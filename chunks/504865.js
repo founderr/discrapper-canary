@@ -1,35 +1,36 @@
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(442837),
-    o = n(481060),
-    l = n(509545),
-    u = n(74538),
-    c = n(474936),
-    d = n(849800);
-t.Z = function (e) {
-    let { subscriptionTier: t, interval: n = c.rV.MONTH, className: i, isGift: f = !1, variant: _, priceOptions: p, isMarketingPageV2: h } = e;
-    if (!(0, s.e7)([l.Z], () => l.Z.isLoadedForPremiumSKUs()))
-        return (0, r.jsx)(o.Spinner, {
-            type: o.Spinner.Type.PULSING_ELLIPSIS,
-            className: d.priceSpinner
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(442837),
+    l = r(481060),
+    u = r(509545),
+    c = r(74538),
+    d = r(474936),
+    f = r(849800);
+function _(e) {
+    let { subscriptionTier: n, interval: r = d.rV.MONTH, className: a, isGift: _ = !1, variant: h, priceOptions: p, isMarketingPageV2: m } = e;
+    if (!(0, o.e7)([u.Z], () => u.Z.isLoadedForPremiumSKUs()))
+        return (0, i.jsx)(l.Spinner, {
+            type: l.Spinner.Type.PULSING_ELLIPSIS,
+            className: f.priceSpinner
         });
-    let m = l.Z.getForSkuAndInterval((0, u.Wz)(t), n),
-        g = null != m ? (0, u.gy)(m, p, !1, f) : null;
-    return (0, r.jsx)(o.Heading, {
-        color: h ? 'none' : 'always-white',
-        variant: null != _ ? _ : 'heading-md/medium',
-        className: a()(d.pricePerInterval, i),
-        children: (0, r.jsxs)(r.Fragment, {
+    let g = u.Z.getForSkuAndInterval((0, c.Wz)(n), r),
+        E = null != g ? (0, c.gy)(g, p, !1, _) : null;
+    return (0, i.jsx)(l.Heading, {
+        color: m ? 'none' : 'always-white',
+        variant: null != h ? h : 'heading-md/medium',
+        className: s()(f.pricePerInterval, a),
+        children: (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)('span', {
-                    className: h ? void 0 : d.price,
-                    children: g
+                (0, i.jsx)('span', {
+                    className: m ? void 0 : f.price,
+                    children: E
                 }),
                 ' / ',
-                (0, u.eP)(n)
+                (0, c.eP)(r)
             ]
         })
     });
-};
+}
+n.Z = _;

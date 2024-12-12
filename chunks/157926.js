@@ -1,15 +1,18 @@
-var r = n(779518),
-    i = n(474401),
-    a = n(759248),
-    s = n(320249),
-    o = n(584428),
-    l = n(85357),
-    u = n(278757);
-e.exports = function (e, t) {
-    return s(e) && o(t)
-        ? l(u(e), t)
-        : function (n) {
-              var s = i(n, e);
-              return void 0 === s && s === t ? a(n, e) : r(t, s, 3);
+var i = r(779518),
+    a = r(474401),
+    s = r(759248),
+    o = r(320249),
+    l = r(584428),
+    u = r(85357),
+    c = r(278757),
+    d = 1,
+    f = 2;
+function _(e, n) {
+    return o(e) && l(n)
+        ? u(c(e), n)
+        : function (r) {
+              var o = a(r, e);
+              return void 0 === o && o === n ? s(r, e) : i(n, o, d | f);
           };
-};
+}
+e.exports = _;

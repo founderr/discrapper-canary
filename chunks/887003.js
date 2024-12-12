@@ -1,11 +1,9 @@
-var r, i;
-n.d(t, {
+var i;
+r.d(n, {
     w: function () {
-        return r;
+        return i;
     }
 }),
-    ((i = r || (r = {}))[(i.REWARD_CODE = 1)] = 'REWARD_CODE'),
-    (i[(i.IN_GAME = 2)] = 'IN_GAME'),
-    (i[(i.COLLECTIBLE = 3)] = 'COLLECTIBLE'),
-    (i[(i.VIRTUAL_CURRENCY = 4)] = 'VIRTUAL_CURRENCY'),
-    (i[(i.FRACTIONAL_PREMIUM = 5)] = 'FRACTIONAL_PREMIUM');
+    !(function (e) {
+        (e[(e.REWARD_CODE = 1)] = 'REWARD_CODE'), (e[(e.IN_GAME = 2)] = 'IN_GAME'), (e[(e.COLLECTIBLE = 3)] = 'COLLECTIBLE'), (e[(e.VIRTUAL_CURRENCY = 4)] = 'VIRTUAL_CURRENCY'), (e[(e.FRACTIONAL_PREMIUM = 5)] = 'FRACTIONAL_PREMIUM');
+    })(i || (i = {}));

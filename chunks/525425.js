@@ -1,5 +1,6 @@
-var r = n(580897),
-    i = n(703284);
-e.exports = function (e, t, n) {
-    ((void 0 !== n && !i(e[t], n)) || (void 0 === n && !(t in e))) && r(e, t, n);
-};
+var i = r(580897),
+    a = r(703284);
+function s(e, n, r) {
+    ((void 0 !== r && !a(e[n], r)) || (void 0 === r && !(n in e))) && i(e, n, r);
+}
+e.exports = s;

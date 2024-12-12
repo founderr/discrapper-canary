@@ -1,34 +1,35 @@
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(921944),
-    s = n(388032),
-    o = n(961335);
-t.Z = (e) => {
-    let { markAsDismissed: t } = e;
-    return (0, r.jsxs)('div', {
-        className: o.wrapper,
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(921944),
+    o = r(388032),
+    l = r(961335);
+let u = (e) => {
+    let { markAsDismissed: n } = e;
+    return (0, i.jsxs)('div', {
+        className: l.wrapper,
         children: [
-            (0, r.jsx)(i.HeartIcon, {
+            (0, i.jsx)(a.HeartIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: o.icon
+                className: l.icon
             }),
-            (0, r.jsx)('div', {
-                className: o.content,
-                children: (0, r.jsx)(i.Text, {
+            (0, i.jsx)('div', {
+                className: l.content,
+                children: (0, i.jsx)(a.Text, {
                     variant: 'text-xs/normal',
-                    children: s.intl.string(s.t['xdRf6+'])
+                    children: o.intl.string(o.t['xdRf6+'])
                 })
             }),
-            (0, r.jsx)(i.Clickable, {
-                onClick: () => t(a.L.UNKNOWN),
-                children: (0, r.jsx)(i.XSmallIcon, {
+            (0, i.jsx)(a.Clickable, {
+                onClick: () => n(s.L.UNKNOWN),
+                children: (0, i.jsx)(a.XSmallIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: o.close
+                    className: l.close
                 })
             })
         ]
     });
 };
+n.Z = u;

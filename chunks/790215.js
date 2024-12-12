@@ -1,5 +1,6 @@
-var r = n(572657);
-t.Z = function (e, t) {
-    for (var n = e.length; n--; ) if ((0, r.Z)(e[n][0], t)) return n;
+var i = r(572657);
+function a(e, n) {
+    for (var r = e.length; r--; ) if ((0, i.Z)(e[r][0], n)) return r;
     return -1;
-};
+}
+n.Z = a;

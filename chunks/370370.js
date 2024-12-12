@@ -1,54 +1,55 @@
-n.d(t, {
+r.d(n, {
     j: function () {
-        return c;
+        return d;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(379357),
-    s = n(442550),
-    o = n(297781),
-    l = n(443487),
-    u = n(830677);
-let c = [o.OV, o.EE, o.Af, o.U9, o.n8, o.pQ];
-t.Z = i.memo((e) => {
-    let { entry: t, channel: n, selected: i, hovered: d } = e,
-        { largeImage: f } = (0, a.rv)({
-            entry: t,
-            showCoverImage: !1
-        });
-    return (0, r.jsxs)(l.Zb, {
-        selected: i,
-        children: [
-            (0, r.jsxs)(l.e$, {
-                children: [
-                    (0, r.jsx)(l.F9, {
-                        entry: t,
-                        channelId: n.id,
-                        guildId: n.guild_id
-                    }),
-                    (0, r.jsx)(l.ll, { children: t.extra.activity_name }),
-                    (0, r.jsx)(o.Gk, {
-                        location: o.Gt.CARD,
-                        children: c.map((e, n) =>
-                            (0, r.jsx)(
-                                e,
-                                {
-                                    entry: t,
-                                    hovered: d
-                                },
-                                n
+var i = r(200651),
+    a = r(192379),
+    s = r(379357),
+    o = r(442550),
+    l = r(297781),
+    u = r(443487),
+    c = r(830677);
+let d = [l.OV, l.EE, l.Af, l.U9, l.n8, l.pQ],
+    f = (e) => {
+        let { entry: n, channel: r, selected: a, hovered: f } = e,
+            { largeImage: _ } = (0, s.rv)({
+                entry: n,
+                showCoverImage: !1
+            });
+        return (0, i.jsxs)(u.Zb, {
+            selected: a,
+            children: [
+                (0, i.jsxs)(u.e$, {
+                    children: [
+                        (0, i.jsx)(u.F9, {
+                            entry: n,
+                            channelId: r.id,
+                            guildId: r.guild_id
+                        }),
+                        (0, i.jsx)(u.ll, { children: n.extra.activity_name }),
+                        (0, i.jsx)(l.Gk, {
+                            location: l.Gt.CARD,
+                            children: d.map((e, r) =>
+                                (0, i.jsx)(
+                                    e,
+                                    {
+                                        entry: n,
+                                        hovered: f
+                                    },
+                                    r
+                                )
                             )
-                        )
-                    })
-                ]
-            }),
-            (0, r.jsx)(s.f, {
-                alt: null == f ? void 0 : f.alt,
-                src: null == f ? void 0 : f.src,
-                size: 48,
-                className: u.thumbnail
-            })
-        ]
-    });
-});
+                        })
+                    ]
+                }),
+                (0, i.jsx)(o.f, {
+                    alt: null == _ ? void 0 : _.alt,
+                    src: null == _ ? void 0 : _.src,
+                    size: 48,
+                    className: c.thumbnail
+                })
+            ]
+        });
+    };
+n.Z = a.memo(f);

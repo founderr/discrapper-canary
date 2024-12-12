@@ -1,115 +1,113 @@
-var r = n(244287),
-    i = n(126387),
-    a = n(885952),
-    s = n(510104),
-    o = n(891734),
-    l = n(740078),
-    u = n(632471);
-t.Z = {
+var i = r(244287),
+    a = r(126387),
+    s = r(885952),
+    o = r(510104),
+    l = r(891734),
+    u = r(740078),
+    c = r(632471);
+function d(e) {
+    if ((0, a.Z)(e) === u.d7) return [];
+    var n = (0, i.Z)(e);
+    return [(0, s.Z)(e), n, (0, s.Z)(n)];
+}
+function f(e) {
+    var n = e.state,
+        r = e.options,
+        s = e.name;
+    if (!n.modifiersData[s]._skip) {
+        for (
+            var f = r.mainAxis,
+                _ = void 0 === f || f,
+                h = r.altAxis,
+                p = void 0 === h || h,
+                m = r.fallbackPlacements,
+                g = r.padding,
+                E = r.boundary,
+                v = r.rootBoundary,
+                I = r.altBoundary,
+                T = r.flipVariations,
+                b = void 0 === T || T,
+                y = r.allowedAutoPlacements,
+                S = n.options.placement,
+                A = (0, a.Z)(S) === S,
+                N = m || (A || !b ? [(0, i.Z)(S)] : d(S)),
+                C = [S].concat(N).reduce(function (e, r) {
+                    return e.concat(
+                        (0, a.Z)(r) === u.d7
+                            ? (0, l.Z)(n, {
+                                  placement: r,
+                                  boundary: E,
+                                  rootBoundary: v,
+                                  padding: g,
+                                  flipVariations: b,
+                                  allowedAutoPlacements: y
+                              })
+                            : r
+                    );
+                }, []),
+                R = n.rects.reference,
+                O = n.rects.popper,
+                D = new Map(),
+                L = !0,
+                x = C[0],
+                w = 0;
+            w < C.length;
+            w++
+        ) {
+            var P = C[w],
+                M = (0, a.Z)(P),
+                k = (0, c.Z)(P) === u.BL,
+                U = [u.we, u.I].indexOf(M) >= 0,
+                B = U ? 'width' : 'height',
+                G = (0, o.Z)(n, {
+                    placement: P,
+                    boundary: E,
+                    rootBoundary: v,
+                    altBoundary: I,
+                    padding: g
+                }),
+                Z = U ? (k ? u.F2 : u.t$) : k ? u.I : u.we;
+            R[B] > O[B] && (Z = (0, i.Z)(Z));
+            var F = (0, i.Z)(Z),
+                V = [];
+            if (
+                (_ && V.push(G[M] <= 0),
+                p && V.push(G[Z] <= 0, G[F] <= 0),
+                V.every(function (e) {
+                    return e;
+                }))
+            ) {
+                (x = P), (L = !1);
+                break;
+            }
+            D.set(P, V);
+        }
+        if (L) {
+            for (
+                var j = b ? 3 : 1,
+                    H = function (e) {
+                        var n = C.find(function (n) {
+                            var r = D.get(n);
+                            if (r)
+                                return r.slice(0, e).every(function (e) {
+                                    return e;
+                                });
+                        });
+                        if (n) return (x = n), 'break';
+                    },
+                    Y = j;
+                Y > 0 && 'break' !== H(Y);
+                Y--
+            );
+        }
+        n.placement !== x && ((n.modifiersData[s]._skip = !0), (n.placement = x), (n.reset = !0));
+    }
+}
+n.Z = {
     name: 'flip',
     enabled: !0,
     phase: 'main',
-    fn: function (e) {
-        var t = e.state,
-            n = e.options,
-            c = e.name;
-        if (!t.modifiersData[c]._skip) {
-            for (
-                var d = n.mainAxis,
-                    f = void 0 === d || d,
-                    _ = n.altAxis,
-                    p = void 0 === _ || _,
-                    h = n.fallbackPlacements,
-                    m = n.padding,
-                    g = n.boundary,
-                    E = n.rootBoundary,
-                    v = n.altBoundary,
-                    I = n.flipVariations,
-                    T = void 0 === I || I,
-                    b = n.allowedAutoPlacements,
-                    S = t.options.placement,
-                    y = (0, i.Z)(S) === S,
-                    A =
-                        h ||
-                        (y || !T
-                            ? [(0, r.Z)(S)]
-                            : (function (e) {
-                                  if ((0, i.Z)(e) === l.d7) return [];
-                                  var t = (0, r.Z)(e);
-                                  return [(0, a.Z)(e), t, (0, a.Z)(t)];
-                              })(S)),
-                    N = [S].concat(A).reduce(function (e, n) {
-                        return e.concat(
-                            (0, i.Z)(n) === l.d7
-                                ? (0, o.Z)(t, {
-                                      placement: n,
-                                      boundary: g,
-                                      rootBoundary: E,
-                                      padding: m,
-                                      flipVariations: T,
-                                      allowedAutoPlacements: b
-                                  })
-                                : n
-                        );
-                    }, []),
-                    C = t.rects.reference,
-                    R = t.rects.popper,
-                    O = new Map(),
-                    D = !0,
-                    L = N[0],
-                    x = 0;
-                x < N.length;
-                x++
-            ) {
-                var w = N[x],
-                    P = (0, i.Z)(w),
-                    M = (0, u.Z)(w) === l.BL,
-                    k = [l.we, l.I].indexOf(P) >= 0,
-                    U = k ? 'width' : 'height',
-                    B = (0, s.Z)(t, {
-                        placement: w,
-                        boundary: g,
-                        rootBoundary: E,
-                        altBoundary: v,
-                        padding: m
-                    }),
-                    G = k ? (M ? l.F2 : l.t$) : M ? l.I : l.we;
-                C[U] > R[U] && (G = (0, r.Z)(G));
-                var Z = (0, r.Z)(G),
-                    F = [];
-                if (
-                    (f && F.push(B[P] <= 0),
-                    p && F.push(B[G] <= 0, B[Z] <= 0),
-                    F.every(function (e) {
-                        return e;
-                    }))
-                ) {
-                    (L = w), (D = !1);
-                    break;
-                }
-                O.set(w, F);
-            }
-            if (D) {
-                for (
-                    var V = T ? 3 : 1,
-                        j = function (e) {
-                            var t = N.find(function (t) {
-                                var n = O.get(t);
-                                if (n)
-                                    return n.slice(0, e).every(function (e) {
-                                        return e;
-                                    });
-                            });
-                            if (t) return (L = t), 'break';
-                        },
-                        H = V;
-                    H > 0 && 'break' !== j(H);
-                    H--
-                );
-            }
-            t.placement !== L && ((t.modifiersData[c]._skip = !0), (t.placement = L), (t.reset = !0));
-        }
-    },
+    fn: f,
     requiresIfExists: ['offset'],
     data: { _skip: !1 }
 };

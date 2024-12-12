@@ -1,53 +1,54 @@
-var t = '%[a-f0-9]{2}',
-    n = RegExp('(' + t + ')|([^%]+?)', 'gi'),
-    r = RegExp('(' + t + ')+', 'gi');
+var n = '%[a-f0-9]{2}',
+    r = RegExp('(' + n + ')|([^%]+?)', 'gi'),
+    i = RegExp('(' + n + ')+', 'gi');
+function a(e, n) {
+    try {
+        return [decodeURIComponent(e.join(''))];
+    } catch (e) {}
+    if (1 === e.length) return e;
+    n = n || 1;
+    var r = e.slice(0, n),
+        i = e.slice(n);
+    return Array.prototype.concat.call([], a(r), a(i));
+}
+function s(e) {
+    try {
+        return decodeURIComponent(e);
+    } catch (s) {
+        for (var n = e.match(r) || [], i = 1; i < n.length; i++) n = (e = a(n, i).join('')).match(r) || [];
+        return e;
+    }
+}
+function o(e) {
+    for (
+        var n = {
+                '%FE%FF': '\uFFFD\uFFFD',
+                '%FF%FE': '\uFFFD\uFFFD'
+            },
+            r = i.exec(e);
+        r;
+
+    ) {
+        try {
+            n[r[0]] = decodeURIComponent(r[0]);
+        } catch (e) {
+            var a = s(r[0]);
+            a !== r[0] && (n[r[0]] = a);
+        }
+        r = i.exec(e);
+    }
+    n['%C2'] = '\uFFFD';
+    for (var o = Object.keys(n), l = 0; l < o.length; l++) {
+        var u = o[l];
+        e = e.replace(RegExp(u, 'g'), n[u]);
+    }
+    return e;
+}
 e.exports = function (e) {
     if ('string' != typeof e) throw TypeError('Expected `encodedURI` to be of type `string`, got `' + typeof e + '`');
     try {
         return (e = e.replace(/\+/g, ' ')), decodeURIComponent(e);
-    } catch (t) {
-        return (function (e) {
-            for (
-                var t = {
-                        '%FE%FF': '\uFFFD\uFFFD',
-                        '%FF%FE': '\uFFFD\uFFFD'
-                    },
-                    i = r.exec(e);
-                i;
-
-            ) {
-                try {
-                    t[i[0]] = decodeURIComponent(i[0]);
-                } catch (e) {
-                    var a = (function (e) {
-                        try {
-                            return decodeURIComponent(e);
-                        } catch (i) {
-                            for (var t = e.match(n) || [], r = 1; r < t.length; r++)
-                                t =
-                                    (e = (function e(t, n) {
-                                        try {
-                                            return [decodeURIComponent(t.join(''))];
-                                        } catch (e) {}
-                                        if (1 === t.length) return t;
-                                        n = n || 1;
-                                        var r = t.slice(0, n),
-                                            i = t.slice(n);
-                                        return Array.prototype.concat.call([], e(r), e(i));
-                                    })(t, r).join('')).match(n) || [];
-                            return e;
-                        }
-                    })(i[0]);
-                    a !== i[0] && (t[i[0]] = a);
-                }
-                i = r.exec(e);
-            }
-            t['%C2'] = '\uFFFD';
-            for (var s = Object.keys(t), o = 0; o < s.length; o++) {
-                var l = s[o];
-                e = e.replace(RegExp(l, 'g'), t[l]);
-            }
-            return e;
-        })(e);
+    } catch (n) {
+        return o(e);
     }
 };

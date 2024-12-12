@@ -1,10 +1,1 @@
-var r = n(200651);
-n(192379);
-var i = n(508180),
-    a = n(717114),
-    s = n(8685),
-    o = n(634500);
-t.Z = () =>
-    (0, r.jsxs)(r.Fragment, {
-        children: [(0, r.jsx)(a.Z, {}), (0, r.jsx)(i.Z, {}), (0, r.jsx)(s.Z, {}), (0, r.jsx)(o.Z, {})]
-    });
+e.exports = { effect: 'effect_efd76b' };

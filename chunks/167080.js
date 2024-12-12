@@ -1,49 +1,50 @@
-var r = n(200651),
-    i = n(192379),
-    a = n(335854),
-    s = n(481060),
-    o = n(626135),
-    l = n(981631),
-    u = n(388032);
-t.Z = (e) => {
-    let { href: t, className: n, iconClassName: c, rel: d, target: f, mimeType: _, fileName: p, focusProps: h, onClick: m, ...g } = e,
-        E = i.useMemo(() => a.X.getDefaultLinkInterceptor(t), [t]),
-        v = i.useCallback(
+var i = r(200651),
+    a = r(192379),
+    s = r(335854),
+    o = r(481060),
+    l = r(626135),
+    u = r(981631),
+    c = r(388032);
+let d = (e) => {
+    let { href: n, className: r, iconClassName: d, rel: f, target: _, mimeType: h, fileName: p, focusProps: m, onClick: g, ...E } = e,
+        v = a.useMemo(() => s.X.getDefaultLinkInterceptor(n), [n]),
+        I = a.useCallback(
             (e) => {
-                o.default.track(l.rMx.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
-                    attachment_type: null == _ ? void 0 : _[0],
-                    attachment_subtype: null == _ ? void 0 : _[1]
+                l.default.track(u.rMx.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
+                    attachment_type: null == h ? void 0 : h[0],
+                    attachment_subtype: null == h ? void 0 : h[1]
                 }),
-                    null == m || m(),
-                    null == E || E(e);
+                    null == g || g(),
+                    null == v || v(e);
             },
-            [E, _, m]
+            [v, h, g]
         );
     return null != p
-        ? (0, r.jsx)(s.Anchor, {
-              href: t,
-              onClick: v,
-              target: f,
-              rel: d,
-              className: n,
-              'aria-label': u.intl.string(u.t['1WjMbG']),
-              focusProps: h,
-              ...g,
+        ? (0, i.jsx)(o.Anchor, {
+              href: n,
+              onClick: I,
+              target: _,
+              rel: f,
+              className: r,
+              'aria-label': c.intl.string(c.t['1WjMbG']),
+              focusProps: m,
+              ...E,
               children: p
           })
-        : (0, r.jsx)(s.Anchor, {
-              href: t,
-              onClick: v,
-              target: f,
-              rel: d,
-              className: n,
-              'aria-label': u.intl.string(u.t['1WjMbG']),
-              focusProps: h,
-              ...g,
-              children: (0, r.jsx)(s.DownloadIcon, {
+        : (0, i.jsx)(o.Anchor, {
+              href: n,
+              onClick: I,
+              target: _,
+              rel: f,
+              className: r,
+              'aria-label': c.intl.string(c.t['1WjMbG']),
+              focusProps: m,
+              ...E,
+              children: (0, i.jsx)(o.DownloadIcon, {
                   size: 'md',
                   color: 'currentColor',
-                  className: c
+                  className: d
               })
           });
 };
+n.Z = d;

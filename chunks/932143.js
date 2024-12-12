@@ -1,35 +1,37 @@
-n.d(t, {
+r.d(n, {
     W: function () {
-        return a;
+        return s;
     }
 });
-var r = n(781988),
-    i = n(192379);
-function a(e) {
-    let t = (0, r.d)(e),
-        [n, a] = (0, i.useState)(null),
-        [s, o] = (0, i.useState)([]),
-        l = () => {
-            o([]), t.close();
+var i = r(781988),
+    a = r(192379);
+function s(e) {
+    let n = (0, i.d)(e),
+        [r, s] = (0, a.useState)(null),
+        [o, l] = (0, a.useState)([]),
+        u = () => {
+            l([]), n.close();
+        },
+        c = (e, n) => {
+            l((r) => (n > r.length ? r : [...r.slice(0, n), e]));
+        },
+        d = (e, n) => {
+            l((r) => (r[n] === e ? r.slice(0, n) : r));
         };
     return {
-        focusStrategy: n,
-        ...t,
+        focusStrategy: r,
+        ...n,
         open(e = null) {
-            a(e), t.open();
+            s(e), n.open();
         },
         toggle(e = null) {
-            a(e), t.toggle();
+            s(e), n.toggle();
         },
         close() {
-            l();
+            u();
         },
-        UNSTABLE_expandedKeysStack: s,
-        UNSTABLE_openSubmenu: (e, t) => {
-            o((n) => (t > n.length ? n : [...n.slice(0, t), e]));
-        },
-        UNSTABLE_closeSubmenu: (e, t) => {
-            o((n) => (n[t] === e ? n.slice(0, t) : n));
-        }
+        UNSTABLE_expandedKeysStack: o,
+        UNSTABLE_openSubmenu: c,
+        UNSTABLE_closeSubmenu: d
     };
 }

@@ -1,198 +1,203 @@
-var r = n(192379),
-    i = n(476400),
-    a = n.n(i),
-    s = n(723184),
-    o = n(829307),
-    l = n(877837),
-    u = n(492253),
-    c = n(974727),
-    d = n(278860),
-    f = n(48254),
-    _ = n(849818),
+var i = r(192379),
+    a = r(476400),
+    s = r.n(a),
+    o = r(723184),
+    l = r(829307),
+    u = r(877837),
+    c = r(492253),
+    d = r(974727),
+    f = r(278860),
+    _ = r(48254),
+    h = r(849818),
     p = (function () {
-        function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-                var r = t[n];
-                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+        function e(e, n) {
+            for (var r = 0; r < n.length; r++) {
+                var i = n[r];
+                (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
             }
         }
-        return function (t, n, r) {
-            return n && e(t.prototype, n), r && e(t, r), t;
+        return function (n, r, i) {
+            return r && e(n.prototype, r), i && e(n, i), n;
         };
-    })(),
-    h = (function (e) {
-        function t(e) {
-            !(function (e, t) {
-                if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-            })(this, t);
-            var n = (function (e, t) {
-                if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-                return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
-            })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-            return (n.state = { currentColor: e.hex }), n;
+    })();
+function m(e, n) {
+    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+}
+function g(e, n) {
+    if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
+}
+function E(e, n) {
+    if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
+    (e.prototype = Object.create(n && n.prototype, {
+        constructor: {
+            value: e,
+            enumerable: !1,
+            writable: !0,
+            configurable: !0
         }
-        return (
-            !(function (e, t) {
-                if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-                (e.prototype = Object.create(t && t.prototype, {
-                    constructor: {
-                        value: e,
-                        enumerable: !1,
-                        writable: !0,
-                        configurable: !0
-                    }
-                })),
-                    t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
-            })(t, e),
-            p(t, [
-                {
-                    key: 'render',
-                    value: function () {
-                        var e = this.props,
-                            t = e.styles,
-                            n = e.className,
-                            i = (0, s.default)(
-                                (0, o.Z)(
-                                    {
-                                        default: {
-                                            picker: {
-                                                background: '#DCDCDC',
-                                                borderRadius: '4px',
-                                                boxShadow: '0 0 0 1px rgba(0,0,0,.25), 0 8px 16px rgba(0,0,0,.15)',
-                                                boxSizing: 'initial',
-                                                width: '513px'
-                                            },
-                                            head: {
-                                                backgroundImage: 'linear-gradient(-180deg, #F0F0F0 0%, #D4D4D4 100%)',
-                                                borderBottom: '1px solid #B1B1B1',
-                                                boxShadow: 'inset 0 1px 0 0 rgba(255,255,255,.2), inset 0 -1px 0 0 rgba(0,0,0,.02)',
-                                                height: '23px',
-                                                lineHeight: '24px',
-                                                borderRadius: '4px 4px 0 0',
-                                                fontSize: '13px',
-                                                color: '#4D4D4D',
-                                                textAlign: 'center'
-                                            },
-                                            body: {
-                                                padding: '15px 15px 0',
-                                                display: 'flex'
-                                            },
-                                            saturation: {
-                                                width: '256px',
-                                                height: '256px',
-                                                position: 'relative',
-                                                border: '2px solid #B3B3B3',
-                                                borderBottom: '2px solid #F0F0F0',
-                                                overflow: 'hidden'
-                                            },
-                                            hue: {
-                                                position: 'relative',
-                                                height: '256px',
-                                                width: '19px',
-                                                marginLeft: '10px',
-                                                border: '2px solid #B3B3B3',
-                                                borderBottom: '2px solid #F0F0F0'
-                                            },
-                                            controls: {
-                                                width: '180px',
-                                                marginLeft: '10px'
-                                            },
-                                            top: { display: 'flex' },
-                                            previews: { width: '60px' },
-                                            actions: {
-                                                flex: '1',
-                                                marginLeft: '20px'
-                                            }
+    })),
+        n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
+}
+var v = (function (e) {
+    function n(e) {
+        m(this, n);
+        var r = g(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
+        return (r.state = { currentColor: e.hex }), r;
+    }
+    return (
+        E(n, e),
+        p(n, [
+            {
+                key: 'render',
+                value: function () {
+                    var e = this.props,
+                        n = e.styles,
+                        r = void 0 === n ? {} : n,
+                        a = e.className,
+                        s = void 0 === a ? '' : a,
+                        p = (0, o.default)(
+                            (0, l.Z)(
+                                {
+                                    default: {
+                                        picker: {
+                                            background: '#DCDCDC',
+                                            borderRadius: '4px',
+                                            boxShadow: '0 0 0 1px rgba(0,0,0,.25), 0 8px 16px rgba(0,0,0,.15)',
+                                            boxSizing: 'initial',
+                                            width: '513px'
+                                        },
+                                        head: {
+                                            backgroundImage: 'linear-gradient(-180deg, #F0F0F0 0%, #D4D4D4 100%)',
+                                            borderBottom: '1px solid #B1B1B1',
+                                            boxShadow: 'inset 0 1px 0 0 rgba(255,255,255,.2), inset 0 -1px 0 0 rgba(0,0,0,.02)',
+                                            height: '23px',
+                                            lineHeight: '24px',
+                                            borderRadius: '4px 4px 0 0',
+                                            fontSize: '13px',
+                                            color: '#4D4D4D',
+                                            textAlign: 'center'
+                                        },
+                                        body: {
+                                            padding: '15px 15px 0',
+                                            display: 'flex'
+                                        },
+                                        saturation: {
+                                            width: '256px',
+                                            height: '256px',
+                                            position: 'relative',
+                                            border: '2px solid #B3B3B3',
+                                            borderBottom: '2px solid #F0F0F0',
+                                            overflow: 'hidden'
+                                        },
+                                        hue: {
+                                            position: 'relative',
+                                            height: '256px',
+                                            width: '19px',
+                                            marginLeft: '10px',
+                                            border: '2px solid #B3B3B3',
+                                            borderBottom: '2px solid #F0F0F0'
+                                        },
+                                        controls: {
+                                            width: '180px',
+                                            marginLeft: '10px'
+                                        },
+                                        top: { display: 'flex' },
+                                        previews: { width: '60px' },
+                                        actions: {
+                                            flex: '1',
+                                            marginLeft: '20px'
                                         }
-                                    },
-                                    void 0 === t ? {} : t
-                                )
-                            );
-                        return r.createElement(
+                                    }
+                                },
+                                r
+                            )
+                        );
+                    return i.createElement(
+                        'div',
+                        {
+                            style: p.picker,
+                            className: 'photoshop-picker ' + s
+                        },
+                        i.createElement('div', { style: p.head }, this.props.header),
+                        i.createElement(
                             'div',
                             {
-                                style: i.picker,
-                                className: 'photoshop-picker ' + (void 0 === n ? '' : n)
+                                style: p.body,
+                                className: 'flexbox-fix'
                             },
-                            r.createElement('div', { style: i.head }, this.props.header),
-                            r.createElement(
+                            i.createElement(
                                 'div',
-                                {
-                                    style: i.body,
-                                    className: 'flexbox-fix'
-                                },
-                                r.createElement(
+                                { style: p.saturation },
+                                i.createElement(u.OQ, {
+                                    hsl: this.props.hsl,
+                                    hsv: this.props.hsv,
+                                    pointer: d.Z,
+                                    onChange: this.props.onChange
+                                })
+                            ),
+                            i.createElement(
+                                'div',
+                                { style: p.hue },
+                                i.createElement(u.PS, {
+                                    direction: 'vertical',
+                                    hsl: this.props.hsl,
+                                    pointer: f.Z,
+                                    onChange: this.props.onChange
+                                })
+                            ),
+                            i.createElement(
+                                'div',
+                                { style: p.controls },
+                                i.createElement(
                                     'div',
-                                    { style: i.saturation },
-                                    r.createElement(l.OQ, {
-                                        hsl: this.props.hsl,
-                                        hsv: this.props.hsv,
-                                        pointer: c.Z,
-                                        onChange: this.props.onChange
-                                    })
-                                ),
-                                r.createElement(
-                                    'div',
-                                    { style: i.hue },
-                                    r.createElement(l.PS, {
-                                        direction: 'vertical',
-                                        hsl: this.props.hsl,
-                                        pointer: d.Z,
-                                        onChange: this.props.onChange
-                                    })
-                                ),
-                                r.createElement(
-                                    'div',
-                                    { style: i.controls },
-                                    r.createElement(
+                                    {
+                                        style: p.top,
+                                        className: 'flexbox-fix'
+                                    },
+                                    i.createElement(
                                         'div',
-                                        {
-                                            style: i.top,
-                                            className: 'flexbox-fix'
-                                        },
-                                        r.createElement(
-                                            'div',
-                                            { style: i.previews },
-                                            r.createElement(_.Z, {
-                                                rgb: this.props.rgb,
-                                                currentColor: this.state.currentColor
-                                            })
-                                        ),
-                                        r.createElement(
-                                            'div',
-                                            { style: i.actions },
-                                            r.createElement(f.C, {
-                                                label: 'OK',
-                                                onClick: this.props.onAccept,
-                                                active: !0
-                                            }),
-                                            r.createElement(f.C, {
-                                                label: 'Cancel',
-                                                onClick: this.props.onCancel
-                                            }),
-                                            r.createElement(u.Z, {
-                                                onChange: this.props.onChange,
-                                                rgb: this.props.rgb,
-                                                hsv: this.props.hsv,
-                                                hex: this.props.hex
-                                            })
-                                        )
+                                        { style: p.previews },
+                                        i.createElement(h.Z, {
+                                            rgb: this.props.rgb,
+                                            currentColor: this.state.currentColor
+                                        })
+                                    ),
+                                    i.createElement(
+                                        'div',
+                                        { style: p.actions },
+                                        i.createElement(_.C, {
+                                            label: 'OK',
+                                            onClick: this.props.onAccept,
+                                            active: !0
+                                        }),
+                                        i.createElement(_.C, {
+                                            label: 'Cancel',
+                                            onClick: this.props.onCancel
+                                        }),
+                                        i.createElement(c.Z, {
+                                            onChange: this.props.onChange,
+                                            rgb: this.props.rgb,
+                                            hsv: this.props.hsv,
+                                            hex: this.props.hex
+                                        })
                                     )
                                 )
                             )
-                        );
-                    }
+                        )
+                    );
                 }
-            ]),
-            t
-        );
-    })(r.Component);
-(h.propTypes = {
-    header: a().string,
-    styles: a().object
+            }
+        ]),
+        n
+    );
+})(i.Component);
+(v.propTypes = {
+    header: s().string,
+    styles: s().object
 }),
-    (h.defaultProps = {
+    (v.defaultProps = {
         header: 'Color Picker',
         styles: {}
     }),
-    (0, l.t1)(h);
+    (0, u.t1)(v);

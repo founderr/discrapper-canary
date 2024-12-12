@@ -1,48 +1,51 @@
-n.d(t, {
+r.d(n, {
     Qg: function () {
-        return o;
+        return f;
     },
     S3: function () {
-        return a;
+        return c;
     },
     r5: function () {
-        return l;
+        return _;
     }
-}),
-    n(47120),
-    n(411104);
-var r = n(688619),
-    i = n.n(r);
-let a = {
-    NonText: 3,
-    Text: 4.5,
-    HighContrastText: 7
-};
-function s(e) {
-    let [t, n, r, i] = e.rgba();
-    return 'rgba('.concat(t, ', ').concat(n, ', ').concat(r, ', ').concat(i, ')');
+});
+var i = r(47120);
+var a = r(411104);
+var s = r(688619),
+    o = r.n(s);
+let l = 3,
+    u = 100,
+    c = {
+        NonText: 3,
+        Text: 4.5,
+        HighContrastText: 7
+    };
+function d(e) {
+    let [n, r, i, a] = e.rgba();
+    return 'rgba('.concat(n, ', ').concat(r, ', ').concat(i, ', ').concat(a, ')');
 }
-function o(e) {
-    var t, n, r;
-    let o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        l = null !== (t = o.contrastRatio) && void 0 !== t ? t : a.NonText,
-        u = null !== (n = o.tolerance) && void 0 !== n ? n : 3,
-        c = i()(null !== (r = o.base) && void 0 !== r ? r : e),
-        d = i()(e),
-        f = c.luminance(),
-        _ = d,
-        p = l + u,
-        h = i().contrast(c, d),
-        m = 100;
-    for (; m-- > 0; ) {
-        let e = h < l,
-            t = h > p;
-        if (!e && !t) break;
-        let n = _.luminance() > f;
-        (_ = (t && n) || (e && !n) ? _.darken() : _.brighten()), (h = i().contrast(c, _));
+function f(e) {
+    var n, r, i;
+    let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        s = null !== (n = a.contrastRatio) && void 0 !== n ? n : c.NonText,
+        f = null !== (r = a.tolerance) && void 0 !== r ? r : l,
+        _ = o()(null !== (i = a.base) && void 0 !== i ? i : e),
+        h = o()(e),
+        p = _.luminance(),
+        m = h,
+        g = s,
+        E = s + f,
+        v = o().contrast(_, h),
+        I = u;
+    for (; I-- > 0; ) {
+        let e = v < g,
+            n = v > E;
+        if (!e && !n) break;
+        let r = m.luminance() > p;
+        (m = (n && r) || (e && !r) ? m.darken() : m.brighten()), (v = o().contrast(_, m));
     }
-    return s(_);
+    return d(m);
 }
-function l(e, t) {
-    return s(i()(e).darken(t));
+function _(e, n) {
+    return d(o()(e).darken(n));
 }

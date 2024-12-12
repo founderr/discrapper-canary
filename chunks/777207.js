@@ -1,68 +1,69 @@
-n.d(t, {
+r.d(n, {
     x: function () {
-        return _;
+        return h;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(803997),
-    s = n.n(a),
-    o = n(696689),
-    l = n.n(o),
-    u = n(692547),
-    c = n(537054),
-    d = n(770151);
-let f = Object.fromEntries(Object.keys(u.Z.colors).map((e) => [l()(e), e])),
-    _ = i.forwardRef(function (e, t) {
-        let n,
-            { variant: i, tag: a = 'div', selectable: o = !1, className: l, lineClamp: _, color: p, tabularNumbers: h = !1, scaleFontToUserSetting: m = !1, ...g } = e,
-            E = '',
-            v = {};
+var i = r(200651),
+    a = r(192379),
+    s = r(803997),
+    o = r.n(s),
+    l = r(696689),
+    u = r.n(l),
+    c = r(692547),
+    d = r(537054),
+    f = r(770151);
+let _ = Object.fromEntries(Object.keys(c.Z.colors).map((e) => [u()(e), e])),
+    h = a.forwardRef(function (e, n) {
+        let r,
+            { variant: a, tag: s = 'div', selectable: l = !1, className: u, lineClamp: h, color: p, tabularNumbers: m = !1, scaleFontToUserSetting: g = !1, ...E } = e,
+            v = s,
+            I = '',
+            T = {};
         if (
-            (null != _ &&
-                (1 === _
-                    ? (E = c.lineClamp1)
-                    : ((E = c.lineClamp2Plus),
-                      (v = {
-                          lineClamp: _,
-                          WebkitLineClamp: _
+            (null != h &&
+                (1 === h
+                    ? (I = d.lineClamp1)
+                    : ((I = d.lineClamp2Plus),
+                      (T = {
+                          lineClamp: h,
+                          WebkitLineClamp: h
                       }))),
             void 0 !== p)
         )
             switch (p) {
                 case 'currentColor':
-                    n = 'currentColor';
+                    r = 'currentColor';
                     break;
                 case 'none':
-                    n = void 0;
+                    r = void 0;
                     break;
                 case 'always-white':
-                    n = 'white';
+                    r = 'white';
                     break;
                 default:
-                    var I;
-                    n = null === (I = u.Z.colors[f[p]]) || void 0 === I ? void 0 : I.css;
+                    var b;
+                    r = null === (b = c.Z.colors[_[p]]) || void 0 === b ? void 0 : b.css;
             }
-        let T = {
-            color: n,
-            ...v,
-            ...g.style
+        let y = {
+            color: r,
+            ...T,
+            ...E.style
         };
-        return (0, r.jsx)(a, {
-            ref: t,
-            className: s()(
+        return (0, i.jsx)(v, {
+            ref: n,
+            className: o()(
                 {
-                    [c.defaultColor]: void 0 === p,
-                    [c.selectable]: o,
-                    [c.tabularNumbers]: h,
-                    [d.fontScaling]: m
+                    [d.defaultColor]: void 0 === p,
+                    [d.selectable]: l,
+                    [d.tabularNumbers]: m,
+                    [f.fontScaling]: g
                 },
-                E,
-                d[i],
-                l
+                I,
+                f[a],
+                u
             ),
-            ...g,
-            style: Object.values(T).filter(Boolean).length > 0 ? T : void 0,
-            'data-text-variant': i
+            ...E,
+            style: Object.values(y).filter(Boolean).length > 0 ? y : void 0,
+            'data-text-variant': a
         });
     });

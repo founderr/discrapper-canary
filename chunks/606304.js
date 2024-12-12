@@ -1,146 +1,154 @@
-n(47120), n(789020), n(724458);
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140),
-    u = n(700785),
-    c = n(592125),
-    d = n(131951),
-    f = n(19780),
-    _ = n(944486),
-    p = n(981631),
-    h = n(65154);
-let m = new Map(),
-    g = null,
-    E = null,
-    v = null;
-function I(e, t) {
-    let n = m.get(e);
-    if (null == n) return !1;
-    let r = n.delete(t);
-    return 0 === n.size && m.delete(e), r;
+var i,
+    a = r(47120);
+var s = r(789020);
+var o = r(724458);
+var l = r(442837),
+    u = r(570140),
+    c = r(700785),
+    d = r(592125),
+    f = r(131951),
+    _ = r(19780),
+    h = r(944486),
+    p = r(981631),
+    m = r(65154);
+function g(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
 }
-function T(e, t, n) {
-    var r, i, a;
-    return ((null !== (a = null === (i = m.get(e)) || void 0 === i ? void 0 : null === (r = i.get(t)) || void 0 === r ? void 0 : r.flags) && void 0 !== a ? a : h.Dg.NONE) & n) === n;
+let E = new Map(),
+    v = null,
+    I = null,
+    T = null;
+function b() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.Yn.DEFAULT,
+        n = E.get(e);
+    return null == n && ((n = new Map()), E.set(e, n)), n;
 }
-function b(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        r = m.get(e);
+function y(e, n) {
+    let r = E.get(e);
     if (null == r) return !1;
-    for (let [e, { flags: i }] of r) {
-        if (!n || e !== g) {
-            if ((i & t) === t) return !0;
+    let i = r.delete(n);
+    return 0 === r.size && E.delete(e), i;
+}
+function S(e, n, r) {
+    var i, a, s;
+    return ((null !== (s = null === (a = E.get(e)) || void 0 === a ? void 0 : null === (i = a.get(n)) || void 0 === i ? void 0 : i.flags) && void 0 !== s ? s : m.Dg.NONE) & r) === r;
+}
+function A(e, n) {
+    let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        i = E.get(e);
+    if (null == i) return !1;
+    for (let [e, { flags: a }] of i) {
+        if (!r || e !== v) {
+            if ((a & n) === n) return !0;
         }
     }
     return !1;
 }
-function S(e) {
-    let { user: t, sessionId: n } = e;
-    (g = t.id), (E = n), (v = null);
-}
-class y extends (r = o.ZP.Store) {
-    initialize() {
-        this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type && 'VOICE_STATE_UPDATES' !== e.type), this.waitFor(f.Z);
+function N(e, n, r) {
+    var i, a;
+    let s = b(e),
+        o = s.get(n),
+        l = null !== (i = null == o ? void 0 : o.flags) && void 0 !== i ? i : 0;
+    if (0 === l && 0 === r) return !1;
+    if (0 === r) s.delete(n), 0 === s.size && E.delete(e);
+    else {
+        let e = null !== (a = null == o ? void 0 : o.since) && void 0 !== a ? a : null,
+            i = (l & m.Dg.VOICE) === m.Dg.VOICE,
+            u = (r & m.Dg.VOICE) === m.Dg.VOICE;
+        i !== u && (e = u ? Date.now() : null),
+            s.set(n, {
+                flags: r,
+                since: e
+            });
     }
-    getSpeakingDuration(e, t) {
-        var n, r;
-        let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : h.Yn.DEFAULT,
-            a = null === (r = m.get(i)) || void 0 === r ? void 0 : null === (n = r.get(e)) || void 0 === n ? void 0 : n.since;
-        return null != a ? t - a : 0;
+    return !0;
+}
+function C(e) {
+    let { user: n, sessionId: r } = e;
+    (v = n.id), (I = r), (T = null);
+}
+function R(e) {
+    let { context: n, userId: r, speakingFlags: i } = e;
+    if ((i & m.Dg.PRIORITY) === m.Dg.PRIORITY) {
+        let e = d.Z.getChannel(h.Z.getVoiceChannelId());
+        null != e &&
+        c.BT({
+            permission: p.Plq.PRIORITY_SPEAKER,
+            user: r,
+            context: e
+        })
+            ? f.Z.setCanHavePriority(r, !0)
+            : (f.Z.setCanHavePriority(r, !1), (i &= ~m.Dg.PRIORITY));
+    }
+    return N(n, r, i);
+}
+function O(e) {
+    let { voiceStates: n } = e;
+    return n.reduce((e, n) => {
+        let { userId: r, channelId: i, sessionId: a } = n,
+            s = !1,
+            o = T;
+        return r === v && a === I && (T = null != i ? i : null), o !== T && (s = E.delete(m.Yn.DEFAULT) || s), null == i ? (s = r === v && a === I ? E.delete(m.Yn.DEFAULT) || s : y(m.Yn.DEFAULT, r) || s) : r === v && a !== I ? (s = E.delete(m.Yn.DEFAULT) || s) : r !== v && i !== _.Z.getChannelId() && (s = y(m.Yn.DEFAULT, r) || s), s || e;
+    }, !1);
+}
+class D extends (i = l.ZP.Store) {
+    initialize() {
+        this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type && 'VOICE_STATE_UPDATES' !== e.type), this.waitFor(_.Z);
+    }
+    getSpeakingDuration(e, n) {
+        var r, i;
+        let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : m.Yn.DEFAULT,
+            s = null === (i = E.get(a)) || void 0 === i ? void 0 : null === (r = i.get(e)) || void 0 === r ? void 0 : r.since;
+        return null != s ? n - s : 0;
     }
     getSpeakers() {
-        var e, t;
-        let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.Yn.DEFAULT;
-        return Array.from(null !== (t = null === (e = m.get(n)) || void 0 === e ? void 0 : e.keys()) && void 0 !== t ? t : []).filter((e) => T(n, e, h.Dg.VOICE));
+        var e, n;
+        let r = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.Yn.DEFAULT;
+        return Array.from(null !== (n = null === (e = E.get(r)) || void 0 === e ? void 0 : e.keys()) && void 0 !== n ? n : []).filter((e) => S(r, e, m.Dg.VOICE));
     }
     isSpeaking(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h.Yn.DEFAULT;
-        return T(t, e, h.Dg.VOICE);
+        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : m.Yn.DEFAULT;
+        return S(n, e, m.Dg.VOICE);
     }
     isPrioritySpeaker(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h.Yn.DEFAULT;
-        return T(t, e, h.Dg.PRIORITY);
+        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : m.Yn.DEFAULT;
+        return S(n, e, m.Dg.PRIORITY);
     }
     isSoundSharing(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h.Yn.DEFAULT;
-        return T(t, e, h.Dg.SOUNDSHARE);
+        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : m.Yn.DEFAULT;
+        return S(n, e, m.Dg.SOUNDSHARE);
     }
     isAnyoneElseSpeaking() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.Yn.DEFAULT;
-        return b(e, h.Dg.VOICE, !0);
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.Yn.DEFAULT;
+        return A(e, m.Dg.VOICE, !0);
     }
     isCurrentUserSpeaking() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.Yn.DEFAULT;
-        return null != g && this.isSpeaking(g, e);
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.Yn.DEFAULT;
+        return null != v && this.isSpeaking(v, e);
     }
     isAnyonePrioritySpeaking() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.Yn.DEFAULT;
-        return b(e, h.Dg.VOICE | h.Dg.PRIORITY);
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.Yn.DEFAULT;
+        return A(e, m.Dg.VOICE | m.Dg.PRIORITY);
     }
     isCurrentUserPrioritySpeaking() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.Yn.DEFAULT;
-        return null != g && this.isPrioritySpeaker(g, e) && this.isSpeaking(g, e);
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.Yn.DEFAULT;
+        return null != v && this.isPrioritySpeaker(v, e) && this.isSpeaking(v, e);
     }
 }
-(s = 'SpeakingStore'),
-    (a = 'displayName') in (i = y)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new y(l.Z, {
-        CONNECTION_OPEN: S,
-        OVERLAY_INITIALIZE: S,
-        SPEAKING: function (e) {
-            let { context: t, userId: n, speakingFlags: r } = e;
-            if ((r & h.Dg.PRIORITY) === h.Dg.PRIORITY) {
-                let e = c.Z.getChannel(_.Z.getVoiceChannelId());
-                null != e &&
-                u.BT({
-                    permission: p.Plq.PRIORITY_SPEAKER,
-                    user: n,
-                    context: e
-                })
-                    ? d.Z.setCanHavePriority(n, !0)
-                    : (d.Z.setCanHavePriority(n, !1), (r &= ~h.Dg.PRIORITY));
-            }
-            return (function (e, t, n) {
-                var r, i;
-                let a = (function () {
-                        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.Yn.DEFAULT,
-                            t = m.get(e);
-                        return null == t && ((t = new Map()), m.set(e, t)), t;
-                    })(e),
-                    s = a.get(t),
-                    o = null !== (r = null == s ? void 0 : s.flags) && void 0 !== r ? r : 0;
-                if (0 === o && 0 === n) return !1;
-                if (0 === n) a.delete(t), 0 === a.size && m.delete(e);
-                else {
-                    let e = null !== (i = null == s ? void 0 : s.since) && void 0 !== i ? i : null,
-                        r = (o & h.Dg.VOICE) === h.Dg.VOICE,
-                        l = (n & h.Dg.VOICE) === h.Dg.VOICE;
-                    r !== l && (e = l ? Date.now() : null),
-                        a.set(t, {
-                            flags: n,
-                            since: e
-                        });
-                }
-                return !0;
-            })(t, n, r);
-        },
-        VOICE_STATE_UPDATES: function (e) {
-            let { voiceStates: t } = e;
-            return t.reduce((e, t) => {
-                let { userId: n, channelId: r, sessionId: i } = t,
-                    a = !1,
-                    s = v;
-                return n === g && i === E && (v = null != r ? r : null), s !== v && (a = m.delete(h.Yn.DEFAULT) || a), null == r ? (a = n === g && i === E ? m.delete(h.Yn.DEFAULT) || a : I(h.Yn.DEFAULT, n) || a) : n === g && i !== E ? (a = m.delete(h.Yn.DEFAULT) || a) : n !== g && r !== f.Z.getChannelId() && (a = I(h.Yn.DEFAULT, n) || a), a || e;
-            }, !1);
-        }
+g(D, 'displayName', 'SpeakingStore'),
+    (n.Z = new D(u.Z, {
+        CONNECTION_OPEN: C,
+        OVERLAY_INITIALIZE: C,
+        SPEAKING: R,
+        VOICE_STATE_UPDATES: O
     }));

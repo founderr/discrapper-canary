@@ -1,13 +1,13 @@
-n.d(t, {
+r.d(n, {
     A: function () {
-        return l;
+        return u;
     }
 });
-var r = n(442837),
-    i = n(818083),
-    a = n(592125),
-    s = n(155647);
-let o = (0, i.B)({
+var i = r(442837),
+    a = r(818083),
+    s = r(592125),
+    o = r(155647);
+let l = (0, a.B)({
     kind: 'user',
     id: '2024-08_iar_privacy_and_safety_settings_upsells',
     label: 'IAR Privacy & Safety Settings Upsells',
@@ -20,14 +20,12 @@ let o = (0, i.B)({
         }
     ]
 });
-function l(e) {
-    let { location: t, settingsUpsells: n, channelId: i } = e,
-        l = (0, r.e7)([a.Z], () => a.Z.getChannel(i));
-    return (
-        (0, s.jc)(n, null == l ? void 0 : l.type).length > 0 &&
-        (function (e) {
-            let { enabled: t } = o.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
-            return t;
-        })(t)
-    );
+function u(e) {
+    let { location: n, settingsUpsells: r, channelId: a } = e,
+        l = (0, i.e7)([s.Z], () => s.Z.getChannel(a));
+    return (0, o.jc)(r, null == l ? void 0 : l.type).length > 0 && c(n);
+}
+function c(e) {
+    let { enabled: n } = l.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
+    return n;
 }

@@ -1,3 +1,4 @@
-t.Z = function (e, t) {
-    return e === t || (e != e && t != t);
-};
+function r(e, n) {
+    return e === n || (e != e && n != n);
+}
+n.Z = r;

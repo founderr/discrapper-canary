@@ -1,43 +1,44 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return l;
+        return c;
     }
 });
-var r = n(423650),
-    i = n.n(r),
-    a = n(754700),
-    s = n(628665),
-    o = n(388032);
-function l(e) {
-    let { entityName: t } = e,
-        n = [
+var i = r(423650),
+    a = r.n(i),
+    s = r(754700),
+    o = r(628665),
+    l = r(388032);
+let u = '1290718710658629658';
+function c(e) {
+    let { entityName: n } = e,
+        r = [
             {
                 key: 'NOT_INTERESTED',
-                text: o.intl.formatToPlainString(o.t.AZRWVV, { entityName: t })
+                text: l.intl.formatToPlainString(l.t.AZRWVV, { entityName: n })
             },
             {
                 key: 'INVALUABLE',
-                text: o.intl.string(o.t.ETU4NT)
+                text: l.intl.string(l.t.ETU4NT)
             },
             {
                 key: 'TOO_LONG',
-                text: o.intl.string(o.t.uRIIpK)
+                text: l.intl.string(l.t.uRIIpK)
             },
             {
                 key: 'UNSURE_HOW',
-                text: o.intl.string(o.t['5dxvxs'])
+                text: l.intl.string(l.t['5dxvxs'])
             },
             {
                 key: 'OTHER',
-                text: o.intl.string(o.t.RFasgo)
+                text: l.intl.string(l.t.RFasgo)
             }
         ];
     return {
-        id: '1290718710658629658',
-        title: o.intl.string(o.t.ugbhDQ),
-        subtitle: o.intl.string(o.t.FIYcpK),
-        choices: i()(n.slice(0, 4)).concat(n[4]),
-        taskType: a.X.WATCH_VIDEO,
-        experiment: s.Y
+        id: u,
+        title: l.intl.string(l.t.ugbhDQ),
+        subtitle: l.intl.string(l.t.FIYcpK),
+        choices: a()(r.slice(0, 4)).concat(r[4]),
+        taskType: s.X.WATCH_VIDEO,
+        experiment: o.Y
     };
 }

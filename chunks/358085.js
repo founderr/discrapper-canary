@@ -1,8 +1,8 @@
-var r, i;
-n.r(t),
-    n.d(t, {
+var i;
+r.r(n),
+    r.d(n, {
         PlatformTypes: function () {
-            return r;
+            return i;
         },
         getNativePlatform: function () {
             return I;
@@ -23,7 +23,7 @@ n.r(t),
             return _;
         },
         isAndroidWeb: function () {
-            return p;
+            return h;
         },
         isDesktop: function () {
             return d;
@@ -38,7 +38,7 @@ n.r(t),
             return u;
         },
         isMacWeb: function () {
-            return h;
+            return p;
         },
         isPlatformEmbedded: function () {
             return s;
@@ -50,10 +50,9 @@ n.r(t),
             return l;
         }
     }),
-    ((i = r || (r = {})).WINDOWS = 'WINDOWS'),
-    (i.OSX = 'OSX'),
-    (i.LINUX = 'LINUX'),
-    (i.WEB = 'WEB');
+    !(function (e) {
+        (e.WINDOWS = 'WINDOWS'), (e.OSX = 'OSX'), (e.LINUX = 'LINUX'), (e.WEB = 'WEB');
+    })(i || (i = {}));
 let a = window.DiscordNative,
     s = null != a,
     o = null != a ? a.process.platform : '';
@@ -75,11 +74,11 @@ function f() {
 function _() {
     return null != navigator.userAgent && null != navigator.userAgent.toLowerCase().match('(android ).+chrome/[.0-9]* mobile');
 }
-function p() {
+function h() {
     var e;
     return (null === (e = navigator.userAgent) || void 0 === e ? void 0 : e.match(/android/i)) != null;
 }
-function h() {
+function p() {
     var e;
     return (null === (e = navigator.userAgent) || void 0 === e ? void 0 : e.match(/Macintosh/i)) != null;
 }

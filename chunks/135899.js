@@ -1,43 +1,44 @@
-n.d(t, {
+r.d(n, {
     $X: function () {
-        return d;
+        return f;
     },
     IO: function () {
-        return r;
+        return i;
     },
     M_: function () {
-        return l;
-    },
-    U3: function () {
-        return _;
-    },
-    b4: function () {
-        return c;
-    },
-    c9: function () {
         return u;
     },
+    U3: function () {
+        return h;
+    },
+    b4: function () {
+        return d;
+    },
+    c9: function () {
+        return c;
+    },
     mu: function () {
-        return f;
+        return _;
     },
     tA: function () {
         return p;
     },
     zs: function () {
-        return o;
+        return l;
     }
-}),
-    n(47120);
-var r,
-    i,
-    a = n(149765),
-    s = n(981631);
-let o = 'publicSuccessModalSeen',
-    l = '667560445975986187',
-    u = '669627189624307712',
-    c = '1',
-    d = [s.Plq.ADMINISTRATOR, s.Plq.KICK_MEMBERS, s.Plq.BAN_MEMBERS, s.Plq.MANAGE_GUILD, s.Plq.MANAGE_CHANNELS, s.Plq.MANAGE_ROLES, s.Plq.MANAGE_MESSAGES, s.Plq.MANAGE_GUILD_EXPRESSIONS, s.Plq.CREATE_GUILD_EXPRESSIONS, s.Plq.MANAGE_EVENTS, s.Plq.CREATE_EVENTS, s.Plq.MODERATE_MEMBERS, s.Plq.MENTION_EVERYONE],
-    f = a.$e(...d),
-    _ = 1000,
+});
+var i,
+    a = r(47120);
+var s = r(149765),
+    o = r(981631);
+let l = 'publicSuccessModalSeen',
+    u = '667560445975986187',
+    c = '669627189624307712',
+    d = '1',
+    f = [o.Plq.ADMINISTRATOR, o.Plq.KICK_MEMBERS, o.Plq.BAN_MEMBERS, o.Plq.MANAGE_GUILD, o.Plq.MANAGE_CHANNELS, o.Plq.MANAGE_ROLES, o.Plq.MANAGE_MESSAGES, o.Plq.MANAGE_GUILD_EXPRESSIONS, o.Plq.CREATE_GUILD_EXPRESSIONS, o.Plq.MANAGE_EVENTS, o.Plq.CREATE_EVENTS, o.Plq.MODERATE_MEMBERS, o.Plq.MENTION_EVERYONE],
+    _ = s.$e(...f),
+    h = 1000,
     p = 'Enable Community Modal';
-((i = r || (r = {})).SAFETY_CHECK = 'safety_check'), (i.BASICS = 'basics'), (i.FINISH = 'finish');
+!(function (e) {
+    (e.SAFETY_CHECK = 'safety_check'), (e.BASICS = 'basics'), (e.FINISH = 'finish');
+})(i || (i = {}));

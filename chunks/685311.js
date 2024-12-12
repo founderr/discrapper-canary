@@ -1,22 +1,22 @@
-n.d(t, {
+r.d(n, {
     e: function () {
-        return I;
+        return A;
     }
-}),
-    n(47120),
-    n(653041);
-var r = n(200651),
-    i = n(192379),
-    a = n(752877),
-    s = n(442837),
-    o = n(780384),
-    l = n(481060),
-    u = n(410030),
-    c = n(607070),
-    d = n(965645),
-    f = n(362061),
-    _ = n(424496);
-let p = [
+});
+var i = r(47120);
+var a = r(653041);
+var s = r(200651),
+    o = r(192379),
+    l = r(752877),
+    u = r(442837),
+    c = r(780384),
+    d = r(481060),
+    f = r(410030),
+    _ = r(607070),
+    h = r(965645),
+    p = r(362061),
+    m = r(424496);
+let g = [
         {
             box: '#FFD89E',
             ribbon: '#FF7476'
@@ -46,7 +46,7 @@ let p = [
             ribbon: '#67DA9C'
         }
     ],
-    h = [
+    E = [
         {
             box: '#EABB75',
             ribbon: '#E4595C'
@@ -76,40 +76,42 @@ let p = [
             ribbon: '#81C29F'
         }
     ],
-    m = 1 / 300,
-    g = (0, a.animated)(d.Z),
-    E = (0, a.animated)(f.Z),
-    v = (0, a.animated)(l.GiftIcon);
-function I(e) {
+    v = 7,
+    I = 1 / 300;
+function T(e) {
+    let [n, r] = o.useState(!1),
+        [i, a] = o.useState(Math.floor(Math.random() * v));
+    return (
+        o.useEffect(() => {
+            if (e) return;
+            let n = Math.random() <= I;
+            if ((r(n), !n)) {
+                let e;
+                do e = Math.floor(Math.random() * v);
+                while (e === i);
+                a(e);
+            }
+        }, [e]),
+        [n, i]
+    );
+}
+let b = (0, l.animated)(h.Z),
+    y = (0, l.animated)(p.Z),
+    S = (0, l.animated)(d.GiftIcon);
+function A(e) {
     let {
-            themeOverride: t,
-            hovered: n,
-            isContentDismissed: a,
-            boxColors: s = {
-                dark: p,
-                light: h
+            themeOverride: n,
+            hovered: r,
+            isContentDismissed: i,
+            boxColors: a = {
+                dark: g,
+                light: E
             }
         } = e,
-        c = (0, u.ZP)(),
-        [d, f] = (function (e) {
-            let [t, n] = i.useState(!1),
-                [r, a] = i.useState(Math.floor(7 * Math.random()));
-            return (
-                i.useEffect(() => {
-                    if (e) return;
-                    let t = Math.random() <= m;
-                    if ((n(t), !t)) {
-                        let e;
-                        do e = Math.floor(7 * Math.random());
-                        while (e === r);
-                        a(e);
-                    }
-                }, [e]),
-                [t, r]
-            );
-        })(n),
-        _ = (0, l.useSpring)({
-            reverse: !n,
+        o = (0, f.ZP)(),
+        [l, u] = T(r),
+        _ = (0, d.useSpring)({
+            reverse: !r,
             reset: !0,
             from: { scale: 1 },
             to: { scale: 1.14 },
@@ -118,35 +120,37 @@ function I(e) {
                 friction: 24
             }
         }),
-        I = a ? f : 0,
-        T = (0, o.wj)(null != t ? t : c) ? s.dark[I] : s.light[I];
-    return !n && a
-        ? (0, r.jsx)(v, {})
-        : a && d
-          ? (0, r.jsx)(E, {
-                isDark: (0, o.wj)(c),
+        h = !!i && l,
+        p = i ? u : 0,
+        m = (0, c.wj)(null != n ? n : o) ? a.dark[p] : a.light[p];
+    return !r && i
+        ? (0, s.jsx)(S, {})
+        : h
+          ? (0, s.jsx)(y, {
+                isDark: (0, c.wj)(o),
                 style: _
             })
-          : (0, r.jsx)(g, {
-                boxColor: T.box,
-                ribbonColor: T.ribbon,
+          : (0, s.jsx)(b, {
+                boxColor: m.box,
+                ribbonColor: m.ribbon,
                 style: _
             });
 }
-t.Z = i.memo(function (e) {
-    let { hovered: t } = e,
-        a = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
-        o = i.useMemo(() => {
+function N(e) {
+    let { hovered: n } = e,
+        i = (0, u.e7)([_.Z], () => _.Z.useReducedMotion),
+        a = o.useMemo(() => {
             let e = [];
-            return !a && e.push(() => n.e('31496').then(n.t.bind(n, 347381, 19))), e.push(() => n.e('37711').then(n.t.bind(n, 891220, 19))), e;
-        }, [a]);
-    return t
-        ? (0, r.jsx)(l.ChainedLottieAnimation, {
-              className: _.icon,
-              animationData: o
+            return !i && e.push(() => r.e('31496').then(r.t.bind(r, 347381, 19))), e.push(() => r.e('37711').then(r.t.bind(r, 891220, 19))), e;
+        }, [i]);
+    return n
+        ? (0, s.jsx)(d.ChainedLottieAnimation, {
+              className: m.icon,
+              animationData: a
           })
-        : (0, r.jsx)(I, {
-              hovered: t,
+        : (0, s.jsx)(A, {
+              hovered: n,
               isContentDismissed: !0
           });
-});
+}
+n.Z = o.memo(N);

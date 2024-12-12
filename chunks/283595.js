@@ -1,182 +1,195 @@
-n(47120), n(789020), n(177593);
-var r,
-    i,
-    a,
-    s,
-    o = n(392711),
-    l = n.n(o),
-    u = n(442837),
-    c = n(433517),
-    d = n(570140),
-    f = n(85521),
-    _ = n(630388),
-    p = n(780570),
-    h = n(314897),
-    m = n(981631);
-let g = 'LibraryApplicationStore';
-function E() {
+var i,
+    a = r(47120);
+var s = r(789020);
+var o = r(177593);
+var l = r(392711),
+    u = r.n(l),
+    c = r(442837),
+    d = r(433517),
+    f = r(570140),
+    _ = r(85521),
+    h = r(630388),
+    p = r(780570),
+    m = r(314897),
+    g = r(981631);
+function E(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let v = 'LibraryApplicationStore';
+function I() {
     var e;
-    return null !== (e = c.K.get(g)) && void 0 !== e ? e : {};
+    return null !== (e = d.K.get(v)) && void 0 !== e ? e : {};
 }
-let v = !1,
-    I = {},
-    T = {},
-    b = new Set(),
-    S = {},
+let T = !1,
+    b = {},
     y = {},
-    A = !1;
-function N() {
-    c.K.set(g, {
-        ...E(),
-        activeLaunchOptionIds: y
+    S = new Set(),
+    A = {},
+    N = {},
+    C = !1;
+function R() {
+    d.K.set(v, {
+        ...I(),
+        activeLaunchOptionIds: N
     });
 }
-function C() {
-    c.K.set(g, {
-        ...E(),
-        activeLibraryApplicationBranchIds: S
+function O() {
+    d.K.set(v, {
+        ...I(),
+        activeLibraryApplicationBranchIds: A
     });
 }
-function R(e) {
-    for (let t of e) {
-        let e = f.Z.createFromServer(t);
-        I[(0, p.Tu)(e.id, e.branchId)] = e;
+function D(e) {
+    for (let n of e) {
+        let e = _.Z.createFromServer(n);
+        b[(0, p.Tu)(e.id, e.branchId)] = e;
     }
-}
-function O(e) {
-    let { libraryApplication: t } = e,
-        n = f.Z.createFromServer(t),
-        r = (0, p.Tu)(n.id, n.branchId);
-    (I[r] = n), b.delete(r);
-}
-function D(e, t) {
-    var n;
-    let r = (0, p.Tu)(e, t);
-    return null !== (n = I[r]) && void 0 !== n ? n : T[r];
 }
 function L() {
+    T = !1;
+}
+function x(e) {
+    let { libraryApplications: n } = e;
+    (b = {}), D(n), (T = !0);
+}
+function w(e) {
+    let { libraryApplications: n } = e;
+    D(n);
+}
+function P(e) {
+    let { applicationId: n, branchId: r, flags: i } = e,
+        a = (0, p.Tu)(n, r),
+        s = F(n, r);
+    null != s && !s.isHidden() && h.yE(i, g.eHb.HIDDEN) && (C = !0), S.add(a);
+}
+function M(e) {
+    let { libraryApplication: n } = e,
+        r = _.Z.createFromServer(n),
+        i = (0, p.Tu)(r.id, r.branchId);
+    (b[i] = r), S.delete(i);
+}
+function k(e) {
+    let { applicationId: n, branchId: r, launchOptionId: i } = e;
+    (N[(0, p.Tu)(n, r)] = i), R();
+}
+function U(e) {
+    let { applicationId: n, branchId: r } = e;
+    if (A[n] === r) return !1;
+    (A[n] = r), O();
+}
+function B(e) {
+    let { libraryApplications: n } = e;
+    for (let e of n) y[(0, p.Tu)(e.id, e.branchId)] = e;
+}
+function G() {
+    y = {};
+}
+function Z(e) {
+    let n = V();
+    return (
+        Object.keys(n).forEach((r) => {
+            !e(n[r]) && delete n[r];
+        }),
+        n
+    );
+}
+function F(e, n) {
+    var r;
+    let i = (0, p.Tu)(e, n);
+    return null !== (r = b[i]) && void 0 !== r ? r : y[i];
+}
+function V() {
     return {
-        ...T,
-        ...I
+        ...y,
+        ...b
     };
 }
-class x extends (r = u.ZP.Store) {
+class j extends (i = c.ZP.Store) {
     initialize() {
-        this.waitFor(h.default);
-        let e = c.K.get(g);
-        null != e && (null == e.activeLaunchOptionIds ? N() : (y = e.activeLaunchOptionIds), null == e.activeLibraryApplicationBranchIds ? C() : (S = e.activeLibraryApplicationBranchIds));
+        this.waitFor(m.default);
+        let e = d.K.get(v);
+        null != e && (null == e.activeLaunchOptionIds ? R() : (N = e.activeLaunchOptionIds), null == e.activeLibraryApplicationBranchIds ? O() : (A = e.activeLibraryApplicationBranchIds));
     }
     get libraryApplications() {
-        return (function (e) {
-            let t = L();
-            return (
-                Object.keys(t).forEach((n) => {
-                    !e(t[n]) && delete t[n];
-                }),
-                t
-            );
-        })((e) => !e.isHidden());
+        return Z((e) => !e.isHidden());
     }
     getAllLibraryApplications() {
-        return L();
+        return V();
     }
     hasLibraryApplication() {
-        return Object.keys(L()).length > 0;
+        return Object.keys(V()).length > 0;
     }
-    hasApplication(e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            r = D(e, t);
-        return !(null == r || (!n && r.isHidden())) && (0, p.Je)(r);
+    hasApplication(e, n) {
+        let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+            i = F(e, n);
+        return !(null == i || (!r && i.isHidden())) && (0, p.Je)(i);
     }
-    getLibraryApplication(e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            r = D(e, t);
-        return n && null != r ? ((0, p.Je)(r) ? r : null) : r;
+    getLibraryApplication(e, n) {
+        let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+            i = F(e, n);
+        return r && null != i ? ((0, p.Je)(i) ? i : null) : i;
     }
     getActiveLibraryApplication(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = S[e];
-        if (null != n) {
-            var r;
-            let i = (0, p.Tu)(e, n),
-                a = null !== (r = I[i]) && void 0 !== r ? r : T[i];
-            if (null != a && (0, p.Je)(a) && (t || !a.isHidden())) return a;
+        let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            r = A[e];
+        if (null != r) {
+            var i;
+            let a = (0, p.Tu)(e, r),
+                s = null !== (i = b[a]) && void 0 !== i ? i : y[a];
+            if (null != s && (0, p.Je)(s) && (n || !s.isHidden())) return s;
         }
-        let i = L();
-        for (let n in i)
-            if (i[n].id === e) {
-                let e = i[n];
-                if ((0, p.Je)(e) && (t || !e.isHidden())) return e;
+        let a = V();
+        for (let r in a)
+            if (a[r].id === e) {
+                let e = a[r];
+                if ((0, p.Je)(e) && (n || !e.isHidden())) return e;
             }
     }
-    isUpdatingFlags(e, t) {
-        return b.has((0, p.Tu)(e, t));
+    isUpdatingFlags(e, n) {
+        return S.has((0, p.Tu)(e, n));
     }
-    getActiveLaunchOptionId(e, t) {
-        return y[(0, p.Tu)(e, t)];
+    getActiveLaunchOptionId(e, n) {
+        return N[(0, p.Tu)(e, n)];
     }
     get fetched() {
-        return v;
+        return T;
     }
     get entitledBranchIds() {
-        return l()(L())
+        return u()(V())
             .values()
             .filter((e) => (0, p.Je)(e))
             .map((e) => e.branchId)
             .value();
     }
     get hasRemovedLibraryApplicationThisSession() {
-        return A;
+        return C;
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {
-            if (v) return setImmediate(e), !1;
+            if (T) return setImmediate(e), !1;
         });
     }
 }
-(s = 'LibraryApplicationStore'),
-    (a = 'displayName') in (i = x)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new x(d.Z, {
-        LOGOUT: function () {
-            v = !1;
-        },
-        LIBRARY_FETCH_SUCCESS: function (e) {
-            let { libraryApplications: t } = e;
-            (I = {}), R(t), (v = !0);
-        },
-        SKU_PURCHASE_SUCCESS: function (e) {
-            let { libraryApplications: t } = e;
-            R(t);
-        },
-        LIBRARY_APPLICATION_FLAGS_UPDATE_START: function (e) {
-            let { applicationId: t, branchId: n, flags: r } = e,
-                i = (0, p.Tu)(t, n),
-                a = D(t, n);
-            null != a && !a.isHidden() && _.yE(r, m.eHb.HIDDEN) && (A = !0), b.add(i);
-        },
-        LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: O,
-        LIBRARY_APPLICATION_UPDATE: O,
-        LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: function (e) {
-            let { applicationId: t, branchId: n, launchOptionId: r } = e;
-            (y[(0, p.Tu)(t, n)] = r), N();
-        },
-        LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: function (e) {
-            let { applicationId: t, branchId: n } = e;
-            if (S[t] === n) return !1;
-            (S[t] = n), C();
-        },
-        LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: function (e) {
-            let { libraryApplications: t } = e;
-            for (let e of t) T[(0, p.Tu)(e.id, e.branchId)] = e;
-        },
-        DEVELOPER_TEST_MODE_RESET: function () {
-            T = {};
-        }
+E(j, 'displayName', 'LibraryApplicationStore'),
+    (n.Z = new j(f.Z, {
+        LOGOUT: L,
+        LIBRARY_FETCH_SUCCESS: x,
+        SKU_PURCHASE_SUCCESS: w,
+        LIBRARY_APPLICATION_FLAGS_UPDATE_START: P,
+        LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: M,
+        LIBRARY_APPLICATION_UPDATE: M,
+        LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: k,
+        LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: U,
+        LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: B,
+        DEVELOPER_TEST_MODE_RESET: G
     }));

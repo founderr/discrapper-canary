@@ -1,27 +1,28 @@
-n(47120);
-var r = n(147913),
-    i = n(430871),
-    a = n(185923);
-let s = new Set([a.qR.EmojiButtonMouseEntered, a.qR.ChatInputExpressionPressed, a.qR.ChatInputSuggestionsShown, a.qR.SearchEmojiKeybindPressed, a.qR.AutocompleteTyped, a.qR.GuildLeaveModalShown, a.qR.AddReactionPopoutMouseEntered, a.qR.AddReactionPopoutFocused, a.qR.MessageContextMenuMouseEntered, a.qR.AutocompleteWrapperShown]);
-class o extends r.Z {
+var i = r(47120);
+var a = r(147913),
+    s = r(430871),
+    o = r(185923);
+function l(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let u = new Set([o.qR.EmojiButtonMouseEntered, o.qR.ChatInputExpressionPressed, o.qR.ChatInputSuggestionsShown, o.qR.SearchEmojiKeybindPressed, o.qR.AutocompleteTyped, o.qR.GuildLeaveModalShown, o.qR.AddReactionPopoutMouseEntered, o.qR.AddReactionPopoutFocused, o.qR.MessageContextMenuMouseEntered, o.qR.AutocompleteWrapperShown]);
+class c extends a.Z {
     handleInteraction(e) {
-        let { interaction: t } = e;
-        s.has(t) && (0, i.x)(t);
+        let { interaction: n } = e;
+        u.has(n) && (0, s.x)(n);
     }
     constructor(...e) {
-        var t, n, r;
-        super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = { EMOJI_INTERACTION_INITIATED: this.handleInteraction }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+        super(...e), l(this, 'actions', { EMOJI_INTERACTION_INITIATED: this.handleInteraction });
     }
 }
-t.Z = new o();
+n.Z = new c();

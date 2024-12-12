@@ -1,8 +1,9 @@
-var r, i;
-n.d(t, {
+var i;
+r.d(n, {
     o: function () {
-        return r;
+        return i;
     }
 }),
-    ((i = r || (r = {}))[(i.TRENDING_TYPE_UNSPECIFIED = 0)] = 'TRENDING_TYPE_UNSPECIFIED'),
-    (i[(i.GLOBAL = 1)] = 'GLOBAL');
+    !(function (e) {
+        (e[(e.TRENDING_TYPE_UNSPECIFIED = 0)] = 'TRENDING_TYPE_UNSPECIFIED'), (e[(e.GLOBAL = 1)] = 'GLOBAL');
+    })(i || (i = {}));

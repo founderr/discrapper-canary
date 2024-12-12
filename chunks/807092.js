@@ -1,104 +1,113 @@
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140),
-    u = n(375954);
-let c = {},
-    d = {},
-    f = {};
-function _(e) {
-    if (null == e) return !1;
-    let t = d[e];
-    if (null == t) return !1;
-    let n = u.Z.getMessage(e, t.messageId);
-    if (null == n) return !1;
-    (c[e] = {
-        channel: t.channel,
-        message: n,
-        shouldMention: t.shouldMention,
-        showMentionToggle: t.showMentionToggle
+var i,
+    a = r(442837),
+    s = r(570140),
+    o = r(375954);
+function l(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let u = {},
+    c = {},
+    d = {};
+function f(e) {
+    let { channel: n, message: r, shouldMention: i = !0, showMentionToggle: a = !0, source: s } = e;
+    (u[n.id] = {
+        channel: n,
+        message: r,
+        shouldMention: i,
+        showMentionToggle: a
     }),
-        delete d[e];
+        (d[n.id] = s);
 }
-function p() {
-    (c = {}), (d = {}), (f = {});
+function _(e) {
+    let { channel: n, messageId: r, shouldMention: i = !0, showMentionToggle: a = !0 } = e;
+    c[n.id] = {
+        channel: n,
+        messageId: r,
+        shouldMention: i,
+        showMentionToggle: a
+    };
 }
-class h extends (s = o.ZP.Store) {
+function h(e) {
+    let { channelId: n, shouldMention: r } = e;
+    n in u &&
+        (u[n] = {
+            ...u[n],
+            shouldMention: r
+        }),
+        n in c &&
+            (c[n] = {
+                ...c[n],
+                shouldMention: r
+            });
+}
+function p(e) {
+    let { channelId: n } = e;
+    delete u[n], delete c[n];
+}
+function m(e) {
+    var n, r, i;
+    let { id: a, channelId: s } = e;
+    if ((null === (r = u[s]) || void 0 === r ? void 0 : null === (n = r.message) || void 0 === n ? void 0 : n.id) === a) delete u[s], delete d[s];
+    else {
+        if ((null === (i = c[s]) || void 0 === i ? void 0 : i.messageId) !== a) return !1;
+        delete c[s], delete d[s];
+    }
+}
+function g(e) {
+    if (null == e) return !1;
+    let n = c[e];
+    if (null == n) return !1;
+    let r = o.Z.getMessage(e, n.messageId);
+    if (null == r) return !1;
+    (u[e] = {
+        channel: n.channel,
+        message: r,
+        shouldMention: n.shouldMention,
+        showMentionToggle: n.showMentionToggle
+    }),
+        delete c[e];
+}
+function E(e) {
+    let { channelId: n } = e;
+    g(n);
+}
+function v(e) {
+    let { channelId: n } = e;
+    g(n);
+}
+function I() {
+    (u = {}), (c = {}), (d = {});
+}
+class T extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(u.Z);
+        this.waitFor(o.Z);
     }
     getPendingReply(e) {
-        return c[e];
+        return u[e];
     }
     getPendingReplyActionSource(e) {
-        return f[e];
+        return d[e];
     }
 }
-(a = 'PendingReplyStore'),
-    (i = 'displayName') in (r = h)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.Z = new h(l.Z, {
-        CREATE_PENDING_REPLY: function (e) {
-            let { channel: t, message: n, shouldMention: r = !0, showMentionToggle: i = !0, source: a } = e;
-            (c[t.id] = {
-                channel: t,
-                message: n,
-                shouldMention: r,
-                showMentionToggle: i
-            }),
-                (f[t.id] = a);
-        },
-        CREATE_SHALLOW_PENDING_REPLY: function (e) {
-            let { channel: t, messageId: n, shouldMention: r = !0, showMentionToggle: i = !0 } = e;
-            d[t.id] = {
-                channel: t,
-                messageId: n,
-                shouldMention: r,
-                showMentionToggle: i
-            };
-        },
-        SET_PENDING_REPLY_SHOULD_MENTION: function (e) {
-            let { channelId: t, shouldMention: n } = e;
-            t in c &&
-                (c[t] = {
-                    ...c[t],
-                    shouldMention: n
-                }),
-                t in d &&
-                    (d[t] = {
-                        ...d[t],
-                        shouldMention: n
-                    });
-        },
-        DELETE_PENDING_REPLY: function (e) {
-            let { channelId: t } = e;
-            delete c[t], delete d[t];
-        },
-        CONNECTION_OPEN: p,
-        LOGOUT: p,
-        MESSAGE_DELETE: function (e) {
-            var t, n, r;
-            let { id: i, channelId: a } = e;
-            if ((null === (n = c[a]) || void 0 === n ? void 0 : null === (t = n.message) || void 0 === t ? void 0 : t.id) === i) delete c[a], delete f[a];
-            else {
-                if ((null === (r = d[a]) || void 0 === r ? void 0 : r.messageId) !== i) return !1;
-                delete d[a], delete f[a];
-            }
-        },
-        CHANNEL_SELECT: function (e) {
-            let { channelId: t } = e;
-            _(t);
-        },
-        LOAD_MESSAGES_SUCCESS: function (e) {
-            let { channelId: t } = e;
-            _(t);
-        }
+l(T, 'displayName', 'PendingReplyStore'),
+    (n.Z = new T(s.Z, {
+        CREATE_PENDING_REPLY: f,
+        CREATE_SHALLOW_PENDING_REPLY: _,
+        SET_PENDING_REPLY_SHOULD_MENTION: h,
+        DELETE_PENDING_REPLY: p,
+        CONNECTION_OPEN: I,
+        LOGOUT: I,
+        MESSAGE_DELETE: m,
+        CHANNEL_SELECT: E,
+        LOAD_MESSAGES_SUCCESS: v
     }));

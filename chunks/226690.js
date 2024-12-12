@@ -1,30 +1,31 @@
-n.d(t, {
+r.d(n, {
     F: function () {
-        return c;
+        return d;
     }
-}),
-    n(47120);
-var r,
-    i,
+});
+var i,
     a,
-    s = n(200651),
-    o = n(192379),
-    l = n(846519);
-function u(e, t, n) {
+    s = r(47120);
+var o = r(200651),
+    l = r(192379),
+    u = r(846519);
+function c(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-((a = r || (r = {})).SVG = 'svg'), (a.CANVAS = 'canvas');
-class c extends (i = o.Component) {
+!(function (e) {
+    (e.SVG = 'svg'), (e.CANVAS = 'canvas');
+})(i || (i = {}));
+class d extends (a = l.Component) {
     componentDidMount() {
         (null == this.props.versionKey || !(this.props.versionKey < 0)) && this.loadAnimation();
     }
@@ -38,49 +39,49 @@ class c extends (i = o.Component) {
         if (null != this.animation) this.props.shouldAnimate && (null == e || !e.shouldAnimate) ? (this.props.resetOnPlay ? this.animation.goToAndPlay(0) : this.animation.play()) : !this.props.shouldAnimate && (null == e || e.shouldAnimate) && (this.animation.pause(), null != this.props.pauseAtFrame && this.animation.goToAndStop(this.props.pauseAtFrame, !0));
     }
     render() {
-        return (0, s.jsx)('div', {
+        return (0, o.jsx)('div', {
             className: this.props.className,
             ref: this.animationRef
         });
     }
     constructor(...e) {
         super(...e),
-            u(this, 'animationRef', o.createRef()),
-            u(this, 'animation', void 0),
-            u(this, 'delayTimeout', new l.V7()),
-            u(this, 'loadAnimation', async () => {
-                let { importData: e, loop: t, autoplay: r, delay: i, renderer: a, rendererSettings: s, shouldAnimate: o } = this.props;
+            c(this, 'animationRef', l.createRef()),
+            c(this, 'animation', void 0),
+            c(this, 'delayTimeout', new u.V7()),
+            c(this, 'loadAnimation', async () => {
+                let { importData: e, loop: n, autoplay: i, delay: a, renderer: s, rendererSettings: o, shouldAnimate: l } = this.props;
                 null != this.animation && this.animation.destroy();
-                let [l, { default: u }] = await Promise.all([e(), n.e('23755').then(n.t.bind(n, 500923, 23))]);
+                let [u, { default: c }] = await Promise.all([e(), Promise.resolve().then(r.t.bind(r, 500923, 23))]);
                 if (null == this.animationRef.current) return;
-                let c = 'object' == typeof l && 'default' in l && 'string' == typeof l.default ? { path: l.default } : { animationData: l };
-                (this.animation = u.loadAnimation({
+                let d = 'object' == typeof u && 'default' in u && 'string' == typeof u.default ? { path: u.default } : { animationData: u };
+                (this.animation = c.loadAnimation({
                     container: this.animationRef.current,
-                    renderer: a,
-                    loop: t,
-                    autoplay: r && null == i && o,
-                    rendererSettings: s,
-                    ...c
+                    renderer: s,
+                    loop: n,
+                    autoplay: i && null == a && l,
+                    rendererSettings: o,
+                    ...d
                 })),
-                    null != i
-                        ? this.delayTimeout.start(i, () => {
+                    null != a
+                        ? this.delayTimeout.start(a, () => {
                               var e;
                               null === (e = this.animation) || void 0 === e || e.play();
                           })
                         : this.playOrPauseAnimation(),
                     this.animation.addEventListener('complete', this.handleComplete);
             }),
-            u(this, 'handleComplete', () => {
+            c(this, 'handleComplete', () => {
                 let { onComplete: e } = this.props;
                 null != e && e();
             });
     }
 }
-u(c, 'defaultProps', {
+c(d, 'defaultProps', {
     loop: !0,
     autoplay: !0,
     renderer: 'svg',
     shouldAnimate: !0,
     resetOnPlay: !1
 }),
-    u(c, 'Renderers', r);
+    c(d, 'Renderers', i);

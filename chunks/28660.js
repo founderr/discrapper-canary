@@ -1,35 +1,36 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return l;
+        return u;
     }
-}),
-    n(47120);
-var r,
-    i,
-    a = n(192379),
-    s = n(695346),
-    o = n(768581);
-function l(e) {
-    let { displayProfile: t, size: n, canAnimate: r, pendingBanner: i } = e,
-        l = s.QK.getSetting(),
-        u = null == t ? void 0 : t.getPreviewBanner(i, r, n),
-        [c, d] = (0, a.useState)((null == t ? void 0 : t.banner) == null ? 'COMPLETE' : 'SHOULD_LOAD');
+});
+var i,
+    a = r(47120);
+var s = r(192379),
+    o = r(695346),
+    l = r(768581);
+function u(e) {
+    let { displayProfile: n, size: r, canAnimate: i, pendingBanner: a } = e,
+        u = o.QK.getSetting(),
+        c = null == n ? void 0 : n.getPreviewBanner(a, i, r),
+        [d, f] = (0, s.useState)((null == n ? void 0 : n.banner) == null ? 'COMPLETE' : 'SHOULD_LOAD');
     return (
-        (0, a.useEffect)(() => {
-            if (null == u || 'SHOULD_LOAD' !== c) return;
-            d('LOADING');
+        (0, s.useEffect)(() => {
+            if (null == c || 'SHOULD_LOAD' !== d) return;
+            f('LOADING');
             let e = new Image();
-            (e.src = u), (e.onload = () => d('COMPLETE'));
-        }, [u, c]),
-        (0, a.useEffect)(() => {
-            if (l) return;
-            let e = null == t ? void 0 : t.getPreviewBanner(i, !0, n);
-            if (null != e && !!(0, o.F8)(e)) new Image().src = e;
-        }, [l, t, n, i]),
+            (e.src = c), (e.onload = () => f('COMPLETE'));
+        }, [c, d]),
+        (0, s.useEffect)(() => {
+            if (u) return;
+            let e = null == n ? void 0 : n.getPreviewBanner(a, !0, r);
+            if (null != e && !!(0, l.F8)(e)) new Image().src = e;
+        }, [u, n, r, a]),
         {
-            bannerSrc: u,
-            status: c
+            bannerSrc: c,
+            status: d
         }
     );
 }
-((i = r || (r = {})).SHOULD_LOAD = 'SHOULD_LOAD'), (i.LOADING = 'LOADING'), (i.COMPLETE = 'COMPLETE');
+!(function (e) {
+    (e.SHOULD_LOAD = 'SHOULD_LOAD'), (e.LOADING = 'LOADING'), (e.COMPLETE = 'COMPLETE');
+})(i || (i = {}));

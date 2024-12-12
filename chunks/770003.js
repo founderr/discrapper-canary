@@ -1,35 +1,36 @@
-n.d(t, {
+r.d(n, {
     gb: function () {
-        return a;
+        return o;
     },
     xQ: function () {
-        return i;
+        return s;
     }
 });
-let r = null;
-function i(e, t = 'assertive', n = 7000) {
-    !r && (r = new s()), r.announce(e, t, n);
+let i = 7000,
+    a = null;
+function s(e, n = 'assertive', r = i) {
+    !a && (a = new l()), a.announce(e, n, r);
 }
-function a(e) {
-    r && r.clear(e);
+function o(e) {
+    a && a.clear(e);
 }
-class s {
+class l {
     createLog(e) {
-        let t = document.createElement('div');
-        return t.setAttribute('role', 'log'), t.setAttribute('aria-live', e), t.setAttribute('aria-relevant', 'additions'), t;
+        let n = document.createElement('div');
+        return n.setAttribute('role', 'log'), n.setAttribute('aria-live', e), n.setAttribute('aria-relevant', 'additions'), n;
     }
     destroy() {
         this.node && (document.body.removeChild(this.node), (this.node = null));
     }
-    announce(e, t = 'assertive', n = 7000) {
+    announce(e, n = 'assertive', r = i) {
         if (!this.node) return;
-        let r = document.createElement('div');
-        (r.textContent = e),
-            'assertive' === t ? this.assertiveLog.appendChild(r) : this.politeLog.appendChild(r),
+        let a = document.createElement('div');
+        (a.textContent = e),
+            'assertive' === n ? this.assertiveLog.appendChild(a) : this.politeLog.appendChild(a),
             '' !== e &&
                 setTimeout(() => {
-                    r.remove();
-                }, n);
+                    a.remove();
+                }, r);
     }
     clear(e) {
         this.node && ((!e || 'assertive' === e) && (this.assertiveLog.innerHTML = ''), (!e || 'polite' === e) && (this.politeLog.innerHTML = ''));

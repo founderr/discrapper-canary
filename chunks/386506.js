@@ -1,73 +1,75 @@
-let r;
-n.d(t, {
+let i;
+r.d(n, {
     M3: function () {
-        return f;
+        return p;
     },
     aD: function () {
-        return u;
+        return f;
     },
     bF: function () {
-        return d;
+        return h;
     },
     f0: function () {
-        return c;
+        return _;
     }
 });
-var i = n(544891),
-    a = n(314897),
-    s = n(12647),
-    o = n(865427);
-let l = '/__development/build_overrides';
-async function u(e) {
+var a = r(544891),
+    s = r(314897),
+    o = r(12647),
+    l = r(865427);
+let u = '/__development/build_overrides',
+    c = '/__development/create_build_override_link',
+    d = '/__development/link';
+async function f(e) {
     try {
-        var t;
-        let n = await i.tn.put({
-            url: (0, o.pU)(l),
+        var n;
+        let r = await a.tn.put({
+            url: (0, l.pU)(u),
             body: {
                 overrides: e,
-                version: o.Ji
+                version: l.Ji
             },
-            headers: { Authorization: null !== (t = a.default.getToken()) && void 0 !== t ? t : '' },
+            headers: { Authorization: null !== (n = s.default.getToken()) && void 0 !== n ? n : '' },
             oldFormErrors: !0,
             rejectWithError: !1
         });
-        return await r(n), n;
+        return await i(r), r;
     } catch (e) {
         return e;
     }
 }
-async function c(e) {
+async function _(e) {
     try {
-        let t = await i.tn.put({
-            url: (0, o.pU)('/__development/link'),
+        let n = await a.tn.put({
+            url: (0, l.pU)(d),
             body: {
                 payload: e,
-                token: a.default.getToken(),
-                version: o.Ji
+                token: s.default.getToken(),
+                version: l.Ji
             },
             oldFormErrors: !0,
             rejectWithError: !1
         });
-        return await r(t), t;
+        return await i(n), n;
     } catch (e) {
         return e;
     }
 }
-async function d() {
-    let e = await i.tn.del({
-        url: (0, o.pU)(l),
+async function h() {
+    let e = await a.tn.del({
+        url: (0, l.pU)(u),
         oldFormErrors: !0,
         rejectWithError: !1
     });
-    return await r(e), e;
+    return await i(e), e;
 }
-function f(e) {
-    var t;
-    return i.tn
+function p(e) {
+    var n;
+    return a.tn
         .post({
-            url: (0, o.pU)('/__development/create_build_override_link'),
+            url: (0, l.pU)(c),
             body: e,
-            headers: { Authorization: null !== (t = a.default.getToken()) && void 0 !== t ? t : '' },
+            headers: { Authorization: null !== (n = s.default.getToken()) && void 0 !== n ? n : '' },
             oldFormErrors: !0,
             rejectWithError: !1
         })
@@ -88,8 +90,8 @@ function f(e) {
                       }
         );
 }
-r = async (e) => {
+i = async (e) => {
     try {
-        await s.Z.flushCookies();
+        await o.Z.flushCookies();
     } catch (e) {}
 };

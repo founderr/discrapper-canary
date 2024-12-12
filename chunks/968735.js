@@ -1,4 +1,4 @@
-n.d(t, {
+r.d(n, {
     C8: function () {
         return o;
     },
@@ -15,38 +15,39 @@ n.d(t, {
         return s;
     }
 });
-var r,
-    i,
-    a = n(259630);
-((r = i || (i = {})).MISSING_VALUE = 'MISSING_VALUE'), (r.INVALID_VALUE = 'INVALID_VALUE'), (r.MISSING_INTL_API = 'MISSING_INTL_API');
+var i,
+    a = r(259630);
+!(function (e) {
+    (e.MISSING_VALUE = 'MISSING_VALUE'), (e.INVALID_VALUE = 'INVALID_VALUE'), (e.MISSING_INTL_API = 'MISSING_INTL_API');
+})(i || (i = {}));
 var s = (function (e) {
-        function t(t, n, r) {
-            var i = e.call(this, t) || this;
-            return (i.code = n), (i.originalMessage = r), i;
+        function n(n, r, i) {
+            var a = e.call(this, n) || this;
+            return (a.code = r), (a.originalMessage = i), a;
         }
         return (
-            (0, a.ZT)(t, e),
-            (t.prototype.toString = function () {
+            (0, a.ZT)(n, e),
+            (n.prototype.toString = function () {
                 return '[formatjs Error: '.concat(this.code, '] ').concat(this.message);
             }),
-            t
+            n
         );
     })(Error),
     o = (function (e) {
-        function t(t, n, r, a) {
-            return e.call(this, 'Invalid values for "'.concat(t, '": "').concat(n, '". Options are "').concat(Object.keys(r).join('", "'), '"'), i.INVALID_VALUE, a) || this;
+        function n(n, r, a, s) {
+            return e.call(this, 'Invalid values for "'.concat(n, '": "').concat(r, '". Options are "').concat(Object.keys(a).join('", "'), '"'), i.INVALID_VALUE, s) || this;
         }
-        return (0, a.ZT)(t, e), t;
+        return (0, a.ZT)(n, e), n;
     })(s),
     l = (function (e) {
-        function t(t, n, r) {
-            return e.call(this, 'Value for "'.concat(t, '" must be of type ').concat(n), i.INVALID_VALUE, r) || this;
+        function n(n, r, a) {
+            return e.call(this, 'Value for "'.concat(n, '" must be of type ').concat(r), i.INVALID_VALUE, a) || this;
         }
-        return (0, a.ZT)(t, e), t;
+        return (0, a.ZT)(n, e), n;
     })(s),
     u = (function (e) {
-        function t(t, n) {
-            return e.call(this, 'The intl string context variable "'.concat(t, '" was not provided to the string "').concat(n, '"'), i.MISSING_VALUE, n) || this;
+        function n(n, r) {
+            return e.call(this, 'The intl string context variable "'.concat(n, '" was not provided to the string "').concat(r, '"'), i.MISSING_VALUE, r) || this;
         }
-        return (0, a.ZT)(t, e), t;
+        return (0, a.ZT)(n, e), n;
     })(s);

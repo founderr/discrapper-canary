@@ -1,101 +1,103 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return E;
+        return T;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(442837),
-    o = n(481060),
-    l = n(607070),
-    u = n(70097),
-    c = n(104494),
-    d = n(639119),
-    f = n(165583),
-    _ = n(197115),
-    p = n(981631),
-    h = n(474936),
-    m = n(388032),
-    g = n(923026);
-function E(e) {
-    var t, n;
-    let { onDismiss: i } = e,
-        E = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
-        v = m.intl.string(m.t['eikz4+']),
-        I = (0, d.N)(),
-        T = (0, c.Ng)(),
-        b = (null == I ? void 0 : I.subscription_trial) != null || null != T,
-        S = {
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(442837),
+    l = r(481060),
+    u = r(607070),
+    c = r(70097),
+    d = r(104494),
+    f = r(639119),
+    _ = r(165583),
+    h = r(197115),
+    p = r(981631),
+    m = r(474936),
+    g = r(388032),
+    E = r(923026);
+let v = 'https://cdn.discordapp.com/assets/22_211_SuperReactions_GTM_Hero_v09.mp4',
+    I = 32;
+function T(e) {
+    var n, r;
+    let { onDismiss: a } = e,
+        T = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+        b = g.intl.string(g.t['eikz4+']),
+        y = (0, f.N)(),
+        S = (0, d.Ng)(),
+        A = (null == y ? void 0 : y.subscription_trial) != null || null != S,
+        N = {
             object: p.qAy.BUTTON_CTA,
             section: p.jXE.SUPER_REACTION_PICKER
         };
-    return (0, r.jsxs)('div', {
-        className: g.wrapper,
+    return (0, i.jsxs)('div', {
+        className: E.wrapper,
         children: [
-            (0, r.jsx)(o.Clickable, {
-                onClick: i,
-                className: g.closeButton,
-                'aria-label': m.intl.string(m.t.WAI6xs),
-                children: (0, r.jsx)(o.XSmallIcon, {
+            (0, i.jsx)(l.Clickable, {
+                onClick: a,
+                className: E.closeButton,
+                'aria-label': g.intl.string(g.t.WAI6xs),
+                children: (0, i.jsx)(l.XSmallIcon, {
                     size: 'md',
                     color: 'currentColor'
                 })
             }),
-            (0, r.jsxs)('div', {
-                className: g.content,
+            (0, i.jsxs)('div', {
+                className: E.content,
                 children: [
-                    (0, r.jsx)('div', {
-                        className: g.contentFill,
-                        children: (0, r.jsx)(u.Z, {
-                            className: a()(g.banner, { [g.hasTrialOffer]: b }),
-                            src: 'https://cdn.discordapp.com/assets/22_211_SuperReactions_GTM_Hero_v09.mp4',
+                    (0, i.jsx)('div', {
+                        className: E.contentFill,
+                        children: (0, i.jsx)(c.Z, {
+                            className: s()(E.banner, { [E.hasTrialOffer]: A }),
+                            src: v,
                             loop: !0,
-                            autoPlay: !E,
+                            autoPlay: !T,
                             muted: !0,
                             controls: !0
                         })
                     }),
-                    b
-                        ? (0, r.jsx)(f.ZP, {
-                              type: h.cd.BURST_REACTION_QUICK_ACTION_UPSELL,
-                              subscriptionTier: null !== (n = null == I ? void 0 : null === (t = I.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : h.Si.TIER_2,
-                              headingText: m.intl.string(m.t.Wfl5zs),
-                              analyticsLocationObject: S,
-                              discountOffer: T,
-                              trialOffer: I,
-                              children: v
+                    A
+                        ? (0, i.jsx)(_.ZP, {
+                              type: m.cd.BURST_REACTION_QUICK_ACTION_UPSELL,
+                              subscriptionTier: null !== (r = null == y ? void 0 : null === (n = y.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== r ? r : m.Si.TIER_2,
+                              headingText: g.intl.string(g.t.Wfl5zs),
+                              analyticsLocationObject: N,
+                              discountOffer: S,
+                              trialOffer: y,
+                              children: b
                           })
-                        : (0, r.jsxs)(r.Fragment, {
+                        : (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, r.jsxs)('div', {
-                                      className: g.header,
+                                  (0, i.jsxs)('div', {
+                                      className: E.header,
                                       children: [
-                                          (0, r.jsx)(o.NitroWheelIcon, {
+                                          (0, i.jsx)(l.NitroWheelIcon, {
                                               size: 'custom',
                                               color: 'currentColor',
-                                              className: g.nitroWheel,
-                                              width: 32,
-                                              height: 32
+                                              className: E.nitroWheel,
+                                              width: I,
+                                              height: I
                                           }),
-                                          (0, r.jsx)(o.Heading, {
-                                              className: g.headerText,
+                                          (0, i.jsx)(l.Heading, {
+                                              className: E.headerText,
                                               variant: 'heading-xl/bold',
-                                              children: m.intl.string(m.t.Wfl5zs)
+                                              children: g.intl.string(g.t.Wfl5zs)
                                           })
                                       ]
                                   }),
-                                  (0, r.jsx)(o.Text, {
-                                      className: g.subheaderText,
+                                  (0, i.jsx)(l.Text, {
+                                      className: E.subheaderText,
                                       variant: 'text-md/normal',
-                                      children: v
+                                      children: b
                                   }),
-                                  (0, r.jsx)('div', {
-                                      className: g.ctaActionWrapper,
-                                      children: (0, r.jsx)(_.Z, {
-                                          subscriptionTier: h.Si.TIER_2,
-                                          buttonText: m.intl.string(m.t.sEAnVF)
+                                  (0, i.jsx)('div', {
+                                      className: E.ctaActionWrapper,
+                                      children: (0, i.jsx)(h.Z, {
+                                          subscriptionTier: m.Si.TIER_2,
+                                          buttonText: g.intl.string(g.t.sEAnVF)
                                       })
                                   })
                               ]

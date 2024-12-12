@@ -1,19 +1,20 @@
-e.exports = function (e, t, r) {
-    var i,
-        a,
+e.exports = function (e, n, i) {
+    var a,
         s,
         o,
-        l = {},
-        u = 0,
-        c = !1;
-    for (a = 0, i = this.getMatches(e, t, r); a < i.length; ++a) i[a].seq && (u = Math.max(u, i[a].level));
-    for (a = 0; a < i.length; ++a) {
-        if (i[a].seq) {
-            if (i[a].level !== u) continue;
-            (c = !0), (l[i[a].seq] = 1), this.fireCallback(i[a].callback, r, i[a].combo, i[a].seq);
+        l,
+        u = this,
+        c = {},
+        d = 0,
+        f = !1;
+    for (s = 0, a = u.getMatches(e, n, i); s < a.length; ++s) a[s].seq && (d = Math.max(d, a[s].level));
+    for (s = 0; s < a.length; ++s) {
+        if (a[s].seq) {
+            if (a[s].level !== d) continue;
+            (f = !0), (c[a[s].seq] = 1), u.fireCallback(a[s].callback, i, a[s].combo, a[s].seq);
             continue;
         }
-        !c && this.fireCallback(i[a].callback, r, i[a].combo);
+        !f && u.fireCallback(a[s].callback, i, a[s].combo);
     }
-    (o = 'keypress' === r.type && this.ignoreNextKeypress), (s = n(64000)), r.type === this.nextExpectedAction && !s(e) && !o && this.resetSequences(l), (this.ignoreNextKeypress = c && 'keydown' === r.type);
+    (l = 'keypress' === i.type && u.ignoreNextKeypress), (o = r(64000)), i.type === u.nextExpectedAction && !o(e) && !l && u.resetSequences(c), (u.ignoreNextKeypress = f && 'keydown' === i.type);
 };

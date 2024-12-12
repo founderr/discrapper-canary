@@ -1,30 +1,31 @@
-n.d(t, {
+r.d(n, {
     j: function () {
-        return o;
+        return c;
     }
-}),
-    n(47120);
-var r = n(192379),
-    i = n(442837),
-    a = n(607070),
-    s = n(451478);
-let o = (e, t) => {
-    let n = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
-        o = (0, i.e7)([s.Z], () => s.Z.isFocused()),
-        [l, u] = r.useState(!1),
-        c = r.useRef(null);
-    return (
-        r.useEffect(() => {
-            clearTimeout(c.current), (c.current = null);
-            let r = !n && !t,
-                i = o && (e || r);
-            i && n
-                ? (c.current = window.setTimeout(() => {
-                      u(!0);
-                  }, 1000))
-                : u(i);
-        }, [o, e, n, t]),
-        r.useEffect(() => () => clearTimeout(c.current), []),
-        { canAnimate: l }
-    );
-};
+});
+var i = r(47120);
+var a = r(192379),
+    s = r(442837),
+    o = r(607070),
+    l = r(451478);
+let u = 1000,
+    c = (e, n) => {
+        let r = (0, s.e7)([o.Z], () => o.Z.useReducedMotion),
+            i = (0, s.e7)([l.Z], () => l.Z.isFocused()),
+            [c, d] = a.useState(!1),
+            f = a.useRef(null);
+        return (
+            a.useEffect(() => {
+                clearTimeout(f.current), (f.current = null);
+                let a = !r && !n,
+                    s = i && (e || a);
+                s && r
+                    ? (f.current = window.setTimeout(() => {
+                          d(!0);
+                      }, u))
+                    : d(s);
+            }, [i, e, r, n]),
+            a.useEffect(() => () => clearTimeout(f.current), []),
+            { canAnimate: c }
+        );
+    };

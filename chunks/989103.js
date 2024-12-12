@@ -1,124 +1,191 @@
-n.d(t, {
+r.d(n, {
     Em: function () {
-        return c;
+        return _;
     },
     Kx: function () {
-        return o;
+        return c;
     },
     _P: function () {
-        return l;
+        return d;
     },
     eg: function () {
-        return f;
+        return p;
     },
     is: function () {
-        return h;
+        return E;
     },
     l8: function () {
-        return u;
+        return f;
     },
     s: function () {
-        return d;
+        return h;
     }
 });
-var r = n(192379);
-class i {
-    build(e, t) {
-        return (this.context = t), a(() => this.iterateCollection(e));
+var i = r(192379);
+function a(e) {
+    return null != e.hasChildItems ? e.hasChildItems : !!(e.childItems || (e.title && i.Children.count(e.children) > 0)) || !1;
+}
+(function e(e) {
+    return null;
+}).getCollectionNode = function* (e, n) {
+    let { childItems: r, title: s, children: o } = e,
+        l = e.title || e.children,
+        u = e.textValue || ('string' == typeof l ? l : '') || e['aria-label'] || '';
+    !u && !(null == n ? void 0 : n.suppressTextValueWarning) && console.warn('<Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.'),
+        yield {
+            type: 'item',
+            props: e,
+            rendered: l,
+            textValue: u,
+            'aria-label': e['aria-label'],
+            hasChildNodes: a(e),
+            *childNodes() {
+                if (r)
+                    for (let e of r)
+                        yield {
+                            type: 'item',
+                            value: e
+                        };
+                else if (s) {
+                    let e = [];
+                    i.Children.forEach(o, (n) => {
+                        e.push({
+                            type: 'item',
+                            element: n
+                        });
+                    }),
+                        yield* e;
+                }
+            }
+        };
+};
+(function e(e) {
+    return null;
+}).getCollectionNode = function* (e) {
+    let { children: n, title: r, items: a } = e;
+    yield {
+        type: 'section',
+        props: e,
+        hasChildNodes: !0,
+        rendered: r,
+        'aria-label': e['aria-label'],
+        *childNodes() {
+            if ('function' == typeof n) {
+                if (!a) throw Error('props.children was a function but props.items is missing');
+                for (let e of a)
+                    yield {
+                        type: 'item',
+                        value: e,
+                        renderer: n
+                    };
+            } else {
+                let e = [];
+                i.Children.forEach(n, (n) => {
+                    e.push({
+                        type: 'item',
+                        element: n
+                    });
+                }),
+                    yield* e;
+            }
+        }
+    };
+};
+class s {
+    build(e, n) {
+        return (this.context = n), o(() => this.iterateCollection(e));
     }
     *iterateCollection(e) {
-        let { children: t, items: n } = e;
-        if ('function' == typeof t) {
-            if (!n) throw Error('props.children was a function but props.items is missing');
-            for (let n of e.items) yield* this.getFullNode({ value: n }, { renderer: t });
+        let { children: n, items: r } = e;
+        if ('function' == typeof n) {
+            if (!r) throw Error('props.children was a function but props.items is missing');
+            for (let r of e.items) yield* this.getFullNode({ value: r }, { renderer: n });
         } else {
             let e = [];
-            r.Children.forEach(t, (t) => {
-                e.push(t);
+            i.Children.forEach(n, (n) => {
+                e.push(n);
             });
-            let n = 0;
-            for (let t of e)
+            let r = 0;
+            for (let n of e)
                 for (let e of this.getFullNode(
                     {
-                        element: t,
-                        index: n
+                        element: n,
+                        index: r
                     },
                     {}
                 ))
-                    n++, yield e;
+                    r++, yield e;
         }
     }
-    getKey(e, t, n, r) {
+    getKey(e, n, r, i) {
         if (null != e.key) return e.key;
-        if ('cell' === t.type && null != t.key) return `${r}${t.key}`;
-        let i = t.value;
-        if (null != i) {
-            var a;
-            let e = null !== (a = i.key) && void 0 !== a ? a : i.id;
+        if ('cell' === n.type && null != n.key) return `${i}${n.key}`;
+        let a = n.value;
+        if (null != a) {
+            var s;
+            let e = null !== (s = a.key) && void 0 !== s ? s : a.id;
             if (null == e) throw Error('No key found for item');
             return e;
         }
-        return r ? `${r}.${t.index}` : `$.${t.index}`;
+        return i ? `${i}.${n.index}` : `$.${n.index}`;
     }
-    getChildState(e, t) {
-        return { renderer: t.renderer || e.renderer };
+    getChildState(e, n) {
+        return { renderer: n.renderer || e.renderer };
     }
-    *getFullNode(e, t, n, i) {
-        let o = e.element;
-        if (!o && e.value && t && t.renderer) {
-            let n = this.cache.get(e.value);
-            if (n && (!n.shouldInvalidate || !n.shouldInvalidate(this.context))) {
-                (n.index = e.index), (n.parentKey = i ? i.key : null), yield n;
+    *getFullNode(e, n, r, a) {
+        let s = e.element;
+        if (!s && e.value && n && n.renderer) {
+            let r = this.cache.get(e.value);
+            if (r && (!r.shouldInvalidate || !r.shouldInvalidate(this.context))) {
+                (r.index = e.index), (r.parentKey = a ? a.key : null), yield r;
                 return;
             }
-            o = t.renderer(e.value);
+            s = n.renderer(e.value);
         }
-        if (r.isValidElement(o)) {
-            let r = o.type;
-            if ('function' != typeof r && 'function' != typeof r.getCollectionNode) {
-                let e = 'function' == typeof o.type ? o.type.name : o.type;
+        if (i.isValidElement(s)) {
+            let i = s.type;
+            if ('function' != typeof i && 'function' != typeof i.getCollectionNode) {
+                let e = 'function' == typeof s.type ? s.type.name : s.type;
                 throw Error(`Unknown element <${e}> in collection.`);
             }
-            let a = r.getCollectionNode(o.props, this.context),
-                l = e.index,
-                u = a.next();
-            for (; !u.done && u.value; ) {
-                let r = u.value;
-                e.index = l;
-                let c = r.key;
-                !c && (c = r.element ? null : this.getKey(o, e, t, n));
-                let d = [
+            let o = i.getCollectionNode(s.props, this.context),
+                c = e.index,
+                d = o.next();
+            for (; !d.done && d.value; ) {
+                let i = d.value;
+                e.index = c;
+                let f = i.key;
+                !f && (f = i.element ? null : this.getKey(s, e, n, r));
+                let _ = [
                     ...this.getFullNode(
                         {
-                            ...r,
-                            key: c,
-                            index: l,
-                            wrapper: (function (e, t) {
-                                return e && t ? (n) => e(t(n)) : e ? e : t ? t : void 0;
-                            })(e.wrapper, r.wrapper)
+                            ...i,
+                            key: f,
+                            index: c,
+                            wrapper: l(e.wrapper, i.wrapper)
                         },
-                        this.getChildState(t, r),
-                        n ? `${n}${o.key}` : o.key,
-                        i
+                        this.getChildState(n, i),
+                        r ? `${r}${s.key}` : s.key,
+                        a
                     )
                 ];
-                for (let t of d) {
-                    if (((t.value = r.value || e.value), t.value && this.cache.set(t.value, t), e.type && t.type !== e.type)) throw Error(`Unsupported type <${s(t.type)}> in <${s(i.type)}>. Only <${s(e.type)}> is supported.`);
-                    l++, yield t;
+                for (let n of _) {
+                    if (((n.value = i.value || e.value), n.value && this.cache.set(n.value, n), e.type && n.type !== e.type)) throw Error(`Unsupported type <${u(n.type)}> in <${u(a.type)}>. Only <${u(e.type)}> is supported.`);
+                    c++, yield n;
                 }
-                u = a.next(d);
+                d = o.next(_);
             }
             return;
         }
         if (null == e.key) return;
-        let l = this,
-            u = {
+        let c = this,
+            d = {
                 type: e.type,
                 props: e.props,
                 key: e.key,
-                parentKey: i ? i.key : null,
+                parentKey: a ? a.key : null,
                 value: e.value,
-                level: i ? i.level + 1 : 0,
+                level: a ? a.level + 1 : 0,
                 index: e.index,
                 rendered: e.rendered,
                 textValue: e.textValue,
@@ -126,88 +193,91 @@ class i {
                 wrapper: e.wrapper,
                 shouldInvalidate: e.shouldInvalidate,
                 hasChildNodes: e.hasChildNodes,
-                childNodes: a(function* () {
+                childNodes: o(function* () {
                     if (!e.hasChildNodes) return;
-                    let n = 0;
-                    for (let r of e.childNodes()) for (let e of (null != r.key && (r.key = `${u.key}${r.key}`), (r.index = n), l.getFullNode(r, l.getChildState(t, r), u.key, u))) n++, yield e;
+                    let r = 0;
+                    for (let i of e.childNodes()) for (let e of (null != i.key && (i.key = `${d.key}${i.key}`), (i.index = r), c.getFullNode(i, c.getChildState(n, i), d.key, d))) r++, yield e;
                 })
             };
-        yield u;
+        yield d;
     }
     constructor() {
         this.cache = new WeakMap();
     }
 }
-function a(e) {
-    let t = [],
-        n = null;
+function o(e) {
+    let n = [],
+        r = null;
     return {
         *[Symbol.iterator]() {
-            for (let e of t) yield e;
-            for (let r of (!n && (n = e()), n)) t.push(r), yield r;
+            for (let e of n) yield e;
+            for (let i of (!r && (r = e()), r)) n.push(i), yield i;
         }
     };
 }
-function s(e) {
-    return e[0].toUpperCase() + e.slice(1);
-}
-function o(e, t, n) {
-    let a = (0, r.useMemo)(() => new i(), []),
-        { children: s, items: o, collection: l } = e;
-    return (0, r.useMemo)(
-        () =>
-            l
-                ? l
-                : t(
-                      a.build(
-                          {
-                              children: s,
-                              items: o
-                          },
-                          n
-                      )
-                  ),
-        [a, s, o, l, n, t]
-    );
-}
-function l(e, t) {
-    return 'function' == typeof t.getChildren ? t.getChildren(e.key) : e.childNodes;
+function l(e, n) {
+    return e && n ? (r) => e(n(r)) : e ? e : n ? n : void 0;
 }
 function u(e) {
-    return c(e, 0);
+    return e[0].toUpperCase() + e.slice(1);
 }
-function c(e, t) {
-    if (t < 0) return;
-    let n = 0;
-    for (let r of e) {
-        if (n === t) return r;
-        n++;
+function c(e, n, r) {
+    let a = (0, i.useMemo)(() => new s(), []),
+        { children: o, items: l, collection: u } = e;
+    return (0, i.useMemo)(
+        () =>
+            u
+                ? u
+                : n(
+                      a.build(
+                          {
+                              children: o,
+                              items: l
+                          },
+                          r
+                      )
+                  ),
+        [a, o, l, u, r, n]
+    );
+}
+function d(e, n) {
+    return 'function' == typeof n.getChildren ? n.getChildren(e.key) : e.childNodes;
+}
+function f(e) {
+    return _(e, 0);
+}
+function _(e, n) {
+    if (n < 0) return;
+    let r = 0;
+    for (let i of e) {
+        if (r === n) return i;
+        r++;
     }
 }
-function d(e) {
-    let t;
-    for (let n of e) t = n;
-    return t;
-}
-function f(e, t, n) {
-    if (t.parentKey === n.parentKey) return t.index - n.index;
-    let r = [..._(e, t), t],
-        i = [..._(e, n), n],
-        a = r.slice(0, i.length).findIndex((e, t) => e !== i[t]);
-    return -1 !== a ? ((t = r[a]), (n = i[a]), t.index - n.index) : r.findIndex((e) => e === n) >= 0 ? 1 : (i.findIndex((e) => e === t), -1);
-}
-function _(e, t) {
-    let n = [];
-    for (; (null == t ? void 0 : t.parentKey) != null; ) (t = e.getItem(t.parentKey)), n.unshift(t);
+function h(e) {
+    let n;
+    for (let r of e) n = r;
     return n;
 }
-let p = new WeakMap();
-function h(e) {
-    let t = p.get(e);
-    if (null != t) return t;
-    t = 0;
-    let n = (r) => {
-        for (let i of r) 'section' === i.type ? n(l(i, e)) : t++;
+function p(e, n, r) {
+    if (n.parentKey === r.parentKey) return n.index - r.index;
+    let i = [...m(e, n), n],
+        a = [...m(e, r), r],
+        s = i.slice(0, a.length).findIndex((e, n) => e !== a[n]);
+    return -1 !== s ? ((n = i[s]), (r = a[s]), n.index - r.index) : i.findIndex((e) => e === r) >= 0 ? 1 : (a.findIndex((e) => e === n), -1);
+}
+function m(e, n) {
+    let r = [];
+    for (; (null == n ? void 0 : n.parentKey) != null; ) (n = e.getItem(n.parentKey)), r.unshift(n);
+    return r;
+}
+let g = new WeakMap();
+function E(e) {
+    let n = g.get(e);
+    if (null != n) return n;
+    n = 0;
+    let r = (i) => {
+        for (let a of i) 'section' === a.type ? r(d(a, e)) : n++;
     };
-    return n(e), p.set(e, t), t;
+    return r(e), g.set(e, n), n;
 }

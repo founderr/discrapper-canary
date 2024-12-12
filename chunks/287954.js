@@ -1,59 +1,60 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return c;
+        return f;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(510659),
-    s = n(511341),
-    o = n(215105),
-    l = n(429974),
-    u = n(228168);
-function c(e) {
-    var t, n;
-    let { user: c, guildId: d, channelId: f, profileType: _, sourceType: p, sourceDetails: h, sourceId: m, onClose: g, children: E, entry: v } = e,
-        { interactionType: I, interactionSource: T, resetInteraction: b, interactionSourceId: S } = (0, a.Xo)(),
-        y = _ === u.y0.FULL_SIZE ? (0, l.z)(c.id, d) : void 0,
-        A = T === p && I === u.P.REACT,
-        N = T === p && I === u.P.REPLY;
-    return (0, r.jsx)(i.Popout, {
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(510659),
+    o = r(511341),
+    l = r(215105),
+    u = r(429974),
+    c = r(228168);
+function d(e, n) {
+    return e === c.P.REACT
+        ? {
+              position: 'left',
+              align: 'top',
+              animationPosition: 'right',
+              spacing: 8
+          }
+        : {
+              position: 'bottom',
+              align: n === c.y0.FULL_SIZE ? 'center' : 'left',
+              animationPosition: 'top',
+              spacing: 6
+          };
+}
+function f(e) {
+    let { user: n, guildId: r, channelId: f, profileType: _, sourceType: h, sourceDetails: p, sourceId: m, onClose: g, children: E, entry: v } = e,
+        { interactionType: I, interactionSource: T, resetInteraction: b, interactionSourceId: y } = (0, s.Xo)(),
+        S = _ === c.y0.FULL_SIZE ? (0, u.z)(n.id, r) : void 0,
+        A = T === h && I === c.P.REACT,
+        N = T === h && I === c.P.REPLY,
+        C = (A || N) && y === m;
+    return (0, i.jsx)(a.Popout, {
         renderPopout: (e) => {
-            let { setPopoutRef: t } = e,
-                n = A ? s.Z : o.Z;
-            return (0, r.jsx)(n, {
-                user: c,
-                guildId: d,
+            let { setPopoutRef: a } = e,
+                s = A ? o.Z : l.Z;
+            return (0, i.jsx)(s, {
+                user: n,
+                guildId: r,
                 channelId: f,
                 profileType: _,
-                sourceType: p,
-                sourceDetails: h,
+                sourceType: h,
+                sourceDetails: p,
                 entry: v,
                 onClose: g,
-                modalKey: y,
-                setPopoutRef: t
+                modalKey: S,
+                setPopoutRef: a
             });
         },
         onRequestClose: () => {
             b(), null == g || g();
         },
-        shouldShow: (A || N) && S === m,
-        ...((t = I),
-        (n = _),
-        t === u.P.REACT
-            ? {
-                  position: 'left',
-                  align: 'top',
-                  animationPosition: 'right',
-                  spacing: 8
-              }
-            : {
-                  position: 'bottom',
-                  align: n === u.y0.FULL_SIZE ? 'center' : 'left',
-                  animationPosition: 'top',
-                  spacing: 6
-              }),
+        shouldShow: C,
+        ...d(I, _),
         children: E
     });
 }

@@ -1,38 +1,42 @@
-n.d(t, {
+r.d(n, {
     WD: function () {
-        return l;
+        return h;
     },
     nt: function () {
-        return o;
+        return _;
     }
 });
-var r = n(404759),
-    i = n.n(r);
-n(913527);
-var a = n(124368),
-    s = n(388032);
-function o() {
+var i = r(404759),
+    a = r.n(i),
+    s = r(913527);
+var o = r(124368),
+    l = r(388032);
+let u = 60,
+    c = 1440,
+    d = 4320,
+    f = 10080;
+function _() {
     return [
         {
-            label: s.intl.string(s.t.cs8A1d),
-            value: 60
+            label: l.intl.string(l.t.cs8A1d),
+            value: u
         },
         {
-            label: s.intl.string(s.t.zFKbrK),
-            value: 1440
+            label: l.intl.string(l.t.zFKbrK),
+            value: c
         },
         {
-            label: s.intl.string(s.t.TmPIZW),
-            value: 4320
+            label: l.intl.string(l.t.TmPIZW),
+            value: d
         },
         {
-            label: s.intl.string(s.t['/7i2en']),
-            value: 10080
+            label: l.intl.string(l.t['/7i2en']),
+            value: f
         }
     ];
 }
-function l(e, t) {
-    var n;
-    return null !== (n = null != t ? t : null == e ? void 0 : e.defaultAutoArchiveDuration) && void 0 !== n ? n : a.AX;
+a()(() => _().map((e) => e.value));
+function h(e, n) {
+    var r;
+    return null !== (r = null != n ? n : null == e ? void 0 : e.defaultAutoArchiveDuration) && void 0 !== r ? r : o.AX;
 }
-i()(() => o().map((e) => e.value));

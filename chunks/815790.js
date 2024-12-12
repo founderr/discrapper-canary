@@ -1,6 +1,6 @@
-n.d(t, {
+r.d(n, {
     Dw: function () {
-        return f;
+        return _;
     },
     I: function () {
         return o;
@@ -9,16 +9,15 @@ n.d(t, {
         return l;
     },
     fv: function () {
-        return d;
+        return f;
     },
     jq: function () {
         return i;
     }
 });
-var r,
-    i,
-    a = n(814391),
-    s = n(388032);
+var i,
+    a = r(814391),
+    s = r(388032);
 let o = {
         month: 'short',
         day: 'numeric',
@@ -33,7 +32,9 @@ let o = {
         hour: 'numeric',
         minute: '2-digit'
     };
-((r = i || (i = {}))[(r.JOINED_AT = 0)] = 'JOINED_AT'), (r[(r.ACCOUNT_AGE = 1)] = 'ACCOUNT_AGE');
+!(function (e) {
+    (e[(e.JOINED_AT = 0)] = 'JOINED_AT'), (e[(e.ACCOUNT_AGE = 1)] = 'ACCOUNT_AGE');
+})(i || (i = {}));
 let u = () => ({
         seconds: s.t.FsBhl5,
         minutes: s.t['4d1mgY'],
@@ -47,10 +48,12 @@ let u = () => ({
         days: s.t['3moSHR'],
         months: s.t['0Ddwr6'],
         years: s.t.cR7lcn
-    }),
-    d = (e, t) => {
-        var n;
-        let r = 0 === (n = t) ? u : 1 === n ? c : void 0;
+    });
+function d(e) {
+    return 0 === e ? u : 1 === e ? c : void 0;
+}
+let f = (e, n) => {
+        let r = d(n);
         return (0, a.Z)(e, r, !1);
     },
-    f = (e) => (null != e ? new Date(e) : new Date()).getTime();
+    _ = (e) => (null != e ? new Date(e) : new Date()).getTime();

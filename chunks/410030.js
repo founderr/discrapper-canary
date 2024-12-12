@@ -1,25 +1,26 @@
-n.d(t, {
+r.d(n, {
     Fg: function () {
-        return a;
+        return s;
     },
     i6: function () {
-        return s;
+        return o;
     }
 });
-var r = n(780384),
-    i = n(981631);
-function a() {
-    let { theme: e } = (0, r.TC)();
+var i = r(780384),
+    a = r(981631);
+function s() {
+    let { theme: e } = (0, i.TC)();
     return e;
 }
-function s() {
-    return (function (e) {
-        switch (e) {
-            case i.BRd.DARK:
-                return 0;
-            case i.BRd.LIGHT:
-                return 1;
-        }
-    })(a());
+function o() {
+    return l(s());
 }
-t.ZP = a;
+function l(e) {
+    switch (e) {
+        case a.BRd.DARK:
+            return 0;
+        case a.BRd.LIGHT:
+            return 1;
+    }
+}
+n.ZP = s;

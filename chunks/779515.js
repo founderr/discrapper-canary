@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function n(e) {
     return {
         name: 'Vim Script',
         keywords: {
@@ -47,4 +47,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = n;

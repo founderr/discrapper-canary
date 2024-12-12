@@ -1,123 +1,121 @@
-var r = n(492476),
-    i = n(381538),
-    a = n(26018);
-function s(e, t) {
-    return t.encode ? (t.strict ? r(e) : encodeURIComponent(e)) : e;
+var i = r(492476),
+    a = r(381538),
+    s = r(26018);
+function o(e) {
+    switch (e.arrayFormat) {
+        case 'index':
+            return function (n, r, i) {
+                return null === r ? [u(n, e), '[', i, ']'].join('') : [u(n, e), '[', u(i, e), ']=', u(r, e)].join('');
+            };
+        case 'bracket':
+            return function (n, r) {
+                return null === r ? u(n, e) : [u(n, e), '[]=', u(r, e)].join('');
+            };
+        default:
+            return function (n, r) {
+                return null === r ? u(n, e) : [u(n, e), '=', u(r, e)].join('');
+            };
+    }
 }
-(t.extract = function (e) {
+function l(e) {
+    var n;
+    switch (e.arrayFormat) {
+        case 'index':
+            return function (e, r, i) {
+                if (((n = /\[(\d*)\]$/.exec(e)), (e = e.replace(/\[\d*\]$/, '')), !n)) {
+                    i[e] = r;
+                    return;
+                }
+                void 0 === i[e] && (i[e] = {}), (i[e][n[1]] = r);
+            };
+        case 'bracket':
+            return function (e, r, i) {
+                if (((n = /(\[\])$/.exec(e)), (e = e.replace(/\[\]$/, '')), n)) {
+                    if (void 0 === i[e]) {
+                        i[e] = [r];
+                        return;
+                    }
+                } else {
+                    i[e] = r;
+                    return;
+                }
+                i[e] = [].concat(i[e], r);
+            };
+        default:
+            return function (e, n, r) {
+                if (void 0 === r[e]) {
+                    r[e] = n;
+                    return;
+                }
+                r[e] = [].concat(r[e], n);
+            };
+    }
+}
+function u(e, n) {
+    return n.encode ? (n.strict ? i(e) : encodeURIComponent(e)) : e;
+}
+function c(e) {
+    return Array.isArray(e)
+        ? e.sort()
+        : 'object' == typeof e
+          ? c(Object.keys(e))
+                .sort(function (e, n) {
+                    return Number(e) - Number(n);
+                })
+                .map(function (n) {
+                    return e[n];
+                })
+          : e;
+}
+(n.extract = function (e) {
     return e.split('?')[1] || '';
 }),
-    (t.parse = function (e, t) {
-        var n = (function (e) {
-                var t;
-                switch (e.arrayFormat) {
-                    case 'index':
-                        return function (e, n, r) {
-                            if (((t = /\[(\d*)\]$/.exec(e)), (e = e.replace(/\[\d*\]$/, '')), !t)) {
-                                r[e] = n;
-                                return;
-                            }
-                            void 0 === r[e] && (r[e] = {}), (r[e][t[1]] = n);
-                        };
-                    case 'bracket':
-                        return function (e, n, r) {
-                            if (((t = /(\[\])$/.exec(e)), (e = e.replace(/\[\]$/, '')), t)) {
-                                if (void 0 === r[e]) {
-                                    r[e] = [n];
-                                    return;
-                                }
-                            } else {
-                                r[e] = n;
-                                return;
-                            }
-                            r[e] = [].concat(r[e], n);
-                        };
-                    default:
-                        return function (e, t, n) {
-                            if (void 0 === n[e]) {
-                                n[e] = t;
-                                return;
-                            }
-                            n[e] = [].concat(n[e], t);
-                        };
-                }
-            })((t = i({ arrayFormat: 'none' }, t))),
-            r = Object.create(null);
+    (n.parse = function (e, n) {
+        var r = l((n = a({ arrayFormat: 'none' }, n))),
+            i = Object.create(null);
         return 'string' == typeof e && (e = e.trim().replace(/^(\?|#|&)/, ''))
             ? (e.split('&').forEach(function (e) {
-                  var t = e.replace(/\+/g, ' ').split('='),
-                      i = t.shift(),
-                      s = t.length > 0 ? t.join('=') : void 0;
-                  (s = void 0 === s ? null : a(s)), n(a(i), s, r);
+                  var n = e.replace(/\+/g, ' ').split('='),
+                      a = n.shift(),
+                      o = n.length > 0 ? n.join('=') : void 0;
+                  (o = void 0 === o ? null : s(o)), r(s(a), o, i);
               }),
-              Object.keys(r)
+              Object.keys(i)
                   .sort()
-                  .reduce(function (e, t) {
-                      var n = r[t];
-                      return (
-                          n && 'object' == typeof n && !Array.isArray(n)
-                              ? (e[t] = (function e(t) {
-                                    return Array.isArray(t)
-                                        ? t.sort()
-                                        : 'object' == typeof t
-                                          ? e(Object.keys(t))
-                                                .sort(function (e, t) {
-                                                    return Number(e) - Number(t);
-                                                })
-                                                .map(function (e) {
-                                                    return t[e];
-                                                })
-                                          : t;
-                                })(n))
-                              : (e[t] = n),
-                          e
-                      );
+                  .reduce(function (e, n) {
+                      var r = i[n];
+                      return r && 'object' == typeof r && !Array.isArray(r) ? (e[n] = c(r)) : (e[n] = r), e;
                   }, Object.create(null)))
-            : r;
+            : i;
     }),
-    (t.stringify = function (e, t) {
-        var n = (function (e) {
-            switch (e.arrayFormat) {
-                case 'index':
-                    return function (t, n, r) {
-                        return null === n ? [s(t, e), '[', r, ']'].join('') : [s(t, e), '[', s(r, e), ']=', s(n, e)].join('');
-                    };
-                case 'bracket':
-                    return function (t, n) {
-                        return null === n ? s(t, e) : [s(t, e), '[]=', s(n, e)].join('');
-                    };
-                default:
-                    return function (t, n) {
-                        return null === n ? s(t, e) : [s(t, e), '=', s(n, e)].join('');
-                    };
-            }
-        })(
-            (t = i(
+    (n.stringify = function (e, n) {
+        var r = o(
+            (n = a(
                 {
                     encode: !0,
                     strict: !0,
                     arrayFormat: 'none'
                 },
-                t
+                n
             ))
         );
         return e
             ? Object.keys(e)
                   .sort()
-                  .map(function (r) {
-                      var i = e[r];
-                      if (void 0 === i) return '';
-                      if (null === i) return s(r, t);
-                      if (Array.isArray(i)) {
-                          var a = [];
+                  .map(function (i) {
+                      var a = e[i];
+                      if (void 0 === a) return '';
+                      if (null === a) return u(i, n);
+                      if (Array.isArray(a)) {
+                          var s = [];
                           return (
-                              i.slice().forEach(function (e) {
-                                  if (void 0 !== e) a.push(n(r, e, a.length));
+                              a.slice().forEach(function (e) {
+                                  if (void 0 !== e) s.push(r(i, e, s.length));
                               }),
-                              a.join('&')
+                              s.join('&')
                           );
                       }
-                      return s(r, t) + '=' + s(i, t);
+                      return u(i, n) + '=' + u(a, n);
                   })
                   .filter(function (e) {
                       return e.length > 0;

@@ -1,41 +1,42 @@
-n.d(t, {
+r.d(n, {
     J: function () {
-        return o.Hb;
+        return l.Hb;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(385499),
-    o = n(674563),
-    l = n(485453);
-t.Z = (e) => {
-    let { name: t, discriminator: n, invertBotTagColor: i, nameColor: o, className: u, botType: c, usernameClass: d, discriminatorClass: f, botClass: _, botVerified: p = !1, style: h, useRemSizes: m = !1, usernameIcon: g } = e;
-    return (0, r.jsxs)('div', {
-        className: a()(u, l.nameTag),
-        style: h,
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(385499),
+    l = r(674563),
+    u = r(485453);
+let c = (e) => {
+    let { name: n, discriminator: r, invertBotTagColor: a, nameColor: l, className: c, botType: d, usernameClass: f, discriminatorClass: _, botClass: h, botVerified: p = !1, style: m, useRemSizes: g = !1, usernameIcon: E } = e;
+    return (0, i.jsxs)('div', {
+        className: s()(c, u.nameTag),
+        style: m,
         children: [
-            (0, r.jsxs)('span', {
-                className: a()(l.username, d),
-                style: null != o ? { color: o } : void 0,
-                children: [g, t]
+            (0, i.jsxs)('span', {
+                className: s()(u.username, f),
+                style: null != l ? { color: l } : void 0,
+                children: [E, n]
             }),
-            null != n
-                ? (0, r.jsxs)('span', {
-                      className: null != f ? f : void 0,
-                      children: ['#', n]
+            null != r
+                ? (0, i.jsxs)('span', {
+                      className: null != _ ? _ : void 0,
+                      children: ['#', r]
                   })
                 : null,
-            null != c
-                ? (0, r.jsx)(s.Z, {
-                      type: c,
-                      invertColor: i,
-                      className: a()(_, l.bot),
+            null != d
+                ? (0, i.jsx)(o.Z, {
+                      type: d,
+                      invertColor: a,
+                      className: s()(h, u.bot),
                       verified: p,
-                      useRemSizes: m
+                      useRemSizes: g
                   })
                 : null
         ]
     });
 };
+n.Z = c;

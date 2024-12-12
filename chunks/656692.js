@@ -1,13 +1,13 @@
-n.d(t, {
+r.d(n, {
     D: function () {
-        return l;
+        return u;
     }
 });
-var r = n(192379),
-    i = n(398928),
-    a = n(989103),
-    s = n(239700);
-class o {
+var i = r(192379),
+    a = r(398928),
+    s = r(989103),
+    o = r(239700);
+class l {
     *[Symbol.iterator]() {
         yield* this.iterable;
     }
@@ -18,12 +18,12 @@ class o {
         return this.keyMap.keys();
     }
     getKeyBefore(e) {
-        let t = this.keyMap.get(e);
-        return t ? t.prevKey : null;
+        let n = this.keyMap.get(e);
+        return n ? n.prevKey : null;
     }
     getKeyAfter(e) {
-        let t = this.keyMap.get(e);
-        return t ? t.nextKey : null;
+        let n = this.keyMap.get(e);
+        return n ? n.nextKey : null;
     }
     getFirstKey() {
         return this.firstKey;
@@ -35,48 +35,46 @@ class o {
         return this.keyMap.get(e);
     }
     at(e) {
-        let t = [...this.getKeys()];
-        return this.getItem(t[e]);
+        let n = [...this.getKeys()];
+        return this.getItem(n[e]);
     }
-    constructor(e, { expandedKeys: t } = {}) {
-        let n;
-        (this.keyMap = new Map()), (this.iterable = e), (t = t || new Set());
-        let r = (e) => {
-            if ((this.keyMap.set(e.key, e), e.childNodes && ('section' === e.type || t.has(e.key)))) for (let t of e.childNodes) r(t);
+    constructor(e, { expandedKeys: n } = {}) {
+        let r;
+        (this.keyMap = new Map()), (this.iterable = e), (n = n || new Set());
+        let i = (e) => {
+            if ((this.keyMap.set(e.key, e), e.childNodes && ('section' === e.type || n.has(e.key)))) for (let n of e.childNodes) i(n);
         };
-        for (let t of e) r(t);
-        let i = 0;
-        for (let [e, t] of this.keyMap) n ? ((n.nextKey = e), (t.prevKey = n.key)) : ((this.firstKey = e), (t.prevKey = void 0)), 'item' === t.type && (t.index = i++), ((n = t).nextKey = void 0);
-        this.lastKey = null == n ? void 0 : n.key;
+        for (let n of e) i(n);
+        let a = 0;
+        for (let [e, n] of this.keyMap) r ? ((r.nextKey = e), (n.prevKey = r.key)) : ((this.firstKey = e), (n.prevKey = void 0)), 'item' === n.type && (n.index = a++), ((r = n).nextKey = void 0);
+        this.lastKey = null == r ? void 0 : r.key;
     }
 }
-function l(e) {
-    let [t, n] = (0, s.zk)(e.expandedKeys ? new Set(e.expandedKeys) : void 0, e.defaultExpandedKeys ? new Set(e.defaultExpandedKeys) : new Set(), e.onExpandedChange),
-        l = (0, i.q)(e),
-        u = (0, r.useMemo)(() => (e.disabledKeys ? new Set(e.disabledKeys) : new Set()), [e.disabledKeys]),
-        c = (0, a.Kx)(
+function u(e) {
+    let [n, r] = (0, o.zk)(e.expandedKeys ? new Set(e.expandedKeys) : void 0, e.defaultExpandedKeys ? new Set(e.defaultExpandedKeys) : new Set(), e.onExpandedChange),
+        u = (0, a.q)(e),
+        d = (0, i.useMemo)(() => (e.disabledKeys ? new Set(e.disabledKeys) : new Set()), [e.disabledKeys]),
+        f = (0, s.Kx)(
             e,
-            (0, r.useCallback)((e) => new o(e, { expandedKeys: t }), [t]),
+            (0, i.useCallback)((e) => new l(e, { expandedKeys: n }), [n]),
             null
         );
-    return (
-        (0, r.useEffect)(() => {
-            null != l.focusedKey && !c.getItem(l.focusedKey) && l.setFocusedKey(null);
-        }, [c, l.focusedKey]),
-        {
-            collection: c,
-            expandedKeys: t,
-            disabledKeys: u,
-            toggleKey: (e) => {
-                n(
-                    (function (e, t) {
-                        let n = new Set(e);
-                        return n.has(t) ? n.delete(t) : n.add(t), n;
-                    })(t, e)
-                );
-            },
-            setExpandedKeys: n,
-            selectionManager: new i.Z(c, l)
-        }
-    );
+    (0, i.useEffect)(() => {
+        null != u.focusedKey && !f.getItem(u.focusedKey) && u.setFocusedKey(null);
+    }, [f, u.focusedKey]);
+    let _ = (e) => {
+        r(c(n, e));
+    };
+    return {
+        collection: f,
+        expandedKeys: n,
+        disabledKeys: d,
+        toggleKey: _,
+        setExpandedKeys: r,
+        selectionManager: new a.Z(f, u)
+    };
+}
+function c(e, n) {
+    let r = new Set(e);
+    return r.has(n) ? r.delete(n) : r.add(n), r;
 }

@@ -1,5 +1,7 @@
-var r = n(144511),
-    i = n(730179);
-e.exports = function (e) {
-    return e ? r(i(e), 0, 4294967295) : 0;
-};
+var i = r(144511),
+    a = r(730179),
+    s = 4294967295;
+function o(e) {
+    return e ? i(a(e), 0, s) : 0;
+}
+e.exports = o;

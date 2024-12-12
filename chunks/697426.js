@@ -1,77 +1,74 @@
-var r, i, a, s, o, l, u, c, d, f, _, p, h, m;
-function g(e, t) {
-    let { sound_id: n, emoji_id: r, emoji_name: i, user_id: a, available: s, ...o } = e;
+var i, a, s, o, l, u, c;
+function d(e, n) {
+    let { sound_id: r, emoji_id: i, emoji_name: a, user_id: s, available: o, ...l } = e;
+    return {
+        ...l,
+        soundId: r,
+        guildId: n,
+        emojiId: i,
+        emojiName: a,
+        userId: s,
+        available: null == o || o
+    };
+}
+function f(e) {
+    let { soundId: n, guildId: r, emojiId: i, emojiName: a, userId: s, ...o } = e;
     return {
         ...o,
-        soundId: n,
-        guildId: t,
-        emojiId: r,
-        emojiName: i,
-        userId: a,
-        available: null == s || s
+        sound_id: n,
+        guild_id: r,
+        emoji_id: i,
+        emoji_name: a,
+        user_id: s
     };
 }
-function E(e) {
-    let { soundId: t, guildId: n, emojiId: r, emojiName: i, userId: a, ...s } = e;
-    return {
-        ...s,
-        sound_id: t,
-        guild_id: n,
-        emoji_id: r,
-        emoji_name: i,
-        user_id: a
-    };
-}
-n.d(t, {
+r.d(n, {
     H$: function () {
-        return s;
-    },
-    MW: function () {
-        return a;
-    },
-    Pb: function () {
-        return r;
-    },
-    QL: function () {
-        return E;
-    },
-    YQ: function () {
-        return u;
-    },
-    bg: function () {
         return o;
     },
-    jy: function () {
+    MW: function () {
+        return s;
+    },
+    Pb: function () {
         return i;
     },
+    QL: function () {
+        return f;
+    },
+    YQ: function () {
+        return c;
+    },
+    bg: function () {
+        return l;
+    },
+    jy: function () {
+        return a;
+    },
     o3: function () {
-        return g;
+        return d;
     },
     vB: function () {
-        return l;
+        return u;
     }
 }),
-    ((c = r || (r = {}))[(c.NONE = 0)] = 'NONE'),
-    (c[(c.PLAY = 1)] = 'PLAY'),
-    (c[(c.ADD = 2)] = 'ADD'),
-    (c[(c.SOUNDMOJI = 3)] = 'SOUNDMOJI'),
-    ((d = i || (i = {})).ENTRY = 'entry_sound'),
-    (d.EXIT = 'exit_sound'),
-    (d.DEFAULT = 'default'),
-    ((f = a || (a = {})).ADDED = 'added'),
-    (f.UPDATED = 'updated'),
-    (f.REMOVED = 'removed'),
-    ((_ = s || (s = {})).DEFAULT = 'default'),
-    (_.CUSTOM = 'custom'),
-    ((p = o || (o = {}))[(p.FAVORITES = 0)] = 'FAVORITES'),
-    (p[(p.RECENTLY_HEARD = 1)] = 'RECENTLY_HEARD'),
-    (p[(p.FREQUENTLY_USED = 2)] = 'FREQUENTLY_USED'),
-    (p[(p.GUILD = 3)] = 'GUILD'),
-    (p[(p.DEFAULTS = 4)] = 'DEFAULTS'),
-    (p[(p.SEARCH = 5)] = 'SEARCH'),
-    ((h = l || (l = {}))[(h.SOUND = 0)] = 'SOUND'),
-    (h[(h.ADD_SOUND = 1)] = 'ADD_SOUND'),
-    ((m = u || (u = {}))[(m.GIFT_CODE = 0)] = 'GIFT_CODE'),
-    (m[(m.SOUNDBOARD = 1)] = 'SOUNDBOARD'),
-    (m[(m.JOINED_VOICE_CHANNEL = 2)] = 'JOINED_VOICE_CHANNEL'),
-    (m[(m.SOUNDMOJI = 3)] = 'SOUNDMOJI');
+    !(function (e) {
+        (e[(e.NONE = 0)] = 'NONE'), (e[(e.PLAY = 1)] = 'PLAY'), (e[(e.ADD = 2)] = 'ADD'), (e[(e.SOUNDMOJI = 3)] = 'SOUNDMOJI');
+    })(i || (i = {})),
+    !(function (e) {
+        (e.ENTRY = 'entry_sound'), (e.EXIT = 'exit_sound'), (e.DEFAULT = 'default');
+    })(a || (a = {})),
+    !(function (e) {
+        (e.ADDED = 'added'), (e.UPDATED = 'updated'), (e.REMOVED = 'removed');
+    })(s || (s = {})),
+    !(function (e) {
+        (e.DEFAULT = 'default'), (e.CUSTOM = 'custom');
+    })(o || (o = {})),
+    !(function (e) {
+        (e[(e.FAVORITES = 0)] = 'FAVORITES'), (e[(e.RECENTLY_HEARD = 1)] = 'RECENTLY_HEARD'), (e[(e.FREQUENTLY_USED = 2)] = 'FREQUENTLY_USED'), (e[(e.GUILD = 3)] = 'GUILD'), (e[(e.DEFAULTS = 4)] = 'DEFAULTS'), (e[(e.SEARCH = 5)] = 'SEARCH');
+    })(l || (l = {})),
+    !(function (e) {
+        (e[(e.SOUND = 0)] = 'SOUND'), (e[(e.ADD_SOUND = 1)] = 'ADD_SOUND');
+    })(u || (u = {})),
+    !(function (e) {
+        (e[(e.GIFT_CODE = 0)] = 'GIFT_CODE'), (e[(e.SOUNDBOARD = 1)] = 'SOUNDBOARD'), (e[(e.JOINED_VOICE_CHANNEL = 2)] = 'JOINED_VOICE_CHANNEL'), (e[(e.SOUNDMOJI = 3)] = 'SOUNDMOJI');
+    })(c || (c = {}));

@@ -1,28 +1,28 @@
-var r, i, a, s, o, l, u, c;
-n.d(t, {
+var i, a, s, o;
+r.d(n, {
     G0: function () {
-        return f;
+        return u;
     },
     L3: function () {
-        return d;
+        return l;
     },
     LG: function () {
-        return i;
+        return a;
     },
     _b: function () {
-        return r;
+        return i;
     },
     _y: function () {
-        return s;
+        return o;
     },
     ti: function () {
-        return a;
+        return s;
     }
 }),
-    ((o = r || (r = {})).NONE = 'NONE'),
-    (o.TEXT = 'TEXT'),
-    (o.VOICE = 'VOICE');
-let d = {
+    !(function (e) {
+        (e.NONE = 'NONE'), (e.TEXT = 'TEXT'), (e.VOICE = 'VOICE');
+    })(i || (i = {}));
+let l = {
         SEARCH: 'search',
         RECENT: 'recent',
         INSTALLED: 'installed',
@@ -32,8 +32,16 @@ let d = {
         NEW_TO_APPS: 'new_to_apps',
         APPS_IN_THIS_SERVER: 'apps_in_this_server'
     },
-    f = {
+    u = {
         HOME: 'home',
         APP_DETAIL: 'app_detail'
     };
-((l = i || (i = {})).HOME_EMPTY = 'home_empty'), (l.SEARCH_EMPTY = 'search_empty'), (l.HOME_NO_PERMISSIONS = 'home_no_permissions'), (l.COMMAND_NO_PERMISSIONS = 'command_no_permissions'), (l.COMMAND_NOT_FOUND = 'command_not_found'), ((u = a || (a = {}))[(u.DISMISSED = 0)] = 'DISMISSED'), (u[(u.COMMAND = 1)] = 'COMMAND'), (u[(u.ACTIVITY = 2)] = 'ACTIVITY'), ((c = s || (s = {})).OPEN_APP_DM = 'open_app_dm'), (c.USE_APP_COMMAND = 'use_app_command');
+!(function (e) {
+    (e.HOME_EMPTY = 'home_empty'), (e.SEARCH_EMPTY = 'search_empty'), (e.HOME_NO_PERMISSIONS = 'home_no_permissions'), (e.COMMAND_NO_PERMISSIONS = 'command_no_permissions'), (e.COMMAND_NOT_FOUND = 'command_not_found');
+})(a || (a = {})),
+    !(function (e) {
+        (e[(e.DISMISSED = 0)] = 'DISMISSED'), (e[(e.COMMAND = 1)] = 'COMMAND'), (e[(e.ACTIVITY = 2)] = 'ACTIVITY');
+    })(s || (s = {})),
+    !(function (e) {
+        (e.OPEN_APP_DM = 'open_app_dm'), (e.USE_APP_COMMAND = 'use_app_command');
+    })(o || (o = {}));

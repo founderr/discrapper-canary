@@ -1,111 +1,113 @@
-var r = n(444675);
-!(function (e, t) {
+var i = r(444675);
+!(function (e, n) {
     if (!e.setImmediate) {
-        var n,
-            i,
-            a,
-            s,
-            o,
-            l = 1,
-            u = {},
-            c = !1,
-            d = e.document;
-        var f = Object.getPrototypeOf && Object.getPrototypeOf(e);
-        if (((f = f && f.setTimeout ? f : e), '[object process]' === {}.toString.call(e.process)))
-            o = function (e) {
-                r.nextTick(function () {
-                    p(e);
-                });
-            };
-        else if (
-            (function () {
-                if (e.postMessage && !e.importScripts) {
-                    var t = !0,
-                        n = e.onmessage;
-                    return (
-                        (e.onmessage = function () {
-                            t = !1;
-                        }),
-                        e.postMessage('', '*'),
-                        (e.onmessage = n),
-                        t
-                    );
-                }
-            })()
-        ) {
-            (n = 'setImmediate$' + Math.random() + '$'),
-                (i = function (t) {
-                    t.source === e && 'string' == typeof t.data && 0 === t.data.indexOf(n) && p(+t.data.slice(n.length));
-                }),
-                e.addEventListener ? e.addEventListener('message', i, !1) : e.attachEvent('onmessage', i),
-                (o = function (t) {
-                    e.postMessage(n + t, '*');
-                });
-        } else if (e.MessageChannel) {
-            ((a = new MessageChannel()).port1.onmessage = function (e) {
-                p(e.data);
-            }),
-                (o = function (e) {
-                    a.port2.postMessage(e);
-                });
-        } else if (d && 'onreadystatechange' in d.createElement('script')) {
-            (s = d.documentElement),
-                (o = function (e) {
-                    var t = d.createElement('script');
-                    (t.onreadystatechange = function () {
-                        p(e), (t.onreadystatechange = null), s.removeChild(t), (t = null);
-                    }),
-                        s.appendChild(t);
-                });
-        } else
-            o = function (e) {
-                setTimeout(p, 0, e);
-            };
-        (f.setImmediate = function (e) {
-            'function' != typeof e && (e = Function('' + e));
-            for (var t = Array(arguments.length - 1), n = 0; n < t.length; n++) t[n] = arguments[n + 1];
-            var r = {
-                callback: e,
-                args: t
-            };
-            return (u[l] = r), o(l), l++;
-        }),
-            (f.clearImmediate = _);
+        var r,
+            a = 1,
+            s = {},
+            o = !1,
+            l = e.document;
+        var u = Object.getPrototypeOf && Object.getPrototypeOf(e);
+        (u = u && u.setTimeout ? u : e), '[object process]' === {}.toString.call(e.process) ? h() : p() ? m() : e.MessageChannel ? g() : l && 'onreadystatechange' in l.createElement('script') ? E() : v(), (u.setImmediate = c), (u.clearImmediate = d);
+    }
+    function c(e) {
+        'function' != typeof e && (e = Function('' + e));
+        for (var n = Array(arguments.length - 1), i = 0; i < n.length; i++) n[i] = arguments[i + 1];
+        var o = {
+            callback: e,
+            args: n
+        };
+        return (s[a] = o), r(a), a++;
+    }
+    function d(e) {
+        delete s[e];
+    }
+    function f(e) {
+        var r = e.callback,
+            i = e.args;
+        switch (i.length) {
+            case 0:
+                r();
+                break;
+            case 1:
+                r(i[0]);
+                break;
+            case 2:
+                r(i[0], i[1]);
+                break;
+            case 3:
+                r(i[0], i[1], i[2]);
+                break;
+            default:
+                r.apply(n, i);
+        }
     }
     function _(e) {
-        delete u[e];
-    }
-    function p(e) {
-        if (c) setTimeout(p, 0, e);
+        if (o) setTimeout(_, 0, e);
         else {
-            var n = u[e];
+            var n = s[e];
             if (n) {
-                c = !0;
+                o = !0;
                 try {
-                    !(function (e) {
-                        var n = e.callback,
-                            r = e.args;
-                        switch (r.length) {
-                            case 0:
-                                n();
-                                break;
-                            case 1:
-                                n(r[0]);
-                                break;
-                            case 2:
-                                n(r[0], r[1]);
-                                break;
-                            case 3:
-                                n(r[0], r[1], r[2]);
-                                break;
-                            default:
-                                n.apply(t, r);
-                        }
-                    })(n);
+                    f(n);
                 } finally {
-                    _(e), (c = !1);
+                    d(e), (o = !1);
                 }
             }
         }
     }
-})('undefined' == typeof self ? (void 0 === n.g ? this : n.g) : self);
+    function h() {
+        r = function (e) {
+            i.nextTick(function () {
+                _(e);
+            });
+        };
+    }
+    function p() {
+        if (e.postMessage && !e.importScripts) {
+            var n = !0,
+                r = e.onmessage;
+            return (
+                (e.onmessage = function () {
+                    n = !1;
+                }),
+                e.postMessage('', '*'),
+                (e.onmessage = r),
+                n
+            );
+        }
+    }
+    function m() {
+        var n = 'setImmediate$' + Math.random() + '$',
+            i = function (r) {
+                r.source === e && 'string' == typeof r.data && 0 === r.data.indexOf(n) && _(+r.data.slice(n.length));
+            };
+        e.addEventListener ? e.addEventListener('message', i, !1) : e.attachEvent('onmessage', i),
+            (r = function (r) {
+                e.postMessage(n + r, '*');
+            });
+    }
+    function g() {
+        var e = new MessageChannel();
+        (e.port1.onmessage = function (e) {
+            _(e.data);
+        }),
+            (r = function (n) {
+                e.port2.postMessage(n);
+            });
+    }
+    function E() {
+        var e = l.documentElement;
+        r = function (n) {
+            var r = l.createElement('script');
+            (r.onreadystatechange = function () {
+                _(n), (r.onreadystatechange = null), e.removeChild(r), (r = null);
+            }),
+                e.appendChild(r);
+        };
+    }
+    function v() {
+        r = function (e) {
+            setTimeout(_, 0, e);
+        };
+    }
+})('undefined' == typeof self ? (void 0 === r.g ? this : r.g) : self);

@@ -1,2 +1,2 @@
-var n = 'object' == typeof global && global && global.Object === Object && global;
-t.Z = n;
+var r = 'object' == typeof global && global && global.Object === Object && global;
+n.Z = r;

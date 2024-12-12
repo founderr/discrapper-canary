@@ -1,93 +1,113 @@
-e.exports = function (e) {
-    let t = '~?[a-z$_][0-9a-zA-Z$_]*',
-        n = '`?[A-Z$_][0-9a-zA-Z$_]*',
-        r = "'?[a-z$_][0-9a-z$_]*",
-        i =
+function n(e) {
+    let n = '~?[a-z$_][0-9a-zA-Z$_]*',
+        r = '`?[A-Z$_][0-9a-zA-Z$_]*',
+        i = "'?[a-z$_][0-9a-z$_]*",
+        a = n + '(' + ('\\s*:\\s*[a-z$_][0-9a-z$_]*(\\(\\s*(' + i + '\\s*(,' + i + '\\s*)*)?\\))?') + '){0,2}',
+        s =
             '(' +
-            ['||', '++', '**', '+.', '*', '/', '*.', '/.', '...']
-                .map(function (e) {
-                    return e
-                        .split('')
-                        .map(function (e) {
-                            return '\\' + e;
-                        })
-                        .join('');
-                })
-                .join('|') +
+            (function e(e) {
+                return e
+                    .map(function (e) {
+                        return e
+                            .split('')
+                            .map(function (e) {
+                                return '\\' + e;
+                            })
+                            .join('');
+                    })
+                    .join('|');
+            })(['||', '++', '**', '+.', '*', '/', '*.', '/.', '...']) +
             '|\\|>|&&|==|===)',
-        a = {
+        o = '\\s+' + s + '\\s+',
+        l = {
             keyword: 'and as asr assert begin class constraint do done downto else end exception external for fun function functor if in include inherit initializer land lazy let lor lsl lsr lxor match method mod module mutable new nonrec object of open or private rec sig struct then to try type val virtual when while with',
             built_in: 'array bool bytes char exn|5 float int int32 int64 list lazy_t|5 nativeint|5 ref string unit ',
             literal: 'true false'
         },
-        s = '\\b(0[xX][a-fA-F0-9_]+[Lln]?|0[oO][0-7_]+[Lln]?|0[bB][01_]+[Lln]?|[0-9][0-9_]*([Lln]|(\\.[0-9_]*)?([eE][-+]?[0-9_]+)?)?)',
-        o = {
+        u = '\\b(0[xX][a-fA-F0-9_]+[Lln]?|0[oO][0-7_]+[Lln]?|0[bB][01_]+[Lln]?|[0-9][0-9_]*([Lln]|(\\.[0-9_]*)?([eE][-+]?[0-9_]+)?)?)',
+        c = {
             className: 'number',
             relevance: 0,
-            variants: [{ begin: s }, { begin: '\\(-' + s + '\\)' }]
+            variants: [{ begin: u }, { begin: '\\(-' + u + '\\)' }]
         },
-        l = {
+        d = {
             className: 'operator',
             relevance: 0,
-            begin: i
+            begin: s
         },
-        u = [
+        f = [
             {
                 className: 'identifier',
                 relevance: 0,
-                begin: t
+                begin: n
             },
-            l,
-            o
+            d,
+            c
         ],
-        c = [
+        _ = [
             e.QUOTE_STRING_MODE,
-            l,
+            d,
             {
                 className: 'module',
-                begin: '\\b' + n,
+                begin: '\\b' + r,
                 returnBegin: !0,
                 relevance: 0,
                 end: '.',
                 contains: [
                     {
                         className: 'identifier',
-                        begin: n,
+                        begin: r,
                         relevance: 0
                     }
                 ]
             }
         ],
-        d = [
+        h = [
             {
                 className: 'module',
-                begin: '\\b' + n,
+                begin: '\\b' + r,
                 returnBegin: !0,
                 end: '.',
                 relevance: 0,
                 contains: [
                     {
                         className: 'identifier',
-                        begin: n,
+                        begin: r,
                         relevance: 0
                     }
                 ]
             }
         ],
-        f = {
+        p = {
+            begin: n,
+            end: '(,|\\n|\\))',
+            relevance: 0,
+            contains: [
+                d,
+                {
+                    className: 'typing',
+                    begin: ':',
+                    end: '(,|\\n)',
+                    returnBegin: !0,
+                    relevance: 0,
+                    contains: h
+                }
+            ]
+        },
+        m = {
             className: 'function',
             relevance: 0,
-            keywords: a,
+            keywords: l,
             variants: [
                 {
-                    begin: '\\s(\\(\\.?.*?\\)|' + t + ')\\s*=>',
+                    begin: '\\s(\\(\\.?.*?\\)|' + n + ')\\s*=>',
                     end: '\\s*=>',
                     returnBegin: !0,
                     relevance: 0,
                     contains: [
                         {
                             className: 'params',
-                            variants: [{ begin: t }, { begin: t + '(' + ('\\s*:\\s*[a-z$_][0-9a-z$_]*(\\(\\s*(' + r + '\\s*(,' + r) + '\\s*)*)?\\))?){0,2}' }, { begin: /\(\s*\)/ }]
+                            variants: [{ begin: n }, { begin: a }, { begin: /\(\s*\)/ }]
                         }
                     ]
                 },
@@ -100,79 +120,79 @@ e.exports = function (e) {
                         {
                             className: 'params',
                             relevance: 0,
-                            variants: [
-                                {
-                                    begin: t,
-                                    end: '(,|\\n|\\))',
-                                    relevance: 0,
-                                    contains: [
-                                        l,
-                                        {
-                                            className: 'typing',
-                                            begin: ':',
-                                            end: '(,|\\n)',
-                                            returnBegin: !0,
-                                            relevance: 0,
-                                            contains: d
-                                        }
-                                    ]
-                                }
-                            ]
+                            variants: [p]
                         }
                     ]
                 },
-                { begin: '\\(\\.\\s' + t + '\\)\\s*=>' }
+                { begin: '\\(\\.\\s' + n + '\\)\\s*=>' }
             ]
         };
-    c.push(f);
-    let _ = {
+    _.push(m);
+    let g = {
             className: 'constructor',
-            begin: n + '\\(',
+            begin: r + '\\(',
             end: '\\)',
             illegal: '\\n',
-            keywords: a,
+            keywords: l,
             contains: [
                 e.QUOTE_STRING_MODE,
-                l,
+                d,
                 {
                     className: 'params',
-                    begin: '\\b' + t
+                    begin: '\\b' + n
                 }
             ]
         },
-        p = {
+        E = {
+            className: 'pattern-match',
+            begin: '\\|',
+            returnBegin: !0,
+            keywords: l,
+            end: '=>',
+            relevance: 0,
+            contains: [
+                g,
+                d,
+                {
+                    relevance: 0,
+                    className: 'constructor',
+                    begin: r
+                }
+            ]
+        },
+        v = {
             className: 'module-access',
-            keywords: a,
+            keywords: l,
             returnBegin: !0,
             variants: [
-                { begin: '\\b(' + n + '\\.)+' + t },
+                { begin: '\\b(' + r + '\\.)+' + n },
                 {
-                    begin: '\\b(' + n + '\\.)+\\(',
+                    begin: '\\b(' + r + '\\.)+\\(',
                     end: '\\)',
                     returnBegin: !0,
                     contains: [
-                        f,
+                        m,
                         {
                             begin: '\\(',
                             end: '\\)',
                             relevance: 0,
                             skip: !0
                         }
-                    ].concat(c)
+                    ].concat(_)
                 },
                 {
-                    begin: '\\b(' + n + '\\.)+\\{',
+                    begin: '\\b(' + r + '\\.)+\\{',
                     end: /\}/
                 }
             ],
-            contains: c
+            contains: _
         };
     return (
-        d.push(p),
+        h.push(v),
         {
             name: 'ReasonML',
             aliases: ['re'],
-            keywords: a,
+            keywords: l,
             illegal: '(:-|:=|\\$\\{|\\+=)',
             contains: [
                 e.COMMENT('/\\*', '\\*/', { illegal: '^(#,\\/\\/)' }),
@@ -193,54 +213,38 @@ e.exports = function (e) {
                     begin: '\\[\\|',
                     end: '\\|\\]',
                     relevance: 0,
-                    contains: u
+                    contains: f
                 },
                 {
                     className: 'literal',
                     begin: '\\[',
                     end: '\\]',
                     relevance: 0,
-                    contains: u
+                    contains: f
                 },
-                _,
+                g,
                 {
                     className: 'operator',
-                    begin: '\\s+' + i + '\\s+',
+                    begin: o,
                     illegal: '-->',
                     relevance: 0
                 },
-                o,
+                c,
                 e.C_LINE_COMMENT_MODE,
-                {
-                    className: 'pattern-match',
-                    begin: '\\|',
-                    returnBegin: !0,
-                    keywords: a,
-                    end: '=>',
-                    relevance: 0,
-                    contains: [
-                        _,
-                        l,
-                        {
-                            relevance: 0,
-                            className: 'constructor',
-                            begin: n
-                        }
-                    ]
-                },
-                f,
+                E,
+                m,
                 {
                     className: 'module-def',
-                    begin: '\\bmodule\\s+' + t + '\\s+' + n + '\\s+=\\s+\\{',
+                    begin: '\\bmodule\\s+' + n + '\\s+' + r + '\\s+=\\s+\\{',
                     end: /\}/,
                     returnBegin: !0,
-                    keywords: a,
+                    keywords: l,
                     relevance: 0,
                     contains: [
                         {
                             className: 'module',
                             relevance: 0,
-                            begin: n
+                            begin: r
                         },
                         {
                             begin: /\{/,
@@ -248,10 +252,11 @@ e.exports = function (e) {
                             relevance: 0,
                             skip: !0
                         }
-                    ].concat(c)
+                    ].concat(_)
                 },
-                p
+                v
             ]
         }
     );
-};
+}
+e.exports = n;

@@ -1,29 +1,30 @@
-var r = n(192379);
-let i = (e) => {
-    e.effects.forEach((e) => {
-        let { src: t } = e,
-            n = document.createElement('link');
-        (n.rel = 'prefetch'),
-            (n.href = t),
-            (n.onload = () => {
-                document.body.removeChild(n);
-            }),
-            document.body.appendChild(n);
-    });
-};
-t.Z = (e) => {
-    r.useEffect(() => {
-        if ('loading' === document.readyState) {
-            let t = () => {
-                i(e);
-            };
-            return (
-                document.addEventListener('DOMContentLoaded', t),
-                () => {
-                    document.removeEventListener('DOMContentLoaded', t);
-                }
-            );
-        }
-        i(e);
-    }, [e]);
-};
+var i = r(192379);
+let a = (e) => {
+        e.effects.forEach((e) => {
+            let { src: n } = e,
+                r = document.createElement('link');
+            (r.rel = 'prefetch'),
+                (r.href = n),
+                (r.onload = () => {
+                    document.body.removeChild(r);
+                }),
+                document.body.appendChild(r);
+        });
+    },
+    s = (e) => {
+        i.useEffect(() => {
+            if ('loading' === document.readyState) {
+                let n = () => {
+                    a(e);
+                };
+                return (
+                    document.addEventListener('DOMContentLoaded', n),
+                    () => {
+                        document.removeEventListener('DOMContentLoaded', n);
+                    }
+                );
+            }
+            a(e);
+        }, [e]);
+    };
+n.Z = s;

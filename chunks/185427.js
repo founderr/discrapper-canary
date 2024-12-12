@@ -1,44 +1,43 @@
-var r = n(126387),
-    i = n(740078);
-t.Z = {
+var i = r(126387),
+    a = r(740078);
+function s(e, n, r) {
+    var s = (0, i.Z)(e),
+        o = [a.t$, a.we].indexOf(s) >= 0 ? -1 : 1,
+        l = 'function' == typeof r ? r(Object.assign({}, n, { placement: e })) : r,
+        u = l[0],
+        c = l[1];
+    return (
+        (u = u || 0),
+        (c = (c || 0) * o),
+        [a.t$, a.F2].indexOf(s) >= 0
+            ? {
+                  x: c,
+                  y: u
+              }
+            : {
+                  x: u,
+                  y: c
+              }
+    );
+}
+function o(e) {
+    var n = e.state,
+        r = e.options,
+        i = e.name,
+        o = r.offset,
+        l = void 0 === o ? [0, 0] : o,
+        u = a.Ct.reduce(function (e, r) {
+            return (e[r] = s(r, n.rects, l)), e;
+        }, {}),
+        c = u[n.placement],
+        d = c.x,
+        f = c.y;
+    null != n.modifiersData.popperOffsets && ((n.modifiersData.popperOffsets.x += d), (n.modifiersData.popperOffsets.y += f)), (n.modifiersData[i] = u);
+}
+n.Z = {
     name: 'offset',
     enabled: !0,
     phase: 'main',
     requires: ['popperOffsets'],
-    fn: function (e) {
-        var t = e.state,
-            n = e.options,
-            a = e.name,
-            s = n.offset,
-            o = void 0 === s ? [0, 0] : s,
-            l = i.Ct.reduce(function (e, n) {
-                var a, s, l, u, c, d, f, _;
-                return (
-                    (e[n] =
-                        ((a = n),
-                        (s = t.rects),
-                        (l = o),
-                        (u = (0, r.Z)(a)),
-                        (c = [i.t$, i.we].indexOf(u) >= 0 ? -1 : 1),
-                        (f = (d = 'function' == typeof l ? l(Object.assign({}, s, { placement: a })) : l)[0]),
-                        (_ = d[1]),
-                        (f = f || 0),
-                        (_ = (_ || 0) * c),
-                        [i.t$, i.F2].indexOf(u) >= 0
-                            ? {
-                                  x: _,
-                                  y: f
-                              }
-                            : {
-                                  x: f,
-                                  y: _
-                              })),
-                    e
-                );
-            }, {}),
-            u = l[t.placement],
-            c = u.x,
-            d = u.y;
-        null != t.modifiersData.popperOffsets && ((t.modifiersData.popperOffsets.x += c), (t.modifiersData.popperOffsets.y += d)), (t.modifiersData[a] = l);
-    }
+    fn: o
 };

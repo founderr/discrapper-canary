@@ -1,38 +1,35 @@
-var r = Array.prototype.slice,
-    i = n(775569),
-    a = n(35262),
-    s = (e.exports = function (e, t, n) {
-        if ((!n && (n = {}), e === t)) return !0;
-        if (e instanceof Date && t instanceof Date) return e.getTime() === t.getTime();
-        if (!e || !t || ('object' != typeof e && 'object' != typeof t)) return n.strict ? e === t : e == t;
-        else
-            return (function (e, t, n) {
-                if (null == (c = e) || null == (d = t) || e.prototype !== t.prototype) return !1;
-                if (a(e)) return !!a(t) && ((e = r.call(e)), s(e, (t = r.call(t)), n));
-                if (l(e)) {
-                    if (!l(t) || e.length !== t.length) return !1;
-                    for (o = 0; o < e.length; o++) if (e[o] !== t[o]) return !1;
-                    return !0;
-                }
-                try {
-                    var o,
-                        u,
-                        c,
-                        d,
-                        f = i(e),
-                        _ = i(t);
-                } catch (e) {
-                    return !1;
-                }
-                if (f.length != _.length) return !1;
-                for (f.sort(), _.sort(), o = f.length - 1; o >= 0; o--) if (f[o] != _[o]) return !1;
-                for (o = f.length - 1; o >= 0; o--) if (!s(e[(u = f[o])], t[u], n)) return !1;
-                return typeof e == typeof t;
-            })(e, t, n);
+var i = Array.prototype.slice,
+    a = r(775569),
+    s = r(35262),
+    o = (e.exports = function (e, n, r) {
+        if ((!r && (r = {}), e === n)) return !0;
+        if (e instanceof Date && n instanceof Date) return e.getTime() === n.getTime();
+        if (!e || !n || ('object' != typeof e && 'object' != typeof n)) return r.strict ? e === n : e == n;
+        else return c(e, n, r);
     });
-function o(e) {
+function l(e) {
     return null == e;
 }
-function l(e) {
+function u(e) {
     return !!e && 'object' == typeof e && 'number' == typeof e.length && 'function' == typeof e.copy && 'function' == typeof e.slice && (!(e.length > 0) || 'number' == typeof e[0]) && !0;
+}
+function c(e, n, r) {
+    var c, d;
+    if (l(e) || l(n) || e.prototype !== n.prototype) return !1;
+    if (s(e)) return !!s(n) && ((e = i.call(e)), o(e, (n = i.call(n)), r));
+    if (u(e)) {
+        if (!u(n) || e.length !== n.length) return !1;
+        for (c = 0; c < e.length; c++) if (e[c] !== n[c]) return !1;
+        return !0;
+    }
+    try {
+        var f = a(e),
+            _ = a(n);
+    } catch (e) {
+        return !1;
+    }
+    if (f.length != _.length) return !1;
+    for (f.sort(), _.sort(), c = f.length - 1; c >= 0; c--) if (f[c] != _[c]) return !1;
+    for (c = f.length - 1; c >= 0; c--) if (!o(e[(d = f[c])], n[d], r)) return !1;
+    return typeof e == typeof n;
 }

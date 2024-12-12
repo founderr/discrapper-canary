@@ -1,56 +1,60 @@
-n(47120);
-var r,
-    i = n(442837),
-    a = n(570140),
-    s = n(581883);
-function o(e, t, n) {
+var i,
+    a = r(47120);
+var s = r(442837),
+    o = r(570140),
+    l = r(581883);
+function u(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let l = new Set();
-class u extends (r = i.ZP.PersistedStore) {
+let c = new Set();
+function d() {
+    let e = l.Z.getGuildFolders();
+    if (null == e) return !1;
+    let n = !1;
+    for (let r of c) !e.some((e) => e.folderId === r) && ((c = new Set(c)).delete(r), (n = !0));
+    return n;
+}
+function f(e) {
+    let { folderId: n } = e;
+    (c = new Set(c)).has(n) ? c.delete(n) : c.add(n);
+}
+function _(e) {
+    let { folderId: n, expanded: r } = e;
+    (c = new Set(c)), r ? c.add(n) : c.has(n) && c.delete(n);
+}
+function h() {
+    if (0 === c.size) return !1;
+    c = new Set();
+}
+class p extends (i = s.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (l = new Set(e.expandedFolders)), this.waitFor(s.Z);
+        null != e && (c = new Set(e.expandedFolders)), this.waitFor(l.Z);
     }
     getState() {
-        return { expandedFolders: Array.from(l) };
+        return { expandedFolders: Array.from(c) };
     }
     getExpandedFolders() {
-        return l;
+        return c;
     }
     isFolderExpanded(e) {
-        return l.has(e);
+        return c.has(e);
     }
 }
-o(u, 'displayName', 'ExpandedGuildFolderStore'),
-    o(u, 'persistKey', 'ExpandedGuildFolderStore'),
-    (t.Z = new u(a.Z, {
-        TOGGLE_GUILD_FOLDER_EXPAND: function (e) {
-            let { folderId: t } = e;
-            (l = new Set(l)).has(t) ? l.delete(t) : l.add(t);
-        },
-        SET_GUILD_FOLDER_EXPANDED: function (e) {
-            let { folderId: t, expanded: n } = e;
-            (l = new Set(l)), n ? l.add(t) : l.has(t) && l.delete(t);
-        },
-        USER_SETTINGS_PROTO_UPDATE: function () {
-            let e = s.Z.getGuildFolders();
-            if (null == e) return !1;
-            let t = !1;
-            for (let n of l) !e.some((e) => e.folderId === n) && ((l = new Set(l)).delete(n), (t = !0));
-            return t;
-        },
-        GUILD_FOLDER_COLLAPSE: function () {
-            if (0 === l.size) return !1;
-            l = new Set();
-        }
+u(p, 'displayName', 'ExpandedGuildFolderStore'),
+    u(p, 'persistKey', 'ExpandedGuildFolderStore'),
+    (n.Z = new p(o.Z, {
+        TOGGLE_GUILD_FOLDER_EXPAND: f,
+        SET_GUILD_FOLDER_EXPANDED: _,
+        USER_SETTINGS_PROTO_UPDATE: d,
+        GUILD_FOLDER_COLLAPSE: h
     }));

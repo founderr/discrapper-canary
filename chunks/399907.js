@@ -1,30 +1,32 @@
-n(47120);
-var r = n(956067),
-    i = n(147913),
-    a = n(70956),
-    s = n(640795),
-    o = n(139674);
-let l = 4 * a.Z.Millis.HOUR;
-class u extends i.Z {
+var i = r(47120);
+var a = r(956067),
+    s = r(147913),
+    o = r(70956),
+    l = r(640795),
+    u = r(139674);
+function c(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let d = 4 * o.Z.Millis.HOUR;
+class f extends s.Z {
     _initialize() {
-        setTimeout(() => r.Z.timeAsync('\uD83D\uDCBE', 'getBlockedDomainList', () => o.Z.getBlockedDomainList()), 1000), setTimeout(() => (0, s.q)(), 10 * a.Z.Millis.SECOND), (this.intervalID = setInterval(s.q, l));
+        setTimeout(() => a.Z.timeAsync('\uD83D\uDCBE', 'getBlockedDomainList', () => u.Z.getBlockedDomainList()), 1000), setTimeout(() => (0, l.q)(), 10 * o.Z.Millis.SECOND), (this.intervalID = setInterval(l.q, d));
     }
     _terminate() {
         clearInterval(this.intervalID);
     }
     constructor(...e) {
-        var t, n, r;
-        super(...e),
-            (t = this),
-            (r = void 0),
-            (n = 'intervalID') in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+        super(...e), c(this, 'intervalID', void 0);
     }
 }
-t.Z = new u();
+n.Z = new f();

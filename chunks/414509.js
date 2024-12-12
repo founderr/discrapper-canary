@@ -1,71 +1,74 @@
-n.d(t, {
+r.d(n, {
     B: function () {
-        return g;
+        return I;
     }
-}),
-    n(47120);
-var r = n(147913),
-    i = n(592125),
-    a = n(19780),
-    s = n(699516),
-    o = n(70956),
-    l = n(280006),
-    u = n(33194);
-n(452369);
-var c = n(807031),
-    d = n(189275),
-    f = n(451092);
-n(334431);
-let _ = 1 * o.Z.Millis.HOUR,
-    p = 3 * o.Z.Millis.DAY;
-function h(e) {
-    let { channelId: t } = e;
-    if (null == t) return;
-    let n = i.Z.getChannel(t);
-    if (null != n && n.isGroupDM()) {
-        let e = n.recipients.filter((e) => s.Z.isBlocked(e)),
-            r = n.recipients.filter((e) => s.Z.isIgnored(e));
-        (e.length > 0 || r.length > 0) &&
-            l.E.getCurrentConfig({ location: 'channel_select' }, { autoTrackExposure: !0 }).showAsModal &&
-            !n.blockedUserWarningDismissed &&
-            !(function (e) {
-                return (0, u.Iu)(e) > Date.now() - p;
-            })(t) &&
-            (0, d.O)({
-                channelId: t,
+});
+var i = r(47120);
+var a = r(147913),
+    s = r(592125),
+    o = r(19780),
+    l = r(699516),
+    u = r(70956),
+    c = r(280006),
+    d = r(33194);
+r(452369);
+var f = r(807031),
+    _ = r(189275),
+    h = r(451092);
+function p(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+r(334431);
+let m = 1 * u.Z.Millis.HOUR,
+    g = 3 * u.Z.Millis.DAY;
+function E(e) {
+    let { channelId: n } = e;
+    if (null == n) return;
+    let r = s.Z.getChannel(n);
+    if (null != r && r.isGroupDM()) {
+        let e = r.recipients.filter((e) => l.Z.isBlocked(e)),
+            i = r.recipients.filter((e) => l.Z.isIgnored(e));
+        (e.length > 0 || i.length > 0) &&
+            c.E.getCurrentConfig({ location: 'channel_select' }, { autoTrackExposure: !0 }).showAsModal &&
+            !r.blockedUserWarningDismissed &&
+            !T(n) &&
+            (0, _.O)({
+                channelId: n,
                 blockedUserIds: e,
-                ignoredUserIds: r
+                ignoredUserIds: i
             });
     }
 }
-function m(e) {
-    let { state: t } = e;
+function v(e) {
+    let { state: n } = e;
 }
-function g(e) {
-    return (0, u.Iu)(e) > Date.now() - _;
+function I(e) {
+    return (0, d.Iu)(e) > Date.now() - m;
 }
-class E extends r.Z {
-    handleBlockedOrIgnoredUserVoiceChannelJoin(e, t) {
-        let n = a.Z.getChannelId();
-        if (e === n && null != i.Z.getChannel(e)) (0, c.wC)({ location: 'warning_manager' }) && !g(e) && (0, f.H)(n, t);
+function T(e) {
+    return (0, d.Iu)(e) > Date.now() - g;
+}
+class b extends a.Z {
+    handleBlockedOrIgnoredUserVoiceChannelJoin(e, n) {
+        let r = o.Z.getChannelId();
+        if (e === r && null != s.Z.getChannel(e)) (0, f.wC)({ location: 'warning_manager' }) && !I(e) && (0, h.H)(r, n);
     }
     constructor(...e) {
-        var t, n, r;
         super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = {
-                CHANNEL_SELECT: h,
-                APP_STATE_UPDATE: m
-            }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+            p(this, 'actions', {
+                CHANNEL_SELECT: E,
+                APP_STATE_UPDATE: v
+            });
     }
 }
-t.Z = new E();
+n.Z = new b();

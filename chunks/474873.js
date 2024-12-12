@@ -1,46 +1,43 @@
-var r,
-    i = n(442837),
-    a = n(570140),
-    s = n(871465);
-function o(e, t, n) {
+var i,
+    a = r(442837),
+    s = r(570140),
+    o = r(871465);
+function l(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let l = {
-    soundpack: s.YC.CLASSIC,
+let u = {
+    soundpack: o.YC.CLASSIC,
     lastSoundpackExperimentId: null
 };
-class u extends (r = i.ZP.PersistedStore) {
+function c(e) {
+    let { soundpack: n, forExperimentId: r } = e;
+    u = {
+        soundpack: n,
+        lastSoundpackExperimentId: void 0 !== r ? r : u.lastSoundpackExperimentId
+    };
+}
+class d extends (i = a.ZP.PersistedStore) {
     initialize(e) {
-        null != e && ((l = e), !Object.values(s.YC).includes(l.soundpack) && (l.soundpack = s.YC.CLASSIC));
+        null != e && ((u = e), !Object.values(o.YC).includes(u.soundpack) && (u.soundpack = o.YC.CLASSIC));
     }
     getState() {
-        return l;
+        return u;
     }
     getSoundpack() {
-        return l.soundpack;
+        return u.soundpack;
     }
     getLastSoundpackExperimentId() {
-        return l.lastSoundpackExperimentId;
+        return u.lastSoundpackExperimentId;
     }
 }
-o(u, 'displayName', 'SoundpackStore'),
-    o(u, 'persistKey', 'SoundpackStore'),
-    (t.Z = new u(a.Z, {
-        SET_SOUNDPACK: function (e) {
-            let { soundpack: t, forExperimentId: n } = e;
-            l = {
-                soundpack: t,
-                lastSoundpackExperimentId: void 0 !== n ? n : l.lastSoundpackExperimentId
-            };
-        }
-    }));
+l(d, 'displayName', 'SoundpackStore'), l(d, 'persistKey', 'SoundpackStore'), (n.Z = new d(s.Z, { SET_SOUNDPACK: c }));

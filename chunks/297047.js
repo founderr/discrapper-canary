@@ -1,51 +1,52 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return h;
+        return g;
     },
     q: function () {
-        return p;
+        return m;
     }
-}),
-    n(47120);
-var r = n(200651);
-n(192379);
-var i = n(442837),
-    a = n(481060),
-    s = n(144144),
-    o = n(592125),
-    l = n(496675),
-    u = n(944486),
-    c = n(585483),
-    d = n(51144),
-    f = n(981631),
-    _ = n(388032);
-function p(e, t) {
-    let { id: n } = e,
-        r = '@'.concat(d.ZP.getUserTag(e, { decoration: 'never' }));
-    c.S.dispatchToLastSubscribed(f.CkL.INSERT_TEXT, {
-        plainText: r,
-        rawText: '<@'.concat(n, '>')
+});
+var i = r(47120);
+var a = r(200651);
+r(192379);
+var s = r(442837),
+    o = r(481060),
+    l = r(144144),
+    u = r(592125),
+    c = r(496675),
+    d = r(944486),
+    f = r(585483),
+    _ = r(51144),
+    h = r(981631),
+    p = r(388032);
+function m(e, n) {
+    let { id: r } = e,
+        i = '@'.concat(_.ZP.getUserTag(e, { decoration: 'never' })),
+        a = '<@'.concat(r, '>');
+    f.S.dispatchToLastSubscribed(h.CkL.INSERT_TEXT, {
+        plainText: i,
+        rawText: a
     }),
-        null != t && s.Z.startTyping(t);
+        null != n && l.Z.startTyping(n);
 }
-function h(e, t, n) {
-    let [s, c] = (0, i.Wu)(
-            [u.Z, o.Z, l.Z],
+function g(e, n, r) {
+    let [i, l] = (0, s.Wu)(
+            [d.Z, u.Z, c.Z],
             () => {
-                let e = u.Z.getChannelId(t),
-                    n = o.Z.getChannel(e);
-                return [e, null != n && (n.isMultiUserDM() || l.Z.can(f.Plq.SEND_MESSAGES, n))];
+                let e = d.Z.getChannelId(n),
+                    r = u.Z.getChannel(e);
+                return [e, null != r && (r.isMultiUserDM() || c.Z.can(h.Plq.SEND_MESSAGES, r))];
             },
-            [t]
+            [n]
         ),
-        d = n === f.IlC.POPOUT;
-    return !c || d
-        ? null
-        : (0, r.jsx)(a.MenuItem, {
-              id: 'mention',
-              label: _.intl.string(_.t.P8tvKC),
-              action: function () {
-                  p(e, s);
-              }
-          });
+        f = r === h.IlC.POPOUT;
+    if (!l || f) return null;
+    function _() {
+        m(e, i);
+    }
+    return (0, a.jsx)(o.MenuItem, {
+        id: 'mention',
+        label: p.intl.string(p.t.P8tvKC),
+        action: _
+    });
 }

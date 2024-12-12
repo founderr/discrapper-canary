@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     Cl: function () {
         return _;
     },
     GN: function () {
-        return p;
+        return h;
     },
     L9: function () {
         return l;
@@ -24,11 +24,10 @@ n.d(t, {
         return u;
     }
 });
-var r,
-    i,
-    a = n(63063),
-    s = n(981631),
-    o = n(388032);
+var i,
+    a = r(63063),
+    s = r(981631),
+    o = r(388032);
 function l(e) {
     switch (e) {
         case 60:
@@ -47,14 +46,16 @@ function l(e) {
             return;
     }
 }
-((r = i || (i = {}))[(r.DURATION_60_SEC = 60)] = 'DURATION_60_SEC'), (r[(r.DURATION_5_MIN = 300)] = 'DURATION_5_MIN'), (r[(r.DURATION_10_MIN = 600)] = 'DURATION_10_MIN'), (r[(r.DURATION_1_HOUR = 3600)] = 'DURATION_1_HOUR'), (r[(r.DURATION_1_DAY = 86400)] = 'DURATION_1_DAY'), (r[(r.DURATION_1_WEEK = 604800)] = 'DURATION_1_WEEK');
+!(function (e) {
+    (e[(e.DURATION_60_SEC = 60)] = 'DURATION_60_SEC'), (e[(e.DURATION_5_MIN = 300)] = 'DURATION_5_MIN'), (e[(e.DURATION_10_MIN = 600)] = 'DURATION_10_MIN'), (e[(e.DURATION_1_HOUR = 3600)] = 'DURATION_1_HOUR'), (e[(e.DURATION_1_DAY = 86400)] = 'DURATION_1_DAY'), (e[(e.DURATION_1_WEEK = 604800)] = 'DURATION_1_WEEK');
+})(i || (i = {}));
 let u = () =>
         Object.keys(i)
             .filter((e) => isNaN(Number(e)))
             .map((e) => {
-                var t;
+                var n;
                 return {
-                    label: null !== (t = l(i[e])) && void 0 !== t ? t : '',
+                    label: null !== (n = l(i[e])) && void 0 !== n ? n : '',
                     value: i[e]
                 };
             }),
@@ -62,4 +63,4 @@ let u = () =>
     d = 'GuildCommunicationDisabledDismissedGuilds',
     f = 'Set Communication Disabled Modal',
     _ = 'Clear Communication Disabled Modal',
-    p = 512;
+    h = 512;

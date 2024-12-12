@@ -1,11 +1,13 @@
-var r, i;
-n.d(t, {
+var i;
+r.d(n, {
     d: function () {
-        return r;
+        return i;
     },
     t: function () {
         return a;
     }
 });
 let a = 202;
-((i = r || (r = {}))[(i.SUCCESSFUL_QUERY = 1)] = 'SUCCESSFUL_QUERY'), (i[(i.ERROR = 2)] = 'ERROR');
+!(function (e) {
+    (e[(e.SUCCESSFUL_QUERY = 1)] = 'SUCCESSFUL_QUERY'), (e[(e.ERROR = 2)] = 'ERROR');
+})(i || (i = {}));

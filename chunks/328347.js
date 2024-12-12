@@ -1,50 +1,54 @@
-let r;
-var i,
-    a,
-    s,
-    o,
-    l = n(442837),
-    u = n(570140);
-let c = [],
-    d = c,
-    f = null,
+let i;
+var a,
+    s = r(442837),
+    o = r(570140);
+function l(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let u = [],
+    c = u,
+    d = null,
+    f = (e) => {
+        var n, r;
+        (c = null !== (n = e.analyticsLocations) && void 0 !== n ? n : u), (d = null !== (r = e.analyticsSource) && void 0 !== r ? r : null), (i = e.initialProductSkuId);
+    },
     _ = (e) => {
-        (d = c), (f = null);
+        (c = u), (d = null);
+    },
+    h = (e) => {
+        e.item.skuId === i && (i = void 0);
     };
-class p extends (o = l.ZP.Store) {
+class p extends (a = s.ZP.Store) {
     get analyticsLocations() {
-        return d;
+        return c;
     }
     get analyticsSource() {
-        return f;
+        return d;
     }
     get initialProductSkuId() {
-        return r;
+        return i;
     }
     getAnalytics() {
         return {
-            analyticsLocations: d,
-            analyticsSource: f
+            analyticsLocations: c,
+            analyticsSource: d
         };
     }
 }
-(s = 'CollectiblesShopStore'),
-    (a = 'displayName') in (i = p)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new p(u.Z, {
-        COLLECTIBLES_SHOP_OPEN: (e) => {
-            var t, n;
-            (d = null !== (t = e.analyticsLocations) && void 0 !== t ? t : c), (f = null !== (n = e.analyticsSource) && void 0 !== n ? n : null), (r = e.initialProductSkuId);
-        },
+l(p, 'displayName', 'CollectiblesShopStore'),
+    (n.Z = new p(o.Z, {
+        COLLECTIBLES_SHOP_OPEN: f,
         COLLECTIBLES_SHOP_CLOSE: _,
-        COLLECTIBLES_PRODUCT_DETAILS_OPEN: (e) => {
-            e.item.skuId === r && (r = void 0);
-        },
+        COLLECTIBLES_PRODUCT_DETAILS_OPEN: h,
         LOGOUT: _
     }));

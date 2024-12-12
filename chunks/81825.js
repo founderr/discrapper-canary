@@ -1,37 +1,40 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return a;
     }
-}),
-    n(47120);
-class r {
+});
+var i = r(47120);
+class a {
     toJS() {
         return { ...this };
     }
-    set(e, t) {
-        let n = this[e];
-        return t instanceof Date && n instanceof Date && t.getTime() === n.getTime()
+    set(e, n) {
+        let r = this,
+            i = r[e];
+        return n instanceof Date && i instanceof Date && n.getTime() === i.getTime()
             ? this
-            : n !== t
+            : i !== n
               ? new this.constructor({
                     ...this,
-                    [e]: t
+                    [e]: n
                 })
               : this;
     }
     merge(e) {
-        let t = null;
-        for (let n in e) {
-            if (!e.hasOwnProperty(n)) continue;
-            let r = this[n],
-                i = e[n];
-            if (!(i instanceof Date) || !(r instanceof Date) || i.getTime() !== r.getTime()) r !== i && (null == t && (t = { ...this }), (t[n] = e[n]));
+        let n = this,
+            r = null;
+        for (let i in e) {
+            if (!e.hasOwnProperty(i)) continue;
+            let a = n[i],
+                s = e[i];
+            if (!(s instanceof Date) || !(a instanceof Date) || s.getTime() !== a.getTime()) a !== s && (null == r && (r = { ...this }), (r[i] = e[i]));
         }
-        return null != t ? new this.constructor(t) : this;
+        return null != r ? new this.constructor(r) : this;
     }
-    update(e, t, n) {
-        null == n && ((n = t), (t = void 0));
-        let i = this[e];
-        return i instanceof r || (i instanceof Array ? (i = [...i]) : i instanceof Object && (i = { ...i })), void 0 === i && (i = t), this.set(e, n(i));
+    update(e, n, r) {
+        null == r && ((r = n), (n = void 0));
+        let i = this,
+            s = i[e];
+        return s instanceof a || (s instanceof Array ? (s = [...s]) : s instanceof Object && (s = { ...s })), void 0 === s && (s = n), this.set(e, r(s));
     }
 }

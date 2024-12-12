@@ -1,42 +1,40 @@
-n.d(t, {
+r.d(n, {
     b: function () {
-        return a;
+        return u;
     }
 });
-var r = n(961742);
-function i(e, t, n) {
-    let i = window.getComputedStyle(e, n),
-        a = i.getPropertyValue('content');
-    if ('' === a || 'none' === a) return;
-    let s = (0, r.Vj)();
+var i = r(961742);
+function a(e) {
+    let n = e.getPropertyValue('content');
+    return `${e.cssText} content: '${n.replace(/'|"/g, '')}';`;
+}
+function s(e) {
+    return (0, i.qo)(e)
+        .map((n) => {
+            let r = e.getPropertyValue(n),
+                i = e.getPropertyPriority(n);
+            return `${n}: ${r}${i ? ' !important' : ''};`;
+        })
+        .join(' ');
+}
+function o(e, n, r) {
+    let i = `.${e}:${n}`,
+        o = r.cssText ? a(r) : s(r);
+    return document.createTextNode(`${i}{${o}}`);
+}
+function l(e, n, r) {
+    let a = window.getComputedStyle(e, r),
+        s = a.getPropertyValue('content');
+    if ('' === s || 'none' === s) return;
+    let l = (0, i.Vj)();
     try {
-        t.className = `${t.className} ${s}`;
+        n.className = `${n.className} ${l}`;
     } catch (e) {
         return;
     }
-    let o = document.createElement('style');
-    o.appendChild(
-        (function (e, t, n) {
-            var i;
-            let a = `.${e}:${t}`;
-            let s = n.cssText
-                ? (function (e) {
-                      let t = e.getPropertyValue('content');
-                      return `${e.cssText} content: '${t.replace(/'|"/g, '')}';`;
-                  })(n)
-                : ((i = n),
-                  (0, r.qo)(i)
-                      .map((e) => {
-                          let t = i.getPropertyValue(e),
-                              n = i.getPropertyPriority(e);
-                          return `${e}: ${t}${n ? ' !important' : ''};`;
-                      })
-                      .join(' '));
-            return document.createTextNode(`${a}{${s}}`);
-        })(s, n, i)
-    ),
-        t.appendChild(o);
+    let u = document.createElement('style');
+    u.appendChild(o(l, r, a)), n.appendChild(u);
 }
-function a(e, t) {
-    i(e, t, ':before'), i(e, t, ':after');
+function u(e, n) {
+    l(e, n, ':before'), l(e, n, ':after');
 }

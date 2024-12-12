@@ -1,70 +1,73 @@
-n.d(t, {
+r.d(n, {
     IF: function () {
-        return c;
+        return p;
     },
     LU: function () {
-        return l;
+        return d;
     },
     Rt: function () {
-        return f;
+        return g;
     },
     hW: function () {
-        return u;
+        return f;
     },
     t3: function () {
-        return d;
+        return m;
     }
-}),
-    n(724458),
-    n(653041),
-    n(47120);
-var r,
-    i,
-    a = n(271383),
-    s = n(588215);
-function o(e, t, n) {
+});
+var i,
+    a = r(724458);
+var s = r(653041);
+var o = r(47120);
+var l = r(271383),
+    u = r(588215);
+function c(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let l = [12, 25, 50, 100],
-    u = 7;
-function c() {
+let d = [12, 25, 50, 100],
+    f = 7,
+    _ = 5,
+    h = 250;
+function p() {
     return {
-        pageSize: l[0],
+        pageSize: d[0],
         currentPage: 1,
         continuationToken: null,
-        sort: s.d$.ORDER_BY_UNSPECIFIED,
+        sort: u.d$.ORDER_BY_UNSPECIFIED,
         elasticSearchCursor: null
     };
 }
-function d(e) {
-    return Math.max(5 * e.pageSize, 250);
+function m(e) {
+    return Math.max(e.pageSize * _, h);
 }
-((i = r || (r = {}))[(i.FORWARD = 1)] = 'FORWARD'), (i[(i.BACKWARD = -1)] = 'BACKWARD');
-class f {
+!(function (e) {
+    (e[(e.FORWARD = 1)] = 'FORWARD'), (e[(e.BACKWARD = -1)] = 'BACKWARD');
+})(i || (i = {}));
+class g {
     reset() {
-        (this._paginationState = c()), (this._sortedMemberIds = []), (this._cachedPaginationChunks = {}), (this._version += 1);
+        (this._paginationState = p()), (this._sortedMemberIds = []), (this._cachedPaginationChunks = {}), (this._version += 1);
     }
     isMemberOnCurrentPage(e) {
-        var t;
-        return (null !== (t = this._cachedPaginationChunks[this._paginationState.currentPage]) && void 0 !== t ? t : []).includes(e);
+        var n;
+        return (null !== (n = this._cachedPaginationChunks[this._paginationState.currentPage]) && void 0 !== n ? n : []).includes(e);
     }
     isMemberInAnyChunk(e) {
         return this._sortedMemberIds.includes(e);
     }
     _initPaginationFromRawMembers(e) {
-        let t = [],
-            n = e.reduce((e, n, r) => ((e = this._reduceMemberIdsToPaginationChunks(e, n.userId, r)), t.push(n.userId), e), {});
-        return [t, n];
+        let n = [],
+            r = e.reduce((e, r, i) => ((e = this._reduceMemberIdsToPaginationChunks(e, r.userId, i)), n.push(r.userId), e), {});
+        return [n, r];
     }
     _buildPaginationFromMemberIds(e) {
         return e.reduce(this._reduceMemberIdsToPaginationChunks, {});
@@ -85,42 +88,42 @@ class f {
             !0)
         );
     }
-    _calculateNewPageFromPageSizeChange(e, t) {
-        let { currentPage: n, pageSize: r } = this._paginationState;
-        return e * r <= this._sortedMemberIds.length ? Math.max(Math.ceil((r / e) * (null != t ? t : n)), 1) : 1;
+    _calculateNewPageFromPageSizeChange(e, n) {
+        let { currentPage: r, pageSize: i } = this._paginationState;
+        return e * i <= this._sortedMemberIds.length ? Math.max(Math.ceil((i / e) * (null != n ? n : r)), 1) : 1;
     }
     updatePaginationState(e) {
-        let t = !1;
+        let n = !1;
         if (null != e.pageSize && e.pageSize !== this._paginationState.pageSize) {
-            var n;
-            (t = !0), (e.currentPage = this._calculateNewPageFromPageSizeChange(null !== (n = e.pageSize) && void 0 !== n ? n : this._paginationState.pageSize, e.currentPage));
+            var r;
+            (n = !0), (e.currentPage = this._calculateNewPageFromPageSizeChange(null !== (r = e.pageSize) && void 0 !== r ? r : this._paginationState.pageSize, e.currentPage));
         }
         return (
             (this._paginationState = {
                 ...this._paginationState,
                 ...e
             }),
-            t && this._rebuildPaginationChunksFromStoredMembers(),
-            [!0, t]
+            n && this._rebuildPaginationChunksFromStoredMembers(),
+            [!0, n]
         );
     }
     updateSortedMembers(e) {
-        let [t, n] = this._initPaginationFromRawMembers(e);
-        return (this._sortedMemberIds = t), (this._cachedPaginationChunks = n), (this._version += 1), !0;
+        let [n, r] = this._initPaginationFromRawMembers(e);
+        return (this._sortedMemberIds = n), (this._cachedPaginationChunks = r), (this._version += 1), !0;
     }
     updateSortedMembersByUserIds(e) {
         return (this._sortedMemberIds = e), this._rebuildPaginationChunksFromStoredMembers(), !0;
     }
     _findMember(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-            n = e;
-        n < this._sortedMemberIds.length && (n = this._sortedMemberIds.length - 1), n < 0 && (n = 0);
-        let r = this._sortedMemberIds[e],
-            i = a.ZP.getMember(this.guildId, r);
-        for (; null == i && !((e += t) < 0) && !(e >= this._sortedMemberIds.length); ) {
-            (r = this._sortedMemberIds[e]), (null == (i = a.ZP.getMember(this.guildId, r)) ? void 0 : i.joinedAt) == null && (i = null);
+        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+            r = e;
+        r < this._sortedMemberIds.length && (r = this._sortedMemberIds.length - 1), r < 0 && (r = 0);
+        let i = this._sortedMemberIds[e],
+            a = l.ZP.getMember(this.guildId, i);
+        for (; null == a && !((e += n) < 0) && !(e >= this._sortedMemberIds.length); ) {
+            (i = this._sortedMemberIds[e]), (null == (a = l.ZP.getMember(this.guildId, i)) ? void 0 : a.joinedAt) == null && (a = null);
         }
-        return i;
+        return a;
     }
     getElasticSearchPagination() {
         return this.getPaginationState().elasticSearchCursor;
@@ -131,20 +134,20 @@ class f {
     get version() {
         return this._version;
     }
-    constructor(e, t) {
-        o(this, 'guildId', void 0),
-            o(this, '_sortedMemberIds', void 0),
-            o(this, '_paginationState', void 0),
-            o(this, '_version', void 0),
-            o(this, '_cachedPaginationChunks', void 0),
-            o(this, '_reduceMemberIdsToPaginationChunks', (e, t, n) => {
-                let r = Math.floor(n / this._paginationState.pageSize) + 1;
-                return null == e[r] && (e[r] = []), e[r].push(t), e;
+    constructor(e, n) {
+        c(this, 'guildId', void 0),
+            c(this, '_sortedMemberIds', void 0),
+            c(this, '_paginationState', void 0),
+            c(this, '_version', void 0),
+            c(this, '_cachedPaginationChunks', void 0),
+            c(this, '_reduceMemberIdsToPaginationChunks', (e, n, r) => {
+                let i = Math.floor(r / this._paginationState.pageSize) + 1;
+                return null == e[i] && (e[i] = []), e[i].push(n), e;
             }),
             (this.guildId = e),
-            (this._paginationState = c()),
+            (this._paginationState = p()),
             (this._version = 0);
-        let [n, r] = this._initPaginationFromRawMembers(t);
-        (this._sortedMemberIds = n), (this._cachedPaginationChunks = r), (this._version += 1);
+        let [r, i] = this._initPaginationFromRawMembers(n);
+        (this._sortedMemberIds = r), (this._cachedPaginationChunks = i), (this._version += 1);
     }
 }

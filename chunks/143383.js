@@ -1,18 +1,24 @@
-e.exports = function (e) {
-    let t = {
+function n(e) {
+    let n = {
             className: 'number',
             begin: '[1-9][0-9]*',
             relevance: 0
         },
-        n = {
+        r = {
             className: 'symbol',
             begin: ':[^\\]]+'
         },
-        r = {
+        i = {
+            className: 'built_in',
+            begin: '(AR|P|PAYLOAD|PR|R|SR|RSR|LBL|VR|UALM|MESSAGE|UTOOL|UFRAME|TIMER|TIMER_OVERFLOW|JOINT_MAX_SPEED|RESUME_PROG|DIAG_REC)\\[',
+            end: '\\]',
+            contains: ['self', n, r]
+        },
+        a = {
             className: 'built_in',
             begin: '(AI|AO|DI|DO|F|RI|RO|UI|UO|GI|GO|SI|SO)\\[',
             end: '\\]',
-            contains: ['self', t, e.QUOTE_STRING_MODE, n]
+            contains: ['self', n, e.QUOTE_STRING_MODE, r]
         };
     return {
         name: 'TP',
@@ -21,13 +27,8 @@ e.exports = function (e) {
             literal: ['ON', 'OFF', 'max_speed', 'LPOS', 'JPOS', 'ENABLE', 'DISABLE', 'START', 'STOP', 'RESET']
         },
         contains: [
-            {
-                className: 'built_in',
-                begin: '(AR|P|PAYLOAD|PR|R|SR|RSR|LBL|VR|UALM|MESSAGE|UTOOL|UFRAME|TIMER|TIMER_OVERFLOW|JOINT_MAX_SPEED|RESUME_PROG|DIAG_REC)\\[',
-                end: '\\]',
-                contains: ['self', t, n]
-            },
-            r,
+            i,
+            a,
             {
                 className: 'keyword',
                 begin: '/(PROG|ATTR|MN|POS|END)\\b'
@@ -61,4 +62,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = n;

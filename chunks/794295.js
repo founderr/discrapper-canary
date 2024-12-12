@@ -1,30 +1,31 @@
-var r = n(200651),
-    i = n(192379),
-    a = n(302454),
-    s = n.n(a),
-    o = n(481060),
-    l = n(100527),
-    u = n(906732),
-    c = n(49012);
-t.Z = i.memo(function (e) {
-    let { onClick: t, trusted: n, title: a, href: d, children: f, messageId: _, channelId: p, ...h } = e,
-        { analyticsLocations: m } = (0, u.ZP)(l.Z.MASKED_LINK),
-        g = i.useCallback((t) => (0, c.q)(e, t, m), [m, e]),
-        E = i.useCallback(
+var i = r(200651),
+    a = r(192379),
+    s = r(302454),
+    o = r.n(s),
+    l = r(481060),
+    u = r(100527),
+    c = r(906732),
+    d = r(49012);
+let f = 1;
+n.Z = a.memo(function (e) {
+    let { onClick: n, trusted: r, title: s, href: _, children: h, messageId: p, channelId: m, ...g } = e,
+        { analyticsLocations: E } = (0, c.ZP)(u.Z.MASKED_LINK),
+        v = a.useCallback((n) => (0, d.q)(e, n, E), [E, e]),
+        I = a.useCallback(
             (e) => {
-                1 === e.button && g(e);
+                e.button === f && v(e);
             },
-            [g]
+            [v]
         ),
-        v = s().sanitizeUrl(d);
-    return (0, r.jsx)(o.Anchor, {
-        ...h,
-        title: a,
+        T = o().sanitizeUrl(_);
+    return (0, i.jsx)(l.Anchor, {
+        ...g,
+        title: s,
         target: '_blank',
         rel: 'noreferrer noopener',
-        href: v,
-        onClick: g,
-        onAuxClick: E,
-        children: null != f ? f : a
+        href: T,
+        onClick: v,
+        onAuxClick: I,
+        children: null != h ? h : s
     });
 });

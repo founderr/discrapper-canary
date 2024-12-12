@@ -1,113 +1,113 @@
-var r = n(200651),
-    i = n(192379),
-    a = n(588468),
-    s = n(271383),
-    o = n(483360),
-    l = n(51144),
-    u = n(877565),
-    c = n(590921),
-    d = n(665692),
-    f = n(388032);
-let _ = {
-    sentinel: d.ME,
-    stores: [s.ZP],
-    matches: (e, t, n, r, i) => (i.mentions.user !== c.h3.DENY || i.mentions.role !== c.Fw.DENY || i.mentions.global !== c.VV.DENY) && !0,
-    queryResults(e, t, n, r, i) {
-        let a = r.mentions.global === c.VV.ALLOW_EVERYONE || r.mentions.global === c.VV.ALLOW_EVERYONE_OR_HERE,
-            s = r.mentions.global === c.VV.ALLOW_EVERYONE_OR_HERE,
-            l = r.mentions.user !== c.h3.DENY,
-            u = r.mentions.role !== c.Fw.DENY,
-            d = r.mentions.user === c.h3.ALLOW_GUILD,
-            f = r.mentions.role === c.Fw.ALLOW_ALL;
+var i = r(200651),
+    a = r(192379),
+    s = r(588468),
+    o = r(271383),
+    l = r(483360),
+    u = r(51144),
+    c = r(877565),
+    d = r(590921),
+    f = r(665692),
+    _ = r(388032);
+let h = {
+    sentinel: f.ME,
+    stores: [o.ZP],
+    matches: (e, n, r, i, a) => (a.mentions.user !== d.h3.DENY || a.mentions.role !== d.Fw.DENY || a.mentions.global !== d.VV.DENY) && !0,
+    queryResults(e, n, r, i, a) {
+        let s = i.mentions.global === d.VV.ALLOW_EVERYONE || i.mentions.global === d.VV.ALLOW_EVERYONE_OR_HERE,
+            o = i.mentions.global === d.VV.ALLOW_EVERYONE_OR_HERE,
+            u = i.mentions.user !== d.h3.DENY,
+            c = i.mentions.role !== d.Fw.DENY,
+            f = i.mentions.user === d.h3.ALLOW_GUILD,
+            _ = i.mentions.role === d.Fw.ALLOW_ALL;
         return {
-            results: o.ZP.queryMentionResults({
-                query: n,
+            results: l.ZP.queryMentionResults({
+                query: r,
                 channel: e,
-                canMentionEveryone: a,
-                canMentionHere: s,
-                canMentionUsers: l,
-                canMentionRoles: u,
-                includeAllGuildUsers: d,
-                includeNonMentionableRoles: f,
-                request: i
+                canMentionEveryone: s,
+                canMentionHere: o,
+                canMentionUsers: u,
+                canMentionRoles: c,
+                includeAllGuildUsers: f,
+                includeNonMentionableRoles: _,
+                request: a
             })
         };
     },
     renderResults(e) {
-        let t,
-            n,
+        let n,
+            r,
             {
-                results: { users: s, globals: o, roles: l },
-                selectedIndex: _,
+                results: { users: o, globals: l, roles: u },
+                selectedIndex: h,
                 channel: p,
-                query: h,
-                options: m,
-                onHover: g,
-                onClick: E
+                query: m,
+                options: g,
+                onHover: E,
+                onClick: v
             } = e,
-            v = s.map((e, t) =>
-                (0, r.jsx)(
-                    a.ZP.User,
+            I = o.map((e, n) =>
+                (0, i.jsx)(
+                    s.ZP.User,
                     {
                         guildId: p.guild_id,
-                        onClick: E,
-                        onHover: g,
-                        selected: _ === t,
-                        index: t,
+                        onClick: v,
+                        onHover: E,
+                        selected: h === n,
+                        index: n,
                         user: e.user,
                         nick: e.nick,
                         status: e.status,
-                        hidePersonalInformation: m.hidePersonalInformation
+                        hidePersonalInformation: g.hidePersonalInformation
                     },
                     e.user.id
                 )
             ),
-            I = o.map((e, t) =>
-                (0, r.jsx)(
-                    a.ZP.Generic,
+            T = l.map((e, n) =>
+                (0, i.jsx)(
+                    s.ZP.Generic,
                     {
-                        onClick: E,
-                        onHover: g,
-                        selected: _ === t + s.length,
-                        index: s.length + t,
+                        onClick: v,
+                        onHover: E,
+                        selected: h === n + o.length,
+                        index: o.length + n,
                         text: e.text,
-                        description: m.hideMentionDescription ? null : e.description,
+                        description: g.hideMentionDescription ? null : e.description,
                         'aria-label': e.text
                     },
                     e.text
                 )
             ),
-            T = l.map((e, t) =>
-                (0, r.jsx)(
-                    a.ZP.Role,
+            b = u.map((e, n) =>
+                (0, i.jsx)(
+                    s.ZP.Role,
                     {
-                        onClick: E,
-                        onHover: g,
-                        selected: _ === t + s.length + o.length,
-                        index: s.length + o.length + t,
+                        onClick: v,
+                        onHover: E,
+                        selected: h === n + o.length + l.length,
+                        index: o.length + l.length + n,
                         role: e,
-                        hideDescription: m.hideMentionDescription
+                        hideDescription: g.hideMentionDescription
                     },
                     e.id
                 )
             );
         return (
-            m.mentions.user === c.h3.DENY ? ((t = f.t.MLiD1d), (n = f.intl.string(f.t.LPJmLy))) : ((t = f.t.rPNimp), (n = f.intl.string(f.t['9Oq93t']))),
-            (0, r.jsxs)(
-                i.Fragment,
+            g.mentions.user === d.h3.DENY ? ((n = _.t.MLiD1d), (r = _.intl.string(_.t.LPJmLy))) : ((n = _.t.rPNimp), (r = _.intl.string(_.t['9Oq93t']))),
+            (0, i.jsxs)(
+                a.Fragment,
                 {
                     children: [
-                        (0, u.gm)({
-                            titleWithQuery: t,
-                            titleWithoutQuery: n,
-                            query: h,
-                            getQuery: (e) => ''.concat(d.ME).concat(e)
+                        (0, c.gm)({
+                            titleWithQuery: n,
+                            titleWithoutQuery: r,
+                            query: m,
+                            getQuery: (e) => ''.concat(f.ME).concat(e)
                         }),
-                        v,
-                        s.length > 0 && o.length > 0 ? (0, r.jsx)(a.ZP.Divider, {}) : null,
                         I,
-                        (s.length > 0 && l.length > 0) || (o.length > 0 && l.length > 0) ? (0, r.jsx)(a.ZP.Divider, {}) : null,
-                        T
+                        o.length > 0 && l.length > 0 ? (0, i.jsx)(s.ZP.Divider, {}) : null,
+                        T,
+                        (o.length > 0 && u.length > 0) || (l.length > 0 && u.length > 0) ? (0, i.jsx)(s.ZP.Divider, {}) : null,
+                        b
                     ]
                 },
                 'mentions'
@@ -116,41 +116,30 @@ let _ = {
     },
     onSelect(e) {
         let {
-                results: { users: t, globals: n, roles: r },
-                index: i,
-                options: a,
-                channel: s
+                results: { users: n, globals: r, roles: i },
+                index: a,
+                options: s,
+                channel: o
             } = e,
-            u = t[i],
-            f = n[i - t.length],
-            _ = r[i - t.length - n.length];
-        return (
-            null != u
-                ? a.insertText(
-                      (function (e, t, n) {
-                          return o.ZP.hasSameRoleAsUsername(t, e) ? ''.concat(d.ME).concat(e.tag) : ''.concat(d.ME).concat(l.ZP.getUserTag(e, { identifiable: n ? 'never' : 'always' }));
-                      })(u.user, s, a.hidePersonalInformation),
-                      (function (e) {
-                          return '<@'.concat(e.id, '>');
-                      })(u.user)
-                  )
-                : null != f
-                  ? a.insertText(
-                        (function (e) {
-                            return e.text;
-                        })(f)
-                    )
-                  : null != _ &&
-                    a.insertText(
-                        (function (e) {
-                            return ''.concat(d.ME).concat(e.name);
-                        })(_),
-                        (function (e) {
-                            return '<@&'.concat(e.id, '>');
-                        })(_)
-                    ),
-            { type: c.z2.MENTION }
-        );
+            l = n[a],
+            u = r[a - n.length],
+            c = i[a - n.length - r.length];
+        return null != l ? s.insertText(p(l.user, o, s.hidePersonalInformation), m(l.user)) : null != u ? s.insertText(g(u)) : null != c && s.insertText(E(c), v(c)), { type: d.z2.MENTION };
     }
 };
-t.Z = _;
+function p(e, n, r) {
+    return l.ZP.hasSameRoleAsUsername(n, e) ? ''.concat(f.ME).concat(e.tag) : ''.concat(f.ME).concat(u.ZP.getUserTag(e, { identifiable: r ? 'never' : 'always' }));
+}
+function m(e) {
+    return '<@'.concat(e.id, '>');
+}
+function g(e) {
+    return e.text;
+}
+function E(e) {
+    return ''.concat(f.ME).concat(e.name);
+}
+function v(e) {
+    return '<@&'.concat(e.id, '>');
+}
+n.Z = h;

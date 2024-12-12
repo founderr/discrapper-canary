@@ -1,35 +1,36 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return d;
+        return h;
     }
-}),
-    n(789020);
-var r = n(913527),
-    i = n.n(r),
-    a = n(81825),
-    s = n(812206),
-    o = n(630388),
-    l = n(959546),
-    u = n(981631);
-function c(e, t, n) {
+});
+var i = r(789020);
+var a = r(913527),
+    s = r.n(a),
+    o = r(81825),
+    l = r(812206),
+    u = r(630388),
+    c = r(959546),
+    d = r(981631);
+function f(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-class d extends a.Z {
+let _ = 'master';
+class h extends o.Z {
     static createFromServer(e) {
-        return new d({
+        return new h({
             id: e.application.id,
             branchId: e.branch_id,
-            entitlements: null != e.entitlements ? e.entitlements.map((e) => l.Z.createFromServer(e)) : [],
+            entitlements: null != e.entitlements ? e.entitlements.map((e) => c.Z.createFromServer(e)) : [],
             branch: e.branch,
             flags: e.flags,
             createdAt: e.created_at,
@@ -37,22 +38,22 @@ class d extends a.Z {
                 id: e.sku.id,
                 type: e.sku.type,
                 premium: e.sku.premium,
-                preorderReleaseAt: null != e.sku.preorder_release_at ? i()(e.sku.preorder_release_at) : null,
+                preorderReleaseAt: null != e.sku.preorder_release_at ? s()(e.sku.preorder_release_at) : null,
                 preorderApproximateReleaseDate: null != e.sku.preorder_approximate_release_date ? e.sku.preorder_approximate_release_date : null
             }
         });
     }
     static createForTestMode(e) {
-        return new d({
+        return new h({
             id: e.id,
             entitlements: [],
             branchId: e.branch.id,
             branch: e.branch,
-            flags: u.eHb.ENTITLED,
+            flags: d.eHb.ENTITLED,
             createdAt: e.branch.created_at,
             sku: {
                 id: e.skuId,
-                type: u.epS.DURABLE_PRIMARY,
+                type: d.epS.DURABLE_PRIMARY,
                 premium: !1
             },
             isTestMode: !0
@@ -62,13 +63,13 @@ class d extends a.Z {
         return this.flags;
     }
     hasFlag(e) {
-        return o.yE(this.flags, e);
+        return u.yE(this.flags, e);
     }
     isHidden() {
-        return this.hasFlag(u.eHb.HIDDEN);
+        return this.hasFlag(d.eHb.HIDDEN);
     }
     isOverlayEnabled() {
-        return !this.hasFlag(u.eHb.OVERLAY_DISABLED);
+        return !this.hasFlag(d.eHb.OVERLAY_DISABLED);
     }
     isMasterBranch() {
         return this.branchId === this.id;
@@ -76,17 +77,17 @@ class d extends a.Z {
     isDiscordApplication() {
         return !0;
     }
-    isEntitled(e, t) {
-        return !!this.isTestMode || this.entitlements.some((n) => n.isValid(e, t, this.branchId));
+    isEntitled(e, n) {
+        return !!this.isTestMode || this.entitlements.some((r) => r.isValid(e, n, this.branchId));
     }
     isPreorder() {
         return null != this.sku.preorderReleaseAt || null != this.sku.preorderApproximateReleaseDate;
     }
     getDistributor() {
-        return u.GQo.DISCORD;
+        return d.GQo.DISCORD;
     }
     getBranchName() {
-        return null != this.branch ? this.branch.name : 'master';
+        return null != this.branch ? this.branch.name : _;
     }
     getBranchedName(e) {
         return this.isMasterBranch() || null == this.branch ? e.name : ''.concat(e.name, ' (').concat(this.branch.name, ')');
@@ -95,7 +96,7 @@ class d extends a.Z {
         return this.sku.id;
     }
     getAnalyticsData() {
-        let e = s.Z.getApplication(this.id);
+        let e = l.Z.getApplication(this.id);
         return {
             application_id: null != e ? e.id : null,
             application_name: null != e ? e.name : null,
@@ -104,6 +105,6 @@ class d extends a.Z {
         };
     }
     constructor(e) {
-        super(), c(this, 'id', void 0), c(this, 'branchId', void 0), c(this, 'flags', void 0), c(this, 'createdAt', void 0), c(this, 'entitlements', void 0), c(this, 'branch', void 0), c(this, 'sku', void 0), c(this, 'isTestMode', void 0), (this.id = e.id), (this.createdAt = e.createdAt), (this.flags = e.flags), (this.branchId = e.branchId), (this.entitlements = e.entitlements), (this.branch = e.branch), (this.sku = e.sku), (this.isTestMode = e.isTestMode || !1);
+        super(), f(this, 'id', void 0), f(this, 'branchId', void 0), f(this, 'flags', void 0), f(this, 'createdAt', void 0), f(this, 'entitlements', void 0), f(this, 'branch', void 0), f(this, 'sku', void 0), f(this, 'isTestMode', void 0), (this.id = e.id), (this.createdAt = e.createdAt), (this.flags = e.flags), (this.branchId = e.branchId), (this.entitlements = e.entitlements), (this.branch = e.branch), (this.sku = e.sku), (this.isTestMode = e.isTestMode || !1);
     }
 }

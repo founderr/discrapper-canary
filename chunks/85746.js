@@ -1,17 +1,15 @@
-var r, i, a, s;
-n.d(t, {
+var i, a;
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     },
     l: function () {
-        return r;
+        return i;
     }
 }),
-    ((a = r || (r = {})).COZY = 'cozy'),
-    (a.COZY_DRAWER = 'cozy-drawer'),
-    (a.COZY_DRAWER_SMOL = 'cozy-drawer-smol'),
-    (a.COMPACT = 'compact'),
-    (a.MINIMAL = 'minimal'),
-    ((s = i || (i = {})).ALL = 'all'),
-    (s.UNREADS = 'unreads'),
-    (s.NONE = 'none');
+    !(function (e) {
+        (e.COZY = 'cozy'), (e.COZY_DRAWER = 'cozy-drawer'), (e.COZY_DRAWER_SMOL = 'cozy-drawer-smol'), (e.COMPACT = 'compact'), (e.MINIMAL = 'minimal');
+    })(i || (i = {})),
+    !(function (e) {
+        (e.ALL = 'all'), (e.UNREADS = 'unreads'), (e.NONE = 'none');
+    })(a || (a = {}));

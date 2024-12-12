@@ -1,35 +1,37 @@
-function r(e) {
-    return function (t) {
-        var n,
-            r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            i = r.width,
-            a = (i && e.matchPatterns[i]) || e.matchPatterns[e.defaultMatchWidth],
-            s = t.match(a);
-        if (!s) return null;
-        var o = s[0],
-            l = (i && e.parsePatterns[i]) || e.parsePatterns[e.defaultParseWidth],
-            u = Array.isArray(l)
-                ? (function (e, t) {
-                      for (var n = 0; n < e.length; n++) if (t(e[n])) return n;
-                  })(l, function (e) {
-                      return e.test(o);
+function i(e) {
+    return function (n) {
+        var r,
+            i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            o = i.width,
+            l = (o && e.matchPatterns[o]) || e.matchPatterns[e.defaultMatchWidth],
+            u = n.match(l);
+        if (!u) return null;
+        var c = u[0],
+            d = (o && e.parsePatterns[o]) || e.parsePatterns[e.defaultParseWidth],
+            f = Array.isArray(d)
+                ? s(d, function (e) {
+                      return e.test(c);
                   })
-                : (function (e, t) {
-                      for (var n in e) if (e.hasOwnProperty(n) && t(e[n])) return n;
-                  })(l, function (e) {
-                      return e.test(o);
+                : a(d, function (e) {
+                      return e.test(c);
                   });
         return (
-            (n = e.valueCallback ? e.valueCallback(u) : u),
+            (r = e.valueCallback ? e.valueCallback(f) : f),
             {
-                value: (n = r.valueCallback ? r.valueCallback(n) : n),
-                rest: t.slice(o.length)
+                value: (r = i.valueCallback ? i.valueCallback(r) : r),
+                rest: n.slice(c.length)
             }
         );
     };
 }
-n.d(t, {
+function a(e, n) {
+    for (var r in e) if (e.hasOwnProperty(r) && n(e[r])) return r;
+}
+function s(e, n) {
+    for (var r = 0; r < e.length; r++) if (n(e[r])) return r;
+}
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

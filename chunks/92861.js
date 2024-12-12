@@ -1,78 +1,80 @@
-n.d(t, {
+r.d(n, {
     S: function () {
-        return l;
+        return d;
     }
 });
-var r = n(573654),
-    i = n(778010),
-    a = n(112457),
-    s = n(603565);
-function o(e, t) {
-    for (var n = 0; n < t.length; n++) {
-        var r = t[n];
-        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+var i = r(573654),
+    a = r(778010),
+    s = r(112457),
+    o = r(603565);
+function l(e, n) {
+    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+}
+function u(e, n) {
+    for (var r = 0; r < n.length; r++) {
+        var i = n[r];
+        (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
     }
 }
-var l = (function () {
-    var e, t, n;
-    function l(e, t) {
-        !(function (e, t) {
-            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-        })(this, l),
-            (this.store = e),
-            (this.registry = t);
+function c(e, n, r) {
+    return n && u(e.prototype, n), r && u(e, r), e;
+}
+var d = (function () {
+    function e(n, r) {
+        l(this, e), (this.store = n), (this.registry = r);
     }
     return (
-        (e = l),
-        (t = [
+        c(e, [
             {
                 key: 'subscribeToStateChange',
                 value: function (e) {
-                    var t = this,
-                        n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { handlerIds: void 0 },
-                        i = n.handlerIds;
-                    (0, r.k)('function' == typeof e, 'listener must be a function.'), (0, r.k)(void 0 === i || Array.isArray(i), 'handlerIds, when specified, must be an array of strings.');
-                    var a = this.store.getState().stateId;
-                    return this.store.subscribe(function () {
-                        var n = t.store.getState(),
-                            r = n.stateId;
-                        try {
-                            !(r === a || (r === a + 1 && !(0, s.co)(n.dirtyHandlerIds, i))) && e();
-                        } finally {
-                            a = r;
-                        }
-                    });
+                    var n = this,
+                        r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { handlerIds: void 0 },
+                        a = r.handlerIds;
+                    (0, i.k)('function' == typeof e, 'listener must be a function.'), (0, i.k)(void 0 === a || Array.isArray(a), 'handlerIds, when specified, must be an array of strings.');
+                    var s = this.store.getState().stateId,
+                        l = function () {
+                            var r = n.store.getState(),
+                                i = r.stateId;
+                            try {
+                                !(i === s || (i === s + 1 && !(0, o.co)(r.dirtyHandlerIds, a))) && e();
+                            } finally {
+                                s = i;
+                            }
+                        };
+                    return this.store.subscribe(l);
                 }
             },
             {
                 key: 'subscribeToOffsetChange',
                 value: function (e) {
-                    var t = this;
-                    (0, r.k)('function' == typeof e, 'listener must be a function.');
-                    var n = this.store.getState().dragOffset;
-                    return this.store.subscribe(function () {
-                        var r = t.store.getState().dragOffset;
-                        if (r !== n) (n = r), e();
-                    });
+                    var n = this;
+                    (0, i.k)('function' == typeof e, 'listener must be a function.');
+                    var r = this.store.getState().dragOffset,
+                        a = function () {
+                            var i = n.store.getState().dragOffset;
+                            if (i !== r) (r = i), e();
+                        };
+                    return this.store.subscribe(a);
                 }
             },
             {
                 key: 'canDragSource',
                 value: function (e) {
                     if (!e) return !1;
-                    var t = this.registry.getSource(e);
-                    return (0, r.k)(t, 'Expected to find a valid source. sourceId='.concat(e)), !this.isDragging() && t.canDrag(this, e);
+                    var n = this.registry.getSource(e);
+                    return (0, i.k)(n, 'Expected to find a valid source. sourceId='.concat(e)), !this.isDragging() && n.canDrag(this, e);
                 }
             },
             {
                 key: 'canDropOnTarget',
                 value: function (e) {
                     if (!e) return !1;
-                    var t = this.registry.getTarget(e);
-                    if (((0, r.k)(t, 'Expected to find a valid target. targetId='.concat(e)), !this.isDragging() || this.didDrop())) return !1;
-                    var n = this.registry.getTargetType(e),
-                        a = this.getItemType();
-                    return (0, i.s)(n, a) && t.canDrop(this, e);
+                    var n = this.registry.getTarget(e);
+                    if (((0, i.k)(n, 'Expected to find a valid target. targetId='.concat(e)), !this.isDragging() || this.didDrop())) return !1;
+                    var r = this.registry.getTargetType(e),
+                        s = this.getItemType();
+                    return (0, a.s)(r, s) && n.canDrop(this, e);
                 }
             },
             {
@@ -85,24 +87,24 @@ var l = (function () {
                 key: 'isDraggingSource',
                 value: function (e) {
                     if (!e) return !1;
-                    var t = this.registry.getSource(e, !0);
-                    return (0, r.k)(t, 'Expected to find a valid source. sourceId='.concat(e)), !!(this.isDragging() && this.isSourcePublic()) && this.registry.getSourceType(e) === this.getItemType() && t.isDragging(this, e);
+                    var n = this.registry.getSource(e, !0);
+                    return (0, i.k)(n, 'Expected to find a valid source. sourceId='.concat(e)), !!(this.isDragging() && this.isSourcePublic()) && this.registry.getSourceType(e) === this.getItemType() && n.isDragging(this, e);
                 }
             },
             {
                 key: 'isOverTarget',
                 value: function (e) {
-                    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { shallow: !1 };
+                    var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { shallow: !1 };
                     if (!e) return !1;
-                    var n = t.shallow;
+                    var r = n.shallow;
                     if (!this.isDragging()) return !1;
-                    var r = this.registry.getTargetType(e),
-                        a = this.getItemType();
-                    if (a && !(0, i.s)(r, a)) return !1;
-                    var s = this.getTargetIds();
-                    if (!s.length) return !1;
-                    var o = s.indexOf(e);
-                    return n ? o === s.length - 1 : o > -1;
+                    var i = this.registry.getTargetType(e),
+                        s = this.getItemType();
+                    if (s && !(0, a.s)(i, s)) return !1;
+                    var o = this.getTargetIds();
+                    if (!o.length) return !1;
+                    var l = o.indexOf(e);
+                    return r ? l === o.length - 1 : l > -1;
                 }
             },
             {
@@ -168,17 +170,16 @@ var l = (function () {
             {
                 key: 'getSourceClientOffset',
                 value: function () {
-                    return (0, a.YY)(this.store.getState().dragOffset);
+                    return (0, s.YY)(this.store.getState().dragOffset);
                 }
             },
             {
                 key: 'getDifferenceFromInitialOffset',
                 value: function () {
-                    return (0, a.ar)(this.store.getState().dragOffset);
+                    return (0, s.ar)(this.store.getState().dragOffset);
                 }
             }
         ]),
-        o(e.prototype, t),
-        l
+        e
     );
 })();

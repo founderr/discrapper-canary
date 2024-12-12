@@ -1,6 +1,10 @@
-e.exports = function (e) {
-    let t = e.regex,
-        n = {
+function n(e) {
+    let n = e.regex,
+        r = {
+            className: 'meta',
+            begin: '@[A-Za-z]+'
+        },
+        i = {
             className: 'subst',
             variants: [
                 { begin: '\\$[A-Za-z0-9_]+' },
@@ -10,7 +14,7 @@ e.exports = function (e) {
                 }
             ]
         },
-        r = {
+        a = {
             className: 'string',
             variants: [
                 {
@@ -27,28 +31,28 @@ e.exports = function (e) {
                     begin: '[a-z]+"',
                     end: '"',
                     illegal: '\\n',
-                    contains: [e.BACKSLASH_ESCAPE, n]
+                    contains: [e.BACKSLASH_ESCAPE, i]
                 },
                 {
                     className: 'string',
                     begin: '[a-z]+"""',
                     end: '"""',
-                    contains: [n],
+                    contains: [i],
                     relevance: 10
                 }
             ]
         },
-        i = {
+        s = {
             className: 'type',
             begin: '\\b[A-Z][A-Za-z0-9_]*',
             relevance: 0
         },
-        a = {
+        o = {
             className: 'title',
             begin: /[^0-9\n\t "'(),.`{}\[\]:;][^\n\t "'(),.`{}\[\]:;]+|[^0-9\n\t "'(),.`{}\[\]:;=]/,
             relevance: 0
         },
-        s = {
+        l = {
             className: 'class',
             beginKeywords: 'class object trait type',
             end: /[:={\[\n;]/,
@@ -66,7 +70,7 @@ e.exports = function (e) {
                     excludeBegin: !0,
                     excludeEnd: !0,
                     relevance: 0,
-                    contains: [i]
+                    contains: [s]
                 },
                 {
                     className: 'params',
@@ -75,16 +79,38 @@ e.exports = function (e) {
                     excludeBegin: !0,
                     excludeEnd: !0,
                     relevance: 0,
-                    contains: [i]
+                    contains: [s]
                 },
-                a
+                o
             ]
         },
-        o = {
+        u = {
             className: 'function',
             beginKeywords: 'def',
-            end: t.lookahead(/[:={\[(\n;]/),
-            contains: [a]
+            end: n.lookahead(/[:={\[(\n;]/),
+            contains: [o]
+        },
+        c = {
+            begin: [/^\s*/, 'extension', /\s+(?=[[(])/],
+            beginScope: { 2: 'keyword' }
+        },
+        d = {
+            begin: [/^\s*/, /end/, /\s+/, /(extension\b)?/],
+            beginScope: {
+                2: 'keyword',
+                4: 'keyword'
+            }
+        },
+        f = [
+            { match: /\.inline\b/ },
+            {
+                begin: /\binline(?=\s)/,
+                keywords: 'inline'
+            }
+        ],
+        _ = {
+            begin: [/\(\s*/, /using/, /\s+(?!\))/],
+            beginScope: { 2: 'keyword' }
         };
     return {
         name: 'Scala',
@@ -92,38 +118,7 @@ e.exports = function (e) {
             literal: 'true false null',
             keyword: 'type yield lazy override def with val var sealed abstract private trait object if then forSome for while do throw finally protected extends import final return else break new catch super class case package default try this match continue throws implicit export enum given transparent'
         },
-        contains: [
-            e.C_LINE_COMMENT_MODE,
-            e.C_BLOCK_COMMENT_MODE,
-            r,
-            i,
-            o,
-            s,
-            e.C_NUMBER_MODE,
-            {
-                begin: [/^\s*/, 'extension', /\s+(?=[[(])/],
-                beginScope: { 2: 'keyword' }
-            },
-            {
-                begin: [/^\s*/, /end/, /\s+/, /(extension\b)?/],
-                beginScope: {
-                    2: 'keyword',
-                    4: 'keyword'
-                }
-            },
-            { match: /\.inline\b/ },
-            {
-                begin: /\binline(?=\s)/,
-                keywords: 'inline'
-            },
-            {
-                begin: [/\(\s*/, /using/, /\s+(?!\))/],
-                beginScope: { 2: 'keyword' }
-            },
-            {
-                className: 'meta',
-                begin: '@[A-Za-z]+'
-            }
-        ]
+        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, a, s, u, l, e.C_NUMBER_MODE, c, d, ...f, _, r]
     };
-};
+}
+e.exports = n;

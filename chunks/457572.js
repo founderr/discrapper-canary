@@ -1,60 +1,56 @@
-n(47120);
-var r = n(570140),
-    i = n(147913),
-    a = n(70956),
-    s = n(2818),
-    o = n(768943);
-function l(e, t, n) {
+var i = r(47120);
+var a = r(570140),
+    s = r(147913),
+    o = r(70956),
+    l = r(2818),
+    u = r(768943);
+function c(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let u = null;
-function c() {
+let d = null;
+function f(e) {
+    let { enabled: n } = l.Z.getCurrentConfig({ location: 'MessageRemindersNotificationManager' }, { autoTrackExposure: !1 });
+    if (!!n)
+        a.Z.dispatch({
+            type: 'MESSAGE_REMINDER_DUE',
+            savedMessage: e
+        }),
+            _();
+}
+function _() {
     var e;
-    let { enabled: t } = s.Z.getCurrentConfig({ location: 'MessageRemindersNotificationManager' }, { autoTrackExposure: !1 });
-    if (!t) return;
-    null != u && clearTimeout(u);
-    let n = o.Z.getMessageReminders().find((e) => null != e.saveData.dueAt && e.saveData.dueAt > new Date());
-    if ((null == n ? void 0 : null === (e = n.saveData) || void 0 === e ? void 0 : e.dueAt) == null) {
-        u = null;
+    let { enabled: n } = l.Z.getCurrentConfig({ location: 'MessageRemindersNotificationManager' }, { autoTrackExposure: !1 });
+    if (!n) return;
+    null != d && clearTimeout(d);
+    let r = u.Z.getMessageReminders().find((e) => null != e.saveData.dueAt && e.saveData.dueAt > new Date());
+    if ((null == r ? void 0 : null === (e = r.saveData) || void 0 === e ? void 0 : e.dueAt) == null) {
+        d = null;
         return;
     }
-    let i = Date.now() + a.Z.Millis.WEEK;
-    if (!(n.saveData.dueAt.getTime() > i))
-        u = setTimeout(
-            () =>
-                (function (e) {
-                    let { enabled: t } = s.Z.getCurrentConfig({ location: 'MessageRemindersNotificationManager' }, { autoTrackExposure: !1 });
-                    if (!!t)
-                        r.Z.dispatch({
-                            type: 'MESSAGE_REMINDER_DUE',
-                            savedMessage: e
-                        }),
-                            c();
-                })(n),
-            n.saveData.dueAt.getTime() - Date.now()
-        );
+    let i = Date.now() + o.Z.Millis.WEEK;
+    if (!(r.saveData.dueAt.getTime() > i)) d = setTimeout(() => f(r), r.saveData.dueAt.getTime() - Date.now());
 }
-class d extends i.Z {
+class h extends s.Z {
     constructor(...e) {
         super(...e),
-            l(this, 'actions', {
+            c(this, 'actions', {
                 SAVED_MESSAGES_UPDATE: () => this.handleUpdates(),
                 SAVED_MESSAGE_CREATE: () => this.handleUpdates(),
                 SAVED_MESSAGE_DELETE: () => this.handleUpdates()
             }),
-            l(this, 'handleUpdates', () => {
-                c();
+            c(this, 'handleUpdates', () => {
+                _();
             });
     }
 }
-t.Z = new d();
+n.Z = new h();

@@ -1,53 +1,56 @@
-n.d(t, {
+r.d(n, {
     g: function () {
-        return u;
+        return _;
     }
-}),
-    n(411104);
-var r = n(544891),
-    i = n(570140),
-    a = n(881052),
-    s = n(70956),
-    o = n(672458),
-    l = n(981631);
-async function u(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        c = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-    if (c > 3) throw Error('Unable to search guild members after max retries');
-    let { autoRetry: d = !0, signal: f } = n;
+});
+var i = r(411104);
+var a = r(544891),
+    s = r(570140),
+    o = r(881052),
+    l = r(70956),
+    u = r(672458),
+    c = r(981631);
+function d(e) {
+    return {
+        guild_id: e.guild_id,
+        members: e.members,
+        page_result_count: e.page_result_count,
+        total_result_count: e.total_result_count
+    };
+}
+let f = 3;
+async function _(e, n) {
+    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+    if (i > f) throw Error('Unable to search guild members after max retries');
+    let { autoRetry: h = !0, signal: p } = r;
     try {
-        var _;
-        let a = await r.tn.post({
-            url: l.ANM.GUILD_MEMBER_SEARCH(e),
-            body: t,
-            signal: f,
+        let o = await a.tn.post({
+            url: c.ANM.GUILD_MEMBER_SEARCH(e),
+            body: n,
+            signal: p,
             rejectWithError: !1
         });
-        if (a.status === o.t) {
-            if (null == a.body.retry_after) throw Error('Indexing response did not include retry_after');
-            if (!d) throw Error('Indexing response received but autoRetry is disabled');
+        if (o.status === u.t) {
+            if (null == o.body.retry_after) throw Error('Indexing response did not include retry_after');
+            if (!h) throw Error('Indexing response received but autoRetry is disabled');
             return (
-                await i.Z.dispatch({
+                await s.Z.dispatch({
                     type: 'MEMBER_SAFETY_GUILD_MEMBER_SEARCH_STILL_INDEXING',
                     guildId: e
                 }),
-                await new Promise((e) => setTimeout(e, a.body.retry_after * s.Z.Millis.SECOND)),
-                u(e, t, n, c + 1)
+                await new Promise((e) => setTimeout(e, o.body.retry_after * l.Z.Millis.SECOND)),
+                _(e, n, r, i + 1)
             );
         }
         return {
-            type: o.d.SUCCESSFUL_QUERY,
-            body: {
-                guild_id: (_ = a.body).guild_id,
-                members: _.members,
-                page_result_count: _.page_result_count,
-                total_result_count: _.total_result_count
-            }
+            type: u.d.SUCCESSFUL_QUERY,
+            body: d(o.body)
         };
-    } catch (t) {
-        let e = new a.Hx(t);
+    } catch (n) {
+        let e = new o.Hx(n);
         return {
-            type: o.d.ERROR,
+            type: u.d.ERROR,
             body: e
         };
     }

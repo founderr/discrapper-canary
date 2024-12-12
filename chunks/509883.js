@@ -1,75 +1,79 @@
-n.d(t, {
+r.d(n, {
     _: function () {
-        return l;
+        return c;
     }
 });
-var r = n(573654),
-    i = n(964742),
-    a = n(144459);
-function s(e, t) {
-    var n = Object.keys(e);
+var i = r(573654),
+    a = r(964742),
+    s = r(144459);
+function o(e, n) {
+    var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+        var i = Object.getOwnPropertySymbols(e);
+        n &&
+            (i = i.filter(function (n) {
+                return Object.getOwnPropertyDescriptor(e, n).enumerable;
             })),
-            n.push.apply(n, r);
+            r.push.apply(r, i);
     }
-    return n;
+    return r;
 }
-function o(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {};
-        t % 2
-            ? s(Object(n), !0).forEach(function (t) {
-                  (function (e, t, n) {
-                      t in e
-                          ? Object.defineProperty(e, t, {
-                                value: n,
-                                enumerable: !0,
-                                configurable: !0,
-                                writable: !0
-                            })
-                          : (e[t] = n);
-                  })(e, t, n[t]);
+function l(e) {
+    for (var n = 1; n < arguments.length; n++) {
+        var r = null != arguments[n] ? arguments[n] : {};
+        n % 2
+            ? o(Object(r), !0).forEach(function (n) {
+                  u(e, n, r[n]);
               })
             : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : s(Object(n)).forEach(function (t) {
-                    Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
+              : o(Object(r)).forEach(function (n) {
+                    Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(r, n));
                 });
     }
     return e;
 }
-function l(e) {
+function u(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+function c(e) {
     return function () {
-        var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            n = e.getMonitor(),
-            s = e.getRegistry();
-        (function (e) {
-            (0, r.k)(e.isDragging(), 'Cannot call drop while not dragging.'), (0, r.k)(!e.didDrop(), 'Cannot call drop twice during one drag operation.');
-        })(n),
-            (function (e) {
-                var t = e.getTargetIds().filter(e.canDropOnTarget, e);
-                return t.reverse(), t;
-            })(n).forEach(function (l, u) {
-                var c = (function (e, t, n, i) {
-                        var s = n.getTarget(e),
-                            o = s ? s.drop(i, e) : void 0;
-                        return (
-                            (function (e) {
-                                (0, r.k)(void 0 === e || (0, a.Kn)(e), 'Drop result must either be an object or undefined.');
-                            })(o),
-                            void 0 === o && (o = 0 === t ? {} : i.getDropResult()),
-                            o
-                        );
-                    })(l, u, s, n),
-                    d = {
-                        type: i.rp,
-                        payload: { dropResult: o(o({}, t), c) }
+        var n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            r = e.getMonitor(),
+            i = e.getRegistry();
+        d(r),
+            h(r).forEach(function (s, o) {
+                var u = f(s, o, i, r),
+                    c = {
+                        type: a.rp,
+                        payload: { dropResult: l(l({}, n), u) }
                     };
-                e.dispatch(d);
+                e.dispatch(c);
             });
     };
+}
+function d(e) {
+    (0, i.k)(e.isDragging(), 'Cannot call drop while not dragging.'), (0, i.k)(!e.didDrop(), 'Cannot call drop twice during one drag operation.');
+}
+function f(e, n, r, i) {
+    var a = r.getTarget(e),
+        s = a ? a.drop(i, e) : void 0;
+    return _(s), void 0 === s && (s = 0 === n ? {} : i.getDropResult()), s;
+}
+function _(e) {
+    (0, i.k)(void 0 === e || (0, s.Kn)(e), 'Drop result must either be an object or undefined.');
+}
+function h(e) {
+    var n = e.getTargetIds().filter(e.canDropOnTarget, e);
+    return n.reverse(), n;
 }

@@ -1,52 +1,49 @@
-n.d(t, {
-    p: function () {
-        return a;
-    }
-});
-function r(e, t) {
-    for (var n = 0; n < t.length; n++) {
-        var r = t[n];
-        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+function i(e, n) {
+    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+}
+function a(e, n) {
+    for (var r = 0; r < n.length; r++) {
+        var i = n[r];
+        (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
     }
 }
-function i(e, t, n) {
+function s(e, n, r) {
+    return n && a(e.prototype, n), r && a(e, r), e;
+}
+function o(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-var a = (function () {
-    var e, t, n;
-    function a(e) {
-        !(function (e, t) {
-            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-        })(this, a),
-            i(this, 'item', void 0),
-            i(this, 'config', void 0),
-            (this.config = e),
-            (this.item = {}),
-            this.initializeExposedProperties();
+r.d(n, {
+    p: function () {
+        return l;
+    }
+});
+var l = (function () {
+    function e(n) {
+        i(this, e), o(this, 'item', void 0), o(this, 'config', void 0), (this.config = n), (this.item = {}), this.initializeExposedProperties();
     }
     return (
-        (e = a),
-        (t = [
+        s(e, [
             {
                 key: 'initializeExposedProperties',
                 value: function () {
                     var e = this;
-                    Object.keys(this.config.exposeProperties).forEach(function (t) {
-                        Object.defineProperty(e.item, t, {
+                    Object.keys(this.config.exposeProperties).forEach(function (n) {
+                        Object.defineProperty(e.item, n, {
                             configurable: !0,
                             enumerable: !0,
                             get: function () {
-                                return console.warn('Browser doesn\'t allow reading "'.concat(t, '" until the drop event.')), null;
+                                return console.warn('Browser doesn\'t allow reading "'.concat(n, '" until the drop event.')), null;
                             }
                         });
                     });
@@ -55,17 +52,17 @@ var a = (function () {
             {
                 key: 'loadDataTransfer',
                 value: function (e) {
-                    var t = this;
+                    var n = this;
                     if (e) {
-                        var n = {};
-                        Object.keys(this.config.exposeProperties).forEach(function (r) {
-                            n[r] = {
-                                value: t.config.exposeProperties[r](e, t.config.matchesTypes),
+                        var r = {};
+                        Object.keys(this.config.exposeProperties).forEach(function (i) {
+                            r[i] = {
+                                value: n.config.exposeProperties[i](e, n.config.matchesTypes),
                                 configurable: !0,
                                 enumerable: !0
                             };
                         }),
-                            Object.defineProperties(this.item, n);
+                            Object.defineProperties(this.item, r);
                     }
                 }
             },
@@ -83,8 +80,8 @@ var a = (function () {
             },
             {
                 key: 'isDragging',
-                value: function (e, t) {
-                    return t === e.getSourceId();
+                value: function (e, n) {
+                    return n === e.getSourceId();
                 }
             },
             {
@@ -92,7 +89,6 @@ var a = (function () {
                 value: function () {}
             }
         ]),
-        r(e.prototype, t),
-        a
+        e
     );
 })();

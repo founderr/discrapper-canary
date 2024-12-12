@@ -1,61 +1,63 @@
-n.d(t, {
+r.d(n, {
     AC: function () {
-        return g;
-    },
-    Cq: function () {
         return v;
     },
+    Cq: function () {
+        return T;
+    },
     R5: function () {
-        return I;
+        return b;
     },
     TM: function () {
-        return E;
+        return I;
     }
 });
-var r = n(749210),
-    i = n(287734),
-    a = n(872810),
-    s = n(366297),
-    o = n(280837),
-    l = n(199902),
-    u = n(592125),
-    c = n(430824),
-    d = n(496675),
-    f = n(944486),
-    _ = n(881824),
-    p = n(107511),
-    h = n(146085),
-    m = n(96150);
-function g(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    return new Promise(async (i) => {
-        let a = u.Z.getChannel(t);
-        if (null != a) return E(a, n), i(a);
-        await (0, o.O)([e]),
-            await r.Z.joinGuild(e, { lurker: !0 }),
-            c.Z.addConditionalChangeListener(() => {
-                let e = u.Z.getChannel(t);
-                return null == e || (E(e), m.Z.initialize(), i(e), !1);
+var i = r(749210),
+    a = r(287734),
+    s = r(872810),
+    o = r(366297),
+    l = r(280837),
+    u = r(199902),
+    c = r(592125),
+    d = r(430824),
+    f = r(496675),
+    _ = r(944486),
+    h = r(881824),
+    p = r(107511),
+    m = r(146085),
+    g = r(96150);
+function E(e, n) {
+    return !!f.Z.can(m.gl, e) && (!h.Zl(e.id) || n === e.id || (h.vu(e, () => T(e, !0)), !1));
+}
+function v(e, n) {
+    let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+    return new Promise(async (a) => {
+        let s = c.Z.getChannel(n);
+        if (null != s) return I(s, r), a(s);
+        await (0, l.O)([e]),
+            await i.Z.joinGuild(e, { lurker: !0 }),
+            d.Z.addConditionalChangeListener(() => {
+                let e = c.Z.getChannel(n);
+                return null == e || (I(e), g.Z.initialize(), a(e), !1);
             });
     });
 }
-function E(e) {
-    var t, n;
-    let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        s = f.Z.getVoiceChannelId();
-    if (!r && ((t = e), (n = s), !d.Z.can(h.gl, t) || (_.Zl(t.id) && n !== t.id && (_.vu(t, () => v(t, !0)), 1)))) return !1;
-    if ((p.Z.initialize(), i.default.selectVoiceChannel(e.id), (s = f.Z.getVoiceChannelId()) !== e.id)) return !1;
-    let o = l.Z.getAllApplicationStreamsForChannel(e.id);
-    return o.length > 0 && (0, a.rn)(o[0], { noFocus: !1 }), !0;
+function I(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        r = _.Z.getVoiceChannelId();
+    if (!n && !E(e, r)) return !1;
+    if ((p.Z.initialize(), a.default.selectVoiceChannel(e.id), (r = _.Z.getVoiceChannelId()) !== e.id)) return !1;
+    let i = u.Z.getAllApplicationStreamsForChannel(e.id);
+    return i.length > 0 && (0, s.rn)(i[0], { noFocus: !1 }), !0;
 }
-function v(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        i = f.Z.getVoiceChannelId();
-    if (!(!r && i !== e.id && (0, s._)(e) && _.Gy(e, () => v(e, t, n, !0)))) E(e, t) && I(e, i, n);
+function T(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        a = _.Z.getVoiceChannelId();
+    if (!(!i && a !== e.id && (0, o._)(e) && h.Gy(e, () => T(e, n, r, !0)))) I(e, n) && b(e, a, r);
 }
-function I(e, t) {
-    let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-    _.R5(e, t, n);
+function b(e, n) {
+    let r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
+    h.R5(e, n, r);
 }

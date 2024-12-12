@@ -1,49 +1,50 @@
-Object.defineProperty(t, '__esModule', { value: !0 }), (t.IntlManager = t.DEFAULT_LOCALE = void 0);
-let r = n(942267),
-    i = n(200232),
-    a = n(488517);
-t.DEFAULT_LOCALE = 'en-US';
-t.IntlManager = class e {
-    constructor({ initialLocale: e = t.DEFAULT_LOCALE, defaultLocale: n = t.DEFAULT_LOCALE }) {
+Object.defineProperty(n, '__esModule', { value: !0 }), (n.IntlManager = n.DEFAULT_LOCALE = void 0);
+let i = r(942267),
+    a = r(200232),
+    s = r(488517);
+n.DEFAULT_LOCALE = 'en-US';
+class o {
+    constructor({ initialLocale: e = n.DEFAULT_LOCALE, defaultLocale: r = n.DEFAULT_LOCALE }) {
         (this.onLocaleChange = (e) => (this._localeSubscriptions.add(e), () => this._localeSubscriptions.delete(e))),
             (this.currentLocale = e),
-            (this.defaultLocale = n),
-            (this.formatConfig = a.DEFAULT_FORMAT_CONFIG),
-            (this.intl = (0, r.createIntl)({
-                formats: a.DEFAULT_FORMAT_CONFIG,
-                defaultLocale: n,
-                locale: n
+            (this.defaultLocale = r),
+            (this.formatConfig = s.DEFAULT_FORMAT_CONFIG),
+            (this.intl = (0, i.createIntl)({
+                formats: s.DEFAULT_FORMAT_CONFIG,
+                defaultLocale: r,
+                locale: r
             })),
             (this._localeSubscriptions = new Set());
     }
     withFormatters(e) {
-        for (let [t, n] of Object.entries(e)) this[t] = this.makeFormatFunction(n);
+        for (let [n, r] of Object.entries(e)) this[n] = this.makeFormatFunction(r);
         return this;
     }
-    makeFormatFunction({ format: e, builder: t }) {
-        let n = e.bind(this);
-        return (e, r) => (null == e ? null : n(e(this.currentLocale), r, t));
+    makeFormatFunction({ format: e, builder: n }) {
+        let r = e.bind(this);
+        return (e, i) => (null == e ? null : r(e(this.currentLocale), i, n));
     }
     setLocale(e) {
         (this.currentLocale = e),
-            (this.intl = (0, r.createIntl)({
+            (this.intl = (0, i.createIntl)({
                 defaultLocale: this.defaultLocale,
                 locale: e
             })),
             this.emitLocaleChange(e);
     }
     emitLocaleChange(e) {
-        for (let t of this._localeSubscriptions) t(e);
+        for (let n of this._localeSubscriptions) n(e);
     }
     string(e) {
         return null == e ? '' : e(this.currentLocale).reserialize();
     }
     reserialize(e) {
         if (null == e) return '';
-        let t = e(this.currentLocale);
-        return 'string' == typeof t ? t : t.reserialize();
+        let n = e(this.currentLocale);
+        return 'string' == typeof n ? n : n.reserialize();
     }
-    bindFormatValues(e, t, n) {
-        return (0, i.bindFormatValues)(e, t.ast, [this.currentLocale, this.defaultLocale], this.intl.formatters, this.formatConfig, n);
+    bindFormatValues(e, n, r) {
+        return (0, a.bindFormatValues)(e, n.ast, [this.currentLocale, this.defaultLocale], this.intl.formatters, this.formatConfig, r);
     }
-};
+}
+n.IntlManager = o;

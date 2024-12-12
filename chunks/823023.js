@@ -1,87 +1,88 @@
-n.d(t, {
+r.d(n, {
     N: function () {
-        return p;
+        return g;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(752877),
-    s = n(481060),
-    o = n(450096),
-    l = n(981631),
-    u = n(319378);
-let c = {
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(752877),
+    l = r(481060),
+    u = r(450096),
+    c = r(981631),
+    d = r(319378);
+let f = 200,
+    _ = {
         from: { opacity: 1 },
         enter: { opacity: 1 },
         leave: { opacity: 0 },
         config: { duration: 200 }
     },
-    d = {
-        ...c,
+    h = {
+        ..._,
         config: { duration: 50 }
     },
-    f = {
-        ...c,
-        config: (e, t) => (t ? { duration: 800 } : { duration: 200 })
+    p = {
+        ..._,
+        config: (e, n) => (n ? { duration: 800 } : { duration: 200 })
     };
-function _(e) {
-    let { readyState: t, placeholderImg: n, placeholderStyle: o } = e,
-        f = t === l.zo9.LOADING,
-        [_] = i.useState(() => Date.now()),
-        p = t === l.zo9.READY && Date.now() - _ < 200,
-        h = (0, s.useTransition)(f && null != n, p ? d : c);
-    return (0, r.jsx)(r.Fragment, {
-        children: h(
-            (e, t) =>
-                t &&
-                (0, r.jsx)(a.animated.img, {
+function m(e) {
+    let { readyState: n, placeholderImg: r, placeholderStyle: i } = e,
+        u = n === c.zo9.LOADING,
+        [p] = s.useState(() => Date.now()),
+        m = n === c.zo9.READY && Date.now() - p < f,
+        g = (0, l.useTransition)(u && null != r, m ? h : _);
+    return (0, a.jsx)(a.Fragment, {
+        children: g(
+            (e, n) =>
+                n &&
+                (0, a.jsx)(o.animated.img, {
                     style: {
-                        ...o,
+                        ...i,
                         ...e
                     },
-                    className: u.imagePlaceholder,
-                    src: n,
+                    className: d.imagePlaceholder,
+                    src: r,
                     alt: ''
                 })
         )
     });
 }
-function p(e) {
-    let { readyState: t, aspectRatio: n, placeholder: c, placeholderVersion: d, placeholderStyle: p, children: h } = e,
-        m = t === l.zo9.LOADING,
-        [g] = i.useState(m),
-        [E, v] = i.useState(!1),
-        I = (0, o.L)(c, d, g);
-    i.useEffect(() => {
+function g(e) {
+    let { readyState: n, aspectRatio: r, placeholder: i, placeholderVersion: f, placeholderStyle: _, children: h } = e,
+        g = n === c.zo9.LOADING,
+        [E] = s.useState(g),
+        [v, I] = s.useState(!1),
+        T = (0, u.L)(i, f, E);
+    s.useEffect(() => {
         let e = setTimeout(() => {
-            v(!0);
+            I(!0);
         }, 2000);
         return () => {
             clearTimeout(e);
         };
-    }, [g]);
-    let T = (0, s.useTransition)(m && E, f);
-    return (0, r.jsxs)('div', {
-        className: u.loadingOverlay,
-        style: { aspectRatio: n },
+    }, [E]);
+    let b = (0, l.useTransition)(g && v, p);
+    return (0, a.jsxs)('div', {
+        className: d.loadingOverlay,
+        style: { aspectRatio: r },
         children: [
             h,
-            null != I &&
-                (0, r.jsx)(_, {
-                    readyState: t,
-                    placeholderImg: I,
-                    placeholderStyle: p
+            null != T &&
+                (0, a.jsx)(m, {
+                    readyState: n,
+                    placeholderImg: T,
+                    placeholderStyle: _
                 }),
-            T(
-                (e, t) =>
-                    t &&
-                    (0, r.jsx)(a.animated.div, {
+            b(
+                (e, n) =>
+                    n &&
+                    (0, a.jsx)(o.animated.div, {
                         style: e,
-                        className: u.imageLoadingOverlay,
-                        children: (0, r.jsx)(s.Spinner, {
-                            type: s.SpinnerTypes.SPINNING_CIRCLE_SIMPLE,
-                            className: u.cornerLoadingSpinner
+                        className: d.imageLoadingOverlay,
+                        children: (0, a.jsx)(l.Spinner, {
+                            type: l.SpinnerTypes.SPINNING_CIRCLE_SIMPLE,
+                            className: d.cornerLoadingSpinner
                         })
                     })
             )

@@ -1,6 +1,7 @@
-var r = n(36781),
-    i = n(286113),
-    a = n(876557);
-e.exports = function (e) {
-    return 'function' != typeof e.constructor || a(e) ? {} : r(i(e));
-};
+var i = r(36781),
+    a = r(286113),
+    s = r(876557);
+function o(e) {
+    return 'function' != typeof e.constructor || s(e) ? {} : i(a(e));
+}
+e.exports = o;

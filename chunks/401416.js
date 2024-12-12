@@ -1,37 +1,38 @@
-n.d(t, {
+r.d(n, {
     Y: function () {
-        return l;
+        return d;
     }
-}),
-    n(47120);
-var r = n(544891),
-    i = n(147913),
-    a = n(25733),
-    s = n(981631);
-class o extends i.Z {
+});
+var i = r(47120);
+var a = r(544891),
+    s = r(147913),
+    o = r(25733),
+    l = r(981631);
+function u(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+class c extends s.Z {
     handleDmSettingsUpsellShow(e) {
-        a.Z.openDmSettingsUpsellModal(e.guildId);
+        o.Z.openDmSettingsUpsellModal(e.guildId);
     }
     constructor(...e) {
-        var t, n, r;
-        super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = { DM_SETTINGS_UPSELL_SHOW: this.handleDmSettingsUpsellShow }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+        super(...e), u(this, 'actions', { DM_SETTINGS_UPSELL_SHOW: this.handleDmSettingsUpsellShow });
     }
 }
-function l(e) {
-    return r.tn.post({
-        url: s.ANM.DM_SETTINGS_UPSELL_ACK(e),
+function d(e) {
+    return a.tn.post({
+        url: l.ANM.DM_SETTINGS_UPSELL_ACK(e),
         rejectWithError: !1
     });
 }
-t.Z = new o();
+n.Z = new c();

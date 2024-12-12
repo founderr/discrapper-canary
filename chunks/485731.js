@@ -1,24 +1,25 @@
-let r;
-var i,
-    a = n(442837),
-    s = n(570140),
-    o = n(314897),
-    l = n(979651),
-    u = n(1163);
-function c(e, t, n) {
+let i;
+var a,
+    s = r(442837),
+    o = r(570140),
+    l = r(314897),
+    u = r(979651),
+    c = r(1163);
+function d(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let d = {
+let f = 5,
+    _ = {
         hqStreamingFrameAnimationPlayed: !1,
         hqStreamingPopoutDismissed: !1,
         hqStreamingOptInPopoutDismissedCount: 0,
@@ -26,69 +27,75 @@ let d = {
         hqStreamingIsEnabled: !1,
         hqStreamingDidEnable: !1
     },
-    f = !1,
-    _ = d;
-function p(e) {
-    _ = {
-        ..._,
-        ...(null == e ? void 0 : e(_))
+    h = !1,
+    p = _;
+function m(e) {
+    p = {
+        ...p,
+        ...(null == e ? void 0 : e(p))
     };
 }
-function h() {
-    p(() => d);
+function g() {
+    m(() => ({ hqStreamingFrameAnimationPlayed: !0 }));
 }
-function m() {
-    r = u.Z.getCurrentConfig({ location: 'handleExperimentFetch' }, { autoTrackExposure: !1 });
+function E() {
+    m(() => ({ hqStreamingPopoutDismissed: !0 }));
 }
-class g extends (i = a.ZP.PersistedStore) {
+function v() {
+    !p.hqStreamingOptInPopoutDismissed &&
+        m((e) => ({
+            hqStreamingOptInPopoutDismissedCount: e.hqStreamingOptInPopoutDismissedCount + 1,
+            hqStreamingOptInPopoutDismissed: !0
+        }));
+}
+function I(e) {
+    let { shouldShow: n } = e,
+        r = null != i && i.extendedOptInDuration ? f : 1;
+    h = n && p.hqStreamingOptInPopoutDismissedCount < r;
+}
+function T(e) {
+    let { enabled: n } = e;
+    m((e) => ({
+        hqStreamingIsEnabled: n,
+        hqStreamingDidEnable: n || e.hqStreamingDidEnable
+    }));
+}
+function b() {
+    m(() => _);
+}
+function y() {
+    if (null == u.Z.getVoiceStateForUser(l.default.getId()))
+        m(() => ({
+            hqStreamingOptInPopoutDismissed: !1,
+            hqStreamingFrameAnimationPlayed: !1
+        }));
+}
+function S() {
+    i = c.Z.getCurrentConfig({ location: 'handleExperimentFetch' }, { autoTrackExposure: !1 });
+}
+class A extends (a = s.ZP.PersistedStore) {
     getState() {
-        return _;
+        return p;
     }
     shouldShowOptInPopout() {
-        return f;
+        return h;
     }
     initialize(e) {
-        null != e && (_ = e);
+        null != e && (p = e);
     }
 }
-c(g, 'displayName', 'PerksDemosUIState'),
-    c(g, 'persistKey', 'PerksDemosUIState'),
-    (t.Z = new g(s.Z, {
-        PERMIUM_PERKS_DEMO_FRAME_ANIMATION_PLAYED: function () {
-            p(() => ({ hqStreamingFrameAnimationPlayed: !0 }));
-        },
-        PREMIUM_PERKS_DEMO_POPOUT_DISMISSED: function () {
-            p(() => ({ hqStreamingPopoutDismissed: !0 }));
-        },
-        PREMIUM_PERKS_DEMO_OPT_IN_POPOUT_DISMISSED: function () {
-            !_.hqStreamingOptInPopoutDismissed &&
-                p((e) => ({
-                    hqStreamingOptInPopoutDismissedCount: e.hqStreamingOptInPopoutDismissedCount + 1,
-                    hqStreamingOptInPopoutDismissed: !0
-                }));
-        },
-        PREMIUM_PERKS_DEMO_OPT_IN_POPOUT_SHOULD_SHOW: function (e) {
-            let { shouldShow: t } = e,
-                n = null != r && r.extendedOptInDuration ? 5 : 1;
-            f = t && _.hqStreamingOptInPopoutDismissedCount < n;
-        },
-        PREMIUM_PERKS_DEMO_ENABLED: function (e) {
-            let { enabled: t } = e;
-            p((e) => ({
-                hqStreamingIsEnabled: t,
-                hqStreamingDidEnable: t || e.hqStreamingDidEnable
-            }));
-        },
-        PREMIUM_PERKS_DEMO_UI_RESET: h,
-        VOICE_STATE_UPDATES: function () {
-            if (null == l.Z.getVoiceStateForUser(o.default.getId()))
-                p(() => ({
-                    hqStreamingOptInPopoutDismissed: !1,
-                    hqStreamingFrameAnimationPlayed: !1
-                }));
-        },
-        CONNECTION_OPEN: m,
-        EXPERIMENTS_FETCH_SUCCESS: m,
-        EXPERIMENT_OVERRIDE_BUCKET: m,
-        LOGOUT: h
+d(A, 'displayName', 'PerksDemosUIState'),
+    d(A, 'persistKey', 'PerksDemosUIState'),
+    (n.Z = new A(o.Z, {
+        PERMIUM_PERKS_DEMO_FRAME_ANIMATION_PLAYED: g,
+        PREMIUM_PERKS_DEMO_POPOUT_DISMISSED: E,
+        PREMIUM_PERKS_DEMO_OPT_IN_POPOUT_DISMISSED: v,
+        PREMIUM_PERKS_DEMO_OPT_IN_POPOUT_SHOULD_SHOW: I,
+        PREMIUM_PERKS_DEMO_ENABLED: T,
+        PREMIUM_PERKS_DEMO_UI_RESET: b,
+        VOICE_STATE_UPDATES: y,
+        CONNECTION_OPEN: S,
+        EXPERIMENTS_FETCH_SUCCESS: S,
+        EXPERIMENT_OVERRIDE_BUCKET: S,
+        LOGOUT: b
     }));

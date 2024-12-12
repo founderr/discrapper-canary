@@ -1,5 +1,6 @@
-var n = /\s/;
-t.Z = function (e) {
-    for (var t = e.length; t-- && n.test(e.charAt(t)); );
-    return t;
-};
+var r = /\s/;
+function i(e) {
+    for (var n = e.length; n-- && r.test(e.charAt(n)); );
+    return n;
+}
+n.Z = i;

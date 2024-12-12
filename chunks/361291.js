@@ -1,54 +1,56 @@
-var r,
-    i = n(442837),
-    a = n(570140),
-    s = n(37113),
-    o = n(65154);
-function l(e, t, n) {
+var i,
+    a = r(442837),
+    s = r(570140),
+    o = r(37113),
+    l = r(65154);
+function u(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let u = s.tI.PRESET_VIDEO,
-    c = s.LY.RESOLUTION_720,
-    d = s.ws.FPS_30,
-    f = !0;
-class _ extends (r = i.ZP.PersistedStore) {
+let c = o.tI.PRESET_VIDEO,
+    d = o.LY.RESOLUTION_720,
+    f = o.ws.FPS_30,
+    _ = !0;
+function h(e) {
+    let { settings: n } = e;
+    if ((null == n ? void 0 : n.context) === l.Yn.STREAM) {
+        if ((null == n ? void 0 : n.qualityOptions) == null || (null == n ? void 0 : n.qualityOptions.resolution) == null || (null == n ? void 0 : n.qualityOptions.frameRate) == null) return !1;
+        (d = n.qualityOptions.resolution), (f = n.qualityOptions.frameRate);
+    }
+}
+function p(e) {
+    let { preset: n, resolution: r, frameRate: i, soundshareEnabled: a } = e,
+        s = !1;
+    return null != n && ((c = n), (s = !0)), null != r && ((d = r), (s = !0)), null != i && ((f = i), (s = !0)), null != a && ((_ = a), (s = !0)), s;
+}
+class m extends (i = a.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
-            var t, n;
-            (u = null !== (t = e.preset) && void 0 !== t ? t : s.tI.PRESET_VIDEO), (c = e.resolution), (d = e.fps), (f = null === (n = e.soundshareEnabled) || void 0 === n || n);
+            var n, r;
+            (c = null !== (n = e.preset) && void 0 !== n ? n : o.tI.PRESET_VIDEO), (d = e.resolution), (f = e.fps), (_ = null === (r = e.soundshareEnabled) || void 0 === r || r);
         }
     }
     getState() {
         return {
-            preset: u,
-            resolution: c,
-            fps: d,
-            soundshareEnabled: f
+            preset: c,
+            resolution: d,
+            fps: f,
+            soundshareEnabled: _
         };
     }
 }
-l(_, 'displayName', 'ApplicationStreamingSettingsStore'),
-    l(_, 'persistKey', 'ApplicationStreamingSettingStore'),
-    (t.Z = new _(a.Z, {
-        MEDIA_ENGINE_SET_GO_LIVE_SOURCE: function (e) {
-            let { settings: t } = e;
-            if ((null == t ? void 0 : t.context) === o.Yn.STREAM) {
-                if ((null == t ? void 0 : t.qualityOptions) == null || (null == t ? void 0 : t.qualityOptions.resolution) == null || (null == t ? void 0 : t.qualityOptions.frameRate) == null) return !1;
-                (c = t.qualityOptions.resolution), (d = t.qualityOptions.frameRate);
-            }
-        },
-        STREAM_UPDATE_SETTINGS: function (e) {
-            let { preset: t, resolution: n, frameRate: r, soundshareEnabled: i } = e,
-                a = !1;
-            return null != t && ((u = t), (a = !0)), null != n && ((c = n), (a = !0)), null != r && ((d = r), (a = !0)), null != i && ((f = i), (a = !0)), a;
-        }
+u(m, 'displayName', 'ApplicationStreamingSettingsStore'),
+    u(m, 'persistKey', 'ApplicationStreamingSettingStore'),
+    (n.Z = new m(s.Z, {
+        MEDIA_ENGINE_SET_GO_LIVE_SOURCE: h,
+        STREAM_UPDATE_SETTINGS: p
     }));

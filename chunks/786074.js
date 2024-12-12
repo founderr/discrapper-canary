@@ -1,15 +1,18 @@
-var r = n(490983),
-    i = n(388032);
-t.Z = {
-    MENTION_EVERYONE: () => ({
+var i = r(490983),
+    a = r(388032);
+let s = () => ({
         test: 'everyone',
         text: '@everyone',
-        description: i.intl.string(i.t.lHC4z8)
+        description: a.intl.string(a.t.lHC4z8)
     }),
-    MENTION_HERE: () => ({
+    o = () => ({
         test: 'here',
         text: '@here',
-        description: i.intl.string(i.t.OE6mOz)
+        description: a.intl.string(a.t.OE6mOz)
     }),
-    LAUNCHABLE_APPLICATIONS: () => r.Z.launchableApplicationViewItems
+    l = () => i.Z.launchableApplicationViewItems;
+n.Z = {
+    MENTION_EVERYONE: s,
+    MENTION_HERE: o,
+    LAUNCHABLE_APPLICATIONS: l
 };

@@ -1,50 +1,55 @@
-n.d(t, {
+r.d(n, {
     j: function () {
-        return D;
+        return k;
     }
 });
-var r = n(526167),
-    i = n(621554),
-    a = n(328756),
-    s = n(639525),
-    o = n(131812),
-    l = n(265174),
-    u = n(926425),
-    c = n(844049),
-    d = n(712386),
-    f = n(602722),
-    _ = n(534109),
-    p = n(859500),
-    h = n(484542),
-    m = n(881500),
-    g = n(910826),
-    E = n(307244),
-    v = n(669730),
-    I = n(666828),
-    T = n(131999),
-    b = n(649272),
-    S = n(241372),
-    y = n(538387),
-    A = n(213921),
-    N = n(34721),
-    C = n(410693),
-    R = n(185672),
-    O = n(235731);
-function D() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return e ? O : i;
+var i = r(526167),
+    a = r(621554),
+    s = r(328756),
+    o = r(639525),
+    l = r(131812),
+    u = r(265174),
+    c = r(926425),
+    d = r(844049),
+    f = r(712386),
+    _ = r(602722),
+    h = r(534109),
+    p = r(859500),
+    m = r(484542),
+    g = r(881500),
+    E = r(910826),
+    v = r(307244),
+    I = r(669730),
+    T = r(666828),
+    b = r(131999),
+    y = r(649272),
+    S = r(241372),
+    A = r(538387),
+    N = r(213921),
+    C = r(34721),
+    R = r(410693),
+    O = r(185672),
+    D = r(235731);
+let L = [s, o, l, u, c, d],
+    x = [f, _, h, p, m, g, E, v],
+    w = [y, S, A, N, C, R],
+    P = {
+        clyde: O,
+        nitro: T,
+        nitro_wumpus: b
+    };
+function M() {
+    return i.og();
 }
-t.Z = {
-    DEFAULT_AVATARS: [a, s, o, l, u, c],
-    DEFAULT_PROVISIONAL_AVATARS: [b, S, y, A, N, C],
-    DEFAULT_GROUP_DM_AVATARS: [d, f, _, p, h, m, g, E],
-    BOT_AVATARS: {
-        clyde: R,
-        nitro: I,
-        nitro_wumpus: T
-    },
-    DEFAULT_CHANNEL_ICON: v,
-    canUseWebp: function () {
-        return r.og();
-    }
+function k() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+    return e ? D : a;
+}
+n.Z = {
+    DEFAULT_AVATARS: L,
+    DEFAULT_PROVISIONAL_AVATARS: w,
+    DEFAULT_GROUP_DM_AVATARS: x,
+    BOT_AVATARS: P,
+    DEFAULT_CHANNEL_ICON: I,
+    canUseWebp: M
 };

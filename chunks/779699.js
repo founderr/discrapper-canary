@@ -1,139 +1,140 @@
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(481060),
-    o = n(457926),
-    l = n(388032),
-    u = n(400357);
-t.Z = function (e) {
-    let { iconType: t, children: n } = e,
-        i = null;
-    switch (t) {
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(481060),
+    l = r(457926),
+    u = r(388032),
+    c = r(400357);
+function d(e) {
+    let { iconType: n, children: r } = e,
+        a = null;
+    switch (n) {
         case 'voice':
-            i = (0, r.jsx)(s.VoiceNormalIcon, {
+            a = (0, i.jsx)(o.VoiceNormalIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: u.icon,
-                'aria-label': l.intl.string(l.t.BVZqJi)
+                className: c.icon,
+                'aria-label': u.intl.string(u.t.BVZqJi)
             });
             break;
         case 'voice-locked':
-            i = (0, r.jsx)(s.LockIcon, {
+            a = (0, i.jsx)(o.LockIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: u.icon,
-                'aria-label': l.intl.string(l.t.aa0FYm)
+                className: c.icon,
+                'aria-label': u.intl.string(u.t.aa0FYm)
             });
             break;
         case 'stage':
-            i = (0, r.jsx)(s.StageIcon, {
+            a = (0, i.jsx)(o.StageIcon, {
                 size: 'lg',
                 color: 'currentColor',
-                className: u.icon,
-                'aria-label': l.intl.string(l.t.EErMzM)
+                className: c.icon,
+                'aria-label': u.intl.string(u.t.EErMzM)
             });
             break;
         case 'stage-locked':
-            i = (0, r.jsx)(s.LockIcon, {
+            a = (0, i.jsx)(o.LockIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: u.icon,
-                'aria-label': l.intl.string(l.t.pKZ4Iy)
+                className: c.icon,
+                'aria-label': u.intl.string(u.t.pKZ4Iy)
             });
             break;
         case 'thread':
-            i = (0, r.jsx)(s.ThreadIcon, {
+            a = (0, i.jsx)(o.ThreadIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: u.icon,
-                'aria-label': l.intl.string(l.t['7Xm5QE'])
+                className: c.icon,
+                'aria-label': u.intl.string(u.t['7Xm5QE'])
             });
             break;
         case 'text':
-            i = (0, r.jsx)(s.TextIcon, {
+            a = (0, i.jsx)(o.TextIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: u.icon,
-                'aria-label': l.intl.string(l.t.GK18KC)
+                className: c.icon,
+                'aria-label': u.intl.string(u.t.GK18KC)
             });
             break;
         case 'forum':
-            i = (0, r.jsx)(s.ForumIcon, {
+            a = (0, i.jsx)(o.ForumIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: u.icon,
-                'aria-label': l.intl.string(l.t.GbryDQ)
+                className: c.icon,
+                'aria-label': u.intl.string(u.t.GbryDQ)
             });
             break;
         case 'post':
-            i = (0, r.jsx)(s.ChatIcon, {
+            a = (0, i.jsx)(o.ChatIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: u.icon,
-                'aria-label': l.intl.string(l.t.Y4REmJ)
+                className: c.icon,
+                'aria-label': u.intl.string(u.t.Y4REmJ)
             });
             break;
         case 'home':
         case 'guide':
-            i = (0, r.jsx)(s.SignPostIcon, {
+            a = (0, i.jsx)(o.SignPostIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: u.icon,
-                'aria-label': l.intl.string(l.t.VbpLyc)
+                className: c.icon,
+                'aria-label': u.intl.string(u.t.VbpLyc)
             });
             break;
         case 'browse':
         case 'customize':
-            i = (0, r.jsx)(s.ChannelListMagnifyingGlassIcon, {
+            a = (0, i.jsx)(o.ChannelListMagnifyingGlassIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: u.icon,
-                'aria-label': l.intl.string(l.t.et6wam)
+                className: c.icon,
+                'aria-label': u.intl.string(u.t.et6wam)
             });
             break;
         case 'message':
-            i = (0, r.jsx)(s.ChatIcon, {
+            a = (0, i.jsx)(o.ChatIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: u.icon,
-                'aria-label': l.intl.string(l.t.BAB0yM)
+                className: c.icon,
+                'aria-label': u.intl.string(u.t.BAB0yM)
             });
             break;
         case 'locked':
-            i = (0, r.jsx)(s.LockIcon, {
+            a = (0, i.jsx)(o.LockIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: u.icon,
-                'aria-label': l.intl.string(l.t['/YzI6+'])
+                className: c.icon,
+                'aria-label': u.intl.string(u.t['/YzI6+'])
             });
             break;
         case 'media':
-            i = (0, r.jsx)(s.ImageIcon, {
+            a = (0, i.jsx)(o.ImageIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: u.icon,
-                'aria-label': l.intl.string(l.t.seKITE)
+                className: c.icon,
+                'aria-label': u.intl.string(u.t.seKITE)
             });
             break;
         case 'linked-roles':
-            i = (0, r.jsx)(s.LinkIcon, {
+            a = (0, i.jsx)(o.LinkIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: u.icon,
-                'aria-label': l.intl.string(l.t.ghtnsr)
+                className: c.icon,
+                'aria-label': u.intl.string(u.t.ghtnsr)
             });
     }
-    return (0, r.jsxs)('span', {
-        className: a()('channelWithIcon', { [u.iconMentionText]: 'text' === t }),
+    return (0, i.jsxs)('span', {
+        className: s()('channelWithIcon', { [c.iconMentionText]: 'text' === n }),
         children: [
-            (0, r.jsx)(o.Z, { children: i }),
-            null != n && '' !== n
-                ? (0, r.jsx)('span', {
-                      className: u.name,
-                      children: n
+            (0, i.jsx)(l.Z, { children: a }),
+            null != r && '' !== r
+                ? (0, i.jsx)('span', {
+                      className: c.name,
+                      children: r
                   })
                 : null
         ]
     });
-};
+}
+n.Z = d;

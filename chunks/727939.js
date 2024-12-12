@@ -1,27 +1,28 @@
-n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(112724),
-    s = n(241915),
-    o = n(981631);
-let l = 48,
-    u = 32,
-    c = 32,
-    d = 32;
-t.Z = (0, a.Z)(function (e) {
-    let { className: t, defaultPosition: n = o.VD2.BOTTOM_RIGHT, children: a, width: f, height: _ } = e,
-        [p, h] = i.useState(n);
-    return (0, r.jsx)(s._, {
-        className: t,
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(112724),
+    l = r(241915),
+    u = r(981631);
+let c = 48,
+    d = 32,
+    f = 32,
+    _ = 32;
+function h(e) {
+    let { className: n, defaultPosition: r = u.VD2.BOTTOM_RIGHT, children: i, width: o, height: h } = e,
+        [p, m] = s.useState(r);
+    return (0, a.jsx)(l._, {
+        className: n,
         position: p,
         id: 0,
-        onMove: (e, t) => h(t),
-        maxX: f,
-        maxY: _,
-        edgeOffsetTop: l,
-        edgeOffsetBottom: u,
-        edgeOffsetLeft: c,
-        edgeOffsetRight: d,
-        children: a
+        onMove: (e, n) => m(n),
+        maxX: o,
+        maxY: h,
+        edgeOffsetTop: c,
+        edgeOffsetBottom: d,
+        edgeOffsetLeft: f,
+        edgeOffsetRight: _,
+        children: i
     });
-});
+}
+n.Z = (0, o.Z)(h);

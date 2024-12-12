@@ -1,11 +1,9 @@
-var r, i;
-n.d(t, {
+var i;
+r.d(n, {
     i: function () {
-        return r;
+        return i;
     }
 }),
-    ((i = r || (r = {})).BIO = 'bio'),
-    (i.USERNAME = 'username'),
-    (i.NICKNAME = 'nickname'),
-    (i.GLOBAL_NAME = 'display_name'),
-    (i.CLAN_TAG = 'clan_tag');
+    !(function (e) {
+        (e.BIO = 'bio'), (e.USERNAME = 'username'), (e.NICKNAME = 'nickname'), (e.GLOBAL_NAME = 'display_name'), (e.CLAN_TAG = 'clan_tag');
+    })(i || (i = {}));

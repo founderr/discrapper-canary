@@ -1,75 +1,73 @@
-n(47120);
-var r,
-    i = n(442837),
-    a = n(902704),
-    s = n(570140),
-    o = n(709054);
-function l(e, t, n) {
+var i,
+    a = r(47120);
+var s = r(442837),
+    o = r(902704),
+    l = r(570140),
+    u = r(709054);
+function c(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-function u(e, t, n) {
-    return ''.concat(e, ',').concat(t, ',').concat(n);
+function d(e, n, r) {
+    return ''.concat(e, ',').concat(n, ',').concat(r);
 }
-let c = () => ({
+let f = () => ({
         currentLeaderboardRanks: {},
         prevLeaderboardRanks: {}
     }),
-    d = c();
-class f extends (r = i.ZP.PersistedStore) {
+    _ = f();
+function h(e) {
+    var n;
+    let { leaderboardResponse: r, intervalOffset: i } = e;
+    if (0 !== i) return !1;
+    let { leaderboard: a } = r,
+        s = d(a.guild_id, a.leaderboard_id, a.interval_start),
+        l = {
+            ranks: a.users.map((e) => e.user_id),
+            ttl: u.default.extractTimestamp(a.interval_end)
+        },
+        c = _.currentLeaderboardRanks[s];
+    if ((0, o.E)(l.ranks, null !== (n = null == c ? void 0 : c.ranks) && void 0 !== n ? n : [])) return !1;
+    (_.prevLeaderboardRanks[s] = c), (_.currentLeaderboardRanks[s] = l);
+}
+function p() {
+    let e = Date.now();
+    for (let [n, r] of Object.entries(_.prevLeaderboardRanks)) (null == r || e > r.ttl) && delete _.prevLeaderboardRanks[n];
+    for (let [n, r] of Object.entries(_.currentLeaderboardRanks)) (null == r || e > r.ttl) && delete _.currentLeaderboardRanks[n];
+}
+class m extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         return (
-            (d = {
-                ...d,
+            (_ = {
+                ..._,
                 ...(null != e ? e : {})
             }),
-            !(function () {
-                let e = Date.now();
-                for (let [t, n] of Object.entries(d.prevLeaderboardRanks)) (null == n || e > n.ttl) && delete d.prevLeaderboardRanks[t];
-                for (let [t, n] of Object.entries(d.currentLeaderboardRanks)) (null == n || e > n.ttl) && delete d.currentLeaderboardRanks[t];
-            })(),
+            p(),
             !0
         );
     }
     getState() {
-        return d;
+        return _;
     }
-    getPrevLeaderboardRanks(e, t, n) {
-        let r = u(e, t, n);
-        return d.prevLeaderboardRanks[r];
+    getPrevLeaderboardRanks(e, n, r) {
+        let i = d(e, n, r);
+        return _.prevLeaderboardRanks[i];
     }
-    getCurrentLeaderboardRanks(e, t, n) {
-        let r = u(e, t, n);
-        return d.currentLeaderboardRanks[r];
+    getCurrentLeaderboardRanks(e, n, r) {
+        let i = d(e, n, r);
+        return _.currentLeaderboardRanks[i];
     }
     reset() {
-        d = c();
+        _ = f();
     }
 }
-l(f, 'displayName', 'GuildLeaderboardRanksStore'),
-    l(f, 'persistKey', 'GuildLeaderboardRanksStore'),
-    (t.Z = new f(s.Z, {
-        SET_GUILD_LEADERBOARD: function (e) {
-            var t;
-            let { leaderboardResponse: n, intervalOffset: r } = e;
-            if (0 !== r) return !1;
-            let { leaderboard: i } = n,
-                s = u(i.guild_id, i.leaderboard_id, i.interval_start),
-                l = {
-                    ranks: i.users.map((e) => e.user_id),
-                    ttl: o.default.extractTimestamp(i.interval_end)
-                },
-                c = d.currentLeaderboardRanks[s];
-            if ((0, a.E)(l.ranks, null !== (t = null == c ? void 0 : c.ranks) && void 0 !== t ? t : [])) return !1;
-            (d.prevLeaderboardRanks[s] = c), (d.currentLeaderboardRanks[s] = l);
-        }
-    }));
+c(m, 'displayName', 'GuildLeaderboardRanksStore'), c(m, 'persistKey', 'GuildLeaderboardRanksStore'), (n.Z = new m(l.Z, { SET_GUILD_LEADERBOARD: h }));

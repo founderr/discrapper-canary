@@ -1,4 +1,4 @@
-n.d(t, {
+r.d(n, {
     cO: function () {
         return u;
     },
@@ -9,32 +9,33 @@ n.d(t, {
         return c;
     }
 });
-var r,
-    i,
-    a = n(700785),
-    s = n(74538),
-    o = n(378233),
-    l = n(981631);
-((r = i || (i = {}))[(r.SENDABLE = 0)] = 'SENDABLE'), (r[(r.SENDABLE_WITH_PREMIUM = 1)] = 'SENDABLE_WITH_PREMIUM'), (r[(r.NONSENDABLE = 2)] = 'NONSENDABLE'), (r[(r.SENDABLE_WITH_BOOSTED_GUILD = 3)] = 'SENDABLE_WITH_BOOSTED_GUILD');
-let u = (e, t, n) => {
-        if (null == t) return 2;
-        let r = s.ZP.canUseCustomStickersEverywhere(t);
+var i,
+    a = r(700785),
+    s = r(74538),
+    o = r(378233),
+    l = r(981631);
+!(function (e) {
+    (e[(e.SENDABLE = 0)] = 'SENDABLE'), (e[(e.SENDABLE_WITH_PREMIUM = 1)] = 'SENDABLE_WITH_PREMIUM'), (e[(e.NONSENDABLE = 2)] = 'NONSENDABLE'), (e[(e.SENDABLE_WITH_BOOSTED_GUILD = 3)] = 'SENDABLE_WITH_BOOSTED_GUILD');
+})(i || (i = {}));
+let u = (e, n, r) => {
+        if (null == n) return 2;
+        let i = s.ZP.canUseCustomStickersEverywhere(n);
         if ((0, o.jl)(e)) return 0;
-        if ((0, o.J8)(e) && null != n)
+        if ((0, o.J8)(e) && null != r)
             return e.available
-                ? null != n.guild_id && '' !== n.guild_id && n.guild_id === e.guild_id
+                ? null != r.guild_id && '' !== r.guild_id && r.guild_id === e.guild_id
                     ? 0
-                    : null == n.guild_id ||
+                    : null == r.guild_id ||
                         a.BT({
                             permission: l.Plq.USE_EXTERNAL_STICKERS,
-                            user: t,
-                            context: n
+                            user: n,
+                            context: r
                         })
-                      ? r
+                      ? i
                           ? 0
                           : 1
                       : 2
                 : 3;
         return 2;
     },
-    c = (e, t, n) => 0 === u(e, t, n);
+    c = (e, n, r) => 0 === u(e, n, r);

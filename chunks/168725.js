@@ -1,80 +1,77 @@
-var r = n(413135).Buffer,
-    i = n(814033),
-    a = new (n(687363))(),
-    s = new i(24),
-    o = new i(11),
-    l = new i(10),
-    u = new i(3),
-    c = new i(7),
-    d = n(988608),
-    f = n(706178);
-function _(e, t) {
-    return (t = t || 'utf8'), !r.isBuffer(e) && (e = new r(e, t)), (this._pub = new i(e)), this;
+var i = r(413135).Buffer,
+    a = r(814033),
+    s = new (r(687363))(),
+    o = new a(24),
+    l = new a(11),
+    u = new a(10),
+    c = new a(3),
+    d = new a(7),
+    f = r(988608),
+    _ = r(706178);
+function h(e, n) {
+    return (n = n || 'utf8'), !i.isBuffer(e) && (e = new i(e, n)), (this._pub = new a(e)), this;
 }
-function p(e, t) {
-    return (t = t || 'utf8'), !r.isBuffer(e) && (e = new r(e, t)), (this._priv = new i(e)), this;
+function p(e, n) {
+    return (n = n || 'utf8'), !i.isBuffer(e) && (e = new i(e, n)), (this._priv = new a(e)), this;
 }
-e.exports = m;
-var h = {};
-function m(e, t, n) {
-    this.setGenerator(t), (this.__prime = new i(e)), (this._prime = i.mont(this.__prime)), (this._primeLen = e.length), (this._pub = void 0), (this._priv = void 0), (this._primeCode = void 0), n ? ((this.setPublicKey = _), (this.setPrivateKey = p)) : (this._primeCode = 8);
+e.exports = E;
+var m = {};
+function g(e, n) {
+    var r,
+        i = n.toString('hex'),
+        a = [i, e.toString(16)].join('_');
+    if (a in m) return m[a];
+    var _ = 0;
+    if (e.isEven() || !f.simpleSieve || !f.fermatTest(e) || !s.test(e)) return (_ += 1), '02' === i || '05' === i ? (_ += 8) : (_ += 4), (m[a] = _), _;
+    switch ((!s.test(e.shrn(1)) && (_ += 2), i)) {
+        case '02':
+            e.mod(o).cmp(l) && (_ += 8);
+            break;
+        case '05':
+            (r = e.mod(u)).cmp(c) && r.cmp(d) && (_ += 8);
+            break;
+        default:
+            _ += 4;
+    }
+    return (m[a] = _), _;
 }
-function g(e, t) {
-    var n = new r(e.toArray());
-    return t ? n.toString(t) : n;
+function E(e, n, r) {
+    this.setGenerator(n), (this.__prime = new a(e)), (this._prime = a.mont(this.__prime)), (this._primeLen = e.length), (this._pub = void 0), (this._priv = void 0), (this._primeCode = void 0), r ? ((this.setPublicKey = h), (this.setPrivateKey = p)) : (this._primeCode = 8);
 }
-Object.defineProperty(m.prototype, 'verifyError', {
+function v(e, n) {
+    var r = new i(e.toArray());
+    return n ? r.toString(n) : r;
+}
+Object.defineProperty(E.prototype, 'verifyError', {
     enumerable: !0,
     get: function () {
-        return (
-            'number' != typeof this._primeCode &&
-                (this._primeCode = (function (e, t) {
-                    var n,
-                        r = t.toString('hex'),
-                        i = [r, e.toString(16)].join('_');
-                    if (i in h) return h[i];
-                    var f = 0;
-                    if (e.isEven() || !d.simpleSieve || !d.fermatTest(e) || !a.test(e)) return (f += 1), '02' === r || '05' === r ? (f += 8) : (f += 4), (h[i] = f), f;
-                    switch ((!a.test(e.shrn(1)) && (f += 2), r)) {
-                        case '02':
-                            e.mod(s).cmp(o) && (f += 8);
-                            break;
-                        case '05':
-                            (n = e.mod(l)).cmp(u) && n.cmp(c) && (f += 8);
-                            break;
-                        default:
-                            f += 4;
-                    }
-                    return (h[i] = f), f;
-                })(this.__prime, this.__gen)),
-            this._primeCode
-        );
+        return 'number' != typeof this._primeCode && (this._primeCode = g(this.__prime, this.__gen)), this._primeCode;
     }
 }),
-    (m.prototype.generateKeys = function () {
-        return !this._priv && (this._priv = new i(f(this._primeLen))), (this._pub = this._gen.toRed(this._prime).redPow(this._priv).fromRed()), this.getPublicKey();
+    (E.prototype.generateKeys = function () {
+        return !this._priv && (this._priv = new a(_(this._primeLen))), (this._pub = this._gen.toRed(this._prime).redPow(this._priv).fromRed()), this.getPublicKey();
     }),
-    (m.prototype.computeSecret = function (e) {
-        var t = new r((e = (e = new i(e)).toRed(this._prime)).redPow(this._priv).fromRed().toArray()),
-            n = this.getPrime();
-        if (t.length < n.length) {
-            var a = new r(n.length - t.length);
-            a.fill(0), (t = r.concat([a, t]));
+    (E.prototype.computeSecret = function (e) {
+        var n = new i((e = (e = new a(e)).toRed(this._prime)).redPow(this._priv).fromRed().toArray()),
+            r = this.getPrime();
+        if (n.length < r.length) {
+            var s = new i(r.length - n.length);
+            s.fill(0), (n = i.concat([s, n]));
         }
-        return t;
+        return n;
     }),
-    (m.prototype.getPublicKey = function (e) {
-        return g(this._pub, e);
+    (E.prototype.getPublicKey = function (e) {
+        return v(this._pub, e);
     }),
-    (m.prototype.getPrivateKey = function (e) {
-        return g(this._priv, e);
+    (E.prototype.getPrivateKey = function (e) {
+        return v(this._priv, e);
     }),
-    (m.prototype.getPrime = function (e) {
-        return g(this.__prime, e);
+    (E.prototype.getPrime = function (e) {
+        return v(this.__prime, e);
     }),
-    (m.prototype.getGenerator = function (e) {
-        return g(this._gen, e);
+    (E.prototype.getGenerator = function (e) {
+        return v(this._gen, e);
     }),
-    (m.prototype.setGenerator = function (e, t) {
-        return (t = t || 'utf8'), !r.isBuffer(e) && (e = new r(e, t)), (this.__gen = e), (this._gen = new i(e)), this;
+    (E.prototype.setGenerator = function (e, n) {
+        return (n = n || 'utf8'), !i.isBuffer(e) && (e = new i(e, n)), (this.__gen = e), (this._gen = new a(e)), this;
     });

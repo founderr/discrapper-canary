@@ -1,96 +1,93 @@
-n(47120);
-var r = n(592125),
-    i = n(412788);
-function a(e, t, n) {
+var i = r(47120);
+var a = r(592125),
+    s = r(412788);
+function o(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let s = new Set(),
-    o = new Set(),
-    l = !1;
-function u(e) {
+let l = new Set(),
+    u = new Set(),
+    c = !1;
+function d(e) {
     return e.isSpam;
 }
-function c(e) {
-    let t = !1;
-    if (e.isSpam && !s.has(e.id)) s.add(e.id), (t = !0);
-    if (!e.isSpam && s.has(e.id)) s.delete(e.id), (t = !0);
-    if (!e.isSpam && o.has(e.id)) o.delete(e.id), (t = !0);
-    return t;
-}
-function d() {
-    s.clear(),
-        o.clear(),
-        Object.values(r.Z.getMutablePrivateChannels()).forEach((e) => {
-            c(e);
-        }),
-        (l = !0);
-}
 function f(e) {
-    let { channelId: t } = e;
-    o.add(t);
+    let n = !1;
+    return d(e) && !l.has(e.id) && (l.add(e.id), (n = !0)), !d(e) && l.has(e.id) && (l.delete(e.id), (n = !0)), !d(e) && u.has(e.id) && (u.delete(e.id), (n = !0)), n;
 }
-function _(e) {
-    let { channel: t } = e;
-    return c(t);
-}
-function p(e) {
-    let { channels: t } = e;
-    for (let e of t) c(e);
+function _() {
+    l.clear(),
+        u.clear(),
+        Object.values(a.Z.getMutablePrivateChannels()).forEach((e) => {
+            f(e);
+        }),
+        (c = !0);
 }
 function h(e) {
-    let { channel: t } = e,
-        n = !1;
-    return s.has(t.id) && (s.delete(t.id), (n = !0)), n;
+    let { channelId: n } = e;
+    u.add(n);
 }
-class m extends i.Z {
+function p(e) {
+    let { channel: n } = e;
+    return f(n);
+}
+function m(e) {
+    let { channels: n } = e;
+    for (let e of n) f(e);
+}
+function g(e) {
+    let { channel: n } = e,
+        r = !1;
+    return l.has(n.id) && (l.delete(n.id), (r = !0)), r;
+}
+class E extends s.Z {
     initialize() {
-        this.waitFor(r.Z);
+        this.waitFor(a.Z);
     }
     loadCache() {
-        let e = this.readSnapshot(m.LATEST_SNAPSHOT_VERSION);
-        null != e && (s = new Set(e));
+        let e = this.readSnapshot(E.LATEST_SNAPSHOT_VERSION);
+        null != e && (l = new Set(e));
     }
     takeSnapshot() {
         return {
-            version: m.LATEST_SNAPSHOT_VERSION,
-            data: Array.from(s)
+            version: E.LATEST_SNAPSHOT_VERSION,
+            data: Array.from(l)
         };
     }
     getSpamChannelIds() {
-        return s;
+        return l;
     }
     getSpamChannelsCount() {
-        return s.size;
+        return l.size;
     }
     isSpam(e) {
-        return s.has(e);
+        return l.has(e);
     }
     isAcceptedOptimistic(e) {
-        return o.has(e);
+        return u.has(e);
     }
     isReady() {
-        return l;
+        return c;
     }
     constructor() {
         super({
-            CONNECTION_OPEN: d,
-            CONNECTION_OPEN_SUPPLEMENTAL: d,
+            CONNECTION_OPEN: _,
+            CONNECTION_OPEN_SUPPLEMENTAL: _,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            CHANNEL_CREATE: _,
-            CHANNEL_UPDATES: p,
-            CHANNEL_DELETE: h,
-            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: f
+            CHANNEL_CREATE: p,
+            CHANNEL_UPDATES: m,
+            CHANNEL_DELETE: g,
+            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: h
         });
     }
 }
-a(m, 'displayName', 'SpamMessageRequestStore'), a(m, 'LATEST_SNAPSHOT_VERSION', 1), (t.Z = new m());
+o(E, 'displayName', 'SpamMessageRequestStore'), o(E, 'LATEST_SNAPSHOT_VERSION', 1), (n.Z = new E());

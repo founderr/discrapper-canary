@@ -1,64 +1,66 @@
-n(47120);
-var r = n(147913),
-    i = n(592125),
-    a = n(944486),
-    s = n(116347),
-    o = n(237292),
-    l = n(118910);
-function u(e) {
-    let { channelId: t } = e;
-    if (null == t || !(0, o.mG)({ location: 'channel_select' }) || !(0, s.dg)()) return !1;
-    let n = i.Z.getChannel(t);
-    if (null == n || !n.isDM()) return !1;
-    let r = (0, s.uu)(t);
+var i = r(47120);
+var a = r(147913),
+    s = r(592125),
+    o = r(944486),
+    l = r(116347),
+    u = r(237292),
+    c = r(118910);
+function d(e, n, r) {
     return (
-        null != r &&
-        ((0, l.a)({
-            warningId: r.id,
-            warningType: r.type,
-            senderId: n.getRecipientId(),
-            channelId: t
-        }),
-        !0)
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
     );
 }
-function c(e) {
-    let { channels: t } = e;
-    if (!(0, o.mG)({ location: 'channel_updates' }) || !(0, s.dg)()) return !1;
-    let n = a.Z.getCurrentlySelectedChannelId();
-    if (null == n) return !1;
-    let r = t.find((e) => e.id === n);
-    if (null == r) return !1;
-    let i = (0, s.uu)(r.id);
+function f(e) {
+    let { channelId: n } = e;
+    if (null == n || !(0, u.mG)({ location: 'channel_select' }) || !(0, l.dg)()) return !1;
+    let r = s.Z.getChannel(n);
+    if (null == r || !r.isDM()) return !1;
+    let i = (0, l.uu)(n);
     return (
-        !!(null != i && r.isDM()) &&
-        ((0, l.a)({
+        null != i &&
+        ((0, c.a)({
             warningId: i.id,
             warningType: i.type,
             senderId: r.getRecipientId(),
-            channelId: r.id
+            channelId: n
         }),
         !0)
     );
 }
-class d extends r.Z {
+function _(e) {
+    let { channels: n } = e;
+    if (!(0, u.mG)({ location: 'channel_updates' }) || !(0, l.dg)()) return !1;
+    let r = o.Z.getCurrentlySelectedChannelId();
+    if (null == r) return !1;
+    let i = n.find((e) => e.id === r);
+    if (null == i) return !1;
+    let a = (0, l.uu)(i.id);
+    return (
+        !!(null != a && i.isDM()) &&
+        ((0, c.a)({
+            warningId: a.id,
+            warningType: a.type,
+            senderId: i.getRecipientId(),
+            channelId: i.id
+        }),
+        !0)
+    );
+}
+class h extends a.Z {
     constructor(...e) {
-        var t, n, r;
         super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = {
-                CHANNEL_SELECT: u,
-                CHANNEL_UPDATES: c
-            }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+            d(this, 'actions', {
+                CHANNEL_SELECT: f,
+                CHANNEL_UPDATES: _
+            });
     }
 }
-t.Z = new d();
+n.Z = new h();

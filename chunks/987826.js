@@ -1,32 +1,33 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(481060),
-    o = n(118012),
-    l = n(952670);
-function u(e) {
-    var t;
-    let { name: n, className: i, state: u, isInline: c, onClick: d } = e,
-        f = null,
-        _ = o.Z.Colors.HEADER_PRIMARY;
-    (null == u ? void 0 : u.isActive) && !c ? (f = l.active) : (null == u ? void 0 : null === (t = u.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? (f = l.error) : (null == u ? void 0 : u.hasValue) && !c && (f = l.set);
-    let p = (0, r.jsx)(o.Z, {
-        size: c ? o.Z.Sizes.SIZE_16 : o.Z.Sizes.SIZE_14,
-        color: _,
-        className: a()(l.option, { [l.inline]: c }, f, i),
-        children: n + (c ? ':' : '')
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(481060),
+    l = r(118012),
+    u = r(952670);
+function c(e) {
+    var n;
+    let { name: r, className: a, state: c, isInline: d, onClick: f } = e,
+        _ = r + (d ? ':' : ''),
+        h = null,
+        p = l.Z.Colors.HEADER_PRIMARY;
+    (null == c ? void 0 : c.isActive) && !d ? (h = u.active) : (null == c ? void 0 : null === (n = c.lastValidationResult) || void 0 === n ? void 0 : n.success) === !1 ? (h = u.error) : (null == c ? void 0 : c.hasValue) && !d && (h = u.set);
+    let m = (0, i.jsx)(l.Z, {
+        size: d ? l.Z.Sizes.SIZE_16 : l.Z.Sizes.SIZE_14,
+        color: p,
+        className: s()(u.option, { [u.inline]: d }, h, a),
+        children: _
     });
-    return null == d
-        ? p
-        : (0, r.jsx)(s.Clickable, {
-              className: l.clickable,
-              onClick: () => d(n),
-              children: p
+    return null == f
+        ? m
+        : (0, i.jsx)(o.Clickable, {
+              className: u.clickable,
+              onClick: () => f(r),
+              children: m
           });
 }

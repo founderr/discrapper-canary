@@ -1,88 +1,89 @@
-n.d(t, {
+r.d(n, {
     DB: function () {
-        return s;
-    },
-    Lm: function () {
-        return d;
-    },
-    Ob: function () {
         return o;
     },
+    Lm: function () {
+        return m;
+    },
+    Ob: function () {
+        return f;
+    },
     Rw: function () {
-        return l;
+        return _;
     },
     Sd: function () {
-        return a;
+        return s;
     },
     gS: function () {
-        return u;
+        return h;
     },
     mG: function () {
-        return c;
+        return p;
     }
 });
-var r = n(586072),
-    i = n(981631);
-function a() {
-    let { isUserEligibleForCreatorMonetization: e } = r.bT.useExperiment({ location: 'e3bb71_1' }, { autoTrackExposure: !1 });
-    return e;
-}
+var i = r(586072),
+    a = r(981631);
 function s() {
-    let { isUserEligibleForCreatorMonetization: e } = r.bT.getCurrentConfig({ location: 'e3bb71_2' }, { autoTrackExposure: !1 });
+    let { isUserEligibleForCreatorMonetization: e } = i.bT.useExperiment({ location: 'e3bb71_1' }, { autoTrackExposure: !1 });
     return e;
 }
-function o(e) {
-    let t = (function (e) {
-            let { enableFastMonetizationOnboardingForGuild: t } = r.z.useExperiment(
-                    {
-                        guildId: null != e ? e : i.lds,
-                        location: 'e3bb71_3'
-                    },
-                    { autoTrackExposure: !0 }
-                ),
-                { enableFastMonetizationOnboardingForUser: n } = r.AC.useExperiment({ location: 'e3bb71_4' }, { autoTrackExposure: !1 });
-            return null != e && t && n;
-        })(null == e ? void 0 : e.id),
-        n = (function (e) {
-            let { enableFastMonetizationOnboardingForUser: t } = r.AC.useExperiment({ location: 'e3bb71_7' }, { autoTrackExposure: !1 });
-            return null != e && e.hasFeature(i.oNc.CREATOR_MONETIZABLE_WHITEGLOVE) && t;
-        })(e);
-    return t || n;
+function o() {
+    let { isUserEligibleForCreatorMonetization: e } = i.bT.getCurrentConfig({ location: 'e3bb71_2' }, { autoTrackExposure: !1 });
+    return e;
 }
 function l(e) {
-    return (
-        (function (e) {
-            let { enableFastMonetizationOnboardingForGuild: t } = r.z.getCurrentConfig({
-                    guildId: null != e ? e : i.lds,
-                    location: 'e3bb71_5'
-                }),
-                { enableFastMonetizationOnboardingForUser: n } = r.AC.getCurrentConfig({ location: 'e3bb71_6' });
-            return null != e && t && n;
-        })(null == e ? void 0 : e.id) ||
-        (function (e) {
-            let { enableFastMonetizationOnboardingForUser: t } = r.AC.getCurrentConfig({ location: 'e3bb71_8' });
-            return null != e && e.hasFeature(i.oNc.CREATOR_MONETIZABLE_WHITEGLOVE) && t;
-        })(e)
-    );
+    let { enableFastMonetizationOnboardingForGuild: n } = i.z.useExperiment(
+            {
+                guildId: null != e ? e : a.lds,
+                location: 'e3bb71_3'
+            },
+            { autoTrackExposure: !0 }
+        ),
+        { enableFastMonetizationOnboardingForUser: r } = i.AC.useExperiment({ location: 'e3bb71_4' }, { autoTrackExposure: !1 });
+    return null != e && n && r;
 }
 function u(e) {
-    let { enableWaitlist: t } = r.IW.useExperiment(
+    let { enableFastMonetizationOnboardingForGuild: n } = i.z.getCurrentConfig({
+            guildId: null != e ? e : a.lds,
+            location: 'e3bb71_5'
+        }),
+        { enableFastMonetizationOnboardingForUser: r } = i.AC.getCurrentConfig({ location: 'e3bb71_6' });
+    return null != e && n && r;
+}
+function c(e) {
+    let { enableFastMonetizationOnboardingForUser: n } = i.AC.useExperiment({ location: 'e3bb71_7' }, { autoTrackExposure: !1 });
+    return null != e && e.hasFeature(a.oNc.CREATOR_MONETIZABLE_WHITEGLOVE) && n;
+}
+function d(e) {
+    let { enableFastMonetizationOnboardingForUser: n } = i.AC.getCurrentConfig({ location: 'e3bb71_8' });
+    return null != e && e.hasFeature(a.oNc.CREATOR_MONETIZABLE_WHITEGLOVE) && n;
+}
+function f(e) {
+    let n = l(null == e ? void 0 : e.id),
+        r = c(e);
+    return n || r;
+}
+function _(e) {
+    return u(null == e ? void 0 : e.id) || d(e);
+}
+function h(e) {
+    let { enableWaitlist: n } = i.IW.useExperiment(
         {
-            guildId: null != e ? e : i.lds,
+            guildId: null != e ? e : a.lds,
             location: 'e3bb71_9'
         },
         { autoTrackExposure: !1 }
     );
-    return t;
+    return n;
 }
-function c(e) {
-    let { enableWaitlist: t } = r.IW.getCurrentConfig({
-        guildId: null != e ? e : i.lds,
+function p(e) {
+    let { enableWaitlist: n } = i.IW.getCurrentConfig({
+        guildId: null != e ? e : a.lds,
         location: 'e3bb71_10'
     });
-    return t;
+    return n;
 }
-function d() {
-    let { enableCreatorMonetizationNagActivateForUser: e } = r.aC.getCurrentConfig({ location: 'e3bb71_11' }, { autoTrackExposure: !0 });
+function m() {
+    let { enableCreatorMonetizationNagActivateForUser: e } = i.aC.getCurrentConfig({ location: 'e3bb71_11' }, { autoTrackExposure: !0 });
     return e;
 }

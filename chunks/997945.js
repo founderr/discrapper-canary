@@ -1,43 +1,18 @@
-var r, i, a, s, o;
-n.d(t, {
+var i, a, s;
+r.d(n, {
     Ru: function () {
-        return i;
+        return a;
     },
     aH: function () {
-        return r;
+        return i;
     }
 }),
-    ((r || (r = {})).DEFAULT = 'AppIcon'),
-    ((s = i || (i = {})).BRAND_DARK = 'BrandDarkIcon'),
-    (s.BRAND_INVERTED = 'BrandInvertedIcon'),
-    (s.MATTE_LIGHT = 'MatteLightIcon'),
-    (s.MATTE_DARK = 'MatteDarkIcon'),
-    (s.PASTEL = 'PastelIcon'),
-    (s.PIRATE = 'PirateIcon'),
-    (s.CAMO = 'CamoIcon'),
-    (s.SUNSET = 'SunsetIcon'),
-    (s.GALAXY = 'GalaxyIcon'),
-    (s.Y2K = 'Y2KIcon'),
-    (s.CHERRY_BLOSSOM = 'CherryBlossomIcon'),
-    (s.BEANIE = 'BeanieIcon'),
-    (s.GAMING = 'GamingIcon'),
-    (s.CIRCUIT = 'CircuitIcon'),
-    (s.HOLO_WAVES = 'HoloWavesIcon'),
-    (s.BLUSH = 'BlushIcon'),
-    (s.ANGRY = 'AngryIcon'),
-    (s.MANGA = 'MangaIcon'),
-    (s.CONTROLLER = 'ControllerIcon'),
-    (s.MUSHROOM = 'MushroomIcon'),
-    (s.BLURPLE_TWILIGHT = 'BlurpleTwilightIcon'),
-    (s.IN_RAINBOWS = 'InRainbowsIcon'),
-    (s.COLOR_WAVE = 'ColorWaveIcon'),
-    (s.MIDNIGHT_PRISM = 'MidnightPrismIcon'),
-    ((o = a || (a = {})).DRIP = 'DripIcon'),
-    (o.SLIMY = 'SlimyIcon'),
-    (o.ZOMBIE = 'ZombieIcon'),
-    (o.CLYDE_STEIN = 'ClydeSteinIcon'),
-    {
-        ...r,
-        ...i,
-        ...a
-    };
+    !(function (e) {
+        e.DEFAULT = 'AppIcon';
+    })(i || (i = {})),
+    !(function (e) {
+        (e.BRAND_DARK = 'BrandDarkIcon'), (e.BRAND_INVERTED = 'BrandInvertedIcon'), (e.MATTE_LIGHT = 'MatteLightIcon'), (e.MATTE_DARK = 'MatteDarkIcon'), (e.PASTEL = 'PastelIcon'), (e.PIRATE = 'PirateIcon'), (e.CAMO = 'CamoIcon'), (e.SUNSET = 'SunsetIcon'), (e.GALAXY = 'GalaxyIcon'), (e.Y2K = 'Y2KIcon'), (e.CHERRY_BLOSSOM = 'CherryBlossomIcon'), (e.BEANIE = 'BeanieIcon'), (e.GAMING = 'GamingIcon'), (e.CIRCUIT = 'CircuitIcon'), (e.HOLO_WAVES = 'HoloWavesIcon'), (e.BLUSH = 'BlushIcon'), (e.ANGRY = 'AngryIcon'), (e.MANGA = 'MangaIcon'), (e.CONTROLLER = 'ControllerIcon'), (e.MUSHROOM = 'MushroomIcon'), (e.BLURPLE_TWILIGHT = 'BlurpleTwilightIcon'), (e.IN_RAINBOWS = 'InRainbowsIcon'), (e.COLOR_WAVE = 'ColorWaveIcon'), (e.MIDNIGHT_PRISM = 'MidnightPrismIcon');
+    })(a || (a = {})),
+    !(function (e) {
+        (e.DRIP = 'DripIcon'), (e.SLIMY = 'SlimyIcon'), (e.ZOMBIE = 'ZombieIcon'), (e.CLYDE_STEIN = 'ClydeSteinIcon');
+    })(s || (s = {}));

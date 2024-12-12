@@ -1,12 +1,13 @@
-n(47120);
-var r = n(192379);
-t.Z = () => {
-    let [e, t] = (0, r.useState)(null);
+var i = r(47120);
+var a = r(192379);
+let s = () => {
+    let [e, n] = (0, a.useState)(null);
     return (
-        (0, r.useEffect)(() => {
+        (0, a.useEffect)(() => {
             var e;
-            if ((null === (e = window) || void 0 === e ? void 0 : e.EyeDropper) != null) t(new window.EyeDropper());
+            if ((null === (e = window) || void 0 === e ? void 0 : e.EyeDropper) != null) n(new window.EyeDropper());
         }, []),
         e
     );
 };
+n.Z = s;

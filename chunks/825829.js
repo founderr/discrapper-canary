@@ -1,297 +1,321 @@
-n.d(t, {
+r.d(n, {
     FL: function () {
-        return y;
+        return B;
     },
     Mq: function () {
-        return b;
+        return M;
     },
     NK: function () {
-        return C;
+        return F;
     },
     OP: function () {
-        return I;
+        return b;
     },
     Sw: function () {
-        return O;
+        return j;
     },
     ZP: function () {
-        return N;
+        return Z;
     },
     ge: function () {
-        return R;
+        return V;
     },
     hU: function () {
-        return S;
+        return k;
     },
     nY: function () {
-        return v;
+        return T;
     },
     nj: function () {
-        return D;
+        return H;
     }
-}),
-    n(47120);
-var r = n(192379),
-    i = n(462382),
-    a = n(259346),
-    s = n(436817),
-    o = n(189722),
-    l = n(721355),
-    u = n(999923),
-    c = n(729917),
-    d = n(932019),
-    f = n(442837),
-    _ = n(592125),
-    p = n(496675);
-n(594174);
-var h = n(313889),
-    m = n(177862),
-    g = n(981631),
-    E = n(388032);
-function v(e) {
-    return e.type === g.uaV.AUTO_MODERATION_ACTION;
+});
+var i = r(47120);
+var a = r(192379),
+    s = r(462382),
+    o = r(259346),
+    l = r(436817),
+    u = r(189722),
+    c = r(721355),
+    d = r(999923),
+    f = r(729917),
+    _ = r(932019),
+    h = r(442837),
+    p = r(592125),
+    m = r(496675);
+r(594174);
+var g = r(313889),
+    E = r(177862),
+    v = r(981631),
+    I = r(388032);
+function T(e) {
+    return e.type === v.uaV.AUTO_MODERATION_ACTION;
 }
-function I(e) {
-    var t;
-    return null === (t = e.embeds) || void 0 === t
+function b(e) {
+    var n;
+    return null === (n = e.embeds) || void 0 === n
         ? void 0
-        : t.some((e) => {
-              let { type: t } = e;
-              return t === g.hBH.AUTO_MODERATION_NOTIFICATION;
+        : n.some((e) => {
+              let { type: n } = e;
+              return n === v.hBH.AUTO_MODERATION_NOTIFICATION;
           });
-}
-function T(e, t) {
-    var n, r, i, a, s;
-    let [o] = null !== (n = e.embeds) && void 0 !== n ? n : [];
-    if (null != o) {
-        if (o.type === g.hBH.AUTO_MODERATION_MESSAGE)
-            return null == o
-                ? void 0
-                : null === (i = o.fields) || void 0 === i
-                  ? void 0
-                  : null ===
-                          (r = i.find((e) => {
-                              let { rawName: n } = e;
-                              return n === t;
-                          })) || void 0 === r
-                    ? void 0
-                    : r.rawValue;
-        if (o.type === g.hBH.AUTO_MODERATION_NOTIFICATION)
-            return null == o
-                ? void 0
-                : null === (s = o.fields) || void 0 === s
-                  ? void 0
-                  : null ===
-                          (a = s.find((e) => {
-                              let { rawName: n } = e;
-                              return n === t;
-                          })) || void 0 === a
-                    ? void 0
-                    : a.rawValue;
-    }
-}
-function b(e, t) {
-    var n, r;
-    let l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : g.VqG,
-        d = arguments.length > 3 ? arguments[3] : void 0,
-        f = arguments.length > 4 ? arguments[4] : void 0,
-        _ = (function (e) {
-            let t = T(e, o.G.BLOCK_PROFILE_UPDATE_TYPE);
-            if (null != t) return t;
-        })(e),
-        h = (function (e) {
-            let t = T(e, o.G.QUARANTINE_USER_ACTION);
-            if (null != t) return t;
-        })(e),
-        m = (function (e) {
-            let t = T(e, o.G.QUARANTINE_EVENT);
-            if (null != t) return t;
-        })(e),
-        v = (function (e) {
-            let t = T(e, o.G.QUARANTINE_USER);
-            if (null != t) return t;
-        })(e),
-        I = (function (e) {
-            let t = T(e, o.G.DECISION_OUTCOME);
-            if (null != t) return t;
-        })(e),
-        b = T(e, o.G.INTERACTION_CALLBACK_TYPE),
-        S = T(e, o.G.APPLICATION_NAME);
-    if (null != v) {
-        let e = (function (e, t, n) {
-            switch (t) {
-                case c.z.BLOCK_PROFILE_UPDATE:
-                    return (function (e) {
-                        switch (e) {
-                            case i.J.NICKNAME_UPDATE:
-                                return E.intl.string(E.t.t98DPT);
-                            case i.J.NICKNAME_RESET:
-                                return E.intl.string(E.t['7u/rlZ']);
-                            default:
-                                return;
-                        }
-                    })(e);
-                case c.z.QUARANTINE_USER:
-                    return (function (e) {
-                        switch (e) {
-                            case u.B.MESSAGE_SEND:
-                                return E.intl.string(E.t.PmSMMT);
-                            case u.B.GUILD_JOIN:
-                                return E.intl.string(E.t.m9wWzs);
-                            case u.B.USERNAME_UPDATE:
-                                return E.intl.string(E.t.KNSkCw);
-                            case u.B.CLAN_TAG_UPDATE:
-                                return E.intl.string(E.t.qV4K6u);
-                            default:
-                                return;
-                        }
-                    })(n);
-                case c.z.BLOCK_GUEST_JOIN:
-                    return (function () {
-                        return E.intl.string(E.t.MrYeyc);
-                    })();
-            }
-        })(_, h, m);
-        if (null != e) return e;
-    }
-    let y = p.Z.can(g.Plq.VIEW_CHANNEL, t);
-    let A = ((n = t), y ? (null !== (r = null == n ? void 0 : n.name) && void 0 !== r ? r : E.intl.string(E.t.J90oLS)) : E.intl.string(E.t['/YzI6+'])),
-        N = null != t && y ? l : g.VqG,
-        C = (function (e, t, n) {
-            let r = T(e, o.G.VOICE_CHANNEL_STATUS_OUTCOME);
-            if (null == r) return null;
-            let i = 'blocked' === r ? E.t.cLQrq6 : E.t.bma6cn;
-            return E.intl.format(i, {
-                channelName: t,
-                channelHook: n
-            });
-        })(e, A, l);
-    if (null != C) return C;
-    if (null != S)
-        return b === s.y.MODAL && null != f
-            ? I !== a.P.BLOCKED
-                ? E.intl.format(E.t['4xL9Sk'], {
-                      applicationName: S,
-                      interactionUserHook: f,
-                      integrationOwnerHook: d
-                  })
-                : E.intl.format(E.t.S3lNIS, {
-                      applicationName: S,
-                      interactionUserHook: f,
-                      integrationOwnerHook: d
-                  })
-            : I !== a.P.BLOCKED
-              ? E.intl.format(E.t.AXQufH, {
-                    applicationName: S,
-                    channelName: A,
-                    channelHook: N,
-                    integrationOwnerHook: d
-                })
-              : E.intl.format(E.t.s3tjMD, {
-                    applicationName: S,
-                    channelName: A,
-                    channelHook: N,
-                    integrationOwnerHook: d
-                });
-    return I !== a.P.BLOCKED
-        ? E.intl.format(E.t.IZg0VV, {
-              channelName: A,
-              channelHook: N
-          })
-        : E.intl.format(E.t.lOIOSE, {
-              channelName: A,
-              channelHook: N
-          });
-}
-function S(e) {
-    switch (e) {
-        case d.i.NICKNAME:
-            return E.intl.string(E.t.fkBQa2);
-        case d.i.USERNAME:
-            return E.intl.string(E.t.pJQVnp);
-        case d.i.GLOBAL_NAME:
-            return E.intl.string(E.t['V9eJ8/']);
-        case d.i.CLAN_TAG:
-            return E.intl.string(E.t.Rtum09);
-        default:
-            return E.intl.string(E.t.pJQVnp);
-    }
 }
 function y(e) {
-    var t, n;
-    let r = T(e, l.D.NOTIFICATION_TYPE),
-        i = T(e, l.D.JOIN_ATTEMPTS),
-        a = T(e, l.D.RAID_DATETIME),
-        s = T(e, l.D.DMS_SENT),
-        o = T(e, l.D.RAID_TYPE),
-        u = T(e, l.D.RESOLVED_REASON),
-        c = T(e, l.D.DECISION_ID),
-        d = T(e, l.D.SUSPICIOUS_MENTION_ACTIVITY_UNTIL);
+    return e.type === v.hBH.AUTO_MODERATION_NOTIFICATION;
+}
+function S(e) {
+    return e.type === v.hBH.AUTO_MODERATION_MESSAGE;
+}
+function A(e, n) {
+    var r, i, a, s, o;
+    let [l] = null !== (r = e.embeds) && void 0 !== r ? r : [];
+    return null == l
+        ? void 0
+        : S(l)
+          ? null == l
+              ? void 0
+              : null === (a = l.fields) || void 0 === a
+                ? void 0
+                : null ===
+                        (i = a.find((e) => {
+                            let { rawName: r } = e;
+                            return r === n;
+                        })) || void 0 === i
+                  ? void 0
+                  : i.rawValue
+          : y(l)
+            ? null == l
+                ? void 0
+                : null === (o = l.fields) || void 0 === o
+                  ? void 0
+                  : null ===
+                          (s = o.find((e) => {
+                              let { rawName: r } = e;
+                              return r === n;
+                          })) || void 0 === s
+                    ? void 0
+                    : s.rawValue
+            : void 0;
+}
+function N(e) {
+    var n, r;
+    let [i] = null !== (n = e.embeds) && void 0 !== n ? n : [];
+    return null !== (r = null == i ? void 0 : i.rawDescription) && void 0 !== r ? r : '';
+}
+function C(e) {
+    let n = A(e, u.G.DECISION_OUTCOME);
+    if (null != n) return n;
+}
+function R(e) {
+    let n = A(e, u.G.QUARANTINE_USER);
+    if (null != n) return n;
+}
+function O(e) {
+    let n = A(e, u.G.QUARANTINE_USER_ACTION);
+    if (null != n) return n;
+}
+function D(e) {
+    let n = A(e, u.G.BLOCK_PROFILE_UPDATE_TYPE);
+    if (null != n) return n;
+}
+function L(e) {
+    let n = A(e, u.G.QUARANTINE_EVENT);
+    if (null != n) return n;
+}
+function x(e, n, r) {
+    switch (n) {
+        case f.z.BLOCK_PROFILE_UPDATE:
+            return i(e);
+        case f.z.QUARANTINE_USER:
+            return o(r);
+        case f.z.BLOCK_GUEST_JOIN:
+            return a();
+    }
+    function i(e) {
+        switch (e) {
+            case s.J.NICKNAME_UPDATE:
+                return I.intl.string(I.t.t98DPT);
+            case s.J.NICKNAME_RESET:
+                return I.intl.string(I.t['7u/rlZ']);
+            default:
+                return;
+        }
+    }
+    function a() {
+        return I.intl.string(I.t.MrYeyc);
+    }
+    function o(e) {
+        switch (e) {
+            case d.B.MESSAGE_SEND:
+                return I.intl.string(I.t.PmSMMT);
+            case d.B.GUILD_JOIN:
+                return I.intl.string(I.t.m9wWzs);
+            case d.B.USERNAME_UPDATE:
+                return I.intl.string(I.t.KNSkCw);
+            case d.B.CLAN_TAG_UPDATE:
+                return I.intl.string(I.t.qV4K6u);
+            default:
+                return;
+        }
+    }
+}
+function w(e, n) {
+    var r;
+    return n ? (null !== (r = null == e ? void 0 : e.name) && void 0 !== r ? r : I.intl.string(I.t.J90oLS)) : I.intl.string(I.t['/YzI6+']);
+}
+function P(e, n, r) {
+    let i = A(e, u.G.VOICE_CHANNEL_STATUS_OUTCOME);
+    if (null == i) return null;
+    let a = 'blocked' === i ? I.t.cLQrq6 : I.t.bma6cn;
+    return I.intl.format(a, {
+        channelName: n,
+        channelHook: r
+    });
+}
+function M(e, n) {
+    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : v.VqG,
+        i = arguments.length > 3 ? arguments[3] : void 0,
+        a = arguments.length > 4 ? arguments[4] : void 0,
+        s = D(e),
+        c = O(e),
+        d = L(e),
+        f = R(e),
+        _ = C(e),
+        h = A(e, u.G.INTERACTION_CALLBACK_TYPE),
+        p = A(e, u.G.APPLICATION_NAME);
+    if (null != f) {
+        let e = x(s, c, d);
+        if (null != e) return e;
+    }
+    let g = m.Z.can(v.Plq.VIEW_CHANNEL, n),
+        E = w(n, g),
+        T = null != n && g ? r : v.VqG,
+        b = P(e, E, r);
+    if (null != b) return b;
+    if (null != p)
+        return h === l.y.MODAL && null != a
+            ? _ !== o.P.BLOCKED
+                ? I.intl.format(I.t['4xL9Sk'], {
+                      applicationName: p,
+                      interactionUserHook: a,
+                      integrationOwnerHook: i
+                  })
+                : I.intl.format(I.t.S3lNIS, {
+                      applicationName: p,
+                      interactionUserHook: a,
+                      integrationOwnerHook: i
+                  })
+            : _ !== o.P.BLOCKED
+              ? I.intl.format(I.t.AXQufH, {
+                    applicationName: p,
+                    channelName: E,
+                    channelHook: T,
+                    integrationOwnerHook: i
+                })
+              : I.intl.format(I.t.s3tjMD, {
+                    applicationName: p,
+                    channelName: E,
+                    channelHook: T,
+                    integrationOwnerHook: i
+                });
+    return _ !== o.P.BLOCKED
+        ? I.intl.format(I.t.IZg0VV, {
+              channelName: E,
+              channelHook: T
+          })
+        : I.intl.format(I.t.lOIOSE, {
+              channelName: E,
+              channelHook: T
+          });
+}
+function k(e) {
+    switch (e) {
+        case _.i.NICKNAME:
+            return I.intl.string(I.t.fkBQa2);
+        case _.i.USERNAME:
+            return I.intl.string(I.t.pJQVnp);
+        case _.i.GLOBAL_NAME:
+            return I.intl.string(I.t['V9eJ8/']);
+        case _.i.CLAN_TAG:
+            return I.intl.string(I.t.Rtum09);
+        default:
+            return I.intl.string(I.t.pJQVnp);
+    }
+}
+function U(e) {
+    return null == e ? null : e;
+}
+function B(e) {
+    var n;
+    let r = A(e, c.D.NOTIFICATION_TYPE),
+        i = A(e, c.D.JOIN_ATTEMPTS),
+        a = A(e, c.D.RAID_DATETIME),
+        s = A(e, c.D.DMS_SENT),
+        o = A(e, c.D.RAID_TYPE),
+        l = A(e, c.D.RESOLVED_REASON),
+        u = A(e, c.D.DECISION_ID),
+        d = A(e, c.D.SUSPICIOUS_MENTION_ACTIVITY_UNTIL);
     return {
-        notificationType: null !== (t = null == (n = r) ? null : n) && void 0 !== t ? t : void 0,
+        notificationType: null !== (n = U(r)) && void 0 !== n ? n : void 0,
         joinAttempts: null != i ? parseInt(i) : void 0,
         raidDatetime: null != a ? new Date(a) : void 0,
         dmsSent: null != s ? parseInt(s) : void 0,
         raidType: null != o ? o : void 0,
-        resolvedReason: null != u ? u : void 0,
-        decisionId: null != c ? c : void 0,
+        resolvedReason: null != l ? l : void 0,
+        decisionId: null != u ? u : void 0,
         suspiciousMentionActivityUntil: null != d ? new Date(d) : void 0
     };
 }
-function A(e) {
-    let t = T(e, o.G.CHANNEL_ID),
-        n = T(e, o.G.ALERT_ACTIONS_EXECUTION),
-        r = (0, h.t)(n);
+function G(e) {
+    let n = A(e, u.G.CHANNEL_ID),
+        r = A(e, u.G.ALERT_ACTIONS_EXECUTION),
+        i = (0, g.t)(r);
     return {
-        content: (function (e) {
-            var t, n;
-            let [r] = null !== (t = e.embeds) && void 0 !== t ? t : [];
-            return null !== (n = null == r ? void 0 : r.rawDescription) && void 0 !== n ? n : '';
-        })(e),
-        ruleName: T(e, o.G.RULE_NAME),
-        decisionId: T(e, o.G.DECISION_ID),
-        keyword: T(e, o.G.KEYWORD),
-        keywordMatchedContent: T(e, o.G.KEYWORD_MATCHED_CONTENT),
-        flaggedMessageId: T(e, o.G.FLAGGED_MESSAGE_ID),
-        timeoutDuration: T(e, o.G.TIMEOUT_DURATION),
-        quarantineType: T(e, o.G.QUARANTINE_USER),
-        quarantineAction: T(e, o.G.QUARANTINE_USER_ACTION),
-        decisionReason: T(e, o.G.DECISION_REASON),
-        applicationName: T(e, o.G.APPLICATION_NAME),
-        interactionUserId: T(e, o.G.INTERACTION_USER_ID),
-        interactionCallbackType: T(e, o.G.INTERACTION_CALLBACK_TYPE),
-        embedChannel: _.Z.getChannel(t),
-        embedChannelId: t,
-        alertActionsExecution: null != r ? r : void 0
+        content: N(e),
+        ruleName: A(e, u.G.RULE_NAME),
+        decisionId: A(e, u.G.DECISION_ID),
+        keyword: A(e, u.G.KEYWORD),
+        keywordMatchedContent: A(e, u.G.KEYWORD_MATCHED_CONTENT),
+        flaggedMessageId: A(e, u.G.FLAGGED_MESSAGE_ID),
+        timeoutDuration: A(e, u.G.TIMEOUT_DURATION),
+        quarantineType: A(e, u.G.QUARANTINE_USER),
+        quarantineAction: A(e, u.G.QUARANTINE_USER_ACTION),
+        decisionReason: A(e, u.G.DECISION_REASON),
+        applicationName: A(e, u.G.APPLICATION_NAME),
+        interactionUserId: A(e, u.G.INTERACTION_USER_ID),
+        interactionCallbackType: A(e, u.G.INTERACTION_CALLBACK_TYPE),
+        embedChannel: p.Z.getChannel(n),
+        embedChannelId: n,
+        alertActionsExecution: null != i ? i : void 0
     };
 }
-function N(e) {
-    let t = r.useMemo(() => A(e), [e]),
-        n = (0, f.e7)([_.Z], () => _.Z.getChannel(t.embedChannelId), [t.embedChannelId]);
+function Z(e) {
+    let n = a.useMemo(() => G(e), [e]),
+        r = (0, h.e7)([p.Z], () => p.Z.getChannel(n.embedChannelId), [n.embedChannelId]);
     return {
-        ...t,
-        embedChannel: n
+        ...n,
+        embedChannel: r
     };
 }
-function C(e) {
+function F(e) {
     if (null == e) return null;
-    let { alertActionsExecution: t } = A(e);
-    return null != t ? t : null;
+    let { alertActionsExecution: n } = G(e);
+    return null != n ? n : null;
 }
-function R(e) {
-    if (null == e) return E.intl.string(E.t.Gh3A0N);
+function V(e) {
+    if (null == e) return I.intl.string(I.t.Gh3A0N);
     switch (e) {
-        case m.$l.LEGITIMATE_ACTIVITY:
-            return E.intl.string(E.t['riQ+HB']);
-        case m.$l.DM_SPAM:
-            return E.intl.string(E.t.j5V0io);
-        case m.$l.JOIN_RAID:
-            return E.intl.string(E.t.qhaRbG);
+        case E.$l.LEGITIMATE_ACTIVITY:
+            return I.intl.string(I.t['riQ+HB']);
+        case E.$l.DM_SPAM:
+            return I.intl.string(I.t.j5V0io);
+        case E.$l.JOIN_RAID:
+            return I.intl.string(I.t.qhaRbG);
         default:
-            return E.intl.string(E.t.GPg6JC);
+            return I.intl.string(I.t.GPg6JC);
     }
 }
-function O(e) {
-    return T(e, l.D.ACTION_BY_USER_ID);
+function j(e) {
+    return A(e, c.D.ACTION_BY_USER_ID);
 }
-let D = void 0;
+let H = void 0;

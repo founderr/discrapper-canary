@@ -1,5 +1,6 @@
-var r = n(741057),
-    i = n(370873);
-t.Z = function e(t, n, a, s, o) {
-    return t === n || (null != t && null != n && ((0, i.Z)(t) || (0, i.Z)(n)) ? (0, r.Z)(t, n, a, s, e, o) : t != t && n != n);
-};
+var i = r(741057),
+    a = r(370873);
+function s(e, n, r, o, l) {
+    return e === n || (null != e && null != n && ((0, a.Z)(e) || (0, a.Z)(n)) ? (0, i.Z)(e, n, r, o, s, l) : e != e && n != n);
+}
+n.Z = s;

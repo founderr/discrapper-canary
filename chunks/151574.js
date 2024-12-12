@@ -1,307 +1,310 @@
-n(47120);
-var r,
-    i,
-    a = n(200651),
-    s = n(192379),
-    o = n(120356),
-    l = n.n(o),
-    u = n(91192),
-    c = n(924826),
-    d = n(536895),
-    f = n(468194),
-    _ = n(477690),
-    p = n(481060),
-    h = n(100527),
-    m = n(906732),
-    g = n(570220),
-    E = n(686546),
-    v = n(28546),
-    I = n(285651),
-    T = n(926491),
-    b = n(373228),
-    S = n(378233),
-    y = n(419922),
-    A = n(490095),
-    N = n(652136),
-    C = n(626135),
-    R = n(280930),
-    O = n(606301),
-    D = n(278754),
-    L = n(981631),
-    x = n(388032),
-    w = n(304550);
-let P = (0, f.Mg)(_.Z.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
-    M = (0, f.Mg)(_.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE),
-    k = 2 * M + (0, f.Mg)(_.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN) + 2 * P,
-    U = () => Promise.resolve();
-function B(e) {
-    let { isFocused: t, isHidden: n, sendability: r, listIndex: i, sticker: s, onMouseOver: o, onSelectSticker: c } = e,
-        { tabIndex: d, ...f } = (0, u.JA)(''.concat(i));
-    return (0, a.jsxs)(p.Clickable, {
-        ...f,
-        tabIndex: n ? -1 : d,
-        className: l()(w.suggestedExpression, { [w.suggestedExpressionFocused]: t }),
+var i,
+    a = r(47120);
+var s = r(200651),
+    o = r(192379),
+    l = r(120356),
+    u = r.n(l),
+    c = r(91192),
+    d = r(924826),
+    f = r(536895),
+    _ = r(468194),
+    h = r(477690),
+    p = r(481060),
+    m = r(100527),
+    g = r(906732),
+    E = r(570220),
+    v = r(686546),
+    I = r(28546),
+    T = r(285651),
+    b = r(926491),
+    y = r(373228),
+    S = r(378233),
+    A = r(419922),
+    N = r(490095),
+    C = r(652136),
+    R = r(626135),
+    O = r(280930),
+    D = r(606301),
+    L = r(278754),
+    x = r(981631),
+    w = r(388032),
+    P = r(304550);
+let M = 4,
+    k = (0, _.Mg)(h.Z.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
+    U = (0, _.Mg)(h.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE),
+    B = 2 * U + (0, _.Mg)(h.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN) + 2 * k,
+    G = () => Promise.resolve();
+function Z(e) {
+    let { isFocused: n, isHidden: r, sendability: i, listIndex: a, sticker: o, onMouseOver: l, onSelectSticker: d } = e,
+        { tabIndex: f, ..._ } = (0, c.JA)(''.concat(a));
+    return (0, s.jsxs)(p.Clickable, {
+        ..._,
+        tabIndex: r ? -1 : f,
+        className: u()(P.suggestedExpression, { [P.suggestedExpressionFocused]: n }),
         focusProps: { enabled: !1 },
-        onClick: () => c(s, r),
-        onMouseOver: o,
+        onClick: () => d(o, i),
+        onMouseOver: l,
         children: [
-            (0, a.jsx)(E.ZP, {
-                mask: E.ZP.Masks.STICKER_ROUNDED_RECT,
-                width: M + 4,
-                height: M + 4,
-                className: w.mask,
-                children: (0, a.jsx)('div', { className: w.maskBackground })
+            (0, s.jsx)(v.ZP, {
+                mask: v.ZP.Masks.STICKER_ROUNDED_RECT,
+                width: U + M,
+                height: U + M,
+                className: P.mask,
+                children: (0, s.jsx)('div', { className: P.maskBackground })
             }),
-            (0, a.jsx)(y.ZP, {
+            (0, s.jsx)(A.ZP, {
                 maskAsset: !0,
-                size: M,
-                sticker: s,
-                className: w.__invalid_sticker
+                size: U,
+                sticker: o,
+                className: P.__invalid_sticker
             }),
-            r !== I.eb.SENDABLE && (0, a.jsx)(A.Z, { size: 14 })
+            i !== T.eb.SENDABLE && (0, s.jsx)(N.Z, { size: 14 })
         ]
     });
 }
-(i = r || (r = {}))[(i.STICKER = 0)] = 'STICKER';
-t.Z = s.memo(function (e) {
-    var t;
-    let { editorRef: n, channel: r, isEditorFocused: i, onSelectSticker: o, stickerIconVisible: f = !1, submitButtonVisible: _ = !1 } = e,
-        E = s.useContext(g.ZP),
-        [y, A] = s.useState(null),
-        [P, M] = s.useState(!1),
-        [G, Z] = s.useState(null),
-        F = (0, v.Iu)((e) => null != e.activeView),
-        V = s.useRef(null),
-        [j, H] = s.useState(''),
-        [Y, W] = s.useState(''),
-        [K, z] = s.useState(!1),
-        [q, Q] = s.useState(!1),
-        X = (0, R.Z)(j, P, r),
-        { analyticsLocations: J } = (0, m.ZP)(h.Z.EXPRESSION_SUGGESTIONS),
-        { handleTextChange: $, debouncedSetTextInputValue: ee } = (0, R.m)({
-            setTextInputValue: H,
-            setHasDismissed: M,
-            setHasSelection: Q,
-            setFocusedSuggestionType: A
-        });
-    s.useEffect(() => {
-        let e = (e) => {
-                z(e);
+function F(e) {
+    let { editorRef: n, hasStickerResults: r, shouldRenderSuggestions: i, focusedSuggestionType: a, setFocusedStickerListItem: s, setFocusedSuggestionType: l, setHasDismissed: u, setTextInputValue: c } = e,
+        _ = o.useCallback(
+            (e, n) => {
+                s(n);
             },
-            t = (e) => {
-                let t = '' !== e && null != e;
-                if ((Q(t), t)) {
-                    var r;
-                    A(null), null === (r = n.current) || void 0 === r || r.focus();
+            [s]
+        ),
+        h = (0, d.ZP)({
+            id: 'expression-suggestions-stickers',
+            isEnabled: !0,
+            scrollToStart: G,
+            scrollToEnd: G,
+            orientation: f.hy.HORIZONTAL,
+            setFocus: _,
+            useVirtualFocus: !0
+        });
+    return (
+        o.useEffect(() => {
+            let e = (e) => {
+                var s, o;
+                if (i && !e.shiftKey && !e.ctrlKey && !e.altKey && !e.metaKey) {
+                    switch (e.key) {
+                        case 'ArrowUp':
+                            e.preventDefault(), null == a && r && (h.focusFirstVisibleItem(), l(0));
+                            break;
+                        case 'ArrowDown':
+                            l(null), null === (s = n.current) || void 0 === s || s.focus();
+                            break;
+                        case 'Escape':
+                            l(null), u(!0), c(''), null === (o = n.current) || void 0 === o || o.focus();
+                    }
+                    0 === a && h.containerProps.onKeyDown(e);
                 }
             };
-        return (
-            E.addListener('text-changed', $),
-            E.addListener('autocomplete-visibility-change', e),
-            E.addListener('selection-changed', t),
-            () => {
-                E.removeListener('text-changed', $), E.removeListener('autocomplete-visibility-change', e), E.removeListener('selection-changed', t);
-            }
-        );
-    }, [$, n, E]),
-        s.useLayoutEffect(() => {
-            null == y && Z(null);
-        }, [y]);
-    let [et, en] = s.useState(!1);
-    s.useLayoutEffect(() => {
-        requestAnimationFrame(() => {
-            let e = V.current;
-            en(i || (null == e ? void 0 : e.contains(null == e ? void 0 : e.ownerDocument.activeElement)) === !0);
-        });
-    }, [i]);
-    let er = X.length > 0,
-        ei = et && !F && !K && !P && !q && er,
-        { stickersNavigator: ea } = (function (e) {
-            let { editorRef: t, hasStickerResults: n, shouldRenderSuggestions: r, focusedSuggestionType: i, setFocusedStickerListItem: a, setFocusedSuggestionType: o, setHasDismissed: l, setTextInputValue: u } = e,
-                f = s.useCallback(
-                    (e, t) => {
-                        a(t);
-                    },
-                    [a]
-                ),
-                _ = (0, c.ZP)({
-                    id: 'expression-suggestions-stickers',
-                    isEnabled: !0,
-                    scrollToStart: U,
-                    scrollToEnd: U,
-                    orientation: d.hy.HORIZONTAL,
-                    setFocus: f,
-                    useVirtualFocus: !0
-                });
+            return window.addEventListener('keydown', e, { capture: !0 }), () => window.removeEventListener('keydown', e, { capture: !0 });
+        }, [h, i, a, l, r, n, u, s, c]),
+        { stickersNavigator: h }
+    );
+}
+!(function (e) {
+    e[(e.STICKER = 0)] = 'STICKER';
+})(i || (i = {})),
+    (n.Z = o.memo(function (e) {
+        var n;
+        let { editorRef: r, channel: i, isEditorFocused: a, onSelectSticker: l, stickerIconVisible: d = !1, submitButtonVisible: f = !1 } = e,
+            _ = o.useContext(E.ZP),
+            [h, v] = o.useState(null),
+            [A, N] = o.useState(!1),
+            [M, k] = o.useState(null),
+            U = (0, I.Iu)((e) => null != e.activeView),
+            G = o.useRef(null),
+            [V, j] = o.useState(''),
+            [H, Y] = o.useState(''),
+            [W, K] = o.useState(!1),
+            [z, q] = o.useState(!1),
+            Q = (0, O.Z)(V, A, i),
+            { analyticsLocations: X } = (0, g.ZP)(m.Z.EXPRESSION_SUGGESTIONS),
+            { handleTextChange: J, debouncedSetTextInputValue: $ } = (0, O.m)({
+                setTextInputValue: j,
+                setHasDismissed: N,
+                setHasSelection: q,
+                setFocusedSuggestionType: v
+            });
+        o.useEffect(() => {
+            let e = (e) => {
+                    K(e);
+                },
+                n = (e) => {
+                    let n = '' !== e && null != e;
+                    if ((q(n), n)) {
+                        var i;
+                        v(null), null === (i = r.current) || void 0 === i || i.focus();
+                    }
+                };
             return (
-                s.useEffect(() => {
-                    let e = (e) => {
-                        var a, s;
-                        if (r && !e.shiftKey && !e.ctrlKey && !e.altKey && !e.metaKey) {
-                            switch (e.key) {
-                                case 'ArrowUp':
-                                    e.preventDefault(), null == i && n && (_.focusFirstVisibleItem(), o(0));
-                                    break;
-                                case 'ArrowDown':
-                                    o(null), null === (a = t.current) || void 0 === a || a.focus();
-                                    break;
-                                case 'Escape':
-                                    o(null), l(!0), u(''), null === (s = t.current) || void 0 === s || s.focus();
-                            }
-                            0 === i && _.containerProps.onKeyDown(e);
-                        }
-                    };
-                    return window.addEventListener('keydown', e, { capture: !0 }), () => window.removeEventListener('keydown', e, { capture: !0 });
-                }, [_, r, i, o, n, t, l, a, u]),
-                { stickersNavigator: _ }
-            );
-        })({
-            editorRef: n,
-            hasStickerResults: er,
-            shouldRenderSuggestions: ei,
-            focusedSuggestionType: y,
-            setFocusedSuggestionType: A,
-            setHasDismissed: M,
-            setFocusedStickerListItem: Z,
-            setTextInputValue: H
-        }),
-        es = (e, t) => {
-            if (ei) {
-                if (
-                    (C.default.track(L.rMx.AUTO_SUGGEST_EXPRESSION_SELECTED, {
-                        sticker_id: e.id,
-                        suggestion_trigger: Y
-                    }),
-                    t === I.eb.SENDABLE)
-                )
-                    M(!0), o(e, b.V0.EXPRESSION_SUGGESTIONS), ee.cancel(), H('');
-                else if ((0, S.jl)(e)) {
-                    let t = T.Z.getStickerPack(e.pack_id);
-                    null != t &&
-                        (0, N.Z)({
-                            stickerPack: t,
-                            analyticsLocations: J
-                        });
+                _.addListener('text-changed', J),
+                _.addListener('autocomplete-visibility-change', e),
+                _.addListener('selection-changed', n),
+                () => {
+                    _.removeListener('text-changed', J), _.removeListener('autocomplete-visibility-change', e), _.removeListener('selection-changed', n);
                 }
-                E.emit('sticker-suggestions-hidden');
-            }
-        },
-        eo = s.useRef([]),
-        el = s.useRef(!1);
-    s.useEffect(() => {
-        ei && (eo.current = X), ei !== el.current && (E.emit(ei ? 'sticker-suggestions-shown' : 'sticker-suggestions-hidden'), ei && ((0, O.Tk)(j), W(j))), (el.current = ei);
-    }, [E, ei, X, j]);
-    let eu = !ei,
-        ec = ei ? X : eo.current;
-    return (0, a.jsx)(m.Gt, {
-        value: J,
-        children: (0, a.jsxs)(p.Clickable, {
-            tabIndex: eu ? -1 : 0,
-            'aria-hidden': eu,
-            className: l()(w.container, {
-                [w.hidden]: eu,
-                [w.submitButtonOffset]: _,
-                [w.stickerIconOffset]: f
+            );
+        }, [J, r, _]),
+            o.useLayoutEffect(() => {
+                null == h && k(null);
+            }, [h]);
+        let [ee, et] = o.useState(!1);
+        o.useLayoutEffect(() => {
+            requestAnimationFrame(() => {
+                let e = G.current;
+                et(a || (null == e ? void 0 : e.contains(null == e ? void 0 : e.ownerDocument.activeElement)) === !0);
+            });
+        }, [a]);
+        let en = Q.length > 0,
+            er = ee && !U && !W && !A && !z && en,
+            { stickersNavigator: ei } = F({
+                editorRef: r,
+                hasStickerResults: en,
+                shouldRenderSuggestions: er,
+                focusedSuggestionType: h,
+                setFocusedSuggestionType: v,
+                setHasDismissed: N,
+                setFocusedStickerListItem: k,
+                setTextInputValue: j
             }),
-            innerRef: V,
-            style: { minWidth: k },
-            onClick: () => {
-                var e;
-                return null === (e = n.current) || void 0 === e ? void 0 : e.focus();
-            },
-            children: [
-                (0, a.jsxs)(a.Fragment, {
-                    children: [
-                        (0, a.jsx)(u.bG, {
-                            navigator: ea,
-                            children: (0, a.jsx)(u.SJ, {
-                                children: (e) => {
-                                    let { ref: t, tabIndex: n, ...r } = e;
-                                    return (0, a.jsx)('div', {
-                                        className: w.stickerResults,
-                                        ref: (e) => {
-                                            t.current = e;
-                                        },
-                                        onMouseLeave: () => {
-                                            null == y && Z(null);
-                                        },
-                                        tabIndex: eu ? -1 : n,
-                                        ...r,
-                                        children: ec.map((e, t) => {
-                                            let { sticker: n, sendability: r } = e;
-                                            return (0, a.jsx)(
-                                                B,
-                                                {
-                                                    isFocused: G === ''.concat(t),
-                                                    isHidden: eu,
-                                                    sendability: r,
-                                                    listIndex: t,
-                                                    onMouseOver: () => {
-                                                        ea.setFocus(''.concat(t)), Z(''.concat(t));
-                                                    },
-                                                    onSelectSticker: es,
-                                                    sticker: n
-                                                },
-                                                n.id
-                                            );
-                                        })
-                                    });
-                                }
-                            })
+            ea = (e, n) => {
+                if (er) {
+                    if (
+                        (R.default.track(x.rMx.AUTO_SUGGEST_EXPRESSION_SELECTED, {
+                            sticker_id: e.id,
+                            suggestion_trigger: H
                         }),
-                        (0, a.jsxs)('div', {
-                            className: w.bottomInformationTextContainer,
-                            children: [
-                                (0, a.jsx)('div', { className: w.textDivider }),
-                                (0, a.jsxs)('div', {
-                                    className: w.bottomInformationLayout,
-                                    children: [
-                                        (0, a.jsx)(p.Text, {
-                                            className: w.descriptionText,
-                                            style: { maxWidth: k },
-                                            variant: 'text-sm/normal',
-                                            children:
-                                                null != G
-                                                    ? x.intl.format(x.t['5gglIi'], { stickerName: null === (t = X[+G]) || void 0 === t ? void 0 : t.sticker.name })
-                                                    : x.intl.format(x.t['8DjNnJ'], {
-                                                          upHook: (e, t) =>
-                                                              (0, a.jsx)(
-                                                                  p.KeyCombo,
-                                                                  {
-                                                                      shortcut: 'up',
-                                                                      className: w.keybind
-                                                                  },
-                                                                  t
-                                                              )
-                                                      })
-                                        }),
-                                        (0, a.jsx)(p.Clickable, {
-                                            onClick: () => {
-                                                C.default.track(L.rMx.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
-                                                    enabled: !1,
-                                                    location: { section: L.jXE.EXPRESSION_PICKER }
-                                                }),
-                                                    (0, D.AW)(!1);
-                                            },
-                                            children: (0, a.jsx)(p.Tooltip, {
-                                                text: x.intl.string(x.t.XNMs5u),
-                                                children: (e) =>
-                                                    (0, a.jsx)(p.XSmallIcon, {
-                                                        size: 'md',
-                                                        color: 'currentColor',
-                                                        ...e,
-                                                        className: w.closeIcon
-                                                    })
-                                            })
-                                        })
-                                    ]
-                                })
-                            ]
-                        })
-                    ]
+                        n === T.eb.SENDABLE)
+                    )
+                        N(!0), l(e, y.V0.EXPRESSION_SUGGESTIONS), $.cancel(), j('');
+                    else if ((0, S.jl)(e)) {
+                        let n = b.Z.getStickerPack(e.pack_id);
+                        null != n &&
+                            (0, C.Z)({
+                                stickerPack: n,
+                                analyticsLocations: X
+                            });
+                    }
+                    _.emit('sticker-suggestions-hidden');
+                }
+            },
+            es = o.useRef([]),
+            eo = o.useRef(!1);
+        o.useEffect(() => {
+            er && (es.current = Q), er !== eo.current && (_.emit(er ? 'sticker-suggestions-shown' : 'sticker-suggestions-hidden'), er && ((0, D.Tk)(V), Y(V))), (eo.current = er);
+        }, [_, er, Q, V]);
+        let el = !er,
+            eu = er ? Q : es.current;
+        return (0, s.jsx)(g.Gt, {
+            value: X,
+            children: (0, s.jsxs)(p.Clickable, {
+                tabIndex: el ? -1 : 0,
+                'aria-hidden': el,
+                className: u()(P.container, {
+                    [P.hidden]: el,
+                    [P.submitButtonOffset]: f,
+                    [P.stickerIconOffset]: d
                 }),
-                (0, a.jsx)('div', { className: w.containerBackground })
-            ]
-        })
-    });
-});
+                innerRef: G,
+                style: { minWidth: B },
+                onClick: () => {
+                    var e;
+                    return null === (e = r.current) || void 0 === e ? void 0 : e.focus();
+                },
+                children: [
+                    (0, s.jsxs)(s.Fragment, {
+                        children: [
+                            (0, s.jsx)(c.bG, {
+                                navigator: ei,
+                                children: (0, s.jsx)(c.SJ, {
+                                    children: (e) => {
+                                        let { ref: n, tabIndex: r, ...i } = e;
+                                        return (0, s.jsx)('div', {
+                                            className: P.stickerResults,
+                                            ref: (e) => {
+                                                n.current = e;
+                                            },
+                                            onMouseLeave: () => {
+                                                null == h && k(null);
+                                            },
+                                            tabIndex: el ? -1 : r,
+                                            ...i,
+                                            children: eu.map((e, n) => {
+                                                let { sticker: r, sendability: i } = e;
+                                                return (0, s.jsx)(
+                                                    Z,
+                                                    {
+                                                        isFocused: M === ''.concat(n),
+                                                        isHidden: el,
+                                                        sendability: i,
+                                                        listIndex: n,
+                                                        onMouseOver: () => {
+                                                            ei.setFocus(''.concat(n)), k(''.concat(n));
+                                                        },
+                                                        onSelectSticker: ea,
+                                                        sticker: r
+                                                    },
+                                                    r.id
+                                                );
+                                            })
+                                        });
+                                    }
+                                })
+                            }),
+                            (0, s.jsxs)('div', {
+                                className: P.bottomInformationTextContainer,
+                                children: [
+                                    (0, s.jsx)('div', { className: P.textDivider }),
+                                    (0, s.jsxs)('div', {
+                                        className: P.bottomInformationLayout,
+                                        children: [
+                                            (0, s.jsx)(p.Text, {
+                                                className: P.descriptionText,
+                                                style: { maxWidth: B },
+                                                variant: 'text-sm/normal',
+                                                children:
+                                                    null != M
+                                                        ? w.intl.format(w.t['5gglIi'], { stickerName: null === (n = Q[+M]) || void 0 === n ? void 0 : n.sticker.name })
+                                                        : w.intl.format(w.t['8DjNnJ'], {
+                                                              upHook: (e, n) =>
+                                                                  (0, s.jsx)(
+                                                                      p.KeyCombo,
+                                                                      {
+                                                                          shortcut: 'up',
+                                                                          className: P.keybind
+                                                                      },
+                                                                      n
+                                                                  )
+                                                          })
+                                            }),
+                                            (0, s.jsx)(p.Clickable, {
+                                                onClick: () => {
+                                                    R.default.track(x.rMx.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
+                                                        enabled: !1,
+                                                        location: { section: x.jXE.EXPRESSION_PICKER }
+                                                    }),
+                                                        (0, L.AW)(!1);
+                                                },
+                                                children: (0, s.jsx)(p.Tooltip, {
+                                                    text: w.intl.string(w.t.XNMs5u),
+                                                    children: (e) =>
+                                                        (0, s.jsx)(p.XSmallIcon, {
+                                                            size: 'md',
+                                                            color: 'currentColor',
+                                                            ...e,
+                                                            className: P.closeIcon
+                                                        })
+                                                })
+                                            })
+                                        ]
+                                    })
+                                ]
+                            })
+                        ]
+                    }),
+                    (0, s.jsx)('div', { className: P.containerBackground })
+                ]
+            })
+        });
+    }));

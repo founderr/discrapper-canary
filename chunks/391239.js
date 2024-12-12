@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function n(e) {
     return {
         name: 'Caché Object Script',
         case_insensitive: !0,
@@ -74,4 +74,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = n;

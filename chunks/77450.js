@@ -1,23 +1,26 @@
-n.d(t, {
+function i(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+r.d(n, {
     h: function () {
-        return r;
+        return a;
     }
 });
-class r {
+class a {
     getCPUCoreCount() {
         return this.cpuCoreCount;
     }
     constructor() {
-        var e, t, n;
-        (e = this),
-            (n = void 0),
-            (t = 'cpuCoreCount') in e
-                ? Object.defineProperty(e, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (e[t] = n);
+        i(this, 'cpuCoreCount', void 0);
     }
 }

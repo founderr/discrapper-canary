@@ -1,48 +1,52 @@
-n.d(t, {
+r.d(n, {
     u: function () {
-        return u;
+        return d;
     }
 });
-var r = n(964742),
-    i = n(40284),
-    a = n(144459);
-function s(e, t) {
-    var n = Object.keys(e);
+var i = r(964742),
+    a = r(40284),
+    s = r(144459);
+function o(e, n) {
+    var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+        var i = Object.getOwnPropertySymbols(e);
+        n &&
+            (i = i.filter(function (n) {
+                return Object.getOwnPropertyDescriptor(e, n).enumerable;
             })),
-            n.push.apply(n, r);
+            r.push.apply(r, i);
     }
-    return n;
+    return r;
 }
-function o(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {};
-        t % 2
-            ? s(Object(n), !0).forEach(function (t) {
-                  (function (e, t, n) {
-                      t in e
-                          ? Object.defineProperty(e, t, {
-                                value: n,
-                                enumerable: !0,
-                                configurable: !0,
-                                writable: !0
-                            })
-                          : (e[t] = n);
-                  })(e, t, n[t]);
+function l(e) {
+    for (var n = 1; n < arguments.length; n++) {
+        var r = null != arguments[n] ? arguments[n] : {};
+        n % 2
+            ? o(Object(r), !0).forEach(function (n) {
+                  u(e, n, r[n]);
               })
             : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : s(Object(n)).forEach(function (t) {
-                    Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
+              : o(Object(r)).forEach(function (n) {
+                    Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(r, n));
                 });
     }
     return e;
 }
-var l = {
+function u(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+var c = {
     itemType: null,
     item: null,
     sourceId: null,
@@ -51,44 +55,44 @@ var l = {
     didDrop: !1,
     isSourcePublic: null
 };
-function u() {
-    var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l,
-        t = arguments.length > 1 ? arguments[1] : void 0,
-        n = t.payload;
-    switch (t.type) {
-        case r.qu:
-            return o(
-                o({}, e),
+function d() {
+    var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c,
+        n = arguments.length > 1 ? arguments[1] : void 0,
+        r = n.payload;
+    switch (n.type) {
+        case i.qu:
+            return l(
+                l({}, e),
                 {},
                 {
-                    itemType: n.itemType,
-                    item: n.item,
-                    sourceId: n.sourceId,
-                    isSourcePublic: n.isSourcePublic,
+                    itemType: r.itemType,
+                    item: r.item,
+                    sourceId: r.sourceId,
+                    isSourcePublic: r.isSourcePublic,
                     dropResult: null,
                     didDrop: !1
                 }
             );
-        case r.js:
-            return o(o({}, e), {}, { isSourcePublic: !0 });
-        case r.$T:
-            return o(o({}, e), {}, { targetIds: n.targetIds });
-        case i.IS:
-            if (-1 === e.targetIds.indexOf(n.targetId)) return e;
-            return o(o({}, e), {}, { targetIds: (0, a.zu)(e.targetIds, n.targetId) });
-        case r.rp:
-            return o(
-                o({}, e),
+        case i.js:
+            return l(l({}, e), {}, { isSourcePublic: !0 });
+        case i.$T:
+            return l(l({}, e), {}, { targetIds: r.targetIds });
+        case a.IS:
+            if (-1 === e.targetIds.indexOf(r.targetId)) return e;
+            return l(l({}, e), {}, { targetIds: (0, s.zu)(e.targetIds, r.targetId) });
+        case i.rp:
+            return l(
+                l({}, e),
                 {},
                 {
-                    dropResult: n.dropResult,
+                    dropResult: r.dropResult,
                     didDrop: !0,
                     targetIds: []
                 }
             );
-        case r.Bs:
-            return o(
-                o({}, e),
+        case i.Bs:
+            return l(
+                l({}, e),
                 {},
                 {
                     itemType: null,

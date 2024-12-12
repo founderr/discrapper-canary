@@ -1,5 +1,6 @@
-e.exports = function (e) {
-    let t = e.regex;
+function n(e) {
+    let n = e.regex,
+        r = /[_A-Za-z][_0-9A-Za-z]*/;
     return {
         name: 'GraphQL',
         aliases: ['gql'],
@@ -37,10 +38,11 @@ e.exports = function (e) {
             },
             {
                 scope: 'symbol',
-                begin: t.concat(/[_A-Za-z][_0-9A-Za-z]*/, t.lookahead(/\s*:/)),
+                begin: n.concat(r, n.lookahead(/\s*:/)),
                 relevance: 0
             }
         ],
         illegal: [/[;<']/, /BEGIN/]
     };
-};
+}
+e.exports = n;

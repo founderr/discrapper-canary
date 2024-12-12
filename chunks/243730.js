@@ -1,66 +1,76 @@
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140);
-let u = {},
+var i,
+    a = r(442837),
+    s = r(570140);
+function o(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let l = 120000,
+    u = {},
     c = {};
-class d extends (s = o.ZP.Store) {
+function d(e) {
+    let { guildId: n, roleMemberCount: r } = e;
+    (u[n] = r), (c[n] = Date.now());
+}
+function f(e) {
+    let { guildId: n, roleId: r, count: i } = e,
+        a = u[n];
+    if (null == a) return !1;
+    a[r] = i;
+}
+function _(e) {
+    let { guildId: n, roleId: r, added: i } = e,
+        a = u[n];
+    if (null == a || null == a[r]) return !1;
+    let s = Object.keys(i).length;
+    a[r] += s;
+}
+function h(e) {
+    let { guildId: n, roleId: r } = e,
+        i = u[n];
+    if (null == i || null == i[r]) return !1;
+    i[r] = i[r] + 1;
+}
+function p(e) {
+    let { guildId: n, roleId: r } = e,
+        i = u[n];
+    if (null == i || null == i[r]) return !1;
+    i[r] = Math.max(i[r] - 1, 0);
+}
+function m(e) {
+    let { guildId: n, role: r } = e;
+    null == u[n] && (u[n] = {}), (u[n][r.id] = 0);
+}
+function g(e) {
+    let { guild: n } = e;
+    delete u[n.id], delete c[n.id];
+}
+class E extends (i = a.ZP.Store) {
     getRoleMemberCount(e) {
         return null != e ? u[e] : null;
     }
     shouldFetch(e) {
         if (null == e) return !1;
-        let t = c[e];
-        return null == t || Date.now() - t > 120000;
+        let n = c[e];
+        return null == n || Date.now() - n > l;
     }
 }
-(a = 'GuildRoleMemberCountStore'),
-    (i = 'displayName') in (r = d)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.Z = new d(l.Z, {
-        GUILD_ROLE_MEMBER_COUNT_FETCH_SUCCESS: function (e) {
-            let { guildId: t, roleMemberCount: n } = e;
-            (u[t] = n), (c[t] = Date.now());
-        },
-        GUILD_ROLE_MEMBER_COUNT_UPDATE: function (e) {
-            let { guildId: t, roleId: n, count: r } = e,
-                i = u[t];
-            if (null == i) return !1;
-            i[n] = r;
-        },
-        GUILD_ROLE_MEMBER_BULK_ADD: function (e) {
-            let { guildId: t, roleId: n, added: r } = e,
-                i = u[t];
-            if (null == i || null == i[n]) return !1;
-            let a = Object.keys(r).length;
-            i[n] += a;
-        },
-        GUILD_ROLE_MEMBER_ADD: function (e) {
-            let { guildId: t, roleId: n } = e,
-                r = u[t];
-            if (null == r || null == r[n]) return !1;
-            r[n] = r[n] + 1;
-        },
-        GUILD_ROLE_MEMBER_REMOVE: function (e) {
-            let { guildId: t, roleId: n } = e,
-                r = u[t];
-            if (null == r || null == r[n]) return !1;
-            r[n] = Math.max(r[n] - 1, 0);
-        },
-        GUILD_ROLE_CREATE: function (e) {
-            let { guildId: t, role: n } = e;
-            null == u[t] && (u[t] = {}), (u[t][n.id] = 0);
-        },
-        GUILD_DELETE: function (e) {
-            let { guild: t } = e;
-            delete u[t.id], delete c[t.id];
-        }
+o(E, 'displayName', 'GuildRoleMemberCountStore'),
+    (n.Z = new E(s.Z, {
+        GUILD_ROLE_MEMBER_COUNT_FETCH_SUCCESS: d,
+        GUILD_ROLE_MEMBER_COUNT_UPDATE: f,
+        GUILD_ROLE_MEMBER_BULK_ADD: _,
+        GUILD_ROLE_MEMBER_ADD: h,
+        GUILD_ROLE_MEMBER_REMOVE: p,
+        GUILD_ROLE_CREATE: m,
+        GUILD_DELETE: g
     }));

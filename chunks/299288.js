@@ -1,45 +1,45 @@
-e.exports = function (e) {
-    let t = e.regex,
-        n = /[dualxmsipngr]{0,12}/,
-        r = {
+function n(e) {
+    let n = e.regex,
+        r = /[dualxmsipngr]{0,12}/,
+        i = {
             $pattern: /[\w.]+/,
             keyword: 'abs accept alarm and atan2 bind binmode bless break caller chdir chmod chomp chop chown chr chroot close closedir connect continue cos crypt dbmclose dbmopen defined delete die do dump each else elsif endgrent endhostent endnetent endprotoent endpwent endservent eof eval exec exists exit exp fcntl fileno flock for foreach fork format formline getc getgrent getgrgid getgrnam gethostbyaddr gethostbyname gethostent getlogin getnetbyaddr getnetbyname getnetent getpeername getpgrp getpriority getprotobyname getprotobynumber getprotoent getpwent getpwnam getpwuid getservbyname getservbyport getservent getsockname getsockopt given glob gmtime goto grep gt hex if index int ioctl join keys kill last lc lcfirst length link listen local localtime log lstat lt ma map mkdir msgctl msgget msgrcv msgsnd my ne next no not oct open opendir or ord our pack package pipe pop pos print printf prototype push q|0 qq quotemeta qw qx rand read readdir readline readlink readpipe recv redo ref rename require reset return reverse rewinddir rindex rmdir say scalar seek seekdir select semctl semget semop send setgrent sethostent setnetent setpgrp setpriority setprotoent setpwent setservent setsockopt shift shmctl shmget shmread shmwrite shutdown sin sleep socket socketpair sort splice split sprintf sqrt srand stat state study sub substr symlink syscall sysopen sysread sysseek system syswrite tell telldir tie tied time times tr truncate uc ucfirst umask undef unless unlink unpack unshift untie until use utime values vec wait waitpid wantarray warn when while write x|0 xor y|0'
         },
-        i = {
+        a = {
             className: 'subst',
             begin: '[$@]\\{',
             end: '\\}',
-            keywords: r
+            keywords: i
         },
-        a = {
+        s = {
             begin: /->\{/,
             end: /\}/
         },
-        s = {
+        o = {
             variants: [
                 { begin: /\$\d/ },
-                { begin: t.concat(/[$%@](\^\w\b|#\w+(::\w+)*|\{\w+\}|\w+(::\w*)*)/, '(?![A-Za-z])(?![@$%])') },
+                { begin: n.concat(/[$%@](\^\w\b|#\w+(::\w+)*|\{\w+\}|\w+(::\w*)*)/, '(?![A-Za-z])(?![@$%])') },
                 {
                     begin: /[$%@][^\s\w{]/,
                     relevance: 0
                 }
             ]
         },
-        o = [e.BACKSLASH_ESCAPE, i, s],
-        l = [/!/, /\//, /\|/, /\?/, /'/, /"/, /#/],
-        u = (e, r, i = '\\1') => {
-            let a = '\\1' === i ? i : t.concat(i, r);
-            return t.concat(t.concat('(?:', e, ')'), r, /(?:\\.|[^\\\/])*?/, a, /(?:\\.|[^\\\/])*?/, i, n);
+        l = [e.BACKSLASH_ESCAPE, a, o],
+        u = [/!/, /\//, /\|/, /\?/, /'/, /"/, /#/],
+        c = (e, i, a = '\\1') => {
+            let s = '\\1' === a ? a : n.concat(a, i);
+            return n.concat(n.concat('(?:', e, ')'), i, /(?:\\.|[^\\\/])*?/, s, /(?:\\.|[^\\\/])*?/, a, r);
         },
-        c = (e, r, i) => t.concat(t.concat('(?:', e, ')'), r, /(?:\\.|[^\\\/])*?/, i, n),
-        d = [
-            s,
+        d = (e, i, a) => n.concat(n.concat('(?:', e, ')'), i, /(?:\\.|[^\\\/])*?/, a, r),
+        f = [
+            o,
             e.HASH_COMMENT_MODE,
             e.COMMENT(/^=\w/, /=cut/, { endsWithParent: !0 }),
-            a,
+            s,
             {
                 className: 'string',
-                contains: o,
+                contains: l,
                 variants: [
                     {
                         begin: 'q[qwxr]?\\s*\\(',
@@ -108,7 +108,7 @@ e.exports = function (e) {
                     e.HASH_COMMENT_MODE,
                     {
                         className: 'regexp',
-                        variants: [{ begin: u('s|tr|y', t.either(...l, { capture: !0 })) }, { begin: u('s|tr|y', '\\(', '\\)') }, { begin: u('s|tr|y', '\\[', '\\]') }, { begin: u('s|tr|y', '\\{', '\\}') }],
+                        variants: [{ begin: c('s|tr|y', n.either(...u, { capture: !0 })) }, { begin: c('s|tr|y', '\\(', '\\)') }, { begin: c('s|tr|y', '\\[', '\\]') }, { begin: c('s|tr|y', '\\{', '\\}') }],
                         relevance: 2
                     },
                     {
@@ -118,11 +118,11 @@ e.exports = function (e) {
                                 begin: /(m|qr)\/\//,
                                 relevance: 0
                             },
-                            { begin: c('(?:m|qr)?', /\//, /\//) },
-                            { begin: c('m|qr', t.either(...l, { capture: !0 }), /\1/) },
-                            { begin: c('m|qr', /\(/, /\)/) },
-                            { begin: c('m|qr', /\[/, /\]/) },
-                            { begin: c('m|qr', /\{/, /\}/) }
+                            { begin: d('(?:m|qr)?', /\//, /\//) },
+                            { begin: d('m|qr', n.either(...u, { capture: !0 }), /\1/) },
+                            { begin: d('m|qr', /\(/, /\)/) },
+                            { begin: d('m|qr', /\[/, /\]/) },
+                            { begin: d('m|qr', /\{/, /\}/) }
                         ]
                     }
                 ]
@@ -153,13 +153,14 @@ e.exports = function (e) {
             }
         ];
     return (
-        (i.contains = d),
-        (a.contains = d),
+        (a.contains = f),
+        (s.contains = f),
         {
             name: 'Perl',
             aliases: ['pl', 'pm'],
-            keywords: r,
-            contains: d
+            keywords: i,
+            contains: f
         }
     );
-};
+}
+e.exports = n;

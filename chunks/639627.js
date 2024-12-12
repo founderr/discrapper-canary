@@ -1,43 +1,44 @@
-n.d(t, {
+r.d(n, {
     T: function () {
-        return o;
+        return l;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(952265),
-    s = n(813197);
-let o = i.forwardRef(function (e, t) {
-    let o = i.useRef(null);
+var i = r(200651),
+    a = r(192379),
+    s = r(952265),
+    o = r(813197);
+let l = a.forwardRef(function (e, n) {
+    let l = a.useRef(null);
+    function u(n, a) {
+        (0, s.ZD)(async () => {
+            let { default: s } = await Promise.all([r.e('70687'), r.e('48017'), r.e('40998')]).then(r.bind(r, 850085));
+            return (r) =>
+                (0, i.jsx)(s, {
+                    imgURI: n,
+                    file: a,
+                    onCrop: e.onChange,
+                    ...r
+                });
+        });
+    }
     return (
-        i.useImperativeHandle(
-            t,
+        a.useImperativeHandle(
+            n,
             () => ({
                 focus: () => null,
                 activate: () => {
                     var e;
-                    return null === (e = o.current) || void 0 === e || e.activateUploadDialogue(), !1;
+                    return null === (e = l.current) || void 0 === e || e.activateUploadDialogue(), !1;
                 }
             }),
             []
         ),
-        (0, r.jsx)('div', {
+        (0, i.jsx)('div', {
             style: { position: 'relative' },
-            children: (0, r.jsx)(s.ZP, {
+            children: (0, i.jsx)(o.ZP, {
                 ...e,
-                ref: o,
-                onChange: function (t, i) {
-                    (0, a.ZD)(async () => {
-                        let { default: a } = await Promise.all([n.e('70687'), n.e('48017'), n.e('40998')]).then(n.bind(n, 850085));
-                        return (n) =>
-                            (0, r.jsx)(a, {
-                                imgURI: t,
-                                file: i,
-                                onCrop: e.onChange,
-                                ...n
-                            });
-                    });
-                }
+                ref: l,
+                onChange: u
             })
         })
     );

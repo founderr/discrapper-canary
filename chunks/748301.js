@@ -1,15 +1,16 @@
-n.r(t),
-    n.d(t, {
+r.r(n),
+    r.d(n, {
         default: function () {
-            return s;
+            return l;
         }
     });
-var r = n(923868),
-    i = n(424421),
-    a = n(951516);
-function s(e, t, n) {
-    (0, a.Z)(2, arguments);
-    var s = (0, r.default)(e, n),
-        o = (0, r.default)(t, n);
-    return Math.round((s.getTime() - (0, i.Z)(s) - (o.getTime() - (0, i.Z)(o))) / 604800000);
+var i = r(923868),
+    a = r(424421),
+    s = r(951516),
+    o = 604800000;
+function l(e, n, r) {
+    (0, s.Z)(2, arguments);
+    var l = (0, i.default)(e, r),
+        u = (0, i.default)(n, r);
+    return Math.round((l.getTime() - (0, a.Z)(l) - (u.getTime() - (0, a.Z)(u))) / o);
 }

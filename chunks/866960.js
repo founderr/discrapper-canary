@@ -1,40 +1,42 @@
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140),
-    u = n(931619),
-    c = n(981631);
-let d = c.IWh.UNKNOWN,
-    f = c.IyS.UNKNOWN,
-    _ = null;
-function p(e) {
-    var t;
-    (d = null != e.type ? e.type : c.IWh.UNKNOWN), (f = null !== (t = e.effectiveSpeed) && void 0 !== t ? t : c.IyS.UNKNOWN), (_ = e.serviceProvider), m.emitChange();
+var i,
+    a = r(442837),
+    s = r(570140),
+    o = r(931619),
+    l = r(981631);
+function u(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
 }
-class h extends (s = o.ZP.Store) {
+let c = l.IWh.UNKNOWN,
+    d = l.IyS.UNKNOWN,
+    f = null;
+function _(e) {
+    var n;
+    (c = null != e.type ? e.type : l.IWh.UNKNOWN), (d = null !== (n = e.effectiveSpeed) && void 0 !== n ? n : l.IyS.UNKNOWN), (f = e.serviceProvider), p.emitChange();
+}
+class h extends (i = a.ZP.Store) {
     initialize() {
-        u.Z.getNetworkInformation().then(p), u.Z.addChangeCallback(p);
+        o.Z.getNetworkInformation().then(_), o.Z.addChangeCallback(_);
     }
     getType() {
-        return d;
+        return c;
     }
     getEffectiveConnectionSpeed() {
-        return f;
+        return d;
     }
     getServiceProvider() {
-        return _;
+        return f;
     }
 }
-(a = 'NetworkStore'),
-    (i = 'displayName') in (r = h)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a);
-let m = new h(l.Z, {});
-t.Z = m;
+u(h, 'displayName', 'NetworkStore');
+let p = new h(s.Z, {});
+n.Z = p;

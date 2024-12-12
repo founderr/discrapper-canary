@@ -1,246 +1,252 @@
-n.d(t, {
+r.d(n, {
     C$: function () {
-        return E;
-    },
-    Eo: function () {
-        return T;
-    },
-    Fe: function () {
-        return r;
-    },
-    Fz: function () {
-        return i;
-    },
-    IB: function () {
         return b;
     },
+    Eo: function () {
+        return A;
+    },
+    Fe: function () {
+        return i;
+    },
+    Fz: function () {
+        return a;
+    },
+    IB: function () {
+        return N;
+    },
     Ve: function () {
-        return v;
+        return y;
     },
     bq: function () {
-        return m;
+        return I;
     },
     iF: function () {
-        return g;
+        return T;
     },
     jy: function () {
-        return I;
+        return S;
     }
-}),
-    n(47120),
-    n(653041);
-var r,
-    i,
+});
+var i,
     a,
-    s,
-    o = n(544891),
-    l = n(570140),
-    u = n(904245),
-    c = n(598077),
-    d = n(944486),
-    f = n(960048),
-    _ = n(981631);
-function p(e, t, n) {
+    s = r(47120);
+var o = r(653041);
+var l = r(544891),
+    u = r(570140),
+    c = r(904245),
+    d = r(598077),
+    f = r(944486),
+    _ = r(960048),
+    h = r(981631);
+function p(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-((a = r || (r = {}))[(a.REDEEMED = 1)] = 'REDEEMED'), (a[(a.PENDING = 2)] = 'PENDING'), (a[(a.CONVERTED = 3)] = 'CONVERTED'), ((s = i || (i = {}))[(s.SUCCESS = 1)] = 'SUCCESS'), (s[(s.FAIL = 2)] = 'FAIL');
-let h = new (class e {
-        set(e, t) {
-            this.cache.set(e, t);
-        }
-        get(e) {
-            return this._checkExpiration(), this.cache.get(e);
-        }
-        has(e) {
-            return this._checkExpiration(), this.cache.has(e);
-        }
-        _checkExpiration() {
-            this.expiration < Date.now() && this.cache.clear();
-        }
-        constructor() {
-            p(this, 'cache', void 0), p(this, 'expiration', void 0), (this.cache = new Map()), (this.expiration = Date.now() + 600000);
-        }
-    })(),
-    m = () => (
-        l.Z.dispatch({ type: 'BILLING_GET_REFERRAL_INCENTIVE_STATUS_START' }),
-        o.tn
+let m = 10,
+    g = 600000;
+!(function (e) {
+    (e[(e.REDEEMED = 1)] = 'REDEEMED'), (e[(e.PENDING = 2)] = 'PENDING'), (e[(e.CONVERTED = 3)] = 'CONVERTED');
+})(i || (i = {})),
+    !(function (e) {
+        (e[(e.SUCCESS = 1)] = 'SUCCESS'), (e[(e.FAIL = 2)] = 'FAIL');
+    })(a || (a = {}));
+class E {
+    set(e, n) {
+        this.cache.set(e, n);
+    }
+    get(e) {
+        return this._checkExpiration(), this.cache.get(e);
+    }
+    has(e) {
+        return this._checkExpiration(), this.cache.has(e);
+    }
+    _checkExpiration() {
+        this.expiration < Date.now() && this.cache.clear();
+    }
+    constructor() {
+        p(this, 'cache', void 0), p(this, 'expiration', void 0), (this.cache = new Map()), (this.expiration = Date.now() + g);
+    }
+}
+let v = new E(),
+    I = () => (
+        u.Z.dispatch({ type: 'BILLING_GET_REFERRAL_INCENTIVE_STATUS_START' }),
+        l.tn
             .get({
-                url: _.ANM.GET_REFERRAL_INCENTIVE_ELIGIBILITY,
+                url: h.ANM.GET_REFERRAL_INCENTIVE_ELIGIBILITY,
                 oldFormErrors: !0,
                 rejectWithError: !1
             })
             .then(
                 (e) => {
-                    l.Z.dispatch({
+                    u.Z.dispatch({
                         type: 'BILLING_GET_REFERRAL_INCENTIVE_STATUS_SUCCESS',
                         isUserEligibleForIncentive: null != e.body ? e.body.is_eligible_for_incentive : null
                     });
                 },
                 () => {
-                    l.Z.dispatch({ type: 'BILLING_GET_REFERRAL_INCENTIVE_STATUS_FAIL' });
+                    u.Z.dispatch({ type: 'BILLING_GET_REFERRAL_INCENTIVE_STATUS_FAIL' });
                 }
             )
     );
-async function g(e, t, n) {
-    let r = JSON.stringify({
+async function T(e, n, r) {
+    let i = JSON.stringify({
         index: e,
-        searchQuery: t
+        searchQuery: n
     });
-    if (h.has(r)) return h.get(r);
-    let { users: i, next_index: a } = (
-            await o.tn.post({
-                url: _.ANM.GET_REFERRAL_ELIGIBLE_USERS,
+    if (v.has(i)) return v.get(i);
+    let { users: a, next_index: s } = (
+            await l.tn.post({
+                url: h.ANM.GET_REFERRAL_ELIGIBLE_USERS,
                 body: {
                     index: e,
-                    limit: null != n ? n : 10,
-                    search_query: t
+                    limit: null != r ? r : m,
+                    search_query: n
                 },
                 oldFormErrors: !0,
                 rejectWithError: !1
             })
         ).body,
-        s = {
-            users: i.map((e) => new c.Z(e)),
-            nextIndex: a
+        o = {
+            users: a.map((e) => new d.Z(e)),
+            nextIndex: s
         };
-    return h.set(r, s), s;
+    return v.set(i, o), o;
 }
-let E = () => (
-        l.Z.dispatch({ type: 'BILLING_REFERRALS_REMAINING_FETCH_START' }),
-        o.tn
+let b = () => (
+        u.Z.dispatch({ type: 'BILLING_REFERRALS_REMAINING_FETCH_START' }),
+        l.tn
             .get({
-                url: _.ANM.GET_REFERRALS_REMAINING,
+                url: h.ANM.GET_REFERRALS_REMAINING,
                 oldFormErrors: !0,
                 rejectWithError: !1
             })
             .then(
                 (e) => {
-                    var t, n, r;
-                    let i = new Map();
+                    var n, r, i;
+                    let a = new Map();
                     if (null != e.body && null != e.body.recipient_status)
-                        for (let t in e.body.recipient_status) {
-                            let n = e.body.recipient_status[t];
-                            i.set(t, n);
+                        for (let n in e.body.recipient_status) {
+                            let r = e.body.recipient_status[n];
+                            a.set(n, r);
                         }
-                    l.Z.dispatch({
+                    u.Z.dispatch({
                         type: 'BILLING_REFERRALS_REMAINING_FETCH_SUCCESS',
                         referrals_remaining: null != e.body && null != e.body.referrals_remaining ? e.body.referrals_remaining : 0,
                         sent_user_ids: null != e.body && null != e.body.sent_user_ids ? e.body.sent_user_ids : [],
-                        refresh_at: null !== (r = null === (t = e.body) || void 0 === t ? void 0 : t.refresh_at) && void 0 !== r ? r : null,
-                        recipient_status: i,
+                        refresh_at: null !== (i = null === (n = e.body) || void 0 === n ? void 0 : n.refresh_at) && void 0 !== i ? i : null,
+                        recipient_status: a,
                         has_eligible_friends: e.body.has_eligible_friends,
                         isUserEligibleForIncentive: e.body.is_eligible_for_incentive,
                         isUserQualifiedForIncentive: e.body.is_qualified_for_incentive,
-                        userReferralIncentiveState: null === (n = e.body) || void 0 === n ? void 0 : n.referral_incentive_status
+                        userReferralIncentiveState: null === (r = e.body) || void 0 === r ? void 0 : r.referral_incentive_status
                     });
                 },
                 () => {
-                    l.Z.dispatch({ type: 'BILLING_REFERRALS_REMAINING_FETCH_FAIL' });
+                    u.Z.dispatch({ type: 'BILLING_REFERRALS_REMAINING_FETCH_FAIL' });
                 }
             )
     ),
-    v = (e) => (
-        l.Z.dispatch({
+    y = (e) => (
+        u.Z.dispatch({
             type: 'BILLING_CREATE_REFERRAL_PREVIEW_START',
             recipientId: e
         }),
-        o.tn
+        l.tn
             .post({
-                url: _.ANM.CREATE_REFERRAL_PREVIEW(e),
+                url: h.ANM.CREATE_REFERRAL_PREVIEW(e),
                 oldFormErrors: !0,
                 rejectWithError: !1
             })
             .then(
-                (t) => {
-                    l.Z.dispatch({
+                (n) => {
+                    u.Z.dispatch({
                         type: 'BILLING_CREATE_REFERRAL_PREVIEW_SUCCESS',
                         recipientId: e,
-                        is_eligible: null != t.body && t.body.is_eligible
+                        is_eligible: null != n.body && n.body.is_eligible
                     });
                 },
                 () => {
-                    l.Z.dispatch({
+                    u.Z.dispatch({
                         type: 'BILLING_CREATE_REFERRAL_PREVIEW_FAIL',
                         recipientId: e
                     });
                 }
             )
     );
-async function I(e) {
-    let t = [],
-        n = new Map();
-    for (let i of e)
+async function S(e) {
+    let n = [],
+        r = new Map();
+    for (let a of e)
         try {
-            var r;
-            let e = await o.tn.post({
-                    url: _.ANM.CREATE_REFERRAL(i),
+            var i;
+            let e = await l.tn.post({
+                    url: h.ANM.CREATE_REFERRAL(a),
                     oldFormErrors: !0,
                     rejectWithError: !0
                 }),
-                a = null !== (r = e.body) && void 0 !== r ? r : null;
-            null != a && t.push(a), n.set(i, 1);
+                s = null !== (i = e.body) && void 0 !== i ? i : null;
+            null != s && n.push(s), r.set(a, 1);
         } catch (e) {
-            f.Z.captureException(e), n.set(i, 2);
+            _.Z.captureException(e), r.set(a, 2);
         }
     return (
-        l.Z.dispatch({
+        u.Z.dispatch({
             type: 'CREATE_REFERRALS_SUCCESS',
-            userTrialOffers: t
+            userTrialOffers: n
         }),
-        n
+        r
     );
 }
-async function T(e) {
+async function A(e) {
     try {
-        var t;
-        let n = await o.tn.post({
-                url: _.ANM.CREATE_REFERRAL(e),
+        var n;
+        let r = await l.tn.post({
+                url: h.ANM.CREATE_REFERRAL(e),
                 oldFormErrors: !0,
                 rejectWithError: !1
             }),
-            r = null !== (t = n.body) && void 0 !== t ? t : null;
+            i = null !== (n = r.body) && void 0 !== n ? n : null;
         return (
-            l.Z.dispatch({
+            u.Z.dispatch({
                 type: 'BILLING_CREATE_REFERRAL_SUCCESS',
-                userTrialOffer: r
+                userTrialOffer: i
             }),
-            { userTrialOffer: r }
+            { userTrialOffer: i }
         );
     } catch (e) {
-        if ((l.Z.dispatch({ type: 'BILLING_CREATE_REFERRAL_FAIL' }), e.body.code === _.evJ.INVALID_MESSAGE_SEND_USER)) {
-            let t = d.Z.getCurrentlySelectedChannelId();
-            null != t && u.Z.sendClydeError(t, e.body.code);
+        if ((u.Z.dispatch({ type: 'BILLING_CREATE_REFERRAL_FAIL' }), e.body.code === h.evJ.INVALID_MESSAGE_SEND_USER)) {
+            let n = f.Z.getCurrentlySelectedChannelId();
+            null != n && c.Z.sendClydeError(n, e.body.code);
         }
     }
 }
-async function b(e) {
+async function N(e) {
     try {
-        var t;
-        let n = await o.tn.get({
-                url: _.ANM.REFERRAL_OFFER_ID_RESOLVE(e),
+        var n;
+        let r = await l.tn.get({
+                url: h.ANM.REFERRAL_OFFER_ID_RESOLVE(e),
                 oldFormErrors: !0,
                 rejectWithError: !1
             }),
-            r = null !== (t = n.body) && void 0 !== t ? t : null;
+            i = null !== (n = r.body) && void 0 !== n ? n : null;
         return (
-            l.Z.dispatch({
+            u.Z.dispatch({
                 type: 'BILLING_REFERRAL_RESOLVE_SUCCESS',
-                userTrialOffer: r
+                userTrialOffer: i
             }),
-            { userTrialOffer: r }
+            { userTrialOffer: i }
         );
-    } catch (t) {
-        l.Z.dispatch({
+    } catch (n) {
+        u.Z.dispatch({
             type: 'BILLING_REFERRAL_RESOLVE_FAIL',
             userTrialOfferId: e
         });

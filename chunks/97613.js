@@ -1,6 +1,7 @@
-var r = n(263604),
-    i = 0;
-e.exports = function (e) {
-    var t = ++i;
-    return r(e) + t;
-};
+var i = r(263604),
+    a = 0;
+function s(e) {
+    var n = ++a;
+    return i(e) + n;
+}
+e.exports = s;

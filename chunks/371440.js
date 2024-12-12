@@ -1,10 +1,10 @@
-e.exports = function (e) {
-    let t = ['bool', 'byte', 'i16', 'i32', 'i64', 'double', 'string', 'binary'];
+function n(e) {
+    let n = ['bool', 'byte', 'i16', 'i32', 'i64', 'double', 'string', 'binary'];
     return {
         name: 'Thrift',
         keywords: {
             keyword: ['namespace', 'const', 'typedef', 'struct', 'enum', 'service', 'exception', 'void', 'oneway', 'set', 'list', 'map', 'required', 'optional'],
-            type: t,
+            type: n,
             literal: 'true false'
         },
         contains: [
@@ -29,11 +29,12 @@ e.exports = function (e) {
             {
                 begin: '\\b(set|list|map)\\s*<',
                 keywords: {
-                    type: [...t, 'set', 'list', 'map']
+                    type: [...n, 'set', 'list', 'map']
                 },
                 end: '>',
                 contains: ['self']
             }
         ]
     };
-};
+}
+e.exports = n;

@@ -1,5 +1,5 @@
-e.exports = function (e) {
-    let t = {
+function n(e) {
+    let n = {
             className: 'string',
             variants: [
                 e.inherit(e.QUOTE_STRING_MODE, { begin: '((u8?|U)|L)?"' }),
@@ -15,12 +15,12 @@ e.exports = function (e) {
                 }
             ]
         },
-        n = {
+        r = {
             className: 'number',
             variants: [{ begin: '\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)' }, { begin: e.C_NUMBER_RE }],
             relevance: 0
         },
-        r = {
+        i = {
             className: 'meta',
             begin: '#',
             end: '$',
@@ -35,7 +35,7 @@ e.exports = function (e) {
                     end: '$',
                     keywords: { keyword: 'include' },
                     contains: [
-                        e.inherit(t, { className: 'string' }),
+                        e.inherit(n, { className: 'string' }),
                         {
                             className: 'string',
                             begin: '<',
@@ -44,14 +44,26 @@ e.exports = function (e) {
                         }
                     ]
                 },
-                t,
+                n,
                 e.C_LINE_COMMENT_MODE,
                 e.C_BLOCK_COMMENT_MODE
             ]
         },
-        i = {
+        a = {
             className: 'variable',
             begin: /&[a-z\d_]*\b/
+        },
+        s = {
+            className: 'params',
+            relevance: 0,
+            begin: '<',
+            end: '>',
+            contains: [r, a]
+        },
+        o = {
+            scope: 'punctuation',
+            relevance: 0,
+            match: /\};|[;{}]/
         };
     return {
         name: 'Device Tree',
@@ -61,7 +73,7 @@ e.exports = function (e) {
                 begin: /^\/(?=\s*\{)/,
                 relevance: 10
             },
-            i,
+            a,
             {
                 className: 'keyword',
                 begin: '/[a-z][a-z\\d-]*/'
@@ -88,27 +100,18 @@ e.exports = function (e) {
                 relevance: 0,
                 scope: 'attr'
             },
-            {
-                className: 'params',
-                relevance: 0,
-                begin: '<',
-                end: '>',
-                contains: [n, i]
-            },
+            s,
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            n,
-            t,
             r,
-            {
-                scope: 'punctuation',
-                relevance: 0,
-                match: /\};|[;{}]/
-            },
+            n,
+            i,
+            o,
             {
                 begin: e.IDENT_RE + '::',
                 keywords: ''
             }
         ]
     };
-};
+}
+e.exports = n;

@@ -1,2 +1,3 @@
-n.r(t);
-t.default = 'https://cdn.discordapp.com/assets/content/cb7e3ec0658c4e8cf86f2829b12203af68cfc9ab95b98579957427134d00c6e0.jpg';
+r.r(n);
+let i = 'https://cdn.discordapp.com/assets/content/cb7e3ec0658c4e8cf86f2829b12203af68cfc9ab95b98579957427134d00c6e0.jpg';
+n.default = i;

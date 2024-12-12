@@ -1,23 +1,24 @@
-var r = (function () {
-        function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-                var r = t[n];
-                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
-            }
+var i = (function () {
+    function e(e, n) {
+        for (var r = 0; r < n.length; r++) {
+            var i = n[r];
+            (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
         }
-        return function (t, n, r) {
-            return n && e(t.prototype, n), r && e(t, r), t;
-        };
-    })(),
-    i = n(780643),
-    a = (function () {
+    }
+    return function (n, r, i) {
+        return r && e(n.prototype, r), i && e(n, i), n;
+    };
+})();
+function a(e, n) {
+    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+}
+var s = r(780643),
+    o = (function () {
         function e() {
-            !(function (e, t) {
-                if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-            })(this, e);
+            a(this, e);
         }
         return (
-            r(e, null, [
+            i(e, null, [
                 {
                     key: 'step0',
                     value: function (e) {
@@ -39,7 +40,7 @@ var r = (function () {
                 {
                     key: 'ease',
                     value: function (e) {
-                        return s(e);
+                        return l(e);
                     }
                 },
                 {
@@ -57,8 +58,8 @@ var r = (function () {
                 {
                     key: 'poly',
                     value: function (e) {
-                        return function (t) {
-                            return Math.pow(t, e);
+                        return function (n) {
+                            return Math.pow(n, e);
                         };
                     }
                 },
@@ -84,9 +85,9 @@ var r = (function () {
                     key: 'elastic',
                     value: function () {
                         var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-                            t = e * Math.PI;
+                            n = e * Math.PI;
                         return function (e) {
-                            return 1 - Math.pow(Math.cos((e * Math.PI) / 2), 3) * Math.cos(e * t);
+                            return 1 - Math.pow(Math.cos((e * Math.PI) / 2), 3) * Math.cos(e * n);
                         };
                     }
                 },
@@ -95,8 +96,8 @@ var r = (function () {
                     value: function (e) {
                         return (
                             void 0 === e && (e = 1.70158),
-                            function (t) {
-                                return t * t * ((e + 1) * t - e);
+                            function (n) {
+                                return n * n * ((e + 1) * n - e);
                             }
                         );
                     }
@@ -109,8 +110,8 @@ var r = (function () {
                 },
                 {
                     key: 'bezier',
-                    value: function (e, t, n, r) {
-                        return i(e, t, n, r);
+                    value: function (e, n, r, i) {
+                        return s(e, n, r, i);
                     }
                 },
                 {
@@ -122,16 +123,16 @@ var r = (function () {
                 {
                     key: 'out',
                     value: function (e) {
-                        return function (t) {
-                            return 1 - e(1 - t);
+                        return function (n) {
+                            return 1 - e(1 - n);
                         };
                     }
                 },
                 {
                     key: 'inOut',
                     value: function (e) {
-                        return function (t) {
-                            return t < 0.5 ? e(2 * t) / 2 : 1 - e((1 - t) * 2) / 2;
+                        return function (n) {
+                            return n < 0.5 ? e(2 * n) / 2 : 1 - e((1 - n) * 2) / 2;
                         };
                     }
                 }
@@ -139,5 +140,5 @@ var r = (function () {
             e
         );
     })(),
-    s = a.bezier(0.42, 0, 1, 1);
-e.exports = a;
+    l = o.bezier(0.42, 0, 1, 1);
+e.exports = o;

@@ -1,40 +1,44 @@
-n(411104);
-var r = n(710845),
-    i = n(358085),
-    a = n(579806);
-let s = new r.Z('ProgressBarManager');
-t.Z = new (class e {
-    setProgress(e, t) {
-        if (!(0, i.isDesktop)()) throw Error('cannot set progress from non-native');
+var i = r(411104);
+var a = r(710845),
+    s = r(358085),
+    o = r(579806);
+function l(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let u = new a.Z('ProgressBarManager');
+class c {
+    setProgress(e, n) {
+        if (!(0, s.isDesktop)()) throw Error('cannot set progress from non-native');
         if (null != this.taskID && this.taskID !== e) {
-            s.warn(''.concat(this.taskID, ' is already running. cannot set ').concat(e));
+            u.warn(''.concat(this.taskID, ' is already running. cannot set ').concat(e));
             return;
         }
-        (this.taskID = e), a.Z.window.setProgressBar(t);
+        (this.taskID = e), o.Z.window.setProgressBar(n);
     }
     clearProgress(e) {
-        if (!(0, i.isDesktop)()) throw Error('cannot clear progress from non-native');
+        if (!(0, s.isDesktop)()) throw Error('cannot clear progress from non-native');
         if (null == this.taskID) {
-            s.warn('cannot clear progress. No current progress running.');
+            u.warn('cannot clear progress. No current progress running.');
             return;
         }
         if (this.taskID !== e) {
-            s.warn('cannot clear progress of '.concat(e, ' when ').concat(this.taskID, ' is running'));
+            u.warn('cannot clear progress of '.concat(e, ' when ').concat(this.taskID, ' is running'));
             return;
         }
-        (this.taskID = null), a.Z.window.setProgressBar(-1);
+        (this.taskID = null), o.Z.window.setProgressBar(-1);
     }
     constructor() {
-        var e, t, n;
-        (e = this),
-            (n = void 0),
-            (t = 'taskID') in e
-                ? Object.defineProperty(e, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (e[t] = n);
+        l(this, 'taskID', void 0);
     }
-})();
+}
+n.Z = new c();

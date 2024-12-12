@@ -1,154 +1,161 @@
-n.d(t, {
+r.d(n, {
     EO: function () {
-        return v;
+        return A;
     },
     Fc: function () {
-        return E;
+        return S;
     },
     Ft: function () {
-        return b;
+        return O;
     },
     W5: function () {
-        return T;
+        return C;
     },
     _T: function () {
-        return p;
+        return v;
     },
     oY: function () {
-        return _;
+        return E;
     },
     u5: function () {
-        return m;
+        return b;
     }
-}),
-    n(411104);
-var r = n(442837),
-    i = n(246946),
-    a = n(594174),
-    s = n(981631),
-    o = n(388032);
-let l = (e) => ''.concat(e[0], '...'),
-    u = (e) => '@'.concat(e),
-    c = {
+});
+var i = r(411104);
+var a = r(442837),
+    s = r(246946),
+    o = r(594174),
+    l = r(981631),
+    u = r(388032);
+let c = 86400000,
+    d = '???',
+    f = (e) => ''.concat(e[0], '...'),
+    _ = (e) => '@'.concat(e),
+    h = (e) => 4 === e.length && e.endsWith('...'),
+    p = {
         mode: 'full',
         decoration: 'never',
         identifiable: 'auto',
         forcePomelo: !1
     };
-function d(e) {
+function m(e) {
     return !!(null != e && e.length > 0);
 }
-function f(e) {
-    if (d(e.global_name)) return e.global_name;
-    if (d(e.globalName)) return e.globalName;
-    if (d(e.username)) return e.username;
-    else return '???';
+function g(e) {
+    if (m(e.global_name)) return e.global_name;
+    if (m(e.globalName)) return e.globalName;
+    if (m(e.username)) return e.username;
+    else return d;
 }
-function _(e) {
-    var t;
+function E(e) {
+    var n;
     if (null == e) return;
-    let n = i.Z.hidePersonalInformation,
-        r = f(e);
-    return n && r.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) && '0' === e.discriminator && (r = l(r)), r;
+    let r = s.Z.hidePersonalInformation,
+        i = g(e);
+    return r && i.toLocaleLowerCase() === (null === (n = e.username) || void 0 === n ? void 0 : n.toLocaleLowerCase()) && '0' === e.discriminator && (i = f(i)), i;
 }
-function p(e) {
-    var t;
-    let n = (0, r.e7)([i.Z], () => i.Z.hidePersonalInformation);
+function v(e) {
+    var n;
+    let r = (0, a.e7)([s.Z], () => s.Z.hidePersonalInformation);
     if (null == e) return;
-    let a = f(e);
-    return n && a.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) && '0' === e.discriminator && (a = l(a)), a;
+    let i = g(e);
+    return r && i.toLocaleLowerCase() === (null === (n = e.username) || void 0 === n ? void 0 : n.toLocaleLowerCase()) && '0' === e.discriminator && (i = f(i)), i;
 }
-function h(e) {
+function I(e) {
     if (null != e) {
-        if (d(e.globalName)) return e.globalName;
-        else if (d(e.global_name)) return e.global_name;
+        if (m(e.globalName)) return e.globalName;
+        else if (m(e.global_name)) return e.global_name;
         else return;
     }
 }
-function m(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+function T(e) {
+    var n;
+    let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    if (null == e) return d;
+    let i = I(e),
+        a = r ? C(e) : null !== (n = e.username) && void 0 !== n ? n : d;
+    return i === a ? i : null != i ? ''.concat(i, ' (').concat(a, ')') : a;
+}
+function b(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     switch (e) {
-        case s.Skl.ONLINE:
-            return t ? o.intl.string(o.t['9hghLC']) : o.intl.string(o.t.WbGtnJ);
-        case s.Skl.OFFLINE:
-            return o.intl.string(o.t.Vv0abG);
-        case s.Skl.IDLE:
-            return o.intl.string(o.t.qWbtVV);
-        case s.Skl.DND:
-            return o.intl.string(o.t.jaNpQE);
-        case s.Skl.INVISIBLE:
-            return o.intl.string(o.t.bg24HB);
-        case s.Skl.STREAMING:
-            return o.intl.string(o.t.XKYej4);
-        case s.Skl.UNKNOWN:
+        case l.Skl.ONLINE:
+            return n ? u.intl.string(u.t['9hghLC']) : u.intl.string(u.t.WbGtnJ);
+        case l.Skl.OFFLINE:
+            return u.intl.string(u.t.Vv0abG);
+        case l.Skl.IDLE:
+            return u.intl.string(u.t.qWbtVV);
+        case l.Skl.DND:
+            return u.intl.string(u.t.jaNpQE);
+        case l.Skl.INVISIBLE:
+            return u.intl.string(u.t.bg24HB);
+        case l.Skl.STREAMING:
+            return u.intl.string(u.t.XKYej4);
+        case l.Skl.UNKNOWN:
         default:
             return null;
     }
 }
-function g(e, t) {
-    let { maxDaysOld: n, minDaysOld: r = 0 } = t;
+function y(e, n) {
+    let { maxDaysOld: r, minDaysOld: i = 0 } = n;
     if (null == e) return !1;
-    let i = Date.now() - e.createdAt.getTime();
-    return ((null == n || !!(i <= 86400000 * n)) && !!(i >= 86400000 * r)) || !1;
+    let a = Date.now() - e.createdAt.getTime(),
+        s = null == r || a <= c * r,
+        o = a >= c * i;
+    return (!!s && !!o) || !1;
 }
-function E(e) {
-    return !g(e, {
+function S(e) {
+    return !y(e, {
         minDaysOld: 0,
         maxDaysOld: 30
     });
 }
-function v(e) {
-    return g(e, {
+function A(e) {
+    return y(e, {
         minDaysOld: 0,
         maxDaysOld: 7
     });
 }
-function I(e, t, n) {
-    if (null == e) return o.intl.string(o.t.sKdZ6e);
-    if (!d(e.username)) return '???';
-    let r = n;
-    if (('always' === t.identifiable ? (r = !1) : 'never' === t.identifiable && (r = !0), '0' !== e.discriminator && e.discriminator !== s.fo$ && !t.forcePomelo)) return 'username' === t.mode ? e.username : r ? e.username : ''.concat(e.username, '#').concat(e.discriminator);
-    let i = r ? l(e.username) : e.username;
-    return 'never' !== t.decoration ? u(i) : i;
+function N(e, n, r) {
+    if (null == e) return u.intl.string(u.t.sKdZ6e);
+    if (!m(e.username)) return d;
+    let i = r;
+    if (('always' === n.identifiable ? (i = !1) : 'never' === n.identifiable && (i = !0), '0' !== e.discriminator && e.discriminator !== l.fo$ && !n.forcePomelo)) return 'username' === n.mode ? e.username : i ? e.username : ''.concat(e.username, '#').concat(e.discriminator);
+    let a = i ? f(e.username) : e.username;
+    return 'never' !== n.decoration ? _(a) : a;
 }
-function T(e, t) {
-    let n = {
-            ...c,
-            ...t
+function C(e, n) {
+    let r = {
+            ...p,
+            ...n
         },
-        r = 'auto' !== n.identifiable || i.Z.hidePersonalInformation;
-    return I(e, n, r);
+        i = 'auto' !== r.identifiable || s.Z.hidePersonalInformation;
+    return N(e, r, i);
 }
-function b(e) {
-    return (0, r.e7)([a.default], () => {
-        if (null != e) return e.isPrivate() && e.isDM() ? a.default.getUser(e.getRecipientId()) : null;
+function R(e, n) {
+    let r = {
+        ...p,
+        ...n
+    };
+    return N(
+        e,
+        r,
+        (0, a.e7)([s.Z], () => s.Z.hidePersonalInformation)
+    );
+}
+function O(e) {
+    return (0, a.e7)([o.default], () => {
+        if (null != e) return e.isPrivate() && e.isDM() ? o.default.getUser(e.getRecipientId()) : null;
     });
 }
-t.ZP = {
-    getName: _,
-    useName: p,
-    isNameConcealed: (e) => 4 === e.length && e.endsWith('...'),
-    getUserTag: T,
-    useUserTag: function (e, t) {
-        let n = {
-            ...c,
-            ...t
-        };
-        return I(
-            e,
-            n,
-            (0, r.e7)([i.Z], () => i.Z.hidePersonalInformation)
-        );
-    },
-    getFormattedName: function (e) {
-        var t;
-        let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (null == e) return '???';
-        let r = h(e),
-            i = n ? T(e) : null !== (t = e.username) && void 0 !== t ? t : '???';
-        return r === i ? r : null != r ? ''.concat(r, ' (').concat(i, ')') : i;
-    },
-    getGlobalName: h,
-    humanizeStatus: m,
-    useDirectMessageRecipient: b
+n.ZP = {
+    getName: E,
+    useName: v,
+    isNameConcealed: h,
+    getUserTag: C,
+    useUserTag: R,
+    getFormattedName: T,
+    getGlobalName: I,
+    humanizeStatus: b,
+    useDirectMessageRecipient: O
 };

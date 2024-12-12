@@ -1,34 +1,35 @@
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(388032),
-    s = n(96865);
-t.Z = (e) => {
-    let { errorMessage: t, onClose: n } = e;
-    return null == t || '' === t
-        ? null
-        : (0, r.jsxs)('div', {
-              className: s.errorContainer,
-              children: [
-                  (0, r.jsx)(i.CircleWarningIcon, {
-                      size: 'custom',
-                      color: 'currentColor',
-                      width: 20,
-                      height: 20,
-                      className: s.errorIcon
-                  }),
-                  (0, r.jsx)(i.Text, {
-                      className: s.errorText,
-                      variant: 'text-sm/normal',
-                      children: t
-                  }),
-                  (0, r.jsx)(i.Clickable, {
-                      onClick: () => {
-                          n();
-                      },
-                      'aria-label': a.intl.string(a.t.WAI6xs),
-                      className: s.closeIcon
-                  })
-              ]
-          });
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(388032),
+    o = r(96865);
+let l = (e) => {
+    let { errorMessage: n, onClose: r } = e;
+    if (null == n || '' === n) return null;
+    let l = () => {
+        r();
+    };
+    return (0, i.jsxs)('div', {
+        className: o.errorContainer,
+        children: [
+            (0, i.jsx)(a.CircleWarningIcon, {
+                size: 'custom',
+                color: 'currentColor',
+                width: 20,
+                height: 20,
+                className: o.errorIcon
+            }),
+            (0, i.jsx)(a.Text, {
+                className: o.errorText,
+                variant: 'text-sm/normal',
+                children: n
+            }),
+            (0, i.jsx)(a.Clickable, {
+                onClick: l,
+                'aria-label': s.intl.string(s.t.WAI6xs),
+                className: o.closeIcon
+            })
+        ]
+    });
 };
+n.Z = l;

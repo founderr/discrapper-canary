@@ -1,19 +1,20 @@
-n.d(t, {
+r.d(n, {
     l: function () {
-        return i;
+        return a;
     }
 });
-var r = n(239700);
-function i(e = {}) {
-    let { isReadOnly: t } = e,
-        [n, i] = (0, r.zk)(e.isSelected, e.defaultSelected || !1, e.onChange);
+var i = r(239700);
+function a(e = {}) {
+    let { isReadOnly: n } = e,
+        [r, a] = (0, i.zk)(e.isSelected, e.defaultSelected || !1, e.onChange);
+    function s() {
+        !n && a(!r);
+    }
     return {
-        isSelected: n,
-        setSelected: function (e) {
-            !t && i(e);
+        isSelected: r,
+        setSelected: function e(e) {
+            !n && a(e);
         },
-        toggle: function () {
-            !t && i(!n);
-        }
+        toggle: s
     };
 }

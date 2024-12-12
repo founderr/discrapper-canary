@@ -1,3 +1,4 @@
-e.exports = function () {
+function n() {
     return [];
-};
+}
+e.exports = n;

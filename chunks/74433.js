@@ -1,75 +1,74 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return d;
+        return h;
     }
-}),
-    n(47120);
-var r = n(833858),
-    i = n(657305),
-    a = n(841784),
-    s = n(420660),
-    o = n(981631),
-    l = n(388032);
-function u(e) {
+});
+var i = r(47120);
+var a = r(833858),
+    s = r(657305),
+    o = r(841784),
+    l = r(420660),
+    u = r(981631),
+    c = r(388032);
+function d(e) {
     return {
-        [o.IIU.STREAMING]: e ? l.t['4CQq9f'] : l.t['0wJXSk'],
-        [o.IIU.LISTENING]: e ? l.t['b+lA5+'] : l.t.Vnuxub,
-        [o.IIU.WATCHING]: e ? l.t.mqdfDQ : l.t.pW3Ip6,
-        [o.IIU.COMPETING]: e ? l.t.oHF7Cg : l.t.QQ2wVF
+        [u.IIU.STREAMING]: e ? c.t['4CQq9f'] : c.t['0wJXSk'],
+        [u.IIU.LISTENING]: e ? c.t['b+lA5+'] : c.t.Vnuxub,
+        [u.IIU.WATCHING]: e ? c.t.mqdfDQ : c.t.pW3Ip6,
+        [u.IIU.COMPETING]: e ? c.t.oHF7Cg : c.t.QQ2wVF
     };
 }
-function c(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        c = arguments.length > 3 ? arguments[3] : void 0;
-    if (null != e && e.type === o.IIU.CUSTOM_STATUS) return null != e.state ? e.state.trim() : null;
-    if (null != t) return null == e || e.type !== o.IIU.PLAYING ? l.intl.string(l.t.eXan7O) : l.intl.format(u(n)[o.IIU.STREAMING], { name: e.name });
-    if (c && null != e && e.type === o.IIU.HANG_STATUS) return (0, r.O8)(e);
-    if (null == e || null == e.name) return null;
-    if ((0, s.Z)(e)) {
-        let t = null != e.details && '' !== e.details ? e.details : e.name;
-        return l.intl.format(u(n)[o.IIU.STREAMING], { name: t });
+function f(e, n, r) {
+    let i = d(r);
+    switch (e) {
+        case u.IIU.LISTENING:
+        case u.IIU.WATCHING:
+        case u.IIU.COMPETING:
+            return c.intl.format(i[e], { name: n });
+        case u.IIU.CUSTOM_STATUS:
+        case u.IIU.HANG_STATUS:
+            return null;
+        case u.IIU.PLAYING:
+        default:
+            return r ? c.intl.formatToPlainString(c.t.Sq9xJy, { game: n }) : c.intl.format(c.t.lFApm5, { game: n });
     }
-    return (0, a.Z)(e)
-        ? (0, i.Z)(e.name)
-        : (function (e, t, n) {
-              let r = u(n);
-              switch (e) {
-                  case o.IIU.LISTENING:
-                  case o.IIU.WATCHING:
-                  case o.IIU.COMPETING:
-                      return l.intl.format(r[e], { name: t });
-                  case o.IIU.CUSTOM_STATUS:
-                  case o.IIU.HANG_STATUS:
-                      return null;
-                  case o.IIU.PLAYING:
-                  default:
-                      return n ? l.intl.formatToPlainString(l.t.Sq9xJy, { game: t }) : l.intl.format(l.t.lFApm5, { game: t });
-              }
-          })(e.type, e.name, n);
 }
-function d(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        r = arguments.length > 3 ? arguments[3] : void 0,
-        i = arguments.length > 4 ? arguments[4] : void 0;
+function _(e, n) {
+    let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        i = arguments.length > 3 ? arguments[3] : void 0;
+    if (null != e && e.type === u.IIU.CUSTOM_STATUS) return null != e.state ? e.state.trim() : null;
+    if (null != n) return null == e || e.type !== u.IIU.PLAYING ? c.intl.string(c.t.eXan7O) : c.intl.format(d(r)[u.IIU.STREAMING], { name: e.name });
+    if (i && null != e && e.type === u.IIU.HANG_STATUS) return (0, a.O8)(e);
+    if (null == e || null == e.name) return null;
+    if ((0, l.Z)(e)) {
+        let n = null != e.details && '' !== e.details ? e.details : e.name;
+        return c.intl.format(d(r)[u.IIU.STREAMING], { name: n });
+    }
+    return (0, o.Z)(e) ? (0, s.Z)(e.name) : f(e.type, e.name, r);
+}
+function h(e, n) {
+    let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        i = arguments.length > 3 ? arguments[3] : void 0,
+        a = arguments.length > 4 ? arguments[4] : void 0;
     if (Array.isArray(e)) {
-        let a = e;
-        null != t && (!i || !1 !== t.discoverable) && (a = [...a, null]);
-        let s = null;
-        for (let e of a) {
-            let i = c(e, t, n, r);
-            if (null != i)
+        let s = e;
+        null != n && (!a || !1 !== n.discoverable) && (s = [...s, null]);
+        let o = null;
+        for (let e of s) {
+            let a = _(e, n, r, i);
+            if (null != a)
                 return {
                     activity: e,
-                    activityText: i
+                    activityText: a
                 };
-            (null == e ? void 0 : e.type) === o.IIU.CUSTOM_STATUS && null != e.emoji && (s = e);
+            (null == e ? void 0 : e.type) === u.IIU.CUSTOM_STATUS && null != e.emoji && (o = e);
         }
-        return (null == s ? void 0 : s.emoji) != null
+        return (null == o ? void 0 : o.emoji) != null
             ? {
-                  activity: s,
+                  activity: o,
                   activityText: null
               }
             : null;
     }
-    return c(e, t, n, r);
+    return _(e, n, r, i);
 }

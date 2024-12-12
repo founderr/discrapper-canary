@@ -1,62 +1,64 @@
-n.d(t, {
+r.d(n, {
     z6: function () {
-        return T;
+        return y;
     }
-}),
-    n(789020),
-    n(653041);
-var r,
-    i,
-    a = n(192379),
-    s = n(512722),
-    o = n.n(s),
-    l = n(683076),
-    u = n(442837),
-    c = n(224706),
-    d = n(812206),
-    f = n(835473),
-    _ = n(669764),
-    p = n(626135),
-    h = n(630388),
-    m = n(539746),
-    g = n(981631);
-((i = r || (r = {})).NoMatch = 'no match'), (i.NSFW = 'nsfw'), (i.NoSummary = 'no summary'), (i.NoReleaseDate = 'no release date'), (i.NoCoverImage = 'no cover image'), (i.Disabled = 'profile disabled');
-let E = function (e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-            r = arguments.length > 3 ? arguments[3] : void 0;
-        p.default.track(g.rMx.GAME_PROFILE_ENTRY_POINT_AVAILABLE, {
+});
+var i,
+    a = r(789020);
+var s = r(653041);
+var o = r(192379),
+    l = r(512722),
+    u = r.n(l),
+    c = r(683076),
+    d = r(442837),
+    f = r(224706),
+    _ = r(812206),
+    h = r(835473),
+    p = r(669764),
+    m = r(626135),
+    g = r(630388),
+    E = r(539746),
+    v = r(981631);
+!(function (e) {
+    (e.NoMatch = 'no match'), (e.NSFW = 'nsfw'), (e.NoSummary = 'no summary'), (e.NoReleaseDate = 'no release date'), (e.NoCoverImage = 'no cover image'), (e.Disabled = 'profile disabled');
+})(i || (i = {}));
+let I = function (e, n) {
+        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
+            i = arguments.length > 3 ? arguments[3] : void 0;
+        m.default.track(v.rMx.GAME_PROFILE_ENTRY_POINT_AVAILABLE, {
             game_profile_available: e,
-            application_id: t,
-            rejection_reason: n,
-            source: r
+            application_id: n,
+            rejection_reason: r,
+            source: i
         });
     },
-    v = (e, t) => {
-        let n = [];
-        return null == e || null == t ? ['no match'] : ((0, h.yE)(t.flags, g.udG.GAME_PROFILE_DISABLED) && n.push('profile disabled'), e.themes.includes(l.i.EROTIC) && n.push('nsfw'), (null == e.summary || 0 === e.summary.length) && n.push('no summary'), (null == e.summary || 0 === e.summary.length) && n.push('no summary'), n);
+    T = (e, n) => {
+        let r = [];
+        return null == e || null == n ? ['no match'] : ((0, g.yE)(n.flags, v.udG.GAME_PROFILE_DISABLED) && r.push('profile disabled'), e.themes.includes(c.i.EROTIC) && r.push('nsfw'), (null == e.summary || 0 === e.summary.length) && r.push('no summary'), (null == e.summary || 0 === e.summary.length) && r.push('no summary'), r);
     },
-    I = (e, t) => 0 === v(e, t).length,
-    T = (e) => {
-        let t = _.Z.getGame(e);
-        return I(t, d.Z.getApplication(e));
+    b = (e, n) => 0 === T(e, n).length,
+    y = (e) => {
+        let n = p.Z.getGame(e);
+        return b(n, _.Z.getApplication(e));
+    },
+    S = (e) => {
+        let { location: n, applicationId: r = '', autoTrackExposure: i = !0, source: a, trackEntryPointImpression: s = !0 } = e,
+            l = o.useRef(!1),
+            c = (0, E.xG)(n, i);
+        o.useEffect(() => {
+            c && null != r && '' !== r && f.Z.getDetectableGamesSupplemental([r]);
+        }, [r, c]);
+        let _ = (0, d.e7)([p.Z], () => p.Z.getGame(r)),
+            m = (0, h.q)(r),
+            g = o.useMemo(() => (null != _ && null != m ? b(_, m) : null), [m, _]);
+        return (
+            o.useEffect(() => {
+                !l.current && c && s && !1 === p.Z.isFetching(r) && null != _ && null != g && (u()(null != a, 'Cannot track a Game Profile Entry Point Impressions without a source.'), I(g, r, T(_), a), (l.current = !0));
+            }, [g, r, c, _, a, s]),
+            {
+                shouldOpenGameProfile: c && !0 === g,
+                applicationId: r
+            }
+        );
     };
-t.ZP = (e) => {
-    let { location: t, applicationId: n = '', autoTrackExposure: r = !0, source: i, trackEntryPointImpression: s = !0 } = e,
-        l = a.useRef(!1),
-        d = (0, m.xG)(t, r);
-    a.useEffect(() => {
-        d && null != n && '' !== n && c.Z.getDetectableGamesSupplemental([n]);
-    }, [n, d]);
-    let p = (0, u.e7)([_.Z], () => _.Z.getGame(n)),
-        h = (0, f.q)(n),
-        g = a.useMemo(() => (null != p && null != h ? I(p, h) : null), [h, p]);
-    return (
-        a.useEffect(() => {
-            !l.current && d && s && !1 === _.Z.isFetching(n) && null != p && null != g && (o()(null != i, 'Cannot track a Game Profile Entry Point Impressions without a source.'), E(g, n, v(p), i), (l.current = !0));
-        }, [g, n, d, p, i, s]),
-        {
-            shouldOpenGameProfile: d && !0 === g,
-            applicationId: n
-        }
-    );
-};
+n.ZP = S;

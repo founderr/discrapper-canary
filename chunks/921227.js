@@ -1,35 +1,32 @@
-var r,
-    i = n(442837),
-    a = n(570140);
-function s(e, t, n) {
+var i,
+    a = r(442837),
+    s = r(570140);
+function o(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let o = {};
-class l extends (r = i.ZP.PersistedStore) {
+let l = {};
+function u(e) {
+    return (l[e.key] = e.value), !0;
+}
+class c extends (i = a.ZP.PersistedStore) {
     initialize(e) {
-        Object.assign(o, e);
+        Object.assign(l, e);
     }
     getState() {
-        return o;
+        return l;
     }
     shouldShowEducation(e) {
-        return !0 !== o[e];
+        return !0 !== l[e];
     }
 }
-s(l, 'displayName', 'ActivityInviteEducationStore'),
-    s(l, 'persistKey', 'ActivityInviteEducationExperimentStore'),
-    (t.Z = new l(a.Z, {
-        ACTIVITY_INVITE_EDUCATION_DISMISS: function (e) {
-            return (o[e.key] = e.value), !0;
-        }
-    }));
+o(c, 'displayName', 'ActivityInviteEducationStore'), o(c, 'persistKey', 'ActivityInviteEducationExperimentStore'), (n.Z = new c(s.Z, { ACTIVITY_INVITE_EDUCATION_DISMISS: u }));

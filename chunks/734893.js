@@ -1,24 +1,24 @@
-n.d(t, {
+r.d(n, {
     HH: function () {
-        return S;
+        return y;
     },
     O9: function () {
-        return h;
+        return p;
     },
     Vu: function () {
         return E;
     },
     W4: function () {
-        return f;
+        return d;
     },
     Wz: function () {
-        return _;
+        return f;
     },
     Z3: function () {
-        return p;
+        return _;
     },
     ZR: function () {
-        return d;
+        return c;
     },
     am: function () {
         return g;
@@ -30,7 +30,7 @@ n.d(t, {
         return I;
     },
     j: function () {
-        return s;
+        return a;
     },
     k3: function () {
         return R;
@@ -42,13 +42,13 @@ n.d(t, {
         return m;
     },
     oi: function () {
-        return a;
+        return i;
     },
     pw: function () {
         return A;
     },
     rk: function () {
-        return y;
+        return S;
     },
     tB: function () {
         return b;
@@ -63,25 +63,24 @@ n.d(t, {
         return v;
     }
 });
-var r,
-    i,
+var i,
     a,
-    s,
-    o = n(592125),
-    l = n(823379),
-    u = n(700785),
-    c = n(981631);
-let d = 7,
-    f = 300,
-    _ = 7,
-    p = 60,
-    h = 5,
+    s = r(592125),
+    o = r(823379),
+    l = r(700785),
+    u = r(981631);
+let c = 7,
+    d = 300,
+    f = 7,
+    _ = 60,
+    h = 3,
+    p = 5,
     m = 1,
     g = 30,
     E = 200,
     v = 7;
 function I(e) {
-    var t;
+    var n;
     return {
         channelId: e.channel_id,
         actionType: e.action_type,
@@ -95,15 +94,15 @@ function I(e) {
                       name: e.emoji.name,
                       animated: e.emoji.animated
                   },
-        icon: null !== (t = e.icon) && void 0 !== t ? t : null
+        icon: null !== (n = e.icon) && void 0 !== n ? n : null
     };
 }
 function T(e) {
-    var t, n;
+    var n, r;
     return {
         channelId: e.channel_id,
         title: e.title,
-        description: null !== (t = e.description) && void 0 !== t ? t : '',
+        description: null !== (n = e.description) && void 0 !== n ? n : '',
         emoji:
             null == e.emoji
                 ? null
@@ -112,78 +111,80 @@ function T(e) {
                       name: e.emoji.name,
                       animated: e.emoji.animated
                   },
-        icon: null !== (n = e.icon) && void 0 !== n ? n : null
+        icon: null !== (r = e.icon) && void 0 !== r ? r : null
     };
 }
 function b(e) {
     if (null == e) return null;
-    let { welcome_message: t, new_member_actions: n, resource_channels: r, enabled: i } = e,
-        a = {
-            authorIds: t.author_ids,
-            message: t.message
+    let { welcome_message: n, new_member_actions: r, resource_channels: i, enabled: a } = e,
+        l = {
+            authorIds: n.author_ids,
+            message: n.message
         },
-        s = n.filter((e) => (0, l.lm)(o.Z.getChannel(e.channel_id))).map(I);
+        u = r.filter((e) => (0, o.lm)(s.Z.getChannel(e.channel_id))).map(I);
     return {
-        welcomeMessage: a,
-        newMemberActions: s,
-        resourceChannels: r.filter((e) => (0, l.lm)(o.Z.getChannel(e.channel_id))).map(T),
-        enabled: i
+        welcomeMessage: l,
+        newMemberActions: u,
+        resourceChannels: i.filter((e) => (0, o.lm)(s.Z.getChannel(e.channel_id))).map(T),
+        enabled: a
     };
 }
-function S(e, t) {
-    var n, r;
-    if (null == t) return null;
-    let { welcomeMessage: i, newMemberActions: a, resourceChannels: s, enabled: u } = t,
-        c = {
-            author_ids: null !== (n = null == i ? void 0 : i.authorIds) && void 0 !== n ? n : [],
-            message: null !== (r = null == i ? void 0 : i.message) && void 0 !== r ? r : ''
+function y(e, n) {
+    var r, i;
+    if (null == n) return null;
+    let { welcomeMessage: a, newMemberActions: l, resourceChannels: u, enabled: c } = n,
+        d = {
+            author_ids: null !== (r = null == a ? void 0 : a.authorIds) && void 0 !== r ? r : [],
+            message: null !== (i = null == a ? void 0 : a.message) && void 0 !== i ? i : ''
         },
-        d = (null != a ? a : [])
-            .filter((e) => (0, l.lm)(o.Z.getChannel(e.channelId)))
+        f = (null != l ? l : [])
+            .filter((e) => (0, o.lm)(s.Z.getChannel(e.channelId)))
             .map((e) => {
-                var t, n, r, i, a, s, o;
+                var n, r, i, a, s, o, l;
                 return {
                     channel_id: e.channelId,
                     action_type: e.actionType,
                     title: e.title,
                     description: e.description,
                     emoji: {
-                        id: null !== (i = null === (t = e.emoji) || void 0 === t ? void 0 : t.id) && void 0 !== i ? i : void 0,
-                        name: null !== (a = null === (n = e.emoji) || void 0 === n ? void 0 : n.name) && void 0 !== a ? a : void 0,
-                        animated: null !== (s = null === (r = e.emoji) || void 0 === r ? void 0 : r.animated) && void 0 !== s ? s : void 0
+                        id: null !== (a = null === (n = e.emoji) || void 0 === n ? void 0 : n.id) && void 0 !== a ? a : void 0,
+                        name: null !== (s = null === (r = e.emoji) || void 0 === r ? void 0 : r.name) && void 0 !== s ? s : void 0,
+                        animated: null !== (o = null === (i = e.emoji) || void 0 === i ? void 0 : i.animated) && void 0 !== o ? o : void 0
                     },
-                    icon: null !== (o = e.icon) && void 0 !== o ? o : void 0
+                    icon: null !== (l = e.icon) && void 0 !== l ? l : void 0
                 };
             });
     return {
         guild_id: e,
-        welcome_message: c,
-        new_member_actions: d,
-        resource_channels: (null != s ? s : [])
-            .filter((e) => (0, l.lm)(o.Z.getChannel(e.channelId)))
+        welcome_message: d,
+        new_member_actions: f,
+        resource_channels: (null != u ? u : [])
+            .filter((e) => (0, o.lm)(s.Z.getChannel(e.channelId)))
             .map((e) => {
-                var t, n, r, i, a, s, o;
+                var n, r, i, a, s, o, l;
                 return {
                     channel_id: e.channelId,
                     title: e.title,
                     description: e.description,
                     emoji: {
-                        id: null !== (i = null === (t = e.emoji) || void 0 === t ? void 0 : t.id) && void 0 !== i ? i : void 0,
-                        name: null !== (a = null === (n = e.emoji) || void 0 === n ? void 0 : n.name) && void 0 !== a ? a : void 0,
-                        animated: null !== (s = null === (r = e.emoji) || void 0 === r ? void 0 : r.animated) && void 0 !== s ? s : void 0
+                        id: null !== (a = null === (n = e.emoji) || void 0 === n ? void 0 : n.id) && void 0 !== a ? a : void 0,
+                        name: null !== (s = null === (r = e.emoji) || void 0 === r ? void 0 : r.name) && void 0 !== s ? s : void 0,
+                        animated: null !== (o = null === (i = e.emoji) || void 0 === i ? void 0 : i.animated) && void 0 !== o ? o : void 0
                     },
-                    icon: null !== (o = e.icon) && void 0 !== o ? o : void 0
+                    icon: null !== (l = e.icon) && void 0 !== l ? l : void 0
                 };
             }),
-        enabled: u
+        enabled: c
     };
 }
-((r = a || (a = {}))[(r.VIEW = 0)] = 'VIEW'), (r[(r.CHAT = 1)] = 'CHAT');
-let y = (e) => {
+!(function (e) {
+    (e[(e.VIEW = 0)] = 'VIEW'), (e[(e.CHAT = 1)] = 'CHAT');
+})(i || (i = {}));
+let S = (e) => {
     if (null == e) return null;
-    let t = {};
-    for (let n in e.channel_actions) t[n] = e.channel_actions[n].completed;
-    return t;
+    let n = {};
+    for (let r in e.channel_actions) n[r] = e.channel_actions[r].completed;
+    return n;
 };
 function A(e) {
     return null == e || ((null == e.message || !(e.message.length > 0)) && (null == e.authorIds || !(e.authorIds.length > 0)) && !0);
@@ -192,21 +193,23 @@ function N(e) {
     return null == e || (!!A(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)) && !0);
 }
 function C(e) {
-    var t, n;
-    return null != e && (!!N(e) || ((null === (t = e.welcomeMessage) || void 0 === t ? void 0 : t.message) != null && !(e.welcomeMessage.message.length < d) && (null === (n = e.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < 3) && !0));
+    var n, r;
+    return null != e && (!!N(e) || ((null === (n = e.welcomeMessage) || void 0 === n ? void 0 : n.message) != null && !(e.welcomeMessage.message.length < c) && (null === (r = e.welcomeMessage) || void 0 === r ? void 0 : r.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < h) && !0));
 }
 function R(e) {
-    return e.type === c.d4z.GUILD_TEXT && !u.Uu(c.Plq.SEND_MESSAGES, e) && u.Uu(c.Plq.VIEW_CHANNEL, e);
+    return e.type === u.d4z.GUILD_TEXT && !l.Uu(u.Plq.SEND_MESSAGES, e) && l.Uu(u.Plq.VIEW_CHANNEL, e);
 }
 function O(e) {
     switch (e.type) {
-        case c.d4z.GUILD_TEXT:
-        case c.d4z.GUILD_ANNOUNCEMENT:
-        case c.d4z.GUILD_FORUM:
-        case c.d4z.GUILD_MEDIA:
-            return u.Uu(c.Plq.VIEW_CHANNEL, e);
+        case u.d4z.GUILD_TEXT:
+        case u.d4z.GUILD_ANNOUNCEMENT:
+        case u.d4z.GUILD_FORUM:
+        case u.d4z.GUILD_MEDIA:
+            return l.Uu(u.Plq.VIEW_CHANNEL, e);
         default:
             return !1;
     }
 }
-((i = s || (s = {}))[(i.DEFAULT = 0)] = 'DEFAULT'), (i[(i.TODO = 1)] = 'TODO'), (i[(i.RESOURCE = 2)] = 'RESOURCE');
+!(function (e) {
+    (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.TODO = 1)] = 'TODO'), (e[(e.RESOURCE = 2)] = 'RESOURCE');
+})(a || (a = {}));

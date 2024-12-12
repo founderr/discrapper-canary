@@ -1,5 +1,7 @@
-n(627494), n(757143);
-let r = /[<>:"/\\|?*\.]/g;
-t.Z = function (e) {
-    return e.replaceAll(r, '').trim().replaceAll(' ', '_');
-};
+var i = r(627494);
+var a = r(757143);
+let s = /[<>:"/\\|?*\.]/g;
+function o(e) {
+    return e.replaceAll(s, '').trim().replaceAll(' ', '_');
+}
+n.Z = o;

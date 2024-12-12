@@ -1,72 +1,78 @@
-let r, i, a;
-var s,
-    o,
-    l,
-    u,
-    c = n(772848),
-    d = n(442837),
-    f = n(433517),
-    _ = n(846519),
-    p = n(570140),
-    h = n(899742),
-    m = n(598077),
-    g = n(12647),
-    E = n(358085),
-    v = n(374023);
-let I = 'BrowserHandoffStore',
-    T = !1,
-    b = new _.V7();
-function S() {
-    null != r && null != i && (window.open(''.concat(r, '&key=').concat(i)), g.Z.focus(null, !0));
+let i, a, s;
+var o,
+    l = r(772848),
+    u = r(442837),
+    c = r(433517),
+    d = r(846519),
+    f = r(570140),
+    _ = r(899742),
+    h = r(598077),
+    p = r(12647),
+    m = r(358085),
+    g = r(374023);
+function E(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let v = 'BrowserHandoffStore',
+    I = !1,
+    T = new d.V7();
+function b() {
+    null != i && null != a && (window.open(''.concat(i, '&key=').concat(a)), p.Z.focus(null, !0));
 }
 function y() {
-    (i = null), b.stop(), (T = !1), f.K.set(I, T);
+    (a = null), T.stop(), (I = !1), c.K.set(v, I);
 }
-function A() {
+function S(e) {
+    (i = ''.concat(location.protocol, '//').concat(location.host, '/handoff?rpc=').concat(e.port)), b();
+}
+function A(e) {
+    if (null != a) return !1;
+    (a = (0, l.Z)()), T.start(e.timeout, () => (0, _.lx)()), b();
+}
+function N(e) {
+    let { handoffKey: n, handoffToken: r, timeout: i } = e;
+    if (null == n || null == r) return !1;
+    (I = !0), T.start(i, () => (0, _.lx)());
+}
+function C(e) {
+    s = new h.Z(e.user);
+}
+function R() {
     y();
 }
-class N extends (u = d.ZP.Store) {
+class O extends (o = u.ZP.Store) {
     initialize() {
-        !1 !== f.K.get(I) && (T = E.isPlatformEmbedded && 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL);
+        !1 !== c.K.get(v) && (I = m.isPlatformEmbedded && 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL);
     }
     isHandoffAvailable() {
-        return !v.s.isDisallowPopupsSet() && T;
+        return !g.s.isDisallowPopupsSet() && I;
     }
     get user() {
-        return a;
+        return s;
     }
     get key() {
-        return i;
+        return a;
     }
 }
-(l = 'BrowserHandoffStore'),
-    (o = 'displayName') in (s = N)
-        ? Object.defineProperty(s, o, {
-              value: l,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (s[o] = l),
-    (t.Z = new N(p.Z, {
-        RPC_SERVER_READY: function (e) {
-            (r = ''.concat(location.protocol, '//').concat(location.host, '/handoff?rpc=').concat(e.port)), S();
-        },
-        BROWSER_HANDOFF_BEGIN: function (e) {
-            if (null != i) return !1;
-            (i = (0, c.Z)()), b.start(e.timeout, () => (0, h.lx)()), S();
-        },
-        BROWSER_HANDOFF_FROM_APP: function (e) {
-            let { handoffKey: t, handoffToken: n, timeout: r } = e;
-            if (null == t || null == n) return !1;
-            (T = !0), b.start(r, () => (0, h.lx)());
-        },
+E(O, 'displayName', 'BrowserHandoffStore'),
+    (n.Z = new O(f.Z, {
+        RPC_SERVER_READY: S,
+        BROWSER_HANDOFF_BEGIN: A,
+        BROWSER_HANDOFF_FROM_APP: N,
         BROWSER_HANDOFF_UNAVAILABLE: y,
-        BROWSER_HANDOFF_SET_USER: function (e) {
-            a = new m.Z(e.user);
-        },
-        LOGIN: A,
-        LOGIN_SUCCESS: A,
-        LOGOUT: A,
-        REGISTER: A
+        BROWSER_HANDOFF_SET_USER: C,
+        LOGIN: R,
+        LOGIN_SUCCESS: R,
+        LOGOUT: R,
+        REGISTER: R
     }));

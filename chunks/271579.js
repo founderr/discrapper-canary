@@ -1,64 +1,67 @@
-n.d(t, {
+r.d(n, {
     WS: function () {
-        return l;
+        return v;
     },
     ZP: function () {
-        return c;
+        return T;
     },
     zS: function () {
-        return u;
+        return I;
     }
-}),
-    n(315314),
-    n(610138),
-    n(216116),
-    n(78328),
-    n(815648),
-    n(47120);
-var r = n(264344),
-    i = n.n(r),
-    a = n(772848),
-    s = n(511266);
-let o = 'https://discordapp.page.link';
-function l() {
-    return (0, a.Z)();
+});
+var i = r(315314);
+var a = r(610138);
+var s = r(216116);
+var o = r(78328);
+var l = r(815648);
+var u = r(47120);
+var c = r(264344),
+    d = r.n(c),
+    f = r(772848),
+    _ = r(511266);
+let h = 'com.discord',
+    p = 985746746,
+    m = 'com.hammerandchisel.discord',
+    g = 'https://discordapp.page.link';
+function E() {
+    var e, n;
+    let r = ['WebView', '(iPhone|iPod|iPad)(?!.*Safari/)'],
+        i = RegExp('('.concat(r.join('|'), ')'), 'ig'),
+        a = (null === d() || void 0 === d() ? void 0 : null === (e = d().ua) || void 0 === e ? void 0 : e.match(i)) != null,
+        s = (null === d() || void 0 === d() ? void 0 : d().name) === 'Safari' && !a;
+    return (null === d() || void 0 === d() ? void 0 : null === (n = d().os) || void 0 === n ? void 0 : n.family) !== 'iOS' || s;
 }
-function u(e) {
-    if (!e.startsWith(o)) return null;
+function v() {
+    return (0, f.Z)();
+}
+function I(e) {
+    if (!e.startsWith(g)) return null;
     try {
-        var t;
-        let n = new URL(e).searchParams,
-            r = n.get('link');
-        if (null == r) return null;
-        let i = decodeURIComponent(r),
-            a = new URL(i).searchParams,
-            s = { utmSource: null !== (t = n.get('utm_source')) && void 0 !== t ? t : void 0 };
-        for (let [e, t] of a.entries()) s[e] = t;
-        return s;
+        var n;
+        let r = new URL(e).searchParams,
+            i = r.get('link');
+        if (null == i) return null;
+        let a = decodeURIComponent(i),
+            s = new URL(a).searchParams,
+            o = { utmSource: null !== (n = r.get('utm_source')) && void 0 !== n ? n : void 0 };
+        for (let [e, n] of s.entries()) o[e] = n;
+        return o;
     } catch {
         return null;
     }
 }
-function c(e, t) {
-    let { utmSource: n, androidFallbackLink: r, iosFallbackLink: a, ...l } = t,
-        u = new URL(e);
-    for (let e in l) {
-        let t = l[e];
-        null != t && u.searchParams.set(e, t);
+function T(e, n) {
+    let { utmSource: r, androidFallbackLink: i, iosFallbackLink: a, ...s } = n,
+        o = new URL(e);
+    for (let e in s) {
+        let n = s[e];
+        null != n && o.searchParams.set(e, n);
     }
-    let c = encodeURIComponent(u.toString()),
-        d = encodeURIComponent((0, s.Z)()),
-        f = !(function () {
-            var e, t;
-            let n = RegExp('('.concat('WebView|(iPhone|iPod|iPad)(?!.*Safari/)', ')'), 'ig'),
-                r = (null === i() || void 0 === i() ? void 0 : null === (e = i().ua) || void 0 === e ? void 0 : e.match(n)) != null,
-                a = (null === i() || void 0 === i() ? void 0 : i().name) === 'Safari' && !r;
-            return (null === i() || void 0 === i() ? void 0 : null === (t = i().os) || void 0 === t ? void 0 : t.family) !== 'iOS' || a;
-        })()
-            ? 0
-            : 1,
-        _ = null != r ? encodeURIComponent(r) : null,
-        p = null != a ? encodeURIComponent(a) : null,
-        h = ''.concat(o, '/?link=').concat(c, '&utm_source=').concat(n, '&apn=').concat('com.discord', '&isi=').concat(985746746, '&ibi=').concat('com.hammerandchisel.discord', '&sd=').concat(d, '&efr=').concat(f);
-    return null != _ && (h += '&afl='.concat(_)), null != p && (h += '&ifl='.concat(p)), h;
+    let l = encodeURIComponent(o.toString()),
+        u = encodeURIComponent((0, _.Z)()),
+        c = E() ? 1 : 0,
+        d = null != i ? encodeURIComponent(i) : null,
+        f = null != a ? encodeURIComponent(a) : null,
+        v = ''.concat(g, '/?link=').concat(l, '&utm_source=').concat(r, '&apn=').concat(h, '&isi=').concat(p, '&ibi=').concat(m, '&sd=').concat(u, '&efr=').concat(c);
+    return null != d && (v += '&afl='.concat(d)), null != f && (v += '&ifl='.concat(f)), v;
 }

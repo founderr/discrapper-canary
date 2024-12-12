@@ -1,53 +1,50 @@
-var r = n(706178);
-(e.exports = g), (g.simpleSieve = h), (g.fermatTest = m);
-var i = n(814033),
-    a = new i(24),
-    s = new (n(687363))(),
-    o = new i(1),
-    l = new i(2),
-    u = new i(5);
-new i(16), new i(8);
-var c = new i(10),
-    d = new i(3);
-new i(7);
-var f = new i(11),
-    _ = new i(4);
-new i(12);
+var i = r(706178);
+(e.exports = v), (v.simpleSieve = g), (v.fermatTest = E);
+var a = r(814033),
+    s = new a(24),
+    o = new (r(687363))(),
+    l = new a(1),
+    u = new a(2),
+    c = new a(5);
+new a(16), new a(8);
+var d = new a(10),
+    f = new a(3);
+new a(7);
+var _ = new a(11),
+    h = new a(4);
+new a(12);
 var p = null;
-function h(e) {
-    for (
-        var t = (function () {
-                if (null !== p) return p;
-                var e = [];
-                e[0] = 2;
-                for (var t = 1, n = 3; n < 1048576; n += 2) {
-                    for (var r = Math.ceil(Math.sqrt(n)), i = 0; i < t && e[i] <= r && n % e[i] != 0; i++);
-                    (t === i || !(e[i] <= r)) && (e[t++] = n);
-                }
-                return (p = e), e;
-            })(),
-            n = 0;
-        n < t.length;
-        n++
-    )
-        if (0 === e.modn(t[n])) {
-            if (0 !== e.cmpn(t[n])) return !1;
+function m() {
+    if (null !== p) return p;
+    var e = 1048576,
+        n = [];
+    n[0] = 2;
+    for (var r = 1, i = 3; i < e; i += 2) {
+        for (var a = Math.ceil(Math.sqrt(i)), s = 0; s < r && n[s] <= a && i % n[s] != 0; s++);
+        (r === s || !(n[s] <= a)) && (n[r++] = i);
+    }
+    return (p = n), n;
+}
+function g(e) {
+    for (var n = m(), r = 0; r < n.length; r++)
+        if (0 === e.modn(n[r])) {
+            if (0 !== e.cmpn(n[r])) return !1;
             break;
         }
     return !0;
 }
-function m(e) {
-    var t = i.mont(e);
-    return 0 === l.toRed(t).redPow(e.subn(1)).fromRed().cmpn(1);
+function E(e) {
+    var n = a.mont(e);
+    return 0 === u.toRed(n).redPow(e.subn(1)).fromRed().cmpn(1);
 }
-function g(e, t) {
-    var n, p;
-    if (e < 16) return 2 === t || 5 === t ? new i([140, 123]) : new i([140, 39]);
-    for (t = new i(t); ; ) {
-        for (n = new i(r(Math.ceil(e / 8))); n.bitLength() > e; ) n.ishrn(1);
-        if ((n.isEven() && n.iadd(o), !n.testn(1) && n.iadd(l), t.cmp(l))) {
-            if (!t.cmp(u)) for (; n.mod(c).cmp(d); ) n.iadd(_);
-        } else for (; n.mod(a).cmp(f); ) n.iadd(_);
-        if (h((p = n.shrn(1))) && h(n) && m(p) && m(n) && s.test(p) && s.test(n)) return n;
+function v(e, n) {
+    var r, p;
+    if (e < 16) return 2 === n || 5 === n ? new a([140, 123]) : new a([140, 39]);
+    for (n = new a(n); ; ) {
+        for (r = new a(i(Math.ceil(e / 8))); r.bitLength() > e; ) r.ishrn(1);
+        if ((r.isEven() && r.iadd(l), !r.testn(1) && r.iadd(u), n.cmp(u))) {
+            if (!n.cmp(c)) for (; r.mod(d).cmp(f); ) r.iadd(h);
+        } else for (; r.mod(s).cmp(_); ) r.iadd(h);
+        if (g((p = r.shrn(1))) && g(r) && E(p) && E(r) && o.test(p) && o.test(r)) return r;
     }
 }

@@ -1,9 +1,10 @@
-e.exports = function (e, t, n, r) {
-    for (var i = (65535 & e) | 0, a = ((e >>> 16) & 65535) | 0, s = 0; 0 !== n; ) {
-        (s = n > 2000 ? 2000 : n), (n -= s);
-        do a = (a + (i = (i + t[r++]) | 0)) | 0;
-        while (--s);
-        (i %= 65521), (a %= 65521);
+function n(e, n, r, i) {
+    for (var a = (65535 & e) | 0, s = ((e >>> 16) & 65535) | 0, o = 0; 0 !== r; ) {
+        (o = r > 2000 ? 2000 : r), (r -= o);
+        do s = (s + (a = (a + n[i++]) | 0)) | 0;
+        while (--o);
+        (a %= 65521), (s %= 65521);
     }
-    return i | (a << 16) | 0;
-};
+    return a | (s << 16) | 0;
+}
+e.exports = n;

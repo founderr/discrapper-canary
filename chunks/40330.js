@@ -1,116 +1,117 @@
-n.d(t, {
+r.d(n, {
     p: function () {
-        return _;
+        return h;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(112456),
-    o = n.n(s),
-    l = n(481060),
-    u = n(403182),
-    c = n(388032),
-    d = n(914356);
-let f = (e) => {
-        let { filename: t } = e,
-            i = (0, u.uV)(t),
-            a = n(148660)('./icon-file-'.concat(i, '.svg'));
-        return (0, r.jsx)('img', {
-            className: d.icon,
-            src: a,
-            alt: c.intl.formatToPlainString(c.t.g6KdFh, { fileType: i }),
-            title: i
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(112456),
+    l = r.n(o),
+    u = r(481060),
+    c = r(403182),
+    d = r(388032),
+    f = r(914356);
+let _ = (e) => {
+        let { filename: n } = e,
+            a = (0, c.uV)(n),
+            s = r(148660)('./icon-file-'.concat(a, '.svg'));
+        return (0, i.jsx)('img', {
+            className: f.icon,
+            src: s,
+            alt: d.intl.formatToPlainString(d.t.g6KdFh, { fileType: a }),
+            title: a
         });
     },
-    _ = (e) => {
-        let { filename: t, size: n, progress: i, onCancelUpload: a, onClick: s, onContextMenu: u } = e,
-            _ = 100 === i,
-            p = !_ && n > 0;
-        return (0, r.jsx)('div', {
-            className: d.fileWrapper,
-            children: (0, r.jsxs)('div', {
-                className: d.file,
+    h = (e) => {
+        let { filename: n, size: r, progress: a, onCancelUpload: s, onClick: o, onContextMenu: c } = e,
+            h = 100 === a,
+            p = !h && r > 0;
+        return (0, i.jsx)('div', {
+            className: f.fileWrapper,
+            children: (0, i.jsxs)('div', {
+                className: f.file,
                 children: [
-                    (0, r.jsx)(f, { filename: t }),
-                    (0, r.jsxs)('div', {
-                        className: d.fileInner,
+                    (0, i.jsx)(_, { filename: n }),
+                    (0, i.jsxs)('div', {
+                        className: f.fileInner,
                         children: [
-                            (0, r.jsxs)('div', {
-                                className: d.filenameWrapper,
+                            (0, i.jsxs)('div', {
+                                className: f.filenameWrapper,
                                 children: [
-                                    (0, r.jsx)(l.Clickable, {
-                                        className: d.filename,
-                                        onClick: s,
-                                        onContextMenu: u,
-                                        children: t
+                                    (0, i.jsx)(u.Clickable, {
+                                        className: f.filename,
+                                        onClick: o,
+                                        onContextMenu: c,
+                                        children: n
                                     }),
                                     p
-                                        ? (0, r.jsx)('div', {
-                                              className: d.size,
-                                              children: '\u2014 '.concat(o().filesize(n))
+                                        ? (0, i.jsx)('div', {
+                                              className: f.size,
+                                              children: '\u2014 '.concat(l().filesize(r))
                                           })
                                         : null
                                 ]
                             }),
-                            (0, r.jsx)('div', {
-                                className: d.progressContainer,
-                                children: _
-                                    ? c.intl.string(c.t.jfKTen)
-                                    : (0, r.jsx)(l.Progress, {
-                                          className: d.progress,
-                                          percent: i
+                            (0, i.jsx)('div', {
+                                className: f.progressContainer,
+                                children: h
+                                    ? d.intl.string(d.t.jfKTen)
+                                    : (0, i.jsx)(u.Progress, {
+                                          className: f.progress,
+                                          percent: a
                                       })
                             })
                         ]
                     }),
-                    _
+                    h
                         ? null
-                        : (0, r.jsx)(l.Clickable, {
-                              onClick: a,
-                              children: (0, r.jsx)(l.XSmallIcon, {
+                        : (0, i.jsx)(u.Clickable, {
+                              onClick: s,
+                              children: (0, i.jsx)(u.XSmallIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: d.cancelButton
+                                  className: f.cancelButton
                               })
                           })
                 ]
             })
         });
-    };
-t.Z = (e) => {
-    let { className: t, url: n, fileName: i, fileSize: s, onClick: u, onContextMenu: c, renderAdjacentContent: _ } = e;
-    return (0, r.jsxs)('div', {
-        className: a()(d.fileWrapper, t),
-        children: [
-            (0, r.jsxs)('div', {
-                className: d.file,
-                children: [
-                    (0, r.jsx)(f, { filename: i }),
-                    (0, r.jsxs)('div', {
-                        className: d.fileInner,
-                        children: [
-                            (0, r.jsx)('div', {
-                                className: d.filenameLinkWrapper,
-                                children: (0, r.jsx)(l.Anchor, {
-                                    className: d.fileNameLink,
-                                    href: n,
-                                    onClick: u,
-                                    onContextMenu: c,
-                                    children: i
+    },
+    p = (e) => {
+        let { className: n, url: r, fileName: a, fileSize: o, onClick: c, onContextMenu: d, renderAdjacentContent: h } = e;
+        return (0, i.jsxs)('div', {
+            className: s()(f.fileWrapper, n),
+            children: [
+                (0, i.jsxs)('div', {
+                    className: f.file,
+                    children: [
+                        (0, i.jsx)(_, { filename: a }),
+                        (0, i.jsxs)('div', {
+                            className: f.fileInner,
+                            children: [
+                                (0, i.jsx)('div', {
+                                    className: f.filenameLinkWrapper,
+                                    children: (0, i.jsx)(u.Anchor, {
+                                        className: f.fileNameLink,
+                                        href: r,
+                                        onClick: c,
+                                        onContextMenu: d,
+                                        children: a
+                                    })
+                                }),
+                                (0, i.jsx)(u.Text, {
+                                    variant: 'text-xs/normal',
+                                    color: 'text-muted',
+                                    children: l().filesize(o)
                                 })
-                            }),
-                            (0, r.jsx)(l.Text, {
-                                variant: 'text-xs/normal',
-                                color: 'text-muted',
-                                children: o().filesize(s)
-                            })
-                        ]
-                    })
-                ]
-            }),
-            null != _ && _()
-        ]
-    });
-};
+                            ]
+                        })
+                    ]
+                }),
+                null != h && h()
+            ]
+        });
+    };
+n.Z = p;

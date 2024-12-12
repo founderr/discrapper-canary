@@ -1,100 +1,107 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return o;
+        return i;
     }
 });
-var r,
-    i,
+var i,
     a,
-    s,
-    o,
-    l,
-    u = n(442837),
-    c = n(570140),
-    d = n(865427);
-((r = o || (o = {}))[(r.NotResolved = 0)] = 'NotResolved'), (r[(r.Resolving = 1)] = 'Resolving'), (r[(r.Resolved = 2)] = 'Resolved'), (r[(r.Invalid = 3)] = 'Invalid');
-let f = 0,
-    _ = null,
-    p = {};
-class h extends (l = u.ZP.Store) {
+    s = r(442837),
+    o = r(570140),
+    l = r(865427);
+function u(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+!(function (e) {
+    (e[(e.NotResolved = 0)] = 'NotResolved'), (e[(e.Resolving = 1)] = 'Resolving'), (e[(e.Resolved = 2)] = 'Resolved'), (e[(e.Invalid = 3)] = 'Invalid');
+})(i || (i = {}));
+let c = 0,
+    d = null,
+    f = {};
+function _() {
+    0 === c &&
+        ((c = 1),
+        (0, l.Ce)().then((e) => {
+            o.Z.dispatch({
+                type: 'CURRENT_BUILD_OVERRIDE_RESOLVED',
+                overrides: e
+            });
+        }));
+}
+function h(e) {
+    let { overrides: n } = e;
+    (c = 2), (d = n);
+}
+function p(e) {
+    if (e in f) return;
+    let n = (0, l.r4)(e);
+    if (null == n) {
+        f = {
+            ...f,
+            [e]: {
+                url: e,
+                state: 3
+            }
+        };
+        return;
+    }
+    f = {
+        ...f,
+        [e]: {
+            url: e,
+            validatedURL: n.url,
+            payload: String(n.payload),
+            state: 1
+        }
+    };
+    (0, l._I)(n.url).then((n) => {
+        o.Z.dispatch({
+            type: 'BUILD_OVERRIDE_RESOLVED',
+            url: e,
+            override: n
+        });
+    });
+}
+function m(e) {
+    let { url: n, override: r } = e,
+        i = null == r ? 3 : 2;
+    f = {
+        ...f,
+        [n]: {
+            ...f[n],
+            state: i,
+            override: r
+        }
+    };
+}
+class g extends (a = s.ZP.Store) {
     getCurrentBuildOverride() {
         return (
-            0 === f &&
-                ((f = 1),
-                (0, d.Ce)().then((e) => {
-                    c.Z.dispatch({
-                        type: 'CURRENT_BUILD_OVERRIDE_RESOLVED',
-                        overrides: e
-                    });
-                })),
+            _(),
             {
-                state: f,
-                overrides: _
+                state: c,
+                overrides: d
             }
         );
     }
     getBuildOverride(e) {
-        return (
-            !(function (e) {
-                if (e in p) return;
-                let t = (0, d.r4)(e);
-                if (null == t) {
-                    p = {
-                        ...p,
-                        [e]: {
-                            url: e,
-                            state: 3
-                        }
-                    };
-                    return;
-                }
-                p = {
-                    ...p,
-                    [e]: {
-                        url: e,
-                        validatedURL: t.url,
-                        payload: String(t.payload),
-                        state: 1
-                    }
-                };
-                (0, d._I)(t.url).then((t) => {
-                    c.Z.dispatch({
-                        type: 'BUILD_OVERRIDE_RESOLVED',
-                        url: e,
-                        override: t
-                    });
-                });
-            })(e),
-            p[e]
-        );
+        return p(e), f[e];
     }
     getBuildOverrides() {
-        return p;
+        return f;
     }
 }
-(s = 'BuildOverrideStore'),
-    (a = 'displayName') in (i = h)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.C = new h(c.Z, {
-        BUILD_OVERRIDE_RESOLVED: function (e) {
-            let { url: t, override: n } = e;
-            p = {
-                ...p,
-                [t]: {
-                    ...p[t],
-                    state: null == n ? 3 : 2,
-                    override: n
-                }
-            };
-        },
-        CURRENT_BUILD_OVERRIDE_RESOLVED: function (e) {
-            let { overrides: t } = e;
-            (f = 2), (_ = t);
-        }
+u(g, 'displayName', 'BuildOverrideStore'),
+    (n.C = new g(o.Z, {
+        BUILD_OVERRIDE_RESOLVED: m,
+        CURRENT_BUILD_OVERRIDE_RESOLVED: h
     }));

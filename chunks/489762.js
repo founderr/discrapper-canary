@@ -1,73 +1,75 @@
-n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(232713),
-    s = n(442837),
-    o = n(477690),
-    l = n(481060),
-    u = n(788911),
-    c = n(2052),
-    d = n(100527),
-    f = n(906732),
-    _ = n(218867),
-    p = n(880949),
-    h = n(806966),
-    m = n(28546),
-    g = n(691251),
-    E = n(98528),
-    v = n(551058),
-    I = n(695346),
-    T = n(430824),
-    b = n(594174),
-    S = n(626135),
-    y = n(624138),
-    A = n(45521),
-    N = n(285651),
-    C = n(268350),
-    R = n(217590),
-    O = n(926491),
-    D = n(373228),
-    L = n(378233),
-    x = n(419922),
-    w = n(1450),
-    P = n(491173),
-    M = n(515005),
-    k = n(652136),
-    U = n(981631),
-    B = n(957825),
-    G = n(388032),
-    Z = n(458381),
-    F = n(239840);
-let V = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
-    j = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_MEDIUM),
-    H = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP),
-    Y = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP_SEARCH_RESULTS),
-    W = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
-    K = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_BOTTOM),
-    z = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
-    q = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKERS_LIST_DIVIDER_HEIGHT),
-    Q = (0, y.Mg)(o.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT),
-    X = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
-    J = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
-    $ = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
-    ee = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
-    et = X + 2 * $ + ee,
-    en = J + 2 * $ + ee,
-    er = [H, W, K, z],
-    ei = [Y, W, K, z],
-    ea = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKERS_LIST_EMPTY_GUILD_UPSELL_HEIGHT),
-    es = ['laugh', 'wave', 'yes', 'dance', 'sad', 'no', 'hi', 'bye', 'cry', 'ok'],
-    eo = (e) => {
-        let { onSuggestionClick: t } = e;
-        return (0, r.jsx)('div', {
-            className: Z.searchSuggestions,
-            children: es.map((e) =>
-                (0, r.jsx)(
-                    l.Clickable,
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(232713),
+    l = r(442837),
+    u = r(477690),
+    c = r(481060),
+    d = r(788911),
+    f = r(2052),
+    _ = r(100527),
+    h = r(906732),
+    p = r(218867),
+    m = r(880949),
+    g = r(806966),
+    E = r(28546),
+    v = r(691251),
+    I = r(98528),
+    T = r(551058),
+    b = r(695346),
+    y = r(430824),
+    S = r(594174),
+    A = r(626135),
+    N = r(624138),
+    C = r(45521),
+    R = r(285651),
+    O = r(268350),
+    D = r(217590),
+    L = r(926491),
+    x = r(373228),
+    w = r(378233),
+    P = r(419922),
+    M = r(1450),
+    k = r(491173),
+    U = r(515005),
+    B = r(652136),
+    G = r(981631),
+    Z = r(957825),
+    F = r(388032),
+    V = r(458381),
+    j = r(239840);
+let H = (0, N.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
+    Y = (0, N.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_MEDIUM),
+    W = (0, N.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP),
+    K = (0, N.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP_SEARCH_RESULTS),
+    z = (0, N.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
+    q = (0, N.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_BOTTOM),
+    Q = (0, N.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
+    X = (0, N.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_DIVIDER_HEIGHT),
+    J = (0, N.Mg)(u.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT),
+    $ = (0, N.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
+    ee = (0, N.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
+    et = (0, N.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
+    en = (0, N.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
+    er = $ + 2 * et + en,
+    ei = ee + 2 * et + en,
+    ea = 20,
+    es = [W, z, q, Q],
+    eo = [K, z, q, Q],
+    el = 12,
+    eu = (0, N.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_EMPTY_GUILD_UPSELL_HEIGHT),
+    ec = ['laugh', 'wave', 'yes', 'dance', 'sad', 'no', 'hi', 'bye', 'cry', 'ok'],
+    ed = (e) => {
+        let { onSuggestionClick: n } = e;
+        return (0, a.jsx)('div', {
+            className: V.searchSuggestions,
+            children: ec.map((e) =>
+                (0, a.jsx)(
+                    c.Clickable,
                     {
-                        className: Z.searchSuggestion,
-                        onClick: () => t(e),
-                        children: (0, r.jsx)(l.Text, {
+                        className: V.searchSuggestion,
+                        onClick: () => n(e),
+                        children: (0, a.jsx)(c.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-normal',
                             children: e
@@ -78,220 +80,220 @@ let V = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             )
         });
     },
-    el = (e) => {
-        let { onSelectSticker: t, channel: n, currentUser: r } = e,
-            a = (0, c.O)(),
-            { analyticsLocations: s } = (0, f.ZP)(),
-            o = (0, m.Iu)((e) => e.searchQuery),
-            l = i.useCallback((e) => {
-                let { visibleRowIndex: t, columnIndex: n, gridSectionIndex: r } = e;
-                h.ZN.setActiveCategoryIndex(r), h.ZN.setInspectedExpressionPosition(n, t, g.u.MOUSE_EVENT), e.type === D.al.STICKER && h.ZN.setSearchPlaceholder(e.sticker.name);
+    ef = (e) => {
+        let { onSelectSticker: n, channel: r, currentUser: i } = e,
+            a = (0, f.O)(),
+            { analyticsLocations: o } = (0, h.ZP)(),
+            l = (0, E.Iu)((e) => e.searchQuery),
+            u = s.useCallback((e) => {
+                let { visibleRowIndex: n, columnIndex: r, gridSectionIndex: i } = e;
+                g.ZN.setActiveCategoryIndex(i), g.ZN.setInspectedExpressionPosition(r, n, v.u.MOUSE_EVENT), e.type === x.al.STICKER && g.ZN.setSearchPlaceholder(e.sticker.name);
             }, []);
         return {
-            handleStickerInspect: l,
-            handleSelect: i.useCallback(
-                (e, i) => {
-                    if (e.type !== D.al.STICKER) return;
-                    let { packId: l, sticker: u } = e;
-                    if (null == u) return;
-                    let c = {
+            handleStickerInspect: u,
+            handleSelect: s.useCallback(
+                (e, s) => {
+                    if (e.type !== x.al.STICKER) return;
+                    let { packId: u, sticker: c } = e;
+                    if (null == c) return;
+                    let d = {
                         ...a.location,
-                        object: '' === o ? U.qAy.STICKER_PICKER_VIEW_ALL : U.qAy.STICKER_SEARCH_VIEW_ALL
+                        object: '' === l ? G.qAy.STICKER_PICKER_VIEW_ALL : G.qAy.STICKER_SEARCH_VIEW_ALL
                     };
-                    if (null != u && !(0, N.kl)(u, r, n)) {
-                        let e = O.Z.getStickerPack(l);
+                    if (null != c && !(0, R.kl)(c, i, r)) {
+                        let e = L.Z.getStickerPack(u);
                         null != e &&
-                            (S.default.track(U.rMx.STICKER_PACK_VIEW_ALL, {
-                                sticker_id: u.id,
-                                sticker_pack_id: l,
-                                location: c,
-                                location_stack: s
+                            (A.default.track(G.rMx.STICKER_PACK_VIEW_ALL, {
+                                sticker_id: c.id,
+                                sticker_pack_id: u,
+                                location: d,
+                                location_stack: o
                             }),
-                            (0, k.Z)({
+                            (0, B.Z)({
                                 stickerPack: e,
-                                analyticsLocations: s
+                                analyticsLocations: o
                             }));
-                        let t = (0, L.J8)(u),
-                            i = (0, N.cO)(u, r, n);
-                        i === N.eb.SENDABLE_WITH_PREMIUM && (0, A.f)(!0), t && N.eb.SENDABLE_WITH_BOOSTED_GUILD;
+                        let n = (0, w.J8)(c),
+                            a = (0, R.cO)(c, i, r);
+                        a === R.eb.SENDABLE_WITH_PREMIUM && (0, C.f)(!0), n && R.eb.SENDABLE_WITH_BOOSTED_GUILD;
                         return;
                     }
-                    if (i) {
-                        (0, L.gM)(u.id)
-                            ? (0, C.hW)(u.id)
-                            : ((0, R.cQ)({
-                                  sticker: u,
+                    if (s) {
+                        (0, w.gM)(c.id)
+                            ? (0, O.hW)(c.id)
+                            : ((0, D.cQ)({
+                                  sticker: c,
                                   location: {
-                                      ...c,
-                                      object: U.qAy.STICKER
+                                      ...d,
+                                      object: G.qAy.STICKER
                                   }
                               }),
-                              (0, C.SA)(u.id));
+                              (0, O.SA)(c.id));
                         return;
                     }
-                    t(e);
+                    n(e);
                 },
-                [a.location, o, r, n, s, t]
+                [a.location, l, i, r, o, n]
             )
         };
     },
-    eu = (e) => {
-        let { collapsedStickersCategories: t, gridWidth: n, onSelectSticker: a, getStickerItemProps: o, getStickerRowProps: u, gutterWidth: d, inspectedStickerPosition: f, isScrolling: _, isUsingKeyboardNavigation: h, stickersGrid: m, stickersCategories: g, filteredStickers: E, ownedStickerPacks: y, channel: A } = e,
-            N = (0, c.O)(),
-            C = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
-            { handleStickerInspect: R, handleSelect: P } = el({
-                onSelectSticker: a,
-                channel: A,
-                currentUser: C
+    e_ = (e) => {
+        let { collapsedStickersCategories: n, gridWidth: r, onSelectSticker: i, getStickerItemProps: o, getStickerRowProps: u, gutterWidth: d, inspectedStickerPosition: _, isScrolling: h, isUsingKeyboardNavigation: p, stickersGrid: g, stickersCategories: E, filteredStickers: v, ownedStickerPacks: I, channel: N } = e,
+            C = (0, f.O)(),
+            R = (0, l.e7)([S.default], () => S.default.getCurrentUser()),
+            { handleStickerInspect: O, handleSelect: D } = ef({
+                onSelectSticker: i,
+                channel: N,
+                currentUser: R
             }),
-            [k, F] = i.useState(!1),
-            H = i.useCallback((e) => {
-                I._O.updateSetting(Array.from(e));
+            [k, B] = s.useState(!1),
+            j = s.useCallback((e) => {
+                b._O.updateSetting(Array.from(e));
             }, []),
-            Y = i.useCallback(
+            W = s.useCallback(
                 (e) => {
-                    let t = m[e];
-                    return null != t
-                        ? (0, r.jsx)(
-                              M.Z,
+                    let n = g[e];
+                    return null != n
+                        ? (0, a.jsx)(
+                              U.Z,
                               {
                                   getStickerItemProps: o,
                                   getStickerRowProps: u,
                                   gutterWidth: d,
-                                  inspectedStickerPosition: f,
-                                  isScrolling: _,
-                                  isUsingKeyboardNavigation: h,
-                                  onInspect: R,
-                                  onSelect: P,
+                                  inspectedStickerPosition: _,
+                                  isScrolling: h,
+                                  isUsingKeyboardNavigation: p,
+                                  onInspect: O,
+                                  onSelect: D,
                                   rowIndex: e,
-                                  stickerClassName: Z.sticker,
-                                  stickerDescriptors: t,
-                                  stickerSize: n > V ? X : J,
-                                  preferAnimation: n <= j,
-                                  ownedStickerPacks: y,
+                                  stickerClassName: V.sticker,
+                                  stickerDescriptors: n,
+                                  stickerSize: r > H ? $ : ee,
+                                  preferAnimation: r <= Y,
+                                  ownedStickerPacks: I,
                                   isDisplayingIndividualStickers: !0,
-                                  channel: A,
-                                  currentUser: C
+                                  channel: N,
+                                  currentUser: R
                               },
                               e
                           )
                         : null;
                 },
-                [m, o, u, d, f, _, h, R, P, n, y, A, C]
+                [g, o, u, d, _, h, p, O, D, r, I, N, R]
             ),
-            W = i.useCallback((e, t) => (0, r.jsx)('div', { children: t }, e), []),
-            K = i.useCallback(
+            K = s.useCallback((e, n) => (0, a.jsx)('div', { children: n }, e), []),
+            z = s.useCallback(
                 function (e) {
-                    let { isStickerPack: n = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                        r = new Set(t),
-                        i = t.has(e);
-                    i ? r.delete(e) : r.add(e),
-                        S.default.track(U.rMx.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
-                            location: null == N ? void 0 : N.location,
-                            tab: B.X1.STICKER,
-                            collapsed: !i,
-                            sticker_pack_id: n ? e : null
+                    let { isStickerPack: r = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                        i = new Set(n),
+                        a = n.has(e);
+                    a ? i.delete(e) : i.add(e),
+                        A.default.track(G.rMx.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
+                            location: null == C ? void 0 : C.location,
+                            tab: Z.X1.STICKER,
+                            collapsed: !a,
+                            sticker_pack_id: r ? e : null
                         }),
-                        H(r);
+                        j(i);
                 },
-                [N, t, H]
+                [C, n, j]
             ),
-            z = i.useCallback(
+            q = s.useCallback(
                 (e) => {
-                    let n = g[e];
-                    if (null != E) {
-                        let { sendable: t, sendableWithPremium: n } = E;
-                        if (0 === e && t.length > 0) return null;
-                        let i = t.length > 0 && n.length > 0;
-                        return (0, r.jsxs)(r.Fragment, {
+                    let r = E[e];
+                    if (null != v) {
+                        let { sendable: n, sendableWithPremium: r } = v;
+                        if (0 === e && n.length > 0) return null;
+                        let i = n.length > 0 && r.length > 0;
+                        return (0, a.jsxs)(a.Fragment, {
                             children: [
                                 i
-                                    ? (0, r.jsx)('div', {
-                                          className: Z.divider,
-                                          children: (0, r.jsx)(l.FormDivider, {})
+                                    ? (0, a.jsx)('div', {
+                                          className: V.divider,
+                                          children: (0, a.jsx)(c.FormDivider, {})
                                       })
                                     : null,
-                                (0, r.jsx)(
-                                    v.Z,
+                                (0, a.jsx)(
+                                    T.Z,
                                     {
-                                        className: Z.packHeader,
-                                        'aria-label': G.intl.string(G.t.wbfJFh),
-                                        children: G.intl.string(G.t['05Z/0t'])
+                                        className: V.packHeader,
+                                        'aria-label': F.intl.string(F.t.wbfJFh),
+                                        children: F.intl.string(F.t['05Z/0t'])
                                     },
                                     'stickers-you-might-like-header'
                                 )
                             ]
                         });
                     }
-                    switch (n.type) {
-                        case D.Ih.FAVORITE:
-                            return (0, r.jsx)(
-                                v.Z,
+                    switch (r.type) {
+                        case x.Ih.FAVORITE:
+                            return (0, a.jsx)(
+                                T.Z,
                                 {
-                                    className: Z.packHeader,
-                                    'aria-label': G.intl.formatToPlainString(G.t['7lLCjY'], { categoryName: n.name }),
-                                    icon: (0, r.jsx)(l.StarIcon, {
+                                    className: V.packHeader,
+                                    'aria-label': F.intl.formatToPlainString(F.t['7lLCjY'], { categoryName: r.name }),
+                                    icon: (0, a.jsx)(c.StarIcon, {
                                         size: 'xs',
                                         color: 'currentColor'
                                     }),
-                                    isCollapsed: t.has(n.id),
-                                    onClick: () => K(n.id, { isStickerPack: !1 }),
-                                    children: n.name
+                                    isCollapsed: n.has(r.id),
+                                    onClick: () => z(r.id, { isStickerPack: !1 }),
+                                    children: r.name
                                 },
-                                'header-'.concat(n.id)
+                                'header-'.concat(r.id)
                             );
-                        case D.Ih.RECENT:
-                            return (0, r.jsx)(
-                                v.Z,
+                        case x.Ih.RECENT:
+                            return (0, a.jsx)(
+                                T.Z,
                                 {
-                                    className: Z.packHeader,
-                                    'aria-label': G.intl.formatToPlainString(G.t['7lLCjY'], { categoryName: n.name }),
-                                    icon: (0, r.jsx)(l.ClockIcon, {
+                                    className: V.packHeader,
+                                    'aria-label': F.intl.formatToPlainString(F.t['7lLCjY'], { categoryName: r.name }),
+                                    icon: (0, a.jsx)(c.ClockIcon, {
                                         size: 'xs',
                                         color: 'currentColor'
                                     }),
-                                    isCollapsed: t.has(n.id),
-                                    onClick: () => K(n.id, { isStickerPack: !1 }),
-                                    children: n.name
+                                    isCollapsed: n.has(r.id),
+                                    onClick: () => z(r.id, { isStickerPack: !1 }),
+                                    children: r.name
                                 },
-                                'header-'.concat(n.id)
+                                'header-'.concat(r.id)
                             );
-                        case D.Ih.GUILD:
-                        case D.Ih.EMPTY_GUILD_UPSELL: {
-                            let e = T.Z.getGuild(n.id);
+                        case x.Ih.GUILD:
+                        case x.Ih.EMPTY_GUILD_UPSELL: {
+                            let e = y.Z.getGuild(r.id);
                             if (null == e) return null;
-                            return (0, r.jsx)(
-                                v.Z,
+                            return (0, a.jsx)(
+                                T.Z,
                                 {
-                                    className: Z.packHeader,
-                                    'aria-label': G.intl.formatToPlainString(G.t['7lLCjY'], { categoryName: e.name }),
-                                    icon: (0, r.jsx)(p.Z, {
+                                    className: V.packHeader,
+                                    'aria-label': F.intl.formatToPlainString(F.t['7lLCjY'], { categoryName: e.name }),
+                                    icon: (0, a.jsx)(m.Z, {
                                         guild: e,
                                         height: 16,
                                         width: 16
                                     }),
-                                    isCollapsed: t.has(e.id),
-                                    onClick: () => K(e.id),
+                                    isCollapsed: n.has(e.id),
+                                    onClick: () => z(e.id),
                                     children: e.name
                                 },
                                 'h'.concat(e.id)
                             );
                         }
-                        case D.Ih.PACK: {
-                            let e = O.Z.getStickerPack(n.id);
+                        case x.Ih.PACK: {
+                            let e = L.Z.getStickerPack(r.id);
                             if (null == e) return null;
-                            return (0, r.jsx)(
-                                v.Z,
+                            return (0, a.jsx)(
+                                T.Z,
                                 {
-                                    className: Z.packHeader,
-                                    'aria-label': G.intl.formatToPlainString(G.t['7lLCjY'], { categoryName: e.name }),
-                                    icon: (0, r.jsx)(x.ZP, {
+                                    className: V.packHeader,
+                                    'aria-label': F.intl.formatToPlainString(F.t['7lLCjY'], { categoryName: e.name }),
+                                    icon: (0, a.jsx)(P.ZP, {
                                         disableAnimation: !0,
-                                        size: 12,
-                                        sticker: (0, L.Zt)(e)
+                                        size: el,
+                                        sticker: (0, w.Zt)(e)
                                     }),
-                                    isCollapsed: t.has(e.id),
-                                    onClick: () => K(e.id),
+                                    isCollapsed: n.has(e.id),
+                                    onClick: () => z(e.id),
                                     children: e.name
                                 },
                                 'h'.concat(e.id)
@@ -299,134 +301,134 @@ let V = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                         }
                     }
                 },
-                [t, g, K, E]
+                [n, E, z, v]
             ),
-            $ = i.useCallback(
+            Q = s.useCallback(
                 (e) => {
-                    if (null != E) {
-                        let { sendable: t, sendableWithPremium: n } = E;
-                        return 0 === e && t.length > 0 ? 0 : Q + (t.length > 0 && n.length > 0 ? q : 0);
+                    if (null != v) {
+                        let { sendable: n, sendableWithPremium: r } = v;
+                        return 0 === e && n.length > 0 ? 0 : J + (n.length > 0 && r.length > 0 ? X : 0);
                     }
-                    return Q;
+                    return J;
                 },
-                [E]
+                [v]
             ),
-            ee = i.useCallback(
+            et = s.useCallback(
                 (e) => {
-                    let n = g[e],
-                        i = t.has(n.id);
-                    return n.type !== D.Ih.EMPTY_GUILD_UPSELL || null != E || i
+                    let r = E[e],
+                        i = n.has(r.id);
+                    return r.type !== x.Ih.EMPTY_GUILD_UPSELL || null != v || i
                         ? null
-                        : (0, r.jsx)(
-                              w.Z,
+                        : (0, a.jsx)(
+                              M.Z,
                               {
-                                  className: Z.emptyGuildUpsell,
-                                  guildId: n.id,
-                                  channel: A,
+                                  className: V.emptyGuildUpsell,
+                                  guildId: r.id,
+                                  channel: N,
                                   shouldTrackUpsellViewed: !k,
-                                  setTrackedUpsellViewed: F
+                                  setTrackedUpsellViewed: B
                               },
-                              'sticker-picker-empty-guild-inline-upsell-'.concat(n.id)
+                              'sticker-picker-empty-guild-inline-upsell-'.concat(r.id)
                           );
                 },
-                [g, t, E, A, k]
+                [E, n, v, N, k]
             );
         return {
-            renderRow: Y,
-            renderSection: W,
-            renderSectionHeader: z,
-            sectionHeaderHeight: $,
-            renderSectionFooter: ee,
-            sectionFooterHeight: i.useCallback(
+            renderRow: W,
+            renderSection: K,
+            renderSectionHeader: q,
+            sectionHeaderHeight: Q,
+            renderSectionFooter: et,
+            sectionFooterHeight: s.useCallback(
                 (e) => {
-                    let n = g[e],
-                        r = t.has(n.id);
-                    return n.type !== D.Ih.EMPTY_GUILD_UPSELL || r ? 0 : ea;
+                    let r = E[e],
+                        i = n.has(r.id);
+                    return r.type !== x.Ih.EMPTY_GUILD_UPSELL || i ? 0 : eu;
                 },
-                [g, t]
+                [E, n]
             )
         };
     },
-    ec = i.forwardRef(function (e, t) {
-        let { collapsedStickersCategories: n, gridWidth: o, filteredStickers: l, getStickerItemProps: c, getStickerRowProps: p, gutterWidth: g, isUsingKeyboardNavigation: v, onSelectSticker: I, rowCount: T, rowCountBySection: b, stickersCategories: S, stickersGrid: y, channel: A } = e,
-            N = i.useRef(!1),
-            C = i.useRef(null),
-            [R, D] = h.ZN.useStore((e) => [e.activeCategoryIndex, e.inspectedExpressionPosition], a.X),
-            { analyticsLocations: L } = (0, f.ZP)(d.Z.STICKER_PICKER),
-            x = (0, m.Iu)((e) => e.searchQuery),
-            w = (0, s.e7)([O.Z], () => O.Z.getPremiumPacks()),
+    eh = s.forwardRef(function (e, n) {
+        let { collapsedStickersCategories: r, gridWidth: i, filteredStickers: u, getStickerItemProps: c, getStickerRowProps: f, gutterWidth: m, isUsingKeyboardNavigation: v, onSelectSticker: T, rowCount: b, rowCountBySection: y, stickersCategories: S, stickersGrid: A, channel: N } = e,
+            C = s.useRef(!1),
+            R = s.useRef(null),
+            [O, D] = g.ZN.useStore((e) => [e.activeCategoryIndex, e.inspectedExpressionPosition], o.X),
+            { analyticsLocations: x } = (0, h.ZP)(_.Z.STICKER_PICKER),
+            w = (0, E.Iu)((e) => e.searchQuery),
+            P = (0, l.e7)([L.Z], () => L.Z.getPremiumPacks()),
             {
                 renderRow: M,
-                renderSection: k,
-                renderSectionFooter: U,
-                sectionFooterHeight: B,
-                renderSectionHeader: j,
-                sectionHeaderHeight: H
-            } = eu({
-                collapsedStickersCategories: n,
-                gridWidth: o,
+                renderSection: U,
+                renderSectionFooter: B,
+                sectionFooterHeight: G,
+                renderSectionHeader: Z,
+                sectionHeaderHeight: Y
+            } = e_({
+                collapsedStickersCategories: r,
+                gridWidth: i,
                 stickersCategories: S,
-                stickersGrid: y,
-                isScrolling: N,
+                stickersGrid: A,
+                isScrolling: C,
                 isUsingKeyboardNavigation: v,
-                onSelectSticker: I,
+                onSelectSticker: T,
                 getStickerItemProps: c,
-                getStickerRowProps: p,
-                gutterWidth: g,
+                getStickerRowProps: f,
+                gutterWidth: m,
                 inspectedStickerPosition: D,
-                filteredStickers: l,
-                ownedStickerPacks: i.useMemo(() => new Set(w.map((e) => e.id)), [w]),
-                channel: A
+                filteredStickers: u,
+                ownedStickerPacks: s.useMemo(() => new Set(P.map((e) => e.id)), [P]),
+                channel: N
             }),
-            Y = (0, E.Qs)({
-                activeCategoryIndex: R,
-                isScrolling: N,
-                listRef: C,
-                onActiveCategoryIndexChange: h.ZN.setActiveCategoryIndex,
-                scrollOffset: 20,
-                searchQuery: x
+            W = (0, I.Qs)({
+                activeCategoryIndex: O,
+                isScrolling: C,
+                listRef: R,
+                onActiveCategoryIndexChange: g.ZN.setActiveCategoryIndex,
+                scrollOffset: ea,
+                searchQuery: w
             });
         return (
-            (0, E.Xs)({
-                searchQuery: x,
-                activeCategoryIndex: R,
-                listRef: C
+            (0, I.Xs)({
+                searchQuery: w,
+                activeCategoryIndex: O,
+                listRef: R
             }),
-            i.useImperativeHandle(
-                t,
+            s.useImperativeHandle(
+                n,
                 () => ({
                     scrollTo: function () {
-                        for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-                        return null === (e = C.current) || void 0 === e ? void 0 : e.scrollTo(...n);
+                        for (var e, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
+                        return null === (e = R.current) || void 0 === e ? void 0 : e.scrollTo(...r);
                     },
                     getRowDescriptors: () => {
-                        var e, t;
-                        return null !== (t = null === (e = C.current) || void 0 === e ? void 0 : e.getRowDescriptors()) && void 0 !== t ? t : [];
+                        var e, n;
+                        return null !== (n = null === (e = R.current) || void 0 === e ? void 0 : e.getRowDescriptors()) && void 0 !== n ? n : [];
                     },
                     getSectionDescriptors: () => {
-                        var e, t;
-                        return null !== (t = null === (e = C.current) || void 0 === e ? void 0 : e.getSectionDescriptors()) && void 0 !== t ? t : [];
+                        var e, n;
+                        return null !== (n = null === (e = R.current) || void 0 === e ? void 0 : e.getSectionDescriptors()) && void 0 !== n ? n : [];
                     },
                     scrollToSectionTop: function () {
-                        for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-                        return null === (e = C.current) || void 0 === e ? void 0 : e.scrollToSectionTop(...n);
+                        for (var e, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
+                        return null === (e = R.current) || void 0 === e ? void 0 : e.scrollToSectionTop(...r);
                     },
                     scrollRowIntoView: function () {
-                        for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-                        return null === (e = C.current) || void 0 === e ? void 0 : e.scrollRowIntoView(...n);
+                        for (var e, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
+                        return null === (e = R.current) || void 0 === e ? void 0 : e.scrollRowIntoView(...r);
                     },
                     getScrollerNode: function () {
-                        for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-                        return null === (e = C.current) || void 0 === e ? void 0 : e.getScrollerNode(...n);
+                        for (var e, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
+                        return null === (e = R.current) || void 0 === e ? void 0 : e.getScrollerNode(...r);
                     },
                     scrollIntoViewNode: function () {
-                        for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-                        return null === (e = C.current) || void 0 === e ? void 0 : e.scrollIntoViewNode(...n);
+                        for (var e, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
+                        return null === (e = R.current) || void 0 === e ? void 0 : e.scrollIntoViewNode(...r);
                     },
                     getListDimensions: function () {
-                        for (var e, t, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
-                        return null !== (t = null === (e = C.current) || void 0 === e ? void 0 : e.getListDimensions(...r)) && void 0 !== t
-                            ? t
+                        for (var e, n, r = arguments.length, i = Array(r), a = 0; a < r; a++) i[a] = arguments[a];
+                        return null !== (n = null === (e = R.current) || void 0 === e ? void 0 : e.getListDimensions(...i)) && void 0 !== n
+                            ? n
                             : {
                                   height: -1,
                                   totalHeight: -1
@@ -435,38 +437,38 @@ let V = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 }),
                 []
             ),
-            (0, r.jsx)(f.Gt, {
-                value: L,
-                children: (0, r.jsxs)('div', {
-                    className: Z.wrapper,
+            (0, a.jsx)(h.Gt, {
+                value: x,
+                children: (0, a.jsxs)('div', {
+                    className: V.wrapper,
                     children: [
-                        null != l && 0 === l.sendable.length && 0 === l.sendableWithPremium.length
-                            ? (0, r.jsx)(u.Z, {
-                                  message: G.intl.string(G.t['zc+LQU']),
-                                  className: Z.__invalid_noSearchResultsContainer,
-                                  noResultsImageURL: F,
-                                  suggestions: (0, r.jsx)(eo, { onSuggestionClick: (e) => (0, m.ql)(e, !0) })
+                        null != u && 0 === u.sendable.length && 0 === u.sendableWithPremium.length
+                            ? (0, a.jsx)(d.Z, {
+                                  message: F.intl.string(F.t['zc+LQU']),
+                                  className: V.__invalid_noSearchResultsContainer,
+                                  noResultsImageURL: j,
+                                  suggestions: (0, a.jsx)(ed, { onSuggestionClick: (e) => (0, E.ql)(e, !0) })
                               })
-                            : (0, r.jsx)(_.Z, {
+                            : (0, a.jsx)(p.Z, {
                                   role: 'none presentation',
-                                  listPadding: null != l ? ei : er,
-                                  onScroll: Y,
+                                  listPadding: null != u ? eo : es,
+                                  onScroll: W,
                                   renderRow: M,
-                                  renderSection: null == l ? k : void 0,
-                                  renderSectionHeader: j,
-                                  renderSectionFooter: U,
-                                  rowCount: T,
-                                  rowCountBySection: b,
-                                  rowHeight: o > V ? et : en,
-                                  sectionHeaderHeight: H,
-                                  sectionFooterHeight: B,
+                                  renderSection: null == u ? U : void 0,
+                                  renderSectionHeader: Z,
+                                  renderSectionFooter: B,
+                                  rowCount: b,
+                                  rowCountBySection: y,
+                                  rowHeight: i > H ? er : ei,
+                                  sectionHeaderHeight: Y,
+                                  sectionFooterHeight: G,
                                   stickyHeaders: !0,
-                                  ref: C
+                                  ref: R
                               }),
-                        (0, r.jsx)(P.Z, { stickersGrid: y })
+                        (0, a.jsx)(k.Z, { stickersGrid: A })
                     ]
                 })
             })
         );
     });
-t.Z = ec;
+n.Z = eh;

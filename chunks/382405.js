@@ -1,97 +1,97 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return G;
+        return F;
     }
-}),
-    n(47120);
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(278074),
-    o = n(876215),
-    l = n(481060),
-    u = n(906732),
-    c = n(499254),
-    d = n(827498),
-    f = n(541716),
-    _ = n(379357),
-    p = n(26033),
-    h = n(358696),
-    m = n(740605),
-    g = n(370370),
-    E = n(91140),
-    v = n(551228),
-    I = n(555672),
-    T = n(335326),
-    b = n(297781),
-    S = n(797342),
-    y = n(810568),
-    A = n(168524),
-    N = n(960870),
-    C = n(139793),
-    R = n(502762),
-    O = n(652853),
-    D = n(336383),
-    L = n(373826),
-    x = n(228168),
-    w = n(616922),
-    P = n(249942);
-function M(e) {
-    let { user: t, entry: n, header: i, className: s, onClose: c } = e,
-        { profileType: d } = (0, O.z)(),
-        f = { [P.fullSize]: d === x.y0.FULL_SIZE },
-        { largeImage: p } = (0, _.rv)({
-            entry: n,
+});
+var i = r(47120);
+var a = r(200651);
+r(192379);
+var s = r(120356),
+    o = r.n(s),
+    l = r(278074),
+    u = r(876215),
+    c = r(481060),
+    d = r(906732),
+    f = r(499254),
+    _ = r(827498),
+    h = r(541716),
+    p = r(379357),
+    m = r(26033),
+    g = r(358696),
+    E = r(740605),
+    v = r(370370),
+    I = r(91140),
+    T = r(551228),
+    b = r(555672),
+    y = r(335326),
+    S = r(297781),
+    A = r(797342),
+    N = r(810568),
+    C = r(168524),
+    R = r(960870),
+    O = r(139793),
+    D = r(502762),
+    L = r(652853),
+    x = r(336383),
+    w = r(373826),
+    P = r(228168),
+    M = r(616922),
+    k = r(249942);
+function U(e) {
+    let { user: n, entry: r, header: i, className: s, onClose: l } = e,
+        { profileType: f } = (0, L.z)(),
+        _ = { [k.fullSize]: f === P.y0.FULL_SIZE },
+        { largeImage: h } = (0, p.rv)({
+            entry: r,
             showCoverImage: !1
         }),
-        { appName: m } = (0, S.n)(n),
-        g = (0, A.Z)({
+        { appName: m } = (0, A.n)(r),
+        E = (0, C.Z)({
             location: 'UserProfileRecentActivityCard',
-            applicationId: n.extra.application_id,
-            source: y.m1.UserProfile,
-            sourceUserId: t.id,
+            applicationId: r.extra.application_id,
+            source: N.m1.UserProfile,
+            sourceUserId: n.id,
             trackEntryPointImpression: !0
         }),
-        { analyticsLocations: v } = (0, u.ZP)(),
-        T = (0, N.Z)({
+        { analyticsLocations: v } = (0, d.ZP)(),
+        T = (0, R.Z)({
             display: 'recent',
-            user: t,
-            entry: n,
+            user: n,
+            entry: r,
             analyticsLocations: v
         }),
-        w = (0, C.Z)({
-            userId: t.id,
+        y = (0, O.Z)({
+            userId: n.id,
             onAction: T
         }),
-        M = () => (n.content_type === o.s.TOP_GAME ? I.Hs.map((e, t) => (0, r.jsx)(e, { entry: n }, 'entry-'.concat(t))) : E.W.map((e, t) => (0, r.jsx)(e, { entry: n }, 'entry-'.concat(t))));
-    return null == g
-        ? (0, r.jsxs)(R.Z.Overlay, {
-              className: a()(P.card, s),
-              ref: w,
+        M = () => (r.content_type === u.s.TOP_GAME ? b.Hs.map((e, n) => (0, a.jsx)(e, { entry: r }, 'entry-'.concat(n))) : I.W.map((e, n) => (0, a.jsx)(e, { entry: r }, 'entry-'.concat(n))));
+    return null == E
+        ? (0, a.jsxs)(D.Z.Overlay, {
+              className: o()(k.card, s),
+              ref: y,
               children: [
                   i,
-                  (0, r.jsx)('div', {
-                      className: P.body,
-                      children: (0, r.jsxs)('div', {
-                          className: a()(P.content, f),
+                  (0, a.jsx)('div', {
+                      className: k.body,
+                      children: (0, a.jsxs)('div', {
+                          className: o()(k.content, _),
                           children: [
-                              (0, r.jsx)(h.E, {
-                                  image: p,
-                                  size: h.J.SIZE_60
+                              (0, a.jsx)(g.E, {
+                                  image: h,
+                                  size: g.J.SIZE_60
                               }),
-                              (0, r.jsxs)('div', {
-                                  className: P.details,
+                              (0, a.jsxs)('div', {
+                                  className: k.details,
                                   children: [
-                                      (0, r.jsx)('div', {
-                                          children: (0, r.jsx)(L.Z, {
+                                      (0, a.jsx)('div', {
+                                          children: (0, a.jsx)(w.Z, {
                                               variant: 'heading-sm/semibold',
                                               text: m
                                           })
                                       }),
-                                      (0, r.jsx)(b.Gk, {
-                                          location: b.Gt.USER_PROFILE,
-                                          className: P.badges,
+                                      (0, a.jsx)(S.Gk, {
+                                          location: S.Gt.USER_PROFILE,
+                                          className: k.badges,
                                           children: M()
                                       })
                                   ]
@@ -101,210 +101,44 @@ function M(e) {
                   })
               ]
           })
-        : (0, r.jsxs)(D.Z, {
-              ref: w,
+        : (0, a.jsxs)(x.Z, {
+              ref: y,
               className: s,
-              subsection: x.Tb.RECENT_ACTIVITY,
+              subsection: P.Tb.RECENT_ACTIVITY,
               onAction: T,
-              onClose: c,
+              onClose: l,
               children: [
                   i,
-                  (0, r.jsx)('div', {
-                      className: P.body,
-                      children: (0, r.jsxs)('div', {
-                          className: a()(P.content, f),
+                  (0, a.jsx)('div', {
+                      className: k.body,
+                      children: (0, a.jsxs)('div', {
+                          className: o()(k.content, _),
                           children: [
-                              (0, r.jsx)(h.E, {
-                                  image: p,
-                                  size: h.J.SIZE_60,
-                                  className: P.clickableImage,
+                              (0, a.jsx)(g.E, {
+                                  image: h,
+                                  size: g.J.SIZE_60,
+                                  className: k.clickableImage,
                                   onClick: (e) => {
-                                      T({ action: 'PRESS_IMAGE' }), g(e), d !== x.y0.FULL_SIZE && (null == c || c());
+                                      T({ action: 'PRESS_IMAGE' }), E(e), f !== P.y0.FULL_SIZE && (null == l || l());
                                   }
                               }),
-                              (0, r.jsxs)('div', {
-                                  className: P.details,
+                              (0, a.jsxs)('div', {
+                                  className: k.details,
                                   children: [
-                                      (0, r.jsx)(l.Clickable, {
-                                          className: P.clickableText,
+                                      (0, a.jsx)(c.Clickable, {
+                                          className: k.clickableText,
                                           onClick: (e) => {
-                                              T({ action: 'PRESS_TEXT' }), g(e), d !== x.y0.FULL_SIZE && (null == c || c());
+                                              T({ action: 'PRESS_TEXT' }), E(e), f !== P.y0.FULL_SIZE && (null == l || l());
                                           },
-                                          children: (0, r.jsx)(L.Z, {
+                                          children: (0, a.jsx)(w.Z, {
                                               variant: 'heading-sm/semibold',
                                               text: m
                                           })
                                       }),
-                                      (0, r.jsx)(b.Gk, {
-                                          location: b.Gt.USER_PROFILE,
-                                          className: P.badges,
+                                      (0, a.jsx)(S.Gk, {
+                                          location: S.Gt.USER_PROFILE,
+                                          className: k.badges,
                                           children: M()
-                                      })
-                                  ]
-                              })
-                          ]
-                      })
-                  })
-              ]
-          });
-}
-function k(e) {
-    let { user: t, entry: n, header: i, className: s, onClose: o } = e,
-        { profileType: c } = (0, O.z)(),
-        d = { [P.fullSize]: c === x.y0.FULL_SIZE },
-        { largeImage: f } = (0, _.rv)({ entry: n }),
-        { url: p } = n.extra,
-        { analyticsLocations: g } = (0, u.ZP)(),
-        E = (0, N.Z)({
-            display: 'recent',
-            user: t,
-            entry: n,
-            analyticsLocations: g
-        }),
-        v = (0, C.Z)({
-            userId: t.id,
-            onAction: E
-        });
-    return (0, r.jsxs)(D.Z, {
-        ref: v,
-        className: s,
-        subsection: x.Tb.RECENT_ACTIVITY,
-        onAction: E,
-        onClose: o,
-        children: [
-            i,
-            (0, r.jsx)('div', {
-                className: P.body,
-                children: (0, r.jsxs)('div', {
-                    className: a()(P.content, d),
-                    children: [
-                        null == p || '' === p
-                            ? (0, r.jsx)(h.E, {
-                                  aspectRatio: 'crunchyroll',
-                                  image: f,
-                                  size: h.J.SIZE_60
-                              })
-                            : (0, r.jsx)(h.E, {
-                                  aspectRatio: 'crunchyroll',
-                                  image: f,
-                                  size: h.J.SIZE_60,
-                                  className: P.clickableImage,
-                                  onClick: () => {
-                                      E({ action: 'PRESS_IMAGE' }), (0, m.Y)(p);
-                                  }
-                              }),
-                        (0, r.jsxs)('div', {
-                            className: P.details,
-                            children: [
-                                null == p || '' === p
-                                    ? (0, r.jsxs)('div', {
-                                          children: [
-                                              (0, r.jsx)(L.Z, {
-                                                  variant: 'heading-sm/semibold',
-                                                  text: n.extra.media_title
-                                              }),
-                                              (0, r.jsx)(L.Z, {
-                                                  variant: 'text-xs/normal',
-                                                  text: n.extra.media_subtitle
-                                              })
-                                          ]
-                                      })
-                                    : (0, r.jsxs)(l.Clickable, {
-                                          className: P.clickableText,
-                                          onClick: () => {
-                                              E({ action: 'PRESS_TEXT' }), (0, m.Y)(p);
-                                          },
-                                          children: [
-                                              (0, r.jsx)(L.Z, {
-                                                  variant: 'heading-sm/semibold',
-                                                  text: n.extra.media_title
-                                              }),
-                                              (0, r.jsx)(L.Z, {
-                                                  variant: 'text-xs/normal',
-                                                  text: n.extra.media_subtitle
-                                              })
-                                          ]
-                                      }),
-                                (0, r.jsx)(b.Gk, {
-                                    location: b.Gt.USER_PROFILE,
-                                    className: P.badges,
-                                    children: T.t.map((e, t) => (0, r.jsx)(e, { entry: n }, 'entry-'.concat(t)))
-                                })
-                            ]
-                        })
-                    ]
-                })
-            })
-        ]
-    });
-}
-function U(e) {
-    var t, n;
-    let { user: i, entry: s, header: o, className: l, onClose: c } = e,
-        { profileType: d } = (0, O.z)(),
-        f = { [P.fullSize]: d === x.y0.FULL_SIZE },
-        { largeImage: p } = (0, _.rv)({ entry: s }),
-        { analyticsLocations: g } = (0, u.ZP)(),
-        E = (0, N.Z)({
-            display: 'recent',
-            user: i,
-            entry: s,
-            analyticsLocations: g
-        }),
-        I = (0, C.Z)({
-            userId: i.id,
-            onAction: E
-        }),
-        T = null === (t = s.extra.entries[0]) || void 0 === t ? void 0 : t.media;
-    return null == T
-        ? null
-        : (0, r.jsxs)(D.Z, {
-              ref: I,
-              className: l,
-              subsection: x.Tb.RECENT_ACTIVITY,
-              onAction: E,
-              onClose: c,
-              children: [
-                  o,
-                  (0, r.jsx)('div', {
-                      className: P.body,
-                      children: (0, r.jsxs)('div', {
-                          className: a()(P.content, f),
-                          children: [
-                              (0, r.jsx)(h.E, {
-                                  image: p,
-                                  size: h.J.SIZE_60,
-                                  className: P.clickableImage,
-                                  onClick: () => {
-                                      E({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, m.o)(w.Hw.ALBUM, T.external_parent_id);
-                                  }
-                              }),
-                              (0, r.jsxs)('div', {
-                                  className: P.details,
-                                  children: [
-                                      (0, r.jsxs)('div', {
-                                          children: [
-                                              (0, r.jsx)(L.Z, {
-                                                  variant: 'heading-sm/semibold',
-                                                  text: T.title,
-                                                  onClick: () => {
-                                                      E({ action: 'OPEN_SPOTIFY_TRACK' }), (0, m.o)(w.Hw.TRACK, T.external_id);
-                                                  }
-                                              }),
-                                              (0, r.jsx)(L.Z, {
-                                                  variant: 'text-xs/normal',
-                                                  text: null === (n = T.artists[0]) || void 0 === n ? void 0 : n.name,
-                                                  onClick: () => {
-                                                      var e;
-                                                      E({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, m.o)(w.Hw.ARTIST, null === (e = T.artists[0]) || void 0 === e ? void 0 : e.external_id);
-                                                  }
-                                              })
-                                          ]
-                                      }),
-                                      (0, r.jsx)(b.Gk, {
-                                          location: b.Gt.USER_PROFILE,
-                                          className: P.badges,
-                                          children: v.te.map((e, t) => (0, r.jsx)(e, { entry: s }, 'entry-'.concat(t)))
                                       })
                                   ]
                               })
@@ -315,64 +149,90 @@ function U(e) {
           });
 }
 function B(e) {
-    let { user: t, entry: n, header: i, className: s, onClose: o } = e,
-        { profileType: l } = (0, O.z)(),
-        p = { [P.fullSize]: l === x.y0.FULL_SIZE },
-        { largeImage: m } = (0, _.rv)({
-            entry: n,
-            showCoverImage: !1
-        }),
-        { analyticsLocations: E } = (0, u.ZP)(),
-        v = (0, N.Z)({
+    let { user: n, entry: r, header: i, className: s, onClose: l } = e,
+        { profileType: u } = (0, L.z)(),
+        f = { [k.fullSize]: u === P.y0.FULL_SIZE },
+        { largeImage: _ } = (0, p.rv)({ entry: r }),
+        { url: h } = r.extra,
+        { analyticsLocations: m } = (0, d.ZP)(),
+        v = (0, R.Z)({
             display: 'recent',
-            user: t,
-            entry: n,
-            analyticsLocations: E
+            user: n,
+            entry: r,
+            analyticsLocations: m
         }),
-        I = (0, C.Z)({
-            userId: t.id,
+        I = (0, O.Z)({
+            userId: n.id,
             onAction: v
         }),
-        T = () => {
-            null == o || o(), (0, c.__)(d._b.TEXT, f.Ie.NORMAL, { applicationId: n.extra.application_id });
-        };
-    return (0, r.jsxs)(D.Z, {
+        T = () =>
+            null == h || '' === h
+                ? (0, a.jsx)(g.E, {
+                      aspectRatio: 'crunchyroll',
+                      image: _,
+                      size: g.J.SIZE_60
+                  })
+                : (0, a.jsx)(g.E, {
+                      aspectRatio: 'crunchyroll',
+                      image: _,
+                      size: g.J.SIZE_60,
+                      className: k.clickableImage,
+                      onClick: () => {
+                          v({ action: 'PRESS_IMAGE' }), (0, E.Y)(h);
+                      }
+                  }),
+        b = () =>
+            null == h || '' === h
+                ? (0, a.jsxs)('div', {
+                      children: [
+                          (0, a.jsx)(w.Z, {
+                              variant: 'heading-sm/semibold',
+                              text: r.extra.media_title
+                          }),
+                          (0, a.jsx)(w.Z, {
+                              variant: 'text-xs/normal',
+                              text: r.extra.media_subtitle
+                          })
+                      ]
+                  })
+                : (0, a.jsxs)(c.Clickable, {
+                      className: k.clickableText,
+                      onClick: () => {
+                          v({ action: 'PRESS_TEXT' }), (0, E.Y)(h);
+                      },
+                      children: [
+                          (0, a.jsx)(w.Z, {
+                              variant: 'heading-sm/semibold',
+                              text: r.extra.media_title
+                          }),
+                          (0, a.jsx)(w.Z, {
+                              variant: 'text-xs/normal',
+                              text: r.extra.media_subtitle
+                          })
+                      ]
+                  });
+    return (0, a.jsxs)(x.Z, {
         ref: I,
         className: s,
-        subsection: x.Tb.RECENT_ACTIVITY,
+        subsection: P.Tb.RECENT_ACTIVITY,
         onAction: v,
-        onClose: o,
+        onClose: l,
         children: [
             i,
-            (0, r.jsx)('div', {
-                className: P.body,
-                children: (0, r.jsxs)('div', {
-                    className: a()(P.content, p),
+            (0, a.jsx)('div', {
+                className: k.body,
+                children: (0, a.jsxs)('div', {
+                    className: o()(k.content, f),
                     children: [
-                        (0, r.jsx)(h.E, {
-                            image: m,
-                            size: h.J.SIZE_60,
-                            className: P.clickableImage,
-                            onClick: () => {
-                                v({ action: 'PRESS_IMAGE' }), T();
-                            }
-                        }),
-                        (0, r.jsxs)('div', {
-                            className: P.details,
+                        T(),
+                        (0, a.jsxs)('div', {
+                            className: k.details,
                             children: [
-                                (0, r.jsx)('div', {
-                                    children: (0, r.jsx)(L.Z, {
-                                        variant: 'heading-sm/semibold',
-                                        text: n.extra.activity_name,
-                                        onClick: () => {
-                                            v({ action: 'PRESS_TEXT' }), T();
-                                        }
-                                    })
-                                }),
-                                (0, r.jsx)(b.Gk, {
-                                    location: b.Gt.USER_PROFILE,
-                                    className: P.badges,
-                                    children: g.j.map((e, t) => (0, r.jsx)(e, { entry: n }, 'entry-'.concat(t)))
+                                b(),
+                                (0, a.jsx)(S.Gk, {
+                                    location: S.Gt.USER_PROFILE,
+                                    className: k.badges,
+                                    children: y.t.map((e, n) => (0, a.jsx)(e, { entry: r }, 'entry-'.concat(n)))
                                 })
                             ]
                         })
@@ -383,30 +243,174 @@ function B(e) {
     });
 }
 function G(e) {
-    let { entry: t, ...n } = e;
-    return (0, s.EQ)(t)
-        .when(p.dX, (e) =>
-            (0, r.jsx)(M, {
+    var n, r;
+    let { user: i, entry: s, header: l, className: u, onClose: c } = e,
+        { profileType: f } = (0, L.z)(),
+        _ = { [k.fullSize]: f === P.y0.FULL_SIZE },
+        { largeImage: h } = (0, p.rv)({ entry: s }),
+        { analyticsLocations: m } = (0, d.ZP)(),
+        v = (0, R.Z)({
+            display: 'recent',
+            user: i,
+            entry: s,
+            analyticsLocations: m
+        }),
+        I = (0, O.Z)({
+            userId: i.id,
+            onAction: v
+        }),
+        b = null === (n = s.extra.entries[0]) || void 0 === n ? void 0 : n.media;
+    return null == b
+        ? null
+        : (0, a.jsxs)(x.Z, {
+              ref: I,
+              className: u,
+              subsection: P.Tb.RECENT_ACTIVITY,
+              onAction: v,
+              onClose: c,
+              children: [
+                  l,
+                  (0, a.jsx)('div', {
+                      className: k.body,
+                      children: (0, a.jsxs)('div', {
+                          className: o()(k.content, _),
+                          children: [
+                              (0, a.jsx)(g.E, {
+                                  image: h,
+                                  size: g.J.SIZE_60,
+                                  className: k.clickableImage,
+                                  onClick: () => {
+                                      v({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, E.o)(M.Hw.ALBUM, b.external_parent_id);
+                                  }
+                              }),
+                              (0, a.jsxs)('div', {
+                                  className: k.details,
+                                  children: [
+                                      (0, a.jsxs)('div', {
+                                          children: [
+                                              (0, a.jsx)(w.Z, {
+                                                  variant: 'heading-sm/semibold',
+                                                  text: b.title,
+                                                  onClick: () => {
+                                                      v({ action: 'OPEN_SPOTIFY_TRACK' }), (0, E.o)(M.Hw.TRACK, b.external_id);
+                                                  }
+                                              }),
+                                              (0, a.jsx)(w.Z, {
+                                                  variant: 'text-xs/normal',
+                                                  text: null === (r = b.artists[0]) || void 0 === r ? void 0 : r.name,
+                                                  onClick: () => {
+                                                      var e;
+                                                      v({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, E.o)(M.Hw.ARTIST, null === (e = b.artists[0]) || void 0 === e ? void 0 : e.external_id);
+                                                  }
+                                              })
+                                          ]
+                                      }),
+                                      (0, a.jsx)(S.Gk, {
+                                          location: S.Gt.USER_PROFILE,
+                                          className: k.badges,
+                                          children: T.te.map((e, n) => (0, a.jsx)(e, { entry: s }, 'entry-'.concat(n)))
+                                      })
+                                  ]
+                              })
+                          ]
+                      })
+                  })
+              ]
+          });
+}
+function Z(e) {
+    let { user: n, entry: r, header: i, className: s, onClose: l } = e,
+        { profileType: u } = (0, L.z)(),
+        c = { [k.fullSize]: u === P.y0.FULL_SIZE },
+        { largeImage: m } = (0, p.rv)({
+            entry: r,
+            showCoverImage: !1
+        }),
+        { analyticsLocations: E } = (0, d.ZP)(),
+        I = (0, R.Z)({
+            display: 'recent',
+            user: n,
+            entry: r,
+            analyticsLocations: E
+        }),
+        T = (0, O.Z)({
+            userId: n.id,
+            onAction: I
+        }),
+        b = () => {
+            null == l || l(), (0, f.__)(_._b.TEXT, h.Ie.NORMAL, { applicationId: r.extra.application_id });
+        };
+    return (0, a.jsxs)(x.Z, {
+        ref: T,
+        className: s,
+        subsection: P.Tb.RECENT_ACTIVITY,
+        onAction: I,
+        onClose: l,
+        children: [
+            i,
+            (0, a.jsx)('div', {
+                className: k.body,
+                children: (0, a.jsxs)('div', {
+                    className: o()(k.content, c),
+                    children: [
+                        (0, a.jsx)(g.E, {
+                            image: m,
+                            size: g.J.SIZE_60,
+                            className: k.clickableImage,
+                            onClick: () => {
+                                I({ action: 'PRESS_IMAGE' }), b();
+                            }
+                        }),
+                        (0, a.jsxs)('div', {
+                            className: k.details,
+                            children: [
+                                (0, a.jsx)('div', {
+                                    children: (0, a.jsx)(w.Z, {
+                                        variant: 'heading-sm/semibold',
+                                        text: r.extra.activity_name,
+                                        onClick: () => {
+                                            I({ action: 'PRESS_TEXT' }), b();
+                                        }
+                                    })
+                                }),
+                                (0, a.jsx)(S.Gk, {
+                                    location: S.Gt.USER_PROFILE,
+                                    className: k.badges,
+                                    children: v.j.map((e, n) => (0, a.jsx)(e, { entry: r }, 'entry-'.concat(n)))
+                                })
+                            ]
+                        })
+                    ]
+                })
+            })
+        ]
+    });
+}
+function F(e) {
+    let { entry: n, ...r } = e;
+    return (0, l.EQ)(n)
+        .when(m.dX, (e) =>
+            (0, a.jsx)(U, {
                 entry: e,
-                ...n
+                ...r
             })
         )
-        .when(p.y0, (e) =>
-            (0, r.jsx)(k, {
+        .when(m.y0, (e) =>
+            (0, a.jsx)(B, {
                 entry: e,
-                ...n
+                ...r
             })
         )
-        .when(p.dU, (e) =>
-            (0, r.jsx)(U, {
+        .when(m.dU, (e) =>
+            (0, a.jsx)(G, {
                 entry: e,
-                ...n
+                ...r
             })
         )
-        .when(p.Mq, (e) =>
-            (0, r.jsx)(B, {
+        .when(m.Mq, (e) =>
+            (0, a.jsx)(Z, {
                 entry: e,
-                ...n
+                ...r
             })
         )
         .exhaustive();

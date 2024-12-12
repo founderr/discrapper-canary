@@ -1,43 +1,45 @@
-n.d(t, {
+r.d(n, {
     S: function () {
-        return f;
+        return p;
     }
-}),
-    n(47120);
-var r = n(192379),
-    i = n(392711),
-    a = n.n(i),
-    s = n(941028),
-    o = n(509848),
-    l = n(849522),
-    u = n(439170);
-let c = '@here';
-function d(e) {
+});
+var i = r(47120);
+var a = r(192379),
+    s = r(392711),
+    o = r.n(s),
+    l = r(941028),
+    u = r(509848),
+    c = r(849522),
+    d = r(439170);
+let f = '@here';
+function _(e) {
     return !!(e.length > 1) || !(1 === e.length && 'GROUP' === e[0].type && 'unknown' === e[0].id);
 }
-function f(e, t, n) {
-    let i = (0, l.Z)(),
-        [f, _] = r.useState(!1),
-        p = r.useMemo(
+function h(e, n, r, i) {
+    return !!_(d.ZP.getProps(r, i).groups) || (!(e.length < f.length) && !(e.length > n) && -1 !== e.indexOf(f) && ((0, l.b8)(r, i, u.KV), !0));
+}
+function p(e, n, r) {
+    let i = (0, c.Z)(),
+        [s, l] = a.useState(!1),
+        u = a.useMemo(
             () =>
-                a().debounce(
+                o().debounce(
                     (e) => {
-                        var r, a, l, f;
-                        if (((r = e), (a = i), (l = t), (f = n), d(u.ZP.getProps(l, f).groups) || (!(r.length < c.length) && !(r.length > a) && -1 !== r.indexOf(c) && ((0, s.b8)(l, f, o.KV), 1)))) _(!0);
+                        h(e, i, n, r) && l(!0);
                     },
                     200,
                     { maxWait: 500 }
                 ),
-            [i, t, n]
+            [i, n, r]
         );
-    r.useEffect(() => {
-        let r = u.ZP.getProps(t, n).groups;
-        if (null != t && !d(r) && !f)
+    a.useEffect(() => {
+        let i = d.ZP.getProps(n, r).groups;
+        if (null != n && !_(i) && !s)
             return (
-                e.addListener('text-changed', p),
+                e.addListener('text-changed', u),
                 () => {
-                    e.removeListener('text-changed', p), p.cancel();
+                    e.removeListener('text-changed', u), u.cancel();
                 }
             );
-    }, [f, p, e, t, n]);
+    }, [s, u, e, n, r]);
 }

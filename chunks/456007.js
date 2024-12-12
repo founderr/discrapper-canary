@@ -1,78 +1,98 @@
-let r, i, a;
-n.d(t, {
+let i, a, s;
+r.d(n, {
     AS: function () {
-        return f;
+        return I;
     },
     Dw: function () {
-        return _;
+        return T;
     },
     KF: function () {
-        return c;
+        return E;
     },
     OU: function () {
-        return u;
+        return _;
     },
     li: function () {
-        return d;
+        return v;
     }
-}),
-    n(757143),
-    n(47120),
-    n(512722);
-var s = n(911969),
-    o = n(702813),
-    l = n(226951);
-function u(e) {
-    return null == e ? [] : e.filter((t, n) => 'text' !== t.type || (n > 0 && n < e.length - 1 ? '' !== t.text : '' !== t.text.trim()));
+});
+var o = r(757143);
+var l = r(47120);
+var u = r(512722);
+var c = r(911969),
+    d = r(702813),
+    f = r(226951);
+function _(e) {
+    return null == e ? [] : e.filter((n, r) => 'text' !== n.type || (r > 0 && r < e.length - 1 ? '' !== n.text : '' !== n.text.trim()));
 }
-function c(e, t) {
-    let n = e[t],
-        r = '';
-    for (let e of n)
+function h(e, n) {
+    var r;
+    let i = _(e[n]);
+    return invariant(1 === i.length, 'Contains multiple values'), invariant((null === (r = i[0]) || void 0 === r ? void 0 : r.type) === 'text', 'First value is not text'), i[0].text === TRUE_OPTION_NAME;
+}
+r(689079);
+function p(e, n) {
+    var r;
+    let i = _(e[n]);
+    return invariant(1 === i.length, 'Contains multiple values'), invariant((null === (r = i[0]) || void 0 === r ? void 0 : r.type) === 'channelMention', 'First value is not a channel mention'), i[0].channelId;
+}
+function m(e, n) {
+    var r;
+    let i = _(e[n]);
+    return invariant(1 === i.length, 'Contains multiple values'), invariant((null === (r = i[0]) || void 0 === r ? void 0 : r.type) === 'userMention', 'First value is not a user mention'), i[0].userId;
+}
+function g(e, n) {
+    var r;
+    let i = _(e[n]);
+    return invariant(1 === i.length, 'Contains multiple values'), invariant((null === (r = i[0]) || void 0 === r ? void 0 : r.type) === 'roleMention', 'First value is not a role mention'), i[0].roleId;
+}
+function E(e, n) {
+    let r = e[n],
+        i = '';
+    for (let e of r)
         switch (e.type) {
             case 'text':
             case 'textMention':
-                r += e.text;
+                i += e.text;
                 break;
             case 'userMention':
-                r += '<@'.concat(e.userId, '>');
+                i += '<@'.concat(e.userId, '>');
                 break;
             case 'channelMention':
-                r += '<#'.concat(e.channelId, '>');
+                i += '<#'.concat(e.channelId, '>');
                 break;
             case 'roleMention':
-                r += '<@&'.concat(e.roleId, '>');
+                i += '<@&'.concat(e.roleId, '>');
                 break;
             case 'emoji':
-                r += e.surrogate;
+                i += e.surrogate;
                 break;
             case 'customEmoji':
-                r += '<'
+                i += '<'
                     .concat(e.animated ? 'a' : '', ':')
                     .concat(e.name.replace(/:/g, '').split('~')[0], ':')
                     .concat(e.emojiId, '>');
         }
+    return i;
+}
+function v(e, n) {
+    return null == e[n] ? null : E(e, n);
+}
+function I(e, n) {
+    if (e !== s) {
+        var r;
+        s = e;
+        let { group: n, decimal: o } = null !== (r = d.L[e]) && void 0 !== r ? r : d.L['en-US'];
+        (i = RegExp(f.Z.escape(n), 'g')), (a = RegExp(f.Z.escape(o), 'g'));
+    }
+    return n.replace(i, '').replace(a, '.');
+}
+function T(e, n) {
+    let r = {};
+    for (let a of n) {
+        var i;
+        let n = null === (i = e.options) || void 0 === i ? void 0 : i.find((e) => e.name === a.name);
+        if (a.type !== c.jw.ATTACHMENT && (null == n ? !void 0 : !n.autocomplete)) r[a.name] = a;
+    }
     return r;
 }
-function d(e, t) {
-    return null == e[t] ? null : c(e, t);
-}
-function f(e, t) {
-    if (e !== a) {
-        var n;
-        a = e;
-        let { group: t, decimal: s } = null !== (n = o.L[e]) && void 0 !== n ? n : o.L['en-US'];
-        (r = RegExp(l.Z.escape(t), 'g')), (i = RegExp(l.Z.escape(s), 'g'));
-    }
-    return t.replace(r, '').replace(i, '.');
-}
-function _(e, t) {
-    let n = {};
-    for (let i of t) {
-        var r;
-        let t = null === (r = e.options) || void 0 === r ? void 0 : r.find((e) => e.name === i.name);
-        if (i.type !== s.jw.ATTACHMENT && (null == t ? !void 0 : !t.autocomplete)) n[i.name] = i;
-    }
-    return n;
-}
-n(689079);

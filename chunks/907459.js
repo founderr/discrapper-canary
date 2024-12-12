@@ -1,144 +1,145 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return L;
+        return x;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(442837),
-    l = n(481060),
-    u = n(230711),
-    c = n(351773),
-    d = n(607070),
-    f = n(100527),
-    _ = n(906732),
-    p = n(639119),
-    h = n(197115),
-    m = n(587446),
-    g = n(594174),
-    E = n(626135),
-    v = n(74538),
-    I = n(94795),
-    T = n(327943),
-    b = n(539873),
-    S = n(981631),
-    y = n(921944),
-    A = n(474936),
-    N = n(388032),
-    C = n(45950);
-let R = () => {
-        var e, t, n;
-        let i = (0, o.e7)([g.default], () => v.ZP.isPremium(g.default.getCurrentUser())),
-            a = (0, p.N)(),
-            s = (null == a ? void 0 : null === (e = a.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === A.Si.TIER_2;
-        return (0, r.jsx)(h.Z, {
-            size: l.Button.Sizes.MEDIUM,
-            buttonText: i
-                ? N.intl.string(N.t.IJI7ys)
-                : s
-                  ? (0, v.Rt)({
-                        intervalType: null == a ? void 0 : null === (t = a.subscription_trial) || void 0 === t ? void 0 : t.interval,
-                        intervalCount: null == a ? void 0 : null === (n = a.subscription_trial) || void 0 === n ? void 0 : n.interval_count
+var i = r(200651),
+    a = r(192379),
+    s = r(120356),
+    o = r.n(s),
+    l = r(442837),
+    u = r(481060),
+    c = r(230711),
+    d = r(351773),
+    f = r(607070),
+    _ = r(100527),
+    h = r(906732),
+    p = r(639119),
+    m = r(197115),
+    g = r(587446),
+    E = r(594174),
+    v = r(626135),
+    I = r(74538),
+    T = r(94795),
+    b = r(327943),
+    y = r(539873),
+    S = r(981631),
+    A = r(921944),
+    N = r(474936),
+    C = r(388032),
+    R = r(45950);
+let O = () => {
+        var e, n, r;
+        let a = (0, l.e7)([E.default], () => I.ZP.isPremium(E.default.getCurrentUser())),
+            s = (0, p.N)(),
+            o = (null == s ? void 0 : null === (e = s.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === N.Si.TIER_2;
+        return (0, i.jsx)(m.Z, {
+            size: u.Button.Sizes.MEDIUM,
+            buttonText: a
+                ? C.intl.string(C.t.IJI7ys)
+                : o
+                  ? (0, I.Rt)({
+                        intervalType: null == s ? void 0 : null === (n = s.subscription_trial) || void 0 === n ? void 0 : n.interval,
+                        intervalCount: null == s ? void 0 : null === (r = s.subscription_trial) || void 0 === r ? void 0 : r.interval_count
                     })
-                  : N.intl.string(N.t.mr4K7O),
-            subscriptionTier: A.Si.TIER_2
+                  : C.intl.string(C.t.mr4K7O),
+            subscriptionTier: N.Si.TIER_2
         });
     },
-    O = (e) => {
-        let { markAsDismissed: t } = e,
-            n = () => {
-                null == t || t(y.L.DISMISS), (0, I.G8)();
+    D = (e) => {
+        let { markAsDismissed: n } = e,
+            r = () => {
+                null == n || n(A.L.DISMISS), (0, T.G8)();
             };
-        return (0, r.jsxs)('div', {
-            className: C.editorHeader,
+        return (0, i.jsxs)('div', {
+            className: R.editorHeader,
             children: [
-                (0, r.jsx)(l.Clickable, {
-                    className: C.closeCircleButton,
-                    onClick: () => n(),
-                    children: (0, r.jsx)(l.CircleXIcon, {
+                (0, i.jsx)(u.Clickable, {
+                    className: R.closeCircleButton,
+                    onClick: () => r(),
+                    children: (0, i.jsx)(u.CircleXIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: C.closeCircle
+                        className: R.closeCircle
                     })
                 }),
-                (0, r.jsxs)('div', {
-                    className: C.title,
+                (0, i.jsxs)('div', {
+                    className: R.title,
                     children: [
-                        (0, r.jsx)(l.Heading, {
+                        (0, i.jsx)(u.Heading, {
                             variant: 'heading-lg/extrabold',
-                            children: N.intl.string(N.t['hb/wEx'])
+                            children: C.intl.string(C.t['hb/wEx'])
                         }),
-                        (0, r.jsx)(m.Z, { className: C.premiumIcon })
+                        (0, i.jsx)(g.Z, { className: R.premiumIcon })
                     ]
                 })
             ]
         });
     },
-    D = (e) => {
-        let { isCoachmark: t, markAsDismissed: n } = e,
-            i = (0, o.e7)([T.Z], () => T.Z.isUpsellPreview);
-        return (0, r.jsxs)('div', {
-            className: C.editorFooter,
+    L = (e) => {
+        let { isCoachmark: n, markAsDismissed: r } = e,
+            a = (0, l.e7)([b.Z], () => b.Z.isUpsellPreview),
+            s = () => {
+                null == r || r(A.L.DISMISS), (0, T.G8)(), !n && c.Z.open();
+            };
+        return (0, i.jsxs)('div', {
+            className: R.editorFooter,
             children: [
-                i && (0, r.jsx)(R, {}),
-                (0, r.jsx)(l.Button, {
-                    className: C.footerButton,
-                    onClick: () => {
-                        null == n || n(y.L.DISMISS), (0, I.G8)(), !t && u.Z.open();
-                    },
-                    color: l.Button.Colors.PRIMARY,
-                    size: l.Button.Sizes.MEDIUM,
-                    children: i || t ? N.intl.string(N.t['dqH+qq']) : N.intl.string(N.t.Olc2Ky)
+                a && (0, i.jsx)(O, {}),
+                (0, i.jsx)(u.Button, {
+                    className: R.footerButton,
+                    onClick: s,
+                    color: u.Button.Colors.PRIMARY,
+                    size: u.Button.Sizes.MEDIUM,
+                    children: a || n ? C.intl.string(C.t['dqH+qq']) : C.intl.string(C.t.Olc2Ky)
                 })
             ]
         });
     };
-function L(e) {
-    let { isCoachmark: t, markAsDismissed: n } = e,
-        { analyticsLocations: a } = (0, _.ZP)(f.Z.APP_ICON_EDITOR),
-        u = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
+function x(e) {
+    let { isCoachmark: n, markAsDismissed: r } = e,
+        { analyticsLocations: s } = (0, h.ZP)(_.Z.APP_ICON_EDITOR),
+        c = (0, l.e7)([E.default], () => E.default.getCurrentUser()),
         {
             isUpsellPreview: p,
-            isEditorOpen: h,
-            shouldEditorAnimate: m
-        } = (0, o.cj)([T.Z, d.Z], () => ({
-            isUpsellPreview: T.Z.isUpsellPreview,
-            isEditorOpen: T.Z.isEditorOpen,
-            shouldEditorAnimate: t && !d.Z.useReducedMotion
+            isEditorOpen: m,
+            shouldEditorAnimate: g
+        } = (0, l.cj)([b.Z, f.Z], () => ({
+            isUpsellPreview: b.Z.isUpsellPreview,
+            isEditorOpen: b.Z.isEditorOpen,
+            shouldEditorAnimate: n && !f.Z.useReducedMotion
         }));
-    i.useEffect(() => {
+    a.useEffect(() => {
         if (!!p)
-            E.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: A.cd.APP_ICON_UPSELL,
-                location_stack: a
+            v.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: N.cd.APP_ICON_UPSELL,
+                location_stack: s
             });
-    }, [p, a]);
-    let v = (0, c.Z)(null, p ? I.O7 : S.dG4);
-    return (i.useEffect(() => {
-        if (!!p && !h) return I.O7;
-    }, [p, h]),
-    null == u)
+    }, [p, s]);
+    let I = (0, d.Z)(null, p ? T.O7 : S.dG4);
+    return (a.useEffect(() => {
+        if (!!p && !m) return T.O7;
+    }, [p, m]),
+    null == c)
         ? null
-        : (0, r.jsx)(_.Gt, {
-              value: a,
-              children: (0, r.jsx)('div', {
-                  ref: v,
-                  className: s()(C.editor, m ? C.editorAnimate : null),
-                  children: (0, r.jsxs)(l.HeadingLevel, {
+        : (0, i.jsx)(h.Gt, {
+              value: s,
+              children: (0, i.jsx)('div', {
+                  ref: I,
+                  className: o()(R.editor, g ? R.editorAnimate : null),
+                  children: (0, i.jsxs)(u.HeadingLevel, {
                       children: [
-                          (0, r.jsx)(O, { markAsDismissed: n }),
-                          (0, r.jsx)(l.Scroller, {
-                              className: C.editorBody,
-                              children: (0, r.jsx)(b.Z, {
-                                  className: C.selectionGroup,
+                          (0, i.jsx)(D, { markAsDismissed: r }),
+                          (0, i.jsx)(u.Scroller, {
+                              className: R.editorBody,
+                              children: (0, i.jsx)(y.Z, {
+                                  className: R.selectionGroup,
                                   isEditor: !0
                               })
                           }),
-                          (0, r.jsx)(D, {
-                              markAsDismissed: n,
-                              isCoachmark: t
+                          (0, i.jsx)(L, {
+                              markAsDismissed: r,
+                              isCoachmark: n
                           })
                       ]
                   })

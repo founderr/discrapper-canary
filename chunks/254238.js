@@ -1,247 +1,244 @@
-n.d(t, {
+r.d(n, {
     LO: function () {
-        return A;
+        return O;
     },
     On: function () {
-        return S;
-    },
-    Vv: function () {
-        return T;
-    },
-    _: function () {
-        return b;
-    },
-    bp: function () {
         return N;
     },
+    Vv: function () {
+        return S;
+    },
+    _: function () {
+        return A;
+    },
+    bp: function () {
+        return D;
+    },
     ef: function () {
-        return I;
+        return y;
     },
     s6: function () {
-        return v;
+        return b;
     },
     sh: function () {
-        return O;
+        return w;
     }
-}),
-    n(653041),
-    n(47120);
-var r = n(434179),
-    i = n(771649),
-    a = n(544891),
-    s = n(570140),
-    o = n(668781),
-    l = n(340332),
-    u = n(19780),
-    c = n(797258),
-    d = n(626135),
-    f = n(960048),
-    _ = n(607214),
-    p = n(258609),
-    h = n(893387),
-    m = n(981631),
-    g = n(388032);
-function E(e, t) {
-    var n, r;
-    d.default.track(m.rMx.REMOTE_COMMAND_SENT, {
+});
+var i = r(653041);
+var a = r(47120);
+var s = r(434179),
+    o = r(771649),
+    l = r(544891),
+    u = r(570140),
+    c = r(668781),
+    d = r(340332),
+    f = r(19780),
+    _ = r(797258),
+    h = r(626135),
+    p = r(960048),
+    m = r(607214),
+    g = r(258609),
+    E = r(893387),
+    v = r(981631),
+    I = r(388032);
+function T(e, n) {
+    var r, i;
+    h.default.track(v.rMx.REMOTE_COMMAND_SENT, {
         command_type: e,
-        remote_platform: null === (r = c.Z.getSessionById(t)) || void 0 === r ? void 0 : null === (n = r.clientInfo) || void 0 === n ? void 0 : n.os
+        remote_platform: null === (i = _.Z.getSessionById(n)) || void 0 === i ? void 0 : null === (r = i.clientInfo) || void 0 === r ? void 0 : r.os
     });
 }
-async function v() {
-    let e = p.Z.getAwaitingRemoteSessionInfo(),
-        t = null == e ? void 0 : e.nonce;
-    s.Z.dispatch({ type: 'REMOTE_SESSION_DISCONNECT' });
-    let n = [];
-    ((null == e ? void 0 : e.type) === m.ABu.PLAYSTATION || (null == e ? void 0 : e.type) === m.ABu.PLAYSTATION_STAGING) && (null == e ? void 0 : e.commandId) != null && (null == e ? void 0 : e.deviceId) != null && n.push(R(e.type, e.deviceId, e.commandId)),
-        null != t &&
-            n.push(
-                (function (e) {
-                    return a.tn.del({
-                        url: m.ANM.CONNECT_REQUEST(e),
-                        rejectWithError: !1
-                    });
-                })(t)
-            );
+async function b() {
+    let e = g.Z.getAwaitingRemoteSessionInfo(),
+        n = null == e ? void 0 : e.nonce;
+    u.Z.dispatch({ type: 'REMOTE_SESSION_DISCONNECT' });
+    let r = [];
+    ((null == e ? void 0 : e.type) === v.ABu.PLAYSTATION || (null == e ? void 0 : e.type) === v.ABu.PLAYSTATION_STAGING) && (null == e ? void 0 : e.commandId) != null && (null == e ? void 0 : e.deviceId) != null && r.push(x(e.type, e.deviceId, e.commandId)), null != n && r.push(R(n));
     try {
-        await Promise.all(n);
+        await Promise.all(r);
     } catch (e) {
-        o.Z.show({
-            title: g.intl.string(g.t.LNhXcH),
-            body: g.intl.string(g.t.QnKxtL)
+        c.Z.show({
+            title: I.intl.string(I.t.LNhXcH),
+            body: I.intl.string(I.t.QnKxtL)
         });
     }
 }
-function I(e) {
-    s.Z.dispatch({
+function y(e) {
+    u.Z.dispatch({
         type: 'REMOTE_SESSION_CONNECT',
         sessionId: e
     });
 }
-function T(e, t) {
-    let { selfMute: n, selfDeaf: r } = t;
-    s.Z.dispatch({
+function S(e, n) {
+    let { selfMute: r, selfDeaf: i } = n;
+    u.Z.dispatch({
         type: 'REMOTE_COMMAND',
         sessionId: e,
         payload: {
             type: 'VOICE_STATE_UPDATE',
-            self_mute: n,
-            self_deaf: r
+            self_mute: r,
+            self_deaf: i
         }
     }),
-        E('VOICE_STATE_UPDATE', e);
+        T('VOICE_STATE_UPDATE', e);
 }
-function b(e) {
-    s.Z.dispatch({
+function A(e) {
+    u.Z.dispatch({
         type: 'REMOTE_COMMAND',
         sessionId: e,
         payload: { type: 'DISCONNECT' }
     }),
-        E('DISCONNECT', e),
-        v();
+        T('DISCONNECT', e),
+        b();
 }
-function S(e, t, n, r) {
-    let i = (0, l.z)(n);
-    null != i &&
-        (s.Z.dispatch({
+function N(e, n, r, i) {
+    let a = (0, d.z)(r);
+    null != a &&
+        (u.Z.dispatch({
             type: 'REMOTE_COMMAND',
             sessionId: e,
             payload: {
                 type: 'AUDIO_SETTINGS_UPDATE',
-                context: i,
-                id: t,
-                ...r
+                context: a,
+                id: n,
+                ...i
             }
         }),
-        E('AUDIO_SETTINGS_UPDATE', e));
+        T('AUDIO_SETTINGS_UPDATE', e));
 }
-async function y() {
+async function C() {
     let e;
     try {
-        let t = null != u.Z.getRTCConnectionId() ? i.o.TRANSFER_EXISTING_CALL : i.o.CREATE_NEW_CALL;
+        let n = null != f.Z.getRTCConnectionId() ? o.o.TRANSFER_EXISTING_CALL : o.o.CREATE_NEW_CALL;
         e = (
-            await a.tn.post({
-                url: m.ANM.CONNECT_REQUEST_CREATE,
-                body: { analytics_properties: { handoff_type: t } },
+            await l.tn.post({
+                url: v.ANM.CONNECT_REQUEST_CREATE,
+                body: { analytics_properties: { handoff_type: n } },
                 rejectWithError: !1
             })
         ).body.nonce;
     } catch (e) {
-        f.Z.captureException(e);
+        p.Z.captureException(e);
     }
     return e;
 }
-async function A(e) {
-    let t;
-    s.Z.dispatch({
+function R(e) {
+    return l.tn.del({
+        url: v.ANM.CONNECT_REQUEST(e),
+        rejectWithError: !1
+    });
+}
+async function O(e) {
+    let n;
+    u.Z.dispatch({
         type: 'GAME_CONSOLE_FETCH_DEVICES_START',
         platform: e
     });
     try {
-        t = await a.tn.get({
-            url: m.ANM.CONSOLES_DEVICES(e),
+        n = await l.tn.get({
+            url: v.ANM.CONSOLES_DEVICES(e),
             rejectWithError: !1
         });
-    } catch (t) {
+    } catch (n) {
         throw (
-            (s.Z.dispatch({
+            (u.Z.dispatch({
                 type: 'GAME_CONSOLE_FETCH_DEVICES_FAIL',
                 platform: e,
-                error: t
+                error: n
             }),
-            t)
+            n)
         );
     }
-    let n = t.body.devices;
+    let r = n.body.devices;
     return (
-        s.Z.dispatch({
+        u.Z.dispatch({
             type: 'GAME_CONSOLE_FETCH_DEVICES_SUCCESS',
             platform: e,
-            devices: n
+            devices: r
         }),
-        n
+        r
     );
 }
-function N(e, t) {
-    s.Z.dispatch({
+function D(e, n) {
+    u.Z.dispatch({
         type: 'GAME_CONSOLE_SELECT_DEVICE',
         platform: e,
-        deviceId: t
+        deviceId: n
     });
 }
-async function C(e, t, n, i) {
-    let o;
-    s.Z.dispatch({
+async function L(e, n, r, i) {
+    let a;
+    u.Z.dispatch({
         type: 'GAME_CONSOLE_DEVICE_SEND_COMMAND_START',
         platform: e
     });
     try {
-        o = await a.tn.post({
-            url: m.ANM.CONSOLES_DEVICES_COMMANDS(e, t),
+        a = await l.tn.post({
+            url: v.ANM.CONSOLES_DEVICES_COMMANDS(e, n),
             body: {
-                command: r.n.CONNECT_VOICE,
-                channel_id: n.id,
-                guild_id: n.guild_id,
+                command: s.n.CONNECT_VOICE,
+                channel_id: r.id,
+                guild_id: r.guild_id,
                 nonce: i
             },
             rejectWithError: !1
         });
-    } catch (t) {
+    } catch (n) {
         throw (
-            (s.Z.dispatch({
+            (u.Z.dispatch({
                 type: 'GAME_CONSOLE_DEVICE_SEND_COMMAND_FAIL',
                 platform: e,
-                error: t
+                error: n
             }),
-            t)
+            n)
         );
     }
-    let l = o.body.id;
+    let o = a.body.id;
     return (
-        s.Z.dispatch({
+        u.Z.dispatch({
             type: 'WAIT_FOR_REMOTE_SESSION',
             sessionType: e,
             nonce: i,
-            channelId: n.id,
-            deviceId: t,
-            commandId: l
+            channelId: r.id,
+            deviceId: n,
+            commandId: o
         }),
-        l
+        o
     );
 }
-async function R(e, t, n) {
-    s.Z.dispatch({
+async function x(e, n, r) {
+    u.Z.dispatch({
         type: 'GAME_CONSOLE_DEVICE_CANCEL_COMMAND_START',
         platform: e,
-        deviceId: t,
-        commandId: n
+        deviceId: n,
+        commandId: r
     });
     try {
-        await a.tn.del({
-            url: m.ANM.CONSOLES_DEVICES_COMMAND(e, t, n),
+        await l.tn.del({
+            url: v.ANM.CONSOLES_DEVICES_COMMAND(e, n, r),
             rejectWithError: !1
         });
-    } catch (r) {
+    } catch (i) {
         throw (
-            (s.Z.dispatch({
+            (u.Z.dispatch({
                 type: 'GAME_CONSOLE_DEVICE_CANCEL_COMMAND_FAIL',
                 platform: e,
-                deviceId: t,
-                commandId: n,
-                error: r
+                deviceId: n,
+                commandId: r,
+                error: i
             }),
-            r)
+            i)
         );
     }
-    s.Z.dispatch({
+    u.Z.dispatch({
         type: 'GAME_CONSOLE_DEVICE_CANCEL_COMMAND_SUCCESS',
         platform: e,
-        deviceId: t,
-        commandId: n
+        deviceId: n,
+        commandId: r
     });
 }
-async function O(e, t, n) {
-    await _.Z.maybeShowPTTAlert(e), await v();
-    let r = await y();
-    await C(e, t, n, r), (0, h.Z)(n.id, e);
+async function w(e, n, r) {
+    await m.Z.maybeShowPTTAlert(e), await b();
+    let i = await C();
+    await L(e, n, r, i), (0, E.Z)(r.id, e);
 }

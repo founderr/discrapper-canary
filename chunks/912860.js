@@ -1,51 +1,54 @@
-n.d(t, {
+r.d(n, {
     b: function () {
-        return o;
+        return d;
     }
 });
-var r,
-    i,
-    a = n(836560);
-((r = i || (i = {})).VERTICAL = 'vertical'), (r.HORIZONTAL = 'horizontal');
-let s = {
+var i,
+    a = r(836560);
+let s = 160,
+    o = 500;
+!(function (e) {
+    (e.VERTICAL = 'vertical'), (e.HORIZONTAL = 'horizontal');
+})(i || (i = {}));
+let l = {
     open: !1,
     orientation: null
 };
-class o extends a.EventEmitter {
+function u() {
+    try {
+        return window.outerWidth - window.innerWidth;
+    } catch (e) {
+        return 0;
+    }
+}
+function c() {
+    try {
+        return window.outerHeight - window.innerHeight;
+    } catch (e) {
+        return 0;
+    }
+}
+class d extends a.EventEmitter {
     get orientations() {
         return Object.values(i);
     }
     get state() {
-        return s;
+        return l;
     }
     check() {
-        let e =
-                (function () {
-                    try {
-                        return window.outerWidth - window.innerWidth;
-                    } catch (e) {
-                        return 0;
-                    }
-                })() > 160,
-            t =
-                (function () {
-                    try {
-                        return window.outerHeight - window.innerHeight;
-                    } catch (e) {
-                        return 0;
-                    }
-                })() > 160,
-            n = e ? 'vertical' : 'horizontal';
-        if (!(t && e) && (e || t)) {
-            let e = s.open;
-            (s = {
+        let e = u() > s,
+            n = c() > s,
+            r = e ? 'vertical' : 'horizontal';
+        if (!(n && e) && (e || n)) {
+            let e = l.open;
+            (l = {
                 open: !0,
-                orientation: n
+                orientation: r
             }),
-                (!e || s.orientation !== n) && this.emit('changed', s);
-        } else s.open && ((s.open = !1), this.emit('changed', s));
+                (!e || l.orientation !== r) && this.emit('changed', l);
+        } else l.open && ((l.open = !1), this.emit('changed', l));
     }
     constructor() {
-        super(), setInterval(() => this.check(), 500);
+        super(), setInterval(() => this.check(), o);
     }
 }

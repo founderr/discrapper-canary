@@ -1,18 +1,19 @@
-n.d(t, {
+r.d(n, {
     F: function () {
-        return a;
+        return s;
     }
 });
-var r = n(573654),
-    i = n(964742);
-function a(e) {
+var i = r(573654),
+    a = r(964742);
+function s(e) {
     return function () {
-        var t = e.getMonitor(),
-            n = e.getRegistry();
-        (function (e) {
-            (0, r.k)(e.isDragging(), 'Cannot call endDrag while not dragging.');
-        })(t);
-        var a = t.getSourceId();
-        return null != a && (n.getSource(a, !0).endDrag(t, a), n.unpinSource()), { type: i.Bs };
+        var n = e.getMonitor(),
+            r = e.getRegistry();
+        o(n);
+        var i = n.getSourceId();
+        return null != i && (r.getSource(i, !0).endDrag(n, i), r.unpinSource()), { type: a.Bs };
     };
+}
+function o(e) {
+    (0, i.k)(e.isDragging(), 'Cannot call endDrag while not dragging.');
 }

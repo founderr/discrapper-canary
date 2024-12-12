@@ -1,42 +1,39 @@
-n.d(t, {
-    r: function () {
-        return a;
-    }
-});
-function r(e, t) {
-    for (var n = 0; n < t.length; n++) {
-        var r = t[n];
-        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+function i(e, n) {
+    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+}
+function a(e, n) {
+    for (var r = 0; r < n.length; r++) {
+        var i = n[r];
+        (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
     }
 }
-function i(e, t, n) {
+function s(e, n, r) {
+    return n && a(e.prototype, n), r && a(e, r), e;
+}
+function o(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-var a = (function () {
-    var e, t, n;
-    function a(e, t) {
-        !(function (e, t) {
-            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-        })(this, a),
-            i(this, 'ownerDocument', null),
-            i(this, 'globalContext', void 0),
-            i(this, 'optionsArgs', void 0),
-            (this.globalContext = e),
-            (this.optionsArgs = t);
+r.d(n, {
+    r: function () {
+        return l;
+    }
+});
+var l = (function () {
+    function e(n, r) {
+        i(this, e), o(this, 'ownerDocument', null), o(this, 'globalContext', void 0), o(this, 'optionsArgs', void 0), (this.globalContext = n), (this.optionsArgs = r);
     }
     return (
-        (e = a),
-        (t = [
+        s(e, [
             {
                 key: 'window',
                 get: function () {
@@ -58,7 +55,6 @@ var a = (function () {
                 }
             }
         ]),
-        r(e.prototype, t),
-        a
+        e
     );
 })();

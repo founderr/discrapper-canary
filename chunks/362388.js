@@ -1,13 +1,14 @@
-var r = n(4609),
-    i = Math.max;
-e.exports = function (e, t, n) {
+var i = r(4609),
+    a = Math.max;
+function s(e, n, r) {
     return (
-        (t = i(void 0 === t ? e.length - 1 : t, 0)),
+        (n = a(void 0 === n ? e.length - 1 : n, 0)),
         function () {
-            for (var a = arguments, s = -1, o = i(a.length - t, 0), l = Array(o); ++s < o; ) l[s] = a[t + s];
-            s = -1;
-            for (var u = Array(t + 1); ++s < t; ) u[s] = a[s];
-            return (u[t] = n(l)), r(e, this, u);
+            for (var s = arguments, o = -1, l = a(s.length - n, 0), u = Array(l); ++o < l; ) u[o] = s[n + o];
+            o = -1;
+            for (var c = Array(n + 1); ++o < n; ) c[o] = s[o];
+            return (c[n] = r(u)), i(e, this, c);
         }
     );
-};
+}
+e.exports = s;

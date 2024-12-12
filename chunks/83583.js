@@ -1,3 +1,4 @@
-e.exports = function (e, t) {
-    return null != e && t in Object(e);
-};
+function n(e, n) {
+    return null != e && n in Object(e);
+}
+e.exports = n;

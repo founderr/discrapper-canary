@@ -1,54 +1,62 @@
-var r =
+var i =
         Object.assign ||
         function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+            for (var n = 1; n < arguments.length; n++) {
+                var r = arguments[n];
+                for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
             }
             return e;
         },
-    i = (function () {
-        function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-                var r = t[n];
-                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+    a = 'src/createAnimatedComponent.js',
+    s = (function () {
+        function e(e, n) {
+            for (var r = 0; r < n.length; r++) {
+                var i = n[r];
+                (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
             }
         }
-        return function (t, n, r) {
-            return n && e(t.prototype, n), r && e(t, r), t;
+        return function (n, r, i) {
+            return r && e(n.prototype, r), i && e(n, i), n;
         };
-    })(),
-    a = n(192379),
-    s = n(724027),
-    o = n(457958);
-e.exports = function (e) {
-    var t = 'node',
-        n = (function (n) {
-            function l() {
-                return (
-                    !(function (e, t) {
-                        if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-                    })(this, l),
-                    (function (e, t) {
-                        if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-                        return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
-                    })(this, (l.__proto__ || Object.getPrototypeOf(l)).apply(this, arguments))
-                );
+    })();
+function o(e, n) {
+    var r = {};
+    for (var i in e) {
+        if (!(n.indexOf(i) >= 0)) Object.prototype.hasOwnProperty.call(e, i) && (r[i] = e[i]);
+    }
+    return r;
+}
+function l(e, n) {
+    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+}
+function u(e, n) {
+    if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
+}
+function c(e, n) {
+    if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
+    (e.prototype = Object.create(n && n.prototype, {
+        constructor: {
+            value: e,
+            enumerable: !1,
+            writable: !0,
+            configurable: !0
+        }
+    })),
+        n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
+}
+var d = r(192379),
+    f = r(724027),
+    _ = r(457958);
+function h(e) {
+    var n = 'node',
+        r = (function (r) {
+            function h() {
+                return l(this, h), u(this, (h.__proto__ || Object.getPrototypeOf(h)).apply(this, arguments));
             }
             return (
-                !(function (e, t) {
-                    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-                    (e.prototype = Object.create(t && t.prototype, {
-                        constructor: {
-                            value: e,
-                            enumerable: !1,
-                            writable: !0,
-                            configurable: !0
-                        }
-                    })),
-                        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
-                })(l, n),
-                i(l, [
+                c(h, r),
+                s(h, [
                     {
                         key: 'componentWillUnmount',
                         value: function () {
@@ -58,7 +66,7 @@ e.exports = function (e) {
                     {
                         key: 'setNativeProps',
                         value: function (e) {
-                            !1 === o.current(this.refs[t], e, this) && this.forceUpdate();
+                            !1 === _.current(this.refs[n], e, this) && this.forceUpdate();
                         }
                     },
                     {
@@ -70,12 +78,12 @@ e.exports = function (e) {
                     {
                         key: 'attachProps',
                         value: function (e) {
-                            var n = this,
-                                r = this._propsAnimated;
-                            (this._propsAnimated = new s(e, function () {
-                                !1 === o.current(n.refs[t], n._propsAnimated.__getAnimatedValue(), n) && n.forceUpdate();
-                            })),
-                                r && r.__detach();
+                            var r = this,
+                                i = this._propsAnimated,
+                                a = function () {
+                                    !1 === _.current(r.refs[n], r._propsAnimated.__getAnimatedValue(), r) && r.forceUpdate();
+                                };
+                            (this._propsAnimated = new f(e, a)), i && i.__detach();
                         }
                     },
                     {
@@ -87,22 +95,16 @@ e.exports = function (e) {
                     {
                         key: 'render',
                         value: function () {
-                            var n = this._propsAnimated.__getValue(),
-                                i = n.style,
-                                s = (function (e, t) {
-                                    var n = {};
-                                    for (var r in e) {
-                                        if (!(t.indexOf(r) >= 0)) Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]);
-                                    }
-                                    return n;
-                                })(n, ['style']);
-                            return a.createElement(
+                            var r = this._propsAnimated.__getValue(),
+                                s = r.style,
+                                l = o(r, ['style']);
+                            return d.createElement(
                                 e,
-                                r({}, s, {
-                                    style: o.transformStyles(i),
-                                    ref: t,
+                                i({}, l, {
+                                    style: _.transformStyles(s),
+                                    ref: n,
                                     __source: {
-                                        fileName: 'src/createAnimatedComponent.js',
+                                        fileName: a,
                                         lineNumber: 78
                                     }
                                 })
@@ -110,15 +112,16 @@ e.exports = function (e) {
                         }
                     }
                 ]),
-                l
+                h
             );
-        })(a.Component);
+        })(d.Component);
     return (
-        (n.propTypes = {
-            style: function (t, n, r) {
+        (r.propTypes = {
+            style: function (n, r, i) {
                 if (!e.propTypes) return;
             }
         }),
-        n
+        r
     );
-};
+}
+e.exports = h;

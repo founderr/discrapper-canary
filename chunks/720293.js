@@ -1,49 +1,51 @@
-n.d(t, {
+r.d(n, {
     i: function () {
         return i;
     },
     z: function () {
-        return o;
+        return l;
     }
 });
-var r,
-    i,
-    a = n(475595),
-    s = n(46140);
-((r = i || (i = {})).VIDEO_PLAYER_VIDEO = 'video_player_video'), (r.VIDEO_PLAYER_VIDEO_LOW_RES = 'video_player_video_low_res'), (r.VIDEO_PLAYER_THUMBNAIL = 'video_player_thumbnail'), (r.VIDEO_PLAYER_CAPTION = 'video_player_caption'), (r.VIDEO_PLAYER_TRANSCRIPT = 'video_player_transcript'), (r.QUEST_BAR_PREVIEW_VIDEO = 'quest_bar_preview_video'), (r.QUEST_BAR_PREVIEW_THUMBNAIL = 'quest_bar_preview_thumbnail'), (r.QUEST_HOME_VIDEO = 'quest_home_video');
-function o(e, t) {
-    let n = (function (e, t) {
-        var n, r, i, a, s, o, l, u;
-        switch (e) {
-            case 'video_player_video':
-                return null === (n = t.config.videoMetadata) || void 0 === n ? void 0 : n.assets.videoPlayerVideo;
-            case 'video_player_video_low_res':
-                return null === (r = t.config.videoMetadata) || void 0 === r ? void 0 : r.assets.videoPlayerVideoLowRes;
-            case 'video_player_thumbnail':
-                return null === (i = t.config.videoMetadata) || void 0 === i ? void 0 : i.assets.videoPlayerThumbnail;
-            case 'video_player_caption':
-                return null === (a = t.config.videoMetadata) || void 0 === a ? void 0 : a.assets.videoPlayerCaption;
-            case 'video_player_transcript':
-                return null === (s = t.config.videoMetadata) || void 0 === s ? void 0 : s.assets.videoPlayerTranscript;
-            case 'quest_bar_preview_video':
-                return null === (o = t.config.videoMetadata) || void 0 === o ? void 0 : o.assets.questBarPreviewVideo;
-            case 'quest_bar_preview_thumbnail':
-                return null === (l = t.config.videoMetadata) || void 0 === l ? void 0 : l.assets.questBarPreviewThumbnail;
-            case 'quest_home_video':
-                return null === (u = t.config.videoMetadata) || void 0 === u ? void 0 : u.assets.questHomeVideo;
-            default:
-                return;
-        }
-    })(e, t);
-    if (null == n) return null;
-    let r = t.config.features.includes(s.S7.QUESTS_CDN),
-        i = (0, a.Dm)(n);
-    if (null == i) return null;
-    let o = (0, a.Q2)(t.id, n, { newCdn: r }),
-        l = a.N0.includes(i);
+var i,
+    a = r(475595),
+    s = r(46140);
+function o(e, n) {
+    var r, i, a, s, o, l, u, c;
+    switch (e) {
+        case 'video_player_video':
+            return null === (r = n.config.videoMetadata) || void 0 === r ? void 0 : r.assets.videoPlayerVideo;
+        case 'video_player_video_low_res':
+            return null === (i = n.config.videoMetadata) || void 0 === i ? void 0 : i.assets.videoPlayerVideoLowRes;
+        case 'video_player_thumbnail':
+            return null === (a = n.config.videoMetadata) || void 0 === a ? void 0 : a.assets.videoPlayerThumbnail;
+        case 'video_player_caption':
+            return null === (s = n.config.videoMetadata) || void 0 === s ? void 0 : s.assets.videoPlayerCaption;
+        case 'video_player_transcript':
+            return null === (o = n.config.videoMetadata) || void 0 === o ? void 0 : o.assets.videoPlayerTranscript;
+        case 'quest_bar_preview_video':
+            return null === (l = n.config.videoMetadata) || void 0 === l ? void 0 : l.assets.questBarPreviewVideo;
+        case 'quest_bar_preview_thumbnail':
+            return null === (u = n.config.videoMetadata) || void 0 === u ? void 0 : u.assets.questBarPreviewThumbnail;
+        case 'quest_home_video':
+            return null === (c = n.config.videoMetadata) || void 0 === c ? void 0 : c.assets.questHomeVideo;
+        default:
+            return;
+    }
+}
+function l(e, n) {
+    let r = o(e, n);
+    if (null == r) return null;
+    let i = n.config.features.includes(s.S7.QUESTS_CDN),
+        l = (0, a.Dm)(r);
+    if (null == l) return null;
+    let u = (0, a.Q2)(n.id, r, { newCdn: i }),
+        c = a.N0.includes(l);
     return {
-        url: o,
-        mimetype: i,
-        isAnimated: l
+        url: u,
+        mimetype: l,
+        isAnimated: c
     };
 }
+!(function (e) {
+    (e.VIDEO_PLAYER_VIDEO = 'video_player_video'), (e.VIDEO_PLAYER_VIDEO_LOW_RES = 'video_player_video_low_res'), (e.VIDEO_PLAYER_THUMBNAIL = 'video_player_thumbnail'), (e.VIDEO_PLAYER_CAPTION = 'video_player_caption'), (e.VIDEO_PLAYER_TRANSCRIPT = 'video_player_transcript'), (e.QUEST_BAR_PREVIEW_VIDEO = 'quest_bar_preview_video'), (e.QUEST_BAR_PREVIEW_THUMBNAIL = 'quest_bar_preview_thumbnail'), (e.QUEST_HOME_VIDEO = 'quest_home_video');
+})(i || (i = {}));

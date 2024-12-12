@@ -1,15 +1,17 @@
-var r = n(924102),
-    i = n(675717);
-t.Z = function (e, t, n) {
-    var a = !0,
-        s = !0;
-    if ('function' != typeof e) throw TypeError('Expected a function');
+var i = r(924102),
+    a = r(675717),
+    s = 'Expected a function';
+function o(e, n, r) {
+    var o = !0,
+        l = !0;
+    if ('function' != typeof e) throw TypeError(s);
     return (
-        (0, i.Z)(n) && ((a = 'leading' in n ? !!n.leading : a), (s = 'trailing' in n ? !!n.trailing : s)),
-        (0, r.Z)(e, t, {
-            leading: a,
-            maxWait: t,
-            trailing: s
+        (0, a.Z)(r) && ((o = 'leading' in r ? !!r.leading : o), (l = 'trailing' in r ? !!r.trailing : l)),
+        (0, i.Z)(e, n, {
+            leading: o,
+            maxWait: n,
+            trailing: l
         })
     );
-};
+}
+n.Z = o;

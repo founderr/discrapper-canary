@@ -1,11 +1,12 @@
-var r = n(704446);
-e.exports = function (e, t, n) {
-    '__proto__' == t && r
-        ? r(e, t, {
+var i = r(704446);
+function a(e, n, r) {
+    '__proto__' == n && i
+        ? i(e, n, {
               configurable: !0,
               enumerable: !0,
-              value: n,
+              value: r,
               writable: !0
           })
-        : (e[t] = n);
-};
+        : (e[n] = r);
+}
+e.exports = a;

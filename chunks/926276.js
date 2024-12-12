@@ -1,8 +1,8 @@
-e.exports = function (e) {
-    let t = e.regex.either(...['(?:NeedsTeXFormat|RequirePackage|GetIdInfo)', 'Provides(?:Expl)?(?:Package|Class|File)', '(?:DeclareOption|ProcessOptions)', '(?:documentclass|usepackage|input|include)', 'makeat(?:letter|other)', 'ExplSyntax(?:On|Off)', '(?:new|renew|provide)?command', '(?:re)newenvironment', '(?:New|Renew|Provide|Declare)(?:Expandable)?DocumentCommand', '(?:New|Renew|Provide|Declare)DocumentEnvironment', '(?:(?:e|g|x)?def|let)', '(?:begin|end)', '(?:part|chapter|(?:sub){0,2}section|(?:sub)?paragraph)', 'caption', '(?:label|(?:eq|page|name)?ref|(?:paren|foot|super)?cite)', '(?:alpha|beta|[Gg]amma|[Dd]elta|(?:var)?epsilon|zeta|eta|[Tt]heta|vartheta)', '(?:iota|(?:var)?kappa|[Ll]ambda|mu|nu|[Xx]i|[Pp]i|varpi|(?:var)rho)', '(?:[Ss]igma|varsigma|tau|[Uu]psilon|[Pp]hi|varphi|chi|[Pp]si|[Oo]mega)', '(?:frac|sum|prod|lim|infty|times|sqrt|leq|geq|left|right|middle|[bB]igg?)', '(?:[lr]angle|q?quad|[lcvdi]?dots|d?dot|hat|tilde|bar)'].map((e) => e + '(?![a-zA-Z@:_])')),
-        n = new RegExp(['(?:__)?[a-zA-Z]{2,}_[a-zA-Z](?:_?[a-zA-Z])+:[a-zA-Z]*', '[lgc]__?[a-zA-Z](?:_?[a-zA-Z])*_[a-zA-Z]{2,}', '[qs]__?[a-zA-Z](?:_?[a-zA-Z])+', 'use(?:_i)?:[a-zA-Z]*', '(?:else|fi|or):', '(?:if|cs|exp):w', '(?:hbox|vbox):n', '::[a-zA-Z]_unbraced', '::[a-zA-Z:]'].map((e) => e + '(?![a-zA-Z:_])').join('|')),
-        r = [{ begin: /\^{6}[0-9a-f]{6}/ }, { begin: /\^{5}[0-9a-f]{5}/ }, { begin: /\^{4}[0-9a-f]{4}/ }, { begin: /\^{3}[0-9a-f]{3}/ }, { begin: /\^{2}[0-9a-f]{2}/ }, { begin: /\^{2}[\u0000-\u007f]/ }],
-        i = [
+function n(e) {
+    let n = e.regex.either(...['(?:NeedsTeXFormat|RequirePackage|GetIdInfo)', 'Provides(?:Expl)?(?:Package|Class|File)', '(?:DeclareOption|ProcessOptions)', '(?:documentclass|usepackage|input|include)', 'makeat(?:letter|other)', 'ExplSyntax(?:On|Off)', '(?:new|renew|provide)?command', '(?:re)newenvironment', '(?:New|Renew|Provide|Declare)(?:Expandable)?DocumentCommand', '(?:New|Renew|Provide|Declare)DocumentEnvironment', '(?:(?:e|g|x)?def|let)', '(?:begin|end)', '(?:part|chapter|(?:sub){0,2}section|(?:sub)?paragraph)', 'caption', '(?:label|(?:eq|page|name)?ref|(?:paren|foot|super)?cite)', '(?:alpha|beta|[Gg]amma|[Dd]elta|(?:var)?epsilon|zeta|eta|[Tt]heta|vartheta)', '(?:iota|(?:var)?kappa|[Ll]ambda|mu|nu|[Xx]i|[Pp]i|varpi|(?:var)rho)', '(?:[Ss]igma|varsigma|tau|[Uu]psilon|[Pp]hi|varphi|chi|[Pp]si|[Oo]mega)', '(?:frac|sum|prod|lim|infty|times|sqrt|leq|geq|left|right|middle|[bB]igg?)', '(?:[lr]angle|q?quad|[lcvdi]?dots|d?dot|hat|tilde|bar)'].map((e) => e + '(?![a-zA-Z@:_])')),
+        r = new RegExp(['(?:__)?[a-zA-Z]{2,}_[a-zA-Z](?:_?[a-zA-Z])+:[a-zA-Z]*', '[lgc]__?[a-zA-Z](?:_?[a-zA-Z])*_[a-zA-Z]{2,}', '[qs]__?[a-zA-Z](?:_?[a-zA-Z])+', 'use(?:_i)?:[a-zA-Z]*', '(?:else|fi|or):', '(?:if|cs|exp):w', '(?:hbox|vbox):n', '::[a-zA-Z]_unbraced', '::[a-zA-Z:]'].map((e) => e + '(?![a-zA-Z:_])').join('|')),
+        i = [{ begin: /\^{6}[0-9a-f]{6}/ }, { begin: /\^{5}[0-9a-f]{5}/ }, { begin: /\^{4}[0-9a-f]{4}/ }, { begin: /\^{3}[0-9a-f]{3}/ }, { begin: /\^{2}[0-9a-f]{2}/ }, { begin: /\^{2}[\u0000-\u007f]/ }],
+        a = [
             {
                 className: 'keyword',
                 begin: /\\/,
@@ -10,15 +10,15 @@ e.exports = function (e) {
                 contains: [
                     {
                         endsParent: !0,
-                        begin: t
-                    },
-                    {
-                        endsParent: !0,
                         begin: n
                     },
                     {
                         endsParent: !0,
-                        variants: r
+                        begin: r
+                    },
+                    {
+                        endsParent: !0,
+                        variants: i
                     },
                     {
                         endsParent: !0,
@@ -32,7 +32,7 @@ e.exports = function (e) {
                 relevance: 0,
                 begin: /#+\d?/
             },
-            { variants: r },
+            { variants: i },
             {
                 className: 'built_in',
                 relevance: 0,
@@ -46,42 +46,42 @@ e.exports = function (e) {
             },
             e.COMMENT('%', '$', { relevance: 0 })
         ],
-        a = {
+        s = {
             begin: /\{/,
             end: /\}/,
             relevance: 0,
-            contains: ['self', ...i]
+            contains: ['self', ...a]
         },
-        s = e.inherit(a, {
+        o = e.inherit(s, {
             relevance: 0,
             endsParent: !0,
-            contains: [a, ...i]
+            contains: [s, ...a]
         }),
-        o = {
+        l = {
             begin: /\s+/,
             relevance: 0
         },
-        l = [s],
-        u = [
+        u = [o],
+        c = [
             {
                 begin: /\[/,
                 end: /\]/,
                 endsParent: !0,
                 relevance: 0,
-                contains: [a, ...i]
+                contains: [s, ...a]
             }
         ],
-        c = function (e, t) {
+        d = function (e, n) {
             return {
-                contains: [o],
+                contains: [l],
                 starts: {
                     relevance: 0,
                     contains: e,
-                    starts: t
+                    starts: n
                 }
             };
         },
-        d = function (e, t) {
+        f = function (e, n) {
             return {
                 begin: '\\\\' + e + '(?![a-zA-Z@:_])',
                 keywords: {
@@ -89,26 +89,26 @@ e.exports = function (e) {
                     keyword: '\\' + e
                 },
                 relevance: 0,
-                contains: [o],
-                starts: t
+                contains: [l],
+                starts: n
             };
         },
-        f = function (t, n) {
+        _ = function (n, r) {
             return e.inherit(
                 {
-                    begin: '\\\\begin(?=[ \t]*(\\r?\\n[ \t]*)?\\{' + t + '\\})',
+                    begin: '\\\\begin(?=[ \t]*(\\r?\\n[ \t]*)?\\{' + n + '\\})',
                     keywords: {
                         $pattern: /\\[a-zA-Z]+/,
                         keyword: '\\begin'
                     },
                     relevance: 0
                 },
-                c(l, n)
+                d(u, r)
             );
         },
-        _ = (t = 'string') =>
+        h = (n = 'string') =>
             e.END_SAME_AS_BEGIN({
-                className: t,
+                className: n,
                 begin: /(.|\r?\n)/,
                 end: /(.|\r?\n)/,
                 excludeBegin: !0,
@@ -121,7 +121,7 @@ e.exports = function (e) {
                 end: '(?=\\\\end\\{' + e + '\\})'
             };
         },
-        h = (e = 'string') => ({
+        m = (e = 'string') => ({
             relevance: 0,
             begin: /\{/,
             starts: {
@@ -147,22 +147,23 @@ e.exports = function (e) {
         name: 'LaTeX',
         aliases: ['tex'],
         contains: [
-            ...['verb', 'lstinline'].map((e) => d(e, { contains: [_()] })),
-            d('mint', c(l, { contains: [_()] })),
-            d(
+            ...['verb', 'lstinline'].map((e) => f(e, { contains: [h()] })),
+            f('mint', d(u, { contains: [h()] })),
+            f(
                 'mintinline',
-                c(l, {
-                    contains: [h(), _()]
+                d(u, {
+                    contains: [m(), h()]
                 })
             ),
-            d('url', {
-                contains: [h('link'), h('link')]
+            f('url', {
+                contains: [m('link'), m('link')]
             }),
-            d('hyperref', { contains: [h('link')] }),
-            d('href', c(u, { contains: [h('link')] })),
-            ...[].concat(...['', '\\*'].map((e) => [f('verbatim' + e, p('verbatim' + e)), f('filecontents' + e, c(l, p('filecontents' + e))), ...['', 'B', 'L'].map((t) => f(t + 'Verbatim' + e, c(u, p(t + 'Verbatim' + e))))])),
-            f('minted', c(u, c(l, p('minted')))),
-            ...i
+            f('hyperref', { contains: [m('link')] }),
+            f('href', d(c, { contains: [m('link')] })),
+            ...[].concat(...['', '\\*'].map((e) => [_('verbatim' + e, p('verbatim' + e)), _('filecontents' + e, d(u, p('filecontents' + e))), ...['', 'B', 'L'].map((n) => _(n + 'Verbatim' + e, d(c, p(n + 'Verbatim' + e))))])),
+            _('minted', d(c, d(u, p('minted')))),
+            ...a
         ]
     };
-};
+}
+e.exports = n;

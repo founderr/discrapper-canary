@@ -1,23 +1,24 @@
-n(47120);
-var r = n(259443),
-    i = n(569611);
-let a = Date.now(),
-    s = a;
-(0, r._n)(function (e, t, n) {
-    for (var r = arguments.length, o = Array(r > 3 ? r - 3 : 0), l = 3; l < r; l++) o[l - 3] = arguments[l];
-    let u = Date.now(),
-        c = ((u - a) / 1000).toFixed(3),
-        d = ((u - s) / 1000).toFixed(3),
-        f = 'Σ:'.concat(c, 's, Δ:').concat(d, 's');
-    (s = u),
-        i.Hj(
+var i = r(47120);
+var a = r(259443),
+    s = r(569611);
+let o = Date.now(),
+    l = o,
+    u = '\nfont-weight: bold;\ncolor: purple;\n';
+(0, a._n)(function (e, n, r) {
+    for (var i = arguments.length, a = Array(i > 3 ? i - 3 : 0), c = 3; c < i; c++) a[c - 3] = arguments[c];
+    let d = Date.now(),
+        f = ((d - o) / 1000).toFixed(3),
+        _ = ((d - l) / 1000).toFixed(3),
+        h = 'Σ:'.concat(f, 's, Δ:').concat(_, 's');
+    (l = d),
+        s.Hj(
             {
                 name: e,
-                timing: f
+                timing: h
             },
-            n,
-            ...o
+            r,
+            ...a
         ),
-        'file-only' !== t && console[t]('%c['.concat(e, ']'), '\nfont-weight: bold;\ncolor: purple;\n', n, ...o);
+        'file-only' !== n && console[n]('%c['.concat(e, ']'), u, r, ...a);
 }),
-    (t.Z = r.Yd);
+    (n.Z = a.Yd);

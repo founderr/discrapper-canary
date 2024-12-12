@@ -1,5 +1,6 @@
-t.Z = function (e, t) {
-    return function (n) {
-        return e(t(n));
+function r(e, n) {
+    return function (r) {
+        return e(n(r));
     };
-};
+}
+n.Z = r;

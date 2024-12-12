@@ -1,92 +1,93 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return v;
+        return T;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(913527),
-    s = n.n(a),
-    o = n(442837),
-    l = n(481060),
-    u = n(11769),
-    c = n(540059),
-    d = n(496675),
-    f = n(300429),
-    _ = n(585483),
-    p = n(70956),
-    h = n(981631),
-    m = n(388032),
-    g = n(200263);
-function E(e) {
-    let t,
-        { isEnabled: n, rateLimitPerUser: a, isBypassSlowmode: o, slowmodeCooldownGuess: c, isRefreshEnabled: d } = e,
-        [f, E] = i.useState(!1);
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(913527),
+    l = r.n(o),
+    u = r(442837),
+    c = r(481060),
+    d = r(11769),
+    f = r(540059),
+    _ = r(496675),
+    h = r(300429),
+    p = r(585483),
+    m = r(70956),
+    g = r(981631),
+    E = r(388032),
+    v = r(200263);
+function I(e) {
+    let n,
+        { isEnabled: r, rateLimitPerUser: i, isBypassSlowmode: o, slowmodeCooldownGuess: u, isRefreshEnabled: f } = e,
+        [_, h] = s.useState(!1);
     if (
-        (i.useEffect(() => {
+        (s.useEffect(() => {
             function e() {
-                E(!0),
+                h(!0),
                     setTimeout(() => {
-                        E(!1);
+                        h(!1);
                     }, 1000);
             }
             return (
-                _.S.subscribe(h.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, e),
+                p.S.subscribe(g.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, e),
                 () => {
-                    _.S.unsubscribe(h.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, e);
+                    p.S.unsubscribe(g.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, e);
                 }
             );
         }, []),
-        !n)
+        !r)
     )
         return null;
-    let v = (0, u.k)(a);
-    if (!o && c > 0) {
-        let e = s().duration(c);
-        if (c > p.Z.Millis.HOUR) {
-            let n = ''.concat(e.minutes()).padStart(2, '0'),
-                r = ''.concat(e.seconds()).padStart(2, '0');
-            t = ''.concat(e.hours(), ':').concat(n, ':').concat(r);
+    let I = (0, d.k)(i);
+    if (!o && u > 0) {
+        let e = l().duration(u);
+        if (u > m.Z.Millis.HOUR) {
+            let r = ''.concat(e.minutes()).padStart(2, '0'),
+                i = ''.concat(e.seconds()).padStart(2, '0');
+            n = ''.concat(e.hours(), ':').concat(r, ':').concat(i);
         } else {
-            let n = ''.concat(e.seconds()).padStart(2, '0');
-            t = ''.concat(e.minutes(), ':').concat(n);
+            let r = ''.concat(e.seconds()).padStart(2, '0');
+            n = ''.concat(e.minutes(), ':').concat(r);
         }
-    } else t = o ? (d ? m.intl.string(m.t['8+NidX']) : m.intl.string(m.t.SSzXvb)) : d ? '' : m.intl.string(m.t.Icu3bW);
-    return (0, r.jsx)(l.Tooltip, {
-        text: v,
+    } else n = o ? (f ? E.intl.string(E.t['8+NidX']) : E.intl.string(E.t.SSzXvb)) : f ? '' : E.intl.string(E.t.Icu3bW);
+    return (0, a.jsx)(c.Tooltip, {
+        text: I,
         children: (e) =>
-            (0, r.jsx)('div', {
-                className: g.cooldownWrapper,
+            (0, a.jsx)('div', {
+                className: v.cooldownWrapper,
                 ...e,
-                children: (0, r.jsxs)(l.Text, {
-                    className: g.cooldownText,
-                    variant: d ? 'text-xs/medium' : 'text-sm/medium',
-                    color: d ? (f ? 'text-danger' : 'text-muted') : 'interactive-normal',
+                children: (0, a.jsxs)(c.Text, {
+                    className: v.cooldownText,
+                    variant: f ? 'text-xs/medium' : 'text-sm/medium',
+                    color: f ? (_ ? 'text-danger' : 'text-muted') : 'interactive-normal',
                     tabularNumbers: !0,
                     children: [
-                        t,
-                        (0, r.jsx)(l.TimerIcon, {
+                        n,
+                        (0, a.jsx)(c.TimerIcon, {
                             size: 'xs',
                             color: 'currentColor',
-                            className: g.slowModeIcon
+                            className: v.slowModeIcon
                         })
                     ]
                 })
             })
     });
 }
-function v(e) {
-    let { channel: t, isThreadCreation: n = !1 } = e,
-        i = (0, o.e7)([f.Z], () => f.Z.getSlowmodeCooldownGuess(t.id, n ? f.S.CreateThread : f.S.SendMessage)),
-        a = (0, o.e7)([d.Z], () => (n ? d.Z.can(h.Plq.MANAGE_THREADS, t) : d.Z.can(h.Plq.MANAGE_CHANNELS, t) || d.Z.can(h.Plq.MANAGE_MESSAGES, t))),
-        { rateLimitPerUser: s } = t,
-        l = (0, c.Q3)('SlowmodeIndicator');
-    return (0, r.jsx)(E, {
-        isEnabled: s > 0,
-        rateLimitPerUser: s,
-        isBypassSlowmode: a,
+function T(e) {
+    let { channel: n, isThreadCreation: r = !1 } = e,
+        i = (0, u.e7)([h.Z], () => h.Z.getSlowmodeCooldownGuess(n.id, r ? h.S.CreateThread : h.S.SendMessage)),
+        s = (0, u.e7)([_.Z], () => (r ? _.Z.can(g.Plq.MANAGE_THREADS, n) : _.Z.can(g.Plq.MANAGE_CHANNELS, n) || _.Z.can(g.Plq.MANAGE_MESSAGES, n))),
+        { rateLimitPerUser: o } = n,
+        l = o > 0,
+        c = (0, f.Q3)('SlowmodeIndicator');
+    return (0, a.jsx)(I, {
+        isEnabled: l,
+        rateLimitPerUser: o,
+        isBypassSlowmode: s,
         slowmodeCooldownGuess: i,
-        isRefreshEnabled: l
+        isRefreshEnabled: c
     });
 }

@@ -1,38 +1,40 @@
-n.d(t, {
+r.d(n, {
     PZ: function () {
-        return r;
+        return i;
     },
     XX: function () {
-        return o;
+        return l;
     }
-}),
-    n(47120);
-var r,
-    i,
-    a = n(601964),
-    s = n(981631);
-function o(e) {
-    let t = new Set(e.features),
-        n = t.has(s.oNc.COMMUNITY) && t.has(s.oNc.DISCOVERABLE) ? 'PUBLIC' : 'INVITE_ONLY',
-        r = (function (e) {
-            return null != e && (e instanceof a.ZP ? e.premiumSubscriberCount > 0 || e.premiumTier > s.Eu4.NONE : null != e.premiumSubscriptionCount && e.premiumSubscriptionCount > 0);
-        })(e),
-        i = 0;
-    if (r) {
-        var o;
-        i = null !== (o = e instanceof a.ZP ? e.premiumSubscriberCount : e.premiumSubscriptionCount) && void 0 !== o ? o : 0;
+});
+var i,
+    a = r(47120);
+var s = r(601964),
+    o = r(981631);
+function l(e) {
+    let n = new Set(e.features),
+        r = n.has(o.oNc.COMMUNITY) && n.has(o.oNc.DISCOVERABLE) ? 'PUBLIC' : 'INVITE_ONLY',
+        i = u(e),
+        a = 0;
+    if (i) {
+        var l;
+        a = null !== (l = e instanceof s.ZP ? e.premiumSubscriberCount : e.premiumSubscriptionCount) && void 0 !== l ? l : 0;
     }
-    let l = e instanceof a.ZP ? e.premiumTier : s.Eu4.NONE;
+    let c = e instanceof s.ZP ? e.premiumTier : o.Eu4.NONE;
     return {
-        verified: t.has(s.oNc.VERIFIED),
-        partnered: t.has(s.oNc.PARTNERED),
-        community: t.has(s.oNc.COMMUNITY),
-        staff: t.has(s.oNc.INTERNAL_EMPLOYEE_ONLY),
-        clan: t.has(s.oNc.CLAN),
-        visibility: n,
-        premium: r,
-        premiumSubscriberCount: i,
-        premiumTier: l
+        verified: n.has(o.oNc.VERIFIED),
+        partnered: n.has(o.oNc.PARTNERED),
+        community: n.has(o.oNc.COMMUNITY),
+        staff: n.has(o.oNc.INTERNAL_EMPLOYEE_ONLY),
+        clan: n.has(o.oNc.CLAN),
+        visibility: r,
+        premium: i,
+        premiumSubscriberCount: a,
+        premiumTier: c
     };
 }
-((i = r || (r = {})).PUBLIC = 'PUBLIC'), (i.INVITE_ONLY = 'INVITE_ONLY');
+function u(e) {
+    return null != e && (e instanceof s.ZP ? e.premiumSubscriberCount > 0 || e.premiumTier > o.Eu4.NONE : null != e.premiumSubscriptionCount && e.premiumSubscriptionCount > 0);
+}
+!(function (e) {
+    (e.PUBLIC = 'PUBLIC'), (e.INVITE_ONLY = 'INVITE_ONLY');
+})(i || (i = {}));

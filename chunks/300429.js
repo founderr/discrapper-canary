@@ -1,116 +1,123 @@
-n.d(t, {
+r.d(n, {
     S: function () {
-        return r;
+        return i;
     }
-}),
-    n(47120);
-var r,
-    i,
+});
+var i,
     a,
-    s,
-    o,
-    l,
-    u = n(442837),
-    c = n(846519),
-    d = n(570140),
-    f = n(70956),
-    _ = n(592125),
-    p = n(496675),
-    h = n(981631);
-((a = r || (r = {}))[(a.SendMessage = 0)] = 'SendMessage'), (a[(a.CreateThread = 1)] = 'CreateThread');
+    s = r(47120);
+var o = r(442837),
+    l = r(846519),
+    u = r(570140),
+    c = r(70956),
+    d = r(592125),
+    f = r(496675),
+    _ = r(981631);
+function h(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let p = 100;
+!(function (e) {
+    (e[(e.SendMessage = 0)] = 'SendMessage'), (e[(e.CreateThread = 1)] = 'CreateThread');
+})(i || (i = {}));
 let m = {
     0: {},
     1: {}
 };
-function g(e, t, n) {
-    if (
-        ((function (e, t) {
-            null != m[t][e.id] && (m[t][e.id].timer.stop(), delete m[t][e.id]);
-        })(e, t),
-        (function (e, t) {
-            return 0 === t ? p.Z.can(h.Plq.MANAGE_CHANNELS, e) || p.Z.can(h.Plq.MANAGE_MESSAGES, e) : p.Z.can(h.Plq.MANAGE_THREADS, e);
-        })(e, t) || n <= 0)
-    )
-        return;
-    let r = n + Date.now();
-    (m[t][e.id] = {
+function g(e, n, r) {
+    if ((E(e, n), I(e, n) || r <= 0)) return;
+    let i = r + Date.now();
+    (m[n][e.id] = {
         rateLimitPerUser: e.rateLimitPerUser,
-        cooldownMs: n,
-        cooldownEndTimestamp: r,
-        timer: new c.V7()
+        cooldownMs: r,
+        cooldownEndTimestamp: i,
+        timer: new l.V7()
     }),
-        m[t][e.id].timer.start(
+        m[n][e.id].timer.start(
             1000,
             () => {
-                d.Z.dispatch({
+                u.Z.dispatch({
                     type: 'SLOWMODE_SET_COOLDOWN',
                     channelId: e.id,
-                    slowmodeType: t,
-                    cooldownMs: Math.max(r - Date.now(), 0)
+                    slowmodeType: n,
+                    cooldownMs: Math.max(i - Date.now(), 0)
                 });
             },
             !0
         );
 }
-function E(e, t) {
-    let n = _.Z.getChannel(e);
-    if (null == n) return !1;
-    g(n, t, 0 === n.rateLimitPerUser ? 0 : n.rateLimitPerUser * f.Z.Millis.SECOND + 100);
+function E(e, n) {
+    null != m[n][e.id] && (m[n][e.id].timer.stop(), delete m[n][e.id]);
 }
-function v(e) {
-    let { file: t } = e,
-        n = _.Z.getChannel(t.channelId);
-    return null != n && g(n, 0, 0);
+function v(e, n) {
+    let r = d.Z.getChannel(e);
+    if (null == r) return !1;
+    g(r, n, 0 === r.rateLimitPerUser ? 0 : r.rateLimitPerUser * c.Z.Millis.SECOND + p);
 }
-class I extends (i = u.ZP.Store) {
-    initialize() {
-        this.waitFor(_.Z);
-    }
-    getSlowmodeCooldownGuess(e, t) {
-        let n = m[null != t ? t : 0][e];
-        return null != n ? n.cooldownMs : 0;
-    }
+function I(e, n) {
+    return 0 === n ? f.Z.can(_.Plq.MANAGE_CHANNELS, e) || f.Z.can(_.Plq.MANAGE_MESSAGES, e) : f.Z.can(_.Plq.MANAGE_THREADS, e);
 }
-(l = 'SlowmodeStore'),
-    (o = 'displayName') in (s = I)
-        ? Object.defineProperty(s, o, {
-              value: l,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (s[o] = l),
-    (t.Z = new I(d.Z, {
-        SLOWMODE_RESET_COOLDOWN: function (e) {
-            let { channelId: t, slowmodeType: n } = e;
-            return E(t, n);
-        },
-        SLOWMODE_SET_COOLDOWN: function (e) {
-            let { channelId: t, slowmodeType: n, cooldownMs: r } = e,
-                i = _.Z.getChannel(t);
-            if (null == i) return !1;
-            g(i, n, 0 === r ? 0 : r + 100);
-        },
-        UPLOAD_START: function (e) {
-            let { channelId: t } = e;
-            return E(t, 0);
-        },
-        UPLOAD_FAIL: v,
-        UPLOAD_CANCEL_REQUEST: v,
-        CHANNEL_UPDATES: function (e) {
-            let { channels: t } = e;
-            [0, 1].forEach((e) => {
-                for (let r of t) {
-                    var n;
-                    let t = m[e][r.id],
-                        i = r.rateLimitPerUser;
-                    if (null != t && t.rateLimitPerUser !== i) g(r, e, Math.min(null !== (n = null == t ? void 0 : t.cooldownMs) && void 0 !== n ? n : 0, i * f.Z.Millis.SECOND));
-                }
-            });
-        },
-        LOGOUT: function () {
-            [0, 1].forEach((e) => {
-                Object.keys(m[e]).forEach((t) => m[e][t].timer.stop()), (m[e] = {});
-            });
+function T(e) {
+    let { channelId: n } = e;
+    return v(n, 0);
+}
+function b(e) {
+    let { file: n } = e,
+        r = d.Z.getChannel(n.channelId);
+    return null != r && g(r, 0, 0);
+}
+function y(e) {
+    let { channelId: n, slowmodeType: r } = e;
+    return v(n, r);
+}
+function S(e) {
+    let { channelId: n, slowmodeType: r, cooldownMs: i } = e,
+        a = d.Z.getChannel(n);
+    if (null == a) return !1;
+    g(a, r, 0 === i ? 0 : i + p);
+}
+function A(e) {
+    let { channels: n } = e;
+    [0, 1].forEach((e) => {
+        for (let i of n) {
+            var r;
+            let n = m[e][i.id],
+                a = i.rateLimitPerUser;
+            if (null != n && n.rateLimitPerUser !== a) g(i, e, Math.min(null !== (r = null == n ? void 0 : n.cooldownMs) && void 0 !== r ? r : 0, a * c.Z.Millis.SECOND));
         }
+    });
+}
+function N() {
+    [0, 1].forEach((e) => {
+        Object.keys(m[e]).forEach((n) => m[e][n].timer.stop()), (m[e] = {});
+    });
+}
+class C extends (a = o.ZP.Store) {
+    initialize() {
+        this.waitFor(d.Z);
+    }
+    getSlowmodeCooldownGuess(e, n) {
+        let r = m[null != n ? n : 0][e];
+        return null != r ? r.cooldownMs : 0;
+    }
+}
+h(C, 'displayName', 'SlowmodeStore'),
+    (n.Z = new C(u.Z, {
+        SLOWMODE_RESET_COOLDOWN: y,
+        SLOWMODE_SET_COOLDOWN: S,
+        UPLOAD_START: T,
+        UPLOAD_FAIL: b,
+        UPLOAD_CANCEL_REQUEST: b,
+        CHANNEL_UPDATES: A,
+        LOGOUT: N
     }));

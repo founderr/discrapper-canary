@@ -1,59 +1,55 @@
-var r,
-    i = n(392711),
-    a = n.n(i),
-    s = n(442837),
-    o = n(570140),
-    l = n(70956);
-function u(e, t, n) {
+var i,
+    a = r(392711),
+    s = r.n(a),
+    o = r(442837),
+    l = r(570140),
+    u = r(70956);
+function c(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let c = {
+let d = {
         preferredRegions: null,
         lastTestTimestamp: null,
         lastGeoRankedOrder: null
     },
-    d = c,
-    f = 1 * l.Z.Millis.HOUR;
-class _ extends (r = s.ZP.DeviceSettingsStore) {
+    f = d,
+    _ = 1 * u.Z.Millis.HOUR;
+function h(e) {
+    e.latencyRankedRegions.length > 0 && ((f.lastGeoRankedOrder = e.geoRankedRegions), (f.preferredRegions = e.latencyRankedRegions)), (f.lastTestTimestamp = Date.now());
+}
+class p extends (i = o.ZP.DeviceSettingsStore) {
     initialize(e) {
-        d = null != e ? e : c;
+        f = null != e ? e : d;
     }
     shouldIncludePreferredRegion() {
-        return null != d.preferredRegions;
+        return null != f.preferredRegions;
     }
     getPreferredRegion() {
-        var e, t;
-        return null !== (t = null === (e = d.preferredRegions) || void 0 === e ? void 0 : e[0]) && void 0 !== t ? t : null;
+        var e, n;
+        return null !== (n = null === (e = f.preferredRegions) || void 0 === e ? void 0 : e[0]) && void 0 !== n ? n : null;
     }
     getPreferredRegions() {
-        return d.preferredRegions;
+        return f.preferredRegions;
     }
     getRegion(e) {
         if (null != e) return e.substr(0, e.search(/\d/));
     }
     getUserAgnosticState() {
-        return d;
+        return f;
     }
     shouldPerformLatencyTest(e) {
-        var t, n;
-        return null === d.preferredRegions || !a().isEqual(e, null !== (t = d.lastGeoRankedOrder) && void 0 !== t ? t : []) || Date.now() - (null !== (n = d.lastTestTimestamp) && void 0 !== n ? n : 0) >= f;
+        var n, r;
+        return null === f.preferredRegions || !s().isEqual(e, null !== (n = f.lastGeoRankedOrder) && void 0 !== n ? n : []) || Date.now() - (null !== (r = f.lastTestTimestamp) && void 0 !== r ? r : 0) >= _;
     }
 }
-u(_, 'displayName', 'RTCRegionStore'),
-    u(_, 'persistKey', 'RTCRegionStore'),
-    u(_, 'migrations', [(e) => (e.preferredRegion ? (e.preferredRegions = [e.preferredRegion]) : (e.preferredRegions = null), delete e.preferredRegion, e)]),
-    (t.Z = new _(o.Z, {
-        RTC_LATENCY_TEST_COMPLETE: function (e) {
-            e.latencyRankedRegions.length > 0 && ((d.lastGeoRankedOrder = e.geoRankedRegions), (d.preferredRegions = e.latencyRankedRegions)), (d.lastTestTimestamp = Date.now());
-        }
-    }));
+c(p, 'displayName', 'RTCRegionStore'), c(p, 'persistKey', 'RTCRegionStore'), c(p, 'migrations', [(e) => (e.preferredRegion ? (e.preferredRegions = [e.preferredRegion]) : (e.preferredRegions = null), delete e.preferredRegion, e)]), (n.Z = new p(l.Z, { RTC_LATENCY_TEST_COMPLETE: h }));

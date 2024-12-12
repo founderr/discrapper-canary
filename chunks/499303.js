@@ -1,14 +1,27 @@
-n.d(t, {
+function i(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+r.d(n, {
     I: function () {
-        return r;
+        return a;
     }
 });
-class r {
-    schedule(e, t) {
+class a {
+    schedule(e, n) {
         this.unschedule(),
             (this.timeoutId = setTimeout(() => {
                 (this.timeoutId = null), e();
-            }, t));
+            }, n));
     }
     unschedule() {
         this.scheduled() && (clearTimeout(this.timeoutId), (this.timeoutId = null));
@@ -17,16 +30,6 @@ class r {
         return null !== this.timeoutId;
     }
     constructor() {
-        var e, t, n;
-        (e = this),
-            (n = null),
-            (t = 'timeoutId') in e
-                ? Object.defineProperty(e, t, {
-                      value: null,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (e[t] = n);
+        i(this, 'timeoutId', null);
     }
 }

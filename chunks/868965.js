@@ -1,136 +1,137 @@
-n.d(t, {
+r.d(n, {
     P: function () {
-        return l;
+        return u;
     }
 });
-var r = n(989103),
-    i = n(155263),
-    a = n(192379),
-    s = n(239700),
-    o = n(932143);
-function l(e) {
-    var t, n, l, u, c, d, f, _;
-    let { defaultFilter: p, menuTrigger: h = 'input', allowsEmptyCollection: m = !1, allowsCustomValue: g, shouldCloseOnBlur: E = !0 } = e,
-        [v, I] = (0, a.useState)(!1),
-        [T, b] = (0, a.useState)(!1),
+var i = r(989103),
+    a = r(155263),
+    s = r(192379),
+    o = r(239700),
+    l = r(932143);
+function u(e) {
+    var n, r, i, u, d, f, _, h;
+    let { defaultFilter: p, menuTrigger: m = 'input', allowsEmptyCollection: g = !1, allowsCustomValue: E, shouldCloseOnBlur: v = !0 } = e,
+        [I, T] = (0, s.useState)(!1),
+        [b, y] = (0, s.useState)(!1),
+        S = (n) => {
+            e.onSelectionChange && e.onSelectionChange(n), n === C && (Y(), j());
+        },
         {
-            collection: S,
-            selectionManager: y,
-            selectedKey: A,
-            setSelectedKey: N,
-            selectedItem: C,
-            disabledKeys: R
-        } = (0, i.BA)({
+            collection: A,
+            selectionManager: N,
+            selectedKey: C,
+            setSelectedKey: R,
+            selectedItem: O,
+            disabledKeys: D
+        } = (0, a.BA)({
             ...e,
-            onSelectionChange: (t) => {
-                e.onSelectionChange && e.onSelectionChange(t), t === A && (Z(), B());
-            },
-            items: null !== (l = e.items) && void 0 !== l ? l : e.defaultItems
+            onSelectionChange: S,
+            items: null !== (i = e.items) && void 0 !== i ? i : e.defaultItems
         }),
-        [O, D] = (0, s.zk)(e.inputValue, null !== (c = null !== (u = e.defaultInputValue) && void 0 !== u ? u : null === (t = S.getItem(A)) || void 0 === t ? void 0 : t.textValue) && void 0 !== c ? c : '', e.onInputChange),
-        L = (0, a.useMemo)(
-            () =>
-                null == e.items && p
-                    ? (function (e, t, n) {
-                          return new i.DC(
-                              (function e(t, n, i, a) {
-                                  let s = [];
-                                  for (let o of n)
-                                      if ('section' === o.type && o.hasChildNodes) {
-                                          let n = e(t, (0, r._P)(o, t), i, a);
-                                          [...n].some((e) => 'item' === e.type) &&
-                                              s.push({
-                                                  ...o,
-                                                  childNodes: n
-                                              });
-                                      } else 'item' === o.type && a(o.textValue, i) ? s.push({ ...o }) : 'item' !== o.type && s.push({ ...o });
-                                  return s;
-                              })(e, e, t, n)
-                          );
-                      })(S, O, p)
-                    : S,
-            [S, O, p, e.items]
-        ),
-        [x, w] = (0, a.useState)(L),
-        P = (0, a.useRef)('focus'),
-        M = (0, o.W)({
+        [L, x] = (0, o.zk)(e.inputValue, null !== (d = null !== (u = e.defaultInputValue) && void 0 !== u ? u : null === (n = A.getItem(C)) || void 0 === n ? void 0 : n.textValue) && void 0 !== d ? d : '', e.onInputChange),
+        w = A,
+        P = (0, s.useMemo)(() => (null == e.items && p ? c(A, L, p) : A), [A, L, p, e.items]),
+        [M, k] = (0, s.useState)(P),
+        U = (0, s.useRef)('focus'),
+        B = (n) => {
+            e.onOpenChange && e.onOpenChange(n, n ? U.current : void 0), N.setFocused(n), !n && N.setFocusedKey(null);
+        },
+        G = (0, l.W)({
             ...e,
-            onOpenChange: (t) => {
-                e.onOpenChange && e.onOpenChange(t, t ? P.current : void 0), y.setFocused(t), !t && y.setFocusedKey(null);
-            },
+            onOpenChange: B,
             isOpen: void 0,
             defaultOpen: void 0
         }),
-        k = (t, n) => {
-            let r = 'manual' === n || ('focus' === n && 'focus' === h);
-            (m || L.size > 0 || (r && S.size > 0) || e.items) && (r && !M.isOpen && void 0 === e.items && I(!0), (P.current = n), M.open(t));
+        Z = (n, r) => {
+            let i = 'manual' === r || ('focus' === r && 'focus' === m);
+            (g || P.size > 0 || (i && w.size > 0) || e.items) && (i && !G.isOpen && void 0 === e.items && T(!0), (U.current = r), G.open(n));
         },
-        U = (0, a.useCallback)(
+        F = (n, r) => {
+            let i = 'manual' === r || ('focus' === r && 'focus' === m);
+            (g || P.size > 0 || (i && w.size > 0) || e.items || G.isOpen) && (i && !G.isOpen && void 0 === e.items && T(!0), !G.isOpen && (U.current = r), V(n));
+        },
+        V = (0, s.useCallback)(
             (e) => {
-                M.isOpen && w(L), M.toggle(e);
+                G.isOpen && k(P), G.toggle(e);
             },
-            [M, L]
+            [G, P]
         ),
-        B = (0, a.useCallback)(() => {
-            M.isOpen && (w(L), M.close());
-        }, [M, L]),
-        G = (0, a.useRef)(O),
-        Z = () => {
-            var e, t;
-            let n = null !== (t = null === (e = S.getItem(A)) || void 0 === e ? void 0 : e.textValue) && void 0 !== t ? t : '';
-            (G.current = n), D(n);
-        },
-        F = (0, a.useRef)(null !== (f = null !== (d = e.selectedKey) && void 0 !== d ? d : e.defaultSelectedKey) && void 0 !== f ? f : null),
-        V = (0, a.useRef)(null !== (_ = null === (n = S.getItem(A)) || void 0 === n ? void 0 : n.textValue) && void 0 !== _ ? _ : '');
-    (0, a.useEffect)(() => {
-        var t, n;
-        T && (L.size > 0 || m) && !M.isOpen && O !== G.current && 'manual' !== h && k(null, 'input'), !v && !m && M.isOpen && 0 === L.size && B(), null != A && A !== F.current && B(), O !== G.current && (y.setFocusedKey(null), I(!1), '' === O && (void 0 === e.inputValue || void 0 === e.selectedKey) && N(null)), A !== F.current && (void 0 === e.inputValue || void 0 === e.selectedKey) ? Z() : (G.current = O);
-        let r = null !== (n = null === (t = S.getItem(A)) || void 0 === t ? void 0 : t.textValue) && void 0 !== n ? n : '';
-        !T && null != A && void 0 === e.inputValue && A === F.current && V.current !== r && ((G.current = r), D(r)), (F.current = A), (V.current = r);
-    });
-    let j = () => {
-            (F.current = null), N(null), B();
-        },
-        H = () => {
-            if (void 0 !== e.selectedKey && void 0 !== e.inputValue) {
-                var t, n;
-                e.onSelectionChange(A);
-                let r = null !== (n = null === (t = S.getItem(A)) || void 0 === t ? void 0 : t.textValue) && void 0 !== n ? n : '';
-                (G.current = r), B();
-            } else Z(), B();
-        },
+        j = (0, s.useCallback)(() => {
+            G.isOpen && (k(P), G.close());
+        }, [G, P]),
+        H = (0, s.useRef)(L),
         Y = () => {
-            if (g) {
-                var e, t;
-                O === (null !== (t = null === (e = S.getItem(A)) || void 0 === e ? void 0 : e.textValue) && void 0 !== t ? t : '') ? H() : j();
-            } else H();
+            var e, n;
+            let r = null !== (n = null === (e = A.getItem(C)) || void 0 === e ? void 0 : e.textValue) && void 0 !== n ? n : '';
+            (H.current = r), x(r);
         },
-        W = (0, a.useMemo)(() => (M.isOpen ? (v ? S : L) : x), [M.isOpen, S, L, v, x]);
+        W = (0, s.useRef)(null !== (_ = null !== (f = e.selectedKey) && void 0 !== f ? f : e.defaultSelectedKey) && void 0 !== _ ? _ : null),
+        K = (0, s.useRef)(null !== (h = null === (r = A.getItem(C)) || void 0 === r ? void 0 : r.textValue) && void 0 !== h ? h : '');
+    (0, s.useEffect)(() => {
+        var n, r;
+        b && (P.size > 0 || g) && !G.isOpen && L !== H.current && 'manual' !== m && Z(null, 'input'), !I && !g && G.isOpen && 0 === P.size && j(), null != C && C !== W.current && j(), L !== H.current && (N.setFocusedKey(null), T(!1), '' === L && (void 0 === e.inputValue || void 0 === e.selectedKey) && R(null)), C !== W.current && (void 0 === e.inputValue || void 0 === e.selectedKey) ? Y() : (H.current = L);
+        let i = null !== (r = null === (n = A.getItem(C)) || void 0 === n ? void 0 : n.textValue) && void 0 !== r ? r : '';
+        !b && null != C && void 0 === e.inputValue && C === W.current && K.current !== i && ((H.current = i), x(i)), (W.current = C), (K.current = i);
+    });
+    let z = () => {
+            E && null == C ? q() : Q();
+        },
+        q = () => {
+            (W.current = null), R(null), j();
+        },
+        Q = () => {
+            if (void 0 !== e.selectedKey && void 0 !== e.inputValue) {
+                var n, r;
+                e.onSelectionChange(C);
+                let i = null !== (r = null === (n = A.getItem(C)) || void 0 === n ? void 0 : n.textValue) && void 0 !== r ? r : '';
+                (H.current = i), j();
+            } else Y(), j();
+        },
+        X = () => {
+            if (E) {
+                var e, n;
+                L === (null !== (n = null === (e = A.getItem(C)) || void 0 === e ? void 0 : e.textValue) && void 0 !== n ? n : '') ? Q() : q();
+            } else Q();
+        },
+        J = () => {
+            G.isOpen && null != N.focusedKey ? (C === N.focusedKey ? Q() : R(N.focusedKey)) : X();
+        },
+        $ = (e) => {
+            e ? 'focus' === m && Z(null, 'focus') : v && X(), y(e);
+        },
+        ee = (0, s.useMemo)(() => (G.isOpen ? (I ? w : P) : M), [G.isOpen, w, P, I, M]);
     return {
-        ...M,
-        toggle: (t, n) => {
-            let r = 'manual' === n || ('focus' === n && 'focus' === h);
-            (m || L.size > 0 || (r && S.size > 0) || e.items || M.isOpen) && (r && !M.isOpen && void 0 === e.items && I(!0), !M.isOpen && (P.current = n), U(t));
-        },
-        open: k,
-        close: Y,
-        selectionManager: y,
-        selectedKey: A,
-        setSelectedKey: N,
-        disabledKeys: R,
-        isFocused: T,
-        setFocused: (e) => {
-            e ? 'focus' === h && k(null, 'focus') : E && Y(), b(e);
-        },
-        selectedItem: C,
-        collection: W,
-        inputValue: O,
-        setInputValue: D,
-        commit: () => {
-            M.isOpen && null != y.focusedKey ? (A === y.focusedKey ? H() : N(y.focusedKey)) : Y();
-        },
-        revert: () => {
-            g && null == A ? j() : H();
-        }
+        ...G,
+        toggle: F,
+        open: Z,
+        close: X,
+        selectionManager: N,
+        selectedKey: C,
+        setSelectedKey: R,
+        disabledKeys: D,
+        isFocused: b,
+        setFocused: $,
+        selectedItem: O,
+        collection: ee,
+        inputValue: L,
+        setInputValue: x,
+        commit: J,
+        revert: z
     };
+}
+function c(e, n, r) {
+    return new a.DC(d(e, e, n, r));
+}
+function d(e, n, r, a) {
+    let s = [];
+    for (let o of n)
+        if ('section' === o.type && o.hasChildNodes) {
+            let n = d(e, (0, i._P)(o, e), r, a);
+            [...n].some((e) => 'item' === e.type) &&
+                s.push({
+                    ...o,
+                    childNodes: n
+                });
+        } else 'item' === o.type && a(o.textValue, r) ? s.push({ ...o }) : 'item' !== o.type && s.push({ ...o });
+    return s;
 }

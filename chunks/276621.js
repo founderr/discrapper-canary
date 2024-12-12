@@ -1,9 +1,10 @@
-var r = n(436091);
-e.exports = function (e, t) {
-    return function (n, i) {
-        if (null == n) return n;
-        if (!r(n)) return e(n, i);
-        for (var a = n.length, s = t ? a : -1, o = Object(n); (t ? s-- : ++s < a) && !1 !== i(o[s], s, o); );
-        return n;
+var i = r(436091);
+function a(e, n) {
+    return function (r, a) {
+        if (null == r) return r;
+        if (!i(r)) return e(r, a);
+        for (var s = r.length, o = n ? s : -1, l = Object(r); (n ? o-- : ++o < s) && !1 !== a(l[o], o, l); );
+        return r;
     };
-};
+}
+e.exports = a;

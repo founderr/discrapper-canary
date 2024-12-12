@@ -1,10 +1,10 @@
-function t(e, t = {}) {
-    return (t.variants = e), t;
+function n(e, n = {}) {
+    return (n.variants = e), n;
 }
-e.exports = function (e) {
-    let n = e.regex,
-        r = '[A-Za-z0-9_$]+',
-        i = t([
+function r(e) {
+    let r = e.regex,
+        i = '[A-Za-z0-9_$]+',
+        a = n([
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             e.COMMENT('/\\*\\*', '\\*/', {
@@ -21,13 +21,13 @@ e.exports = function (e) {
                 ]
             })
         ]),
-        a = {
+        s = {
             className: 'regexp',
             begin: /~?\/[^\/\n]+\//,
             contains: [e.BACKSLASH_ESCAPE]
         },
-        s = t([e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE]),
-        o = t(
+        o = n([e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE]),
+        l = n(
             [
                 {
                     begin: /"""/,
@@ -47,7 +47,7 @@ e.exports = function (e) {
             ],
             { className: 'string' }
         ),
-        l = {
+        u = {
             match: [/(class|interface|trait|enum|extends|implements)/, /\s+/, e.UNDERSCORE_IDENT_RE],
             scope: {
                 1: 'keyword',
@@ -67,11 +67,11 @@ e.exports = function (e) {
                 binary: 'groovy',
                 relevance: 10
             }),
-            i,
-            o,
             a,
-            s,
             l,
+            s,
+            o,
+            u,
             {
                 className: 'meta',
                 begin: '@[A-Za-z]+',
@@ -79,23 +79,24 @@ e.exports = function (e) {
             },
             {
                 className: 'attr',
-                begin: r + '[ \t]*:',
+                begin: i + '[ \t]*:',
                 relevance: 0
             },
             {
                 begin: /\?/,
                 end: /:/,
                 relevance: 0,
-                contains: [i, o, a, s, 'self']
+                contains: [a, l, s, o, 'self']
             },
             {
                 className: 'symbol',
-                begin: '^[ \t]*' + n.lookahead(r + ':'),
+                begin: '^[ \t]*' + r.lookahead(i + ':'),
                 excludeBegin: !0,
-                end: r + ':',
+                end: i + ':',
                 relevance: 0
             }
         ],
         illegal: /#|<\//
     };
-};
+}
+e.exports = r;

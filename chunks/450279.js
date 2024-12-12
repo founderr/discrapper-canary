@@ -1,68 +1,71 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return u;
     }
-}),
-    n(47120),
-    n(653041);
-var r = n(878604);
-function i(e) {
+});
+var i = r(47120);
+var a = r(653041);
+var s = r(878604);
+function o(e) {
     return {
         id: e.payloadType,
         name: e.mimeType.split('/').slice(1)[0]
     };
 }
-function a(e, t, n, a, s) {
-    var o, l, u;
-    let c = {},
-        d = {},
-        f = [],
-        _ = [];
-    for (let t of e.values())
-        switch (t.type) {
+function l(e) {
+    return null === e || 0 === e;
+}
+function u(e, n, r, i, a) {
+    var u, c;
+    let d = {},
+        f = {},
+        _ = [],
+        h = [];
+    for (let n of e.values())
+        switch (n.type) {
             case 'candidate-pair':
-                c[t.id] = t;
+                d[n.id] = n;
                 break;
             case 'codec':
-                d[t.id] = t;
+                f[n.id] = n;
                 break;
             case 'inbound-rtp':
-                f.push(t);
+                _.push(n);
                 break;
             case 'outbound-rtp':
-                _.push(t);
+                h.push(n);
         }
-    let p = Object.values(c).find((e) => 'succeeded' === e.state);
+    let p = Object.values(d).find((e) => 'succeeded' === e.state);
     if (void 0 === p) return null;
-    let h = [];
-    for (let e of _) {
-        let t = d[e.codecId];
-        if (null == t) continue;
-        let a = {
+    let m = [];
+    for (let e of h) {
+        let n = f[e.codecId];
+        if (null == n) continue;
+        let i = {
             type: e.kind,
             ssrc: e.ssrc,
             timestamp: e.timestamp,
-            sinkWant: (0, r.f)(n, e.ssrc, 'video' === e.kind),
-            sinkWantAsInt: (0, r.F)(n, e.ssrc),
-            codec: i(t),
+            sinkWant: (0, s.f)(r, e.ssrc, 'video' === e.kind),
+            sinkWantAsInt: (0, s.F)(r, e.ssrc),
+            codec: o(n),
             bytesSent: e.bytesSent,
             packetsSent: e.packetsSent
         };
         if ('audio' === e.kind)
-            h.push({
-                ...a,
+            m.push({
+                ...i,
                 type: 'audio'
             });
-        else if ('video' === e.kind && s) {
-            let t =
+        else if ('video' === e.kind && a) {
+            let n =
                 null !== e.frameWidth
                     ? {
                           width: e.frameWidth,
                           height: e.frameHeight
                       }
                     : void 0;
-            h.push({
-                ...a,
+            m.push({
+                ...i,
                 framesEncoded: e.framesEncoded,
                 keyFramesEncoded: e.keyFramesEncoded,
                 firCount: e.firCount,
@@ -70,54 +73,54 @@ function a(e, t, n, a, s) {
                 pliCount: e.pliCount,
                 bitrateTarget: e.targetBitrate,
                 qpSum: e.qpSum,
-                averageEncodeTime: null == e.framesEncoded || null === (u = e.totalEncodeTime) || 0 === u ? void 0 : ((1000 * e.totalEncodeTime) / e.framesEncoded).toFixed(1),
-                resolution: t,
+                averageEncodeTime: null == e.framesEncoded || l(e.totalEncodeTime) ? void 0 : ((1000 * e.totalEncodeTime) / e.framesEncoded).toFixed(1),
+                resolution: n,
                 framesSent: e.framesSent,
                 frameRateInput: e.framesPerSecond,
                 type: 'video'
             });
         }
     }
-    let m = {};
-    for (let e of f) {
-        let s = d[e.codecId];
-        if (null == s) continue;
-        let o = t(e.ssrc);
-        if (null == o) continue;
-        let l = {
+    let g = {};
+    for (let e of _) {
+        let a = f[e.codecId];
+        if (null == a) continue;
+        let l = n(e.ssrc);
+        if (null == l) continue;
+        let u = {
             type: e.kind,
             ssrc: e.ssrc,
             timestamp: e.timestamp,
-            sinkWant: (0, r.f)(n, e.ssrc, 'video' === e.kind),
-            sinkWantAsInt: (0, r.F)(n, e.ssrc),
-            sinkWantLocal: (0, r.f)(a, e.ssrc, 'video' === e.kind),
-            sinkWantLocalAsInt: (0, r.F)(a, e.ssrc),
-            codec: i(s),
+            sinkWant: (0, s.f)(r, e.ssrc, 'video' === e.kind),
+            sinkWantAsInt: (0, s.F)(r, e.ssrc),
+            sinkWantLocal: (0, s.f)(i, e.ssrc, 'video' === e.kind),
+            sinkWantLocalAsInt: (0, s.F)(i, e.ssrc),
+            codec: o(a),
             bytesReceived: e.bytesReceived,
             packetsReceived: e.packetsReceived,
             packetsLost: e.packetsLost
         };
         if ('audio' === e.kind) {
-            let t = void 0 !== e.jitterBufferDelay && void 0 !== e.jitterBufferEmittedCount ? Math.round((1000 * e.jitterBufferDelay) / e.jitterBufferEmittedCount) : 0;
-            null == m[o] && (m[o] = []),
-                m[o].push({
-                    ...l,
+            let n = void 0 !== e.jitterBufferDelay && void 0 !== e.jitterBufferEmittedCount ? Math.round((1000 * e.jitterBufferDelay) / e.jitterBufferEmittedCount) : 0;
+            null == g[l] && (g[l] = []),
+                g[l].push({
+                    ...u,
                     audioLevel: e.audioLevel,
                     jitter: 1000 * e.jitter,
-                    jitterBuffer: t
+                    jitterBuffer: n
                 });
         } else if ('video' === e.kind) {
-            null == m[o] && (m[o] = []);
-            let t =
+            null == g[l] && (g[l] = []);
+            let n =
                 null !== e.frameWidth
                     ? {
                           width: e.frameWidth,
                           height: e.frameHeight
                       }
                     : void 0;
-            m[o].push({
-                ...l,
-                resolution: t,
+            g[l].push({
+                ...u,
+                resolution: n,
                 framesDecoded: e.framesDecoded,
                 keyFramesDecoded: e.keyFramesDecoded,
                 framesDropped: e.framesDropped,
@@ -136,17 +139,17 @@ function a(e, t, n, a, s) {
             });
         }
     }
-    let g = (null !== (o = p.currentRoundTripTime) && void 0 !== o ? o : 0) * 1000;
+    let E = (null !== (u = p.currentRoundTripTime) && void 0 !== u ? u : 0) * 1000;
     return {
         transport: {
-            availableOutgoingBitrate: null !== (l = p.availableOutgoingBitrate) && void 0 !== l ? l : 0,
+            availableOutgoingBitrate: null !== (c = p.availableOutgoingBitrate) && void 0 !== c ? c : 0,
             bytesReceived: p.bytesReceived,
             bytesSent: p.bytesSent,
-            ping: g
+            ping: E
         },
         rtp: {
-            inbound: m,
-            outbound: h
+            inbound: g,
+            outbound: m
         }
     };
 }

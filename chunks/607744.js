@@ -1,18 +1,30 @@
-n(47120), n(789020), n(653041);
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140),
-    u = n(630388),
-    c = n(709054),
-    d = n(271383),
-    f = n(430824),
-    _ = n(594174),
-    p = n(981631),
-    h = n(372897);
-let m = {
+var i,
+    a = r(47120);
+var s = r(789020);
+var o = r(653041);
+var l = r(442837),
+    u = r(570140),
+    c = r(630388),
+    d = r(709054),
+    f = r(271383),
+    _ = r(430824),
+    h = r(594174),
+    p = r(981631),
+    m = r(372897);
+function g(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let E = {
         notClaimed: !1,
         notEmailVerified: !1,
         notPhoneVerified: !1,
@@ -20,111 +32,109 @@ let m = {
         newMember: !1,
         canChat: !0
     },
-    g = new Set(),
-    E = {};
-function v(e) {
-    let t;
-    I(e), g.add(e);
-    let n = f.Z.getGuild(e),
-        r = _.default.getCurrentUser();
-    if (null == n || n.verificationLevel === p.sFg.NONE || null == r || n.isOwner(r) || r.isPhoneVerified()) return;
-    let i = d.ZP.getMember(n.id, r.id);
-    if (null != i) {
-        var a;
-        if ((0, u.yE)(null !== (a = i.flags) && void 0 !== a ? a : 0, h.q.BYPASSES_VERIFICATION)) return;
+    v = new Set(),
+    I = {};
+function T(e) {
+    let n;
+    b(e), v.add(e);
+    let r = _.Z.getGuild(e),
+        i = h.default.getCurrentUser();
+    if (null == r || r.verificationLevel === p.sFg.NONE || null == i || r.isOwner(i) || i.isPhoneVerified()) return;
+    let a = f.ZP.getMember(r.id, i.id);
+    if (null != a) {
+        var s;
+        if ((0, c.yE)(null !== (s = a.flags) && void 0 !== s ? s : 0, m.q.BYPASSES_VERIFICATION)) return;
         let e = new Set();
-        for (let t of i.roles) {
-            let r = f.Z.getRole(n.id, t);
-            null != r && !r.managed && e.add(t);
+        for (let n of a.roles) {
+            let i = _.Z.getRole(r.id, n);
+            null != i && !i.managed && e.add(n);
         }
-        let t = new Date('2022-12-02 00:00:00'),
-            r = null == i.joinedAt || new Date(i.joinedAt) < t;
-        if (!(n.hasFeature(p.oNc.GUILD_ONBOARDING_EVER_ENABLED) && !r) && e.size > 0) return;
+        let n = new Date('2022-12-02 00:00:00'),
+            i = null == a.joinedAt || new Date(a.joinedAt) < n;
+        if (!(r.hasFeature(p.oNc.GUILD_ONBOARDING_EVER_ENABLED) && !i) && e.size > 0) return;
     }
-    let s = +r.createdAt + 60000 * p.YeM.ACCOUNT_AGE - Date.now(),
-        o = +n.joinedAt + 60000 * p.YeM.MEMBER_AGE - Date.now(),
-        c = n.verificationLevel >= p.sFg.LOW && !r.isClaimed(),
-        m = !1,
-        v = !1,
+    let o = +i.createdAt + 60000 * p.YeM.ACCOUNT_AGE - Date.now(),
+        l = +r.joinedAt + 60000 * p.YeM.MEMBER_AGE - Date.now(),
+        d = r.verificationLevel >= p.sFg.LOW && !i.isClaimed(),
+        g = !1,
+        E = !1,
         T = !1,
-        b = !1;
-    !r.isPhoneVerified() && !r.isStaff() && ((m = n.verificationLevel >= p.sFg.LOW && !r.verified), (v = n.verificationLevel >= p.sFg.VERY_HIGH), (T = n.verificationLevel >= p.sFg.MEDIUM && s > 0), (b = n.verificationLevel >= p.sFg.HIGH && o > 0));
+        y = !1;
+    !i.isPhoneVerified() && !i.isStaff() && ((g = r.verificationLevel >= p.sFg.LOW && !i.verified), (E = r.verificationLevel >= p.sFg.VERY_HIGH), (T = r.verificationLevel >= p.sFg.MEDIUM && o > 0), (y = r.verificationLevel >= p.sFg.HIGH && l > 0));
     let S = [];
-    b && S.push(o),
-        T && S.push(s),
+    y && S.push(l),
+        T && S.push(o),
         S.length > 0 &&
-            (t = setTimeout(
+            (n = setTimeout(
                 () =>
-                    l.Z.dispatch({
+                    u.Z.dispatch({
                         type: 'GUILD_VERIFICATION_CHECK',
                         guildId: e
                     }),
                 Math.max(...S)
             )),
-        (E[e] = {
-            notClaimed: c,
-            notEmailVerified: m,
-            notPhoneVerified: v,
+        (I[e] = {
+            notClaimed: d,
+            notEmailVerified: g,
+            notPhoneVerified: E,
             newAccount: T,
-            newMember: b,
-            canChat: !(c || m || v || T || b),
-            accountDeadline: new Date(Date.now() + s),
-            memberDeadline: new Date(Date.now() + o),
-            timeoutRef: t
+            newMember: y,
+            canChat: !(d || g || E || T || y),
+            accountDeadline: new Date(Date.now() + o),
+            memberDeadline: new Date(Date.now() + l),
+            timeoutRef: n
         });
 }
-function I(e) {
-    let t = E[e];
-    null != t && clearTimeout(t.timeoutRef), delete E[e];
+function b(e) {
+    let n = I[e];
+    null != n && clearTimeout(n.timeoutRef), delete I[e];
 }
-function T(e) {
-    g.delete(e.guild.id), v(e.guild.id);
+function y() {
+    for (let e in (v.clear(), I)) b(e);
 }
-class b extends (r = o.ZP.Store) {
+function S() {
+    d.default.keys(I).forEach(b);
+}
+function A(e) {
+    v.delete(e.guild.id), T(e.guild.id);
+}
+function N(e) {
+    let { guild: n } = e;
+    b(n.id);
+}
+function C(e) {
+    var n;
+    let { guildId: r, user: i } = e;
+    if (i.id !== (null === (n = h.default.getCurrentUser()) || void 0 === n ? void 0 : n.id)) return !1;
+    v.delete(r);
+}
+function R() {
+    v.clear();
+}
+function O(e) {
+    let { guildId: n } = e;
+    T(n);
+}
+class D extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(f.Z, _.default);
+        this.waitFor(_.Z, h.default);
     }
     getCheck(e) {
-        var t;
-        return !g.has(e) && v(e), null !== (t = E[e]) && void 0 !== t ? t : m;
+        var n;
+        return !v.has(e) && T(e), null !== (n = I[e]) && void 0 !== n ? n : E;
     }
     canChatInGuild(e) {
         return this.getCheck(e).canChat;
     }
 }
-(s = 'GuildVerificationStore'),
-    (a = 'displayName') in (i = b)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new b(l.Z, {
-        CONNECTION_OPEN: function () {
-            for (let e in (g.clear(), E)) I(e);
-        },
-        CONNECTION_CLOSED: function () {
-            c.default.keys(E).forEach(I);
-        },
-        CURRENT_USER_UPDATE: function () {
-            g.clear();
-        },
-        GUILD_CREATE: T,
-        GUILD_UPDATE: T,
-        GUILD_DELETE: function (e) {
-            let { guild: t } = e;
-            I(t.id);
-        },
-        GUILD_MEMBER_UPDATE: function (e) {
-            var t;
-            let { guildId: n, user: r } = e;
-            if (r.id !== (null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
-            g.delete(n);
-        },
-        GUILD_VERIFICATION_CHECK: function (e) {
-            let { guildId: t } = e;
-            v(t);
-        }
+g(D, 'displayName', 'GuildVerificationStore'),
+    (n.Z = new D(u.Z, {
+        CONNECTION_OPEN: y,
+        CONNECTION_CLOSED: S,
+        CURRENT_USER_UPDATE: R,
+        GUILD_CREATE: A,
+        GUILD_UPDATE: A,
+        GUILD_DELETE: N,
+        GUILD_MEMBER_UPDATE: C,
+        GUILD_VERIFICATION_CHECK: O
     }));

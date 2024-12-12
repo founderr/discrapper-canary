@@ -1,52 +1,53 @@
-var r = n(531478).codes.ERR_STREAM_PREMATURE_CLOSE;
-function i() {}
-e.exports = function e(t, n, a) {
-    if ('function' == typeof n) return e(t, null, n);
-    !n && (n = {}),
-        (s = a || i),
-        (o = !1),
-        (a = function () {
-            if (!o) {
-                o = !0;
-                for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                s.apply(this, t);
-            }
-        });
-    var s,
-        o,
-        l,
-        u = n.readable || (!1 !== n.readable && t.readable),
-        c = n.writable || (!1 !== n.writable && t.writable),
+var i = r(531478).codes.ERR_STREAM_PREMATURE_CLOSE;
+function a(e) {
+    var n = !1;
+    return function () {
+        if (!n) {
+            n = !0;
+            for (var r = arguments.length, i = Array(r), a = 0; a < r; a++) i[a] = arguments[a];
+            e.apply(this, i);
+        }
+    };
+}
+function s() {}
+function o(e) {
+    return e.setHeader && 'function' == typeof e.abort;
+}
+function l(e, n, r) {
+    if ('function' == typeof n) return l(e, null, n);
+    !n && (n = {}), (r = a(r || s));
+    var u = n.readable || (!1 !== n.readable && e.readable),
+        c = n.writable || (!1 !== n.writable && e.writable),
         d = function () {
-            !t.writable && _();
+            !e.writable && _();
         },
-        f = t._writableState && t._writableState.finished,
+        f = e._writableState && e._writableState.finished,
         _ = function () {
-            (c = !1), (f = !0), !u && a.call(t);
+            (c = !1), (f = !0), !u && r.call(e);
         },
-        p = t._readableState && t._readableState.endEmitted,
-        h = function () {
-            (u = !1), (p = !0), !c && a.call(t);
+        h = e._readableState && e._readableState.endEmitted,
+        p = function () {
+            (u = !1), (h = !0), !c && r.call(e);
         },
-        m = function (e) {
-            a.call(t, e);
+        m = function (n) {
+            r.call(e, n);
         },
         g = function () {
-            var e;
-            return u && !p ? ((!t._readableState || !t._readableState.ended) && (e = new r()), a.call(t, e)) : c && !f ? ((!t._writableState || !t._writableState.ended) && (e = new r()), a.call(t, e)) : void 0;
+            var n;
+            return u && !h ? ((!e._readableState || !e._readableState.ended) && (n = new i()), r.call(e, n)) : c && !f ? ((!e._writableState || !e._writableState.ended) && (n = new i()), r.call(e, n)) : void 0;
         },
         E = function () {
-            t.req.on('finish', _);
+            e.req.on('finish', _);
         };
-    if ((l = t).setHeader && 'function' == typeof l.abort) t.on('complete', _), t.on('abort', g), t.req ? E() : t.on('request', E);
-    else c && !t._writableState && (t.on('end', d), t.on('close', d));
     return (
-        t.on('end', h),
-        t.on('finish', _),
-        !1 !== n.error && t.on('error', m),
-        t.on('close', g),
+        o(e) ? (e.on('complete', _), e.on('abort', g), e.req ? E() : e.on('request', E)) : c && !e._writableState && (e.on('end', d), e.on('close', d)),
+        e.on('end', p),
+        e.on('finish', _),
+        !1 !== n.error && e.on('error', m),
+        e.on('close', g),
         function () {
-            t.removeListener('complete', _), t.removeListener('abort', g), t.removeListener('request', E), t.req && t.req.removeListener('finish', _), t.removeListener('end', d), t.removeListener('close', d), t.removeListener('finish', _), t.removeListener('end', h), t.removeListener('error', m), t.removeListener('close', g);
+            e.removeListener('complete', _), e.removeListener('abort', g), e.removeListener('request', E), e.req && e.req.removeListener('finish', _), e.removeListener('end', d), e.removeListener('close', d), e.removeListener('finish', _), e.removeListener('end', p), e.removeListener('error', m), e.removeListener('close', g);
         }
     );
-};
+}
+e.exports = l;

@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function n(e) {
     return {
         name: 'Gherkin',
         aliases: ['feature'],
@@ -37,4 +37,5 @@ e.exports = function (e) {
             e.QUOTE_STRING_MODE
         ]
     };
-};
+}
+e.exports = n;

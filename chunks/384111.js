@@ -1,1 +1,2 @@
-(t.bignum = n(814033)), (t.define = n(366445).define), (t.base = n(921806)), (t.constants = n(358063)), (t.decoders = n(728734)), (t.encoders = n(318655));
+let i = n;
+(i.bignum = r(814033)), (i.define = r(366445).define), (i.base = r(921806)), (i.constants = r(358063)), (i.decoders = r(728734)), (i.encoders = r(318655));

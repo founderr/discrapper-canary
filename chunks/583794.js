@@ -1,27 +1,28 @@
-function r(e, t, n) {
+r.d(n, {
+    Z: function () {
+        return s;
+    }
+});
+var i = r(47120);
+function a(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-}),
-    n(47120);
-class i {
-    traceEvent(e, t) {
-        let n;
-        let r = this._report;
-        void 0 !== r[(n = 'soundshare_state_transition' === t.type ? 'soundshare_state_transition_'.concat(['detached', 'waiting', 'attached', 'started', 'playing', 'silence'][t.newState], '_count') : ''.concat(t.type, '_count'))] ? r[n] < 32767 && r[n]++ : r.soundshare_unknown_event_count++, 'pid' in t && (0 === r.soundshare_first_pid && (r.soundshare_first_pid = t.pid), (r.soundshare_last_pid = t.pid), this._pids.add(t.pid)), null != e && (null == r.soundshare_first_session && (r.soundshare_first_session = e), (r.soundshare_last_session = e));
+class s {
+    traceEvent(e, n) {
+        let r;
+        let i = this._report,
+            a = ['detached', 'waiting', 'attached', 'started', 'playing', 'silence'];
+        void 0 !== i[(r = 'soundshare_state_transition' === n.type ? 'soundshare_state_transition_'.concat(a[n.newState], '_count') : ''.concat(n.type, '_count'))] ? i[r] < 32767 && i[r]++ : i.soundshare_unknown_event_count++, 'pid' in n && (0 === i.soundshare_first_pid && (i.soundshare_first_pid = n.pid), (i.soundshare_last_pid = n.pid), this._pids.add(n.pid)), null != e && (null == i.soundshare_first_session && (i.soundshare_first_session = e), (i.soundshare_last_session = e));
     }
     getStats() {
         return {
@@ -30,8 +31,8 @@ class i {
         };
     }
     constructor() {
-        r(this, '_report', void 0),
-            r(this, '_pids', void 0),
+        a(this, '_report', void 0),
+            a(this, '_pids', void 0),
             (this._report = {
                 soundshare_attach_requested_count: 0,
                 soundshare_capturing_count: 0,

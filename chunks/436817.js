@@ -1,7 +1,9 @@
-var r;
-n.d(t, {
+var i;
+r.d(n, {
     y: function () {
-        return r;
+        return i;
     }
 }),
-    ((r || (r = {})).MODAL = 'MODAL');
+    !(function (e) {
+        e.MODAL = 'MODAL';
+    })(i || (i = {}));

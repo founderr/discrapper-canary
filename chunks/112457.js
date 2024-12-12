@@ -1,36 +1,31 @@
-n.d(t, {
-    YY: function () {
-        return i;
-    },
-    ar: function () {
-        return a;
-    }
-});
-function r(e, t) {
+function i(e, n) {
     return {
-        x: e.x - t.x,
-        y: e.y - t.y
+        x: e.x + n.x,
+        y: e.y + n.y
     };
 }
-function i(e) {
-    var t,
-        n,
-        i = e.clientOffset,
-        a = e.initialClientOffset,
+function a(e, n) {
+    return {
+        x: e.x - n.x,
+        y: e.y - n.y
+    };
+}
+function s(e) {
+    var n = e.clientOffset,
+        r = e.initialClientOffset,
         s = e.initialSourceClientOffset;
-    if (!i || !a || !s) return null;
-    return r(
-        ((t = i),
-        (n = s),
-        {
-            x: t.x + n.x,
-            y: t.y + n.y
-        }),
-        a
-    );
+    return n && r && s ? a(i(n, s), r) : null;
 }
-function a(e) {
-    var t = e.clientOffset,
-        n = e.initialClientOffset;
-    return t && n ? r(t, n) : null;
+function o(e) {
+    var n = e.clientOffset,
+        r = e.initialClientOffset;
+    return n && r ? a(n, r) : null;
 }
+r.d(n, {
+    YY: function () {
+        return s;
+    },
+    ar: function () {
+        return o;
+    }
+});

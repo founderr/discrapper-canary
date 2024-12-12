@@ -1,21 +1,23 @@
-var t = (e.exports = {});
-(t.isIE = function (e) {
-    var t;
+var n = (e.exports = {});
+(n.isIE = function (e) {
     return (
-        (-1 !== (t = navigator.userAgent.toLowerCase()).indexOf('msie') || -1 !== t.indexOf('trident') || -1 !== t.indexOf(' edge/')) &&
+        !!(function e() {
+            var e = navigator.userAgent.toLowerCase();
+            return -1 !== e.indexOf('msie') || -1 !== e.indexOf('trident') || -1 !== e.indexOf(' edge/');
+        })() &&
         (!e ||
             e ===
                 (function () {
                     var e,
-                        t = 3,
-                        n = document.createElement('div'),
-                        r = n.getElementsByTagName('i');
-                    do n.innerHTML = '<!--[if gt IE ' + ++t + ']><i></i><![endif]-->';
-                    while (r[0]);
-                    return t > 4 ? t : e;
+                        n = 3,
+                        r = document.createElement('div'),
+                        i = r.getElementsByTagName('i');
+                    do r.innerHTML = '<!--[if gt IE ' + ++n + ']><i></i><![endif]-->';
+                    while (i[0]);
+                    return n > 4 ? n : e;
                 })())
     );
 }),
-    (t.isLegacyOpera = function () {
+    (n.isLegacyOpera = function () {
         return !!window.opera;
     });

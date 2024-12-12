@@ -1,47 +1,48 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return f;
+        return _;
     }
 });
-var r = n(200651),
-    i = n(481060),
-    a = n(99690),
-    s = n(473188),
-    o = n(688693),
-    l = n(191420),
-    u = n(774621),
-    c = n(49274),
-    d = n(904141);
-function f(e) {
-    let { user: t, rank: n, rankBadgeVisibility: f = 'visible', avatarClassName: _, avatarSize: p = i.AvatarSizes.SIZE_40 } = e,
-        h = (0, i.getAvatarSize)(p);
-    return (0, r.jsxs)('div', {
-        className: o.container,
+var i = r(200651),
+    a = r(481060),
+    s = r(99690),
+    o = r(473188),
+    l = r(688693),
+    u = r(191420),
+    c = r(774621),
+    d = r(49274),
+    f = r(904141);
+function _(e) {
+    let { user: n, rank: r, rankBadgeVisibility: _ = 'visible', avatarClassName: h, avatarSize: p = a.AvatarSizes.SIZE_40 } = e,
+        m = 1 === r ? u : 2 === r ? c : 3 === r ? d : f,
+        g = (0, a.getAvatarSize)(p);
+    return (0, i.jsxs)('div', {
+        className: l.container,
         style: {
-            width: ''.concat(h, 'px'),
-            height: ''.concat(h, 'px')
+            width: ''.concat(g, 'px'),
+            height: ''.concat(g, 'px')
         },
         children: [
-            (0, r.jsx)('img', {
-                className: o.frame,
-                src: 1 === n ? l : 2 === n ? u : 3 === n ? c : d,
+            (0, i.jsx)('img', {
+                className: l.frame,
+                src: m,
                 style: {
-                    width: h + 8,
-                    height: h + 8
+                    width: g + 8,
+                    height: g + 8
                 },
                 alt: ''
             }),
-            (0, r.jsx)(a.Z, {
-                className: _,
-                user: t,
+            (0, i.jsx)(s.Z, {
+                className: h,
+                user: n,
                 size: p
             }),
-            'hidden' !== f &&
-                (0, r.jsx)('div', {
-                    className: o.rankBadge,
-                    children: (0, r.jsx)(s._, {
-                        rank: n,
-                        hideInnerBorder: 'visibleWithoutBorder' === f
+            'hidden' !== _ &&
+                (0, i.jsx)('div', {
+                    className: l.rankBadge,
+                    children: (0, i.jsx)(o._, {
+                        rank: r,
+                        hideInnerBorder: 'visibleWithoutBorder' === _
                     })
                 })
         ]

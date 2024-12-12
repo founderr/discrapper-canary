@@ -1,37 +1,38 @@
-n.d(t, {
+r.d(n, {
     V: function () {
-        return s;
+        return l;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(531826);
-function s(e) {
-    let { application: t, channelId: s, onAgree: o, onDisagree: l } = e,
-        u =
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(531826);
+let o = 'activity-age-gate';
+function l(e) {
+    let { application: n, channelId: l, onAgree: u, onDisagree: c } = e,
+        d =
             null !=
-            (0, a.ZP)({
-                application: t,
-                channelId: s
+            (0, s.ZP)({
+                application: n,
+                channelId: l
             })
-                ? i.POPOUT_MODAL_CONTEXT
-                : i.DEFAULT_MODAL_CONTEXT;
+                ? a.POPOUT_MODAL_CONTEXT
+                : a.DEFAULT_MODAL_CONTEXT;
     return (
-        (0, i.openModalLazy)(
+        (0, a.openModalLazy)(
             async () => {
-                let { ActivityAgeGateModal: e } = await n.e('57951').then(n.bind(n, 252528));
-                return (n) =>
-                    (0, r.jsx)(e, {
-                        ...n,
-                        application: t,
-                        onAgree: o,
-                        onDisagree: l
+                let { ActivityAgeGateModal: e } = await r.e('57951').then(r.bind(r, 252528));
+                return (r) =>
+                    (0, i.jsx)(e, {
+                        ...r,
+                        application: n,
+                        onAgree: u,
+                        onDisagree: c
                     });
             },
             {
-                modalKey: 'activity-age-gate',
-                contextKey: u
+                modalKey: o,
+                contextKey: d
             }
         ),
         Promise.resolve()

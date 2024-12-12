@@ -1,17 +1,18 @@
-n.d(t, {
+function i(e, n, r) {
+    let i = 0,
+        a = e.length;
+    for (; i < a; ) {
+        let s = (i + a) >>> 1;
+        0 > r(e[s], n) ? (i = s + 1) : (a = s);
+    }
+    return i;
+}
+function a(e, n, r) {
+    let a = i(e, n, r);
+    e.splice(a, 0, n);
+}
+r.d(n, {
     $: function () {
-        return r;
+        return a;
     }
 });
-function r(e, t, n) {
-    let r = (function (e, t, n) {
-        let r = 0,
-            i = e.length;
-        for (; r < i; ) {
-            let a = (r + i) >>> 1;
-            0 > n(e[a], t) ? (r = a + 1) : (i = a);
-        }
-        return r;
-    })(e, t, n);
-    e.splice(r, 0, t);
-}

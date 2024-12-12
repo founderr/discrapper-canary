@@ -1,22 +1,23 @@
-var r, i, a, s;
-n.d(t, {
+var i, a;
+r.d(n, {
     CT: function () {
-        return o;
+        return s;
     },
     Om: function () {
-        return l;
+        return o;
     },
     X1: function () {
-        return r;
+        return i;
     },
     _j: function () {
-        return i;
+        return a;
     }
 }),
-    ((a = r || (r = {})).EMOJI = 'emoji'),
-    (a.GIF = 'gif'),
-    (a.STICKER = 'sticker'),
-    (a.SOUNDBOARD = 'soundboard');
-let o = 'expression-picker-chat-input-button',
-    l = 498;
-((s = i || (i = {})).MIN = 'min'), (s.MAX = 'max');
+    !(function (e) {
+        (e.EMOJI = 'emoji'), (e.GIF = 'gif'), (e.STICKER = 'sticker'), (e.SOUNDBOARD = 'soundboard');
+    })(i || (i = {}));
+let s = 'expression-picker-chat-input-button',
+    o = 498;
+!(function (e) {
+    (e.MIN = 'min'), (e.MAX = 'max');
+})(a || (a = {}));

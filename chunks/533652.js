@@ -1,4 +1,5 @@
-var r = n(559969);
-e.exports = function (e) {
-    return r(this.__data__, e) > -1;
-};
+var i = r(559969);
+function a(e) {
+    return i(this.__data__, e) > -1;
+}
+e.exports = a;

@@ -1,60 +1,55 @@
-function r(e, t, n) {
+r.d(n, {
+    H: function () {
+        return o;
+    }
+});
+var i = r(411104);
+function a(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-n.d(t, {
-    H: function () {
-        return i;
+function s(e, n) {
+    if ('string' == typeof e)
+        return {
+            message: e,
+            code: n
+        };
+    if (null != e.body) {
+        if (null != e.body.message && !Array.isArray(e.body.message) && (null == e.body.code || !Array.isArray(e.body.code)))
+            return {
+                message: e.body.message,
+                code: e.body.code,
+                retryAfter: e.body.retry_after,
+                status: e.status
+            };
+        {
+            let n = e.body,
+                r = null != n ? Object.values(n)[0] : null;
+            return {
+                message: null != r ? r[0] : void 0,
+                fields: n,
+                status: e.status
+            };
+        }
     }
-}),
-    n(411104);
-class i {
+    return {};
+}
+class o {
     getFieldMessage(e) {
         return null != this.fields[e] ? this.fields[e][0] : null;
     }
-    constructor(e, t, n = 'An unexpected error occurred.') {
-        r(this, 'message', void 0), r(this, 'code', void 0), r(this, 'retryAfter', void 0), r(this, 'fields', void 0), r(this, 'error', void 0), r(this, 'status', void 0);
-        let {
-            message: i,
-            code: a,
-            retryAfter: s,
-            fields: o,
-            status: l
-        } = (function (e, t) {
-            if ('string' == typeof e)
-                return {
-                    message: e,
-                    code: t
-                };
-            if (null != e.body) {
-                if (null != e.body.message && !Array.isArray(e.body.message) && (null == e.body.code || !Array.isArray(e.body.code)))
-                    return {
-                        message: e.body.message,
-                        code: e.body.code,
-                        retryAfter: e.body.retry_after,
-                        status: e.status
-                    };
-                {
-                    let t = e.body,
-                        n = null != t ? Object.values(t)[0] : null;
-                    return {
-                        message: null != n ? n[0] : void 0,
-                        fields: t,
-                        status: e.status
-                    };
-                }
-            }
-            return {};
-        })(e, t);
-        (this.message = i || n), (this.retryAfter = s), (this.code = a || -1), (this.fields = o || {}), (this.status = l), (this.error = Error(i));
+    constructor(e, n, r = 'An unexpected error occurred.') {
+        a(this, 'message', void 0), a(this, 'code', void 0), a(this, 'retryAfter', void 0), a(this, 'fields', void 0), a(this, 'error', void 0), a(this, 'status', void 0);
+        let { message: i, code: o, retryAfter: l, fields: u, status: c } = s(e, n);
+        (this.message = i || r), (this.retryAfter = l), (this.code = o || -1), (this.fields = u || {}), (this.status = c), (this.error = Error(i));
     }
 }

@@ -1,28 +1,28 @@
-n.d(t, {
+r.d(n, {
     C: function () {
-        return i;
+        return a;
     }
 });
-let r = new Map();
-class i {
+let i = new Map();
+class a {
     format(e) {
         return this.formatter.format(e);
     }
     formatToParts(e) {
         return this.formatter.formatToParts(e);
     }
-    formatRange(e, t) {
-        if ('function' == typeof this.formatter.formatRange) return this.formatter.formatRange(e, t);
-        if (t < e) throw RangeError('End date must be >= start date');
-        return `${this.formatter.format(e)} \u{2013} ${this.formatter.format(t)}`;
+    formatRange(e, n) {
+        if ('function' == typeof this.formatter.formatRange) return this.formatter.formatRange(e, n);
+        if (n < e) throw RangeError('End date must be >= start date');
+        return `${this.formatter.format(e)} \u{2013} ${this.formatter.format(n)}`;
     }
-    formatRangeToParts(e, t) {
-        if ('function' == typeof this.formatter.formatRangeToParts) return this.formatter.formatRangeToParts(e, t);
-        if (t < e) throw RangeError('End date must be >= start date');
-        let n = this.formatter.formatToParts(e),
-            r = this.formatter.formatToParts(t);
+    formatRangeToParts(e, n) {
+        if ('function' == typeof this.formatter.formatRangeToParts) return this.formatter.formatRangeToParts(e, n);
+        if (n < e) throw RangeError('End date must be >= start date');
+        let r = this.formatter.formatToParts(e),
+            i = this.formatter.formatToParts(n);
         return [
-            ...n.map((e) => ({
+            ...r.map((e) => ({
                 ...e,
                 source: 'startRange'
             })),
@@ -31,7 +31,7 @@ class i {
                 value: ' \u2013 ',
                 source: 'shared'
             },
-            ...r.map((e) => ({
+            ...i.map((e) => ({
                 ...e,
                 source: 'endRange'
             }))
@@ -39,79 +39,71 @@ class i {
     }
     resolvedOptions() {
         let e = this.formatter.resolvedOptions();
-        return (
-            (function () {
-                return (
-                    null == l &&
-                        (l =
-                            'h12' ===
-                            new Intl.DateTimeFormat('fr', {
-                                hour: 'numeric',
-                                hour12: !1
-                            }).resolvedOptions().hourCycle),
-                    l
-                );
-            })() &&
-                (!this.resolvedHourCycle &&
-                    (this.resolvedHourCycle = (function (e, t) {
-                        if (!t.timeStyle && !t.hour) return;
-                        e = e.replace(/(-u-)?-nu-[a-zA-Z0-9]+/, '');
-                        let n = s((e += (e.includes('-u-') ? '' : '-u') + '-nu-latn'), {
-                                ...t,
-                                timeZone: void 0
-                            }),
-                            r = parseInt(n.formatToParts(new Date(2020, 2, 3, 0)).find((e) => 'hour' === e.type).value, 10),
-                            i = parseInt(n.formatToParts(new Date(2020, 2, 3, 23)).find((e) => 'hour' === e.type).value, 10);
-                        if (0 === r && 23 === i) return 'h23';
-                        if (24 === r && 23 === i) return 'h24';
-                        if (0 === r && 11 === i) return 'h11';
-                        if (12 === r && 11 === i) return 'h12';
-                        throw Error('Unexpected hour cycle result');
-                    })(e.locale, this.options)),
-                (e.hourCycle = this.resolvedHourCycle),
-                (e.hour12 = 'h11' === this.resolvedHourCycle || 'h12' === this.resolvedHourCycle)),
-            'ethiopic-amete-alem' === e.calendar && (e.calendar = 'ethioaa'),
-            e
-        );
+        return d() && (!this.resolvedHourCycle && (this.resolvedHourCycle = f(e.locale, this.options)), (e.hourCycle = this.resolvedHourCycle), (e.hour12 = 'h11' === this.resolvedHourCycle || 'h12' === this.resolvedHourCycle)), 'ethiopic-amete-alem' === e.calendar && (e.calendar = 'ethioaa'), e;
     }
-    constructor(e, t = {}) {
-        (this.formatter = s(e, t)), (this.options = t);
+    constructor(e, n = {}) {
+        (this.formatter = o(e, n)), (this.options = n);
     }
 }
-let a = {
+let s = {
     true: { ja: 'h11' },
     false: {}
 };
-function s(e, t = {}) {
-    if (
-        'boolean' == typeof t.hour12 &&
-        (function () {
-            return (
-                null == o &&
-                    (o =
-                        '24' ===
-                        new Intl.DateTimeFormat('en-US', {
-                            hour: 'numeric',
-                            hour12: !1
-                        }).format(new Date(2020, 2, 3, 0))),
-                o
-            );
-        })()
-    ) {
-        let n = a[String((t = { ...t }).hour12)][e.split('-')[0]],
-            r = t.hour12 ? 'h12' : 'h23';
-        (t.hourCycle = null != n ? n : r), delete t.hour12;
+function o(e, n = {}) {
+    if ('boolean' == typeof n.hour12 && u()) {
+        let r = s[String((n = { ...n }).hour12)][e.split('-')[0]],
+            i = n.hour12 ? 'h12' : 'h23';
+        (n.hourCycle = null != r ? r : i), delete n.hour12;
     }
-    let n =
+    let r =
         e +
-        (t
-            ? Object.entries(t)
-                  .sort((e, t) => (e[0] < t[0] ? -1 : 1))
+        (n
+            ? Object.entries(n)
+                  .sort((e, n) => (e[0] < n[0] ? -1 : 1))
                   .join()
             : '');
-    if (r.has(n)) return r.get(n);
-    let i = new Intl.DateTimeFormat(e, t);
-    return r.set(n, i), i;
+    if (i.has(r)) return i.get(r);
+    let a = new Intl.DateTimeFormat(e, n);
+    return i.set(r, a), a;
 }
-let o = null,
-    l = null;
+let l = null;
+function u() {
+    return (
+        null == l &&
+            (l =
+                '24' ===
+                new Intl.DateTimeFormat('en-US', {
+                    hour: 'numeric',
+                    hour12: !1
+                }).format(new Date(2020, 2, 3, 0))),
+        l
+    );
+}
+let c = null;
+function d() {
+    return (
+        null == c &&
+            (c =
+                'h12' ===
+                new Intl.DateTimeFormat('fr', {
+                    hour: 'numeric',
+                    hour12: !1
+                }).resolvedOptions().hourCycle),
+        c
+    );
+}
+function f(e, n) {
+    if (!n.timeStyle && !n.hour) return;
+    e = e.replace(/(-u-)?-nu-[a-zA-Z0-9]+/, '');
+    let r = o((e += (e.includes('-u-') ? '' : '-u') + '-nu-latn'), {
+            ...n,
+            timeZone: void 0
+        }),
+        i = parseInt(r.formatToParts(new Date(2020, 2, 3, 0)).find((e) => 'hour' === e.type).value, 10),
+        a = parseInt(r.formatToParts(new Date(2020, 2, 3, 23)).find((e) => 'hour' === e.type).value, 10);
+    if (0 === i && 23 === a) return 'h23';
+    if (24 === i && 23 === a) return 'h24';
+    if (0 === i && 11 === a) return 'h11';
+    if (12 === i && 11 === a) return 'h12';
+    throw Error('Unexpected hour cycle result');
+}

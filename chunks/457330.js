@@ -1,239 +1,245 @@
-n(610138), n(216116), n(78328), n(815648), n(47120);
-var r = n(990547),
-    i = n(544891),
-    a = n(570140),
-    s = n(275759),
-    o = n(185669),
-    l = n(710845),
-    u = n(314897),
-    c = n(553795),
-    d = n(626135),
-    f = n(573261),
-    _ = n(981631);
-let p = new l.Z('ConnectedAccounts');
-function h(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    return i.tn.post({
-        url: _.ANM.CONNECTIONS_CALLBACK(e),
+var i = r(610138);
+var a = r(216116);
+var s = r(78328);
+var o = r(815648);
+var l = r(47120);
+var u = r(990547),
+    c = r(544891),
+    d = r(570140),
+    f = r(275759),
+    _ = r(185669),
+    h = r(710845),
+    p = r(314897),
+    m = r(553795),
+    g = r(626135),
+    E = r(573261),
+    v = r(981631);
+let I = new h.Z('ConnectedAccounts');
+function T(e, n) {
+    let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+    return c.tn.post({
+        url: v.ANM.CONNECTIONS_CALLBACK(e),
         body: {
-            ...t,
-            insecure: n,
-            friend_sync: _.BFP.has(e),
-            ...(o.g.getCurrentConfig({ location: 'ConnectedAccountsActionCreators.callback' }).enabled ? { session_id: u.default.getSessionId() } : {})
+            ...n,
+            insecure: r,
+            friend_sync: v.BFP.has(e),
+            ...(_.g.getCurrentConfig({ location: 'ConnectedAccountsActionCreators.callback' }).enabled ? { session_id: p.default.getSessionId() } : {})
         },
         oldFormErrors: !0,
         rejectWithError: !1
     });
 }
-t.Z = {
+function b(e, n, r, i, a) {
+    return c.tn.post({
+        url: v.ANM.CONNECTIONS_SESSION_HANDOFF(e),
+        body: {
+            state: n,
+            code: r,
+            openid_params: i,
+            iss: a
+        },
+        oldFormErrors: !0,
+        rejectWithError: !1
+    });
+}
+function y(e, n) {
+    let r = new URLSearchParams();
+    r.append('state', n);
+    let i = ''.concat(v.ANM.CONNECTIONS_SESSION_HANDOFF(e), '?').concat(r.toString());
+    return c.tn.get({
+        url: i,
+        body: { state: n },
+        rejectWithError: !0
+    });
+}
+n.Z = {
     fetch: () =>
-        i.tn
+        c.tn
             .get({
-                url: _.ANM.CONNECTIONS,
+                url: v.ANM.CONNECTIONS,
                 oldFormErrors: !0,
                 rejectWithError: !0
             })
             .then(
                 (e) =>
-                    a.Z.dispatch({
+                    d.Z.dispatch({
                         type: 'USER_CONNECTIONS_UPDATE',
                         local: !0,
                         accounts: e.body
                     }),
                 () =>
-                    a.Z.dispatch({
+                    d.Z.dispatch({
                         type: 'USER_CONNECTIONS_UPDATE',
                         local: !0,
                         accounts: []
                     })
             ),
     async authorize(e) {
-        var t;
-        let { location: n, twoWayLinkType: r, userCode: a, twoWayLink: l, successRedirect: f, handle: p } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        d.default.track(_.rMx.CONNECTED_ACCOUNT_INITIATED, {
+        var n;
+        let { location: r, twoWayLinkType: i, userCode: a, twoWayLink: s, successRedirect: o, handle: l } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        g.default.track(v.rMx.CONNECTED_ACCOUNT_INITIATED, {
             platform_type: e,
-            location: n
+            location: r
         });
-        let h = _.ANM.CONNECTIONS_AUTHORIZE(e),
-            m = new URLSearchParams();
-        null != a && m.append('two_way_user_code', a), null != f && m.append('success_redirect', f), null != r ? (m.append('two_way_link_type', r), m.append('two_way_link', 'true')) : null != l && m.append('two_way_link', String(l)), null != p && m.append('handle', p);
-        let { enabled: g } = o.g.getCurrentConfig({ location: 'ConnectedAcountsActionCreators.authorize' }, { autoTrackExposure: !0 });
-        if (g) {
-            let e = u.default.getSessionId();
-            null != e && m.append('session_id', e);
+        let u = v.ANM.CONNECTIONS_AUTHORIZE(e),
+            d = new URLSearchParams();
+        null != a && d.append('two_way_user_code', a), null != o && d.append('success_redirect', o), null != i ? (d.append('two_way_link_type', i), d.append('two_way_link', 'true')) : null != s && d.append('two_way_link', String(s)), null != l && d.append('handle', l);
+        let { enabled: h } = _.g.getCurrentConfig({ location: 'ConnectedAcountsActionCreators.authorize' }, { autoTrackExposure: !0 });
+        if (h) {
+            let e = p.default.getSessionId();
+            null != e && d.append('session_id', e);
         }
-        h = h + '?' + m.toString();
-        let E = await i.tn.get({
-                url: h,
+        u = u + '?' + d.toString();
+        let E = await c.tn.get({
+                url: u,
                 oldFormErrors: !0,
                 rejectWithError: !1
             }),
-            { state: v } = (0, s.xp)(null !== (t = E.body.url) && void 0 !== t ? t : '');
-        return null != v && !o.g.getCurrentConfig({ location: 'ConnectedAccountsActionCreators.authorize' }).enabled && c.Z.addPendingAuthorizedState(v), E;
+            { state: I } = (0, f.xp)(null !== (n = E.body.url) && void 0 !== n ? n : '');
+        return null != I && !_.g.getCurrentConfig({ location: 'ConnectedAccountsActionCreators.authorize' }).enabled && m.Z.addPendingAuthorizedState(I), E;
     },
-    callback: h,
-    connect(e, t, n, i, a) {
+    callback: T,
+    connect(e, n, r, i, a) {
         var s;
-        return f.Z.put({
-            url: _.ANM.CONNECTION(e, t),
+        return E.Z.put({
+            url: v.ANM.CONNECTION(e, n),
             body: {
-                name: n,
-                friend_sync: null !== (s = null == a ? void 0 : a.friend_sync) && void 0 !== s ? s : _.BFP.has(e)
+                name: r,
+                friend_sync: null !== (s = null == a ? void 0 : a.friend_sync) && void 0 !== s ? s : v.BFP.has(e)
             },
             context: { location: i },
             oldFormErrors: !0,
             trackedActionData: {
-                event: r.NetworkActionNames.USER_CONNECTIONS_UPDATE,
+                event: u.NetworkActionNames.USER_CONNECTIONS_UPDATE,
                 properties: {
-                    name: n,
-                    friend_sync: _.BFP.has(e)
+                    name: r,
+                    friend_sync: v.BFP.has(e)
                 }
             },
             rejectWithError: !1
         });
     },
-    disconnect: (e, t) =>
-        i.tn.del({
-            url: _.ANM.CONNECTION(e, t),
+    disconnect: (e, n) =>
+        c.tn.del({
+            url: v.ANM.CONNECTION(e, n),
             oldFormErrors: !0,
             rejectWithError: !1
         }),
-    refresh: (e, t) =>
-        i.tn.post({
-            url: _.ANM.CONNECTION_REFRESH(e, t),
+    refresh: (e, n) =>
+        c.tn.post({
+            url: v.ANM.CONNECTION_REFRESH(e, n),
             oldFormErrors: !0,
             rejectWithError: !1
         }),
-    setVisibility(e, t, n) {
-        return this.update(e, t, { visibility: 1 === n });
+    setVisibility(e, n, r) {
+        return this.update(e, n, { visibility: 1 === r });
     },
-    setMetadataVisibility(e, t, n) {
-        return this.update(e, t, { metadata_visibility: 1 === n });
+    setMetadataVisibility(e, n, r) {
+        return this.update(e, n, { metadata_visibility: 1 === r });
     },
-    setFriendSync(e, t, n) {
-        return this.update(e, t, { friend_sync: n });
+    setFriendSync(e, n, r) {
+        return this.update(e, n, { friend_sync: r });
     },
-    setShowActivity(e, t, n) {
-        return this.update(e, t, { show_activity: n });
+    setShowActivity(e, n, r) {
+        return this.update(e, n, { show_activity: r });
     },
-    update: (e, t, n) =>
-        f.Z.patch({
-            url: _.ANM.CONNECTION(e, t),
-            body: n,
+    update: (e, n, r) =>
+        E.Z.patch({
+            url: v.ANM.CONNECTION(e, n),
+            body: r,
             oldFormErrors: !0,
             trackedActionData: {
-                event: r.NetworkActionNames.USER_CONNECTIONS_UPDATE,
-                properties: { ...n }
+                event: u.NetworkActionNames.USER_CONNECTIONS_UPDATE,
+                properties: { ...r }
             },
             rejectWithError: !1
         }),
-    joinServer(e, t) {
-        a.Z.dispatch({
+    joinServer(e, n) {
+        d.Z.dispatch({
             type: 'USER_CONNECTIONS_INTEGRATION_JOINING',
             integrationId: e,
             joining: !0
         }),
-            i.tn.post(
+            c.tn.post(
                 {
-                    url: _.ANM.INTEGRATION_JOIN(e),
+                    url: v.ANM.INTEGRATION_JOIN(e),
                     oldFormErrors: !0,
                     rejectWithError: !1
                 },
-                (n) => {
-                    a.Z.dispatch({
+                (r) => {
+                    d.Z.dispatch({
                         type: 'USER_CONNECTIONS_INTEGRATION_JOINING',
                         integrationId: e,
                         joining: !1
                     }),
-                        !n.ok &&
-                            (a.Z.dispatch({
+                        !r.ok &&
+                            (d.Z.dispatch({
                                 type: 'USER_CONNECTIONS_INTEGRATION_JOINING_ERROR',
                                 integrationId: e,
-                                error: n.hasErr ? void 0 : n.body.message
+                                error: r.hasErr ? void 0 : r.body.message
                             }),
-                            null == t || t());
+                            null == n || n());
                 }
             );
     },
-    async refreshAccessToken(e, t) {
+    async refreshAccessToken(e, n) {
         try {
             let {
-                body: { access_token: n }
-            } = await i.tn.get({
-                url: _.ANM.CONNECTION_ACCESS_TOKEN(e, t),
+                body: { access_token: r }
+            } = await c.tn.get({
+                url: v.ANM.CONNECTION_ACCESS_TOKEN(e, n),
                 oldFormErrors: !0,
                 rejectWithError: !1
             });
             return (
-                a.Z.dispatch({
+                d.Z.dispatch({
                     type: 'USER_CONNECTION_UPDATE',
                     platformType: e,
-                    id: t,
-                    accessToken: n
+                    id: n,
+                    accessToken: r
                 }),
-                n
+                r
             );
-        } catch (n) {
+        } catch (r) {
             throw (
-                (n.body.code === _.evJ.CONNECTION_REVOKED &&
-                    a.Z.dispatch({
+                (r.body.code === v.evJ.CONNECTION_REVOKED &&
+                    d.Z.dispatch({
                         type: 'USER_CONNECTION_UPDATE',
                         platformType: e,
-                        id: t,
+                        id: n,
                         revoked: !0
                     }),
-                n)
+                r)
             );
         }
     },
-    linkDispatchAuthCallback: (e, t) =>
-        i.tn.post({
-            url: _.ANM.CONNECTIONS_LINK_DISPATCH_AUTH_CALLBACK(e),
-            body: { ...t },
+    linkDispatchAuthCallback: (e, n) =>
+        c.tn.post({
+            url: v.ANM.CONNECTIONS_LINK_DISPATCH_AUTH_CALLBACK(e),
+            body: { ...n },
             oldFormErrors: !0,
             rejectWithError: !1
         }),
-    async completeTwoWayLink(e, t, n, r, i) {
-        if (null == t) {
-            p.error('Two-way link: missing authorize location');
+    async completeTwoWayLink(e, n, r, i, a) {
+        if (null == n) {
+            I.error('Two-way link: missing authorize location');
             return;
         }
-        let { code: a, error: o, errorDescription: l } = (0, s.xp)(t);
+        let { code: s, error: o, errorDescription: l } = (0, f.xp)(n);
         if (null != o) {
-            p.error('Two-way link: missing authorize code', {
+            I.error('Two-way link: missing authorize code', {
                 error: o,
                 errorDescription: l
             });
             return;
         }
-        return await h(e, {
-            code: n,
-            state: r,
-            two_way_link_code: a,
-            token_redirect_uri: i
+        return await T(e, {
+            code: r,
+            state: i,
+            two_way_link_code: s,
+            token_redirect_uri: a
         });
     },
-    sessionHandoff: function (e, t, n, r, a) {
-        return i.tn.post({
-            url: _.ANM.CONNECTIONS_SESSION_HANDOFF(e),
-            body: {
-                state: t,
-                code: n,
-                openid_params: r,
-                iss: a
-            },
-            oldFormErrors: !0,
-            rejectWithError: !1
-        });
-    },
-    getHandoffStatus: function (e, t) {
-        let n = new URLSearchParams();
-        n.append('state', t);
-        let r = ''.concat(_.ANM.CONNECTIONS_SESSION_HANDOFF(e), '?').concat(n.toString());
-        return i.tn.get({
-            url: r,
-            body: { state: t },
-            rejectWithError: !0
-        });
-    }
+    sessionHandoff: b,
+    getHandoffStatus: y
 };

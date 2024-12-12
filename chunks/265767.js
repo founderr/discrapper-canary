@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function n(e) {
     return {
         name: 'HSP',
         case_insensitive: !0,
@@ -33,4 +33,5 @@ e.exports = function (e) {
             e.C_NUMBER_MODE
         ]
     };
-};
+}
+e.exports = n;

@@ -1,256 +1,237 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return E;
+        return y;
     }
-}),
-    n(653041),
-    n(47120),
-    n(789020),
-    n(724458);
-var r = n(392711),
-    i = n.n(r),
-    a = n(131704),
-    s = n(680089),
-    o = n(592125),
-    l = n(480294),
-    u = n(580005),
-    c = n(496675),
-    d = n(9156),
-    f = n(70956),
-    _ = n(630388),
-    p = n(823379),
-    h = n(789662),
-    m = n(981631),
-    g = n(526761);
-function E(e, t, n, r, _) {
-    if (t !== h.AR.UseGreyDot)
+});
+var i = r(653041);
+var a = r(47120);
+var s = r(789020);
+var o = r(724458);
+var l = r(392711),
+    u = r.n(l),
+    c = r(131704),
+    d = r(680089),
+    f = r(592125),
+    _ = r(480294),
+    h = r(580005),
+    p = r(496675),
+    m = r(9156),
+    g = r(70956),
+    E = r(630388),
+    v = r(823379),
+    I = r(789662),
+    T = r(981631),
+    b = r(526761);
+function y(e, n, r, i, a) {
+    if (n !== I.AR.UseGreyDot)
         return [
             {
                 label: 'Setting the guild to a white dot unread',
-                apply: (e, t) => {
-                    v(e, t, !0);
+                apply: (e, n) => {
+                    C(e, n, !0);
                 }
             }
         ];
-    let g = [],
-        E = Object.values(o.Z.getMutableGuildChannelsForGuild(e.id)).filter((e) => c.Z.can(m.Plq.VIEW_CHANNEL, e));
+    let s = [],
+        o = Object.values(f.Z.getMutableGuildChannelsForGuild(e.id)).filter((e) => p.Z.can(T.Plq.VIEW_CHANNEL, e));
+    return s.push(...S(e, o)), s.push(A(e)), s.push(N()), s.push(...R(o)), s.push(...O(o)), s.push(...x(o)), _.Z.hasConsented(T.pjP.PERSONALIZATION) ? s.push(...D(e, o, r, i, a)) : s.push(...L(e, o)), s.filter(v.lm);
+}
+function S(e, n) {
+    if (!(m.ZP.isMuted(e.id) && !m.ZP.isTemporarilyMuted(e.id))) return [];
+    let r = [
+            {
+                label: 'Unmuting the guild and marking it as read',
+                apply: (e) => {
+                    (e.muted = !1), (e.mute_config = null);
+                },
+                needsMarkedAsRead: !0
+            }
+        ],
+        i = n.filter((n) => m.ZP.getChannelMessageNotifications(e.id, n.id) === T.bL.ALL_MESSAGES);
     return (
-        g.push(
-            ...(function (e, t) {
-                if (!(d.ZP.isMuted(e.id) && !d.ZP.isTemporarilyMuted(e.id))) return [];
-                let n = [
-                        {
-                            label: 'Unmuting the guild and marking it as read',
-                            apply: (e) => {
-                                (e.muted = !1), (e.mute_config = null);
-                            },
-                            needsMarkedAsRead: !0
-                        }
-                    ],
-                    r = t.filter((t) => d.ZP.getChannelMessageNotifications(e.id, t.id) === m.bL.ALL_MESSAGES);
-                return (
-                    r.length > 0 &&
-                        n.push({
-                            label: 'Setting '.concat(r.length, ' to mentions-only since they were all-messages and we are unmuting the guild'),
-                            debug: r.map((e) => '\n    - #'.concat(e.name)).join(''),
-                            apply: (e, t) => {
-                                for (let n of r)
-                                    I(e, t, n.id, (e) => {
-                                        e.message_notifications = m.bL.ONLY_MENTIONS;
-                                    });
-                            }
-                        }),
-                    n
-                );
-            })(e, E)
-        ),
-        g.push(
-            (function (e) {
-                if (d.ZP.getMessageNotifications(e.id) === m.bL.ALL_MESSAGES)
-                    return {
-                        label: 'Setting the guild to only mentions since it is in care-a-little but was previously all-messages',
-                        apply: (e) => {
-                            e.message_notifications = m.bL.ONLY_MENTIONS;
-                        }
-                    };
-            })(e)
-        ),
-        g.push(
-            (function () {
-                return {
-                    label: 'Setting the guild to a grey dot unread',
-                    apply: (e, t) => {
-                        v(e, t, !1);
-                    }
-                };
-            })()
-        ),
-        g.push(
-            ...(function (e) {
-                let t = [],
-                    [n, r] = i()(e)
-                        .filter((e) => e.type === m.d4z.GUILD_ANNOUNCEMENT)
-                        .partition((e) => d.ZP.isChannelMuted(e.guild_id, e.id) || (null != e.parent_id && d.ZP.isChannelMuted(e.guild_id, e.parent_id)))
-                        .value();
-                return (
-                    n.length > 0 &&
-                        t.push({
-                            label: 'Not touching '.concat(n.length, ' announcement channels since they are muted'),
-                            debug: n.map((e) => '\n    - #'.concat(e.name)).join('')
-                        }),
-                    r.length > 0 &&
-                        t.push({
-                            label: 'Setting '.concat(r.length, ' announcement channels to white-dot'),
-                            debug: r.map((e) => '\n    - #'.concat(e.name)).join(''),
-                            apply: (e, t) => {
-                                for (let n of r) T(e, t, n.id, !0);
-                            }
-                        }),
-                    t
-                );
-            })(E)
-        ),
-        g.push(
-            ...(function (e) {
-                let t = [],
-                    n = [];
-                for (let t of e) d.ZP.isChannelMuted(t.guild_id, t.id) && t.isCategory() && !s.Z.isCollapsed(t.id) && n.push(t);
-                return (
-                    n.length > 0 &&
-                        t.push({
-                            label: 'Unmuting '.concat(n.length, ' categories and setting to grey-dot'),
-                            debug: n.map((e) => '\n    - #'.concat(e.name)).join(''),
-                            apply: (e, t) => {
-                                for (let r of n)
-                                    T(e, t, r.id, !1),
-                                        I(e, t, r.id, (e) => {
-                                            (e.muted = !1), (e.mute_config = null);
-                                        });
-                            }
-                        }),
-                    t
-                );
-            })(E)
-        ),
-        g.push(
-            ...(function (e) {
-                let t = [],
-                    n = [],
-                    r = [];
-                return (
-                    e.forEach((e) => {
-                        if (d.ZP.isChannelMuted(e.guild_id, e.id)) return;
-                        let t = d.ZP.getChannelMessageNotifications(e.guild_id, e.id);
-                        t === m.bL.ALL_MESSAGES ? n.push(e) : t === m.bL.ONLY_MENTIONS && r.push(e);
-                    }),
-                    n.length > 0 &&
-                        t.push({
-                            label: 'Setting '.concat(n.length, ' channels to white-dot since they were explicitly All Messages'),
-                            debug: n.map((e) => '\n    - #'.concat(e.name)).join(''),
-                            apply: (e, t) => {
-                                for (let r of n) T(e, t, r.id, !0);
-                            }
-                        }),
-                    r.length > 0 &&
-                        t.push({
-                            label: 'Setting '.concat(r.length, ' channels to grey-dot since they were explicitly Mentions Only'),
-                            debug: r.map((e) => '\n    - #'.concat(e.name)).join(''),
-                            apply: (e, t) => {
-                                for (let n of r) T(e, t, n.id, !1);
-                            }
-                        }),
-                    t
-                );
-            })(E)
-        ),
-        l.Z.hasConsented(m.pjP.PERSONALIZATION)
-            ? g.push(
-                  ...(function (e, t, n, r, a) {
-                      if (d.ZP.isMuted(e.id) && !d.ZP.isTemporarilyMuted(e.id)) return [];
-                      let s = new Set(t.map((e) => e.id)),
-                          o = r.filter((e) => s.has(e.channel_id)),
-                          l = i().keyBy(o, 'channel_id'),
-                          u = Math.max(
-                              n.messages === h.XR.High ? a.frecency.yearMinOpensLargeServer : a.frecency.yearMinOpensSmallServer,
-                              o.reduce((e, t) => {
-                                  var n;
-                                  return e + Number(null !== (n = t.num_year_opens) && void 0 !== n ? n : 0);
-                              }, 0) * a.frecency.totalOpensPercent
-                          ),
-                          c = Math.max(
-                              a.frecency.monthMinOpens,
-                              o.reduce((e, t) => {
-                                  var n;
-                                  return e + Number(null !== (n = t.num_three_month_opens) && void 0 !== n ? n : 0);
-                              }, 0) * a.frecency.totalOpensPercent
-                          ),
-                          f = [],
-                          _ = [];
-                      t.forEach((e) => {
-                          var t, n, r, i;
-                          let a = null !== (t = l[e.id]) && void 0 !== t ? t : {};
-                          Number(null !== (n = a.num_year_opens) && void 0 !== n ? n : 0) > u || Number(null !== (r = a.num_month_opens) && void 0 !== r ? r : 0) > c ? f.push(e) : Number(null !== (i = a.num_three_month_opens) && void 0 !== i ? i : 0) > 2 && _.push(e);
-                      });
-                      let p = [];
-                      return (
-                          f.length > 0 &&
-                              p.push({
-                                  label: 'Setting '.concat(f.length, ' channels to white-dot since they are recent and frequently viewed'),
-                                  debug: f.map((e) => '\n    - #'.concat(e.name, ' (').concat(JSON.stringify(l[e.id]), ')')).join(''),
-                                  apply: (e, t) => {
-                                      for (let n of f) T(e, t, n.id, !0);
-                                  }
-                              }),
-                          _.length > 0 &&
-                              p.push({
-                                  label: 'NOT setting '.concat(_.length, ' channels to white-dot because they were only viewed a little.'),
-                                  debug: _.map((e) => '\n    - #'.concat(e.name, ' (').concat(JSON.stringify(l[e.id]), ')')).join('')
-                              }),
-                          p
-                      );
-                  })(e, E, n, r, _)
-              )
-            : g.push(
-                  ...(function (e, t) {
-                      if (d.ZP.isMuted(e.id) && !d.ZP.isTemporarilyMuted(e.id)) return [];
-                      let n = [],
-                          r = new Set(t.map((e) => e.id)),
-                          i = Date.now() - f.Z.Millis.DAYS_30,
-                          s = u.Z.getFrequentlyWithoutFetchingLatest()
-                              .filter((e) => e instanceof a.Sf && r.has(e.id))
-                              .filter((e) => {
-                                  var t, n;
-                                  let r = null !== (n = null === (t = u.Z.frecencyWithoutFetchingLatest.usageHistory[e.id]) || void 0 === t ? void 0 : t.recentUses) && void 0 !== n ? n : [];
-                                  return 0 !== r.length && r[r.length - 1] >= i;
-                              });
-                      return (
-                          s.length > 0 &&
-                              n.push({
-                                  label: 'Setting '.concat(s.length, ' channels to white-dot since they are recent and frequently viewed'),
-                                  debug: s.map((e) => '\n    - #'.concat(e.name)).join(''),
-                                  apply: (e, t) => {
-                                      for (let n of s) T(e, t, n.id, !0);
-                                  }
-                              }),
-                          n
-                      );
-                  })(e, E)
-              ),
-        g.filter(p.lm)
+        i.length > 0 &&
+            r.push({
+                label: 'Setting '.concat(i.length, ' to mentions-only since they were all-messages and we are unmuting the guild'),
+                debug: i.map((e) => '\n    - #'.concat(e.name)).join(''),
+                apply: (e, n) => {
+                    for (let r of i)
+                        w(e, n, r.id, (e) => {
+                            e.message_notifications = T.bL.ONLY_MENTIONS;
+                        });
+                }
+            }),
+        r
     );
 }
-function v(e, t, n) {
-    var r, i;
-    (e.flags = (0, _.mB)(null !== (i = null !== (r = e.flags) && void 0 !== r ? r : t.flags) && void 0 !== i ? i : 0, g.vc.UNREADS_ALL_MESSAGES, n)), (e.flags = (0, _.mB)(e.flags, g.vc.UNREADS_ONLY_MENTIONS, !n));
+function A(e) {
+    if (m.ZP.getMessageNotifications(e.id) === T.bL.ALL_MESSAGES)
+        return {
+            label: 'Setting the guild to only mentions since it is in care-a-little but was previously all-messages',
+            apply: (e) => {
+                e.message_notifications = T.bL.ONLY_MENTIONS;
+            }
+        };
 }
-function I(e, t, n, r) {
+function N() {
+    return {
+        label: 'Setting the guild to a grey dot unread',
+        apply: (e, n) => {
+            C(e, n, !1);
+        }
+    };
+}
+function C(e, n, r) {
+    var i, a;
+    (e.flags = (0, E.mB)(null !== (a = null !== (i = e.flags) && void 0 !== i ? i : n.flags) && void 0 !== a ? a : 0, b.vc.UNREADS_ALL_MESSAGES, r)), (e.flags = (0, E.mB)(e.flags, b.vc.UNREADS_ONLY_MENTIONS, !r));
+}
+function R(e) {
+    let n = [],
+        [r, i] = u()(e)
+            .filter((e) => e.type === T.d4z.GUILD_ANNOUNCEMENT)
+            .partition((e) => m.ZP.isChannelMuted(e.guild_id, e.id) || (null != e.parent_id && m.ZP.isChannelMuted(e.guild_id, e.parent_id)))
+            .value();
+    return (
+        r.length > 0 &&
+            n.push({
+                label: 'Not touching '.concat(r.length, ' announcement channels since they are muted'),
+                debug: r.map((e) => '\n    - #'.concat(e.name)).join('')
+            }),
+        i.length > 0 &&
+            n.push({
+                label: 'Setting '.concat(i.length, ' announcement channels to white-dot'),
+                debug: i.map((e) => '\n    - #'.concat(e.name)).join(''),
+                apply: (e, n) => {
+                    for (let r of i) P(e, n, r.id, !0);
+                }
+            }),
+        n
+    );
+}
+function O(e) {
+    let n = [],
+        r = [];
+    for (let n of e) m.ZP.isChannelMuted(n.guild_id, n.id) && n.isCategory() && !d.Z.isCollapsed(n.id) && r.push(n);
+    return (
+        r.length > 0 &&
+            n.push({
+                label: 'Unmuting '.concat(r.length, ' categories and setting to grey-dot'),
+                debug: r.map((e) => '\n    - #'.concat(e.name)).join(''),
+                apply: (e, n) => {
+                    for (let i of r)
+                        P(e, n, i.id, !1),
+                            w(e, n, i.id, (e) => {
+                                (e.muted = !1), (e.mute_config = null);
+                            });
+                }
+            }),
+        n
+    );
+}
+function D(e, n, r, i, a) {
+    if (m.ZP.isMuted(e.id) && !m.ZP.isTemporarilyMuted(e.id)) return [];
+    let s = new Set(n.map((e) => e.id)),
+        o = i.filter((e) => s.has(e.channel_id)),
+        l = u().keyBy(o, 'channel_id'),
+        c = Math.max(
+            r.messages === I.XR.High ? a.frecency.yearMinOpensLargeServer : a.frecency.yearMinOpensSmallServer,
+            o.reduce((e, n) => {
+                var r;
+                return e + Number(null !== (r = n.num_year_opens) && void 0 !== r ? r : 0);
+            }, 0) * a.frecency.totalOpensPercent
+        ),
+        d = Math.max(
+            a.frecency.monthMinOpens,
+            o.reduce((e, n) => {
+                var r;
+                return e + Number(null !== (r = n.num_three_month_opens) && void 0 !== r ? r : 0);
+            }, 0) * a.frecency.totalOpensPercent
+        ),
+        f = [],
+        _ = [];
+    n.forEach((e) => {
+        var n, r, i, a;
+        let s = null !== (n = l[e.id]) && void 0 !== n ? n : {};
+        Number(null !== (r = s.num_year_opens) && void 0 !== r ? r : 0) > c || Number(null !== (i = s.num_month_opens) && void 0 !== i ? i : 0) > d ? f.push(e) : Number(null !== (a = s.num_three_month_opens) && void 0 !== a ? a : 0) > 2 && _.push(e);
+    });
+    let h = [];
+    return (
+        f.length > 0 &&
+            h.push({
+                label: 'Setting '.concat(f.length, ' channels to white-dot since they are recent and frequently viewed'),
+                debug: f.map((e) => '\n    - #'.concat(e.name, ' (').concat(JSON.stringify(l[e.id]), ')')).join(''),
+                apply: (e, n) => {
+                    for (let r of f) P(e, n, r.id, !0);
+                }
+            }),
+        _.length > 0 &&
+            h.push({
+                label: 'NOT setting '.concat(_.length, ' channels to white-dot because they were only viewed a little.'),
+                debug: _.map((e) => '\n    - #'.concat(e.name, ' (').concat(JSON.stringify(l[e.id]), ')')).join('')
+            }),
+        h
+    );
+}
+function L(e, n) {
+    if (m.ZP.isMuted(e.id) && !m.ZP.isTemporarilyMuted(e.id)) return [];
+    let r = [],
+        i = new Set(n.map((e) => e.id)),
+        a = Date.now() - g.Z.Millis.DAYS_30,
+        s = h.Z.getFrequentlyWithoutFetchingLatest()
+            .filter((e) => e instanceof c.Sf && i.has(e.id))
+            .filter((e) => {
+                var n, r;
+                let i = null !== (r = null === (n = h.Z.frecencyWithoutFetchingLatest.usageHistory[e.id]) || void 0 === n ? void 0 : n.recentUses) && void 0 !== r ? r : [];
+                return 0 !== i.length && i[i.length - 1] >= a;
+            });
+    return (
+        s.length > 0 &&
+            r.push({
+                label: 'Setting '.concat(s.length, ' channels to white-dot since they are recent and frequently viewed'),
+                debug: s.map((e) => '\n    - #'.concat(e.name)).join(''),
+                apply: (e, n) => {
+                    for (let r of s) P(e, n, r.id, !0);
+                }
+            }),
+        r
+    );
+}
+function x(e) {
+    let n = [],
+        r = [],
+        i = [];
+    return (
+        e.forEach((e) => {
+            if (m.ZP.isChannelMuted(e.guild_id, e.id)) return;
+            let n = m.ZP.getChannelMessageNotifications(e.guild_id, e.id);
+            n === T.bL.ALL_MESSAGES ? r.push(e) : n === T.bL.ONLY_MENTIONS && i.push(e);
+        }),
+        r.length > 0 &&
+            n.push({
+                label: 'Setting '.concat(r.length, ' channels to white-dot since they were explicitly All Messages'),
+                debug: r.map((e) => '\n    - #'.concat(e.name)).join(''),
+                apply: (e, n) => {
+                    for (let i of r) P(e, n, i.id, !0);
+                }
+            }),
+        i.length > 0 &&
+            n.push({
+                label: 'Setting '.concat(i.length, ' channels to grey-dot since they were explicitly Mentions Only'),
+                debug: i.map((e) => '\n    - #'.concat(e.name)).join(''),
+                apply: (e, n) => {
+                    for (let r of i) P(e, n, r.id, !1);
+                }
+            }),
+        n
+    );
+}
+function w(e, n, r, i) {
     var a, s, o, l;
-    let u = null !== (o = null === (a = e.channel_overrides) || void 0 === a ? void 0 : a[n]) && void 0 !== o ? o : {};
-    r(u, null !== (l = null === (s = t.channel_overrides) || void 0 === s ? void 0 : s[n]) && void 0 !== l ? l : {}), !i().isEmpty(u) && (null == e.channel_overrides && (e.channel_overrides = {}), (e.channel_overrides[n] = u));
+    let c = null !== (o = null === (a = e.channel_overrides) || void 0 === a ? void 0 : a[r]) && void 0 !== o ? o : {};
+    i(c, null !== (l = null === (s = n.channel_overrides) || void 0 === s ? void 0 : s[r]) && void 0 !== l ? l : {}), !u().isEmpty(c) && (null == e.channel_overrides && (e.channel_overrides = {}), (e.channel_overrides[r] = c));
 }
-function T(e, t, n, r) {
-    I(e, t, n, (e, t) => {
-        var n, i;
-        (e.flags = (0, _.mB)(null !== (i = null !== (n = e.flags) && void 0 !== n ? n : t.flags) && void 0 !== i ? i : 0, g.ic.UNREADS_ALL_MESSAGES, r)), (e.flags = (0, _.mB)(e.flags, g.ic.UNREADS_ONLY_MENTIONS, !r));
+function P(e, n, r, i) {
+    w(e, n, r, (e, n) => {
+        var r, a;
+        (e.flags = (0, E.mB)(null !== (a = null !== (r = e.flags) && void 0 !== r ? r : n.flags) && void 0 !== a ? a : 0, b.ic.UNREADS_ALL_MESSAGES, i)), (e.flags = (0, E.mB)(e.flags, b.ic.UNREADS_ONLY_MENTIONS, !i));
     });
 }

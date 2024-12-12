@@ -1,74 +1,87 @@
-n.d(t, {
+r.d(n, {
     $: function () {
-        return p;
+        return v;
     },
     Z: function () {
-        return _;
+        return E;
     }
-}),
-    n(724458),
-    n(47120),
-    n(411104);
-var r = n(259443),
-    i = n(510990),
-    a = n(141795),
-    s = n(983544),
-    o = n(596956),
-    l = n(865275),
-    u = n(981631),
-    c = n(959517),
-    d = n(388032);
-let f = new r.Yd('CloudUploaderBase.tsx');
-class _ extends l.Z {
+});
+var i = r(724458);
+var a = r(47120);
+var s = r(411104);
+var o = r(259443),
+    l = r(510990),
+    u = r(141795),
+    c = r(983544),
+    d = r(596956),
+    f = r(865275),
+    _ = r(981631),
+    h = r(959517),
+    p = r(388032);
+function m(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let g = new o.Yd('CloudUploaderBase.tsx');
+class E extends f.Z {
     _fileSize() {
-        return this.files.reduce((e, t) => {
-            var n;
-            return (e += null !== (n = t.currentSize) && void 0 !== n ? n : 0);
+        return this.files.reduce((e, n) => {
+            var r;
+            return (e += null !== (r = n.currentSize) && void 0 !== r ? r : 0);
         }, 0);
     }
     async compressAndCheckFileSize() {
-        var e, t;
-        let n = (0, s.F)(null === (t = this.files[0]) || void 0 === t ? void 0 : null === (e = t.item) || void 0 === e ? void 0 : e.target);
-        return this.files.length > n.getMaxAttachmentsCount()
-            ? (f.log('Too many attachments for '.concat(this.id)), this._handleError({ code: u.evJ.TOO_MANY_ATTACHMENTS }), !1)
-            : !(this._fileSize() > n.getMaxTotalAttachmentSize()) ||
+        var e, n;
+        let r = (0, c.F)(null === (n = this.files[0]) || void 0 === n ? void 0 : null === (e = n.item) || void 0 === e ? void 0 : e.target);
+        return this.files.length > r.getMaxAttachmentsCount()
+            ? (g.log('Too many attachments for '.concat(this.id)), this._handleError({ code: _.evJ.TOO_MANY_ATTACHMENTS }), !1)
+            : !(this._fileSize() > r.getMaxTotalAttachmentSize()) ||
                   (this._handleError({
-                      code: u.evJ.ENTITY_TOO_LARGE,
-                      reason: { type: c.xi.POSTCOMPRESSION_SUM_TOO_LARGE }
+                      code: _.evJ.ENTITY_TOO_LARGE,
+                      reason: { type: h.xi.POSTCOMPRESSION_SUM_TOO_LARGE }
                   }),
                   !1);
     }
     _filesTooLarge() {
-        return this.files.some((e) => e.error === u.evJ.ENTITY_TOO_LARGE);
+        return this.files.some((e) => e.error === _.evJ.ENTITY_TOO_LARGE);
     }
     setUploadingTextForUI() {
-        let e = 1 === this.files.length && null != this.files[0].filename ? this.files[0].filename : d.intl.formatToPlainString(d.t.D0noUl, { count: this.files.length }),
-            t = this.files.some((e) => e.isImage),
-            n = this.files.some((e) => e.isVideo),
-            r = this._fileSize();
-        f.log('setUploadingTextForUI - total content: '.concat(r, ' bytes and ').concat(this.files.length, ' attachments for ').concat(this.id)),
+        let e = 1 === this.files.length && null != this.files[0].filename ? this.files[0].filename : p.intl.formatToPlainString(p.t.D0noUl, { count: this.files.length }),
+            n = this.files.some((e) => e.isImage),
+            r = this.files.some((e) => e.isVideo),
+            i = this._fileSize();
+        g.log('setUploadingTextForUI - total content: '.concat(i, ' bytes and ').concat(this.files.length, ' attachments for ').concat(this.id)),
             (this._file = {
                 ...this._file,
-                totalPostCompressionSize: r,
-                currentSize: r,
+                totalPostCompressionSize: i,
+                currentSize: i,
                 name: e,
-                hasVideo: n,
-                hasImage: t,
+                hasVideo: r,
+                hasImage: n,
                 attachmentsCount: this.files.length,
                 items: this.files
             });
     }
     _recomputeProgress() {
-        let { loaded: e, total: t } = this._recomputeProgressTotal(),
-            n = this._recomputeProgressByFile();
-        this._handleProgress(e, t, n);
+        let { loaded: e, total: n } = this._recomputeProgressTotal(),
+            r = this._recomputeProgressByFile();
+        this._handleProgress(e, n, r);
     }
     _recomputeProgressTotal() {
         let e = this._fileSize();
         return {
-            loaded: this.files.reduce((e, t) => {
-                var n;
-                return (e += null !== (n = t.loaded) && void 0 !== n ? n : 0);
+            loaded: this.files.reduce((e, n) => {
+                var r;
+                return (e += null !== (r = n.loaded) && void 0 !== r ? r : 0);
             }, 0),
             total: e
         };
@@ -76,84 +89,73 @@ class _ extends l.Z {
     _recomputeProgressByFile() {
         let e = {};
         return (
-            this.files.forEach((t) => {
-                e[t.id] = (0, o.S)(t.loaded, t.currentSize);
+            this.files.forEach((n) => {
+                e[n.id] = (0, d.S)(n.loaded, n.currentSize);
             }),
             e
         );
     }
     cancel() {
-        if ((f.log('Cancel called for '.concat(this.id)), !this._aborted)) (this._aborted = !0), null != this._cancel && this._cancel(), this.files.forEach((e) => e.cancel()), this._handleComplete();
+        if ((g.log('Cancel called for '.concat(this.id)), !this._aborted)) (this._aborted = !0), null != this._cancel && this._cancel(), this.files.forEach((e) => e.cancel()), this._handleComplete();
     }
     async cancelItem(e) {
-        f.log('Cancel called for '.concat(this.id, ' for item ').concat(e));
-        let t = this.files.find((t) => t.id === e);
-        if (null == t || t.status === a.m.CANCELED) return;
-        let n = this.files.indexOf(t);
-        (this.files = [...this.files.slice(0, n), ...this.files.slice(n + 1)]),
+        g.log('Cancel called for '.concat(this.id, ' for item ').concat(e));
+        let n = this.files.find((n) => n.id === e);
+        if (null == n || n.status === u.m.CANCELED) return;
+        let r = this.files.indexOf(n);
+        (this.files = [...this.files.slice(0, r), ...this.files.slice(r + 1)]),
             (this._file = {
                 ...this._file,
                 items: this.files
             }),
-            await (0, i.V)(t),
-            t.cancel(),
+            await (0, l.V)(n),
+            n.cancel(),
             this.emit('cancel-upload-item', this._file),
             0 === this.files.length && this.cancel();
     }
     failed() {
-        return this.files.some((e) => e.status === a.m.ERROR);
+        return this.files.some((e) => e.status === u.m.ERROR);
     }
     _remainingUploadCount() {
         let e = this.files;
-        return e.length - e.filter((e) => e.status === a.m.COMPLETED).length;
+        return e.length - e.filter((e) => e.status === u.m.COMPLETED).length;
     }
     clear() {
         this.cancel(), (this.files = []);
     }
     constructor(...e) {
-        var t, n, r;
-        super(...e),
-            (t = this),
-            (r = []),
-            (n = 'files') in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+        super(...e), m(this, 'files', []);
     }
 }
-async function p(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = arguments.length > 2 ? arguments[2] : void 0,
-        r = e.map(
+async function v(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        r = arguments.length > 2 ? arguments[2] : void 0,
+        i = e.map(
             (e) =>
-                new Promise((r, i) => {
+                new Promise((i, a) => {
                     switch (e.status) {
-                        case a.m.NOT_STARTED:
+                        case u.m.NOT_STARTED:
                             e.upload();
                             break;
-                        case a.m.COMPLETED:
-                            r('complete');
+                        case u.m.COMPLETED:
+                            i('complete');
                             break;
-                        case a.m.ERROR:
-                            t && e.error !== u.evJ.ENTITY_TOO_LARGE ? e.upload() : i(Error('File failed to upload'));
+                        case u.m.ERROR:
+                            n && e.error !== _.evJ.ENTITY_TOO_LARGE ? e.upload() : a(Error('File failed to upload'));
                             break;
-                        case a.m.CANCELED:
-                            i(Error('Upload is canceled'));
+                        case u.m.CANCELED:
+                            a(Error('Upload is canceled'));
                     }
                     e.on('complete', () => {
-                        r('complete');
+                        i('complete');
                     }),
                         e.on('error', () => {
-                            i(Error('File '.concat(e.id, ' failed to upload')));
+                            a(Error('File '.concat(e.id, ' failed to upload')));
                         }),
-                        e.on('progress', (e, t) => {
-                            null == n || n(e, t);
+                        e.on('progress', (e, n) => {
+                            null == r || r(e, n);
                         });
                 })
         );
-    await Promise.all(r);
+    await Promise.all(i);
 }

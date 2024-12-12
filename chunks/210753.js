@@ -1,64 +1,66 @@
-n.d(t, {
+r.d(n, {
     $: function () {
-        return f;
+        return g;
     }
-}),
-    n(653041),
-    n(47120);
-var r = n(192379),
-    i = n(392711),
-    a = n.n(i),
-    s = n(442837),
-    o = n(846519),
-    l = n(224706),
-    u = n(669764);
-function c(e, t, n) {
+});
+var i = r(653041);
+var a = r(47120);
+var s = r(192379),
+    o = r(392711),
+    l = r.n(o),
+    u = r(442837),
+    c = r(846519),
+    d = r(224706),
+    f = r(669764);
+function _(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let d = new (class e {
+let h = 20;
+class p {
     request(e) {
         !(this._pending.has(e) || this._fetched.has(e)) && (this._pending.add(e), this._flushHandler.delay(!1));
     }
     _flush() {
         let e = [];
-        this._pending.forEach((t) => {
-            this._fetched.add(t), e.push(t);
+        this._pending.forEach((n) => {
+            this._fetched.add(n), e.push(n);
         }),
-            a()
-                .chunk(e, 20)
+            l()
+                .chunk(e, h)
                 .forEach((e) => {
-                    l.Z.getDetectableGamesSupplemental(e);
+                    d.Z.getDetectableGamesSupplemental(e);
                 });
     }
     constructor() {
-        c(this, '_fetched', new Set()), c(this, '_pending', new Set()), c(this, '_flushHandler', new o.sW(0, () => this._flush()));
+        _(this, '_fetched', new Set()), _(this, '_pending', new Set()), _(this, '_flushHandler', new c.sW(0, () => this._flush()));
     }
-})();
-function f(e, t) {
-    r.useEffect(() => {
-        null != e && d.request(e);
+}
+let m = new p();
+function g(e, n) {
+    s.useEffect(() => {
+        null != e && m.request(e);
     }, [e]);
-    let n = r.useMemo(
+    let r = s.useMemo(
         () =>
-            null != t
+            null != n
                 ? {
-                      width: t.coverImageWidth,
-                      height: t.coverImageHeight
+                      width: n.coverImageWidth,
+                      height: n.coverImageHeight
                   }
                 : void 0,
-        [t]
+        [n]
     );
-    return (0, s.cj)([u.Z], () =>
+    return (0, u.cj)([f.Z], () =>
         null == e
             ? {
                   isFetching: !1,
@@ -67,10 +69,10 @@ function f(e, t) {
                   coverImageUrl: void 0
               }
             : {
-                  isFetching: u.Z.isFetching(e),
-                  localizedName: u.Z.getLocalizedName(e),
-                  themes: u.Z.getThemes(e),
-                  coverImageUrl: u.Z.getCoverImageUrl(e, n)
+                  isFetching: f.Z.isFetching(e),
+                  localizedName: f.Z.getLocalizedName(e),
+                  themes: f.Z.getThemes(e),
+                  coverImageUrl: f.Z.getCoverImageUrl(e, r)
               }
     );
 }

@@ -1,59 +1,60 @@
-n(47120);
-var r = n(70780),
-    i = n(147913),
-    a = n(710845),
-    s = n(131951),
-    o = n(936349),
-    l = n(70956),
-    u = n(358085);
-function c(e, t, n) {
+var i = r(47120);
+var a = r(70780),
+    s = r(147913),
+    o = r(710845),
+    l = r(131951),
+    u = r(936349),
+    c = r(70956),
+    d = r(358085);
+function f(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let d = 1 * l.Z.Millis.SECOND,
-    f = 30 * l.Z.Millis.SECOND,
-    _ = new a.Z('RTCLatencyTestManager');
-_.enableNativeLogger(!0);
-class p extends i.Z {
+let _ = 1 * c.Z.Millis.SECOND,
+    h = 30 * c.Z.Millis.SECOND,
+    p = 360,
+    m = new o.Z('RTCLatencyTestManager');
+m.enableNativeLogger(!0);
+class g extends s.Z {
     _terminate() {
         null != this.refetchTimeout && clearTimeout(this.refetchTimeout);
     }
     constructor(...e) {
         super(...e),
-            c(this, 'refetchTimeout', void 0),
-            c(this, 'actions', { POST_CONNECTION_OPEN: () => this._handleConnectionOpen() }),
-            c(this, '_handleTestRegionsResponse', (e) => {
-                let t = e.map((e) => e.region);
-                o.Z.shouldPerformLatencyTest(t)
-                    ? s.Z.getMediaEngine()
+            f(this, 'refetchTimeout', void 0),
+            f(this, 'actions', { POST_CONNECTION_OPEN: () => this._handleConnectionOpen() }),
+            f(this, '_handleTestRegionsResponse', (e) => {
+                let n = e.map((e) => e.region);
+                u.Z.shouldPerformLatencyTest(n)
+                    ? l.Z.getMediaEngine()
                           .rankRtcRegions(e)
                           .then((e) => {
-                              _.verbose('RTC region latency test completed, ranked regions are: ', e), (0, r.o)(e, t);
+                              m.verbose('RTC region latency test completed, ranked regions are: ', e), (0, a.o)(e, n);
                           })
-                          .catch((e) => _.warn(e))
-                    : _.verbose('RTC cached ranked preferred regions are '.concat(o.Z.getPreferredRegions()));
+                          .catch((e) => m.warn(e))
+                    : m.verbose('RTC cached ranked preferred regions are '.concat(u.Z.getPreferredRegions()));
             }),
-            c(this, '_fetchAndScheduleRefetch', () => {
-                (0, r.J)()
+            f(this, '_fetchAndScheduleRefetch', () => {
+                (0, a.J)()
                     .then((e) => this._handleTestRegionsResponse(e.body))
-                    .catch((e) => _.warn(e)),
-                    (this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, 360 * l.Z.Millis.MINUTE));
+                    .catch((e) => m.warn(e)),
+                    (this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, p * c.Z.Millis.MINUTE));
             }),
-            c(this, '_handleConnectionOpen', () => {
-                if (u.isPlatformEmbedded && !__OVERLAY__) {
-                    let e = Math.floor(d + Math.random() * f);
+            f(this, '_handleConnectionOpen', () => {
+                if (d.isPlatformEmbedded && !__OVERLAY__) {
+                    let e = Math.floor(_ + Math.random() * h);
                     null != this.refetchTimeout && clearTimeout(this.refetchTimeout), (this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, e));
                 }
             });
     }
 }
-t.Z = new p();
+n.Z = new g();

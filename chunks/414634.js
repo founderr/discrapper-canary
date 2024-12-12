@@ -1,3 +1,4 @@
-e.exports = function (e) {
+function n(e) {
     return e != e;
-};
+}
+e.exports = n;

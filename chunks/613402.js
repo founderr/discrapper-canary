@@ -1,29 +1,30 @@
-n(47120);
-var r = n(570140),
-    i = n(147913),
-    a = n(885110);
-class s extends i.Z {
+var i = r(47120);
+var a = r(570140),
+    s = r(147913),
+    o = r(885110);
+function l(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+class u extends s.Z {
     constructor(...e) {
-        var t, n, r;
-        super(...e),
-            (t = this),
-            (n = 'stores'),
-            (r = new Map().set(a.Z, o)),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+        super(...e), l(this, 'stores', new Map().set(o.Z, c));
     }
 }
-function o() {
-    r.Z.dispatch({
+function c() {
+    a.Z.dispatch({
         type: 'SELF_PRESENCE_STORE_UPDATE',
-        status: a.Z.getStatus(),
-        activities: a.Z.getActivities()
+        status: o.Z.getStatus(),
+        activities: o.Z.getActivities()
     });
 }
-t.Z = new s();
+n.Z = new u();

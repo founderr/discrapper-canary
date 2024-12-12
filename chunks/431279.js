@@ -1,82 +1,81 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return v;
+        return T;
     }
-}),
-    n(47120);
-var r,
-    i = n(200651),
-    a = n(192379),
-    s = n(374470),
-    o = n(481060),
-    l = n(40851),
-    u = n(124347),
-    c = n(312097),
-    d = n(626135),
-    f = n(956664),
-    _ = n(506071),
-    p = n(981631),
-    h = n(701865),
-    m = n(765568);
-function g(e, t, n) {
+});
+var i,
+    a = r(47120);
+var s = r(200651),
+    o = r(192379),
+    l = r(374470),
+    u = r(481060),
+    c = r(40851),
+    d = r(124347),
+    f = r(312097),
+    _ = r(626135),
+    h = r(956664),
+    p = r(506071),
+    m = r(981631),
+    g = r(701865),
+    E = r(765568);
+function v(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-class E extends (r = a.PureComponent) {
+class I extends (i = o.PureComponent) {
     render() {
-        let { appContext: e, isWindowFocused: t, ...n } = this.props;
-        return (0, i.jsx)(u.ZP, {
-            ...n,
+        let { appContext: e, isWindowFocused: n, ...r } = this.props;
+        return (0, s.jsx)(d.ZP, {
+            ...r,
             onZoom: this.onZoom,
             onMouseEnter: this.onMouseEnter,
-            shouldAnimate: t
+            shouldAnimate: n
         });
     }
     constructor(...e) {
         super(...e),
-            g(this, 'onMouseEnter', (e, t) => {
-                let { preloadImage: n } = t,
-                    { width: r, height: i, onMouseEnter: a } = this.props;
-                null == a || a(e, { preloadImage: n }), n((0, f.zp)(r, i));
+            v(this, 'onMouseEnter', (e, n) => {
+                let { preloadImage: r } = n,
+                    { width: i, height: a, onMouseEnter: s } = this.props;
+                null == s || s(e, { preloadImage: r }), r((0, h.zp)(i, a));
             }),
-            g(this, 'modalContext', (0, o.modalContextFromAppContext)(this.props.appContext)),
-            g(this, 'onCloseImage', () => {
-                (0, o.closeModal)(h.U, this.modalContext);
+            v(this, 'modalContext', (0, u.modalContextFromAppContext)(this.props.appContext)),
+            v(this, 'onCloseImage', () => {
+                (0, u.closeModal)(g.U, this.modalContext);
             }),
-            g(this, 'onZoom', (e, t) => {
-                let { zoomThumbnailPlaceholder: n, trigger: r } = t;
+            v(this, 'onZoom', (e, n) => {
+                let { zoomThumbnailPlaceholder: r, trigger: i } = n;
                 e.preventDefault();
-                let { alt: i, src: a, original: o, width: l, height: u, animated: f, srcIsAnimated: _, children: h, shouldHideMediaOptions: g = !1, sourceMetadata: E } = this.props;
-                (0, s.k)(e.currentTarget) && e.currentTarget.blur(),
-                    d.default.track(p.rMx.OPEN_MODAL, { type: 'Media Modal' }),
-                    (0, c.K)({
-                        className: m.modal,
+                let { alt: a, src: s, original: o, width: u, height: c, animated: d, srcIsAnimated: h, children: p, shouldHideMediaOptions: g = !1, sourceMetadata: v } = this.props,
+                    I = {
+                        url: s,
+                        width: u,
+                        height: c,
+                        type: 'IMAGE',
+                        alt: a,
+                        zoomThumbnailPlaceholder: r,
+                        animated: d,
+                        srcIsAnimated: h,
+                        children: p,
+                        trigger: i,
+                        sourceMetadata: v,
+                        original: null != o ? o : s
+                    };
+                (0, l.k)(e.currentTarget) && e.currentTarget.blur(),
+                    _.default.track(m.rMx.OPEN_MODAL, { type: 'Media Modal' }),
+                    (0, f.K)({
+                        className: E.modal,
                         onClose: this.onCloseImage,
-                        items: [
-                            {
-                                url: a,
-                                width: l,
-                                height: u,
-                                type: 'IMAGE',
-                                alt: i,
-                                zoomThumbnailPlaceholder: n,
-                                animated: f,
-                                srcIsAnimated: _,
-                                children: h,
-                                trigger: r,
-                                sourceMetadata: E,
-                                original: null != o ? o : a
-                            }
-                        ],
+                        items: [I],
                         shouldHideMediaOptions: g,
                         location: 'LazyImageZoomable',
                         contextKey: this.modalContext
@@ -84,16 +83,16 @@ class E extends (r = a.PureComponent) {
             });
     }
 }
-function v(e) {
-    let t = (0, l.bp)(),
-        n = (0, _.n)();
-    return (0, i.jsx)(E, {
+function T(e) {
+    let n = (0, c.bp)(),
+        r = (0, p.n)();
+    return (0, s.jsx)(I, {
         ...e,
-        isWindowFocused: n,
-        appContext: t
+        isWindowFocused: r,
+        appContext: n
     });
 }
-g(E, 'defaultProps', {
+v(I, 'defaultProps', {
     shouldLink: !0,
     autoPlay: !1,
     animated: !1

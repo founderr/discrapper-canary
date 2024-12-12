@@ -1,86 +1,87 @@
-n.d(t, {
+r.d(n, {
     tS: function () {
-        return m;
+        return v;
     },
     x3: function () {
-        return g;
+        return I;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(442837),
-    l = n(846519),
-    u = n(481060),
-    c = n(607070),
-    d = n(706454),
-    f = n(70956),
-    _ = n(506071),
-    p = n(561308),
-    h = n(687371);
-function m(e) {
-    let [t, n] = i.useState(Date.now()),
-        r = (0, _.n)(),
-        a = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
-        s = !r || (a && !e);
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(120356),
+    l = r.n(o),
+    u = r(442837),
+    c = r(846519),
+    d = r(481060),
+    f = r(607070),
+    _ = r(706454),
+    h = r(70956),
+    p = r(506071),
+    m = r(561308),
+    g = r(687371);
+let E = (e) => {
+    let { entry: n, textColor: r, hovered: i = !1, bold: s = !1, scaleFontToUserSetting: o = !1 } = e,
+        l = (0, m.Jg)(n),
+        c = (0, u.e7)([_.default], () => _.default.locale);
+    return l
+        ? (0, a.jsx)(I, {
+              entry: n,
+              textColor: r,
+              hovered: i,
+              bold: s,
+              scaleFontToUserSetting: o
+          })
+        : (0, a.jsx)(d.Text, {
+              variant: 'text-xs/normal',
+              color: r,
+              lineClamp: 1,
+              scaleFontToUserSetting: o,
+              children: (0, m.GL)(n, c)
+          });
+};
+function v(e) {
+    let [n, r] = s.useState(Date.now()),
+        i = (0, p.n)(),
+        a = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
+        o = !i || (a && !e);
     return (
-        i.useEffect(() => {
-            let e = new l.Xp();
+        s.useEffect(() => {
+            let e = new c.Xp();
             return (
-                e.start(s ? 15 * f.Z.Millis.SECOND : f.Z.Millis.SECOND, () => {
-                    n(Date.now());
+                e.start(o ? 15 * h.Z.Millis.SECOND : h.Z.Millis.SECOND, () => {
+                    r(Date.now());
                 }),
                 () => e.stop()
             );
-        }, [s]),
+        }, [o]),
         {
-            now: t,
-            slowTickMode: s
+            now: n,
+            slowTickMode: o
         }
     );
 }
-let g = (e) => {
-    let { entry: t, inline: n = !1, textColor: a, hovered: o = !1, bold: l = !1, scaleFontToUserSetting: c = !1 } = e,
-        { now: d } = m(o),
-        f = i.useMemo(() => (0, p.T_)(t, d), [t, d]),
-        _ = i.useRef(f);
+let I = (e) => {
+    let { entry: n, inline: r = !1, textColor: i, hovered: o = !1, bold: u = !1, scaleFontToUserSetting: c = !1 } = e,
+        { now: f } = v(o),
+        _ = s.useMemo(() => (0, m.T_)(n, f), [n, f]),
+        h = s.useRef(_);
     return (
-        i.useEffect(() => {
-            _.current = f;
-        }, [t]),
-        (0, r.jsx)(u.Text, {
-            className: s()(h.timestamp, {
-                [h.inlineTimestamp]: n,
-                [h.bold]: l
+        s.useEffect(() => {
+            h.current = _;
+        }, [n]),
+        (0, a.jsx)(d.Text, {
+            className: l()(g.timestamp, {
+                [g.inlineTimestamp]: r,
+                [g.bold]: u
             }),
             variant: 'text-xs/medium',
             tabularNumbers: !0,
-            color: a,
+            color: i,
             scaleFontToUserSetting: c,
-            'aria-label': _.current,
-            children: f
+            'aria-label': h.current,
+            children: _
         })
     );
 };
-t.ZP = (e) => {
-    let { entry: t, textColor: n, hovered: i = !1, bold: a = !1, scaleFontToUserSetting: s = !1 } = e,
-        l = (0, p.Jg)(t),
-        c = (0, o.e7)([d.default], () => d.default.locale);
-    return l
-        ? (0, r.jsx)(g, {
-              entry: t,
-              textColor: n,
-              hovered: i,
-              bold: a,
-              scaleFontToUserSetting: s
-          })
-        : (0, r.jsx)(u.Text, {
-              variant: 'text-xs/normal',
-              color: n,
-              lineClamp: 1,
-              scaleFontToUserSetting: s,
-              children: (0, p.GL)(t, c)
-          });
-};
+n.ZP = E;

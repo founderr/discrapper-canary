@@ -1,71 +1,70 @@
-n.d(t, {
+r.d(n, {
     q: function () {
-        return m;
+        return v;
     }
-}),
-    n(47120);
-var r,
-    i = n(442837),
-    a = n(570140),
-    s = n(353926),
-    o = n(626135),
-    l = n(358085),
-    u = n(998502);
-function c(e, t, n) {
+});
+var i,
+    a = r(47120);
+var s = r(442837),
+    o = r(570140),
+    l = r(353926),
+    u = r(626135),
+    c = r(358085),
+    d = r(998502);
+function f(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let d = { hashes: {} };
-async function f() {
-    if (!l.isPlatformEmbedded || !(0, l.isWindows)()) return [];
-    await u.ZP.ensureModule('discord_media');
-    let e = u.ZP.requireModule('discord_media');
+let _ = { hashes: {} };
+async function h() {
+    if (!c.isPlatformEmbedded || !(0, c.isWindows)()) return [];
+    await d.ZP.ensureModule('discord_media');
+    let e = d.ZP.requireModule('discord_media');
     return (await e.getSystemAnalyticsBlob()) || [];
 }
-async function _() {
+async function p() {
     try {
-        let t = (await f()).filter((e) => d.hashes[e.name] !== e.hash);
-        for (let { name: n, hash: r, data: i } of t) {
+        let n = (await h()).filter((e) => _.hashes[e.name] !== e.hash);
+        for (let { name: r, hash: i, data: a } of n) {
             var e;
-            let t = {
-                ...i,
-                gpus: null === (e = i.gpus) || void 0 === e ? void 0 : e.map((e) => JSON.stringify(e))
+            let n = {
+                ...a,
+                gpus: null === (e = a.gpus) || void 0 === e ? void 0 : e.map((e) => JSON.stringify(e))
             };
-            o.default.track(n, t), ((d = { hashes: { ...d.hashes } }).hashes[n] = r);
+            u.default.track(r, n), ((_ = { hashes: { ..._.hashes } }).hashes[r] = i);
         }
-        t.length > 0 && h.emitChange();
+        n.length > 0 && E.emitChange();
     } catch (e) {}
 }
-class p extends (r = i.ZP.PersistedStore) {
+function m() {
+    return p(), !1;
+}
+class g extends (i = s.ZP.PersistedStore) {
     initialize(e) {
-        (d = null != e && 'object' == typeof e.hashes ? e : { hashes: {} }), this.waitFor(s.Z);
+        (_ = null != e && 'object' == typeof e.hashes ? e : { hashes: {} }), this.waitFor(l.Z);
     }
     getState() {
-        return d;
+        return _;
     }
     async info() {
         try {
-            let e = (await f()).find((e) => 'hardware_detected' === e.name);
+            let e = (await h()).find((e) => 'hardware_detected' === e.name);
             if (null == e) return null;
             return e.data;
         } catch (e) {}
     }
 }
-c(p, 'displayName', 'SystemAnalyticsStore'), c(p, 'persistKey', 'SystemAnalyticsStore');
-let h = new p(a.Z, {
-    START_SESSION: function () {
-        return _(), !1;
-    }
-});
-function m() {
-    return h.info();
+f(g, 'displayName', 'SystemAnalyticsStore'), f(g, 'persistKey', 'SystemAnalyticsStore');
+let E = new g(o.Z, { START_SESSION: m });
+function v() {
+    return E.info();
 }

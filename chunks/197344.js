@@ -1,32 +1,37 @@
-var r = n(378364);
-function i() {
-    return s() && r.Z.experiment.getCurrentConfig({ location: 'holiday_events_is_eligible' }, { autoTrackExposure: !1 }).enabled;
-}
+var i = r(378364);
 function a() {
-    let { enabled: e } = r.Z.experiment.useExperiment({ location: 'holiday_events_use_eligible' }, { autoTrackExposure: !1 });
-    return s() && e;
+    return o() && i.Z.experiment.getCurrentConfig({ location: 'holiday_events_is_eligible' }, { autoTrackExposure: !1 }).enabled;
 }
 function s() {
-    let e = Date.now();
-    return e >= r.Z.startTimeMs && e <= r.Z.endTimeMs;
+    let { enabled: e } = i.Z.experiment.useExperiment({ location: 'holiday_events_use_eligible' }, { autoTrackExposure: !1 });
+    return o() && e;
 }
-t.Z = {
-    subscribe: function (e) {
-        return r.Z.experiment.subscribe({ location: 'holiday_events_subscribe' }, e);
-    },
-    isEligible: i,
-    useHolidaySoundpack: function () {
-        return a() && r.Z.soundpack ? r.Z.soundpack : null;
-    },
-    useIsEligible: a,
-    getAppSpinnerSources: function () {
-        return s() ? r.Z.appSpinnerSources : null;
-    },
-    getLoadingTips: function () {
-        var e;
-        return s() ? (null === (e = r.Z.getLoadingTips) || void 0 === e ? void 0 : e.call(r.Z)) : null;
-    },
-    getHolidaySoundpack: function () {
-        return i() && r.Z.soundpack ? r.Z.soundpack : null;
-    }
+function o() {
+    let e = Date.now();
+    return e >= i.Z.startTimeMs && e <= i.Z.endTimeMs;
+}
+function l() {
+    var e;
+    return o() ? (null === (e = i.Z.getLoadingTips) || void 0 === e ? void 0 : e.call(i.Z)) : null;
+}
+function u() {
+    return o() ? i.Z.appSpinnerSources : null;
+}
+function c(e) {
+    return i.Z.experiment.subscribe({ location: 'holiday_events_subscribe' }, e);
+}
+function d() {
+    return a() && i.Z.soundpack ? i.Z.soundpack : null;
+}
+function f() {
+    return s() && i.Z.soundpack ? i.Z.soundpack : null;
+}
+n.Z = {
+    subscribe: c,
+    isEligible: a,
+    useHolidaySoundpack: f,
+    useIsEligible: s,
+    getAppSpinnerSources: u,
+    getLoadingTips: l,
+    getHolidaySoundpack: d
 };

@@ -1,34 +1,38 @@
-n.d(t, {
+r.d(n, {
     Cb: function () {
-        return r;
+        return i;
     },
     Hv: function () {
-        return p;
+        return E;
     },
     JD: function () {
-        return f;
+        return m;
     },
     VY: function () {
-        return d;
-    },
-    y_: function () {
         return _;
     },
+    y_: function () {
+        return g;
+    },
     ym: function () {
-        return c;
+        return f;
     }
-}),
-    n(789020);
-var r,
-    i,
-    a = n(911969),
-    s = n(406432),
-    o = n(630388),
-    l = n(591759),
-    u = n(981631);
-(i = r || (r = {}))[(i.EXPLICIT = 1)] = 'EXPLICIT';
-function c(e) {
-    var t, n;
+});
+var i,
+    a = r(789020);
+var s = r(911969),
+    o = r(406432),
+    l = r(630388),
+    u = r(591759),
+    c = r(981631);
+function d(e) {
+    return {
+        version: e.version,
+        flags: e.flags
+    };
+}
+function f(e) {
+    var n;
     return {
         url: e.url,
         proxyUrl: e.proxy_url,
@@ -38,21 +42,15 @@ function c(e) {
         placeholderVersion: e.placeholder_version,
         contentType: e.content_type,
         loadingState: e.loading_state,
-        contentScanMetadata:
-            null != e.content_scan_metadata
-                ? {
-                      version: (n = e.content_scan_metadata).version,
-                      flags: n.flags
-                  }
-                : void 0,
-        srcIsAnimated: (0, o.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, u.J0y.IS_ANIMATED)
+        contentScanMetadata: null != e.content_scan_metadata ? d(e.content_scan_metadata) : void 0,
+        srcIsAnimated: (0, l.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, c.J0y.IS_ANIMATED)
     };
 }
-function d(e) {
-    var t, n;
-    let r = 0;
+function _(e) {
+    var n, r;
+    let i = 0;
     return (
-        (0, o.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, u.J0y.CONTAINS_EXPLICIT_MEDIA) && (r += 1),
+        (0, l.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, c.J0y.CONTAINS_EXPLICIT_MEDIA) && (i += 1),
         {
             url: e.url,
             proxyUrl: e.proxy_url,
@@ -61,25 +59,30 @@ function d(e) {
             contentType: e.content_type,
             placeholder: e.placeholder,
             placeholderVersion: e.placeholder_version,
-            loadingState: a.f.LOADED_SUCCESS,
+            loadingState: s.f.LOADED_SUCCESS,
             contentScanMetadata:
                 null == e.content_scan_version
                     ? void 0
                     : {
                           version: e.content_scan_version,
-                          flags: r
+                          flags: i
                       },
-            srcIsAnimated: (0, o.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, u.J0y.IS_ANIMATED)
+            srcIsAnimated: (0, l.yE)(null !== (r = e.flags) && void 0 !== r ? r : 0, c.J0y.IS_ANIMATED)
         }
     );
 }
-function f(e, t) {
-    var n;
+function h(e) {
+    return (0, o.tw)(e.contentType) ? 'IMAGE' : (0, o.X2)(e.contentType) && null != e.proxyUrl && null != u.Z.toURLSafe(e.proxyUrl) ? 'VIDEO' : 'INVALID';
+}
+function p(e) {
+    return (0, o.CO)(e.filename) ? 'IMAGE' : (0, o.NU)(e.filename) ? 'VIDEO' : 'INVALID';
+}
+function m(e, n) {
     return {
-        ...d(e),
-        type: ((n = e), (0, s.CO)(n.filename) ? 'IMAGE' : (0, s.NU)(n.filename) ? 'VIDEO' : 'INVALID'),
+        ..._(e),
+        type: p(e),
         sourceMetadata: {
-            message: t,
+            message: n,
             identifier: {
                 type: 'attachment',
                 attachmentId: e.id
@@ -87,22 +90,24 @@ function f(e, t) {
         }
     };
 }
-function _(e) {
-    var t;
+function g(e) {
     return {
         ...e,
-        type: ((t = e), (0, s.tw)(t.contentType) ? 'IMAGE' : (0, s.X2)(t.contentType) && null != t.proxyUrl && null != l.Z.toURLSafe(t.proxyUrl) ? 'VIDEO' : 'INVALID')
+        type: h(e)
     };
 }
-function p(e, t, n) {
+function E(e, n, r) {
     return {
-        type: n,
+        type: r,
         url: e.url,
         proxyUrl: e.proxyURL,
         width: e.width,
         height: e.height,
         placeholder: e.placeholder,
         placeholderVersion: e.placeholderVersion,
-        sourceMetadata: t
+        sourceMetadata: n
     };
 }
+!(function (e) {
+    e[(e.EXPLICIT = 1)] = 'EXPLICIT';
+})(i || (i = {}));

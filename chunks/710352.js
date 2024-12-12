@@ -1,27 +1,31 @@
-var r, i, a, s;
-n.d(t, {
+var i, a;
+r.d(n, {
     Cn: function () {
-        return l;
+        return o;
     },
     R6: function () {
-        return i;
+        return a;
     },
     V8: function () {
-        return c;
-    },
-    Vb: function () {
         return u;
     },
+    Vb: function () {
+        return l;
+    },
     ZI: function () {
-        return r;
+        return i;
     },
     pC: function () {
-        return o;
+        return s;
     }
 });
-let o = 20,
-    l = 5,
-    u = 256;
-((a = r || (r = {})).PERMISSIONS = 'Permissions'), (a.GUIDELINES = 'Guidelines'), (a.TAGS = 'Tags'), (a.DEFAULT_REACTION = 'Default Reaction'), (a.CREATE_POST = 'Create Post');
-let c = 'https://discord.com/community/creating-value-with-conversation';
-((s = i || (i = {}))[(s.DURATION_AGO = 0)] = 'DURATION_AGO'), (s[(s.POSTED_DURATION_AGO = 1)] = 'POSTED_DURATION_AGO');
+let s = 20,
+    o = 5,
+    l = 256;
+!(function (e) {
+    (e.PERMISSIONS = 'Permissions'), (e.GUIDELINES = 'Guidelines'), (e.TAGS = 'Tags'), (e.DEFAULT_REACTION = 'Default Reaction'), (e.CREATE_POST = 'Create Post');
+})(i || (i = {}));
+let u = 'https://discord.com/community/creating-value-with-conversation';
+!(function (e) {
+    (e[(e.DURATION_AGO = 0)] = 'DURATION_AGO'), (e[(e.POSTED_DURATION_AGO = 1)] = 'POSTED_DURATION_AGO');
+})(a || (a = {}));

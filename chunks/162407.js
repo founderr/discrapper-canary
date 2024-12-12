@@ -1,13 +1,18 @@
-e.exports = function (e) {
-    let t = e.regex,
-        n = [
+function n(e) {
+    let n = e.regex,
+        r = {
+            begin: "^'{3,}[ \\t]*$",
+            relevance: 10
+        },
+        i = [{ begin: /\\[*_`]/ }, { begin: /\\\\\*{2}[^\n]*?\*{2}/ }, { begin: /\\\\_{2}[^\n]*_{2}/ }, { begin: /\\\\`{2}[^\n]*`{2}/ }, { begin: /[:;}][*_`](?![*_`])/ }],
+        a = [
             {
                 className: 'strong',
                 begin: /\*{2}([^\n]+?)\*{2}/
             },
             {
                 className: 'strong',
-                begin: t.concat(/\*\*/, /((\*(?!\*)|\\[^\n]|[^*\n\\])+\n)+/, /(\*(?!\*)|\\[^\n]|[^*\n\\])*/, /\*\*/),
+                begin: n.concat(/\*\*/, /((\*(?!\*)|\\[^\n]|[^*\n\\])+\n)+/, /(\*(?!\*)|\\[^\n]|[^*\n\\])*/, /\*\*/),
                 relevance: 0
             },
             {
@@ -19,14 +24,14 @@ e.exports = function (e) {
                 begin: /\*[^\s]([^\n]+\n)+([^\n]+)\*/
             }
         ],
-        r = [
+        s = [
             {
                 className: 'emphasis',
                 begin: /_{2}([^\n]+?)_{2}/
             },
             {
                 className: 'emphasis',
-                begin: t.concat(/__/, /((_(?!_)|\\[^\n]|[^_\n\\])+\n)+/, /(_(?!_)|\\[^\n]|[^_\n\\])*/, /__/),
+                begin: n.concat(/__/, /((_(?!_)|\\[^\n]|[^_\n\\])+\n)+/, /(_(?!_)|\\[^\n]|[^_\n\\])*/, /__/),
                 relevance: 0
             },
             {
@@ -49,7 +54,16 @@ e.exports = function (e) {
                 ],
                 relevance: 0
             }
-        ];
+        ],
+        o = {
+            className: 'symbol',
+            begin: '^(NOTE|TIP|IMPORTANT|WARNING|CAUTION):\\s+',
+            relevance: 10
+        },
+        l = {
+            className: 'bullet',
+            begin: '^(\\*+|-+|\\.+|[^\\n]+?::)\\s+'
+        };
     return {
         name: 'AsciiDoc',
         aliases: ['adoc'],
@@ -107,22 +121,11 @@ e.exports = function (e) {
                 ],
                 relevance: 10
             },
-            {
-                className: 'bullet',
-                begin: '^(\\*+|-+|\\.+|[^\\n]+?::)\\s+'
-            },
-            {
-                className: 'symbol',
-                begin: '^(NOTE|TIP|IMPORTANT|WARNING|CAUTION):\\s+',
-                relevance: 10
-            },
-            { begin: /\\[*_`]/ },
-            { begin: /\\\\\*{2}[^\n]*?\*{2}/ },
-            { begin: /\\\\_{2}[^\n]*_{2}/ },
-            { begin: /\\\\`{2}[^\n]*`{2}/ },
-            { begin: /[:;}][*_`](?![*_`])/ },
-            ...n,
-            ...r,
+            l,
+            o,
+            ...i,
+            ...a,
+            ...s,
             {
                 className: 'string',
                 variants: [{ begin: "``.+?''" }, { begin: "`.+?'" }]
@@ -143,10 +146,7 @@ e.exports = function (e) {
                 end: '$',
                 relevance: 0
             },
-            {
-                begin: "^'{3,}[ \\t]*$",
-                relevance: 10
-            },
+            r,
             {
                 begin: '(link:)?(http|https|ftp|file|irc|image:?):\\S+?\\[[^[]*?\\]',
                 returnBegin: !0,
@@ -174,4 +174,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = n;

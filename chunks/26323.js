@@ -1,43 +1,44 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(928518),
-    s = n(776862),
-    o = n(626135),
-    l = n(981631);
-function u(e, t) {
-    let u = null != t ? t : ''.concat(l.jXE.PREMIUM_GUILD_UPSELL_MODAL);
-    null != e.targetBoostedGuildTier && (u += ' - Tier '.concat(e.targetBoostedGuildTier));
-    o.default.track(l.rMx.OPEN_MODAL, {
-        type: u,
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(928518),
+    o = r(776862),
+    l = r(626135),
+    u = r(981631);
+function c(e, n) {
+    let c = null != n ? n : ''.concat(u.jXE.PREMIUM_GUILD_UPSELL_MODAL);
+    null != e.targetBoostedGuildTier && (c += ' - Tier '.concat(e.targetBoostedGuildTier));
+    let d = () => {
+        l.default.track(u.rMx.MODAL_DISMISSED, {
+            type: c,
+            location: e.analyticsSourceLocation
+        });
+    };
+    l.default.track(u.rMx.OPEN_MODAL, {
+        type: c,
         location: e.analyticsSourceLocation
     });
-    let { openInPopoutEnabled: c, ...d } = e,
-        f = a.Z.getWindowOpen(l.KJ3.CHANNEL_CALL_POPOUT) && null != c && c;
-    f && (0, s.Z)(l.KJ3.CHANNEL_CALL_POPOUT);
-    let _ = f ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
-    (0, i.openModalLazy)(
+    let { openInPopoutEnabled: f, ..._ } = e,
+        h = s.Z.getWindowOpen(u.KJ3.CHANNEL_CALL_POPOUT) && null != f && f;
+    h && (0, o.Z)(u.KJ3.CHANNEL_CALL_POPOUT);
+    let p = h ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
+    (0, a.openModalLazy)(
         async () => {
-            let { default: e } = await n.e('89675').then(n.bind(n, 146747));
-            return (t) =>
-                (0, r.jsx)(e, {
-                    ...d,
-                    ...t
+            let { default: e } = await r.e('89675').then(r.bind(r, 146747));
+            return (n) =>
+                (0, i.jsx)(e, {
+                    ..._,
+                    ...n
                 });
         },
         {
-            onCloseCallback: () => {
-                o.default.track(l.rMx.MODAL_DISMISSED, {
-                    type: u,
-                    location: e.analyticsSourceLocation
-                });
-            },
-            contextKey: _
+            onCloseCallback: d,
+            contextKey: p
         }
     );
 }

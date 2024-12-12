@@ -1,36 +1,37 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return u;
+        return d;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    l = n(680357);
-function u(e) {
-    let { children: t, 'aria-label': n, className: a, position: u, ...c } = e,
-        d = i.useRef(null),
-        f = null != n ? n : 'string' == typeof t && t;
-    return (0, r.jsx)(o.Tooltip, {
-        ...c,
-        position: null != u ? u : 'top',
-        delay: 500,
-        text: t,
-        'aria-label': f,
-        children: (n) => {
-            let { onMouseEnter: i, onMouseLeave: o } = n;
-            return (0, r.jsx)('div', {
-                className: s()(a, l.overflow),
-                ref: d,
+var i = r(200651),
+    a = r(192379),
+    s = r(120356),
+    o = r.n(s),
+    l = r(481060),
+    u = r(680357);
+let c = 500;
+function d(e) {
+    let { children: n, 'aria-label': r, className: s, position: d, ...f } = e,
+        _ = a.useRef(null),
+        h = null != r ? r : 'string' == typeof n && n;
+    return (0, i.jsx)(l.Tooltip, {
+        ...f,
+        position: null != d ? d : 'top',
+        delay: c,
+        text: n,
+        'aria-label': h,
+        children: (r) => {
+            let { onMouseEnter: a, onMouseLeave: l } = r;
+            return (0, i.jsx)('div', {
+                className: o()(s, u.overflow),
+                ref: _,
                 'aria-hidden': e['aria-hidden'],
                 onMouseEnter: () => {
-                    let { current: e } = d;
-                    null != e && e.offsetWidth < e.scrollWidth && (null == i || i());
+                    let { current: e } = _;
+                    null != e && e.offsetWidth < e.scrollWidth && (null == a || a());
                 },
-                onMouseLeave: o,
-                children: t
+                onMouseLeave: l,
+                children: n
             });
         }
     });

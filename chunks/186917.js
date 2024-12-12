@@ -1,14 +1,14 @@
-var r = n(192379),
-    i = n(580747),
-    a = n(607789);
-t.Z = (e, t) => {
-    let n = (0, i.Z)('profile_effect_debug_controls'),
-        { id: s, preset: o, increment: l, decrement: u } = (0, a.Z)(e);
+var i = r(192379),
+    a = r(580747),
+    s = r(607789);
+let o = (e, n) => {
+    let r = (0, a.Z)('profile_effect_debug_controls'),
+        { id: o, preset: l, increment: u, decrement: c } = (0, s.Z)(e);
     return (
-        r.useEffect(() => {
-            if (!n) return;
+        i.useEffect(() => {
+            if (!r) return;
             let e = (e) => {
-                'ArrowUp' === e.key && (l(), e.preventDefault()), 'ArrowDown' === e.key && (u(), e.preventDefault()), 'r' === e.key && (null == t || t(), e.preventDefault());
+                'ArrowUp' === e.key && (u(), e.preventDefault()), 'ArrowDown' === e.key && (c(), e.preventDefault()), 'r' === e.key && (null == n || n(), e.preventDefault());
             };
             return (
                 window.addEventListener('keydown', e),
@@ -18,8 +18,9 @@ t.Z = (e, t) => {
             );
         }, []),
         {
-            id: null != s ? s : null,
-            preset: o
+            id: null != o ? o : null,
+            preset: l
         }
     );
 };
+n.Z = o;

@@ -1,29 +1,34 @@
-function r(e, t) {
-    if (!e) throw Error(t);
+function i(e, n) {
+    if (!e) throw Error(n);
 }
-n.d(t, {
+r.d(n, {
     E_: function () {
-        return s;
+        return f;
     },
     fp: function () {
-        return a;
+        return d;
     },
     hu: function () {
-        return r;
+        return i;
     },
     ug: function () {
-        return i;
+        return c;
     }
 });
-function i(e) {
+let a = 3.4028234663852886e38,
+    s = -3.4028234663852886e38,
+    o = 4294967295,
+    l = 2147483647,
+    u = -2147483648;
+function c(e) {
     if ('number' != typeof e) throw Error('invalid int 32: ' + typeof e);
-    if (!Number.isInteger(e) || e > 2147483647 || e < -2147483648) throw Error('invalid int 32: ' + e);
+    if (!Number.isInteger(e) || e > l || e < u) throw Error('invalid int 32: ' + e);
 }
-function a(e) {
+function d(e) {
     if ('number' != typeof e) throw Error('invalid uint 32: ' + typeof e);
-    if (!Number.isInteger(e) || e > 4294967295 || e < 0) throw Error('invalid uint 32: ' + e);
+    if (!Number.isInteger(e) || e > o || e < 0) throw Error('invalid uint 32: ' + e);
 }
-function s(e) {
+function f(e) {
     if ('number' != typeof e) throw Error('invalid float 32: ' + typeof e);
-    if (Number.isFinite(e) && (e > 3.4028234663852886e38 || e < -3.4028234663852886e38)) throw Error('invalid float 32: ' + e);
+    if (Number.isFinite(e) && (e > a || e < s)) throw Error('invalid float 32: ' + e);
 }

@@ -1,72 +1,85 @@
-n.d(t, {
+r.d(n, {
     l: function () {
-        return p;
+        return m;
     }
 });
-var r,
-    i,
-    a = n(570140),
-    s = n(830917),
-    o = n(692401),
-    l = n(459005),
-    u = n(398463);
-let c =
-        null !== (r = window.requestIdleCallback) && void 0 !== r
-            ? r
+var i,
+    a,
+    s = r(570140),
+    o = r(830917),
+    l = r(692401),
+    u = r(459005),
+    c = r(398463);
+function d(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let f =
+        null !== (i = window.requestIdleCallback) && void 0 !== i
+            ? i
             : (e) => {
-                  let t = Date.now();
+                  let n = Date.now();
                   return setTimeout(() => {
                       e({
                           didTimeout: !1,
                           timeRemaining() {
-                              let e = Date.now() - t;
-                              return Math.max(0, u.Ls - e);
+                              let e = Date.now() - n;
+                              return Math.max(0, c.Ls - e);
                           }
                       });
                   }, 1);
               },
-    d = null !== (i = window.cancelIdleCallback) && void 0 !== i ? i : clearTimeout;
-function f(e) {
-    return null == e ? new u.Lj(u.HO, !0) : new u.Lj(e.timeRemaining(), e.didTimeout);
+    _ = null !== (a = window.cancelIdleCallback) && void 0 !== a ? a : clearTimeout;
+function h(e) {
+    return null == e ? new c.Lj(c.HO, !0) : new c.Lj(e.timeRemaining(), e.didTimeout);
 }
-class _ extends o.W {
+class p extends l.W {
     _queueIdleCallback() {
         if (!this._enableRequestIdleCallback || this._criticalWorkScheduled) return this._processWorkCallback();
-        this.telemetry.time(l.JV.TIME_TO_FIRE_IDLE_CALLBACK),
+        this.telemetry.time(u.JV.TIME_TO_FIRE_IDLE_CALLBACK),
             this._scheduleRequestIdleCallback(
                 (e) => {
-                    var t;
+                    var n;
                     if (null == e ? void 0 : e.didTimeout) {
-                        this.telemetry.track(l.ug.FIRED_DUE_TO_MAX_TIMEOUT), this.telemetry.clearTime(l.JV.TIME_TO_FIRE_IDLE_CALLBACK), this._processWorkCallback();
+                        this.telemetry.track(u.ug.FIRED_DUE_TO_MAX_TIMEOUT), this.telemetry.clearTime(u.JV.TIME_TO_FIRE_IDLE_CALLBACK), this._processWorkCallback();
                         return;
                     }
-                    this.telemetry.timeEnd(l.JV.TIME_TO_FIRE_IDLE_CALLBACK);
-                    if ((null !== (t = null == e ? void 0 : e.timeRemaining()) && void 0 !== t ? t : u.HO) < u.HO)
-                        this.telemetry.time(l.JV.TIME_TO_FIRE_IDLE_CALLBACK),
+                    this.telemetry.timeEnd(u.JV.TIME_TO_FIRE_IDLE_CALLBACK);
+                    if ((null !== (n = null == e ? void 0 : e.timeRemaining()) && void 0 !== n ? n : c.HO) < c.HO)
+                        this.telemetry.time(u.JV.TIME_TO_FIRE_IDLE_CALLBACK),
                             this._scheduleRequestIdleCallback(
                                 (e) => {
-                                    this.telemetry.timeEnd(l.JV.TIME_TO_FIRE_IDLE_CALLBACK);
-                                    let t = f(e),
-                                        n = null == t ? void 0 : t.timeRemaining();
-                                    null != n && this.telemetry.timeTrack(l.JV.DEADLINE_INITIAL_TIME_REMAINING, n), this._processWorkCallback(t);
+                                    this.telemetry.timeEnd(u.JV.TIME_TO_FIRE_IDLE_CALLBACK);
+                                    let n = h(e),
+                                        r = null == n ? void 0 : n.timeRemaining();
+                                    null != r && this.telemetry.timeTrack(u.JV.DEADLINE_INITIAL_TIME_REMAINING, r), this._processWorkCallback(n);
                                 },
-                                { timeout: u.Hb / 5 }
+                                { timeout: c.Hb / 5 }
                             );
                     else {
-                        this.telemetry.timeEnd(l.JV.TIME_TO_FIRE_IDLE_CALLBACK);
-                        let t = f(e),
-                            n = null == t ? void 0 : t.timeRemaining();
-                        null != n && this.telemetry.timeTrack(l.JV.DEADLINE_INITIAL_TIME_REMAINING, n), this._processWorkCallback(t);
+                        this.telemetry.timeEnd(u.JV.TIME_TO_FIRE_IDLE_CALLBACK);
+                        let n = h(e),
+                            r = null == n ? void 0 : n.timeRemaining();
+                        null != r && this.telemetry.timeTrack(u.JV.DEADLINE_INITIAL_TIME_REMAINING, r), this._processWorkCallback(n);
                     }
                 },
-                { timeout: u.Hb }
+                { timeout: c.Hb }
             );
     }
-    _scheduleRequestIdleCallback(e, t) {
-        (this._flushIdleHandler = c((t) => {
-            this._clearIdleCallback(), e(t);
+    _scheduleRequestIdleCallback(e, n) {
+        (this._flushIdleHandler = f((n) => {
+            this._clearIdleCallback(), e(n);
         })),
-            (null == t ? void 0 : t.timeout) != null && this._scheduleMaxIdleCallback(t.timeout);
+            (null == n ? void 0 : n.timeout) != null && this._scheduleMaxIdleCallback(n.timeout);
     }
     _scheduleMaxIdleCallback(e) {
         null != this._flushIdleMaxTimeoutHandler && clearTimeout(this._flushIdleMaxTimeoutHandler),
@@ -75,27 +88,17 @@ class _ extends o.W {
             }, e));
     }
     _clearIdleCallback() {
-        null != this._flushIdleHandler && (d(this._flushIdleHandler), (this._flushIdleHandler = null)), null != this._flushIdleMaxTimeoutHandler && (clearTimeout(this._flushIdleMaxTimeoutHandler), (this._flushIdleMaxTimeoutHandler = null));
+        null != this._flushIdleHandler && (_(this._flushIdleHandler), (this._flushIdleHandler = null)), null != this._flushIdleMaxTimeoutHandler && (clearTimeout(this._flushIdleMaxTimeoutHandler), (this._flushIdleMaxTimeoutHandler = null));
     }
     constructor() {
-        var e, t, n;
         super(),
-            (e = this),
-            (n = null),
-            (t = '_flushIdleMaxTimeoutHandler') in e
-                ? Object.defineProperty(e, t, {
-                      value: null,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (e[t] = n),
-            a.Z.subscribe('WINDOW_VISIBILITY_CHANGE', (e) => {
-                let { visible: t, windowId: n } = e;
-                if (n === (0, s.UU)()) this._trackAppBackgrounded(!t);
+            d(this, '_flushIdleMaxTimeoutHandler', null),
+            s.Z.subscribe('WINDOW_VISIBILITY_CHANGE', (e) => {
+                let { visible: n, windowId: r } = e;
+                if (r === (0, o.UU)()) this._trackAppBackgrounded(!n);
             });
     }
 }
-function p() {
-    return new _();
+function m() {
+    return new p();
 }

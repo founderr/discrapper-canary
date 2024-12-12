@@ -1,72 +1,78 @@
-n(47120), n(757143), n(653041), n(627494);
-var r = n(710845),
-    i = n(287328);
-let a = new r.Z('GuildStickers');
-t.Z = new (class e {
+var i = r(47120);
+var a = r(757143);
+var s = r(653041);
+var o = r(627494);
+var l = r(710845),
+    u = r(287328);
+function c(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let d = new l.Z('GuildStickers');
+class f {
     async getAsync(e) {
-        let t = performance.now(),
-            n = await i.Z.stickers(e).getMapEntries(),
-            r = performance.now();
-        return a.log('asynchronously loaded in '.concat(r - t, 'ms (guilds: ').concat(n.length, ')')), n;
+        let n = performance.now(),
+            r = await u.Z.stickers(e).getMapEntries(),
+            i = performance.now();
+        return d.log('asynchronously loaded in '.concat(i - n, 'ms (guilds: ').concat(r.length, ')')), r;
     }
-    handleConnectionOpen(e, t) {
-        for (let n of e.guilds) this.handleOneGuildCreate(n, t);
+    handleConnectionOpen(e, n) {
+        for (let r of e.guilds) this.handleOneGuildCreate(r, n);
     }
-    handleGuildCreate(e, t) {
-        this.handleOneGuildCreate(e.guild, t);
+    handleGuildCreate(e, n) {
+        this.handleOneGuildCreate(e.guild, n);
     }
-    handleGuildUpdate(e, t) {
-        this.replace(e.guild.id, e.guild.stickers, t);
+    handleGuildUpdate(e, n) {
+        this.replace(e.guild.id, e.guild.stickers, n);
     }
-    handleGuildDelete(e, t) {
-        this.delete(e.guild.id, t);
+    handleGuildDelete(e, n) {
+        this.delete(e.guild.id, n);
     }
-    handleGuildStickersUpdate(e, t) {
-        this.replace(e.guildId, e.stickers, t);
+    handleGuildStickersUpdate(e, n) {
+        this.replace(e.guildId, e.stickers, n);
     }
-    handleBackgroundSync(e, t) {
+    handleBackgroundSync(e, n) {
         e.promisesForBackgroundSyncToWaitOn.push(
             Promise.all(
                 e.stickers.map((e) => {
                     if ('unavailable' === e.dataMode) return Promise.resolve();
-                    'full' === e.dataMode ? (a.verbose('Replacing '.concat(e.entities.length, ' stickers for ').concat(e.guildId)), this.replace(e.guildId, e.entities, t)) : (e.updatedEntities.length > 0 || e.deletedEntityIds.length > 0) && (a.verbose('Updating '.concat(e.updatedEntities.length, ' and deleting ').concat(e.deletedEntityIds.length, ' stickers for ').concat(e.guildId)), this.update(e.guildId, e.updatedEntities, e.deletedEntityIds, t));
+                    'full' === e.dataMode ? (d.verbose('Replacing '.concat(e.entities.length, ' stickers for ').concat(e.guildId)), this.replace(e.guildId, e.entities, n)) : (e.updatedEntities.length > 0 || e.deletedEntityIds.length > 0) && (d.verbose('Updating '.concat(e.updatedEntities.length, ' and deleting ').concat(e.deletedEntityIds.length, ' stickers for ').concat(e.guildId)), this.update(e.guildId, e.updatedEntities, e.deletedEntityIds, n));
                 })
             )
         );
     }
-    handleOneGuildCreate(e, t) {
-        null != e.stickers && this.replace(e.id, e.stickers, t), null != e.stickerUpdates && this.update(e.id, e.stickerUpdates.writes, e.stickerUpdates.deletes, t);
+    handleOneGuildCreate(e, n) {
+        null != e.stickers && this.replace(e.id, e.stickers, n), null != e.stickerUpdates && this.update(e.id, e.stickerUpdates.writes, e.stickerUpdates.deletes, n);
     }
     resetInMemoryState() {}
-    replace(e, t, n) {
-        i.Z.stickersTransaction(n).replaceAll(e, t);
+    replace(e, n, r) {
+        u.Z.stickersTransaction(r).replaceAll(e, n);
     }
-    delete(e, t) {
-        i.Z.stickersTransaction(t).delete(e);
+    delete(e, n) {
+        u.Z.stickersTransaction(n).delete(e);
     }
-    update(e, t, n, r) {
-        let a = i.Z.stickersTransaction(r);
-        for (let r of (a.putAll(e, t), n)) a.delete(e, r);
+    update(e, n, r, i) {
+        let a = u.Z.stickersTransaction(i);
+        for (let i of (a.putAll(e, n), r)) a.delete(e, i);
     }
     constructor() {
-        var e, t, n;
-        (e = this),
-            (t = 'actions'),
-            (n = {
-                BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
-                CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
-                GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),
-                GUILD_DELETE: (e, t) => this.handleGuildDelete(e, t),
-                GUILD_STICKERS_UPDATE: (e, t) => this.handleGuildStickersUpdate(e, t),
-                GUILD_UPDATE: (e, t) => this.handleGuildUpdate(e, t)
-            }),
-            t in e
-                ? Object.defineProperty(e, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (e[t] = n);
+        c(this, 'actions', {
+            BACKGROUND_SYNC: (e, n) => this.handleBackgroundSync(e, n),
+            CONNECTION_OPEN: (e, n) => this.handleConnectionOpen(e, n),
+            GUILD_CREATE: (e, n) => this.handleGuildCreate(e, n),
+            GUILD_DELETE: (e, n) => this.handleGuildDelete(e, n),
+            GUILD_STICKERS_UPDATE: (e, n) => this.handleGuildStickersUpdate(e, n),
+            GUILD_UPDATE: (e, n) => this.handleGuildUpdate(e, n)
+        });
     }
-})();
+}
+n.Z = new f();

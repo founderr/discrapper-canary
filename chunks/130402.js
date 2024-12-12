@@ -1,38 +1,40 @@
-n.d(t, {
+r.d(n, {
     n: function () {
-        return s;
+        return u;
     },
     x: function () {
-        return o;
+        return c;
     }
-}),
-    n(47120);
-var r = n(544891),
-    i = n(570140),
-    a = n(981631);
-async function s() {
-    i.Z.dispatch({ type: 'EMOJI_CAPTIONS_FETCH' });
+});
+var i = r(47120);
+var a = r(544891),
+    s = r(570140),
+    o = r(981631);
+function l(e) {
+    return (null == e ? void 0 : e.status) >= 400 && (null == e ? void 0 : e.status) <= 499;
+}
+async function u() {
+    s.Z.dispatch({ type: 'EMOJI_CAPTIONS_FETCH' });
     try {
-        let { body: e } = await r.tn.get({
-                url: a.ANM.EMOJI_CAPTIONS_GET,
+        let { body: e } = await a.tn.get({
+                url: o.ANM.EMOJI_CAPTIONS_GET,
                 rejectWithError: !1
             }),
-            t = {};
-        for (let n of e.items) t[n.emoji_id] = n.emoji_captions;
-        i.Z.dispatch({
+            n = {};
+        for (let r of e.items) n[r.emoji_id] = r.emoji_captions;
+        s.Z.dispatch({
             type: 'EMOJI_CAPTIONS_FETCH_SUCCESS',
-            emojiCaptions: t
+            emojiCaptions: n
         });
-    } catch (t) {
-        var e;
-        i.Z.dispatch({
+    } catch (e) {
+        s.Z.dispatch({
             type: 'EMOJI_CAPTIONS_FETCH_ERROR',
-            is4XXError: (null == (e = t.body) ? void 0 : e.status) >= 400 && (null == e ? void 0 : e.status) <= 499
+            is4XXError: l(e.body)
         });
     }
 }
-function o(e) {
-    i.Z.dispatch({
+function c(e) {
+    s.Z.dispatch({
         type: 'EMOJI_INTERACTION_INITIATED',
         interaction: e
     });

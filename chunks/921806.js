@@ -1,1 +1,2 @@
-(t.Reporter = n(761655).Reporter), (t.DecoderBuffer = n(873994).DecoderBuffer), (t.EncoderBuffer = n(873994).EncoderBuffer), (t.Node = n(206424));
+let i = n;
+(i.Reporter = r(761655).Reporter), (i.DecoderBuffer = r(873994).DecoderBuffer), (i.EncoderBuffer = r(873994).EncoderBuffer), (i.Node = r(206424));

@@ -1,52 +1,54 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return o;
     }
-}),
-    n(47120);
-var r = n(836560);
-class i {
-    on(e, t) {
-        this.emitter.on(e, t);
+});
+var i = r(47120);
+var a = r(836560);
+function s(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+class o {
+    on(e, n) {
+        this.emitter.on(e, n);
     }
-    off(e, t) {
-        this.emitter.off(e, t);
+    off(e, n) {
+        this.emitter.off(e, n);
     }
-    once(e, t) {
-        this.emitter.once(e, t);
+    once(e, n) {
+        this.emitter.once(e, n);
     }
-    addListener(e, t) {
-        this.emitter.addListener(e, t);
+    addListener(e, n) {
+        this.emitter.addListener(e, n);
     }
-    removeListener(e, t) {
-        this.emitter.removeListener(e, t);
+    removeListener(e, n) {
+        this.emitter.removeListener(e, n);
     }
     removeAllListeners() {
         this.emitter.removeAllListeners();
     }
     emit(e) {
-        for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
-        this.emitter.emit(e, ...n);
+        for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++) r[i - 1] = arguments[i];
+        this.emitter.emit(e, ...r);
     }
     emitUnsafe(e) {
-        for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
-        this.emitter.emit(e, ...n);
+        for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++) r[i - 1] = arguments[i];
+        this.emitter.emit(e, ...r);
     }
     listenerCount(e) {
         return this.emitter.listenerCount(e);
     }
     constructor() {
-        var e, t, n;
-        (e = this),
-            (t = 'emitter'),
-            (n = new r.EventEmitter()),
-            t in e
-                ? Object.defineProperty(e, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (e[t] = n);
+        s(this, 'emitter', new a.EventEmitter());
     }
 }

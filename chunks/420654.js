@@ -1,57 +1,59 @@
-n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    l = n(906732),
-    u = n(785717),
-    c = n(280885),
-    d = n(171368),
-    f = n(981631),
-    _ = n(388032),
-    p = n(813238);
-let h = 57.75;
-t.Z = i.memo(function (e) {
-    let { user: t, onClose: n, bio: a, hidePersonalInformation: m, viewFullBioDisabled: g = !1 } = e,
-        { context: E } = (0, u.KZ)(),
-        { analyticsLocations: v } = (0, l.ZP)(),
-        [I, T] = i.useState(!1),
-        [b, S] = i.useState(!1);
-    return m || null == a || '' === a
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(120356),
+    l = r.n(o),
+    u = r(481060),
+    c = r(906732),
+    d = r(785717),
+    f = r(280885),
+    _ = r(171368),
+    h = r(981631),
+    p = r(388032),
+    m = r(813238);
+let g = 57.75;
+n.Z = s.memo(function (e) {
+    let { user: n, onClose: r, bio: i, hidePersonalInformation: o, viewFullBioDisabled: E = !1 } = e,
+        { context: v } = (0, d.KZ)(),
+        { analyticsLocations: I } = (0, c.ZP)(),
+        [T, b] = s.useState(!1),
+        [y, S] = s.useState(!1),
+        A = (e) => {
+            null != e && (b(!y && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > g && S(!0));
+        },
+        N = () => {
+            null == r || r(),
+                (0, _.openUserProfileModal)({
+                    ...v,
+                    userId: n.id,
+                    sourceAnalyticsLocations: I,
+                    analyticsLocation: { section: h.jXE.BITE_SIZE_PROFILE_POPOUT }
+                });
+        };
+    return o || null == i || '' === i
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, a.jsxs)('div', {
               children: [
-                  (0, r.jsx)('div', {
-                      ref: (e) => {
-                          null != e && (T(!b && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > h && S(!0));
-                      },
-                      className: s()(p.descriptionClamp, b && p.maxBioHeight),
-                      children: (0, r.jsx)(c.Z, {
-                          userBio: a,
+                  (0, a.jsx)('div', {
+                      ref: A,
+                      className: l()(m.descriptionClamp, y && m.maxBioHeight),
+                      children: (0, a.jsx)(f.Z, {
+                          userBio: i,
                           setLineClamp: !1,
                           textColor: 'header-primary'
                       })
                   }),
-                  (I || b) &&
-                      (0, r.jsx)(o.Button, {
-                          look: o.Button.Looks.BLANK,
-                          size: o.Button.Sizes.NONE,
-                          className: p.viewFullBio,
-                          color: s()(p.viewFullBioColor, g && p.viewFullBioDisabled),
-                          onClick: () => {
-                              null == n || n(),
-                                  (0, d.openUserProfileModal)({
-                                      ...E,
-                                      userId: t.id,
-                                      sourceAnalyticsLocations: v,
-                                      analyticsLocation: { section: f.jXE.BITE_SIZE_PROFILE_POPOUT }
-                                  });
-                          },
-                          children: (0, r.jsx)(o.Text, {
+                  (T || y) &&
+                      (0, a.jsx)(u.Button, {
+                          look: u.Button.Looks.BLANK,
+                          size: u.Button.Sizes.NONE,
+                          className: m.viewFullBio,
+                          color: l()(m.viewFullBioColor, E && m.viewFullBioDisabled),
+                          onClick: N,
+                          children: (0, a.jsx)(u.Text, {
                               variant: 'text-xs/normal',
                               color: 'none',
-                              children: _.intl.string(_.t.YDiPq6)
+                              children: p.intl.string(p.t.YDiPq6)
                           })
                       })
               ]

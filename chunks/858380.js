@@ -1,18 +1,15 @@
-var r, i, a, s;
-n.d(t, {
+var i, a;
+r.d(n, {
     G: function () {
-        return r;
+        return i;
     },
     l: function () {
-        return i;
+        return a;
     }
 }),
-    ((a = r || (r = {}))[(a.SPAM = 1)] = 'SPAM'),
-    (a[(a.IGNORED = 2)] = 'IGNORED'),
-    ((s = i || (i = {})).GOTO_IGNORE = 'GOTO_IGNORE'),
-    (s.GOTO_BLOCK = 'GOTO_BLOCK'),
-    (s.EXPLORE_FEATURE_GUILD = 'EXPLORE_FEATURE_GUILD'),
-    (s.DISMISS_IGNORE = 'DISMISS_IGNORE'),
-    (s.DISMISS_BLOCK = 'DISMISS_BLOCK'),
-    (s.CANCEL_IGNORE = 'CANCEL_IGNORE'),
-    (s.CANCEL_BLOCK = 'CANCEL_BLOCK');
+    !(function (e) {
+        (e[(e.SPAM = 1)] = 'SPAM'), (e[(e.IGNORED = 2)] = 'IGNORED');
+    })(i || (i = {})),
+    !(function (e) {
+        (e.GOTO_IGNORE = 'GOTO_IGNORE'), (e.GOTO_BLOCK = 'GOTO_BLOCK'), (e.EXPLORE_FEATURE_GUILD = 'EXPLORE_FEATURE_GUILD'), (e.DISMISS_IGNORE = 'DISMISS_IGNORE'), (e.DISMISS_BLOCK = 'DISMISS_BLOCK'), (e.CANCEL_IGNORE = 'CANCEL_IGNORE'), (e.CANCEL_BLOCK = 'CANCEL_BLOCK');
+    })(a || (a = {}));

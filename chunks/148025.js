@@ -1,33 +1,34 @@
-var r,
-    i,
+var i,
     a,
     s,
-    o = n(192853),
-    l = n(703825)();
-if (l) {
-    (r = o('Object.prototype.hasOwnProperty')), (i = o('RegExp.prototype.exec')), (a = {});
-    var u = function () {
-        throw a;
+    o,
+    l = r(192853),
+    u = r(703825)();
+if (u) {
+    (i = l('Object.prototype.hasOwnProperty')), (a = l('RegExp.prototype.exec')), (s = {});
+    var c = function () {
+        throw s;
     };
-    (s = {
-        toString: u,
-        valueOf: u
+    (o = {
+        toString: c,
+        valueOf: c
     }),
-        'symbol' == typeof Symbol.toPrimitive && (s[Symbol.toPrimitive] = u);
+        'symbol' == typeof Symbol.toPrimitive && (o[Symbol.toPrimitive] = c);
 }
-var c = o('Object.prototype.toString'),
-    d = Object.getOwnPropertyDescriptor;
-e.exports = l
+var d = l('Object.prototype.toString'),
+    f = Object.getOwnPropertyDescriptor,
+    _ = '[object RegExp]';
+e.exports = u
     ? function (e) {
           if (!e || 'object' != typeof e) return !1;
-          var t = d(e, 'lastIndex');
-          if (!(t && r(t, 'value'))) return !1;
+          var n = f(e, 'lastIndex');
+          if (!(n && i(n, 'value'))) return !1;
           try {
-              i(e, s);
+              a(e, o);
           } catch (e) {
-              return e === a;
+              return e === s;
           }
       }
     : function (e) {
-          return !!e && ('object' == typeof e || 'function' == typeof e) && '[object RegExp]' === c(e);
+          return !!e && ('object' == typeof e || 'function' == typeof e) && d(e) === _;
       };

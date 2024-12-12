@@ -1,8 +1,8 @@
-var r = n(302454),
-    i = n.n(r),
-    a = n(818083);
-let s = /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com))\/(?:attachments|ephemeral-attachments)\/\d+\/\d+\/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?/,
-    o = (0, a.B)({
+var i = r(302454),
+    a = r.n(i),
+    s = r(818083);
+let o = /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com))\/(?:attachments|ephemeral-attachments)\/\d+\/\d+\/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?/,
+    l = (0, s.B)({
         kind: 'user',
         id: '2023-11_attachment_link_markup',
         label: 'Attachment Link Config User Experiment',
@@ -19,32 +19,34 @@ let s = /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com
                 config: { enabled: !0 }
             }
         ]
-    }),
-    l = {
-        order: i().defaultRules.url.order - 0.5,
-        requiredFirstCharacters: ['h'],
-        match(e) {
-            let t = s.exec(e);
-            if (null !== t) {
-                let { enabled: e } = o.getCurrentConfig({ location: 'markup' });
-                if (!e) return null;
+    });
+function u(e, n) {
+    return {
+        type: 'attachmentLink',
+        content: [
+            {
+                type: 'text',
+                content: e
             }
-            return t;
-        },
-        parse(e, t, n) {
-            var r;
-            let i = e[0];
-            return {
-                type: 'attachmentLink',
-                content: [
-                    {
-                        type: 'text',
-                        content: (r = e[1])
-                    }
-                ],
-                attachmentUrl: i,
-                attachmentName: r
-            };
-        }
+        ],
+        attachmentUrl: n,
+        attachmentName: e
     };
-t.Z = { attachmentLink: l };
+}
+let c = {
+    order: a().defaultRules.url.order - 0.5,
+    requiredFirstCharacters: ['h'],
+    match(e) {
+        let n = o.exec(e);
+        if (null !== n) {
+            let { enabled: e } = l.getCurrentConfig({ location: 'markup' });
+            if (!e) return null;
+        }
+        return n;
+    },
+    parse(e, n, r) {
+        let i = e[0];
+        return u(e[1], i);
+    }
+};
+n.Z = { attachmentLink: c };

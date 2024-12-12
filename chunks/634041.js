@@ -1,81 +1,88 @@
-n(724458);
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(46973),
-    u = n(570140),
-    c = n(581883),
-    d = n(131951),
-    f = n(944486),
-    _ = n(594174),
-    p = n(647177);
-let h = !1,
+var i,
+    a = r(724458);
+var s = r(442837),
+    o = r(46973),
+    l = r(570140),
+    u = r(581883),
+    c = r(131951),
+    d = r(944486),
+    f = r(594174),
+    _ = r(647177);
+function h(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let p = !1,
     m = null,
     g = !1,
     E = {};
 function v(e) {
-    var t;
-    let n = _.default.getCurrentUser();
-    if (null == n) return !1;
-    let r = null != e ? e : (0, p.Gx)(null === (t = c.Z.settings.voiceAndVideo) || void 0 === t ? void 0 : t.videoBackgroundFilterDesktop, n.id);
-    return null != f.Z.getVoiceChannelId() && d.Z.isVideoEnabled() && null != r;
+    let { assets: n } = e;
+    E = n.reduce(
+        (e, n) => ({
+            ...e,
+            [n.id]: n
+        }),
+        {}
+    );
 }
-function I() {
-    m !== f.Z.getVoiceChannelId() && (g = !1), v() && (g = !0), (m = f.Z.getVoiceChannelId());
+function I(e) {
+    let { videoFilterAsset: n } = e;
+    E = {
+        ...E,
+        [n.id]: n
+    };
 }
-class T extends (r = o.ZP.Store) {
+function T(e) {
+    let { videoFilterAsset: n } = e;
+    (E = { ...E }), delete E[n.id];
+}
+function b(e) {
+    var n;
+    let r = f.default.getCurrentUser();
+    if (null == r) return !1;
+    let i = null != e ? e : (0, _.Gx)(null === (n = u.Z.settings.voiceAndVideo) || void 0 === n ? void 0 : n.videoBackgroundFilterDesktop, r.id);
+    return null != d.Z.getVoiceChannelId() && c.Z.isVideoEnabled() && null != i;
+}
+function y(e) {
+    let { backgroundOption: n } = e;
+    b(n) && (g = !0);
+}
+function S(e) {
+    let { settings: n } = e;
+    o.TO.CAMERA_BACKGROUND_LIVE in n && (p = !0);
+}
+function A() {
+    m !== d.Z.getVoiceChannelId() && (g = !1), b() && (g = !0), (m = d.Z.getVoiceChannelId());
+}
+class N extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(c.Z, f.Z, d.Z), this.syncWith([f.Z, d.Z], I);
+        this.waitFor(u.Z, d.Z, c.Z), this.syncWith([d.Z, c.Z], A);
     }
     get videoFilterAssets() {
         return E;
     }
     get hasBeenApplied() {
-        return h;
+        return p;
     }
     get hasUsedBackgroundInCall() {
         return g;
     }
 }
-(s = 'VideoBackgroundStore'),
-    (a = 'displayName') in (i = T)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new T(u.Z, {
-        VIDEO_FILTER_ASSETS_FETCH_SUCCESS: function (e) {
-            let { assets: t } = e;
-            E = t.reduce(
-                (e, t) => ({
-                    ...e,
-                    [t.id]: t
-                }),
-                {}
-            );
-        },
-        VIDEO_FILTER_ASSET_UPLOAD_SUCCESS: function (e) {
-            let { videoFilterAsset: t } = e;
-            E = {
-                ...E,
-                [t.id]: t
-            };
-        },
-        VIDEO_FILTER_ASSET_DELETE_SUCCESS: function (e) {
-            let { videoFilterAsset: t } = e;
-            (E = { ...E }), delete E[t.id];
-        },
-        VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: function (e) {
-            let { backgroundOption: t } = e;
-            v(t) && (g = !0);
-        },
-        MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: function (e) {
-            let { settings: t } = e;
-            l.TO.CAMERA_BACKGROUND_LIVE in t && (h = !0);
-        }
+h(N, 'displayName', 'VideoBackgroundStore'),
+    (n.Z = new N(l.Z, {
+        VIDEO_FILTER_ASSETS_FETCH_SUCCESS: v,
+        VIDEO_FILTER_ASSET_UPLOAD_SUCCESS: I,
+        VIDEO_FILTER_ASSET_DELETE_SUCCESS: T,
+        VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: y,
+        MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: S
     }));

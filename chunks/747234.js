@@ -1,179 +1,187 @@
-n.r(t),
-    n.d(t, {
+r.r(n),
+    r.d(n, {
         IGNORE_CLASS_NAME: function () {
-            return p;
+            return v;
         }
     });
-var r,
-    i,
-    a = n(192379),
-    s = n(995295);
-function o(e, t) {
-    return (o =
-        Object.setPrototypeOf ||
-        function (e, t) {
-            return (e.__proto__ = t), e;
-        })(e, t);
+var i,
+    a = r(192379),
+    s = r(995295);
+function o(e, n) {
+    (e.prototype = Object.create(n.prototype)), (e.prototype.constructor = e), l(e, n);
 }
-function l(e) {
+function l(e, n) {
+    return (l =
+        Object.setPrototypeOf ||
+        function (e, n) {
+            return (e.__proto__ = n), e;
+        })(e, n);
+}
+function u(e, n) {
+    if (null == e) return {};
+    var r,
+        i,
+        a = {},
+        s = Object.keys(e);
+    for (i = 0; i < s.length; i++) (r = s[i]), !(n.indexOf(r) >= 0) && (a[r] = e[r]);
+    return a;
+}
+function c(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
-var u = function () {
-    if ('undefined' != typeof window && 'function' == typeof window.addEventListener) {
-        var e = !1,
-            t = Object.defineProperty({}, 'passive', {
-                get: function () {
-                    e = !0;
-                }
-            }),
-            n = function () {};
-        return window.addEventListener('testPassiveEventSupport', n, t), window.removeEventListener('testPassiveEventSupport', n, t), e;
-    }
-};
-var c =
-        (void 0 === r && (r = 0),
-        function () {
-            return ++r;
-        }),
-    d = {},
-    f = {},
-    _ = ['touchstart', 'touchmove'],
-    p = 'ignore-react-onclickoutside';
-function h(e, t) {
-    var n = {};
-    return -1 !== _.indexOf(t) && i && (n.passive = !e.props.preventDefault), n;
+function d(e, n, r) {
+    return e === n || (e.correspondingElement ? e.correspondingElement.classList.contains(r) : e.classList.contains(r));
 }
-t.default = function (e, t) {
-    var n,
-        r,
-        _ = e.displayName || e.name || 'Component';
+function f(e, n, r) {
+    if (e === n) return !0;
+    for (; e.parentNode || e.host; ) {
+        if (e.parentNode && d(e, n, r)) return !0;
+        e = e.parentNode || e.host;
+    }
+    return e;
+}
+function _(e) {
+    return document.documentElement.clientWidth <= e.clientX || document.documentElement.clientHeight <= e.clientY;
+}
+var h = function () {
+        if ('undefined' != typeof window && 'function' == typeof window.addEventListener) {
+            var e = !1,
+                n = Object.defineProperty({}, 'passive', {
+                    get: function () {
+                        e = !0;
+                    }
+                }),
+                r = function () {};
+            return window.addEventListener('testPassiveEventSupport', r, n), window.removeEventListener('testPassiveEventSupport', r, n), e;
+        }
+    },
+    p = (function e(e) {
+        return (
+            void 0 === e && (e = 0),
+            function () {
+                return ++e;
+            }
+        );
+    })(),
+    m = {},
+    g = {},
+    E = ['touchstart', 'touchmove'],
+    v = 'ignore-react-onclickoutside';
+function I(e, n) {
+    var r = {};
+    return -1 !== E.indexOf(n) && i && (r.passive = !e.props.preventDefault), r;
+}
+function T(e, n) {
+    var r,
+        l,
+        d = e.displayName || e.name || 'Component';
     return (
-        (r = n =
-            (function (n) {
-                function r(e) {
-                    var r;
+        (l = r =
+            (function (r) {
+                function l(e) {
+                    var a;
                     return (
-                        ((r = n.call(this, e) || this).__outsideClickHandler = function (e) {
-                            if ('function' == typeof r.__clickOutsideHandlerProp) {
-                                r.__clickOutsideHandlerProp(e);
+                        ((a = r.call(this, e) || this).__outsideClickHandler = function (e) {
+                            if ('function' == typeof a.__clickOutsideHandlerProp) {
+                                a.__clickOutsideHandlerProp(e);
                                 return;
                             }
-                            var t = r.getInstance();
-                            if ('function' == typeof t.props.handleClickOutside) {
-                                t.props.handleClickOutside(e);
+                            var n = a.getInstance();
+                            if ('function' == typeof n.props.handleClickOutside) {
+                                n.props.handleClickOutside(e);
                                 return;
                             }
-                            if ('function' == typeof t.handleClickOutside) {
-                                t.handleClickOutside(e);
+                            if ('function' == typeof n.handleClickOutside) {
+                                n.handleClickOutside(e);
                                 return;
                             }
-                            throw Error('WrappedComponent: ' + _ + ' lacks a handleClickOutside(event) function for processing outside click events.');
+                            throw Error('WrappedComponent: ' + d + ' lacks a handleClickOutside(event) function for processing outside click events.');
                         }),
-                        (r.__getComponentNode = function () {
-                            var e = r.getInstance();
-                            return t && 'function' == typeof t.setClickOutsideRef ? t.setClickOutsideRef()(e) : 'function' == typeof e.setClickOutsideRef ? e.setClickOutsideRef() : (0, s.findDOMNode)(e);
+                        (a.__getComponentNode = function () {
+                            var e = a.getInstance();
+                            return n && 'function' == typeof n.setClickOutsideRef ? n.setClickOutsideRef()(e) : 'function' == typeof e.setClickOutsideRef ? e.setClickOutsideRef() : (0, s.findDOMNode)(e);
                         }),
-                        (r.enableOnClickOutside = function () {
-                            if ('undefined' != typeof document && !f[r._uid]) {
-                                void 0 === i && (i = u()), (f[r._uid] = !0);
-                                var e = r.props.eventTypes;
+                        (a.enableOnClickOutside = function () {
+                            if ('undefined' != typeof document && !g[a._uid]) {
+                                void 0 === i && (i = h()), (g[a._uid] = !0);
+                                var e = a.props.eventTypes;
                                 !e.forEach && (e = [e]),
-                                    (d[r._uid] = function (e) {
-                                        var t;
-                                        if (null !== r.componentNode) {
-                                            if ((r.props.preventDefault && e.preventDefault(), r.props.stopPropagation && e.stopPropagation(), !(r.props.excludeScrollbar && ((t = e), document.documentElement.clientWidth <= t.clientX || document.documentElement.clientHeight <= t.clientY)))) {
-                                                if (
-                                                    (function (e, t, n) {
-                                                        if (e === t) return !0;
-                                                        for (; e.parentNode || e.host; ) {
-                                                            var r, i, a;
-                                                            if (e.parentNode && ((r = e), (i = t), (a = n), r === i || (r.correspondingElement ? r.correspondingElement.classList.contains(a) : r.classList.contains(a)))) return !0;
-                                                            e = e.parentNode || e.host;
-                                                        }
-                                                        return e;
-                                                    })((e.composed && e.composedPath && e.composedPath().shift()) || e.target, r.componentNode, r.props.outsideClickIgnoreClass) !== document
-                                                )
-                                                    return;
-                                                r.__outsideClickHandler(e);
+                                    (m[a._uid] = function (e) {
+                                        if (null !== a.componentNode) {
+                                            if ((a.props.preventDefault && e.preventDefault(), a.props.stopPropagation && e.stopPropagation(), !(a.props.excludeScrollbar && _(e)))) {
+                                                var n = (e.composed && e.composedPath && e.composedPath().shift()) || e.target;
+                                                if (f(n, a.componentNode, a.props.outsideClickIgnoreClass) !== document) return;
+                                                a.__outsideClickHandler(e);
                                             }
                                         }
                                     }),
                                     e.forEach(function (e) {
-                                        document.addEventListener(e, d[r._uid], h(l(r), e));
+                                        document.addEventListener(e, m[a._uid], I(c(a), e));
                                     });
                             }
                         }),
-                        (r.disableOnClickOutside = function () {
-                            delete f[r._uid];
-                            var e = d[r._uid];
+                        (a.disableOnClickOutside = function () {
+                            delete g[a._uid];
+                            var e = m[a._uid];
                             if (e && 'undefined' != typeof document) {
-                                var t = r.props.eventTypes;
-                                !t.forEach && (t = [t]),
-                                    t.forEach(function (t) {
-                                        return document.removeEventListener(t, e, h(l(r), t));
+                                var n = a.props.eventTypes;
+                                !n.forEach && (n = [n]),
+                                    n.forEach(function (n) {
+                                        return document.removeEventListener(n, e, I(c(a), n));
                                     }),
-                                    delete d[r._uid];
+                                    delete m[a._uid];
                             }
                         }),
-                        (r.getRef = function (e) {
-                            return (r.instanceRef = e);
+                        (a.getRef = function (e) {
+                            return (a.instanceRef = e);
                         }),
-                        (r._uid = c()),
-                        r
+                        (a._uid = p()),
+                        a
                     );
                 }
-                (p = r), (m = n), (p.prototype = Object.create(m.prototype)), (p.prototype.constructor = p), o(p, m);
-                var p,
-                    m,
-                    g = r.prototype;
+                o(l, r);
+                var E = l.prototype;
                 return (
-                    (g.getInstance = function () {
+                    (E.getInstance = function () {
                         if (e.prototype && !e.prototype.isReactComponent) return this;
-                        var t = this.instanceRef;
-                        return t.getInstance ? t.getInstance() : t;
+                        var n = this.instanceRef;
+                        return n.getInstance ? n.getInstance() : n;
                     }),
-                    (g.componentDidMount = function () {
+                    (E.componentDidMount = function () {
                         if ('undefined' != typeof document && !!document.createElement) {
                             var e = this.getInstance();
-                            if (t && 'function' == typeof t.handleClickOutside && ((this.__clickOutsideHandlerProp = t.handleClickOutside(e)), 'function' != typeof this.__clickOutsideHandlerProp)) throw Error('WrappedComponent: ' + _ + ' lacks a function for processing outside click events specified by the handleClickOutside config option.');
+                            if (n && 'function' == typeof n.handleClickOutside && ((this.__clickOutsideHandlerProp = n.handleClickOutside(e)), 'function' != typeof this.__clickOutsideHandlerProp)) throw Error('WrappedComponent: ' + d + ' lacks a function for processing outside click events specified by the handleClickOutside config option.');
                             (this.componentNode = this.__getComponentNode()), !this.props.disableOnClickOutside && this.enableOnClickOutside();
                         }
                     }),
-                    (g.componentDidUpdate = function () {
+                    (E.componentDidUpdate = function () {
                         this.componentNode = this.__getComponentNode();
                     }),
-                    (g.componentWillUnmount = function () {
+                    (E.componentWillUnmount = function () {
                         this.disableOnClickOutside();
                     }),
-                    (g.render = function () {
-                        var t = this.props;
-                        t.excludeScrollbar;
-                        var n = (function (e, t) {
-                            if (null == e) return {};
-                            var n,
-                                r,
-                                i = {},
-                                a = Object.keys(e);
-                            for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && (i[n] = e[n]);
-                            return i;
-                        })(t, ['excludeScrollbar']);
-                        return e.prototype && e.prototype.isReactComponent ? (n.ref = this.getRef) : (n.wrappedRef = this.getRef), (n.disableOnClickOutside = this.disableOnClickOutside), (n.enableOnClickOutside = this.enableOnClickOutside), (0, a.createElement)(e, n);
+                    (E.render = function () {
+                        var n = this.props;
+                        n.excludeScrollbar;
+                        var r = u(n, ['excludeScrollbar']);
+                        return e.prototype && e.prototype.isReactComponent ? (r.ref = this.getRef) : (r.wrappedRef = this.getRef), (r.disableOnClickOutside = this.disableOnClickOutside), (r.enableOnClickOutside = this.enableOnClickOutside), (0, a.createElement)(e, r);
                     }),
-                    r
+                    l
                 );
             })(a.Component)),
-        (n.displayName = 'OnClickOutside(' + _ + ')'),
-        (n.defaultProps = {
+        (r.displayName = 'OnClickOutside(' + d + ')'),
+        (r.defaultProps = {
             eventTypes: ['mousedown', 'touchstart'],
-            excludeScrollbar: (t && t.excludeScrollbar) || !1,
-            outsideClickIgnoreClass: p,
+            excludeScrollbar: (n && n.excludeScrollbar) || !1,
+            outsideClickIgnoreClass: v,
             preventDefault: !1,
             stopPropagation: !1
         }),
-        (n.getClass = function () {
+        (r.getClass = function () {
             return e.getClass ? e.getClass() : e;
         }),
-        r
+        l
     );
-};
+}
+n.default = T;

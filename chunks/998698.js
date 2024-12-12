@@ -1,18 +1,28 @@
-n(47120);
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140),
-    u = n(433355),
-    c = n(944486),
-    d = n(581364);
+var i,
+    a = r(47120);
+var s = r(442837),
+    o = r(570140),
+    l = r(433355),
+    u = r(944486),
+    c = r(581364);
+function d(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
 let f = {};
 function _() {
     return (f = {}), !0;
 }
-function p(e) {
+function h(e) {
     return (
         !(e in f) &&
             (f[e] = {
@@ -27,53 +37,53 @@ function p(e) {
         f[e]
     );
 }
-function h(e) {
-    var t;
-    let { channelId: n, command: r, section: i, initialValues: a, location: s, triggerSection: o, queryLength: l, sectionName: u, query: c, searchResultsPosition: f, source: _, commandOrigin: h } = e,
-        m = p(n);
-    if ((null == r ? void 0 : r.id) === (null === (t = m.activeCommand) || void 0 === t ? void 0 : t.id)) return !1;
-    (m.activeCommand = r), (m.activeCommandSection = i), (m.activeOptionName = null), (m.preferredCommandId = null), (m.initialValues = null != a ? a : {}), (m.commandOrigin = null != h ? h : null), (m.source = _);
-    let g = {};
+function p(e) {
+    var n;
+    let { channelId: r, command: i, section: a, initialValues: s, location: o, triggerSection: l, queryLength: u, sectionName: d, query: f, searchResultsPosition: _, source: p, commandOrigin: m } = e,
+        g = h(r);
+    if ((null == i ? void 0 : i.id) === (null === (n = g.activeCommand) || void 0 === n ? void 0 : n.id)) return !1;
+    (g.activeCommand = i), (g.activeCommandSection = a), (g.activeOptionName = null), (g.preferredCommandId = null), (g.initialValues = null != s ? s : {}), (g.commandOrigin = null != m ? m : null), (g.source = p);
+    let E = {};
     return (
-        (null == r ? void 0 : r.options) != null &&
-            r.options.forEach((e) => {
-                g[e.name] = {
+        (null == i ? void 0 : i.options) != null &&
+            i.options.forEach((e) => {
+                E[e.name] = {
                     isActive: !1,
                     hasValue: !1,
                     lastValidationResult: null,
                     optionValue: null
                 };
             }),
-        (m.optionStates = g),
-        null != r &&
-            (0, d.qJ)({
-                command: r,
-                location: s,
-                triggerSection: o,
-                queryLength: l,
-                sectionName: u,
-                query: c,
-                searchResultsPosition: f,
-                source: _
+        (g.optionStates = E),
+        null != i &&
+            (0, c.qJ)({
+                command: i,
+                location: o,
+                triggerSection: l,
+                queryLength: u,
+                sectionName: d,
+                query: f,
+                searchResultsPosition: _,
+                source: p
             }),
         !0
     );
 }
 function m(e) {
-    var t, n;
-    let { channelId: r, commandId: i } = e,
-        a = p(r);
-    return i !== a.preferredCommandId && (null !== a.preferredCommandId || i !== (null !== (n = null === (t = a.activeCommand) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null)) && ((a.activeCommand = null), (a.activeOptionName = null), (a.preferredCommandId = i), (a.optionStates = {}), !0);
+    var n, r;
+    let { channelId: i, commandId: a } = e,
+        s = h(i);
+    return a !== s.preferredCommandId && (null !== s.preferredCommandId || a !== (null !== (r = null === (n = s.activeCommand) || void 0 === n ? void 0 : n.id) && void 0 !== r ? r : null)) && ((s.activeCommand = null), (s.activeOptionName = null), (s.preferredCommandId = a), (s.optionStates = {}), !0);
 }
 function g(e) {
-    let { channelId: t, changedOptionStates: n } = e,
-        r = p(t),
-        i = { ...r.optionStates };
-    for (let [e, t] of Object.entries(n)) {
-        var a, s, o;
-        if (!(e in r.optionStates)) continue;
-        if (!(void 0 !== t.hasValue ? t.hasValue : i[e].hasValue)) {
-            (i[e] = {
+    let { channelId: n, changedOptionStates: r } = e,
+        i = h(n),
+        a = { ...i.optionStates };
+    for (let [e, n] of Object.entries(r)) {
+        var s, o, l;
+        if (!(e in i.optionStates)) continue;
+        if (!(void 0 !== n.hasValue ? n.hasValue : a[e].hasValue)) {
+            (a[e] = {
                 hasValue: !1,
                 isActive: !1,
                 lastValidationResult: null,
@@ -81,105 +91,98 @@ function g(e) {
                 location: void 0,
                 length: void 0
             }),
-                r.activeOptionName === e && (r.activeOptionName = null);
+                i.activeOptionName === e && (i.activeOptionName = null);
             continue;
         }
-        let n = i[e];
-        (i[e] = {
+        let r = a[e];
+        (a[e] = {
             hasValue: !0,
-            isActive: void 0 !== t.isActive ? t.isActive : n.isActive,
-            lastValidationResult: void 0 !== t.lastValidationResult ? t.lastValidationResult : n.lastValidationResult,
-            optionValue: null !== (a = t.optionValue) && void 0 !== a ? a : n.optionValue,
-            location: null !== (s = t.location) && void 0 !== s ? s : n.location,
-            length: null !== (o = t.length) && void 0 !== o ? o : n.length
+            isActive: void 0 !== n.isActive ? n.isActive : r.isActive,
+            lastValidationResult: void 0 !== n.lastValidationResult ? n.lastValidationResult : r.lastValidationResult,
+            optionValue: null !== (s = n.optionValue) && void 0 !== s ? s : r.optionValue,
+            location: null !== (o = n.location) && void 0 !== o ? o : r.location,
+            length: null !== (l = n.length) && void 0 !== l ? l : r.length
         }),
-            void 0 !== t.isActive && (t.isActive ? (null != r.activeOptionName && r.activeOptionName !== e && ((i[r.activeOptionName] = { ...i[r.activeOptionName] }), (i[r.activeOptionName].isActive = !1)), (r.activeOptionName = e)) : e === r.activeOptionName && (r.activeOptionName = null));
+            void 0 !== n.isActive && (n.isActive ? (null != i.activeOptionName && i.activeOptionName !== e && ((a[i.activeOptionName] = { ...a[i.activeOptionName] }), (a[i.activeOptionName].isActive = !1)), (i.activeOptionName = e)) : e === i.activeOptionName && (i.activeOptionName = null));
     }
-    return (r.optionStates = i), !0;
+    return (i.optionStates = a), !0;
 }
-class E extends (r = o.ZP.Store) {
+function E(e) {
+    let { channelId: n, preferredCommandId: r, command: i, section: a, location: s, changedOptionStates: o } = e,
+        l = p({
+            type: 'APPLICATION_COMMAND_SET_ACTIVE_COMMAND',
+            channelId: n,
+            command: i,
+            section: a,
+            location: s
+        }),
+        u = m({
+            type: 'APPLICATION_COMMAND_SET_PREFERRED_COMMAND',
+            channelId: n,
+            commandId: r
+        }),
+        c = g({
+            type: 'APPLICATION_COMMAND_UPDATE_OPTIONS',
+            channelId: n,
+            changedOptionStates: o
+        });
+    return l || u || c;
+}
+class v extends (i = s.ZP.Store) {
     initialize() {
-        u.ZP.addChangeListener(() => {
-            let e = c.Z.getChannelId();
+        l.ZP.addChangeListener(() => {
+            let e = u.Z.getChannelId();
             if (null == e) return (f = {}), !0;
-            let t = u.ZP.getCurrentSidebarChannelId(e);
-            if (null != t && t in f) return !1;
+            let n = l.ZP.getCurrentSidebarChannelId(e);
+            if (null != n && n in f) return !1;
             f = e in f ? { [e]: f[e] } : {};
         });
     }
     getActiveCommand(e) {
-        return p(e).activeCommand;
+        return h(e).activeCommand;
     }
     getActiveCommandSection(e) {
-        return p(e).activeCommandSection;
+        return h(e).activeCommandSection;
     }
     getActiveOptionName(e) {
-        return p(e).activeOptionName;
+        return h(e).activeOptionName;
     }
     getActiveOption(e) {
-        var t, n, r;
-        let i = p(e);
-        return null !== (r = null === (n = i.activeCommand) || void 0 === n ? void 0 : null === (t = n.options) || void 0 === t ? void 0 : t.find((e) => e.name === i.activeOptionName)) && void 0 !== r ? r : null;
+        var n, r, i;
+        let a = h(e);
+        return null !== (i = null === (r = a.activeCommand) || void 0 === r ? void 0 : null === (n = r.options) || void 0 === n ? void 0 : n.find((e) => e.name === a.activeOptionName)) && void 0 !== i ? i : null;
     }
     getPreferredCommandId(e) {
-        return p(e).preferredCommandId;
+        return h(e).preferredCommandId;
     }
     getOptionStates(e) {
-        return p(e).optionStates;
+        return h(e).optionStates;
     }
-    getOptionState(e, t) {
-        return p(e).optionStates[t];
+    getOptionState(e, n) {
+        return h(e).optionStates[n];
     }
     getCommandOrigin(e) {
-        return p(e).commandOrigin;
+        return h(e).commandOrigin;
     }
     getSource(e) {
-        return p(e).source;
+        return h(e).source;
     }
-    getOption(e, t) {
-        var n, r;
-        return null === (r = p(e).activeCommand) || void 0 === r ? void 0 : null === (n = r.options) || void 0 === n ? void 0 : n.find((e) => e.name === t);
+    getOption(e, n) {
+        var r, i;
+        return null === (i = h(e).activeCommand) || void 0 === i ? void 0 : null === (r = i.options) || void 0 === r ? void 0 : r.find((e) => e.name === n);
     }
     getState(e) {
-        return { ...p(e) };
+        return { ...h(e) };
     }
 }
-(s = 'ApplicationCommandStore'),
-    (a = 'displayName') in (i = E)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s);
-let v = new E(l.Z, {
+d(v, 'displayName', 'ApplicationCommandStore');
+let I = new v(o.Z, {
     CONNECTION_OPEN: _,
     CHANNEL_SELECT: _,
     LOGOUT: _,
-    APPLICATION_COMMAND_SET_ACTIVE_COMMAND: h,
+    APPLICATION_COMMAND_SET_ACTIVE_COMMAND: p,
     APPLICATION_COMMAND_SET_PREFERRED_COMMAND: m,
     APPLICATION_COMMAND_UPDATE_OPTIONS: g,
-    APPLICATION_COMMAND_UPDATE_CHANNEL_STATE: function (e) {
-        let { channelId: t, preferredCommandId: n, command: r, section: i, location: a, changedOptionStates: s } = e,
-            o = h({
-                type: 'APPLICATION_COMMAND_SET_ACTIVE_COMMAND',
-                channelId: t,
-                command: r,
-                section: i,
-                location: a
-            }),
-            l = m({
-                type: 'APPLICATION_COMMAND_SET_PREFERRED_COMMAND',
-                channelId: t,
-                commandId: n
-            }),
-            u = g({
-                type: 'APPLICATION_COMMAND_UPDATE_OPTIONS',
-                channelId: t,
-                changedOptionStates: s
-            });
-        return o || l || u;
-    }
+    APPLICATION_COMMAND_UPDATE_CHANNEL_STATE: E
 });
-t.Z = v;
+n.Z = I;

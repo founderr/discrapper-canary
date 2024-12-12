@@ -1,13 +1,13 @@
-e.exports = function (e) {
-    let t = {
+function n(e) {
+    let n = {
             variants: [e.COMMENT('--', '$'), e.COMMENT(/\{-/, /-\}/, { contains: ['self'] })]
         },
-        n = {
+        r = {
             className: 'type',
             begin: "\\b[A-Z][\\w']*",
             relevance: 0
         },
-        r = {
+        i = {
             begin: '\\(',
             end: '\\)',
             illegal: '"',
@@ -16,13 +16,19 @@ e.exports = function (e) {
                     className: 'type',
                     begin: '\\b[A-Z][\\w]*(\\((\\.\\.|,|\\w+)\\))?'
                 },
-                t
+                n
             ]
         },
-        i = {
+        a = {
             begin: /\{/,
             end: /\}/,
-            contains: r.contains
+            contains: i.contains
+        },
+        s = {
+            className: 'string',
+            begin: "'\\\\?.",
+            end: "'",
+            illegal: '.'
         };
     return {
         name: 'Elm',
@@ -32,46 +38,42 @@ e.exports = function (e) {
                 beginKeywords: 'port effect module',
                 end: 'exposing',
                 keywords: 'port effect module where command subscription exposing',
-                contains: [r, t],
+                contains: [i, n],
                 illegal: '\\W\\.|;'
             },
             {
                 begin: 'import',
                 end: '$',
                 keywords: 'import as exposing',
-                contains: [r, t],
+                contains: [i, n],
                 illegal: '\\W\\.|;'
             },
             {
                 begin: 'type',
                 end: '$',
                 keywords: 'type alias',
-                contains: [n, r, i, t]
+                contains: [r, i, a, n]
             },
             {
                 beginKeywords: 'infix infixl infixr',
                 end: '$',
-                contains: [e.C_NUMBER_MODE, t]
+                contains: [e.C_NUMBER_MODE, n]
             },
             {
                 begin: 'port',
                 end: '$',
                 keywords: 'port',
-                contains: [t]
+                contains: [n]
             },
-            {
-                className: 'string',
-                begin: "'\\\\?.",
-                end: "'",
-                illegal: '.'
-            },
+            s,
             e.QUOTE_STRING_MODE,
             e.C_NUMBER_MODE,
-            n,
+            r,
             e.inherit(e.TITLE_MODE, { begin: "^[_a-z][\\w']*" }),
-            t,
+            n,
             { begin: '->|<-' }
         ],
         illegal: /;/
     };
-};
+}
+e.exports = n;

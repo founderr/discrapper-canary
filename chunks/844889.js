@@ -1,56 +1,55 @@
-n.d(t, {
+r.d(n, {
     Gg: function () {
-        return d;
-    },
-    Hg: function () {
         return _;
     },
+    Hg: function () {
+        return m;
+    },
     fr: function () {
-        return c;
+        return f;
     }
 });
-var r = n(772848),
-    i = n(433517);
-let a = 'LATEST_SESSION_TIMESTAMP',
-    s = 'LATEST_SESSION_UUID',
-    o = 'LATEST_SESSION_INITIALIZED_TIMESTAMP',
-    l = Promise.resolve(),
-    u = !1;
-function c(e) {
-    u = e;
+var i = r(772848),
+    a = r(433517);
+let s = 30,
+    o = 'LATEST_SESSION_TIMESTAMP',
+    l = 'LATEST_SESSION_UUID',
+    u = 'LATEST_SESSION_INITIALIZED_TIMESTAMP',
+    c = Promise.resolve(),
+    d = !1;
+function f(e) {
+    d = e;
 }
-function d() {
-    return (l = l.then(async () => {
-        let e = await f();
-        if (
-            null == e ||
-            (function (e) {
-                return 1800000 + e.lastUsed - Date.now() <= 0;
-            })(e)
-        ) {
-            if (!u) return null;
-            let t = {
-                uuid: (0, r.Z)(),
+function _() {
+    return (c = c.then(async () => {
+        let e = await h();
+        if (null == e || p(e)) {
+            if (!d) return null;
+            let n = {
+                uuid: (0, i.Z)(),
                 initialized: Date.now(),
                 lastUsed: Date.now()
             };
-            i.K.set(s, t.uuid), i.K.set(o, t.initialized.toString()), i.K.set(a, Date.now().toString()), (e = t);
-        } else u && i.K.set(a, Date.now().toString());
+            a.K.set(l, n.uuid), a.K.set(u, n.initialized.toString()), a.K.set(o, Date.now().toString()), (e = n);
+        } else d && a.K.set(o, Date.now().toString());
         return e;
     }));
 }
-async function f() {
-    let e = await i.K.getAfterRefresh(s),
-        t = await i.K.getAfterRefresh(o).then(_),
-        n = await i.K.getAfterRefresh(a).then(_);
-    return null != e && null != t
+async function h() {
+    let e = await a.K.getAfterRefresh(l),
+        n = await a.K.getAfterRefresh(u).then(m),
+        r = await a.K.getAfterRefresh(o).then(m);
+    return null != e && null != n
         ? {
               uuid: e,
-              initialized: t,
-              lastUsed: n
+              initialized: n,
+              lastUsed: r
           }
         : null;
 }
-function _(e) {
+function p(e) {
+    return 60000 * s + e.lastUsed - Date.now() <= 0;
+}
+function m(e) {
     return null != e ? Number(e) : 0;
 }

@@ -1,5 +1,6 @@
 e.exports = function () {
-    var e = n(562255),
-        t = this.element;
-    (this.eventHandler = n(925965).bind(this)), e(t, 'keypress', this.eventHandler), e(t, 'keydown', this.eventHandler), e(t, 'keyup', this.eventHandler);
+    var e = this,
+        n = r(562255),
+        i = e.element;
+    (e.eventHandler = r(925965).bind(e)), n(i, 'keypress', e.eventHandler), n(i, 'keydown', e.eventHandler), n(i, 'keyup', e.eventHandler);
 };

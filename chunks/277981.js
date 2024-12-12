@@ -1,125 +1,125 @@
-var r = n(200651),
-    i = n(192379),
-    a = n(392711),
-    s = n.n(a),
-    o = n(481060),
-    l = n(570140),
-    u = n(85235),
-    c = n(367907),
-    d = n(998698),
-    f = n(895924),
-    _ = n(588468),
-    p = n(600164),
-    h = n(718745),
-    m = n(590921),
-    g = n(665692),
-    E = n(981631),
-    v = n(388032),
-    I = n(781010);
-let T = {
+var i = r(200651),
+    a = r(192379),
+    s = r(392711),
+    o = r.n(s),
+    l = r(481060),
+    u = r(570140),
+    c = r(85235),
+    d = r(367907),
+    f = r(998698),
+    _ = r(895924),
+    h = r(588468),
+    p = r(600164),
+    m = r(718745),
+    g = r(590921),
+    E = r(665692),
+    v = r(981631),
+    I = r(388032),
+    T = r(781010);
+let b = {
     results: {
         command: null,
         integrations: [],
         isLoading: !1
     }
 };
-function b(e, t, n) {
-    var r, i;
-    let a;
+function y(e, n, r) {
+    var i, a;
+    let s;
     return (
-        n.commands === m.L8.OLD_BUILT_INS ? ((a = t.split(' ')[0].substring(g.GI.length)), (t = t.substring((null !== (r = a.length) && void 0 !== r ? r : 0) + g.GI.length))) : (a = null === (i = d.Z.getActiveCommand(e.id)) || void 0 === i ? void 0 : i.untranslatedName),
+        r.commands === g.L8.OLD_BUILT_INS ? ((s = n.split(' ')[0].substring(E.GI.length)), (n = n.substring((null !== (i = s.length) && void 0 !== i ? i : 0) + E.GI.length))) : (s = null === (a = f.Z.getActiveCommand(e.id)) || void 0 === a ? void 0 : a.untranslatedName),
         {
-            command: a,
-            query: t.trim()
+            command: s,
+            query: n.trim()
         }
     );
 }
 let S = {
-    stores: [d.Z, h.Z],
-    matches(e, t, n, r, i) {
-        var a;
-        return i.commands !== m.L8.DISABLED && (i.commands === m.L8.OLD_BUILT_INS ? n.startsWith(g.GI + 'gif') || n.startsWith(g.GI + 'tenor') : (null === (a = d.Z.getActiveCommand(e.id)) || void 0 === a ? void 0 : a.integrationType) === E.q9n.GIF && d.Z.getOptionStates(e.id).query.hasValue);
+    stores: [f.Z, m.Z],
+    matches(e, n, r, i, a) {
+        var s;
+        return a.commands !== g.L8.DISABLED && (a.commands === g.L8.OLD_BUILT_INS ? r.startsWith(E.GI + 'gif') || r.startsWith(E.GI + 'tenor') : (null === (s = f.Z.getActiveCommand(e.id)) || void 0 === s ? void 0 : s.integrationType) === v.q9n.GIF && f.Z.getOptionStates(e.id).query.hasValue);
     },
-    queryResults(e, t, n, r, i) {
-        let { command: a, query: o } = b(e, n, r);
-        if (null == a) return T;
-        let l = s().findKey(E.nkL, (e) => e.command === a);
-        i && null != l && o.length > 0 && u.Z.search(l, o);
-        let c = h.Z.getResults(l, o);
-        return null == c
-            ? T
+    queryResults(e, n, r, i, a) {
+        let { command: s, query: l } = y(e, r, i);
+        if (null == s) return b;
+        let u = o().findKey(v.nkL, (e) => e.command === s);
+        a && null != u && l.length > 0 && c.Z.search(u, l);
+        let d = m.Z.getResults(u, l);
+        return null == d
+            ? b
             : {
                   results: {
-                      command: a,
-                      integrations: c.results,
-                      isLoading: c.loading
+                      command: s,
+                      integrations: d.results,
+                      isLoading: d.loading
                   }
               };
     },
     renderResults(e) {
         let {
-                results: { integrations: t, isLoading: n },
-                selectedIndex: a,
-                channel: s,
-                query: l,
-                options: u,
-                onHover: c,
-                onClick: f
+                results: { integrations: n, isLoading: r },
+                selectedIndex: s,
+                channel: o,
+                query: u,
+                options: c,
+                onHover: d,
+                onClick: _
             } = e,
-            { command: h, query: g } = b(s, l, u);
-        if (null == h || 0 === g.length) return null;
-        if (n)
-            return (0, r.jsx)(o.Spinner, {
-                className: I.spinner,
-                type: o.Spinner.Type.SPINNING_CIRCLE
+            { command: m, query: E } = y(o, u, c);
+        if (null == m || 0 === E.length) return null;
+        if (r)
+            return (0, i.jsx)(l.Spinner, {
+                className: T.spinner,
+                type: l.Spinner.Type.SPINNING_CIRCLE
             });
-        if (null != t) {
-            var T, S;
+        if (null != n) {
+            var b, S;
             let e = !1,
-                n = t.map((t, n) => {
-                    if (t.type === E.q9n.GIF) {
-                        var i, s, o;
+                r = n.map((n, r) => {
+                    if (n.type === v.q9n.GIF) {
+                        var a, o, l;
                         return (
                             (e = !0),
-                            (0, r.jsx)(
-                                _.ZP.GIFIntegration,
+                            (0, i.jsx)(
+                                h.ZP.GIFIntegration,
                                 {
-                                    className: I.horizontalAutocomplete,
-                                    onClick: f,
-                                    onHover: c,
-                                    selected: a === n,
-                                    index: n,
-                                    width: null !== (i = t.meta.width) && void 0 !== i ? i : 0,
-                                    height: null !== (s = t.meta.height) && void 0 !== s ? s : 0,
-                                    src: null !== (o = t.meta.src) && void 0 !== o ? o : '',
-                                    url: t.meta.url
+                                    className: T.horizontalAutocomplete,
+                                    onClick: _,
+                                    onHover: d,
+                                    selected: s === r,
+                                    index: r,
+                                    width: null !== (a = n.meta.width) && void 0 !== a ? a : 0,
+                                    height: null !== (o = n.meta.height) && void 0 !== o ? o : 0,
+                                    src: null !== (l = n.meta.src) && void 0 !== l ? l : '',
+                                    url: n.meta.url
                                 },
-                                ''.concat(t.meta.url).concat(t.meta.src)
+                                ''.concat(n.meta.url).concat(n.meta.src)
                             )
                         );
                     }
                 }),
-                o = u.commands === m.L8.OLD_BUILT_INS ? h : null !== (S = null === (T = d.Z.getActiveCommand(s.id)) || void 0 === T ? void 0 : T.integrationTitle) && void 0 !== S ? S : h,
-                l =
-                    g.length > 0 && null != o
-                        ? v.intl.format(v.t['3njXz8'], {
-                              query: g,
-                              command: o
+                l = c.commands === g.L8.OLD_BUILT_INS ? m : null !== (S = null === (b = f.Z.getActiveCommand(o.id)) || void 0 === b ? void 0 : b.integrationTitle) && void 0 !== S ? S : m,
+                u =
+                    E.length > 0 && null != l
+                        ? I.intl.format(I.t['3njXz8'], {
+                              query: E,
+                              command: l
                           })
-                        : null != o
-                          ? o
-                          : h;
-            return (0, r.jsxs)(
-                i.Fragment,
+                        : null != l
+                          ? l
+                          : m;
+            return (0, i.jsxs)(
+                a.Fragment,
                 {
                     children: [
-                        (0, r.jsx)(_.ZP.Title, { title: l }),
+                        (0, i.jsx)(h.ZP.Title, { title: u }),
                         e
-                            ? (0, r.jsx)(p.Z, {
-                                  className: I.horizontalAutocompletes,
-                                  children: n
+                            ? (0, i.jsx)(p.Z, {
+                                  className: T.horizontalAutocompletes,
+                                  children: r
                               })
-                            : n
+                            : r
                     ]
                 },
                 'gifs'
@@ -128,56 +128,46 @@ let S = {
     },
     onSelect(e) {
         let {
-            results: { command: t, integrations: n },
-            index: r,
-            type: i,
-            options: a,
-            channel: s,
-            guild: o
+            results: { command: n, integrations: r },
+            index: i,
+            type: a,
+            options: s,
+            channel: o,
+            guild: l
         } = e;
-        if (null == t) return { type: null };
-        let u = n[r];
+        if (null == n) return { type: null };
+        let c = r[i];
         if (
-            (i === m.QB.INSERT
-                ? a.replaceText(
-                      (function (e) {
-                          return e.meta.url;
-                      })(u)
-                  )
-                : a.sendMessage(
-                      (function (e) {
-                          return e.meta.url;
-                      })(u)
-                  ),
-            c.ZP.trackWithMetadata(E.rMx.SEARCH_RESULT_SELECTED, {
-                search_type: E.aib.GIF,
-                index_num: r,
-                source_object: '/'.concat(t)
+            (a === g.QB.INSERT ? s.replaceText(A(c)) : s.sendMessage(A(c)),
+            d.ZP.trackWithMetadata(v.rMx.SEARCH_RESULT_SELECTED, {
+                search_type: v.aib.GIF,
+                index_num: i,
+                source_object: '/'.concat(n)
             }),
-            a.commands !== m.L8.OLD_BUILT_INS)
+            s.commands !== g.L8.OLD_BUILT_INS)
         ) {
-            let e = d.Z.getActiveCommand(s.id);
-            (null == e ? void 0 : e.inputType) === f.iw.BUILT_IN_INTEGRATION &&
-                (l.Z.dispatch({
+            let e = f.Z.getActiveCommand(o.id);
+            (null == e ? void 0 : e.inputType) === _.iw.BUILT_IN_INTEGRATION &&
+                (u.Z.dispatch({
                     type: 'APPLICATION_COMMAND_USED',
                     context: {
-                        channel: s,
-                        guild: o
+                        channel: o,
+                        guild: l
                     },
                     command: e,
-                    commandOrigin: f.bB.CHAT
+                    commandOrigin: _.bB.CHAT
                 }),
-                c.ZP.trackWithMetadata(E.rMx.APPLICATION_COMMAND_USED, {
+                d.ZP.trackWithMetadata(v.rMx.APPLICATION_COMMAND_USED, {
                     command_id: e.id,
                     application_id: e.applicationId,
                     command_type: e.type,
-                    source: d.Z.getSource(s.id)
+                    source: f.Z.getSource(o.id)
                 }));
         }
-        return { type: m.z2.GIF };
+        return { type: g.z2.GIF };
     }
 };
-function y(e) {
+function A(e) {
     return e.meta.url;
 }
-t.Z = S;
+n.Z = S;

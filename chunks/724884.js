@@ -1,72 +1,73 @@
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(481060),
-    o = n(388032),
-    l = n(523184),
-    u = n(247844);
-function c(e) {
-    let { className: t, icon: n, children: i } = e;
-    return (0, r.jsxs)('li', {
-        className: a()(l.card, t),
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(481060),
+    l = r(388032),
+    u = r(523184),
+    c = r(247844);
+function d(e) {
+    let { className: n, icon: r, children: a } = e;
+    return (0, i.jsxs)('li', {
+        className: s()(u.card, n),
         children: [
-            (0, r.jsx)(n, { className: l.icon }),
-            (0, r.jsx)(s.Text, {
-                className: l.__invalid_description,
+            (0, i.jsx)(r, { className: u.icon }),
+            (0, i.jsx)(o.Text, {
+                className: u.__invalid_description,
                 variant: 'text-sm/medium',
-                children: i
+                children: a
             })
         ]
     });
 }
-t.Z = function (e) {
-    let { cardClassName: t } = e;
-    return (0, r.jsxs)('div', {
-        className: l.wrapper,
+function f(e) {
+    let { cardClassName: n } = e;
+    return (0, i.jsxs)('div', {
+        className: u.wrapper,
         children: [
-            (0, r.jsxs)('div', {
-                className: l.content,
+            (0, i.jsxs)('div', {
+                className: u.content,
                 children: [
-                    (0, r.jsx)(s.Heading, {
-                        className: l.heading,
+                    (0, i.jsx)(o.Heading, {
+                        className: u.heading,
                         color: 'always-white',
                         variant: 'heading-xxl/bold',
-                        children: o.intl.string(o.t.IzKs3t)
+                        children: l.intl.string(l.t.IzKs3t)
                     }),
-                    (0, r.jsxs)('ul', {
-                        className: l.cards,
+                    (0, i.jsxs)('ul', {
+                        className: u.cards,
                         children: [
-                            (0, r.jsx)(c, {
-                                className: t,
-                                icon: s.BoostTier2SimpleIcon,
-                                children: o.intl.string(o.t.TZigSE)
+                            (0, i.jsx)(d, {
+                                className: n,
+                                icon: o.BoostTier2SimpleIcon,
+                                children: l.intl.string(l.t.TZigSE)
                             }),
-                            (0, r.jsx)(c, {
-                                className: t,
+                            (0, i.jsx)(d, {
+                                className: n,
                                 icon: (e) =>
-                                    (0, r.jsx)('img', {
-                                        className: a()(e.className, l.iconImage),
-                                        src: u,
+                                    (0, i.jsx)('img', {
+                                        className: s()(e.className, u.iconImage),
+                                        src: c,
                                         alt: ''
                                     }),
-                                children: o.intl.string(o.t.hjQuV1)
+                                children: l.intl.string(l.t.hjQuV1)
                             }),
-                            (0, r.jsx)(c, {
-                                className: t,
-                                icon: s.ShieldUserIcon,
-                                children: o.intl.string(o.t['2RUcaG'])
+                            (0, i.jsx)(d, {
+                                className: n,
+                                icon: o.ShieldUserIcon,
+                                children: l.intl.string(l.t['2RUcaG'])
                             }),
-                            (0, r.jsx)(c, {
-                                className: t,
-                                icon: s.HeartIcon,
-                                children: o.intl.string(o.t.bJoZKS)
+                            (0, i.jsx)(d, {
+                                className: n,
+                                icon: o.HeartIcon,
+                                children: l.intl.string(l.t.bJoZKS)
                             })
                         ]
                     })
                 ]
             }),
-            (0, r.jsx)('div', { className: l.backgroundImages })
+            (0, i.jsx)('div', { className: u.backgroundImages })
         ]
     });
-};
+}
+n.Z = f;

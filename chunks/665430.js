@@ -1,11 +1,11 @@
-n.d(t, {
+r.d(n, {
     pF: function () {
-        return a;
+        return o;
     }
 });
-var r = n(818083);
-n(528264), n(46140);
-let i = (0, r.B)({
+var i = r(818083);
+r(528264), r(46140);
+let a = (0, i.B)({
         id: '2024-07_quests_mobile_ga',
         kind: 'user',
         label: 'Quests Mobile GA',
@@ -23,7 +23,11 @@ let i = (0, r.B)({
             }
         ]
     }),
-    a = (e) => {
-        let { location: t } = e;
-        return i.useExperiment({ location: t }, { autoTrackExposure: !1 }).enabled;
+    s = (e) => {
+        let { location: n } = e;
+        return a.getCurrentConfig({ location: n }, { autoTrackExposure: !1 }).enabled;
+    },
+    o = (e) => {
+        let { location: n } = e;
+        return a.useExperiment({ location: n }, { autoTrackExposure: !1 }).enabled;
     };

@@ -1,47 +1,48 @@
-n.d(t, {
+r.d(n, {
     Q: function () {
-        return _;
+        return h;
     }
 });
-var r = n(200651),
-    i = n(120356),
-    a = n.n(i),
-    s = n(257182),
-    o = n(84735),
-    l = n(766646),
-    u = n(993365),
-    c = n(531895),
-    d = n(388032),
-    f = n(620797);
-function _(e) {
-    let { role: t = 'button', variant: n = 'default', textVariant: i = 'text-sm/medium', lineClamp: _ = 1, text: p, icon: h, iconPosition: m = 'end', external: g, focusProps: E, ...v } = e;
-    function I() {
-        if (null != h)
-            return (0, r.jsx)(h, {
-                color: 'currentColor',
-                size: 'text-lg/medium' === i ? 'md' : 'sm'
-            });
+var i = r(200651),
+    a = r(120356),
+    s = r.n(a),
+    o = r(257182),
+    l = r(84735),
+    u = r(766646),
+    c = r(993365),
+    d = r(531895),
+    f = r(388032),
+    _ = r(620797);
+function h(e) {
+    let { role: n = 'button', variant: r = 'default', textVariant: a = 'text-sm/medium', lineClamp: h = 1, text: p, icon: m, iconPosition: g = 'end', external: E, focusProps: v, ...I } = e;
+    function T() {
+        if (null == m) return;
+        let e = 'text-lg/medium' === a ? 'md' : 'sm';
+        return (0, i.jsx)(m, {
+            color: 'currentColor',
+            size: e
+        });
     }
     return (
-        g && (h = s.G),
-        (0, r.jsx)(o.t, {
-            ...E,
-            children: (0, r.jsxs)('button', {
-                role: t,
-                className: a()(f.linkButton, f[n]),
-                ...v,
+        E && (m = o.G),
+        (0, i.jsx)(l.t, {
+            ...v,
+            children: (0, i.jsxs)('button', {
+                role: n,
+                className: s()(_.linkButton, _[r]),
+                ...I,
                 children: [
-                    null != h && 'start' === m && (0, r.jsx)(I, {}),
-                    (0, r.jsx)(u.x, {
+                    null != m && 'start' === g && (0, i.jsx)(T, {}),
+                    (0, i.jsx)(c.x, {
                         tag: 'span',
-                        variant: i,
+                        variant: a,
                         color: 'none',
-                        lineClamp: _,
-                        className: f.text,
+                        lineClamp: h,
+                        className: _.text,
                         children: p
                     }),
-                    null != h && 'end' === m && (0, r.jsx)(I, {}),
-                    g && (0, r.jsx)(l.n, { children: d.intl.string(c.Z.cgdAs7) })
+                    null != m && 'end' === g && (0, i.jsx)(T, {}),
+                    E && (0, i.jsx)(u.n, { children: f.intl.string(d.Z.cgdAs7) })
                 ]
             })
         })

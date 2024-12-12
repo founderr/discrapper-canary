@@ -1,65 +1,68 @@
-n(47120);
-var r = n(570140),
-    i = n(147913),
-    a = n(271383),
-    s = n(594174),
-    o = n(69882);
-let l = null,
-    u = () => {
-        let e = a.ZP.getCommunicationDisabledUserMap();
-        Object.keys(e).forEach((t) => {
-            let n = (0, a.O5)(t),
-                r = (0, a.V6)(t),
-                i = e[t];
-            !(0, o.J)(i) && c(n, r);
+var i = r(47120);
+var a = r(570140),
+    s = r(147913),
+    o = r(271383),
+    l = r(594174),
+    u = r(69882);
+function c(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let d = 10000,
+    f = null,
+    _ = () => {
+        let e = o.ZP.getCommunicationDisabledUserMap();
+        Object.keys(e).forEach((n) => {
+            let r = n,
+                i = (0, o.O5)(r),
+                a = (0, o.V6)(r),
+                s = e[r];
+            !(0, u.J)(s) && h(i, a);
         });
     },
-    c = (e, t) => {
-        var n, i, l, u, c, d;
-        let f = a.ZP.getMember(e, t),
-            _ = s.default.getUser(t);
-        if (null == f || null == _ || (0, o.b)(f)) return;
+    h = (e, n) => {
+        var r, i, s, c, d, f;
+        let _ = o.ZP.getMember(e, n),
+            h = l.default.getUser(n);
+        if (null == _ || null == h || (0, u.b)(_)) return;
         let p = {
-            ...f,
+            ..._,
             guildId: e,
-            nick: null !== (n = f.nick) && void 0 !== n ? n : _.username,
-            avatar: null !== (i = f.avatar) && void 0 !== i ? i : void 0,
-            avatarDecoration: null != f.avatarDecoration ? { ...f.avatarDecoration } : void 0,
-            premiumSince: null !== (l = f.premiumSince) && void 0 !== l ? l : void 0,
-            isPending: null !== (u = f.isPending) && void 0 !== u && u,
+            nick: null !== (r = _.nick) && void 0 !== r ? r : h.username,
+            avatar: null !== (i = _.avatar) && void 0 !== i ? i : void 0,
+            avatarDecoration: null != _.avatarDecoration ? { ..._.avatarDecoration } : void 0,
+            premiumSince: null !== (s = _.premiumSince) && void 0 !== s ? s : void 0,
+            isPending: null !== (c = _.isPending) && void 0 !== c && c,
             user: {
-                ..._,
-                email: null !== (c = _.email) && void 0 !== c ? c : void 0,
-                phone: null !== (d = _.phone) && void 0 !== d ? d : void 0
+                ...h,
+                email: null !== (d = h.email) && void 0 !== d ? d : void 0,
+                phone: null !== (f = h.phone) && void 0 !== f ? f : void 0
             },
             communicationDisabledUntil: null
         };
-        r.Z.dispatch({
+        a.Z.dispatch({
             type: 'GUILD_MEMBER_UPDATE',
             ...p
         });
     };
-class d extends i.Z {
+class p extends s.Z {
     _initialize() {
-        l = setInterval(() => u(), 10000);
+        f = setInterval(() => _(), d);
     }
     _terminate() {
-        clearInterval(l);
+        clearInterval(f);
     }
     constructor(...e) {
-        var t, n, r;
-        super(...e),
-            (t = this),
-            (n = 'clearGuildMemberTimeout'),
-            (r = c),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+        super(...e), c(this, 'clearGuildMemberTimeout', h);
     }
 }
-t.Z = new d();
+n.Z = new p();

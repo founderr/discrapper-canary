@@ -1,29 +1,30 @@
-function n(e) {
+function r(e) {
     return '/' === e.charAt(0);
 }
-function r(e, t) {
-    for (var n = t, r = n + 1, i = e.length; r < i; n += 1, r += 1) e[n] = e[r];
+function i(e, n) {
+    for (var r = n, i = r + 1, a = e.length; i < a; r += 1, i += 1) e[r] = e[i];
     e.pop();
 }
-t.Z = function (e, t) {
-    void 0 === t && (t = '');
-    var i,
-        a = (e && e.split('/')) || [],
-        s = (t && t.split('/')) || [],
-        o = e && n(e),
-        l = t && n(t),
-        u = o || l;
-    if ((e && n(e) ? (s = a) : a.length && (s.pop(), (s = s.concat(a))), !s.length)) return '/';
-    if (s.length) {
-        var c = s[s.length - 1];
-        i = '.' === c || '..' === c || '' === c;
-    } else i = !1;
-    for (var d = 0, f = s.length; f >= 0; f--) {
-        var _ = s[f];
-        '.' === _ ? r(s, f) : '..' === _ ? (r(s, f), d++) : d && (r(s, f), d--);
+function a(e, n) {
+    void 0 === n && (n = '');
+    var a,
+        s = (e && e.split('/')) || [],
+        o = (n && n.split('/')) || [],
+        l = e && r(e),
+        u = n && r(n),
+        c = l || u;
+    if ((e && r(e) ? (o = s) : s.length && (o.pop(), (o = o.concat(s))), !o.length)) return '/';
+    if (o.length) {
+        var d = o[o.length - 1];
+        a = '.' === d || '..' === d || '' === d;
+    } else a = !1;
+    for (var f = 0, _ = o.length; _ >= 0; _--) {
+        var h = o[_];
+        '.' === h ? i(o, _) : '..' === h ? (i(o, _), f++) : f && (i(o, _), f--);
     }
-    if (!u) for (; d--; d) s.unshift('..');
-    u && '' !== s[0] && (!s[0] || !n(s[0])) && s.unshift('');
-    var p = s.join('/');
-    return i && '/' !== p.substr(-1) && (p += '/'), p;
-};
+    if (!c) for (; f--; f) o.unshift('..');
+    c && '' !== o[0] && (!o[0] || !r(o[0])) && o.unshift('');
+    var p = o.join('/');
+    return a && '/' !== p.substr(-1) && (p += '/'), p;
+}
+n.Z = a;

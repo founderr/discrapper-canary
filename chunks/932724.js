@@ -1,18 +1,19 @@
-n.d(t, {
+r.d(n, {
     P: function () {
-        return s;
+        return l;
     }
 }),
-    n(192379),
-    n(442837);
-var r = n(581883);
-n(594174);
-var i = n(74538),
-    a = n(647177);
-function s(e) {
-    var t;
-    return (function (e, t) {
-        let n = (0, a.Gx)(e, t.id);
-        return (0, a.rD)(n) && !i.ZP.canUseCustomBackgrounds(t) ? null : 'number' != typeof n || (0, a.sd)(n) ? n : null;
-    })(null === (t = r.Z.settings.voiceAndVideo) || void 0 === t ? void 0 : t.videoBackgroundFilterDesktop, e);
+    r(192379),
+    r(442837);
+var i = r(581883);
+r(594174);
+var a = r(74538),
+    s = r(647177);
+function o(e, n) {
+    let r = (0, s.Gx)(e, n.id);
+    return (0, s.rD)(r) && !a.ZP.canUseCustomBackgrounds(n) ? null : 'number' != typeof r || (0, s.sd)(r) ? r : null;
+}
+function l(e) {
+    var n;
+    return o(null === (n = i.Z.settings.voiceAndVideo) || void 0 === n ? void 0 : n.videoBackgroundFilterDesktop, e);
 }

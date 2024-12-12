@@ -1,26 +1,27 @@
-var r = n(200651);
-n(192379);
-var i = n(788307),
-    a = n(833858),
-    s = n(981631);
-t.Z = (e) => {
-    var t;
-    let { className: n, hangStatusActivity: o, animate: l = !0 } = e;
-    if ((null == o ? void 0 : o.state) === s.tNA.CUSTOM)
-        return null != o.emoji
-            ? (0, r.jsx)(i.Iv, {
-                  emoji: o.emoji,
-                  className: n,
+var i = r(200651);
+r(192379);
+var a = r(788307),
+    s = r(833858),
+    o = r(981631);
+let l = (e) => {
+    var n;
+    let { className: r, hangStatusActivity: l, animate: u = !0 } = e;
+    if ((null == l ? void 0 : l.state) === o.tNA.CUSTOM)
+        return null != l.emoji
+            ? (0, i.jsx)(a.Iv, {
+                  emoji: l.emoji,
+                  className: r,
                   hideTooltip: !0,
-                  animate: l
+                  animate: u
               })
             : null;
-    let u = null === (t = (0, a.tV)(o)) || void 0 === t ? void 0 : t.icon;
-    return null != u
-        ? (0, r.jsx)('img', {
-              src: u,
+    let c = null === (n = (0, s.tV)(l)) || void 0 === n ? void 0 : n.icon;
+    return null != c
+        ? (0, i.jsx)('img', {
+              src: c,
               alt: '',
-              className: null != n ? n : void 0
+              className: null != r ? r : void 0
           })
         : null;
 };
+n.Z = l;

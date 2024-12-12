@@ -1,5 +1,5 @@
-var r, i;
-n.d(t, {
+var i;
+r.d(n, {
     Jj: function () {
         return s;
     },
@@ -10,7 +10,7 @@ n.d(t, {
         return l;
     },
     hV: function () {
-        return r;
+        return i;
     },
     mT: function () {
         return a;
@@ -19,5 +19,7 @@ n.d(t, {
 let a = 550,
     s = 350,
     o = 40;
-((i = r || (r = {})).STATIC = 'STATIC'), (i.RESPONSIVE = 'RESPONSIVE'), (i.MOSAIC = 'MOSAIC');
+!(function (e) {
+    (e.STATIC = 'STATIC'), (e.RESPONSIVE = 'RESPONSIVE'), (e.MOSAIC = 'MOSAIC');
+})(i || (i = {}));
 let l = 20;

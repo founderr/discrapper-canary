@@ -1,10 +1,11 @@
-n.r(t),
-    n.d(t, {
+r.r(n),
+    r.d(n, {
         deprecateInterpolate: function () {
-            return i;
+            return s;
         }
     });
-var r = !1;
-function i() {
-    !r && ((r = !0), console.warn('react-spring: The "interpolate" function is deprecated in v10 (use "to" instead)'));
+var i = 'react-spring: ',
+    a = !1;
+function s() {
+    !a && ((a = !0), console.warn(i + 'The "interpolate" function is deprecated in v10 (use "to" instead)'));
 }

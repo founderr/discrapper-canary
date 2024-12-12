@@ -1,7 +1,6 @@
-var r, i, a, s;
-n.d(t, {
+r.d(n, {
     aZ: function () {
-        return r;
+        return i;
     },
     b5: function () {
         return l;
@@ -10,19 +9,23 @@ n.d(t, {
         return o;
     },
     nw: function () {
-        return i;
+        return a;
     }
-}),
-    n(724458),
-    ((a = r || (r = {})).BAD = 'bad'),
-    (a.NEUTRAL = 'neutral'),
-    (a.GOOD = 'good');
+});
+var i,
+    a,
+    s = r(724458);
+!(function (e) {
+    (e.BAD = 'bad'), (e.NEUTRAL = 'neutral'), (e.GOOD = 'good');
+})(i || (i = {}));
 let o = 1024;
-((s = i || (i = {})).VOICE = 'VOICE'), (s.STREAM = 'STREAM'), (s.VIDEO_BACKGROUND = 'VOICE_BACKGROUND'), (s.ACTIVITY = 'ACTIVITY'), (s.IN_APP_REPORTS = 'IN_APP_REPORTS'), (s.USER_DM_MUTE = 'USER_DM_MUTE'), (s.BLOCK_USER = 'BLOCK_USER');
+!(function (e) {
+    (e.VOICE = 'VOICE'), (e.STREAM = 'STREAM'), (e.VIDEO_BACKGROUND = 'VOICE_BACKGROUND'), (e.ACTIVITY = 'ACTIVITY'), (e.IN_APP_REPORTS = 'IN_APP_REPORTS'), (e.USER_DM_MUTE = 'USER_DM_MUTE'), (e.BLOCK_USER = 'BLOCK_USER');
+})(a || (a = {}));
 let l = ['VOICE_BACKGROUND', 'STREAM', 'ACTIVITY', 'VOICE', 'IN_APP_REPORTS', 'USER_DM_MUTE', 'BLOCK_USER'].reduce(
-    (e, t, n) => ({
+    (e, n, r) => ({
         ...e,
-        [t]: n
+        [n]: r
     }),
     {}
 );

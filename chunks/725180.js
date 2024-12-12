@@ -1,3 +1,5 @@
-t.Z = function (e) {
-    return 'number' == typeof e && e > -1 && e % 1 == 0 && e <= 9007199254740991;
-};
+var r = 9007199254740991;
+function i(e) {
+    return 'number' == typeof e && e > -1 && e % 1 == 0 && e <= r;
+}
+n.Z = i;

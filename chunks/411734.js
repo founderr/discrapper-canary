@@ -1,4 +1,4 @@
-let t = (e) => ({
+let n = (e) => ({
         IMPORTANT: {
             scope: 'meta',
             begin: '!important'
@@ -29,11 +29,11 @@ let t = (e) => ({
             begin: /--[A-Za-z][A-Za-z0-9_-]*/
         }
     }),
-    n = ['a', 'abbr', 'address', 'article', 'aside', 'audio', 'b', 'blockquote', 'body', 'button', 'canvas', 'caption', 'cite', 'code', 'dd', 'del', 'details', 'dfn', 'div', 'dl', 'dt', 'em', 'fieldset', 'figcaption', 'figure', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'header', 'hgroup', 'html', 'i', 'iframe', 'img', 'input', 'ins', 'kbd', 'label', 'legend', 'li', 'main', 'mark', 'menu', 'nav', 'object', 'ol', 'p', 'q', 'quote', 'samp', 'section', 'span', 'strong', 'summary', 'sup', 'table', 'tbody', 'td', 'textarea', 'tfoot', 'th', 'thead', 'time', 'tr', 'ul', 'var', 'video'],
-    r = ['any-hover', 'any-pointer', 'aspect-ratio', 'color', 'color-gamut', 'color-index', 'device-aspect-ratio', 'device-height', 'device-width', 'display-mode', 'forced-colors', 'grid', 'height', 'hover', 'inverted-colors', 'monochrome', 'orientation', 'overflow-block', 'overflow-inline', 'pointer', 'prefers-color-scheme', 'prefers-contrast', 'prefers-reduced-motion', 'prefers-reduced-transparency', 'resolution', 'scan', 'scripting', 'update', 'width', 'min-width', 'max-width', 'min-height', 'max-height'],
-    i = ['active', 'any-link', 'blank', 'checked', 'current', 'default', 'defined', 'dir', 'disabled', 'drop', 'empty', 'enabled', 'first', 'first-child', 'first-of-type', 'fullscreen', 'future', 'focus', 'focus-visible', 'focus-within', 'has', 'host', 'host-context', 'hover', 'indeterminate', 'in-range', 'invalid', 'is', 'lang', 'last-child', 'last-of-type', 'left', 'link', 'local-link', 'not', 'nth-child', 'nth-col', 'nth-last-child', 'nth-last-col', 'nth-last-of-type', 'nth-of-type', 'only-child', 'only-of-type', 'optional', 'out-of-range', 'past', 'placeholder-shown', 'read-only', 'read-write', 'required', 'right', 'root', 'scope', 'target', 'target-within', 'user-invalid', 'valid', 'visited', 'where'],
-    a = ['after', 'backdrop', 'before', 'cue', 'cue-region', 'first-letter', 'first-line', 'grammar-error', 'marker', 'part', 'placeholder', 'selection', 'slotted', 'spelling-error'],
-    s = [
+    r = ['a', 'abbr', 'address', 'article', 'aside', 'audio', 'b', 'blockquote', 'body', 'button', 'canvas', 'caption', 'cite', 'code', 'dd', 'del', 'details', 'dfn', 'div', 'dl', 'dt', 'em', 'fieldset', 'figcaption', 'figure', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'header', 'hgroup', 'html', 'i', 'iframe', 'img', 'input', 'ins', 'kbd', 'label', 'legend', 'li', 'main', 'mark', 'menu', 'nav', 'object', 'ol', 'p', 'q', 'quote', 'samp', 'section', 'span', 'strong', 'summary', 'sup', 'table', 'tbody', 'td', 'textarea', 'tfoot', 'th', 'thead', 'time', 'tr', 'ul', 'var', 'video'],
+    i = ['any-hover', 'any-pointer', 'aspect-ratio', 'color', 'color-gamut', 'color-index', 'device-aspect-ratio', 'device-height', 'device-width', 'display-mode', 'forced-colors', 'grid', 'height', 'hover', 'inverted-colors', 'monochrome', 'orientation', 'overflow-block', 'overflow-inline', 'pointer', 'prefers-color-scheme', 'prefers-contrast', 'prefers-reduced-motion', 'prefers-reduced-transparency', 'resolution', 'scan', 'scripting', 'update', 'width', 'min-width', 'max-width', 'min-height', 'max-height'],
+    a = ['active', 'any-link', 'blank', 'checked', 'current', 'default', 'defined', 'dir', 'disabled', 'drop', 'empty', 'enabled', 'first', 'first-child', 'first-of-type', 'fullscreen', 'future', 'focus', 'focus-visible', 'focus-within', 'has', 'host', 'host-context', 'hover', 'indeterminate', 'in-range', 'invalid', 'is', 'lang', 'last-child', 'last-of-type', 'left', 'link', 'local-link', 'not', 'nth-child', 'nth-col', 'nth-last-child', 'nth-last-col', 'nth-last-of-type', 'nth-of-type', 'only-child', 'only-of-type', 'optional', 'out-of-range', 'past', 'placeholder-shown', 'read-only', 'read-write', 'required', 'right', 'root', 'scope', 'target', 'target-within', 'user-invalid', 'valid', 'visited', 'where'],
+    s = ['after', 'backdrop', 'before', 'cue', 'cue-region', 'first-letter', 'first-line', 'grammar-error', 'marker', 'part', 'placeholder', 'selection', 'slotted', 'spelling-error'],
+    o = [
         'align-content',
         'align-items',
         'align-self',
@@ -393,10 +393,13 @@ let t = (e) => ({
         'writing-mode',
         'z-index'
     ].reverse();
-e.exports = function (e) {
-    let o = t(e),
-        l = '@[a-z-]+',
-        u = {
+function l(e) {
+    let l = n(e),
+        u = s,
+        c = a,
+        d = '@[a-z-]+',
+        f = 'and or not only',
+        _ = {
             className: 'variable',
             begin: '(\\$[a-zA-Z-][a-zA-Z0-9_-]*)\\b',
             relevance: 0
@@ -408,7 +411,7 @@ e.exports = function (e) {
         contains: [
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            o.CSS_NUMBER_MODE,
+            l.CSS_NUMBER_MODE,
             {
                 className: 'selector-id',
                 begin: '#[A-Za-z0-9_-]+',
@@ -419,42 +422,42 @@ e.exports = function (e) {
                 begin: '\\.[A-Za-z0-9_-]+',
                 relevance: 0
             },
-            o.ATTRIBUTE_SELECTOR_MODE,
+            l.ATTRIBUTE_SELECTOR_MODE,
             {
                 className: 'selector-tag',
-                begin: '\\b(' + n.join('|') + ')\\b',
+                begin: '\\b(' + r.join('|') + ')\\b',
                 relevance: 0
             },
             {
                 className: 'selector-pseudo',
-                begin: ':(' + i.join('|') + ')'
+                begin: ':(' + c.join('|') + ')'
             },
             {
                 className: 'selector-pseudo',
-                begin: ':(:)?(' + a.join('|') + ')'
+                begin: ':(:)?(' + u.join('|') + ')'
             },
-            u,
+            _,
             {
                 begin: /\(/,
                 end: /\)/,
-                contains: [o.CSS_NUMBER_MODE]
+                contains: [l.CSS_NUMBER_MODE]
             },
-            o.CSS_VARIABLE,
+            l.CSS_VARIABLE,
             {
                 className: 'attribute',
-                begin: '\\b(' + s.join('|') + ')\\b'
+                begin: '\\b(' + o.join('|') + ')\\b'
             },
             { begin: '\\b(whitespace|wait|w-resize|visible|vertical-text|vertical-ideographic|uppercase|upper-roman|upper-alpha|underline|transparent|top|thin|thick|text|text-top|text-bottom|tb-rl|table-header-group|table-footer-group|sw-resize|super|strict|static|square|solid|small-caps|separate|se-resize|scroll|s-resize|rtl|row-resize|ridge|right|repeat|repeat-y|repeat-x|relative|progress|pointer|overline|outside|outset|oblique|nowrap|not-allowed|normal|none|nw-resize|no-repeat|no-drop|newspaper|ne-resize|n-resize|move|middle|medium|ltr|lr-tb|lowercase|lower-roman|lower-alpha|loose|list-item|line|line-through|line-edge|lighter|left|keep-all|justify|italic|inter-word|inter-ideograph|inside|inset|inline|inline-block|inherit|inactive|ideograph-space|ideograph-parenthesis|ideograph-numeric|ideograph-alpha|horizontal|hidden|help|hand|groove|fixed|ellipsis|e-resize|double|dotted|distribute|distribute-space|distribute-letter|distribute-all-lines|disc|disabled|default|decimal|dashed|crosshair|collapse|col-resize|circle|char|center|capitalize|break-word|break-all|bottom|both|bolder|bold|block|bidi-override|below|baseline|auto|always|all-scroll|absolute|table|table-cell)\\b' },
             {
                 begin: /:/,
                 end: /[;}{]/,
                 relevance: 0,
-                contains: [o.BLOCK_COMMENT, u, o.HEXCOLOR, o.CSS_NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, o.IMPORTANT, o.FUNCTION_DISPATCH]
+                contains: [l.BLOCK_COMMENT, _, l.HEXCOLOR, l.CSS_NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, l.IMPORTANT, l.FUNCTION_DISPATCH]
             },
             {
                 begin: '@(page|font-face)',
                 keywords: {
-                    $pattern: l,
+                    $pattern: d,
                     keyword: '@page @font-face'
                 }
             },
@@ -464,26 +467,27 @@ e.exports = function (e) {
                 returnBegin: !0,
                 keywords: {
                     $pattern: /[a-z-]+/,
-                    keyword: 'and or not only',
-                    attribute: r.join(' ')
+                    keyword: f,
+                    attribute: i.join(' ')
                 },
                 contains: [
                     {
-                        begin: l,
+                        begin: d,
                         className: 'keyword'
                     },
                     {
                         begin: /[a-z-]+(?=:)/,
                         className: 'attribute'
                     },
-                    u,
+                    _,
                     e.QUOTE_STRING_MODE,
                     e.APOS_STRING_MODE,
-                    o.HEXCOLOR,
-                    o.CSS_NUMBER_MODE
+                    l.HEXCOLOR,
+                    l.CSS_NUMBER_MODE
                 ]
             },
-            o.FUNCTION_DISPATCH
+            l.FUNCTION_DISPATCH
         ]
     };
-};
+}
+e.exports = l;

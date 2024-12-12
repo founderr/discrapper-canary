@@ -1,53 +1,53 @@
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(481060),
-    o = n(249458),
-    l = n(138599),
-    u = n(388032),
-    c = n(435499);
-t.Z = (e) => {
-    let { onPlay: t, externalURL: n, className: i, renderLinkComponent: d, inactive: f, messageId: _, channelId: p } = e;
-    return (0, r.jsx)(o.G.Consumer, {
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(481060),
+    l = r(249458),
+    u = r(138599),
+    c = r(388032),
+    d = r(435499);
+let f = (e) => {
+    let { onPlay: n, externalURL: r, className: a, renderLinkComponent: f, inactive: _, messageId: h, channelId: p } = e;
+    return (0, i.jsx)(l.G.Consumer, {
         children: (e) =>
-            (0, r.jsxs)('div', {
-                className: a()(i, c.wrapper, { [c.disableInteractions]: e.disableInteractions }),
+            (0, i.jsxs)('div', {
+                className: s()(a, d.wrapper, { [d.disableInteractions]: e.disableInteractions }),
                 children: [
-                    f && null == t
-                        ? (0, r.jsx)('div', {
-                              className: c.iconWrapper,
-                              children: (0, r.jsx)(s.PlayIcon, {
+                    _ && null == n
+                        ? (0, i.jsx)('div', {
+                              className: d.iconWrapper,
+                              children: (0, i.jsx)(o.PlayIcon, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: c.iconPlay
-                              })
-                          })
-                        : null,
-                    null != t
-                        ? (0, r.jsx)(s.Clickable, {
-                              onClick: t,
-                              className: a()(c.iconWrapperActive),
-                              tabIndex: f ? -1 : 0,
-                              'aria-label': u.intl.string(u.t.RscU7O),
-                              children: (0, r.jsx)(s.PlayIcon, {
-                                  size: 'xs',
-                                  color: 'currentColor',
-                                  className: c.iconPlay
+                                  className: d.iconPlay
                               })
                           })
                         : null,
                     null != n
-                        ? d({
-                              href: n,
+                        ? (0, i.jsx)(o.Clickable, {
+                              onClick: n,
+                              className: s()(d.iconWrapperActive),
+                              tabIndex: _ ? -1 : 0,
+                              'aria-label': c.intl.string(c.t.RscU7O),
+                              children: (0, i.jsx)(o.PlayIcon, {
+                                  size: 'xs',
+                                  color: 'currentColor',
+                                  className: d.iconPlay
+                              })
+                          })
+                        : null,
+                    null != r
+                        ? f({
+                              href: r,
                               target: '_blank',
                               rel: 'noreferrer noopener',
-                              className: c.iconWrapperActive,
-                              children: (0, r.jsx)(l.Z, {
-                                  'aria-label': u.intl.string(u.t.wuRE8P),
-                                  className: null != t ? c.iconExternalMargins : c.iconExternal
+                              className: d.iconWrapperActive,
+                              children: (0, i.jsx)(u.Z, {
+                                  'aria-label': c.intl.string(c.t.wuRE8P),
+                                  className: null != n ? d.iconExternalMargins : d.iconExternal
                               }),
-                              messageId: _,
+                              messageId: h,
                               channelId: p
                           })
                         : null
@@ -55,3 +55,4 @@ t.Z = (e) => {
             })
     });
 };
+n.Z = f;

@@ -1,14 +1,9 @@
-var r, i;
-n.d(t, {
+var i;
+r.d(n, {
     w: function () {
-        return r;
+        return i;
     }
 }),
-    ((i = r || (r = {})).IGNORE_SUCCESS = 'IGNORE_SUCCESS'),
-    (i.UNIGNORE_SUCCESS = 'UNIGNORE_SUCCESS'),
-    (i.BLOCK_SUCCESS = 'BLOCK_SUCCESS'),
-    (i.UNBLOCK_SUCCESS = 'UNBLOCK_SUCCESS'),
-    (i.MUTE_SUCCESS = 'MUTE_SUCCESS'),
-    (i.UNMUTE_SUCCESS = 'UNMUTE_SUCCESS'),
-    (i.REPORT_SUCCESS = 'REPORT_SUCCESS'),
-    (i.GENERIC_ERROR = 'GENERIC_ERROR');
+    !(function (e) {
+        (e.IGNORE_SUCCESS = 'IGNORE_SUCCESS'), (e.UNIGNORE_SUCCESS = 'UNIGNORE_SUCCESS'), (e.BLOCK_SUCCESS = 'BLOCK_SUCCESS'), (e.UNBLOCK_SUCCESS = 'UNBLOCK_SUCCESS'), (e.MUTE_SUCCESS = 'MUTE_SUCCESS'), (e.UNMUTE_SUCCESS = 'UNMUTE_SUCCESS'), (e.REPORT_SUCCESS = 'REPORT_SUCCESS'), (e.GENERIC_ERROR = 'GENERIC_ERROR');
+    })(i || (i = {}));

@@ -1,8 +1,9 @@
-var r, i;
-n.d(t, {
+var i;
+r.d(n, {
     L: function () {
-        return r;
+        return i;
     }
 }),
-    ((i = r || (r = {}))[(i.FIRST_PARTY = 1)] = 'FIRST_PARTY'),
-    (i[(i.THIRD_PARTY = 2)] = 'THIRD_PARTY');
+    !(function (e) {
+        (e[(e.FIRST_PARTY = 1)] = 'FIRST_PARTY'), (e[(e.THIRD_PARTY = 2)] = 'THIRD_PARTY');
+    })(i || (i = {}));

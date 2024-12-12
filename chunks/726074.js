@@ -1,33 +1,31 @@
-n.d(t, {
+r.d(n, {
     as: function () {
-        return a;
+        return s;
     },
     tX: function () {
-        return s;
+        return l;
     }
 });
-let r = 'undefined' != typeof global ? global : self,
-    i = r.MutationObserver || r.WebKitMutationObserver;
-function a(e) {
+let i = 'undefined' != typeof global ? global : self,
+    a = i.MutationObserver || i.WebKitMutationObserver;
+function s(e) {
     return function () {
-        let t = setTimeout(r, 0),
-            n = setInterval(r, 50);
-        function r() {
-            clearTimeout(t), clearInterval(n), e();
+        let n = setTimeout(i, 0),
+            r = setInterval(i, 50);
+        function i() {
+            clearTimeout(n), clearInterval(r), e();
         }
     };
 }
-let s =
-    'function' == typeof i
-        ? function (e) {
-              let t = 1,
-                  n = new i(e),
-                  r = document.createTextNode('');
-              return (
-                  n.observe(r, { characterData: !0 }),
-                  function () {
-                      (t = -t), (r.data = t);
-                  }
-              );
-          }
-        : a;
+function o(e) {
+    let n = 1,
+        r = new a(e),
+        i = document.createTextNode('');
+    return (
+        r.observe(i, { characterData: !0 }),
+        function () {
+            (n = -n), (i.data = n);
+        }
+    );
+}
+let l = 'function' == typeof a ? o : s;

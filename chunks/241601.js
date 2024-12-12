@@ -1,87 +1,80 @@
-let r;
-n.d(t, {
+let i;
+r.d(n, {
     Ql: function () {
-        return c;
+        return _;
     },
     R_: function () {
-        return u;
+        return f;
     },
     _2: function () {
-        return d;
+        return h;
     }
-}),
-    n(653041),
-    n(47120);
-var i = n(436772),
-    a = n(65400),
-    s = n(388032),
-    o = n(424395),
-    l = n(689938);
-r = n(330711).Z;
-let u = (0, a.F)((e, t) => ({
+});
+var a = r(653041);
+var s = r(47120);
+var o = r(436772);
+var l = r(65400),
+    u = r(388032),
+    c = r(424395),
+    d = r(689938);
+i = r(330711).Z;
+let f = (0, l.F)((e, n) => ({
     isLoading: !1,
     inProgressLocale: void 0,
     error: void 0,
-    setLoadingStarted: (t) =>
+    setLoadingStarted: (n) =>
         e({
             isLoading: !0,
-            inProgressLocale: t
+            inProgressLocale: n
         }),
-    setLoadingSucceeded: (n) => {
-        let { inProgressLocale: r } = t();
-        r === n &&
+    setLoadingSucceeded: (r) => {
+        let { inProgressLocale: i } = n();
+        i === r &&
             e({
                 isLoading: !1,
                 inProgressLocale: void 0,
                 error: void 0
             });
     },
-    setLoadingFailed: (n, r) => {
-        let { inProgressLocale: i } = t();
-        i === r &&
+    setLoadingFailed: (r, i) => {
+        let { inProgressLocale: a } = n();
+        a === i &&
             e({
                 isLoading: !1,
                 inProgressLocale: void 0,
-                error: n
+                error: r
             });
     }
 }));
-function c(e) {
-    return u.subscribe((t, n) => {
-        if (null != n.inProgressLocale && null == t.inProgressLocale) null == t.error && e(n.inProgressLocale);
+function _(e) {
+    return f.subscribe((n, r) => {
+        if (null != r.inProgressLocale && null == n.inProgressLocale) null == n.error && e(r.inProgressLocale);
     });
 }
-async function d(e) {
-    let t = u.getState();
-    t.setLoadingStarted(e);
-    let a = [];
-    o.vJ ? (s.intl.setLocale(e), a.push((0, i.loadAllMessagesInLocale)(e))) : (l.Z.setLocale(e), a.push(l.Z.loadPromise)),
-        null != r && (r.setLocale(e), a.push(r.loadPromise)),
-        a.push(f(e)),
-        a.push(_(e)),
-        a.push(
-            (function (e) {
-                let { setTags: t } = n(960048).Z;
-                return t({ locale: e }), Promise.resolve();
-            })(e)
-        ),
-        await Promise.all(a).catch((n) => t.setLoadingFailed(n, e)),
-        t.setLoadingSucceeded(e);
+async function h(e) {
+    let n = f.getState();
+    n.setLoadingStarted(e);
+    let r = [];
+    c.vJ ? (u.intl.setLocale(e), r.push((0, o.loadAllMessagesInLocale)(e))) : (d.Z.setLocale(e), r.push(d.Z.loadPromise)), null != i && (i.setLocale(e), r.push(i.loadPromise)), r.push(p(e)), r.push(m(e)), r.push(g(e)), await Promise.all(r).catch((r) => n.setLoadingFailed(r, e)), n.setLoadingSucceeded(e);
 }
-async function f(e) {
-    let t = n(602473).q[e];
-    if (null == t) return;
-    let r = await t().default;
+async function p(e) {
+    let n = r(602473).q[e];
+    if (null == n) return;
+    let i = await n().default;
     {
-        let { registerLocale: t } = n(674091);
-        t(e, r);
+        let { registerLocale: n } = r(674091);
+        n(e, i);
     }
 }
-async function _(e) {
-    let t = n(352968).y[e];
-    null != t && (await t());
-    let r = [],
-        i = ('no' === e ? 'nb' : e).split('-');
-    for (; i.length > 0; ) r.push(i.join('-')), i.pop();
-    r.push('en-US'), n(913527).locale(r);
+async function m(e) {
+    let n = r(352968).y[e];
+    null != n && (await n());
+    let i = [],
+        a = ('no' === e ? 'nb' : e).split('-');
+    for (; a.length > 0; ) i.push(a.join('-')), a.pop();
+    i.push('en-US'), r(913527).locale(i);
+}
+function g(e) {
+    let { setTags: n } = r(960048).Z;
+    return n({ locale: e }), Promise.resolve();
 }

@@ -1,67 +1,68 @@
-n.d(t, {
+r.d(n, {
     N: function () {
-        return l;
+        return u;
     }
 });
-var r = n(812975),
-    i = n(686942),
-    a = n(713267),
-    s = n(695170),
-    o = n(829105);
-function l(e) {
-    for (var t = [], n = '', l = Object.keys(e), u = Object.keys(r.WN), c = 0; c < l.length; c++) {
-        if ('tzid' !== l[c] && !!(0, i.q9)(u, l[c])) {
-            var d = l[c].toUpperCase(),
-                f = e[l[c]],
-                _ = '';
-            if (!(!(0, i.EN)(f) || ((0, i.kJ)(f) && !f.length))) {
-                switch (d) {
+var i = r(812975),
+    a = r(686942),
+    s = r(713267),
+    o = r(695170),
+    l = r(829105);
+function u(e) {
+    for (var n = [], r = '', l = Object.keys(e), u = Object.keys(i.WN), d = 0; d < l.length; d++) {
+        if ('tzid' !== l[d] && !!(0, a.q9)(u, l[d])) {
+            var f = l[d].toUpperCase(),
+                _ = e[l[d]],
+                h = '';
+            if (!(!(0, a.EN)(_) || ((0, a.kJ)(_) && !_.length))) {
+                switch (f) {
                     case 'FREQ':
-                        _ = r.Ci.FREQUENCIES[e.freq];
+                        h = i.Ci.FREQUENCIES[e.freq];
                         break;
                     case 'WKST':
-                        _ = (0, i.hj)(f) ? new a.O(f).toString() : f.toString();
+                        h = (0, a.hj)(_) ? new s.O(_).toString() : _.toString();
                         break;
                     case 'BYWEEKDAY':
-                        (d = 'BYDAY'),
-                            (_ = (0, i.qo)(f)
+                        (f = 'BYDAY'),
+                            (h = (0, a.qo)(_)
                                 .map(function (e) {
-                                    return e instanceof a.O ? e : (0, i.kJ)(e) ? new a.O(e[0], e[1]) : new a.O(e);
+                                    return e instanceof s.O ? e : (0, a.kJ)(e) ? new s.O(e[0], e[1]) : new s.O(e);
                                 })
                                 .toString());
                         break;
                     case 'DTSTART':
-                        n = (function (e, t) {
-                            return e ? 'DTSTART' + new o.M(new Date(e), t).toString() : '';
-                        })(f, e.tzid);
+                        r = c(_, e.tzid);
                         break;
                     case 'UNTIL':
-                        _ = (0, s.Od)(f, !e.tzid);
+                        h = (0, o.Od)(_, !e.tzid);
                         break;
                     default:
-                        if ((0, i.kJ)(f)) {
-                            for (var p = [], h = 0; h < f.length; h++) p[h] = String(f[h]);
-                            _ = p.toString();
-                        } else _ = String(f);
+                        if ((0, a.kJ)(_)) {
+                            for (var p = [], m = 0; m < _.length; m++) p[m] = String(_[m]);
+                            h = p.toString();
+                        } else h = String(_);
                 }
-                _ && t.push([d, _]);
+                h && n.push([f, h]);
             }
         }
     }
-    var m = t
+    var g = n
             .map(function (e) {
-                var t = e[0],
-                    n = e[1];
-                return ''.concat(t, '=').concat(n.toString());
+                var n = e[0],
+                    r = e[1];
+                return ''.concat(n, '=').concat(r.toString());
             })
             .join(';'),
-        g = '';
+        E = '';
     return (
-        '' !== m && (g = 'RRULE:'.concat(m)),
-        [n, g]
+        '' !== g && (E = 'RRULE:'.concat(g)),
+        [r, E]
             .filter(function (e) {
                 return !!e;
             })
             .join('\n')
     );
+}
+function c(e, n) {
+    return e ? 'DTSTART' + new l.M(new Date(e), n).toString() : '';
 }

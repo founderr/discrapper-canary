@@ -1,18 +1,15 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(695103),
-    i = n(115130);
-function a(e) {
-    let t = i.Z.getState();
-    return t.useActivityUrlOverride && null != t.activityUrlOverride && '' !== t.activityUrlOverride
-        ? t.activityUrlOverride
-        : r.Z.inTestModeForEmbeddedApplication(e)
-          ? r.Z.testModeOriginURL
-          : (function (e) {
-                let t = window.GLOBAL_ENV.ACTIVITY_APPLICATION_HOST;
-                return null == t ? null : 'https://'.concat(e, '.').concat(t);
-            })(e);
+var i = r(695103),
+    a = r(115130);
+function s(e) {
+    let n = a.Z.getState();
+    return n.useActivityUrlOverride && null != n.activityUrlOverride && '' !== n.activityUrlOverride ? n.activityUrlOverride : i.Z.inTestModeForEmbeddedApplication(e) ? i.Z.testModeOriginURL : o(e);
+}
+function o(e) {
+    let n = window.GLOBAL_ENV.ACTIVITY_APPLICATION_HOST;
+    return null == n ? null : 'https://'.concat(e, '.').concat(n);
 }

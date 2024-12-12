@@ -1,168 +1,166 @@
-var r = n(575270).RBTree;
-function i(e, t, n) {
-    (this.discrete = !1 === e), (this.delta = e || 0.01), (this.K = void 0 === t ? 25 : t), (this.CX = void 0 === n ? 1.1 : n), (this.centroids = new r(a)), (this.nreset = 0), this.reset();
+var i = r(575270).RBTree;
+function a(e, n, r) {
+    (this.discrete = !1 === e), (this.delta = e || 0.01), (this.K = void 0 === n ? 25 : n), (this.CX = void 0 === r ? 1.1 : r), (this.centroids = new i(s)), (this.nreset = 0), this.reset();
 }
-function a(e, t) {
-    return e.mean > t.mean ? 1 : e.mean < t.mean ? -1 : 0;
+function s(e, n) {
+    return e.mean > n.mean ? 1 : e.mean < n.mean ? -1 : 0;
 }
-function s(e, t) {
-    return e.mean_cumn - t.mean_cumn;
+function o(e, n) {
+    return e.mean_cumn - n.mean_cumn;
 }
-(i.prototype.reset = function () {
+function l(e) {
+    var n = Math.floor(Math.random() * e.length);
+    return e.splice(n, 1)[0];
+}
+function u(e) {
+    (this.config = e || {}), (this.mode = this.config.mode || 'auto'), a.call(this, 'cont' === this.mode && e.delta), (this.digest_ratio = this.config.ratio || 0.9), (this.digest_thresh = this.config.thresh || 1000), (this.n_unique = 0);
+}
+(a.prototype.reset = function () {
     this.centroids.clear(), (this.n = 0), (this.nreset += 1), (this.last_cumulate = 0);
 }),
-    (i.prototype.size = function () {
+    (a.prototype.size = function () {
         return this.centroids.size;
     }),
-    (i.prototype.toArray = function (e) {
-        var t = [];
+    (a.prototype.toArray = function (e) {
+        var n = [];
         return (
             e
                 ? (this._cumulate(!0),
                   this.centroids.each(function (e) {
-                      t.push(e);
+                      n.push(e);
                   }))
                 : this.centroids.each(function (e) {
-                      t.push({
+                      n.push({
                           mean: e.mean,
                           n: e.n
                       });
                   }),
-            t
+            n
         );
     }),
-    (i.prototype.summary = function () {
+    (a.prototype.summary = function () {
         return [(this.discrete ? 'exact ' : 'approximating ') + this.n + ' samples using ' + this.size() + ' centroids', 'min = ' + this.percentile(0), 'Q1  = ' + this.percentile(0.25), 'Q2  = ' + this.percentile(0.5), 'Q3  = ' + this.percentile(0.75), 'max = ' + this.percentile(1)].join('\n');
     }),
-    (i.prototype.push = function (e, t) {
-        (t = t || 1), (e = Array.isArray(e) ? e : [e]);
-        for (var n = 0; n < e.length; n++) this._digest(e[n], t);
+    (a.prototype.push = function (e, n) {
+        (n = n || 1), (e = Array.isArray(e) ? e : [e]);
+        for (var r = 0; r < e.length; r++) this._digest(e[r], n);
     }),
-    (i.prototype.push_centroid = function (e) {
+    (a.prototype.push_centroid = function (e) {
         e = Array.isArray(e) ? e : [e];
-        for (var t = 0; t < e.length; t++) this._digest(e[t].mean, e[t].n);
+        for (var n = 0; n < e.length; n++) this._digest(e[n].mean, e[n].n);
     }),
-    (i.prototype._cumulate = function (e) {
+    (a.prototype._cumulate = function (e) {
         if (this.n !== this.last_cumulate && (!!e || !this.CX || !(this.CX > this.n / this.last_cumulate))) {
-            var t = 0;
+            var n = 0;
             this.centroids.each(function (e) {
-                (e.mean_cumn = t + e.n / 2), (t = e.cumn = t + e.n);
+                (e.mean_cumn = n + e.n / 2), (n = e.cumn = n + e.n);
             }),
-                (this.n = this.last_cumulate = t);
+                (this.n = this.last_cumulate = n);
         }
     }),
-    (i.prototype.find_nearest = function (e) {
+    (a.prototype.find_nearest = function (e) {
         if (0 === this.size()) return null;
-        var t = this.centroids.lowerBound({ mean: e }),
-            n = null === t.data() ? t.prev() : t.data();
-        if (n.mean === e || this.discrete) return n;
-        var r = t.prev();
-        return r && Math.abs(r.mean - e) < Math.abs(n.mean - e) ? r : n;
+        var n = this.centroids.lowerBound({ mean: e }),
+            r = null === n.data() ? n.prev() : n.data();
+        if (r.mean === e || this.discrete) return r;
+        var i = n.prev();
+        return i && Math.abs(i.mean - e) < Math.abs(r.mean - e) ? i : r;
     }),
-    (i.prototype._new_centroid = function (e, t, n) {
-        var r = {
+    (a.prototype._new_centroid = function (e, n, r) {
+        var i = {
             mean: e,
-            n: t,
-            cumn: n
+            n: n,
+            cumn: r
         };
-        return this.centroids.insert(r), (this.n += t), r;
+        return this.centroids.insert(i), (this.n += n), i;
     }),
-    (i.prototype._addweight = function (e, t, n) {
-        t !== e.mean && (e.mean += (n * (t - e.mean)) / (e.n + n)), (e.cumn += n), (e.mean_cumn += n / 2), (e.n += n), (this.n += n);
+    (a.prototype._addweight = function (e, n, r) {
+        n !== e.mean && (e.mean += (r * (n - e.mean)) / (e.n + r)), (e.cumn += r), (e.mean_cumn += r / 2), (e.n += r), (this.n += r);
     }),
-    (i.prototype._digest = function (e, t) {
-        var n = this.centroids.min(),
-            r = this.centroids.max(),
-            i = this.find_nearest(e);
-        if (i && i.mean === e) this._addweight(i, e, t);
-        else if (i === n) this._new_centroid(e, t, 0);
-        else if (i === r) this._new_centroid(e, t, this.n);
-        else if (this.discrete) this._new_centroid(e, t, i.cumn);
+    (a.prototype._digest = function (e, n) {
+        var r = this.centroids.min(),
+            i = this.centroids.max(),
+            a = this.find_nearest(e);
+        if (a && a.mean === e) this._addweight(a, e, n);
+        else if (a === r) this._new_centroid(e, n, 0);
+        else if (a === i) this._new_centroid(e, n, this.n);
+        else if (this.discrete) this._new_centroid(e, n, a.cumn);
         else {
-            var a = i.mean_cumn / this.n;
-            Math.floor(4 * this.n * this.delta * a * (1 - a)) - i.n >= t ? this._addweight(i, e, t) : this._new_centroid(e, t, i.cumn);
+            var s = a.mean_cumn / this.n;
+            Math.floor(4 * this.n * this.delta * s * (1 - s)) - a.n >= n ? this._addweight(a, e, n) : this._new_centroid(e, n, a.cumn);
         }
         this._cumulate(!1), !this.discrete && this.K && this.size() > this.K / this.delta && this.compress();
     }),
-    (i.prototype.bound_mean = function (e) {
-        var t = this.centroids.upperBound({ mean: e }),
-            n = t.prev(),
-            r = n.mean === e ? n : t.next();
-        return [n, r];
+    (a.prototype.bound_mean = function (e) {
+        var n = this.centroids.upperBound({ mean: e }),
+            r = n.prev(),
+            i = r.mean === e ? r : n.next();
+        return [r, i];
     }),
-    (i.prototype.p_rank = function (e) {
-        var t = (Array.isArray(e) ? e : [e]).map(this._p_rank, this);
-        return Array.isArray(e) ? t : t[0];
+    (a.prototype.p_rank = function (e) {
+        var n = (Array.isArray(e) ? e : [e]).map(this._p_rank, this);
+        return Array.isArray(e) ? n : n[0];
     }),
-    (i.prototype._p_rank = function (e) {
+    (a.prototype._p_rank = function (e) {
         if (0 !== this.size()) {
             if (e < this.centroids.min().mean) return 0;
             if (e > this.centroids.max().mean) return 1;
             this._cumulate(!0);
-            var t = this.bound_mean(e),
-                n = t[0],
-                r = t[1];
-            if (this.discrete) return n.cumn / this.n;
-            var i = n.mean_cumn;
-            return n !== r && (i += ((e - n.mean) * (r.mean_cumn - n.mean_cumn)) / (r.mean - n.mean)), i / this.n;
-        }
-    }),
-    (i.prototype.bound_mean_cumn = function (e) {
-        this.centroids._comparator = s;
-        var t = this.centroids.upperBound({ mean_cumn: e });
-        this.centroids._comparator = a;
-        var n = t.prev(),
-            r = n && n.mean_cumn === e ? n : t.next();
-        return [n, r];
-    }),
-    (i.prototype.percentile = function (e) {
-        var t = (Array.isArray(e) ? e : [e]).map(this._percentile, this);
-        return Array.isArray(e) ? t : t[0];
-    }),
-    (i.prototype._percentile = function (e) {
-        if (0 !== this.size()) {
-            this._cumulate(!0), this.centroids.min(), this.centroids.max();
-            var t = this.n * e,
-                n = this.bound_mean_cumn(t),
+            var n = this.bound_mean(e),
                 r = n[0],
                 i = n[1];
-            if (i === r || null === r || null === i) return (r || i).mean;
-            if (!this.discrete) return r.mean + ((t - r.mean_cumn) * (i.mean - r.mean)) / (i.mean_cumn - r.mean_cumn);
-            if (t <= r.cumn) return r.mean;
-            else return i.mean;
+            if (this.discrete) return r.cumn / this.n;
+            var a = r.mean_cumn;
+            return r !== i && (a += ((e - r.mean) * (i.mean_cumn - r.mean_cumn)) / (i.mean - r.mean)), a / this.n;
         }
-    });
-function o(e) {
-    (this.config = e || {}), (this.mode = this.config.mode || 'auto'), i.call(this, 'cont' === this.mode && e.delta), (this.digest_ratio = this.config.ratio || 0.9), (this.digest_thresh = this.config.thresh || 1000), (this.n_unique = 0);
-}
-(i.prototype.compress = function () {
-    if (!this.compressing) {
-        var e = this.toArray();
-        for (this.reset(), this.compressing = !0; e.length > 0; )
-            this.push_centroid(
-                (function (e) {
-                    var t = Math.floor(Math.random() * e.length);
-                    return e.splice(t, 1)[0];
-                })(e)
-            );
-        this._cumulate(!0), (this.compressing = !1);
-    }
-}),
-    (o.prototype = Object.create(i.prototype)),
-    (o.prototype.constructor = o),
-    (o.prototype.push = function (e) {
-        i.prototype.push.call(this, e), this.check_continuous();
     }),
-    (o.prototype._new_centroid = function (e, t, n) {
-        (this.n_unique += 1), i.prototype._new_centroid.call(this, e, t, n);
+    (a.prototype.bound_mean_cumn = function (e) {
+        this.centroids._comparator = o;
+        var n = this.centroids.upperBound({ mean_cumn: e });
+        this.centroids._comparator = s;
+        var r = n.prev(),
+            i = r && r.mean_cumn === e ? r : n.next();
+        return [r, i];
     }),
-    (o.prototype._addweight = function (e, t, n) {
-        1 === e.n && (this.n_unique -= 1), i.prototype._addweight.call(this, e, t, n);
+    (a.prototype.percentile = function (e) {
+        var n = (Array.isArray(e) ? e : [e]).map(this._percentile, this);
+        return Array.isArray(e) ? n : n[0];
     }),
-    (o.prototype.check_continuous = function () {
+    (a.prototype._percentile = function (e) {
+        if (0 !== this.size()) {
+            this._cumulate(!0), this.centroids.min(), this.centroids.max();
+            var n = this.n * e,
+                r = this.bound_mean_cumn(n),
+                i = r[0],
+                a = r[1];
+            if (a === i || null === i || null === a) return (i || a).mean;
+            if (!this.discrete) return i.mean + ((n - i.mean_cumn) * (a.mean - i.mean)) / (a.mean_cumn - i.mean_cumn);
+            if (n <= i.cumn) return i.mean;
+            else return a.mean;
+        }
+    }),
+    (a.prototype.compress = function () {
+        if (!this.compressing) {
+            var e = this.toArray();
+            for (this.reset(), this.compressing = !0; e.length > 0; ) this.push_centroid(l(e));
+            this._cumulate(!0), (this.compressing = !1);
+        }
+    }),
+    (u.prototype = Object.create(a.prototype)),
+    (u.prototype.constructor = u),
+    (u.prototype.push = function (e) {
+        a.prototype.push.call(this, e), this.check_continuous();
+    }),
+    (u.prototype._new_centroid = function (e, n, r) {
+        (this.n_unique += 1), a.prototype._new_centroid.call(this, e, n, r);
+    }),
+    (u.prototype._addweight = function (e, n, r) {
+        1 === e.n && (this.n_unique -= 1), a.prototype._addweight.call(this, e, n, r);
+    }),
+    (u.prototype.check_continuous = function () {
         return !('auto' !== this.mode || this.size() < this.digest_thresh) && !!(this.n_unique / this.size() > this.digest_ratio) && ((this.mode = 'cont'), (this.discrete = !1), (this.delta = this.config.delta || 0.01), this.compress(), !0);
     }),
     (e.exports = {
-        TDigest: i,
-        Digest: o
+        TDigest: a,
+        Digest: u
     });

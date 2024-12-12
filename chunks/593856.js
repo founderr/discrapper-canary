@@ -1,9 +1,10 @@
-t.Z = function (e) {
-    return function (t, n, r) {
-        for (var i = -1, a = Object(t), s = r(t), o = s.length; o--; ) {
-            var l = s[e ? o : ++i];
-            if (!1 === n(a[l], l, a)) break;
+function r(e) {
+    return function (n, r, i) {
+        for (var a = -1, s = Object(n), o = i(n), l = o.length; l--; ) {
+            var u = o[e ? l : ++a];
+            if (!1 === r(s[u], u, s)) break;
         }
-        return t;
+        return n;
     };
-};
+}
+n.Z = r;

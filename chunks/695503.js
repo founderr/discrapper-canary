@@ -1,13 +1,14 @@
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(388032),
-    s = n(779840);
-t.Z = function () {
-    return (0, r.jsx)(i.ChatIcon, {
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(388032),
+    o = r(779840);
+function l() {
+    return (0, i.jsx)(a.ChatIcon, {
         size: 'md',
         color: 'currentColor',
-        className: s.icon,
-        'aria-label': a.intl.string(a.t.BAB0yM)
+        className: o.icon,
+        'aria-label': s.intl.string(s.t.BAB0yM)
     });
-};
+}
+n.Z = l;

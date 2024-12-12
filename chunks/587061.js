@@ -1,62 +1,65 @@
-var r = n(192379),
-    i = n(442837),
-    a = n(952265),
-    s = n(481060),
-    o = n(714338),
-    l = n(857595),
-    u = n(607070),
-    c = n(627845),
-    d = n(556296),
-    f = n(5967),
-    _ = n(13140),
-    p = n(981631),
-    h = n(420212);
-function m(e) {
-    let t = e.ctrlKey || e.altKey || e.metaKey;
-    e.key === h.mR.Tab && !t && !__OVERLAY__ && !(0, a.$s)() && c.Z.maybeShowKeyboardNavigationExplainerModal();
+var i = r(192379),
+    a = r(442837),
+    s = r(952265),
+    o = r(481060),
+    l = r(714338),
+    u = r(857595),
+    c = r(607070),
+    d = r(627845),
+    f = r(556296),
+    _ = r(5967),
+    h = r(13140),
+    p = r(981631),
+    m = r(420212);
+function g(e) {
+    let n = e.ctrlKey || e.altKey || e.metaKey;
+    e.key === m.mR.Tab && !n && !__OVERLAY__ && !(0, s.$s)() && d.Z.maybeShowKeyboardNavigationExplainerModal();
 }
-function g() {
-    (0, l.rf)();
+function E(e) {
+    let n = h.C$('shift'),
+        r = h.C$('tab');
+    if (e.key === m.mR.Tab && e.shiftKey && null != n && null != r)
+        return [
+            [p.MoX.KEYBOARD_KEY, n],
+            [p.MoX.KEYBOARD_KEY, r]
+        ];
+    let i = m.el.get(e.key);
+    if (null != i) {
+        let e = h.C$(i);
+        if (null != e) return [[p.MoX.KEYBOARD_KEY, e]];
+    }
+    return null;
 }
-t.Z = function (e, t) {
-    let n = (0, i.e7)([u.Z], () => u.Z.keyboardModeEnabled);
-    (0, s.useFocusJumpSectionManager)(n);
-    let a = (0, r.useCallback)(
+function v(e, n) {
+    var r, i;
+    let a = (0, _.VG)(null === (r = (0, _.uB)(e)) || void 0 === r ? void 0 : r.activeElement);
+    if ((a && e.key !== m.mR.Tab) || e.ctrlKey || e.altKey || e.metaKey || (e.key !== m.mR.Tab && e.shiftKey)) return;
+    let s = E(e);
+    null != s && !f.Z.hasExactKeybind(s) && !l.Z.hasBind(null !== (i = h.H9(s[0])) && void 0 !== i ? i : '') && ((0, u.Qj)(), a && !n && e.preventDefault());
+}
+function I() {
+    (0, u.rf)();
+}
+function T(e, n) {
+    let r = (0, a.e7)([c.Z], () => c.Z.keyboardModeEnabled);
+    (0, o.useFocusJumpSectionManager)(r);
+    let s = (0, i.useCallback)(
         (e) => {
-            !(function (e, t) {
-                var n, r;
-                let i = (0, f.VG)(null === (n = (0, f.uB)(e)) || void 0 === n ? void 0 : n.activeElement);
-                if ((i && e.key !== h.mR.Tab) || e.ctrlKey || e.altKey || e.metaKey || (e.key !== h.mR.Tab && e.shiftKey)) return;
-                let a = (function (e) {
-                    let t = _.C$('shift'),
-                        n = _.C$('tab');
-                    if (e.key === h.mR.Tab && e.shiftKey && null != t && null != n)
-                        return [
-                            [p.MoX.KEYBOARD_KEY, t],
-                            [p.MoX.KEYBOARD_KEY, n]
-                        ];
-                    let r = h.el.get(e.key);
-                    if (null != r) {
-                        let e = _.C$(r);
-                        if (null != e) return [[p.MoX.KEYBOARD_KEY, e]];
-                    }
-                    return null;
-                })(e);
-                null != a && !d.Z.hasExactKeybind(a) && !o.Z.hasBind(null !== (r = _.H9(a[0])) && void 0 !== r ? r : '') && ((0, l.Qj)(), i && !t && e.preventDefault());
-            })(e, t);
+            v(e, n);
         },
-        [t]
+        [n]
     );
     return (
-        (0, r.useLayoutEffect)(
+        (0, i.useLayoutEffect)(
             () => (
-                n ? (e.addEventListener('mousedown', g), e.addEventListener('keydown', m)) : e.addEventListener('keydown', a),
+                r ? (e.addEventListener('mousedown', I), e.addEventListener('keydown', g)) : e.addEventListener('keydown', s),
                 () => {
-                    n ? (e.removeEventListener('mousedown', g), e.removeEventListener('keydown', m)) : e.removeEventListener('keydown', a);
+                    r ? (e.removeEventListener('mousedown', I), e.removeEventListener('keydown', g)) : e.removeEventListener('keydown', s);
                 }
             ),
-            [e, a, n]
+            [e, s, r]
         ),
-        n
+        r
     );
-};
+}
+n.Z = T;

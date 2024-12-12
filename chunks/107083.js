@@ -1,53 +1,52 @@
-var r = n(444675);
-function i() {
+var i = r(444675);
+function a() {
     throw Error('secure random number generation not supported by this browser\nuse chrome, FireFox or Internet Explorer 11');
 }
-var a = n(957578),
-    s = n(706178),
-    o = a.Buffer,
-    l = a.kMaxLength,
-    u = n.g.crypto || n.g.msCrypto,
-    c = 4294967295;
-function d(e, t) {
+var s = r(957578),
+    o = r(706178),
+    l = s.Buffer,
+    u = s.kMaxLength,
+    c = r.g.crypto || r.g.msCrypto,
+    d = 4294967295;
+function f(e, n) {
     if ('number' != typeof e || e != e) throw TypeError('offset must be a number');
-    if (e > c || e < 0) throw TypeError('offset must be a uint32');
-    if (e > l || e > t) throw RangeError('offset out of range');
+    if (e > d || e < 0) throw TypeError('offset must be a uint32');
+    if (e > u || e > n) throw RangeError('offset out of range');
 }
-function f(e, t, n) {
+function _(e, n, r) {
     if ('number' != typeof e || e != e) throw TypeError('size must be a number');
-    if (e > c || e < 0) throw TypeError('size must be a uint32');
-    if (e + t > n || e > l) throw RangeError('buffer too small');
+    if (e > d || e < 0) throw TypeError('size must be a uint32');
+    if (e + n > r || e > u) throw RangeError('buffer too small');
 }
-(u && u.getRandomValues) || !r.browser
-    ? ((t.randomFill = function (e, t, r, i) {
-          if (!o.isBuffer(e) && !(e instanceof n.g.Uint8Array)) throw TypeError('"buf" argument must be a Buffer or Uint8Array');
-          if ('function' == typeof t) (i = t), (t = 0), (r = e.length);
-          else if ('function' == typeof r) (i = r), (r = e.length - t);
-          else if ('function' != typeof i) throw TypeError('"cb" argument must be a function');
-          return d(t, e.length), f(r, t, e.length), _(e, t, r, i);
-      }),
-      (t.randomFillSync = function (e, t, r) {
-          if ((void 0 === t && (t = 0), !o.isBuffer(e) && !(e instanceof n.g.Uint8Array))) throw TypeError('"buf" argument must be a Buffer or Uint8Array');
-          return d(t, e.length), void 0 === r && (r = e.length - t), f(r, t, e.length), _(e, t, r);
-      }))
-    : ((t.randomFill = i), (t.randomFillSync = i));
-function _(e, t, n, i) {
-    if (r.browser) {
-        var a = new Uint8Array(e.buffer, t, n);
-        if ((u.getRandomValues(a), i)) {
-            r.nextTick(function () {
-                i(null, e);
+function h(e, n, i, a) {
+    if (!l.isBuffer(e) && !(e instanceof r.g.Uint8Array)) throw TypeError('"buf" argument must be a Buffer or Uint8Array');
+    if ('function' == typeof n) (a = n), (n = 0), (i = e.length);
+    else if ('function' == typeof i) (a = i), (i = e.length - n);
+    else if ('function' != typeof a) throw TypeError('"cb" argument must be a function');
+    return f(n, e.length), _(i, n, e.length), p(e, n, i, a);
+}
+function p(e, n, r, a) {
+    if (i.browser) {
+        var s = new Uint8Array(e.buffer, n, r);
+        if ((c.getRandomValues(s), a)) {
+            i.nextTick(function () {
+                a(null, e);
             });
             return;
         }
         return e;
     }
-    if (i) {
-        s(n, function (n, r) {
-            if (n) return i(n);
-            r.copy(e, t), i(null, e);
+    if (a) {
+        o(r, function (r, i) {
+            if (r) return a(r);
+            i.copy(e, n), a(null, e);
         });
         return;
     }
-    return s(n).copy(e, t), e;
+    return o(r).copy(e, n), e;
 }
+function m(e, n, i) {
+    if ((void 0 === n && (n = 0), !l.isBuffer(e) && !(e instanceof r.g.Uint8Array))) throw TypeError('"buf" argument must be a Buffer or Uint8Array');
+    return f(n, e.length), void 0 === i && (i = e.length - n), _(i, n, e.length), p(e, n, i);
+}
+(c && c.getRandomValues) || !i.browser ? ((n.randomFill = h), (n.randomFillSync = m)) : ((n.randomFill = a), (n.randomFillSync = a));

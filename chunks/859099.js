@@ -1,37 +1,39 @@
-n(47120);
-var r = n(780384),
-    i = n(147913),
-    a = n(844070),
-    s = n(922611),
-    o = n(981631),
-    l = n(388032);
-function u(e) {
-    let { relationship: t } = e,
-        n = (0, s.JX)({ location: 'RelationshipManager.handleRelationshipAdd' }) && t.userIgnored;
-    t.type === o.OGo.PENDING_INCOMING && !n && (r.uv.announce(l.intl.formatToPlainString(l.t.zH0kCw, { username: t.user.username })), a.T(t.user));
+var i = r(47120);
+var a = r(780384),
+    s = r(147913),
+    o = r(844070),
+    l = r(922611),
+    u = r(981631),
+    c = r(388032);
+function d(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
 }
-function c(e) {
-    let { user: t } = e;
-    r.uv.announce(l.intl.formatToPlainString(l.t['/+7xk5'], { username: t.username })), a.z(t);
+function f(e) {
+    let { relationship: n } = e,
+        r = (0, l.JX)({ location: 'RelationshipManager.handleRelationshipAdd' }) && n.userIgnored;
+    n.type === u.OGo.PENDING_INCOMING && !r && (a.uv.announce(c.intl.formatToPlainString(c.t.zH0kCw, { username: n.user.username })), o.T(n.user));
 }
-class d extends i.Z {
+function _(e) {
+    let { user: n } = e;
+    a.uv.announce(c.intl.formatToPlainString(c.t['/+7xk5'], { username: n.username })), o.z(n);
+}
+class h extends s.Z {
     constructor(...e) {
-        var t, n, r;
         super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = {
-                RELATIONSHIP_ADD: u,
-                FRIEND_REQUEST_ACCEPTED: c
-            }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+            d(this, 'actions', {
+                RELATIONSHIP_ADD: f,
+                FRIEND_REQUEST_ACCEPTED: _
+            });
     }
 }
-t.Z = new d();
+n.Z = new h();

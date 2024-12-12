@@ -1,2 +1,2 @@
-var r = n(195168).Z.Uint8Array;
-t.Z = r;
+var i = r(195168).Z.Uint8Array;
+n.Z = i;

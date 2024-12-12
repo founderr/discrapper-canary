@@ -1,58 +1,61 @@
-var r = n(957578).Buffer,
-    i = n(28704),
-    a = n(136924).ec,
-    s = n(223428),
-    o = n(733345);
-function l(e, t) {
-    if (0 >= e.cmpn(0) || e.cmp(t) >= t) throw Error('invalid sig');
-}
-e.exports = function (e, t, n, u, c) {
-    var d = s(n);
-    if ('ec' === d.type) {
-        if ('ecdsa' !== u && 'ecdsa/rsa' !== u) throw Error('wrong public key type');
-        return (function (e, t, n) {
-            var r = o[n.data.algorithm.curve.join('.')];
-            if (!r) throw Error('unknown curve ' + n.data.algorithm.curve.join('.'));
-            var i = new a(r),
-                s = n.data.subjectPrivateKey.data;
-            return i.verify(t, e, s);
-        })(e, t, d);
+var i = r(957578).Buffer,
+    a = r(28704),
+    s = r(136924).ec,
+    o = r(223428),
+    l = r(733345);
+function u(e, n, r, s, l) {
+    var u = o(r);
+    if ('ec' === u.type) {
+        if ('ecdsa' !== s && 'ecdsa/rsa' !== s) throw Error('wrong public key type');
+        return c(e, n, u);
     }
-    if ('dsa' === d.type) {
-        if ('dsa' !== u) throw Error('wrong public key type');
-        return (function (e, t, n) {
-            var r = n.data.p,
-                a = n.data.q,
-                o = n.data.g,
-                u = n.data.pub_key,
-                c = s.signature.decode(e, 'der'),
-                d = c.s,
-                f = c.r;
-            l(d, a), l(f, a);
-            var _ = i.mont(r),
-                p = d.invm(a);
-            return (
-                0 ===
-                o
-                    .toRed(_)
-                    .redPow(new i(t).mul(p).mod(a))
-                    .fromRed()
-                    .mul(u.toRed(_).redPow(f.mul(p).mod(a)).fromRed())
-                    .mod(r)
-                    .mod(a)
-                    .cmp(f)
-            );
-        })(e, t, d);
+    if ('dsa' === u.type) {
+        if ('dsa' !== s) throw Error('wrong public key type');
+        return d(e, n, u);
     }
-    if ('rsa' !== u && 'ecdsa/rsa' !== u) throw Error('wrong public key type');
-    t = r.concat([c, t]);
-    for (var f = d.modulus.byteLength(), _ = [1], p = 0; t.length + _.length + 2 < f; ) _.push(255), p++;
+    if ('rsa' !== s && 'ecdsa/rsa' !== s) throw Error('wrong public key type');
+    n = i.concat([l, n]);
+    for (var f = u.modulus.byteLength(), _ = [1], h = 0; n.length + _.length + 2 < f; ) _.push(255), h++;
     _.push(0);
-    for (var h = -1; ++h < t.length; ) _.push(t[h]);
-    _ = r.from(_);
-    var m = i.mont(d.modulus);
-    (e = (e = new i(e).toRed(m)).redPow(new i(d.publicExponent))), (e = r.from(e.fromRed().toArray()));
-    var g = p < 8 ? 1 : 0;
-    for (f = Math.min(e.length, _.length), e.length !== _.length && (g = 1), h = -1; ++h < f; ) g |= e[h] ^ _[h];
+    for (var p = -1; ++p < n.length; ) _.push(n[p]);
+    _ = i.from(_);
+    var m = a.mont(u.modulus);
+    (e = (e = new a(e).toRed(m)).redPow(new a(u.publicExponent))), (e = i.from(e.fromRed().toArray()));
+    var g = h < 8 ? 1 : 0;
+    for (f = Math.min(e.length, _.length), e.length !== _.length && (g = 1), p = -1; ++p < f; ) g |= e[p] ^ _[p];
     return 0 === g;
-};
+}
+function c(e, n, r) {
+    var i = l[r.data.algorithm.curve.join('.')];
+    if (!i) throw Error('unknown curve ' + r.data.algorithm.curve.join('.'));
+    var a = new s(i),
+        o = r.data.subjectPrivateKey.data;
+    return a.verify(n, e, o);
+}
+function d(e, n, r) {
+    var i = r.data.p,
+        s = r.data.q,
+        l = r.data.g,
+        u = r.data.pub_key,
+        c = o.signature.decode(e, 'der'),
+        d = c.s,
+        _ = c.r;
+    f(d, s), f(_, s);
+    var h = a.mont(i),
+        p = d.invm(s);
+    return (
+        0 ===
+        l
+            .toRed(h)
+            .redPow(new a(n).mul(p).mod(s))
+            .fromRed()
+            .mul(u.toRed(h).redPow(_.mul(p).mod(s)).fromRed())
+            .mod(i)
+            .mod(s)
+            .cmp(_)
+    );
+}
+function f(e, n) {
+    if (0 >= e.cmpn(0) || e.cmp(n) >= n) throw Error('invalid sig');
+}
+e.exports = u;

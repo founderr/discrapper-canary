@@ -1,25 +1,35 @@
-n(724458);
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140),
-    u = n(786761),
-    c = n(651530),
-    d = n(247206);
+var i,
+    a = r(724458);
+var s = r(442837),
+    o = r(570140),
+    l = r(786761),
+    u = r(651530),
+    c = r(247206);
+function d(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
 let f = {};
 function _(e) {
     return ''.concat(e.channel_id, ':').concat(e.id);
 }
-function p(e) {
+function h(e) {
     return (
-        !!(0, c.Kh)() &&
+        !!(0, u.Kh)() &&
         null != e.messages &&
         ((f = e.messages.reduce(
-            (e, t) => (
-                t.forEach((t) => {
-                    e[_(t)] = (0, u.e5)(t);
+            (e, n) => (
+                n.forEach((n) => {
+                    e[_(n)] = (0, l.e5)(n);
                 }),
                 e
             ),
@@ -28,62 +38,54 @@ function p(e) {
         !0)
     );
 }
-function h() {
+function p(e) {
+    let { message: n } = e;
+    if (!(0, u.Kh)() || null == n.id || null == n.channel_id) return !1;
+    let r = _(n),
+        i = f[r];
+    return (
+        null != i &&
+        ((f[r] = (0, l.wi)(i, {
+            attachments: n.attachments,
+            embeds: n.embeds
+        })),
+        !0)
+    );
+}
+function m(e) {
+    let { messageId: n, channelId: r } = e,
+        i = _({
+            id: n,
+            channel_id: r
+        }),
+        a = f[i];
+    null != a && (f[i] = (0, c.Cm)(a));
+}
+function g() {
+    v();
+}
+function E() {
+    v();
+}
+function v() {
     f = {};
 }
-class m extends (r = o.ZP.Store) {
-    getMessage(e, t) {
+class I extends (i = s.ZP.Store) {
+    getMessage(e, n) {
         return f[
             _({
                 id: e,
-                channel_id: t
+                channel_id: n
             })
         ];
     }
 }
-(s = 'SearchMessageStore'),
-    (a = 'displayName') in (i = m)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new m(l.Z, {
-        SEARCH_FINISH: p,
-        MOD_VIEW_SEARCH_FINISH: p,
-        MESSAGE_UPDATE: function (e) {
-            let { message: t } = e;
-            if (!(0, c.Kh)() || null == t.id || null == t.channel_id) return !1;
-            let n = _(t),
-                r = f[n];
-            return (
-                null != r &&
-                ((f[n] = (0, u.wi)(r, {
-                    attachments: t.attachments,
-                    embeds: t.embeds
-                })),
-                !0)
-            );
-        },
-        LOGOUT: function () {
-            (function () {
-                f = {};
-            })();
-        },
-        CONNECTION_OPEN: function () {
-            (function () {
-                f = {};
-            })();
-        },
-        MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function (e) {
-            let { messageId: t, channelId: n } = e,
-                r = _({
-                    id: t,
-                    channel_id: n
-                }),
-                i = f[r];
-            null != i && (f[r] = (0, d.Cm)(i));
-        }
+d(I, 'displayName', 'SearchMessageStore'),
+    (n.Z = new I(o.Z, {
+        SEARCH_FINISH: h,
+        MOD_VIEW_SEARCH_FINISH: h,
+        MESSAGE_UPDATE: p,
+        LOGOUT: g,
+        CONNECTION_OPEN: E,
+        MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: m
     }));

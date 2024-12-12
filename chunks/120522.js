@@ -1,73 +1,63 @@
-n.d(t, {
+r.d(n, {
     S: function () {
-        return _;
+        return h;
     },
     z: function () {
-        return f;
+        return _;
     }
 });
-var r = n(913527),
-    i = n.n(r),
-    a = n(544891),
-    s = n(570140),
-    o = n(168232),
-    l = n(594174),
-    u = n(114064),
-    c = n(1163),
-    d = n(981631);
-async function f() {
-    let e = l.default.getCurrentUser();
+var i = r(913527),
+    a = r.n(i),
+    s = r(544891),
+    o = r(570140),
+    l = r(168232),
+    u = r(594174),
+    c = r(114064),
+    d = r(1163),
+    f = r(981631);
+async function _() {
+    let e = u.default.getCurrentUser();
     try {
-        let { body: t } = await a.tn.get({
-            url: d.ANM.USER_PERKS_DEMOS,
+        let { body: n } = await s.tn.get({
+            url: f.ANM.USER_PERKS_DEMOS,
             rejectWithError: !0
         });
-        (0, o.QI)(e) &&
-            (t.available = {
-                ...t.available,
-                ...(function () {
-                    let e = u.Z.overrides(),
-                        t = {};
-                    for (let i in e) {
-                        var n, r;
-                        !0 === (null !== (r = null === (n = e[i]) || void 0 === n ? void 0 : n.available) && void 0 !== r ? r : void 0) && (t[i] = !0);
-                    }
-                    return t;
-                })()
+        (0, l.QI)(e) &&
+            (n.available = {
+                ...n.available,
+                ...g()
             }),
-            s.Z.dispatch({
+            o.Z.dispatch({
                 type: 'PREMIUM_PERKS_DEMOS_FETCH_SUCCESS',
-                demos: t
+                demos: n
             });
     } catch (e) {
-        s.Z.dispatch({ type: 'PREMIUM_PERKS_DEMOS_FETCH_FAILURE' });
+        o.Z.dispatch({ type: 'PREMIUM_PERKS_DEMOS_FETCH_FAILURE' });
     }
 }
-async function _(e) {
-    if (u.Z.hasActivated(e)) return !0;
-    let t = l.default.getCurrentUser();
+async function h(e) {
+    if (c.Z.hasActivated(e)) return !0;
+    let n = u.default.getCurrentUser();
     try {
-        if ((0, o.QI)(t)) {
-            let t = (function (e) {
-                return u.Z.overrides()[e];
-            })(e);
-            if ((null == t ? void 0 : t.activateSuccess) === !0)
+        if ((0, l.QI)(n)) {
+            let n = m(e);
+            if ((null == n ? void 0 : n.activateSuccess) === !0)
                 return (
                     p(e, {
-                        start_time: i()().toISOString(),
-                        end_time: (c.Z.getCurrentConfig({ location: 'activatePerkDemo' }, { autoTrackExposure: !1 }).extendedDemoDuration ? i()().add(t.demoDuration, 'days') : i()().add(1, 'hour')).toISOString()
+                        start_time: a()().toISOString(),
+                        end_time: (d.Z.getCurrentConfig({ location: 'activatePerkDemo' }, { autoTrackExposure: !1 }).extendedDemoDuration ? a()().add(n.demoDuration, 'days') : a()().add(1, 'hour')).toISOString()
                     }),
                     !0
                 );
         }
-        let { body: n } = await a.tn.post({
-            url: d.ANM.USER_PERKS_DEMOS_ACTIVATE(e),
+        let { body: r } = await s.tn.post({
+            url: f.ANM.USER_PERKS_DEMOS_ACTIVATE(e),
             rejectWithError: !0
         });
-        return p(e, n), !0;
+        return p(e, r), !0;
     } catch {
         return (
-            s.Z.dispatch({
+            o.Z.dispatch({
                 type: 'PREMIUM_PERKS_DEMO_ACTIVATE_FAILURE',
                 perkType: e
             }),
@@ -75,10 +65,22 @@ async function _(e) {
         );
     }
 }
-function p(e, t) {
-    s.Z.dispatch({
+function p(e, n) {
+    o.Z.dispatch({
         type: 'PREMIUM_PERKS_DEMO_ACTIVATE_SUCCESS',
         perkType: e,
-        activatedDuration: t
+        activatedDuration: n
     });
+}
+function m(e) {
+    return c.Z.overrides()[e];
+}
+function g() {
+    let e = c.Z.overrides(),
+        n = {};
+    for (let a in e) {
+        var r, i;
+        !0 === (null !== (i = null === (r = e[a]) || void 0 === r ? void 0 : r.available) && void 0 !== i ? i : void 0) && (n[a] = !0);
+    }
+    return n;
 }

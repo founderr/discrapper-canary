@@ -1,102 +1,111 @@
-n(47120), n(724458);
-var r,
-    i,
-    a,
-    s,
-    o = n(392711),
-    l = n.n(o),
-    u = n(442837),
-    c = n(570140),
-    d = n(872810),
-    f = n(569545),
-    _ = n(70722);
-let p = {},
-    h = {},
-    m = new Set();
-function g() {
-    (p = {}), (h = {});
+var i,
+    a = r(47120);
+var s = r(724458);
+var o = r(392711),
+    l = r.n(o),
+    u = r(442837),
+    c = r(570140),
+    d = r(872810),
+    f = r(569545),
+    _ = r(70722);
+function h(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
 }
-class E extends (r = u.ZP.Store) {
-    getPreviewURL(e, t, n) {
-        let r = (0, f.V9)({
+let p = 120000,
+    m = 10000,
+    g = {},
+    E = {},
+    v = new Set();
+function I() {
+    (g = {}), (E = {});
+}
+function T(e) {
+    let { streamKey: n, previewURL: r } = e;
+    (g[n] = {
+        url: r,
+        expires: Date.now() + p
+    }),
+        (E[n] = 0),
+        v.delete(n);
+}
+function b(e) {
+    let { streamKey: n, retryAfter: r } = e;
+    (g[n] = {
+        url: null,
+        expires: Date.now() + (null != r ? r : m * E[n])
+    }),
+        v.delete(n);
+}
+function y(e) {
+    var n;
+    let { streamKey: r } = e;
+    (E[r] = (null !== (n = E[r]) && void 0 !== n ? n : 0) + 1), v.add(r);
+}
+function S(e) {
+    let { voiceStates: n } = e;
+    return (
+        !(l().isEmpty(g) && l().isEmpty(E)) &&
+        n.reduce((e, n) => {
+            let { userId: r, guildId: i, channelId: a, selfStream: s } = n;
+            if (s) return e;
+            let o = (0, f.V9)({
+                streamType: null != i ? _.lo.GUILD : _.lo.CALL,
+                guildId: i,
+                channelId: a,
+                ownerId: r
+            });
+            return delete g[o], delete E[o], !0;
+        }, !1)
+    );
+}
+class A extends (i = u.ZP.Store) {
+    getPreviewURL(e, n, r) {
+        let i = (0, f.V9)({
                 streamType: null != e ? _.lo.GUILD : _.lo.CALL,
                 guildId: e,
-                channelId: t,
-                ownerId: n
+                channelId: n,
+                ownerId: r
             }),
-            i = p[r];
-        return null == i || Date.now() > i.expires
-            ? (!m.has(r) &&
-                  (m.add(r),
+            a = g[i];
+        return null == a || Date.now() > a.expires
+            ? (!v.has(i) &&
+                  (v.add(i),
                   Promise.resolve().then(() => {
-                      (0, d.n9)(e, t, n);
+                      (0, d.n9)(e, n, r);
                   })),
               null)
-            : i.url;
+            : a.url;
     }
     getPreviewURLForStreamKey(e) {
-        let { guildId: t, channelId: n, ownerId: r } = (0, f.my)(e);
-        return this.getPreviewURL(t, n, r);
+        let { guildId: n, channelId: r, ownerId: i } = (0, f.my)(e);
+        return this.getPreviewURL(n, r, i);
     }
-    getIsPreviewLoading(e, t, n) {
-        let r = (0, f.V9)({
+    getIsPreviewLoading(e, n, r) {
+        let i = (0, f.V9)({
             streamType: null != e ? _.lo.GUILD : _.lo.CALL,
             guildId: e,
-            channelId: t,
-            ownerId: n
+            channelId: n,
+            ownerId: r
         });
-        return m.has(r);
+        return v.has(i);
     }
 }
-(s = 'ApplicationStreamPreviewStore'),
-    (a = 'displayName') in (i = E)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new E(c.Z, {
-        CONNECTION_OPEN: g,
-        LOGOUT: g,
-        STREAM_PREVIEW_FETCH_START: function (e) {
-            var t;
-            let { streamKey: n } = e;
-            (h[n] = (null !== (t = h[n]) && void 0 !== t ? t : 0) + 1), m.add(n);
-        },
-        STREAM_PREVIEW_FETCH_SUCCESS: function (e) {
-            let { streamKey: t, previewURL: n } = e;
-            (p[t] = {
-                url: n,
-                expires: Date.now() + 120000
-            }),
-                (h[t] = 0),
-                m.delete(t);
-        },
-        STREAM_PREVIEW_FETCH_FAIL: function (e) {
-            let { streamKey: t, retryAfter: n } = e;
-            (p[t] = {
-                url: null,
-                expires: Date.now() + (null != n ? n : 10000 * h[t])
-            }),
-                m.delete(t);
-        },
-        VOICE_STATE_UPDATES: function (e) {
-            let { voiceStates: t } = e;
-            return (
-                !(l().isEmpty(p) && l().isEmpty(h)) &&
-                t.reduce((e, t) => {
-                    let { userId: n, guildId: r, channelId: i, selfStream: a } = t;
-                    if (a) return e;
-                    let s = (0, f.V9)({
-                        streamType: null != r ? _.lo.GUILD : _.lo.CALL,
-                        guildId: r,
-                        channelId: i,
-                        ownerId: n
-                    });
-                    return delete p[s], delete h[s], !0;
-                }, !1)
-            );
-        }
+h(A, 'displayName', 'ApplicationStreamPreviewStore'),
+    (n.Z = new A(c.Z, {
+        CONNECTION_OPEN: I,
+        LOGOUT: I,
+        STREAM_PREVIEW_FETCH_START: y,
+        STREAM_PREVIEW_FETCH_SUCCESS: T,
+        STREAM_PREVIEW_FETCH_FAIL: b,
+        VOICE_STATE_UPDATES: S
     }));

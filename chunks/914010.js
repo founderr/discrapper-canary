@@ -1,92 +1,98 @@
-var r,
-    i = n(512969),
-    a = n(442837),
-    s = n(570140),
-    o = n(937111),
-    l = n(893607),
-    u = n(703656),
-    c = n(314897),
-    d = n(896797),
-    f = n(430824),
-    _ = n(981631);
-function p(e, t, n) {
+var i,
+    a = r(512969),
+    s = r(442837),
+    o = r(570140),
+    l = r(937111),
+    u = r(893607),
+    c = r(703656),
+    d = r(314897),
+    f = r(896797),
+    _ = r(430824),
+    h = r(981631);
+function p(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let h = null,
-    m = null,
-    g = {};
-function E() {
-    null != h && null == f.Z.getGuild(h) && null == o.Z.getRequest(h) && (h = null), null != m && null == f.Z.getGuild(m) && null == o.Z.getRequest(m) && (m = null), v(h);
+let m = -1,
+    g = null,
+    E = null,
+    v = {};
+function I() {
+    null != g && null == _.Z.getGuild(g) && null == l.Z.getRequest(g) && (g = null), null != E && null == _.Z.getGuild(E) && null == l.Z.getRequest(E) && (E = null), b(g);
 }
-function v(e) {
-    if (null != e) g[e] = Date.now();
+function T(e) {
+    (g = e.selectedGuildId), (E = void 0), I();
 }
-function I(e) {
-    let t = !1;
-    if ((delete g[e], m === e && ((m = null), (t = !0)), h === e)) {
-        Object.values(f.Z.getGuilds()).find((t) => t.id !== e);
-        (h = null), (0, u.dL)(_.Z5c.ME), (t = !0);
+function b(e) {
+    if (null != e) v[e] = Date.now();
+}
+function y(e) {
+    let { guildId: n } = e;
+    if (g === n) return !1;
+    b(g), b(n), null != n && (E = n), (g = n);
+}
+function S(e) {
+    let n = !1;
+    if ((delete v[e], E === e && ((E = null), (n = !0)), g === e)) {
+        Object.values(_.Z.getGuilds()).find((n) => n.id !== e);
+        (g = null), (0, c.dL)(h.Z5c.ME), (n = !0);
     }
-    return t;
+    return n;
 }
-class T extends (r = a.ZP.PersistedStore) {
+function A(e) {
+    let {
+        guild: { id: n, unavailable: r }
+    } = e;
+    return !0 !== r && S(n);
+}
+function N(e) {
+    let { guildId: n, user: r } = e;
+    return r.id === d.default.getId() && S(n);
+}
+function C() {
+    (g = null), (E = null);
+}
+class R extends (i = s.ZP.PersistedStore) {
     initialize(e) {
-        var t, n, r, a;
-        this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type), this.waitFor(f.Z, c.default, d.Z), (g = null !== (n = null == e ? void 0 : e.selectedGuildTimestampMillis) && void 0 !== n ? n : {}), (h = null !== (r = null == e ? void 0 : e.selectedGuildId) && void 0 !== r ? r : null), (m = null !== (a = null == e ? void 0 : e.lastSelectedGuildId) && void 0 !== a ? a : null);
-        let s = d.Z.lastNonVoiceRoute,
-            o = (0, i.LX)(s, { path: _.Z5c.CHANNEL(l.Hw.guildId()) });
-        null == o || null === (t = o.params) || void 0 === t || t.guildId;
+        var n, r, i, s;
+        this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type), this.waitFor(_.Z, d.default, f.Z), (v = null !== (r = null == e ? void 0 : e.selectedGuildTimestampMillis) && void 0 !== r ? r : {}), (g = null !== (i = null == e ? void 0 : e.selectedGuildId) && void 0 !== i ? i : null), (E = null !== (s = null == e ? void 0 : e.lastSelectedGuildId) && void 0 !== s ? s : null);
+        let o = f.Z.lastNonVoiceRoute,
+            l = (0, a.LX)(o, { path: h.Z5c.CHANNEL(u.Hw.guildId()) });
+        null == l || null === (n = l.params) || void 0 === n || n.guildId;
     }
     getState() {
         return {
-            selectedGuildTimestampMillis: g,
-            selectedGuildId: h,
-            lastSelectedGuildId: m
+            selectedGuildTimestampMillis: v,
+            selectedGuildId: g,
+            lastSelectedGuildId: E
         };
     }
     getGuildId() {
-        return h;
+        return g;
     }
     getLastSelectedGuildId() {
-        return m;
+        return E;
     }
     getLastSelectedTimestamp(e) {
-        return h === e ? -1 : g[e];
+        return g === e ? m : v[e];
     }
 }
-p(T, 'displayName', 'SelectedGuildStore'),
-    p(T, 'persistKey', 'SelectedGuildStore'),
-    (t.Z = new T(s.Z, {
-        CONNECTION_OPEN: E,
-        OVERLAY_INITIALIZE: function (e) {
-            (h = e.selectedGuildId), (m = void 0), E();
-        },
-        CHANNEL_SELECT: function (e) {
-            let { guildId: t } = e;
-            if (h === t) return !1;
-            v(h), v(t), null != t && (m = t), (h = t);
-        },
-        GUILD_MEMBER_REMOVE: function (e) {
-            let { guildId: t, user: n } = e;
-            return n.id === c.default.getId() && I(t);
-        },
-        GUILD_DELETE: function (e) {
-            let {
-                guild: { id: t, unavailable: n }
-            } = e;
-            return !0 !== n && I(t);
-        },
-        LOGOUT: function () {
-            (h = null), (m = null);
-        }
+p(R, 'displayName', 'SelectedGuildStore'),
+    p(R, 'persistKey', 'SelectedGuildStore'),
+    (n.Z = new R(o.Z, {
+        CONNECTION_OPEN: I,
+        OVERLAY_INITIALIZE: T,
+        CHANNEL_SELECT: y,
+        GUILD_MEMBER_REMOVE: N,
+        GUILD_DELETE: A,
+        LOGOUT: C
     }));

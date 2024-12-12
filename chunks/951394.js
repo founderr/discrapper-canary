@@ -1,41 +1,42 @@
-n.d(t, {
+r.d(n, {
     Z0: function () {
-        return l;
+        return u;
     },
     zx: function () {
-        return u;
+        return c;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(481060),
-    o = n(925424);
-function l(e) {
-    let { className: t } = e;
-    return (0, r.jsx)('div', { className: a()(t, o.separator) });
-}
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(481060),
+    l = r(925424);
 function u(e) {
-    let { onClick: t, onContextMenu: n, className: i, selected: l = !1, children: u, disabled: c = !1, dangerous: d, ...f } = e;
-    return (0, r.jsx)(s.Clickable, {
-        onClick: c ? void 0 : t,
-        onContextMenu: c ? void 0 : n,
-        className: a()(i, {
-            [o.button]: !0,
-            [o.selected]: l,
-            [o.disabled]: c,
-            [o.dangerous]: d
+    let { className: n } = e;
+    return (0, i.jsx)('div', { className: s()(n, l.separator) });
+}
+function c(e) {
+    let { onClick: n, onContextMenu: r, className: a, selected: u = !1, children: c, disabled: d = !1, dangerous: f, ..._ } = e;
+    return (0, i.jsx)(o.Clickable, {
+        onClick: d ? void 0 : n,
+        onContextMenu: d ? void 0 : r,
+        className: s()(a, {
+            [l.button]: !0,
+            [l.selected]: u,
+            [l.disabled]: d,
+            [l.dangerous]: f
         }),
-        ...f,
-        children: u
+        ..._,
+        children: c
     });
 }
-t.ZP = function (e) {
-    let { className: t, children: n, ...i } = e;
-    return (0, r.jsx)('div', {
-        className: a()(t, o.wrapper),
-        ...i,
-        children: n
+function d(e) {
+    let { className: n, children: r, ...a } = e;
+    return (0, i.jsx)('div', {
+        className: s()(n, l.wrapper),
+        ...a,
+        children: r
     });
-};
+}
+n.ZP = d;

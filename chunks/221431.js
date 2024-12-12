@@ -1,116 +1,119 @@
-var r = n(192379),
-    i = n(919499),
-    a = n(476400),
-    s = n.n(a),
-    o = 'undefined' != typeof globalThis ? globalThis : 'undefined' != typeof window ? window : void 0 !== n.g ? n.g : {},
-    l =
-        r.createContext ||
-        function (e, t) {
-            var n,
-                a,
-                l,
-                u = '__create-react-context-' + (o[(n = '__global_unique_id__')] = (o[n] || 0) + 1) + '__',
-                c = (function (e) {
-                    function n() {
-                        var t, n, r;
-                        return (
-                            (t = e.apply(this, arguments) || this),
-                            (t.emitter =
-                                ((n = t.props.value),
-                                (r = []),
-                                {
-                                    on: function (e) {
-                                        r.push(e);
-                                    },
-                                    off: function (e) {
-                                        r = r.filter(function (t) {
-                                            return t !== e;
-                                        });
-                                    },
-                                    get: function () {
-                                        return n;
-                                    },
-                                    set: function (e, t) {
-                                        (n = e),
-                                            r.forEach(function (e) {
-                                                return e(n, t);
-                                            });
-                                    }
-                                })),
-                            t
-                        );
-                    }
-                    (0, i.Z)(n, e);
-                    var r = n.prototype;
-                    return (
-                        (r.getChildContext = function () {
-                            var e;
-                            return ((e = {})[u] = this.emitter), e;
-                        }),
-                        (r.componentWillReceiveProps = function (e) {
-                            if (this.props.value !== e.value) {
-                                var n,
-                                    r,
-                                    i,
-                                    a = this.props.value,
-                                    s = e.value;
-                                if ((n = a) === (r = s) ? 0 !== n || 1 / n == 1 / r : n != n && r != r) i = 0;
-                                else {
-                                    i = 'function' == typeof t ? t(a, s) : 1073741823;
-                                    0 != (i |= 0) && this.emitter.set(e.value, i);
-                                }
-                            }
-                        }),
-                        (r.render = function () {
-                            return this.props.children;
-                        }),
-                        n
-                    );
-                })(r.Component);
-            c.childContextTypes = (((a = {})[u] = s().object.isRequired), a);
-            var d = (function (t) {
-                function n() {
-                    var e;
-                    return (
-                        (e = t.apply(this, arguments) || this),
-                        (e.state = { value: e.getValue() }),
-                        (e.onUpdate = function (t, n) {
-                            ((0 | e.observedBits) & n) != 0 && e.setState({ value: e.getValue() });
-                        }),
-                        e
-                    );
-                }
-                (0, i.Z)(n, t);
-                var r = n.prototype;
-                return (
-                    (r.componentWillReceiveProps = function (e) {
-                        var t = e.observedBits;
-                        this.observedBits = null == t ? 1073741823 : t;
-                    }),
-                    (r.componentDidMount = function () {
-                        this.context[u] && this.context[u].on(this.onUpdate);
-                        var e = this.props.observedBits;
-                        this.observedBits = null == e ? 1073741823 : e;
-                    }),
-                    (r.componentWillUnmount = function () {
-                        this.context[u] && this.context[u].off(this.onUpdate);
-                    }),
-                    (r.getValue = function () {
-                        return this.context[u] ? this.context[u].get() : e;
-                    }),
-                    (r.render = function () {
-                        var e;
-                        return (Array.isArray((e = this.props.children)) ? e[0] : e)(this.state.value);
-                    }),
-                    n
-                );
-            })(r.Component);
+var i = r(192379),
+    a = r(919499),
+    s = r(476400),
+    o = r.n(s),
+    l = 1073741823,
+    u = 'undefined' != typeof globalThis ? globalThis : 'undefined' != typeof window ? window : void 0 !== r.g ? r.g : {};
+function c() {
+    var e = '__global_unique_id__';
+    return (u[e] = (u[e] || 0) + 1);
+}
+function d(e, n) {
+    return e === n ? 0 !== e || 1 / e == 1 / n : e != e && n != n;
+}
+function f(e) {
+    var n = [];
+    return {
+        on: function (e) {
+            n.push(e);
+        },
+        off: function (e) {
+            n = n.filter(function (n) {
+                return n !== e;
+            });
+        },
+        get: function () {
+            return e;
+        },
+        set: function (r, i) {
+            (e = r),
+                n.forEach(function (n) {
+                    return n(e, i);
+                });
+        }
+    };
+}
+function _(e) {
+    return Array.isArray(e) ? e[0] : e;
+}
+function h(e, n) {
+    var r,
+        s,
+        u = '__create-react-context-' + c() + '__',
+        h = (function (e) {
+            function r() {
+                var n;
+                return (n = e.apply(this, arguments) || this), (n.emitter = f(n.props.value)), n;
+            }
+            (0, a.Z)(r, e);
+            var i = r.prototype;
             return (
-                (d.contextTypes = (((l = {})[u] = s().object), l)),
-                {
-                    Provider: c,
-                    Consumer: d
-                }
+                (i.getChildContext = function () {
+                    var e;
+                    return ((e = {})[u] = this.emitter), e;
+                }),
+                (i.componentWillReceiveProps = function (e) {
+                    if (this.props.value !== e.value) {
+                        var r,
+                            i = this.props.value,
+                            a = e.value;
+                        if (d(i, a)) r = 0;
+                        else {
+                            r = 'function' == typeof n ? n(i, a) : l;
+                            0 != (r |= 0) && this.emitter.set(e.value, r);
+                        }
+                    }
+                }),
+                (i.render = function () {
+                    return this.props.children;
+                }),
+                r
             );
-        };
-t.Z = l;
+        })(i.Component);
+    h.childContextTypes = (((r = {})[u] = o().object.isRequired), r);
+    var p = (function (n) {
+        function r() {
+            var e;
+            return (
+                (e = n.apply(this, arguments) || this),
+                (e.state = { value: e.getValue() }),
+                (e.onUpdate = function (n, r) {
+                    ((0 | e.observedBits) & r) != 0 && e.setState({ value: e.getValue() });
+                }),
+                e
+            );
+        }
+        (0, a.Z)(r, n);
+        var i = r.prototype;
+        return (
+            (i.componentWillReceiveProps = function (e) {
+                var n = e.observedBits;
+                this.observedBits = null == n ? l : n;
+            }),
+            (i.componentDidMount = function () {
+                this.context[u] && this.context[u].on(this.onUpdate);
+                var e = this.props.observedBits;
+                this.observedBits = null == e ? l : e;
+            }),
+            (i.componentWillUnmount = function () {
+                this.context[u] && this.context[u].off(this.onUpdate);
+            }),
+            (i.getValue = function () {
+                return this.context[u] ? this.context[u].get() : e;
+            }),
+            (i.render = function () {
+                return _(this.props.children)(this.state.value);
+            }),
+            r
+        );
+    })(i.Component);
+    return (
+        (p.contextTypes = (((s = {})[u] = o().object), s)),
+        {
+            Provider: h,
+            Consumer: p
+        }
+    );
+}
+var p = i.createContext || h;
+n.Z = p;

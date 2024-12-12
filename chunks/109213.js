@@ -1,4 +1,4 @@
-n.d(t, {
+r.d(n, {
     G: function () {
         return o;
     },
@@ -6,11 +6,12 @@ n.d(t, {
         return i;
     }
 });
-var r,
-    i,
-    a = n(818083),
-    s = n(987338);
-((r = i || (i = {}))[(r.NONE = 0)] = 'NONE'), (r[(r.POPULAR = 1)] = 'POPULAR'), (r[(r.RECENT = 2)] = 'RECENT');
+var i,
+    a = r(818083),
+    s = r(987338);
+!(function (e) {
+    (e[(e.NONE = 0)] = 'NONE'), (e[(e.POPULAR = 1)] = 'POPULAR'), (e[(e.RECENT = 2)] = 'RECENT');
+})(i || (i = {}));
 let o = (0, a.B)({
     kind: 'user',
     id: '2024-10_shop_skus_in_gift_flow',

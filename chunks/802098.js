@@ -1,17 +1,27 @@
-n(47120);
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(433517),
-    u = n(570140),
-    c = n(706454),
-    d = n(695346),
-    f = n(581883),
-    _ = n(596401);
-let p = {},
-    h = {},
+var i,
+    a = r(47120);
+var s = r(442837),
+    o = r(433517),
+    l = r(570140),
+    u = r(706454),
+    c = r(695346),
+    d = r(581883),
+    f = r(596401);
+function _(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let h = {},
+    p = {},
     m = null,
     g = null,
     E = null,
@@ -19,30 +29,71 @@ let p = {},
     I = null,
     T = null,
     b = new Set();
-function S() {
-    I = d.l4.getSetting();
+function y(e) {
+    let { key: n } = e;
+    if (b.has(n)) return !1;
+    (b = new Set(b)).add(n);
 }
-class y extends (r = o.ZP.Store) {
+function S(e) {
+    let { key: n } = e;
+    if (!b.has(n)) return !1;
+    (b = new Set(b)).delete(n);
+}
+function A(e) {
+    let { config: n, latestChangelogId: r } = e;
+    (m = r), (E = n);
+}
+function N(e) {
+    let { id: n, changelog: r } = e;
+    null == h[n] && (h[n] = {}),
+        (h[n][r.locale] = {
+            id: n,
+            date: r.date,
+            body: r.content,
+            revision: 1,
+            locale: r.locale,
+            [r.asset_type === f.h3.YOUTUBE_VIDEO_ID ? 'youtube_video_id' : 'image']: r.asset
+        }),
+        null == p[n] && (p[n] = {}),
+        (p[n][r.locale] = f.LU.LOADED_SUCCESS);
+}
+function C(e) {
+    let { id: n, locale: r } = e;
+    if (null != h[n] && null != h[n][r]) return !1;
+    null == p[n] && (p[n] = {}), (p[n][r] = f.LU.LOADED_FAILURE);
+}
+function R(e) {
+    let { id: n } = e;
+    g = n;
+}
+function O(e) {
+    let { changelogDate: n } = e;
+    (T = new Date(n)), o.K.set(v, n);
+}
+function D() {
+    I = c.l4.getSetting();
+}
+class L extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(c.default, f.Z), this.syncWith([c.default], () => !0), this.syncWith([f.Z], S);
-        let e = l.K.get(v);
+        this.waitFor(u.default, d.Z), this.syncWith([u.default], () => !0), this.syncWith([d.Z], D);
+        let e = o.K.get(v);
         if (null != e)
             try {
                 T = new Date(e);
             } catch {
-                l.K.remove(v);
+                o.K.remove(v);
             }
     }
-    getChangelog(e, t) {
-        var n, r;
-        return null !== (r = null === (n = p[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== r ? r : null;
+    getChangelog(e, n) {
+        var r, i;
+        return null !== (i = null === (r = h[e]) || void 0 === r ? void 0 : r[n]) && void 0 !== i ? i : null;
     }
     latestChangelogId() {
         return m;
     }
-    getChangelogLoadStatus(e, t) {
-        var n, r;
-        return null !== (r = null === (n = h[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== r ? r : _.LU.NOT_LOADED;
+    getChangelogLoadStatus(e, n) {
+        var r, i;
+        return null !== (i = null === (r = p[e]) || void 0 === r ? void 0 : r[n]) && void 0 !== i ? i : f.LU.NOT_LOADED;
     }
     hasLoadedConfig() {
         return null != E;
@@ -62,7 +113,7 @@ class y extends (r = o.ZP.Store) {
     getStateForDebugging() {
         return {
             changelogConfig: E,
-            loadedChangelogs: h,
+            loadedChangelogs: p,
             lastSeenChangelogId: I,
             lastSeenChangelogDate: T
         };
@@ -71,55 +122,13 @@ class y extends (r = o.ZP.Store) {
         return b.size > 0;
     }
 }
-(s = 'ChangelogStore'),
-    (a = 'displayName') in (i = y)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new y(u.Z, {
-        CHANGE_LOG_LOCK: function (e) {
-            let { key: t } = e;
-            if (b.has(t)) return !1;
-            (b = new Set(b)).add(t);
-        },
-        CHANGE_LOG_UNLOCK: function (e) {
-            let { key: t } = e;
-            if (!b.has(t)) return !1;
-            (b = new Set(b)).delete(t);
-        },
-        CHANGE_LOG_SET_CONFIG: function (e) {
-            let { config: t, latestChangelogId: n } = e;
-            (m = n), (E = t);
-        },
-        CHANGE_LOG_FETCH_SUCCESS: function (e) {
-            let { id: t, changelog: n } = e;
-            null == p[t] && (p[t] = {}),
-                (p[t][n.locale] = {
-                    id: t,
-                    date: n.date,
-                    body: n.content,
-                    revision: 1,
-                    locale: n.locale,
-                    [n.asset_type === _.h3.YOUTUBE_VIDEO_ID ? 'youtube_video_id' : 'image']: n.asset
-                }),
-                null == h[t] && (h[t] = {}),
-                (h[t][n.locale] = _.LU.LOADED_SUCCESS);
-        },
-        CHANGE_LOG_FETCH_FAILED: function (e) {
-            let { id: t, locale: n } = e;
-            if (null != p[t] && null != p[t][n]) return !1;
-            null == h[t] && (h[t] = {}), (h[t][n] = _.LU.LOADED_FAILURE);
-        },
-        CHANGE_LOG_SET_OVERRIDE: function (e) {
-            let { id: t } = e;
-            g = t;
-        },
-        CHANGE_LOG_MARK_SEEN: function (e) {
-            let { changelogDate: t } = e;
-            (T = new Date(t)), l.K.set(v, t);
-        }
+_(L, 'displayName', 'ChangelogStore'),
+    (n.Z = new L(l.Z, {
+        CHANGE_LOG_LOCK: y,
+        CHANGE_LOG_UNLOCK: S,
+        CHANGE_LOG_SET_CONFIG: A,
+        CHANGE_LOG_FETCH_SUCCESS: N,
+        CHANGE_LOG_FETCH_FAILED: C,
+        CHANGE_LOG_SET_OVERRIDE: R,
+        CHANGE_LOG_MARK_SEEN: O
     }));

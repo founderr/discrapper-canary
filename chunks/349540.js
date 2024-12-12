@@ -1,43 +1,45 @@
-n(47120);
-var r = n(147913),
-    i = n(594174),
-    a = n(74538),
-    s = n(163684),
-    o = n(748770),
-    l = n(474936);
-class u extends r.Z {
+var i = r(47120);
+var a = r(147913),
+    s = r(594174),
+    o = r(74538),
+    l = r(163684),
+    u = r(748770),
+    c = r(474936);
+function d(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+class f extends a.Z {
     onPostConnectionOpen() {
         this.maybeFetchActiveOutboundPromotions();
     }
     maybeFetchActiveOutboundPromotions() {
-        let e = i.default.getCurrentUser(),
-            t = a.ZP.isPremiumExactly(e, l.p9.TIER_2),
-            n = s.g.getCurrentConfig(
+        let e = s.default.getCurrentUser(),
+            n = o.ZP.isPremiumExactly(e, c.p9.TIER_2),
+            r = l.g.getCurrentConfig(
                 { location: 'maybeFetchActiveOutboundPromotions' },
                 {
                     autoTrackExposure: !1,
-                    disable: t
+                    disable: n
                 }
             ).enabled;
-        (t || n) && (0, o.vM)();
+        (n || r) && (0, u.vM)();
     }
     constructor(...e) {
-        var t, n, r;
         super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = {
+            d(this, 'actions', {
                 POST_CONNECTION_OPEN: this.onPostConnectionOpen.bind(this),
                 EXPERIMENTS_FETCH_SUCCESS: this.onPostConnectionOpen.bind(this)
-            }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+            });
     }
 }
-t.Z = new u();
+n.Z = new f();

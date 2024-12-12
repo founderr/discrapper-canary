@@ -1,53 +1,52 @@
-n.d(t, {
+r.d(n, {
     H: function () {
-        return l;
+        return u;
     }
 });
-var r = n(192379),
-    i = n(877124),
-    a = n(65400),
-    s = n(731965);
-function o(e, t) {
-    return e === t;
+var i = r(192379),
+    a = r(877124),
+    s = r(65400),
+    o = r(731965);
+function l(e, n) {
+    return e === n;
 }
-function l(e) {
-    let t = (0, a.F)((0, i.XR)((t, n, r) => e((e) => (0, s.j)(() => t(e)), n, r)));
-    function n(e, n) {
-        return t(e, n);
-    }
-    function l(e) {
-        let n = t.getState();
-        return null != e ? e(n) : n;
+function u(e) {
+    let n = (0, s.F)((0, a.XR)((n, r, i) => e((e) => (0, o.j)(() => n(e)), r, i)));
+    function r(e, r) {
+        return n(e, r);
     }
     function u(e) {
-        return (t) => t[e];
+        let r = n.getState();
+        return null != e ? e(r) : r;
     }
-    let c = (e) => {
-        (0, s.j)(() => t.setState(e));
+    function c(e) {
+        return (n) => n[e];
+    }
+    function d(e) {
+        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l;
+        return r(
+            i.useMemo(() => c(e), [e]),
+            n
+        );
+    }
+    function f(e) {
+        return u(c(e));
+    }
+    let _ = (e) => {
+        (0, o.j)(() => n.setState(e));
     };
+    function h() {
+        _(n.getInitialState());
+    }
     return {
-        useState: n,
-        getState: l,
-        useField: function (e) {
-            let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o;
-            return t(
-                r.useMemo(() => {
-                    var t;
-                    return (t = e), (e) => e[t];
-                }, [e]),
-                n
-            );
+        useState: r,
+        getState: u,
+        useField: d,
+        getField: f,
+        subscribe: function e(e, r, i) {
+            return n.subscribe(e, r, i);
         },
-        getField: function (e) {
-            var t;
-            return l(((t = e), (e) => e[t]));
-        },
-        subscribe: function (e, n, r) {
-            return t.subscribe(e, n, r);
-        },
-        setState: c,
-        resetState: function () {
-            c(t.getInitialState());
-        }
+        setState: _,
+        resetState: h
     };
 }

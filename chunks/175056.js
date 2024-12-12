@@ -1,2 +1,2 @@
-var n = Array.isArray;
-t.Z = n;
+var r = Array.isArray;
+n.Z = r;

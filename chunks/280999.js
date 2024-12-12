@@ -1,47 +1,49 @@
-n.d(t, {
+r.d(n, {
     I: function () {
-        return u;
+        return d;
     },
     T: function () {
-        return c;
+        return f;
     }
 });
-var r = n(259630),
-    i = n(52948),
-    a = n(968735),
-    s = n(548097),
-    o = ['type', 'style'],
-    l = Date.now();
-function u(e, t, n, r) {
-    void 0 === r && (r = {});
-    var i = c(e, t, n, r).reduce(function (e, t) {
-        var n = t.value;
-        return 'string' != typeof n ? e.push(n) : 'string' == typeof e[e.length - 1] ? (e[e.length - 1] += n) : e.push(n), e;
-    }, []);
-    return 1 === i.length ? i[0] : 0 === i.length ? '' : i;
+var i = r(259630),
+    a = r(52948),
+    s = r(968735),
+    o = r(548097),
+    l = ['type', 'style'],
+    u = Date.now();
+function c(e) {
+    return ''.concat(u, '_').concat(e, '_').concat(u);
 }
-function c(e, t, n, u) {
-    var c = e.locale,
-        d = e.onError;
-    void 0 === u && (u = {}), !Intl.ListFormat && d(new a.u_('Intl.ListFormat is not available in this environment.\nTry polyfilling it using "@formatjs/intl-listformat"\n', a.jK.MISSING_INTL_API));
-    var f = (0, i.L6)(u, o);
+function d(e, n, r, i) {
+    void 0 === i && (i = {});
+    var a = f(e, n, r, i).reduce(function (e, n) {
+        var r = n.value;
+        return 'string' != typeof r ? e.push(r) : 'string' == typeof e[e.length - 1] ? (e[e.length - 1] += r) : e.push(r), e;
+    }, []);
+    return 1 === a.length ? a[0] : 0 === a.length ? '' : a;
+}
+function f(e, n, r, u) {
+    var d = e.locale,
+        f = e.onError;
+    void 0 === u && (u = {}), !Intl.ListFormat && f(new s.u_('Intl.ListFormat is not available in this environment.\nTry polyfilling it using "@formatjs/intl-listformat"\n', s.jK.MISSING_INTL_API));
+    var _ = (0, a.L6)(u, l);
     try {
-        var _ = {},
-            p = n.map(function (e, t) {
+        var h = {},
+            p = r.map(function (e, n) {
                 if ('object' == typeof e) {
-                    var n,
-                        r = ((n = t), ''.concat(l, '_').concat(n, '_').concat(l));
-                    return (_[r] = e), r;
+                    var r = c(n);
+                    return (h[r] = e), r;
                 }
                 return String(e);
             });
-        return t(c, f)
+        return n(d, _)
             .formatToParts(p)
             .map(function (e) {
-                return 'literal' === e.type ? e : (0, r.pi)((0, r.pi)({}, e), { value: _[e.value] || e.value });
+                return 'literal' === e.type ? e : (0, i.pi)((0, i.pi)({}, e), { value: h[e.value] || e.value });
             });
     } catch (e) {
-        d(new s.Qe('Error formatting list.', c, e));
+        f(new o.Qe('Error formatting list.', d, e));
     }
-    return n;
+    return r;
 }

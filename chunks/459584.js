@@ -1,72 +1,61 @@
-var r = n(458340),
-    i = n(957578).Buffer,
-    a = n(764900),
-    s = n(689118),
-    o = n(285844),
-    l = n(257693),
-    u = n(875115);
-function c(e, t, n, s) {
-    a.call(this);
-    var l = i.alloc(4, 0);
-    this._cipher = new r.AES(t);
-    var c = this._cipher.encryptBlock(l);
-    (this._ghash = new o(c)),
-        (n = (function (e, t, n) {
-            if (12 === t.length) return (e._finID = i.concat([t, i.from([0, 0, 0, 1])])), i.concat([t, i.from([0, 0, 0, 2])]);
-            var r = new o(n),
-                a = t.length,
-                s = a % 16;
-            r.update(t), s && ((s = 16 - s), r.update(i.alloc(s, 0))), r.update(i.alloc(8, 0));
-            var l = i.alloc(8);
-            l.writeUIntBE(8 * a, 0, 8), r.update(l), (e._finID = r.state);
-            var c = i.from(e._finID);
-            return u(c), c;
-        })(this, n, c)),
-        (this._prev = i.from(n)),
-        (this._cache = i.allocUnsafe(0)),
-        (this._secCache = i.allocUnsafe(0)),
-        (this._decrypt = s),
-        (this._alen = 0),
-        (this._len = 0),
-        (this._mode = e),
-        (this._authTag = null),
-        (this._called = !1);
+var i = r(458340),
+    a = r(957578).Buffer,
+    s = r(764900),
+    o = r(689118),
+    l = r(285844),
+    u = r(257693),
+    c = r(875115);
+function d(e, n) {
+    var r = 0;
+    e.length !== n.length && r++;
+    for (var i = Math.min(e.length, n.length), a = 0; a < i; ++a) r += e[a] ^ n[a];
+    return r;
 }
-s(c, a),
-    (c.prototype._update = function (e) {
+function f(e, n, r) {
+    if (12 === n.length) return (e._finID = a.concat([n, a.from([0, 0, 0, 1])])), a.concat([n, a.from([0, 0, 0, 2])]);
+    var i = new l(r),
+        s = n.length,
+        o = s % 16;
+    i.update(n), o && ((o = 16 - o), i.update(a.alloc(o, 0))), i.update(a.alloc(8, 0));
+    var u = 8 * s,
+        d = a.alloc(8);
+    d.writeUIntBE(u, 0, 8), i.update(d), (e._finID = i.state);
+    var f = a.from(e._finID);
+    return c(f), f;
+}
+function _(e, n, r, o) {
+    s.call(this);
+    var u = a.alloc(4, 0);
+    this._cipher = new i.AES(n);
+    var c = this._cipher.encryptBlock(u);
+    (this._ghash = new l(c)), (r = f(this, r, c)), (this._prev = a.from(r)), (this._cache = a.allocUnsafe(0)), (this._secCache = a.allocUnsafe(0)), (this._decrypt = o), (this._alen = 0), (this._len = 0), (this._mode = e), (this._authTag = null), (this._called = !1);
+}
+o(_, s),
+    (_.prototype._update = function (e) {
         if (!this._called && this._alen) {
-            var t = 16 - (this._alen % 16);
-            t < 16 && ((t = i.alloc(t, 0)), this._ghash.update(t));
+            var n = 16 - (this._alen % 16);
+            n < 16 && ((n = a.alloc(n, 0)), this._ghash.update(n));
         }
         this._called = !0;
-        var n = this._mode.encrypt(this, e);
-        return this._decrypt ? this._ghash.update(e) : this._ghash.update(n), (this._len += e.length), n;
+        var r = this._mode.encrypt(this, e);
+        return this._decrypt ? this._ghash.update(e) : this._ghash.update(r), (this._len += e.length), r;
     }),
-    (c.prototype._final = function () {
+    (_.prototype._final = function () {
         if (this._decrypt && !this._authTag) throw Error('Unsupported state or unable to authenticate data');
-        var e = l(this._ghash.final(8 * this._alen, 8 * this._len), this._cipher.encryptBlock(this._finID));
-        if (
-            this._decrypt &&
-            (function (e, t) {
-                var n = 0;
-                e.length !== t.length && n++;
-                for (var r = Math.min(e.length, t.length), i = 0; i < r; ++i) n += e[i] ^ t[i];
-                return n;
-            })(e, this._authTag)
-        )
-            throw Error('Unsupported state or unable to authenticate data');
+        var e = u(this._ghash.final(8 * this._alen, 8 * this._len), this._cipher.encryptBlock(this._finID));
+        if (this._decrypt && d(e, this._authTag)) throw Error('Unsupported state or unable to authenticate data');
         (this._authTag = e), this._cipher.scrub();
     }),
-    (c.prototype.getAuthTag = function () {
-        if (this._decrypt || !i.isBuffer(this._authTag)) throw Error('Attempting to get auth tag in unsupported state');
+    (_.prototype.getAuthTag = function () {
+        if (this._decrypt || !a.isBuffer(this._authTag)) throw Error('Attempting to get auth tag in unsupported state');
         return this._authTag;
     }),
-    (c.prototype.setAuthTag = function (e) {
+    (_.prototype.setAuthTag = function (e) {
         if (!this._decrypt) throw Error('Attempting to set auth tag in unsupported state');
         this._authTag = e;
     }),
-    (c.prototype.setAAD = function (e) {
+    (_.prototype.setAAD = function (e) {
         if (this._called) throw Error('Attempting to set AAD in unsupported state');
         this._ghash.update(e), (this._alen += e.length);
     }),
-    (e.exports = c);
+    (e.exports = _);

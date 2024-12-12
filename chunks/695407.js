@@ -1,113 +1,112 @@
-n.d(t, {
+r.d(n, {
     n: function () {
-        return _;
+        return m;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(1561),
-    l = n(84735),
-    u = n(922770),
-    c = n(481060),
-    d = n(388032),
-    f = n(496052);
-let _ = i.forwardRef(function (e, t) {
-    var n, a, _;
-    let { query: p, onChange: h, loading: m = !1, disabled: g = !1, placeholder: E = d.intl.string(d.t['5h0QOD']), 'aria-label': v } = e,
-        I = i.useRef(null),
-        T = i.useRef(null);
-    i.useImperativeHandle(
-        t,
+var i = r(200651),
+    a = r(192379),
+    s = r(120356),
+    o = r.n(s),
+    l = r(1561),
+    u = r(84735),
+    c = r(922770),
+    d = r(481060),
+    f = r(388032),
+    _ = r(496052);
+let h = 18;
+function p(e, n, r) {
+    return n
+        ? (0, i.jsx)('div', {
+              className: _.iconContainer,
+              children: (0, i.jsx)(c.$, {
+                  type: c.$.Type.SPINNING_CIRCLE,
+                  className: o()(_.icon)
+              })
+          })
+        : e.length > 0
+          ? (0, i.jsx)(l.P, {
+                'aria-label': f.intl.string(f.t['78fJND']),
+                className: o()(_.iconContainer, _.iconClickable),
+                onClick: (e) => {
+                    e.stopPropagation(), r('');
+                },
+                onMouseDown: (e) => {
+                    e.preventDefault(), e.stopPropagation();
+                },
+                focusProps: {
+                    offset: {
+                        top: -3,
+                        right: -3,
+                        bottom: -3,
+                        left: -3
+                    }
+                },
+                children: (0, i.jsx)(d.XSmallIcon, {
+                    size: 'custom',
+                    color: 'currentColor',
+                    width: h,
+                    height: h,
+                    className: _.icon,
+                    'aria-label': f.intl.string(f.t.cpT0Cg)
+                })
+            })
+          : (0, i.jsx)('div', {
+                className: _.iconContainer,
+                children: (0, i.jsx)(d.MagnifyingGlassIcon, {
+                    size: 'custom',
+                    color: 'currentColor',
+                    width: h,
+                    height: h,
+                    className: _.icon,
+                    'aria-label': f.intl.string(f.t['5h0QOD'])
+                })
+            });
+}
+let m = a.forwardRef(function (e, n) {
+    let { query: r, onChange: s, loading: o = !1, disabled: l = !1, placeholder: c = f.intl.string(f.t['5h0QOD']), 'aria-label': d } = e,
+        h = a.useRef(null),
+        m = a.useRef(null);
+    a.useImperativeHandle(
+        n,
         () => ({
             focus: () => {
                 var e;
-                return null === (e = T.current) || void 0 === e ? void 0 : e.focus();
+                return null === (e = m.current) || void 0 === e ? void 0 : e.focus();
             },
             blur: () => {
                 var e;
-                return null === (e = T.current) || void 0 === e ? void 0 : e.blur();
+                return null === (e = m.current) || void 0 === e ? void 0 : e.blur();
             },
             activate: () => !1
         }),
         []
     );
-    let b =
-        ((n = p),
-        (a = m),
-        (_ = h),
-        a
-            ? (0, r.jsx)('div', {
-                  className: f.iconContainer,
-                  children: (0, r.jsx)(u.$, {
-                      type: u.$.Type.SPINNING_CIRCLE,
-                      className: s()(f.icon)
-                  })
-              })
-            : n.length > 0
-              ? (0, r.jsx)(o.P, {
-                    'aria-label': d.intl.string(d.t['78fJND']),
-                    className: s()(f.iconContainer, f.iconClickable),
-                    onClick: (e) => {
-                        e.stopPropagation(), _('');
-                    },
-                    onMouseDown: (e) => {
-                        e.preventDefault(), e.stopPropagation();
-                    },
-                    focusProps: {
-                        offset: {
-                            top: -3,
-                            right: -3,
-                            bottom: -3,
-                            left: -3
-                        }
-                    },
-                    children: (0, r.jsx)(c.XSmallIcon, {
-                        size: 'custom',
-                        color: 'currentColor',
-                        width: 18,
-                        height: 18,
-                        className: f.icon,
-                        'aria-label': d.intl.string(d.t.cpT0Cg)
-                    })
-                })
-              : (0, r.jsx)('div', {
-                    className: f.iconContainer,
-                    children: (0, r.jsx)(c.MagnifyingGlassIcon, {
-                        size: 'custom',
-                        color: 'currentColor',
-                        width: 18,
-                        height: 18,
-                        className: f.icon,
-                        'aria-label': d.intl.string(d.t['5h0QOD'])
-                    })
-                }));
-    return (0, r.jsx)(l.t, {
-        focusTarget: T,
-        ringTarget: I,
+    let g = p(r, o, s);
+    return (0, i.jsx)(u.t, {
+        focusTarget: m,
+        ringTarget: h,
         offset: {
             top: 2,
             bottom: 2,
             left: 4,
             right: 4
         },
-        children: (0, r.jsxs)('div', {
-            className: f.container,
-            ref: I,
+        children: (0, i.jsxs)('div', {
+            className: _.container,
+            ref: h,
             children: [
-                (0, r.jsx)('input', {
+                (0, i.jsx)('input', {
                     role: 'searchbox',
-                    'aria-busy': m,
-                    ref: T,
-                    className: f.input,
-                    value: p,
-                    onChange: (e) => h(e.currentTarget.value),
-                    'aria-label': v,
-                    placeholder: E,
-                    disabled: g
+                    'aria-busy': o,
+                    ref: m,
+                    className: _.input,
+                    value: r,
+                    onChange: (e) => s(e.currentTarget.value),
+                    'aria-label': d,
+                    placeholder: c,
+                    disabled: l
                 }),
-                b
+                g
             ]
         })
     });

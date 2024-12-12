@@ -1,3 +1,4 @@
-t.Z = function (e, t) {
-    return null != e && t in Object(e);
-};
+function r(e, n) {
+    return null != e && n in Object(e);
+}
+n.Z = r;

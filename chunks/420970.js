@@ -1,104 +1,105 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return l;
+        return f;
     }
-}),
-    n(653041),
-    n(47120),
-    n(411104);
-var r = n(836560),
-    i = n(259443),
-    a = n(643191);
-function s(e, t, n) {
+});
+var i = r(653041);
+var a = r(47120);
+var s = r(411104);
+var o = r(836560);
+var l = r(259443),
+    u = r(643191);
+function c(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let o = new i.Yd('Flux');
-class l extends r.EventEmitter {
-    log(e, t) {
-        let n = new c(e);
-        n.startTime = a.Sv.now();
-        try {
-            t((t, r) => {
-                let i;
+let d = new l.Yd('Flux');
+class f extends o.EventEmitter {
+    log(e, n) {
+        let r = new h(e),
+            i = (n, i) => {
+                let a;
                 let s = {
-                        name: t,
+                        name: n,
                         time: -1
                     },
-                    o = a.Sv.now();
+                    o = u.Sv.now();
                 try {
-                    i = r();
+                    a = i();
                 } finally {
-                    (s.time = a.Sv.now() - o), this.persist && n.traces.push(s), this.emit('trace', e.type, t, s.time);
+                    (s.time = u.Sv.now() - o), this.persist && r.traces.push(s), this.emit('trace', e.type, n, s.time);
                 }
-                return i;
-            });
+                return a;
+            };
+        r.startTime = u.Sv.now();
+        try {
+            n(i);
         } catch (e) {
-            throw ((n.error = e), e);
+            throw ((r.error = e), e);
         } finally {
-            (n.totalTime = a.Sv.now() - n.startTime), this.persist && n.totalTime > 0 && this.logs.push(n), this.logs.length > 1000 && this.logs.shift(), this.emit('log', e);
+            (r.totalTime = u.Sv.now() - r.startTime), this.persist && r.totalTime > 0 && this.logs.push(r), this.logs.length > 1000 && this.logs.shift(), this.emit('log', e);
         }
-        return n;
+        return r;
     }
     getSlowestActions(e) {
-        var t;
-        let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 20,
-            i = [];
-        for (let t of this.logs) {
-            if (null == e || t.name === e) for (let e of t.traces) i.push([e.name, t.name, e.time]);
+        var n;
+        let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 20,
+            a = [];
+        for (let n of this.logs) {
+            if (null == e || n.name === e) for (let e of n.traces) a.push([e.name, n.name, e.time]);
         }
-        i.sort((e, t) => t[2] - e[2]), i.length > r && (i.length = r);
-        let a = 0,
-            s = 0,
-            l = i
-                .map((t) => {
-                    let [n, r, i] = t,
-                        s = ''.concat(n);
-                    return null == e && (s += '<'.concat(r, '>')), (a = Math.max(s.length, a)), [s, i];
+        a.sort((e, n) => n[2] - e[2]), a.length > i && (a.length = i);
+        let s = 0,
+            o = 0,
+            l = a
+                .map((n) => {
+                    let [r, i, a] = n,
+                        o = ''.concat(r);
+                    return null == e && (o += '<'.concat(i, '>')), (s = Math.max(o.length, s)), [o, a];
                 })
                 .map((e) => {
-                    let [t, n] = e;
-                    return (s += n), ''.concat(t.padEnd(a + 1, ' '), ' - ').concat(n, 'ms');
+                    let [n, r] = e;
+                    return (o += r), ''.concat(n.padEnd(s + 1, ' '), ' - ').concat(r, 'ms');
                 })
                 .join('\n');
-        return 0 === i.length || i[0][2] < 10 || s < 20 ? i : (o.log('Using Hermes:', void 0 !== (null === (t = n.g) || void 0 === t ? void 0 : t.HermesInternal)), o.log(''.concat(null != e ? '\n\n=== '.concat(e, ' ===') : '', '\n').concat(l, '\n')), o.log('Total Time: '.concat(s, 'ms')), i);
+        return 0 === a.length || a[0][2] < 10 || o < 20 ? a : (d.log('Using Hermes:', void 0 !== (null === (n = r.g) || void 0 === n ? void 0 : n.HermesInternal)), d.log(''.concat(null != e ? '\n\n=== '.concat(e, ' ===') : '', '\n').concat(l, '\n')), d.log('Total Time: '.concat(o, 'ms')), a);
     }
     getLastActionMetrics(e) {
-        var t;
-        let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 20,
-            i = {};
-        for (let e of this.logs) for (let t of e.traces) i[t.name] = [t.name, e.name, t.time];
-        let a = Object.values(i);
-        a.sort((e, t) => t[2] - e[2]), a.length > r && (a.length = r);
-        let s = 0,
+        var n;
+        let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 20,
+            a = {};
+        for (let e of this.logs) for (let n of e.traces) a[n.name] = [n.name, e.name, n.time];
+        let s = Object.values(a);
+        s.sort((e, n) => n[2] - e[2]), s.length > i && (s.length = i);
+        let o = 0,
             l = 0,
-            u = a
+            u = s
                 .map((e) => {
-                    let [t, n, r] = e;
-                    return (s = Math.max(t.length, s)), [t, r];
+                    let [n, r, i] = e;
+                    return (o = Math.max(n.length, o)), [n, i];
                 })
                 .map((e) => {
-                    let [t, n] = e;
-                    return (l += n), ''.concat(t.padEnd(s + 1, ' '), ' - ').concat(n, 'ms');
+                    let [n, r] = e;
+                    return (l += r), ''.concat(n.padEnd(o + 1, ' '), ' - ').concat(r, 'ms');
                 })
                 .join('\n');
-        return 0 === a.length || l < 8 ? a : (o.log('\nUsing Hermes: '.concat(void 0 !== (null === (t = n.g) || void 0 === t ? void 0 : t.HermesInternal)), '\n\n=== '.concat(e, ' ===\n').concat(u), '\nTotal Time: '.concat(l, 'ms\n\n')), a);
+        return 0 === s.length || l < 8 ? s : (d.log('\nUsing Hermes: '.concat(void 0 !== (null === (n = r.g) || void 0 === n ? void 0 : n.HermesInternal)), '\n\n=== '.concat(e, ' ===\n').concat(u), '\nTotal Time: '.concat(l, 'ms\n\n')), s);
     }
     constructor({ persist: e = !1 } = {}) {
-        super(), s(this, 'logs', []), s(this, 'persist', void 0), (this.persist = e);
+        super(), c(this, 'logs', []), c(this, 'persist', void 0), (this.persist = e);
     }
 }
-let u = 0;
-class c {
+let _ = 0;
+class h {
     get name() {
         return this.action.type;
     }
@@ -112,6 +113,6 @@ class c {
         };
     }
     constructor(e) {
-        s(this, 'id', void 0), s(this, 'action', void 0), s(this, 'createdAt', void 0), s(this, 'startTime', 0), s(this, 'totalTime', 0), s(this, 'traces', []), s(this, 'error', void 0), (this.id = u++), (this.action = e), (this.createdAt = new Date());
+        c(this, 'id', void 0), c(this, 'action', void 0), c(this, 'createdAt', void 0), c(this, 'startTime', 0), c(this, 'totalTime', 0), c(this, 'traces', []), c(this, 'error', void 0), (this.id = _++), (this.action = e), (this.createdAt = new Date());
     }
 }

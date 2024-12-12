@@ -1,39 +1,40 @@
-n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(442837),
-    s = n(87051),
-    o = n(367907),
-    l = n(681678),
-    u = n(138201),
-    c = n(592125),
-    d = n(9156),
-    f = n(5192),
-    _ = n(621600),
-    p = n(981631),
-    h = n(388032);
-t.Z = (e) => {
-    let { user: t, channelId: n, reportId: m } = e,
-        g = c.Z.getDMFromUserId(t.id),
-        E = (0, a.e7)([c.Z], () => c.Z.getChannel(n), [n]),
-        v = i.useMemo(() => f.ZP.getName(null == E ? void 0 : E.guild_id, null == E ? void 0 : E.id, t), [E, t]),
-        I = (0, a.e7)([d.ZP], () => (null == g ? null : d.ZP.isChannelMuted(null, g))),
-        [T, b] = i.useState(null != I && I),
-        S = i.useCallback(() => {
-            null != g &&
-                (b(!0),
-                o.ZP.trackWithMetadata(p.rMx.IAR_MUTE_USER_BUTTON_CLICKED, {
-                    other_user_id: t.id,
-                    report_id: m
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(442837),
+    l = r(87051),
+    u = r(367907),
+    c = r(681678),
+    d = r(138201),
+    f = r(592125),
+    _ = r(9156),
+    h = r(5192),
+    p = r(621600),
+    m = r(981631),
+    g = r(388032);
+let E = (e) => {
+    let { user: n, channelId: r, reportId: i } = e,
+        E = f.Z.getDMFromUserId(n.id),
+        v = (0, o.e7)([f.Z], () => f.Z.getChannel(r), [r]),
+        I = s.useMemo(() => h.ZP.getName(null == v ? void 0 : v.guild_id, null == v ? void 0 : v.id, n), [v, n]),
+        T = (0, o.e7)([_.ZP], () => (null == E ? null : _.ZP.isChannelMuted(null, E))),
+        [b, y] = s.useState(null != T && T),
+        S = s.useCallback(() => {
+            null != E &&
+                (y(!0),
+                u.ZP.trackWithMetadata(m.rMx.IAR_MUTE_USER_BUTTON_CLICKED, {
+                    other_user_id: n.id,
+                    report_id: i
                 }),
-                s.Z.updateChannelOverrideSettings(null, g, { muted: !0 }, _.ZB.Muted),
-                l.Z.showMuteSuccessToast(t.id, n));
-        }, [g, n, t, m]);
-    return (0, r.jsx)(u.Z, {
-        title: h.intl.formatToPlainString(h.t.TRp5wc, { username: v }),
-        description: h.intl.string(h.t['yM/+AA']),
-        buttonText: T ? h.intl.string(h.t.E8x4Nj) : h.intl.string(h.t.HITUcX),
-        buttonDisabled: T,
+                l.Z.updateChannelOverrideSettings(null, E, { muted: !0 }, p.ZB.Muted),
+                c.Z.showMuteSuccessToast(n.id, r));
+        }, [E, r, n, i]);
+    return (0, a.jsx)(d.Z, {
+        title: g.intl.formatToPlainString(g.t.TRp5wc, { username: I }),
+        description: g.intl.string(g.t['yM/+AA']),
+        buttonText: b ? g.intl.string(g.t.E8x4Nj) : g.intl.string(g.t.HITUcX),
+        buttonDisabled: b,
         onButtonPress: S
     });
 };
+n.Z = E;

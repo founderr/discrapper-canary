@@ -1,4 +1,4 @@
-n.d(t, {
+r.d(n, {
     G: function () {
         return i;
     },
@@ -6,25 +6,26 @@ n.d(t, {
         return u;
     }
 });
-var r,
-    i,
-    a = n(47770),
-    s = n(68721),
-    o = n(591218);
-function l(e, t, n) {
+var i,
+    a = r(47770),
+    s = r(68721),
+    o = r(591218);
+function l(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-((r = i || (i = {})).Stream = 'stream'), (r.Video = 'video'), (r.Mute = 'mute'), (r.VoiceActivity = 'voiceactivity'), (r.DesktopSourceEnd = 'desktopsourceend'), (r.Speaking = 'speaking'), (r.AudioPermission = 'audio-permission'), (r.VideoPermission = 'video-permission'), (r.AddVideoTrack = 'add-video-track');
+!(function (e) {
+    (e.Stream = 'stream'), (e.Video = 'video'), (e.Mute = 'mute'), (e.VoiceActivity = 'voiceactivity'), (e.DesktopSourceEnd = 'desktopsourceend'), (e.Speaking = 'speaking'), (e.AudioPermission = 'audio-permission'), (e.VideoPermission = 'video-permission'), (e.AddVideoTrack = 'add-video-track');
+})(i || (i = {}));
 class u extends a.Z {
     destroy() {
         this.removeAllListeners(), this.destroyStreams();
@@ -49,8 +50,8 @@ class u extends a.Z {
     enableAudioInput() {
         this.audio.enable();
     }
-    setAudioMode(e, t) {
-        this.audio.setMode(e, t);
+    setAudioMode(e, n) {
+        this.audio.setMode(e, n);
     }
     setMute(e) {
         (this.audio.mute = e), this.emit('mute', e);
@@ -95,9 +96,9 @@ class u extends a.Z {
             l(this, 'desktop', null),
             l(this, 'stream', void 0),
             l(this, 'mergeStreams', () => {
-                var e, t, n;
-                let r = new MediaStream();
-                return null != this.desktop ? (null === (e = this.desktop.stream) || void 0 === e || e.getTracks().forEach((e) => r.addTrack(e)), this.desktop.refreshSpeaking()) : (null === (t = this.audio.stream) || void 0 === t || t.getAudioTracks().forEach((e) => r.addTrack(e)), null === (n = this.video.stream) || void 0 === n || n.getVideoTracks().forEach((e) => r.addTrack(e))), (this.stream = r), this.emit('stream', r), this.emit('video', this.getVideoStreamId()), r;
+                var e, n, r;
+                let i = new MediaStream();
+                return null != this.desktop ? (null === (e = this.desktop.stream) || void 0 === e || e.getTracks().forEach((e) => i.addTrack(e)), this.desktop.refreshSpeaking()) : (null === (n = this.audio.stream) || void 0 === n || n.getAudioTracks().forEach((e) => i.addTrack(e)), null === (r = this.video.stream) || void 0 === r || r.getVideoTracks().forEach((e) => i.addTrack(e))), (this.stream = i), this.emit('stream', i), this.emit('video', this.getVideoStreamId()), i;
             }),
             l(this, 'handleVoiceActivity', (e) => {
                 this.emit('voiceactivity', e);

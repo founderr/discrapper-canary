@@ -1,7 +1,20 @@
-n(47120);
-var r = n(442837),
-    i = n(570140);
-class a extends r.ZP.Store {
+var i = r(47120);
+var a = r(442837),
+    s = r(570140);
+function o(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+class l extends a.ZP.Store {
     allGuildIds() {
         return this.guildIds;
     }
@@ -15,7 +28,7 @@ class a extends r.ZP.Store {
         this.guildIds = new Set(e.guilds.map((e) => e.id));
     }
     handleCacheLoadedLazy(e) {
-        for (let t of e.guilds) this.guildIds.add(t.id);
+        for (let n of e.guilds) this.guildIds.add(n.id);
     }
     handleGuildCreate(e) {
         this.guildIds.add(e.guild.id);
@@ -24,9 +37,8 @@ class a extends r.ZP.Store {
         !0 !== e.guild.unavailable && this.guildIds.delete(e.guild.id);
     }
     constructor() {
-        var e, t, n;
         super(
-            i.Z,
+            s.Z,
             {
                 CACHE_LOADED: (e) => this.handleCacheLoaded(e),
                 CACHE_LOADED_LAZY: (e) => this.handleCacheLoadedLazy(e),
@@ -34,19 +46,9 @@ class a extends r.ZP.Store {
                 GUILD_CREATE: (e) => this.handleGuildCreate(e),
                 GUILD_DELETE: (e) => this.handleGuildDelete(e)
             },
-            i.c.Early
+            s.c.Early
         ),
-            (e = this),
-            (t = 'guildIds'),
-            (n = new Set()),
-            t in e
-                ? Object.defineProperty(e, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (e[t] = n);
+            o(this, 'guildIds', new Set());
     }
 }
-t.Z = new a();
+n.Z = new l();

@@ -1,8 +1,9 @@
-var r, i;
-n.d(t, {
+var i;
+r.d(n, {
     v: function () {
-        return r;
+        return i;
     }
 }),
-    ((i = r || (r = {}))[(i.INDIVIDUAL_PRODUCTS = 1)] = 'INDIVIDUAL_PRODUCTS'),
-    (i[(i.VARIANTS_GROUP = 2)] = 'VARIANTS_GROUP');
+    !(function (e) {
+        (e[(e.INDIVIDUAL_PRODUCTS = 1)] = 'INDIVIDUAL_PRODUCTS'), (e[(e.VARIANTS_GROUP = 2)] = 'VARIANTS_GROUP');
+    })(i || (i = {}));

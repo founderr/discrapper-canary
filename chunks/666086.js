@@ -1,97 +1,101 @@
-n(47120);
-var r = n(392711),
-    i = n(106351),
-    a = n(904245),
-    s = n(147913),
-    o = n(367907),
-    l = n(447003),
-    u = n(592125),
-    c = n(650774),
-    d = n(271383),
-    f = n(430824),
-    _ = n(375954),
-    p = n(944486),
-    h = n(626135),
-    m = n(522558),
-    g = n(581025),
-    E = n(795448),
-    v = n(441623),
-    I = n(474936),
-    T = n(981631);
-class b extends s.Z {
-    isChannelEligible(e, t) {
+var i = r(47120);
+var a = r(392711);
+var s = r(106351),
+    o = r(904245),
+    l = r(147913),
+    u = r(367907),
+    c = r(447003),
+    d = r(592125),
+    f = r(650774),
+    _ = r(271383),
+    h = r(430824),
+    p = r(375954),
+    m = r(944486),
+    g = r(626135),
+    E = r(522558),
+    v = r(581025),
+    I = r(795448),
+    T = r(441623),
+    b = r(474936),
+    y = r(981631);
+function S(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let A = 50,
+    N = 1000;
+class C extends l.Z {
+    isChannelEligible(e, n) {
         switch (e.type) {
-            case i.d.DM:
-            case i.d.GROUP_DM:
+            case s.d.DM:
+            case s.d.GROUP_DM:
                 return !0;
-            case i.d.GUILD_TEXT:
-                let n = f.Z.getGuild(t),
-                    r = c.Z.getMemberCount(t);
-                return null != r && r <= 50 && (null == n ? void 0 : n.rulesChannelId) !== e.id && !e.isNSFW() && !(0, l.Z)(e) && null == e.linkedLobby;
+            case s.d.GUILD_TEXT:
+                let r = h.Z.getGuild(n),
+                    i = f.Z.getMemberCount(n);
+                return null != i && i <= A && (null == r ? void 0 : r.rulesChannelId) !== e.id && !e.isNSFW() && !(0, c.Z)(e) && null == e.linkedLobby;
             default:
                 return !1;
         }
     }
-    maybeSendGiftingPromptSystemMessageDebounced(e, t, n, i) {
-        (0, r.debounce)(() => {
-            let r = p.Z.getChannelId();
-            !v.Z.isGiftIntentMessageInCooldown(n) &&
-                e === r &&
-                _.Z.isReady(e) &&
-                (a.Z.sendGiftingPromptSystemMessage(e, {
-                    giftIntentType: t,
-                    recipientUserId: n,
+    maybeSendGiftingPromptSystemMessageDebounced(e, n, r, i) {
+        (0, a.debounce)(() => {
+            let a = m.Z.getChannelId();
+            !T.Z.isGiftIntentMessageInCooldown(r) &&
+                e === a &&
+                p.Z.isReady(e) &&
+                (o.Z.sendGiftingPromptSystemMessage(e, {
+                    giftIntentType: n,
+                    recipientUserId: r,
                     giftIntentSecondaryAction: i
                 }),
-                (0, E.PV)(n));
-        }, 1000)();
+                (0, I.PV)(r));
+        }, N)();
     }
-    handleChannelSelect(e, t) {
-        let { enabled: n } = g.G.getCurrentConfig({ location: 'PremiumGiftingIntentManager handleChannelSelect' }, { autoTrackExposure: !1 }),
-            { enabled: r } = m.w.getCurrentConfig({ location: 'PremiumGiftingIntentManager handleChannelSelect' }, { autoTrackExposure: !1 }),
-            i = u.Z.getChannel(t);
-        if ((n || r) && null != i && this.isChannelEligible(i, e)) {
-            let t = new Set(null != e ? d.ZP.getMemberIds(e) : i.recipients),
-                a = v.Z.getFriendAnniversaries().filter((e) => t.has(e));
-            if (r && a.length > 0) {
-                let e = a[0];
-                this.maybeSendGiftingPromptSystemMessageDebounced(i.id, I.hX.FRIEND_ANNIVERSARY, e, a.length > 1 ? I.X2.VIEW_ALL : I.X2.SEND_MESSAGE);
+    handleChannelSelect(e, n) {
+        let { enabled: r } = v.G.getCurrentConfig({ location: 'PremiumGiftingIntentManager handleChannelSelect' }, { autoTrackExposure: !1 }),
+            { enabled: i } = E.w.getCurrentConfig({ location: 'PremiumGiftingIntentManager handleChannelSelect' }, { autoTrackExposure: !1 }),
+            a = d.Z.getChannel(n);
+        if ((r || i) && null != a && this.isChannelEligible(a, e)) {
+            let n = new Set(null != e ? _.ZP.getMemberIds(e) : a.recipients),
+                s = T.Z.getFriendAnniversaries().filter((e) => n.has(e));
+            if (i && s.length > 0) {
+                let e = s[0];
+                this.maybeSendGiftingPromptSystemMessageDebounced(a.id, b.hX.FRIEND_ANNIVERSARY, e, s.length > 1 ? b.X2.VIEW_ALL : b.X2.SEND_MESSAGE);
             }
-            n &&
-                h.default.track(T.rMx.FRIEND_ANNIVERSARIES_CHANNEL_VIEWED, {
-                    friend_anniversaries_count: a.length,
-                    ...(0, o.v_)(i)
+            r &&
+                g.default.track(y.rMx.FRIEND_ANNIVERSARIES_CHANNEL_VIEWED, {
+                    friend_anniversaries_count: s.length,
+                    ...(0, u.v_)(a)
                 });
         }
     }
     onChannelSelect(e) {
-        let { guildId: t, channelId: n } = e;
-        this.handleChannelSelect(t, n);
+        let { guildId: n, channelId: r } = e;
+        this.handleChannelSelect(n, r);
     }
     onPostConnectionOpen() {
-        let e = p.Z.getChannelId();
+        let e = m.Z.getChannelId();
         if (null != e) {
-            let t = u.Z.getChannel(e);
-            this.handleChannelSelect(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id);
+            let n = d.Z.getChannel(e);
+            this.handleChannelSelect(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id);
         }
     }
     constructor(...e) {
-        var t, n, r;
         super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = {
+            S(this, 'actions', {
                 POST_CONNECTION_OPEN: () => this.onPostConnectionOpen(),
                 CHANNEL_SELECT: (e) => this.onChannelSelect(e)
-            }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+            });
     }
 }
-t.Z = new b();
+n.Z = new C();

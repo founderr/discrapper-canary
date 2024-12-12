@@ -1,18 +1,19 @@
-Object.defineProperty(t, '__esModule', { value: !0 }),
-    (t.runtimeHashMessageKey = function (e) {
-        let t = (function (e) {
-            e = BigInt(e);
-            let t = [],
-                n = Math.ceil(Math.floor(Math.log2(Number(e)) + 1) / 8);
-            for (let r = 0; r < n; r++) t.unshift(Number((e >> BigInt(8 * r)) & BigInt(255)));
-            let r = new Uint8Array(t);
-            return a ? r : r.reverse();
-        })((0, r.hash)(e, 0));
-        return [i[t[0] >> 2], i[((3 & t[0]) << 4) | (t[1] >> 4)], i[((15 & t[1]) << 2) | (t[2] >> 6)], i[63 & t[2]], i[t[3] >> 2], i[((3 & t[3]) << 4) | (t[3] >> 4)]].join('');
-    });
-let r = n(820401),
-    i = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'.split(''),
-    a = (() => {
+Object.defineProperty(n, '__esModule', { value: !0 }), (n.runtimeHashMessageKey = l);
+let i = r(820401),
+    a = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'.split(''),
+    s = (() => {
         let e = new Uint8Array(4);
         return !((new Uint32Array(e.buffer)[0] = 1) & e[0]);
     })();
+function o(e) {
+    e = BigInt(e);
+    let n = [],
+        r = Math.ceil(Math.floor(Math.log2(Number(e)) + 1) / 8);
+    for (let i = 0; i < r; i++) n.unshift(Number((e >> BigInt(8 * i)) & BigInt(255)));
+    let i = new Uint8Array(n);
+    return s ? i : i.reverse();
+}
+function l(e) {
+    let n = o((0, i.hash)(e, 0));
+    return [a[n[0] >> 2], a[((3 & n[0]) << 4) | (n[1] >> 4)], a[((15 & n[1]) << 2) | (n[2] >> 6)], a[63 & n[2]], a[n[3] >> 2], a[((3 & n[3]) << 4) | (n[3] >> 4)]].join('');
+}

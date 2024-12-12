@@ -1,41 +1,43 @@
-function r(e, t, n) {
-    let r, i;
-    for (let a of e.fields) {
-        let e = a.localName;
-        if (a.oneof) {
-            let s = n[a.oneof];
-            if ((null == s ? void 0 : s.oneofKind) == void 0) continue;
-            if (((r = s[e]), ((i = t[a.oneof]).oneofKind = s.oneofKind), void 0 == r)) {
-                delete i[e];
+function i(e, n, r) {
+    let i,
+        a = r,
+        s;
+    for (let r of e.fields) {
+        let e = r.localName;
+        if (r.oneof) {
+            let o = a[r.oneof];
+            if ((null == o ? void 0 : o.oneofKind) == void 0) continue;
+            if (((i = o[e]), ((s = n[r.oneof]).oneofKind = o.oneofKind), void 0 == i)) {
+                delete s[e];
                 continue;
             }
-        } else if (((r = n[e]), (i = t), void 0 == r)) continue;
-        switch ((a.repeat && (i[e].length = r.length), a.kind)) {
+        } else if (((i = a[e]), (s = n), void 0 == i)) continue;
+        switch ((r.repeat && (s[e].length = i.length), r.kind)) {
             case 'scalar':
             case 'enum':
-                if (a.repeat) for (let t = 0; t < r.length; t++) i[e][t] = r[t];
-                else i[e] = r;
+                if (r.repeat) for (let n = 0; n < i.length; n++) s[e][n] = i[n];
+                else s[e] = i;
                 break;
             case 'message':
-                let s = a.T();
-                if (a.repeat) for (let t = 0; t < r.length; t++) i[e][t] = s.create(r[t]);
-                else void 0 === i[e] ? (i[e] = s.create(r)) : s.mergePartial(i[e], r);
+                let o = r.T();
+                if (r.repeat) for (let n = 0; n < i.length; n++) s[e][n] = o.create(i[n]);
+                else void 0 === s[e] ? (s[e] = o.create(i)) : o.mergePartial(s[e], i);
                 break;
             case 'map':
-                switch (a.V.kind) {
+                switch (r.V.kind) {
                     case 'scalar':
                     case 'enum':
-                        Object.assign(i[e], r);
+                        Object.assign(s[e], i);
                         break;
                     case 'message':
-                        let o = a.V.T();
-                        for (let t of Object.keys(r)) i[e][t] = o.create(r[t]);
+                        let l = r.V.T();
+                        for (let n of Object.keys(i)) s[e][n] = l.create(i[n]);
                 }
         }
     }
 }
-n.d(t, {
+r.d(n, {
     l: function () {
-        return r;
+        return i;
     }
 });

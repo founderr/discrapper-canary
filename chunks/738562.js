@@ -1,3 +1,4 @@
-t.Z = function (e, t) {
-    return e.has(t);
-};
+function r(e, n) {
+    return e.has(n);
+}
+n.Z = r;

@@ -1,59 +1,60 @@
-n(47120);
-var r = n(570140),
-    i = n(661111),
-    a = n(147913),
-    s = n(706454),
-    o = n(709054),
-    l = n(802098),
-    u = n(128014),
-    c = n(163379);
-function d(e, t, n) {
+var i = r(47120);
+var a = r(570140),
+    s = r(661111),
+    o = r(147913),
+    l = r(706454),
+    u = r(709054),
+    c = r(802098),
+    d = r(128014),
+    f = r(163379);
+function _(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-class f extends a.Z {
+function h(e, n) {
+    let r = 0,
+        i = null;
+    for (var [a, { min_version: s }] of Object.entries(e)) s <= n && s > r && ((r = s), (i = a));
+    return i;
+}
+class p extends o.Z {
     constructor(...e) {
         super(...e),
-            d(this, 'actions', { POST_CONNECTION_OPEN: (e) => this.handleConnectionOpen(e) }),
-            d(this, 'handleConnectionOpen', async (e) => {
-                let t = await i.Z.fetchChangelogConfig(),
-                    n = t.body,
-                    a = (function (e, t) {
-                        let n = 0,
-                            r = null;
-                        for (var [i, { min_version: a }] of Object.entries(e)) a <= t && a > n && ((n = a), (r = i));
-                        return r;
-                    })(n, (0, u.b)());
+            _(this, 'actions', { POST_CONNECTION_OPEN: (e) => this.handleConnectionOpen(e) }),
+            _(this, 'handleConnectionOpen', async (e) => {
+                let n = await s.Z.fetchChangelogConfig(),
+                    r = n.body,
+                    i = h(r, (0, d.b)());
                 if (
-                    (r.Z.dispatch({
+                    (a.Z.dispatch({
                         type: 'CHANGE_LOG_SET_CONFIG',
-                        config: t.body,
-                        latestChangelogId: a
+                        config: n.body,
+                        latestChangelogId: i
                     }),
-                    null == a || !0 !== n[a].show_on_startup)
+                    null == i || !0 !== r[i].show_on_startup)
                 )
                     return;
-                let d = l.Z.lastSeenChangelogId(),
-                    f = l.Z.lastSeenChangelogDate();
-                if (null != d && 0 >= o.default.compare(a, d)) return;
-                let _ = await i.Z.fetchChangelog(a, s.default.locale);
-                if (null != _) {
-                    if (null == f || null == l.Z.lastSeenChangelogDate()) {
-                        i.Z.markChangelogAsSeen(a, _.date);
+                let o = c.Z.lastSeenChangelogId(),
+                    _ = c.Z.lastSeenChangelogDate();
+                if (null != o && 0 >= u.default.compare(i, o)) return;
+                let p = await s.Z.fetchChangelog(i, l.default.locale);
+                if (null != p) {
+                    if (null == _ || null == c.Z.lastSeenChangelogDate()) {
+                        s.Z.markChangelogAsSeen(i, p.date);
                         return;
                     }
-                    !l.Z.isLocked() && new Date(_.date) > new Date(f) && (0, c.Z)();
+                    !c.Z.isLocked() && new Date(p.date) > new Date(_) && (0, f.Z)();
                 }
             });
     }
 }
-t.Z = new f();
+n.Z = new p();

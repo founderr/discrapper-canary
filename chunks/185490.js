@@ -1,7 +1,8 @@
-var r = n(790215),
-    i = Array.prototype.splice;
-t.Z = function (e) {
-    var t = this.__data__,
-        n = (0, r.Z)(t, e);
-    return !(n < 0) && (n == t.length - 1 ? t.pop() : i.call(t, n, 1), --this.size, !0);
-};
+var i = r(790215),
+    a = Array.prototype.splice;
+function s(e) {
+    var n = this.__data__,
+        r = (0, i.Z)(n, e);
+    return !(r < 0) && (r == n.length - 1 ? n.pop() : a.call(n, r, 1), --this.size, !0);
+}
+n.Z = s;

@@ -1,33 +1,41 @@
-n.d(t, {
+r.d(n, {
     Kh: function () {
-        return c;
+        return d;
     },
     ad: function () {
-        return d;
+        return f;
     }
 });
-var r = n(512722),
-    i = n.n(r),
-    a = n(493683),
-    s = n(727429),
-    o = n(592125),
-    l = n(703656),
-    u = n(981631);
-function c(e, t) {
-    let n = o.Z.getChannel(e);
-    if (null == n) return;
-    let r = (0, s.e)(n);
-    a.Z.preload(n.guild_id, n.id),
-        (0, l.uL)(u.Z5c.CHANNEL(r, n.id), {
+var i = r(512722),
+    a = r.n(i),
+    s = r(493683),
+    o = r(727429),
+    l = r(592125),
+    u = r(703656),
+    c = r(981631);
+function d(e, n) {
+    let r = l.Z.getChannel(e);
+    if (null == r) return;
+    let i = (0, o.e)(r);
+    s.Z.preload(r.guild_id, r.id),
+        (0, u.uL)(c.Z5c.CHANNEL(i, r.id), {
             openChannel: !0,
-            ...t
+            ...n
         });
 }
-function d(e, t) {
-    i()(null != e.parent_id, 'Thread must have a parent ID.');
-    let n = (0, s.e)(e);
-    (0, l.uL)(u.Z5c.CHANNEL(n, e.id), {
+function f(e, n) {
+    a()(null != e.parent_id, 'Thread must have a parent ID.');
+    let r = (0, o.e)(e);
+    (0, u.uL)(c.Z5c.CHANNEL(r, e.id), {
         openChannel: !0,
-        ...t
+        ...n
+    });
+}
+function _(e, n, r) {
+    invariant(null != e.parent_id, 'Thread must have a parent ID.');
+    let i = getGuildIdForGenericRedirect(e);
+    transitionTo(Routes.CHANNEL(i, e.id, n), {
+        openChannel: !0,
+        ...r
     });
 }

@@ -1,33 +1,77 @@
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(481060),
-    o = n(55935),
-    l = n(543388),
-    u = n(223021),
-    c = n(388032),
-    d = n(507304);
-function f(e) {
-    let { tooltipProps: t, timeFormatted: n, children: i, compact: a, timestamp: s, id: o } = e;
-    return (0, r.jsx)('time', {
-        ...t,
-        id: o,
-        dateTime: s.toISOString(),
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(481060),
+    l = r(55935),
+    u = r(543388),
+    c = r(223021),
+    d = r(388032),
+    f = r(507304);
+function _(e) {
+    let { children: n, className: r, compact: a = !1, timestamp: _, isVisibleOnlyOnHover: p = !1, cozyAlt: m = !1, isInline: g = !0, id: E, isEdited: v = !1, application: I } = e,
+        T = (0, l.Hg)(_),
+        b = a ? (0, l.vc)(_, 'LT') : (0, l.Y4)(_),
+        y = a ? (0, c.Z)(b) : null,
+        S = v ? d.intl.formatToPlainString(d.t.CDzOFR, { timeFormatted: T }) : T;
+    return (0, i.jsx)('span', {
+        className: s()(r, y, {
+            [f.timestamp]: !0,
+            [f.timestampVisibleOnHover]: p,
+            [f.timestampInline]: g,
+            [f.alt]: m
+        }),
         children:
-            null != i
-                ? i
-                : (0, r.jsxs)(r.Fragment, {
+            null == I
+                ? (0, i.jsx)(o.Tooltip, {
+                      text: (0, l.vc)(_, 'LLLL'),
+                      'aria-label': S,
+                      tooltipClassName: f.timestampTooltip,
+                      delay: 750,
+                      children: (e) =>
+                          (0, i.jsx)(h, {
+                              tooltipProps: e,
+                              timeFormatted: b,
+                              timestamp: _,
+                              id: E,
+                              compact: a,
+                              children: n
+                          })
+                  })
+                : (0, i.jsx)(u.Z, {
+                      application: I,
+                      timestamp: _,
+                      compact: a,
+                      children: (0, i.jsx)(h, {
+                          timeFormatted: b,
+                          timestamp: _,
+                          id: E,
+                          compact: a,
+                          children: n
+                      })
+                  })
+    });
+}
+function h(e) {
+    let { tooltipProps: n, timeFormatted: r, children: a, compact: s, timestamp: o, id: l } = e;
+    return (0, i.jsx)('time', {
+        ...n,
+        id: l,
+        dateTime: o.toISOString(),
+        children:
+            null != a
+                ? a
+                : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, r.jsx)('i', {
-                              className: d.separator,
+                          (0, i.jsx)('i', {
+                              className: f.separator,
                               'aria-hidden': !0,
-                              children: a ? '[' : ' \u2014 '
+                              children: s ? '[' : ' \u2014 '
                           }),
-                          n,
-                          a &&
-                              (0, r.jsxs)('i', {
-                                  className: d.separator,
+                          r,
+                          s &&
+                              (0, i.jsxs)('i', {
+                                  className: f.separator,
                                   'aria-hidden': !0,
                                   children: [']', ' ']
                               })
@@ -35,47 +79,4 @@ function f(e) {
                   })
     });
 }
-t.Z = function (e) {
-    let { children: t, className: n, compact: i = !1, timestamp: _, isVisibleOnlyOnHover: p = !1, cozyAlt: h = !1, isInline: m = !0, id: g, isEdited: E = !1, application: v } = e,
-        I = (0, o.Hg)(_),
-        T = i ? (0, o.vc)(_, 'LT') : (0, o.Y4)(_),
-        b = i ? (0, u.Z)(T) : null,
-        S = E ? c.intl.formatToPlainString(c.t.CDzOFR, { timeFormatted: I }) : I;
-    return (0, r.jsx)('span', {
-        className: a()(n, b, {
-            [d.timestamp]: !0,
-            [d.timestampVisibleOnHover]: p,
-            [d.timestampInline]: m,
-            [d.alt]: h
-        }),
-        children:
-            null == v
-                ? (0, r.jsx)(s.Tooltip, {
-                      text: (0, o.vc)(_, 'LLLL'),
-                      'aria-label': S,
-                      tooltipClassName: d.timestampTooltip,
-                      delay: 750,
-                      children: (e) =>
-                          (0, r.jsx)(f, {
-                              tooltipProps: e,
-                              timeFormatted: T,
-                              timestamp: _,
-                              id: g,
-                              compact: i,
-                              children: t
-                          })
-                  })
-                : (0, r.jsx)(l.Z, {
-                      application: v,
-                      timestamp: _,
-                      compact: i,
-                      children: (0, r.jsx)(f, {
-                          timeFormatted: T,
-                          timestamp: _,
-                          id: g,
-                          compact: i,
-                          children: t
-                      })
-                  })
-    });
-};
+n.Z = _;

@@ -1,19 +1,21 @@
-var r = n(192379),
-    i = n(476400),
-    a = n.n(i),
-    s = n(723184),
-    o = n(829307),
-    l = n(877837),
-    u = n(871810),
-    c = n(913727),
-    d = function (e) {
-        var t = e.hsl,
-            n = e.onChange,
-            i = e.pointer,
-            a = e.styles,
-            c = e.className,
-            d = (0, s.default)(
-                (0, o.Z)(
+var i = r(192379),
+    a = r(476400),
+    s = r.n(a),
+    o = r(723184),
+    l = r(829307),
+    u = r(877837),
+    c = r(871810),
+    d = r(913727),
+    f = function (e) {
+        var n = e.hsl,
+            r = e.onChange,
+            a = e.pointer,
+            s = e.styles,
+            d = void 0 === s ? {} : s,
+            f = e.className,
+            _ = void 0 === f ? '' : f,
+            h = (0, o.default)(
+                (0, l.Z)(
                     {
                         default: {
                             hue: {
@@ -23,38 +25,38 @@ var r = n(192379),
                             Hue: { radius: '2px' }
                         }
                     },
-                    void 0 === a ? {} : a
+                    d
                 )
             );
-        return r.createElement(
+        return i.createElement(
             'div',
             {
-                style: d.wrap || {},
-                className: 'slider-picker ' + (void 0 === c ? '' : c)
+                style: h.wrap || {},
+                className: 'slider-picker ' + _
             },
-            r.createElement(
+            i.createElement(
                 'div',
-                { style: d.hue },
-                r.createElement(l.PS, {
-                    style: d.Hue,
-                    hsl: t,
-                    pointer: i,
-                    onChange: n
+                { style: h.hue },
+                i.createElement(u.PS, {
+                    style: h.Hue,
+                    hsl: n,
+                    pointer: a,
+                    onChange: r
                 })
             ),
-            r.createElement(
+            i.createElement(
                 'div',
-                { style: d.swatches },
-                r.createElement(u.Z, {
-                    hsl: t,
-                    onClick: n
+                { style: h.swatches },
+                i.createElement(c.Z, {
+                    hsl: n,
+                    onClick: r
                 })
             )
         );
     };
-(d.propTypes = { styles: a().object }),
-    (d.defaultProps = {
-        pointer: c.Z,
+(f.propTypes = { styles: s().object }),
+    (f.defaultProps = {
+        pointer: d.Z,
         styles: {}
     }),
-    (0, l.t1)(d);
+    (0, u.t1)(f);

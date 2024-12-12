@@ -1,76 +1,83 @@
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140);
-let u = { enabled: !1 },
+var i,
+    a = r(442837),
+    s = r(570140);
+function o(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let l = { enabled: !1 },
+    u = {},
     c = {},
-    d = {},
-    f = !1;
-class _ extends (s = o.ZP.DeviceSettingsStore) {
+    d = !1;
+function f(e) {
+    let { userId: n, channelId: r, emoji: i } = e;
+    u[r] = {
+        ...u[r],
+        [n]: i
+    };
+}
+function _(e) {
+    let { userId: n, channelId: r } = e,
+        i = u[r];
+    if (null == i) return !1;
+    delete i[n];
+}
+function h(e) {
+    let { enabled: n } = e;
+    d = n;
+}
+function p(e) {
+    var n;
+    let { completingEmoji: r, completingUserId: i, waitingUserId: a, channelId: s } = e,
+        o = null !== (n = u[s]) && void 0 !== n ? n : {},
+        l = o[a];
+    if ((delete o[a], null == l)) return !1;
+    c[s] = {
+        ...c[s],
+        [a]: [l, r],
+        [i]: [r, l]
+    };
+}
+function m(e) {
+    var n;
+    let { firstUserId: r, secondUserId: i, channelId: a } = e,
+        s = null !== (n = c[a]) && void 0 !== n ? n : {};
+    delete s[r], delete s[i];
+}
+class g extends (i = a.ZP.DeviceSettingsStore) {
     initialize() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u;
-        f = e.enabled;
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l;
+        d = e.enabled;
     }
-    getWaitingHighFive(e, t) {
-        var n;
-        return null === (n = c[e]) || void 0 === n ? void 0 : n[t];
+    getWaitingHighFive(e, n) {
+        var r;
+        return null === (r = u[e]) || void 0 === r ? void 0 : r[n];
     }
-    getCompletedHighFive(e, t) {
-        var n;
-        return null === (n = d[e]) || void 0 === n ? void 0 : n[t];
+    getCompletedHighFive(e, n) {
+        var r;
+        return null === (r = c[e]) || void 0 === r ? void 0 : r[n];
     }
     getEnabled() {
-        return f;
+        return d;
     }
     getUserAgnosticState() {
-        return { enabled: f };
+        return { enabled: d };
     }
 }
-(a = 'HighFiveStore'),
-    (i = 'persistKey') in (r = _)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.Z = new _(l.Z, {
-        HIGH_FIVE_QUEUE: function (e) {
-            let { userId: t, channelId: n, emoji: r } = e;
-            c[n] = {
-                ...c[n],
-                [t]: r
-            };
-        },
-        HIGH_FIVE_REMOVE: function (e) {
-            let { userId: t, channelId: n } = e,
-                r = c[n];
-            if (null == r) return !1;
-            delete r[t];
-        },
-        HIGH_FIVE_SET_ENABLED: function (e) {
-            let { enabled: t } = e;
-            f = t;
-        },
-        HIGH_FIVE_COMPLETE: function (e) {
-            var t;
-            let { completingEmoji: n, completingUserId: r, waitingUserId: i, channelId: a } = e,
-                s = null !== (t = c[a]) && void 0 !== t ? t : {},
-                o = s[i];
-            if ((delete s[i], null == o)) return !1;
-            d[a] = {
-                ...d[a],
-                [i]: [o, n],
-                [r]: [n, o]
-            };
-        },
-        HIGH_FIVE_COMPLETE_CLEAR: function (e) {
-            var t;
-            let { firstUserId: n, secondUserId: r, channelId: i } = e,
-                a = null !== (t = d[i]) && void 0 !== t ? t : {};
-            delete a[n], delete a[r];
-        }
+o(g, 'persistKey', 'HighFiveStore'),
+    (n.Z = new g(s.Z, {
+        HIGH_FIVE_QUEUE: f,
+        HIGH_FIVE_REMOVE: _,
+        HIGH_FIVE_SET_ENABLED: h,
+        HIGH_FIVE_COMPLETE: p,
+        HIGH_FIVE_COMPLETE_CLEAR: m
     }));

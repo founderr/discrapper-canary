@@ -1,29 +1,42 @@
-n(47120);
-var r = n(570140),
-    i = n(287734),
-    a = n(147913),
-    s = n(703656),
-    o = n(769654),
-    l = n(131951),
-    u = n(944486),
-    c = n(914010),
-    d = n(981631);
-class f extends a.Z {
+var i = r(47120);
+var a = r(570140),
+    s = r(287734),
+    o = r(147913),
+    l = r(703656),
+    u = r(769654),
+    c = r(131951),
+    d = r(944486),
+    f = r(914010),
+    _ = r(981631);
+function h(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+class p extends o.Z {
     handleGuildCreate(e) {
-        let { guild: t } = e,
-            n = u.Z.getChannelId(d.ME),
-            r = u.Z.getVoiceChannelId();
-        t.id === n && (0, o.X)(t.id), t.id === r && !1 !== t.unavailable && null == r && i.default.selectVoiceChannel((0, u.C)(t.id));
+        let { guild: n } = e,
+            r = d.Z.getChannelId(_.ME),
+            i = d.Z.getVoiceChannelId();
+        n.id === r && (0, u.X)(n.id), n.id === i && !1 !== n.unavailable && null == i && s.default.selectVoiceChannel((0, d.C)(n.id));
     }
     handleChannelCreate(e) {
-        let { channel: t } = e;
-        if (t.type !== d.d4z.GROUP_DM) return;
-        let n = t.originChannelId,
-            r = u.Z.getChannelId(d.kod);
-        null == c.Z.getGuildId() && null != n && n === r && (0, s.uL)(d.Z5c.CHANNEL(d.ME, t.id)), null != n && n === u.Z.getVoiceChannelId() && i.default.selectVoiceChannel(t.id, l.Z.isVideoEnabled());
+        let { channel: n } = e;
+        if (n.type !== _.d4z.GROUP_DM) return;
+        let r = n.originChannelId,
+            i = d.Z.getChannelId(_.kod);
+        null == f.Z.getGuildId() && null != r && r === i && (0, l.uL)(_.Z5c.CHANNEL(_.ME, n.id)), null != r && r === d.Z.getVoiceChannelId() && s.default.selectVoiceChannel(n.id, c.Z.isVideoEnabled());
     }
     handleLogout() {
-        r.Z.dispatch({
+        a.Z.dispatch({
             type: 'VOICE_CHANNEL_SELECT',
             channelId: null,
             guildId: null,
@@ -32,23 +45,12 @@ class f extends a.Z {
         });
     }
     constructor(...e) {
-        var t, n, r;
         super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = {
+            h(this, 'actions', {
                 GUILD_CREATE: this.handleGuildCreate,
                 CHANNEL_CREATE: this.handleChannelCreate,
                 LOGOUT: this.handleLogout
-            }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+            });
     }
 }
-t.Z = new f();
+n.Z = new p();

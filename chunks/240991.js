@@ -1,40 +1,41 @@
-n.r(t),
-    n.d(t, {
+r.r(n),
+    r.d(n, {
         getOrParseBioAST: function () {
-            return g;
-        },
-        parseBioReact: function () {
-            return h;
-        },
-        parseBioReactWithCachedAST: function () {
             return E;
         },
-        parseBioReactWithoutScrolling: function () {
+        parseBioReact: function () {
+            return m;
+        },
+        parseBioReactWithCachedAST: function () {
             return v;
+        },
+        parseBioReactWithoutScrolling: function () {
+            return T;
         }
     });
-var r = n(392711),
-    i = n.n(r),
-    a = n(31775),
-    s = n.n(a),
-    o = n(302454),
-    l = n.n(o),
-    u = n(25209),
-    c = n(691424),
-    d = n(428595);
-n(454585);
-var f = n(364458);
-let _ = (0, f.Z)([d.Z.PROFILE_BIO_RULES, (0, c.Z)({ enableBuildOverrides: !1 })]),
-    p = new (s())({ max: 2000 }),
-    h = u.w4(_),
-    m = void 0;
-function g(e) {
-    let t = p.get(e);
-    return null != t ? t : ((t = m(e, !0)), p.set(e, t), t);
-}
+var i = r(392711),
+    a = r.n(i),
+    s = r(31775),
+    o = r.n(s),
+    l = r(302454),
+    u = r.n(l),
+    c = r(25209),
+    d = r(691424),
+    f = r(428595);
+r(454585);
+var _ = r(364458);
+let h = (0, _.Z)([f.Z.PROFILE_BIO_RULES, (0, d.Z)({ enableBuildOverrides: !1 })]),
+    p = new (o())({ max: 2000 }),
+    m = c.w4(h),
+    g = void 0;
 function E(e) {
-    if (0 === e.trim().length) return null;
-    let t = g(e);
-    return l().reactFor(l().ruleOutput(_, 'react'))(t);
+    let n = p.get(e);
+    return null != n ? n : ((n = g(e, !0)), p.set(e, n), n);
 }
-let v = u.w4((0, f.Z)([i().omit(_, ['link', 'url', 'autolink', 'customEmoji', 'emoji', 'commandMention']), { emoji: { react: () => null } }]));
+function v(e) {
+    if (0 === e.trim().length) return null;
+    let n = E(e);
+    return u().reactFor(u().ruleOutput(h, 'react'))(n);
+}
+let I = ['link', 'url', 'autolink', 'customEmoji', 'emoji', 'commandMention'],
+    T = c.w4((0, _.Z)([a().omit(h, I), { emoji: { react: () => null } }]));

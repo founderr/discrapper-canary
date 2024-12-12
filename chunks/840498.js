@@ -1,53 +1,56 @@
-n.d(t, {
+r.d(n, {
     RA: function () {
-        return function e(t) {
-            let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { limit: 200 };
-            if (Array.isArray(t)) {
-                let i = t.length;
-                for (let a = 0; a < i; a++) {
-                    let i = e(t[a], n);
-                    if (i === r) {
-                        t.length = a;
-                        break;
-                    }
-                    t[a] = i;
-                }
-            } else if ('text' !== t.type) {
-                if (((n.limit -= 1), n.limit <= 0)) return r;
-                Array.isArray(t.content) && (t.content = e(t.content, n)), 'list' === t.type && (t.items = t.items.map((t) => e(t, n)));
-            }
-            return t;
-        };
+        return u;
     },
     Rp: function () {
-        return i;
+        return c;
     },
     ge: function () {
-        return function e(t) {
-            let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-            if (Array.isArray(t)) {
-                let r = t.length,
-                    i = [];
-                for (let a = 0; a < r; a++)
-                    !(function (e, t) {
-                        if (Array.isArray(t)) {
-                            let { length: n } = t;
-                            for (let r = 0; r < n; r++) e.push(t[r]);
-                            return;
-                        }
-                        e.push(t);
-                    })(i, e(t[a], n));
-                return i;
-            }
-            return (null != t.content && (t.content = e(t.content, t)), 'inlineCode' === t.type && delete t.validationChildContent, 'list' === t.type && (t.items = t.items.map((t) => (Array.isArray(t) ? e(t, null) : t))), null != n && t.type === n.type) ? t.content : t;
-        };
+        return o;
     }
-}),
-    n(653041);
-let r = {};
-function i(e) {
-    return (function e(t) {
-        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-        return Array.isArray(t) ? t.forEach((t) => e(t, n)) : 'string' == typeof t.content ? n.push(t.content) : null != t.content && e(t.content, n), n;
-    })(e).join('');
+});
+var i = r(653041);
+function a(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+    return Array.isArray(e) ? e.forEach((e) => a(e, n)) : 'string' == typeof e.content ? n.push(e.content) : null != e.content && a(e.content, n), n;
+}
+function s(e, n) {
+    if (Array.isArray(n)) {
+        let { length: r } = n;
+        for (let i = 0; i < r; i++) e.push(n[i]);
+        return;
+    }
+    e.push(n);
+}
+function o(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+    if (Array.isArray(e)) {
+        let r = e.length,
+            i = [];
+        for (let a = 0; a < r; a++) s(i, o(e[a], n));
+        return i;
+    }
+    return (null != e.content && (e.content = o(e.content, e)), 'inlineCode' === e.type && delete e.validationChildContent, 'list' === e.type && (e.items = e.items.map((e) => (Array.isArray(e) ? o(e, null) : e))), null != n && e.type === n.type) ? e.content : e;
+}
+let l = {};
+function u(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { limit: 200 };
+    if (Array.isArray(e)) {
+        let r = e.length;
+        for (let i = 0; i < r; i++) {
+            let r = u(e[i], n);
+            if (r === l) {
+                e.length = i;
+                break;
+            }
+            e[i] = r;
+        }
+    } else if ('text' !== e.type) {
+        if (((n.limit -= 1), n.limit <= 0)) return l;
+        Array.isArray(e.content) && (e.content = u(e.content, n)), 'list' === e.type && (e.items = e.items.map((e) => u(e, n)));
+    }
+    return e;
+}
+function c(e) {
+    return a(e).join('');
 }

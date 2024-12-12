@@ -1,172 +1,174 @@
-n.d(t, {
+r.d(n, {
     DD: function () {
-        return D;
+        return w;
     },
     Iv: function () {
-        return O;
+        return L;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(442837),
-    l = n(481060),
-    u = n(596454),
-    c = n(122810),
-    d = n(74433),
-    f = n(750881),
-    _ = n(44315),
-    p = n(633302),
-    h = n(574176),
-    m = n(106301),
-    g = n(223135),
-    E = n(695346),
-    v = n(314897),
-    I = n(592125),
-    T = n(496675),
-    b = n(699516),
-    S = n(979651),
-    y = n(6074),
-    A = n(626135),
-    N = n(981631),
-    C = n(299334);
-let R = '14px';
-function O(e) {
-    let { emoji: t, className: n, animate: i = !0, hideTooltip: a, tooltipDelay: o } = e,
-        c = E.Yk.useSetting(),
-        d = null != t.id ? ':'.concat(t.name, ':') : p.ZP.translateSurrogatesToInlineEmoji(t.name),
-        f = {
-            className: s()(C.emoji, n),
-            emojiId: t.id,
-            emojiName: t.name,
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(120356),
+    l = r.n(o),
+    u = r(442837),
+    c = r(481060),
+    d = r(596454),
+    f = r(122810),
+    _ = r(74433),
+    h = r(750881),
+    p = r(44315),
+    m = r(633302),
+    g = r(574176),
+    E = r(106301),
+    v = r(223135),
+    I = r(695346),
+    T = r(314897),
+    b = r(592125),
+    y = r(496675),
+    S = r(699516),
+    A = r(979651),
+    N = r(6074),
+    C = r(626135),
+    R = r(981631),
+    O = r(299334);
+let D = '14px';
+function L(e) {
+    let { emoji: n, className: r, animate: i = !0, hideTooltip: s, tooltipDelay: o } = e,
+        u = I.Yk.useSetting(),
+        f = null != n.id ? ':'.concat(n.name, ':') : m.ZP.translateSurrogatesToInlineEmoji(n.name),
+        _ = {
+            className: l()(O.emoji, r),
+            emojiId: n.id,
+            emojiName: n.name,
             autoplay: !0,
-            animated: !!(t.animated && c && i)
+            animated: !!(n.animated && u && i)
         };
-    return a
-        ? (0, r.jsx)(u.Z, { ...f })
-        : (0, r.jsx)(l.Tooltip, {
-              text: d,
+    return s
+        ? (0, a.jsx)(d.Z, { ..._ })
+        : (0, a.jsx)(c.Tooltip, {
+              text: f,
               delay: o,
               children: (e) =>
-                  (0, r.jsx)(u.Z, {
+                  (0, a.jsx)(d.Z, {
                       ...e,
-                      ...f
+                      ..._
                   })
           });
 }
-let D = (e) => {
-    let { className: t, text: n } = e,
-        a = i.useRef(null),
-        o = i.useRef(null),
-        [u, c] = i.useState(!1);
-    return (
-        i.useLayoutEffect(() => {
-            let { current: e } = a,
-                { current: t } = o;
-            if (null != e && null != t) c(!(e.clientWidth < t.clientWidth && e.clientHeight <= t.clientHeight));
-        }, [n]),
-        (0, r.jsx)(l.Tooltip, {
-            text: u || null == n || '' === n ? null : n,
-            delay: 150,
-            'aria-label': !1,
-            children: (e) =>
-                (0, r.jsxs)(r.Fragment, {
-                    children: [
-                        (0, r.jsx)('div', {
-                            ...e,
-                            className: t,
-                            ref: a,
-                            children: n
-                        }),
-                        (0, r.jsx)('div', {
-                            className: s()(C.textRuler, t),
-                            ref: o,
-                            'aria-hidden': !0,
-                            children: n
-                        })
-                    ]
-                })
-        })
-    );
-};
-t.ZP = (e) => {
-    let { activities: t, applicationStream: n, className: a, textClassName: s, emojiClassName: u, animate: p = !0, hideTooltip: E = !1, hideEmoji: L = !1, user: x, hasQuest: w } = e,
-        P = null != t ? t.find((e) => e.type === N.IIU.CUSTOM_STATUS) : null,
-        M = (0, o.e7)([v.default], () => v.default.getId() === (null == x ? void 0 : x.id)),
-        k = (0, o.e7)([m.Z], () => (M ? m.Z.getHangStatusActivity() : null != t ? t.find((e) => e.type === N.IIU.HANG_STATUS) : null)),
-        U = (0, o.e7)([S.Z, I.Z], () => {
-            var e;
-            return null != k && null != x ? I.Z.getChannel(null === (e = S.Z.getVoiceStateForUser(x.id)) || void 0 === e ? void 0 : e.channelId) : null;
-        }),
-        { enableHangStatus: B } = h.n.useExperiment(
-            {
-                guildId: null == U ? void 0 : U.guild_id,
-                location: 'ActivityStatus'
-            },
-            { autoTrackExposure: !1 }
-        ),
-        G = (0, _.Sl)(N.Ilk.BRAND_345),
-        Z = null,
-        F = B && null != k && T.Z.can(N.Plq.CONNECT, U);
-    F
-        ? (Z = (0, r.jsx)(g.Z, {
-              className: u,
-              hangStatusActivity: k
-          }))
-        : null != P &&
-          null != P.emoji &&
-          !L &&
-          (Z = (0, r.jsx)(O, {
-              emoji: P.emoji,
-              animate: p,
-              hideTooltip: E,
-              className: u
-          }));
-    let { blockeeExperimentEnabled: V, blockerExperimentEnabled: j, analyticsEligible: H } = (0, f.NR)('activity-status-web'),
-        Y = (0, o.e7)([b.Z], () => (null != x ? b.Z.getRelationshipType(x.id) : N.OGo.NONE)),
-        W = (0, d.Z)(t, n, void 0, F, V),
-        K = (0, d.Z)(t, n, void 0, F, !1);
-    i.useEffect(() => {
-        if (null != K && null == K.activity && null != n && H) {
-            var e;
-            A.default.track(N.rMx.USER_VOICE_ACTIVITY_VIEWED, {
-                activity_user_id: null == x ? void 0 : x.id,
-                discoverable: null === (e = n.discoverable) || void 0 === e || e,
-                surface: 'activity-status-web',
-                relationship_type: Y,
-                treatment: (V && !1 === n.discoverable) || (j && Y === N.OGo.BLOCKED) ? f.h9.HIDE : f.h9.SHOW
-            });
-        }
-    }, [V, j, H, x, n, K, Y]);
-    let z = null == W ? void 0 : W.activityText,
-        q = null != z && '' !== z;
-    return (j && Y === N.OGo.BLOCKED) || (null == Z && !q)
-        ? null
-        : (0, r.jsxs)('div', {
-              className: a,
-              children: [
-                  Z,
-                  (0, r.jsx)(D, {
-                      text: z,
-                      className: s
-                  }),
-                  w &&
-                      (0, r.jsx)(l.QuestsIcon, {
-                          size: 'custom',
-                          className: C.questsIcon,
-                          height: R,
-                          width: R,
-                          color: G.hex
+let x = 150,
+    w = (e) => {
+        let { className: n, text: r } = e,
+            i = s.useRef(null),
+            o = s.useRef(null),
+            [u, d] = s.useState(!1);
+        return (
+            s.useLayoutEffect(() => {
+                let { current: e } = i,
+                    { current: n } = o;
+                if (null != e && null != n) d(!(e.clientWidth < n.clientWidth && e.clientHeight <= n.clientHeight));
+            }, [r]),
+            (0, a.jsx)(c.Tooltip, {
+                text: u || null == r || '' === r ? null : r,
+                delay: x,
+                'aria-label': !1,
+                children: (e) =>
+                    (0, a.jsxs)(a.Fragment, {
+                        children: [
+                            (0, a.jsx)('div', {
+                                ...e,
+                                className: n,
+                                ref: i,
+                                children: r
+                            }),
+                            (0, a.jsx)('div', {
+                                className: l()(O.textRuler, n),
+                                ref: o,
+                                'aria-hidden': !0,
+                                children: r
+                            })
+                        ]
+                    })
+            })
+        );
+    },
+    P = (e) => {
+        let { activities: n, applicationStream: r, className: i, textClassName: o, emojiClassName: l, animate: d = !0, hideTooltip: m = !1, hideEmoji: I = !1, user: x, hasQuest: P } = e,
+            M = null != n ? n.find((e) => e.type === R.IIU.CUSTOM_STATUS) : null,
+            k = (0, u.e7)([T.default], () => T.default.getId() === (null == x ? void 0 : x.id)),
+            U = (0, u.e7)([E.Z], () => (k ? E.Z.getHangStatusActivity() : null != n ? n.find((e) => e.type === R.IIU.HANG_STATUS) : null)),
+            B = (0, u.e7)([A.Z, b.Z], () => {
+                var e;
+                return null != U && null != x ? b.Z.getChannel(null === (e = A.Z.getVoiceStateForUser(x.id)) || void 0 === e ? void 0 : e.channelId) : null;
+            }),
+            { enableHangStatus: G } = g.n.useExperiment(
+                {
+                    guildId: null == B ? void 0 : B.guild_id,
+                    location: 'ActivityStatus'
+                },
+                { autoTrackExposure: !1 }
+            ),
+            Z = (0, p.Sl)(R.Ilk.BRAND_345),
+            F = null,
+            V = G && null != U && y.Z.can(R.Plq.CONNECT, B);
+        V
+            ? (F = (0, a.jsx)(v.Z, {
+                  className: l,
+                  hangStatusActivity: U
+              }))
+            : null != M &&
+              null != M.emoji &&
+              !I &&
+              (F = (0, a.jsx)(L, {
+                  emoji: M.emoji,
+                  animate: d,
+                  hideTooltip: m,
+                  className: l
+              }));
+        let { blockeeExperimentEnabled: j, blockerExperimentEnabled: H, analyticsEligible: Y } = (0, h.NR)('activity-status-web'),
+            W = (0, u.e7)([S.Z], () => (null != x ? S.Z.getRelationshipType(x.id) : R.OGo.NONE)),
+            K = (0, _.Z)(n, r, void 0, V, j),
+            z = (0, _.Z)(n, r, void 0, V, !1);
+        s.useEffect(() => {
+            if (null != z && null == z.activity && null != r && Y) {
+                var e;
+                C.default.track(R.rMx.USER_VOICE_ACTIVITY_VIEWED, {
+                    activity_user_id: null == x ? void 0 : x.id,
+                    discoverable: null === (e = r.discoverable) || void 0 === e || e,
+                    surface: 'activity-status-web',
+                    relationship_type: W,
+                    treatment: (j && !1 === r.discoverable) || (H && W === R.OGo.BLOCKED) ? h.h9.HIDE : h.h9.SHOW
+                });
+            }
+        }, [j, H, Y, x, r, z, W]);
+        let q = null == K ? void 0 : K.activityText,
+            Q = null != q && '' !== q;
+        return (H && W === R.OGo.BLOCKED) || (null == F && !Q)
+            ? null
+            : (0, a.jsxs)('div', {
+                  className: i,
+                  children: [
+                      F,
+                      (0, a.jsx)(w, {
+                          text: q,
+                          className: o
                       }),
-                  null != t && t.some((e) => (0, c.Z)(e, F))
-                      ? (0, r.jsx)(y.Z, {
-                            width: 16,
-                            height: 16,
-                            className: C.icon
-                        })
-                      : null
-              ]
-          });
-};
+                      P &&
+                          (0, a.jsx)(c.QuestsIcon, {
+                              size: 'custom',
+                              className: O.questsIcon,
+                              height: D,
+                              width: D,
+                              color: Z.hex
+                          }),
+                      null != n && n.some((e) => (0, f.Z)(e, V))
+                          ? (0, a.jsx)(N.Z, {
+                                width: 16,
+                                height: 16,
+                                className: O.icon
+                            })
+                          : null
+                  ]
+              });
+    };
+n.ZP = P;

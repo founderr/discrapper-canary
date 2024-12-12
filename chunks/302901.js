@@ -1,114 +1,112 @@
-n.d(t, {
+r.d(n, {
     Og: function () {
-        return p;
-    },
-    Xv: function () {
-        return v;
-    },
-    li: function () {
-        return h;
-    },
-    mh: function () {
-        return E;
-    },
-    px: function () {
         return m;
     },
-    wL: function () {
+    Xv: function () {
+        return b;
+    },
+    li: function () {
         return g;
+    },
+    mh: function () {
+        return T;
+    },
+    px: function () {
+        return E;
+    },
+    wL: function () {
+        return v;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(512722),
-    l = n.n(o),
-    u = n(995295),
-    c = n(251625),
-    d = n(872801),
-    f = n(905298);
-function _(e, t, n) {
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(120356),
+    l = r.n(o),
+    u = r(512722),
+    c = r.n(u),
+    d = r(995295),
+    f = r(251625),
+    _ = r(872801),
+    h = r(905298);
+function p(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let p = f.layerContainer;
-class h extends i.Component {
+let m = h.layerContainer;
+class g extends s.Component {
     componentWillUnmount() {
         this.state.layerContainerElement = null;
     }
     render() {
-        let { layerContext: e, children: t } = this.props,
-            { layerContainerElement: n } = this.state;
-        return (0, r.jsx)(e.Provider, {
-            value: this.getContextValue(n),
-            children: t
+        let { layerContext: e, children: n } = this.props,
+            { layerContainerElement: r } = this.state;
+        return (0, a.jsx)(e.Provider, {
+            value: this.getContextValue(r),
+            children: n
         });
     }
     constructor(...e) {
         super(...e),
-            _(this, 'state', { layerContainerElement: null }),
-            _(this, 'setLayerContainerElement', (e) => {
+            p(this, 'state', { layerContainerElement: null }),
+            p(this, 'setLayerContainerElement', (e) => {
                 this.setState({ layerContainerElement: e });
             }),
-            _(
+            p(
                 this,
                 'getContextValue',
-                (0, c.oH)((e) => [e, this.setLayerContainerElement])
+                (0, f.oH)((e) => [e, this.setLayerContainerElement])
             );
     }
 }
-let m = (e) => {
-    let { layerContext: t, className: n } = e,
-        [, a] = i.useContext(t);
-    return (0, r.jsx)('div', {
-        className: s()(p, n),
-        ref: a
-    });
-};
-function g(e) {
-    let t = (0, d.Z)(e, f.layerContainer);
-    return l()(null != t, 'Unexpected missing parent container'), t;
-}
 let E = (e) => {
-    let { layerContext: t, children: n } = e;
-    return (0, r.jsx)(t.Consumer, {
-        children: (e) =>
-            (function (e, t) {
-                let [n] = e;
-                return null == n ? null : u.createPortal(i.Children.only(t), n);
-            })(e, n)
+    let { layerContext: n, className: r } = e,
+        [, i] = s.useContext(n);
+    return (0, a.jsx)('div', {
+        className: l()(m, r),
+        ref: i
     });
 };
 function v(e) {
-    let t = i.createContext([null, () => {}]),
-        n = {
+    let n = (0, _.Z)(e, h.layerContainer);
+    return c()(null != n, 'Unexpected missing parent container'), n;
+}
+function I(e, n) {
+    let [r] = e;
+    return null == r ? null : d.createPortal(s.Children.only(n), r);
+}
+let T = (e) => {
+    let { layerContext: n, children: r } = e;
+    return (0, a.jsx)(n.Consumer, { children: (e) => I(e, r) });
+};
+function b(e) {
+    let n = s.createContext([null, () => {}]),
+        r = {
             LayerProvider: (e) =>
-                (0, r.jsx)(h, {
-                    layerContext: t,
+                (0, a.jsx)(g, {
+                    layerContext: n,
                     ...e
                 }),
             LayerContainer: (e) =>
-                (0, r.jsx)(m, {
-                    layerContext: t,
+                (0, a.jsx)(E, {
+                    layerContext: n,
                     ...e
                 }),
             Layer: (e) =>
-                (0, r.jsx)(E, {
-                    layerContext: t,
+                (0, a.jsx)(T, {
+                    layerContext: n,
                     ...e
                 }),
-            layerContext: t
+            layerContext: n
         };
-    return (n.LayerProvider.displayName = ''.concat(e, 'LayerProvider')), (n.LayerContainer.displayName = ''.concat(e, 'LayerContainer')), (n.Layer.displayName = ''.concat(e, 'Layer')), n;
+    return (r.LayerProvider.displayName = ''.concat(e, 'LayerProvider')), (r.LayerContainer.displayName = ''.concat(e, 'LayerContainer')), (r.Layer.displayName = ''.concat(e, 'Layer')), r;
 }

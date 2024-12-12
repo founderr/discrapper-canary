@@ -1,55 +1,52 @@
-n.d(t, {
+r.d(n, {
     L9: function () {
-        return _;
+        return f;
     },
     LY: function () {
-        return r;
+        return i;
     },
     ND: function () {
         return h;
     },
     WC: function () {
-        return g;
+        return m;
     },
     aW: function () {
-        return f;
+        return d;
     },
     af: function () {
-        return b;
-    },
-    k0: function () {
         return T;
     },
-    km: function () {
+    k0: function () {
         return I;
     },
-    no: function () {
-        return p;
-    },
-    o6: function () {
+    km: function () {
         return v;
     },
+    no: function () {
+        return _;
+    },
+    o6: function () {
+        return E;
+    },
     tI: function () {
-        return a;
+        return s;
     },
     ws: function () {
-        return i;
+        return a;
     },
     z8: function () {
-        return E;
+        return g;
     }
-}),
-    n(411104);
-var r,
-    i,
+});
+var i,
     a,
     s,
-    o,
-    l,
-    u = n(981631),
-    c = n(474936),
-    d = n(388032);
-function f(e) {
+    o = r(411104);
+var l = r(981631),
+    u = r(474936),
+    c = r(388032);
+function d(e) {
     switch (e) {
         case 480:
             return 480;
@@ -65,7 +62,7 @@ function f(e) {
             throw Error('Unknown resolution: '.concat(e));
     }
 }
-function _(e) {
+function f(e) {
     switch (e) {
         case 5:
             return 5;
@@ -79,8 +76,16 @@ function _(e) {
             throw Error('Unknown frame rate: '.concat(e));
     }
 }
-((s = r || (r = {}))[(s.RESOLUTION_480 = 480)] = 'RESOLUTION_480'), (s[(s.RESOLUTION_720 = 720)] = 'RESOLUTION_720'), (s[(s.RESOLUTION_1080 = 1080)] = 'RESOLUTION_1080'), (s[(s.RESOLUTION_1440 = 1440)] = 'RESOLUTION_1440'), (s[(s.RESOLUTION_SOURCE = 0)] = 'RESOLUTION_SOURCE'), ((o = i || (i = {}))[(o.FPS_5 = 5)] = 'FPS_5'), (o[(o.FPS_15 = 15)] = 'FPS_15'), (o[(o.FPS_30 = 30)] = 'FPS_30'), (o[(o.FPS_60 = 60)] = 'FPS_60'), ((l = a || (a = {}))[(l.PRESET_VIDEO = 1)] = 'PRESET_VIDEO'), (l[(l.PRESET_DOCUMENTS = 2)] = 'PRESET_DOCUMENTS'), (l[(l.PRESET_CUSTOM = 3)] = 'PRESET_CUSTOM');
-let p = {
+!(function (e) {
+    (e[(e.RESOLUTION_480 = 480)] = 'RESOLUTION_480'), (e[(e.RESOLUTION_720 = 720)] = 'RESOLUTION_720'), (e[(e.RESOLUTION_1080 = 1080)] = 'RESOLUTION_1080'), (e[(e.RESOLUTION_1440 = 1440)] = 'RESOLUTION_1440'), (e[(e.RESOLUTION_SOURCE = 0)] = 'RESOLUTION_SOURCE');
+})(i || (i = {})),
+    !(function (e) {
+        (e[(e.FPS_5 = 5)] = 'FPS_5'), (e[(e.FPS_15 = 15)] = 'FPS_15'), (e[(e.FPS_30 = 30)] = 'FPS_30'), (e[(e.FPS_60 = 60)] = 'FPS_60');
+    })(a || (a = {})),
+    !(function (e) {
+        (e[(e.PRESET_VIDEO = 1)] = 'PRESET_VIDEO'), (e[(e.PRESET_DOCUMENTS = 2)] = 'PRESET_DOCUMENTS'), (e[(e.PRESET_CUSTOM = 3)] = 'PRESET_CUSTOM');
+    })(s || (s = {}));
+let _ = {
         2: [
             {
                 resolution: 0,
@@ -115,17 +120,17 @@ let p = {
         {
             resolution: 0,
             fps: 60,
-            quality: c.ys.HIGH_STREAMING_QUALITY
+            quality: u.ys.HIGH_STREAMING_QUALITY
         },
         {
             resolution: 0,
             fps: 30,
-            quality: c.ys.HIGH_STREAMING_QUALITY
+            quality: u.ys.HIGH_STREAMING_QUALITY
         },
         {
             resolution: 0,
             fps: 15,
-            quality: c.ys.HIGH_STREAMING_QUALITY
+            quality: u.ys.HIGH_STREAMING_QUALITY
         },
         {
             resolution: 0,
@@ -135,44 +140,44 @@ let p = {
         {
             resolution: 1440,
             fps: 60,
-            guildPremiumTier: u.Eu4.TIER_2,
-            quality: c.ys.MID_STREAMING_QUALITY
+            guildPremiumTier: l.Eu4.TIER_2,
+            quality: u.ys.MID_STREAMING_QUALITY
         },
         {
             resolution: 1440,
             fps: 30,
-            guildPremiumTier: u.Eu4.TIER_2,
-            quality: c.ys.MID_STREAMING_QUALITY
+            guildPremiumTier: l.Eu4.TIER_2,
+            quality: u.ys.MID_STREAMING_QUALITY
         },
         {
             resolution: 1440,
             fps: 15,
-            guildPremiumTier: u.Eu4.TIER_2,
-            quality: c.ys.MID_STREAMING_QUALITY
+            guildPremiumTier: l.Eu4.TIER_2,
+            quality: u.ys.MID_STREAMING_QUALITY
         },
         {
             resolution: 1080,
             fps: 60,
-            guildPremiumTier: u.Eu4.TIER_2,
-            quality: c.ys.MID_STREAMING_QUALITY
+            guildPremiumTier: l.Eu4.TIER_2,
+            quality: u.ys.MID_STREAMING_QUALITY
         },
         {
             resolution: 1080,
             fps: 30,
-            guildPremiumTier: u.Eu4.TIER_2,
-            quality: c.ys.MID_STREAMING_QUALITY
+            guildPremiumTier: l.Eu4.TIER_2,
+            quality: u.ys.MID_STREAMING_QUALITY
         },
         {
             resolution: 1080,
             fps: 15,
-            guildPremiumTier: u.Eu4.TIER_2,
-            quality: c.ys.MID_STREAMING_QUALITY
+            guildPremiumTier: l.Eu4.TIER_2,
+            quality: u.ys.MID_STREAMING_QUALITY
         },
         {
             resolution: 720,
             fps: 60,
-            guildPremiumTier: u.Eu4.TIER_1,
-            quality: c.ys.MID_STREAMING_QUALITY
+            guildPremiumTier: l.Eu4.TIER_1,
+            quality: u.ys.MID_STREAMING_QUALITY
         },
         {
             resolution: 720,
@@ -189,8 +194,8 @@ let p = {
         {
             resolution: 480,
             fps: 60,
-            guildPremiumTier: u.Eu4.TIER_1,
-            quality: c.ys.MID_STREAMING_QUALITY
+            guildPremiumTier: l.Eu4.TIER_1,
+            quality: u.ys.MID_STREAMING_QUALITY
         },
         {
             resolution: 480,
@@ -205,17 +210,17 @@ let p = {
             fps: 5
         }
     ];
-function m(e, t) {
+function p(e, n) {
     return {
         value: e,
         get label() {
-            return null != t ? t() : e;
+            return null != n ? n() : e;
         }
     };
 }
-let g = [m(720), m(1080), m(1440), m(0, () => d.intl.string(d.t.XjXqzs))],
-    E = [m(720), m(1080), m(1440)],
-    v = (e) => (0 === e ? d.intl.string(d.t.XjXqzs) : d.intl.formatToPlainString(d.t.TEOC0N, { resolution: e })),
-    I = [m(480, () => v(480)), m(720, () => v(720)), m(1080, () => v(1080)), m(1440, () => v(1440)), m(0, () => v(0))],
-    T = [m(15), m(30), m(60)],
-    b = [m(15, () => d.intl.formatToPlainString(d.t['bW+JCQ'], { value: 15 })), m(30, () => d.intl.formatToPlainString(d.t['bW+JCQ'], { value: 30 })), m(60, () => d.intl.formatToPlainString(d.t['bW+JCQ'], { value: 60 }))];
+let m = [p(720), p(1080), p(1440), p(0, () => c.intl.string(c.t.XjXqzs))],
+    g = [p(720), p(1080), p(1440)],
+    E = (e) => (0 === e ? c.intl.string(c.t.XjXqzs) : c.intl.formatToPlainString(c.t.TEOC0N, { resolution: e })),
+    v = [p(480, () => E(480)), p(720, () => E(720)), p(1080, () => E(1080)), p(1440, () => E(1440)), p(0, () => E(0))],
+    I = [p(15), p(30), p(60)],
+    T = [p(15, () => c.intl.formatToPlainString(c.t['bW+JCQ'], { value: 15 })), p(30, () => c.intl.formatToPlainString(c.t['bW+JCQ'], { value: 30 })), p(60, () => c.intl.formatToPlainString(c.t['bW+JCQ'], { value: 60 }))];

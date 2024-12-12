@@ -1,76 +1,77 @@
-n.d(t, {
+r.d(n, {
     pi: function () {
-        return p;
+        return m;
     },
     te: function () {
-        return _;
+        return p;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(442837),
-    s = n(594174),
-    o = n(379357),
-    l = n(719247),
-    u = n(442550),
-    c = n(297781),
-    d = n(443487),
-    f = n(830677);
-let _ = [c.XF];
-function p(e) {
-    var t, n, r, i;
-    let o = (0, a.e7)([l.Z], () => l.Z.getMatchingActivity(e)),
-        u = (0, a.e7)([s.default], () => s.default.getUser(e.author_id));
-    if (null == o || null == u) return {};
-    let c = e.extra.entries[0],
-        d = null !== (r = null !== (n = o.state) && void 0 !== n ? n : null === (t = c.media.artists[0]) || void 0 === t ? void 0 : t.name) && void 0 !== r ? r : c.media.title,
-        f = null !== (i = o.details) && void 0 !== i ? i : c.media.title;
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(442837),
+    l = r(594174),
+    u = r(379357),
+    c = r(719247),
+    d = r(442550),
+    f = r(297781),
+    _ = r(443487),
+    h = r(830677);
+let p = [f.XF];
+function m(e) {
+    var n, r, i, a;
+    let s = (0, o.e7)([c.Z], () => c.Z.getMatchingActivity(e)),
+        u = (0, o.e7)([l.default], () => l.default.getUser(e.author_id));
+    if (null == s || null == u) return {};
+    let d = e.extra.entries[0],
+        f = null !== (i = null !== (r = s.state) && void 0 !== r ? r : null === (n = d.media.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== i ? i : d.media.title,
+        _ = null !== (a = s.details) && void 0 !== a ? a : d.media.title;
     return {
-        activity: o,
-        artist: d,
-        currentEntry: c,
-        title: f,
+        activity: s,
+        artist: f,
+        currentEntry: d,
+        title: _,
         user: u
     };
 }
-t.ZP = i.memo(function (e) {
-    let { entry: t, channel: n, selected: i, hovered: a } = e,
-        { activity: s, artist: l } = p(t),
-        { largeImage: h } = (0, o.rv)({ entry: t });
-    return null == s
-        ? (0, r.jsx)(d.cA, {})
-        : (0, r.jsxs)(d.Zb, {
+function g(e) {
+    let { entry: n, channel: r, selected: i, hovered: s } = e,
+        { activity: o, artist: l } = m(n),
+        { largeImage: c } = (0, u.rv)({ entry: n });
+    return null == o
+        ? (0, a.jsx)(_.cA, {})
+        : (0, a.jsxs)(_.Zb, {
               selected: i,
               children: [
-                  (0, r.jsxs)(d.e$, {
+                  (0, a.jsxs)(_.e$, {
                       children: [
-                          (0, r.jsx)(d.F9, {
-                              entry: t,
-                              channelId: n.id,
-                              guildId: n.guild_id
+                          (0, a.jsx)(_.F9, {
+                              entry: n,
+                              channelId: r.id,
+                              guildId: r.guild_id
                           }),
-                          (0, r.jsx)(d.ll, { children: l }),
-                          (0, r.jsx)(c.Gk, {
-                              location: c.Gt.CARD,
-                              children: _.map((e, n) =>
-                                  (0, r.jsx)(
+                          (0, a.jsx)(_.ll, { children: l }),
+                          (0, a.jsx)(f.Gk, {
+                              location: f.Gt.CARD,
+                              children: p.map((e, r) =>
+                                  (0, a.jsx)(
                                       e,
                                       {
-                                          entry: t,
-                                          hovered: a
+                                          entry: n,
+                                          hovered: s
                                       },
-                                      n
+                                      r
                                   )
                               )
                           })
                       ]
                   }),
-                  (0, r.jsx)(u.f, {
-                      src: null == h ? void 0 : h.src,
+                  (0, a.jsx)(d.f, {
+                      src: null == c ? void 0 : c.src,
                       size: 48,
-                      className: f.thumbnail
+                      className: h.thumbnail
                   })
               ]
           });
-});
+}
+n.ZP = s.memo(g);

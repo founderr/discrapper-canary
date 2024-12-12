@@ -1,48 +1,48 @@
-n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(442837),
-    s = n(481060),
-    o = n(661824),
-    l = n(913663),
-    u = n(268350),
-    c = n(419922),
-    d = n(388032),
-    f = n(573101);
-t.Z = i.memo(function (e) {
-    var t;
-    let { channelId: n, chatInputType: _ } = e,
-        [p, h] = i.useState(null),
-        m = (0, a.e7)([l.Z], () => l.Z.getStickerPreview(n, _.drafts.type));
-    return (null === (t = _.stickers) || void 0 === t ? void 0 : t.allowSending) && null != m && 0 !== m.length
-        ? (0, r.jsxs)(r.Fragment, {
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(442837),
+    l = r(481060),
+    u = r(661824),
+    c = r(913663),
+    d = r(268350),
+    f = r(419922),
+    _ = r(388032),
+    h = r(573101);
+function p(e) {
+    var n;
+    let { channelId: r, chatInputType: i } = e,
+        [p, m] = s.useState(null),
+        g = (0, o.e7)([c.Z], () => c.Z.getStickerPreview(r, i.drafts.type));
+    return (null === (n = i.stickers) || void 0 === n ? void 0 : n.allowSending) && null != g && 0 !== g.length
+        ? (0, a.jsxs)(a.Fragment, {
               children: [
-                  (0, r.jsx)('div', {
-                      className: f.stickerPreviews,
-                      children: m.map((e) =>
-                          (0, r.jsxs)(
+                  (0, a.jsx)('div', {
+                      className: h.stickerPreviews,
+                      children: g.map((e) =>
+                          (0, a.jsxs)(
                               'div',
                               {
-                                  className: f.stickerPreviewContainer,
+                                  className: h.stickerPreviewContainer,
                                   children: [
-                                      (0, r.jsx)(s.Clickable, {
-                                          onFocus: () => h(e.id),
-                                          onBlur: () => h(null),
-                                          className: f.closeButton,
-                                          'aria-label': d.intl.formatToPlainString(d.t.BGAQRU, { name: e.name }),
-                                          onClick: () => (0, u.qB)(n, _.drafts.type),
-                                          children: (0, r.jsx)('div', {
-                                              className: f.closeIconContainer,
-                                              children: (0, r.jsx)(s.CircleXIcon, {
+                                      (0, a.jsx)(l.Clickable, {
+                                          onFocus: () => m(e.id),
+                                          onBlur: () => m(null),
+                                          className: h.closeButton,
+                                          'aria-label': _.intl.formatToPlainString(_.t.BGAQRU, { name: e.name }),
+                                          onClick: () => (0, d.qB)(r, i.drafts.type),
+                                          children: (0, a.jsx)('div', {
+                                              className: h.closeIconContainer,
+                                              children: (0, a.jsx)(l.CircleXIcon, {
                                                   size: 'md',
                                                   color: 'currentColor',
-                                                  className: f.closeIcon
+                                                  className: h.closeIcon
                                               })
                                           })
                                       }),
-                                      (0, r.jsx)(c.ZP, {
+                                      (0, a.jsx)(f.ZP, {
                                           isInteracting: p === e.id,
-                                          className: f.stickerPreview,
+                                          className: h.stickerPreview,
                                           size: 48,
                                           sticker: e
                                       })
@@ -52,8 +52,9 @@ t.Z = i.memo(function (e) {
                           )
                       )
                   }),
-                  (0, r.jsx)(o.Z, { className: f.stickerPreviewDivider })
+                  (0, a.jsx)(u.Z, { className: h.stickerPreviewDivider })
               ]
           })
         : null;
-});
+}
+n.Z = s.memo(p);

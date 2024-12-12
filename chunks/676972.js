@@ -1,29 +1,30 @@
-var r = n(957578).Buffer;
-function i(e, t) {
-    (this._block = r.alloc(e)), (this._finalSize = t), (this._blockSize = e), (this._len = 0);
+var i = r(957578).Buffer;
+function a(e, n) {
+    (this._block = i.alloc(e)), (this._finalSize = n), (this._blockSize = e), (this._len = 0);
 }
-(i.prototype.update = function (e, t) {
-    'string' == typeof e && ((t = t || 'utf8'), (e = r.from(e, t)));
-    for (var n = this._block, i = this._blockSize, a = e.length, s = this._len, o = 0; o < a; ) {
-        for (var l = s % i, u = Math.min(a - o, i - l), c = 0; c < u; c++) n[l + c] = e[o + c];
-        (s += u), (o += u), s % i == 0 && this._update(n);
+(a.prototype.update = function (e, n) {
+    'string' == typeof e && ((n = n || 'utf8'), (e = i.from(e, n)));
+    for (var r = this._block, a = this._blockSize, s = e.length, o = this._len, l = 0; l < s; ) {
+        for (var u = o % a, c = Math.min(s - l, a - u), d = 0; d < c; d++) r[u + d] = e[l + d];
+        (o += c), (l += c), o % a == 0 && this._update(r);
     }
-    return (this._len += a), this;
+    return (this._len += s), this;
 }),
-    (i.prototype.digest = function (e) {
-        var t = this._len % this._blockSize;
-        (this._block[t] = 128), this._block.fill(0, t + 1), t >= this._finalSize && (this._update(this._block), this._block.fill(0));
-        var n = 8 * this._len;
-        if (n <= 4294967295) this._block.writeUInt32BE(n, this._blockSize - 4);
+    (a.prototype.digest = function (e) {
+        var n = this._len % this._blockSize;
+        (this._block[n] = 128), this._block.fill(0, n + 1), n >= this._finalSize && (this._update(this._block), this._block.fill(0));
+        var r = 8 * this._len;
+        if (r <= 4294967295) this._block.writeUInt32BE(r, this._blockSize - 4);
         else {
-            var r = (4294967295 & n) >>> 0;
-            this._block.writeUInt32BE((n - r) / 4294967296, this._blockSize - 8), this._block.writeUInt32BE(r, this._blockSize - 4);
+            var i = (4294967295 & r) >>> 0,
+                a = (r - i) / 4294967296;
+            this._block.writeUInt32BE(a, this._blockSize - 8), this._block.writeUInt32BE(i, this._blockSize - 4);
         }
         this._update(this._block);
-        var i = this._hash();
-        return e ? i.toString(e) : i;
+        var s = this._hash();
+        return e ? s.toString(e) : s;
     }),
-    (i.prototype._update = function () {
+    (a.prototype._update = function () {
         throw Error('_update must be implemented by subclass');
     }),
-    (e.exports = i);
+    (e.exports = a);

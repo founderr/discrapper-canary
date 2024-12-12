@@ -1,115 +1,111 @@
-n.d(t, {
+r.d(n, {
     W: function () {
-        return d;
+        return v;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(468204),
-    s = n(348288),
-    o = ['children'];
-function l(e, t) {
-    (null == t || t > e.length) && (t = e.length);
-    for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
-    return r;
+var i = r(200651),
+    a = r(192379),
+    s = r(468204),
+    o = r(348288),
+    l = ['children'];
+function u(e, n) {
+    return h(e) || _(e, n) || d(e, n) || c();
 }
-var u = 0,
-    c = Symbol.for('__REACT_DND_CONTEXT_INSTANCE__'),
-    d = (0, i.memo)(function (e) {
-        var t,
-            n,
-            d = e.children;
-        var _ =
-                ((n = 2),
-                (function (e) {
-                    if (Array.isArray(e)) return e;
-                })(
-                    (t = (function (e) {
-                        return 'manager' in e
-                            ? [{ dragDropManager: e.manager }, !1]
-                            : [
-                                  (function (e) {
-                                      var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f(),
-                                          n = arguments.length > 2 ? arguments[2] : void 0,
-                                          r = arguments.length > 3 ? arguments[3] : void 0;
-                                      return !t[c] && (t[c] = { dragDropManager: (0, a.i)(e, t, n, r) }), t[c];
-                                  })(e.backend, e.context, e.options, e.debugMode),
-                                  !e.context
-                              ];
-                    })(
-                        (function (e, t) {
-                            if (null == e) return {};
-                            var n,
-                                r,
-                                i = (function (e, t) {
-                                    if (null == e) return {};
-                                    var n,
-                                        r,
-                                        i = {},
-                                        a = Object.keys(e);
-                                    for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && (i[n] = e[n]);
-                                    return i;
-                                })(e, t);
-                            if (Object.getOwnPropertySymbols) {
-                                var a = Object.getOwnPropertySymbols(e);
-                                for (r = 0; r < a.length; r++) {
-                                    if (((n = a[r]), !(t.indexOf(n) >= 0))) Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-                                }
-                            }
-                            return i;
-                        })(e, o)
-                    ))
-                ) ||
-                    (function (e, t) {
-                        var n,
-                            r,
-                            i = null == e ? null : ('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator'];
-                        if (null != i) {
-                            var a = [],
-                                s = !0,
-                                o = !1;
-                            try {
-                                for (i = i.call(e); !(s = (n = i.next()).done) && (a.push(n.value), !t || a.length !== t); s = !0);
-                            } catch (e) {
-                                (o = !0), (r = e);
-                            } finally {
-                                try {
-                                    !s && null != i.return && i.return();
-                                } finally {
-                                    if (o) throw r;
-                                }
-                            }
-                            return a;
-                        }
-                    })(t, 2) ||
-                    (function (e, t) {
-                        if (e) {
-                            if ('string' == typeof e) return l(e, t);
-                            var n = Object.prototype.toString.call(e).slice(8, -1);
-                            if (('Object' === n && e.constructor && (n = e.constructor.name), 'Map' === n || 'Set' === n)) return Array.from(e);
-                            if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return l(e, t);
-                        }
-                    })(t, n) ||
-                    (function () {
-                        throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
-                    })()),
-            p = _[0],
-            h = _[1];
+function c() {
+    throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
+}
+function d(e, n) {
+    if (e) {
+        if ('string' == typeof e) return f(e, n);
+        var r = Object.prototype.toString.call(e).slice(8, -1);
+        if (('Object' === r && e.constructor && (r = e.constructor.name), 'Map' === r || 'Set' === r)) return Array.from(e);
+        if ('Arguments' === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)) return f(e, n);
+    }
+}
+function f(e, n) {
+    (null == n || n > e.length) && (n = e.length);
+    for (var r = 0, i = Array(n); r < n; r++) i[r] = e[r];
+    return i;
+}
+function _(e, n) {
+    var r,
+        i,
+        a = null == e ? null : ('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator'];
+    if (null != a) {
+        var s = [],
+            o = !0,
+            l = !1;
+        try {
+            for (a = a.call(e); !(o = (r = a.next()).done) && (s.push(r.value), !n || s.length !== n); o = !0);
+        } catch (e) {
+            (l = !0), (i = e);
+        } finally {
+            try {
+                !o && null != a.return && a.return();
+            } finally {
+                if (l) throw i;
+            }
+        }
+        return s;
+    }
+}
+function h(e) {
+    if (Array.isArray(e)) return e;
+}
+function p(e, n) {
+    if (null == e) return {};
+    var r,
+        i,
+        a = m(e, n);
+    if (Object.getOwnPropertySymbols) {
+        var s = Object.getOwnPropertySymbols(e);
+        for (i = 0; i < s.length; i++) {
+            if (((r = s[i]), !(n.indexOf(r) >= 0))) Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+        }
+    }
+    return a;
+}
+function m(e, n) {
+    if (null == e) return {};
+    var r,
+        i,
+        a = {},
+        s = Object.keys(e);
+    for (i = 0; i < s.length; i++) (r = s[i]), !(n.indexOf(r) >= 0) && (a[r] = e[r]);
+    return a;
+}
+var g = 0,
+    E = Symbol.for('__REACT_DND_CONTEXT_INSTANCE__'),
+    v = (0, a.memo)(function (e) {
+        var n = e.children,
+            r = u(I(p(e, l)), 2),
+            s = r[0],
+            c = r[1];
         return (
-            (0, i.useEffect)(function () {
-                if (h) {
-                    var e = f();
+            (0, a.useEffect)(function () {
+                if (c) {
+                    var e = b();
                     return (
-                        ++u,
+                        ++g,
                         function () {
-                            0 == --u && (e[c] = null);
+                            0 == --g && (e[E] = null);
                         }
                     );
                 }
             }, []),
-            (0, r.jsx)(s.L.Provider, Object.assign({ value: p }, { children: d }), void 0)
+            (0, i.jsx)(o.L.Provider, Object.assign({ value: s }, { children: n }), void 0)
         );
     });
-function f() {
-    return void 0 !== n.g ? n.g : window;
+function I(e) {
+    return 'manager' in e ? [{ dragDropManager: e.manager }, !1] : [T(e.backend, e.context, e.options, e.debugMode), !e.context];
+}
+function T(e) {
+    var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b(),
+        r = arguments.length > 2 ? arguments[2] : void 0,
+        i = arguments.length > 3 ? arguments[3] : void 0,
+        a = n;
+    return !a[E] && (a[E] = { dragDropManager: (0, s.i)(e, n, r, i) }), a[E];
+}
+function b() {
+    return void 0 !== r.g ? r.g : window;
 }

@@ -1,4 +1,5 @@
-var r = n(661233);
-e.exports = function (e) {
-    return e == e && !r(e);
-};
+var i = r(661233);
+function a(e) {
+    return e == e && !i(e);
+}
+e.exports = a;

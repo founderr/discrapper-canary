@@ -1,53 +1,61 @@
-n(653041), n(47120);
-var r = n(147913),
-    i = n(579806);
-n(987170);
-var a = n(998502);
-let s = [0, 0],
-    o = [];
-function l(e) {
-    for (let t of e) if (t[0] === s[0] && t[1] === s[1]) return !0;
+var i = r(653041);
+var a = r(47120);
+var s = r(147913),
+    o = r(579806);
+r(987170);
+var l = r(998502);
+function u(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let c = [0, 0];
+function d(e) {
+    let n = e.toString(16);
+    for (; n.length < 4; ) n = '0' + n;
+    return n;
+}
+let f = [];
+function _(e) {
+    for (let n of e) if (n[0] === c[0] && n[1] === c[1]) return !0;
     return !1;
 }
-let u = !1;
-function c() {
+let h = !1;
+function p() {
     let e = {};
-    for (let t of o)
-        if (l(t.gpus)) {
-            let n = t.experiment.getCurrentConfig({ location: 'updateFlags' });
+    for (let n of f)
+        if (_(n.gpus)) {
+            let r = n.experiment.getCurrentConfig({ location: 'updateFlags' });
             e = {
                 ...e,
-                ...n
+                ...r
             };
         }
-    a.ZP.setChromiumSwitches(e);
+    l.ZP.setChromiumSwitches(e);
 }
-class d extends r.Z {
+class m extends s.Z {
     constructor(...e) {
-        var t, n, r;
         super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = {
+            u(this, 'actions', {
                 POST_CONNECTION_OPEN: async () => {
                     try {
-                        var e, t, n, r;
-                        if (u || (null === (t = window.DiscordNative) || void 0 === t ? void 0 : null === (e = t.gpuSettings) || void 0 === e ? void 0 : e.setChromiumSwitches) == null) return;
-                        let a = await i.Z.processUtils.getSystemInfo();
-                        for (let e of null !== (r = null === (n = a.electronGPUInfo) || void 0 === n ? void 0 : n.gpuDevice) && void 0 !== r ? r : []) !0 === e.active && (s = [e.vendorId, e.deviceId]);
-                        for (let e of ((u = !0), o)) l(e.gpus) && e.experiment.subscribe({ location: 'GPU experiment subscription' }, c);
-                        c();
+                        var e, n, r, i;
+                        if (h || (null === (n = window.DiscordNative) || void 0 === n ? void 0 : null === (e = n.gpuSettings) || void 0 === e ? void 0 : e.setChromiumSwitches) == null) return;
+                        let a = await o.Z.processUtils.getSystemInfo();
+                        for (let e of null !== (i = null === (r = a.electronGPUInfo) || void 0 === r ? void 0 : r.gpuDevice) && void 0 !== i ? i : []) !0 === e.active && (c = [e.vendorId, e.deviceId]);
+                        for (let e of ((h = !0), f)) _(e.gpus) && e.experiment.subscribe({ location: 'GPU experiment subscription' }, p);
+                        p();
                     } catch (e) {}
                 }
-            }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+            });
     }
 }
-t.Z = new d();
+n.Z = new m();

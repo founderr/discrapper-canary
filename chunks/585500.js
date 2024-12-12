@@ -1,191 +1,198 @@
-n.d(t, {
+r.d(n, {
     D: function () {
-        return f;
+        return b;
     }
-}),
-    n(47120);
-var r = n(113434),
-    i = n(918701),
-    a = n(5881),
-    s = n(665430),
-    o = n(566078),
-    l = n(388032);
-let u = (0, a.T)({});
-function c(e, t, n) {
-    return n ? l.intl.formatToParts(e, t) : l.intl.formatToPlainString(e, t);
+});
+var i = r(47120);
+var a = r(113434),
+    s = r(918701),
+    o = r(5881),
+    l = r(665430),
+    u = r(566078),
+    c = r(388032);
+let d = (0, o.T)({});
+function f(e, n, r) {
+    return r ? c.intl.formatToParts(e, n) : c.intl.formatToPlainString(e, n);
 }
-let d = (e) => {
+function _(e) {
+    var n;
+    let { quest: r, taskDetails: i, connectedConsoleLinkOnClick: a, withoutMarkdown: o, isEligibleForMobileGA: l } = e,
+        d = u.r.build(r.config).defaultReward.messages.nameWithArticle,
+        _ = (null === (n = r.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
+        h = (0, s.Kr)(r.config),
+        { targetMinutes: p } = i,
+        m = r.config.messages.gameTitle;
+    return f(
+        null != h ? (_ && !l ? c.t.TZT3Oj : c.t.Ta44ur) : c.t.NIimTk,
+        {
+            gameTitle: m,
+            reward: d,
+            streamingDurationRequirement: p,
+            rewardNameWithArticle: d,
+            targetMinutes: p,
+            onClick: a,
+            duration: h
+        },
+        o
+    );
+}
+function h(e) {
+    let { quest: n, taskDetails: r, withoutMarkdown: i } = e,
+        a = u.r.build(n.config).defaultReward.messages.nameWithArticle,
+        o = (0, s.Kr)(n.config),
+        { targetMinutes: l } = r,
+        d = n.config.messages.gameTitle;
+    return f(
+        null != o ? c.t.Ta44ur : c.t.NIimTk,
+        {
+            gameTitle: d,
+            targetMinutes: l,
+            rewardNameWithArticle: a,
+            duration: o
+        },
+        i
+    );
+}
+function p(e) {
+    let { quest: n, taskDetails: r, withoutMarkdown: i } = e,
+        a = u.r.build(n.config).defaultReward.messages.nameWithArticle,
+        o = (0, s.Kr)(n.config),
+        { targetMinutes: l } = r,
+        d = n.config.messages.gameTitle;
+    return f(
+        null != o ? c.t.AwuMRU : c.t.FZL5Q0,
+        {
+            gameTitle: d,
+            streamingDurationRequirement: l,
+            rewardNameWithArticle: a,
+            duration: o,
+            questReward: a
+        },
+        i
+    );
+}
+function m(e) {
+    let { useV2Variants: n, quest: r, taskDetails: i, withoutMarkdown: a } = e,
+        { targetMinutes: s } = i,
+        o = r.config.messages.gameTitle;
+    return f(
+        n ? c.t['a/ia7O'] : c.t.OVMlGx,
+        {
+            gameTitle: o,
+            streamingDurationRequirement: s
+        },
+        a
+    );
+}
+function g(e, n) {
+    var r;
+    let i = u.r.build(e.config).defaultReward.messages.nameWithArticle,
+        a = null === (r = e.config.videoMetadata) || void 0 === r ? void 0 : r.messages.videoTitle;
+    return null == a
+        ? f(c.t['g+InPD'], { rewardNameWithArticle: i }, n)
+        : f(
+              c.t.yMsQ7e,
+              {
+                  videoTitle: a,
+                  rewardNameWithArticle: i
+              },
+              n
+          );
+}
+function E(e) {
+    let { quest: n, taskDetails: r, withoutMarkdown: i } = e,
+        a = r.targetMinutes,
+        s = u.r.build(n.config).defaultReward.messages.nameWithArticle;
+    return f(
+        c.t.VYwSSk,
+        {
+            streamingDurationRequirement: a,
+            questReward: s
+        },
+        i
+    );
+}
+function v(e) {
+    let { quest: n, taskDetails: r, isEligibleForMobileGA: i, useV2Variants: a = !1, connectedConsoleLinkOnClick: o, thirdPartyTaskDetails: l, withoutMarkdown: d } = e,
+        v = n.config.messages.gameTitle,
+        I = u.r.build(n.config).defaultReward.messages.nameWithArticle,
+        { targetMinutes: T } = r,
+        b = (0, s.Kr)(n.config);
+    if ((0, s.$J)(n) && (0, s.$H)(n))
+        return _({
+            quest: n,
+            taskDetails: r,
+            connectedConsoleLinkOnClick: o,
+            withoutMarkdown: d,
+            isEligibleForMobileGA: i
+        });
+    if ((0, s.$J)(n))
+        return h({
+            quest: n,
+            taskDetails: r,
+            withoutMarkdown: d
+        });
+    if ((0, s.$H)(n))
+        return p({
+            quest: n,
+            taskDetails: r,
+            withoutMarkdown: d
+        });
+    else if ((0, s.oo)({ quest: n }))
+        return m({
+            useV2Variants: a,
+            quest: n,
+            taskDetails: r,
+            withoutMarkdown: d
+        });
+    else if ((0, s.q8)(n)) return g(n, d);
+    else if ((0, s.pO)(n))
+        return E({
+            quest: n,
+            taskDetails: r,
+            withoutMarkdown: d
+        });
+    return null != l
+        ? l.description
+        : f(
+              null != b ? c.t.BLyDvL : a ? c.t['hkJ+Gh'] : c.t.j9iEPD,
+              {
+                  gameTitle: v,
+                  streamingDurationRequirement: T,
+                  questReward: I,
+                  duration: b
+              },
+              d
+          );
+}
+let I = (e) => {
     try {
-        let t = '';
+        let n = '';
         if ('string' == typeof e) return e;
         if (Array.isArray(e)) {
-            for (let n of e) t += d(n.content);
-            return t;
+            for (let r of e) n += I(r.content);
+            return n;
         }
-        return d(e.content);
+        return I(e.content);
     } catch (e) {
-        return u.error('Failed to convert ASTNode to string', e), '';
+        return d.error('Failed to convert ASTNode to string', e), '';
     }
 };
-function f(e) {
-    let { quest: t, location: n, questContent: a } = e,
-        u = (0, s.pF)({ location: n }),
-        f = (0, r.uA)({
-            quest: t,
-            questContent: a
+function T(e) {
+    let n = v(e);
+    return e.withoutMarkdown ? I(n) : n;
+}
+function b(e) {
+    let { quest: n, location: r, questContent: i } = e,
+        s = (0, l.pF)({ location: r }),
+        o = (0, a.uA)({
+            quest: n,
+            questContent: i
         });
-    return (function (e) {
-        let t = (function (e) {
-            let { quest: t, taskDetails: n, isEligibleForMobileGA: r, useV2Variants: a = !1, connectedConsoleLinkOnClick: s, thirdPartyTaskDetails: u, withoutMarkdown: d } = e,
-                f = t.config.messages.gameTitle,
-                _ = o.r.build(t.config).defaultReward.messages.nameWithArticle,
-                { targetMinutes: p } = n,
-                h = (0, i.Kr)(t.config);
-            if ((0, i.$J)(t) && (0, i.$H)(t))
-                return (function (e) {
-                    var t;
-                    let { quest: n, taskDetails: r, connectedConsoleLinkOnClick: a, withoutMarkdown: s, isEligibleForMobileGA: u } = e,
-                        d = o.r.build(n.config).defaultReward.messages.nameWithArticle,
-                        f = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-                        _ = (0, i.Kr)(n.config),
-                        { targetMinutes: p } = r,
-                        h = n.config.messages.gameTitle;
-                    return c(
-                        null != _ ? (f && !u ? l.t.TZT3Oj : l.t.Ta44ur) : l.t.NIimTk,
-                        {
-                            gameTitle: h,
-                            reward: d,
-                            streamingDurationRequirement: p,
-                            rewardNameWithArticle: d,
-                            targetMinutes: p,
-                            onClick: a,
-                            duration: _
-                        },
-                        s
-                    );
-                })({
-                    quest: t,
-                    taskDetails: n,
-                    connectedConsoleLinkOnClick: s,
-                    withoutMarkdown: d,
-                    isEligibleForMobileGA: r
-                });
-            if ((0, i.$J)(t))
-                return (function (e) {
-                    let { quest: t, taskDetails: n, withoutMarkdown: r } = e,
-                        a = o.r.build(t.config).defaultReward.messages.nameWithArticle,
-                        s = (0, i.Kr)(t.config),
-                        { targetMinutes: u } = n,
-                        d = t.config.messages.gameTitle;
-                    return c(
-                        null != s ? l.t.Ta44ur : l.t.NIimTk,
-                        {
-                            gameTitle: d,
-                            targetMinutes: u,
-                            rewardNameWithArticle: a,
-                            duration: s
-                        },
-                        r
-                    );
-                })({
-                    quest: t,
-                    taskDetails: n,
-                    withoutMarkdown: d
-                });
-            if ((0, i.$H)(t))
-                return (function (e) {
-                    let { quest: t, taskDetails: n, withoutMarkdown: r } = e,
-                        a = o.r.build(t.config).defaultReward.messages.nameWithArticle,
-                        s = (0, i.Kr)(t.config),
-                        { targetMinutes: u } = n,
-                        d = t.config.messages.gameTitle;
-                    return c(
-                        null != s ? l.t.AwuMRU : l.t.FZL5Q0,
-                        {
-                            gameTitle: d,
-                            streamingDurationRequirement: u,
-                            rewardNameWithArticle: a,
-                            duration: s,
-                            questReward: a
-                        },
-                        r
-                    );
-                })({
-                    quest: t,
-                    taskDetails: n,
-                    withoutMarkdown: d
-                });
-            else if ((0, i.oo)({ quest: t }))
-                return (function (e) {
-                    let { useV2Variants: t, quest: n, taskDetails: r, withoutMarkdown: i } = e,
-                        { targetMinutes: a } = r,
-                        s = n.config.messages.gameTitle;
-                    return c(
-                        t ? l.t['a/ia7O'] : l.t.OVMlGx,
-                        {
-                            gameTitle: s,
-                            streamingDurationRequirement: a
-                        },
-                        i
-                    );
-                })({
-                    useV2Variants: a,
-                    quest: t,
-                    taskDetails: n,
-                    withoutMarkdown: d
-                });
-            else if ((0, i.q8)(t))
-                return (function (e, t) {
-                    var n;
-                    let r = o.r.build(e.config).defaultReward.messages.nameWithArticle,
-                        i = null === (n = e.config.videoMetadata) || void 0 === n ? void 0 : n.messages.videoTitle;
-                    return null == i
-                        ? c(l.t['g+InPD'], { rewardNameWithArticle: r }, t)
-                        : c(
-                              l.t.yMsQ7e,
-                              {
-                                  videoTitle: i,
-                                  rewardNameWithArticle: r
-                              },
-                              t
-                          );
-                })(t, d);
-            else if ((0, i.pO)(t))
-                return (function (e) {
-                    let { quest: t, taskDetails: n, withoutMarkdown: r } = e,
-                        i = n.targetMinutes,
-                        a = o.r.build(t.config).defaultReward.messages.nameWithArticle;
-                    return c(
-                        l.t.VYwSSk,
-                        {
-                            streamingDurationRequirement: i,
-                            questReward: a
-                        },
-                        r
-                    );
-                })({
-                    quest: t,
-                    taskDetails: n,
-                    withoutMarkdown: d
-                });
-            return null != u
-                ? u.description
-                : c(
-                      null != h ? l.t.BLyDvL : a ? l.t['hkJ+Gh'] : l.t.j9iEPD,
-                      {
-                          gameTitle: f,
-                          streamingDurationRequirement: p,
-                          questReward: _,
-                          duration: h
-                      },
-                      d
-                  );
-        })(e);
-        return e.withoutMarkdown ? d(t) : t;
-    })({
+    return T({
         ...e,
-        isEligibleForMobileGA: u,
-        connectedConsoleLinkOnClick: f,
+        isEligibleForMobileGA: s,
+        connectedConsoleLinkOnClick: o,
         withoutMarkdown: !1
     });
 }

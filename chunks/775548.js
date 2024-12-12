@@ -1,68 +1,57 @@
-var r = n(29513);
-function i() {
+var i = r(29513);
+function a() {
     var e = {},
-        t = 0,
         n = 0,
-        r = 0;
+        r = 0,
+        i = 0;
     return {
-        add: function (i, a) {
-            !a && ((a = i), (i = 0)), i > n ? (n = i) : i < r && (r = i), !e[i] && (e[i] = []), e[i].push(a), t++;
+        add: function a(a, s) {
+            !s && ((s = a), (a = 0)), a > r ? (r = a) : a < i && (i = a), !e[a] && (e[a] = []), e[a].push(s), n++;
         },
-        process: function () {
-            for (var t = r; t <= n; t++) {
-                for (var i = e[t], a = 0; a < i.length; a++) (0, i[a])();
+        process: function n() {
+            for (var n = i; n <= r; n++) {
+                for (var a = e[n], s = 0; s < a.length; s++) (0, a[s])();
             }
         },
-        size: function () {
-            return t;
+        size: function e() {
+            return n;
         }
     };
 }
 e.exports = function (e) {
-    var t,
-        n = (e = e || {}).reporter,
-        a = r.getOption(e, 'async', !0),
-        s = r.getOption(e, 'auto', !0);
-    s && !a && (n && n.warn('Invalid options combination. auto=true and async=false is invalid. Setting async=true.'), (a = !0));
-    var o = i(),
-        l = !1;
-    function u() {
-        for (l = !0; o.size(); ) {
-            var e = o;
-            (o = i()), e.process();
+    var n,
+        r = (e = e || {}).reporter,
+        s = i.getOption(e, 'async', !0),
+        o = i.getOption(e, 'auto', !0);
+    o && !s && (r && r.warn('Invalid options combination. auto=true and async=false is invalid. Setting async=true.'), (s = !0));
+    var l = a(),
+        u = !1;
+    function c(e, n) {
+        !u && o && s && 0 === l.size() && _(), l.add(e, n);
+    }
+    function d() {
+        for (u = !0; l.size(); ) {
+            var e = l;
+            (l = a()), e.process();
         }
-        l = !1;
+        u = !1;
     }
-    function c() {
-        t = d(u);
+    function f(e) {
+        if (!u) void 0 === e && (e = s), n && (h(n), (n = null)), e ? _() : d();
     }
-    function d(e) {
-        return setTimeout(e, 0);
+    function _() {
+        n = p(d);
+    }
+    function h(e) {
+        return clearTimeout(e);
+    }
+    function p(e) {
+        return (function (e) {
+            return setTimeout(e, 0);
+        })(e);
     }
     return {
-        add: function (e, n) {
-            !l &&
-                s &&
-                a &&
-                0 === o.size() &&
-                (function () {
-                    t = d(u);
-                })(),
-                o.add(e, n);
-        },
-        force: function (e) {
-            if (!l)
-                void 0 === e && (e = a),
-                    t &&
-                        ((function (e) {
-                            clearTimeout(e);
-                        })(t),
-                        (t = null)),
-                    e
-                        ? (function () {
-                              t = d(u);
-                          })()
-                        : u();
-        }
+        add: c,
+        force: f
     };
 };

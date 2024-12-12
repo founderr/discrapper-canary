@@ -1,213 +1,215 @@
-n.d(t, {
+r.d(n, {
     A1: function () {
-        return A;
-    },
-    LO: function () {
-        return v;
-    },
-    S1: function () {
-        return g;
-    },
-    Wx: function () {
-        return R;
-    },
-    XT: function () {
         return O;
     },
-    al: function () {
-        return N;
-    },
-    cG: function () {
-        return I;
-    },
-    li: function () {
-        return T;
-    },
-    ob: function () {
-        return E;
-    },
-    pC: function () {
+    LO: function () {
         return b;
     },
-    v4: function () {
-        return S;
+    S1: function () {
+        return I;
     },
-    wO: function () {
+    Wx: function () {
+        return x;
+    },
+    XT: function () {
+        return w;
+    },
+    al: function () {
+        return D;
+    },
+    cG: function () {
         return y;
     },
-    wi: function () {
+    li: function () {
+        return A;
+    },
+    ob: function () {
+        return T;
+    },
+    pC: function () {
+        return N;
+    },
+    v4: function () {
         return C;
+    },
+    wO: function () {
+        return R;
+    },
+    wi: function () {
+        return L;
     }
-}),
-    n(411104);
-var r = n(544891),
-    i = n(570140),
-    a = n(812206),
-    s = n(594190),
-    o = n(703656),
-    l = n(695346),
-    u = n(391690),
-    c = n(626135),
-    d = n(129542),
-    f = n(877481),
-    _ = n(830168),
-    p = n(57513),
-    h = n(981631),
-    m = n(388032);
-function g(e, t) {
-    _.Z.init({
+});
+var i = r(411104);
+var a = r(544891),
+    s = r(570140),
+    o = r(812206),
+    l = r(594190),
+    u = r(703656),
+    c = r(695346),
+    d = r(391690),
+    f = r(626135),
+    _ = r(129542),
+    h = r(877481),
+    p = r(830168),
+    m = r(57513),
+    g = r(981631),
+    E = r(388032);
+let v = 64;
+function I(e, n) {
+    p.Z.init({
         userToken: e,
-        userId: t,
-        installPaths: u.Z.installationPaths,
-        platform: (0, d.D)(),
+        userId: n,
+        installPaths: d.Z.installationPaths,
+        platform: (0, _.D)(),
         stateCallback: (e) => {
-            i.Z.dispatch({
+            s.Z.dispatch({
                 type: 'DISPATCH_APPLICATION_STATE_UPDATE',
                 state: e
             });
         },
         errorCallback: (e) => {
-            i.Z.dispatch({
+            s.Z.dispatch({
                 type: 'DISPATCH_APPLICATION_ERROR',
                 error: e
             });
         }
     });
 }
-function E() {
-    _.Z.destroy();
+function T() {
+    p.Z.destroy();
 }
-function v(e) {
-    let { application: t, branchId: n, buildId: r, manifestIds: a, installationPath: s, analyticsLocation: o } = e;
-    _.Z.setTargetManifest({
-        applicationId: t.id,
-        applicationName: t.name,
-        applicationIcon: t.icon,
-        branchId: n,
-        buildId: r,
+function b(e) {
+    let { application: n, branchId: r, buildId: i, manifestIds: a, installationPath: o, analyticsLocation: l } = e;
+    p.Z.setTargetManifest({
+        applicationId: n.id,
+        applicationName: n.name,
+        applicationIcon: n.icon,
+        branchId: r,
+        buildId: i,
         manifestIds: a,
-        installationPath: s
+        installationPath: o
     }),
-        i.Z.dispatch({
+        s.Z.dispatch({
             type: 'DISPATCH_APPLICATION_INSTALL',
-            applicationId: t.id,
-            branchId: n,
-            installationPath: s
+            applicationId: n.id,
+            branchId: r,
+            installationPath: o
         }),
-        c.default.track(h.rMx.LIBRARY_INSTALL_INITIATED, {
-            application_id: t.id,
-            application_name: t.name,
-            sku_id: t.primarySkuId,
-            location: o
+        f.default.track(g.rMx.LIBRARY_INSTALL_INITIATED, {
+            application_id: n.id,
+            application_name: n.name,
+            sku_id: n.primarySkuId,
+            location: l
         });
 }
-function I(e, t, n) {
-    (0, p.l)(e.id, t).then(() => {
-        i.Z.dispatch({
+function y(e, n, r) {
+    (0, m.l)(e.id, n).then(() => {
+        s.Z.dispatch({
             type: 'DISPATCH_APPLICATION_REPAIR',
             applicationId: e.id,
-            branchId: t
+            branchId: n
         });
     }),
-        c.default.track(h.rMx.LIBRARY_REPAIR_INITIATED, {
+        f.default.track(g.rMx.LIBRARY_REPAIR_INITIATED, {
             application_id: e.id,
             application_name: e.name,
             sku_id: e.primarySkuId,
-            location: n
+            location: r
         });
 }
-function T(e, t, n, r) {
+function S(e, n, r, i) {
+    if (l.ZP.getRunningDiscordApplicationIds().includes(e.id)) return;
+    let a = d.Z.getInstallationPath(e.id, n);
+    if (null == a) throw Error('Missing installation path for application: '.concat(e.id, ' ').concat(n));
+    p.Z.setTargetManifest({
+        applicationId: e.id,
+        applicationName: e.name,
+        applicationIcon: e.icon,
+        branchId: n,
+        buildId: r,
+        manifestIds: i,
+        installationPath: a
+    });
+}
+function A(e, n, r, i) {
     let a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-    !(function (e, t, n, r) {
-        if (s.ZP.getRunningDiscordApplicationIds().includes(e.id)) return;
-        let i = u.Z.getInstallationPath(e.id, t);
-        if (null == i) throw Error('Missing installation path for application: '.concat(e.id, ' ').concat(t));
-        _.Z.setTargetManifest({
-            applicationId: e.id,
-            applicationName: e.name,
-            applicationIcon: e.icon,
-            branchId: t,
-            buildId: n,
-            manifestIds: r,
-            installationPath: i
-        });
-    })(e, t, n, r),
-        i.Z.dispatch({
+    S(e, n, r, i),
+        s.Z.dispatch({
             type: 'DISPATCH_APPLICATION_UPDATE',
             applicationId: e.id,
-            branchId: t,
+            branchId: n,
             automatic: a
         });
 }
-function b(e, t, n) {
-    let r = a.Z.getApplication(e);
-    null != r &&
-        (f.Z.removeShortcuts(r.name),
-        c.default.track(h.rMx.LIBRARY_UNINSTALL_INITIATED, {
-            application_id: r.id,
-            application_name: r.name,
-            sku_id: r.primarySkuId,
-            location: n
+function N(e, n, r) {
+    let i = o.Z.getApplication(e);
+    null != i &&
+        (h.Z.removeShortcuts(i.name),
+        f.default.track(g.rMx.LIBRARY_UNINSTALL_INITIATED, {
+            application_id: i.id,
+            application_name: i.name,
+            sku_id: i.primarySkuId,
+            location: r
         })),
-        _.Z.uninstall(e, t),
-        i.Z.dispatch({
+        p.Z.uninstall(e, n),
+        s.Z.dispatch({
             type: 'DISPATCH_APPLICATION_UNINSTALL',
             applicationId: e,
-            branchId: t
+            branchId: n
         });
 }
-function S() {
-    _.Z.resume();
+function C() {
+    p.Z.resume();
 }
-function y() {
-    _.Z.pause();
+function R() {
+    p.Z.pause();
 }
-function A(e, t) {
-    i.Z.dispatch({
+function O(e, n) {
+    s.Z.dispatch({
         type: 'DISPATCH_APPLICATION_MOVE_UP',
         applicationId: e,
-        branchId: t
+        branchId: n
     });
 }
-function N(e, t) {
-    _.Z.cancel(e, t),
-        i.Z.dispatch({
+function D(e, n) {
+    p.Z.cancel(e, n),
+        s.Z.dispatch({
             type: 'DISPATCH_APPLICATION_CANCEL',
             applicationId: e,
-            branchId: t
+            branchId: n
         });
 }
-function C(e, t) {
-    i.Z.dispatch({
+function L(e, n) {
+    s.Z.dispatch({
         type: 'DISPATCH_APPLICATION_REMOVE_FINISHED',
         applicationId: e,
-        branchId: t
+        branchId: n
     });
 }
-function R(e, t) {
-    let n = a.Z.getApplication(e);
-    null != n && f.Z.createShortcuts(l.Xc.getSetting(), l.Pe.getSetting(), n.name, n.id, t.installPath);
+function x(e, n) {
+    let r = o.Z.getApplication(e);
+    null != r && h.Z.createShortcuts(c.Xc.getSetting(), c.Pe.getSetting(), r.name, r.id, n.installPath);
 }
-function O(e, t) {
-    let i = a.Z.getApplication(e);
-    r.tn.post({
-        url: h.ANM.LIBRARY_APPLICATION_INSTALLED(e, e),
+function w(e, n) {
+    let i = o.Z.getApplication(e);
+    a.tn.post({
+        url: g.ANM.LIBRARY_APPLICATION_INSTALLED(e, e),
         oldFormErrors: !0,
         rejectWithError: !0
     }),
         null != i &&
-            (f.Z.createShortcuts(l.Xc.getSetting(), l.Pe.getSetting(), i.name, i.id, t.installPath),
+            (h.Z.createShortcuts(c.Xc.getSetting(), c.Pe.getSetting(), i.name, i.id, n.installPath),
             Promise.resolve()
-                .then(n.bind(n, 292556))
+                .then(r.bind(r, 292556))
                 .then((e) => {
-                    let { default: t } = e;
-                    t.showNotification(
-                        i.getIconURL(64),
-                        m.intl.string(m.t['1wR7yM']),
-                        m.intl.formatToPlainString(m.t['89VAgY'], { name: i.name }),
+                    let { default: n } = e;
+                    n.showNotification(
+                        i.getIconURL(v),
+                        E.intl.string(E.t['1wR7yM']),
+                        E.intl.formatToPlainString(E.t['89VAgY'], { name: i.name }),
                         { notif_type: 'Game Library Game Installed' },
                         {
-                            onClick: () => (0, o.uL)(h.Z5c.APPLICATION_LIBRARY),
+                            onClick: () => (0, u.uL)(g.Z5c.APPLICATION_LIBRARY),
                             omitViewTracking: !0
                         }
                     );

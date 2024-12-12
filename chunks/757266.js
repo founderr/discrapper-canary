@@ -1,19 +1,56 @@
-n(47120);
-var r,
-    i,
-    a,
-    s,
-    o = n(392711),
-    l = n.n(o),
-    u = n(442837),
-    c = n(570140);
+var i,
+    a = r(47120);
+var s = r(392711),
+    o = r.n(s),
+    l = r(442837),
+    u = r(570140);
+function c(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
 let d = {};
-class f extends (r = u.ZP.Store) {
+function f(e) {
+    let { application: n } = e;
+    if (null == n.id) return !1;
+    let r = n.id;
+    null == d[r] &&
+        (d[r] = {
+            count: 0,
+            id: n.id,
+            name: n.name,
+            icon: n.icon,
+            coverImage: n.coverImage,
+            authenticated: !1
+        }),
+        d[r].count++;
+}
+function _(e) {
+    let { application: n } = e;
+    if (null != n.id && null != d[n.id]) d[n.id].authenticated = !0;
+}
+function h(e) {
+    let { application: n } = e;
+    if (null != n.id && null != d[n.id]) d[n.id].count--, 0 === d[n.id].count && delete d[n.id];
+}
+function p(e) {
+    let { connectedApps: n } = e;
+    d = { ...n };
+}
+class m extends (i = l.ZP.Store) {
     isConnected(e) {
         return null != d[e];
     }
     get connections() {
-        return l().values(d);
+        return o().values(d);
     }
     getApplication(e) {
         return d[e];
@@ -22,41 +59,10 @@ class f extends (r = u.ZP.Store) {
         return d;
     }
 }
-(s = 'ConnectedAppsStore'),
-    (a = 'displayName') in (i = f)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new f(c.Z, {
-        OVERLAY_INITIALIZE: function (e) {
-            let { connectedApps: t } = e;
-            d = { ...t };
-        },
-        RPC_APP_CONNECTED: function (e) {
-            let { application: t } = e;
-            if (null == t.id) return !1;
-            let n = t.id;
-            null == d[n] &&
-                (d[n] = {
-                    count: 0,
-                    id: t.id,
-                    name: t.name,
-                    icon: t.icon,
-                    coverImage: t.coverImage,
-                    authenticated: !1
-                }),
-                d[n].count++;
-        },
-        RPC_APP_AUTHENTICATED: function (e) {
-            let { application: t } = e;
-            if (null != t.id && null != d[t.id]) d[t.id].authenticated = !0;
-        },
-        RPC_APP_DISCONNECTED: function (e) {
-            let { application: t } = e;
-            if (null != t.id && null != d[t.id]) d[t.id].count--, 0 === d[t.id].count && delete d[t.id];
-        }
+c(m, 'displayName', 'ConnectedAppsStore'),
+    (n.Z = new m(u.Z, {
+        OVERLAY_INITIALIZE: p,
+        RPC_APP_CONNECTED: f,
+        RPC_APP_AUTHENTICATED: _,
+        RPC_APP_DISCONNECTED: h
     }));

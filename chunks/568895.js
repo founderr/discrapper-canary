@@ -1,10 +1,14 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return s;
     }
 });
-var r = 'Invariant failed';
-function i(e, t) {
-    var n;
-    if (!e) throw Error(r);
+var i = !0,
+    a = 'Invariant failed';
+function s(e, n) {
+    if (!e) {
+        if (i) throw Error(a);
+        var r = 'function' == typeof n ? n() : n;
+        throw Error(r ? ''.concat(a, ': ').concat(r) : a);
+    }
 }

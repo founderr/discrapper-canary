@@ -1,19 +1,29 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
         return f;
     }
-}),
-    n(653041);
-var r,
-    i,
-    a,
-    s,
-    o = n(512722),
-    l = n.n(o),
-    u = n(442837),
-    c = n(433517),
-    d = n(570140);
-class f extends (r = u.ZP.Store) {
+});
+var i,
+    a = r(653041);
+var s = r(512722),
+    o = r.n(s),
+    l = r(442837),
+    u = r(433517),
+    c = r(570140);
+function d(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+class f extends (i = l.ZP.Store) {
     static clearAll() {
         f.allStores.forEach((e) => e.clear());
     }
@@ -21,40 +31,32 @@ class f extends (r = u.ZP.Store) {
         return ''.concat(this.getClass().displayName, '-snapshot');
     }
     clear() {
-        c.K.remove(this.persistKey);
+        u.K.remove(this.persistKey);
     }
     save() {
-        c.K.set(this.persistKey, this.takeSnapshot());
+        u.K.set(this.persistKey, this.takeSnapshot());
     }
     readSnapshot(e) {
-        let t = c.K.get(this.persistKey);
-        return null == t || t.version !== e ? null : t.data;
+        let n = u.K.get(this.persistKey);
+        return null == n || n.version !== e ? null : n.data;
     }
     getClass() {
         return this.constructor;
     }
-    constructor(e, t) {
+    constructor(e, n) {
         super(
-            d.Z,
+            c.Z,
             {
                 ...e,
                 CLEAR_CACHES: () => (this.clear(), !1),
                 WRITE_CACHES: () => (this.save(), !1)
             },
-            t
+            n
         ),
-            l()(null != this.getClass().displayName, 'Snapshot stores need a display name'),
-            l()(!('CLEAR_CACHES' in e), "SnapshotStores cannot use the 'CLEAR_CACHES' action"),
-            l()(!('WRITE_CACHES' in e), "SnapshotStores cannot use the 'WRITE_CACHES' action"),
+            o()(null != this.getClass().displayName, 'Snapshot stores need a display name'),
+            o()(!('CLEAR_CACHES' in e), "SnapshotStores cannot use the 'CLEAR_CACHES' action"),
+            o()(!('WRITE_CACHES' in e), "SnapshotStores cannot use the 'WRITE_CACHES' action"),
             f.allStores.push(this);
     }
 }
-(s = []),
-    (a = 'allStores') in (i = f)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s);
+d(f, 'allStores', []);

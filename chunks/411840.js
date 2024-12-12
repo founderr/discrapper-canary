@@ -1,4 +1,4 @@
-n.d(t, {
+r.d(n, {
     B: function () {
         return i;
     },
@@ -6,10 +6,11 @@ n.d(t, {
         return o;
     }
 });
-var r,
-    i,
-    a = n(818083);
-((r = i || (i = {})).MicPushToEnable = 'mic-push-to-enable'), (r.MicButtonMovedLeft = 'mic-button-moved-left'), (r.GroupedButtonsControlColors = 'grouped-buttons-control-colors'), (r.GroupedButtonsRedMic = 'grouped-buttons-red-mic');
+var i,
+    a = r(818083);
+!(function (e) {
+    (e.MicPushToEnable = 'mic-push-to-enable'), (e.MicButtonMovedLeft = 'mic-button-moved-left'), (e.GroupedButtonsControlColors = 'grouped-buttons-control-colors'), (e.GroupedButtonsRedMic = 'grouped-buttons-red-mic');
+})(i || (i = {}));
 let s = (0, a.B)({
     kind: 'user',
     id: '2024-12_voice_icon_states',

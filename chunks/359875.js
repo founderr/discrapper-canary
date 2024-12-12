@@ -1,28 +1,29 @@
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(565138),
-    o = n(457926),
-    l = n(696153);
-t.Z = function (e) {
-    let { guild: t, children: n } = e,
-        i =
-            null != t
-                ? (0, r.jsx)(s.Z, {
-                      guild: t,
-                      size: s.Z.Sizes.MEDIUM,
-                      className: a()(l.icon, null == t.icon ? l.textIcon : l.imageIcon),
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(565138),
+    l = r(457926),
+    u = r(696153);
+function c(e) {
+    let { guild: n, children: r } = e,
+        a =
+            null != n
+                ? (0, i.jsx)(o.Z, {
+                      guild: n,
+                      size: o.Z.Sizes.MEDIUM,
+                      className: s()(u.icon, null == n.icon ? u.textIcon : u.imageIcon),
                       active: !0
                   })
                 : null;
-    return (0, r.jsxs)('span', {
+    return (0, i.jsxs)('span', {
         children: [
-            (0, r.jsx)(o.Z, { children: i }),
-            (0, r.jsx)('span', {
-                className: l.name,
-                children: n
+            (0, i.jsx)(l.Z, { children: a }),
+            (0, i.jsx)('span', {
+                className: u.name,
+                children: r
             })
         ]
     });
-};
+}
+n.Z = c;

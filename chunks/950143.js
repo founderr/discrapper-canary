@@ -1,35 +1,37 @@
-n(789020), n(47120);
-var r = n(533800),
-    i = n(147913),
-    a = n(305325),
-    s = n(82085),
-    o = n(630388),
-    l = n(461014),
-    u = n(981631);
-function c(e) {
-    var t;
-    let { guild: n, flags: i } = e.invite;
-    if (null != n && (null == n ? void 0 : null === (t = n.features) || void 0 === t ? void 0 : t.includes(u.oNc.HUB))) {
-        s.Z.onOpenHubInvite(e.invite);
+var i = r(789020);
+var a = r(47120);
+var s = r(533800),
+    o = r(147913),
+    l = r(305325),
+    u = r(82085),
+    c = r(630388),
+    d = r(461014),
+    f = r(981631);
+function _(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+function h(e) {
+    var n;
+    let { guild: r, flags: i } = e.invite;
+    if (null != r && (null == r ? void 0 : null === (n = r.features) || void 0 === n ? void 0 : n.includes(f.oNc.HUB))) {
+        u.Z.onOpenHubInvite(e.invite);
         return;
     }
-    !(0, o.yE)(null != i ? i : 0, r.$.IS_GUEST_INVITE) && null != n && (0, l.u)(n) && (0, a.hk)(n.id);
+    !(0, c.yE)(null != i ? i : 0, s.$.IS_GUEST_INVITE) && null != r && (0, d.u)(r) && (0, l.hk)(r.id);
 }
-class d extends i.Z {
+class p extends o.Z {
     constructor(...e) {
-        var t, n, r;
-        super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = { INVITE_ACCEPT_SUCCESS: c }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+        super(...e), _(this, 'actions', { INVITE_ACCEPT_SUCCESS: h });
     }
 }
-t.Z = new d();
+n.Z = new p();

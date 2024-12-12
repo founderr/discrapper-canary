@@ -1,136 +1,137 @@
-n.d(t, {
+r.d(n, {
     $0: function () {
-        return p;
-    },
-    j1: function () {
-        return g;
-    },
-    nP: function () {
         return E;
     },
+    j1: function () {
+        return y;
+    },
+    nP: function () {
+        return S;
+    },
     nj: function () {
-        return v;
+        return A;
     },
     pX: function () {
-        return m;
+        return I;
     }
-}),
-    n(47120);
-var r = n(192379),
-    i = n(688619),
-    a = n.n(i),
-    s = n(392711),
-    o = n.n(s),
-    l = n(780384),
-    u = n(481060),
-    c = n(410030),
-    d = n(564334),
-    f = n(302221),
-    _ = n(308083);
-function p(e) {
-    let t = a()(e),
-        n = t.get('rgb.r'),
-        r = t.get('rgb.g'),
-        i = t.get('rgb.b');
-    return (299 * n + 587 * r + 114 * i) / 1000 < 128
-        ? u.tokens.colors.HEADER_PRIMARY.resolve({
+});
+var i = r(47120);
+var a = r(192379),
+    s = r(688619),
+    o = r.n(s),
+    l = r(392711),
+    u = r.n(l),
+    c = r(780384),
+    d = r(481060),
+    f = r(410030),
+    _ = r(564334),
+    h = r(302221),
+    p = r(308083);
+let m = 15;
+function g(e) {
+    var n;
+    let r = o()(e);
+    return null ===
+        (n = u()(p.ym)
+            .map((e) => {
+                let { primary: n } = e;
+                return {
+                    primary: n,
+                    distance: o().distance(r, o()(n), 'hsl')
+                };
+            })
+            .filter((e) => {
+                let { distance: n } = e;
+                return n < m;
+            })
+            .minBy((e) => {
+                let { distance: n } = e;
+                return n;
+            })) || void 0 === n
+        ? void 0
+        : n.primary;
+}
+function E(e) {
+    let n = o()(e),
+        r = n.get('rgb.r'),
+        i = n.get('rgb.g');
+    return (299 * r + 587 * i + 114 * n.get('rgb.b')) / 1000 < 128
+        ? d.tokens.colors.HEADER_PRIMARY.resolve({
               theme: 'dark',
               saturation: 1
           })
-        : u.tokens.colors.HEADER_PRIMARY.resolve({
+        : d.tokens.colors.HEADER_PRIMARY.resolve({
               theme: 'light',
               saturation: 1
           });
 }
-function h(e) {
-    return new d.Z(e.get('rgb.r'), e.get('rgb.g'), e.get('rgb.b'), e.alpha());
+function v(e) {
+    return new _.Z(e.get('rgb.r'), e.get('rgb.g'), e.get('rgb.b'), e.alpha());
 }
-function m(e, t) {
-    var n;
-    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.S3.Text;
+function I(e, n) {
+    var r;
+    let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.S3.Text;
     if (null == e) return;
-    let i =
-            null !==
-                (n = (function (e) {
-                    var t;
-                    let n = a()(e);
-                    return null ===
-                        (t = o()(_.ym)
-                            .map((e) => {
-                                let { primary: t } = e;
-                                return {
-                                    primary: t,
-                                    distance: a().distance(n, a()(t), 'hsl')
-                                };
-                            })
-                            .filter((e) => {
-                                let { distance: t } = e;
-                                return t < 15;
-                            })
-                            .minBy((e) => {
-                                let { distance: t } = e;
-                                return t;
-                            })) || void 0 === t
-                        ? void 0
-                        : t.primary;
-                })(e)) && void 0 !== n
-                ? n
-                : e,
-        s = a()(i),
-        u = a()(t),
-        c = (0, f.k8)({
-            colors: [h(s), h(u)],
-            ratio: r,
+    let a = null !== (r = g(e)) && void 0 !== r ? r : e,
+        s = o()(a),
+        l = o()(n),
+        u = (0, h.k8)({
+            colors: [v(s), v(l)],
+            ratio: i,
             saturationFactor: 1
         });
-    if (null != c) return a()(c.toHexString());
+    if (null != u) return o()(u.toHexString());
 }
-function g(e, t) {
-    let n = (function (e, t) {
-        if (null == e) return;
-        let n = m(e, t, l.S3.NonText);
-        if (null == n) return;
-        let r = 0.2 > n.luminance() ? n.brighten(0.3) : n.darken(0.3),
-            i = 0.2 > n.luminance() ? n.brighten(0.35) : n.darken(0.35);
-        return {
-            '--custom-clan-bg': n.css(),
-            '--custom-clan-hover-bg': r.css(),
-            '--custom-clan-active-bg': i.css()
-        };
-    })(e, t);
-    if (null == n) return;
-    let r = { '--custom-clan-text': p(n['--custom-clan-bg']).hex() };
+function T(e, n) {
+    if (null == e) return;
+    let r = I(e, n, c.S3.NonText);
+    if (null == r) return;
+    let i = 0.2 > r.luminance() ? r.brighten(0.3) : r.darken(0.3),
+        a = 0.2 > r.luminance() ? r.brighten(0.35) : r.darken(0.35);
     return {
-        ...n,
-        ...r
+        '--custom-clan-bg': r.css(),
+        '--custom-clan-hover-bg': i.css(),
+        '--custom-clan-active-bg': a.css()
     };
 }
-function E(e, t) {
-    let [n, i = 1] = t,
-        a = (0, c.ZP)();
-    return r.useMemo(
+function b(e) {
+    return { '--custom-clan-text': E(e).hex() };
+}
+function y(e, n) {
+    let r = T(e, n);
+    if (null == r) return;
+    let i = b(r['--custom-clan-bg']);
+    return {
+        ...r,
+        ...i
+    };
+}
+function S(e, n) {
+    let [r, i = 1] = n,
+        s = (0, f.ZP)();
+    return a.useMemo(
         () =>
             null != e
                 ? e
-                : n
+                : r
                       .resolve({
-                          theme: a,
+                          theme: s,
                           saturation: i
                       })
                       .hex(),
-        [e, n, i, a]
+        [e, r, i, s]
     );
 }
-function v(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'top left',
-        r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0.3,
-        i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : '50%';
+function A(e, n) {
+    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'top left',
+        i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0.3,
+        a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : '50%';
     if (null == e) return;
-    let s = a()(e),
-        o = { background: '\n      radial-gradient(\n        circle at '.concat(n, ',\n        ').concat(s.alpha(r).hex(), ' 0%,\n        transparent ').concat(i, '\n      )\n    ') };
-    if (null != t) {
-        let e = a()(t);
-        o.background += ', '.concat(e.hex());
+    let s = o()(e),
+        l = { background: '\n      radial-gradient(\n        circle at '.concat(r, ',\n        ').concat(s.alpha(i).hex(), ' 0%,\n        transparent ').concat(a, '\n      )\n    ') };
+    if (null != n) {
+        let e = o()(n);
+        l.background += ', '.concat(e.hex());
     }
-    return o;
+    return l;
 }

@@ -1,15 +1,17 @@
-e.exports = function (e) {
-    let t = ['assembly', 'module', 'package', 'import', 'alias', 'class', 'interface', 'object', 'given', 'value', 'assign', 'void', 'function', 'new', 'of', 'extends', 'satisfies', 'abstracts', 'in', 'out', 'return', 'break', 'continue', 'throw', 'assert', 'dynamic', 'if', 'else', 'switch', 'case', 'for', 'while', 'try', 'catch', 'finally', 'then', 'let', 'this', 'outer', 'super', 'is', 'exists', 'nonempty'],
-        n = {
+function n(e) {
+    let n = ['assembly', 'module', 'package', 'import', 'alias', 'class', 'interface', 'object', 'given', 'value', 'assign', 'void', 'function', 'new', 'of', 'extends', 'satisfies', 'abstracts', 'in', 'out', 'return', 'break', 'continue', 'throw', 'assert', 'dynamic', 'if', 'else', 'switch', 'case', 'for', 'while', 'try', 'catch', 'finally', 'then', 'let', 'this', 'outer', 'super', 'is', 'exists', 'nonempty'],
+        r = ['shared', 'abstract', 'formal', 'default', 'actual', 'variable', 'late', 'native', 'deprecated', 'final', 'sealed', 'annotation', 'suppressWarnings', 'small'],
+        i = ['doc', 'by', 'license', 'see', 'throws', 'tagged'],
+        a = {
             className: 'subst',
             excludeBegin: !0,
             excludeEnd: !0,
             begin: /``/,
             end: /``/,
-            keywords: t,
+            keywords: n,
             relevance: 10
         },
-        r = [
+        s = [
             {
                 className: 'string',
                 begin: '"""',
@@ -20,7 +22,7 @@ e.exports = function (e) {
                 className: 'string',
                 begin: '"',
                 end: '"',
-                contains: [n]
+                contains: [a]
             },
             {
                 className: 'string',
@@ -34,12 +36,12 @@ e.exports = function (e) {
             }
         ];
     return (
-        (n.contains = r),
+        (a.contains = s),
         {
             name: 'Ceylon',
             keywords: {
-                keyword: t.concat(['shared', 'abstract', 'formal', 'default', 'actual', 'variable', 'late', 'native', 'deprecated', 'final', 'sealed', 'annotation', 'suppressWarnings', 'small']),
-                meta: ['doc', 'by', 'license', 'see', 'throws', 'tagged']
+                keyword: n.concat(r),
+                meta: i
             },
             illegal: '\\$[^01]|#[^0-9a-fA-F]',
             contains: [
@@ -49,7 +51,8 @@ e.exports = function (e) {
                     className: 'meta',
                     begin: '@[a-z]\\w*(?::"[^"]*")?'
                 }
-            ].concat(r)
+            ].concat(s)
         }
     );
-};
+}
+e.exports = n;

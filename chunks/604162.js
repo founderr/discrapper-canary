@@ -1,51 +1,49 @@
-n.d(t, {
+r.d(n, {
     F9: function () {
-        return s;
+        return l;
     },
     G6: function () {
-        return u;
+        return d;
     },
     JC: function () {
-        return o;
+        return u;
     },
     yv: function () {
-        return l;
+        return c;
     }
-}),
-    n(47120);
-var r = n(192379),
-    i = n(918701),
-    a = n(388032);
-let s = (e) => {
-        let t = (0, i.si)(e);
-        return e.percentComplete > 0 ? a.intl.formatToPlainString(a.t['c59/Tk'], { remainTime: ''.concat(String(t.minutes).padStart(2, '0'), ':').concat(String(t.seconds).padStart(2, '0')) }) : a.intl.formatToPlainString(a.t.GNsKiY, { remainTime: ''.concat(String(t.minutes).padStart(2, '0'), ':').concat(String(t.seconds).padStart(2, '0')) });
+});
+var i = r(47120);
+var a = r(192379),
+    s = r(918701),
+    o = r(388032);
+let l = (e) => {
+        let n = (0, s.si)(e);
+        return e.percentComplete > 0 ? o.intl.formatToPlainString(o.t['c59/Tk'], { remainTime: ''.concat(String(n.minutes).padStart(2, '0'), ':').concat(String(n.seconds).padStart(2, '0')) }) : o.intl.formatToPlainString(o.t.GNsKiY, { remainTime: ''.concat(String(n.minutes).padStart(2, '0'), ':').concat(String(n.seconds).padStart(2, '0')) });
     },
-    o = (e) => null != e.text;
-function l(e) {
-    let t = 0 | Math.round(e),
-        n = t % 60;
-    return ''.concat((t - n) / 60, ':').concat(String(n).padStart(2, '0'));
+    u = (e) => null != e.text;
+function c(e) {
+    let n = 0 | Math.round(e),
+        r = n % 60;
+    return ''.concat((n - r) / 60, ':').concat(String(r).padStart(2, '0'));
 }
-function u(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2000,
-        [i, a] = (0, r.useState)(e),
-        s = (0, r.useRef)(null);
+function d(e, n) {
+    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2000,
+        [i, s] = (0, a.useState)(e),
+        o = (0, a.useRef)(null),
+        l = () => {
+            s(n),
+                null != o.current && clearTimeout(o.current),
+                (o.current = setTimeout(() => {
+                    s(e);
+                }, r));
+        };
     return (
-        (0, r.useEffect)(
+        (0, a.useEffect)(
             () => () => {
-                null != s.current && clearTimeout(s.current);
+                null != o.current && clearTimeout(o.current);
             },
             [e]
         ),
-        [
-            i,
-            () => {
-                a(t),
-                    null != s.current && clearTimeout(s.current),
-                    (s.current = setTimeout(() => {
-                        a(e);
-                    }, n));
-            }
-        ]
+        [i, l]
     );
 }

@@ -1,28 +1,30 @@
-var r = n(192379),
-    i = n(476400),
-    a = n.n(i),
-    s = n(723184),
-    o = n(829307),
-    l = n(877837),
-    u = n(474527),
-    c = n(372712),
-    d = n(899627),
-    f = function (e) {
-        var t = e.width,
-            n = e.onChange,
-            i = e.rgb,
-            a = e.hsl,
-            f = e.hsv,
-            _ = e.hex,
+var i = r(192379),
+    a = r(476400),
+    s = r.n(a),
+    o = r(723184),
+    l = r(829307),
+    u = r(877837),
+    c = r(474527),
+    d = r(372712),
+    f = r(899627),
+    _ = function (e) {
+        var n = e.width,
+            r = e.onChange,
+            a = e.rgb,
+            s = e.hsl,
+            _ = e.hsv,
+            h = e.hex,
             p = e.header,
-            h = e.styles,
-            m = e.className,
-            g = (0, s.default)(
-                (0, o.Z)(
+            m = e.styles,
+            g = void 0 === m ? {} : m,
+            E = e.className,
+            v = void 0 === E ? '' : E,
+            I = (0, o.default)(
+                (0, l.Z)(
                     {
                         default: {
                             picker: {
-                                width: t,
+                                width: n,
                                 background: '#fff',
                                 border: '1px solid #dfe1e5',
                                 boxSizing: 'initial',
@@ -50,7 +52,7 @@ var r = n(192379),
                                 width: '30%',
                                 height: '228px',
                                 padding: '0px',
-                                background: 'rgba(' + i.r + ', ' + i.g + ', ' + i.b + ', 1)',
+                                background: 'rgba(' + a.r + ', ' + a.g + ', ' + a.b + ', 1)',
                                 position: 'relative',
                                 overflow: 'hidden'
                             },
@@ -74,66 +76,66 @@ var r = n(192379),
                             Hue: { radius: '2px' }
                         }
                     },
-                    void 0 === h ? {} : h
+                    g
                 )
             );
-        return r.createElement(
+        return i.createElement(
             'div',
             {
-                style: g.picker,
-                className: 'google-picker ' + (void 0 === m ? '' : m)
+                style: I.picker,
+                className: 'google-picker ' + v
             },
-            r.createElement('div', { style: g.head }, p),
-            r.createElement('div', { style: g.swatch }),
-            r.createElement(
+            i.createElement('div', { style: I.head }, p),
+            i.createElement('div', { style: I.swatch }),
+            i.createElement(
                 'div',
-                { style: g.saturation },
-                r.createElement(l.OQ, {
-                    hsl: a,
-                    hsv: f,
-                    pointer: u.C,
-                    onChange: n
+                { style: I.saturation },
+                i.createElement(u.OQ, {
+                    hsl: s,
+                    hsv: _,
+                    pointer: c.C,
+                    onChange: r
                 })
             ),
-            r.createElement(
+            i.createElement(
                 'div',
-                { style: g.body },
-                r.createElement(
+                { style: I.body },
+                i.createElement(
                     'div',
                     {
-                        style: g.controls,
+                        style: I.controls,
                         className: 'flexbox-fix'
                     },
-                    r.createElement(
+                    i.createElement(
                         'div',
-                        { style: g.hue },
-                        r.createElement(l.PS, {
-                            style: g.Hue,
-                            hsl: a,
+                        { style: I.hue },
+                        i.createElement(u.PS, {
+                            style: I.Hue,
+                            hsl: s,
                             radius: '4px',
-                            pointer: c.Z,
-                            onChange: n
+                            pointer: d.Z,
+                            onChange: r
                         })
                     )
                 ),
-                r.createElement(d.Z, {
-                    rgb: i,
-                    hsl: a,
-                    hex: _,
-                    hsv: f,
-                    onChange: n
+                i.createElement(f.Z, {
+                    rgb: a,
+                    hsl: s,
+                    hex: h,
+                    hsv: _,
+                    onChange: r
                 })
             )
         );
     };
-(f.propTypes = {
-    width: a().oneOfType([a().string, a().number]),
-    styles: a().object,
-    header: a().string
+(_.propTypes = {
+    width: s().oneOfType([s().string, s().number]),
+    styles: s().object,
+    header: s().string
 }),
-    (f.defaultProps = {
+    (_.defaultProps = {
         width: 652,
         styles: {},
         header: 'Color picker'
     }),
-    (0, l.t1)(f);
+    (0, u.t1)(_);

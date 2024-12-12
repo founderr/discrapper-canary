@@ -1,17 +1,18 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(192379),
-    i = n(237617);
-function a(e) {
-    let t = (0, i.Z)(e);
-    (0, r.useEffect)(() => {
-        let e = requestAnimationFrame(function n() {
-            var r;
-            null === (r = t.current) || void 0 === r || r.call(t), (e = requestAnimationFrame(n));
-        });
-        return () => cancelAnimationFrame(e);
+var i = r(192379),
+    a = r(237617);
+function s(e) {
+    let n = (0, a.Z)(e);
+    (0, i.useEffect)(() => {
+        function e() {
+            var i;
+            null === (i = n.current) || void 0 === i || i.call(n), (r = requestAnimationFrame(e));
+        }
+        let r = requestAnimationFrame(e);
+        return () => cancelAnimationFrame(r);
     }, []);
 }

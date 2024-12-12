@@ -1,17 +1,19 @@
-e.exports = function (e) {
-    let t = e.regex,
-        n = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
-        r = {
+function n(e) {
+    let n = e.regex,
+        r = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
+        i = {
             className: 'params',
             begin: /\(/,
             end: /\)/,
-            contains: ['self', e.C_NUMBER_MODE, n]
+            contains: ['self', e.C_NUMBER_MODE, r]
         },
-        i = e.COMMENT(/--/, /$/),
-        a = e.COMMENT(/\(\*/, /\*\)/, {
-            contains: ['self', i]
+        a = e.COMMENT(/--/, /$/),
+        s = e.COMMENT(/\(\*/, /\*\)/, {
+            contains: ['self', a]
         }),
-        s = [i, a, e.HASH_COMMENT_MODE];
+        o = [a, s, e.HASH_COMMENT_MODE],
+        l = [/apart from/, /aside from/, /instead of/, /out of/, /greater than/, /isn't|(doesn't|does not) (equal|come before|come after|contain)/, /(greater|less) than( or equal)?/, /(starts?|ends|begins?) with/, /contained by/, /comes (before|after)/, /a (ref|reference)/, /POSIX (file|path)/, /(date|time) string/, /quoted form/],
+        u = [/clipboard info/, /the clipboard/, /info for/, /list (disks|folder)/, /mount volume/, /path to/, /(close|open for) access/, /(get|set) eof/, /current date/, /do shell script/, /get volume settings/, /random number/, /set volume/, /system attribute/, /system info/, /time to GMT/, /(load|run|store) script/, /scripting components/, /ASCII (character|number)/, /localized string/, /choose (application|color|file|file name|folder|from list|remote application|URL)/, /display (alert|dialog)/];
     return {
         name: 'AppleScript',
         aliases: ['osascript'],
@@ -21,11 +23,11 @@ e.exports = function (e) {
             built_in: 'alias application boolean class constant date file integer list number real record string text activate beep count delay launch log offset read round run say summarize write character characters contents day frontmost id item length month name|0 paragraph paragraphs rest reverse running time version weekday word words year'
         },
         contains: [
-            n,
+            r,
             e.C_NUMBER_MODE,
             {
                 className: 'built_in',
-                begin: t.concat(/\b/, t.either(/clipboard info/, /the clipboard/, /info for/, /list (disks|folder)/, /mount volume/, /path to/, /(close|open for) access/, /(get|set) eof/, /current date/, /do shell script/, /get volume settings/, /random number/, /set volume/, /system attribute/, /system info/, /time to GMT/, /(load|run|store) script/, /scripting components/, /ASCII (character|number)/, /localized string/, /choose (application|color|file|file name|folder|from list|remote application|URL)/, /display (alert|dialog)/), /\b/)
+                begin: n.concat(/\b/, n.either(...u), /\b/)
             },
             {
                 className: 'built_in',
@@ -37,15 +39,16 @@ e.exports = function (e) {
             },
             {
                 className: 'keyword',
-                begin: t.concat(/\b/, t.either(/apart from/, /aside from/, /instead of/, /out of/, /greater than/, /isn't|(doesn't|does not) (equal|come before|come after|contain)/, /(greater|less) than( or equal)?/, /(starts?|ends|begins?) with/, /contained by/, /comes (before|after)/, /a (ref|reference)/, /POSIX (file|path)/, /(date|time) string/, /quoted form/), /\b/)
+                begin: n.concat(/\b/, n.either(...l), /\b/)
             },
             {
                 beginKeywords: 'on',
                 illegal: /[${=;\n]/,
-                contains: [e.UNDERSCORE_TITLE_MODE, r]
+                contains: [e.UNDERSCORE_TITLE_MODE, i]
             },
-            ...s
+            ...o
         ],
         illegal: /\/\/|->|=>|\[\[/
     };
-};
+}
+e.exports = n;

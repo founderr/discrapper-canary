@@ -1,4 +1,5 @@
-e.exports = function (e, t, n) {
-    for (var r = n - 1, i = e.length; ++r < i; ) if (e[r] === t) return r;
+function n(e, n, r) {
+    for (var i = r - 1, a = e.length; ++i < a; ) if (e[i] === n) return i;
     return -1;
-};
+}
+e.exports = n;

@@ -1,5 +1,6 @@
-var r = n(562255).off;
+var i = r(562255).off;
 e.exports = function () {
-    var e = this.element;
-    r(e, 'keypress', this.eventHandler), r(e, 'keydown', this.eventHandler), r(e, 'keyup', this.eventHandler);
+    var e = this,
+        n = e.element;
+    i(n, 'keypress', e.eventHandler), i(n, 'keydown', e.eventHandler), i(n, 'keyup', e.eventHandler);
 };

@@ -1,29 +1,30 @@
-n.d(t, {
+r.d(n, {
     zU: function () {
-        return r;
+        return i;
     }
-}),
-    n(47120);
-var r,
-    i,
+});
+var i,
     a,
-    s = n(442837),
-    o = n(570140);
-function l(e, t, n) {
+    s = r(47120);
+var o = r(442837),
+    l = r(570140);
+function u(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-((a = r || (r = {}))[(a.MESSAGING = 0)] = 'MESSAGING'), (a[(a.OVERLAYS = 1)] = 'OVERLAYS'), (a[(a.PREMIUM = 2)] = 'PREMIUM'), (a[(a.REPORTING = 3)] = 'REPORTING');
-let u = {
+!(function (e) {
+    (e[(e.MESSAGING = 0)] = 'MESSAGING'), (e[(e.OVERLAYS = 1)] = 'OVERLAYS'), (e[(e.PREMIUM = 2)] = 'PREMIUM'), (e[(e.REPORTING = 3)] = 'REPORTING');
+})(i || (i = {}));
+let c = {
         visual_effect_view_overrides: {
             label: 'Blur view overrides for designers to test with',
             category: 1
@@ -57,44 +58,41 @@ let u = {
             category: 3
         }
     },
-    c = {};
-class d extends (i = s.ZP.DeviceSettingsStore) {
+    d = {};
+function f(e) {
+    d[e.toggle] = e.value;
+}
+class _ extends (a = o.ZP.DeviceSettingsStore) {
     getUserAgnosticState() {
-        return { toggleStates: c };
+        return { toggleStates: d };
     }
     initialize(e) {
-        for (var t in u) {
-            var n, r;
-            let i = null !== (r = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== r && r;
-            c[t] = i;
+        for (var n in c) {
+            var r, i;
+            let a = null !== (i = null == e ? void 0 : null === (r = e.toggleStates) || void 0 === r ? void 0 : r[n]) && void 0 !== i && i;
+            d[n] = a;
         }
     }
     get(e) {
-        var t;
-        return null !== (t = c[e]) && void 0 !== t && t;
+        var n;
+        return null !== (n = d[e]) && void 0 !== n && n;
     }
-    set(e, t) {
-        return (c[e] = t), t;
+    set(e, n) {
+        return (d[e] = n), n;
     }
     all() {
-        return c;
+        return d;
     }
     allByCategory(e) {
-        return Object.entries(u)
-            .filter((t) => {
-                let [n, r] = t;
-                return r.category === e;
+        return Object.entries(c)
+            .filter((n) => {
+                let [r, i] = n;
+                return i.category === e;
             })
             .map((e) => {
-                let [t, n] = e;
-                return [t, c[t], n];
+                let [n, r] = e;
+                return [n, d[n], r];
             });
     }
 }
-l(d, 'displayName', 'DevToolsDevSettingsStore'),
-    l(d, 'persistKey', 'DevToolsDevSettingsStore'),
-    (t.ZP = new d(o.Z, {
-        DEV_TOOLS_DEV_SETTING_SET: function (e) {
-            c[e.toggle] = e.value;
-        }
-    }));
+u(_, 'displayName', 'DevToolsDevSettingsStore'), u(_, 'persistKey', 'DevToolsDevSettingsStore'), (n.ZP = new _(l.Z, { DEV_TOOLS_DEV_SETTING_SET: f }));

@@ -1,10 +1,9 @@
-var r, i;
-n.d(t, {
+var i;
+r.d(n, {
     q: function () {
-        return r;
+        return i;
     }
 }),
-    ((i = r || (r = {}))[(i.DAILY = 1)] = 'DAILY'),
-    (i[(i.WEEKLY = 2)] = 'WEEKLY'),
-    (i[(i.MONTHLY = 3)] = 'MONTHLY'),
-    (i[(i.ALL_TIME = 4)] = 'ALL_TIME');
+    !(function (e) {
+        (e[(e.DAILY = 1)] = 'DAILY'), (e[(e.WEEKLY = 2)] = 'WEEKLY'), (e[(e.MONTHLY = 3)] = 'MONTHLY'), (e[(e.ALL_TIME = 4)] = 'ALL_TIME');
+    })(i || (i = {}));

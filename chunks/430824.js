@@ -1,52 +1,170 @@
-let r;
-n(47120);
-var i,
-    a,
-    s,
-    o,
-    l = n(442837),
-    u = n(902704),
-    c = n(570140),
-    d = n(601964),
-    f = n(411198),
-    _ = n(625137),
-    p = n(709054),
-    h = n(314897),
-    m = n(981631),
-    g = n(647086);
+let i;
+var a,
+    s = r(47120);
+var o = r(442837),
+    l = r(902704),
+    u = r(570140),
+    c = r(601964),
+    d = r(411198),
+    f = r(625137),
+    _ = r(709054),
+    h = r(314897),
+    p = r(981631),
+    m = r(647086);
+function g(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
 let E = {},
     v = {},
     I = !1,
     T = [];
 function b(e) {
-    for (let t of ((v = {}), (E = {}), (r = 0), e)) r++, (v[t.id] = f.cL(t)), (E[t.id] = t.roles);
+    I = !0;
+    let n = v;
+    (v = {}),
+        (E = {}),
+        (i = 0),
+        e.guilds.forEach((e) => {
+            i++, (v[e.id] = d.wD(e, n[e.id])), (E[e.id] = e.roles instanceof Array ? f.C5(e.id, e.roles) : e.roles);
+        });
+    let r = !1;
+    if (T.length !== e.geoRestrictedGuilds.length) r = !0;
+    else
+        for (let n = 0; n < e.geoRestrictedGuilds.length; n++)
+            if (!(0, l.Z)(T[n], e.geoRestrictedGuilds[n])) {
+                r = !0;
+                break;
+            }
+    r && (T = e.geoRestrictedGuilds);
+}
+function y(e) {
+    for (let r of e.guilds) {
+        var n;
+        let e = v[r.id];
+        if (null == e || 'unavailable' === r.data_mode) return;
+        (v[r.id] = d.sp(r, e)), (E[r.id] = 'partial' === r.data_mode ? d.EO(r.id, null !== (n = E[r.id]) && void 0 !== n ? n : k, r.partial_updates.roles, r.partial_updates.deleted_role_ids) : f.C5(r.id, r.roles));
+    }
+    i = Object.keys(v).length;
 }
 function S(e) {
-    let { guildId: t, role: n } = e,
-        r = E[t],
-        i = _.CL(n),
-        a = null == r ? void 0 : r[i.id];
-    if (null != a && (0, u.Z)(i, a)) return !1;
-    (r = {
-        ...r,
-        [n.id]: _.CL(n)
-    }),
-        (r = _.iw(t, Object.values(r))),
-        (E[t] = r);
+    for (let n of ((v = {}), (E = {}), (i = 0), e)) i++, (v[n.id] = d.cL(n)), (E[n.id] = n.roles);
 }
-let y = Object.freeze({});
-class A extends (i = l.ZP.Store) {
+function A(e) {
+    S(e.guilds);
+}
+function N(e) {
+    if (0 === e.guilds.length) return !1;
+    S(e.guilds);
+}
+function C(e) {
+    var n;
+    (v = {}),
+        (E = {}),
+        (i = 0),
+        null === (n = e.guilds) ||
+            void 0 === n ||
+            n.forEach((e) => {
+                i++, (v[e.id] = new c.ZP(e));
+            }),
+        (E = e.allGuildsRoles);
+}
+function R(e) {
+    let n = d.wD(e.guild, v[e.guild.id]);
+    null == v[n.id] && i++,
+        (v = {
+            ...v,
+            [n.id]: n
+        }),
+        (E[n.id] = e.guild.roles instanceof Array ? f.C5(n.id, e.guild.roles) : e.guild.roles);
+}
+function O(e) {
+    let n = d.di(e.guild, v[e.guild.id]);
+    null == v[n.id] && i++,
+        (v = {
+            ...v,
+            [n.id]: n
+        }),
+        (E[n.id] = f.C5(n.id, e.guild.roles));
+}
+function D(e) {
+    T = [
+        ...T,
+        {
+            id: e.guildId,
+            name: e.name,
+            icon: e.icon,
+            unavailable: !0,
+            geo_restricted: !0
+        }
+    ];
+}
+function L(e) {
+    let { guild: n } = e,
+        r = T.findIndex((e) => e.id === n.id);
+    if (-1 !== r) {
+        T.splice(r, 1), (T = [...T]);
+        return;
+    }
+    if (null == v[n.id] || n.unavailable) return !1;
+    (v = { ...v }), delete v[n.id], (E[n.id] = void 0), i--;
+}
+function x(e) {
+    let { guildId: n, role: r } = e,
+        i = E[n],
+        a = f.CL(r),
+        s = null == i ? void 0 : i[a.id];
+    if (null != s && (0, l.Z)(a, s)) return !1;
+    (i = {
+        ...i,
+        [r.id]: f.CL(r)
+    }),
+        (i = f.iw(n, Object.values(i))),
+        (E[n] = i);
+}
+function w(e) {
+    let { guildId: n, roleId: r } = e,
+        i = E[n];
+    if (null == i) return !1;
+    (i = { ...i }), delete i[r], (E[n] = i);
+}
+function P(e) {
+    let { guildId: n, joinedAt: r, user: i } = e,
+        a = h.default.getId(),
+        s = v[n];
+    if (a !== i.id || null == s) return !1;
+    let o = 'string' == typeof r ? new Date(r) : r;
+    if (o === s.joinedAt || null == o) return !1;
+    v = {
+        ...v,
+        [n]: s.updateJoinedAt(o)
+    };
+}
+function M() {
+    return !0;
+}
+let k = Object.freeze({});
+class U extends (a = o.ZP.Store) {
     getGuild(e) {
-        return null == e ? void 0 : e === m.I_8 ? g.g : v[e];
+        return null == e ? void 0 : e === p.I_8 ? m.g : v[e];
     }
     getGuilds() {
         return v;
     }
     getGuildIds() {
-        return p.default.keys(v);
+        return _.default.keys(v);
     }
     getGuildCount() {
-        return r;
+        return i;
     }
     isLoaded() {
         return I;
@@ -58,132 +176,28 @@ class A extends (i = l.ZP.Store) {
         return E;
     }
     getRoles(e) {
-        var t;
-        return null !== (t = E[e]) && void 0 !== t ? t : y;
-    }
-    getRole(e, t) {
         var n;
-        return null === (n = E[e]) || void 0 === n ? void 0 : n[t];
+        return null !== (n = E[e]) && void 0 !== n ? n : k;
+    }
+    getRole(e, n) {
+        var r;
+        return null === (r = E[e]) || void 0 === r ? void 0 : r[n];
     }
 }
-(o = 'GuildStore'),
-    (s = 'displayName') in (a = A)
-        ? Object.defineProperty(a, s, {
-              value: o,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (a[s] = o),
-    (t.Z = new A(c.Z, {
-        BACKGROUND_SYNC: function (e) {
-            for (let n of e.guilds) {
-                var t;
-                let e = v[n.id];
-                if (null == e || 'unavailable' === n.data_mode) return;
-                (v[n.id] = f.sp(n, e)), (E[n.id] = 'partial' === n.data_mode ? f.EO(n.id, null !== (t = E[n.id]) && void 0 !== t ? t : y, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : _.C5(n.id, n.roles));
-            }
-            r = Object.keys(v).length;
-        },
-        CONNECTION_OPEN: function (e) {
-            I = !0;
-            let t = v;
-            (v = {}),
-                (E = {}),
-                (r = 0),
-                e.guilds.forEach((e) => {
-                    r++, (v[e.id] = f.wD(e, t[e.id])), (E[e.id] = e.roles instanceof Array ? _.C5(e.id, e.roles) : e.roles);
-                });
-            let n = !1;
-            if (T.length !== e.geoRestrictedGuilds.length) n = !0;
-            else
-                for (let t = 0; t < e.geoRestrictedGuilds.length; t++)
-                    if (!(0, u.Z)(T[t], e.geoRestrictedGuilds[t])) {
-                        n = !0;
-                        break;
-                    }
-            n && (T = e.geoRestrictedGuilds);
-        },
-        OVERLAY_INITIALIZE: function (e) {
-            var t;
-            (v = {}),
-                (E = {}),
-                (r = 0),
-                null === (t = e.guilds) ||
-                    void 0 === t ||
-                    t.forEach((e) => {
-                        r++, (v[e.id] = new d.ZP(e));
-                    }),
-                (E = e.allGuildsRoles);
-        },
-        CACHE_LOADED: function (e) {
-            b(e.guilds);
-        },
-        CACHE_LOADED_LAZY: function (e) {
-            if (0 === e.guilds.length) return !1;
-            b(e.guilds);
-        },
-        GUILD_CREATE: function (e) {
-            let t = f.wD(e.guild, v[e.guild.id]);
-            null == v[t.id] && r++,
-                (v = {
-                    ...v,
-                    [t.id]: t
-                }),
-                (E[t.id] = e.guild.roles instanceof Array ? _.C5(t.id, e.guild.roles) : e.guild.roles);
-        },
-        GUILD_UPDATE: function (e) {
-            let t = f.di(e.guild, v[e.guild.id]);
-            null == v[t.id] && r++,
-                (v = {
-                    ...v,
-                    [t.id]: t
-                }),
-                (E[t.id] = _.C5(t.id, e.guild.roles));
-        },
-        GUILD_DELETE: function (e) {
-            let { guild: t } = e,
-                n = T.findIndex((e) => e.id === t.id);
-            if (-1 !== n) {
-                T.splice(n, 1), (T = [...T]);
-                return;
-            }
-            if (null == v[t.id] || t.unavailable) return !1;
-            (v = { ...v }), delete v[t.id], (E[t.id] = void 0), r--;
-        },
-        GUILD_ROLE_CREATE: S,
-        GUILD_ROLE_UPDATE: S,
-        GUILD_ROLE_DELETE: function (e) {
-            let { guildId: t, roleId: n } = e,
-                r = E[t];
-            if (null == r) return !1;
-            (r = { ...r }), delete r[n], (E[t] = r);
-        },
-        GUILD_MEMBER_ADD: function (e) {
-            let { guildId: t, joinedAt: n, user: r } = e,
-                i = h.default.getId(),
-                a = v[t];
-            if (i !== r.id || null == a) return !1;
-            let s = 'string' == typeof n ? new Date(n) : n;
-            if (s === a.joinedAt || null == s) return !1;
-            v = {
-                ...v,
-                [t]: a.updateJoinedAt(s)
-            };
-        },
-        GUILD_SETTINGS_SUBMIT_SUCCESS: function () {
-            return !0;
-        },
-        GUILD_GEO_RESTRICTED: function (e) {
-            T = [
-                ...T,
-                {
-                    id: e.guildId,
-                    name: e.name,
-                    icon: e.icon,
-                    unavailable: !0,
-                    geo_restricted: !0
-                }
-            ];
-        }
+g(U, 'displayName', 'GuildStore'),
+    (n.Z = new U(u.Z, {
+        BACKGROUND_SYNC: y,
+        CONNECTION_OPEN: b,
+        OVERLAY_INITIALIZE: C,
+        CACHE_LOADED: A,
+        CACHE_LOADED_LAZY: N,
+        GUILD_CREATE: R,
+        GUILD_UPDATE: O,
+        GUILD_DELETE: L,
+        GUILD_ROLE_CREATE: x,
+        GUILD_ROLE_UPDATE: x,
+        GUILD_ROLE_DELETE: w,
+        GUILD_MEMBER_ADD: P,
+        GUILD_SETTINGS_SUBMIT_SUCCESS: M,
+        GUILD_GEO_RESTRICTED: D
     }));

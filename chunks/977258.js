@@ -1,16 +1,18 @@
-n.d(t, {
+r.d(n, {
     s: function () {
-        return l;
+        return c;
     }
 });
-var r = n(149765);
-n(442837);
-var i = n(430198),
-    a = n(592125),
-    s = n(700785),
-    o = n(981631);
-function l(e, t) {
-    var n;
-    let l = null != (n = a.Z.getChannel(t)) && o.TPd.GUILD_VOCAL.has(n.type) ? r.$e(o.Plq.VIEW_CHANNEL, o.Plq.CONNECT) : o.Plq.VIEW_CHANNEL;
-    return i.Z.isChannelGated(e, t) || s.Uu(l, a.Z.getChannel(t));
+var i = r(149765);
+r(442837);
+var a = r(430198),
+    s = r(592125),
+    o = r(700785),
+    l = r(981631);
+function u(e) {
+    return null != e && l.TPd.GUILD_VOCAL.has(e.type) ? i.$e(l.Plq.VIEW_CHANNEL, l.Plq.CONNECT) : l.Plq.VIEW_CHANNEL;
+}
+function c(e, n) {
+    let r = u(s.Z.getChannel(n));
+    return a.Z.isChannelGated(e, n) || o.Uu(r, s.Z.getChannel(n));
 }

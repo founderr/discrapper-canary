@@ -1,105 +1,109 @@
-Object.defineProperty(t, '__esModule', { value: !0 }), (t.ColorWrap = void 0);
-var r =
+Object.defineProperty(n, '__esModule', { value: !0 }), (n.ColorWrap = void 0);
+var i =
         Object.assign ||
         function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+            for (var n = 1; n < arguments.length; n++) {
+                var r = arguments[n];
+                for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
             }
             return e;
         },
-    i = (function () {
-        function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-                var r = t[n];
-                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+    a = (function () {
+        function e(e, n) {
+            for (var r = 0; r < n.length; r++) {
+                var i = n[r];
+                (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
             }
         }
-        return function (t, n, r) {
-            return n && e(t.prototype, n), r && e(t, r), t;
+        return function (n, r, i) {
+            return r && e(n.prototype, r), i && e(n, i), n;
         };
     })(),
-    a = n(192379),
-    s = u(a),
-    o = u(n(889678)),
-    l = (function (e) {
-        if (e && e.__esModule) return e;
-        var t = {};
-        if (null != e) for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
-        return (t.default = e), t;
-    })(n(999385));
-function u(e) {
+    s = r(192379),
+    o = d(s),
+    l = d(r(889678)),
+    u = c(r(999385));
+function c(e) {
+    if (e && e.__esModule) return e;
+    var n = {};
+    if (null != e) for (var r in e) Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]);
+    return (n.default = e), n;
+}
+function d(e) {
     return e && e.__esModule ? e : { default: e };
 }
-var c = (t.ColorWrap = function (e) {
-    var t = (function (t) {
-        function n(e) {
-            !(function (e, t) {
-                if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-            })(this, n);
-            var t = (function (e, t) {
-                if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-                return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
-            })(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
+function f(e, n) {
+    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+}
+function _(e, n) {
+    if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
+}
+function h(e, n) {
+    if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
+    (e.prototype = Object.create(n && n.prototype, {
+        constructor: {
+            value: e,
+            enumerable: !1,
+            writable: !0,
+            configurable: !0
+        }
+    })),
+        n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
+}
+var p = (n.ColorWrap = function (e) {
+    var n = (function (n) {
+        function r(e) {
+            f(this, r);
+            var n = _(this, (r.__proto__ || Object.getPrototypeOf(r)).call(this));
             return (
-                (t.handleChange = function (e, n) {
-                    if (l.simpleCheckForValidColor(e)) {
-                        var r = l.toState(e, e.h || t.state.oldHue);
-                        t.setState(r), t.props.onChangeComplete && t.debounce(t.props.onChangeComplete, r, n), t.props.onChange && t.props.onChange(r, n);
+                (n.handleChange = function (e, r) {
+                    if (u.simpleCheckForValidColor(e)) {
+                        var i = u.toState(e, e.h || n.state.oldHue);
+                        n.setState(i), n.props.onChangeComplete && n.debounce(n.props.onChangeComplete, i, r), n.props.onChange && n.props.onChange(i, r);
                     }
                 }),
-                (t.handleSwatchHover = function (e, n) {
-                    if (l.simpleCheckForValidColor(e)) {
-                        var r = l.toState(e, e.h || t.state.oldHue);
-                        t.props.onSwatchHover && t.props.onSwatchHover(r, n);
+                (n.handleSwatchHover = function (e, r) {
+                    if (u.simpleCheckForValidColor(e)) {
+                        var i = u.toState(e, e.h || n.state.oldHue);
+                        n.props.onSwatchHover && n.props.onSwatchHover(i, r);
                     }
                 }),
-                (t.state = r({}, l.toState(e.color, 0))),
-                (t.debounce = (0, o.default)(function (e, t, n) {
-                    e(t, n);
+                (n.state = i({}, u.toState(e.color, 0))),
+                (n.debounce = (0, l.default)(function (e, n, r) {
+                    e(n, r);
                 }, 100)),
-                t
+                n
             );
         }
         return (
-            !(function (e, t) {
-                if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-                (e.prototype = Object.create(t && t.prototype, {
-                    constructor: {
-                        value: e,
-                        enumerable: !1,
-                        writable: !0,
-                        configurable: !0
-                    }
-                })),
-                    t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
-            })(n, t),
-            i(
-                n,
+            h(r, n),
+            a(
+                r,
                 [
                     {
                         key: 'render',
                         value: function () {
-                            var t = {};
-                            return this.props.onSwatchHover && (t.onSwatchHover = this.handleSwatchHover), s.default.createElement(e, r({}, this.props, this.state, { onChange: this.handleChange }, t));
+                            var n = {};
+                            return this.props.onSwatchHover && (n.onSwatchHover = this.handleSwatchHover), o.default.createElement(e, i({}, this.props, this.state, { onChange: this.handleChange }, n));
                         }
                     }
                 ],
                 [
                     {
                         key: 'getDerivedStateFromProps',
-                        value: function (e, t) {
-                            return r({}, l.toState(e.color, t.oldHue));
+                        value: function (e, n) {
+                            return i({}, u.toState(e.color, n.oldHue));
                         }
                     }
                 ]
             ),
-            n
+            r
         );
-    })(a.PureComponent || a.Component);
+    })(s.PureComponent || s.Component);
     return (
-        (t.propTypes = r({}, e.propTypes)),
-        (t.defaultProps = r({}, e.defaultProps, {
+        (n.propTypes = i({}, e.propTypes)),
+        (n.defaultProps = i({}, e.defaultProps, {
             color: {
                 h: 250,
                 s: 0.5,
@@ -107,7 +111,7 @@ var c = (t.ColorWrap = function (e) {
                 a: 1
             }
         })),
-        t
+        n
     );
 });
-t.default = c;
+n.default = p;

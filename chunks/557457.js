@@ -1,53 +1,56 @@
-n.d(t, {
+r.d(n, {
     Wc: function () {
-        return g;
+        return v;
     },
     Ye: function () {
-        return E;
+        return I;
     },
     bp: function () {
-        return m;
+        return E;
     },
     ml: function () {
-        return h;
+        return g;
     },
     nG: function () {
-        return _;
+        return h;
     },
     tR: function () {
-        return f;
+        return _;
     }
 });
-var r = n(430824),
-    i = n(19780),
-    a = n(594174),
-    s = n(626135),
-    o = n(981631),
-    l = n(37113),
-    u = n(474936),
-    c = n(65154),
-    d = n(388032);
-function f(e) {
-    if (null == e) return;
-    let t = e.maxResolution.type === c.uA.SOURCE ? l.LY.RESOLUTION_SOURCE : e.maxResolution.height,
-        n = (0, l.aW)(t);
-    return (0, l.L9)(e.maxFrameRate) !== l.ws.FPS_5 && null == l.ND.find((e) => e.resolution === n && e.fps !== l.ws.FPS_5 && !p(e));
-}
+var i = r(430824),
+    a = r(19780),
+    s = r(594174),
+    o = r(626135),
+    l = r(981631),
+    u = r(37113),
+    c = r(474936),
+    d = r(65154),
+    f = r(388032);
 function _(e) {
     if (null == e) return;
-    let t = (0, l.L9)(e.maxFrameRate);
-    return null == l.ND.find((e) => e.fps === t && !p(e));
+    let n = e.maxResolution.type === d.uA.SOURCE ? u.LY.RESOLUTION_SOURCE : e.maxResolution.height,
+        r = (0, u.aW)(n);
+    return (0, u.L9)(e.maxFrameRate) !== u.ws.FPS_5 && null == u.ND.find((e) => e.resolution === r && e.fps !== u.ws.FPS_5 && !p(e));
+}
+function h(e) {
+    if (null == e) return;
+    let n = (0, u.L9)(e.maxFrameRate);
+    return null == u.ND.find((e) => e.fps === n && !p(e));
 }
 function p(e) {
     return null != e.quality || null != e.guildPremiumTier;
 }
-function h(e) {
-    return e.type === c.uA.SOURCE ? d.intl.string(d.t.XjXqzs) : d.intl.formatToPlainString(d.t.TEOC0N, { resolution: e.height });
-}
-function m(e) {
-    return d.intl.formatToPlainString(d.t.Qb44XF, { fps: e });
+function m(e, n, r) {
+    return u.ND.find((i) => (null == i.preset || i.preset === e) && i.resolution === n && i.fps === r);
 }
 function g(e) {
+    return e.type === d.uA.SOURCE ? f.intl.string(f.t.XjXqzs) : f.intl.formatToPlainString(f.t.TEOC0N, { resolution: e.height });
+}
+function E(e) {
+    return f.intl.formatToPlainString(f.t.Qb44XF, { fps: e });
+}
+function v(e) {
     return null == e.maxResolution || null == e.maxFrameRate
         ? null
         : {
@@ -55,19 +58,18 @@ function g(e) {
               maxResolution: e.maxResolution
           };
 }
-function E(e, t, n) {
-    var c, d, f;
-    let _ = ((c = e), (d = t), (f = n), l.ND.find((e) => (null == e.preset || e.preset === c) && e.resolution === d && e.fps === f)),
-        p = a.default.getCurrentUser(),
-        h = i.Z.getGuildId(),
-        m = null != h ? r.Z.getGuild(h) : null;
-    s.default.track(o.rMx.STREAM_SETTINGS_UPDATE, {
-        user_premium_tier: null == p ? void 0 : p.premiumType,
-        guild_premium_tier: null == m ? void 0 : m.premiumTier,
-        stream_quality_user_premium_tier: (null == _ ? void 0 : _.quality) != null ? u.bg[_.quality] : null,
-        stream_quality_guild_premium_tier: null == _ ? void 0 : _.guildPremiumTier,
+function I(e, n, r) {
+    let u = m(e, n, r),
+        d = s.default.getCurrentUser(),
+        f = a.Z.getGuildId(),
+        _ = null != f ? i.Z.getGuild(f) : null;
+    o.default.track(l.rMx.STREAM_SETTINGS_UPDATE, {
+        user_premium_tier: null == d ? void 0 : d.premiumType,
+        guild_premium_tier: null == _ ? void 0 : _.premiumTier,
+        stream_quality_user_premium_tier: (null == u ? void 0 : u.quality) != null ? c.bg[u.quality] : null,
+        stream_quality_guild_premium_tier: null == u ? void 0 : u.guildPremiumTier,
         stream_quality_preset: e,
-        stream_quality_resolution: t,
-        stream_quality_frame_rate: n
+        stream_quality_resolution: n,
+        stream_quality_frame_rate: r
     });
 }

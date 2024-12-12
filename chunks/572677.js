@@ -1,12 +1,11 @@
-var r = n(24124);
-function i(e, t) {
-    for (var n = 0; n < t.length; n++) {
-        var i = t[n];
-        (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, r(i.key), i);
+var i = r(24124);
+function a(e, n) {
+    for (var r = 0; r < n.length; r++) {
+        var a = n[r];
+        (a.enumerable = a.enumerable || !1), (a.configurable = !0), 'value' in a && (a.writable = !0), Object.defineProperty(e, i(a.key), a);
     }
 }
-(e.exports = function (e, t, n) {
-    return t && i(e.prototype, t), n && i(e, n), Object.defineProperty(e, 'prototype', { writable: !1 }), e;
-}),
-    (e.exports.__esModule = !0),
-    (e.exports.default = e.exports);
+function s(e, n, r) {
+    return n && a(e.prototype, n), r && a(e, r), Object.defineProperty(e, 'prototype', { writable: !1 }), e;
+}
+(e.exports = s), (e.exports.__esModule = !0), (e.exports.default = e.exports);

@@ -1,30 +1,27 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return o;
     }
-}),
-    n(411104);
-var r = n(200651),
-    i = n(192379);
-function a() {
-    let e = i.createContext(void 0);
-    function t() {
-        let t = i.useContext(e);
-        if (null == t) throw Error('Context was used outside of defined provider.');
-        return t;
+});
+var i = r(411104);
+var a = r(200651),
+    s = r(192379);
+function o() {
+    let e = s.createContext(void 0);
+    function n() {
+        let n = s.useContext(e);
+        if (null == n) throw Error('Context was used outside of defined provider.');
+        return n;
     }
-    return [
-        e,
-        t,
-        function () {
-            let n = t();
-            return function (t) {
-                let { children: i } = t;
-                return (0, r.jsx)(e.Provider, {
-                    value: n,
-                    children: i
-                });
-            };
-        }
-    ];
+    function r() {
+        let r = n();
+        return function n(n) {
+            let { children: i } = n;
+            return (0, a.jsx)(e.Provider, {
+                value: r,
+                children: i
+            });
+        };
+    }
+    return [e, n, r];
 }

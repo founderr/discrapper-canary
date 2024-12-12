@@ -1,30 +1,32 @@
-var r = n(413135).Buffer,
-    i = n(28704),
-    a = n(706178);
-function s(e) {
-    var t,
-        n = e.modulus.byteLength();
-    do t = new i(a(n));
-    while (t.cmp(e.modulus) >= 0 || !t.umod(e.prime1) || !t.umod(e.prime2));
-    return t;
+var i = r(413135).Buffer,
+    a = r(28704),
+    s = r(706178);
+function o(e) {
+    var n = l(e);
+    return {
+        blinder: n.toRed(a.mont(e.modulus)).redPow(new a(e.publicExponent)).fromRed(),
+        unblinder: n.invm(e.modulus)
+    };
 }
-function o(e, t) {
+function l(e) {
     var n,
-        a,
-        o = {
-            blinder: (a = s((n = t))).toRed(i.mont(n.modulus)).redPow(new i(n.publicExponent)).fromRed(),
-            unblinder: a.invm(n.modulus)
-        },
-        l = t.modulus.byteLength(),
-        u = new i(e).mul(o.blinder).umod(t.modulus),
-        c = u.toRed(i.mont(t.prime1)),
-        d = u.toRed(i.mont(t.prime2)),
-        f = t.coefficient,
-        _ = t.prime1,
-        p = t.prime2,
-        h = c.redPow(t.exponent1).fromRed(),
-        m = d.redPow(t.exponent2).fromRed(),
-        g = h.isub(m).imul(f).umod(_).imul(p);
-    return m.iadd(g).imul(o.unblinder).umod(t.modulus).toArrayLike(r, 'be', l);
+        r = e.modulus.byteLength();
+    do n = new a(s(r));
+    while (n.cmp(e.modulus) >= 0 || !n.umod(e.prime1) || !n.umod(e.prime2));
+    return n;
 }
-(o.getr = s), (e.exports = o);
+function u(e, n) {
+    var r = o(n),
+        s = n.modulus.byteLength(),
+        l = new a(e).mul(r.blinder).umod(n.modulus),
+        u = l.toRed(a.mont(n.prime1)),
+        c = l.toRed(a.mont(n.prime2)),
+        d = n.coefficient,
+        f = n.prime1,
+        _ = n.prime2,
+        h = u.redPow(n.exponent1).fromRed(),
+        p = c.redPow(n.exponent2).fromRed(),
+        m = h.isub(p).imul(d).umod(f).imul(_);
+    return p.iadd(m).imul(r.unblinder).umod(n.modulus).toArrayLike(i, 'be', s);
+}
+(u.getr = l), (e.exports = u);

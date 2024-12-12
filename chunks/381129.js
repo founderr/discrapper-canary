@@ -1,50 +1,54 @@
-n(47120);
-var r = n(512722),
-    i = n.n(r),
-    a = n(957730),
-    s = n(439170),
-    o = n(496675),
-    l = n(981631);
-let u = new RegExp(/@(:?everyone|here)/);
-function c(e, t) {
-    let n = 0;
-    if (t.isThread()) {
-        var r;
-        return null !== (r = t.memberCount) && void 0 !== r ? r : 0;
+var i = r(47120);
+var a = r(512722),
+    s = r.n(a),
+    o = r(957730),
+    l = r(439170),
+    u = r(496675),
+    c = r(981631);
+let d = new RegExp(/@(:?everyone|here)/),
+    f = 30;
+function _(e, n) {
+    let r = n.getGuildId();
+    return s()(r, 'isGuildChannel with null guildId'), h(e, n) > f && u.Z.can(c.Plq.MENTION_EVERYONE, n);
+}
+function h(e, n) {
+    let r = 0;
+    if (n.isThread()) {
+        var i;
+        return null !== (i = n.memberCount) && void 0 !== i ? i : 0;
     }
     return (
-        s.ZP.getProps(t.getGuildId(), t.id).groups.forEach((t) => {
-            ('@everyone' === e || t.id !== l.Skl.OFFLINE) && (n += t.count);
+        l.ZP.getProps(n.getGuildId(), n.id).groups.forEach((n) => {
+            ('@everyone' === e || n.id !== c.Skl.OFFLINE) && (r += n.count);
         }),
-        n
+        r
     );
 }
-t.Z = {
-    shouldShowEveryoneGuard: function (e, t) {
-        let n = t.getGuildId();
-        return i()(n, 'isGuildChannel with null guildId'), c(e, t) > 30 && o.Z.can(l.Plq.MENTION_EVERYONE, t);
-    },
-    everyoneMemberCount: c,
-    extractEveryoneRole: function (e, t) {
-        for (let n of a.ZP.parsePreprocessor(t, e)) {
-            let e = (function e(t) {
-                if ('string' == typeof t.content) {
-                    var n;
-                    if ('inlineCode' === t.type || 'codeBlock' === t.type) return null;
-                    let e = null === (n = t.content) || void 0 === n ? void 0 : n.match(u);
-                    if (null != e) {
-                        let [t] = e;
-                        return t;
-                    }
-                } else if (Array.isArray(t.content))
-                    for (let n of t.content) {
-                        let t = e(n);
-                        if (null != t) return t;
-                    }
-                return null;
-            })(n);
+function p(e) {
+    if ('string' == typeof e.content) {
+        var n;
+        if ('inlineCode' === e.type || 'codeBlock' === e.type) return null;
+        let r = null === (n = e.content) || void 0 === n ? void 0 : n.match(d);
+        if (null != r) {
+            let [e] = r;
+            return e;
+        }
+    } else if (Array.isArray(e.content))
+        for (let n of e.content) {
+            let e = p(n);
             if (null != e) return e;
         }
-        return null;
+    return null;
+}
+function m(e, n) {
+    for (let r of o.ZP.parsePreprocessor(n, e)) {
+        let e = p(r);
+        if (null != e) return e;
     }
+    return null;
+}
+n.Z = {
+    shouldShowEveryoneGuard: _,
+    everyoneMemberCount: h,
+    extractEveryoneRole: m
 };

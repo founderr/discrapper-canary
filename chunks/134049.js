@@ -1,36 +1,37 @@
-n.d(t, {
+r.d(n, {
     i: function () {
-        return c;
+        return _;
     },
     l: function () {
-        return d;
+        return h;
     }
-}),
-    n(47120);
-var r = n(232713),
-    i = n(65400),
-    a = n(5907),
-    s = n(731965),
-    o = n(433517),
-    l = n(590433);
-let u = (0, a.M)((e, t) => {
-    var n;
-    return {
-        notificationDismissedInGuilds: new Set(null !== (n = o.K.get(l.hL)) && void 0 !== n ? n : []),
-        dismissNotification: (n) => {
-            let r = t().notificationDismissedInGuilds;
-            r.add(n), o.K.set(l.hL, r), (0, s.j)(() => e({ notificationDismissedInGuilds: r }));
-        },
-        resetNotification: (n) => {
-            let r = t().notificationDismissedInGuilds;
-            r.has(n) && (r.delete(n), o.K.set(l.hL, r), (0, s.j)(() => e({ notificationDismissedInGuilds: r })));
-        }
-    };
 });
-function c(e) {
-    let [t, n] = (0, i.s)(u, (e) => [e.notificationDismissedInGuilds, e.dismissNotification], r.X);
-    return [!t.has(e), n];
+var i = r(47120);
+var a = r(232713),
+    s = r(65400),
+    o = r(5907),
+    l = r(731965),
+    u = r(433517),
+    c = r(590433);
+function d() {
+    var e;
+    return new Set(null !== (e = u.K.get(c.hL)) && void 0 !== e ? e : []);
 }
-function d(e) {
-    return u.getState().resetNotification(e);
+let f = (0, o.M)((e, n) => ({
+    notificationDismissedInGuilds: d(),
+    dismissNotification: (r) => {
+        let i = n().notificationDismissedInGuilds;
+        i.add(r), u.K.set(c.hL, i), (0, l.j)(() => e({ notificationDismissedInGuilds: i }));
+    },
+    resetNotification: (r) => {
+        let i = n().notificationDismissedInGuilds;
+        i.has(r) && (i.delete(r), u.K.set(c.hL, i), (0, l.j)(() => e({ notificationDismissedInGuilds: i })));
+    }
+}));
+function _(e) {
+    let [n, r] = (0, s.s)(f, (e) => [e.notificationDismissedInGuilds, e.dismissNotification], a.X);
+    return [!n.has(e), r];
+}
+function h(e) {
+    return f.getState().resetNotification(e);
 }

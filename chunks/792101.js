@@ -1,16 +1,19 @@
-n.d(t, {
+r.d(n, {
     mv: function () {
-        return s;
+        return l;
     },
     xJ: function () {
-        return o;
+        return u;
     }
 });
-var r,
-    i,
-    a = n(358085);
-let s = null;
-function o() {
-    return (0, a.isAndroid)(), null;
+var i,
+    a = r(358085);
+let s = null,
+    o = null,
+    l = null;
+function u() {
+    return (0, a.isAndroid)() ? s : o;
 }
-((r = i || (i = {})).REMINDER = 'reminder'), (r.TOP_MESSAGE_PUSH = 'top_messages_push'), (r.TRENDING_CONTENT_PUSH = 'trending_content_push');
+!(function (e) {
+    (e.REMINDER = 'reminder'), (e.TOP_MESSAGE_PUSH = 'top_messages_push'), (e.TRENDING_CONTENT_PUSH = 'trending_content_push');
+})(i || (i = {}));

@@ -1,45 +1,40 @@
-n.d(t, {
+r.d(n, {
     Vk: function () {
-        return u;
+        return a;
     },
     YK: function () {
-        return h;
-    },
-    ap: function () {
-        return m;
-    },
-    bv: function () {
         return d;
     },
-    gl: function () {
+    ap: function () {
         return f;
     },
-    iP: function () {
-        return p;
+    bv: function () {
+        return o;
     },
-    n0: function () {
-        return c;
-    },
-    nc: function () {
+    gl: function () {
         return l;
     },
+    iP: function () {
+        return c;
+    },
+    n0: function () {
+        return s;
+    },
+    nc: function () {
+        return i;
+    },
     wF: function () {
-        return g;
+        return _;
     }
 });
-var r,
-    i,
+var i,
     a,
     s,
     o,
     l,
-    u,
-    c,
-    d,
-    f,
-    _ = n(358085);
-let p = _.isPlatformEmbedded && ((0, _.isWindows)() || !1);
-function h(e) {
+    u = r(358085);
+let c = u.isPlatformEmbedded && ((0, u.isWindows)() || !1);
+function d(e) {
     switch (e) {
         case 'News Nudge':
         case 'Welcome Nudge':
@@ -60,16 +55,29 @@ function h(e) {
             return 5;
     }
 }
-((r = l || (l = {}))[(r.WELCOME = 0)] = 'WELCOME'), (r[(r.NEWS = 1)] = 'NEWS'), (r[(r.GO_LIVE_VOICE = 2)] = 'GO_LIVE_VOICE'), (r[(r.GO_LIVE_NON_VOICE = 3)] = 'GO_LIVE_NON_VOICE'), (r[(r.KEYBIND_INDICATORS = 4)] = 'KEYBIND_INDICATORS'), (r[(r.CONTENT_INVENTORY = 5)] = 'CONTENT_INVENTORY'), ((i = u || (u = {}))[(i.Nudge = 0)] = 'Nudge'), (i[(i.TextChat = 1)] = 'TextChat'), (i[(i.VoiceCall = 2)] = 'VoiceCall'), (i[(i.Activity = 3)] = 'Activity'), (i[(i.Clips = 4)] = 'Clips'), (i[(i.Other = 5)] = 'Other'), ((a = c || (c = {})).NewsNudge = 'News Nudge'), (a.WelcomeNudge = 'Welcome Nudge'), (a.TextChat = 'Text Chat'), (a.ActivityUserJoin = 'Activity User Join'), (a.ActivityInvite = 'Activity Invite'), (a.IncomingCall = 'Incoming Call'), (a.GoLiveNudge = 'Go Live Nudge'), (a.GoLiveNonVoiceNudge = 'Go Live Non Voice Nudge'), (a.OverlayCrashed = 'Overlay Crashed'), (a.ClipsReminderNotification = 'Clips Reminder Notification'), (a.ClipsNotification = 'Clips Notification'), (a.KeybindIndicatorsNotification = 'Keybind Indicators Notification'), (a.SendGameInvitesNotification = 'Send Game Invites Notification'), ((s = d || (d = {}))[(s.Viewed = 0)] = 'Viewed'), (s[(s.Clicked = 1)] = 'Clicked');
-let m = Object.freeze({
+!(function (e) {
+    (e[(e.WELCOME = 0)] = 'WELCOME'), (e[(e.NEWS = 1)] = 'NEWS'), (e[(e.GO_LIVE_VOICE = 2)] = 'GO_LIVE_VOICE'), (e[(e.GO_LIVE_NON_VOICE = 3)] = 'GO_LIVE_NON_VOICE'), (e[(e.KEYBIND_INDICATORS = 4)] = 'KEYBIND_INDICATORS'), (e[(e.CONTENT_INVENTORY = 5)] = 'CONTENT_INVENTORY');
+})(i || (i = {})),
+    !(function (e) {
+        (e[(e.Nudge = 0)] = 'Nudge'), (e[(e.TextChat = 1)] = 'TextChat'), (e[(e.VoiceCall = 2)] = 'VoiceCall'), (e[(e.Activity = 3)] = 'Activity'), (e[(e.Clips = 4)] = 'Clips'), (e[(e.Other = 5)] = 'Other');
+    })(a || (a = {})),
+    !(function (e) {
+        (e.NewsNudge = 'News Nudge'), (e.WelcomeNudge = 'Welcome Nudge'), (e.TextChat = 'Text Chat'), (e.ActivityUserJoin = 'Activity User Join'), (e.ActivityInvite = 'Activity Invite'), (e.IncomingCall = 'Incoming Call'), (e.GoLiveNudge = 'Go Live Nudge'), (e.GoLiveNonVoiceNudge = 'Go Live Non Voice Nudge'), (e.OverlayCrashed = 'Overlay Crashed'), (e.ClipsReminderNotification = 'Clips Reminder Notification'), (e.ClipsNotification = 'Clips Notification'), (e.KeybindIndicatorsNotification = 'Keybind Indicators Notification'), (e.SendGameInvitesNotification = 'Send Game Invites Notification');
+    })(s || (s = {})),
+    !(function (e) {
+        (e[(e.Viewed = 0)] = 'Viewed'), (e[(e.Clicked = 1)] = 'Clicked');
+    })(o || (o = {}));
+let f = Object.freeze({
     LOW: 'background-opacity-low',
     MEDIUM: 'background-opacity-medium',
     HIGH: 'background-opacity-high',
     FULL: 'background-opacity-full',
     DISABLED: null
 });
-((o = f || (f = {}))[(o.Disabled = 0)] = 'Disabled'), (o[(o.Hook = 1)] = 'Hook'), (o[(o.OutOfProcess = 2)] = 'OutOfProcess');
-let g = Object.freeze({
+!(function (e) {
+    (e[(e.Disabled = 0)] = 'Disabled'), (e[(e.Hook = 1)] = 'Hook'), (e[(e.OutOfProcess = 2)] = 'OutOfProcess');
+})(l || (l = {}));
+let _ = Object.freeze({
     BOTTOM: 0,
     LOWER: 0.25,
     UPPER: 0.75,

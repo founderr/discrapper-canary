@@ -1,59 +1,65 @@
-n.d(t, {
-    DT: function () {
-        return i;
-    },
-    cd: function () {
-        return a;
-    },
-    pZ: function () {
-        return r;
-    },
-    sx: function () {
-        return o;
-    }
-});
-function r(e) {
+function i(e) {
+    return e.split(/,/)[1];
+}
+function a(e) {
     return -1 !== e.search(/^(data:)/);
 }
-function i(e, t) {
-    return `data:${t};base64,${e}`;
+function s(e, n) {
+    return `data:${n};base64,${e}`;
 }
-async function a(e, t, n) {
-    let r = await fetch(e, t);
-    if (404 === r.status) throw Error(`Resource "${r.url}" not found`);
-    let i = await r.blob();
-    return new Promise((e, t) => {
-        let a = new FileReader();
-        (a.onerror = t),
-            (a.onloadend = () => {
+async function o(e, n, r) {
+    let i = await fetch(e, n);
+    if (404 === i.status) throw Error(`Resource "${i.url}" not found`);
+    let a = await i.blob();
+    return new Promise((e, n) => {
+        let s = new FileReader();
+        (s.onerror = n),
+            (s.onloadend = () => {
                 try {
                     e(
-                        n({
-                            res: r,
-                            result: a.result
+                        r({
+                            res: i,
+                            result: s.result
                         })
                     );
                 } catch (e) {
-                    t(e);
+                    n(e);
                 }
             }),
-            a.readAsDataURL(i);
+            s.readAsDataURL(a);
     });
 }
-let s = {};
-async function o(e, t, n) {
-    var r, o, l;
-    let u, c;
-    let d = ((r = e), (o = t), (l = n.includeQueryParams), (c = r.replace(/\?.*/, '')), l && (c = r), /ttf|otf|eot|woff2?/i.test(c) && (c = c.replace(/.*\//, '')), o ? `[${o}]${c}` : c);
-    if (null != s[d]) return s[d];
-    n.cacheBust && (e += (/\?/.test(e) ? '&' : '?') + new Date().getTime());
-    try {
-        let r = await a(e, n.fetchRequestInit, ({ res: e, result: n }) => (!t && (t = e.headers.get('Content-Type') || ''), n.split(/,/)[1]));
-        u = i(r, t);
-    } catch (r) {
-        u = n.imagePlaceholder || '';
-        let t = `Failed to fetch resource: ${e}`;
-        r && (t = 'string' == typeof r ? r : r.message), t && console.warn(t);
+r.d(n, {
+    DT: function () {
+        return s;
+    },
+    cd: function () {
+        return o;
+    },
+    pZ: function () {
+        return a;
+    },
+    sx: function () {
+        return c;
     }
-    return (s[d] = u), u;
+});
+let l = {};
+function u(e, n, r) {
+    let i = e.replace(/\?.*/, '');
+    return r && (i = e), /ttf|otf|eot|woff2?/i.test(i) && (i = i.replace(/.*\//, '')), n ? `[${n}]${i}` : i;
+}
+async function c(e, n, r) {
+    let a;
+    let c = u(e, n, r.includeQueryParams);
+    if (null != l[c]) return l[c];
+    r.cacheBust && (e += (/\?/.test(e) ? '&' : '?') + new Date().getTime());
+    try {
+        let l = await o(e, r.fetchRequestInit, ({ res: e, result: r }) => (!n && (n = e.headers.get('Content-Type') || ''), i(r)));
+        a = s(l, n);
+    } catch (i) {
+        a = r.imagePlaceholder || '';
+        let n = `Failed to fetch resource: ${e}`;
+        i && (n = 'string' == typeof i ? i : i.message), n && console.warn(n);
+    }
+    return (l[c] = a), a;
 }

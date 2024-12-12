@@ -1,156 +1,158 @@
-n.d(t, {
+r.d(n, {
     Kq: function () {
-        return v;
+        return y;
     },
     L0: function () {
-        return N;
+        return D;
     },
     Ux: function () {
-        return S;
+        return C;
     },
     Xe: function () {
-        return A;
+        return O;
     },
     aQ: function () {
-        return T;
+        return A;
     },
     bU: function () {
-        return g;
+        return I;
     },
     qb: function () {
-        return I;
+        return S;
     }
 });
-var r = n(192379),
-    i = n(198453),
-    a = n(133886),
-    s = n(495484),
-    o = n(661763),
-    l = n(881085);
-let u = new Set(['Arab', 'Syrc', 'Samr', 'Mand', 'Thaa', 'Mend', 'Nkoo', 'Adlm', 'Rohg', 'Hebr']),
-    c = new Set(['ae', 'ar', 'arc', 'bcc', 'bqi', 'ckb', 'dv', 'fa', 'glk', 'he', 'ku', 'mzn', 'nqo', 'pnb', 'ps', 'sd', 'ug', 'ur', 'yi']),
-    d = Symbol.for('react-aria.i18n.locale');
-function f() {
-    let e = ('undefined' != typeof window && window[d]) || ('undefined' != typeof navigator && (navigator.language || navigator.userLanguage)) || 'en-US';
+var i = r(192379),
+    a = r(198453),
+    s = r(133886),
+    o = r(495484),
+    l = r(661763),
+    u = r(881085);
+let c = new Set(['Arab', 'Syrc', 'Samr', 'Mand', 'Thaa', 'Mend', 'Nkoo', 'Adlm', 'Rohg', 'Hebr']),
+    d = new Set(['ae', 'ar', 'arc', 'bcc', 'bqi', 'ckb', 'dv', 'fa', 'glk', 'he', 'ku', 'mzn', 'nqo', 'pnb', 'ps', 'sd', 'ug', 'ur', 'yi']);
+function f(e) {
+    if (Intl.Locale) {
+        let n = new Intl.Locale(e).maximize(),
+            r = 'function' == typeof n.getTextInfo ? n.getTextInfo() : n.textInfo;
+        if (r) return 'rtl' === r.direction;
+        if (n.script) return c.has(n.script);
+    }
+    let n = e.split('-')[0];
+    return d.has(n);
+}
+let _ = Symbol.for('react-aria.i18n.locale');
+function h() {
+    let e = ('undefined' != typeof window && window[_]) || ('undefined' != typeof navigator && (navigator.language || navigator.userLanguage)) || 'en-US';
     try {
         Intl.DateTimeFormat.supportedLocalesOf([e]);
-    } catch (t) {
+    } catch (n) {
         e = 'en-US';
     }
     return {
         locale: e,
-        direction: !(function (e) {
-            if (Intl.Locale) {
-                let t = new Intl.Locale(e).maximize(),
-                    n = 'function' == typeof t.getTextInfo ? t.getTextInfo() : t.textInfo;
-                if (n) return 'rtl' === n.direction;
-                if (t.script) return u.has(t.script);
-            }
-            let t = e.split('-')[0];
-            return c.has(t);
-        })(e)
-            ? 'ltr'
-            : 'rtl'
+        direction: f(e) ? 'rtl' : 'ltr'
     };
 }
-let _ = f(),
-    p = new Set();
-function h() {
-    for (let e of ((_ = f()), p)) e(_);
-}
-let m = r.createContext(null);
+let p = h(),
+    m = new Set();
 function g() {
-    let e = (function () {
-        let e = (0, i.Av)(),
-            [t, n] = (0, r.useState)(_);
-        return ((0, r.useEffect)(
-            () => (
-                0 === p.size && window.addEventListener('languagechange', h),
-                p.add(n),
-                () => {
-                    p.delete(n), 0 === p.size && window.removeEventListener('languagechange', h);
-                }
-            ),
-            []
+    for (let e of ((p = h()), m)) e(p);
+}
+function E() {
+    let e = (0, a.Av)(),
+        [n, r] = (0, i.useState)(p);
+    return ((0, i.useEffect)(
+        () => (
+            0 === m.size && window.addEventListener('languagechange', g),
+            m.add(r),
+            () => {
+                m.delete(r), 0 === m.size && window.removeEventListener('languagechange', g);
+            }
         ),
-        e)
-            ? {
-                  locale: 'en-US',
-                  direction: 'ltr'
-              }
-            : t;
-    })();
-    return (0, r.useContext)(m) || e;
+        []
+    ),
+    e)
+        ? {
+              locale: 'en-US',
+              direction: 'ltr'
+          }
+        : n;
 }
-let E = new WeakMap();
-function v(e, t) {
-    var n;
-    let r;
-    return (t && (0, a.J).getGlobalDictionaryForPackage(t)) || ((n = e), !(r = E.get(n)) && ((r = new a.J(n)), E.set(n, r)), r);
+let v = i.createContext(null);
+function I() {
+    let e = E();
+    return (0, i.useContext)(v) || e;
 }
-function I(e, t) {
-    let { locale: n } = g(),
-        i = v(e, t);
-    return (0, r.useMemo)(() => new a.E(n, i), [n, i]);
+let T = new WeakMap();
+function b(e) {
+    let n = T.get(e);
+    return !n && ((n = new s.J(e)), T.set(e, n)), n;
 }
-function T(e) {
-    e = (0, o.vE)(null != e ? e : {}, b);
-    let { locale: t } = g();
-    return (0, r.useMemo)(() => new s.C(t, e), [t, e]);
+function y(e, n) {
+    return (n && (0, s.J).getGlobalDictionaryForPackage(n)) || b(e);
 }
-function b(e, t) {
-    if (e === t) return !0;
-    let n = Object.keys(e),
-        r = Object.keys(t);
-    if (n.length !== r.length) return !1;
-    for (let r of n) if (t[r] !== e[r]) return !1;
+function S(e, n) {
+    let { locale: r } = I(),
+        a = y(e, n);
+    return (0, i.useMemo)(() => new s.E(r, a), [r, a]);
+}
+function A(e) {
+    e = (0, l.vE)(null != e ? e : {}, N);
+    let { locale: n } = I();
+    return (0, i.useMemo)(() => new o.C(n, e), [n, e]);
+}
+function N(e, n) {
+    if (e === n) return !0;
+    let r = Object.keys(e),
+        i = Object.keys(n);
+    if (r.length !== i.length) return !1;
+    for (let i of r) if (n[i] !== e[i]) return !1;
     return !0;
 }
-function S(e = {}) {
-    let { locale: t } = g();
-    return (0, r.useMemo)(() => new l.e(t, e), [t, e]);
+function C(e = {}) {
+    let { locale: n } = I();
+    return (0, i.useMemo)(() => new u.e(n, e), [n, e]);
 }
-let y = new Map();
-function A(e) {
-    let { locale: t } = g(),
-        n =
-            t +
+let R = new Map();
+function O(e) {
+    let { locale: n } = I(),
+        r =
+            n +
             (e
                 ? Object.entries(e)
-                      .sort((e, t) => (e[0] < t[0] ? -1 : 1))
+                      .sort((e, n) => (e[0] < n[0] ? -1 : 1))
                       .join()
                 : '');
-    if (y.has(n)) return y.get(n);
-    let r = new Intl.Collator(t, e);
-    return y.set(n, r), r;
+    if (R.has(r)) return R.get(r);
+    let i = new Intl.Collator(n, e);
+    return R.set(r, i), i;
 }
-function N(e) {
-    let t = A({
+function D(e) {
+    let n = O({
             usage: 'search',
             ...e
         }),
-        n = (0, r.useCallback)((e, n) => 0 === n.length || ((e = e.normalize('NFC')), (n = n.normalize('NFC')), 0 === t.compare(e.slice(0, n.length), n)), [t]),
-        i = (0, r.useCallback)((e, n) => 0 === n.length || ((e = e.normalize('NFC')), (n = n.normalize('NFC')), 0 === t.compare(e.slice(-n.length), n)), [t]),
-        a = (0, r.useCallback)(
-            (e, n) => {
-                if (0 === n.length) return !0;
-                (e = e.normalize('NFC')), (n = n.normalize('NFC'));
-                let r = 0,
-                    i = n.length;
-                for (; r + i <= e.length; r++) {
-                    let a = e.slice(r, r + i);
-                    if (0 === t.compare(n, a)) return !0;
+        r = (0, i.useCallback)((e, r) => 0 === r.length || ((e = e.normalize('NFC')), (r = r.normalize('NFC')), 0 === n.compare(e.slice(0, r.length), r)), [n]),
+        a = (0, i.useCallback)((e, r) => 0 === r.length || ((e = e.normalize('NFC')), (r = r.normalize('NFC')), 0 === n.compare(e.slice(-r.length), r)), [n]),
+        s = (0, i.useCallback)(
+            (e, r) => {
+                if (0 === r.length) return !0;
+                (e = e.normalize('NFC')), (r = r.normalize('NFC'));
+                let i = 0,
+                    a = r.length;
+                for (; i + a <= e.length; i++) {
+                    let s = e.slice(i, i + a);
+                    if (0 === n.compare(r, s)) return !0;
                 }
                 return !1;
             },
-            [t]
+            [n]
         );
-    return (0, r.useMemo)(
+    return (0, i.useMemo)(
         () => ({
-            startsWith: n,
-            endsWith: i,
-            contains: a
+            startsWith: r,
+            endsWith: a,
+            contains: s
         }),
-        [n, i, a]
+        [r, a, s]
     );
 }

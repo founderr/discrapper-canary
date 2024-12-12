@@ -1,93 +1,94 @@
-n.d(t, {
+r.d(n, {
     Fs: function () {
-        return p;
+        return m;
     },
     Xu: function () {
-        return _;
+        return p;
     },
     ZP: function () {
-        return f;
-    },
-    ms: function () {
         return h;
     },
+    ms: function () {
+        return E;
+    },
     sV: function () {
-        return d;
+        return _;
     }
-}),
-    n(411104);
-var r = n(192379),
-    i = n(373793),
-    a = n(911969),
-    s = n(404295),
-    o = n(592125),
-    l = n(963456),
-    u = n(213459),
-    c = n(367790);
-let d = 'no primary app command for application';
-async function f(e, t) {
-    let n,
-        r = o.Z.getChannel(e);
+});
+var i = r(411104);
+var a = r(192379),
+    s = r(373793),
+    o = r(911969),
+    l = r(404295),
+    u = r(592125),
+    c = r(963456),
+    d = r(213459),
+    f = r(367790);
+let _ = 'no primary app command for application';
+async function h(e, n) {
+    let r,
+        i = u.Z.getChannel(e);
     if (
-        (null != r &&
-            null == (n = _(r, t)) &&
-            (await (0, u.FN)({
+        (null != i &&
+            null == (r = p(i, n)) &&
+            (await (0, d.FN)({
                 type: 'application',
-                applicationId: t
+                applicationId: n
             }),
-            (n = _(r, t))),
-        null != n)
+            (r = p(i, n))),
+        null != r)
     )
-        return n;
-    throw Error(d);
+        return r;
+    throw Error(_);
 }
-function _(e, t) {
-    return u.ZP.query(
+function p(e, n) {
+    return d.ZP.query(
         e,
-        { commandTypes: [a.yU.PRIMARY_ENTRY_POINT] },
+        { commandTypes: [o.yU.PRIMARY_ENTRY_POINT] },
         {
             placeholderCount: 1,
-            scoreMethod: c.p.COMMAND_ONLY,
-            applicationId: t,
+            scoreMethod: f.p.COMMAND_ONLY,
+            applicationId: n,
             allowFetch: !1,
             allowApplicationState: !0
         }
     ).commands[0];
 }
-function p(e, t) {
-    let { commands: n, loading: i } = (function (e, t) {
-            return (0, u.v1)(
-                e,
-                { commandTypes: [a.yU.PRIMARY_ENTRY_POINT] },
-                {
-                    placeholderCount: 1,
-                    scoreMethod: c.p.COMMAND_ONLY,
-                    applicationId: t,
-                    allowFetch: !1,
-                    allowApplicationState: !0
-                }
-            );
-        })(e, t),
-        s = n[0],
+function m(e, n) {
+    let { commands: r, loading: i } = g(e, n),
+        s = r[0],
         o = null != s;
     return (
-        r.useEffect(() => {
+        a.useEffect(() => {
             !o &&
                 !i &&
-                (0, l.j)({
+                (0, c.j)({
                     type: 'application',
-                    applicationId: t
+                    applicationId: n
                 });
-        }, [t, o, i]),
+        }, [n, o, i]),
         s
     );
 }
-function h(e) {
-    let { channel: t, applicationId: n, botUserId: r } = e,
-        o = p(t, n),
-        l = (0, s.bG)('useIsPrimaryAppCommandUsableInAppDM');
-    if (null == o) return !1;
-    let u = null != o.integration_types && o.integration_types.includes(i.Y.USER_INSTALL),
-        c = null != o.contexts && o.contexts.includes(a.D.BOT_DM);
-    return l && null != r && u && c;
+function g(e, n) {
+    return (0, d.v1)(
+        e,
+        { commandTypes: [o.yU.PRIMARY_ENTRY_POINT] },
+        {
+            placeholderCount: 1,
+            scoreMethod: f.p.COMMAND_ONLY,
+            applicationId: n,
+            allowFetch: !1,
+            allowApplicationState: !0
+        }
+    );
+}
+function E(e) {
+    let { channel: n, applicationId: r, botUserId: i } = e,
+        a = m(n, r),
+        u = (0, l.bG)('useIsPrimaryAppCommandUsableInAppDM');
+    if (null == a) return !1;
+    let c = null != a.integration_types && a.integration_types.includes(s.Y.USER_INSTALL),
+        d = null != a.contexts && a.contexts.includes(o.D.BOT_DM);
+    return u && null != i && c && d;
 }

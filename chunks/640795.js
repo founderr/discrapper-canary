@@ -1,82 +1,85 @@
-n.d(t, {
+r.d(n, {
     q: function () {
-        return f;
+        return g;
     }
-}),
-    n(411104);
-var r = n(956067),
-    i = n(544891),
-    a = n(570140),
-    s = n(710845),
-    o = n(873741),
-    l = n(139674);
-let { WEBAPP_ENDPOINT: u } = window.GLOBAL_ENV,
-    c = 'https:'.concat(u, '/bad-hash-delta'),
-    d = new s.Z('FetchBlockedDomain');
-function f() {
-    return r.Z.timeAsync('\uD83D\uDCBE', 'fetchBlockedDomainList', _);
+});
+var i = r(411104);
+var a = r(956067),
+    s = r(544891),
+    o = r(570140),
+    l = r(710845),
+    u = r(873741),
+    c = r(139674);
+let d = 'https://cdn.discordapp.com/bad-domains/updated_hashes.json',
+    f = 'https://cdn.discordapp.com/bad-domains/current_revision.txt',
+    { WEBAPP_ENDPOINT: _ } = window.GLOBAL_ENV,
+    h = 'https:'.concat(_, '/bad-hash-delta'),
+    p = 15,
+    m = new l.Z('FetchBlockedDomain');
+function g() {
+    return a.Z.timeAsync('\uD83D\uDCBE', 'fetchBlockedDomainList', E);
 }
-async function _() {
-    d.verbose('Fetching blocked domain list');
+async function E() {
+    m.verbose('Fetching blocked domain list');
     try {
         let e;
-        let t = parseInt((await i.tn.get('https://cdn.discordapp.com/bad-domains/current_revision.txt')).text),
-            n = l.Z.getCurrentRevision();
-        if ((d.verbose('Server revision: '.concat(t, ', Client revision: ').concat(n)), null === n || n !== t)) {
+        let n = parseInt((await s.tn.get(f)).text),
+            r = c.Z.getCurrentRevision();
+        if ((m.verbose('Server revision: '.concat(n, ', Client revision: ').concat(r)), null === r || r !== n)) {
             try {
-                if (null === n || n > t) {
-                    let e = null === n ? 'null' : 'greater than server revision number';
+                if (null === r || r > n) {
+                    let e = null === r ? 'null' : 'greater than server revision number';
                     throw Error('Client revision number is ' + e);
                 }
-                if (t - n > 15) throw Error('Client revision number is more than '.concat(15, ' behind the server revision number'));
-                let a = (
-                    await i.tn.get({
-                        url: c,
-                        query: { revision: n },
+                if (n - r > p) throw Error('Client revision number is more than '.concat(p, ' behind the server revision number'));
+                let i = (
+                    await s.tn.get({
+                        url: h,
+                        query: { revision: r },
                         rejectWithError: !1
                     })
                 ).body;
-                if (0 === a.ADDED.length && 0 === a.REMOVED.length) {
-                    d.verbose('No changes to blocked domains list.');
+                if (0 === i.ADDED.length && 0 === i.REMOVED.length) {
+                    m.verbose('No changes to blocked domains list.');
                     return;
                 }
-                d.verbose('Retrieved delta, domains added: '.concat(a.ADDED.length, ', domains removed: ').concat(a.REMOVED.length));
-                let s = await r.Z.timeAsync('\uD83D\uDCBE', 'getBlockedDomainList', () => l.Z.getBlockedDomainList());
-                if (null === s) throw Error('Blocked domain list is null');
-                d.verbose('Blocked domains list length: '.concat(s.size, ' before update')),
-                    a.ADDED.forEach((e) => {
-                        if (s.has(e)) throw Error('Unable to add domain which is already in the blockedDomains set: '.concat(e));
-                        s.add(e);
+                m.verbose('Retrieved delta, domains added: '.concat(i.ADDED.length, ', domains removed: ').concat(i.REMOVED.length));
+                let o = await a.Z.timeAsync('\uD83D\uDCBE', 'getBlockedDomainList', () => c.Z.getBlockedDomainList());
+                if (null === o) throw Error('Blocked domain list is null');
+                m.verbose('Blocked domains list length: '.concat(o.size, ' before update')),
+                    i.ADDED.forEach((e) => {
+                        if (o.has(e)) throw Error('Unable to add domain which is already in the blockedDomains set: '.concat(e));
+                        o.add(e);
                     }),
-                    a.REMOVED.forEach((e) => {
-                        if (!s.has(e)) throw Error('Unable to removed domain which is not in the blockedDomains set: '.concat(e));
-                        s.delete(e);
+                    i.REMOVED.forEach((e) => {
+                        if (!o.has(e)) throw Error('Unable to removed domain which is not in the blockedDomains set: '.concat(e));
+                        o.delete(e);
                     }),
-                    (e = Array.from(s)),
-                    d.verbose('Delta applied successfully');
-            } catch (t) {
-                if ((d.verbose('Unable to process domain list delta: '.concat(t.message)), (0, o.K)())) {
-                    d.verbose('Slow network detected, not downloading full list');
+                    (e = Array.from(o)),
+                    m.verbose('Delta applied successfully');
+            } catch (n) {
+                if ((m.verbose('Unable to process domain list delta: '.concat(n.message)), (0, u.K)())) {
+                    m.verbose('Slow network detected, not downloading full list');
                     return;
                 }
-                d.verbose('Downloading the full bad domains file'),
+                m.verbose('Downloading the full bad domains file'),
                     (e = (
-                        await i.tn.get({
-                            url: 'https://cdn.discordapp.com/bad-domains/updated_hashes.json',
+                        await s.tn.get({
+                            url: d,
                             rejectWithError: !1
                         })
                     ).body);
             }
-            d.verbose('Blocked domains list length: '.concat(e.length, ' after update')),
-                r.Z.time('\uD83D\uDCBE', 'Save Blocked Domain List', () =>
-                    a.Z.dispatch({
+            m.verbose('Blocked domains list length: '.concat(e.length, ' after update')),
+                a.Z.time('\uD83D\uDCBE', 'Save Blocked Domain List', () =>
+                    o.Z.dispatch({
                         type: 'BLOCKED_DOMAIN_LIST_FETCHED',
                         list: e,
-                        revision: t
+                        revision: n
                     })
                 );
         }
     } catch (e) {
-        d.error(e);
+        m.error(e);
     }
 }

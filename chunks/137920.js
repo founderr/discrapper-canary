@@ -1,12 +1,9 @@
-var r, i;
-n.d(t, {
+var i;
+r.d(n, {
     z: function () {
-        return r;
+        return i;
     }
 }),
-    ((i = r || (r = {}))[(i.NONE = 0)] = 'NONE'),
-    (i[(i.SOCIAL = 1)] = 'SOCIAL'),
-    (i[(i.CASUAL = 2)] = 'CASUAL'),
-    (i[(i.COMPETITIVE = 3)] = 'COMPETITIVE'),
-    (i[(i.CREATIVE = 4)] = 'CREATIVE'),
-    (i[(i.VERY_HARDCORE = 5)] = 'VERY_HARDCORE');
+    !(function (e) {
+        (e[(e.NONE = 0)] = 'NONE'), (e[(e.SOCIAL = 1)] = 'SOCIAL'), (e[(e.CASUAL = 2)] = 'CASUAL'), (e[(e.COMPETITIVE = 3)] = 'COMPETITIVE'), (e[(e.CREATIVE = 4)] = 'CREATIVE'), (e[(e.VERY_HARDCORE = 5)] = 'VERY_HARDCORE');
+    })(i || (i = {}));

@@ -1,13 +1,27 @@
-n(47120), n(724458);
-var r = n(381338),
-    i = n(99815);
-let a = new Set([i.E.LOL_MOST_PLAYED_CHAMPION_ID]);
-function s(e, t) {
+var i = r(47120);
+var a = r(724458);
+var s = r(381338),
+    o = r(99815);
+let l = new Set([o.E.LOL_MOST_PLAYED_CHAMPION_ID]);
+function u(e) {
+    return e.reduce(
+        (e, n) => (
+            (e[n] = {
+                id: n,
+                aggregation_type: 1,
+                selectable_for_competition: !l.has(n)
+            }),
+            e
+        ),
+        {}
+    );
+}
+function c(e, n) {
     return {
         user_id: e,
-        statistics: t.reduce(
-            (e, t) => (
-                (e[t] = {
+        statistics: n.reduce(
+            (e, n) => (
+                (e[n] = {
                     value: Math.floor(100 * Math.random()),
                     updated_at: new Date().toISOString()
                 }),
@@ -17,34 +31,24 @@ function s(e, t) {
         )
     };
 }
-let o = Object.values(i.E),
-    l = {
+let d = Object.values(o.E),
+    f = {
         guild_id: '1266851512559210577',
         leaderboard_id: '1280436307230720000',
         interval_start: '1295808410419200000',
         interval_end: '1298345125478400000',
         guild_settings: {
-            sort_by_statistic_id: i.E.LOL_TOTAL_KILLS,
+            sort_by_statistic_id: o.E.LOL_TOTAL_KILLS,
             sort_desc: !0,
             show_winner_crown: !0
         },
         settings: {
-            sort_by_statistic_id: i.E.LOL_TOTAL_KILLS,
+            sort_by_statistic_id: o.E.LOL_TOTAL_KILLS,
             sort_desc: !0,
-            interval_type: r.q.WEEKLY,
-            statistics: o.reduce(
-                (e, t) => (
-                    (e[t] = {
-                        id: t,
-                        aggregation_type: 1,
-                        selectable_for_competition: !a.has(t)
-                    }),
-                    e
-                ),
-                {}
-            ),
+            interval_type: s.q.WEEKLY,
+            statistics: u(d),
             application_id: '356869127241072640'
         },
-        users: [s('213097507503210496', o), s('1011326743526785086', o), s('107562988810027008', o), s('1088605061631983768', o), s('1073722616684232897', o)]
+        users: [c('213097507503210496', d), c('1011326743526785086', d), c('107562988810027008', d), c('1088605061631983768', d), c('1073722616684232897', d)]
     };
-t.Z = l;
+n.Z = f;

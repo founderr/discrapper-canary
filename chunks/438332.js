@@ -1,99 +1,103 @@
-var r,
-    i = n(913527),
-    a = n.n(i),
-    s = n(442837),
-    o = n(570140),
-    l = n(709054);
-function u(e, t, n) {
+var i,
+    a = r(913527),
+    s = r.n(a),
+    o = r(442837),
+    l = r(570140),
+    u = r(709054);
+function c(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let c = { lastSeenNewlyAddedEmojiIds: {} },
-    d = c,
-    f = {};
-function _() {
-    for (let e in f) d.lastSeenNewlyAddedEmojiIds[e] = f[e];
+let d = { lastSeenNewlyAddedEmojiIds: {} },
+    f = d,
+    _ = {};
+function h() {
+    (f = d), (_ = {});
 }
-class p extends (r = s.ZP.PersistedStore) {
+function p(e) {
+    var n;
+    let { guildId: r, emojiId: i } = e,
+        a = null !== (n = _[r]) && void 0 !== n ? n : f.lastSeenNewlyAddedEmojiIds[r];
+    null == a || 0 > u.default.compare(a.id, i)
+        ? (_[r] = {
+              id: i,
+              lastSeen: Date.now(),
+              acknowledged: !0
+          })
+        : (_[r] = {
+              ...a,
+              acknowledged: !0
+          });
+}
+function m(e) {
+    var n;
+    let { guildId: r, emojiId: i } = e,
+        a = null !== (n = _[r]) && void 0 !== n ? n : f.lastSeenNewlyAddedEmojiIds[r];
+    (null == a || 0 > u.default.compare(a.id, i)) &&
+        (_[r] = {
+            id: i,
+            lastSeen: Date.now(),
+            acknowledged: !1
+        });
+}
+function g() {
+    for (let e in _) f.lastSeenNewlyAddedEmojiIds[e] = _[e];
+}
+function E() {
+    (f = d), g();
+}
+class v extends (i = o.ZP.PersistedStore) {
     initialize(e) {
-        d = null != e ? e : c;
+        f = null != e ? e : d;
     }
     getState() {
-        return d;
+        return f;
     }
     getLastSeenEmojiByGuild(e) {
-        return d.lastSeenNewlyAddedEmojiIds[e];
+        return f.lastSeenNewlyAddedEmojiIds[e];
     }
-    isNewerThanLastSeen(e, t) {
-        if (null == e || null == t) return !1;
-        let n = this.getLastSeenEmojiByGuild(e);
-        if (null == n) return !0;
-        if (l.default.compare(t, n.id) > 0) return !0;
+    isNewerThanLastSeen(e, n) {
+        if (null == e || null == n) return !1;
+        let r = this.getLastSeenEmojiByGuild(e);
+        if (null == r) return !0;
+        if (u.default.compare(n, r.id) > 0) return !0;
         {
-            let e = a()(n.lastSeen);
-            return a()().isBefore(e.add(2, 'weeks')) && !n.acknowledged;
+            let e = s()(r.lastSeen);
+            return s()().isBefore(e.add(2, 'weeks')) && !r.acknowledged;
         }
     }
 }
-u(p, 'displayName', 'NewlyAddedEmojiStore'),
-    u(p, 'persistKey', 'NewlyAddedEmojiStore'),
-    u(p, 'migrations', [
+c(v, 'displayName', 'NewlyAddedEmojiStore'),
+    c(v, 'persistKey', 'NewlyAddedEmojiStore'),
+    c(v, 'migrations', [
         (e) => {
-            let t = e.lastSeenNewlyAddedEmojiIds,
-                n = {};
-            for (let e in t) {
-                let r = t[e];
-                n[e] = {
-                    id: r,
+            let n = e.lastSeenNewlyAddedEmojiIds,
+                r = {};
+            for (let e in n) {
+                let i = n[e];
+                r[e] = {
+                    id: i,
                     lastSeen: Date.now(),
                     acknowledged: !1
                 };
             }
-            return { lastSeenNewlyAddedEmojiIds: n };
+            return { lastSeenNewlyAddedEmojiIds: r };
         }
     ]),
-    (t.Z = new p(o.Z, {
-        LOGOUT: function () {
-            (d = c), (f = {});
-        },
-        NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED: function (e) {
-            var t;
-            let { guildId: n, emojiId: r } = e,
-                i = null !== (t = f[n]) && void 0 !== t ? t : d.lastSeenNewlyAddedEmojiIds[n];
-            null == i || 0 > l.default.compare(i.id, r)
-                ? (f[n] = {
-                      id: r,
-                      lastSeen: Date.now(),
-                      acknowledged: !0
-                  })
-                : (f[n] = {
-                      ...i,
-                      acknowledged: !0
-                  });
-        },
-        NEWLY_ADDED_EMOJI_SEEN_PENDING: function (e) {
-            var t;
-            let { guildId: n, emojiId: r } = e,
-                i = null !== (t = f[n]) && void 0 !== t ? t : d.lastSeenNewlyAddedEmojiIds[n];
-            (null == i || 0 > l.default.compare(i.id, r)) &&
-                (f[n] = {
-                    id: r,
-                    lastSeen: Date.now(),
-                    acknowledged: !1
-                });
-        },
-        NEWLY_ADDED_EMOJI_SEEN_UPDATED: _,
-        CLEAR_CACHES: function () {
-            (d = c), _();
-        },
-        CONNECTION_CLOSED: _
+    (n.Z = new v(l.Z, {
+        LOGOUT: h,
+        NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED: p,
+        NEWLY_ADDED_EMOJI_SEEN_PENDING: m,
+        NEWLY_ADDED_EMOJI_SEEN_UPDATED: g,
+        CLEAR_CACHES: E,
+        CONNECTION_CLOSED: g
     }));

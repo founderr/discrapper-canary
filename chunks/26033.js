@@ -1,71 +1,76 @@
-n.d(t, {
+r.d(n, {
     Cb: function () {
-        return a;
-    },
-    KF: function () {
-        return c;
-    },
-    Mq: function () {
-        return p;
-    },
-    Q0: function () {
         return s;
     },
-    Rh: function () {
-        return h;
-    },
-    aA: function () {
-        return _;
-    },
-    dU: function () {
-        return u;
-    },
-    dX: function () {
-        return o;
-    },
-    kq: function () {
+    KF: function () {
         return d;
     },
-    m9: function () {
+    Mq: function () {
+        return g;
+    },
+    Q0: function () {
+        return o;
+    },
+    Rh: function () {
+        return E;
+    },
+    aA: function () {
+        return m;
+    },
+    dU: function () {
+        return c;
+    },
+    dX: function () {
         return l;
     },
-    y0: function () {
+    kq: function () {
         return f;
+    },
+    m9: function () {
+        return u;
+    },
+    y0: function () {
+        return _;
     }
 });
-var r = n(876215),
-    i = n(758713);
-function a(e) {
-    return (null == e ? void 0 : e.content_type) === r.s.PLAYED_GAME;
-}
+var i = r(876215),
+    a = r(758713);
 function s(e) {
-    return (null == e ? void 0 : e.content_type) === r.s.TOP_GAME;
+    return (null == e ? void 0 : e.content_type) === i.s.PLAYED_GAME;
 }
 function o(e) {
-    return a(e) || s(e);
+    return (null == e ? void 0 : e.content_type) === i.s.TOP_GAME;
 }
 function l(e) {
-    return (null == e ? void 0 : e.extra) != null && 'application_id' in (null == e ? void 0 : e.extra);
+    return s(e) || o(e);
 }
 function u(e) {
-    return (null == e ? void 0 : e.content_type) === r.s.LISTENED_SESSION;
+    return (null == e ? void 0 : e.extra) != null && 'application_id' in (null == e ? void 0 : e.extra);
 }
 function c(e) {
-    return (null == e ? void 0 : e.content_type) === r.s.TOP_ARTIST;
+    return (null == e ? void 0 : e.content_type) === i.s.LISTENED_SESSION;
 }
 function d(e) {
-    return u(e) || c(e);
+    return (null == e ? void 0 : e.content_type) === i.s.TOP_ARTIST;
 }
 function f(e) {
-    return (null == e ? void 0 : e.content_type) === r.s.WATCHED_MEDIA;
+    return c(e) || d(e);
 }
 function _(e) {
-    var t, n;
-    return (!!o((t = e)) && t.extra.platform === i.z.XBOX) || (!!o((n = e)) && n.extra.platform === i.z.PLAYSTATION);
-}
-function p(e) {
-    return (null == e ? void 0 : e.content_type) === r.s.LAUNCHED_ACTIVITY;
+    return (null == e ? void 0 : e.content_type) === i.s.WATCHED_MEDIA;
 }
 function h(e) {
-    return o(e) || u(e) || f(e) || l(e);
+    return !!l(e) && e.extra.platform === a.z.XBOX;
+}
+function p(e) {
+    return !!l(e) && e.extra.platform === a.z.PLAYSTATION;
+}
+function m(e) {
+    return h(e) || p(e);
+}
+function g(e) {
+    return (null == e ? void 0 : e.content_type) === i.s.LAUNCHED_ACTIVITY;
+}
+function E(e) {
+    return l(e) || c(e) || _(e) || u(e);
 }

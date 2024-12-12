@@ -1,78 +1,78 @@
-n(47120);
-var r = n(710845),
-    i = n(430824),
-    a = n(287328);
-function s(e, t, n) {
+var i = r(47120);
+var a = r(710845),
+    s = r(430824),
+    o = r(287328);
+function l(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let o = new r.Z('GuildVersions');
-t.Z = new (class e {
+let u = new a.Z('GuildVersions');
+class c {
     async getCommittedVersions() {
         try {
-            let e = a.Z.guildVersions();
+            let e = o.Z.guildVersions();
             if (null == e) return {};
-            let t = (await e.getMany()).map((e) => [e.id, e.version]);
-            return Object.fromEntries(null != t ? t : []);
+            let n = (await e.getMany()).map((e) => [e.id, e.version]);
+            return Object.fromEntries(null != n ? n : []);
         } catch (e) {
-            return o.warn("couldn't load guild versions", e), {};
+            return u.warn("couldn't load guild versions", e), {};
         }
     }
-    remove(e, t) {
-        this.deleteWith(e), this.commit(t);
+    remove(e, n) {
+        this.deleteWith(e), this.commit(n);
     }
-    handleBackgroundSync(e, t) {
-        for (let n of e.guilds) 'unavailable' !== n.data_mode && this.updateWith(n.id, [n]), null == i.Z.getGuild(n.id) && this.remove(n.id, t);
-        this.commit(t);
+    handleBackgroundSync(e, n) {
+        for (let r of e.guilds) 'unavailable' !== r.data_mode && this.updateWith(r.id, [r]), null == s.Z.getGuild(r.id) && this.remove(r.id, n);
+        this.commit(n);
     }
-    handleConnectionOpen(e, t) {
-        for (let t of (this.reset(), e.guilds)) this.updateWith(t.id, [t]);
-        this.commit(t);
+    handleConnectionOpen(e, n) {
+        for (let n of (this.reset(), e.guilds)) this.updateWith(n.id, [n]);
+        this.commit(n);
     }
-    handleGuildCreate(e, t) {
-        var n;
+    handleGuildCreate(e, n) {
+        var r;
+        let i = e.guild,
+            a = e.guild.id;
+        this.updateWith(a, [i]), this.updateWith(a, i.emojis), this.updateWith(a, i.stickers), this.updateWith(a, i.channels), this.updateWith(a, null === (r = i.channelUpdates) || void 0 === r ? void 0 : r.writes), this.updateWith(a, Array.isArray(i.roles) ? i.roles : Object.values(i.roles)), this.commit(n);
+    }
+    handleGuildUpdate(e, n) {
         let r = e.guild,
             i = e.guild.id;
-        this.updateWith(i, [r]), this.updateWith(i, r.emojis), this.updateWith(i, r.stickers), this.updateWith(i, r.channels), this.updateWith(i, null === (n = r.channelUpdates) || void 0 === n ? void 0 : n.writes), this.updateWith(i, Array.isArray(r.roles) ? r.roles : Object.values(r.roles)), this.commit(t);
+        this.updateWith(i, [r]), this.updateWith(i, r.emojis), this.updateWith(i, r.stickers), this.updateWith(i, Array.isArray(r.roles) ? r.roles : Object.values(r.roles)), this.commit(n);
     }
-    handleGuildUpdate(e, t) {
-        let n = e.guild,
-            r = e.guild.id;
-        this.updateWith(r, [n]), this.updateWith(r, n.emojis), this.updateWith(r, n.stickers), this.updateWith(r, Array.isArray(n.roles) ? n.roles : Object.values(n.roles)), this.commit(t);
+    handleGuildDelete(e, n) {
+        this.deleteWith(e.guild.id), this.commit(n);
     }
-    handleGuildDelete(e, t) {
-        this.deleteWith(e.guild.id), this.commit(t);
+    handleGuildRoleChange(e, n) {
+        this.updateWith(e.guildId, [e.role]), this.commit(n);
     }
-    handleGuildRoleChange(e, t) {
-        this.updateWith(e.guildId, [e.role]), this.commit(t);
+    handleGuildRoleDelete(e, n) {
+        this.updateWith(e.guildId, [{ version: e.version }]), this.commit(n);
     }
-    handleGuildRoleDelete(e, t) {
-        this.updateWith(e.guildId, [{ version: e.version }]), this.commit(t);
+    handleGuildEmojisUpdate(e, n) {
+        this.updateWith(e.guildId, e.emojis), this.commit(n);
     }
-    handleGuildEmojisUpdate(e, t) {
-        this.updateWith(e.guildId, e.emojis), this.commit(t);
+    handleGuildStickersUpdate(e, n) {
+        this.updateWith(e.guildId, e.stickers), this.commit(n);
     }
-    handleGuildStickersUpdate(e, t) {
-        this.updateWith(e.guildId, e.stickers), this.commit(t);
+    handleChannelCreate(e, n) {
+        null != e.channel.guild_id && this.updateWith(e.channel.guild_id, [e.channel]), this.commit(n);
     }
-    handleChannelCreate(e, t) {
-        null != e.channel.guild_id && this.updateWith(e.channel.guild_id, [e.channel]), this.commit(t);
+    handleChannelUpdates(e, n) {
+        for (let n of e.channels) null != n.guild_id && this.updateWith(n.guild_id, [n]);
+        this.commit(n);
     }
-    handleChannelUpdates(e, t) {
-        for (let t of e.channels) null != t.guild_id && this.updateWith(t.guild_id, [t]);
-        this.commit(t);
-    }
-    handleChannelDelete(e, t) {
-        null != e.channel.guild_id && this.updateWith(e.channel.guild_id, [e.channel]), this.commit(t);
+    handleChannelDelete(e, n) {
+        null != e.channel.guild_id && this.updateWith(e.channel.guild_id, [e.channel]), this.commit(n);
     }
     resetInMemoryState() {
         this.reset();
@@ -83,53 +83,54 @@ t.Z = new (class e {
     deleteWith(e) {
         this.pending.set(e, null);
     }
-    updateWith(e, t) {
-        if (null != t) {
-            var n, r;
-            let i = Math.max(null !== (n = this.committed.get(e)) && void 0 !== n ? n : 0, null !== (r = this.pending.get(e)) && void 0 !== r ? r : 0),
-                a = this.computeLatestVersion(i, t);
-            a > i && this.pending.set(e, a);
+    updateWith(e, n) {
+        if (null != n) {
+            var r, i;
+            let a = Math.max(null !== (r = this.committed.get(e)) && void 0 !== r ? r : 0, null !== (i = this.pending.get(e)) && void 0 !== i ? i : 0),
+                s = this.computeLatestVersion(a, n);
+            s > a && this.pending.set(e, s);
         }
     }
-    computeLatestVersion(e, t) {
-        let n = e;
-        for (let e of t) {
-            var r;
-            n = Math.max(n, null !== (r = e.version) && void 0 !== r ? r : 0);
+    computeLatestVersion(e, n) {
+        let r = e;
+        for (let e of n) {
+            var i;
+            r = Math.max(r, null !== (i = e.version) && void 0 !== i ? i : 0);
         }
-        return n;
+        return r;
     }
     commit(e) {
         if (this.pending.size > 0) {
-            let t = a.Z.guildVersionsTransaction(e);
-            for (let [e, n] of this.pending)
-                null != n
-                    ? (t.put({
+            let n = o.Z.guildVersionsTransaction(e);
+            for (let [e, r] of this.pending)
+                null != r
+                    ? (n.put({
                           id: e,
-                          version: n
+                          version: r
                       }),
-                      this.committed.set(e, n))
-                    : (t.delete(e), this.committed.delete(e));
+                      this.committed.set(e, r))
+                    : (n.delete(e), this.committed.delete(e));
             this.pending.clear();
         }
     }
     constructor() {
-        s(this, 'pending', new Map()),
-            s(this, 'committed', new Map()),
-            s(this, 'actions', {
-                BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
-                CHANNEL_CREATE: (e, t) => this.handleChannelCreate(e, t),
-                CHANNEL_DELETE: (e, t) => this.handleChannelDelete(e, t),
-                CHANNEL_UPDATES: (e, t) => this.handleChannelUpdates(e, t),
-                CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
-                GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),
-                GUILD_DELETE: (e, t) => this.handleGuildDelete(e, t),
-                GUILD_EMOJIS_UPDATE: (e, t) => this.handleGuildEmojisUpdate(e, t),
-                GUILD_ROLE_CREATE: (e, t) => this.handleGuildRoleChange(e, t),
-                GUILD_ROLE_DELETE: (e, t) => this.handleGuildRoleDelete(e, t),
-                GUILD_ROLE_UPDATE: (e, t) => this.handleGuildRoleChange(e, t),
-                GUILD_STICKERS_UPDATE: (e, t) => this.handleGuildStickersUpdate(e, t),
-                GUILD_UPDATE: (e, t) => this.handleGuildUpdate(e, t)
+        l(this, 'pending', new Map()),
+            l(this, 'committed', new Map()),
+            l(this, 'actions', {
+                BACKGROUND_SYNC: (e, n) => this.handleBackgroundSync(e, n),
+                CHANNEL_CREATE: (e, n) => this.handleChannelCreate(e, n),
+                CHANNEL_DELETE: (e, n) => this.handleChannelDelete(e, n),
+                CHANNEL_UPDATES: (e, n) => this.handleChannelUpdates(e, n),
+                CONNECTION_OPEN: (e, n) => this.handleConnectionOpen(e, n),
+                GUILD_CREATE: (e, n) => this.handleGuildCreate(e, n),
+                GUILD_DELETE: (e, n) => this.handleGuildDelete(e, n),
+                GUILD_EMOJIS_UPDATE: (e, n) => this.handleGuildEmojisUpdate(e, n),
+                GUILD_ROLE_CREATE: (e, n) => this.handleGuildRoleChange(e, n),
+                GUILD_ROLE_DELETE: (e, n) => this.handleGuildRoleDelete(e, n),
+                GUILD_ROLE_UPDATE: (e, n) => this.handleGuildRoleChange(e, n),
+                GUILD_STICKERS_UPDATE: (e, n) => this.handleGuildStickersUpdate(e, n),
+                GUILD_UPDATE: (e, n) => this.handleGuildUpdate(e, n)
             });
     }
-})();
+}
+n.Z = new c();

@@ -1,4 +1,4 @@
-n.d(t, {
+r.d(n, {
     AF: function () {
         return I;
     },
@@ -6,13 +6,13 @@ n.d(t, {
         return g;
     },
     Cf: function () {
-        return S;
+        return y;
     },
     Gj: function () {
-        return a;
+        return s;
     },
     Hk: function () {
-        return _;
+        return f;
     },
     KL: function () {
         return v;
@@ -21,19 +21,19 @@ n.d(t, {
         return T;
     },
     MU: function () {
-        return h;
-    },
-    Qq: function () {
-        return i;
-    },
-    dc: function () {
-        return f;
-    },
-    gU: function () {
         return p;
     },
-    o3: function () {
+    Qq: function () {
+        return a;
+    },
+    dc: function () {
         return d;
+    },
+    gU: function () {
+        return _;
+    },
+    o3: function () {
+        return c;
     },
     q5: function () {
         return m;
@@ -42,40 +42,45 @@ n.d(t, {
         return E;
     },
     vf: function () {
-        return r;
+        return i;
     }
-}),
-    n(47120);
-var r,
-    i,
+});
+var i,
     a,
     s,
-    o,
-    l,
-    u = n(70956),
-    c = n(388032);
-let d = 0,
-    f = 13,
-    _ = -1,
-    p = -2;
-((s = r || (r = {})).FEATURED = 'featured'), (s.GAMING = 'gaming'), (s.MUSIC = 'music'), (s.ENTERTAINMENT = 'entertainment'), (s.TECH = 'tech'), (s.EDUCATION = 'education'), (s.HUBS = 'hubs'), ((o = i || (i = {})).UNKNOWN = 'unknown'), (o.GUILDS_BAR = 'guilds_bar'), (o.RTC_PANEL = 'rtc_panel'), (o.PROFILE = 'profile'), (o.GAME_LINK = 'game_link'), (o.EMBED = 'embed');
-let h = new Set(['hubs']),
+    o = r(47120);
+var l = r(70956),
+    u = r(388032);
+let c = 0,
+    d = 13,
+    f = -1,
+    _ = -2,
+    h = -3;
+!(function (e) {
+    (e.FEATURED = 'featured'), (e.GAMING = 'gaming'), (e.MUSIC = 'music'), (e.ENTERTAINMENT = 'entertainment'), (e.TECH = 'tech'), (e.EDUCATION = 'education'), (e.HUBS = 'hubs');
+})(i || (i = {})),
+    !(function (e) {
+        (e.UNKNOWN = 'unknown'), (e.GUILDS_BAR = 'guilds_bar'), (e.RTC_PANEL = 'rtc_panel'), (e.PROFILE = 'profile'), (e.GAME_LINK = 'game_link'), (e.EMBED = 'embed');
+    })(a || (a = {}));
+let p = new Set(['hubs']),
     m = [],
     g = 'q',
     E = 'c',
     v = 'l',
-    I = 10 * u.Z.Millis.MINUTE;
-((l = a || (a = {}))[(l.Clans = -3)] = 'Clans'), (l[(l.Hub = p)] = 'Hub'), (l[(l.Communities = _)] = 'Communities'), (l[(l.Activity = 1)] = 'Activity'), (l[(l.Music = 2)] = 'Music'), (l[(l.Television = 3)] = 'Television'), (l[(l.Science = 5)] = 'Science'), (l[(l.Education = 6)] = 'Education');
+    I = 10 * l.Z.Millis.MINUTE;
+!(function (e) {
+    (e[(e.Clans = h)] = 'Clans'), (e[(e.Hub = _)] = 'Hub'), (e[(e.Communities = f)] = 'Communities'), (e[(e.Activity = 1)] = 'Activity'), (e[(e.Music = 2)] = 'Music'), (e[(e.Television = 3)] = 'Television'), (e[(e.Science = 5)] = 'Science'), (e[(e.Education = 6)] = 'Education');
+})(s || (s = {}));
 let T = [1, 2, 3, 5, 6],
     b = ['en-GB'];
-function S() {
-    return (0, c.getLanguages)()
+function y() {
+    return (0, u.getLanguages)()
         .filter((e) => !b.includes(e.code))
         .map((e) =>
             'en-US' === e.code
                 ? {
                       ...e,
-                      name: c.intl.string(c.t.LQLMGB)
+                      name: u.intl.string(u.t.LQLMGB)
                   }
                 : e
         );

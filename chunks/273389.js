@@ -1,51 +1,53 @@
-var r = n(200651),
-    i = n(192379),
-    a = n(481060),
-    s = n(600164),
-    o = n(388032),
-    l = n(798828);
-t.Z = (e) => {
-    let t,
-        { button: n, submitting: u, disableNext: c, onClick: d, canNavigateBack: f, onBackClicked: _ } = e,
-        p = i.useRef(null),
-        h = null != n && 'cancel' !== n.type,
-        m = f && (null == n ? void 0 : n.type) !== 'done',
-        g = h || m;
+var i = r(200651),
+    a = r(192379),
+    s = r(481060),
+    o = r(600164),
+    l = r(388032),
+    u = r(798828);
+let c = (e) => {
+    let n,
+        { button: r, submitting: c, disableNext: d, onClick: f, canNavigateBack: _, onBackClicked: h } = e,
+        p = a.useRef(null),
+        m = null != r && 'cancel' !== r.type,
+        g = _ && (null == r ? void 0 : r.type) !== 'done',
+        E = m || g;
     if (
-        (i.useEffect(() => {
-            if ((null == n ? void 0 : n.type) === 'submit' || (null == n ? void 0 : n.type) === 'done') {
+        (a.useEffect(() => {
+            if ((null == r ? void 0 : r.type) === 'submit' || (null == r ? void 0 : r.type) === 'done') {
                 var e;
                 null === (e = p.current) || void 0 === e || e.focus();
             }
-        }, [null == n ? void 0 : n.type]),
-        !g)
+        }, [null == r ? void 0 : r.type]),
+        !E)
     )
         return null;
-    let E = o.intl.string(o.t.i4jeWV);
+    let v = () => {
+            if (null != r) f(r);
+        },
+        I = l.intl.string(l.t.i4jeWV);
     return (
-        (null == n ? void 0 : n.type) === 'submit' ? ((E = o.intl.string(o.t['G+vU8/'])), (t = a.Button.Colors.RED)) : (null == n ? void 0 : n.type) === 'next' ? (E = o.intl.string(o.t.PDTjLC)) : (null == n ? void 0 : n.type) === 'cancel' && ((E = o.intl.string(o.t['ETE/oK'])), (t = a.Button.Colors.TRANSPARENT)),
-        (0, r.jsxs)(a.ModalFooter, {
-            direction: s.Z.Direction.HORIZONTAL,
+        (null == r ? void 0 : r.type) === 'submit' ? ((I = l.intl.string(l.t['G+vU8/'])), (n = s.Button.Colors.RED)) : (null == r ? void 0 : r.type) === 'next' ? (I = l.intl.string(l.t.PDTjLC)) : (null == r ? void 0 : r.type) === 'cancel' && ((I = l.intl.string(l.t['ETE/oK'])), (n = s.Button.Colors.TRANSPARENT)),
+        (0, i.jsxs)(s.ModalFooter, {
+            direction: o.Z.Direction.HORIZONTAL,
             children: [
-                m &&
-                    (0, r.jsx)(a.Button, {
-                        onClick: _,
-                        color: a.Button.Colors.TRANSPARENT,
-                        disabled: u,
-                        children: o.intl.string(o.t['13/7kZ'])
+                g &&
+                    (0, i.jsx)(s.Button, {
+                        onClick: h,
+                        color: s.Button.Colors.TRANSPARENT,
+                        disabled: c,
+                        children: l.intl.string(l.t['13/7kZ'])
                     }),
-                h &&
-                    (0, r.jsx)(a.Button, {
-                        onClick: () => {
-                            if (null != n) d(n);
-                        },
-                        color: t,
-                        className: l.actionButton,
-                        disabled: u || c,
+                m &&
+                    (0, i.jsx)(s.Button, {
+                        onClick: v,
+                        color: n,
+                        className: u.actionButton,
+                        disabled: c || d,
                         buttonRef: p,
-                        children: E
+                        children: I
                     })
             ]
         })
     );
 };
+n.Z = c;

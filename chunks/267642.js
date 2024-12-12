@@ -1,460 +1,469 @@
-n.d(t, {
+r.d(n, {
     A3: function () {
-        return T;
-    },
-    FZ: function () {
-        return I;
-    },
-    Je: function () {
-        return y;
-    },
-    KK: function () {
-        return V;
-    },
-    Qi: function () {
-        return Z;
-    },
-    Ro: function () {
-        return r;
-    },
-    U2: function () {
-        return S;
-    },
-    Vx: function () {
-        return M;
-    },
-    _k: function () {
-        return k;
-    },
-    _p: function () {
         return R;
     },
-    aq: function () {
-        return P;
-    },
-    cP: function () {
-        return A;
-    },
-    e9: function () {
+    FZ: function () {
         return C;
     },
-    f2: function () {
-        return x;
-    },
-    gZ: function () {
-        return G;
-    },
-    ge: function () {
-        return O;
-    },
-    ig: function () {
-        return b;
-    },
-    nW: function () {
-        return N;
-    },
-    rF: function () {
-        return D;
-    },
-    tb: function () {
+    Je: function () {
         return L;
     },
-    tl: function () {
-        return j;
+    KK: function () {
+        return X;
     },
-    vn: function () {
-        return U;
+    Qi: function () {
+        return q;
     },
-    vx: function () {
+    Ro: function () {
+        return i;
+    },
+    U2: function () {
+        return D;
+    },
+    Vx: function () {
+        return H;
+    },
+    _k: function () {
+        return Y;
+    },
+    _p: function () {
+        return M;
+    },
+    aq: function () {
+        return V;
+    },
+    cP: function () {
+        return x;
+    },
+    e9: function () {
+        return P;
+    },
+    f2: function () {
+        return Z;
+    },
+    gZ: function () {
+        return z;
+    },
+    ge: function () {
+        return k;
+    },
+    ig: function () {
+        return O;
+    },
+    nW: function () {
         return w;
     },
-    yw: function () {
+    rF: function () {
+        return U;
+    },
+    tb: function () {
+        return G;
+    },
+    tl: function () {
+        return J;
+    },
+    vn: function () {
+        return W;
+    },
+    vx: function () {
         return F;
+    },
+    yw: function () {
+        return Q;
     }
-}),
-    n(411104),
-    n(47120),
-    n(627341),
-    n(724458);
-var r,
-    i,
-    a = n(392711),
-    s = n.n(a);
-n(913527);
-var o = n(278074),
-    l = n(274136),
-    u = n(179360),
-    c = n(314884),
-    d = n(78839),
-    f = n(424218),
-    _ = n(823379),
-    p = n(63063),
-    h = n(74538),
-    m = n(981631),
-    g = n(474936),
-    E = n(388032);
-Object.freeze({
-    1: 1,
-    2: 2,
-    3: 3,
-    4: 6,
-    5: 9,
-    6: 12,
-    7: 15,
-    8: 18,
-    9: 24
 });
-((i = r || (r = {}))[(i.EMOJI = 1)] = 'EMOJI'), (i[(i.AUDIO = 2)] = 'AUDIO'), (i[(i.ANIMATED = 3)] = 'ANIMATED'), (i[(i.CUSTOMIZATION = 4)] = 'CUSTOMIZATION'), (i[(i.UPLOAD = 5)] = 'UPLOAD'), (i[(i.VANITY = 6)] = 'VANITY'), (i[(i.STREAM = 7)] = 'STREAM'), (i[(i.STICKER = 8)] = 'STICKER'), (i[(i.CUSTOM_ROLE_ICON = 11)] = 'CUSTOM_ROLE_ICON'), (i[(i.STAGE_VIDEO = 12)] = 'STAGE_VIDEO'), (i[(i.SOUNDBOARD = 13)] = 'SOUNDBOARD');
-let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
-    I = (e, t) => {
-        var n;
-        return e === m.Eu4.NONE ? m.Eu4.TIER_1 : null === (n = B(t).find((t) => t.tier === e)) || void 0 === n ? void 0 : n.nextTier;
+var i,
+    a = r(411104);
+var s = r(47120);
+var o = r(627341);
+var l = r(724458);
+var u = r(392711),
+    c = r.n(u),
+    d = r(913527);
+var f = r(278074),
+    _ = r(274136),
+    h = r(179360),
+    p = r(314884),
+    m = r(78839),
+    g = r(424218),
+    E = r(823379),
+    v = r(63063),
+    I = r(74538),
+    T = r(981631),
+    b = r(474936),
+    y = r(388032);
+let S = Object.freeze({
+        1: 1,
+        2: 2,
+        3: 3,
+        4: 6,
+        5: 9,
+        6: 12,
+        7: 15,
+        8: 18,
+        9: 24
+    }),
+    A = 96;
+!(function (e) {
+    (e[(e.EMOJI = 1)] = 'EMOJI'), (e[(e.AUDIO = 2)] = 'AUDIO'), (e[(e.ANIMATED = 3)] = 'ANIMATED'), (e[(e.CUSTOMIZATION = 4)] = 'CUSTOMIZATION'), (e[(e.UPLOAD = 5)] = 'UPLOAD'), (e[(e.VANITY = 6)] = 'VANITY'), (e[(e.STREAM = 7)] = 'STREAM'), (e[(e.STICKER = 8)] = 'STICKER'), (e[(e.CUSTOM_ROLE_ICON = 11)] = 'CUSTOM_ROLE_ICON'), (e[(e.STAGE_VIDEO = 12)] = 'STAGE_VIDEO'), (e[(e.SOUNDBOARD = 13)] = 'SOUNDBOARD');
+})(i || (i = {}));
+let N = [T.Eu4.NONE, T.Eu4.TIER_1, T.Eu4.TIER_2, T.Eu4.TIER_3],
+    C = (e, n) => {
+        var r;
+        return e === T.Eu4.NONE ? T.Eu4.TIER_1 : null === (r = K(n).find((n) => n.tier === e)) || void 0 === r ? void 0 : r.nextTier;
     },
-    T = (e, t) => (null != t && t.hasFeature(m.oNc.MORE_STICKERS) && e === m.Eu4.TIER_3 ? l.D.MAX_STICKER_SLOTS : g.$8[e]),
-    b = (e) => g.pH[e],
-    S = (e, t) => (null != t && t.hasFeature(m.oNc.MORE_SOUNDBOARD) ? 96 : g._k[e]),
-    y = (e) => {
-        if (e === m.Eu4.NONE) return g._k[e];
-        let t = v[v.indexOf(e) - 1];
-        return g._k[e] - g._k[t];
+    R = (e, n) => (null != n && n.hasFeature(T.oNc.MORE_STICKERS) && e === T.Eu4.TIER_3 ? _.D.MAX_STICKER_SLOTS : b.$8[e]),
+    O = (e) => b.pH[e],
+    D = (e, n) => (null != n && n.hasFeature(T.oNc.MORE_SOUNDBOARD) ? A : b._k[e]),
+    L = (e) => {
+        if (e === T.Eu4.NONE) return b._k[e];
+        let n = N[N.indexOf(e) - 1];
+        return b._k[e] - b._k[n];
     },
-    A = (e) => [
+    x = (e) => [
         {
-            tier: m.Eu4.TIER_1,
-            title: E.intl.string(E.t['lK+WOT']),
+            tier: T.Eu4.TIER_1,
+            title: y.intl.string(y.t['lK+WOT']),
             perks: [
                 {
-                    title: E.intl.formatToPlainString(E.t.dnLAws, {
-                        adding: g.HO[m.Eu4.TIER_1].limits.emoji - g.HO[m.Eu4.NONE].limits.emoji,
-                        total: g.HO[m.Eu4.TIER_1].limits.emoji
+                    title: y.intl.formatToPlainString(y.t.dnLAws, {
+                        adding: b.HO[T.Eu4.TIER_1].limits.emoji - b.HO[T.Eu4.NONE].limits.emoji,
+                        total: b.HO[T.Eu4.TIER_1].limits.emoji
                     }),
-                    description: E.intl.string(E.t['/Guvxs']),
+                    description: y.intl.string(y.t['/Guvxs']),
                     icon: 1
                 },
                 {
-                    title: E.intl.formatToPlainString(E.t['/9p2/v'], {
-                        adding: b(m.Eu4.TIER_1),
-                        total: T(m.Eu4.TIER_1)
+                    title: y.intl.formatToPlainString(y.t['/9p2/v'], {
+                        adding: O(T.Eu4.TIER_1),
+                        total: R(T.Eu4.TIER_1)
                     }),
-                    description: E.intl.string(E.t.JfsnDQ),
+                    description: y.intl.string(y.t.JfsnDQ),
                     icon: 8
                 },
                 {
-                    title: E.intl.formatToPlainString(E.t.NRuk5u, {
-                        soundCount: y(m.Eu4.TIER_1),
-                        totalSoundCount: S(m.Eu4.TIER_1)
+                    title: y.intl.formatToPlainString(y.t.NRuk5u, {
+                        soundCount: L(T.Eu4.TIER_1),
+                        totalSoundCount: D(T.Eu4.TIER_1)
                     }),
-                    description: E.intl.string(E.t.Oq7OVl),
+                    description: y.intl.string(y.t.Oq7OVl),
                     icon: 13
                 },
                 {
-                    title: E.intl.formatToPlainString(E.t.zoT1ZG, { bitrate: g.HO[m.Eu4.TIER_1].limits.bitrate / 1000 }),
-                    description: E.intl.string(E.t['8a03jo']),
+                    title: y.intl.formatToPlainString(y.t.zoT1ZG, { bitrate: b.HO[T.Eu4.TIER_1].limits.bitrate / 1000 }),
+                    description: y.intl.string(y.t['8a03jo']),
                     icon: 2
                 },
                 {
-                    title: E.intl.string(E.t.h0s84e),
-                    description: E.intl.format(E.t['t+0cbm'], {}),
+                    title: y.intl.string(y.t.h0s84e),
+                    description: y.intl.format(y.t['t+0cbm'], {}),
                     icon: 3
                 },
                 {
-                    title: E.intl.string(E.t.vjPGPj),
-                    description: E.intl.string(E.t.tG4MMT),
+                    title: y.intl.string(y.t.vjPGPj),
+                    description: y.intl.string(y.t.tG4MMT),
                     icon: 4
                 },
                 {
-                    title: E.intl.string(E.t.cObMZG),
-                    description: E.intl.string(E.t['puH/9f']),
+                    title: y.intl.string(y.t.cObMZG),
+                    description: y.intl.string(y.t['puH/9f']),
                     icon: 7
                 }
-            ].filter(_.lm)
+            ].filter(E.lm)
         },
         {
-            tier: m.Eu4.TIER_2,
-            title: E.intl.string(E.t['34GpBQ']),
+            tier: T.Eu4.TIER_2,
+            title: y.intl.string(y.t['34GpBQ']),
             perks: [
                 {
-                    title: E.intl.formatToPlainString(E.t.dnLAws, {
-                        adding: g.HO[m.Eu4.TIER_2].limits.emoji - g.HO[m.Eu4.TIER_1].limits.emoji,
-                        total: g.HO[m.Eu4.TIER_2].limits.emoji
+                    title: y.intl.formatToPlainString(y.t.dnLAws, {
+                        adding: b.HO[T.Eu4.TIER_2].limits.emoji - b.HO[T.Eu4.TIER_1].limits.emoji,
+                        total: b.HO[T.Eu4.TIER_2].limits.emoji
                     }),
-                    description: E.intl.string(E.t.fRiNh4),
+                    description: y.intl.string(y.t.fRiNh4),
                     icon: 1
                 },
                 {
-                    title: E.intl.formatToPlainString(E.t['/9p2/v'], {
-                        adding: b(m.Eu4.TIER_2),
-                        total: T(m.Eu4.TIER_2)
+                    title: y.intl.formatToPlainString(y.t['/9p2/v'], {
+                        adding: O(T.Eu4.TIER_2),
+                        total: R(T.Eu4.TIER_2)
                     }),
-                    description: E.intl.string(E.t.t4TM29),
+                    description: y.intl.string(y.t.t4TM29),
                     icon: 8
                 },
                 {
-                    title: E.intl.formatToPlainString(E.t.NRuk5u, {
-                        soundCount: y(m.Eu4.TIER_2),
-                        totalSoundCount: S(m.Eu4.TIER_2)
+                    title: y.intl.formatToPlainString(y.t.NRuk5u, {
+                        soundCount: L(T.Eu4.TIER_2),
+                        totalSoundCount: D(T.Eu4.TIER_2)
                     }),
-                    description: E.intl.string(E.t.pEYlPT),
+                    description: y.intl.string(y.t.pEYlPT),
                     icon: 13
                 },
                 {
-                    title: E.intl.formatToPlainString(E.t.zoT1ZG, { bitrate: g.HO[m.Eu4.TIER_2].limits.bitrate / 1000 }),
-                    description: E.intl.string(E.t['nzRo/P']),
+                    title: y.intl.formatToPlainString(y.t.zoT1ZG, { bitrate: b.HO[T.Eu4.TIER_2].limits.bitrate / 1000 }),
+                    description: y.intl.string(y.t['nzRo/P']),
                     icon: 2
                 },
                 {
-                    title: E.intl.string(E.t['+KhQKC']),
-                    description: E.intl.string(E.t.ZWf10N),
+                    title: y.intl.string(y.t['+KhQKC']),
+                    description: y.intl.string(y.t.ZWf10N),
                     icon: 4
                 },
                 {
-                    title: E.intl.formatToPlainString(E.t.t95LnJ, { fileSize: (0, f.BU)(g.HO[m.Eu4.TIER_2].limits.fileSize / 1024, { useKibibytes: !0 }) }),
-                    description: E.intl.format(E.t['yvht6+'], {}),
+                    title: y.intl.formatToPlainString(y.t.t95LnJ, { fileSize: (0, g.BU)(b.HO[T.Eu4.TIER_2].limits.fileSize / 1024, { useKibibytes: !0 }) }),
+                    description: y.intl.format(y.t['yvht6+'], {}),
                     icon: 5
                 },
                 {
-                    title: E.intl.string(E.t.bmaoND),
-                    description: E.intl.string(E.t.WZW2Bg),
+                    title: y.intl.string(y.t.bmaoND),
+                    description: y.intl.string(y.t.WZW2Bg),
                     icon: 7
                 },
                 {
-                    title: E.intl.string(E.t.BHtqcX),
-                    description: E.intl.string(E.t.ukVcER),
+                    title: y.intl.string(y.t.BHtqcX),
+                    description: y.intl.string(y.t.ukVcER),
                     icon: 11
                 },
                 e
                     ? {
-                          title: E.intl.formatToPlainString(E.t.T8P3TE, { limit: m.eez }),
-                          description: E.intl.formatToPlainString(E.t.T8P3TE, { limit: m.eez }),
+                          title: y.intl.formatToPlainString(y.t.T8P3TE, { limit: T.eez }),
+                          description: y.intl.formatToPlainString(y.t.T8P3TE, { limit: T.eez }),
                           icon: 12
                       }
                     : null
-            ].filter(_.lm)
+            ].filter(E.lm)
         },
         {
-            tier: m.Eu4.TIER_3,
-            title: E.intl.string(E.t.P7LdcX),
+            tier: T.Eu4.TIER_3,
+            title: y.intl.string(y.t.P7LdcX),
             perks: [
                 {
-                    title: E.intl.formatToPlainString(E.t.dnLAws, {
-                        adding: g.HO[m.Eu4.TIER_3].limits.emoji - g.HO[m.Eu4.TIER_2].limits.emoji,
-                        total: g.HO[m.Eu4.TIER_3].limits.emoji
+                    title: y.intl.formatToPlainString(y.t.dnLAws, {
+                        adding: b.HO[T.Eu4.TIER_3].limits.emoji - b.HO[T.Eu4.TIER_2].limits.emoji,
+                        total: b.HO[T.Eu4.TIER_3].limits.emoji
                     }),
-                    description: E.intl.string(E.t.AfJxnZ),
+                    description: y.intl.string(y.t.AfJxnZ),
                     icon: 1
                 },
                 {
-                    title: E.intl.formatToPlainString(E.t['/9p2/v'], {
-                        adding: b(m.Eu4.TIER_3),
-                        total: T(m.Eu4.TIER_3)
+                    title: y.intl.formatToPlainString(y.t['/9p2/v'], {
+                        adding: O(T.Eu4.TIER_3),
+                        total: R(T.Eu4.TIER_3)
                     }),
-                    description: E.intl.string(E.t['+ZI4QU']),
+                    description: y.intl.string(y.t['+ZI4QU']),
                     icon: 8
                 },
                 {
-                    title: E.intl.formatToPlainString(E.t.NRuk5u, {
-                        soundCount: y(m.Eu4.TIER_3),
-                        totalSoundCount: S(m.Eu4.TIER_3)
+                    title: y.intl.formatToPlainString(y.t.NRuk5u, {
+                        soundCount: L(T.Eu4.TIER_3),
+                        totalSoundCount: D(T.Eu4.TIER_3)
                     }),
-                    description: E.intl.string(E.t['8omJSU']),
+                    description: y.intl.string(y.t['8omJSU']),
                     icon: 13
                 },
                 {
-                    title: E.intl.formatToPlainString(E.t.zoT1ZG, { bitrate: g.HO[m.Eu4.TIER_3].limits.bitrate / 1000 }),
-                    description: E.intl.string(E.t.cOkbp6),
+                    title: y.intl.formatToPlainString(y.t.zoT1ZG, { bitrate: b.HO[T.Eu4.TIER_3].limits.bitrate / 1000 }),
+                    description: y.intl.string(y.t.cOkbp6),
                     icon: 2
                 },
                 {
-                    title: E.intl.string(E.t.C2w2cH),
-                    description: E.intl.format(E.t['3Reos7'], { helpdeskArticle: p.Z.getArticleURL(m.BhN.GUILD_VANITY_URL) }),
+                    title: y.intl.string(y.t.C2w2cH),
+                    description: y.intl.format(y.t['3Reos7'], { helpdeskArticle: v.Z.getArticleURL(T.BhN.GUILD_VANITY_URL) }),
                     icon: 6
                 },
                 {
-                    title: E.intl.formatToPlainString(E.t.t95LnJ, { fileSize: (0, f.BU)(g.HO[m.Eu4.TIER_3].limits.fileSize / 1024, { useKibibytes: !0 }) }),
-                    description: E.intl.format(E.t.IwDqSE, {}),
+                    title: y.intl.formatToPlainString(y.t.t95LnJ, { fileSize: (0, g.BU)(b.HO[T.Eu4.TIER_3].limits.fileSize / 1024, { useKibibytes: !0 }) }),
+                    description: y.intl.format(y.t.IwDqSE, {}),
                     icon: 5
                 },
                 {
-                    title: E.intl.string(E.t.z0GtBA),
-                    description: E.intl.string(E.t.v92GNT),
+                    title: y.intl.string(y.t.z0GtBA),
+                    description: y.intl.string(y.t.v92GNT),
                     icon: 3
                 },
                 e
                     ? {
-                          title: E.intl.formatToPlainString(E.t.T8P3TE, { limit: m.RcX }),
-                          description: E.intl.formatToPlainString(E.t.T8P3TE, { limit: m.RcX }),
+                          title: y.intl.formatToPlainString(y.t.T8P3TE, { limit: T.RcX }),
+                          description: y.intl.formatToPlainString(y.t.T8P3TE, { limit: T.RcX }),
                           icon: 12
                       }
                     : null
-            ].filter(_.lm)
+            ].filter(E.lm)
         }
     ];
-function N(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { useLevels: n = !0 } = t;
+function w(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        { useLevels: r = !0 } = n;
     switch (e) {
-        case m.Eu4.NONE:
-            return n ? E.intl.string(E.t.LcKgJS) : E.intl.string(E.t.mx8j2t);
-        case m.Eu4.TIER_1:
-            return E.intl.string(E.t.nzXtaW);
-        case m.Eu4.TIER_2:
-            return E.intl.string(E.t['h33/ub']);
-        case m.Eu4.TIER_3:
-            return E.intl.string(E.t.BfF6EB);
+        case T.Eu4.NONE:
+            return r ? y.intl.string(y.t.LcKgJS) : y.intl.string(y.t.mx8j2t);
+        case T.Eu4.TIER_1:
+            return y.intl.string(y.t.nzXtaW);
+        case T.Eu4.TIER_2:
+            return y.intl.string(y.t['h33/ub']);
+        case T.Eu4.TIER_3:
+            return y.intl.string(y.t.BfF6EB);
         default:
             throw Error('Not a valid tier type');
     }
 }
-function C(e) {
+function P(e) {
     switch (e) {
-        case m.Eu4.NONE:
-            return E.intl.string(E.t.LcKgJS);
-        case m.Eu4.TIER_1:
-            return E.intl.string(E.t.xRjU1d);
-        case m.Eu4.TIER_2:
-            return E.intl.string(E.t.C7e2Bg);
-        case m.Eu4.TIER_3:
-            return E.intl.string(E.t.avGxmp);
+        case T.Eu4.NONE:
+            return y.intl.string(y.t.LcKgJS);
+        case T.Eu4.TIER_1:
+            return y.intl.string(y.t.xRjU1d);
+        case T.Eu4.TIER_2:
+            return y.intl.string(y.t.C7e2Bg);
+        case T.Eu4.TIER_3:
+            return y.intl.string(y.t.avGxmp);
         default:
             throw Error('Not a valid tier type');
     }
 }
-let R = s().memoize((e) => (g.HO[m.Eu4.TIER_1].features.includes(e) ? m.Eu4.TIER_1 : g.HO[m.Eu4.TIER_2].features.includes(e) ? m.Eu4.TIER_2 : g.HO[m.Eu4.TIER_3].features.includes(e) ? m.Eu4.TIER_3 : null)),
-    O = (e) => {
-        if (e === m.Eu4.NONE) return m.Qqv.NONE;
-        if (e === m.Eu4.TIER_1) return m.Qqv.TIER_1;
-        if (e === m.Eu4.TIER_2) return m.Qqv.TIER_2;
-        else if (e === m.Eu4.TIER_3) return m.Qqv.TIER_3;
+let M = c().memoize((e) => (b.HO[T.Eu4.TIER_1].features.includes(e) ? T.Eu4.TIER_1 : b.HO[T.Eu4.TIER_2].features.includes(e) ? T.Eu4.TIER_2 : b.HO[T.Eu4.TIER_3].features.includes(e) ? T.Eu4.TIER_3 : null)),
+    k = (e) => {
+        if (e === T.Eu4.NONE) return T.Qqv.NONE;
+        if (e === T.Eu4.TIER_1) return T.Qqv.TIER_1;
+        if (e === T.Eu4.TIER_2) return T.Qqv.TIER_2;
+        else if (e === T.Eu4.TIER_3) return T.Qqv.TIER_3;
         return null;
     };
-function D(e, t) {
-    for (let n of B(t)) if (e >= n.amount) return n.tier;
-    return m.Eu4.NONE;
+function U(e, n) {
+    for (let r of K(n)) if (e >= r.amount) return r.tier;
+    return T.Eu4.NONE;
 }
-function L(e, t) {
-    return null == t || (null != e && e >= t);
+function B(e, n) {
+    for (let r of K(n)) if (e >= r.amount) return r.nextTier;
+    return BoostedGuildTiers.TIER_1;
 }
-function x(e, t) {
-    return L(e.premiumTier, t);
+function G(e, n) {
+    return null == n || (null != e && e >= n);
 }
-function w(e) {
-    return s()
+function Z(e, n) {
+    return G(e.premiumTier, n);
+}
+function F(e) {
+    return c()
         .values(e)
         .filter((e) => e.isAvailable());
 }
-function P(e) {
-    let { fractionalState: t } = e,
-        n = d.ZP.getPremiumTypeSubscription();
-    !c.Z.hasFetched && (0, u.X8)();
-    let r = w(c.Z.boostSlots),
-        i = null == n ? void 0 : n.isPausedOrPausePending,
-        a = r.length > 0,
-        s = E.intl.format(E.t.kJ1AZG, { helpCenterLink: p.Z.getArticleURL(m.BhN.FRACTIONAL_PREMIUM_ABOUT) }),
-        l = (0, o.EQ)({
-            isPausedOrPausePending: i,
-            fractionalState: t,
-            canApplyBoosts: a
+function V(e) {
+    let { fractionalState: n } = e,
+        r = m.ZP.getPremiumTypeSubscription();
+    !p.Z.hasFetched && (0, h.X8)();
+    let i = F(p.Z.boostSlots),
+        a = null == r ? void 0 : r.isPausedOrPausePending,
+        s = i.length > 0,
+        o = y.intl.format(y.t.kJ1AZG, { helpCenterLink: v.Z.getArticleURL(T.BhN.FRACTIONAL_PREMIUM_ABOUT) }),
+        l = (0, f.EQ)({
+            isPausedOrPausePending: a,
+            fractionalState: n,
+            canApplyBoosts: s
         })
             .with(
                 {
                     isPausedOrPausePending: !0,
-                    fractionalState: g.a$.FP_SUB_PAUSED,
+                    fractionalState: b.a$.FP_SUB_PAUSED,
                     canApplyBoosts: !1
                 },
-                () => s
+                () => o
             )
             .with(
                 {
                     isPausedOrPausePending: void 0,
-                    fractionalState: g.a$.FP_ONLY
+                    fractionalState: b.a$.FP_ONLY
                 },
-                () => s
+                () => o
             )
             .with(
                 {
                     isPausedOrPausePending: !1,
-                    fractionalState: g.a$.FP_ONLY
+                    fractionalState: b.a$.FP_ONLY
                 },
-                () => s
+                () => o
             )
             .with(
                 {
                     isPausedOrPausePending: !0,
-                    fractionalState: g.a$.NONE
+                    fractionalState: b.a$.NONE
                 },
-                () => E.intl.string(E.t.mOWsFx)
+                () => y.intl.string(y.t.mOWsFx)
             )
             .otherwise(() => null);
     if (null != l) return l;
-    let { numAvailableGuildBoostSlots: f, numCanceledGuildBoostSlots: _ } = Object.values(c.Z.boostSlots).reduce((e, t) => (j(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
+    let { numAvailableGuildBoostSlots: u, numCanceledGuildBoostSlots: c } = Object.values(p.Z.boostSlots).reduce((e, n) => (J(n) && e.numCanceledGuildBoostSlots++, n.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
         numAvailableGuildBoostSlots: 0,
         numCanceledGuildBoostSlots: 0
     });
-    if (null == n || f > 0) return null;
-    if (n.status === m.O0b.PAST_DUE) return E.intl.string(E.t.De4Vm5);
-    if (n.status === m.O0b.ACCOUNT_HOLD) return E.intl.string(E.t.JakNQ0);
-    if (_ > 0) return E.intl.string(E.t.x25mZW);
-    if (null == n.renewalMutations) return null;
-    let v = h.uV(n.renewalMutations.additionalPlans);
-    return h.uV(n.additionalPlans) > v ? E.intl.string(E.t.x25mZW) : E.intl.string(E.t['W/bb8f']);
+    if (null == r || u > 0) return null;
+    if (r.status === T.O0b.PAST_DUE) return y.intl.string(y.t.De4Vm5);
+    if (r.status === T.O0b.ACCOUNT_HOLD) return y.intl.string(y.t.JakNQ0);
+    if (c > 0) return y.intl.string(y.t.x25mZW);
+    if (null == r.renewalMutations) return null;
+    let d = I.uV(r.renewalMutations.additionalPlans);
+    return I.uV(r.additionalPlans) > d ? y.intl.string(y.t.x25mZW) : y.intl.string(y.t['W/bb8f']);
 }
-function M(e, t) {
-    return k(e, t) > 0;
+function j(e) {
+    return e.sort((e, n) => (null != e.endsAt && null != n.endsAt ? e.endsAt.getTime() - n.endsAt.getTime() : -1));
 }
-function k(e, t) {
-    let n = D(e.length, t),
-        r = U(t)[n],
-        i = e.filter((e) => null != e.endsAt);
-    return r - (e.length - i.length);
+function H(e, n) {
+    return Y(e, n) > 0;
 }
-function U(e) {
-    return m.oCV;
+function Y(e, n) {
+    let r = U(e.length, n),
+        i = W(n)[r],
+        a = e.filter((e) => null != e.endsAt);
+    return i - (e.length - a.length);
 }
-function B(e) {
-    let t = U(e);
+function W(e) {
+    return T.oCV;
+}
+function K(e) {
+    let n = W(e);
     return [
         {
-            tier: m.Eu4.TIER_3,
-            amount: t[m.Eu4.TIER_3],
+            tier: T.Eu4.TIER_3,
+            amount: n[T.Eu4.TIER_3],
             nextTier: null
         },
         {
-            tier: m.Eu4.TIER_2,
-            amount: t[m.Eu4.TIER_2],
-            nextTier: m.Eu4.TIER_3
+            tier: T.Eu4.TIER_2,
+            amount: n[T.Eu4.TIER_2],
+            nextTier: T.Eu4.TIER_3
         },
         {
-            tier: m.Eu4.TIER_1,
-            amount: t[m.Eu4.TIER_1],
-            nextTier: m.Eu4.TIER_2
+            tier: T.Eu4.TIER_1,
+            amount: n[T.Eu4.TIER_1],
+            nextTier: T.Eu4.TIER_2
         }
     ];
 }
-function G(e, t) {
-    let n = k(e, t);
-    if (n > 0) {
-        let t = e.sort((e, t) => (null != e.endsAt && null != t.endsAt ? e.endsAt.getTime() - t.endsAt.getTime() : -1)).filter((e) => null != e.endsAt);
-        return t[t.length - n].endsAt;
+function z(e, n) {
+    let r = Y(e, n);
+    if (r > 0) {
+        let n = j(e).filter((e) => null != e.endsAt);
+        return n[n.length - r].endsAt;
     }
     return null;
 }
-function Z(e, t) {
-    let n = b(t),
-        r = v.indexOf(t);
-    if (-1 === r) return 0;
-    let i = v[r - 1],
-        a = null != i ? T(i) : 0,
-        s = T(t);
-    return Math.max(0, n - e.slice(a, s).length);
+function q(e, n) {
+    let r = O(n),
+        i = N.indexOf(n);
+    if (-1 === i) return 0;
+    let a = N[i - 1],
+        s = null != a ? R(a) : 0,
+        o = R(n);
+    return Math.max(0, r - e.slice(s, o).length);
 }
-function F(e, t, n) {
-    return -1 === v.indexOf(n) ? 0 : Math.max(0, S(n, e) - t.length);
+function Q(e, n, r) {
+    return -1 === N.indexOf(r) ? 0 : Math.max(0, D(r, e) - n.length);
 }
-function V(e, t) {
-    let n = e.premiumSubscriberCount;
-    return Math.max(0, U(e.id)[t] - n);
+function X(e, n) {
+    let r = e.premiumSubscriberCount;
+    return Math.max(0, W(e.id)[n] - r);
 }
-function j(e) {
-    var t;
-    return (null === (t = e.subscription) || void 0 === t ? void 0 : t.status) === m.O0b.CANCELED || e.canceled;
+function J(e) {
+    var n;
+    return (null === (n = e.subscription) || void 0 === n ? void 0 : n.status) === T.O0b.CANCELED || e.canceled;
 }

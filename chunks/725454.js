@@ -1,4 +1,4 @@
-var t = {
+var n = {
         À: 'A',
         Á: 'A',
         Â: 'A',
@@ -399,16 +399,15 @@ var t = {
         Z̧: 'Z',
         z̧: 'z'
     },
-    n = Object.keys(t).join('|'),
-    r = RegExp(n, 'g'),
-    i = RegExp(n, ''),
-    a = function (e) {
-        return e.replace(r, function (e) {
-            return t[e];
+    r = Object.keys(n).join('|'),
+    i = RegExp(r, 'g'),
+    a = RegExp(r, ''),
+    s = function (e) {
+        return e.replace(i, function (e) {
+            return n[e];
         });
+    },
+    o = function (e) {
+        return !!e.match(a);
     };
-(e.exports = a),
-    (e.exports.has = function (e) {
-        return !!e.match(i);
-    }),
-    (e.exports.remove = a);
+(e.exports = s), (e.exports.has = o), (e.exports.remove = s);

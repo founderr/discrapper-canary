@@ -1,40 +1,41 @@
-var r = n(592125);
-function i(e, t, n) {
+var i = r(592125);
+function a(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-t.Z = new (class e {
+class s {
     constructor() {
-        i(this, 'filterTagIds', null),
-            i(this, 'sortOrder', null),
-            i(this, 'layout', null),
-            i(this, 'setFilterTagIds', (e) => {
+        a(this, 'filterTagIds', null),
+            a(this, 'sortOrder', null),
+            a(this, 'layout', null),
+            a(this, 'setFilterTagIds', (e) => {
                 this.filterTagIds = e;
             }),
-            i(this, 'setSortOrder', (e) => {
+            a(this, 'setSortOrder', (e) => {
                 this.sortOrder = e;
             }),
-            i(this, 'setLayout', (e) => {
+            a(this, 'setLayout', (e) => {
                 this.layout = e;
             }),
-            i(this, 'getFilterTagIdsAnalytics', () => (null != this.filterTagIds ? Array.from(this.filterTagIds) : [])),
-            i(this, 'getSortOrderAnalytics', (e) => {
-                var t, n;
-                return null !== (n = this.sortOrder) && void 0 !== n ? n : null === (t = r.Z.getChannel(e)) || void 0 === t ? void 0 : t.getDefaultSortOrder();
+            a(this, 'getFilterTagIdsAnalytics', () => (null != this.filterTagIds ? Array.from(this.filterTagIds) : [])),
+            a(this, 'getSortOrderAnalytics', (e) => {
+                var n, r;
+                return null !== (r = this.sortOrder) && void 0 !== r ? r : null === (n = i.Z.getChannel(e)) || void 0 === n ? void 0 : n.getDefaultSortOrder();
             }),
-            i(this, 'getLayoutAnalytics', (e) => {
-                var t;
-                let n = r.Z.getChannel(e);
-                return null !== (t = this.layout) && void 0 !== t ? t : null == n ? void 0 : n.getDefaultLayout();
+            a(this, 'getLayoutAnalytics', (e) => {
+                var n;
+                let r = i.Z.getChannel(e);
+                return null !== (n = this.layout) && void 0 !== n ? n : null == r ? void 0 : r.getDefaultLayout();
             });
     }
-})();
+}
+n.Z = new s();

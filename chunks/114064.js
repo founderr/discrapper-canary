@@ -1,107 +1,119 @@
-let r;
-var i,
-    a,
-    s,
-    o,
-    l = n(848246),
-    u = n(442837),
-    c = n(570140),
-    d = n(168232),
-    f = n(933843),
-    _ = n(746599),
-    p = n(1163);
-let h = {
+let i;
+var a,
+    s = r(848246),
+    o = r(442837),
+    l = r(570140),
+    u = r(168232),
+    c = r(933843),
+    d = r(746599),
+    f = r(1163);
+function _(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let h = 86400000,
+    p = {
         available: {},
         activated: {},
         lastFetched: null,
         overrides: {}
     },
-    m = h;
+    m = p;
 function g() {
-    r = p.Z.getCurrentConfig({ location: 'PerksDemosStore' }, { autoTrackExposure: !1 });
+    m = p;
 }
-class E extends (o = u.ZP.Store) {
+function E(e) {
+    let {
+        demos: { available: n, activated: r }
+    } = e;
+    (m.available = null != n ? n : {}), (m.activated = null != r ? r : {}), (m.lastFetched = Date.now());
+}
+function v() {
+    (m.available = p.available), (m.lastFetched = null);
+}
+function I(e) {
+    let { perkType: n, activatedDuration: r } = e;
+    m.activated[n] = r;
+}
+function T(e) {
+    let { perkType: n } = e;
+    delete m.activated[n];
+}
+function b(e) {
+    let { perkType: n } = e;
+    if (((m.available[n] = !1), (null == i ? void 0 : i.extendedDemoDuration) !== !0)) delete m.activated[n];
+}
+function y(e) {
+    let { user: n, perkType: r, available: i, activateSuccess: a, demoDuration: s } = e;
+    void 0 !== n &&
+        (0, u.QI)(n) &&
+        ((m.overrides[r] = {
+            available: i,
+            activateSuccess: a,
+            demoDuration: s
+        }),
+        null == m.available && (m.available = {}),
+        (m.available[r] = i || !1),
+        delete m.activated[r],
+        (m.lastFetched = null));
+}
+function S() {
+    if (!!(0, c.vw)(s.q.STREAM_HIGH_QUALITY)) (0, d.cD)(!0);
+}
+function A() {
+    (0, d.cD)(!1);
+}
+function N() {
+    i = f.Z.getCurrentConfig({ location: 'PerksDemosStore' }, { autoTrackExposure: !1 });
+}
+class C extends (a = o.ZP.Store) {
     isAvailable(e) {
-        var t;
-        return null !== (t = m.available[e]) && void 0 !== t && t;
+        var n;
+        return null !== (n = m.available[e]) && void 0 !== n && n;
     }
     hasActiveDemo(e) {
-        let t = m.activated[e];
-        return null != t && null != r && ((r.enabled && !r.extendedDemoDuration) || (r.extendedDemoDuration && new Date() <= new Date(t.end_time)));
+        let n = m.activated[e];
+        return null != n && null != i && ((i.enabled && !i.extendedDemoDuration) || (i.extendedDemoDuration && new Date() <= new Date(n.end_time)));
     }
     hasActivated(e) {
         return null != m.activated[e];
     }
     shouldFetch() {
-        return null == m.lastFetched || Date.now() > m.lastFetched + 86400000;
+        return null == m.lastFetched || Date.now() > m.lastFetched + h;
     }
     shouldActivate(e) {
-        var t;
-        return null !== (t = m.available[e]) && void 0 !== t && t && null == m.activated[e];
+        var n;
+        return null !== (n = m.available[e]) && void 0 !== n && n && null == m.activated[e];
     }
     overrides() {
         return m.overrides;
     }
     activatedEndTime(e) {
-        var t;
-        return null === (t = m.activated[e]) || void 0 === t ? void 0 : t.end_time;
+        var n;
+        return null === (n = m.activated[e]) || void 0 === n ? void 0 : n.end_time;
     }
 }
-(s = 'PerksDemosStore'),
-    (a = 'displayName') in (i = E)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new E(c.Z, {
-        PREMIUM_PERKS_DEMOS_FETCH_SUCCESS: function (e) {
-            let {
-                demos: { available: t, activated: n }
-            } = e;
-            (m.available = null != t ? t : {}), (m.activated = null != n ? n : {}), (m.lastFetched = Date.now());
-        },
-        PREMIUM_PERKS_DEMOS_FETCH_FAILURE: function () {
-            (m.available = h.available), (m.lastFetched = null);
-        },
-        PREMIUM_PERKS_DEMO_ACTIVATE_SUCCESS: function (e) {
-            let { perkType: t, activatedDuration: n } = e;
-            m.activated[t] = n;
-        },
-        PREMIUM_PERKS_DEMO_ACTIVATE_FAILURE: function (e) {
-            let { perkType: t } = e;
-            delete m.activated[t];
-        },
-        PREMIUM_PERKS_DEMO_COMPLETE: function (e) {
-            let { perkType: t } = e;
-            if (((m.available[t] = !1), (null == r ? void 0 : r.extendedDemoDuration) !== !0)) delete m.activated[t];
-        },
-        LOGOUT: function () {
-            m = h;
-        },
-        PREMIUM_PERKS_DEMO_OVERRIDE: function (e) {
-            let { user: t, perkType: n, available: r, activateSuccess: i, demoDuration: a } = e;
-            void 0 !== t &&
-                (0, d.QI)(t) &&
-                ((m.overrides[n] = {
-                    available: r,
-                    activateSuccess: i,
-                    demoDuration: a
-                }),
-                null == m.available && (m.available = {}),
-                (m.available[n] = r || !1),
-                delete m.activated[n],
-                (m.lastFetched = null));
-        },
-        STREAM_START: function () {
-            if (!!(0, f.vw)(l.q.STREAM_HIGH_QUALITY)) (0, _.cD)(!0);
-        },
-        STREAM_STOP: function () {
-            (0, _.cD)(!1);
-        },
-        CONNECTION_OPEN: g,
-        EXPERIMENTS_FETCH_SUCCESS: g,
-        EXPERIMENT_OVERRIDE_BUCKET: g
+_(C, 'displayName', 'PerksDemosStore'),
+    (n.Z = new C(l.Z, {
+        PREMIUM_PERKS_DEMOS_FETCH_SUCCESS: E,
+        PREMIUM_PERKS_DEMOS_FETCH_FAILURE: v,
+        PREMIUM_PERKS_DEMO_ACTIVATE_SUCCESS: I,
+        PREMIUM_PERKS_DEMO_ACTIVATE_FAILURE: T,
+        PREMIUM_PERKS_DEMO_COMPLETE: b,
+        LOGOUT: g,
+        PREMIUM_PERKS_DEMO_OVERRIDE: y,
+        STREAM_START: S,
+        STREAM_STOP: A,
+        CONNECTION_OPEN: N,
+        EXPERIMENTS_FETCH_SUCCESS: N,
+        EXPERIMENT_OVERRIDE_BUCKET: N
     }));

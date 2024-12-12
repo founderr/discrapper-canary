@@ -1,77 +1,80 @@
-var t = {};
-function n(e, n, r) {
-    !r && (r = Error);
-    var i = (function (e) {
-        var t, r;
-        function i(t, r, i) {
-            var a, s, o;
-            return e.call(this, ((a = t), (s = r), (o = i), 'string' == typeof n ? n : n(a, s, o))) || this;
-        }
-        return (t = i), (r = e), (t.prototype = Object.create(r.prototype)), (t.prototype.constructor = t), (t.__proto__ = r), i;
-    })(r);
-    (i.prototype.name = r.name), (i.prototype.code = e), (t[e] = i);
+function n(e, n) {
+    (e.prototype = Object.create(n.prototype)), (e.prototype.constructor = e), (e.__proto__ = n);
 }
-function r(e, t) {
-    if (!Array.isArray(e)) return 'of '.concat(t, ' ').concat(String(e));
-    var n = e.length;
+var r = {};
+function i(e, i, a) {
+    function s(e, n, r) {
+        return 'string' == typeof i ? i : i(e, n, r);
+    }
+    !a && (a = Error);
+    var o = (function (e) {
+        function r(n, r, i) {
+            return e.call(this, s(n, r, i)) || this;
+        }
+        return n(r, e), r;
+    })(a);
+    (o.prototype.name = a.name), (o.prototype.code = e), (r[e] = o);
+}
+function a(e, n) {
+    if (!Array.isArray(e)) return 'of '.concat(n, ' ').concat(String(e));
+    var r = e.length;
     return ((e = e.map(function (e) {
         return String(e);
     })),
-    n > 2)
-        ? 'one of '.concat(t, ' ').concat(e.slice(0, n - 1).join(', '), ', or ') + e[n - 1]
-        : 2 === n
-          ? 'one of '.concat(t, ' ').concat(e[0], ' or ').concat(e[1])
-          : 'of '.concat(t, ' ').concat(e[0]);
+    r > 2)
+        ? 'one of '.concat(n, ' ').concat(e.slice(0, r - 1).join(', '), ', or ') + e[r - 1]
+        : 2 === r
+          ? 'one of '.concat(n, ' ').concat(e[0], ' or ').concat(e[1])
+          : 'of '.concat(n, ' ').concat(e[0]);
 }
-n(
+function s(e, n, r) {
+    return e.substr(!r || r < 0 ? 0 : +r, n.length) === n;
+}
+function o(e, n, r) {
+    return (void 0 === r || r > e.length) && (r = e.length), e.substring(r - n.length, r) === n;
+}
+function l(e, n, r) {
+    return 'number' != typeof r && (r = 0), !(r + n.length > e.length) && -1 !== e.indexOf(n, r);
+}
+i(
     'ERR_INVALID_OPT_VALUE',
-    function (e, t) {
-        return 'The value "' + t + '" is invalid for option "' + e + '"';
+    function (e, n) {
+        return 'The value "' + n + '" is invalid for option "' + e + '"';
     },
     TypeError
 ),
-    n(
+    i(
         'ERR_INVALID_ARG_TYPE',
-        function (e, t, n) {
-            if ('string' == typeof t && ((i = 'not '), t.substr(0, i.length) === i)) (f = 'must not be'), (t = t.replace(/^not /, ''));
-            else f = 'must be';
-            if (((s = e), (o = ' argument'), (void 0 === l || l > s.length) && (l = s.length), s.substring(l - o.length, l) === o)) _ = 'The '.concat(e, ' ').concat(f, ' ').concat(r(t, 'type'));
+        function (e, n, r) {
+            if (('string' == typeof n && s(n, 'not ') ? ((i = 'must not be'), (n = n.replace(/^not /, ''))) : (i = 'must be'), o(e, ' argument'))) u = 'The '.concat(e, ' ').concat(i, ' ').concat(a(n, 'type'));
             else {
                 var i,
-                    a,
-                    s,
-                    o,
-                    l,
                     u,
-                    c,
-                    d,
-                    f,
-                    _,
-                    p = ((u = e), (c = '.'), 'number' != typeof d && (d = 0), d + 1 > u.length || -1 === u.indexOf(c, d)) ? 'argument' : 'property';
-                _ = 'The "'.concat(e, '" ').concat(p, ' ').concat(f, ' ').concat(r(t, 'type'));
+                    c = l(e, '.') ? 'property' : 'argument';
+                u = 'The "'.concat(e, '" ').concat(c, ' ').concat(i, ' ').concat(a(n, 'type'));
             }
-            return (_ += '. Received type '.concat(typeof n));
+            return (u += '. Received type '.concat(typeof r));
         },
         TypeError
     ),
-    n('ERR_STREAM_PUSH_AFTER_EOF', 'stream.push() after EOF'),
-    n('ERR_METHOD_NOT_IMPLEMENTED', function (e) {
+    i('ERR_STREAM_PUSH_AFTER_EOF', 'stream.push() after EOF'),
+    i('ERR_METHOD_NOT_IMPLEMENTED', function (e) {
         return 'The ' + e + ' method is not implemented';
     }),
-    n('ERR_STREAM_PREMATURE_CLOSE', 'Premature close'),
-    n('ERR_STREAM_DESTROYED', function (e) {
+    i('ERR_STREAM_PREMATURE_CLOSE', 'Premature close'),
+    i('ERR_STREAM_DESTROYED', function (e) {
         return 'Cannot call ' + e + ' after a stream was destroyed';
     }),
-    n('ERR_MULTIPLE_CALLBACK', 'Callback called multiple times'),
-    n('ERR_STREAM_CANNOT_PIPE', 'Cannot pipe, not readable'),
-    n('ERR_STREAM_WRITE_AFTER_END', 'write after end'),
-    n('ERR_STREAM_NULL_VALUES', 'May not write null values to stream', TypeError),
-    n(
+    i('ERR_MULTIPLE_CALLBACK', 'Callback called multiple times'),
+    i('ERR_STREAM_CANNOT_PIPE', 'Cannot pipe, not readable'),
+    i('ERR_STREAM_WRITE_AFTER_END', 'write after end'),
+    i('ERR_STREAM_NULL_VALUES', 'May not write null values to stream', TypeError),
+    i(
         'ERR_UNKNOWN_ENCODING',
         function (e) {
             return 'Unknown encoding: ' + e;
         },
         TypeError
     ),
-    n('ERR_STREAM_UNSHIFT_AFTER_END_EVENT', 'stream.unshift() after end event'),
-    (e.exports.codes = t);
+    i('ERR_STREAM_UNSHIFT_AFTER_END_EVENT', 'stream.unshift() after end event'),
+    (e.exports.codes = r);

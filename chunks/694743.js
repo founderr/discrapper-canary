@@ -1,45 +1,46 @@
-n.d(t, {
+r.d(n, {
     E: function () {
         return f;
     }
 });
-var r,
-    i,
-    a = n(200651),
-    s = n(192379),
-    o = n(120356),
-    l = n.n(o),
-    u = n(692547),
-    c = n(489421);
-((r = i || (i = {})).XXSMALL = 'xxsmall'), (r.XSMALL = 'xsmall'), (r.SMALL = 'small'), (r.LARGE = 'large');
+var i,
+    a = r(200651),
+    s = r(192379),
+    o = r(120356),
+    l = r.n(o),
+    u = r(692547),
+    c = r(489421);
+!(function (e) {
+    (e.XXSMALL = 'xxsmall'), (e.XSMALL = 'xsmall'), (e.SMALL = 'small'), (e.LARGE = 'large');
+})(i || (i = {}));
 let d = 'indeterminate';
 function f(e) {
-    let t,
-        { className: n, percent: r, size: i = 'small', foregroundColor: o = u.Z.unsafe_rawColors.BRAND_500.css, backgroundColor: f = 'var(--background-modifier-active)', foregroundGradientColor: _, animate: p = !0 } = e,
-        h = null != r ? r : 0;
+    let n,
+        { className: r, percent: i, size: o = 'small', foregroundColor: f = u.Z.unsafe_rawColors.BRAND_500.css, backgroundColor: _ = 'var(--background-modifier-active)', foregroundGradientColor: h, animate: p = !0 } = e,
+        m = null != i ? i : 0;
     return (
-        (t = null != _ ? { background: 'linear-gradient(to right, '.concat(_[0], ', ').concat(_[1], ')') } : { backgroundColor: o }),
+        (n = null != h ? { background: 'linear-gradient(to right, '.concat(h[0], ', ').concat(h[1], ')') } : { backgroundColor: f }),
         (0, a.jsx)('div', {
-            className: l()(n, c.progress, c[i]),
-            style: { backgroundColor: f },
+            className: l()(r, c.progress, c[o]),
+            style: { backgroundColor: _ },
             children:
-                h !== d && 'number' == typeof h
+                m !== d && 'number' == typeof m
                     ? (0, a.jsx)('div', {
-                          className: l()(c.progressBar, c[i], { [c.animating]: p }),
+                          className: l()(c.progressBar, c[o], { [c.animating]: p }),
                           style: {
-                              transform: 'translate3d('.concat(Math.min(Math.max(0, h), 100) - 100, '%, 0, 0)'),
-                              ...t
+                              transform: 'translate3d('.concat(Math.min(Math.max(0, m), 100) - 100, '%, 0, 0)'),
+                              ...n
                           }
                       })
                     : (0, a.jsxs)(s.Fragment, {
                           children: [
                               (0, a.jsx)('div', {
-                                  className: l()(c.indeterminateBar1, c[i], { [c.animating]: p }),
-                                  style: t
+                                  className: l()(c.indeterminateBar1, c[o], { [c.animating]: p }),
+                                  style: n
                               }),
                               (0, a.jsx)('div', {
-                                  className: l()(c.indeterminateBar2, c[i], { [c.animating]: p }),
-                                  style: t
+                                  className: l()(c.indeterminateBar2, c[o], { [c.animating]: p }),
+                                  style: n
                               })
                           ]
                       })

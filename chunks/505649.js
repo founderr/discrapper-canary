@@ -1,17 +1,27 @@
-n(411104);
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140),
-    u = n(366939),
-    c = n(16084),
-    d = n(128069),
-    f = n(122289),
-    _ = n(622999),
-    p = n(981631),
-    h = n(388032);
+var i,
+    a = r(411104);
+var s = r(442837),
+    o = r(570140),
+    l = r(366939),
+    u = r(16084),
+    c = r(128069),
+    d = r(122289),
+    f = r(622999),
+    _ = r(981631),
+    h = r(388032);
+function p(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
 let m = !1,
     g = null,
     E = null;
@@ -19,30 +29,34 @@ function v() {
     (m = !1), (E = null), (g = null);
 }
 function I(e) {
-    let { error: t } = e,
-        { code: n, paymentId: r } = t;
-    if (n !== d.ZP.ErrorCodes.CONFIRMATION_REQUIRED && n !== d.ZP.ErrorCodes.AUTHENTICATION_REQUIRED) return (m = !1), !1;
-    !m && ((m = !0), (g = r), n === d.ZP.ErrorCodes.AUTHENTICATION_REQUIRED && T(r));
+    let { error: n } = e,
+        { code: r, paymentId: i } = n;
+    if (r !== c.ZP.ErrorCodes.CONFIRMATION_REQUIRED && r !== c.ZP.ErrorCodes.AUTHENTICATION_REQUIRED) return (m = !1), !1;
+    !m && ((m = !0), (g = i), r === c.ZP.ErrorCodes.AUTHENTICATION_REQUIRED && T(i));
 }
 async function T(e) {
     if (null == e) return;
-    let { error: t } = await (0, _.oe)(e);
-    if (null != t) {
-        let e = Error(t);
-        (0, f.q2)(e, { extra: { authenticationError: t } });
+    let { error: n } = await (0, f.oe)(e);
+    if (null != n) {
+        let e = Error(n);
+        (0, d.q2)(e, { extra: { authenticationError: n } });
     }
 }
 function b(e) {
-    let { payment: t } = e,
-        n = [p.PyE.COMPLETED, p.PyE.FAILED, p.PyE.CANCELED];
-    if (!m || t.id !== g || !n.includes(t.status)) return !1;
-    if (((m = !1), (g = null), t.status === p.PyE.FAILED)) {
-        var r;
-        let e = null;
-        (null === (r = t.metadata) || void 0 === r ? void 0 : r.billing_error_code) === d.SM.BILLING_INSUFFICIENT_FUNDS && (e = d.SM.BILLING_INSUFFICIENT_FUNDS), (E = new d.ZP(h.intl.string(h.t.khEaRE), e));
-    } else (E = null), l.Z.wait(u.fw), l.Z.wait(c.pB);
+    let { error: n } = e;
+    (E = n), (m = !1);
 }
-class S extends (r = o.ZP.Store) {
+function y(e) {
+    let { payment: n } = e,
+        r = [_.PyE.COMPLETED, _.PyE.FAILED, _.PyE.CANCELED];
+    if (!m || n.id !== g || !r.includes(n.status)) return !1;
+    if (((m = !1), (g = null), n.status === _.PyE.FAILED)) {
+        var i;
+        let e = null;
+        (null === (i = n.metadata) || void 0 === i ? void 0 : i.billing_error_code) === c.SM.BILLING_INSUFFICIENT_FUNDS && (e = c.SM.BILLING_INSUFFICIENT_FUNDS), (E = new c.ZP(h.intl.string(h.t.khEaRE), e));
+    } else (E = null), o.Z.wait(l.fw), o.Z.wait(u.pB);
+}
+class S extends (i = s.ZP.Store) {
     get isAwaitingAuthentication() {
         return m;
     }
@@ -53,16 +67,8 @@ class S extends (r = o.ZP.Store) {
         return g;
     }
 }
-(s = 'PaymentAuthenticationStore'),
-    (a = 'displayName') in (i = S)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new S(l.Z, {
+p(S, 'displayName', 'PaymentAuthenticationStore'),
+    (n.Z = new S(o.Z, {
         BILLING_SUBSCRIPTION_UPDATE_START: v,
         PAYMENT_AUTHENTICATION_CLEAR_ERROR: v,
         PREMIUM_PAYMENT_ERROR_CLEAR: v,
@@ -80,10 +86,7 @@ class S extends (r = o.ZP.Store) {
         PREMIUM_PAYMENT_UPDATE_FAIL: I,
         SKU_PURCHASE_FAIL: I,
         GIFT_CODE_REDEEM_FAILURE: I,
-        PAYMENT_AUTHENTICATION_ERROR: function (e) {
-            let { error: t } = e;
-            (E = t), (m = !1);
-        },
-        PAYMENT_UPDATE: b,
-        BILLING_PAYMENT_FETCH_SUCCESS: b
+        PAYMENT_AUTHENTICATION_ERROR: b,
+        PAYMENT_UPDATE: y,
+        BILLING_PAYMENT_FETCH_SUCCESS: y
     }));

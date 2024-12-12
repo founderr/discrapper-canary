@@ -1,60 +1,63 @@
-n.d(t, {
+r.d(n, {
     KX: function () {
-        return c;
+        return m;
     },
     M$: function () {
-        return u;
+        return p;
     }
-}),
-    n(653041),
-    n(47120);
-var r = n(392711),
-    i = n.n(r),
-    a = n(913527),
-    s = n.n(a);
-function o(e, t, n) {
+});
+var i = r(653041);
+var a = r(47120);
+var s = r(392711),
+    o = r.n(s),
+    l = r(913527),
+    u = r.n(l);
+function c(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let l = (e, t, n) => Math.ceil(e * (t / n.numOfRecentUses)),
-    u = {
+let d = 10,
+    f = 1000,
+    _ = 32,
+    h = (e, n, r) => Math.ceil(e * (n / r.numOfRecentUses)),
+    p = {
         original: (e) => {
-            let t = 1;
-            return e <= 3 ? (t = 100) : e <= 15 ? (t = 70) : e <= 30 ? (t = 50) : e <= 45 ? (t = 30) : e <= 80 && (t = 10), t;
+            let n = 1;
+            return e <= 3 ? (n = 100) : e <= 15 ? (n = 70) : e <= 30 ? (n = 50) : e <= 45 ? (n = 30) : e <= 80 && (n = 10), n;
         },
         safe: (e) => {
-            let t = 1;
-            return e <= 3 ? (t = 100) : e <= 15 ? (t = 70) : e <= 30 ? (t = 50) : e <= 45 ? (t = 30) : e <= 80 && (t = 10), t;
+            let n = 1;
+            return e <= 3 ? (n = 100) : e <= 15 ? (n = 70) : e <= 30 ? (n = 50) : e <= 45 ? (n = 30) : e <= 80 && (n = 10), n;
         },
         day_recency: (e) => {
-            let t = 1;
-            return e <= 1 ? (t = 100) : e <= 2 ? (t = 70) : e <= 3 ? (t = 50) : e <= 7 ? (t = 20) : e <= 15 ? (t = 15) : e <= 30 ? (t = 10) : e <= 45 ? (t = 5) : e <= 80 && (t = 2), t;
+            let n = 1;
+            return e <= 1 ? (n = 100) : e <= 2 ? (n = 70) : e <= 3 ? (n = 50) : e <= 7 ? (n = 20) : e <= 15 ? (n = 15) : e <= 30 ? (n = 10) : e <= 45 ? (n = 5) : e <= 80 && (n = 2), n;
         }
     },
-    c = {
-        original: l,
-        safe: (e, t, n) => (null == n.maxTotalUse ? 0 : Math.trunc(1000 * ((e / n.maxTotalUse) * 0.2 + (t / 1000) * 0.8))),
-        day_recency: (e, t, n) => (null == n.maxTotalUse ? 0 : Math.trunc(1000 * ((e / n.maxTotalUse) * 0.05 + (t / 1000) * 0.95)))
+    m = {
+        original: h,
+        safe: (e, n, r) => (null == r.maxTotalUse ? 0 : Math.trunc(1000 * ((e / r.maxTotalUse) * 0.2 + (n / f) * 0.8))),
+        day_recency: (e, n, r) => (null == r.maxTotalUse ? 0 : Math.trunc(1000 * ((e / r.maxTotalUse) * 0.05 + (n / f) * 0.95)))
     };
-t.ZP = class e {
-    overwriteHistory(e, t) {
-        (this.usageHistory = i().mapValues(null != e ? e : {}, (e) => ({
+class g {
+    overwriteHistory(e, n) {
+        (this.usageHistory = o().mapValues(null != e ? e : {}, (e) => ({
             ...e,
             frecency: -1
         }))),
-            null == t ||
-                t.forEach((e) => {
-                    let { key: t, timestamp: n } = e;
-                    return this.track(t, n);
+            null == n ||
+                n.forEach((e) => {
+                    let { key: n, timestamp: r } = e;
+                    return this.track(n, r);
                 }),
             this.markDirty();
     }
@@ -64,75 +67,75 @@ t.ZP = class e {
     isDirty() {
         return this.dirty;
     }
-    track(e, t) {
+    track(e, n) {
         if (null == e) return;
-        let n = Object.prototype.hasOwnProperty.call(this.usageHistory, e) ? this.usageHistory[e] : void 0;
-        if (null == n)
-            n = {
+        let r = Object.prototype.hasOwnProperty.call(this.usageHistory, e) ? this.usageHistory[e] : void 0;
+        if (null == r)
+            r = {
                 totalUses: 1,
-                recentUses: [null != t ? t : Date.now()],
+                recentUses: [null != n ? n : Date.now()],
                 frecency: -1,
                 score: 0
             };
-        else for (n.frecency = -1, n.totalUses += 1, null == t ? n.recentUses.push(Date.now()) : (n.recentUses.push(t), n.recentUses.sort()); n.recentUses.length > this.maxSamples; ) n.recentUses.shift();
-        (this.usageHistory[e] = n), this.markDirty();
+        else for (r.frecency = -1, r.totalUses += 1, null == n ? r.recentUses.push(Date.now()) : (r.recentUses.push(n), r.recentUses.sort()); r.recentUses.length > this.maxSamples; ) r.recentUses.shift();
+        (this.usageHistory[e] = r), this.markDirty();
     }
     getEntry(e) {
         return null == e ? null : (this.dirty && this.compute(), Object.prototype.hasOwnProperty.call(this.usageHistory, e) ? this.usageHistory[e] : void 0);
     }
     getScore(e) {
-        let t = this.getEntry(e);
-        return null != t ? t.score : null;
+        let n = this.getEntry(e);
+        return null != n ? n.score : null;
     }
     getFrecency(e) {
-        let t = this.getEntry(e);
-        return null != t ? t.frecency : null;
+        let n = this.getEntry(e);
+        return null != n ? n.frecency : null;
     }
-    replaceEntryComputeFunctions(e, t, n) {
+    replaceEntryComputeFunctions(e, n, r) {
         (this.computeWeight = e),
-            (this.computeFrecency = t),
-            (this.calculateMaxTotalUse = n),
-            (this.usageHistory = i().mapValues(this.usageHistory, (e) => ({
+            (this.computeFrecency = n),
+            (this.calculateMaxTotalUse = r),
+            (this.usageHistory = o().mapValues(this.usageHistory, (e) => ({
                 ...e,
                 frecency: -1
             }))),
             this.markDirty();
     }
     compute() {
-        let e = s()(),
-            t = this.calculateMaxTotalUse ? i().maxBy(Object.values(this.usageHistory), (e) => e.totalUses) : null;
-        i().forEach(this.usageHistory, (n, r) => {
-            let { totalUses: a, recentUses: o, frecency: l } = n;
+        let e = u()(),
+            n = this.calculateMaxTotalUse ? o().maxBy(Object.values(this.usageHistory), (e) => e.totalUses) : null;
+        o().forEach(this.usageHistory, (r, i) => {
+            let { totalUses: a, recentUses: s, frecency: l } = r;
             if (-1 !== l) return;
-            let u = this.computeBonus(r) / 100;
-            (n.score = 0),
-                i().forEach(o, (t, r) => {
-                    if (r >= this.maxSamples) return !1;
-                    let i = this.computeWeight(e.diff(s()(t), 'days'));
-                    n.score += u * i;
+            let c = this.computeBonus(i) / 100;
+            (r.score = 0),
+                o().forEach(s, (n, i) => {
+                    if (i >= this.maxSamples) return !1;
+                    let a = this.computeWeight(e.diff(u()(n), 'days'));
+                    r.score += c * a;
                 }),
-                n.score > 0
-                    ? (n.recentUses.length > 0 &&
-                          (n.frecency = this.computeFrecency(a, n.score, {
-                              numOfRecentUses: o.length,
-                              maxTotalUse: null == t ? void 0 : t.totalUses
+                r.score > 0
+                    ? (r.recentUses.length > 0 &&
+                          (r.frecency = this.computeFrecency(a, r.score, {
+                              numOfRecentUses: s.length,
+                              maxTotalUse: null == n ? void 0 : n.totalUses
                           })),
-                      (this.usageHistory[r] = n))
-                    : delete this.usageHistory[r];
+                      (this.usageHistory[i] = r))
+                    : delete this.usageHistory[i];
         }),
-            (this.frequently = i()(this.usageHistory)
-                .map((e, t) => {
-                    let n = this.lookupKey(t);
-                    return null == n ? null : [n, e.frecency];
+            (this.frequently = o()(this.usageHistory)
+                .map((e, n) => {
+                    let r = this.lookupKey(n);
+                    return null == r ? null : [r, e.frecency];
                 })
                 .filter((e) => null !== e)
                 .sortBy((e) => {
-                    let [t, n] = e;
-                    return -n;
+                    let [n, r] = e;
+                    return -r;
                 })
                 .map((e) => {
-                    let [t] = e;
-                    return t;
+                    let [n] = e;
+                    return n;
                 })
                 .take(this.numFrequentlyItems)
                 .value()),
@@ -145,7 +148,8 @@ t.ZP = class e {
     set frequently(e) {
         this._frequently = e;
     }
-    constructor({ computeBonus: e, computeWeight: t, computeFrecency: n = l, lookupKey: r, afterCompute: i, numFrequentlyItems: a = 32, maxSamples: s = 10 }) {
-        o(this, 'dirty', void 0), o(this, '_frequently', void 0), o(this, 'numFrequentlyItems', void 0), o(this, 'maxSamples', void 0), o(this, 'computeBonus', void 0), o(this, 'computeWeight', void 0), o(this, 'computeFrecency', void 0), o(this, 'lookupKey', void 0), o(this, 'usageHistory', void 0), o(this, 'afterCompute', void 0), o(this, 'calculateMaxTotalUse', void 0), (this.computeBonus = e), (this.computeWeight = t), (this.computeFrecency = n), (this.afterCompute = i), (this.lookupKey = r), (this.usageHistory = {}), (this.frequently = []), (this.maxSamples = s), (this.numFrequentlyItems = a), (this.calculateMaxTotalUse = !1), (this.dirty = !1);
+    constructor({ computeBonus: e, computeWeight: n, computeFrecency: r = h, lookupKey: i, afterCompute: a, numFrequentlyItems: s = _, maxSamples: o = d }) {
+        c(this, 'dirty', void 0), c(this, '_frequently', void 0), c(this, 'numFrequentlyItems', void 0), c(this, 'maxSamples', void 0), c(this, 'computeBonus', void 0), c(this, 'computeWeight', void 0), c(this, 'computeFrecency', void 0), c(this, 'lookupKey', void 0), c(this, 'usageHistory', void 0), c(this, 'afterCompute', void 0), c(this, 'calculateMaxTotalUse', void 0), (this.computeBonus = e), (this.computeWeight = n), (this.computeFrecency = r), (this.afterCompute = a), (this.lookupKey = i), (this.usageHistory = {}), (this.frequently = []), (this.maxSamples = o), (this.numFrequentlyItems = s), (this.calculateMaxTotalUse = !1), (this.dirty = !1);
     }
-};
+}
+n.ZP = g;

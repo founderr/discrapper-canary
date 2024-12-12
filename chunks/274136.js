@@ -1,7 +1,9 @@
-var r, i;
-n.d(t, {
+var i;
+r.d(n, {
     D: function () {
-        return r;
+        return i;
     }
 }),
-    ((i = r || (r = {}))[(i.MAX_STICKER_SLOTS = 120)] = 'MAX_STICKER_SLOTS');
+    !(function (e) {
+        e[(e.MAX_STICKER_SLOTS = 120)] = 'MAX_STICKER_SLOTS';
+    })(i || (i = {}));

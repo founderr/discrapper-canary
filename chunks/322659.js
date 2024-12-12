@@ -1,67 +1,70 @@
-var r = (function () {
-        function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-                var r = t[n];
-                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
-            }
+var i = (function () {
+    function e(e, n) {
+        for (var r = 0; r < n.length; r++) {
+            var i = n[r];
+            (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
         }
-        return function (t, n, r) {
-            return n && e(t.prototype, n), r && e(t, r), t;
-        };
-    })(),
-    i = n(129629),
-    a = (function (e) {
-        function t(e, n) {
-            !(function (e, t) {
-                if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-            })(this, t);
-            var r = (function (e, t) {
-                if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-                return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
-            })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-            return (r._strings = e), (r._values = n), r;
+    }
+    return function (n, r, i) {
+        return r && e(n.prototype, r), i && e(n, i), n;
+    };
+})();
+function a(e, n) {
+    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+}
+function s(e, n) {
+    if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
+}
+function o(e, n) {
+    if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
+    (e.prototype = Object.create(n && n.prototype, {
+        constructor: {
+            value: e,
+            enumerable: !1,
+            writable: !0,
+            configurable: !0
+        }
+    })),
+        n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
+}
+var l = r(129629),
+    u = (function (e) {
+        function n(e, r) {
+            a(this, n);
+            var i = s(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
+            return (i._strings = e), (i._values = r), i;
         }
         return (
-            !(function (e, t) {
-                if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-                (e.prototype = Object.create(t && t.prototype, {
-                    constructor: {
-                        value: e,
-                        enumerable: !1,
-                        writable: !0,
-                        configurable: !0
-                    }
-                })),
-                    t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
-            })(t, e),
-            r(t, [
+            o(n, e),
+            i(n, [
                 {
                     key: '__transformValue',
                     value: function (e) {
-                        return e instanceof i ? e.__getValue() : e;
+                        return e instanceof l ? e.__getValue() : e;
                     }
                 },
                 {
                     key: '__getValue',
                     value: function () {
-                        for (var e = this._strings[0], t = 0; t < this._values.length; ++t) e += this.__transformValue(this._values[t]) + this._strings[1 + t];
+                        for (var e = this._strings[0], n = 0; n < this._values.length; ++n) e += this.__transformValue(this._values[n]) + this._strings[1 + n];
                         return e;
                     }
                 },
                 {
                     key: '__attach',
                     value: function () {
-                        for (var e = 0; e < this._values.length; ++e) this._values[e] instanceof i && this._values[e].__addChild(this);
+                        for (var e = 0; e < this._values.length; ++e) this._values[e] instanceof l && this._values[e].__addChild(this);
                     }
                 },
                 {
                     key: '__detach',
                     value: function () {
-                        for (var e = 0; e < this._values.length; ++e) this._values[e] instanceof i && this._values[e].__removeChild(this);
+                        for (var e = 0; e < this._values.length; ++e) this._values[e] instanceof l && this._values[e].__removeChild(this);
                     }
                 }
             ]),
-            t
+            n
         );
-    })(n(22672));
-e.exports = a;
+    })(r(22672));
+e.exports = u;

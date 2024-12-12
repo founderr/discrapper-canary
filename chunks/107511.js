@@ -1,41 +1,43 @@
-n(47120);
-var r = n(433517),
-    i = n(570140),
-    a = n(317770),
-    s = n(314897),
-    o = n(944486),
-    l = n(105372),
-    u = n(88751),
-    c = n(157925);
-class d extends a.Z {
+var i = r(47120);
+var a = r(433517),
+    s = r(570140),
+    o = r(317770),
+    l = r(314897),
+    u = r(944486),
+    c = r(105372),
+    d = r(88751),
+    f = r(157925);
+function _(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+class h extends o.Z {
     _initialize() {
-        i.Z.subscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
+        s.Z.subscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
     }
     _terminate() {
-        i.Z.unsubscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
+        s.Z.unsubscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
     }
     constructor(...e) {
-        var t, n, i;
         super(...e),
-            (t = this),
-            (n = 'handleVoiceStateUpdates'),
-            (i = (e) => {
-                let { voiceStates: t } = e;
-                t.forEach((e) => {
-                    if (null == e.channelId || e.userId !== s.default.getId()) return;
-                    if ((this.terminate(), r.K.get(c.$z, !1))) return;
-                    let t = o.Z.getVoiceChannelId();
-                    if (null != t && e.channelId === t) u.ZP.isAudienceMember(e.userId, t) && (r.K.set(c.$z, !0), l.$(t));
+            _(this, 'handleVoiceStateUpdates', (e) => {
+                let { voiceStates: n } = e;
+                n.forEach((e) => {
+                    if (null == e.channelId || e.userId !== l.default.getId()) return;
+                    if ((this.terminate(), a.K.get(f.$z, !1))) return;
+                    let n = u.Z.getVoiceChannelId();
+                    if (null != n && e.channelId === n) d.ZP.isAudienceMember(e.userId, n) && (a.K.set(f.$z, !0), c.$(n));
                 });
-            }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: i,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = i);
+            });
     }
 }
-t.Z = new d();
+n.Z = new h();

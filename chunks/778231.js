@@ -1,99 +1,101 @@
-var r = n(200651),
-    i = n(192379),
-    a = n(442837),
-    s = n(481060),
-    o = n(384275),
-    l = n(824606),
-    u = n(686546),
-    c = n(522289),
-    d = n(146078),
-    f = n(881998),
-    _ = n(709054),
-    p = n(388032),
-    h = n(914301),
-    m = n(970952);
-t.Z = (e) => {
-    var t, n;
-    let { entry: g } = e,
-        { name: E } = g,
-        v = (0, a.e7)([f.Z], () => {
-            let e = f.Z.getApps();
-            return null != e ? e.find((e) => e.application.id === g.id) : null;
-        }),
-        I = null !== (n = g.getIconURL(64)) && void 0 !== n ? n : m,
-        T = (0, l.Z)({ application: g }),
-        b = i.useRef(!1);
-    i.useEffect(() => {
-        !b.current && (o.Z.fetch(), (b.current = !0));
-    }, []);
-    let S = null != v ? _.default.extractTimestamp(v.id) : void 0;
-    return (0, r.jsxs)('div', {
-        className: h.container,
-        children: [
-            (0, r.jsx)(s.Heading, {
-                className: h.header,
-                variant: 'heading-sm/semibold',
-                children: p.intl.string(p.t['aYfK//'])
+var i = r(200651),
+    a = r(192379),
+    s = r(442837),
+    o = r(481060),
+    l = r(384275),
+    u = r(824606),
+    c = r(686546),
+    d = r(522289),
+    f = r(146078),
+    _ = r(881998),
+    h = r(709054),
+    p = r(388032),
+    m = r(914301),
+    g = r(970952);
+let E = 64,
+    v = (e) => {
+        var n, r;
+        let { entry: v } = e,
+            { name: I } = v,
+            T = (0, s.e7)([_.Z], () => {
+                let e = _.Z.getApps();
+                return null != e ? e.find((e) => e.application.id === v.id) : null;
             }),
-            (0, r.jsx)('div', {
-                className: h.appContainer,
-                children: (0, r.jsxs)('div', {
-                    className: h.appInfo,
-                    children: [
-                        (0, r.jsx)(u.ZP, {
-                            mask: u.ZP.Masks.AVATAR_DEFAULT,
-                            width: 64,
-                            height: 64,
-                            className: h.appIconMask,
-                            children: (0, r.jsx)('img', {
-                                src: I,
-                                alt: '',
-                                className: h.appIcon
-                            })
-                        }),
-                        (0, r.jsxs)('div', {
-                            className: h.textContainer,
-                            children: [
-                                (0, r.jsx)(s.Text, {
-                                    color: 'header-primary',
-                                    variant: 'text-sm/semibold',
-                                    children: E
-                                }),
-                                T.length > 0
-                                    ? (0, r.jsxs)(r.Fragment, {
-                                          children: [
-                                              (0, r.jsx)(s.Text, {
-                                                  color: 'text-normal',
-                                                  variant: 'text-xs/normal',
-                                                  children: (0, d.Z)(T.length)
-                                              }),
-                                              (0, r.jsx)(c.Z, {
-                                                  className: h.guildStack,
-                                                  guilds: T,
-                                                  maxGuilds: 6
-                                              })
-                                          ]
-                                      })
-                                    : (0, r.jsxs)(r.Fragment, {
-                                          children: [
-                                              (0, r.jsx)(s.Text, {
-                                                  color: 'text-normal',
-                                                  variant: 'text-xs/normal',
-                                                  children: null === (t = g.bot) || void 0 === t ? void 0 : t.tag
-                                              }),
-                                              null != S &&
-                                                  (0, r.jsx)(s.Text, {
+            b = null !== (r = v.getIconURL(E)) && void 0 !== r ? r : g,
+            y = (0, u.Z)({ application: v }),
+            S = a.useRef(!1);
+        a.useEffect(() => {
+            !S.current && (l.Z.fetch(), (S.current = !0));
+        }, []);
+        let A = null != T ? h.default.extractTimestamp(T.id) : void 0;
+        return (0, i.jsxs)('div', {
+            className: m.container,
+            children: [
+                (0, i.jsx)(o.Heading, {
+                    className: m.header,
+                    variant: 'heading-sm/semibold',
+                    children: p.intl.string(p.t['aYfK//'])
+                }),
+                (0, i.jsx)('div', {
+                    className: m.appContainer,
+                    children: (0, i.jsxs)('div', {
+                        className: m.appInfo,
+                        children: [
+                            (0, i.jsx)(c.ZP, {
+                                mask: c.ZP.Masks.AVATAR_DEFAULT,
+                                width: E,
+                                height: E,
+                                className: m.appIconMask,
+                                children: (0, i.jsx)('img', {
+                                    src: b,
+                                    alt: '',
+                                    className: m.appIcon
+                                })
+                            }),
+                            (0, i.jsxs)('div', {
+                                className: m.textContainer,
+                                children: [
+                                    (0, i.jsx)(o.Text, {
+                                        color: 'header-primary',
+                                        variant: 'text-sm/semibold',
+                                        children: I
+                                    }),
+                                    y.length > 0
+                                        ? (0, i.jsxs)(i.Fragment, {
+                                              children: [
+                                                  (0, i.jsx)(o.Text, {
                                                       color: 'text-normal',
                                                       variant: 'text-xs/normal',
-                                                      children: p.intl.formatToPlainString(p.t.C9rUOz, { authorizedAt: S })
+                                                      children: (0, f.Z)(y.length)
+                                                  }),
+                                                  (0, i.jsx)(d.Z, {
+                                                      className: m.guildStack,
+                                                      guilds: y,
+                                                      maxGuilds: 6
                                                   })
-                                          ]
-                                      })
-                            ]
-                        })
-                    ]
+                                              ]
+                                          })
+                                        : (0, i.jsxs)(i.Fragment, {
+                                              children: [
+                                                  (0, i.jsx)(o.Text, {
+                                                      color: 'text-normal',
+                                                      variant: 'text-xs/normal',
+                                                      children: null === (n = v.bot) || void 0 === n ? void 0 : n.tag
+                                                  }),
+                                                  null != A &&
+                                                      (0, i.jsx)(o.Text, {
+                                                          color: 'text-normal',
+                                                          variant: 'text-xs/normal',
+                                                          children: p.intl.formatToPlainString(p.t.C9rUOz, { authorizedAt: A })
+                                                      })
+                                              ]
+                                          })
+                                ]
+                            })
+                        ]
+                    })
                 })
-            })
-        ]
-    });
-};
+            ]
+        });
+    };
+n.Z = v;

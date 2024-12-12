@@ -1,92 +1,93 @@
-n(47120);
-var r = n(544891),
-    i = n(147913),
-    a = n(680089),
-    s = n(592125),
-    o = n(70956),
-    l = n(981631);
-function u(e, t, n) {
+var i = r(47120);
+var a = r(544891),
+    s = r(147913),
+    o = r(680089),
+    l = r(592125),
+    u = r(70956),
+    c = r(981631);
+function d(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let c = {},
-    d = 0,
-    f = 15 * o.Z.Millis.SECOND;
-function _() {
-    c = { ...a.Z.getCollapsedCategories() };
-}
+let f = {},
+    _ = 0,
+    h = 15 * u.Z.Millis.SECOND;
 function p() {
-    !__OVERLAY__ && (clearTimeout(d), (d = setTimeout(() => m({}), f)));
+    f = { ...o.Z.getCollapsedCategories() };
 }
-async function h(e, t) {
-    null == e || e === l.ME
-        ? await r.tn.patch({
-              url: l.ANM.USER_GUILD_SETTINGS(l.ME),
-              body: t,
+function m() {
+    !__OVERLAY__ && (clearTimeout(_), (_ = setTimeout(() => E({}), h)));
+}
+async function g(e, n) {
+    null == e || e === c.ME
+        ? await a.tn.patch({
+              url: c.ANM.USER_GUILD_SETTINGS(c.ME),
+              body: n,
               rejectWithError: !1
           })
-        : await m(null != t ? { [null != e ? e : l.ME]: t } : {});
+        : await E(null != n ? { [null != e ? e : c.ME]: n } : {});
 }
-async function m(e) {
-    clearTimeout(d);
-    let t = 0 !== Object.keys(e).length,
-        n = a.Z.getCollapsedCategories(),
-        i = (function () {
-            let e = {},
-                t = a.Z.getCollapsedCategories();
-            for (let n in t) t[n] !== c[n] && (e[n] = !0);
-            for (let n in c) t[n] !== c[n] && (e[n] = !0);
-            return e;
-        })();
-    for (let r in i) {
-        let i = s.Z.getChannel(r);
+async function E(e) {
+    clearTimeout(_);
+    let n = 0 !== Object.keys(e).length,
+        r = o.Z.getCollapsedCategories(),
+        i = v();
+    for (let a in i) {
+        let i = l.Z.getChannel(a);
         null != i &&
             null != i.guild_id &&
             (!(i.guild_id in e) && (e[i.guild_id] = {}),
             null == e[i.guild_id].channel_overrides && (e[i.guild_id].channel_overrides = {}),
             (e[i.guild_id].channel_overrides[i.id] = {
                 ...e[i.guild_id].channel_overrides[i.id],
-                collapsed: i.id in n
+                collapsed: i.id in r
             }),
-            (t = !0));
+            (n = !0));
     }
-    return t
-        ? ((c = { ...n }),
-          delete e[l.I_8],
+    return n
+        ? ((f = { ...r }),
+          delete e[c.I_8],
           (
-              await r.tn.patch({
-                  url: l.ANM.USER_GUILD_SETTINGS_BULK,
+              await a.tn.patch({
+                  url: c.ANM.USER_GUILD_SETTINGS_BULK,
                   body: { guilds: e },
                   rejectWithError: !1
               })
           ).body)
         : [];
 }
-function g() {
-    c = { ...a.Z.getCollapsedCategories() };
+function v() {
+    let e = {},
+        n = o.Z.getCollapsedCategories();
+    for (let r in n) n[r] !== f[r] && (e[r] = !0);
+    for (let r in f) n[r] !== f[r] && (e[r] = !0);
+    return e;
 }
-class E extends i.Z {
+function I() {
+    f = { ...o.Z.getCollapsedCategories() };
+}
+class T extends s.Z {
     constructor(...e) {
         super(...e),
-            u(this, 'actions', {
-                CATEGORY_COLLAPSE: p,
-                CATEGORY_EXPAND: p,
-                CATEGORY_COLLAPSE_ALL: p,
-                CATEGORY_EXPAND_ALL: p,
-                POST_CONNECTION_OPEN: _,
-                USER_GUILD_SETTINGS_FULL_UPDATE: g
+            d(this, 'actions', {
+                CATEGORY_COLLAPSE: m,
+                CATEGORY_EXPAND: m,
+                CATEGORY_COLLAPSE_ALL: m,
+                CATEGORY_EXPAND_ALL: m,
+                POST_CONNECTION_OPEN: p,
+                USER_GUILD_SETTINGS_FULL_UPDATE: I
             }),
-            u(this, 'saveUserGuildSettings', h),
-            u(this, 'saveUserGuildSettingsBulk', m);
+            d(this, 'saveUserGuildSettings', g),
+            d(this, 'saveUserGuildSettingsBulk', E);
     }
 }
-t.Z = new E();
+n.Z = new T();

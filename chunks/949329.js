@@ -1,8 +1,8 @@
-e.exports = function (e) {
-    let t = "('|\\.')+",
-        n = {
+function n(e) {
+    let n = "('|\\.')+",
+        r = {
             relevance: 0,
-            contains: [{ begin: t }]
+            contains: [{ begin: n }]
         };
     return {
         name: 'Matlab',
@@ -37,17 +37,17 @@ e.exports = function (e) {
                 className: 'built_in',
                 begin: /true|false/,
                 relevance: 0,
-                starts: n
+                starts: r
             },
             {
-                begin: '[a-zA-Z][a-zA-Z_0-9]*' + t,
+                begin: '[a-zA-Z][a-zA-Z_0-9]*' + n,
                 relevance: 0
             },
             {
                 className: 'number',
                 begin: e.C_NUMBER_RE,
                 relevance: 0,
-                starts: n
+                starts: r
             },
             {
                 className: 'string',
@@ -58,17 +58,18 @@ e.exports = function (e) {
             {
                 begin: /\]|\}|\)/,
                 relevance: 0,
-                starts: n
+                starts: r
             },
             {
                 className: 'string',
                 begin: '"',
                 end: '"',
                 contains: [{ begin: '""' }],
-                starts: n
+                starts: r
             },
             e.COMMENT('^\\s*%\\{\\s*$', '^\\s*%\\}\\s*$'),
             e.COMMENT('%', '$')
         ]
     };
-};
+}
+e.exports = n;

@@ -1,47 +1,49 @@
-n.d(t, {
+r.d(n, {
     O: function () {
-        return s;
+        return o;
     }
 });
-var r = n(661763),
-    i = n(662845),
-    a = n(921336);
-function s(e, t, n) {
-    let { isDisabled: s = !1, isReadOnly: o = !1, value: l, name: u, children: c, 'aria-label': d, 'aria-labelledby': f, validationState: _ = 'valid', isInvalid: p } = e;
-    !(null != c) && !(null != d || null != f) && console.warn('If you do not provide children, you must specify an aria-label for accessibility');
-    let { pressProps: h, isPressed: m } = (0, a.r7)({ isDisabled: s }),
-        { pressProps: g, isPressed: E } = (0, a.r7)({
-            isDisabled: s || o,
+var i = r(661763),
+    a = r(662845),
+    s = r(921336);
+function o(e, n, r) {
+    let { isDisabled: o = !1, isReadOnly: l = !1, value: u, name: c, children: d, 'aria-label': f, 'aria-labelledby': _, validationState: h = 'valid', isInvalid: p } = e,
+        m = (e) => {
+            e.stopPropagation(), n.setSelected(e.target.checked);
+        },
+        g = null != f || null != _;
+    !(null != d) && !g && console.warn('If you do not provide children, you must specify an aria-label for accessibility');
+    let { pressProps: E, isPressed: v } = (0, s.r7)({ isDisabled: o }),
+        { pressProps: I, isPressed: T } = (0, s.r7)({
+            isDisabled: o || l,
             onPress() {
-                t.toggle();
+                n.toggle();
             }
         }),
-        { focusableProps: v } = (0, i.kc)(e, n),
-        I = (0, r.dG)(h, v),
-        T = (0, r.zL)(e, { labelable: !0 });
+        { focusableProps: b } = (0, a.kc)(e, r),
+        y = (0, i.dG)(E, b),
+        S = (0, i.zL)(e, { labelable: !0 });
     return (
-        (0, r.y$)(n, t.isSelected, t.setSelected),
+        (0, i.y$)(r, n.isSelected, n.setSelected),
         {
-            labelProps: (0, r.dG)(g, { onClick: (e) => e.preventDefault() }),
-            inputProps: (0, r.dG)(T, {
-                'aria-invalid': p || 'invalid' === _ || void 0,
+            labelProps: (0, i.dG)(I, { onClick: (e) => e.preventDefault() }),
+            inputProps: (0, i.dG)(S, {
+                'aria-invalid': p || 'invalid' === h || void 0,
                 'aria-errormessage': e['aria-errormessage'],
                 'aria-controls': e['aria-controls'],
-                'aria-readonly': o || void 0,
-                onChange: (e) => {
-                    e.stopPropagation(), t.setSelected(e.target.checked);
-                },
-                disabled: s,
-                ...(null == l ? {} : { value: l }),
-                name: u,
+                'aria-readonly': l || void 0,
+                onChange: m,
+                disabled: o,
+                ...(null == u ? {} : { value: u }),
+                name: c,
                 type: 'checkbox',
-                ...I
+                ...y
             }),
-            isSelected: t.isSelected,
-            isPressed: m || E,
-            isDisabled: s,
-            isReadOnly: o,
-            isInvalid: p || 'invalid' === _
+            isSelected: n.isSelected,
+            isPressed: v || T,
+            isDisabled: o,
+            isReadOnly: l,
+            isInvalid: p || 'invalid' === h
         }
     );
 }

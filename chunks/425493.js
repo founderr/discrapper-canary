@@ -1,32 +1,31 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
         return f;
     }
 });
-var r,
-    i,
-    a = n(200651);
-n(192379);
-var s = n(120356),
-    o = n.n(s),
-    l = n(873546),
-    u = n(481060),
-    c = n(388032),
-    d = n(121139);
+var i,
+    a = r(200651);
+r(192379);
+var s = r(120356),
+    o = r.n(s),
+    l = r(873546),
+    u = r(481060),
+    c = r(388032),
+    d = r(121139);
 function f(e) {
-    let { closeAction: t, variant: n = '', keybind: r, className: i } = e;
+    let { closeAction: n, variant: r = '', keybind: i, className: s } = e;
     return (0, a.jsxs)('div', {
-        className: o()(d.container, i),
+        className: o()(d.container, s),
         children: [
             (0, a.jsx)(u.Clickable, {
                 className: o()(d.closeButton, {
-                    [d.closeButtonBold]: 'Bold' === n,
-                    [d.closeButtonSolid]: 'Solid' === n
+                    [d.closeButtonBold]: 'Bold' === r,
+                    [d.closeButtonSolid]: 'Solid' === r
                 }),
-                onClick: t,
+                onClick: n,
                 'aria-label': c.intl.string(c.t.cpT0Cg),
                 children:
-                    'Solid' === n
+                    'Solid' === r
                         ? (0, a.jsx)(u.CircleXIcon, {
                               size: 'md',
                               color: 'currentColor',
@@ -43,9 +42,12 @@ function f(e) {
                 : (0, a.jsx)('div', {
                       className: o()(d.keybind),
                       'aria-hidden': !0,
-                      children: r
+                      children: i
                   })
         ]
     });
 }
-((r = i || (i = {})).DEFAULT = ''), (r.BOLD = 'Bold'), (r.SOLID = 'Solid'), (f.Variants = i);
+!(function (e) {
+    (e.DEFAULT = ''), (e.BOLD = 'Bold'), (e.SOLID = 'Solid');
+})(i || (i = {})),
+    (f.Variants = i);

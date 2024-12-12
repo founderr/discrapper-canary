@@ -1,4 +1,4 @@
-let t = [
+let n = [
     'AASTriangle',
     'AbelianGroup',
     'Abort',
@@ -6624,17 +6624,67 @@ let t = [
     '$WolframID',
     '$WolframUUID'
 ];
-e.exports = function (e) {
-    let n = e.regex,
-        r = n.either(n.concat(/([2-9]|[1-2]\d|[3][0-5])\^\^/, /(\w*\.\w+|\w+\.\w*|\w+)/), /(\d*\.\d+|\d+\.\d*|\d+)/),
-        i = n.either(/``[+-]?(\d*\.\d+|\d+\.\d*|\d+)/, /`([+-]?(\d*\.\d+|\d+\.\d*|\d+))?/),
-        a = n.concat(r, n.optional(i), n.optional(/\*\^[+-]?\d+/)),
-        s = /[a-zA-Z$][a-zA-Z0-9$]*/,
-        o = new Set(t),
-        l = {
+function r(e) {
+    let r = e.regex,
+        i = /([2-9]|[1-2]\d|[3][0-5])\^\^/,
+        a = /(\w*\.\w+|\w+\.\w*|\w+)/,
+        s = /(\d*\.\d+|\d+\.\d*|\d+)/,
+        o = r.either(r.concat(i, a), s),
+        l = /``[+-]?(\d*\.\d+|\d+\.\d*|\d+)/,
+        u = /`([+-]?(\d*\.\d+|\d+\.\d*|\d+))?/,
+        c = r.either(l, u),
+        d = /\*\^[+-]?\d+/,
+        f = {
+            className: 'number',
+            relevance: 0,
+            begin: r.concat(o, r.optional(c), r.optional(d))
+        },
+        _ = /[a-zA-Z$][a-zA-Z0-9$]*/,
+        h = new Set(n),
+        p = {
+            variants: [
+                {
+                    className: 'builtin-symbol',
+                    begin: _,
+                    'on:begin': (e, n) => {
+                        !h.has(e[0]) && n.ignoreMatch();
+                    }
+                },
+                {
+                    className: 'symbol',
+                    relevance: 0,
+                    begin: _
+                }
+            ]
+        },
+        m = {
+            className: 'named-character',
+            begin: /\\\[[$a-zA-Z][$a-zA-Z0-9]+\]/
+        },
+        g = {
+            className: 'operator',
+            relevance: 0,
+            begin: /[+\-*/,;.:@~=><&|_`'^?!%]+/
+        },
+        E = {
+            className: 'pattern',
+            relevance: 0,
+            begin: /([a-zA-Z$][a-zA-Z0-9$]*)?_+([a-zA-Z$][a-zA-Z0-9$]*)?/
+        },
+        v = {
+            className: 'slot',
+            relevance: 0,
+            begin: /#[a-zA-Z$][a-zA-Z0-9$]*|#+[0-9]?/
+        },
+        I = {
+            className: 'brace',
+            relevance: 0,
+            begin: /[[\](){}]/
+        },
+        T = {
             className: 'message-name',
             relevance: 0,
-            begin: n.concat('::', s)
+            begin: r.concat('::', _)
         };
     return {
         name: 'Mathematica',
@@ -6648,55 +6698,7 @@ e.exports = function (e) {
             'builtin-symbol': 'built_in',
             'message-name': 'string'
         },
-        contains: [
-            e.COMMENT(/\(\*/, /\*\)/, { contains: ['self'] }),
-            {
-                className: 'pattern',
-                relevance: 0,
-                begin: /([a-zA-Z$][a-zA-Z0-9$]*)?_+([a-zA-Z$][a-zA-Z0-9$]*)?/
-            },
-            {
-                className: 'slot',
-                relevance: 0,
-                begin: /#[a-zA-Z$][a-zA-Z0-9$]*|#+[0-9]?/
-            },
-            l,
-            {
-                variants: [
-                    {
-                        className: 'builtin-symbol',
-                        begin: s,
-                        'on:begin': (e, t) => {
-                            !o.has(e[0]) && t.ignoreMatch();
-                        }
-                    },
-                    {
-                        className: 'symbol',
-                        relevance: 0,
-                        begin: s
-                    }
-                ]
-            },
-            {
-                className: 'named-character',
-                begin: /\\\[[$a-zA-Z][$a-zA-Z0-9]+\]/
-            },
-            e.QUOTE_STRING_MODE,
-            {
-                className: 'number',
-                relevance: 0,
-                begin: a
-            },
-            {
-                className: 'operator',
-                relevance: 0,
-                begin: /[+\-*/,;.:@~=><&|_`'^?!%]+/
-            },
-            {
-                className: 'brace',
-                relevance: 0,
-                begin: /[[\](){}]/
-            }
-        ]
+        contains: [e.COMMENT(/\(\*/, /\*\)/, { contains: ['self'] }), E, v, T, p, m, e.QUOTE_STRING_MODE, f, g, I]
     };
-};
+}
+e.exports = r;

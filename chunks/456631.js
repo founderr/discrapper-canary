@@ -1,98 +1,106 @@
-let r;
-n.d(t, {
+let i;
+r.d(n, {
     H: function () {
-        return E;
+        return v;
     }
-}),
-    n(47120),
-    n(733860);
-var i,
-    a,
-    s,
-    o,
-    l = n(392711),
-    u = n(442837),
-    c = n(780384),
-    d = n(570140),
-    f = n(70956),
-    _ = n(963838),
-    p = n(354459);
-let h = [],
-    m = {},
-    g = [],
-    E = (e) => {
+});
+var a,
+    s = r(47120);
+var o = r(733860);
+var l = r(392711);
+var u = r(442837),
+    c = r(780384),
+    d = r(570140),
+    f = r(70956),
+    _ = r(963838),
+    h = r(354459);
+function p(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let m = [],
+    g = {},
+    E = [],
+    v = (e) => {
         null != e &&
             d.Z.dispatch({
                 type: 'VOICE_CHANNEL_EFFECT_CLEAR',
                 userId: e
             });
     },
-    v = [],
-    I = 10 * f.Z.Millis.SECOND,
-    T = (0, l.debounce)(() => {
-        let e = (0, _.cX)(g);
-        c.uv.announce(e, 'polite'), (g = []);
-    }, 500);
-class b extends (i = u.ZP.Store) {
+    I = [],
+    T = 20,
+    b = 10 * f.Z.Millis.SECOND,
+    y = () => {
+        let e = new Date();
+        if ((I = [e, ...I].slice(0, T)).length >= T) {
+            let n = I[I.length - 1],
+                r = e.getTime() - n.getTime();
+            r < b && (i = new Date(e.getTime() + b - r));
+        }
+    },
+    S = (e) => {
+        let { cooldownEndsAtMs: n } = e;
+        i = new Date(Date.now() + n);
+    },
+    A = (0, l.debounce)(() => {
+        let e = (0, _.cX)(E);
+        c.uv.announce(e, 'polite'), (E = []);
+    }, 500),
+    N = (e) => {
+        let { emoji: n, userId: r, animationType: i } = e;
+        null != n &&
+            null != i &&
+            ((g[r] = {
+                emoji: n,
+                sentAt: Date.now(),
+                animationType: i
+            }),
+            (E = [
+                ...E,
+                {
+                    emojiName: n.name,
+                    userId: r
+                }
+            ]),
+            A());
+    },
+    C = (e) => {
+        let { emoji: n } = e;
+        if (null != n) m.unshift(n), (m = (0, l.uniqBy)(m, 'name')).length > h.e5 + 1 && m.pop();
+    },
+    R = (e) => {
+        let { userId: n } = e;
+        null != g[n] && delete g[n];
+    };
+class O extends (a = u.ZP.Store) {
     get recentlyUsedEmojis() {
-        return h;
+        return m;
     }
     get isOnCooldown() {
-        return null != r && new Date() < r;
+        return null != i && new Date() < i;
     }
     get effectCooldownEndTime() {
-        return r;
+        return i;
     }
     getEffectForUserId(e) {
-        return m[e];
+        return g[e];
     }
 }
-(o = 'VoiceChannelEffectsStore'),
-    (s = 'displayName') in (a = b)
-        ? Object.defineProperty(a, s, {
-              value: o,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (a[s] = o),
-    (t.Z = new b(d.Z, {
-        VOICE_CHANNEL_EFFECT_CLEAR: (e) => {
-            let { userId: t } = e;
-            null != m[t] && delete m[t];
-        },
-        VOICE_CHANNEL_EFFECT_RECENT_EMOJI: (e) => {
-            let { emoji: t } = e;
-            if (null != t) h.unshift(t), (h = (0, l.uniqBy)(h, 'name')).length > p.e5 + 1 && h.pop();
-        },
-        VOICE_CHANNEL_EFFECT_SEND: (e) => {
-            let { emoji: t, userId: n, animationType: r } = e;
-            null != t &&
-                null != r &&
-                ((m[n] = {
-                    emoji: t,
-                    sentAt: Date.now(),
-                    animationType: r
-                }),
-                (g = [
-                    ...g,
-                    {
-                        emojiName: t.name,
-                        userId: n
-                    }
-                ]),
-                T());
-        },
-        VOICE_CHANNEL_EFFECT_SENT_LOCAL: () => {
-            let e = new Date();
-            if ((v = [e, ...v].slice(0, 20)).length >= 20) {
-                let t = v[v.length - 1],
-                    n = e.getTime() - t.getTime();
-                n < I && (r = new Date(e.getTime() + I - n));
-            }
-        },
-        VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: (e) => {
-            let { cooldownEndsAtMs: t } = e;
-            r = new Date(Date.now() + t);
-        }
+p(O, 'displayName', 'VoiceChannelEffectsStore'),
+    (n.Z = new O(d.Z, {
+        VOICE_CHANNEL_EFFECT_CLEAR: R,
+        VOICE_CHANNEL_EFFECT_RECENT_EMOJI: C,
+        VOICE_CHANNEL_EFFECT_SEND: N,
+        VOICE_CHANNEL_EFFECT_SENT_LOCAL: y,
+        VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: S
     }));

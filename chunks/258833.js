@@ -1,36 +1,37 @@
-n(47120);
-var r = n(147913),
-    i = n(474873),
-    a = n(523746),
-    s = n(292959),
-    o = n(246946),
-    l = n(979651),
-    u = n(938475),
-    c = n(557177);
-let d = (0, c.uk)('call_calling', i.Z.getSoundpack());
-class f extends r.Z {
+var i = r(47120);
+var a = r(147913),
+    s = r(474873),
+    o = r(523746),
+    l = r(292959),
+    u = r(246946),
+    c = r(979651),
+    d = r(938475),
+    f = r(557177);
+function _(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let h = (0, f.uk)('call_calling', s.Z.getSoundpack());
+class p extends a.Z {
     handleSoundpackUpdate() {
-        d.stop(), (d = (0, c.uk)('call_calling', i.Z.getSoundpack()));
+        h.stop(), (h = (0, f.uk)('call_calling', s.Z.getSoundpack()));
     }
     handleRingUpdate() {
-        let e = a.Z.getCalls().filter((e) => e.ringing.length > 0 && l.Z.getCurrentClientVoiceChannelId(null) === e.channelId),
-            t = l.Z.getCurrentClientVoiceChannelId(null);
-        (null != t && u.ZP.countVoiceStatesForChannel(t) >= 2) || !(e.length > 0) || s.Z.isSoundDisabled('call_calling') || o.Z.disableSounds ? d.stop() : d.loop();
+        let e = o.Z.getCalls().filter((e) => e.ringing.length > 0 && c.Z.getCurrentClientVoiceChannelId(null) === e.channelId),
+            n = c.Z.getCurrentClientVoiceChannelId(null);
+        (null != n && d.ZP.countVoiceStatesForChannel(n) >= 2) || !(e.length > 0) || l.Z.isSoundDisabled('call_calling') || u.Z.disableSounds ? h.stop() : h.loop();
     }
     constructor(...e) {
-        var t, n, r;
-        super(...e),
-            (t = this),
-            (n = 'stores'),
-            (r = new Map().set(a.Z, this.handleRingUpdate).set(s.Z, this.handleRingUpdate).set(o.Z, this.handleRingUpdate).set(l.Z, this.handleRingUpdate).set(i.Z, this.handleSoundpackUpdate)),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+        super(...e), _(this, 'stores', new Map().set(o.Z, this.handleRingUpdate).set(l.Z, this.handleRingUpdate).set(u.Z, this.handleRingUpdate).set(c.Z, this.handleRingUpdate).set(s.Z, this.handleSoundpackUpdate));
     }
 }
-t.Z = new f();
+n.Z = new p();

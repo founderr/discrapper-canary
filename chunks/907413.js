@@ -1,16 +1,18 @@
-e.exports = function (e) {
-    let t = {
-        match: [/(message|enum|service)\s+/, e.IDENT_RE],
-        scope: {
-            1: 'keyword',
-            2: 'title.class'
-        }
-    };
+function n(e) {
+    let n = ['package', 'import', 'option', 'optional', 'required', 'repeated', 'group', 'oneof'],
+        r = ['double', 'float', 'int32', 'int64', 'uint32', 'uint64', 'sint32', 'sint64', 'fixed32', 'fixed64', 'sfixed32', 'sfixed64', 'bool', 'string', 'bytes'],
+        i = {
+            match: [/(message|enum|service)\s+/, e.IDENT_RE],
+            scope: {
+                1: 'keyword',
+                2: 'title.class'
+            }
+        };
     return {
         name: 'Protocol Buffers',
         keywords: {
-            keyword: ['package', 'import', 'option', 'optional', 'required', 'repeated', 'group', 'oneof'],
-            type: ['double', 'float', 'int32', 'int64', 'uint32', 'uint64', 'sint32', 'sint64', 'fixed32', 'fixed64', 'sfixed32', 'sfixed64', 'bool', 'string', 'bytes'],
+            keyword: n,
+            type: r,
             literal: ['true', 'false']
         },
         contains: [
@@ -18,7 +20,7 @@ e.exports = function (e) {
             e.NUMBER_MODE,
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            t,
+            i,
             {
                 className: 'function',
                 beginKeywords: 'rpc',
@@ -29,4 +31,5 @@ e.exports = function (e) {
             { begin: /^\s*[A-Z_]+(?=\s*=[^\n]+;$)/ }
         ]
     };
-};
+}
+e.exports = n;

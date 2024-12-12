@@ -1,77 +1,84 @@
-var r = n(200651),
-    i = n(192379),
-    a = n(392711),
-    s = n.n(a),
-    o = n(252759),
-    l = n(442837),
-    u = n(481060),
-    c = n(317381),
-    d = n(966302),
-    f = n(474873),
-    _ = n(292959),
-    p = n(944486),
-    h = n(246946),
-    m = n(340895),
-    g = n(557177),
-    E = n(918559),
-    v = n(871465);
-let I = {
+var i = r(200651),
+    a = r(192379),
+    s = r(392711),
+    o = r.n(s),
+    l = r(252759),
+    u = r(442837),
+    c = r(481060),
+    d = r(317381),
+    f = r(966302),
+    _ = r(474873),
+    h = r(292959),
+    p = r(944486),
+    m = r(246946),
+    g = r(340895),
+    E = r(557177),
+    v = r(918559),
+    I = r(871465);
+let T = {
         transform: 'scale(0.7)',
         opacity: 0
     },
-    T = {
+    b = {
         transform: 'scale(1)',
         opacity: 1
     };
-t.Z = i.memo(function () {
-    let e = (0, l.Wu)([m.Z, p.Z, c.ZP], () =>
-            m.Z.getIncomingCalls().filter((e) => {
-                let { channel: t } = e,
-                    n = c.ZP.getConnectedActivityChannelId() === t.id && p.Z.getVoiceChannelId() !== t.id && c.ZP.getActivityPanelMode() === E.Ez.PANEL;
-                return p.Z.getChannelId() !== t.id || n;
+function y() {
+    return 500 !== o().random(1, 1000) ? 'call_ringing' : o().sample(['call_ringing_beat', 'call_ringing_snow_halation']);
+}
+function S() {
+    let e = (0, u.Wu)([g.Z, p.Z, d.ZP], () =>
+            g.Z.getIncomingCalls().filter((e) => {
+                let { channel: n } = e,
+                    r = d.ZP.getConnectedActivityChannelId() === n.id && p.Z.getVoiceChannelId() !== n.id && d.ZP.getActivityPanelMode() === v.Ez.PANEL;
+                return p.Z.getChannelId() !== n.id || r;
             })
         ),
-        t = (0, l.e7)([m.Z], () => m.Z.hasIncomingCalls()),
-        n = (0, l.e7)([_.Z], () => _.Z.isSoundDisabled('call_ringing')),
-        a = (0, l.e7)([h.Z], () => h.Z.disableSounds),
-        b = (0, l.e7)([f.Z], () => f.Z.getSoundpack()),
-        S = i.useRef(!1),
-        y = (0, o.Z)(() => (b === v.YC.CLASSIC ? (0, g.tu)(500 !== s().random(1, 1000) ? 'call_ringing' : s().sample(['call_ringing_beat', 'call_ringing_snow_halation']), 'call_ringing') : (0, g.uk)('call_ringing', b)), [b]);
+        n = (0, u.e7)([g.Z], () => g.Z.hasIncomingCalls()),
+        r = (0, u.e7)([h.Z], () => h.Z.isSoundDisabled('call_ringing')),
+        s = (0, u.e7)([m.Z], () => m.Z.disableSounds),
+        o = (0, u.e7)([_.Z], () => _.Z.getSoundpack()),
+        S = a.useRef(!1),
+        A = (0, l.Z)(() => {
+            let e = 'call_ringing';
+            return o === I.YC.CLASSIC ? (0, E.tu)(y(), e) : (0, E.uk)('call_ringing', o);
+        }, [o]);
     return (
-        i.useEffect(
+        a.useEffect(
             () => () => {
-                y.stop();
+                A.stop();
             },
-            [y]
+            [A]
         ),
-        i.useEffect(() => {
-            if (a || n) {
-                S.current && (y.stop(), (S.current = !1));
+        a.useEffect(() => {
+            if (s || r) {
+                S.current && (A.stop(), (S.current = !1));
                 return;
             }
-            t && !S.current ? (y.loop(), (S.current = !0)) : !t && S.current && (y.stop(), (S.current = !1));
-        }, [n, a, t, y]),
-        (0, u.useTransition)(e, {
+            n && !S.current ? (A.loop(), (S.current = !0)) : !n && S.current && (A.stop(), (S.current = !1));
+        }, [r, s, n, A]),
+        (0, c.useTransition)(e, {
             keys: (e) => {
-                var t;
-                return null === (t = e.channel) || void 0 === t ? void 0 : t.id;
+                var n;
+                return null === (n = e.channel) || void 0 === n ? void 0 : n.id;
             },
             enter: {
-                from: I,
-                to: T
+                from: T,
+                to: b
             },
-            leave: I,
+            leave: T,
             config: {
                 mass: 1,
                 tension: 500,
                 friction: 18,
                 clamp: !0
             }
-        })((e, t) =>
-            (0, r.jsx)(d.Z, {
-                ...t,
+        })((e, n) =>
+            (0, i.jsx)(f.Z, {
+                ...n,
                 animatedStyle: e
             })
         )
     );
-});
+}
+n.Z = a.memo(S);

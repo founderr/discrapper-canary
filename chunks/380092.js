@@ -1,6 +1,7 @@
-var r = n(559969);
-e.exports = function (e, t) {
-    var n = this.__data__,
-        i = r(n, e);
-    return i < 0 ? (++this.size, n.push([e, t])) : (n[i][1] = t), this;
-};
+var i = r(559969);
+function a(e, n) {
+    var r = this.__data__,
+        a = i(r, e);
+    return a < 0 ? (++this.size, r.push([e, n])) : (r[a][1] = n), this;
+}
+e.exports = a;

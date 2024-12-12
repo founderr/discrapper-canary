@@ -1,71 +1,73 @@
-n.d(t, {
+r.d(n, {
     $U: function () {
-        return l;
-    },
-    KP: function () {
         return d;
     },
+    KP: function () {
+        return h;
+    },
     Tn: function () {
-        return o;
+        return c;
     },
     dt: function () {
-        return f;
+        return p;
     },
     xx: function () {
-        return u;
+        return f;
     }
 });
-var r = n(392711),
-    i = n.n(r),
-    a = n(544891),
-    s = n(981631);
-async function o() {
+var i = r(392711),
+    a = r.n(i),
+    s = r(544891),
+    o = r(981631);
+let l = 5,
+    u = 1000000;
+async function c() {
     return (
-        await a.tn.get({
-            url: s.ANM.NOTIFICATION_SNAPSHOTS,
+        await s.tn.get({
+            url: o.ANM.NOTIFICATION_SNAPSHOTS,
             rejectWithError: !1
         })
     ).body;
 }
-async function l(e) {
+async function d(e) {
     return (
-        await a.tn.post({
-            url: s.ANM.NOTIFICATION_SNAPSHOTS,
+        await s.tn.post({
+            url: o.ANM.NOTIFICATION_SNAPSHOTS,
             body: { label: e },
             rejectWithError: !1
         })
     ).body;
 }
-async function u(e) {
-    return (
-        await a.tn.post({
-            url: s.ANM.RESTORE_NOTIFICATION_SNAPSHOT(e),
-            rejectWithError: !1
-        })
-    ).body;
-}
-async function c(e) {
-    return (
-        await a.tn.del({
-            url: s.ANM.NOTIFICATION_SNAPSHOT(e),
-            rejectWithError: !1
-        })
-    ).body;
-}
-async function d() {
-    let e = await o(),
-        t = i().sortBy(e, (e) => new Date(e.recorded_at).getTime());
-    0 !== t.length && (await u(t[t.length - 1].id));
-}
 async function f(e) {
+    return (
+        await s.tn.post({
+            url: o.ANM.RESTORE_NOTIFICATION_SNAPSHOT(e),
+            rejectWithError: !1
+        })
+    ).body;
+}
+async function _(e) {
+    return (
+        await s.tn.del({
+            url: o.ANM.NOTIFICATION_SNAPSHOT(e),
+            rejectWithError: !1
+        })
+    ).body;
+}
+async function h() {
+    let e = await c(),
+        n = a().sortBy(e, (e) => new Date(e.recorded_at).getTime());
+    0 !== n.length && (await f(n[n.length - 1].id));
+}
+async function p(e) {
     if (e.length > 0) {
-        var t;
-        let n = i().sum(e.map((e) => e.length)),
-            r = null !== (t = i().max(e.map((e) => e.length))) && void 0 !== t ? t : 0;
-        if (e.length >= 5 || n + r > 1000000) {
-            let t = i().sortBy(e, (e) => new Date(e.recorded_at).getTime());
-            await c(t[0].id);
+        var n;
+        let r = a().sum(e.map((e) => e.length)),
+            i = null !== (n = a().max(e.map((e) => e.length))) && void 0 !== n ? n : 0;
+        if (e.length >= l || r + i > u) {
+            let n = a().sortBy(e, (e) => new Date(e.recorded_at).getTime());
+            await _(n[0].id);
         }
     }
-    return l('Backup from '.concat(new Date().toLocaleDateString()));
+    return d('Backup from '.concat(new Date().toLocaleDateString()));
 }

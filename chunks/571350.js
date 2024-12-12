@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function n(e) {
     return {
         name: 'MIPS Assembly',
         case_insensitive: !0,
@@ -43,4 +43,5 @@ e.exports = function (e) {
         ],
         illegal: /\//
     };
-};
+}
+e.exports = n;

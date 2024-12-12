@@ -1,70 +1,71 @@
-n(47120);
-var r = n(147913),
-    i = n(282397),
-    a = n(626135),
-    s = n(131595),
-    o = n(475774),
-    l = n(981631);
-function u(e, t, n) {
+var i = r(47120);
+var a = r(147913),
+    s = r(282397),
+    o = r(626135),
+    l = r(131595),
+    u = r(475774),
+    c = r(981631);
+function d(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let c = 'interaction_iframe_modal';
-async function d(e) {
-    let { openInteractionModal: t } = await Promise.all([n.e('73503'), n.e('72181'), n.e('74891'), n.e('46097'), n.e('8739'), n.e('82147'), n.e('8041')]).then(n.bind(n, 440934));
-    t(e),
-        a.default.track(l.rMx.OPEN_MODAL, {
+let f = 'interaction_iframe_modal';
+async function _(e) {
+    let { openInteractionModal: n } = await Promise.all([r.e('73503'), r.e('72181'), r.e('74891'), r.e('46097'), r.e('8739'), r.e('82147'), r.e('8041')]).then(r.bind(r, 440934));
+    n(e),
+        o.default.track(c.rMx.OPEN_MODAL, {
             type: 'interaction_modal',
             application_id: e.application.id
         });
 }
-class f extends r.Z {
+function h(e) {
+    (0, u.Z)(e),
+        o.default.track(c.rMx.OPEN_MODAL, {
+            type: f,
+            application_id: e.application.id
+        });
+}
+function p(e) {
+    let { application: n } = e,
+        r = s.ZP.getIFrameModalApplicationId(),
+        i = s.ZP.getIFrameModalKey();
+    n.id === r && null != r && (0, l.Z)(r, i);
+}
+function m(e, n) {
+    let r = null != n ? Date.now() - n : void 0;
+    o.default.track(c.rMx.MODAL_DISMISSED, {
+        type: f,
+        application_id: e.applicationId,
+        duration_open_ms: r
+    });
+}
+class g extends a.Z {
     constructor(...e) {
         super(...e),
-            u(this, 'iframeModalOpenTimeMs', void 0),
-            u(this, 'actions', {
+            d(this, 'iframeModalOpenTimeMs', void 0),
+            d(this, 'actions', {
                 INTERACTION_MODAL_CREATE: (e) => {
-                    d(e);
+                    _(e);
                 },
                 INTERACTION_IFRAME_MODAL_CREATE: (e) => {
-                    var t;
-                    (this.iframeModalOpenTimeMs = Date.now()),
-                        (t = e),
-                        (0, o.Z)(t),
-                        a.default.track(l.rMx.OPEN_MODAL, {
-                            type: c,
-                            application_id: t.application.id
-                        });
+                    (this.iframeModalOpenTimeMs = Date.now()), h(e);
                 },
                 INTERACTION_IFRAME_MODAL_CLOSE: (e) => {
-                    !(function (e, t) {
-                        let n = null != t ? Date.now() - t : void 0;
-                        a.default.track(l.rMx.MODAL_DISMISSED, {
-                            type: c,
-                            application_id: e.applicationId,
-                            duration_open_ms: n
-                        });
-                    })(e, this.iframeModalOpenTimeMs),
-                        (this.iframeModalOpenTimeMs = void 0);
+                    m(e, this.iframeModalOpenTimeMs), (this.iframeModalOpenTimeMs = void 0);
                 },
                 RPC_APP_DISCONNECTED: (e) => {
-                    !(function (e) {
-                        let { application: t } = e,
-                            n = i.ZP.getIFrameModalApplicationId(),
-                            r = i.ZP.getIFrameModalKey();
-                        t.id === n && null != n && (0, s.Z)(n, r);
-                    })(e);
+                    p(e);
                 }
             });
     }
 }
-t.Z = new f();
+n.Z = new g();

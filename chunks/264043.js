@@ -1,46 +1,89 @@
-n.d(t, {
+r.d(n, {
     M: function () {
-        return r;
+        return i;
     }
-}),
-    n(47120);
-var r,
-    i,
+});
+var i,
     a,
-    s,
-    o,
-    l,
-    u = n(442837),
-    c = n(570140),
-    d = n(973616);
-((a = r || (r = {}))[(a.FETCHING = 0)] = 'FETCHING'), (a[(a.FETCHED = 1)] = 'FETCHED'), (a[(a.ERROR = 2)] = 'ERROR');
-let f = {},
-    _ = {},
-    p = new Set(),
+    s = r(47120);
+var o = r(442837),
+    l = r(570140),
+    u = r(973616);
+function c(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+!(function (e) {
+    (e[(e.FETCHING = 0)] = 'FETCHING'), (e[(e.FETCHED = 1)] = 'FETCHED'), (e[(e.ERROR = 2)] = 'ERROR');
+})(i || (i = {}));
+let d = {},
+    f = {},
+    _ = new Set(),
     h = {};
-class m extends (i = u.ZP.Store) {
+function p(e) {
+    let { applicationId: n } = e;
+    f = {
+        ...f,
+        [n]: 0
+    };
+}
+function m(e) {
+    let { application: n } = e;
+    (d = {
+        ...d,
+        [n.id]: n
+    }),
+        (f = {
+            ...f,
+            [n.id]: 1
+        });
+    let r = Date.now();
+    (h = {
+        ...h,
+        [n.id]: r
+    }),
+        _.has(n.id) && (_.delete(n.id), (_ = new Set(_)));
+}
+function g(e) {
+    let { applicationId: n, isInvalidApplication: r } = e;
+    (f = {
+        ...f,
+        [n]: 2
+    }),
+        r && (_.add(n), (_ = new Set(_)));
+}
+class E extends (a = o.ZP.Store) {
     getApplication(e) {
-        if (null != e) return f[e];
+        if (null != e) return d[e];
     }
     getApplicationRecord(e) {
         if (null == e) return;
-        let t = f[e];
-        if (null != t) return d.ZP.createFromServer(t);
+        let n = d[e];
+        if (null != n) return u.ZP.createFromServer(n);
     }
     getApplications() {
-        return f;
+        return d;
     }
     getApplicationFetchState(e) {
-        if (null != e) return _[e];
+        if (null != e) return f[e];
     }
     getApplicationFetchStates() {
-        return _;
+        return f;
     }
     isInvalidApplication(e) {
-        return null != e && p.has(e);
+        return null != e && _.has(e);
     }
     getInvalidApplicationIds() {
-        return p;
+        return _;
     }
     isFetching(e) {
         return 0 === this.getApplicationFetchState(e);
@@ -49,46 +92,9 @@ class m extends (i = u.ZP.Store) {
         if (null != e) return h[e];
     }
 }
-(l = 'ApplicationDirectoryApplicationsStore'),
-    (o = 'displayName') in (s = m)
-        ? Object.defineProperty(s, o, {
-              value: l,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (s[o] = l),
-    (t.Z = new m(c.Z, {
-        APPLICATION_DIRECTORY_FETCH_APPLICATION: function (e) {
-            let { applicationId: t } = e;
-            _ = {
-                ..._,
-                [t]: 0
-            };
-        },
-        APPLICATION_DIRECTORY_FETCH_APPLICATION_SUCCESS: function (e) {
-            let { application: t } = e;
-            (f = {
-                ...f,
-                [t.id]: t
-            }),
-                (_ = {
-                    ..._,
-                    [t.id]: 1
-                });
-            let n = Date.now();
-            (h = {
-                ...h,
-                [t.id]: n
-            }),
-                p.has(t.id) && (p.delete(t.id), (p = new Set(p)));
-        },
-        APPLICATION_DIRECTORY_FETCH_APPLICATION_FAILURE: function (e) {
-            let { applicationId: t, isInvalidApplication: n } = e;
-            (_ = {
-                ..._,
-                [t]: 2
-            }),
-                n && (p.add(t), (p = new Set(p)));
-        }
+c(E, 'displayName', 'ApplicationDirectoryApplicationsStore'),
+    (n.Z = new E(l.Z, {
+        APPLICATION_DIRECTORY_FETCH_APPLICATION: p,
+        APPLICATION_DIRECTORY_FETCH_APPLICATION_SUCCESS: m,
+        APPLICATION_DIRECTORY_FETCH_APPLICATION_FAILURE: g
     }));

@@ -1,62 +1,64 @@
-n(47120);
-var r = n(668781),
-    i = n(998502),
-    a = n(58406),
-    s = n(761274);
-function o(e, t, n) {
+var i = r(47120);
+var a = r(668781),
+    s = r(998502),
+    o = r(58406),
+    l = r(761274);
+function u(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-class l extends a.g {
-    requestPermissionCore(e, t) {
-        var n;
-        return this.asyncify(null === (n = this.nativeUtils) || void 0 === n ? void 0 : n.nativePermssionRequestAuthorization, e, t);
+class c extends o.g {
+    requestPermissionCore(e, n) {
+        var r;
+        return this.asyncify(null === (r = this.nativeUtils) || void 0 === r ? void 0 : r.nativePermssionRequestAuthorization, e, n);
     }
-    hasPermissionCore(e, t) {
-        var n;
-        return this.asyncify(null === (n = this.nativeUtils) || void 0 === n ? void 0 : n.nativePermssionHasAuthorization, e, t);
+    hasPermissionCore(e, n) {
+        var r;
+        return this.asyncify(null === (r = this.nativeUtils) || void 0 === r ? void 0 : r.nativePermssionHasAuthorization, e, n);
     }
-    asyncify(e, t, n) {
-        let r = l.requestTypeLookup[t];
-        return void 0 === r ? Promise.resolve(!0) : this.requestAuthorization(t, () => (null == e ? Promise.resolve(s.NZ.AUTHORIZED) : new Promise((t, n) => e(t, r))), n);
+    asyncify(e, n, r) {
+        let i = c.requestTypeLookup[n];
+        if (void 0 === i) return Promise.resolve(!0);
+        let a = () => (null == e ? Promise.resolve(l.NZ.AUTHORIZED) : new Promise((n, r) => e(n, i)));
+        return this.requestAuthorization(n, a, r);
     }
     openSettings(e) {
-        var t;
-        if ((null === (t = this.nativeUtils) || void 0 === t ? void 0 : t.nativePermissionOpenSettings) == null) return;
-        let n = l.requestTypeLookup[e];
-        void 0 !== n && this.nativeUtils.nativePermissionOpenSettings(n);
+        var n;
+        if ((null === (n = this.nativeUtils) || void 0 === n ? void 0 : n.nativePermissionOpenSettings) == null) return;
+        let r = c.requestTypeLookup[e];
+        void 0 !== r && this.nativeUtils.nativePermissionOpenSettings(r);
     }
     didHavePermission(e) {
         return this.storage.hasPermission(e);
     }
     openAlertModal(e) {
-        let { title: t, body: n, onConfirm: i, cancelText: a, confirmText: s } = e;
-        r.Z.show({
-            title: t,
-            body: n,
+        let { title: n, body: r, onConfirm: i, cancelText: s, confirmText: o } = e;
+        a.Z.show({
+            title: n,
+            body: r,
             onConfirm: i,
-            cancelText: a,
-            confirmText: s
+            cancelText: s,
+            confirmText: o
         });
     }
     constructor(...e) {
-        super(...e), o(this, 'nativeUtils', i.ZP.getDiscordUtils());
+        super(...e), u(this, 'nativeUtils', s.ZP.getDiscordUtils());
     }
 }
-o(l, 'requestTypeLookup', {
-    [s.Eu.CAMERA]: i.jK.Camera,
-    [s.Eu.AUDIO]: i.jK.Microphone,
-    [s.Eu.PHOTOS]: i.jK.Photo,
-    [s.Eu.INPUT_MONITORING]: i.jK.InputMonitoring,
-    [s.Eu.SCREEN_RECORDING]: i.jK.ScreenRecording
+u(c, 'requestTypeLookup', {
+    [l.Eu.CAMERA]: s.jK.Camera,
+    [l.Eu.AUDIO]: s.jK.Microphone,
+    [l.Eu.PHOTOS]: s.jK.Photo,
+    [l.Eu.INPUT_MONITORING]: s.jK.InputMonitoring,
+    [l.Eu.SCREEN_RECORDING]: s.jK.ScreenRecording
 }),
-    (t.Z = new l());
+    (n.Z = new c());

@@ -1,28 +1,29 @@
-n.d(t, {
+r.d(n, {
     VK: function () {
-        return s;
+        return u;
     },
     qu: function () {
-        return o;
+        return d;
     }
-}),
-    n(47120);
-var r = n(44315),
-    i = n(469115),
-    a = n(231338);
-function s(e) {
-    let { angle: t, colors: n } = e;
-    return 'linear-gradient('.concat(t, 'deg, ').concat(
-        n
+});
+var i = r(47120);
+var a = r(44315),
+    s = r(469115),
+    o = r(231338);
+let l = 0.3;
+function u(e) {
+    let { angle: n, colors: r } = e;
+    return 'linear-gradient('.concat(n, 'deg, ').concat(
+        r
             .map((e) => {
-                let { token: t, stop: n } = e;
-                return ''.concat((0, r.Lq)(t), ' ').concat(n, '%');
+                let { token: n, stop: r } = e;
+                return ''.concat((0, a.Lq)(n), ' ').concat(r, '%');
             })
             .join(', '),
         ')'
     );
 }
-function o(e, t) {
-    return e === t || (e === a.BR.DARK && t === a.BR.DARKER) || (e === a.BR.DARKER && t === a.BR.DARK) || !1;
+let c = [...s.bV, ...s.Qf];
+function d(e, n) {
+    return e === n || (e === o.BR.DARK && n === o.BR.DARKER) || (e === o.BR.DARKER && n === o.BR.DARK) || !1;
 }
-[...i.bV, ...i.Qf];

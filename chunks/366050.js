@@ -1,173 +1,182 @@
-let r, i;
-n(47120);
-var a,
-    s = n(442837),
-    o = n(570140),
-    l = n(981631),
-    u = n(354459);
-function c(e, t, n) {
+let i, a;
+var s,
+    o = r(47120);
+var l = r(442837),
+    u = r(570140),
+    c = r(981631),
+    d = r(354459);
+function f(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let d = new Map(),
-    f = {},
-    _ = l.VD2.BOTTOM_RIGHT,
-    p = {
-        [u.cL.VIDEO]: u.l8[u.cL.VIDEO],
-        [u.cL.CAMERA_PREVIEW]: u.l8[u.cL.CAMERA_PREVIEW]
+let _ = new Map(),
+    h = {},
+    p = c.VD2.BOTTOM_RIGHT,
+    m = {
+        [d.cL.VIDEO]: d.l8[d.cL.VIDEO],
+        [d.cL.CAMERA_PREVIEW]: d.l8[d.cL.CAMERA_PREVIEW]
     };
-class h extends (a = s.ZP.PersistedStore) {
+function g(e) {
+    var n, r;
+    let { id: s, component: o, props: l } = e;
+    if (null != _.get(s)) return;
+    let u = {
+        id: s,
+        component: o,
+        position: null !== (n = l.position) && void 0 !== n ? n : p,
+        props: l,
+        docked: null !== (r = l.docked) && void 0 !== r && r
+    };
+    _.set(s, u), o === c.NYg.VIDEO ? null == i && (i = s) : o === c.NYg.EMBED_IFRAME && null == a && (a = s);
+}
+function E(e) {
+    let { id: n } = e;
+    if (!_.has(n)) return !1;
+    {
+        _.delete(n);
+        let e = Array.from(_.keys());
+        i === n
+            ? (i = e.find((e) => {
+                  let n = _.get(e);
+                  return null != n && n.component === c.NYg.VIDEO;
+              }))
+            : a === n &&
+              (a = e.find((e) => {
+                  let n = _.get(e);
+                  return null != n && n.component === c.NYg.EMBED_IFRAME;
+              }));
+    }
+}
+function v(e) {
+    let { id: n, position: r } = e;
+    if (null == n || (i !== n && a !== n)) return !1;
+    {
+        let e = new Map();
+        _.forEach((n, i) => {
+            e.set(i, {
+                ...n,
+                position: r
+            });
+        }),
+            (_ = e),
+            (p = r);
+    }
+}
+function I(e) {
+    let { width: n, pipType: r } = e;
+    m[r] = n;
+}
+function T(e) {
+    let { id: n, rect: r } = e;
+    h[n] = r;
+}
+function b(e) {
+    let { id: n } = e;
+    if (i !== n && a !== n) return !1;
+    {
+        let e = _.get(n);
+        if (null == e) return !1;
+        _.set(n, {
+            ...e,
+            hidden: !0
+        });
+    }
+}
+function y(e) {
+    let { id: n } = e;
+    if (i !== n && a !== n) return !1;
+    {
+        let e = _.get(n);
+        if (null == e) return !1;
+        _.set(n, {
+            ...e,
+            hidden: !1
+        });
+    }
+}
+function S(e) {
+    let { id: n } = e,
+        r = _.get(n);
+    null != r && (r.component === c.NYg.VIDEO ? (i = n) : r.component === c.NYg.EMBED_IFRAME && (a = n));
+}
+function A() {
+    (i = null), (a = null), (_ = new Map());
+}
+class N extends (s = l.ZP.PersistedStore) {
     initialize(e) {
         if (null == e) {
-            (_ = l.VD2.BOTTOM_RIGHT),
-                (p = {
-                    [u.cL.VIDEO]: u.l8[u.cL.VIDEO],
-                    [u.cL.CAMERA_PREVIEW]: u.l8[u.cL.CAMERA_PREVIEW]
+            (p = c.VD2.BOTTOM_RIGHT),
+                (m = {
+                    [d.cL.VIDEO]: d.l8[d.cL.VIDEO],
+                    [d.cL.CAMERA_PREVIEW]: d.l8[d.cL.CAMERA_PREVIEW]
                 });
             return;
         }
-        (_ = e.openPosition), (p = e.pipWidths);
+        (p = e.openPosition), (m = e.pipWidths);
     }
     get pipWindow() {
         var e;
-        return null == r && null == i ? null : d.get(null !== (e = null != r ? r : i) && void 0 !== e ? e : '');
+        return null == i && null == a ? null : _.get(null !== (e = null != i ? i : a) && void 0 !== e ? e : '');
     }
     get pipVideoWindow() {
-        return null == r ? null : d.get(r);
+        return null == i ? null : _.get(i);
     }
     get pipActivityWindow() {
-        return null == i ? null : d.get(i);
+        return null == a ? null : _.get(a);
     }
     get pipWindows() {
-        return d;
+        return _;
     }
     pipWidth(e) {
-        return p[e];
+        return m[e];
     }
     isEmbeddedActivityHidden() {
-        return null == i;
+        return null == a;
     }
     getDockedRect(e) {
-        return f[e];
+        return h[e];
     }
     isOpen(e) {
-        return null != e && d.has(e);
+        return null != e && _.has(e);
     }
     getState() {
         return {
-            openPosition: _,
-            pipWidths: p
+            openPosition: p,
+            pipWidths: m
         };
     }
 }
-c(h, 'displayName', 'PictureInPictureStore'),
-    c(h, 'persistKey', 'PictureInPictureStore'),
-    c(h, 'migrations', [
+f(N, 'displayName', 'PictureInPictureStore'),
+    f(N, 'persistKey', 'PictureInPictureStore'),
+    f(N, 'migrations', [
         (e) => {
-            var t, n;
+            var n, r;
             return {
                 pipWidths: {
-                    [u.cL.VIDEO]: null !== (t = e.pipWidth) && void 0 !== t ? t : u.l8[u.cL.VIDEO],
-                    [u.cL.CAMERA_PREVIEW]: u.l8[u.cL.CAMERA_PREVIEW]
+                    [d.cL.VIDEO]: null !== (n = e.pipWidth) && void 0 !== n ? n : d.l8[d.cL.VIDEO],
+                    [d.cL.CAMERA_PREVIEW]: d.l8[d.cL.CAMERA_PREVIEW]
                 },
-                openPosition: null !== (n = e.openPosition) && void 0 !== n ? n : l.VD2.BOTTOM_RIGHT
+                openPosition: null !== (r = e.openPosition) && void 0 !== r ? r : c.VD2.BOTTOM_RIGHT
             };
         }
     ]),
-    (t.Z = new h(o.Z, {
-        PICTURE_IN_PICTURE_OPEN: function (e) {
-            var t, n;
-            let { id: a, component: s, props: o } = e;
-            if (null != d.get(a)) return;
-            let u = {
-                id: a,
-                component: s,
-                position: null !== (t = o.position) && void 0 !== t ? t : _,
-                props: o,
-                docked: null !== (n = o.docked) && void 0 !== n && n
-            };
-            d.set(a, u), s === l.NYg.VIDEO ? null == r && (r = a) : s === l.NYg.EMBED_IFRAME && null == i && (i = a);
-        },
-        PICTURE_IN_PICTURE_CLOSE: function (e) {
-            let { id: t } = e;
-            if (!d.has(t)) return !1;
-            {
-                d.delete(t);
-                let e = Array.from(d.keys());
-                r === t
-                    ? (r = e.find((e) => {
-                          let t = d.get(e);
-                          return null != t && t.component === l.NYg.VIDEO;
-                      }))
-                    : i === t &&
-                      (i = e.find((e) => {
-                          let t = d.get(e);
-                          return null != t && t.component === l.NYg.EMBED_IFRAME;
-                      }));
-            }
-        },
-        PICTURE_IN_PICTURE_MOVE: function (e) {
-            let { id: t, position: n } = e;
-            if (null == t || (r !== t && i !== t)) return !1;
-            {
-                let e = new Map();
-                d.forEach((t, r) => {
-                    e.set(r, {
-                        ...t,
-                        position: n
-                    });
-                }),
-                    (d = e),
-                    (_ = n);
-            }
-        },
-        PICTURE_IN_PICTURE_RESIZE: function (e) {
-            let { width: t, pipType: n } = e;
-            p[n] = t;
-        },
-        PICTURE_IN_PICTURE_HIDE: function (e) {
-            let { id: t } = e;
-            if (r !== t && i !== t) return !1;
-            {
-                let e = d.get(t);
-                if (null == e) return !1;
-                d.set(t, {
-                    ...e,
-                    hidden: !0
-                });
-            }
-        },
-        PICTURE_IN_PICTURE_SHOW: function (e) {
-            let { id: t } = e;
-            if (r !== t && i !== t) return !1;
-            {
-                let e = d.get(t);
-                if (null == e) return !1;
-                d.set(t, {
-                    ...e,
-                    hidden: !1
-                });
-            }
-        },
-        PICTURE_IN_PICTURE_UPDATE_RECT: function (e) {
-            let { id: t, rect: n } = e;
-            f[t] = n;
-        },
-        PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW: function (e) {
-            let { id: t } = e,
-                n = d.get(t);
-            null != n && (n.component === l.NYg.VIDEO ? (r = t) : n.component === l.NYg.EMBED_IFRAME && (i = t));
-        },
-        LOGOUT: function () {
-            (r = null), (i = null), (d = new Map());
-        }
+    (n.Z = new N(u.Z, {
+        PICTURE_IN_PICTURE_OPEN: g,
+        PICTURE_IN_PICTURE_CLOSE: E,
+        PICTURE_IN_PICTURE_MOVE: v,
+        PICTURE_IN_PICTURE_RESIZE: I,
+        PICTURE_IN_PICTURE_HIDE: b,
+        PICTURE_IN_PICTURE_SHOW: y,
+        PICTURE_IN_PICTURE_UPDATE_RECT: T,
+        PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW: S,
+        LOGOUT: A
     }));

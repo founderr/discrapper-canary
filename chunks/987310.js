@@ -1,11 +1,12 @@
-var r = n(195168),
-    i = 'object' == typeof exports && exports && !exports.nodeType && exports,
-    a = i && 'object' == typeof module && module && !module.nodeType && module,
-    s = a && a.exports === i ? r.Z.Buffer : void 0,
-    o = s ? s.allocUnsafe : void 0;
-t.Z = function (e, t) {
-    if (t) return e.slice();
-    var n = e.length,
-        r = o ? o(n) : new e.constructor(n);
-    return e.copy(r), r;
-};
+var i = r(195168),
+    a = 'object' == typeof exports && exports && !exports.nodeType && exports,
+    s = a && 'object' == typeof module && module && !module.nodeType && module,
+    o = s && s.exports === a ? i.Z.Buffer : void 0,
+    l = o ? o.allocUnsafe : void 0;
+function u(e, n) {
+    if (n) return e.slice();
+    var r = e.length,
+        i = l ? l(r) : new e.constructor(r);
+    return e.copy(i), i;
+}
+n.Z = u;

@@ -1,27 +1,28 @@
-var r = n(886985),
-    i = n(256098),
-    a = n(207536),
-    s = n(695609),
-    o = n(939556),
-    l = n(322909),
-    u = n(118666);
-e.exports = function (e, t, n) {
-    var c = -1;
+var i = r(886985),
+    a = r(256098),
+    s = r(207536),
+    o = r(695609),
+    l = r(939556),
+    u = r(322909),
+    c = r(118666);
+function d(e, n, r) {
+    var d = -1;
     return (
-        (t = r(t.length ? t : [u], o(i))),
-        s(
-            a(e, function (e, n, i) {
+        (n = i(n.length ? n : [c], l(a))),
+        o(
+            s(e, function (e, r, a) {
                 return {
-                    criteria: r(t, function (t) {
-                        return t(e);
+                    criteria: i(n, function (n) {
+                        return n(e);
                     }),
-                    index: ++c,
+                    index: ++d,
                     value: e
                 };
             }),
-            function (e, t) {
-                return l(e, t, n);
+            function (e, n) {
+                return u(e, n, r);
             }
         )
     );
-};
+}
+e.exports = d;

@@ -1,3 +1,4 @@
-e.exports = function (e, t) {
-    if (('constructor' !== t || 'function' != typeof e[t]) && '__proto__' != t) return e[t];
-};
+function n(e, n) {
+    if (('constructor' !== n || 'function' != typeof e[n]) && '__proto__' != n) return e[n];
+}
+e.exports = n;

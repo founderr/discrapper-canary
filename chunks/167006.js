@@ -1,4 +1,5 @@
-var t = Array.prototype.reverse;
-e.exports = function (e) {
-    return null == e ? e : t.call(e);
-};
+var n = Array.prototype.reverse;
+function r(e) {
+    return null == e ? e : n.call(e);
+}
+e.exports = r;

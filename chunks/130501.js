@@ -1,15 +1,18 @@
-n.d(t, {
+r.d(n, {
     Q: function () {
-        return s;
+        return l;
     }
 });
-var r = n(430901),
-    i = n(229579),
-    a = n(222285),
-    s = (function () {
-        function e(e, t) {
+var i = r(430901),
+    a = r(229579),
+    s = r(222285),
+    o = function (e) {
+        return !(0, s.zd)(e) && !(0, s.jD)(e) && 'inline' === getComputedStyle(e).display;
+    },
+    l = (function () {
+        function e(e, n) {
             (this.target = e),
-                (this.observedBox = t || r.z.CONTENT_BOX),
+                (this.observedBox = n || i.z.CONTENT_BOX),
                 (this.lastReportedSize = {
                     inlineSize: 0,
                     blockSize: 0
@@ -17,10 +20,8 @@ var r = n(430901),
         }
         return (
             (e.prototype.isActive = function () {
-                var e,
-                    t = (0, i.Y)(this.target, this.observedBox, !0);
-                if (((e = this.target), !(0, a.zd)(e) && !(0, a.jD)(e) && 'inline' === getComputedStyle(e).display)) this.lastReportedSize = t;
-                return this.lastReportedSize.inlineSize !== t.inlineSize || this.lastReportedSize.blockSize !== t.blockSize || !1;
+                var e = (0, a.Y)(this.target, this.observedBox, !0);
+                return o(this.target) && (this.lastReportedSize = e), this.lastReportedSize.inlineSize !== e.inlineSize || this.lastReportedSize.blockSize !== e.blockSize || !1;
             }),
             e
         );

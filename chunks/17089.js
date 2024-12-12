@@ -1,16 +1,12 @@
-function r(e) {
-    var t, n;
-    null ===
-        (n = (function () {
-            return 'undefined' != typeof window ? window.__DISCORD_DEVTOOLS : null;
-        })()) ||
-        void 0 === n ||
-        null === (t = n.reportEvent) ||
-        void 0 === t ||
-        t.call(n, e);
-}
-n.d(t, {
+r.d(n, {
     LN: function () {
-        return r;
+        return i;
     }
 });
+function i(e) {
+    var n, r;
+    null === (r = a()) || void 0 === r || null === (n = r.reportEvent) || void 0 === n || n.call(r, e);
+}
+function a() {
+    return 'undefined' != typeof window ? window.__DISCORD_DEVTOOLS : null;
+}

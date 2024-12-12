@@ -1,37 +1,39 @@
-var r = n(687249),
-    i = n(718332),
-    a = n(995542),
-    s = n(92141),
-    o = n(53919),
-    l = n(290677),
-    u = n(551023),
-    c = n(454745),
-    d = '[object Arguments]',
-    f = '[object Array]',
-    _ = '[object Object]',
-    p = Object.prototype.hasOwnProperty;
-e.exports = function (e, t, n, h, m, g) {
-    var E = l(e),
-        v = l(t),
-        I = E ? f : o(e),
-        T = v ? f : o(t);
-    (I = I == d ? _ : I), (T = T == d ? _ : T);
-    var b = I == _,
-        S = T == _,
-        y = I == T;
-    if (y && u(e)) {
-        if (!u(t)) return !1;
-        (E = !0), (b = !1);
+var i = r(687249),
+    a = r(718332),
+    s = r(995542),
+    o = r(92141),
+    l = r(53919),
+    u = r(290677),
+    c = r(551023),
+    d = r(454745),
+    f = 1,
+    _ = '[object Arguments]',
+    h = '[object Array]',
+    p = '[object Object]',
+    m = Object.prototype.hasOwnProperty;
+function g(e, n, r, g, E, v) {
+    var I = u(e),
+        T = u(n),
+        b = I ? h : l(e),
+        y = T ? h : l(n);
+    (b = b == _ ? p : b), (y = y == _ ? p : y);
+    var S = b == p,
+        A = y == p,
+        N = b == y;
+    if (N && c(e)) {
+        if (!c(n)) return !1;
+        (I = !0), (S = !1);
     }
-    if (y && !b) return g || (g = new r()), E || c(e) ? i(e, t, n, h, m, g) : a(e, t, I, n, h, m, g);
-    if (!(1 & n)) {
-        var A = b && p.call(e, '__wrapped__'),
-            N = S && p.call(t, '__wrapped__');
-        if (A || N) {
-            var C = A ? e.value() : e,
-                R = N ? t.value() : t;
-            return g || (g = new r()), m(C, R, n, h, g);
+    if (N && !S) return v || (v = new i()), I || d(e) ? a(e, n, r, g, E, v) : s(e, n, b, r, g, E, v);
+    if (!(r & f)) {
+        var C = S && m.call(e, '__wrapped__'),
+            R = A && m.call(n, '__wrapped__');
+        if (C || R) {
+            var O = C ? e.value() : e,
+                D = R ? n.value() : n;
+            return v || (v = new i()), E(O, D, r, g, v);
         }
     }
-    return !!y && (g || (g = new r()), s(e, t, n, h, m, g));
-};
+    return !!N && (v || (v = new i()), o(e, n, r, g, E, v));
+}
+e.exports = g;

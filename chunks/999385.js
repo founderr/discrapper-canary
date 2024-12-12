@@ -1,48 +1,49 @@
-Object.defineProperty(t, '__esModule', { value: !0 }), (t.isvalidColorString = t.red = t.getContrastingColor = t.isValidHex = t.toState = t.simpleCheckForValidColor = void 0);
-var r = a(n(876344)),
-    i = a(n(979590));
-function a(e) {
+Object.defineProperty(n, '__esModule', { value: !0 }), (n.isvalidColorString = n.red = n.getContrastingColor = n.isValidHex = n.toState = n.simpleCheckForValidColor = void 0);
+var i = s(r(876344)),
+    a = s(r(979590));
+function s(e) {
     return e && e.__esModule ? e : { default: e };
 }
-t.simpleCheckForValidColor = function (e) {
-    var t = 0,
-        n = 0;
+n.simpleCheckForValidColor = function (e) {
+    var n = ['r', 'g', 'b', 'a', 'h', 's', 'l', 'v'],
+        r = 0,
+        a = 0;
     return (
-        (0, r.default)(['r', 'g', 'b', 'a', 'h', 's', 'l', 'v'], function (r) {
-            e[r] && ((t += 1), !isNaN(e[r]) && (n += 1), ('s' === r || 'l' === r) && /^\d+%$/.test(e[r]) && (n += 1));
+        (0, i.default)(n, function (n) {
+            e[n] && ((r += 1), isNaN(e[n]) || (a += 1), ('s' === n || 'l' === n) && /^\d+%$/.test(e[n]) && (a += 1));
         }),
-        t === n && e
+        r === a && e
     );
 };
-var s = (t.toState = function (e, t) {
-    var n = e.hex ? (0, i.default)(e.hex) : (0, i.default)(e),
-        r = n.toHsl(),
-        a = n.toHsv(),
-        s = n.toRgb(),
-        o = n.toHex();
+var o = (n.toState = function (e, n) {
+    var r = e.hex ? (0, a.default)(e.hex) : (0, a.default)(e),
+        i = r.toHsl(),
+        s = r.toHsv(),
+        o = r.toRgb(),
+        l = r.toHex();
     return (
-        0 === r.s && ((r.h = t || 0), (a.h = t || 0)),
+        0 === i.s && ((i.h = n || 0), (s.h = n || 0)),
         {
-            hsl: r,
-            hex: '000000' === o && 0 === s.a ? 'transparent' : '#' + o,
-            rgb: s,
-            hsv: a,
-            oldHue: e.h || t || r.h,
+            hsl: i,
+            hex: '000000' === l && 0 === o.a ? 'transparent' : '#' + l,
+            rgb: o,
+            hsv: s,
+            oldHue: e.h || n || i.h,
             source: e.source
         }
     );
 });
-(t.isValidHex = function (e) {
+(n.isValidHex = function (e) {
     if ('transparent' === e) return !0;
-    var t = '#' === String(e).charAt(0) ? 1 : 0;
-    return e.length !== 4 + t && e.length < 7 + t && (0, i.default)(e).isValid();
+    var n = '#' === String(e).charAt(0) ? 1 : 0;
+    return e.length !== 4 + n && e.length < 7 + n && (0, a.default)(e).isValid();
 }),
-    (t.getContrastingColor = function (e) {
+    (n.getContrastingColor = function (e) {
         if (!e) return '#fff';
-        var t = s(e);
-        return 'transparent' === t.hex ? 'rgba(0,0,0,0.4)' : (299 * t.rgb.r + 587 * t.rgb.g + 114 * t.rgb.b) / 1000 >= 128 ? '#000' : '#fff';
+        var n = o(e);
+        return 'transparent' === n.hex ? 'rgba(0,0,0,0.4)' : (299 * n.rgb.r + 587 * n.rgb.g + 114 * n.rgb.b) / 1000 >= 128 ? '#000' : '#fff';
     }),
-    (t.red = {
+    (n.red = {
         hsl: {
             a: 1,
             h: 0,
@@ -63,7 +64,7 @@ var s = (t.toState = function (e, t) {
             a: 1
         }
     }),
-    (t.isvalidColorString = function (e, t) {
-        var n = e.replace('\xB0', '');
-        return (0, i.default)(t + ' (' + n + ')')._ok;
+    (n.isvalidColorString = function (e, n) {
+        var r = e.replace('\xB0', '');
+        return (0, a.default)(n + ' (' + r + ')')._ok;
     });

@@ -1,72 +1,77 @@
-var r = n(192379),
-    i = n(723184),
-    a = n(317019),
-    s = n(716708),
-    o =
+var i = r(192379),
+    a = r(723184),
+    s = r(317019),
+    o = r(716708),
+    l =
         Object.assign ||
         function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+            for (var n = 1; n < arguments.length; n++) {
+                var r = arguments[n];
+                for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
             }
             return e;
-        };
-t.Z = (0, a.I)(function (e) {
-    var t = e.color,
-        n = e.style,
-        a = e.onClick,
-        l = void 0 === a ? function () {} : a,
-        u = e.onHover,
-        c = e.title,
-        d = void 0 === c ? t : c,
-        f = e.children,
-        _ = e.focus,
-        p = e.focusStyle,
-        h = 'transparent' === t,
-        m = (0, i.default)({
-            default: {
-                swatch: o(
-                    {
-                        background: t,
-                        height: '100%',
-                        width: '100%',
-                        cursor: 'pointer',
-                        position: 'relative',
-                        outline: 'none'
-                    },
-                    n,
-                    _ ? (void 0 === p ? {} : p) : {}
-                )
-            }
-        }),
-        g = {};
-    return (
-        u &&
-            (g.onMouseOver = function (e) {
-                return u(t, e);
+        },
+    u = 13,
+    c = function (e) {
+        var n = e.color,
+            r = e.style,
+            s = e.onClick,
+            c = void 0 === s ? function () {} : s,
+            d = e.onHover,
+            f = e.title,
+            _ = void 0 === f ? n : f,
+            h = e.children,
+            p = e.focus,
+            m = e.focusStyle,
+            g = void 0 === m ? {} : m,
+            E = 'transparent' === n,
+            v = (0, a.default)({
+                default: {
+                    swatch: l(
+                        {
+                            background: n,
+                            height: '100%',
+                            width: '100%',
+                            cursor: 'pointer',
+                            position: 'relative',
+                            outline: 'none'
+                        },
+                        r,
+                        p ? g : {}
+                    )
+                }
             }),
-        r.createElement(
-            'div',
-            o(
-                {
-                    style: m.swatch,
-                    onClick: function (e) {
-                        return l(t, e);
+            I = function (e) {
+                return c(n, e);
+            },
+            T = function (e) {
+                return e.keyCode === u && c(n, e);
+            },
+            b = function (e) {
+                return d(n, e);
+            },
+            y = {};
+        return (
+            d && (y.onMouseOver = b),
+            i.createElement(
+                'div',
+                l(
+                    {
+                        style: v.swatch,
+                        onClick: I,
+                        title: _,
+                        tabIndex: 0,
+                        onKeyDown: T
                     },
-                    title: d,
-                    tabIndex: 0,
-                    onKeyDown: function (e) {
-                        return 13 === e.keyCode && l(t, e);
-                    }
-                },
-                g
-            ),
-            f,
-            h &&
-                r.createElement(s.Z, {
-                    borderRadius: m.swatch.borderRadius,
-                    boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.1)'
-                })
-        )
-    );
-});
+                    y
+                ),
+                h,
+                E &&
+                    i.createElement(o.Z, {
+                        borderRadius: v.swatch.borderRadius,
+                        boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.1)'
+                    })
+            )
+        );
+    };
+n.Z = (0, s.I)(c);

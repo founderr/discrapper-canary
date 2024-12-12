@@ -1,106 +1,107 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return b;
+        return y;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(399606),
-    a = n(704215),
-    s = n(481060),
-    o = n(596454),
-    l = n(607070),
-    u = n(605236),
-    c = n(880949),
-    d = n(28546),
-    f = n(65029),
-    _ = n(430824),
-    p = n(556296),
-    h = n(451478),
-    m = n(358085),
-    g = n(13140),
-    E = n(763296),
-    v = n(981631),
-    I = n(388032),
-    T = n(705340);
-function b(e) {
-    let { soundboardSound: t, closePicker: b } = e,
-        S = (0, d.Iu)((e) => e.searchQuery),
-        y = (0, i.e7)([E.Z], () => null != t && E.Z.isFavoriteSound(t.soundId)),
-        A = (0, i.e7)([_.Z], () => _.Z.getGuild(null == t ? void 0 : t.guildId)),
-        N = (0, i.e7)([l.Z], () => l.Z.useReducedMotion, []),
-        C = (0, i.e7)([h.Z], () => h.Z.isFocused()),
-        R = (0, i.e7)([p.Z], () => p.Z.getKeybindForAction(v.kg4.SOUNDBOARD_HOLD));
-    if (null != t && S.length > 0)
-        return (0, r.jsx)(f.Z, {
+var i = r(200651);
+r(192379);
+var a = r(399606),
+    s = r(704215),
+    o = r(481060),
+    l = r(596454),
+    u = r(607070),
+    c = r(605236),
+    d = r(880949),
+    f = r(28546),
+    _ = r(65029),
+    h = r(430824),
+    p = r(556296),
+    m = r(451478),
+    g = r(358085),
+    E = r(13140),
+    v = r(763296),
+    I = r(981631),
+    T = r(388032),
+    b = r(705340);
+function y(e) {
+    let { soundboardSound: n, closePicker: y } = e,
+        S = (0, f.Iu)((e) => e.searchQuery),
+        A = (0, a.e7)([v.Z], () => null != n && v.Z.isFavoriteSound(n.soundId)),
+        N = (0, a.e7)([h.Z], () => h.Z.getGuild(null == n ? void 0 : n.guildId)),
+        C = (0, a.e7)([u.Z], () => u.Z.useReducedMotion, []),
+        R = (0, a.e7)([m.Z], () => m.Z.isFocused()),
+        O = (0, a.e7)([p.Z], () => p.Z.getKeybindForAction(I.kg4.SOUNDBOARD_HOLD));
+    if (null != n && S.length > 0)
+        return (0, i.jsx)(_.Z, {
             graphicPrimary:
-                null != t.emojiId || null != t.emojiName
-                    ? (0, r.jsx)(o.Z, {
-                          emojiId: t.emojiId,
-                          emojiName: t.emojiName,
-                          className: T.emoji
+                null != n.emojiId || null != n.emojiName
+                    ? (0, i.jsx)(l.Z, {
+                          emojiId: n.emojiId,
+                          emojiName: n.emojiName,
+                          className: b.emoji
                       })
-                    : (0, r.jsx)(s.ImageIcon, {
+                    : (0, i.jsx)(o.ImageIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: T.emoji
+                          className: b.emoji
                       }),
             graphicSecondary:
-                null != A
-                    ? (0, r.jsx)(c.Z, {
-                          guild: A,
-                          shouldAnimate: !N && C
+                null != N
+                    ? (0, i.jsx)(d.Z, {
+                          guild: N,
+                          shouldAnimate: !C && R
                       })
                     : null,
-            titlePrimary: t.name,
-            titleSecondary: null == A ? void 0 : A.name,
-            isFavorite: y
+            titlePrimary: n.name,
+            titleSecondary: null == N ? void 0 : N.name,
+            isFavorite: A
         });
-    let O = () => {
-            b(),
-                (0, s.openModalLazy)(async () => {
-                    let { default: e } = await n.e('58120').then(n.bind(n, 355453));
-                    return (t) => (0, r.jsx)(e, { ...t });
+    let D = () => {
+            y(),
+                (0, o.openModalLazy)(async () => {
+                    let { default: e } = await r.e('58120').then(r.bind(r, 355453));
+                    return (n) => (0, i.jsx)(e, { ...n });
                 });
         },
-        D = (0, u.un)(a.z.SOUNDBOARD_KEYBIND_TIP),
-        L =
-            null != R && (0, m.isWindows)() && !D
-                ? I.intl.format(I.t.udMTtr, {
-                      keybind: (0, g.BB)(R.shortcut, !0),
-                      openSettingsHook: (e, t) =>
-                          (0, r.jsx)(
-                              s.Anchor,
+        L = (0, c.un)(s.z.SOUNDBOARD_KEYBIND_TIP),
+        x = () => (0, c.EW)(s.z.SOUNDBOARD_KEYBIND_TIP),
+        w =
+            null != O && (0, g.isWindows)() && !L
+                ? T.intl.format(T.t.udMTtr, {
+                      keybind: (0, E.BB)(O.shortcut, !0),
+                      openSettingsHook: (e, n) =>
+                          (0, i.jsx)(
+                              o.Anchor,
                               {
-                                  onClick: O,
+                                  onClick: D,
                                   children: e
                               },
-                              t
+                              n
                           )
                   })
                 : null;
-    return null == L
+    return null == w
         ? null
-        : (0, r.jsxs)('div', {
-              className: T.keybindHint,
+        : (0, i.jsxs)('div', {
+              className: b.keybindHint,
               children: [
-                  (0, r.jsx)(s.CircleWarningIcon, {
+                  (0, i.jsx)(o.CircleWarningIcon, {
                       size: 'custom',
                       width: 20,
                       height: 20,
                       color: 'currentColor',
-                      className: T.warningIcon
+                      className: b.warningIcon
                   }),
-                  (0, r.jsx)(s.Text, {
+                  (0, i.jsx)(o.Text, {
                       variant: 'text-sm/medium',
                       color: 'text-normal',
-                      className: T.keybindHintText,
-                      children: L
+                      className: b.keybindHintText,
+                      children: w
                   }),
-                  (0, r.jsx)(s.Clickable, {
-                      className: T.closeButton,
-                      onClick: () => (0, u.EW)(a.z.SOUNDBOARD_KEYBIND_TIP),
-                      children: (0, r.jsx)(s.XSmallIcon, {
+                  (0, i.jsx)(o.Clickable, {
+                      className: b.closeButton,
+                      onClick: x,
+                      children: (0, i.jsx)(o.XSmallIcon, {
                           size: 'xs',
                           color: 'currentColor'
                       })

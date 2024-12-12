@@ -1,4 +1,4 @@
-n.d(t, {
+r.d(n, {
     $_: function () {
         return l;
     },
@@ -12,9 +12,8 @@ n.d(t, {
         return s;
     }
 });
-var r,
-    i,
-    a = n(786761);
+var i,
+    a = r(786761);
 function s(e) {
     return {
         channelId: e.channel_id,
@@ -41,4 +40,6 @@ function l(e) {
         messageId: e.message_id
     };
 }
-((r = i || (i = {})).ALL = 'ALL'), (r.REMINDER = 'REMINDER'), (r.BOOKMARK = 'BOOKMARK');
+!(function (e) {
+    (e.ALL = 'ALL'), (e.REMINDER = 'REMINDER'), (e.BOOKMARK = 'BOOKMARK');
+})(i || (i = {}));

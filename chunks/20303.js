@@ -1,80 +1,85 @@
-n(47120), n(757143);
-var r,
-    i,
+var i,
     a,
-    s,
-    o,
-    l = n(442837),
-    u = n(433517),
-    c = n(570140),
-    d = n(591759),
-    f = n(902676),
-    _ = n(616922);
+    s = r(47120);
+var o = r(757143);
+var l = r(442837),
+    u = r(433517),
+    c = r(570140),
+    d = r(591759),
+    f = r(902676),
+    _ = r(616922);
+function h(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
 let p = 'MaskedLinkStore',
-    h = new Set(),
     m = new Set(),
-    g = null === (r = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === r ? void 0 : r.replace('//', '');
-function E(e) {
-    let t = (0, f.F)(e);
-    switch (t) {
+    g = new Set(),
+    E = null === (i = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === i ? void 0 : i.replace('//', '');
+function v(e) {
+    let n = (0, f.F)(e);
+    switch (n) {
         case window.GLOBAL_ENV.CDN_HOST:
         case window.GLOBAL_ENV.INVITE_HOST:
         case window.GLOBAL_ENV.GIFT_CODE_HOST:
         case window.GLOBAL_ENV.GUILD_TEMPLATE_HOST:
-        case g:
+        case E:
         case location.hostname:
             return !0;
         default:
-            return _.SD.includes(t) || d.Z.isDiscordHostname(t) || h.has(t);
+            return _.SD.includes(n) || d.Z.isDiscordHostname(n) || m.has(n);
     }
 }
-function v(e) {
-    let t = (0, f.E)(e);
-    return m.has(t);
+function I(e) {
+    let n = (0, f.E)(e);
+    return g.has(n);
 }
-class I extends (i = l.ZP.Store) {
+function T(e) {
+    let { url: n } = e;
+    if (v(n)) return !1;
+    m.add((0, f.F)(n)),
+        u.K.set(p, {
+            trustedDomains: m,
+            trustedProtocols: g
+        });
+}
+function b(e) {
+    let { url: n } = e;
+    if (I(n)) return !1;
+    g.add((0, f.E)(n)),
+        u.K.set(p, {
+            trustedDomains: m,
+            trustedProtocols: g
+        });
+}
+class y extends (a = l.ZP.Store) {
     initialize() {
         var e;
-        let t = null !== (e = u.K.get(p)) && void 0 !== e ? e : {};
-        if (Array.isArray(t)) (h = new Set(null != t ? Array.from(t) : null)), (m = new Set());
+        let n = null !== (e = u.K.get(p)) && void 0 !== e ? e : {};
+        if (Array.isArray(n)) (m = new Set(null != n ? Array.from(n) : null)), (g = new Set());
         else {
-            let { trustedDomains: e, trustedProtocols: n } = t;
-            (h = new Set(null != e ? Array.from(e) : null)), (m = new Set(null != n ? Array.from(n) : null));
+            let { trustedDomains: e, trustedProtocols: r } = n;
+            (m = new Set(null != e ? Array.from(e) : null)), (g = new Set(null != r ? Array.from(r) : null));
         }
     }
     isTrustedDomain(e) {
-        return E(e);
-    }
-    isTrustedProtocol(e) {
         return v(e);
     }
+    isTrustedProtocol(e) {
+        return I(e);
+    }
 }
-(o = 'MaskedLinkStore'),
-    (s = 'displayName') in (a = I)
-        ? Object.defineProperty(a, s, {
-              value: o,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (a[s] = o),
-    (t.Z = new I(c.Z, {
-        MASKED_LINK_ADD_TRUSTED_DOMAIN: function (e) {
-            let { url: t } = e;
-            if (E(t)) return !1;
-            h.add((0, f.F)(t)),
-                u.K.set(p, {
-                    trustedDomains: h,
-                    trustedProtocols: m
-                });
-        },
-        MASKED_LINK_ADD_TRUSTED_PROTOCOL: function (e) {
-            let { url: t } = e;
-            if (v(t)) return !1;
-            m.add((0, f.E)(t)),
-                u.K.set(p, {
-                    trustedDomains: h,
-                    trustedProtocols: m
-                });
-        }
+h(y, 'displayName', 'MaskedLinkStore'),
+    (n.Z = new y(c.Z, {
+        MASKED_LINK_ADD_TRUSTED_DOMAIN: T,
+        MASKED_LINK_ADD_TRUSTED_PROTOCOL: b
     }));

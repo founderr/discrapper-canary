@@ -1,38 +1,39 @@
-n.d(t, {
+r.d(n, {
     H: function () {
-        return u;
+        return d;
     }
 });
-var r = n(200651),
-    i = n(481060),
-    a = n(699516),
-    s = n(626135),
-    o = n(110223),
-    l = n(981631);
-function u(e, t) {
-    let u = a.Z.isBlocked(t);
-    (0, i.openModalLazy)(
+var i = r(200651),
+    a = r(481060),
+    s = r(699516),
+    o = r(626135),
+    l = r(110223),
+    u = r(981631);
+let c = 'blocked_user_joined_voice_channel_modal';
+function d(e, n) {
+    let d = s.Z.isBlocked(n);
+    (0, a.openModalLazy)(
         async () => {
-            let { default: i } = await n.e('85505').then(n.bind(n, 232837));
-            return (n) => {
-                let { transitionState: a, onClose: s } = n;
-                return (0, r.jsx)(i, {
+            let { default: a } = await r.e('85505').then(r.bind(r, 232837));
+            return (r) => {
+                let { transitionState: s, onClose: o } = r;
+                return (0, i.jsx)(a, {
                     channelId: e,
-                    userId: t,
-                    transitionState: a,
-                    onClose: s
+                    userId: n,
+                    transitionState: s,
+                    onClose: o
                 });
             };
         },
         {
-            modalKey: 'blocked_user_joined_voice_channel_modal',
+            modalKey: c,
             onCloseCallback: () => {
-                s.default.track(l.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                    action: o.q.DISMISS,
+                o.default.track(u.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                    action: l.q.DISMISS,
                     channel_id: e,
-                    blocked_user_ids: u ? [t] : [],
-                    ignored_user_ids: u ? [] : [t],
-                    warning_surface: o.fz.POST_JOIN_MODAL
+                    blocked_user_ids: d ? [n] : [],
+                    ignored_user_ids: d ? [] : [n],
+                    warning_surface: l.fz.POST_JOIN_MODAL
                 });
             }
         }

@@ -1,132 +1,128 @@
-var r = n(200651);
-n(192379);
-var i = n(392711),
-    a = n.n(i),
-    s = n(788911),
-    o = n(911969),
-    l = n(174212),
-    u = n(998698),
-    c = n(667204),
-    d = n(588468),
-    f = n(483360),
-    _ = n(877565),
-    p = n(590921),
-    h = n(689079),
-    m = n(388032),
-    g = n(49508),
-    E = n(239840);
-let v = { results: { choices: [] } },
-    I = {
+var i = r(200651);
+r(192379);
+var a = r(392711),
+    s = r.n(a),
+    o = r(788911),
+    l = r(911969),
+    u = r(174212),
+    c = r(998698),
+    d = r(667204),
+    f = r(588468),
+    _ = r(483360),
+    h = r(877565),
+    p = r(590921),
+    m = r(689079),
+    g = r(388032),
+    E = r(49508),
+    v = r(239840);
+let I = { results: { choices: [] } },
+    T = {
         results: {
             choices: [],
             isLoading: !0
         }
     },
-    T = Array.from({ length: 5 }, () => ({
+    b = Array.from({ length: 5 }, () => ({
         name: '',
         displayName: '',
         value: ''
     })),
-    b = {
+    y = {
         results: {
             choices: [],
             isError: !0
         }
     },
-    S = a().debounce(c.Z, h.Fu, {
+    S = s().debounce(d.Z, m.Fu, {
         leading: !0,
         trailing: !0
     }),
-    y = {
-        stores: [u.Z, l.Z],
+    A = {
+        stores: [c.Z, u.Z],
         showEmpty: !0,
-        matches(e, t, n, r, i) {
-            let a = u.Z.getActiveOption(e.id);
-            return i.commands !== p.L8.DISABLED && null != a && (a.type === o.jw.BOOLEAN || !!(null == a ? void 0 : a.autocomplete) || ((null == a ? void 0 : a.choices) != null && a.choices.length > 0));
+        matches(e, n, r, i, a) {
+            let s = c.Z.getActiveOption(e.id);
+            return a.commands !== p.L8.DISABLED && null != s && (s.type === l.jw.BOOLEAN || !!(null == s ? void 0 : s.autocomplete) || ((null == s ? void 0 : s.choices) != null && s.choices.length > 0));
         },
-        queryResults(e, t, n, r, i) {
-            var a;
-            let s = u.Z.getActiveOption(e.id);
-            if (null == s) return v;
-            if (s.autocomplete) {
-                if (i) {
-                    let i = u.Z.getActiveCommand(e.id);
+        queryResults(e, n, r, i, a) {
+            var s;
+            let o = c.Z.getActiveOption(e.id);
+            if (null == o) return I;
+            if (o.autocomplete) {
+                if (a) {
+                    let a = c.Z.getActiveCommand(e.id);
                     S({
-                        command: i,
-                        optionValues: r.getCommandOptionValues(),
+                        command: a,
+                        optionValues: i.getCommandOptionValues(),
                         context: {
                             channel: e,
-                            guild: t,
+                            guild: n,
                             autocomplete: {
-                                name: s.name,
-                                query: n
+                                name: o.name,
+                                query: r
                             }
                         }
                     });
                 }
-                if (l.Z.getLastErrored(e.id)) return b;
-                let a = l.Z.getAutocompleteChoices(e.id, s.name, n);
-                return null == a ? I : { results: { choices: a } };
+                if (u.Z.getLastErrored(e.id)) return y;
+                let s = u.Z.getAutocompleteChoices(e.id, o.name, r);
+                return null == s ? T : { results: { choices: s } };
             }
             return {
-                results: f.ZP.queryChoiceResults({
-                    query: n,
-                    choices: s.type === o.jw.BOOLEAN ? h.ak : null !== (a = s.choices) && void 0 !== a ? a : []
+                results: _.ZP.queryChoiceResults({
+                    query: r,
+                    choices: o.type === l.jw.BOOLEAN ? m.ak : null !== (s = o.choices) && void 0 !== s ? s : []
                 })
             };
         },
         renderResults(e) {
             let {
-                results: { choices: t, isLoading: n, isError: i },
-                selectedIndex: a,
-                query: o,
-                onHover: l,
-                onClick: u
+                results: { choices: n, isLoading: r, isError: a },
+                selectedIndex: s,
+                query: l,
+                onHover: u,
+                onClick: c
             } = e;
-            return i
-                ? (0, r.jsx)(s.Z, {
-                      message: m.intl.string(m.t.rTAbPj),
-                      noResultsImageURL: E,
-                      className: g.noAutocompleteResults
+            return a
+                ? (0, i.jsx)(o.Z, {
+                      message: g.intl.string(g.t.rTAbPj),
+                      noResultsImageURL: v,
+                      className: E.noAutocompleteResults
                   })
-                : 0 !== t.length || n
-                  ? (0, _.HI)({
-                        query: o,
-                        selectedIndex: a,
-                        autocompletes: n ? T : t,
-                        onHover: l,
-                        onClick: u,
-                        titleWithQuery: m.t.pg0anJ,
-                        titleWithoutQuery: m.intl.string(m.t['+1H47u']),
-                        Component: n ? d.ZP.Loading : d.ZP.Generic,
-                        getProps: (e, t) => ({
-                            key: t.toString(),
+                : 0 !== n.length || r
+                  ? (0, h.HI)({
+                        query: l,
+                        selectedIndex: s,
+                        autocompletes: r ? b : n,
+                        onHover: u,
+                        onClick: c,
+                        titleWithQuery: g.t.pg0anJ,
+                        titleWithoutQuery: g.intl.string(g.t['+1H47u']),
+                        Component: r ? f.ZP.Loading : f.ZP.Generic,
+                        getProps: (e, n) => ({
+                            key: n.toString(),
                             text: e.displayName
                         }),
                         getQuery: (e) => e,
                         key: 'choice'
                     })
-                  : (0, r.jsx)(s.Z, {
-                        message: m.intl.string(m.t['41014u']),
-                        noResultsImageURL: E,
-                        className: g.noAutocompleteResults
+                  : (0, i.jsx)(o.Z, {
+                        message: g.intl.string(g.t['41014u']),
+                        noResultsImageURL: v,
+                        className: E.noAutocompleteResults
                     });
         },
         onSelect(e) {
             let {
-                    results: { choices: t },
-                    index: n,
-                    options: r
+                    results: { choices: n },
+                    index: r,
+                    options: i
                 } = e,
-                i = t[n];
-            return (
-                r.insertText(
-                    (function (e) {
-                        return e.displayName;
-                    })(i)
-                ),
-                { type: p.z2.CHOICE }
-            );
+                a = n[r];
+            return i.insertText(N(a)), { type: p.z2.CHOICE };
         }
     };
-t.Z = y;
+function N(e) {
+    return e.displayName;
+}
+n.Z = A;

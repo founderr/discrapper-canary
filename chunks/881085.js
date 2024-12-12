@@ -1,26 +1,26 @@
-n.d(t, {
+r.d(n, {
     d: function () {
-        return c;
+        return _;
     },
     e: function () {
-        return o;
+        return l;
     }
 });
-let r = new Map(),
-    i = !1;
+let i = new Map(),
+    a = !1;
 try {
-    i = 'exceptZero' === new Intl.NumberFormat('de-DE', { signDisplay: 'exceptZero' }).resolvedOptions().signDisplay;
+    a = 'exceptZero' === new Intl.NumberFormat('de-DE', { signDisplay: 'exceptZero' }).resolvedOptions().signDisplay;
 } catch (e) {}
-let a = !1;
+let s = !1;
 try {
-    a =
+    s =
         'unit' ===
         new Intl.NumberFormat('de-DE', {
             style: 'unit',
             unit: 'degree'
         }).resolvedOptions().style;
 } catch (e) {}
-let s = {
+let o = {
     degree: {
         narrow: {
             default: '\xB0',
@@ -30,52 +30,33 @@ let s = {
         }
     }
 };
-class o {
+class l {
     format(e) {
-        let t = '';
-        if (
-            ((t =
-                i || null == this.options.signDisplay
-                    ? this.numberFormatter.format(e)
-                    : (function (e, t, n) {
-                          if ('auto' === t) return e.format(n);
-                          {
-                              if ('never' === t) return e.format(Math.abs(n));
-                              let r = !1;
-                              if (('always' === t ? (r = n > 0 || Object.is(n, 0)) : 'exceptZero' === t && (Object.is(n, -0) || Object.is(n, 0) ? (n = Math.abs(n)) : (r = n > 0)), !r)) return e.format(n);
-                              {
-                                  let t = e.format(-n),
-                                      r = e.format(n),
-                                      i = t.replace(r, '').replace(/\u200e|\u061C/, '');
-                                  return 1 != [...i].length && console.warn('@react-aria/i18n polyfill for NumberFormat signDisplay: Unsupported case'), t.replace(r, '!!!').replace(i, '+').replace('!!!', r);
-                              }
-                          }
-                      })(this.numberFormatter, this.options.signDisplay, e)),
-            'unit' === this.options.style && !a)
-        ) {
-            var n;
-            let { unit: e, unitDisplay: r = 'short', locale: i } = this.resolvedOptions();
-            if (!e) return t;
-            let a = null === (n = s[e]) || void 0 === n ? void 0 : n[r];
-            t += a[i] || a.default;
+        let n = '';
+        if (((n = a || null == this.options.signDisplay ? this.numberFormatter.format(e) : c(this.numberFormatter, this.options.signDisplay, e)), 'unit' === this.options.style && !s)) {
+            var r;
+            let { unit: e, unitDisplay: i = 'short', locale: a } = this.resolvedOptions();
+            if (!e) return n;
+            let s = null === (r = o[e]) || void 0 === r ? void 0 : r[i];
+            n += s[a] || s.default;
         }
-        return t;
+        return n;
     }
     formatToParts(e) {
         return this.numberFormatter.formatToParts(e);
     }
-    formatRange(e, t) {
-        if ('function' == typeof this.numberFormatter.formatRange) return this.numberFormatter.formatRange(e, t);
-        if (t < e) throw RangeError('End date must be >= start date');
-        return `${this.format(e)} \u{2013} ${this.format(t)}`;
+    formatRange(e, n) {
+        if ('function' == typeof this.numberFormatter.formatRange) return this.numberFormatter.formatRange(e, n);
+        if (n < e) throw RangeError('End date must be >= start date');
+        return `${this.format(e)} \u{2013} ${this.format(n)}`;
     }
-    formatRangeToParts(e, t) {
-        if ('function' == typeof this.numberFormatter.formatRangeToParts) return this.numberFormatter.formatRangeToParts(e, t);
-        if (t < e) throw RangeError('End date must be >= start date');
-        let n = this.numberFormatter.formatToParts(e),
-            r = this.numberFormatter.formatToParts(t);
+    formatRangeToParts(e, n) {
+        if ('function' == typeof this.numberFormatter.formatRangeToParts) return this.numberFormatter.formatRangeToParts(e, n);
+        if (n < e) throw RangeError('End date must be >= start date');
+        let r = this.numberFormatter.formatToParts(e),
+            i = this.numberFormatter.formatToParts(n);
         return [
-            ...n.map((e) => ({
+            ...r.map((e) => ({
                 ...e,
                 source: 'startRange'
             })),
@@ -84,7 +65,7 @@ class o {
                 value: ' \u2013 ',
                 source: 'shared'
             },
-            ...r.map((e) => ({
+            ...i.map((e) => ({
                 ...e,
                 source: 'endRange'
             }))
@@ -93,13 +74,13 @@ class o {
     resolvedOptions() {
         let e = this.numberFormatter.resolvedOptions();
         return (
-            !i &&
+            !a &&
                 null != this.options.signDisplay &&
                 (e = {
                     ...e,
                     signDisplay: this.options.signDisplay
                 }),
-            !a &&
+            !s &&
                 'unit' === this.options.style &&
                 (e = {
                     ...e,
@@ -110,82 +91,96 @@ class o {
             e
         );
     }
-    constructor(e, t = {}) {
-        (this.numberFormatter = (function (e, t = {}) {
-            let { numberingSystem: n } = t;
-            if ((n && e.includes('-nu-') && (!e.includes('-u-') && (e += '-u-'), (e += `-nu-${n}`)), 'unit' === t.style && !a)) {
-                var i;
-                let { unit: e, unitDisplay: n = 'short' } = t;
-                if (!e) throw Error('unit option must be provided with style: "unit"');
-                if (!(null === (i = s[e]) || void 0 === i ? void 0 : i[n])) throw Error(`Unsupported unit ${e} with unitDisplay = ${n}`);
-                t = {
-                    ...t,
-                    style: 'decimal'
-                };
-            }
-            let o =
-                e +
-                (t
-                    ? Object.entries(t)
-                          .sort((e, t) => (e[0] < t[0] ? -1 : 1))
-                          .join()
-                    : '');
-            if (r.has(o)) return r.get(o);
-            let l = new Intl.NumberFormat(e, t);
-            return r.set(o, l), l;
-        })(e, t)),
-            (this.options = t);
+    constructor(e, n = {}) {
+        (this.numberFormatter = u(e, n)), (this.options = n);
     }
 }
-let l = RegExp('^.*\\(.*\\).*$'),
-    u = ['latn', 'arab', 'hanidec'];
-class c {
-    parse(e) {
-        return f(this.locale, this.options, e).parse(e);
+function u(e, n = {}) {
+    let { numberingSystem: r } = n;
+    if ((r && e.includes('-nu-') && (!e.includes('-u-') && (e += '-u-'), (e += `-nu-${r}`)), 'unit' === n.style && !s)) {
+        var a;
+        let { unit: e, unitDisplay: r = 'short' } = n;
+        if (!e) throw Error('unit option must be provided with style: "unit"');
+        if (!(null === (a = o[e]) || void 0 === a ? void 0 : a[r])) throw Error(`Unsupported unit ${e} with unitDisplay = ${r}`);
+        n = {
+            ...n,
+            style: 'decimal'
+        };
     }
-    isValidPartialNumber(e, t, n) {
-        return f(this.locale, this.options, e).isValidPartialNumber(e, t, n);
+    let l =
+        e +
+        (n
+            ? Object.entries(n)
+                  .sort((e, n) => (e[0] < n[0] ? -1 : 1))
+                  .join()
+            : '');
+    if (i.has(l)) return i.get(l);
+    let u = new Intl.NumberFormat(e, n);
+    return i.set(l, u), u;
+}
+function c(e, n, r) {
+    if ('auto' === n) return e.format(r);
+    {
+        if ('never' === n) return e.format(Math.abs(r));
+        let i = !1;
+        if (('always' === n ? (i = r > 0 || Object.is(r, 0)) : 'exceptZero' === n && (Object.is(r, -0) || Object.is(r, 0) ? (r = Math.abs(r)) : (i = r > 0)), !i)) return e.format(r);
+        {
+            let n = e.format(-r),
+                i = e.format(r),
+                a = n.replace(i, '').replace(/\u200e|\u061C/, '');
+            return 1 != [...a].length && console.warn('@react-aria/i18n polyfill for NumberFormat signDisplay: Unsupported case'), n.replace(i, '!!!').replace(a, '+').replace('!!!', i);
+        }
+    }
+}
+let d = RegExp('^.*\\(.*\\).*$'),
+    f = ['latn', 'arab', 'hanidec'];
+class _ {
+    parse(e) {
+        return p(this.locale, this.options, e).parse(e);
+    }
+    isValidPartialNumber(e, n, r) {
+        return p(this.locale, this.options, e).isValidPartialNumber(e, n, r);
     }
     getNumberingSystem(e) {
-        return f(this.locale, this.options, e).options.numberingSystem;
+        return p(this.locale, this.options, e).options.numberingSystem;
     }
-    constructor(e, t = {}) {
-        (this.locale = e), (this.options = t);
+    constructor(e, n = {}) {
+        (this.locale = e), (this.options = n);
     }
 }
-let d = new Map();
-function f(e, t, n) {
-    let r = _(e, t);
-    if (!e.includes('-nu-') && !r.isValidPartialNumber(n)) {
-        for (let i of u)
-            if (i !== r.options.numberingSystem) {
-                let r = _(e + (e.includes('-u-') ? '-nu-' : '-u-nu-') + i, t);
-                if (r.isValidPartialNumber(n)) return r;
+let h = new Map();
+function p(e, n, r) {
+    let i = m(e, n);
+    if (!e.includes('-nu-') && !i.isValidPartialNumber(r)) {
+        for (let a of f)
+            if (a !== i.options.numberingSystem) {
+                let i = m(e + (e.includes('-u-') ? '-nu-' : '-u-nu-') + a, n);
+                if (i.isValidPartialNumber(r)) return i;
             }
     }
-    return r;
+    return i;
 }
-function _(e, t) {
-    let n =
+function m(e, n) {
+    let r =
             e +
-            (t
-                ? Object.entries(t)
-                      .sort((e, t) => (e[0] < t[0] ? -1 : 1))
+            (n
+                ? Object.entries(n)
+                      .sort((e, n) => (e[0] < n[0] ? -1 : 1))
                       .join()
                 : ''),
-        r = d.get(n);
-    return !r && ((r = new p(e, t)), d.set(n, r)), r;
+        i = h.get(r);
+    return !i && ((i = new g(e, n)), h.set(r, i)), i;
 }
-class p {
+class g {
     parse(e) {
-        let t = this.sanitize(e);
-        if ((this.symbols.group && (t = g(t, this.symbols.group, '')), this.symbols.decimal && (t = t.replace(this.symbols.decimal, '.')), this.symbols.minusSign && (t = t.replace(this.symbols.minusSign, '-')), (t = t.replace(this.symbols.numeral, this.symbols.index)), 'percent' === this.options.style)) {
-            let e = t.indexOf('-'),
-                n = (t = t.replace('-', '')).indexOf('.');
-            -1 === n && (n = t.length), (t = t.replace('.', '')), (t = n - 2 == 0 ? `0.${t}` : n - 2 == -1 ? `0.0${t}` : n - 2 == -2 ? '0.00' : `${t.slice(0, n - 2)}.${t.slice(n - 2)}`), e > -1 && (t = `-${t}`);
+        let n = this.sanitize(e);
+        if ((this.symbols.group && (n = T(n, this.symbols.group, '')), this.symbols.decimal && (n = n.replace(this.symbols.decimal, '.')), this.symbols.minusSign && (n = n.replace(this.symbols.minusSign, '-')), (n = n.replace(this.symbols.numeral, this.symbols.index)), 'percent' === this.options.style)) {
+            let e = n.indexOf('-'),
+                r = (n = n.replace('-', '')).indexOf('.');
+            -1 === r && (r = n.length), (n = n.replace('.', '')), (n = r - 2 == 0 ? `0.${n}` : r - 2 == -1 ? `0.0${n}` : r - 2 == -2 ? '0.00' : `${n.slice(0, r - 2)}.${n.slice(r - 2)}`), e > -1 && (n = `-${n}`);
         }
-        let n = t ? +t : NaN;
-        if (isNaN(n)) return NaN;
+        let r = n ? +n : NaN;
+        if (isNaN(r)) return NaN;
         if ('percent' === this.options.style) {
             let e = {
                 ...this.options,
@@ -193,69 +188,65 @@ class p {
                 minimumFractionDigits: Math.min(this.options.minimumFractionDigits + 2, 20),
                 maximumFractionDigits: Math.min(this.options.maximumFractionDigits + 2, 20)
             };
-            return new c(this.locale, e).parse(new o(this.locale, e).format(n));
+            return new _(this.locale, e).parse(new l(this.locale, e).format(r));
         }
-        return 'accounting' === this.options.currencySign && l.test(e) && (n *= -1), n;
+        return 'accounting' === this.options.currencySign && d.test(e) && (r *= -1), r;
     }
     sanitize(e) {
-        return (e = e.replace(this.symbols.literals, '')), this.symbols.minusSign && (e = e.replace('-', this.symbols.minusSign)), 'arab' === this.options.numberingSystem && (this.symbols.decimal && (e = (e = e.replace(',', this.symbols.decimal)).replace(String.fromCharCode(1548), this.symbols.decimal)), this.symbols.group && (e = g(e, '.', this.symbols.group))), 'fr-FR' === this.options.locale && (e = g(e, '.', String.fromCharCode(8239))), e;
+        return (e = e.replace(this.symbols.literals, '')), this.symbols.minusSign && (e = e.replace('-', this.symbols.minusSign)), 'arab' === this.options.numberingSystem && (this.symbols.decimal && (e = (e = e.replace(',', this.symbols.decimal)).replace(String.fromCharCode(1548), this.symbols.decimal)), this.symbols.group && (e = T(e, '.', this.symbols.group))), 'fr-FR' === this.options.locale && (e = T(e, '.', String.fromCharCode(8239))), e;
     }
-    isValidPartialNumber(e, t = -1 / 0, n = 1 / 0) {
-        return (e = this.sanitize(e)), this.symbols.minusSign && e.startsWith(this.symbols.minusSign) && t < 0 ? (e = e.slice(this.symbols.minusSign.length)) : this.symbols.plusSign && e.startsWith(this.symbols.plusSign) && n > 0 && (e = e.slice(this.symbols.plusSign.length)), !((this.symbols.group && e.startsWith(this.symbols.group)) || (this.symbols.decimal && e.indexOf(this.symbols.decimal) > -1 && 0 === this.options.maximumFractionDigits)) && (this.symbols.group && (e = g(e, this.symbols.group, '')), (e = e.replace(this.symbols.numeral, '')), this.symbols.decimal && (e = e.replace(this.symbols.decimal, '')), 0 === e.length);
+    isValidPartialNumber(e, n = -1 / 0, r = 1 / 0) {
+        return (e = this.sanitize(e)), this.symbols.minusSign && e.startsWith(this.symbols.minusSign) && n < 0 ? (e = e.slice(this.symbols.minusSign.length)) : this.symbols.plusSign && e.startsWith(this.symbols.plusSign) && r > 0 && (e = e.slice(this.symbols.plusSign.length)), !((this.symbols.group && e.startsWith(this.symbols.group)) || (this.symbols.decimal && e.indexOf(this.symbols.decimal) > -1 && 0 === this.options.maximumFractionDigits)) && (this.symbols.group && (e = T(e, this.symbols.group, '')), (e = e.replace(this.symbols.numeral, '')), this.symbols.decimal && (e = e.replace(this.symbols.decimal, '')), 0 === e.length);
     }
-    constructor(e, t = {}) {
-        var n, r;
-        (this.locale = e),
-            (this.formatter = new Intl.NumberFormat(e, t)),
-            (this.options = this.formatter.resolvedOptions()),
-            (this.symbols = (function (e, t, n, r) {
-                var i, a, s, o, l;
-                let u = new Intl.NumberFormat(e, {
-                        ...n,
-                        minimumSignificantDigits: 1,
-                        maximumSignificantDigits: 21
-                    }),
-                    c = u.formatToParts(-10000.111),
-                    d = u.formatToParts(10000.111),
-                    f = m.map((e) => u.formatToParts(e)),
-                    _ = null !== (l = null === (i = c.find((e) => 'minusSign' === e.type)) || void 0 === i ? void 0 : i.value) && void 0 !== l ? l : '-',
-                    p = null === (a = d.find((e) => 'plusSign' === e.type)) || void 0 === a ? void 0 : a.value;
-                !p && ((null == r ? void 0 : r.signDisplay) === 'exceptZero' || (null == r ? void 0 : r.signDisplay) === 'always') && (p = '+');
-                let g =
-                        null ===
-                            (s = new Intl.NumberFormat(e, {
-                                ...n,
-                                minimumFractionDigits: 2,
-                                maximumFractionDigits: 2
-                            })
-                                .formatToParts(0.001)
-                                .find((e) => 'decimal' === e.type)) || void 0 === s
-                            ? void 0
-                            : s.value,
-                    v = null === (o = c.find((e) => 'group' === e.type)) || void 0 === o ? void 0 : o.value,
-                    I = [...new Set([...c.filter((e) => !h.has(e.type)).map((e) => E(e.value)), ...f.flatMap((e) => e.filter((e) => !h.has(e.type)).map((e) => E(e.value)))])].sort((e, t) => t.length - e.length),
-                    T = 0 === I.length ? RegExp('[\\p{White_Space}]', 'gu') : RegExp(`${I.join('|')}|[\\p{White_Space}]`, 'gu'),
-                    b = [...new Intl.NumberFormat(n.locale, { useGrouping: !1 }).format(9876543210)].reverse(),
-                    S = new Map(b.map((e, t) => [e, t])),
-                    y = RegExp(`[${b.join('')}]`, 'g');
-                return {
-                    minusSign: _,
-                    plusSign: p,
-                    decimal: g,
-                    group: v,
-                    literals: T,
-                    numeral: y,
-                    index: (e) => String(S.get(e))
-                };
-            })(e, this.formatter, this.options, t)),
-            'percent' === this.options.style && ((null !== (n = this.options.minimumFractionDigits) && void 0 !== n ? n : 0) > 18 || (null !== (r = this.options.maximumFractionDigits) && void 0 !== r ? r : 0) > 18) && console.warn('NumberParser cannot handle percentages with greater than 18 decimal places, please reduce the number in your options.');
+    constructor(e, n = {}) {
+        var r, i;
+        (this.locale = e), (this.formatter = new Intl.NumberFormat(e, n)), (this.options = this.formatter.resolvedOptions()), (this.symbols = I(e, this.formatter, this.options, n)), 'percent' === this.options.style && ((null !== (r = this.options.minimumFractionDigits) && void 0 !== r ? r : 0) > 18 || (null !== (i = this.options.maximumFractionDigits) && void 0 !== i ? i : 0) > 18) && console.warn('NumberParser cannot handle percentages with greater than 18 decimal places, please reduce the number in your options.');
     }
 }
-let h = new Set(['decimal', 'fraction', 'integer', 'minusSign', 'plusSign', 'group']),
-    m = [0, 4, 2, 1, 11, 20, 3, 7, 100, 21, 0.1, 1.1];
-function g(e, t, n) {
-    return e.replaceAll ? e.replaceAll(t, n) : e.split(t).join(n);
+let E = new Set(['decimal', 'fraction', 'integer', 'minusSign', 'plusSign', 'group']),
+    v = [0, 4, 2, 1, 11, 20, 3, 7, 100, 21, 0.1, 1.1];
+function I(e, n, r, i) {
+    var a, s, o, l, u;
+    let c = new Intl.NumberFormat(e, {
+            ...r,
+            minimumSignificantDigits: 1,
+            maximumSignificantDigits: 21
+        }),
+        d = c.formatToParts(-10000.111),
+        f = c.formatToParts(10000.111),
+        _ = v.map((e) => c.formatToParts(e)),
+        h = null !== (u = null === (a = d.find((e) => 'minusSign' === e.type)) || void 0 === a ? void 0 : a.value) && void 0 !== u ? u : '-',
+        p = null === (s = f.find((e) => 'plusSign' === e.type)) || void 0 === s ? void 0 : s.value;
+    !p && ((null == i ? void 0 : i.signDisplay) === 'exceptZero' || (null == i ? void 0 : i.signDisplay) === 'always') && (p = '+');
+    let m =
+            null ===
+                (o = new Intl.NumberFormat(e, {
+                    ...r,
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                })
+                    .formatToParts(0.001)
+                    .find((e) => 'decimal' === e.type)) || void 0 === o
+                ? void 0
+                : o.value,
+        g = null === (l = d.find((e) => 'group' === e.type)) || void 0 === l ? void 0 : l.value,
+        I = [...new Set([...d.filter((e) => !E.has(e.type)).map((e) => b(e.value)), ..._.flatMap((e) => e.filter((e) => !E.has(e.type)).map((e) => b(e.value)))])].sort((e, n) => n.length - e.length),
+        T = 0 === I.length ? RegExp('[\\p{White_Space}]', 'gu') : RegExp(`${I.join('|')}|[\\p{White_Space}]`, 'gu'),
+        y = [...new Intl.NumberFormat(r.locale, { useGrouping: !1 }).format(9876543210)].reverse(),
+        S = new Map(y.map((e, n) => [e, n]));
+    return {
+        minusSign: h,
+        plusSign: p,
+        decimal: m,
+        group: g,
+        literals: T,
+        numeral: RegExp(`[${y.join('')}]`, 'g'),
+        index: (e) => String(S.get(e))
+    };
 }
-function E(e) {
+function T(e, n, r) {
+    return e.replaceAll ? e.replaceAll(n, r) : e.split(n).join(r);
+}
+function b(e) {
     return e.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }

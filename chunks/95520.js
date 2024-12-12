@@ -1,9 +1,10 @@
-Object.defineProperty(t, '__esModule', { value: !0 });
-t.default = function (e, t) {
-    var n = {},
-        r = function (e) {
-            var t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-            n[e] = t;
+Object.defineProperty(n, '__esModule', { value: !0 });
+var r = function (e, n) {
+    var r = {},
+        i = function (e) {
+            var n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+            r[e] = n;
         };
-    return 0 === e && r('first-child'), e === t - 1 && r('last-child'), (0 === e || e % 2 == 0) && r('even'), 1 === Math.abs(e % 2) && r('odd'), r('nth-child', e), n;
+    return 0 === e && i('first-child'), e === n - 1 && i('last-child'), (0 === e || e % 2 == 0) && i('even'), 1 === Math.abs(e % 2) && i('odd'), i('nth-child', e), r;
 };
+n.default = r;

@@ -1,6 +1,7 @@
-var r = n(208066);
-t.Z = function (e) {
-    return function (t) {
-        return (0, r.Z)(t, e);
+var i = r(208066);
+function a(e) {
+    return function (n) {
+        return (0, i.Z)(n, e);
     };
-};
+}
+n.Z = a;

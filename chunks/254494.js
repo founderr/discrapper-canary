@@ -1,72 +1,73 @@
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(218867),
-    l = n(28546),
-    u = n(981631),
-    c = n(670638);
-let d = (e) => {
-    let { activeIndex: t, categoryListRef: n, getScrollOffsetForIndex: r } = e,
-        a = i.useRef(u.xAR),
-        s = i.useRef(t);
-    return (
-        i.useEffect(() => {
-            null != t &&
-                t !== s.current &&
-                (a.current !== u.xAR && window.cancelAnimationFrame(a.current),
-                (a.current = window.requestAnimationFrame(() => {
-                    var e;
-                    if (null == n.current) return;
-                    let i = t > (null !== (e = s.current) && void 0 !== e ? e : -1),
-                        o = null != r ? r(t, i) : 0;
-                    n.current.scrollRowIntoView(t, {
-                        animate: !0,
-                        offset: o
-                    }),
-                        (a.current = u.xAR),
-                        (s.current = t);
-                })));
-        }, [t, n, r]),
-        { categoryListRef: n }
-    );
-};
-t.Z = function (e) {
-    let { categoryListRef: t, expressionsListRef: n, categories: a, store: u, children: f, className: _, listPadding: p, rowCount: h, getScrollOffsetForIndex: m, categoryHeight: g, onScroll: E, renderCategoryListItem: v, rowCountBySection: I, renderSection: T } = e,
-        b = u.useStore((e) => e.activeCategoryIndex);
-    d({
-        activeIndex: b,
-        categoryListRef: t,
-        getScrollOffsetForIndex: m
-    });
-    let S = i.useCallback(
-            (e) => {
-                let { searchQuery: t } = l.Iu.getState();
-                if ((u.setActiveCategoryIndex(e), '' !== t)) (0, l.ql)('');
-                else {
-                    var r;
-                    null === (r = n.current) || void 0 === r || r.scrollToSectionTop(e);
-                }
-            },
-            [n, u]
-        ),
-        y = i.useCallback((e) => v(a[e], e, () => S(e), b === e), [b, a, S, v]),
-        A = i.useMemo(() => ('function' == typeof g ? (e) => g(a[e], e) : g), [a, g]);
-    return (0, r.jsxs)('div', {
-        className: s()(c.wrapper, _),
-        children: [
-            (0, r.jsx)(o.Z, {
-                listPadding: p,
-                onScroll: E,
-                ref: t,
-                renderRow: y,
-                rowCount: h,
-                rowHeight: A,
-                hideScrollbar: !0,
-                rowCountBySection: I,
-                renderSection: T
-            }),
-            null == f ? void 0 : f(S)
-        ]
-    });
-};
+var i = r(200651),
+    a = r(192379),
+    s = r(120356),
+    o = r.n(s),
+    l = r(218867),
+    u = r(28546),
+    c = r(981631),
+    d = r(670638);
+let f = (e) => {
+        let { activeIndex: n, categoryListRef: r, getScrollOffsetForIndex: i } = e,
+            s = a.useRef(c.xAR),
+            o = a.useRef(n);
+        return (
+            a.useEffect(() => {
+                null != n &&
+                    n !== o.current &&
+                    (s.current !== c.xAR && window.cancelAnimationFrame(s.current),
+                    (s.current = window.requestAnimationFrame(() => {
+                        var e;
+                        if (null == r.current) return;
+                        let a = n > (null !== (e = o.current) && void 0 !== e ? e : -1),
+                            l = null != i ? i(n, a) : 0;
+                        r.current.scrollRowIntoView(n, {
+                            animate: !0,
+                            offset: l
+                        }),
+                            (s.current = c.xAR),
+                            (o.current = n);
+                    })));
+            }, [n, r, i]),
+            { categoryListRef: r }
+        );
+    },
+    _ = function (e) {
+        let { categoryListRef: n, expressionsListRef: r, categories: s, store: c, children: _, className: h, listPadding: p, rowCount: m, getScrollOffsetForIndex: g, categoryHeight: E, onScroll: v, renderCategoryListItem: I, rowCountBySection: T, renderSection: b } = e,
+            y = c.useStore((e) => e.activeCategoryIndex);
+        f({
+            activeIndex: y,
+            categoryListRef: n,
+            getScrollOffsetForIndex: g
+        });
+        let S = a.useCallback(
+                (e) => {
+                    let { searchQuery: n } = u.Iu.getState();
+                    if ((c.setActiveCategoryIndex(e), '' !== n)) (0, u.ql)('');
+                    else {
+                        var i;
+                        null === (i = r.current) || void 0 === i || i.scrollToSectionTop(e);
+                    }
+                },
+                [r, c]
+            ),
+            A = a.useCallback((e) => I(s[e], e, () => S(e), y === e), [y, s, S, I]),
+            N = a.useMemo(() => ('function' == typeof E ? (e) => E(s[e], e) : E), [s, E]);
+        return (0, i.jsxs)('div', {
+            className: o()(d.wrapper, h),
+            children: [
+                (0, i.jsx)(l.Z, {
+                    listPadding: p,
+                    onScroll: v,
+                    ref: n,
+                    renderRow: A,
+                    rowCount: m,
+                    rowHeight: N,
+                    hideScrollbar: !0,
+                    rowCountBySection: T,
+                    renderSection: b
+                }),
+                null == _ ? void 0 : _(S)
+            ]
+        });
+    };
+n.Z = _;

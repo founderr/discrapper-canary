@@ -1,4 +1,4 @@
-t.Z = {
+let r = {
     aa: 'aa-ET',
     af: 'af-ZA',
     ak: 'ak-GH',
@@ -137,3 +137,4 @@ t.Z = {
     zh: 'zh-CN',
     zu: 'zu-ZA'
 };
+n.Z = r;

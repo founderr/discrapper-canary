@@ -1,51 +1,52 @@
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(565138),
-    s = n(592125),
-    o = n(430824),
-    l = n(388032),
-    u = n(411773);
-t.Z = (e) => {
-    let { entry: t } = e,
-        n = s.Z.getChannel(t.channelId);
-    if (null == n) return null;
-    let c = o.Z.getGuild(n.guild_id);
-    return null == c
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(565138),
+    o = r(592125),
+    l = r(430824),
+    u = r(388032),
+    c = r(411773);
+let d = (e) => {
+    let { entry: n } = e,
+        r = o.Z.getChannel(n.channelId);
+    if (null == r) return null;
+    let d = l.Z.getGuild(r.guild_id);
+    return null == d
         ? null
-        : (0, r.jsxs)('div', {
-              className: u.container,
+        : (0, i.jsxs)('div', {
+              className: c.container,
               children: [
-                  (0, r.jsx)(i.Heading, {
-                      className: u.header,
+                  (0, i.jsx)(a.Heading, {
+                      className: c.header,
                       variant: 'heading-sm/semibold',
-                      children: l.intl.string(l.t.nTe4HB)
+                      children: u.intl.string(u.t.nTe4HB)
                   }),
-                  (0, r.jsxs)('div', {
-                      className: u.guildContainer,
+                  (0, i.jsxs)('div', {
+                      className: c.guildContainer,
                       children: [
-                          (0, r.jsxs)('div', {
-                              className: u.hubInfo,
+                          (0, i.jsxs)('div', {
+                              className: c.hubInfo,
                               children: [
-                                  (0, r.jsx)(a.Z, {
-                                      guild: c,
-                                      size: a.Z.Sizes.MINI,
-                                      className: u.hubIcon
+                                  (0, i.jsx)(s.Z, {
+                                      guild: d,
+                                      size: s.Z.Sizes.MINI,
+                                      className: c.hubIcon
                                   }),
-                                  (0, r.jsx)(i.Text, {
+                                  (0, i.jsx)(a.Text, {
                                       color: 'header-secondary',
                                       variant: 'text-sm/normal',
-                                      children: c.name
+                                      children: d.name
                                   })
                               ]
                           }),
-                          (0, r.jsx)(i.Text, {
+                          (0, i.jsx)(a.Text, {
                               variant: 'text-md/semibold',
                               color: 'header-primary',
-                              children: t.name
+                              children: n.name
                           })
                       ]
                   })
               ]
           });
 };
+n.Z = d;

@@ -1,71 +1,75 @@
-n(47120);
-var r,
-    i = n(442837),
-    a = n(570140),
-    s = n(374023),
-    o = n(188785);
-function l(e, t, n) {
+var i,
+    a = r(47120);
+var s = r(442837),
+    o = r(570140),
+    l = r(374023),
+    u = r(188785);
+function c(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let u = new Set(),
-    c = {};
-class d extends (r = i.ZP.PersistedStore) {
+let d = new Set(),
+    f = {};
+function _(e) {
+    let { location: n } = e;
+    if (d.has(n)) return !1;
+    d.add(n);
+}
+function h(e) {
+    let { location: n, enabled: r } = e;
+    f[n] = r;
+}
+function p(e) {
+    let { location: n } = e;
+    if (null == f[n]) return !1;
+    delete f[n];
+}
+function m(e) {
+    let { hiddenHotspots: n } = e;
+    d = new Set(n);
+}
+class g extends (i = s.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (Array.isArray(e.hiddenHotspots) && (u = new Set(e.hiddenHotspots)), null != e.hotspotOverrides && (c = e.hotspotOverrides));
+        null != e && (Array.isArray(e.hiddenHotspots) && (d = new Set(e.hiddenHotspots)), null != e.hotspotOverrides && (f = e.hotspotOverrides));
     }
     hasHotspot(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = !t && c[e];
-        return !(o.a || s.s.isDisallowPopupsSet()) && (n || !u.has(e));
+        let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            r = !n && f[e];
+        return !(u.a || l.s.isDisallowPopupsSet()) && (r || !d.has(e));
     }
     hasHiddenHotspot(e) {
-        return u.has(e);
+        return d.has(e);
     }
     getHotspotOverride(e) {
-        return c[e];
+        return f[e];
     }
     getState() {
         return {
-            hiddenHotspots: u,
-            hotspotOverrides: c
+            hiddenHotspots: d,
+            hotspotOverrides: f
         };
     }
 }
-l(d, 'displayName', 'HotspotStore'),
-    l(d, 'persistKey', 'hotspots'),
-    l(d, 'migrations', [
+c(g, 'displayName', 'HotspotStore'),
+    c(g, 'persistKey', 'hotspots'),
+    c(g, 'migrations', [
         (e) => ({
             hiddenHotspots: null != e ? e : [],
             hotspotOverrides: {}
         })
     ]),
-    (t.Z = new d(a.Z, {
-        OVERLAY_INITIALIZE: function (e) {
-            let { hiddenHotspots: t } = e;
-            u = new Set(t);
-        },
-        HOTSPOT_HIDE: function (e) {
-            let { location: t } = e;
-            if (u.has(t)) return !1;
-            u.add(t);
-        },
-        HOTSPOT_OVERRIDE_SET: function (e) {
-            let { location: t, enabled: n } = e;
-            c[t] = n;
-        },
-        HOTSPOT_OVERRIDE_CLEAR: function (e) {
-            let { location: t } = e;
-            if (null == c[t]) return !1;
-            delete c[t];
-        }
+    (n.Z = new g(o.Z, {
+        OVERLAY_INITIALIZE: m,
+        HOTSPOT_HIDE: _,
+        HOTSPOT_OVERRIDE_SET: h,
+        HOTSPOT_OVERRIDE_CLEAR: p
     }));

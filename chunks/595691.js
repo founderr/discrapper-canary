@@ -1,11 +1,13 @@
-n.d(t, {
+r.d(n, {
     A: function () {
-        return a;
+        return s;
     }
 });
-var r = n(641862),
-    i = n(721056),
-    a = function (e) {
-        var t = (0, r.u)(e);
-        (this.target = e), (this.contentRect = t.contentRect), (this.borderBoxSize = (0, i.v)([t.borderBoxSize])), (this.contentBoxSize = (0, i.v)([t.contentBoxSize])), (this.devicePixelContentBoxSize = (0, i.v)([t.devicePixelContentBoxSize]));
-    };
+var i = r(641862),
+    a = r(721056),
+    s = (function () {
+        return function e(e) {
+            var n = (0, i.u)(e);
+            (this.target = e), (this.contentRect = n.contentRect), (this.borderBoxSize = (0, a.v)([n.borderBoxSize])), (this.contentBoxSize = (0, a.v)([n.contentBoxSize])), (this.devicePixelContentBoxSize = (0, a.v)([n.devicePixelContentBoxSize]));
+        };
+    })();

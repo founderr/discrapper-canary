@@ -1,64 +1,59 @@
-n.d(t, {
+r.d(n, {
     h: function () {
-        return m;
+        return g;
     }
 });
-var r = n(952265),
-    i = n(570140),
-    a = n(281956),
-    s = n(200498),
-    o = n(368442),
-    l = n(672339),
-    u = n(653175),
-    c = n(592125),
-    d = n(430824),
-    f = n(607744),
-    _ = n(944486),
-    p = n(979651),
-    h = n(934415);
-let m = function (e, t) {
-    let m = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        g = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        E = c.Z.getChannel(e),
-        v = p.Z.getCurrentClientVoiceChannelId(null != t ? t : null) === e,
-        I = null != E ? f.Z.getCheck(E.guild_id) : null;
-    if (!(null != t && (0, a.n)(t)) && (null == I || !!I.canChat || !!(0, s.jU)(E))) {
-        if (null != E && !v) {
-            let e = (0, h.rY)(E, p.Z, d.Z);
-            if (e && E.isGuildStageVoice() && (0, o.xJ)(E.id)) {
-                (0, r.ZD)(async () => {
-                    let { default: e } = await n.e('46398').then(n.bind(n, 523794));
-                    return (t) =>
+var i = r(952265),
+    a = r(570140),
+    s = r(281956),
+    o = r(200498),
+    l = r(368442),
+    u = r(672339),
+    c = r(653175),
+    d = r(592125),
+    f = r(430824),
+    _ = r(607744),
+    h = r(944486),
+    p = r(979651),
+    m = r(934415);
+let g = function (e, n) {
+    let g = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        E = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        v = d.Z.getChannel(e),
+        I = p.Z.getCurrentClientVoiceChannelId(null != n ? n : null) === e,
+        T = null != v ? _.Z.getCheck(v.guild_id) : null;
+    if (!(null != n && (0, s.n)(n)) && (null == T || !!T.canChat || !!(0, o.jU)(v))) {
+        if (null != v && !I) {
+            let e = (0, m.rY)(v, p.Z, f.Z);
+            if (e && v.isGuildStageVoice() && (0, l.xJ)(v.id)) {
+                (0, i.ZD)(async () => {
+                    let { default: e } = await r.e('46398').then(r.bind(r, 523794));
+                    return (n) =>
                         e({
-                            channel: E,
-                            ...t
+                            channel: v,
+                            ...n
                         });
                 });
                 return;
             }
             if (e) {
-                (0, r.ZD)(async () => {
-                    let { default: e } = await n.e('86465').then(n.bind(n, 997308));
-                    return (t) => e(t);
+                (0, i.ZD)(async () => {
+                    let { default: e } = await r.e('86465').then(r.bind(r, 997308));
+                    return (n) => e(n);
                 });
                 return;
             }
         }
-        m && (0, l.eH)();
-        (0, u.Z)(
-            function () {
-                i.Z.dispatch({
-                    type: 'VOICE_CHANNEL_SELECT',
-                    guildId: t,
-                    channelId: e,
-                    currentVoiceChannelId: _.Z.getVoiceChannelId(),
-                    video: m,
-                    stream: g
-                });
-            },
-            e,
-            g,
-            m
-        );
+        g && (0, u.eH)(), (0, c.Z)(b, e, E, g);
+    }
+    function b() {
+        a.Z.dispatch({
+            type: 'VOICE_CHANNEL_SELECT',
+            guildId: n,
+            channelId: e,
+            currentVoiceChannelId: h.Z.getVoiceChannelId(),
+            video: g,
+            stream: E
+        });
     }
 };

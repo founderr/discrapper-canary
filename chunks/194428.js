@@ -1,5 +1,6 @@
-var r = n(183952),
-    i = n(51329);
-t.Z = function (e) {
-    return (0, r.Z)(e, (0, i.Z)(e));
-};
+var i = r(183952),
+    a = r(51329);
+function s(e) {
+    return (0, i.Z)(e, (0, a.Z)(e));
+}
+n.Z = s;

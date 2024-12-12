@@ -1,57 +1,58 @@
-e.exports = function (e) {
-    let t = '[A-Za-z_][0-9A-Za-z_]*',
-        n = {
+function n(e) {
+    let n = '[A-Za-z_][0-9A-Za-z_]*',
+        r = {
             keyword: ['if', 'for', 'while', 'var', 'new', 'function', 'do', 'return', 'void', 'else', 'break'],
             literal: ['BackSlash', 'DoubleQuote', 'false', 'ForwardSlash', 'Infinity', 'NaN', 'NewLine', 'null', 'PI', 'SingleQuote', 'Tab', 'TextFormatting', 'true', 'undefined'],
             built_in: ['Abs', 'Acos', 'All', 'Angle', 'Any', 'Area', 'AreaGeodetic', 'Array', 'Asin', 'Atan', 'Atan2', 'Attachments', 'Average', 'Back', 'Bearing', 'Boolean', 'Buffer', 'BufferGeodetic', 'Ceil', 'Centroid', 'Clip', 'Concatenate', 'Console', 'Constrain', 'Contains', 'ConvertDirection', 'Cos', 'Count', 'Crosses', 'Cut', 'Date', 'DateAdd', 'DateDiff', 'Day', 'Decode', 'DefaultValue', 'Densify', 'DensifyGeodetic', 'Dictionary', 'Difference', 'Disjoint', 'Distance', 'DistanceGeodetic', 'Distinct', 'Domain', 'DomainCode', 'DomainName', 'EnvelopeIntersects', 'Equals', 'Erase', 'Exp', 'Expects', 'Extent', 'Feature', 'FeatureSet', 'FeatureSetByAssociation', 'FeatureSetById', 'FeatureSetByName', 'FeatureSetByPortalItem', 'FeatureSetByRelationshipName', 'Filter', 'Find', 'First', 'Floor', 'FromCharCode', 'FromCodePoint', 'FromJSON', 'GdbVersion', 'Generalize', 'Geometry', 'GetFeatureSet', 'GetUser', 'GroupBy', 'Guid', 'Hash', 'HasKey', 'Hour', 'IIf', 'Includes', 'IndexOf', 'Insert', 'Intersection', 'Intersects', 'IsEmpty', 'IsNan', 'ISOMonth', 'ISOWeek', 'ISOWeekday', 'ISOYear', 'IsSelfIntersecting', 'IsSimple', 'Left|0', 'Length', 'Length3D', 'LengthGeodetic', 'Log', 'Lower', 'Map', 'Max', 'Mean', 'Mid', 'Millisecond', 'Min', 'Minute', 'Month', 'MultiPartToSinglePart', 'Multipoint', 'NextSequenceValue', 'None', 'Now', 'Number', 'Offset|0', 'OrderBy', 'Overlaps', 'Point', 'Polygon', 'Polyline', 'Pop', 'Portal', 'Pow', 'Proper', 'Push', 'Random', 'Reduce', 'Relate', 'Replace', 'Resize', 'Reverse', 'Right|0', 'RingIsClockwise', 'Rotate', 'Round', 'Schema', 'Second', 'SetGeometry', 'Simplify', 'Sin', 'Slice', 'Sort', 'Splice', 'Split', 'Sqrt', 'Stdev', 'SubtypeCode', 'SubtypeName', 'Subtypes', 'Sum', 'SymmetricDifference', 'Tan', 'Text', 'Timestamp', 'ToCharCode', 'ToCodePoint', 'Today', 'ToHex', 'ToLocal', 'Top|0', 'Touches', 'ToUTC', 'TrackAccelerationAt', 'TrackAccelerationWindow', 'TrackCurrentAcceleration', 'TrackCurrentDistance', 'TrackCurrentSpeed', 'TrackCurrentTime', 'TrackDistanceAt', 'TrackDistanceWindow', 'TrackDuration', 'TrackFieldWindow', 'TrackGeometryWindow', 'TrackIndex', 'TrackSpeedAt', 'TrackSpeedWindow', 'TrackStartTime', 'TrackWindow', 'Trim', 'TypeOf', 'Union', 'Upper', 'UrlEncode', 'Variance', 'Week', 'Weekday', 'When', 'Within', 'Year']
         },
-        r = {
+        i = {
+            className: 'symbol',
+            begin: '\\$[datastore|feature|layer|map|measure|sourcefeature|sourcelayer|targetfeature|targetlayer|value|view]+'
+        },
+        a = {
             className: 'number',
             variants: [{ begin: '\\b(0[bB][01]+)' }, { begin: '\\b(0[oO][0-7]+)' }, { begin: e.C_NUMBER_RE }],
             relevance: 0
         },
-        i = {
+        s = {
             className: 'subst',
             begin: '\\$\\{',
             end: '\\}',
-            keywords: n,
+            keywords: r,
             contains: []
         },
-        a = {
+        o = {
             className: 'string',
             begin: '`',
             end: '`',
-            contains: [e.BACKSLASH_ESCAPE, i]
+            contains: [e.BACKSLASH_ESCAPE, s]
         };
-    i.contains = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, a, r, e.REGEXP_MODE];
-    let s = i.contains.concat([e.C_BLOCK_COMMENT_MODE, e.C_LINE_COMMENT_MODE]);
+    s.contains = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, o, a, e.REGEXP_MODE];
+    let l = s.contains.concat([e.C_BLOCK_COMMENT_MODE, e.C_LINE_COMMENT_MODE]);
     return {
         name: 'ArcGIS Arcade',
         case_insensitive: !0,
-        keywords: n,
+        keywords: r,
         contains: [
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,
-            a,
+            o,
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            {
-                className: 'symbol',
-                begin: '\\$[datastore|feature|layer|map|measure|sourcefeature|sourcelayer|targetfeature|targetlayer|value|view]+'
-            },
-            r,
+            i,
+            a,
             {
                 begin: /[{,]\s*/,
                 relevance: 0,
                 contains: [
                     {
-                        begin: t + '\\s*:',
+                        begin: n + '\\s*:',
                         returnBegin: !0,
                         relevance: 0,
                         contains: [
                             {
                                 className: 'attr',
-                                begin: t,
+                                begin: n,
                                 relevance: 0
                             }
                         ]
@@ -67,22 +68,22 @@ e.exports = function (e) {
                     e.REGEXP_MODE,
                     {
                         className: 'function',
-                        begin: '(\\(.*?\\)|' + t + ')\\s*=>',
+                        begin: '(\\(.*?\\)|' + n + ')\\s*=>',
                         returnBegin: !0,
                         end: '\\s*=>',
                         contains: [
                             {
                                 className: 'params',
                                 variants: [
-                                    { begin: t },
+                                    { begin: n },
                                     { begin: /\(\s*\)/ },
                                     {
                                         begin: /\(/,
                                         end: /\)/,
                                         excludeBegin: !0,
                                         excludeEnd: !0,
-                                        keywords: n,
-                                        contains: s
+                                        keywords: r,
+                                        contains: l
                                     }
                                 ]
                             }
@@ -98,7 +99,7 @@ e.exports = function (e) {
                 contains: [
                     e.inherit(e.TITLE_MODE, {
                         className: 'title.function',
-                        begin: t
+                        begin: n
                     }),
                     {
                         className: 'params',
@@ -106,7 +107,7 @@ e.exports = function (e) {
                         end: /\)/,
                         excludeBegin: !0,
                         excludeEnd: !0,
-                        contains: s
+                        contains: l
                     }
                 ],
                 illegal: /\[|%/
@@ -115,4 +116,5 @@ e.exports = function (e) {
         ],
         illegal: /#(?!!)/
     };
-};
+}
+e.exports = n;

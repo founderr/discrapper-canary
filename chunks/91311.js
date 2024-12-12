@@ -1,21 +1,21 @@
-n(47120);
-var r,
-    i = n(442837),
-    a = n(570140);
-function s(e, t, n) {
+var i,
+    a = r(47120);
+var s = r(442837),
+    o = r(570140);
+function l(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let o = {
+let u = {
         use_topic_dividers_in_chat: 'Use summary topics as divider content in chat instead of string formatted dates.',
         highlight_redesigned_icons: 'Highlight redesigned icons',
         alt_clips_1: 'Use alt clip icon 1',
@@ -31,39 +31,36 @@ let o = {
         ss03: 'Italic - full height forms (W,M)',
         ss04: 'Italic - alternate figures (3,4,5,6,7,8,9)'
     },
-    l = {};
-class u extends (r = i.ZP.DeviceSettingsStore) {
+    c = {};
+function d(e) {
+    c[e.toggle] = e.value;
+}
+class f extends (i = s.ZP.DeviceSettingsStore) {
     getUserAgnosticState() {
-        return { toggleStates: l };
+        return { toggleStates: c };
     }
     initialize(e) {
-        for (var t in o) {
-            var n, r;
-            let i = null !== (r = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== r && r;
-            l[t] = i;
+        for (var n in u) {
+            var r, i;
+            let a = null !== (i = null == e ? void 0 : null === (r = e.toggleStates) || void 0 === r ? void 0 : r[n]) && void 0 !== i && i;
+            c[n] = a;
         }
     }
     get(e) {
-        var t;
-        return null !== (t = l[e]) && void 0 !== t && t;
+        var n;
+        return null !== (n = c[e]) && void 0 !== n && n;
     }
-    set(e, t) {
-        return (l[e] = t), t;
+    set(e, n) {
+        return (c[e] = n), n;
     }
     all() {
-        return l;
+        return c;
     }
     allWithDescriptions() {
-        return Object.entries(l).map((e) => {
-            let [t, n] = e;
-            return [t, n, o[t]];
+        return Object.entries(c).map((e) => {
+            let [n, r] = e;
+            return [n, r, u[n]];
         });
     }
 }
-s(u, 'displayName', 'DevToolsDesignTogglesStore'),
-    s(u, 'persistKey', 'DevToolsDesignTogglesStore'),
-    (t.Z = new u(a.Z, {
-        DEV_TOOLS_DESIGN_TOGGLE_WEB_SET: function (e) {
-            l[e.toggle] = e.value;
-        }
-    }));
+l(f, 'displayName', 'DevToolsDesignTogglesStore'), l(f, 'persistKey', 'DevToolsDesignTogglesStore'), (n.Z = new f(o.Z, { DEV_TOOLS_DESIGN_TOGGLE_WEB_SET: d }));

@@ -1,35 +1,36 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return h;
+        return m;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(442837),
-    a = n(287734),
-    s = n(359110),
-    o = n(922482),
-    l = n(496675),
-    u = n(979651),
-    c = n(652853),
-    d = n(475413),
-    f = n(228168),
-    _ = n(981631),
-    p = n(388032);
-function h(e) {
-    let { channel: t, onAction: n, onClose: h } = e,
-        { profileType: m } = (0, c.z)(),
-        g = (0, i.e7)([u.Z], () => u.Z.isInChannel(t.id)),
-        E = (0, i.e7)([l.Z], () => l.Z.canBasicChannel(_.S7T.CONNECT, t)),
-        v = t.isGuildStageVoice();
-    return E
-        ? (0, r.jsx)(d.tG, {
-              text: v ? (g && m === f.y0.FULL_SIZE ? p.intl.string(p.t['3xjX0d']) : g ? p.intl.string(p.t.g6pBAg) : m === f.y0.FULL_SIZE ? p.intl.string(p.t.VJlc0d) : p.intl.string(p.t['7vb2cX'])) : g && m === f.y0.FULL_SIZE ? p.intl.string(p.t['3xjX0d']) : g ? p.intl.string(p.t.iOqmAQ) : m === f.y0.FULL_SIZE ? p.intl.string(p.t.VJlc0d) : p.intl.string(p.t['96ANUF']),
-              themeColor: g ? 'secondary' : 'primary',
-              fullWidth: !0,
-              onClick: () => {
-                  null == n || n({ action: 'PRESS_JOIN_CALL_BUTTON' }), v ? (0, o.Cq)(t) : (a.default.selectVoiceChannel(t.id), (0, s.Kh)(t.id)), null == h || h();
-              }
-          })
-        : null;
+var i = r(200651);
+r(192379);
+var a = r(442837),
+    s = r(287734),
+    o = r(359110),
+    l = r(922482),
+    u = r(496675),
+    c = r(979651),
+    d = r(652853),
+    f = r(475413),
+    _ = r(228168),
+    h = r(981631),
+    p = r(388032);
+function m(e) {
+    let { channel: n, onAction: r, onClose: m } = e,
+        { profileType: g } = (0, d.z)(),
+        E = (0, a.e7)([c.Z], () => c.Z.isInChannel(n.id)),
+        v = (0, a.e7)([u.Z], () => u.Z.canBasicChannel(h.S7T.CONNECT, n)),
+        I = n.isGuildStageVoice();
+    if (!v) return null;
+    let T = () => (E && g === _.y0.FULL_SIZE ? p.intl.string(p.t['3xjX0d']) : E ? p.intl.string(p.t.iOqmAQ) : g === _.y0.FULL_SIZE ? p.intl.string(p.t.VJlc0d) : p.intl.string(p.t['96ANUF'])),
+        b = () => (E && g === _.y0.FULL_SIZE ? p.intl.string(p.t['3xjX0d']) : E ? p.intl.string(p.t.g6pBAg) : g === _.y0.FULL_SIZE ? p.intl.string(p.t.VJlc0d) : p.intl.string(p.t['7vb2cX']));
+    return (0, i.jsx)(f.tG, {
+        text: I ? b() : T(),
+        themeColor: E ? 'secondary' : 'primary',
+        fullWidth: !0,
+        onClick: () => {
+            null == r || r({ action: 'PRESS_JOIN_CALL_BUTTON' }), I ? (0, l.Cq)(n) : (s.default.selectVoiceChannel(n.id), (0, o.Kh)(n.id)), null == m || m();
+        }
+    });
 }

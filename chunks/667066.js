@@ -1,14 +1,16 @@
-var r = n(657398),
-    i = n(708187),
-    a = n(389109),
-    s = Object.prototype,
-    o = Function.prototype.toString,
-    l = s.hasOwnProperty,
-    u = o.call(Object);
-e.exports = function (e) {
-    if (!a(e) || '[object Object]' != r(e)) return !1;
-    var t = i(e);
-    if (null === t) return !0;
-    var n = l.call(t, 'constructor') && t.constructor;
-    return 'function' == typeof n && n instanceof n && o.call(n) == u;
-};
+var i = r(657398),
+    a = r(708187),
+    s = r(389109),
+    o = '[object Object]',
+    l = Object.prototype,
+    u = Function.prototype.toString,
+    c = l.hasOwnProperty,
+    d = u.call(Object);
+function f(e) {
+    if (!s(e) || i(e) != o) return !1;
+    var n = a(e);
+    if (null === n) return !0;
+    var r = c.call(n, 'constructor') && n.constructor;
+    return 'function' == typeof r && r instanceof r && u.call(r) == d;
+}
+e.exports = f;

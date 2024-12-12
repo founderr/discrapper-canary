@@ -1,127 +1,128 @@
-let r = n(689118),
-    i = n(988324).Buffer,
-    a = n(206424),
-    s = n(375990);
-function o(e) {
-    (this.enc = 'der'), (this.name = e.name), (this.entity = e), (this.tree = new l()), this.tree._init(e.body);
-}
+let i = r(689118),
+    a = r(988324).Buffer,
+    s = r(206424),
+    o = r(375990);
 function l(e) {
-    a.call(this, 'der', e);
+    (this.enc = 'der'), (this.name = e.name), (this.entity = e), (this.tree = new u()), this.tree._init(e.body);
 }
 function u(e) {
+    s.call(this, 'der', e);
+}
+function c(e) {
     return e < 10 ? '0' + e : e;
 }
-(e.exports = o),
-    (o.prototype.encode = function (e, t) {
-        return this.tree._encode(e, t).join();
+function d(e, n, r, i) {
+    let a;
+    if (('seqof' === e ? (e = 'seq') : 'setof' === e && (e = 'set'), o.tagByName.hasOwnProperty(e))) a = o.tagByName[e];
+    else {
+        if ('number' != typeof e || (0 | e) !== e) return i.error('Unknown tag: ' + e);
+        a = e;
+    }
+    return a >= 31 ? i.error('Multi-octet tag encoding unsupported') : (!n && (a |= 32), (a |= o.tagClassByName[r || 'universal'] << 6));
+}
+(e.exports = l),
+    (l.prototype.encode = function (e, n) {
+        return this.tree._encode(e, n).join();
     }),
-    r(l, a),
-    (l.prototype._encodeComposite = function (e, t, n, r) {
-        let a = (function (e, t, n, r) {
-            let i;
-            if (('seqof' === e ? (e = 'seq') : 'setof' === e && (e = 'set'), s.tagByName.hasOwnProperty(e))) i = s.tagByName[e];
-            else {
-                if ('number' != typeof e || (0 | e) !== e) return r.error('Unknown tag: ' + e);
-                i = e;
-            }
-            return i >= 31 ? r.error('Multi-octet tag encoding unsupported') : (!t && (i |= 32), (i |= s.tagClassByName[n || 'universal'] << 6));
-        })(e, t, n, this.reporter);
-        if (r.length < 128) {
-            let e = i.alloc(2);
-            return (e[0] = a), (e[1] = r.length), this._createEncoderBuffer([e, r]);
+    i(u, s),
+    (u.prototype._encodeComposite = function (e, n, r, i) {
+        let s = d(e, n, r, this.reporter);
+        if (i.length < 128) {
+            let e = a.alloc(2);
+            return (e[0] = s), (e[1] = i.length), this._createEncoderBuffer([e, i]);
         }
         let o = 1;
-        for (let e = r.length; e >= 256; e >>= 8) o++;
-        let l = i.alloc(2 + o);
-        (l[0] = a), (l[1] = 128 | o);
-        for (let e = 1 + o, t = r.length; t > 0; e--, t >>= 8) l[e] = 255 & t;
-        return this._createEncoderBuffer([l, r]);
+        for (let e = i.length; e >= 256; e >>= 8) o++;
+        let l = a.alloc(2 + o);
+        (l[0] = s), (l[1] = 128 | o);
+        for (let e = 1 + o, n = i.length; n > 0; e--, n >>= 8) l[e] = 255 & n;
+        return this._createEncoderBuffer([l, i]);
     }),
-    (l.prototype._encodeStr = function (e, t) {
-        if ('bitstr' === t) return this._createEncoderBuffer([0 | e.unused, e.data]);
-        if ('bmpstr' === t) {
-            let t = i.alloc(2 * e.length);
-            for (let n = 0; n < e.length; n++) t.writeUInt16BE(e.charCodeAt(n), 2 * n);
-            return this._createEncoderBuffer(t);
+    (u.prototype._encodeStr = function (e, n) {
+        if ('bitstr' === n) return this._createEncoderBuffer([0 | e.unused, e.data]);
+        if ('bmpstr' === n) {
+            let n = a.alloc(2 * e.length);
+            for (let r = 0; r < e.length; r++) n.writeUInt16BE(e.charCodeAt(r), 2 * r);
+            return this._createEncoderBuffer(n);
         }
-        if ('numstr' === t) return this._isNumstr(e) ? this._createEncoderBuffer(e) : this.reporter.error('Encoding of string type: numstr supports only digits and space');
-        else if ('printstr' === t) return this._isPrintstr(e) ? this._createEncoderBuffer(e) : this.reporter.error('Encoding of string type: printstr supports only latin upper and lower case letters, digits, space, apostrophe, left and rigth parenthesis, plus sign, comma, hyphen, dot, slash, colon, equal sign, question mark');
-        else if (/str$/.test(t)) return this._createEncoderBuffer(e);
-        else if ('objDesc' === t) return this._createEncoderBuffer(e);
-        else return this.reporter.error('Encoding of string type: ' + t + ' unsupported');
+        if ('numstr' === n) return this._isNumstr(e) ? this._createEncoderBuffer(e) : this.reporter.error('Encoding of string type: numstr supports only digits and space');
+        else if ('printstr' === n) return this._isPrintstr(e) ? this._createEncoderBuffer(e) : this.reporter.error('Encoding of string type: printstr supports only latin upper and lower case letters, digits, space, apostrophe, left and rigth parenthesis, plus sign, comma, hyphen, dot, slash, colon, equal sign, question mark');
+        else if (/str$/.test(n)) return this._createEncoderBuffer(e);
+        else if ('objDesc' === n) return this._createEncoderBuffer(e);
+        else return this.reporter.error('Encoding of string type: ' + n + ' unsupported');
     }),
-    (l.prototype._encodeObjid = function (e, t, n) {
+    (u.prototype._encodeObjid = function (e, n, r) {
         if ('string' == typeof e) {
-            if (!t) return this.reporter.error('string objid given, but no values map found');
-            if (!t.hasOwnProperty(e)) return this.reporter.error('objid not found in values map');
-            e = t[e].split(/[\s.]+/g);
-            for (let t = 0; t < e.length; t++) e[t] |= 0;
+            if (!n) return this.reporter.error('string objid given, but no values map found');
+            if (!n.hasOwnProperty(e)) return this.reporter.error('objid not found in values map');
+            e = n[e].split(/[\s.]+/g);
+            for (let n = 0; n < e.length; n++) e[n] |= 0;
         } else if (Array.isArray(e)) {
             e = e.slice();
-            for (let t = 0; t < e.length; t++) e[t] |= 0;
+            for (let n = 0; n < e.length; n++) e[n] |= 0;
         }
         if (!Array.isArray(e)) return this.reporter.error('objid() should be either array or string, got: ' + JSON.stringify(e));
-        if (!n) {
+        if (!r) {
             if (e[1] >= 40) return this.reporter.error('Second objid identifier OOB');
             e.splice(0, 2, 40 * e[0] + e[1]);
         }
-        let r = 0;
-        for (let t = 0; t < e.length; t++) {
-            let n = e[t];
-            for (r++; n >= 128; n >>= 7) r++;
+        let i = 0;
+        for (let n = 0; n < e.length; n++) {
+            let r = e[n];
+            for (i++; r >= 128; r >>= 7) i++;
         }
-        let a = i.alloc(r),
-            s = a.length - 1;
-        for (let t = e.length - 1; t >= 0; t--) {
-            let n = e[t];
-            for (a[s--] = 127 & n; (n >>= 7) > 0; ) a[s--] = 128 | (127 & n);
+        let s = a.alloc(i),
+            o = s.length - 1;
+        for (let n = e.length - 1; n >= 0; n--) {
+            let r = e[n];
+            for (s[o--] = 127 & r; (r >>= 7) > 0; ) s[o--] = 128 | (127 & r);
         }
-        return this._createEncoderBuffer(a);
+        return this._createEncoderBuffer(s);
     }),
-    (l.prototype._encodeTime = function (e, t) {
-        let n;
-        let r = new Date(e);
-        return 'gentime' === t ? (n = [u(r.getUTCFullYear()), u(r.getUTCMonth() + 1), u(r.getUTCDate()), u(r.getUTCHours()), u(r.getUTCMinutes()), u(r.getUTCSeconds()), 'Z'].join('')) : 'utctime' === t ? (n = [u(r.getUTCFullYear() % 100), u(r.getUTCMonth() + 1), u(r.getUTCDate()), u(r.getUTCHours()), u(r.getUTCMinutes()), u(r.getUTCSeconds()), 'Z'].join('')) : this.reporter.error('Encoding ' + t + ' time is not supported yet'), this._encodeStr(n, 'octstr');
+    (u.prototype._encodeTime = function (e, n) {
+        let r;
+        let i = new Date(e);
+        return 'gentime' === n ? (r = [c(i.getUTCFullYear()), c(i.getUTCMonth() + 1), c(i.getUTCDate()), c(i.getUTCHours()), c(i.getUTCMinutes()), c(i.getUTCSeconds()), 'Z'].join('')) : 'utctime' === n ? (r = [c(i.getUTCFullYear() % 100), c(i.getUTCMonth() + 1), c(i.getUTCDate()), c(i.getUTCHours()), c(i.getUTCMinutes()), c(i.getUTCSeconds()), 'Z'].join('')) : this.reporter.error('Encoding ' + n + ' time is not supported yet'), this._encodeStr(r, 'octstr');
     }),
-    (l.prototype._encodeNull = function () {
+    (u.prototype._encodeNull = function () {
         return this._createEncoderBuffer('');
     }),
-    (l.prototype._encodeInt = function (e, t) {
+    (u.prototype._encodeInt = function (e, n) {
         if ('string' == typeof e) {
-            if (!t) return this.reporter.error('String int or enum given, but no values map');
-            if (!t.hasOwnProperty(e)) return this.reporter.error("Values map doesn't contain: " + JSON.stringify(e));
-            e = t[e];
+            if (!n) return this.reporter.error('String int or enum given, but no values map');
+            if (!n.hasOwnProperty(e)) return this.reporter.error("Values map doesn't contain: " + JSON.stringify(e));
+            e = n[e];
         }
-        if ('number' != typeof e && !i.isBuffer(e)) {
-            let t = e.toArray();
-            !e.sign && 128 & t[0] && t.unshift(0), (e = i.from(t));
+        if ('number' != typeof e && !a.isBuffer(e)) {
+            let n = e.toArray();
+            !e.sign && 128 & n[0] && n.unshift(0), (e = a.from(n));
         }
-        if (i.isBuffer(e)) {
-            let t = e.length;
-            0 === e.length && t++;
-            let n = i.alloc(t);
-            return e.copy(n), 0 === e.length && (n[0] = 0), this._createEncoderBuffer(n);
+        if (a.isBuffer(e)) {
+            let n = e.length;
+            0 === e.length && n++;
+            let r = a.alloc(n);
+            return e.copy(r), 0 === e.length && (r[0] = 0), this._createEncoderBuffer(r);
         }
         if (e < 128) return this._createEncoderBuffer(e);
         if (e < 256) return this._createEncoderBuffer([0, e]);
-        let n = 1;
-        for (let t = e; t >= 256; t >>= 8) n++;
-        let r = Array(n);
-        for (let t = r.length - 1; t >= 0; t--) (r[t] = 255 & e), (e >>= 8);
-        return 128 & r[0] && r.unshift(0), this._createEncoderBuffer(i.from(r));
+        let r = 1;
+        for (let n = e; n >= 256; n >>= 8) r++;
+        let i = Array(r);
+        for (let n = i.length - 1; n >= 0; n--) (i[n] = 255 & e), (e >>= 8);
+        return 128 & i[0] && i.unshift(0), this._createEncoderBuffer(a.from(i));
     }),
-    (l.prototype._encodeBool = function (e) {
+    (u.prototype._encodeBool = function (e) {
         return this._createEncoderBuffer(e ? 255 : 0);
     }),
-    (l.prototype._use = function (e, t) {
-        return 'function' == typeof e && (e = e(t)), e._getEncoder('der').tree;
+    (u.prototype._use = function (e, n) {
+        return 'function' == typeof e && (e = e(n)), e._getEncoder('der').tree;
     }),
-    (l.prototype._skipDefault = function (e, t, n) {
-        let r;
-        let i = this._baseState;
-        if (null === i.default) return !1;
-        let a = e.join();
-        if ((void 0 === i.defaultBuffer && (i.defaultBuffer = this._encodeValue(i.default, t, n).join()), a.length !== i.defaultBuffer.length)) return !1;
-        for (r = 0; r < a.length; r++) if (a[r] !== i.defaultBuffer[r]) return !1;
+    (u.prototype._skipDefault = function (e, n, r) {
+        let i;
+        let a = this._baseState;
+        if (null === a.default) return !1;
+        let s = e.join();
+        if ((void 0 === a.defaultBuffer && (a.defaultBuffer = this._encodeValue(a.default, n, r).join()), s.length !== a.defaultBuffer.length)) return !1;
+        for (i = 0; i < s.length; i++) if (s[i] !== a.defaultBuffer[i]) return !1;
         return !0;
     });

@@ -1,5 +1,5 @@
-e.exports = function (e) {
-    let t = {
+function n(e) {
+    let n = {
             className: 'variable',
             variants: [
                 {
@@ -9,13 +9,35 @@ e.exports = function (e) {
                 { begin: /\$[@%<?\^\+\*]/ }
             ]
         },
-        n = {
+        r = {
             className: 'string',
             begin: /"/,
             end: /"/,
-            contains: [e.BACKSLASH_ESCAPE, t]
+            contains: [e.BACKSLASH_ESCAPE, n]
         },
-        r = { begin: '^' + e.UNDERSCORE_IDENT_RE + '\\s*(?=[:+?]?=)' };
+        i = {
+            className: 'variable',
+            begin: /\$\([\w-]+\s/,
+            end: /\)/,
+            keywords: { built_in: 'subst patsubst strip findstring filter filter-out sort word wordlist firstword lastword dir notdir suffix basename addsuffix addprefix join wildcard realpath abspath error warning shell origin flavor foreach if or and call eval file value' },
+            contains: [n]
+        },
+        a = { begin: '^' + e.UNDERSCORE_IDENT_RE + '\\s*(?=[:+?]?=)' },
+        s = {
+            className: 'meta',
+            begin: /^\.PHONY:/,
+            end: /$/,
+            keywords: {
+                $pattern: /[\.\w]+/,
+                keyword: '.PHONY'
+            }
+        },
+        o = {
+            className: 'section',
+            begin: /^[^\s]+:/,
+            end: /$/,
+            contains: [n]
+        };
     return {
         name: 'Makefile',
         aliases: ['mk', 'mak', 'make'],
@@ -23,33 +45,7 @@ e.exports = function (e) {
             $pattern: /[\w-]+/,
             keyword: 'define endef undefine ifdef ifndef ifeq ifneq else endif include -include sinclude override export unexport private vpath'
         },
-        contains: [
-            e.HASH_COMMENT_MODE,
-            t,
-            n,
-            {
-                className: 'variable',
-                begin: /\$\([\w-]+\s/,
-                end: /\)/,
-                keywords: { built_in: 'subst patsubst strip findstring filter filter-out sort word wordlist firstword lastword dir notdir suffix basename addsuffix addprefix join wildcard realpath abspath error warning shell origin flavor foreach if or and call eval file value' },
-                contains: [t]
-            },
-            r,
-            {
-                className: 'meta',
-                begin: /^\.PHONY:/,
-                end: /$/,
-                keywords: {
-                    $pattern: /[\.\w]+/,
-                    keyword: '.PHONY'
-                }
-            },
-            {
-                className: 'section',
-                begin: /^[^\s]+:/,
-                end: /$/,
-                contains: [t]
-            }
-        ]
+        contains: [e.HASH_COMMENT_MODE, n, r, i, a, s, o]
     };
-};
+}
+e.exports = n;

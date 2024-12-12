@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function n(e) {
     return {
         name: 'MEL',
         keywords:
@@ -19,4 +19,5 @@ e.exports = function (e) {
             e.C_BLOCK_COMMENT_MODE
         ]
     };
-};
+}
+e.exports = n;

@@ -1,106 +1,115 @@
-n.d(t, {
+r.d(n, {
     x: function () {
-        return a;
+        return u;
     }
 });
-var r = n(239700),
-    i = n(192379);
-function a(e) {
-    var t;
-    let { isDisabled: n = !1, minValue: a = 0, maxValue: u = 100, numberFormatter: c, step: d = 1, orientation: f = 'horizontal' } = e,
-        _ = (0, i.useMemo)(() => {
-            let e = (u - a) / 10;
-            return Math.max((e = (0, r.N4)(e, 0, e + d, d)), d);
-        }, [d, u, a]),
-        p = (0, i.useMemo)(() => o(e.value), [e.value]),
-        h = (0, i.useMemo)(() => (null !== (t = o(e.defaultValue)) && void 0 !== t ? t : [a]), [e.defaultValue, a]),
-        m = l(e.value, e.defaultValue, e.onChange),
-        g = l(e.value, e.defaultValue, e.onChangeEnd),
-        [E, v] = (0, r.zk)(p, h, m),
-        [I, T] = (0, i.useState)(Array(E.length).fill(!1)),
-        b = (0, i.useRef)(Array(E.length).fill(!0)),
-        [S, y] = (0, i.useState)(void 0),
-        A = (0, i.useRef)(E),
-        N = (0, i.useRef)(I),
-        C = (e) => {
-            (A.current = e), v(e);
+var i = r(239700),
+    a = r(192379);
+let s = 0,
+    o = 100,
+    l = 1;
+function u(e) {
+    var n;
+    let { isDisabled: r = !1, minValue: u = s, maxValue: _ = o, numberFormatter: h, step: p = l, orientation: m = 'horizontal' } = e,
+        g = (0, a.useMemo)(() => {
+            let e = (_ - u) / 10;
+            return Math.max((e = (0, i.N4)(e, 0, e + p, p)), p);
+        }, [p, _, u]),
+        E = (0, a.useMemo)(() => d(e.value), [e.value]),
+        v = (0, a.useMemo)(() => (null !== (n = d(e.defaultValue)) && void 0 !== n ? n : [u]), [e.defaultValue, u]),
+        I = f(e.value, e.defaultValue, e.onChange),
+        T = f(e.value, e.defaultValue, e.onChangeEnd),
+        [b, y] = (0, i.zk)(E, v, I),
+        [S, A] = (0, a.useState)(Array(b.length).fill(!1)),
+        N = (0, a.useRef)(Array(b.length).fill(!0)),
+        [C, R] = (0, a.useState)(void 0),
+        O = (0, a.useRef)(b),
+        D = (0, a.useRef)(S),
+        L = (e) => {
+            (O.current = e), y(e);
         },
-        R = (e) => {
-            (N.current = e), T(e);
+        x = (e) => {
+            (D.current = e), A(e);
         };
-    function O(e) {
-        return (e - a) / (u - a);
-    }
-    function D(e) {
-        return 0 === e ? a : E[e - 1];
-    }
-    function L(e) {
-        return e === E.length - 1 ? u : E[e + 1];
-    }
-    function x(e) {
-        return b.current[e];
-    }
-    function w(e, t) {
-        if (n || !x(e)) return;
-        let i = D(e),
-            a = L(e);
-        (t = (0, r.N4)(t, i, a, d)), C(s(A.current, e, t));
+    function w(e) {
+        return (e - u) / (_ - u);
     }
     function P(e) {
-        return c.format(e);
+        return 0 === e ? u : b[e - 1];
     }
     function M(e) {
-        let t = e * (u - a) + a;
-        return (0, r.uZ)(Math.round((t - a) / d) * d + a, a, u);
+        return e === b.length - 1 ? _ : b[e + 1];
+    }
+    function k(e) {
+        return N.current[e];
+    }
+    function U(e, n) {
+        if (r || !k(e)) return;
+        let a = P(e),
+            s = M(e);
+        (n = (0, i.N4)(n, a, s, p)), L(c(O.current, e, n));
+    }
+    function B(e) {
+        return h.format(e);
+    }
+    function G(e, n) {
+        U(e, F(n));
+    }
+    function Z(e) {
+        return Math.round((e - u) / p) * p + u;
+    }
+    function F(e) {
+        let n = e * (_ - u) + u;
+        return (0, i.uZ)(Z(n), u, _);
+    }
+    function V(e, n = 1) {
+        let r = Math.max(n, p);
+        U(e, (0, i.N4)(b[e] + r, u, _, p));
+    }
+    function j(e, n = 1) {
+        let r = Math.max(n, p);
+        U(e, (0, i.N4)(b[e] - r, u, _, p));
     }
     return {
-        values: E,
-        getThumbValue: (e) => E[e],
-        setThumbValue: w,
-        setThumbPercent: function (e, t) {
-            w(e, M(t));
+        values: b,
+        getThumbValue: (e) => b[e],
+        setThumbValue: U,
+        setThumbPercent: G,
+        isThumbDragging: (e) => S[e],
+        setThumbDragging: function e(e, n) {
+            if (r || !k(e)) return;
+            let i = D.current[e];
+            (D.current = c(D.current, e, n)), x(D.current), T && i && !D.current.some(Boolean) && T(O.current);
         },
-        isThumbDragging: (e) => I[e],
-        setThumbDragging: function (e, t) {
-            if (n || !x(e)) return;
-            let r = N.current[e];
-            (N.current = s(N.current, e, t)), R(N.current), g && r && !N.current.some(Boolean) && g(A.current);
+        focusedThumb: C,
+        setFocusedThumb: R,
+        getThumbPercent: (e) => w(b[e]),
+        getValuePercent: w,
+        getThumbValueLabel: (e) => B(b[e]),
+        getFormattedValue: B,
+        getThumbMinValue: P,
+        getThumbMaxValue: M,
+        getPercentValue: F,
+        isThumbEditable: k,
+        setThumbEditable: function e(e, n) {
+            N.current[e] = n;
         },
-        focusedThumb: S,
-        setFocusedThumb: y,
-        getThumbPercent: (e) => O(E[e]),
-        getValuePercent: O,
-        getThumbValueLabel: (e) => P(E[e]),
-        getFormattedValue: P,
-        getThumbMinValue: D,
-        getThumbMaxValue: L,
-        getPercentValue: M,
-        isThumbEditable: x,
-        setThumbEditable: function (e, t) {
-            b.current[e] = t;
-        },
-        incrementThumb: function (e, t = 1) {
-            let n = Math.max(t, d);
-            w(e, (0, r.N4)(E[e] + n, a, u, d));
-        },
-        decrementThumb: function (e, t = 1) {
-            let n = Math.max(t, d);
-            w(e, (0, r.N4)(E[e] - n, a, u, d));
-        },
-        step: d,
-        pageSize: _,
-        orientation: f,
-        isDisabled: n
+        incrementThumb: V,
+        decrementThumb: j,
+        step: p,
+        pageSize: g,
+        orientation: m,
+        isDisabled: r
     };
 }
-function s(e, t, n) {
-    return e[t] === n ? e : [...e.slice(0, t), n, ...e.slice(t + 1)];
+function c(e, n, r) {
+    return e[n] === r ? e : [...e.slice(0, n), r, ...e.slice(n + 1)];
 }
-function o(e) {
+function d(e) {
     if (null != e) return Array.isArray(e) ? e : [e];
 }
-function l(e, t, n) {
-    return (r) => {
-        'number' == typeof e || 'number' == typeof t ? null == n || n(r[0]) : null == n || n(r);
+function f(e, n, r) {
+    return (i) => {
+        'number' == typeof e || 'number' == typeof n ? null == r || r(i[0]) : null == r || r(i);
     };
 }

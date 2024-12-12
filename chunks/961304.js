@@ -1,4 +1,4 @@
-n.d(t, {
+r.d(n, {
     X: function () {
         return i;
     },
@@ -6,28 +6,29 @@ n.d(t, {
         return f;
     }
 });
-var r,
-    i,
-    a = n(259443),
-    s = n(47770),
-    o = n(740197),
-    l = n(376398),
-    u = n(65154);
-function c(e, t, n) {
+var i,
+    a = r(259443),
+    s = r(47770),
+    o = r(740197),
+    l = r(376398),
+    u = r(65154);
+function c(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
 let d = new a.Yd('Output');
-((r = i || (i = {})).InteractionRequired = 'interactionrequired'), (r.Speaking = 'speaking'), (r.Video = 'video');
+!(function (e) {
+    (e.InteractionRequired = 'interactionrequired'), (e.Speaking = 'speaking'), (e.Video = 'video');
+})(i || (i = {}));
 class f extends s.Z {
     play() {
         var e;
@@ -42,8 +43,8 @@ class f extends s.Z {
         if ((this.stream.addTrack(e), null == this.audioElement)) {
             let e = document.createElement('audio');
             e.srcObject = this.stream;
-            let t = e.play();
-            null != t && t.catch(() => this.emit('interactionrequired', !0)), (this.audioElement = e), this.updateAudioElement();
+            let n = e.play();
+            null != n && n.catch(() => this.emit('interactionrequired', !0)), (this.audioElement = e), this.updateAudioElement();
         }
         if (null == this.levelNode && this.stream.getAudioTracks().length > 0) {
             this.streamSourceNode = this.audioContext.createMediaStreamSource(this.stream);
@@ -60,14 +61,14 @@ class f extends s.Z {
         return (
             'video' === e.kind &&
                 (null != this.videoStreamId && (0, l.jC)(this.videoStreamId),
-                this.stream.getVideoTracks().forEach((t) => {
-                    e !== t && ((t.discordIsTearingDown = !0), this.stream.removeTrack(t));
+                this.stream.getVideoTracks().forEach((n) => {
+                    e !== n && ((n.discordIsTearingDown = !0), this.stream.removeTrack(n));
                 }),
                 (this.videoStreamId = (0, l.N7)(this.stream)),
                 this.emit('video', this.videoStreamId)),
             'audio' === e.kind &&
-                this.stream.getAudioTracks().forEach((t) => {
-                    e !== t && ((t.discordIsTearingDown = !0), this.stream.removeTrack(t));
+                this.stream.getAudioTracks().forEach((n) => {
+                    e !== n && ((n.discordIsTearingDown = !0), this.stream.removeTrack(n));
                 }),
             this.stream.getTracks().length
         );
@@ -103,11 +104,11 @@ class f extends s.Z {
         let e = this.audioElement;
         if (null != e) {
             (e.muted = this._mute), (e.volume = this._volume / 100);
-            let t = this.sinkId;
-            null != t && o.ZA && e.setSinkId(t);
+            let n = this.sinkId;
+            null != n && o.ZA && e.setSinkId(n);
         }
     }
-    constructor(e, t) {
-        super(), c(this, 'id', void 0), c(this, '_speakingFlags', u.Dg.NONE), c(this, '_mute', !1), c(this, '_volume', u.Qx), c(this, 'sinkId', null), c(this, 'audioElement', null), c(this, 'stream', new MediaStream()), c(this, 'videoStreamId', null), c(this, 'levelNode', null), c(this, 'streamSourceNode', null), c(this, 'audioContext', void 0), (this.id = e), (this.audioContext = t);
+    constructor(e, n) {
+        super(), c(this, 'id', void 0), c(this, '_speakingFlags', u.Dg.NONE), c(this, '_mute', !1), c(this, '_volume', u.Qx), c(this, 'sinkId', null), c(this, 'audioElement', null), c(this, 'stream', new MediaStream()), c(this, 'videoStreamId', null), c(this, 'levelNode', null), c(this, 'streamSourceNode', null), c(this, 'audioContext', void 0), (this.id = e), (this.audioContext = n);
     }
 }

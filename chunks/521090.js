@@ -1,110 +1,107 @@
-n(733860), n(47120);
-var r = n(106351),
-    i = n(212819),
-    a = n(588468),
-    s = n(933557),
-    o = n(592125),
-    l = n(984933),
-    u = n(483360),
-    c = n(877565),
-    d = n(590921),
-    f = n(665692),
-    _ = n(176505),
-    p = n(388032);
-let h = {
-    sentinel: f.zy,
-    matches: (e, t, n, r, i) => i.mentions.channel !== d.nS.DENY && !e.isPrivate(),
-    queryResults(e, t, n, r, a) {
+var i = r(733860);
+var a = r(47120);
+var s = r(106351),
+    o = r(212819),
+    l = r(588468),
+    u = r(933557),
+    c = r(592125),
+    d = r(984933),
+    f = r(483360),
+    _ = r(877565),
+    h = r(590921),
+    p = r(665692),
+    m = r(176505),
+    g = r(388032);
+let E = {
+    sentinel: p.zy,
+    matches: (e, n, r, i, a) => a.mentions.channel !== h.nS.DENY && !e.isPrivate(),
+    queryResults(e, n, r, i, a) {
         let s,
-            o,
-            c = l.sH;
+            l,
+            u = d.sH;
         return (
-            n.charAt(0) === i.xQ.VOICE_CHANNEL && ((c = l.Zb), (n = n.substring(1))),
-            r.forNonStringCommandOption
-                ? (s = u.ZP.queryApplicationCommandChannelResults({
-                      query: n,
+            r.charAt(0) === o.xQ.VOICE_CHANNEL && ((u = d.Zb), (r = r.substring(1))),
+            i.forNonStringCommandOption
+                ? (s = f.ZP.queryApplicationCommandChannelResults({
+                      query: r,
                       channel: e,
-                      channelTypes: r.allowedChannelTypes
+                      channelTypes: i.allowedChannelTypes
                   }))
-                : ((s = u.ZP.queryChannelResults({
-                      query: n,
+                : ((s = f.ZP.queryChannelResults({
+                      query: r,
                       channel: e,
-                      type: c
+                      type: u
                   })),
-                  null != t &&
-                      ((o = u.ZP.queryStaticRouteChannels({
-                          query: n,
-                          guild: t
+                  null != n &&
+                      ((l = f.ZP.queryStaticRouteChannels({
+                          query: r,
+                          guild: n
                       })),
-                      s.channels.unshift(...o))),
+                      s.channels.unshift(...l))),
             {
                 results: s,
-                staticRouteChannels: o
+                staticRouteChannels: l
             }
         );
     },
     renderResults(e) {
-        let t,
-            n,
+        let n,
+            r,
             {
-                results: { channels: r },
-                selectedIndex: s,
-                query: l,
+                results: { channels: i },
+                selectedIndex: a,
+                query: s,
                 options: u,
                 onHover: d,
-                onClick: _
+                onClick: f
             } = e,
-            h = l.charAt(0) === i.xQ.VOICE_CHANNEL;
+            h = s.charAt(0) === o.xQ.VOICE_CHANNEL;
         return (
-            h ? ((t = p.t.rMUL39), (n = p.intl.string(p.t.CYnO4u)), (l = l.substring(1))) : u.forNonStringCommandOption ? ((t = p.t.upNFT0), (n = p.intl.string(p.t.OGiMXF))) : ((t = p.t.UhnmJC), (n = p.intl.string(p.t.nIfr0d))),
-            (0, c.HI)({
-                query: l,
-                selectedIndex: s,
-                autocompletes: r,
+            h ? ((n = g.t.rMUL39), (r = g.intl.string(g.t.CYnO4u)), (s = s.substring(1))) : u.forNonStringCommandOption ? ((n = g.t.upNFT0), (r = g.intl.string(g.t.OGiMXF))) : ((n = g.t.UhnmJC), (r = g.intl.string(g.t.nIfr0d))),
+            (0, _.HI)({
+                query: s,
+                selectedIndex: a,
+                autocompletes: i,
                 onHover: d,
-                onClick: _,
-                titleWithQuery: t,
-                titleWithoutQuery: n,
-                Component: a.ZP.Channel,
+                onClick: f,
+                titleWithQuery: n,
+                titleWithoutQuery: r,
+                Component: l.ZP.Channel,
                 getProps: (e) => ({
                     channel: e,
                     key: e.id,
-                    category: o.Z.getChannel(e.parent_id)
+                    category: c.Z.getChannel(e.parent_id)
                 }),
-                getQuery: (e) => (h ? ''.concat(f.zy).concat(i.xQ.VOICE_CHANNEL).concat(e) : ''.concat(f.zy).concat(e)),
+                getQuery: (e) => (h ? ''.concat(p.zy).concat(o.xQ.VOICE_CHANNEL).concat(e) : ''.concat(p.zy).concat(e)),
                 key: 'channels'
             })
         );
     },
     onSelect(e) {
         let {
-                results: { channels: t },
-                index: n,
+                results: { channels: n },
+                index: r,
                 options: i
             } = e,
-            a = t[n];
-        return (
-            i.insertText(
-                (function (e) {
-                    switch (e.type) {
-                        case r.d.PUBLIC_THREAD:
-                        case r.d.PRIVATE_THREAD:
-                        case r.d.ANNOUNCEMENT_THREAD:
-                        case r.d.GUILD_VOICE:
-                        case r.d.GUILD_STAGE_VOICE:
-                        case r.d.GUILD_CATEGORY:
-                            return '#"'.concat((0, s.le)(e.name), '"');
-                        default:
-                            let t = l.ZP.getTextChannelNameDisambiguations(e.guild_id)[e.id];
-                            return '#'.concat(null != t ? t.name : e.name);
-                    }
-                })(a),
-                (function (e) {
-                    return _.EC.has(e.id) ? '<id:'.concat(e.id, '>') : '<#'.concat(e.id, '>');
-                })(a)
-            ),
-            { type: d.z2.CHANNEL }
-        );
+            a = n[r];
+        return i.insertText(v(a), I(a)), { type: h.z2.CHANNEL };
     }
 };
-t.Z = h;
+function v(e) {
+    switch (e.type) {
+        case s.d.PUBLIC_THREAD:
+        case s.d.PRIVATE_THREAD:
+        case s.d.ANNOUNCEMENT_THREAD:
+        case s.d.GUILD_VOICE:
+        case s.d.GUILD_STAGE_VOICE:
+        case s.d.GUILD_CATEGORY:
+            return '#"'.concat((0, u.le)(e.name), '"');
+        default:
+            let n = d.ZP.getTextChannelNameDisambiguations(e.guild_id)[e.id];
+            return '#'.concat(null != n ? n.name : e.name);
+    }
+}
+function I(e) {
+    return m.EC.has(e.id) ? '<id:'.concat(e.id, '>') : '<#'.concat(e.id, '>');
+}
+n.Z = E;

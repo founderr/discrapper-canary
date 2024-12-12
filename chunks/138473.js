@@ -1,69 +1,73 @@
-Object.defineProperty(t, '__esModule', { value: !0 }), (t.Saturation = void 0);
-var r = (function () {
-        function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-                var r = t[n];
-                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+Object.defineProperty(n, '__esModule', { value: !0 }), (n.Saturation = void 0);
+var i = (function () {
+        function e(e, n) {
+            for (var r = 0; r < n.length; r++) {
+                var i = n[r];
+                (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
             }
         }
-        return function (t, n, r) {
-            return n && e(t.prototype, n), r && e(t, r), t;
+        return function (n, r, i) {
+            return r && e(n.prototype, r), i && e(n, i), n;
         };
     })(),
-    i = n(192379),
-    a = u(i),
-    s = u(n(723184)),
-    o = u(n(123763)),
-    l = (function (e) {
-        if (e && e.__esModule) return e;
-        var t = {};
-        if (null != e) for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
-        return (t.default = e), t;
-    })(n(733244));
-function u(e) {
+    a = r(192379),
+    s = d(a),
+    o = d(r(723184)),
+    l = d(r(123763)),
+    u = c(r(733244));
+function c(e) {
+    if (e && e.__esModule) return e;
+    var n = {};
+    if (null != e) for (var r in e) Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]);
+    return (n.default = e), n;
+}
+function d(e) {
     return e && e.__esModule ? e : { default: e };
 }
-var c = (t.Saturation = (function (e) {
-    function t(e) {
-        !(function (e, t) {
-            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-        })(this, t);
-        var n = (function (e, t) {
-            if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-            return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
-        })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e));
+function f(e, n) {
+    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+}
+function _(e, n) {
+    if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
+}
+function h(e, n) {
+    if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
+    (e.prototype = Object.create(n && n.prototype, {
+        constructor: {
+            value: e,
+            enumerable: !1,
+            writable: !0,
+            configurable: !0
+        }
+    })),
+        n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
+}
+var p = (n.Saturation = (function (e) {
+    function n(e) {
+        f(this, n);
+        var r = _(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this, e));
         return (
-            (n.handleChange = function (e) {
-                'function' == typeof n.props.onChange && n.throttle(n.props.onChange, l.calculateChange(e, n.props.hsl, n.container), e);
+            (r.handleChange = function (e) {
+                'function' == typeof r.props.onChange && r.throttle(r.props.onChange, u.calculateChange(e, r.props.hsl, r.container), e);
             }),
-            (n.handleMouseDown = function (e) {
-                n.handleChange(e);
-                var t = n.getContainerRenderWindow();
-                t.addEventListener('mousemove', n.handleChange), t.addEventListener('mouseup', n.handleMouseUp);
+            (r.handleMouseDown = function (e) {
+                r.handleChange(e);
+                var n = r.getContainerRenderWindow();
+                n.addEventListener('mousemove', r.handleChange), n.addEventListener('mouseup', r.handleMouseUp);
             }),
-            (n.handleMouseUp = function () {
-                n.unbindEventListeners();
+            (r.handleMouseUp = function () {
+                r.unbindEventListeners();
             }),
-            (n.throttle = (0, o.default)(function (e, t, n) {
-                e(t, n);
+            (r.throttle = (0, l.default)(function (e, n, r) {
+                e(n, r);
             }, 50)),
-            n
+            r
         );
     }
     return (
-        !(function (e, t) {
-            if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-            (e.prototype = Object.create(t && t.prototype, {
-                constructor: {
-                    value: e,
-                    enumerable: !1,
-                    writable: !0,
-                    configurable: !0
-                }
-            })),
-                t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
-        })(t, e),
-        r(t, [
+        h(n, e),
+        i(n, [
             {
                 key: 'componentWillUnmount',
                 value: function () {
@@ -73,8 +77,8 @@ var c = (t.Saturation = (function (e) {
             {
                 key: 'getContainerRenderWindow',
                 value: function () {
-                    for (var e = this.container, t = window; !t.document.contains(e) && t.parent !== t; ) t = t.parent;
-                    return t;
+                    for (var e = this.container, n = window; !n.document.contains(e) && n.parent !== n; ) n = n.parent;
+                    return n;
                 }
             },
             {
@@ -88,13 +92,13 @@ var c = (t.Saturation = (function (e) {
                 key: 'render',
                 value: function () {
                     var e = this,
-                        t = this.props.style || {},
-                        n = t.color,
-                        r = t.white,
-                        i = t.black,
-                        o = t.pointer,
-                        l = t.circle,
-                        u = (0, s.default)(
+                        n = this.props.style || {},
+                        r = n.color,
+                        i = n.white,
+                        a = n.black,
+                        l = n.pointer,
+                        u = n.circle,
+                        c = (0, o.default)(
                             {
                                 default: {
                                     color: {
@@ -127,44 +131,44 @@ var c = (t.Saturation = (function (e) {
                                     }
                                 },
                                 custom: {
-                                    color: n,
-                                    white: r,
-                                    black: i,
-                                    pointer: o,
-                                    circle: l
+                                    color: r,
+                                    white: i,
+                                    black: a,
+                                    pointer: l,
+                                    circle: u
                                 }
                             },
                             { custom: !!this.props.style }
                         );
-                    return a.default.createElement(
+                    return s.default.createElement(
                         'div',
                         {
-                            style: u.color,
-                            ref: function (t) {
-                                return (e.container = t);
+                            style: c.color,
+                            ref: function (n) {
+                                return (e.container = n);
                             },
                             onMouseDown: this.handleMouseDown,
                             onTouchMove: this.handleChange,
                             onTouchStart: this.handleChange
                         },
-                        a.default.createElement('style', null, '\n          .saturation-white {\n            background: -webkit-linear-gradient(to right, #fff, rgba(255,255,255,0));\n            background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n          }\n          .saturation-black {\n            background: -webkit-linear-gradient(to top, #000, rgba(0,0,0,0));\n            background: linear-gradient(to top, #000, rgba(0,0,0,0));\n          }\n        '),
-                        a.default.createElement(
+                        s.default.createElement('style', null, '\n          .saturation-white {\n            background: -webkit-linear-gradient(to right, #fff, rgba(255,255,255,0));\n            background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n          }\n          .saturation-black {\n            background: -webkit-linear-gradient(to top, #000, rgba(0,0,0,0));\n            background: linear-gradient(to top, #000, rgba(0,0,0,0));\n          }\n        '),
+                        s.default.createElement(
                             'div',
                             {
-                                style: u.white,
+                                style: c.white,
                                 className: 'saturation-white'
                             },
-                            a.default.createElement('div', {
-                                style: u.black,
+                            s.default.createElement('div', {
+                                style: c.black,
                                 className: 'saturation-black'
                             }),
-                            a.default.createElement('div', { style: u.pointer }, this.props.pointer ? a.default.createElement(this.props.pointer, this.props) : a.default.createElement('div', { style: u.circle }))
+                            s.default.createElement('div', { style: c.pointer }, this.props.pointer ? s.default.createElement(this.props.pointer, this.props) : s.default.createElement('div', { style: c.circle }))
                         )
                     );
                 }
             }
         ]),
-        t
+        n
     );
-})(i.PureComponent || i.Component));
-t.default = c;
+})(a.PureComponent || a.Component));
+n.default = p;

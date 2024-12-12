@@ -1,132 +1,131 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return y;
+        return N;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(848246),
-    s = n(442837),
-    o = n(481060),
-    l = n(846027),
-    u = n(2052),
-    c = n(451467),
-    d = n(386542),
-    f = n(933843),
-    _ = n(746599),
-    p = n(361291),
-    h = n(592125),
-    m = n(430824),
-    g = n(131951),
-    E = n(944486),
-    v = n(594174),
-    I = n(981631),
-    T = n(37113),
-    b = n(65154),
-    S = n(388032);
-function y(e, t) {
-    let { preset: y, resolution: A, fps: N } = (0, s.cj)([p.Z], () => p.Z.getState()),
-        C = (0, s.e7)([g.Z], () => g.Z.getGoLiveSource()),
-        R = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
-        O = (0, s.e7)([m.Z], () => {
-            var t;
-            return null === (t = m.Z.getGuild(null == e ? void 0 : e.guildId)) || void 0 === t ? void 0 : t.premiumTier;
+var i = r(200651),
+    a = r(192379),
+    s = r(848246),
+    o = r(442837),
+    l = r(481060),
+    u = r(846027),
+    c = r(2052),
+    d = r(451467),
+    f = r(386542),
+    _ = r(933843),
+    h = r(746599),
+    p = r(361291),
+    m = r(592125),
+    g = r(430824),
+    E = r(131951),
+    v = r(944486),
+    I = r(594174),
+    T = r(981631),
+    b = r(37113),
+    y = r(65154),
+    S = r(388032);
+function A(e, n) {
+    (0, l.openModalLazy)(
+        async () => {
+            let { default: e } = await r.e('28479').then(r.bind(r, 78865));
+            return (r) =>
+                (0, i.jsx)(e, {
+                    ...r,
+                    analyticsSource: n
+                });
+        },
+        { contextKey: e === T.IlC.POPOUT ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT }
+    );
+}
+function N(e, n) {
+    let { preset: r, resolution: N, fps: C } = (0, o.cj)([p.Z], () => p.Z.getState()),
+        R = (0, o.e7)([E.Z], () => E.Z.getGoLiveSource()),
+        O = (0, o.e7)([I.default], () => I.default.getCurrentUser()),
+        D = (0, o.e7)([g.Z], () => {
+            var n;
+            return null === (n = g.Z.getGuild(null == e ? void 0 : e.guildId)) || void 0 === n ? void 0 : n.premiumTier;
         }),
-        { location: D } = (0, u.O)(),
-        { available: L, activated: x } = (0, d.k)(a.q.STREAM_HIGH_QUALITY),
-        w = (0, s.e7)([E.Z, h.Z], () => h.Z.getChannel(E.Z.getVoiceChannelId())),
-        P = i.useCallback(
-            (e, i, a, s) => {
+        { location: L } = (0, c.O)(),
+        { available: x, activated: w } = (0, f.k)(s.q.STREAM_HIGH_QUALITY),
+        P = (0, o.e7)([v.Z, m.Z], () => m.Z.getChannel(v.Z.getVoiceChannelId())),
+        M = a.useCallback(
+            (e, r, i, a) => {
                 if (e) {
-                    if (null != C) {
+                    if (null != R) {
                         let e = {
                             qualityOptions: {
-                                preset: T.tI.PRESET_CUSTOM,
-                                resolution: i,
-                                frameRate: a
+                                preset: b.tI.PRESET_CUSTOM,
+                                resolution: r,
+                                frameRate: i
                             },
-                            context: b.Yn.STREAM
+                            context: y.Yn.STREAM
                         };
-                        null != C.desktopSource
+                        null != R.desktopSource
                             ? (e.desktopSettings = {
-                                  sourceId: C.desktopSource.id,
+                                  sourceId: R.desktopSource.id,
                                   sound: !0
                               })
-                            : null != C.cameraSource &&
+                            : null != R.cameraSource &&
                               (e.cameraSettings = {
-                                  videoDeviceGuid: C.cameraSource.videoDeviceGuid,
-                                  audioDeviceGuid: C.cameraSource.audioDeviceGuid
+                                  videoDeviceGuid: R.cameraSource.videoDeviceGuid,
+                                  audioDeviceGuid: R.cameraSource.audioDeviceGuid
                               }),
-                            L && (0, _.J1)(!(0, f.mc)(i, a)),
-                            l.Z.setGoLiveSource(e);
+                            x && (0, h.J1)(!(0, _.mc)(r, i)),
+                            u.Z.setGoLiveSource(e);
                     }
-                } else {
-                    var u, c;
-                    (u = t),
-                        (c = {
-                            ...D,
-                            object: I.qAy.RADIO_ITEM,
-                            objectType: s
-                        }),
-                        (0, o.openModalLazy)(
-                            async () => {
-                                let { default: e } = await n.e('28479').then(n.bind(n, 78865));
-                                return (t) =>
-                                    (0, r.jsx)(e, {
-                                        ...t,
-                                        analyticsSource: c
-                                    });
-                            },
-                            { contextKey: u === I.IlC.POPOUT ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT }
-                        );
-                }
+                } else
+                    A(n, {
+                        ...L,
+                        object: T.qAy.RADIO_ITEM,
+                        objectType: a
+                    });
             },
-            [t, D, C, L]
+            [n, L, R, x]
         );
     if (null == e) return null;
-    let M = y === T.tI.PRESET_DOCUMENTS ? T.ws.FPS_30 : N,
-        k = T.af.map((e) => {
-            let { value: t, label: n } = e,
-                i = (0, c.Z)(T.tI.PRESET_CUSTOM, A, t, R, O, w);
-            return (0, r.jsx)(
-                o.MenuRadioItem,
+    let k = r === b.tI.PRESET_DOCUMENTS ? b.ws.FPS_30 : C,
+        U = b.af.map((e) => {
+            let { value: n, label: r } = e,
+                a = (0, d.Z)(b.tI.PRESET_CUSTOM, N, n, O, D, P);
+            return (0, i.jsx)(
+                l.MenuRadioItem,
                 {
                     group: 'stream-settings-fps',
-                    id: 'stream-settings-fps-'.concat(t),
-                    label: n,
-                    checked: t === N,
-                    action: () => P(i, A, t, I.Qqv.RESOLUTION)
+                    id: 'stream-settings-fps-'.concat(n),
+                    label: r,
+                    checked: n === C,
+                    action: () => M(a, N, n, T.Qqv.RESOLUTION)
                 },
-                'stream-settings-fps-'.concat(t)
+                'stream-settings-fps-'.concat(n)
             );
         }),
-        U = T.km.map((e) => {
-            let { value: t, label: n } = e,
-                i = (0, c.Z)(T.tI.PRESET_CUSTOM, t, M, R, O, w);
+        B = b.km.map((e) => {
+            let { value: n, label: r } = e,
+                a = (0, d.Z)(b.tI.PRESET_CUSTOM, n, k, O, D, P);
             return (
-                L && !x && (i = !1),
-                (0, r.jsx)(
-                    o.MenuRadioItem,
+                x && !w && (a = !1),
+                (0, i.jsx)(
+                    l.MenuRadioItem,
                     {
                         group: 'stream-settings-resolution',
-                        id: 'stream-settings-resolution-'.concat(t),
-                        label: n,
-                        checked: t === A,
-                        action: () => P(i, t, M, I.Qqv.RESOLUTION)
+                        id: 'stream-settings-resolution-'.concat(n),
+                        label: r,
+                        checked: n === N,
+                        action: () => M(a, n, k, T.Qqv.RESOLUTION)
                     },
-                    'stream-settings-resolution-'.concat(t)
+                    'stream-settings-resolution-'.concat(n)
                 )
             );
         });
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsx)(o.MenuGroup, {
+            (0, i.jsx)(l.MenuGroup, {
                 label: S.intl.string(S.t.SkkeIi),
-                children: k
-            }),
-            (0, r.jsx)(o.MenuGroup, {
-                label: S.intl.string(S.t.rHyPXl),
                 children: U
+            }),
+            (0, i.jsx)(l.MenuGroup, {
+                label: S.intl.string(S.t.rHyPXl),
+                children: B
             })
         ]
     });

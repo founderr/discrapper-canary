@@ -1,97 +1,101 @@
-n(653041);
-var r = n(371193),
-    i = n(501501),
-    a = n.n(i),
-    s = n(78650),
-    o = n.n(s),
-    l = n(505444),
-    u = n.n(l);
-function c(e) {
-    let t = Object.keys(e)[0];
-    return ''.concat(t, '(').concat(e[t], ')');
-}
-let d = /rgba\(([\d.]+), ([\d.]+), ([\d.]+), ([\d.]+)\)/;
+var i = r(653041);
+var a = r(371193);
+var s = r(501501),
+    o = r.n(s),
+    l = r(78650),
+    u = r.n(l),
+    c = r(505444),
+    d = r.n(c);
 function f(e) {
-    let t = e.match(d);
+    let n = Object.keys(e)[0];
+    return ''.concat(n, '(').concat(e[n], ')');
+}
+let _ = /rgba\(([\d.]+), ([\d.]+), ([\d.]+), ([\d.]+)\)/;
+function h(e) {
+    let n = e.match(_);
     return (
-        null != t &&
+        null != n &&
             (e = 'rgba('
-                .concat(0 | t[1], ', ')
-                .concat(0 | t[2], ', ')
-                .concat(0 | t[3], ', ')
-                .concat(t[4], ')')),
+                .concat(0 | n[1], ', ')
+                .concat(0 | n[2], ', ')
+                .concat(0 | n[3], ', ')
+                .concat(n[4], ')')),
         e
     );
 }
-r.inject.ApplyAnimatedValues(
-    function (e, t, n) {
-        if (e.setNativeProps) e.setNativeProps(t);
-        else {
-            if (!e.nodeType || void 0 === e.setAttribute) return !1;
-            var r;
-            u().setValueForStyles(e, ((r = t.style) && (r.transform && (r.transform = r.WebkitTransform = r.MozTransform = r.transform.map(c).join(' ')), r.color && (r.color = f(r.color)), r.backgroundColor && (r.backgroundColor = f(r.backgroundColor))), r), n._reactInternalInstance);
-        }
-    },
-    (e) => e
-);
-function _(e, t, n) {
-    return void 0 !== t && void 0 != n ? o()(t, n) : e;
+function p(e) {
+    return e && (e.transform && (e.transform = e.WebkitTransform = e.MozTransform = e.transform.map(f).join(' ')), e.color && (e.color = h(e.color)), e.backgroundColor && (e.backgroundColor = h(e.backgroundColor))), e;
 }
-t.Z = {
-    ...r,
-    Easing: a(),
-    accelerate: function (e) {
-        return (e.transform = e.transform || []), e.transform.push({ translateZ: 0 }), e;
-    },
-    animate: function e(t, n) {
-        let i;
-        let { toValueMin: a, toValueMax: s, tension: o = 0, friction: l = 0, loop: u, reverse: c, invert: d, callback: f, type: p = 'spring', shouldLoop: h, durationMin: m, durationMax: g, ...E } = n,
-            v = t._value,
-            I = _(n.duration, m, g),
-            T = _(n.toValue, a, s),
-            b = r[p](t, {
-                ...E,
-                toValue: T,
-                tension: o,
-                friction: l,
-                duration: I
-            }),
-            S = b;
-        if (c || d) {
-            let e = _(n.duration, m, g);
-            (i = r[p](t, {
-                ...E,
-                toValue: c ? v : -T,
-                tension: o,
-                friction: l,
-                duration: e
-            })),
-                (S = r.sequence([b, i]));
-        }
-        u
-            ? S.start(() => {
-                  (!h || (h && h())) && (f ? f(e.bind(null, t, n)) : e(t, n));
-              })
-            : S.start(f);
-    },
-    interpolate: function (e) {
-        for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
-        return e.interpolate({
-            inputRange: [0, 1],
-            outputRange: n
-        });
-    },
-    Extrapolate: { CLAMP: 'clamp' },
-    div: r.createAnimatedComponent('div'),
-    span: r.createAnimatedComponent('span'),
-    img: r.createAnimatedComponent('img'),
-    a: r.createAnimatedComponent('a'),
-    form: r.createAnimatedComponent('form'),
-    ul: r.createAnimatedComponent('ul'),
-    li: r.createAnimatedComponent('li'),
-    g: r.createAnimatedComponent('g'),
-    use: r.createAnimatedComponent('use'),
-    path: r.createAnimatedComponent('path'),
-    section: r.createAnimatedComponent('section'),
-    video: r.createAnimatedComponent('video')
+function m(e, n, r) {
+    if (e.setNativeProps) e.setNativeProps(n);
+    else {
+        if (!e.nodeType || void 0 === e.setAttribute) return !1;
+        d().setValueForStyles(e, p(n.style), r._reactInternalInstance);
+    }
+}
+function g(e) {
+    return (e.transform = e.transform || []), e.transform.push({ translateZ: 0 }), e;
+}
+function E(e, n, r) {
+    return void 0 !== n && void 0 != r ? u()(n, r) : e;
+}
+function v(e, n) {
+    let r;
+    let { toValueMin: i, toValueMax: s, tension: o = 0, friction: l = 0, loop: u, reverse: c, invert: d, callback: f, type: _ = 'spring', shouldLoop: h, durationMin: p, durationMax: m, ...g } = n,
+        I = e._value,
+        T = E(n.duration, p, m),
+        b = E(n.toValue, i, s),
+        y = a[_](e, {
+            ...g,
+            toValue: b,
+            tension: o,
+            friction: l,
+            duration: T
+        }),
+        S = y;
+    if (c || d) {
+        let i = E(n.duration, p, m);
+        (r = a[_](e, {
+            ...g,
+            toValue: c ? I : -b,
+            tension: o,
+            friction: l,
+            duration: i
+        })),
+            (S = a.sequence([y, r]));
+    }
+    u
+        ? S.start(() => {
+              (!h || (h && h())) && (f ? f(v.bind(null, e, n)) : v(e, n));
+          })
+        : S.start(f);
+}
+function I(e) {
+    for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++) r[i - 1] = arguments[i];
+    return e.interpolate({
+        inputRange: [0, 1],
+        outputRange: r
+    });
+}
+a.inject.ApplyAnimatedValues(m, (e) => e);
+let T = { CLAMP: 'clamp' };
+n.Z = {
+    ...a,
+    Easing: o(),
+    accelerate: g,
+    animate: v,
+    interpolate: I,
+    Extrapolate: T,
+    div: a.createAnimatedComponent('div'),
+    span: a.createAnimatedComponent('span'),
+    img: a.createAnimatedComponent('img'),
+    a: a.createAnimatedComponent('a'),
+    form: a.createAnimatedComponent('form'),
+    ul: a.createAnimatedComponent('ul'),
+    li: a.createAnimatedComponent('li'),
+    g: a.createAnimatedComponent('g'),
+    use: a.createAnimatedComponent('use'),
+    path: a.createAnimatedComponent('path'),
+    section: a.createAnimatedComponent('section'),
+    video: a.createAnimatedComponent('video')
 };

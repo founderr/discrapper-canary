@@ -1,21 +1,21 @@
-e.exports = function (e) {
-    let t = {
+function n(e) {
+    let n = {
             className: 'built_in',
             begin: '\\b(void|bool|int8|int16|int32|int64|int|uint8|uint16|uint32|uint64|uint|string|ref|array|double|float|auto|dictionary)'
         },
-        n = {
+        r = {
             className: 'symbol',
             begin: '[a-zA-Z0-9_]+@'
         },
-        r = {
+        i = {
             className: 'keyword',
             begin: '<',
             end: '>',
-            contains: [t, n]
+            contains: [n, r]
         };
     return (
-        (t.contains = [r]),
-        (n.contains = [r]),
+        (n.contains = [i]),
+        (r.contains = [i]),
         {
             name: 'AngelScript',
             aliases: ['asc'],
@@ -83,8 +83,8 @@ e.exports = function (e) {
                         }
                     ]
                 },
-                t,
                 n,
+                r,
                 {
                     className: 'literal',
                     begin: '\\b(null|true|false)'
@@ -97,4 +97,5 @@ e.exports = function (e) {
             ]
         }
     );
-};
+}
+e.exports = n;

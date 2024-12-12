@@ -1,9 +1,9 @@
-e.exports = function (e) {
-    let t = {
+function n(e) {
+    let n = {
             className: 'subst',
             variants: [{ begin: '\\$[A-Za-z0-9_]+' }]
         },
-        n = {
+        r = {
             className: 'subst',
             variants: [
                 {
@@ -13,7 +13,7 @@ e.exports = function (e) {
             ],
             keywords: 'true false null this is new super'
         },
-        r = {
+        i = {
             className: 'string',
             variants: [
                 {
@@ -37,39 +37,39 @@ e.exports = function (e) {
                 {
                     begin: "'''",
                     end: "'''",
-                    contains: [e.BACKSLASH_ESCAPE, t, n]
+                    contains: [e.BACKSLASH_ESCAPE, n, r]
                 },
                 {
                     begin: '"""',
                     end: '"""',
-                    contains: [e.BACKSLASH_ESCAPE, t, n]
+                    contains: [e.BACKSLASH_ESCAPE, n, r]
                 },
                 {
                     begin: "'",
                     end: "'",
                     illegal: '\\n',
-                    contains: [e.BACKSLASH_ESCAPE, t, n]
+                    contains: [e.BACKSLASH_ESCAPE, n, r]
                 },
                 {
                     begin: '"',
                     end: '"',
                     illegal: '\\n',
-                    contains: [e.BACKSLASH_ESCAPE, t, n]
+                    contains: [e.BACKSLASH_ESCAPE, n, r]
                 }
             ]
         };
-    n.contains = [e.C_NUMBER_MODE, r];
-    let i = ['Comparable', 'DateTime', 'Duration', 'Function', 'Iterable', 'Iterator', 'List', 'Map', 'Match', 'Object', 'Pattern', 'RegExp', 'Set', 'Stopwatch', 'String', 'StringBuffer', 'StringSink', 'Symbol', 'Type', 'Uri', 'bool', 'double', 'int', 'num', 'Element', 'ElementList'],
-        a = i.map((e) => `${e}?`);
+    r.contains = [e.C_NUMBER_MODE, i];
+    let a = ['Comparable', 'DateTime', 'Duration', 'Function', 'Iterable', 'Iterator', 'List', 'Map', 'Match', 'Object', 'Pattern', 'RegExp', 'Set', 'Stopwatch', 'String', 'StringBuffer', 'StringSink', 'Symbol', 'Type', 'Uri', 'bool', 'double', 'int', 'num', 'Element', 'ElementList'],
+        s = a.map((e) => `${e}?`);
     return {
         name: 'Dart',
         keywords: {
             keyword: ['abstract', 'as', 'assert', 'async', 'await', 'break', 'case', 'catch', 'class', 'const', 'continue', 'covariant', 'default', 'deferred', 'do', 'dynamic', 'else', 'enum', 'export', 'extends', 'extension', 'external', 'factory', 'false', 'final', 'finally', 'for', 'Function', 'get', 'hide', 'if', 'implements', 'import', 'in', 'inferface', 'is', 'late', 'library', 'mixin', 'new', 'null', 'on', 'operator', 'part', 'required', 'rethrow', 'return', 'set', 'show', 'static', 'super', 'switch', 'sync', 'this', 'throw', 'true', 'try', 'typedef', 'var', 'void', 'while', 'with', 'yield'],
-            built_in: i.concat(a).concat(['Never', 'Null', 'dynamic', 'print', 'document', 'querySelector', 'querySelectorAll', 'window']),
+            built_in: a.concat(s).concat(['Never', 'Null', 'dynamic', 'print', 'document', 'querySelector', 'querySelectorAll', 'window']),
             $pattern: /[A-Za-z][A-Za-z0-9_]*\??/
         },
         contains: [
-            r,
+            i,
             e.COMMENT(/\/\*\*(?!\/)/, /\*\//, {
                 subLanguage: 'markdown',
                 relevance: 0
@@ -101,4 +101,5 @@ e.exports = function (e) {
             { begin: '=>' }
         ]
     };
-};
+}
+e.exports = n;

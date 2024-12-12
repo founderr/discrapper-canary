@@ -1,19 +1,20 @@
-Object.defineProperty(t, '__esModule', { value: !0 }), (t.Raised = void 0);
-var r = o(n(192379)),
-    i = o(n(476400)),
-    a = o(n(723184)),
-    s = o(n(429867));
-function o(e) {
+Object.defineProperty(n, '__esModule', { value: !0 }), (n.Raised = void 0);
+var i = l(r(192379)),
+    a = l(r(476400)),
+    s = l(r(723184)),
+    o = l(r(429867));
+function l(e) {
     return e && e.__esModule ? e : { default: e };
 }
-var l = (t.Raised = function (e) {
-    var t = e.zDepth,
-        n = e.radius,
-        i = e.background,
-        o = e.children,
-        l = e.styles,
-        u = (0, a.default)(
-            (0, s.default)(
+var u = (n.Raised = function (e) {
+    var n = e.zDepth,
+        r = e.radius,
+        a = e.background,
+        l = e.children,
+        u = e.styles,
+        c = void 0 === u ? {} : u,
+        d = (0, s.default)(
+            (0, o.default)(
                 {
                     default: {
                         wrap: {
@@ -23,9 +24,9 @@ var l = (t.Raised = function (e) {
                         content: { position: 'relative' },
                         bg: {
                             absolute: '0px 0px 0px 0px',
-                            boxShadow: '0 ' + t + 'px ' + 4 * t + 'px rgba(0,0,0,.24)',
-                            borderRadius: n,
-                            background: i
+                            boxShadow: '0 ' + n + 'px ' + 4 * n + 'px rgba(0,0,0,.24)',
+                            borderRadius: r,
+                            background: a
                         }
                     },
                     'zDepth-0': { bg: { boxShadow: 'none' } },
@@ -37,22 +38,22 @@ var l = (t.Raised = function (e) {
                     square: { bg: { borderRadius: '0' } },
                     circle: { bg: { borderRadius: '50%' } }
                 },
-                void 0 === l ? {} : l
+                c
             ),
-            { 'zDepth-1': 1 === t }
+            { 'zDepth-1': 1 === n }
         );
-    return r.default.createElement('div', { style: u.wrap }, r.default.createElement('div', { style: u.bg }), r.default.createElement('div', { style: u.content }, o));
+    return i.default.createElement('div', { style: d.wrap }, i.default.createElement('div', { style: d.bg }), i.default.createElement('div', { style: d.content }, l));
 });
-(l.propTypes = {
-    background: i.default.string,
-    zDepth: i.default.oneOf([0, 1, 2, 3, 4, 5]),
-    radius: i.default.number,
-    styles: i.default.object
+(u.propTypes = {
+    background: a.default.string,
+    zDepth: a.default.oneOf([0, 1, 2, 3, 4, 5]),
+    radius: a.default.number,
+    styles: a.default.object
 }),
-    (l.defaultProps = {
+    (u.defaultProps = {
         background: '#fff',
         zDepth: 1,
         radius: 2,
         styles: {}
     }),
-    (t.default = l);
+    (n.default = u);

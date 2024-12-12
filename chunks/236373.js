@@ -1,6 +1,6 @@
-n.d(t, {
+r.d(n, {
     Gb: function () {
-        return f;
+        return p;
     },
     J1: function () {
         return c;
@@ -12,20 +12,19 @@ n.d(t, {
         return u;
     },
     j$: function () {
-        return _;
+        return m;
     }
 });
-var r,
-    i,
-    a = n(314897),
-    s = n(230900),
-    o = n(854698),
-    l = n(765305);
+var i,
+    a = r(314897),
+    s = r(230900),
+    o = r(854698),
+    l = r(765305);
 function u(e) {
     return !!(null == e ? void 0 : e.id);
 }
 function c(e) {
-    var t, n;
+    var n, r;
     return null == e
         ? null
         : {
@@ -36,7 +35,7 @@ function c(e) {
               by_weekday: e.byWeekday,
               by_n_weekday: e.byNWeekday,
               by_month: e.byMonth,
-              by_month_day: (null !== (n = null === (t = e.byMonthDay) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0) > 0 ? e.byMonthDay : null,
+              by_month_day: (null !== (r = null === (n = e.byMonthDay) || void 0 === n ? void 0 : n.length) && void 0 !== r ? r : 0) > 0 ? e.byMonthDay : null,
               by_year_day: e.byYearDay,
               count: e.count
           };
@@ -57,60 +56,71 @@ function d(e) {
               count: e.count
           };
 }
-((r = i || (i = {})).CHANNEL_SELECTOR = 'ChannelSelector'), (r.DETAILS = 'Details'), (r.PREVIEW = 'Preview');
-function f(e, t, n) {
-    let { name: r, description: i, privacyLevel: s, channelId: o, scheduledStartTime: u, scheduledEndTime: d, entityType: f, entityMetadata: _, image: p, recurrenceRule: h, eventExceptions: m } = e;
+function f(e) {
+    return e.map((e) => ({
+        event_exception_id: e.eventExceptionId,
+        event_id: e.eventId,
+        guild_id: e.guildId,
+        scheduled_start_time: e.scheduledStartTime,
+        scheduled_end_time: e.scheduledEndTime,
+        is_canceled: e.isCanceled
+    }));
+}
+function _(e) {
+    return e.map((e) => ({
+        eventExceptionId: e.event_exception_id,
+        eventId: e.event_id,
+        guildId: e.guild_id,
+        scheduledStartTime: e.scheduled_start_time,
+        scheduledEndTime: e.scheduled_end_time,
+        isCanceled: e.is_canceled
+    }));
+}
+function h(e) {
+    return null != e && 'id' in e;
+}
+function p(e, n, r) {
+    let { name: i, description: s, privacyLevel: o, channelId: u, scheduledStartTime: d, scheduledEndTime: _, entityType: h, entityMetadata: p, image: m, recurrenceRule: g, eventExceptions: E } = e;
     return {
-        id: null != n ? n : l.Ku,
-        name: r,
-        description: null != i ? i : null,
-        privacy_level: s,
-        scheduled_start_time: u,
-        scheduled_end_time: d,
-        entity_type: f,
-        entity_metadata: null != _ ? _ : null,
-        image: null != p ? p : void 0,
-        channel_id: o,
-        guild_id: t,
+        id: null != r ? r : l.Ku,
+        name: i,
+        description: null != s ? s : null,
+        privacy_level: o,
+        scheduled_start_time: d,
+        scheduled_end_time: _,
+        entity_type: h,
+        entity_metadata: null != p ? p : null,
+        image: null != m ? m : void 0,
+        channel_id: u,
+        guild_id: n,
         creator_id: a.default.getId(),
         status: l.p1.SCHEDULED,
-        recurrence_rule: c(h),
-        guild_scheduled_event_exceptions: m.map((e) => ({
-            event_exception_id: e.eventExceptionId,
-            event_id: e.eventId,
-            guild_id: e.guildId,
-            scheduled_start_time: e.scheduledStartTime,
-            scheduled_end_time: e.scheduledEndTime,
-            is_canceled: e.isCanceled
-        }))
+        recurrence_rule: c(g),
+        guild_scheduled_event_exceptions: f(E)
     };
 }
-function _(e, t) {
-    var n, r, i, a, u, c, f, _;
-    let p = {
-        name: null !== (n = null == e ? void 0 : e.name) && void 0 !== n ? n : '',
-        privacyLevel: null !== (r = null == e ? void 0 : e.privacy_level) && void 0 !== r ? r : l.j8.GUILD_ONLY,
-        description: null !== (i = null == e ? void 0 : e.description) && void 0 !== i ? i : '',
-        scheduledStartTime: null !== (a = null == e ? void 0 : e.scheduled_start_time) && void 0 !== a ? a : (0, o.ib)().toISOString(),
-        entityType: null !== (u = null == e ? void 0 : e.entity_type) && void 0 !== u ? u : l.WX.NONE,
-        entityMetadata: null !== (c = null == e ? void 0 : e.entity_metadata) && void 0 !== c ? c : void 0,
+function m(e, n) {
+    var r, i, a, u, c, f, p;
+    let m = {
+        name: null !== (r = null == e ? void 0 : e.name) && void 0 !== r ? r : '',
+        privacyLevel: null !== (i = null == e ? void 0 : e.privacy_level) && void 0 !== i ? i : l.j8.GUILD_ONLY,
+        description: null !== (a = null == e ? void 0 : e.description) && void 0 !== a ? a : '',
+        scheduledStartTime: null !== (u = null == e ? void 0 : e.scheduled_start_time) && void 0 !== u ? u : (0, o.ib)().toISOString(),
+        entityType: null !== (c = null == e ? void 0 : e.entity_type) && void 0 !== c ? c : l.WX.NONE,
+        entityMetadata: null !== (f = null == e ? void 0 : e.entity_metadata) && void 0 !== f ? f : void 0,
         channelId: null == e ? void 0 : e.channel_id,
         creatorId: null == e ? void 0 : e.creator_id,
         image: null == e ? void 0 : e.image,
         scheduledEndTime: null == e ? void 0 : e.scheduled_end_time,
         recurrenceRule: d(null == e ? void 0 : e.recurrence_rule),
-        eventExceptions: (null !== (f = null == e ? void 0 : e.guild_scheduled_event_exceptions) && void 0 !== f ? f : []).map((e) => ({
-            eventExceptionId: e.event_exception_id,
-            eventId: e.event_id,
-            guildId: e.guild_id,
-            scheduledStartTime: e.scheduled_start_time,
-            scheduledEndTime: e.scheduled_end_time,
-            isCanceled: e.is_canceled
-        }))
+        eventExceptions: _(null !== (p = null == e ? void 0 : e.guild_scheduled_event_exceptions) && void 0 !== p ? p : [])
     };
-    if (null != (_ = e) && 'id' in _ && (null == e ? void 0 : e.entity_type) === l.WX.EXTERNAL) {
-        let t = (0, s.cS)(e);
-        null != t && (p.entityMetadata = { location: t });
-    } else null == p.channelId && null != t && ((p.channelId = t.id), t.isGuildStageVoice() ? (p.entityType = l.WX.STAGE_INSTANCE) : t.isGuildVoice() && (p.entityType = l.WX.VOICE));
-    return p;
+    if (h(e) && (null == e ? void 0 : e.entity_type) === l.WX.EXTERNAL) {
+        let n = (0, s.cS)(e);
+        null != n && (m.entityMetadata = { location: n });
+    } else null == m.channelId && null != n && ((m.channelId = n.id), n.isGuildStageVoice() ? (m.entityType = l.WX.STAGE_INSTANCE) : n.isGuildVoice() && (m.entityType = l.WX.VOICE));
+    return m;
 }
+!(function (e) {
+    (e.CHANNEL_SELECTOR = 'ChannelSelector'), (e.DETAILS = 'Details'), (e.PREVIEW = 'Preview');
+})(i || (i = {}));

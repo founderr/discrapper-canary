@@ -1,7 +1,24 @@
-e.exports = function (e) {
-    let t = 'true false yes no null',
-        n = "[\\w#;/?:@&=+$,.~*'()[\\]]+",
-        r = {
+function n(e) {
+    let n = 'true false yes no null',
+        r = "[\\w#;/?:@&=+$,.~*'()[\\]]+",
+        i = {
+            className: 'attr',
+            variants: [{ begin: '\\w[\\w :\\/.-]*:(?=[ \t]|$)' }, { begin: '"\\w[\\w :\\/.-]*":(?=[ \t]|$)' }, { begin: "'\\w[\\w :\\/.-]*':(?=[ \t]|$)" }]
+        },
+        a = {
+            className: 'template-variable',
+            variants: [
+                {
+                    begin: /\{\{/,
+                    end: /\}\}/
+                },
+                {
+                    begin: /%\{/,
+                    end: /\}/
+                }
+            ]
+        },
+        s = {
             className: 'string',
             relevance: 0,
             variants: [
@@ -15,24 +32,9 @@ e.exports = function (e) {
                 },
                 { begin: /\S+/ }
             ],
-            contains: [
-                e.BACKSLASH_ESCAPE,
-                {
-                    className: 'template-variable',
-                    variants: [
-                        {
-                            begin: /\{\{/,
-                            end: /\}\}/
-                        },
-                        {
-                            begin: /%\{/,
-                            end: /\}/
-                        }
-                    ]
-                }
-            ]
+            contains: [e.BACKSLASH_ESCAPE, a]
         },
-        i = e.inherit(r, {
+        o = e.inherit(s, {
             variants: [
                 {
                     begin: /'/,
@@ -45,18 +47,33 @@ e.exports = function (e) {
                 { begin: /[^\s,{}[\]]+/ }
             ]
         }),
-        a = {
+        l = {
+            className: 'number',
+            begin: '\\b[0-9]{4}(-[0-9][0-9]){0,2}([Tt \\t][0-9][0-9]?(:[0-9][0-9]){2})?(\\.[0-9]*)?([ \\t])*(Z|[-+][0-9][0-9]?(:[0-9][0-9])?)?\\b'
+        },
+        u = {
             end: ',',
             endsWithParent: !0,
             excludeEnd: !0,
-            keywords: t,
+            keywords: n,
             relevance: 0
         },
-        s = [
-            {
-                className: 'attr',
-                variants: [{ begin: '\\w[\\w :\\/.-]*:(?=[ \t]|$)' }, { begin: '"\\w[\\w :\\/.-]*":(?=[ \t]|$)' }, { begin: "'\\w[\\w :\\/.-]*':(?=[ \t]|$)" }]
-            },
+        c = {
+            begin: /\{/,
+            end: /\}/,
+            contains: [u],
+            illegal: '\\n',
+            relevance: 0
+        },
+        d = {
+            begin: '\\[',
+            end: '\\]',
+            contains: [u],
+            illegal: '\\n',
+            relevance: 0
+        },
+        f = [
+            i,
             {
                 className: 'meta',
                 begin: '^---\\s*$',
@@ -76,19 +93,19 @@ e.exports = function (e) {
             },
             {
                 className: 'type',
-                begin: '!\\w+!' + n
+                begin: '!\\w+!' + r
             },
             {
                 className: 'type',
-                begin: '!<' + n + '>'
+                begin: '!<' + r + '>'
             },
             {
                 className: 'type',
-                begin: '!' + n
+                begin: '!' + r
             },
             {
                 className: 'type',
-                begin: '!!' + n
+                begin: '!!' + r
             },
             {
                 className: 'meta',
@@ -105,44 +122,30 @@ e.exports = function (e) {
             },
             e.HASH_COMMENT_MODE,
             {
-                beginKeywords: t,
-                keywords: { literal: t }
+                beginKeywords: n,
+                keywords: { literal: n }
             },
-            {
-                className: 'number',
-                begin: '\\b[0-9]{4}(-[0-9][0-9]){0,2}([Tt \\t][0-9][0-9]?(:[0-9][0-9]){2})?(\\.[0-9]*)?([ \\t])*(Z|[-+][0-9][0-9]?(:[0-9][0-9])?)?\\b'
-            },
+            l,
             {
                 className: 'number',
                 begin: e.C_NUMBER_RE + '\\b',
                 relevance: 0
             },
-            {
-                begin: /\{/,
-                end: /\}/,
-                contains: [a],
-                illegal: '\\n',
-                relevance: 0
-            },
-            {
-                begin: '\\[',
-                end: '\\]',
-                contains: [a],
-                illegal: '\\n',
-                relevance: 0
-            },
-            r
+            c,
+            d,
+            s
         ],
-        o = [...s];
+        _ = [...f];
     return (
-        o.pop(),
-        o.push(i),
-        (a.contains = o),
+        _.pop(),
+        _.push(o),
+        (u.contains = _),
         {
             name: 'YAML',
             case_insensitive: !0,
             aliases: ['yml'],
-            contains: s
+            contains: f
         }
     );
-};
+}
+e.exports = n;

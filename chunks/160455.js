@@ -1,4 +1,4 @@
-let t = (e) => ({
+let n = (e) => ({
         IMPORTANT: {
             scope: 'meta',
             begin: '!important'
@@ -29,11 +29,11 @@ let t = (e) => ({
             begin: /--[A-Za-z][A-Za-z0-9_-]*/
         }
     }),
-    n = ['a', 'abbr', 'address', 'article', 'aside', 'audio', 'b', 'blockquote', 'body', 'button', 'canvas', 'caption', 'cite', 'code', 'dd', 'del', 'details', 'dfn', 'div', 'dl', 'dt', 'em', 'fieldset', 'figcaption', 'figure', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'header', 'hgroup', 'html', 'i', 'iframe', 'img', 'input', 'ins', 'kbd', 'label', 'legend', 'li', 'main', 'mark', 'menu', 'nav', 'object', 'ol', 'p', 'q', 'quote', 'samp', 'section', 'span', 'strong', 'summary', 'sup', 'table', 'tbody', 'td', 'textarea', 'tfoot', 'th', 'thead', 'time', 'tr', 'ul', 'var', 'video'],
-    r = ['any-hover', 'any-pointer', 'aspect-ratio', 'color', 'color-gamut', 'color-index', 'device-aspect-ratio', 'device-height', 'device-width', 'display-mode', 'forced-colors', 'grid', 'height', 'hover', 'inverted-colors', 'monochrome', 'orientation', 'overflow-block', 'overflow-inline', 'pointer', 'prefers-color-scheme', 'prefers-contrast', 'prefers-reduced-motion', 'prefers-reduced-transparency', 'resolution', 'scan', 'scripting', 'update', 'width', 'min-width', 'max-width', 'min-height', 'max-height'],
-    i = ['active', 'any-link', 'blank', 'checked', 'current', 'default', 'defined', 'dir', 'disabled', 'drop', 'empty', 'enabled', 'first', 'first-child', 'first-of-type', 'fullscreen', 'future', 'focus', 'focus-visible', 'focus-within', 'has', 'host', 'host-context', 'hover', 'indeterminate', 'in-range', 'invalid', 'is', 'lang', 'last-child', 'last-of-type', 'left', 'link', 'local-link', 'not', 'nth-child', 'nth-col', 'nth-last-child', 'nth-last-col', 'nth-last-of-type', 'nth-of-type', 'only-child', 'only-of-type', 'optional', 'out-of-range', 'past', 'placeholder-shown', 'read-only', 'read-write', 'required', 'right', 'root', 'scope', 'target', 'target-within', 'user-invalid', 'valid', 'visited', 'where'],
-    a = ['after', 'backdrop', 'before', 'cue', 'cue-region', 'first-letter', 'first-line', 'grammar-error', 'marker', 'part', 'placeholder', 'selection', 'slotted', 'spelling-error'],
-    s = [
+    r = ['a', 'abbr', 'address', 'article', 'aside', 'audio', 'b', 'blockquote', 'body', 'button', 'canvas', 'caption', 'cite', 'code', 'dd', 'del', 'details', 'dfn', 'div', 'dl', 'dt', 'em', 'fieldset', 'figcaption', 'figure', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'header', 'hgroup', 'html', 'i', 'iframe', 'img', 'input', 'ins', 'kbd', 'label', 'legend', 'li', 'main', 'mark', 'menu', 'nav', 'object', 'ol', 'p', 'q', 'quote', 'samp', 'section', 'span', 'strong', 'summary', 'sup', 'table', 'tbody', 'td', 'textarea', 'tfoot', 'th', 'thead', 'time', 'tr', 'ul', 'var', 'video'],
+    i = ['any-hover', 'any-pointer', 'aspect-ratio', 'color', 'color-gamut', 'color-index', 'device-aspect-ratio', 'device-height', 'device-width', 'display-mode', 'forced-colors', 'grid', 'height', 'hover', 'inverted-colors', 'monochrome', 'orientation', 'overflow-block', 'overflow-inline', 'pointer', 'prefers-color-scheme', 'prefers-contrast', 'prefers-reduced-motion', 'prefers-reduced-transparency', 'resolution', 'scan', 'scripting', 'update', 'width', 'min-width', 'max-width', 'min-height', 'max-height'],
+    a = ['active', 'any-link', 'blank', 'checked', 'current', 'default', 'defined', 'dir', 'disabled', 'drop', 'empty', 'enabled', 'first', 'first-child', 'first-of-type', 'fullscreen', 'future', 'focus', 'focus-visible', 'focus-within', 'has', 'host', 'host-context', 'hover', 'indeterminate', 'in-range', 'invalid', 'is', 'lang', 'last-child', 'last-of-type', 'left', 'link', 'local-link', 'not', 'nth-child', 'nth-col', 'nth-last-child', 'nth-last-col', 'nth-last-of-type', 'nth-of-type', 'only-child', 'only-of-type', 'optional', 'out-of-range', 'past', 'placeholder-shown', 'read-only', 'read-write', 'required', 'right', 'root', 'scope', 'target', 'target-within', 'user-invalid', 'valid', 'visited', 'where'],
+    s = ['after', 'backdrop', 'before', 'cue', 'cue-region', 'first-letter', 'first-line', 'grammar-error', 'marker', 'part', 'placeholder', 'selection', 'slotted', 'spelling-error'],
+    o = [
         'align-content',
         'align-items',
         'align-self',
@@ -393,37 +393,45 @@ let t = (e) => ({
         'writing-mode',
         'z-index'
     ].reverse(),
-    o = i.concat(a);
-e.exports = function (e) {
-    let l = t(e),
-        u = '[\\w-]+',
-        c = '(' + u + '|@\\{' + u + '\\})',
-        d = [],
-        f = [],
-        _ = function (e) {
+    l = a.concat(s);
+function u(e) {
+    let u = n(e),
+        c = l,
+        d = '[\\w-]+',
+        f = '(' + d + '|@\\{' + d + '\\})',
+        _ = [],
+        h = [],
+        p = function (e) {
             return {
                 className: 'string',
                 begin: '~?' + e + '.*?' + e
             };
         },
-        p = function (e, t, n) {
+        m = function (e, n, r) {
             return {
                 className: e,
-                begin: t,
-                relevance: n
+                begin: n,
+                relevance: r
             };
         },
-        h = {
+        g = {
             $pattern: /[a-z-]+/,
             keyword: 'and or not only',
-            attribute: r.join(' ')
+            attribute: i.join(' ')
+        },
+        E = {
+            begin: '\\(',
+            end: '\\)',
+            contains: h,
+            keywords: g,
+            relevance: 0
         };
-    f.push(
+    h.push(
         e.C_LINE_COMMENT_MODE,
         e.C_BLOCK_COMMENT_MODE,
-        _("'"),
-        _('"'),
-        l.CSS_NUMBER_MODE,
+        p("'"),
+        p('"'),
+        u.CSS_NUMBER_MODE,
         {
             begin: '(url|data-uri)\\(',
             starts: {
@@ -432,67 +440,87 @@ e.exports = function (e) {
                 excludeEnd: !0
             }
         },
-        l.HEXCOLOR,
-        {
-            begin: '\\(',
-            end: '\\)',
-            contains: f,
-            keywords: h,
-            relevance: 0
-        },
-        p('variable', '@@?' + u, 10),
-        p('variable', '@\\{' + u + '\\}'),
-        p('built_in', '~?`[^`]*?`'),
+        u.HEXCOLOR,
+        E,
+        m('variable', '@@?' + d, 10),
+        m('variable', '@\\{' + d + '\\}'),
+        m('built_in', '~?`[^`]*?`'),
         {
             className: 'attribute',
-            begin: u + '\\s*:',
+            begin: d + '\\s*:',
             end: ':',
             returnBegin: !0,
             excludeEnd: !0
         },
-        l.IMPORTANT,
+        u.IMPORTANT,
         { beginKeywords: 'and not' },
-        l.FUNCTION_DISPATCH
+        u.FUNCTION_DISPATCH
     );
-    let m = f.concat({
+    let v = h.concat({
             begin: /\{/,
             end: /\}/,
-            contains: d
+            contains: _
         }),
-        g = {
+        I = {
             beginKeywords: 'when',
             endsWithParent: !0,
-            contains: [{ beginKeywords: 'and not' }].concat(f)
+            contains: [{ beginKeywords: 'and not' }].concat(h)
         },
-        E = {
-            begin: c + '\\s*:',
+        T = {
+            begin: f + '\\s*:',
             returnBegin: !0,
             end: /[;}]/,
             relevance: 0,
             contains: [
                 { begin: /-(webkit|moz|ms|o)-/ },
-                l.CSS_VARIABLE,
+                u.CSS_VARIABLE,
                 {
                     className: 'attribute',
-                    begin: '\\b(' + s.join('|') + ')\\b',
+                    begin: '\\b(' + o.join('|') + ')\\b',
                     end: /(?=:)/,
                     starts: {
                         endsWithParent: !0,
                         illegal: '[<=$]',
                         relevance: 0,
-                        contains: f
+                        contains: h
                     }
                 }
             ]
         },
-        v = {
+        b = {
+            className: 'keyword',
+            begin: '@(import|media|charset|font-face|(-[a-z]+-)?keyframes|supports|document|namespace|page|viewport|host)\\b',
+            starts: {
+                end: '[;{}]',
+                keywords: g,
+                returnEnd: !0,
+                contains: h,
+                relevance: 0
+            }
+        },
+        y = {
+            className: 'variable',
+            variants: [
+                {
+                    begin: '@' + d + '\\s*:',
+                    relevance: 15
+                },
+                { begin: '@' + d }
+            ],
+            starts: {
+                end: '[;}]',
+                returnEnd: !0,
+                contains: v
+            }
+        },
+        S = {
             variants: [
                 {
                     begin: '[\\.#:&\\[>]',
                     end: '[;{}]'
                 },
                 {
-                    begin: c,
+                    begin: f,
                     end: /\{/
                 }
             ],
@@ -503,83 +531,50 @@ e.exports = function (e) {
             contains: [
                 e.C_LINE_COMMENT_MODE,
                 e.C_BLOCK_COMMENT_MODE,
-                g,
-                p('keyword', 'all\\b'),
-                p('variable', '@\\{' + u + '\\}'),
+                I,
+                m('keyword', 'all\\b'),
+                m('variable', '@\\{' + d + '\\}'),
                 {
-                    begin: '\\b(' + n.join('|') + ')\\b',
+                    begin: '\\b(' + r.join('|') + ')\\b',
                     className: 'selector-tag'
                 },
-                l.CSS_NUMBER_MODE,
-                p('selector-tag', c, 0),
-                p('selector-id', '#' + c),
-                p('selector-class', '\\.' + c, 0),
-                p('selector-tag', '&', 0),
-                l.ATTRIBUTE_SELECTOR_MODE,
+                u.CSS_NUMBER_MODE,
+                m('selector-tag', f, 0),
+                m('selector-id', '#' + f),
+                m('selector-class', '\\.' + f, 0),
+                m('selector-tag', '&', 0),
+                u.ATTRIBUTE_SELECTOR_MODE,
                 {
                     className: 'selector-pseudo',
-                    begin: ':(' + i.join('|') + ')'
+                    begin: ':(' + a.join('|') + ')'
                 },
                 {
                     className: 'selector-pseudo',
-                    begin: ':(:)?(' + a.join('|') + ')'
+                    begin: ':(:)?(' + s.join('|') + ')'
                 },
                 {
                     begin: /\(/,
                     end: /\)/,
                     relevance: 0,
-                    contains: m
+                    contains: v
                 },
                 { begin: '!important' },
-                l.FUNCTION_DISPATCH
+                u.FUNCTION_DISPATCH
             ]
         },
-        I = {
-            begin: u + ':(:)?' + `(${o.join('|')})`,
+        A = {
+            begin: d + ':(:)?' + `(${c.join('|')})`,
             returnBegin: !0,
-            contains: [v]
+            contains: [S]
         };
     return (
-        d.push(
-            e.C_LINE_COMMENT_MODE,
-            e.C_BLOCK_COMMENT_MODE,
-            {
-                className: 'keyword',
-                begin: '@(import|media|charset|font-face|(-[a-z]+-)?keyframes|supports|document|namespace|page|viewport|host)\\b',
-                starts: {
-                    end: '[;{}]',
-                    keywords: h,
-                    returnEnd: !0,
-                    contains: f,
-                    relevance: 0
-                }
-            },
-            {
-                className: 'variable',
-                variants: [
-                    {
-                        begin: '@' + u + '\\s*:',
-                        relevance: 15
-                    },
-                    { begin: '@' + u }
-                ],
-                starts: {
-                    end: '[;}]',
-                    returnEnd: !0,
-                    contains: m
-                }
-            },
-            I,
-            E,
-            v,
-            g,
-            l.FUNCTION_DISPATCH
-        ),
+        _.push(e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, b, y, A, T, S, I, u.FUNCTION_DISPATCH),
         {
             name: 'Less',
             case_insensitive: !0,
             illegal: '[=>\'/<($"]',
-            contains: d
+            contains: _
         }
     );
-};
+}
+e.exports = u;

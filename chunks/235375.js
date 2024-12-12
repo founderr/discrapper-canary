@@ -1,121 +1,126 @@
-n.r(t),
-    n.d(t, {
+r.r(n),
+    r.d(n, {
         baseRules: function () {
-            return I;
+            return S;
         },
         customRules: function () {
-            return T;
+            return A;
         }
-    }),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(302454),
-    l = n.n(o),
-    u = n(481060),
-    c = n(37234),
-    d = n(230711),
-    f = n(454585),
-    _ = n(703656),
-    p = n(626135),
-    h = n(981631),
-    m = n(596401);
-let g = l().defaultRules.link,
-    E = { section: h.jXE.SETTINGS_CHANGELOG },
-    v = (e) => {
-        var t, n;
-        let { level: r, children: a, className: o = null, styleSheet: l = {} } = e,
-            c = (0, u.usePrivateHeadingLevel)(),
-            d = parseInt(r, 10),
-            f = isNaN(d) ? 1 : d;
-        return i.createElement('h'.concat(c + f - 1), { className: s()(...((t = l), null == (n = o) ? [] : n.split(' ').map((e) => t[e]))) }, a);
+    });
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(120356),
+    l = r.n(o),
+    u = r(302454),
+    c = r.n(u),
+    d = r(481060),
+    f = r(37234),
+    _ = r(230711),
+    h = r(454585),
+    p = r(703656),
+    m = r(626135),
+    g = r(981631),
+    E = r(596401);
+let v = c().defaultRules.link,
+    I = { section: g.jXE.SETTINGS_CHANGELOG };
+function T() {
+    m.default.track(g.rMx.PREMIUM_PROMOTION_OPENED, { location: I });
+}
+function b(e, n) {
+    return null == n ? [] : n.split(' ').map((n) => e[n]);
+}
+let y = (e) => {
+        let { level: n, children: r, className: i = null, styleSheet: a = {} } = e,
+            o = (0, d.usePrivateHeadingLevel)(),
+            u = parseInt(n, 10),
+            c = o + (isNaN(u) ? 1 : u) - 1;
+        return s.createElement('h'.concat(c), { className: l()(...b(a, i)) }, r);
     },
-    I = null != f.Z ? f.Z.defaultRules : null,
-    T = {
+    S = null != h.Z ? h.Z.defaultRules : null,
+    A = {
         link: {
-            parse(e, t, n) {
-                let r;
-                let i = e[2],
-                    a = i.startsWith('https://discordapp.com/nitro') || i.startsWith('https://discord.com/nitro'),
-                    s = i.startsWith('https://discordapp.com/hypesquad') || i.startsWith('https://discord.com/hypesquad'),
-                    o = i.startsWith('/shop/fullscreen?source=1') || i.startsWith('/activities');
+            parse(e, n, r) {
+                let i;
+                let a = e[2],
+                    s = a.startsWith('https://discordapp.com/nitro') || a.startsWith('https://discord.com/nitro'),
+                    o = a.startsWith('https://discordapp.com/hypesquad') || a.startsWith('https://discord.com/hypesquad'),
+                    l = a.startsWith('/shop/fullscreen?source=1') || a.startsWith('/activities');
                 return (
-                    (r =
-                        a || s
+                    (i =
+                        s || o
                             ? (e) => {
-                                  p.default.track(h.rMx.PREMIUM_PROMOTION_OPENED, { location: E }), a ? d.Z.open(h.oAB.PREMIUM) : s && d.Z.open(h.oAB.HYPESQUAD_ONLINE), n.changeLog.track(h.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: 'nitro' }), (0, u.closeModal)(m.Xd), e.preventDefault();
+                                  T(), s ? _.Z.open(g.oAB.PREMIUM) : o && _.Z.open(g.oAB.HYPESQUAD_ONLINE), r.changeLog.track(g.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: 'nitro' }), (0, d.closeModal)(E.Xd), e.preventDefault();
                               }
-                            : o
+                            : l
                               ? (e) => {
-                                    (0, _.uL)(i), n.changeLog.track(h.rMx.CHANGE_LOG_CTA_CLICKED, { ...p.default.getCampaignParams(i) }), (0, c.Ou)(), (0, u.closeModal)(m.Xd), e.preventDefault();
+                                    (0, p.uL)(a), r.changeLog.track(g.rMx.CHANGE_LOG_CTA_CLICKED, { ...m.default.getCampaignParams(a) }), (0, f.Ou)(), (0, d.closeModal)(E.Xd), e.preventDefault();
                                 }
                               : () => {
-                                    n && 'function' == typeof n.onLinkClick && n.onLinkClick(i),
-                                        n.changeLog.track(h.rMx.CHANGE_LOG_CTA_CLICKED, {
-                                            target: i,
+                                    r && 'function' == typeof r.onLinkClick && r.onLinkClick(a),
+                                        r.changeLog.track(g.rMx.CHANGE_LOG_CTA_CLICKED, {
+                                            target: a,
                                             cta_type: 'inline_link',
-                                            ...p.default.getCampaignParams(i)
+                                            ...m.default.getCampaignParams(a)
                                         });
                                 }),
                     {
-                        ...g.parse(e, t, n),
-                        callToAction: r
+                        ...v.parse(e, n, r),
+                        callToAction: i
                     }
                 );
             },
-            react: (e, t, n) =>
-                (0, r.jsx)(
-                    u.Anchor,
+            react: (e, n, r) =>
+                (0, a.jsx)(
+                    d.Anchor,
                     {
-                        href: l().sanitizeUrl(e.target),
+                        href: c().sanitizeUrl(e.target),
                         title: e.title,
                         onClick: e.callToAction,
                         target: '_blank',
                         className: e.callToAction ? 'cta' : void 0,
-                        children: t(e.content, n)
+                        children: n(e.content, r)
                     },
-                    n.key
+                    r.key
                 )
         },
         lheading: (e) => ({
-            react: (t, n, i) =>
-                (0, r.jsx)(
-                    v,
+            react: (n, r, i) =>
+                (0, a.jsx)(
+                    y,
                     {
-                        level: t.level,
-                        className: t.className,
+                        level: n.level,
+                        className: n.className,
                         styleSheet: e,
-                        children: n(t.content, i)
+                        children: r(n.content, i)
                     },
                     i.key
                 )
         }),
         heading: {
-            react: (e, t, n) =>
-                (0, r.jsx)(
-                    v,
+            react: (e, n, r) =>
+                (0, a.jsx)(
+                    y,
                     {
                         level: e.level,
-                        children: t(e.content, n)
+                        children: n(e.content, r)
                     },
-                    n.key
+                    r.key
                 )
         },
         image: {
-            react(e, t, i) {
-                let a = n(595173)('./'.concat(e.target));
-                return (0, r.jsx)(
+            react(e, n, i) {
+                let s = r(595173)('./'.concat(e.target));
+                return (0, a.jsx)(
                     'img',
                     {
                         alt: e.alt,
-                        src: a
+                        src: s
                     },
                     i.key
                 );
             }
         },
-        blockQuote: { react: null == I ? void 0 : I.blockQuote.react },
-        paragraph: { react: (e, t, n) => (0, r.jsx)('p', { children: t(e.content, n) }, n.key) }
+        blockQuote: { react: null == S ? void 0 : S.blockQuote.react },
+        paragraph: { react: (e, n, r) => (0, a.jsx)('p', { children: n(e.content, r) }, r.key) }
     };

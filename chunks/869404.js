@@ -1,49 +1,50 @@
-n.d(t, {
+r.d(n, {
     IO: function () {
-        return u;
+        return h;
     },
     h3: function () {
-        return l;
+        return _;
     },
     k1: function () {
-        return s;
+        return u;
     },
     tU: function () {
-        return o;
+        return f;
     }
-}),
-    n(47120),
-    n(724458);
-var r = n(709054),
-    i = n(355298),
-    a = n(333984);
-function s(e) {
-    let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [i.Z, a.Z];
-    return (function (e) {
-        return Array.from(e).reduce((e, t) => {
-            let [n, r] = t;
-            return Object.assign(e, { [n]: r });
-        }, {});
-    })(
-        (function (e) {
-            return r.default.keys(e).map((t) => [t, e[t]]);
-        })(e).filter((e) => {
-            let [, r] = e;
-            return !t.isMessageRequest(r.id) && !n.isSpam(r.id);
+});
+var i = r(47120);
+var a = r(724458);
+var s = r(709054),
+    o = r(355298),
+    l = r(333984);
+function u(e) {
+    let [n, r] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.Z, l.Z];
+    return d(
+        c(e).filter((e) => {
+            let [, i] = e;
+            return !n.isMessageRequest(i.id) && !r.isSpam(i.id);
         })
     );
 }
-function o(e) {
-    let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [i.Z, a.Z];
-    return e.filter((e) => !t.isMessageRequest(e) && !n.isSpam(e));
+function c(e) {
+    return s.default.keys(e).map((n) => [n, e[n]]);
 }
-function l(e) {
-    let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [i.Z, a.Z];
-    return t.isMessageRequest(e) || n.isSpam(e);
+function d(e) {
+    return Array.from(e).reduce((e, n) => {
+        let [r, i] = n;
+        return Object.assign(e, { [r]: i });
+    }, {});
 }
-function u() {
-    let [e, t] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [i.Z, a.Z],
-        n = t.getSpamChannelsCount(),
-        r = e.getMessageRequestsCount();
-    return r > 0 || n > 0;
+function f(e) {
+    let [n, r] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.Z, l.Z];
+    return e.filter((e) => !n.isMessageRequest(e) && !r.isSpam(e));
+}
+function _(e) {
+    let [n, r] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.Z, l.Z];
+    return n.isMessageRequest(e) || r.isSpam(e);
+}
+function h() {
+    let [e, n] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [o.Z, l.Z],
+        r = n.getSpamChannelsCount();
+    return e.getMessageRequestsCount() > 0 || r > 0;
 }

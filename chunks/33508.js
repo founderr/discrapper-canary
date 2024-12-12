@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function n(e) {
     return {
         name: 'PHP template',
         subLanguage: 'xml',
@@ -39,4 +39,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = n;

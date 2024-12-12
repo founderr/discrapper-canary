@@ -1,94 +1,98 @@
-n.d(t, {
+r.d(n, {
     N: function () {
-        return d;
+        return h;
     }
-}),
-    n(653041);
-var r = n(200651),
-    i = n(192379),
-    a = n(711873),
-    s = n.n(a),
-    o = n(134432);
-function l(e, t, n) {
+});
+var i = r(653041);
+var a = r(200651),
+    s = r(192379),
+    o = r(711873),
+    l = r.n(o),
+    u = r(134432);
+function c(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let u = /url\(['"](.*)['"]\)/,
-    c = (e) => {
+let d = /url\(['"](.*)['"]\)/,
+    f = (e) => {
         if (null == e || '' === e || 'none' === e) return null;
-        let t = e.match(u);
-        return null != t ? t[1] : e;
+        let n = e.match(d);
+        return null != n ? n[1] : e;
     };
-function d(e) {
-    class t extends i.Component {
-        componentDidUpdate(e, t) {
-            if (t === this.state) return;
-            let { cached: n, loaded: r } = this.state,
-                { style: i } = this.props,
-                a = null != i ? c(i.backgroundImage) : null;
-            null == a && a !== n
+function _(e) {
+    return null == e || '' === e || 'none' === e ? 'none' : 'url('.concat(e, ')');
+}
+function h(e) {
+    class n extends s.Component {
+        componentDidUpdate(e, n) {
+            if (n === this.state) return;
+            let { cached: r, loaded: i } = this.state,
+                { style: a } = this.props,
+                s = null != a ? f(a.backgroundImage) : null;
+            null == s && s !== r
                 ? this.setState({
                       loaded: !0,
-                      cached: a
+                      cached: s
                   })
-                : this.cachedURLs.indexOf(a) >= 0
+                : this.cachedURLs.indexOf(s) >= 0
                   ? this.setState({
                         loaded: !0,
-                        cached: a
+                        cached: s
                     })
-                  : null != a && a !== n && !0 === r && this.setState({ loaded: !1 }, () => this.preloadURL(a));
+                  : null != s && s !== r && !0 === i && this.setState({ loaded: !1 }, () => this.preloadURL(s));
         }
         preloadURL(e) {
             this.canceller && this.canceller(),
-                (this.canceller = (0, o.po)(e, (t) => {
+                (this.canceller = (0, u.po)(e, (n) => {
                     this.canceller && (this.canceller = null),
-                        !t &&
+                        !n &&
                             (this.cachedURLs.push(e),
                             this.setState({
                                 cached: e,
                                 loaded: !0
                             }));
-                    let { onBackgroundImageLoad: n } = this.props;
-                    n && n(t, e);
+                    let { onBackgroundImageLoad: r } = this.props;
+                    r && r(n, e);
                 }));
         }
         componentWillUnmount() {
             this.canceller && this.canceller(), (this.cachedURLs.length = 0);
         }
         render() {
-            let { style: t, onBackgroundImageLoad: n, ...i } = this.props,
-                { loaded: a, cached: s } = this.state;
-            if (!a && null != t) {
-                var o;
-                t = {
-                    ...t,
-                    backgroundImage: null == (o = s) || '' === o || 'none' === o ? 'none' : 'url('.concat(o, ')')
-                };
-            }
-            return (0, r.jsx)(e, {
-                style: t,
-                ...i
-            });
+            let { style: n, onBackgroundImageLoad: r, ...i } = this.props,
+                { loaded: s, cached: o } = this.state;
+            return (
+                !s &&
+                    null != n &&
+                    (n = {
+                        ...n,
+                        backgroundImage: _(o)
+                    }),
+                (0, a.jsx)(e, {
+                    style: n,
+                    ...i
+                })
+            );
         }
         constructor(e) {
-            super(e), l(this, 'cachedURLs', []), l(this, 'canceller', null);
-            let { style: t } = e,
-                n = null != t ? c(t.backgroundImage) : null;
-            (this.cachedURLs = [n]),
+            super(e), c(this, 'cachedURLs', []), c(this, 'canceller', null);
+            let { style: n } = e,
+                r = null != n ? f(n.backgroundImage) : null;
+            (this.cachedURLs = [r]),
                 (this.state = {
-                    cached: n,
+                    cached: r,
                     loaded: !0
                 });
         }
     }
-    return s()(t, e), t;
+    return l()(n, e), n;
 }

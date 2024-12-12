@@ -1,56 +1,58 @@
-var r = n(192379),
-    i = n(723184),
-    a = n(925489),
-    s = (function () {
-        function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-                var r = t[n];
-                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+var i = r(192379),
+    a = r(723184),
+    s = r(925489),
+    o = (function () {
+        function e(e, n) {
+            for (var r = 0; r < n.length; r++) {
+                var i = n[r];
+                (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
             }
         }
-        return function (t, n, r) {
-            return n && e(t.prototype, n), r && e(t, r), t;
+        return function (n, r, i) {
+            return r && e(n.prototype, r), i && e(n, i), n;
         };
     })();
-function o(e, t) {
-    if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
+function l(e, n) {
+    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
 }
-var l = (function (e) {
-    function t() {
-        !(function (e, t) {
-            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-        })(this, t);
-        for (var e, n, r, i = arguments.length, s = Array(i), l = 0; l < i; l++) s[l] = arguments[l];
+function u(e, n) {
+    if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
+}
+function c(e, n) {
+    if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
+    (e.prototype = Object.create(n && n.prototype, {
+        constructor: {
+            value: e,
+            enumerable: !1,
+            writable: !0,
+            configurable: !0
+        }
+    })),
+        n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
+}
+var d = (function (e) {
+    function n() {
+        l(this, n);
+        for (var e, r, i, a = arguments.length, o = Array(a), c = 0; c < a; c++) o[c] = arguments[c];
         return (
-            (n = r = o(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(s)))),
-            (r.handleChange = function (e) {
-                var t = a.T(e, r.props.direction, r.props.hsl, r.container);
-                t && 'function' == typeof r.props.onChange && r.props.onChange(t, e);
+            (r = i = u(this, (e = n.__proto__ || Object.getPrototypeOf(n)).call.apply(e, [this].concat(o)))),
+            (i.handleChange = function (e) {
+                var n = s.T(e, i.props.direction, i.props.hsl, i.container);
+                n && 'function' == typeof i.props.onChange && i.props.onChange(n, e);
             }),
-            (r.handleMouseDown = function (e) {
-                r.handleChange(e), window.addEventListener('mousemove', r.handleChange), window.addEventListener('mouseup', r.handleMouseUp);
+            (i.handleMouseDown = function (e) {
+                i.handleChange(e), window.addEventListener('mousemove', i.handleChange), window.addEventListener('mouseup', i.handleMouseUp);
             }),
-            (r.handleMouseUp = function () {
-                r.unbindEventListeners();
+            (i.handleMouseUp = function () {
+                i.unbindEventListeners();
             }),
-            o(r, n)
+            u(i, r)
         );
     }
     return (
-        !(function (e, t) {
-            if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-            (e.prototype = Object.create(t && t.prototype, {
-                constructor: {
-                    value: e,
-                    enumerable: !1,
-                    writable: !0,
-                    configurable: !0
-                }
-            })),
-                t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
-        })(t, e),
-        s(t, [
+        c(n, e),
+        o(n, [
             {
                 key: 'componentWillUnmount',
                 value: function () {
@@ -67,9 +69,9 @@ var l = (function (e) {
                 key: 'render',
                 value: function () {
                     var e = this,
-                        t = this.props.direction,
-                        n = void 0 === t ? 'horizontal' : t,
-                        a = (0, i.default)(
+                        n = this.props.direction,
+                        r = void 0 === n ? 'horizontal' : n,
+                        s = (0, a.default)(
                             {
                                 default: {
                                     hue: {
@@ -104,31 +106,31 @@ var l = (function (e) {
                                     }
                                 }
                             },
-                            { vertical: 'vertical' === n }
+                            { vertical: 'vertical' === r }
                         );
-                    return r.createElement(
+                    return i.createElement(
                         'div',
-                        { style: a.hue },
-                        r.createElement(
+                        { style: s.hue },
+                        i.createElement(
                             'div',
                             {
-                                className: 'hue-' + n,
-                                style: a.container,
-                                ref: function (t) {
-                                    return (e.container = t);
+                                className: 'hue-' + r,
+                                style: s.container,
+                                ref: function (n) {
+                                    return (e.container = n);
                                 },
                                 onMouseDown: this.handleMouseDown,
                                 onTouchMove: this.handleChange,
                                 onTouchStart: this.handleChange
                             },
-                            r.createElement('style', null, '\n            .hue-horizontal {\n              background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0\n                33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to right, #f00 0%, #ff0\n                17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n\n            .hue-vertical {\n              background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%,\n                #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to top, #f00 0%, #ff0 17%,\n                #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n          '),
-                            r.createElement('div', { style: a.pointer }, this.props.pointer ? r.createElement(this.props.pointer, this.props) : r.createElement('div', { style: a.slider }))
+                            i.createElement('style', null, '\n            .hue-horizontal {\n              background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0\n                33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to right, #f00 0%, #ff0\n                17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n\n            .hue-vertical {\n              background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%,\n                #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to top, #f00 0%, #ff0 17%,\n                #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n          '),
+                            i.createElement('div', { style: s.pointer }, this.props.pointer ? i.createElement(this.props.pointer, this.props) : i.createElement('div', { style: s.slider }))
                         )
                     );
                 }
             }
         ]),
-        t
+        n
     );
-})(r.PureComponent || r.Component);
-t.Z = l;
+})(i.PureComponent || i.Component);
+n.Z = d;

@@ -1,39 +1,40 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return o;
+        return u;
     }
 });
-var r = n(192379),
-    i = n(399606),
-    a = n(745510),
-    s = n(351780);
-function o() {
-    let { createMultipleConfettiAt: e } = r.useContext(a.h),
-        t = (0, i.e7)([s.Z], () => s.Z.getState()),
-        n = r.useCallback(
+var i = r(192379),
+    a = r(399606),
+    s = r(745510),
+    o = r(351780);
+let l = 7;
+function u() {
+    let { createMultipleConfettiAt: e } = i.useContext(s.h),
+        n = (0, a.e7)([o.Z], () => o.Z.getState()),
+        r = i.useCallback(
             (e) => ({
                 size: {
                     type: 'static-random',
-                    minValue: e.confettiSize - 7,
-                    maxValue: e.confettiSize + 7
+                    minValue: e.confettiSize - l,
+                    maxValue: e.confettiSize + l
                 }
             }),
             []
         );
-    return r.useMemo(
+    return i.useMemo(
         () => ({
-            fire: (r, i, a) => {
-                var s, o;
-                let l =
-                    (null == a ? void 0 : a.settings) != null
+            fire: (i, a, s) => {
+                var o, l;
+                let u =
+                    (null == s ? void 0 : s.settings) != null
                         ? {
-                              ...t,
-                              ...a.settings
+                              ...n,
+                              ...s.settings
                           }
-                        : t;
-                e(r, i, n(l), (null !== (s = null == a ? void 0 : a.count) && void 0 !== s ? s : l.confettiCount) * (null !== (o = null == a ? void 0 : a.countMultiplier) && void 0 !== o ? o : 1), { sprite: null == a ? void 0 : a.sprite });
+                        : n;
+                e(i, a, r(u), (null !== (o = null == s ? void 0 : s.count) && void 0 !== o ? o : u.confettiCount) * (null !== (l = null == s ? void 0 : s.countMultiplier) && void 0 !== l ? l : 1), { sprite: null == s ? void 0 : s.sprite });
             }
         }),
-        [e, n, t]
+        [e, r, n]
     );
 }

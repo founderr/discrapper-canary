@@ -1,19 +1,24 @@
-e.exports = function (e) {
-    let t = '(_?[ui](8|16|32|64|128))?',
-        n = '[a-zA-Z_]\\w*[!?=]?|[-+~]@|<<|>>|[=!]~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~|]|//|//=|&[-+*]=?|&\\*\\*|\\[\\][=?]?',
-        r = '[A-Za-z_]\\w*(::\\w+)*(\\?|!)?',
-        i = {
+function n(e) {
+    let n = '(_?[ui](8|16|32|64|128))?',
+        r = '(_?f(32|64))?',
+        i = '[a-zA-Z_]\\w*[!?=]?|[-+~]@|<<|>>|[=!]~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~|]|//|//=|&[-+*]=?|&\\*\\*|\\[\\][=?]?',
+        a = '[A-Za-z_]\\w*(::\\w+)*(\\?|!)?',
+        s = {
             $pattern: '[a-zA-Z_]\\w*[!?=]?',
             keyword: 'abstract alias annotation as as? asm begin break case class def do else elsif end ensure enum extend for fun if include instance_sizeof is_a? lib macro module next nil? of out pointerof private protected rescue responds_to? return require select self sizeof struct super then type typeof union uninitialized unless until verbatim when while with yield __DIR__ __END_LINE__ __FILE__ __LINE__',
             literal: 'false nil true'
         },
-        a = {
+        o = {
             className: 'subst',
             begin: /#\{/,
             end: /\}/,
-            keywords: i
+            keywords: s
         },
-        s = {
+        l = {
+            className: 'variable',
+            begin: "(\\$\\W)|((\\$|@@?)(\\w+))(?=[^@$?])(?![A-Za-z])(?![@$?'])"
+        },
+        u = {
             className: 'template-variable',
             variants: [
                 {
@@ -25,20 +30,20 @@ e.exports = function (e) {
                     end: '%\\}'
                 }
             ],
-            keywords: i
+            keywords: s
         };
-    function o(e, t) {
-        let n = [
+    function c(e, n) {
+        let r = [
             {
                 begin: e,
-                end: t
+                end: n
             }
         ];
-        return (n[0].contains = n), n;
+        return (r[0].contains = r), r;
     }
-    let l = {
+    let d = {
             className: 'string',
-            contains: [e.BACKSLASH_ESCAPE, a],
+            contains: [e.BACKSLASH_ESCAPE, o],
             variants: [
                 {
                     begin: /'/,
@@ -55,22 +60,22 @@ e.exports = function (e) {
                 {
                     begin: '%[Qwi]?\\(',
                     end: '\\)',
-                    contains: o('\\(', '\\)')
+                    contains: c('\\(', '\\)')
                 },
                 {
                     begin: '%[Qwi]?\\[',
                     end: '\\]',
-                    contains: o('\\[', '\\]')
+                    contains: c('\\[', '\\]')
                 },
                 {
                     begin: '%[Qwi]?\\{',
                     end: /\}/,
-                    contains: o(/\{/, /\}/)
+                    contains: c(/\{/, /\}/)
                 },
                 {
                     begin: '%[Qwi]?<',
                     end: '>',
-                    contains: o('<', '>')
+                    contains: c('<', '>')
                 },
                 {
                     begin: '%[Qwi]?\\|',
@@ -83,28 +88,28 @@ e.exports = function (e) {
             ],
             relevance: 0
         },
-        u = {
+        f = {
             className: 'string',
             variants: [
                 {
                     begin: '%q\\(',
                     end: '\\)',
-                    contains: o('\\(', '\\)')
+                    contains: c('\\(', '\\)')
                 },
                 {
                     begin: '%q\\[',
                     end: '\\]',
-                    contains: o('\\[', '\\]')
+                    contains: c('\\[', '\\]')
                 },
                 {
                     begin: '%q\\{',
                     end: /\}/,
-                    contains: o(/\{/, /\}/)
+                    contains: c(/\{/, /\}/)
                 },
                 {
                     begin: '%q<',
                     end: '>',
-                    contains: o('<', '>')
+                    contains: c('<', '>')
                 },
                 {
                     begin: '%q\\|',
@@ -117,13 +122,13 @@ e.exports = function (e) {
             ],
             relevance: 0
         },
-        c = {
+        _ = {
             begin: '(?!%\\})(' + e.RE_STARTERS_RE + '|\\n|\\b(case|if|select|unless|until|when|while)\\b)\\s*',
             keywords: 'case if select unless until when while',
             contains: [
                 {
                     className: 'regexp',
-                    contains: [e.BACKSLASH_ESCAPE, a],
+                    contains: [e.BACKSLASH_ESCAPE, o],
                     variants: [
                         {
                             begin: '//[a-z]*',
@@ -138,29 +143,29 @@ e.exports = function (e) {
             ],
             relevance: 0
         },
-        d = {
+        h = {
             className: 'regexp',
-            contains: [e.BACKSLASH_ESCAPE, a],
+            contains: [e.BACKSLASH_ESCAPE, o],
             variants: [
                 {
                     begin: '%r\\(',
                     end: '\\)',
-                    contains: o('\\(', '\\)')
+                    contains: c('\\(', '\\)')
                 },
                 {
                     begin: '%r\\[',
                     end: '\\]',
-                    contains: o('\\[', '\\]')
+                    contains: c('\\[', '\\]')
                 },
                 {
                     begin: '%r\\{',
                     end: /\}/,
-                    contains: o(/\{/, /\}/)
+                    contains: c(/\{/, /\}/)
                 },
                 {
                     begin: '%r<',
                     end: '>',
-                    contains: o('<', '>')
+                    contains: c('<', '>')
                 },
                 {
                     begin: '%r\\|',
@@ -169,42 +174,39 @@ e.exports = function (e) {
             ],
             relevance: 0
         },
-        f = [
-            s,
-            l,
+        p = [
             u,
             d,
-            c,
+            f,
+            h,
+            _,
             {
                 className: 'meta',
                 begin: '@\\[',
                 end: '\\]',
                 contains: [e.inherit(e.QUOTE_STRING_MODE, { className: 'string' })]
             },
-            {
-                className: 'variable',
-                begin: "(\\$\\W)|((\\$|@@?)(\\w+))(?=[^@$?])(?![A-Za-z])(?![@$?'])"
-            },
+            l,
             e.HASH_COMMENT_MODE,
             {
                 className: 'class',
                 beginKeywords: 'class module struct',
                 end: '$|;',
                 illegal: /=/,
-                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: r }), { begin: '<' }]
+                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: a }), { begin: '<' }]
             },
             {
                 className: 'class',
                 beginKeywords: 'lib enum union',
                 end: '$|;',
                 illegal: /=/,
-                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: r })]
+                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: a })]
             },
             {
                 beginKeywords: 'annotation',
                 end: '$|;',
                 illegal: /=/,
-                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: r })],
+                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: a })],
                 relevance: 2
             },
             {
@@ -213,7 +215,7 @@ e.exports = function (e) {
                 end: /\B\b/,
                 contains: [
                     e.inherit(e.TITLE_MODE, {
-                        begin: n,
+                        begin: i,
                         endsParent: !0
                     })
                 ]
@@ -224,7 +226,7 @@ e.exports = function (e) {
                 end: /\B\b/,
                 contains: [
                     e.inherit(e.TITLE_MODE, {
-                        begin: n,
+                        begin: i,
                         endsParent: !0
                     })
                 ],
@@ -238,23 +240,24 @@ e.exports = function (e) {
             {
                 className: 'symbol',
                 begin: ':',
-                contains: [l, { begin: n }],
+                contains: [d, { begin: i }],
                 relevance: 0
             },
             {
                 className: 'number',
-                variants: [{ begin: '\\b0b([01_]+)' + t }, { begin: '\\b0o([0-7_]+)' + t }, { begin: '\\b0x([A-Fa-f0-9_]+)' + t }, { begin: '\\b([1-9][0-9_]*[0-9]|[0-9])(\\.[0-9][0-9_]*)?([eE]_?[-+]?[0-9_]*)?(_?f(32|64))?(?!_)' }, { begin: '\\b([1-9][0-9_]*|0)' + t }],
+                variants: [{ begin: '\\b0b([01_]+)' + n }, { begin: '\\b0o([0-7_]+)' + n }, { begin: '\\b0x([A-Fa-f0-9_]+)' + n }, { begin: '\\b([1-9][0-9_]*[0-9]|[0-9])(\\.[0-9][0-9_]*)?([eE]_?[-+]?[0-9_]*)?' + r + '(?!_)' }, { begin: '\\b([1-9][0-9_]*|0)' + n }],
                 relevance: 0
             }
         ];
     return (
-        (a.contains = f),
-        (s.contains = f.slice(1)),
+        (o.contains = p),
+        (u.contains = p.slice(1)),
         {
             name: 'Crystal',
             aliases: ['cr'],
-            keywords: i,
-            contains: f
+            keywords: s,
+            contains: p
         }
     );
-};
+}
+e.exports = n;

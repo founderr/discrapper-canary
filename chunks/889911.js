@@ -1,23 +1,22 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(433517),
-    i = n(981631);
-function a(e, t) {
+var i = r(433517),
+    a = r(981631);
+function s(e, n) {
     if (0 === e.length) return 'No logs';
-    let n = r.K.get(i.JkL),
-        a = r.K.get(i.scU),
-        s = e
+    let r = i.K.get(a.JkL),
+        s = i.K.get(a.scU),
+        o = null != r ? 'Device Token: '.concat(r) : '',
+        l = null != s ? 'Device Voip Token: '.concat(s) : '',
+        u = e
             .map((e) => {
-                let n = e.silent ? 'Silent' : 'Displayed',
-                    r = t ? ''.concat(e.channelId, ' - ').concat(e.messageId) : ''.concat(e.title, ' - ').concat(e.content);
-                return ''.concat(new Date(e.receivedTimestamp).toISOString(), ' [').concat(e.type, '] ').concat(n, ' - ').concat(r);
+                let r = e.silent ? 'Silent' : 'Displayed',
+                    i = n ? ''.concat(e.channelId, ' - ').concat(e.messageId) : ''.concat(e.title, ' - ').concat(e.content);
+                return ''.concat(new Date(e.receivedTimestamp).toISOString(), ' [').concat(e.type, '] ').concat(r, ' - ').concat(i);
             })
             .join('\n');
-    return ''
-        .concat(null != n ? 'Device Token: '.concat(n) : '', '\n')
-        .concat(null != a ? 'Device Voip Token: '.concat(a) : '', '\n\n')
-        .concat(s);
+    return ''.concat(o, '\n').concat(l, '\n\n').concat(u);
 }

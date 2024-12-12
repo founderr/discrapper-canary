@@ -1,113 +1,122 @@
-let r;
-n(47120);
-var i,
-    a,
-    s,
-    o,
-    l = n(442837),
-    u = n(433517),
-    c = n(570140),
-    d = n(695346),
-    f = n(581883),
-    _ = n(314897),
-    p = n(592125),
-    h = n(885110),
-    m = n(451478),
-    g = n(981631);
-let E = {
+let i;
+var a,
+    s = r(47120);
+var o = r(442837),
+    l = r(433517),
+    u = r(570140),
+    c = r(695346),
+    d = r(581883),
+    f = r(314897),
+    _ = r(592125),
+    h = r(885110),
+    p = r(451478),
+    m = r(981631);
+function g(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let E = 'IncomingCallStore',
+    v = {
         width: 232,
         height: 315
     },
-    v = new Set(),
-    I = [],
-    T = new Map(),
-    b = new Set(),
-    S = !1;
-function y(e) {
-    if (null == e || null == T.get(e)) return !1;
-    T.delete(e), (b = new Set(b)).delete(e);
+    I = 10,
+    T = new Set(),
+    b = [],
+    y = new Map(),
+    S = new Set(),
+    A = !1;
+function N() {
+    let e = p.Z.windowSize();
+    return null != i && i.x + v.width < e.width && i.y + v.height < e.height
+        ? i
+        : {
+              x: e.width / 2 - v.width / 2,
+              y: e.height / 2 - v.height / 2
+          };
 }
-function A(e) {
-    let { channelId: t, ringing: n } = e,
-        i = n.includes(_.default.getId());
-    if (!b.has(t) && i) {
-        let e = p.Z.getChannel(t);
+function C(e) {
+    if (null == e || null == y.get(e)) return !1;
+    y.delete(e), (S = new Set(S)).delete(e);
+}
+function R(e) {
+    let { channelId: n, ringing: r } = e,
+        i = r.includes(f.default.getId());
+    if (!S.has(n) && i) {
+        let e = _.Z.getChannel(n);
         if (null == e) return !1;
-        let n = 10 * b.size,
-            { x: i, y: a } = (function () {
-                let e = m.Z.windowSize();
-                return null != r && r.x + E.width < e.width && r.y + E.height < e.height
-                    ? r
-                    : {
-                          x: e.width / 2 - E.width / 2,
-                          y: e.height / 2 - E.height / 2
-                      };
-            })();
+        let r = I * S.size,
+            { x: i, y: a } = N();
         return (
-            T.set(t, {
+            y.set(n, {
                 channel: e,
-                x: i + n,
-                y: a + n
+                x: i + r,
+                y: a + r
             }),
-            (b = new Set(b)).add(t),
+            (S = new Set(S)).add(n),
             void 0
         );
     }
-    return !!b.has(t) && !i && y(t);
+    return !!S.has(n) && !i && C(n);
 }
-function N() {
-    S = h.Z.getStatus() === g.Skl.DND || d.QZ.getSetting();
+function O(e) {
+    let { channelId: n } = e;
+    return C(n);
 }
-class C extends (i = l.ZP.Store) {
+function D(e) {
+    let { channelId: n } = e;
+    return C(n);
+}
+function L(e) {
+    let { x: n, y: r } = e;
+    return (
+        (i = {
+            x: n,
+            y: r
+        }),
+        l.K.set(E, i),
+        !1
+    );
+}
+function x(e) {
+    let { channel: n } = e;
+    return C(n.id);
+}
+function w() {
+    A = h.Z.getStatus() === m.Skl.DND || c.QZ.getSetting();
+}
+class P extends (a = o.ZP.Store) {
     initialize() {
-        this.waitFor(p.Z, h.Z), this.syncWith([h.Z], N), this.syncWith([f.Z], N);
+        this.waitFor(_.Z, h.Z), this.syncWith([h.Z], w), this.syncWith([d.Z], w);
     }
     getIncomingCalls() {
-        return S ? I : Array.from(T.values());
+        return A ? b : Array.from(y.values());
     }
     getIncomingCallChannelIds() {
-        return S ? v : b;
+        return A ? T : S;
     }
     getFirstIncomingCallId() {
-        return S ? null : b.values().next().value;
+        return A ? null : S.values().next().value;
     }
     hasIncomingCalls() {
-        return !S && b.size > 0;
+        return !A && S.size > 0;
     }
 }
-(o = 'IncomingCallStore'),
-    (s = 'displayName') in (a = C)
-        ? Object.defineProperty(a, s, {
-              value: o,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (a[s] = o),
-    (t.Z = new C(c.Z, {
-        CALL_CREATE: A,
-        CALL_UPDATE: A,
-        CALL_DELETE: function (e) {
-            let { channelId: t } = e;
-            return y(t);
-        },
-        VOICE_CHANNEL_SELECT: function (e) {
-            let { channelId: t } = e;
-            return y(t);
-        },
-        INCOMING_CALL_MOVE: function (e) {
-            let { x: t, y: n } = e;
-            return (
-                (r = {
-                    x: t,
-                    y: n
-                }),
-                u.K.set('IncomingCallStore', r),
-                !1
-            );
-        },
-        CHANNEL_DELETE: function (e) {
-            let { channel: t } = e;
-            return y(t.id);
-        }
+g(P, 'displayName', 'IncomingCallStore'),
+    (n.Z = new P(u.Z, {
+        CALL_CREATE: R,
+        CALL_UPDATE: R,
+        CALL_DELETE: O,
+        VOICE_CHANNEL_SELECT: D,
+        INCOMING_CALL_MOVE: L,
+        CHANNEL_DELETE: x
     }));

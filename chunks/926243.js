@@ -1,152 +1,154 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return y;
+        return N;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(442837),
-    l = n(481060),
-    u = n(239091),
-    c = n(607070),
-    d = n(339085),
-    f = n(906411),
-    _ = n(633302),
-    p = n(691251),
-    h = n(536442),
-    m = n(912893),
-    g = n(430824),
-    E = n(358085),
-    v = n(288406),
-    I = n(388032),
-    T = n(538891);
-let b = (e, t) => ''.concat(e, ':').concat(t),
-    S = i.forwardRef(function (e, t) {
-        let n,
-            { emoji: i, isFavorite: a, isLargeSize: u, isMediumSize: c, isInspected: d, isDisabled: _, showPulse: h, columnIndex: m, rowIndex: E, size: b, surrogateCodePoint: S, allowAnimatedEmoji: y, selectedItemClassName: A, inNitroLockedSection: N, ...C } = e,
-            R = (0, o.e7)([g.Z], () => (i.type === f.B.GUILD ? g.Z.getGuild(i.guildId) : void 0), [i]);
-        return (0, r.jsx)(l.FocusRing, {
-            children: (0, r.jsx)('button', {
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(120356),
+    l = r.n(o),
+    u = r(442837),
+    c = r(481060),
+    d = r(239091),
+    f = r(607070),
+    _ = r(339085),
+    h = r(906411),
+    p = r(633302),
+    m = r(691251),
+    g = r(536442),
+    E = r(912893),
+    v = r(430824),
+    I = r(358085),
+    T = r(288406),
+    b = r(388032),
+    y = r(538891);
+let S = (e, n) => ''.concat(e, ':').concat(n),
+    A = s.forwardRef(function (e, n) {
+        let { emoji: r, isFavorite: i, isLargeSize: s, isMediumSize: o, isInspected: d, isDisabled: f, showPulse: _, columnIndex: p, rowIndex: g, size: E, surrogateCodePoint: I, allowAnimatedEmoji: S, selectedItemClassName: A, inNitroLockedSection: N, ...C } = e,
+            R = (0, u.e7)([v.Z], () => (r.type === h.B.GUILD ? v.Z.getGuild(r.guildId) : void 0), [r]),
+            O = () => {
+                let e = r.allNamesString;
+                return ((null == R ? void 0 : R.name) != null &&
+                    (e = b.intl.formatToPlainString(b.t['nXv4/P'], {
+                        names: e,
+                        guildName: R.name
+                    })),
+                i)
+                    ? b.intl.formatToPlainString(b.t['9FI9Z2'], { names: e })
+                    : e;
+            },
+            D = f && !N;
+        return (0, a.jsx)(c.FocusRing, {
+            children: (0, a.jsx)('button', {
                 ...C,
-                className: s()(T.emojiItem, {
-                    [T.emojiItemLarge]: u,
-                    [T.emojiItemMedium]: c,
-                    [T.emojiItemSelected]: d,
+                className: l()(y.emojiItem, {
+                    [y.emojiItemLarge]: s,
+                    [y.emojiItemMedium]: o,
+                    [y.emojiItemSelected]: d,
                     [null != A ? A : '']: d,
-                    [T.showPulse]: h
+                    [y.showPulse]: _
                 }),
-                'data-type': p.S.EMOJI,
-                'data-id': i.id,
-                'data-name': i.name,
-                'data-surrogates': 'surrogates' in i ? i.surrogates : null,
-                'data-animated': i.animated ? 'true' : null,
-                ref: t,
-                children: (0, r.jsx)(v.Z, {
-                    'aria-label':
-                        ((n = i.allNamesString),
-                        ((null == R ? void 0 : R.name) != null &&
-                            (n = I.intl.formatToPlainString(I.t['nXv4/P'], {
-                                names: n,
-                                guildName: R.name
-                            })),
-                        a)
-                            ? I.intl.formatToPlainString(I.t['9FI9Z2'], { names: n })
-                            : n),
-                    columnIndex: m,
-                    rowIndex: E,
-                    emoji: i,
-                    size: b,
-                    surrogateCodePoint: S,
-                    allowAnimatedEmoji: y,
-                    isLocked: _ && !N
+                'data-type': m.S.EMOJI,
+                'data-id': r.id,
+                'data-name': r.name,
+                'data-surrogates': 'surrogates' in r ? r.surrogates : null,
+                'data-animated': r.animated ? 'true' : null,
+                ref: n,
+                children: (0, a.jsx)(T.Z, {
+                    'aria-label': O(),
+                    columnIndex: p,
+                    rowIndex: g,
+                    emoji: r,
+                    size: E,
+                    surrogateCodePoint: I,
+                    allowAnimatedEmoji: S,
+                    isLocked: D
                 })
             })
         });
     });
-function y(e) {
-    let { descriptor: t, emojiItemKey: a, isInspected: s, rowIndex: f, channelGuildId: p, onInspect: g, onSelect: v, isScrolling: T, isUsingKeyboardNavigation: y, showEmojiFavoriteTooltip: A, surrogateCodePoint: N, selectedItemClassName: C, getEmojiItemProps: R, isMediumSize: O, isLargeSize: D, pulseItemKey: L, allowAnimatedEmoji: x, setPulseItemKey: w, messageId: P, isBurstReaction: M, rowPosition: k, inNitroLockedSection: U } = e,
-        [B, G] = i.useState(''),
-        Z = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
-        F = (0, o.e7)([d.ZP], () => d.ZP.getDisambiguatedEmojiContext(p), [p]),
-        V = i.useRef(null),
-        { emoji: j, size: H, isDisabled: Y, columnIndex: W } = t,
-        K = (e) => {
+function N(e) {
+    let { descriptor: n, emojiItemKey: i, isInspected: o, rowIndex: l, channelGuildId: h, onInspect: m, onSelect: v, isScrolling: T, isUsingKeyboardNavigation: y, showEmojiFavoriteTooltip: N, surrogateCodePoint: C, selectedItemClassName: R, getEmojiItemProps: O, isMediumSize: D, isLargeSize: L, pulseItemKey: x, allowAnimatedEmoji: w, setPulseItemKey: P, messageId: M, isBurstReaction: k, rowPosition: U, inNitroLockedSection: B } = e,
+        [G, Z] = s.useState(''),
+        F = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
+        V = (0, u.e7)([_.ZP], () => _.ZP.getDisambiguatedEmojiContext(h), [h]),
+        j = s.useRef(null),
+        { emoji: H, size: Y, isDisabled: W, columnIndex: K } = n,
+        z = (e) => {
             if ((e.stopPropagation(), T.current || y.current)) return;
-            let n = e.altKey;
-            n && !d.ZP.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(j) && w(a),
-                (0, h.Kw)(h.v6.FAVORITE_EMOJI_TOOLTIP),
-                v(t, {
+            let r = e.altKey;
+            r && !_.ZP.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(H) && P(i),
+                (0, g.Kw)(g.v6.FAVORITE_EMOJI_TOOLTIP),
+                v(n, {
                     isFinalSelection: !e.shiftKey,
-                    toggleFavorite: n
+                    toggleFavorite: r
                 });
         },
-        z = () => {
-            !T.current && !y.current && g(t);
+        q = () => {
+            !T.current && !y.current && m(n);
         },
-        q = (e) => {
-            (0, u.jW)(e, async () => {
-                let { default: e } = await n.e('39010').then(n.bind(n, 269254));
-                return (t) => (0, r.jsx)(e, { ...t });
+        Q = (e) => {
+            (0, d.jW)(e, async () => {
+                let { default: e } = await r.e('39010').then(r.bind(r, 269254));
+                return (n) => (0, a.jsx)(e, { ...n });
             });
         },
-        Q = function () {
+        X = function () {
             var e;
-            let { onMouseEnter: t, onMouseLeave: n } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                { ref: o, tabIndex: l, onFocus: u, ...c } = null !== (e = R(W, f)) && void 0 !== e ? e : {};
-            return (0, i.createElement)(
+            let { onMouseEnter: n, onMouseLeave: r } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+                { ref: u, tabIndex: c, onFocus: d, ...f } = null !== (e = O(K, l)) && void 0 !== e ? e : {};
+            return (0, s.createElement)(
                 'li',
                 {
-                    ...c,
-                    key: a,
-                    ref: V
+                    ...f,
+                    key: i,
+                    ref: j
                 },
-                B !== b(W, f) &&
-                    (0, r.jsx)(S, {
-                        ref: o,
-                        emoji: j,
-                        isFavorite: F.isFavoriteEmojiWithoutFetchingLatest(j),
-                        isLargeSize: D,
-                        isMediumSize: O,
-                        isInspected: s,
-                        isDisabled: Y,
-                        showPulse: L === a,
-                        allowAnimatedEmoji: x,
-                        onFocus: null != u ? u : z,
-                        onMouseMove: z,
-                        onMouseEnter: t,
-                        onMouseLeave: n,
+                G !== S(K, l) &&
+                    (0, a.jsx)(A, {
+                        ref: u,
+                        emoji: H,
+                        isFavorite: V.isFavoriteEmojiWithoutFetchingLatest(H),
+                        isLargeSize: L,
+                        isMediumSize: D,
+                        isInspected: o,
+                        isDisabled: W,
+                        showPulse: x === i,
+                        allowAnimatedEmoji: w,
+                        onFocus: null != d ? d : q,
+                        onMouseMove: q,
+                        onMouseEnter: n,
+                        onMouseLeave: r,
                         onClick: (e) => {
-                            if (null != V.current && null != k && null != P && !e.shiftKey && null != j.name && M && !Z && x) {
-                                let e = null == j.id ? _.ZP.convertNameToSurrogate(j.name) : j.name,
-                                    t = V.current.getBoundingClientRect();
-                                (t.x = k.x + (W + 1) * H), G(b(W, f)), (0, m.U)(P, e, j.id, t);
+                            if (null != j.current && null != U && null != M && !e.shiftKey && null != H.name && k && !F && w) {
+                                let e = null == H.id ? p.ZP.convertNameToSurrogate(H.name) : H.name,
+                                    n = j.current.getBoundingClientRect();
+                                (n.x = U.x + (K + 1) * Y), Z(S(K, l)), (0, E.U)(M, e, H.id, n);
                             }
-                            K(e);
+                            z(e);
                         },
-                        onContextMenu: q,
-                        tabIndex: l,
-                        columnIndex: W,
-                        rowIndex: f,
-                        size: H,
-                        surrogateCodePoint: N,
-                        selectedItemClassName: C,
-                        inNitroLockedSection: U
+                        onContextMenu: Q,
+                        tabIndex: c,
+                        columnIndex: K,
+                        rowIndex: l,
+                        size: Y,
+                        surrogateCodePoint: C,
+                        selectedItemClassName: R,
+                        inNitroLockedSection: B
                     })
             );
         };
-    return A
-        ? (0, r.jsx)(
-              l.Tooltip,
+    return N
+        ? (0, a.jsx)(
+              c.Tooltip,
               {
-                  text: I.intl.formatToPlainString(I.t.glqNsb, { key: (0, E.isMac)() ? 'Opt' : 'Alt' }),
+                  text: b.intl.formatToPlainString(b.t.glqNsb, { key: (0, I.isMac)() ? 'Opt' : 'Alt' }),
                   position: 'top',
                   delay: 200,
-                  children: (e) => Q(e)
+                  children: (e) => X(e)
               },
-              a
+              i
           )
-        : Q();
+        : X();
 }

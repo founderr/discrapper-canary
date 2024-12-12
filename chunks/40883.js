@@ -1,6 +1,7 @@
-e.exports = function (e) {
-    let t = e.regex,
-        n = ['begin_keywords', 'celldefine', 'default_nettype', 'default_decay_time', 'default_trireg_strength', 'define', 'delay_mode_distributed', 'delay_mode_path', 'delay_mode_unit', 'delay_mode_zero', 'else', 'elsif', 'end_keywords', 'endcelldefine', 'endif', 'ifdef', 'ifndef', 'include', 'line', 'nounconnected_drive', 'pragma', 'resetall', 'timescale', 'unconnected_drive', 'undef', 'undefineall'];
+function n(e) {
+    let n = e.regex,
+        r = ['__FILE__', '__LINE__'],
+        i = ['begin_keywords', 'celldefine', 'default_nettype', 'default_decay_time', 'default_trireg_strength', 'define', 'delay_mode_distributed', 'delay_mode_path', 'delay_mode_unit', 'delay_mode_zero', 'else', 'elsif', 'end_keywords', 'endcelldefine', 'endif', 'ifdef', 'ifndef', 'include', 'line', 'nounconnected_drive', 'pragma', 'resetall', 'timescale', 'unconnected_drive', 'undef', 'undefineall'];
     return {
         name: 'Verilog',
         aliases: ['v', 'sv', 'svh'],
@@ -39,15 +40,16 @@ e.exports = function (e) {
             },
             {
                 scope: 'variable.constant',
-                match: t.concat(/`/, t.either('__FILE__', '__LINE__'))
+                match: n.concat(/`/, n.either(...r))
             },
             {
                 scope: 'meta',
-                begin: t.concat(/`/, t.either(...n)),
+                begin: n.concat(/`/, n.either(...i)),
                 end: /$|\/\/|\/\*/,
                 returnEnd: !0,
-                keywords: n
+                keywords: i
             }
         ]
     };
-};
+}
+e.exports = n;

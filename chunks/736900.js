@@ -1,10 +1,10 @@
-e.exports = function (e) {
-    let t = e.regex,
-        n = {
-            className: 'variable',
-            variants: [{ begin: /\$\d+/ }, { begin: /\$\{\w+\}/ }, { begin: t.concat(/[$@]/, e.UNDERSCORE_IDENT_RE) }]
-        },
+function n(e) {
+    let n = e.regex,
         r = {
+            className: 'variable',
+            variants: [{ begin: /\$\d+/ }, { begin: /\$\{\w+\}/ }, { begin: n.concat(/[$@]/, e.UNDERSCORE_IDENT_RE) }]
+        },
+        i = {
             endsWithParent: !0,
             keywords: {
                 $pattern: /[a-z_]{2,}|\/dev\/poll/,
@@ -16,7 +16,7 @@ e.exports = function (e) {
                 e.HASH_COMMENT_MODE,
                 {
                     className: 'string',
-                    contains: [e.BACKSLASH_ESCAPE, n],
+                    contains: [e.BACKSLASH_ESCAPE, r],
                     variants: [
                         {
                             begin: /"/,
@@ -33,11 +33,11 @@ e.exports = function (e) {
                     end: '\\s',
                     endsWithParent: !0,
                     excludeEnd: !0,
-                    contains: [n]
+                    contains: [r]
                 },
                 {
                     className: 'regexp',
-                    contains: [e.BACKSLASH_ESCAPE, n],
+                    contains: [e.BACKSLASH_ESCAPE, r],
                     variants: [
                         {
                             begin: '\\s\\^',
@@ -62,7 +62,7 @@ e.exports = function (e) {
                     begin: '\\b\\d+[kKmMgGdshdwy]?\\b',
                     relevance: 0
                 },
-                n
+                r
             ]
         };
     return {
@@ -73,22 +73,22 @@ e.exports = function (e) {
             {
                 beginKeywords: 'upstream location',
                 end: /;|\{/,
-                contains: r.contains,
+                contains: i.contains,
                 keywords: { section: 'upstream location' }
             },
             {
                 className: 'section',
-                begin: t.concat(e.UNDERSCORE_IDENT_RE + t.lookahead(/\s+\{/)),
+                begin: n.concat(e.UNDERSCORE_IDENT_RE + n.lookahead(/\s+\{/)),
                 relevance: 0
             },
             {
-                begin: t.lookahead(e.UNDERSCORE_IDENT_RE + '\\s'),
+                begin: n.lookahead(e.UNDERSCORE_IDENT_RE + '\\s'),
                 end: ';|\\{',
                 contains: [
                     {
                         className: 'attribute',
                         begin: e.UNDERSCORE_IDENT_RE,
-                        starts: r
+                        starts: i
                     }
                 ],
                 relevance: 0
@@ -96,4 +96,5 @@ e.exports = function (e) {
         ],
         illegal: '[^\\s\\}\\{]'
     };
-};
+}
+e.exports = n;

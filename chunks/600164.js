@@ -1,77 +1,73 @@
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(189180),
-    l = n(652849);
-let u = {
-        VERTICAL: l.vertical,
-        HORIZONTAL: o.horizontal,
-        HORIZONTAL_REVERSE: o.horizontalReverse
-    },
-    c = {
-        START: l.justifyStart,
-        END: l.justifyEnd,
-        CENTER: l.justifyCenter,
-        BETWEEN: l.justifyBetween,
-        AROUND: l.justifyAround
+var i = r(200651),
+    a = r(192379),
+    s = r(120356),
+    o = r.n(s),
+    l = r(189180),
+    u = r(652849);
+let c = {
+        VERTICAL: u.vertical,
+        HORIZONTAL: l.horizontal,
+        HORIZONTAL_REVERSE: l.horizontalReverse
     },
     d = {
-        START: l.alignStart,
-        END: l.alignEnd,
-        CENTER: l.alignCenter,
-        STRETCH: l.alignStretch,
-        BASELINE: l.alignBaseline
+        START: u.justifyStart,
+        END: u.justifyEnd,
+        CENTER: u.justifyCenter,
+        BETWEEN: u.justifyBetween,
+        AROUND: u.justifyAround
     },
     f = {
-        NO_WRAP: l.noWrap,
-        WRAP: l.wrap,
-        WRAP_REVERSE: l.wrapReverse
+        START: u.alignStart,
+        END: u.alignEnd,
+        CENTER: u.alignCenter,
+        STRETCH: u.alignStretch,
+        BASELINE: u.alignBaseline
     },
-    _ = (e) => {
-        let { children: t, className: n, direction: i = u.HORIZONTAL, justify: a = c.START, align: l = d.STRETCH, wrap: _ = f.NO_WRAP, shrink: p = 1, grow: h = 1, basis: m = 'auto', style: g, ...E } = e;
-        return (0, r.jsx)('div', {
+    _ = {
+        NO_WRAP: u.noWrap,
+        WRAP: u.wrap,
+        WRAP_REVERSE: u.wrapReverse
+    },
+    h = (e) => {
+        let { children: n, className: r, shrink: s = 1, grow: u = 1, basis: c = 'auto', style: d, wrap: f = !1, ..._ } = e,
+            h = {
+                className: (r = null != r ? r : l.flexChild),
+                style: {
+                    flexGrow: u,
+                    flexShrink: s,
+                    flexBasis: c,
+                    ...d
+                },
+                ..._
+            };
+        if (!f && 'string' != typeof n && 1 === a.Children.count(n)) {
+            let e = a.Children.only(n);
+            return (
+                (h.style = {
+                    ...h.style,
+                    ...e.props.style
+                }),
+                (h.className = o()(e.props.className, r)),
+                a.cloneElement(e, h)
+            );
+        }
+        return (0, i.jsx)('div', {
+            ...h,
+            children: n
+        });
+    },
+    p = (e) => {
+        let { children: n, className: r, direction: a = c.HORIZONTAL, justify: s = d.START, align: u = f.STRETCH, wrap: h = _.NO_WRAP, shrink: p = 1, grow: m = 1, basis: g = 'auto', style: E, ...v } = e;
+        return (0, i.jsx)('div', {
             style: {
                 flexShrink: p,
-                flexGrow: h,
-                flexBasis: m,
-                ...g
+                flexGrow: m,
+                flexBasis: g,
+                ...E
             },
-            className: s()(o.flex, i, a, l, _, n),
-            ...E,
-            children: t
+            className: o()(l.flex, a, s, u, h, r),
+            ...v,
+            children: n
         });
     };
-(_.Child = (e) => {
-    let { children: t, className: n, shrink: a = 1, grow: l = 1, basis: u = 'auto', style: c, wrap: d = !1, ...f } = e,
-        _ = {
-            className: (n = null != n ? n : o.flexChild),
-            style: {
-                flexGrow: l,
-                flexShrink: a,
-                flexBasis: u,
-                ...c
-            },
-            ...f
-        };
-    if (!d && 'string' != typeof t && 1 === i.Children.count(t)) {
-        let e = i.Children.only(t);
-        return (
-            (_.style = {
-                ..._.style,
-                ...e.props.style
-            }),
-            (_.className = s()(e.props.className, n)),
-            i.cloneElement(e, _)
-        );
-    }
-    return (0, r.jsx)('div', {
-        ..._,
-        children: t
-    });
-}),
-    (_.Direction = u),
-    (_.Align = d),
-    (_.Justify = c),
-    (_.Wrap = f),
-    (t.Z = _);
+(p.Child = h), (p.Direction = c), (p.Align = f), (p.Justify = d), (p.Wrap = _), (n.Z = p);

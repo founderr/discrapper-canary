@@ -1,7 +1,8 @@
-var r = n(867595),
-    i = n(987355),
-    a = n(521678),
-    s = n(477829);
-t.Z = function (e) {
-    return (0, a.Z)(e) ? (0, r.Z)((0, s.Z)(e)) : (0, i.Z)(e);
-};
+var i = r(867595),
+    a = r(987355),
+    s = r(521678),
+    o = r(477829);
+function l(e) {
+    return (0, s.Z)(e) ? (0, i.Z)((0, o.Z)(e)) : (0, a.Z)(e);
+}
+n.Z = l;

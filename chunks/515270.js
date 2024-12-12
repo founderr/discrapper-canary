@@ -1,229 +1,231 @@
-n.d(t, {
+r.d(n, {
     L6: function () {
-        return S;
+        return k;
     },
     ZP: function () {
-        return E;
+        return y;
     },
     iF: function () {
-        return b;
+        return M;
     }
-}),
-    n(47120),
-    n(411104),
-    n(653041),
-    n(757143);
-var r = n(920478),
-    i = n(31775),
-    a = n.n(i),
-    s = n(70956),
-    o = n(364964),
-    l = n(53529),
-    u = n(925994),
-    c = n(436660),
-    d = n(887490),
-    f = n(42530);
-let _ = new Set(['line']),
-    p = r.Z.listLanguages(),
-    h = new Map();
-for (let e of p) {
+});
+var i = r(47120);
+var a = r(411104);
+var s = r(653041);
+var o = r(757143);
+var l = r(920478),
+    u = r(31775),
+    c = r.n(u),
+    d = r(70956),
+    f = r(364964),
+    _ = r(53529),
+    h = r(925994),
+    p = r(436660),
+    m = r(887490),
+    g = r(42530);
+let E = new Set(['line']),
+    v = l.Z.listLanguages(),
+    I = new Map();
+for (let e of v) {
     e = e.toLowerCase();
-    let t = r.Z.getLanguage(e);
-    if (null == t) continue;
-    let n = t.aliases;
-    if ((h.set(e, e), null != n)) for (let t of n) h.set(t.toLowerCase(), e);
+    let n = l.Z.getLanguage(e);
+    if (null == n) continue;
+    let r = n.aliases;
+    if ((I.set(e, e), null != r)) for (let n of r) I.set(n.toLowerCase(), e);
 }
-let m = /^[a-z0-9_+\-.#]+$/,
-    g = /^[a-z0-9_+\-.#]+$/i;
-for (let [e, t] of h) if (null == e.match(m)) throw Error('Language name does not match regex: '.concat(e));
-function E(e) {
-    let { onChange: t } = e,
-        n = null;
+let T = /^[a-z0-9_+\-.#]+$/,
+    b = /^[a-z0-9_+\-.#]+$/i;
+for (let [e, n] of I) if (null == e.match(T)) throw Error('Language name does not match regex: '.concat(e));
+function y(e) {
+    let { onChange: n } = e,
+        r = null;
     return (
         (e.onChange = () => {
-            d.bN.richValue(e) !== n &&
-                (l.T.withMergedEntry(e, () => {
-                    d.bN.withoutNormalizing(e, () =>
-                        (function (e) {
-                            let t = (function (e) {
-                                let t = [],
-                                    n = null;
-                                for (let r of d.bN.blocks(e)) {
-                                    let i = null != n && (n.isInCodeBlock || n.opensCodeBlock),
-                                        a = null != n && (n.isStyledCodeBlockLine || n.opensCodeBlockOnOwnLine);
-                                    (n = (function (e, t, n, r, i) {
-                                        var a;
-                                        let s = (function (e) {
-                                                let t;
-                                                let [n, r] = e;
-                                                if (!_.has(n.type)) return [];
-                                                let i = [],
-                                                    a = /\\|```/g;
-                                                for (let e = 0; e < n.children.length; e++) {
-                                                    let s = n.children[e];
-                                                    if (d.LC.isText(s))
-                                                        for (a.lastIndex = 0; null != (t = a.exec(s.text)); ) {
-                                                            if ('\\' === t[0]) {
-                                                                a.lastIndex += 1;
-                                                                continue;
-                                                            }
-                                                            i.push({
-                                                                path: d.C0.child(r, e),
-                                                                offset: t.index
-                                                            });
-                                                        }
-                                                }
-                                                return i;
-                                            })(t),
-                                            o = s[0],
-                                            l = s[s.length - 1],
-                                            u = null;
-                                        if (null != l) {
-                                            let [t] = d.bN.node(e, l.path);
-                                            u = t.text.substring(l.offset + 3);
-                                        }
-                                        let c = n && null != o,
-                                            f = n && 0 === s.length,
-                                            p = r && 0 === s.length,
-                                            m = (c ? s.slice(1) : s).length % 2 == 1,
-                                            E = m && (null == u || '' === u || null != u.match(g)),
-                                            v = E && null != u && null !== (a = h.get(u.toLowerCase())) && void 0 !== a ? a : null;
-                                        return {
-                                            blockEntry: t,
-                                            wasInCodeBlock: n,
-                                            isInCodeBlock: f,
-                                            isStyledCodeBlockLine: p,
-                                            lang: m || c ? v : i,
-                                            hljsTypes: null,
-                                            closesCodeBlock: c,
-                                            opensCodeBlock: m,
-                                            opensCodeBlockOnOwnLine: E
-                                        };
-                                    })(e, r, i, a, null != n && (n.opensCodeBlock || !n.closesCodeBlock) ? n.lang : null)),
-                                        t.push(n);
-                                }
-                                return (
-                                    (function (e) {
-                                        let t = [],
-                                            n = !1;
-                                        for (let i of e) {
-                                            let a = i === e[e.length - 1];
-                                            if ((i.closesCodeBlock || a) && (n && a && !i.closesCodeBlock && t.push(i), (n = !1), t.length > 0)) {
-                                                let e = t.map((e) => (0, u.sg)(e.blockEntry[0])).join('\n'),
-                                                    n = t[0].lang;
-                                                if (null != n && null != r.Z.getLanguage(n)) {
-                                                    let r = (function (e, t) {
-                                                        let n = ''.concat(e, '-').concat(t),
-                                                            r = T.get(n);
-                                                        if (null != r) return r;
-                                                        let i = o.default.highlight(t, e, !1);
-                                                        if (null == i || i.illegal) return null;
-                                                        let a = i.value.split('\n');
-                                                        return T.set(n, a), a;
-                                                    })(e, n);
-                                                    if (null != r && r.length === t.length) {
-                                                        let e = [];
-                                                        for (let n = 0; n < t.length; n++) {
-                                                            let i;
-                                                            let a = r[n]
-                                                                    .replace(/&amp;/g, '&')
-                                                                    .replace(/&lt;/g, '<')
-                                                                    .replace(/&gt;/g, '>')
-                                                                    .replace(/&quot;/g, '"')
-                                                                    .replace(/&#x27;/g, "'"),
-                                                                s = [],
-                                                                o = 0,
-                                                                l = 0;
-                                                            for (; null != (i = v.exec(a)); ) {
-                                                                let t = i.index + i[0].length,
-                                                                    n = i.index - l;
-                                                                i.index > l &&
-                                                                    (e.length > 0 &&
-                                                                        s.push({
-                                                                            types: [...e],
-                                                                            start: o,
-                                                                            end: o + n
-                                                                        }),
-                                                                    (o += n)),
-                                                                    '</span>' === i[0] ? e.pop() : e.push(i[1]),
-                                                                    (l = t);
-                                                            }
-                                                            if (e.length > 0) {
-                                                                let t = a.length - l;
-                                                                s.push({
-                                                                    types: [...e],
-                                                                    start: o,
-                                                                    end: o + t
-                                                                });
-                                                            }
-                                                            t[n].hljsTypes = s;
-                                                        }
-                                                    } else for (let e = 0; e < t.length; e++) t[e].hljsTypes = null;
-                                                }
-                                                t = [];
-                                            }
-                                            n && t.push(i), i.opensCodeBlock && (n = !0);
-                                        }
-                                    })(t),
-                                    t
-                                );
-                            })(e);
-                            (function (e, t) {
-                                for (let n of t) {
-                                    let [t, r] = n.blockEntry,
-                                        i = (function (e) {
-                                            return e.isStyledCodeBlockLine || e.wasInCodeBlock
-                                                ? {
-                                                      lang: e.lang,
-                                                      wasInCodeBlock: e.wasInCodeBlock,
-                                                      isInCodeBlock: e.isInCodeBlock,
-                                                      isStyledCodeBlockLine: e.isStyledCodeBlockLine,
-                                                      hljsTypes: e.hljsTypes
-                                                  }
-                                                : null;
-                                        })(n);
-                                    (null == t ? void 0 : t.codeBlockState) != i && c.Q.setNodes(e, { codeBlockState: i }, { at: r });
-                                }
-                            })(e, t);
-                        })(e)
-                    );
+            m.bN.richValue(e) !== r &&
+                (_.T.withMergedEntry(e, () => {
+                    m.bN.withoutNormalizing(e, () => S(e));
                 }),
-                (n = d.bN.richValue(e))),
-                t();
+                (r = m.bN.richValue(e))),
+                n();
         }),
         e
     );
 }
-let v = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
-    I = {
+function S(e) {
+    let n = N(e);
+    R(e, n);
+}
+let A = /(?:<span class="([^"]*)">)|(?:<\/span>)/g;
+function N(e) {
+    let n = [],
+        r = null;
+    for (let i of m.bN.blocks(e)) {
+        let a = null != r && (r.isInCodeBlock || r.opensCodeBlock),
+            s = null != r && (r.isStyledCodeBlockLine || r.opensCodeBlockOnOwnLine);
+        (r = C(e, i, a, s, null != r && (r.opensCodeBlock || !r.closesCodeBlock) ? r.lang : null)), n.push(r);
+    }
+    return D(n), n;
+}
+function C(e, n, r, i, a) {
+    var s;
+    let o = P(n),
+        l = o[0],
+        u = o[o.length - 1],
+        c = null;
+    if (null != u) {
+        let [n] = m.bN.node(e, u.path);
+        c = n.text.substring(u.offset + 3);
+    }
+    let d = r && null != l,
+        f = r && 0 === o.length,
+        _ = i && 0 === o.length,
+        h = (d ? o.slice(1) : o).length % 2 == 1,
+        p = h && (null == c || '' === c || null != c.match(b)),
+        g = p && null != c && null !== (s = I.get(c.toLowerCase())) && void 0 !== s ? s : null;
+    return {
+        blockEntry: n,
+        wasInCodeBlock: r,
+        isInCodeBlock: f,
+        isStyledCodeBlockLine: _,
+        lang: h || d ? g : a,
+        hljsTypes: null,
+        closesCodeBlock: d,
+        opensCodeBlock: h,
+        opensCodeBlockOnOwnLine: p
+    };
+}
+function R(e, n) {
+    for (let r of n) {
+        let [n, i] = r.blockEntry,
+            a = O(r);
+        (null == n ? void 0 : n.codeBlockState) != a && p.Q.setNodes(e, { codeBlockState: a }, { at: i });
+    }
+}
+function O(e) {
+    return e.isStyledCodeBlockLine || e.wasInCodeBlock
+        ? {
+              lang: e.lang,
+              wasInCodeBlock: e.wasInCodeBlock,
+              isInCodeBlock: e.isInCodeBlock,
+              isStyledCodeBlockLine: e.isStyledCodeBlockLine,
+              hljsTypes: e.hljsTypes
+          }
+        : null;
+}
+function D(e) {
+    let n = [],
+        r = !1;
+    for (let i of e) {
+        let a = i === e[e.length - 1];
+        if ((i.closesCodeBlock || a) && (r && a && !i.closesCodeBlock && n.push(i), (r = !1), n.length > 0)) {
+            let e = n.map((e) => (0, h.sg)(e.blockEntry[0])).join('\n'),
+                r = n[0].lang;
+            if (null != r && null != l.Z.getLanguage(r)) {
+                let i = w(e, r);
+                if (null != i && i.length === n.length) {
+                    let e = [];
+                    for (let r = 0; r < n.length; r++) {
+                        let a;
+                        let s = i[r]
+                                .replace(/&amp;/g, '&')
+                                .replace(/&lt;/g, '<')
+                                .replace(/&gt;/g, '>')
+                                .replace(/&quot;/g, '"')
+                                .replace(/&#x27;/g, "'"),
+                            o = [],
+                            l = 0,
+                            u = 0;
+                        for (; null != (a = A.exec(s)); ) {
+                            let n = a.index + a[0].length,
+                                r = a.index - u;
+                            a.index > u &&
+                                (e.length > 0 &&
+                                    o.push({
+                                        types: [...e],
+                                        start: l,
+                                        end: l + r
+                                    }),
+                                (l += r)),
+                                '</span>' === a[0] ? e.pop() : e.push(a[1]),
+                                (u = n);
+                        }
+                        if (e.length > 0) {
+                            let n = s.length - u;
+                            o.push({
+                                types: [...e],
+                                start: l,
+                                end: l + n
+                            });
+                        }
+                        n[r].hljsTypes = o;
+                    }
+                } else for (let e = 0; e < n.length; e++) n[e].hljsTypes = null;
+            }
+            n = [];
+        }
+        r && n.push(i), i.opensCodeBlock && (r = !0);
+    }
+}
+let L = {
         max: 1 / 0,
-        maxAge: 1 * s.Z.Millis.MINUTE,
+        maxAge: 1 * d.Z.Millis.MINUTE,
         updateAgeOnGet: !0
     },
-    T = new (a())(I);
-function b(e, t) {
-    let n = 0;
-    for (let i of d.bN.nodes(e, {
+    x = new (c())(L);
+function w(e, n) {
+    let r = ''.concat(e, '-').concat(n),
+        i = x.get(r);
+    if (null != i) return i;
+    let a = f.default.highlight(n, e, !1);
+    if (null == a || a.illegal) return null;
+    let s = a.value.split('\n');
+    return x.set(r, s), s;
+}
+function P(e) {
+    let n;
+    let [r, i] = e;
+    if (!E.has(r.type)) return [];
+    let a = [],
+        s = /\\|```/g;
+    for (let e = 0; e < r.children.length; e++) {
+        let o = r.children[e];
+        if (m.LC.isText(o))
+            for (s.lastIndex = 0; null != (n = s.exec(o.text)); ) {
+                if ('\\' === n[0]) {
+                    s.lastIndex += 1;
+                    continue;
+                }
+                a.push({
+                    path: m.C0.child(i, e),
+                    offset: n.index
+                });
+            }
+    }
+    return a;
+}
+function M(e, n) {
+    let r = 0;
+    for (let a of m.bN.nodes(e, {
         at: {
             anchor: {
-                path: f.u9,
+                path: g.u9,
                 offset: 0
             },
-            focus: t
+            focus: n
         },
         mode: 'lowest',
-        match: (e) => d.LC.isText(e)
+        match: (e) => m.LC.isText(e)
     })) {
-        var r;
-        let e = i[0].text;
-        d.C0.equals(i[1], t.path) && (e = e.substring(0, t.offset));
-        let a = e.match(/```/g);
-        n += null !== (r = null == a ? void 0 : a.length) && void 0 !== r ? r : 0;
+        var i;
+        let e = a[0].text;
+        m.C0.equals(a[1], n.path) && (e = e.substring(0, n.offset));
+        let s = e.match(/```/g);
+        r += null !== (i = null == s ? void 0 : s.length) && void 0 !== i ? i : 0;
     }
-    return n % 2 != 0;
+    return r % 2 != 0;
 }
-function S(e) {
+function k(e) {
     if (null == e.selection) return !1;
-    let t = d.M8.start(e.selection);
-    return b(e, t);
+    let n = m.M8.start(e.selection);
+    return M(e, n);
 }

@@ -1,93 +1,96 @@
-n.d(t, {
+r.d(n, {
     V1: function () {
-        return _;
+        return h;
     },
     ZI: function () {
-        return h;
+        return g;
     }
 });
-var r = n(524437),
-    i = n(381499),
-    a = n(570140),
-    s = n(514361),
-    o = n(238514),
-    l = n(210887),
-    u = n(695346),
-    c = n(675478),
-    d = n(981631),
-    f = n(874893);
-function _(e) {
-    return c.hW.updateAsync(
+var i = r(524437),
+    a = r(381499),
+    s = r(570140),
+    o = r(514361),
+    l = r(238514),
+    u = r(210887),
+    c = r(695346),
+    d = r(675478),
+    f = r(981631),
+    _ = r(874893);
+function h(e) {
+    return d.hW.updateAsync(
         'guildFolders',
-        (t) => {
-            t.folders = e.map((e) => {
-                let t = r.yX.create({ guildIds: e.guildIds });
-                return null != e.folderId && (t.id = i.r1.create({ value: String(e.folderId) })), null != e.folderColor && (t.color = i.wA.create({ value: String(e.folderColor) })), null != e.folderName && '' !== e.folderName && (t.name = i.Gm.create({ value: String(e.folderName) })), t;
+        (n) => {
+            n.folders = e.map((e) => {
+                let n = i.yX.create({ guildIds: e.guildIds });
+                return null != e.folderId && (n.id = a.r1.create({ value: String(e.folderId) })), null != e.folderColor && (n.color = a.wA.create({ value: String(e.folderColor) })), null != e.folderName && '' !== e.folderName && (n.name = a.Gm.create({ value: String(e.folderName) })), n;
             });
         },
-        c.fy.FREQUENT_USER_ACTION
+        d.fy.FREQUENT_USER_ACTION
     );
 }
 function p(e) {
     switch (e) {
-        case d.BRd.DARK:
-            return r.Q2.DARK;
-        case d.BRd.LIGHT:
-            return r.Q2.LIGHT;
-        case d.BRd.DARKER:
-            return r.Q2.DARKER;
-        case d.BRd.MIDNIGHT:
-            return r.Q2.MIDNIGHT;
+        case f.BRd.DARK:
+            return i.Q2.DARK;
+        case f.BRd.LIGHT:
+            return i.Q2.LIGHT;
+        case f.BRd.DARKER:
+            return i.Q2.DARKER;
+        case f.BRd.MIDNIGHT:
+            return i.Q2.MIDNIGHT;
         default:
-            return r.Q2.DARK;
+            return i.Q2.DARK;
     }
 }
-function h(e) {
-    let { backgroundGradientPresetId: t, theme: n, useSystemTheme: r } = e,
-        s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.fy.INFREQUENT_USER_ACTION,
-        l = 'system' === n ? f.K.ON : f.K.OFF;
+function m(e) {
+    return { backgroundGradientPresetId: null != e.backgroundGradientPresetId ? a.yC.create({ value: e.backgroundGradientPresetId }) : void 0 };
+}
+function g(e) {
+    let { backgroundGradientPresetId: n, theme: r, useSystemTheme: i } = e,
+        a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.fy.INFREQUENT_USER_ACTION,
+        o = 'system' === r ? _.K.ON : _.K.OFF,
+        u = null != i ? i : o;
     if (
-        (a.Z.dispatch({
+        (s.Z.dispatch({
             type: 'UNSYNCED_USER_SETTINGS_UPDATE',
-            settings: { useSystemTheme: null != r ? r : l }
+            settings: { useSystemTheme: u }
         }),
-        a.Z.dispatch({
+        s.Z.dispatch({
             type: 'SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE',
             changes: {
                 appearance: {
                     settings: {
-                        clientThemeSettings: { backgroundGradientPresetId: t },
-                        theme: 'system' === n ? void 0 : n
+                        clientThemeSettings: { backgroundGradientPresetId: n },
+                        theme: 'system' === r ? void 0 : r
                     }
                 }
             }
         }),
-        o.Z.shouldSync('appearance'))
+        l.Z.shouldSync('appearance'))
     )
-        return c.hW.updateAsync(
+        return d.hW.updateAsync(
             'appearance',
             (e) => {
-                var r;
-                (e.theme = p(n)), (e.clientThemeSettings = { backgroundGradientPresetId: null != (r = { backgroundGradientPresetId: t }).backgroundGradientPresetId ? i.yC.create({ value: r.backgroundGradientPresetId }) : void 0 });
+                (e.theme = p(r)), (e.clientThemeSettings = m({ backgroundGradientPresetId: n }));
             },
-            s
+            a
         );
 }
-t.ZP = {
+n.ZP = {
     overrideLocale(e) {
-        a.Z.dispatch({
+        s.Z.dispatch({
             type: 'USER_SETTINGS_LOCALE_OVERRIDE',
             locale: e
         });
     },
     updatedUnsyncedSettings(e) {
-        a.Z.dispatch({
+        s.Z.dispatch({
             type: 'UNSYNCED_USER_SETTINGS_UPDATE',
             settings: e
         });
     },
     setShouldSyncTextSettings(e) {
-        a.Z.dispatch({
+        s.Z.dispatch({
             type: 'SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE',
             changes: {
                 text: {
@@ -95,21 +98,21 @@ t.ZP = {
                     settings: e
                         ? {}
                         : {
-                              inlineAttachmentMedia: u.x4.getSetting(),
-                              inlineEmbedMedia: u.RS.getSetting(),
-                              renderEmbeds: u.NA.getSetting(),
-                              renderReactions: u.nc.getSetting(),
-                              animateEmoji: u.Yk.getSetting(),
-                              animateStickers: u.Wp.getSetting(),
-                              gifAutoPlay: u.QK.getSetting()
+                              inlineAttachmentMedia: c.x4.getSetting(),
+                              inlineEmbedMedia: c.RS.getSetting(),
+                              renderEmbeds: c.NA.getSetting(),
+                              renderReactions: c.nc.getSetting(),
+                              animateEmoji: c.Yk.getSetting(),
+                              animateStickers: c.Wp.getSetting(),
+                              gifAutoPlay: c.QK.getSetting()
                           }
                 }
             }
         });
     },
     setShouldSyncAppearanceSettings(e) {
-        var t;
-        a.Z.dispatch({
+        var n;
+        s.Z.dispatch({
             type: 'SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE',
             changes: {
                 appearance: {
@@ -117,47 +120,47 @@ t.ZP = {
                     settings: e
                         ? {}
                         : {
-                              theme: l.Z.theme,
-                              clientThemeSettings: { backgroundGradientPresetId: null === (t = s.Z.gradientPreset) || void 0 === t ? void 0 : t.id },
-                              developerMode: u.Sb.getSetting()
+                              theme: u.Z.theme,
+                              clientThemeSettings: { backgroundGradientPresetId: null === (n = o.Z.gradientPreset) || void 0 === n ? void 0 : n.id },
+                              developerMode: c.Sb.getSetting()
                           }
                 }
             }
         });
     },
     applySettingsOverride(e) {
-        a.Z.dispatch({
+        s.Z.dispatch({
             type: 'USER_SETTINGS_OVERRIDE_APPLY',
             settings: e
         });
     },
     clearSettingsOverride() {
-        for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-        a.Z.dispatch({
+        for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
+        s.Z.dispatch({
             type: 'USER_SETTINGS_OVERRIDE_CLEAR',
-            settings: t
+            settings: n
         });
     },
     updateLocale: (e) =>
-        c.hW.updateAsync(
+        d.hW.updateAsync(
             'localization',
-            (t) => {
-                t.locale = i.Gm.create({ value: e });
+            (n) => {
+                n.locale = a.Gm.create({ value: e });
             },
-            c.fy.INFREQUENT_USER_ACTION
+            d.fy.INFREQUENT_USER_ACTION
         ),
     updateTheme(e) {
-        a.Z.dispatch({
+        s.Z.dispatch({
             type: 'SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE',
             changes: { appearance: { settings: { theme: e } } }
         }),
-            o.Z.shouldSync('appearance') &&
-                c.hW.updateAsync(
+            l.Z.shouldSync('appearance') &&
+                d.hW.updateAsync(
                     'appearance',
-                    (t) => {
-                        t.theme = p(e);
+                    (n) => {
+                        n.theme = p(e);
                     },
-                    c.fy.INFREQUENT_USER_ACTION
+                    d.fy.INFREQUENT_USER_ACTION
                 );
     }
 };

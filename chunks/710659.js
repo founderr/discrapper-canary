@@ -1,4 +1,4 @@
-t.Z = {
+var r = {
     dayNames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
     monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
     tokens: {
@@ -46,3 +46,4 @@ t.Z = {
         comma: /^(,\s*|(and|or)\s*)+/i
     }
 };
+n.Z = r;

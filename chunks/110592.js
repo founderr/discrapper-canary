@@ -1,5 +1,6 @@
-var r = n(546757);
-t.Z = function (e, t) {
-    var n = e.__data__;
-    return (0, r.Z)(t) ? n['string' == typeof t ? 'string' : 'hash'] : n.map;
-};
+var i = r(546757);
+function a(e, n) {
+    var r = e.__data__;
+    return (0, i.Z)(n) ? r['string' == typeof n ? 'string' : 'hash'] : r.map;
+}
+n.Z = a;

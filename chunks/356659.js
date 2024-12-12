@@ -1,129 +1,136 @@
-n.d(t, {
+r.d(n, {
     A5: function () {
-        return B;
-    },
-    Bg: function () {
-        return g;
-    },
-    D5: function () {
-        return c;
-    },
-    D_: function () {
-        return _;
-    },
-    EF: function () {
-        return m;
-    },
-    G$: function () {
-        return p;
-    },
-    HW: function () {
-        return b;
-    },
-    Hp: function () {
-        return T;
-    },
-    JO: function () {
-        return O;
-    },
-    Kw: function () {
-        return L;
-    },
-    MG: function () {
-        return y;
-    },
-    OT: function () {
-        return o;
-    },
-    Qr: function () {
-        return N;
-    },
-    Ut: function () {
-        return A;
-    },
-    WM: function () {
-        return E;
-    },
-    X9: function () {
-        return u;
-    },
-    XH: function () {
-        return S;
-    },
-    _U: function () {
-        return k;
-    },
-    dJ: function () {
-        return l;
-    },
-    f_: function () {
-        return C;
-    },
-    i$: function () {
-        return P;
-    },
-    jF: function () {
-        return h;
-    },
-    ji: function () {
-        return w;
-    },
-    jp: function () {
-        return x;
-    },
-    mg: function () {
-        return I;
-    },
-    nU: function () {
-        return v;
-    },
-    wD: function () {
-        return R;
-    },
-    xd: function () {
-        return U;
-    },
-    xx: function () {
         return M;
     },
-    yl: function () {
+    Bg: function () {
+        return h;
+    },
+    D5: function () {
+        return o;
+    },
+    D_: function () {
+        return c;
+    },
+    EF: function () {
+        return _;
+    },
+    G$: function () {
+        return d;
+    },
+    HW: function () {
+        return v;
+    },
+    Hp: function () {
+        return E;
+    },
+    JO: function () {
+        return N;
+    },
+    Kw: function () {
+        return R;
+    },
+    MG: function () {
+        return T;
+    },
+    OT: function () {
+        return i;
+    },
+    Qr: function () {
+        return y;
+    },
+    Ut: function () {
+        return b;
+    },
+    WM: function () {
+        return p;
+    },
+    X9: function () {
+        return s;
+    },
+    XH: function () {
+        return I;
+    },
+    _U: function () {
+        return w;
+    },
+    dJ: function () {
+        return a;
+    },
+    f_: function () {
+        return S;
+    },
+    i$: function () {
+        return L;
+    },
+    jF: function () {
+        return f;
+    },
+    ji: function () {
         return D;
+    },
+    jp: function () {
+        return O;
+    },
+    mg: function () {
+        return g;
+    },
+    nU: function () {
+        return m;
+    },
+    wD: function () {
+        return A;
+    },
+    xd: function () {
+        return P;
+    },
+    xx: function () {
+        return x;
+    },
+    yl: function () {
+        return C;
     }
 });
-var r,
-    i,
+var i,
     a,
     s,
     o,
-    l,
-    u,
-    c,
-    d = n(710845),
-    f = n(70956);
-((r = o || (o = {}))[(r.SECONDS_30 = 30 * f.Z.Millis.SECOND)] = 'SECONDS_30'), (r[(r.MINUTES_1 = f.Z.Millis.MINUTE)] = 'MINUTES_1'), (r[(r.MINUTES_2 = 2 * f.Z.Millis.MINUTE)] = 'MINUTES_2'), ((i = l || (l = {}))[(i.ALL = 0)] = 'ALL'), (i[(i.FRIENDS = 1)] = 'FRIENDS'), ((a = u || (u = {})).DECOUPLED = 'decoupled'), (a.VIEWER = 'viewer'), (a.STREAMER = 'streamer'), ((s = c || (c = {}))[(s.Error = 0)] = 'Error'), (s[(s.Disabled = 1)] = 'Disabled'), (s[(s.Enabled = 2)] = 'Enabled');
-let _ = 'alt+c',
-    p = 6 * f.Z.Millis.SECOND,
-    h = new d.Z('Clips'),
-    m = (e) => 'Discord_Clip_'.concat(e, '.mp4'),
-    g = 3,
-    E = 1,
-    v = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
-    I = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
-    T = 0.1,
-    b = 25,
-    S = 0,
-    y = 200,
-    A = 'clips-edit',
-    N = 'clips-gallery',
-    C = 640,
-    R = 360,
-    O = 100,
-    D = (e) => 'Clip - '.concat(new Date(e).toLocaleString()),
-    L = 15,
-    x = 30000,
-    w = 30,
-    P = 10,
-    M = 14 * f.Z.Millis.DAY,
-    k = 5,
-    U = 5,
-    B = 1;
+    l = r(710845),
+    u = r(70956);
+!(function (e) {
+    (e[(e.SECONDS_30 = 30 * u.Z.Millis.SECOND)] = 'SECONDS_30'), (e[(e.MINUTES_1 = u.Z.Millis.MINUTE)] = 'MINUTES_1'), (e[(e.MINUTES_2 = 2 * u.Z.Millis.MINUTE)] = 'MINUTES_2');
+})(i || (i = {})),
+    !(function (e) {
+        (e[(e.ALL = 0)] = 'ALL'), (e[(e.FRIENDS = 1)] = 'FRIENDS');
+    })(a || (a = {})),
+    !(function (e) {
+        (e.DECOUPLED = 'decoupled'), (e.VIEWER = 'viewer'), (e.STREAMER = 'streamer');
+    })(s || (s = {})),
+    !(function (e) {
+        (e[(e.Error = 0)] = 'Error'), (e[(e.Disabled = 1)] = 'Disabled'), (e[(e.Enabled = 2)] = 'Enabled');
+    })(o || (o = {}));
+let c = 'alt+c',
+    d = 6 * u.Z.Millis.SECOND,
+    f = new l.Z('Clips'),
+    _ = (e) => 'Discord_Clip_'.concat(e, '.mp4'),
+    h = 3,
+    p = 1,
+    m = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
+    g = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
+    E = 0.1,
+    v = 25,
+    I = 0,
+    T = 200,
+    b = 'clips-edit',
+    y = 'clips-gallery',
+    S = 640,
+    A = 360,
+    N = 100,
+    C = (e) => 'Clip - '.concat(new Date(e).toLocaleString()),
+    R = 15,
+    O = 30000,
+    D = 30,
+    L = 10,
+    x = 14 * u.Z.Millis.DAY,
+    w = 5,
+    P = 5,
+    M = 1;

@@ -1,3 +1,4 @@
-t.Z = function (e) {
+function r(e) {
     return this.__data__.has(e);
-};
+}
+n.Z = r;

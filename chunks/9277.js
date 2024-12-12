@@ -1,76 +1,75 @@
-n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(232713),
-    l = n(442837),
-    u = n(114101),
-    c = n(481060),
-    d = n(540059),
-    f = n(28546),
-    _ = n(581883),
-    p = n(459273),
-    h = n(443603),
-    m = n(981631),
-    g = n(957825),
-    E = n(388032),
-    v = n(553796);
-t.Z = i.memo(
-    i.forwardRef(function (e, t) {
-        let { disabled: n, type: a } = e,
-            [I, T] = i.useState(!1),
-            b = (0, l.e7)([_.Z], () => {
-                var e, t;
-                return I && Object.values(null !== (t = null === (e = _.Z.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2;
-            }),
-            [S, y, A] = (0, f.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], o.X),
-            N = i.useRef(0),
-            C = i.useCallback(() => {
-                T(!0),
-                    clearTimeout(N.current),
-                    (N.current = setTimeout(() => {
-                        T(!1), (N.current = 0);
-                    }, 2000));
-            }, []);
-        (0, p.yp)({
-            event: m.CkL.FAVORITE_GIF,
-            handler: C
-        });
-        let R = i.useCallback(() => {
-                (0, f.RO)(g.X1.GIF, a);
-            }, [a]),
-            { Component: O, events: D, play: L } = (0, u.V)(),
-            x = (0, d.Q3)('ChannelGIFPickerButton');
-        if (n) return null;
-        let w = S === g.X1.GIF && y === a;
-        return (0, r.jsx)(c.Tooltip, {
-            text: b ? E.intl.string(E.t.mE2e8P) : null,
-            forceOpen: !0,
-            children: (e) =>
-                (0, r.jsx)('div', {
-                    ref: t,
-                    className: s()(g.CT, v.buttonContainer),
-                    ...e,
-                    children: (0, r.jsx)(h.Z, {
-                        innerClassName: v.button,
-                        onMouseEnter: D.onMouseEnter,
-                        onMouseLeave: D.onMouseLeave,
-                        onClick: () => {
-                            R(), L();
-                        },
-                        isActive: w,
-                        pulse: I,
-                        'aria-label': E.intl.string(E.t.PtVpk5),
-                        'aria-expanded': w,
-                        'aria-haspopup': 'dialog',
-                        'aria-controls': A,
-                        children: (0, r.jsx)(O, {
-                            size: x ? 'refresh_sm' : void 0,
-                            color: 'currentColor'
-                        })
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(120356),
+    l = r.n(o),
+    u = r(232713),
+    c = r(442837),
+    d = r(114101),
+    f = r(481060),
+    _ = r(540059),
+    h = r(28546),
+    p = r(581883),
+    m = r(459273),
+    g = r(443603),
+    E = r(981631),
+    v = r(957825),
+    I = r(388032),
+    T = r(553796);
+function b(e, n) {
+    let { disabled: r, type: i } = e,
+        [o, b] = s.useState(!1),
+        y = (0, c.e7)([p.Z], () => {
+            var e, n;
+            return o && Object.values(null !== (n = null === (e = p.Z.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== n ? n : {}).length <= 2;
+        }),
+        [S, A, N] = (0, h.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], u.X),
+        C = s.useRef(0),
+        R = s.useCallback(() => {
+            b(!0),
+                clearTimeout(C.current),
+                (C.current = setTimeout(() => {
+                    b(!1), (C.current = 0);
+                }, 2000));
+        }, []);
+    (0, m.yp)({
+        event: E.CkL.FAVORITE_GIF,
+        handler: R
+    });
+    let O = s.useCallback(() => {
+            (0, h.RO)(v.X1.GIF, i);
+        }, [i]),
+        { Component: D, events: L, play: x } = (0, d.V)(),
+        w = (0, _.Q3)('ChannelGIFPickerButton');
+    if (r) return null;
+    let P = S === v.X1.GIF && A === i;
+    return (0, a.jsx)(f.Tooltip, {
+        text: y ? I.intl.string(I.t.mE2e8P) : null,
+        forceOpen: !0,
+        children: (e) =>
+            (0, a.jsx)('div', {
+                ref: n,
+                className: l()(v.CT, T.buttonContainer),
+                ...e,
+                children: (0, a.jsx)(g.Z, {
+                    innerClassName: T.button,
+                    onMouseEnter: L.onMouseEnter,
+                    onMouseLeave: L.onMouseLeave,
+                    onClick: () => {
+                        O(), x();
+                    },
+                    isActive: P,
+                    pulse: o,
+                    'aria-label': I.intl.string(I.t.PtVpk5),
+                    'aria-expanded': P,
+                    'aria-haspopup': 'dialog',
+                    'aria-controls': N,
+                    children: (0, a.jsx)(D, {
+                        size: w ? 'refresh_sm' : void 0,
+                        color: 'currentColor'
                     })
                 })
-        });
-    })
-);
+            })
+    });
+}
+n.Z = s.memo(s.forwardRef(b));

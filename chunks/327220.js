@@ -1,33 +1,35 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return o;
+        return c;
     }
-}),
-    n(47120);
-var r = n(192379),
-    i = n(442837),
-    a = n(592125),
-    s = n(9156);
-function o(e) {
-    let t = (0, i.e7)([a.Z], () => a.Z.getPrivateChannelsVersion()),
-        n = (0, i.e7)([a.Z], () => a.Z.getMutableDMsByUserIds(), [t]),
-        o = (0, i.e7)([s.ZP], () => s.ZP.getMutedChannels(null)),
-        l = r.useMemo(() => {
+});
+var i = r(47120);
+var a = r(192379),
+    s = r(442837),
+    o = r(592125),
+    l = r(9156);
+let u = null;
+function c(e) {
+    let n = (0, s.e7)([o.Z], () => o.Z.getPrivateChannelsVersion()),
+        r = (0, s.e7)([o.Z], () => o.Z.getMutableDMsByUserIds(), [n]),
+        i = (0, s.e7)([l.ZP], () => l.ZP.getMutedChannels(u)),
+        c = a.useMemo(() => {
             let e = new Set();
-            for (let t in n) {
-                let r = n[t];
-                null != r && o.has(r) && e.add(t);
+            for (let n in r) {
+                let a = n,
+                    s = r[a];
+                null != s && i.has(s) && e.add(a);
             }
             return e;
-        }, [n, o]);
-    return r.useMemo(
+        }, [r, i]);
+    return a.useMemo(
         () =>
             null == e
                 ? void 0
                 : e.filter((e) => {
-                      for (let t of e.participants) if (l.has(t)) return !1;
+                      for (let n of e.participants) if (c.has(n)) return !1;
                       return !0;
                   }),
-        [e, l]
+        [e, c]
     );
 }

@@ -1,168 +1,169 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return y;
+        return A;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(990547),
-    s = n(442837),
-    o = n(481060),
-    l = n(194359),
-    u = n(843931),
-    c = n(1596),
-    d = n(681678),
-    f = n(138201),
-    _ = n(699516),
-    p = n(626135),
-    h = n(63063),
-    m = n(5192),
-    g = n(922611),
-    E = n(240515),
-    v = n(858380),
-    I = n(981631),
-    T = n(388032),
-    b = n(294794);
+var i = r(200651),
+    a = r(192379),
+    s = r(990547),
+    o = r(442837),
+    l = r(481060),
+    u = r(194359),
+    c = r(843931),
+    d = r(1596),
+    f = r(681678),
+    _ = r(138201),
+    h = r(699516),
+    p = r(626135),
+    m = r(63063),
+    g = r(5192),
+    E = r(922611),
+    v = r(240515),
+    I = r(858380),
+    T = r(981631),
+    b = r(388032),
+    y = r(294794);
 function S(e) {
-    let { user: t, onBlock: n, onIgnore: i, location: a, disallowIgnore: l, guildId: d, channelId: S } = e,
-        y = (0, g.Do)({ location: 'confirm_block_modal_body' }),
-        A = (0, s.e7)([_.Z], () => _.Z.isIgnored(t.id));
-    return y
-        ? (0, r.jsxs)('div', {
-              className: b.container,
+    let { user: n, onBlock: r, onIgnore: a, location: s, disallowIgnore: u, guildId: f, channelId: S } = e,
+        A = (0, E.Do)({ location: 'confirm_block_modal_body' }),
+        N = (0, o.e7)([h.Z], () => h.Z.isIgnored(n.id));
+    return A
+        ? (0, i.jsxs)('div', {
+              className: y.container,
               children: [
-                  (0, r.jsxs)('div', {
-                      className: b.confirmationHeader,
+                  (0, i.jsxs)('div', {
+                      className: y.confirmationHeader,
                       children: [
-                          (0, r.jsxs)('div', {
-                              className: b.iconContainer,
+                          (0, i.jsxs)('div', {
+                              className: y.iconContainer,
                               children: [
-                                  (0, r.jsx)(o.Avatar, {
-                                      size: o.AvatarSizes.SIZE_56,
-                                      src: t.getAvatarURL(void 0, 64),
+                                  (0, i.jsx)(l.Avatar, {
+                                      size: l.AvatarSizes.SIZE_56,
+                                      src: n.getAvatarURL(void 0, 64),
                                       'aria-hidden': !0
                                   }),
-                                  (0, r.jsx)('div', {
-                                      className: b.icon,
-                                      children: (0, r.jsx)(o.DenyIcon, {})
+                                  (0, i.jsx)('div', {
+                                      className: y.icon,
+                                      children: (0, i.jsx)(l.DenyIcon, {})
                                   })
                               ]
                           }),
-                          (0, r.jsxs)('div', {
+                          (0, i.jsxs)('div', {
                               children: [
-                                  (0, r.jsx)(o.Heading, {
+                                  (0, i.jsx)(l.Heading, {
                                       variant: 'heading-xl/bold',
                                       color: 'header-primary',
-                                      children: T.intl.format(T.t.CIbzHR, { username: m.ZP.getName(d, S, t) })
+                                      children: b.intl.format(b.t.CIbzHR, { username: g.ZP.getName(f, S, n) })
                                   }),
-                                  (0, r.jsx)(o.Text, {
+                                  (0, i.jsx)(l.Text, {
                                       variant: 'text-md/medium',
                                       color: 'header-secondary',
-                                      children: T.intl.string(T.t.S70joq)
+                                      children: b.intl.string(b.t.S70joq)
                                   })
                               ]
                           })
                       ]
                   }),
-                  (0, r.jsx)(c.Z, {}),
-                  l || A
+                  (0, i.jsx)(d.Z, {}),
+                  u || N
                       ? null
-                      : (0, r.jsxs)('div', {
-                            className: b.otherOptions,
+                      : (0, i.jsxs)('div', {
+                            className: y.otherOptions,
                             children: [
-                                (0, r.jsx)(o.Text, {
+                                (0, i.jsx)(l.Text, {
                                     variant: 'text-sm/semibold',
                                     color: 'header-secondary',
-                                    children: T.intl.string(T.t['+BJTcH'])
+                                    children: b.intl.string(b.t['+BJTcH'])
                                 }),
-                                (0, r.jsx)('div', {
-                                    className: b.row,
-                                    children: (0, r.jsx)(f.Z, {
-                                        title: T.intl.string(T.t.hC8tcX),
-                                        description: T.intl.string(T.t.If89rK),
+                                (0, i.jsx)('div', {
+                                    className: y.row,
+                                    children: (0, i.jsx)(_.Z, {
+                                        title: b.intl.string(b.t.hC8tcX),
+                                        description: b.intl.string(b.t.If89rK),
                                         titleVariant: 'text-md/medium',
                                         descriptionVariant: 'text-xs/medium',
-                                        buttonText: T.intl.string(T.t.mxJOd3),
-                                        buttonColor: o.ButtonColors.PRIMARY,
+                                        buttonText: b.intl.string(b.t.mxJOd3),
+                                        buttonColor: l.ButtonColors.PRIMARY,
                                         onButtonPress: () => {
-                                            p.default.track(I.rMx.USER_REMEDIATION_ACTION, {
-                                                action: v.l.GOTO_IGNORE,
-                                                location: a
+                                            p.default.track(T.rMx.USER_REMEDIATION_ACTION, {
+                                                action: I.l.GOTO_IGNORE,
+                                                location: s
                                             }),
-                                                (0, o.closeAllModals)(),
-                                                (0, o.openModal)((e) =>
-                                                    (0, r.jsx)(E.Z, {
+                                                (0, l.closeAllModals)(),
+                                                (0, l.openModal)((e) =>
+                                                    (0, i.jsx)(v.Z, {
                                                         ...e,
-                                                        user: t,
-                                                        guildId: d,
+                                                        user: n,
+                                                        guildId: f,
                                                         channelId: S,
-                                                        onIgnore: i,
-                                                        onBlock: n,
-                                                        location: a
+                                                        onIgnore: a,
+                                                        onBlock: r,
+                                                        location: s
                                                     })
                                                 );
                                         }
                                     })
                                 }),
-                                (0, r.jsx)(o.Text, {
+                                (0, i.jsx)(l.Text, {
                                     variant: 'text-sm/medium',
-                                    className: b.featureGuide,
-                                    children: T.intl.format(T.t.DJN6eX, { articleLink: h.Z.getArticleURL(I.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) })
+                                    className: y.featureGuide,
+                                    children: b.intl.format(b.t.DJN6eX, { articleLink: m.Z.getArticleURL(T.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) })
                                 })
                             ]
                         })
               ]
           })
-        : (0, u.cC)({ location: 'confirm_block_modal' })
-          ? (0, r.jsx)(c.Z, {})
-          : (0, r.jsx)(o.Text, {
+        : (0, c.cC)({ location: 'confirm_block_modal' })
+          ? (0, i.jsx)(d.Z, {})
+          : (0, i.jsx)(l.Text, {
                 variant: 'text-md/normal',
-                children: T.intl.format(T.t.pegItL, { name: t.username })
+                children: b.intl.format(b.t.pegItL, { name: n.username })
             });
 }
-function y(e) {
-    let { user: t, onBlock: n, onCancel: s, onIgnore: u, location: c = 'ContextMenu', disallowIgnore: f, guildId: _, channelId: h, ...m } = e,
-        E = (0, g.Do)({ location: 'block-confirm-modal' });
+function A(e) {
+    let { user: n, onBlock: r, onCancel: o, onIgnore: c, location: d = 'ContextMenu', disallowIgnore: _, guildId: h, channelId: m, ...g } = e,
+        v = (0, E.Do)({ location: 'block-confirm-modal' }),
+        y = () => {
+            p.default.track(T.rMx.USER_REMEDIATION_ACTION, {
+                action: I.l.CANCEL_BLOCK,
+                location: d
+            }),
+                null == o || o();
+        };
     return (
-        i.useLayoutEffect(
+        a.useLayoutEffect(
             () => () => {
-                p.default.track(I.rMx.USER_REMEDIATION_ACTION, {
-                    action: v.l.DISMISS_BLOCK,
-                    location: c
+                p.default.track(T.rMx.USER_REMEDIATION_ACTION, {
+                    action: I.l.DISMISS_BLOCK,
+                    location: d
                 });
             },
-            [c]
+            [d]
         ),
-        (0, r.jsx)(o.ConfirmModal, {
-            header: E ? null : T.intl.formatToPlainString(T.t.x5pOn5, { name: t.username }),
-            confirmText: T.intl.string(T.t.l4EmaW),
-            cancelText: E ? T.intl.string(T.t['ETE/oK']) : T.intl.string(T.t['eN6+rK']),
-            onCancel: () => {
-                p.default.track(I.rMx.USER_REMEDIATION_ACTION, {
-                    action: v.l.CANCEL_BLOCK,
-                    location: c
-                }),
-                    null == s || s();
-            },
+        (0, i.jsx)(l.ConfirmModal, {
+            header: v ? null : b.intl.formatToPlainString(b.t.x5pOn5, { name: n.username }),
+            confirmText: b.intl.string(b.t.l4EmaW),
+            cancelText: v ? b.intl.string(b.t['ETE/oK']) : b.intl.string(b.t['eN6+rK']),
+            onCancel: y,
             onConfirm: () => {
-                null == n || n(),
-                    l.Z.addRelationship({
-                        userId: t.id,
-                        context: { location: c },
-                        type: I.OGo.BLOCKED
+                null == r || r(),
+                    u.Z.addRelationship({
+                        userId: n.id,
+                        context: { location: d },
+                        type: T.OGo.BLOCKED
                     }),
-                    p.default.track(I.rMx.BLOCK_USER_CONFIRMED),
-                    d.Z.showBlockSuccessToast(t.id, null != h ? h : void 0);
+                    p.default.track(T.rMx.BLOCK_USER_CONFIRMED),
+                    f.Z.showBlockSuccessToast(n.id, null != m ? m : void 0);
             },
-            impression: { impressionName: a.ImpressionNames.BLOCK_USER_CONFIRMATION },
-            ...m,
-            children: (0, r.jsx)(S, {
-                user: t,
-                guildId: _,
-                channelId: h,
-                onBlock: n,
-                onIgnore: u,
-                disallowIgnore: f
+            impression: { impressionName: s.ImpressionNames.BLOCK_USER_CONFIRMATION },
+            ...g,
+            children: (0, i.jsx)(S, {
+                user: n,
+                guildId: h,
+                channelId: m,
+                onBlock: r,
+                onIgnore: c,
+                disallowIgnore: _
             })
         })
     );

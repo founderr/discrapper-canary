@@ -1,2 +1,2 @@
-let n = window.DiscordNative;
-t.Z = n;
+let r = window.DiscordNative;
+n.Z = r;

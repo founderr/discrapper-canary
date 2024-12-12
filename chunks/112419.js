@@ -1,5 +1,6 @@
-var r = n(785423),
-    i = /^\s+/;
-t.Z = function (e) {
-    return e ? e.slice(0, (0, r.Z)(e) + 1).replace(i, '') : e;
-};
+var i = r(785423),
+    a = /^\s+/;
+function s(e) {
+    return e ? e.slice(0, (0, i.Z)(e) + 1).replace(a, '') : e;
+}
+n.Z = s;

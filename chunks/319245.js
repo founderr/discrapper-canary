@@ -1,8 +1,9 @@
-var r, i;
-n.d(t, {
+var i;
+r.d(n, {
     W: function () {
-        return r;
+        return i;
     }
 }),
-    ((i = r || (r = {})).GAMEPLAY = 'GAMEPLAY'),
-    (i.VIDEO = 'VIDEO');
+    !(function (e) {
+        (e.GAMEPLAY = 'GAMEPLAY'), (e.VIDEO = 'VIDEO');
+    })(i || (i = {}));

@@ -1,195 +1,200 @@
-var r,
-    i = n(512722),
-    a = n.n(i),
-    s = n(392711),
-    o = n.n(s),
-    l = n(442837),
-    u = n(377108),
-    c = n(524437),
-    d = n(835913),
-    f = n(570140),
-    _ = n(262847),
-    p = n(48481),
-    h = n(526761);
-function m(e, t, n) {
+var i,
+    a = r(512722),
+    s = r.n(a),
+    o = r(392711),
+    l = r.n(o),
+    u = r(442837),
+    c = r(377108),
+    d = r(524437),
+    f = r(835913),
+    _ = r(570140),
+    h = r(262847),
+    p = r(48481),
+    m = r(526761);
+function g(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let g = {
-        ProtoClass: c.o8,
-        proto: c.o8.create(),
+let E = {
+        ProtoClass: d.o8,
+        proto: d.o8.create(),
         lazyLoaded: !1,
-        editInfo: (0, h.JC)()
-    },
-    E = {
-        ProtoClass: u.ji,
-        proto: u.ji.create(),
-        lazyLoaded: !0,
-        editInfo: (0, h.JC)()
+        editInfo: (0, m.JC)()
     },
     v = {
-        [h.yP.PRELOADED_USER_SETTINGS]: g,
-        [h.yP.FRECENCY_AND_FAVORITES_SETTINGS]: E
+        ProtoClass: c.ji,
+        proto: c.ji.create(),
+        lazyLoaded: !0,
+        editInfo: (0, m.JC)()
     },
-    I = !1;
-function T() {
-    b();
+    I = {
+        [m.yP.PRELOADED_USER_SETTINGS]: E,
+        [m.yP.FRECENCY_AND_FAVORITES_SETTINGS]: v
+    },
+    T = !1;
+function b(e) {
+    let { userSettingsProto: n } = e;
+    null != n && ((E.proto = n), s()('string' != typeof E.proto, 'UserSettingsProto cannot be a string'));
+    let { proto: r, isDirty: i, cleanupFuncs: a } = (0, p.xt)(E.proto, h.Z[m.yP.PRELOADED_USER_SETTINGS]);
+    i && N(E),
+        (E.proto = r),
+        s()('string' != typeof E.proto, 'UserSettingsProto cannot be a string'),
+        (E.editInfo.triggeredMigrations = i),
+        (E.editInfo.cleanupFuncs = a),
+        (E.editInfo.loaded = !0),
+        Object.values(I).forEach((e) => {
+            e.lazyLoaded && ((e.editInfo.loaded = !1), (e.editInfo.loading = !1));
+        }),
+        A();
 }
-function b() {
-    Object.values(v).forEach((e) => {
+function y() {
+    A();
+}
+function S() {
+    A(),
+        Object.values(I).forEach((e) => {
+            (e.proto = e.ProtoClass.create()), (e.editInfo = (0, m.JC)());
+        });
+}
+function A() {
+    Object.values(I).forEach((e) => {
         if (null != e.editInfo.timeout) {
-            var t, n;
-            clearTimeout(e.editInfo.timeout), (e.editInfo.timeout = void 0), (e.editInfo.timeoutDelay = Number.MAX_SAFE_INTEGER), (e.editInfo.rateLimited = !1), (e.editInfo.offlineEditDataVersion = null !== (n = null === (t = e.proto.versions) || void 0 === t ? void 0 : t.dataVersion) && void 0 !== n ? n : 0);
+            var n, r;
+            clearTimeout(e.editInfo.timeout), (e.editInfo.timeout = void 0), (e.editInfo.timeoutDelay = Number.MAX_SAFE_INTEGER), (e.editInfo.rateLimited = !1), (e.editInfo.offlineEditDataVersion = null !== (r = null === (n = e.proto.versions) || void 0 === n ? void 0 : n.dataVersion) && void 0 !== r ? r : 0);
         }
     });
 }
-function S(e) {
-    null != e.editInfo.timeout && clearTimeout(e.editInfo.timeout), (e.editInfo = (0, h.JC)());
+function N(e) {
+    null != e.editInfo.timeout && clearTimeout(e.editInfo.timeout), (e.editInfo = (0, m.JC)());
 }
-function y(e) {
+function C(e) {
+    let { userSettingsProto: n } = e;
+    (E.proto = (0, p.ac)(n)), s()('string' != typeof E.proto, 'UserSettingsProto cannot be a string');
+}
+function R(e) {
     let {
-        settings: { proto: t, type: n },
-        partial: r,
-        resetEditInfo: i,
-        local: s
+        settings: { proto: n, type: r },
+        partial: i,
+        resetEditInfo: a,
+        local: o
     } = e;
-    I = !s;
-    let o = v[n];
-    i && S(o), r ? ((o.proto = (0, p.re)(o.ProtoClass, o.proto, t)), a()('string' != typeof o.proto, 'UserSettingsProto cannot be a string')) : ((o.proto = t), a()('string' != typeof o.proto, 'UserSettingsProto cannot be a string'), (o.editInfo.loaded = !0), (o.editInfo.loading = !1));
+    T = !o;
+    let l = I[r];
+    a && N(l), i ? ((l.proto = (0, p.re)(l.ProtoClass, l.proto, n)), s()('string' != typeof l.proto, 'UserSettingsProto cannot be a string')) : ((l.proto = n), s()('string' != typeof l.proto, 'UserSettingsProto cannot be a string'), (l.editInfo.loaded = !0), (l.editInfo.loading = !1));
 }
-function A(e) {
+function O(e) {
+    let {
+        settings: { type: n, changes: r }
+    } = e;
+    s()(!__OVERLAY__, 'this cannot run in the overlay');
+    let i = I[n];
+    return (
+        (i.editInfo = {
+            ...i.editInfo,
+            ...r
+        }),
+        !1
+    );
+}
+function D(e) {
+    let { userSettings: n } = e;
+    L(n);
+}
+function L(e) {
     null != e &&
-        o().forEach(v, (t, n) => {
-            var r, i;
-            let s = e[Number(n)];
-            if (null == s) return;
-            let o = null !== (r = null == s ? void 0 : s.proto) && void 0 !== r ? r : '',
-                l = (0, p.d5)(t.ProtoClass, o);
-            if (null == l) return;
-            (t.proto = l), a()('string' != typeof t.proto, 'UserSettingsProto cannot be a string');
-            let u = null !== (i = null == s ? void 0 : s.protoToSave) && void 0 !== i ? i : null;
-            if (null == u || null == s.offlineEditDataVersion) return;
-            let c = (0, p.d5)(t.ProtoClass, u);
-            null != c && ((t.editInfo.protoToSave = c), (t.editInfo.offlineEditDataVersion = s.offlineEditDataVersion));
+        l().forEach(I, (n, r) => {
+            var i, a;
+            let o = e[Number(r)];
+            if (null == o) return;
+            let l = null !== (i = null == o ? void 0 : o.proto) && void 0 !== i ? i : '',
+                u = (0, p.d5)(n.ProtoClass, l);
+            if (null == u) return;
+            (n.proto = u), s()('string' != typeof n.proto, 'UserSettingsProto cannot be a string');
+            let c = null !== (a = null == o ? void 0 : o.protoToSave) && void 0 !== a ? a : null;
+            if (null == c || null == o.offlineEditDataVersion) return;
+            let d = (0, p.d5)(n.ProtoClass, c);
+            null != d && ((n.editInfo.protoToSave = d), (n.editInfo.offlineEditDataVersion = o.offlineEditDataVersion));
         });
 }
-class N extends (r = l.ZP.PersistedStore) {
+class x extends (i = u.ZP.PersistedStore) {
     initialize(e) {
-        A(e);
+        L(e);
     }
     getState() {
         return this.computeState();
     }
     computeState() {
-        return o().mapValues(v, (e) => {
-            let t = { proto: (0, p.xU)(e.ProtoClass, e.proto) };
-            return null != e.editInfo.offlineEditDataVersion && null != e.editInfo.protoToSave && ((t.protoToSave = (0, p.xU)(e.ProtoClass, e.editInfo.protoToSave)), (t.offlineEditDataVersion = e.editInfo.offlineEditDataVersion)), t;
+        return l().mapValues(I, (e) => {
+            let n = { proto: (0, p.xU)(e.ProtoClass, e.proto) };
+            return null != e.editInfo.offlineEditDataVersion && null != e.editInfo.protoToSave && ((n.protoToSave = (0, p.xU)(e.ProtoClass, e.editInfo.protoToSave)), (n.offlineEditDataVersion = e.editInfo.offlineEditDataVersion)), n;
         });
     }
     hasLoaded(e) {
-        return v[e].editInfo.loaded;
+        return I[e].editInfo.loaded;
     }
     get settings() {
-        return g.proto;
-    }
-    get frecencyWithoutFetchingLatest() {
         return E.proto;
     }
+    get frecencyWithoutFetchingLatest() {
+        return v.proto;
+    }
     get wasMostRecentUpdateFromServer() {
-        return I;
+        return T;
     }
     getFullState() {
-        return v;
+        return I;
     }
     getGuildFolders() {
         var e;
-        let t = null === (e = g.proto.guildFolders) || void 0 === e ? void 0 : e.folders;
-        return null == t
+        let n = null === (e = E.proto.guildFolders) || void 0 === e ? void 0 : e.folders;
+        return null == n
             ? null
-            : t.map((e) => {
-                  var t, n, r;
-                  let i = null === (t = e.id) || void 0 === t ? void 0 : t.value,
-                      a = null === (n = e.color) || void 0 === n ? void 0 : n.value;
+            : n.map((e) => {
+                  var n, r, i;
+                  let a = null === (n = e.id) || void 0 === n ? void 0 : n.value,
+                      s = null === (r = e.color) || void 0 === r ? void 0 : r.value;
                   return {
                       guildIds: e.guildIds,
-                      folderId: null == i ? void 0 : Number(i),
-                      folderName: null === (r = e.name) || void 0 === r ? void 0 : r.value,
-                      folderColor: null == a ? void 0 : Number(a)
+                      folderId: null == a ? void 0 : Number(a),
+                      folderName: null === (i = e.name) || void 0 === i ? void 0 : i.value,
+                      folderColor: null == s ? void 0 : Number(s)
                   };
               });
     }
     getGuildRecentsDismissedAt(e) {
-        var t, n;
+        var n, r;
         if (null == e) return 0;
-        let r = null === (n = this.settings.guilds) || void 0 === n ? void 0 : null === (t = n.guilds[e]) || void 0 === t ? void 0 : t.guildRecentsDismissedAt;
-        return null == r ? 0 : d.E.toDate(r).getTime();
+        let i = null === (r = this.settings.guilds) || void 0 === r ? void 0 : null === (n = r.guilds[e]) || void 0 === n ? void 0 : n.guildRecentsDismissedAt;
+        return null == i ? 0 : f.E.toDate(i).getTime();
     }
     getDismissedGuildContent(e) {
-        var t, n, r;
-        return null == e ? null : null === (r = this.settings.guilds) || void 0 === r ? void 0 : null === (n = r.guilds) || void 0 === n ? void 0 : null === (t = n[e]) || void 0 === t ? void 0 : t.dismissedGuildContent;
+        var n, r, i;
+        return null == e ? null : null === (i = this.settings.guilds) || void 0 === i ? void 0 : null === (r = i.guilds) || void 0 === r ? void 0 : null === (n = r[e]) || void 0 === n ? void 0 : n.dismissedGuildContent;
     }
     getGuildsProto() {
-        var e, t;
-        return null !== (t = null === (e = this.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : null;
+        var e, n;
+        return null !== (n = null === (e = this.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== n ? n : null;
     }
 }
-m(N, 'displayName', 'UserSettingsProtoStore'),
-    m(N, 'persistKey', 'UserSettingsProtoStore-Cache'),
-    (t.Z = new N(f.Z, {
-        CACHE_LOADED: function (e) {
-            let { userSettings: t } = e;
-            A(t);
-        },
-        USER_SETTINGS_PROTO_UPDATE: y,
-        USER_SETTINGS_PROTO_ENQUEUE_UPDATE: y,
-        USER_SETTINGS_PROTO_UPDATE_EDIT_INFO: function (e) {
-            let {
-                settings: { type: t, changes: n }
-            } = e;
-            a()(!__OVERLAY__, 'this cannot run in the overlay');
-            let r = v[t];
-            return (
-                (r.editInfo = {
-                    ...r.editInfo,
-                    ...n
-                }),
-                !1
-            );
-        },
-        CONNECTION_OPEN: function (e) {
-            let { userSettingsProto: t } = e;
-            null != t && ((g.proto = t), a()('string' != typeof g.proto, 'UserSettingsProto cannot be a string'));
-            let { proto: n, isDirty: r, cleanupFuncs: i } = (0, p.xt)(g.proto, _.Z[h.yP.PRELOADED_USER_SETTINGS]);
-            r && S(g),
-                (g.proto = n),
-                a()('string' != typeof g.proto, 'UserSettingsProto cannot be a string'),
-                (g.editInfo.triggeredMigrations = r),
-                (g.editInfo.cleanupFuncs = i),
-                (g.editInfo.loaded = !0),
-                Object.values(v).forEach((e) => {
-                    e.lazyLoaded && ((e.editInfo.loaded = !1), (e.editInfo.loading = !1));
-                }),
-                b();
-        },
-        CONNECTION_CLOSED: T,
-        CONNECTION_RESUMED: T,
-        OVERLAY_INITIALIZE: function (e) {
-            let { userSettingsProto: t } = e;
-            (g.proto = (0, p.ac)(t)), a()('string' != typeof g.proto, 'UserSettingsProto cannot be a string');
-        },
-        LOGOUT: function () {
-            b(),
-                Object.values(v).forEach((e) => {
-                    (e.proto = e.ProtoClass.create()), (e.editInfo = (0, h.JC)());
-                });
-        }
+g(x, 'displayName', 'UserSettingsProtoStore'),
+    g(x, 'persistKey', 'UserSettingsProtoStore-Cache'),
+    (n.Z = new x(_.Z, {
+        CACHE_LOADED: D,
+        USER_SETTINGS_PROTO_UPDATE: R,
+        USER_SETTINGS_PROTO_ENQUEUE_UPDATE: R,
+        USER_SETTINGS_PROTO_UPDATE_EDIT_INFO: O,
+        CONNECTION_OPEN: b,
+        CONNECTION_CLOSED: y,
+        CONNECTION_RESUMED: y,
+        OVERLAY_INITIALIZE: C,
+        LOGOUT: S
     }));

@@ -1,78 +1,79 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
         return p;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    l = n(475179),
-    u = n(871499),
-    c = n(388032),
-    d = n(89554);
-function f(e) {
-    let { className: t, isVertical: n } = e;
-    return (0, r.jsxs)('div', {
-        className: d.iconContainer,
+var i = r(200651),
+    a = r(192379),
+    s = r(120356),
+    o = r.n(s),
+    l = r(481060),
+    u = r(475179),
+    c = r(871499),
+    d = r(388032),
+    f = r(89554);
+function _(e) {
+    let { className: n, isVertical: r } = e;
+    return (0, i.jsxs)('div', {
+        className: f.iconContainer,
         children: [
-            (0, r.jsx)(o.ChevronSmallDownIcon, {
+            (0, i.jsx)(l.ChevronSmallDownIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: s()(n ? d.upCaret : d.leftCaret, t)
+                className: o()(r ? f.upCaret : f.leftCaret, n)
             }),
-            (0, r.jsx)(o.GroupIcon, {
+            (0, i.jsx)(l.GroupIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: s()(d.members, t)
+                className: o()(f.members, n)
             })
         ]
     });
 }
-function _(e) {
-    let { className: t, isVertical: n } = e;
-    return (0, r.jsxs)('div', {
-        className: d.iconContainer,
+function h(e) {
+    let { className: n, isVertical: r } = e;
+    return (0, i.jsxs)('div', {
+        className: f.iconContainer,
         children: [
-            (0, r.jsx)(o.ChevronSmallDownIcon, {
+            (0, i.jsx)(l.ChevronSmallDownIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: s()(n ? d.downCaret : d.rightCaret, t)
+                className: o()(r ? f.downCaret : f.rightCaret, n)
             }),
-            n &&
-                (0, r.jsx)(o.GroupIcon, {
+            r &&
+                (0, i.jsx)(l.GroupIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: s()(d.members, t)
+                    className: o()(f.members, n)
                 })
         ]
     });
 }
 function p(e) {
-    let { channelId: t, className: n, isParticipantsOpen: a, isVertical: o = !1, hideTooltip: p = !1 } = e,
-        h = i.useCallback(
-            (e) => {
-                let { className: t } = e;
-                return a
-                    ? (0, r.jsx)(_, {
-                          className: t,
-                          isVertical: o
-                      })
-                    : (0, r.jsx)(f, {
-                          className: t,
-                          isVertical: o
-                      });
-            },
-            [a, o]
-        );
-    return (0, r.jsx)(u.Z, {
-        label: a ? c.intl.string(c.t.QJMRUF) : c.intl.string(c.t.vZiwmJ),
-        className: s()(d.participantsButton, n),
-        onClick: function () {
-            l.Z.toggleParticipants(t, !a);
+    let { channelId: n, className: r, isParticipantsOpen: s, isVertical: l = !1, hideTooltip: p = !1 } = e;
+    function m() {
+        u.Z.toggleParticipants(n, !s);
+    }
+    let g = a.useCallback(
+        (e) => {
+            let { className: n } = e;
+            return s
+                ? (0, i.jsx)(h, {
+                      className: n,
+                      isVertical: l
+                  })
+                : (0, i.jsx)(_, {
+                      className: n,
+                      isVertical: l
+                  });
         },
-        iconComponent: h,
+        [s, l]
+    );
+    return (0, i.jsx)(c.Z, {
+        label: s ? d.intl.string(d.t.QJMRUF) : d.intl.string(d.t.vZiwmJ),
+        className: o()(f.participantsButton, r),
+        onClick: m,
+        iconComponent: g,
         shouldShowTooltip: !p
     });
 }

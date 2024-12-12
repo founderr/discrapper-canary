@@ -1,41 +1,42 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return c;
+        return f;
     }
-}),
-    n(47120);
-var r = n(192379),
-    i = n(442837),
-    a = n(607070),
-    s = n(654904),
-    o = n(271383),
-    l = n(451478),
-    u = n(369111);
-function c(e) {
-    let { user: t, guildId: n, size: c, showPending: d = !1, animateOnHover: f = !1, avatarOverride: _ } = e,
-        [p, h] = r.useState(!1),
-        m = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
-        g = (0, i.e7)([l.Z], () => l.Z.isFocused()) && (p || (!m && !f)),
-        { pendingAvatar: E } = (0, u.Z)({}),
-        v = void 0 !== _ ? _ : d ? E : void 0,
-        I = (0, i.e7)([o.ZP], () => (null != n && null != t ? o.ZP.getMember(n, t.id) : null)),
-        T = r.useMemo(
+});
+var i = r(47120);
+var a = r(192379),
+    s = r(442837),
+    o = r(607070),
+    l = r(654904),
+    u = r(271383),
+    c = r(451478),
+    d = r(369111);
+function f(e) {
+    let { user: n, guildId: r, size: i, showPending: f = !1, animateOnHover: _ = !1, avatarOverride: h } = e,
+        [p, m] = a.useState(!1),
+        g = (0, s.e7)([o.Z], () => o.Z.useReducedMotion),
+        E = (0, s.e7)([c.Z], () => c.Z.isFocused()) && (p || (!g && !_)),
+        { pendingAvatar: v } = (0, d.Z)({}),
+        I = f ? v : void 0,
+        T = void 0 !== h ? h : I,
+        b = (0, s.e7)([u.ZP], () => (null != r && null != n ? u.ZP.getMember(r, n.id) : null)),
+        y = a.useMemo(
             () =>
-                null != t
-                    ? (0, s.SG)(v, I, t, {
-                          canAnimate: g,
-                          size: c
+                null != n
+                    ? (0, l.SG)(T, b, n, {
+                          canAnimate: E,
+                          size: i
                       })
                     : void 0,
-            [v, I, t, g, c]
+            [T, b, n, E, i]
         ),
-        b = r.useCallback(() => h(!0), []);
+        S = a.useCallback(() => m(!0), []);
     return {
-        avatarSrc: T,
-        isAvatarAnimating: g,
+        avatarSrc: y,
+        isAvatarAnimating: E,
         eventHandlers: {
-            onMouseEnter: b,
-            onMouseLeave: r.useCallback(() => h(!1), [])
+            onMouseEnter: S,
+            onMouseLeave: a.useCallback(() => m(!1), [])
         }
     };
 }

@@ -1,55 +1,66 @@
-(e = n.nmd(e)),
-    !(function (r) {
-        var i = t && !t.nodeType && t,
-            a = e && !e.nodeType && e,
-            s = 'object' == typeof n.g && n.g;
-        (s.global === s || s.window === s || s.self === s) && (r = s);
-        var o,
-            l,
-            u = /^xn--/,
-            c = /[^\x20-\x7E]/,
-            d = /[\x2E\u3002\uFF0E\uFF61]/g,
-            f = {
+(e = r.nmd(e)),
+    !(function (i) {
+        var a = n && !n.nodeType && n,
+            s = e && !e.nodeType && e,
+            o = 'object' == typeof r.g && r.g;
+        (o.global === o || o.window === o || o.self === o) && (i = o);
+        var l,
+            u,
+            c = 2147483647,
+            d = 36,
+            f = 1,
+            _ = 26,
+            h = 38,
+            p = 700,
+            m = 72,
+            g = 128,
+            E = '-',
+            v = /^xn--/,
+            I = /[^\x20-\x7E]/,
+            T = /[\x2E\u3002\uFF0E\uFF61]/g,
+            b = {
                 overflow: 'Overflow: input needs wider integers to process',
                 'not-basic': 'Illegal input >= 0x80 (not a basic code point)',
                 'invalid-input': 'Invalid input'
             },
-            _ = 35,
-            p = Math.floor,
-            h = String.fromCharCode;
-        function m(e) {
-            throw RangeError(f[e]);
+            y = 35,
+            S = Math.floor,
+            A = String.fromCharCode;
+        function N(e) {
+            throw RangeError(b[e]);
         }
-        function g(e, t) {
-            for (var n = e.length, r = []; n--; ) r[n] = t(e[n]);
-            return r;
+        function C(e, n) {
+            for (var r = e.length, i = []; r--; ) i[r] = n(e[r]);
+            return i;
         }
-        function E(e, t) {
-            var n = e.split('@'),
-                r = '';
-            return n.length > 1 && ((r = n[0] + '@'), (e = n[1])), r + g((e = e.replace(d, '.')).split('.'), t).join('.');
+        function R(e, n) {
+            var r = e.split('@'),
+                i = '';
+            return r.length > 1 && ((i = r[0] + '@'), (e = r[1])), i + C((e = e.replace(T, '.')).split('.'), n).join('.');
         }
-        function v(e) {
-            for (var t, n, r = [], i = 0, a = e.length; i < a; ) (t = e.charCodeAt(i++)) >= 55296 && t <= 56319 && i < a ? ((64512 & (n = e.charCodeAt(i++))) == 56320 ? r.push(((1023 & t) << 10) + (1023 & n) + 65536) : (r.push(t), i--)) : r.push(t);
-            return r;
+        function O(e) {
+            for (var n, r, i = [], a = 0, s = e.length; a < s; ) (n = e.charCodeAt(a++)) >= 55296 && n <= 56319 && a < s ? ((64512 & (r = e.charCodeAt(a++))) == 56320 ? i.push(((1023 & n) << 10) + (1023 & r) + 65536) : (i.push(n), a--)) : i.push(n);
+            return i;
         }
-        function I(e) {
-            return g(e, function (e) {
-                var t = '';
-                return e > 65535 && ((e -= 65536), (t += h(((e >>> 10) & 1023) | 55296)), (e = 56320 | (1023 & e))), (t += h(e));
+        function D(e) {
+            return C(e, function (e) {
+                var n = '';
+                return e > 65535 && ((e -= 65536), (n += A(((e >>> 10) & 1023) | 55296)), (e = 56320 | (1023 & e))), (n += A(e));
             }).join('');
         }
-        function T(e, t) {
-            return e + 22 + 75 * (e < 26) - ((0 != t) << 5);
+        function L(e) {
+            return e - 48 < 10 ? e - 22 : e - 65 < 26 ? e - 65 : e - 97 < 26 ? e - 97 : d;
         }
-        function b(e, t, n) {
-            var r = 0;
-            for (e = n ? p(e / 700) : e >> 1, e += p(e / t); e > (26 * _) >> 1; r += 36) e = p(e / _);
-            return p(r + ((_ + 1) * e) / (e + 38));
+        function x(e, n) {
+            return e + 22 + 75 * (e < 26) - ((0 != n) << 5);
         }
-        function S(e) {
-            var t,
-                n,
+        function w(e, n, r) {
+            var i = 0;
+            for (e = r ? S(e / p) : e >> 1, e += S(e / n); e > (y * _) >> 1; i += d) e = S(e / y);
+            return S(i + ((y + 1) * e) / (e + h));
+        }
+        function P(e) {
+            var n,
                 r,
                 i,
                 a,
@@ -57,26 +68,24 @@
                 o,
                 l,
                 u,
-                c,
-                d,
-                f = [],
-                _ = e.length,
-                h = 0,
-                g = 128,
-                E = 72;
-            for ((r = e.lastIndexOf('-')) < 0 && (r = 0), i = 0; i < r; ++i) e.charCodeAt(i) >= 128 && m('not-basic'), f.push(e.charCodeAt(i));
-            for (a = r > 0 ? r + 1 : 0; a < _; ) {
-                for (s = h, o = 1, l = 36; ; l += 36) {
-                    if ((a >= _ && m('invalid-input'), ((u = (t = e.charCodeAt(a++)) - 48 < 10 ? t - 22 : t - 65 < 26 ? t - 65 : t - 97 < 26 ? t - 97 : 36) >= 36 || u > p((2147483647 - h) / o)) && m('overflow'), (h += u * o), u < (c = l <= E ? 1 : l >= E + 26 ? 26 : l - E))) break;
-                    o > p(2147483647 / (d = 36 - c)) && m('overflow'), (o *= d);
+                h,
+                p,
+                v = [],
+                I = e.length,
+                T = 0,
+                b = g,
+                y = m;
+            for ((r = e.lastIndexOf(E)) < 0 && (r = 0), i = 0; i < r; ++i) e.charCodeAt(i) >= 128 && N('not-basic'), v.push(e.charCodeAt(i));
+            for (a = r > 0 ? r + 1 : 0; a < I; ) {
+                for (s = T, o = 1, l = d; a >= I && N('invalid-input'), ((u = L(e.charCodeAt(a++))) >= d || u > S((c - T) / o)) && N('overflow'), (T += u * o), !(u < (h = l <= y ? f : l >= y + _ ? _ : l - y)); l += d) {
+                    o > S(c / (p = d - h)) && N('overflow'), (o *= p);
                 }
-                (E = b(h - s, (n = f.length + 1), 0 == s)), p(h / n) > 2147483647 - g && m('overflow'), (g += p(h / n)), (h %= n), f.splice(h++, 0, g);
+                (y = w(T - s, (n = v.length + 1), 0 == s)), S(T / n) > c - b && N('overflow'), (b += S(T / n)), (T %= n), v.splice(T++, 0, b);
             }
-            return I(f);
+            return D(v);
         }
-        function y(e) {
-            var t,
-                n,
+        function M(e) {
+            var n,
                 r,
                 i,
                 a,
@@ -84,54 +93,57 @@
                 o,
                 l,
                 u,
-                c,
-                d,
-                f,
-                _,
-                g,
-                E,
-                I = [];
-            for (s = 0, f = (e = v(e)).length, t = 128, n = 0, a = 72; s < f; ++s) (d = e[s]) < 128 && I.push(h(d));
-            for (r = i = I.length, i && I.push('-'); r < f; ) {
-                for (o = 2147483647, s = 0; s < f; ++s) (d = e[s]) >= t && d < o && (o = d);
-                for (o - t > p((2147483647 - n) / (_ = r + 1)) && m('overflow'), n += (o - t) * _, t = o, s = 0; s < f; ++s)
-                    if (((d = e[s]) < t && ++n > 2147483647 && m('overflow'), d == t)) {
-                        for (l = n, u = 36; !(l < (c = u <= a ? 1 : u >= a + 26 ? 26 : u - a)); u += 36) {
-                            (E = l - c), (g = 36 - c), I.push(h(T(c + (E % g), 0))), (l = p(E / g));
+                h,
+                p,
+                v,
+                I,
+                T,
+                b,
+                y,
+                C = [];
+            for (o = 0, I = (e = O(e)).length, n = g, r = 0, s = m; o < I; ++o) (v = e[o]) < 128 && C.push(A(v));
+            for (i = a = C.length, a && C.push(E); i < I; ) {
+                for (l = c, o = 0; o < I; ++o) (v = e[o]) >= n && v < l && (l = v);
+                for (l - n > S((c - r) / (T = i + 1)) && N('overflow'), r += (l - n) * T, n = l, o = 0; o < I; ++o)
+                    if (((v = e[o]) < n && ++r > c && N('overflow'), v == n)) {
+                        for (u = r, h = d; !(u < (p = h <= s ? f : h >= s + _ ? _ : h - s)); h += d) {
+                            (y = u - p), (b = d - p), C.push(A(x(p + (y % b), 0))), (u = S(y / b));
                         }
-                        I.push(h(T(l, 0))), (a = b(n, _, r == i)), (n = 0), ++r;
+                        C.push(A(x(u, 0))), (s = w(r, T, i == a)), (r = 0), ++i;
                     }
-                ++n, ++t;
+                ++r, ++n;
             }
-            return I.join('');
+            return C.join('');
+        }
+        function k(e) {
+            return R(e, function (e) {
+                return v.test(e) ? P(e.slice(4).toLowerCase()) : e;
+            });
+        }
+        function U(e) {
+            return R(e, function (e) {
+                return I.test(e) ? 'xn--' + M(e) : e;
+            });
         }
         if (
-            ((o = {
+            ((l = {
                 version: '1.4.1',
                 ucs2: {
-                    decode: v,
-                    encode: I
+                    decode: O,
+                    encode: D
                 },
-                decode: S,
-                encode: y,
-                toASCII: function (e) {
-                    return E(e, function (e) {
-                        return c.test(e) ? 'xn--' + y(e) : e;
-                    });
-                },
-                toUnicode: function (e) {
-                    return E(e, function (e) {
-                        return u.test(e) ? S(e.slice(4).toLowerCase()) : e;
-                    });
-                }
+                decode: P,
+                encode: M,
+                toASCII: U,
+                toUnicode: k
             }),
             'function' == typeof define && 'object' == typeof define.amd && define.amd)
         )
             define('punycode', function () {
-                return o;
+                return l;
             });
-        else if (i && a) {
-            if (e.exports == i) a.exports = o;
-            else for (l in o) o.hasOwnProperty(l) && (i[l] = o[l]);
-        } else r.punycode = o;
+        else if (a && s) {
+            if (e.exports == a) s.exports = l;
+            else for (u in l) l.hasOwnProperty(u) && (a[u] = l[u]);
+        } else i.punycode = l;
     })(this);

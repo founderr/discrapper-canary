@@ -1,30 +1,27 @@
-n.d(t, {
+r.d(n, {
     b: function () {
-        return s;
+        return l;
     }
 });
-let r = 'application/font-woff',
-    i = 'image/jpeg',
-    a = {
-        woff: r,
-        woff2: r,
+let i = 'application/font-woff',
+    a = 'image/jpeg',
+    s = {
+        woff: i,
+        woff2: i,
         ttf: 'application/font-truetype',
         eot: 'application/vnd.ms-fontobject',
         png: 'image/png',
-        jpg: i,
-        jpeg: i,
+        jpg: a,
+        jpeg: a,
         gif: 'image/gif',
         tiff: 'image/tiff',
         svg: 'image/svg+xml',
         webp: 'image/webp'
     };
-function s(e) {
-    return (
-        a[
-            (function (e) {
-                let t = /\.([^./]*?)$/g.exec(e);
-                return t ? t[1] : '';
-            })(e).toLowerCase()
-        ] || ''
-    );
+function o(e) {
+    let n = /\.([^./]*?)$/g.exec(e);
+    return n ? n[1] : '';
+}
+function l(e) {
+    return s[o(e).toLowerCase()] || '';
 }

@@ -1,5 +1,6 @@
-var r = n(563602),
-    i = n(917430);
-t.Z = function (e, t) {
-    return e && (0, r.Z)(e, t, i.Z);
-};
+var i = r(563602),
+    a = r(917430);
+function s(e, n) {
+    return e && (0, i.Z)(e, n, a.Z);
+}
+n.Z = s;

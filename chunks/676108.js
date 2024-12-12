@@ -1,65 +1,66 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return f;
+        return _;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(481060),
-    s = n(318766),
-    o = n(907040),
-    l = n(28546),
-    u = n(872635),
-    c = n(185923),
-    d = n(692466);
-function f(e) {
-    var t;
-    let { editorRef: n, options: f, channel: _ } = e,
-        p = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor(),
-        h = i.useCallback(
-            (e, t) => {
-                let r = n.current;
-                null != e && null != r && r.insertEmoji(e, t, !1), t && (0, l._Q)();
+var i = r(200651),
+    a = r(192379),
+    s = r(481060),
+    o = r(318766),
+    l = r(907040),
+    u = r(28546),
+    c = r(872635),
+    d = r(185923),
+    f = r(692466);
+function _(e) {
+    var n;
+    let { editorRef: r, options: _, channel: h } = e,
+        p = null === (n = r.current) || void 0 === n ? void 0 : n.getSlateEditor(),
+        m = a.useCallback(
+            (e, n) => {
+                let i = r.current;
+                null != e && null != i && i.insertEmoji(e, n, !1), n && (0, u._Q)();
             },
-            [n]
-        );
+            [r]
+        ),
+        g = (e) => {
+            let { closePopout: n } = e;
+            return (0, i.jsx)(l.Z, {
+                persistSearch: !0,
+                channel: h,
+                closePopout: n,
+                onSelectEmoji: (e, r) => {
+                    m(e, r), r && n();
+                },
+                pickerIntention: d.Hz.COMMUNITY_CONTENT
+            });
+        };
     return null == p
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, i.jsxs)('div', {
               id: 'slate-toolbar',
-              className: d.staticToolbar,
+              className: f.staticToolbar,
               children: [
-                  (0, r.jsx)('div', {
-                      className: d.staticButtons,
-                      children: (0, r.jsx)(u.I, {
-                          editorRef: n,
-                          options: f,
-                          iconClassName: d.staticIcon,
-                          dividerClassName: d.staticDivider
+                  (0, i.jsx)('div', {
+                      className: f.staticButtons,
+                      children: (0, i.jsx)(c.I, {
+                          editorRef: r,
+                          options: _,
+                          iconClassName: f.staticIcon,
+                          dividerClassName: f.staticDivider
                       })
                   }),
-                  (0, r.jsx)(a.Popout, {
-                      renderPopout: (e) => {
-                          let { closePopout: t } = e;
-                          return (0, r.jsx)(o.Z, {
-                              persistSearch: !0,
-                              channel: _,
-                              closePopout: t,
-                              onSelectEmoji: (e, n) => {
-                                  h(e, n), n && t();
-                              },
-                              pickerIntention: c.Hz.COMMUNITY_CONTENT
-                          });
-                      },
+                  (0, i.jsx)(s.Popout, {
+                      renderPopout: g,
                       position: 'bottom',
-                      animation: a.Popout.Animation.NONE,
+                      animation: s.Popout.Animation.NONE,
                       align: 'left',
-                      children: (e, t) => {
-                          let { isShown: n } = t;
-                          return (0, r.jsx)(s.Z, {
+                      children: (e, n) => {
+                          let { isShown: r } = n;
+                          return (0, i.jsx)(o.Z, {
                               ...e,
-                              active: n,
-                              className: d.emojiButton,
+                              active: r,
+                              className: f.emojiButton,
                               tabIndex: 0
                           });
                       }

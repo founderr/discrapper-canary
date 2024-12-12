@@ -1,14 +1,16 @@
-var t = (function () {
-    for (var e, t = [], n = 0; n < 256; n++) {
-        e = n;
-        for (var r = 0; r < 8; r++) e = 1 & e ? 3988292384 ^ (e >>> 1) : e >>> 1;
-        t[n] = e;
+var n = (function e() {
+    for (var e, n = [], r = 0; r < 256; r++) {
+        e = r;
+        for (var i = 0; i < 8; i++) e = 1 & e ? 3988292384 ^ (e >>> 1) : e >>> 1;
+        n[r] = e;
     }
-    return t;
+    return n;
 })();
-e.exports = function (e, n, r, i) {
-    var a = i + r;
+function r(e, r, i, a) {
+    var s = n,
+        o = a + i;
     e ^= -1;
-    for (var s = i; s < a; s++) e = (e >>> 8) ^ t[(e ^ n[s]) & 255];
+    for (var l = a; l < o; l++) e = (e >>> 8) ^ s[(e ^ r[l]) & 255];
     return -1 ^ e;
-};
+}
+e.exports = r;

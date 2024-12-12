@@ -1,94 +1,101 @@
-n(47120), n(653041);
-var r,
-    i,
-    a = n(404097),
-    s = n(544891),
-    o = n(358085),
-    l = n(747268),
-    u = n(20186),
-    c = n(981631);
-function d(e, t, n) {
+var i,
+    a = r(47120);
+var s = r(653041);
+var o = r(404097),
+    l = r(544891),
+    u = r(358085),
+    c = r(747268),
+    d = r(20186),
+    f = r(981631);
+function _(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let f = new Set(['darwin', 'linux', 'win32', 'ios', 'android']);
-((i = r || (r = {})).COUNT = 'count'), (i.DISTRIBUTION = 'distribution');
-t.Z = new (class e {
-    _getMetricWithDefaults(e, t) {
-        let { name: n, tags: r } = e,
-            i = {
-                name: n,
-                type: t,
-                tags: (0, u.d)()
+let h = new Set(['darwin', 'linux', 'win32', 'ios', 'android']);
+function p() {
+    if ((0, u.isWeb)()) return 'web';
+    {
+        let e = (0, u.getPlatformName)();
+        return h.has(e) ? e : null;
+    }
+}
+function m() {
+    let e = c.Z;
+    return null != e && o.e.ALL.has(e) ? e : null;
+}
+!(function (e) {
+    (e.COUNT = 'count'), (e.DISTRIBUTION = 'distribution');
+})(i || (i = {}));
+let g = 120000,
+    E = 100;
+class v {
+    _getMetricWithDefaults(e, n) {
+        let { name: r, tags: i } = e,
+            a = {
+                name: r,
+                type: n,
+                tags: (0, d.d)()
             };
-        null != r &&
-            r.forEach((e) => {
-                i.tags.push(e);
+        null != i &&
+            i.forEach((e) => {
+                a.tags.push(e);
             });
-        let s = (function () {
-            if ((0, o.isWeb)()) return 'web';
-            {
-                let e = (0, o.getPlatformName)();
-                return f.has(e) ? e : null;
-            }
-        })();
-        null != s && i.tags.push('platform:'.concat(s));
-        let c = (function () {
-            let e = l.Z;
-            return null != e && a.e.ALL.has(e) ? e : null;
-        })();
-        return null != c && i.tags.push('release_channel:'.concat(c)), i;
+        let s = p();
+        null != s && a.tags.push('platform:'.concat(s));
+        let o = m();
+        return null != o && a.tags.push('release_channel:'.concat(o)), a;
     }
     increment(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = this._getMetricWithDefaults(e, 'count');
-        this._metrics.push(n), (t || this._metrics.length >= 100) && this._flush();
+        let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            r = this._getMetricWithDefaults(e, 'count');
+        this._metrics.push(r), (n || this._metrics.length >= E) && this._flush();
     }
-    distribution(e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            r = {
+    distribution(e, n) {
+        let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+            i = {
                 ...this._getMetricWithDefaults(e, 'distribution'),
-                value: t
+                value: n
             };
-        this._metrics.push(r), (n || this._metrics.length >= 100) && this._flush();
+        this._metrics.push(i), (r || this._metrics.length >= E) && this._flush();
     }
     _flush() {
         if (this._metrics.length > 0) {
             let e = [...this._metrics];
-            s.tn
+            l.tn
                 .post({
-                    url: c.ANM.METRICS_V2,
+                    url: f.ANM.METRICS_V2,
                     body: {
                         metrics: e,
                         client_info: {
-                            built_at: '1733962778262',
-                            build_number: '352764'
+                            built_at: '1733963449921',
+                            build_number: '352772'
                         }
                     },
                     retries: 1,
                     rejectWithError: !0
                 })
-                .catch((t) => {
-                    this._metrics.length + e.length < 100 && (this._metrics = [...this._metrics, ...e]);
+                .catch((n) => {
+                    this._metrics.length + e.length < E && (this._metrics = [...this._metrics, ...e]);
                 });
         }
         this._metrics = [];
     }
     constructor() {
-        d(this, '_metrics', void 0),
-            d(this, '_intervalId', void 0),
+        _(this, '_metrics', void 0),
+            _(this, '_intervalId', void 0),
             (this._metrics = []),
             (this._intervalId = setInterval(() => {
                 this._flush();
-            }, 120000));
+            }, g));
     }
-})();
+}
+n.Z = new v();

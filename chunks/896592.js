@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function n(e) {
     return {
         name: 'Q',
         aliases: ['k', 'kdb'],
@@ -11,4 +11,5 @@ e.exports = function (e) {
         },
         contains: [e.C_LINE_COMMENT_MODE, e.QUOTE_STRING_MODE, e.C_NUMBER_MODE]
     };
-};
+}
+e.exports = n;

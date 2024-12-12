@@ -1,52 +1,53 @@
-var r = n(544891),
-    i = n(626135);
-function a(e, t, n) {
-    let { trackedActionData: r, ...a } = t,
-        s = {
-            url: a.url,
-            request_method: n
+var i = r(544891),
+    a = r(626135);
+function s(e, n, r) {
+    let { trackedActionData: i, ...s } = n,
+        o = {
+            url: s.url,
+            request_method: r
         };
-    return new Promise((t, n) => {
-        e(a)
+    return new Promise((n, r) => {
+        e(s)
             .then((e) => {
-                let n = r.properties;
-                'function' == typeof r.properties && (n = r.properties(e)),
-                    (0, i.trackNetworkAction)(r.event, {
+                let r = i.properties;
+                'function' == typeof i.properties && (r = i.properties(e)),
+                    (0, a.trackNetworkAction)(i.event, {
                         status_code: e.status,
-                        ...s,
-                        ...n
-                    }),
-                    t(e);
-            })
-            .catch((e) => {
-                var t, a;
-                let o = r.properties;
-                'function' == typeof r.properties && (o = r.properties(e)),
-                    (0, i.trackNetworkAction)(r.event, {
-                        status_code: e.status,
-                        error_code: null === (t = e.body) || void 0 === t ? void 0 : t.code,
-                        error_message: null === (a = e.body) || void 0 === a ? void 0 : a.message,
-                        ...s,
-                        ...o
+                        ...o,
+                        ...r
                     }),
                     n(e);
+            })
+            .catch((e) => {
+                var n, s;
+                let l = i.properties;
+                'function' == typeof i.properties && (l = i.properties(e)),
+                    (0, a.trackNetworkAction)(i.event, {
+                        status_code: e.status,
+                        error_code: null === (n = e.body) || void 0 === n ? void 0 : n.code,
+                        error_message: null === (s = e.body) || void 0 === s ? void 0 : s.message,
+                        ...o,
+                        ...l
+                    }),
+                    r(e);
             });
     });
 }
-t.Z = {
-    get: function (e) {
-        return a(r.tn.get, e, 'get');
+let o = {
+    get: function e(e) {
+        return s(i.tn.get, e, 'get');
     },
-    post: function (e) {
-        return a(r.tn.post, e, 'post');
+    post: function e(e) {
+        return s(i.tn.post, e, 'post');
     },
-    put: function (e) {
-        return a(r.tn.put, e, 'put');
+    put: function e(e) {
+        return s(i.tn.put, e, 'put');
     },
-    patch: function (e) {
-        return a(r.tn.patch, e, 'patch');
+    patch: function e(e) {
+        return s(i.tn.patch, e, 'patch');
     },
-    delete: function (e) {
-        return a(r.tn.del, e, 'del');
+    delete: function e(e) {
+        return s(i.tn.del, e, 'del');
     }
 };
+n.Z = o;

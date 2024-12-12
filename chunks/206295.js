@@ -1,55 +1,83 @@
-n(47120);
-var r = n(192379),
-    i = n(688619),
-    a = n.n(i);
-n(979590);
-var s = n(442837),
-    o = n(866442),
-    l = n(607070),
-    u = n(220082),
-    c = n(981631);
-t.Z = (e) => {
-    var t, i, d, f, _, p;
-    let h;
-    h = n(481060).tokens;
-    let m = (0, s.e7)([l.Z], () => l.Z.saturation),
-        [g, E] = (0, u.Cf)(
-            e,
-            null !==
-                (p =
-                    null == h
-                        ? void 0
-                        : null === (_ = h.colors) || void 0 === _
-                          ? void 0
-                          : null === (f = _.BACKGROUND_FLOATING) || void 0 === f
+var i = r(47120);
+var a = r(192379),
+    s = r(688619),
+    o = r.n(s),
+    l = r(979590);
+var u = r(442837),
+    c = r(866442),
+    d = r(607070),
+    f = r(220082),
+    _ = r(981631);
+let h = 8,
+    p = 0.725,
+    m = (e, n) => {
+        let r = AccessibilityStore.desaturateUserColors ? AccessibilityStore.saturation : 1,
+            i = useColorStore.getState().palette[e],
+            a =
+                null == i
+                    ? void 0
+                    : i.map((e) => {
+                          let [n, i, a] = e,
+                              {
+                                  h: s,
+                                  s: o,
+                                  l
+                              } = tinycolor({
+                                  r: n,
+                                  g: i,
+                                  b: a
+                              }).toHsl();
+                          return tinycolor({
+                              h: s,
+                              s: o * r,
+                              l
+                          }).toHexString();
+                      });
+        return null != a ? a : [n, n];
+    },
+    g = (e) => {
+        var n, i, s, l, m, g;
+        let E;
+        E = r(481060).tokens;
+        let v = (0, u.e7)([d.Z], () => d.Z.saturation),
+            [I, T] = (0, f.Cf)(
+                e,
+                null !==
+                    (g =
+                        null == E
                             ? void 0
-                            : null === (d = f.resolve) || void 0 === d
+                            : null === (m = E.colors) || void 0 === m
                               ? void 0
-                              : null ===
-                                      (i = d.call(f, {
-                                          theme: c.BRd.DARK,
-                                          saturation: m
-                                      })) || void 0 === i
+                              : null === (l = m.BACKGROUND_FLOATING) || void 0 === l
                                 ? void 0
-                                : null === (t = i.hex) || void 0 === t
+                                : null === (s = l.resolve) || void 0 === s
                                   ? void 0
-                                  : t.call(i)) && void 0 !== p
-                ? p
-                : '#000'
-        );
-    return r.useMemo(() => {
-        let e = (0, o._i)(g),
-            t = (0, o._i)(E);
-        for (let t = 1; t < 8 && !((0, o.Bd)(e) >= 0.725); t++) {
-            e = a()(e).darken(0.5).num();
-        }
-        for (let e = 1; e < 8 && !((0, o.Bd)(t) >= 0.725); e++) {
-            t = a()(t).darken(0.5).num();
-        }
-        let n = (0, o.Rf)(e);
-        return {
-            primaryColor: n,
-            secondaryColor: (0, o.Rf)(t)
-        };
-    }, [g, E]);
-};
+                                  : null ===
+                                          (i = s.call(l, {
+                                              theme: _.BRd.DARK,
+                                              saturation: v
+                                          })) || void 0 === i
+                                    ? void 0
+                                    : null === (n = i.hex) || void 0 === n
+                                      ? void 0
+                                      : n.call(i)) && void 0 !== g
+                    ? g
+                    : '#000'
+            );
+        return a.useMemo(() => {
+            let e = (0, c._i)(I),
+                n = (0, c._i)(T);
+            for (let n = 1; n < h && !((0, c.Bd)(e) >= p); n++) {
+                e = o()(e).darken(0.5).num();
+            }
+            for (let e = 1; e < h && !((0, c.Bd)(n) >= p); e++) {
+                n = o()(n).darken(0.5).num();
+            }
+            let r = (0, c.Rf)(e);
+            return {
+                primaryColor: r,
+                secondaryColor: (0, c.Rf)(n)
+            };
+        }, [I, T]);
+    };
+n.Z = g;

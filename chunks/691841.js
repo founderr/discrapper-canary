@@ -1,54 +1,55 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return l;
+        return u;
     }
 });
-var r = n(192379),
-    i = n(924826),
-    a = n(536895),
-    s = n(40851),
-    o = n(590921);
-function l(e) {
-    var t, n, l;
-    let { navId: u, scrollerRef: c, state: d, onFocus: f } = e,
-        { renderWindow: _ } = r.useContext(s.ZP),
-        p = (e, t) => {
+var i = r(192379),
+    a = r(924826),
+    s = r(536895),
+    o = r(40851),
+    l = r(590921);
+function u(e) {
+    var n, r, u;
+    let { navId: c, scrollerRef: d, state: f, onFocus: _ } = e,
+        { renderWindow: h } = i.useContext(o.ZP),
+        p = (e, n) => {
+            let r = h.document.querySelector(e);
+            if (null != r) {
+                var i;
+                null === (i = d.current) || void 0 === i || i.scrollIntoViewNode({ node: r });
+            }
+            null == _ || _(+n);
+        },
+        m = (e, n) => {
+            var r;
+            if ((null === (r = d.current) || void 0 === r || r.scrollToTop(), e && null != f.query)) {
+                let e = f.query.typeInfo.focusMode,
+                    r = !(e === l.QZ.MANUAL || (e === l.QZ.AUTO_WHEN_FILTERED && 0 === f.query.queryText.length));
+                f.isVisible && (!0 !== n || !1 !== r) ? (E.setFocus('0'), null == _ || _(0)) : (E.setFocus(null), null == _ || _(null));
+            }
+        },
+        g = (e) => {
             var n;
-            if ((null === (n = c.current) || void 0 === n || n.scrollToTop(), e && null != d.query)) {
-                let e = d.query.typeInfo.focusMode,
-                    n = !(e === o.QZ.MANUAL || (e === o.QZ.AUTO_WHEN_FILTERED && 0 === d.query.queryText.length));
-                d.isVisible && (!0 !== t || !1 !== n) ? (m.setFocus('0'), null == f || f(0)) : (m.setFocus(null), null == f || f(null));
+            if ((null === (n = d.current) || void 0 === n || n.scrollToBottom(), e && null != f.query && f.query.resultCount > 0)) {
+                let e = f.query.resultCount - 1;
+                E.setFocus(e.toString()), null == _ || _(e);
             }
         },
-        h = (e) => {
-            var t;
-            if ((null === (t = c.current) || void 0 === t || t.scrollToBottom(), e && null != d.query && d.query.resultCount > 0)) {
-                let e = d.query.resultCount - 1;
-                m.setFocus(e.toString()), null == f || f(e);
-            }
-        },
-        m = (0, i.ZP)({
-            id: u,
-            isEnabled: d.isVisible,
-            orientation: a.hy.VERTICAL,
+        E = (0, a.ZP)({
+            id: c,
+            isEnabled: f.isVisible,
+            orientation: s.hy.VERTICAL,
             useVirtualFocus: !0,
-            setFocus: (e, t) => {
-                let n = _.document.querySelector(e);
-                if (null != n) {
-                    var r;
-                    null === (r = c.current) || void 0 === r || r.scrollIntoViewNode({ node: n });
-                }
-                null == f || f(+t);
-            },
-            onNavigateNextAtEnd: () => p(!0),
-            onNavigatePreviousAtStart: () => h(!0),
-            scrollToStart: () => (p(!1, !1), Promise.resolve()),
-            scrollToEnd: () => (h(!1), Promise.resolve())
+            setFocus: p,
+            onNavigateNextAtEnd: () => m(!0),
+            onNavigatePreviousAtStart: () => g(!0),
+            scrollToStart: () => (m(!1, !1), Promise.resolve()),
+            scrollToEnd: () => (g(!1), Promise.resolve())
         });
     return (
-        r.useEffect(() => {
-            p(!0, !0);
-        }, [null === (t = d.query) || void 0 === t ? void 0 : t.type, null === (n = d.query) || void 0 === n ? void 0 : n.queryText, null === (l = d.query) || void 0 === l ? void 0 : l.isLoading, d.isVisible]),
-        m
+        i.useEffect(() => {
+            m(!0, !0);
+        }, [null === (n = f.query) || void 0 === n ? void 0 : n.type, null === (r = f.query) || void 0 === r ? void 0 : r.queryText, null === (u = f.query) || void 0 === u ? void 0 : u.isLoading, f.isVisible]),
+        E
     );
 }

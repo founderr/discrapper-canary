@@ -1,63 +1,64 @@
-var r = n(192379),
-    i = n(723184),
-    a = n(877837),
-    s = n(68688),
-    o =
+var i = r(192379),
+    a = r(723184),
+    s = r(877837),
+    o = r(68688),
+    l =
         Object.assign ||
         function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+            for (var n = 1; n < arguments.length; n++) {
+                var r = arguments[n];
+                for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
             }
             return e;
         },
-    l = function (e) {
-        var t = e.rgb,
-            n = e.hsl,
-            s = e.width,
-            l = e.height,
-            u = e.onChange,
-            c = e.direction,
-            d = e.style,
-            f = e.renderers,
-            _ = e.pointer,
+    u = function (e) {
+        var n = e.rgb,
+            r = e.hsl,
+            o = e.width,
+            u = e.height,
+            c = e.onChange,
+            d = e.direction,
+            f = e.style,
+            _ = e.renderers,
+            h = e.pointer,
             p = e.className,
-            h = (0, i.default)({
+            m = void 0 === p ? '' : p,
+            g = (0, a.default)({
                 default: {
                     picker: {
                         position: 'relative',
-                        width: s,
-                        height: l
+                        width: o,
+                        height: u
                     },
                     alpha: {
                         radius: '2px',
-                        style: d
+                        style: f
                     }
                 }
             });
-        return r.createElement(
+        return i.createElement(
             'div',
             {
-                style: h.picker,
-                className: 'alpha-picker ' + (void 0 === p ? '' : p)
+                style: g.picker,
+                className: 'alpha-picker ' + m
             },
-            r.createElement(
-                a.xV,
-                o({}, h.alpha, {
-                    rgb: t,
-                    hsl: n,
-                    pointer: _,
-                    renderers: f,
-                    onChange: u,
-                    direction: c
+            i.createElement(
+                s.xV,
+                l({}, g.alpha, {
+                    rgb: n,
+                    hsl: r,
+                    pointer: h,
+                    renderers: _,
+                    onChange: c,
+                    direction: d
                 })
             )
         );
     };
-(l.defaultProps = {
+(u.defaultProps = {
     width: '316px',
     height: '16px',
     direction: 'horizontal',
-    pointer: s.Z
+    pointer: o.Z
 }),
-    (0, a.t1)(l);
+    (0, s.t1)(u);

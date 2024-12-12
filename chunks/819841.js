@@ -1,17 +1,16 @@
-t.Z = function () {
-    for (var e, t, n = 0, r = ''; n < arguments.length; )
-        (e = arguments[n++]) &&
-            (t = (function e(t) {
-                var n,
-                    r,
-                    i = '';
-                if ('string' == typeof t || 'number' == typeof t) i += t;
-                else if ('object' == typeof t) {
-                    if (Array.isArray(t)) for (n = 0; n < t.length; n++) t[n] && (r = e(t[n])) && (i && (i += ' '), (i += r));
-                    else for (n in t) t[n] && (i && (i += ' '), (i += n));
-                }
-                return i;
-            })(e)) &&
-            (r && (r += ' '), (r += t));
-    return r;
-};
+function r(e) {
+    var n,
+        i,
+        a = '';
+    if ('string' == typeof e || 'number' == typeof e) a += e;
+    else if ('object' == typeof e) {
+        if (Array.isArray(e)) for (n = 0; n < e.length; n++) e[n] && (i = r(e[n])) && (a && (a += ' '), (a += i));
+        else for (n in e) e[n] && (a && (a += ' '), (a += n));
+    }
+    return a;
+}
+function i() {
+    for (var e, n, i = 0, a = ''; i < arguments.length; ) (e = arguments[i++]) && (n = r(e)) && (a && (a += ' '), (a += n));
+    return a;
+}
+n.Z = i;

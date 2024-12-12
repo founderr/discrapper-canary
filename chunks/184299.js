@@ -1,90 +1,94 @@
-n.d(t, {
+r.d(n, {
     iF: function () {
-        return s;
+        return a;
     },
     iw: function () {
-        return a;
+        return i;
     },
     km: function () {
         return d;
     }
 });
-var r,
-    i,
+var i,
     a,
-    s,
-    o = n(877124),
-    l = n(65400),
-    u = n(731965),
-    c = n(433517);
-((r = a || (a = {})).UNKNOWN = 'UNKNOWN'), (r.NOT_STARTED = 'NOT_STARTED'), (r.IN_PROGRESS = 'IN_PROGRESS'), (r.COMPLETED = 'COMPLETED'), ((i = s || (s = {})).NONE = 'NONE'), (i.FETCHING = 'FETCHING'), (i.SUCCESS = 'SUCCESS'), (i.FAILURE = 'FAILURE');
-let d = (0, l.F)()(
-    (0, o.tJ)(
-        (e, t) => ({
-            volume: 0.3,
+    s = r(877124),
+    o = r(65400),
+    l = r(731965),
+    u = r(433517);
+let c = 0.3;
+!(function (e) {
+    (e.UNKNOWN = 'UNKNOWN'), (e.NOT_STARTED = 'NOT_STARTED'), (e.IN_PROGRESS = 'IN_PROGRESS'), (e.COMPLETED = 'COMPLETED');
+})(i || (i = {})),
+    !(function (e) {
+        (e.NONE = 'NONE'), (e.FETCHING = 'FETCHING'), (e.SUCCESS = 'SUCCESS'), (e.FAILURE = 'FAILURE');
+    })(a || (a = {}));
+let d = (0, o.F)()(
+    (0, s.tJ)(
+        (e, n) => ({
+            volume: c,
             muted: !1,
             transcriptEnabled: !1,
             captionEnabled: !1,
             fullScreenEnabled: !1,
             videoProgress: {},
             transcript: null,
-            setVolume: (t) => {
-                (0, u.j)(() => e({ volume: t }));
+            setVolume: (n) => {
+                (0, l.j)(() => e({ volume: n }));
             },
-            setMuted: (t) => {
-                (0, u.j)(() => e({ muted: t }));
+            setMuted: (n) => {
+                (0, l.j)(() => e({ muted: n }));
             },
-            setVideoProgress: (n, r, i) => {
-                var a, s;
-                let o = Math.max(null !== (s = null === (a = t().videoProgress[n]) || void 0 === a ? void 0 : a.maxTimestampSec) && void 0 !== s ? s : 0, Math.floor(r));
-                (0, u.j)(() =>
+            setVideoProgress: (r, i, a) => {
+                var s, o;
+                let u = Math.max(null !== (o = null === (s = n().videoProgress[r]) || void 0 === s ? void 0 : s.maxTimestampSec) && void 0 !== o ? o : 0, Math.floor(i));
+                (0, l.j)(() =>
                     e({
                         videoProgress: {
-                            ...t().videoProgress,
-                            [n]: {
-                                timestampSec: r,
-                                duration: i,
-                                maxTimestampSec: o
+                            ...n().videoProgress,
+                            [r]: {
+                                timestampSec: i,
+                                duration: a,
+                                maxTimestampSec: u
                             }
                         }
                     })
                 );
             },
-            setTranscriptEnabled: (t) => {
-                (0, u.j)(() => e({ transcriptEnabled: t }));
+            setTranscriptEnabled: (n) => {
+                (0, l.j)(() => e({ transcriptEnabled: n }));
             },
-            setCaptionEnabled: (t) => {
-                (0, u.j)(() => e({ captionEnabled: t }));
+            setCaptionEnabled: (n) => {
+                (0, l.j)(() => e({ captionEnabled: n }));
             },
-            setFullScreenEnabled: (t) => {
-                (0, u.j)(() => e({ fullScreenEnabled: t }));
+            setFullScreenEnabled: (n) => {
+                (0, l.j)(() => e({ fullScreenEnabled: n }));
             },
-            getVideoProgress: (e) => t().videoProgress[e],
+            getVideoProgress: (e) => n().videoProgress[e],
             getVideoProgressState: (e) => {
-                let n = t().videoProgress[e];
-                return null == n ? 'UNKNOWN' : 0 === n.timestampSec ? 'NOT_STARTED' : n.timestampSec >= n.duration ? 'COMPLETED' : 'IN_PROGRESS';
+                let r = n().videoProgress[e];
+                return null == r ? 'UNKNOWN' : 0 === r.timestampSec ? 'NOT_STARTED' : r.timestampSec >= r.duration ? 'COMPLETED' : 'IN_PROGRESS';
             },
-            resetQuest: (n) => {
-                (0, u.j)(() => {
-                    let { [n]: r, ...i } = t().videoProgress;
-                    e({ videoProgress: i });
+            resetQuest: (r) => {
+                (0, l.j)(() => {
+                    let { [r]: i, ...a } = n().videoProgress;
+                    e({ videoProgress: a });
                 });
             },
-            setTranscriptAsset: (t) => {
-                (0, u.j)(() => {
-                    e({ transcript: t });
+            setTranscriptAsset: (n) => {
+                (0, l.j)(() => {
+                    e({ transcript: n });
                 });
             }
         }),
         {
             name: 'videoQuestUIState',
-            storage: (0, o.FL)(() => ({
+            storage: (0, s.FL)(() => ({
                 getItem: (e) => {
-                    var t;
-                    return null !== (t = c.K.get(e)) && void 0 !== t ? t : null;
+                    var n;
+                    return null !== (n = u.K.get(e)) && void 0 !== n ? n : null;
                 },
-                setItem: (e, t) => c.K.set(e, t),
-                removeItem: (e) => c.K.remove(e)
+                setItem: (e, n) => u.K.set(e, n),
+                removeItem: (e) => u.K.remove(e)
             })),
             partialize: (e) => ({
                 volume: e.volume,
@@ -95,4 +99,4 @@ let d = (0, l.F)()(
         }
     )
 );
-t.ZP = d;
+n.ZP = d;

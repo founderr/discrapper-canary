@@ -1,6 +1,7 @@
-var t = Object.prototype.hasOwnProperty;
-e.exports = function (e) {
-    var n = e.length,
-        r = new e.constructor(n);
-    return n && 'string' == typeof e[0] && t.call(e, 'index') && ((r.index = e.index), (r.input = e.input)), r;
-};
+var n = Object.prototype.hasOwnProperty;
+function r(e) {
+    var r = e.length,
+        i = new e.constructor(r);
+    return r && 'string' == typeof e[0] && n.call(e, 'index') && ((i.index = e.index), (i.input = e.input)), i;
+}
+e.exports = r;

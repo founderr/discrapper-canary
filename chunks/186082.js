@@ -1,13 +1,14 @@
-t.Z = function (e, t, n) {
-    switch (n.length) {
+function r(e, n, r) {
+    switch (r.length) {
         case 0:
-            return e.call(t);
+            return e.call(n);
         case 1:
-            return e.call(t, n[0]);
+            return e.call(n, r[0]);
         case 2:
-            return e.call(t, n[0], n[1]);
+            return e.call(n, r[0], r[1]);
         case 3:
-            return e.call(t, n[0], n[1], n[2]);
+            return e.call(n, r[0], r[1], r[2]);
     }
-    return e.apply(t, n);
-};
+    return e.apply(n, r);
+}
+n.Z = r;

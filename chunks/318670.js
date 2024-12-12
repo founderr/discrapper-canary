@@ -1,39 +1,42 @@
-var r = n(345114),
-    i = n(806159),
-    a = n(738562);
-t.Z = function (e, t, n, s, o, l) {
-    var u = 1 & n,
-        c = e.length,
-        d = t.length;
-    if (c != d && !(u && d > c)) return !1;
-    var f = l.get(e),
-        _ = l.get(t);
-    if (f && _) return f == t && _ == e;
-    var p = -1,
-        h = !0,
-        m = 2 & n ? new r.Z() : void 0;
-    for (l.set(e, t), l.set(t, e); ++p < c; ) {
-        var g = e[p],
-            E = t[p];
-        if (s) var v = u ? s(E, g, p, t, e, l) : s(g, E, p, e, t, l);
-        if (void 0 !== v) {
-            if (v) continue;
-            h = !1;
+var i = r(345114),
+    a = r(806159),
+    s = r(738562),
+    o = 1,
+    l = 2;
+function u(e, n, r, u, c, d) {
+    var f = r & o,
+        _ = e.length,
+        h = n.length;
+    if (_ != h && !(f && h > _)) return !1;
+    var p = d.get(e),
+        m = d.get(n);
+    if (p && m) return p == n && m == e;
+    var g = -1,
+        E = !0,
+        v = r & l ? new i.Z() : void 0;
+    for (d.set(e, n), d.set(n, e); ++g < _; ) {
+        var I = e[g],
+            T = n[g];
+        if (u) var b = f ? u(T, I, g, n, e, d) : u(I, T, g, e, n, d);
+        if (void 0 !== b) {
+            if (b) continue;
+            E = !1;
             break;
         }
-        if (m) {
+        if (v) {
             if (
-                !(0, i.Z)(t, function (e, t) {
-                    if (!(0, a.Z)(m, t) && (g === e || o(g, e, n, s, l))) return m.push(t);
+                !(0, a.Z)(n, function (e, n) {
+                    if (!(0, s.Z)(v, n) && (I === e || c(I, e, r, u, d))) return v.push(n);
                 })
             ) {
-                h = !1;
+                E = !1;
                 break;
             }
-        } else if (!(g === E || o(g, E, n, s, l))) {
-            h = !1;
+        } else if (!(I === T || c(I, T, r, u, d))) {
+            E = !1;
             break;
         }
     }
-    return l.delete(e), l.delete(t), h;
-};
+    return d.delete(e), d.delete(n), E;
+}
+n.Z = u;

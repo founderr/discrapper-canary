@@ -1,128 +1,134 @@
-n(47120);
-var r,
-    i,
-    a,
-    s,
-    o = n(149765),
-    l = n(442837),
-    u = n(570140),
-    c = n(271383),
-    d = n(430824),
-    f = n(594174),
-    _ = n(973542),
-    p = n(981631);
-let h = new Set(),
+var i,
+    a = r(47120);
+var s = r(149765),
+    o = r(442837),
+    l = r(570140),
+    u = r(271383),
+    c = r(430824),
+    d = r(594174),
+    f = r(973542),
+    _ = r(981631);
+function h(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let p = new Set(),
     m = new Map(),
     g = new Map(),
     E = new Map(),
     v = new Map(),
     I = null;
 function T(e) {
-    let t = f.default.getCurrentUser(),
-        n = d.Z.getGuild(e);
-    if (null == n || null == t) return !1;
-    let r = new Set(),
-        i = new Set(),
-        a = new Set();
-    if ((v.set(e, n.isOwner(t)), n.hasFeature(p.oNc.ROLE_SUBSCRIPTIONS_ENABLED))) {
-        var s, l;
-        let u = c.ZP.getMember(e, t.id),
-            f = new Set(null !== (s = null == u ? void 0 : u.roles) && void 0 !== s ? s : []),
-            h = d.Z.getRoles(n.id);
-        for (let t in h) {
-            let n = h[t];
-            if (((0, _.Z)(n) && (r.add(t), (0, _.h)(n) && (i.add(t), f.has(t) && a.add(t))), f.has(t) && ((l = n), o.e$(l.permissions, p.Plq.ADMINISTRATOR)))) v.set(e, !0);
+    return s.e$(e.permissions, _.Plq.ADMINISTRATOR);
+}
+function b(e) {
+    let n = d.default.getCurrentUser(),
+        r = c.Z.getGuild(e);
+    if (null == r || null == n) return !1;
+    let i = new Set(),
+        a = new Set(),
+        s = new Set();
+    if ((v.set(e, r.isOwner(n)), r.hasFeature(_.oNc.ROLE_SUBSCRIPTIONS_ENABLED))) {
+        var o;
+        let l = u.ZP.getMember(e, n.id),
+            d = new Set(null !== (o = null == l ? void 0 : l.roles) && void 0 !== o ? o : []),
+            _ = c.Z.getRoles(r.id);
+        for (let n in _) {
+            let r = _[n];
+            (0, f.Z)(r) && (i.add(n), (0, f.h)(r) && (a.add(n), d.has(n) && s.add(n))), d.has(n) && T(r) && v.set(e, !0);
         }
     }
-    return m.set(e, r), E.set(e, a), g.set(e, i), !0;
+    return m.set(e, i), E.set(e, s), g.set(e, a), !0;
 }
-function b() {
+function y() {
+    let e = c.Z.getGuilds(),
+        n = new Set();
+    for (let r in e) e[r].hasFeature(_.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE) && n.add(r);
+    return (I = n), n;
+}
+function S() {
     m.clear(), E.clear(), g.clear(), v.clear(), (I = null);
 }
-function S(e) {
+function A(e) {
     let {
-        guild: { id: t }
+        guild: { id: n }
+    } = e;
+    if ((null == I ? void 0 : I.has(n)) !== !0) return !1;
+    let r = new Set(I);
+    r.delete(n), (I = r);
+}
+function N(e) {
+    let {
+        guild: { id: n }
     } = e;
     if (null == I) return !1;
-    let n = d.Z.getGuild(t);
-    if (null == n) return !1;
-    let r = n.hasFeature(p.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
-    if (r && !I.has(t)) {
+    let r = c.Z.getGuild(n);
+    if (null == r) return !1;
+    let i = r.hasFeature(_.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
+    if (i && !I.has(n)) {
         let e = new Set(I);
-        return e.add(t), (I = e), !0;
+        return e.add(n), (I = e), !0;
     }
-    if (!r && I.has(t)) {
+    if (!i && I.has(n)) {
         let e = new Set(I);
-        return e.delete(t), (I = e), !0;
+        return e.delete(n), (I = e), !0;
     }
     return !1;
 }
-function y(e) {
-    let { guildId: t } = e;
-    return !!m.has(t) && T(t);
+function C(e) {
+    let { guildId: n } = e;
+    return !!m.has(n) && b(n);
 }
-class A extends (r = l.ZP.Store) {
+function R(e) {
+    let { guildId: n, user: r } = e,
+        i = d.default.getCurrentUser();
+    return !!(r.id === (null == i ? void 0 : i.id) && m.has(n)) && b(n);
+}
+class O extends (i = o.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z);
+        this.waitFor(c.Z);
     }
     getGuildIdsWithPurchasableRoles() {
-        return null == I
-            ? (function () {
-                  let e = d.Z.getGuilds(),
-                      t = new Set();
-                  for (let n in e) e[n].hasFeature(p.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE) && t.add(n);
-                  return (I = t), t;
-              })()
-            : I;
+        return null == I ? y() : I;
     }
     buildRoles(e) {
-        !m.has(e) && T(e);
+        !m.has(e) && b(e);
     }
     getSubscriptionRoles(e) {
-        var t;
-        return this.buildRoles(e), null !== (t = m.get(e)) && void 0 !== t ? t : h;
+        var n;
+        return this.buildRoles(e), null !== (n = m.get(e)) && void 0 !== n ? n : p;
     }
     getPurchasableSubscriptionRoles(e) {
-        var t;
-        return this.buildRoles(e), null !== (t = g.get(e)) && void 0 !== t ? t : h;
+        var n;
+        return this.buildRoles(e), null !== (n = g.get(e)) && void 0 !== n ? n : p;
     }
     getUserSubscriptionRoles(e) {
-        var t;
-        return this.buildRoles(e), null !== (t = E.get(e)) && void 0 !== t ? t : h;
+        var n;
+        return this.buildRoles(e), null !== (n = E.get(e)) && void 0 !== n ? n : p;
     }
     getUserIsAdmin(e) {
-        var t;
-        return this.buildRoles(e), null !== (t = v.get(e)) && void 0 !== t && t;
+        var n;
+        return this.buildRoles(e), null !== (n = v.get(e)) && void 0 !== n && n;
     }
 }
-(s = 'SubscriptionRoleStore'),
-    (a = 'displayName') in (i = A)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new A(u.Z, {
-        CONNECTION_OPEN: b,
-        LOGOUT: b,
-        GUILD_CREATE: S,
-        GUILD_DELETE: function (e) {
-            let {
-                guild: { id: t }
-            } = e;
-            if ((null == I ? void 0 : I.has(t)) !== !0) return !1;
-            let n = new Set(I);
-            n.delete(t), (I = n);
-        },
-        GUILD_UPDATE: S,
-        GUILD_ROLE_CREATE: y,
-        GUILD_ROLE_UPDATE: y,
-        GUILD_ROLE_DELETE: y,
-        GUILD_MEMBER_UPDATE: function (e) {
-            let { guildId: t, user: n } = e,
-                r = f.default.getCurrentUser();
-            return !!(n.id === (null == r ? void 0 : r.id) && m.has(t)) && T(t);
-        }
+h(O, 'displayName', 'SubscriptionRoleStore'),
+    (n.Z = new O(l.Z, {
+        CONNECTION_OPEN: S,
+        LOGOUT: S,
+        GUILD_CREATE: N,
+        GUILD_DELETE: A,
+        GUILD_UPDATE: N,
+        GUILD_ROLE_CREATE: C,
+        GUILD_ROLE_UPDATE: C,
+        GUILD_ROLE_DELETE: C,
+        GUILD_MEMBER_UPDATE: R
     }));

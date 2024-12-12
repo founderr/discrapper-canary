@@ -1,19 +1,20 @@
-n.d(t, {
+r.d(n, {
     e: function () {
-        return i;
+        return s;
     }
-}),
-    n(47120);
-let r = '_errors';
-function i(e) {
-    return (function e(t, n) {
-        let i = t[r];
-        if (null != i && Array.isArray(i)) return i[0];
-        for (let [i, a] of Object.entries(t)) {
-            if (i !== r && null != a) {
-                if ('object' == typeof a) return e(a, null != n ? n : i);
-            }
+});
+var i = r(47120);
+let a = '_errors';
+function s(e) {
+    return o(e, void 0);
+}
+function o(e, n) {
+    let r = e[a];
+    if (null != r && Array.isArray(r)) return r[0];
+    for (let [r, i] of Object.entries(e)) {
+        if (r !== a && null != i) {
+            if ('object' == typeof i) return o(i, null != n ? n : r);
         }
-        return null;
-    })(e, void 0);
+    }
+    return null;
 }

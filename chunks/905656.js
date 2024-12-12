@@ -1,25 +1,25 @@
-n(733860);
-var r = n(200651),
-    i = n(192379),
-    a = n(780384),
-    s = n(481060),
-    o = n(197344),
-    l = n(526167),
-    u = n(70097),
-    c = n(981631),
-    d = n(73117),
-    f = n(988868),
-    _ = n(554355),
-    p = n(991989),
-    h = n(787462),
-    m = n(635507),
-    g = n(470794),
-    E = n(886777);
-function v(e) {
-    let { movDark: t = d, movLight: n = h, mp4Dark: i = f, mp4Light: a = m, pngDark: s = _, pngLight: o = g, webmDark: u = p, webmLight: v = E } = e,
-        I = (0, l.vu)(),
-        T = [
-            (0, r.jsx)(
+var i = r(733860);
+var a = r(200651),
+    s = r(192379),
+    o = r(780384),
+    l = r(481060),
+    u = r(197344),
+    c = r(526167),
+    d = r(70097),
+    f = r(981631),
+    _ = r(73117),
+    h = r(988868),
+    p = r(554355),
+    m = r(991989),
+    g = r(787462),
+    E = r(635507),
+    v = r(470794),
+    I = r(886777);
+function T(e) {
+    let { movDark: n = _, movLight: r = g, mp4Dark: i = h, mp4Light: s = E, pngDark: o = p, pngLight: l = v, webmDark: u = m, webmLight: d = I } = e,
+        T = (0, c.vu)(),
+        b = [
+            (0, a.jsx)(
                 'source',
                 {
                     src: i,
@@ -27,25 +27,7 @@ function v(e) {
                 },
                 'mp4'
             ),
-            (0, r.jsx)(
-                'img',
-                {
-                    alt: '',
-                    src: s
-                },
-                'png'
-            )
-        ],
-        b = [
-            (0, r.jsx)(
-                'source',
-                {
-                    src: a,
-                    type: 'video/mp4'
-                },
-                'mp4'
-            ),
-            (0, r.jsx)(
+            (0, a.jsx)(
                 'img',
                 {
                     alt: '',
@@ -53,11 +35,29 @@ function v(e) {
                 },
                 'png'
             )
+        ],
+        y = [
+            (0, a.jsx)(
+                'source',
+                {
+                    src: s,
+                    type: 'video/mp4'
+                },
+                'mp4'
+            ),
+            (0, a.jsx)(
+                'img',
+                {
+                    alt: '',
+                    src: l
+                },
+                'png'
+            )
         ];
     return (
-        (I > 52 || -1 === I) &&
-            (T.unshift(
-                (0, r.jsx)(
+        (T > 52 || -1 === T) &&
+            (b.unshift(
+                (0, a.jsx)(
                     'source',
                     {
                         src: u,
@@ -66,29 +66,19 @@ function v(e) {
                     'webm'
                 )
             ),
-            b.unshift(
-                (0, r.jsx)(
+            y.unshift(
+                (0, a.jsx)(
                     'source',
                     {
-                        src: v,
+                        src: d,
                         type: 'video/webm'
                     },
                     'webm'
                 )
             )),
-        (0, l.rO)() &&
-            (T.unshift(
-                (0, r.jsx)(
-                    'source',
-                    {
-                        src: t,
-                        type: 'video/mp4'
-                    },
-                    'hevc'
-                )
-            ),
-            b.unshift(
-                (0, r.jsx)(
+        (0, c.rO)() &&
+            (b.unshift(
+                (0, a.jsx)(
                     'source',
                     {
                         src: n,
@@ -96,36 +86,47 @@ function v(e) {
                     },
                     'hevc'
                 )
+            ),
+            y.unshift(
+                (0, a.jsx)(
+                    'source',
+                    {
+                        src: r,
+                        type: 'video/mp4'
+                    },
+                    'hevc'
+                )
             )),
         {
-            [c.BRd.DARK]: T,
-            [c.BRd.LIGHT]: b
+            [f.BRd.DARK]: b,
+            [f.BRd.LIGHT]: y
         }
     );
 }
-let I = o.Z.getAppSpinnerSources(),
-    T = null != I ? v(I) : null,
-    b = v({});
-t.Z = (e) => {
-    var t;
-    let { loop: n = !0, autoPlay: o = !0, setRef: l, className: d, onReady: f } = e,
-        { theme: _ } = (0, s.useThemeContext)(),
-        { reducedMotion: p } = i.useContext(s.AccessibilityPreferencesContext),
-        h = b;
-    null != T && (h = T);
-    let m = null !== (t = h[(0, a.wj)(_) ? c.BRd.DARK : c.BRd.LIGHT]) && void 0 !== t ? t : h[c.BRd.DARK];
-    return (0, r.jsx)(
-        u.Z,
-        {
-            ref: l,
-            onLoadedData: f,
-            className: d,
-            loop: !p.enabled && n,
-            autoPlay: !p.enabled && o,
-            playsInline: !0,
-            'data-testid': 'app-spinner',
-            children: m
-        },
-        _
-    );
-};
+let b = u.Z.getAppSpinnerSources(),
+    y = null != b ? T(b) : null,
+    S = T({}),
+    A = (e) => {
+        var n;
+        let { loop: r = !0, autoPlay: i = !0, setRef: u, className: c, onReady: _ } = e,
+            { theme: h } = (0, l.useThemeContext)(),
+            { reducedMotion: p } = s.useContext(l.AccessibilityPreferencesContext),
+            m = S;
+        null != y && (m = y);
+        let g = null !== (n = m[(0, o.wj)(h) ? f.BRd.DARK : f.BRd.LIGHT]) && void 0 !== n ? n : m[f.BRd.DARK];
+        return (0, a.jsx)(
+            d.Z,
+            {
+                ref: u,
+                onLoadedData: _,
+                className: c,
+                loop: !p.enabled && r,
+                autoPlay: !p.enabled && i,
+                playsInline: !0,
+                'data-testid': 'app-spinner',
+                children: g
+            },
+            h
+        );
+    };
+n.Z = A;

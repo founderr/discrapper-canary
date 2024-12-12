@@ -1,5 +1,6 @@
-e.exports = function (e, t) {
-    return function (n) {
-        return null != n && n[e] === t && (void 0 !== t || e in Object(n));
+function n(e, n) {
+    return function (r) {
+        return null != r && r[e] === n && (void 0 !== n || e in Object(r));
     };
-};
+}
+e.exports = n;

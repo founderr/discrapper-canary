@@ -1,38 +1,39 @@
-var r = n(192379),
-    i = n(723184),
-    a = n(329022),
-    s = n(877837);
-t.Z = function (e) {
-    var t = e.colors,
-        n = e.onClick,
-        o = e.onSwatchHover,
-        l = (0, i.default)({
-            default: {
-                swatches: { marginRight: '-10px' },
-                swatch: {
-                    width: '22px',
-                    height: '22px',
-                    float: 'left',
-                    marginRight: '10px',
-                    marginBottom: '10px',
-                    borderRadius: '4px'
-                },
-                clear: { clear: 'both' }
-            }
-        });
-    return r.createElement(
-        'div',
-        { style: l.swatches },
-        (0, a.Z)(t, function (e) {
-            return r.createElement(s.m4, {
-                key: e,
-                color: e,
-                style: l.swatch,
-                onClick: n,
-                onHover: o,
-                focusStyle: { boxShadow: '0 0 4px ' + e }
+var i = r(192379),
+    a = r(723184),
+    s = r(329022),
+    o = r(877837),
+    l = function (e) {
+        var n = e.colors,
+            r = e.onClick,
+            l = e.onSwatchHover,
+            u = (0, a.default)({
+                default: {
+                    swatches: { marginRight: '-10px' },
+                    swatch: {
+                        width: '22px',
+                        height: '22px',
+                        float: 'left',
+                        marginRight: '10px',
+                        marginBottom: '10px',
+                        borderRadius: '4px'
+                    },
+                    clear: { clear: 'both' }
+                }
             });
-        }),
-        r.createElement('div', { style: l.clear })
-    );
-};
+        return i.createElement(
+            'div',
+            { style: u.swatches },
+            (0, s.Z)(n, function (e) {
+                return i.createElement(o.m4, {
+                    key: e,
+                    color: e,
+                    style: u.swatch,
+                    onClick: r,
+                    onHover: l,
+                    focusStyle: { boxShadow: '0 0 4px ' + e }
+                });
+            }),
+            i.createElement('div', { style: u.clear })
+        );
+    };
+n.Z = l;

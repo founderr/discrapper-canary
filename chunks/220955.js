@@ -1,20 +1,21 @@
-var r = n(112419),
-    i = n(675717),
-    a = n(906024),
-    s = 0 / 0,
-    o = /^[-+]0x[0-9a-f]+$/i,
-    l = /^0b[01]+$/i,
-    u = /^0o[0-7]+$/i,
-    c = parseInt;
-t.Z = function (e) {
+var i = r(112419),
+    a = r(675717),
+    s = r(906024),
+    o = 0 / 0,
+    l = /^[-+]0x[0-9a-f]+$/i,
+    u = /^0b[01]+$/i,
+    c = /^0o[0-7]+$/i,
+    d = parseInt;
+function f(e) {
     if ('number' == typeof e) return e;
-    if ((0, a.Z)(e)) return s;
-    if ((0, i.Z)(e)) {
-        var t = 'function' == typeof e.valueOf ? e.valueOf() : e;
-        e = (0, i.Z)(t) ? t + '' : t;
+    if ((0, s.Z)(e)) return o;
+    if ((0, a.Z)(e)) {
+        var n = 'function' == typeof e.valueOf ? e.valueOf() : e;
+        e = (0, a.Z)(n) ? n + '' : n;
     }
     if ('string' != typeof e) return 0 === e ? e : +e;
-    e = (0, r.Z)(e);
-    var n = l.test(e);
-    return n || u.test(e) ? c(e.slice(2), n ? 2 : 8) : o.test(e) ? s : +e;
-};
+    e = (0, i.Z)(e);
+    var r = u.test(e);
+    return r || c.test(e) ? d(e.slice(2), r ? 2 : 8) : l.test(e) ? o : +e;
+}
+n.Z = f;

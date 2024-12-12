@@ -1,4 +1,5 @@
-(e.exports = {}).getOption = function (e, t, n) {
-    var r = e[t];
-    return null == r && void 0 !== n ? n : r;
-};
+function n(e, n, r) {
+    var i = e[n];
+    return null == i && void 0 !== r ? r : i;
+}
+(e.exports = {}).getOption = n;

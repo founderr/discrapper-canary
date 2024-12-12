@@ -1,6 +1,7 @@
-var r = n(373640);
-e.exports = function (e) {
-    var t = r(e),
-        n = t % 1;
-    return t == t ? (n ? t - n : t) : 0;
-};
+var i = r(373640);
+function a(e) {
+    var n = i(e),
+        r = n % 1;
+    return n == n ? (r ? n - r : n) : 0;
+}
+e.exports = a;

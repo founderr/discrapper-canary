@@ -1,15 +1,20 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return o;
+        return l;
     }
 });
-var r,
-    i = n(695346),
-    a = n(131951),
-    s = n(36703);
-function o(e) {
-    var t;
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null !== (r = null === (t = i.kU.getSetting()) || void 0 === t ? void 0 : t.volume) && void 0 !== r ? r : 100,
-        o = (0, s.P)(n) / 100;
-    return Math.min(e * o * Math.min(a.Z.getOutputVolume() / 100, 1), 1);
+var i,
+    a = r(695346),
+    s = r(131951),
+    o = r(36703);
+function l(e) {
+    let n =
+            arguments.length > 1 && void 0 !== arguments[1]
+                ? arguments[1]
+                : (() => {
+                      var e;
+                      return null !== (i = null === (e = a.kU.getSetting()) || void 0 === e ? void 0 : e.volume) && void 0 !== i ? i : 100;
+                  })(),
+        r = (0, o.P)(n) / 100;
+    return Math.min(e * r * Math.min(s.Z.getOutputVolume() / 100, 1), 1);
 }

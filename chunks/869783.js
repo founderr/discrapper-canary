@@ -1,8 +1,9 @@
-var r, i;
-n.d(t, {
+var i;
+r.d(n, {
     m: function () {
-        return r;
+        return i;
     }
 }),
-    ((i = r || (r = {})).MP4 = 'video/mp4'),
-    (i.WEBM = 'video/webm');
+    !(function (e) {
+        (e.MP4 = 'video/mp4'), (e.WEBM = 'video/webm');
+    })(i || (i = {}));

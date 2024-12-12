@@ -1,31 +1,33 @@
-var r, i;
-Object.defineProperty(t, '__esModule', { value: !0 }), (t.astFormatter = t.RichTextNodeType = void 0), (t.formatToAst = l);
-let a = n(200232);
-((i = r || (t.RichTextNodeType = r = {})).Text = 'text'), (i.Strong = 'strong'), (i.Emphasis = 'em'), (i.Strikethrough = 's'), (i.Code = 'inlineCode'), (i.Link = 'link'), (i.Paragraph = 'paragraph');
+var i;
+Object.defineProperty(n, '__esModule', { value: !0 }), (n.astFormatter = n.RichTextNodeType = void 0), (n.formatToAst = l);
+let a = r(200232);
+!(function (e) {
+    (e.Text = 'text'), (e.Strong = 'strong'), (e.Emphasis = 'em'), (e.Strikethrough = 's'), (e.Code = 'inlineCode'), (e.Link = 'link'), (e.Paragraph = 'paragraph');
+})(i || (n.RichTextNodeType = i = {}));
 let s = {
     $b: (e) => ({
-        type: r.Strong,
+        type: i.Strong,
         content: e
     }),
     $i: (e) => ({
-        type: r.Emphasis,
+        type: i.Emphasis,
         content: e
     }),
     $del: (e) => ({
-        type: r.Strikethrough,
+        type: i.Strikethrough,
         content: e
     }),
     $code: (e) => ({
-        type: r.Code,
+        type: i.Code,
         content: e
     }),
-    $link: (e, t, [n]) => ({
-        type: r.Link,
-        target: n,
+    $link: (e, n, [r]) => ({
+        type: i.Link,
+        target: r,
         content: e
     }),
     $p: (e) => ({
-        type: r.Paragraph,
+        type: i.Paragraph,
         content: e
     })
 };
@@ -33,17 +35,17 @@ class o extends a.FormatBuilder {
     constructor() {
         super(...arguments), (this.result = []);
     }
-    pushRichTextTag(e, t, n) {
+    pushRichTextTag(e, n, r) {
         if (!(e in s)) throw `${e} is not a known rich text formatting tag`;
-        let r = s[e](t, '', n);
-        Array.isArray(r) ? this.result.push(...r) : this.result.push(r);
+        let i = s[e](n, '', r);
+        Array.isArray(i) ? this.result.push(...i) : this.result.push(i);
     }
     pushLiteralText(e) {
-        let t = this.result[this.result.length - 1];
-        null != t && t.type === r.Text
-            ? (t.content += e)
+        let n = this.result[this.result.length - 1];
+        null != n && n.type === i.Text
+            ? (n.content += e)
             : this.result.push({
-                  type: r.Text,
+                  type: i.Text,
                   content: e
               });
     }
@@ -54,17 +56,17 @@ class o extends a.FormatBuilder {
         return this.result;
     }
 }
-function l(e, t) {
+function l(e, n) {
     return 'string' == typeof e
         ? [
               {
-                  type: r.Text,
+                  type: i.Text,
                   content: e
               }
           ]
-        : this.bindFormatValues(o, e, t);
+        : this.bindFormatValues(o, e, n);
 }
-t.astFormatter = {
+n.astFormatter = {
     format: l,
     builder: o
 };

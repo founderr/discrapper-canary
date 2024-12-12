@@ -1,38 +1,43 @@
-var t = Object.prototype.toString,
-    n = Math.max,
-    r = function (e, t) {
-        for (var n = [], r = 0; r < e.length; r += 1) n[r] = e[r];
-        for (var i = 0; i < t.length; i += 1) n[i + e.length] = t[i];
-        return n;
+var n = 'Function.prototype.bind called on incompatible ',
+    r = Object.prototype.toString,
+    i = Math.max,
+    a = '[object Function]',
+    s = function (e, n) {
+        for (var r = [], i = 0; i < e.length; i += 1) r[i] = e[i];
+        for (var a = 0; a < n.length; a += 1) r[a + e.length] = n[a];
+        return r;
     },
-    i = function (e, t) {
-        for (var n = [], r = t || 0, i = 0; r < e.length; r += 1, i += 1) n[i] = e[r];
-        return n;
+    o = function (e, n) {
+        for (var r = [], i = n || 0, a = 0; i < e.length; i += 1, a += 1) r[a] = e[i];
+        return r;
     },
-    a = function (e, t) {
-        for (var n = '', r = 0; r < e.length; r += 1) (n += e[r]), r + 1 < e.length && (n += t);
-        return n;
+    l = function (e, n) {
+        for (var r = '', i = 0; i < e.length; i += 1) (r += e[i]), i + 1 < e.length && (r += n);
+        return r;
     };
 e.exports = function (e) {
-    var s,
-        o = this;
-    if ('function' != typeof o || '[object Function]' !== t.apply(o)) throw TypeError('Function.prototype.bind called on incompatible ' + o);
-    for (var l = i(arguments, 1), u = n(0, o.length - l.length), c = [], d = 0; d < u; d++) c[d] = '$' + d;
-    if (
-        ((s = Function(
-            'binder',
-            'return function (' + a(c, ',') + '){ return binder.apply(this,arguments); }'
-        )(function () {
-            if (this instanceof s) {
-                var t = o.apply(this, r(l, arguments));
-                return Object(t) === t ? t : this;
-            }
-            return o.apply(e, r(l, arguments));
-        })),
-        o.prototype)
-    ) {
-        var f = function () {};
-        (f.prototype = o.prototype), (s.prototype = new f()), (f.prototype = null);
+    var u,
+        c = this;
+    if ('function' != typeof c || r.apply(c) !== a) throw TypeError(n + c);
+    for (
+        var d = o(arguments, 1),
+            f = function () {
+                if (this instanceof u) {
+                    var n = c.apply(this, s(d, arguments));
+                    return Object(n) === n ? n : this;
+                }
+                return c.apply(e, s(d, arguments));
+            },
+            _ = i(0, c.length - d.length),
+            h = [],
+            p = 0;
+        p < _;
+        p++
+    )
+        h[p] = '$' + p;
+    if (((u = Function('binder', 'return function (' + l(h, ',') + '){ return binder.apply(this,arguments); }')(f)), c.prototype)) {
+        var m = function () {};
+        (m.prototype = c.prototype), (u.prototype = new m()), (m.prototype = null);
     }
-    return s;
+    return u;
 };

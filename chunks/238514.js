@@ -1,70 +1,91 @@
-var r,
-    i = n(392711),
-    a = n.n(i),
-    s = n(442837),
-    o = n(433517),
-    l = n(570140),
-    u = n(981631);
-function c(e, t, n) {
+var i,
+    a = r(392711),
+    s = r.n(a),
+    o = r(442837),
+    l = r(433517),
+    u = r(570140),
+    c = r(981631);
+function d(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let d = {};
-class f extends (r = s.ZP.PersistedStore) {
+let f = {};
+function _(e) {
+    let { changes: n } = e;
+    for (let e in n) {
+        var r;
+        let i = e,
+            { shouldSync: a, settings: s } = n[i];
+        if (!0 === a) {
+            delete f[i];
+            continue;
+        }
+        !1 === a &&
+            (f[i] = {
+                shouldSync: a,
+                settings: {}
+            });
+        if ((null === (r = f[i]) || void 0 === r ? void 0 : r.shouldSync) === !1) for (let e in s) f[i].settings[e] = s[e];
+    }
+}
+function h() {
+    f = {};
+}
+class p extends (i = o.ZP.PersistedStore) {
     initialize(e) {
-        d = null != e ? e : {};
+        f = null != e ? e : {};
     }
     getState() {
-        return d;
+        return f;
     }
     shouldSync(e) {
-        var t;
-        return (null === (t = d[e]) || void 0 === t ? void 0 : t.shouldSync) !== !1;
+        var n;
+        return (null === (n = f[e]) || void 0 === n ? void 0 : n.shouldSync) !== !1;
     }
     getTextSettings() {
         var e;
-        return null === (e = d.text) || void 0 === e ? void 0 : e.settings;
+        return null === (e = f.text) || void 0 === e ? void 0 : e.settings;
     }
     getAppearanceSettings() {
         var e;
-        return null === (e = d.appearance) || void 0 === e ? void 0 : e.settings;
+        return null === (e = f.appearance) || void 0 === e ? void 0 : e.settings;
     }
 }
-c(f, 'displayName', 'SelectivelySyncedUserSettingsStore'),
-    c(f, 'persistKey', 'SelectivelySyncedUserSettingsStore'),
-    c(f, 'migrations', [
+d(p, 'displayName', 'SelectivelySyncedUserSettingsStore'),
+    d(p, 'persistKey', 'SelectivelySyncedUserSettingsStore'),
+    d(p, 'migrations', [
         () => {
-            var e, t;
-            let n = null !== (e = o.K.get('UserSettingsSync')) && void 0 !== e ? e : {},
-                r = null !== (t = o.K.get('UserSettingsStore')) && void 0 !== t ? t : {};
-            o.K.remove('UserSettingsSync');
-            let i = {};
+            var e, n;
+            let r = null !== (e = l.K.get('UserSettingsSync')) && void 0 !== e ? e : {},
+                i = null !== (n = l.K.get('UserSettingsStore')) && void 0 !== n ? n : {};
+            l.K.remove('UserSettingsSync');
+            let a = {};
             return (
-                !1 === n[u.oAB.TEXT] &&
-                    (i.text = {
+                !1 === r[c.oAB.TEXT] &&
+                    (a.text = {
                         shouldSync: !1,
-                        settings: a().pick(r, ['inlineAttachmentMedia', 'inlineEmbedMedia', 'renderEmbeds', 'renderReactions', 'animateEmoji', 'animateStickers', 'gifAutoPlay'])
+                        settings: s().pick(i, ['inlineAttachmentMedia', 'inlineEmbedMedia', 'renderEmbeds', 'renderReactions', 'animateEmoji', 'animateStickers', 'gifAutoPlay'])
                     }),
-                !1 === n[u.oAB.APPEARANCE] &&
-                    (i.appearance = {
+                !1 === r[c.oAB.APPEARANCE] &&
+                    (a.appearance = {
                         shouldSync: !1,
-                        settings: a().pick(r, ['theme', 'clientThemeSettings', 'developerMode'])
+                        settings: s().pick(i, ['theme', 'clientThemeSettings', 'developerMode'])
                     }),
-                i
+                a
             );
         },
         (e) => {
-            var t, n;
-            if ((null == e ? void 0 : null === (n = e.appearance) || void 0 === n ? void 0 : null === (t = n.settings) || void 0 === t ? void 0 : t.theme) === 'amoled')
+            var n, r;
+            if ((null == e ? void 0 : null === (r = e.appearance) || void 0 === r ? void 0 : null === (n = r.settings) || void 0 === n ? void 0 : n.theme) === 'amoled')
                 return {
                     ...e,
                     appearance: {
@@ -77,25 +98,7 @@ c(f, 'displayName', 'SelectivelySyncedUserSettingsStore'),
                 };
         }
     ]),
-    (t.Z = new f(l.Z, {
-        SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: function (e) {
-            let { changes: t } = e;
-            for (let e in t) {
-                var n;
-                let { shouldSync: r, settings: i } = t[e];
-                if (!0 === r) {
-                    delete d[e];
-                    continue;
-                }
-                !1 === r &&
-                    (d[e] = {
-                        shouldSync: r,
-                        settings: {}
-                    });
-                if ((null === (n = d[e]) || void 0 === n ? void 0 : n.shouldSync) === !1) for (let t in i) d[e].settings[t] = i[t];
-            }
-        },
-        LOGOUT: function () {
-            d = {};
-        }
+    (n.Z = new p(u.Z, {
+        SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: _,
+        LOGOUT: h
     }));

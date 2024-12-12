@@ -1,5 +1,6 @@
-e.exports = function (e, t) {
-    var n = e.length;
-    for (e.sort(t); n--; ) e[n] = e[n].value;
+function n(e, n) {
+    var r = e.length;
+    for (e.sort(n); r--; ) e[r] = e[r].value;
     return e;
-};
+}
+e.exports = n;

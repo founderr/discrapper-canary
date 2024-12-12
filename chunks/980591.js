@@ -1,12 +1,13 @@
-var r = n(192379);
-t.Z = (e, t) => {
-    let n = (0, r.useRef)(e);
-    (0, r.useEffect)(() => {
-        n.current = e;
+var i = r(192379);
+let a = (e, n) => {
+    let r = (0, i.useRef)(e);
+    (0, i.useEffect)(() => {
+        r.current = e;
     }, [e]),
-        (0, r.useEffect)(() => {
-            if (null === t) return;
-            let e = setTimeout(() => n.current(), t);
+        (0, i.useEffect)(() => {
+            if (null === n) return;
+            let e = setTimeout(() => r.current(), n);
             return () => clearTimeout(e);
-        }, [t, n]);
+        }, [n, r]);
 };
+n.Z = a;

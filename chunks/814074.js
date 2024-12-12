@@ -1,13 +1,14 @@
-n.d(t, {
+r.d(n, {
     Hr: function () {
-        return a;
+        return o;
     }
 }),
-    n(592125);
-var r = n(650774),
-    i = n(981631);
-function a(e) {
-    var t;
-    let n = null !== (t = r.Z.getMemberCount(null == e ? void 0 : e.guild_id)) && void 0 !== t ? t : 0;
-    return null != e && e.type !== i.d4z.DM && e.type !== i.d4z.GROUP_DM && n >= 10000;
+    r(592125);
+var i = r(650774),
+    a = r(981631);
+let s = 10000;
+function o(e) {
+    var n;
+    let r = null !== (n = i.Z.getMemberCount(null == e ? void 0 : e.guild_id)) && void 0 !== n ? n : 0;
+    return null != e && e.type !== a.d4z.DM && e.type !== a.d4z.GROUP_DM && r >= s;
 }

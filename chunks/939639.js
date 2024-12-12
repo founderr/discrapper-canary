@@ -1,10 +1,9 @@
-var r, i;
-n.d(t, {
+var i;
+r.d(n, {
     k: function () {
-        return r;
+        return i;
     }
 }),
-    ((i = r || (r = {}))[(i.SUM = 1)] = 'SUM'),
-    (i[(i.MEAN = 2)] = 'MEAN'),
-    (i[(i.MAX = 3)] = 'MAX'),
-    (i[(i.MODE = 4)] = 'MODE');
+    !(function (e) {
+        (e[(e.SUM = 1)] = 'SUM'), (e[(e.MEAN = 2)] = 'MEAN'), (e[(e.MAX = 3)] = 'MAX'), (e[(e.MODE = 4)] = 'MODE');
+    })(i || (i = {}));

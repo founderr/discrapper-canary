@@ -1,71 +1,72 @@
-n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(232713),
-    l = n(532772),
-    u = n(570220),
-    c = n(540059),
-    d = n(28546),
-    f = n(443603),
-    _ = n(957825),
-    p = n(388032),
-    h = n(553796);
-t.Z = i.memo(
-    i.forwardRef(function (e, t) {
-        let { disabled: n, type: a } = e,
-            [m, g] = (0, d.Iu)((e) => [e.activeView, e.pickerId], o.X),
-            E = i.useContext(u.ZP),
-            [v, I] = i.useState(!1),
-            T = m === _.X1.STICKER,
-            b = i.useCallback(() => {
-                (0, d.RO)(_.X1.STICKER, a);
-            }, [a]);
-        i.useEffect(() => {
-            let e = () => {
-                    requestAnimationFrame(() => {
-                        I(!0);
-                    });
-                },
-                t = () => {
-                    requestAnimationFrame(() => {
-                        I(!1);
-                    });
-                };
-            return (
-                E.addListener('sticker-suggestions-shown', e),
-                E.addListener('sticker-suggestions-hidden', t),
-                () => {
-                    E.removeListener('sticker-suggestions-shown', e), E.removeListener('sticker-suggestions-hidden', t);
-                }
-            );
-        }, [E]);
-        let { Component: S, events: y, play: A } = (0, l.z)(),
-            N = (0, c.Q3)('ChannelStickerPickerButton');
-        return n
-            ? null
-            : (0, r.jsx)('div', {
-                  className: s()(_.CT, h.buttonContainer),
-                  ref: t,
-                  children: (0, r.jsx)(f.Z, {
-                      innerClassName: s()(h.button, h.stickerButton, { [h.stickerButtonTilted]: v && !T }),
-                      ...y,
-                      onClick: () => {
-                          b(), A();
-                      },
-                      isActive: T,
-                      'aria-label': p.intl.string(p.t.rZpidX),
-                      'aria-expanded': T,
-                      'aria-haspopup': 'dialog',
-                      'aria-controls': g,
-                      sparkle: !1,
-                      notification: null,
-                      children: (0, r.jsx)(S, {
-                          size: N ? 'refresh_sm' : void 0,
-                          color: 'currentColor'
-                      })
-                  })
-              });
-    })
-);
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(120356),
+    l = r.n(o),
+    u = r(232713),
+    c = r(532772),
+    d = r(570220),
+    f = r(540059),
+    _ = r(28546),
+    h = r(443603),
+    p = r(957825),
+    m = r(388032),
+    g = r(553796);
+function E(e, n) {
+    let { disabled: r, type: i } = e,
+        [o, E] = (0, _.Iu)((e) => [e.activeView, e.pickerId], u.X),
+        v = s.useContext(d.ZP),
+        I = !1,
+        [T, b] = s.useState(!1),
+        y = o === p.X1.STICKER,
+        S = !1,
+        A = s.useCallback(() => {
+            (0, _.RO)(p.X1.STICKER, i);
+        }, [i]);
+    s.useEffect(() => {
+        let e = () => {
+                requestAnimationFrame(() => {
+                    b(!0);
+                });
+            },
+            n = () => {
+                requestAnimationFrame(() => {
+                    b(!1);
+                });
+            };
+        return (
+            v.addListener('sticker-suggestions-shown', e),
+            v.addListener('sticker-suggestions-hidden', n),
+            () => {
+                v.removeListener('sticker-suggestions-shown', e), v.removeListener('sticker-suggestions-hidden', n);
+            }
+        );
+    }, [v]);
+    let { Component: N, events: C, play: R } = (0, c.z)(),
+        O = (0, f.Q3)('ChannelStickerPickerButton');
+    if (r) return null;
+    let D = T;
+    return (0, a.jsx)('div', {
+        className: l()(p.CT, g.buttonContainer),
+        ref: n,
+        children: (0, a.jsx)(h.Z, {
+            innerClassName: l()(g.button, g.stickerButton, { [g.stickerButtonTilted]: D && !y }),
+            ...C,
+            onClick: () => {
+                A(), R();
+            },
+            isActive: y,
+            'aria-label': m.intl.string(m.t.rZpidX),
+            'aria-expanded': y,
+            'aria-haspopup': 'dialog',
+            'aria-controls': E,
+            sparkle: I,
+            notification: S ? h.j.UPDATE : null,
+            children: (0, a.jsx)(N, {
+                size: O ? 'refresh_sm' : void 0,
+                color: 'currentColor'
+            })
+        })
+    });
+}
+n.Z = s.memo(s.forwardRef(E));

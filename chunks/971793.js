@@ -1,10 +1,11 @@
-var r = n(605905),
-    i = n(625898),
-    a = n(161757),
-    s = n(595736),
-    o = n(402428);
-e.exports = function (e, t, n) {
-    var l = o(e) ? r : s,
-        u = arguments.length < 3;
-    return l(e, a(t, 4), n, u, i);
-};
+var i = r(605905),
+    a = r(625898),
+    s = r(161757),
+    o = r(595736),
+    l = r(402428);
+function u(e, n, r) {
+    var u = l(e) ? i : o,
+        c = arguments.length < 3;
+    return u(e, s(n, 4), r, c, a);
+}
+e.exports = u;

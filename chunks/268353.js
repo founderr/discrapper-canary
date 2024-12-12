@@ -1,22 +1,23 @@
-var r = n(200651);
-n(192379);
-var i = n(442837),
-    a = n(481060),
-    s = n(928518),
-    o = n(451478),
-    l = n(228488),
-    u = n(871499),
-    c = n(388032);
-t.Z = i.ZP.connectStores([o.Z, s.Z], (e) => {
-    let { node: t, guestWindow: n } = e;
-    return { enabled: (0, l.rB)(t, null == n ? void 0 : n.document) };
-})(function (e) {
-    let { enabled: t, ...n } = e,
-        i = t ? c.intl.string(c.t.Z7MyND) : c.intl.string(c.t.OIDkcn),
-        s = t ? a.FullscreenExitIcon : a.FullscreenEnterIcon;
-    return (0, r.jsx)(u.Z, {
-        label: i,
-        iconComponent: s,
-        ...n
+var i = r(200651);
+r(192379);
+var a = r(442837),
+    s = r(481060),
+    o = r(928518),
+    l = r(451478),
+    u = r(228488),
+    c = r(871499),
+    d = r(388032);
+function f(e) {
+    let { enabled: n, ...r } = e,
+        a = n ? d.intl.string(d.t.Z7MyND) : d.intl.string(d.t.OIDkcn),
+        o = n ? s.FullscreenExitIcon : s.FullscreenEnterIcon;
+    return (0, i.jsx)(c.Z, {
+        label: a,
+        iconComponent: o,
+        ...r
     });
-});
+}
+n.Z = a.ZP.connectStores([l.Z, o.Z], (e) => {
+    let { node: n, guestWindow: r } = e;
+    return { enabled: (0, u.rB)(n, null == r ? void 0 : r.document) };
+})(f);

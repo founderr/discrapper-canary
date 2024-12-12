@@ -1,36 +1,38 @@
-n(47120);
-var r = n(147913),
-    i = n(358221),
-    a = n(729052),
-    s = n(592125),
-    o = n(979651),
-    l = n(556076);
-class u extends r.Z {
+var i = r(47120);
+var a = r(147913),
+    s = r(358221),
+    o = r(729052),
+    l = r(592125),
+    u = r(979651),
+    c = r(556076);
+function d(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+class f extends a.Z {
     handleVoiceChannelSelect(e) {
-        let { channelId: t, guildId: n } = e;
-        if (null == t || null == n) return;
-        let r = s.Z.getChannel(t);
-        if (null != r && (0, a.vS)(r) && r.isGuildVoice()) {
-            let e = i.Z.getParticipants(t).length,
-                n = o.Z.isInChannel(t),
-                r = e === (n ? 1 : 0);
-            r ? l.y(t, r) : e === (n ? 2 : 1) && l.y(t, r);
+        let { channelId: n, guildId: r } = e;
+        if (null == n || null == r) return;
+        let i = l.Z.getChannel(n);
+        if (null != i && (0, o.vS)(i) && i.isGuildVoice()) {
+            let e = s.Z.getParticipants(n).length,
+                r = u.Z.isInChannel(n),
+                i = e === (r ? 1 : 0),
+                a = e === (r ? 2 : 1);
+            i ? c.y(n, i) : a && c.y(n, i);
         }
     }
     constructor(...e) {
-        var t, n, r;
-        super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = { VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+        super(...e), d(this, 'actions', { VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect });
     }
 }
-t.Z = new u();
+n.Z = new f();

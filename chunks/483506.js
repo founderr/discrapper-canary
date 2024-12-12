@@ -1,7 +1,8 @@
-var r = n(56135),
-    i = n(841566),
-    a = n(290677),
-    s = r ? r.isConcatSpreadable : void 0;
-e.exports = function (e) {
-    return a(e) || i(e) || !!(s && e && e[s]);
-};
+var i = r(56135),
+    a = r(841566),
+    s = r(290677),
+    o = i ? i.isConcatSpreadable : void 0;
+function l(e) {
+    return s(e) || a(e) || !!(o && e && e[o]);
+}
+e.exports = l;

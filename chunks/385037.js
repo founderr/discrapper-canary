@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function n(e) {
     return {
         name: 'Backus\u2013Naur Form',
         contains: [
@@ -23,4 +23,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = n;

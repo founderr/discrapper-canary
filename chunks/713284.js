@@ -1,59 +1,72 @@
-n.d(t, {
+r.d(n, {
     D: function () {
-        return r;
+        return i;
     }
-}),
-    n(653041);
-var r,
-    i,
+});
+var i,
     a,
-    s,
-    o,
-    l,
-    u = n(442837),
-    c = n(570140);
-((a = r || (r = {}))[(a.DC_SHOWN = 0)] = 'DC_SHOWN'), (a[(a.DC_SHOW_REQUEST = 1)] = 'DC_SHOW_REQUEST'), (a[(a.DC_DISMISSED = 2)] = 'DC_DISMISSED');
-let d = [],
-    f = (e) => {
-        let { eventType: t, dismissibleContent: n } = e;
+    s = r(653041);
+var o = r(442837),
+    l = r(570140);
+function u(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+!(function (e) {
+    (e[(e.DC_SHOWN = 0)] = 'DC_SHOWN'), (e[(e.DC_SHOW_REQUEST = 1)] = 'DC_SHOW_REQUEST'), (e[(e.DC_DISMISSED = 2)] = 'DC_DISMISSED');
+})(i || (i = {}));
+let c = !0,
+    d = [],
+    f = () => {
+        d = [];
+    },
+    _ = (e) => {
+        let { eventType: n, dismissibleContent: r } = e;
+        if (!c)
+            d.push({
+                eventType: n,
+                dismissibleContent: r
+            });
+    },
+    h = (e) => {
+        let { eventType: n, dismissibleContent: r } = e;
+        _({
+            eventType: n,
+            dismissibleContent: r
+        });
+    },
+    p = (e) => {
+        let { dismissibleContent: n } = e;
+        _({
+            eventType: 2,
+            dismissibleContent: n
+        });
+    },
+    m = (e) => {
+        let { dismissibleContent: n } = e;
+        _({
+            eventType: 0,
+            dismissibleContent: n
+        });
     };
-class _ extends (i = u.ZP.Store) {
+class g extends (a = o.ZP.Store) {
     getDCFEvents() {
         return d;
     }
 }
-(l = 'DCFEventStore'),
-    (o = 'displayName') in (s = _)
-        ? Object.defineProperty(s, o, {
-              value: l,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (s[o] = l),
-    (t.Z = new _(c.Z, {
-        LOGOUT: () => {
-            d = [];
-        },
-        DCF_EVENT_LOGGED: (e) => {
-            let { eventType: t, dismissibleContent: n } = e;
-            f({
-                eventType: t,
-                dismissibleContent: n
-            });
-        },
-        DCF_HANDLE_DC_DISMISSED: (e) => {
-            let { dismissibleContent: t } = e;
-            f({
-                eventType: 2,
-                dismissibleContent: t
-            });
-        },
-        DCF_HANDLE_DC_SHOWN: (e) => {
-            let { dismissibleContent: t } = e;
-            f({
-                eventType: 0,
-                dismissibleContent: t
-            });
-        }
+u(g, 'displayName', 'DCFEventStore'),
+    (n.Z = new g(l.Z, {
+        LOGOUT: f,
+        DCF_EVENT_LOGGED: h,
+        DCF_HANDLE_DC_DISMISSED: p,
+        DCF_HANDLE_DC_SHOWN: m
     }));

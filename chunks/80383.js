@@ -1,46 +1,47 @@
-var r = n(119352);
-t.Z = {
-    y: function (e, t) {
-        var n = e.getUTCFullYear(),
-            i = n > 0 ? n : 1 - n;
-        return (0, r.Z)('yy' === t ? i % 100 : i, t.length);
-    },
-    M: function (e, t) {
-        var n = e.getUTCMonth();
-        return 'M' === t ? String(n + 1) : (0, r.Z)(n + 1, 2);
-    },
-    d: function (e, t) {
-        return (0, r.Z)(e.getUTCDate(), t.length);
-    },
-    a: function (e, t) {
-        var n = e.getUTCHours() / 12 >= 1 ? 'pm' : 'am';
-        switch (t) {
-            case 'a':
-            case 'aa':
-                return n.toUpperCase();
-            case 'aaa':
-                return n;
-            case 'aaaaa':
-                return n[0];
-            default:
-                return 'am' === n ? 'a.m.' : 'p.m.';
+var i = r(119352),
+    a = {
+        y: function (e, n) {
+            var r = e.getUTCFullYear(),
+                a = r > 0 ? r : 1 - r;
+            return (0, i.Z)('yy' === n ? a % 100 : a, n.length);
+        },
+        M: function (e, n) {
+            var r = e.getUTCMonth();
+            return 'M' === n ? String(r + 1) : (0, i.Z)(r + 1, 2);
+        },
+        d: function (e, n) {
+            return (0, i.Z)(e.getUTCDate(), n.length);
+        },
+        a: function (e, n) {
+            var r = e.getUTCHours() / 12 >= 1 ? 'pm' : 'am';
+            switch (n) {
+                case 'a':
+                case 'aa':
+                    return r.toUpperCase();
+                case 'aaa':
+                    return r;
+                case 'aaaaa':
+                    return r[0];
+                default:
+                    return 'am' === r ? 'a.m.' : 'p.m.';
+            }
+        },
+        h: function (e, n) {
+            return (0, i.Z)(e.getUTCHours() % 12 || 12, n.length);
+        },
+        H: function (e, n) {
+            return (0, i.Z)(e.getUTCHours(), n.length);
+        },
+        m: function (e, n) {
+            return (0, i.Z)(e.getUTCMinutes(), n.length);
+        },
+        s: function (e, n) {
+            return (0, i.Z)(e.getUTCSeconds(), n.length);
+        },
+        S: function (e, n) {
+            var r = n.length,
+                a = Math.floor(e.getUTCMilliseconds() * Math.pow(10, r - 3));
+            return (0, i.Z)(a, n.length);
         }
-    },
-    h: function (e, t) {
-        return (0, r.Z)(e.getUTCHours() % 12 || 12, t.length);
-    },
-    H: function (e, t) {
-        return (0, r.Z)(e.getUTCHours(), t.length);
-    },
-    m: function (e, t) {
-        return (0, r.Z)(e.getUTCMinutes(), t.length);
-    },
-    s: function (e, t) {
-        return (0, r.Z)(e.getUTCSeconds(), t.length);
-    },
-    S: function (e, t) {
-        var n = t.length,
-            i = Math.floor(e.getUTCMilliseconds() * Math.pow(10, n - 3));
-        return (0, r.Z)(i, t.length);
-    }
-};
+    };
+n.Z = a;

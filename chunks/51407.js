@@ -1,8 +1,9 @@
-var r, i;
-n.d(t, {
+var i;
+r.d(n, {
     h: function () {
-        return r;
+        return i;
     }
 }),
-    ((i = r || (r = {}))[(i.USER = 100)] = 'USER'),
-    (i[(i.STREAM = 18)] = 'STREAM');
+    !(function (e) {
+        (e[(e.USER = 100)] = 'USER'), (e[(e.STREAM = 18)] = 'STREAM');
+    })(i || (i = {}));

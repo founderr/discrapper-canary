@@ -1,39 +1,40 @@
-var r = n(467360),
-    i = n(483266),
-    a = n(862195),
-    s = n(24002),
-    o = n(178683),
-    l = n(176338),
-    u = n(526389),
-    c = '[object Map]',
-    d = '[object Promise]',
-    f = '[object Set]',
-    _ = '[object WeakMap]',
-    p = '[object DataView]',
-    h = (0, u.Z)(r.Z),
-    m = (0, u.Z)(i.Z),
-    g = (0, u.Z)(a.Z),
-    E = (0, u.Z)(s.Z),
-    v = (0, u.Z)(o.Z),
-    I = l.Z;
-((r.Z && I(new r.Z(new ArrayBuffer(1))) != p) || (i.Z && I(new i.Z()) != c) || (a.Z && I(a.Z.resolve()) != d) || (s.Z && I(new s.Z()) != f) || (o.Z && I(new o.Z()) != _)) &&
-    (I = function (e) {
-        var t = (0, l.Z)(e),
-            n = '[object Object]' == t ? e.constructor : void 0,
-            r = n ? (0, u.Z)(n) : '';
-        if (r)
-            switch (r) {
-                case h:
-                    return p;
-                case m:
-                    return c;
+var i = r(467360),
+    a = r(483266),
+    s = r(862195),
+    o = r(24002),
+    l = r(178683),
+    u = r(176338),
+    c = r(526389),
+    d = '[object Map]',
+    f = '[object Object]',
+    _ = '[object Promise]',
+    h = '[object Set]',
+    p = '[object WeakMap]',
+    m = '[object DataView]',
+    g = (0, c.Z)(i.Z),
+    E = (0, c.Z)(a.Z),
+    v = (0, c.Z)(s.Z),
+    I = (0, c.Z)(o.Z),
+    T = (0, c.Z)(l.Z),
+    b = u.Z;
+((i.Z && b(new i.Z(new ArrayBuffer(1))) != m) || (a.Z && b(new a.Z()) != d) || (s.Z && b(s.Z.resolve()) != _) || (o.Z && b(new o.Z()) != h) || (l.Z && b(new l.Z()) != p)) &&
+    (b = function (e) {
+        var n = (0, u.Z)(e),
+            r = n == f ? e.constructor : void 0,
+            i = r ? (0, c.Z)(r) : '';
+        if (i)
+            switch (i) {
                 case g:
-                    return d;
+                    return m;
                 case E:
-                    return f;
+                    return d;
                 case v:
                     return _;
+                case I:
+                    return h;
+                case T:
+                    return p;
             }
-        return t;
+        return n;
     }),
-    (t.Z = I);
+    (n.Z = b);

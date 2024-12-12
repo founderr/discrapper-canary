@@ -1,1 +1,2 @@
-(t.version = n(5107).i8), (t.utils = n(685053)), (t.rand = n(526808)), (t.curve = n(814084)), (t.curves = n(609513)), (t.ec = n(424777)), (t.eddsa = n(208208));
+var i = n;
+(i.version = r(5107).i8), (i.utils = r(685053)), (i.rand = r(526808)), (i.curve = r(814084)), (i.curves = r(609513)), (i.ec = r(424777)), (i.eddsa = r(208208));

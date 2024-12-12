@@ -1,146 +1,153 @@
-n.d(t, {
+r.d(n, {
     B: function () {
-        return r;
+        return i;
     },
     Z: function () {
-        return d;
+        return I;
     }
-}),
-    n(653041),
-    n(47120),
-    n(411104);
-var r,
-    i,
-    a = n(536895);
-function s(e, t) {
-    return e.findIndex((e) => t === e.key);
+});
+var i,
+    a = r(653041);
+var s = r(47120);
+var o = r(411104);
+var l = r(536895);
+function u(e, n) {
+    return e.findIndex((e) => n === e.key);
 }
-function o(e) {
+function c(e) {
     return e.focusPath[e.focusPath.length - 1];
 }
-function l(e) {
-    let t = e.items;
-    for (let n = 0; n < e.focusPath.length - 1; n++) {
-        if (null == t) return;
-        let r = s(t, e.focusPath[n]);
-        t = t[r].children;
+function d(e) {
+    let n = e.items;
+    for (let r = 0; r < e.focusPath.length - 1; r++) {
+        if (null == n) return;
+        let i = u(n, e.focusPath[r]);
+        n = n[i].children;
     }
-    return t;
+    return n;
 }
-function u(e, t) {
-    let n = e,
-        r = [];
-    for (let e = 0; e < t.length && null != n; e++) {
-        let i = t[e],
-            a = s(n, i);
-        if (a < 0 || a >= n.length) {
-            let e = n[0];
-            null != e && r.push(e.key);
+function f(e, n) {
+    let r = e,
+        i = [];
+    for (let e = 0; e < n.length && null != r; e++) {
+        let a = n[e],
+            s = u(r, a);
+        if (s < 0 || s >= r.length) {
+            let e = r[0];
+            null != e && i.push(e.key);
             break;
         }
-        r.push(i), (n = n[a].children);
+        i.push(a), (r = r[s].children);
     }
-    return r;
+    return i;
 }
-((i = r || (r = {})).UPDATE_ITEMS = 'UPDATE_ITEMS'), (i.SET_FOCUS_PATH = 'SET_FOCUS_PATH');
-function c(e) {
-    let t = o(e),
-        n = l(e);
-    return null == n ? -1 : s(n, t);
+function _(e, n) {
+    let { items: r } = n,
+        i = {
+            ...e,
+            items: r,
+            focusPath: f(r, e.focusPath)
+        };
+    return {
+        ...i,
+        focusIndex: v(i)
+    };
 }
-function d(e, t) {
-    switch (t.type) {
-        case a.Us.NAVIGATE_UP:
-            return (function (e, t) {
-                let n = o(e),
-                    r = l(e);
-                if (null == r) return e;
-                let i = (s(r, n) - 1) % r.length;
-                if ((i < 0 && (i = r.length - 1), null == r[i])) return e;
-                let a = {
-                    ...e,
-                    focusPath: [...e.focusPath.slice(0, -1), r[i].key]
-                };
-                return {
-                    ...a,
-                    focusIndex: c(a)
-                };
-            })(e, 0);
-        case a.Us.NAVIGATE_DOWN:
-            return (function (e, t) {
-                let n = o(e),
-                    r = l(e);
-                if (null == r) return e;
-                let i = (s(r, n) + 1) % r.length;
-                if (null == r[i]) return e;
-                let a = {
-                    ...e,
-                    focusPath: [...e.focusPath.slice(0, -1), r[i].key]
-                };
-                return {
-                    ...a,
-                    focusIndex: c(a)
-                };
-            })(e, 0);
-        case a.Us.NAVIGATE_IN:
-            return (function (e, t) {
-                var n;
-                let r = o(e),
-                    i = l(e);
-                if (null == i) return e;
-                let a = i[s(i, r)],
-                    u = null == a ? void 0 : null === (n = a.children) || void 0 === n ? void 0 : n[0];
-                if (null == u) return e;
-                let d = {
-                    ...e,
-                    focusPath: [...e.focusPath, u.key]
-                };
-                return {
-                    ...d,
-                    focusIndex: c(d)
-                };
-            })(e, 0);
-        case a.Us.NAVIGATE_OUT:
-            return (function (e, t) {
-                if (e.focusPath.length <= 1) return e;
-                let n = {
-                    ...e,
-                    focusPath: e.focusPath.slice(0, -1)
-                };
-                return {
-                    ...n,
-                    focusIndex: c(n)
-                };
-            })(e, 0);
+function h(e, n) {
+    let { path: r } = n,
+        i = {
+            ...e,
+            focusPath: f(e.items, r)
+        };
+    return {
+        ...i,
+        focusIndex: v(i)
+    };
+}
+function p(e, n) {
+    let r = c(e),
+        i = d(e);
+    if (null == i) return e;
+    let a = (u(i, r) - 1) % i.length;
+    if ((a < 0 && (a = i.length - 1), null == i[a])) return e;
+    let s = {
+        ...e,
+        focusPath: [...e.focusPath.slice(0, -1), i[a].key]
+    };
+    return {
+        ...s,
+        focusIndex: v(s)
+    };
+}
+function m(e, n) {
+    let r = c(e),
+        i = d(e);
+    if (null == i) return e;
+    let a = (u(i, r) + 1) % i.length;
+    if (null == i[a]) return e;
+    let s = {
+        ...e,
+        focusPath: [...e.focusPath.slice(0, -1), i[a].key]
+    };
+    return {
+        ...s,
+        focusIndex: v(s)
+    };
+}
+function g(e, n) {
+    var r;
+    let i = c(e),
+        a = d(e);
+    if (null == a) return e;
+    let s = a[u(a, i)],
+        o = null == s ? void 0 : null === (r = s.children) || void 0 === r ? void 0 : r[0];
+    if (null == o) return e;
+    let l = {
+        ...e,
+        focusPath: [...e.focusPath, o.key]
+    };
+    return {
+        ...l,
+        focusIndex: v(l)
+    };
+}
+function E(e, n) {
+    if (e.focusPath.length <= 1) return e;
+    let r = {
+        ...e,
+        focusPath: e.focusPath.slice(0, -1)
+    };
+    return {
+        ...r,
+        focusIndex: v(r)
+    };
+}
+function v(e) {
+    let n = c(e),
+        r = d(e);
+    return null == r ? -1 : u(r, n);
+}
+function I(e, n) {
+    switch (n.type) {
+        case l.Us.NAVIGATE_UP:
+            return p(e, n);
+        case l.Us.NAVIGATE_DOWN:
+            return m(e, n);
+        case l.Us.NAVIGATE_IN:
+            return g(e, n);
+        case l.Us.NAVIGATE_OUT:
+            return E(e, n);
         case 'UPDATE_ITEMS':
-            return (function (e, t) {
-                let { items: n } = t,
-                    r = {
-                        ...e,
-                        items: n,
-                        focusPath: u(n, e.focusPath)
-                    };
-                return {
-                    ...r,
-                    focusIndex: c(r)
-                };
-            })(e, t);
+            return _(e, n);
         case 'SET_FOCUS_PATH':
-            return (function (e, t) {
-                let { path: n } = t,
-                    r = {
-                        ...e,
-                        focusPath: u(e.items, n)
-                    };
-                return {
-                    ...r,
-                    focusIndex: c(r)
-                };
-            })(e, t);
-        case a.Us.SELECT_FOCUSED_ITEM:
+            return h(e, n);
+        case l.Us.SELECT_FOCUSED_ITEM:
             break;
         default:
-            throw Error('Menu navigator was given an unhandled action '.concat(t.type));
+            throw Error('Menu navigator was given an unhandled action '.concat(n.type));
     }
     return e;
 }
+!(function (e) {
+    (e.UPDATE_ITEMS = 'UPDATE_ITEMS'), (e.SET_FOCUS_PATH = 'SET_FOCUS_PATH');
+})(i || (i = {}));

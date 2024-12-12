@@ -1,151 +1,140 @@
-var r = n(660566);
-(e.exports = f),
-    (e.exports.parse = a),
-    (e.exports.compile = function (e, t) {
-        return o(a(e, t));
-    }),
-    (e.exports.tokensToFunction = o),
-    (e.exports.tokensToRegExp = d);
-var i = RegExp('(\\\\.)|([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))', 'g');
-function a(e, t) {
-    for (var n, r = [], a = 0, s = 0, o = '', u = (t && t.delimiter) || '/'; null != (n = i.exec(e)); ) {
-        var c = n[0],
-            d = n[1],
-            f = n.index;
-        if (((o += e.slice(s, f)), (s = f + c.length), d)) {
-            o += d[1];
+var i = r(660566);
+(e.exports = v), (e.exports.parse = s), (e.exports.compile = o), (e.exports.tokensToFunction = c), (e.exports.tokensToRegExp = E);
+var a = RegExp('(\\\\.)|([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))', 'g');
+function s(e, n) {
+    for (var r, i = [], s = 0, o = 0, l = '', u = (n && n.delimiter) || '/'; null != (r = a.exec(e)); ) {
+        var c = r[0],
+            _ = r[1],
+            h = r.index;
+        if (((l += e.slice(o, h)), (o = h + c.length), _)) {
+            l += _[1];
             continue;
         }
-        var _ = e[s],
-            p = n[2],
-            h = n[3],
-            m = n[4],
-            g = n[5],
-            E = n[6],
-            v = n[7];
-        o && (r.push(o), (o = ''));
-        var I = null != p && null != _ && _ !== p,
-            T = '+' === E || '*' === E,
-            b = '?' === E || '*' === E,
-            S = n[2] || u,
-            y = m || g;
-        r.push({
-            name: h || a++,
-            prefix: p || '',
-            delimiter: S,
-            optional: b,
-            repeat: T,
-            partial: I,
-            asterisk: !!v,
-            pattern: y
-                ? (function (e) {
-                      return e.replace(/([=!:$\/()])/g, '\\$1');
-                  })(y)
-                : v
-                  ? '.*'
-                  : '[^' + l(S) + ']+?'
+        var p = e[o],
+            m = r[2],
+            g = r[3],
+            E = r[4],
+            v = r[5],
+            I = r[6],
+            T = r[7];
+        l && (i.push(l), (l = ''));
+        var b = null != m && null != p && p !== m,
+            y = '+' === I || '*' === I,
+            S = '?' === I || '*' === I,
+            A = r[2] || u,
+            N = E || v;
+        i.push({
+            name: g || s++,
+            prefix: m || '',
+            delimiter: A,
+            optional: S,
+            repeat: y,
+            partial: b,
+            asterisk: !!T,
+            pattern: N ? f(N) : T ? '.*' : '[^' + d(A) + ']+?'
         });
     }
-    return s < e.length && (o += e.substr(s)), o && r.push(o), r;
+    return o < e.length && (l += e.substr(o)), l && i.push(l), i;
 }
-function s(e) {
+function o(e, n) {
+    return c(s(e, n));
+}
+function l(e) {
     return encodeURI(e).replace(/[\/?#]/g, function (e) {
         return '%' + e.charCodeAt(0).toString(16).toUpperCase();
     });
 }
-function o(e) {
-    for (var t = Array(e.length), n = 0; n < e.length; n++) 'object' == typeof e[n] && (t[n] = RegExp('^(?:' + e[n].pattern + ')$'));
-    return function (n, i) {
-        for (var a = '', o = n || {}, l = (i || {}).pretty ? s : encodeURIComponent, u = 0; u < e.length; u++) {
-            var c,
-                d = e[u];
-            if ('string' == typeof d) {
-                a += d;
-                continue;
-            }
-            var f = o[d.name];
-            if (null == f) {
-                if (d.optional) {
-                    d.partial && (a += d.prefix);
-                    continue;
-                }
-                throw TypeError('Expected "' + d.name + '" to be defined');
-            }
-            if (r(f)) {
-                if (!d.repeat) throw TypeError('Expected "' + d.name + '" to not repeat, but received `' + JSON.stringify(f) + '`');
-                if (0 === f.length) {
-                    if (d.optional) continue;
-                    throw TypeError('Expected "' + d.name + '" to not be empty');
-                }
-                for (var _ = 0; _ < f.length; _++) {
-                    if (((c = l(f[_])), !t[u].test(c))) throw TypeError('Expected all "' + d.name + '" to match "' + d.pattern + '", but received `' + JSON.stringify(c) + '`');
-                    a += (0 === _ ? d.prefix : d.delimiter) + c;
-                }
-                continue;
-            }
-            if (
-                ((c = d.asterisk
-                    ? encodeURI(f).replace(/[?#]/g, function (e) {
-                          return '%' + e.charCodeAt(0).toString(16).toUpperCase();
-                      })
-                    : l(f)),
-                !t[u].test(c))
-            )
-                throw TypeError('Expected "' + d.name + '" to match "' + d.pattern + '", but received "' + c + '"');
-            a += d.prefix + c;
-        }
-        return a;
-    };
-}
-function l(e) {
-    return e.replace(/([.+*?=^!:${}()[\]|\/\\])/g, '\\$1');
-}
-function u(e, t) {
-    return (e.keys = t), e;
+function u(e) {
+    return encodeURI(e).replace(/[?#]/g, function (e) {
+        return '%' + e.charCodeAt(0).toString(16).toUpperCase();
+    });
 }
 function c(e) {
+    for (var n = Array(e.length), r = 0; r < e.length; r++) 'object' == typeof e[r] && (n[r] = RegExp('^(?:' + e[r].pattern + ')$'));
+    return function (r, a) {
+        for (var s = '', o = r || {}, c = (a || {}).pretty ? l : encodeURIComponent, d = 0; d < e.length; d++) {
+            var f,
+                _ = e[d];
+            if ('string' == typeof _) {
+                s += _;
+                continue;
+            }
+            var h = o[_.name];
+            if (null == h) {
+                if (_.optional) {
+                    _.partial && (s += _.prefix);
+                    continue;
+                }
+                throw TypeError('Expected "' + _.name + '" to be defined');
+            }
+            if (i(h)) {
+                if (!_.repeat) throw TypeError('Expected "' + _.name + '" to not repeat, but received `' + JSON.stringify(h) + '`');
+                if (0 === h.length) {
+                    if (_.optional) continue;
+                    throw TypeError('Expected "' + _.name + '" to not be empty');
+                }
+                for (var p = 0; p < h.length; p++) {
+                    if (((f = c(h[p])), !n[d].test(f))) throw TypeError('Expected all "' + _.name + '" to match "' + _.pattern + '", but received `' + JSON.stringify(f) + '`');
+                    s += (0 === p ? _.prefix : _.delimiter) + f;
+                }
+                continue;
+            }
+            if (((f = _.asterisk ? u(h) : c(h)), !n[d].test(f))) throw TypeError('Expected "' + _.name + '" to match "' + _.pattern + '", but received "' + f + '"');
+            s += _.prefix + f;
+        }
+        return s;
+    };
+}
+function d(e) {
+    return e.replace(/([.+*?=^!:${}()[\]|\/\\])/g, '\\$1');
+}
+function f(e) {
+    return e.replace(/([=!:$\/()])/g, '\\$1');
+}
+function _(e, n) {
+    return (e.keys = n), e;
+}
+function h(e) {
     return e.sensitive ? '' : 'i';
 }
-function d(e, t, n) {
-    !r(t) && ((n = t || n), (t = []));
-    for (var i, a, s = (n = n || {}).strict, o = !1 !== n.end, u = '', d = 0; d < e.length; d++) {
-        var f = e[d];
-        if ('string' == typeof f) u += l(f);
+function p(e, n) {
+    var r = e.source.match(/\((?!\?)/g);
+    if (r)
+        for (var i = 0; i < r.length; i++)
+            n.push({
+                name: i,
+                prefix: null,
+                delimiter: null,
+                optional: !1,
+                repeat: !1,
+                partial: !1,
+                asterisk: !1,
+                pattern: null
+            });
+    return _(e, n);
+}
+function m(e, n, r) {
+    for (var i = [], a = 0; a < e.length; a++) i.push(v(e[a], n, r).source);
+    return _(RegExp('(?:' + i.join('|') + ')', h(r)), n);
+}
+function g(e, n, r) {
+    return E(s(e, r), n, r);
+}
+function E(e, n, r) {
+    !i(n) && ((r = n || r), (n = []));
+    for (var a = (r = r || {}).strict, s = !1 !== r.end, o = '', l = 0; l < e.length; l++) {
+        var u = e[l];
+        if ('string' == typeof u) o += d(u);
         else {
-            var _ = l(f.prefix),
-                p = '(?:' + f.pattern + ')';
-            t.push(f), f.repeat && (p += '(?:' + _ + p + ')*'), (u += p = f.optional ? (f.partial ? _ + '(' + p + ')?' : '(?:' + _ + '(' + p + '))?') : _ + '(' + p + ')');
+            var c = d(u.prefix),
+                f = '(?:' + u.pattern + ')';
+            n.push(u), u.repeat && (f += '(?:' + c + f + ')*'), (o += f = u.optional ? (u.partial ? c + '(' + f + ')?' : '(?:' + c + '(' + f + '))?') : c + '(' + f + ')');
         }
     }
-    var h = l(n.delimiter || '/'),
-        m = u.slice(-h.length) === h;
-    return !s && (u = (m ? u.slice(0, -h.length) : u) + '(?:' + h + '(?=$))?'), o ? (u += '$') : (u += s && m ? '' : '(?=' + h + '|$)'), (i = RegExp('^' + u, c(n))), (a = t), (i.keys = a), i;
+    var p = d(r.delimiter || '/'),
+        m = o.slice(-p.length) === p;
+    return !a && (o = (m ? o.slice(0, -p.length) : o) + '(?:' + p + '(?=$))?'), s ? (o += '$') : (o += a && m ? '' : '(?=' + p + '|$)'), _(RegExp('^' + o, h(r)), n);
 }
-function f(e, t, n) {
-    var i, s, o;
-    if ((!r(t) && ((n = t || n), (t = [])), (n = n || {}), e instanceof RegExp))
-        return (function (e, t) {
-            var n,
-                r,
-                i = e.source.match(/\((?!\?)/g);
-            if (i)
-                for (var a = 0; a < i.length; a++)
-                    t.push({
-                        name: a,
-                        prefix: null,
-                        delimiter: null,
-                        optional: !1,
-                        repeat: !1,
-                        partial: !1,
-                        asterisk: !1,
-                        pattern: null
-                    });
-            return (n = e), (r = t), (n.keys = r), n;
-        })(e, t);
-    if (r(e))
-        return (function (e, t, n) {
-            for (var r, i, a = [], s = 0; s < e.length; s++) a.push(f(e[s], t, n).source);
-            return (r = RegExp('(?:' + a.join('|') + ')', c(n))), (i = t), (r.keys = i), r;
-        })(e, t, n);
-    return (i = e), (s = t), d(a(i, (o = n)), s, o);
+function v(e, n, r) {
+    return (!i(n) && ((r = n || r), (n = [])), (r = r || {}), e instanceof RegExp) ? p(e, n) : i(e) ? m(e, n, r) : g(e, n, r);
 }

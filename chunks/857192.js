@@ -1,49 +1,60 @@
-n.r(t), n(789020);
-var r,
-    i,
-    a,
-    s,
-    o = n(261470),
-    l = n(213919),
-    u = n(442837),
-    c = n(544891),
-    d = n(433517),
-    f = n(570140),
-    _ = n(179658),
-    p = n(70956),
-    h = n(960048),
-    m = n(981631);
+r.r(n);
+var i,
+    a = r(789020);
+var s = r(261470),
+    o = r(213919),
+    l = r(442837),
+    u = r(544891),
+    c = r(433517),
+    d = r(570140),
+    f = r(179658),
+    _ = r(70956),
+    h = r(960048),
+    p = r(981631);
+function m(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
 let g = (() => {
         let e = ''.concat(location.protocol, '//').concat(location.host, '/__development/source_maps'),
-            t = null,
-            n = new o.Z(5 * p.Z.Millis.SECOND, 1 * p.Z.Millis.MINUTE, !0),
-            r = () => {
-                c.tn
+            n = null,
+            r = new s.Z(5 * _.Z.Millis.SECOND, 1 * _.Z.Millis.MINUTE, !0),
+            i = () => {
+                u.tn
                     .put({
                         url: e,
-                        headers: { Authorization: l.getToken() },
+                        headers: { Authorization: o.getToken() },
                         oldFormErrors: !0,
                         rejectWithError: !0
                     })
                     .then(
                         (e) => {
-                            401 === e.status || 403 === e.status ? ((t = null), (0, _.y)({ sourceMapsEnabled: !1 })) : 200 !== e.status ? (t = setTimeout(r, n.fail())) : (n.succeed(), (t = setTimeout(r, e.body.sourceMapCookieTTLSeconds * p.Z.Millis.SECOND * 0.75)));
+                            401 === e.status || 403 === e.status ? ((n = null), (0, f.y)({ sourceMapsEnabled: !1 })) : 200 !== e.status ? (n = setTimeout(i, r.fail())) : (r.succeed(), (n = setTimeout(i, e.body.sourceMapCookieTTLSeconds * _.Z.Millis.SECOND * 0.75)));
                         },
                         () => {
-                            t = setTimeout(r, n.fail());
+                            n = setTimeout(i, r.fail());
                         }
                     );
             };
         return {
-            set: (n) => {
-                if (n !== (null != t))
-                    n
-                        ? (t = setTimeout(r, 0))
-                        : (clearTimeout(t),
-                          (t = null),
-                          c.tn.del({
+            set: (r) => {
+                if (r !== (null != n))
+                    r
+                        ? (n = setTimeout(i, 0))
+                        : (clearTimeout(n),
+                          (n = null),
+                          u.tn.del({
                               url: e,
-                              headers: { Authorization: l.getToken() },
+                              headers: { Authorization: o.getToken() },
                               oldFormErrors: !0,
                               rejectWithError: !0
                           }));
@@ -75,11 +86,24 @@ function T(e) {
         ...e
     }),
         g.set(I.sourceMapsEnabled),
-        d.K.set(E, I);
+        c.K.set(E, I);
 }
-class b extends (r = u.ZP.Store) {
+function b(e) {
+    let { settings: n } = e;
+    T(n);
+}
+function y(e) {
+    T(v);
+}
+function S(e) {
+    var n;
+    let r = ((null !== (n = e.user.flags) && void 0 !== n ? n : 0) & p.xW$.STAFF) === p.xW$.STAFF,
+        i = r || null != e.user.personal_connection_id;
+    r && g.set(I.sourceMapsEnabled), h.Z.setTags({ isStaff: i.toString() });
+}
+class A extends (i = l.ZP.Store) {
     initialize() {
-        let e = d.K.get(E);
+        let e = c.K.get(E);
         null != e &&
             (I = {
                 ...v,
@@ -137,27 +161,9 @@ class b extends (r = u.ZP.Store) {
         );
     }
 }
-(s = 'DeveloperOptionsStore'),
-    (a = 'displayName') in (i = b)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.default = new b(f.Z, {
-        LOGOUT: function (e) {
-            T(v);
-        },
-        CONNECTION_OPEN: function (e) {
-            var t;
-            let n = ((null !== (t = e.user.flags) && void 0 !== t ? t : 0) & m.xW$.STAFF) === m.xW$.STAFF,
-                r = n || null != e.user.personal_connection_id;
-            n && g.set(I.sourceMapsEnabled), h.Z.setTags({ isStaff: r.toString() });
-        },
-        DEVELOPER_OPTIONS_UPDATE_SETTINGS: function (e) {
-            let { settings: t } = e;
-            T(t);
-        }
+m(A, 'displayName', 'DeveloperOptionsStore'),
+    (n.default = new A(d.Z, {
+        LOGOUT: y,
+        CONNECTION_OPEN: S,
+        DEVELOPER_OPTIONS_UPDATE_SETTINGS: b
     }));

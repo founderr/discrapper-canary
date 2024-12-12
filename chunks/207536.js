@@ -1,12 +1,13 @@
-var r = n(543744),
-    i = n(436091);
-e.exports = function (e, t) {
-    var n = -1,
-        a = i(e) ? Array(e.length) : [];
+var i = r(543744),
+    a = r(436091);
+function s(e, n) {
+    var r = -1,
+        s = a(e) ? Array(e.length) : [];
     return (
-        r(e, function (e, r, i) {
-            a[++n] = t(e, r, i);
+        i(e, function (e, i, a) {
+            s[++r] = n(e, i, a);
         }),
-        a
+        s
     );
-};
+}
+e.exports = s;

@@ -1,45 +1,46 @@
-n.d(t, {
+r.d(n, {
     r: function () {
-        return u;
+        return h;
     }
-}),
-    n(653041),
-    n(47120),
-    n(411104);
-var r = n(259443),
-    i = n(198584),
-    a = n(444675);
-function s(e, t, n) {
+});
+var i = r(653041);
+var a = r(47120);
+var s = r(411104);
+var o = r(259443),
+    l = r(198584),
+    u = r(444675);
+function c(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let o = '1' === a.env.KV_STORAGE_LOGGING,
-    l = new r.Yd('Runtime');
-class u {
+let d = 1000000,
+    f = '1' === u.env.KV_STORAGE_LOGGING,
+    _ = new o.Yd('Runtime');
+class h {
     static nextId() {
         return ++this.counter;
     }
-    static executeAsync(e, t) {
+    static executeAsync(e, n) {
         return (
             this.initialize(),
-            new Promise((n, r) => {
-                let i = this.nextId();
-                t(i),
-                    this.pending.set(i, {
-                        id: i,
+            new Promise((r, i) => {
+                let a = this.nextId();
+                n(a),
+                    this.pending.set(a, {
+                        id: a,
                         tag: e,
                         started: performance.now(),
-                        resolve: n,
-                        reject: r
+                        resolve: r,
+                        reject: i
                     });
             })
         );
@@ -51,54 +52,54 @@ class u {
         return this.dbStateCallbacks.push(e), e;
     }
     static removeCompletionCallback(e) {
-        this.completionCallbacks = this.completionCallbacks.filter((t) => t !== e);
+        this.completionCallbacks = this.completionCallbacks.filter((n) => n !== e);
     }
     static removeDatabaseStateCallback(e) {
-        this.dbStateCallbacks = this.dbStateCallbacks.filter((t) => t !== e);
+        this.dbStateCallbacks = this.dbStateCallbacks.filter((n) => n !== e);
     }
-    static onResponse(e, t) {
-        let n = performance.now(),
-            r = this.pending.get(e.id);
-        null != r && (this.pending.delete(e.id), (e.timings.materializationTimeNanoseconds = null != t ? t : 0), this.completeOperation(r, e, n), this.resolveOperation(r, e));
+    static onResponse(e, n) {
+        let r = performance.now(),
+            i = this.pending.get(e.id);
+        null != i && (this.pending.delete(e.id), (e.timings.materializationTimeNanoseconds = null != n ? n : 0), this.completeOperation(i, e, r), this.resolveOperation(i, e));
     }
     static onStatus(e) {
-        for (let t of this.dbStateCallbacks) t(e.handle, e.state);
+        for (let n of this.dbStateCallbacks) n(e.handle, e.state);
     }
-    static resolveOperation(e, t) {
-        t.ok ? e.resolve(t.data) : e.reject('string' == typeof t.data ? Error(t.data) : t.data);
+    static resolveOperation(e, n) {
+        n.ok ? e.resolve(n.data) : e.reject('string' == typeof n.data ? Error(n.data) : n.data);
     }
-    static completeOperation(e, t, n) {
+    static completeOperation(e, n, r) {
         if (this.completionCallbacks.length > 0) {
-            let r = {
+            let i = {
                 id: e.id,
                 tag: e.tag,
-                ok: t.ok,
-                value: t.data,
+                ok: n.ok,
+                value: n.data,
                 timings: {
-                    queue: t.timings.queueTimeNanoseconds / 1000000,
-                    execution: t.timings.executionTimeNanoseconds / 1000000,
-                    materialization: t.timings.materializationTimeNanoseconds / 1000000,
-                    ccTotal: t.timings.totalTimeNanoseconds / 1000000,
-                    jsTotal: n - e.started
+                    queue: n.timings.queueTimeNanoseconds / d,
+                    execution: n.timings.executionTimeNanoseconds / d,
+                    materialization: n.timings.materializationTimeNanoseconds / d,
+                    ccTotal: n.timings.totalTimeNanoseconds / d,
+                    jsTotal: r - e.started
                 }
             };
-            for (let e of this.completionCallbacks) e(r);
+            for (let e of this.completionCallbacks) e(i);
         }
     }
     static initialize() {
         if (!this.initialized)
-            i.d.setCallbacks({
+            l.d.setCallbacks({
                 status: (e) => this.onStatus(e),
-                response: (e, t) => this.onResponse(e, t)
+                response: (e, n) => this.onResponse(e, n)
             }),
-                o &&
+                f &&
                     (this.addCompletionCallback((e) => {
-                        let t = e.ok ? 'completed' : 'failed',
-                            n = [''.concat(e.timings.execution.toFixed(3), 'ms execution'), ''.concat(e.timings.materialization.toFixed(3), 'ms js materialization'), ''.concat(e.timings.ccTotal.toFixed(3), 'ms cc completion'), ''.concat(e.timings.jsTotal.toFixed(3), 'ms js reception')].join(', ');
-                        l.info(''.concat(e.tag, ' (#').concat(e.id, ') ').concat(t, ' in ').concat(e.timings.ccTotal.toFixed(3), 'ms (').concat(n, ').'));
+                        let n = e.ok ? 'completed' : 'failed',
+                            r = [''.concat(e.timings.execution.toFixed(3), 'ms execution'), ''.concat(e.timings.materialization.toFixed(3), 'ms js materialization'), ''.concat(e.timings.ccTotal.toFixed(3), 'ms cc completion'), ''.concat(e.timings.jsTotal.toFixed(3), 'ms js reception')].join(', ');
+                        _.info(''.concat(e.tag, ' (#').concat(e.id, ') ').concat(n, ' in ').concat(e.timings.ccTotal.toFixed(3), 'ms (').concat(r, ').'));
                     }),
-                    this.addDatabaseStateCallback((e, t) => l.info(''.concat(e, ' (state: ').concat(t, ')')))),
+                    this.addDatabaseStateCallback((e, n) => _.info(''.concat(e, ' (state: ').concat(n, ')')))),
                 (this.initialized = !0);
     }
 }
-s(u, 'counter', 0), s(u, 'pending', new Map()), s(u, 'initialized', !1), s(u, 'dbStateCallbacks', []), s(u, 'completionCallbacks', []);
+c(h, 'counter', 0), c(h, 'pending', new Map()), c(h, 'initialized', !1), c(h, 'dbStateCallbacks', []), c(h, 'completionCallbacks', []);

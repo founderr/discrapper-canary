@@ -1,35 +1,37 @@
-n.d(t, {
+r.d(n, {
     w: function () {
-        return o;
+        return l;
     }
 });
-var r = n(299379),
-    i = n(706454),
-    a = n(358085),
-    s = n(981631);
-let o = 'https://'.concat(s.xr4),
-    l = 'https://'.concat(s.rxP);
-function u(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o;
-    return t + e;
+var i = r(299379),
+    a = r(706454),
+    s = r(358085),
+    o = r(981631);
+let l = 'https://'.concat(o.xr4),
+    u = 'https://'.concat(o.rxP),
+    c = 'https://creator-support.discord.com',
+    d = 'https://support-apps.discord.com';
+function f(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l;
+    return n + e;
 }
-function c() {
-    return i.default.locale.toLowerCase();
+function _() {
+    return a.default.locale.toLowerCase();
 }
-t.Z = {
-    getArticleURL: (e) => u('/hc/'.concat(c(), '/articles/').concat(e)),
-    getDevArticleURL: (e) => u('/hc/'.concat(c(), '/articles/').concat(e), l),
-    getCreatorSupportArticleURL: (e) => u('/hc/'.concat(c(), '/articles/').concat(e), 'https://creator-support.discord.com'),
-    getTwitterURL: () => (0, r.Z)(s.RK.TWITTER),
-    getCommunityURL: () => u('/hc/'.concat(c())),
+n.Z = {
+    getArticleURL: (e) => f('/hc/'.concat(_(), '/articles/').concat(e)),
+    getDevArticleURL: (e) => f('/hc/'.concat(_(), '/articles/').concat(e), u),
+    getCreatorSupportArticleURL: (e) => f('/hc/'.concat(_(), '/articles/').concat(e), c),
+    getTwitterURL: () => (0, i.Z)(o.RK.TWITTER),
+    getCommunityURL: () => f('/hc/'.concat(_())),
     getSubmitRequestURL(e) {
-        let t = u('/hc/'.concat(c(), '/requests/new?platform=').concat(encodeURIComponent((0, a.getPlatformName)())));
-        return null != e && (t += '&device_info='.concat(encodeURIComponent(e))), t;
+        let n = f('/hc/'.concat(_(), '/requests/new?platform=').concat(encodeURIComponent((0, s.getPlatformName)())));
+        return null != e && (n += '&device_info='.concat(encodeURIComponent(e))), n;
     },
     getSearchURL(e) {
-        let t = encodeURIComponent(e);
-        return u('/hc/'.concat(c(), '/search?utf8=%E2%9C%93&query=').concat(t, '&commit=Search'));
+        let n = encodeURIComponent(e);
+        return f('/hc/'.concat(_(), '/search?utf8=%E2%9C%93&query=').concat(n, '&commit=Search'));
     },
-    getFeaturedArticlesJsonURL: () => u('/api/v2/help_center/en-us/articles.json?label_names=featured'),
-    getAppsSupportURL: (e) => u('/hc/'.concat(c(), '/articles/').concat(e), 'https://support-apps.discord.com')
+    getFeaturedArticlesJsonURL: () => f('/api/v2/help_center/en-us/articles.json?label_names=featured'),
+    getAppsSupportURL: (e) => f('/hc/'.concat(_(), '/articles/').concat(e), d)
 };

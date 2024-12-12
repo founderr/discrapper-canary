@@ -1,27 +1,28 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return l;
+        return u;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(513202),
-    s = n(871499),
-    o = n(388032);
-function l(e) {
-    let { channelId: t, applicationId: n, centerButton: l = !1, ...u } = e,
-        c = l ? s.d : s.Z;
-    return (0, r.jsx)(c, {
-        ...u,
-        onClick: () => {
-            a.Z.leaveActivity({
-                channelId: t,
-                applicationId: n,
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(513202),
+    o = r(871499),
+    l = r(388032);
+function u(e) {
+    let { channelId: n, applicationId: r, centerButton: u = !1, ...c } = e,
+        d = u ? o.d : o.Z,
+        f = () => {
+            s.Z.leaveActivity({
+                channelId: n,
+                applicationId: r,
                 showFeedback: !0
             });
-        },
-        iconComponent: i.DoorExitIcon,
-        label: o.intl.string(o.t['R/FK4O'])
+        };
+    return (0, i.jsx)(d, {
+        ...c,
+        onClick: f,
+        iconComponent: a.DoorExitIcon,
+        label: l.intl.string(l.t['R/FK4O'])
     });
 }

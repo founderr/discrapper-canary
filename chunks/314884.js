@@ -1,28 +1,49 @@
-n(47120);
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140),
-    u = n(78839);
+var i,
+    a = r(47120);
+var s = r(442837),
+    o = r(570140),
+    l = r(78839);
+function u(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
 let c = !1,
     d = {};
 function f(e) {
-    let { guildBoostSlot: t } = e;
+    let { guildBoostSlots: n } = e;
+    (d = {}),
+        n.forEach((e) => {
+            d[e.id] = e;
+        }),
+        (c = !0);
+}
+function _(e) {
+    let { guildBoostSlot: n } = e;
     d = {
         ...d,
-        [t.id]: t
+        [n.id]: n
     };
 }
-function _() {
+function h() {
+    (d = {}), (c = !1);
+}
+function p() {
     let e = {};
-    for (let t of Object.values(d)) (e[t.id] = t), (t.subscription = u.ZP.getSubscriptionById(t.subscriptionId));
+    for (let n of Object.values(d)) (e[n.id] = n), (n.subscription = l.ZP.getSubscriptionById(n.subscriptionId));
     d = e;
 }
-class p extends (r = o.ZP.Store) {
+class m extends (i = s.ZP.Store) {
     initialize() {
-        this.syncWith([u.ZP], _);
+        this.syncWith([l.ZP], p);
     }
     get hasFetched() {
         return c;
@@ -34,28 +55,11 @@ class p extends (r = o.ZP.Store) {
         return d[e];
     }
 }
-(s = 'GuildBoostSlotStore'),
-    (a = 'displayName') in (i = p)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new p(l.Z, {
-        GUILD_BOOST_SLOTS_FETCH_SUCCESS: function (e) {
-            let { guildBoostSlots: t } = e;
-            (d = {}),
-                t.forEach((e) => {
-                    d[e.id] = e;
-                }),
-                (c = !0);
-        },
-        GUILD_BOOST_SLOT_UPDATE_SUCCESS: f,
-        GUILD_BOOST_SLOT_CREATE: f,
-        GUILD_BOOST_SLOT_UPDATE: f,
-        LOGOUT: function () {
-            (d = {}), (c = !1);
-        }
+u(m, 'displayName', 'GuildBoostSlotStore'),
+    (n.Z = new m(o.Z, {
+        GUILD_BOOST_SLOTS_FETCH_SUCCESS: f,
+        GUILD_BOOST_SLOT_UPDATE_SUCCESS: _,
+        GUILD_BOOST_SLOT_CREATE: _,
+        GUILD_BOOST_SLOT_UPDATE: _,
+        LOGOUT: h
     }));

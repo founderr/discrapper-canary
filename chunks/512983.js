@@ -1,4 +1,4 @@
-n.d(t, {
+r.d(n, {
     R: function () {
         return i;
     },
@@ -6,57 +6,58 @@ n.d(t, {
         return c;
     }
 });
-var r,
-    i,
-    a = n(200651);
-n(192379);
-var s = n(120356),
-    o = n.n(s),
-    l = n(481060),
-    u = n(488256);
+var i,
+    a = r(200651);
+r(192379);
+var s = r(120356),
+    o = r.n(s),
+    l = r(481060),
+    u = r(488256);
 function c(e) {
-    let t,
-        { tag: n = 'h5', children: r, className: i, faded: s, disabled: c, required: d = !1, error: f, errorId: _, ...p } = e;
-    switch (n) {
+    let n,
+        { tag: r = 'h5', children: i, className: s, faded: c, disabled: d, required: f = !1, error: _, errorId: h, ...p } = e;
+    switch (r) {
         case 'legend':
         case 'label':
-            t = n;
+            n = r;
             break;
         default:
-            t = l.H;
+            n = l.H;
     }
-    return (0, a.jsxs)(t, {
-        className: o()(u[n], 'h5' !== n ? u.defaultColor : null, i, {
-            [u['defaultMargin'.concat(n)]]: null == i,
-            [u.faded]: s,
-            [u.disabled]: c,
-            [u.error]: null != f
+    return (0, a.jsxs)(n, {
+        className: o()(u[r], 'h5' !== r ? u.defaultColor : null, s, {
+            [u['defaultMargin'.concat(r)]]: null == s,
+            [u.faded]: c,
+            [u.disabled]: d,
+            [u.error]: null != _
         }),
         ...p,
         children: [
-            r,
-            d && null == f
+            i,
+            f && null == _
                 ? (0, a.jsx)('span', {
                       className: u.required,
                       children: '*'
                   })
                 : null,
-            null != f
+            null != _
                 ? (0, a.jsxs)('span', {
-                      id: _,
+                      id: h,
                       className: u.errorMessage,
                       children: [
-                          null != r
+                          null != i
                               ? (0, a.jsx)('span', {
                                     className: u.errorSeparator,
                                     children: '-'
                                 })
                               : null,
-                          f
+                          _
                       ]
                   })
                 : null
         ]
     });
 }
-((r = i || (i = {})).H1 = 'h1'), (r.H2 = 'h2'), (r.H3 = 'h3'), (r.H4 = 'h4'), (r.H5 = 'h5'), (r.LABEL = 'label'), (r.LEGEND = 'legend');
+!(function (e) {
+    (e.H1 = 'h1'), (e.H2 = 'h2'), (e.H3 = 'h3'), (e.H4 = 'h4'), (e.H5 = 'h5'), (e.LABEL = 'label'), (e.LEGEND = 'legend');
+})(i || (i = {}));

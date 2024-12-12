@@ -1,21 +1,22 @@
-var r, i, a, s;
-n.d(t, {
+var i, a;
+r.d(n, {
     AR: function () {
-        return r;
-    },
-    XR: function () {
         return i;
     },
+    XR: function () {
+        return a;
+    },
     nf: function () {
-        return o;
+        return s;
     }
 }),
-    ((a = r || (r = {}))[(a.KeepAsIs = 0)] = 'KeepAsIs'),
-    (a[(a.UseGreyDot = 1)] = 'UseGreyDot'),
-    ((s = i || (i = {}))[(s.Low = 0)] = 'Low'),
-    (s[(s.Medium = 1)] = 'Medium'),
-    (s[(s.High = 2)] = 'High');
-let o = {
+    !(function (e) {
+        (e[(e.KeepAsIs = 0)] = 'KeepAsIs'), (e[(e.UseGreyDot = 1)] = 'UseGreyDot');
+    })(i || (i = {})),
+    !(function (e) {
+        (e[(e.Low = 0)] = 'Low'), (e[(e.Medium = 1)] = 'Medium'), (e[(e.High = 2)] = 'High');
+    })(a || (a = {}));
+let s = {
     careALot: {
         monthOpenPerc: 0.01,
         yearOpenPerc: 0.01,

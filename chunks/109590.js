@@ -1,37 +1,39 @@
-n.d(t, {
+r.d(n, {
     EB: function () {
-        return I;
+        return A;
     },
     cl: function () {
-        return E;
+        return y;
     }
-}),
-    n(47120);
-var r = n(392711),
-    i = n.n(r),
-    a = n(442837),
-    s = n(544891),
-    o = n(570140),
-    l = n(592125),
-    u = n(709054),
-    c = n(238349),
-    d = n(660189);
-n(682474);
-var f = n(981631);
-function _(e, t, n) {
+});
+var i = r(47120);
+var a = r(392711),
+    s = r.n(a),
+    o = r(442837),
+    l = r(544891),
+    u = r(570140),
+    c = r(592125),
+    d = r(709054),
+    f = r(238349),
+    _ = r(660189);
+r(682474);
+var h = r(981631);
+function p(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-class p {
+let m = 10,
+    g = 5;
+class E {
     get(e) {
         return !this._set.hasOwnProperty(e) && (this._set[e] = this._defaultValueFunc()), this._set[e];
     }
@@ -39,106 +41,107 @@ class p {
         delete this._set[e];
     }
     hasNext() {
-        return !i().isEmpty(this._set);
+        return !s().isEmpty(this._set);
     }
     next() {
-        return u.default.keys(this._set)[0];
+        return d.default.keys(this._set)[0];
     }
     constructor(e) {
-        _(this, '_set', void 0), _(this, '_defaultValueFunc', void 0), (this._set = {}), (this._defaultValueFunc = e);
+        p(this, '_set', void 0), p(this, '_defaultValueFunc', void 0), (this._set = {}), (this._defaultValueFunc = e);
     }
 }
-let h = new (class e {
-        request(e, t) {
-            this.requested.get(e).add(t);
-        }
-        hasRequested(e, t) {
-            return this.requested.get(e).has(t);
-        }
-        finishRequesting(e, t) {
-            let n = this.requested.get(e);
-            t.forEach((e) => n.delete(e)), h.compact(e);
-        }
-        getRequested(e) {
-            return this.requested.get(e);
-        }
-        getNextBatch(e, t) {
-            return Array.from(this.requested.get(e)).slice(0, t);
-        }
-        hasNext() {
-            return this.requested.hasNext();
-        }
-        next() {
-            return this.requested.next();
-        }
-        compact(e) {
-            0 === this.requested.get(e).size && this.requested.delete(e);
-        }
-        constructor() {
-            _(this, 'requested', void 0), (this.requested = new p(() => new Set()));
-        }
-    })(),
-    m = null;
-function g(e, t) {
-    return !e && null == t;
+class v {
+    request(e, n) {
+        this.requested.get(e).add(n);
+    }
+    hasRequested(e, n) {
+        return this.requested.get(e).has(n);
+    }
+    finishRequesting(e, n) {
+        let r = this.requested.get(e);
+        n.forEach((e) => r.delete(e)), I.compact(e);
+    }
+    getRequested(e) {
+        return this.requested.get(e);
+    }
+    getNextBatch(e, n) {
+        return Array.from(this.requested.get(e)).slice(0, n);
+    }
+    hasNext() {
+        return this.requested.hasNext();
+    }
+    next() {
+        return this.requested.next();
+    }
+    compact(e) {
+        0 === this.requested.get(e).size && this.requested.delete(e);
+    }
+    constructor() {
+        p(this, 'requested', void 0), (this.requested = new E(() => new Set()));
+    }
 }
-function E(e) {
-    var t, n;
-    let { loaded: r, firstMessage: i } = (0, a.cj)([d.Z], () => d.Z.getMessage(e.id)),
-        s = (0, a.e7)([l.Z], () => l.Z.getChannel(e.parent_id));
-    if (null != s && ((t = r), (n = i), !t && null == n))
-        (function (e, t) {
-            if (h.hasRequested(e.id, t)) return;
-            let n = (0, c.U)(e.id),
-                r = n.findIndex((e) => e === t),
-                i = n.slice(r, r + 5).filter((t) => !h.hasRequested(e.id, t));
-            v(e, i);
-        })(s, e.id);
-    return {
-        loaded: r,
-        firstMessage: i
-    };
+let I = new v(),
+    T = null;
+function b(e, n) {
+    return !e && null == n;
 }
-function v(e, t) {
-    let n = !1;
-    t.forEach((t) => {
-        var r, i;
-        let { loaded: a, firstMessage: s } = d.Z.getMessage(t);
-        if (((r = a), (i = s), !r && null == i)) h.request(e.id, t), (n = !0);
+function y(e) {
+    let { loaded: n, firstMessage: r } = (0, o.cj)([_.Z], () => _.Z.getMessage(e.id)),
+        i = (0, o.e7)([c.Z], () => c.Z.getChannel(e.parent_id));
+    return (
+        null != i && b(n, r) && N(i, e.id),
+        {
+            loaded: n,
+            firstMessage: r
+        }
+    );
+}
+function S(e, n) {
+    let r = !1;
+    n.forEach((n) => {
+        let { loaded: i, firstMessage: a } = _.Z.getMessage(n);
+        b(i, a) && (I.request(e.id, n), (r = !0));
     }),
-        n && null == m && (m = setTimeout(T, 0));
+        r && null == T && (T = setTimeout(C, 0));
 }
-function I(e) {
-    v(e, (0, c.U)(e.id).slice(0, 10));
+function A(e) {
+    S(e, (0, f.U)(e.id).slice(0, m));
 }
-async function T() {
+function N(e, n) {
+    if (I.hasRequested(e.id, n)) return;
+    let r = (0, f.U)(e.id),
+        i = r.findIndex((e) => e === n),
+        a = r.slice(i, i + g).filter((n) => !I.hasRequested(e.id, n));
+    S(e, a);
+}
+async function C() {
     try {
-        for (; h.hasNext(); ) await b(h.next());
+        for (; I.hasNext(); ) await R(I.next());
     } finally {
-        m = null;
+        T = null;
     }
 }
-async function b(e) {
-    let t = h.getNextBatch(e, 10);
+async function R(e) {
+    let n = I.getNextBatch(e, m);
     try {
-        var n;
-        if (0 === t.length) return;
-        let r = null === (n = l.Z.getChannel(e)) || void 0 === n ? void 0 : n.guild_id;
-        if (null == r) return;
+        var r;
+        if (0 === n.length) return;
+        let i = null === (r = c.Z.getChannel(e)) || void 0 === r ? void 0 : r.guild_id;
+        if (null == i) return;
         let {
-            body: { threads: i }
-        } = await s.tn.post({
-            url: f.ANM.FORUM_POSTS(e),
-            body: { thread_ids: t },
+            body: { threads: a }
+        } = await l.tn.post({
+            url: h.ANM.FORUM_POSTS(e),
+            body: { thread_ids: n },
             rejectWithError: !0
         });
-        o.Z.dispatch({
+        u.Z.dispatch({
             type: 'LOAD_FORUM_POSTS',
-            guildId: r,
-            threads: i
+            guildId: i,
+            threads: a
         });
     } catch (e) {
     } finally {
-        h.finishRequesting(e, t);
+        I.finishRequesting(e, n);
     }
 }

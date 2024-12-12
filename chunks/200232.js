@@ -1,92 +1,94 @@
-Object.defineProperty(t, '__esModule', { value: !0 }), (t.FormatBuilder = void 0), (t.bindFormatValuesWithBuilder = o), (t.bindFormatValues = l);
-let r = n(927882),
-    i = n(902626),
-    a = n(950119);
-function s(e) {
+Object.defineProperty(n, '__esModule', { value: !0 }), (n.FormatBuilder = void 0), (n.bindFormatValuesWithBuilder = u), (n.bindFormatValues = c);
+let i = r(927882),
+    a = r(902626),
+    s = r(950119);
+function o(e) {
     return '$' === e[0];
 }
-function o(e, t, n, s, u, c = {}, d, f) {
-    var _;
-    if (1 === t.length && 'string' == typeof t[0]) {
-        e.pushLiteralText(t[0]);
+class l {}
+function u(e, n, r, l, d, f = {}, _, h) {
+    var p;
+    if (1 === n.length && 'string' == typeof n[0]) {
+        e.pushLiteralText(n[0]);
         return;
     }
-    for (let p of t) {
-        if ('string' == typeof p) {
-            e.pushLiteralText(p);
+    for (let m of n) {
+        if ('string' == typeof m) {
+            e.pushLiteralText(m);
             continue;
         }
-        let t = p[0];
-        if (t === i.FormatJsNodeType.Pound) {
-            if ('number' == typeof d) {
-                let t = s.getNumberFormat(n).format(d);
-                e.pushLiteralText(t);
+        let n = m[0];
+        if (n === a.FormatJsNodeType.Pound) {
+            if ('number' == typeof _) {
+                let n = l.getNumberFormat(r).format(_);
+                e.pushLiteralText(n);
             }
             continue;
         }
-        let h = p[1];
-        if (!(h in c) && '$' !== h[0]) throw new a.MissingValueError(h, f);
-        let m = c[h];
-        switch (t) {
-            case i.FormatJsNodeType.Argument:
-                'object' == typeof m || 'function' == typeof m ? e.pushObject(m) : e.pushLiteralText(String(m));
+        let g = m[1];
+        if (!(g in f) && !o(g)) throw new s.MissingValueError(g, h);
+        let E = f[g];
+        switch (n) {
+            case a.FormatJsNodeType.Argument:
+                'object' == typeof E || 'function' == typeof E ? e.pushObject(E) : e.pushLiteralText(String(E));
                 break;
-            case i.FormatJsNodeType.Date: {
-                let t = p[2],
-                    i = t in u.date ? u.date[t] : null != t ? (0, r.parseDateTimeSkeleton)(t) : u.time.medium;
-                e.pushLiteralText(s.getDateTimeFormat(n, i).format(m));
-                break;
-            }
-            case i.FormatJsNodeType.Time: {
-                let t = p[2],
-                    i = t in u.time ? u.time[t] : null != t ? (0, r.parseDateTimeSkeleton)(t) : void 0;
-                e.pushLiteralText(s.getDateTimeFormat(n, i).format(m));
+            case a.FormatJsNodeType.Date: {
+                let n = m[2],
+                    a = n in d.date ? d.date[n] : null != n ? (0, i.parseDateTimeSkeleton)(n) : d.time.medium;
+                e.pushLiteralText(l.getDateTimeFormat(r, a).format(E));
                 break;
             }
-            case i.FormatJsNodeType.Number: {
-                let t = p[2],
-                    i = t in u.number ? u.number[t] : null != t ? (0, r.parseNumberSkeleton)((0, r.parseNumberSkeletonFromString)(t)) : void 0,
-                    a = 'number' != typeof m ? m : m * (null !== (_ = null == i ? void 0 : i.scale) && void 0 !== _ ? _ : 1);
-                e.pushLiteralText(s.getNumberFormat(n, i).format(a));
+            case a.FormatJsNodeType.Time: {
+                let n = m[2],
+                    a = n in d.time ? d.time[n] : null != n ? (0, i.parseDateTimeSkeleton)(n) : void 0;
+                e.pushLiteralText(l.getDateTimeFormat(r, a).format(E));
                 break;
             }
-            case i.FormatJsNodeType.Tag: {
-                let t = p[2],
-                    r = p[3],
-                    i = l(e.constructor, t, n, s, u, c, d),
-                    a = null != r ? l(e.constructor, r, n, s, u, c, d) : [];
-                if ('$' === h[0]) e.pushRichTextTag(h, i, a);
+            case a.FormatJsNodeType.Number: {
+                let n = m[2],
+                    a = n in d.number ? d.number[n] : null != n ? (0, i.parseNumberSkeleton)((0, i.parseNumberSkeletonFromString)(n)) : void 0,
+                    s = 'number' != typeof E ? E : E * (null !== (p = null == a ? void 0 : a.scale) && void 0 !== p ? p : 1);
+                e.pushLiteralText(l.getNumberFormat(r, a).format(s));
+                break;
+            }
+            case a.FormatJsNodeType.Tag: {
+                let n = m[2],
+                    i = m[3],
+                    a = c(e.constructor, n, r, l, d, f, _),
+                    s = null != i ? c(e.constructor, i, r, l, d, f, _) : [];
+                if (o(g)) e.pushRichTextTag(g, a, s);
                 else {
-                    if ('function' != typeof m) throw `expected a function type for a Tag formatting value, ${h}. got ${typeof m}: ${m}`;
-                    let t = m(i);
-                    for (let n of (t = Array.isArray(t) ? t : [t])) 'string' == typeof n ? e.pushLiteralText(n) : e.pushObject(n);
+                    if ('function' != typeof E) throw `expected a function type for a Tag formatting value, ${g}. got ${typeof E}: ${E}`;
+                    let n = E(a);
+                    for (let r of (n = Array.isArray(n) ? n : [n])) 'string' == typeof r ? e.pushLiteralText(r) : e.pushObject(r);
                 }
                 break;
             }
-            case i.FormatJsNodeType.Select: {
-                let t = p[2],
-                    r = m in t ? t[m] : t.other;
-                if (null == r) throw `${m} is not a known option for select value ${h}. Valid options are ${Object.keys(t).join(', ')}`;
-                o(e, r, n, s, u, c);
+            case a.FormatJsNodeType.Select: {
+                let n = E,
+                    i = m[2],
+                    a = n in i ? i[n] : i.other;
+                if (null == a) throw `${n} is not a known option for select value ${g}. Valid options are ${Object.keys(i).join(', ')}`;
+                u(e, a, r, l, d, f);
                 break;
             }
-            case i.FormatJsNodeType.Plural: {
-                let t = p[2],
-                    r = p[3],
-                    i = p[4],
-                    a = (() => {
+            case a.FormatJsNodeType.Plural: {
+                let n = m[2],
+                    i = m[3],
+                    a = m[4],
+                    s = (() => {
                         var e;
-                        let a = `=${m}`;
-                        return a in t ? t[a] : null !== (e = t[s.getPluralRules(n, { type: i }).select(m - (null != r ? r : 0))]) && void 0 !== e ? e : t.other;
+                        let s = `=${E}`;
+                        return s in n ? n[s] : null !== (e = n[l.getPluralRules(r, { type: a }).select(E - (null != i ? i : 0))]) && void 0 !== e ? e : n.other;
                     })();
-                if (null == a) throw `${m} is not a known option for plural value ${h}. Valid options are ${Object.keys(t).join(', ')}`;
-                o(e, a, n, s, u, c, m - (null != r ? r : 0));
+                if (null == s) throw `${E} is not a known option for plural value ${g}. Valid options are ${Object.keys(n).join(', ')}`;
+                u(e, s, r, l, d, f, E - (null != i ? i : 0));
             }
         }
     }
 }
-function l(e, t, n, r, i, a = {}, s) {
+function c(e, n, r, i, a, s = {}, o) {
     let l = new e();
-    return 'string' == typeof t ? (l.pushLiteralText(t), l.finish()) : (o(l, t, n, r, i, a, s), l.finish());
+    return 'string' == typeof n ? (l.pushLiteralText(n), l.finish()) : (u(l, n, r, i, a, s, o), l.finish());
 }
-t.FormatBuilder = class e {};
+n.FormatBuilder = l;

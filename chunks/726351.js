@@ -1,150 +1,152 @@
-var r = n(201694).forEach,
-    i = n(864483),
-    a = n(10968),
-    s = n(525185),
-    o = n(498031),
-    l = n(763160),
-    u = n(117417),
-    c = n(775548),
-    d = n(656082),
-    f = n(302366),
-    _ = n(78687);
+var i = r(201694).forEach,
+    a = r(864483),
+    s = r(10968),
+    o = r(525185),
+    l = r(498031),
+    u = r(763160),
+    c = r(117417),
+    d = r(775548),
+    f = r(656082),
+    _ = r(302366),
+    h = r(78687);
 function p(e) {
     return Array.isArray(e) || void 0 !== e.length;
 }
-function h(e) {
+function m(e) {
     if (Array.isArray(e)) return e;
-    var t = [];
+    var n = [];
     return (
-        r(e, function (e) {
-            t.push(e);
+        i(e, function (e) {
+            n.push(e);
         }),
-        t
+        n
     );
 }
-function m(e) {
+function g(e) {
     return e && 1 === e.nodeType;
 }
-function g(e, t, n) {
-    var r = e[t];
-    return null == r && void 0 !== n ? n : r;
+function E(e, n, r) {
+    var i = e[n];
+    return null == i && void 0 !== r ? r : i;
 }
 e.exports = function (e) {
     if ((e = e || {}).idHandler)
-        t = {
-            get: function (t) {
-                return e.idHandler.get(t, !0);
+        n = {
+            get: function (n) {
+                return e.idHandler.get(n, !0);
             },
             set: e.idHandler.set
         };
     else {
-        var t, n;
-        t = o({
-            idGenerator: s(),
-            stateHandler: d
+        var n, r;
+        n = l({
+            idGenerator: o(),
+            stateHandler: f
         });
     }
-    var E = e.reporter;
-    !E && (E = l(!1 === E));
-    var v = g(e, 'batchProcessor', c({ reporter: E })),
-        I = {};
-    (I.callOnAdd = !!g(e, 'callOnAdd', !0)), (I.debug = !!g(e, 'debug', !1));
-    var T = a(t),
-        b = i({ stateHandler: d }),
-        S = g(e, 'strategy', 'object'),
-        y = g(e, 'important', !1),
-        A = {
-            reporter: E,
-            batchProcessor: v,
-            stateHandler: d,
-            idHandler: t,
-            important: y
+    var v = e.reporter;
+    !v && (v = u(!1 === v));
+    var I = E(e, 'batchProcessor', d({ reporter: v })),
+        T = {};
+    (T.callOnAdd = !!E(e, 'callOnAdd', !0)), (T.debug = !!E(e, 'debug', !1));
+    var b = s(n),
+        y = a({ stateHandler: f }),
+        S = E(e, 'strategy', 'object'),
+        A = E(e, 'important', !1),
+        N = {
+            reporter: v,
+            batchProcessor: I,
+            stateHandler: f,
+            idHandler: n,
+            important: A
         };
-    if (('scroll' === S && (u.isLegacyOpera() ? (E.warn('Scroll strategy is not supported on legacy Opera. Changing to object strategy.'), (S = 'object')) : u.isIE(9) && (E.warn('Scroll strategy is not supported on IE9. Changing to object strategy.'), (S = 'object'))), 'scroll' === S)) n = _(A);
-    else if ('object' === S) n = f(A);
+    if (('scroll' === S && (c.isLegacyOpera() ? (v.warn('Scroll strategy is not supported on legacy Opera. Changing to object strategy.'), (S = 'object')) : c.isIE(9) && (v.warn('Scroll strategy is not supported on IE9. Changing to object strategy.'), (S = 'object'))), 'scroll' === S)) r = h(N);
+    else if ('object' === S) r = _(N);
     else throw Error('Invalid strategy name: ' + S);
-    var N = {};
+    var C = {};
+    function R(e) {
+        if (!e) return v.error('At least one element is required.');
+        if (g(e)) e = [e];
+        else {
+            if (!p(e)) return v.error('Invalid arguments. Must be a DOM element or a collection of DOM elements.');
+            e = m(e);
+        }
+        i(e, function (e) {
+            b.removeAllListeners(e), r.uninstall(e), f.cleanState(e);
+        });
+    }
+    function O(e) {
+        r.initDocument && r.initDocument(e);
+    }
     return {
-        listenTo: function (e, i, a) {
-            function s(e) {
-                r(T.get(e), function (t) {
-                    t(e);
+        listenTo: function e(e, a, s) {
+            function o(e) {
+                i(b.get(e), function (n) {
+                    n(e);
                 });
             }
-            function o(e, t, n) {
-                T.add(t, n), e && n(t);
+            function l(e, n, r) {
+                b.add(n, r), e && r(n);
             }
-            if ((!a && ((a = i), (i = e), (e = {})), !i)) throw Error('At least one element required.');
-            if (!a) throw Error('Listener required.');
-            if (m(i)) i = [i];
+            if ((!s && ((s = a), (a = e), (e = {})), !a)) throw Error('At least one element required.');
+            if (!s) throw Error('Listener required.');
+            if (g(a)) a = [a];
             else {
-                if (!p(i)) return E.error('Invalid arguments. Must be a DOM element or a collection of DOM elements.');
-                i = h(i);
+                if (!p(a)) return v.error('Invalid arguments. Must be a DOM element or a collection of DOM elements.');
+                a = m(a);
             }
-            var l = 0,
-                u = g(e, 'callOnAdd', I.callOnAdd),
-                c = g(e, 'onReady', function () {}),
-                f = g(e, 'debug', I.debug);
-            r(i, function (e) {
-                !d.getState(e) && (d.initState(e), t.set(e));
-                var _ = t.get(e);
-                if ((f && E.log('Attaching listener to element', _, e), !b.isDetectable(e))) {
-                    if ((f && E.log(_, 'Not detectable.'), b.isBusy(e))) {
-                        f && E.log(_, 'System busy making it detectable'),
-                            o(u, e, a),
-                            (N[_] = N[_] || []),
-                            N[_].push(function () {
-                                ++l === i.length && c();
+            var u = 0,
+                c = E(e, 'callOnAdd', T.callOnAdd),
+                d = E(e, 'onReady', function () {}),
+                _ = E(e, 'debug', T.debug);
+            i(a, function (e) {
+                !f.getState(e) && (f.initState(e), n.set(e));
+                var h = n.get(e);
+                if ((_ && v.log('Attaching listener to element', h, e), !y.isDetectable(e))) {
+                    if ((_ && v.log(h, 'Not detectable.'), y.isBusy(e))) {
+                        _ && v.log(h, 'System busy making it detectable'),
+                            l(c, e, s),
+                            (C[h] = C[h] || []),
+                            C[h].push(function () {
+                                ++u === a.length && d();
                             });
                         return;
                     }
                     return (
-                        f && E.log(_, 'Making detectable...'),
-                        b.markBusy(e, !0),
-                        n.makeDetectable(
+                        _ && v.log(h, 'Making detectable...'),
+                        y.markBusy(e, !0),
+                        r.makeDetectable(
                             {
-                                debug: f,
-                                important: y
+                                debug: _,
+                                important: A
                             },
                             e,
                             function (e) {
-                                if ((f && E.log(_, 'onElementDetectable'), d.getState(e))) {
-                                    b.markAsDetectable(e), b.markBusy(e, !1), n.addListener(e, s), o(u, e, a);
-                                    var t = d.getState(e);
-                                    if (t && t.startSize) {
+                                if ((_ && v.log(h, 'onElementDetectable'), f.getState(e))) {
+                                    y.markAsDetectable(e), y.markBusy(e, !1), r.addListener(e, o), l(c, e, s);
+                                    var n = f.getState(e);
+                                    if (n && n.startSize) {
                                         var p = e.offsetWidth,
-                                            h = e.offsetHeight;
-                                        (t.startSize.width !== p || t.startSize.height !== h) && s(e);
+                                            m = e.offsetHeight;
+                                        (n.startSize.width !== p || n.startSize.height !== m) && o(e);
                                     }
-                                    N[_] &&
-                                        r(N[_], function (e) {
+                                    C[h] &&
+                                        i(C[h], function (e) {
                                             e();
                                         });
-                                } else f && E.log(_, 'Element uninstalled before being detectable.');
-                                delete N[_], ++l === i.length && c();
+                                } else _ && v.log(h, 'Element uninstalled before being detectable.');
+                                delete C[h], ++u === a.length && d();
                             }
                         )
                     );
                 }
-                f && E.log(_, 'Already detecable, adding listener.'), o(u, e, a), l++;
+                _ && v.log(h, 'Already detecable, adding listener.'), l(c, e, s), u++;
             }),
-                l === i.length && c();
+                u === a.length && d();
         },
-        removeListener: T.removeListener,
-        removeAllListeners: T.removeAllListeners,
-        uninstall: function (e) {
-            if (!e) return E.error('At least one element is required.');
-            if (m(e)) e = [e];
-            else {
-                if (!p(e)) return E.error('Invalid arguments. Must be a DOM element or a collection of DOM elements.');
-                e = h(e);
-            }
-            r(e, function (e) {
-                T.removeAllListeners(e), n.uninstall(e), d.cleanState(e);
-            });
-        },
-        initDocument: function (e) {
-            n.initDocument && n.initDocument(e);
-        }
+        removeListener: b.removeListener,
+        removeAllListeners: b.removeAllListeners,
+        uninstall: R,
+        initDocument: O
     };
 };

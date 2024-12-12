@@ -1,100 +1,101 @@
-n.d(t, {
+r.d(n, {
     J: function () {
-        return v;
+        return A;
     }
-}),
-    n(47120),
-    n(610138),
-    n(216116),
-    n(78328),
-    n(815648);
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(812028),
-    l = n(772848),
-    u = n(631467),
-    c = n(210887),
-    d = n(585483),
-    f = n(531826),
-    _ = n(53289),
-    p = n(953101),
-    h = n(701488),
-    m = n(981631),
-    g = n(37796);
-function E(e) {
-    let { url: t, className: n, style: a, onLoad: s, shouldRefocus: g, queryParams: E, allowPopups: v = !1, referrerPolicy: I = 'origin' } = e,
-        T = (0, f.sU)({}),
-        b = (0, o.useMemoOne)(() => (0, l.Z)(), [t]),
-        S = i.useRef(null),
-        y = (0, _.Z)(S, g, null == T ? window : T),
-        A = {
-            ...E,
-            frame_id: b,
-            platform: h.S4.DESKTOP
+});
+var i = r(47120);
+var a = r(610138);
+var s = r(216116);
+var o = r(78328);
+var l = r(815648);
+var u = r(200651),
+    c = r(192379),
+    d = r(120356),
+    f = r.n(d),
+    _ = r(812028),
+    h = r(772848),
+    p = r(631467),
+    m = r(210887),
+    g = r(585483),
+    E = r(531826),
+    v = r(53289),
+    I = r(953101),
+    T = r(701488),
+    b = r(981631),
+    y = r(37796);
+function S(e) {
+    let { url: n, className: r, style: i, onLoad: a, shouldRefocus: s, queryParams: o, allowPopups: l = !1, referrerPolicy: d = 'origin' } = e,
+        f = (0, E.sU)({}),
+        y = (0, _.useMemoOne)(() => (0, h.Z)(), [n]),
+        S = c.useRef(null),
+        A = (0, v.Z)(S, s, null == f ? window : f),
+        N = {
+            ...o,
+            frame_id: y,
+            platform: T.S4.DESKTOP
         },
-        [N, C] = i.useState(!1),
-        R = c.Z.theme,
-        O = { ...a };
+        [C, R] = c.useState(!1),
+        O = m.Z.theme,
+        D = { ...i };
+    function L(e) {
+        var r;
+        null == a || a(e.target), (S.current = e.target), A(!0), null === (r = e.target.contentWindow) || void 0 === r || r.postMessage([p.Z.HELLO, N], null != n ? n : '');
+    }
     return (
-        R === m.BRd.LIGHT ? (O.colorScheme = 'light') : (O.colorScheme = 'dark'),
-        i.useEffect(
+        O === b.BRd.LIGHT ? (D.colorScheme = 'light') : (D.colorScheme = 'dark'),
+        c.useEffect(
             () => (
-                d.S.dispatch(m.CkL.IFRAME_MOUNT, { id: b }),
+                g.S.dispatch(b.CkL.IFRAME_MOUNT, { id: y }),
                 () => {
-                    d.S.dispatch(m.CkL.IFRAME_UNMOUNT, { id: b });
+                    g.S.dispatch(b.CkL.IFRAME_UNMOUNT, { id: y });
                 }
             ),
-            [b]
+            [y]
         ),
-        i.useEffect(() => {
+        c.useEffect(() => {
             let e = (e) => {
-                let { resizing: t } = e;
-                C(t);
+                let { resizing: n } = e;
+                R(n);
             };
             return (
-                d.S.subscribe(m.CkL.MANUAL_IFRAME_RESIZING, e),
+                g.S.subscribe(b.CkL.MANUAL_IFRAME_RESIZING, e),
                 () => {
-                    d.S.unsubscribe(m.CkL.MANUAL_IFRAME_RESIZING, e);
+                    g.S.unsubscribe(b.CkL.MANUAL_IFRAME_RESIZING, e);
                 }
             );
         }, []),
-        N && (O.pointerEvents = 'none'),
-        null != t
-            ? (0, r.jsx)('iframe', {
-                  style: O,
+        C && (D.pointerEvents = 'none'),
+        null != n
+            ? (0, u.jsx)('iframe', {
+                  style: D,
                   allow: 'autoplay; encrypted-media',
-                  referrerPolicy: I,
-                  onLoad: function (e) {
-                      var n;
-                      null == s || s(e.target), (S.current = e.target), y(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([u.Z.HELLO, A], null != t ? t : '');
-                  },
-                  sandbox: (0, p.Z)({ allowPopups: v }),
-                  className: n,
-                  src: ''.concat(t, '?').concat(new URLSearchParams(A))
+                  referrerPolicy: d,
+                  onLoad: L,
+                  sandbox: (0, I.Z)({ allowPopups: l }),
+                  className: r,
+                  src: ''.concat(n, '?').concat(new URLSearchParams(N))
               })
             : null
     );
 }
-function v(e) {
-    let { onLoad: t } = e,
-        [n, a] = i.useState(!1),
-        o = i.useCallback(
+function A(e) {
+    let { onLoad: n } = e,
+        [r, i] = c.useState(!1),
+        a = c.useCallback(
             (e) => {
-                a(!0), null == t || t(e);
+                i(!0), null == n || n(e);
             },
-            [t]
+            [n]
         );
-    return (0, r.jsxs)('div', {
-        className: g.fillParent,
+    return (0, u.jsxs)('div', {
+        className: y.fillParent,
         children: [
-            !n && (0, r.jsx)('div', { className: s()(g.fillParent, g.iframePlaceholder) }),
-            (0, r.jsx)('div', {
-                className: s()(g.fillParent, n ? void 0 : g.hiddenIframeContainer),
-                children: (0, r.jsx)(E, {
+            !r && (0, u.jsx)('div', { className: f()(y.fillParent, y.iframePlaceholder) }),
+            (0, u.jsx)('div', {
+                className: f()(y.fillParent, r ? void 0 : y.hiddenIframeContainer),
+                children: (0, u.jsx)(S, {
                     ...e,
-                    onLoad: o
+                    onLoad: a
                 })
             })
         ]

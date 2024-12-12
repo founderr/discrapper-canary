@@ -1,8 +1,10 @@
-var r = n(236933);
-t.Z = function (e) {
-    var t = (0, r.Z)(e, function (e) {
-            return 500 === n.size && n.clear(), e;
+var i = r(236933),
+    a = 500;
+function s(e) {
+    var n = (0, i.Z)(e, function (e) {
+            return r.size === a && r.clear(), e;
         }),
-        n = t.cache;
-    return t;
-};
+        r = n.cache;
+    return n;
+}
+n.Z = s;

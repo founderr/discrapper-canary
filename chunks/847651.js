@@ -1,32 +1,34 @@
-function n(e) {
-    return 1 === e.length ? '0' + e : e;
-}
-function r(e) {
-    for (var t = '', r = 0; r < e.length; r++) t += n(e[r].toString(16));
-    return t;
-}
-(t.toArray = function (e, t) {
+var r = n;
+function i(e, n) {
     if (Array.isArray(e)) return e.slice();
     if (!e) return [];
-    var n = [];
+    var r = [];
     if ('string' != typeof e) {
-        for (var r = 0; r < e.length; r++) n[r] = 0 | e[r];
-        return n;
+        for (var i = 0; i < e.length; i++) r[i] = 0 | e[i];
+        return r;
     }
-    if ('hex' === t) {
+    if ('hex' === n) {
         (e = e.replace(/[^a-z0-9]+/gi, '')).length % 2 != 0 && (e = '0' + e);
-        for (var r = 0; r < e.length; r += 2) n.push(parseInt(e[r] + e[r + 1], 16));
+        for (var i = 0; i < e.length; i += 2) r.push(parseInt(e[i] + e[i + 1], 16));
     } else
-        for (var r = 0; r < e.length; r++) {
-            var i = e.charCodeAt(r),
-                a = i >> 8,
-                s = 255 & i;
-            a ? n.push(a, s) : n.push(s);
+        for (var i = 0; i < e.length; i++) {
+            var a = e.charCodeAt(i),
+                s = a >> 8,
+                o = 255 & a;
+            s ? r.push(s, o) : r.push(o);
         }
+    return r;
+}
+function a(e) {
+    return 1 === e.length ? '0' + e : e;
+}
+function s(e) {
+    for (var n = '', r = 0; r < e.length; r++) n += a(e[r].toString(16));
     return n;
-}),
-    (t.zero2 = n),
-    (t.toHex = r),
-    (t.encode = function (e, t) {
-        return 'hex' === t ? r(e) : e;
+}
+(r.toArray = i),
+    (r.zero2 = a),
+    (r.toHex = s),
+    (r.encode = function (e, n) {
+        return 'hex' === n ? s(e) : e;
     });

@@ -1,106 +1,108 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return A;
+        return C;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    l = n(315263),
-    u = n(100527),
-    c = n(906732),
-    d = n(617136),
-    f = n(497505),
-    _ = n(626135),
-    p = n(291175),
-    h = n(785717),
-    m = n(221292),
-    g = n(485341),
-    E = n(797321),
-    v = n(228168),
-    I = n(981631),
-    T = n(474936),
-    b = n(388032),
-    S = n(153225);
-let y = (e) => {
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(120356),
+    l = r.n(o),
+    u = r(481060),
+    c = r(315263),
+    d = r(100527),
+    f = r(906732),
+    _ = r(617136),
+    h = r(497505),
+    p = r(626135),
+    m = r(291175),
+    g = r(785717),
+    E = r(221292),
+    v = r(485341),
+    I = r(797321),
+    T = r(228168),
+    b = r(981631),
+    y = r(474936),
+    S = r(388032),
+    A = r(153225);
+let N = (e) => {
     if (null != e)
         switch (e) {
-            case T.VU.PREMIUM_TENURE_1_MONTH:
-                return S.tieredTenureBadgeBronzeGlow;
-            case T.VU.PREMIUM_TENURE_3_MONTH:
-                return S.tieredTenureBadgeSilverGlow;
-            case T.VU.PREMIUM_TENURE_6_MONTH:
-                return S.tieredTenureBadgeGoldGlow;
-            case T.VU.PREMIUM_TENURE_12_MONTH:
-                return S.tieredTenureBadgePlatinumGlow;
-            case T.VU.PREMIUM_TENURE_24_MONTH:
-                return S.tieredTenureBadgeDiamondGlow;
-            case T.VU.PREMIUM_TENURE_36_MONTH:
-                return S.tieredTenureBadgeEmeraldGlow;
-            case T.VU.PREMIUM_TENURE_60_MONTH:
-                return S.tieredTenureBadgeRubyGlow;
-            case T.VU.PREMIUM_TENURE_72_MONTH:
-                return S.tieredTenureBadgeFireGlow;
+            case y.VU.PREMIUM_TENURE_1_MONTH:
+                return A.tieredTenureBadgeBronzeGlow;
+            case y.VU.PREMIUM_TENURE_3_MONTH:
+                return A.tieredTenureBadgeSilverGlow;
+            case y.VU.PREMIUM_TENURE_6_MONTH:
+                return A.tieredTenureBadgeGoldGlow;
+            case y.VU.PREMIUM_TENURE_12_MONTH:
+                return A.tieredTenureBadgePlatinumGlow;
+            case y.VU.PREMIUM_TENURE_24_MONTH:
+                return A.tieredTenureBadgeDiamondGlow;
+            case y.VU.PREMIUM_TENURE_36_MONTH:
+                return A.tieredTenureBadgeEmeraldGlow;
+            case y.VU.PREMIUM_TENURE_60_MONTH:
+                return A.tieredTenureBadgeRubyGlow;
+            case y.VU.PREMIUM_TENURE_72_MONTH:
+                return A.tieredTenureBadgeFireGlow;
             default:
                 return;
         }
 };
-function A(e) {
-    let { badges: t, className: n, badgeClassName: a, onClose: T } = e,
-        { analyticsLocations: A } = (0, c.ZP)(u.Z.BADGE),
-        { context: N, trackUserProfileAction: C } = (0, h.KZ)(),
-        [R, O] = i.useState(!1);
-    return (0, r.jsx)('div', {
-        className: s()(S.container, n),
-        'aria-label': b.intl.string(b.t.VWV0y8),
+function C(e) {
+    let { badges: n, className: r, badgeClassName: i, onClose: o } = e,
+        { analyticsLocations: y } = (0, f.ZP)(d.Z.BADGE),
+        { context: C, trackUserProfileAction: R } = (0, g.KZ)(),
+        [O, D] = s.useState(!1);
+    return (0, a.jsx)('div', {
+        className: l()(A.container, r),
+        'aria-label': S.intl.string(S.t.VWV0y8),
         role: 'group',
-        children: t.map((e) => {
-            let t = (0, p.gn)(e.id),
-                n = y(t),
-                i = null != t && R;
-            return (0, r.jsx)(
-                o.TooltipContainer,
+        children: n.map((e) => {
+            let n = (n) => {
+                    R({ action: 'PRESS_BADGE' }),
+                        (0, E.NE)({
+                            badge: e.id,
+                            analyticsLocations: y,
+                            ...C
+                        });
+                    let r = null != e.link ? (0, c.default)(e.link, { analyticsLocations: y }) : null;
+                    if (null != r) return null == o || o(), r(n);
+                },
+                r = () => {
+                    e.id === v.i && p.default.track(b.rMx.QUEST_CONTENT_VIEWED, { ...(0, _.mH)(h.jn.QUEST_BADGE) }),
+                        R({ action: 'HOVER_BADGE' }),
+                        (0, E.Qf)({
+                            badge: e.id,
+                            analyticsLocations: y,
+                            ...C
+                        });
+                },
+                s = (0, m.gn)(e.id),
+                d = N(s),
+                f = null != s && O;
+            return (0, a.jsx)(
+                u.TooltipContainer,
                 {
                     text: e.description,
-                    delay: v.vB,
-                    tooltipClassName: n,
-                    onTooltipShow: () => O(null != t),
-                    onTooltipHide: () => O(!1),
-                    children: (0, r.jsxs)(o.Anchor, {
-                        onClick: (t) => {
-                            C({ action: 'PRESS_BADGE' }),
-                                (0, m.NE)({
-                                    badge: e.id,
-                                    analyticsLocations: A,
-                                    ...N
-                                });
-                            let n = null != e.link ? (0, l.default)(e.link, { analyticsLocations: A }) : null;
-                            if (null != n) return null == T || T(), n(t);
-                        },
-                        onMouseEnter: () => {
-                            e.id === g.i && _.default.track(I.rMx.QUEST_CONTENT_VIEWED, { ...(0, d.mH)(f.jn.QUEST_BADGE) }),
-                                C({ action: 'HOVER_BADGE' }),
-                                (0, m.Qf)({
-                                    badge: e.id,
-                                    analyticsLocations: A,
-                                    ...N
-                                });
-                        },
+                    delay: T.vB,
+                    tooltipClassName: d,
+                    onTooltipShow: () => D(null != s),
+                    onTooltipHide: () => D(!1),
+                    children: (0, a.jsxs)(u.Anchor, {
+                        onClick: n,
+                        onMouseEnter: r,
                         href: e.link,
                         children: [
-                            (0, r.jsx)('img', {
+                            (0, a.jsx)('img', {
                                 alt: ' ',
                                 'aria-hidden': !0,
-                                src: (0, v.jC)(e.icon),
-                                className: s()(S.badge, a)
+                                src: (0, T.jC)(e.icon),
+                                className: l()(A.badge, i)
                             }),
-                            i &&
-                                (0, r.jsxs)('div', {
-                                    className: S.starContainer,
-                                    children: [(0, r.jsx)(E.Z, { className: S.topLeftStar }), (0, r.jsx)(E.Z, { className: S.bottomRightStar })]
+                            f &&
+                                (0, a.jsxs)('div', {
+                                    className: A.starContainer,
+                                    children: [(0, a.jsx)(I.Z, { className: A.topLeftStar }), (0, a.jsx)(I.Z, { className: A.bottomRightStar })]
                                 })
                         ]
                     })

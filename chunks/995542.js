@@ -1,40 +1,54 @@
-var r = n(56135),
-    i = n(888968),
-    a = n(649786),
-    s = n(718332),
-    o = n(320114),
-    l = n(82075),
-    u = r ? r.prototype : void 0,
-    c = u ? u.valueOf : void 0;
-e.exports = function (e, t, n, r, u, d, f) {
-    switch (n) {
-        case '[object DataView]':
-            if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset) break;
-            (e = e.buffer), (t = t.buffer);
-        case '[object ArrayBuffer]':
-            if (e.byteLength != t.byteLength || !d(new i(e), new i(t))) break;
+var i = r(56135),
+    a = r(888968),
+    s = r(649786),
+    o = r(718332),
+    l = r(320114),
+    u = r(82075),
+    c = 1,
+    d = 2,
+    f = '[object Boolean]',
+    _ = '[object Date]',
+    h = '[object Error]',
+    p = '[object Map]',
+    m = '[object Number]',
+    g = '[object RegExp]',
+    E = '[object Set]',
+    v = '[object String]',
+    I = '[object Symbol]',
+    T = '[object ArrayBuffer]',
+    b = '[object DataView]',
+    y = i ? i.prototype : void 0,
+    S = y ? y.valueOf : void 0;
+function A(e, n, r, i, y, A, N) {
+    switch (r) {
+        case b:
+            if (e.byteLength != n.byteLength || e.byteOffset != n.byteOffset) break;
+            (e = e.buffer), (n = n.buffer);
+        case T:
+            if (e.byteLength != n.byteLength || !A(new a(e), new a(n))) break;
             return !0;
-        case '[object Boolean]':
-        case '[object Date]':
-        case '[object Number]':
-            return a(+e, +t);
-        case '[object Error]':
-            return e.name == t.name && e.message == t.message;
-        case '[object RegExp]':
-        case '[object String]':
-            return e == t + '';
-        case '[object Map]':
-            var _ = o;
-        case '[object Set]':
-            var p = 1 & r;
-            if ((_ || (_ = l), e.size != t.size && !p)) break;
-            var h = f.get(e);
-            if (h) return h == t;
-            (r |= 2), f.set(e, t);
-            var m = s(_(e), _(t), r, u, d, f);
-            return f.delete(e), m;
-        case '[object Symbol]':
-            if (c) return c.call(e) == c.call(t);
+        case f:
+        case _:
+        case m:
+            return s(+e, +n);
+        case h:
+            return e.name == n.name && e.message == n.message;
+        case g:
+        case v:
+            return e == n + '';
+        case p:
+            var C = l;
+        case E:
+            var R = i & c;
+            if ((C || (C = u), e.size != n.size && !R)) break;
+            var O = N.get(e);
+            if (O) return O == n;
+            (i |= d), N.set(e, n);
+            var D = o(C(e), C(n), i, y, A, N);
+            return N.delete(e), D;
+        case I:
+            if (S) return S.call(e) == S.call(n);
     }
     return !1;
-};
+}
+e.exports = A;

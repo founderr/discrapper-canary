@@ -1,79 +1,80 @@
-n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(913527),
-    s = n.n(a),
-    o = n(442837),
-    l = n(433517),
-    u = n(481060),
-    c = n(355467),
-    d = n(230711),
-    f = n(436774),
-    _ = n(78839),
-    p = n(74538),
-    h = n(543241),
-    m = n(981631),
-    g = n(474936),
-    E = n(388032),
-    v = n(888084);
-let I = 'premiumRetentionEmojiPickerNotice',
-    T = l.K.get(I);
-t.Z = (e) => {
-    let { closePopout: t, channel: n } = e,
-        [a, b] = i.useState(!1),
-        { subscription: S, hasFetchedSubscriptions: y } = (0, o.cj)([_.ZP], () => ({
-            subscription: _.ZP.getPremiumSubscription(),
-            hasFetchedSubscriptions: _.ZP.hasFetchedSubscriptions()
-        }));
-    if (
-        (i.useEffect(() => {
-            !y && (0, c.jg)();
-        }, [y]),
-        null == S || !(0, p.zV)(S.status) || a)
-    )
-        return null;
-    let A = S.status === m.O0b.PAST_DUE ? (0, p.lY)(S).expiresDate : s()(S.currentPeriodStart).add(g.gh),
-        N = ''.concat(S.id, ':').concat(A.toISOString());
-    if (T === N) return null;
-    let C = p.ZP.getPremiumType(S.planId) === g.p9.TIER_0 ? f.JX.PREMIUM_TIER_0 : p.ZP.getPremiumType(S.planId) === g.p9.TIER_1 ? f.JX.PREMIUM_TIER_1 : f.JX.PREMIUM_TIER_2;
-    return (0, r.jsxs)('div', {
-        className: v.premiumRetentionNotice,
-        children: [
-            (0, r.jsx)(u.NitroWheelIcon, {
-                size: 'md',
-                className: v.premiumRetentionNoticeIcon,
-                color: C
-            }),
-            (0, r.jsxs)('div', {
-                className: v.premiumRetentionNoticeContent,
-                children: [
-                    (0, r.jsx)(u.Text, {
-                        variant: 'text-xs/normal',
-                        children: E.intl.format(E.t.bTMjiI, {
-                            planName: p.ZP.getDisplayPremiumType(S.planId),
-                            endsAt: A.toDate()
-                        })
-                    }),
-                    (0, r.jsx)('div', {
-                        children: (0, r.jsx)(u.Anchor, {
-                            onClick: () => {
-                                (0, h.A3)(n), t(), d.Z.open(m.oAB.PREMIUM);
-                            },
-                            children: E.intl.string(E.t.W3aavr)
-                        })
-                    })
-                ]
-            }),
-            (0, r.jsx)(u.Clickable, {
-                onClick: () => {
-                    l.K.set(I, N), (T = N), b(!0);
-                },
-                children: (0, r.jsx)(u.XSmallIcon, {
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(913527),
+    l = r.n(o),
+    u = r(442837),
+    c = r(433517),
+    d = r(481060),
+    f = r(355467),
+    _ = r(230711),
+    h = r(436774),
+    p = r(78839),
+    m = r(74538),
+    g = r(543241),
+    E = r(981631),
+    v = r(474936),
+    I = r(388032),
+    T = r(888084);
+let b = 'premiumRetentionEmojiPickerNotice',
+    y = c.K.get(b),
+    S = (e) => {
+        let { closePopout: n, channel: r } = e,
+            [i, o] = s.useState(!1),
+            { subscription: S, hasFetchedSubscriptions: A } = (0, u.cj)([p.ZP], () => ({
+                subscription: p.ZP.getPremiumSubscription(),
+                hasFetchedSubscriptions: p.ZP.hasFetchedSubscriptions()
+            }));
+        if (
+            (s.useEffect(() => {
+                !A && (0, f.jg)();
+            }, [A]),
+            null == S || !(0, m.zV)(S.status) || i)
+        )
+            return null;
+        let N = S.status === E.O0b.PAST_DUE ? (0, m.lY)(S).expiresDate : l()(S.currentPeriodStart).add(v.gh),
+            C = ''.concat(S.id, ':').concat(N.toISOString());
+        if (y === C) return null;
+        let R = m.ZP.getPremiumType(S.planId) === v.p9.TIER_0 ? h.JX.PREMIUM_TIER_0 : m.ZP.getPremiumType(S.planId) === v.p9.TIER_1 ? h.JX.PREMIUM_TIER_1 : h.JX.PREMIUM_TIER_2;
+        return (0, a.jsxs)('div', {
+            className: T.premiumRetentionNotice,
+            children: [
+                (0, a.jsx)(d.NitroWheelIcon, {
                     size: 'md',
-                    color: 'currentColor',
-                    className: v.premiumRetentionNoticeClose
+                    className: T.premiumRetentionNoticeIcon,
+                    color: R
+                }),
+                (0, a.jsxs)('div', {
+                    className: T.premiumRetentionNoticeContent,
+                    children: [
+                        (0, a.jsx)(d.Text, {
+                            variant: 'text-xs/normal',
+                            children: I.intl.format(I.t.bTMjiI, {
+                                planName: m.ZP.getDisplayPremiumType(S.planId),
+                                endsAt: N.toDate()
+                            })
+                        }),
+                        (0, a.jsx)('div', {
+                            children: (0, a.jsx)(d.Anchor, {
+                                onClick: () => {
+                                    (0, g.A3)(r), n(), _.Z.open(E.oAB.PREMIUM);
+                                },
+                                children: I.intl.string(I.t.W3aavr)
+                            })
+                        })
+                    ]
+                }),
+                (0, a.jsx)(d.Clickable, {
+                    onClick: () => {
+                        c.K.set(b, C), (y = C), o(!0);
+                    },
+                    children: (0, a.jsx)(d.XSmallIcon, {
+                        size: 'md',
+                        color: 'currentColor',
+                        className: T.premiumRetentionNoticeClose
+                    })
                 })
-            })
-        ]
-    });
-};
+            ]
+        });
+    };
+n.Z = S;

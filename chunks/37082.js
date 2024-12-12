@@ -1,24 +1,79 @@
-let r;
-n.d(t, {
+let i;
+function a(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+r.d(n, {
     R: function () {
-        return i;
+        return l;
     },
     y: function () {
-        return a;
+        return u;
     }
 });
 try {
-    r = window.localStorage;
+    i = window.localStorage;
 } catch (e) {}
 try {
     delete window.localStorage;
 } catch (e) {}
-class i {
-    get(e, t) {
-        return this.storage.hasOwnProperty(e) ? this.storage[e] : t;
+function s() {
+    let e = 'test';
+    try {
+        return i.setItem(e, e), i.removeItem(e), !0;
+    } catch (e) {
+        return !1;
     }
-    set(e, t) {
-        this.storage[e] = t;
+}
+class o {
+    get(e, n) {
+        let r = i.getItem(e);
+        if (null != r)
+            try {
+                r = JSON.parse(r);
+            } catch (e) {
+                r = n;
+            }
+        else r = n;
+        return r;
+    }
+    set(e, n) {
+        i.setItem(e, JSON.stringify(n));
+    }
+    remove(e) {
+        i.removeItem(e);
+    }
+    clear() {
+        i.clear();
+    }
+    stringify() {
+        return JSON.stringify(i || {});
+    }
+    asyncGetRaw(e, n) {
+        return Promise.resolve(i.getItem(e));
+    }
+    setRaw(e, n) {
+        i.setItem(e, n);
+    }
+    getAfterRefresh(e) {
+        return Promise.resolve(this.get(e));
+    }
+}
+class l {
+    get(e, n) {
+        return this.storage.hasOwnProperty(e) ? this.storage[e] : n;
+    }
+    set(e, n) {
+        this.storage[e] = n;
     }
     remove(e) {
         delete this.storage[e];
@@ -29,70 +84,17 @@ class i {
     stringify() {
         return JSON.stringify(this.storage);
     }
-    asyncGetRaw(e, t) {
-        return Promise.resolve(r.getItem(e));
+    asyncGetRaw(e, n) {
+        return Promise.resolve(i.getItem(e));
     }
-    setRaw(e, t) {
-        r.setItem(e, t);
+    setRaw(e, n) {
+        i.setItem(e, n);
     }
     getAfterRefresh(e) {
         return Promise.resolve(this.get(e));
     }
     constructor() {
-        var e, t, n;
-        (e = this),
-            (n = void 0),
-            (t = 'storage') in e
-                ? Object.defineProperty(e, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (e[t] = n),
-            (this.storage = {});
+        a(this, 'storage', void 0), (this.storage = {});
     }
 }
-let a = !(function () {
-    let e = 'test';
-    try {
-        return r.setItem(e, e), r.removeItem(e), !0;
-    } catch (e) {
-        return !1;
-    }
-})()
-    ? new i()
-    : new (class e {
-          get(e, t) {
-              let n = r.getItem(e);
-              if (null != n)
-                  try {
-                      n = JSON.parse(n);
-                  } catch (e) {
-                      n = t;
-                  }
-              else n = t;
-              return n;
-          }
-          set(e, t) {
-              r.setItem(e, JSON.stringify(t));
-          }
-          remove(e) {
-              r.removeItem(e);
-          }
-          clear() {
-              r.clear();
-          }
-          stringify() {
-              return JSON.stringify(r || {});
-          }
-          asyncGetRaw(e, t) {
-              return Promise.resolve(r.getItem(e));
-          }
-          setRaw(e, t) {
-              r.setItem(e, t);
-          }
-          getAfterRefresh(e) {
-              return Promise.resolve(this.get(e));
-          }
-      })();
+let u = s() ? new o() : new l();

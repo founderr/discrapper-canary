@@ -1,47 +1,48 @@
-n.d(t, {
+r.d(n, {
     f: function () {
-        return p;
+        return m;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(512722),
-    a = n.n(i),
-    s = n(442837),
-    o = n(100527),
-    l = n(906732),
-    u = n(84615),
-    c = n(430824),
-    d = n(594174),
-    f = n(443002);
-let _ = (e) => {
-    let { guildId: t, close: n, location: i } = e,
-        u = (0, s.e7)([d.default], () => d.default.getCurrentUser());
-    a()(null != u, 'PremiumGuildPerksModalConnected: currentUser cannot be undefined');
-    let _ = (0, s.e7)([c.Z], () => c.Z.getGuild(t), [t]),
-        { analyticsLocations: p } = (0, l.ZP)(o.Z.BOOSTED_GUILD_PERKS_MODAL);
-    return null == _
-        ? null
-        : (0, r.jsx)(l.Gt, {
-              value: p,
-              children: (0, r.jsx)(f.Z, {
-                  analyticsLocation: i,
-                  onClose: n,
-                  guild: _
-              })
-          });
-};
-function p(e) {
-    let { guildId: t, location: n } = e;
-    (0, u.q4)(
+var i = r(200651);
+r(192379);
+var a = r(512722),
+    s = r.n(a),
+    o = r(442837),
+    l = r(100527),
+    u = r(906732),
+    c = r(84615),
+    d = r(430824),
+    f = r(594174),
+    _ = r(443002);
+let h = 'BoostedGuildPerksModalConnected',
+    p = (e) => {
+        let { guildId: n, close: r, location: a } = e,
+            c = (0, o.e7)([f.default], () => f.default.getCurrentUser());
+        s()(null != c, 'PremiumGuildPerksModalConnected: currentUser cannot be undefined');
+        let h = (0, o.e7)([d.Z], () => d.Z.getGuild(n), [n]),
+            { analyticsLocations: p } = (0, u.ZP)(l.Z.BOOSTED_GUILD_PERKS_MODAL);
+        return null == h
+            ? null
+            : (0, i.jsx)(u.Gt, {
+                  value: p,
+                  children: (0, i.jsx)(_.Z, {
+                      analyticsLocation: a,
+                      onClose: r,
+                      guild: h
+                  })
+              });
+    };
+function m(e) {
+    let { guildId: n, location: r } = e;
+    (0, c.q4)(
         (e) => {
-            let { closeLayer: i } = e;
-            return (0, r.jsx)(_, {
-                close: i,
-                guildId: t,
-                location: n
+            let { closeLayer: a } = e;
+            return (0, i.jsx)(p, {
+                close: a,
+                guildId: n,
+                location: r
             });
         },
-        { layerKey: 'BoostedGuildPerksModalConnected' }
+        { layerKey: h }
     );
 }

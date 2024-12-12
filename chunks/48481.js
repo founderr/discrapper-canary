@@ -1,140 +1,142 @@
-n.d(t, {
+r.d(n, {
     Uc: function () {
-        return f;
-    },
-    ac: function () {
         return m;
     },
-    cv: function () {
-        return g;
-    },
-    d5: function () {
-        return h;
-    },
-    i7: function () {
-        return T;
-    },
-    kI: function () {
-        return p;
-    },
-    re: function () {
-        return v;
-    },
-    tU: function () {
-        return y;
-    },
-    u0: function () {
+    ac: function () {
         return I;
     },
-    uL: function () {
-        return b;
+    cv: function () {
+        return T;
     },
-    xU: function () {
+    d5: function () {
+        return v;
+    },
+    i7: function () {
+        return N;
+    },
+    kI: function () {
         return E;
     },
+    re: function () {
+        return y;
+    },
+    tU: function () {
+        return O;
+    },
+    u0: function () {
+        return A;
+    },
+    uL: function () {
+        return C;
+    },
+    xU: function () {
+        return b;
+    },
     xt: function () {
-        return S;
+        return R;
     }
-}),
-    n(411104),
-    n(47120),
-    n(653041);
-var r = n(647943),
-    i = n(581282),
-    a = n(392711),
-    s = n.n(a),
-    o = n(377108),
-    l = n(524437),
-    u = n(397696),
-    c = n(526761),
-    d = n(981631);
-let f = { readerFactory: (e) => new r.o(e, new TextDecoder('utf-8')) },
-    _ = {
-        [c.yP.PRELOADED_USER_SETTINGS]: l.o8,
-        [c.yP.FRECENCY_AND_FAVORITES_SETTINGS]: o.ji
+});
+var i = r(411104);
+var a = r(47120);
+var s = r(653041);
+var o = r(647943),
+    l = r(581282),
+    u = r(392711),
+    c = r.n(u),
+    d = r(377108),
+    f = r(524437),
+    _ = r(397696),
+    h = r(526761),
+    p = r(981631);
+let m = { readerFactory: (e) => new o.o(e, new TextDecoder('utf-8')) },
+    g = {
+        [h.yP.PRELOADED_USER_SETTINGS]: f.o8,
+        [h.yP.FRECENCY_AND_FAVORITES_SETTINGS]: d.ji
     };
-function p(e, t) {
-    return null != t && e in _ ? h(_[e], t) : null;
+function E(e, n) {
+    return null != n && e in g ? v(g[e], n) : null;
 }
-function h(e, t) {
-    if (null == t) return null;
-    let n = (0, i.c)(t);
+function v(e, n) {
+    if (null == n) return null;
+    let r = (0, l.c)(n);
     try {
-        return e.fromBinary(n, f);
+        return e.fromBinary(r, m);
     } catch (e) {
         throw Error('Settings proto failed to deserialize (potentially corrupt): '.concat(e));
     }
 }
-function m(e) {
-    return h(l.o8, e);
+function I(e) {
+    return v(f.o8, e);
 }
-function g(e, t) {
-    return E(_[e], t);
+function T(e, n) {
+    return b(g[e], n);
 }
-function E(e, t) {
-    return (0, i.m)(e.toBinary(t));
+function b(e, n) {
+    return (0, l.m)(e.toBinary(n));
 }
-function v(e, t, n) {
-    for (let e in ((t = { ...t }), n)) delete t[e];
-    return e.mergePartial(t, n), t;
+function y(e, n, r) {
+    for (let e in ((n = { ...n }), r)) delete n[e];
+    return e.mergePartial(n, r), n;
 }
-function I(e, t, n) {
-    return (null == t || 'null' === t) && (t = d.aIL), !(t in e.guilds) && (e.guilds[t] = l.C4.create()), n(e.guilds[t]);
+function S(e, n, r) {
+    return null == e.guilds && (e.guilds = f.os.create()), A(e.guilds, n, r);
 }
-function T(e, t, n, r) {
-    var i, a, s;
-    return (i = e), (a = t), (s = (e) => b(e, n, r)), null == i.guilds && (i.guilds = l.os.create()), I(i.guilds, a, s);
+function A(e, n, r) {
+    return (null == n || 'null' === n) && (n = p.aIL), !(n in e.guilds) && (e.guilds[n] = f.C4.create()), r(e.guilds[n]);
 }
-function b(e, t, n) {
-    return !(t in e.channels) && (e.channels[t] = l.p5.create()), n(e.channels[t]);
+function N(e, n, r, i) {
+    return S(e, n, (e) => C(e, r, i));
 }
-function S(e, t) {
-    null == e.versions && (e.versions = u.L.create());
-    let n = 0;
-    for (let e of t) {
-        if (e.version <= n) throw Error('Migrations are out of order or there is a duplicate version');
-        n = e.version;
+function C(e, n, r) {
+    return !(n in e.channels) && (e.channels[n] = f.p5.create()), r(e.channels[n]);
+}
+function R(e, n) {
+    null == e.versions && (e.versions = _.L.create());
+    let r = 0;
+    for (let e of n) {
+        if (e.version <= r) throw Error('Migrations are out of order or there is a duplicate version');
+        r = e.version;
     }
-    let r = 0.1 > Math.random(),
-        i = !1,
-        a = [];
-    for (let n of t) {
-        var s, o;
-        if (n.version <= e.versions.clientVersion) {
-            r && (null === (s = n.cleanup) || void 0 === s || s.call(n));
+    let i = 0.1 > Math.random(),
+        a = !1,
+        s = [];
+    for (let r of n) {
+        var o, l;
+        if (r.version <= e.versions.clientVersion) {
+            i && (null === (o = r.cleanup) || void 0 === o || o.call(r));
             continue;
         }
-        let t = n.run(e);
-        if (((e.versions.clientVersion = n.version), !1 === t)) {
-            null === (o = n.cleanup) || void 0 === o || o.call(n);
+        let n = r.run(e);
+        if (((e.versions.clientVersion = r.version), !1 === n)) {
+            null === (l = r.cleanup) || void 0 === l || l.call(r);
             continue;
         }
-        (i = !0), null != n.cleanup && a.push(n.cleanup);
+        (a = !0), null != r.cleanup && s.push(r.cleanup);
     }
     return {
         proto: e,
-        isDirty: i,
-        cleanupFuncs: a
+        isDirty: a,
+        cleanupFuncs: s
     };
 }
-function y(e, t) {
-    let n = Object.entries(e);
-    if (n.length > t)
+function O(e, n) {
+    let r = Object.entries(e);
+    if (r.length > n)
         for (
-            n = s()
-                .sortBy(n, (e) => {
-                    let [t, n] = e;
-                    return n.recentUses[n.recentUses.length - 1];
+            r = c()
+                .sortBy(r, (e) => {
+                    let [n, r] = e;
+                    return r.recentUses[r.recentUses.length - 1];
                 })
                 .reverse();
-            n.length > t;
+            r.length > n;
 
         )
-            n.pop();
-    let r = {};
-    for (let [e, t] of n) {
-        let n = o._F.create();
-        (n.frecency = t.frecency), (n.recentUses = t.recentUses.filter((e) => null != e && e > 0).map(String)), (n.score = Math.round(t.score)), (n.totalUses = t.totalUses), (r[e] = n);
+            r.pop();
+    let i = {};
+    for (let [e, n] of r) {
+        let r = d._F.create();
+        (r.frecency = n.frecency), (r.recentUses = n.recentUses.filter((e) => null != e && e > 0).map(String)), (r.score = Math.round(n.score)), (r.totalUses = n.totalUses), (i[e] = r);
     }
-    return r;
+    return i;
 }

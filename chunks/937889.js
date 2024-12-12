@@ -1,185 +1,212 @@
-n.d(t, {
+r.d(n, {
     ZP: function () {
-        return p;
+        return T;
     },
     k$: function () {
-        return h;
+        return S;
     },
     n0: function () {
-        return _;
+        return I;
     },
     p6: function () {
-        return f;
+        return g;
     },
     rs: function () {
-        return d;
+        return m;
     }
-}),
-    n(47120),
-    n(757143),
-    n(865427);
-var r = n(830121),
-    i = n(202131),
-    a = n(454585);
-n(665430);
-var s = n(55406),
-    o = n(408433),
-    l = n(981631);
-let u = new Set([l.hBH.IMAGE, l.hBH.GIFV]),
-    c = new Set(['strong', 'em', 'u', 'text', 'inlineCode', 's', 'spoiler']);
-function d(e, t) {
-    let n = f({
+});
+var i = r(47120);
+var a = r(757143);
+var s = r(865427),
+    o = r(830121),
+    l = r(202131),
+    u = r(454585);
+r(665430);
+var c = r(55406),
+    d = r(408433),
+    f = r(981631);
+let _ = 30,
+    h = new Set([f.hBH.IMAGE, f.hBH.GIFV]),
+    p = new Set(['strong', 'em', 'u', 'text', 'inlineCode', 's', 'spoiler']);
+function m(e, n) {
+    let r = g({
             channelId: e.channel_id,
             messageId: e.id,
-            renderOptions: t
+            renderOptions: n
         }),
-        r = null != e.webhookId;
+        i = null != e.webhookId;
     return {
-        ...n,
-        allowLinks: r || n.allowLinks,
-        allowEmojiLinks: r,
+        ...r,
+        allowLinks: i || r.allowLinks,
+        allowEmojiLinks: i,
         mentionChannels: e.mentionChannels
     };
 }
-function f(e) {
-    let { channelId: t, messageId: n, renderOptions: r } = e;
+function g(e) {
+    let { channelId: n, messageId: r, renderOptions: i } = e;
     return {
-        channelId: t,
-        messageId: n,
-        allowLinks: !!r.allowLinks,
-        allowDevLinks: !!r.allowDevLinks,
-        formatInline: !!r.formatInline,
-        noStyleAndInteraction: !!r.noStyleAndInteraction,
-        allowHeading: !!r.allowHeading,
-        allowList: !!r.allowList,
-        previewLinkTarget: !!r.previewLinkTarget,
-        disableAnimatedEmoji: !!r.disableAnimatedEmoji,
-        isInteracting: !!r.isInteracting,
+        channelId: n,
+        messageId: r,
+        allowLinks: !!i.allowLinks,
+        allowDevLinks: !!i.allowDevLinks,
+        formatInline: !!i.formatInline,
+        noStyleAndInteraction: !!i.noStyleAndInteraction,
+        allowHeading: !!i.allowHeading,
+        allowList: !!i.allowList,
+        previewLinkTarget: !!i.previewLinkTarget,
+        disableAnimatedEmoji: !!i.disableAnimatedEmoji,
+        isInteracting: !!i.isInteracting,
         allowEmojiLinks: !1,
         disableAutoBlockNewlines: !0,
         mentionChannels: [],
         muted: !1,
         unknownUserMentionPlaceholder: !0,
-        viewingChannelId: r.viewingChannelId,
-        forceWhite: !!r.forceWhite
+        viewingChannelId: i.viewingChannelId,
+        forceWhite: !!i.forceWhite
     };
 }
-function _(e, t, n) {
+function E(e, n, r) {
+    var i;
+    let { toAST: a = !1, hideSimpleEmbedContent: s = !0, formatInline: o = !1, postProcessor: u, shouldFilterKeywords: c, contentMessage: d } = r,
+        f = !1,
+        _ = (null != d ? d : n).content,
+        h = e(
+            c
+                ? (0, l.N)(_, {
+                      escapeReplacement: !0,
+                      messageId: n.id,
+                      channelId: n.channel_id,
+                      authorId: null === (i = n.author) || void 0 === i ? void 0 : i.id
+                  })
+                : _,
+            !0,
+            m(n, r),
+            (e, r) => (!Array.isArray(e) && (e = [e]), s && (e = D(e, (null != d ? d : n).embeds)), !o && (e = A(e, r)), (e = v(e)), n.embeds.length > 0 && (f = C(e, r)), o && (e = L(e)), null != u && (e = u(e, r)), e)
+        );
+    return {
+        hasSpoilerEmbeds: f,
+        content: h
+    };
+}
+function v(e) {
+    let n = e.some((e) => 'link' !== e.type || !1);
+    return e.filter((e) => {
+        let r = 'link' === e.type,
+            i = null != (0, o.el)(e.target);
+        return !(r && i && !n);
+    });
+}
+function I(e, n, r) {
     return {
         hasSpoilerEmbeds: !1,
-        content: a.Z.reactParserFor(s.Z.getDefaultRules(t))(e.content, !1, null != n ? { changeLog: n } : {})
+        content: u.Z.reactParserFor(c.Z.getDefaultRules(n))(e.content, !1, null != r ? { changeLog: r } : {})
     };
 }
-function p(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    return (function (e, t, n) {
-        var a;
-        let { toAST: s = !1, hideSimpleEmbedContent: l = !0, formatInline: f = !1, postProcessor: _, shouldFilterKeywords: p, contentMessage: h } = n,
-            g = !1,
-            v = (null != h ? h : t).content,
-            I = e(
-                p
-                    ? (0, i.N)(v, {
-                          escapeReplacement: !0,
-                          messageId: t.id,
-                          channelId: t.channel_id,
-                          authorId: null === (a = t.author) || void 0 === a ? void 0 : a.id
-                      })
-                    : v,
-                !0,
-                d(t, n),
-                (e, n) => (
-                    !Array.isArray(e) && (e = [e]),
-                    l &&
-                        (e = (function (e, t) {
-                            if (1 !== e.length || 1 !== t.length) return e;
-                            let n = e[0],
-                                r = t[0];
-                            return ('link' === n.type || 'attachmentLink' === n.type) && u.has(r.type) && (0, o.dY)(r) ? [] : e;
-                        })(e, (null != h ? h : t).embeds)),
-                    !f &&
-                        (e = (function (e, t) {
-                            return t ? m(e) : ('paragraph' === e[0].type && e[0].content instanceof Array && (e[0].content = m(e[0].content)), e);
-                        })(e, n)),
-                    (e = (function (e) {
-                        let t = e.some((e) => 'link' !== e.type || !1);
-                        return e.filter((e) => {
-                            let n = 'link' === e.type,
-                                i = (0, r.el)(e.target);
-                            return !(n && null != i && !t);
-                        });
-                    })(e)),
-                    t.embeds.length > 0 &&
-                        (g = (function (e, t) {
-                            return t ? E(e) : 'paragraph' === e[0].type && e[0].content instanceof Array && E(e[0].content);
-                        })(e, n)),
-                    f &&
-                        (e = (function e(t) {
-                            return (
-                                t.forEach((t) => {
-                                    c.has(t.type) && null != t.content && (Array.isArray(t.content) ? e(t.content) : (t.content = t.content.replace(/\n/g, ' ')));
-                                }),
-                                t
-                            );
-                        })(e)),
-                    null != _ && (e = _(e, n)),
-                    e
-                )
-            );
-        return {
-            hasSpoilerEmbeds: g,
-            content: I
-        };
-    })(t.formatInline ? a.Z.parseInlineReply : a.Z.parse, e, t);
+function T(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    return E(n.formatInline ? u.Z.parseInlineReply : u.Z.parse, e, n);
 }
-function h(e, t, n) {
-    var r;
-    return (
-        (r = a.Z.parseAutoModerationSystemMessage),
-        r(
-            e,
-            !0,
-            {
-                allowLinks: !1,
-                allowDevLinks: !1,
-                allowEmojiLinks: !1,
-                mentionChannels: [],
-                isInteracting: !1,
-                formatInline: !1,
-                noStyleAndInteraction: !1,
-                allowHeading: !1,
-                allowList: !1,
-                disableAutoBlockNewlines: !0,
-                highlightWord: t,
-                disableAnimatedEmoji: !1,
-                channelId: n,
-                muted: !1
-            },
-            (e) => (!Array.isArray(e) && (e = [e]), e)
-        )
+function b(e, n) {
+    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        { content: i, guildId: a, channelId: s, messageId: o } = n,
+        l = {
+            allowLinks: !1,
+            allowDevLinks: !1,
+            allowEmojiLinks: !1,
+            mentionChannels: [],
+            isInteracting: !1,
+            formatInline: !0,
+            noStyleAndInteraction: !1,
+            allowHeading: !1,
+            allowList: !1,
+            disableAutoBlockNewlines: !0,
+            previewLinkTarget: !1,
+            disableAnimatedEmoji: !0,
+            guildId: a,
+            channelId: s,
+            muted: !1,
+            disablePressableChannelMention: !0
+        };
+    return e(
+        (null == r ? void 0 : r.shouldFilterKeywords)
+            ? getKeywordSubstitutedContent(i, {
+                  escapeReplacement: !0,
+                  channelId: s,
+                  messageId: o
+              })
+            : i,
+        !0,
+        l,
+        (e) => (!Array.isArray(e) && (e = [e]), e)
     );
 }
-function m(e) {
+function y(e, n, r, i) {
+    return e(
+        n,
+        !0,
+        {
+            allowLinks: !1,
+            allowDevLinks: !1,
+            allowEmojiLinks: !1,
+            mentionChannels: [],
+            isInteracting: !1,
+            formatInline: !1,
+            noStyleAndInteraction: !1,
+            allowHeading: !1,
+            allowList: !1,
+            disableAutoBlockNewlines: !0,
+            highlightWord: r,
+            disableAnimatedEmoji: !1,
+            channelId: i,
+            muted: !1
+        },
+        (e) => (!Array.isArray(e) && (e = [e]), e)
+    );
+}
+function S(e, n, r) {
+    return y(u.Z.parseAutoModerationSystemMessage, e, n, r);
+}
+function A(e, n) {
+    return n ? N(e) : ('paragraph' === e[0].type && e[0].content instanceof Array && (e[0].content = N(e[0].content)), e);
+}
+function N(e) {
     if (e.some((e) => 'emoji' !== e.type && 'customEmoji' !== e.type && 'soundboard' !== e.type && ('string' != typeof e.content || '' !== e.content.trim()) && !0)) return e;
-    let t = 0;
+    let n = 0;
     return (e.forEach((e) => {
-        if ((('emoji' === e.type || 'customEmoji' === e.type || 'soundboard' === e.type) && (t += 1), t > 30)) return !1;
+        if ((('emoji' === e.type || 'customEmoji' === e.type || 'soundboard' === e.type) && (n += 1), n > _)) return !1;
     }),
-    t > 30)
+    n > _)
         ? e
         : (e.forEach((e) => {
               e.jumboable = !0;
           }),
           e);
 }
-function g(e, t) {
-    if (e instanceof Array) return e.some((e) => g(e, t));
-    let n = t(e);
-    if (null != n) return n;
-    if (e.content instanceof Array) return g(e.content, t);
-    if (e.items instanceof Array) return e.items.some((e) => g(e, t));
+function C(e, n) {
+    return n ? O(e) : 'paragraph' === e[0].type && e[0].content instanceof Array && O(e[0].content);
+}
+function R(e, n) {
+    if (e instanceof Array) return e.some((e) => R(e, n));
+    let r = n(e);
+    if (null != r) return r;
+    if (e.content instanceof Array) return R(e.content, n);
+    if (e.items instanceof Array) return e.items.some((e) => R(e, n));
     else return !1;
 }
-function E(e) {
-    return g(e, (e) => ('spoiler' === e.type ? g(e, (e) => 'link' === e.type || 'attachmentLink' === e.type || null) : null));
+function O(e) {
+    return R(e, (e) => ('spoiler' === e.type ? R(e, (e) => 'link' === e.type || 'attachmentLink' === e.type || null) : null));
+}
+function D(e, n) {
+    if (1 !== e.length || 1 !== n.length) return e;
+    let r = e[0],
+        i = n[0];
+    return ('link' === r.type || 'attachmentLink' === r.type) && h.has(i.type) && (0, d.dY)(i) ? [] : e;
+}
+function L(e) {
+    return (
+        e.forEach((e) => {
+            p.has(e.type) && null != e.content && (Array.isArray(e.content) ? L(e.content) : (e.content = e.content.replace(/\n/g, ' ')));
+        }),
+        e
+    );
 }

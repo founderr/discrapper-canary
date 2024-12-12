@@ -1,4 +1,5 @@
-var r = n(352644);
-e.exports = function () {
-    (this.__data__ = r ? r(null) : {}), (this.size = 0);
-};
+var i = r(352644);
+function a() {
+    (this.__data__ = i ? i(null) : {}), (this.size = 0);
+}
+e.exports = a;

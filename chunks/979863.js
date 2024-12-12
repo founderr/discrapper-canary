@@ -1,6 +1,9 @@
-e.exports = function (e) {
-    let t = '\\d(_|\\d)*',
-        n = '[eE][-+]?' + t;
+function n(e) {
+    let n = '\\d(_|\\d)*',
+        r = '[eE][-+]?' + n,
+        i = n + '(\\.' + n + ')?(' + r + ')?',
+        a = '\\w+',
+        s = '\\b(' + (n + '#' + a + '(\\.' + a + ')?#(' + r + ')?') + '|' + i + ')';
     return {
         name: 'VHDL',
         case_insensitive: !0,
@@ -16,7 +19,7 @@ e.exports = function (e) {
             e.QUOTE_STRING_MODE,
             {
                 className: 'number',
-                begin: '\\b(' + (t + '#\\w+(\\.\\w+)?#(' + n) + ')?|' + (t + '(\\.' + t + ')?(' + n) + ')?)',
+                begin: s,
                 relevance: 0
             },
             {
@@ -31,4 +34,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = n;

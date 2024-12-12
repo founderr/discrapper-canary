@@ -1,15 +1,34 @@
-n(47120);
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140);
+var i,
+    a = r(47120);
+var s = r(442837),
+    o = r(570140);
+function l(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
 let u = [];
-function c() {
+function c(e) {
+    let { component: n } = e;
+    if (u.indexOf(n) >= 0) return !1;
+    u = [...u, n];
+}
+function d() {
+    if (0 === u.length) return !1;
+    u = u.slice(0, -1);
+}
+function f() {
     u = [];
 }
-class d extends (r = o.ZP.Store) {
+class _ extends (i = s.ZP.Store) {
     hasLayers() {
         return u.length > 0;
     }
@@ -17,26 +36,11 @@ class d extends (r = o.ZP.Store) {
         return u;
     }
 }
-(s = 'LayerStore'),
-    (a = 'displayName') in (i = d)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new d(l.Z, {
-        LAYER_PUSH: function (e) {
-            let { component: t } = e;
-            if (u.indexOf(t) >= 0) return !1;
-            u = [...u, t];
-        },
-        LAYER_POP: function () {
-            if (0 === u.length) return !1;
-            u = u.slice(0, -1);
-        },
-        LAYER_POP_ALL: c,
-        LOGOUT: c,
-        NOTIFICATION_CLICK: c
+l(_, 'displayName', 'LayerStore'),
+    (n.Z = new _(o.Z, {
+        LAYER_PUSH: c,
+        LAYER_POP: d,
+        LAYER_POP_ALL: f,
+        LOGOUT: f,
+        NOTIFICATION_CLICK: f
     }));

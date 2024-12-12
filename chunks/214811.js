@@ -1,35 +1,36 @@
-var r = n(192379),
-    i = n(723184),
-    a = n(329022),
-    s = n(730320);
-t.Z = function (e) {
-    var t = e.onClick,
-        n = e.onSwatchHover,
-        o = e.group,
-        l = e.active,
-        u = (0, i.default)({
-            default: {
-                group: {
-                    paddingBottom: '10px',
-                    width: '40px',
-                    float: 'left',
-                    marginRight: '10px'
+var i = r(192379),
+    a = r(723184),
+    s = r(329022),
+    o = r(730320),
+    l = function (e) {
+        var n = e.onClick,
+            r = e.onSwatchHover,
+            l = e.group,
+            u = e.active,
+            c = (0, a.default)({
+                default: {
+                    group: {
+                        paddingBottom: '10px',
+                        width: '40px',
+                        float: 'left',
+                        marginRight: '10px'
+                    }
                 }
-            }
-        });
-    return r.createElement(
-        'div',
-        { style: u.group },
-        (0, a.Z)(o, function (e, i) {
-            return r.createElement(s.Z, {
-                key: e,
-                color: e,
-                active: e.toLowerCase() === l,
-                first: 0 === i,
-                last: i === o.length - 1,
-                onClick: t,
-                onSwatchHover: n
             });
-        })
-    );
-};
+        return i.createElement(
+            'div',
+            { style: c.group },
+            (0, s.Z)(l, function (e, a) {
+                return i.createElement(o.Z, {
+                    key: e,
+                    color: e,
+                    active: e.toLowerCase() === u,
+                    first: 0 === a,
+                    last: a === l.length - 1,
+                    onClick: n,
+                    onSwatchHover: r
+                });
+            })
+        );
+    };
+n.Z = l;

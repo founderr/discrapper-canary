@@ -1,62 +1,65 @@
-n.d(t, {
+r.d(n, {
     Q: function () {
         return i;
     },
     W: function () {
-        return c;
+        return f;
     }
 });
-var r,
-    i,
-    a = n(200651);
-n(192379);
-var s = n(120356),
-    o = n.n(s),
-    l = n(481060),
-    u = n(552633);
-((r = i || (i = {}))[(r.WARNING = 0)] = 'WARNING'), (r[(r.INFO = 1)] = 'INFO'), (r[(r.ERROR = 2)] = 'ERROR'), (r[(r.POSITIVE = 3)] = 'POSITIVE');
+var i,
+    a = r(200651);
+r(192379);
+var s = r(120356),
+    o = r.n(s),
+    l = r(481060),
+    u = r(552633);
 function c(e) {
-    let { children: t, messageType: n, className: r, textColor: i = 'text-normal', textVariant: s = 'text-sm/medium' } = e,
-        c = (function (e) {
-            switch (e) {
-                case 0:
-                    return l.CircleWarningIcon;
-                case 1:
-                    return l.CircleInformationIcon;
-                case 2:
-                    return l.CircleXIcon;
-                case 3:
-                    return l.CheckmarkLargeIcon;
-            }
-        })(n),
-        d = (function (e) {
-            switch (e) {
-                case 0:
-                    return u.warning;
-                case 1:
-                    return u.info;
-                case 2:
-                    return u.error;
-                case 3:
-                    return u.positive;
-            }
-        })(n);
+    switch (e) {
+        case 0:
+            return l.CircleWarningIcon;
+        case 1:
+            return l.CircleInformationIcon;
+        case 2:
+            return l.CircleXIcon;
+        case 3:
+            return l.CheckmarkLargeIcon;
+    }
+}
+function d(e) {
+    switch (e) {
+        case 0:
+            return u.warning;
+        case 1:
+            return u.info;
+        case 2:
+            return u.error;
+        case 3:
+            return u.positive;
+    }
+}
+function f(e) {
+    let { children: n, messageType: r, className: i, textColor: s = 'text-normal', textVariant: f = 'text-sm/medium' } = e,
+        _ = c(r),
+        h = d(r);
     return (0, a.jsxs)('div', {
-        className: o()(u.container, d, r),
+        className: o()(u.container, h, i),
         children: [
             (0, a.jsx)('div', {
                 className: u.iconDiv,
-                children: (0, a.jsx)(c, {
+                children: (0, a.jsx)(_, {
                     className: u.icon,
                     color: 'currentColor'
                 })
             }),
             (0, a.jsx)(l.Text, {
                 className: u.text,
-                color: i,
-                variant: s,
-                children: t
+                color: s,
+                variant: f,
+                children: n
             })
         ]
     });
 }
+!(function (e) {
+    (e[(e.WARNING = 0)] = 'WARNING'), (e[(e.INFO = 1)] = 'INFO'), (e[(e.ERROR = 2)] = 'ERROR'), (e[(e.POSITIVE = 3)] = 'POSITIVE');
+})(i || (i = {}));

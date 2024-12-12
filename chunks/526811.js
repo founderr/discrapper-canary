@@ -1,61 +1,64 @@
-var r = (function () {
-    function e(e, t) {
-        for (var n = 0; n < t.length; n++) {
-            var r = t[n];
-            (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+var i = (function () {
+    function e(e, n) {
+        for (var r = 0; r < n.length; r++) {
+            var i = n[r];
+            (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
         }
     }
-    return function (t, n, r) {
-        return n && e(t.prototype, n), r && e(t, r), t;
+    return function (n, r, i) {
+        return r && e(n.prototype, r), i && e(n, i), n;
     };
 })();
-n(129629);
-var i = n(22672),
-    a = n(512722),
-    s = n(912037),
-    o = n(16686),
-    l = (function (e) {
-        function t(e, n) {
-            !(function (e, t) {
-                if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-            })(this, t);
-            var r = (function (e, t) {
-                if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-                return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
-            })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-            return (r._parent = e), (r._interpolation = n), (r._listeners = {}), r;
+function a(e, n) {
+    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+}
+function s(e, n) {
+    if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
+}
+function o(e, n) {
+    if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
+    (e.prototype = Object.create(n && n.prototype, {
+        constructor: {
+            value: e,
+            enumerable: !1,
+            writable: !0,
+            configurable: !0
+        }
+    })),
+        n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
+}
+r(129629);
+var l = r(22672),
+    u = r(512722),
+    c = r(912037),
+    d = r(16686),
+    f = (function (e) {
+        function n(e, r) {
+            a(this, n);
+            var i = s(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
+            return (i._parent = e), (i._interpolation = r), (i._listeners = {}), i;
         }
         return (
-            !(function (e, t) {
-                if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-                (e.prototype = Object.create(t && t.prototype, {
-                    constructor: {
-                        value: e,
-                        enumerable: !1,
-                        writable: !0,
-                        configurable: !0
-                    }
-                })),
-                    t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
-            })(t, e),
-            r(t, [
+            o(n, e),
+            i(n, [
                 {
                     key: '__getValue',
                     value: function () {
                         var e = this._parent.__getValue();
-                        return a('number' == typeof e, 'Cannot interpolate an input which is not a number.'), this._interpolation(e);
+                        return u('number' == typeof e, 'Cannot interpolate an input which is not a number.'), this._interpolation(e);
                     }
                 },
                 {
                     key: 'addListener',
                     value: function (e) {
-                        var t = this;
+                        var n = this;
                         !this._parentListener &&
                             (this._parentListener = this._parent.addListener(function () {
-                                for (var e in t._listeners) t._listeners[e]({ value: t.__getValue() });
+                                for (var e in n._listeners) n._listeners[e]({ value: n.__getValue() });
                             }));
-                        var n = o();
-                        return (this._listeners[n] = e), n;
+                        var r = d();
+                        return (this._listeners[r] = e), r;
                     }
                 },
                 {
@@ -67,7 +70,7 @@ var i = n(22672),
                 {
                     key: 'interpolate',
                     value: function (e) {
-                        return new t(this, s.create(e));
+                        return new n(this, c.create(e));
                     }
                 },
                 {
@@ -83,7 +86,7 @@ var i = n(22672),
                     }
                 }
             ]),
-            t
+            n
         );
-    })(i);
-e.exports = l;
+    })(l);
+e.exports = f;

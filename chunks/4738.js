@@ -1,185 +1,190 @@
-n.d(t, {
+r.d(n, {
     D: function () {
-        return h;
+        return g;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(693789),
-    l = n(1561),
-    u = n(463208),
-    c = n(481060),
-    d = n(889963),
-    f = n(388032),
-    _ = n(695265);
-function p(e) {
-    let { page: t, totalPageCount: n, disabled: a, onPageChange: o } = e,
-        [d, f] = i.useState(!1),
-        [p, h] = i.useState(null),
-        m = null != p && p >= 1 && p <= n;
-    return a
-        ? (0, r.jsx)(
-              c.Heading,
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(120356),
+    l = r.n(o),
+    u = r(693789),
+    c = r(1561),
+    d = r(463208),
+    f = r(481060),
+    _ = r(889963),
+    h = r(388032),
+    p = r(695265);
+function m(e) {
+    let { page: n, totalPageCount: r, disabled: i, onPageChange: o } = e,
+        [u, _] = s.useState(!1),
+        [h, m] = s.useState(null),
+        g = null != h && h >= 1 && h <= r,
+        E = (e) => {
+            let n = parseInt(e);
+            if ('' === e || isNaN(n)) {
+                m(null);
+                return;
+            }
+            m(n);
+        },
+        v = (e) => {
+            'Enter' === e.key && null != h && g && (o(h), _(!1), m(null));
+        };
+    return i
+        ? (0, a.jsx)(
+              f.Heading,
               {
-                  className: _.gap,
+                  className: p.gap,
                   'aria-hidden': !0,
                   variant: 'heading-sm/semibold',
                   children: '\u2026'
               },
-              t.key
+              n.key
           )
-        : d
-          ? (0, r.jsx)(
-                u.o,
+        : u
+          ? (0, a.jsx)(
+                d.o,
                 {
                     autoFocus: !0,
-                    className: _.jumpToPageInlineInput,
-                    size: u.o.Sizes.MINI,
-                    value: null == p ? '' : ''.concat(p),
-                    onChange: (e) => {
-                        let t = parseInt(e);
-                        if ('' === e || isNaN(t)) {
-                            h(null);
-                            return;
-                        }
-                        h(t);
-                    },
+                    className: p.jumpToPageInlineInput,
+                    size: d.o.Sizes.MINI,
+                    value: null == h ? '' : ''.concat(h),
+                    onChange: E,
                     onBlur: () => {
-                        f(!1), h(null);
+                        _(!1), m(null);
                     },
-                    onKeyPress: (e) => {
-                        'Enter' === e.key && null != p && m && (o(p), f(!1), h(null));
-                    },
-                    disabled: a
+                    onKeyPress: v,
+                    disabled: i
                 },
-                t.key
+                n.key
             )
-          : (0, r.jsx)(
-                l.P,
+          : (0, a.jsx)(
+                c.P,
                 {
-                    onClick: () => f(!0),
-                    children: (0, r.jsx)(c.Heading, {
-                        className: s()(_.roundButton, _.gap),
+                    onClick: () => _(!0),
+                    children: (0, a.jsx)(f.Heading, {
+                        className: l()(p.roundButton, p.gap),
                         'aria-hidden': !0,
                         variant: 'heading-sm/semibold',
                         children: '\u2026'
                     })
                 },
-                t.key
+                n.key
             );
 }
-function h(e) {
-    let { currentPage: t, totalCount: n, pageSize: i, maxVisiblePages: a, disablePaginationGap: u, onPageChange: h, hideMaxPage: m = !1, className: g } = e,
-        E = Math.ceil(n / i);
-    return (0, r.jsx)(d.W, {
-        totalPageCount: E,
-        selectedPage: t,
-        maxVisiblePages: a,
-        hideMaxPage: m,
-        onPageChange: function (e) {
-            null != h && h(e);
-        },
-        children: function (e) {
-            let { pages: t, hasMultiplePages: n } = e;
-            return n
-                ? (0, r.jsx)('div', {
-                      className: s()(_.pageControlContainer, g),
-                      children: (0, r.jsx)('nav', {
-                          className: _.pageControl,
-                          children: t.map((e) => {
-                              var t, n;
-                              switch (e.type) {
-                                  case d.s.BACK:
-                                      return (function (e) {
-                                          let { key: t, disabled: n, navigateToPage: i } = e;
-                                          return (0, r.jsxs)(
-                                              o.zx,
-                                              {
-                                                  className: _.endButton,
-                                                  innerClassName: _.endButtonInner,
-                                                  look: o.zx.Looks.BLANK,
-                                                  color: o.zx.Colors.TRANSPARENT,
-                                                  onClick: i,
-                                                  disabled: n,
-                                                  rel: 'prev',
-                                                  children: [
-                                                      (0, r.jsx)(c.ChevronSmallLeftIcon, {
-                                                          size: 'md',
-                                                          color: 'currentColor',
-                                                          className: _.iconCaret,
-                                                          'aria-hidden': !0
-                                                      }),
-                                                      (0, r.jsx)('span', { children: f.intl.string(f.t['13/7kZ']) })
-                                                  ]
-                                              },
-                                              t
-                                          );
-                                      })(e);
-                                  case d.s.PAGE:
-                                      return (
-                                          (t = e),
-                                          (0, r.jsx)(
-                                              l.P,
-                                              {
-                                                  className: s()(_.roundButton, { [_.activeButton]: t.selected }),
-                                                  onClick: t.selected ? void 0 : t.navigateToPage,
-                                                  'aria-label': f.intl.formatToPlainString(f.t.IGMs8f, { pageNumber: t.targetPage }),
-                                                  'aria-current': t.selected ? 'page' : void 0,
-                                                  children: (0, r.jsx)('span', { children: t.targetPage })
-                                              },
-                                              t.key
-                                          )
-                                      );
-                                  case d.s.GAP:
-                                      return (
-                                          (n = e),
-                                          (0, r.jsx)(
-                                              p,
-                                              {
-                                                  page: n,
-                                                  totalPageCount: E,
-                                                  disabled: !!u,
-                                                  onPageChange: h
-                                              },
-                                              n.key
-                                          )
-                                      );
-                                  case d.s.NEXT:
-                                      return (function (e) {
-                                          let { key: t, disabled: n, navigateToPage: i } = e;
-                                          return (0, r.jsxs)(
-                                              o.zx,
-                                              {
-                                                  className: _.endButton,
-                                                  innerClassName: _.endButtonInner,
-                                                  look: o.zx.Looks.BLANK,
-                                                  color: o.zx.Colors.TRANSPARENT,
-                                                  onClick: i,
-                                                  disabled: n,
-                                                  rel: 'next',
-                                                  children: [
-                                                      (0, r.jsx)('span', { children: f.intl.string(f.t.PDTjLC) }),
-                                                      (0, r.jsx)(c.ChevronSmallRightIcon, {
-                                                          size: 'md',
-                                                          color: 'currentColor',
-                                                          className: _.iconCaret,
-                                                          'aria-hidden': !0
-                                                      })
-                                                  ]
-                                              },
-                                              t
-                                          );
-                                      })(e);
-                                  default:
-                                      return null;
-                              }
-                          })
+function g(e) {
+    let { currentPage: n, totalCount: r, pageSize: i, maxVisiblePages: s, disablePaginationGap: o, onPageChange: d, hideMaxPage: g = !1, className: E } = e,
+        v = Math.ceil(r / i);
+    function I(e) {
+        null != d && d(e);
+    }
+    function T(e) {
+        let { key: n, disabled: r, navigateToPage: i } = e;
+        return (0, a.jsxs)(
+            u.zx,
+            {
+                className: p.endButton,
+                innerClassName: p.endButtonInner,
+                look: u.zx.Looks.BLANK,
+                color: u.zx.Colors.TRANSPARENT,
+                onClick: i,
+                disabled: r,
+                rel: 'prev',
+                children: [
+                    (0, a.jsx)(f.ChevronSmallLeftIcon, {
+                        size: 'md',
+                        color: 'currentColor',
+                        className: p.iconCaret,
+                        'aria-hidden': !0
+                    }),
+                    (0, a.jsx)('span', { children: h.intl.string(h.t['13/7kZ']) })
+                ]
+            },
+            n
+        );
+    }
+    function b(e) {
+        let { key: n, disabled: r, navigateToPage: i } = e;
+        return (0, a.jsxs)(
+            u.zx,
+            {
+                className: p.endButton,
+                innerClassName: p.endButtonInner,
+                look: u.zx.Looks.BLANK,
+                color: u.zx.Colors.TRANSPARENT,
+                onClick: i,
+                disabled: r,
+                rel: 'next',
+                children: [
+                    (0, a.jsx)('span', { children: h.intl.string(h.t.PDTjLC) }),
+                    (0, a.jsx)(f.ChevronSmallRightIcon, {
+                        size: 'md',
+                        color: 'currentColor',
+                        className: p.iconCaret,
+                        'aria-hidden': !0
+                    })
+                ]
+            },
+            n
+        );
+    }
+    function y(e) {
+        return (0, a.jsx)(
+            c.P,
+            {
+                className: l()(p.roundButton, { [p.activeButton]: e.selected }),
+                onClick: e.selected ? void 0 : e.navigateToPage,
+                'aria-label': h.intl.formatToPlainString(h.t.IGMs8f, { pageNumber: e.targetPage }),
+                'aria-current': e.selected ? 'page' : void 0,
+                children: (0, a.jsx)('span', { children: e.targetPage })
+            },
+            e.key
+        );
+    }
+    function S(e) {
+        return (0, a.jsx)(
+            m,
+            {
+                page: e,
+                totalPageCount: v,
+                disabled: !!o,
+                onPageChange: d
+            },
+            e.key
+        );
+    }
+    function A(e) {
+        let { pages: n, hasMultiplePages: r } = e;
+        return r
+            ? (0, a.jsx)('div', {
+                  className: l()(p.pageControlContainer, E),
+                  children: (0, a.jsx)('nav', {
+                      className: p.pageControl,
+                      children: n.map((e) => {
+                          switch (e.type) {
+                              case _.s.BACK:
+                                  return T(e);
+                              case _.s.PAGE:
+                                  return y(e);
+                              case _.s.GAP:
+                                  return S(e);
+                              case _.s.NEXT:
+                                  return b(e);
+                              default:
+                                  return null;
+                          }
                       })
                   })
-                : null;
-        }
+              })
+            : null;
+    }
+    return (0, a.jsx)(_.W, {
+        totalPageCount: v,
+        selectedPage: n,
+        maxVisiblePages: s,
+        hideMaxPage: g,
+        onPageChange: I,
+        children: A
     });
 }

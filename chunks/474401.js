@@ -1,5 +1,6 @@
-var r = n(816925);
-e.exports = function (e, t, n) {
-    var i = null == e ? void 0 : r(e, t);
-    return void 0 === i ? n : i;
-};
+var i = r(816925);
+function a(e, n, r) {
+    var a = null == e ? void 0 : i(e, n);
+    return void 0 === a ? r : a;
+}
+e.exports = a;

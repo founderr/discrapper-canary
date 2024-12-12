@@ -1,4 +1,5 @@
-t.Z = function (e, t) {
-    for (var n = -1, r = null == e ? 0 : e.length; ++n < r && !1 !== t(e[n], n, e); );
+function r(e, n) {
+    for (var r = -1, i = null == e ? 0 : e.length; ++r < i && !1 !== n(e[r], r, e); );
     return e;
-};
+}
+n.Z = r;

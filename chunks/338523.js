@@ -1,6 +1,6 @@
-e.exports = function (e) {
-    let t = '[a-zA-Z-_][^\\n{]+\\{',
-        n = {
+function n(e) {
+    let n = '[a-zA-Z-_][^\\n{]+\\{',
+        r = {
             className: 'attribute',
             begin: /[a-zA-Z-_]+/,
             end: /\s*:/,
@@ -27,24 +27,25 @@ e.exports = function (e) {
         keywords: 'import',
         contains: [
             {
-                begin: '^facet ' + t,
+                begin: '^facet ' + n,
                 end: /\}/,
                 keywords: 'facet',
-                contains: [n, e.HASH_COMMENT_MODE]
+                contains: [r, e.HASH_COMMENT_MODE]
             },
             {
-                begin: '^\\s*instance of ' + t,
+                begin: '^\\s*instance of ' + n,
                 end: /\}/,
                 keywords: 'name count channels instance-data instance-state instance of',
                 illegal: /\S/,
-                contains: ['self', n, e.HASH_COMMENT_MODE]
+                contains: ['self', r, e.HASH_COMMENT_MODE]
             },
             {
-                begin: '^' + t,
+                begin: '^' + n,
                 end: /\}/,
-                contains: [n, e.HASH_COMMENT_MODE]
+                contains: [r, e.HASH_COMMENT_MODE]
             },
             e.HASH_COMMENT_MODE
         ]
     };
-};
+}
+e.exports = n;

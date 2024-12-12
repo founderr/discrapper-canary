@@ -1,34 +1,35 @@
-var r,
-    i,
+var i,
     a,
-    s = n(200651),
-    o = n(192379),
-    l = n(120356),
-    u = n.n(l),
-    c = n(481060),
-    d = n(686546),
-    f = n(15588);
-function _(e, t, n) {
+    s = r(200651),
+    o = r(192379),
+    l = r(120356),
+    u = r.n(l),
+    c = r(481060),
+    d = r(686546),
+    f = r(15588);
+function _(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-((r = i || (i = {}))[(r.OUTGOING = 0)] = 'OUTGOING'), (r[(r.INCOMING = 1)] = 'INCOMING');
-class p extends (a = o.PureComponent) {
+!(function (e) {
+    (e[(e.OUTGOING = 0)] = 'OUTGOING'), (e[(e.INCOMING = 1)] = 'INCOMING');
+})(i || (i = {}));
+class h extends (a = o.PureComponent) {
     renderStatus() {
-        let { muted: e, deafen: t } = this.props,
-            n = t ? c.HeadphonesSlashIcon : c.MicrophoneSlashIcon;
-        return e || t
+        let { muted: e, deafen: n } = this.props,
+            r = n ? c.HeadphonesSlashIcon : c.MicrophoneSlashIcon;
+        return e || n
             ? (0, s.jsx)(
-                  n,
+                  r,
                   {
                       className: f.status,
                       color: c.tokens.colors.WHITE.css
@@ -42,27 +43,27 @@ class p extends (a = o.PureComponent) {
         return (0, s.jsx)('div', { className: u()(f.border, { [f.speaking]: e }) }, 'border');
     }
     renderMask() {
-        let { muted: e, speaking: t, deafen: n } = this.props;
-        return e && t
+        let { muted: e, speaking: n, deafen: r } = this.props;
+        return e && n
             ? (0, s.jsxs)(s.Fragment, {
                   children: [this.renderBorder(), this.renderStatus()]
               })
-            : e || n
+            : e || r
               ? (0, s.jsx)(s.Fragment, { children: this.renderStatus() })
               : (0, s.jsx)(s.Fragment, { children: this.renderBorder() });
     }
     renderVoiceCallAvatar() {
-        let { src: e, disabled: t, ringing: n, ringingType: r, avatarClassName: i, muted: a, deafen: o, size: l, renderIcon: _ } = this.props,
-            p = (0, c.getAvatarSize)(l),
-            h = (0, s.jsx)('img', {
+        let { src: e, disabled: n, ringing: r, ringingType: i, avatarClassName: a, muted: o, deafen: l, size: _, renderIcon: h } = this.props,
+            p = (0, c.getAvatarSize)(_),
+            m = (0, s.jsx)('img', {
                 src: e,
                 alt: ' ',
-                className: u()(f.voiceAvatar, i, { [f.ringingOutgoing]: n && 0 === r })
+                className: u()(f.voiceAvatar, a, { [f.ringingOutgoing]: r && 0 === i })
             });
-        if (t) return h;
-        let m = d.QS.AVATAR_DEFAULT;
+        if (n) return m;
+        let g = d.QS.AVATAR_DEFAULT;
         return (
-            null != _ ? (m = l === c.AvatarSizes.SIZE_32 ? d.QS.AVATAR_CALL_ICON_32 : d.QS.AVATAR_CALL_ICON) : (a || o) && (m = d.QS.AVATAR_VOICE_CALL_80),
+            null != h ? (g = _ === c.AvatarSizes.SIZE_32 ? d.QS.AVATAR_CALL_ICON_32 : d.QS.AVATAR_CALL_ICON) : (o || l) && (g = d.QS.AVATAR_VOICE_CALL_80),
             (0, s.jsxs)('div', {
                 className: f.callAvatarMaskContainer,
                 children: [
@@ -70,8 +71,8 @@ class p extends (a = o.PureComponent) {
                         className: f.callAvatarMask,
                         width: p,
                         height: p,
-                        mask: m,
-                        children: [null == _ ? void 0 : _(), h]
+                        mask: g,
+                        children: [null == h ? void 0 : h(), m]
                     }),
                     this.renderMask()
                 ]
@@ -79,31 +80,31 @@ class p extends (a = o.PureComponent) {
         );
     }
     render() {
-        let { size: e, onClick: t, style: n, onContextMenu: r, className: i, ringingType: a, ringing: o } = this.props,
-            l = u()(
+        let { size: e, onClick: n, style: r, onContextMenu: i, className: a, ringingType: o, ringing: l } = this.props,
+            d = u()(
                 f.wrapper,
                 {
-                    [f.clickable]: null != t,
-                    [f.ringingOutgoing]: o && 0 === a,
-                    [f.ringingIncoming]: o && 1 === a
+                    [f.clickable]: null != n,
+                    [f.ringingOutgoing]: l && 0 === o,
+                    [f.ringingIncoming]: l && 1 === o
                 },
-                i
+                a
             ),
-            d = (0, c.getAvatarSize)(e),
-            _ = {
-                height: d,
-                width: d,
-                ...n
+            _ = (0, c.getAvatarSize)(e),
+            h = {
+                height: _,
+                width: _,
+                ...r
             };
         return (0, s.jsx)('div', {
-            style: _,
-            onContextMenu: r,
-            className: l,
+            style: h,
+            onContextMenu: i,
+            className: d,
             children: this.renderVoiceCallAvatar()
         });
     }
 }
-_(p, 'defaultProps', {
+_(h, 'defaultProps', {
     size: c.AvatarSizes.SIZE_80,
     ringingType: 0,
     speaking: !1,
@@ -116,5 +117,5 @@ _(p, 'defaultProps', {
     disabled: !1,
     paused: !1
 }),
-    _(p, 'RingingType', i),
-    (t.Z = p);
+    _(h, 'RingingType', i),
+    (n.Z = h);

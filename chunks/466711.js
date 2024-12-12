@@ -1,91 +1,92 @@
-n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(442837),
-    s = n(704215),
-    o = n(100527),
-    l = n(906732),
-    u = n(644916),
-    c = n(243778),
-    d = n(963249),
-    f = n(906690),
-    _ = n(802408),
-    p = n(685311),
-    h = n(819640),
-    m = n(594174),
-    g = n(70956),
-    E = n(709054),
-    v = n(51144),
-    I = n(443603),
-    T = n(981631),
-    b = n(921944),
-    S = n(388032),
-    y = n(17823),
-    A = n(553796);
-let N = g.Z.Millis.DAYS_30;
-function C(e) {
-    let { giftingPromotionVersion: t, hovered: n } = e;
-    if (t === f.JY) return (0, r.jsx)(p.Z, { hovered: n });
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(442837),
+    l = r(704215),
+    u = r(100527),
+    c = r(906732),
+    d = r(644916),
+    f = r(243778),
+    _ = r(963249),
+    h = r(906690),
+    p = r(802408),
+    m = r(685311),
+    g = r(819640),
+    E = r(594174),
+    v = r(70956),
+    I = r(709054),
+    T = r(51144),
+    b = r(443603),
+    y = r(981631),
+    S = r(921944),
+    A = r(388032),
+    N = r(17823),
+    C = r(553796);
+let R = v.Z.Millis.DAYS_30;
+function O(e) {
+    let { giftingPromotionVersion: n, hovered: r } = e;
+    if (n === h.JY) return (0, a.jsx)(m.Z, { hovered: r });
     return null;
 }
-t.Z = i.memo(function (e) {
-    let { giftingPromotionConfig: t, disabled: n, channel: f } = e,
-        { analyticsLocations: p } = (0, l.ZP)(o.Z.GIFT_BUTTON),
-        [g, R] = i.useState(!1),
-        O = (0, a.e7)([h.Z], () => !(null === h.Z || void 0 === h.Z ? void 0 : h.Z.hasLayers())),
-        D = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
-        L = null != D ? E.default.age(D.id) : 0,
-        x = null != t.firstTimeNotice && !n && O && L >= N,
-        [w, P] = (0, c.XR)(x ? s.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, (0, u.t)(s.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK)),
-        M = null != w,
-        k = (0, v.Ft)(f);
-    if (n) return null;
-    let U = () => {
-        (0, d.Z)({
+function D(e) {
+    let { giftingPromotionConfig: n, disabled: r, channel: i } = e,
+        { analyticsLocations: h } = (0, c.ZP)(u.Z.GIFT_BUTTON),
+        [m, v] = s.useState(!1),
+        D = (0, o.e7)([g.Z], () => !(null === g.Z || void 0 === g.Z ? void 0 : g.Z.hasLayers())),
+        L = (0, o.e7)([E.default], () => E.default.getCurrentUser()),
+        x = null != L ? I.default.age(L.id) : 0,
+        w = null != n.firstTimeNotice && !r && D && x >= R,
+        [P, M] = (0, f.XR)(w ? l.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, (0, d.t)(l.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK)),
+        k = null != P,
+        U = (0, T.Ft)(i);
+    if (r) return null;
+    let B = () => {
+        (0, _.Z)({
             isGift: !0,
-            giftRecipient: null == k ? void 0 : k,
+            giftRecipient: null == U ? void 0 : U,
             initialPlanId: null,
-            analyticsLocations: p,
+            analyticsLocations: h,
             analyticsObject: {
-                page: f.isPrivate() ? T.ZY5.DM_CHANNEL : T.ZY5.GUILD_CHANNEL,
-                section: T.jXE.CHANNEL_TEXT_AREA,
-                object: T.qAy.SEASONAL_BUTTON_ICON,
-                objectType: T.Qqv.GIFT
+                page: i.isPrivate() ? y.ZY5.DM_CHANNEL : y.ZY5.GUILD_CHANNEL,
+                section: y.jXE.CHANNEL_TEXT_AREA,
+                object: y.qAy.SEASONAL_BUTTON_ICON,
+                objectType: y.Qqv.GIFT
             }
         });
     };
-    return (0, r.jsxs)('div', {
-        className: y.container,
+    return (0, a.jsxs)('div', {
+        className: N.container,
         onMouseEnter: () => {
-            !g && R(!0);
+            !m && v(!0);
         },
         onMouseLeave: () => {
-            R(!1);
+            v(!1);
         },
         children: [
-            null != t.firstTimeNotice &&
-                M &&
-                (0, r.jsx)(_.Z, {
-                    onComplete: () => R(!1),
-                    onCheckItOutClick: U,
-                    markAsDismissed: P,
-                    config: t.firstTimeNotice
+            null != n.firstTimeNotice &&
+                k &&
+                (0, a.jsx)(p.Z, {
+                    onComplete: () => v(!1),
+                    onCheckItOutClick: B,
+                    markAsDismissed: M,
+                    config: n.firstTimeNotice
                 }),
-            (0, r.jsx)(I.Z, {
-                innerClassName: A.button,
-                'aria-label': S.intl.string(S.t.Z1RnTk),
+            (0, a.jsx)(b.Z, {
+                innerClassName: C.button,
+                'aria-label': A.intl.string(A.t.Z1RnTk),
                 isActive: !1,
                 onClick: () => {
-                    R(!1), P(b.L.TAKE_ACTION), U();
+                    v(!1), M(S.L.TAKE_ACTION), B();
                 },
-                children: (0, r.jsx)('div', {
-                    className: y.giftIconContainer,
-                    children: (0, r.jsx)(C, {
-                        giftingPromotionVersion: t.dismissibleContentVersion,
-                        hovered: g || M
+                children: (0, a.jsx)('div', {
+                    className: N.giftIconContainer,
+                    children: (0, a.jsx)(O, {
+                        giftingPromotionVersion: n.dismissibleContentVersion,
+                        hovered: m || k
                     })
                 })
             })
         ]
     });
-});
+}
+n.Z = s.memo(D);

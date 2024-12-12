@@ -1,82 +1,86 @@
-n(724458);
-var r = n(259443),
-    i = n(579806),
-    a = n(77450),
-    s = n(998502);
-let o = new r.Yd('ProcessUtilsElectron');
-class l extends a.h {
+var i = r(724458);
+var a = r(259443),
+    s = r(579806),
+    o = r(77450),
+    l = r(998502);
+function u(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let c = new a.Yd('ProcessUtilsElectron');
+class d extends o.h {
     setupReportingTimer() {
-        var e, t;
-        let n = null === i.Z || void 0 === i.Z ? void 0 : null === (e = i.Z.processUtils) || void 0 === e ? void 0 : e.setMemoryInformation;
-        if (null == n) {
-            o.log('setMemoryInformation not available.');
+        var e, n;
+        let r = null === s.Z || void 0 === s.Z ? void 0 : null === (e = s.Z.processUtils) || void 0 === e ? void 0 : e.setMemoryInformation;
+        if (null == r) {
+            c.log('setMemoryInformation not available.');
             return;
         }
-        (null === (t = performance.memory) || void 0 === t ? void 0 : t.usedJSHeapSize) == null && o.error('usedJSHeapSize is not available.');
-        setInterval(() => {
-            var e, t, r;
-            let i = null !== (t = null === (e = performance.memory) || void 0 === e ? void 0 : e.usedJSHeapSize) && void 0 !== t ? t : 0;
-            n({
-                memoryUsageKB: null !== (r = this.lastMemoryUsageKB) && void 0 !== r ? r : 0,
-                usedJSHeapSizeKB: Math.ceil(i / 1024)
-            });
-        }, 10000);
+        function i(e) {
+            return Math.ceil(e / 1024);
+        }
+        (null === (n = performance.memory) || void 0 === n ? void 0 : n.usedJSHeapSize) == null && c.error('usedJSHeapSize is not available.'),
+            setInterval(() => {
+                var e, n, a;
+                let s = null !== (n = null === (e = performance.memory) || void 0 === e ? void 0 : e.usedJSHeapSize) && void 0 !== n ? n : 0;
+                r({
+                    memoryUsageKB: null !== (a = this.lastMemoryUsageKB) && void 0 !== a ? a : 0,
+                    usedJSHeapSizeKB: i(s)
+                });
+            }, 10000);
     }
     getProcessUptime() {
-        var e, t;
-        return null === i.Z || void 0 === i.Z ? void 0 : null === (t = i.Z.processUtils) || void 0 === t ? void 0 : null === (e = t.getProcessUptime) || void 0 === e ? void 0 : e.call(t);
+        var e, n;
+        return null === s.Z || void 0 === s.Z ? void 0 : null === (n = s.Z.processUtils) || void 0 === n ? void 0 : null === (e = n.getProcessUptime) || void 0 === e ? void 0 : e.call(n);
     }
     getCurrentCPUUsagePercent() {
-        var e, t;
-        return null === i.Z || void 0 === i.Z ? void 0 : null === (t = i.Z.processUtils) || void 0 === t ? void 0 : null === (e = t.getCurrentCPUUsagePercent) || void 0 === e ? void 0 : e.call(t);
+        var e, n;
+        return null === s.Z || void 0 === s.Z ? void 0 : null === (n = s.Z.processUtils) || void 0 === n ? void 0 : null === (e = n.getCurrentCPUUsagePercent) || void 0 === e ? void 0 : e.call(n);
     }
     getCumulativeCPUUsage() {
-        var e, t;
-        return null === i.Z || void 0 === i.Z ? void 0 : null === (t = i.Z.processUtils) || void 0 === t ? void 0 : null === (e = t.getCumulativeCPUUsage) || void 0 === e ? void 0 : e.call(t);
+        var e, n;
+        return null === s.Z || void 0 === s.Z ? void 0 : null === (n = s.Z.processUtils) || void 0 === n ? void 0 : null === (e = n.getCumulativeCPUUsage) || void 0 === e ? void 0 : e.call(n);
     }
     getCurrentMemoryUsageKB() {
-        let e = l.getCurrentMemoryUsageKBCore();
+        let e = d.getCurrentMemoryUsageKBCore();
         return (this.lastMemoryUsageKB = e), e;
     }
     static getCurrentMemoryUsageKBCore() {
         try {
-            let e = s.ZP.getDiscordMemoryUsage();
+            let e = l.ZP.getDiscordMemoryUsage();
             if (null == e) return 0;
-            let t = Object.values(e).reduce((e, t) => e + t, 0);
-            return Math.ceil(t / 1024);
+            let n = Object.values(e).reduce((e, n) => e + n, 0);
+            return Math.ceil(n / 1024);
         } catch (e) {
             return 0;
         }
     }
     getMemoryUsageDetails() {
-        return s.ZP.getDiscordMemoryUsage();
+        return l.ZP.getDiscordMemoryUsage();
     }
     getMemoryUsageElectronRenderer() {
         try {
-            return s.ZP.getDiscordMemoryUsageElectronRenderer();
+            return l.ZP.getDiscordMemoryUsageElectronRenderer();
         } catch (e) {
             return null;
         }
     }
     getMemoryUsageElectronRendererUsedHeapSize() {
-        var e, t;
-        return null === i.Z || void 0 === i.Z ? void 0 : null === (t = i.Z.processUtils) || void 0 === t ? void 0 : null === (e = t.getUsedHeapSize) || void 0 === e ? void 0 : e.call(t);
+        var e, n;
+        return null === s.Z || void 0 === s.Z ? void 0 : null === (n = s.Z.processUtils) || void 0 === n ? void 0 : null === (e = n.getUsedHeapSize) || void 0 === e ? void 0 : e.call(n);
     }
     constructor() {
-        var e, t, n, r, a;
-        super(),
-            (n = this),
-            (a = void 0),
-            (r = 'lastMemoryUsageKB') in n
-                ? Object.defineProperty(n, r, {
-                      value: a,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (n[r] = a),
-            (this.cpuCoreCount = null === i.Z || void 0 === i.Z ? void 0 : null === (t = i.Z.processUtils) || void 0 === t ? void 0 : null === (e = t.getCPUCoreCount) || void 0 === e ? void 0 : e.call(t)),
-            this.setupReportingTimer();
+        var e, n;
+        super(), u(this, 'lastMemoryUsageKB', void 0), (this.cpuCoreCount = null === s.Z || void 0 === s.Z ? void 0 : null === (n = s.Z.processUtils) || void 0 === n ? void 0 : null === (e = n.getCPUCoreCount) || void 0 === e ? void 0 : e.call(n)), this.setupReportingTimer();
     }
 }
-t.Z = new l();
+n.Z = new d();

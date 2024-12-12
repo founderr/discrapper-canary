@@ -1,17 +1,20 @@
-e.exports = function (e) {
-    let t = 'foreach do while for if from to step else on-error and or not in',
-        n = 'true false yes no nothing nil null',
-        r = {
+function n(e) {
+    let n = 'foreach do while for if from to step else on-error and or not in',
+        r = 'global local beep delay put len typeof pick log time set find environment terminal error execute parse resolve toarray tobool toid toip toip6 tonum tostr totime',
+        i = 'add remove enable disable set get print export edit find run debug error info warning',
+        a = 'true false yes no nothing nil null',
+        s = 'traffic-flow traffic-generator firewall scheduler aaa accounting address-list address align area bandwidth-server bfd bgp bridge client clock community config connection console customer default dhcp-client dhcp-server discovery dns e-mail ethernet filter firmware gps graphing group hardware health hotspot identity igmp-proxy incoming instance interface ip ipsec ipv6 irq l2tp-server lcd ldp logging mac-server mac-winbox mangle manual mirror mme mpls nat nd neighbor network note ntp ospf ospf-v3 ovpn-server page peer pim ping policy pool port ppp pppoe-client pptp-server prefix profile proposal proxy queue radius resource rip ripng route routing screen script security-profiles server service service-port settings shares smb sms sniffer snmp snooper socks sstp-server system tool tracking type upgrade upnp user-manager users user vlan secret vrrp watchdog web-access wireless pptp pppoe lan wan layer7-protocol lease simple raw',
+        o = {
             className: 'variable',
             variants: [{ begin: /\$[\w\d#@][\w\d_]*/ }, { begin: /\$\{(.*?)\}/ }]
         },
-        i = {
+        l = {
             className: 'string',
             begin: /"/,
             end: /"/,
             contains: [
                 e.BACKSLASH_ESCAPE,
-                r,
+                o,
                 {
                     className: 'variable',
                     begin: /\$\(/,
@@ -20,7 +23,7 @@ e.exports = function (e) {
                 }
             ]
         },
-        a = {
+        u = {
             className: 'string',
             begin: /'/,
             end: /'/
@@ -31,8 +34,8 @@ e.exports = function (e) {
         case_insensitive: !0,
         keywords: {
             $pattern: /:?[\w-]+/,
-            literal: n,
-            keyword: t + ' :' + t.split(' ').join(' :') + ' :' + 'global local beep delay put len typeof pick log time set find environment terminal error execute parse resolve toarray tobool toid toip toip6 tonum tostr totime'.split(' ').join(' :')
+            literal: a,
+            keyword: n + ' :' + n.split(' ').join(' :') + ' :' + r.split(' ').join(' :')
         },
         contains: [
             {
@@ -53,9 +56,9 @@ e.exports = function (e) {
                 illegal: /./
             },
             e.COMMENT('^#', '$'),
-            i,
-            a,
-            r,
+            l,
+            u,
+            o,
             {
                 begin: /[\w-]+=([^\s{}[\]()>]+)/,
                 relevance: 0,
@@ -70,12 +73,12 @@ e.exports = function (e) {
                         endsWithParent: !0,
                         relevance: 0,
                         contains: [
-                            i,
-                            a,
-                            r,
+                            l,
+                            u,
+                            o,
                             {
                                 className: 'literal',
-                                begin: '\\b(' + n.split(' ').join('|') + ')\\b'
+                                begin: '\\b(' + a.split(' ').join('|') + ')\\b'
                             },
                             { begin: /("[^"]*"|[^\s{}[\]]+)/ }
                         ]
@@ -87,7 +90,7 @@ e.exports = function (e) {
                 begin: /\*[0-9a-fA-F]+/
             },
             {
-                begin: '\\b(' + 'add remove enable disable set get print export edit find run debug error info warning'.split(' ').join('|') + ')([\\s[(\\]|])',
+                begin: '\\b(' + i.split(' ').join('|') + ')([\\s[(\\]|])',
                 returnBegin: !0,
                 contains: [
                     {
@@ -99,7 +102,7 @@ e.exports = function (e) {
             {
                 className: 'built_in',
                 variants: [
-                    { begin: '(\\.\\./|/|\\s)((' + 'traffic-flow traffic-generator firewall scheduler aaa accounting address-list address align area bandwidth-server bfd bgp bridge client clock community config connection console customer default dhcp-client dhcp-server discovery dns e-mail ethernet filter firmware gps graphing group hardware health hotspot identity igmp-proxy incoming instance interface ip ipsec ipv6 irq l2tp-server lcd ldp logging mac-server mac-winbox mangle manual mirror mme mpls nat nd neighbor network note ntp ospf ospf-v3 ovpn-server page peer pim ping policy pool port ppp pppoe-client pptp-server prefix profile proposal proxy queue radius resource rip ripng route routing screen script security-profiles server service service-port settings shares smb sms sniffer snmp snooper socks sstp-server system tool tracking type upgrade upnp user-manager users user vlan secret vrrp watchdog web-access wireless pptp pppoe lan wan layer7-protocol lease simple raw'.split(' ').join('|') + ');?\\s)+' },
+                    { begin: '(\\.\\./|/|\\s)((' + s.split(' ').join('|') + ');?\\s)+' },
                     {
                         begin: /\.\./,
                         relevance: 0
@@ -108,4 +111,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = n;

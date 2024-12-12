@@ -1,28 +1,30 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return l;
     }
 });
-var r = n(217942);
-function i(e, t, n) {
+var i = r(217942);
+function a(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-class a {
+let s = 500,
+    o = 150;
+class l {
     getCurrentValue() {
         if (null == this.animationDetails) return this.value;
         let e = performance.now() - this.animationDetails.animationStart,
-            t = this.value < this.animationDetails.lastValue ? 150 : 500;
-        return e > t ? ((this.animationDetails = null), this.value) : this.value < this.animationDetails.lastValue ? r.easeOutQuint(e, this.animationDetails.lastValue, this.value, t) : r.easeOutBack(e, this.animationDetails.lastValue, this.value, t, 4);
+            n = this.value < this.animationDetails.lastValue ? o : s;
+        return e > n ? ((this.animationDetails = null), this.value) : this.value < this.animationDetails.lastValue ? i.easeOutQuint(e, this.animationDetails.lastValue, this.value, n) : i.easeOutBack(e, this.animationDetails.lastValue, this.value, n, 4);
     }
     animateTo(e) {
         if (((this.isReset = !1), this.value !== e))
@@ -39,6 +41,6 @@ class a {
         this.animateTo(0), (this.isReset = !0);
     }
     constructor(e) {
-        i(this, 'value', void 0), i(this, 'animationDetails', void 0), i(this, 'isReset', void 0), (this.value = e), (this.animationDetails = null), (this.isReset = !1);
+        a(this, 'value', void 0), a(this, 'animationDetails', void 0), a(this, 'isReset', void 0), (this.value = e), (this.animationDetails = null), (this.isReset = !1);
     }
 }

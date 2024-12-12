@@ -1,41 +1,38 @@
-var r,
-    i = n(442837),
-    a = n(570140);
-function s(e, t, n) {
+var i,
+    a = r(442837),
+    s = r(570140);
+function o(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-function o() {
+function l() {
     return {
         usageByApplicationId: {},
         shelfOrder: []
     };
 }
-let l = o();
-class u extends (r = i.ZP.PersistedStore) {
+let u = l();
+function c() {
+    u = l();
+}
+class d extends (i = a.ZP.PersistedStore) {
     initialize(e) {
-        l = {
-            ...o(),
+        u = {
+            ...l(),
             ...(null != e ? e : {})
         };
     }
     getState() {
-        return l;
+        return u;
     }
 }
-s(u, 'displayName', 'ActivityShelfStore'),
-    s(u, 'persistKey', 'ActivityShelfStore'),
-    (t.Z = new u(a.Z, {
-        LOGOUT: function () {
-            l = o();
-        }
-    }));
+o(d, 'displayName', 'ActivityShelfStore'), o(d, 'persistKey', 'ActivityShelfStore'), (n.Z = new d(s.Z, { LOGOUT: c }));

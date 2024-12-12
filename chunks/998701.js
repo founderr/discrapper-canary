@@ -1,13 +1,27 @@
-n.d(t, {
+r.d(n, {
     c: function () {
         return i;
     }
 });
-var r,
-    i,
-    a = n(388032);
-((r = i || (i = {}))[(r.GENERAL = 0)] = 'GENERAL'), (r[(r.NO_FILE = 1)] = 'NO_FILE'), (r[(r.PROGRESS = 2)] = 'PROGRESS'), (r[(r.UPLOAD = 3)] = 'UPLOAD'), (r[(r.READ = 4)] = 'READ');
-t.Z = class e {
+var i,
+    a = r(388032);
+function s(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+!(function (e) {
+    (e[(e.GENERAL = 0)] = 'GENERAL'), (e[(e.NO_FILE = 1)] = 'NO_FILE'), (e[(e.PROGRESS = 2)] = 'PROGRESS'), (e[(e.UPLOAD = 3)] = 'UPLOAD'), (e[(e.READ = 4)] = 'READ');
+})(i || (i = {}));
+class o {
     get displayMessage() {
         switch (this.code) {
             case 1:
@@ -23,17 +37,7 @@ t.Z = class e {
         }
     }
     constructor(e) {
-        var t, n, r;
-        (t = this),
-            (r = void 0),
-            (n = 'code') in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r),
-            (this.code = e);
+        s(this, 'code', void 0), (this.code = e);
     }
-};
+}
+n.Z = o;

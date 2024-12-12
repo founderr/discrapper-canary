@@ -1,77 +1,76 @@
-n.d(t, {
+r.d(n, {
     l: function () {
-        return m;
+        return E;
     }
 });
-var r = n(544891),
-    i = n(379649),
-    a = n(846519),
-    s = n(570140),
-    o = n(706454),
-    l = n(283595),
-    u = n(129542),
-    c = n(70956),
-    d = n(981631);
-let f = 10 * c.Z.Millis.MINUTE,
-    _ = 10 * c.Z.Millis.MINUTE,
-    p = 1 * c.Z.Millis.MINUTE,
-    h = {};
-async function m(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        c = o.default.locale;
+var i = r(544891),
+    a = r(379649),
+    s = r(846519),
+    o = r(570140),
+    l = r(706454),
+    u = r(283595),
+    c = r(129542),
+    d = r(70956),
+    f = r(981631);
+let _ = 10 * d.Z.Millis.MINUTE,
+    h = 10 * d.Z.Millis.MINUTE,
+    p = 1 * d.Z.Millis.MINUTE,
+    m = {};
+function g(e, n) {
+    null == m[n] && (m[n] = new s.V7()),
+        m[n].start(_ + Math.random() * h, () => {
+            null != u.Z.getLibraryApplication(e, n) && E(e, n);
+        });
+}
+async function E(e, n) {
+    let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        s = l.default.locale;
     return (
-        s.Z.dispatch({
+        o.Z.dispatch({
             type: 'APPLICATION_BUILD_FETCH_START',
             applicationId: e,
-            branchId: t,
-            locale: c
+            branchId: n,
+            locale: s
         }),
-        n && (await (0, i._v)(Math.random() * p)),
-        r.tn
+        r && (await (0, a._v)(Math.random() * p)),
+        i.tn
             .get({
-                url: d.ANM.APPLICATION_LIVE_BUILD(e, t),
+                url: f.ANM.APPLICATION_LIVE_BUILD(e, n),
                 query: {
-                    platform: (0, u.D)(),
-                    locale: c
+                    platform: (0, c.D)(),
+                    locale: s
                 },
                 oldFormErrors: !0,
                 rejectWithError: !1
             })
             .then(
-                (n) => {
-                    let r = n.body;
-                    if (0 === r.manifests.length) {
-                        s.Z.dispatch({
+                (r) => {
+                    let i = r.body;
+                    if (0 === i.manifests.length) {
+                        o.Z.dispatch({
                             type: 'APPLICATION_BUILD_NOT_FOUND',
                             applicationId: e,
-                            branchId: t
+                            branchId: n
                         });
                         return;
                     }
-                    s.Z.dispatch({
+                    o.Z.dispatch({
                         type: 'APPLICATION_BUILD_FETCH_SUCCESS',
                         applicationId: e,
-                        branchId: t,
-                        locale: c,
-                        build: r
+                        branchId: n,
+                        locale: s,
+                        build: i
                     });
                 },
-                (n) => {
-                    let { status: r } = n;
-                    if (404 === r)
-                        s.Z.dispatch({
-                            type: 'APPLICATION_BUILD_NOT_FOUND',
-                            applicationId: e,
-                            branchId: t
-                        });
-                    else {
-                        var i, o;
-                        (i = e),
-                            null == h[(o = t)] && (h[o] = new a.V7()),
-                            h[o].start(f + Math.random() * _, () => {
-                                null != l.Z.getLibraryApplication(i, o) && m(i, o);
-                            });
-                    }
+                (r) => {
+                    let { status: i } = r;
+                    404 === i
+                        ? o.Z.dispatch({
+                              type: 'APPLICATION_BUILD_NOT_FOUND',
+                              applicationId: e,
+                              branchId: n
+                          })
+                        : g(e, n);
                 }
             )
     );

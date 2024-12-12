@@ -1,13 +1,14 @@
-t.extend = function (e) {
-    var t,
-        r,
+n.extend = i;
+var r = Object.prototype.hasOwnProperty;
+function i(e) {
+    var n,
         i,
         a,
-        s = Array.prototype.slice.call(arguments, 1);
-    for (t = 0, r = s.length; t < r; t += 1) {
-        if (!!(i = s[t])) for (a in i) n.call(i, a) && (e[a] = i[a]);
+        s,
+        o = Array.prototype.slice.call(arguments, 1);
+    for (n = 0, i = o.length; n < i; n += 1) {
+        if (!!(a = o[n])) for (s in a) r.call(a, s) && (e[s] = a[s]);
     }
     return e;
-};
-var n = Object.prototype.hasOwnProperty;
-t.hop = n;
+}
+n.hop = r;

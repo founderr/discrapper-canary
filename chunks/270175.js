@@ -1,41 +1,42 @@
-var r = n(192379),
-    i = n(476400),
-    a = n.n(i),
-    s = n(723184),
-    o = n(829307),
-    l = n(877837),
-    u = n(376670),
-    c = n(796892),
-    d =
+var i = r(192379),
+    a = r(476400),
+    s = r.n(a),
+    o = r(723184),
+    l = r(829307),
+    u = r(877837),
+    c = r(376670),
+    d = r(796892),
+    f =
         Object.assign ||
         function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+            for (var n = 1; n < arguments.length; n++) {
+                var r = arguments[n];
+                for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
             }
             return e;
         },
-    f = function (e) {
-        var t = e.width,
-            n = e.rgb,
-            i = e.hex,
-            a = e.hsv,
-            f = e.hsl,
-            _ = e.onChange,
+    _ = function (e) {
+        var n = e.width,
+            r = e.rgb,
+            a = e.hex,
+            s = e.hsv,
+            _ = e.hsl,
+            h = e.onChange,
             p = e.onSwatchHover,
-            h = e.disableAlpha,
-            m = e.presetColors,
-            g = e.renderers,
-            E = e.styles,
-            v = void 0 === E ? {} : E,
-            I = e.className,
-            T = (0, s.default)(
-                (0, o.Z)(
+            m = e.disableAlpha,
+            g = e.presetColors,
+            E = e.renderers,
+            v = e.styles,
+            I = void 0 === v ? {} : v,
+            T = e.className,
+            b = void 0 === T ? '' : T,
+            y = (0, o.default)(
+                (0, l.Z)(
                     {
-                        default: d(
+                        default: f(
                             {
                                 picker: {
-                                    width: t,
+                                    width: n,
                                     padding: '10px 10px 0',
                                     boxSizing: 'initial',
                                     background: '#fff',
@@ -68,7 +69,7 @@ var r = n(192379),
                                 activeColor: {
                                     absolute: '0px 0px 0px 0px',
                                     borderRadius: '2px',
-                                    background: 'rgba(' + n.r + ',' + n.g + ',' + n.b + ',' + n.a + ')',
+                                    background: 'rgba(' + r.r + ',' + r.g + ',' + r.b + ',' + r.a + ')',
                                     boxShadow: 'inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25)'
                                 },
                                 hue: {
@@ -91,7 +92,7 @@ var r = n(192379),
                                     shadow: 'inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25)'
                                 }
                             },
-                            v
+                            I
                         ),
                         disableAlpha: {
                             color: { height: '10px' },
@@ -99,81 +100,81 @@ var r = n(192379),
                             alpha: { display: 'none' }
                         }
                     },
-                    v
+                    I
                 ),
-                { disableAlpha: h }
+                { disableAlpha: m }
             );
-        return r.createElement(
+        return i.createElement(
             'div',
             {
-                style: T.picker,
-                className: 'sketch-picker ' + (void 0 === I ? '' : I)
+                style: y.picker,
+                className: 'sketch-picker ' + b
             },
-            r.createElement(
+            i.createElement(
                 'div',
-                { style: T.saturation },
-                r.createElement(l.OQ, {
-                    style: T.Saturation,
-                    hsl: f,
-                    hsv: a,
-                    onChange: _
+                { style: y.saturation },
+                i.createElement(u.OQ, {
+                    style: y.Saturation,
+                    hsl: _,
+                    hsv: s,
+                    onChange: h
                 })
             ),
-            r.createElement(
+            i.createElement(
                 'div',
                 {
-                    style: T.controls,
+                    style: y.controls,
                     className: 'flexbox-fix'
                 },
-                r.createElement(
+                i.createElement(
                     'div',
-                    { style: T.sliders },
-                    r.createElement(
+                    { style: y.sliders },
+                    i.createElement(
                         'div',
-                        { style: T.hue },
-                        r.createElement(l.PS, {
-                            style: T.Hue,
-                            hsl: f,
-                            onChange: _
+                        { style: y.hue },
+                        i.createElement(u.PS, {
+                            style: y.Hue,
+                            hsl: _,
+                            onChange: h
                         })
                     ),
-                    r.createElement(
+                    i.createElement(
                         'div',
-                        { style: T.alpha },
-                        r.createElement(l.xV, {
-                            style: T.Alpha,
-                            rgb: n,
-                            hsl: f,
-                            renderers: g,
-                            onChange: _
+                        { style: y.alpha },
+                        i.createElement(u.xV, {
+                            style: y.Alpha,
+                            rgb: r,
+                            hsl: _,
+                            renderers: E,
+                            onChange: h
                         })
                     )
                 ),
-                r.createElement('div', { style: T.color }, r.createElement(l.QN, null), r.createElement('div', { style: T.activeColor }))
+                i.createElement('div', { style: y.color }, i.createElement(u.QN, null), i.createElement('div', { style: y.activeColor }))
             ),
-            r.createElement(u.Z, {
-                rgb: n,
-                hsl: f,
-                hex: i,
-                onChange: _,
-                disableAlpha: h
+            i.createElement(c.Z, {
+                rgb: r,
+                hsl: _,
+                hex: a,
+                onChange: h,
+                disableAlpha: m
             }),
-            r.createElement(c.Z, {
-                colors: m,
-                onClick: _,
+            i.createElement(d.Z, {
+                colors: g,
+                onClick: h,
                 onSwatchHover: p
             })
         );
     };
-(f.propTypes = {
-    disableAlpha: a().bool,
-    width: a().oneOfType([a().string, a().number]),
-    styles: a().object
+(_.propTypes = {
+    disableAlpha: s().bool,
+    width: s().oneOfType([s().string, s().number]),
+    styles: s().object
 }),
-    (f.defaultProps = {
+    (_.defaultProps = {
         disableAlpha: !1,
         width: 200,
         styles: {},
         presetColors: ['#D0021B', '#F5A623', '#F8E71C', '#8B572A', '#7ED321', '#417505', '#BD10E0', '#9013FE', '#4A90E2', '#50E3C2', '#B8E986', '#000000', '#4A4A4A', '#9B9B9B', '#FFFFFF']
     }),
-    (0, l.t1)(f);
+    (0, u.t1)(_);

@@ -1,37 +1,42 @@
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140),
-    u = n(981631);
-let c = {};
-class d extends (s = o.ZP.Store) {
+var i,
+    a = r(442837),
+    s = r(570140),
+    o = r(981631);
+function l(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let u = {};
+function c() {
+    u = {};
+}
+function d() {
+    delete u[o.K3D.SOUND];
+}
+function f(e) {
+    let { errorMessage: n, errorCode: r } = e;
+    u[o.K3D.SOUND] = {
+        errorMessage: n,
+        errorCode: r
+    };
+}
+class _ extends (i = a.ZP.Store) {
     getHookError(e) {
-        return c[e];
+        return u[e];
     }
 }
-(a = 'HookErrorStore'),
-    (i = 'displayName') in (r = d)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.Z = new d(l.Z, {
-        MEDIA_ENGINE_SET_GO_LIVE_SOURCE: function () {
-            c = {};
-        },
-        MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING: function () {
-            delete c[u.K3D.SOUND];
-        },
-        MEDIA_ENGINE_SOUNDSHARE_FAILED: function (e) {
-            let { errorMessage: t, errorCode: n } = e;
-            c[u.K3D.SOUND] = {
-                errorMessage: t,
-                errorCode: n
-            };
-        }
+l(_, 'displayName', 'HookErrorStore'),
+    (n.Z = new _(s.Z, {
+        MEDIA_ENGINE_SET_GO_LIVE_SOURCE: c,
+        MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING: d,
+        MEDIA_ENGINE_SOUNDSHARE_FAILED: f
     }));

@@ -1,82 +1,88 @@
-n.d(t, {
+r.d(n, {
     Xj: function () {
-        return g;
+        return v;
     },
     fq: function () {
-        return E;
+        return I;
     },
     rR: function () {
-        return v;
+        return b;
     }
-}),
-    n(47120);
-var r = n(192379),
-    i = n(392711),
-    a = n.n(i),
-    s = n(442837),
-    o = n(726542),
-    l = n(487576),
-    u = n(553795),
-    c = n(594174),
-    d = n(70956),
-    f = n(981631),
-    _ = n(420212);
-let p = { [f.ABu.INSTAGRAM]: ['1036753656588017764'] },
-    h = new Map([[f.ABu.INSTAGRAM, new Date(2023, 1, 18).getTime()]]),
-    m = 30 * d.Z.Millis.DAY;
-function g(e) {
-    let { forUserProfile: t } = e,
-        n = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
-        r = l.c.useExperiment({ location: 'f2f7ef_1' }, { autoTrackExposure: !1 }).allowPlayStationStaging;
+});
+var i = r(47120);
+var a = r(192379),
+    s = r(392711),
+    o = r.n(s),
+    l = r(442837),
+    u = r(726542),
+    c = r(487576),
+    d = r(553795),
+    f = r(594174),
+    _ = r(70956),
+    h = r(981631),
+    p = r(420212);
+let m = { [h.ABu.INSTAGRAM]: ['1036753656588017764'] },
+    g = new Map([[h.ABu.INSTAGRAM, new Date(2023, 1, 18).getTime()]]),
+    E = 30 * _.Z.Millis.DAY;
+function v(e) {
+    let { forUserProfile: n } = e,
+        r = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
+        i = c.c.useExperiment({ location: 'f2f7ef_1' }, { autoTrackExposure: !1 }).allowPlayStationStaging;
     return (e) => {
-        var i;
-        return e.type === f.ABu.PLAYSTATION_STAGING ? r : !!(void 0 !== n && (null === (i = p[e.type]) || void 0 === i ? void 0 : i.includes(n.id))) || !!t || e.enabled;
+        var a;
+        return e.type === h.ABu.PLAYSTATION_STAGING ? i : !!(void 0 !== r && (null === (a = m[e.type]) || void 0 === a ? void 0 : a.includes(r.id))) || !!n || e.enabled;
     };
 }
-function E() {
-    let e = (0, s.e7)([u.Z], () => u.Z.getAccounts()),
-        t = g({ forUserProfile: !1 }),
-        n = r.useMemo(() => {
-            let t = new Set();
-            return e.forEach((e) => t.add(e.type)), t;
+function I() {
+    let e = (0, l.e7)([d.Z], () => d.Z.getAccounts()),
+        n = v({ forUserProfile: !1 }),
+        r = a.useMemo(() => {
+            let n = new Set();
+            return e.forEach((e) => n.add(e.type)), n;
         }, [e]);
-    return r.useMemo(
+    return a.useMemo(
         () =>
-            a().sortBy(o.Z.filter(t), [
+            o().sortBy(u.Z.filter(n), [
                 (e) => {
-                    var t;
-                    return !(h.has(e.type) && Date.now() < (null !== (t = h.get(e.type)) && void 0 !== t ? t : 0) + m);
+                    var n;
+                    return !(g.has(e.type) && Date.now() < (null !== (n = g.get(e.type)) && void 0 !== n ? n : 0) + E);
                 },
-                (e) => n.has(e.type),
+                (e) => r.has(e.type),
                 (e) => e.hasMetadata,
-                (e) => !f.vbS.has(e.type),
+                (e) => !h.vbS.has(e.type),
                 (e) => e.name
             ]),
-        [n, t]
+        [r, n]
     );
 }
-function v(e) {
-    let [t, n] = r.useState(!1);
+let T = new Map([
+    [h.ABu.PLAYSTATION, 2],
+    [h.ABu.XBOX, 2],
+    [h.ABu.SPOTIFY, 1],
+    [h.ABu.STEAM, 1],
+    [h.ABu.TWITCH, 1]
+]);
+function b(e) {
+    let [n, r] = a.useState(!1);
     function i(e) {
-        let { key: t } = e;
-        t === _.vn.SHIFT && n(!0);
+        let { key: n } = e;
+        n === p.vn.SHIFT && r(!0);
     }
-    function a(e) {
-        let { key: t } = e;
-        t === _.vn.SHIFT && n(!1);
+    function s(e) {
+        let { key: n } = e;
+        n === p.vn.SHIFT && r(!1);
     }
-    return (r.useEffect(
+    return (a.useEffect(
         () => (
             window.addEventListener('keydown', i),
-            window.addEventListener('keyup', a),
+            window.addEventListener('keyup', s),
             () => {
-                window.removeEventListener('keydown', i), window.removeEventListener('keyup', a);
+                window.removeEventListener('keydown', i), window.removeEventListener('keyup', s);
             }
         ),
         []
     ),
-    t && e === f.ABu.TWITTER)
-        ? f.ABu.TWITTER_LEGACY
+    n && e === h.ABu.TWITTER)
+        ? h.ABu.TWITTER_LEGACY
         : e;
 }
-f.ABu.PLAYSTATION, f.ABu.XBOX, f.ABu.SPOTIFY, f.ABu.STEAM, f.ABu.TWITCH;

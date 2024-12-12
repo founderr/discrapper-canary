@@ -1,27 +1,28 @@
-n(47120);
-var r = n(224706),
-    i = n(978085),
-    a = n(147913),
-    s = n(283595),
-    o = n(358085);
-class l extends a.Z {
+var i = r(47120);
+var a = r(224706),
+    s = r(978085),
+    o = r(147913),
+    l = r(283595),
+    u = r(358085);
+function c(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+class d extends o.Z {
     handlePostConnectionOpen() {
-        (0, o.isDesktop)() && (!s.Z.fetched && (0, i.b8)(), r.Z.getDetectableGames());
+        (0, u.isDesktop)() && (!l.Z.fetched && (0, s.b8)(), a.Z.getDetectableGames());
     }
     constructor(...e) {
-        var t, n, r;
-        super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = { POST_CONNECTION_OPEN: this.handlePostConnectionOpen }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+        super(...e), c(this, 'actions', { POST_CONNECTION_OPEN: this.handlePostConnectionOpen });
     }
 }
-t.Z = new l();
+n.Z = new d();

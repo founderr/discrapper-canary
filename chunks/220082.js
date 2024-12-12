@@ -1,68 +1,70 @@
-n.d(t, {
+r.d(n, {
     Cf: function () {
-        return g;
+        return I;
     },
     Dq: function () {
-        return h;
+        return E;
     },
     SR: function () {
-        return f;
+        return h;
     },
     ZP: function () {
-        return m;
+        return v;
     },
     vM: function () {
-        return _;
+        return m;
     }
-}),
-    n(47120);
-var r = n(192379),
-    i = n(979590),
-    a = n.n(i),
-    s = n(15729),
-    o = n(731965),
-    l = n(442837),
-    u = n(607070),
-    c = n(302221),
-    d = n(956664);
-let f = (0, s.U)(() => ({
+});
+var i = r(47120);
+var a = r(192379),
+    s = r(979590),
+    o = r.n(s),
+    l = r(15729),
+    u = r(731965),
+    c = r(442837),
+    d = r(607070),
+    f = r(302221),
+    _ = r(956664);
+let h = (0, l.U)(() => ({
     palette: {},
     fetching: {}
 }));
-async function _(e) {
-    var t;
-    if (((t = e), null == f.getState().palette[t])) await p(e);
+function p(e) {
+    return null != h.getState().palette[e];
 }
-async function p(e) {
-    if (!f.getState().fetching[e]) {
-        (0, o.j)(() =>
-            f.setState((t) => ({
+async function m(e) {
+    !p(e) && (await g(e));
+}
+async function g(e) {
+    if (!h.getState().fetching[e]) {
+        (0, u.j)(() =>
+            h.setState((n) => ({
                 fetching: {
-                    ...t.fetching,
+                    ...n.fetching,
                     [e]: !0
                 }
             }))
         );
         try {
-            let t = await (0, d.OF)(e),
-                n = (0, c.WY)(t[0]);
-            (0, o.j)(() => {
-                f.setState((r) => ({
+            let n = await (0, _.OF)(e),
+                r = (0, f.WY)(n[0]);
+            (0, u.j)(() => {
+                h.setState((i) => ({
                     fetching: {
-                        ...r.fetching,
+                        ...i.fetching,
                         [e]: !1
                     },
                     palette: {
-                        ...r.palette,
-                        [e]: [...t.slice(0, 2), ...n]
+                        ...i.palette,
+                        [e]: [...n.slice(0, 2), ...r]
                     }
                 }));
             });
-        } catch (t) {
-            (0, o.j)(() =>
-                f.setState((t) => ({
+        } catch (n) {
+            (0, u.j)(() =>
+                h.setState((n) => ({
                     fetching: {
-                        ...t.fetching,
+                        ...n.fetching,
                         [e]: !1
                     }
                 }))
@@ -70,43 +72,43 @@ async function p(e) {
         }
     }
 }
-function h(e) {
-    return !f((t) => null != e && t.fetching[e]);
+function E(e) {
+    return !h((n) => null != e && n.fetching[e]);
 }
-function m(e, t) {
-    let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        [r] = g(e, t, n);
-    return r;
+function v(e, n) {
+    let r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+        [i] = I(e, n, r);
+    return i;
 }
-function g(e, t) {
-    let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        i = f((t) => (null == e ? void 0 : t.palette[e])),
-        s = (0, l.e7)([u.Z], () => (n && u.Z.desaturateUserColors ? u.Z.saturation : 1));
-    r.useEffect(() => {
-        if (null != e && null == i) p(e);
+function I(e, n) {
+    let r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+        i = h((n) => (null == e ? void 0 : n.palette[e])),
+        s = (0, c.e7)([d.Z], () => (r && d.Z.desaturateUserColors ? d.Z.saturation : 1));
+    a.useEffect(() => {
+        if (null != e && null == i) g(e);
     }, [e, i]);
-    let o = r.useMemo(
+    let l = a.useMemo(
         () =>
             null == i
                 ? void 0
                 : i.map((e) => {
-                      let [t, n, r] = e,
+                      let [n, r, i] = e,
                           {
-                              h: i,
-                              s: o,
-                              l
-                          } = a()({
-                              r: t,
-                              g: n,
-                              b: r
+                              h: a,
+                              s: l,
+                              l: u
+                          } = o()({
+                              r: n,
+                              g: r,
+                              b: i
                           }).toHsl();
-                      return a()({
-                          h: i,
-                          s: o * s,
-                          l
+                      return o()({
+                          h: a,
+                          s: l * s,
+                          l: u
                       }).toHexString();
                   }),
         [i, s]
     );
-    return null != o ? o : [t, t];
+    return null != l ? l : [n, n];
 }

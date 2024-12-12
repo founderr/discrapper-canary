@@ -1,11 +1,9 @@
-var r, i;
-n.d(t, {
+var i;
+r.d(n, {
     d: function () {
-        return r;
+        return i;
     }
 }),
-    ((i = r || (r = {})).LAUNCHER = 'LAUNCHER'),
-    (i.LIBRARY_APPLICATION = 'LIBRARY_APPLICATION'),
-    (i.USER_OVERRIDE = 'USER_OVERRIDE'),
-    (i.DATABASE = 'DATABASE'),
-    (i.DEFAULT = 'DEFAULT');
+    !(function (e) {
+        (e.LAUNCHER = 'LAUNCHER'), (e.LIBRARY_APPLICATION = 'LIBRARY_APPLICATION'), (e.USER_OVERRIDE = 'USER_OVERRIDE'), (e.DATABASE = 'DATABASE'), (e.DEFAULT = 'DEFAULT');
+    })(i || (i = {}));

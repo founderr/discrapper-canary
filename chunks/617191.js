@@ -1,23 +1,21 @@
-var r = n(524437),
-    i = n(247206),
-    a = n(82554),
-    s = n(388032);
-let o = {
-    getTitle: () => s.intl.string(s.t['5Qu1IS']),
-    getDisabledTitle: () => s.intl.string(s.t.YdZZtL),
-    getDescription: () => s.intl.string(s.t.Vzp5BA),
-    eligibleReportSubtypes: [a.i5.SUB_CSAM, a.i5.SUB_LOLI, a.i5.SUB_NCP, a.i5.SUB_SEXUALLY_DEGRADING_CONTENT, a.i5.SUB_UNSOLICITED_PORN],
-    onApply: () =>
-        (0, i.zj)(
-            (function () {
-                let { explicitContentGuilds: e, explicitContentFriendDm: t, explicitContentNonFriendDm: n } = (0, i.l4)(),
-                    a = {};
-                return e === r.Q4.SHOW && (a.explicitContentGuilds = r.Q4.BLUR), t === r.Q4.SHOW && (a.explicitContentFriendDm = r.Q4.BLUR), n === r.Q4.SHOW && (a.explicitContentNonFriendDm = r.Q4.BLUR), a;
-            })()
-        ),
+var i = r(524437),
+    a = r(247206),
+    s = r(82554),
+    o = r(388032);
+function l() {
+    let { explicitContentGuilds: e, explicitContentFriendDm: n, explicitContentNonFriendDm: r } = (0, a.l4)(),
+        s = {};
+    return e === i.Q4.SHOW && (s.explicitContentGuilds = i.Q4.BLUR), n === i.Q4.SHOW && (s.explicitContentFriendDm = i.Q4.BLUR), r === i.Q4.SHOW && (s.explicitContentNonFriendDm = i.Q4.BLUR), s;
+}
+let u = {
+    getTitle: () => o.intl.string(o.t['5Qu1IS']),
+    getDisabledTitle: () => o.intl.string(o.t.YdZZtL),
+    getDescription: () => o.intl.string(o.t.Vzp5BA),
+    eligibleReportSubtypes: [s.i5.SUB_CSAM, s.i5.SUB_LOLI, s.i5.SUB_NCP, s.i5.SUB_SEXUALLY_DEGRADING_CONTENT, s.i5.SUB_UNSOLICITED_PORN],
+    onApply: () => (0, a.zj)(l()),
     predicate: () => {
-        let { explicitContentGuilds: e, explicitContentFriendDm: t, explicitContentNonFriendDm: n } = (0, i.l4)();
-        return e === r.Q4.SHOW || t === r.Q4.SHOW || n === r.Q4.SHOW;
+        let { explicitContentGuilds: e, explicitContentFriendDm: n, explicitContentNonFriendDm: r } = (0, a.l4)();
+        return e === i.Q4.SHOW || n === i.Q4.SHOW || r === i.Q4.SHOW;
     }
 };
-t.Z = o;
+n.Z = u;

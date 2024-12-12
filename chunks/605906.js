@@ -1,4 +1,5 @@
-var r = n(106234);
-e.exports = function (e, t) {
-    return (t = 'function' == typeof t ? t : void 0), e && e.length ? r(e, void 0, t) : [];
-};
+var i = r(106234);
+function a(e, n) {
+    return (n = 'function' == typeof n ? n : void 0), e && e.length ? i(e, void 0, n) : [];
+}
+e.exports = a;

@@ -1,35 +1,37 @@
-n(47120);
-var r = n(147913),
-    i = n(604375),
-    a = n(268004);
-class s extends r.Z {
+var i = r(47120);
+var a = r(147913),
+    s = r(604375),
+    o = r(268004);
+function l(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+class u extends a.Z {
     handleVoiceChannelSelect() {
-        a.M.trigger();
+        o.M.trigger();
     }
     handleCallCreate() {
-        a.M.trigger();
+        o.M.trigger();
     }
     handleUserSettingsModalOpen() {
-        i.X.trigger();
+        s.X.trigger();
     }
     constructor(...e) {
-        var t, n, r;
         super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = {
+            l(this, 'actions', {
                 VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect,
                 CALL_CREATE: this.handleCallCreate,
                 USER_SETTINGS_MODAL_OPEN: this.handleUserSettingsModalOpen
-            }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+            });
     }
 }
-t.Z = new s();
+n.Z = new u();

@@ -1,10 +1,11 @@
-var r = n(171688),
-    i = n(273314),
-    a = n(452177),
-    s = n(238896);
+var i = r(171688),
+    a = r(273314),
+    s = r(452177),
+    o = r(238896),
+    l = 4294967296;
 e.exports = function (e) {
-    var t = i(e);
-    if (!s(t) || 0 === t) return 0;
-    var n = r(a(t), 4294967296);
-    return 0 === n ? 0 : n;
+    var n = a(e);
+    if (!o(n) || 0 === n) return 0;
+    var r = i(s(n), l);
+    return 0 === r ? 0 : r;
 };

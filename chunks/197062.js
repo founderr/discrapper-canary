@@ -1,21 +1,22 @@
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(388032);
-let s = (e, t) =>
-    (0, r.jsxs)(
-        i.Text,
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(388032);
+let o = (e, n) => {
+    let r = {
+        display: 'flex',
+        gap: '4px',
+        margin: '8px 0 4px 0',
+        alignItems: 'center'
+    };
+    return (0, i.jsxs)(
+        a.Text,
         {
             color: 'text-danger',
-            style: {
-                display: 'flex',
-                gap: '4px',
-                margin: '8px 0 4px 0',
-                alignItems: 'center'
-            },
+            style: r,
             variant: 'text-sm/normal',
             children: [
-                (0, r.jsx)(i.CircleWarningIcon, {
+                (0, i.jsx)(a.CircleWarningIcon, {
                     size: 'custom',
                     color: 'currentColor',
                     width: 14,
@@ -24,10 +25,10 @@ let s = (e, t) =>
                 e
             ]
         },
-        t
+        n
     );
-t.Z = {
-    getForumChannelPermissionText: function () {
-        return a.intl.format(a.t.zlXUVV, { warningHook: s });
-    }
 };
+function l() {
+    return s.intl.format(s.t.zlXUVV, { warningHook: o });
+}
+n.Z = { getForumChannelPermissionText: l };

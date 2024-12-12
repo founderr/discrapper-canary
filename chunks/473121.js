@@ -1,43 +1,44 @@
-var r = n(200651),
-    i = n(192379),
-    a = n(481060),
-    s = n(454585),
-    o = n(273744),
-    l = n(388032),
-    u = n(494045);
-t.Z = (e) => {
+var i = r(200651),
+    a = r(192379),
+    s = r(481060),
+    o = r(454585),
+    l = r(273744),
+    u = r(388032),
+    c = r(494045);
+let d = (e) => {
     let {
-            node: { header: t, subheader: n, button: c }
+            node: { header: n, subheader: r, button: d }
         } = e,
-        d = (null == c ? void 0 : c.type) === 'submit',
-        f = i.useRef(
-            s.Z.reactParserFor({
-                ...s.Z.defaultRules,
-                link: o.s
+        f = (null == d ? void 0 : d.type) === 'submit',
+        _ = a.useRef(
+            o.Z.reactParserFor({
+                ...o.Z.defaultRules,
+                link: l.s
             })
         );
-    return (0, r.jsxs)('div', {
-        className: u.headerContainer,
+    return (0, i.jsxs)('div', {
+        className: c.headerContainer,
         children: [
-            null != t && '' !== t
-                ? (0, r.jsx)(a.Heading, {
+            null != n && '' !== n
+                ? (0, i.jsx)(s.Heading, {
                       variant: 'heading-xl/semibold',
                       color: 'header-primary',
-                      children: t
+                      children: n
                   })
                 : null,
-            null != n && '' !== t
-                ? (0, r.jsx)(a.Text, {
+            null != r && '' !== n
+                ? (0, i.jsx)(s.Text, {
                       variant: 'text-md/normal',
                       color: 'header-secondary',
-                      children: f.current(n)
+                      children: _.current(r)
                   })
                 : null,
-            d &&
-                (0, r.jsx)(a.Text, {
+            f &&
+                (0, i.jsx)(s.Text, {
                     variant: 'text-sm/normal',
-                    children: l.intl.format(l.t.Q0tSKS, {})
+                    children: u.intl.format(u.t.Q0tSKS, {})
                 })
         ]
     });
 };
+n.Z = d;

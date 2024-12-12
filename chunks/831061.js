@@ -1,17 +1,18 @@
-e.exports = function (e) {
-    let t = e.regex,
-        n = /[a-zA-Z]\w*/,
-        r = ['as', 'break', 'class', 'construct', 'continue', 'else', 'for', 'foreign', 'if', 'import', 'in', 'is', 'return', 'static', 'var', 'while'],
-        i = ['true', 'false', 'null'],
-        a = ['this', 'super'],
-        s = ['-', '~', /\*/, '%', /\.\.\./, /\.\./, /\+/, '<<', '>>', '>=', '<=', '<', '>', /\^/, /!=/, /!/, /\bis\b/, '==', '&&', '&', /\|\|/, /\|/, /\?:/, '='],
-        o = {
+function n(e) {
+    let n = e.regex,
+        r = /[a-zA-Z]\w*/,
+        i = ['as', 'break', 'class', 'construct', 'continue', 'else', 'for', 'foreign', 'if', 'import', 'in', 'is', 'return', 'static', 'var', 'while'],
+        a = ['true', 'false', 'null'],
+        s = ['this', 'super'],
+        o = ['Bool', 'Class', 'Fiber', 'Fn', 'List', 'Map', 'Null', 'Num', 'Object', 'Range', 'Sequence', 'String', 'System'],
+        l = ['-', '~', /\*/, '%', /\.\.\./, /\.\./, /\+/, '<<', '>>', '>=', '<=', '<', '>', /\^/, /!=/, /!/, /\bis\b/, '==', '&&', '&', /\|\|/, /\|/, /\?:/, '='],
+        u = {
             relevance: 0,
-            match: t.concat(/\b(?!(if|while|for|else|super)\b)/, n, /(?=\s*[({])/),
+            match: n.concat(/\b(?!(if|while|for|else|super)\b)/, r, /(?=\s*[({])/),
             className: 'title.function'
         },
-        l = {
-            match: t.concat(t.either(t.concat(/\b(?!(if|while|for|else|super)\b)/, n), t.either(...s)), /(?=\s*\([^)]+\)\s*\{)/),
+        c = {
+            match: n.concat(n.either(n.concat(/\b(?!(if|while|for|else|super)\b)/, r), n.either(...l)), /(?=\s*\([^)]+\)\s*\{)/),
             className: 'title.function',
             starts: {
                 contains: [
@@ -22,40 +23,66 @@ e.exports = function (e) {
                             {
                                 relevance: 0,
                                 scope: 'params',
-                                match: n
+                                match: r
                             }
                         ]
                     }
                 ]
             }
         },
-        u = {
-            relevance: 0,
-            match: t.either(...s),
-            className: 'operator'
-        },
-        c = {
-            className: 'property',
-            begin: t.concat(/\./, t.lookahead(n)),
-            end: n,
-            excludeBegin: !0,
-            relevance: 0
-        },
         d = {
-            relevance: 0,
-            match: t.concat(/\b_/, n),
-            scope: 'variable'
+            variants: [
+                {
+                    match: [/class\s+/, r, /\s+is\s+/, r]
+                },
+                {
+                    match: [/class\s+/, r]
+                }
+            ],
+            scope: {
+                2: 'title.class',
+                4: 'title.class.inherited'
+            },
+            keywords: i
         },
         f = {
             relevance: 0,
+            match: n.either(...l),
+            className: 'operator'
+        },
+        _ = {
+            className: 'string',
+            begin: /"""/,
+            end: /"""/
+        },
+        h = {
+            className: 'property',
+            begin: n.concat(/\./, n.lookahead(r)),
+            end: r,
+            excludeBegin: !0,
+            relevance: 0
+        },
+        p = {
+            relevance: 0,
+            match: n.concat(/\b_/, r),
+            scope: 'variable'
+        },
+        m = {
+            relevance: 0,
             match: /\b[A-Z]+[a-z]+([A-Z]+[a-z]+)*/,
             scope: 'title.class',
-            keywords: {
-                _: ['Bool', 'Class', 'Fiber', 'Fn', 'List', 'Map', 'Null', 'Num', 'Object', 'Range', 'Sequence', 'String', 'System']
+            keywords: { _: o }
+        },
+        g = e.C_NUMBER_MODE,
+        E = {
+            match: [r, /\s*/, /=/, /\s*/, /\(/, r, /\)\s*\{/],
+            scope: {
+                1: 'title.function',
+                3: 'operator',
+                6: 'params'
             }
         },
-        _ = e.C_NUMBER_MODE,
-        p = e.COMMENT(/\/\*\*/, /\*\//, {
+        v = e.COMMENT(/\/\*\*/, /\*\//, {
             contains: [
                 {
                     match: /@[a-z]+/,
@@ -64,96 +91,56 @@ e.exports = function (e) {
                 'self'
             ]
         }),
-        h = {
+        I = {
             scope: 'subst',
             begin: /%\(/,
             end: /\)/,
-            contains: [_, f, o, d, u]
+            contains: [g, m, u, p, f]
         },
-        m = {
+        T = {
             scope: 'string',
             begin: /"/,
             end: /"/,
             contains: [
-                h,
+                I,
                 {
                     scope: 'char.escape',
                     variants: [{ match: /\\\\|\\["0%abefnrtv]/ }, { match: /\\x[0-9A-F]{2}/ }, { match: /\\u[0-9A-F]{4}/ }, { match: /\\U[0-9A-F]{8}/ }]
                 }
             ]
         };
-    h.contains.push(m);
-    let g = [...r, ...a, ...i],
-        E = {
+    I.contains.push(T);
+    let b = [...i, ...s, ...a],
+        y = {
             relevance: 0,
-            match: t.concat('\\b(?!', g.join('|'), '\\b)', /[a-zA-Z_]\w*(?:[?!]|\b)/),
+            match: n.concat('\\b(?!', b.join('|'), '\\b)', /[a-zA-Z_]\w*(?:[?!]|\b)/),
             className: 'variable'
+        },
+        S = {
+            scope: 'comment',
+            variants: [
+                {
+                    begin: [/#!?/, /[A-Za-z_]+(?=\()/],
+                    beginScope: {},
+                    keywords: { literal: a },
+                    contains: [],
+                    end: /\)/
+                },
+                {
+                    begin: [/#!?/, /[A-Za-z_]+/],
+                    beginScope: {},
+                    end: /$/
+                }
+            ]
         };
     return {
         name: 'Wren',
         keywords: {
-            keyword: r,
-            'variable.language': a,
-            literal: i
+            keyword: i,
+            'variable.language': s,
+            literal: a
         },
-        contains: [
-            {
-                scope: 'comment',
-                variants: [
-                    {
-                        begin: [/#!?/, /[A-Za-z_]+(?=\()/],
-                        beginScope: {},
-                        keywords: { literal: i },
-                        contains: [],
-                        end: /\)/
-                    },
-                    {
-                        begin: [/#!?/, /[A-Za-z_]+/],
-                        beginScope: {},
-                        end: /$/
-                    }
-                ]
-            },
-            _,
-            m,
-            {
-                className: 'string',
-                begin: /"""/,
-                end: /"""/
-            },
-            p,
-            e.C_LINE_COMMENT_MODE,
-            e.C_BLOCK_COMMENT_MODE,
-            f,
-            {
-                variants: [
-                    {
-                        match: [/class\s+/, n, /\s+is\s+/, n]
-                    },
-                    {
-                        match: [/class\s+/, n]
-                    }
-                ],
-                scope: {
-                    2: 'title.class',
-                    4: 'title.class.inherited'
-                },
-                keywords: r
-            },
-            {
-                match: [n, /\s*/, /=/, /\s*/, /\(/, n, /\)\s*\{/],
-                scope: {
-                    1: 'title.function',
-                    3: 'operator',
-                    6: 'params'
-                }
-            },
-            l,
-            o,
-            u,
-            d,
-            c,
-            E
-        ]
+        contains: [S, g, T, _, v, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, m, d, E, c, u, f, p, h, y]
     };
-};
+}
+e.exports = n;

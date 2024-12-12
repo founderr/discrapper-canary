@@ -1,24 +1,41 @@
-n(653041);
-var r = n(981631);
-let i = [],
-    a = !1;
-function s() {
+var i = r(653041);
+var a = r(981631);
+let s = [],
+    o = !1;
+function l() {
     let e = window.navigator.connection;
     return null == e
         ? {
-              type: r.IWh.UNKNOWN,
-              effectiveSpeed: r.IyS.UNKNOWN
+              type: a.IWh.UNKNOWN,
+              effectiveSpeed: a.IyS.UNKNOWN
           }
         : {
-              type: null != e.type ? e.type : r.IWh.UNKNOWN,
+              type: null != e.type ? e.type : a.IWh.UNKNOWN,
               effectiveSpeed: e.effectiveType
           };
 }
-function o() {
-    let e = s();
-    i.forEach((t) => t(e));
+function u() {
+    if (!0 === o) return;
+    let e = window.navigator.connection;
+    null != e && ((o = !0), e.addEventListener('change', d));
 }
-t.Z = {
+function c() {
+    if (!1 === o) return;
+    let e = window.navigator.connection;
+    null != e && 0 === s.length && null != e && (e.removeEventListener('change', d), (o = !1));
+}
+function d() {
+    let e = l();
+    s.forEach((n) => n(e));
+}
+function f(e) {
+    s.push(e), u();
+}
+function _(e) {
+    let n = s.indexOf(e);
+    -1 !== n && (s.splice(n, 1), c());
+}
+n.Z = {
     addOnlineCallback(e) {
         window.addEventListener('online', e);
     },
@@ -32,28 +49,12 @@ t.Z = {
         window.removeEventListener('offline', e);
     },
     addChangeCallback(e) {
-        var t;
-        (t = e),
-            i.push(t),
-            (function () {
-                if (!0 === a) return;
-                let e = window.navigator.connection;
-                null != e && ((a = !0), e.addEventListener('change', o));
-            })();
+        f(e);
     },
     removeChangeCallback(e) {
-        !(function (e) {
-            let t = i.indexOf(e);
-            -1 !== t &&
-                (i.splice(t, 1),
-                !(function () {
-                    if (!1 === a) return;
-                    let e = window.navigator.connection;
-                    null != e && 0 === i.length && null != e && (e.removeEventListener('change', o), (a = !1));
-                })());
-        })(e);
+        _(e);
     },
-    getNetworkInformation: () => Promise.resolve(s()),
+    getNetworkInformation: () => Promise.resolve(l()),
     isOnline() {
         let e = navigator.onLine;
         return void 0 === e || e;

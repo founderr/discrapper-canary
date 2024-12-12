@@ -1,62 +1,56 @@
-n.d(t, {
+r.d(n, {
     e: function () {
-        return s;
+        return u;
     }
 });
-var r = n(708644);
-function i(e, t) {
-    for (var n = 0; n < t.length; n++) {
-        var r = t[n];
-        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+var i = r(708644);
+function a(e, n) {
+    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+}
+function s(e, n) {
+    for (var r = 0; r < n.length; r++) {
+        var i = n[r];
+        (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
     }
 }
-function a(e, t, n) {
+function o(e, n, r) {
+    return n && s(e.prototype, n), r && s(e, r), e;
+}
+function l(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-var s = (function () {
-    var e, t, n;
-    function s(e) {
-        !(function (e, t) {
-            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-        })(this, s),
-            a(this, 'entered', []),
-            a(this, 'isNodeInDocument', void 0),
-            (this.isNodeInDocument = e);
+var u = (function () {
+    function e(n) {
+        a(this, e), l(this, 'entered', []), l(this, 'isNodeInDocument', void 0), (this.isNodeInDocument = n);
     }
     return (
-        (e = s),
-        (t = [
+        o(e, [
             {
                 key: 'enter',
                 value: function (e) {
-                    var t = this,
-                        n = this.entered.length;
-                    return (
-                        (this.entered = (0, r.G0)(
-                            this.entered.filter(function (n) {
-                                return t.isNodeInDocument(n) && (!n.contains || n.contains(e));
-                            }),
-                            [e]
-                        )),
-                        0 === n && this.entered.length > 0
-                    );
+                    var n = this,
+                        r = this.entered.length,
+                        a = function (r) {
+                            return n.isNodeInDocument(r) && (!r.contains || r.contains(e));
+                        };
+                    return (this.entered = (0, i.G0)(this.entered.filter(a), [e])), 0 === r && this.entered.length > 0;
                 }
             },
             {
                 key: 'leave',
                 value: function (e) {
-                    var t = this.entered.length;
-                    return (this.entered = (0, r.zu)(this.entered.filter(this.isNodeInDocument), e)), t > 0 && 0 === this.entered.length;
+                    var n = this.entered.length;
+                    return (this.entered = (0, i.zu)(this.entered.filter(this.isNodeInDocument), e)), n > 0 && 0 === this.entered.length;
                 }
             },
             {
@@ -66,7 +60,6 @@ var s = (function () {
                 }
             }
         ]),
-        i(e.prototype, t),
-        s
+        e
     );
 })();

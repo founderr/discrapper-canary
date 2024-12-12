@@ -1,33 +1,42 @@
-n.d(t, {
+r.d(n, {
     u: function () {
-        return d;
+        return h;
     }
-}),
-    n(47120);
-var r = n(259443),
-    i = n(544891),
-    a = n(881052),
-    s = n(131951),
-    o = n(403182),
-    l = n(579806),
-    u = n(981631);
-let c = new r.Yd('uploadRtcLogFiles');
-async function d(e, t) {
-    let n;
-    if (null == l.Z.fileManager.readLogFiles) throw new a.n0(a.cz.GENERAL);
-    let r = [];
+});
+var i = r(47120);
+var a = r(259443),
+    s = r(544891),
+    o = r(881052),
+    l = r(131951),
+    u = r(403182),
+    c = r(579806),
+    d = r(981631);
+let f = new a.Yd('uploadRtcLogFiles');
+function _(e, n) {
+    let r = n.split('.'),
+        i = r.length > 1 ? r.pop() : '',
+        a = r.join('.'),
+        s = ''.concat(a, '.').concat(i),
+        o = 1;
+    for (; e.has(s); ) (s = ''.concat(a, '_').concat(o, '.').concat(i)), (o += 1);
+    return e.add(s), s;
+}
+async function h(e, n) {
+    let r;
+    if (null == c.Z.fileManager.readLogFiles) throw new o.n0(o.cz.GENERAL);
+    let i = [];
     try {
-        r = (r = await l.Z.fileManager.readLogFiles(e)).map((e) => (0, o.qF)(e, 'application/octet-stream'));
+        i = (i = await c.Z.fileManager.readLogFiles(e)).map((e) => (0, u.qF)(e, 'application/octet-stream'));
     } catch (e) {
-        throw (c.error("uploadDebugFiles: read error '".concat(e, "'")), new a.n0(a.cz.READ));
+        throw (f.error("uploadDebugFiles: read error '".concat(e, "'")), new o.n0(o.cz.READ));
     }
-    if (0 === r.length) throw new a.n0(a.cz.NO_FILE);
-    let d = {
-            extraInfo: t,
-            mediaEngineState: s.Z.getState()
+    if (0 === i.length) throw new o.n0(o.cz.NO_FILE);
+    let a = {
+            extraInfo: n,
+            mediaEngineState: l.Z.getState()
         },
-        f = [
-            ...r.map((e) => ({
+        h = [
+            ...i.map((e) => ({
                 name: e.name,
                 file: e,
                 filename: e.name
@@ -35,37 +44,29 @@ async function d(e, t) {
             {
                 name: 'media_engine_state.json',
                 filename: 'media_engine_state.json',
-                file: new Blob([JSON.stringify(d, void 0, 2)])
+                file: new Blob([JSON.stringify(a, void 0, 2)])
             }
         ],
-        _ = new Set();
+        p = new Set();
     try {
-        n = await i.tn.post({
-            url: u.ANM.DEBUG_LOGS(u.GU0.RTC),
+        r = await s.tn.post({
+            url: d.ANM.DEBUG_LOGS(d.GU0.RTC),
             attachments: [
-                ...f.map((e) => {
-                    let t = (function (e, t) {
-                        let n = t.split('.'),
-                            r = n.length > 1 ? n.pop() : '',
-                            i = n.join('.'),
-                            a = ''.concat(i, '.').concat(r),
-                            s = 1;
-                        for (; e.has(a); ) (a = ''.concat(i, '_').concat(s, '.').concat(r)), (s += 1);
-                        return e.add(a), a;
-                    })(_, e.name);
+                ...h.map((e) => {
+                    let n = _(p, e.name);
                     return {
-                        name: t,
+                        name: n,
                         file: e.file,
-                        filename: t
+                        filename: n
                     };
                 })
             ],
             rejectWithError: !1
         });
     } catch (e) {
-        if (429 === e.status) throw new a.n0(a.cz.PROGRESS);
-        throw (c.error('Debug log upload error: status: '.concat(e.status, ', message: ').concat(e.message)), new a.n0(a.cz.UPLOAD));
+        if (429 === e.status) throw new o.n0(o.cz.PROGRESS);
+        throw (f.error('Debug log upload error: status: '.concat(e.status, ', message: ').concat(e.message)), new o.n0(o.cz.UPLOAD));
     }
-    if ('success_count' in n.body && n.body.success_count !== f.length) throw (c.error('Debug log upload: stored files '.concat(n.body.success_count, ' !== ').concat(f.length)), new a.n0(a.cz.GENERAL));
-    if (('store_success' in n.body && !n.body.store_success) || ('id_match' in n.body && !n.body.id_match) || ('all_success' in n.body && !n.body.all_success)) throw (c.error('Debug log upload: store_success: '.concat(n.body.store_success, ' / ') + 'id_match: '.concat(n.body.id_match, ' / ') + 'all_success: '.concat(n.body.all_success)), new a.n0(a.cz.GENERAL));
+    if ('success_count' in r.body && r.body.success_count !== h.length) throw (f.error('Debug log upload: stored files '.concat(r.body.success_count, ' !== ').concat(h.length)), new o.n0(o.cz.GENERAL));
+    if (('store_success' in r.body && !r.body.store_success) || ('id_match' in r.body && !r.body.id_match) || ('all_success' in r.body && !r.body.all_success)) throw (f.error('Debug log upload: store_success: '.concat(r.body.store_success, ' / ') + 'id_match: '.concat(r.body.id_match, ' / ') + 'all_success: '.concat(r.body.all_success)), new o.n0(o.cz.GENERAL));
 }

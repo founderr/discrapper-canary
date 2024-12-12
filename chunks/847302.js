@@ -1,191 +1,133 @@
-n.d(t, {
+r.d(n, {
     Gg: function () {
-        return T;
+        return S;
     },
     KH: function () {
-        return E;
+        return T;
     },
     ZP: function () {
-        return g;
+        return I;
     }
-}),
-    n(47120),
-    n(653041);
-var r = n(512722),
-    i = n.n(r),
-    a = n(911969),
-    s = n(998698),
-    o = n(465343),
-    l = n(53529),
-    u = n(341702),
-    c = n(925994),
-    d = n(436660),
-    f = n(887490);
-let _ = /(@[^@#]+(?:#0|#\d{4}))|(@[^\s\t@#:]+)(?=[\s\t@:])|(:[a-zA-Z0-9_~]+:)|(#"(?:\ |\\\\|\\"|(?!")\w)+")|(#[^\s\t@#:]+(?=[\s\t@#:]))/g,
-    p = new Set(['emoji', 'customEmoji', 'textMention', 'userMention', 'roleMention', 'channelMention', 'staticRouteLink', 'soundboard', 'timestamp']),
-    h = new Set(['line', 'blockQuote']),
-    m = new Set(['applicationCommandOption']);
-function g(e, t, n) {
-    let { isInline: r, isVoid: i, onChange: a } = e;
-    (e.isVoid = (e) => !!p.has(e.type) || i(e)), (e.isInline = (e) => !!p.has(e.type) || r(e));
-    let s = null,
-        o = !0;
+});
+var i = r(47120);
+var a = r(653041);
+var s = r(512722),
+    o = r.n(s),
+    l = r(911969),
+    u = r(998698),
+    c = r(465343),
+    d = r(53529),
+    f = r(341702),
+    _ = r(925994),
+    h = r(436660),
+    p = r(887490);
+let m = /(@[^@#]+(?:#0|#\d{4}))|(@[^\s\t@#:]+)(?=[\s\t@:])|(:[a-zA-Z0-9_~]+:)|(#"(?:\ |\\\\|\\"|(?!")\w)+")|(#[^\s\t@#:]+(?=[\s\t@#:]))/g,
+    g = new Set(['emoji', 'customEmoji', 'textMention', 'userMention', 'roleMention', 'channelMention', 'staticRouteLink', 'soundboard', 'timestamp']),
+    E = new Set(['line', 'blockQuote']),
+    v = new Set(['applicationCommandOption']);
+function I(e, n, r) {
+    let { isInline: i, isVoid: a, onChange: s } = e;
+    (e.isVoid = (e) => !!g.has(e.type) || a(e)), (e.isInline = (e) => !!g.has(e.type) || i(e));
+    let o = null,
+        l = !0;
     return (
         (e.onChange = () => {
-            let r = f.bN.richValue(e);
-            (r !== s || e.previewMarkdown !== o) &&
-                (l.T.withMergedEntry(e, () => {
-                    f.bN.withoutNormalizing(e, () => E(e, t, n));
+            let i = p.bN.richValue(e);
+            (i !== o || e.previewMarkdown !== l) &&
+                (d.T.withMergedEntry(e, () => {
+                    p.bN.withoutNormalizing(e, () => T(e, n, r));
                 }),
-                (s = r),
-                (o = e.previewMarkdown)),
-                a();
+                (o = i),
+                (l = e.previewMarkdown)),
+                s();
         }),
         e
     );
 }
-function E(e, t, n) {
-    let r = f.bN.areStylesDisabled(e);
-    for (let i of f.bN.blocks(e))
-        if (h.has(i[0].type)) r ? I(e, i, !0, null) : v(e, i, t, n);
+function T(e, n, r) {
+    let i = p.bN.areStylesDisabled(e);
+    for (let a of p.bN.blocks(e))
+        if (E.has(a[0].type)) i ? y(e, a, !0, null) : b(e, a, n, r);
         else {
-            let [a, s] = i;
-            for (let i = a.children.length - 1; i >= 0; i--) {
-                let o = a.children[i];
-                if (m.has(o.type)) {
-                    let a = [o, f.C0.child(s, i)];
-                    r ? I(e, a, !0, null) : v(e, a, t, n);
+            let [s, o] = a;
+            for (let a = s.children.length - 1; a >= 0; a--) {
+                let l = s.children[a];
+                if (v.has(l.type)) {
+                    let s = [l, p.C0.child(o, a)];
+                    i ? y(e, s, !0, null) : b(e, s, n, r);
                 }
             }
         }
 }
-function v(e, t, n, r) {
+function b(e, n, r, i) {
     var a;
-    let s = 'line' === t[0].type && (null === (a = t[0].codeBlockState) || void 0 === a ? void 0 : a.isInCodeBlock) === !0,
-        l = f.q.markdown(t[0], n);
-    I(e, t, s, l) && ((t = f.q.updateElement(e, t)), (l = f.q.markdown(t[0], n))),
-        !s &&
-            (T(e, t, r, l) && ((t = f.q.updateElement(e, t)), (l = f.q.markdown(t[0], n))),
-            (function (e, t, n, r, a) {
-                let [s, l] = t,
-                    u = !1;
-                for (let c = s.children.length - 1; c >= 0; c--) {
-                    let p;
-                    let h = s.children[c];
-                    if (!f.LC.isText(h)) continue;
-                    let m = f.C0.child(l, c),
-                        g = [];
-                    for (_.lastIndex = 0; null != (p = _.exec(h.text)); ) {
-                        if (0 !== p.index && null == h.text.charAt(p.index - 1).match(/(\t|\s)/)) {
-                            _.lastIndex = p.index + 1;
-                            continue;
-                        }
-                        if (
-                            b(
-                                e,
-                                l,
-                                {
-                                    path: m,
-                                    offset: p.index
-                                },
-                                a
-                            )
-                        )
-                            continue;
-                        let i = (0, o.i)(p[0], n, r);
-                        null != i && S(r, t[0], i)
-                            ? g.push({
-                                  index: p.index,
-                                  length: p[0].length,
-                                  node: i
-                              })
-                            : (_.lastIndex = p.index + 1);
-                    }
-                    for (let t of g.reverse())
-                        (function (e, t, n, r, a) {
-                            let [s, o] = t,
-                                l = {
-                                    path: o,
-                                    offset: n
-                                },
-                                u = {
-                                    path: o,
-                                    offset: n + r
-                                };
-                            i()(l.offset >= 0 && l.offset <= s.text.length, 'Failed to find valid start position for raw mention replace'),
-                                i()(u.offset >= 0 && u.offset <= s.text.length, 'Failed to find valid end position for raw mention replace'),
-                                d.Q.textToVoid(e, a, {
-                                    anchor: l,
-                                    focus: u
-                                });
-                        })(e, [h, f.C0.child(l, c)], t.index, t.length, t.node),
-                            (u = !0);
-                }
-            })(e, t, n, r, l));
+    let s = 'line' === n[0].type && (null === (a = n[0].codeBlockState) || void 0 === a ? void 0 : a.isInCodeBlock) === !0,
+        o = p.q.markdown(n[0], r);
+    y(e, n, s, o) && ((n = p.q.updateElement(e, n)), (o = p.q.markdown(n[0], r))), !s && (S(e, n, i, o) && ((n = p.q.updateElement(e, n)), (o = p.q.markdown(n[0], r))), A(e, n, r, i, o));
 }
-function I(e, t, n, r) {
-    let [i, a] = t,
-        s = !1;
-    for (let t = i.children.length - 1; t >= 0; t--) {
-        let o = i.children[t],
-            l = t < i.children.length - 1 ? i.children[t + 1] : null;
-        if (f.LC.isText(o) && !n) {
-            if (null == l || !e.isVoid(l)) continue;
-            let n = !1,
-                r = 0;
+function y(e, n, r, i) {
+    let [a, s] = n,
+        o = !1;
+    for (let n = a.children.length - 1; n >= 0; n--) {
+        let l = a.children[n],
+            u = n < a.children.length - 1 ? a.children[n + 1] : null;
+        if (p.LC.isText(l) && !r) {
+            if (null == u || !e.isVoid(u)) continue;
+            let r = !1,
+                i = 0;
             for (;;) {
-                let e = o.text.indexOf('\\', r);
+                let e = l.text.indexOf('\\', i);
                 if (-1 === e) break;
-                if (e === o.text.length - 1) {
-                    n = !0;
+                if (e === l.text.length - 1) {
+                    r = !0;
                     break;
                 }
-                r = e + 2;
+                i = e + 2;
             }
-            if (n) {
-                let n = f.C0.child(a, t + 1);
-                d.Q.voidToText(
+            if (r) {
+                let r = p.C0.child(s, n + 1);
+                h.Q.voidToText(
                     e,
-                    (0, c.sg)(l, {
+                    (0, _.sg)(u, {
                         mode: 'plain',
                         preventEmojiSurrogates: !0
                     }),
-                    n
+                    r
                 ),
-                    (s = !0);
+                    (o = !0);
             }
-        } else if (e.isVoid(o)) {
-            let i = f.C0.child(a, t),
-                l = {
-                    path: f.C0.child(i, 0),
+        } else if (e.isVoid(l)) {
+            let a = p.C0.child(s, n),
+                u = {
+                    path: p.C0.child(a, 0),
                     offset: 0
                 };
-            (n || (null != r && b(e, a, l, r))) &&
-                (d.Q.voidToText(
+            (r || (null != i && C(e, s, u, i))) &&
+                (h.Q.voidToText(
                     e,
-                    (0, c.sg)(o, {
+                    (0, _.sg)(l, {
                         mode: 'plain',
                         preventEmojiSurrogates: !0
                     }),
-                    i
+                    a
                 ),
-                (s = !0));
+                (o = !0));
         }
     }
-    return s;
+    return o;
 }
-function T(e, t, n, r) {
-    let i = t[1],
-        a = !1,
-        s = [...r.entries].reverse();
-    for (let o = 0; o < s.length; o++) {
-        let l;
-        let c = s[o],
-            f = s[o + 1];
-        if (null != f && f.text.endsWith('\\') && c.start === f.start + f.text.length) continue;
+function S(e, n, r, i) {
+    let a = n[1],
+        s = !1,
+        o = [...i.entries].reverse();
+    for (let l = 0; l < o.length; l++) {
+        let u;
+        let c = o[l],
+            d = o[l + 1];
+        if (null != d && d.text.endsWith('\\') && c.start === d.start + d.text.length) continue;
         switch (c.attributes[0]) {
             case 'emoji':
-                l = {
+                u = {
                     type: 'emoji',
                     emoji: {
                         name: c.data.name,
@@ -197,7 +139,7 @@ function T(e, t, n, r) {
                 };
                 break;
             case 'customEmoji':
-                l = {
+                u = {
                     type: 'customEmoji',
                     emoji: {
                         emojiId: c.data.emojiId,
@@ -209,35 +151,35 @@ function T(e, t, n, r) {
                 };
                 break;
             case 'textMention':
-                l = {
+                u = {
                     type: 'textMention',
                     name: c.data.text,
                     children: [{ text: '' }]
                 };
                 break;
             case 'mention':
-                l = {
+                u = {
                     type: 'userMention',
                     userId: c.data.id,
                     children: [{ text: '' }]
                 };
                 break;
             case 'roleMention':
-                l = {
+                u = {
                     type: 'roleMention',
                     roleId: c.data.id,
                     children: [{ text: '' }]
                 };
                 break;
             case 'channelMention':
-                l = {
+                u = {
                     type: 'channelMention',
                     channelId: c.data.id,
                     children: [{ text: '' }]
                 };
                 break;
             case 'staticRouteLink':
-                l = {
+                u = {
                     type: 'staticRouteLink',
                     id: c.data.id,
                     itemId: c.data.itemId,
@@ -245,7 +187,7 @@ function T(e, t, n, r) {
                 };
                 break;
             case 'soundboard':
-                l = {
+                u = {
                     type: 'soundboard',
                     guildId: c.data.guildId,
                     soundId: c.data.soundId,
@@ -253,7 +195,7 @@ function T(e, t, n, r) {
                 };
                 break;
             case 'timestamp':
-                l = {
+                u = {
                     type: 'timestamp',
                     parsed: c.data,
                     children: [{ text: '' }]
@@ -262,49 +204,105 @@ function T(e, t, n, r) {
             default:
                 continue;
         }
-        if (!S(n, t[0], l)) continue;
-        let _ = (0, u.t)(e, i, r.serializedChildren, c.start),
-            p = (0, u.t)(e, i, r.serializedChildren, c.start + c.text.length);
-        d.Q.textToVoid(e, l, {
+        if (!R(r, n[0], u)) continue;
+        let _ = (0, f.t)(e, a, i.serializedChildren, c.start),
+            p = (0, f.t)(e, a, i.serializedChildren, c.start + c.text.length);
+        h.Q.textToVoid(e, u, {
             anchor: _,
             focus: p
         }),
-            (a = !0);
+            (s = !0);
     }
-    return a;
+    return s;
 }
-function b(e, t, n, r) {
-    let i = 0;
-    for (let [r, a] of f.bN.nodes(e, {
+function A(e, n, r, i, a) {
+    let [s, o] = n,
+        l = !1;
+    for (let u = s.children.length - 1; u >= 0; u--) {
+        let d;
+        let f = s.children[u];
+        if (!p.LC.isText(f)) continue;
+        let _ = p.C0.child(o, u),
+            h = [];
+        for (m.lastIndex = 0; null != (d = m.exec(f.text)); ) {
+            if (0 !== d.index && null == f.text.charAt(d.index - 1).match(/(\t|\s)/)) {
+                m.lastIndex = d.index + 1;
+                continue;
+            }
+            if (
+                C(
+                    e,
+                    o,
+                    {
+                        path: _,
+                        offset: d.index
+                    },
+                    a
+                )
+            )
+                continue;
+            let s = (0, c.i)(d[0], r, i);
+            null != s && R(i, n[0], s)
+                ? h.push({
+                      index: d.index,
+                      length: d[0].length,
+                      node: s
+                  })
+                : (m.lastIndex = d.index + 1);
+        }
+        for (let n of h.reverse()) N(e, [f, p.C0.child(o, u)], n.index, n.length, n.node), (l = !0);
+    }
+    return l;
+}
+function N(e, n, r, i, a) {
+    let [s, l] = n,
+        u = {
+            path: l,
+            offset: r
+        },
+        c = {
+            path: l,
+            offset: r + i
+        };
+    o()(u.offset >= 0 && u.offset <= s.text.length, 'Failed to find valid start position for raw mention replace'),
+        o()(c.offset >= 0 && c.offset <= s.text.length, 'Failed to find valid end position for raw mention replace'),
+        h.Q.textToVoid(e, a, {
+            anchor: u,
+            focus: c
+        });
+}
+function C(e, n, r, i) {
+    let a = 0;
+    for (let [i, s] of p.bN.nodes(e, {
         at: {
-            anchor: f.bN.start(e, t),
-            focus: n
+            anchor: p.bN.start(e, n),
+            focus: r
         },
         mode: 'lowest'
     }))
-        f.LC.isText(r) ? (f.C0.equals(a, n.path) ? (i += n.offset) : (i += r.text.length)) : (i += 1);
-    for (let e of r.entries) {
+        p.LC.isText(i) ? (p.C0.equals(s, r.path) ? (a += r.offset) : (a += i.text.length)) : (a += 1);
+    for (let e of i.entries) {
         if (!e.attributes.includes('codeBlockText') && !e.attributes.includes('inlineCode')) continue;
-        let t = e.start,
-            n = e.start + e.text.length;
-        if (t <= i && n >= i) return !0;
+        let n = e.start,
+            r = e.start + e.text.length;
+        if (n <= a && r >= a) return !0;
     }
     return !1;
 }
-function S(e, t, n) {
-    if ('applicationCommandOption' !== t.type) return !0;
-    switch (t.optionType) {
-        case a.jw.CHANNEL:
-            return 'channelMention' === n.type;
-        case a.jw.ROLE:
-            return 'roleMention' === n.type || ('textMention' === n.type && '@everyone' === n.name);
-        case a.jw.USER:
-            return 'userMention' === n.type;
-        case a.jw.MENTIONABLE:
-            return 'roleMention' === n.type || 'userMention' === n.type || ('textMention' === n.type && '@everyone' === n.name);
-        case a.jw.STRING: {
-            let n = null != e ? s.Z.getOption(e, t.optionName) : null;
-            return (null == n ? void 0 : n.choices) == null && (null == n ? void 0 : n.autocomplete) !== !0;
+function R(e, n, r) {
+    if ('applicationCommandOption' !== n.type) return !0;
+    switch (n.optionType) {
+        case l.jw.CHANNEL:
+            return 'channelMention' === r.type;
+        case l.jw.ROLE:
+            return 'roleMention' === r.type || ('textMention' === r.type && '@everyone' === r.name);
+        case l.jw.USER:
+            return 'userMention' === r.type;
+        case l.jw.MENTIONABLE:
+            return 'roleMention' === r.type || 'userMention' === r.type || ('textMention' === r.type && '@everyone' === r.name);
+        case l.jw.STRING: {
+            let r = null != e ? u.Z.getOption(e, n.optionName) : null;
+            return (null == r ? void 0 : r.choices) == null && (null == r ? void 0 : r.autocomplete) !== !0;
         }
         default:
             return !1;

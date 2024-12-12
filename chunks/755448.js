@@ -1,75 +1,77 @@
-e.exports = function (e, t) {
-    var n, r, i, a, s, o, l, u, c, d, f, _, p, h, m, g, E, v, I, T, b, S, y, A, N;
-    (n = e.state), (r = e.next_in), (A = e.input), (i = r + (e.avail_in - 5)), (a = e.next_out), (N = e.output), (s = a - (t - e.avail_out)), (o = a + (e.avail_out - 257)), (l = n.dmax), (u = n.wsize), (c = n.whave), (d = n.wnext), (f = n.window), (_ = n.hold), (p = n.bits), (h = n.lencode), (m = n.distcode), (g = (1 << n.lenbits) - 1), (E = (1 << n.distbits) - 1);
+var n = 30,
+    r = 12;
+e.exports = function (e, i) {
+    var a, s, o, l, u, c, d, f, _, h, p, m, g, E, v, I, T, b, y, S, A, N, C, R, O;
+    (a = e.state), (s = e.next_in), (R = e.input), (o = s + (e.avail_in - 5)), (l = e.next_out), (O = e.output), (u = l - (i - e.avail_out)), (c = l + (e.avail_out - 257)), (d = a.dmax), (f = a.wsize), (_ = a.whave), (h = a.wnext), (p = a.window), (m = a.hold), (g = a.bits), (E = a.lencode), (v = a.distcode), (I = (1 << a.lenbits) - 1), (T = (1 << a.distbits) - 1);
     n: do
-        for (p < 15 && ((_ += A[r++] << p), (p += 8), (_ += A[r++] << p), (p += 8)), v = h[_ & g]; ; ) {
-            if (((_ >>>= I = v >>> 24), (p -= I), 0 == (I = (v >>> 16) & 255))) N[a++] = 65535 & v;
-            else if (16 & I)
-                for (T = 65535 & v, (I &= 15) && (p < I && ((_ += A[r++] << p), (p += 8)), (T += _ & ((1 << I) - 1)), (_ >>>= I), (p -= I)), p < 15 && ((_ += A[r++] << p), (p += 8), (_ += A[r++] << p), (p += 8)), v = m[_ & E]; ; ) {
-                    if (((_ >>>= I = v >>> 24), (p -= I), 16 & (I = (v >>> 16) & 255))) {
-                        if (((b = 65535 & v), p < (I &= 15) && ((_ += A[r++] << p), (p += 8) < I && ((_ += A[r++] << p), (p += 8))), (b += _ & ((1 << I) - 1)) > l)) {
-                            (e.msg = 'invalid distance too far back'), (n.mode = 30);
+        for (g < 15 && ((m += R[s++] << g), (g += 8), (m += R[s++] << g), (g += 8)), b = E[m & I]; ; ) {
+            if (((m >>>= y = b >>> 24), (g -= y), 0 == (y = (b >>> 16) & 255))) O[l++] = 65535 & b;
+            else if (16 & y)
+                for (S = 65535 & b, (y &= 15) && (g < y && ((m += R[s++] << g), (g += 8)), (S += m & ((1 << y) - 1)), (m >>>= y), (g -= y)), g < 15 && ((m += R[s++] << g), (g += 8), (m += R[s++] << g), (g += 8)), b = v[m & T]; ; ) {
+                    if (((m >>>= y = b >>> 24), (g -= y), 16 & (y = (b >>> 16) & 255))) {
+                        if (((A = 65535 & b), g < (y &= 15) && ((m += R[s++] << g), (g += 8) < y && ((m += R[s++] << g), (g += 8))), (A += m & ((1 << y) - 1)) > d)) {
+                            (e.msg = 'invalid distance too far back'), (a.mode = n);
                             break n;
                         }
-                        if (((_ >>>= I), (p -= I), b > (I = a - s))) {
-                            if ((I = b - I) > c && n.sane) {
-                                (e.msg = 'invalid distance too far back'), (n.mode = 30);
+                        if (((m >>>= y), (g -= y), A > (y = l - u))) {
+                            if ((y = A - y) > _ && a.sane) {
+                                (e.msg = 'invalid distance too far back'), (a.mode = n);
                                 break n;
                             }
-                            if (((S = 0), (y = f), 0 === d)) {
-                                if (((S += u - I), I < T)) {
-                                    T -= I;
-                                    do N[a++] = f[S++];
-                                    while (--I);
-                                    (S = a - b), (y = N);
+                            if (((N = 0), (C = p), 0 === h)) {
+                                if (((N += f - y), y < S)) {
+                                    S -= y;
+                                    do O[l++] = p[N++];
+                                    while (--y);
+                                    (N = l - A), (C = O);
                                 }
-                            } else if (d < I) {
-                                if (((S += u + d - I), (I -= d) < T)) {
-                                    T -= I;
-                                    do N[a++] = f[S++];
-                                    while (--I);
-                                    if (((S = 0), d < T)) {
-                                        T -= I = d;
-                                        do N[a++] = f[S++];
-                                        while (--I);
-                                        (S = a - b), (y = N);
+                            } else if (h < y) {
+                                if (((N += f + h - y), (y -= h) < S)) {
+                                    S -= y;
+                                    do O[l++] = p[N++];
+                                    while (--y);
+                                    if (((N = 0), h < S)) {
+                                        S -= y = h;
+                                        do O[l++] = p[N++];
+                                        while (--y);
+                                        (N = l - A), (C = O);
                                     }
                                 }
-                            } else if (((S += d - I), I < T)) {
-                                T -= I;
-                                do N[a++] = f[S++];
-                                while (--I);
-                                (S = a - b), (y = N);
+                            } else if (((N += h - y), y < S)) {
+                                S -= y;
+                                do O[l++] = p[N++];
+                                while (--y);
+                                (N = l - A), (C = O);
                             }
-                            for (; T > 2; ) (N[a++] = y[S++]), (N[a++] = y[S++]), (N[a++] = y[S++]), (T -= 3);
-                            T && ((N[a++] = y[S++]), T > 1 && (N[a++] = y[S++]));
+                            for (; S > 2; ) (O[l++] = C[N++]), (O[l++] = C[N++]), (O[l++] = C[N++]), (S -= 3);
+                            S && ((O[l++] = C[N++]), S > 1 && (O[l++] = C[N++]));
                         } else {
-                            S = a - b;
-                            do (N[a++] = N[S++]), (N[a++] = N[S++]), (N[a++] = N[S++]), (T -= 3);
-                            while (T > 2);
-                            T && ((N[a++] = N[S++]), T > 1 && (N[a++] = N[S++]));
+                            N = l - A;
+                            do (O[l++] = O[N++]), (O[l++] = O[N++]), (O[l++] = O[N++]), (S -= 3);
+                            while (S > 2);
+                            S && ((O[l++] = O[N++]), S > 1 && (O[l++] = O[N++]));
                         }
-                    } else if ((64 & I) == 0) {
-                        v = m[(65535 & v) + (_ & ((1 << I) - 1))];
+                    } else if ((64 & y) == 0) {
+                        b = v[(65535 & b) + (m & ((1 << y) - 1))];
                         continue;
                     } else {
-                        (e.msg = 'invalid distance code'), (n.mode = 30);
+                        (e.msg = 'invalid distance code'), (a.mode = n);
                         break n;
                     }
                     break;
                 }
-            else if ((64 & I) == 0) {
-                v = h[(65535 & v) + (_ & ((1 << I) - 1))];
+            else if ((64 & y) == 0) {
+                b = E[(65535 & b) + (m & ((1 << y) - 1))];
                 continue;
-            } else if (32 & I) {
-                n.mode = 12;
+            } else if (32 & y) {
+                a.mode = r;
                 break n;
             } else {
-                (e.msg = 'invalid literal/length code'), (n.mode = 30);
+                (e.msg = 'invalid literal/length code'), (a.mode = n);
                 break n;
             }
             break;
         }
-    while (r < i && a < o);
-    (r -= T = p >> 3), (p -= T << 3), (_ &= (1 << p) - 1), (e.next_in = r), (e.next_out = a), (e.avail_in = r < i ? 5 + (i - r) : 5 - (r - i)), (e.avail_out = a < o ? 257 + (o - a) : 257 - (a - o)), (n.hold = _), (n.bits = p);
+    while (s < o && l < c);
+    (s -= S = g >> 3), (g -= S << 3), (m &= (1 << g) - 1), (e.next_in = s), (e.next_out = l), (e.avail_in = s < o ? 5 + (o - s) : 5 - (s - o)), (e.avail_out = l < c ? 257 + (c - l) : 257 - (l - c)), (a.hold = m), (a.bits = g);
 };

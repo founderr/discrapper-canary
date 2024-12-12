@@ -1,48 +1,49 @@
-n.d(t, {
+r.d(n, {
     O: function () {
-        return l;
+        return f;
     }
-}),
-    n(47120);
-var r = n(192379),
-    i = n(237617),
-    a = n(266338);
-let s = {},
-    o = new Map([[1, { threshold: 1 }]]);
-function l(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-        n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        l = (0, i.Z)((t) => {
-            e(t.isIntersecting);
+});
+var i = r(47120);
+var a = r(192379),
+    s = r(237617),
+    o = r(266338);
+let l = {};
+function u(e, n) {
+    let r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+        i = (0, a.useRef)(null),
+        u = (0, s.Z)(null != n ? n : l),
+        c = (0, a.useRef)(null);
+    return (
+        (0, a.useLayoutEffect)(() => {
+            if (!r) return;
+            null == c.current && (c.current = (0, o.c)(u.current));
+            let n = i.current,
+                a = c.current;
+            if (null != n && null != a) (0, o.YP)(a, n, e);
+        }, [r, e]),
+        (0, a.useEffect)(() => {
+            if (!r) return;
+            let e = i.current,
+                n = c.current;
+            if (null != e && null != n)
+                return () => {
+                    (0, o.UC)(n, e);
+                };
+        }, [r, n]),
+        i
+    );
+}
+let c = new Map([[1, { threshold: 1 }]]);
+function d(e) {
+    let n = c.get(e);
+    return null != n ? n : ((n = { threshold: e }), c.set(e, n), n);
+}
+function f(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+        r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+        i = (0, s.Z)((n) => {
+            e(n.isIntersecting);
         }),
-        u = (0, r.useMemo)(() => {
-            var e;
-            let n;
-            return (e = t), null != (n = o.get(e)) ? n : ((n = { threshold: e }), o.set(e, n), n);
-        }, [t]);
-    return (function (e, t) {
-        let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-            o = (0, r.useRef)(null),
-            l = (0, i.Z)(null != t ? t : s),
-            u = (0, r.useRef)(null);
-        return (
-            (0, r.useLayoutEffect)(() => {
-                if (!n) return;
-                null == u.current && (u.current = (0, a.c)(l.current));
-                let t = o.current,
-                    r = u.current;
-                if (null != t && null != r) (0, a.YP)(r, t, e);
-            }, [n, e]),
-            (0, r.useEffect)(() => {
-                if (!n) return;
-                let e = o.current,
-                    t = u.current;
-                if (null != e && null != t)
-                    return () => {
-                        (0, a.UC)(t, e);
-                    };
-            }, [n, t]),
-            o
-        );
-    })(l.current, u, n);
+        o = (0, a.useMemo)(() => d(n), [n]);
+    return u(i.current, o, r);
 }

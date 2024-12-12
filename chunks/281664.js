@@ -1,77 +1,79 @@
-var r = n(192379),
-    i = n(476400),
-    a = n.n(i),
-    s = n(723184),
-    o = n(329022),
-    l = n(829307),
-    u = n(705513),
-    c = n(877837),
-    d = n(272991),
-    f = function (e) {
-        var t = e.width,
-            n = e.onChange,
-            i = e.onSwatchHover,
-            a = e.colors,
-            u = e.hex,
-            c = e.circleSize,
-            f = e.styles,
-            _ = e.circleSpacing,
-            p = e.className,
-            h = (0, s.default)(
-                (0, l.Z)(
+var i = r(192379),
+    a = r(476400),
+    s = r.n(a),
+    o = r(723184),
+    l = r(329022),
+    u = r(829307),
+    c = r(705513),
+    d = r(877837),
+    f = r(272991),
+    _ = function (e) {
+        var n = e.width,
+            r = e.onChange,
+            a = e.onSwatchHover,
+            s = e.colors,
+            c = e.hex,
+            d = e.circleSize,
+            _ = e.styles,
+            h = void 0 === _ ? {} : _,
+            p = e.circleSpacing,
+            m = e.className,
+            g = void 0 === m ? '' : m,
+            E = (0, o.default)(
+                (0, u.Z)(
                     {
                         default: {
                             card: {
-                                width: t,
+                                width: n,
                                 display: 'flex',
                                 flexWrap: 'wrap',
-                                marginRight: -_,
-                                marginBottom: -_
+                                marginRight: -p,
+                                marginBottom: -p
                             }
                         }
                     },
-                    void 0 === f ? {} : f
+                    h
                 )
             ),
-            m = function (e, t) {
-                return n(
+            v = function (e, n) {
+                return r(
                     {
                         hex: e,
                         source: 'hex'
                     },
-                    t
+                    n
                 );
             };
-        return r.createElement(
+        return i.createElement(
             'div',
             {
-                style: h.card,
-                className: 'circle-picker ' + (void 0 === p ? '' : p)
+                style: E.card,
+                className: 'circle-picker ' + g
             },
-            (0, o.Z)(a, function (e) {
-                return r.createElement(d.Z, {
+            (0, l.Z)(s, function (e) {
+                return i.createElement(f.Z, {
                     key: e,
                     color: e,
-                    onClick: m,
-                    onSwatchHover: i,
-                    active: u === e.toLowerCase(),
-                    circleSize: c,
-                    circleSpacing: _
+                    onClick: v,
+                    onSwatchHover: a,
+                    active: c === e.toLowerCase(),
+                    circleSize: d,
+                    circleSpacing: p
                 });
             })
         );
     };
-(f.propTypes = {
-    width: a().oneOfType([a().string, a().number]),
-    circleSize: a().number,
-    circleSpacing: a().number,
-    styles: a().object
+(_.propTypes = {
+    width: s().oneOfType([s().string, s().number]),
+    circleSize: s().number,
+    circleSpacing: s().number,
+    styles: s().object
 }),
-    (f.defaultProps = {
+    (_.defaultProps = {
         width: 252,
         circleSize: 28,
         circleSpacing: 14,
-        colors: [u.Q6['500'], u.iQ['500'], u.jk['500'], u.vq['500'], u.QN['500'], u.iN['500'], u.f7['500'], u.sl['500'], u.$C['500'], u.ek['500'], u.ZE['500'], u.LR['500'], u.er['500'], u.Dz['500'], u.$y['500'], u.bK['500'], u.P_['500'], u.BU['500']],
+        colors: [c.Q6['500'], c.iQ['500'], c.jk['500'], c.vq['500'], c.QN['500'], c.iN['500'], c.f7['500'], c.sl['500'], c.$C['500'], c.ek['500'], c.ZE['500'], c.LR['500'], c.er['500'], c.Dz['500'], c.$y['500'], c.bK['500'], c.P_['500'], c.BU['500']],
         styles: {}
     }),
-    (0, c.t1)(f);
+    (0, d.t1)(_);

@@ -1,25 +1,29 @@
-var r = n(772848);
-function i(e) {
+var i = r(772848);
+function a(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+function s(e) {
     return {
         channelId: e,
-        sessionId: (0, r.Z)()
+        sessionId: (0, i.Z)()
     };
 }
-t.Z = new (class e {
+class o {
     getForumChannelSessionId(e) {
-        return null == this.session && (this.session = i(e)), this.session.channelId !== e && (this.session = i(e)), this.session.sessionId;
+        return null == this.session && (this.session = s(e)), this.session.channelId !== e && (this.session = s(e)), this.session.sessionId;
     }
     constructor() {
-        var e, t, n;
-        (e = this),
-            (n = void 0),
-            (t = 'session') in e
-                ? Object.defineProperty(e, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (e[t] = n);
+        a(this, 'session', void 0);
     }
-})();
+}
+n.Z = new o();

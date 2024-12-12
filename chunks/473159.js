@@ -1,43 +1,42 @@
-n.d(t, {
+r.d(n, {
     O: function () {
-        return o;
+        return u;
     }
-}),
-    n(47120);
-var r = n(284737),
-    i = n(228488),
-    a = n(830917),
-    s = n(919570);
-function o(e) {
-    let t = e.document,
-        n = (0, a.Ig)(e);
-    function o() {
-        (0, s.gK)(n);
+});
+var i = r(47120);
+var a = r(284737),
+    s = r(228488),
+    o = r(830917),
+    l = r(919570);
+function u(e) {
+    let n = e.document,
+        r = (0, o.Ig)(e);
+    function i() {
+        (0, a.dx)(e);
     }
-    function l() {
+    function u() {
+        (0, a.T_)(e, !0);
+    }
+    function c() {
+        !e.document.hasFocus() && (0, a.T_)(e, !1);
+    }
+    function d() {
+        (0, a.gH)(e);
+    }
+    function f() {
+        (0, a.Rz)(e);
+    }
+    function _() {
+        (0, l.gK)(r);
+    }
+    function h() {
         setTimeout(() => {
-            (0, s.HQ)(n);
+            (0, l.HQ)(r);
         }, 0);
     }
-    for (let n of (e.addEventListener('resize', function () {
-        (0, r.dx)(e);
-    }),
-    e.addEventListener('focus', function () {
-        (0, r.T_)(e, !0);
-    }),
-    e.addEventListener('blur', function () {
-        !e.document.hasFocus() && (0, r.T_)(e, !1);
-    }),
-    e.addEventListener('unload', function () {
-        (0, r.Rz)(e);
-    }),
-    e.addEventListener('visibilitychange', function () {
-        (0, r.CO)(e);
-    }),
-    s.wu))
-        t.addEventListener(n, o, !0), t.addEventListener(n, l, !1);
-    (0, i.uF)(t, function () {
-        (0, r.gH)(e);
-    }),
-        (0, r.S1)(e);
+    function p() {
+        (0, a.CO)(e);
+    }
+    for (let r of (e.addEventListener('resize', i), e.addEventListener('focus', u), e.addEventListener('blur', c), e.addEventListener('unload', f), e.addEventListener('visibilitychange', p), l.wu)) n.addEventListener(r, _, !0), n.addEventListener(r, h, !1);
+    (0, s.uF)(n, d), (0, a.S1)(e);
 }

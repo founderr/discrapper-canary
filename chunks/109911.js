@@ -1,16 +1,15 @@
-n.d(t, {
+r.d(n, {
     Ji: function () {
-        return d;
+        return f;
     },
     XN: function () {
         return c;
     }
 });
-var r,
-    i,
-    a = n(818083),
-    s = n(638395);
-n(171393);
+var i,
+    a = r(818083),
+    s = r(638395);
+r(171393);
 let o = (0, a.B)({
         kind: 'user',
         id: '2024-07_icymi',
@@ -56,7 +55,9 @@ let o = (0, a.B)({
             }
         ]
     });
-((r = i || (i = {}))[(r.NO_BADGE = 1)] = 'NO_BADGE'), (r[(r.RED_BADGE = 2)] = 'RED_BADGE'), (r[(r.BLUE_BADGE = 3)] = 'BLUE_BADGE');
+!(function (e) {
+    (e[(e.NO_BADGE = 1)] = 'NO_BADGE'), (e[(e.RED_BADGE = 2)] = 'RED_BADGE'), (e[(e.BLUE_BADGE = 3)] = 'BLUE_BADGE');
+})(i || (i = {}));
 let u = (0, a.B)({
     kind: 'user',
     id: '2024-10_merge_notifications_tab',
@@ -106,43 +107,61 @@ let u = (0, a.B)({
     ]
 });
 function c(e) {
-    let { location: t, autoTrackExposure: n = !0 } = e,
-        r = s.Z.get('hide_icymi_tab'),
-        i = d(t, !1),
+    let { location: n, autoTrackExposure: r = !0 } = e,
+        i = s.Z.get('hide_icymi_tab'),
+        a = f(n, !1),
         {
-            enabled: a,
-            tabBadgeVariant: o,
-            removeHomeMentionBadges: l
+            enabled: o,
+            tabBadgeVariant: l,
+            removeHomeMentionBadges: c
         } = u.getCurrentConfig(
-            { location: t },
+            { location: n },
             {
-                autoTrackExposure: n,
+                autoTrackExposure: r,
                 disable: !0
             }
         );
     return {
-        enabled: a && !r && i,
-        tabBadgeVariant: o,
-        removeHomeMentionBadges: l
+        enabled: o && !i && a,
+        tabBadgeVariant: l,
+        removeHomeMentionBadges: c
     };
 }
 function d(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = o.getCurrentConfig(
+    let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        r = o.useExperiment(
+            { location: e },
+            {
+                autoTrackExposure: n,
+                disable: !0
+            }
+        ),
+        i = l.useExperiment(
             { location: e },
             {
                 disable: !0,
-                autoTrackExposure: t
+                autoTrackExposure: !0
+            }
+        );
+    return r.enabled || i.enabled;
+}
+function f(e) {
+    let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        r = o.getCurrentConfig(
+            { location: e },
+            {
+                disable: !0,
+                autoTrackExposure: n
             }
         ).enabled,
-        r = l.getCurrentConfig(
+        i = l.getCurrentConfig(
             { location: e },
             {
                 disable: !0,
-                autoTrackExposure: t
+                autoTrackExposure: n
             }
         ).enabled;
-    return n || r;
+    return r || i;
 }
 (0, a.B)({
     kind: 'user',

@@ -1,87 +1,88 @@
-n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    l = n(63063),
-    u = n(981631),
-    c = n(388032),
-    d = n(208802);
-let f = [
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(120356),
+    l = r.n(o),
+    u = r(481060),
+    c = r(63063),
+    d = r(981631),
+    f = r(388032),
+    _ = r(208802);
+let h = [
     {
-        getQuestion: () => c.intl.string(c.t.C4J8UF),
-        getAnswer: () => c.intl.string(c.t.nhkk6u)
+        getQuestion: () => f.intl.string(f.t.C4J8UF),
+        getAnswer: () => f.intl.string(f.t.nhkk6u)
     },
     {
-        getQuestion: () => c.intl.string(c.t.ai4ym5),
-        getAnswer: () => c.intl.format(c.t['8zlqlJ'], { helpCenterUrl: l.Z.getArticleURL(u.BhN.GUILD_BOOSTING_FAQ) })
+        getQuestion: () => f.intl.string(f.t.ai4ym5),
+        getAnswer: () => f.intl.format(f.t['8zlqlJ'], { helpCenterUrl: c.Z.getArticleURL(d.BhN.GUILD_BOOSTING_FAQ) })
     },
     {
-        getQuestion: () => c.intl.string(c.t.kMVGsL),
-        getAnswer: () => c.intl.string(c.t['Vz/SCQ'])
+        getQuestion: () => f.intl.string(f.t.kMVGsL),
+        getAnswer: () => f.intl.string(f.t['Vz/SCQ'])
     },
     {
-        getQuestion: () => c.intl.string(c.t.kYmXWF),
-        getAnswer: () => c.intl.string(c.t['+OURPj'])
+        getQuestion: () => f.intl.string(f.t.kYmXWF),
+        getAnswer: () => f.intl.string(f.t['+OURPj'])
     }
 ];
-t.Z = function (e) {
-    let { className: t } = e,
-        [n, a] = i.useState(null);
-    return (0, r.jsxs)('div', {
-        className: s()(d.wrapper, t),
+function p(e) {
+    let { className: n } = e,
+        [r, i] = s.useState(null);
+    return (0, a.jsxs)('div', {
+        className: l()(_.wrapper, n),
         children: [
-            (0, r.jsx)(o.Heading, {
-                className: d.heading,
+            (0, a.jsx)(u.Heading, {
+                className: _.heading,
                 variant: 'heading-xxl/bold',
-                children: c.intl.string(c.t.HPJ6Nj)
+                children: f.intl.string(f.t.HPJ6Nj)
             }),
-            (0, r.jsx)('ul', {
-                className: d.list,
-                children: f.map((e, t) => {
-                    let i = n === t;
-                    return (0, r.jsxs)(
+            (0, a.jsx)('ul', {
+                className: _.list,
+                children: h.map((e, n) => {
+                    let s = r === n;
+                    return (0, a.jsxs)(
                         'div',
                         {
-                            className: d.listItem,
+                            className: _.listItem,
                             children: [
-                                (0, r.jsxs)(o.Clickable, {
-                                    className: s()(d.questionWrapper, { [d.questionWrapperExpanded]: i }),
-                                    onClick: () => a((e) => (e === t ? null : t)),
+                                (0, a.jsxs)(u.Clickable, {
+                                    className: l()(_.questionWrapper, { [_.questionWrapperExpanded]: s }),
+                                    onClick: () => i((e) => (e === n ? null : n)),
                                     tag: 'li',
                                     children: [
-                                        (0, r.jsx)(o.Text, {
-                                            className: d.question,
+                                        (0, a.jsx)(u.Text, {
+                                            className: _.question,
                                             variant: 'text-lg/normal',
                                             children: e.getQuestion()
                                         }),
-                                        i
-                                            ? (0, r.jsx)(o.MinusIcon, {
+                                        s
+                                            ? (0, a.jsx)(u.MinusIcon, {
                                                   size: 'md',
                                                   color: 'currentColor',
-                                                  className: d.questionIcon
+                                                  className: _.questionIcon
                                               })
-                                            : (0, r.jsx)(o.PlusSmallIcon, {
+                                            : (0, a.jsx)(u.PlusSmallIcon, {
                                                   size: 'md',
                                                   color: 'currentColor',
-                                                  className: d.questionIcon
+                                                  className: _.questionIcon
                                               })
                                     ]
                                 }),
-                                i &&
-                                    (0, r.jsx)(o.Text, {
-                                        className: d.answer,
+                                s &&
+                                    (0, a.jsx)(u.Text, {
+                                        className: _.answer,
                                         color: 'text-normal',
                                         variant: 'text-md/normal',
                                         children: e.getAnswer()
                                     })
                             ]
                         },
-                        t
+                        n
                     );
                 })
             })
         ]
     });
-};
+}
+n.Z = p;

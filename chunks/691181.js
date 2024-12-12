@@ -1,4 +1,5 @@
-var r = n(129629);
-e.exports = function (e) {
-    return e instanceof r;
-};
+var i = r(129629);
+function a(e) {
+    return e instanceof i;
+}
+e.exports = a;

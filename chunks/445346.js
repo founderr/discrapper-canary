@@ -1,56 +1,73 @@
-let r;
-n.d(t, {
+let i;
+r.d(n, {
     y: function () {
-        return _;
+        return E;
     }
-}),
-    n(177593),
-    n(47120),
-    n(653041);
-var i = n(512722),
-    a = n.n(i),
-    s = n(956067);
-n(17089);
-var o = n(673011),
-    l = n(153102);
-function u(e, t, n) {
+});
+var a = r(177593);
+var s = r(47120);
+var o = r(653041);
+var l = r(512722),
+    u = r.n(l),
+    c = r(956067);
+r(17089);
+var d = r(673011),
+    f = r(153102);
+function _(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let c = [],
-    d = !1,
-    f = new Promise((e) => {
-        r = () => {
-            e(), (r = null);
+let h = [],
+    p = !1,
+    m = new Promise((e) => {
+        i = () => {
+            e(), (i = null);
         };
     });
-class _ {
+function g(e, n) {
+    let r = null;
+    return 0 === e
+        ? function () {
+              clearImmediate(r), (r = setImmediate(n));
+          }
+        : function () {
+              null == r &&
+                  (r = setTimeout(() => {
+                      try {
+                          n();
+                      } finally {
+                          r = null;
+                      }
+                  }, e));
+          };
+}
+class E {
     static initialize() {
-        (d = !0), c.forEach((e) => e.initializeIfNeeded()), null != r && r();
+        (p = !0), h.forEach((e) => e.initializeIfNeeded()), null != i && i();
     }
     static destroy() {
-        (c.length = 0), l.Z.destroy();
+        (h.length = 0), f.Z.destroy();
     }
     static getAll() {
-        return c;
+        return h;
     }
-    registerActionHandlers(e, t) {
+    registerActionHandlers(e, n) {
         this._dispatcher.register(
             this.getName(),
             e,
             (e) => {
-                (this._changeCallbacks.hasAny() || this._reactChangeCallbacks.hasAny() || this._syncWiths.length > 0) && (l.Z.markChanged(this), l.Z.getIsPaused() && null != this._mustEmitChanges && this._mustEmitChanges(e) && l.Z.resume(!1));
+                (this._changeCallbacks.hasAny() || this._reactChangeCallbacks.hasAny() || this._syncWiths.length > 0) && (f.Z.markChanged(this), f.Z.getIsPaused() && null != this._mustEmitChanges && this._mustEmitChanges(e) && f.Z.resume(!1));
             },
-            t,
+            n,
             this._dispatchToken
         );
     }
@@ -62,56 +79,36 @@ class _ {
         if (!this._isInitialized) {
             let e = Date.now();
             this.initialize(), (this._isInitialized = !0);
-            let t = Date.now() - e;
-            t > 5 && s.Z.mark('\uD83E\uDDA5', this.getName() + '.initialize()', t);
+            let n = Date.now() - e;
+            n > 5 && c.Z.mark('\uD83E\uDDA5', this.getName() + '.initialize()', n);
         }
     }
     initialize() {}
-    syncWith(e, t, n) {
-        if ((this.waitFor(...e), null != n)) {
-            var r, i;
-            let a,
-                s = 0,
-                o = () => {
-                    s !== l.Z.getChangeSentinel() && ((s = l.Z.getChangeSentinel()), !1 !== t() && this.emitChange());
+    syncWith(e, n, r) {
+        if ((this.waitFor(...e), null != r)) {
+            let i = 0,
+                a = () => {
+                    i !== f.Z.getChangeSentinel() && ((i = f.Z.getChangeSentinel()), !1 !== n() && this.emitChange());
                 };
-            (r = null != n ? n : 0),
-                (i = o),
-                (a = null),
-                (o =
-                    0 === r
-                        ? function () {
-                              clearImmediate(a), (a = setImmediate(i));
-                          }
-                        : function () {
-                              null == a &&
-                                  (a = setTimeout(() => {
-                                      try {
-                                          i();
-                                      } finally {
-                                          a = null;
-                                      }
-                                  }, r));
-                          }),
-                e.forEach((e) => e.addChangeListener(o));
+            (a = g(null != r ? r : 0, a)), e.forEach((e) => e.addChangeListener(a));
         } else
             e.forEach((e) => {
                 e._syncWiths.push({
-                    func: t,
+                    func: n,
                     store: this
                 });
             });
     }
     waitFor() {
-        for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-        let r = t.map((e, t) => ((a()(null != e, 'Store.waitFor(...) called with null Store at index '.concat(t, ' for store ').concat(this.getName())), null != e._dispatcher) ? (a()(e._dispatcher === this._dispatcher, 'Stores belong to two separate dispatchers.'), e.getDispatchToken()) : null));
+        for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
+        let i = n.map((e, n) => ((u()(null != e, 'Store.waitFor(...) called with null Store at index '.concat(n, ' for store ').concat(this.getName())), null != e._dispatcher) ? (u()(e._dispatcher === this._dispatcher, 'Stores belong to two separate dispatchers.'), e.getDispatchToken()) : null));
         this._dispatcher.addDependencies(
             this.getDispatchToken(),
-            r.filter((e) => null != e)
+            i.filter((e) => null != e)
         );
     }
     emitChange() {
-        l.Z.markChanged(this);
+        f.Z.markChanged(this);
     }
     getDispatchToken() {
         return this._dispatchToken;
@@ -120,9 +117,9 @@ class _ {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : () => !0;
         this._mustEmitChanges = e;
     }
-    constructor(e, t, n) {
-        u(this, '_changeCallbacks', new o.Z()), u(this, '_reactChangeCallbacks', new o.Z()), u(this, '_syncWiths', []), u(this, '_dispatchToken', void 0), u(this, '_dispatcher', void 0), u(this, '_mustEmitChanges', void 0), u(this, '_isInitialized', !1), u(this, '__getLocalVars', void 0), u(this, 'addChangeListener', this._changeCallbacks.add), u(this, 'addConditionalChangeListener', this._changeCallbacks.addConditional), u(this, 'removeChangeListener', this._changeCallbacks.remove), u(this, 'addReactChangeListener', this._reactChangeCallbacks.add), u(this, 'removeReactChangeListener', this._reactChangeCallbacks.remove), (this._dispatcher = e), (this._dispatchToken = this._dispatcher.createToken()), this.registerActionHandlers(null != t ? t : {}, n), c.push(this);
-        d && this.initializeIfNeeded();
+    constructor(e, n, r) {
+        _(this, '_changeCallbacks', new d.Z()), _(this, '_reactChangeCallbacks', new d.Z()), _(this, '_syncWiths', []), _(this, '_dispatchToken', void 0), _(this, '_dispatcher', void 0), _(this, '_mustEmitChanges', void 0), _(this, '_isInitialized', !1), _(this, '__getLocalVars', void 0), _(this, 'addChangeListener', this._changeCallbacks.add), _(this, 'addConditionalChangeListener', this._changeCallbacks.addConditional), _(this, 'removeChangeListener', this._changeCallbacks.remove), _(this, 'addReactChangeListener', this._reactChangeCallbacks.add), _(this, 'removeReactChangeListener', this._reactChangeCallbacks.remove), (this._dispatcher = e), (this._dispatchToken = this._dispatcher.createToken()), this.registerActionHandlers(null != n ? n : {}, r), h.push(this);
+        p && this.initializeIfNeeded();
     }
 }
-u(_, 'displayName', void 0), u(_, 'initialized', f);
+_(E, 'displayName', void 0), _(E, 'initialized', m);

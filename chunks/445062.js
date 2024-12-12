@@ -1,27 +1,30 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return o;
+        return u;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(864094),
-    a = n(871499),
-    s = n(388032);
-function o(e) {
-    let { isSelfStream: t, centerButton: n = !1, onMouseEnter: o, onMouseLeave: l, ...u } = e,
-        c = n ? a.d : a.Z,
-        { Component: d, events: f } = (0, i.P)('disable');
-    return (0, r.jsx)(c, {
-        label: t ? s.intl.string(s.t.S5anIS) : s.intl.string(s.t.q3O3Jy),
-        iconComponent: d,
+var i = r(200651);
+r(192379);
+var a = r(864094),
+    s = r(871499),
+    o = r(388032);
+function l(e) {
+    return e ? o.intl.string(o.t.S5anIS) : o.intl.string(o.t.q3O3Jy);
+}
+function u(e) {
+    let { isSelfStream: n, centerButton: r = !1, onMouseEnter: o, onMouseLeave: u, ...c } = e,
+        d = r ? s.d : s.Z,
+        { Component: f, events: _ } = (0, a.P)('disable');
+    return (0, i.jsx)(d, {
+        label: l(n),
+        iconComponent: f,
         isActive: !0,
         onMouseEnter: (e) => {
-            null == o || o(e), f.onMouseEnter();
+            null == o || o(e), _.onMouseEnter();
         },
         onMouseLeave: (e) => {
-            null == l || l(e), f.onMouseLeave();
+            null == u || u(e), _.onMouseLeave();
         },
-        ...u
+        ...c
     });
 }

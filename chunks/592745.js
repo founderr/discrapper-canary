@@ -1,21 +1,35 @@
-n(47120);
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140);
+var i,
+    a = r(47120);
+var s = r(442837),
+    o = r(570140);
+function l(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
 let u = new Set(),
     c = {};
 function d(e) {
-    let { applicationId: t } = e;
-    u.add(t);
+    let { gameId: n, isLaunchable: r } = e;
+    c[n] = r;
 }
 function f(e) {
-    let { applicationId: t } = e;
-    u.delete(t);
+    let { applicationId: n } = e;
+    u.add(n);
 }
-class _ extends (r = o.ZP.Store) {
+function _(e) {
+    let { applicationId: n } = e;
+    u.delete(n);
+}
+class h extends (i = s.ZP.Store) {
     get launchingGames() {
         return u;
     }
@@ -26,32 +40,21 @@ class _ extends (r = o.ZP.Store) {
         return null != c[e]
             ? c[e]
             : ((c[e] = !1),
-              l.Z.dispatch({
+              o.Z.dispatch({
                   type: 'CHECK_LAUNCHABLE_GAME',
                   gameId: e
               }),
               !1);
     }
 }
-(s = 'LaunchableGameStore'),
-    (a = 'displayName') in (i = _)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new _(l.Z, {
-        GAME_LAUNCHABLE_UPDATE: function (e) {
-            let { gameId: t, isLaunchable: n } = e;
-            c[t] = n;
-        },
-        GAME_CLOUD_SYNC_START: d,
-        GAME_LAUNCH_START: d,
-        GAME_LAUNCH_SUCCESS: f,
-        GAME_LAUNCH_FAIL: f,
-        GAME_CLOUD_SYNC_CONFLICT: f,
-        GAME_CLOUD_SYNC_ERROR: f,
-        GAME_CLOUD_SYNC_COMPLETE: f
+l(h, 'displayName', 'LaunchableGameStore'),
+    (n.Z = new h(o.Z, {
+        GAME_LAUNCHABLE_UPDATE: d,
+        GAME_CLOUD_SYNC_START: f,
+        GAME_LAUNCH_START: f,
+        GAME_LAUNCH_SUCCESS: _,
+        GAME_LAUNCH_FAIL: _,
+        GAME_CLOUD_SYNC_CONFLICT: _,
+        GAME_CLOUD_SYNC_ERROR: _,
+        GAME_CLOUD_SYNC_COMPLETE: _
     }));

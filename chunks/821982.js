@@ -1,8 +1,9 @@
-var r = n(768581),
-    i = n(1585);
-t.Z = (e, t, n) =>
-    (0, r.NZ)({
+var i = r(768581),
+    a = r(1585);
+let s = (e, n, r) =>
+    (0, i.NZ)({
         avatarDecoration: { asset: e },
-        size: (0, i.y9)(t),
-        canAnimate: n
+        size: (0, a.y9)(n),
+        canAnimate: r
     });
+n.Z = s;

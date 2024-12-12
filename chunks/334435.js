@@ -1,10 +1,10 @@
-e.exports = function (e) {
-    let t = {
+function n(e) {
+    let n = {
             className: 'number',
             relevance: 0,
             variants: [{ begin: '[$][a-fA-F0-9]+' }, e.NUMBER_MODE]
         },
-        n = {
+        r = {
             variants: [
                 {
                     match: [/(function|method)/, /\s+/, e.UNDERSCORE_IDENT_RE]
@@ -15,7 +15,7 @@ e.exports = function (e) {
                 3: 'title.function'
             }
         },
-        r = {
+        i = {
             variants: [
                 {
                     match: [/(class|interface|extends|implements)/, /\s+/, e.UNDERSCORE_IDENT_RE]
@@ -38,8 +38,8 @@ e.exports = function (e) {
         contains: [
             e.COMMENT('#rem', '#end'),
             e.COMMENT("'", '$', { relevance: 0 }),
-            n,
             r,
+            i,
             {
                 className: 'variable.language',
                 begin: /\b(self|super)\b/
@@ -60,7 +60,8 @@ e.exports = function (e) {
                 contains: [e.UNDERSCORE_TITLE_MODE]
             },
             e.QUOTE_STRING_MODE,
-            t
+            n
         ]
     };
-};
+}
+e.exports = n;

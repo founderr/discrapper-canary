@@ -1,196 +1,212 @@
-n(47120);
-var r,
-    i,
-    a,
-    s,
-    o = n(275726),
-    l = n(442837),
-    u = n(570140),
-    c = n(594174),
-    d = n(281494),
-    f = n(981631);
-let _ = null,
+var i,
+    a = r(47120);
+var s = r(275726),
+    o = r(442837),
+    l = r(570140),
+    u = r(594174),
+    c = r(281494),
+    d = r(981631);
+function f(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let _ = 5,
+    h = null,
     p = {},
-    h = [],
-    m = new Map(),
-    g = new Set(),
-    E = !1,
-    v = new Set(),
+    m = [],
+    g = new Map(),
+    E = new Set(),
+    v = !1,
     I = new Set(),
-    T = {},
-    b = 0,
+    T = new Set(),
+    b = {},
+    y = 0,
     S = null,
-    y = [],
-    A = !1,
-    N = 0,
-    C = !1,
-    R = null,
-    O = !1,
+    A = [],
+    N = !1,
+    C = 0,
+    R = !1,
+    O = null,
     D = !1,
     L = !1,
-    x = f.g2L.NOT_ELIGIBLE,
-    w = () => !0;
-function P(e) {
-    v.add(e);
+    x = !1,
+    w = d.g2L.NOT_ELIGIBLE;
+function P() {
+    (h = null), (p = {}), (m = []), (E = new Set()), (v = !1), (I = new Set()), (T = new Set()), (b = {}), (y = 0), (S = null), (A = []), (N = !1), (C = 0), (R = !1), (O = null), (g = new Map()), (D = !1), (L = !1), (x = !1), (w = d.g2L.NOT_ELIGIBLE);
 }
-function M(e) {
-    let { messages: t } = e;
-    t.forEach((e) => k(e));
-}
+let M = () => !0;
 function k(e) {
-    let t = e.type === o.u.PREMIUM_REFERRAL ? e.content : null;
-    if (null == t) return !1;
-    if (!I.has(t) && !v.has(t)) {
-        var n;
-        (n = t), v.add(n), u.Z.wait(() => (0, d.IB)(t).catch(f.VqG));
-    }
+    let {} = e;
+    (R = !1), (O = null), (v = !0);
 }
-class U extends (r = l.ZP.Store) {
+function U(e) {
+    let { referrals_remaining: n, sent_user_ids: r, refresh_at: i, recipient_status: a, has_eligible_friends: s, isUserEligibleForIncentive: o, isUserQualifiedForIncentive: l, userReferralIncentiveState: u } = e;
+    (R = null == i && s), (v = !1), (h = n), (m = r), (O = i), (g = a), (D = o && (s || g.size > 0)), (L = l), (w = u);
+}
+function B(e) {
+    let {} = e;
+    (R = !1), (O = null), (v = !1), (y += 1), (S = Date.now() + 1000 * Math.pow(2, y));
+}
+function G(e) {
+    let { recipientId: n } = e;
+    E.add(n);
+}
+function Z(e) {
+    let { recipientId: n, is_eligible: r } = e;
+    (p[n] = r), E.delete(n);
+}
+function F(e) {
+    let { recipientId: n } = e;
+    (p[n] = !1), E.delete(n);
+}
+function V(e) {
+    let { userTrialOffer: n } = e;
+    (0, c.C$)(), (b[n.id] = n), (m = [...m, n.user_id]);
+}
+function j(e) {
+    let { userTrialOffers: n } = e;
+    for (let e of ((0, c.C$)(), n)) (b[e.id] = e), (m = [...m, e.user_id]);
+}
+function H(e) {
+    I.add(e);
+}
+function Y(e) {
+    let { userTrialOffer: n } = e;
+    null != n && (I.delete(n.id), T.add(n.id), (b[n.id] = n));
+}
+function W(e) {
+    let { userTrialOfferId: n } = e;
+    I.delete(n), T.add(n);
+}
+function K(e) {
+    let { message: n } = e;
+    Q(n);
+}
+function z(e) {
+    let { messages: n } = e;
+    n.forEach((e) => Q(e));
+}
+function q(e) {
+    let { userTrialOfferId: n, recipientId: r } = e;
+    !v && (0, c.C$)(), !E.has(r) && (0, c.Ve)(r), !I.has(n) && (H(n), l.Z.wait(() => (0, c.IB)(n).catch(d.VqG)));
+}
+function Q(e) {
+    let n = e.type === s.u.PREMIUM_REFERRAL ? e.content : null;
+    if (null == n) return !1;
+    !T.has(n) && !I.has(n) && (H(n), l.Z.wait(() => (0, c.IB)(n).catch(d.VqG)));
+}
+function X() {
+    N = !0;
+}
+function J(e) {
+    let { users: n, nextIndex: r } = e;
+    (N = !1), (A = n), (C = r);
+}
+function $() {
+    N = !1;
+}
+function ee(e) {
+    let { isUserEligibleForIncentive: n } = e;
+    (x = !1), null != n && (D = n);
+}
+function et() {
+    x = !1;
+}
+function en() {
+    x = !0;
+}
+class er extends (i = o.ZP.Store) {
     initialize() {
-        this.waitFor(c.default), this.syncWith([c.default], w);
+        this.waitFor(u.default), this.syncWith([u.default], M);
     }
     checkAndFetchReferralsRemaining() {
-        null == _ && !E && b < 5 && (null == S || S < Date.now()) && (0, d.C$)();
+        null == h && !v && y < _ && (null == S || S < Date.now()) && (0, c.C$)();
     }
     getReferralsRemaining() {
-        return this.checkAndFetchReferralsRemaining(), _;
+        return this.checkAndFetchReferralsRemaining(), h;
     }
     getSentUserIds() {
-        return this.checkAndFetchReferralsRemaining(), null == h ? [] : h;
+        return this.checkAndFetchReferralsRemaining(), null == m ? [] : m;
     }
     isFetchingReferralsRemaining() {
-        return E;
+        return v;
     }
     isFetchingRecipientEligibility(e) {
-        return g.has(e);
+        return E.has(e);
     }
     getRecipientEligibility(e) {
-        return void 0 === p[e] && !g.has(e) && (0, d.Ve)(e), p[e];
+        return void 0 === p[e] && !E.has(e) && (0, c.Ve)(e), p[e];
     }
     getRelevantUserTrialOffer(e) {
-        return T[e];
+        return b[e];
     }
     isResolving(e) {
-        return v.has(e);
+        return I.has(e);
     }
     getEligibleUsers() {
-        return y;
-    }
-    getFetchingEligibleUsers() {
         return A;
     }
-    getNextIndexOfEligibleUsers() {
+    getFetchingEligibleUsers() {
         return N;
     }
-    getIsEligibleToSendReferrals() {
+    getNextIndexOfEligibleUsers() {
         return C;
     }
-    getRefreshAt() {
+    getIsEligibleToSendReferrals() {
         return R;
     }
-    getRelevantReferralTrialOffers() {
-        return T;
-    }
-    getRecipientStatus() {
-        return m;
-    }
-    getIsSenderEligibleForIncentive() {
+    getRefreshAt() {
         return O;
     }
-    getIsSenderQualifiedForIncentive() {
+    getRelevantReferralTrialOffers() {
+        return b;
+    }
+    getRecipientStatus() {
+        return g;
+    }
+    getIsSenderEligibleForIncentive() {
         return D;
     }
-    getIsFetchingReferralIncentiveEligibility() {
+    getIsSenderQualifiedForIncentive() {
         return L;
     }
-    getSenderIncentiveState() {
+    getIsFetchingReferralIncentiveEligibility() {
         return x;
     }
+    getSenderIncentiveState() {
+        return w;
+    }
 }
-(s = 'ReferralTrialStore'),
-    (a = 'displayName') in (i = U)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new U(u.Z, {
-        BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function (e) {
-            let { userTrialOfferId: t, recipientId: n } = e;
-            if ((!E && (0, d.C$)(), !g.has(n) && (0, d.Ve)(n), !v.has(t))) {
-                var r;
-                (r = t), v.add(r), u.Z.wait(() => (0, d.IB)(t).catch(f.VqG));
-            }
-        },
-        BILLING_REFERRALS_REMAINING_FETCH_START: function (e) {
-            let {} = e;
-            (C = !1), (R = null), (E = !0);
-        },
-        BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: function (e) {
-            let { referrals_remaining: t, sent_user_ids: n, refresh_at: r, recipient_status: i, has_eligible_friends: a, isUserEligibleForIncentive: s, isUserQualifiedForIncentive: o, userReferralIncentiveState: l } = e;
-            (C = null == r && a), (E = !1), (_ = t), (h = n), (R = r), (m = i), (O = s && (a || m.size > 0)), (D = o), (x = l);
-        },
-        BILLING_REFERRALS_REMAINING_FETCH_FAIL: function (e) {
-            let {} = e;
-            (C = !1), (R = null), (E = !1), (b += 1), (S = Date.now() + 1000 * Math.pow(2, b));
-        },
-        BILLING_CREATE_REFERRAL_PREVIEW_START: function (e) {
-            let { recipientId: t } = e;
-            g.add(t);
-        },
-        BILLING_GET_REFERRAL_INCENTIVE_STATUS_SUCCESS: function (e) {
-            let { isUserEligibleForIncentive: t } = e;
-            (L = !1), null != t && (O = t);
-        },
-        BILLING_GET_REFERRAL_INCENTIVE_STATUS_FAIL: function () {
-            L = !1;
-        },
-        BILLING_GET_REFERRAL_INCENTIVE_STATUS_START: function () {
-            L = !0;
-        },
-        BILLING_CREATE_REFERRAL_PREVIEW_SUCCESS: function (e) {
-            let { recipientId: t, is_eligible: n } = e;
-            (p[t] = n), g.delete(t);
-        },
-        BILLING_CREATE_REFERRAL_PREVIEW_FAIL: function (e) {
-            let { recipientId: t } = e;
-            (p[t] = !1), g.delete(t);
-        },
-        BILLING_CREATE_REFERRAL_SUCCESS: function (e) {
-            let { userTrialOffer: t } = e;
-            (0, d.C$)(), (T[t.id] = t), (h = [...h, t.user_id]);
-        },
-        CREATE_REFERRALS_SUCCESS: function (e) {
-            let { userTrialOffers: t } = e;
-            for (let e of ((0, d.C$)(), t)) (T[e.id] = e), (h = [...h, e.user_id]);
-        },
-        BILLING_REFERRAL_RESOLVE_SUCCESS: function (e) {
-            let { userTrialOffer: t } = e;
-            null != t && (v.delete(t.id), I.add(t.id), (T[t.id] = t));
-        },
-        BILLING_REFERRAL_RESOLVE_FAIL: function (e) {
-            let { userTrialOfferId: t } = e;
-            v.delete(t), I.add(t);
-        },
-        REFERRALS_FETCH_ELIGIBLE_USER_START: function () {
-            A = !0;
-        },
-        REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: function (e) {
-            let { users: t, nextIndex: n } = e;
-            (A = !1), (y = t), (N = n);
-        },
-        REFERRALS_FETCH_ELIGIBLE_USER_FAIL: function () {
-            A = !1;
-        },
-        LOAD_MESSAGES_SUCCESS: M,
-        MESSAGE_CREATE: function (e) {
-            let { message: t } = e;
-            k(t);
-        },
-        LOAD_MESSAGES_AROUND_SUCCESS: M,
-        LOGOUT: function () {
-            (_ = null), (p = {}), (h = []), (g = new Set()), (E = !1), (v = new Set()), (I = new Set()), (T = {}), (b = 0), (S = null), (y = []), (A = !1), (N = 0), (C = !1), (R = null), (m = new Map()), (O = !1), (D = !1), (L = !1), (x = f.g2L.NOT_ELIGIBLE);
-        }
+f(er, 'displayName', 'ReferralTrialStore'),
+    (n.Z = new er(l.Z, {
+        BILLING_REFERRAL_TRIAL_OFFER_UPDATE: q,
+        BILLING_REFERRALS_REMAINING_FETCH_START: k,
+        BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: U,
+        BILLING_REFERRALS_REMAINING_FETCH_FAIL: B,
+        BILLING_CREATE_REFERRAL_PREVIEW_START: G,
+        BILLING_GET_REFERRAL_INCENTIVE_STATUS_SUCCESS: ee,
+        BILLING_GET_REFERRAL_INCENTIVE_STATUS_FAIL: et,
+        BILLING_GET_REFERRAL_INCENTIVE_STATUS_START: en,
+        BILLING_CREATE_REFERRAL_PREVIEW_SUCCESS: Z,
+        BILLING_CREATE_REFERRAL_PREVIEW_FAIL: F,
+        BILLING_CREATE_REFERRAL_SUCCESS: V,
+        CREATE_REFERRALS_SUCCESS: j,
+        BILLING_REFERRAL_RESOLVE_SUCCESS: Y,
+        BILLING_REFERRAL_RESOLVE_FAIL: W,
+        REFERRALS_FETCH_ELIGIBLE_USER_START: X,
+        REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: J,
+        REFERRALS_FETCH_ELIGIBLE_USER_FAIL: $,
+        LOAD_MESSAGES_SUCCESS: z,
+        MESSAGE_CREATE: K,
+        LOAD_MESSAGES_AROUND_SUCCESS: z,
+        LOGOUT: P
     }));

@@ -1,44 +1,45 @@
-var r = n(200651),
-    i = n(192379),
-    a = n(392711),
-    s = n.n(a),
-    o = n(826298),
-    l = n(253676);
-t.Z = (e) => {
-    let { showImage: t } = e,
+var i = r(200651),
+    a = r(192379),
+    s = r(392711),
+    o = r.n(s),
+    l = r(826298),
+    u = r(253676);
+let c = (e) => {
+    let { showImage: n } = e,
         {
-            usageWidth: n,
-            descriptionWidth: a,
-            sourceWidth: u
-        } = i.useMemo(
+            usageWidth: r,
+            descriptionWidth: s,
+            sourceWidth: c
+        } = a.useMemo(
             () => ({
-                usageWidth: s().random(60, 120),
-                descriptionWidth: s().random(200, 600),
-                sourceWidth: s().random(45, 90)
+                usageWidth: o().random(60, 120),
+                descriptionWidth: o().random(200, 600),
+                sourceWidth: o().random(45, 90)
             }),
             []
         );
-    return (0, r.jsxs)('div', {
-        className: l.wrapper,
+    return (0, i.jsxs)('div', {
+        className: u.wrapper,
         children: [
-            t ? (0, r.jsx)('div', { className: l.image }) : null,
-            (0, r.jsxs)('div', {
-                className: l.infoWrapper,
+            n ? (0, i.jsx)('div', { className: u.image }) : null,
+            (0, i.jsxs)('div', {
+                className: u.infoWrapper,
                 children: [
-                    (0, r.jsx)('div', {
-                        style: { maxWidth: (0, o.Q1)(n) },
-                        className: l.usageWrapper
+                    (0, i.jsx)('div', {
+                        style: { maxWidth: (0, l.Q1)(r) },
+                        className: u.usageWrapper
                     }),
-                    (0, r.jsx)('div', {
-                        style: { maxWidth: (0, o.Q1)(a) },
-                        className: l.description
+                    (0, i.jsx)('div', {
+                        style: { maxWidth: (0, l.Q1)(s) },
+                        className: u.description
                     })
                 ]
             }),
-            (0, r.jsx)('div', {
-                style: { width: (0, o.Q1)(u) },
-                className: l.source
+            (0, i.jsx)('div', {
+                style: { width: (0, l.Q1)(c) },
+                className: u.source
             })
         ]
     });
 };
+n.Z = c;

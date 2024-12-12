@@ -1,76 +1,74 @@
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(524437),
-    u = n(570140),
-    c = n(581883),
-    d = n(131704),
-    f = n(981631);
-let _ = {},
-    p = !1;
-function h() {
-    var e, t, n;
-    (p = null !== (n = null === (e = c.Z.settings.favorites) || void 0 === e ? void 0 : e.muted) && void 0 !== n && n), (_ = {});
-    let r = null === (t = c.Z.settings.favorites) || void 0 === t ? void 0 : t.favoriteChannels;
-    if (null == r) return !1;
-    for (let e in r) {
-        let t = r[e];
-        _[e] = {
+var i,
+    a = r(442837),
+    s = r(524437),
+    o = r(570140),
+    l = r(581883),
+    u = r(131704),
+    c = r(981631);
+function d(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let f = {},
+    _ = !1;
+function h(e) {
+    var n;
+    return (0, u.kt)({
+        id: e.id,
+        name: null !== (n = e.nickname) && void 0 !== n ? n : '',
+        type: c.d4z.GUILD_CATEGORY,
+        position: e.order,
+        guild_id: c.I_8
+    });
+}
+function p() {
+    var e, n, r;
+    (_ = null !== (r = null === (e = l.Z.settings.favorites) || void 0 === e ? void 0 : e.muted) && void 0 !== r && r), (f = {});
+    let i = null === (n = l.Z.settings.favorites) || void 0 === n ? void 0 : n.favoriteChannels;
+    if (null == i) return !1;
+    for (let e in i) {
+        let n = i[e];
+        f[e] = {
             id: e,
-            nickname: '' !== t.nickname ? t.nickname : null,
-            type: t.type,
-            order: t.position,
-            parentId: '0' !== t.parentId ? t.parentId : null
+            nickname: '' !== n.nickname ? n.nickname : null,
+            type: n.type,
+            order: n.position,
+            parentId: '0' !== n.parentId ? n.parentId : null
         };
     }
 }
-class m extends (s = o.ZP.Store) {
+class m extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(c.Z), h(), this.syncWith([c.Z], h);
+        this.waitFor(l.Z), p(), this.syncWith([l.Z], p);
     }
     getFavoriteChannels() {
-        return _;
+        return f;
     }
     get favoriteServerMuted() {
-        return p;
+        return _;
     }
     isFavorite(e) {
-        return null != e && null != _[e];
+        return null != e && null != f[e];
     }
     getFavorite(e) {
-        if (null != e) return _[e];
+        if (null != e) return f[e];
     }
     getCategoryRecord(e) {
-        if (e in _ && _[e].type === l.Dd.CATEGORY) {
-            var t, n;
-            return (
-                (t = _[e]),
-                (0, d.kt)({
-                    id: t.id,
-                    name: null !== (n = t.nickname) && void 0 !== n ? n : '',
-                    type: f.d4z.GUILD_CATEGORY,
-                    position: t.order,
-                    guild_id: f.I_8
-                })
-            );
-        }
-        return null;
+        return e in f && f[e].type === s.Dd.CATEGORY ? h(f[e]) : null;
     }
     getNickname(e) {
-        var t;
-        let n = this.getFavorite(e);
-        return null !== (t = null == n ? void 0 : n.nickname) && void 0 !== t ? t : void 0;
+        var n;
+        let r = this.getFavorite(e);
+        return null !== (n = null == r ? void 0 : r.nickname) && void 0 !== n ? n : void 0;
     }
 }
-(a = 'FavoriteStore'),
-    (i = 'displayName') in (r = m)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.Z = new m(u.Z, {}));
+d(m, 'displayName', 'FavoriteStore'), (n.Z = new m(o.Z, {}));

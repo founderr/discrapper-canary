@@ -1,56 +1,54 @@
-n.r(t),
-    n.d(t, {
+r.r(n),
+    r.d(n, {
         useCallback: function () {
-            return o;
+            return u;
         },
         useCallbackOne: function () {
-            return a;
+            return o;
         },
         useMemo: function () {
-            return s;
+            return l;
         },
         useMemoOne: function () {
-            return i;
+            return s;
         }
     });
-var r = n(192379);
-function i(e, t) {
-    var n = (0, r.useState)(function () {
+var i = r(192379);
+function a(e, n) {
+    if (e.length !== n.length) return !1;
+    for (var r = 0; r < e.length; r++) if (e[r] !== n[r]) return !1;
+    return !0;
+}
+function s(e, n) {
+    var r = (0, i.useState)(function () {
             return {
-                inputs: t,
+                inputs: n,
                 result: e()
             };
         })[0],
-        i = (0, r.useRef)(!0),
-        a = (0, r.useRef)(n),
-        s =
-            i.current ||
-            (t &&
-                a.current.inputs &&
-                (function (e, t) {
-                    if (e.length !== t.length) return !1;
-                    for (var n = 0; n < e.length; n++) if (e[n] !== t[n]) return !1;
-                    return !0;
-                })(t, a.current.inputs))
-                ? a.current
+        s = (0, i.useRef)(!0),
+        o = (0, i.useRef)(r),
+        l =
+            s.current || (n && o.current.inputs && a(n, o.current.inputs))
+                ? o.current
                 : {
-                      inputs: t,
+                      inputs: n,
                       result: e()
                   };
     return (
-        (0, r.useEffect)(
+        (0, i.useEffect)(
             function () {
-                (i.current = !1), (a.current = s);
+                (s.current = !1), (o.current = l);
             },
-            [s]
+            [l]
         ),
-        s.result
+        l.result
     );
 }
-function a(e, t) {
-    return i(function () {
+function o(e, n) {
+    return s(function () {
         return e;
-    }, t);
+    }, n);
 }
-var s = i,
-    o = a;
+var l = s,
+    u = o;

@@ -1,30 +1,33 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
         return o;
     }
-}),
-    n(51350);
-var r,
-    i,
-    a,
-    s = n(149765);
+});
+var i = r(51350);
+var a = r(149765);
+function s(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
 class o {
-    static has(e, t) {
-        return (e & t) != 0;
+    static has(e, n) {
+        return (e & n) != 0;
     }
     static asBasicFlag(e) {
-        return s.ug(20, e);
+        let n = 20;
+        return a.ug(n, e);
     }
     static asBigFlag(e) {
-        return !Object.hasOwn(this.cache, e) && (this.cache[e] = s.vB(e)), this.cache[e];
+        return !Object.hasOwn(this.cache, e) && (this.cache[e] = a.vB(e)), this.cache[e];
     }
 }
-(a = {}),
-    (i = 'cache') in (r = o)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a);
+s(o, 'cache', {});

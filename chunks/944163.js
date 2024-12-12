@@ -1,79 +1,85 @@
-n.d(t, {
+r.d(n, {
     t: function () {
-        return f;
+        return d;
     }
 });
-var r,
-    i,
-    a,
-    s,
-    o = n(392711),
-    l = n.n(o),
-    u = n(442837),
-    c = n(570140),
-    d = n(246364);
-let f = {
+var i,
+    a = r(392711),
+    s = r.n(a),
+    o = r(442837),
+    l = r(570140),
+    u = r(246364);
+function c(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let d = {
         version: '',
         description: '',
         formFields: []
     },
-    _ = {};
-class p extends (s = u.ZP.Store) {
-    get(e) {
-        if (null != e) return _[e];
-    }
-    getRulesPrompt(e) {
-        var t;
-        return l().find(null === (t = _[e]) || void 0 === t ? void 0 : t.formFields, d.J);
+    f = {};
+function _(e) {
+    let { form: n, guildId: r } = e;
+    if (null == n) f[r] = d;
+    else {
+        var i;
+        let e = null !== (i = f[r]) && void 0 !== i ? i : d;
+        f[r] = {
+            ...e,
+            ...n
+        };
     }
 }
-(a = 'MemberVerificationFormStore'),
-    (i = 'displayName') in (r = p)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.Z = new p(c.Z, {
-        INVITE_ACCEPT_SUCCESS: function (e) {
-            let { invite: t } = e,
-                { member_verification_form: n } = t,
-                { guild: r } = t;
-            if (null != r && null != n) {
-                var i;
-                return (
-                    (_[r.id] = {
-                        version: n.version,
-                        description: null !== (i = n.description) && void 0 !== i ? i : '',
-                        formFields: n.form_fields,
-                        guild: r
-                    }),
-                    !0
-                );
-            }
-            return !1;
-        },
-        MEMBER_VERIFICATION_FORM_UPDATE: function (e) {
-            let { form: t, guildId: n } = e;
-            if (null == t) _[n] = f;
-            else {
-                var r;
-                let e = null !== (r = _[n]) && void 0 !== r ? r : f;
-                _[n] = {
-                    ...e,
-                    ...t
-                };
-            }
-        },
-        MEMBER_VERIFICATION_FORM_FETCH_FAIL: function (e) {
-            var t;
-            let { guildId: n } = e;
-            _[n] = null !== (t = _[n]) && void 0 !== t ? t : f;
-        },
-        GUILD_DELETE: function (e) {
-            let { guild: t } = e;
-            delete _[null == t ? void 0 : t.id];
-        }
+function h(e) {
+    var n;
+    let { guildId: r } = e;
+    f[r] = null !== (n = f[r]) && void 0 !== n ? n : d;
+}
+function p(e) {
+    let { invite: n } = e,
+        { member_verification_form: r } = n,
+        { guild: i } = n;
+    if (null != i && null != r) {
+        var a;
+        return (
+            (f[i.id] = {
+                version: r.version,
+                description: null !== (a = r.description) && void 0 !== a ? a : '',
+                formFields: r.form_fields,
+                guild: i
+            }),
+            !0
+        );
+    }
+    return !1;
+}
+function m(e) {
+    let { guild: n } = e;
+    delete f[null == n ? void 0 : n.id];
+}
+class g extends (i = o.ZP.Store) {
+    get(e) {
+        if (null != e) return f[e];
+    }
+    getRulesPrompt(e) {
+        var n;
+        return s().find(null === (n = f[e]) || void 0 === n ? void 0 : n.formFields, u.J);
+    }
+}
+c(g, 'displayName', 'MemberVerificationFormStore'),
+    (n.Z = new g(l.Z, {
+        INVITE_ACCEPT_SUCCESS: p,
+        MEMBER_VERIFICATION_FORM_UPDATE: _,
+        MEMBER_VERIFICATION_FORM_FETCH_FAIL: h,
+        GUILD_DELETE: m
     }));

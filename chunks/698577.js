@@ -1,3 +1,4 @@
-e.exports = function (e, t, n) {
-    return (e = e instanceof Array ? e : [e]), this.bindMultiple(e, t, n), this;
+e.exports = function (e, n, r) {
+    var i = this;
+    return (e = e instanceof Array ? e : [e]), i.bindMultiple(e, n, r), i;
 };

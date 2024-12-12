@@ -1,94 +1,94 @@
-n.d(t, {
+r.d(n, {
     DF: function () {
-        return a;
+        return i;
     },
     ZP: function () {
-        return p;
+        return _;
     },
     _F: function () {
-        return s;
+        return a;
     }
 });
-var r,
-    i,
+var i,
     a,
-    s,
-    o = n(200651),
-    l = n(192379),
-    u = n(120356),
-    c = n.n(u),
-    d = n(481060),
-    f = n(921944),
-    _ = n(44669);
-function p(e) {
+    s = r(200651),
+    o = r(192379),
+    l = r(120356),
+    u = r.n(l),
+    c = r(481060),
+    d = r(921944),
+    f = r(44669);
+function _(e) {
     let {
-        className: t,
-        header: n,
-        headerClassName: r,
-        content: i,
-        contentClassName: a,
-        buttonCTA: s,
-        secondaryButtonCTA: u,
+        className: n,
+        header: r,
+        headerClassName: i,
+        content: a,
+        contentClassName: l,
+        buttonCTA: _,
+        secondaryButtonCTA: h,
         onClick: p,
-        onSecondaryClick: h,
-        buttonProps: m = {
-            color: d.Button.Colors.BRAND,
-            look: d.Button.Looks.FILLED
+        onSecondaryClick: m,
+        buttonProps: g = {
+            color: c.Button.Colors.BRAND,
+            look: c.Button.Looks.FILLED
         },
-        secondaryButtonProps: g = { color: d.Button.Colors.BRAND_INVERTED },
-        onComponentMount: E,
-        asset: v,
-        markAsDismissed: I,
-        caretPosition: T = 'caretTopCenter',
-        buttonLayout: b = 0
+        secondaryButtonProps: E = { color: c.Button.Colors.BRAND_INVERTED },
+        onComponentMount: v,
+        asset: I,
+        markAsDismissed: T,
+        caretPosition: b = 'caretTopCenter',
+        buttonLayout: y = 0
     } = e;
-    l.useEffect(() => {
-        null == E || E();
+    o.useEffect(() => {
+        null == v || v();
     }, []);
-    let S = null != u;
-    return (0, o.jsxs)('div', {
-        className: c()(t, _.upsellTooltipWrapper, _[T]),
+    let S = null != h,
+        A = (e) => {
+            p(e), null == T || T(d.L.PRIMARY);
+        },
+        N = () => {
+            null == m || m(), null == T || T(d.L.SECONDARY);
+        };
+    return (0, s.jsxs)('div', {
+        className: u()(n, f.upsellTooltipWrapper, f[b]),
         children: [
-            v,
-            null == n
+            I,
+            null == r
                 ? null
-                : (0, o.jsx)(d.Heading, {
-                      className: c()(r, _.upsellTooltipHeader),
+                : (0, s.jsx)(c.Heading, {
+                      className: u()(i, f.upsellTooltipHeader),
                       variant: 'heading-md/semibold',
-                      children: n
+                      children: r
                   }),
-            (0, o.jsx)(d.Text, {
+            (0, s.jsx)(c.Text, {
                 color: 'always-white',
-                className: c()(a, _.content),
+                className: u()(l, f.content),
                 variant: 'text-sm/normal',
-                children: i
+                children: a
             }),
-            null != s || S
-                ? (0, o.jsxs)('div', {
-                      className: c()(_.upsellButtonsContainer, {
-                          [_.upsellButtonsAdjacent]: 0 === b,
-                          [_.upsellButtonsStacked]: 1 === b
+            null != _ || S
+                ? (0, s.jsxs)('div', {
+                      className: u()(f.upsellButtonsContainer, {
+                          [f.upsellButtonsAdjacent]: 0 === y,
+                          [f.upsellButtonsStacked]: 1 === y
                       }),
                       children: [
                           S
-                              ? (0, o.jsx)(d.Button, {
-                                    ...g,
-                                    fullWidth: 1 === b,
-                                    onClick: () => {
-                                        null == h || h(), null == I || I(f.L.SECONDARY);
-                                    },
-                                    children: u
+                              ? (0, s.jsx)(c.Button, {
+                                    ...E,
+                                    fullWidth: 1 === y,
+                                    onClick: N,
+                                    children: h
                                 })
                               : null,
-                          null == s
+                          null == _
                               ? null
-                              : (0, o.jsx)(d.Button, {
-                                    ...m,
-                                    fullWidth: !S || 1 === b,
-                                    onClick: (e) => {
-                                        p(e), null == I || I(f.L.PRIMARY);
-                                    },
-                                    children: s
+                              : (0, s.jsx)(c.Button, {
+                                    ...g,
+                                    fullWidth: !S || 1 === y,
+                                    onClick: A,
+                                    children: _
                                 })
                       ]
                   })
@@ -96,4 +96,11 @@ function p(e) {
         ]
     });
 }
-((r = a || (a = {})).TOP_CENTER = 'caretTopCenter'), (r.TOP_RIGHT = 'caretTopRight'), (r.TOP_LEFT = 'caretTopLeft'), (r.BOTTOM_CENTER = 'caretBottomCenter'), (r.BOTTOM_LEFT = 'caretBottomLeft'), (r.BOTTOM_RIGHT = 'caretBottomRight'), (r.LEFT_CENTER = 'caretLeftCenter'), (r.LEFT_TOP = 'caretLeftTop'), (r.RIGHT_CENTER = 'caretRightCenter'), (r.RIGHT_TOP = 'caretRightTop'), ((i = s || (s = {}))[(i.ADJACENT = 0)] = 'ADJACENT'), (i[(i.STACKED = 1)] = 'STACKED'), (p.CaretPosition = a), (p.ButtonLayout = s);
+!(function (e) {
+    (e.TOP_CENTER = 'caretTopCenter'), (e.TOP_RIGHT = 'caretTopRight'), (e.TOP_LEFT = 'caretTopLeft'), (e.BOTTOM_CENTER = 'caretBottomCenter'), (e.BOTTOM_LEFT = 'caretBottomLeft'), (e.BOTTOM_RIGHT = 'caretBottomRight'), (e.LEFT_CENTER = 'caretLeftCenter'), (e.LEFT_TOP = 'caretLeftTop'), (e.RIGHT_CENTER = 'caretRightCenter'), (e.RIGHT_TOP = 'caretRightTop');
+})(i || (i = {})),
+    !(function (e) {
+        (e[(e.ADJACENT = 0)] = 'ADJACENT'), (e[(e.STACKED = 1)] = 'STACKED');
+    })(a || (a = {})),
+    (_.CaretPosition = i),
+    (_.ButtonLayout = a);

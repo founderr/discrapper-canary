@@ -1,10 +1,10 @@
-e.exports = function (e) {
-    let t = e.regex,
-        n = ['false', 'synchronized', 'int', 'abstract', 'float', 'private', 'char', 'boolean', 'static', 'null', 'if', 'const', 'for', 'true', 'while', 'long', 'throw', 'strictfp', 'finally', 'protected', 'import', 'native', 'final', 'return', 'void', 'enum', 'else', 'extends', 'implements', 'break', 'transient', 'new', 'catch', 'instanceof', 'byte', 'super', 'volatile', 'case', 'assert', 'short', 'package', 'default', 'double', 'public', 'try', 'this', 'switch', 'continue', 'throws', 'privileged', 'aspectOf', 'adviceexecution', 'proceed', 'cflowbelow', 'cflow', 'initialization', 'preinitialization', 'staticinitialization', 'withincode', 'target', 'within', 'execution', 'getWithinTypeName', 'handler', 'thisJoinPoint', 'thisJoinPointStaticPart', 'thisEnclosingJoinPointStaticPart', 'declare', 'parents', 'warning', 'error', 'soft', 'precedence', 'thisAspectInstance'],
-        r = ['get', 'set', 'args', 'call'];
+function n(e) {
+    let n = e.regex,
+        r = ['false', 'synchronized', 'int', 'abstract', 'float', 'private', 'char', 'boolean', 'static', 'null', 'if', 'const', 'for', 'true', 'while', 'long', 'throw', 'strictfp', 'finally', 'protected', 'import', 'native', 'final', 'return', 'void', 'enum', 'else', 'extends', 'implements', 'break', 'transient', 'new', 'catch', 'instanceof', 'byte', 'super', 'volatile', 'case', 'assert', 'short', 'package', 'default', 'double', 'public', 'try', 'this', 'switch', 'continue', 'throws', 'privileged', 'aspectOf', 'adviceexecution', 'proceed', 'cflowbelow', 'cflow', 'initialization', 'preinitialization', 'staticinitialization', 'withincode', 'target', 'within', 'execution', 'getWithinTypeName', 'handler', 'thisJoinPoint', 'thisJoinPointStaticPart', 'thisEnclosingJoinPointStaticPart', 'declare', 'parents', 'warning', 'error', 'soft', 'precedence', 'thisAspectInstance'],
+        i = ['get', 'set', 'args', 'call'];
     return {
         name: 'AspectJ',
-        keywords: n,
+        keywords: r,
         illegal: /<\/|#/,
         contains: [
             e.COMMENT(/\/\*\*/, /\*\//, {
@@ -36,7 +36,7 @@ e.exports = function (e) {
                     {
                         begin: /\([^\)]*/,
                         end: /[)]+/,
-                        keywords: n.concat(r),
+                        keywords: r.concat(i),
                         excludeEnd: !1
                     }
                 ]
@@ -58,7 +58,7 @@ e.exports = function (e) {
                 illegal: /["\[\]]/,
                 contains: [
                     {
-                        begin: t.concat(e.UNDERSCORE_IDENT_RE, /\s*\(/),
+                        begin: n.concat(e.UNDERSCORE_IDENT_RE, /\s*\(/),
                         returnBegin: !0,
                         contains: [e.UNDERSCORE_TITLE_MODE]
                     }
@@ -70,12 +70,12 @@ e.exports = function (e) {
                 end: /[{;]/,
                 relevance: 0,
                 excludeEnd: !1,
-                keywords: n,
+                keywords: r,
                 illegal: /["\[\]]/,
                 contains: [
                     {
-                        begin: t.concat(e.UNDERSCORE_IDENT_RE, /\s*\(/),
-                        keywords: n.concat(r),
+                        begin: n.concat(e.UNDERSCORE_IDENT_RE, /\s*\(/),
+                        keywords: r.concat(i),
                         relevance: 0
                     },
                     e.QUOTE_STRING_MODE
@@ -90,11 +90,11 @@ e.exports = function (e) {
                 begin: /\w+ +\w+(\.\w+)?\s*\([^\)]*\)\s*((throws)[\w\s,]+)?[\{;]/,
                 returnBegin: !0,
                 end: /[{;=]/,
-                keywords: n,
+                keywords: r,
                 excludeEnd: !0,
                 contains: [
                     {
-                        begin: t.concat(e.UNDERSCORE_IDENT_RE, /\s*\(/),
+                        begin: n.concat(e.UNDERSCORE_IDENT_RE, /\s*\(/),
                         returnBegin: !0,
                         relevance: 0,
                         contains: [e.UNDERSCORE_TITLE_MODE]
@@ -104,7 +104,7 @@ e.exports = function (e) {
                         begin: /\(/,
                         end: /\)/,
                         relevance: 0,
-                        keywords: n,
+                        keywords: r,
                         contains: [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, e.C_NUMBER_MODE, e.C_BLOCK_COMMENT_MODE]
                     },
                     e.C_LINE_COMMENT_MODE,
@@ -118,4 +118,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = n;

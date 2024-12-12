@@ -1,33 +1,30 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return d;
+        return _;
     }
 });
-var r = n(49691),
-    i = n(316138),
-    a = n(874900),
-    s = n(882159),
-    o = n(953177),
-    l = n(660027),
-    u = n(408431);
-function c(e) {
-    return (0, s.Re)(e) && 'fixed' !== (0, a.Z)(e).position ? e.offsetParent : null;
-}
+var i = r(49691),
+    a = r(316138),
+    s = r(874900),
+    o = r(882159),
+    l = r(953177),
+    u = r(660027),
+    c = r(408431);
 function d(e) {
-    for (var t = (0, r.Z)(e), n = c(e); n && (0, o.Z)(n) && 'static' === (0, a.Z)(n).position; ) n = c(n);
-    return n && ('html' === (0, i.Z)(n) || ('body' === (0, i.Z)(n) && 'static' === (0, a.Z)(n).position))
-        ? t
-        : n ||
-              (function (e) {
-                  var t = /firefox/i.test((0, u.Z)());
-                  if (/Trident/i.test((0, u.Z)()) && (0, s.Re)(e) && 'fixed' === (0, a.Z)(e).position) return null;
-                  var n = (0, l.Z)(e);
-                  for ((0, s.Zq)(n) && (n = n.host); (0, s.Re)(n) && 0 > ['html', 'body'].indexOf((0, i.Z)(n)); ) {
-                      var r = (0, a.Z)(n);
-                      if ('none' !== r.transform || 'none' !== r.perspective || 'paint' === r.contain || -1 !== ['transform', 'perspective'].indexOf(r.willChange) || (t && 'filter' === r.willChange) || (t && r.filter && 'none' !== r.filter)) return n;
-                      n = n.parentNode;
-                  }
-                  return null;
-              })(e) ||
-              t;
+    return (0, o.Re)(e) && 'fixed' !== (0, s.Z)(e).position ? e.offsetParent : null;
+}
+function f(e) {
+    var n = /firefox/i.test((0, c.Z)());
+    if (/Trident/i.test((0, c.Z)()) && (0, o.Re)(e) && 'fixed' === (0, s.Z)(e).position) return null;
+    var r = (0, u.Z)(e);
+    for ((0, o.Zq)(r) && (r = r.host); (0, o.Re)(r) && 0 > ['html', 'body'].indexOf((0, a.Z)(r)); ) {
+        var i = (0, s.Z)(r);
+        if ('none' !== i.transform || 'none' !== i.perspective || 'paint' === i.contain || -1 !== ['transform', 'perspective'].indexOf(i.willChange) || (n && 'filter' === i.willChange) || (n && i.filter && 'none' !== i.filter)) return r;
+        r = r.parentNode;
+    }
+    return null;
+}
+function _(e) {
+    for (var n = (0, i.Z)(e), r = d(e); r && (0, l.Z)(r) && 'static' === (0, s.Z)(r).position; ) r = d(r);
+    return r && ('html' === (0, a.Z)(r) || ('body' === (0, a.Z)(r) && 'static' === (0, s.Z)(r).position)) ? n : r || f(e) || n;
 }

@@ -1,15 +1,19 @@
-let r = new (n(113638).Z)(function (e) {
+var i = r(113638);
+let a = new i.Z(o);
+function s(e) {
+    a.setParams(e);
+}
+function o(e) {
     {
-        let t = n(160170).B[e];
-        return void 0 !== t ? t().then((e) => e.default) : Promise.resolve({});
+        let n = r(160170).B[e];
+        return void 0 !== n ? n().then((e) => e.default) : Promise.resolve({});
     }
-});
-t.Z = {
-    setEmojiLocale: function (e) {
-        r.setParams(e);
-    },
-    getTermsForEmoji: function (e) {
-        let t = r.get();
-        return void 0 !== t ? t[e] : [];
-    }
+}
+function l(e) {
+    let n = a.get();
+    return void 0 !== n ? n[e] : [];
+}
+n.Z = {
+    setEmojiLocale: s,
+    getTermsForEmoji: l
 };

@@ -1,67 +1,64 @@
-function r(e, t) {
-    var n = t && t.cache ? t.cache : c,
-        r = t && t.serializer ? t.serializer : l;
-    return (t && t.strategy ? t.strategy : o)(e, {
-        cache: n,
-        serializer: r
+function i(e, n) {
+    var r = n && n.cache ? n.cache : h,
+        i = n && n.serializer ? n.serializer : f;
+    return (n && n.strategy ? n.strategy : u)(e, {
+        cache: r,
+        serializer: i
     });
 }
-n.d(t, {
+function a(e) {
+    return null == e || 'number' == typeof e || 'boolean' == typeof e;
+}
+function s(e, n, r, i) {
+    var s = a(i) ? i : r(i),
+        o = n.get(s);
+    return void 0 === o && ((o = e.call(this, i)), n.set(s, o)), o;
+}
+function o(e, n, r) {
+    var i = Array.prototype.slice.call(arguments, 3),
+        a = r(i),
+        s = n.get(a);
+    return void 0 === s && ((s = e.apply(this, i)), n.set(a, s)), s;
+}
+function l(e, n, r, i, a) {
+    return r.bind(n, e, i, a);
+}
+function u(e, n) {
+    var r = 1 === e.length ? s : o;
+    return l(e, this, r, n.cache.create(), n.serializer);
+}
+function c(e, n) {
+    return l(e, this, o, n.cache.create(), n.serializer);
+}
+function d(e, n) {
+    return l(e, this, s, n.cache.create(), n.serializer);
+}
+r.d(n, {
     A: function () {
-        return d;
+        return p;
     },
     H: function () {
-        return r;
+        return i;
     }
 });
-function i(e, t, n, r) {
-    var i,
-        a = null == (i = r) || 'number' == typeof i || 'boolean' == typeof i ? r : n(r),
-        s = t.get(a);
-    return void 0 === s && ((s = e.call(this, r)), t.set(a, s)), s;
-}
-function a(e, t, n) {
-    var r = Array.prototype.slice.call(arguments, 3),
-        i = n(r),
-        a = t.get(i);
-    return void 0 === a && ((a = e.apply(this, r)), t.set(i, a)), a;
-}
-function s(e, t, n, r, i) {
-    return n.bind(t, e, r, i);
-}
-function o(e, t) {
-    var n,
-        r,
-        s,
-        o,
-        l,
-        u = 1 === e.length ? i : a;
-    return (n = e), (r = this), (s = u), (o = t.cache.create()), (l = t.serializer), s.bind(r, n, o, l);
-}
-var l = function () {
+var f = function () {
     return JSON.stringify(arguments);
 };
-function u() {
+function _() {
     this.cache = Object.create(null);
 }
-(u.prototype.get = function (e) {
+(_.prototype.get = function (e) {
     return this.cache[e];
 }),
-    (u.prototype.set = function (e, t) {
-        this.cache[e] = t;
+    (_.prototype.set = function (e, n) {
+        this.cache[e] = n;
     });
-var c = {
+var h = {
         create: function () {
-            return new u();
+            return new _();
         }
     },
-    d = {
-        variadic: function (e, t) {
-            var n, r, i, s, o;
-            return (n = e), (r = this), (i = a), (s = t.cache.create()), (o = t.serializer), i.bind(r, n, s, o);
-        },
-        monadic: function (e, t) {
-            var n, r, a, s, o;
-            return (n = e), (r = this), (a = i), (s = t.cache.create()), (o = t.serializer), a.bind(r, n, s, o);
-        }
+    p = {
+        variadic: c,
+        monadic: d
     };

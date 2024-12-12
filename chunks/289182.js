@@ -1,19 +1,22 @@
-n.d(t, {
+r.d(n, {
     v: function () {
-        return a;
+        return o;
     }
 });
-var r = n(625306),
-    i = n(570140);
-function a(e) {
+var i = r(625306),
+    a = r(570140);
+function s() {
+    return {
+        ...(null != a.Z._currentDispatchActionType ? { currentAction: a.Z._currentDispatchActionType } : {}),
+        lastFewActions: (0, i.qC)()
+    };
+}
+function o(e) {
     return {
         ...e,
         extra: {
             ...(null == e ? void 0 : e.extra),
-            ...{
-                ...(null != i.Z._currentDispatchActionType ? { currentAction: i.Z._currentDispatchActionType } : {}),
-                lastFewActions: (0, r.qC)()
-            }
+            ...s()
         }
     };
 }

@@ -1,80 +1,82 @@
-n.d(t, {
+r.d(n, {
     CZ: function () {
-        return o;
-    },
-    LB: function () {
         return u;
     },
+    LB: function () {
+        return d;
+    },
     O5: function () {
-        return l;
+        return c;
     },
     YC: function () {
-        return r;
+        return i;
     }
-}),
-    n(47120),
-    n(653041);
-var r,
-    i,
-    a = n(433517),
-    s = n(388032);
-((i = r || (r = {})).CLASSIC = 'classic'), (i.RETRO = 'retro'), (i.BUBBLE = 'bop'), (i.DUCKY = 'ducky'), (i.LOFI = 'lofi'), (i.ASMR = 'asmr'), (i.DISCODO = 'discodo'), (i.HALLOWEEN = 'halloween');
-let o = 'custom_notification_sounds_asmr',
-    l = 'custom_notification_sounds_discodo';
-function u() {
+});
+var i,
+    a = r(47120);
+var s = r(653041);
+var o = r(433517),
+    l = r(388032);
+!(function (e) {
+    (e.CLASSIC = 'classic'), (e.RETRO = 'retro'), (e.BUBBLE = 'bop'), (e.DUCKY = 'ducky'), (e.LOFI = 'lofi'), (e.ASMR = 'asmr'), (e.DISCODO = 'discodo'), (e.HALLOWEEN = 'halloween');
+})(i || (i = {}));
+let u = 'custom_notification_sounds_asmr',
+    c = 'custom_notification_sounds_discodo';
+function d() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-        t = (function (e) {
-            if (!e) return [];
-            let t = [];
-            return (
-                a.K.get(l, !1) &&
-                    t.push({
-                        value: 'discodo',
-                        label: 'DISCODO',
-                        description: '๑(\u25D5‿\u25D5)๑',
-                        requirePremium: !0
-                    }),
-                a.K.get(o, !1) &&
-                    t.push({
-                        value: 'asmr',
-                        label: s.intl.string(s.t['3SJZKC']),
-                        description: s.intl.formatToMarkdownString(s.t.MZlgQE, {}),
-                        requirePremium: !0
-                    }),
-                t
-            );
-        })(e);
+        n = f(e);
     return [
         {
             value: 'classic',
-            label: s.intl.string(s.t.p3Hg5e),
-            description: s.intl.string(s.t['4iA55u']),
+            label: l.intl.string(l.t.p3Hg5e),
+            description: l.intl.string(l.t['4iA55u']),
             requirePremium: !1
         },
         {
             value: 'retro',
-            label: s.intl.string(s.t.Rrwrnp),
-            description: s.intl.string(s.t['zKG+ur']),
+            label: l.intl.string(l.t.Rrwrnp),
+            description: l.intl.string(l.t['zKG+ur']),
             requirePremium: !0
         },
         {
             value: 'lofi',
-            label: s.intl.string(s.t.aEsrnp),
-            description: s.intl.string(s.t.fMUEj4),
+            label: l.intl.string(l.t.aEsrnp),
+            description: l.intl.string(l.t.fMUEj4),
             requirePremium: !0
         },
         {
             value: 'ducky',
-            label: s.intl.string(s.t['4TOv0t']),
-            description: s.intl.string(s.t['1kbe6e']),
+            label: l.intl.string(l.t['4TOv0t']),
+            description: l.intl.string(l.t['1kbe6e']),
             requirePremium: !0
         },
         {
             value: 'bop',
-            label: s.intl.string(s.t.s5Qo8P),
-            description: s.intl.string(s.t.I39onp),
+            label: l.intl.string(l.t.s5Qo8P),
+            description: l.intl.string(l.t.I39onp),
             requirePremium: !0
         },
-        ...t
+        ...n
     ];
+}
+function f(e) {
+    if (!e) return [];
+    let n = [];
+    return (
+        o.K.get(c, !1) &&
+            n.push({
+                value: 'discodo',
+                label: 'DISCODO',
+                description: '๑(\u25D5‿\u25D5)๑',
+                requirePremium: !0
+            }),
+        o.K.get(u, !1) &&
+            n.push({
+                value: 'asmr',
+                label: l.intl.string(l.t['3SJZKC']),
+                description: l.intl.formatToMarkdownString(l.t.MZlgQE, {}),
+                requirePremium: !0
+            }),
+        n
+    );
 }

@@ -1,4 +1,5 @@
-var n = Object.prototype.toString;
-t.Z = function (e) {
-    return n.call(e);
-};
+var r = Object.prototype.toString;
+function i(e) {
+    return r.call(e);
+}
+n.Z = i;

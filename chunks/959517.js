@@ -1,55 +1,53 @@
-n.d(t, {
+r.d(n, {
     D4: function () {
-        return p;
+        return _;
     },
     Eo: function () {
         return h;
     },
     R4: function () {
-        return m;
+        return p;
     },
     Y1: function () {
-        return v;
-    },
-    _j: function () {
         return E;
     },
-    c8: function () {
-        return d;
-    },
-    d$: function () {
-        return f;
-    },
-    fP: function () {
-        return u;
-    },
-    hs: function () {
-        return I;
-    },
-    j1: function () {
+    _j: function () {
         return g;
     },
-    kQ: function () {
-        return _;
-    },
-    pq: function () {
+    c8: function () {
         return c;
     },
+    d$: function () {
+        return d;
+    },
+    fP: function () {
+        return l;
+    },
+    hs: function () {
+        return v;
+    },
+    j1: function () {
+        return m;
+    },
+    kQ: function () {
+        return f;
+    },
+    pq: function () {
+        return u;
+    },
     xi: function () {
-        return a;
+        return i;
     }
 });
-var r,
-    i,
+var i,
     a,
-    s,
-    o = n(261470),
-    l = n(70956);
-n(981631);
-let u = [0, 4, 8, 16, 24],
-    c = 16,
-    d = 0,
-    f = Object.freeze({
+    s = r(261470),
+    o = r(70956);
+r(981631);
+let l = [0, 4, 8, 16, 24],
+    u = 16,
+    c = 0,
+    d = Object.freeze({
         referencedAvatarProfile: !1,
         referencedUsernameProfile: !1,
         interactionAvatarProfile: !1,
@@ -62,16 +60,21 @@ let u = [0, 4, 8, 16, 24],
         moreUtilities: !1,
         contextMenu: !1
     }),
+    f = 16,
     _ = 16,
-    p = 16,
     h = 32,
-    m = 64,
-    g = '---new-messages-bar',
-    E = 'SPOILER_';
-((r = a || (a = {})).ERROR_SOURCE_UNKNOWN = 'ERROR_SOURCE_UNKNOWN'), (r.PRECOMPRESSION_SUM_TOO_LARGE = 'PRECOMPRESSION_SUM_TOO_LARGE'), (r.PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE = 'PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE'), (r.POSTCOMPRESSION_SUM_TOO_LARGE = 'POSTCOMPRESSION_SUM_TOO_LARGE'), (r.POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE = 'POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE'), (r.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR = 'UPLOAD_MESSAGE_ATTACHMENT_MAX_SIZE_ERROR'), (r.EXPLICIT_CONTENT = 'EXPLICIT_CONTENT'), ((i = s || (s = {})).SYSTEM_DM_TAG_SYSTEM_TYPE = 'a'), (i.BOT_TAG_SERVER_TYPE = 'b'), (i.AI_TAG_TYPE = 'c'), (i.BOT_TAG_BOT_TYPE = 'd'), (i.REMIXING_TYPE = 'e'), (i.POLL_TYPE = 'g');
-let v = 209715200,
-    I = {
-        timeout: 60 * l.Z.Millis.SECOND,
+    p = 64,
+    m = '---new-messages-bar',
+    g = 'SPOILER_';
+!(function (e) {
+    (e.ERROR_SOURCE_UNKNOWN = 'ERROR_SOURCE_UNKNOWN'), (e.PRECOMPRESSION_SUM_TOO_LARGE = 'PRECOMPRESSION_SUM_TOO_LARGE'), (e.PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE = 'PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE'), (e.POSTCOMPRESSION_SUM_TOO_LARGE = 'POSTCOMPRESSION_SUM_TOO_LARGE'), (e.POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE = 'POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE'), (e.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR = 'UPLOAD_MESSAGE_ATTACHMENT_MAX_SIZE_ERROR'), (e.EXPLICIT_CONTENT = 'EXPLICIT_CONTENT');
+})(i || (i = {})),
+    !(function (e) {
+        (e.SYSTEM_DM_TAG_SYSTEM_TYPE = 'a'), (e.BOT_TAG_SERVER_TYPE = 'b'), (e.AI_TAG_TYPE = 'c'), (e.BOT_TAG_BOT_TYPE = 'd'), (e.REMIXING_TYPE = 'e'), (e.POLL_TYPE = 'g');
+    })(a || (a = {}));
+let E = 209715200,
+    v = {
+        timeout: 60 * o.Z.Millis.SECOND,
         retries: 3,
-        backoff: new o.Z()
+        backoff: new s.Z()
     };

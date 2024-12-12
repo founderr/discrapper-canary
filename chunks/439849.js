@@ -1,48 +1,49 @@
-let r;
-n.d(t, {
+let i;
+r.d(n, {
     F: function () {
-        return _;
+        return g;
     },
     Z: function () {
-        return p;
+        return E;
     }
-}),
-    n(757143),
-    n(653041);
-var i = n(392711),
-    a = n.n(i),
-    s = n(579806),
-    o = n(710845),
-    l = n(358085),
-    u = n(998502);
-let c = [];
-function d(e) {
-    return (e = e.toLowerCase()), (0, l.isWindows)() && (e = (e = e.replace(/^[a-z]:/, '')).replace(/\\/g, '/')), e;
+});
+var a = r(757143);
+var s = r(653041);
+var o = r(392711),
+    l = r.n(o),
+    u = r(579806),
+    c = r(710845),
+    d = r(358085),
+    f = r(998502);
+let _ = [],
+    h = 'dosbox.exe';
+function p(e) {
+    return (e = e.toLowerCase()), (0, d.isWindows)() && (e = (e = e.replace(/^[a-z]:/, '')).replace(/\\/g, '/')), e;
 }
-function f(e) {
-    null != e && '' !== e && (!(e = d(e)).endsWith('/') && (e += '/'), c.push(e));
+function m(e) {
+    null != e && '' !== e && (!(e = p(e)).endsWith('/') && (e += '/'), _.push(e));
 }
-function _(e) {
-    e = d(e);
-    let t = !1;
-    return (c.forEach((n) => {
-        !t && e.startsWith(n) && ((e = e.substr(n.length)), (t = !0));
+function g(e) {
+    e = p(e);
+    let n = !1;
+    return (_.forEach((r) => {
+        !n && e.startsWith(r) && ((e = e.substr(r.length)), (n = !0));
     }),
-    t)
-        ? (e = e.includes('dosbox.exe') ? e.split('/').slice(-3).join('/') : e.split('/').slice(-2).join('/'))
+    n)
+        ? (e = e.includes(h) ? e.split('/').slice(-3).join('/') : e.split('/').slice(-2).join('/'))
         : null;
 }
-async function p() {
-    if (null != r) return r;
+async function E() {
+    if (null != i) return i;
     try {
-        await u.ZP.ensureModule('discord_game_utils'), (r = await u.ZP.requireModule('discord_game_utils'));
+        await f.ZP.ensureModule('discord_game_utils'), (i = await f.ZP.requireModule('discord_game_utils'));
     } catch (e) {
-        new o.Z('GamesActionCreators').error('could not load discord_game_utils', e);
+        new c.Z('GamesActionCreators').error('could not load discord_game_utils', e);
     }
-    if ((0, l.isWindows)()) {
-        let e = s.Z.process.env;
-        f(e.LOCALAPPDATA), f(e['PROGRAMFILES(X86)']), f(e.PROGRAMFILES), f(e.PROGRAMW6432), f(e.PROGRAMDATA), f('/games/'), f('/steamlibrary/steamapps/common/');
+    if ((0, d.isWindows)()) {
+        let e = u.Z.process.env;
+        m(e.LOCALAPPDATA), m(e['PROGRAMFILES(X86)']), m(e.PROGRAMFILES), m(e.PROGRAMW6432), m(e.PROGRAMDATA), m('/games/'), m('/steamlibrary/steamapps/common/');
     }
-    let e = s.Z.remoteApp.getPath;
-    return f(await e('home')), f(await e('appData')), f(await e('desktop')), f(await e('documents')), f(await e('downloads')), (c = a().uniq(c)).sort((e, t) => t.length - e.length), r;
+    let e = u.Z.remoteApp.getPath;
+    return m(await e('home')), m(await e('appData')), m(await e('desktop')), m(await e('documents')), m(await e('downloads')), (_ = l().uniq(_)).sort((e, n) => n.length - e.length), i;
 }

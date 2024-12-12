@@ -1,7 +1,7 @@
-var r = n(995769),
-    i = Object.prototype.hasOwnProperty,
-    a = Array.isArray,
-    s = {
+var i = r(995769),
+    a = Object.prototype.hasOwnProperty,
+    s = Array.isArray,
+    o = {
         allowDots: !1,
         allowEmptyArrays: !1,
         allowPrototypes: !1,
@@ -11,7 +11,7 @@ var r = n(995769),
         charsetSentinel: !1,
         comma: !1,
         decodeDotInKeys: !0,
-        decoder: r.decode,
+        decoder: i.decode,
         delimiter: '&',
         depth: 5,
         duplicates: 'combine',
@@ -22,116 +22,119 @@ var r = n(995769),
         plainObjects: !1,
         strictNullHandling: !1
     },
-    o = function (e, t) {
-        return e && 'string' == typeof e && t.comma && e.indexOf(',') > -1 ? e.split(',') : e;
+    l = function (e) {
+        return e.replace(/&#(\d+);/g, function (e, n) {
+            return String.fromCharCode(parseInt(n, 10));
+        });
     },
-    l = function (e, t) {
-        var n = { __proto__: null },
-            l = t.ignoreQueryPrefix ? e.replace(/^\?/, '') : e,
-            u = t.parameterLimit === 1 / 0 ? void 0 : t.parameterLimit,
-            c = l.split(t.delimiter, u),
-            d = -1,
-            f = t.charset;
-        if (t.charsetSentinel) for (_ = 0; _ < c.length; ++_) 0 === c[_].indexOf('utf8=') && ('utf8=%E2%9C%93' === c[_] ? (f = 'utf-8') : 'utf8=%26%2310003%3B' === c[_] && (f = 'iso-8859-1'), (d = _), (_ = c.length));
-        for (_ = 0; _ < c.length; ++_) {
-            if (_ !== d) {
-                var _,
-                    p,
-                    h,
-                    m = c[_],
-                    g = m.indexOf(']='),
-                    E = -1 === g ? m.indexOf('=') : g + 1;
-                if (
-                    (-1 === E
-                        ? ((p = t.decoder(m, s.decoder, f, 'key')), (h = t.strictNullHandling ? null : ''))
-                        : ((p = t.decoder(m.slice(0, E), s.decoder, f, 'key')),
-                          (h = r.maybeMap(o(m.slice(E + 1), t), function (e) {
-                              return t.decoder(e, s.decoder, f, 'value');
-                          }))),
-                    h && t.interpretNumericEntities && 'iso-8859-1' === f)
-                )
-                    h = h.replace(/&#(\d+);/g, function (e, t) {
-                        return String.fromCharCode(parseInt(t, 10));
-                    });
-                m.indexOf('[]=') > -1 && (h = a(h) ? [h] : h);
-                var v = i.call(n, p);
-                v && 'combine' === t.duplicates ? (n[p] = r.combine(n[p], h)) : (!v || 'last' === t.duplicates) && (n[p] = h);
+    u = function (e, n) {
+        return e && 'string' == typeof e && n.comma && e.indexOf(',') > -1 ? e.split(',') : e;
+    },
+    c = 'utf8=%26%2310003%3B',
+    d = 'utf8=%E2%9C%93',
+    f = function (e, n) {
+        var r = { __proto__: null },
+            f = n.ignoreQueryPrefix ? e.replace(/^\?/, '') : e,
+            _ = n.parameterLimit === 1 / 0 ? void 0 : n.parameterLimit,
+            h = f.split(n.delimiter, _),
+            p = -1,
+            m = n.charset;
+        if (n.charsetSentinel) for (g = 0; g < h.length; ++g) 0 === h[g].indexOf('utf8=') && (h[g] === d ? (m = 'utf-8') : h[g] === c && (m = 'iso-8859-1'), (p = g), (g = h.length));
+        for (g = 0; g < h.length; ++g) {
+            if (g !== p) {
+                var g,
+                    E,
+                    v,
+                    I = h[g],
+                    T = I.indexOf(']='),
+                    b = -1 === T ? I.indexOf('=') : T + 1;
+                -1 === b
+                    ? ((E = n.decoder(I, o.decoder, m, 'key')), (v = n.strictNullHandling ? null : ''))
+                    : ((E = n.decoder(I.slice(0, b), o.decoder, m, 'key')),
+                      (v = i.maybeMap(u(I.slice(b + 1), n), function (e) {
+                          return n.decoder(e, o.decoder, m, 'value');
+                      }))),
+                    v && n.interpretNumericEntities && 'iso-8859-1' === m && (v = l(v)),
+                    I.indexOf('[]=') > -1 && (v = s(v) ? [v] : v);
+                var y = a.call(r, E);
+                y && 'combine' === n.duplicates ? (r[E] = i.combine(r[E], v)) : (!y || 'last' === n.duplicates) && (r[E] = v);
             }
         }
-        return n;
+        return r;
     },
-    u = function (e, t, n, r) {
-        for (var i = r ? t : o(t, n), a = e.length - 1; a >= 0; --a) {
-            var s,
-                l = e[a];
-            if ('[]' === l && n.parseArrays) s = n.allowEmptyArrays && '' === i ? [] : [].concat(i);
+    _ = function (e, n, r, i) {
+        for (var a = i ? n : u(n, r), s = e.length - 1; s >= 0; --s) {
+            var o,
+                l = e[s];
+            if ('[]' === l && r.parseArrays) o = r.allowEmptyArrays && '' === a ? [] : [].concat(a);
             else {
-                s = n.plainObjects ? Object.create(null) : {};
-                var u = '[' === l.charAt(0) && ']' === l.charAt(l.length - 1) ? l.slice(1, -1) : l,
-                    c = n.decodeDotInKeys ? u.replace(/%2E/g, '.') : u,
-                    d = parseInt(c, 10);
-                n.parseArrays || '' !== c ? (!isNaN(d) && l !== c && String(d) === c && d >= 0 && n.parseArrays && d <= n.arrayLimit ? ((s = [])[d] = i) : '__proto__' !== c && (s[c] = i)) : (s = { 0: i });
+                o = r.plainObjects ? Object.create(null) : {};
+                var c = '[' === l.charAt(0) && ']' === l.charAt(l.length - 1) ? l.slice(1, -1) : l,
+                    d = r.decodeDotInKeys ? c.replace(/%2E/g, '.') : c,
+                    f = parseInt(d, 10);
+                r.parseArrays || '' !== d ? (!isNaN(f) && l !== d && String(f) === d && f >= 0 && r.parseArrays && f <= r.arrayLimit ? ((o = [])[f] = a) : '__proto__' !== d && (o[d] = a)) : (o = { 0: a });
             }
-            i = s;
+            a = o;
         }
-        return i;
+        return a;
     },
-    c = function (e, t, n, r) {
+    h = function (e, n, r, i) {
         if (!!e) {
-            var a = n.allowDots ? e.replace(/\.([^.[]+)/g, '[$1]') : e,
-                s = /(\[[^[\]]*])/g,
-                o = n.depth > 0 && /(\[[^[\]]*])/.exec(a),
-                l = o ? a.slice(0, o.index) : a,
-                c = [];
-            if (l) {
-                if (!n.plainObjects && i.call(Object.prototype, l) && !n.allowPrototypes) return;
-                c.push(l);
+            var s = r.allowDots ? e.replace(/\.([^.[]+)/g, '[$1]') : e,
+                o = /(\[[^[\]]*])/,
+                l = /(\[[^[\]]*])/g,
+                u = r.depth > 0 && o.exec(s),
+                c = u ? s.slice(0, u.index) : s,
+                d = [];
+            if (c) {
+                if (!r.plainObjects && a.call(Object.prototype, c) && !r.allowPrototypes) return;
+                d.push(c);
             }
-            for (var d = 0; n.depth > 0 && null !== (o = s.exec(a)) && d < n.depth; ) {
-                if (((d += 1), !n.plainObjects && i.call(Object.prototype, o[1].slice(1, -1)) && !n.allowPrototypes)) return;
-                c.push(o[1]);
+            for (var f = 0; r.depth > 0 && null !== (u = l.exec(s)) && f < r.depth; ) {
+                if (((f += 1), !r.plainObjects && a.call(Object.prototype, u[1].slice(1, -1)) && !r.allowPrototypes)) return;
+                d.push(u[1]);
             }
-            return o && c.push('[' + a.slice(o.index) + ']'), u(c, t, n, r);
+            return u && d.push('[' + s.slice(u.index) + ']'), _(d, n, r, i);
         }
     },
-    d = function (e) {
-        if (!e) return s;
+    p = function (e) {
+        if (!e) return o;
         if (void 0 !== e.allowEmptyArrays && 'boolean' != typeof e.allowEmptyArrays) throw TypeError('`allowEmptyArrays` option can only be `true` or `false`, when provided');
         if (void 0 !== e.decodeDotInKeys && 'boolean' != typeof e.decodeDotInKeys) throw TypeError('`decodeDotInKeys` option can only be `true` or `false`, when provided');
         if (null !== e.decoder && void 0 !== e.decoder && 'function' != typeof e.decoder) throw TypeError('Decoder has to be a function.');
         if (void 0 !== e.charset && 'utf-8' !== e.charset && 'iso-8859-1' !== e.charset) throw TypeError('The charset option must be either utf-8, iso-8859-1, or undefined');
-        var t = void 0 === e.charset ? s.charset : e.charset,
-            n = void 0 === e.duplicates ? s.duplicates : e.duplicates;
-        if ('combine' !== n && 'first' !== n && 'last' !== n) throw TypeError('The duplicates option must be either combine, first, or last');
+        var n = void 0 === e.charset ? o.charset : e.charset,
+            r = void 0 === e.duplicates ? o.duplicates : e.duplicates;
+        if ('combine' !== r && 'first' !== r && 'last' !== r) throw TypeError('The duplicates option must be either combine, first, or last');
         return {
-            allowDots: void 0 === e.allowDots ? !0 === e.decodeDotInKeys || s.allowDots : !!e.allowDots,
-            allowEmptyArrays: 'boolean' == typeof e.allowEmptyArrays ? !!e.allowEmptyArrays : s.allowEmptyArrays,
-            allowPrototypes: 'boolean' == typeof e.allowPrototypes ? e.allowPrototypes : s.allowPrototypes,
-            allowSparse: 'boolean' == typeof e.allowSparse ? e.allowSparse : s.allowSparse,
-            arrayLimit: 'number' == typeof e.arrayLimit ? e.arrayLimit : s.arrayLimit,
-            charset: t,
-            charsetSentinel: 'boolean' == typeof e.charsetSentinel ? e.charsetSentinel : s.charsetSentinel,
-            comma: 'boolean' == typeof e.comma ? e.comma : s.comma,
-            decodeDotInKeys: 'boolean' == typeof e.decodeDotInKeys ? e.decodeDotInKeys : s.decodeDotInKeys,
-            decoder: 'function' == typeof e.decoder ? e.decoder : s.decoder,
-            delimiter: 'string' == typeof e.delimiter || r.isRegExp(e.delimiter) ? e.delimiter : s.delimiter,
-            depth: 'number' == typeof e.depth || !1 === e.depth ? +e.depth : s.depth,
-            duplicates: n,
+            allowDots: void 0 === e.allowDots ? !0 === e.decodeDotInKeys || o.allowDots : !!e.allowDots,
+            allowEmptyArrays: 'boolean' == typeof e.allowEmptyArrays ? !!e.allowEmptyArrays : o.allowEmptyArrays,
+            allowPrototypes: 'boolean' == typeof e.allowPrototypes ? e.allowPrototypes : o.allowPrototypes,
+            allowSparse: 'boolean' == typeof e.allowSparse ? e.allowSparse : o.allowSparse,
+            arrayLimit: 'number' == typeof e.arrayLimit ? e.arrayLimit : o.arrayLimit,
+            charset: n,
+            charsetSentinel: 'boolean' == typeof e.charsetSentinel ? e.charsetSentinel : o.charsetSentinel,
+            comma: 'boolean' == typeof e.comma ? e.comma : o.comma,
+            decodeDotInKeys: 'boolean' == typeof e.decodeDotInKeys ? e.decodeDotInKeys : o.decodeDotInKeys,
+            decoder: 'function' == typeof e.decoder ? e.decoder : o.decoder,
+            delimiter: 'string' == typeof e.delimiter || i.isRegExp(e.delimiter) ? e.delimiter : o.delimiter,
+            depth: 'number' == typeof e.depth || !1 === e.depth ? +e.depth : o.depth,
+            duplicates: r,
             ignoreQueryPrefix: !0 === e.ignoreQueryPrefix,
-            interpretNumericEntities: 'boolean' == typeof e.interpretNumericEntities ? e.interpretNumericEntities : s.interpretNumericEntities,
-            parameterLimit: 'number' == typeof e.parameterLimit ? e.parameterLimit : s.parameterLimit,
+            interpretNumericEntities: 'boolean' == typeof e.interpretNumericEntities ? e.interpretNumericEntities : o.interpretNumericEntities,
+            parameterLimit: 'number' == typeof e.parameterLimit ? e.parameterLimit : o.parameterLimit,
             parseArrays: !1 !== e.parseArrays,
-            plainObjects: 'boolean' == typeof e.plainObjects ? e.plainObjects : s.plainObjects,
-            strictNullHandling: 'boolean' == typeof e.strictNullHandling ? e.strictNullHandling : s.strictNullHandling
+            plainObjects: 'boolean' == typeof e.plainObjects ? e.plainObjects : o.plainObjects,
+            strictNullHandling: 'boolean' == typeof e.strictNullHandling ? e.strictNullHandling : o.strictNullHandling
         };
     };
-e.exports = function (e, t) {
-    var n = d(t);
-    if ('' === e || null == e) return n.plainObjects ? Object.create(null) : {};
-    for (var i = 'string' == typeof e ? l(e, n) : e, a = n.plainObjects ? Object.create(null) : {}, s = Object.keys(i), o = 0; o < s.length; ++o) {
-        var u = s[o],
-            f = c(u, i[u], n, 'string' == typeof e);
-        a = r.merge(a, f, n);
+e.exports = function (e, n) {
+    var r = p(n);
+    if ('' === e || null == e) return r.plainObjects ? Object.create(null) : {};
+    for (var a = 'string' == typeof e ? f(e, r) : e, s = r.plainObjects ? Object.create(null) : {}, o = Object.keys(a), l = 0; l < o.length; ++l) {
+        var u = o[l],
+            c = h(u, a[u], r, 'string' == typeof e);
+        s = i.merge(s, c, r);
     }
-    return !0 === n.allowSparse ? a : r.compact(a);
+    return !0 === r.allowSparse ? s : i.compact(s);
 };

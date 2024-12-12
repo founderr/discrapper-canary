@@ -1,32 +1,32 @@
-n.d(t, {
+r.d(n, {
     I: function () {
-        return c;
+        return f;
     },
     j: function () {
-        return _;
+        return g;
     }
-}),
-    n(47120);
-var r = n(498607),
-    i = n.n(r),
-    a = n(715903),
-    s = n(69882),
-    o = n(709054),
-    l = n(733026);
-function u(e, t, n) {
+});
+var i = r(47120);
+var a = r(498607),
+    s = r.n(a),
+    o = r(715903),
+    l = r(69882),
+    u = r(709054),
+    c = r(733026);
+function d(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-function c() {
+function f() {
     return {
         query: '',
         requireUnusualDmActivity: !1,
@@ -49,16 +49,30 @@ function c() {
         selectedSort: void 0
     };
 }
-let d = Object.freeze(c());
-function f(e, t) {
-    return null != e && (!!e.toLowerCase().includes(t.toLowerCase()) || !1);
+let _ = Object.freeze(f());
+function h(e, n) {
+    return null != e && (!!e.toLowerCase().includes(n.toLowerCase()) || !1);
 }
-class _ {
+function p(e, n) {
+    if ('' === n.trim()) return !1;
+    let [r, i] = (0, c.C)(n);
+    for (let n of i) if (e.userId === n) return !0;
+    for (let n of r) if (h(e.nick, n)) return !0;
+    if (null == e.user) return !1;
+    let { globalName: a, username: s } = e.user;
+    for (let e of r) if (h(s, e)) return !0;
+    for (let e of r) if (h(a, e)) return !0;
+    return !1;
+}
+function m(e, n) {
+    return 0 !== n.size && Array.from(n).every((n) => e.roles.includes(n));
+}
+class g {
     get requiresUsernameMatch() {
         return this._searchState.query.trim().length > 0;
     }
     reset() {
-        (this._searchState = c()), (this.hasDefaultQuery = !0);
+        (this._searchState = f()), (this.hasDefaultQuery = !0);
     }
     updateSearchState(e) {
         return (
@@ -66,42 +80,23 @@ class _ {
                 ...this._searchState,
                 ...e
             }),
-            (this.hasDefaultQuery = i()(this._searchState, d)),
+            (this.hasDefaultQuery = s()(this._searchState, _)),
             !0
         );
     }
     resetSearchState() {
-        return !this.hasDefaultQuery && ((this._searchState = c()), (this.hasDefaultQuery = !0), !0);
+        return !this.hasDefaultQuery && ((this._searchState = f()), (this.hasDefaultQuery = !0), !0);
     }
     getSearchState() {
         return this._searchState;
     }
     isMemberIncludedInSearchResults(e) {
-        let { query: t, requireUnusualDmActivity: n, requireCommunicationDisabled: r, requireUnusualAccountActivity: i, requireUsernameQuarantined: u, selectedRoleIds: c, selectedJoinDateOption: d, selectedAccountAgeOption: _, selectedSourceInviteCode: p, selectedJoinSourceType: h } = this._searchState;
-        if (
-            t.length > 0 &&
-            !(function (e, t) {
-                if ('' === t.trim()) return !1;
-                let [n, r] = (0, l.C)(t);
-                for (let t of r) if (e.userId === t) return !0;
-                for (let t of n) if (f(e.nick, t)) return !0;
-                if (null == e.user) return !1;
-                let { globalName: i, username: a } = e.user;
-                for (let e of n) if (f(a, e)) return !0;
-                for (let e of n) if (f(i, e)) return !0;
-                return !1;
-            })(e, t)
-        )
-            return !1;
-        if (c.size > 0) {
-            var m, g;
-            if (((m = e), !(0 !== (g = c).size && Array.from(g).every((e) => m.roles.includes(e))))) return !1;
-        }
-        if ((null != d.afterDate && e.joinedAtTimestamp < d.afterDate) || (null != d.beforeDate && e.joinedAtTimestamp > d.beforeDate) || (null != _.afterDate && o.default.extractTimestamp(e.userId) < _.afterDate) || (null != _.beforeDate && o.default.extractTimestamp(e.userId) > _.beforeDate) || (null != p && e.sourceInviteCode !== p) || (null != h && e.joinSourceType !== h)) return !1;
-        if (n || r || i || u) return !!((n && e.hasUnusualDmActivity) || (r && (0, s.b)(e)) || (i && e.hasUnusualAccountActivity) || (u && (0, a.EY)(e))) || !1;
+        let { query: n, requireUnusualDmActivity: r, requireCommunicationDisabled: i, requireUnusualAccountActivity: a, requireUsernameQuarantined: s, selectedRoleIds: c, selectedJoinDateOption: d, selectedAccountAgeOption: f, selectedSourceInviteCode: _, selectedJoinSourceType: h } = this._searchState;
+        if ((n.length > 0 && !p(e, n)) || (c.size > 0 && !m(e, c)) || (null != d.afterDate && e.joinedAtTimestamp < d.afterDate) || (null != d.beforeDate && e.joinedAtTimestamp > d.beforeDate) || (null != f.afterDate && u.default.extractTimestamp(e.userId) < f.afterDate) || (null != f.beforeDate && u.default.extractTimestamp(e.userId) > f.beforeDate) || (null != _ && e.sourceInviteCode !== _) || (null != h && e.joinSourceType !== h)) return !1;
+        if (r || i || a || s) return !!((r && e.hasUnusualDmActivity) || (i && (0, l.b)(e)) || (a && e.hasUnusualAccountActivity) || (s && (0, o.EY)(e))) || !1;
         return !0;
     }
     constructor(e) {
-        u(this, 'guildId', void 0), u(this, '_searchState', void 0), u(this, 'hasDefaultQuery', void 0), (this.guildId = e), (this._searchState = c()), (this.hasDefaultQuery = !0);
+        d(this, 'guildId', void 0), d(this, '_searchState', void 0), d(this, 'hasDefaultQuery', void 0), (this.guildId = e), (this._searchState = f()), (this.hasDefaultQuery = !0);
     }
 }

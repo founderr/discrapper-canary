@@ -1,20 +1,19 @@
-var r, i, a, s;
-n.d(t, {
+var i, a;
+r.d(n, {
     Ez: function () {
-        return r;
+        return i;
     },
     I0: function () {
-        return o;
+        return s;
     },
     MI: function () {
-        return i;
+        return a;
     }
 }),
-    ((a = r || (r = {})).DISCONNECTED = 'disconnected'),
-    (a.LAUNCHING_WITH_ORIENTATION_CHANGE = 'launching_with_orientation_change'),
-    (a.PANEL = 'panel'),
-    (a.PIP = 'pip'),
-    (a.ACTIVITY_POPOUT_WINDOW = 'activity_popout_window'),
-    ((s = i || (i = {}))[(s.NO_CHAT = 0)] = 'NO_CHAT'),
-    (s[(s.RESIZABLE = 1)] = 'RESIZABLE');
-let o = 16 / 9;
+    !(function (e) {
+        (e.DISCONNECTED = 'disconnected'), (e.LAUNCHING_WITH_ORIENTATION_CHANGE = 'launching_with_orientation_change'), (e.PANEL = 'panel'), (e.PIP = 'pip'), (e.ACTIVITY_POPOUT_WINDOW = 'activity_popout_window');
+    })(i || (i = {}));
+!(function (e) {
+    (e[(e.NO_CHAT = 0)] = 'NO_CHAT'), (e[(e.RESIZABLE = 1)] = 'RESIZABLE');
+})(a || (a = {}));
+let s = 16 / 9;

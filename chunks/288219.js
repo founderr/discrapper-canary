@@ -1,1 +1,2 @@
-t.Z = { hide_icymi_tab: { description: 'Hide ICYMI tab' } };
+let r = { hide_icymi_tab: { description: 'Hide ICYMI tab' } };
+n.Z = r;

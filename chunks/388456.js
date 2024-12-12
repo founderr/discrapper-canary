@@ -1,5 +1,6 @@
-var r = n(92238),
-    i = n(469128);
-e.exports = function (e, t) {
-    return r(e, i(e), t);
-};
+var i = r(92238),
+    a = r(469128);
+function s(e, n) {
+    return i(e, a(e), n);
+}
+e.exports = s;

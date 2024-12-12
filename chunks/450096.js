@@ -1,47 +1,49 @@
-n.d(t, {
+r.d(n, {
     L: function () {
-        return s;
+        return h;
     }
-}),
-    n(315314),
-    n(610138),
-    n(216116),
-    n(78328),
-    n(815648),
-    n(47120);
-var r = n(192379),
-    i = n(772848);
-let a = new Worker(new URL('/assets/' + n.u('77459'), n.b));
-function s(e, t, n) {
-    let s = n && 1 === t && null != e,
-        [o, l] = r.useState(void 0);
-    return (
-        r.useEffect(() => {
-            let t = !1;
-            if (s) {
-                var n;
-                ((n = e),
-                new Promise((e) => {
-                    let t = (0, i.Z)(),
-                        r = (n) => {
-                            let {
-                                data: { id: i, png: s }
-                            } = n;
-                            t === i && (e(s), a.removeEventListener('message', r));
-                        };
-                    a.addEventListener('message', r),
-                        a.postMessage({
-                            id: t,
-                            placeholderData: n
-                        });
-                })).then((e) => {
-                    if (!t) l(e);
-                });
-            }
-            return () => {
-                t = !0;
+});
+var i = r(315314);
+var a = r(610138);
+var s = r(216116);
+var o = r(78328);
+var l = r(815648);
+var u = r(47120);
+var c = r(192379),
+    d = r(772848);
+let f = new Worker(new URL('/assets/' + r.u('77459'), r.b));
+function _(e) {
+    return new Promise((n) => {
+        let r = (0, d.Z)(),
+            i = (e) => {
+                let {
+                    data: { id: a, png: s }
+                } = e;
+                r === a && (n(s), f.removeEventListener('message', i));
             };
-        }, [e, s]),
-        o
+        f.addEventListener('message', i),
+            f.postMessage({
+                id: r,
+                placeholderData: e
+            });
+    });
+}
+function h(e, n, r) {
+    let i = r && 1 === n && null != e,
+        [a, s] = c.useState(void 0);
+    return (
+        c.useEffect(() => {
+            let n = !1;
+            return (
+                i &&
+                    _(e).then((e) => {
+                        if (!n) s(e);
+                    }),
+                () => {
+                    n = !0;
+                }
+            );
+        }, [e, i]),
+        a
     );
 }

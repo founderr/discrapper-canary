@@ -1,12 +1,13 @@
-var r, i;
-n.d(t, {
+var i;
+r.d(n, {
     q: function () {
-        return r;
+        return i;
     },
     v: function () {
         return a;
     }
 }),
-    ((i = r || (r = {}))[(i.PREMIUM = 0)] = 'PREMIUM'),
-    (i[(i.BASIC = 1)] = 'BASIC');
+    !(function (e) {
+        (e[(e.PREMIUM = 0)] = 'PREMIUM'), (e[(e.BASIC = 1)] = 'BASIC');
+    })(i || (i = {}));
 let a = 32;

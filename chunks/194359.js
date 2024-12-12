@@ -1,218 +1,229 @@
-n(47120);
-var r,
-    i,
-    a = n(544891),
-    s = n(780384),
-    o = n(570140),
-    l = n(391650),
-    u = n(877215),
-    c = n(895886),
-    d = n(681678),
-    f = n(397550),
-    _ = n(594174),
-    p = n(657682),
-    h = n(51144),
-    m = n(668781),
-    g = n(239091),
-    E = n(981631),
-    v = n(858380),
-    I = n(388032);
-function T(e) {
-    (0, g.Zy)(), m.Z.show(e);
+var i,
+    a = r(47120);
+var s = r(544891),
+    o = r(780384),
+    l = r(570140),
+    u = r(391650),
+    c = r(877215),
+    d = r(895886),
+    f = r(681678),
+    _ = r(397550),
+    h = r(594174),
+    p = r(657682),
+    m = r(51144),
+    g = r(668781),
+    E = r(239091),
+    v = r(981631),
+    I = r(858380),
+    T = r(388032);
+function b(e) {
+    (0, E.Zy)(), g.Z.show(e);
 }
-function b(e, t, n) {
-    let { status: r, body: i } = e,
-        a = i && i.code;
-    switch (r) {
+function y() {
+    (0, E.Zy)(), (0, d.default)();
+}
+function S(e, n, r) {
+    let { status: i, body: a } = e,
+        s = a && a.code;
+    switch (i) {
         case 429:
-            0 === t &&
-                T({
-                    title: I.intl.string(I.t['3D5eo6']),
-                    body: I.intl.string(I.t.TuJriI),
-                    confirmText: I.intl.string(I.t.DppXIy)
+            0 === n &&
+                b({
+                    title: T.intl.string(T.t['3D5eo6']),
+                    body: T.intl.string(T.t.TuJriI),
+                    confirmText: T.intl.string(T.t.DppXIy)
                 });
             break;
         case 403:
-            if (a === E.evJ.EMAIL_VERIFICATION_REQUIRED) {
-                T({
-                    title: I.intl.string(I.t.Gqf33N),
-                    body: I.intl.string(I.t.GHOBd3),
-                    confirmText: I.intl.string(I.t.HbTSEx),
+            if (s === v.evJ.EMAIL_VERIFICATION_REQUIRED) {
+                b({
+                    title: T.intl.string(T.t.Gqf33N),
+                    body: T.intl.string(T.t.GHOBd3),
+                    confirmText: T.intl.string(T.t.HbTSEx),
                     onConfirm: () => {
-                        l.j();
+                        u.j();
                     }
                 });
                 break;
             }
         default:
-            if (a === E.evJ.USER_QUARANTINED) (0, g.Zy)(), (0, c.default)();
-            else if ((0, f.b)(r, a)) break;
-            else if (0 === t) {
-                let e = null != n ? (0, p.NF)(a || 0, n) : I.intl.string(I.t.paDJBA);
-                T({
-                    title: I.intl.string(I.t['6moJ8v']),
+            if (s === v.evJ.USER_QUARANTINED) y();
+            else if ((0, _.b)(i, s)) break;
+            else if (0 === n) {
+                let e = null != r ? (0, p.NF)(s || 0, r) : T.intl.string(T.t.paDJBA);
+                b({
+                    title: T.intl.string(T.t['6moJ8v']),
                     body: e,
-                    confirmText: I.intl.string(I.t.BddRzc)
+                    confirmText: T.intl.string(T.t.BddRzc)
                 });
             }
     }
     throw e;
 }
-((i = r || (r = {}))[(i.SHOW_ALWAYS = 0)] = 'SHOW_ALWAYS'), (i[(i.SHOW_ONLY_IF_ACTION_NEEDED = 1)] = 'SHOW_ONLY_IF_ACTION_NEEDED');
-let S = {
+!(function (e) {
+    (e[(e.SHOW_ALWAYS = 0)] = 'SHOW_ALWAYS'), (e[(e.SHOW_ONLY_IF_ACTION_NEEDED = 1)] = 'SHOW_ONLY_IF_ACTION_NEEDED');
+})(i || (i = {}));
+let A = {
     sendRequest(e) {
-        let { discordTag: t, context: n, captchaPayload: r, errorUxConfig: i = 0 } = e,
-            [s, o] = t.split('#');
-        return a.tn
+        let { discordTag: n, context: r, captchaPayload: i, errorUxConfig: a = 0 } = e,
+            [o, l] = n.split('#');
+        return s.tn
             .post({
-                url: E.ANM.USER_RELATIONSHIPS(),
+                url: v.ANM.USER_RELATIONSHIPS(),
                 body: {
-                    username: s,
-                    discriminator: parseInt(o),
-                    ...r
-                },
-                context: n,
-                oldFormErrors: !0,
-                rejectWithError: !1
-            })
-            .catch((e) => {
-                b(e, i, t);
-            });
-    },
-    addRelationship(e, t) {
-        let { userId: n, context: r, type: i, friendToken: s, fromFriendSuggestion: o, captchaPayload: l } = e,
-            u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-            c = _.default.getUser(n);
-        return a.tn
-            .put({
-                url: E.ANM.USER_RELATIONSHIP(n),
-                body: {
-                    type: i,
-                    friend_token: s,
-                    from_friend_suggestion: o,
-                    ...l
+                    username: o,
+                    discriminator: parseInt(l),
+                    ...i
                 },
                 context: r,
                 oldFormErrors: !0,
                 rejectWithError: !1
             })
-            .then(() => {
-                null == t || t();
-            })
             .catch((e) => {
-                b(e, u, h.ZP.getUserTag(c));
+                S(e, a, n);
             });
     },
-    acceptFriendRequest: (e) =>
-        S.addRelationship(e, function () {
-            s.uv.announce(I.intl.string(I.t['3goNa2']));
-        }),
-    cancelFriendRequest: (e, t) =>
-        S.removeRelationship(e, t, function () {
-            s.uv.announce(I.intl.string(I.t.pLUaxc));
-        }),
-    removeFriend(e, t) {
-        S.removeRelationship(e, t, function () {
-            s.uv.announce(I.intl.string(I.t.vGSLa2));
-        });
-    },
-    unblockUser: (e, t) =>
-        S.removeRelationship(e, t, function () {
-            s.uv.announce(I.intl.string(I.t['9t1au7']));
-        }),
-    removeRelationship: (e, t, n) =>
-        a.tn
-            .del({
-                url: E.ANM.USER_RELATIONSHIP(e),
-                context: t,
+    addRelationship(e, n) {
+        let { userId: r, context: i, type: a, friendToken: o, fromFriendSuggestion: l, captchaPayload: u } = e,
+            c = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+            d = h.default.getUser(r);
+        return s.tn
+            .put({
+                url: v.ANM.USER_RELATIONSHIP(r),
+                body: {
+                    type: a,
+                    friend_token: o,
+                    from_friend_suggestion: l,
+                    ...u
+                },
+                context: i,
                 oldFormErrors: !0,
                 rejectWithError: !1
             })
             .then(() => {
                 null == n || n();
             })
+            .catch((e) => {
+                S(e, c, m.ZP.getUserTag(d));
+            });
+    },
+    acceptFriendRequest(e) {
+        function n() {
+            o.uv.announce(T.intl.string(T.t['3goNa2']));
+        }
+        return A.addRelationship(e, n);
+    },
+    cancelFriendRequest(e, n) {
+        function r() {
+            o.uv.announce(T.intl.string(T.t.pLUaxc));
+        }
+        return A.removeRelationship(e, n, r);
+    },
+    removeFriend(e, n) {
+        function r() {
+            o.uv.announce(T.intl.string(T.t.vGSLa2));
+        }
+        A.removeRelationship(e, n, r);
+    },
+    unblockUser(e, n) {
+        function r() {
+            o.uv.announce(T.intl.string(T.t['9t1au7']));
+        }
+        return A.removeRelationship(e, n, r);
+    },
+    removeRelationship: (e, n, r) =>
+        s.tn
+            .del({
+                url: v.ANM.USER_RELATIONSHIP(e),
+                context: n,
+                oldFormErrors: !0,
+                rejectWithError: !1
+            })
+            .then(() => {
+                null == r || r();
+            })
             .catch(() => {
-                s.uv.announce(I.intl.string(I.t.n6Jo3N));
+                o.uv.announce(T.intl.string(T.t.n6Jo3N));
             }),
-    updateRelationship: (e, t) =>
-        a.tn.patch({
-            url: E.ANM.USER_RELATIONSHIP(e),
-            body: { nickname: t },
+    updateRelationship: (e, n) =>
+        s.tn.patch({
+            url: v.ANM.USER_RELATIONSHIP(e),
+            body: { nickname: n },
             rejectWithError: !1
         }),
     fetchRelationships() {
-        a.tn
+        s.tn
             .get({
-                url: E.ANM.USER_RELATIONSHIPS(),
+                url: v.ANM.USER_RELATIONSHIPS(),
                 oldFormErrors: !0,
                 rejectWithError: !0
             })
             .then(
                 (e) =>
-                    o.Z.dispatch({
+                    l.Z.dispatch({
                         type: 'LOAD_RELATIONSHIPS_SUCCESS',
                         relationships: e.body
                     }),
-                () => o.Z.dispatch({ type: 'LOAD_RELATIONSHIPS_FAILURE' })
+                () => l.Z.dispatch({ type: 'LOAD_RELATIONSHIPS_FAILURE' })
             );
     },
     confirmClearPendingRelationships(e) {
-        (0, u.Z)(e);
+        (0, c.Z)(e);
     },
     clearPendingRelationships: () =>
-        a.tn
+        s.tn
             .del({
-                url: E.ANM.USER_RELATIONSHIPS(),
-                query: { relationship_type: E.OGo.PENDING_INCOMING },
+                url: v.ANM.USER_RELATIONSHIPS(),
+                query: { relationship_type: v.OGo.PENDING_INCOMING },
                 rejectWithError: !1
             })
             .then(() => {
-                o.Z.dispatch({ type: 'RELATIONSHIP_PENDING_INCOMING_REMOVED' });
+                l.Z.dispatch({ type: 'RELATIONSHIP_PENDING_INCOMING_REMOVED' });
             })
             .catch(() => {
-                s.uv.announce(I.intl.string(I.t.n6Jo3N));
+                o.uv.announce(T.intl.string(T.t.n6Jo3N));
             }),
     clearPendingSpamAndIgnored: () =>
-        a.tn
+        s.tn
             .del({
-                url: E.ANM.USER_RELATIONSHIPS(),
-                query: { relationship_type: E.OGo.PENDING_INCOMING },
+                url: v.ANM.USER_RELATIONSHIPS(),
+                query: { relationship_type: v.OGo.PENDING_INCOMING },
                 body: {
-                    filters: [v.G.SPAM, v.G.IGNORED]
+                    filters: [I.G.SPAM, I.G.IGNORED]
                 },
                 rejectWithError: !1
             })
             .then(() => {
-                o.Z.dispatch({ type: 'RELATIONSHIP_PENDING_INCOMING_REMOVED' });
+                l.Z.dispatch({ type: 'RELATIONSHIP_PENDING_INCOMING_REMOVED' });
             })
             .catch(() => {
-                s.uv.announce(I.intl.string(I.t.n6Jo3N));
+                o.uv.announce(T.intl.string(T.t.n6Jo3N));
             }),
-    ignoreUser: (e, t, n) =>
-        a.tn
+    ignoreUser: (e, n, r) =>
+        s.tn
             .put({
-                url: E.ANM.IGNORE_USER(e),
-                context: { location: t },
+                url: v.ANM.IGNORE_USER(e),
+                context: { location: n },
                 rejectWithError: !1
             })
             .then(() => {
-                d.Z.showIgnoreSuccessToast(e, n), s.uv.announce(I.intl.string(I.t.Us93CQ));
+                f.Z.showIgnoreSuccessToast(e, r), o.uv.announce(T.intl.string(T.t.Us93CQ));
             })
             .catch(() => {
-                d.Z.showFailedToast(), s.uv.announce(I.intl.string(I.t.n6Jo3N));
+                f.Z.showFailedToast(), o.uv.announce(T.intl.string(T.t.n6Jo3N));
             }),
-    unignoreUser: (e, t, n) =>
-        a.tn
+    unignoreUser: (e, n, r) =>
+        s.tn
             .del({
-                url: E.ANM.IGNORE_USER(e),
-                context: { location: t },
+                url: v.ANM.IGNORE_USER(e),
+                context: { location: n },
                 rejectWithError: !1
             })
             .then(() => {
-                d.Z.showUnignoreSuccessToast(e, n), s.uv.announce(I.intl.string(I.t.QlH5w8));
+                f.Z.showUnignoreSuccessToast(e, r), o.uv.announce(T.intl.string(T.t.QlH5w8));
             })
             .catch(() => {
-                d.Z.showFailedToast(), s.uv.announce(I.intl.string(I.t.n6Jo3N));
+                f.Z.showFailedToast(), o.uv.announce(T.intl.string(T.t.n6Jo3N));
             })
 };
-t.Z = S;
+n.Z = A;

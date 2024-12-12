@@ -1,29 +1,39 @@
-let r;
-n(47120);
-var i,
-    a,
-    s,
-    o,
-    l = n(442837),
-    u = n(570140),
-    c = n(706454),
-    d = n(659181),
-    f = n(77498);
+let i;
+var a,
+    s = r(47120);
+var o = r(442837),
+    l = r(570140),
+    u = r(706454),
+    c = r(659181),
+    d = r(77498);
+function f(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
 let _ = new Map(),
-    p = new Set(),
     h = new Set(),
+    p = new Set(),
     m = new Map(),
     g = new Map(),
     E = new Map();
 function v(e) {
-    var t;
-    m.set(e.id, d.Z.createFromServer(e)),
-        p.delete(e.id),
+    var n;
+    m.set(e.id, c.Z.createFromServer(e)),
         h.delete(e.id),
-        null === (t = e.bundled_sku_ids) ||
-            void 0 === t ||
-            t.forEach((t) => {
-                _.set(t, e.id);
+        p.delete(e.id),
+        null === (n = e.bundled_sku_ids) ||
+            void 0 === n ||
+            n.forEach((n) => {
+                _.set(n, e.id);
             }),
         !g.has(e.application_id) && g.set(e.application_id, new Set()),
         g.get(e.application_id).add(e.id);
@@ -32,94 +42,95 @@ function I(e) {
     v(e);
 }
 function T(e) {
-    v(e.sku), null != e.child_skus && e.child_skus.forEach((e) => v(e)), null != e.alternative_skus && e.alternative_skus.forEach((e) => v(e));
+    let { skuId: n } = e;
+    h.add(n);
 }
 function b(e) {
-    let { entitlements: t } = e;
-    for (let e of t) null != e.sku && v(e.sku);
+    let { skuId: n } = e;
+    h.add(n);
 }
-function S() {
-    (_ = new Map()), (p = new Set()), (h = new Set()), (m = new Map()), (g = new Map()), (E = new Map());
+function y(e) {
+    let { skuId: n } = e;
+    h.delete(n), p.add(n);
 }
-function y() {
-    if (r === c.default.locale) return !1;
-    (r = c.default.locale), S();
+function S(e) {
+    let { skuId: n } = e;
+    h.delete(n), p.add(n);
 }
-class A extends (i = l.yh) {
+function A(e) {
+    let { giftCode: n } = e;
+    if (null == n.store_listing) return !1;
+    v(n.store_listing.sku);
+}
+function N(e) {
+    let { sku: n } = e;
+    I(n);
+}
+function C(e) {
+    let { guildId: n, skus: r } = e;
+    for (let e of r) I(e);
+    null != n && E.set(n, new Set(r.map((e) => e.id)));
+}
+function R(e) {
+    v(e.sku), null != e.child_skus && e.child_skus.forEach((e) => v(e)), null != e.alternative_skus && e.alternative_skus.forEach((e) => v(e));
+}
+function O(e) {
+    let { storeListings: n } = e;
+    for (let e of n) R(e);
+}
+function D(e) {
+    let { storeListing: n } = e;
+    R(n);
+}
+function L(e) {
+    let { entitlements: n } = e;
+    for (let e of n) null != e.sku && v(e.sku);
+}
+function x() {
+    (_ = new Map()), (h = new Set()), (p = new Set()), (m = new Map()), (g = new Map()), (E = new Map());
+}
+function w() {
+    if (i === u.default.locale) return !1;
+    (i = u.default.locale), x();
+}
+class P extends (a = o.yh) {
     initialize() {
-        this.waitFor(c.default, f.Z), this.syncWith([c.default], y), (r = c.default.locale);
+        this.waitFor(u.default, d.Z), this.syncWith([u.default], w), (i = u.default.locale);
     }
     get(e) {
         return m.get(e);
     }
     getForApplication(e) {
-        let t = g.get(e);
-        return null == t ? [] : Array.from(t).map((e) => m.get(e));
+        let n = g.get(e);
+        return null == n ? [] : Array.from(n).map((e) => m.get(e));
     }
     isFetching(e) {
-        return p.has(e);
+        return h.has(e);
     }
     getSKUs() {
         return Object.fromEntries(m);
     }
     getParentSKU(e) {
-        let t = _.get(e);
-        if (null != t) return this.get(t);
+        let n = _.get(e);
+        if (null != n) return this.get(n);
     }
     didFetchingSkuFail(e) {
-        return h.has(e);
+        return p.has(e);
     }
 }
-(o = 'SKUStore'),
-    (s = 'displayName') in (a = A)
-        ? Object.defineProperty(a, s, {
-              value: o,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (a[s] = o),
-    (t.Z = new A(u.Z, {
-        STORE_LISTINGS_FETCH_START: function (e) {
-            let { skuId: t } = e;
-            p.add(t);
-        },
-        STORE_LISTINGS_FETCH_FAIL: function (e) {
-            let { skuId: t } = e;
-            p.delete(t), h.add(t);
-        },
-        STORE_LISTINGS_FETCH_SUCCESS: function (e) {
-            let { storeListings: t } = e;
-            for (let e of t) T(e);
-        },
-        STORE_LISTING_FETCH_SUCCESS: function (e) {
-            let { storeListing: t } = e;
-            T(t);
-        },
-        GIFT_CODE_RESOLVE_SUCCESS: function (e) {
-            let { giftCode: t } = e;
-            if (null == t.store_listing) return !1;
-            v(t.store_listing.sku);
-        },
-        SKU_FETCH_START: function (e) {
-            let { skuId: t } = e;
-            p.add(t);
-        },
-        SKU_FETCH_SUCCESS: function (e) {
-            let { sku: t } = e;
-            v(t);
-        },
-        SKU_FETCH_FAIL: function (e) {
-            let { skuId: t } = e;
-            p.delete(t), h.add(t);
-        },
-        SKUS_FETCH_SUCCESS: function (e) {
-            let { guildId: t, skus: n } = e;
-            for (let e of n) v(e);
-            null != t && E.set(t, new Set(n.map((e) => e.id)));
-        },
-        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: b,
-        APPLICATION_STORE_CLEAR_DATA: S,
-        APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: b,
-        ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: b
+f(P, 'displayName', 'SKUStore'),
+    (n.Z = new P(l.Z, {
+        STORE_LISTINGS_FETCH_START: T,
+        STORE_LISTINGS_FETCH_FAIL: y,
+        STORE_LISTINGS_FETCH_SUCCESS: O,
+        STORE_LISTING_FETCH_SUCCESS: D,
+        GIFT_CODE_RESOLVE_SUCCESS: A,
+        SKU_FETCH_START: b,
+        SKU_FETCH_SUCCESS: N,
+        SKU_FETCH_FAIL: S,
+        SKUS_FETCH_SUCCESS: C,
+        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: L,
+        APPLICATION_STORE_CLEAR_DATA: x,
+        APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: L,
+        ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: L
     }));

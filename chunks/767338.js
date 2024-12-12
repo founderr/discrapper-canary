@@ -1,93 +1,95 @@
-n.d(t, {
+r.d(n, {
     W: function () {
-        return u;
+        return g;
     },
     y: function () {
-        return l;
+        return m;
     }
 });
-var r = n(192379),
-    i = n(127225),
-    a = n(53625);
-function s() {
-    return (s =
+var i = r(192379),
+    a = r(127225),
+    s = r(53625);
+function o() {
+    return (o =
         Object.assign ||
         function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+            for (var n = 1; n < arguments.length; n++) {
+                var r = arguments[n];
+                for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
             }
             return e;
         }).apply(this, arguments);
 }
-function o(e, t) {
-    (null == t || t > e.length) && (t = e.length);
-    for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
-    return r;
+function l(e, n) {
+    return _(e) || f(e, n) || c(e, n) || u();
 }
-var l = (0, r.createContext)(null),
-    u = function (e) {
-        var t,
-            n,
-            u = e.portal,
-            c = (function (e, t) {
-                if (null == e) return {};
-                var n,
-                    r,
-                    i = (function (e, t) {
-                        if (null == e) return {};
-                        var n,
-                            r,
-                            i = {},
-                            a = Object.keys(e);
-                        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && (i[n] = e[n]);
-                        return i;
-                    })(e, t);
-                if (Object.getOwnPropertySymbols) {
-                    var a = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < a.length; r++) {
-                        if (((n = a[r]), !(t.indexOf(n) >= 0))) Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-                    }
-                }
-                return i;
-            })(e, ['portal']);
-        var d =
-                ((n = 2),
-                (function (e) {
-                    if (Array.isArray(e)) return e;
-                })((t = (0, r.useState)(null))) ||
-                    (function (e, t) {
-                        if ('undefined' != typeof Symbol && Symbol.iterator in Object(e)) {
-                            var n = [],
-                                r = !0,
-                                i = !1,
-                                a = void 0;
-                            try {
-                                for (var s, o = e[Symbol.iterator](); !(r = (s = o.next()).done) && (n.push(s.value), !t || n.length !== t); r = !0);
-                            } catch (e) {
-                                (i = !0), (a = e);
-                            } finally {
-                                try {
-                                    !r && null != o.return && o.return();
-                                } finally {
-                                    if (i) throw a;
-                                }
-                            }
-                            return n;
-                        }
-                    })(t, 2) ||
-                    (function (e, t) {
-                        if (e) {
-                            if ('string' == typeof e) return o(e, t);
-                            var n = Object.prototype.toString.call(e).slice(8, -1);
-                            if (('Object' === n && e.constructor && (n = e.constructor.name), 'Map' === n || 'Set' === n)) return Array.from(e);
-                            if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return o(e, t);
-                        }
-                    })(t, n) ||
-                    (function () {
-                        throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
-                    })()),
-            f = d[0],
-            _ = d[1];
-        return r.createElement(l.Provider, { value: null != u ? u : f }, r.createElement(i.W, s({ backend: a.Q }, c)), u ? null : r.createElement('div', { ref: _ }));
+function u() {
+    throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
+}
+function c(e, n) {
+    if (e) {
+        if ('string' == typeof e) return d(e, n);
+        var r = Object.prototype.toString.call(e).slice(8, -1);
+        if (('Object' === r && e.constructor && (r = e.constructor.name), 'Map' === r || 'Set' === r)) return Array.from(e);
+        if ('Arguments' === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)) return d(e, n);
+    }
+}
+function d(e, n) {
+    (null == n || n > e.length) && (n = e.length);
+    for (var r = 0, i = Array(n); r < n; r++) i[r] = e[r];
+    return i;
+}
+function f(e, n) {
+    if ('undefined' != typeof Symbol && Symbol.iterator in Object(e)) {
+        var r = [],
+            i = !0,
+            a = !1,
+            s = void 0;
+        try {
+            for (var o, l = e[Symbol.iterator](); !(i = (o = l.next()).done) && (r.push(o.value), !n || r.length !== n); i = !0);
+        } catch (e) {
+            (a = !0), (s = e);
+        } finally {
+            try {
+                !i && null != l.return && l.return();
+            } finally {
+                if (a) throw s;
+            }
+        }
+        return r;
+    }
+}
+function _(e) {
+    if (Array.isArray(e)) return e;
+}
+function h(e, n) {
+    if (null == e) return {};
+    var r,
+        i,
+        a = p(e, n);
+    if (Object.getOwnPropertySymbols) {
+        var s = Object.getOwnPropertySymbols(e);
+        for (i = 0; i < s.length; i++) {
+            if (((r = s[i]), !(n.indexOf(r) >= 0))) Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+        }
+    }
+    return a;
+}
+function p(e, n) {
+    if (null == e) return {};
+    var r,
+        i,
+        a = {},
+        s = Object.keys(e);
+    for (i = 0; i < s.length; i++) (r = s[i]), !(n.indexOf(r) >= 0) && (a[r] = e[r]);
+    return a;
+}
+var m = (0, i.createContext)(null),
+    g = function (e) {
+        var n = e.portal,
+            r = h(e, ['portal']),
+            u = l((0, i.useState)(null), 2),
+            c = u[0],
+            d = u[1];
+        return i.createElement(m.Provider, { value: null != n ? n : c }, i.createElement(a.W, o({ backend: s.Q }, r)), n ? null : i.createElement('div', { ref: d }));
     };

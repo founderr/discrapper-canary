@@ -1,17 +1,20 @@
-n.d(t, {
+r.d(n, {
     Jw: function () {
-        return s;
+        return o;
     },
     bC: function () {
-        return o;
+        return u;
     }
 });
-var r = n(442837),
-    i = n(808506),
-    a = n(358085);
-function s() {
-    return a.isPlatformEmbedded;
-}
+var i = r(442837),
+    a = r(808506),
+    s = r(358085);
 function o() {
-    return (0, r.e7)([i.Z], () => i.Z.isSupported()) || !1;
+    return s.isPlatformEmbedded;
+}
+function l(e) {
+    return e || !1;
+}
+function u() {
+    return l((0, i.e7)([a.Z], () => a.Z.isSupported()));
 }

@@ -1,54 +1,55 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return f;
+        return h;
     }
 });
-var r = n(570140),
-    i = n(232567),
-    a = n(220082),
-    s = n(275759),
-    o = n(365943),
-    l = n(592125),
-    u = n(271383),
-    c = n(621853),
-    d = n(120569);
-async function f(e, t) {
-    var n, f, _, p;
-    let { withMutualGuilds: h = !1, withMutualFriendsCount: m = !1, withMutualFriends: g = !1, friendToken: E, preloadUserBanner: v = !0, dispatchWait: I = !1, guildId: T, channelId: b, joinRequestId: S, abortSignal: y } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    if ('' === e || c.Z.isFetchingProfile(e, T)) return;
-    let A = c.Z.getUserProfile(e),
-        N = Date.now() - (null !== (p = null == A ? void 0 : A.lastFetched) && void 0 !== p ? p : 0) >= 60000;
-    if (((null == A ? void 0 : null === (n = A.fetchError) || void 0 === n ? void 0 : n.status) === 404 || (null == A ? void 0 : null === (f = A.fetchError) || void 0 === f ? void 0 : f.status) === 429) && !N) return;
-    let C = c.Z.getGuildMemberProfile(e, T),
-        R = c.Z.getMutualGuilds(e),
-        O = c.Z.getMutualFriends(e),
-        D = c.Z.getMutualFriendsCount(e);
-    h = h || null != T;
-    let L = null == O && g,
-        x = null == D && m,
-        w = null != T && null == C;
-    if (!(null == R && h) && !L && !x && !w && !N) return;
-    (0, o.z)(), null != t && (0, a.vM)(t);
-    let P = {
-            withMutualGuilds: h,
-            withMutualFriends: g,
-            withMutualFriendsCount: m,
-            friendToken: E,
-            guildId: T,
-            joinRequestId: S,
-            abortSignal: y,
+var i = r(570140),
+    a = r(232567),
+    s = r(220082),
+    o = r(275759),
+    l = r(365943),
+    u = r(592125),
+    c = r(271383),
+    d = r(621853),
+    f = r(120569);
+let _ = 60000;
+async function h(e, n) {
+    var r, h, p, m;
+    let { withMutualGuilds: g = !1, withMutualFriendsCount: E = !1, withMutualFriends: v = !1, friendToken: I, preloadUserBanner: T = !0, dispatchWait: b = !1, guildId: y, channelId: S, joinRequestId: A, abortSignal: N } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    if ('' === e || d.Z.isFetchingProfile(e, y)) return;
+    let C = d.Z.getUserProfile(e),
+        R = Date.now() - (null !== (m = null == C ? void 0 : C.lastFetched) && void 0 !== m ? m : 0) >= _;
+    if (((null == C ? void 0 : null === (r = C.fetchError) || void 0 === r ? void 0 : r.status) === 404 || (null == C ? void 0 : null === (h = C.fetchError) || void 0 === h ? void 0 : h.status) === 429) && !R) return;
+    let O = d.Z.getGuildMemberProfile(e, y),
+        D = d.Z.getMutualGuilds(e),
+        L = d.Z.getMutualFriends(e),
+        x = d.Z.getMutualFriendsCount(e);
+    g = g || null != y;
+    let w = null == L && v,
+        P = null == x && E,
+        M = null != y && null == O;
+    if (!(null == D && g) && !w && !P && !M && !R) return;
+    (0, l.z)(), null != n && (0, s.vM)(n);
+    let k = {
+            withMutualGuilds: g,
+            withMutualFriends: v,
+            withMutualFriendsCount: E,
+            friendToken: I,
+            guildId: y,
+            joinRequestId: A,
+            abortSignal: N,
             connectionsRoleId:
-                null == T
+                null == y
                     ? void 0
                     : null ===
-                            (_ = (0, s.Ur)({
-                                guildMember: u.ZP.getMember(T, e),
-                                channel: l.Z.getChannel(b)
-                            })) || void 0 === _
+                            (p = (0, o.Ur)({
+                                guildMember: c.ZP.getMember(y, e),
+                                channel: u.Z.getChannel(S)
+                            })) || void 0 === p
                       ? void 0
-                      : _.id
+                      : p.id
         },
-        M = v ? d.Z : void 0;
-    if (I) return r.Z.wait(() => (0, i.In)(e, P, M));
-    await (0, i.In)(e, P, M);
+        U = T ? f.Z : void 0;
+    if (b) return i.Z.wait(() => (0, a.In)(e, k, U));
+    await (0, a.In)(e, k, U);
 }

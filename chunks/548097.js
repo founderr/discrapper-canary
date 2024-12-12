@@ -1,4 +1,4 @@
-n.d(t, {
+r.d(n, {
     $6: function () {
         return f;
     },
@@ -24,89 +24,90 @@ n.d(t, {
         return o;
     }
 });
-var r,
-    i,
-    a = n(259630);
-((r = i || (i = {})).FORMAT_ERROR = 'FORMAT_ERROR'), (r.UNSUPPORTED_FORMATTER = 'UNSUPPORTED_FORMATTER'), (r.INVALID_CONFIG = 'INVALID_CONFIG'), (r.MISSING_DATA = 'MISSING_DATA'), (r.MISSING_TRANSLATION = 'MISSING_TRANSLATION');
+var i,
+    a = r(259630);
+!(function (e) {
+    (e.FORMAT_ERROR = 'FORMAT_ERROR'), (e.UNSUPPORTED_FORMATTER = 'UNSUPPORTED_FORMATTER'), (e.INVALID_CONFIG = 'INVALID_CONFIG'), (e.MISSING_DATA = 'MISSING_DATA'), (e.MISSING_TRANSLATION = 'MISSING_TRANSLATION');
+})(i || (i = {}));
 var s = (function (e) {
-        function t(n, r, i) {
-            var a = this,
-                s = i ? (i instanceof Error ? i : Error(String(i))) : void 0;
+        function n(r, i, a) {
+            var s = this,
+                o = a ? (a instanceof Error ? a : Error(String(a))) : void 0;
             return (
-                ((a =
+                ((s =
                     e.call(
                         this,
                         '[@formatjs/intl Error '
-                            .concat(n, '] ')
-                            .concat(r, '\n')
-                            .concat(s ? '\n'.concat(s.message, '\n').concat(s.stack) : '')
-                    ) || this).code = n),
-                'function' == typeof Error.captureStackTrace && Error.captureStackTrace(a, t),
-                a
+                            .concat(r, '] ')
+                            .concat(i, '\n')
+                            .concat(o ? '\n'.concat(o.message, '\n').concat(o.stack) : '')
+                    ) || this).code = r),
+                'function' == typeof Error.captureStackTrace && Error.captureStackTrace(s, n),
+                s
             );
         }
-        return (0, a.ZT)(t, e), t;
+        return (0, a.ZT)(n, e), n;
     })(Error),
     o = (function (e) {
-        function t(t, n) {
-            return e.call(this, i.UNSUPPORTED_FORMATTER, t, n) || this;
+        function n(n, r) {
+            return e.call(this, i.UNSUPPORTED_FORMATTER, n, r) || this;
         }
-        return (0, a.ZT)(t, e), t;
+        return (0, a.ZT)(n, e), n;
     })(s),
     l = (function (e) {
-        function t(t, n) {
-            return e.call(this, i.INVALID_CONFIG, t, n) || this;
+        function n(n, r) {
+            return e.call(this, i.INVALID_CONFIG, n, r) || this;
         }
-        return (0, a.ZT)(t, e), t;
+        return (0, a.ZT)(n, e), n;
     })(s),
     u = (function (e) {
-        function t(t, n) {
-            return e.call(this, i.MISSING_DATA, t, n) || this;
+        function n(n, r) {
+            return e.call(this, i.MISSING_DATA, n, r) || this;
         }
-        return (0, a.ZT)(t, e), t;
+        return (0, a.ZT)(n, e), n;
     })(s),
     c = (function (e) {
-        function t(t, n, r) {
-            var a = e.call(this, i.FORMAT_ERROR, ''.concat(t, '\nLocale: ').concat(n, '\n'), r) || this;
-            return (a.locale = n), a;
+        function n(n, r, a) {
+            var s = e.call(this, i.FORMAT_ERROR, ''.concat(n, '\nLocale: ').concat(r, '\n'), a) || this;
+            return (s.locale = r), s;
         }
-        return (0, a.ZT)(t, e), t;
+        return (0, a.ZT)(n, e), n;
     })(s),
     d = (function (e) {
-        function t(t, n, r, i) {
-            var a =
+        function n(n, r, i, a) {
+            var s =
                 e.call(
                     this,
                     ''
-                        .concat(t, '\nMessageID: ')
-                        .concat(null == r ? void 0 : r.id, '\nDefault Message: ')
-                        .concat(null == r ? void 0 : r.defaultMessage, '\nDescription: ')
-                        .concat(null == r ? void 0 : r.description, '\n'),
-                    n,
-                    i
+                        .concat(n, '\nMessageID: ')
+                        .concat(null == i ? void 0 : i.id, '\nDefault Message: ')
+                        .concat(null == i ? void 0 : i.defaultMessage, '\nDescription: ')
+                        .concat(null == i ? void 0 : i.description, '\n'),
+                    r,
+                    a
                 ) || this;
-            return (a.descriptor = r), (a.locale = n), a;
+            return (s.descriptor = i), (s.locale = r), s;
         }
-        return (0, a.ZT)(t, e), t;
+        return (0, a.ZT)(n, e), n;
     })(c),
     f = (function (e) {
-        function t(t, n) {
-            var r =
+        function n(n, r) {
+            var a =
                 e.call(
                     this,
                     i.MISSING_TRANSLATION,
                     'Missing message: "'
-                        .concat(t.id, '" for locale "')
-                        .concat(n, '", using ')
+                        .concat(n.id, '" for locale "')
+                        .concat(r, '", using ')
                         .concat(
-                            t.defaultMessage
+                            n.defaultMessage
                                 ? 'default message ('.concat(
-                                      'string' == typeof t.defaultMessage
-                                          ? t.defaultMessage
-                                          : t.defaultMessage
+                                      'string' == typeof n.defaultMessage
+                                          ? n.defaultMessage
+                                          : n.defaultMessage
                                                 .map(function (e) {
-                                                    var t;
-                                                    return null !== (t = e.value) && void 0 !== t ? t : JSON.stringify(e);
+                                                    var n;
+                                                    return null !== (n = e.value) && void 0 !== n ? n : JSON.stringify(e);
                                                 })
                                                 .join(),
                                       ')'
@@ -115,7 +116,7 @@ var s = (function (e) {
                             ' as fallback.'
                         )
                 ) || this;
-            return (r.descriptor = t), r;
+            return (a.descriptor = n), a;
         }
-        return (0, a.ZT)(t, e), t;
+        return (0, a.ZT)(n, e), n;
     })(s);

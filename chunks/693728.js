@@ -1,63 +1,64 @@
-n(47120);
-var r,
-    i,
+var i,
     a,
-    s = n(200651),
-    o = n(192379),
-    l = n(120356),
-    u = n.n(l),
-    c = n(481060),
-    d = n(600164),
-    f = n(862380);
-function _(e, t, n) {
+    s = r(47120);
+var o = r(200651),
+    l = r(192379),
+    u = r(120356),
+    c = r.n(u),
+    d = r(481060),
+    f = r(600164),
+    _ = r(862380);
+function h(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-((a = r || (r = {})).SINGLE_AVATAR = '1'), (a.MULTIPLE_AVATAR = '2');
+!(function (e) {
+    (e.SINGLE_AVATAR = '1'), (e.MULTIPLE_AVATAR = '2');
+})(i || (i = {}));
 let p = {
-    [c.AvatarSizes.SIZE_32]: f.avatarSmall,
-    [c.AvatarSizes.SIZE_40]: f.avatarLarge
+    [d.AvatarSizes.SIZE_32]: _.avatarSmall,
+    [d.AvatarSizes.SIZE_40]: _.avatarLarge
 };
-class h extends (i = o.Component) {
+class m extends (a = l.Component) {
     render() {
-        let { type: e, avatarSize: t, className: n } = this.props;
+        let { type: e, avatarSize: n, className: r } = this.props;
         return '2' === e
-            ? (0, s.jsxs)('div', {
-                  className: u()(f.multiplePlaceholder, n),
+            ? (0, o.jsxs)('div', {
+                  className: c()(_.multiplePlaceholder, r),
                   children: [
-                      (0, s.jsxs)(d.Z, {
-                          children: [(0, s.jsx)('div', { className: u()(f.placeholderAvatar, p[t], f.avatarMasked) }), (0, s.jsx)('div', { className: u()(f.placeholderAvatar, p[t], f.avatarMasked) }), (0, s.jsx)('div', { className: u()(f.placeholderAvatar, p[t]) })]
+                      (0, o.jsxs)(f.Z, {
+                          children: [(0, o.jsx)('div', { className: c()(_.placeholderAvatar, p[n], _.avatarMasked) }), (0, o.jsx)('div', { className: c()(_.placeholderAvatar, p[n], _.avatarMasked) }), (0, o.jsx)('div', { className: c()(_.placeholderAvatar, p[n]) })]
                       }),
-                      (0, s.jsx)(d.Z, {
+                      (0, o.jsx)(f.Z, {
                           grow: 1,
-                          className: f.mulitplePlaceholderUsername,
+                          className: _.mulitplePlaceholderUsername,
                           style: { maxWidth: this.placeholderMaxWidth }
                       })
                   ]
               })
-            : (0, s.jsxs)(d.Z, {
-                  className: u()(f.placeholder, n),
+            : (0, o.jsxs)(f.Z, {
+                  className: c()(_.placeholder, r),
                   children: [
-                      (0, s.jsx)('div', { className: u()(f.placeholderAvatar, p[t]) }),
-                      (0, s.jsx)(d.Z, {
+                      (0, o.jsx)('div', { className: c()(_.placeholderAvatar, p[n]) }),
+                      (0, o.jsx)(f.Z, {
                           grow: 1,
-                          className: f.placeholderUsername,
+                          className: _.placeholderUsername,
                           style: { maxWidth: this.placeholderMaxWidth }
                       })
                   ]
               });
     }
     constructor(...e) {
-        super(...e), _(this, 'placeholderMaxWidth', ''.concat(Math.floor(40 * Math.random()) + 40, '%'));
+        super(...e), h(this, 'placeholderMaxWidth', ''.concat(Math.floor(40 * Math.random()) + 40, '%'));
     }
 }
-_(h, 'defaultProps', { type: '1' }), _(h, 'Types', r), (t.Z = h);
+h(m, 'defaultProps', { type: '1' }), h(m, 'Types', i), (n.Z = m);

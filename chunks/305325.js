@@ -1,8 +1,9 @@
-let r;
-n.d(t, {
+let i;
+r.d(n, {
     hk: function () {
-        return i;
+        return a;
     }
 });
-let i = (r = n(66511).Z).openMemberVerificationModal;
-r.closeMemberVerificationModal;
+i = r(66511).Z;
+let a = i.openMemberVerificationModal;
+i.closeMemberVerificationModal;

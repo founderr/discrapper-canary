@@ -1,3 +1,4 @@
-e.exports = function (e, t) {
-    return this.directMap[e + ':' + t] && this.directMap[e + ':' + t]({}, e), this;
+e.exports = function (e, n) {
+    var r = this;
+    return r.directMap[e + ':' + n] && r.directMap[e + ':' + n]({}, e), this;
 };

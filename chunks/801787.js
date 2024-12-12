@@ -1,48 +1,52 @@
-n.d(t, {
+r.d(n, {
     C1: function () {
-        return g;
+        return I;
     },
     Od: function () {
-        return l;
+        return d;
     },
     TC: function () {
-        return m;
+        return v;
     },
     bg: function () {
-        return r;
+        return i;
     },
     wM: function () {
-        return _;
+        return m;
     },
     wR: function () {
-        return h;
+        return E;
     },
     ze: function () {
-        return p;
+        return g;
     }
-}),
-    n(789020),
-    n(411104);
-var r,
-    i,
-    a = n(200651),
-    s = n(192379),
-    o = n(231338);
-function l(e, t) {
-    return e | t;
+});
+var i,
+    a = r(789020);
+var s = r(411104);
+var o = r(200651),
+    l = r(192379),
+    u = r(231338);
+function c(e, n) {
+    return (e.flags & n) === n;
 }
-function u(e, t) {
-    return e & ~t;
+function d(e, n) {
+    return e | n;
 }
-function c(e) {
-    let t = JSON.stringify(e);
+function f(e, n) {
+    return e & ~n;
+}
+!(function (e) {
+    (e[(e.MOBILE_DARK_GRADIENT_THEME_ENABLED = 4)] = 'MOBILE_DARK_GRADIENT_THEME_ENABLED'), (e[(e.MOBILE_LIGHT_GRADIENT_THEME_ENABLED = 8)] = 'MOBILE_LIGHT_GRADIENT_THEME_ENABLED'), (e[(e.REDUCED_CONTRAST_ENABLED = 16)] = 'REDUCED_CONTRAST_ENABLED'), (e[(e.INCREASED_CONTRAST_ENABLED = 32)] = 'INCREASED_CONTRAST_ENABLED'), (e[(e.REDUCE_SATURATION_ENABLED = 64)] = 'REDUCE_SATURATION_ENABLED');
+})(i || (i = {}));
+function _(e) {
+    let n = JSON.stringify(e);
     return {
         ...e,
-        key: t
+        key: n
     };
 }
-((i = r || (r = {}))[(i.MOBILE_DARK_GRADIENT_THEME_ENABLED = 4)] = 'MOBILE_DARK_GRADIENT_THEME_ENABLED'), (i[(i.MOBILE_LIGHT_GRADIENT_THEME_ENABLED = 8)] = 'MOBILE_LIGHT_GRADIENT_THEME_ENABLED'), (i[(i.REDUCED_CONTRAST_ENABLED = 16)] = 'REDUCED_CONTRAST_ENABLED'), (i[(i.INCREASED_CONTRAST_ENABLED = 32)] = 'INCREASED_CONTRAST_ENABLED'), (i[(i.REDUCE_SATURATION_ENABLED = 64)] = 'REDUCE_SATURATION_ENABLED');
-let d = {
+let h = {
         theme: 'light',
         primaryColor: null,
         secondaryColor: null,
@@ -54,79 +58,79 @@ let d = {
         density: 'compact',
         disableAdaptiveTheme: !1
     },
-    f = s.createContext(d);
-function _(e) {
-    let { children: t, theme: n = o.BR.DARK, primaryColor: r = null, secondaryColor: i = null, gradient: l = null, flags: u = 0, contrast: d = 1, saturation: _ = 1, density: p = 'cozy', disableAdaptiveTheme: h = !1 } = e,
-        m = s.useMemo(
+    p = l.createContext(h);
+function m(e) {
+    let { children: n, theme: r = u.BR.DARK, primaryColor: i = null, secondaryColor: a = null, gradient: s = null, flags: c = 0, contrast: d = 1, saturation: f = 1, density: h = 'cozy', disableAdaptiveTheme: m = !1 } = e,
+        g = l.useMemo(
             () =>
-                c({
-                    theme: n,
-                    primaryColor: r,
-                    secondaryColor: i,
-                    gradient: l,
-                    flags: u,
+                _({
+                    theme: r,
+                    primaryColor: i,
+                    secondaryColor: a,
+                    gradient: s,
+                    flags: c,
                     contrast: d,
-                    saturation: _,
-                    density: p,
-                    disableAdaptiveTheme: h
+                    saturation: f,
+                    density: h,
+                    disableAdaptiveTheme: m
                 }),
-            [n, r, i, l, u, d, _, p, h]
+            [r, i, a, s, c, d, f, h, m]
         );
-    return (0, a.jsx)(f.Provider, {
-        value: m,
-        children: t
+    return (0, o.jsx)(p.Provider, {
+        value: g,
+        children: n
     });
 }
-function p(e) {
-    let { children: t, theme: n, primaryColor: r, secondaryColor: i, gradient: o, flags: l, contrast: u, saturation: d, density: _, disableAdaptiveTheme: p } = e,
-        h = s.useContext(f),
-        m = s.useMemo(
+function g(e) {
+    let { children: n, theme: r, primaryColor: i, secondaryColor: a, gradient: s, flags: u, contrast: c, saturation: d, density: f, disableAdaptiveTheme: h } = e,
+        m = l.useContext(p),
+        g = l.useMemo(
             () =>
-                c({
-                    theme: null != n ? n : h.theme,
-                    primaryColor: null != r ? r : h.primaryColor,
-                    secondaryColor: null != i ? i : h.secondaryColor,
-                    gradient: null != o ? o : h.gradient,
-                    flags: null != l ? l : h.flags,
-                    contrast: null != u ? u : h.contrast,
-                    saturation: null != d ? d : h.saturation,
-                    density: null != _ ? _ : h.density,
-                    disableAdaptiveTheme: null != p ? p : h.disableAdaptiveTheme
+                _({
+                    theme: null != r ? r : m.theme,
+                    primaryColor: null != i ? i : m.primaryColor,
+                    secondaryColor: null != a ? a : m.secondaryColor,
+                    gradient: null != s ? s : m.gradient,
+                    flags: null != u ? u : m.flags,
+                    contrast: null != c ? c : m.contrast,
+                    saturation: null != d ? d : m.saturation,
+                    density: null != f ? f : m.density,
+                    disableAdaptiveTheme: null != h ? h : m.disableAdaptiveTheme
                 }),
-            [n, h.theme, h.primaryColor, h.secondaryColor, h.gradient, h.flags, h.contrast, h.saturation, h.density, h.disableAdaptiveTheme, r, i, o, l, u, d, _, p]
+            [r, m.theme, m.primaryColor, m.secondaryColor, m.gradient, m.flags, m.contrast, m.saturation, m.density, m.disableAdaptiveTheme, i, a, s, u, c, d, f, h]
         );
-    return (0, a.jsx)(f.Provider, {
-        value: m,
-        children: t
+    return (0, o.jsx)(p.Provider, {
+        value: g,
+        children: n
     });
 }
-function h(e) {
-    let t = m(),
-        n = s.useMemo(() => {
-            let e = -5 & t.flags;
+function E(e) {
+    let n = v(),
+        r = l.useMemo(() => {
+            let e = f(n.flags, 4);
             return (
-                (e &= -9),
-                c({
-                    ...t,
+                (e = f(e, 8)),
+                _({
+                    ...n,
                     primaryColor: null,
                     secondaryColor: null,
                     gradient: null,
                     flags: e
                 })
             );
-        }, [t]);
-    return (0, a.jsx)(f.Provider, {
-        value: n,
+        }, [n]);
+    return (0, o.jsx)(p.Provider, {
+        value: r,
         children: e.children
     });
 }
-function m() {
-    let e = s.useContext(f);
+function v() {
+    let e = l.useContext(p);
     if (null == e) throw Error('useThemeContext must be used within a ThemeContext.Provider');
     return e;
 }
-function g(e) {
-    let { children: t } = e,
-        n = m();
-    return (0, a.jsx)(a.Fragment, { children: t(n) });
+function I(e) {
+    let { children: n } = e,
+        r = v();
+    return (0, o.jsx)(o.Fragment, { children: n(r) });
 }

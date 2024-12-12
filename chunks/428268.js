@@ -1,74 +1,83 @@
-var r = n(200651);
-n(192379);
-var i = n(442837),
-    a = n(692547),
-    s = n(481060),
-    o = n(726542),
-    l = n(231757),
-    u = n(511010),
-    c = n(553795),
-    d = n(979192),
-    f = n(981631),
-    _ = n(388032),
-    p = n(804665);
-t.Z = function (e) {
-    let { guildId: t, leaderboardId: h } = e,
-        { leaderboardsDisabled: m } = (0, d.O)(t, h),
-        g = (0, i.e7)([c.Z], () => c.Z.getAccount(null, f.ABu.RIOT_GAMES)),
-        E = (0, i.e7)([c.Z], () => c.Z.getAccount(null, f.ABu.LEAGUE_OF_LEGENDS));
-    if (null != g && null != E && !m) return null;
-    let v = o.Z.get(f.ABu.RIOT_GAMES),
-        I = null == g && null == E,
-        T = (null != g && null == E) || (null == g && null != E);
-    return (0, r.jsxs)(r.Fragment, {
-        children: [
-            (0, r.jsx)(u.Z, { className: p.divider }),
-            (function () {
-                if (m) return null;
-                let e = I
-                        ? (0, r.jsx)(s.CircleInformationIcon, { className: p.infoMessageIcon })
-                        : (0, r.jsx)(s.WarningIcon, {
-                              color: a.Z.colors.STATUS_WARNING,
-                              className: p.infoMessageIcon
-                          }),
-                    t = I ? _.intl.string(_.t['Ihg/Dg']) : _.intl.string(_.t['J8U+Iy']);
-                return (0, r.jsxs)('div', {
-                    className: p.updateMessage,
-                    children: [
-                        e,
-                        (0, r.jsx)(s.Text, {
-                            variant: 'text-xs/medium',
-                            color: 'text-muted',
-                            children: t
-                        })
-                    ]
+var i = r(200651);
+r(192379);
+var a = r(442837),
+    s = r(692547),
+    o = r(481060),
+    l = r(726542),
+    u = r(231757),
+    c = r(511010),
+    d = r(553795),
+    f = r(979192),
+    _ = r(981631),
+    h = r(388032),
+    p = r(804665);
+function m(e) {
+    let { guildId: n, leaderboardId: m } = e,
+        { leaderboardsDisabled: g } = (0, f.O)(n, m),
+        E = (0, a.e7)([d.Z], () => d.Z.getAccount(null, _.ABu.RIOT_GAMES)),
+        v = (0, a.e7)([d.Z], () => d.Z.getAccount(null, _.ABu.LEAGUE_OF_LEGENDS));
+    if (null != E && null != v && !g) return null;
+    let I = l.Z.get(_.ABu.RIOT_GAMES),
+        T = null == E && null == v,
+        b = null != E && null == v,
+        y = null == E && null != v,
+        S = b || y;
+    function A() {
+        (0, o.openModalLazy)(async () => {
+            let { default: e } = await r.e('73217').then(r.bind(r, 139964));
+            return (r) =>
+                (0, i.jsx)(e, {
+                    ...r,
+                    guildId: n
                 });
-            })(),
-            (0, r.jsxs)(s.Button, {
+        });
+    }
+    function N() {
+        return T || S ? (0, u.Z)({ platformType: _.ABu.RIOT_GAMES }) : A();
+    }
+    function C() {
+        return T ? h.intl.string(h.t.w6VSSE) : S ? h.intl.string(h.t.CHNBdn) : h.intl.string(h.t['0yRXHx']);
+    }
+    function R() {
+        if (g) return null;
+        let e = T
+                ? (0, i.jsx)(o.CircleInformationIcon, { className: p.infoMessageIcon })
+                : (0, i.jsx)(o.WarningIcon, {
+                      color: s.Z.colors.STATUS_WARNING,
+                      className: p.infoMessageIcon
+                  }),
+            n = T ? h.intl.string(h.t['Ihg/Dg']) : h.intl.string(h.t['J8U+Iy']);
+        return (0, i.jsxs)('div', {
+            className: p.updateMessage,
+            children: [
+                e,
+                (0, i.jsx)(o.Text, {
+                    variant: 'text-xs/medium',
+                    color: 'text-muted',
+                    children: n
+                })
+            ]
+        });
+    }
+    return (0, i.jsxs)(i.Fragment, {
+        children: [
+            (0, i.jsx)(c.Z, { className: p.divider }),
+            R(),
+            (0, i.jsxs)(o.Button, {
                 className: p.joinLeaderboardButton,
                 innerClassName: p.joinLeaderboardButtonInner,
-                onClick: function () {
-                    return I || T
-                        ? (0, l.Z)({ platformType: f.ABu.RIOT_GAMES })
-                        : void (0, s.openModalLazy)(async () => {
-                              let { default: e } = await n.e('73217').then(n.bind(n, 139964));
-                              return (n) =>
-                                  (0, r.jsx)(e, {
-                                      ...n,
-                                      guildId: t
-                                  });
-                          });
-                },
+                onClick: N,
                 children: [
-                    !m &&
-                        (0, r.jsx)('img', {
+                    !g &&
+                        (0, i.jsx)('img', {
                             alt: 'Riot Games',
-                            src: v.icon.whiteSVG,
+                            src: I.icon.whiteSVG,
                             className: p.riotIcon
                         }),
-                    I ? _.intl.string(_.t.w6VSSE) : T ? _.intl.string(_.t.CHNBdn) : _.intl.string(_.t['0yRXHx'])
+                    C()
                 ]
             })
         ]
     });
-};
+}
+n.Z = m;

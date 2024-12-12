@@ -1,40 +1,48 @@
-var r, i, a, s, o, l, u;
-n.r(t),
-    n.d(t, {
+var i, a, s, o;
+r.r(n),
+    r.d(n, {
         GLOBAL_DISCOVERY_DEFAULT_TAB: function () {
-            return f;
-        },
-        GLOBAL_DISCOVERY_SEARCH_BAR_ICON_WIDTH_PX: function () {
-            return _;
-        },
-        GLOBAL_DISCOVERY_SEARCH_BAR_WIDTH_PX: function () {
-            return p;
-        },
-        GLOBAL_DISCOVERY_TABS: function () {
             return c;
         },
+        GLOBAL_DISCOVERY_SEARCH_BAR_ICON_WIDTH_PX: function () {
+            return d;
+        },
+        GLOBAL_DISCOVERY_SEARCH_BAR_WIDTH_PX: function () {
+            return f;
+        },
+        GLOBAL_DISCOVERY_TABS: function () {
+            return l;
+        },
         GlobalDiscoveryAnalyticsLocations: function () {
-            return s;
+            return o;
         },
         GlobalDiscoveryRoutes: function () {
-            return a;
+            return s;
         },
         GlobalDiscoverySearchBarState: function () {
-            return i;
+            return a;
         },
         GlobalDiscoveryTab: function () {
-            return r;
+            return i;
         },
         MOBILE_GLOBAL_DISCOVERY_TABS: function () {
-            return d;
+            return u;
         }
     }),
-    ((o = r || (r = {})).SERVERS = 'servers'),
-    (o.QUESTS = 'quests'),
-    (o.APPS = 'apps');
-let c = ['servers', 'apps', 'quests'],
-    d = ['servers', 'quests'],
-    f = 'servers',
-    _ = 24,
-    p = 240;
-((l = i || (i = {})).DEFAULT = 'default'), (l.FLOATING = 'floating'), (l.COLLAPSED = 'collapsed'), ((u = a || (a = {})).ROOT = 'root'), (u.SERVERS_CATEGORY = 'server_tab'), (u.SERVERS_SEARCH = 'server_search'), ((s || (s = {})).GUILDS_BAR_ICON = 'guilds_bar_icon');
+    !(function (e) {
+        (e.SERVERS = 'servers'), (e.QUESTS = 'quests'), (e.APPS = 'apps');
+    })(i || (i = {}));
+let l = ['servers', 'apps', 'quests'],
+    u = ['servers', 'quests'],
+    c = 'servers',
+    d = 24,
+    f = 240;
+!(function (e) {
+    (e.DEFAULT = 'default'), (e.FLOATING = 'floating'), (e.COLLAPSED = 'collapsed');
+})(a || (a = {})),
+    !(function (e) {
+        (e.ROOT = 'root'), (e.SERVERS_CATEGORY = 'server_tab'), (e.SERVERS_SEARCH = 'server_search');
+    })(s || (s = {})),
+    !(function (e) {
+        e.GUILDS_BAR_ICON = 'guilds_bar_icon';
+    })(o || (o = {}));

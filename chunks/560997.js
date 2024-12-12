@@ -1,92 +1,93 @@
-n.d(t, {
+r.d(n, {
     KM: function () {
-        return c;
-    },
-    R2: function () {
         return d;
     },
+    R2: function () {
+        return f;
+    },
     Zc: function () {
-        return u;
+        return c;
     }
 });
-var r = n(442837),
-    i = n(570140),
-    a = n(238514),
-    s = n(675478),
-    o = n(581883),
-    l = n(526761);
-function u(e, t, n, i) {
-    let a = () => {
-        var r;
-        return n(null === (r = o.Z.settings[e]) || void 0 === r ? void 0 : r[t]);
-    };
-    return {
-        getSetting: a,
-        updateSetting: f(a, (n) =>
-            s.hW.updateAsync(
-                e,
-                (e) => {
-                    e[t] = i(n, e[t]);
-                },
-                l.fy.INFREQUENT_USER_ACTION
-            )
-        ),
-        useSetting: () => (0, r.e7)([o.Z], a)
-    };
-}
-function c(e, t, n) {
+var i = r(442837),
+    a = r(570140),
+    s = r(238514),
+    o = r(675478),
+    l = r(581883),
+    u = r(526761);
+function c(e, n, r, a) {
     let s = () => {
-        var r;
-        let i = a.Z.getState()[t];
-        return null !== (r = null == i ? void 0 : i.settings[n]) && void 0 !== r ? r : e.getSetting();
-    };
+            var i;
+            return r(null === (i = l.Z.settings[e]) || void 0 === i ? void 0 : i[n]);
+        },
+        c = () => (0, i.e7)([l.Z], s);
     return {
         getSetting: s,
+        updateSetting: _(s, (r) =>
+            o.hW.updateAsync(
+                e,
+                (e) => {
+                    e[n] = a(r, e[n]);
+                },
+                u.fy.INFREQUENT_USER_ACTION
+            )
+        ),
+        useSetting: c
+    };
+}
+function d(e, n, r) {
+    let o = () => {
+        var i;
+        let a = s.Z.getState()[n];
+        return null !== (i = null == a ? void 0 : a.settings[r]) && void 0 !== i ? i : e.getSetting();
+    };
+    return {
+        getSetting: o,
         useSetting: () => {
-            let i = e.useSetting(),
-                s = (0, r.e7)([a.Z], () => {
-                    let e = a.Z.getState()[t];
-                    return null == e ? void 0 : e.settings[n];
+            let a = e.useSetting(),
+                o = (0, i.e7)([s.Z], () => {
+                    let e = s.Z.getState()[n];
+                    return null == e ? void 0 : e.settings[r];
                 });
-            return null != s ? s : i;
+            return null != o ? o : a;
         },
-        updateSetting: f(s, (r) =>
-            a.Z.shouldSync(t)
-                ? e.updateSetting(r)
-                : (i.Z.dispatch({
+        updateSetting: _(o, (i) =>
+            s.Z.shouldSync(n)
+                ? e.updateSetting(i)
+                : (a.Z.dispatch({
                       type: 'SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE',
-                      changes: { [t]: { settings: { [n]: r } } }
+                      changes: { [n]: { settings: { [r]: i } } }
                   }),
                   Promise.resolve())
         )
     };
 }
-function d(e, t, n, r) {
-    let a = () => {
-        var t;
-        return null !== (t = n()) && void 0 !== t ? t : e.getSetting();
+function f(e, n, r, i) {
+    let s = () => {
+        var n;
+        return null !== (n = r()) && void 0 !== n ? n : e.getSetting();
     };
     return {
-        getSetting: a,
+        getSetting: s,
         useSetting: () => {
-            let t = e.useSetting(),
-                n = r();
-            return null != n ? n : t;
+            let n = e.useSetting(),
+                r = i();
+            return null != r ? r : n;
         },
-        updateSetting: f(
-            a,
-            (n) => (
-                i.Z.dispatch({
+        updateSetting: _(
+            s,
+            (r) => (
+                a.Z.dispatch({
                     type: 'USER_SETTINGS_OVERRIDE_CLEAR',
-                    settings: [t]
+                    settings: [n]
                 }),
-                e.updateSetting(n)
+                e.updateSetting(r)
             )
         )
     };
 }
-function f(e, t) {
-    return function (n) {
-        return 'function' == typeof n ? t(n(e())) : t(n);
+function _(e, n) {
+    return function (r) {
+        return 'function' == typeof r ? n(r(e())) : n(r);
     };
 }

@@ -1,6 +1,7 @@
-var r = n(56135),
-    i = r ? r.prototype : void 0,
-    a = i ? i.valueOf : void 0;
-e.exports = function (e) {
-    return a ? Object(a.call(e)) : {};
-};
+var i = r(56135),
+    a = i ? i.prototype : void 0,
+    s = a ? a.valueOf : void 0;
+function o(e) {
+    return s ? Object(s.call(e)) : {};
+}
+e.exports = o;

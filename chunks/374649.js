@@ -1,176 +1,177 @@
-n.d(t, {
+r.d(n, {
     ED: function () {
-        return E;
+        return I;
     },
     Ox: function () {
-        return v;
+        return T;
     },
     hz: function () {
-        return _;
+        return p;
     },
     o5: function () {
-        return g;
+        return v;
     },
     pV: function () {
-        return I;
+        return b;
     }
-}),
-    n(47120);
-var r = n(192379),
-    i = n(512722),
-    a = n.n(i),
-    s = n(544891),
-    o = n(881052),
-    l = n(146528),
-    u = n(74538),
-    c = n(73346),
-    d = n(981631);
-async function f(e) {
-    let { items: t, paymentSourceId: n, trialId: r, code: i, applyEntitlements: a = !1, currency: c, renewal: f, metadata: _ } = e,
+});
+var i = r(47120);
+var a = r(192379),
+    s = r(512722),
+    o = r.n(s),
+    l = r(544891),
+    u = r(881052),
+    c = r(146528),
+    d = r(74538),
+    f = r(73346),
+    _ = r(981631);
+async function h(e) {
+    let { items: n, paymentSourceId: r, trialId: i, code: a, applyEntitlements: s = !1, currency: o, renewal: f, metadata: h } = e,
         p = {
-            items: (t = (0, u.gB)(t)).map((e) => {
-                let { planId: t, ...n } = e;
+            items: (n = (0, d.gB)(n)).map((e) => {
+                let { planId: n, ...r } = e;
                 return {
-                    ...n,
-                    plan_id: t
+                    ...r,
+                    plan_id: n
                 };
             }),
-            payment_source_id: n,
-            trial_id: r,
-            code: i,
-            apply_entitlements: a,
-            currency: c,
+            payment_source_id: r,
+            trial_id: i,
+            code: a,
+            apply_entitlements: s,
+            currency: o,
             renewal: f,
-            metadata: _
+            metadata: h
         };
     try {
-        let e = await s.tn.post({
-            url: d.ANM.BILLING_SUBSCRIPTIONS_PREVIEW,
+        let e = await l.tn.post({
+            url: _.ANM.BILLING_SUBSCRIPTIONS_PREVIEW,
             body: p,
             oldFormErrors: !0,
             rejectWithError: !1
         });
-        return l.Z.createInvoiceFromServer(e.body);
+        return c.Z.createInvoiceFromServer(e.body);
     } catch (e) {
-        throw new o.HF(e);
-    }
-}
-async function _(e) {
-    let { subscriptionId: t, items: n, paymentSourceId: r, renewal: i, currency: a, applyEntitlements: c = !1, analyticsLocations: f, analyticsLocation: _, userDiscountOfferId: p } = e;
-    null != n && (n = (0, u.gB)(n));
-    let h = {
-        items:
-            null == n
-                ? void 0
-                : n.map((e) => {
-                      let { planId: t, ...n } = e;
-                      return {
-                          ...n,
-                          plan_id: t
-                      };
-                  }),
-        payment_source_id: r,
-        renewal: i,
-        apply_entitlements: c,
-        currency: a,
-        user_discount_offer_id: p
-    };
-    try {
-        let e = await s.tn.patch({
-            url: d.ANM.BILLING_SUBSCRIPTION_PREVIEW(t),
-            query: {
-                location: _,
-                location_stack: f
-            },
-            body: h,
-            oldFormErrors: !0,
-            rejectWithError: !1
-        });
-        return l.Z.createInvoiceFromServer(e.body);
-    } catch (e) {
-        throw new o.HF(e);
+        throw new u.HF(e);
     }
 }
 async function p(e) {
-    let { paymentSourceId: t, skuId: n, subscriptionPlanId: r, currency: i, loadId: s } = e;
-    a()(n, 'SKU ID is missing for one time purchase gift invoice preview');
+    let { subscriptionId: n, items: r, paymentSourceId: i, renewal: a, currency: s, applyEntitlements: o = !1, analyticsLocations: f, analyticsLocation: h, userDiscountOfferId: p } = e;
+    null != r && (r = (0, d.gB)(r));
+    let m = {
+        items:
+            null == r
+                ? void 0
+                : r.map((e) => {
+                      let { planId: n, ...r } = e;
+                      return {
+                          ...r,
+                          plan_id: n
+                      };
+                  }),
+        payment_source_id: i,
+        renewal: a,
+        apply_entitlements: o,
+        currency: s,
+        user_discount_offer_id: p
+    };
     try {
-        let e = await (0, c.Kb)({
-            url: d.ANM.STORE_SKU_PURCHASE(n),
+        let e = await l.tn.patch({
+            url: _.ANM.BILLING_SUBSCRIPTION_PREVIEW(n),
             query: {
-                gift: !0,
-                payment_source_id: t,
-                sku_subscription_plan_id: r,
-                currency: i,
-                load_id: s
+                location: h,
+                location_stack: f
             },
+            body: m,
             oldFormErrors: !0,
             rejectWithError: !1
         });
-        return l.Z.createInvoiceFromServer(e.body);
+        return c.Z.createInvoiceFromServer(e.body);
     } catch (e) {
-        throw new o.HF(e);
+        throw new u.HF(e);
     }
 }
-async function h(e) {
-    let { subscriptionId: t, preventFetch: n } = e;
-    if (n) return null;
-    let r = await s.tn.get({
-        url: d.ANM.BILLING_SUBSCRIPTION_INVOICE(t),
+async function m(e) {
+    let { paymentSourceId: n, skuId: r, subscriptionPlanId: i, currency: a, loadId: s } = e;
+    o()(r, 'SKU ID is missing for one time purchase gift invoice preview');
+    let l = {
+        gift: !0,
+        payment_source_id: n,
+        sku_subscription_plan_id: i,
+        currency: a,
+        load_id: s
+    };
+    try {
+        let e = await (0, f.Kb)({
+            url: _.ANM.STORE_SKU_PURCHASE(r),
+            query: l,
+            oldFormErrors: !0,
+            rejectWithError: !1
+        });
+        return c.Z.createInvoiceFromServer(e.body);
+    } catch (e) {
+        throw new u.HF(e);
+    }
+}
+async function g(e) {
+    let { subscriptionId: n, preventFetch: r } = e;
+    if (r) return null;
+    let i = await l.tn.get({
+        url: _.ANM.BILLING_SUBSCRIPTION_INVOICE(n),
         oldFormErrors: !0,
         rejectWithError: !1
     });
-    return l.Z.createInvoiceFromServer(r.body);
+    return c.Z.createInvoiceFromServer(i.body);
 }
-function m(e, t) {
-    let { preventFetch: n = !1 } = e,
-        [i, a] = (0, r.useState)(null),
-        [s, o] = (0, r.useState)(null);
+function E(e, n) {
+    let { preventFetch: r = !1 } = e,
+        [i, s] = (0, a.useState)(null),
+        [o, l] = (0, a.useState)(null);
     return (
-        (0, r.useEffect)(() => {
+        (0, a.useEffect)(() => {
             let e = !1;
-            async function r() {
+            async function i() {
                 try {
-                    o(null), a(null);
-                    let n = await t();
-                    !e && a(n);
-                } catch (t) {
-                    !e && o(t);
+                    l(null), s(null);
+                    let r = await n();
+                    !e && s(r);
+                } catch (n) {
+                    !e && l(n);
                 }
             }
             return (
-                !n && r(),
+                !r && i(),
                 () => {
                     e = !0;
                 }
             );
-        }, [n, t]),
-        [i, s]
+        }, [r, n]),
+        [i, o]
     );
 }
-function g(e) {
-    let t = (0, r.useCallback)(() => p(e), [JSON.stringify(e)]);
-    return m(e, t);
-}
-function E(e) {
-    if ('subscriptionId' in e && null == e.subscriptionId) {
-        let { subscriptionId: t, ...n } = e;
-        e = n;
-    }
-    let t = (0, r.useCallback)(() => ('subscriptionId' in e ? _(e) : 'items' in e ? f(e) : null), [JSON.stringify(e)]);
-    return m(e, t);
-}
 function v(e) {
-    let t = (0, r.useCallback)(() => h(e), [JSON.stringify(e)]);
-    return m(e, t);
+    let n = (0, a.useCallback)(() => m(e), [JSON.stringify(e)]);
+    return E(e, n);
 }
 function I(e) {
-    let t = e.subscriptionPlanPrice;
+    if ('subscriptionId' in e && null == e.subscriptionId) {
+        let { subscriptionId: n, ...r } = e;
+        e = r;
+    }
+    let n = (0, a.useCallback)(() => ('subscriptionId' in e ? p(e) : 'items' in e ? h(e) : null), [JSON.stringify(e)]);
+    return E(e, n);
+}
+function T(e) {
+    let n = (0, a.useCallback)(() => g(e), [JSON.stringify(e)]);
+    return E(e, n);
+}
+function b(e) {
+    let n = e.subscriptionPlanPrice;
     return (
-        e.discounts.forEach((n) => {
-            let r = n.amount / e.quantity;
-            t -= r;
+        e.discounts.forEach((r) => {
+            let i = r.amount / e.quantity;
+            n -= i;
         }),
-        t
+        n
     );
 }

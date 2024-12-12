@@ -1,61 +1,66 @@
-n(47120);
-var r = n(147913),
-    i = n(367907),
-    a = n(728345),
-    s = n(812206),
-    o = n(574176),
-    l = n(314897),
-    u = n(592125),
-    c = n(944486),
-    d = n(885110),
-    f = n(649739),
-    _ = n(981631);
-async function p(e) {
-    await a.ZP.fetchApplications(e, !1);
+var i = r(47120);
+var a = r(147913),
+    s = r(367907),
+    o = r(728345),
+    l = r(812206),
+    u = r(574176),
+    c = r(314897),
+    d = r(592125),
+    f = r(944486),
+    _ = r(885110),
+    h = r(649739),
+    p = r(981631);
+function m(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
 }
-async function h(e) {
+function g(e) {
+    return e.filter((e) => e.type === p.IIU.PLAYING && e.application_id).map((e) => e.application_id);
+}
+async function E(e) {
+    await o.ZP.fetchApplications(e, !1);
+}
+async function v(e) {
     if (null == e) return;
-    let t = u.Z.getChannel(e),
-        { enableHangStatus: n } = o.n.getCurrentConfig({ location: 'GameActivityManager' }, { autoTrackExposure: !1 });
-    if (null == t || !((0, f.Ku)('running_games_change', !1) || n)) return;
-    let r = d.Z.getActivities();
-    if (0 === r.length) return;
-    let a = [...r].filter((e) => e.type === _.IIU.PLAYING && e.application_id).map((e) => e.application_id);
-    await p([...a]);
-    let c = s.Z.getApplication(a[0]);
-    null != c &&
-        i.ZP.trackWithMetadata(_.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_SET, {
+    let n = d.Z.getChannel(e),
+        { enableHangStatus: r } = u.n.getCurrentConfig({ location: 'GameActivityManager' }, { autoTrackExposure: !1 });
+    if (null == n || !((0, h.Ku)('running_games_change', !1) || r)) return;
+    let i = _.Z.getActivities();
+    if (0 === i.length) return;
+    let a = g([...i]);
+    await E([...a]);
+    let o = l.Z.getApplication(a[0]);
+    null != o &&
+        s.ZP.trackWithMetadata(p.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_SET, {
             channel_id: e,
-            guild_id: t.guild_id,
-            game_name: c.name,
-            user_id: l.default.getId()
+            guild_id: n.guild_id,
+            game_name: o.name,
+            user_id: c.default.getId()
         });
 }
-class m extends r.Z {
+class I extends a.Z {
     handleRunningGamesChange() {
-        h(c.Z.getVoiceChannelId());
+        v(f.Z.getVoiceChannelId());
     }
     handleVoiceChannelSelect(e) {
-        let { channelId: t } = e;
-        h(t);
+        let { channelId: n } = e;
+        v(n);
     }
     constructor(...e) {
-        var t, n, r;
         super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = {
+            m(this, 'actions', {
                 RUNNING_GAMES_CHANGE: this.handleRunningGamesChange,
                 VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect
-            }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+            });
     }
 }
-t.Z = new m();
+n.Z = new I();

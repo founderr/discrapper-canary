@@ -1,13 +1,14 @@
 e.exports = function (e) {
+    var n,
+        r = this;
     e = e || {};
-    var t,
-        n = !1;
-    for (t in this.sequenceLevels) {
-        if (e[t]) {
-            n = !0;
+    var i = !1;
+    for (n in r.sequenceLevels) {
+        if (e[n]) {
+            i = !0;
             continue;
         }
-        this.sequenceLevels[t] = 0;
+        r.sequenceLevels[n] = 0;
     }
-    !n && (this.nextExpectedAction = !1);
+    !i && (r.nextExpectedAction = !1);
 };

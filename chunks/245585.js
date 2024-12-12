@@ -1,54 +1,54 @@
-n.d(t, {
+r.d(n, {
     u: function () {
-        return s;
+        return u;
     }
-}),
-    n(627494),
-    n(757143);
-var r = n(503461),
-    i = n(190313);
-function a(e, t, n) {
+});
+var i = r(627494);
+var a = r(757143);
+var s = r(503461),
+    o = r(190313);
+function l(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-class s {
+class u {
     get prefix() {
         return this.table.prefix;
     }
     withoutLogging() {
-        return new s(this.originalPrefix, this.table.tableId, this.table.database, !1);
+        return new u(this.originalPrefix, this.table.tableId, this.table.database, !1);
     }
-    get(e, t, n) {
-        return this.table.get([e, t, u(n)]);
+    get(e, n, r) {
+        return this.table.get([e, n, f(r)]);
     }
-    getLatest(e, t, n) {
-        return this.table.getMany([e, t], {
-            ordering: r.Sk.Descending,
-            limit: n
+    getLatest(e, n, r) {
+        return this.table.getMany([e, n], {
+            ordering: s.Sk.Descending,
+            limit: r
         });
     }
-    getRange(e, t, n, r, i) {
-        return this.table.getRange([e, t, u(n)], [e, t, u(r)], i);
+    getRange(e, n, r, i, a) {
+        return this.table.getRange([e, n, f(r)], [e, n, f(i)], a);
     }
     getMostRecents(e) {
         return this.table.messages.getLatest(e);
     }
-    put(e, t, n) {
-        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.Sn.Replace;
-        return this.table.put(l(e, t, n), i);
+    put(e, n, r) {
+        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s.Sn.Replace;
+        return this.table.put(d(e, n, r), i);
     }
-    putAll(e, t, n) {
-        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.Sn.Replace,
-            a = n.map((n) => l(e, t, n));
+    putAll(e, n, r) {
+        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s.Sn.Replace,
+            a = r.map((r) => d(e, n, r));
         return this.table.putAll(a, i);
     }
     deleteAll() {
@@ -57,41 +57,41 @@ class s {
     deleteGuild(e) {
         return this.table.delete([e]);
     }
-    deleteChannel(e, t) {
-        return this.table.delete([e, t]);
+    deleteChannel(e, n) {
+        return this.table.delete([e, n]);
     }
-    deleteMessage(e, t, n) {
-        return this.table.delete([e, t, u(n)]);
+    deleteMessage(e, n, r) {
+        return this.table.delete([e, n, f(r)]);
     }
-    transaction(e, t) {
-        return this.table.transaction((t) => e(new o(t)), t);
+    transaction(e, n) {
+        return this.table.transaction((n) => e(new c(n)), n);
     }
     upgradeTransaction(e) {
-        return new o(this.table.upgradeTransaction(e));
+        return new c(this.table.upgradeTransaction(e));
     }
-    constructor(e, t, n, r = !0) {
-        a(this, 'originalPrefix', void 0), a(this, 'table', void 0), (this.originalPrefix = e), (this.table = new i.i([e], t, n, r));
+    constructor(e, n, r, i = !0) {
+        l(this, 'originalPrefix', void 0), l(this, 'table', void 0), (this.originalPrefix = e), (this.table = new o.i([e], n, r, i));
     }
 }
-class o {
+class c {
     static fromTableTransaction(e) {
-        return new o(e);
+        return new c(e);
     }
-    static fromDatabaseTransaction(e, t, n) {
-        return new o(new i.E(e, t, n));
+    static fromDatabaseTransaction(e, n, r) {
+        return new c(new o.E(e, n, r));
     }
-    put(e, t, n) {
-        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.Sn.Replace;
-        this.transaction.put(l(e, t, n), i);
+    put(e, n, r) {
+        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s.Sn.Replace;
+        this.transaction.put(d(e, n, r), i);
     }
-    putAll(e, t, n) {
-        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.Sn.Replace,
-            a = n.map((n) => l(e, t, n));
+    putAll(e, n, r) {
+        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s.Sn.Replace,
+            a = r.map((r) => d(e, n, r));
         this.transaction.putAll(a, i);
     }
-    replaceAll(e, t, n) {
-        let r = n.map((n) => l(e, t, n));
-        this.transaction.replaceAll(r);
+    replaceAll(e, n, r) {
+        let i = r.map((r) => d(e, n, r));
+        this.transaction.replaceAll(i);
     }
     deleteAll() {
         this.transaction.delete();
@@ -99,36 +99,37 @@ class o {
     deleteGuild(e) {
         this.transaction.delete([e]);
     }
-    deleteChannel(e, t) {
-        this.transaction.delete([e, t]);
+    deleteChannel(e, n) {
+        this.transaction.delete([e, n]);
     }
-    deleteMessage(e, t, n) {
-        this.transaction.delete([e, t, u(n)]);
+    deleteMessage(e, n, r) {
+        this.transaction.delete([e, n, f(r)]);
     }
     trimOrphans(e) {
         this.transaction.messages.trimOrphans(e);
     }
-    trimChannel(e, t, n) {
-        this.transaction.messages.trimChannel([e, t], n);
+    trimChannel(e, n, r) {
+        this.transaction.messages.trimChannel([e, n], r);
     }
-    trimChannelsIn(e, t) {
-        this.transaction.messages.trimChannelsIn(e, t);
+    trimChannelsIn(e, n) {
+        this.transaction.messages.trimChannelsIn(e, n);
     }
-    trimChannelsNotIn(e, t) {
-        this.transaction.messages.trimChannelsNotIn(e, t);
+    trimChannelsNotIn(e, n) {
+        this.transaction.messages.trimChannelsNotIn(e, n);
     }
     constructor(e) {
-        a(this, 'transaction', void 0), (this.transaction = e);
+        l(this, 'transaction', void 0), (this.transaction = e);
     }
 }
-function l(e, t, n) {
-    let r = u(n.id);
+function d(e, n, r) {
+    let i = f(r.id);
     return {
-        key: [e, t, r],
-        data: n,
-        generation: r
+        key: [e, n, i],
+        data: r,
+        generation: i
     };
 }
-function u(e) {
-    return e.padStart(19, '0');
+function f(e) {
+    let n = 19;
+    return e.padStart(n, '0');
 }

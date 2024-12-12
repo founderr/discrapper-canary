@@ -1,41 +1,42 @@
-var r = n(21841),
-    i = n(689118);
-t.inherits = i;
-t.toArray = function (e, t) {
+var i = r(21841),
+    a = r(689118);
+function s(e, n) {
+    return (64512 & e.charCodeAt(n)) == 55296 && !(n < 0) && !(n + 1 >= e.length) && (64512 & e.charCodeAt(n + 1)) == 56320;
+}
+function o(e, n) {
     if (Array.isArray(e)) return e.slice();
     if (!e) return [];
-    var n = [];
+    var r = [];
     if ('string' == typeof e) {
-        if (t) {
-            if ('hex' === t) for ((e = e.replace(/[^a-z0-9]+/gi, '')).length % 2 != 0 && (e = '0' + e), i = 0; i < e.length; i += 2) n.push(parseInt(e[i] + e[i + 1], 16));
+        if (n) {
+            if ('hex' === n) for ((e = e.replace(/[^a-z0-9]+/gi, '')).length % 2 != 0 && (e = '0' + e), a = 0; a < e.length; a += 2) r.push(parseInt(e[a] + e[a + 1], 16));
         } else {
-            for (var r = 0, i = 0; i < e.length; i++) {
-                var a,
-                    s,
-                    o = e.charCodeAt(i);
-                if (o < 128) n[r++] = o;
-                else if (o < 2048) (n[r++] = (o >> 6) | 192), (n[r++] = (63 & o) | 128);
-                else {
-                    if (((a = e), (s = i), (64512 & a.charCodeAt(s)) != 55296 || s < 0 || s + 1 >= a.length ? 1 : (64512 & a.charCodeAt(s + 1)) != 56320)) (n[r++] = (o >> 12) | 224), (n[r++] = ((o >> 6) & 63) | 128), (n[r++] = (63 & o) | 128);
-                    else (o = 65536 + ((1023 & o) << 10) + (1023 & e.charCodeAt(++i))), (n[r++] = (o >> 18) | 240), (n[r++] = ((o >> 12) & 63) | 128), (n[r++] = ((o >> 6) & 63) | 128), (n[r++] = (63 & o) | 128);
-                }
+            for (var i = 0, a = 0; a < e.length; a++) {
+                var o = e.charCodeAt(a);
+                o < 128 ? (r[i++] = o) : (o < 2048 ? (r[i++] = (o >> 6) | 192) : (s(e, a) ? ((o = 65536 + ((1023 & o) << 10) + (1023 & e.charCodeAt(++a))), (r[i++] = (o >> 18) | 240), (r[i++] = ((o >> 12) & 63) | 128)) : (r[i++] = (o >> 12) | 224), (r[i++] = ((o >> 6) & 63) | 128)), (r[i++] = (63 & o) | 128));
             }
         }
-    } else for (i = 0; i < e.length; i++) n[i] = 0 | e[i];
+    } else for (a = 0; a < e.length; a++) r[a] = 0 | e[a];
+    return r;
+}
+function l(e) {
+    for (var n = '', r = 0; r < e.length; r++) n += d(e[r].toString(16));
     return n;
-};
-function a(e) {
+}
+function u(e) {
     return ((e >>> 24) | ((e >>> 8) & 65280) | ((e << 8) & 16711680) | ((255 & e) << 24)) >>> 0;
 }
-(t.toHex = function (e) {
-    for (var t = '', n = 0; n < e.length; n++) t += s(e[n].toString(16));
-    return t;
-}),
-    (t.htonl = a);
-function s(e) {
+function c(e, n) {
+    for (var r = '', i = 0; i < e.length; i++) {
+        var a = e[i];
+        'little' === n && (a = u(a)), (r += f(a.toString(16)));
+    }
+    return r;
+}
+function d(e) {
     return 1 === e.length ? '0' + e : e;
 }
-function o(e) {
+function f(e) {
     if (7 === e.length) return '0' + e;
     if (6 === e.length) return '00' + e;
     if (5 === e.length) return '000' + e;
@@ -45,83 +46,76 @@ function o(e) {
     else if (1 === e.length) return '0000000' + e;
     else return e;
 }
-(t.toHex32 = function (e, t) {
-    for (var n = '', r = 0; r < e.length; r++) {
-        var i = e[r];
-        'little' === t && (i = a(i)), (n += o(i.toString(16)));
+function _(e, n, r, a) {
+    var s,
+        o = r - n;
+    i(o % 4 == 0);
+    for (var l = Array(o / 4), u = 0, c = n; u < l.length; u++, c += 4) (s = 'big' === a ? (e[c] << 24) | (e[c + 1] << 16) | (e[c + 2] << 8) | e[c + 3] : (e[c + 3] << 24) | (e[c + 2] << 16) | (e[c + 1] << 8) | e[c]), (l[u] = s >>> 0);
+    return l;
+}
+function h(e, n) {
+    for (var r = Array(4 * e.length), i = 0, a = 0; i < e.length; i++, a += 4) {
+        var s = e[i];
+        'big' === n ? ((r[a] = s >>> 24), (r[a + 1] = (s >>> 16) & 255), (r[a + 2] = (s >>> 8) & 255), (r[a + 3] = 255 & s)) : ((r[a + 3] = s >>> 24), (r[a + 2] = (s >>> 16) & 255), (r[a + 1] = (s >>> 8) & 255), (r[a] = 255 & s));
     }
-    return n;
-}),
-    (t.zero2 = s),
-    (t.zero8 = o);
-t.join32 = function (e, t, n, i) {
-    var a,
-        s = n - t;
-    r(s % 4 == 0);
-    for (var o = Array(s / 4), l = 0, u = t; l < o.length; l++, u += 4) (a = 'big' === i ? (e[u] << 24) | (e[u + 1] << 16) | (e[u + 2] << 8) | e[u + 3] : (e[u + 3] << 24) | (e[u + 2] << 16) | (e[u + 1] << 8) | e[u]), (o[l] = a >>> 0);
-    return o;
-};
-t.split32 = function (e, t) {
-    for (var n = Array(4 * e.length), r = 0, i = 0; r < e.length; r++, i += 4) {
-        var a = e[r];
-        'big' === t ? ((n[i] = a >>> 24), (n[i + 1] = (a >>> 16) & 255), (n[i + 2] = (a >>> 8) & 255), (n[i + 3] = 255 & a)) : ((n[i + 3] = a >>> 24), (n[i + 2] = (a >>> 16) & 255), (n[i + 1] = (a >>> 8) & 255), (n[i] = 255 & a));
-    }
-    return n;
-};
-t.rotr32 = function (e, t) {
-    return (e >>> t) | (e << (32 - t));
-};
-t.rotl32 = function (e, t) {
-    return (e << t) | (e >>> (32 - t));
-};
-t.sum32 = function (e, t) {
-    return (e + t) >>> 0;
-};
-t.sum32_3 = function (e, t, n) {
-    return (e + t + n) >>> 0;
-};
-t.sum32_4 = function (e, t, n, r) {
-    return (e + t + n + r) >>> 0;
-};
-t.sum32_5 = function (e, t, n, r, i) {
-    return (e + t + n + r + i) >>> 0;
-};
-t.sum64 = function (e, t, n, r) {
-    var i = e[t],
-        a = (r + e[t + 1]) >>> 0;
-    (e[t] = ((a < r ? 1 : 0) + n + i) >>> 0), (e[t + 1] = a);
-};
-t.sum64_hi = function (e, t, n, r) {
-    return (((t + r) >>> 0 < t ? 1 : 0) + e + n) >>> 0;
-};
-t.sum64_lo = function (e, t, n, r) {
-    return (t + r) >>> 0;
-};
-t.sum64_4_hi = function (e, t, n, r, i, a, s, o) {
-    var l,
-        u = t;
-    return (l = 0 + ((u = (u + r) >>> 0) < t ? 1 : 0)), (l += (u = (u + a) >>> 0) < a ? 1 : 0), (e + n + i + s + (l += (u = (u + o) >>> 0) < o ? 1 : 0)) >>> 0;
-};
-t.sum64_4_lo = function (e, t, n, r, i, a, s, o) {
-    return (t + r + a + o) >>> 0;
-};
-t.sum64_5_hi = function (e, t, n, r, i, a, s, o, l, u) {
-    var c,
-        d = t;
-    return (c = 0 + ((d = (d + r) >>> 0) < t ? 1 : 0)), (c += (d = (d + a) >>> 0) < a ? 1 : 0), (c += (d = (d + o) >>> 0) < o ? 1 : 0), (e + n + i + s + l + (c += (d = (d + u) >>> 0) < u ? 1 : 0)) >>> 0;
-};
-t.sum64_5_lo = function (e, t, n, r, i, a, s, o, l, u) {
-    return (t + r + a + o + u) >>> 0;
-};
-t.rotr64_hi = function (e, t, n) {
-    return ((t << (32 - n)) | (e >>> n)) >>> 0;
-};
-t.rotr64_lo = function (e, t, n) {
-    return ((e << (32 - n)) | (t >>> n)) >>> 0;
-};
-t.shr64_hi = function (e, t, n) {
-    return e >>> n;
-};
-t.shr64_lo = function (e, t, n) {
-    return ((e << (32 - n)) | (t >>> n)) >>> 0;
-};
+    return r;
+}
+function p(e, n) {
+    return (e >>> n) | (e << (32 - n));
+}
+function m(e, n) {
+    return (e << n) | (e >>> (32 - n));
+}
+function g(e, n) {
+    return (e + n) >>> 0;
+}
+function E(e, n, r) {
+    return (e + n + r) >>> 0;
+}
+function v(e, n, r, i) {
+    return (e + n + r + i) >>> 0;
+}
+function I(e, n, r, i, a) {
+    return (e + n + r + i + a) >>> 0;
+}
+function T(e, n, r, i) {
+    var a = e[n],
+        s = (i + e[n + 1]) >>> 0,
+        o = (s < i ? 1 : 0) + r + a;
+    (e[n] = o >>> 0), (e[n + 1] = s);
+}
+function b(e, n, r, i) {
+    return (((n + i) >>> 0 < n ? 1 : 0) + e + r) >>> 0;
+}
+function y(e, n, r, i) {
+    return (n + i) >>> 0;
+}
+function S(e, n, r, i, a, s, o, l) {
+    var u,
+        c = n;
+    return (u = 0 + ((c = (c + i) >>> 0) < n ? 1 : 0)), (u += (c = (c + s) >>> 0) < s ? 1 : 0), (e + r + a + o + (u += (c = (c + l) >>> 0) < l ? 1 : 0)) >>> 0;
+}
+function A(e, n, r, i, a, s, o, l) {
+    return (n + i + s + l) >>> 0;
+}
+function N(e, n, r, i, a, s, o, l, u, c) {
+    var d,
+        f = n;
+    return (d = 0 + ((f = (f + i) >>> 0) < n ? 1 : 0)), (d += (f = (f + s) >>> 0) < s ? 1 : 0), (d += (f = (f + l) >>> 0) < l ? 1 : 0), (e + r + a + o + u + (d += (f = (f + c) >>> 0) < c ? 1 : 0)) >>> 0;
+}
+function C(e, n, r, i, a, s, o, l, u, c) {
+    return (n + i + s + l + c) >>> 0;
+}
+function R(e, n, r) {
+    return ((n << (32 - r)) | (e >>> r)) >>> 0;
+}
+function O(e, n, r) {
+    return ((e << (32 - r)) | (n >>> r)) >>> 0;
+}
+function D(e, n, r) {
+    return e >>> r;
+}
+function L(e, n, r) {
+    return ((e << (32 - r)) | (n >>> r)) >>> 0;
+}
+(n.inherits = a), (n.toArray = o), (n.toHex = l), (n.htonl = u), (n.toHex32 = c), (n.zero2 = d), (n.zero8 = f), (n.join32 = _), (n.split32 = h), (n.rotr32 = p), (n.rotl32 = m), (n.sum32 = g), (n.sum32_3 = E), (n.sum32_4 = v), (n.sum32_5 = I), (n.sum64 = T), (n.sum64_hi = b), (n.sum64_lo = y), (n.sum64_4_hi = S), (n.sum64_4_lo = A), (n.sum64_5_hi = N), (n.sum64_5_lo = C), (n.rotr64_hi = R), (n.rotr64_lo = O), (n.shr64_hi = D), (n.shr64_lo = L);

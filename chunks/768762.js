@@ -1,44 +1,43 @@
-var r,
-    i,
-    a,
-    s,
-    o = n(200651),
-    l = n(192379),
-    u = n(120356),
-    c = n.n(u),
-    d = n(481060),
-    f = n(51474);
-let _ = {
+var i,
+    a = r(200651),
+    s = r(192379),
+    o = r(120356),
+    l = r.n(o),
+    u = r(481060),
+    c = r(51474);
+function d(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let f = {
         UP: 'up',
         RIGHT: 'right',
         DOWN: 'down',
         LEFT: 'left'
     },
-    p = {
-        [_.UP]: f.up,
-        [_.RIGHT]: f.right,
-        [_.DOWN]: f.down,
-        [_.LEFT]: f.left
+    _ = {
+        [f.UP]: c.up,
+        [f.RIGHT]: c.right,
+        [f.DOWN]: c.down,
+        [f.LEFT]: c.left
     };
-class h extends (s = l.PureComponent) {
+class h extends (i = s.PureComponent) {
     render() {
-        let { direction: e, className: t } = this.props;
-        return (0, o.jsx)(d.ArrowSmallUpIcon, {
+        let { direction: e, className: n } = this.props;
+        return (0, a.jsx)(u.ArrowSmallUpIcon, {
             size: 'md',
             color: 'currentColor',
-            className: c()(f.__invalid_arrow, t, { [p[e]]: !0 })
+            className: l()(c.__invalid_arrow, n, { [_[e]]: !0 })
         });
     }
 }
-(r = h),
-    (i = 'Directions'),
-    (a = _),
-    i in r
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.Z = h);
+d(h, 'Directions', f), (n.Z = h);

@@ -1,38 +1,41 @@
-n.d(t, {
+r.d(n, {
     I: function () {
-        return l;
+        return c;
     }
 });
-var r = n(120356),
-    i = n.n(r),
-    a = n(442837),
-    s = n(481060),
-    o = n(607070);
-function l() {
-    let e = (0, a.cj)([o.Z], () => {
-            let { fontScale: e, fontScaleClass: t, keyboardModeEnabled: n, saturation: r, desaturateUserColors: i, useForcedColors: a, systemForcedColors: s, useReducedMotion: l, alwaysShowLinkDecorations: u } = o.Z;
-            return {
-                fontScale: e,
-                fontScaleClass: t,
-                keyboardModeEnabled: n,
-                saturation: r,
-                desaturateUserColors: i,
-                useForcedColors: a,
-                systemForcedColors: s,
-                useReducedMotion: l,
-                alwaysShowLinkDecorations: u
-            };
-        }),
-        t = window.CSS.supports('selector(::-webkit-scrollbar)'),
-        n = i()({
-            'low-saturation': e.saturation <= s.LOW_SATURATION_THRESHOLD,
+var i = r(120356),
+    a = r.n(i),
+    s = r(442837),
+    o = r(481060),
+    l = r(607070);
+function u() {
+    return (0, s.cj)([l.Z], () => {
+        let { fontScale: e, fontScaleClass: n, keyboardModeEnabled: r, saturation: i, desaturateUserColors: a, useForcedColors: s, systemForcedColors: o, useReducedMotion: u, alwaysShowLinkDecorations: c } = l.Z;
+        return {
+            fontScale: e,
+            fontScaleClass: n,
+            keyboardModeEnabled: r,
+            saturation: i,
+            desaturateUserColors: a,
+            useForcedColors: s,
+            systemForcedColors: o,
+            useReducedMotion: u,
+            alwaysShowLinkDecorations: c
+        };
+    });
+}
+function c() {
+    let e = u(),
+        n = window.CSS.supports('selector(::-webkit-scrollbar)'),
+        r = a()({
+            'low-saturation': e.saturation <= o.LOW_SATURATION_THRESHOLD,
             'keyboard-mode': e.keyboardModeEnabled,
             'decorate-links': e.alwaysShowLinkDecorations,
-            'no-webkit-scrollbar': !t,
-            'has-webkit-scrollbar': t
+            'no-webkit-scrollbar': !n,
+            'has-webkit-scrollbar': n
         });
     return {
         accessibilitySettings: e,
-        appWrapperClassName: n
+        appWrapperClassName: r
     };
 }

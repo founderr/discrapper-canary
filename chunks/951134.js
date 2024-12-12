@@ -1,9 +1,10 @@
-e.exports = function (e) {
-    let t = e.regex,
-        n = 'HTTP/(2|1\\.[01])',
-        r = {
+function n(e) {
+    let n = e.regex,
+        r = 'HTTP/(2|1\\.[01])',
+        i = /[A-Za-z][A-Za-z0-9-]*/,
+        a = {
             className: 'attribute',
-            begin: t.concat('^', /[A-Za-z][A-Za-z0-9-]*/, '(?=\\:\\s)'),
+            begin: n.concat('^', i, '(?=\\:\\s)'),
             starts: {
                 contains: [
                     {
@@ -18,8 +19,8 @@ e.exports = function (e) {
                 ]
             }
         },
-        i = [
-            r,
+        s = [
+            a,
             {
                 begin: '\\n\\n',
                 starts: {
@@ -34,12 +35,12 @@ e.exports = function (e) {
         illegal: /\S/,
         contains: [
             {
-                begin: '^(?=' + n + ' \\d{3})',
+                begin: '^(?=' + r + ' \\d{3})',
                 end: /$/,
                 contains: [
                     {
                         className: 'meta',
-                        begin: n
+                        begin: r
                     },
                     {
                         className: 'number',
@@ -49,11 +50,11 @@ e.exports = function (e) {
                 starts: {
                     end: /\b\B/,
                     illegal: /\S/,
-                    contains: i
+                    contains: s
                 }
             },
             {
-                begin: '(?=^[A-Z]+ (.*?) ' + n + '$)',
+                begin: '(?=^[A-Z]+ (.*?) ' + r + '$)',
                 end: /$/,
                 contains: [
                     {
@@ -65,7 +66,7 @@ e.exports = function (e) {
                     },
                     {
                         className: 'meta',
-                        begin: n
+                        begin: r
                     },
                     {
                         className: 'keyword',
@@ -75,10 +76,11 @@ e.exports = function (e) {
                 starts: {
                     end: /\b\B/,
                     illegal: /\S/,
-                    contains: i
+                    contains: s
                 }
             },
-            e.inherit(r, { relevance: 0 })
+            e.inherit(a, { relevance: 0 })
         ]
     };
-};
+}
+e.exports = n;

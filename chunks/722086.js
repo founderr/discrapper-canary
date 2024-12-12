@@ -1,48 +1,53 @@
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140);
-let u = {};
-function c() {
-    u = {};
+var i,
+    a = r(442837),
+    s = r(570140);
+function o(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
 }
-class d extends (s = o.ZP.Store) {
+let l = {};
+function u() {
+    l = {};
+}
+function c(e) {
+    l[e.id] = {
+        loading: !1,
+        note: e.note
+    };
+}
+function d(e) {
+    let { userId: n } = e;
+    l[n] = {
+        loading: !0,
+        note: null
+    };
+}
+function f(e) {
+    let { userId: n, note: r } = e;
+    l[n] = {
+        loading: !1,
+        note: null == r ? void 0 : r.note
+    };
+}
+class _ extends (i = a.ZP.Store) {
     getNote(e) {
-        return u[e];
+        return l[e];
     }
 }
-(a = 'NoteStore'),
-    (i = 'displayName') in (r = d)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.Z = new d(l.Z, {
-        CONNECTION_OPEN: c,
-        OVERLAY_INITIALIZE: c,
-        USER_NOTE_UPDATE: function (e) {
-            u[e.id] = {
-                loading: !1,
-                note: e.note
-            };
-        },
-        USER_NOTE_LOAD_START: function (e) {
-            let { userId: t } = e;
-            u[t] = {
-                loading: !0,
-                note: null
-            };
-        },
-        USER_NOTE_LOADED: function (e) {
-            let { userId: t, note: n } = e;
-            u[t] = {
-                loading: !1,
-                note: null == n ? void 0 : n.note
-            };
-        }
+o(_, 'displayName', 'NoteStore'),
+    (n.Z = new _(s.Z, {
+        CONNECTION_OPEN: u,
+        OVERLAY_INITIALIZE: u,
+        USER_NOTE_UPDATE: c,
+        USER_NOTE_LOAD_START: d,
+        USER_NOTE_LOADED: f
     }));

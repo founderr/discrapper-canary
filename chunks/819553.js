@@ -1,80 +1,91 @@
-n.d(t, {
+r.d(n, {
     kp: function () {
-        return f;
+        return c;
     },
     uX: function () {
-        return o;
+        return i;
     }
 });
-var r,
-    i,
+var i,
     a,
-    s,
-    o,
-    l,
-    u = n(442837),
-    c = n(570140),
-    d = n(981631);
-function f(e) {
+    s = r(442837),
+    o = r(570140),
+    l = r(981631);
+function u(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+function c(e) {
     return null != e && ['started', 'ready'].includes(e);
 }
-((r = o || (o = {})).STARTED = 'started'), (r.READY = 'ready'), (r.COMPLETED = 'completed'), (r.NOT_APPLICABLE = 'not_applicable');
-let _ = {},
-    p = {};
-class h extends (l = u.ZP.Store) {
+!(function (e) {
+    (e.STARTED = 'started'), (e.READY = 'ready'), (e.COMPLETED = 'completed'), (e.NOT_APPLICABLE = 'not_applicable');
+})(i || (i = {}));
+let d = {},
+    f = {};
+function _() {
+    (d = {}), (f = {});
+}
+function h(e) {
+    let { guildId: n } = e;
+    d[n] = 'started';
+}
+function p(e) {
+    let { guildId: n, enabled: r } = e;
+    if ('started' !== d[n]) return !1;
+    r ? (d[n] = 'ready') : (d[n] = 'not_applicable');
+}
+function m(e) {
+    let { guildId: n } = e;
+    d[n] = 'not_applicable';
+}
+function g(e) {
+    let { guildId: n } = e;
+    d[n] = 'completed';
+}
+function E(e) {
+    let { guild: n } = e;
+    delete d[n.id], delete f[n.id];
+}
+function v(e) {
+    let { guildId: n, step: r } = e;
+    f[n] = r;
+}
+function I() {
+    f = {};
+}
+class T extends (a = s.ZP.Store) {
     shouldShowOnboarding(e) {
-        return !!(e !== d.ME && e !== d.I_8 && f(_[e])) || !1;
+        return !!(e !== l.ME && e !== l.I_8 && c(d[e])) || !1;
     }
     getOnboardingStatus(e) {
-        return _[e];
+        return d[e];
     }
     resetOnboardingStatus(e) {
-        (_[e] = 'started'), (p[e] = 'cover');
+        (d[e] = 'started'), (f[e] = 'cover');
     }
     getCurrentOnboardingStep(e) {
-        var t;
-        return null !== (t = p[e]) && void 0 !== t ? t : 'cover';
+        var n;
+        return null !== (n = f[e]) && void 0 !== n ? n : 'cover';
     }
 }
-(s = 'GuildOnboardingStore'),
-    (a = 'displayName') in (i = h)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.ZP = new h(c.Z, {
-        LOGOUT: function () {
-            (_ = {}), (p = {});
-        },
-        GUILD_DELETE: function (e) {
-            let { guild: t } = e;
-            delete _[t.id], delete p[t.id];
-        },
-        GUILD_ONBOARDING_START: function (e) {
-            let { guildId: t } = e;
-            _[t] = 'started';
-        },
-        GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: function (e) {
-            let { guildId: t, enabled: n } = e;
-            if ('started' !== _[t]) return !1;
-            n ? (_[t] = 'ready') : (_[t] = 'not_applicable');
-        },
-        GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: function (e) {
-            let { guildId: t } = e;
-            _[t] = 'not_applicable';
-        },
-        GUILD_ONBOARDING_COMPLETE: function (e) {
-            let { guildId: t } = e;
-            _[t] = 'completed';
-        },
-        GUILD_ONBOARDING_SET_STEP: function (e) {
-            let { guildId: t, step: n } = e;
-            p[t] = n;
-        },
-        CONNECTION_OPEN: function () {
-            p = {};
-        }
+u(T, 'displayName', 'GuildOnboardingStore'),
+    (n.ZP = new T(o.Z, {
+        LOGOUT: _,
+        GUILD_DELETE: E,
+        GUILD_ONBOARDING_START: h,
+        GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: p,
+        GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: m,
+        GUILD_ONBOARDING_COMPLETE: g,
+        GUILD_ONBOARDING_SET_STEP: v,
+        CONNECTION_OPEN: I
     }));

@@ -1,16 +1,17 @@
-n.d(t, {
+r.d(n, {
     O: function () {
         return i;
     }
 });
-var r,
-    i,
-    a = n(774258),
-    s = n(871465),
-    o = n(388032),
-    l = n(770676),
-    u = n(483465);
-(r = i || (i = {}))[(r.THROW_EMOJI = 0)] = 'THROW_EMOJI';
+var i,
+    a = r(774258),
+    s = r(871465),
+    o = r(388032),
+    l = r(770676),
+    u = r(483465);
+!(function (e) {
+    e[(e.THROW_EMOJI = 0)] = 'THROW_EMOJI';
+})(i || (i = {}));
 let c = {
     experiment: a.Z,
     startTimeMs: 1729789200000,
@@ -26,4 +27,4 @@ let c = {
     emojiAnimationTriggers: ['jack_o_lantern', 'nose'],
     triggerEmojiAnimationFromSentMessage: !1
 };
-t.Z = c;
+n.Z = c;

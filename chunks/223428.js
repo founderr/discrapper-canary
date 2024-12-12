@@ -1,92 +1,93 @@
-var r = n(35768),
-    i = n(771378),
-    a = n(778247),
-    s = n(780177),
-    o = n(585754),
-    l = n(957578).Buffer;
-function u(e) {
-    'object' == typeof e && !l.isBuffer(e) && ((t = e.passphrase), (e = e.key)), 'string' == typeof e && (e = l.from(e));
-    var t,
-        n,
-        u,
-        c = a(e, t),
-        d = c.tag,
-        f = c.data;
-    switch (d) {
+var i = r(35768),
+    a = r(771378),
+    s = r(778247),
+    o = r(780177),
+    l = r(585754),
+    u = r(957578).Buffer;
+function c(e) {
+    'object' == typeof e && !u.isBuffer(e) && ((n = e.passphrase), (e = e.key)), 'string' == typeof e && (e = u.from(e));
+    var n,
+        r,
+        a,
+        o = s(e, n),
+        l = o.tag,
+        c = o.data;
+    switch (l) {
         case 'CERTIFICATE':
-            u = r.certificate.decode(f, 'der').tbsCertificate.subjectPublicKeyInfo;
+            a = i.certificate.decode(c, 'der').tbsCertificate.subjectPublicKeyInfo;
         case 'PUBLIC KEY':
-            switch ((!u && (u = r.PublicKey.decode(f, 'der')), (n = u.algorithm.algorithm.join('.')))) {
+            switch ((!a && (a = i.PublicKey.decode(c, 'der')), (r = a.algorithm.algorithm.join('.')))) {
                 case '1.2.840.113549.1.1.1':
-                    return r.RSAPublicKey.decode(u.subjectPublicKey.data, 'der');
+                    return i.RSAPublicKey.decode(a.subjectPublicKey.data, 'der');
                 case '1.2.840.10045.2.1':
                     return (
-                        (u.subjectPrivateKey = u.subjectPublicKey),
+                        (a.subjectPrivateKey = a.subjectPublicKey),
                         {
                             type: 'ec',
-                            data: u
+                            data: a
                         }
                     );
                 case '1.2.840.10040.4.1':
                     return (
-                        (u.algorithm.params.pub_key = r.DSAparam.decode(u.subjectPublicKey.data, 'der')),
+                        (a.algorithm.params.pub_key = i.DSAparam.decode(a.subjectPublicKey.data, 'der')),
                         {
                             type: 'dsa',
-                            data: u.algorithm.params
+                            data: a.algorithm.params
                         }
                     );
                 default:
-                    throw Error('unknown key id ' + n);
+                    throw Error('unknown key id ' + r);
             }
         case 'ENCRYPTED PRIVATE KEY':
-            f = (function (e, t) {
-                var n = e.algorithm.decrypt.kde.kdeparams.salt,
-                    r = parseInt(e.algorithm.decrypt.kde.kdeparams.iters.toString(), 10),
-                    a = i[e.algorithm.decrypt.cipher.algo.join('.')],
-                    u = e.algorithm.decrypt.cipher.iv,
-                    c = e.subjectPrivateKey,
-                    d = parseInt(a.split('-')[1], 10) / 8,
-                    f = o.pbkdf2Sync(t, n, r, d, 'sha1'),
-                    _ = s.createDecipheriv(a, f, u),
-                    p = [];
-                return p.push(_.update(c)), p.push(_.final()), l.concat(p);
-            })((f = r.EncryptedPrivateKey.decode(f, 'der')), t);
+            c = d((c = i.EncryptedPrivateKey.decode(c, 'der')), n);
         case 'PRIVATE KEY':
-            switch ((n = (u = r.PrivateKey.decode(f, 'der')).algorithm.algorithm.join('.'))) {
+            switch ((r = (a = i.PrivateKey.decode(c, 'der')).algorithm.algorithm.join('.'))) {
                 case '1.2.840.113549.1.1.1':
-                    return r.RSAPrivateKey.decode(u.subjectPrivateKey, 'der');
+                    return i.RSAPrivateKey.decode(a.subjectPrivateKey, 'der');
                 case '1.2.840.10045.2.1':
                     return {
-                        curve: u.algorithm.curve,
-                        privateKey: r.ECPrivateKey.decode(u.subjectPrivateKey, 'der').privateKey
+                        curve: a.algorithm.curve,
+                        privateKey: i.ECPrivateKey.decode(a.subjectPrivateKey, 'der').privateKey
                     };
                 case '1.2.840.10040.4.1':
                     return (
-                        (u.algorithm.params.priv_key = r.DSAparam.decode(u.subjectPrivateKey, 'der')),
+                        (a.algorithm.params.priv_key = i.DSAparam.decode(a.subjectPrivateKey, 'der')),
                         {
                             type: 'dsa',
-                            params: u.algorithm.params
+                            params: a.algorithm.params
                         }
                     );
                 default:
-                    throw Error('unknown key id ' + n);
+                    throw Error('unknown key id ' + r);
             }
         case 'RSA PUBLIC KEY':
-            return r.RSAPublicKey.decode(f, 'der');
+            return i.RSAPublicKey.decode(c, 'der');
         case 'RSA PRIVATE KEY':
-            return r.RSAPrivateKey.decode(f, 'der');
+            return i.RSAPrivateKey.decode(c, 'der');
         case 'DSA PRIVATE KEY':
             return {
                 type: 'dsa',
-                params: r.DSAPrivateKey.decode(f, 'der')
+                params: i.DSAPrivateKey.decode(c, 'der')
             };
         case 'EC PRIVATE KEY':
             return {
-                curve: (f = r.ECPrivateKey.decode(f, 'der')).parameters.value,
-                privateKey: f.privateKey
+                curve: (c = i.ECPrivateKey.decode(c, 'der')).parameters.value,
+                privateKey: c.privateKey
             };
         default:
-            throw Error('unknown key type ' + d);
+            throw Error('unknown key type ' + l);
     }
 }
-(e.exports = u), (u.signature = r.signature);
+function d(e, n) {
+    var r = e.algorithm.decrypt.kde.kdeparams.salt,
+        i = parseInt(e.algorithm.decrypt.kde.kdeparams.iters.toString(), 10),
+        s = a[e.algorithm.decrypt.cipher.algo.join('.')],
+        c = e.algorithm.decrypt.cipher.iv,
+        d = e.subjectPrivateKey,
+        f = parseInt(s.split('-')[1], 10) / 8,
+        _ = l.pbkdf2Sync(n, r, i, f, 'sha1'),
+        h = o.createDecipheriv(s, _, c),
+        p = [];
+    return p.push(h.update(d)), p.push(h.final()), u.concat(p);
+}
+(e.exports = c), (c.signature = i.signature);

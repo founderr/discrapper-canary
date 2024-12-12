@@ -1,57 +1,53 @@
-var r = n(957578).Buffer,
-    i = n(477260).Transform,
-    a = n(689118);
-function s(e) {
-    i.call(this), (this._block = r.allocUnsafe(e)), (this._blockSize = e), (this._blockOffset = 0), (this._length = [0, 0, 0, 0]), (this._finalized = !1);
+var i = r(957578).Buffer,
+    a = r(477260).Transform;
+function s(e, n) {
+    if (!i.isBuffer(e) && 'string' != typeof e) throw TypeError(n + ' must be a string or a buffer');
 }
-a(s, i),
-    (s.prototype._transform = function (e, t, n) {
-        var r = null;
+function o(e) {
+    a.call(this), (this._block = i.allocUnsafe(e)), (this._blockSize = e), (this._blockOffset = 0), (this._length = [0, 0, 0, 0]), (this._finalized = !1);
+}
+r(689118)(o, a),
+    (o.prototype._transform = function (e, n, r) {
+        var i = null;
         try {
-            this.update(e, t);
+            this.update(e, n);
         } catch (e) {
-            r = e;
+            i = e;
         }
-        n(r);
+        r(i);
     }),
-    (s.prototype._flush = function (e) {
-        var t = null;
+    (o.prototype._flush = function (e) {
+        var n = null;
         try {
             this.push(this.digest());
         } catch (e) {
-            t = e;
+            n = e;
         }
-        e(t);
+        e(n);
     }),
-    (s.prototype.update = function (e, t) {
-        if (
-            (!(function (e, t) {
-                if (!r.isBuffer(e) && 'string' != typeof e) throw TypeError(t + ' must be a string or a buffer');
-            })(e, 'Data'),
-            this._finalized)
-        )
-            throw Error('Digest already called');
-        !r.isBuffer(e) && (e = r.from(e, t));
-        for (var n = this._block, i = 0; this._blockOffset + e.length - i >= this._blockSize; ) {
-            for (var a = this._blockOffset; a < this._blockSize; ) n[a++] = e[i++];
+    (o.prototype.update = function (e, n) {
+        if ((s(e, 'Data'), this._finalized)) throw Error('Digest already called');
+        !i.isBuffer(e) && (e = i.from(e, n));
+        for (var r = this._block, a = 0; this._blockOffset + e.length - a >= this._blockSize; ) {
+            for (var o = this._blockOffset; o < this._blockSize; ) r[o++] = e[a++];
             this._update(), (this._blockOffset = 0);
         }
-        for (; i < e.length; ) n[this._blockOffset++] = e[i++];
-        for (var s = 0, o = 8 * e.length; o > 0; ++s) (this._length[s] += o), (o = (this._length[s] / 4294967296) | 0) > 0 && (this._length[s] -= 4294967296 * o);
+        for (; a < e.length; ) r[this._blockOffset++] = e[a++];
+        for (var l = 0, u = 8 * e.length; u > 0; ++l) (this._length[l] += u), (u = (this._length[l] / 4294967296) | 0) > 0 && (this._length[l] -= 4294967296 * u);
         return this;
     }),
-    (s.prototype._update = function () {
+    (o.prototype._update = function () {
         throw Error('_update is not implemented');
     }),
-    (s.prototype.digest = function (e) {
+    (o.prototype.digest = function (e) {
         if (this._finalized) throw Error('Digest already called');
         this._finalized = !0;
-        var t = this._digest();
-        void 0 !== e && (t = t.toString(e)), this._block.fill(0), (this._blockOffset = 0);
-        for (var n = 0; n < 4; ++n) this._length[n] = 0;
-        return t;
+        var n = this._digest();
+        void 0 !== e && (n = n.toString(e)), this._block.fill(0), (this._blockOffset = 0);
+        for (var r = 0; r < 4; ++r) this._length[r] = 0;
+        return n;
     }),
-    (s.prototype._digest = function () {
+    (o.prototype._digest = function () {
         throw Error('_digest is not implemented');
     }),
-    (e.exports = s);
+    (e.exports = o);

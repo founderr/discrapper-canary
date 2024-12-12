@@ -1,47 +1,48 @@
-n.d(t, {
+r.d(n, {
     t: function () {
-        return o;
+        return u;
     }
 });
-var r = n(927521),
-    i = n(165352);
-function a(e) {
-    return 'minguo' === e.era ? e.year + 1911 : 1 - e.year + 1911;
+var i = r(927521),
+    a = r(165352);
+let s = 1911;
+function o(e) {
+    return 'minguo' === e.era ? e.year + s : 1 - e.year + s;
 }
-function s(e) {
-    let t = e - 1911;
-    return t > 0 ? ['minguo', t] : ['before_minguo', 1 - t];
+function l(e) {
+    let n = e - s;
+    return n > 0 ? ['minguo', n] : ['before_minguo', 1 - n];
 }
-class o extends i.IQ {
+class u extends a.IQ {
     fromJulianDay(e) {
-        let t = super.fromJulianDay(e),
-            [n, a] = s((0, i.J4)(t.era, t.year));
-        return new r.aw(this, n, a, t.month, t.day);
+        let n = super.fromJulianDay(e),
+            [r, s] = l((0, a.J4)(n.era, n.year));
+        return new i.aw(this, r, s, n.month, n.day);
     }
     toJulianDay(e) {
-        return super.toJulianDay(l(e));
+        return super.toJulianDay(c(e));
     }
     getEras() {
         return ['before_minguo', 'minguo'];
     }
     balanceDate(e) {
-        let [t, n] = s(a(e));
-        (e.era = t), (e.year = n);
+        let [n, r] = l(o(e));
+        (e.era = n), (e.year = r);
     }
     isInverseEra(e) {
         return 'before_minguo' === e.era;
     }
     getDaysInMonth(e) {
-        return super.getDaysInMonth(l(e));
+        return super.getDaysInMonth(c(e));
     }
     getYearsInEra(e) {
-        return 'before_minguo' === e.era ? 9999 : 8088;
+        return 'before_minguo' === e.era ? 9999 : 9999 - s;
     }
     constructor(...e) {
         super(...e), (this.identifier = 'roc');
     }
 }
-function l(e) {
-    let [t, n] = (0, i.JD)(a(e));
-    return new r.aw(t, n, e.month, e.day);
+function c(e) {
+    let [n, r] = (0, a.JD)(o(e));
+    return new i.aw(n, r, e.month, e.day);
 }

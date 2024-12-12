@@ -1,19 +1,20 @@
-n.d(t, {
+r.d(n, {
     x8: function () {
-        return a;
+        return l;
     }
-}),
-    n(47120);
-var r = n(192379),
-    i = n(223143);
-function a() {
-    let [e, t] = r.useState(),
-        { purchases: n, hasPreviouslyFetched: a } = (0, i.c7)(),
-        s = r.useRef(!1);
+});
+var i = r(47120);
+var a = r(192379),
+    s = r(223143);
+let o = '1157412779335090267';
+function l() {
+    let [e, n] = a.useState(),
+        { purchases: r, hasPreviouslyFetched: i } = (0, s.c7)(),
+        l = a.useRef(!1);
     return (
-        r.useEffect(() => {
-            a && !s.current && (t(null != n.get('1157412779335090267')), (s.current = !0));
-        }, [n, a]),
+        a.useEffect(() => {
+            i && !l.current && (n(null != r.get(o)), (l.current = !0));
+        }, [r, i]),
         e
     );
 }

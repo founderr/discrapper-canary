@@ -1,73 +1,76 @@
-var r = n(192379),
-    i = n(476400),
-    a = n.n(i),
-    s = n(723184),
-    o = n(829307),
-    l = n(877837),
-    u = n(361016),
-    c =
+var i = r(192379),
+    a = r(476400),
+    s = r.n(a),
+    o = r(723184),
+    l = r(829307),
+    u = r(877837),
+    c = r(361016),
+    d =
         Object.assign ||
         function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+            for (var n = 1; n < arguments.length; n++) {
+                var r = arguments[n];
+                for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
             }
             return e;
         },
-    d = function (e) {
-        var t = e.width,
-            n = e.height,
-            i = e.onChange,
-            a = e.hsl,
-            u = e.direction,
-            d = e.pointer,
-            f = e.styles,
-            _ = e.className,
-            p = (0, s.default)(
-                (0, o.Z)(
+    f = function (e) {
+        var n = e.width,
+            r = e.height,
+            a = e.onChange,
+            s = e.hsl,
+            c = e.direction,
+            f = e.pointer,
+            _ = e.styles,
+            h = void 0 === _ ? {} : _,
+            p = e.className,
+            m = void 0 === p ? '' : p,
+            g = (0, o.default)(
+                (0, l.Z)(
                     {
                         default: {
                             picker: {
                                 position: 'relative',
-                                width: t,
-                                height: n
+                                width: n,
+                                height: r
                             },
                             hue: { radius: '2px' }
                         }
                     },
-                    void 0 === f ? {} : f
+                    h
                 )
-            );
-        return r.createElement(
+            ),
+            E = function (e) {
+                return a({
+                    a: 1,
+                    h: e.h,
+                    l: 0.5,
+                    s: 1
+                });
+            };
+        return i.createElement(
             'div',
             {
-                style: p.picker,
-                className: 'hue-picker ' + (void 0 === _ ? '' : _)
+                style: g.picker,
+                className: 'hue-picker ' + m
             },
-            r.createElement(
-                l.PS,
-                c({}, p.hue, {
-                    hsl: a,
-                    pointer: d,
-                    onChange: function (e) {
-                        return i({
-                            a: 1,
-                            h: e.h,
-                            l: 0.5,
-                            s: 1
-                        });
-                    },
-                    direction: u
+            i.createElement(
+                u.PS,
+                d({}, g.hue, {
+                    hsl: s,
+                    pointer: f,
+                    onChange: E,
+                    direction: c
                 })
             )
         );
     };
-(d.propTypes = { styles: a().object }),
-    (d.defaultProps = {
+(f.propTypes = { styles: s().object }),
+    (f.defaultProps = {
         width: '316px',
         height: '16px',
         direction: 'horizontal',
-        pointer: u.Z,
+        pointer: c.Z,
         styles: {}
     }),
-    (0, l.t1)(d);
+    (0, u.t1)(f);

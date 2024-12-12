@@ -1,10 +1,12 @@
-var r = n(929527);
-Object.keys(r).forEach(function (e) {
+i = { value: !0 };
+var i,
+    a = r(929527);
+Object.keys(a).forEach(function (e) {
     'default' !== e &&
-        Object.defineProperty(t, e, {
+        Object.defineProperty(n, e, {
             enumerable: !0,
             get: function () {
-                return r[e];
+                return a[e];
             }
         });
 });

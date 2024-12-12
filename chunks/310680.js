@@ -1,11 +1,12 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return function e(t) {
-            return ['html', 'body', '#document'].indexOf((0, a.Z)(t)) >= 0 ? t.ownerDocument.body : (0, s.Re)(t) && (0, i.Z)(t) ? t : e((0, r.Z)(t));
-        };
+        return l;
     }
 });
-var r = n(660027),
-    i = n(538018),
-    a = n(316138),
-    s = n(882159);
+var i = r(660027),
+    a = r(538018),
+    s = r(316138),
+    o = r(882159);
+function l(e) {
+    return ['html', 'body', '#document'].indexOf((0, s.Z)(e)) >= 0 ? e.ownerDocument.body : (0, o.Re)(e) && (0, a.Z)(e) ? e : l((0, i.Z)(e));
+}

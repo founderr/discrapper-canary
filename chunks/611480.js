@@ -1,5 +1,5 @@
-var r, i;
-n.d(t, {
+var i;
+r.d(n, {
     ED: function () {
         return s;
     },
@@ -28,7 +28,7 @@ n.d(t, {
         return a;
     },
     yr: function () {
-        return r;
+        return i;
     }
 });
 let a = 'sticker-picker-tab-panel',
@@ -40,4 +40,6 @@ let a = 'sticker-picker-tab-panel',
     d = ['781323769960202280', '809209266556764241', '818597810047680532', '819129296374595614'],
     f = 524288,
     _ = 1572864;
-((i = r || (r = {}))[(i.ALWAYS_ANIMATE = 0)] = 'ALWAYS_ANIMATE'), (i[(i.ANIMATE_ON_INTERACTION = 1)] = 'ANIMATE_ON_INTERACTION'), (i[(i.NEVER_ANIMATE = 2)] = 'NEVER_ANIMATE');
+!(function (e) {
+    (e[(e.ALWAYS_ANIMATE = 0)] = 'ALWAYS_ANIMATE'), (e[(e.ANIMATE_ON_INTERACTION = 1)] = 'ANIMATE_ON_INTERACTION'), (e[(e.NEVER_ANIMATE = 2)] = 'NEVER_ANIMATE');
+})(i || (i = {}));

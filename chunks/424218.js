@@ -1,34 +1,36 @@
-n.d(t, {
+r.d(n, {
     BU: function () {
-        return s;
+        return u;
     },
     IC: function () {
-        return o;
+        return c;
     },
     XD: function () {
-        return i;
+        return a;
     }
 });
-var r = n(388032);
-let i = 1024,
-    a = {
+var i = r(388032);
+let a = 1024,
+    s = 1024,
+    o = 1024,
+    l = {
         useKibibytes: !1,
         showDecimalForGB: !0,
         useSpace: !0
     };
-function s(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a,
-        n = t.useKibibytes ? 1024 : 1000,
-        i = t.useKibibytes ? 1024 : 1000,
-        s = Math.ceil(e / n);
-    if (s < i) return t.useSpace ? r.intl.formatToPlainString(r.t.cS889P, { size: s }) : r.intl.formatToPlainString(r.t.pIn7AQ, { size: s });
-    let o = s / i;
-    return (o = t.showDecimalForGB ? Math.round(10 * o) / 10 : Math.round(o)), t.useSpace ? r.intl.formatToPlainString(r.t.yhEXX1, { size: o }) : r.intl.formatToPlainString(r.t.TbMX9P, { size: o });
+function u(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l,
+        r = n.useKibibytes ? s : 1000,
+        a = n.useKibibytes ? o : 1000,
+        u = Math.ceil(e / r);
+    if (u < a) return n.useSpace ? i.intl.formatToPlainString(i.t.cS889P, { size: u }) : i.intl.formatToPlainString(i.t.pIn7AQ, { size: u });
+    let c = u / a;
+    return (c = n.showDecimalForGB ? Math.round(10 * c) / 10 : Math.round(c)), n.useSpace ? i.intl.formatToPlainString(i.t.yhEXX1, { size: c }) : i.intl.formatToPlainString(i.t.TbMX9P, { size: c });
 }
-function o(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a,
-        n = t.useKibibytes ? i : 1000,
-        o = t.useKibibytes ? 1024 : 1000,
-        l = e / n;
-    return l / o >= 1 ? s(l, t) : t.useSpace ? r.intl.formatToPlainString(r.t.bTzRR0, { size: Math.ceil(l) }) : r.intl.formatToPlainString(r.t.kEk9pq, { size: Math.ceil(l) });
+function c(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l,
+        r = n.useKibibytes ? a : 1000,
+        o = n.useKibibytes ? s : 1000,
+        c = e / r;
+    return c / o >= 1 ? u(c, n) : n.useSpace ? i.intl.formatToPlainString(i.t.bTzRR0, { size: Math.ceil(c) }) : i.intl.formatToPlainString(i.t.kEk9pq, { size: Math.ceil(c) });
 }

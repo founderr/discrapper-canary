@@ -1,28 +1,41 @@
-n.d(t, {
+r.d(n, {
     s: function () {
-        return l;
+        return f;
     }
-}),
-    n(47120),
-    n(627341);
-var r = n(278074),
-    i = n(264181),
-    a = n(178185),
-    s = n(272280),
-    o = n(806185);
-class l {
+});
+var i = r(47120);
+var a = r(627341);
+var s = r(278074),
+    o = r(264181),
+    l = r(178185),
+    u = r(272280),
+    c = r(806185);
+function d(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+class f {
     static fromServer(e) {
-        var t;
-        return new l(
+        var n;
+        return new f(
             Object.fromEntries(
-                Object.entries(null !== (t = e.marketings) && void 0 !== t ? t : {}).map((e) => {
-                    let [t, n] = e;
+                Object.entries(null !== (n = e.marketings) && void 0 !== n ? n : {}).map((e) => {
+                    let [n, r] = e;
                     return [
-                        t,
-                        (0, r.EQ)(n)
-                            .with({ type: i.Z.COACHTIP }, (e) => o.Z.fromServer(e))
-                            .with({ type: i.Z.BADGE }, (e) => a.E.fromServer(e))
-                            .with({ type: i.Z.BANNER }, (e) => s.I.fromServer(e))
+                        n,
+                        (0, s.EQ)(r)
+                            .with({ type: o.Z.COACHTIP }, (e) => c.Z.fromServer(e))
+                            .with({ type: o.Z.BADGE }, (e) => l.E.fromServer(e))
+                            .with({ type: o.Z.BANNER }, (e) => u.I.fromServer(e))
                             .otherwise(() => void 0)
                     ];
                 })
@@ -30,17 +43,6 @@ class l {
         );
     }
     constructor(e) {
-        var t, n, r;
-        (t = this),
-            (r = void 0),
-            (n = 'marketingsBySurfaces') in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r),
-            (this.marketingsBySurfaces = e);
+        d(this, 'marketingsBySurfaces', void 0), (this.marketingsBySurfaces = e);
     }
 }

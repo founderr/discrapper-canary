@@ -1,13 +1,19 @@
-n.d(t, {
+r.d(n, {
     hi: function () {
-        return i;
+        return s;
     }
 });
-var r = n(570140);
-function i(e) {
-    r.Z.dispatch({
+var i = r(570140);
+function a(e) {
+    Dispatcher.dispatch({
+        type: 'SYSTEM_THEME_CHANGE',
+        systemTheme: e
+    });
+}
+r(541049), r(740492), r(874893);
+function s(e) {
+    i.Z.dispatch({
         type: 'UNSYNCED_USER_SETTINGS_UPDATE',
         settings: { useSystemTheme: e }
     });
 }
-n(541049), n(740492), n(874893);

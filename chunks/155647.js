@@ -1,60 +1,47 @@
-n.d(t, {
+r.d(n, {
     fW: function () {
-        return c;
+        return _;
     },
     jc: function () {
-        return d;
+        return p;
     }
-}),
-    n(47120),
-    n(653041);
-var r = n(192379),
-    i = n(823379),
-    a = n(568315),
-    s = n(83126),
-    o = n(617191),
-    l = n(82554);
-let u = {
-    [l.zR.SAFETY_DM_SPAM_FILTER]: a.Z,
-    [l.zR.SAFETY_SENSITIVE_MEDIA_FILTERS]: o.Z,
-    [l.zR.SAFETY_LANGUAGE_FILTER]: s.Z
+});
+var i = r(47120);
+var a = r(653041);
+var s = r(192379),
+    o = r(823379),
+    l = r(568315),
+    u = r(83126),
+    c = r(617191),
+    d = r(82554);
+let f = {
+    [d.zR.SAFETY_DM_SPAM_FILTER]: l.Z,
+    [d.zR.SAFETY_SENSITIVE_MEDIA_FILTERS]: c.Z,
+    [d.zR.SAFETY_LANGUAGE_FILTER]: u.Z
 };
-function c(e) {
-    return r.useMemo(
-        () =>
-            null != e
-                ? (function (e) {
-                      let t = [];
-                      return (
-                          Object.entries(u).forEach((n) => {
-                              let [r, i] = n;
-                              (null == i.eligibleReportSubtypes || i.eligibleReportSubtypes.includes(e)) && t.push(r);
-                          }),
-                          0 === t.length ? null : t
-                      );
-                  })(e)
-                : null,
-        [e]
+function _(e) {
+    return s.useMemo(() => (null != e ? h(e) : null), [e]);
+}
+function h(e) {
+    let n = [];
+    return (
+        Object.entries(f).forEach((r) => {
+            let [i, a] = r;
+            (null == a.eligibleReportSubtypes || a.eligibleReportSubtypes.includes(e)) && n.push(i);
+        }),
+        0 === n.length ? null : n
     );
 }
-function d(e, t) {
-    return r.useMemo(
-        () =>
-            e
-                .map((e) =>
-                    (function (e, t) {
-                        let n = u[e];
-                        return (function (e, t) {
-                            let { predicate: n, eligibleChannelTypes: r } = e,
-                                i = null == n || (null == n ? void 0 : n()) === !0,
-                                a = null == t || null == r || r.includes(t);
-                            return i && a;
-                        })(n, t)
-                            ? n
-                            : null;
-                    })(e, t)
-                )
-                .filter(i.lm),
-        [e, t]
-    );
+function p(e, n) {
+    return s.useMemo(() => e.map((e) => m(e, n)).filter(o.lm), [e, n]);
+}
+function m(e, n) {
+    let r = f[e];
+    return g(r, n) ? r : null;
+}
+function g(e, n) {
+    let { predicate: r, eligibleChannelTypes: i } = e,
+        a = null == r || (null == r ? void 0 : r()) === !0,
+        s = null == n || null == i || i.includes(n);
+    return a && s;
 }

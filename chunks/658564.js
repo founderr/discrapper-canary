@@ -1,8 +1,20 @@
-e.exports = function (e) {
-    let t = {
-        className: 'number',
-        begin: /\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(:\d{1,5})?/
-    };
+function n(e) {
+    let n = {
+            className: 'number',
+            begin: /[$%]\d+/
+        },
+        r = {
+            className: 'number',
+            begin: /\b\d+/
+        },
+        i = {
+            className: 'number',
+            begin: /\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(:\d{1,5})?/
+        },
+        a = {
+            className: 'number',
+            begin: /:\d{1,5}/
+        };
     return {
         name: 'Apache config',
         aliases: ['apacheconf'],
@@ -13,14 +25,7 @@ e.exports = function (e) {
                 className: 'section',
                 begin: /<\/?/,
                 end: />/,
-                contains: [
-                    t,
-                    {
-                        className: 'number',
-                        begin: /:\d{1,5}/
-                    },
-                    e.inherit(e.QUOTE_STRING_MODE, { relevance: 0 })
-                ]
+                contains: [i, a, e.inherit(e.QUOTE_STRING_MODE, { relevance: 0 })]
             },
             {
                 className: 'attribute',
@@ -43,19 +48,10 @@ e.exports = function (e) {
                             className: 'variable',
                             begin: /[\$%]\{/,
                             end: /\}/,
-                            contains: [
-                                'self',
-                                {
-                                    className: 'number',
-                                    begin: /[$%]\d+/
-                                }
-                            ]
+                            contains: ['self', n]
                         },
-                        t,
-                        {
-                            className: 'number',
-                            begin: /\b\d+/
-                        },
+                        i,
+                        r,
                         e.QUOTE_STRING_MODE
                     ]
                 }
@@ -63,4 +59,5 @@ e.exports = function (e) {
         ],
         illegal: /\S/
     };
-};
+}
+e.exports = n;

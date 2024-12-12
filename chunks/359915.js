@@ -1,50 +1,52 @@
-n(47120);
-var r = n(442837),
-    i = n(570140),
-    a = n(147913),
-    s = n(883429),
-    o = n(314897),
-    l = n(592125);
-class u extends a.Z {
+var i = r(47120);
+var a = r(442837),
+    s = r(570140),
+    o = r(147913),
+    l = r(883429),
+    u = r(314897),
+    c = r(592125);
+function d(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+class f extends o.Z {
     handleChannelDelete(e) {
-        let { channel: t } = e;
-        if (null != t.guild_id) {
-            let e = l.Z.getAllThreadsForParent(t.id);
+        let { channel: n } = e;
+        if (null != n.guild_id) {
+            let e = c.Z.getAllThreadsForParent(n.id);
             e.length > 0 &&
-                r.ZP.Emitter.batched(() => {
-                    for (let t of e)
-                        i.Z.dispatch({
+                a.ZP.Emitter.batched(() => {
+                    for (let n of e)
+                        s.Z.dispatch({
                             type: 'THREAD_DELETE',
-                            channel: t
+                            channel: n
                         });
                 });
         }
     }
     handleMessageCreate(e) {
-        var t, n, r;
-        let { channelId: i, message: a } = e,
-            u = l.Z.getChannel(i);
-        if ((null === (t = a.author) || void 0 === t ? void 0 : t.id) !== o.default.getId() || !(null == u ? void 0 : u.isActiveThread())) return;
-        let c = new Date(null !== (r = null === (n = u.threadMetadata) || void 0 === n ? void 0 : n.archiveTimestamp) && void 0 !== r ? r : 0).getTime();
-        Date.now() - c < 5000 && s.Z.resort(u.parent_id);
+        var n, r, i;
+        let { channelId: a, message: s } = e,
+            o = c.Z.getChannel(a);
+        if ((null === (n = s.author) || void 0 === n ? void 0 : n.id) !== u.default.getId() || !(null == o ? void 0 : o.isActiveThread())) return;
+        let d = new Date(null !== (i = null === (r = o.threadMetadata) || void 0 === r ? void 0 : r.archiveTimestamp) && void 0 !== i ? i : 0).getTime();
+        Date.now() - d < 5000 && l.Z.resort(o.parent_id);
     }
     constructor(...e) {
-        var t, n, r;
         super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = {
+            d(this, 'actions', {
                 CHANNEL_DELETE: this.handleChannelDelete,
                 MESSAGE_CREATE: this.handleMessageCreate
-            }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+            });
     }
 }
-t.Z = new u();
+n.Z = new f();

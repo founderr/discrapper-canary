@@ -1,27 +1,28 @@
-n.d(t, {
+r.d(n, {
     k: function () {
-        return a;
+        return s;
     }
 });
-var r = n(70956),
-    i = n(388032);
-function a(e) {
-    if (e >= r.Z.Seconds.HOUR) {
-        let t = Math.floor(e / r.Z.Seconds.HOUR),
-            n = Math.floor((e - t * r.Z.Seconds.HOUR) / r.Z.Seconds.MINUTE),
-            a = e - t * r.Z.Seconds.HOUR - n * r.Z.Seconds.MINUTE;
-        return i.intl.formatToPlainString(i.t['3hz51N'], {
-            hours: t,
-            minutes: n,
-            seconds: a
+var i = r(70956),
+    a = r(388032);
+function s(e) {
+    if (e >= i.Z.Seconds.HOUR) {
+        let n = Math.floor(e / i.Z.Seconds.HOUR),
+            r = Math.floor((e - n * i.Z.Seconds.HOUR) / i.Z.Seconds.MINUTE),
+            s = e - n * i.Z.Seconds.HOUR - r * i.Z.Seconds.MINUTE;
+        return a.intl.formatToPlainString(a.t['3hz51N'], {
+            hours: n,
+            minutes: r,
+            seconds: s
         });
     }
-    if (!(e >= 60)) return i.intl.formatToPlainString(i.t.IWntYm, { seconds: e });
+    if (!(e >= 60)) return a.intl.formatToPlainString(a.t.IWntYm, { seconds: e });
     {
-        let t = Math.floor(e / 60);
-        return i.intl.formatToPlainString(i.t.sY3wlJ, {
-            minutes: t,
-            seconds: e - 60 * t
+        let n = Math.floor(e / 60),
+            r = e - 60 * n;
+        return a.intl.formatToPlainString(a.t.sY3wlJ, {
+            minutes: n,
+            seconds: r
         });
     }
 }

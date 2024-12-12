@@ -1,130 +1,142 @@
-n(47120), n(653041);
-var r,
-    i,
-    a,
-    s,
-    o = n(392711),
-    l = n.n(o),
-    u = n(442837),
-    c = n(570140),
-    d = n(668781),
-    f = n(141795),
-    _ = n(596956),
-    p = n(703558),
-    h = n(981631),
-    m = n(388032);
-let g = new Map(),
-    E = [];
-function v(e, t) {
-    var n, r;
-    return null !== (r = null === (n = I(e)) || void 0 === n ? void 0 : n.get(t)) && void 0 !== r ? r : E;
+var i,
+    a = r(47120);
+var s = r(653041);
+var o = r(392711),
+    l = r.n(o),
+    u = r(442837),
+    c = r(570140),
+    d = r(668781),
+    f = r(141795),
+    _ = r(596956),
+    h = r(703558),
+    p = r(981631),
+    m = r(388032);
+function g(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
 }
-function I(e) {
-    var t;
-    return null !== (t = g.get(e)) && void 0 !== t ? t : new Map();
+let E = new Map(),
+    v = [];
+function I(e, n) {
+    var r, i;
+    return null !== (i = null === (r = T(e)) || void 0 === r ? void 0 : r.get(n)) && void 0 !== i ? i : v;
 }
-function T(e, t, n) {
-    let r = I(e);
-    r.set(t, n), g.set(e, r);
+function T(e) {
+    var n;
+    return null !== (n = E.get(e)) && void 0 !== n ? n : new Map();
 }
-class b extends (r = u.ZP.Store) {
-    getFirstUpload(e, t) {
-        let n = v(e, t);
-        return n.length > 0 ? n[0] : null;
+function b(e, n, r) {
+    let i = T(e);
+    i.set(n, r), E.set(e, i);
+}
+function y(e) {
+    let { channelId: n } = e,
+        r = [...I(n, h.d.ChannelMessage)];
+    r.shift(), b(n, h.d.ChannelMessage, r);
+}
+let S = (e) => {
+    let { files: n, channelId: r, showLargeMessageDialog: i, draftType: a } = e,
+        s = [...I(r, a)];
+    if (s.length + n.length > p.dN1 && a !== h.d.SlashCommand && a !== h.d.ApplicationLauncherCommand) {
+        d.Z.show({
+            title: m.intl.string(m.t.wOr6hI),
+            body: m.intl.formatToPlainString(m.t['qqyp/f'], { limit: p.dN1 })
+        });
+        return;
     }
-    hasAdditionalUploads(e, t) {
-        var n;
-        return (null !== (n = v(e, t).length) && void 0 !== n ? n : 0) > 1;
+    l().forEach(n, (e) => {
+        let n = new f.n(e, r, i, s.length);
+        n.upload(), s.push(n);
+    }),
+        b(r, a, s);
+};
+function A(e) {
+    let { channelId: n, id: r, draftType: i } = e,
+        a = [...I(n, i)],
+        s = a.findIndex((e) =>
+            (0, _.T)(
+                {
+                    uri: r,
+                    filename: r
+                },
+                e
+            )
+        );
+    s > -1 && (a.splice(s, 1)[0].cancel(), b(n, i, a));
+}
+function N(e) {
+    let { channelId: n, attachmentIds: r, draftType: i } = e,
+        a = [...I(n, i)];
+    r.forEach((e) => {
+        let n = a.findIndex((n) => e === n.id);
+        n > -1 && a.splice(n, 1)[0].cancel();
+    }),
+        b(n, i, a);
+}
+function C(e) {
+    let { channelId: n, id: r, filename: i, description: a, spoiler: s, thumbnail: o, draftType: l } = e,
+        u = [...I(n, l)].map((e) => (e.id === r && (void 0 !== i && (e.filename = i), void 0 !== s && (e.spoiler = s), void 0 !== a && (e.description = a), void 0 !== o && (e.isThumbnail = o)), e));
+    b(n, l, u);
+}
+function R(e) {
+    let { channelId: n, id: r, file: i, draftType: a } = e,
+        s = [...I(n, a)].filter((e) => e.id !== r),
+        o = new f.n(i, n);
+    o.upload(), s.push(o), b(n, a, s);
+}
+function O(e) {
+    let { channelId: n, uploads: r, draftType: i } = e;
+    b(n, i, r);
+}
+function D(e) {
+    let { channelId: n, draftType: r } = e;
+    b(n, r, []);
+}
+function L(e) {
+    let { baseChannelId: n } = e;
+    b(n, h.d.FirstThreadMessage, []);
+}
+class x extends (i = u.ZP.Store) {
+    getFirstUpload(e, n) {
+        let r = I(e, n);
+        return r.length > 0 ? r[0] : null;
     }
-    getUploads(e, t) {
-        return v(e, t);
+    hasAdditionalUploads(e, n) {
+        var r;
+        return (null !== (r = I(e, n).length) && void 0 !== r ? r : 0) > 1;
     }
-    getUploadCount(e, t) {
-        var n;
-        return null !== (n = v(e, t).length) && void 0 !== n ? n : 0;
+    getUploads(e, n) {
+        return I(e, n);
     }
-    getUpload(e, t, n) {
-        return v(e, n).find((e) => e.id === t);
+    getUploadCount(e, n) {
+        var r;
+        return null !== (r = I(e, n).length) && void 0 !== r ? r : 0;
     }
-    findUpload(e, t, n) {
-        return v(e, t).find(n);
+    getUpload(e, n, r) {
+        return I(e, r).find((e) => e.id === n);
+    }
+    findUpload(e, n, r) {
+        return I(e, n).find(r);
     }
 }
-(s = 'UploadAttachmentStore'),
-    (a = 'displayName') in (i = b)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new b(c.Z, {
-        UPLOAD_ATTACHMENT_POP_FILE: function (e) {
-            let { channelId: t } = e,
-                n = [...v(t, p.d.ChannelMessage)];
-            n.shift(), T(t, p.d.ChannelMessage, n);
-        },
-        UPLOAD_ATTACHMENT_ADD_FILES: (e) => {
-            let { files: t, channelId: n, showLargeMessageDialog: r, draftType: i } = e,
-                a = [...v(n, i)];
-            if (a.length + t.length > h.dN1 && i !== p.d.SlashCommand && i !== p.d.ApplicationLauncherCommand) {
-                d.Z.show({
-                    title: m.intl.string(m.t.wOr6hI),
-                    body: m.intl.formatToPlainString(m.t['qqyp/f'], { limit: h.dN1 })
-                });
-                return;
-            }
-            l().forEach(t, (e) => {
-                let t = new f.n(e, n, r, a.length);
-                t.upload(), a.push(t);
-            }),
-                T(n, i, a);
-        },
-        UPLOAD_ATTACHMENT_UPDATE_FILE: function (e) {
-            let { channelId: t, id: n, filename: r, description: i, spoiler: a, thumbnail: s, draftType: o } = e,
-                l = [...v(t, o)].map((e) => (e.id === n && (void 0 !== r && (e.filename = r), void 0 !== a && (e.spoiler = a), void 0 !== i && (e.description = i), void 0 !== s && (e.isThumbnail = s)), e));
-            T(t, o, l);
-        },
-        UPLOAD_ATTACHMENT_REMOVE_FILE: function (e) {
-            let { channelId: t, id: n, draftType: r } = e,
-                i = [...v(t, r)],
-                a = i.findIndex((e) =>
-                    (0, _.T)(
-                        {
-                            uri: n,
-                            filename: n
-                        },
-                        e
-                    )
-                );
-            a > -1 && (i.splice(a, 1)[0].cancel(), T(t, r, i));
-        },
-        UPLOAD_ATTACHMENT_REMOVE_FILES: function (e) {
-            let { channelId: t, attachmentIds: n, draftType: r } = e,
-                i = [...v(t, r)];
-            n.forEach((e) => {
-                let t = i.findIndex((t) => e === t.id);
-                t > -1 && i.splice(t, 1)[0].cancel();
-            }),
-                T(t, r, i);
-        },
-        UPLOAD_ATTACHMENT_CLEAR_ALL_FILES: function (e) {
-            let { channelId: t, draftType: n } = e;
-            T(t, n, []);
-        },
-        UPLOAD_ATTACHMENT_SET_UPLOADS: function (e) {
-            let { channelId: t, uploads: n, draftType: r } = e;
-            T(t, r, n);
-        },
-        UPLOAD_ATTACHMENT_SET_FILE: function (e) {
-            let { channelId: t, id: n, file: r, draftType: i } = e,
-                a = [...v(t, i)].filter((e) => e.id !== n),
-                s = new f.n(r, t);
-            s.upload(), a.push(s), T(t, i, a);
-        },
-        SIDEBAR_CLOSE: function (e) {
-            let { baseChannelId: t } = e;
-            T(t, p.d.FirstThreadMessage, []);
-        }
+g(x, 'displayName', 'UploadAttachmentStore'),
+    (n.Z = new x(c.Z, {
+        UPLOAD_ATTACHMENT_POP_FILE: y,
+        UPLOAD_ATTACHMENT_ADD_FILES: S,
+        UPLOAD_ATTACHMENT_UPDATE_FILE: C,
+        UPLOAD_ATTACHMENT_REMOVE_FILE: A,
+        UPLOAD_ATTACHMENT_REMOVE_FILES: N,
+        UPLOAD_ATTACHMENT_CLEAR_ALL_FILES: D,
+        UPLOAD_ATTACHMENT_SET_UPLOADS: O,
+        UPLOAD_ATTACHMENT_SET_FILE: R,
+        SIDEBAR_CLOSE: L
     }));

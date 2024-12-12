@@ -1,54 +1,56 @@
-var r = n(192379),
-    i = n(723184),
-    a = n(820611),
-    s = n(877837);
-t.Z = function (e) {
-    var t = e.color,
-        n = e.onClick,
-        o = e.onSwatchHover,
-        l = e.active,
-        u = (0, i.default)(
-            {
-                default: {
-                    color: {
-                        background: t,
-                        width: '15px',
-                        height: '15px',
-                        float: 'left',
-                        marginRight: '5px',
-                        marginBottom: '5px',
-                        position: 'relative',
-                        cursor: 'pointer'
+var i = r(192379),
+    a = r(723184),
+    s = r(820611),
+    o = r(877837),
+    l = function (e) {
+        var n = e.color,
+            r = e.onClick,
+            l = void 0 === r ? function () {} : r,
+            u = e.onSwatchHover,
+            c = e.active,
+            d = (0, a.default)(
+                {
+                    default: {
+                        color: {
+                            background: n,
+                            width: '15px',
+                            height: '15px',
+                            float: 'left',
+                            marginRight: '5px',
+                            marginBottom: '5px',
+                            position: 'relative',
+                            cursor: 'pointer'
+                        },
+                        dot: {
+                            absolute: '5px 5px 5px 5px',
+                            background: s.Qg(n),
+                            borderRadius: '50%',
+                            opacity: '0'
+                        }
                     },
-                    dot: {
-                        absolute: '5px 5px 5px 5px',
-                        background: a.Qg(t),
-                        borderRadius: '50%',
-                        opacity: '0'
-                    }
+                    active: { dot: { opacity: '1' } },
+                    'color-#FFFFFF': {
+                        color: { boxShadow: 'inset 0 0 0 1px #ddd' },
+                        dot: { background: '#000' }
+                    },
+                    transparent: { dot: { background: '#000' } }
                 },
-                active: { dot: { opacity: '1' } },
-                'color-#FFFFFF': {
-                    color: { boxShadow: 'inset 0 0 0 1px #ddd' },
-                    dot: { background: '#000' }
-                },
-                transparent: { dot: { background: '#000' } }
-            },
+                {
+                    active: c,
+                    'color-#FFFFFF': '#FFFFFF' === n,
+                    transparent: 'transparent' === n
+                }
+            );
+        return i.createElement(
+            o.m4,
             {
-                active: l,
-                'color-#FFFFFF': '#FFFFFF' === t,
-                transparent: 'transparent' === t
-            }
+                style: d.color,
+                color: n,
+                onClick: l,
+                onHover: u,
+                focusStyle: { boxShadow: '0 0 4px ' + n }
+            },
+            i.createElement('div', { style: d.dot })
         );
-    return r.createElement(
-        s.m4,
-        {
-            style: u.color,
-            color: t,
-            onClick: void 0 === n ? function () {} : n,
-            onHover: o,
-            focusStyle: { boxShadow: '0 0 4px ' + t }
-        },
-        r.createElement('div', { style: u.dot })
-    );
-};
+    };
+n.Z = l;

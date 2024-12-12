@@ -1,104 +1,109 @@
-let r, i, a;
-n(47120), n(177593);
-var s,
-    o = n(442837),
-    l = n(570140),
-    u = n(238514),
-    c = n(695346),
-    d = n(581883),
-    f = n(283595);
-function _(e, t, n) {
+let i, a, s;
+var o,
+    l = r(47120);
+var u = r(177593);
+var c = r(442837),
+    d = r(570140),
+    f = r(238514),
+    _ = r(695346),
+    h = r(581883),
+    p = r(283595);
+function m(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let p = {
+let g = {
         applicationId: null,
         originURL: null
     },
-    h = p,
-    m = new Set(),
-    g = !1;
-function E() {
-    a = null;
+    E = g,
+    v = new Set(),
+    I = !1;
+function T() {
+    s = null;
 }
-function v() {
-    (r = null), (i = null), (m = new Set()), (h.applicationId = null), (h.originURL = null), E();
+function b() {
+    (i = null), (a = null), (v = new Set()), (E.applicationId = null), (E.originURL = null), T();
 }
-class I extends (s = o.ZP.PersistedStore) {
+function y(e) {
+    let { applicationId: n } = e;
+    v.add(n), (s = null);
+}
+function S(e) {
+    let { applicationId: n, originURL: r } = e;
+    (i = n), (a = r), v.delete(n), (s = null), (E.applicationId = n), (E.originURL = r);
+}
+function A(e) {
+    let { applicationId: n, error: r } = e;
+    v.delete(n), (s = r);
+}
+function N(e) {
+    let { testModeApplicationId: n } = e;
+    i = n;
+}
+class C extends (o = c.ZP.PersistedStore) {
     initialize(e) {
-        (r = (h = { ...(null != e ? e : p) }).applicationId),
-            (i = h.originURL),
-            this.waitFor(d.Z, u.Z),
-            this.syncWith([d.Z, u.Z], () => !0),
-            f.Z.whenInitialized(() => {
-                g = !0;
+        (i = (E = { ...(null != e ? e : g) }).applicationId),
+            (a = E.originURL),
+            this.waitFor(h.Z, f.Z),
+            this.syncWith([h.Z, f.Z], () => !0),
+            p.Z.whenInitialized(() => {
+                I = !0;
             });
     }
     inTestModeForApplication(e) {
-        return r === e;
+        return i === e;
     }
     inTestModeForEmbeddedApplication(e) {
-        return r === e && null != i;
+        return i === e && null != a;
     }
     shouldDisplayTestMode(e) {
-        return c.Sb.getSetting() && this.inTestModeForApplication(e);
+        return _.Sb.getSetting() && this.inTestModeForApplication(e);
     }
     getState() {
-        return h;
+        return E;
     }
     get isTestMode() {
-        return null != r;
+        return null != i;
     }
     get isFetchingAuthorization() {
-        return m.size > 0;
+        return v.size > 0;
     }
     get testModeEmbeddedApplicationId() {
-        return null != i ? r : null;
+        return null != a ? i : null;
     }
     get testModeApplicationId() {
-        return r;
-    }
-    get testModeOriginURL() {
         return i;
     }
-    get error() {
+    get testModeOriginURL() {
         return a;
+    }
+    get error() {
+        return s;
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {
-            if (g) return setImmediate(e), !1;
+            if (I) return setImmediate(e), !1;
         });
     }
 }
-_(I, 'displayName', 'TestModeStore'),
-    _(I, 'persistKey', 'TestModeStore'),
-    (t.Z = new I(l.Z, {
-        DEVELOPER_TEST_MODE_AUTHORIZATION_START: function (e) {
-            let { applicationId: t } = e;
-            m.add(t), (a = null);
-        },
-        DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS: function (e) {
-            let { applicationId: t, originURL: n } = e;
-            (r = t), (i = n), m.delete(t), (a = null), (h.applicationId = t), (h.originURL = n);
-        },
-        DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL: function (e) {
-            let { applicationId: t, error: n } = e;
-            m.delete(t), (a = n);
-        },
-        OVERLAY_INITIALIZE: function (e) {
-            let { testModeApplicationId: t } = e;
-            r = t;
-        },
-        DEVELOPER_TEST_MODE_RESET_ERROR: E,
-        LOGOUT: v,
-        DEVELOPER_TEST_MODE_RESET: v
+m(C, 'displayName', 'TestModeStore'),
+    m(C, 'persistKey', 'TestModeStore'),
+    (n.Z = new C(d.Z, {
+        DEVELOPER_TEST_MODE_AUTHORIZATION_START: y,
+        DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS: S,
+        DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL: A,
+        OVERLAY_INITIALIZE: N,
+        DEVELOPER_TEST_MODE_RESET_ERROR: T,
+        LOGOUT: b,
+        DEVELOPER_TEST_MODE_RESET: b
     }));

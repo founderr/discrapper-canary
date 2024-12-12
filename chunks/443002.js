@@ -1,69 +1,69 @@
-n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(75124),
-    s = n(622535),
-    o = n(481060),
-    l = n(425493),
-    u = n(906732),
-    c = n(626135),
-    d = n(724884),
-    f = n(355045),
-    _ = n(290799),
-    p = n(394769),
-    h = n(555932),
-    m = n(808189),
-    g = n(362948),
-    E = n(245004),
-    v = n(383881),
-    I = n(981631),
-    T = n(388032),
-    b = n(483843);
-t.Z = function (e) {
-    let { analyticsLocation: t, guild: n, onClose: S } = e,
-        [y, A] = i.useState(!0),
-        N = i.useRef(!1),
-        C = (0, a.Z)(() => Date.now()),
-        { analyticsLocations: R } = (0, u.ZP)(),
-        O = i.useCallback(() => {
-            S(),
-                c.default.track(I.rMx.MODAL_DISMISSED, {
-                    type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
-                    location_stack: R,
-                    location_section: t.section,
-                    location_object: t.object,
-                    guild_id: n.id,
-                    duration_open_ms: Date.now() - C
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(75124),
+    l = r(622535),
+    u = r(481060),
+    c = r(425493),
+    d = r(906732),
+    f = r(626135),
+    _ = r(724884),
+    h = r(355045),
+    p = r(290799),
+    m = r(394769),
+    g = r(555932),
+    E = r(808189),
+    v = r(362948),
+    I = r(245004),
+    T = r(383881),
+    b = r(981631),
+    y = r(388032),
+    S = r(483843);
+function A(e) {
+    let { analyticsLocation: n, guild: r, onClose: i } = e,
+        [A, N] = s.useState(!0),
+        C = s.useRef(!1),
+        R = (0, o.Z)(() => Date.now()),
+        { analyticsLocations: O } = (0, d.ZP)(),
+        D = s.useCallback(() => {
+            i(),
+                f.default.track(b.rMx.MODAL_DISMISSED, {
+                    type: b.ZY5.PREMIUM_GUILD_USER_MODAL,
+                    location_stack: O,
+                    location_section: n.section,
+                    location_object: n.object,
+                    guild_id: r.id,
+                    duration_open_ms: Date.now() - R
                 });
-        }, [S, t, R, C, n.id]),
-        D = i.useCallback(
+        }, [i, n, O, R, r.id]),
+        L = s.useCallback(
             (e) => {
                 e &&
-                    !N.current &&
-                    (c.default.track(I.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-                        type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
-                        location_stack: R,
-                        location_section: t.section,
-                        location_object: t.object,
-                        guild_id: n.id
+                    !C.current &&
+                    (f.default.track(b.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                        type: b.ZY5.PREMIUM_GUILD_USER_MODAL,
+                        location_stack: O,
+                        location_section: n.section,
+                        location_object: n.object,
+                        guild_id: r.id
                     }),
-                    (N.current = !0));
+                    (C.current = !0));
             },
-            [t, R, n.id]
+            [n, O, r.id]
         );
     return (
-        i.useEffect(() => {
-            c.default.track(I.rMx.OPEN_MODAL, {
-                type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
-                location_stack: R,
-                location_section: t.section,
-                location_object: t.object,
-                guild_id: n.id
+        s.useEffect(() => {
+            f.default.track(b.rMx.OPEN_MODAL, {
+                type: b.ZY5.PREMIUM_GUILD_USER_MODAL,
+                location_stack: O,
+                location_section: n.section,
+                location_object: n.object,
+                guild_id: r.id
             });
-        }, [n.id, t, R]),
-        i.useEffect(() => {
+        }, [r.id, n, O]),
+        s.useEffect(() => {
             function e(e) {
-                'Escape' === e.key && O();
+                'Escape' === e.key && D();
             }
             return (
                 window.addEventListener('keydown', e),
@@ -71,79 +71,80 @@ t.Z = function (e) {
                     window.removeEventListener('keydown', e);
                 }
             );
-        }, [O]),
-        (0, r.jsxs)(r.Fragment, {
+        }, [D]),
+        (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, r.jsx)('div', {
-                    className: b.closeIconWrapper,
-                    children: (0, r.jsx)(l.Z, {
-                        className: b.closeIcon,
-                        closeAction: O,
+                (0, a.jsx)('div', {
+                    className: S.closeIconWrapper,
+                    children: (0, a.jsx)(c.Z, {
+                        className: S.closeIcon,
+                        closeAction: D,
                         keybind: 'ESC',
-                        variant: l.Z.Variants.SOLID
+                        variant: c.Z.Variants.SOLID
                     })
                 }),
-                (0, r.jsxs)(o.AdvancedScrollerAuto, {
-                    className: b.scroller,
+                (0, a.jsxs)(u.AdvancedScrollerAuto, {
+                    className: S.scroller,
                     children: [
-                        (0, r.jsxs)('div', {
-                            className: b.header,
+                        (0, a.jsxs)('div', {
+                            className: S.header,
                             children: [
-                                (0, r.jsxs)('div', {
-                                    className: b.headerContentWrapper,
+                                (0, a.jsxs)('div', {
+                                    className: S.headerContentWrapper,
                                     children: [
-                                        (0, r.jsx)(o.Heading, {
-                                            className: b.heading,
+                                        (0, a.jsx)(u.Heading, {
+                                            className: S.heading,
                                             color: 'always-white',
                                             variant: 'display-lg',
-                                            children: T.intl.string(T.t.N4sqzM)
+                                            children: y.intl.string(y.t.N4sqzM)
                                         }),
-                                        (0, r.jsx)(f.Z, {
-                                            guild: n,
-                                            closeLayer: O,
-                                            onCtaVisibilityChange: A
+                                        (0, a.jsx)(h.Z, {
+                                            guild: r,
+                                            closeLayer: D,
+                                            onCtaVisibilityChange: N
                                         }),
-                                        (0, r.jsx)(h.Z, { guild: n }),
-                                        (0, r.jsx)(m.Z, { guild: n })
+                                        (0, a.jsx)(g.Z, { guild: r }),
+                                        (0, a.jsx)(E.Z, { guild: r })
                                     ]
                                 }),
-                                (0, r.jsx)(v.O, {})
+                                (0, a.jsx)(T.O, {})
                             ]
                         }),
-                        (0, r.jsx)('div', {
-                            className: b.middleBodyContentWrapper,
-                            children: (0, r.jsx)(E.Z, {})
+                        (0, a.jsx)('div', {
+                            className: S.middleBodyContentWrapper,
+                            children: (0, a.jsx)(I.Z, {})
                         }),
-                        (0, r.jsxs)('div', {
-                            className: b.lowerBody,
+                        (0, a.jsxs)('div', {
+                            className: S.lowerBody,
                             children: [
-                                (0, r.jsxs)('div', {
-                                    className: b.lowerBodyContentWrapper,
+                                (0, a.jsxs)('div', {
+                                    className: S.lowerBodyContentWrapper,
                                     children: [
-                                        (0, r.jsx)(g.Z, {
-                                            className: b.tierComparisonTable,
-                                            guild: n
+                                        (0, a.jsx)(v.Z, {
+                                            className: S.tierComparisonTable,
+                                            guild: r
                                         }),
-                                        (0, r.jsx)(d.Z, {}),
-                                        (0, r.jsx)(_.Z, {})
+                                        (0, a.jsx)(_.Z, {}),
+                                        (0, a.jsx)(p.Z, {})
                                     ]
                                 }),
-                                (0, r.jsx)(v.A, {}),
-                                (0, r.jsx)('div', { className: b.lowerBodyBackgroundImage })
+                                (0, a.jsx)(T.A, {}),
+                                (0, a.jsx)('div', { className: S.lowerBodyBackgroundImage })
                             ]
                         }),
-                        (0, r.jsx)(s.$, {
-                            onChange: D,
-                            children: (0, r.jsx)('div', { className: b.persistentCtaSpacer })
+                        (0, a.jsx)(l.$, {
+                            onChange: L,
+                            children: (0, a.jsx)('div', { className: S.persistentCtaSpacer })
                         })
                     ]
                 }),
-                (0, r.jsx)(p.Z, {
-                    guild: n,
-                    isVisible: !y,
-                    closeLayer: O
+                (0, a.jsx)(m.Z, {
+                    guild: r,
+                    isVisible: !A,
+                    closeLayer: D
                 })
             ]
         })
     );
-};
+}
+n.Z = A;

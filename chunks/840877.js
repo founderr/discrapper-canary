@@ -1,70 +1,72 @@
-n.d(t, {
+r.d(n, {
     ZP: function () {
-        return c;
+        return h;
     },
     tJ: function () {
-        return d;
+        return p;
     }
-}),
-    n(411104);
-var r = n(664751),
-    i = n(544891),
-    a = n(710845),
-    s = n(70956),
-    o = n(981631);
-function l(e, t, n) {
+});
+var i = r(411104);
+var a = r(664751),
+    s = r(544891),
+    o = r(710845),
+    l = r(70956),
+    u = r(981631);
+function c(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-class u {
-    async fetch(e, t, n) {
+let d = 5000,
+    f = 5;
+class _ {
+    async fetch(e, n, r) {
         if (!this.isCanceled)
             try {
-                let i = await this.makeRequest();
-                if (null == i || this.isCanceled) return;
-                if (200 === i.status) e(i);
-                else if (202 === i.status) {
-                    var r;
-                    if (((this.query.attempts = (null !== (r = this.query.attempts) && void 0 !== r ? r : 0) + 1), this.query.attempts > 5)) return;
-                    let a = parseInt(i.headers['retry-after']);
-                    (this.retryDelay = isNaN(a) || 0 === a ? 5000 : a * s.Z.Millis.SECOND), this.retryLater(e, t, n), t(i);
+                let a = await this.makeRequest();
+                if (null == a || this.isCanceled) return;
+                if (200 === a.status) e(a);
+                else if (202 === a.status) {
+                    var i;
+                    if (((this.query.attempts = (null !== (i = this.query.attempts) && void 0 !== i ? i : 0) + 1), this.query.attempts > f)) return;
+                    let s = parseInt(a.headers['retry-after']);
+                    (this.retryDelay = isNaN(s) || 0 === s ? d : s * l.Z.Millis.SECOND), this.retryLater(e, n, r), n(a);
                 }
             } catch (e) {
-                new a.Z('SearchFetcher').error(e), n(e);
+                new o.Z('SearchFetcher').error(e), r(e);
             }
     }
     cancel() {
         (this.isCanceled = !0), null != this.indexingPollId && clearTimeout(this.indexingPollId);
     }
-    retryLater(e, t, n) {
-        null != this.indexingPollId && clearTimeout(this.indexingPollId), (this.indexingPollId = setTimeout(this.fetch.bind(this, e, t, n), this.retryDelay));
+    retryLater(e, n, r) {
+        null != this.indexingPollId && clearTimeout(this.indexingPollId), (this.indexingPollId = setTimeout(this.fetch.bind(this, e, n, r), this.retryDelay));
     }
-    constructor(e, t, n) {
-        l(this, 'indexingPollId', void 0), l(this, 'searchId', void 0), l(this, 'searchType', void 0), l(this, 'query', void 0), l(this, 'retryDelay', void 0), l(this, 'isCanceled', !1), (this.searchId = e), (this.searchType = t), (this.query = n);
+    constructor(e, n, r) {
+        c(this, 'indexingPollId', void 0), c(this, 'searchId', void 0), c(this, 'searchType', void 0), c(this, 'query', void 0), c(this, 'retryDelay', void 0), c(this, 'isCanceled', !1), (this.searchId = e), (this.searchType = n), (this.query = r);
     }
 }
-class c extends u {
+class h extends _ {
     getEndpoint() {
         switch (this.searchType) {
-            case o.aib.DMS:
-                return o.ANM.SEARCH_DMS;
-            case o.aib.FAVORITES:
-                return o.ANM.SEARCH_FAVORITES;
-            case o.aib.GUILD:
+            case u.aib.DMS:
+                return u.ANM.SEARCH_DMS;
+            case u.aib.FAVORITES:
+                return u.ANM.SEARCH_FAVORITES;
+            case u.aib.GUILD:
                 if (null == this.searchId || '' === this.searchId) return;
-                return o.ANM.SEARCH_GUILD(this.searchId);
-            case o.aib.CHANNEL:
+                return u.ANM.SEARCH_GUILD(this.searchId);
+            case u.aib.CHANNEL:
                 if (null == this.searchId || '' === this.searchId) return;
-                return o.ANM.SEARCH_CHANNEL(this.searchId);
+                return u.ANM.SEARCH_CHANNEL(this.searchId);
             default:
                 throw Error('[SearchFetcher] Unhandled search type: '.concat(this.searchType));
         }
@@ -73,26 +75,26 @@ class c extends u {
         let e = this.getEndpoint();
         return null == e
             ? null
-            : i.tn.get({
+            : s.tn.get({
                   url: e,
-                  query: r.stringify(this.query),
+                  query: a.stringify(this.query),
                   oldFormErrors: !0,
                   rejectWithError: !1
               });
     }
 }
-class d extends u {
+class p extends _ {
     getEndpoint() {
         switch (this.searchType) {
-            case o.aib.DMS:
-                return o.ANM.SEARCH_TABS_DMS;
-            case o.aib.GUILD_CHANNEL:
-            case o.aib.GUILD:
+            case u.aib.DMS:
+                return u.ANM.SEARCH_TABS_DMS;
+            case u.aib.GUILD_CHANNEL:
+            case u.aib.GUILD:
                 if (null == this.searchId || '' === this.searchId) return;
-                return o.ANM.SEARCH_TABS_GUILD(this.searchId);
-            case o.aib.CHANNEL:
+                return u.ANM.SEARCH_TABS_GUILD(this.searchId);
+            case u.aib.CHANNEL:
                 if (null == this.searchId || '' === this.searchId) return;
-                return o.ANM.SEARCH_TABS_CHANNEL(this.searchId);
+                return u.ANM.SEARCH_TABS_CHANNEL(this.searchId);
             default:
                 throw Error('[SearchFetcher] Unhandled search type: '.concat(this.searchType));
         }
@@ -101,14 +103,14 @@ class d extends u {
         let e = this.getEndpoint();
         return null == e
             ? null
-            : i.tn.post({
+            : s.tn.post({
                   url: e,
                   body: this.payload,
                   oldFormErrors: !0,
                   rejectWithError: !1
               });
     }
-    constructor(e, t, n, r) {
-        super(e, t, n), l(this, 'payload', void 0), (this.payload = r);
+    constructor(e, n, r, i) {
+        super(e, n, r), c(this, 'payload', void 0), (this.payload = i);
     }
 }

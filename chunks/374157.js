@@ -1,126 +1,126 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return c;
     }
-}),
-    n(47120),
-    n(571269),
-    n(298267);
-var r = n(327432),
-    i = n(436660),
-    a = n(887490);
-function s(e) {
-    let { apply: t, deleteBackward: n, deleteForward: s, deleteFragment: l, insertText: c } = e;
+});
+var i = r(47120);
+var a = r(571269);
+var s = r(298267);
+var o = r(327432),
+    l = r(436660),
+    u = r(887490);
+function c(e) {
+    let { apply: n, deleteBackward: r, deleteForward: i, deleteFragment: a, insertText: s } = e;
     return (
-        (e.apply = (n) => {
-            var r;
-            if ('set_selection' === n.type && (null === (r = e.composition) || void 0 === r ? void 0 : r.startedInsideInline) && a.M8.isRange(n.properties) && a.M8.isRange(n.newProperties) && a.M8.isCollapsed(n.newProperties)) {
-                let t = a.bN.getParentInline(e, n.properties),
-                    r = a.bN.getParentInline(e, n.newProperties);
-                if (null != t && (null == r || !a.C0.equals(t[1], r[1]))) return;
+        (e.apply = (r) => {
+            var i;
+            if ('set_selection' === r.type && (null === (i = e.composition) || void 0 === i ? void 0 : i.startedInsideInline) && u.M8.isRange(r.properties) && u.M8.isRange(r.newProperties) && u.M8.isCollapsed(r.newProperties)) {
+                let n = u.bN.getParentInline(e, r.properties),
+                    i = u.bN.getParentInline(e, r.newProperties);
+                if (null != n && (null == i || !u.C0.equals(n[1], i[1]))) return;
             }
-            t(n);
+            n(r);
         }),
-        (e.insertText = (t) => {
-            if (null != e.selection && null != a.bN.getCurrentInline(e)) {
-                i.Q.insertText(e, t);
+        (e.insertText = (n) => {
+            if (null != e.selection && null != u.bN.getCurrentInline(e)) {
+                l.Q.insertText(e, n);
                 return;
             }
-            c(t);
+            s(n);
         }),
-        (e.deleteBackward = (t) => {
-            !o(e, t, !0) && n(t);
+        (e.deleteBackward = (n) => {
+            !d(e, n, !0) && r(n);
         }),
-        (e.deleteForward = (t) => {
-            !o(e, t, !1) && s(t);
+        (e.deleteForward = (n) => {
+            !d(e, n, !1) && i(n);
         }),
-        (e.deleteFragment = (t) => {
-            if (null != e.selection && a.M8.isExpanded(e.selection)) {
-                var n, r, s, o;
-                let u = e.selection.anchor,
-                    c = e.selection.focus,
-                    d = a.bN.getParentInline(e, u),
-                    f = a.bN.getParentInline(e, c);
-                if (null != d && null != f && a.C0.equals(d[1], f[1])) {
-                    l(t);
+        (e.deleteFragment = (n) => {
+            if (null != e.selection && u.M8.isExpanded(e.selection)) {
+                var r, i, s, o;
+                let c = e.selection.anchor,
+                    d = e.selection.focus,
+                    f = u.bN.getParentInline(e, c),
+                    _ = u.bN.getParentInline(e, d);
+                if (null != f && null != _ && u.C0.equals(f[1], _[1])) {
+                    a(n);
                     return;
                 }
-                let _ = a.M8.isForward(e.selection);
-                if (null != d) {
-                    let [, t] = d,
-                        [i, s] = a.bN.edges(e, t);
-                    _ && a.Jz.equals(u, i) ? (u = null !== (n = a.bN.before(e, i)) && void 0 !== n ? n : a.bN.start(e, [])) : !_ && a.Jz.equals(u, s) && (u = null !== (r = a.bN.after(e, s)) && void 0 !== r ? r : a.bN.end(e, []));
-                }
+                let h = u.M8.isForward(e.selection);
                 if (null != f) {
-                    let [, t] = f,
-                        [n, r] = a.bN.edges(e, t);
-                    !_ && a.Jz.equals(c, n) ? (c = null !== (s = a.bN.before(e, n)) && void 0 !== s ? s : a.bN.start(e, [])) : _ && a.Jz.equals(c, r) && (c = null !== (o = a.bN.after(e, r)) && void 0 !== o ? o : a.bN.end(e, []));
+                    let [, n] = f,
+                        [a, s] = u.bN.edges(e, n);
+                    h && u.Jz.equals(c, a) ? (c = null !== (r = u.bN.before(e, a)) && void 0 !== r ? r : u.bN.start(e, [])) : !h && u.Jz.equals(c, s) && (c = null !== (i = u.bN.after(e, s)) && void 0 !== i ? i : u.bN.end(e, []));
                 }
-                i.Q.delete(e, {
+                if (null != _) {
+                    let [, n] = _,
+                        [r, i] = u.bN.edges(e, n);
+                    !h && u.Jz.equals(d, r) ? (d = null !== (s = u.bN.before(e, r)) && void 0 !== s ? s : u.bN.start(e, [])) : h && u.Jz.equals(d, i) && (d = null !== (o = u.bN.after(e, i)) && void 0 !== o ? o : u.bN.end(e, []));
+                }
+                l.Q.delete(e, {
                     at: {
-                        anchor: u,
-                        focus: c
+                        anchor: c,
+                        focus: d
                     },
-                    reverse: 'backward' === t,
+                    reverse: 'backward' === n,
                     select: !0
                 });
                 return;
             }
-            l(t);
+            a(n);
         }),
-        (r.ML.positions = u),
+        (o.ML.positions = _),
         e
     );
 }
-function o(e, t, n) {
-    let r = a.bN.getCurrentInline(e),
-        s = a.bN.getCurrentBlock(e),
-        o = a.M8.toPoint(e.selection);
-    if (null == o || null == s || 'block' === t) return !0;
-    if ('line' === t && null == r) return !1;
-    let l = r;
-    if (null == l) {
-        let t = (n ? a.bN.before : a.bN.after)(e, o);
-        null != t && null != (l = a.bN.getParentInline(e, t)) && (o = t);
+function d(e, n, r) {
+    let i = u.bN.getCurrentInline(e),
+        a = u.bN.getCurrentBlock(e),
+        s = u.M8.toPoint(e.selection);
+    if (null == s || null == a || 'block' === n) return !0;
+    if ('line' === n && null == i) return !1;
+    let o = i;
+    if (null == o) {
+        let n = (r ? u.bN.before : u.bN.after)(e, s);
+        null != n && null != (o = u.bN.getParentInline(e, n)) && (s = n);
     }
-    if (null != l) {
-        let [r, s] = l;
-        if (a.bN.isEmpty(e, r) || a.bN.isVoid(e, r)) i.Q.removeInline(e, s);
+    if (null != o) {
+        let [i, a] = o;
+        if (u.bN.isEmpty(e, i) || u.bN.isVoid(e, i)) l.Q.removeInline(e, a);
         else {
-            let [r, l] = a.bN.edges(e, s);
-            i.Q.delete(e, {
-                at: o,
-                unit: t,
-                reverse: n,
+            let [i, o] = u.bN.edges(e, a);
+            l.Q.delete(e, {
+                at: s,
+                unit: n,
+                reverse: r,
                 select: !0,
                 bounds: {
-                    anchor: r,
-                    focus: l
+                    anchor: i,
+                    focus: o
                 }
             });
         }
         return !0;
     }
-    let u = !1;
-    if (null != s) {
-        let [, t] = s,
-            [r, i] = a.bN.edges(e, t);
-        u = (n && a.Jz.equals(o, r)) || (!n && a.Jz.equals(o, i));
+    let c = !1;
+    if (null != a) {
+        let [, n] = a,
+            [i, o] = u.bN.edges(e, n);
+        c = (r && u.Jz.equals(s, i)) || (!r && u.Jz.equals(s, o));
     }
-    if ('word' === t && !u) {
-        let r = a.bN.getCurrentText(e);
-        if (null != r) {
-            let [, s] = r,
-                [l, u] = a.bN.edges(e, s);
+    if ('word' === n && !c) {
+        let i = u.bN.getCurrentText(e);
+        if (null != i) {
+            let [, a] = i,
+                [o, c] = u.bN.edges(e, a);
             return (
-                i.Q.delete(e, {
-                    at: o,
-                    unit: t,
-                    reverse: n,
+                l.Q.delete(e, {
+                    at: s,
+                    unit: n,
+                    reverse: r,
                     select: !0,
                     bounds: {
-                        anchor: l,
-                        focus: u
+                        anchor: o,
+                        focus: c
                     }
                 }),
                 !0
@@ -128,77 +128,78 @@ function o(e, t, n) {
         }
     }
     return (
-        i.Q.delete(e, {
-            at: o,
-            unit: t,
-            reverse: n,
+        l.Q.delete(e, {
+            at: s,
+            unit: n,
+            reverse: r,
             select: !0
         }),
         !0
     );
 }
-let l = r.ML.positions;
-function* u(e) {
-    var t, n, r, i, s, o, u, c;
+let f = o.ML.positions;
+function* _(e) {
+    var n, r, i, a, s, o, l, c;
     let d = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { at: f = e.selection, unit: _ = 'offset', reverse: p = !1, voids: h = !1 } = null != d ? d : {};
-    if ('word' !== _) {
-        for (let t of l(e, {
+        { at: _ = e.selection, unit: h = 'offset', reverse: p = !1, voids: m = !1 } = null != d ? d : {};
+    if ('word' !== h) {
+        for (let n of f(e, {
             ...d,
-            voids: h || 'block' === _
+            voids: m || 'block' === h
         }))
-            yield t;
+            yield n;
         return;
     }
-    if (null == f) return;
-    let m = a.bN.range(e, f),
-        [g, E] = a.M8.edges(m),
-        v = a.bN.richValue(e),
-        I = p ? -1 : 1,
-        T = null !== (r = null === (t = g.path) || void 0 === t ? void 0 : t[0]) && void 0 !== r ? r : 0,
-        b = null !== (i = null === (n = E.path) || void 0 === n ? void 0 : n[0]) && void 0 !== i ? i : v.length - 1,
-        S = p ? T : b,
-        y = p ? b : T;
+    if (null == _) return;
+    let g = u.bN.range(e, _),
+        [E, v] = u.M8.edges(g),
+        I = u.bN.richValue(e),
+        T = p ? -1 : 1,
+        b = null !== (i = null === (n = E.path) || void 0 === n ? void 0 : n[0]) && void 0 !== i ? i : 0,
+        y = null !== (a = null === (r = v.path) || void 0 === r ? void 0 : r[0]) && void 0 !== a ? a : I.length - 1,
+        S = p ? y : b,
+        A = p ? b : y,
+        N = S;
     for (;;) {
-        let t = v[y],
-            n = null !== (u = y === T ? (null === (s = g.path) || void 0 === s ? void 0 : s[1]) : null) && void 0 !== u ? u : 0,
-            r = null !== (c = y === b ? (null === (o = E.path) || void 0 === o ? void 0 : o[1]) : null) && void 0 !== c ? c : t.children.length - 1,
-            i = p ? r : n,
-            f = p ? n : r,
-            _ = i;
+        let n = I[N],
+            r = null !== (l = N === b ? (null === (s = E.path) || void 0 === s ? void 0 : s[1]) : null) && void 0 !== l ? l : 0,
+            i = null !== (c = N === y ? (null === (o = v.path) || void 0 === o ? void 0 : o[1]) : null) && void 0 !== c ? c : n.children.length - 1,
+            a = p ? i : r,
+            _ = p ? r : i,
+            h = a;
         for (;;) {
-            let n, r;
-            let i = t.children[_],
-                s = [y, _];
-            if (((n = a.C0.equals(s, g.path) || a.C0.isAncestor(s, g.path) ? (!p && a.bN.isEnd(e, g, s) ? null : g) : a.bN.start(e, s)), (r = a.C0.equals(s, E.path) || a.C0.isAncestor(s, E.path) ? (p && a.bN.isStart(e, E, s) ? null : E) : a.bN.end(e, s)), null != n && null != r)) {
-                if (a.LC.isText(i) && 0 === i.text.length) {
+            let r, i;
+            let a = n.children[h],
+                s = [N, h];
+            if (((r = u.C0.equals(s, E.path) || u.C0.isAncestor(s, E.path) ? (!p && u.bN.isEnd(e, E, s) ? null : E) : u.bN.start(e, s)), (i = u.C0.equals(s, v.path) || u.C0.isAncestor(s, v.path) ? (p && u.bN.isStart(e, v, s) ? null : v) : u.bN.end(e, s)), null != r && null != i)) {
+                if (u.LC.isText(a) && 0 === a.text.length) {
                     let e = {
                         path: s,
                         offset: 0
                     };
                     yield e, yield e;
-                } else if (a.bN.isInline(e, i) && a.LC.isText(i.children[0]) && 0 === i.children[0].text.length) {
+                } else if (u.bN.isInline(e, a) && u.LC.isText(a.children[0]) && 0 === a.children[0].text.length) {
                     let e = {
-                        path: a.C0.child(s, 0),
+                        path: u.C0.child(s, 0),
                         offset: 0
                     };
                     yield e, yield e;
                 } else {
-                    let t = {
-                        anchor: n,
-                        focus: r
+                    let n = {
+                        anchor: r,
+                        focus: i
                     };
-                    for (let n of l(e, {
+                    for (let r of f(e, {
                         ...d,
-                        at: t
+                        at: n
                     }))
-                        yield n;
+                        yield r;
                 }
             }
-            if (_ === f) break;
-            _ += I;
+            if (h === _) break;
+            h += T;
         }
-        if (y === S) break;
-        y += I;
+        if (N === A) break;
+        N += T;
     }
 }

@@ -1,44 +1,41 @@
-var r,
-    i = n(442837),
-    a = n(570140),
-    s = n(288219);
-function o(e, t, n) {
+var i,
+    a = r(442837),
+    s = r(570140),
+    o = r(288219);
+function l(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let l = {};
-class u extends (r = i.ZP.DeviceSettingsStore) {
+let u = {};
+function c(e) {
+    let { labFeature: n, enabled: r } = e;
+    u[n] = r;
+}
+class d extends (i = a.ZP.DeviceSettingsStore) {
     getUserAgnosticState() {
-        return { toggleStates: l };
+        return { toggleStates: u };
     }
     initialize(e) {
-        for (var t in s.Z) {
-            var n, r;
-            l[t] = null !== (r = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== r && r;
+        for (var n in o.Z) {
+            var r, i;
+            u[n] = null !== (i = null == e ? void 0 : null === (r = e.toggleStates) || void 0 === r ? void 0 : r[n]) && void 0 !== i && i;
         }
     }
     get(e) {
-        var t;
-        return null !== (t = l[e]) && void 0 !== t && t;
+        var n;
+        return null !== (n = u[e]) && void 0 !== n && n;
     }
-    set(e, t) {
-        return (l[e] = t), t;
+    set(e, n) {
+        return (u[e] = n), n;
     }
 }
-o(u, 'displayName', 'LabFeatureStore'),
-    o(u, 'persistKey', 'LabFeatureStore'),
-    (t.Z = new u(a.Z, {
-        LAB_FEATURE_TOGGLE: function (e) {
-            let { labFeature: t, enabled: n } = e;
-            l[t] = n;
-        }
-    }));
+l(d, 'displayName', 'LabFeatureStore'), l(d, 'persistKey', 'LabFeatureStore'), (n.Z = new d(s.Z, { LAB_FEATURE_TOGGLE: c }));

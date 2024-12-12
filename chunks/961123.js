@@ -1,7 +1,8 @@
-var r = n(290677),
-    i = n(320249),
-    a = n(440960),
-    s = n(263604);
-e.exports = function (e, t) {
-    return r(e) ? e : i(e, t) ? [e] : a(s(e));
-};
+var i = r(290677),
+    a = r(320249),
+    s = r(440960),
+    o = r(263604);
+function l(e, n) {
+    return i(e) ? e : a(e, n) ? [e] : s(o(e));
+}
+e.exports = l;

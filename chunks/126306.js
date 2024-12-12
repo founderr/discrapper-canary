@@ -1,64 +1,66 @@
-n.d(t, {
+r.d(n, {
     l: function () {
-        return p;
+        return m;
     }
-}),
-    n(47120);
-var r,
-    i,
-    a = n(200651),
-    s = n(192379),
-    o = n(120356),
-    l = n.n(o),
-    u = n(846519),
-    c = n(186325),
-    d = n(549915);
-((i = r || (r = {}))[(i.TRANSLATE = 1)] = 'TRANSLATE'), (i[(i.SCALE = 2)] = 'SCALE'), (i[(i.FADE = 3)] = 'FADE');
-let f = Object.freeze({
-        1: d.translate,
-        2: d.scale,
-        3: d.fade
+});
+var i,
+    a = r(47120);
+var s = r(200651),
+    o = r(192379),
+    l = r(120356),
+    u = r.n(l),
+    c = r(846519),
+    d = r(186325),
+    f = r(549915);
+let _ = 200;
+!(function (e) {
+    (e[(e.TRANSLATE = 1)] = 'TRANSLATE'), (e[(e.SCALE = 2)] = 'SCALE'), (e[(e.FADE = 3)] = 'FADE');
+})(i || (i = {}));
+let h = Object.freeze({
+        1: f.translate,
+        2: f.scale,
+        3: f.fade
     }),
-    _ = Object.freeze({
-        top: d.animatorTop,
-        bottom: d.animatorBottom,
-        left: d.animatorLeft,
-        right: d.animatorRight,
-        center: d.animatorCenter,
-        window_center: d.animatorCenter
+    p = Object.freeze({
+        top: f.animatorTop,
+        bottom: f.animatorBottom,
+        left: f.animatorLeft,
+        right: f.animatorRight,
+        center: f.animatorCenter,
+        window_center: f.animatorCenter
     });
-function p(e) {
-    let { position: t, type: n, children: r } = e,
-        { reducedMotion: i } = s.useContext(c.S),
-        o = i.enabled ? 3 : n,
-        [p, h] = s.useState(null != t),
-        [m] = s.useState(() => new u.V7()),
-        [g, E] = s.useState(!0),
-        v = s.useRef(null);
+function m(e) {
+    let { position: n, type: r, children: i } = e,
+        { reducedMotion: a } = o.useContext(d.S),
+        l = a.enabled ? 3 : r,
+        [m, g] = o.useState(null != n),
+        [E] = o.useState(() => new c.V7()),
+        [v, I] = o.useState(!0),
+        T = o.useRef(null);
     return (
-        s.useLayoutEffect(() => {
+        o.useLayoutEffect(() => {
             var e;
-            null === (e = v.current) ||
+            null === (e = T.current) ||
                 void 0 === e ||
                 e.addEventListener('transitionend', () => {
-                    E(!1);
+                    I(!1);
                 }),
                 setTimeout(() => {
-                    E(!1);
-                }, 200);
+                    I(!1);
+                }, _);
         }, []),
-        s.useEffect(() => () => m.stop(), [m]),
-        s.useEffect(() => {
-            null != t && m.start(10, () => h(!0));
-        }, [t, m]),
-        (0, a.jsx)('div', {
-            'data-popout-animating': g,
-            className: l()(null != t ? _[t] : null, {
-                [f[o]]: null != t,
-                [d.didRender]: p
+        o.useEffect(() => () => E.stop(), [E]),
+        o.useEffect(() => {
+            null != n && E.start(10, () => g(!0));
+        }, [n, E]),
+        (0, s.jsx)('div', {
+            'data-popout-animating': v,
+            className: u()(null != n ? p[n] : null, {
+                [h[l]]: null != n,
+                [f.didRender]: m
             }),
-            children: r
+            children: i
         })
     );
 }
-p.Types = r;
+m.Types = i;

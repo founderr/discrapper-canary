@@ -1,79 +1,82 @@
-Object.defineProperty(t, '__esModule', { value: !0 }), (t.Alpha = void 0);
-var r =
+Object.defineProperty(n, '__esModule', { value: !0 }), (n.Alpha = void 0);
+var i =
         Object.assign ||
         function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+            for (var n = 1; n < arguments.length; n++) {
+                var r = arguments[n];
+                for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
             }
             return e;
         },
-    i = (function () {
-        function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-                var r = t[n];
-                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+    a = (function () {
+        function e(e, n) {
+            for (var r = 0; r < n.length; r++) {
+                var i = n[r];
+                (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
             }
         }
-        return function (t, n, r) {
-            return n && e(t.prototype, n), r && e(t, r), t;
+        return function (n, r, i) {
+            return r && e(n.prototype, r), i && e(n, i), n;
         };
     })(),
-    a = n(192379),
-    s = c(a),
-    o = c(n(723184)),
-    l = (function (e) {
-        if (e && e.__esModule) return e;
-        var t = {};
-        if (null != e) for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
-        return (t.default = e), t;
-    })(n(121494)),
-    u = c(n(122024));
-function c(e) {
+    s = r(192379),
+    o = f(s),
+    l = f(r(723184)),
+    u = d(r(121494)),
+    c = f(r(122024));
+function d(e) {
+    if (e && e.__esModule) return e;
+    var n = {};
+    if (null != e) for (var r in e) Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]);
+    return (n.default = e), n;
+}
+function f(e) {
     return e && e.__esModule ? e : { default: e };
 }
-function d(e, t) {
-    if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
+function _(e, n) {
+    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
 }
-var f = (t.Alpha = (function (e) {
-    function t() {
-        !(function (e, t) {
-            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-        })(this, t);
-        for (var e, n, r, i = arguments.length, a = Array(i), s = 0; s < i; s++) a[s] = arguments[s];
+function h(e, n) {
+    if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
+}
+function p(e, n) {
+    if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
+    (e.prototype = Object.create(n && n.prototype, {
+        constructor: {
+            value: e,
+            enumerable: !1,
+            writable: !0,
+            configurable: !0
+        }
+    })),
+        n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
+}
+var m = (n.Alpha = (function (e) {
+    function n() {
+        _(this, n);
+        for (var e, r, i, a = arguments.length, s = Array(a), o = 0; o < a; o++) s[o] = arguments[o];
         return (
-            (n = r = d(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(a)))),
-            (r.handleChange = function (e) {
-                var t = l.calculateChange(e, r.props.hsl, r.props.direction, r.props.a, r.container);
-                t && 'function' == typeof r.props.onChange && r.props.onChange(t, e);
+            (r = i = h(this, (e = n.__proto__ || Object.getPrototypeOf(n)).call.apply(e, [this].concat(s)))),
+            (i.handleChange = function (e) {
+                var n = u.calculateChange(e, i.props.hsl, i.props.direction, i.props.a, i.container);
+                n && 'function' == typeof i.props.onChange && i.props.onChange(n, e);
             }),
-            (r.handleMouseDown = function (e) {
-                r.handleChange(e), window.addEventListener('mousemove', r.handleChange), window.addEventListener('mouseup', r.handleMouseUp);
+            (i.handleMouseDown = function (e) {
+                i.handleChange(e), window.addEventListener('mousemove', i.handleChange), window.addEventListener('mouseup', i.handleMouseUp);
             }),
-            (r.handleMouseUp = function () {
-                r.unbindEventListeners();
+            (i.handleMouseUp = function () {
+                i.unbindEventListeners();
             }),
-            (r.unbindEventListeners = function () {
-                window.removeEventListener('mousemove', r.handleChange), window.removeEventListener('mouseup', r.handleMouseUp);
+            (i.unbindEventListeners = function () {
+                window.removeEventListener('mousemove', i.handleChange), window.removeEventListener('mouseup', i.handleMouseUp);
             }),
-            d(r, n)
+            h(i, r)
         );
     }
     return (
-        !(function (e, t) {
-            if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-            (e.prototype = Object.create(t && t.prototype, {
-                constructor: {
-                    value: e,
-                    enumerable: !1,
-                    writable: !0,
-                    configurable: !0
-                }
-            })),
-                t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
-        })(t, e),
-        i(t, [
+        p(n, e),
+        a(n, [
             {
                 key: 'componentWillUnmount',
                 value: function () {
@@ -84,8 +87,8 @@ var f = (t.Alpha = (function (e) {
                 key: 'render',
                 value: function () {
                     var e = this,
-                        t = this.props.rgb,
-                        n = (0, o.default)(
+                        n = this.props.rgb,
+                        r = (0, l.default)(
                             {
                                 default: {
                                     alpha: {
@@ -99,7 +102,7 @@ var f = (t.Alpha = (function (e) {
                                     },
                                     gradient: {
                                         absolute: '0px 0px 0px 0px',
-                                        background: 'linear-gradient(to right, rgba(' + t.r + ',' + t.g + ',' + t.b + ', 0) 0%,\n           rgba(' + t.r + ',' + t.g + ',' + t.b + ', 1) 100%)',
+                                        background: 'linear-gradient(to right, rgba(' + n.r + ',' + n.g + ',' + n.b + ', 0) 0%,\n           rgba(' + n.r + ',' + n.g + ',' + n.b + ', 1) 100%)',
                                         boxShadow: this.props.shadow,
                                         borderRadius: this.props.radius
                                     },
@@ -110,7 +113,7 @@ var f = (t.Alpha = (function (e) {
                                     },
                                     pointer: {
                                         position: 'absolute',
-                                        left: 100 * t.a + '%'
+                                        left: 100 * n.a + '%'
                                     },
                                     slider: {
                                         width: '4px',
@@ -123,42 +126,42 @@ var f = (t.Alpha = (function (e) {
                                     }
                                 },
                                 vertical: {
-                                    gradient: { background: 'linear-gradient(to bottom, rgba(' + t.r + ',' + t.g + ',' + t.b + ', 0) 0%,\n           rgba(' + t.r + ',' + t.g + ',' + t.b + ', 1) 100%)' },
+                                    gradient: { background: 'linear-gradient(to bottom, rgba(' + n.r + ',' + n.g + ',' + n.b + ', 0) 0%,\n           rgba(' + n.r + ',' + n.g + ',' + n.b + ', 1) 100%)' },
                                     pointer: {
                                         left: 0,
-                                        top: 100 * t.a + '%'
+                                        top: 100 * n.a + '%'
                                     }
                                 },
-                                overwrite: r({}, this.props.style)
+                                overwrite: i({}, this.props.style)
                             },
                             {
                                 vertical: 'vertical' === this.props.direction,
                                 overwrite: !0
                             }
                         );
-                    return s.default.createElement(
+                    return o.default.createElement(
                         'div',
-                        { style: n.alpha },
-                        s.default.createElement('div', { style: n.checkboard }, s.default.createElement(u.default, { renderers: this.props.renderers })),
-                        s.default.createElement('div', { style: n.gradient }),
-                        s.default.createElement(
+                        { style: r.alpha },
+                        o.default.createElement('div', { style: r.checkboard }, o.default.createElement(c.default, { renderers: this.props.renderers })),
+                        o.default.createElement('div', { style: r.gradient }),
+                        o.default.createElement(
                             'div',
                             {
-                                style: n.container,
-                                ref: function (t) {
-                                    return (e.container = t);
+                                style: r.container,
+                                ref: function (n) {
+                                    return (e.container = n);
                                 },
                                 onMouseDown: this.handleMouseDown,
                                 onTouchMove: this.handleChange,
                                 onTouchStart: this.handleChange
                             },
-                            s.default.createElement('div', { style: n.pointer }, this.props.pointer ? s.default.createElement(this.props.pointer, this.props) : s.default.createElement('div', { style: n.slider }))
+                            o.default.createElement('div', { style: r.pointer }, this.props.pointer ? o.default.createElement(this.props.pointer, this.props) : o.default.createElement('div', { style: r.slider }))
                         )
                     );
                 }
             }
         ]),
-        t
+        n
     );
-})(a.PureComponent || a.Component));
-t.default = f;
+})(s.PureComponent || s.Component));
+n.default = m;

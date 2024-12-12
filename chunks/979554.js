@@ -1,11 +1,9 @@
-var r, i;
-n.d(t, {
+var i;
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 }),
-    ((i = r || (r = {}))[(i.NONE = 100)] = 'NONE'),
-    (i[(i.AVATAR_DECORATION = 0)] = 'AVATAR_DECORATION'),
-    (i[(i.PROFILE_EFFECT = 1)] = 'PROFILE_EFFECT'),
-    (i[(i.BUNDLE = 1000)] = 'BUNDLE'),
-    (i[(i.VARIANTS_GROUP = 2000)] = 'VARIANTS_GROUP');
+    !(function (e) {
+        (e[(e.NONE = 100)] = 'NONE'), (e[(e.AVATAR_DECORATION = 0)] = 'AVATAR_DECORATION'), (e[(e.PROFILE_EFFECT = 1)] = 'PROFILE_EFFECT'), (e[(e.BUNDLE = 1000)] = 'BUNDLE'), (e[(e.VARIANTS_GROUP = 2000)] = 'VARIANTS_GROUP');
+    })(i || (i = {}));

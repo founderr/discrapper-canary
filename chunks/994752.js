@@ -1,49 +1,54 @@
-n(47120);
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140),
-    u = n(664674);
-let c = new Map();
-class d extends (r = o.ZP.Store) {
+var i,
+    a = r(47120);
+var s = r(442837),
+    o = r(570140),
+    l = r(664674);
+function u(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let c = !1,
+    d = new Map();
+function f(e) {
+    let { leaderboardResponse: n, intervalOffset: r } = e,
+        { leaderboard: i } = n,
+        { guild_id: a, leaderboard_id: s } = i,
+        o = d.get(r);
+    null == o && ((o = new Map()), d.set(r, o));
+    let l = o.get(a);
+    null == l && ((l = new Map()), o.set(a, l)), l.set(s, n);
+}
+function _() {
+    d = new Map();
+}
+class h extends (i = s.ZP.Store) {
     getLeaderboards(e) {
-        var t;
-        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return null === (t = c.get(n)) || void 0 === t ? void 0 : t.get(e);
-    }
-    get(e, t) {
         var n;
-        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        return null === (n = this.getLeaderboardResponse(e, t, r)) || void 0 === n ? void 0 : n.leaderboard;
+        let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return null === (n = d.get(r)) || void 0 === n ? void 0 : n.get(e);
     }
-    getLeaderboardResponse(e, t) {
-        var n, r;
+    get(e, n) {
+        var r;
         let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        return null === (r = c.get(i)) || void 0 === r ? void 0 : null === (n = r.get(e)) || void 0 === n ? void 0 : n.get(t);
+        return c ? l.Z : null === (r = this.getLeaderboardResponse(e, n, i)) || void 0 === r ? void 0 : r.leaderboard;
+    }
+    getLeaderboardResponse(e, n) {
+        var r, i;
+        let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        return null === (i = d.get(a)) || void 0 === i ? void 0 : null === (r = i.get(e)) || void 0 === r ? void 0 : r.get(n);
     }
 }
-(s = 'GuildLeaderboardStore'),
-    (a = 'displayName') in (i = d)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new d(l.Z, {
-        CONNECTION_OPEN: function () {
-            c = new Map();
-        },
-        SET_GUILD_LEADERBOARD: function (e) {
-            let { leaderboardResponse: t, intervalOffset: n } = e,
-                { leaderboard: r } = t,
-                { guild_id: i, leaderboard_id: a } = r,
-                s = c.get(n);
-            null == s && ((s = new Map()), c.set(n, s));
-            let o = s.get(i);
-            null == o && ((o = new Map()), s.set(i, o)), o.set(a, t);
-        }
+u(h, 'displayName', 'GuildLeaderboardStore'),
+    (n.Z = new h(o.Z, {
+        CONNECTION_OPEN: _,
+        SET_GUILD_LEADERBOARD: f
     }));

@@ -1,7 +1,8 @@
-var r = n(158698),
-    i = 1 / 0;
-e.exports = function (e) {
-    if ('string' == typeof e || r(e)) return e;
-    var t = e + '';
-    return '0' == t && 1 / e == -i ? '-0' : t;
-};
+var i = r(158698),
+    a = 1 / 0;
+function s(e) {
+    if ('string' == typeof e || i(e)) return e;
+    var n = e + '';
+    return '0' == n && 1 / e == -a ? '-0' : n;
+}
+e.exports = s;

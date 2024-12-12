@@ -1,112 +1,113 @@
-n(411104);
-var r = n(544891),
-    i = n(433517),
-    a = n(570140),
-    s = n(663389),
-    o = n(626135),
-    l = n(768581),
-    u = n(546796),
-    c = n(37234),
-    d = n(981631),
-    f = n(792101),
-    _ = n(388032);
-t.Z = {
+var i = r(411104);
+var a = r(544891),
+    s = r(433517),
+    o = r(570140),
+    l = r(663389),
+    u = r(626135),
+    c = r(768581),
+    d = r(546796),
+    f = r(37234),
+    _ = r(981631),
+    h = r(792101),
+    p = r(388032);
+function m(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+        r = arguments.length > 2 ? arguments[2] : void 0;
+    o.Z.dispatch({
+        type: 'USER_SETTINGS_MODAL_INIT',
+        section: e,
+        subsection: n,
+        ...r
+    });
+}
+n.Z = {
     open() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-            t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { openWithoutBackstack: !1 };
-        a.Z.dispatch({
+            n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+            r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { openWithoutBackstack: !1 };
+        o.Z.dispatch({
             type: 'USER_SETTINGS_MODAL_OPEN',
             section: e,
-            subsection: t,
-            ...n
+            subsection: n,
+            ...r
         });
-        (0, c.jN)(d.S9g.USER_SETTINGS);
+        (0, f.jN)(_.S9g.USER_SETTINGS);
     },
-    init: function (e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-            n = arguments.length > 2 ? arguments[2] : void 0;
-        a.Z.dispatch({
-            type: 'USER_SETTINGS_MODAL_INIT',
-            section: e,
-            subsection: t,
-            ...n
-        });
-    },
+    init: m,
     close() {
-        let e = s.Z.onClose;
-        a.Z.dispatch({ type: 'USER_SETTINGS_MODAL_CLOSE' }), null != e && e();
+        let e = l.Z.onClose;
+        o.Z.dispatch({ type: 'USER_SETTINGS_MODAL_CLOSE' }), null != e && e();
     },
     setSection(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        a.Z.dispatch({
+        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+            r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        o.Z.dispatch({
             type: 'USER_SETTINGS_MODAL_SET_SECTION',
             section: e,
-            subsection: t,
-            ...n
+            subsection: n,
+            ...r
         });
     },
     clearSubsection(e) {
-        a.Z.dispatch({
+        o.Z.dispatch({
             type: 'USER_SETTINGS_MODAL_CLEAR_SUBSECTION',
             forSection: e
         });
     },
     clearScrollPosition(e) {
-        a.Z.dispatch({
+        o.Z.dispatch({
             type: 'USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION',
             forSection: e
         });
     },
     updateAccount(e) {
-        a.Z.dispatch({
+        o.Z.dispatch({
             type: 'USER_SETTINGS_MODAL_UPDATE_ACCOUNT',
             settings: e
         });
     },
     submitComplete() {
-        a.Z.dispatch({ type: 'USER_SETTINGS_MODAL_SUBMIT_COMPLETE' });
+        o.Z.dispatch({ type: 'USER_SETTINGS_MODAL_SUBMIT_COMPLETE' });
     },
     reset() {
-        a.Z.dispatch({ type: 'USER_SETTINGS_MODAL_RESET' });
+        o.Z.dispatch({ type: 'USER_SETTINGS_MODAL_RESET' });
     },
-    saveAccountChanges(e, t) {
-        a.Z.dispatch({ type: 'USER_SETTINGS_MODAL_SUBMIT' });
-        let { username: n, email: s, emailToken: c, password: p, avatar: h, newPassword: m, discriminator: g } = e,
-            { close: E } = t;
-        return (0, u.Z)(
+    saveAccountChanges(e, n) {
+        o.Z.dispatch({ type: 'USER_SETTINGS_MODAL_SUBMIT' });
+        let { username: r, email: i, emailToken: l, password: f, avatar: m, newPassword: g, discriminator: E } = e,
+            { close: v } = n;
+        return (0, d.Z)(
             (e) => {
-                let t = {
-                        username: n,
-                        email: s,
-                        email_token: c,
-                        password: p,
-                        avatar: h,
-                        new_password: m,
+                let n = {
+                        username: r,
+                        email: i,
+                        email_token: l,
+                        password: f,
+                        avatar: m,
+                        new_password: g,
                         ...e,
-                        discriminator: null != g && '' !== g ? g : void 0
+                        discriminator: null != E && '' !== E ? E : void 0
                     },
-                    a = i.K.get(d.JkL),
-                    o = (0, f.xJ)();
-                null != o && null != a && ((t.push_provider = o), (t.push_token = a));
-                let l = i.K.get(d.scU);
+                    o = s.K.get(_.JkL),
+                    u = (0, h.xJ)();
+                null != u && null != o && ((n.push_provider = u), (n.push_token = o));
+                let c = s.K.get(_.scU);
                 return (
-                    null != f.mv && null != l && ((t.push_voip_provider = f.mv), (t.push_voip_token = l)),
-                    r.tn.patch({
-                        url: d.ANM.ME,
+                    null != h.mv && null != c && ((n.push_voip_provider = h.mv), (n.push_voip_token = c)),
+                    a.tn.patch({
+                        url: _.ANM.ME,
                         oldFormErrors: !0,
-                        body: t,
+                        body: n,
                         rejectWithError: !1
                     })
                 );
             },
             {
                 checkEnabled: !1,
-                modalProps: { title: _.intl.string(_.t.clQc1d) },
+                modalProps: { title: p.intl.string(p.t.clQc1d) },
                 hooks: {
                     onEarlyClose: () =>
-                        a.Z.dispatch({
+                        o.Z.dispatch({
                             type: 'USER_SETTINGS_MODAL_SUBMIT_FAILURE',
                             errors: {}
                         })
@@ -114,38 +115,38 @@ t.Z = {
             }
         ).then(
             (e) => {
-                let t = e.body,
-                    n = t.token;
+                let n = e.body,
+                    r = n.token;
                 return (
-                    o.default.track(d.rMx.USER_AVATAR_UPDATED, { animated: (0, l.xR)(t.avatar) }),
-                    delete t.token,
-                    a.Z.dispatch({
+                    u.default.track(_.rMx.USER_AVATAR_UPDATED, { animated: (0, c.xR)(n.avatar) }),
+                    delete n.token,
+                    o.Z.dispatch({
                         type: 'UPDATE_TOKEN',
-                        token: n,
-                        userId: t.id
+                        token: r,
+                        userId: n.id
                     }),
-                    a.Z.dispatch({
+                    o.Z.dispatch({
                         type: 'CURRENT_USER_UPDATE',
-                        user: t
+                        user: n
                     }),
-                    null != m &&
-                        a.Z.dispatch({
+                    null != g &&
+                        o.Z.dispatch({
                             type: 'USER_PASSWORD_UPDATE',
-                            user: t,
-                            newPassword: m
+                            user: n,
+                            newPassword: g
                         }),
-                    null != p &&
-                        null != m &&
-                        a.Z.dispatch({
+                    null != f &&
+                        null != g &&
+                        o.Z.dispatch({
                             type: 'PASSWORD_UPDATED',
-                            userId: t.id
+                            userId: n.id
                         }),
-                    E ? this.close() : this.submitComplete(),
+                    v ? this.close() : this.submitComplete(),
                     e
                 );
             },
             (e) => (
-                a.Z.dispatch({
+                o.Z.dispatch({
                     type: 'USER_SETTINGS_MODAL_SUBMIT_FAILURE',
                     errors: e.body
                 }),

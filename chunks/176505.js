@@ -1,5 +1,4 @@
-var r, i, a, s;
-n.d(t, {
+r.d(n, {
     $x: function () {
         return f;
     },
@@ -7,10 +6,10 @@ n.d(t, {
         return l;
     },
     EC: function () {
-        return p;
+        return h;
     },
     HY: function () {
-        return i;
+        return a;
     },
     ME: function () {
         return c;
@@ -19,7 +18,7 @@ n.d(t, {
         return u;
     },
     V: function () {
-        return h;
+        return p;
     },
     Vg: function () {
         return o;
@@ -28,27 +27,24 @@ n.d(t, {
         return _;
     },
     oC: function () {
-        return r;
+        return i;
     },
     zZ: function () {
         return d;
     }
-}),
-    n(47120),
-    ((a = r || (r = {})).ROLE_SUBSCRIPTIONS = 'role-subscriptions'),
-    (a.GUILD_SHOP = 'shop'),
-    (a.MEMBER_APPLICATIONS = 'member-applications'),
-    (a.GUILD_HOME = '@home'),
-    (a.CHANNEL_BROWSER = 'channel-browser'),
-    (a.GUILD_ONBOARDING = 'onboarding'),
-    (a.CUSTOMIZE_COMMUNITY = 'customize-community'),
-    (a.MEMBER_SAFETY = 'member-safety');
-let o = new Set(Object.values(r));
+});
+var i,
+    a,
+    s = r(47120);
+!(function (e) {
+    (e.ROLE_SUBSCRIPTIONS = 'role-subscriptions'), (e.GUILD_SHOP = 'shop'), (e.MEMBER_APPLICATIONS = 'member-applications'), (e.GUILD_HOME = '@home'), (e.CHANNEL_BROWSER = 'channel-browser'), (e.GUILD_ONBOARDING = 'onboarding'), (e.CUSTOMIZE_COMMUNITY = 'customize-community'), (e.MEMBER_SAFETY = 'member-safety');
+})(i || (i = {}));
+let o = new Set(Object.values(i));
 function l(e) {
     return o.has(e);
 }
-function u(e, t) {
-    return ''.concat(e, '-').concat(t);
+function u(e, n) {
+    return ''.concat(e, '-').concat(n);
 }
 function c(e) {
     return !!(null == e ? void 0 : e.includes('@home'));
@@ -72,6 +68,8 @@ let d = Object.freeze({
     }),
     f = 1024,
     _ = 4096;
-((s = i || (i = {})).GUILD_HOME = 'home'), (s.SERVER_GUIDE = 'guide'), (s.CHANNEL_BROWSER = 'browse'), (s.CUSTOMIZE_COMMUNITY = 'customize'), (s.LINKED_ROLES = 'linked-roles');
-let p = new Set(Object.values(i)),
-    h = '131';
+!(function (e) {
+    (e.GUILD_HOME = 'home'), (e.SERVER_GUIDE = 'guide'), (e.CHANNEL_BROWSER = 'browse'), (e.CUSTOMIZE_COMMUNITY = 'customize'), (e.LINKED_ROLES = 'linked-roles');
+})(a || (a = {}));
+let h = new Set(Object.values(a)),
+    p = '131';

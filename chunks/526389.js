@@ -1,12 +1,13 @@
-var n = Function.prototype.toString;
-t.Z = function (e) {
+var r = Function.prototype.toString;
+function i(e) {
     if (null != e) {
         try {
-            return n.call(e);
+            return r.call(e);
         } catch (e) {}
         try {
             return e + '';
         } catch (e) {}
     }
     return '';
-};
+}
+n.Z = i;

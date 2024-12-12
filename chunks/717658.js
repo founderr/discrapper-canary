@@ -1,5 +1,5 @@
-e.exports = function (e) {
-    let t = e.regex;
+function n(e) {
+    let n = e.regex;
     return {
         name: 'Diff',
         aliases: ['patch'],
@@ -7,13 +7,13 @@ e.exports = function (e) {
             {
                 className: 'meta',
                 relevance: 10,
-                match: t.either(/^@@ +-\d+,\d+ +\+\d+,\d+ +@@/, /^\*\*\* +\d+,\d+ +\*\*\*\*$/, /^--- +\d+,\d+ +----$/)
+                match: n.either(/^@@ +-\d+,\d+ +\+\d+,\d+ +@@/, /^\*\*\* +\d+,\d+ +\*\*\*\*$/, /^--- +\d+,\d+ +----$/)
             },
             {
                 className: 'comment',
                 variants: [
                     {
-                        begin: t.either(/Index: /, /^index/, /={3,}/, /^-{3}/, /^\*{3} /, /^\+{3}/, /^diff --git/),
+                        begin: n.either(/Index: /, /^index/, /={3,}/, /^-{3}/, /^\*{3} /, /^\+{3}/, /^diff --git/),
                         end: /$/
                     },
                     { match: /^\*{15}$/ }
@@ -36,4 +36,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = n;

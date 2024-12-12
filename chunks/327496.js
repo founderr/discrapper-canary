@@ -1,81 +1,85 @@
-n.d(t, {
+r.d(n, {
     L: function () {
-        return p;
+        return E;
     }
-}),
-    n(653041);
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(512969),
-    l = n(481060),
-    u = n(540059),
-    c = n(624138),
-    d = n(369455);
-let f = [18, 18, 16, 16, 14, 12, 10];
-function _(e, t) {
-    return s()({
-        [d.childWrapper]: !0,
-        [d.childWrapperNoHoverBg]: 'always' === e,
-        [d.childWrapperHoverScale]: 'on-hover' === e && t
+});
+var i = r(653041);
+var a = r(200651),
+    s = r(192379),
+    o = r(120356),
+    l = r.n(o),
+    u = r(512969),
+    c = r(481060),
+    d = r(540059),
+    f = r(624138),
+    _ = r(369455);
+let h = [18, 18, 16, 16, 14, 12, 10];
+function p(e) {
+    var n;
+    return null !== (n = h[e.length - 1]) && void 0 !== n ? n : h[h.length - 1];
+}
+function m(e, n) {
+    return l()({
+        [_.childWrapper]: !0,
+        [_.childWrapperNoHoverBg]: 'always' === e,
+        [_.childWrapperHoverScale]: 'on-hover' === e && n
     });
 }
-let p = (e) => {
-    let t,
-        n,
-        { backgroundStyle: a = 'always', children: p, icon: h, name: m, ariaLabel: g, className: E, style: v, to: I, onClick: T, selected: b = !1, ...S } = e,
-        y = (0, o.k6)(),
-        A = (0, u.Q3)('NavItem');
-    if (null == h && null != m) {
-        var N;
-        n = null !== (N = f[(t = (0, c.Zg)(m)).length - 1]) && void 0 !== N ? N : f[f.length - 1];
-    }
-    let C = i.useCallback(
+function g(e) {
+    return e ? 44 : 48;
+}
+let E = (e) => {
+    let n,
+        r,
+        { backgroundStyle: i = 'always', children: o, icon: h, name: E, ariaLabel: v, className: I, style: T, to: b, onClick: y, selected: S = !1, ...A } = e,
+        N = (0, u.k6)(),
+        C = (0, d.Q3)('NavItem');
+    null == h && null != E && (r = p((n = (0, f.Zg)(E))));
+    let R = s.useCallback(
             (e) => {
-                if (null == I);
-                else if ('string' == typeof I) y.push(I);
+                if (null == b);
+                else if ('string' == typeof b) N.push(b);
                 else {
-                    let { pathname: e = '', state: t } = I;
-                    y.push(e, t);
+                    let { pathname: e = '', state: n } = b;
+                    N.push(e, n);
                 }
-                null != T && T(e);
+                null != y && y(e);
             },
-            [y, I, T]
+            [N, b, y]
         ),
-        R = A ? 44 : 48;
-    return (0, r.jsxs)(l.Clickable, {
-        ...S,
-        onClick: C,
-        className: s()(E, d.wrapper, { [d.selected]: b }),
-        'aria-label': null != g && '' !== g ? g : null != m ? m : '',
+        O = g(C);
+    return (0, a.jsxs)(c.Clickable, {
+        ...A,
+        onClick: R,
+        className: l()(I, _.wrapper, { [_.selected]: S }),
+        'aria-label': null != v && '' !== v ? v : null != E ? E : '',
         style: {
-            ...v,
-            fontSize: n
+            ...T,
+            fontSize: r
         },
         focusProps: { enabled: !1 },
         children: [
-            null != t
-                ? (0, r.jsx)('div', {
-                      className: s()(_(a, !1), d.acronym),
+            null != n
+                ? (0, a.jsx)('div', {
+                      className: l()(m(i, !1), _.acronym),
                       'aria-hidden': !0,
-                      children: t
+                      children: n
                   })
                 : null,
             null != h
-                ? (0, r.jsx)('img', {
-                      className: d.icon,
+                ? (0, a.jsx)('img', {
+                      className: _.icon,
                       src: h,
                       alt: ' ',
-                      width: R,
-                      height: R,
+                      width: O,
+                      height: O,
                       'aria-hidden': !0
                   })
                 : null,
-            null != p
-                ? (0, r.jsx)('div', {
-                      className: _(a, !0),
-                      children: p
+            null != o
+                ? (0, a.jsx)('div', {
+                      className: m(i, !0),
+                      children: o
                   })
                 : null
         ]

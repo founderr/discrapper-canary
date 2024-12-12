@@ -1,12 +1,13 @@
-n.d(t, {
+r.d(n, {
     B: function () {
         return i;
     }
 });
-var r,
-    i,
-    a = n(818083);
-((r = i || (i = {}))[(r.NONE = 0)] = 'NONE'), (r[(r.WITH_TOP_LIST = 1)] = 'WITH_TOP_LIST'), (r[(r.WITHOUT_TOP_LIST = 2)] = 'WITHOUT_TOP_LIST');
+var i,
+    a = r(818083);
+!(function (e) {
+    (e[(e.NONE = 0)] = 'NONE'), (e[(e.WITH_TOP_LIST = 1)] = 'WITH_TOP_LIST'), (e[(e.WITHOUT_TOP_LIST = 2)] = 'WITHOUT_TOP_LIST');
+})(i || (i = {}));
 let s = (0, a.B)({
     kind: 'user',
     id: '2024-02_emoji_picker_upload_desktop',
@@ -34,4 +35,4 @@ let s = (0, a.B)({
         }
     ]
 });
-t.Z = s;
+n.Z = s;

@@ -1,8 +1,10 @@
-n.d(t, {
+r.d(n, {
     r: function () {
-        return r;
+        return i;
     }
 });
-var r = function (e, t) {
-    (this.activeTargets = []), (this.skippedTargets = []), (this.observationTargets = []), (this.observer = e), (this.callback = t);
-};
+var i = (function () {
+    return function e(e, n) {
+        (this.activeTargets = []), (this.skippedTargets = []), (this.observationTargets = []), (this.observer = e), (this.callback = n);
+    };
+})();

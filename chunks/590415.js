@@ -1,4 +1,4 @@
-n.d(t, {
+r.d(n, {
     ZP: function () {
         return l;
     },
@@ -9,10 +9,9 @@ n.d(t, {
         return i;
     }
 });
-var r,
-    i,
-    a = n(442837),
-    s = n(979651);
+var i,
+    a = r(442837),
+    s = r(979651);
 function o(e) {
     if (null == e) return 0;
     if (e.suppress && null != e.requestToSpeakTimestamp) return 1;
@@ -20,7 +19,9 @@ function o(e) {
     if (!e.suppress && null == e.requestToSpeakTimestamp) return 3;
     return 0;
 }
-function l(e, t) {
-    return (0, a.e7)([s.Z], () => (null == e || null == t ? 0 : o(s.Z.getVoiceStateForChannel(t, e))), [e, t]);
+function l(e, n) {
+    return (0, a.e7)([s.Z], () => (null == e || null == n ? 0 : o(s.Z.getVoiceStateForChannel(n, e))), [e, n]);
 }
-((r = i || (i = {}))[(r.NONE = 0)] = 'NONE'), (r[(r.REQUESTED_TO_SPEAK = 1)] = 'REQUESTED_TO_SPEAK'), (r[(r.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK = 2)] = 'REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK'), (r[(r.ON_STAGE = 3)] = 'ON_STAGE');
+!(function (e) {
+    (e[(e.NONE = 0)] = 'NONE'), (e[(e.REQUESTED_TO_SPEAK = 1)] = 'REQUESTED_TO_SPEAK'), (e[(e.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK = 2)] = 'REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK'), (e[(e.ON_STAGE = 3)] = 'ON_STAGE');
+})(i || (i = {}));

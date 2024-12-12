@@ -1,54 +1,60 @@
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140);
-let u = !1,
-    c = !1,
-    d = {},
-    f = null;
-class _ extends (s = o.ZP.Store) {
+var i,
+    a = r(442837),
+    s = r(570140);
+function o(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let l = !1,
+    u = !1,
+    c = {},
+    d = null;
+function f(e) {
+    let { consents: n } = e;
+    null != n &&
+        ((c = {
+            ...c,
+            ...n
+        }),
+        (u = !0));
+}
+function _(e) {
+    let { consents: n } = e;
+    (c = { ...n }), (l = !0);
+}
+function h(e) {
+    d = e.consentRequired;
+}
+function p() {
+    d = null;
+}
+class m extends (i = a.ZP.Store) {
     hasConsented(e) {
-        return null != d[e] && d[e].consented;
+        return null != c[e] && c[e].consented;
     }
     get fetchedConsents() {
-        return u;
+        return l;
     }
     get receivedConsentsInConnectionOpen() {
-        return c;
+        return u;
     }
     getAuthenticationConsentRequired() {
-        return f;
+        return d;
     }
 }
-(a = 'ConsentStore'),
-    (i = 'displayName') in (r = _)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.Z = new _(l.Z, {
-        CONNECTION_OPEN: function (e) {
-            let { consents: t } = e;
-            null != t &&
-                ((d = {
-                    ...d,
-                    ...t
-                }),
-                (c = !0));
-        },
-        UPDATE_CONSENTS: function (e) {
-            let { consents: t } = e;
-            (d = { ...t }), (u = !0);
-        },
-        SET_CONSENT_REQUIRED: function (e) {
-            f = e.consentRequired;
-        },
-        LOGOUT: function () {
-            f = null;
-        }
+o(m, 'displayName', 'ConsentStore'),
+    (n.Z = new m(s.Z, {
+        CONNECTION_OPEN: f,
+        UPDATE_CONSENTS: _,
+        SET_CONSENT_REQUIRED: h,
+        LOGOUT: p
     }));

@@ -1,47 +1,48 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return f;
+        return p;
     },
     o: function () {
-        return d;
+        return h;
     }
-}),
-    n(47120);
-var r = n(392711),
-    i = n.n(r),
-    a = n(544891),
-    s = n(570140),
-    o = n(503013),
-    l = n(283595),
-    u = n(804739),
-    c = n(981631);
-async function d() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.Z.entitledBranchIds;
-    if (!(0, u.Q)() || 0 === e.length) return [];
-    let t = i().chunk(e, 50);
+});
+var i = r(47120);
+var a = r(392711),
+    s = r.n(a),
+    o = r(544891),
+    l = r(570140),
+    u = r(503013),
+    c = r(283595),
+    d = r(804739),
+    f = r(981631);
+let _ = 50;
+async function h() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.Z.entitledBranchIds;
+    if (!(0, d.Q)() || 0 === e.length) return [];
+    let n = s().chunk(e, _);
     try {
-        let e = t.map(async (e) =>
+        let e = n.map(async (e) =>
                 (
-                    await a.tn.post({
-                        url: c.ANM.APPLICATION_BRANCHES,
+                    await o.tn.post({
+                        url: f.ANM.APPLICATION_BRANCHES,
                         body: { branch_ids: e },
                         oldFormErrors: !0,
                         rejectWithError: !0
                     })
-                ).body.map(o.Z.createFromServer)
+                ).body.map(u.Z.createFromServer)
             ),
-            n = await Promise.all(e),
-            r = i().flatten(n);
+            r = await Promise.all(e),
+            i = s().flatten(r);
         return (
-            s.Z.dispatch({
+            l.Z.dispatch({
                 type: 'APPLICATION_BRANCHES_FETCH_SUCCESS',
-                branches: r
+                branches: i
             }),
-            r
+            i
         );
-    } catch (t) {
+    } catch (n) {
         return (
-            s.Z.dispatch({
+            l.Z.dispatch({
                 type: 'APPLICATION_BRANCHES_FETCH_FAIL',
                 branchIds: e
             }),
@@ -49,25 +50,25 @@ async function d() {
         );
     }
 }
-async function f(e) {
+async function p(e) {
     try {
-        let t = await a.tn.get({
-                url: c.ANM.OWNED_APPLICATION_BRANCHES(e),
+        let n = await o.tn.get({
+                url: f.ANM.OWNED_APPLICATION_BRANCHES(e),
                 oldFormErrors: !0,
                 rejectWithError: !0
             }),
-            n = Array.isArray(t.body) ? t.body.map(o.Z.createFromServer) : [];
+            r = Array.isArray(n.body) ? n.body.map(u.Z.createFromServer) : [];
         return (
-            s.Z.dispatch({
+            l.Z.dispatch({
                 type: 'OWNED_APPLICATION_BRANCHES_FETCH_SUCCESS',
                 applicationId: e,
-                branches: n
+                branches: r
             }),
-            n
+            r
         );
-    } catch (t) {
+    } catch (n) {
         return (
-            s.Z.dispatch({
+            l.Z.dispatch({
                 type: 'OWNED_APPLICATION_BRANCHES_FETCH_FAIL',
                 applicationId: e
             }),

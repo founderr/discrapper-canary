@@ -1,125 +1,130 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return I;
+        return S;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(752877),
-    l = n(442837),
-    u = n(704215),
-    c = n(481060),
-    d = n(607070),
-    f = n(243778),
-    _ = n(594174),
-    p = n(74538),
-    h = n(921944),
-    m = n(388032),
-    g = n(140787);
-let E = {
-    tension: 750,
-    mass: 2.5,
-    friction: 70
-};
-function v(e) {
-    let { tooltipText: t, headingText: n, textColor: i } = e,
-        a = null != n;
-    return (0, r.jsxs)('span', {
-        className: a ? void 0 : g.tooltipContainer,
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(120356),
+    l = r.n(o),
+    u = r(752877),
+    c = r(442837),
+    d = r(704215),
+    f = r(481060),
+    _ = r(607070),
+    h = r(243778),
+    p = r(594174),
+    m = r(74538),
+    g = r(921944),
+    E = r(388032),
+    v = r(140787);
+let I = {
+        tension: 750,
+        mass: 2.5,
+        friction: 70
+    },
+    T = 20;
+function b(e) {
+    let { tooltipText: n, headingText: r, textColor: i } = e,
+        s = null != r;
+    return (0, a.jsxs)('span', {
+        className: s ? void 0 : v.tooltipContainer,
         children: [
-            (0, r.jsxs)('span', {
-                className: g.tooltipContainer,
+            (0, a.jsxs)('span', {
+                className: v.tooltipContainer,
                 children: [
-                    (0, r.jsx)(c.NitroWheelIcon, {
+                    (0, a.jsx)(f.NitroWheelIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: g.nitroWheel
+                        className: v.nitroWheel
                     }),
-                    a
-                        ? (0, r.jsx)(c.Heading, {
+                    s
+                        ? (0, a.jsx)(f.Heading, {
                               color: null != i ? i : 'text-normal',
                               variant: 'heading-sm/semibold',
-                              children: n
+                              children: r
                           })
                         : null
                 ]
             }),
-            (0, r.jsx)(c.Text, {
-                variant: a ? 'text-xs/normal' : 'text-sm/medium',
+            (0, a.jsx)(f.Text, {
+                variant: s ? 'text-xs/normal' : 'text-sm/medium',
                 color: null != i ? i : 'text-normal',
-                children: t
+                children: n
             })
         ]
     });
 }
-function I(e) {
-    let { checked: t, onClick: n, id: a = 'burst-reaction-toggle-button' } = e,
-        I = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        T = _.default.getCurrentUser(),
-        b = null == T || (0, p.I5)(T) ? [u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
-        [S, y] = (0, f.US)(b),
-        [A, N] = i.useState(!1),
-        [C, R] = (0, c.useSpring)(() => ({})),
-        O = (0, o.animated)(c.SuperReactionIcon);
-    i.useEffect(() => {
-        let e = S === u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-        e && (y(h.L.DISMISS), setTimeout(() => N(e), 200));
-    }, [S, y]);
-    let D = A ? m.intl.string(m.t['Osi/u7']) : t ? m.intl.string(m.t['5cRA/f']) : m.intl.string(m.t.buV4am),
-        L = A ? m.intl.string(m.t.ORK94u) : void 0;
-    return (0, r.jsxs)(c.TooltipContainer, {
-        position: 'top',
-        text: (0, r.jsx)(v, {
-            textColor: 'always-white',
-            tooltipText: D,
-            headingText: L
+function y(e) {
+    return e ? E.intl.string(E.t['5cRA/f']) : E.intl.string(E.t.buV4am);
+}
+function S(e) {
+    let { checked: n, onClick: r, id: i = 'burst-reaction-toggle-button' } = e,
+        o = (0, c.e7)([_.Z], () => _.Z.useReducedMotion),
+        S = p.default.getCurrentUser(),
+        A = null == S || (0, m.I5)(S) ? [d.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
+        [N, C] = (0, h.US)(A),
+        [R, O] = s.useState(!1),
+        [D, L] = (0, f.useSpring)(() => ({})),
+        x = (0, u.animated)(f.SuperReactionIcon);
+    function w() {
+        L({
+            from: { rotate: n ? '360deg' : '0deg' },
+            to: { rotate: n ? '0deg' : '360deg' },
+            config: I
         }),
-        color: c.Tooltip.Colors.BRAND,
-        forceOpen: A,
-        'aria-label': D,
-        tooltipClassName: g.tooltip,
+            null == r || r(),
+            O(!1);
+    }
+    s.useEffect(() => {
+        let e = N === d.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
+        e && (C(g.L.DISMISS), setTimeout(() => O(e), 200));
+    }, [N, C]);
+    let P = R ? E.intl.string(E.t['Osi/u7']) : y(n),
+        M = R ? E.intl.string(E.t.ORK94u) : void 0;
+    return (0, a.jsxs)(f.TooltipContainer, {
+        position: 'top',
+        text: (0, a.jsx)(b, {
+            textColor: 'always-white',
+            tooltipText: P,
+            headingText: M
+        }),
+        color: f.Tooltip.Colors.BRAND,
+        forceOpen: R,
+        'aria-label': P,
+        tooltipClassName: v.tooltip,
         children: [
-            (0, r.jsx)('input', {
-                className: g.visuallyHidden,
-                checked: t,
-                onChange: function () {
-                    R({
-                        from: { rotate: t ? '360deg' : '0deg' },
-                        to: { rotate: t ? '0deg' : '360deg' },
-                        config: E
-                    }),
-                        null == n || n(),
-                        N(!1);
-                },
-                id: a,
+            (0, a.jsx)('input', {
+                className: v.visuallyHidden,
+                checked: n,
+                onChange: w,
+                id: i,
                 type: 'checkbox'
             }),
-            (0, r.jsxs)('label', {
-                htmlFor: a,
-                className: s()(g.label, { [g.labelChecked]: t }),
+            (0, a.jsxs)('label', {
+                htmlFor: i,
+                className: l()(v.label, { [v.labelChecked]: n }),
                 children: [
-                    t
-                        ? (0, r.jsx)(c.Shine, {
-                              className: g.shine,
-                              shinePaused: I
+                    n
+                        ? (0, a.jsx)(f.Shine, {
+                              className: v.shine,
+                              shinePaused: o
                           })
                         : null,
-                    (0, r.jsx)(O, {
-                        style: I ? void 0 : C,
+                    (0, a.jsx)(x, {
+                        style: o ? void 0 : D,
                         size: 'custom',
-                        width: 20,
-                        height: 20,
-                        color: t ? 'white' : 'currentColor',
-                        className: g.icon
+                        width: T,
+                        height: T,
+                        color: n ? 'white' : 'currentColor',
+                        className: v.icon
                     }),
-                    (0, r.jsx)('span', {
-                        children: (0, r.jsx)(c.Text, {
-                            className: g.visuallyHidden,
+                    (0, a.jsx)('span', {
+                        children: (0, a.jsx)(f.Text, {
+                            className: v.visuallyHidden,
                             variant: 'text-sm/semibold',
-                            children: m.intl.string(m.t.buV4am)
+                            children: E.intl.string(E.t.buV4am)
                         })
                     })
                 ]

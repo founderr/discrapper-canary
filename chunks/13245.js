@@ -1,322 +1,323 @@
-n(411104), n(47120);
-var r = n(772848),
-    i = n(570140),
-    a = n(318885),
-    s = n(355863),
-    o = n(449224),
-    l = n(451478),
-    u = n(434529),
-    c = n(145597),
-    d = n(765250),
-    f = n(981631);
-let _ = {
+var i = r(411104);
+var a = r(47120);
+var s = r(772848),
+    o = r(570140),
+    l = r(318885),
+    u = r(355863),
+    c = r(449224),
+    d = r(451478),
+    f = r(434529),
+    _ = r(145597),
+    h = r(765250),
+    p = r(981631);
+let m = {
     track(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        (0, a.Q)(e, t, n);
+        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        (0, l.Q)(e, n, r);
     },
     overlayReady(e) {
-        i.Z.dispatch({
+        o.Z.dispatch({
             type: 'OVERLAY_READY',
             pid: e
         });
     },
     overlayMounted() {
-        for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-        i.Z.dispatch({
+        for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
+        o.Z.dispatch({
             type: 'OVERLAY_MOUNTED',
-            nudges: t
+            nudges: n
         });
     },
     setFocusedPID(e) {
-        i.Z.dispatch({
+        o.Z.dispatch({
             type: 'OVERLAY_FOCUSED',
             pid: e
         });
     },
-    setInputLocked(e, t) {
-        i.Z.dispatch({
+    setInputLocked(e, n) {
+        o.Z.dispatch({
             type: 'OVERLAY_SET_INPUT_LOCKED',
             locked: e,
-            pid: t
+            pid: n
         });
     },
     setClickZoneDebugMode(e) {
-        i.Z.dispatch({
+        o.Z.dispatch({
             type: 'OVERLAY_CLICK_ZONE_DEBUG_MODE',
             enabled: e
         });
     },
     setRenderDebugMode(e) {
-        i.Z.dispatch({
+        o.Z.dispatch({
             type: 'OVERLAY_RENDER_DEBUG_MODE',
             enabled: e
         });
     },
     setInstanceLocked(e) {
         if (!__OVERLAY__) throw Error('OverlayActionCreators.setInstanceLocked: Must be called within Overlay context');
-        _.setInputLocked(e, (0, c.QF)());
+        m.setInputLocked(e, (0, _.QF)());
     },
-    setEnabled(e, t, n) {
-        i.Z.dispatch({
+    setEnabled(e, n, r) {
+        o.Z.dispatch({
             type: 'OVERLAY_SET_ENABLED',
             enabled: e,
-            legacyEnabled: t,
-            global: n
+            legacyEnabled: n,
+            global: r
         });
     },
     selectCall(e) {
-        i.Z.dispatch({
+        o.Z.dispatch({
             type: 'OVERLAY_SELECT_CALL',
             callId: e
         });
     },
     setDisplayNameMode(e) {
-        i.Z.dispatch({
+        o.Z.dispatch({
             type: 'OVERLAY_SET_DISPLAY_NAME_MODE',
             mode: e
         });
     },
     setDisplayUserMode(e) {
-        i.Z.dispatch({
+        o.Z.dispatch({
             type: 'OVERLAY_SET_DISPLAY_USER_MODE',
             mode: e
         });
     },
     setAvatarSizeMode(e) {
-        i.Z.dispatch({
+        o.Z.dispatch({
             type: 'OVERLAY_SET_AVATAR_SIZE_MODE',
             mode: e
         });
     },
     setNotificationPositionMode(e) {
-        i.Z.dispatch({
+        o.Z.dispatch({
             type: 'OVERLAY_SET_NOTIFICATION_POSITION_MODE',
             mode: e
         });
     },
     setTextChatNotificationMode(e) {
-        i.Z.dispatch({
+        o.Z.dispatch({
             type: 'OVERLAY_SET_TEXT_CHAT_NOTIFICATION_MODE',
             mode: e
         });
     },
     setShowKeybindIndicators(e) {
-        i.Z.dispatch({
+        o.Z.dispatch({
             type: 'OVERLAY_SET_SHOW_KEYBIND_INDICATORS',
             shouldShow: e
         });
     },
-    callPrivateChannel(e, t) {
-        i.Z.dispatch({
+    callPrivateChannel(e, n) {
+        o.Z.dispatch({
             type: 'OVERLAY_CALL_PRIVATE_CHANNEL',
             channelId: e,
-            ring: t
+            ring: n
         });
     },
     setTextWidgetOpacity(e) {
-        i.Z.dispatch({
+        o.Z.dispatch({
             type: 'OVERLAY_SET_TEXT_WIDGET_OPACITY',
             opacity: e
         });
     },
     disableExternalLinkAlert() {
-        i.Z.dispatch({ type: 'OVERLAY_DISABLE_EXTERNAL_LINK_ALERT' });
+        o.Z.dispatch({ type: 'OVERLAY_DISABLE_EXTERNAL_LINK_ALERT' });
     },
     startSession() {
         if (!__OVERLAY__) throw Error('Attempting to start an overlay session outside of the overlay context');
-        i.Z.dispatch({ type: 'OVERLAY_START_SESSION' });
+        o.Z.dispatch({ type: 'OVERLAY_START_SESSION' });
     },
     activateRegion(e) {
-        i.Z.dispatch({
+        o.Z.dispatch({
             type: 'OVERLAY_ACTIVATE_REGION',
             region: e
         });
     },
     deactivateAllRegions() {
-        i.Z.dispatch({ type: 'OVERLAY_DEACTIVATE_ALL_REGIONS' });
+        o.Z.dispatch({ type: 'OVERLAY_DEACTIVATE_ALL_REGIONS' });
     },
     setPreviewInGameMode(e) {
-        i.Z.dispatch({
+        o.Z.dispatch({
             type: 'OVERLAY_SET_PREVIEW_IN_GAME_MODE',
             isPreviewingInGame: e
         });
     },
     updateNotificationStatus(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f._1z.DISMISSED;
-        i.Z.dispatch({
+        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : p._1z.DISMISSED;
+        o.Z.dispatch({
             type: 'OVERLAY_UPDATE_NOTIFICATION_STATUS',
             notificationId: e,
-            status: t
+            status: n
         });
     },
-    notificationEvent(e, t) {
-        var n, r;
-        let a = o.Z.getGame();
-        i.Z.dispatch({
+    notificationEvent(e, n) {
+        var r, i;
+        let a = c.Z.getGame();
+        o.Z.dispatch({
             type: 'OVERLAY_NOTIFICATION_EVENT',
             notificationType: e,
-            action: t,
-            gameName: null !== (n = null == a ? void 0 : a.name) && void 0 !== n ? n : null,
-            gameId: null !== (r = null == a ? void 0 : a.id) && void 0 !== r ? r : null
+            action: n,
+            gameName: null !== (r = null == a ? void 0 : a.name) && void 0 !== r ? r : null,
+            gameId: null !== (i = null == a ? void 0 : a.id) && void 0 !== i ? i : null
         });
     },
     setPinChat(e) {
-        let t = c.qU,
-            n = s.Z.getWidgetsForLayout(t),
-            i = s.Z.getWidgetConfig(f.Odu.GUILDS),
-            a = s.Z.getWidgetConfig(f.Odu.TEXT),
-            o = s.Z.getWidgetConfig(f.Odu.GUILDS_TEXT);
-        if (0 === n.length || null == i || null == a || null == o) return;
-        let _ = l.Z.windowSize(),
-            p = {
+        let n = _.qU,
+            r = u.Z.getWidgetsForLayout(n),
+            i = u.Z.getWidgetConfig(p.Odu.GUILDS),
+            a = u.Z.getWidgetConfig(p.Odu.TEXT),
+            o = u.Z.getWidgetConfig(p.Odu.GUILDS_TEXT);
+        if (0 === r.length || null == i || null == a || null == o) return;
+        let l = d.Z.windowSize(),
+            c = {
                 width: 0,
                 height: 0
             },
-            h = {
+            m = {
                 top: 0,
                 left: 0,
                 right: 0,
                 bottom: 0
             },
-            m = {
+            g = {
                 width: 312,
                 height: 0
             },
-            g = {
+            E = {
                 top: 0,
                 left: 0,
                 right: 0,
                 bottom: 0
             },
-            E = {
+            v = {
                 width: 0,
                 height: 0
             };
         if (
-            (n.forEach((e) => {
-                let { type: t, id: n, anchor: r, size: i } = e;
-                switch (t) {
-                    case f.Odu.TEXT:
-                        (p = (0, u.w_)(i, _)), (0, d.E9)(n);
+            (r.forEach((e) => {
+                let { type: n, id: r, anchor: i, size: a } = e;
+                switch (n) {
+                    case p.Odu.TEXT:
+                        (c = (0, f.w_)(a, l)), (0, h.E9)(r);
                         break;
-                    case f.Odu.GUILDS:
-                        (h = (0, u.vS)(r, i, _)), (m = (0, u.w_)(i, _)), (0, d.E9)(n);
+                    case p.Odu.GUILDS:
+                        (m = (0, f.vS)(i, a, l)), (g = (0, f.w_)(a, l)), (0, h.E9)(r);
                         break;
-                    case f.Odu.GUILDS_TEXT:
-                        (g = (0, u.vS)(r, i, _)), (E = (0, u.w_)(i, _)), (0, d.E9)(n);
+                    case p.Odu.GUILDS_TEXT:
+                        (E = (0, f.vS)(i, a, l)), (v = (0, f.w_)(a, l)), (0, h.E9)(r);
                 }
             }),
             e)
         ) {
-            let e = 'auto' === E.width ? o.minSize.width : E.width;
+            let e = 'auto' === v.width ? o.minSize.width : v.width;
             e -= i.minSize.width;
-            let [n, a] = (0, u.o4)(
-                    g,
+            let [r, a] = (0, f.o4)(
+                    E,
                     {
-                        ...E,
+                        ...v,
                         width: i.minSize.width
                     },
-                    _
+                    l
                 ),
-                [l, c] = (0, u.uq)(
-                    g,
+                [c, d] = (0, f.uq)(
+                    E,
                     {
-                        ...E,
+                        ...v,
                         width: e
                     },
-                    _,
+                    l,
                     {
                         x: 10,
                         y: 10
                     }
                 ),
-                p = s.Z.getWidgetDefaultSettings(f.Odu.TEXT);
-            if (null == p) throw Error('OverlayActionCreators.setPinChat: No config for TEXT exists');
-            (0, d.A4)({
-                ...p,
-                type: f.Odu.TEXT,
-                id: (0, r.Z)(),
-                size: c,
-                anchor: l,
-                layoutId: t
+                _ = u.Z.getWidgetDefaultSettings(p.Odu.TEXT);
+            if (null == _) throw Error('OverlayActionCreators.setPinChat: No config for TEXT exists');
+            (0, h.A4)({
+                ..._,
+                type: p.Odu.TEXT,
+                id: (0, s.Z)(),
+                size: d,
+                anchor: c,
+                layoutId: n
             });
-            let h = s.Z.getWidgetDefaultSettings(f.Odu.GUILDS);
-            if (null == h) throw Error('OverlayActionCreators.setPinChat: No config for GUILDS exists');
-            (0, d.A4)({
-                ...h,
-                type: f.Odu.GUILDS,
-                id: (0, r.Z)(),
+            let m = u.Z.getWidgetDefaultSettings(p.Odu.GUILDS);
+            if (null == m) throw Error('OverlayActionCreators.setPinChat: No config for GUILDS exists');
+            (0, h.A4)({
+                ...m,
+                type: p.Odu.GUILDS,
+                id: (0, s.Z)(),
                 size: a,
-                anchor: n,
-                layoutId: t
+                anchor: r,
+                layoutId: n
             });
         } else {
-            let e = 'auto' === p.width ? a.minSize.width : p.width;
+            let e = 'auto' === c.width ? a.minSize.width : c.width;
             e += i.minSize.width;
-            let [n, o] = (0, u.o4)(
-                    h,
+            let [r, o] = (0, f.o4)(
+                    m,
                     {
-                        height: m.height,
+                        height: g.height,
                         width: e
                     },
-                    _
+                    l
                 ),
-                l = s.Z.getWidgetDefaultSettings(f.Odu.GUILDS_TEXT);
-            if (null == l) throw Error('OverlayActionCreators.setPinChat: No config for GUILDS_TEXT exists');
-            (0, d.A4)({
-                ...l,
-                type: f.Odu.GUILDS_TEXT,
-                id: (0, r.Z)(),
-                layoutId: t,
-                anchor: n,
+                d = u.Z.getWidgetDefaultSettings(p.Odu.GUILDS_TEXT);
+            if (null == d) throw Error('OverlayActionCreators.setPinChat: No config for GUILDS_TEXT exists');
+            (0, h.A4)({
+                ...d,
+                type: p.Odu.GUILDS_TEXT,
+                id: (0, s.Z)(),
+                layoutId: n,
+                anchor: r,
                 size: o
             });
         }
     },
     resetDefaultLayout(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        if (null != s.Z.getLayout(e)) (0, d.sz)(e), (0, d.jx)(s.Z.getDefaultLayout(e, t));
+        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        if (null != u.Z.getLayout(e)) (0, h.sz)(e), (0, h.jx)(u.Z.getDefaultLayout(e, n));
     },
     setClickZones(e) {
-        i.Z.dispatch({
+        o.Z.dispatch({
             type: 'OVERLAY_SET_CLICK_ZONES',
             zones: e
         });
     },
-    relayClickZoneClicked(e, t, n) {
-        i.Z.dispatch({
+    relayClickZoneClicked(e, n, r) {
+        o.Z.dispatch({
             type: 'OVERLAY_RELAY_CLICK_ZONE_CLICKED',
             zoneName: e,
-            normalizedMouseX: t,
-            normalizedMouseY: n
+            normalizedMouseX: n,
+            normalizedMouseY: r
         });
     },
-    setAssociatedGame(e, t, n) {
-        i.Z.dispatch({
+    setAssociatedGame(e, n, r) {
+        o.Z.dispatch({
             type: 'OVERLAY_SET_ASSOCIATED_GAME',
             previousAssociatedGamePID: e,
-            associatedGamePID: t,
-            associatedGame: n
+            associatedGamePID: n,
+            associatedGame: r
         });
     },
     notifyReadyToShow(e) {
-        i.Z.dispatch({
+        o.Z.dispatch({
             type: 'OVERLAY_NOTIFY_READY_TO_SHOW',
             pid: e
         });
     },
     successfullyShown(e) {
-        i.Z.dispatch({
+        o.Z.dispatch({
             type: 'OVERLAY_SUCCESSFULLY_SHOWN',
             pid: e
         });
     },
     notifyContentInventoryReady(e) {
-        i.Z.dispatch({
+        o.Z.dispatch({
             type: 'OVERLAY_CONTENT_INVENTORY_READY',
             contentInventoryEntries: e
         });
     }
 };
-t.Z = _;
+n.Z = m;

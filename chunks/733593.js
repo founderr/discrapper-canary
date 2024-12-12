@@ -1,6 +1,7 @@
-var r = n(572770),
-    i = n(175056);
-t.Z = function (e, t, n) {
-    var a = t(e);
-    return (0, i.Z)(e) ? a : (0, r.Z)(a, n(e));
-};
+var i = r(572770),
+    a = r(175056);
+function s(e, n, r) {
+    var s = n(e);
+    return (0, a.Z)(e) ? s : (0, i.Z)(s, r(e));
+}
+n.Z = s;

@@ -1,160 +1,163 @@
-var r = n(192379),
-    i = n(723184),
-    a = n(786547),
-    s = n(64412),
-    o = (function () {
-        function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-                var r = t[n];
-                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+var i = r(192379),
+    a = r(723184),
+    s = r(786547),
+    o = r(64412),
+    l = (function () {
+        function e(e, n) {
+            for (var r = 0; r < n.length; r++) {
+                var i = n[r];
+                (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
             }
         }
-        return function (t, n, r) {
-            return n && e(t.prototype, n), r && e(t, r), t;
+        return function (n, r, i) {
+            return r && e(n.prototype, r), i && e(n, i), n;
         };
-    })(),
-    l = (function (e) {
-        function t(e) {
-            !(function (e, t) {
-                if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-            })(this, t);
-            var n = (function (e, t) {
-                if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-                return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
-            })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e));
-            return (
-                (n.handleChange = function (e) {
-                    'function' == typeof n.props.onChange && n.throttle(n.props.onChange, s.T(e, n.props.hsl, n.container), e);
-                }),
-                (n.handleMouseDown = function (e) {
-                    n.handleChange(e);
-                    var t = n.getContainerRenderWindow();
-                    t.addEventListener('mousemove', n.handleChange), t.addEventListener('mouseup', n.handleMouseUp);
-                }),
-                (n.handleMouseUp = function () {
-                    n.unbindEventListeners();
-                }),
-                (n.throttle = (0, a.Z)(function (e, t, n) {
-                    e(t, n);
-                }, 50)),
-                n
-            );
+    })();
+function u(e, n) {
+    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+}
+function c(e, n) {
+    if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
+}
+function d(e, n) {
+    if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
+    (e.prototype = Object.create(n && n.prototype, {
+        constructor: {
+            value: e,
+            enumerable: !1,
+            writable: !0,
+            configurable: !0
         }
+    })),
+        n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
+}
+var f = (function (e) {
+    function n(e) {
+        u(this, n);
+        var r = c(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this, e));
         return (
-            !(function (e, t) {
-                if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-                (e.prototype = Object.create(t && t.prototype, {
-                    constructor: {
-                        value: e,
-                        enumerable: !1,
-                        writable: !0,
-                        configurable: !0
-                    }
-                })),
-                    t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
-            })(t, e),
-            o(t, [
-                {
-                    key: 'componentWillUnmount',
-                    value: function () {
-                        this.throttle.cancel(), this.unbindEventListeners();
-                    }
-                },
-                {
-                    key: 'getContainerRenderWindow',
-                    value: function () {
-                        for (var e = this.container, t = window; !t.document.contains(e) && t.parent !== t; ) t = t.parent;
-                        return t;
-                    }
-                },
-                {
-                    key: 'unbindEventListeners',
-                    value: function () {
-                        var e = this.getContainerRenderWindow();
-                        e.removeEventListener('mousemove', this.handleChange), e.removeEventListener('mouseup', this.handleMouseUp);
-                    }
-                },
-                {
-                    key: 'render',
-                    value: function () {
-                        var e = this,
-                            t = this.props.style || {},
-                            n = t.color,
-                            a = t.white,
-                            s = t.black,
-                            o = t.pointer,
-                            l = t.circle,
-                            u = (0, i.default)(
-                                {
-                                    default: {
-                                        color: {
-                                            absolute: '0px 0px 0px 0px',
-                                            background: 'hsl(' + this.props.hsl.h + ',100%, 50%)',
-                                            borderRadius: this.props.radius
-                                        },
-                                        white: {
-                                            absolute: '0px 0px 0px 0px',
-                                            borderRadius: this.props.radius
-                                        },
-                                        black: {
-                                            absolute: '0px 0px 0px 0px',
-                                            boxShadow: this.props.shadow,
-                                            borderRadius: this.props.radius
-                                        },
-                                        pointer: {
-                                            position: 'absolute',
-                                            top: -(100 * this.props.hsv.v) + 100 + '%',
-                                            left: 100 * this.props.hsv.s + '%',
-                                            cursor: 'default'
-                                        },
-                                        circle: {
-                                            width: '4px',
-                                            height: '4px',
-                                            boxShadow: '0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,.3),\n            0 0 1px 2px rgba(0,0,0,.4)',
-                                            borderRadius: '50%',
-                                            cursor: 'hand',
-                                            transform: 'translate(-2px, -2px)'
-                                        }
+            (r.handleChange = function (e) {
+                'function' == typeof r.props.onChange && r.throttle(r.props.onChange, o.T(e, r.props.hsl, r.container), e);
+            }),
+            (r.handleMouseDown = function (e) {
+                r.handleChange(e);
+                var n = r.getContainerRenderWindow();
+                n.addEventListener('mousemove', r.handleChange), n.addEventListener('mouseup', r.handleMouseUp);
+            }),
+            (r.handleMouseUp = function () {
+                r.unbindEventListeners();
+            }),
+            (r.throttle = (0, s.Z)(function (e, n, r) {
+                e(n, r);
+            }, 50)),
+            r
+        );
+    }
+    return (
+        d(n, e),
+        l(n, [
+            {
+                key: 'componentWillUnmount',
+                value: function () {
+                    this.throttle.cancel(), this.unbindEventListeners();
+                }
+            },
+            {
+                key: 'getContainerRenderWindow',
+                value: function () {
+                    for (var e = this.container, n = window; !n.document.contains(e) && n.parent !== n; ) n = n.parent;
+                    return n;
+                }
+            },
+            {
+                key: 'unbindEventListeners',
+                value: function () {
+                    var e = this.getContainerRenderWindow();
+                    e.removeEventListener('mousemove', this.handleChange), e.removeEventListener('mouseup', this.handleMouseUp);
+                }
+            },
+            {
+                key: 'render',
+                value: function () {
+                    var e = this,
+                        n = this.props.style || {},
+                        r = n.color,
+                        s = n.white,
+                        o = n.black,
+                        l = n.pointer,
+                        u = n.circle,
+                        c = (0, a.default)(
+                            {
+                                default: {
+                                    color: {
+                                        absolute: '0px 0px 0px 0px',
+                                        background: 'hsl(' + this.props.hsl.h + ',100%, 50%)',
+                                        borderRadius: this.props.radius
                                     },
-                                    custom: {
-                                        color: n,
-                                        white: a,
-                                        black: s,
-                                        pointer: o,
-                                        circle: l
+                                    white: {
+                                        absolute: '0px 0px 0px 0px',
+                                        borderRadius: this.props.radius
+                                    },
+                                    black: {
+                                        absolute: '0px 0px 0px 0px',
+                                        boxShadow: this.props.shadow,
+                                        borderRadius: this.props.radius
+                                    },
+                                    pointer: {
+                                        position: 'absolute',
+                                        top: -(100 * this.props.hsv.v) + 100 + '%',
+                                        left: 100 * this.props.hsv.s + '%',
+                                        cursor: 'default'
+                                    },
+                                    circle: {
+                                        width: '4px',
+                                        height: '4px',
+                                        boxShadow: '0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,.3),\n            0 0 1px 2px rgba(0,0,0,.4)',
+                                        borderRadius: '50%',
+                                        cursor: 'hand',
+                                        transform: 'translate(-2px, -2px)'
                                     }
                                 },
-                                { custom: !!this.props.style }
-                            );
-                        return r.createElement(
+                                custom: {
+                                    color: r,
+                                    white: s,
+                                    black: o,
+                                    pointer: l,
+                                    circle: u
+                                }
+                            },
+                            { custom: !!this.props.style }
+                        );
+                    return i.createElement(
+                        'div',
+                        {
+                            style: c.color,
+                            ref: function (n) {
+                                return (e.container = n);
+                            },
+                            onMouseDown: this.handleMouseDown,
+                            onTouchMove: this.handleChange,
+                            onTouchStart: this.handleChange
+                        },
+                        i.createElement('style', null, '\n          .saturation-white {\n            background: -webkit-linear-gradient(to right, #fff, rgba(255,255,255,0));\n            background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n          }\n          .saturation-black {\n            background: -webkit-linear-gradient(to top, #000, rgba(0,0,0,0));\n            background: linear-gradient(to top, #000, rgba(0,0,0,0));\n          }\n        '),
+                        i.createElement(
                             'div',
                             {
-                                style: u.color,
-                                ref: function (t) {
-                                    return (e.container = t);
-                                },
-                                onMouseDown: this.handleMouseDown,
-                                onTouchMove: this.handleChange,
-                                onTouchStart: this.handleChange
+                                style: c.white,
+                                className: 'saturation-white'
                             },
-                            r.createElement('style', null, '\n          .saturation-white {\n            background: -webkit-linear-gradient(to right, #fff, rgba(255,255,255,0));\n            background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n          }\n          .saturation-black {\n            background: -webkit-linear-gradient(to top, #000, rgba(0,0,0,0));\n            background: linear-gradient(to top, #000, rgba(0,0,0,0));\n          }\n        '),
-                            r.createElement(
-                                'div',
-                                {
-                                    style: u.white,
-                                    className: 'saturation-white'
-                                },
-                                r.createElement('div', {
-                                    style: u.black,
-                                    className: 'saturation-black'
-                                }),
-                                r.createElement('div', { style: u.pointer }, this.props.pointer ? r.createElement(this.props.pointer, this.props) : r.createElement('div', { style: u.circle }))
-                            )
-                        );
-                    }
+                            i.createElement('div', {
+                                style: c.black,
+                                className: 'saturation-black'
+                            }),
+                            i.createElement('div', { style: c.pointer }, this.props.pointer ? i.createElement(this.props.pointer, this.props) : i.createElement('div', { style: c.circle }))
+                        )
+                    );
                 }
-            ]),
-            t
-        );
-    })(r.PureComponent || r.Component);
-t.Z = l;
+            }
+        ]),
+        n
+    );
+})(i.PureComponent || i.Component);
+n.Z = f;

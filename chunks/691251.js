@@ -1,14 +1,15 @@
-var r, i, a, s;
-n.d(t, {
+var i, a;
+r.d(n, {
     S: function () {
-        return i;
+        return a;
     },
     u: function () {
-        return r;
+        return i;
     }
 }),
-    ((a = r || (r = {}))[(a.GRID_NAVIGATOR_EVENT = 0)] = 'GRID_NAVIGATOR_EVENT'),
-    (a[(a.MOUSE_EVENT = 1)] = 'MOUSE_EVENT'),
-    ((s = i || (i = {})).EMOJI = 'emoji'),
-    (s.STICKER = 'sticker'),
-    (s.PACK_ICON = 'pack-icon');
+    !(function (e) {
+        (e[(e.GRID_NAVIGATOR_EVENT = 0)] = 'GRID_NAVIGATOR_EVENT'), (e[(e.MOUSE_EVENT = 1)] = 'MOUSE_EVENT');
+    })(i || (i = {})),
+    !(function (e) {
+        (e.EMOJI = 'emoji'), (e.STICKER = 'sticker'), (e.PACK_ICON = 'pack-icon');
+    })(a || (a = {}));

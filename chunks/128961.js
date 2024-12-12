@@ -1,48 +1,50 @@
-var n = function (e, t) {
+var r = function (e, n) {
         switch (e) {
             case 'P':
-                return t.date({ width: 'short' });
+                return n.date({ width: 'short' });
             case 'PP':
-                return t.date({ width: 'medium' });
+                return n.date({ width: 'medium' });
             case 'PPP':
-                return t.date({ width: 'long' });
+                return n.date({ width: 'long' });
             default:
-                return t.date({ width: 'full' });
+                return n.date({ width: 'full' });
         }
     },
-    r = function (e, t) {
+    i = function (e, n) {
         switch (e) {
             case 'p':
-                return t.time({ width: 'short' });
+                return n.time({ width: 'short' });
             case 'pp':
-                return t.time({ width: 'medium' });
+                return n.time({ width: 'medium' });
             case 'ppp':
-                return t.time({ width: 'long' });
+                return n.time({ width: 'long' });
             default:
-                return t.time({ width: 'full' });
+                return n.time({ width: 'full' });
         }
-    };
-t.Z = {
-    p: r,
-    P: function (e, t) {
-        var i,
-            a = e.match(/(P+)(p+)?/) || [],
-            s = a[1],
-            o = a[2];
-        if (!o) return n(e, t);
-        switch (s) {
+    },
+    a = function (e, n) {
+        var a,
+            s = e.match(/(P+)(p+)?/) || [],
+            o = s[1],
+            l = s[2];
+        if (!l) return r(e, n);
+        switch (o) {
             case 'P':
-                i = t.dateTime({ width: 'short' });
+                a = n.dateTime({ width: 'short' });
                 break;
             case 'PP':
-                i = t.dateTime({ width: 'medium' });
+                a = n.dateTime({ width: 'medium' });
                 break;
             case 'PPP':
-                i = t.dateTime({ width: 'long' });
+                a = n.dateTime({ width: 'long' });
                 break;
             default:
-                i = t.dateTime({ width: 'full' });
+                a = n.dateTime({ width: 'full' });
         }
-        return i.replace('{{date}}', n(s, t)).replace('{{time}}', r(o, t));
-    }
-};
+        return a.replace('{{date}}', r(o, n)).replace('{{time}}', i(l, n));
+    },
+    s = {
+        p: i,
+        P: a
+    };
+n.Z = s;

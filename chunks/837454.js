@@ -1,10 +1,10 @@
-e.exports = function (e) {
-    let t = '[a-z][a-zA-Z0-9_]*',
-        n = {
+function n(e) {
+    let n = '[a-z][a-zA-Z0-9_]*',
+        r = {
             className: 'string',
             begin: '\\$.{1}'
         },
-        r = {
+        i = {
             className: 'symbol',
             begin: '#' + e.UNDERSCORE_IDENT_RE
         };
@@ -21,24 +21,25 @@ e.exports = function (e) {
                 relevance: 0
             },
             {
-                begin: t + ':',
+                begin: n + ':',
                 relevance: 0
             },
             e.C_NUMBER_MODE,
+            i,
             r,
-            n,
             {
-                begin: '\\|[ ]*' + t + '([ ]+' + t + ')*[ ]*\\|',
+                begin: '\\|[ ]*' + n + '([ ]+' + n + ')*[ ]*\\|',
                 returnBegin: !0,
                 end: /\|/,
                 illegal: /\S/,
-                contains: [{ begin: '(\\|[ ]*)?' + t }]
+                contains: [{ begin: '(\\|[ ]*)?' + n }]
             },
             {
                 begin: '#\\(',
                 end: '\\)',
-                contains: [e.APOS_STRING_MODE, n, e.C_NUMBER_MODE, r]
+                contains: [e.APOS_STRING_MODE, r, e.C_NUMBER_MODE, i]
             }
         ]
     };
-};
+}
+e.exports = n;

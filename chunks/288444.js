@@ -1,60 +1,61 @@
-n(47120);
-var r = n(846519),
-    i = n(904245),
-    a = n(287734),
-    s = n(147913),
-    o = n(317381),
-    l = n(592125),
-    u = n(979651),
-    c = n(938475),
-    d = n(388032);
-function f(e, t, n) {
+var i = r(47120);
+var a = r(846519),
+    s = r(904245),
+    o = r(287734),
+    l = r(147913),
+    u = r(317381),
+    c = r(592125),
+    d = r(979651),
+    f = r(938475),
+    _ = r(388032);
+function h(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let _ = 180000;
-function p() {
-    let e = u.Z.getCurrentClientVoiceChannelId(null);
+let p = 3,
+    m = 180000;
+function g() {
+    let e = d.Z.getCurrentClientVoiceChannelId(null);
     if (null == e) return !1;
-    let t = l.Z.getChannel(e);
-    return !(null == t || !t.isPrivate() || t.recipients.length > 1 || c.ZP.countVoiceStatesForChannel(e) > 1) && null == o.ZP.getSelfEmbeddedActivityForChannel(e) && !0;
+    let n = c.Z.getChannel(e);
+    return !(null == n || !n.isPrivate() || n.recipients.length > 1 || f.ZP.countVoiceStatesForChannel(e) > 1) && null == u.ZP.getSelfEmbeddedActivityForChannel(e) && !0;
 }
-function h() {
-    if (!p()) return;
-    let e = u.Z.getCurrentClientVoiceChannelId(null);
-    if (null != e) i.Z.sendBotMessage(e, d.intl.formatToPlainString(d.t.XYof5O, { number: 3 })), a.default.selectVoiceChannel(null);
+function E() {
+    if (!g()) return;
+    let e = d.Z.getCurrentClientVoiceChannelId(null);
+    if (null != e) s.Z.sendBotMessage(e, _.intl.formatToPlainString(_.t.XYof5O, { number: p })), o.default.selectVoiceChannel(null);
 }
-class m extends s.Z {
+class v extends l.Z {
     constructor(...e) {
         super(...e),
-            f(this, 'idleTimeout', new r.V7()),
-            f(this, 'handleConnectionClosed', () => {
+            h(this, 'idleTimeout', new a.V7()),
+            h(this, 'handleConnectionClosed', () => {
                 this.idleTimeout.stop();
             }),
-            f(this, 'handleEmbeddedActivityDisconnect', () => {
-                if (!!p()) this.idleTimeout.start(_, h, !0);
+            h(this, 'handleEmbeddedActivityDisconnect', () => {
+                if (!!g()) this.idleTimeout.start(m, E, !0);
             }),
-            f(this, 'handleVoiceStateUpdates', () => {
-                if (!p()) {
+            h(this, 'handleVoiceStateUpdates', () => {
+                if (!g()) {
                     this.idleTimeout.stop();
                     return;
                 }
-                this.idleTimeout.start(_, h, !1);
+                this.idleTimeout.start(m, E, !1);
             }),
-            f(this, 'actions', {
+            h(this, 'actions', {
                 VOICE_STATE_UPDATES: this.handleVoiceStateUpdates,
                 CONNECTION_CLOSED: this.handleConnectionClosed,
                 EMBEDDED_ACTIVITY_CLOSE: this.handleEmbeddedActivityDisconnect
             });
     }
 }
-t.Z = new m();
+n.Z = new v();

@@ -1,31 +1,30 @@
-n.d(t, {
+r.d(n, {
     O: function () {
-        return r;
+        return i;
     }
-}),
-    n(789020);
-var r,
-    i,
+});
+var i,
     a,
-    s = n(442837),
-    o = n(570140),
-    l = n(695346),
-    u = n(630388),
-    c = n(981631);
-function d(e, t, n) {
+    s = r(789020);
+var o = r(442837),
+    l = r(570140),
+    u = r(695346),
+    c = r(630388),
+    d = r(981631);
+function f(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-function f() {
+function _() {
     return {
         lastUsedObject: {},
         useActivityUrlOverride: !1,
@@ -33,78 +32,87 @@ function f() {
         filter: ''
     };
 }
-let _ = f();
-((a = r || (r = {})).INITIALIZED = 'INITIALIZED'), (a.LOADING = 'LOADING'), (a.LOADED = 'LOADED'), (a.ERROR = 'ERROR');
+let h = _();
+!(function (e) {
+    (e.INITIALIZED = 'INITIALIZED'), (e.LOADING = 'LOADING'), (e.LOADED = 'LOADED'), (e.ERROR = 'ERROR');
+})(i || (i = {}));
 let p = 'INITIALIZED',
-    h = [];
-class m extends (i = s.ZP.PersistedStore) {
+    m = [];
+function g() {
+    (h = _()), (p = 'INITIALIZED'), (m = []);
+}
+function E() {
+    h.useActivityUrlOverride = !h.useActivityUrlOverride;
+}
+function v(e) {
+    let { activityUrlOverride: n } = e;
+    h.activityUrlOverride = n;
+}
+function I(e) {
+    let { applicationId: n, timestamp: r } = e;
+    if (null == m.find((e) => e.id === n)) return !1;
+    h.lastUsedObject[n] = r;
+}
+function T(e) {
+    let { applications: n } = e;
+    (p = 'LOADED'), (m = n.filter((e) => null != e.flags && (0, c.yE)(e.flags, d.udG.EMBEDDED)));
+}
+function b(e) {
+    let { type: n } = e;
+    p = 'ERROR';
+}
+function y(e) {
+    let { filter: n } = e;
+    h.filter = n;
+}
+class S extends (a = o.ZP.PersistedStore) {
     initialize(e) {
-        _ = {
-            ...f(),
+        h = {
+            ..._(),
             ...(null != e ? e : {})
         };
     }
     getState() {
-        return _;
+        return h;
     }
     getIsEnabled() {
-        return l.Sb.getSetting() && h.length > 0;
+        return u.Sb.getSetting() && m.length > 0;
     }
     getLastUsedObject() {
-        return _.lastUsedObject;
+        return h.lastUsedObject;
     }
     getUseActivityUrlOverride() {
-        return this.getIsEnabled() && _.useActivityUrlOverride;
+        return this.getIsEnabled() && h.useActivityUrlOverride;
     }
     getActivityUrlOverride() {
-        return this.getIsEnabled() ? _.activityUrlOverride : null;
+        return this.getIsEnabled() ? h.activityUrlOverride : null;
     }
     getFetchState() {
         return p;
     }
     getFilter() {
-        return this.getIsEnabled() ? _.filter : '';
+        return this.getIsEnabled() ? h.filter : '';
     }
     getDeveloperShelfItems() {
-        return this.getIsEnabled() ? h : [];
+        return this.getIsEnabled() ? m : [];
     }
     inDevModeForApplication(e) {
-        return this.getIsEnabled() && null != h.find((t) => t.id === e);
+        return this.getIsEnabled() && null != m.find((n) => n.id === e);
     }
 }
-d(m, 'displayName', 'DeveloperActivityShelfStore'),
-    d(m, 'persistKey', 'DeveloperActivityShelfStore'),
-    d(m, 'migrations', [(e) => (delete e.isEnabled, { ...e })]),
-    (t.Z = new m(o.Z, {
-        LOGOUT: function () {
-            (_ = f()), (p = 'INITIALIZED'), (h = []);
-        },
-        DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE: function () {
-            _.useActivityUrlOverride = !_.useActivityUrlOverride;
-        },
-        DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE: function (e) {
-            let { activityUrlOverride: t } = e;
-            _.activityUrlOverride = t;
-        },
-        DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED: function (e) {
-            let { applicationId: t, timestamp: n } = e;
-            if (null == h.find((e) => e.id === t)) return !1;
-            _.lastUsedObject[t] = n;
-        },
+f(S, 'displayName', 'DeveloperActivityShelfStore'),
+    f(S, 'persistKey', 'DeveloperActivityShelfStore'),
+    f(S, 'migrations', [(e) => (delete e.isEnabled, { ...e })]),
+    (n.Z = new S(l.Z, {
+        LOGOUT: g,
+        DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE: E,
+        DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE: v,
+        DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED: I,
         DEVELOPER_ACTIVITY_SHELF_FETCH_START() {
             p = 'LOADING';
         },
-        DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: function (e) {
-            let { applications: t } = e;
-            (p = 'LOADED'), (h = t.filter((e) => null != e.flags && (0, u.yE)(e.flags, c.udG.EMBEDDED)));
-        },
-        DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL: function (e) {
-            let { type: t } = e;
-            p = 'ERROR';
-        },
-        DEVELOPER_ACTIVITY_SHELF_UPDATE_FILTER: function (e) {
-            let { filter: t } = e;
-            _.filter = t;
-        },
+        DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: T,
+        DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL: b,
+        DEVELOPER_ACTIVITY_SHELF_UPDATE_FILTER: y,
         USER_SETTINGS_PROTO_UPDATE() {}
     }));

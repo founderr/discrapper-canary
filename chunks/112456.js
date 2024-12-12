@@ -1,48 +1,48 @@
 (function () {
-    var n = this,
-        r = n.humanize,
-        i = {};
-    e.exports && (t = e.exports = i),
-        (t.humanize = i),
-        (i.noConflict = function () {
-            return (n.humanize = r), this;
+    var r = this,
+        i = r.humanize,
+        a = {};
+    e.exports && (n = e.exports = a),
+        (n.humanize = a),
+        (a.noConflict = function () {
+            return (r.humanize = i), this;
         }),
-        (i.pad = function (e, t, n, r) {
-            if (((e += ''), n ? n.length > 1 && (n = n.charAt(0)) : (n = ' '), 'right' == (r = void 0 === r ? 'left' : 'right'))) for (; e.length < t; ) e += n;
-            else for (; e.length < t; ) e = n + e;
+        (a.pad = function (e, n, r, i) {
+            if (((e += ''), r ? r.length > 1 && (r = r.charAt(0)) : (r = ' '), 'right' == (i = void 0 === i ? 'left' : 'right'))) for (; e.length < n; ) e += r;
+            else for (; e.length < n; ) e = r + e;
             return e;
         }),
-        (i.time = function () {
+        (a.time = function () {
             return new Date().getTime() / 1000;
         });
-    var a = [0, 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334],
-        s = [0, 0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335];
-    (i.date = function (e, t) {
-        var n = void 0 === t ? new Date() : new Date(t instanceof Date ? t : 1000 * t),
-            r = /\\?([a-z])/gi,
-            o = function (e, t) {
-                return c[e] ? c[e]() : t;
+    var s = [0, 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334],
+        o = [0, 0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335];
+    (a.date = function (e, n) {
+        var r = void 0 === n ? new Date() : new Date(n instanceof Date ? n : 1000 * n),
+            i = /\\?([a-z])/gi,
+            l = function (e, n) {
+                return d[e] ? d[e]() : n;
             },
-            l = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-            u = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-            c = {
+            u = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+            c = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+            d = {
                 d: function () {
-                    return i.pad(c.j(), 2, '0');
+                    return a.pad(d.j(), 2, '0');
                 },
                 D: function () {
-                    return c.l().slice(0, 3);
+                    return d.l().slice(0, 3);
                 },
                 j: function () {
-                    return n.getDate();
+                    return r.getDate();
                 },
                 l: function () {
-                    return l[c.w()];
+                    return u[d.w()];
                 },
                 N: function () {
-                    return c.w() || 7;
+                    return d.w() || 7;
                 },
                 S: function () {
-                    var e = c.j();
+                    var e = d.j();
                     return e > 4 && e < 21
                         ? 'th'
                         : {
@@ -52,155 +52,159 @@
                           }[e % 10] || 'th';
                 },
                 w: function () {
-                    return n.getDay();
+                    return r.getDay();
                 },
                 z: function () {
-                    return (c.L() ? s[c.n()] : a[c.n()]) + c.j() - 1;
+                    return (d.L() ? o[d.n()] : s[d.n()]) + d.j() - 1;
                 },
                 W: function () {
-                    var e = c.z() - c.N() + 1.5;
-                    return i.pad(1 + Math.floor(Math.abs(e) / 7) + (e % 7 > 3.5 ? 1 : 0), 2, '0');
+                    var e = d.z() - d.N() + 1.5;
+                    return a.pad(1 + Math.floor(Math.abs(e) / 7) + (e % 7 > 3.5 ? 1 : 0), 2, '0');
                 },
                 F: function () {
-                    return u[n.getMonth()];
+                    return c[r.getMonth()];
                 },
                 m: function () {
-                    return i.pad(c.n(), 2, '0');
+                    return a.pad(d.n(), 2, '0');
                 },
                 M: function () {
-                    return c.F().slice(0, 3);
+                    return d.F().slice(0, 3);
                 },
                 n: function () {
-                    return n.getMonth() + 1;
+                    return r.getMonth() + 1;
                 },
                 t: function () {
-                    return new Date(c.Y(), c.n(), 0).getDate();
+                    return new Date(d.Y(), d.n(), 0).getDate();
                 },
                 L: function () {
-                    return 1 === new Date(c.Y(), 1, 29).getMonth() ? 1 : 0;
+                    return 1 === new Date(d.Y(), 1, 29).getMonth() ? 1 : 0;
                 },
                 o: function () {
-                    var e = c.n(),
-                        t = c.W();
-                    return c.Y() + (12 === e && t < 9 ? -1 : 1 === e && t > 9);
+                    var e = d.n(),
+                        n = d.W();
+                    return d.Y() + (12 === e && n < 9 ? -1 : 1 === e && n > 9);
                 },
                 Y: function () {
-                    return n.getFullYear();
+                    return r.getFullYear();
                 },
                 y: function () {
-                    return String(c.Y()).slice(-2);
+                    return String(d.Y()).slice(-2);
                 },
                 a: function () {
-                    return n.getHours() > 11 ? 'pm' : 'am';
+                    return r.getHours() > 11 ? 'pm' : 'am';
                 },
                 A: function () {
-                    return c.a().toUpperCase();
+                    return d.a().toUpperCase();
                 },
                 B: function () {
-                    var e = n.getTime() / 1000,
-                        t = (e % 86400) + 3600;
-                    t < 0 && (t += 86400);
-                    var r = (t / 86.4) % 1000;
-                    return e < 0 ? Math.ceil(r) : Math.floor(r);
+                    var e = r.getTime() / 1000,
+                        n = (e % 86400) + 3600;
+                    n < 0 && (n += 86400);
+                    var i = (n / 86.4) % 1000;
+                    return e < 0 ? Math.ceil(i) : Math.floor(i);
                 },
                 g: function () {
-                    return c.G() % 12 || 12;
+                    return d.G() % 12 || 12;
                 },
                 G: function () {
-                    return n.getHours();
+                    return r.getHours();
                 },
                 h: function () {
-                    return i.pad(c.g(), 2, '0');
+                    return a.pad(d.g(), 2, '0');
                 },
                 H: function () {
-                    return i.pad(c.G(), 2, '0');
+                    return a.pad(d.G(), 2, '0');
                 },
                 i: function () {
-                    return i.pad(n.getMinutes(), 2, '0');
+                    return a.pad(r.getMinutes(), 2, '0');
                 },
                 s: function () {
-                    return i.pad(n.getSeconds(), 2, '0');
+                    return a.pad(r.getSeconds(), 2, '0');
                 },
                 u: function () {
-                    return i.pad(1000 * n.getMilliseconds(), 6, '0');
+                    return a.pad(1000 * r.getMilliseconds(), 6, '0');
                 },
                 O: function () {
-                    var e = n.getTimezoneOffset(),
-                        t = Math.abs(e);
-                    return (e > 0 ? '-' : '+') + i.pad(100 * Math.floor(t / 60) + (t % 60), 4, '0');
+                    var e = r.getTimezoneOffset(),
+                        n = Math.abs(e);
+                    return (e > 0 ? '-' : '+') + a.pad(100 * Math.floor(n / 60) + (n % 60), 4, '0');
                 },
                 P: function () {
-                    var e = c.O();
+                    var e = d.O();
                     return e.substr(0, 3) + ':' + e.substr(3, 2);
                 },
                 Z: function () {
-                    return -(60 * n.getTimezoneOffset());
+                    return -(60 * r.getTimezoneOffset());
                 },
                 c: function () {
-                    return 'Y-m-d\\TH:i:sP'.replace(r, o);
+                    return 'Y-m-d\\TH:i:sP'.replace(i, l);
                 },
                 r: function () {
-                    return 'D, d M Y H:i:s O'.replace(r, o);
+                    return 'D, d M Y H:i:s O'.replace(i, l);
                 },
                 U: function () {
-                    return n.getTime() / 1000 || 0;
+                    return r.getTime() / 1000 || 0;
                 }
             };
-        return e.replace(r, o);
+        return e.replace(i, l);
     }),
-        (i.numberFormat = function (e, t, n, r) {
-            (t = isNaN(t) ? 2 : Math.abs(t)), (n = void 0 === n ? '.' : n), (r = void 0 === r ? ',' : r);
-            var i = e < 0 ? '-' : '',
-                a = parseInt((e = Math.abs(+e || 0)).toFixed(t), 10) + '',
-                s = a.length > 3 ? a.length % 3 : 0;
+        (a.numberFormat = function (e, n, r, i) {
+            (n = isNaN(n) ? 2 : Math.abs(n)), (r = void 0 === r ? '.' : r), (i = void 0 === i ? ',' : i);
+            var a = e < 0 ? '-' : '',
+                s = parseInt((e = Math.abs(+e || 0)).toFixed(n), 10) + '',
+                o = s.length > 3 ? s.length % 3 : 0;
             return (
-                i +
-                (s ? a.substr(0, s) + r : '') +
-                a.substr(s).replace(/(\d{3})(?=\d)/g, '$1' + r) +
-                (t
-                    ? n +
-                      Math.abs(e - a)
-                          .toFixed(t)
+                a +
+                (o ? s.substr(0, o) + i : '') +
+                s.substr(o).replace(/(\d{3})(?=\d)/g, '$1' + i) +
+                (n
+                    ? r +
+                      Math.abs(e - s)
+                          .toFixed(n)
                           .slice(2)
                     : '')
             );
         }),
-        (i.naturalDay = function (e, t) {
-            (e = void 0 === e ? i.time() : e), (t = void 0 === t ? 'Y-m-d' : t);
-            var n = new Date(),
-                r = new Date(n.getFullYear(), n.getMonth(), n.getDate()).getTime() / 1000;
-            if (e < r && e >= r - 86400) return 'yesterday';
-            if (e >= r && e < r + 86400) return 'today';
-            if (e >= r + 86400 && e < r + 172800) return 'tomorrow';
-            return i.date(t, e);
+        (a.naturalDay = function (e, n) {
+            (e = void 0 === e ? a.time() : e), (n = void 0 === n ? 'Y-m-d' : n);
+            var r = 86400,
+                i = new Date(),
+                s = new Date(i.getFullYear(), i.getMonth(), i.getDate()).getTime() / 1000;
+            if (e < s && e >= s - r) return 'yesterday';
+            if (e >= s && e < s + r) return 'today';
+            if (e >= s + r && e < s + 2 * r) return 'tomorrow';
+            return a.date(n, e);
         }),
-        (i.relativeTime = function (e) {
-            e = void 0 === e ? i.time() : e;
-            var t = i.time(),
-                n = t - e;
-            if (n < 2 && n > -2) return (n >= 0 ? 'just ' : '') + 'now';
-            if (n < 60 && n > -60) return n >= 0 ? Math.floor(n) + ' seconds ago' : 'in ' + Math.floor(-n) + ' seconds';
-            if (n < 120 && n > -120) return n >= 0 ? 'about a minute ago' : 'in about a minute';
-            if (n < 3600 && n > -3600) return n >= 0 ? Math.floor(n / 60) + ' minutes ago' : 'in ' + Math.floor(-n / 60) + ' minutes';
-            if (n < 7200 && n > -7200) return n >= 0 ? 'about an hour ago' : 'in about an hour';
-            if (n < 86400 && n > -86400) return n >= 0 ? Math.floor(n / 3600) + ' hours ago' : 'in ' + Math.floor(-n / 3600) + ' hours';
-            if (n < 172800 && n > -172800) return n >= 0 ? '1 day ago' : 'in 1 day';
-            if (n < 2505600 && n > -2505600) return n >= 0 ? Math.floor(n / 86400) + ' days ago' : 'in ' + Math.floor(-n / 86400) + ' days';
-            if (n < 5184000 && n > -5184000) return n >= 0 ? 'about a month ago' : 'in about a month';
-            var r = parseInt(i.date('Y', t), 10),
-                a = parseInt(i.date('Y', e), 10),
-                s = 12 * r + parseInt(i.date('n', t), 10) - (12 * a + parseInt(i.date('n', e), 10));
-            if (s < 12 && s > -12) return s >= 0 ? s + ' months ago' : 'in ' + -s + ' months';
-            var o = r - a;
-            return o < 2 && o > -2 ? (o >= 0 ? 'a year ago' : 'in a year') : o >= 0 ? o + ' years ago' : 'in ' + -o + ' years';
+        (a.relativeTime = function (e) {
+            e = void 0 === e ? a.time() : e;
+            var n = a.time(),
+                r = n - e;
+            if (r < 2 && r > -2) return (r >= 0 ? 'just ' : '') + 'now';
+            if (r < 60 && r > -60) return r >= 0 ? Math.floor(r) + ' seconds ago' : 'in ' + Math.floor(-r) + ' seconds';
+            if (r < 120 && r > -120) return r >= 0 ? 'about a minute ago' : 'in about a minute';
+            if (r < 3600 && r > -3600) return r >= 0 ? Math.floor(r / 60) + ' minutes ago' : 'in ' + Math.floor(-r / 60) + ' minutes';
+            if (r < 7200 && r > -7200) return r >= 0 ? 'about an hour ago' : 'in about an hour';
+            if (r < 86400 && r > -86400) return r >= 0 ? Math.floor(r / 3600) + ' hours ago' : 'in ' + Math.floor(-r / 3600) + ' hours';
+            var i = 172800;
+            if (r < 172800 && r > -i) return r >= 0 ? '1 day ago' : 'in 1 day';
+            var s = 2505600;
+            if (r < 2505600 && r > -s) return r >= 0 ? Math.floor(r / 86400) + ' days ago' : 'in ' + Math.floor(-r / 86400) + ' days';
+            var o = 5184000;
+            if (r < 5184000 && r > -o) return r >= 0 ? 'about a month ago' : 'in about a month';
+            var l = parseInt(a.date('Y', n), 10),
+                u = parseInt(a.date('Y', e), 10),
+                c = 12 * l + parseInt(a.date('n', n), 10) - (12 * u + parseInt(a.date('n', e), 10));
+            if (c < 12 && c > -12) return c >= 0 ? c + ' months ago' : 'in ' + -c + ' months';
+            var d = l - u;
+            return d < 2 && d > -2 ? (d >= 0 ? 'a year ago' : 'in a year') : d >= 0 ? d + ' years ago' : 'in ' + -d + ' years';
         }),
-        (i.ordinal = function (e) {
-            var t = (e = isNaN((e = parseInt(e, 10))) ? 0 : e) < 0 ? '-' : '',
-                n = (e = Math.abs(e)) % 100;
+        (a.ordinal = function (e) {
+            var n = (e = isNaN((e = parseInt(e, 10))) ? 0 : e) < 0 ? '-' : '',
+                r = (e = Math.abs(e)) % 100;
             return (
-                t +
+                n +
                 e +
-                (n > 4 && n < 21
+                (r > 4 && r < 21
                     ? 'th'
                     : {
                           1: 'st',
@@ -209,31 +213,31 @@
                       }[e % 10] || 'th')
             );
         }),
-        (i.filesize = function (e, t, n, r, a, s) {
-            return ((t = void 0 === t ? 1024 : t), e <= 0) ? '0 bytes' : (e < t && void 0 === n && (n = 0), void 0 === s && (s = ' '), i.intword(e, ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB'], t, n, r, a, s));
+        (a.filesize = function (e, n, r, i, s, o) {
+            return ((n = void 0 === n ? 1024 : n), e <= 0) ? '0 bytes' : (e < n && void 0 === r && (r = 0), void 0 === o && (o = ' '), a.intword(e, ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB'], n, r, i, s, o));
         }),
-        (i.intword = function (e, t, n, r, a, s, o) {
-            (u = (t = t || ['', 'K', 'M', 'B', 'T']).length - 1), (n = n || 1000), (r = isNaN(r) ? 2 : Math.abs(r)), (a = a || '.'), (s = s || ','), (o = o || '');
-            for (var l, u, c = 0; c < t.length; c++)
-                if (e < Math.pow(n, c + 1)) {
-                    u = c;
+        (a.intword = function (e, n, r, i, s, o, l) {
+            (c = (n = n || ['', 'K', 'M', 'B', 'T']).length - 1), (r = r || 1000), (i = isNaN(i) ? 2 : Math.abs(i)), (s = s || '.'), (o = o || ','), (l = l || '');
+            for (var u, c, d = 0; d < n.length; d++)
+                if (e < Math.pow(r, d + 1)) {
+                    c = d;
                     break;
                 }
-            l = e / Math.pow(n, u);
-            var d = t[u] ? o + t[u] : '';
-            return i.numberFormat(l, r, a, s) + d;
+            u = e / Math.pow(r, c);
+            var f = n[c] ? l + n[c] : '';
+            return a.numberFormat(u, i, s, o) + f;
         }),
-        (i.linebreaks = function (e) {
+        (a.linebreaks = function (e) {
             return '<p>' + (e = (e = (e = (e = (e = e.replace(/^([\n|\r]*)/, '')).replace(/([\n|\r]*)$/, '')).replace(/(\r\n|\n|\r)/g, '\n')).replace(/(\n{2,})/g, '</p><p>')).replace(/\n/g, '<br />')) + '</p>';
         }),
-        (i.nl2br = function (e) {
+        (a.nl2br = function (e) {
             return e.replace(/(\r\n|\n|\r)/g, '<br />');
         }),
-        (i.truncatechars = function (e, t) {
-            return e.length <= t ? e : e.substr(0, t) + '\u2026';
+        (a.truncatechars = function (e, n) {
+            return e.length <= n ? e : e.substr(0, n) + '\u2026';
         }),
-        (i.truncatewords = function (e, t) {
-            var n = e.split(' ');
-            return n.length < t ? e : n.slice(0, t).join(' ') + '\u2026';
+        (a.truncatewords = function (e, n) {
+            var r = e.split(' ');
+            return r.length < n ? e : r.slice(0, n).join(' ') + '\u2026';
         });
 }).call(this);

@@ -1,98 +1,100 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return l;
+        return d;
     },
     u: function () {
-        return o;
+        return c;
     }
 });
-var r = n(564334),
-    i = n(302221),
-    a = n(563114);
-let s = (e) => {
-        var t, n;
-        let { colors: a, saturationFactor: s = 1 } = e;
-        if (null == a || a.length < 1) return null;
-        let o = (0, i.YD)(a),
-            l = r.Z.parseString('#ffffff');
-        if (null == l) return null;
-        let u = r.Z.parseString('#36393e');
-        if (null == u) return null;
-        let c = r.Z.parseString(o);
-        if (null == c) return null;
-        let d = (0, i.AZ)(c.red, c.blue, c.green),
-            f =
+var i = r(564334),
+    a = r(302221),
+    s = r(563114);
+let o = '#ffffff',
+    l = '#36393e',
+    u = (e) => {
+        var n, r;
+        let { colors: s, saturationFactor: u = 1 } = e;
+        if (null == s || s.length < 1) return null;
+        let c = (0, a.YD)(s),
+            d = i.Z.parseString(o);
+        if (null == d) return null;
+        let f = i.Z.parseString(l);
+        if (null == f) return null;
+        let _ = i.Z.parseString(c);
+        if (null == _) return null;
+        let h = (0, a.AZ)(_.red, _.blue, _.green),
+            p =
                 null !==
-                    (t = (0, i.k8)({
-                        colors: [(0, i.j)(c, 0.6, !0), l],
+                    (n = (0, a.k8)({
+                        colors: [(0, a.j)(_, 0.6, !0), d],
                         ratio: 3,
-                        saturationFactor: s
-                    })) && void 0 !== t
-                    ? t
-                    : c,
-            _ =
-                null !==
-                    (n = (0, i.k8)({
-                        colors: [(0, i.j)(c, 0.6, !1), u],
-                        ratio: 5,
-                        saturationFactor: s
+                        saturationFactor: u
                     })) && void 0 !== n
                     ? n
-                    : c,
-            p = (0, i.k8)({
-                colors: [c, l],
+                    : _,
+            m =
+                null !==
+                    (r = (0, a.k8)({
+                        colors: [(0, a.j)(_, 0.6, !1), f],
+                        ratio: 5,
+                        saturationFactor: u
+                    })) && void 0 !== r
+                    ? r
+                    : _,
+            g = (0, a.k8)({
+                colors: [_, d],
                 ratio: 7,
-                saturationFactor: s
+                saturationFactor: u
             }),
-            h = (0, i.k8)({
-                colors: [c, u],
+            E = (0, a.k8)({
+                colors: [_, f],
                 ratio: 7,
-                saturationFactor: s
+                saturationFactor: u
             });
         return {
             LIGHT: {
-                accentColor: null == p ? void 0 : p.toHexString(),
-                backgroundColor: (0, i.xj)({
-                    colorRGB: f,
-                    saturationFactor: s
+                accentColor: null == g ? void 0 : g.toHexString(),
+                backgroundColor: (0, a.xj)({
+                    colorRGB: p,
+                    saturationFactor: u
                 }),
-                highlightColor: null == c ? void 0 : c.toHexString(),
-                opacity: (null == d ? void 0 : d.saturation) < 0.1 ? 0.35 : 0.1
+                highlightColor: null == _ ? void 0 : _.toHexString(),
+                opacity: (null == h ? void 0 : h.saturation) < 0.1 ? 0.35 : 0.1
             },
             DARK: {
-                accentColor: null == h ? void 0 : h.toHexString(),
-                backgroundColor: (0, i.xj)({
-                    colorRGB: _,
-                    saturationFactor: s
+                accentColor: null == E ? void 0 : E.toHexString(),
+                backgroundColor: (0, a.xj)({
+                    colorRGB: m,
+                    saturationFactor: u
                 }),
-                highlightColor: null == c ? void 0 : c.toHexString(),
-                opacity: (null == d ? void 0 : d.saturation) < 0.1 ? 0.5 : 0.2
+                highlightColor: null == _ ? void 0 : _.toHexString(),
+                opacity: (null == h ? void 0 : h.saturation) < 0.1 ? 0.5 : 0.2
             }
         };
     },
-    o = (e) => {
-        let { colors: t, saturationFactor: n = 1, shouldProcessMobileColors: r = !1 } = e,
-            i = s({
-                colors: t,
-                saturationFactor: n
+    c = (e) => {
+        let { colors: n, saturationFactor: r = 1, shouldProcessMobileColors: i = !1 } = e,
+            a = u({
+                colors: n,
+                saturationFactor: r
             });
-        return a.Z.applyPlatformToThemedEmojiColorPalette({
-            palette: i,
-            shouldProcessMobileColors: r
+        return s.Z.applyPlatformToThemedEmojiColorPalette({
+            palette: a,
+            shouldProcessMobileColors: i
         });
     },
-    l = (e, t, n) => {
-        var r;
+    d = (e, n, r) => {
+        var i;
         if (null == e || e.length < 1) return null;
-        let i = o({
+        let a = c({
                 colors: e,
-                saturationFactor: t
+                saturationFactor: n
             }),
-            a = n ? (null == i ? void 0 : i.DARK) : null == i ? void 0 : i.LIGHT;
+            s = r ? (null == a ? void 0 : a.DARK) : null == a ? void 0 : a.LIGHT;
         return {
-            backgroundColor: null == a ? void 0 : a.backgroundColor,
-            accentColor: null == a ? void 0 : a.accentColor,
-            highlightColor: null == a ? void 0 : a.highlightColor,
-            opacity: null !== (r = null == a ? void 0 : a.opacity) && void 0 !== r ? r : 0.15
+            backgroundColor: null == s ? void 0 : s.backgroundColor,
+            accentColor: null == s ? void 0 : s.accentColor,
+            highlightColor: null == s ? void 0 : s.highlightColor,
+            opacity: null !== (i = null == s ? void 0 : s.opacity) && void 0 !== i ? i : 0.15
         };
     };

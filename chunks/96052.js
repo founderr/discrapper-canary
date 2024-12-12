@@ -1,42 +1,43 @@
-n.d(t, {
+r.d(n, {
     U: function () {
-        return s;
+        return o;
     }
 });
-var r = n(570140),
-    i = n(709054),
-    a = n(981631);
-function s(e, t, n) {
-    r.Z.dispatch({
+var i = r(570140),
+    a = r(709054),
+    s = r(981631);
+function o(e, n, r) {
+    i.Z.dispatch({
         type: 'MESSAGE_CREATE',
         channelId: e,
-        message: (function (e) {
-            let { channelId: t, requesterUser: n, requestToSpeakTimestamp: r } = e;
-            return {
-                id: i.default.fromTimestamp(Date.parse(r)),
-                type: a.uaV.STAGE_RAISE_HAND,
-                flags: a.iLy.EPHEMERAL,
-                content: '',
-                channel_id: t,
-                author: n,
-                attachments: [],
-                embeds: [],
-                pinned: !1,
-                mentions: [],
-                mention_channels: [],
-                mention_roles: [],
-                mention_everyone: !1,
-                timestamp: r,
-                state: a.yb.SENT,
-                tts: !1
-            };
-        })({
+        message: l({
             channelId: e,
-            requesterUser: t,
-            requestToSpeakTimestamp: n
+            requesterUser: n,
+            requestToSpeakTimestamp: r
         }),
         optimistic: !1,
         sendMessageOptions: {},
         isPushNotification: !1
     });
+}
+function l(e) {
+    let { channelId: n, requesterUser: r, requestToSpeakTimestamp: i } = e;
+    return {
+        id: a.default.fromTimestamp(Date.parse(i)),
+        type: s.uaV.STAGE_RAISE_HAND,
+        flags: s.iLy.EPHEMERAL,
+        content: '',
+        channel_id: n,
+        author: r,
+        attachments: [],
+        embeds: [],
+        pinned: !1,
+        mentions: [],
+        mention_channels: [],
+        mention_roles: [],
+        mention_everyone: !1,
+        timestamp: i,
+        state: s.yb.SENT,
+        tts: !1
+    };
 }

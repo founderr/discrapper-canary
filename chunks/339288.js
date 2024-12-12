@@ -1,12 +1,12 @@
-n.d(t, {
+r.d(n, {
     d: function () {
-        return d;
+        return E;
     }
 });
-var r = n(717029),
-    i = n(395913);
-function a(e) {
-    return (a =
+var i = r(717029),
+    a = r(395913);
+function s(e) {
+    return (s =
         'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
             ? function (e) {
                   return typeof e;
@@ -15,144 +15,143 @@ function a(e) {
                   return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
               })(e);
 }
-function s(e, t) {
-    for (var n = 0; n < t.length; n++) {
-        var r = t[n];
-        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+function o(e, n) {
+    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+}
+function l(e, n) {
+    for (var r = 0; r < n.length; r++) {
+        var i = n[r];
+        (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
     }
 }
-function o(e, t) {
-    return (o =
-        Object.setPrototypeOf ||
-        function (e, t) {
-            return (e.__proto__ = t), e;
-        })(e, t);
+function u(e, n, r) {
+    return n && l(e.prototype, n), r && l(e, r), e;
 }
-function l(e) {
+function c(e, n) {
+    if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function');
+    (e.prototype = Object.create(n && n.prototype, {
+        constructor: {
+            value: e,
+            writable: !0,
+            configurable: !0
+        }
+    })),
+        n && d(e, n);
+}
+function d(e, n) {
+    return (d =
+        Object.setPrototypeOf ||
+        function (e, n) {
+            return (e.__proto__ = n), e;
+        })(e, n);
+}
+function f(e) {
+    var n = p();
+    return function () {
+        var r,
+            i = m(e);
+        return (r = n ? Reflect.construct(i, arguments, m(this).constructor) : i.apply(this, arguments)), _(this, r);
+    };
+}
+function _(e, n) {
+    return n && ('object' === s(n) || 'function' == typeof n) ? n : h(e);
+}
+function h(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
-function u(e) {
-    return (u = Object.setPrototypeOf
+function p() {
+    if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
+    if ('function' == typeof Proxy) return !0;
+    try {
+        return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0;
+    } catch (e) {
+        return !1;
+    }
+}
+function m(e) {
+    return (m = Object.setPrototypeOf
         ? Object.getPrototypeOf
         : function (e) {
               return e.__proto__ || Object.getPrototypeOf(e);
           })(e);
 }
-function c(e, t, n) {
+function g(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-var d = (function (e) {
-    !(function (e, t) {
-        if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function');
-        (e.prototype = Object.create(t && t.prototype, {
-            constructor: {
-                value: e,
-                writable: !0,
-                configurable: !0
-            }
-        })),
-            t && o(e, t);
-    })(p, e);
-    var t,
-        n,
-        r,
-        d,
-        f,
-        _ =
-            ((t = p),
-            (n = (function () {
-                if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
-                if ('function' == typeof Proxy) return !0;
-                try {
-                    return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0;
-                } catch (e) {
-                    return !1;
-                }
-            })()),
-            function () {
-                var e,
-                    r = u(t);
-                return (
-                    (e = n ? Reflect.construct(r, arguments, u(this).constructor) : r.apply(this, arguments)),
-                    (function (e, t) {
-                        return t && ('object' === a(t) || 'function' == typeof t) ? t : l(e);
-                    })(this, e)
-                );
-            });
-    function p() {
+var E = (function (e) {
+    c(r, e);
+    var n = f(r);
+    function r() {
         var e;
-        !(function (e, t) {
-            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-        })(this, p);
-        for (var t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-        return c(l((e = _.call.apply(_, [this].concat(n)))), 'priority', 90), c(l(e), 'incompatibleTokens', ['D', 'i', 'e', 'c', 't', 'T']), e;
+        o(this, r);
+        for (var i = arguments.length, a = Array(i), s = 0; s < i; s++) a[s] = arguments[s];
+        return g(h((e = n.call.apply(n, [this].concat(a)))), 'priority', 90), g(h(e), 'incompatibleTokens', ['D', 'i', 'e', 'c', 't', 'T']), e;
     }
     return (
-        (r = p),
-        (d = [
+        u(r, [
             {
                 key: 'parse',
-                value: function (e, t, n) {
-                    switch (t) {
+                value: function (e, n, r) {
+                    switch (n) {
                         case 'E':
                         case 'EE':
                         case 'EEE':
                             return (
-                                n.day(e, {
+                                r.day(e, {
                                     width: 'abbreviated',
                                     context: 'formatting'
                                 }) ||
-                                n.day(e, {
+                                r.day(e, {
                                     width: 'short',
                                     context: 'formatting'
                                 }) ||
-                                n.day(e, {
+                                r.day(e, {
                                     width: 'narrow',
                                     context: 'formatting'
                                 })
                             );
                         case 'EEEEE':
-                            return n.day(e, {
+                            return r.day(e, {
                                 width: 'narrow',
                                 context: 'formatting'
                             });
                         case 'EEEEEE':
                             return (
-                                n.day(e, {
+                                r.day(e, {
                                     width: 'short',
                                     context: 'formatting'
                                 }) ||
-                                n.day(e, {
+                                r.day(e, {
                                     width: 'narrow',
                                     context: 'formatting'
                                 })
                             );
                         default:
                             return (
-                                n.day(e, {
+                                r.day(e, {
                                     width: 'wide',
                                     context: 'formatting'
                                 }) ||
-                                n.day(e, {
+                                r.day(e, {
                                     width: 'abbreviated',
                                     context: 'formatting'
                                 }) ||
-                                n.day(e, {
+                                r.day(e, {
                                     width: 'short',
                                     context: 'formatting'
                                 }) ||
-                                n.day(e, {
+                                r.day(e, {
                                     width: 'narrow',
                                     context: 'formatting'
                                 })
@@ -162,18 +161,17 @@ var d = (function (e) {
             },
             {
                 key: 'validate',
-                value: function (e, t) {
-                    return t >= 0 && t <= 6;
+                value: function (e, n) {
+                    return n >= 0 && n <= 6;
                 }
             },
             {
                 key: 'set',
-                value: function (e, t, n, r) {
-                    return (e = (0, i.Z)(e, n, r)).setUTCHours(0, 0, 0, 0), e;
+                value: function (e, n, r, i) {
+                    return (e = (0, a.Z)(e, r, i)).setUTCHours(0, 0, 0, 0), e;
                 }
             }
         ]),
-        s(r.prototype, d),
-        p
+        r
     );
-})(r._);
+})(i._);

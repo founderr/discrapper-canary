@@ -1,49 +1,53 @@
-n(47120), n(757143);
-var r = n(336317),
-    i = n(768581),
-    a = n(302221),
-    s = n(956664),
-    o = n(753090);
-let l = new Set(['\u2122', '\u2122️', '\xA9', '\xA9️', '\xAE', '\xAE️']);
-function u(e) {
-    if (l.has(e)) return '';
+var i = r(47120);
+var a = r(757143);
+var s = r(336317),
+    o = r(768581),
+    l = r(302221),
+    u = r(956664),
+    c = r(753090);
+let d = new Set(['\u2122', '\u2122️', '\xA9', '\xA9️', '\xAE', '\xAE️']);
+function f(e) {
+    if (d.has(e)) return '';
     try {
-        let t = 0 > e.indexOf('‍') ? e.replace('️', '') : e;
-        return n(723080)('./'.concat(r.Z.convert.toCodePoint(t), '.svg'));
-    } catch (t) {
-        return console.warn(t, 'no emoji for', e), '';
+        let n = 0 > e.indexOf('‍') ? e.replace('️', '') : e;
+        return r(723080)('./'.concat(s.Z.convert.toCodePoint(n), '.svg'));
+    } catch (n) {
+        return console.warn(n, 'no emoji for', e), '';
     }
 }
-async function c(e) {
-    let t;
-    let { id: n, name: r } = e;
-    t =
-        null != n
-            ? i.ZP.getEmojiURL({
-                  id: n,
+function _(e) {
+    return e;
+}
+function h(e) {
+    let { palette: n, shouldProcessMobileColors: r = !1 } = e;
+    return n;
+}
+async function p(e) {
+    let n;
+    let { id: r, name: i } = e;
+    n =
+        null != r
+            ? o.ZP.getEmojiURL({
+                  id: r,
                   size: 32,
                   animated: !1
               })
-            : u(r);
-    let o = await (0, s.OF)(t);
-    return null == o
+            : f(i);
+    let a = await (0, u.OF)(n);
+    return null == a
         ? void 0
-        : o.map((e) => {
-              let [t, n, r] = e;
-              return (0, a.vq)(t, n, r);
+        : a.map((e) => {
+              let [n, r, i] = e;
+              return (0, l.vq)(n, r, i);
           });
 }
-t.Z = {
-    getURL: o.Z.makeMemoizer(u),
-    filterUnsupportedEmojis: function (e) {
-        return e;
-    },
-    applyPlatformToThemedEmojiColorPalette: function (e) {
-        let { palette: t, shouldProcessMobileColors: n = !1 } = e;
-        return t;
-    },
-    getEmojiColors: c,
-    triggerFullscreenAnimation: function (e) {
-        let { channelId: t, messageId: n, emoji: r } = e;
-    }
+function m(e) {
+    let { channelId: n, messageId: r, emoji: i } = e;
+}
+n.Z = {
+    getURL: c.Z.makeMemoizer(f),
+    filterUnsupportedEmojis: _,
+    applyPlatformToThemedEmojiColorPalette: h,
+    getEmojiColors: p,
+    triggerFullscreenAnimation: m
 };

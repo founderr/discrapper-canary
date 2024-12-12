@@ -1,8 +1,9 @@
-e.exports = function (e, t, n, r, i) {
+function n(e, n, r, i, a) {
     return (
-        i(e, function (e, i, a) {
-            n = r ? ((r = !1), e) : t(n, e, i, a);
+        a(e, function (e, a, s) {
+            r = i ? ((i = !1), e) : n(r, e, a, s);
         }),
-        n
+        r
     );
-};
+}
+e.exports = n;

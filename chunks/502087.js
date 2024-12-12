@@ -1,75 +1,77 @@
-var r,
-    i = n(442837),
-    a = n(570140),
-    s = n(168232),
-    o = n(474936);
-function l(e, t, n) {
+var i,
+    a = r(442837),
+    s = r(570140),
+    o = r(168232),
+    l = r(474936);
+function u(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let u = 'OverridePremiumTypeStore',
-    c = {
-        premiumTypeOverride: o.F_,
-        premiumTypeActual: o.F_,
-        createdAtOverride: o.Zh
+let c = 'OverridePremiumTypeStore',
+    d = {
+        premiumTypeOverride: l.F_,
+        premiumTypeActual: l.F_,
+        createdAtOverride: l.Zh
     };
-function d(e) {
-    let { user: t } = e;
-    c.premiumTypeActual = (0, s.G)(t.premium_type);
+function f(e) {
+    let { premiumType: n } = e;
+    d.premiumTypeOverride = n;
 }
-class f extends (r = i.ZP.PersistedStore) {
+function _(e) {
+    let { createdAt: n } = e;
+    d.createdAtOverride = n;
+}
+function h(e) {
+    let { user: n } = e;
+    d.premiumTypeActual = (0, o.G)(n.premium_type);
+}
+class p extends (i = a.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
-            (c.premiumTypeActual = null == e ? void 0 : e.premiumTypeActual), (c.premiumTypeOverride = null == e ? void 0 : e.premiumTypeOverride), null != e.createdAtOverride ? (c.createdAtOverride = new Date(e.createdAtOverride)) : (c.createdAtOverride = o.Zh);
+            (d.premiumTypeActual = null == e ? void 0 : e.premiumTypeActual), (d.premiumTypeOverride = null == e ? void 0 : e.premiumTypeOverride), null != e.createdAtOverride ? (d.createdAtOverride = new Date(e.createdAtOverride)) : (d.createdAtOverride = l.Zh);
             return;
         }
-        (c.premiumTypeOverride = o.F_), (c.createdAtOverride = o.Zh);
+        (d.premiumTypeOverride = l.F_), (d.createdAtOverride = l.Zh);
     }
     getPremiumTypeOverride() {
-        return c.premiumTypeOverride;
+        return d.premiumTypeOverride;
     }
     getPremiumTypeActual() {
-        return c.premiumTypeActual;
+        return d.premiumTypeActual;
     }
     getCreatedAtOverride() {
-        return c.createdAtOverride;
+        return d.createdAtOverride;
     }
     getState() {
-        return c;
+        return d;
     }
     get premiumType() {
-        return c.premiumTypeOverride;
+        return d.premiumTypeOverride;
     }
 }
-l(f, 'displayName', u),
-    l(f, 'persistKey', u),
-    l(f, 'migrations', [
+u(p, 'displayName', c),
+    u(p, 'persistKey', c),
+    u(p, 'migrations', [
         (e) => {
             if ((null == e ? void 0 : e.createdAtOverride) == null)
                 return {
                     ...e,
-                    createdAtOverride: o.Zh
+                    createdAtOverride: l.Zh
                 };
         }
     ]),
-    (t.Z = new f(a.Z, {
-        SET_PREMIUM_TYPE_OVERRIDE: function (e) {
-            let { premiumType: t } = e;
-            c.premiumTypeOverride = t;
-        },
-        SET_CREATED_AT_OVERRIDE: function (e) {
-            let { createdAt: t } = e;
-            c.createdAtOverride = t;
-        },
-        CURRENT_USER_UPDATE: d,
-        CONNECTION_OPEN: d
+    (n.Z = new p(s.Z, {
+        SET_PREMIUM_TYPE_OVERRIDE: f,
+        SET_CREATED_AT_OVERRIDE: _,
+        CURRENT_USER_UPDATE: h,
+        CONNECTION_OPEN: h
     }));

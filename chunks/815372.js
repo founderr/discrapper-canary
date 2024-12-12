@@ -1,51 +1,52 @@
-n.d(t, {
+r.d(n, {
     FL: function () {
-        return l;
+        return u;
     },
     Ky: function () {
-        return r;
+        return i;
     }
-}),
-    n(411104);
-var r,
-    i,
-    a = n(81825),
-    s = n(981631);
-function o(e, t, n) {
+});
+var i,
+    a = r(411104);
+var s = r(81825),
+    o = r(981631);
+function l(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-((i = r || (r = {})).SHOP = 'SHOP'), (i.NITRO_HOME = 'NITRO_HOME'), (i.QUEST_HOME = 'QUEST_HOME'), (i.APPS_HOME = 'APPS_HOME');
-class l extends a.Z {
+!(function (e) {
+    (e.SHOP = 'SHOP'), (e.NITRO_HOME = 'NITRO_HOME'), (e.QUEST_HOME = 'QUEST_HOME'), (e.APPS_HOME = 'APPS_HOME');
+})(i || (i = {}));
+class u extends s.Z {
     static fromType(e) {
         switch (e) {
             case 'SHOP':
-                return new l({
-                    path: s.Z5c.COLLECTIBLES_SHOP,
+                return new u({
+                    path: o.Z5c.COLLECTIBLES_SHOP,
                     type: 'SHOP'
                 });
             case 'NITRO_HOME':
-                return new l({
-                    path: s.Z5c.NITRO_HOME,
+                return new u({
+                    path: o.Z5c.NITRO_HOME,
                     type: 'NITRO_HOME'
                 });
             case 'QUEST_HOME':
-                return new l({
-                    path: s.Z5c.QUEST_HOME,
+                return new u({
+                    path: o.Z5c.QUEST_HOME,
                     type: 'QUEST_HOME'
                 });
             case 'APPS_HOME':
-                return new l({
-                    path: s.Z5c.APPLICATION_DIRECTORY,
+                return new u({
+                    path: o.Z5c.APPLICATION_DIRECTORY,
                     type: 'APPS_HOME'
                 });
             default:
@@ -53,6 +54,6 @@ class l extends a.Z {
         }
     }
     constructor(e) {
-        super(), o(this, 'id', void 0), o(this, 'path', void 0), o(this, 'type', void 0), (this.id = e.type), (this.path = e.path), (this.type = e.type);
+        super(), l(this, 'id', void 0), l(this, 'path', void 0), l(this, 'type', void 0), (this.id = e.type), (this.path = e.path), (this.type = e.type);
     }
 }

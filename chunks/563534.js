@@ -1,121 +1,129 @@
-n.d(t, {
+r.d(n, {
     P: function () {
         return u;
     }
-}),
-    n(47120);
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140);
+});
+var i,
+    a = r(47120);
+var s = r(442837),
+    o = r(570140);
+function l(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
 let u = { enabled: !1 },
     c = [],
     d = {},
     f = new Set(),
     _ = {};
-function p(e) {
-    var t;
-    let n = null === (t = d[e]) || void 0 === t ? void 0 : t.newMemberActions;
-    return null == n ? null : ((_[e] = n), _[e]);
-}
 function h(e) {
-    let { homeSettings: t, guildId: n } = e;
-    null != n && (null == t && (d[n] = u), (d[n] = t), p(n), f.delete(n));
+    var n;
+    let r = null === (n = d[e]) || void 0 === n ? void 0 : n.newMemberActions;
+    return null == r ? null : ((_[e] = r), _[e]);
 }
-class m extends (r = o.ZP.Store) {
+function p(e) {
+    let { homeSettings: n, guildId: r } = e;
+    null != r && (null == n && (d[r] = u), (d[r] = n), h(r), f.delete(r));
+}
+function m(e) {
+    let { guildId: n } = e;
+    f.add(n);
+}
+function g(e) {
+    let { guildId: n } = e;
+    f.delete(n);
+}
+function E(e) {
+    let { guildId: n, enabled: r } = e,
+        i = d[n];
+    if (null == i) return !1;
+    i.enabled = r;
+}
+function v(e) {
+    let { guild: n } = e;
+    if (null == d[n.id]) return !1;
+    delete d[n.id], delete _[n.id];
+}
+function I(e) {
+    var n;
+    let { guildId: r, resourceChannel: i } = e,
+        a = d[r];
+    if (null == a) return !1;
+    a.resourceChannels = null !== (n = a.resourceChannels) && void 0 !== n ? n : [];
+    let s = a.resourceChannels.findIndex((e) => e.channelId === i.channelId);
+    return -1 !== s && ((a.resourceChannels[s] = { ...i }), !0);
+}
+function T(e) {
+    var n;
+    let { guildId: r, action: i } = e,
+        a = d[r];
+    if (null == a) return !1;
+    a.newMemberActions = null !== (n = a.newMemberActions) && void 0 !== n ? n : [];
+    let s = a.newMemberActions.findIndex((e) => e.channelId === i.channelId);
+    return -1 !== s && ((a.newMemberActions[s] = { ...i }), !0);
+}
+class b extends (i = s.ZP.Store) {
     getSettings(e) {
-        var t;
-        return null == e ? null : null !== (t = d[e]) && void 0 !== t ? t : u;
+        var n;
+        return null == e ? null : null !== (n = d[e]) && void 0 !== n ? n : u;
     }
     getNewMemberActions(e) {
-        var t;
-        return null == e || (null === (t = this.getSettings(e)) || void 0 === t ? void 0 : t.newMemberActions) == null ? null : null == _[e] ? p(e) : _[e];
-    }
-    getActionForChannel(e, t) {
         var n;
-        let r = this.getSettings(e);
-        return null == r ? null : (null !== (n = r.newMemberActions) && void 0 !== n ? n : []).find((e) => e.channelId === t);
+        return null == e || (null === (n = this.getSettings(e)) || void 0 === n ? void 0 : n.newMemberActions) == null ? null : null == _[e] ? h(e) : _[e];
     }
-    hasMemberAction(e, t) {
-        return null != this.getActionForChannel(e, t);
+    getActionForChannel(e, n) {
+        var r;
+        let i = this.getSettings(e);
+        return null == i ? null : (null !== (r = i.newMemberActions) && void 0 !== r ? r : []).find((e) => e.channelId === n);
+    }
+    hasMemberAction(e, n) {
+        return null != this.getActionForChannel(e, n);
     }
     getResourceChannels(e) {
-        var t, n;
-        return null !== (n = null === (t = d[e]) || void 0 === t ? void 0 : t.resourceChannels) && void 0 !== n ? n : c;
+        var n, r;
+        return null !== (r = null === (n = d[e]) || void 0 === n ? void 0 : n.resourceChannels) && void 0 !== r ? r : c;
     }
-    getResourceForChannel(e, t) {
+    getResourceForChannel(e, n) {
         if (null == e) return null;
-        let n = this.getResourceChannels(e);
-        return n === c ? null : n.find((e) => e.channelId === t);
+        let r = this.getResourceChannels(e);
+        return r === c ? null : r.find((e) => e.channelId === n);
     }
     getIsLoading(e) {
         return null != e && f.has(e);
     }
     getWelcomeMessage(e) {
-        var t;
-        if (null != e) return null === (t = d[e]) || void 0 === t ? void 0 : t.welcomeMessage;
+        var n;
+        if (null != e) return null === (n = d[e]) || void 0 === n ? void 0 : n.welcomeMessage;
     }
     hasSettings(e) {
         return null != e && null != d[e];
     }
     getEnabled(e) {
-        var t, n;
-        return null != e && null !== (n = null === (t = d[e]) || void 0 === t ? void 0 : t.enabled) && void 0 !== n && n;
+        var n, r;
+        return null != e && null !== (r = null === (n = d[e]) || void 0 === n ? void 0 : n.enabled) && void 0 !== r && r;
     }
-    getNewMemberAction(e, t) {
-        var n, r, i;
-        return null == e || null == t ? null : null !== (i = null === (r = d[e]) || void 0 === r ? void 0 : null === (n = r.newMemberActions) || void 0 === n ? void 0 : n.find((e) => e.channelId === t)) && void 0 !== i ? i : null;
+    getNewMemberAction(e, n) {
+        var r, i, a;
+        return null == e || null == n ? null : null !== (a = null === (i = d[e]) || void 0 === i ? void 0 : null === (r = i.newMemberActions) || void 0 === r ? void 0 : r.find((e) => e.channelId === n)) && void 0 !== a ? a : null;
     }
 }
-(s = 'GuildOnboardingHomeSettingsStore'),
-    (a = 'displayName') in (i = m)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new m(l.Z, {
-        GUILD_HOME_SETTINGS_FETCH_START: function (e) {
-            let { guildId: t } = e;
-            f.add(t);
-        },
-        GUILD_HOME_SETTINGS_FETCH_SUCCESS: h,
-        GUILD_HOME_SETTINGS_FETCH_FAIL: function (e) {
-            let { guildId: t } = e;
-            f.delete(t);
-        },
-        GUILD_HOME_SETTINGS_UPDATE_SUCCESS: h,
-        GUILD_HOME_SETTINGS_TOGGLE_ENABLED: function (e) {
-            let { guildId: t, enabled: n } = e,
-                r = d[t];
-            if (null == r) return !1;
-            r.enabled = n;
-        },
-        GUILD_RESOURCE_CHANNEL_UPDATE_SUCCESS: function (e) {
-            var t;
-            let { guildId: n, resourceChannel: r } = e,
-                i = d[n];
-            if (null == i) return !1;
-            i.resourceChannels = null !== (t = i.resourceChannels) && void 0 !== t ? t : [];
-            let a = i.resourceChannels.findIndex((e) => e.channelId === r.channelId);
-            return -1 !== a && ((i.resourceChannels[a] = { ...r }), !0);
-        },
-        GUILD_NEW_MEMBER_ACTION_UPDATE_SUCCESS: function (e) {
-            var t;
-            let { guildId: n, action: r } = e,
-                i = d[n];
-            if (null == i) return !1;
-            i.newMemberActions = null !== (t = i.newMemberActions) && void 0 !== t ? t : [];
-            let a = i.newMemberActions.findIndex((e) => e.channelId === r.channelId);
-            return -1 !== a && ((i.newMemberActions[a] = { ...r }), !0);
-        },
-        GUILD_DELETE: function (e) {
-            let { guild: t } = e;
-            if (null == d[t.id]) return !1;
-            delete d[t.id], delete _[t.id];
-        }
+l(b, 'displayName', 'GuildOnboardingHomeSettingsStore'),
+    (n.Z = new b(o.Z, {
+        GUILD_HOME_SETTINGS_FETCH_START: m,
+        GUILD_HOME_SETTINGS_FETCH_SUCCESS: p,
+        GUILD_HOME_SETTINGS_FETCH_FAIL: g,
+        GUILD_HOME_SETTINGS_UPDATE_SUCCESS: p,
+        GUILD_HOME_SETTINGS_TOGGLE_ENABLED: E,
+        GUILD_RESOURCE_CHANNEL_UPDATE_SUCCESS: I,
+        GUILD_NEW_MEMBER_ACTION_UPDATE_SUCCESS: T,
+        GUILD_DELETE: v
     }));

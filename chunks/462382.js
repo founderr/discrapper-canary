@@ -1,8 +1,9 @@
-var r, i;
-n.d(t, {
+var i;
+r.d(n, {
     J: function () {
-        return r;
+        return i;
     }
 }),
-    ((i = r || (r = {})).NICKNAME_UPDATE = 'nickname_update'),
-    (i.NICKNAME_RESET = 'nickname_reset');
+    !(function (e) {
+        (e.NICKNAME_UPDATE = 'nickname_update'), (e.NICKNAME_RESET = 'nickname_reset');
+    })(i || (i = {}));

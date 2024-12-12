@@ -1,39 +1,42 @@
-var r = n(911331);
-function i(e) {
+var i = r(911331);
+function a(e) {
     return e === Object(e) && 0 !== Object.keys(e).length;
 }
-t.Z = function (e, t) {
-    var n,
-        a = e.isConnected || e.ownerDocument.documentElement.contains(e);
-    if (i(t) && 'function' == typeof t.behavior) return t.behavior(a ? (0, r.Z)(e, t) : []);
-    if (!!a) {
-        var s =
-            !1 === (n = t)
-                ? {
-                      block: 'end',
-                      inline: 'nearest'
-                  }
-                : i(n)
-                  ? n
-                  : {
-                        block: 'start',
-                        inline: 'nearest'
-                    };
-        return (function (e, t) {
-            void 0 === t && (t = 'auto');
-            var n = 'scrollBehavior' in document.body.style;
-            e.forEach(function (e) {
-                var r = e.el,
-                    i = e.top,
-                    a = e.left;
-                r.scroll && n
-                    ? r.scroll({
-                          top: i,
-                          left: a,
-                          behavior: t
-                      })
-                    : ((r.scrollTop = i), (r.scrollLeft = a));
-            });
-        })((0, r.Z)(e, s), s.behavior);
+function s(e, n) {
+    void 0 === n && (n = 'auto');
+    var r = 'scrollBehavior' in document.body.style;
+    e.forEach(function (e) {
+        var i = e.el,
+            a = e.top,
+            s = e.left;
+        i.scroll && r
+            ? i.scroll({
+                  top: a,
+                  left: s,
+                  behavior: n
+              })
+            : ((i.scrollTop = a), (i.scrollLeft = s));
+    });
+}
+function o(e) {
+    return !1 === e
+        ? {
+              block: 'end',
+              inline: 'nearest'
+          }
+        : a(e)
+          ? e
+          : {
+                block: 'start',
+                inline: 'nearest'
+            };
+}
+function l(e, n) {
+    var r = e.isConnected || e.ownerDocument.documentElement.contains(e);
+    if (a(n) && 'function' == typeof n.behavior) return n.behavior(r ? (0, i.Z)(e, n) : []);
+    if (!!r) {
+        var l = o(n);
+        return s((0, i.Z)(e, l), l.behavior);
     }
-};
+}
+n.Z = l;

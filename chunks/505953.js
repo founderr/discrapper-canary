@@ -1,180 +1,181 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return y;
+        return N;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(442837),
-    s = n(481060),
-    o = n(239091),
-    l = n(79712),
-    u = n(276952),
-    c = n(91159),
-    d = n(496675),
-    f = n(306680),
-    _ = n(446183),
-    p = n(677281),
-    h = n(709054),
-    m = n(765104),
-    g = n(477291),
-    E = n(478758),
-    v = n(789707),
-    I = n(981631),
-    T = n(531578),
-    b = n(359337);
-function S(e) {
-    let { summary: t, channel: f, members: v, guildId: S, unread: y, onClick: A } = e,
-        [N, C] = i.useState(!1),
-        R = (0, c.Ye)(h.default.extractTimestamp(t.startId)),
-        O = (0, a.e7)([m.Z], () => m.Z.summaryFeedback(t)),
-        D = (e, n) => {
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(442837),
+    l = r(481060),
+    u = r(239091),
+    c = r(79712),
+    d = r(276952),
+    f = r(91159),
+    _ = r(496675),
+    h = r(306680),
+    p = r(446183),
+    m = r(677281),
+    g = r(709054),
+    E = r(765104),
+    v = r(477291),
+    I = r(478758),
+    T = r(789707),
+    b = r(981631),
+    y = r(531578),
+    S = r(359337);
+function A(e) {
+    let { summary: n, channel: i, members: h, guildId: T, unread: A, onClick: N } = e,
+        [C, R] = s.useState(!1),
+        O = (0, f.Ye)(g.default.extractTimestamp(n.startId)),
+        D = (0, o.e7)([E.Z], () => E.Z.summaryFeedback(n)),
+        L = (e, r) => {
             e.stopPropagation(),
-                (0, g.Z)({
-                    summary: t,
-                    channel: f,
-                    rating: n
+                (0, v.Z)({
+                    summary: n,
+                    channel: i,
+                    rating: r
                 });
         },
-        L = d.Z.can(I.Plq.MANAGE_MESSAGES, f);
-    return (0, r.jsxs)(s.Clickable, {
-        className: b.container,
-        onClick: A,
-        onContextMenu: (e) => {
-            L &&
-                (0, o.jW)(e, async () => {
-                    let { default: e } = await n.e('12891').then(n.bind(n, 519620));
-                    return (n) =>
-                        (0, r.jsx)(e, {
-                            ...n,
-                            summary: t
+        x = _.Z.can(b.Plq.MANAGE_MESSAGES, i),
+        w = (e) => {
+            x &&
+                (0, u.jW)(e, async () => {
+                    let { default: e } = await r.e('12891').then(r.bind(r, 519620));
+                    return (r) =>
+                        (0, a.jsx)(e, {
+                            ...r,
+                            summary: n
                         });
                 });
-        },
-        onMouseEnter: () => C(!0),
-        onMouseLeave: () => C(!1),
+        };
+    return (0, a.jsxs)(l.Clickable, {
+        className: S.container,
+        onClick: N,
+        onContextMenu: w,
+        onMouseEnter: () => R(!0),
+        onMouseLeave: () => R(!1),
         children: [
-            (0, r.jsx)(u.Z, {
-                hovered: N,
-                unread: y,
-                className: b.unreadPill
+            (0, a.jsx)(d.Z, {
+                hovered: C,
+                unread: A,
+                className: S.unreadPill
             }),
-            (0, r.jsx)('div', {
-                className: b.rowHeader,
-                children: (0, r.jsxs)('div', {
-                    className: b.rowHeaderLeft,
+            (0, a.jsx)('div', {
+                className: S.rowHeader,
+                children: (0, a.jsxs)('div', {
+                    className: S.rowHeaderLeft,
                     children: [
-                        (0, r.jsx)(s.Text, {
-                            className: b.timestamp,
+                        (0, a.jsx)(l.Text, {
+                            className: S.timestamp,
                             color: 'interactive-normal',
                             variant: 'text-xs/normal',
-                            children: R
+                            children: O
                         }),
-                        (0, r.jsx)(l.Z, {
+                        (0, a.jsx)(c.Z, {
                             height: 4,
                             width: 4,
                             'aria-hidden': 'true',
-                            className: b.dot
+                            className: S.dot
                         }),
-                        (0, r.jsx)(s.ChatIcon, {
+                        (0, a.jsx)(l.ChatIcon, {
                             size: 'xxs',
                             color: 'currentColor',
-                            className: b.icon
+                            className: S.icon
                         }),
-                        (0, r.jsx)(s.Text, {
-                            className: b.count,
+                        (0, a.jsx)(l.Text, {
+                            className: S.count,
                             color: 'interactive-normal',
                             variant: 'text-xs/normal',
-                            children: t.count
+                            children: n.count
                         }),
-                        v.length > 0 &&
-                            (0, r.jsxs)(r.Fragment, {
+                        h.length > 0 &&
+                            (0, a.jsxs)(a.Fragment, {
                                 children: [
-                                    (0, r.jsx)(l.Z, {
+                                    (0, a.jsx)(c.Z, {
                                         height: 4,
                                         width: 4,
                                         'aria-hidden': 'true',
-                                        className: b.dot
+                                        className: S.dot
                                     }),
-                                    (0, r.jsx)(E.Z, {
+                                    (0, a.jsx)(I.Z, {
                                         partySize: {
-                                            knownSize: v.length,
-                                            totalSize: v.length
+                                            knownSize: h.length,
+                                            totalSize: h.length
                                         },
                                         maxAvatarsShown: 3,
-                                        members: v,
-                                        guildId: S
+                                        members: h,
+                                        guildId: T
                                     })
                                 ]
                             })
                     ]
                 })
             }),
-            N &&
-                !O &&
-                (0, r.jsxs)('div', {
-                    className: b.feedbackContainer,
+            C &&
+                !D &&
+                (0, a.jsxs)('div', {
+                    className: S.feedbackContainer,
                     children: [
-                        (0, r.jsx)(s.Clickable, {
-                            onClick: (e) => D(e, T.aZ.GOOD),
-                            children: (0, r.jsx)(p.Z, {
-                                className: b.thumbIcon,
+                        (0, a.jsx)(l.Clickable, {
+                            onClick: (e) => L(e, y.aZ.GOOD),
+                            children: (0, a.jsx)(m.Z, {
+                                className: S.thumbIcon,
                                 width: 12,
                                 height: 12
                             })
                         }),
-                        (0, r.jsx)(s.Clickable, {
-                            onClick: (e) => D(e, T.aZ.BAD),
-                            children: (0, r.jsx)(_.Z, {
-                                className: b.thumbIcon,
+                        (0, a.jsx)(l.Clickable, {
+                            onClick: (e) => L(e, y.aZ.BAD),
+                            children: (0, a.jsx)(p.Z, {
+                                className: S.thumbIcon,
                                 width: 12,
                                 height: 12
                             })
                         })
                     ]
                 }),
-            (0, r.jsx)(s.Text, {
+            (0, a.jsx)(l.Text, {
                 color: 'header-primary',
                 variant: 'text-sm/semibold',
-                className: b.title,
-                children: t.topic
+                className: S.title,
+                children: n.topic
             }),
-            (0, r.jsx)(s.Text, {
+            (0, a.jsx)(l.Text, {
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                className: b.subtitle,
-                children: t.summShort
+                className: S.subtitle,
+                children: n.summShort
             })
         ]
     });
 }
-function y(e) {
-    let { summaries: t, summariesMembers: n, channel: s, selectTopic: o, setOpen: l } = e,
-        u = (0, a.e7)([f.ZP], () => f.ZP.getOldestUnreadMessageId(s.id)),
-        c = i.useCallback(
+function N(e) {
+    let { summaries: n, summariesMembers: r, channel: i, selectTopic: l, setOpen: u } = e,
+        c = (0, o.e7)([h.ZP], () => h.ZP.getOldestUnreadMessageId(i.id)),
+        d = s.useCallback(
             (e) => {
-                o(e), l(!1);
+                l(e), u(!1);
             },
-            [o, l]
+            [l, u]
         );
-    return t.length < 1
-        ? (0, r.jsx)(v.Z, {})
-        : (0, r.jsx)(r.Fragment, {
-              children: t.map((e, t) => {
-                  var i;
-                  let a = null !== (i = n[t]) && void 0 !== i ? i : [];
-                  return (0, r.jsx)(
-                      S,
+    return n.length < 1
+        ? (0, a.jsx)(T.Z, {})
+        : (0, a.jsx)(a.Fragment, {
+              children: n.map((e, n) => {
+                  var s;
+                  let o = null !== (s = r[n]) && void 0 !== s ? s : [];
+                  return (0, a.jsx)(
+                      A,
                       {
                           summary: e,
-                          channel: s,
-                          members: a,
-                          guildId: s.guild_id,
-                          unread: null != u && h.default.compare(e.endId, u) > 0,
-                          onClick: () => c(t)
+                          channel: i,
+                          members: o,
+                          guildId: i.guild_id,
+                          unread: null != c && g.default.compare(e.endId, c) > 0,
+                          onClick: () => d(n)
                       },
-                      t
+                      n
                   );
               })
           });

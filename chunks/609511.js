@@ -1,37 +1,58 @@
-var r = n(939793),
-    i = n(861960),
-    a = n(777994),
-    s = n(326048),
-    o = n(688709);
-e.exports = function (e, t, n) {
-    var l = e.constructor;
-    switch (t) {
-        case '[object ArrayBuffer]':
-            return r(e);
-        case '[object Boolean]':
-        case '[object Date]':
-            return new l(+e);
-        case '[object DataView]':
-            return i(e, n);
-        case '[object Float32Array]':
-        case '[object Float64Array]':
-        case '[object Int8Array]':
-        case '[object Int16Array]':
-        case '[object Int32Array]':
-        case '[object Uint8Array]':
-        case '[object Uint8ClampedArray]':
-        case '[object Uint16Array]':
-        case '[object Uint32Array]':
-            return o(e, n);
-        case '[object Map]':
-        case '[object Set]':
-            return new l();
-        case '[object Number]':
-        case '[object String]':
-            return new l(e);
-        case '[object RegExp]':
-            return a(e);
-        case '[object Symbol]':
+var i = r(939793),
+    a = r(861960),
+    s = r(777994),
+    o = r(326048),
+    l = r(688709),
+    u = '[object Boolean]',
+    c = '[object Date]',
+    d = '[object Map]',
+    f = '[object Number]',
+    _ = '[object RegExp]',
+    h = '[object Set]',
+    p = '[object String]',
+    m = '[object Symbol]',
+    g = '[object ArrayBuffer]',
+    E = '[object DataView]',
+    v = '[object Float32Array]',
+    I = '[object Float64Array]',
+    T = '[object Int8Array]',
+    b = '[object Int16Array]',
+    y = '[object Int32Array]',
+    S = '[object Uint8Array]',
+    A = '[object Uint8ClampedArray]',
+    N = '[object Uint16Array]',
+    C = '[object Uint32Array]';
+function R(e, n, r) {
+    var R = e.constructor;
+    switch (n) {
+        case g:
+            return i(e);
+        case u:
+        case c:
+            return new R(+e);
+        case E:
+            return a(e, r);
+        case v:
+        case I:
+        case T:
+        case b:
+        case y:
+        case S:
+        case A:
+        case N:
+        case C:
+            return l(e, r);
+        case d:
+            return new R();
+        case f:
+        case p:
+            return new R(e);
+        case _:
             return s(e);
+        case h:
+            return new R();
+        case m:
+            return o(e);
     }
-};
+}
+e.exports = R;

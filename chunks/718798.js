@@ -1,70 +1,71 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return _;
+        return p;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(665443),
-    s = n.n(a),
-    o = n(39383),
-    l = n.n(o),
-    u = n(992774),
-    c = n(672784),
-    d = n(369711),
-    f = n(649754);
-function _(e) {
-    let { streamId: t, paused: n, onReady: a, onResize: o, className: _, ...p } = e,
-        h = i.useRef(null),
-        { current: m } = i.useRef(l()('media-engine-video-'));
+var i = r(200651),
+    a = r(192379),
+    s = r(665443),
+    o = r.n(s),
+    l = r(39383),
+    u = r.n(l),
+    c = r(992774),
+    d = r(672784),
+    f = r(369711),
+    _ = r(649754);
+function h(e) {
+    var n, r, i, a;
+    let s = null === (a = window) || void 0 === a ? void 0 : null === (i = a.DiscordNative) || void 0 === i ? void 0 : null === (r = i.app) || void 0 === r ? void 0 : null === (n = r.getReleaseChannel) || void 0 === n ? void 0 : n.call(r);
+    return 'canary' === s || 'development' === s ? (0, f.m)(e) : (0, d.y)(e);
+}
+function p(e) {
+    let { streamId: n, paused: r, onReady: s, onResize: l, className: d, ...f } = e,
+        p = a.useRef(null),
+        { current: m } = a.useRef(u()('media-engine-video-'));
     return (
-        i.useEffect(() => {
-            let e = h.current;
-            if (!n && null != e) {
-                let n = !1,
-                    r = (t, r) => {
-                        !n && (null == a || a(), (n = !0)),
-                            (e.width !== t || e.height !== r) &&
-                                ((e.width = t),
-                                (e.height = r),
-                                null == o ||
-                                    o({
-                                        width: t,
-                                        height: r
+        a.useEffect(() => {
+            let e = p.current;
+            if (!r && null != e) {
+                let r = !1,
+                    i = (n, i) => {
+                        !r && (null == s || s(), (r = !0)),
+                            (e.width !== n || e.height !== i) &&
+                                ((e.width = n),
+                                (e.height = i),
+                                null == l ||
+                                    l({
+                                        width: n,
+                                        height: i
                                     }));
                     },
-                    i = (0, u.zS)();
-                if (null != i.addVideoOutputSink)
+                    a = (0, c.zS)();
+                if (null != a.addVideoOutputSink)
                     return (
-                        i.addVideoOutputSink(m, t, r),
+                        a.addVideoOutputSink(m, n, i),
                         () => {
-                            i.removeVideoOutputSink(m, t);
+                            a.removeVideoOutputSink(m, n);
                         }
                     );
                 {
-                    let n = (function (e) {
-                        var t, n, r, i;
-                        let a = null === (i = window) || void 0 === i ? void 0 : null === (r = i.DiscordNative) || void 0 === r ? void 0 : null === (n = r.app) || void 0 === n ? void 0 : null === (t = n.getReleaseChannel) || void 0 === t ? void 0 : t.call(n);
-                        return 'canary' === a || 'development' === a ? (0, d.m)(e) : (0, c.y)(e);
-                    })(e);
-                    if (null == n) return;
+                    let r = h(e);
+                    if (null == r) return;
                     return (
-                        f.Z.addSink(t, h, (e) => {
-                            r(e.width, e.height), n.render(e);
+                        _.Z.addSink(n, p, (e) => {
+                            i(e.width, e.height), r.render(e);
                         }),
                         () => {
-                            f.Z.removeSink(t, h);
+                            _.Z.removeSink(n, p);
                         }
                     );
                 }
             }
-        }, [t, n, o, a, m]),
-        (0, r.jsx)('canvas', {
+        }, [n, r, l, s, m]),
+        (0, i.jsx)('canvas', {
             id: m,
-            className: s()('media-engine-video', _),
-            ref: h,
-            ...p
+            className: o()('media-engine-video', d),
+            ref: p,
+            ...f
         })
     );
 }
-_.defaultProps = { paused: !1 };
+p.defaultProps = { paused: !1 };

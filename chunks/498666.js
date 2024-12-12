@@ -1,68 +1,66 @@
-var r = n(192379),
-    i = n(969710),
-    a =
-        'function' == typeof Object.is
-            ? Object.is
-            : function (e, t) {
-                  return (e === t && (0 !== e || 1 / e == 1 / t)) || (e != e && t != t);
-              },
-    s = i.useSyncExternalStore,
-    o = r.useRef,
-    l = r.useEffect,
-    u = r.useMemo,
-    c = r.useDebugValue;
-t.useSyncExternalStoreWithSelector = function (e, t, n, r, i) {
-    var d = o(null);
-    if (null === d.current) {
-        var f = {
+var i = r(192379),
+    a = r(969710);
+function s(e, n) {
+    return (e === n && (0 !== e || 1 / e == 1 / n)) || (e != e && n != n);
+}
+var o = 'function' == typeof Object.is ? Object.is : s,
+    l = a.useSyncExternalStore,
+    u = i.useRef,
+    c = i.useEffect,
+    d = i.useMemo,
+    f = i.useDebugValue;
+n.useSyncExternalStoreWithSelector = function (e, n, r, i, a) {
+    var s = u(null);
+    if (null === s.current) {
+        var _ = {
             hasValue: !1,
             value: null
         };
-        d.current = f;
-    } else f = d.current;
-    var _ = s(
+        s.current = _;
+    } else _ = s.current;
+    var h = l(
         e,
-        (d = u(
+        (s = d(
             function () {
                 function e(e) {
-                    if (!l) {
-                        if (((l = !0), (s = e), (e = r(e)), void 0 !== i && f.hasValue)) {
-                            var t = f.value;
-                            if (i(t, e)) return (o = t);
+                    if (!u) {
+                        if (((u = !0), (s = e), (e = i(e)), void 0 !== a && _.hasValue)) {
+                            var n = _.value;
+                            if (a(n, e)) return (l = n);
                         }
-                        return (o = e);
+                        return (l = e);
                     }
-                    if (((t = o), a(s, e))) return t;
-                    var n = r(e);
-                    return void 0 !== i && i(t, n) ? t : ((s = e), (o = n));
+                    if (((n = l), o(s, e))) return n;
+                    var r = i(e);
+                    return void 0 !== a && a(n, r) ? n : ((s = e), (l = r));
                 }
                 var s,
-                    o,
-                    l = !1,
-                    u = void 0 === n ? null : n;
+                    l,
+                    u = !1,
+                    c = void 0 === r ? null : r;
                 return [
                     function () {
-                        return e(t());
+                        return e(n());
                     },
-                    null === u
+                    null === c
                         ? void 0
                         : function () {
-                              return e(u());
+                              return e(c());
                           }
                 ];
             },
-            [t, n, r, i]
+            [n, r, i, a]
         ))[0],
-        d[1]
+        s[1]
     );
     return (
-        l(
+        c(
             function () {
-                (f.hasValue = !0), (f.value = _);
+                (_.hasValue = !0), (_.value = h);
             },
-            [_]
+            [h]
         ),
-        c(_),
-        _
+        f(h),
+        h
     );
 };

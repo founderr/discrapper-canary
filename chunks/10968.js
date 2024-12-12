@@ -1,25 +1,27 @@
 e.exports = function (e) {
-    var t = {};
-    function n(n) {
-        var r = e.get(n);
-        return void 0 === r ? [] : t[r] || [];
+    var n = {};
+    function r(r) {
+        var i = e.get(r);
+        return void 0 === i ? [] : n[i] || [];
+    }
+    function i(e, n) {
+        for (var i = r(e), a = 0, s = i.length; a < s; ++a)
+            if (i[a] === n) {
+                i.splice(a, 1);
+                break;
+            }
+    }
+    function a(e) {
+        var n = r(e);
+        if (!!n) n.length = 0;
     }
     return {
-        get: n,
-        add: function (n, r) {
-            var i = e.get(n);
-            !t[i] && (t[i] = []), t[i].push(r);
+        get: r,
+        add: function r(r, i) {
+            var a = e.get(r);
+            !n[a] && (n[a] = []), n[a].push(i);
         },
-        removeListener: function (e, t) {
-            for (var r = n(e), i = 0, a = r.length; i < a; ++i)
-                if (r[i] === t) {
-                    r.splice(i, 1);
-                    break;
-                }
-        },
-        removeAllListeners: function (e) {
-            var t = n(e);
-            if (!!t) t.length = 0;
-        }
+        removeListener: i,
+        removeAllListeners: a
     };
 };

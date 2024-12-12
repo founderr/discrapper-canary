@@ -1,4 +1,7 @@
-var r = n(108101);
-e.exports = function (e) {
-    return r(e, 5);
-};
+var i = r(108101),
+    a = 1,
+    s = 4;
+function o(e) {
+    return i(e, a | s);
+}
+e.exports = o;

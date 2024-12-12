@@ -1,55 +1,53 @@
-n.d(t, {
+r.d(n, {
     NF: function () {
-        return d;
+        return h;
     },
     Zy: function () {
-        return c;
+        return _;
     }
-}),
-    n(47120),
-    n(512722);
-var r = n(626135),
-    i = n(777754),
-    a = n(981631),
-    s = n(388032);
-let o = /^\d+$/,
-    l = /^(.+?@.+?\..+?|.+?#\d{4})$/,
-    u = /^[a-zA-Z0-9_\\.]+$/;
-function c(e) {
-    return u.test(e) || (e.includes('#') && l.test(e))
-        ? null
-        : ((function (e) {
-              let [t, n] = e.split('#');
-              r.default.track(a.rMx.FRIEND_REQUEST_FAILED, {
-                  reason: 'Invalid Username',
-                  query: e,
-                  discrim_len: (null != n ? n : '').length,
-                  username_len: t.length,
-                  is_email_like: i.Z.isEmail(e),
-                  is_invite_like: i.Z.isInvite(e),
-                  is_num_only: o.test(e)
-              });
-          })(e),
-          s.intl.string(s.t.paDJBA));
+});
+var i = r(47120);
+var a = r(512722);
+var s = r(626135),
+    o = r(777754),
+    l = r(981631),
+    u = r(388032);
+let c = /^\d+$/,
+    d = /^(.+?@.+?\..+?|.+?#\d{4})$/,
+    f = /^[a-zA-Z0-9_\\.]+$/;
+function _(e) {
+    return f.test(e) || (e.includes('#') && d.test(e)) ? null : (p(e), u.intl.string(u.t.paDJBA));
 }
-function d(e, t) {
+function h(e, n) {
     switch (e) {
-        case a.evJ.RELATIONSHIP_INCOMING_DISABLED:
-            return s.intl.format(s.t.Oxe6Ul, { discordTag: t });
-        case a.evJ.TOO_MANY_FRIENDS:
-            return s.intl.string(s.t.tnBalJ);
-        case a.evJ.RELATIONSHIP_ALREADY_FRIENDS:
-            return s.intl.string(s.t.VNLnen);
-        case a.evJ.USER_QUARANTINED:
-        case a.evJ.USER_FRIEND_REQUEST_LIMITED_ACCESS:
-            return s.intl.string(s.t.EouHws);
-        case a.evJ.TOO_MANY_BLOCKED_USERS:
-            return s.intl.string(s.t.sIGo1t);
-        case a.evJ.RELATIONSHIP_INCOMING_BLOCKED:
-        case a.evJ.RELATIONSHIP_INVALID_SELF:
-        case a.evJ.RELATIONSHIP_INVALUD_USER_BOT:
-        case a.evJ.RELATIONSHIP_INVALID_DISCORD_TAG:
+        case l.evJ.RELATIONSHIP_INCOMING_DISABLED:
+            return u.intl.format(u.t.Oxe6Ul, { discordTag: n });
+        case l.evJ.TOO_MANY_FRIENDS:
+            return u.intl.string(u.t.tnBalJ);
+        case l.evJ.RELATIONSHIP_ALREADY_FRIENDS:
+            return u.intl.string(u.t.VNLnen);
+        case l.evJ.USER_QUARANTINED:
+        case l.evJ.USER_FRIEND_REQUEST_LIMITED_ACCESS:
+            return u.intl.string(u.t.EouHws);
+        case l.evJ.TOO_MANY_BLOCKED_USERS:
+            return u.intl.string(u.t.sIGo1t);
+        case l.evJ.RELATIONSHIP_INCOMING_BLOCKED:
+        case l.evJ.RELATIONSHIP_INVALID_SELF:
+        case l.evJ.RELATIONSHIP_INVALUD_USER_BOT:
+        case l.evJ.RELATIONSHIP_INVALID_DISCORD_TAG:
         default:
-            return s.intl.string(s.t.paDJBA);
+            return u.intl.string(u.t.paDJBA);
     }
+}
+function p(e) {
+    let [n, r] = e.split('#');
+    s.default.track(l.rMx.FRIEND_REQUEST_FAILED, {
+        reason: 'Invalid Username',
+        query: e,
+        discrim_len: (null != r ? r : '').length,
+        username_len: n.length,
+        is_email_like: o.Z.isEmail(e),
+        is_invite_like: o.Z.isInvite(e),
+        is_num_only: c.test(e)
+    });
 }

@@ -1,52 +1,54 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return l;
+        return c;
     },
     a: function () {
-        return r;
+        return i;
     }
-}),
-    n(411104);
-var r,
-    i,
-    a = n(774078),
-    s = n(55935),
-    o = n(388032);
-function l(e, t) {
-    let n;
-    switch (t) {
+});
+var i,
+    a = r(411104);
+var s = r(774078),
+    o = r(55935),
+    l = r(388032);
+let u = 60000;
+function c(e, n) {
+    let r;
+    switch (n) {
         case 0:
-            n = {
-                days: o.t['/wnvqK'],
-                hours: o.t.Jsq0XF,
-                minutes: o.t['SBd+Bg']
+            r = {
+                days: l.t['/wnvqK'],
+                hours: l.t.Jsq0XF,
+                minutes: l.t['SBd+Bg']
             };
             break;
         case 1:
-            n = {
-                days: o.t.UD5nn5,
-                hours: o.t.Hg8FeX,
-                minutes: o.t.XSbQZW
+            r = {
+                days: l.t.UD5nn5,
+                hours: l.t.Hg8FeX,
+                minutes: l.t.XSbQZW
             };
             break;
         case 2:
-            n = {
-                days: o.t.rLqNaW,
-                hours: o.t.d1LvCA,
-                minutes: o.t.Z2LX7O
+            r = {
+                days: l.t.rLqNaW,
+                hours: l.t.d1LvCA,
+                minutes: l.t.Z2LX7O
             };
             break;
         case 3:
-            n = {
-                days: o.t.fYmir6,
-                hours: o.t['C3RO+v'],
-                minutes: o.t.r77oHR
+            r = {
+                days: l.t.fYmir6,
+                hours: l.t['C3RO+v'],
+                minutes: l.t.r77oHR
             };
             break;
         default:
-            throw Error('Unknown messageType ('.concat(t, ') when rendering time left'));
+            throw Error('Unknown messageType ('.concat(n, ') when rendering time left'));
     }
-    let r = (0, a.Z)(e.toDate(), 60000);
-    return (0, s.QX)(r, n);
+    let i = (0, s.Z)(e.toDate(), u);
+    return (0, o.QX)(i, r);
 }
-((i = r || (r = {}))[(i.SHORT_TIME_LEFT = 0)] = 'SHORT_TIME_LEFT'), (i[(i.LONG_TIME_LEFT = 1)] = 'LONG_TIME_LEFT'), (i[(i.ENDS_IN = 2)] = 'ENDS_IN'), (i[(i.SHORT_TIME = 3)] = 'SHORT_TIME');
+!(function (e) {
+    (e[(e.SHORT_TIME_LEFT = 0)] = 'SHORT_TIME_LEFT'), (e[(e.LONG_TIME_LEFT = 1)] = 'LONG_TIME_LEFT'), (e[(e.ENDS_IN = 2)] = 'ENDS_IN'), (e[(e.SHORT_TIME = 3)] = 'SHORT_TIME');
+})(i || (i = {}));

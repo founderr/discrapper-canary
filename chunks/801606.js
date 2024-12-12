@@ -1,34 +1,32 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return l;
+        return d;
     }
-}),
-    n(47120);
-var r = n(388123),
-    i = n(697426),
-    a = n(375954),
-    s = n(710111);
-function o(e, t) {
-    var n;
-    return null == e ? void 0 : null === (n = e.soundboardSounds) || void 0 === n ? void 0 : n.find((e) => String(e.sound_id) === String(t));
+});
+var i = r(47120);
+var a = r(388123),
+    s = r(697426),
+    o = r(375954),
+    l = r(710111);
+function u(e, n) {
+    let r;
+    for (let i of e) {
+        let e = c(i.message, n);
+        if (null != e) {
+            r = e;
+            break;
+        }
+    }
+    return r;
 }
-function l(e, t, n) {
-    var l, u, c;
-    let d = a.Z.getMessage(e, t);
-    if (null == d) return;
-    let f =
-        (null == d ? void 0 : null === (l = d.messageReference) || void 0 === l ? void 0 : l.type) === r.U.FORWARD
-            ? (function (e, t) {
-                  let n;
-                  for (let r of e) {
-                      let e = o(r.message, t);
-                      if (null != e) {
-                          n = e;
-                          break;
-                      }
-                  }
-                  return n;
-              })(null !== (u = null == d ? void 0 : d.messageSnapshots) && void 0 !== u ? u : [], n)
-            : o(d, n);
-    if (null != f) return (0, i.o3)(f, null !== (c = f.guild_id) && void 0 !== c ? c : s.X8);
+function c(e, n) {
+    var r;
+    return null == e ? void 0 : null === (r = e.soundboardSounds) || void 0 === r ? void 0 : r.find((e) => String(e.sound_id) === String(n));
+}
+function d(e, n, r) {
+    var i, d, f;
+    let _ = o.Z.getMessage(e, n);
+    if (null == _) return;
+    let h = (null == _ ? void 0 : null === (i = _.messageReference) || void 0 === i ? void 0 : i.type) === a.U.FORWARD ? u(null !== (d = null == _ ? void 0 : _.messageSnapshots) && void 0 !== d ? d : [], r) : c(_, r);
+    if (null != h) return (0, s.o3)(h, null !== (f = h.guild_id) && void 0 !== f ? f : l.X8);
 }

@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function n(e) {
     return {
         keywords: 'dsconfig',
         contains: [
@@ -48,4 +48,5 @@ e.exports = function (e) {
             e.HASH_COMMENT_MODE
         ]
     };
-};
+}
+e.exports = n;

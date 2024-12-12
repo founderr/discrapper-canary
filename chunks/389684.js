@@ -1,29 +1,27 @@
-e.exports = function (e) {
-    let t = e.regex,
-        n = {
+function n(e) {
+    let n = e.regex,
+        r = {
+            className: 'params',
+            begin: '\\(',
+            end: '\\)'
+        },
+        i = {
             variants: [e.COMMENT('!', '$', { relevance: 0 }), e.COMMENT('^C[ ]', '$', { relevance: 0 }), e.COMMENT('^C$', '$', { relevance: 0 })]
         },
-        r = /(_[a-z_\d]+)?/,
-        i = /([de][+-]?\d+)?/,
-        a = {
+        a = /(_[a-z_\d]+)?/,
+        s = /([de][+-]?\d+)?/,
+        o = {
             className: 'number',
-            variants: [{ begin: t.concat(/\b\d+/, /\.(\d*)/, i, r) }, { begin: t.concat(/\b\d+/, i, r) }, { begin: t.concat(/\.\d+/, i, r) }],
+            variants: [{ begin: n.concat(/\b\d+/, /\.(\d*)/, s, a) }, { begin: n.concat(/\b\d+/, s, a) }, { begin: n.concat(/\.\d+/, s, a) }],
             relevance: 0
         },
-        s = {
+        l = {
             className: 'function',
             beginKeywords: 'subroutine function program',
             illegal: '[${=\\n]',
-            contains: [
-                e.UNDERSCORE_TITLE_MODE,
-                {
-                    className: 'params',
-                    begin: '\\(',
-                    end: '\\)'
-                }
-            ]
+            contains: [e.UNDERSCORE_TITLE_MODE, r]
         },
-        o = {
+        u = {
             className: 'string',
             relevance: 0,
             variants: [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE]
@@ -39,14 +37,15 @@ e.exports = function (e) {
         },
         illegal: /\/\*/,
         contains: [
-            o,
-            s,
+            u,
+            l,
             {
                 begin: /^C\s*=(?!=)/,
                 relevance: 0
             },
-            n,
-            a
+            i,
+            o
         ]
     };
-};
+}
+e.exports = n;

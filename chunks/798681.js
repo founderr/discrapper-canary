@@ -1,36 +1,37 @@
-n.d(t, {
+r.d(n, {
     e: function () {
         return i;
     },
     w: function () {
-        return h;
+        return p;
     }
 });
-var r,
-    i,
-    a = n(47770),
-    s = n(846519),
-    o = n(570140),
-    l = n(710845),
-    u = n(646047),
-    c = n(425497),
-    d = n(70956),
-    f = n(27414);
-function _(e, t, n) {
+var i,
+    a = r(47770),
+    s = r(846519),
+    o = r(570140),
+    l = r(710845),
+    u = r(646047),
+    c = r(425497),
+    d = r(70956),
+    f = r(27414);
+function _(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-((r = i || (i = {})).WindowVisibilityChanged = 'window-visibility-changed'), (r.IncomingVideoEnabledChanged = 'incoming-video-enabled-changed');
-class p extends a.Z {
+!(function (e) {
+    (e.WindowVisibilityChanged = 'window-visibility-changed'), (e.IncomingVideoEnabledChanged = 'incoming-video-enabled-changed');
+})(i || (i = {}));
+class h extends a.Z {
     isIncomingVideoEnabled() {
         return this.incomingVideoEnabled;
     }
@@ -45,8 +46,8 @@ class p extends a.Z {
                       });
     }
     setIncomingVideoEnabled(e) {
-        let t = this.incomingVideoEnabled !== e;
-        (this.incomingVideoEnabled = e), t && (this.logger.info('Incoming video enabled changed, incomingVideoEnabled = '.concat(this.incomingVideoEnabled)), this.emit('incoming-video-enabled-changed', this.incomingVideoEnabled));
+        let n = this.incomingVideoEnabled !== e;
+        (this.incomingVideoEnabled = e), n && (this.logger.info('Incoming video enabled changed, incomingVideoEnabled = '.concat(this.incomingVideoEnabled)), this.emit('incoming-video-enabled-changed', this.incomingVideoEnabled));
     }
     constructor() {
         super(),
@@ -69,4 +70,4 @@ class p extends a.Z {
             u.Z.addOnPipModeChangedListener(this.handlePipModeChanged);
     }
 }
-let h = new p();
+let p = new h();

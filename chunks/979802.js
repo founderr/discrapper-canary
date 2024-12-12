@@ -1,27 +1,30 @@
-e.exports = function (e) {
-    let t = e.inherit(e.C_NUMBER_MODE, { begin: '([-+]?((\\.\\d+)|(\\d+)(\\.\\d*)?))|' + e.C_NUMBER_RE });
+function n(e) {
+    let n = '%',
+        r = {
+            $pattern: '[A-Z_][A-Z0-9_.]*',
+            keyword: 'IF DO WHILE ENDWHILE CALL ENDIF SUB ENDSUB GOTO REPEAT ENDREPEAT EQ LT GT NE GE LE OR XOR'
+        },
+        i = {
+            className: 'meta',
+            begin: '([O])([0-9]+)'
+        },
+        a = e.inherit(e.C_NUMBER_MODE, { begin: '([-+]?((\\.\\d+)|(\\d+)(\\.\\d*)?))|' + e.C_NUMBER_RE });
     return {
         name: 'G-code (ISO 6983)',
         aliases: ['nc'],
         case_insensitive: !0,
-        keywords: {
-            $pattern: '[A-Z_][A-Z0-9_.]*',
-            keyword: 'IF DO WHILE ENDWHILE CALL ENDIF SUB ENDSUB GOTO REPEAT ENDREPEAT EQ LT GT NE GE LE OR XOR'
-        },
+        keywords: r,
         contains: [
             {
                 className: 'meta',
-                begin: '%'
+                begin: n
             },
-            {
-                className: 'meta',
-                begin: '([O])([0-9]+)'
-            }
+            i
         ].concat([
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             e.COMMENT(/\(/, /\)/),
-            t,
+            a,
             e.inherit(e.APOS_STRING_MODE, { illegal: null }),
             e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
             {
@@ -44,7 +47,7 @@ e.exports = function (e) {
             {
                 className: 'built_in',
                 begin: '(ATAN|ABS|ACOS|ASIN|SIN|COS|EXP|FIX|FUP|ROUND|LN|TAN)(\\[)',
-                contains: [t],
+                contains: [a],
                 end: '\\]'
             },
             {
@@ -59,4 +62,5 @@ e.exports = function (e) {
             }
         ])
     };
-};
+}
+e.exports = n;

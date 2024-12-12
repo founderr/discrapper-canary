@@ -1,20 +1,66 @@
-n(47120);
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140);
+var i,
+    a = r(47120);
+var s = r(442837),
+    o = r(570140);
+function l(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
 let u = {},
     c = {},
     d = new Set();
-class f extends (r = o.ZP.Store) {
+function f(e) {
+    let { guildId: n, channelId: r } = e;
+    c = {
+        ...c,
+        [n]: {
+            ...c[n],
+            [r]: !0
+        }
+    };
+}
+function _(e) {
+    let { memberActions: n, guildId: r } = e;
+    if (null == n) {
+        c[r] = u;
+        return;
+    }
+    (c[r] = n), d.delete(r);
+}
+function h(e) {
+    let { guildId: n } = e;
+    d.add(n);
+}
+function p(e) {
+    let { guildId: n } = e;
+    d.delete(n);
+}
+function m(e) {
+    let { guild: n } = e;
+    if (null == c[n.id]) return !1;
+    delete c[n.id];
+}
+function g(e) {
+    let { guildId: n } = e;
+    if (null == c[n]) return !1;
+    delete c[n];
+}
+class E extends (i = s.ZP.Store) {
     getCompletedActions(e) {
         return null == e ? null : c[e];
     }
-    hasCompletedActionForChannel(e, t) {
-        let n = this.getCompletedActions(e);
-        return null != n && null != n[t];
+    hasCompletedActionForChannel(e, n) {
+        let r = this.getCompletedActions(e);
+        return null != r && null != r[n];
     }
     getState(e) {
         return null == e
@@ -25,50 +71,12 @@ class f extends (r = o.ZP.Store) {
               };
     }
 }
-(s = 'GuildOnboardingMemberActionStore'),
-    (a = 'displayName') in (i = f)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new f(l.Z, {
-        GUILD_NEW_MEMBER_ACTIONS_FETCH_START: function (e) {
-            let { guildId: t } = e;
-            d.add(t);
-        },
-        GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS: function (e) {
-            let { memberActions: t, guildId: n } = e;
-            if (null == t) {
-                c[n] = u;
-                return;
-            }
-            (c[n] = t), d.delete(n);
-        },
-        GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL: function (e) {
-            let { guildId: t } = e;
-            d.delete(t);
-        },
-        GUILD_NEW_MEMBER_ACTIONS_DELETE_SUCCESS: function (e) {
-            let { guildId: t } = e;
-            if (null == c[t]) return !1;
-            delete c[t];
-        },
-        COMPLETE_NEW_MEMBER_ACTION: function (e) {
-            let { guildId: t, channelId: n } = e;
-            c = {
-                ...c,
-                [t]: {
-                    ...c[t],
-                    [n]: !0
-                }
-            };
-        },
-        GUILD_DELETE: function (e) {
-            let { guild: t } = e;
-            if (null == c[t.id]) return !1;
-            delete c[t.id];
-        }
+l(E, 'displayName', 'GuildOnboardingMemberActionStore'),
+    (n.Z = new E(o.Z, {
+        GUILD_NEW_MEMBER_ACTIONS_FETCH_START: h,
+        GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS: _,
+        GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL: p,
+        GUILD_NEW_MEMBER_ACTIONS_DELETE_SUCCESS: g,
+        COMPLETE_NEW_MEMBER_ACTION: f,
+        GUILD_DELETE: m
     }));

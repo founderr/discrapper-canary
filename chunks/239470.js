@@ -1,34 +1,36 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(647162);
-function i(e, t, n, i) {
-    var a, s, o;
-    let l = e.hasConnectedAccount(),
-        u = (0, r.PY)(e),
-        c = e.getTrack(),
-        d = e.getSyncingWith(),
-        f = e.getActivity(),
-        _ = null !== (o = null !== (s = null == c ? void 0 : c.id) && void 0 !== s ? s : null == f ? void 0 : f.sync_id) && void 0 !== o ? o : e.getLastPlayedTrackId(),
-        p = n.id === t.getId(),
-        h = l && !u,
-        m = null != _ && _ === (null == i ? void 0 : i.sync_id),
-        g = (null == f ? void 0 : f.party) != null && (null == i ? void 0 : null === (a = i.party) || void 0 === a ? void 0 : a.id) === f.party.id,
-        E = (null == d ? void 0 : d.userId) != null && (null == d ? void 0 : d.userId) === n.id;
+var i = r(647162);
+function a(e, n, r, a) {
+    var s, o, l;
+    let u = e.hasConnectedAccount(),
+        c = (0, i.PY)(e),
+        d = e.getTrack(),
+        f = e.getSyncingWith(),
+        _ = e.getActivity(),
+        h = null !== (l = null !== (o = null == d ? void 0 : d.id) && void 0 !== o ? o : null == _ ? void 0 : _.sync_id) && void 0 !== l ? l : e.getLastPlayedTrackId(),
+        p = r.id === n.getId(),
+        m = u && !c,
+        g = null != h && h === (null == a ? void 0 : a.sync_id),
+        E = (null == _ ? void 0 : _.party) != null && (null == a ? void 0 : null === (s = a.party) || void 0 === s ? void 0 : s.id) === _.party.id,
+        v = (null == f ? void 0 : f.userId) != null && (null == f ? void 0 : f.userId) === r.id,
+        I = p || m || g,
+        T = p || v || E;
     return {
-        user: n,
-        activity: i,
-        hasSpotifyAccount: l,
-        canPlaySpotify: u,
-        notPlayable: h,
-        syncingWithParty: g,
-        syncingWithUser: E,
+        user: r,
+        activity: a,
+        hasSpotifyAccount: u,
+        canPlaySpotify: c,
+        notPlayable: m,
+        syncingWithParty: E,
+        syncingWithUser: v,
         isCurrentUser: p,
-        currentUserTrackId: _,
-        playingSameTrack: m,
-        playDisabled: p || h || m,
-        syncDisabled: p || E || g
+        currentUserTrackId: h,
+        playingSameTrack: g,
+        playDisabled: I,
+        syncDisabled: T
     };
 }

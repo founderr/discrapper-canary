@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function n(e) {
     return {
         name: 'Coq',
         keywords: {
@@ -18,4 +18,5 @@ e.exports = function (e) {
             { begin: /[-=]>/ }
         ]
     };
-};
+}
+e.exports = n;

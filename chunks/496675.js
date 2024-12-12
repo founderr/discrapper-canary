@@ -1,74 +1,84 @@
-n(47120);
-var r,
-    i,
-    a,
-    s,
-    o = n(392711),
-    l = n.n(o),
-    u = n(149765),
-    c = n(442837),
-    d = n(570140),
-    f = n(160404),
-    _ = n(41776),
-    p = n(427679),
-    h = n(569471),
-    m = n(195663),
-    g = n(131704),
-    E = n(601964),
-    v = n(598077),
-    I = n(386438),
-    T = n(700785),
-    b = n(592125),
-    S = n(271383),
-    y = n(430824),
-    A = n(594174),
-    N = n(981631),
-    C = n(478743);
+var i,
+    a = r(47120);
+var s = r(392711),
+    o = r.n(s),
+    l = r(149765),
+    u = r(442837),
+    c = r(570140),
+    d = r(160404),
+    f = r(41776),
+    _ = r(427679),
+    h = r(569471),
+    p = r(195663),
+    m = r(131704),
+    g = r(601964),
+    E = r(598077),
+    v = r(386438),
+    I = r(700785),
+    T = r(592125),
+    b = r(271383),
+    y = r(430824),
+    S = r(594174),
+    A = r(981631),
+    N = r(478743);
+function C(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
 let R = {},
     O = {},
     D = {},
     L = 0;
 function x(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = R[e];
-    if (null != n) return n;
-    let r = A.default.getCurrentUser();
-    if (null == r) return T.Hn;
-    let i = y.Z.getGuild(e);
-    return null == i
-        ? T.Hn
-        : (R[e] = T.uB({
-              user: r,
-              context: i,
-              checkElevated: t
+    let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        r = R[e];
+    if (null != r) return r;
+    let i = S.default.getCurrentUser();
+    if (null == i) return I.Hn;
+    let a = y.Z.getGuild(e);
+    return null == a
+        ? I.Hn
+        : (R[e] = I.uB({
+              user: i,
+              context: a,
+              checkElevated: n
           }));
 }
 function w(e) {
-    var t;
-    let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        r = A.default.getCurrentUser();
-    if (null == r) return T.Hn;
-    let i = b.Z.getChannel(e);
-    if (null == i) return T.Hn;
-    let a = i.getGuildId(),
-        s = null != a && (_.Z.isLurking(a) || (null === (t = S.ZP.getMember(a, r.id)) || void 0 === t ? void 0 : t.isPending));
-    return !i.isScheduledForDeletion() && !s && l().isEmpty(i.permissionOverwrites) && null != a
-        ? x(a)
-        : T.uB({
-              user: r,
-              context: i,
-              checkElevated: n
+    var n;
+    let r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        i = S.default.getCurrentUser();
+    if (null == i) return I.Hn;
+    let a = T.Z.getChannel(e);
+    if (null == a) return I.Hn;
+    let s = a.getGuildId(),
+        l = null != s && (f.Z.isLurking(s) || (null === (n = b.ZP.getMember(s, i.id)) || void 0 === n ? void 0 : n.isPending));
+    return !a.isScheduledForDeletion() && !l && o().isEmpty(a.permissionOverwrites) && null != s
+        ? x(s)
+        : I.uB({
+              user: i,
+              context: a,
+              checkElevated: r
           });
 }
 function P(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = O[e];
-    return null != n ? n : (O[e] = w(e, t));
+    let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        r = O[e];
+    return null != r ? r : (O[e] = w(e, n));
 }
 function M(e) {
     if (null != e) {
-        var t;
-        D[e] = (null !== (t = D[e]) && void 0 !== t ? t : 0) + 1;
+        var n;
+        D[e] = (null !== (n = D[e]) && void 0 !== n ? n : 0) + 1;
     }
 }
 function k() {
@@ -79,242 +89,241 @@ function U() {
     k();
 }
 function B() {
+    ee();
+}
+function G() {
     k();
 }
-function G(e) {
-    var t;
-    let { user: n } = e;
-    if (n.id !== (null === (t = A.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
+function Z(e) {
+    var n;
+    let { user: r } = e;
+    if (r.id !== (null === (n = S.default.getCurrentUser()) || void 0 === n ? void 0 : n.id)) return !1;
     k();
-}
-function Z() {
-    return !0;
 }
 function F(e) {
-    let { messages: t, threads: n } = e;
-    return !!(n.length > 0) || t.some((e) => e.some((e) => null != e.thread));
+    let {
+            channel: { id: n }
+        } = e,
+        r = T.Z.getChannel(n);
+    if (null == r || r.isPrivate()) return !1;
+    let i = S.default.getCurrentUser(),
+        a = I.uB({
+            user: i,
+            context: r
+        });
+    if (O[r.id] === a) return !1;
+    (O[r.id] = a), (L += 1), M(r.getGuildId());
 }
 function V(e) {
-    let { guildId: t } = e;
-    delete R[t];
-    let n = b.Z.getMutableBasicGuildChannelsForGuild(t);
-    l().forEach(n, (e) => {
-        delete O[e.id];
-    }),
-        (L += 1),
-        M(t);
+    let { channels: n } = e,
+        r = !1;
+    for (let { id: e } of n) {
+        let n = T.Z.getChannel(e);
+        if (null == n || n.isPrivate()) continue;
+        let i = S.default.getCurrentUser(),
+            a = I.uB({
+                user: i,
+                context: n
+            });
+        if (O[n.id] !== a) (O[n.id] = a), M(n.getGuildId()), (r = !0);
+    }
+    return !!r && ((L += 1), r);
 }
-function j(e) {
-    let { instance: t } = e,
-        n = b.Z.getChannel(t.channel_id);
-    if (null == n) return !1;
-    let r = A.default.getCurrentUser(),
-        i = T.uB({
-            user: r,
-            context: n
-        });
-    if (i === O[n.id]) return !1;
-    (O[n.id] = i), (L += 1);
+function j() {
+    return !0;
 }
 function H(e) {
-    let { guildId: t } = e;
-    delete R[t];
-    let n = b.Z.getMutableBasicGuildChannelsForGuild(t);
-    l().forEach(n, (e) => {
+    var n;
+    return (null === (n = S.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) === e.userId && (M(e.guildId), !0);
+}
+function Y(e) {
+    return !!(0, p.s)(e) && (M(e.guildId), !0);
+}
+function W(e) {
+    let { messages: n } = e;
+    return n.some((e) => null != e.thread);
+}
+function K(e) {
+    let { messages: n, threads: r } = e;
+    return !!(r.length > 0) || n.some((e) => e.some((e) => null != e.thread));
+}
+function z(e) {
+    let { channel: n } = e;
+    return delete O[n.id], (L += 1), M(n.guild_id), !1;
+}
+function q(e) {
+    let { guildId: n } = e;
+    delete R[n];
+    let r = T.Z.getMutableBasicGuildChannelsForGuild(n);
+    o().forEach(r, (e) => {
         delete O[e.id];
     }),
         (L += 1),
-        M(t);
+        M(n);
 }
-function Y(e, t, n, r) {
-    let i = T.Hn;
-    if (e instanceof g.Sf) {
-        if (g.Ec.has(e.type)) {
-            let i = b.Z.getChannel(e.parent_id);
-            return null == i ? T.Hn : T.Og(e, Y(i, t, n, r), h.Z.hasJoined(e.id));
+function Q(e) {
+    let { instance: n } = e,
+        r = T.Z.getChannel(n.channel_id);
+    if (null == r) return !1;
+    let i = S.default.getCurrentUser(),
+        a = I.uB({
+            user: i,
+            context: r
+        });
+    if (a === O[r.id]) return !1;
+    (O[r.id] = a), (L += 1);
+}
+function X(e) {
+    let { guildId: n } = e;
+    delete R[n];
+    let r = T.Z.getMutableBasicGuildChannelsForGuild(n);
+    o().forEach(r, (e) => {
+        delete O[e.id];
+    }),
+        (L += 1),
+        M(n);
+}
+function J(e, n, r, i) {
+    let a = I.Hn;
+    if (e instanceof m.Sf) {
+        if (m.Ec.has(e.type)) {
+            let a = T.Z.getChannel(e.parent_id);
+            return null == a ? I.Hn : I.Og(e, J(a, n, r, i), h.Z.hasJoined(e.id));
         }
-        i = P(e.id);
-    } else e instanceof E.ZP && (i = x(e.id));
-    return void 0 !== t || void 0 !== n || void 0 !== r
-        ? T.uB({
-              user: A.default.getCurrentUser(),
+        a = P(e.id);
+    } else e instanceof g.ZP && (a = x(e.id));
+    return void 0 !== n || void 0 !== r || void 0 !== i
+        ? I.uB({
+              user: S.default.getCurrentUser(),
               context: e,
-              overwrites: t,
-              roles: n,
+              overwrites: n,
+              roles: r,
               checkElevated: !0,
-              excludeGuildPermissions: r
+              excludeGuildPermissions: i
           })
-        : i;
+        : a;
 }
-class W extends (r = c.ZP.Store) {
+class $ extends (i = u.ZP.Store) {
     initialize() {
-        this.waitFor(A.default, y.Z, b.Z, S.ZP, h.Z, p.Z, f.Z);
+        this.waitFor(S.default, y.Z, T.Z, b.ZP, h.Z, _.Z, d.Z);
     }
     getChannelPermissions(e) {
-        return g.Ec.has(e.type) ? w(e.id) : P(e.id);
+        return m.Ec.has(e.type) ? w(e.id) : P(e.id);
     }
     getGuildPermissions(e) {
         return x(e.id);
     }
     getGuildPermissionProps(e) {
-        let t = A.default.getCurrentUser();
+        let n = S.default.getCurrentUser();
         return {
-            canManageGuild: this.can(N.Plq.MANAGE_GUILD, e),
-            canManageChannels: this.can(N.Plq.MANAGE_CHANNELS, e),
-            canManageRoles: this.can(N.Plq.MANAGE_ROLES, e),
-            canManageBans: this.can(N.Plq.BAN_MEMBERS, e),
-            canManageNicknames: this.can(N.Plq.MANAGE_NICKNAMES, e),
-            canManageGuildExpressions: this.can(N.Plq.MANAGE_GUILD_EXPRESSIONS, e) || this.can(N.Plq.CREATE_GUILD_EXPRESSIONS, e),
-            canViewAuditLog: this.can(N.Plq.VIEW_AUDIT_LOG, e),
-            canViewAuditLogV2: this.can(N.Plq.VIEW_AUDIT_LOG, e),
-            canManageWebhooks: this.can(N.Plq.MANAGE_WEBHOOKS, e),
-            canViewGuildAnalytics: this.can(N.Plq.VIEW_GUILD_ANALYTICS, e),
+            canManageGuild: this.can(A.Plq.MANAGE_GUILD, e),
+            canManageChannels: this.can(A.Plq.MANAGE_CHANNELS, e),
+            canManageRoles: this.can(A.Plq.MANAGE_ROLES, e),
+            canManageBans: this.can(A.Plq.BAN_MEMBERS, e),
+            canManageNicknames: this.can(A.Plq.MANAGE_NICKNAMES, e),
+            canManageGuildExpressions: this.can(A.Plq.MANAGE_GUILD_EXPRESSIONS, e) || this.can(A.Plq.CREATE_GUILD_EXPRESSIONS, e),
+            canViewAuditLog: this.can(A.Plq.VIEW_AUDIT_LOG, e),
+            canViewAuditLogV2: this.can(A.Plq.VIEW_AUDIT_LOG, e),
+            canManageWebhooks: this.can(A.Plq.MANAGE_WEBHOOKS, e),
+            canViewGuildAnalytics: this.can(A.Plq.VIEW_GUILD_ANALYTICS, e),
             canAccessMembersPage: this.canAccessMemberSafetyPage(e),
-            isGuildAdmin: this.can(N.Plq.ADMINISTRATOR, e),
-            isOwner: null != t && e.isOwner(t),
-            isOwnerWithRequiredMfaLevel: null != t && e.isOwnerWithRequiredMfaLevel(t),
+            isGuildAdmin: this.can(A.Plq.ADMINISTRATOR, e),
+            isOwner: null != n && e.isOwner(n),
+            isOwnerWithRequiredMfaLevel: null != n && e.isOwnerWithRequiredMfaLevel(n),
             guild: e
         };
     }
     canAccessMemberSafetyPage(e) {
-        return u.Db(x(e.id), C.N);
+        return l.Db(x(e.id), N.N);
     }
     canAccessGuildSettings(e) {
-        return u.Db(x(e.id), T.ym);
+        return l.Db(x(e.id), I.ym);
     }
-    canWithPartialContext(e, t) {
-        return 'channelId' in t && 'string' == typeof t.channelId ? this.can(e, b.Z.getChannel(t.channelId)) : 'guildId' in t && 'string' == typeof t.guildId && this.can(e, y.Z.getGuild(t.guildId));
+    canWithPartialContext(e, n) {
+        return 'channelId' in n && 'string' == typeof n.channelId ? this.can(e, T.Z.getChannel(n.channelId)) : 'guildId' in n && 'string' == typeof n.guildId && this.can(e, y.Z.getGuild(n.guildId));
     }
-    can(e, t, n, r, i) {
-        let a = Y(t, n, r, i);
-        return u.e$(a, e);
+    can(e, n, r, i, a) {
+        let s = J(n, r, i, a);
+        return l.e$(s, e);
     }
-    canBasicChannel(e, t, n, r, i) {
-        return 'basicPermissions' in t ? I.Z.has(t.basicPermissions, e) : u.e$(Y(t, n, r, i), I.Z.asBigFlag(e));
+    canBasicChannel(e, n, r, i, a) {
+        return 'basicPermissions' in n ? v.Z.has(n.basicPermissions, e) : l.e$(J(n, r, i, a), v.Z.asBigFlag(e));
     }
-    computePermissions(e, t, n, r) {
-        return Y(e, t, n, r);
+    computePermissions(e, n, r, i) {
+        return J(e, n, r, i);
     }
     computeBasicPermissions(e) {
-        return 'basicPermissions' in e ? e.basicPermissions : I.Z.asBasicFlag(Y(e));
+        return 'basicPermissions' in e ? e.basicPermissions : v.Z.asBasicFlag(J(e));
     }
-    canManageUser(e, t, n) {
-        let r = t instanceof v.Z ? t.id : t;
-        if (n.isOwner(r)) return !1;
-        let i = A.default.getCurrentUser();
-        if (!this.can(e, n)) return !1;
-        let a = null != i ? T.e9(n, i.id) : void 0,
-            s = T.e9(n, r);
-        return null != i && T.r6(n, i.id, a, s);
+    canManageUser(e, n, r) {
+        let i = n instanceof E.Z ? n.id : n;
+        if (r.isOwner(i)) return !1;
+        let a = S.default.getCurrentUser();
+        if (!this.can(e, r)) return !1;
+        let s = null != a ? I.e9(r, a.id) : void 0,
+            o = I.e9(r, i);
+        return null != a && I.r6(r, a.id, s, o);
     }
     getHighestRole(e) {
-        let t = A.default.getCurrentUser();
-        return null != t ? T.e9(e, t.id) : null;
+        let n = S.default.getCurrentUser();
+        return null != n ? I.e9(e, n.id) : null;
     }
-    isRoleHigher(e, t, n) {
-        let r = A.default.getCurrentUser(),
-            i = f.Z.isViewingRoles(e.id);
-        return T.r6(e, i ? void 0 : null == r ? void 0 : r.id, t, n);
+    isRoleHigher(e, n, r) {
+        let i = S.default.getCurrentUser(),
+            a = d.Z.isViewingRoles(e.id);
+        return I.r6(e, a ? void 0 : null == i ? void 0 : i.id, n, r);
     }
-    canImpersonateRole(e, t) {
-        let n = this.getHighestRole(e),
-            r = this.can(N.Plq.MANAGE_GUILD, e) && this.can(N.Plq.MANAGE_ROLES, e),
-            i = this.isRoleHigher(e, n, t);
-        return r && (i || t.id === (null == n ? void 0 : n.id));
+    canImpersonateRole(e, n) {
+        let r = this.getHighestRole(e),
+            i = this.can(A.Plq.MANAGE_GUILD, e) && this.can(A.Plq.MANAGE_ROLES, e),
+            a = this.isRoleHigher(e, r, n);
+        return i && (a || n.id === (null == r ? void 0 : r.id));
     }
     getGuildVersion(e) {
-        var t;
-        return null !== (t = D[e]) && void 0 !== t ? t : 0;
+        var n;
+        return null !== (n = D[e]) && void 0 !== n ? n : 0;
     }
     getChannelsVersion() {
         return L;
     }
 }
-function K() {
+function ee() {
     (O = {}), (R = {}), (D = {}), (L = 0);
 }
-(s = 'PermissionStore'),
-    (a = 'displayName') in (i = W)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new W(d.Z, {
+C($, 'displayName', 'PermissionStore'),
+    (n.Z = new $(c.Z, {
         BACKGROUND_SYNC: U,
         CONNECTION_OPEN: U,
         OVERLAY_INITIALIZE: U,
         CACHE_LOADED: U,
         CACHE_LOADED_LAZY: U,
-        CONNECTION_CLOSED: function () {
-            K();
-        },
-        GUILD_CREATE: B,
-        GUILD_UPDATE: B,
-        GUILD_DELETE: B,
-        GUILD_MEMBER_ADD: G,
-        GUILD_MEMBER_UPDATE: G,
-        CURRENT_USER_UPDATE: G,
-        CHANNEL_CREATE: function (e) {
-            let {
-                    channel: { id: t }
-                } = e,
-                n = b.Z.getChannel(t);
-            if (null == n || n.isPrivate()) return !1;
-            let r = A.default.getCurrentUser(),
-                i = T.uB({
-                    user: r,
-                    context: n
-                });
-            if (O[n.id] === i) return !1;
-            (O[n.id] = i), (L += 1), M(n.getGuildId());
-        },
-        THREAD_CREATE: Z,
-        THREAD_UPDATE: Z,
-        THREAD_LIST_SYNC: Z,
-        LOAD_THREADS_SUCCESS: Z,
-        LOAD_ARCHIVED_THREADS_SUCCESS: Z,
-        CHANNEL_UPDATES: function (e) {
-            let { channels: t } = e,
-                n = !1;
-            for (let { id: e } of t) {
-                let t = b.Z.getChannel(e);
-                if (null == t || t.isPrivate()) continue;
-                let r = A.default.getCurrentUser(),
-                    i = T.uB({
-                        user: r,
-                        context: t
-                    });
-                if (O[t.id] !== i) (O[t.id] = i), M(t.getGuildId()), (n = !0);
-            }
-            return !!n && ((L += 1), n);
-        },
-        LOAD_MESSAGES_SUCCESS: function (e) {
-            let { messages: t } = e;
-            return t.some((e) => null != e.thread);
-        },
-        SEARCH_FINISH: F,
-        MOD_VIEW_SEARCH_FINISH: F,
-        THREAD_MEMBER_UPDATE: function (e) {
-            var t;
-            return (null === (t = A.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.userId && (M(e.guildId), !0);
-        },
-        THREAD_MEMBERS_UPDATE: function (e) {
-            return !!(0, m.s)(e) && (M(e.guildId), !0);
-        },
-        CHANNEL_DELETE: function (e) {
-            let { channel: t } = e;
-            return delete O[t.id], (L += 1), M(t.guild_id), !1;
-        },
-        GUILD_ROLE_CREATE: V,
-        GUILD_ROLE_UPDATE: V,
-        GUILD_ROLE_DELETE: V,
-        LOGOUT: K,
-        STAGE_INSTANCE_CREATE: j,
-        STAGE_INSTANCE_UPDATE: j,
-        STAGE_INSTANCE_DELETE: j,
-        IMPERSONATE_UPDATE: H,
-        IMPERSONATE_STOP: H
+        CONNECTION_CLOSED: B,
+        GUILD_CREATE: G,
+        GUILD_UPDATE: G,
+        GUILD_DELETE: G,
+        GUILD_MEMBER_ADD: Z,
+        GUILD_MEMBER_UPDATE: Z,
+        CURRENT_USER_UPDATE: Z,
+        CHANNEL_CREATE: F,
+        THREAD_CREATE: j,
+        THREAD_UPDATE: j,
+        THREAD_LIST_SYNC: j,
+        LOAD_THREADS_SUCCESS: j,
+        LOAD_ARCHIVED_THREADS_SUCCESS: j,
+        CHANNEL_UPDATES: V,
+        LOAD_MESSAGES_SUCCESS: W,
+        SEARCH_FINISH: K,
+        MOD_VIEW_SEARCH_FINISH: K,
+        THREAD_MEMBER_UPDATE: H,
+        THREAD_MEMBERS_UPDATE: Y,
+        CHANNEL_DELETE: z,
+        GUILD_ROLE_CREATE: q,
+        GUILD_ROLE_UPDATE: q,
+        GUILD_ROLE_DELETE: q,
+        LOGOUT: ee,
+        STAGE_INSTANCE_CREATE: Q,
+        STAGE_INSTANCE_UPDATE: Q,
+        STAGE_INSTANCE_DELETE: Q,
+        IMPERSONATE_UPDATE: X,
+        IMPERSONATE_STOP: X
     }));

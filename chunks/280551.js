@@ -1,13 +1,11 @@
-n.d(t, {
+r.d(n, {
     s: function () {
-        return i;
+        return s;
     }
 });
-var r = n(998502);
-let i =
-    null != window.DiscordNative
-        ? function (e, t) {
-              var n, i;
-              return null === (i = r.ZP.getDiscordUtils()) || void 0 === i ? void 0 : null === (n = i.createDateFormatter) || void 0 === n ? void 0 : n.call(i, e, t);
-          }
-        : void 0;
+var i = r(998502);
+function a(e, n) {
+    var r, a;
+    return null === (a = i.ZP.getDiscordUtils()) || void 0 === a ? void 0 : null === (r = a.createDateFormatter) || void 0 === r ? void 0 : r.call(a, e, n);
+}
+let s = null != window.DiscordNative ? a : void 0;

@@ -1,86 +1,92 @@
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(902704),
-    u = n(570140);
-let c = {},
-    d = {},
-    f = { scrollTop: 0 };
-function _(e) {
+var i,
+    a = r(442837),
+    s = r(902704),
+    o = r(570140);
+function l(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let u = {},
+    c = {},
+    d = { scrollTop: 0 };
+function f(e) {
     return {
         guildId: e,
         scrollTop: null,
         scrollTo: null
     };
 }
-function p(e) {
-    if (null == c[e]) return;
-    let { scrollTop: t, scrollHeight: n, offsetHeight: r } = c[e];
-    return t === n - r;
+function _(e) {
+    let { channelId: n, scrollTop: r, scrollHeight: i, offsetHeight: a } = e,
+        o = u[n];
+    if (null == r || null == i || null == a) {
+        if (null == o) return !1;
+        delete u[n];
+    } else {
+        let e = {
+            channelId: n,
+            scrollTop: r,
+            scrollHeight: i,
+            offsetHeight: a
+        };
+        if (null != o && (0, s.Z)(o, e)) return !1;
+        u[n] = e;
+    }
 }
-class h extends (s = o.ZP.Store) {
+function h(e) {
+    let { scrollTop: n } = e;
+    d.scrollTop = n;
+}
+function p(e) {
+    let { channelId: n } = e;
+    m(n) && delete u[n];
+}
+function m(e) {
+    if (null == u[e]) return;
+    let { scrollTop: n, scrollHeight: r, offsetHeight: i } = u[e];
+    return n === r - i;
+}
+function g(e) {
+    let { guildId: n, scrollTop: r, scrollTo: i } = e;
+    null == c[n] && (c[n] = f(n)), void 0 !== r && (c[n].scrollTop = r);
+    let a = !1;
+    return void 0 !== i && ((a = c[n].scrollTo !== i), (c[n].scrollTo = i)), null != i || a;
+}
+class E extends (i = a.ZP.Store) {
     percentageScrolled(e) {
-        if (null != c[e]) {
-            let { scrollTop: t, scrollHeight: n } = c[e];
-            return t / n;
+        if (null != u[e]) {
+            let { scrollTop: n, scrollHeight: r } = u[e];
+            return n / r;
         }
         return 1;
     }
     getChannelDimensions(e) {
-        return c[e];
+        return u[e];
     }
     getGuildDimensions(e) {
-        var t;
-        return null !== (t = d[e]) && void 0 !== t ? t : _(e);
+        var n;
+        return null !== (n = c[e]) && void 0 !== n ? n : f(e);
     }
     getGuildListDimensions() {
-        return f;
+        return d;
     }
     isAtBottom(e) {
-        return p(e);
+        return m(e);
     }
 }
-(a = 'DimensionStore'),
-    (i = 'displayName') in (r = h)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.Z = new h(u.Z, {
-        UPDATE_CHANNEL_DIMENSIONS: function (e) {
-            let { channelId: t, scrollTop: n, scrollHeight: r, offsetHeight: i } = e,
-                a = c[t];
-            if (null == n || null == r || null == i) {
-                if (null == a) return !1;
-                delete c[t];
-            } else {
-                let e = {
-                    channelId: t,
-                    scrollTop: n,
-                    scrollHeight: r,
-                    offsetHeight: i
-                };
-                if (null != a && (0, l.Z)(a, e)) return !1;
-                c[t] = e;
-            }
-        },
-        UPDATE_CHANNEL_LIST_DIMENSIONS: function (e) {
-            let { guildId: t, scrollTop: n, scrollTo: r } = e;
-            null == d[t] && (d[t] = _(t)), void 0 !== n && (d[t].scrollTop = n);
-            let i = !1;
-            return void 0 !== r && ((i = d[t].scrollTo !== r), (d[t].scrollTo = r)), null != r || i;
-        },
-        UPDATE_GUILD_LIST_DIMENSIONS: function (e) {
-            let { scrollTop: t } = e;
-            f.scrollTop = t;
-        },
-        CALL_CREATE: function (e) {
-            let { channelId: t } = e;
-            p(t) && delete c[t];
-        }
+l(E, 'displayName', 'DimensionStore'),
+    (n.Z = new E(o.Z, {
+        UPDATE_CHANNEL_DIMENSIONS: _,
+        UPDATE_CHANNEL_LIST_DIMENSIONS: g,
+        UPDATE_GUILD_LIST_DIMENSIONS: h,
+        CALL_CREATE: p
     }));

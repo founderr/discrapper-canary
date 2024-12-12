@@ -1,3 +1,4 @@
-t.Z = function (e) {
+function r(e) {
     return e;
-};
+}
+n.Z = r;

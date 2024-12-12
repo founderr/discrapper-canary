@@ -1,5 +1,5 @@
-e.exports = function (e) {
-    let t = [
+function n(e) {
+    let n = [
         e.C_NUMBER_MODE,
         {
             className: 'string',
@@ -40,9 +40,10 @@ e.exports = function (e) {
                 begin: '\\[',
                 end: "\\][\\.']*",
                 relevance: 0,
-                contains: t
+                contains: n
             },
             e.COMMENT('//', '$')
-        ].concat(t)
+        ].concat(n)
     };
-};
+}
+e.exports = n;

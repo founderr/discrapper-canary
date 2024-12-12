@@ -1,5 +1,5 @@
-e.exports = function (e) {
-    let t = e.regex;
+function n(e) {
+    let n = e.regex;
     return {
         name: 'Erlang REPL',
         keywords: {
@@ -20,7 +20,7 @@ e.exports = function (e) {
             },
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,
-            { begin: t.concat(/\?(::)?/, /([A-Z]\w*)/, /((::)[A-Z]\w*)*/) },
+            { begin: n.concat(/\?(::)?/, /([A-Z]\w*)/, /((::)[A-Z]\w*)*/) },
             { begin: '->' },
             { begin: 'ok' },
             { begin: '!' },
@@ -34,4 +34,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = n;

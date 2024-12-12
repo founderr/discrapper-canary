@@ -1,7 +1,8 @@
-var r = n(296214),
-    i = n(809948),
-    a = n(944010),
-    s = n(175056);
-t.Z = function (e, t) {
-    return ((0, s.Z)(e) ? r.Z : i.Z)(e, (0, a.Z)(t));
-};
+var i = r(296214),
+    a = r(809948),
+    s = r(944010),
+    o = r(175056);
+function l(e, n) {
+    return ((0, o.Z)(e) ? i.Z : a.Z)(e, (0, s.Z)(n));
+}
+n.Z = l;

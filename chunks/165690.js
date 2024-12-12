@@ -1,30 +1,32 @@
-var r = n(192379),
-    i = n(476400),
-    a = n.n(i),
-    s = n(723184),
-    o = n(829307),
-    l = n(877837),
-    u = n(122900),
-    c = n(717487),
-    d = n(99737),
-    f = function (e) {
-        var t = e.width,
-            n = e.onChange,
-            i = e.disableAlpha,
-            a = e.rgb,
-            f = e.hsl,
-            _ = e.hsv,
+var i = r(192379),
+    a = r(476400),
+    s = r.n(a),
+    o = r(723184),
+    l = r(829307),
+    u = r(877837),
+    c = r(122900),
+    d = r(717487),
+    f = r(99737),
+    _ = function (e) {
+        var n = e.width,
+            r = e.onChange,
+            a = e.disableAlpha,
+            s = e.rgb,
+            _ = e.hsl,
+            h = e.hsv,
             p = e.hex,
-            h = e.renderers,
-            m = e.styles,
-            g = e.className,
-            E = e.defaultView,
-            v = (0, s.default)(
-                (0, o.Z)(
+            m = e.renderers,
+            g = e.styles,
+            E = void 0 === g ? {} : g,
+            v = e.className,
+            I = void 0 === v ? '' : v,
+            T = e.defaultView,
+            b = (0, o.default)(
+                (0, l.Z)(
                     {
                         default: {
                             picker: {
-                                width: t,
+                                width: n,
                                 background: '#fff',
                                 borderRadius: '2px',
                                 boxShadow: '0 0 2px rgba(0,0,0,.3), 0 4px 8px rgba(0,0,0,.3)',
@@ -54,7 +56,7 @@ var r = n(192379),
                                 absolute: '0px 0px 0px 0px',
                                 borderRadius: '8px',
                                 boxShadow: 'inset 0 0 0 1px rgba(0,0,0,.1)',
-                                background: 'rgba(' + a.r + ', ' + a.g + ', ' + a.b + ', ' + a.a + ')',
+                                background: 'rgba(' + s.r + ', ' + s.g + ', ' + s.b + ', ' + s.a + ')',
                                 zIndex: '2'
                             },
                             toggles: { flex: '1' },
@@ -81,84 +83,84 @@ var r = n(192379),
                             }
                         }
                     },
-                    void 0 === m ? {} : m
+                    E
                 ),
-                { disableAlpha: i }
+                { disableAlpha: a }
             );
-        return r.createElement(
+        return i.createElement(
             'div',
             {
-                style: v.picker,
-                className: 'chrome-picker ' + (void 0 === g ? '' : g)
+                style: b.picker,
+                className: 'chrome-picker ' + I
             },
-            r.createElement(
+            i.createElement(
                 'div',
-                { style: v.saturation },
-                r.createElement(l.OQ, {
-                    style: v.Saturation,
-                    hsl: f,
-                    hsv: _,
-                    pointer: d.Z,
-                    onChange: n
+                { style: b.saturation },
+                i.createElement(u.OQ, {
+                    style: b.Saturation,
+                    hsl: _,
+                    hsv: h,
+                    pointer: f.Z,
+                    onChange: r
                 })
             ),
-            r.createElement(
+            i.createElement(
                 'div',
-                { style: v.body },
-                r.createElement(
+                { style: b.body },
+                i.createElement(
                     'div',
                     {
-                        style: v.controls,
+                        style: b.controls,
                         className: 'flexbox-fix'
                     },
-                    r.createElement('div', { style: v.color }, r.createElement('div', { style: v.swatch }, r.createElement('div', { style: v.active }), r.createElement(l.QN, { renderers: h }))),
-                    r.createElement(
+                    i.createElement('div', { style: b.color }, i.createElement('div', { style: b.swatch }, i.createElement('div', { style: b.active }), i.createElement(u.QN, { renderers: m }))),
+                    i.createElement(
                         'div',
-                        { style: v.toggles },
-                        r.createElement(
+                        { style: b.toggles },
+                        i.createElement(
                             'div',
-                            { style: v.hue },
-                            r.createElement(l.PS, {
-                                style: v.Hue,
-                                hsl: f,
-                                pointer: c.Z,
-                                onChange: n
+                            { style: b.hue },
+                            i.createElement(u.PS, {
+                                style: b.Hue,
+                                hsl: _,
+                                pointer: d.Z,
+                                onChange: r
                             })
                         ),
-                        r.createElement(
+                        i.createElement(
                             'div',
-                            { style: v.alpha },
-                            r.createElement(l.xV, {
-                                style: v.Alpha,
-                                rgb: a,
-                                hsl: f,
-                                pointer: c.Z,
-                                renderers: h,
-                                onChange: n
+                            { style: b.alpha },
+                            i.createElement(u.xV, {
+                                style: b.Alpha,
+                                rgb: s,
+                                hsl: _,
+                                pointer: d.Z,
+                                renderers: m,
+                                onChange: r
                             })
                         )
                     )
                 ),
-                r.createElement(u.Z, {
-                    rgb: a,
-                    hsl: f,
+                i.createElement(c.Z, {
+                    rgb: s,
+                    hsl: _,
                     hex: p,
-                    view: E,
-                    onChange: n,
-                    disableAlpha: i
+                    view: T,
+                    onChange: r,
+                    disableAlpha: a
                 })
             )
         );
     };
-(f.propTypes = {
-    width: a().oneOfType([a().string, a().number]),
-    disableAlpha: a().bool,
-    styles: a().object,
-    defaultView: a().oneOf(['hex', 'rgb', 'hsl'])
+(_.propTypes = {
+    width: s().oneOfType([s().string, s().number]),
+    disableAlpha: s().bool,
+    styles: s().object,
+    defaultView: s().oneOf(['hex', 'rgb', 'hsl'])
 }),
-    (f.defaultProps = {
+    (_.defaultProps = {
         width: 225,
         disableAlpha: !1,
         styles: {}
     }),
-    (0, l.t1)(f);
+    (0, u.t1)(_);

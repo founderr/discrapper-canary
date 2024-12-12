@@ -1,107 +1,108 @@
-n.d(t, {
+r.d(n, {
     DM: function () {
-        return f;
-    },
-    Ey: function () {
         return _;
     },
+    Ey: function () {
+        return h;
+    },
     No: function () {
-        return p;
-    },
-    Ry: function () {
-        return m;
-    },
-    qX: function () {
         return g;
     },
+    Ry: function () {
+        return v;
+    },
+    qX: function () {
+        return I;
+    },
     u3: function () {
-        return h;
+        return E;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(873546),
-    o = n(481060),
-    l = n(626135),
-    u = n(981631),
-    c = n(388032),
-    d = n(532623);
-let f = Object.freeze({
-    DEFAULT: d.colorDefault,
-    NEUTRAL: d.colorNeutral,
-    BRAND: d.colorBrand,
-    WARNING: d.colorWarning,
-    DANGER: d.colorDanger,
-    INFO: d.colorInfo,
-    STREAMER_MODE: d.colorStreamerMode,
-    CUSTOM: d.colorCustom,
-    SPOTIFY: d.colorSpotify,
-    PLAYSTATION: d.colorPlayStation,
-    PREMIUM_TIER_0: d.colorPremiumTier0,
-    PREMIUM_TIER_1: d.colorPremiumTier1,
-    PREMIUM_TIER_2: d.colorPremiumTier2
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(873546),
+    l = r(481060),
+    u = r(626135),
+    c = r(981631),
+    d = r(388032),
+    f = r(532623);
+let _ = Object.freeze({
+    DEFAULT: f.colorDefault,
+    NEUTRAL: f.colorNeutral,
+    BRAND: f.colorBrand,
+    WARNING: f.colorWarning,
+    DANGER: f.colorDanger,
+    INFO: f.colorInfo,
+    STREAMER_MODE: f.colorStreamerMode,
+    CUSTOM: f.colorCustom,
+    SPOTIFY: f.colorSpotify,
+    PLAYSTATION: f.colorPlayStation,
+    PREMIUM_TIER_0: f.colorPremiumTier0,
+    PREMIUM_TIER_1: f.colorPremiumTier1,
+    PREMIUM_TIER_2: f.colorPremiumTier2
 });
-function _(e) {
-    let { children: t, className: n, minor: i = !1, ...s } = e;
-    return (0, r.jsx)(o.FocusRing, {
-        children: (0, r.jsx)('button', {
-            className: a()(d.button, n, { [d.buttonMinor]: i }),
-            ...s,
-            children: t
+function h(e) {
+    let { children: n, className: r, minor: a = !1, ...o } = e;
+    return (0, i.jsx)(l.FocusRing, {
+        children: (0, i.jsx)('button', {
+            className: s()(f.button, r, { [f.buttonMinor]: a }),
+            ...o,
+            children: n
         })
     });
 }
-function p(e) {
-    let { children: t, noticeType: n, additionalTrackingProps: i, ...a } = e;
-    return (0, r.jsx)(_, {
-        ...a,
-        onClick: (e) => {
-            var t, r;
-            null != a.onClick && a.onClick(e),
-                (t = n),
-                (r = i),
-                null != t &&
-                    l.default.track(u.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, {
-                        notice_type: t,
-                        ...r
-                    });
-        },
-        children: t
-    });
-}
-function h(e) {
-    let { children: t, href: n, ...i } = e;
-    return (0, r.jsx)(o.Anchor, {
-        ...i,
-        className: d.button,
-        href: n,
-        children: t
-    });
+function p(e, n) {
+    null != e &&
+        u.default.track(c.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, {
+            notice_type: e,
+            ...n
+        });
 }
 function m(e) {
-    let { onClick: t, noticeType: n } = e;
-    return (0, r.jsx)(o.Clickable, {
-        focusProps: { offset: 6 },
-        className: d.closeButton,
-        onClick: () => {
-            var e;
-            t(), null != (e = n) && l.default.track(u.rMx.APP_NOTICE_CLOSED, { notice_type: e });
+    null != e && u.default.track(c.rMx.APP_NOTICE_CLOSED, { notice_type: e });
+}
+function g(e) {
+    let { children: n, noticeType: r, additionalTrackingProps: a, ...s } = e;
+    return (0, i.jsx)(h, {
+        ...s,
+        onClick: (e) => {
+            null != s.onClick && s.onClick(e), p(r, a);
         },
-        'aria-label': c.intl.string(c.t.WAI6xs),
-        children: (0, r.jsx)(o.XSmallIcon, {
+        children: n
+    });
+}
+function E(e) {
+    let { children: n, href: r, ...a } = e;
+    return (0, i.jsx)(l.Anchor, {
+        ...a,
+        className: f.button,
+        href: r,
+        children: n
+    });
+}
+function v(e) {
+    let { onClick: n, noticeType: r } = e;
+    return (0, i.jsx)(l.Clickable, {
+        focusProps: { offset: 6 },
+        className: f.closeButton,
+        onClick: () => {
+            n(), m(r);
+        },
+        'aria-label': d.intl.string(d.t.WAI6xs),
+        children: (0, i.jsx)(l.XSmallIcon, {
             size: 'sm',
             color: 'currentColor',
-            className: d.closeIcon
+            className: f.closeIcon
         })
     });
 }
-function g(e) {
-    let { color: t = f.DEFAULT, className: n, style: i, children: o } = e;
-    return (0, r.jsx)('div', {
-        className: a()(d.notice, { [d.isMobile]: s.tq }, n, t),
-        style: null != i ? i : void 0,
-        children: o
+function I(e) {
+    let { color: n = _.DEFAULT, className: r, style: a, children: l } = e;
+    return (0, i.jsx)('div', {
+        className: s()(f.notice, { [f.isMobile]: o.tq }, r, n),
+        style: null != a ? a : void 0,
+        children: l
     });
 }

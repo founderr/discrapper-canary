@@ -1,5 +1,5 @@
-e.exports = function (e) {
-    let t = e.COMMENT(/\{/, /\}/, { contains: ['self'] });
+function n(e) {
+    let n = e.COMMENT(/\{/, /\}/, { contains: ['self'] });
     return {
         name: 'Parser3',
         subLanguage: 'xml',
@@ -8,7 +8,7 @@ e.exports = function (e) {
             e.COMMENT('^#', '$'),
             e.COMMENT(/\^rem\{/, /\}/, {
                 relevance: 10,
-                contains: [t]
+                contains: [n]
             }),
             {
                 className: 'meta',
@@ -34,4 +34,5 @@ e.exports = function (e) {
             e.C_NUMBER_MODE
         ]
     };
-};
+}
+e.exports = n;

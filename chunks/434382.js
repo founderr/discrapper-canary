@@ -1,142 +1,147 @@
-n(47120);
-var r = n(152057),
-    i = n(570140),
-    a = n(147913),
-    s = n(38618),
-    o = n(517100),
-    l = n(914010),
-    u = n(451478),
-    c = n(425128),
-    d = n(994752),
-    f = n(276344);
-let _ = r.v.LEAGUE_OF_LEGENDS_WEEKLY,
-    p = new Map(),
-    h = new Set(),
-    m = new Map();
-function g(e, t) {
-    return ''.concat(e, ':').concat(t);
+var i = r(47120);
+var a = r(152057),
+    s = r(570140),
+    o = r(147913),
+    l = r(38618),
+    u = r(517100),
+    c = r(914010),
+    d = r(451478),
+    f = r(425128),
+    _ = r(994752),
+    h = r(276344);
+function p(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
 }
-function E(e, t) {
-    var n;
-    let r = g(e, t);
-    if (h.has(r) || (null !== (n = m.get(r)) && void 0 !== n ? n : 0) > 3) return !1;
-    if (l.Z.getGuildId() !== e) return;
+let m = a.v.LEAGUE_OF_LEGENDS_WEEKLY,
+    g = 3,
+    E = 5,
+    v = 900000,
+    I = new Map(),
+    T = new Set(),
+    b = new Map();
+function y(e, n) {
+    return ''.concat(e, ':').concat(n);
+}
+function S(e, n) {
+    var r;
+    let i = y(e, n);
+    if (T.has(i) || (null !== (r = b.get(i)) && void 0 !== r ? r : 0) > g) return !1;
+    if (c.Z.getGuildId() !== e) return;
     if (
-        !(0, f.NM)({
+        !(0, h.NM)({
             guildId: e,
             location: 'GuildLeaderboardManager'
         }) ||
-        !u.Z.isFocused() ||
-        !s.Z.isConnected()
+        !d.Z.isFocused() ||
+        !l.Z.isConnected()
     )
         return !1;
-    let i = o.Z.getIdleSince();
-    return !(null != i && Date.now() - i > 900000) && !0;
+    let a = u.Z.getIdleSince();
+    return !(null != a && Date.now() - a > v) && !0;
 }
-function v() {
-    for (let e in p) clearTimeout(p.get(e)), p.delete(e);
+function A() {
+    for (let e in I) clearTimeout(I.get(e)), I.delete(e);
 }
-function I() {
+function N() {
     var e;
-    v();
-    let t = l.Z.getGuildId();
-    if (null == t || !E(t, _)) return;
-    let n = d.Z.getLeaderboardResponse(t, _),
-        r = setTimeout(
+    A();
+    let n = c.Z.getGuildId();
+    if (null == n || !S(n, m)) return;
+    let r = _.Z.getLeaderboardResponse(n, m),
+        i = setTimeout(
             () =>
-                T({
-                    guildId: t,
-                    leaderboardId: _
+                C({
+                    guildId: n,
+                    leaderboardId: m
                 }),
-            Math.max(0, (null !== (e = null == n ? void 0 : n.expires_at) && void 0 !== e ? e : Date.now()) - Date.now())
+            Math.max(0, (null !== (e = null == r ? void 0 : r.expires_at) && void 0 !== e ? e : Date.now()) - Date.now())
         ),
-        i = g(t, _);
-    p.set(i, r);
+        a = y(n, m);
+    I.set(a, i);
 }
-async function T(e) {
-    let { guildId: t, leaderboardId: n, force: r = !1 } = e;
-    if (!(E(t, n) || r)) return;
-    let a = g(t, n);
-    if (!h.has(a))
+async function C(e) {
+    let { guildId: n, leaderboardId: r, force: i = !1 } = e;
+    if (!(S(n, r) || i)) return;
+    let a = y(n, r);
+    if (!T.has(a))
         try {
-            h.add(a);
-            let e = await (0, c.pV)({
-                    guildId: t,
-                    leaderboardId: n,
+            T.add(a);
+            let e = await (0, f.pV)({
+                    guildId: n,
+                    leaderboardId: r,
                     intervalOffset: 0,
-                    force: r
+                    force: i
                 }),
-                s = d.Z.get(t, n);
-            if ((null == s ? void 0 : s.interval_start) !== e.leaderboard.interval_start) {
-                let e = await (0, c.pV)({
-                    guildId: t,
-                    leaderboardId: n,
+                o = _.Z.get(n, r);
+            if ((null == o ? void 0 : o.interval_start) !== e.leaderboard.interval_start) {
+                let e = await (0, f.pV)({
+                    guildId: n,
+                    leaderboardId: r,
                     intervalOffset: -1,
-                    force: r
+                    force: i
                 });
-                i.Z.dispatch({
+                s.Z.dispatch({
                     type: 'SET_GUILD_LEADERBOARD',
                     leaderboardResponse: e,
                     intervalOffset: -1
                 });
             }
-            i.Z.dispatch({
+            s.Z.dispatch({
                 type: 'SET_GUILD_LEADERBOARD',
                 leaderboardResponse: e,
                 intervalOffset: 0
             }),
-                m.delete(a),
-                h.delete(a),
-                I();
-        } catch (i) {
-            var s;
-            let e = (null !== (s = m.get(a)) && void 0 !== s ? s : 0) + 1;
-            if ((m.set(a, e), !E(t, n))) return;
-            let r = 1000 * Math.pow(5, e);
-            p.set(
+                b.delete(a),
+                T.delete(a),
+                N();
+        } catch (s) {
+            var o;
+            let e = (null !== (o = b.get(a)) && void 0 !== o ? o : 0) + 1;
+            if ((b.set(a, e), !S(n, r))) return;
+            let i = 1000 * Math.pow(E, e);
+            I.set(
                 a,
                 setTimeout(
                     () =>
-                        T({
-                            guildId: t,
-                            leaderboardId: n,
+                        C({
+                            guildId: n,
+                            leaderboardId: r,
                             force: !0
                         }),
-                    r
+                    i
                 )
             );
         }
 }
-function b() {
-    I();
+function R() {
+    N();
 }
-function S() {
-    v(), (p = new Map()), (h = new Set()), (m = new Map()), b();
+function O() {
+    A(), (I = new Map()), (T = new Set()), (b = new Map()), R();
 }
-class y extends a.Z {
+class D extends o.Z {
     fetchLeaderboard(e) {
-        return T(e);
+        return C(e);
     }
     constructor(...e) {
-        var t, n, r;
         super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = {
-                POST_CONNECTION_OPEN: S,
-                CONNECTION_CLOSED: b,
-                WINDOW_FOCUS: b,
-                IDLE: b,
-                CHANNEL_SELECT: b
-            }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+            p(this, 'actions', {
+                POST_CONNECTION_OPEN: O,
+                CONNECTION_CLOSED: R,
+                WINDOW_FOCUS: R,
+                IDLE: R,
+                CHANNEL_SELECT: R
+            });
     }
 }
-t.Z = new y();
+n.Z = new D();

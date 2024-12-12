@@ -1,8 +1,10 @@
-var r;
-n.d(t, {
+r.d(n, {
     n: function () {
-        return r;
+        return i;
     }
-}),
-    n(47120),
-    ((r || (r = {})).CONNECT_VOICE = 'connect_voice');
+});
+var i,
+    a = r(47120);
+!(function (e) {
+    e.CONNECT_VOICE = 'connect_voice';
+})(i || (i = {}));

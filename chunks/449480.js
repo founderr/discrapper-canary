@@ -1,52 +1,55 @@
-n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(97028),
-    l = n(481060),
-    u = n(686546),
-    c = n(353093),
-    d = n(388032),
-    f = n(894979);
-function _(e) {
-    let { games: t, gameActivity: n } = e;
-    return (0, r.jsx)('div', {
-        className: f.tooltipGames,
-        children: t.map((e) => {
-            let t = e.getIconURL(24);
-            if (null == t) return null;
-            let i = null == n ? void 0 : n[e.id],
-                a = (null == i ? void 0 : i.level) === o.m.HIGH,
-                s = (0, r.jsxs)(l.Text, {
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(120356),
+    l = r.n(o),
+    u = r(97028),
+    c = r(481060),
+    d = r(686546),
+    f = r(353093),
+    _ = r(388032),
+    h = r(894979);
+let p = 4,
+    m = 10,
+    g = 2;
+function E(e) {
+    let { games: n, gameActivity: r } = e;
+    return (0, a.jsx)('div', {
+        className: h.tooltipGames,
+        children: n.map((e) => {
+            let n = e.getIconURL(24);
+            if (null == n) return null;
+            let i = null == r ? void 0 : r[e.id],
+                s = (null == i ? void 0 : i.level) === u.m.HIGH,
+                o = (0, a.jsxs)(c.Text, {
                     variant: 'text-xs/semibold',
                     color: 'interactive-active',
-                    className: f.tooltipGameName,
+                    className: h.tooltipGameName,
                     children: [
                         e.name,
-                        a &&
-                            (0, r.jsx)(l.Text, {
+                        s &&
+                            (0, a.jsx)(c.Text, {
                                 tag: 'div',
                                 variant: 'text-xxs/normal',
                                 color: 'text-muted',
-                                children: d.intl.string(d.t.gTQrTU)
+                                children: _.intl.string(_.t.gTQrTU)
                             })
                     ]
                 });
-            return (0, r.jsxs)(
+            return (0, a.jsxs)(
                 'div',
                 {
-                    className: f.tooltipGame,
+                    className: h.tooltipGame,
                     children: [
-                        (0, r.jsx)('div', {
-                            className: f.tooltipGameImageContainer,
-                            children: (0, r.jsx)('img', {
-                                src: t,
+                        (0, a.jsx)('div', {
+                            className: h.tooltipGameImageContainer,
+                            children: (0, a.jsx)('img', {
+                                src: n,
                                 alt: e.name,
-                                className: f.tooltipGameImage
+                                className: h.tooltipGameImage
                             })
                         }),
-                        s
+                        o
                     ]
                 },
                 e.id
@@ -54,53 +57,53 @@ function _(e) {
         })
     });
 }
-function p(e) {
-    var t;
-    let { game: n, gameActivity: i, highlighted: a = !1 } = e,
-        c = n.getIconURL(24);
-    if (null == c) return null;
-    let _ = (null == i ? void 0 : null === (t = i[n.id]) || void 0 === t ? void 0 : t.level) === o.m.HIGH,
-        p = (0, r.jsxs)(l.Text, {
+function v(e) {
+    var n;
+    let { game: r, gameActivity: i, highlighted: s = !1 } = e,
+        o = r.getIconURL(24);
+    if (null == o) return null;
+    let f = (null == i ? void 0 : null === (n = i[r.id]) || void 0 === n ? void 0 : n.level) === u.m.HIGH,
+        p = (0, a.jsxs)(c.Text, {
             variant: 'text-sm/semibold',
             color: 'interactive-active',
-            className: f.tooltipText,
+            className: h.tooltipText,
             children: [
-                n.name,
-                _ &&
-                    (0, r.jsx)(l.Text, {
+                r.name,
+                f &&
+                    (0, a.jsx)(c.Text, {
                         tag: 'div',
                         variant: 'text-sm/normal',
                         color: 'text-muted',
-                        children: d.intl.string(d.t.gTQrTU)
+                        children: _.intl.string(_.t.gTQrTU)
                     })
             ]
         });
-    return (0, r.jsx)(l.Tooltip, {
+    return (0, a.jsx)(c.Tooltip, {
         text: p,
         position: 'bottom',
-        'aria-label': n.name,
+        'aria-label': r.name,
         children: (e) =>
-            (0, r.jsxs)('div', {
+            (0, a.jsxs)('div', {
                 ...e,
-                className: s()(f.gameImageContainer, a && f.highlighted),
+                className: l()(h.gameImageContainer, s && h.highlighted),
                 children: [
-                    (0, r.jsx)('img', {
-                        src: c,
-                        alt: n.name,
-                        className: f.gameImage
+                    (0, a.jsx)('img', {
+                        src: o,
+                        alt: r.name,
+                        className: h.gameImage
                     }),
-                    _ &&
-                        (0, r.jsx)(u.ZP, {
-                            mask: u.QS.GAMEPLAY_HIGH_ACTIVITY_ICON,
-                            width: 14,
-                            height: 14,
-                            className: f.gameActivityLevel,
-                            children: (0, r.jsx)('div', {
-                                className: f.gameActivityLevelInner,
-                                children: (0, r.jsx)(l.FireIcon, {
-                                    color: l.tokens.unsafe_rawColors.ORANGE_330.css,
-                                    width: 10,
-                                    height: 10,
+                    f &&
+                        (0, a.jsx)(d.ZP, {
+                            mask: d.QS.GAMEPLAY_HIGH_ACTIVITY_ICON,
+                            width: m + 2 * g,
+                            height: m + 2 * g,
+                            className: h.gameActivityLevel,
+                            children: (0, a.jsx)('div', {
+                                className: h.gameActivityLevelInner,
+                                children: (0, a.jsx)(c.FireIcon, {
+                                    color: c.tokens.unsafe_rawColors.ORANGE_330.css,
+                                    width: m,
+                                    height: m,
                                     size: 'custom'
                                 })
                             })
@@ -109,71 +112,71 @@ function p(e) {
             })
     });
 }
-let h = (e) => (t, n) => {
-    var r, i, a, s;
-    let o = null !== (a = null == e ? void 0 : null === (r = e[t.id]) || void 0 === r ? void 0 : r.score) && void 0 !== a ? a : 0,
-        l = null !== (s = null == e ? void 0 : null === (i = e[n.id]) || void 0 === i ? void 0 : i.score) && void 0 !== s ? s : 0;
-    return o !== l ? l - o : 0;
+let I = (e) => (n, r) => {
+    var i, a, s, o;
+    let l = null !== (s = null == e ? void 0 : null === (i = e[n.id]) || void 0 === i ? void 0 : i.score) && void 0 !== s ? s : 0,
+        u = null !== (o = null == e ? void 0 : null === (a = e[r.id]) || void 0 === a ? void 0 : a.score) && void 0 !== o ? o : 0;
+    return l !== u ? u - l : 0;
 };
-t.Z = i.memo(function (e) {
-    let { games: t, prioritizedGameIds: n = new Set(), gameActivity: a = {}, onInteraction: s } = e,
-        o = i.useMemo(() => {
-            let e = t.filter((e) => null != e && null != e.icon),
-                r = e.filter((e) => !n.has(e.id)).sort(h(a));
-            return [...e.filter((e) => n.has(e.id)).sort(h(a)), ...r];
-        }, [a, t, n]),
-        u = o.slice(0, 3),
-        d = i.useMemo(() => {
+n.Z = s.memo(function (e) {
+    let { games: n, prioritizedGameIds: r = new Set(), gameActivity: i = {}, onInteraction: o } = e,
+        l = s.useMemo(() => {
+            let e = n.filter((e) => null != e && null != e.icon),
+                a = e.filter((e) => !r.has(e.id)).sort(I(i));
+            return [...e.filter((e) => r.has(e.id)).sort(I(i)), ...a];
+        }, [i, n, r]),
+        u = l.slice(0, p - 1),
+        d = s.useMemo(() => {
             var e;
-            let t = o[3];
-            if (null == t) return null;
-            let n = t.getIconURL(24);
+            let n = l[p - 1];
             if (null == n) return null;
-            if (o.length <= 4)
-                return (0, r.jsx)(p, {
-                    game: t,
-                    gameActivity: a
+            let r = n.getIconURL(24);
+            if (null == r) return null;
+            if (l.length <= p)
+                return (0, a.jsx)(v, {
+                    game: n,
+                    gameActivity: i
                 });
-            let i = o.slice(3);
-            return (0, r.jsx)(l.Tooltip, {
-                'aria-label': null !== (e = (0, c.f6)(i.map((e) => e.name))) && void 0 !== e ? e : '',
-                onTooltipShow: () => (null == s ? void 0 : s()),
-                text: (0, r.jsx)(_, {
-                    games: i,
-                    gameActivity: a
+            let s = l.slice(p - 1);
+            return (0, a.jsx)(c.Tooltip, {
+                'aria-label': null !== (e = (0, f.f6)(s.map((e) => e.name))) && void 0 !== e ? e : '',
+                onTooltipShow: () => (null == o ? void 0 : o()),
+                text: (0, a.jsx)(E, {
+                    games: s,
+                    gameActivity: i
                 }),
                 position: 'bottom',
                 children: (e) =>
-                    (0, r.jsxs)('div', {
+                    (0, a.jsxs)('div', {
                         ...e,
-                        className: f.gameImageContainer,
+                        className: h.gameImageContainer,
                         children: [
-                            (0, r.jsx)('img', {
-                                src: n,
-                                alt: t.name,
-                                className: f.gameImage
+                            (0, a.jsx)('img', {
+                                src: r,
+                                alt: n.name,
+                                className: h.gameImage
                             }),
-                            (0, r.jsx)('div', {
-                                className: f.extraGameCount,
-                                children: (0, r.jsx)(l.Text, {
+                            (0, a.jsx)('div', {
+                                className: h.extraGameCount,
+                                children: (0, a.jsx)(c.Text, {
                                     variant: 'text-xs/medium',
                                     color: 'always-white',
-                                    children: '+'.concat(i.length)
+                                    children: '+'.concat(s.length)
                                 })
                             })
                         ]
                     })
             });
-        }, [a, o, s]);
-    return (0, r.jsxs)(r.Fragment, {
+        }, [i, l, o]);
+    return (0, a.jsxs)(a.Fragment, {
         children: [
             u.map((e) =>
-                (0, r.jsx)(
-                    p,
+                (0, a.jsx)(
+                    v,
                     {
                         game: e,
-                        gameActivity: a,
-                        highlighted: n.has(e.id)
+                        gameActivity: i,
+                        highlighted: r.has(e.id)
                     },
                     e.id
                 )

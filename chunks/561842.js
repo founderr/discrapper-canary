@@ -1,8 +1,9 @@
-var r, i;
-n.d(t, {
+var i;
+r.d(n, {
     h: function () {
-        return r;
+        return i;
     }
 }),
-    ((i = r || (r = {}))[(i.DESKTOP = 0)] = 'DESKTOP'),
-    (i[(i.MOBILE = 1)] = 'MOBILE');
+    !(function (e) {
+        (e[(e.DESKTOP = 0)] = 'DESKTOP'), (e[(e.MOBILE = 1)] = 'MOBILE');
+    })(i || (i = {}));

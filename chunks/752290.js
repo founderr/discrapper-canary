@@ -1,58 +1,63 @@
-n(47120);
-var r = n(729357),
-    i = n.n(r),
-    a = n(147913),
-    s = n(557177);
-let o = (0, s.tu)('vibing_wumpus', 'vibing_wumpus', 0),
-    l = 0,
-    u = 0,
-    c = null;
-function d(e, t) {
-    let n = Math.round(100 * e),
-        r = Math.round(100 * u),
-        a = Math.round(100 * l);
-    (n > 0 && a >= r) || (n < 0 && a <= r) ? (clearInterval(c), 0 === r && null != t && t()) : ((a += n), (l = a / 100), (o.volume = i()(l, 0, 0.5)));
+var i = r(47120);
+var a = r(729357),
+    s = r.n(a),
+    o = r(147913),
+    l = r(557177);
+function u(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
 }
-function f(e) {
-    null != c && clearInterval(c), (u = 0);
-    let t = m();
-    c = setInterval(() => {
-        d(t, e);
-    }, 100);
+let c = 100,
+    d = 0.5,
+    f = 500,
+    _ = (0, l.tu)('vibing_wumpus', 'vibing_wumpus', 0),
+    h = 0,
+    p = 0,
+    m = null;
+function g(e, n) {
+    let r = Math.round(100 * e),
+        i = Math.round(100 * p),
+        a = Math.round(100 * h);
+    (r > 0 && a >= i) || (r < 0 && a <= i) ? (clearInterval(m), 0 === i && null != n && n()) : ((a += r), (h = a / 100), (_.volume = s()(h, 0, d)));
 }
-function _() {
-    null != c && clearInterval(c), o.loop(), (u = 0.5);
-    let e = m();
-    c = setInterval(() => d(e), 100);
+function E(e) {
+    null != m && clearInterval(m), (p = 0);
+    let n = b();
+    m = setInterval(() => {
+        g(n, e);
+    }, c);
 }
-function p() {
-    f(o.pause.bind(o));
+function v() {
+    null != m && clearInterval(m), _.loop(), (p = d);
+    let e = b();
+    m = setInterval(() => g(e), c);
 }
-function h() {
-    f(o.stop.bind(o));
+function I() {
+    E(_.pause.bind(_));
 }
-function m() {
-    return 0.2 * (u - l);
+function T() {
+    E(_.stop.bind(_));
 }
-class g extends a.Z {
+function b() {
+    return (c / f) * (p - h);
+}
+class y extends o.Z {
     constructor(...e) {
-        var t, n, r;
         super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = {
-                VIBING_WUMPUS_PLAY_MUSIC: _,
-                VIBING_WUMPUS_STOP_MUSIC: h,
-                VIBING_WUMPUS_PAUSE_MUSIC: p
-            }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+            u(this, 'actions', {
+                VIBING_WUMPUS_PLAY_MUSIC: v,
+                VIBING_WUMPUS_STOP_MUSIC: T,
+                VIBING_WUMPUS_PAUSE_MUSIC: I
+            });
     }
 }
-t.Z = new g();
+n.Z = new y();

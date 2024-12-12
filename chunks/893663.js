@@ -1,4 +1,4 @@
-n.d(t, {
+r.d(n, {
     k9: function () {
         return u;
     },
@@ -9,31 +9,32 @@ n.d(t, {
         return i;
     }
 });
-var r,
-    i,
-    a = n(442837),
-    s = n(581883),
-    o = n(710111);
+var i,
+    a = r(442837),
+    s = r(581883),
+    o = r(710111);
 function l(e) {
     return (0, a.e7)([s.Z], () => {
-        var t, n;
-        return c(e, null !== (n = null === (t = s.Z.settings.guilds) || void 0 === t ? void 0 : t.guilds) && void 0 !== n ? n : {});
+        var n, r;
+        return c(e, null !== (r = null === (n = s.Z.settings.guilds) || void 0 === n ? void 0 : n.guilds) && void 0 !== r ? r : {});
     });
 }
 function u(e) {
-    var t, n;
-    return c(e, null !== (n = null === (t = s.Z.settings.guilds) || void 0 === t ? void 0 : t.guilds) && void 0 !== n ? n : {});
-}
-function c(e, t) {
     var n, r;
-    let i = null === (n = t[e]) || void 0 === n ? void 0 : n.joinSound,
-        a = null === (r = t[o.hY]) || void 0 === r ? void 0 : r.joinSound,
-        s = null != i ? i : a;
-    return null != s
+    return c(e, null !== (r = null === (n = s.Z.settings.guilds) || void 0 === n ? void 0 : n.guilds) && void 0 !== r ? r : {});
+}
+function c(e, n) {
+    var r, i;
+    let a = null === (r = n[e]) || void 0 === r ? void 0 : r.joinSound,
+        s = null === (i = n[o.hY]) || void 0 === i ? void 0 : i.joinSound,
+        l = null != a ? a : s;
+    return null != l
         ? {
-              ...s,
-              type: null != i ? 1 : 0
+              ...l,
+              type: null != a ? 1 : 0
           }
         : void 0;
 }
-((r = i || (i = {}))[(r.GLOBAL = 0)] = 'GLOBAL'), (r[(r.GUILD = 1)] = 'GUILD');
+!(function (e) {
+    (e[(e.GLOBAL = 0)] = 'GLOBAL'), (e[(e.GUILD = 1)] = 'GUILD');
+})(i || (i = {}));

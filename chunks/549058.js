@@ -1,4 +1,4 @@
-n.d(t, {
+r.d(n, {
     J7: function () {
         return c;
     },
@@ -15,12 +15,13 @@ n.d(t, {
         return u;
     }
 });
-var r,
-    i,
-    a = n(70956);
+var i,
+    a = r(70956);
 let s = 4,
     o = 5,
     l = 350,
     u = a.Z.Millis.MINUTE,
     c = 2 * a.Z.Millis.MINUTE;
-(r = i || (i = {}))[(r.STICKER = 0)] = 'STICKER';
+!(function (e) {
+    e[(e.STICKER = 0)] = 'STICKER';
+})(i || (i = {}));

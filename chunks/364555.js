@@ -1,11 +1,12 @@
-var r = n(887913);
-t.Z = function (e, t, n) {
-    '__proto__' == t && r.Z
-        ? (0, r.Z)(e, t, {
+var i = r(887913);
+function a(e, n, r) {
+    '__proto__' == n && i.Z
+        ? (0, i.Z)(e, n, {
               configurable: !0,
               enumerable: !0,
-              value: n,
+              value: r,
               writable: !0
           })
-        : (e[t] = n);
-};
+        : (e[n] = r);
+}
+n.Z = a;

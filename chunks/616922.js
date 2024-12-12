@@ -1,50 +1,53 @@
-n.d(t, {
+r.d(n, {
     C7: function () {
-        return g;
+        return m;
     },
     Hw: function () {
-        return a;
+        return i;
     },
     M5: function () {
-        return c;
+        return u;
     },
     Ps: function () {
-        return _;
-    },
-    SD: function () {
-        return p;
-    },
-    ai: function () {
         return f;
     },
+    SD: function () {
+        return _;
+    },
+    ai: function () {
+        return d;
+    },
     c8: function () {
-        return E;
+        return g;
     },
     kG: function () {
-        return s;
+        return a;
     },
     lS: function () {
-        return d;
+        return c;
     }
 });
-var r,
-    i,
+var i,
     a,
-    s,
-    o = n(726542),
-    l = n(358085),
-    u = n(981631);
-let c = 'spotify',
-    d = 'spotify:',
-    f = o.Z.get(u.ABu.SPOTIFY).name;
-function _(e) {
-    return null != e && e.startsWith(d);
+    s = r(726542),
+    o = r(358085),
+    l = r(981631);
+let u = 'spotify',
+    c = 'spotify:',
+    d = s.Z.get(l.ABu.SPOTIFY).name;
+function f(e) {
+    return null != e && e.startsWith(c);
 }
-((r = a || (a = {})).TRACK = 'track'), (r.ARTIST = 'artist'), (r.ALBUM = 'album'), (r.PLAYLIST = 'playlist'), (r.EPISODE = 'episode'), (r.SHOW = 'show'), ((i = s || (s = {})).USER_ACTIVITY_PLAY = 'user_activity_play'), (i.USER_ACTIVITY_SYNC = 'user_activity_sync'), (i.EMBED_SYNC = 'embed_sync');
-let p = ['open.spotify.com', 'www.spotify.com'],
+!(function (e) {
+    (e.TRACK = 'track'), (e.ARTIST = 'artist'), (e.ALBUM = 'album'), (e.PLAYLIST = 'playlist'), (e.EPISODE = 'episode'), (e.SHOW = 'show');
+})(i || (i = {})),
+    !(function (e) {
+        (e.USER_ACTIVITY_PLAY = 'user_activity_play'), (e.USER_ACTIVITY_SYNC = 'user_activity_sync'), (e.EMBED_SYNC = 'embed_sync');
+    })(a || (a = {}));
+let _ = ['open.spotify.com', 'www.spotify.com'],
     h = 'https://api.spotify.com/v1',
-    m = (e) => '?utm_source=discord&utm_medium='.concat(e),
-    g = Object.freeze({
+    p = (e) => '?utm_source=discord&utm_medium='.concat(e),
+    m = Object.freeze({
         PROFILE: ''.concat(h, '/me'),
         NOTIFICATIONS_PLAYER: ''.concat(h, '/me/notifications/player'),
         PLAYER: ''.concat(h, '/me/player'),
@@ -52,29 +55,29 @@ let p = ['open.spotify.com', 'www.spotify.com'],
         PLAYER_PLAY: ''.concat(h, '/me/player/play'),
         PLAYER_PAUSE: ''.concat(h, '/me/player/pause'),
         PLAYER_REPEAT: ''.concat(h, '/me/player/repeat'),
-        WEB_OPEN: function (e, t) {
-            let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'desktop';
-            return 'https://open.spotify.com/'.concat(encodeURIComponent(e), '/').concat(encodeURIComponent(t)).concat(m(n));
+        WEB_OPEN: function (e, n) {
+            let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'desktop';
+            return 'https://open.spotify.com/'.concat(encodeURIComponent(e), '/').concat(encodeURIComponent(n)).concat(p(r));
         },
         EMBED: function (e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'desktop';
-            return 'https://open.spotify.com/embed'.concat(e).concat(m(t));
+            let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'desktop';
+            return 'https://open.spotify.com/embed'.concat(e).concat(p(n));
         },
-        PLAYER_OPEN: function (e, t) {
-            let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-                r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 'desktop';
+        PLAYER_OPEN: function (e, n) {
+            let r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+                i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 'desktop';
             return ''
-                .concat(c, ':')
+                .concat(u, ':')
                 .concat(encodeURIComponent(e), ':')
-                .concat(encodeURIComponent(t))
-                .concat(n ? m(r) : '');
+                .concat(encodeURIComponent(n))
+                .concat(r ? p(i) : '');
         },
-        PREMIUM_SITE: 'https://www.spotify.com/premium/'.concat(m('desktop')),
+        PREMIUM_SITE: 'https://www.spotify.com/premium/'.concat(p('desktop')),
         INSTALL_ATTRIBUTION: (e) => 'https://app.adjust.com/bdyga9?campaign='.concat(e),
-        APP_STORE: (0, l.isAndroid)() ? 'https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US' : 'https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8',
+        APP_STORE: (0, o.isAndroid)() ? 'https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US' : 'https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8',
         IOS_APP_STORE: 'https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8'
     });
-function E(e) {
+function g(e) {
     if ('string' != typeof e) return null;
     switch (e) {
         case 'track':

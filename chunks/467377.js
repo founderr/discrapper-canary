@@ -1,12 +1,12 @@
-e.exports = function (e) {
-    let t = e.regex,
-        n = {
+function n(e) {
+    let n = e.regex,
+        r = {
             className: 'number',
             relevance: 0,
             variants: [{ begin: /([+-]+)?[\d]+_[\d_]+/ }, { begin: e.NUMBER_RE }]
         },
-        r = e.COMMENT();
-    r.variants = [
+        i = e.COMMENT();
+    i.variants = [
         {
             begin: /;/,
             end: /$/
@@ -16,15 +16,15 @@ e.exports = function (e) {
             end: /$/
         }
     ];
-    let i = {
+    let a = {
             className: 'variable',
             variants: [{ begin: /\$[\w\d"][\w\d_]*/ }, { begin: /\$\{(.*?)\}/ }]
         },
-        a = {
+        s = {
             className: 'literal',
             begin: /\bon|off|true|false|yes|no\b/
         },
-        s = {
+        o = {
             className: 'string',
             contains: [e.BACKSLASH_ESCAPE],
             variants: [
@@ -48,39 +48,37 @@ e.exports = function (e) {
                 }
             ]
         },
-        o = t.either(/[A-Za-z0-9_-]+/, /"(\\"|[^"])*"/, /'[^']*'/);
+        l = {
+            begin: /\[/,
+            end: /\]/,
+            contains: [i, s, a, o, r, 'self'],
+            relevance: 0
+        },
+        u = /[A-Za-z0-9_-]+/,
+        c = /"(\\"|[^"])*"/,
+        d = /'[^']*'/,
+        f = n.either(u, c, d);
     return {
         name: 'TOML, also INI',
         aliases: ['toml'],
         case_insensitive: !0,
         illegal: /\S/,
         contains: [
-            r,
+            i,
             {
                 className: 'section',
                 begin: /\[+/,
                 end: /\]+/
             },
             {
-                begin: t.concat(o, '(\\s*\\.\\s*', o, ')*', t.lookahead(/\s*=\s*[^#\s]/)),
+                begin: n.concat(f, '(\\s*\\.\\s*', f, ')*', n.lookahead(/\s*=\s*[^#\s]/)),
                 className: 'attr',
                 starts: {
                     end: /$/,
-                    contains: [
-                        r,
-                        {
-                            begin: /\[/,
-                            end: /\]/,
-                            contains: [r, a, i, s, n, 'self'],
-                            relevance: 0
-                        },
-                        a,
-                        i,
-                        s,
-                        n
-                    ]
+                    contains: [i, l, s, a, o, r]
                 }
             }
         ]
     };
-};
+}
+e.exports = n;

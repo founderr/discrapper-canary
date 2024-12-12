@@ -1,8 +1,7 @@
-var r = n(718043).default,
-    i = n(682595);
-(e.exports = function (e) {
-    var t = i(e, 'string');
-    return 'symbol' == r(t) ? t : t + '';
-}),
-    (e.exports.__esModule = !0),
-    (e.exports.default = e.exports);
+var i = r(718043).default,
+    a = r(682595);
+function s(e) {
+    var n = a(e, 'string');
+    return 'symbol' == i(n) ? n : n + '';
+}
+(e.exports = s), (e.exports.__esModule = !0), (e.exports.default = e.exports);

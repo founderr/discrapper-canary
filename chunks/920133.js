@@ -1,4 +1,4 @@
-n.d(t, {
+r.d(n, {
     L: function () {
         return o;
     },
@@ -6,14 +6,15 @@ n.d(t, {
         return i;
     }
 });
-var r,
-    i,
-    a = n(626135),
-    s = n(981631);
-function o(e, t) {
+var i,
+    a = r(626135),
+    s = r(981631);
+function o(e, n) {
     a.default.track(s.rMx.DM_SETTINGS_UPSELL_ACTION, {
         action: e,
-        guild_id: t
+        guild_id: n
     });
 }
-((r = i || (i = {})).MODAL_VIEWED = 'modal_viewed'), (r.MODAL_DISMISSED = 'modal_dismissed'), (r.MODAL_GUILD_SETTINGS_CLICKED = 'modal_guild_settings_clicked'), (r.SUPPRESSED_BY_COOLDOWN = 'suppressed_by_cooldown'), (r.MODAL_DISABLED_DMS = 'modal_disabled_dms');
+!(function (e) {
+    (e.MODAL_VIEWED = 'modal_viewed'), (e.MODAL_DISMISSED = 'modal_dismissed'), (e.MODAL_GUILD_SETTINGS_CLICKED = 'modal_guild_settings_clicked'), (e.SUPPRESSED_BY_COOLDOWN = 'suppressed_by_cooldown'), (e.MODAL_DISABLED_DMS = 'modal_disabled_dms');
+})(i || (i = {}));

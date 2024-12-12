@@ -1,2 +1,2 @@
-var r = n(150924);
-t.Z = r.default;
+var i = r(150924);
+n.Z = i.default;

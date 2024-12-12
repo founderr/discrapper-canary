@@ -1,62 +1,82 @@
-n.d(t, {
+r.d(n, {
     Av: function () {
-        return _;
+        return v;
     },
     gP: function () {
-        return u;
+        return p;
     }
 });
-var r = n(192379);
-let i = {
+var i = r(192379);
+let a = {
         prefix: String(Math.round(10000000000 * Math.random())),
         current: 0
     },
-    a = r.createContext(i),
-    s = r.createContext(!1),
-    o = !!('undefined' != typeof window && window.document && window.document.createElement),
-    l = new WeakMap(),
-    u =
-        'function' == typeof r.useId
-            ? function (e) {
-                  let t = r.useId(),
-                      [n] = (0, r.useState)(_()),
-                      a = n ? 'react-aria' : `react-aria${i.prefix}`;
-                  return e || `${a}-${t}`;
-              }
-            : function (e) {
-                  let t = (0, r.useContext)(a);
-                  t === i && !o && console.warn('When server rendering, you must wrap your application in an <SSRProvider> to ensure consistent ids are generated between the client and server.');
-                  let n = (function (e = !1) {
-                          let t = (0, r.useContext)(a),
-                              n = (0, r.useRef)(null);
-                          if (null === n.current && !e) {
-                              var i, s;
-                              let e = null === (s = r.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED) || void 0 === s ? void 0 : null === (i = s.ReactCurrentOwner) || void 0 === i ? void 0 : i.current;
-                              if (e) {
-                                  let n = l.get(e);
-                                  null == n
-                                      ? l.set(e, {
-                                            id: t.current,
-                                            state: e.memoizedState
-                                        })
-                                      : e.memoizedState !== n.state && ((t.current = n.id), l.delete(e));
-                              }
-                              n.current = ++t.current;
-                          }
-                          return n.current;
-                      })(!!e),
-                      s = `react-aria${t.prefix}`;
-                  return e || `${s}-${n}`;
-              };
-function c() {
+    s = i.createContext(a),
+    o = i.createContext(!1);
+function l(e) {
+    let n = $73SJx$useContext(s),
+        r = f(n === a),
+        [i, l] = $73SJx$useState(!0),
+        u = $73SJx$useMemo(
+            () => ({
+                prefix: n === a ? '' : `${n.prefix}-${r}`,
+                current: 0
+            }),
+            [n, r]
+        );
+    return (
+        'undefined' != typeof document &&
+            $73SJx$useLayoutEffect(() => {
+                l(!1);
+            }, []),
+        $73SJx$react.createElement(s.Provider, { value: u }, $73SJx$react.createElement(o.Provider, { value: i }, e.children))
+    );
+}
+let u = !1,
+    c = !!('undefined' != typeof window && window.document && window.document.createElement),
+    d = new WeakMap();
+function f(e = !1) {
+    let n = (0, i.useContext)(s),
+        r = (0, i.useRef)(null);
+    if (null === r.current && !e) {
+        var a, o;
+        let e = null === (o = i.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED) || void 0 === o ? void 0 : null === (a = o.ReactCurrentOwner) || void 0 === a ? void 0 : a.current;
+        if (e) {
+            let r = d.get(e);
+            null == r
+                ? d.set(e, {
+                      id: n.current,
+                      state: e.memoizedState
+                  })
+                : e.memoizedState !== r.state && ((n.current = r.id), d.delete(e));
+        }
+        r.current = ++n.current;
+    }
+    return r.current;
+}
+function _(e) {
+    let n = (0, i.useContext)(s);
+    n === a && !c && console.warn('When server rendering, you must wrap your application in an <SSRProvider> to ensure consistent ids are generated between the client and server.');
+    let r = f(!!e),
+        o = `react-aria${n.prefix}`;
+    return e || `${o}-${r}`;
+}
+function h(e) {
+    let n = i.useId(),
+        [r] = (0, i.useState)(v()),
+        s = r ? 'react-aria' : `react-aria${a.prefix}`;
+    return e || `${s}-${n}`;
+}
+let p = 'function' == typeof i.useId ? h : _;
+function m() {
     return !1;
 }
-function d() {
+function g() {
     return !0;
 }
-function f(e) {
+function E(e) {
     return () => {};
 }
-function _() {
-    return 'function' == typeof r.useSyncExternalStore ? r.useSyncExternalStore(f, c, d) : (0, r.useContext)(s);
+function v() {
+    return 'function' == typeof i.useSyncExternalStore ? i.useSyncExternalStore(E, m, g) : (0, i.useContext)(o);
 }

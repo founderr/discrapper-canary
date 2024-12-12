@@ -1,69 +1,71 @@
-n(47120);
-var r = n(442837),
-    i = n(570140),
-    a = n(699516),
-    s = n(979651),
-    o = n(414509),
-    l = n(807031);
-let u = {},
-    c = {},
-    d = new Set();
-function f() {
-    (u = {}), (c = {});
+var i = r(47120);
+var a = r(442837),
+    s = r(570140),
+    o = r(699516),
+    l = r(979651),
+    u = r(414509),
+    c = r(807031);
+let d = {},
+    f = {},
+    _ = new Set();
+function h() {
+    (d = {}), (f = {});
 }
-function _(e) {
-    let { relationship: t } = e,
-        n = s.Z.getVoiceStateForUser(t.id);
-    return null != n && null != n.channelId && p(n.channelId, t.id);
+function p() {
+    h();
+    let e = l.Z.getAllVoiceStates(),
+        n = !1;
+    for (let r of Object.values(e)) for (let e of Object.values(r)) null != e.channelId && (n = E(e.channelId, e.userId) || n);
+    return n;
 }
-function p(e, t) {
-    let n = !1,
-        r = !1,
-        i = new Set(u[e]),
-        s = a.Z.isBlocked(t);
-    s && !i.has(t) ? (i.add(t), (r = !0), (n = !0)) : !s && (n = i.delete(t)), 0 === i.size && n ? delete u[e] : n && (u[e] = i);
-    let l = new Set(c[e]),
-        d = a.Z.isIgnored(t);
-    return d && !l.has(t) ? (l.add(t), (r = !0), (n = !0)) : !d && (n = l.delete(t)), 0 === l.size && n ? delete c[e] : n && (c[e] = l), r && o.Z.handleBlockedOrIgnoredUserVoiceChannelJoin(e, t), n;
+function m(e) {
+    let { relationship: n } = e,
+        r = l.Z.getVoiceStateForUser(n.id);
+    return null != r && null != r.channelId && E(r.channelId, n.id);
 }
-class h extends r.ZP.Store {
+function g(e) {
+    let { voiceStates: n } = e,
+        r = !1;
+    return (
+        n.forEach((e) => {
+            if (null != e.oldChannelId) {
+                var n, i;
+                null != d[e.oldChannelId] && (null === (n = d[e.oldChannelId]) || void 0 === n || n.delete(e.userId), (r = !0)), null != f[e.oldChannelId] && (null === (i = f[e.oldChannelId]) || void 0 === i || i.delete(e.userId), (r = !0));
+            }
+            null != e.channelId && (r = E(e.channelId, e.userId) || r);
+        }),
+        r
+    );
+}
+function E(e, n) {
+    let r = !1,
+        i = !1,
+        a = new Set(d[e]),
+        s = o.Z.isBlocked(n);
+    s && !a.has(n) ? (a.add(n), (i = !0), (r = !0)) : !s && (r = a.delete(n)), 0 === a.size && r ? delete d[e] : r && (d[e] = a);
+    let l = new Set(f[e]),
+        c = o.Z.isIgnored(n);
+    return c && !l.has(n) ? (l.add(n), (i = !0), (r = !0)) : !c && (r = l.delete(n)), 0 === l.size && r ? delete f[e] : r && (f[e] = l), i && u.Z.handleBlockedOrIgnoredUserVoiceChannelJoin(e, n), r;
+}
+class v extends a.ZP.Store {
     initialize() {
-        this.waitFor(a.Z, s.Z);
+        this.waitFor(o.Z, l.Z);
     }
     getBlockedUsersForVoiceChannel(e) {
-        var t;
-        return (0, l.wC)({ location: 'VoiceChannelBlockedUserStore_getBlockedUsersForVoiceChannel' }) ? (null !== (t = u[e]) && void 0 !== t ? t : d) : d;
+        var n;
+        return (0, c.wC)({ location: 'VoiceChannelBlockedUserStore_getBlockedUsersForVoiceChannel' }) ? (null !== (n = d[e]) && void 0 !== n ? n : _) : _;
     }
     getIgnoredUsersForVoiceChannel(e) {
-        var t;
-        return (0, l.wC)({ location: 'VoiceChannelBlockedUserStore_getIgnoredUsersForVoiceChannel' }) ? (null !== (t = c[e]) && void 0 !== t ? t : d) : d;
+        var n;
+        return (0, c.wC)({ location: 'VoiceChannelBlockedUserStore_getIgnoredUsersForVoiceChannel' }) ? (null !== (n = f[e]) && void 0 !== n ? n : _) : _;
     }
 }
-t.Z = new h(i.Z, {
-    CONNECTION_OPEN: f,
-    LOGOUT: f,
-    OVERLAY_INITIALIZE: function () {
-        f();
-        let e = s.Z.getAllVoiceStates(),
-            t = !1;
-        for (let n of Object.values(e)) for (let e of Object.values(n)) null != e.channelId && (t = p(e.channelId, e.userId) || t);
-        return t;
-    },
-    VOICE_STATE_UPDATES: function (e) {
-        let { voiceStates: t } = e,
-            n = !1;
-        return (
-            t.forEach((e) => {
-                if (null != e.oldChannelId) {
-                    var t, r;
-                    null != u[e.oldChannelId] && (null === (t = u[e.oldChannelId]) || void 0 === t || t.delete(e.userId), (n = !0)), null != c[e.oldChannelId] && (null === (r = c[e.oldChannelId]) || void 0 === r || r.delete(e.userId), (n = !0));
-                }
-                null != e.channelId && (n = p(e.channelId, e.userId) || n);
-            }),
-            n
-        );
-    },
-    RELATIONSHIP_ADD: _,
-    RELATIONSHIP_REMOVE: _,
-    RELATIONSHIP_UPDATE: _
+n.Z = new v(s.Z, {
+    CONNECTION_OPEN: h,
+    LOGOUT: h,
+    OVERLAY_INITIALIZE: p,
+    VOICE_STATE_UPDATES: g,
+    RELATIONSHIP_ADD: m,
+    RELATIONSHIP_REMOVE: m,
+    RELATIONSHIP_UPDATE: m
 });

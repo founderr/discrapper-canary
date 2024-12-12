@@ -1,25 +1,26 @@
-n.d(t, {
+r.d(n, {
     D: function () {
-        return o;
+        return l;
     }
-}),
-    n(411104);
-var r,
-    i,
-    a = n(358085),
-    s = n(981631);
-function o() {
-    switch ((0, a.getPlatform)()) {
-        case a.PlatformTypes.WINDOWS:
+});
+var i,
+    a = r(411104);
+var s = r(358085),
+    o = r(981631);
+function l() {
+    switch ((0, s.getPlatform)()) {
+        case s.PlatformTypes.WINDOWS:
             let e = 'x86';
-            if ((null != window.DiscordNative && (e = window.DiscordNative.os.arch), 'x86' === e || 'ia32' === e)) return s.QR$.WIN32;
-            return s.QR$.WIN64;
-        case a.PlatformTypes.OSX:
-            return s.QR$.MACOS;
-        case a.PlatformTypes.LINUX:
-            return s.QR$.LINUX;
+            if ((null != window.DiscordNative && (e = window.DiscordNative.os.arch), 'x86' === e || 'ia32' === e)) return o.QR$.WIN32;
+            return o.QR$.WIN64;
+        case s.PlatformTypes.OSX:
+            return o.QR$.MACOS;
+        case s.PlatformTypes.LINUX:
+            return o.QR$.LINUX;
         default:
             throw Error('Unsupported build type');
     }
 }
-((i = r || (r = {})).X86 = 'x86'), (i.IA32 = 'ia32');
+!(function (e) {
+    (e.X86 = 'x86'), (e.IA32 = 'ia32');
+})(i || (i = {}));

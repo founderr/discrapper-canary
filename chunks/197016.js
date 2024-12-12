@@ -1,30 +1,32 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return l;
+        return u;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(685072),
-    a = n(287734),
-    s = n(871499),
-    o = n(388032);
-function l(e) {
-    let { centerButton: t = !1, onClick: n, onMouseEnter: l, onMouseLeave: u, ...c } = e,
-        d = t ? s.d : s.Z,
-        { Component: f, events: _ } = (0, i.K)();
-    return (0, r.jsx)(d, {
-        ...c,
-        onClick: () => {
-            a.default.disconnect(), null == n || n();
+var i = r(200651);
+r(192379);
+var a = r(685072),
+    s = r(287734),
+    o = r(871499),
+    l = r(388032);
+function u(e) {
+    let { centerButton: n = !1, onClick: r, onMouseEnter: u, onMouseLeave: c, ...d } = e,
+        f = n ? o.d : o.Z,
+        _ = () => {
+            s.default.disconnect(), null == r || r();
         },
-        iconComponent: f,
+        h = () => l.intl.string(l.t['6vrfgo']),
+        { Component: p, events: m } = (0, a.K)();
+    return (0, i.jsx)(f, {
+        ...d,
+        onClick: _,
+        iconComponent: p,
         onMouseEnter: (e) => {
-            null == l || l(e), _.onMouseEnter();
+            null == u || u(e), m.onMouseEnter();
         },
         onMouseLeave: (e) => {
-            null == u || u(e), _.onMouseLeave();
+            null == c || c(e), m.onMouseLeave();
         },
-        label: o.intl.string(o.t['6vrfgo'])
+        label: h()
     });
 }

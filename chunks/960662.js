@@ -1,11 +1,10 @@
-var r, i;
-n.d(t, {
+var i;
+r.d(n, {
     I: function () {
         return a;
     }
 }),
-    ((i = r || (r = {})).SELECT_INSTALL_TYPE = 'SELECT_INSTALL_TYPE'),
-    (i.AUTHORIZE_SCOPES = 'AUTHORIZE_SCOPES'),
-    (i.AUTHORIZE_BOT_PERMISSIONS = 'AUTHORIZE_BOT_PERMISSIONS'),
-    (i.AUTHORIZE_MFA = 'AUTHORIZE_MFA');
+    !(function (e) {
+        (e.SELECT_INSTALL_TYPE = 'SELECT_INSTALL_TYPE'), (e.AUTHORIZE_SCOPES = 'AUTHORIZE_SCOPES'), (e.AUTHORIZE_BOT_PERMISSIONS = 'AUTHORIZE_BOT_PERMISSIONS'), (e.AUTHORIZE_MFA = 'AUTHORIZE_MFA');
+    })(i || (i = {}));
 let a = '1f447';

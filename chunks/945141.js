@@ -1,35 +1,36 @@
-n(47120);
-var r = n(433517),
-    i = n(147913);
-let a = 'formGuidelinesStorageKey';
-class s extends i.Z {
+var i = r(47120);
+var a = r(433517),
+    s = r(147913);
+function o(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let l = 'formGuidelinesStorageKey';
+class u extends s.Z {
     _initialize() {
-        let e = r.K.get(a);
+        let e = a.K.get(l);
         null != e && (this.seenForumGuidelines = new Set(e));
     }
     _terminate() {
-        r.K.set(a, this.seenForumGuidelines);
+        a.K.set(l, this.seenForumGuidelines);
     }
     markAsSeen(e) {
-        this.seenForumGuidelines.add(e), r.K.set(a, this.seenForumGuidelines);
+        this.seenForumGuidelines.add(e), a.K.set(l, this.seenForumGuidelines);
     }
     hasSeen(e) {
         return this.seenForumGuidelines.has(e);
     }
     constructor(...e) {
-        var t, n, r;
-        super(...e),
-            (t = this),
-            (n = 'seenForumGuidelines'),
-            (r = new Set()),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+        super(...e), o(this, 'seenForumGuidelines', new Set());
     }
 }
-t.Z = new s();
+n.Z = new u();

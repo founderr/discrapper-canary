@@ -1,45 +1,46 @@
-n.d(t, {
+r.d(n, {
     _: function () {
-        return a;
+        return l;
     }
 });
-var r = n(608297);
-function i(e, t) {
-    for (var n = 0; n < t.length; n++) {
-        var r = t[n];
-        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+var i = r(608297);
+function a(e, n) {
+    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+}
+function s(e, n) {
+    for (var r = 0; r < n.length; r++) {
+        var i = n[r];
+        (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
     }
 }
-var a = (function () {
-    var e, t, n;
-    function a() {
-        !(function (e, t) {
-            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-        })(this, a);
+function o(e, n, r) {
+    return n && s(e.prototype, n), r && s(e, r), e;
+}
+var l = (function () {
+    function e() {
+        a(this, e);
     }
     return (
-        (e = a),
-        (t = [
+        o(e, [
             {
                 key: 'run',
-                value: function (e, t, n, i) {
-                    var a = this.parse(e, t, n, i);
-                    return a
+                value: function (e, n, r, a) {
+                    var s = this.parse(e, n, r, a);
+                    return s
                         ? {
-                              setter: new r.gr(a.value, this.validate, this.set, this.priority, this.subPriority),
-                              rest: a.rest
+                              setter: new i.gr(s.value, this.validate, this.set, this.priority, this.subPriority),
+                              rest: s.rest
                           }
                         : null;
                 }
             },
             {
                 key: 'validate',
-                value: function (e, t, n) {
+                value: function (e, n, r) {
                     return !0;
                 }
             }
         ]),
-        i(e.prototype, t),
-        a
+        e
     );
 })();

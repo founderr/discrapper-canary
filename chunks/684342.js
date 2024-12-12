@@ -1,24 +1,28 @@
-n.d(t, {
+r.d(n, {
     p: function () {
-        return c;
+        return _;
     },
     t: function () {
-        return d;
+        return h;
     }
 });
-var r = n(468343),
-    i = n(559972),
-    a = n(789741),
-    s = 0,
-    o = {
+var i = r(468343),
+    a = r(559972),
+    s = r(789741),
+    o = 0,
+    l = function () {
+        return !!o;
+    },
+    u = 12,
+    c = {
         attributes: !0,
         characterData: !0,
         childList: !0,
         subtree: !0
     },
-    l = ['resize', 'load', 'transitionend', 'animationend', 'animationstart', 'animationiteration', 'keyup', 'keydown', 'mouseup', 'mousedown', 'mouseover', 'mouseout', 'blur', 'focus'],
-    u = !1,
-    c = new ((function () {
+    d = ['resize', 'load', 'transitionend', 'animationend', 'animationstart', 'animationiteration', 'keyup', 'keydown', 'mouseup', 'mousedown', 'mouseover', 'mouseout', 'blur', 'focus'],
+    f = !1,
+    _ = new ((function () {
         function e() {
             var e = this;
             (this.stopped = !0),
@@ -28,28 +32,28 @@ var r = n(468343),
         }
         return (
             (e.prototype.run = function (e) {
-                var t = this;
-                if (!u)
-                    (u = !0),
-                        (0, a.p)(function () {
-                            var n = !1;
+                var n = this;
+                if (!f)
+                    (f = !0),
+                        (0, s.p)(function () {
+                            var r = !1;
                             try {
-                                n = (0, r.N)();
+                                r = (0, i.N)();
                             } finally {
-                                if (((u = !1), !s)) return;
-                                n ? t.run(60) : e ? t.run(e - 1) : t.start();
+                                if (((f = !1), !l())) return;
+                                r ? n.run(60) : e ? n.run(e - 1) : n.start();
                             }
                         });
             }),
             (e.prototype.schedule = function () {
-                this.stop(), this.run(12);
+                this.stop(), this.run(u);
             }),
             (e.prototype.observe = function () {
                 var e = this,
-                    t = function () {
-                        return e.observer && e.observer.observe(document.body, o);
+                    n = function () {
+                        return e.observer && e.observer.observe(document.body, c);
                     };
-                document.body ? t() : i.C.addEventListener('DOMContentLoaded', t);
+                document.body ? n() : a.C.addEventListener('DOMContentLoaded', n);
             }),
             (e.prototype.start = function () {
                 var e = this;
@@ -57,22 +61,22 @@ var r = n(468343),
                     ((this.stopped = !1),
                     (this.observer = new MutationObserver(this.listener)),
                     this.observe(),
-                    l.forEach(function (t) {
-                        return i.C.addEventListener(t, e.listener, !0);
+                    d.forEach(function (n) {
+                        return a.C.addEventListener(n, e.listener, !0);
                     }));
             }),
             (e.prototype.stop = function () {
                 var e = this;
                 !this.stopped &&
                     (this.observer && this.observer.disconnect(),
-                    l.forEach(function (t) {
-                        return i.C.removeEventListener(t, e.listener, !0);
+                    d.forEach(function (n) {
+                        return a.C.removeEventListener(n, e.listener, !0);
                     }),
                     (this.stopped = !0));
             }),
             e
         );
     })())(),
-    d = function (e) {
-        !s && e > 0 && c.start(), (s += e) || c.stop();
+    h = function (e) {
+        !o && e > 0 && _.start(), (o += e) || _.stop();
     };

@@ -1,69 +1,71 @@
-n.d(t, {
+r.d(n, {
     g: function () {
-        return u;
+        return f;
     }
-}),
-    n(411104);
-var r = n(626135),
-    i = n(823967),
-    a = n(281058),
-    s = n(761274),
-    o = n(981631),
-    l = n(388032);
-class u {
-    async requestAuthorization(e, t, n) {
-        if ('function' != typeof t) throw Error('requestAuthorization: Was provided with not a function for '.concat(e, '.'));
-        r.default.track(o.rMx.PERMISSIONS_REQUESTED, { type: e });
-        let a = (await t()) === s.NZ.AUTHORIZED,
-            l = a ? s.PQ.ACCEPTED : s.PQ.DENIED;
-        return i.Z.setPermission(e, l), !a && n.showAuthorizationError && this.showAlert(e), a;
+});
+var i = r(411104);
+var a = r(626135),
+    s = r(823967),
+    o = r(281058),
+    l = r(761274),
+    u = r(981631),
+    c = r(388032);
+function d(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+class f {
+    async requestAuthorization(e, n, r) {
+        if ('function' != typeof n) throw Error('requestAuthorization: Was provided with not a function for '.concat(e, '.'));
+        a.default.track(u.rMx.PERMISSIONS_REQUESTED, { type: e });
+        let i = (await n()) === l.NZ.AUTHORIZED,
+            o = i ? l.PQ.ACCEPTED : l.PQ.DENIED;
+        return s.Z.setPermission(e, o), !i && r.showAuthorizationError && this.showAlert(e), i;
     }
-    requestPermission(e, t) {
-        let n = u.defaultNativePermissionsRequestOptions(t);
-        return this.requestPermissionCore(e, n);
+    requestPermission(e, n) {
+        let r = f.defaultNativePermissionsRequestOptions(n);
+        return this.requestPermissionCore(e, r);
     }
-    hasPermission(e, t) {
-        let n = u.defaultNativePermissionsRequestOptions(t);
-        return this.hasPermissionCore(e, n);
+    hasPermission(e, n) {
+        let r = f.defaultNativePermissionsRequestOptions(n);
+        return this.hasPermissionCore(e, r);
     }
     showAlert(e) {
-        let t = {
-            [s.Eu.CAMERA]: ''.concat(l.intl.string(l.t['68G7fH']), '. ').concat(l.intl.string(l.t['5Jvu1d'])),
-            [s.Eu.AUDIO]: ''.concat(l.intl.string(l.t.xisTfX), '. ').concat(l.intl.string(l.t['5Jvu1d'])),
-            [s.Eu.PHOTOS]: ''.concat(l.intl.string(l.t.jQHU4O), '. ').concat(l.intl.string(l.t['5Jvu1d'])),
-            [s.Eu.INPUT_MONITORING]: ''.concat(l.intl.string(l.t.UIBqsb), '. ').concat(l.intl.string(l.t['5Jvu1d'])),
-            [s.Eu.CONTACTS]: ''.concat(l.intl.string(l.t.kTtf7u), '. ').concat(l.intl.string(l.t['5Jvu1d']))
+        let n = {
+            [l.Eu.CAMERA]: ''.concat(c.intl.string(c.t['68G7fH']), '. ').concat(c.intl.string(c.t['5Jvu1d'])),
+            [l.Eu.AUDIO]: ''.concat(c.intl.string(c.t.xisTfX), '. ').concat(c.intl.string(c.t['5Jvu1d'])),
+            [l.Eu.PHOTOS]: ''.concat(c.intl.string(c.t.jQHU4O), '. ').concat(c.intl.string(c.t['5Jvu1d'])),
+            [l.Eu.INPUT_MONITORING]: ''.concat(c.intl.string(c.t.UIBqsb), '. ').concat(c.intl.string(c.t['5Jvu1d'])),
+            [l.Eu.CONTACTS]: ''.concat(c.intl.string(c.t.kTtf7u), '. ').concat(c.intl.string(c.t['5Jvu1d']))
         }[e];
-        if (null != t)
+        if (null != n)
             this.openAlertModal({
-                title: l.intl.string(l.t.u1Gxpq),
-                body: t,
+                title: c.intl.string(c.t.u1Gxpq),
+                body: n,
                 onConfirm: () => this.openSettings(e),
-                cancelText: l.intl.string(l.t['ETE/oK']),
-                confirmText: l.intl.string(l.t['XgZk+v'])
+                cancelText: c.intl.string(c.t['ETE/oK']),
+                confirmText: c.intl.string(c.t['XgZk+v'])
             });
     }
     static defaultNativePermissionsRequestOptions(e) {
-        let t = { showAuthorizationError: !0 };
+        let n = { showAuthorizationError: !0 };
         return null == e
-            ? t
+            ? n
             : {
-                  ...t,
+                  ...n,
                   ...e
               };
     }
     constructor() {
-        var e, t, n;
-        (e = this),
-            (t = 'storage'),
-            (n = new a.Z()),
-            t in e
-                ? Object.defineProperty(e, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (e[t] = n);
+        d(this, 'storage', new o.Z());
     }
 }

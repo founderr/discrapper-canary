@@ -1,4 +1,4 @@
-n.d(t, {
+r.d(n, {
     J6: function () {
         return o;
     },
@@ -9,10 +9,11 @@ n.d(t, {
         return l;
     }
 });
-var r,
-    i,
-    a = n(55720);
-((r = i || (i = {}))[(r.IMAGE = 0)] = 'IMAGE'), (r[(r.DOCUMENT = 1)] = 'DOCUMENT'), (r[(r.CODE = 2)] = 'CODE');
+var i,
+    a = r(55720);
+!(function (e) {
+    (e[(e.IMAGE = 0)] = 'IMAGE'), (e[(e.DOCUMENT = 1)] = 'DOCUMENT'), (e[(e.CODE = 2)] = 'CODE');
+})(i || (i = {}));
 let s = {
         0: a.image,
         1: a.document,

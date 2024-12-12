@@ -1,138 +1,152 @@
-n(47120), n(789020);
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140),
-    u = n(264229),
-    c = n(981631);
-let d = new Map(),
-    f = new Map(),
-    _ = {};
-function p(e, t) {
-    var n;
+var i,
+    a = r(47120);
+var s = r(789020);
+var o = r(442837),
+    l = r(570140),
+    u = r(264229),
+    c = r(981631);
+function d(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let f = new Map(),
+    _ = new Map(),
+    h = {};
+function p(e, n) {
+    var r;
     e = null != e ? e : '';
-    let r = (0, u.fU)(e),
-        i = d.get(e),
-        a =
-            null != i
+    let i = (0, u.fU)(e),
+        a = f.get(e),
+        s =
+            null != a
                 ? {
                       state: c.r2o.RESOLVING,
-                      ...i
+                      ...a
                   }
                 : {
                       state: c.r2o.RESOLVING,
-                      code: r.baseCode
+                      code: i.baseCode
                   };
-    t(a),
-        (d = new Map(d)).set(e, a),
-        (null === (n = a.guild) || void 0 === n ? void 0 : n.id) != null &&
-            (_ = {
-                ..._,
-                [a.guild.id]: e
+    n(s),
+        (f = new Map(f)).set(e, s),
+        (null === (r = s.guild) || void 0 === r ? void 0 : r.id) != null &&
+            (h = {
+                ...h,
+                [s.guild.id]: e
             });
 }
-function h(e) {
-    return p(e.code, (t) => {
-        t.state = 'banned' in e && e.banned ? c.r2o.BANNED : c.r2o.EXPIRED;
+function m(e) {
+    let { code: n } = e,
+        r = (0, u.fU)(n);
+    (f = new Map(f)).set(n, {
+        code: r.baseCode,
+        state: c.r2o.RESOLVING
     });
 }
-class m extends (r = o.ZP.Store) {
+function g(e) {
+    return p(e.code, (n) => {
+        var r, i;
+        (n.state = c.r2o.RESOLVED), (n.guild = e.invite.guild), (n.channel = e.invite.channel), (n.inviter = e.invite.inviter), (n.approximate_member_count = null !== (r = e.invite.approximate_member_count) && void 0 !== r ? r : null), (n.approximate_presence_count = null !== (i = e.invite.approximate_presence_count) && void 0 !== i ? i : null), (n.target_type = e.invite.target_type), (n.target_user = e.invite.target_user), (n.target_application = e.invite.target_application), (n.expires_at = e.invite.expires_at), (n.stage_instance = e.invite.stage_instance), (n.friends_count = e.invite.friends_count), (n.is_contact = e.invite.is_contact), (n.guild_scheduled_event = e.invite.guild_scheduled_event), (n.type = e.invite.type), (n.flags = e.invite.flags);
+    });
+}
+function E(e) {
+    return p(e.invite.code, (n) => {
+        var r, i;
+        (n.state = c.r2o.RESOLVED), (n.guild = e.invite.guild), (n.channel = e.invite.channel), (n.inviter = e.invite.inviter), (n.approximate_member_count = null !== (r = e.invite.approximate_member_count) && void 0 !== r ? r : null), (n.approximate_presence_count = null !== (i = e.invite.approximate_presence_count) && void 0 !== i ? i : null), (n.target_type = e.invite.target_type), (n.target_user = e.invite.target_user), (n.target_application = e.invite.target_application), (n.stage_instance = e.invite.stage_instance), (n.guild_scheduled_event = e.invite.guild_scheduled_event), (n.type = e.invite.type);
+    });
+}
+function v(e) {
+    return p(e.invite.code, (n) => {
+        (n.state = c.r2o.RESOLVED), (n.inviter = e.invite.inviter);
+    });
+}
+function I(e) {
+    e.invites.forEach((e) =>
+        p(e.code, (e) => {
+            e.state = c.r2o.EXPIRED;
+        })
+    );
+}
+function T(e) {
+    return p(e.code, (n) => {
+        n.state = 'banned' in e && e.banned ? c.r2o.BANNED : c.r2o.EXPIRED;
+    });
+}
+function b(e) {
+    return p(e.code, (e) => {
+        e.state = c.r2o.ACCEPTING;
+    });
+}
+function y(e) {
+    return p(e.code, (n) => {
+        (n.state = c.r2o.ACCEPTED),
+            (n.guild = e.invite.guild),
+            (n.new_member = e.invite.new_member),
+            (n.channel = {
+                ...n.channel,
+                ...e.invite.channel
+            });
+    });
+}
+function S(e) {
+    return (
+        _.set(e.code, e.error),
+        p(e.code, (e) => {
+            e.state = c.r2o.ERROR;
+        })
+    );
+}
+function A(e) {
+    return p(e.code, (e) => {
+        e.state = c.r2o.APP_OPENING;
+    });
+}
+function N(e) {
+    return p(e.code, (e) => {
+        e.state = c.r2o.APP_OPENED;
+    });
+}
+function C(e) {
+    return p(e.code, (e) => {
+        e.state = c.r2o.APP_NOT_OPENED;
+    });
+}
+class R extends (i = o.ZP.Store) {
     getInvite(e) {
-        return d.get(e);
-    }
-    getInviteError(e) {
         return f.get(e);
     }
+    getInviteError(e) {
+        return _.get(e);
+    }
     getInvites() {
-        return d;
+        return f;
     }
     getInviteKeyForGuildId(e) {
-        return _[e];
+        return h[e];
     }
 }
-(s = 'InviteStore'),
-    (a = 'displayName') in (i = m)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new m(l.Z, {
-        INVITE_RESOLVE: function (e) {
-            let { code: t } = e,
-                n = (0, u.fU)(t);
-            (d = new Map(d)).set(t, {
-                code: n.baseCode,
-                state: c.r2o.RESOLVING
-            });
-        },
-        INVITE_RESOLVE_SUCCESS: function (e) {
-            return p(e.code, (t) => {
-                var n, r;
-                (t.state = c.r2o.RESOLVED), (t.guild = e.invite.guild), (t.channel = e.invite.channel), (t.inviter = e.invite.inviter), (t.approximate_member_count = null !== (n = e.invite.approximate_member_count) && void 0 !== n ? n : null), (t.approximate_presence_count = null !== (r = e.invite.approximate_presence_count) && void 0 !== r ? r : null), (t.target_type = e.invite.target_type), (t.target_user = e.invite.target_user), (t.target_application = e.invite.target_application), (t.expires_at = e.invite.expires_at), (t.stage_instance = e.invite.stage_instance), (t.friends_count = e.invite.friends_count), (t.is_contact = e.invite.is_contact), (t.guild_scheduled_event = e.invite.guild_scheduled_event), (t.type = e.invite.type), (t.flags = e.invite.flags);
-            });
-        },
-        INVITE_RESOLVE_FAILURE: h,
-        INSTANT_INVITE_REVOKE_SUCCESS: h,
-        FRIEND_INVITE_CREATE_SUCCESS: function (e) {
-            return p(e.invite.code, (t) => {
-                (t.state = c.r2o.RESOLVED), (t.inviter = e.invite.inviter);
-            });
-        },
-        FRIEND_INVITE_REVOKE_SUCCESS: function (e) {
-            e.invites.forEach((e) =>
-                p(e.code, (e) => {
-                    e.state = c.r2o.EXPIRED;
-                })
-            );
-        },
-        INSTANT_INVITE_CREATE_SUCCESS: function (e) {
-            return p(e.invite.code, (t) => {
-                var n, r;
-                (t.state = c.r2o.RESOLVED), (t.guild = e.invite.guild), (t.channel = e.invite.channel), (t.inviter = e.invite.inviter), (t.approximate_member_count = null !== (n = e.invite.approximate_member_count) && void 0 !== n ? n : null), (t.approximate_presence_count = null !== (r = e.invite.approximate_presence_count) && void 0 !== r ? r : null), (t.target_type = e.invite.target_type), (t.target_user = e.invite.target_user), (t.target_application = e.invite.target_application), (t.stage_instance = e.invite.stage_instance), (t.guild_scheduled_event = e.invite.guild_scheduled_event), (t.type = e.invite.type);
-            });
-        },
-        INVITE_ACCEPT: function (e) {
-            return p(e.code, (e) => {
-                e.state = c.r2o.ACCEPTING;
-            });
-        },
-        INVITE_ACCEPT_SUCCESS: function (e) {
-            return p(e.code, (t) => {
-                (t.state = c.r2o.ACCEPTED),
-                    (t.guild = e.invite.guild),
-                    (t.new_member = e.invite.new_member),
-                    (t.channel = {
-                        ...t.channel,
-                        ...e.invite.channel
-                    });
-            });
-        },
-        INVITE_ACCEPT_FAILURE: function (e) {
-            return (
-                f.set(e.code, e.error),
-                p(e.code, (e) => {
-                    e.state = c.r2o.ERROR;
-                })
-            );
-        },
-        INVITE_APP_OPENING: function (e) {
-            return p(e.code, (e) => {
-                e.state = c.r2o.APP_OPENING;
-            });
-        },
-        INVITE_APP_OPENED: function (e) {
-            return p(e.code, (e) => {
-                e.state = c.r2o.APP_OPENED;
-            });
-        },
-        INVITE_APP_NOT_OPENED: function (e) {
-            return p(e.code, (e) => {
-                e.state = c.r2o.APP_NOT_OPENED;
-            });
-        }
+d(R, 'displayName', 'InviteStore'),
+    (n.Z = new R(l.Z, {
+        INVITE_RESOLVE: m,
+        INVITE_RESOLVE_SUCCESS: g,
+        INVITE_RESOLVE_FAILURE: T,
+        INSTANT_INVITE_REVOKE_SUCCESS: T,
+        FRIEND_INVITE_CREATE_SUCCESS: v,
+        FRIEND_INVITE_REVOKE_SUCCESS: I,
+        INSTANT_INVITE_CREATE_SUCCESS: E,
+        INVITE_ACCEPT: b,
+        INVITE_ACCEPT_SUCCESS: y,
+        INVITE_ACCEPT_FAILURE: S,
+        INVITE_APP_OPENING: A,
+        INVITE_APP_OPENED: N,
+        INVITE_APP_NOT_OPENED: C
     }));

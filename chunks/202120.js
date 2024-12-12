@@ -1,35 +1,37 @@
-n.d(t, {
+r.d(n, {
     H: function () {
-        return o;
+        return l;
     }
 });
-var r = n(457330),
-    i = n(358085),
-    a = n(856651),
-    s = n(981631);
-async function o(e) {
-    let { location: t, twoWayLinkType: n, successRedirect: o, handle: l } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        u = arguments.length > 2 ? arguments[2] : void 0,
-        c = Math.round(screen.width / 2 - 350),
-        d = screen.height > 640 ? Math.round(screen.height / 2 - 320) : 0,
-        f = null;
-    !(0, i.isDesktop)() && (f = window.open(''.concat(window.location.protocol, '//').concat(window.location.host).concat(s.Z5c.CONNECTIONS(e), '?loading=true'), 'authorize', 'scrollbars=yes,resizable=yes,toolbar=no,location=yes,top='.concat(d, ',left=').concat(c, ',width=').concat(700, ',height=').concat(640)));
-    let _ = u;
-    if (null == _ && e !== a.Kt)
+var i = r(457330),
+    a = r(358085),
+    s = r(856651),
+    o = r(981631);
+async function l(e) {
+    let { location: n, twoWayLinkType: r, successRedirect: l, handle: u } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        c = arguments.length > 2 ? arguments[2] : void 0,
+        d = 700,
+        f = 640,
+        _ = Math.round(screen.width / 2 - d / 2),
+        h = screen.height > f ? Math.round(screen.height / 2 - f / 2) : 0,
+        p = null;
+    !(0, a.isDesktop)() && (p = window.open(''.concat(window.location.protocol, '//').concat(window.location.host).concat(o.Z5c.CONNECTIONS(e), '?loading=true'), 'authorize', 'scrollbars=yes,resizable=yes,toolbar=no,location=yes,top='.concat(h, ',left=').concat(_, ',width=').concat(d, ',height=').concat(f)));
+    let m = c;
+    if (null == m && e !== s.Kt)
         try {
-            let { body: i } = await r.Z.authorize(e, {
-                location: t,
-                twoWayLinkType: n,
-                successRedirect: o,
-                handle: l
+            let { body: a } = await i.Z.authorize(e, {
+                location: n,
+                twoWayLinkType: r,
+                successRedirect: l,
+                handle: u
             });
-            _ = i.url;
+            m = a.url;
         } catch (e) {
-            throw (null == f || f.close(), e);
+            throw (null == p || p.close(), e);
         }
-    if (null == _) {
-        null == f || f.close();
+    if (null == m) {
+        null == p || p.close();
         return;
     }
-    return null != f ? (f.location.href = _) : window.open(_), _;
+    return null != p ? (p.location.href = m) : window.open(m), m;
 }

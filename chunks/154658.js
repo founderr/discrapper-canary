@@ -1,91 +1,92 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return g;
+        return v;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(381338),
-    o = n(99815),
-    l = n(442837),
-    u = n(481060),
-    c = n(206295),
-    d = n(594174),
-    f = n(5192),
-    _ = n(528567),
-    p = n(371583),
-    h = n(388032),
-    m = n(828980);
-function g(e) {
-    var t, n, i, g, E;
-    let { guildId: v, leaderboard: I, className: T } = e,
-        b = null == I ? void 0 : null === (t = I.users) || void 0 === t ? void 0 : t[0],
-        { sort_by_statistic_id: S } = I.guild_settings,
-        y = null !== (E = null == b ? void 0 : null === (i = b.statistics) || void 0 === i ? void 0 : null === (n = i[S]) || void 0 === n ? void 0 : n.value) && void 0 !== E ? E : 0,
-        A = h.intl.formatToPlainString(h.t.yhdo8v, {
-            value: y,
-            statisticName: (0, _.C)(S)
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(381338),
+    l = r(99815),
+    u = r(442837),
+    c = r(481060),
+    d = r(206295),
+    f = r(594174),
+    _ = r(5192),
+    h = r(528567),
+    p = r(371583),
+    m = r(388032),
+    g = r(828980);
+function E(e) {
+    switch (e) {
+        case o.q.DAILY:
+            return m.intl.string(m.t.UfbhDA);
+        case o.q.WEEKLY:
+            return m.intl.string(m.t['9x5Nam']);
+        case o.q.MONTHLY:
+            return m.intl.string(m.t.xB2Co6);
+        default:
+            return m.intl.string(m.t['4N67JS']);
+    }
+}
+function v(e) {
+    var n, r, a, o, v;
+    let { guildId: I, leaderboard: T, className: b } = e,
+        y = null == T ? void 0 : null === (n = T.users) || void 0 === n ? void 0 : n[0],
+        { sort_by_statistic_id: S } = T.guild_settings,
+        A = null !== (v = null == y ? void 0 : null === (a = y.statistics) || void 0 === a ? void 0 : null === (r = a[S]) || void 0 === r ? void 0 : r.value) && void 0 !== v ? v : 0,
+        N = m.intl.formatToPlainString(m.t.yhdo8v, {
+            value: A,
+            statisticName: (0, h.C)(S)
         }),
-        N = null == b ? void 0 : null === (g = b.statistics[o.E.LOL_MOST_PLAYED_CHAMPION_ID]) || void 0 === g ? void 0 : g.value,
-        C = (0, p.I)(N),
-        { primaryColor: R, secondaryColor: O } = (0, c.Z)(''.concat(C, '?forColors')),
-        D = (0, l.e7)([d.default], () => d.default.getUser(null == b ? void 0 : b.user_id));
-    if (null == D) return null;
-    let L = f.ZP.getName(v, void 0, D);
-    return (0, r.jsxs)('div', {
-        className: a()(m.container, T),
-        style: { backgroundImage: 'linear-gradient(90deg, '.concat(O, ' 0%, ').concat(R, ' 100%)') },
+        C = null == y ? void 0 : null === (o = y.statistics[l.E.LOL_MOST_PLAYED_CHAMPION_ID]) || void 0 === o ? void 0 : o.value,
+        R = (0, p.I)(C),
+        { primaryColor: O, secondaryColor: D } = (0, d.Z)(''.concat(R, '?forColors')),
+        L = (0, u.e7)([f.default], () => f.default.getUser(null == y ? void 0 : y.user_id));
+    if (null == L) return null;
+    let x = _.ZP.getName(I, void 0, L);
+    return (0, i.jsxs)('div', {
+        className: s()(g.container, b),
+        style: { backgroundImage: 'linear-gradient(90deg, '.concat(D, ' 0%, ').concat(O, ' 100%)') },
         children: [
-            (0, r.jsx)(u.Text, {
+            (0, i.jsx)(c.Text, {
                 variant: 'text-xs/medium',
-                className: m.title,
-                children: (function (e) {
-                    switch (e) {
-                        case s.q.DAILY:
-                            return h.intl.string(h.t.UfbhDA);
-                        case s.q.WEEKLY:
-                            return h.intl.string(h.t['9x5Nam']);
-                        case s.q.MONTHLY:
-                            return h.intl.string(h.t.xB2Co6);
-                        default:
-                            return h.intl.string(h.t['4N67JS']);
-                    }
-                })(I.settings.interval_type)
+                className: g.title,
+                children: E(T.settings.interval_type)
             }),
-            (0, r.jsx)(u.Avatar, {
-                src: D.getAvatarURL(v, 16),
-                size: u.AvatarSizes.SIZE_16,
+            (0, i.jsx)(c.Avatar, {
+                src: L.getAvatarURL(I, 16),
+                size: c.AvatarSizes.SIZE_16,
                 'aria-label': 'avatar'
             }),
-            (0, r.jsx)(u.Spacer, {
+            (0, i.jsx)(c.Spacer, {
                 size: 6,
                 horizontal: !0
             }),
-            (0, r.jsxs)('div', {
-                className: m.textContainer,
+            (0, i.jsxs)('div', {
+                className: g.textContainer,
                 children: [
-                    (0, r.jsx)(u.Text, {
-                        className: m.username,
+                    (0, i.jsx)(c.Text, {
+                        className: g.username,
                         variant: 'text-xs/semibold',
                         color: 'header-primary',
-                        children: L
+                        children: x
                     }),
-                    (0, r.jsx)(u.Text, {
-                        className: m.statsText,
+                    (0, i.jsx)(c.Text, {
+                        className: g.statsText,
                         variant: 'text-xxs/medium',
                         color: 'text-secondary',
-                        children: A
+                        children: N
                     })
                 ]
             }),
-            null != C &&
-                (0, r.jsx)('div', {
-                    className: m.heroArtContainer,
-                    children: (0, r.jsx)('img', {
-                        className: m.heroArt,
-                        src: C,
+            null != R &&
+                (0, i.jsx)('div', {
+                    className: g.heroArtContainer,
+                    children: (0, i.jsx)('img', {
+                        className: g.heroArt,
+                        src: R,
                         alt: ''
                     })
                 })

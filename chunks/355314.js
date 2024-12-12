@@ -1,127 +1,126 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return C;
+        return R;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(442837),
-    s = n(481060),
-    o = n(310752),
-    l = n(174609),
-    u = n(703656),
-    c = n(210887),
-    d = n(594174),
-    f = n(626135),
-    _ = n(424218),
-    p = n(63063),
-    h = n(380684),
-    m = n(74538),
-    g = n(684259),
-    E = n(104494),
-    v = n(639119),
-    I = n(631771),
-    T = n(790527),
-    b = n(474936),
-    S = n(981631),
-    y = n(731994),
-    A = n(388032),
-    N = n(364443);
-function C(e) {
-    let { onClose: t, ...n } = e,
-        C = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
-        R = (0, a.e7)([c.Z], () => c.Z.theme),
-        O = null == C ? void 0 : C.premiumType,
-        D = (0, v.N)(),
-        L = (0, E.Ng)(),
-        x = null != D || null != L,
-        { enabled: w } = I.MP.useExperiment(
+var i = r(200651),
+    a = r(192379),
+    s = r(442837),
+    o = r(481060),
+    l = r(310752),
+    u = r(174609),
+    c = r(703656),
+    d = r(210887),
+    f = r(594174),
+    _ = r(626135),
+    h = r(424218),
+    p = r(63063),
+    m = r(380684),
+    g = r(74538),
+    E = r(684259),
+    v = r(104494),
+    I = r(639119),
+    T = r(631771),
+    b = r(790527),
+    y = r(474936),
+    S = r(981631),
+    A = r(731994),
+    N = r(388032),
+    C = r(364443);
+function R(e) {
+    let { onClose: n, ...r } = e,
+        R = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
+        O = (0, s.e7)([d.Z], () => d.Z.theme),
+        D = null == R ? void 0 : R.premiumType,
+        L = (0, I.N)(),
+        x = (0, v.Ng)(),
+        w = null != L || null != x,
+        { enabled: P } = T.MP.useExperiment(
             { location: 'File Upload Roadblock' },
             {
-                autoTrackExposure: !x,
-                disable: x
+                autoTrackExposure: !w,
+                disable: w
             }
         ),
-        P = (0, h.XS)(),
-        M = w || P,
-        k = R === S.BRd.LIGHT ? 'light' : 'dark',
-        U = M
-            ? (0, r.jsx)('img', {
-                  className: N.updatedArt,
+        M = (0, m.XS)(),
+        k = P || M,
+        U = O === S.BRd.LIGHT ? 'light' : 'dark',
+        B = k
+            ? (0, i.jsx)('img', {
+                  className: C.updatedArt,
                   alt: 'File Upload Nitro Perk',
-                  src: 'https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_'.concat(k, '_v2.png')
+                  src: 'https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_'.concat(U, '_v2.png')
               })
-            : (0, r.jsx)(o.Z, { icons: y.J6 }),
-        B = i.useMemo(() => {
-            let e = m.ZP.getUserMaxFileSize(C);
-            return (0, _.BU)(e / 1024, { useKibibytes: !0 });
-        }, [C]),
-        G = i.useMemo(() => {
-            let e = A.intl.formatToPlainString(A.t.q5fTZm, { maxSize: B });
-            switch (O) {
-                case b.p9.TIER_0:
-                    e = A.intl.formatToPlainString(A.t['/DXKen'], { maxSize: B });
+            : (0, i.jsx)(l.Z, { icons: A.J6 }),
+        G = a.useMemo(() => {
+            let e = g.ZP.getUserMaxFileSize(R);
+            return (0, h.BU)(e / 1024, { useKibibytes: !0 });
+        }, [R]),
+        Z = a.useMemo(() => {
+            let e = N.intl.formatToPlainString(N.t.q5fTZm, { maxSize: G });
+            switch (D) {
+                case y.p9.TIER_0:
+                    e = N.intl.formatToPlainString(N.t['/DXKen'], { maxSize: G });
                     break;
-                case b.p9.TIER_1:
-                    e = A.intl.formatToPlainString(A.t['Kf/MPD'], { maxSize: B });
+                case y.p9.TIER_1:
+                    e = N.intl.formatToPlainString(N.t['Kf/MPD'], { maxSize: G });
             }
             return e;
-        }, [O, B]),
-        Z = (0, _.BU)(b.Uq / 1024, { useKibibytes: !0 }),
-        F = P ? A.intl.string(A.t['9C+41t']) : A.intl.string(A.t['/tGlcn']),
-        V = M
-            ? P
-                ? (0, g.T)({
-                      user: C,
+        }, [D, G]),
+        F = (0, h.BU)(y.Uq / 1024, { useKibibytes: !0 }),
+        V = M ? N.intl.string(N.t['9C+41t']) : N.intl.string(N.t['/tGlcn']),
+        j = k
+            ? M
+                ? (0, E.T)({
+                      user: R,
                       onClick: () => {
                           window.open(p.Z.getArticleURL(S.BhN.NITRO_FAQ), '_blank');
                       }
                   })
-                : A.intl.string(A.t.ZcYwgY)
-            : A.intl.formatToPlainString(A.t.htbuIS, { premiumMaxSize: Z }),
-        j = M
-            ? (0, r.jsx)('div', {
-                  className: N.body,
-                  children: (0, r.jsx)(s.Text, {
+                : N.intl.string(N.t.ZcYwgY)
+            : N.intl.formatToPlainString(N.t.htbuIS, { premiumMaxSize: F }),
+        H = k
+            ? (0, i.jsx)('div', {
+                  className: C.body,
+                  children: (0, i.jsx)(o.Text, {
                       variant: 'text-sm/medium',
-                      children: V
+                      children: j
                   })
               })
-            : (0, r.jsxs)('div', {
-                  className: N.body,
+            : (0, i.jsxs)('div', {
+                  className: C.body,
                   children: [
-                      (0, r.jsx)('span', { children: G }),
-                      (0, r.jsx)(s.Text, {
+                      (0, i.jsx)('span', { children: Z }),
+                      (0, i.jsx)(o.Text, {
                           variant: 'text-md/medium',
-                          children: V
+                          children: j
                       })
                   ]
               });
-    return (0, r.jsx)(T.Z, {
-        artElement: U,
-        artContainerClassName: M ? N.updatedArtContainer : N.artContainer,
+    function Y() {
+        (0, u.Z)(),
+            n(),
+            _.default.track(S.rMx.PREMIUM_PROMOTION_OPENED, {
+                location_section: S.jXE.FILE_UPLOAD_UPSELL_MODAL,
+                location_object: S.qAy.NAVIGATION_LINK
+            }),
+            (0, c.uL)(S.Z5c.APPLICATION_STORE);
+    }
+    return (0, i.jsx)(b.Z, {
+        artElement: B,
+        artContainerClassName: k ? C.updatedArtContainer : C.artContainer,
         enableArtBoxShadow: !1,
-        type: b.cd.UPLOAD_ERROR_UPSELL,
-        title: F,
-        body: j,
-        context: A.intl.formatToPlainString(A.t.q5fTZm, { maxSize: B }),
-        glowUp: V,
+        type: y.cd.UPLOAD_ERROR_UPSELL,
+        title: V,
+        body: H,
+        context: N.intl.formatToPlainString(N.t.q5fTZm, { maxSize: G }),
+        glowUp: j,
         analyticsLocation: { section: S.jXE.FILE_UPLOAD_POPOUT },
-        onClose: t,
-        subscriptionTier: b.Si.TIER_2,
-        secondaryCTA: M ? A.intl.string(A.t.ZnqyZ2) : void 0,
-        onSecondaryClick: M
-            ? function () {
-                  (0, l.Z)(),
-                      t(),
-                      f.default.track(S.rMx.PREMIUM_PROMOTION_OPENED, {
-                          location_section: S.jXE.FILE_UPLOAD_UPSELL_MODAL,
-                          location_object: S.qAy.NAVIGATION_LINK
-                      }),
-                      (0, u.uL)(S.Z5c.APPLICATION_STORE);
-              }
-            : void 0,
-        showEnhancedUpsell: M,
-        ...n
+        onClose: n,
+        subscriptionTier: y.Si.TIER_2,
+        secondaryCTA: k ? N.intl.string(N.t.ZnqyZ2) : void 0,
+        onSecondaryClick: k ? Y : void 0,
+        showEnhancedUpsell: k,
+        ...r
     });
 }

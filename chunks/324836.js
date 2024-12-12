@@ -1,5 +1,5 @@
-e.exports = function (e) {
-    let t = {
+function n(e) {
+    let n = {
         className: 'literal',
         begin: /[+-]+/,
         relevance: 0
@@ -30,9 +30,10 @@ e.exports = function (e) {
             },
             {
                 begin: /(?=\+\+|--)/,
-                contains: [t]
+                contains: [n]
             },
-            t
+            n
         ]
     };
-};
+}
+e.exports = n;

@@ -1,3 +1,4 @@
-e.exports = function (e, t) {
-    return this.bind(e, function () {}, t);
+e.exports = function (e, n) {
+    var r = this;
+    return r.bind(e, function () {}, n);
 };

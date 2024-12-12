@@ -1,26 +1,27 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return u;
     }
-}),
-    n(47120),
-    n(653041);
-var r = n(341702),
-    i = n(887490);
-function a(e, t) {
-    if (i.bN.areStylesDisabled(e)) return [];
-    let [n, a] = t,
-        s = [];
-    if (!i.aj.isType(n, 'line') || null == n.codeBlockState) return s;
-    let { hljsTypes: o, isStyledCodeBlockLine: l } = n.codeBlockState;
-    if (null == o || 0 === o.length || !l) return [];
-    for (let t of o) {
-        let o = n.children.map((e) => (i.LC.isText(e) ? e.text : null));
-        s.push({
-            hljsTypes: t.types,
-            anchor: (0, r.t)(e, a, o, t.start),
-            focus: (0, r.t)(e, a, o, t.end)
+});
+var i = r(47120);
+var a = r(653041);
+var s = r(341702),
+    o = r(887490);
+let l = 'line';
+function u(e, n) {
+    if (o.bN.areStylesDisabled(e)) return [];
+    let [r, i] = n,
+        a = [];
+    if (!o.aj.isType(r, l) || null == r.codeBlockState) return a;
+    let { hljsTypes: u, isStyledCodeBlockLine: c } = r.codeBlockState;
+    if (null == u || 0 === u.length || !c) return [];
+    for (let n of u) {
+        let l = r.children.map((e) => (o.LC.isText(e) ? e.text : null));
+        a.push({
+            hljsTypes: n.types,
+            anchor: (0, s.t)(e, i, l, n.start),
+            focus: (0, s.t)(e, i, l, n.end)
         });
     }
-    return s;
+    return a;
 }

@@ -1,46 +1,59 @@
-n.d(t, {
+r.d(n, {
     d: function () {
-        return r;
+        return o;
     }
-}),
-    n(411104);
-let r = new (class e {
+});
+var i = r(411104);
+function a(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+class s {
     raise(e) {
         throw e;
     }
     setCallbacks(e) {
         this.callback = e.response;
     }
-    databaseOpen(e, t, n) {
-        let r = 'kv_storage: platform "web" is not supported at this time.';
-        if (null == n ? void 0 : n.synchronous) throw Error(r);
+    databaseOpen(e, n, r) {
+        let i = 'kv_storage: platform "web" is not supported at this time.';
+        if (null == r ? void 0 : r.synchronous) throw Error(i);
         return this.reply({
             requestId: e,
             synchronous: !1,
             ok: !1,
-            data: r
+            data: i
         });
     }
-    databaseList(e, t) {
+    databaseList(e, n) {
         return this.reply({
             requestId: e,
-            synchronous: null == t ? void 0 : t.synchronous,
+            synchronous: null == n ? void 0 : n.synchronous,
             ok: !0,
             data: []
         });
     }
-    databaseDelete(e, t, n) {
+    databaseDelete(e, n, r) {
         return this.reply({
             requestId: e,
-            synchronous: null == n ? void 0 : n.synchronous,
+            synchronous: null == r ? void 0 : r.synchronous,
             ok: !0,
             data: void 0
         });
     }
-    databaseOptimize(e, t, n) {
+    databaseOptimize(e, n, r) {
         return this.reply({
             requestId: e,
-            synchronous: null == n ? void 0 : n.synchronous,
+            synchronous: null == r ? void 0 : r.synchronous,
             ok: !0,
             data: void 0
         });
@@ -48,11 +61,12 @@ let r = new (class e {
     reply(e) {
         if (e.synchronous) return e.data;
         if (null != e.requestId) {
-            var t;
-            null === (t = this.callback) ||
-                void 0 === t ||
-                t.call(
-                    this,
+            var n, r;
+            let i = 0;
+            null === (n = (r = this).callback) ||
+                void 0 === n ||
+                n.call(
+                    r,
                     {
                         id: e.requestId,
                         ok: e.ok,
@@ -64,21 +78,12 @@ let r = new (class e {
                             totalTimeNanoseconds: 0
                         }
                     },
-                    0
+                    i
                 );
         }
     }
     constructor() {
-        var e, t, n;
-        (e = this),
-            (n = null),
-            (t = 'callback') in e
-                ? Object.defineProperty(e, t, {
-                      value: null,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (e[t] = n);
+        a(this, 'callback', null);
     }
-})();
+}
+let o = new s();

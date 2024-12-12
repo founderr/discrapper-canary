@@ -1,8 +1,18 @@
-e.exports = function (e) {
-    let t = '[ \\t\\f]*',
-        n = t + '[:=]' + t,
-        r = '[ \\t\\f]+',
-        i = '([^\\\\:= \\t\\f\\n]|\\\\.)+';
+function n(e) {
+    let n = '[ \\t\\f]*',
+        r = n + '[:=]' + n,
+        i = '[ \\t\\f]+',
+        a = '([^\\\\:= \\t\\f\\n]|\\\\.)+',
+        s = {
+            end: '(' + r + '|' + i + ')',
+            relevance: 0,
+            starts: {
+                className: 'string',
+                end: /$/,
+                relevance: 0,
+                contains: [{ begin: '\\\\\\\\' }, { begin: '\\\\\\n' }]
+            }
+        };
     return {
         name: '.properties',
         disableAutodetect: !0,
@@ -12,29 +22,21 @@ e.exports = function (e) {
             e.COMMENT('^\\s*[!#]', '$'),
             {
                 returnBegin: !0,
-                variants: [{ begin: i + n }, { begin: i + r }],
+                variants: [{ begin: a + r }, { begin: a + i }],
                 contains: [
                     {
                         className: 'attr',
-                        begin: i,
+                        begin: a,
                         endsParent: !0
                     }
                 ],
-                starts: {
-                    end: '(' + n + '|' + r + ')',
-                    relevance: 0,
-                    starts: {
-                        className: 'string',
-                        end: /$/,
-                        relevance: 0,
-                        contains: [{ begin: '\\\\\\\\' }, { begin: '\\\\\\n' }]
-                    }
-                }
+                starts: s
             },
             {
                 className: 'attr',
-                begin: i + t + '$'
+                begin: a + n + '$'
             }
         ]
     };
-};
+}
+e.exports = n;

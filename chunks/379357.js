@@ -1,102 +1,103 @@
-n.d(t, {
+r.d(n, {
     FO: function () {
-        return g;
+        return I;
     },
     YC: function () {
-        return E;
+        return T;
     },
     rv: function () {
-        return m;
+        return v;
     }
-}),
-    n(47120);
-var r = n(726542),
-    i = n(394821),
-    a = n(834353),
-    s = n(802856),
-    o = n(835473),
-    l = n(210753),
-    u = n(81063),
-    c = n(26033),
-    d = n(593294),
-    f = n(981631),
-    _ = n(701488),
-    p = n(388032);
-function h(e) {
-    let t = null == e ? void 0 : e.getIconURL(_.Si.LARGE),
-        n = null == e ? void 0 : e.name;
-    if (null != t)
+});
+var i = r(47120);
+var a = r(726542),
+    s = r(394821),
+    o = r(834353),
+    l = r(802856),
+    u = r(835473),
+    c = r(210753),
+    d = r(81063),
+    f = r(26033),
+    _ = r(593294),
+    h = r(981631),
+    p = r(701488),
+    m = r(388032);
+function g(e) {
+    return (0, f.dU)(e) && e.extra.entries.length > 0
+        ? { src: e.extra.entries[0].media.image_url }
+        : (0, f.y0)(e)
+          ? {
+                src: (0, d.getAssetImage)(e.extra.application_id, e.extra.media_assets_large_image, p.Si.LARGE),
+                alt: e.extra.media_title
+            }
+          : (0, f.KF)(e)
+            ? { src: e.extra.media.image_url }
+            : void 0;
+}
+function E(e) {
+    let n = null == e ? void 0 : e.getIconURL(p.Si.LARGE),
+        r = null == e ? void 0 : e.name;
+    if (null != n)
         return {
-            src: t,
-            alt: null == n ? p.intl.string(p.t['2B/phI']) : p.intl.formatToPlainString(p.t.tiKyYm, { applicationName: n })
+            src: n,
+            alt: null == r ? m.intl.string(m.t['2B/phI']) : m.intl.formatToPlainString(m.t.tiKyYm, { applicationName: r })
         };
 }
-function m(e) {
-    var t, n;
+function v(e) {
+    var n;
     let { entry: r, showCoverImage: i = !0 } = e,
-        { activity: a, activityApplication: s, fallbackApplication: o } = (0, d.Z)(r),
-        { largeImage: f, smallImage: p } = E(a, s),
-        { largeImage: h } = g(a, null != o ? o : s),
-        { coverImageUrl: m } = (0, l.$)(null === (t = null != o ? o : s) || void 0 === t ? void 0 : t.id);
-    let v =
-        ((n = r),
-        (0, c.dU)(n) && n.extra.entries.length > 0
-            ? { src: n.extra.entries[0].media.image_url }
-            : (0, c.y0)(n)
-              ? {
-                    src: (0, u.getAssetImage)(n.extra.application_id, n.extra.media_assets_large_image, _.Si.LARGE),
-                    alt: n.extra.media_title
-                }
-              : (0, c.KF)(n)
-                ? { src: n.extra.media.image_url }
-                : void 0);
-    return null != f
+        { activity: a, activityApplication: s, fallbackApplication: o } = (0, _.Z)(r),
+        { largeImage: l, smallImage: u } = T(a, s),
+        { largeImage: d } = I(a, null != o ? o : s),
+        { coverImageUrl: f } = (0, c.$)(null === (n = null != o ? o : s) || void 0 === n ? void 0 : n.id),
+        h = g(r);
+    return null != l
         ? {
-              largeImage: f,
-              smallImage: p
+              largeImage: l,
+              smallImage: u
           }
-        : null != v
+        : null != h
           ? {
-                largeImage: v,
+                largeImage: h,
                 smallImage: void 0
             }
-          : null != m && i
+          : null != f && i
             ? {
-                  largeImage: { src: m },
+                  largeImage: { src: f },
                   smallImage: void 0
               }
             : {
-                  largeImage: h,
+                  largeImage: d,
                   smallImage: void 0
               };
 }
-function g(e, t) {
-    let { largeImage: n, smallImage: i } = E(e, t);
-    if (null != n)
+function I(e, n) {
+    let { largeImage: r, smallImage: i } = T(e, n);
+    if (null != r)
         return {
-            largeImage: n,
+            largeImage: r,
             smallImage: i
         };
-    if (null == n && (0, s.Z)(e))
+    if (null == r && (0, l.Z)(e))
         return {
             largeImage: {
-                src: r.Z.get(f.ABu.XBOX).icon.customPNG,
-                alt: p.intl.string(p.t['Nfvo7+'])
+                src: a.Z.get(h.ABu.XBOX).icon.customPNG,
+                alt: m.intl.string(m.t['Nfvo7+'])
             },
             smallImage: void 0
         };
-    if (null == n && null == i && (0, a.Z)(e))
+    if (null == r && null == i && (0, o.Z)(e))
         return {
             largeImage: {
-                src: r.Z.get(f.ABu.PLAYSTATION).icon.lightPNG,
-                alt: p.intl.string(p.t.fFl4jo)
+                src: a.Z.get(h.ABu.PLAYSTATION).icon.lightPNG,
+                alt: m.intl.string(m.t.fFl4jo)
             },
             smallImage: void 0
         };
-    let o = h(t);
-    return null != o
+    let s = E(n);
+    return null != s
         ? {
-              largeImage: o,
+              largeImage: s,
               smallImage: i
           }
         : {
@@ -104,32 +105,32 @@ function g(e, t) {
               smallImage: void 0
           };
 }
-function E(e, t) {
-    var n, r, a, s, l, c;
-    let d = (0, o.q)(null == e ? void 0 : e.application_id);
+function T(e, n) {
+    var r, i, a, o, l, c;
+    let f = (0, u.q)(null == e ? void 0 : e.application_id);
     if (null == e)
         return {
             largeImage: void 0,
             smallImage: void 0
         };
-    let f = null == e ? void 0 : null === (n = e.assets) || void 0 === n ? void 0 : n.large_image,
-        p =
-            null != f
+    let _ = null == e ? void 0 : null === (r = e.assets) || void 0 === r ? void 0 : r.large_image,
+        h =
+            null != _
                 ? {
-                      src: (0, u.getAssetImage)(e.application_id, f, [_.Si.LARGE, _.Si.LARGE]),
-                      text: null === (a = e.assets) || void 0 === a ? void 0 : null === (r = a.large_text) || void 0 === r ? void 0 : r.trim()
+                      src: (0, d.getAssetImage)(e.application_id, _, [p.Si.LARGE, p.Si.LARGE]),
+                      text: null === (a = e.assets) || void 0 === a ? void 0 : null === (i = a.large_text) || void 0 === i ? void 0 : i.trim()
                   }
                 : void 0,
-        m = (0, i.Z)(e) ? void 0 : null == e ? void 0 : null === (s = e.assets) || void 0 === s ? void 0 : s.small_image,
+        m = (0, s.Z)(e) ? void 0 : null == e ? void 0 : null === (o = e.assets) || void 0 === o ? void 0 : o.small_image,
         g =
             null != m
                 ? {
-                      src: (0, u.getAssetImage)(e.application_id, m, [_.Si.LARGE, _.Si.LARGE]),
+                      src: (0, d.getAssetImage)(e.application_id, m, [p.Si.LARGE, p.Si.LARGE]),
                       text: null === (c = e.assets) || void 0 === c ? void 0 : null === (l = c.small_text) || void 0 === l ? void 0 : l.trim()
                   }
                 : void 0;
     return {
-        largeImage: null != p ? p : h(null != t ? t : d),
+        largeImage: null != h ? h : E(null != n ? n : f),
         smallImage: g
     };
 }

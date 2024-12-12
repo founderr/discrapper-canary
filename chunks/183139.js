@@ -1,91 +1,93 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return l;
+        return d;
     },
     j: function () {
-        return r;
+        return i;
     }
-}),
-    n(789020),
-    n(47120);
-var r,
-    i,
-    a = n(836560),
-    s = n(936349),
-    o = n(709054);
-((i = r || (r = {}))[(i.DISPATCH = 0)] = 'DISPATCH'), (i[(i.HEARTBEAT = 1)] = 'HEARTBEAT'), (i[(i.IDENTIFY = 2)] = 'IDENTIFY'), (i[(i.PRESENCE_UPDATE = 3)] = 'PRESENCE_UPDATE'), (i[(i.VOICE_STATE_UPDATE = 4)] = 'VOICE_STATE_UPDATE'), (i[(i.VOICE_SERVER_PING = 5)] = 'VOICE_SERVER_PING'), (i[(i.RESUME = 6)] = 'RESUME'), (i[(i.RECONNECT = 7)] = 'RECONNECT'), (i[(i.REQUEST_GUILD_MEMBERS = 8)] = 'REQUEST_GUILD_MEMBERS'), (i[(i.INVALID_SESSION = 9)] = 'INVALID_SESSION'), (i[(i.HELLO = 10)] = 'HELLO'), (i[(i.HEARTBEAT_ACK = 11)] = 'HEARTBEAT_ACK'), (i[(i.CALL_CONNECT = 13)] = 'CALL_CONNECT'), (i[(i.GUILD_SUBSCRIPTIONS = 14)] = 'GUILD_SUBSCRIPTIONS'), (i[(i.STREAM_CREATE = 18)] = 'STREAM_CREATE'), (i[(i.STREAM_DELETE = 19)] = 'STREAM_DELETE'), (i[(i.STREAM_WATCH = 20)] = 'STREAM_WATCH'), (i[(i.STREAM_PING = 21)] = 'STREAM_PING'), (i[(i.STREAM_SET_PAUSED = 22)] = 'STREAM_SET_PAUSED'), (i[(i.REQUEST_GUILD_APPLICATION_COMMANDS = 24)] = 'REQUEST_GUILD_APPLICATION_COMMANDS'), (i[(i.REQUEST_FORUM_UNREADS = 28)] = 'REQUEST_FORUM_UNREADS'), (i[(i.REMOTE_COMMAND = 29)] = 'REMOTE_COMMAND'), (i[(i.GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH = 30)] = 'GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH'), (i[(i.REQUEST_SOUNDBOARD_SOUNDS = 31)] = 'REQUEST_SOUNDBOARD_SOUNDS'), (i[(i.REQUEST_LAST_MESSAGES = 34)] = 'REQUEST_LAST_MESSAGES'), (i[(i.SEARCH_RECENT_MEMBERS = 35)] = 'SEARCH_RECENT_MEMBERS'), (i[(i.REQUEST_CHANNEL_STATUSES = 36)] = 'REQUEST_CHANNEL_STATUSES'), (i[(i.GUILD_SUBSCRIPTIONS_BULK = 37)] = 'GUILD_SUBSCRIPTIONS_BULK'), (i[(i.GUILD_CHANNELS_RESYNC = 38)] = 'GUILD_CHANNELS_RESYNC');
-class l extends a.EventEmitter {
-    presenceUpdate(e, t, n, r) {
+});
+var i,
+    a = r(789020);
+var s = r(47120);
+var o = r(836560);
+var l = r(936349),
+    u = r(709054);
+let c = 15360;
+!(function (e) {
+    (e[(e.DISPATCH = 0)] = 'DISPATCH'), (e[(e.HEARTBEAT = 1)] = 'HEARTBEAT'), (e[(e.IDENTIFY = 2)] = 'IDENTIFY'), (e[(e.PRESENCE_UPDATE = 3)] = 'PRESENCE_UPDATE'), (e[(e.VOICE_STATE_UPDATE = 4)] = 'VOICE_STATE_UPDATE'), (e[(e.VOICE_SERVER_PING = 5)] = 'VOICE_SERVER_PING'), (e[(e.RESUME = 6)] = 'RESUME'), (e[(e.RECONNECT = 7)] = 'RECONNECT'), (e[(e.REQUEST_GUILD_MEMBERS = 8)] = 'REQUEST_GUILD_MEMBERS'), (e[(e.INVALID_SESSION = 9)] = 'INVALID_SESSION'), (e[(e.HELLO = 10)] = 'HELLO'), (e[(e.HEARTBEAT_ACK = 11)] = 'HEARTBEAT_ACK'), (e[(e.CALL_CONNECT = 13)] = 'CALL_CONNECT'), (e[(e.GUILD_SUBSCRIPTIONS = 14)] = 'GUILD_SUBSCRIPTIONS'), (e[(e.STREAM_CREATE = 18)] = 'STREAM_CREATE'), (e[(e.STREAM_DELETE = 19)] = 'STREAM_DELETE'), (e[(e.STREAM_WATCH = 20)] = 'STREAM_WATCH'), (e[(e.STREAM_PING = 21)] = 'STREAM_PING'), (e[(e.STREAM_SET_PAUSED = 22)] = 'STREAM_SET_PAUSED'), (e[(e.REQUEST_GUILD_APPLICATION_COMMANDS = 24)] = 'REQUEST_GUILD_APPLICATION_COMMANDS'), (e[(e.REQUEST_FORUM_UNREADS = 28)] = 'REQUEST_FORUM_UNREADS'), (e[(e.REMOTE_COMMAND = 29)] = 'REMOTE_COMMAND'), (e[(e.GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH = 30)] = 'GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH'), (e[(e.REQUEST_SOUNDBOARD_SOUNDS = 31)] = 'REQUEST_SOUNDBOARD_SOUNDS'), (e[(e.REQUEST_LAST_MESSAGES = 34)] = 'REQUEST_LAST_MESSAGES'), (e[(e.SEARCH_RECENT_MEMBERS = 35)] = 'SEARCH_RECENT_MEMBERS'), (e[(e.REQUEST_CHANNEL_STATUSES = 36)] = 'REQUEST_CHANNEL_STATUSES'), (e[(e.GUILD_SUBSCRIPTIONS_BULK = 37)] = 'GUILD_SUBSCRIPTIONS_BULK'), (e[(e.GUILD_CHANNELS_RESYNC = 38)] = 'GUILD_CHANNELS_RESYNC');
+})(i || (i = {}));
+class d extends o.EventEmitter {
+    presenceUpdate(e, n, r, i) {
         this.send(3, {
             status: e,
-            since: t,
-            activities: n,
-            afk: r
+            since: n,
+            activities: r,
+            afk: i
         });
     }
     voiceStateUpdate(e) {
-        let { guildId: t = null, channelId: n = null, selfMute: r = !1, selfDeaf: i = !1, selfVideo: a = !1, preferredRegion: o = null, preferredRegions: l = null, videoStreamParameters: u = null, flags: c = 0 } = e,
-            d = {
-                guild_id: t,
-                channel_id: n,
-                self_mute: r,
-                self_deaf: i,
-                self_video: a,
-                flags: c
+        let { guildId: n = null, channelId: r = null, selfMute: i = !1, selfDeaf: a = !1, selfVideo: s = !1, preferredRegion: o = null, preferredRegions: u = null, videoStreamParameters: c = null, flags: d = 0 } = e,
+            f = {
+                guild_id: n,
+                channel_id: r,
+                self_mute: i,
+                self_deaf: a,
+                self_video: s,
+                flags: d
             };
-        null != n && s.Z.shouldIncludePreferredRegion() && ((d.preferred_region = o), (d.preferred_regions = l)),
-            null != u &&
-                (d.tracks =
-                    null == u
+        null != r && l.Z.shouldIncludePreferredRegion() && ((f.preferred_region = o), (f.preferred_regions = u)),
+            null != c &&
+                (f.tracks =
+                    null == c
                         ? void 0
-                        : u.map((e) => ({
+                        : c.map((e) => ({
                               type: e.type,
                               rid: e.rid,
                               quality: e.quality
                           }))),
-            this.send(4, d);
+            this.send(4, f);
     }
     voiceServerPing() {
         this.send(5, null);
     }
-    requestGuildMembers(e, t) {
-        let { query: n, limit: r, userIds: i, presences: a } = t;
+    requestGuildMembers(e, n) {
+        let { query: r, limit: i, userIds: a, presences: s } = n;
         this.send(8, {
             guild_id: e,
-            query: n,
-            limit: r,
-            user_ids: i,
-            presences: a
+            query: r,
+            limit: i,
+            user_ids: a,
+            presences: s
         });
     }
-    searchRecentMembers(e, t) {
-        let { query: n, continuationToken: r } = t;
+    searchRecentMembers(e, n) {
+        let { query: r, continuationToken: i } = n;
         this.send(35, {
             guild_id: e,
-            query: null != n ? n : '',
-            continuation_token: null != r ? r : null
+            query: null != r ? r : '',
+            continuation_token: null != i ? i : null
         });
     }
     updateGuildSubscriptions(e) {
-        let t = {},
-            n = 0;
-        o.default.keys(e).forEach((r) => {
-            let i = e[r],
-                a = JSON.stringify([r, i]).length;
-            n + a > 15360 && (this.send(37, { subscriptions: t }), (t = {}), (n = 0)), (t[r] = i), (n += a);
+        let n = {},
+            r = 0;
+        u.default.keys(e).forEach((i) => {
+            let a = e[i],
+                s = JSON.stringify([i, a]).length;
+            r + s > c && (this.send(37, { subscriptions: n }), (n = {}), (r = 0)), (n[i] = a), (r += s);
         }),
-            n > 0 && this.send(37, { subscriptions: t });
+            r > 0 && this.send(37, { subscriptions: n });
     }
     callConnect(e) {
         this.send(13, { channel_id: e });
     }
-    streamCreate(e, t, n) {
-        let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+    streamCreate(e, n, r) {
+        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
         this.send(18, {
             type: e,
-            guild_id: t,
-            channel_id: n,
-            preferred_region: r
+            guild_id: n,
+            channel_id: r,
+            preferred_region: i
         });
     }
     streamWatch(e) {
@@ -97,17 +99,17 @@ class l extends a.EventEmitter {
     streamDelete(e) {
         this.send(19, { stream_key: e });
     }
-    streamSetPaused(e, t) {
+    streamSetPaused(e, n) {
         this.send(22, {
             stream_key: e,
-            paused: t
+            paused: n
         });
     }
-    requestForumUnreads(e, t, n) {
+    requestForumUnreads(e, n, r) {
         this.send(28, {
             guild_id: e,
-            channel_id: t,
-            threads: n.map((e) => ({
+            channel_id: n,
+            threads: r.map((e) => ({
                 thread_id: e.threadId,
                 ack_message_id: e.ackMessageId
             }))
@@ -116,34 +118,34 @@ class l extends a.EventEmitter {
     requestSoundboardSounds(e) {
         this.send(31, { guild_ids: e });
     }
-    requestLastMessages(e, t) {
+    requestLastMessages(e, n) {
         this.send(34, {
             guild_id: e,
-            channel_ids: t
+            channel_ids: n
         });
     }
-    getDeletedEntityIdsNotMatchingHash(e, t, n, r, i) {
+    getDeletedEntityIdsNotMatchingHash(e, n, r, i, a) {
         this.send(30, {
             guild_id: e,
-            channel_ids_hash: t,
-            role_ids_hash: n,
-            emoji_ids_hash: r,
-            sticker_ids_hash: i
+            channel_ids_hash: n,
+            role_ids_hash: r,
+            emoji_ids_hash: i,
+            sticker_ids_hash: a
         });
     }
-    triggerGuildChannelResync(e, t) {
+    triggerGuildChannelResync(e, n) {
         this.send(38, {
             guild_id: e,
-            obfuscated_channel_ids: t
+            obfuscated_channel_ids: n
         });
     }
     requestChannelStatuses(e) {
         this.send(36, { guild_id: e });
     }
-    remoteCommand(e, t) {
+    remoteCommand(e, n) {
         this.send(29, {
             target_session_id: e,
-            payload: t
+            payload: n
         });
     }
 }

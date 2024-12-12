@@ -1,117 +1,119 @@
-n.d(t, {
+r.d(n, {
     Gg: function () {
-        return C;
+        return U;
     },
     Kb: function () {
-        return y;
+        return x;
     },
     Ww: function () {
-        return O;
+        return G;
     },
     ZI: function () {
-        return b;
+        return O;
     },
     _W: function () {
-        return S;
+        return D;
     },
     uF: function () {
-        return A;
+        return w;
     }
-}),
-    n(653041),
-    n(998459),
-    n(47120),
-    n(411104),
-    n(789020);
-var r = n(392711),
-    i = n.n(r),
-    a = n(913527),
-    s = n.n(a),
-    o = n(991637),
-    l = n.n(o),
-    u = n(873546),
-    c = n(544891),
-    d = n(355467),
-    f = n(134432),
-    _ = n(351402),
-    p = n(853872),
-    h = n(78839),
-    m = n(526167),
-    g = n(630388),
-    E = n(823379);
-n(358085);
-var v = n(709054),
-    I = n(981631);
-n(388032), l().shim();
-let T = !u.tq && !u.Em && -1 !== (0, m.vu)();
-function b(e, t) {
-    let { analyticsSource: n, analyticsProperties: r, storeListingId: i, slug: a, channelId: s, guildId: o } = t;
+});
+var i = r(653041);
+var a = r(998459);
+var s = r(47120);
+var o = r(411104);
+var l = r(789020);
+var u = r(392711),
+    c = r.n(u),
+    d = r(913527),
+    f = r.n(d),
+    _ = r(991637),
+    h = r.n(_),
+    p = r(873546),
+    m = r(544891),
+    g = r(355467),
+    E = r(134432),
+    v = r(351402),
+    I = r(853872),
+    T = r(78839),
+    b = r(526167),
+    y = r(630388),
+    S = r(823379);
+r(358085);
+var A = r(709054),
+    N = r(981631);
+r(388032), h().shim();
+let C = !p.tq && !p.Em && -1 !== (0, b.vu)(),
+    R = 3;
+function O(e, n) {
+    let { analyticsSource: r, analyticsProperties: i, storeListingId: a, slug: s, channelId: o, guildId: l } = n,
+        u = {
+            state: {
+                analyticsSource: r,
+                analyticsProperties: i
+            },
+            search: null != a ? '?store_listing_id='.concat(a) : ''
+        };
     return {
-        pathname: null != s && null != o ? I.Z5c.CHANNEL(o, s, e) : I.Z5c.APPLICATION_STORE_LISTING_SKU(e, a),
-        state: {
-            analyticsSource: n,
-            analyticsProperties: r
-        },
-        search: null != i ? '?store_listing_id='.concat(i) : ''
+        pathname: null != o && null != l ? N.Z5c.CHANNEL(l, o, e) : N.Z5c.APPLICATION_STORE_LISTING_SKU(e, s),
+        ...u
     };
 }
-function S(e, t, n, r) {
-    var i;
-    let a;
-    let s = window.GLOBAL_ENV.CDN_HOST;
-    if (null == r)
-        switch (t.mimeType || t.mime_type) {
+function D(e, n, r, i) {
+    var a;
+    let s;
+    let o = window.GLOBAL_ENV.CDN_HOST;
+    if (null == i)
+        switch (n.mimeType || n.mime_type) {
             case 'video/quicktime':
             case 'video/mp4':
-                r = 'mp4';
+                i = 'mp4';
                 break;
             case 'image/gif':
-                r = 'gif';
+                i = 'gif';
                 break;
             default:
-                r = 'webp';
+                i = 'webp';
         }
-    'webp' === r && !T && (r = 'png');
-    let o = 'string' == typeof t ? t : t.id,
-        l = ((i = 'https:'), 'https:');
+    'webp' === i && !C && (i = 'png');
+    let l = 'string' == typeof n ? n : n.id,
+        u = ((a = 'https:'), 'https:');
     return (
-        (a =
-            null != s
-                ? ''.concat(l, '//').concat(s, '/app-assets/').concat(e, '/store/').concat(o, '.').concat(r)
+        (s =
+            null != o
+                ? ''.concat(u, '//').concat(o, '/app-assets/').concat(e, '/store/').concat(l, '.').concat(i)
                 : ''
-                      .concat(l)
+                      .concat(u)
                       .concat(window.GLOBAL_ENV.API_ENDPOINT)
-                      .concat(I.ANM.STORE_ASSET(e, o, r))),
-        null != n && (a += '?size='.concat((0, f.oO)(n * (0, f.x_)()))),
-        a
+                      .concat(N.ANM.STORE_ASSET(e, l, i))),
+        null != r && (s += '?size='.concat((0, E.oO)(r * (0, E.x_)()))),
+        s
     );
 }
-async function y(e) {
-    var t, n, r, i;
-    let a = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    if (a) {
+function L() {
+    return new Promise(async (e) => {
+        if (T.ZP.hasFetchedSubscriptions()) e();
+        else if (v.Z.isSubscriptionFetching) {
+            let n = () => {
+                v.Z.isSubscriptionFetching ? setTimeout(n, 50) : e();
+            };
+            n();
+        } else await (0, g.jg)(), e();
+    });
+}
+async function x(e) {
+    var n, r, i, a;
+    let s = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    if (s) {
         let e = [];
-        !p.Z.hasFetchedPaymentSources && e.push(null !== (n = _.Z.paymentSourcesFetchRequest) && void 0 !== n ? n : (0, d.tZ)()),
-            !_.Z.ipCountryCodeLoaded && e.push((0, d.GE)()),
-            e.push(
-                new Promise(async (e) => {
-                    if (h.ZP.hasFetchedSubscriptions()) e();
-                    else if (_.Z.isSubscriptionFetching) {
-                        let t = () => {
-                            _.Z.isSubscriptionFetching ? setTimeout(t, 50) : e();
-                        };
-                        t();
-                    } else await (0, d.jg)(), e();
-                })
-            ),
-            await Promise.allSettled(e);
+        !I.Z.hasFetchedPaymentSources && e.push(null !== (r = v.Z.paymentSourcesFetchRequest) && void 0 !== r ? r : (0, g.tZ)()), !v.Z.ipCountryCodeLoaded && e.push((0, g.GE)()), e.push(L()), await Promise.allSettled(e);
     }
-    let s = p.Z.getDefaultBillingCountryCode(),
-        o = null !== (r = null === (t = p.Z.defaultPaymentSource) || void 0 === t ? void 0 : t.id) && void 0 !== r ? r : null,
-        l = h.ZP.getPremiumTypeSubscription();
-    null != l && null != l.paymentSourceId && (o = l.paymentSourceId), null === s && (s = null !== (i = _.Z.ipCountryCode) && void 0 !== i ? i : null);
-    let u = {};
-    if ((null != s && (u.country_code = s), null != o && (u.payment_source_id = o), null != s || null != o)) {
+    let o = I.Z.getDefaultBillingCountryCode(),
+        l = null !== (i = null === (n = I.Z.defaultPaymentSource) || void 0 === n ? void 0 : n.id) && void 0 !== i ? i : null,
+        u = T.ZP.getPremiumTypeSubscription();
+    null != u && null != u.paymentSourceId && (l = u.paymentSourceId), null === o && (o = null !== (a = v.Z.ipCountryCode) && void 0 !== a ? a : null);
+    let c = {};
+    if ((null != o && (c.country_code = o), null != l && (c.payment_source_id = l), null != o || null != l)) {
         if (
             ('string' == typeof e &&
                 (e = {
@@ -123,108 +125,110 @@ async function y(e) {
         )
             throw Error('string query not supported');
         e.query = {
-            ...u,
+            ...c,
             ...e.query
         };
     }
-    return c.tn.get(e);
+    return m.tn.get(e);
 }
-function A(e, t, n) {
-    let r = t.getApplication(e);
-    return null == r || null == r.primarySkuId ? null : n.get(r.primarySkuId);
+function w(e, n, r) {
+    let i = n.getApplication(e);
+    return null == i || null == i.primarySkuId ? null : r.get(i.primarySkuId);
 }
-let N = [];
-function C(e, t, n, r, a) {
-    let s = t.get(e);
-    if (null == s) return N;
+function P(e, n, r) {
+    var i;
+    let a = null !== (i = r.getNowPlaying(e)) && void 0 !== i ? i : {},
+        s = A.default
+            .keys(a)
+            .map((e) => {
+                let r = n.getUser(e);
+                return null == r
+                    ? null
+                    : {
+                          user: r,
+                          startTime: a[r.id].startedPlaying
+                      };
+            })
+            .filter(S.lm)
+            .sort((e, n) => n.startTime - e.startTime);
+    return 0 === s.length
+        ? null
+        : {
+              type: N.AzA.NOW_PLAYING,
+              userInfo: s
+          };
+}
+function M(e, n, r) {
+    let i = r.getStatisticsForApplication(e);
+    if (null == i) return null;
+    let a = i
+        .map((e) => {
+            let r = n.getUser(e.user_id);
+            return null == r
+                ? null
+                : {
+                      user: r,
+                      endTime: Date.parse(e.last_played_at)
+                  };
+        })
+        .filter(S.lm)
+        .sort((e, n) => n.endTime - e.endTime);
+    return 0 === a.length
+        ? null
+        : {
+              type: N.AzA.EVER_PLAYED,
+              userInfo: a
+          };
+}
+let k = [];
+function U(e, n, r, i, a) {
+    let s = n.get(e);
+    if (null == s) return k;
     let o = s.applicationId,
         l = [],
         u = [],
-        c = (function (e, t, n) {
-            var r;
-            let i = null !== (r = n.getNowPlaying(e)) && void 0 !== r ? r : {},
-                a = v.default
-                    .keys(i)
-                    .map((e) => {
-                        let n = t.getUser(e);
-                        return null == n
-                            ? null
-                            : {
-                                  user: n,
-                                  startTime: i[n.id].startedPlaying
-                              };
-                    })
-                    .filter(E.lm)
-                    .sort((e, t) => t.startTime - e.startTime);
-            return 0 === a.length
-                ? null
-                : {
-                      type: I.AzA.NOW_PLAYING,
-                      userInfo: a
-                  };
-        })(o, n, r);
-    null != c &&
-        (l.push(c),
-        (u = c.userInfo.map((e) => {
-            let { user: t } = e;
-            return t.id;
+        d = P(o, r, i);
+    null != d &&
+        (l.push(d),
+        (u = d.userInfo.map((e) => {
+            let { user: n } = e;
+            return n.id;
         })));
-    let d = a.getStatisticsForApplication(o);
-    if (null != d) {
-        let e = d.map((e) => e.user_id);
-        if (i().difference(e, u).length > 0) {
-            let e = (function (e, t, n) {
-                let r = n.getStatisticsForApplication(e);
-                if (null == r) return null;
-                let i = r
-                    .map((e) => {
-                        let n = t.getUser(e.user_id);
-                        return null == n
-                            ? null
-                            : {
-                                  user: n,
-                                  endTime: Date.parse(e.last_played_at)
-                              };
-                    })
-                    .filter(E.lm)
-                    .sort((e, t) => t.endTime - e.endTime);
-                return 0 === i.length
-                    ? null
-                    : {
-                          type: I.AzA.EVER_PLAYED,
-                          userInfo: i
-                      };
-            })(o, n, a);
+    let f = a.getStatisticsForApplication(o);
+    if (null != f) {
+        let e = f.map((e) => e.user_id);
+        if (c().difference(e, u).length > 0) {
+            let e = M(o, r, a);
             null != e && l.push(e);
         }
     }
     return l;
 }
-let R = [];
-function O(e, t, n) {
-    let r = t.get(e),
-        i = n.getForSKU(e);
-    if (null == r || null == i) return R;
-    let a = [];
-    (0, g.yE)(r.flags, I.l4R.HAS_FREE_PREMIUM_CONTENT) && a.push({ type: I.AzA.HAS_FREE_PREMIUM_CONTENT });
-    let o = r.releaseDate;
+let B = [];
+function G(e, n, r) {
+    let i = n.get(e),
+        a = r.getForSKU(e);
+    if (null == i || null == a) return B;
+    let s = [];
+    (0, y.yE)(i.flags, N.l4R.HAS_FREE_PREMIUM_CONTENT) && s.push({ type: N.AzA.HAS_FREE_PREMIUM_CONTENT });
+    let o = i.releaseDate;
     return (
         null != o &&
-            3 > s()().diff(o, 'months') &&
-            (r.accessType === I.kGb.EARLY_ACCESS
-                ? a.push({
-                      type: I.AzA.EARLY_ACCESS,
+            f()().diff(o, 'months') < R &&
+            (i.accessType === N.kGb.EARLY_ACCESS
+                ? s.push({
+                      type: N.AzA.EARLY_ACCESS,
                       releaseDate: o
                   })
-                : a.push({
-                      type: I.AzA.RECENT_RELEASE_DATE,
+                : s.push({
+                      type: N.AzA.RECENT_RELEASE_DATE,
                       releaseDate: o
                   })),
-        null != i.flavorText &&
-            a.push({
-                type: I.AzA.FLAVOR_TEXT,
-                flavorText: i.flavorText
+        null != a.flavorText &&
+            s.push({
+                type: N.AzA.FLAVOR_TEXT,
+                flavorText: a.flavorText
             }),
-        a
+        s
     );
 }

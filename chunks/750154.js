@@ -1,60 +1,63 @@
-n.d(t, {
+r.d(n, {
     JE: function () {
-        return _;
+        return E;
     },
     Lw: function () {
-        return c;
+        return p;
     },
     dS: function () {
-        return f;
+        return g;
     },
     rq: function () {
-        return d;
+        return m;
     }
-}),
-    n(47120);
-var r = n(314897),
-    i = n(592125),
-    a = n(430824),
-    s = n(88751),
-    o = n(157925),
-    l = n(981631);
-let u = 'stage:';
-function c(e, t) {
-    let n = 0,
-        i = r.default.getId();
-    s.ZP.isSpeaker(i, e.id) && (n |= 1);
-    let o = a.Z.getGuild(e.getGuildId());
-    null != o && (o.hasFeature(l.oNc.PARTNERED) && (n |= 2), o.hasFeature(l.oNc.VERIFIED) && (n |= 4));
-    let c = n.toString(16);
-    return ''.concat(u).concat(e.guild_id, ':').concat(e.id, ':').concat(c, ':').concat(t.id);
+});
+var i = r(47120);
+var a = r(314897),
+    s = r(592125),
+    o = r(430824),
+    l = r(88751),
+    u = r(157925),
+    c = r(981631);
+let d = 'stage:',
+    f = 1,
+    _ = 2,
+    h = 4;
+function p(e, n) {
+    let r = 0,
+        i = a.default.getId();
+    l.ZP.isSpeaker(i, e.id) && (r |= f);
+    let s = o.Z.getGuild(e.getGuildId());
+    null != s && (s.hasFeature(c.oNc.PARTNERED) && (r |= _), s.hasFeature(c.oNc.VERIFIED) && (r |= h));
+    let u = r.toString(16);
+    return ''.concat(d).concat(e.guild_id, ':').concat(e.id, ':').concat(u, ':').concat(n.id);
 }
-function d(e) {
+function m(e) {
     if (null == e || null == e.party) return;
-    let { id: t, size: n } = e.party;
+    let { id: n, size: r } = e.party;
     try {
-        if (null == t || !t.startsWith(u)) return;
-        let [, e, r, i, a] = t.split(':'),
-            s = parseInt(i, 16);
+        if (null == n || !n.startsWith(d)) return;
+        let [, e, i, a, s] = n.split(':'),
+            o = parseInt(a, 16);
         return {
             guildId: e,
-            channelId: r,
-            size: n,
-            userIsSpeaker: (1 & s) != 0,
-            guildIsPartnered: (2 & s) != 0,
-            guildIsVerified: (4 & s) != 0,
-            stageInstanceId: a
+            channelId: i,
+            size: r,
+            userIsSpeaker: (o & f) != 0,
+            guildIsPartnered: (o & _) != 0,
+            guildIsVerified: (o & h) != 0,
+            stageInstanceId: s
         };
     } catch (e) {
         return null;
     }
 }
-function f(e) {
-    return (null == e ? void 0 : e.application_id) === o.gD;
+function g(e) {
+    return (null == e ? void 0 : e.application_id) === u.gD;
 }
-function _(e) {
-    let t = d(e);
-    if (null == t) return !1;
-    let { channelId: n } = t;
-    return null != i.Z.getChannel(n);
+function E(e) {
+    let n = m(e);
+    if (null == n) return !1;
+    let { channelId: r } = n;
+    return null != s.Z.getChannel(r);
 }

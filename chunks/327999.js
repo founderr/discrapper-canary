@@ -1,64 +1,67 @@
-n.d(t, {
+r.d(n, {
     MS: function () {
         return S;
     },
     Ph: function () {
-        return y;
+        return A;
     },
     _2: function () {
-        return N;
+        return C;
     },
     bE: function () {
-        return b;
+        return y;
     },
     gq: function () {
-        return i;
+        return a;
     },
     nf: function () {
-        return T;
+        return b;
     }
-}),
-    n(653041);
-var r,
-    i,
+});
+var i,
     a,
     s,
-    o,
-    l,
-    u = n(544891),
-    c = n(780384),
-    d = n(410030),
-    f = n(726542),
-    _ = n(122021),
-    p = n(981631),
-    h = n(388032);
-let m = {};
-function g(e, t) {
-    return e + t;
+    o = r(653041);
+var l = r(544891),
+    u = r(780384),
+    c = r(410030),
+    d = r(726542),
+    f = r(122021),
+    _ = r(981631),
+    h = r(388032);
+let p = {};
+function m(e, n) {
+    return e + n;
 }
-function E(e, t) {
-    return t.map((t) => e + t);
+function g(e, n) {
+    return n.map((n) => m(e, n));
 }
-function v(e) {
+function E(e) {
     return e.split('-')[1];
 }
-((s = r || (r = {}))[(s.FAILED = 0)] = 'FAILED'), (s[(s.UNFETCHED = 1)] = 'UNFETCHED'), (s[(s.PENDING = 2)] = 'PENDING'), (s[(s.SUCCEEDED = 3)] = 'SUCCEEDED'), (s[(s.FAILED_NO_RETRY = 4)] = 'FAILED_NO_RETRY');
-function I(e, t) {
+function v(e) {
+    return e.filter((e) => p[e] <= 1).map(E);
+}
+function I(e, n) {
     e.forEach((e) => {
-        m[e] = t;
+        p[e] = n;
     });
 }
-function T(e, t) {
-    t.forEach((t) =>
-        (function (e, t, n) {
-            m[e + t] = 3;
-        })(e, t, 3)
-    );
+function T(e, n, r) {
+    p[m(e, n)] = r;
 }
-((o = i || (i = {}))[(o.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (o[(o.BOT = 1)] = 'BOT'), (o[(o.INTEGRATION = 2)] = 'INTEGRATION'), (o[(o.DISCOVERY = 3)] = 'DISCOVERY'), (o[(o.HUB = 4)] = 'HUB'), (o[(o.INVITE = 5)] = 'INVITE'), (o[(o.VANITY_URL = 6)] = 'VANITY_URL'), (o[(o.MANUAL_MEMBER_VERIFICATION = 7)] = 'MANUAL_MEMBER_VERIFICATION');
-let b = function (e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-        n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+function b(e, n) {
+    n.forEach((n) => T(e, n, 3));
+}
+!(function (e) {
+    (e[(e.FAILED = 0)] = 'FAILED'), (e[(e.UNFETCHED = 1)] = 'UNFETCHED'), (e[(e.PENDING = 2)] = 'PENDING'), (e[(e.SUCCEEDED = 3)] = 'SUCCEEDED'), (e[(e.FAILED_NO_RETRY = 4)] = 'FAILED_NO_RETRY');
+})(i || (i = {})),
+    !(function (e) {
+        (e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.BOT = 1)] = 'BOT'), (e[(e.INTEGRATION = 2)] = 'INTEGRATION'), (e[(e.DISCOVERY = 3)] = 'DISCOVERY'), (e[(e.HUB = 4)] = 'HUB'), (e[(e.INVITE = 5)] = 'INVITE'), (e[(e.VANITY_URL = 6)] = 'VANITY_URL'), (e[(e.MANUAL_MEMBER_VERIFICATION = 7)] = 'MANUAL_MEMBER_VERIFICATION');
+    })(a || (a = {}));
+let y = function (e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
+        r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     switch (e) {
         case 1:
             return h.intl.string(h.t.HumZAg);
@@ -71,7 +74,7 @@ let b = function (e) {
         case 5:
             return h.intl.string(h.t['/3vIRU']);
         case 6:
-            if (null != t && !n) return h.intl.formatToPlainString(h.t.EIUjR0, { vanityUrl: t });
+            if (null != n && !r) return h.intl.formatToPlainString(h.t.EIUjR0, { vanityUrl: n });
             return h.intl.string(h.t.dGiD1N);
         case 7:
             return h.intl.string(h.t.vdu7oa);
@@ -79,7 +82,9 @@ let b = function (e) {
             return h.intl.string(h.t.DvMBkZ);
     }
 };
-((l = a || (a = {})).DISCORD = 'discord'), (l.TWITCH = 'twitch'), (l.YOUTUBE = 'youtube'), (l.GUILD_SUBSCRIPTION = 'guild_subscription');
+!(function (e) {
+    (e.DISCORD = 'discord'), (e.TWITCH = 'twitch'), (e.YOUTUBE = 'youtube'), (e.GUILD_SUBSCRIPTION = 'guild_subscription');
+})(s || (s = {}));
 let S = (e) => {
         switch (e) {
             case 'twitch':
@@ -90,12 +95,12 @@ let S = (e) => {
                 return h.intl.string(h.t.gmCUFx);
         }
     },
-    y = (e) => {
-        let t = f.Z.get((0, _.rR)(e)),
-            n = (0, d.ZP)();
-        return null != t && ['twitch', 'youtube'].includes(e) ? "url('".concat((0, c.wj)(n) ? t.icon.darkSVG : t.icon.lightSVG, "')") : null;
+    A = (e) => {
+        let n = d.Z.get((0, f.rR)(e)),
+            r = (0, c.ZP)();
+        return null != n && ['twitch', 'youtube'].includes(e) ? "url('".concat((0, u.wj)(r) ? n.icon.darkSVG : n.icon.lightSVG, "')") : null;
     };
-function A(e) {
+function N(e) {
     return {
         userId: e.user_id,
         sourceInviteCode: e.source_invite_code,
@@ -104,30 +109,30 @@ function A(e) {
         integrationType: e.integration_type
     };
 }
-async function N(e, t) {
-    let n = E(e, t),
-        r = n.filter((e) => m[e] <= 1).map(v);
-    if (0 === r.length) return [];
-    I(n, 2);
+async function C(e, n) {
+    let r = g(e, n),
+        i = v(r);
+    if (0 === i.length) return [];
+    I(r, 2);
     try {
-        let t = await u.tn.post({
-            url: p.ANM.MEMBER_SAFETY_SUPPLEMENTAL(e),
-            body: { user_ids: r },
+        let n = await l.tn.post({
+            url: _.ANM.MEMBER_SAFETY_SUPPLEMENTAL(e),
+            body: { user_ids: i },
             rejectWithError: !0
         });
-        if (!Array.isArray(t.body)) return I(n, 0), [];
-        let i = t.body.map(A),
-            a = [];
-        i.forEach((e) => {
-            let { userId: t } = e;
-            return a.push(t);
+        if (!Array.isArray(n.body)) return I(r, 0), [];
+        let a = n.body.map(N),
+            s = [];
+        a.forEach((e) => {
+            let { userId: n } = e;
+            return s.push(n);
         });
-        let s = E(e, a),
-            o = r.filter((e) => !a.includes(e)),
-            l = E(e, o);
-        return I(s, 3), I(l, 0), i;
+        let o = g(e, s),
+            u = i.filter((e) => !s.includes(e)),
+            c = g(e, u);
+        return I(o, 3), I(c, 0), a;
     } catch (e) {
-        I(n, 0);
+        I(r, 0);
     }
     return [];
 }

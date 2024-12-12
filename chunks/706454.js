@@ -1,43 +1,46 @@
-n.r(t);
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140),
-    u = n(241601),
-    c = n(424395),
-    d = n(581883),
-    f = n(388032);
-let _ = c.vJ ? f.intl.currentLocale : f.intl.defaultLocale;
-function p() {
-    var e, t;
-    let n = null === (t = d.Z.settings.localization) || void 0 === t ? void 0 : null === (e = t.locale) || void 0 === e ? void 0 : e.value;
-    return null != n && '' !== n && n !== _ && ((_ = n), (0, u._2)(_), !0);
+r.r(n);
+var i,
+    a = r(442837),
+    s = r(570140),
+    o = r(241601),
+    l = r(424395),
+    u = r(581883),
+    c = r(388032);
+function d(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
 }
-class h extends (s = o.ZP.Store) {
+let f = l.vJ ? c.intl.currentLocale : c.intl.defaultLocale;
+function _() {
+    var e, n;
+    let r = null === (n = u.Z.settings.localization) || void 0 === n ? void 0 : null === (e = n.locale) || void 0 === e ? void 0 : e.value;
+    return null != r && '' !== r && r !== f && ((f = r), (0, o._2)(f), !0);
+}
+function h(e) {
+    (f = e.locale), (0, o._2)(f);
+}
+class p extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z), p(), (0, u._2)(_);
+        this.waitFor(u.Z), _(), (0, o._2)(f);
     }
     get locale() {
-        return _;
+        return f;
     }
 }
-(a = 'LocaleStore'),
-    (i = 'displayName') in (r = h)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.default = new h(l.Z, {
-        OVERLAY_INITIALIZE: p,
-        CACHE_LOADED: p,
-        CONNECTION_OPEN: p,
-        USER_SETTINGS_PROTO_UPDATE: p,
-        USER_SETTINGS_LOCALE_OVERRIDE: function (e) {
-            (_ = e.locale), (0, u._2)(_);
-        }
+d(p, 'displayName', 'LocaleStore'),
+    (n.default = new p(s.Z, {
+        OVERLAY_INITIALIZE: _,
+        CACHE_LOADED: _,
+        CONNECTION_OPEN: _,
+        USER_SETTINGS_PROTO_UPDATE: _,
+        USER_SETTINGS_LOCALE_OVERRIDE: h
     }));

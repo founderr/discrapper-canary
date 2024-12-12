@@ -1,87 +1,88 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return d;
+        return h;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(793030),
-    s = n(993365),
-    o = n(481060),
-    l = n(489863),
-    u = n(388032),
-    c = n(804537);
-function d(e) {
-    var t;
-    let { selectedGuildId: n, selectedChannelId: d, onChannelChange: f, error: _ } = e,
-        [p, h] = i.useState(null),
-        m = i.useRef(!1);
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(793030),
+    l = r(993365),
+    u = r(481060),
+    c = r(489863),
+    d = r(388032),
+    f = r(804537);
+let _ = 5;
+function h(e) {
+    var n;
+    let { selectedGuildId: r, selectedChannelId: i, onChannelChange: h, error: p } = e,
+        [m, g] = s.useState(null),
+        E = s.useRef(!1);
     if (
-        (i.useEffect(() => {
+        (s.useEffect(() => {
             async function e(e) {
-                let t = await (0, l.UR)(e);
-                n === e &&
-                    (t.sort((e, t) => e.name.localeCompare(t.name)),
-                    h({
+                let n = await (0, c.UR)(e);
+                r === e &&
+                    (n.sort((e, n) => e.name.localeCompare(n.name)),
+                    g({
                         guildId: e,
-                        channels: t
+                        channels: n
                     }),
-                    (m.current = !0));
+                    (E.current = !0));
             }
-            h(null), null == n ? f(null) : e(n);
-        }, [f, n]),
-        i.useEffect(() => {
-            if (!!m.current) null == p ? null != d && f(null) : !p.channels.some((e) => e.id === d) && f(null);
-        }, [p, f, d, n]),
-        null == n)
+            g(null), null == r ? h(null) : e(r);
+        }, [h, r]),
+        s.useEffect(() => {
+            if (!!E.current) null == m ? null != i && h(null) : !m.channels.some((e) => e.id === i) && h(null);
+        }, [m, h, i, r]),
+        null == r)
     )
         return null;
-    let g =
-        null == p || p.guildId !== n
+    let v =
+        null == m || m.guildId !== r
             ? []
-            : (null !== (t = null == p ? void 0 : p.channels) && void 0 !== t ? t : []).map((e) => ({
+            : (null !== (n = null == m ? void 0 : m.channels) && void 0 !== n ? n : []).map((e) => ({
                   value: e.id,
                   label: e.name
               }));
-    return (0, r.jsxs)('div', {
-        className: c.selectorGroup,
+    return (0, a.jsxs)('div', {
+        className: f.selectorGroup,
         children: [
-            (0, r.jsx)(a.X6, {
+            (0, a.jsx)(o.X6, {
                 variant: 'heading-deprecated-12/semibold',
-                className: c.sectionLabel,
-                children: u.intl.string(u.t['8qKd+P'])
+                className: f.sectionLabel,
+                children: d.intl.string(d.t['8qKd+P'])
             }),
-            null != _ && '' !== _
-                ? (0, r.jsx)(s.x, {
+            null != p && '' !== p
+                ? (0, a.jsx)(l.x, {
                       variant: 'text-xs/normal',
                       color: 'text-danger',
-                      children: _
+                      children: p
                   })
                 : null,
-            (0, r.jsx)(o.SearchableSelect, {
-                wrapperClassName: c.select,
-                maxVisibleItems: 5,
-                onChange: f,
-                placeholder: u.intl.string(u.t['Re/64e']),
-                options: g,
-                value: d,
+            (0, a.jsx)(u.SearchableSelect, {
+                wrapperClassName: f.select,
+                maxVisibleItems: _,
+                onChange: h,
+                placeholder: d.intl.string(d.t['Re/64e']),
+                options: v,
+                value: i,
                 renderOptionLabel: (e) =>
-                    (0, r.jsx)(s.x, {
+                    (0, a.jsx)(l.x, {
                         variant: 'text-md/normal',
                         children: e.label
                     }),
                 renderOptionValue: (e) =>
-                    (0, r.jsx)(s.x, {
+                    (0, a.jsx)(l.x, {
                         variant: 'text-md/normal',
                         children: e[0].label
                     })
             }),
-            (0, r.jsx)(s.x, {
+            (0, a.jsx)(l.x, {
                 variant: 'text-xs/normal',
                 color: 'header-secondary',
-                className: c.label,
-                children: u.intl.string(u.t.kQXMfH)
+                className: f.label,
+                children: d.intl.string(d.t.kQXMfH)
             })
         ]
     });

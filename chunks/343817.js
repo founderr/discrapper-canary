@@ -1,138 +1,135 @@
-var r, i;
-function a(e, t, n) {
+r.d(n, {
+    Hx: function () {
+        return _;
+    },
+    f$: function () {
+        return l;
+    },
+    hP: function () {
+        return i;
+    }
+});
+var i,
+    a = r(47120);
+var s = r(411104);
+function o(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-n.d(t, {
-    Hx: function () {
-        return u;
-    },
-    f$: function () {
-        return s;
-    },
-    hP: function () {
-        return r;
-    }
-}),
-    n(47120),
-    n(411104);
-let s = 50035,
-    o = '__root_errors';
-function l(e) {
+let l = 50035,
+    u = '__root_errors';
+function c(e) {
     return e.map((e) => ({
         code: 'UNKNOWN',
         message: e
     }));
 }
-((i = r || (r = {})).HCAPTCHA = 'hcaptcha'), (i.RECAPTCHA = 'recaptcha'), (i.RECAPTCHA_ENTERPRISE = 'recaptcha_enterprise');
-class u extends Error {
+function d(e) {
+    let n = {};
+    for (let [r, i] of Object.entries(e)) {
+        if ('_misc' === r) {
+            n._errors = c(i);
+            continue;
+        }
+        let e = {};
+        (e._errors = c(i)), (n[r] = e);
+    }
+    return n;
+}
+function f(e, n) {
+    if ('string' == typeof e)
+        return {
+            message: e,
+            code: n
+        };
+    if (null == e.body) return { status: e.status };
+    let r = e.body;
+    return null == e.body.message || Array.isArray(e.body.message) || (null != e.body.code && Array.isArray(e.body.code))
+        ? null != r && 'captcha_key' in r
+            ? {
+                  code: -1,
+                  captchaFields: r,
+                  status: e.status,
+                  message: r.captcha_key.length > 0 ? r.captcha_key[0] : void 0
+              }
+            : {
+                  status: e.status,
+                  code: l,
+                  errors: d(r)
+              }
+        : {
+              message: r.message,
+              code: r.code,
+              retryAfter: r.retry_after,
+              errors: r.errors,
+              status: e.status
+          };
+}
+!(function (e) {
+    (e.HCAPTCHA = 'hcaptcha'), (e.RECAPTCHA = 'recaptcha'), (e.RECAPTCHA_ENTERPRISE = 'recaptcha_enterprise');
+})(i || (i = {}));
+class _ extends Error {
     hasFieldErrors() {
         return null != this.errors && Object.keys(this.errors).length > 0;
     }
     getFieldErrors(e) {
         'string' == typeof e && (e = [e]);
-        let t = this.errors;
-        for (; e.length > 0 && null != t; ) (t = t[e[0]]), (e = e.splice(1));
-        return null == t ? void 0 : t._errors;
+        let n = this.errors;
+        for (; e.length > 0 && null != n; ) (n = n[e[0]]), (e = e.splice(1));
+        return null == n ? void 0 : n._errors;
     }
     getAllFieldErrors() {
         return this.getAllFieldErrorsUnder(this.errors);
     }
     getAllFieldErrorsUnder(e) {
-        let t = {},
-            n = null == e ? void 0 : e._errors;
+        let n = {},
+            r = null == e ? void 0 : e._errors;
         return (
-            null != n && n.length > 0 && (t[o] = n),
+            null != r && r.length > 0 && (n[u] = r),
             void 0 !== e &&
                 Object.entries(e).forEach((e) => {
-                    let [n, r] = e;
-                    if ('_errors' !== n)
-                        Object.entries(this.getAllFieldErrorsUnder(r)).forEach((e) => {
-                            let [r, i] = e;
-                            r === o ? (t[n] = i) : (t[''.concat(n, '.').concat(r)] = i);
+                    let [r, i] = e;
+                    if ('_errors' !== r)
+                        Object.entries(this.getAllFieldErrorsUnder(i)).forEach((e) => {
+                            let [i, a] = e;
+                            i === u ? (n[r] = a) : (n[''.concat(r, '.').concat(i)] = a);
                         });
                 }),
-            t
+            n
         );
     }
     getFirstFieldErrorMessage(e) {
-        let t = this.getFieldErrors(e);
-        return null == t || t.length < 1 ? null : t[0].message;
+        let n = this.getFieldErrors(e);
+        return null == n || n.length < 1 ? null : n[0].message;
     }
     getAnyErrorMessage() {
-        var e, t;
-        return null !== (t = null === (e = this.getAnyErrorMessageAndField()) || void 0 === e ? void 0 : e.error) && void 0 !== t ? t : this.message;
+        var e, n;
+        return null !== (n = null === (e = this.getAnyErrorMessageAndField()) || void 0 === e ? void 0 : e.error) && void 0 !== n ? n : this.message;
     }
     getAnyErrorMessageAndField() {
         let e = this.errors,
-            t = null;
+            n = null;
         for (; null != e; ) {
             if (null != e._errors)
                 return {
-                    fieldName: t,
+                    fieldName: n,
                     error: e._errors[0].message
                 };
-            (t = Object.keys(e)[0]), (e = e[t]);
+            (n = Object.keys(e)[0]), (e = e[n]);
         }
         return null;
     }
-    constructor(e, t, n = 'An unexpected error occurred.') {
-        let {
-            message: r,
-            code: i,
-            retryAfter: o,
-            errors: u,
-            status: c,
-            captchaFields: d
-        } = (function (e, t) {
-            if ('string' == typeof e)
-                return {
-                    message: e,
-                    code: t
-                };
-            if (null == e.body) return { status: e.status };
-            let n = e.body;
-            return null == e.body.message || Array.isArray(e.body.message) || (null != e.body.code && Array.isArray(e.body.code))
-                ? null != n && 'captcha_key' in n
-                    ? {
-                          code: -1,
-                          captchaFields: n,
-                          status: e.status,
-                          message: n.captcha_key.length > 0 ? n.captcha_key[0] : void 0
-                      }
-                    : {
-                          status: e.status,
-                          code: s,
-                          errors: (function (e) {
-                              let t = {};
-                              for (let [n, r] of Object.entries(e)) {
-                                  if ('_misc' === n) {
-                                      t._errors = l(r);
-                                      continue;
-                                  }
-                                  let e = {};
-                                  (e._errors = l(r)), (t[n] = e);
-                              }
-                              return t;
-                          })(n)
-                      }
-                : {
-                      message: n.message,
-                      code: n.code,
-                      retryAfter: n.retry_after,
-                      errors: n.errors,
-                      status: e.status
-                  };
-        })(e, t);
-        super(null != r ? r : n), a(this, 'code', void 0), a(this, 'retryAfter', void 0), a(this, 'errors', void 0), a(this, 'status', void 0), a(this, 'captchaFields', void 0), (this.code = null != i ? i : -1), (this.retryAfter = o), (this.errors = u), (this.status = c), (this.captchaFields = null != d ? d : {}), (this.cause = e);
+    constructor(e, n, r = 'An unexpected error occurred.') {
+        let { message: i, code: a, retryAfter: s, errors: l, status: u, captchaFields: c } = f(e, n);
+        super(null != i ? i : r), o(this, 'code', void 0), o(this, 'retryAfter', void 0), o(this, 'errors', void 0), o(this, 'status', void 0), o(this, 'captchaFields', void 0), (this.code = null != a ? a : -1), (this.retryAfter = s), (this.errors = l), (this.status = u), (this.captchaFields = null != c ? c : {}), (this.cause = e);
     }
 }

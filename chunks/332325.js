@@ -1,10 +1,9 @@
-var r, i;
-n.d(t, {
+var i;
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 }),
-    ((i = r || (r = {})).MY_GAMES = 'MY_GAMES'),
-    (i.CLIPS = 'CLIPS'),
-    (i.OVERLAY = 'OVERLAY'),
-    (i.ACTIVITY_PRIVACY = 'ACTIVITY_PRIVACY');
+    !(function (e) {
+        (e.MY_GAMES = 'MY_GAMES'), (e.CLIPS = 'CLIPS'), (e.OVERLAY = 'OVERLAY'), (e.ACTIVITY_PRIVACY = 'ACTIVITY_PRIVACY');
+    })(i || (i = {}));

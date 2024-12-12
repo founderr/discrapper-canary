@@ -1,101 +1,109 @@
-n.d(t, {
+r.d(n, {
     M: function () {
-        return r;
+        return i;
     }
-}),
-    n(47120);
-var r,
-    i,
+});
+var i,
     a,
-    s = n(442837),
-    o = n(570140),
-    l = n(70956);
-function u(e, t, n) {
+    s = r(47120);
+var o = r(442837),
+    l = r(570140),
+    u = r(70956);
+function c(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-((a = r || (r = {}))[(a.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (a[(a.FETCHING = 1)] = 'FETCHING'), (a[(a.FETCHED = 2)] = 'FETCHED'), (a[(a.ERROR = 3)] = 'ERROR');
-let c = {
+!(function (e) {
+    (e[(e.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (e[(e.FETCHING = 1)] = 'FETCHING'), (e[(e.FETCHED = 2)] = 'FETCHED'), (e[(e.ERROR = 3)] = 'ERROR');
+})(i || (i = {}));
+let d = {
     applicationIdToGuildIds: {},
     lastFetchTimeMs: null,
     nextFetchRetryTimeMs: null,
     fetchState: 0
 };
-function d(e) {
-    let { applicationId: t, guildId: n } = e;
-    null == c.applicationIdToGuildIds[t] && (c.applicationIdToGuildIds[t] = new Set()), c.applicationIdToGuildIds[t].add(n), (c.applicationIdToGuildIds[t] = new Set(c.applicationIdToGuildIds[t]));
+function f() {
+    (d.applicationIdToGuildIds = {}), (d.lastFetchTimeMs = null), (d.nextFetchRetryTimeMs = null), (d.fetchState = 0);
 }
-class f extends (i = s.ZP.PersistedStore) {
+function _() {
+    d.fetchState = 1;
+}
+function h(e) {
+    let { applicationId: n, guildId: r } = e;
+    null == d.applicationIdToGuildIds[n] && (d.applicationIdToGuildIds[n] = new Set()), d.applicationIdToGuildIds[n].add(r), (d.applicationIdToGuildIds[n] = new Set(d.applicationIdToGuildIds[n]));
+}
+function p(e) {
+    let { applicationId: n, guildId: r } = e;
+    if (null != d.applicationIdToGuildIds[n]) d.applicationIdToGuildIds[n].delete(r), (d.applicationIdToGuildIds[n] = new Set(d.applicationIdToGuildIds[n]));
+}
+function m(e) {
+    let { guildIdToApplicationIds: n } = e;
+    for (let e in ((d.fetchState = 2), (d.lastFetchTimeMs = Date.now()), (d.applicationIdToGuildIds = {}), (d.nextFetchRetryTimeMs = null), n))
+        for (let r of n[e])
+            h({
+                applicationId: r,
+                guildId: e
+            });
+}
+function g(e) {
+    let { retryAfterSeconds: n } = e;
+    if (((d.fetchState = 3), null != n)) {
+        let e = n * u.Z.Millis.SECOND;
+        d.nextFetchRetryTimeMs = Date.now() + e;
+    }
+}
+function E(e) {
+    let { application: n, guildId: r } = e;
+    if (null != n)
+        h({
+            applicationId: n.id,
+            guildId: r
+        });
+}
+function v(e) {
+    let { applicationId: n, guildId: r } = e;
+    if (null != n)
+        p({
+            applicationId: n,
+            guildId: r
+        });
+}
+class I extends (a = o.ZP.PersistedStore) {
     initialize(e) {
-        if (null != e) for (let t in ((c.lastFetchTimeMs = e.lastFetchTimeMs), (c.nextFetchRetryTimeMs = e.nextFetchRetryTimeMs), (c.fetchState = e.fetchState), e.applicationIdToGuildIds)) c.applicationIdToGuildIds[t] = new Set(e.applicationIdToGuildIds[t]);
+        if (null != e) for (let n in ((d.lastFetchTimeMs = e.lastFetchTimeMs), (d.nextFetchRetryTimeMs = e.nextFetchRetryTimeMs), (d.fetchState = e.fetchState), e.applicationIdToGuildIds)) d.applicationIdToGuildIds[n] = new Set(e.applicationIdToGuildIds[n]);
     }
     getState() {
-        return c;
+        return d;
     }
     getGuildIdsForApplication(e) {
-        if (null != e) return c.applicationIdToGuildIds[e];
+        if (null != e) return d.applicationIdToGuildIds[e];
     }
     getLastFetchTimeMs() {
-        return c.lastFetchTimeMs;
+        return d.lastFetchTimeMs;
     }
     getNextFetchRetryTimeMs() {
-        return c.nextFetchRetryTimeMs;
+        return d.nextFetchRetryTimeMs;
     }
     getFetchState() {
-        return c.fetchState;
+        return d.fetchState;
     }
 }
-u(f, 'displayName', 'MyGuildApplicationsStore'),
-    u(f, 'persistKey', 'MyGuildApplicationsStore'),
-    (t.Z = new f(o.Z, {
-        LOGOUT: function () {
-            (c.applicationIdToGuildIds = {}), (c.lastFetchTimeMs = null), (c.nextFetchRetryTimeMs = null), (c.fetchState = 0);
-        },
-        FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS: function () {
-            c.fetchState = 1;
-        },
-        FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS_SUCCESS: function (e) {
-            let { guildIdToApplicationIds: t } = e;
-            for (let e in ((c.fetchState = 2), (c.lastFetchTimeMs = Date.now()), (c.applicationIdToGuildIds = {}), (c.nextFetchRetryTimeMs = null), t))
-                for (let n of t[e])
-                    d({
-                        applicationId: n,
-                        guildId: e
-                    });
-        },
-        FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS_FAILURE: function (e) {
-            let { retryAfterSeconds: t } = e;
-            if (((c.fetchState = 3), null != t)) {
-                let e = t * l.Z.Millis.SECOND;
-                c.nextFetchRetryTimeMs = Date.now() + e;
-            }
-        },
-        INTEGRATION_CREATE: function (e) {
-            let { application: t, guildId: n } = e;
-            if (null != t)
-                d({
-                    applicationId: t.id,
-                    guildId: n
-                });
-        },
-        INTEGRATION_DELETE: function (e) {
-            let { applicationId: t, guildId: n } = e;
-            if (null != t)
-                !(function (e) {
-                    let { applicationId: t, guildId: n } = e;
-                    if (null != c.applicationIdToGuildIds[t]) c.applicationIdToGuildIds[t].delete(n), (c.applicationIdToGuildIds[t] = new Set(c.applicationIdToGuildIds[t]));
-                })({
-                    applicationId: t,
-                    guildId: n
-                });
-        }
+c(I, 'displayName', 'MyGuildApplicationsStore'),
+    c(I, 'persistKey', 'MyGuildApplicationsStore'),
+    (n.Z = new I(l.Z, {
+        LOGOUT: f,
+        FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS: _,
+        FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS_SUCCESS: m,
+        FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS_FAILURE: g,
+        INTEGRATION_CREATE: E,
+        INTEGRATION_DELETE: v
     }));

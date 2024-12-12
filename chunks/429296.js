@@ -1,5 +1,7 @@
-var n = /^(?:0|[1-9]\d*)$/;
-t.Z = function (e, t) {
-    var r = typeof e;
-    return !!(t = null == t ? 9007199254740991 : t) && ('number' == r || ('symbol' != r && n.test(e))) && e > -1 && e % 1 == 0 && e < t;
-};
+var r = 9007199254740991,
+    i = /^(?:0|[1-9]\d*)$/;
+function a(e, n) {
+    var a = typeof e;
+    return !!(n = null == n ? r : n) && ('number' == a || ('symbol' != a && i.test(e))) && e > -1 && e % 1 == 0 && e < n;
+}
+n.Z = a;

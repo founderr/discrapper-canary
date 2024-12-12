@@ -1,83 +1,86 @@
-n.d(t, {
+r.d(n, {
     ZX: function () {
-        return I;
+        return E;
     },
     gt: function () {
-        return T;
+        return v;
     },
     rH: function () {
-        return o;
+        return i;
     }
 });
-var r,
-    i,
+var i,
     a,
-    s,
-    o,
-    l,
-    u = n(200651),
-    c = n(192379),
-    d = n(120356),
-    f = n.n(d),
-    _ = n(748780),
-    p = n(481060),
-    h = n(727637),
-    m = n(600164),
-    g = n(136997);
-((r = o || (o = {})).DEFAULT = 'default'), (r.SMALL = 'small');
-let E = {
-        default: g.shineDefault,
-        small: g.shineSmall
+    s = r(200651),
+    o = r(192379),
+    l = r(120356),
+    u = r.n(l),
+    c = r(748780),
+    d = r(481060),
+    f = r(727637),
+    _ = r(600164),
+    h = r(136997);
+function p(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+!(function (e) {
+    (e.DEFAULT = 'default'), (e.SMALL = 'small');
+})(i || (i = {}));
+let m = {
+        default: h.shineDefault,
+        small: h.shineSmall
     },
-    v = {
-        default: g.shineInnerDefault,
-        small: g.shineInnerSmall
+    g = {
+        default: h.shineInnerDefault,
+        small: h.shineInnerSmall
     };
-class I extends (l = c.PureComponent) {
+class E extends (a = o.PureComponent) {
     render() {
-        let { className: e, shineSize: t, shinePaused: n, ...r } = this.props;
-        return (0, u.jsx)(_.Z.div, {
-            ...r,
-            className: f()(g.shineContainer, e, { [g.shinePaused]: n }),
-            children: (0, u.jsx)(m.Z, {
-                align: m.Z.Align.CENTER,
-                justify: m.Z.Justify.CENTER,
-                className: E[t],
-                children: (0, u.jsx)('div', { className: v[t] })
+        let { className: e, shineSize: n, shinePaused: r, ...i } = this.props;
+        return (0, s.jsx)(c.Z.div, {
+            ...i,
+            className: u()(h.shineContainer, e, { [h.shinePaused]: r }),
+            children: (0, s.jsx)(_.Z, {
+                align: _.Z.Align.CENTER,
+                justify: _.Z.Justify.CENTER,
+                className: m[n],
+                children: (0, s.jsx)('div', { className: g[n] })
             })
         });
     }
 }
-(s = { shineSize: 'default' }),
-    (a = 'defaultProps') in (i = I)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s);
-let T = (e) => {
-    let { children: t, className: n, disabled: r, submitting: i, pauseAnimation: a, shineSize: s = 'default', shinePaused: o, buttonShineClassName: l, onlyShineOnHover: d, ..._ } = e,
-        m = c.createRef(),
-        E = (0, h.Z)(m),
-        v = !r && !i && !0 !== a && (!d || E);
-    return (0, u.jsxs)(p.Button, {
-        buttonRef: m,
-        ..._,
-        className: f()(g.shinyButton, n),
-        disabled: r,
-        submitting: i,
+p(E, 'defaultProps', { shineSize: 'default' });
+let v = (e) => {
+    let { children: n, className: r, disabled: i, submitting: a, pauseAnimation: l, shineSize: c = 'default', shinePaused: _, buttonShineClassName: p, onlyShineOnHover: m, ...g } = e,
+        v = o.createRef(),
+        I = (0, f.Z)(v),
+        T = !i && !a && !0 !== l && (!m || I);
+    return (0, s.jsxs)(d.Button, {
+        buttonRef: v,
+        ...g,
+        className: u()(h.shinyButton, r),
+        disabled: i,
+        submitting: a,
         children: [
-            t,
-            v
-                ? (0, u.jsx)(I, {
-                      shinePaused: o,
-                      className: f()(g.buttonShine, d ? g.onlyShineOnHover : void 0, l),
-                      shineSize: s
+            n,
+            T
+                ? (0, s.jsx)(E, {
+                      shinePaused: _,
+                      className: u()(h.buttonShine, m ? h.onlyShineOnHover : void 0, p),
+                      shineSize: c
                   })
                 : null
         ]
     });
 };
-T.ShineSizes = o;
+v.ShineSizes = i;

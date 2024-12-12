@@ -1,56 +1,60 @@
-n(653041), n(47120);
-var r,
-    i = n(442837),
-    a = n(570140);
-function s(e, t, n) {
+var i,
+    a = r(653041);
+var s = r(47120);
+var o = r(442837),
+    l = r(570140);
+function u(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let o = [],
-    l = !1,
-    u = o;
-class c extends (r = i.ZP.PersistedStore) {
+let c = [],
+    d = !1,
+    f = c;
+function _(e) {
+    d = e.persistentCodesEnabled;
+}
+function h(e) {
+    let n = [];
+    for (let r of f) {
+        if (r === e.keyVersion) return;
+        n.push(r);
+    }
+    n.push(e.keyVersion), (f = n);
+}
+function p() {
+    f = c;
+}
+class m extends (i = o.ZP.PersistedStore) {
     initialize(e) {
-        var t, n;
-        (l = null !== (t = null == e ? void 0 : e.persistentCodesEnabled) && void 0 !== t && t), (u = null !== (n = null == e ? void 0 : e.uploadedKeyVersions) && void 0 !== n ? n : o);
+        var n, r;
+        (d = null !== (n = null == e ? void 0 : e.persistentCodesEnabled) && void 0 !== n && n), (f = null !== (r = null == e ? void 0 : e.uploadedKeyVersions) && void 0 !== r ? r : c);
     }
     getState() {
         return {
-            persistentCodesEnabled: l,
-            uploadedKeyVersions: u
+            persistentCodesEnabled: d,
+            uploadedKeyVersions: f
         };
     }
     getPersistentCodesEnabled() {
-        return l;
+        return d;
     }
     getUploadedKeyVersionsCached() {
-        return u;
+        return f;
     }
 }
-s(c, 'displayName', 'SecureFramesPersistedStore'),
-    s(c, 'persistKey', 'SecureFramesPersistedStore'),
-    (t.Z = new c(a.Z, {
-        SECURE_FRAMES_SETTINGS_UPDATE: function (e) {
-            l = e.persistentCodesEnabled;
-        },
-        SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD: function (e) {
-            let t = [];
-            for (let n of u) {
-                if (n === e.keyVersion) return;
-                t.push(n);
-            }
-            t.push(e.keyVersion), (u = t);
-        },
-        SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR: function () {
-            u = o;
-        }
+u(m, 'displayName', 'SecureFramesPersistedStore'),
+    u(m, 'persistKey', 'SecureFramesPersistedStore'),
+    (n.Z = new m(l.Z, {
+        SECURE_FRAMES_SETTINGS_UPDATE: _,
+        SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD: h,
+        SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR: p
     }));

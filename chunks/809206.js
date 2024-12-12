@@ -1,151 +1,149 @@
-n.d(t, {
+r.d(n, {
     FD: function () {
-        return h;
+        return m;
     },
     I5: function () {
-        return b;
+        return y;
     },
     Mn: function () {
-        return v;
+        return I;
     },
     P6: function () {
-        return O;
+        return D;
     },
     S2: function () {
-        return E;
+        return v;
     },
     UZ: function () {
         return S;
     },
     V3: function () {
-        return T;
+        return b;
     },
     W3: function () {
-        return R;
+        return O;
     },
     Zy: function () {
-        return m;
-    },
-    b9: function () {
-        return N;
-    },
-    cV: function () {
-        return y;
-    },
-    ol: function () {
-        return I;
-    },
-    si: function () {
-        return C;
-    },
-    ss: function () {
         return g;
     },
-    xn: function () {
+    b9: function () {
+        return C;
+    },
+    cV: function () {
         return A;
+    },
+    ol: function () {
+        return T;
+    },
+    si: function () {
+        return R;
+    },
+    ss: function () {
+        return E;
+    },
+    xn: function () {
+        return N;
     }
 });
-var r = n(544891),
-    i = n(433517),
-    a = n(780384),
-    s = n(570140),
-    o = n(703656),
-    l = n(626135),
-    u = n(768581),
-    c = n(546796),
-    d = n(893776),
-    f = n(981631),
-    _ = n(792101),
-    p = n(388032);
-function h() {
-    s.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_INIT' });
-}
+var i = r(544891),
+    a = r(433517),
+    s = r(780384),
+    o = r(570140),
+    l = r(703656),
+    u = r(626135),
+    c = r(768581),
+    d = r(546796),
+    f = r(893776),
+    _ = r(981631),
+    h = r(792101),
+    p = r(388032);
 function m() {
-    s.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_CLOSE' });
+    o.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_INIT' });
 }
-function g(e, t) {
-    let n = t ? p.intl.string(p.t['8lQ2ra']) : p.intl.string(p.t.jf5GGR),
-        i = t ? f.ANM.DELETE_ACCOUNT : f.ANM.DISABLE_ACCOUNT;
-    return (0, c.Z)(
-        (t) =>
-            r.tn.post({
-                url: i,
+function g() {
+    o.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_CLOSE' });
+}
+function E(e, n) {
+    let r = n ? p.intl.string(p.t['8lQ2ra']) : p.intl.string(p.t.jf5GGR),
+        a = n ? _.ANM.DELETE_ACCOUNT : _.ANM.DISABLE_ACCOUNT,
+        s = (n) =>
+            i.tn.post({
+                url: a,
                 body: {
                     password: e,
-                    ...t
+                    ...n
                 },
                 oldFormErrors: !0,
                 rejectWithError: !1
-            }),
-        {
-            modalProps: { title: n },
-            checkEnabled: !1
-        }
-    ).then(() => {
-        d.Z.logoutInternal(), (0, o.uL)(f.Z5c.DEFAULT_LOGGED_OUT);
+            });
+    return (0, d.Z)(s, {
+        modalProps: { title: r },
+        checkEnabled: !1
+    }).then(() => {
+        f.Z.logoutInternal(), (0, l.uL)(_.Z5c.DEFAULT_LOGGED_OUT);
     });
 }
-async function E(e) {
-    let t = await r.tn.patch({
-            url: f.ANM.ME,
+async function v(e) {
+    let n = await i.tn.patch({
+            url: _.ANM.ME,
             oldFormErrors: !0,
             body: e,
             rejectWithError: !1
         }),
-        n = t.body;
-    if (n.token) {
-        let t = n.token;
-        delete n.token,
-            s.Z.dispatch({
+        r = n.body;
+    if (r.token) {
+        let n = r.token;
+        delete r.token,
+            o.Z.dispatch({
                 type: 'UPDATE_TOKEN',
-                token: t,
-                userId: n.id
+                token: n,
+                userId: r.id
             }),
             (null == e ? void 0 : e.password) != null &&
                 (null == e ? void 0 : e.new_password) != null &&
-                s.Z.dispatch({
+                o.Z.dispatch({
                     type: 'PASSWORD_UPDATED',
-                    userId: n.id
+                    userId: r.id
                 });
     }
     return (
-        s.Z.dispatch({
+        o.Z.dispatch({
             type: 'CURRENT_USER_UPDATE',
-            user: n
+            user: r
         }),
-        t
+        n
     );
 }
-function v(e) {
-    let { username: t, discriminator: n, email: r, emailToken: a, password: o, avatar: d, avatarDecoration: h, newPassword: m, globalName: g } = e;
+function I(e) {
+    let { username: n, discriminator: r, email: i, emailToken: s, password: l, avatar: f, avatarDecoration: m, newPassword: g, globalName: E } = e;
     return (
-        s.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT' }),
-        (0, c.Z)(
+        o.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT' }),
+        (0, d.Z)(
             (e) => {
-                let s = {
-                    username: t,
-                    email: r,
-                    email_token: a,
-                    password: o,
-                    avatar: d,
-                    discriminator: n,
-                    global_name: g,
-                    new_password: m,
+                let o = {
+                    username: n,
+                    email: i,
+                    email_token: s,
+                    password: l,
+                    avatar: f,
+                    discriminator: r,
+                    global_name: E,
+                    new_password: g,
                     ...e
                 };
-                null === h && (s.avatar_decoration_id = null), null != h && ((s.avatar_decoration_id = h.id), (s.avatar_decoration_sku_id = h.skuId));
-                let l = i.K.get(f.JkL),
-                    u = (0, _.xJ)();
-                null != u && null != l && ((s.push_provider = u), (s.push_token = l));
-                let c = i.K.get(f.scU);
-                return null != _.mv && null != c && ((s.push_voip_provider = _.mv), (s.push_voip_token = c)), E(s);
+                null === m && (o.avatar_decoration_id = null), null != m && ((o.avatar_decoration_id = m.id), (o.avatar_decoration_sku_id = m.skuId));
+                let u = a.K.get(_.JkL),
+                    c = (0, h.xJ)();
+                null != c && null != u && ((o.push_provider = c), (o.push_token = u));
+                let d = a.K.get(_.scU);
+                return null != h.mv && null != d && ((o.push_voip_provider = h.mv), (o.push_voip_token = d)), v(o);
             },
             {
                 checkEnabled: !1,
                 modalProps: { title: p.intl.string(p.t.clQc1d) },
                 hooks: {
                     onEarlyClose: () =>
-                        s.Z.dispatch({
+                        o.Z.dispatch({
                             type: 'USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE',
                             errors: {}
                         })
@@ -153,11 +151,11 @@ function v(e) {
             }
         ).then(
             (e) => {
-                let t = e.body;
-                return l.default.track(f.rMx.USER_AVATAR_UPDATED, { animated: (0, u.xR)(t.avatar) }), s.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS' }), e;
+                let n = e.body;
+                return u.default.track(_.rMx.USER_AVATAR_UPDATED, { animated: (0, c.xR)(n.avatar) }), o.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS' }), e;
             },
             (e) => (
-                s.Z.dispatch({
+                o.Z.dispatch({
                     type: 'USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE',
                     errors: e.body
                 }),
@@ -166,55 +164,55 @@ function v(e) {
         )
     );
 }
-function I() {
-    return r.tn.get({
-        url: f.ANM.USER_HARVEST,
-        oldFormErrors: !0,
-        rejectWithError: !1
-    });
-}
-function T(e) {
-    return r.tn.post({
-        url: f.ANM.USER_HARVEST,
-        body: { backends: e },
+function T() {
+    return i.tn.get({
+        url: _.ANM.USER_HARVEST,
         oldFormErrors: !0,
         rejectWithError: !1
     });
 }
 function b(e) {
-    s.Z.dispatch({
+    return i.tn.post({
+        url: _.ANM.USER_HARVEST,
+        body: { backends: e },
+        oldFormErrors: !0,
+        rejectWithError: !1
+    });
+}
+function y(e) {
+    o.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR',
         avatar: e
     }),
-        null == e ? a.uv.announce(p.intl.string(p.t['f1+oNj'])) : a.uv.announce(p.intl.string(p.t.NstziY));
+        null == e ? s.uv.announce(p.intl.string(p.t['f1+oNj'])) : s.uv.announce(p.intl.string(p.t.NstziY));
 }
 function S(e) {
-    s.Z.dispatch({
+    o.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME',
         globalName: e
     });
 }
-function y(e) {
-    s.Z.dispatch({
+function A(e) {
+    o.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION',
         avatarDecoration: e
     });
 }
-function A(e) {
-    s.Z.dispatch({
+function N(e) {
+    o.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID',
         profileEffectId: e
     });
 }
-function N() {
-    s.Z.dispatch({ type: 'USER_SETTINGS_CLEAR_ERRORS' });
-}
 function C() {
-    s.Z.dispatch({ type: 'USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES' });
+    o.Z.dispatch({ type: 'USER_SETTINGS_CLEAR_ERRORS' });
 }
 function R() {
-    s.Z.dispatch({ type: 'USER_SETTINGS_RESET_ALL_PENDING' });
+    o.Z.dispatch({ type: 'USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES' });
 }
 function O() {
-    s.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM' });
+    o.Z.dispatch({ type: 'USER_SETTINGS_RESET_ALL_PENDING' });
+}
+function D() {
+    o.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM' });
 }

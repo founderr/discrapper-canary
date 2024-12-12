@@ -1,76 +1,75 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return u;
+        return d;
     },
     q: function () {
-        return o;
+        return u;
     }
 });
-var r = n(239700),
-    i = n(192379),
-    a = n(989103);
-class s extends Set {
-    constructor(e, t, n) {
-        super(e), e instanceof s ? ((this.anchorKey = t || e.anchorKey), (this.currentKey = n || e.currentKey)) : ((this.anchorKey = t), (this.currentKey = n));
+var i = r(239700),
+    a = r(192379),
+    s = r(989103);
+class o extends Set {
+    constructor(e, n, r) {
+        super(e), e instanceof o ? ((this.anchorKey = n || e.anchorKey), (this.currentKey = r || e.currentKey)) : ((this.anchorKey = n), (this.currentKey = r));
     }
 }
-function o(e) {
-    let { selectionMode: t = 'none', disallowEmptySelection: n, allowDuplicateSelectionEvents: a, selectionBehavior: o = 'toggle', disabledBehavior: u = 'all' } = e,
-        c = (0, i.useRef)(!1),
-        [, d] = (0, i.useState)(!1),
-        f = (0, i.useRef)(null),
-        _ = (0, i.useRef)(null),
-        [, p] = (0, i.useState)(null),
-        h = (0, i.useMemo)(() => l(e.selectedKeys), [e.selectedKeys]),
-        m = (0, i.useMemo)(() => l(e.defaultSelectedKeys, new s()), [e.defaultSelectedKeys]),
-        [g, E] = (0, r.zk)(h, m, e.onSelectionChange),
-        v = (0, i.useMemo)(() => (e.disabledKeys ? new Set(e.disabledKeys) : new Set()), [e.disabledKeys]),
-        [I, T] = (0, i.useState)(o);
-    'replace' === o && 'toggle' === I && 'object' == typeof g && 0 === g.size && T('replace');
-    let b = (0, i.useRef)(o);
+function l(e, n) {
+    if (e.size !== n.size) return !1;
+    for (let r of e) if (!n.has(r)) return !1;
+    return !0;
+}
+function u(e) {
+    let { selectionMode: n = 'none', disallowEmptySelection: r, allowDuplicateSelectionEvents: s, selectionBehavior: u = 'toggle', disabledBehavior: d = 'all' } = e,
+        f = (0, a.useRef)(!1),
+        [, _] = (0, a.useState)(!1),
+        h = (0, a.useRef)(null),
+        p = (0, a.useRef)(null),
+        [, m] = (0, a.useState)(null),
+        g = (0, a.useMemo)(() => c(e.selectedKeys), [e.selectedKeys]),
+        E = (0, a.useMemo)(() => c(e.defaultSelectedKeys, new o()), [e.defaultSelectedKeys]),
+        [v, I] = (0, i.zk)(g, E, e.onSelectionChange),
+        T = (0, a.useMemo)(() => (e.disabledKeys ? new Set(e.disabledKeys) : new Set()), [e.disabledKeys]),
+        [b, y] = (0, a.useState)(u);
+    'replace' === u && 'toggle' === b && 'object' == typeof v && 0 === v.size && y('replace');
+    let S = (0, a.useRef)(u);
     return (
-        (0, i.useEffect)(() => {
-            o !== b.current && (T(o), (b.current = o));
-        }, [o]),
+        (0, a.useEffect)(() => {
+            u !== S.current && (y(u), (S.current = u));
+        }, [u]),
         {
-            selectionMode: t,
-            disallowEmptySelection: n,
-            selectionBehavior: I,
-            setSelectionBehavior: T,
+            selectionMode: n,
+            disallowEmptySelection: r,
+            selectionBehavior: b,
+            setSelectionBehavior: y,
             get isFocused() {
-                return c.current;
-            },
-            setFocused(e) {
-                (c.current = e), d(e);
-            },
-            get focusedKey() {
                 return f.current;
             },
+            setFocused(e) {
+                (f.current = e), _(e);
+            },
+            get focusedKey() {
+                return h.current;
+            },
             get childFocusStrategy() {
-                return _.current;
+                return p.current;
             },
-            setFocusedKey(e, t = 'first') {
-                (f.current = e), (_.current = t), p(e);
+            setFocusedKey(e, n = 'first') {
+                (h.current = e), (p.current = n), m(e);
             },
-            selectedKeys: g,
+            selectedKeys: v,
             setSelectedKeys(e) {
-                (a ||
-                    !(function (e, t) {
-                        if (e.size !== t.size) return !1;
-                        for (let n of e) if (!t.has(n)) return !1;
-                        return !0;
-                    })(e, g)) &&
-                    E(e);
+                (s || !l(e, v)) && I(e);
             },
-            disabledKeys: v,
-            disabledBehavior: u
+            disabledKeys: T,
+            disabledBehavior: d
         }
     );
 }
-function l(e, t) {
-    return e ? ('all' === e ? 'all' : new s(e)) : t;
+function c(e, n) {
+    return e ? ('all' === e ? 'all' : new o(e)) : n;
 }
-class u {
+class d {
     get selectionMode() {
         return this.state.selectionMode;
     }
@@ -95,8 +94,8 @@ class u {
     get childFocusStrategy() {
         return this.state.childFocusStrategy;
     }
-    setFocusedKey(e, t) {
-        (null == e || this.collection.getItem(e)) && this.state.setFocusedKey(e, t);
+    setFocusedKey(e, n) {
+        (null == e || this.collection.getItem(e)) && this.state.setFocusedKey(e, n);
     }
     get selectedKeys() {
         return 'all' === this.state.selectedKeys ? new Set(this.getSelectAllKeys()) : this.state.selectedKeys;
@@ -115,22 +114,22 @@ class u {
         if ('all' === this.state.selectedKeys) return !0;
         if (null != this._isSelectAll) return this._isSelectAll;
         let e = this.getSelectAllKeys(),
-            t = this.state.selectedKeys;
-        return (this._isSelectAll = e.every((e) => t.has(e))), this._isSelectAll;
+            n = this.state.selectedKeys;
+        return (this._isSelectAll = e.every((e) => n.has(e))), this._isSelectAll;
     }
     get firstSelectedKey() {
         let e = null;
-        for (let t of this.state.selectedKeys) {
-            let n = this.collection.getItem(t);
-            (!e || (n && 0 > (0, a.eg)(this.collection, n, e))) && (e = n);
+        for (let n of this.state.selectedKeys) {
+            let r = this.collection.getItem(n);
+            (!e || (r && 0 > (0, s.eg)(this.collection, r, e))) && (e = r);
         }
         return null == e ? void 0 : e.key;
     }
     get lastSelectedKey() {
         let e = null;
-        for (let t of this.state.selectedKeys) {
-            let n = this.collection.getItem(t);
-            (!e || (n && (0, a.eg)(this.collection, n, e) > 0)) && (e = n);
+        for (let n of this.state.selectedKeys) {
+            let r = this.collection.getItem(n);
+            (!e || (r && (0, s.eg)(this.collection, r, e) > 0)) && (e = r);
         }
         return null == e ? void 0 : e.key;
     }
@@ -141,43 +140,43 @@ class u {
         return this.state.disabledBehavior;
     }
     extendSelection(e) {
-        let t;
+        let n;
         if ('none' !== this.selectionMode) {
             if ('single' === this.selectionMode) {
                 this.replaceSelection(e);
                 return;
             }
-            if (((e = this.getKey(e)), 'all' === this.state.selectedKeys)) t = new s([e], e, e);
+            if (((e = this.getKey(e)), 'all' === this.state.selectedKeys)) n = new o([e], e, e);
             else {
-                let n = this.state.selectedKeys,
-                    r = n.anchorKey || e;
-                for (let i of ((t = new s(n, r, e)), this.getKeyRange(r, n.currentKey || e))) t.delete(i);
-                for (let n of this.getKeyRange(e, r)) this.canSelectItem(n) && t.add(n);
+                let r = this.state.selectedKeys,
+                    i = r.anchorKey || e;
+                for (let a of ((n = new o(r, i, e)), this.getKeyRange(i, r.currentKey || e))) n.delete(a);
+                for (let r of this.getKeyRange(e, i)) this.canSelectItem(r) && n.add(r);
             }
-            this.state.setSelectedKeys(t);
+            this.state.setSelectedKeys(n);
         }
     }
-    getKeyRange(e, t) {
-        let n = this.collection.getItem(e),
-            r = this.collection.getItem(t);
-        if (n && r) return 0 >= (0, a.eg)(this.collection, n, r) ? this.getKeyRangeInternal(e, t) : this.getKeyRangeInternal(t, e);
+    getKeyRange(e, n) {
+        let r = this.collection.getItem(e),
+            i = this.collection.getItem(n);
+        if (r && i) return 0 >= (0, s.eg)(this.collection, r, i) ? this.getKeyRangeInternal(e, n) : this.getKeyRangeInternal(n, e);
         return [];
     }
-    getKeyRangeInternal(e, t) {
-        let n = [],
-            r = e;
-        for (; r; ) {
-            let e = this.collection.getItem(r);
-            if ((((e && 'item' === e.type) || ('cell' === e.type && this.allowsCellSelection)) && n.push(r), r === t)) return n;
-            r = this.collection.getKeyAfter(r);
+    getKeyRangeInternal(e, n) {
+        let r = [],
+            i = e;
+        for (; i; ) {
+            let e = this.collection.getItem(i);
+            if ((((e && 'item' === e.type) || ('cell' === e.type && this.allowsCellSelection)) && r.push(i), i === n)) return r;
+            i = this.collection.getKeyAfter(i);
         }
         return [];
     }
     getKey(e) {
-        let t = this.collection.getItem(e);
-        if (!t || ('cell' === t.type && this.allowsCellSelection)) return e;
-        for (; 'item' !== t.type && null != t.parentKey; ) t = this.collection.getItem(t.parentKey);
-        return t && 'item' === t.type ? t.key : null;
+        let n = this.collection.getItem(e);
+        if (!n || ('cell' === n.type && this.allowsCellSelection)) return e;
+        for (; 'item' !== n.type && null != n.parentKey; ) n = this.collection.getItem(n.parentKey);
+        return n && 'item' === n.type ? n.key : null;
     }
     toggleSelection(e) {
         if ('none' === this.selectionMode) return;
@@ -186,67 +185,67 @@ class u {
             return;
         }
         if (null == (e = this.getKey(e))) return;
-        let t = new s('all' === this.state.selectedKeys ? this.getSelectAllKeys() : this.state.selectedKeys);
-        t.has(e) ? t.delete(e) : this.canSelectItem(e) && (t.add(e), (t.anchorKey = e), (t.currentKey = e)), (!this.disallowEmptySelection || 0 !== t.size) && this.state.setSelectedKeys(t);
+        let n = new o('all' === this.state.selectedKeys ? this.getSelectAllKeys() : this.state.selectedKeys);
+        n.has(e) ? n.delete(e) : this.canSelectItem(e) && (n.add(e), (n.anchorKey = e), (n.currentKey = e)), (!this.disallowEmptySelection || 0 !== n.size) && this.state.setSelectedKeys(n);
     }
     replaceSelection(e) {
         if ('none' === this.selectionMode || null == (e = this.getKey(e))) return;
-        let t = this.canSelectItem(e) ? new s([e], e, e) : new s();
-        this.state.setSelectedKeys(t);
+        let n = this.canSelectItem(e) ? new o([e], e, e) : new o();
+        this.state.setSelectedKeys(n);
     }
     setSelectedKeys(e) {
         if ('none' === this.selectionMode) return;
-        let t = new s();
-        for (let n of e) if (null != (n = this.getKey(n)) && (t.add(n), 'single' === this.selectionMode)) break;
-        this.state.setSelectedKeys(t);
+        let n = new o();
+        for (let r of e) if (null != (r = this.getKey(r)) && (n.add(r), 'single' === this.selectionMode)) break;
+        this.state.setSelectedKeys(n);
     }
     getSelectAllKeys() {
         let e = [],
-            t = (n) => {
-                for (; n; ) {
-                    if (this.canSelectItem(n)) {
-                        let r = this.collection.getItem(n);
-                        'item' === r.type && e.push(n), r.hasChildNodes && (this.allowsCellSelection || 'item' !== r.type) && t((0, a.l8)((0, a._P)(r, this.collection)).key);
+            n = (r) => {
+                for (; r; ) {
+                    if (this.canSelectItem(r)) {
+                        let i = this.collection.getItem(r);
+                        'item' === i.type && e.push(r), i.hasChildNodes && (this.allowsCellSelection || 'item' !== i.type) && n((0, s.l8)((0, s._P)(i, this.collection)).key);
                     }
-                    n = this.collection.getKeyAfter(n);
+                    r = this.collection.getKeyAfter(r);
                 }
             };
-        return t(this.collection.getFirstKey()), e;
+        return n(this.collection.getFirstKey()), e;
     }
     selectAll() {
         !this.isSelectAll && 'multiple' === this.selectionMode && this.state.setSelectedKeys('all');
     }
     clearSelection() {
-        !this.disallowEmptySelection && ('all' === this.state.selectedKeys || this.state.selectedKeys.size > 0) && this.state.setSelectedKeys(new s());
+        !this.disallowEmptySelection && ('all' === this.state.selectedKeys || this.state.selectedKeys.size > 0) && this.state.setSelectedKeys(new o());
     }
     toggleSelectAll() {
         this.isSelectAll ? this.clearSelection() : this.selectAll();
     }
-    select(e, t) {
-        'none' !== this.selectionMode && ('single' === this.selectionMode ? (this.isSelected(e) && !this.disallowEmptySelection ? this.toggleSelection(e) : this.replaceSelection(e)) : 'toggle' === this.selectionBehavior || (t && ('touch' === t.pointerType || 'virtual' === t.pointerType)) ? this.toggleSelection(e) : this.replaceSelection(e));
+    select(e, n) {
+        'none' !== this.selectionMode && ('single' === this.selectionMode ? (this.isSelected(e) && !this.disallowEmptySelection ? this.toggleSelection(e) : this.replaceSelection(e)) : 'toggle' === this.selectionBehavior || (n && ('touch' === n.pointerType || 'virtual' === n.pointerType)) ? this.toggleSelection(e) : this.replaceSelection(e));
     }
     isSelectionEqual(e) {
         if (e === this.state.selectedKeys) return !0;
-        let t = this.selectedKeys;
-        if (e.size !== t.size) return !1;
-        for (let n of e) if (!t.has(n)) return !1;
-        for (let n of t) if (!e.has(n)) return !1;
+        let n = this.selectedKeys;
+        if (e.size !== n.size) return !1;
+        for (let r of e) if (!n.has(r)) return !1;
+        for (let r of n) if (!e.has(r)) return !1;
         return !0;
     }
     canSelectItem(e) {
         if ('none' === this.state.selectionMode || this.state.disabledKeys.has(e)) return !1;
-        let t = this.collection.getItem(e);
-        return (!!t && ('cell' !== t.type || !!this.allowsCellSelection)) || !1;
+        let n = this.collection.getItem(e);
+        return (!!n && ('cell' !== n.type || !!this.allowsCellSelection)) || !1;
     }
     isDisabled(e) {
         return this.state.disabledKeys.has(e) && 'all' === this.state.disabledBehavior;
     }
     isLink(e) {
-        var t, n;
-        return !!(null === (n = this.collection.getItem(e)) || void 0 === n ? void 0 : null === (t = n.props) || void 0 === t ? void 0 : t.href);
+        var n, r;
+        return !!(null === (r = this.collection.getItem(e)) || void 0 === r ? void 0 : null === (n = r.props) || void 0 === n ? void 0 : n.href);
     }
-    constructor(e, t, n) {
-        var r;
-        (this.collection = e), (this.state = t), (this.allowsCellSelection = null !== (r = null == n ? void 0 : n.allowsCellSelection) && void 0 !== r && r), (this._isSelectAll = null);
+    constructor(e, n, r) {
+        var i;
+        (this.collection = e), (this.state = n), (this.allowsCellSelection = null !== (i = null == r ? void 0 : r.allowsCellSelection) && void 0 !== i && i), (this._isSelectAll = null);
     }
 }

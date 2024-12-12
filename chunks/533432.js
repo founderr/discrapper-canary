@@ -1,67 +1,68 @@
-n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(232713),
-    l = n(260866),
-    u = n(481060),
-    c = n(806966),
-    d = n(28546),
-    f = n(149203),
-    _ = n(981631),
-    p = n(388032),
-    h = n(405156);
-let m = i.forwardRef(function (e, t) {
-    let { emojiListRef: n, gridNavigatorId: a, isFullRow: m, onKeyDown: g, onFocus: E, autoFocus: v, className: I, defaultSearchPlaceholder: T } = e,
-        b = i.useRef(null),
-        S = (0, d.Iu)((e) => e.searchQuery),
-        [y, A] = c.kJ.useStore((e) => [e.inspectedExpressionPosition, e.searchPlaceholder], o.X),
-        N = i.useCallback(
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(120356),
+    l = r.n(o),
+    u = r(232713),
+    c = r(260866),
+    d = r(481060),
+    f = r(806966),
+    _ = r(28546),
+    h = r(149203),
+    p = r(981631),
+    m = r(388032),
+    g = r(405156);
+let E = s.forwardRef(function (e, n) {
+    let { emojiListRef: r, gridNavigatorId: i, isFullRow: o, onKeyDown: E, onFocus: v, autoFocus: I, className: T, defaultSearchPlaceholder: b } = e,
+        y = s.useRef(null),
+        S = (0, _.Iu)((e) => e.searchQuery),
+        [A, N] = f.kJ.useStore((e) => [e.inspectedExpressionPosition, e.searchPlaceholder], u.X),
+        C = s.useCallback(
             (e) => {
-                var t;
-                c.kJ.setActiveCategoryIndex('' === e ? 0 : f.c), c.kJ.setInspectedExpressionPosition(0, 0), c.kJ.setSearchPlaceholder(null), (0, d.ql)(e), null === (t = n.current) || void 0 === t || t.scrollTo(0);
+                var n;
+                f.kJ.setActiveCategoryIndex('' === e ? 0 : h.c), f.kJ.setInspectedExpressionPosition(0, 0), f.kJ.setSearchPlaceholder(null), (0, _.ql)(e), null === (n = r.current) || void 0 === n || n.scrollTo(0);
             },
-            [n]
+            [r]
         ),
-        C = i.useCallback(() => {
-            (0, d.ql)('');
-        }, []);
+        R = s.useCallback(() => {
+            (0, _.ql)('');
+        }, []),
+        O = (e) => {
+            switch (e.keyCode) {
+                case p.yXg.ARROW_LEFT:
+                case p.yXg.ARROW_RIGHT:
+                case p.yXg.ARROW_UP:
+                case p.yXg.ARROW_DOWN:
+                    document.activeElement !== e.target && e.preventDefault();
+            }
+            E(e);
+        };
     return (
-        i.useImperativeHandle(t, () => ({
+        s.useImperativeHandle(n, () => ({
             focus: () => {
                 var e;
-                return null === (e = b.current) || void 0 === e ? void 0 : e.focus();
+                return null === (e = y.current) || void 0 === e ? void 0 : e.focus();
             }
         })),
-        (0, r.jsx)(u.SearchBar, {
-            autoFocus: v,
+        (0, a.jsx)(d.SearchBar, {
+            autoFocus: I,
             query: S,
-            ref: b,
-            size: u.SearchBar.Sizes.MEDIUM,
-            placeholder: null != A ? A : T,
-            onClear: C,
-            onKeyDown: (e) => {
-                switch (e.keyCode) {
-                    case _.yXg.ARROW_LEFT:
-                    case _.yXg.ARROW_RIGHT:
-                    case _.yXg.ARROW_UP:
-                    case _.yXg.ARROW_DOWN:
-                        document.activeElement !== e.target && e.preventDefault();
-                }
-                g(e);
-            },
-            onFocus: E,
-            onChange: N,
-            className: s()(I, { [h.searchBarFullRow]: m }),
+            ref: y,
+            size: d.SearchBar.Sizes.MEDIUM,
+            placeholder: null != N ? N : b,
+            onClear: R,
+            onKeyDown: O,
+            onFocus: v,
+            onChange: C,
+            className: l()(T, { [g.searchBarFullRow]: o }),
             inputProps: {
-                'aria-label': p.intl.string(p.t.tCauZW),
+                'aria-label': m.intl.string(m.t.tCauZW),
                 'aria-haspopup': 'grid',
-                'aria-controls': a,
+                'aria-controls': i,
                 'aria-expanded': !0,
-                'aria-activedescendant': (0, l.NE)(a, y.columnIndex, y.rowIndex)
+                'aria-activedescendant': (0, c.NE)(i, A.columnIndex, A.rowIndex)
             }
         })
     );
 });
-t.Z = i.memo(m);
+n.Z = s.memo(E);

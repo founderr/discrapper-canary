@@ -1,70 +1,67 @@
-n.d(t, {
+r.d(n, {
     HI: function () {
-        return s.HI;
+        return o.HI;
     },
     Ii: function () {
-        return s.Ii;
+        return o.Ii;
     },
     Jo: function () {
-        return s.Jo;
+        return o.Jo;
     },
     O4: function () {
-        return s.O4;
+        return o.O4;
     },
     Qc: function () {
-        return o;
+        return u;
     },
     VG: function () {
-        return s.VG;
+        return o.VG;
     },
     Wh: function () {
-        return s.Wh;
+        return o.Wh;
     },
     Wi: function () {
-        return s.Wi;
+        return o.Wi;
     },
     pe: function () {
-        return s.pe;
+        return o.pe;
     },
     rp: function () {
-        return s.rp;
+        return o.rp;
     },
     uf: function () {
-        return s.uf;
+        return o.uf;
     },
     wD: function () {
-        return s.wD;
+        return o.wD;
     },
     yx: function () {
-        return s.yx;
+        return o.yx;
     }
 });
-var r = n(259630),
-    i = n(939990),
-    a = n(262291),
-    s = n(73745);
-function o(e, t) {
-    void 0 === t && (t = {}),
-        (t = (0, r.pi)(
+var i = r(259630),
+    a = r(939990),
+    s = r(262291),
+    o = r(73745);
+function l(e) {
+    e.forEach(function (e) {
+        if ((delete e.location, (0, o.Wi)(e) || (0, o.Jo)(e))) for (var n in e.options) delete e.options[n].location, l(e.options[n].value);
+        else (0, o.uf)(e) && (0, o.Wh)(e.style) ? delete e.style.location : ((0, o.rp)(e) || (0, o.pe)(e)) && (0, o.Ii)(e.style) ? delete e.style.location : (0, o.HI)(e) && l(e.children);
+    });
+}
+function u(e, n) {
+    void 0 === n && (n = {}),
+        (n = (0, i.pi)(
             {
                 shouldParseSkeletons: !0,
                 requiresOtherClause: !0
             },
-            t
+            n
         ));
-    var n = new a._(e, t).parse();
-    if (n.err) {
-        var o = SyntaxError(i.o[n.err.kind]);
-        throw ((o.location = n.err.location), (o.originalMessage = n.err.message), o);
+    var r = new s._(e, n).parse();
+    if (r.err) {
+        var o = SyntaxError(a.o[r.err.kind]);
+        throw ((o.location = r.err.location), (o.originalMessage = r.err.message), o);
     }
-    return (
-        !(null == t ? void 0 : t.captureLocation) &&
-            !(function e(t) {
-                t.forEach(function (t) {
-                    if ((delete t.location, (0, s.Wi)(t) || (0, s.Jo)(t))) for (var n in t.options) delete t.options[n].location, e(t.options[n].value);
-                    else (0, s.uf)(t) && (0, s.Wh)(t.style) ? delete t.style.location : ((0, s.rp)(t) || (0, s.pe)(t)) && (0, s.Ii)(t.style) ? delete t.style.location : (0, s.HI)(t) && e(t.children);
-                });
-            })(n.val),
-        n.val
-    );
+    return !(null == n ? void 0 : n.captureLocation) && l(r.val), r.val;
 }

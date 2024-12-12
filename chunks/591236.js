@@ -1,67 +1,63 @@
-var r = n(588468),
-    i = n(496675),
-    a = n(483360),
-    s = n(877565),
-    o = n(590921),
-    l = n(665692),
-    u = n(981631),
-    c = n(185923),
-    d = n(388032);
-let f = {
-    sentinel: l.a4,
-    matches(e, t, n, r, a) {
-        var s, o;
-        return r && null !== (o = null === (s = a.chatInputType.autocomplete) || void 0 === s ? void 0 : s.addReactionShortcut) && void 0 !== o && o && (i.Z.can(u.Plq.ADD_REACTIONS, e) || e.isPrivate());
+var i = r(588468),
+    a = r(496675),
+    s = r(483360),
+    o = r(877565),
+    l = r(590921),
+    u = r(665692),
+    c = r(981631),
+    d = r(185923),
+    f = r(388032);
+let _ = {
+    sentinel: u.a4,
+    matches(e, n, r, i, s) {
+        var o, l;
+        return i && null !== (l = null === (o = s.chatInputType.autocomplete) || void 0 === o ? void 0 : o.addReactionShortcut) && void 0 !== l && l && (a.Z.can(c.Plq.ADD_REACTIONS, e) || e.isPrivate());
     },
-    queryResults(e, t, n, r, i) {
-        let { emojis: s } = a.ZP.queryEmojiResults({
-            query: n,
+    queryResults(e, n, r, i, a) {
+        let { emojis: o } = s.ZP.queryEmojiResults({
+            query: r,
             channel: e,
-            intention: c.Hz.REACTION
+            intention: d.Hz.REACTION
         });
-        return { results: { emojis: s.unlocked } };
+        return { results: { emojis: o.unlocked } };
     },
     renderResults(e) {
         let {
-            results: { emojis: t },
-            selectedIndex: n,
-            query: i,
-            onHover: a,
-            onClick: o
+            results: { emojis: n },
+            selectedIndex: r,
+            query: a,
+            onHover: s,
+            onClick: l
         } = e;
-        return (0, s.HI)({
-            query: i,
-            selectedIndex: n,
-            autocompletes: t,
-            onHover: a,
-            onClick: o,
-            titleWithQuery: d.t.o1Nmpa,
-            titleWithoutQuery: d.intl.string(d.t.sMOuub),
-            Component: r.ZP.Emoji,
+        return (0, o.HI)({
+            query: a,
+            selectedIndex: r,
+            autocompletes: n,
+            onHover: s,
+            onClick: l,
+            titleWithQuery: f.t.o1Nmpa,
+            titleWithoutQuery: f.intl.string(f.t.sMOuub),
+            Component: i.ZP.Emoji,
             getProps: (e) => ({
                 emoji: e,
                 key: e.id || e.uniqueName || e.name,
-                sentinel: l.Iv
+                sentinel: u.Iv
             }),
-            getQuery: (e) => ''.concat(l.a4).concat(e),
+            getQuery: (e) => ''.concat(u.a4).concat(e),
             key: 'reactions'
         });
     },
     onSelect(e) {
         let {
-                results: { emojis: t },
-                index: n,
-                options: r
+                results: { emojis: n },
+                index: r,
+                options: i
             } = e,
-            i = t[n];
-        return (
-            r.sendMessage(
-                (function (e) {
-                    return ''.concat(l.a4).concat(e.name).concat(l.jp);
-                })(i)
-            ),
-            { type: o.z2.REACTION }
-        );
+            a = n[r];
+        return i.sendMessage(h(a)), { type: l.z2.REACTION };
     }
 };
-t.Z = f;
+function h(e) {
+    return ''.concat(u.a4).concat(e.name).concat(u.jp);
+}
+n.Z = _;

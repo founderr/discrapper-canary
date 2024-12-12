@@ -1,138 +1,139 @@
-n.d(t, {
+r.d(n, {
     E: function () {
-        return f;
+        return p;
     },
     Z: function () {
-        return _;
+        return m;
     }
-}),
-    n(47120);
-var r = n(653603),
-    i = n.n(r),
-    a = n(512722),
-    s = n.n(a),
-    o = n(53529),
-    l = n(50659),
-    u = n(436660),
-    c = n(887490),
-    d = n(981631);
-function f(e, t) {
-    let { cmd: n = !1, ctrl: r = !1, alt: i = !1, shift: a = !1 } = t;
-    return (null == n || e.metaKey === n) && (null == r || e.ctrlKey === r) && (null == i || e.altKey === i) && (null == a || e.shiftKey === a);
+});
+var i = r(47120);
+var a = r(653603),
+    s = r.n(a),
+    o = r(512722),
+    l = r.n(o),
+    u = r(53529),
+    c = r(50659),
+    d = r(436660),
+    f = r(887490),
+    _ = r(981631);
+let h = '  ';
+function p(e, n) {
+    let { cmd: r = !1, ctrl: i = !1, alt: a = !1, shift: s = !1 } = n;
+    return (null == r || e.metaKey === r) && (null == i || e.ctrlKey === i) && (null == a || e.altKey === a) && (null == s || e.shiftKey === s);
 }
-function _(e) {
+function m(e) {
     return (
-        (e.onKeyDown = (t) => {
-            var n, r, a, _;
-            let p = e.isMac;
-            switch (t.which) {
-                case d.yXg.B:
+        (e.onKeyDown = (n) => {
+            var r, i, a, o;
+            let m = e.isMac;
+            switch (n.which) {
+                case _.yXg.B:
                     if (
-                        !c.bN.isEditorEmpty(e) &&
-                        f(t, {
-                            ctrl: !p,
-                            cmd: p
+                        !f.bN.isEditorEmpty(e) &&
+                        p(n, {
+                            ctrl: !m,
+                            cmd: m
                         })
                     )
-                        return (0, l.py)(e, 'bold'), !0;
+                        return (0, c.py)(e, 'bold'), !0;
                     break;
-                case d.yXg.I:
+                case _.yXg.I:
                     if (
-                        !c.bN.isEditorEmpty(e) &&
-                        f(t, {
-                            ctrl: !p,
-                            cmd: p
+                        !f.bN.isEditorEmpty(e) &&
+                        p(n, {
+                            ctrl: !m,
+                            cmd: m
                         })
                     )
-                        return (0, l.py)(e, 'italics'), !0;
+                        return (0, c.py)(e, 'italics'), !0;
                     break;
-                case d.yXg.U:
+                case _.yXg.U:
                     if (
-                        !c.bN.isEditorEmpty(e) &&
-                        f(t, {
-                            ctrl: !p,
-                            cmd: p
+                        !f.bN.isEditorEmpty(e) &&
+                        p(n, {
+                            ctrl: !m,
+                            cmd: m
                         })
                     )
-                        return (0, l.py)(e, 'underline'), !0;
+                        return (0, c.py)(e, 'underline'), !0;
                     break;
-                case d.yXg.S:
+                case _.yXg.S:
                     if (
-                        !c.bN.isEditorEmpty(e) &&
-                        f(t, {
-                            ctrl: !p,
-                            cmd: p,
+                        !f.bN.isEditorEmpty(e) &&
+                        p(n, {
+                            ctrl: !m,
+                            cmd: m,
                             shift: !0
                         })
                     )
-                        return (0, l.py)(e, 'strikethrough'), !0;
+                        return (0, c.py)(e, 'strikethrough'), !0;
                     break;
-                case d.yXg.TAB:
-                    if (null != e.selection && f(t, { shift: null })) {
-                        let [r, i] = c.M8.edges(e.selection),
-                            a = c.bN.blocks(e).slice(r.path[0], i.path[0] + 1),
-                            s = !0;
-                        for (let [e] of a)
-                            if ('line' !== e.type || !(null === (n = e.codeBlockState) || void 0 === n ? void 0 : n.isInCodeBlock)) {
-                                s = !1;
+                case _.yXg.TAB:
+                    if (null != e.selection && p(n, { shift: null })) {
+                        let [i, a] = f.M8.edges(e.selection),
+                            s = f.bN.blocks(e).slice(i.path[0], a.path[0] + 1),
+                            o = !0;
+                        for (let [e] of s)
+                            if ('line' !== e.type || !(null === (r = e.codeBlockState) || void 0 === r ? void 0 : r.isInCodeBlock)) {
+                                o = !1;
                                 break;
                             }
-                        if (s) {
-                            if (!t.shiftKey && c.M8.isCollapsed(e.selection)) return u.Q.insertText(e, '  '), !0;
-                            let n = !t.shiftKey;
+                        if (o) {
+                            if (!n.shiftKey && f.M8.isCollapsed(e.selection)) return d.Q.insertText(e, h), !0;
+                            let r = !n.shiftKey;
                             return (
-                                o.T.withSingleEntry(e, () => {
-                                    var t, r, i, s;
-                                    let o = null !== (i = null === (t = e.selection) || void 0 === t ? void 0 : t.anchor) && void 0 !== i ? i : c.bN.start(e, []),
-                                        l = null !== (s = null === (r = e.selection) || void 0 === r ? void 0 : r.focus) && void 0 !== s ? s : c.bN.end(e, []);
-                                    for (let [t, r] of a) {
-                                        let i = t.children[0];
-                                        if (!c.LC.isText(t.children[0])) continue;
-                                        let a = c.C0.child(r, 0),
-                                            s = {
-                                                path: a,
+                                u.T.withSingleEntry(e, () => {
+                                    var n, i, a, o;
+                                    let l = null !== (a = null === (n = e.selection) || void 0 === n ? void 0 : n.anchor) && void 0 !== a ? a : f.bN.start(e, []),
+                                        u = null !== (o = null === (i = e.selection) || void 0 === i ? void 0 : i.focus) && void 0 !== o ? o : f.bN.end(e, []);
+                                    for (let [n, i] of s) {
+                                        let a = n.children[0];
+                                        if (!f.LC.isText(n.children[0])) continue;
+                                        let s = f.C0.child(i, 0),
+                                            o = {
+                                                path: s,
                                                 offset: 0
                                             };
-                                        if (n)
-                                            u.Q.insertText(e, '  ', { at: s }),
-                                                c.C0.equals(o.path, a) &&
-                                                    0 !== o.offset &&
-                                                    (o = {
-                                                        path: a,
-                                                        offset: o.offset + 2
-                                                    }),
-                                                c.C0.equals(l.path, a) &&
+                                        if (r)
+                                            d.Q.insertText(e, h, { at: o }),
+                                                f.C0.equals(l.path, s) &&
                                                     0 !== l.offset &&
                                                     (l = {
-                                                        path: a,
-                                                        offset: l.offset + 2
+                                                        path: s,
+                                                        offset: l.offset + h.length
+                                                    }),
+                                                f.C0.equals(u.path, s) &&
+                                                    0 !== u.offset &&
+                                                    (u = {
+                                                        path: s,
+                                                        offset: u.offset + h.length
                                                     });
-                                        else if (i.text.startsWith('  ')) {
-                                            let t = {
-                                                path: c.C0.child(r, 0),
-                                                offset: 2
+                                        else if (a.text.startsWith(h)) {
+                                            let n = {
+                                                path: f.C0.child(i, 0),
+                                                offset: h.length
                                             };
-                                            u.Q.delete(e, {
+                                            d.Q.delete(e, {
                                                 at: {
-                                                    anchor: s,
-                                                    focus: t
+                                                    anchor: o,
+                                                    focus: n
                                                 }
                                             }),
-                                                c.C0.equals(o.path, a) &&
-                                                    (o = {
-                                                        path: a,
-                                                        offset: Math.max(0, o.offset - 2)
-                                                    }),
-                                                c.C0.equals(l.path, a) &&
+                                                f.C0.equals(l.path, s) &&
                                                     (l = {
-                                                        path: a,
-                                                        offset: Math.max(0, l.offset - 2)
+                                                        path: s,
+                                                        offset: Math.max(0, l.offset - h.length)
+                                                    }),
+                                                f.C0.equals(u.path, s) &&
+                                                    (u = {
+                                                        path: s,
+                                                        offset: Math.max(0, u.offset - h.length)
                                                     });
                                         }
                                     }
-                                    u.Q.select(e, {
-                                        anchor: o,
-                                        focus: l
+                                    d.Q.select(e, {
+                                        anchor: l,
+                                        focus: u
                                     });
                                 }),
                                 !0
@@ -140,98 +141,98 @@ function _(e) {
                         }
                     }
                     break;
-                case d.yXg.ARROW_LEFT:
-                case d.yXg.ARROW_RIGHT: {
-                    let n, s;
-                    if (f(t, { shift: null })) n = 'character';
+                case _.yXg.ARROW_LEFT:
+                case _.yXg.ARROW_RIGHT: {
+                    let r, l;
+                    if (p(n, { shift: null })) r = 'character';
                     else if (
-                        f(t, {
-                            ctrl: !p,
-                            alt: p,
+                        p(n, {
+                            ctrl: !m,
+                            alt: m,
                             shift: null
                         })
                     )
-                        n = 'word';
+                        r = 'word';
                     else if (
-                        p &&
-                        f(t, {
+                        m &&
+                        p(n, {
                             cmd: !0,
                             shift: null
                         })
                     )
                         return !1;
                     else return !1;
-                    t.shiftKey && (s = 'focus');
-                    let o = e.children[null !== (_ = null === (a = e.selection) || void 0 === a ? void 0 : null === (r = a.focus) || void 0 === r ? void 0 : r.path[0]) && void 0 !== _ ? _ : 0],
-                        l = 'rtl' === i()(c.aj.string(o)),
-                        h = (t.which === d.yXg.ARROW_LEFT) == !l;
+                    n.shiftKey && (l = 'focus');
+                    let u = e.children[null !== (o = null === (a = e.selection) || void 0 === a ? void 0 : null === (i = a.focus) || void 0 === i ? void 0 : i.path[0]) && void 0 !== o ? o : 0],
+                        c = 'rtl' === s()(f.aj.string(u)),
+                        h = (n.which === _.yXg.ARROW_LEFT) == !c;
                     return (
-                        u.Q.keyboardMove(e, {
+                        d.Q.keyboardMove(e, {
                             reverse: h,
-                            unit: n,
-                            edge: s
+                            unit: r,
+                            edge: l
                         }),
                         !0
                     );
                 }
-                case d.yXg.A:
-                    if (p && f(t, { ctrl: !0 })) {
-                        let t = c.bN.getCurrentBlock(e);
-                        if (null != t) {
-                            let [, n] = t,
-                                r = {
-                                    path: c.C0.child(n, 0),
+                case _.yXg.A:
+                    if (m && p(n, { ctrl: !0 })) {
+                        let n = f.bN.getCurrentBlock(e);
+                        if (null != n) {
+                            let [, r] = n,
+                                i = {
+                                    path: f.C0.child(r, 0),
                                     offset: 0
                                 };
                             return (
-                                u.Q.select(e, {
-                                    anchor: r,
-                                    focus: r
+                                d.Q.select(e, {
+                                    anchor: i,
+                                    focus: i
                                 }),
                                 !0
                             );
                         }
                     }
                     break;
-                case d.yXg.E:
-                    if (p && f(t, { ctrl: !0 })) {
-                        let t = c.bN.getCurrentBlock(e);
-                        if (null != t) {
-                            let [n, r] = t,
-                                i = c.C0.child(r, n.children.length - 1),
-                                [a] = c.bN.node(e, i),
-                                s = {
-                                    path: i,
-                                    offset: a.text.length
+                case _.yXg.E:
+                    if (m && p(n, { ctrl: !0 })) {
+                        let n = f.bN.getCurrentBlock(e);
+                        if (null != n) {
+                            let [r, i] = n,
+                                a = f.C0.child(i, r.children.length - 1),
+                                [s] = f.bN.node(e, a),
+                                o = {
+                                    path: a,
+                                    offset: s.text.length
                                 };
                             return (
-                                u.Q.select(e, {
-                                    anchor: s,
-                                    focus: s
+                                d.Q.select(e, {
+                                    anchor: o,
+                                    focus: o
                                 }),
                                 !0
                             );
                         }
                     }
                     break;
-                case d.yXg.BACKSPACE:
-                case d.yXg.DELETE:
-                case d.yXg.K:
-                    let h = t.which === d.yXg.BACKSPACE;
+                case _.yXg.BACKSPACE:
+                case _.yXg.DELETE:
+                case _.yXg.K:
+                    let g = n.which === _.yXg.BACKSPACE;
                     if (
-                        ((!p &&
-                            t.which !== d.yXg.K &&
-                            f(t, {
+                        ((!m &&
+                            n.which !== _.yXg.K &&
+                            p(n, {
                                 ctrl: !0,
                                 shift: !0
                             })) ||
-                            (p && t.which !== d.yXg.K && f(t, { cmd: !0 })) ||
-                            (p && t.which === d.yXg.K && f(t, { ctrl: !0 }))) &&
+                            (m && n.which !== _.yXg.K && p(n, { cmd: !0 })) ||
+                            (m && n.which === _.yXg.K && p(n, { ctrl: !0 }))) &&
                         null != e.selection
                     ) {
-                        let [t, n] = c.M8.edges(e.selection),
-                            [r, i] = c.bN.node(e, [h ? t.path[0] : n.path[0]]);
-                        if ((s()(c.q.isElement(r) && c.bN.isBlock(e, r), 'Top-most node of selection is not a block'), (h && !c.Jz.isAtStart(t, [r, i])) || (!h && !c.Jz.isAtEnd(n, [r, i])))) return h ? e.deleteBackward('line') : e.deleteForward('line'), !0;
+                        let [n, r] = f.M8.edges(e.selection),
+                            [i, a] = f.bN.node(e, [g ? n.path[0] : r.path[0]]);
+                        if ((l()(f.q.isElement(i) && f.bN.isBlock(e, i), 'Top-most node of selection is not a block'), (g && !f.Jz.isAtStart(n, [i, a])) || (!g && !f.Jz.isAtEnd(r, [i, a])))) return g ? e.deleteBackward('line') : e.deleteForward('line'), !0;
                     }
             }
             return !1;

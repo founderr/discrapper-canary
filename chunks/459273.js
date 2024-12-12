@@ -1,98 +1,99 @@
-n.d(t, {
+r.d(n, {
     I3: function () {
-        return u;
+        return h;
     },
     d9: function () {
-        return d;
+        return m;
     },
     oo: function () {
-        return l;
+        return _;
     },
     yp: function () {
-        return c;
+        return p;
     }
-}),
-    n(47120),
-    n(411104);
-var r = n(200651),
-    i = n(192379),
-    a = n(836560),
-    s = n(585483);
-class o {
-    subscribe(e, t) {
-        s.S.subscribe(e, t), this.emitter.on(e, t);
+});
+var i = r(47120);
+var a = r(411104);
+var s = r(200651),
+    o = r(192379),
+    l = r(836560);
+var u = r(585483);
+function c(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+class d {
+    subscribe(e, n) {
+        u.S.subscribe(e, n), this.emitter.on(e, n);
     }
-    unsubscribe(e, t) {
-        s.S.unsubscribe(e, t), this.emitter.off(e, t);
+    unsubscribe(e, n) {
+        u.S.unsubscribe(e, n), this.emitter.off(e, n);
     }
     bumpDispatchPriority() {
-        for (let e of this.emitter.eventNames()) for (let t of this.emitter.listeners(e)) s.S.resubscribe(e, t);
+        for (let e of this.emitter.eventNames()) for (let n of this.emitter.listeners(e)) u.S.resubscribe(e, n);
     }
     constructor() {
-        var e, t, n;
-        (e = this),
-            (t = 'emitter'),
-            (n = new a.EventEmitter()),
-            t in e
-                ? Object.defineProperty(e, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (e[t] = n);
+        c(this, 'emitter', new l.EventEmitter());
     }
 }
-let l = i.createContext(
-        new (class e {
-            subscribe(e, t) {
-                s.S.subscribe(e, t);
-            }
-            unsubscribe(e, t) {
-                s.S.unsubscribe(e, t);
-            }
-            bumpDispatchPriority() {}
-        })()
-    ),
-    u = i.forwardRef(function (e, t) {
-        let { children: n } = e,
-            a = i.useRef(null);
-        function s() {
-            return null === a.current && (a.current = new o()), a.current;
+class f {
+    subscribe(e, n) {
+        u.S.subscribe(e, n);
+    }
+    unsubscribe(e, n) {
+        u.S.unsubscribe(e, n);
+    }
+    bumpDispatchPriority() {}
+}
+let _ = o.createContext(new f()),
+    h = o.forwardRef(function (e, n) {
+        let { children: r } = e,
+            i = o.useRef(null);
+        function a() {
+            return null === i.current && (i.current = new d()), i.current;
         }
         return (
-            i.useImperativeHandle(t, s),
-            (0, r.jsx)(l.Provider, {
-                value: s(),
-                children: n
+            o.useImperativeHandle(n, a),
+            (0, s.jsx)(_.Provider, {
+                value: a(),
+                children: r
             })
         );
     });
-function c(e) {
-    let { event: t, handler: n } = e,
-        r = i.useContext(l),
-        a = i.useRef(n);
-    i.useEffect(() => {
-        a.current = n;
-    }, [n]);
-    let s = null == n;
+function p(e) {
+    let { event: n, handler: r } = e,
+        i = o.useContext(_),
+        a = o.useRef(r);
+    o.useEffect(() => {
+        a.current = r;
+    }, [r]);
+    let s = null == r;
     return (
-        i.useEffect(() => {
+        o.useEffect(() => {
             if (s) return;
             let e = function () {
-                for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-                null === (e = a.current) || void 0 === e || e.call(a, ...n);
+                for (var e, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
+                null === (e = a.current) || void 0 === e || e.call(a, ...r);
             };
             return (
-                r.subscribe(t, e),
+                i.subscribe(n, e),
                 () => {
-                    r.unsubscribe(t, e);
+                    i.unsubscribe(n, e);
                 }
             );
-        }, [r, t, s]),
+        }, [i, n, s]),
         null
     );
 }
-function d(e) {
-    return c(e), null;
+function m(e) {
+    return p(e), null;
 }

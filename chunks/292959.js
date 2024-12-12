@@ -1,113 +1,120 @@
-var r,
-    i = n(442837),
-    a = n(570140),
-    s = n(626135),
-    o = n(358085),
-    l = n(981631);
-function u(e, t, n) {
+var i,
+    a = r(442837),
+    s = r(570140),
+    o = r(626135),
+    l = r(358085),
+    u = r(981631);
+function c(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let c = {
-        desktopType: o.isPlatformEmbedded ? l.qrD.ALL : l.qrD.NEVER,
+let d = {
+        desktopType: l.isPlatformEmbedded ? u.qrD.ALL : u.qrD.NEVER,
         disableAllSounds: !1,
         disabledSounds: [],
-        ttsType: l.PrB.NEVER,
+        ttsType: u.PrB.NEVER,
         disableUnreadBadge: !1,
         taskbarFlash: !0,
         notifyMessagesInSelectedChannel: !1
     },
-    d = c;
-function f(e, t) {
-    !__OVERLAY__ && s.default.track(e, t);
+    f = d;
+function _(e, n) {
+    !__OVERLAY__ && o.default.track(e, n);
 }
-function _(e) {
-    let { desktopType: t } = e;
-    (d.desktopType = t), f(l.rMx.LOCAL_SETTINGS_UPDATED, { notifications_enabled: t === l.qrD.ALL });
+function h(e) {
+    let { desktopType: n } = e;
+    (f.desktopType = n), _(u.rMx.LOCAL_SETTINGS_UPDATED, { notifications_enabled: n === u.qrD.ALL });
 }
-class p extends (r = i.ZP.DeviceSettingsStore) {
+function p(e) {
+    let { sounds: n } = e;
+    f.disabledSounds = n;
+}
+function m() {
+    f.disableAllSounds = !f.disableAllSounds;
+}
+function g(e) {
+    let { ttsType: n } = e;
+    f.ttsType = n;
+}
+function E(e) {
+    let { disableUnreadBadge: n } = e;
+    f.disableUnreadBadge = n;
+}
+function v(e) {
+    let { taskbarFlash: n } = e;
+    f.taskbarFlash = n;
+}
+function I(e) {
+    let { notify: n } = e;
+    f.notifyMessagesInSelectedChannel = n;
+}
+function T(e) {
+    let { enabled: n, source: r } = e;
+    _(u.rMx.ENABLE_NOTIFICATIONS, {
+        enabled: n === u.$Ab.ENABLED,
+        source: r
+    }),
+        n === u.$Ab.BLOCKED ? h({ desktopType: u.qrD.NEVER }) : n === u.$Ab.ENABLED && h({ desktopType: u.qrD.ALL });
+}
+class b extends (i = a.ZP.DeviceSettingsStore) {
     initialize(e) {
-        d = {
-            ...c,
+        f = {
+            ...d,
             ...e
         };
     }
     getUserAgnosticState() {
-        return d;
+        return f;
     }
     getDesktopType() {
-        return d.desktopType;
+        return f.desktopType;
     }
     getTTSType() {
-        return d.ttsType;
+        return f.ttsType;
     }
     getDisabledSounds() {
-        return d.disabledSounds;
+        return f.disabledSounds;
     }
     getDisableAllSounds() {
-        return d.disableAllSounds;
+        return f.disableAllSounds;
     }
     getDisableUnreadBadge() {
-        return d.disableUnreadBadge;
+        return f.disableUnreadBadge;
     }
     getNotifyMessagesInSelectedChannel() {
-        return d.notifyMessagesInSelectedChannel;
+        return f.notifyMessagesInSelectedChannel;
     }
     get taskbarFlash() {
-        return d.taskbarFlash;
+        return f.taskbarFlash;
     }
     isSoundDisabled(e) {
-        return d.disableAllSounds || -1 !== d.disabledSounds.indexOf(e);
+        return f.disableAllSounds || -1 !== f.disabledSounds.indexOf(e);
     }
 }
-u(p, 'displayName', 'NotificationSettingsStore'),
-    u(p, 'persistKey', 'notifications'),
-    u(p, 'migrations', [
+c(b, 'displayName', 'NotificationSettingsStore'),
+    c(b, 'persistKey', 'notifications'),
+    c(b, 'migrations', [
         (e) => {
-            let t = { ...e };
-            return (t.disabledSounds = t.disabledSounds || []), (t.disableUnreadBadge = t.disableUnreadBadge || !1), (t.taskbarFlash = null == t.taskbarFlash || t.taskbarFlash), (t.ttsType = t.ttsType || l.PrB.NEVER), null == t.desktopType && (t.desktopType = o.isPlatformEmbedded ? l.qrD.ALL : l.qrD.NEVER), t;
+            let n = { ...e };
+            return (n.disabledSounds = n.disabledSounds || []), (n.disableUnreadBadge = n.disableUnreadBadge || !1), (n.taskbarFlash = null == n.taskbarFlash || n.taskbarFlash), (n.ttsType = n.ttsType || u.PrB.NEVER), null == n.desktopType && (n.desktopType = l.isPlatformEmbedded ? u.qrD.ALL : u.qrD.NEVER), n;
         }
     ]),
-    (t.Z = new p(a.Z, {
-        NOTIFICATIONS_SET_DESKTOP_TYPE: _,
-        NOTIFICATIONS_SET_TTS_TYPE: function (e) {
-            let { ttsType: t } = e;
-            d.ttsType = t;
-        },
-        NOTIFICATIONS_SET_DISABLED_SOUNDS: function (e) {
-            let { sounds: t } = e;
-            d.disabledSounds = t;
-        },
-        NOTIFICATIONS_TOGGLE_ALL_DISABLED: function () {
-            d.disableAllSounds = !d.disableAllSounds;
-        },
-        NOTIFICATIONS_SET_PERMISSION_STATE: function (e) {
-            let { enabled: t, source: n } = e;
-            f(l.rMx.ENABLE_NOTIFICATIONS, {
-                enabled: t === l.$Ab.ENABLED,
-                source: n
-            }),
-                t === l.$Ab.BLOCKED ? _({ desktopType: l.qrD.NEVER }) : t === l.$Ab.ENABLED && _({ desktopType: l.qrD.ALL });
-        },
-        NOTIFICATIONS_SET_DISABLE_UNREAD_BADGE: function (e) {
-            let { disableUnreadBadge: t } = e;
-            d.disableUnreadBadge = t;
-        },
-        NOTIFICATIONS_SET_TASKBAR_FLASH: function (e) {
-            let { taskbarFlash: t } = e;
-            d.taskbarFlash = t;
-        },
-        NOTIFICATIONS_SET_NOTIFY_MESSAGES_IN_SELECTED_CHANNEL: function (e) {
-            let { notify: t } = e;
-            d.notifyMessagesInSelectedChannel = t;
-        }
+    (n.Z = new b(s.Z, {
+        NOTIFICATIONS_SET_DESKTOP_TYPE: h,
+        NOTIFICATIONS_SET_TTS_TYPE: g,
+        NOTIFICATIONS_SET_DISABLED_SOUNDS: p,
+        NOTIFICATIONS_TOGGLE_ALL_DISABLED: m,
+        NOTIFICATIONS_SET_PERMISSION_STATE: T,
+        NOTIFICATIONS_SET_DISABLE_UNREAD_BADGE: E,
+        NOTIFICATIONS_SET_TASKBAR_FLASH: v,
+        NOTIFICATIONS_SET_NOTIFY_MESSAGES_IN_SELECTED_CHANNEL: I
     }));
