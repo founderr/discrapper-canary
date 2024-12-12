@@ -527,6 +527,10 @@ function M(e) {
                 s = 0 !== e && null != a && null != n ? a(e, n) : null;
             return -1 === s && (s = null), null !== (i = null != s ? s : r) && void 0 !== i ? i : v.Jx.UNKNOWN;
         },
+        GetWindowFullscreenTypeExtraByPid(e, n) {
+            let { getWindowFullscreenTypeExtraByPid: r } = this.getDiscordUtils();
+            return null == r || null == n ? { quns: v.Ng.QUNS_UNKNOWN } : r(e, n);
+        },
         isModuleVersionAtLeast(e, n) {
             var r, i, a;
             let s = [...(null != C ? C : [0, 0, 0])];
