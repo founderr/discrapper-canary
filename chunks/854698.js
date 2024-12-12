@@ -228,17 +228,11 @@ function Y(e) {
 }
 function W(e, n, r) {
     let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        a = [],
-        s = r;
-    s.setMilliseconds(0);
-    let o = new Date();
-    o.setFullYear(o.getFullYear() + b);
-    for (let r = 0; r < e && s < o; r++) {
-        let e = n.after(s, 0 === r && !i);
-        if (null == e) break;
-        (s = e), a.push(e);
-    }
-    return a;
+        a = r > new Date() ? r : new Date(),
+        s = new Date();
+    s.setFullYear(s.getFullYear() + b);
+    let o = n.between(a, s, !0, (n, r) => r < e + 1);
+    return i && o.length > 0 && r.getTime() === o[0].getTime() ? o.slice(1) : o.slice(0, e);
 }
 function K(e) {
     return null == e.recurrence_rule ? null : new Date(e.scheduled_start_time);
