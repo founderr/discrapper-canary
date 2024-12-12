@@ -34,6 +34,13 @@ t.Z = {
             participantsOpen: t
         });
     },
+    toggleParticipantsList(e, t) {
+        r.Z.dispatch({
+            type: 'CHANNEL_RTC_UPDATE_PARTCIPANTS_LIST_OPEN',
+            channelId: e,
+            participantsListOpen: t
+        });
+    },
     toggleVoiceParticipantsHidden(e, t) {
         r.Z.dispatch({
             type: 'CHANNEL_RTC_UPDATE_VOICE_PARTICIPANTS_HIDDEN',

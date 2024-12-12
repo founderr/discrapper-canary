@@ -56,10 +56,10 @@ function u(e) {
     });
 }
 function h(e) {
-    let { screenMessage: t, onDoubleClick: n, onActive: i, onForceIdle: l, idle: a, children: o, renderChatButton: h, renderChatToasts: p, renderVoiceChannelEffects: m, style: f, ...g } = e;
+    let { screenMessage: t, onDoubleClick: n, onActive: i, onForceIdle: l, idle: a, children: o, renderChatToasts: h, renderVoiceChannelEffects: p, style: m, ...f } = e;
     return (0, r.jsxs)('div', {
         className: s()(d.root, { [d.idle]: a }),
-        style: f,
+        style: m,
         onMouseMove: i,
         onMouseDown: i,
         onMouseLeave: l,
@@ -72,15 +72,9 @@ function h(e) {
                       ...t
                   })
                 : null,
-            (0, r.jsx)(u, { ...g }),
-            null == h
-                ? void 0
-                : h({
-                      className: d.chatButton,
-                      showingClassName: d.chatButtonShowing
-                  }),
-            null == p ? void 0 : p(),
-            null == m ? void 0 : m()
+            (0, r.jsx)(u, { ...f }),
+            null == h ? void 0 : h(),
+            null == p ? void 0 : p()
         ]
     });
 }

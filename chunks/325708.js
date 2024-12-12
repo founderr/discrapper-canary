@@ -20,11 +20,11 @@ var i,
     p = n(740492),
     m = n(36645),
     f = n(311572);
-((l = i || (i = {}))[(l.PostSidebar = 0)] = 'PostSidebar'), (l[(l.ThreadSidebar = 1)] = 'ThreadSidebar'), (l[(l.CallChatSidebar = 2)] = 'CallChatSidebar'), (l[(l.MessageRequestSidebar = 3)] = 'MessageRequestSidebar'), (l[(l.HomeSidebar = 4)] = 'HomeSidebar');
+((l = i || (i = {}))[(l.PostSidebar = 0)] = 'PostSidebar'), (l[(l.ThreadSidebar = 1)] = 'ThreadSidebar'), (l[(l.CallChatSidebar = 2)] = 'CallChatSidebar'), (l[(l.MessageRequestSidebar = 3)] = 'MessageRequestSidebar'), (l[(l.HomeSidebar = 4)] = 'HomeSidebar'), (l[(l.ParticipantsSidebar = 5)] = 'ParticipantsSidebar');
 function g(e) {
-    let { resizableNode: t, onResize: n, onResizeEnd: i, maxWidth: l } = e,
-        a = (0, h.Z)({
-            minDimension: m.C,
+    let { resizableNode: t, onResize: n, onResizeEnd: i, maxWidth: l, minWidth: a } = e,
+        s = (0, h.Z)({
+            minDimension: a,
             maxDimension: l,
             resizableDomNodeRef: t,
             onElementResize: n,
@@ -33,7 +33,7 @@ function g(e) {
             throttleDuration: 16
         });
     return (0, r.jsx)('div', {
-        onMouseDown: a,
+        onMouseDown: s,
         className: f.resizeHandle
     });
 }
@@ -52,6 +52,8 @@ function C(e) {
                     return 'messageRequestSidebarWidth';
                 case 4:
                     return 'homeSidebarWidth';
+                case 5:
+                    return 'callParticipantsSidebarWidth';
             }
         })(t),
         [x, v] = a.useState(p.ZP[C]),
@@ -61,29 +63,34 @@ function C(e) {
             },
             [C]
         ),
-        I = (0, m.W)({ maxWidth: n }),
-        E = (0, c.clamp)(x, m.C, n),
-        b = I ? E : E + d.Z.modules.chat.RESIZE_HANDLE_WIDTH;
+        I = 5 === t ? m.at : m.Co,
+        E = (0, m.WL)({
+            maxWidth: n,
+            minWidth: I
+        }),
+        b = (0, c.clamp)(x, I, n),
+        Z = E ? b : b + d.Z.modules.chat.RESIZE_HANDLE_WIDTH;
     a.useEffect(() => {
-        null == i || i(E, I);
-    }, [E, i, I]);
+        null == i || i(b, E);
+    }, [b, i, E]);
     let N = null != s ? s : a.Fragment;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            !I && (0, r.jsx)('div', { style: { minWidth: b } }),
+            !E && (0, r.jsx)('div', { style: { minWidth: Z } }),
             (0, r.jsx)(N, {
                 children: (0, r.jsxs)('div', {
                     className: f.chatLayerWrapper,
                     children: [
                         (0, r.jsx)('div', {
                             className: o()(f.chatTarget, {
-                                [f.floating]: I,
-                                [f.notFloating]: !I
+                                [f.floating]: E,
+                                [f.notFloating]: !E
                             }),
-                            style: { width: b }
+                            style: { width: Z }
                         }),
-                        !I &&
+                        !E &&
                             (0, r.jsx)(g, {
+                                minWidth: I,
                                 maxWidth: n,
                                 resizableNode: h,
                                 onResize: v,
@@ -91,8 +98,8 @@ function C(e) {
                             }),
                         (0, r.jsx)('div', {
                             ref: h,
-                            className: o()(f.container, { [f.floating]: I }),
-                            style: { width: E },
+                            className: o()(f.container, { [f.floating]: E }),
+                            style: { width: b },
                             children: l
                         })
                     ]
