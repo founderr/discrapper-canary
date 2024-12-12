@@ -20,8 +20,8 @@ var i = t(200651),
     f = t(858987),
     v = t(975060),
     E = t(882712),
-    S = t(855775),
-    g = t(626135),
+    g = t(855775),
+    S = t(626135),
     j = t(669079),
     y = t(74538),
     I = t(987209),
@@ -41,15 +41,15 @@ function A(e) {
         ev = {};
     (ev.gift_style = eo), (ev.reward_sku_ids = eh && (null == ex ? void 0 : ex.skuId) != null ? [null == ex ? void 0 : ex.skuId] : []), ef === j.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && (s()(null != ep, 'Gift recipient must be set at purchase review step for these gift options.'), (ev.recipient_id = ep.id), (ev.custom_message = eu), (ev.emoji_id = null == ed ? void 0 : ed.id), (ev.emoji_name = (null == ed ? void 0 : ed.id) == null ? (null == ed ? void 0 : ed.surrogates) : void 0), (ev.sound_id = null == em ? void 0 : em.soundId));
     let eE = null == Y ? void 0 : Y.id,
-        eS = (0, b.sE)(D, X.paymentSourceId, eE),
-        eg = (0, a.e7)([v.Z], () => v.Z.popupCallbackCalled),
+        eg = (0, b.sE)(D, X.paymentSourceId, eE),
+        eS = (0, a.e7)([v.Z], () => v.Z.popupCallbackCalled),
         { analyticsLocations: ej } = (0, u.ZP)(),
         ey = null != $ ? ee[$] : null,
-        [eI, eP] = l.useState(eS),
+        [eI, eP] = l.useState(eg),
         [eT, eN] = l.useState(!1),
         { hasEntitlements: eb } = (0, h.H)(eE, ec),
         eC = (0, y.Ap)(X.paymentSourceId),
-        e_ = eb || eS,
+        e_ = eb || eg,
         eO = (0, p.U)(),
         eA = null,
         eZ = null;
@@ -57,7 +57,7 @@ function A(e) {
         var eR;
         s()(null != en, 'SKU must be selected for one-time purchases'), (eA = null !== (eR = et[en]) && void 0 !== eR ? eR : null), s()(null != eA, 'SKU must exist and be fetched.');
         let e = ei[en],
-            n = null != $ ? $ : S.c;
+            n = null != $ ? $ : g.c;
         eZ = null != e ? e[n] : null;
     }
     let ew = async () => {
@@ -94,14 +94,14 @@ function A(e) {
     };
     l.useEffect(() => {
         (async () => {
-            if (!0 === eg)
+            if (!0 === eS)
                 try {
                     if (null == v.Z.redirectedPaymentId) return;
                     await (0, o.OP)(v.Z.redirectedPaymentId), t(N.A.COMPLETED), A();
                 } catch (e) {
                     t(N.A.FAIL),
                         L(e),
-                        g.default.track(_.rMx.PAYMENT_FLOW_FAILED, {
+                        S.default.track(_.rMx.PAYMENT_FLOW_FAILED, {
                             ...k,
                             payment_error_code: null == e ? void 0 : e.code,
                             payment_source_id: $,
@@ -113,12 +113,12 @@ function A(e) {
                 }
             else G === E.I.SUCCESS && (await ew());
         })();
-    }, [eg]),
+    }, [eS]),
         l.useEffect(() => {
-            eS && !ec && null == n && ew();
-        }, [eS, ec, n]);
+            eg && !ec && null == n && ew();
+        }, [eg, ec, n]);
     let eM = null != H || (Q === _.GZQ.ONE_TIME && !ec);
-    return eS
+    return eg
         ? null
         : (0, i.jsxs)(c.ModalFooter, {
               align: d.Z.Align.CENTER,

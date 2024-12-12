@@ -21,8 +21,8 @@ var i = t(200651),
     f = t(987209),
     v = t(563132),
     E = t(409813),
-    S = t(809144),
-    g = t(698708),
+    g = t(809144),
+    S = t(698708),
     j = t(844068),
     y = t(614223),
     I = t(481595),
@@ -42,8 +42,8 @@ function O(e) {
     let ef = l.useRef(null),
         [ev, eE] = (0, a.Z)(!1, 500);
     (0, x.t)();
-    let eS = null !== (t = null != A ? A : F) && void 0 !== t ? t : null,
-        eg = null != eS && (!er || b.nG[eS].skus.includes(Q)) ? eS : null,
+    let eg = null !== (t = null != A ? A : F) && void 0 !== t ? t : null,
+        eS = null != eg && (!er || b.nG[eg].skus.includes(Q)) ? eg : null,
         ej = (0, d.N)(F),
         ey = (0, u.Ng)(),
         eI = { user_trial_offer_id: null == ej ? void 0 : ej.id };
@@ -115,7 +115,7 @@ function O(e) {
                         setHasAcceptedTerms: es,
                         legalTermsNodeRef: eb,
                         hasLegalTermsFlash: ev,
-                        trialId: eg,
+                        trialId: eS,
                         trialFooterMessageOverride: Z,
                         reviewWarningMessage: R,
                         purchaseState: el,
@@ -149,10 +149,10 @@ function O(e) {
                     })))),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(S.P, { giftMessage: ep }),
+                (0, i.jsx)(g.P, { giftMessage: ep }),
                 !eR && (0, i.jsx)(P.Z, { isEligibleForTrial: eO }),
                 (0, i.jsxs)(N.C3, {
-                    children: [(0, i.jsx)(j.Z, {}), (0, i.jsx)(g.Z, {}), r]
+                    children: [(0, i.jsx)(j.Z, {}), (0, i.jsx)(S.Z, {}), r]
                 }),
                 (0, i.jsx)(N.O3, {
                     children: (0, i.jsx)(T.Z, {
@@ -168,7 +168,7 @@ function O(e) {
                         analyticsLocation: k,
                         baseAnalyticsData: L,
                         flowStartTime: W.startTime,
-                        trialId: eg,
+                        trialId: eS,
                         planGroup: w,
                         purchaseTokenAuthState: q,
                         openInvoiceId: M,

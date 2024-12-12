@@ -3,10 +3,10 @@ t.d(n, {
         return d;
     },
     G0: function () {
-        return f;
+        return m;
     },
     QC: function () {
-        return m;
+        return f;
     },
     dd: function () {
         return h;
@@ -49,7 +49,7 @@ function d(e) {
         )
     });
 }
-function f(e) {
+function m(e) {
     let { onChange: n, checked: t, disabled: r } = e;
     return (0, o.jsx)(a.Checkbox, {
         size: 20,
@@ -65,7 +65,7 @@ function f(e) {
         })
     });
 }
-function m(e) {
+function f(e) {
     let { formField: n } = e;
     return (0, o.jsx)(l.Ih, {
         icon: a.BookCheckIcon,
@@ -83,7 +83,7 @@ let h = (e) => {
                 terms: t.values,
                 channelId: n
             }),
-            (0, o.jsx)(f, {
+            (0, o.jsx)(m, {
                 onChange: r,
                 checked: t.response
             })

@@ -20,8 +20,8 @@ var i = t(200651),
     f = t(228624),
     v = t(925329),
     E = t(215148),
-    S = t(653798),
-    g = t(314182),
+    g = t(653798),
+    S = t(314182),
     j = t(251660),
     y = t(246946),
     I = t(351402),
@@ -46,7 +46,7 @@ function F(e) {
         r = (0, f.ed)('SKUInvoice'),
         a = n.productLine === M.POd.COLLECTIBLES && r;
     return !t.tax_inclusive && t.tax > 0
-        ? (0, i.jsxs)(S.PO, {
+        ? (0, i.jsxs)(g.PO, {
               className: k.invoice,
               children: [
                   a
@@ -55,25 +55,25 @@ function F(e) {
                             value: (0, O.T4)(l, t.currency),
                             className: k.subscriptionCostRow
                         })
-                      : (0, i.jsx)(S.R$, {
+                      : (0, i.jsx)(g.R$, {
                             label: n.name,
                             value: (0, O.T4)(l, t.currency),
                             className: k.subscriptionCostRow
                         }),
-                  (0, i.jsx)(S.R$, {
+                  (0, i.jsx)(g.R$, {
                       label: L.intl.string(L.t['/I8zmJ']),
                       value: (0, O.T4)(t.tax, t.currency),
                       className: k.subscriptionCostRow
                   }),
-                  (0, i.jsx)(S.KU, {}),
-                  (0, i.jsx)(S.Ji, {
+                  (0, i.jsx)(g.KU, {}),
+                  (0, i.jsx)(g.Ji, {
                       label: L.intl.format(L.t['+B5KfH'], {}),
                       value: (0, O.T4)(t.amount, t.currency),
                       className: k.subscriptionCostRow
                   })
               ]
           })
-        : (0, i.jsx)(S.PO, {
+        : (0, i.jsx)(g.PO, {
               className: k.invoice,
               children: a
                   ? (0, i.jsx)(E.C, {
@@ -81,7 +81,7 @@ function F(e) {
                         value: (0, O.T4)(t.amount, t.currency),
                         className: k.subscriptionCostRow
                     })
-                  : (0, i.jsx)(S.R$, {
+                  : (0, i.jsx)(g.R$, {
                         label: n.name,
                         value: (0, O.T4)(t.amount, t.currency),
                         className: k.subscriptionCostRow
@@ -180,7 +180,7 @@ function U(e) {
                             type: o.Spinner.Type.WANDERING_CUBES,
                             className: k.invoiceSpinner
                         })
-                      : (0, i.jsx)(S.PO, {
+                      : (0, i.jsx)(g.PO, {
                             className: k.invoice,
                             children: em
                                 ? (0, i.jsx)(E.C, {
@@ -188,7 +188,7 @@ function U(e) {
                                       value: null,
                                       className: k.subscriptionCostRow
                                   })
-                                : (0, i.jsx)(S.R$, {
+                                : (0, i.jsx)(g.R$, {
                                       label: et.name,
                                       value: null,
                                       className: k.subscriptionCostRow
@@ -210,7 +210,7 @@ function U(e) {
                         })
                     ]
                 }),
-                (0, i.jsx)(g.Z, {
+                (0, i.jsx)(S.Z, {
                     isActive: n,
                     ref: t,
                     children: (0, i.jsx)(x.Z, {

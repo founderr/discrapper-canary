@@ -94,7 +94,7 @@ function N(e) {
                           children: (0, i.jsxs)('div', {
                               className: Z.innerContainer,
                               children: [
-                                  (0, i.jsx)(b.Z, {
+                                  (0, i.jsx)(b.ZP, {
                                       userId: t,
                                       guildId: n,
                                       onClose: r

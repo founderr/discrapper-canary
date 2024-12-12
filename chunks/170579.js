@@ -38,12 +38,12 @@ let h = (e) => {
 t.Z = function (e) {
     var t;
     let n;
-    let { hideCloseButton: l = !1, hideCloseOnFullScreen: S, shouldShowPrice: g, plan: A, renderAnimation: v, onClose: R, isGift: x, upgradeToPremiumType: P, headerTheme: I = T.nL.DEFAULT, className: M, showTrialBadge: b = !1, showDiscountBadge: y = !1 } = e,
+    let { hideCloseButton: l = !1, hideCloseOnFullScreen: S, shouldShowPrice: g, plan: A, renderAnimation: v, onClose: R, isGift: x, upgradeToPremiumType: P, headerTheme: M = T.nL.DEFAULT, className: I, showTrialBadge: b = !1, showDiscountBadge: y = !1 } = e,
         O = P === T.p9.TIER_2;
     n = P === T.p9.TIER_0 ? d.Z : P === T.p9.TIER_1 ? f.Z : c.Z;
     let D = (0, r.e7)([u.Z], () => u.Z.useReducedMotion),
         Z = (0, L.Ng)(),
-        k = null == Z ? void 0 : null === (t = Z.discount) || void 0 === t ? void 0 : t.amount;
+        w = null == Z ? void 0 : null === (t = Z.discount) || void 0 === t ? void 0 : t.amount;
     return (0, i.jsxs)('div', {
         'aria-hidden': !0,
         className: a()(
@@ -51,10 +51,10 @@ t.Z = function (e) {
                 [N.headerBackground]: !O,
                 [N.tier2HeaderBackground]: O
             },
-            M
+            I
         ),
         children: [
-            D || I !== T.nL.WINTER
+            D || M !== T.nL.WINTER
                 ? null
                 : (0, i.jsx)(p.Z, {
                       className: N.snow,
@@ -73,7 +73,7 @@ t.Z = function (e) {
                             (b || y) &&
                                 (0, i.jsx)(h, {
                                     isTier0: P === T.p9.TIER_0,
-                                    discountAmount: y ? k : void 0
+                                    discountAmount: y ? w : void 0
                                 })
                         ]
                     }),

@@ -1,6 +1,6 @@
 t.d(n, {
     O: function () {
-        return S;
+        return g;
     }
 }),
     t(47120),
@@ -59,7 +59,7 @@ let v = (e) => {
             ]
         });
     },
-    S = (e) => {
+    g = (e) => {
         var n;
         let { product: t, sku: l, fallbackLabel: o } = e,
             u = (0, c.e7)([x.Z], () => x.Z.getProduct(null == l ? void 0 : l.id)),

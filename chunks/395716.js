@@ -5,40 +5,40 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(442837),
+    r = n(192379),
+    a = n(442837),
     l = n(481060),
-    a = n(287734),
-    o = n(592125),
-    c = n(693546),
+    o = n(287734),
+    c = n(592125),
+    s = n(693546),
     d = n(388032);
 function u(e) {
     let { joinRequest: t } = e,
-        [n, u] = s.useState(!1),
-        m = (0, r.e7)([o.Z], () => o.Z.getChannel(t.interviewChannelId)),
-        h = s.useCallback(() => {
+        [n, u] = r.useState(!1),
+        m = (0, a.e7)([c.Z], () => c.Z.getChannel(t.interviewChannelId)),
+        f = r.useCallback(() => {
             (0, l.showToast)((0, l.createToast)(d.intl.string(d.t.R0RpRU), l.ToastType.FAILURE));
         }, []),
-        x = s.useCallback(async () => {
+        b = r.useCallback(async () => {
             if (null != m) {
-                a.default.selectPrivateChannel(m.id);
+                o.default.selectPrivateChannel(m.id);
                 return;
             }
             if (!n) {
                 u(!0);
                 try {
-                    await c.Z.createOrEnterJoinRequestInterview(t.joinRequestId);
+                    await s.Z.createOrEnterJoinRequestInterview(t.joinRequestId);
                 } catch {
-                    h();
+                    f();
                 } finally {
                     u(!1);
                 }
             }
-        }, [m, t.joinRequestId, h, n]);
+        }, [m, t.joinRequestId, f, n]);
     return (0, i.jsx)(l.Button, {
         color: l.Button.Colors.BRAND,
         submitting: n,
-        onClick: x,
+        onClick: b,
         children: d.intl.string(d.t.aqiUAA)
     });
 }

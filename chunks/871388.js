@@ -15,7 +15,7 @@ function i(e, t, n) {
         body:
             'string' == typeof t
                 ? t
-                : l.intl.formatToPlainString(t, {
+                : l.intl.format(t, {
                       highlightHook: (e) =>
                           (0, A.jsx)(r.Text, {
                               variant: 'text-md/normal',

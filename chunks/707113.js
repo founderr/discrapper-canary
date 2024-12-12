@@ -1,78 +1,78 @@
 t.d(n, {
     Z: function () {
-        return j;
+        return g;
     }
 });
 var l = t(200651),
-    r = t(192379),
-    i = t(120356),
-    a = t.n(i),
-    o = t(752877),
-    s = t(399606),
+    i = t(192379),
+    r = t(120356),
+    a = t.n(r),
+    s = t(752877),
+    o = t(399606),
     c = t(481060),
     d = t(201070),
     u = t(893966),
-    x = t(472596),
-    m = t(598948),
+    m = t(472596),
+    x = t(598948),
     h = t(428936),
     b = t(41586),
-    _ = t(676391);
-function C(e) {
+    C = t(676391);
+function j(e) {
     let { guild: n } = e,
         t = (0, d.$j)(n.id),
-        r = (0, c.useSpring)({
+        i = (0, c.useSpring)({
             height: t ? 3 : 0,
-            config: o.config.stiff
+            config: s.config.stiff
         });
     return (0, l.jsx)('div', {
-        className: _.loaderContainer,
-        children: (0, l.jsx)(o.animated.div, {
-            className: _.loaderBar,
-            style: r
+        className: C.loaderContainer,
+        children: (0, l.jsx)(s.animated.div, {
+            className: C.loaderBar,
+            style: i
         })
     });
 }
-function j(e) {
-    let { guild: n, className: t, onPageChange: i, onMemberSelect: o } = e,
-        j = n.id,
-        g = (0, s.e7)([u.Z], () => u.Z.getEstimatedMemberSearchCountByGuildId(j), [j]),
-        f = (0, d.$j)(j),
-        v = (0, d.M3)(j),
-        p = r.useCallback(
+function g(e) {
+    let { guild: n, className: t, onPageChange: r, onMemberSelect: s } = e,
+        g = n.id,
+        f = (0, o.e7)([u.Z], () => u.Z.getEstimatedMemberSearchCountByGuildId(g), [g]),
+        v = (0, d.$j)(g),
+        N = (0, d.M3)(g),
+        _ = i.useCallback(
             (e) => {
-                if (null != e) null == o || o(e);
+                if (null != e) null == s || s(e);
             },
-            [o]
+            [s]
         ),
-        N = (0, x.xb)(v, f, g),
-        S = r.useRef(null),
-        T = r.useRef(null),
-        E = r.useCallback(() => {
+        E = (0, m.xb)(N, v, f),
+        T = i.useRef(null),
+        I = i.useRef(null),
+        S = i.useCallback(() => {
             var e;
-            null === (e = S.current) || void 0 === e || e.resetSearchText();
+            null === (e = T.current) || void 0 === e || e.resetSearchText();
         }, []);
     return (0, l.jsx)('div', {
-        className: a()(_.mainTableContainer, t),
+        className: a()(C.mainTableContainer, t),
         children: (0, l.jsxs)(c.AdvancedScroller, {
-            className: a()(_.horizatonalScroller),
-            ref: T,
+            className: a()(C.horizatonalScroller),
+            ref: I,
             orientation: 'horizontal',
             children: [
                 (0, l.jsx)(b.Z, {
                     guild: n,
-                    ref: S
+                    ref: T
                 }),
-                (0, l.jsx)(C, { guild: n }),
-                (0, l.jsx)(m.Z, {
+                (0, l.jsx)(j, { guild: n }),
+                (0, l.jsx)(x.Z, {
                     guild: n,
-                    onSelectRow: p,
-                    searchState: N,
-                    onResetForNewMembers: E
+                    onSelectRow: _,
+                    searchState: E,
+                    onResetForNewMembers: S
                 }),
-                N !== x.po.SUCCESS_STILL_INDEXING &&
+                E !== m.po.SUCCESS_STILL_INDEXING &&
                     (0, l.jsx)(h.Z, {
                         guildId: n.id,
-                        onPageChange: i
+                        onPageChange: r
                     })
             ]
         })

@@ -8,8 +8,8 @@ var o = t(200651),
     c = t(313201),
     u = t(944163),
     d = t(266395),
-    f = t(200305),
-    m = t(592286),
+    m = t(200305),
+    f = t(592286),
     h = t(388032),
     b = t(832311);
 let _ = () =>
@@ -21,13 +21,13 @@ let _ = () =>
         },
         onResetText: h.intl.string(h.t['ETE/oK']),
         onSave: () => {
-            (0, d.PE)(!1), (0, s.closeModal)(m.Pn);
+            (0, d.PE)(!1), (0, s.closeModal)(f.Pn);
         },
         onSaveText: h.intl.string(h.t['Xt+UaW']),
         onSaveButtonColor: s.ButtonColors.RED
     });
 n.default = (e) => {
-    let { guildId: n, transitionState: t, onClose: l, onComplete: m, isPreview: h = !1 } = e,
+    let { guildId: n, transitionState: t, onClose: l, onComplete: f, isPreview: h = !1 } = e,
         p = (0, d.rb)((e) => e.shouldShowWarning),
         x = (0, i.e7)([u.Z], () => u.Z.get(n)),
         C = (0, c.Dt)();
@@ -48,11 +48,11 @@ n.default = (e) => {
                               onClick: () => l(!1),
                               className: b.closeButton
                           }),
-                          (0, o.jsx)(f.Z, {
+                          (0, o.jsx)(m.Z, {
                               headerId: C,
                               guildId: n,
                               onClose: l,
-                              onComplete: m,
+                              onComplete: f,
                               isPreview: h
                           })
                       ]

@@ -87,7 +87,7 @@ let eg = 'resizable-sidebar-width-2',
         renderLoader: e_
     }),
     eI = (0, c.Un)({
-        createPromise: () => Promise.all([n.e('16114'), n.e('20882'), n.e('82450')]).then(n.bind(n, 998420)),
+        createPromise: () => Promise.all([n.e('16114'), n.e('74244')]).then(n.bind(n, 998420)),
         webpackId: 998420,
         name: 'GuildMemberApplicationReview',
         renderLoader: e_
@@ -99,7 +99,7 @@ let eg = 'resizable-sidebar-width-2',
         renderLoader: e_
     }),
     ev = (0, c.Un)({
-        createPromise: () => Promise.all([n.e('60696'), n.e('20882'), n.e('63430')]).then(n.bind(n, 545918)),
+        createPromise: () => Promise.all([n.e('60696'), n.e('44400')]).then(n.bind(n, 545918)),
         webpackId: 545918,
         name: 'MemberSafetyPage',
         renderLoader: e_

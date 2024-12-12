@@ -40,8 +40,8 @@ var A,
     Z = n(923400),
     W = n(623488),
     X = n(152980),
-    S = n(120651),
-    B = n(871388),
+    B = n(120651),
+    S = n(871388),
     z = n(412110),
     R = n(513669),
     Q = n(972797),
@@ -134,7 +134,7 @@ function _(e) {
         }, [el, eA, es, eo]),
         { shouldRestrictUpdatingCreatorMonetizationSettings: ec } = (0, b.gX)(U);
     l.useEffect(() => {
-        ec && (ee(), (0, B.B)(E.intl.string(E.t.OLf3xs), E.t['90LBVl']));
+        ec && (ee(), (0, S.B)(E.intl.string(E.t.OLf3xs), E.t['90LBVl']));
     }, [ec, ee]);
     let [eu, eg] = l.useState(null !== (r = null == eA ? void 0 : eA.name) && void 0 !== r ? r : ''),
         [eh, ep] = l.useState(null !== (i = null == eA ? void 0 : eA.description) && void 0 !== i ? i : ''),
@@ -147,9 +147,9 @@ function _(e) {
         [eN, eT] = l.useState(!0),
         { changesSaving: eF, saveError: eP, saveProductWithAttachments: eK, hasUnsavedAttachmentChanges: eZ, cancelUnusedUploads: eW } = (0, F.P)(),
         eX = (null == eA ? void 0 : eA.attachments) != null && (null == eA ? void 0 : eA.attachments.length) > 0,
-        eS = null != eP ? eP : eV,
-        eB = null != eF && 'published' in eF,
-        ez = null != eF && !eB,
+        eB = null != eP ? eP : eV,
+        eS = null != eF && 'published' in eF,
+        ez = null != eF && !eS,
         eR = null !== (C = null == eA ? void 0 : eA.role_id) && void 0 !== C ? C : null,
         [eQ, eO] = l.useState(),
         ek = null != eQ || null != eR,
@@ -184,7 +184,7 @@ function _(e) {
         ),
         e_ = l.useMemo(
             () =>
-                eY || null == eD || 'publish' === eD || null != eS
+                eY || null == eD || 'publish' === eD || null != eB
                     ? null
                     : (0, a.jsx)(h.SlideIn, {
                           className: D.successNotice,
@@ -207,11 +207,11 @@ function _(e) {
                               onResetText: E.intl.string(E.t.T6QuWV)
                           })
                       }),
-            [eS, eY, eD]
+            [eB, eY, eD]
         ),
         e$ = l.useCallback(() => {
             eY
-                ? (0, S.Z)({
+                ? (0, B.Z)({
                       title: E.intl.string(E.t.FVDhIS),
                       body: E.intl.string(E.t.Hgdhwc),
                       cta: E.intl.string(E.t.h0bti4),
@@ -247,11 +247,11 @@ function _(e) {
         }
     };
     l.useEffect(() => {
-        if (null != eS) {
+        if (null != eB) {
             var e;
-            (0, z.V)(eS, U, null == ea ? void 0 : null === (e = ea.team) || void 0 === e ? void 0 : e.id);
+            (0, z.V)(eB, U, null == ea ? void 0 : null === (e = ea.team) || void 0 === e ? void 0 : e.id);
         }
-    }, [eS, U, ea]),
+    }, [eB, U, ea]),
         l.useEffect(() => {
             eY && ew(void 0);
         }, [eY]);
@@ -301,7 +301,7 @@ function _(e) {
                                     title: E.intl.string(E.t.Hsk7xc),
                                     tag: 'label',
                                     htmlFor: G,
-                                    error: null == eS ? void 0 : eS.getFirstFieldErrorMessage('name'),
+                                    error: null == eB ? void 0 : eB.getFirstFieldErrorMessage('name'),
                                     children: (0, a.jsx)(h.TextArea, {
                                         value: eu,
                                         onChange: eg,
@@ -319,7 +319,7 @@ function _(e) {
                                 (0, a.jsx)(h.FormItem, {
                                     title: E.intl.string(E.t.QdKLyc),
                                     tag: 'label',
-                                    error: null == eS ? void 0 : eS.getFirstFieldErrorMessage('description'),
+                                    error: null == eB ? void 0 : eB.getFirstFieldErrorMessage('description'),
                                     htmlFor: Y,
                                     children: (0, a.jsx)(x.Z, {
                                         id: Y,
@@ -336,7 +336,7 @@ function _(e) {
                                 (0, a.jsx)(h.FormItem, {
                                     title: E.intl.string(E.t['CAY/vr']),
                                     tag: 'label',
-                                    error: null == eS ? void 0 : eS.getFirstFieldErrorMessage('price_tier'),
+                                    error: null == eB ? void 0 : eB.getFirstFieldErrorMessage('price_tier'),
                                     children: (0, a.jsx)(J, {
                                         guildId: U,
                                         selectedPriceTier: em,
@@ -346,7 +346,7 @@ function _(e) {
                                 (0, a.jsxs)(h.FormItem, {
                                     title: E.intl.string(E.t['sqXj6+']),
                                     tag: 'label',
-                                    error: null == eS ? void 0 : eS.getFirstFieldErrorMessage('image'),
+                                    error: null == eB ? void 0 : eB.getFirstFieldErrorMessage('image'),
                                     titleClassName: D.thumbnailLabel,
                                     children: [
                                         (0, a.jsx)(h.Text, {
@@ -373,7 +373,7 @@ function _(e) {
                                 eN
                                     ? (0, a.jsx)(h.FormItem, {
                                           title: E.intl.string(E.t.zLrtkJ),
-                                          error: null == eS ? void 0 : eS.getFirstFieldErrorMessage('attachments'),
+                                          error: null == eB ? void 0 : eB.getFirstFieldErrorMessage('attachments'),
                                           children: (0, a.jsx)(X.s, {
                                               onFileAdded: () => {
                                                   var e;
@@ -389,7 +389,7 @@ function _(e) {
                                     : null,
                                 ek
                                     ? (0, a.jsx)(O.ZP, {
-                                          error: null !== (q = null == eS ? void 0 : eS.getFirstFieldErrorMessage(K.NB)) && void 0 !== q ? q : void 0,
+                                          error: null !== (q = null == eB ? void 0 : eB.getFirstFieldErrorMessage(K.NB)) && void 0 !== q ? q : void 0,
                                           newRoleParams: eQ,
                                           setNewRoleParams: eO,
                                           guildId: U,
@@ -417,7 +417,7 @@ function _(e) {
                                                 published: !er
                                             });
                                     },
-                                    submitting: eB
+                                    submitting: eS
                                 }),
                                 (0, a.jsx)('div', { className: D.verticalSeparator }),
                                 (0, a.jsx)(h.Heading, {
