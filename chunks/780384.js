@@ -23,6 +23,9 @@ r.d(n, {
     bg: function () {
         return o.bg;
     },
+    r5: function () {
+        return u.r5;
+    },
     uv: function () {
         return i.u;
     },

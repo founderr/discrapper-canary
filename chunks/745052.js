@@ -289,16 +289,13 @@ let eo = (0, p.Z)(function (e) {
                                             selectedItem: I,
                                             type: 'top-pill',
                                             onItemSelect: S,
-                                            className: ee.__invalid_tabBar,
                                             children: [
                                                 (0, i.jsx)(u.TabBar.Item, {
                                                     id: q.pS.REQUESTS,
-                                                    className: ee.__invalid_item,
                                                     children: $.intl.string($.t['7RFcXV'])
                                                 }),
                                                 (0, i.jsx)(u.TabBar.Item, {
                                                     id: q.pS.SPAM,
-                                                    className: ee.__invalid_item,
                                                     children: 0 === o ? $.intl.string($.t.ulKXHh) : $.intl.formatToPlainString($.t['5jtrlZ'], { count: o })
                                                 })
                                             ]
