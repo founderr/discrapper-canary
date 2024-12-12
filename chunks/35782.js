@@ -1698,6 +1698,26 @@ let { Themes: i } = r(15202).V,
                     }
                 }
             },
+            SPINE_DEFAULT: {
+                'visual-refresh': {
+                    [i.DARK]: {
+                        raw: 'OPACITY_12',
+                        opacity: 0.12156862745098039
+                    },
+                    [i.LIGHT]: {
+                        raw: 'OPACITY_28',
+                        opacity: 0.2784313725490196
+                    },
+                    [i.MIDNIGHT]: {
+                        raw: 'OPACITY_28',
+                        opacity: 0.2784313725490196
+                    },
+                    [i.DARKER]: {
+                        raw: 'OPACITY_12',
+                        opacity: 0.12156862745098039
+                    }
+                }
+            },
             TEXT_BRAND: {
                 'visual-refresh': {
                     [i.DARK]: {

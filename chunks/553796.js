@@ -10,6 +10,8 @@ e.exports = {
     channelTextAreaDisabled: 'channelTextAreaDisabled_bdf0de',
     hasStackedBar: 'hasStackedBar_bdf0de',
     inlineContainer: 'inlineContainer_bdf0de',
+    accessoryBar: 'accessoryBar_bdf0de',
+    flushContainer: 'flushContainer_bdf0de inlineContainer_bdf0de',
     inner: 'inner_bdf0de',
     innerDisabled: 'innerDisabled_bdf0de inner_bdf0de',
     sansAttachButton: 'sansAttachButton_bdf0de',
@@ -44,7 +46,6 @@ e.exports = {
     stackedBars: 'stackedBars_bdf0de',
     expressionPickerPositionLayer: 'expressionPickerPositionLayer_bdf0de',
     textAreaMobileThemed: 'textAreaMobileThemed_bdf0de',
-    accessoryBar: 'accessoryBar_bdf0de',
     accessoryBarLeft: 'accessoryBarLeft_bdf0de',
     accessoryBarRight: 'accessoryBarRight_bdf0de',
     rightAccessories: 'rightAccessories_bdf0de'

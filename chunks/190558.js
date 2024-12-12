@@ -6013,6 +6013,25 @@ let { Themes: a } = r(15202).V,
                 opacity: 0
             }
         },
+        SPINE_DEFAULT: {
+            category: 'generic',
+            [a.DARK]: {
+                raw: 'PRIMARY_500',
+                opacity: 1
+            },
+            [a.LIGHT]: {
+                raw: 'PRIMARY_300',
+                opacity: 1
+            },
+            [a.MIDNIGHT]: {
+                raw: 'PLUM_13',
+                opacity: 1
+            },
+            [a.DARKER]: {
+                raw: 'PLUM_13',
+                opacity: 1
+            }
+        },
         SPOILER_HIDDEN_BACKGROUND: {
             category: 'generic',
             [a.DARK]: {

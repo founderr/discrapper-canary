@@ -298,6 +298,7 @@ var r;
         (e.SCROLLBAR_AUTO_TRACK = 'var(--scrollbar-auto-track)'),
         (e.SCROLLBAR_THIN_THUMB = 'var(--scrollbar-thin-thumb)'),
         (e.SCROLLBAR_THIN_TRACK = 'var(--scrollbar-thin-track)'),
+        (e.SPINE_DEFAULT = 'var(--spine-default)'),
         (e.SPOILER_HIDDEN_BACKGROUND = 'var(--spoiler-hidden-background)'),
         (e.SPOILER_REVEALED_BACKGROUND = 'var(--spoiler-revealed-background)'),
         (e.STAGE_CARD_PILL_BG = 'var(--stage-card-pill-bg)'),

@@ -420,7 +420,8 @@ function ew(e, n) {
         t0 = !0 === ei.showSlowmodeIndicator,
         t1 = !0 === ei.showTypingIndicator,
         t2 = e5 && ei.layout === ee.gy.INLINE,
-        t3 = (0, s.jsx)(es.Z, {
+        t3 = e5 && ei.layout === ee.gy.FLUSH,
+        t4 = (0, s.jsx)(es.Z, {
             type: ei,
             disabled: tu,
             channel: X,
@@ -429,7 +430,7 @@ function ew(e, n) {
             showAllButtons: tr,
             children: e5 ? (null == ew ? void 0 : ew()) : null
         }),
-        t4 = e5
+        t6 = e5
             ? (0, s.jsxs)('div', {
                   className: eh.accessoryBar,
                   children: [
@@ -448,7 +449,7 @@ function ew(e, n) {
                       }),
                       (0, s.jsx)('div', {
                           className: eh.accessoryBarRight,
-                          children: t3
+                          children: t4
                       })
                   ]
               })
@@ -489,7 +490,8 @@ function ew(e, n) {
                                 [eh.scrollableContainer]: !0,
                                 [eh.themedBackground]: !e1,
                                 [eh.hasStackedBar]: tQ.stacked.length > 0,
-                                [eh.inlineContainer]: t2
+                                [eh.inlineContainer]: t2,
+                                [eh.flushContainer]: t3
                             }),
                             children: [
                                 (0, s.jsx)(er.Z, {
@@ -576,10 +578,10 @@ function ew(e, n) {
                                                           : null
                                                   ]
                                               })
-                                            : t3
+                                            : t4
                                     ]
                                 }),
-                                e5 ? t4 : null
+                                e5 ? t6 : null
                             ]
                         }),
                         tp

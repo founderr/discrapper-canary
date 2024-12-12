@@ -17,7 +17,7 @@ var i,
     (e[(e.TOOLTIP = 0)] = 'TOOLTIP'), (e[(e.STATIC = 1)] = 'STATIC'), (e[(e.NONE = 2)] = 'NONE');
 })(i || (i = {})),
     !(function (e) {
-        (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.INLINE = 1)] = 'INLINE');
+        (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.INLINE = 1)] = 'INLINE'), (e[(e.FLUSH = 2)] = 'FLUSH');
     })(a || (a = {}));
 let l = {
         analyticsName: 'normal',
@@ -214,7 +214,8 @@ let l = {
         disableAutoFocus: !0,
         hideAttachmentArea: !0,
         uploadLongMessages: !0,
-        showSlowmodeIndicator: !0
+        showSlowmodeIndicator: !0,
+        layout: 2
     },
     m = {
         analyticsName: 'create_poll',
@@ -242,7 +243,8 @@ let l = {
             useDisabledStylesOnSubmit: !0,
             clearOnSubmit: !0
         },
-        toolbarType: 2
+        toolbarType: 2,
+        layout: 1
     },
     E = {
         analyticsName: 'overlay_inline_reply',

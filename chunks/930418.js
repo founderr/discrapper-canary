@@ -7,5 +7,6 @@ e.exports = {
     emptyStateIcon: 'emptyStateIcon_b767ed',
     emptyStateIconContainer: 'emptyStateIconContainer_b767ed',
     emptyStateStars: 'emptyStateStars_b767ed',
-    emptyStateSubtext: 'emptyStateSubtext_b767ed'
+    emptyStateSubtext: 'emptyStateSubtext_b767ed',
+    container: 'container_b767ed'
 };
