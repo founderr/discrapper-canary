@@ -361,7 +361,7 @@ function eU(e) {
     )
         return null;
     let P = I ? 'div' : r.Fragment,
-        y = I ? { className: ep.sidebarList } : {};
+        y = I ? { className: a()(ep.sidebarList, { [ep.sidebarListRounded]: !t }) } : {};
     return (0, i.jsx)(m.ThemeProvider, {
         theme: n,
         children: (e) =>

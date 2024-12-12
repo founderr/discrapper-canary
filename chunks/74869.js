@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return p;
     }
 }),
     n(47120);
@@ -16,7 +16,7 @@ var i = n(200651),
     g = n(353926),
     m = n(499533),
     b = n(388032);
-function p(e) {
+function f(e) {
     let { id: t, experiment: n, currentBucket: r } = e;
     return (0, i.jsxs)(
         s.MenuItem,
@@ -53,7 +53,7 @@ function p(e) {
         t
     );
 }
-function f() {
+function p() {
     let e = (0, u.e7)(
             [g.Z, g.Z],
             () => {
@@ -96,8 +96,8 @@ function f() {
                 }),
             [o]
         ),
-        f = r.useMemo(() => d.map(p), [d]),
-        h = r.useMemo(() => m.map(p), [m]);
+        p = r.useMemo(() => d.map(f), [d]),
+        h = r.useMemo(() => m.map(f), [m]);
     return [
         (0, i.jsx)(
             s.MenuControlItem,
@@ -115,8 +115,8 @@ function f() {
             'experiments-search'
         ),
         (0, i.jsx)(s.MenuSeparator, {}, 'separator'),
-        ...f,
-        f.length > 0 ? (0, i.jsx)(s.MenuSeparator, {}, 'separator-2') : null,
+        ...p,
+        p.length > 0 ? (0, i.jsx)(s.MenuSeparator, {}, 'separator-2') : null,
         ...h
     ];
 }

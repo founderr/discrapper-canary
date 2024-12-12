@@ -27,7 +27,7 @@ function d() {
             };
         }),
         { horizontalSpacing: d, verticalSpacing: g, maxHorizontalSpacing: m, maxVerticalSpacing: b } = (0, a.i)(),
-        { setHorizontalSpacing: p, setVerticalSpacing: f } = a.i.getState(),
+        { setHorizontalSpacing: f, setVerticalSpacing: p } = a.i.getState(),
         h = [];
     return (
         t &&
@@ -60,7 +60,7 @@ function d() {
                                     value: d,
                                     minValue: 0,
                                     maxValue: m,
-                                    onChange: (e) => p(e),
+                                    onChange: (e) => f(e),
                                     renderValue: (e) => ''.concat(Math.round(e), 'px'),
                                     'aria-label': 'Horizontal Spacing'
                                 })
@@ -81,7 +81,7 @@ function d() {
                                     value: g,
                                     minValue: 0,
                                     maxValue: b,
-                                    onChange: (e) => f(e),
+                                    onChange: (e) => p(e),
                                     'aria-label': 'Horizontal Spacing',
                                     renderValue: (e) => ''.concat(Math.round(e), 'px')
                                 })

@@ -8,8 +8,8 @@ var l = t(200651),
     r = t(780384),
     a = t(481060),
     s = t(410030),
-    c = t(114487),
-    o = t(686546),
+    o = t(114487),
+    c = t(686546),
     u = t(981631),
     d = t(388032),
     h = t(950039);
@@ -30,13 +30,13 @@ function m(e) {
             }),
             (0, l.jsx)('div', {
                 className: h.avatarContainer,
-                children: (0, l.jsx)(o.ZP, {
-                    mask: o.QS.CLAN_ICON,
+                children: (0, l.jsx)(c.ZP, {
+                    mask: c.QS.CLAN_ICON,
                     width: 70,
                     height: 70,
                     children: (0, l.jsx)('div', {
                         className: h.avatarWrapper,
-                        children: (0, l.jsx)(c.b, {
+                        children: (0, l.jsx)(o.b, {
                             guildId: n.id,
                             guildName: n.name,
                             guildIcon: n.icon,

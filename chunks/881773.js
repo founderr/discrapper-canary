@@ -25,8 +25,8 @@ var r = n(200651),
     h = n(981631),
     _ = n(388032),
     T = n(451680);
-let I = '-:--',
-    N = {
+let N = '-:--',
+    I = {
         [g.r.PLAYING]: {
             icon: d.PauseIcon,
             label: _.intl.string(_.t.ZcgDJS)
@@ -49,8 +49,8 @@ let I = '-:--',
     };
 function A(e) {
     let { current: t, duration: n } = e,
-        i = null != t ? (0, S.yv)(t) : I,
-        l = null != n ? (0, S.yv)(n) : I;
+        i = null != t ? (0, S.yv)(t) : N,
+        l = null != n ? (0, S.yv)(n) : N;
     return (
         (i = i.padStart(l.length, '0')),
         (0, r.jsxs)('div', {
@@ -117,7 +117,7 @@ let j = i.forwardRef(function (e, t) {
 });
 function b(e) {
     var t, n;
-    let { videoRef: l, quest: v, playerState: S, animSpring: h, visible: I, seekForwardEnabled: b, hideCaptionBtn: L, handlePlaybackBtnClick: k, handleTranscriptBtnClick: M, handleCaptionBtnClick: O, handleFullScreenBtnClick: y, handleSeekBackBtnClick: R, handleSeekForwardBtnClick: P, handleControlBarPendingInteraction: w } = e,
+    let { videoRef: l, quest: v, playerState: S, animSpring: h, visible: N, seekForwardEnabled: b, hideCaptionBtn: L, handlePlaybackBtnClick: k, handleTranscriptBtnClick: O, handleCaptionBtnClick: M, handleFullScreenBtnClick: y, handleSeekBackBtnClick: R, handleSeekForwardBtnClick: P, handleControlBarPendingInteraction: w } = e,
         B = (0, p.km)((e) => e.volume),
         U = (0, p.km)((e) => e.setVolume),
         Z = (0, p.km)((e) => e.muted),
@@ -170,7 +170,7 @@ function b(e) {
                         P();
                         break;
                     case x.Y1.CAPTION:
-                        O();
+                        M();
                         break;
                     case x.Y1.FULLSCREEN:
                         y();
@@ -179,7 +179,7 @@ function b(e) {
                         en();
                 }
             },
-            [O, y, k, R, P, en]
+            [M, y, k, R, P, en]
         );
     i.useEffect(() => {
         null != ee.current && ee.current.focus();
@@ -206,7 +206,7 @@ function b(e) {
             [el]
         );
     let eo = 0 === z ? d.VoiceXIcon : z < 0.5 ? d.VoiceLowIcon : d.VoiceNormalIcon,
-        { icon: es, label: ea } = N[S];
+        { icon: es, label: ea } = I[S];
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
@@ -215,7 +215,7 @@ function b(e) {
                     (0, r.jsx)(j, {
                         iconComponent: es,
                         animationTime: h,
-                        visible: I,
+                        visible: N,
                         ariaLabel: ea,
                         tooltipLabel: ea,
                         onClick: k,
@@ -224,7 +224,7 @@ function b(e) {
                     (0, r.jsx)(j, {
                         iconComponent: f.d,
                         animationTime: h,
-                        visible: I,
+                        visible: N,
                         onClick: R,
                         ariaLabel: _.intl.string(_.t.r9s3Ul),
                         tooltipLabel: _.intl.string(_.t.r9s3Ul)
@@ -232,7 +232,7 @@ function b(e) {
                     (0, r.jsx)(j, {
                         iconComponent: C.o,
                         animationTime: h,
-                        visible: I,
+                        visible: N,
                         onClick: P,
                         disabled: !b,
                         ariaLabel: b ? _.intl.string(_.t.zWDcND) : _.intl.string(_.t.xXh3y8),
@@ -251,7 +251,7 @@ function b(e) {
                                 output: [0, 1]
                             })
                         ],
-                        (e) => ''.concat(I ? e : Math.pow(e, 8))
+                        (e) => ''.concat(N ? e : Math.pow(e, 8))
                     )
                 },
                 children: [
@@ -265,7 +265,7 @@ function b(e) {
                             (0, r.jsx)(j, {
                                 iconComponent: eo,
                                 animationTime: h,
-                                visible: I,
+                                visible: N,
                                 onClick: en,
                                 ariaLabel: _.intl.string(_.t['eIl+AA']),
                                 tooltipLabel: _.intl.string(_.t['eIl+AA'])
@@ -280,7 +280,7 @@ function b(e) {
                                                 output: [0, 1]
                                             })
                                         ],
-                                        (e) => ''.concat(I ? e : Math.pow(e, 8))
+                                        (e) => ''.concat(N ? e : Math.pow(e, 8))
                                     ),
                                     width: (0, s.to)(
                                         [
@@ -332,8 +332,8 @@ function b(e) {
                     (0, r.jsx)(j, {
                         iconComponent: d.PaperIcon,
                         animationTime: h,
-                        visible: I,
-                        onClick: M,
+                        visible: N,
+                        onClick: O,
                         active: V && S !== g.r.ENDED,
                         disabled: S === g.r.ENDED,
                         ariaLabel: _.intl.string(_.t.KCzjTk),
@@ -343,16 +343,16 @@ function b(e) {
                         (0, r.jsx)(j, {
                             iconComponent: E.c,
                             animationTime: h,
-                            visible: I,
+                            visible: N,
                             active: q,
-                            onClick: O,
+                            onClick: M,
                             ariaLabel: _.intl.string(_.t.bDSZOz),
                             tooltipLabel: _.intl.string(_.t.bDSZOz)
                         }),
                     (0, r.jsx)(j, {
                         iconComponent: G ? d.FullscreenExitIcon : d.FullscreenEnterIcon,
                         animationTime: h,
-                        visible: I,
+                        visible: N,
                         onClick: y,
                         ariaLabel: _.intl.string(_.t.vKZT5u),
                         tooltipLabel: _.intl.string(_.t.vKZT5u)

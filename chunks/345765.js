@@ -114,11 +114,11 @@ function M() {
 }
 function k() {
     M();
-    let { recentActivityEnabled: e, recentActivityLoadTestEnabled: n } = (0, c.G)({
+    let { recentActivityEnabled: e } = (0, c.G)({
         location: 'ContentInventoryManager',
         autoTrackExposure: !1
     });
-    (e || n) && P(E.YN.GAME_PROFILE_FEED);
+    e && P(E.YN.GAME_PROFILE_FEED);
 }
 function U() {
     x(y);

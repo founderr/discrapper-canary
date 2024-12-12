@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return M;
+            return O;
         }
     }),
     n(47120);
@@ -26,8 +26,8 @@ var r = n(200651),
     h = n(602667),
     _ = n(644646),
     T = n(604162),
-    I = n(747717),
-    N = n(963123),
+    N = n(747717),
+    I = n(963123),
     D = n(281055),
     A = n(46140),
     j = n(981631),
@@ -35,12 +35,12 @@ var r = n(200651),
     L = n(451680);
 function k(e) {
     var t;
-    let { transitionState: n, onClose: l, quest: p, autoplay: k, videoSessionId: M } = e,
-        O = (0, f.il)(p),
+    let { transitionState: n, onClose: l, quest: p, autoplay: k, videoSessionId: O } = e,
+        M = (0, f.il)(p),
         y = (0, s.e7)([d.Z], () => d.Z.getState().theme),
         R = (0, a.wj)(y) ? j.BRd.DARK : j.BRd.LIGHT,
         P = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
-        [w, B] = i.useState(O.progressSeconds),
+        [w, B] = i.useState(M.progressSeconds),
         [U, Z] = i.useState(!1),
         { completedRatio: F, completedRatioDisplay: V } = (0, v.I)(p),
         [q, G] = (0, T.G6)(b.intl.string(b.t.RDE0SU), b.intl.string(b.t['+5kSoa']), 1700),
@@ -99,7 +99,7 @@ function k(e) {
                                                     className: o()(L.contentHeaderLogotype, L.accentOnHover),
                                                     src: (0, C.fh)(p, C.eC.LOGO_TYPE, R).url
                                                 }),
-                                                (0, r.jsx)(I.Z, {}),
+                                                (0, r.jsx)(N.Z, {}),
                                                 (0, r.jsxs)('div', {
                                                     className: L.questHeading,
                                                     children: [
@@ -144,9 +144,9 @@ function k(e) {
                                         })
                                     ]
                                 }),
-                                (0, r.jsx)(N.Z, {
+                                (0, r.jsx)(I.Z, {
                                     quest: p,
-                                    videoSessionId: M,
+                                    videoSessionId: O,
                                     parentTransitionState: n,
                                     onOptimisticProgressUpdate: B,
                                     autoplay: k
@@ -166,7 +166,7 @@ function k(e) {
                                                 (0, r.jsx)(u.Button, {
                                                     color: u.Button.Colors.PRIMARY,
                                                     onClick: z,
-                                                    size: u.Button.Sizes.MEDIUM,
+                                                    size: u.Button.Sizes.NONE,
                                                     className: L.copyLinkBtn,
                                                     children: q
                                                 }),
@@ -191,7 +191,7 @@ function k(e) {
         })
     });
 }
-function M(e) {
+function O(e) {
     let { questId: t, overrideQuest: n, autoplay: i, ...l } = e,
         o = (0, s.e7)([p.Z], () => p.Z.getQuest(t)),
         a = null != n ? n : o;

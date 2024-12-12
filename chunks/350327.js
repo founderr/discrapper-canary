@@ -67,7 +67,7 @@ async function p(e, n) {
             userId: _
         });
         let r = await i.tn.patch({
-            url: null != n ? f.ANM.GUILD_PROFILE(n, f.ME) : f.ANM.USER_PROFILE(f.ME),
+            url: null != n ? f.ANM.USER_GUILD_PROFILE(n, f.ME) : f.ANM.USER_PROFILE(f.ME),
             body: e,
             rejectWithError: !1
         });

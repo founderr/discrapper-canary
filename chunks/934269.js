@@ -4,12 +4,12 @@ t.d(n, {
     }
 });
 var l = t(192379),
-    i = t(65400),
-    r = t(731965),
-    a = t(881052),
+    i = t(731965),
+    r = t(881052),
+    a = t(972959),
     s = t(699553);
-let c = {},
-    o = (0, i.F)((e, n) => ({
+let o = {},
+    c = (0, a.H)((e, n) => ({
         profiles: {},
         isFetchingGuild: (e) => null != n().fetchPromises[e],
         error: null,
@@ -20,28 +20,28 @@ let c = {},
                 !(function (e) {
                     var n;
                     let t = Date.now(),
-                        l = null !== (n = c[e]) && void 0 !== n ? n : 0;
+                        l = null !== (n = o[e]) && void 0 !== n ? n : 0;
                     return t - l > 60000;
                 })(t)
             ) {
-                var i;
-                return null != l ? await l : Promise.resolve(null !== (i = n().profiles[t]) && void 0 !== i ? i : null);
+                var a;
+                return null != l ? await l : Promise.resolve(null !== (a = n().profiles[t]) && void 0 !== a ? a : null);
             }
-            c[t] = Date.now();
+            o[t] = Date.now();
             try {
                 if (null != l) return await l;
                 {
                     let l = (async () => {
                         let l = await (0, s.C)(t),
-                            i = n().profiles,
+                            r = n().profiles,
                             a = n().fetchPromises;
                         return null == a[t]
                             ? l
                             : (delete a[t],
-                              (0, r.j)(() => {
+                              (0, i.j)(() => {
                                   e({
                                       profiles: {
-                                          ...i,
+                                          ...r,
                                           [t]: l
                                       },
                                       error: null,
@@ -51,7 +51,7 @@ let c = {},
                               l);
                     })();
                     return (
-                        (0, r.j)(() => {
+                        (0, i.j)(() => {
                             e({
                                 fetchPromises: {
                                     ...n().fetchPromises,
@@ -63,13 +63,13 @@ let c = {},
                     );
                 }
             } catch (s) {
-                let l = new a.Hx(s),
-                    i = n().fetchPromises;
-                null != i[t] && delete i[t],
-                    (0, r.j)(() => {
+                let l = new r.Hx(s),
+                    a = n().fetchPromises;
+                null != a[t] && delete a[t],
+                    (0, i.j)(() => {
                         e({
                             error: l,
-                            fetchPromises: i
+                            fetchPromises: a
                         });
                     });
             }
@@ -77,8 +77,8 @@ let c = {},
         }
     }));
 function u(e) {
-    let n = o((n) => (null != e ? n.profiles[e] : null)),
-        t = o((e) => e.fetchGuildProfile);
+    let n = c.useState((n) => (null != e ? n.profiles[e] : null), Object.is),
+        t = c.useField('fetchGuildProfile');
     return {
         guildProfile: n,
         fetchGuildProfile: l.useCallback(async () => {

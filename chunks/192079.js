@@ -17,8 +17,8 @@ var l = t(19780),
     r = t(700785),
     a = t(427679),
     s = t(157925),
-    c = t(981631),
-    o = t(71080),
+    o = t(981631),
+    c = t(71080),
     u = t(388032);
 function d(e, n, t, l) {
     let r = n[0],
@@ -35,14 +35,14 @@ function d(e, n, t, l) {
 }
 function h(e, n) {
     switch (e) {
-        case o.aC.OWNER:
+        case c.aC.OWNER:
             return u.intl.string(u.t.icuNBA);
-        case o.aC.ADMINISTRATOR:
+        case c.aC.ADMINISTRATOR:
             return u.intl.string(u.t.eTmN5e);
-        case o.aC.MEMBER:
-        case o.aC.ROLE:
+        case c.aC.MEMBER:
+        case c.aC.ROLE:
             return n ? u.intl.string(u.t.Hw3XW1) : u.intl.string(u.t.YieyPj);
-        case o.aC.EMPTY_STATE:
+        case c.aC.EMPTY_STATE:
     }
     return null;
 }
@@ -53,7 +53,7 @@ function m(e) {
         guild_id: e.guild_id,
         topic: null == n ? void 0 : n.topic,
         media_session_id: l.Z.getMediaSessionId(),
-        request_to_speak_state: r.Uu(c.Plq.REQUEST_TO_SPEAK, e) ? s.BM.EVERYONE : s.BM.NO_ONE,
+        request_to_speak_state: r.Uu(o.Plq.REQUEST_TO_SPEAK, e) ? s.BM.EVERYONE : s.BM.NO_ONE,
         stage_instance_id: null == n ? void 0 : n.id
     };
 }

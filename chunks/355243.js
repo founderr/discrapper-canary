@@ -22,8 +22,8 @@ function v(e, t, n) {
 function p(e) {
     let { percent: t, animate: n, interactionEnabled: l, backgroundColor: p, preloadedBuffers: E, duration: f, maxSeekableTime: C, onClick: g, onScrubBack: S, onScrubForward: x } = e,
         [h, _] = i.useState(null),
-        [T, I] = i.useState(null),
-        [N, D] = i.useState(null),
+        [T, N] = i.useState(null),
+        [I, D] = i.useState(null),
         [A, j] = i.useState(!1),
         b = i.useRef(null),
         L = (e) => {
@@ -44,10 +44,10 @@ function p(e) {
             };
             return window.addEventListener('resize', e), () => window.removeEventListener('resize', e);
         }, [k]);
-    let M = (e) => {
-            I(e.clientX);
+    let O = (e) => {
+            N(e.clientX);
         },
-        O = i.useCallback(
+        M = i.useCallback(
             (e) => {
                 let { key: t } = e;
                 t === c.mR.ArrowLeft && null != S ? (e.preventDefault(), e.stopPropagation(), S()) : t === c.mR.ArrowRight && null != x && (e.preventDefault(), e.stopPropagation(), x());
@@ -58,7 +58,7 @@ function p(e) {
         R = (0, u.yv)(y),
         P = null != h ? h.right - v((t / 100) * f, f, h) : null,
         w = null != T && null != h ? h.right - T : null,
-        B = null != N && null != h ? h.right - N : null;
+        B = null != I && null != h ? h.right - I : null;
     return (0, r.jsxs)('div', {
         className: d.cont,
         ref: k,
@@ -70,15 +70,15 @@ function p(e) {
                     if (!!l && null != g) g(m(e.clientX, e.currentTarget.getBoundingClientRect(), f));
                 },
                 onMouseEnter: (e) => {
-                    if (!!l) null != k.current && L(k.current.getBoundingClientRect()), j(!0), M(e);
+                    if (!!l) null != k.current && L(k.current.getBoundingClientRect()), j(!0), O(e);
                 },
                 onMouseLeave: (e) => {
-                    if (!!l) j(!1), I(null);
+                    if (!!l) j(!1), N(null);
                 },
                 onMouseMove: (e) => {
-                    if (!!l) A && M(e);
+                    if (!!l) A && O(e);
                 },
-                onKeyDown: O,
+                onKeyDown: M,
                 tabIndex: l ? void 0 : -1,
                 focusProps: {
                     offset: {

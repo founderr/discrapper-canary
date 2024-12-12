@@ -302,11 +302,11 @@ class O extends b.ZP {
             var e;
             return await (0, E.J)(this, null !== (e = this.reactNativeFileIndex) && void 0 !== e ? e : 0);
         });
-        if (null == n || null == n.file) return this;
+        if (null == n || null == n.file) return N.error('Failed to get compressed file for '.concat(this.id)), this;
         let r = n.uri,
             i = n.file.name,
             a = n.file.type;
-        if (((0, b.rG)(n.file) && ((this.uploadAnalytics.imageCompressionQuality = n.file.imageCompressionQuality), (this.uploadAnalytics.videoCompressionQuality = n.file.videoCompressionQuality), (this.uploadAnalytics.convertedMimeType = n.file.type), void 0 !== n.file.videoMetadata && ((this.uploadAnalytics.sourceMediaWidth = n.file.videoMetadata.width), (this.uploadAnalytics.sourceMediaHeight = n.file.videoMetadata.height), (this.uploadAnalytics.sourceMediaFormat = n.file.videoMetadata.format), (this.uploadAnalytics.sourceVideoBitrate = n.file.videoMetadata.bitrate))), (this.filename = i), null == i || null == r || null == a))
+        if (((0, b.rG)(n.file) && ((this.uploadAnalytics.imageCompressionQuality = n.file.imageCompressionQuality), (this.uploadAnalytics.videoCompressionQuality = n.file.videoCompressionQuality), (this.uploadAnalytics.convertedMimeType = n.file.type), void 0 !== n.file.videoMetadata && ((this.uploadAnalytics.sourceMediaWidth = n.file.videoMetadata.width), (this.uploadAnalytics.sourceMediaHeight = n.file.videoMetadata.height), (this.uploadAnalytics.sourceMediaFormat = n.file.videoMetadata.format), (this.uploadAnalytics.sourceVideoBitrate = n.file.videoMetadata.bitRate))), (this.filename = i), null == i || null == r || null == a))
             throw (
                 (N.error(
                     'Insufficient file data: '

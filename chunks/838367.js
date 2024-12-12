@@ -3,14 +3,14 @@ var l,
     r,
     a,
     s,
-    c,
-    o = t(442837),
+    o,
+    c = t(442837),
     u = t(570140),
     d = t(314897),
     h = t(900849);
 ((l = s || (s = {})).UNSET = 'unset'), (l.FETCHING = 'fetching'), (l.FAILED = 'failed'), (l.SUCCEEDED = 'succeeded');
 let m = {};
-class f extends (c = o.ZP.Store) {
+class f extends (o = c.ZP.Store) {
     initialize() {
         this.waitFor(d.default);
     }

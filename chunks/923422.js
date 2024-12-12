@@ -11,8 +11,8 @@ var i = n(200651),
     g = n(386506),
     m = n(366953),
     b = n(991346),
-    p = n(606669),
-    f = n(53432),
+    f = n(606669),
+    p = n(53432),
     h = n(74869),
     _ = n(45570),
     S = n(308512),
@@ -27,22 +27,22 @@ t.default = (0, u.Z)(
             [u, s] = r.useState(!1),
             I = (0, _.Z)(),
             v = (0, S.Z)(),
-            j = (0, f.Z)(),
-            B = (0, p.Z)(),
+            j = (0, p.Z)(),
+            B = (0, f.Z)(),
             E = (0, C.Z)(),
             R = (0, x.Z)(),
-            y = (0, h.Z)(),
-            T = (0, M.Z)(),
+            T = (0, h.Z)(),
+            y = (0, M.Z)(),
             { analyticsLocations: D } = (0, d.ZP)(),
             G = r.useMemo(() => (0, m.j)(), []);
-        async function U() {
+        async function O() {
             try {
                 s(!0), await (0, g.bF)(), window.location.reload(!0);
             } catch (e) {
                 s(!1);
             }
         }
-        let O = (e) => {
+        let U = (e) => {
                 switch (e) {
                     case Z.oAB.GAMES:
                         return I;
@@ -57,9 +57,9 @@ t.default = (0, u.Z)(
                     case Z.oAB.TEXT:
                         return R;
                     case Z.oAB.EXPERIMENTS:
-                        return y;
-                    case Z.oAB.DEVELOPER_OPTIONS:
                         return T;
+                    case Z.oAB.DEVELOPER_OPTIONS:
+                        return y;
                     default:
                         return null;
                 }
@@ -93,7 +93,7 @@ t.default = (0, u.Z)(
                                               let n = Object.values(Z.oAB).filter((t) => t === e)[0];
                                               null != n && a.Z.open(n, void 0, { analyticsLocations: t });
                                           })(t, D),
-                                children: O(t)
+                                children: U(t)
                             },
                             l
                         );
@@ -127,7 +127,7 @@ t.default = (0, u.Z)(
                                   id: 'clear-build-override',
                                   disabled: u,
                                   label: k.intl.string(k.t['/Nz9ra']),
-                                  action: U,
+                                  action: O,
                                   color: 'danger'
                               })
                           })

@@ -12,7 +12,7 @@ let i = (0, r(818083).B)({
         label: 'User Profile Recent Activity',
         defaultConfig: {
             recentActivityEnabled: !1,
-            recentActivityLoadTestEnabled: !1
+            allProfileReactReplyEnabled: !1
         },
         treatments: [
             {
@@ -20,15 +20,15 @@ let i = (0, r(818083).B)({
                 label: 'User Profile Recent Activity Enabled',
                 config: {
                     recentActivityEnabled: !0,
-                    recentActivityLoadTestEnabled: !1
+                    allProfileReactReplyEnabled: !1
                 }
             },
             {
-                id: 9999,
-                label: 'User Profile Recent Activity Load Test Enabled',
+                id: 2,
+                label: 'User Profile Recent Activity and React/Reply Enabled',
                 config: {
-                    recentActivityEnabled: !1,
-                    recentActivityLoadTestEnabled: !0
+                    recentActivityEnabled: !0,
+                    allProfileReactReplyEnabled: !0
                 }
             }
         ]

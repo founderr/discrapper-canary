@@ -26,20 +26,20 @@ var r = n(200651),
     h = n(184299),
     _ = n(720293),
     T = n(602667),
-    I = n(341907),
-    N = n(881773),
+    N = n(341907),
+    I = n(881773),
     D = n(355243),
     A = n(106743),
     j = n(223418),
     b = n(604162),
     L = n(747717),
     k = n(281055),
-    M = n(920393),
-    O = n(981631),
+    O = n(920393),
+    M = n(981631),
     y = n(217702),
     R = n(388032),
     P = n(451680);
-let w = new Set([O.IyS.FIVE_G, O.IyS.FOUR_G, O.IyS.UNKNOWN]),
+let w = new Set([M.IyS.FIVE_G, M.IyS.FOUR_G, M.IyS.UNKNOWN]),
     B = {
         tension: 250,
         friction: 5,
@@ -139,12 +139,12 @@ function V(e) {
         [eC, eg] = i.useState(!0),
         [eS, ex] = i.useState(!1),
         [eh, e_] = i.useState([]),
-        [eT, eI] = i.useState(E.Z.getEffectiveConnectionSpeed()),
-        [eN, eD] = i.useState(0),
+        [eT, eN] = i.useState(E.Z.getEffectiveConnectionSpeed()),
+        [eI, eD] = i.useState(0),
         [eA, ej] = i.useState(0),
         [eb, eL] = i.useState(!1),
-        [ek, eM] = i.useState(!1),
-        eO = i.useRef(null),
+        [ek, eO] = i.useState(!1),
+        eM = i.useRef(null),
         ey = i.useRef(null),
         eR = (0, i.useRef)(-1),
         eP = (0, h.km)((e) => {
@@ -177,20 +177,20 @@ function V(e) {
                 null != eF.current &&
                     (0, C.dA)({
                         questId: z.id,
-                        event: O.rMx.QUEST_VIDEO_SEGMENT_WATCHED,
+                        event: M.rMx.QUEST_VIDEO_SEGMENT_WATCHED,
                         properties: {
                             ...e,
                             video_asset_id: e1,
                             quest_completed: eG,
                             video_duration_sec: eF.current.duration,
-                            video_progress: (0, I.formatVideoProgressRatio)(e.segment_end_sec, eF.current.duration),
+                            video_progress: (0, N.formatVideoProgressRatio)(e.segment_end_sec, eF.current.duration),
                             video_session_id: H
                         }
                     });
             },
             [z.id, e1, eG, H]
         ),
-        { forceSendCurrentSegment: e4 } = (0, M.Z)({
+        { forceSendCurrentSegment: e4 } = (0, O.Z)({
             videoRef: eF,
             isPlaying: ea === j.r.PLAYING,
             isMetadataLoaded: eK,
@@ -207,7 +207,7 @@ function V(e) {
                             eF.current.play(),
                                 (0, C.dA)({
                                     questId: z.id,
-                                    event: O.rMx.QUEST_VIDEO_RESUMED,
+                                    event: M.rMx.QUEST_VIDEO_RESUMED,
                                     properties: {
                                         video_timestamp_seconds: eF.current.currentTime,
                                         pause_reason: ez,
@@ -226,14 +226,14 @@ function V(e) {
             [z.id, ez, e4, J, H]
         );
     i.useLayoutEffect(() => {
-        eq.current && ((eq.current = !1), eI(E.Z.getEffectiveConnectionSpeed()), eG && eP.timestampSec >= eP.duration && ew(z.id, 0, eP.duration));
+        eq.current && ((eq.current = !1), eN(E.Z.getEffectiveConnectionSpeed()), eG && eP.timestampSec >= eP.duration && ew(z.id, 0, eP.duration));
     }, []),
         i.useEffect(() => {
             null != eF.current &&
                 null != ez &&
                 (0, C.dA)({
                     questId: z.id,
-                    event: O.rMx.QUEST_VIDEO_PAUSED,
+                    event: M.rMx.QUEST_VIDEO_PAUSED,
                     properties: {
                         video_timestamp_seconds: eF.current.currentTime,
                         reason: ez,
@@ -246,7 +246,7 @@ function V(e) {
                 null != eF.current &&
                 (0, C.dA)({
                     questId: z.id,
-                    event: er ? O.rMx.QUEST_VIDEO_APP_FOCUSED : O.rMx.QUEST_VIDEO_APP_UNFOCUSED,
+                    event: er ? M.rMx.QUEST_VIDEO_APP_FOCUSED : M.rMx.QUEST_VIDEO_APP_UNFOCUSED,
                     properties: {
                         video_timestamp_seconds: eF.current.currentTime,
                         video_state: ea,
@@ -261,9 +261,9 @@ function V(e) {
                 null != eF.current &&
                     (0, C.dA)({
                         questId: z.id,
-                        event: O.rMx.QUEST_VIDEO_PROGRESSED,
+                        event: M.rMx.QUEST_VIDEO_PROGRESSED,
                         properties: {
-                            progress: (0, I.formatVideoProgressRatio)(eF.current.currentTime, eF.current.duration),
+                            progress: (0, N.formatVideoProgressRatio)(eF.current.currentTime, eF.current.duration),
                             video_timestamp_seconds: eF.current.currentTime,
                             video_session_id: H
                         }
@@ -290,7 +290,7 @@ function V(e) {
                 en(!1),
                 (0, C.dA)({
                     questId: z.id,
-                    event: O.rMx.QUEST_VIDEO_FULLSCREEN_EXITED,
+                    event: M.rMx.QUEST_VIDEO_FULLSCREEN_EXITED,
                     properties: { video_session_id: H }
                 }));
         }, [z.id, en, H]),
@@ -372,7 +372,7 @@ function V(e) {
                 let e = null != ey.current ? Date.now() - ey.current : null;
                 (0, C.dA)({
                     questId: z.id,
-                    event: O.rMx.QUEST_VIDEO_BUFFERING_ENDED,
+                    event: M.rMx.QUEST_VIDEO_BUFFERING_ENDED,
                     properties: {
                         video_asset_id: e1,
                         network_connection_speed: eT,
@@ -397,10 +397,10 @@ function V(e) {
             from: { controlBarAnimSpring: 0 },
             config: B,
             onStart: () => {
-                eM(!1);
+                eO(!1);
             },
             onRest: (e) => {
-                1 === e.value && eM(!0);
+                1 === e.value && eO(!0);
             }
         })),
         td = (0, i.useRef)(null),
@@ -468,17 +468,17 @@ function V(e) {
                         poster: null == tE ? void 0 : tE.url,
                         disablePictureInPicture: !0,
                         onTimeUpdate: (e) => {
-                            null != eF.current && (eF.current.currentTime >= eN && (eD(eF.current.currentTime + 6 + 2 * Math.random()), e9(eF.current.currentTime)), eF.current.currentTime >= eA && (ej(eF.current.currentTime + 1), (0, g.qm)(z.id, em.taskType, eF.current.currentTime), K(eF.current.currentTime)), ew(z.id, eF.current.currentTime, eF.current.duration), ep((eF.current.currentTime / eF.current.duration) * 100));
+                            null != eF.current && (eF.current.currentTime >= eI && (eD(eF.current.currentTime + 6 + 2 * Math.random()), e9(eF.current.currentTime)), eF.current.currentTime >= eA && (ej(eF.current.currentTime + 1), (0, g.qm)(z.id, em.taskType, eF.current.currentTime), K(eF.current.currentTime)), ew(z.id, eF.current.currentTime, eF.current.duration), ep((eF.current.currentTime / eF.current.duration) * 100));
                         },
                         onEnded: (e) => {
                             null != eF.current && (e9(eF.current.duration + 1), ew(z.id, eF.current.duration, eF.current.duration)), e7(j.r.ENDED), ex(!1);
                         },
                         onLoadedData: (e) => {
                             if (eC) {
-                                let e = null != eO.current ? Date.now() - eO.current : null;
+                                let e = null != eM.current ? Date.now() - eM.current : null;
                                 (0, C.dA)({
                                     questId: z.id,
-                                    event: O.rMx.QUEST_VIDEO_LOADING_ENDED,
+                                    event: M.rMx.QUEST_VIDEO_LOADING_ENDED,
                                     properties: {
                                         video_asset_id: e1,
                                         network_connection_speed: eT,
@@ -493,10 +493,10 @@ function V(e) {
                             if (null != eF.current) eQ(!0), tr(eG ? eP.timestampSec : Math.max(eP.timestampSec, em.progressSeconds)), eB ? (eF.current.volume = 0) : (eF.current.volume = eU);
                         },
                         onLoadStart: () => {
-                            (eO.current = Date.now()),
+                            (eM.current = Date.now()),
                                 (0, C.dA)({
                                     questId: z.id,
-                                    event: O.rMx.QUEST_VIDEO_LOADING_STARTED,
+                                    event: M.rMx.QUEST_VIDEO_LOADING_STARTED,
                                     properties: {
                                         video_asset_id: e1,
                                         network_connection_speed: eT,
@@ -509,7 +509,7 @@ function V(e) {
                                 (eR.current += 1),
                                 (0, C.dA)({
                                     questId: z.id,
-                                    event: O.rMx.QUEST_VIDEO_BUFFERING_STARTED,
+                                    event: M.rMx.QUEST_VIDEO_BUFFERING_STARTED,
                                     properties: {
                                         video_asset_id: e1,
                                         network_connection_speed: eT,
@@ -743,7 +743,7 @@ function V(e) {
                                         (e) => (e < 0.3 ? 'none' : 'auto')
                                     )
                                 },
-                                children: (0, r.jsx)(N.Z, {
+                                children: (0, r.jsx)(I.Z, {
                                     videoRef: eF,
                                     quest: z,
                                     playerState: ea,
@@ -778,7 +778,7 @@ function V(e) {
                                               n.addEventListener(f.NO, te),
                                               (0, C.dA)({
                                                   questId: z.id,
-                                                  event: O.rMx.QUEST_VIDEO_FULLSCREEN_ENTERED,
+                                                  event: M.rMx.QUEST_VIDEO_FULLSCREEN_ENTERED,
                                                   properties: { video_session_id: H }
                                               }))
                                             : !t &&
@@ -786,7 +786,7 @@ function V(e) {
                                               (n.removeEventListener(f.NO, te),
                                               (0, C.dA)({
                                                   questId: z.id,
-                                                  event: O.rMx.QUEST_VIDEO_FULLSCREEN_EXITED,
+                                                  event: M.rMx.QUEST_VIDEO_FULLSCREEN_EXITED,
                                                   properties: { video_session_id: H }
                                               }),
                                               (0, f.Pr)(n)),
