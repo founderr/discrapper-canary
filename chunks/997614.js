@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return Z;
     }
 }),
     n(47120);
@@ -8,101 +8,112 @@ var i = n(200651),
     l = n(192379),
     r = n(399606),
     a = n(704215),
-    s = n(481060),
-    o = n(239091),
-    c = n(706140),
-    d = n(242291),
-    u = n(792165),
-    h = n(603074),
-    p = n(294629),
-    m = n(411840),
-    f = n(390322),
-    g = n(871499),
-    C = n(131951),
-    x = n(459273),
-    v = n(304388),
-    _ = n(981631),
-    I = n(127379),
-    E = n(388032);
-function b(e) {
-    let { channel: t, themeable: b, whichPopoutIsOpen: Z, setWhichPopoutIsOpen: N } = e,
-        S = t.getGuildId(),
-        { mute: T, suppress: j } = (0, p.Z)(t),
-        A = (0, r.e7)([C.Z], () => C.Z.isDeaf()),
-        y = T || j || A,
-        P = (0, d.sR)({ isSoundboardButtonDisabled: y }),
-        [M, R] = (0, c.cv)(P),
-        { groupedButtons: L, mode: k } = (0, m.Z)({ location: 'ActionBarSoundboardButton' }),
-        O = k === m.B.GroupedButtonsRedMic ? 'green' : void 0;
-    function D() {
-        if (T) return E.intl.string(E.t['Ox4/zc']);
-        if (j) return E.intl.string(E.t['+YBKYG']);
-        if (A) return E.intl.string(E.t.X1lQlp);
+    s = n(582019),
+    o = n(481060),
+    c = n(239091),
+    d = n(706140),
+    u = n(242291),
+    h = n(792165),
+    p = n(603074),
+    m = n(294629),
+    f = n(411840),
+    g = n(390322),
+    C = n(871499),
+    x = n(131951),
+    v = n(459273),
+    _ = n(304388),
+    I = n(981631),
+    E = n(127379),
+    b = n(388032);
+function Z(e) {
+    let { channel: t, themeable: Z, whichPopoutIsOpen: N, setWhichPopoutIsOpen: S } = e,
+        {
+            Component: T,
+            events: { onMouseEnter: j, onMouseLeave: A }
+        } = (0, s.j)(),
+        y = t.getGuildId(),
+        { mute: P, suppress: M } = (0, m.Z)(t),
+        R = (0, r.e7)([x.Z], () => x.Z.isDeaf()),
+        L = P || M || R,
+        k = (0, u.sR)({ isSoundboardButtonDisabled: L }),
+        [O, D] = (0, d.cv)(k),
+        { groupedButtons: w, mode: B } = (0, f.Z)({ location: 'ActionBarSoundboardButton' }),
+        U = B === f.B.GroupedButtonsRedMic ? 'green' : void 0;
+    function H() {
+        if (P) return b.intl.string(b.t['Ox4/zc']);
+        if (M) return b.intl.string(b.t['+YBKYG']);
+        if (R) return b.intl.string(b.t.X1lQlp);
     }
-    function w(e) {
-        null != S &&
-            (0, o.jW)(e, async () => {
+    function G(e) {
+        null != y &&
+            (0, c.jW)(e, async () => {
                 let { default: e } = await n.e('56049').then(n.bind(n, 338991));
                 return (t) =>
                     (0, i.jsx)(e, {
-                        guildId: S,
+                        guildId: y,
                         ...t
                     });
             });
     }
-    let B = l.useRef(null),
-        U = l.useCallback(() => {
+    let F = l.useRef(null),
+        V = l.useCallback(() => {
             var e;
-            null === (e = B.current) || void 0 === e || e.hidePopout();
+            null === (e = F.current) || void 0 === e || e.hidePopout();
         }, []);
     return (
-        (0, x.yp)({
-            event: _.CkL.TOGGLE_SOUNDBOARD,
-            handler: U
+        (0, v.yp)({
+            event: I.CkL.TOGGLE_SOUNDBOARD,
+            handler: V
         }),
-        (0, i.jsx)(v.Z, {
-            ref: B,
-            isPopoutBlocked: null != Z && Z !== I.D.SOUNDBOARD,
-            onPopoutClose: () => (null == N ? void 0 : N(void 0)),
-            onPopoutOpen: () => (null == N ? void 0 : N(I.D.SOUNDBOARD)),
-            align: L ? 'center' : 'left',
+        (0, i.jsx)(_.Z, {
+            ref: F,
+            isPopoutBlocked: null != N && N !== E.D.SOUNDBOARD,
+            onPopoutClose: () => (null == S ? void 0 : S(void 0)),
+            onPopoutOpen: () => (null == S ? void 0 : S(E.D.SOUNDBOARD)),
+            align: w ? 'center' : 'left',
             renderPopout: (e) => {
                 let { closePopout: n } = e;
-                return y
+                return L
                     ? null
-                    : (0, i.jsx)(f.Z, {
-                          children: (0, i.jsx)(h.Z, {
-                              guildId: S,
+                    : (0, i.jsx)(g.Z, {
+                          children: (0, i.jsx)(p.Z, {
+                              guildId: y,
                               channel: t,
                               onClose: n,
                               gridNotice:
-                                  M === a.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
-                                  (0, i.jsx)(u.o, {
+                                  O === a.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
+                                  (0, i.jsx)(h.o, {
                                       onClose: n,
-                                      markAsDismissed: R
+                                      markAsDismissed: D
                                   }),
                               analyticsSource: 'action bar button'
                           })
                       });
             },
             children: (e) =>
-                L
-                    ? (0, i.jsx)(g.d, {
-                          themeable: b,
-                          label: D(),
-                          iconComponent: s.SoundboardIcon,
-                          disabled: y,
-                          onContextMenu: w,
+                w
+                    ? (0, i.jsx)(C.d, {
+                          themeable: Z,
+                          label: H(),
+                          iconComponent: T,
+                          disabled: L,
+                          onContextMenu: G,
                           ...e,
-                          color: e.isActive ? O : void 0,
+                          onMouseEnter: (t) => {
+                              e.onMouseEnter(t), j();
+                          },
+                          onMouseLeave: () => {
+                              e.onMouseLeave(), A();
+                          },
+                          color: e.isActive ? U : void 0,
                           className: ''
                       })
-                    : (0, i.jsx)(g.Z, {
-                          themeable: b,
-                          label: D(),
-                          iconComponent: s.SoundboardIcon,
-                          disabled: y,
-                          onContextMenu: w,
+                    : (0, i.jsx)(C.Z, {
+                          themeable: Z,
+                          label: H(),
+                          iconComponent: o.SoundboardIcon,
+                          disabled: L,
+                          onContextMenu: G,
                           ...e
                       })
         })

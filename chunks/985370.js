@@ -42,7 +42,8 @@ t.Z = (e) => {
         O = (v || Z) && (r === f.D.EMOJI || null == r);
     return (0, i.jsx)(o.Popout, {
         shouldShow: O,
-        animationPosition: 'bottom',
+        animation: y ? o.Popout.Animation.FADE : o.Popout.Animation.TRANSLATE,
+        animationPosition: y ? 'top' : 'bottom',
         position: 'bottom',
         align: 'center',
         spacing: 16,
