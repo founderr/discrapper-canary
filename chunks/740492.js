@@ -184,6 +184,10 @@ class O extends (s = u.ZP.DeviceSettingsStore) {
         var e;
         return null !== (e = b.disableVisualRefresh) && void 0 !== e && e;
     }
+    get listDensity() {
+        var e;
+        return null !== (e = b.listDensity) && void 0 !== e ? e : 'cozy';
+    }
 }
 g(O, 'displayName', 'UnsyncedUserSettingsStore'),
     g(O, 'persistKey', 'UnsyncedUserSettingsStore'),

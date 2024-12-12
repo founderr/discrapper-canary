@@ -1,79 +1,81 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return _;
     }
 }),
-    t(653041);
-var r = t(200651);
-t(192379);
-var o = t(442837),
-    i = t(481060),
-    a = t(153867),
-    l = t(857595),
-    c = t(607070),
-    u = t(906732),
-    s = t(705262),
-    d = t(540059),
-    g = t(210887),
-    m = t(740492),
-    b = t(695346),
-    f = t(874893),
-    p = t(981631),
-    h = t(388032);
+    n(653041);
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    o = n(481060),
+    l = n(153867),
+    a = n(857595),
+    c = n(607070),
+    u = n(906732),
+    s = n(705262),
+    d = n(540059),
+    g = n(210887),
+    m = n(740492),
+    b = n(695346),
+    p = n(874893),
+    f = n(981631),
+    h = n(388032);
 function _() {
     let e = b.jU.useSetting(),
-        { analyticsLocations: n } = (0, u.ZP)(),
+        { analyticsLocations: t } = (0, u.ZP)(),
         {
-            theme: t,
+            theme: n,
             useSystemTheme: _,
-            useForcedColors: S
-        } = (0, o.cj)([g.Z, m.ZP, c.Z], () => ({
+            useForcedColors: S,
+            listDensity: x
+        } = (0, r.cj)([g.Z, m.ZP, c.Z], () => ({
             theme: g.Z.theme,
             useSystemTheme: m.ZP.useSystemTheme,
-            useForcedColors: c.Z.useForcedColors
+            useForcedColors: c.Z.useForcedColors,
+            listDensity: m.ZP.listDensity
         })),
-        x = (0, d.Q3)('appearance_settings'),
-        C = (0, d.o9)('appearance_settings'),
-        M = (e, o) =>
-            (0, r.jsx)(i.MenuRadioItem, {
+        C = (0, d.Q3)('appearance_settings'),
+        M = (0, d.o9)('appearance_settings'),
+        Z = (e, r) =>
+            (0, i.jsx)(o.MenuRadioItem, {
                 id: e,
                 group: 'input-modes',
-                label: o,
+                label: r,
                 disabled: S,
-                checked: _ === f.K.ON ? 'system' === e : e === t,
+                checked: _ === p.K.ON ? 'system' === e : e === n,
                 action: () => {
                     (0, s.Yk)({
                         isPersisted: !0,
-                        analyticsLocations: n,
+                        analyticsLocations: t,
                         themeName: 'default '.concat(e)
                     }),
-                        (0, a.ZI)({ theme: e });
+                        (0, l.ZI)({ theme: e });
                 }
             }),
-        Z = [
-            (0, r.jsxs)(
-                i.MenuGroup,
+        k = [
+            (0, i.jsxs)(
+                o.MenuGroup,
                 {
                     children: [
-                        M(p.BRd.DARK, h.intl.string(h.t.b8Cei4)),
-                        M(p.BRd.LIGHT, h.intl.string(h.t.K2sFfn)),
-                        x &&
-                            (0, r.jsxs)(r.Fragment, {
-                                children: [M(p.BRd.DARKER, 'Darker'), M(p.BRd.MIDNIGHT, h.intl.string(h.t.pQwSpa))]
+                        Z(f.BRd.DARK, h.intl.string(h.t.b8Cei4)),
+                        Z(f.BRd.LIGHT, h.intl.string(h.t.K2sFfn)),
+                        C &&
+                            (0, i.jsxs)(i.Fragment, {
+                                children: [Z(f.BRd.DARKER, 'Darker'), Z(f.BRd.MIDNIGHT, h.intl.string(h.t.pQwSpa))]
                             }),
-                        M('system', h.intl.string(h.t['7rOU6u']))
+                        Z('system', h.intl.string(h.t['7rOU6u']))
                     ]
                 },
                 'theme-items'
             ),
-            (0, r.jsx)(
-                i.MenuGroup,
+            (0, i.jsx)(
+                o.MenuGroup,
                 {
-                    children: (0, r.jsx)(i.MenuItem, {
+                    children: (0, i.jsx)(o.MenuItem, {
                         id: 'compact-mode',
                         label: e ? h.intl.string(h.t.CTpwDw) : h.intl.string(h.t['J/FISU']),
                         action: () => {
-                            b.jU.updateSetting(!e), (0, l.ZZ)();
+                            b.jU.updateSetting(!e), (0, a.ZZ)();
                         }
                     })
                 },
@@ -81,23 +83,51 @@ function _() {
             )
         ];
     return (
-        C &&
-            Z.push(
-                (0, r.jsx)(
-                    i.MenuGroup,
+        M &&
+            (k.push(
+                (0, i.jsxs)(
+                    o.MenuGroup,
                     {
-                        children: (0, r.jsx)(i.MenuCheckboxItem, {
+                        children: [
+                            (0, i.jsx)(o.MenuRadioItem, {
+                                id: 'compact',
+                                group: 'list-density',
+                                label: 'Compact lists',
+                                checked: 'compact' === x,
+                                action: () => {
+                                    l.ZP.updatedUnsyncedSettings({ listDensity: 'compact' });
+                                }
+                            }),
+                            (0, i.jsx)(o.MenuRadioItem, {
+                                id: 'cozy',
+                                group: 'list-density',
+                                label: 'Cozy lists',
+                                checked: 'cozy' === x,
+                                action: () => {
+                                    l.ZP.updatedUnsyncedSettings({ listDensity: 'cozy' });
+                                }
+                            })
+                        ]
+                    },
+                    'list-density'
+                )
+            ),
+            k.push(
+                (0, i.jsx)(
+                    o.MenuGroup,
+                    {
+                        children: (0, i.jsx)(o.MenuCheckboxItem, {
                             id: 'desktop-refresh-override',
                             label: 'Enable Desktop Refresh',
                             action: () => {
-                                a.ZP.updatedUnsyncedSettings({ disableVisualRefresh: x });
+                                l.ZP.updatedUnsyncedSettings({ disableVisualRefresh: C });
                             },
-                            checked: x
+                            checked: C
                         })
                     },
                     'refresh-experiment'
                 )
-            ),
-        Z
+            )),
+        k
     );
 }
