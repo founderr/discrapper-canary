@@ -1,95 +1,75 @@
-o.r(t), o(47120);
-var s = o(200651),
-    r = o(192379),
-    n = o(512722),
-    l = o.n(n),
-    i = o(481060),
-    a = o(985002),
-    c = o(880257),
-    d = o(198952),
-    u = o(329242),
-    h = o(388032),
-    b = o(143510);
-t.default = (e) => {
-    let { currentUser: t, otherUser: o, transitionState: n, onClose: m } = e,
-        [x, f] = r.useState(!1),
-        j = r.useCallback(() => {
-            f(!0);
+t.r(r), t(47120);
+var n = t(200651),
+    o = t(192379),
+    s = t(512722),
+    l = t.n(s),
+    i = t(481060),
+    c = t(985002),
+    a = t(880257),
+    d = t(957656),
+    u = t(388032),
+    h = t(143510);
+r.default = (e) => {
+    let { currentUser: r, otherUser: t, transitionState: s, onClose: x } = e,
+        [m, j] = o.useState(!1),
+        f = o.useCallback(() => {
+            j(!0);
         }, []),
-        k = r.useCallback(() => {
-            f(!1);
+        b = o.useCallback(() => {
+            j(!1);
         }, []),
-        p = r.useCallback(() => {
-            m();
-        }, [m]),
-        C = (0, c.Z)(),
-        { cancelLinkRequest: g, isCancelLoading: S } = (0, a.G)({
-            onError: j,
-            onSuccess: p
+        g = o.useCallback(() => {
+            x();
+        }, [x]),
+        p = (0, a.Z)(),
+        { cancelLinkRequest: v, isCancelLoading: C } = (0, c.G)({
+            onError: f,
+            onSuccess: g
         });
     return (
-        l()(C, 'FamilyCenterDeclineLinkModal should only be rendered for parents.'),
-        (0, s.jsx)(i.ModalRoot, {
-            transitionState: n,
-            children: (0, s.jsxs)('form', {
+        l()(p, 'FamilyCenterDeclineLinkModal should only be rendered for parents.'),
+        (0, n.jsx)(d.Z, {
+            transitionState: s,
+            children: (0, n.jsxs)('form', {
                 onSubmit: (e) => {
-                    e.preventDefault(), g(o);
+                    e.preventDefault(), v(t);
                 },
                 children: [
-                    x
-                        ? (0, s.jsx)(i.FormErrorBlock, {
-                              className: b.error,
-                              onDismiss: k,
-                              children: h.intl.string(h.t['6gyAQU'])
-                          })
-                        : null,
-                    (0, s.jsx)(i.ModalContent, {
-                        children: (0, s.jsxs)('div', {
-                            className: b.header,
-                            children: [
-                                (0, s.jsx)(d.Z, {
-                                    currentUser: t,
-                                    otherUser: o,
-                                    children: (0, s.jsx)(i.XSmallIcon, {
-                                        size: 'md',
-                                        color: 'currentColor',
-                                        className: b.closeIcon
-                                    })
-                                }),
-                                (0, s.jsx)(i.Heading, {
-                                    className: b.headerText,
-                                    variant: 'text-lg/bold',
-                                    children: h.intl.string(h.t.HynllZ)
-                                }),
-                                (0, s.jsx)(u.Z, {
-                                    user: o,
-                                    fill: !0
-                                })
-                            ]
+                    (0, n.jsx)(d.Z.Error, {
+                        error: m ? u.intl.string(u.t['6gyAQU']) : void 0,
+                        onDismiss: b
+                    }),
+                    (0, n.jsx)(i.ModalContent, {
+                        children: (0, n.jsx)(d.Z.Header, {
+                            currentUser: r,
+                            otherUser: t,
+                            header: u.intl.string(u.t.HynllZ),
+                            icon: (0, n.jsx)(i.XSmallIcon, {
+                                size: 'md',
+                                color: 'currentColor',
+                                className: h.closeIcon
+                            })
                         })
                     }),
-                    (0, s.jsx)(i.ModalFooter, {
-                        children: (0, s.jsxs)('div', {
-                            className: b.footer,
+                    (0, n.jsx)(i.ModalFooter, {
+                        children: (0, n.jsxs)(d.Z.ButtonFooter, {
                             children: [
-                                (0, s.jsx)(i.Button, {
-                                    className: b.button,
+                                (0, n.jsx)(i.Button, {
                                     type: 'button',
-                                    disabled: S,
+                                    disabled: C,
                                     look: i.Button.Looks.LINK,
                                     color: i.Button.Colors.PRIMARY,
-                                    onClick: m,
+                                    onClick: x,
                                     size: i.Button.Sizes.SMALL,
-                                    children: h.intl.string(h.t.czincX)
+                                    children: u.intl.string(u.t.czincX)
                                 }),
-                                (0, s.jsx)(i.Button, {
-                                    className: b.button,
+                                (0, n.jsx)(i.Button, {
                                     type: 'submit',
-                                    disabled: S || x,
-                                    submitting: S,
+                                    disabled: C || m,
+                                    submitting: C,
                                     color: i.ButtonColors.RED,
                                     size: i.Button.Sizes.SMALL,
-                                    children: h.intl.string(h.t.mK40bm)
+                                    children: u.intl.string(u.t.mK40bm)
                                 })
                             ]
                         })
