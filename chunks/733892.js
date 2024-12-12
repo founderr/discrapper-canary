@@ -1,6 +1,5 @@
-var i = r(886502),
-    a = r(389109);
-function s(e, n, r, o, l) {
-    return e === n || (null != e && null != n && (a(e) || a(n)) ? i(e, n, r, o, s, l) : e != e && n != n);
-}
-e.exports = s;
+var a = r(886502),
+    n = r(389109);
+e.exports = function e(t, r, _, o, E) {
+    return t === r || (null != t && null != r && (n(t) || n(r)) ? a(t, r, _, o, e, E) : t != t && r != r);
+};

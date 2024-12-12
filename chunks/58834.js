@@ -1,7 +1,6 @@
-var i = r(347189),
-    a = r(800790),
-    s = r(771701);
-function o(e) {
-    return s(e) ? i(e) : a(e);
-}
-e.exports = o;
+var a = r(347189),
+    n = r(800790),
+    _ = r(771701);
+e.exports = function (e) {
+    return _(e) ? a(e) : n(e);
+};

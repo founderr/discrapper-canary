@@ -1,5 +1,4 @@
-function n(e, n) {
-    for (var r = -1, i = Array(e); ++r < e; ) i[r] = n(r);
-    return i;
-}
-e.exports = n;
+e.exports = function (e, t) {
+    for (var r = -1, a = Array(e); ++r < e; ) a[r] = t(r);
+    return a;
+};

@@ -1,10 +1,6 @@
-r.d(n, {
-    Y: function () {
-        return a;
-    },
+r.d(t, {
     a: function () {
-        return i;
+        return a;
     }
 });
-let i = !1,
-    a = null;
+let a = !1;

@@ -1,54 +1,40 @@
-var i = r(466293),
-    a = r(139069),
-    s = r(703284),
+var a = r(466293),
+    n = r(139069),
+    _ = r(703284),
     o = r(501979),
-    l = r(98368),
-    u = r(433005),
-    c = 1,
-    d = 2,
-    f = '[object Boolean]',
-    _ = '[object Date]',
-    h = '[object Error]',
-    p = '[object Map]',
-    m = '[object Number]',
-    g = '[object RegExp]',
-    E = '[object Set]',
-    v = '[object String]',
-    I = '[object Symbol]',
-    T = '[object ArrayBuffer]',
-    b = '[object DataView]',
-    y = i ? i.prototype : void 0,
-    S = y ? y.valueOf : void 0;
-function A(e, n, r, i, y, A, N) {
+    E = r(98368),
+    i = r(433005),
+    c = a ? a.prototype : void 0,
+    s = c ? c.valueOf : void 0;
+e.exports = function (e, t, r, a, c, l, I) {
     switch (r) {
-        case b:
-            if (e.byteLength != n.byteLength || e.byteOffset != n.byteOffset) break;
-            (e = e.buffer), (n = n.buffer);
-        case T:
-            if (e.byteLength != n.byteLength || !A(new a(e), new a(n))) break;
+        case '[object DataView]':
+            if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset) break;
+            (e = e.buffer), (t = t.buffer);
+        case '[object ArrayBuffer]':
+            if (e.byteLength != t.byteLength || !l(new n(e), new n(t))) break;
             return !0;
-        case f:
-        case _:
-        case m:
-            return s(+e, +n);
-        case h:
-            return e.name == n.name && e.message == n.message;
-        case g:
-        case v:
-            return e == n + '';
-        case p:
-            var C = l;
-        case E:
-            var R = i & c;
-            if ((C || (C = u), e.size != n.size && !R)) break;
-            var O = N.get(e);
-            if (O) return O == n;
-            (i |= d), N.set(e, n);
-            var D = o(C(e), C(n), i, y, A, N);
-            return N.delete(e), D;
-        case I:
-            if (S) return S.call(e) == S.call(n);
+        case '[object Boolean]':
+        case '[object Date]':
+        case '[object Number]':
+            return _(+e, +t);
+        case '[object Error]':
+            return e.name == t.name && e.message == t.message;
+        case '[object RegExp]':
+        case '[object String]':
+            return e == t + '';
+        case '[object Map]':
+            var u = E;
+        case '[object Set]':
+            var R = 1 & a;
+            if ((u || (u = i), e.size != t.size && !R)) break;
+            var A = I.get(e);
+            if (A) return A == t;
+            (a |= 2), I.set(e, t);
+            var T = o(u(e), u(t), a, c, l, I);
+            return I.delete(e), T;
+        case '[object Symbol]':
+            if (s) return s.call(e) == s.call(t);
     }
     return !1;
-}
-e.exports = A;
+};

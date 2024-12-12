@@ -1,49 +1,47 @@
-r.d(n, {
+r.d(t, {
     dO: function () {
-        return c;
+        return E;
     },
     pq: function () {
-        return p;
+        return I;
     }
-});
-var i = r(47120);
+}),
+    r(47120);
 var a = r(688619),
-    s = r.n(a);
-function o(e, n, r) {
-    let [i, a] = e,
-        [s, o] = n,
-        l = (i + a) / 2,
-        u = l;
-    return r === l ? u : r < l ? s + ((r - i) / (l - i)) * (u - s) : u + ((r - l) / (a - l)) * (o - u);
+    n = r.n(a);
+function _(e, t, r) {
+    let [a, n] = e,
+        [_, o] = t,
+        E = (a + n) / 2;
+    return r === E ? E : r < E ? _ + ((r - a) / (E - a)) * (E - _) : E + ((r - E) / (n - E)) * (o - E);
 }
-function l(e, n, r) {
-    let [i, a] = e,
-        [s, o] = n;
-    return s + ((r - i) / (a - i)) * (o - s);
-}
-let u = [0, 2];
-function c(e, n, r) {
-    let i = s()(e);
-    if ('background' !== n) return i.set('hsl.s', '*'.concat(r)).hex();
+let o = [0, 2];
+function E(e, t, r) {
+    let a = n()(e);
+    if ('background' !== t) return a.set('hsl.s', '*'.concat(r)).hex();
     {
-        let e = l([0, 1], [0.25, 1], r);
-        return i.set('hsl.s', '*'.concat(e)).hex();
+        let e = (function (e, t, r) {
+            let [a, n] = e,
+                [_, o] = t;
+            return _ + ((r - a) / (n - a)) * (o - _);
+        })([0, 1], [0.25, 1], r);
+        return a.set('hsl.s', '*'.concat(e)).hex();
     }
 }
-let d = [1.3, 0.7],
-    f = [0.98, 1],
-    _ = [0.75, 1.5],
-    h = [1.45, 0.45];
-function p(e, n, r, i) {
-    switch (n) {
+let i = [1.3, 0.7],
+    c = [0.98, 1],
+    s = [0.75, 1.5],
+    l = [1.45, 0.45];
+function I(e, t, r, a) {
+    switch (t) {
         case 'background':
         case 'border':
-            return s()(e)
-                .set('hsl.l', '*'.concat(o(u, 'light' === r ? f : d, i)))
+            return n()(e)
+                .set('hsl.l', '*'.concat(_(o, 'light' === r ? c : i, a)))
                 .hex();
         case 'text':
-            return s()(e)
-                .set('hsl.l', '*'.concat(o(u, 'light' === r ? h : _, i)))
+            return n()(e)
+                .set('hsl.l', '*'.concat(_(o, 'light' === r ? l : s, a)))
                 .hex();
         default:
             return e;

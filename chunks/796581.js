@@ -1,5 +1,4 @@
-function n(e, n) {
-    for (var r = -1, i = n.length, a = e.length; ++r < i; ) e[a + r] = n[r];
+e.exports = function (e, t) {
+    for (var r = -1, a = t.length, n = e.length; ++r < a; ) e[n + r] = t[r];
     return e;
-}
-e.exports = n;
+};

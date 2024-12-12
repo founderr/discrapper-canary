@@ -1,4 +1,3 @@
-function n(e, n) {
-    return e === n || (e != e && n != n);
-}
-e.exports = n;
+e.exports = function (e, t) {
+    return e === t || (e != e && t != t);
+};

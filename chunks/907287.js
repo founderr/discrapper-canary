@@ -1,35 +1,33 @@
-var i = r(990393),
-    a = 1,
-    s = Object.prototype.hasOwnProperty;
-function o(e, n, r, o, l, u) {
-    var c = r & a,
-        d = i(e),
-        f = d.length;
-    if (f != i(n).length && !c) return !1;
-    for (var _ = f; _--; ) {
-        var h = d[_];
-        if (!(c ? h in n : s.call(n, h))) return !1;
+var a = r(990393),
+    n = Object.prototype.hasOwnProperty;
+e.exports = function (e, t, r, _, o, E) {
+    var i = 1 & r,
+        c = a(e),
+        s = c.length;
+    if (s != a(t).length && !i) return !1;
+    for (var l = s; l--; ) {
+        var I = c[l];
+        if (!(i ? I in t : n.call(t, I))) return !1;
     }
-    var p = u.get(e),
-        m = u.get(n);
-    if (p && m) return p == n && m == e;
-    var g = !0;
-    u.set(e, n), u.set(n, e);
-    for (var E = c; ++_ < f; ) {
-        var v = e[(h = d[_])],
-            I = n[h];
-        if (o) var T = c ? o(I, v, h, n, e, u) : o(v, I, h, e, n, u);
-        if (!(void 0 === T ? v === I || l(v, I, r, o, u) : T)) {
-            g = !1;
+    var u = E.get(e),
+        R = E.get(t);
+    if (u && R) return u == t && R == e;
+    var A = !0;
+    E.set(e, t), E.set(t, e);
+    for (var T = i; ++l < s; ) {
+        var N = e[(I = c[l])],
+            d = t[I];
+        if (_) var f = i ? _(d, N, I, t, e, E) : _(N, d, I, e, t, E);
+        if (!(void 0 === f ? N === d || o(N, d, r, _, E) : f)) {
+            A = !1;
             break;
         }
-        E || (E = 'constructor' == h);
+        T || (T = 'constructor' == I);
     }
-    if (g && !E) {
-        var b = e.constructor,
-            y = n.constructor;
-        b != y && 'constructor' in e && 'constructor' in n && !('function' == typeof b && b instanceof b && 'function' == typeof y && y instanceof y) && (g = !1);
+    if (A && !T) {
+        var O = e.constructor,
+            L = t.constructor;
+        O != L && 'constructor' in e && 'constructor' in t && !('function' == typeof O && O instanceof O && 'function' == typeof L && L instanceof L) && (A = !1);
     }
-    return u.delete(e), u.delete(n), g;
-}
-e.exports = o;
+    return E.delete(e), E.delete(t), A;
+};

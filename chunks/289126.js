@@ -1,31 +1,8 @@
-var i = r(657398),
-    a = r(406705),
-    s = r(389109),
-    o = '[object Arguments]',
-    l = '[object Array]',
-    u = '[object Boolean]',
-    c = '[object Date]',
-    d = '[object Error]',
-    f = '[object Function]',
-    _ = '[object Map]',
-    h = '[object Number]',
-    p = '[object Object]',
-    m = '[object RegExp]',
-    g = '[object Set]',
-    E = '[object String]',
-    v = '[object WeakMap]',
-    I = '[object ArrayBuffer]',
-    T = '[object DataView]',
-    b = '[object Float64Array]',
-    y = '[object Int8Array]',
-    S = '[object Int16Array]',
-    A = '[object Int32Array]',
-    N = '[object Uint8Array]',
-    C = '[object Uint8ClampedArray]',
-    R = '[object Uint16Array]',
-    O = '[object Uint32Array]',
-    D = {};
-function L(e) {
-    return s(e) && a(e.length) && !!D[i(e)];
-}
-(D['[object Float32Array]'] = D[b] = D[y] = D[S] = D[A] = D[N] = D[C] = D[R] = D[O] = !0), (D[o] = D[l] = D[I] = D[u] = D[T] = D[c] = D[d] = D[f] = D[_] = D[h] = D[p] = D[m] = D[g] = D[E] = D[v] = !1), (e.exports = L);
+var a = r(657398),
+    n = r(406705),
+    _ = r(389109),
+    o = {};
+(o['[object Float32Array]'] = o['[object Float64Array]'] = o['[object Int8Array]'] = o['[object Int16Array]'] = o['[object Int32Array]'] = o['[object Uint8Array]'] = o['[object Uint8ClampedArray]'] = o['[object Uint16Array]'] = o['[object Uint32Array]'] = !0), (o['[object Arguments]'] = o['[object Array]'] = o['[object ArrayBuffer]'] = o['[object Boolean]'] = o['[object DataView]'] = o['[object Date]'] = o['[object Error]'] = o['[object Function]'] = o['[object Map]'] = o['[object Number]'] = o['[object Object]'] = o['[object RegExp]'] = o['[object Set]'] = o['[object String]'] = o['[object WeakMap]'] = !1);
+e.exports = function (e) {
+    return _(e) && n(e.length) && !!o[a(e)];
+};
