@@ -1,47 +1,47 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return c;
+        return d;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(481060),
-    o = n(689079),
-    l = n(426838);
-let u = (e) => {
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(481060),
+    l = r(689079),
+    u = r(426838);
+let c = (e) => {
     switch (e.id) {
-        case o.bi.BUILT_IN:
-            return s.SlashBoxIcon;
-        case o.bi.FRECENCY:
-            return s.ClockIcon;
+        case l.bi.BUILT_IN:
+            return o.SlashBoxIcon;
+        case l.bi.FRECENCY:
+            return o.ClockIcon;
         default:
             return;
     }
 };
-function c(e) {
-    let { section: t, className: n, width: i, height: s, padding: o, isSelected: c, selectable: d = !1, ...f } = e,
-        _ = u(t);
-    return (0, r.jsx)('div', {
-        className: a()(l.wrapper, n, {
-            [l.selectable]: d,
-            [l.selected]: d && c
+function d(e) {
+    let { section: n, className: r, width: a, height: o, padding: l, isSelected: d, selectable: f = !1, ..._ } = e,
+        h = c(n);
+    return (0, i.jsx)('div', {
+        className: s()(u.wrapper, r, {
+            [u.selectable]: f,
+            [u.selected]: f && d
         }),
         style: {
-            width: i,
-            height: s,
-            padding: null != o ? o : 0
+            width: a,
+            height: o,
+            padding: null != l ? l : 0
         },
         children:
-            null != _
-                ? (0, r.jsx)(_, {
-                      className: l.icon,
+            null != h
+                ? (0, i.jsx)(h, {
+                      className: u.icon,
                       color: 'currentColor',
                       size: 'custom',
-                      width: i,
-                      height: s,
-                      ...f
+                      width: a,
+                      height: o,
+                      ..._
                   })
                 : null
     });

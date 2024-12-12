@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     b: function () {
-        return i;
+        return a;
     }
 });
-var r = n(981631);
-function i(e, t) {
-    return 403 === e && null != t && t >= r.evJ.GUILD_LIMITED_ACCESS_DEFAULT && t <= r.evJ.GUILD_LIMITED_ACCESS_MAX;
+var i = r(981631);
+function a(e, n) {
+    return 403 === e && null != n && n >= i.evJ.GUILD_LIMITED_ACCESS_DEFAULT && n <= i.evJ.GUILD_LIMITED_ACCESS_MAX;
 }

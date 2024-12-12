@@ -1,12 +1,12 @@
-function t() {
+function n() {
     try {
-        var n = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
+        var r = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
     } catch (e) {}
-    return ((e.exports = t =
+    return ((e.exports = n =
         function () {
-            return !!n;
+            return !!r;
         }),
     (e.exports.__esModule = !0),
     (e.exports.default = e.exports))();
 }
-(e.exports = t), (e.exports.__esModule = !0), (e.exports.default = e.exports);
+(e.exports = n), (e.exports.__esModule = !0), (e.exports.default = e.exports);

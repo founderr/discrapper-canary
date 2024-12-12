@@ -1,16 +1,16 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(570140);
-function i(e, t, n, i, a) {
-    r.Z.dispatch({
+var i = r(570140);
+function a(e, n, r, a, s) {
+    i.Z.dispatch({
         type: 'EMBEDDED_ACTIVITY_DEFERRED_OPEN',
         channelId: e,
-        applicationId: t,
-        intent: i,
-        analyticsLocations: n,
-        commandOrigin: a
+        applicationId: n,
+        intent: a,
+        analyticsLocations: r,
+        commandOrigin: s
     });
 }

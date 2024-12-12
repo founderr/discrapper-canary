@@ -1,8 +1,8 @@
-function r(e, t) {
-    return 'function' == typeof e ? e(t) : e;
+function i(e, n) {
+    return 'function' == typeof e ? e(n) : e;
 }
-n.d(t, {
+r.d(n, {
     I: function () {
-        return r;
+        return i;
     }
 });

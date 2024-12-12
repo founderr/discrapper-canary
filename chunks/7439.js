@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     decrease: (e) => `Sc\u{103}dere ${e.fieldLabel}`,
     increase: (e) => `Cre\u{219}tere ${e.fieldLabel}`,
     numberField: `C\xe2mp numeric`

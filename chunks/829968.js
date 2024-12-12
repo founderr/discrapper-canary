@@ -1,26 +1,26 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return o;
     }
-}),
-    n(47120);
-var r = n(192379),
-    i = n(439849);
-function a(e, t) {
-    let [n, a] = r.useState();
+});
+var i = r(47120);
+var a = r(192379),
+    s = r(439849);
+function o(e, n) {
+    let [r, i] = a.useState();
     return (
-        r.useEffect(() => {
-            if (null == e || null != t) {
-                a(void 0);
+        a.useEffect(() => {
+            if (null == e || null != n) {
+                i(void 0);
                 return;
             }
-            (0, i.Z)().then((t) => {
-                if (null != t)
-                    t.identifyGame(e, (e, t) => {
-                        if (0 === e && null != t.icon && '' !== t.icon && null != t.name && '' !== t.name) a('data:image/png;base64,'.concat(t.icon));
+            (0, s.Z)().then((n) => {
+                if (null != n)
+                    n.identifyGame(e, (e, n) => {
+                        if (0 === e && null != n.icon && '' !== n.icon && null != n.name && '' !== n.name) i('data:image/png;base64,'.concat(n.icon));
                     });
             });
-        }, [e, t]),
-        null != t ? t : n
+        }, [e, n]),
+        null != n ? n : r
     );
 }

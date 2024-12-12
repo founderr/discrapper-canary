@@ -1,17 +1,17 @@
-n.d(t, {
+r.d(n, {
     _: function () {
-        return l;
+        return u;
     }
 });
-var r = n(258609),
-    i = n(740492),
-    a = n(314897),
-    s = n(430824),
-    o = n(979651);
-function l(e) {
-    if (i.ZP.disableVoiceChannelChangeAlert) return !1;
-    let t = r.Z.getRemoteSessionId();
-    if (null != o.Z.getVoiceStateForSession(a.default.getId(), t) || !o.Z.isCurrentClientInVoiceChannel() || o.Z.isInChannel(e.id)) return !1;
-    let n = s.Z.getGuild(e.getGuildId());
-    return !((null == n ? void 0 : n.afkChannelId) != null && o.Z.isInChannel(n.afkChannelId)) && !0;
+var i = r(258609),
+    a = r(740492),
+    s = r(314897),
+    o = r(430824),
+    l = r(979651);
+function u(e) {
+    if (a.ZP.disableVoiceChannelChangeAlert) return !1;
+    let n = i.Z.getRemoteSessionId();
+    if (null != l.Z.getVoiceStateForSession(s.default.getId(), n) || !l.Z.isCurrentClientInVoiceChannel() || l.Z.isInChannel(e.id)) return !1;
+    let r = o.Z.getGuild(e.getGuildId());
+    return !((null == r ? void 0 : r.afkChannelId) != null && l.Z.isInChannel(r.afkChannelId)) && !0;
 }

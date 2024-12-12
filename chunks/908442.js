@@ -1,25 +1,25 @@
-n.d(t, {
+r.d(n, {
     F$: function () {
-        return a;
-    },
-    S6: function () {
-        return i;
-    },
-    ZF: function () {
         return s;
     },
+    S6: function () {
+        return a;
+    },
+    ZF: function () {
+        return o;
+    },
     o0: function () {
-        return r;
+        return i;
     }
 });
-let r = {
+let i = {
         discord_marketing: 'Discord Marketing',
         discord_web: 'Discord Web',
         discord_ios: 'Discord iOS',
         discord_android: 'Discord Android',
         discord_developers: 'Discord Developers'
     },
-    i = [
+    a = [
         {
             value: 3600,
             label: '1 Hour'
@@ -49,7 +49,7 @@ let r = {
             label: '1 Month'
         }
     ],
-    a = [
+    s = [
         {
             value: 'all',
             label: 'All'
@@ -71,4 +71,4 @@ let r = {
             label: 'Staging'
         }
     ],
-    s = 'buildOverride';
+    o = 'buildOverride';

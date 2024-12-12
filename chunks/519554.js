@@ -1,30 +1,30 @@
-n.d(t, {
+r.d(n, {
     b: function () {
-        return o;
+        return u;
     }
-}),
-    n(47120);
-var r = n(192379),
-    i = n(752877),
-    a = n(481060),
-    s = n(717495);
-function o(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'respect-motion-settings',
-        o = arguments.length > 3 ? arguments[3] : void 0,
-        l = r.useContext(a.AccessibilityPreferencesContext).reducedMotion.enabled,
-        u = t;
-    !('animate-always' === n || ('respect-motion-settings' === n && !l)) &&
-        (u =
-            'function' == typeof t
-                ? (e, n) => ({
-                      ...t(e, n),
-                      ...s.F
+});
+var i = r(47120);
+var a = r(192379),
+    s = r(752877),
+    o = r(481060),
+    l = r(717495);
+function u(e, n) {
+    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'respect-motion-settings',
+        i = arguments.length > 3 ? arguments[3] : void 0,
+        u = a.useContext(o.AccessibilityPreferencesContext).reducedMotion.enabled,
+        c = n;
+    !('animate-always' === r || ('respect-motion-settings' === r && !u)) &&
+        (c =
+            'function' == typeof n
+                ? (e, r) => ({
+                      ...n(e, r),
+                      ...l.F
                   })
-                : t.map((e) => ({
+                : n.map((e) => ({
                       ...e,
-                      ...s.F
+                      ...l.F
                   })));
-    let c = 'function' == typeof u,
-        [d, f, _] = (0, i.useSprings)(e, u, o);
-    return c || 4 == arguments.length ? [d, f, _] : d;
+    let d = 'function' == typeof c,
+        [f, _, h] = (0, s.useSprings)(e, c, i);
+    return d || 4 == arguments.length ? [f, _, h] : f;
 }

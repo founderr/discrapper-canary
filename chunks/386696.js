@@ -1,36 +1,36 @@
-n.d(t, {
+r.d(n, {
     F: function () {
-        return u;
+        return d;
     },
     Z: function () {
-        return c;
+        return f;
     }
-}),
-    n(47120);
-var r = n(442837),
-    i = n(430824),
-    a = n(496675),
-    s = n(594174),
-    o = n(700785),
-    l = n(981631);
-function u(e, t) {
-    let [n, r, u] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [s.default, i.Z, a.Z],
-        c = r.getGuild(e),
-        d = n.getUser(t);
+});
+var i = r(47120);
+var a = r(442837),
+    s = r(430824),
+    o = r(496675),
+    l = r(594174),
+    u = r(700785),
+    c = r(981631);
+function d(e, n) {
+    let [r, i, a] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [l.default, s.Z, o.Z],
+        d = i.getGuild(e),
+        f = r.getUser(n);
     return (
         !(
-            null == c ||
             null == d ||
-            d.isNonUserBot() ||
-            c.isOwner(d) ||
-            o.BT({
-                permission: l.Plq.ADMINISTRATOR,
-                user: d,
-                context: c
+            null == f ||
+            f.isNonUserBot() ||
+            d.isOwner(f) ||
+            u.BT({
+                permission: c.Plq.ADMINISTRATOR,
+                user: f,
+                context: d
             })
-        ) && u.canManageUser(l.Plq.MODERATE_MEMBERS, d, c)
+        ) && a.canManageUser(c.Plq.MODERATE_MEMBERS, f, d)
     );
 }
-function c(e, t) {
-    return (0, r.e7)([s.default, i.Z, a.Z], () => u(e, t, [s.default, i.Z, a.Z]), [e, t]);
+function f(e, n) {
+    return (0, a.e7)([l.default, s.Z, o.Z], () => d(e, n, [l.default, s.Z, o.Z]), [e, n]);
 }

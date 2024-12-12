@@ -1,10 +1,10 @@
-function t() {
+function n() {
     this._cache = [];
 }
-(t.prototype.add = function (e) {
+(n.prototype.add = function (e) {
     -1 === this._cache.indexOf(e) && this._cache.push(e);
 }),
-    (t.prototype.forEach = function (e) {
+    (n.prototype.forEach = function (e) {
         this._cache.forEach(e);
     }),
-    (e.exports = t);
+    (e.exports = n);

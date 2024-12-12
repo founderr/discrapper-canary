@@ -1,13 +1,13 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var r = n(226430),
-    i = n(951516),
-    a = n(227700);
-function s(e, t, n) {
-    (0, i.Z)(2, arguments);
-    var s = (0, r.Z)(e, t) / 1000;
-    return (0, a.u)(null == n ? void 0 : n.roundingMethod)(s);
+var i = r(226430),
+    a = r(951516),
+    s = r(227700);
+function o(e, n, r) {
+    (0, a.Z)(2, arguments);
+    var o = (0, i.Z)(e, n) / 1000;
+    return (0, s.u)(null == r ? void 0 : r.roundingMethod)(o);
 }

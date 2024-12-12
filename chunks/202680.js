@@ -1,8 +1,8 @@
-function r() {
+function i() {
     return Promise.resolve([]);
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

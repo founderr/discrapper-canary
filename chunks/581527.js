@@ -1,7 +1,7 @@
-var r = n(690244),
-    i = r('%String%'),
-    a = r('%TypeError%');
+var i = r(690244),
+    a = i('%String%'),
+    s = i('%TypeError%');
 e.exports = function (e) {
-    if ('symbol' == typeof e) throw new a('Cannot convert a Symbol value to a string');
-    return i(e);
+    if ('symbol' == typeof e) throw new s('Cannot convert a Symbol value to a string');
+    return a(e);
 };

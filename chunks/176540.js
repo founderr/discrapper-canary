@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     _: function () {
-        return r;
+        return i;
     }
 });
-var r = {
+var i = {
     '001': ['H', 'h'],
     419: ['h', 'H', 'hB', 'hb'],
     AC: ['H', 'h', 'hb', 'hB'],

@@ -1,33 +1,33 @@
-n.d(t, {
+r.d(n, {
     T: function () {
-        return r;
+        return i;
     }
 });
-var r = function (e, t, n, r, i) {
-    var a = i.clientWidth,
-        s = i.clientHeight,
-        o = 'number' == typeof e.pageX ? e.pageX : e.touches[0].pageX,
-        l = 'number' == typeof e.pageY ? e.pageY : e.touches[0].pageY,
-        u = o - (i.getBoundingClientRect().left + window.pageXOffset),
-        c = l - (i.getBoundingClientRect().top + window.pageYOffset);
-    if ('vertical' === n) {
-        var d = void 0;
-        if (((d = c < 0 ? 0 : c > s ? 1 : Math.round((100 * c) / s) / 100), t.a !== d))
+var i = function (e, n, r, i, a) {
+    var s = a.clientWidth,
+        o = a.clientHeight,
+        l = 'number' == typeof e.pageX ? e.pageX : e.touches[0].pageX,
+        u = 'number' == typeof e.pageY ? e.pageY : e.touches[0].pageY,
+        c = l - (a.getBoundingClientRect().left + window.pageXOffset),
+        d = u - (a.getBoundingClientRect().top + window.pageYOffset);
+    if ('vertical' === r) {
+        var f = void 0;
+        if (((f = d < 0 ? 0 : d > o ? 1 : Math.round((100 * d) / o) / 100), n.a !== f))
             return {
-                h: t.h,
-                s: t.s,
-                l: t.l,
-                a: d,
+                h: n.h,
+                s: n.s,
+                l: n.l,
+                a: f,
                 source: 'rgb'
             };
     } else {
-        var f = void 0;
-        if (r !== (f = u < 0 ? 0 : u > a ? 1 : Math.round((100 * u) / a) / 100))
+        var _ = void 0;
+        if (i !== (_ = c < 0 ? 0 : c > s ? 1 : Math.round((100 * c) / s) / 100))
             return {
-                h: t.h,
-                s: t.s,
-                l: t.l,
-                a: f,
+                h: n.h,
+                s: n.s,
+                l: n.l,
+                a: _,
                 source: 'rgb'
             };
     }

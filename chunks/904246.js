@@ -1,28 +1,28 @@
-var r = n(192379),
-    i = Symbol.for('react.element'),
-    a = Symbol.for('react.fragment'),
-    s = Object.prototype.hasOwnProperty,
-    o = r.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,
-    l = {
+var i = r(192379),
+    a = Symbol.for('react.element'),
+    s = Symbol.for('react.fragment'),
+    o = Object.prototype.hasOwnProperty,
+    l = i.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,
+    u = {
         key: !0,
         ref: !0,
         __self: !0,
         __source: !0
     };
-function u(e, t, n) {
-    var r,
-        a = {},
-        u = null,
-        c = null;
-    for (r in (void 0 !== n && (u = '' + n), void 0 !== t.key && (u = '' + t.key), void 0 !== t.ref && (c = t.ref), t)) s.call(t, r) && !l.hasOwnProperty(r) && (a[r] = t[r]);
-    if (e && e.defaultProps) for (r in (t = e.defaultProps)) void 0 === a[r] && (a[r] = t[r]);
+function c(e, n, r) {
+    var i,
+        s = {},
+        c = null,
+        d = null;
+    for (i in (void 0 !== r && (c = '' + r), void 0 !== n.key && (c = '' + n.key), void 0 !== n.ref && (d = n.ref), n)) o.call(n, i) && !u.hasOwnProperty(i) && (s[i] = n[i]);
+    if (e && e.defaultProps) for (i in (n = e.defaultProps)) void 0 === s[i] && (s[i] = n[i]);
     return {
-        $$typeof: i,
+        $$typeof: a,
         type: e,
-        key: u,
-        ref: c,
-        props: a,
-        _owner: o.current
+        key: c,
+        ref: d,
+        props: s,
+        _owner: l.current
     };
 }
-(t.Fragment = a), (t.jsx = u), (t.jsxs = u);
+(n.Fragment = s), (n.jsx = c), (n.jsxs = c);

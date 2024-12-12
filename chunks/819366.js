@@ -1,125 +1,125 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return C;
+        return R;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(512722),
-    s = n.n(a),
-    o = n(873546),
-    l = n(442837),
-    u = n(481060),
-    c = n(239091),
-    d = n(100527),
-    f = n(906732),
-    _ = n(797610),
-    p = n(927723),
-    h = n(124072),
-    m = n(184301),
-    g = n(347475),
-    E = n(592125),
-    v = n(271383),
-    I = n(430824),
-    T = n(699516),
-    b = n(594174),
-    S = n(5192),
-    y = n(51144),
-    A = n(377668);
-function N(e) {
-    let { userId: t, className: a, children: s } = e,
-        o = i.useCallback(() => {
+var i = r(200651),
+    a = r(192379),
+    s = r(512722),
+    o = r.n(s),
+    l = r(873546),
+    u = r(442837),
+    c = r(481060),
+    d = r(239091),
+    f = r(100527),
+    _ = r(906732),
+    h = r(797610),
+    p = r(927723),
+    m = r(124072),
+    g = r(184301),
+    E = r(347475),
+    v = r(592125),
+    I = r(271383),
+    T = r(430824),
+    b = r(699516),
+    y = r(594174),
+    S = r(5192),
+    A = r(51144),
+    N = r(377668);
+function C(e) {
+    let { userId: n, className: s, children: o } = e,
+        l = a.useCallback(() => {
             (0, p.k)({ kind: 'user' });
         }, []),
-        l = i.useCallback(
+        u = a.useCallback(
             (e) => {
-                if (null != t)
-                    (0, c.jW)(e, async () => {
-                        let { default: e } = await n.e('25073').then(n.bind(n, 80742));
-                        return (n) =>
-                            (0, r.jsx)(e, {
-                                ...n,
-                                userId: t
+                if (null != n)
+                    (0, d.jW)(e, async () => {
+                        let { default: e } = await r.e('25073').then(r.bind(r, 80742));
+                        return (r) =>
+                            (0, i.jsx)(e, {
+                                ...r,
+                                userId: n
                             });
                     });
             },
-            [t]
+            [n]
         );
-    return (0, r.jsx)(h.Z, {
-        className: a,
-        onClick: o,
-        onContextMenu: l,
-        children: s
+    return (0, i.jsx)(m.Z, {
+        className: s,
+        onClick: l,
+        onContextMenu: u,
+        children: o
     });
 }
-function C(e) {
-    let { className: t, userId: i, channelId: a, parsedUserId: p, content: C, inlinePreview: R = !1, viewingChannelId: O } = e,
-        { analyticsLocations: D } = (0, f.ZP)(d.Z.USER_MENTION),
-        L = (0, l.e7)([b.default], () => b.default.getUser(i)),
-        x = (0, l.e7)([E.Z], () => E.Z.getChannel(a)),
-        w = null != x ? x.getGuildId() : null,
-        P =
-            R || null == L || null == w || null == a
+function R(e) {
+    let { className: n, userId: a, channelId: s, parsedUserId: p, content: R, inlinePreview: O = !1, viewingChannelId: D } = e,
+        { analyticsLocations: L } = (0, _.ZP)(f.Z.USER_MENTION),
+        x = (0, u.e7)([y.default], () => y.default.getUser(a)),
+        w = (0, u.e7)([v.Z], () => v.Z.getChannel(s)),
+        P = null != w ? w.getGuildId() : null,
+        M =
+            O || null == x || null == P || null == s
                 ? void 0
                 : (e) => {
-                      null != x &&
-                          (0, c.jW)(e, async () => {
-                              let { default: e } = await Promise.all([n.e('50506'), n.e('79695'), n.e('51269'), n.e('13351'), n.e('50050'), n.e('92453'), n.e('13125'), n.e('54492')]).then(n.bind(n, 757387));
-                              return (t) =>
-                                  (0, r.jsx)(e, {
-                                      ...t,
-                                      viewingChannelId: O,
-                                      user: L,
-                                      channel: x,
-                                      guildId: w
+                      null != w &&
+                          (0, d.jW)(e, async () => {
+                              let { default: e } = await Promise.all([r.e('50506'), r.e('79695'), r.e('51269'), r.e('13351'), r.e('50050'), r.e('92453'), r.e('13125'), r.e('54492')]).then(r.bind(r, 757387));
+                              return (n) =>
+                                  (0, i.jsx)(e, {
+                                      ...n,
+                                      viewingChannelId: D,
+                                      user: x,
+                                      channel: w,
+                                      guildId: P
                                   });
                           });
                   },
-        M = y.ZP.useName(L),
-        k = (0, l.e7)([E.Z, v.ZP, T.Z], () => S.ZP.getNickname(w, a, L)),
-        U = I.Z.getGuild(w),
-        B = (0, _.Ib)(U, x) && i === A.fL ? A.jM : null;
-    if (null == L)
-        return (0, r.jsx)(N, {
+        k = A.ZP.useName(x),
+        U = (0, u.e7)([v.Z, I.ZP, b.Z], () => S.ZP.getNickname(P, s, x)),
+        B = T.Z.getGuild(P),
+        G = (0, h.Ib)(B, w) && a === N.fL ? N.jM : null;
+    if (null == x)
+        return (0, i.jsx)(C, {
             userId: p,
-            className: t,
-            children: C
+            className: n,
+            children: R
         });
-    let G = (e) =>
-        (0, r.jsx)(h.Z, {
-            className: t,
-            onContextMenu: P,
-            color: B,
+    let Z = (e) =>
+        (0, i.jsx)(m.Z, {
+            className: n,
+            onContextMenu: M,
+            color: G,
             ...e,
-            children: '@'.concat(null != k ? k : M)
+            children: '@'.concat(null != U ? U : k)
         });
-    return R
-        ? (0, r.jsx)(f.Gt, {
-              value: D,
-              children: G()
+    return O
+        ? (0, i.jsx)(_.Gt, {
+              value: L,
+              children: Z()
           })
-        : (0, r.jsx)(f.Gt, {
-              value: D,
-              children: (0, r.jsx)(u.Popout, {
+        : (0, i.jsx)(_.Gt, {
+              value: L,
+              children: (0, i.jsx)(c.Popout, {
                   preload:
-                      null == L
+                      null == x
                           ? void 0
                           : () =>
-                                (0, m.Z)(L.id, L.getAvatarURL(w, 80), {
-                                    guildId: null != w ? w : void 0,
-                                    channelId: null != a ? a : void 0
+                                (0, g.Z)(x.id, x.getAvatarURL(P, 80), {
+                                    guildId: null != P ? P : void 0,
+                                    channelId: null != s ? s : void 0
                                 }),
                   renderPopout: (e) => (
-                      s()(null != L, 'Unexpected missing user'),
-                      (0, r.jsx)(g.Z, {
-                          userId: L.id,
-                          guildId: null != w ? w : void 0,
-                          channelId: a,
+                      o()(null != x, 'Unexpected missing user'),
+                      (0, i.jsx)(E.Z, {
+                          userId: x.id,
+                          guildId: null != P ? P : void 0,
+                          channelId: s,
                           ...e
                       })
                   ),
-                  position: o.tq ? 'top' : 'right',
-                  children: (e) => G(e)
+                  position: l.tq ? 'top' : 'right',
+                  children: (e) => Z(e)
               })
           });
 }

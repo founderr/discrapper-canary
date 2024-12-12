@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     ascending: `vzestupn\u{11B}`,
     ascendingSort: (e) => `\u{159}azeno vzestupn\u{11B} podle sloupce ${e.columnName}`,
     columnSize: (e) => `${e.value} pixel\u{16F}`,

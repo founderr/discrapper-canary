@@ -1,10 +1,10 @@
-var r, i;
-n.d(t, {
+r.d(n, {
     v: function () {
-        return r;
+        return i;
     }
-}),
-    n(47120),
-    ((i = r || (r = {})).UNHANDLED_NATIVE_ERROR = 'unhandled_native_error'),
-    (i.UNHANDLED_JS_ERROR = 'unhandled_js_error'),
-    (i.SOCKET_CRASHED = 'socket_crashed');
+});
+var i,
+    a = r(47120);
+!(function (e) {
+    (e.UNHANDLED_NATIVE_ERROR = 'unhandled_native_error'), (e.UNHANDLED_JS_ERROR = 'unhandled_js_error'), (e.SOCKET_CRASHED = 'socket_crashed');
+})(i || (i = {}));

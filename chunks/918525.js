@@ -1,28 +1,28 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     buttonLabel: `Afi\u{219}are sugestii`,
-    countAnnouncement: (e, t) =>
-        `${t.plural(e.optionCount, {
-            one: () => `${t.number(e.optionCount)} op\u{21B}iune`,
-            other: () => `${t.number(e.optionCount)} op\u{21B}iuni`
+    countAnnouncement: (e, n) =>
+        `${n.plural(e.optionCount, {
+            one: () => `${n.number(e.optionCount)} op\u{21B}iune`,
+            other: () => `${n.number(e.optionCount)} op\u{21B}iuni`
         })} disponibile.`,
-    focusAnnouncement: (e, t) =>
-        `${t.select(
+    focusAnnouncement: (e, n) =>
+        `${n.select(
             {
                 true: () =>
-                    `Grup ${e.groupTitle} introdus, cu ${t.plural(e.groupCount, {
-                        one: () => `${t.number(e.groupCount)} op\u{21B}iune`,
-                        other: () => `${t.number(e.groupCount)} op\u{21B}iuni`
+                    `Grup ${e.groupTitle} introdus, cu ${n.plural(e.groupCount, {
+                        one: () => `${n.number(e.groupCount)} op\u{21B}iune`,
+                        other: () => `${n.number(e.groupCount)} op\u{21B}iuni`
                     })}. `,
                 other: ''
             },
             e.isGroupChange
-        )}${e.optionText}${t.select(
+        )}${e.optionText}${n.select(
             {
                 true: ', selectat',
                 other: ''

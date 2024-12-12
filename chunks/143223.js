@@ -1,28 +1,28 @@
-var r = n(302454),
-    i = n.n(r),
-    a = n(914216);
-let s = RegExp('^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/shop#itemSkuId=(\\d+)?'),
-    o = {
-        order: i().defaultRules.url.order - 0.5,
+var i = r(302454),
+    a = r.n(i),
+    s = r(914216);
+let o = RegExp('^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/shop#itemSkuId=(\\d+)?'),
+    l = {
+        order: a().defaultRules.url.order - 0.5,
         requiredFirstCharacters: ['h'],
         match(e) {
-            let t = s.exec(e);
-            return null == t || (0, a.Z)('MarkupShopLinkRule') ? t : null;
+            let n = o.exec(e);
+            return null == n || (0, s.Z)('MarkupShopLinkRule') ? n : null;
         },
-        parse(e, t, n) {
-            let r = e[0],
-                i = e[1];
+        parse(e, n, r) {
+            let i = e[0],
+                a = e[1];
             return {
                 type: 'shopLink',
                 content: [
                     {
                         type: 'text',
-                        content: i
+                        content: a
                     }
                 ],
-                shopLink: r,
-                skuId: i
+                shopLink: i,
+                skuId: a
             };
         }
     };
-t.Z = { shopLink: o };
+n.Z = { shopLink: l };

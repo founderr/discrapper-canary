@@ -1,21 +1,21 @@
-n.d(t, {
+r.d(n, {
     _: function () {
-        return i;
+        return a;
     }
 });
-var r = n(981631);
-function i(e, t, n) {
-    let i = null != t ? { [t]: 1 } : {},
-        { offset: a, limit: s, results: o, totalResults: l } = null != n ? n : {};
+var i = r(981631);
+function a(e, n, r) {
+    let a = null != n ? { [n]: 1 } : {},
+        { offset: s, limit: o, results: l, totalResults: u } = null != r ? r : {};
     return {
-        search_type: r.aib.GIF,
+        search_type: i.aib.GIF,
         load_id: e,
-        limit: s,
-        offset: a,
-        page: null != s && null != a ? Math.floor(a / s) + 1 : 1,
-        total_results: l,
-        page_results: null != o ? o : null,
-        num_modifiers: Object.keys(i).length,
-        modifiers: i
+        limit: o,
+        offset: s,
+        page: null != o && null != s ? Math.floor(s / o) + 1 : 1,
+        total_results: u,
+        page_results: null != l ? l : null,
+        num_modifiers: Object.keys(a).length,
+        modifiers: a
     };
 }

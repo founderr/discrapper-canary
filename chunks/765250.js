@@ -1,91 +1,91 @@
-n.d(t, {
+r.d(n, {
     A4: function () {
-        return d;
-    },
-    E9: function () {
-        return u;
-    },
-    Os: function () {
-        return o;
-    },
-    jx: function () {
         return f;
     },
-    nv: function () {
-        return s;
-    },
-    sz: function () {
+    E9: function () {
         return c;
     },
-    te: function () {
-        return a;
-    },
-    xh: function () {
+    Os: function () {
         return l;
     },
-    zG: function () {
+    jx: function () {
         return _;
+    },
+    nv: function () {
+        return o;
+    },
+    sz: function () {
+        return d;
+    },
+    te: function () {
+        return s;
+    },
+    xh: function () {
+        return u;
+    },
+    zG: function () {
+        return h;
     }
 });
-var r = n(570140),
-    i = n(145597);
-function a(e, t, n) {
-    let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.Gr;
-    r.Z.dispatch({
+var i = r(570140),
+    a = r(145597);
+function s(e, n, r) {
+    let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : a.Gr;
+    i.Z.dispatch({
         type: 'LAYOUT_CREATE',
         layoutId: e,
-        widgets: t,
-        version: n,
-        defaultResolution: a
-    });
-}
-function s(e) {
-    let { widgetId: t, anchor: n, size: i, opacity: a } = e;
-    r.Z.dispatch({
-        type: 'LAYOUT_UPDATE_WIDGET',
-        widgetId: t,
-        anchor: n,
-        size: i,
-        opacity: a
+        widgets: n,
+        version: r,
+        defaultResolution: s
     });
 }
 function o(e) {
-    r.Z.dispatch({
+    let { widgetId: n, anchor: r, size: a, opacity: s } = e;
+    i.Z.dispatch({
+        type: 'LAYOUT_UPDATE_WIDGET',
+        widgetId: n,
+        anchor: r,
+        size: a,
+        opacity: s
+    });
+}
+function l(e) {
+    i.Z.dispatch({
         type: 'LAYOUT_SET_TOP_WIDGET',
         widgetId: e
     });
 }
-function l(e) {
-    r.Z.dispatch({
+function u(e) {
+    i.Z.dispatch({
         type: 'LAYOUT_SET_PINNED',
         widgetId: e
     });
 }
-function u(e) {
-    r.Z.dispatch({
+function c(e) {
+    i.Z.dispatch({
         type: 'LAYOUT_DELETE_WIDGET',
         widgetId: e
     });
 }
-function c(e) {
-    r.Z.dispatch({
+function d(e) {
+    i.Z.dispatch({
         type: 'LAYOUT_DELETE_ALL_WIDGETS',
         layoutId: e
     });
 }
-function d(e) {
-    f([e]);
-}
 function f(e) {
-    r.Z.dispatch({
+    _([e]);
+}
+function _(e) {
+    i.Z.dispatch({
         type: 'LAYOUT_CREATE_WIDGETS',
         widgetConfigs: e
     });
 }
-function _(e, t) {
-    r.Z.dispatch({
+function h(e, n) {
+    i.Z.dispatch({
         type: 'LAYOUT_SET_WIDGET_META',
         widgetId: e,
-        meta: t
+        meta: n
     });
 }

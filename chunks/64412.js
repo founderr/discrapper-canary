@@ -1,24 +1,24 @@
-n.d(t, {
+r.d(n, {
     T: function () {
-        return r;
+        return i;
     }
 });
-var r = function (e, t, n) {
-    var r = n.getBoundingClientRect(),
-        i = r.width,
-        a = r.height,
-        s = 'number' == typeof e.pageX ? e.pageX : e.touches[0].pageX,
-        o = 'number' == typeof e.pageY ? e.pageY : e.touches[0].pageY,
-        l = s - (n.getBoundingClientRect().left + window.pageXOffset),
-        u = o - (n.getBoundingClientRect().top + window.pageYOffset);
-    l < 0 ? (l = 0) : l > i && (l = i), u < 0 ? (u = 0) : u > a && (u = a);
-    var c = l / i,
-        d = 1 - u / a;
+var i = function (e, n, r) {
+    var i = r.getBoundingClientRect(),
+        a = i.width,
+        s = i.height,
+        o = 'number' == typeof e.pageX ? e.pageX : e.touches[0].pageX,
+        l = 'number' == typeof e.pageY ? e.pageY : e.touches[0].pageY,
+        u = o - (r.getBoundingClientRect().left + window.pageXOffset),
+        c = l - (r.getBoundingClientRect().top + window.pageYOffset);
+    u < 0 ? (u = 0) : u > a && (u = a), c < 0 ? (c = 0) : c > s && (c = s);
+    var d = u / a,
+        f = 1 - c / s;
     return {
-        h: t.h,
-        s: c,
-        v: d,
-        a: t.a,
+        h: n.h,
+        s: d,
+        v: f,
+        a: n.a,
         source: 'hsv'
     };
 };

@@ -1,36 +1,36 @@
-n.d(t, {
+r.d(n, {
     z: function () {
-        return u;
+        return d;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(239091),
-    s = n(430824),
-    o = n(594174),
-    l = n(74538);
-function u(e, t) {
-    return i.useCallback(
-        (i) => {
-            i.stopPropagation();
-            let u = s.Z.getGuild(e.guildId),
-                c = o.default.getCurrentUser();
-            (null != u || l.ZP.canUseCustomCallSounds(c)) &&
-                !(function (e, t, i, s) {
-                    let u = o.default.getCurrentUser();
-                    (null != t || l.ZP.canUseCustomCallSounds(u)) &&
-                        (0, a.jW)(e, async () => {
-                            let { default: e } = await n.e('2356').then(n.bind(n, 876308));
-                            return (n) =>
-                                (0, r.jsx)(e, {
-                                    ...n,
-                                    soundGuild: t,
-                                    activeCallGuildId: s,
-                                    sound: i
-                                });
-                        });
-                })(i, u, e, t);
+var i = r(200651),
+    a = r(192379),
+    s = r(239091),
+    o = r(430824),
+    l = r(594174),
+    u = r(74538);
+function c(e, n, a, o) {
+    let c = l.default.getCurrentUser();
+    (null != n || u.ZP.canUseCustomCallSounds(c)) &&
+        (0, s.jW)(e, async () => {
+            let { default: e } = await r.e('2356').then(r.bind(r, 876308));
+            return (r) =>
+                (0, i.jsx)(e, {
+                    ...r,
+                    soundGuild: n,
+                    activeCallGuildId: o,
+                    sound: a
+                });
+        });
+}
+function d(e, n) {
+    return a.useCallback(
+        (r) => {
+            r.stopPropagation();
+            let i = o.Z.getGuild(e.guildId),
+                a = l.default.getCurrentUser();
+            (null != i || u.ZP.canUseCustomCallSounds(a)) && c(r, i, e, n);
         },
-        [e, t]
+        [e, n]
     );
 }

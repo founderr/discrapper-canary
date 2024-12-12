@@ -1,6 +1,6 @@
-n.d(t, {
+r.d(n, {
     C: function () {
-        return r;
+        return i;
     }
 });
-let r = Symbol.for('protobuf-ts/message-type');
+let i = Symbol.for('protobuf-ts/message-type');

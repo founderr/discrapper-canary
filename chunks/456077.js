@@ -1,8 +1,8 @@
-function r(e, t) {
-    return t && (e = e.trim()), e;
+function i(e, n) {
+    return n && (e = e.trim()), e;
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

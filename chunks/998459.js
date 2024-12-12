@@ -1,54 +1,54 @@
-var r = n(147018),
-    i = n(926515),
-    a = n(526988),
-    s = n(213897),
-    o = n(532055),
-    l = n(71480);
-r(
+var i = r(147018),
+    a = r(926515),
+    s = r(526988),
+    o = r(213897),
+    l = r(532055),
+    u = r(71480);
+i(
     {
         target: 'Promise',
         stat: !0,
-        forced: n(246582)
+        forced: r(246582)
     },
     {
         allSettled: function (e) {
-            var t = this,
-                n = s.f(t),
-                r = n.resolve,
-                u = n.reject,
-                c = o(function () {
-                    var n = a(t.resolve),
-                        s = [],
-                        o = 0,
-                        u = 1;
-                    l(e, function (e) {
-                        var a = o++,
-                            l = !1;
-                        u++,
-                            i(n, t, e).then(
+            var n = this,
+                r = o.f(n),
+                i = r.resolve,
+                c = r.reject,
+                d = l(function () {
+                    var r = s(n.resolve),
+                        o = [],
+                        l = 0,
+                        c = 1;
+                    u(e, function (e) {
+                        var s = l++,
+                            u = !1;
+                        c++,
+                            a(r, n, e).then(
                                 function (e) {
-                                    !l &&
-                                        ((l = !0),
-                                        (s[a] = {
+                                    !u &&
+                                        ((u = !0),
+                                        (o[s] = {
                                             status: 'fulfilled',
                                             value: e
                                         }),
-                                        --u || r(s));
+                                        --c || i(o));
                                 },
                                 function (e) {
-                                    !l &&
-                                        ((l = !0),
-                                        (s[a] = {
+                                    !u &&
+                                        ((u = !0),
+                                        (o[s] = {
                                             status: 'rejected',
                                             reason: e
                                         }),
-                                        --u || r(s));
+                                        --c || i(o));
                                 }
                             );
                     }),
-                        --u || r(s);
+                        --c || i(o);
                 });
-            return c.error && u(c.value), n.promise;
+            return d.error && c(d.value), r.promise;
         }
     }
 );

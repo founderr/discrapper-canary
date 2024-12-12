@@ -1,19 +1,19 @@
-n.d(t, {
+r.d(n, {
     $: function () {
-        return u;
+        return c;
     },
     v: function () {
-        return l;
+        return u;
     }
 });
-var r = n(131704),
-    i = n(592125),
-    a = n(496675),
-    s = n(981631);
-let o = s.S7T.VIEW_CHANNEL | s.S7T.READ_MESSAGE_HISTORY;
-function l(e) {
-    return null != e && (e.type === s.d4z.DM || e.type === s.d4z.GROUP_DM || ((0, r.Qm)(e.type) && a.Z.canBasicChannel(o, e)));
-}
+var i = r(131704),
+    a = r(592125),
+    s = r(496675),
+    o = r(981631);
+let l = o.S7T.VIEW_CHANNEL | o.S7T.READ_MESSAGE_HISTORY;
 function u(e) {
-    return null != e && l(i.Z.getBasicChannel(e));
+    return null != e && (e.type === o.d4z.DM || e.type === o.d4z.GROUP_DM || ((0, i.Qm)(e.type) && s.Z.canBasicChannel(l, e)));
+}
+function c(e) {
+    return null != e && u(a.Z.getBasicChannel(e));
 }

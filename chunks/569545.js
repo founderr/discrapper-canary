@@ -1,53 +1,53 @@
-n.d(t, {
+r.d(n, {
     DB: function () {
-        return i;
+        return o;
     },
     V9: function () {
-        return s;
+        return u;
     },
     my: function () {
-        return a;
+        return l;
     }
-}),
-    n(47120),
-    n(411104);
-var r = n(70722);
-function i(e) {
-    return null != e && (e.startsWith(r.lo.GUILD) || e.startsWith(r.lo.CALL));
+});
+var i = r(47120);
+var a = r(411104);
+var s = r(70722);
+function o(e) {
+    return null != e && (e.startsWith(s.lo.GUILD) || e.startsWith(s.lo.CALL));
 }
-function a(e) {
-    let t = e.split(':'),
-        n = t[0];
-    switch (n) {
-        case r.lo.GUILD: {
-            let [e, n, r, i] = t;
+function l(e) {
+    let n = e.split(':'),
+        r = n[0];
+    switch (r) {
+        case s.lo.GUILD: {
+            let [e, r, i, a] = n;
             return {
                 streamType: e,
-                guildId: n,
+                guildId: r,
+                channelId: i,
+                ownerId: a
+            };
+        }
+        case s.lo.CALL: {
+            let [e, r, i] = n;
+            return {
+                streamType: e,
                 channelId: r,
                 ownerId: i
             };
         }
-        case r.lo.CALL: {
-            let [e, n, r] = t;
-            return {
-                streamType: e,
-                channelId: n,
-                ownerId: r
-            };
-        }
         default:
-            throw Error('Unknown stream type '.concat(n));
+            throw Error('Unknown stream type '.concat(r));
     }
 }
-function s(e) {
-    let { streamType: t, guildId: n, channelId: i, ownerId: a } = e;
-    switch (t) {
-        case r.lo.GUILD:
-            return [t, n, i, a].join(':');
-        case r.lo.CALL:
-            return [t, i, a].join(':');
+function u(e) {
+    let { streamType: n, guildId: r, channelId: i, ownerId: a } = e;
+    switch (n) {
+        case s.lo.GUILD:
+            return [n, r, i, a].join(':');
+        case s.lo.CALL:
+            return [n, i, a].join(':');
         default:
-            throw Error('Unknown stream type '.concat(t));
+            throw Error('Unknown stream type '.concat(n));
     }
 }

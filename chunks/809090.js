@@ -1,69 +1,69 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return f;
+        return h;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(686546),
-    l = n(768581),
-    u = n(895924),
-    c = n(131754),
-    d = n(970952);
-function f(e) {
-    let { section: t, isSelected: n, width: a, height: f, className: _, selectable: p = !1, isSquircle: h, onFocus: m, onBlur: g, onMouseOver: E, onMouseLeave: v, ...I } = e,
-        [T, b] = i.useState(!1),
-        S = i.useCallback(() => {
-            b(!0), null == m || m();
-        }, [m]),
-        y = i.useCallback(() => {
-            b(!1), null == g || g();
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(120356),
+    l = r.n(o),
+    u = r(686546),
+    c = r(768581),
+    d = r(895924),
+    f = r(131754),
+    _ = r(970952);
+function h(e) {
+    let { section: n, isSelected: r, width: i, height: o, className: h, selectable: p = !1, isSquircle: m, onFocus: g, onBlur: E, onMouseOver: v, onMouseLeave: I, ...T } = e,
+        [b, y] = s.useState(!1),
+        S = s.useCallback(() => {
+            y(!0), null == g || g();
         }, [g]),
-        A = i.useCallback(() => {
-            b(!0), null == E || E();
+        A = s.useCallback(() => {
+            y(!1), null == E || E();
         }, [E]),
-        N = i.useCallback(() => {
-            b(!1), null == v || v();
+        N = s.useCallback(() => {
+            y(!0), null == v || v();
         }, [v]),
-        C = i.useMemo(() => {
-            if (t.type === u.Qi.APPLICATION) {
+        C = s.useCallback(() => {
+            y(!1), null == I || I();
+        }, [I]),
+        R = s.useMemo(() => {
+            if (n.type === d.Qi.APPLICATION) {
                 var e;
-                return l.ZP.getApplicationIconURL({
-                    id: t.id,
-                    icon: t.icon,
-                    bot: null === (e = t.application) || void 0 === e ? void 0 : e.bot,
+                return c.ZP.getApplicationIconURL({
+                    id: n.id,
+                    icon: n.icon,
+                    bot: null === (e = n.application) || void 0 === e ? void 0 : e.bot,
                     botIconFirst: !0,
-                    size: a
+                    size: i
                 });
             }
-            return d;
-        }, [t, a]);
-    return (0, r.jsx)('div', {
-        ...I,
-        className: s()(c.wrapper, _, {
-            [c.selectable]: p,
-            [c.selected]: p && n
+            return _;
+        }, [n, i]);
+    return (0, a.jsx)('div', {
+        ...T,
+        className: l()(f.wrapper, h, {
+            [f.selectable]: p,
+            [f.selected]: p && r
         }),
         onFocus: S,
-        onBlur: y,
-        onMouseOver: A,
-        onMouseLeave: N,
-        children: (0, r.jsx)(o.ZP, {
-            className: c.mask,
-            mask: h || (p && (n || T)) ? o.QS.SQUIRCLE : o.QS.AVATAR_DEFAULT,
-            width: a,
-            height: f,
-            children: (0, r.jsx)('img', {
+        onBlur: A,
+        onMouseOver: N,
+        onMouseLeave: C,
+        children: (0, a.jsx)(u.ZP, {
+            className: f.mask,
+            mask: m || (p && (r || b)) ? u.QS.SQUIRCLE : u.QS.AVATAR_DEFAULT,
+            width: i,
+            height: o,
+            children: (0, a.jsx)('img', {
                 alt: '',
-                className: c.icon,
+                className: f.icon,
                 style: {
-                    width: a,
-                    height: f
+                    width: i,
+                    height: o
                 },
-                src: C
+                src: R
             })
         })
     });

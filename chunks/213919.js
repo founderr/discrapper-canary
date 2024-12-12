@@ -1,63 +1,63 @@
-let r, i;
-n.r(t),
-    n.d(t, {
+let i, a;
+r.r(n),
+    r.d(n, {
         encryptAndStoreTokens: function () {
-            return A;
+            return R;
         },
         getToken: function () {
-            return I;
-        },
-        hideToken: function () {
-            return b;
-        },
-        init: function () {
-            return v;
-        },
-        removeToken: function () {
             return y;
         },
+        hideToken: function () {
+            return A;
+        },
+        init: function () {
+            return b;
+        },
+        removeToken: function () {
+            return C;
+        },
         setToken: function () {
-            return T;
+            return S;
         },
         showToken: function () {
-            return S;
+            return N;
         }
-    }),
-    n(47120),
-    n(724458);
-var a = n(433517),
-    s = n(231338);
-let o = 'dQw4w9WgXcQ:';
-function l(e) {
-    return [...e].reduce((e, t) => {
-        let [n, r] = t;
-        return (e[n] = r), e;
+    });
+var s = r(47120);
+var o = r(724458);
+var l = r(433517),
+    u = r(231338);
+let c = 'dQw4w9WgXcQ:';
+function d(e) {
+    return [...e].reduce((e, n) => {
+        let [r, i] = n;
+        return (e[r] = i), e;
     }, {});
 }
-let u = null,
-    c = window.DiscordNative;
-null != c && (u = c.safeStorage);
-let d = !1,
-    f = {},
-    _ = {},
-    p = !1,
-    h = !1;
-function m() {
-    if (p) {
-        a.K.remove(s.B1), a.K.remove(s.XM);
+let f = null,
+    _ = window.DiscordNative;
+null != _ && (f = _.safeStorage);
+let h = !1,
+    p = {},
+    m = {},
+    g = !1,
+    E = !1;
+function v() {
+    if (g) {
+        l.K.remove(u.B1), l.K.remove(u.XM);
         return;
     }
-    null != i ? a.K.set(s.B1, i) : a.K.remove(s.B1), a.K.set(s.XM, _);
+    null != a ? l.K.set(u.B1, a) : l.K.remove(u.B1), l.K.set(u.XM, m);
 }
-function g(e) {
+function I(e) {
     return null == e || 0 === e.length
         ? {
               decryptedToken: null,
               wasEncrypted: !1
           }
-        : (null == u ? void 0 : u.isEncryptionAvailable()) && e.startsWith(o)
+        : (null == f ? void 0 : f.isEncryptionAvailable()) && e.startsWith(c)
           ? {
-                decryptedToken: u.decryptString(e.substring(o.length)),
+                decryptedToken: f.decryptString(e.substring(c.length)),
                 wasEncrypted: !0
             }
           : {
@@ -65,59 +65,59 @@ function g(e) {
                 wasEncrypted: !1
             };
 }
-function E(e) {
-    return (null == u ? void 0 : u.isEncryptionAvailable()) && !e.startsWith(o) ? ''.concat(o).concat(u.encryptString(e)) : e;
-}
-function v() {
-    if (h) return;
-    (i = a.K.get(s.B1)), (_ = a.K.get(s.XM) || {});
-    let { decryptedToken: e, wasEncrypted: t } = g(i);
-    (d = t),
-        (r = e),
-        (f = l(
-            Object.entries(_)
-                .map((e) => {
-                    let [t, n] = e,
-                        { decryptedToken: r, wasEncrypted: i } = g(n);
-                    return (d = i || d), [t, r];
-                })
-                .filter((e) => {
-                    let [t, n] = e;
-                    return null != n;
-                })
-        )),
-        (h = !0);
-}
-function I(e) {
-    return (v(), null != e) ? f[e] : r;
-}
-function T(e, t) {
-    if (null == e) {
-        y(t);
-        return;
-    }
-    (r = e), null != t && (f[t] = e), d ? A() : ((i = r), (_ = f), m());
+function T(e) {
+    return (null == f ? void 0 : f.isEncryptionAvailable()) && !e.startsWith(c) ? ''.concat(c).concat(f.encryptString(e)) : e;
 }
 function b() {
-    if (!p) (p = !0), m();
-}
-function S() {
-    if (!!p) (p = !1), m();
+    if (E) return;
+    (a = l.K.get(u.B1)), (m = l.K.get(u.XM) || {});
+    let { decryptedToken: e, wasEncrypted: n } = I(a);
+    (h = n),
+        (i = e),
+        (p = d(
+            Object.entries(m)
+                .map((e) => {
+                    let [n, r] = e,
+                        { decryptedToken: i, wasEncrypted: a } = I(r);
+                    return (h = a || h), [n, i];
+                })
+                .filter((e) => {
+                    let [n, r] = e;
+                    return null != r;
+                })
+        )),
+        (E = !0);
 }
 function y(e) {
-    let t = r;
-    return null != e && ((t = f[e]), delete f[e], delete _[e]), t === r && ((r = null), (i = null)), m(), null != t;
+    return (b(), null != e) ? p[e] : i;
+}
+function S(e, n) {
+    if (null == e) {
+        C(n);
+        return;
+    }
+    (i = e), null != n && (p[n] = e), h ? R() : ((a = i), (m = p), v());
 }
 function A() {
-    (null == u ? void 0 : u.isEncryptionAvailable())
-        ? (null != r && (i = E(r)),
-          (_ = l(
-              Object.entries(f).map((e) => {
-                  let [t, n] = e;
-                  return [t, E(n)];
+    if (!g) (g = !0), v();
+}
+function N() {
+    if (!!g) (g = !1), v();
+}
+function C(e) {
+    let n = i;
+    return null != e && ((n = p[e]), delete p[e], delete m[e]), n === i && ((i = null), (a = null)), v(), null != n;
+}
+function R() {
+    (null == f ? void 0 : f.isEncryptionAvailable())
+        ? (null != i && (a = T(i)),
+          (m = d(
+              Object.entries(p).map((e) => {
+                  let [n, r] = e;
+                  return [n, T(r)];
               })
           )),
-          (d = !0))
-        : ((i = r), (_ = f)),
-        m();
+          (h = !0))
+        : ((a = i), (m = p)),
+        v();
 }

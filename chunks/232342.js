@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     calendar: `Napt\xe1r`,
     day: 'nap',
     dayPeriod: 'napszak',

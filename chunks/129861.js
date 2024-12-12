@@ -1,81 +1,81 @@
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(442837),
-    o = n(481060),
-    l = n(385499),
-    u = n(813549),
-    c = n(246946),
-    d = n(51144),
-    f = n(388032),
-    _ = n(319830);
-let p = (e) => {
-    let { primary: t, secondary: n, botType: i, botVerified: s, discriminatorClass: u, className: c, usernameClass: d, color: p, botClass: h, showStreamerModeTooltip: m } = e;
-    return (0, r.jsxs)('div', {
-        className: a()(_.info, c),
-        children: [
-            (0, r.jsx)(o.Tooltip, {
-                text: f.intl.string(f.t.Br1ls7),
-                shouldShow: m,
-                'aria-label': !!m && void 0,
-                children: (e) =>
-                    (0, r.jsx)('span', {
-                        ...e,
-                        className: a()(_.__invalid_username, d),
-                        style: null != p ? { color: p } : void 0,
-                        children: t
-                    })
-            }),
-            null != n
-                ? (0, r.jsx)('span', {
-                      className: a()(_.infoSpacing, u),
-                      children: n
-                  })
-                : void 0,
-            null != i &&
-                (0, r.jsx)(l.Z, {
-                    type: i,
-                    className: a()(_.infoSpacing, h),
-                    verified: s
-                })
-        ]
-    });
-};
-t.Z = (e) => {
-    let { user: t, nick: n, forceUsername: i, showAccountIdentifier: a, overrideDiscriminator: o, forcePomelo: l, hideBotTag: f = !1, hideDiscriminator: _ = !1, ...h } = e,
-        m = (0, s.e7)([c.Z], () => c.Z.hidePersonalInformation),
-        g = m || _ || t.isNonUserBot(),
-        E = t.toString(),
-        v = f
-            ? null
-            : (function (e) {
-                  if (e.isSystemUser()) return u.J.SYSTEM_DM;
-                  if (e.isClyde()) return u.J.AI;
-                  if (e.bot) return u.J.BOT;
-                  return null;
-              })(t),
-        I = t.isVerifiedBot(),
-        T = d.ZP.getName(t),
-        b = i ? E : null != n ? n : T,
-        S = t.isPomelo() || l;
-    if (S || b !== E) {
-        let e = b === E && S && i ? d.ZP.getUserTag(t, { forcePomelo: l }) : b,
-            n = a && e !== '@'.concat(E) ? d.ZP.getUserTag(t) : void 0;
-        return (0, r.jsx)(p, {
-            primary: e,
-            secondary: n,
-            botType: v,
-            botVerified: I,
-            showStreamerModeTooltip: m && d.ZP.isNameConcealed(e),
-            ...h
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(442837),
+    l = r(481060),
+    u = r(385499),
+    c = r(813549),
+    d = r(246946),
+    f = r(51144),
+    _ = r(388032),
+    h = r(319830);
+function p(e) {
+    if (e.isSystemUser()) return c.J.SYSTEM_DM;
+    if (e.isClyde()) return c.J.AI;
+    if (e.bot) return c.J.BOT;
+    return null;
+}
+let m = (e) => {
+        let { user: n, nick: r, forceUsername: a, showAccountIdentifier: s, overrideDiscriminator: l, forcePomelo: u, hideBotTag: _ = !1, hideDiscriminator: h = !1, ...m } = e,
+            E = (0, o.e7)([d.Z], () => d.Z.hidePersonalInformation),
+            v = E || h || n.isNonUserBot(),
+            I = n.toString(),
+            T = _ ? null : p(n),
+            b = n.isVerifiedBot(),
+            y = f.ZP.getName(n),
+            S = a ? I : null != r ? r : y,
+            A = n.isPomelo() || u;
+        if (A || S !== I) {
+            let e = S === I && A && a ? f.ZP.getUserTag(n, { forcePomelo: u }) : S,
+                r = s && e !== '@'.concat(I) ? f.ZP.getUserTag(n) : void 0;
+            return (0, i.jsx)(g, {
+                primary: e,
+                secondary: r,
+                botType: T,
+                botVerified: b,
+                showStreamerModeTooltip: E && f.ZP.isNameConcealed(e),
+                ...m
+            });
+        }
+        return (0, i.jsx)(c.Z, {
+            name: S,
+            botType: T,
+            botVerified: b,
+            discriminator: v || S !== I ? null : null != l ? l : n.discriminator,
+            ...m
         });
-    }
-    return (0, r.jsx)(u.Z, {
-        name: b,
-        botType: v,
-        botVerified: I,
-        discriminator: g || b !== E ? null : null != o ? o : t.discriminator,
-        ...h
-    });
-};
+    },
+    g = (e) => {
+        let { primary: n, secondary: r, botType: a, botVerified: o, discriminatorClass: c, className: d, usernameClass: f, color: p, botClass: m, showStreamerModeTooltip: g } = e;
+        return (0, i.jsxs)('div', {
+            className: s()(h.info, d),
+            children: [
+                (0, i.jsx)(l.Tooltip, {
+                    text: _.intl.string(_.t.Br1ls7),
+                    shouldShow: g,
+                    'aria-label': !!g && void 0,
+                    children: (e) =>
+                        (0, i.jsx)('span', {
+                            ...e,
+                            className: s()(h.__invalid_username, f),
+                            style: null != p ? { color: p } : void 0,
+                            children: n
+                        })
+                }),
+                null != r
+                    ? (0, i.jsx)('span', {
+                          className: s()(h.infoSpacing, c),
+                          children: r
+                      })
+                    : void 0,
+                null != a &&
+                    (0, i.jsx)(u.Z, {
+                        type: a,
+                        className: s()(h.infoSpacing, m),
+                        verified: o
+                    })
+            ]
+        });
+    };
+n.Z = m;

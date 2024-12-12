@@ -1,37 +1,37 @@
-n.d(t, {
+r.d(n, {
     A: function () {
-        return o;
+        return l;
     },
     S: function () {
-        return s;
+        return o;
     }
 });
-var r = n(663993),
-    i = n(618541),
-    a = n(981631);
-function s() {
-    return (0, r.wE)({
-        createPromise: () => n.e('10444').then(n.t.bind(n, 91438, 23)),
+var i = r(663993),
+    a = r(618541),
+    s = r(981631);
+function o() {
+    return (0, i.wE)({
+        createPromise: () => r.e('10444').then(r.t.bind(r, 91438, 23)),
         webpackId: 91438
     }).then((e) => {
-        let { default: t } = e;
-        return t;
+        let { default: n } = e;
+        return n;
     });
 }
-function o() {
-    let e = i.Z.getClient();
+function l() {
+    let e = a.Z.getClient();
     return null == e
-        ? s().then((e) =>
+        ? o().then((e) =>
               e.client
-                  .create({ authorization: a.Ai1.BRAINTREE.KEY })
-                  .then((e) => l(e))
+                  .create({ authorization: s.Ai1.BRAINTREE.KEY })
+                  .then((e) => u(e))
                   .catch(() => null)
           )
-        : l(e);
+        : u(e);
 }
-function l(e) {
-    return s().then((t) =>
-        t.dataCollector
+function u(e) {
+    return o().then((n) =>
+        n.dataCollector
             .create({ client: e })
             .then((e) => e.deviceData)
             .catch(() => null)

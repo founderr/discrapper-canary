@@ -1,29 +1,29 @@
-n(47120);
-var r = n(147913),
-    i = n(344185),
-    a = n(314897),
-    s = n(592125),
-    o = n(709054),
-    l = n(882252);
-function u(e, t, n) {
+var i = r(47120);
+var a = r(147913),
+    s = r(344185),
+    o = r(314897),
+    l = r(592125),
+    u = r(709054),
+    c = r(882252);
+function d(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-class c extends r.Z {
+class f extends a.Z {
     handleThreadCreate(e) {
-        let { channel: t } = e;
-        if (t.isForumPost()) {
-            let e = t.ownerId === a.default.getId();
-            this.readStateSnapshots[t.id] = {
+        let { channel: n } = e;
+        if (n.isForumPost()) {
+            let e = n.ownerId === o.default.getId();
+            this.readStateSnapshots[n.id] = {
                 isNew: !e,
                 hasUnreads: !e
             };
@@ -31,25 +31,25 @@ class c extends r.Z {
     }
     constructor(...e) {
         super(...e),
-            u(this, 'readStateSnapshots', {}),
-            u(this, 'actions', {
+            d(this, 'readStateSnapshots', {}),
+            d(this, 'actions', {
                 CHANNEL_SELECT: (e) => this.handleChannelSelect(e),
                 THREAD_CREATE: (e) => this.handleThreadCreate(e)
             }),
-            u(this, 'handleChannelSelect', (e) => {
-                let { channelId: t } = e;
-                if (null == t) return;
-                let n = s.Z.getChannel(t);
-                null != n && n.isForumLikeChannel() && ((this.readStateSnapshots = {}), this.processForumChannel(n.guild_id, t));
+            d(this, 'handleChannelSelect', (e) => {
+                let { channelId: n } = e;
+                if (null == n) return;
+                let r = l.Z.getChannel(n);
+                null != r && r.isForumLikeChannel() && ((this.readStateSnapshots = {}), this.processForumChannel(r.guild_id, n));
             }),
-            u(this, 'processForumChannel', (e, t) => {
-                let n = i.Z.getThreadsForParent(e, t);
-                o.default.keys(n).forEach((e) => {
-                    let t = (0, l.nC)(e);
-                    null != t && (this.readStateSnapshots[e] = t);
+            d(this, 'processForumChannel', (e, n) => {
+                let r = s.Z.getThreadsForParent(e, n);
+                u.default.keys(r).forEach((e) => {
+                    let n = (0, c.nC)(e);
+                    null != n && (this.readStateSnapshots[e] = n);
                 });
             }),
-            u(this, 'getReadStateSnapshotAnalytics', (e) => this.readStateSnapshots[e]);
+            d(this, 'getReadStateSnapshotAnalytics', (e) => this.readStateSnapshots[e]);
     }
 }
-t.Z = new c();
+n.Z = new f();

@@ -1,77 +1,77 @@
-var r = n(570140),
-    i = n(367907),
-    a = n(626135),
-    s = n(585483),
-    o = n(981631);
-t.Z = {
+var i = r(570140),
+    a = r(367907),
+    s = r(626135),
+    o = r(585483),
+    l = r(981631);
+n.Z = {
     rebuildRTCActiveChannels() {
-        r.Z.dispatch({ type: 'CHANNEL_RTC_ACTIVE_CHANNELS' });
+        i.Z.dispatch({ type: 'CHANNEL_RTC_ACTIVE_CHANNELS' });
     },
-    selectParticipant(e, t) {
-        r.Z.dispatch({
+    selectParticipant(e, n) {
+        i.Z.dispatch({
             type: 'CHANNEL_RTC_SELECT_PARTICIPANT',
             channelId: e,
-            id: t
+            id: n
         });
     },
-    updateLayout(e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.IlC.APP;
-        a.default.track(o.rMx.VIDEO_LAYOUT_TOGGLED, {
-            video_layout: t,
-            ...(0, i.AB)(e)
+    updateLayout(e, n) {
+        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.IlC.APP;
+        s.default.track(l.rMx.VIDEO_LAYOUT_TOGGLED, {
+            video_layout: n,
+            ...(0, a.AB)(e)
         }),
-            r.Z.dispatch({
+            i.Z.dispatch({
                 type: 'CHANNEL_RTC_UPDATE_LAYOUT',
                 channelId: e,
-                layout: t,
-                appContext: n
+                layout: n,
+                appContext: r
             });
     },
-    toggleParticipants(e, t) {
-        r.Z.dispatch({
+    toggleParticipants(e, n) {
+        i.Z.dispatch({
             type: 'CHANNEL_RTC_UPDATE_PARTICIPANTS_OPEN',
             channelId: e,
-            participantsOpen: t
+            participantsOpen: n
         });
     },
-    toggleParticipantsList(e, t) {
-        r.Z.dispatch({
+    toggleParticipantsList(e, n) {
+        i.Z.dispatch({
             type: 'CHANNEL_RTC_UPDATE_PARTCIPANTS_LIST_OPEN',
             channelId: e,
-            participantsListOpen: t
+            participantsListOpen: n
         });
     },
-    toggleVoiceParticipantsHidden(e, t) {
-        r.Z.dispatch({
+    toggleVoiceParticipantsHidden(e, n) {
+        i.Z.dispatch({
             type: 'CHANNEL_RTC_UPDATE_VOICE_PARTICIPANTS_HIDDEN',
             channelId: e,
-            voiceParticipantsHidden: t
+            voiceParticipantsHidden: n
         });
     },
-    updateStageStreamSize(e, t) {
-        r.Z.dispatch({
+    updateStageStreamSize(e, n) {
+        i.Z.dispatch({
             type: 'CHANNEL_RTC_UPDATE_STAGE_STREAM_SIZE',
             channelId: e,
-            large: t
+            large: n
         });
     },
-    updateStageVideoLimitBoostUpsellDismissed(e, t) {
-        r.Z.dispatch({
+    updateStageVideoLimitBoostUpsellDismissed(e, n) {
+        i.Z.dispatch({
             type: 'CHANNEL_RTC_UPDATE_STAGE_VIDEO_LIMIT_BOOST_UPSELL_DISMISSED',
             channelId: e,
-            dismissed: t
+            dismissed: n
         });
     },
-    updateChatOpen(e, t) {
-        r.Z.dispatch({
+    updateChatOpen(e, n) {
+        i.Z.dispatch({
             type: 'CHANNEL_RTC_UPDATE_CHAT_OPEN',
             channelId: e,
-            chatOpen: t
+            chatOpen: n
         }),
-            t
+            n
                 ? setTimeout(() => {
-                      s.S.dispatch(o.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
+                      o.S.dispatch(l.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
                   }, 0)
-                : s.S.dispatch(o.CkL.FOCUS_CHAT_BUTTON);
+                : o.S.dispatch(l.CkL.FOCUS_CHAT_BUTTON);
     }
 };

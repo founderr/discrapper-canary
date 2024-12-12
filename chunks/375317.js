@@ -1,22 +1,22 @@
-function r(e) {
-    var t = e.reduce(function (e, t) {
-        var n = e[t.name];
+function i(e) {
+    var n = e.reduce(function (e, n) {
+        var r = e[n.name];
         return (
-            (e[t.name] = n
-                ? Object.assign({}, n, t, {
-                      options: Object.assign({}, n.options, t.options),
-                      data: Object.assign({}, n.data, t.data)
+            (e[n.name] = r
+                ? Object.assign({}, r, n, {
+                      options: Object.assign({}, r.options, n.options),
+                      data: Object.assign({}, r.data, n.data)
                   })
-                : t),
+                : n),
             e
         );
     }, {});
-    return Object.keys(t).map(function (e) {
-        return t[e];
+    return Object.keys(n).map(function (e) {
+        return n[e];
     });
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

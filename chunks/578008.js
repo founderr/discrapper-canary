@@ -1,50 +1,50 @@
-function t(e) {
+function n(e) {
     return (e - 30) * 3.62 + 194;
 }
-function n(e) {
+function r(e) {
     return (e - 8) * 3 + 25;
 }
-e.exports = {
-    fromOrigamiTensionAndFriction: function (e, n) {
-        return {
-            tension: t(e),
-            friction: (n - 8) * 3 + 25
-        };
-    },
-    fromBouncinessAndSpeed: function (e, n) {
-        function r(e, t, n) {
-            return (e - t) / (n - t);
-        }
-        function i(e, t, n) {
-            return t + e * (n - t);
-        }
-        var a,
-            s,
-            o,
-            l,
-            u,
-            c,
-            d,
-            f,
-            _ = (e / 1.7 - 0) / (20 - (a = 0));
-        var p = 0.5 + ((n / 1.7 - 0) / (20 - (o = 0))) * (200 - (l = 0.5));
-        var h =
-            ((u = _ = 0 + _ * (0.8 - (s = 0))),
-            (c = (function (e) {
-                var t, n, r;
-                if (e <= 18) {
-                    return 0.0007 * Math.pow((t = e), 3) - 0.031 * Math.pow(t, 2) + 0.64 * t + 1.28;
-                }
-                if (e > 18 && e <= 44) {
-                    return 0.000044 * Math.pow((n = e), 3) - 0.006 * Math.pow(n, 2) + 0.36 * n + 2;
-                }
-                return 4.5e-7 * Math.pow((r = e), 3) - 0.000332 * Math.pow(r, 2) + 0.1078 * r + 5.84;
-            })(p)),
-            (d = 0.01),
-            0.01 * (f = 2 * u - u * u) + (1 - f) * c);
-        return {
-            tension: t(p),
-            friction: (h - 8) * 3 + 25
-        };
+function i(e, i) {
+    return {
+        tension: n(e),
+        friction: r(i)
+    };
+}
+function a(e, i) {
+    function a(e, n, r) {
+        return (e - n) / (r - n);
     }
+    function s(e, n, r) {
+        return n + e * (r - n);
+    }
+    function o(e, n, r) {
+        return e * r + (1 - e) * n;
+    }
+    function l(e, n, r) {
+        return o(2 * e - e * e, n, r);
+    }
+    function u(e) {
+        return 0.0007 * Math.pow(e, 3) - 0.031 * Math.pow(e, 2) + 0.64 * e + 1.28;
+    }
+    function c(e) {
+        return 0.000044 * Math.pow(e, 3) - 0.006 * Math.pow(e, 2) + 0.36 * e + 2;
+    }
+    function d(e) {
+        return 4.5e-7 * Math.pow(e, 3) - 0.000332 * Math.pow(e, 2) + 0.1078 * e + 5.84;
+    }
+    function f(e) {
+        return e <= 18 ? u(e) : e > 18 && e <= 44 ? c(e) : d(e);
+    }
+    var _ = a(e / 1.7, 0, 20);
+    _ = s(_, 0, 0.8);
+    var h = s(a(i / 1.7, 0, 20), 0.5, 200),
+        p = l(_, f(h), 0.01);
+    return {
+        tension: n(h),
+        friction: r(p)
+    };
+}
+e.exports = {
+    fromOrigamiTensionAndFriction: i,
+    fromBouncinessAndSpeed: a
 };

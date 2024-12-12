@@ -1,29 +1,29 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return o;
+        return l;
     }
 });
-var r = n(49691),
-    i = n(285363),
-    a = n(977489),
-    s = n(436857);
-function o(e, t) {
-    var n = (0, r.Z)(e),
-        o = (0, i.Z)(e),
-        l = n.visualViewport,
-        u = o.clientWidth,
-        c = o.clientHeight,
-        d = 0,
-        f = 0;
-    if (l) {
-        (u = l.width), (c = l.height);
-        var _ = (0, s.Z)();
-        (_ || (!_ && 'fixed' === t)) && ((d = l.offsetLeft), (f = l.offsetTop));
+var i = r(49691),
+    a = r(285363),
+    s = r(977489),
+    o = r(436857);
+function l(e, n) {
+    var r = (0, i.Z)(e),
+        l = (0, a.Z)(e),
+        u = r.visualViewport,
+        c = l.clientWidth,
+        d = l.clientHeight,
+        f = 0,
+        _ = 0;
+    if (u) {
+        (c = u.width), (d = u.height);
+        var h = (0, o.Z)();
+        (h || (!h && 'fixed' === n)) && ((f = u.offsetLeft), (_ = u.offsetTop));
     }
     return {
-        width: u,
-        height: c,
-        x: d + (0, a.Z)(e),
-        y: f
+        width: c,
+        height: d,
+        x: f + (0, s.Z)(e),
+        y: _
     };
 }

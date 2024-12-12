@@ -1,7 +1,7 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = { dismiss: `Hylk\xe4\xe4` };
+var i = {};
+i = { dismiss: `Hylk\xe4\xe4` };

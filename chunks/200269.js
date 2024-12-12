@@ -1,61 +1,61 @@
-n.d(t, {
+r.d(n, {
     H: function () {
-        return s;
-    },
-    x: function () {
         return l;
     },
+    x: function () {
+        return c;
+    },
     y: function () {
-        return a;
+        return o;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379);
-function a(e) {
-    let { component: t, children: n, forceLevel: a } = e,
-        s = i.useContext(o),
-        [l, u] = i.useState(null != t),
-        c = 1,
-        d = 1;
-    null != a ? (null != t ? ((c = a), (d = a + 1)) : (d = a)) : null != t ? ((c = s.level), (d = s.level + 1)) : (d = s.level + (l ? 1 : 0));
-    let f = i.useCallback(() => (u(!0), c), [c]),
-        _ = i.useCallback(() => (u(!0), d), [d]);
-    return (0, r.jsxs)(r.Fragment, {
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379);
+function o(e) {
+    let { component: n, children: r, forceLevel: i } = e,
+        o = s.useContext(u),
+        [l, c] = s.useState(null != n),
+        d = 1,
+        f = 1;
+    null != i ? (null != n ? ((d = i), (f = i + 1)) : (f = i)) : null != n ? ((d = o.level), (f = o.level + 1)) : (f = o.level + (l ? 1 : 0));
+    let _ = s.useCallback(() => (c(!0), d), [d]),
+        h = s.useCallback(() => (c(!0), f), [f]);
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            null != t
-                ? (0, r.jsx)(o.Provider, {
+            null != n
+                ? (0, a.jsx)(u.Provider, {
                       value: {
-                          level: c,
-                          getLevelAndMarkUsed: f
+                          level: d,
+                          getLevelAndMarkUsed: _
                       },
-                      children: t
+                      children: n
                   })
                 : null,
-            (0, r.jsx)(o.Provider, {
+            (0, a.jsx)(u.Provider, {
                 value: {
-                    level: d,
-                    getLevelAndMarkUsed: _
+                    level: f,
+                    getLevelAndMarkUsed: h
                 },
-                children: n
+                children: r
             })
         ]
     });
 }
-function s(e) {
-    let t = l(),
-        n = 'h'.concat(Math.min(t, 6));
-    return (0, r.jsx)(n, {
-        ...(t > 6 ? { 'data-excessive-heading-level': t } : {}),
+function l(e) {
+    let n = c(),
+        r = 'h'.concat(Math.min(n, 6));
+    return (0, a.jsx)(r, {
+        ...(n > 6 ? { 'data-excessive-heading-level': n } : {}),
         ...e
     });
 }
-let o = i.createContext({
+let u = s.createContext({
     getLevelAndMarkUsed: () => 2,
     level: 2
 });
-function l() {
-    let { getLevelAndMarkUsed: e } = i.useContext(o);
+function c() {
+    let { getLevelAndMarkUsed: e } = s.useContext(u);
     return e();
 }
-o.displayName = 'HeadingLevelContext';
+u.displayName = 'HeadingLevelContext';

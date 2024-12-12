@@ -1,27 +1,27 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(81825);
-function i(e, t, n) {
+var i = r(81825);
+function a(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-class a extends r.Z {
+class s extends i.Z {
     static createFromServer(e) {
-        return new a(e);
+        return new s(e);
     }
     constructor(e) {
-        super(), i(this, 'id', void 0), i(this, 'name', void 0), (this.id = e.id), (this.name = e.name);
+        super(), a(this, 'id', void 0), a(this, 'name', void 0), (this.id = e.id), (this.name = e.name);
     }
 }

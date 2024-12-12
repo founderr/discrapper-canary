@@ -1,7 +1,7 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = { longPressMessage: 'Dugo pritisnite ili pritisnite Alt + strelicu prema dole da otvorite meni' };
+var i = {};
+i = { longPressMessage: 'Dugo pritisnite ili pritisnite Alt + strelicu prema dole da otvorite meni' };

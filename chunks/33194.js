@@ -1,44 +1,44 @@
-n.d(t, {
+r.d(n, {
     Iu: function () {
-        return s;
-    },
-    OS: function () {
         return o;
     },
+    OS: function () {
+        return l;
+    },
     g6: function () {
-        return u;
+        return c;
     },
     v3: function () {
-        return l;
+        return u;
     }
 });
-var r = n(15729),
-    i = n(877124);
-let a = (0, r.U)(
-    (0, i.tJ)(
+var i = r(15729),
+    a = r(877124);
+let s = (0, i.U)(
+    (0, a.tJ)(
         (e) => ({
             channelDismissTimestamps: {},
             queuedWarning: !1
         }),
         {
             name: 'shared-spaces-warning-storage',
-            storage: (0, i.FL)(() => localStorage)
+            storage: (0, a.FL)(() => localStorage)
         }
     )
 );
-function s(e) {
-    return a.getState().channelDismissTimestamps[e];
-}
-function o() {
-    return a.getState().queuedWarning;
+function o(e) {
+    return s.getState().channelDismissTimestamps[e];
 }
 function l() {
-    a.setState({ queuedWarning: !1 });
+    return s.getState().queuedWarning;
 }
-function u(e) {
-    a.setState((t) => ({
+function u() {
+    s.setState({ queuedWarning: !1 });
+}
+function c(e) {
+    s.setState((n) => ({
         channelDismissTimestamps: {
-            ...t.channelDismissTimestamps,
+            ...n.channelDismissTimestamps,
             [e]: Date.now()
         }
     }));

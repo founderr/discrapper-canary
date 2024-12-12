@@ -1,28 +1,28 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     buttonLabel: 'Afficher les suggestions',
-    countAnnouncement: (e, t) =>
-        `${t.plural(e.optionCount, {
-            one: () => `${t.number(e.optionCount)} option`,
-            other: () => `${t.number(e.optionCount)} options`
+    countAnnouncement: (e, n) =>
+        `${n.plural(e.optionCount, {
+            one: () => `${n.number(e.optionCount)} option`,
+            other: () => `${n.number(e.optionCount)} options`
         })} disponible(s).`,
-    focusAnnouncement: (e, t) =>
-        `${t.select(
+    focusAnnouncement: (e, n) =>
+        `${n.select(
             {
                 true: () =>
-                    `Groupe ${e.groupTitle} saisi, avec ${t.plural(e.groupCount, {
-                        one: () => `${t.number(e.groupCount)} option`,
-                        other: () => `${t.number(e.groupCount)} options`
+                    `Groupe ${e.groupTitle} saisi, avec ${n.plural(e.groupCount, {
+                        one: () => `${n.number(e.groupCount)} option`,
+                        other: () => `${n.number(e.groupCount)} options`
                     })}. `,
                 other: ''
             },
             e.isGroupChange
-        )}${e.optionText}${t.select(
+        )}${e.optionText}${n.select(
             {
                 true: `, s\xe9lectionn\xe9(s)`,
                 other: ''

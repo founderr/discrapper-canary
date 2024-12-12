@@ -1,6 +1,6 @@
-n.d(t, {
+r.d(n, {
     V: function () {
-        return r;
+        return i;
     }
 });
-let r = { Modules: { chat: { RESIZE_HANDLE_WIDTH: 8 } } };
+let i = { Modules: { chat: { RESIZE_HANDLE_WIDTH: 8 } } };

@@ -1,35 +1,35 @@
-var r = n(859209),
-    i = n(581031),
-    a = n(714050),
-    s = n(202934),
-    o = URLSearchParams,
-    l = o.prototype,
-    u = i(l.append),
-    c = i(l.delete),
-    d = i(l.forEach),
-    f = i([].push),
-    _ = new o('a=1&a=2&b=3');
-_.delete('a', 1),
-    _.delete('b', void 0),
-    _ + '' != 'a=2' &&
-        r(
-            l,
+var i = r(859209),
+    a = r(581031),
+    s = r(714050),
+    o = r(202934),
+    l = URLSearchParams,
+    u = l.prototype,
+    c = a(u.append),
+    d = a(u.delete),
+    f = a(u.forEach),
+    _ = a([].push),
+    h = new l('a=1&a=2&b=3');
+h.delete('a', 1),
+    h.delete('b', void 0),
+    h + '' != 'a=2' &&
+        i(
+            u,
             'delete',
             function (e) {
-                var t,
-                    n = arguments.length,
-                    r = n < 2 ? void 0 : arguments[1];
-                if (n && void 0 === r) return c(this, e);
-                var i = [];
-                d(this, function (e, t) {
-                    f(i, {
-                        key: t,
+                var n,
+                    r = arguments.length,
+                    i = r < 2 ? void 0 : arguments[1];
+                if (r && void 0 === i) return d(this, e);
+                var a = [];
+                f(this, function (e, n) {
+                    _(a, {
+                        key: n,
                         value: e
                     });
                 }),
-                    s(n, 1);
-                for (var o = a(e), l = a(r), _ = 0, p = 0, h = !1, m = i.length; _ < m; ) (t = i[_++]), h || t.key === o ? ((h = !0), c(this, t.key)) : p++;
-                for (; p < m; ) !((t = i[p++]).key === o && t.value === l) && u(this, t.key, t.value);
+                    o(r, 1);
+                for (var l = s(e), u = s(i), h = 0, p = 0, m = !1, g = a.length; h < g; ) (n = a[h++]), m || n.key === l ? ((m = !0), d(this, n.key)) : p++;
+                for (; p < g; ) !((n = a[p++]).key === l && n.value === u) && c(this, n.key, n.value);
             },
             {
                 enumerable: !0,

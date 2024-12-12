@@ -1,15 +1,15 @@
 IntlMessageFormat.__addLocaleData({
     locale: 'hr',
-    pluralRuleFunction: function (e, t) {
-        var n = String(e).split('.'),
-            r = n[0],
-            i = n[1] || '',
-            a = !n[1],
-            s = r.slice(-1),
-            o = r.slice(-2),
-            l = i.slice(-1),
-            u = i.slice(-2);
-        return t ? 'other' : (a && 1 == s && 11 != o) || (1 == l && 11 != u) ? 'one' : (a && s >= 2 && s <= 4 && (o < 12 || o > 14)) || (l >= 2 && l <= 4 && (u < 12 || u > 14)) ? 'few' : 'other';
+    pluralRuleFunction: function (e, n) {
+        var r = String(e).split('.'),
+            i = r[0],
+            a = r[1] || '',
+            s = !r[1],
+            o = i.slice(-1),
+            l = i.slice(-2),
+            u = a.slice(-1),
+            c = a.slice(-2);
+        return n ? 'other' : (s && 1 == o && 11 != l) || (1 == u && 11 != c) ? 'one' : (s && o >= 2 && o <= 4 && (l < 12 || l > 14)) || (u >= 2 && u <= 4 && (c < 12 || c > 14)) ? 'few' : 'other';
     }
 }),
     IntlMessageFormat.__addLocaleData({

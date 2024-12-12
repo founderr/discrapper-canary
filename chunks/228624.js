@@ -1,34 +1,34 @@
-n.d(t, {
+r.d(n, {
     ed: function () {
-        return u;
+        return c;
     },
     hv: function () {
-        return o;
+        return l;
     },
     k: function () {
-        return s;
+        return o;
     },
     oj: function () {
-        return l;
+        return u;
     }
 });
-var r = n(311570),
-    i = n(818083),
-    a = n(987338);
-let s = (0, i.B)({
+var i = r(311570),
+    a = r(818083),
+    s = r(987338);
+let o = (0, a.B)({
         kind: 'user',
         id: '2024-10_shop_variants',
         label: 'Shop Variants Experiment',
-        defaultConfig: { variantsReturnStyle: r.v.INDIVIDUAL_PRODUCTS },
+        defaultConfig: { variantsReturnStyle: i.v.INDIVIDUAL_PRODUCTS },
         treatments: [
             {
                 id: 1,
                 label: 'Return Variants as Group',
-                config: { variantsReturnStyle: r.v.VARIANTS_GROUP }
+                config: { variantsReturnStyle: i.v.VARIANTS_GROUP }
             }
         ],
-        commonTriggerPoint: a.$P.COLLECTIBLES_SHOP_OPEN
+        commonTriggerPoint: s.$P.COLLECTIBLES_SHOP_OPEN
     }),
-    o = (e) => s.useExperiment({ location: e }).variantsReturnStyle,
-    l = (e) => s.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).variantsReturnStyle,
-    u = (e) => o(e) === r.v.VARIANTS_GROUP;
+    l = (e) => o.useExperiment({ location: e }).variantsReturnStyle,
+    u = (e) => o.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).variantsReturnStyle,
+    c = (e) => l(e) === i.v.VARIANTS_GROUP;

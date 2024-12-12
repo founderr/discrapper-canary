@@ -1,41 +1,41 @@
-n.d(t, {
+r.d(n, {
     AI: function () {
-        return l;
-    },
-    EL: function () {
-        return d;
-    },
-    SE: function () {
         return u;
     },
-    ew: function () {
+    EL: function () {
+        return f;
+    },
+    SE: function () {
         return c;
+    },
+    ew: function () {
+        return d;
     }
 });
-var r = n(570140),
-    i = n(314897),
-    a = n(351780),
-    s = n(843693),
-    o = n(112606);
-function l(e) {
-    r.Z.dispatch({
+var i = r(570140),
+    a = r(314897),
+    s = r(351780),
+    o = r(843693),
+    l = r(112606);
+function u(e) {
+    i.Z.dispatch({
         type: 'POGGERMODE_SETTINGS_UPDATE',
         settings: e
     });
-    let t = {
-        ...a.Z.getState(),
+    let n = {
+        ...s.Z.getState(),
         ...e
     };
-    (0, o.Z)(t);
+    (0, l.Z)(n);
 }
-function u(e) {
-    r.Z.dispatch({
+function c(e) {
+    i.Z.dispatch({
         type: 'POGGERMODE_UPDATE_COMBO',
         ...e
     });
 }
-function c(e) {
-    r.Z.dispatch({
+function d(e) {
+    i.Z.dispatch({
         type: 'POGGERMODE_UPDATE_MESSAGE_COMBO',
         comboMessage: {
             ...e,
@@ -43,26 +43,26 @@ function c(e) {
         }
     });
 }
-function d(e, t) {
-    var n;
-    let a = i.default.getId(),
-        o = s.ZP.getUserCombo(a, e);
-    null != o &&
-        r.Z.dispatch({
+function f(e, n) {
+    var r;
+    let s = a.default.getId(),
+        l = o.ZP.getUserCombo(s, e);
+    null != l &&
+        i.Z.dispatch({
             type: 'POGGERMODE_UPDATE_MESSAGE_COMBO',
             comboMessage: {
-                combo: o,
+                combo: l,
                 channelId: e,
-                messageId: t,
+                messageId: n,
                 displayed: !1
             }
         });
-    let l = null != o && (null == o ? void 0 : o.value) > 0 ? (null !== (n = null == o ? void 0 : o.multiplier) && void 0 !== n ? n : 0) + 1 : 1;
-    r.Z.dispatch({
+    let u = null != l && (null == l ? void 0 : l.value) > 0 ? (null !== (r = null == l ? void 0 : l.multiplier) && void 0 !== r ? r : 0) + 1 : 1;
+    i.Z.dispatch({
         type: 'POGGERMODE_UPDATE_COMBO',
         channelId: e,
-        userId: a,
-        multiplier: l,
+        userId: s,
+        multiplier: u,
         value: 0
     });
 }

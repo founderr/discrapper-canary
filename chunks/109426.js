@@ -1,26 +1,26 @@
-(t['des-ecb'] = {
+(n['des-ecb'] = {
     key: 8,
     iv: 0
 }),
-    (t['des-cbc'] = t.des =
+    (n['des-cbc'] = n.des =
         {
             key: 8,
             iv: 8
         }),
-    (t['des-ede3-cbc'] = t.des3 =
+    (n['des-ede3-cbc'] = n.des3 =
         {
             key: 24,
             iv: 8
         }),
-    (t['des-ede3'] = {
+    (n['des-ede3'] = {
         key: 24,
         iv: 0
     }),
-    (t['des-ede-cbc'] = {
+    (n['des-ede-cbc'] = {
         key: 16,
         iv: 8
     }),
-    (t['des-ede'] = {
+    (n['des-ede'] = {
         key: 16,
         iv: 0
     });

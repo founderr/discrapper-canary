@@ -1,7 +1,7 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = { longPressMessage: 'Druk lang op Alt + pijl-omlaag of druk op Alt om het menu te openen' };
+var i = {};
+i = { longPressMessage: 'Druk lang op Alt + pijl-omlaag of druk op Alt om het menu te openen' };

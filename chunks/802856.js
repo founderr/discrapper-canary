@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(701488),
-    i = n(981631);
-function a(e) {
-    return (null == e ? void 0 : e.application_id) === r.Ev || (null == e ? void 0 : e.platform) === i.M7m.XBOX;
+var i = r(701488),
+    a = r(981631);
+function s(e) {
+    return (null == e ? void 0 : e.application_id) === i.Ev || (null == e ? void 0 : e.platform) === a.M7m.XBOX;
 }

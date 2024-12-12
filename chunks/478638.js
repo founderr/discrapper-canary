@@ -1,28 +1,28 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     buttonLabel: `Rodyti pasi\u{16B}lymus`,
-    countAnnouncement: (e, t) =>
-        `Yra ${t.plural(e.optionCount, {
-            one: () => `${t.number(e.optionCount)} parinktis`,
-            other: () => `${t.number(e.optionCount)} parinktys (-i\u{173})`
+    countAnnouncement: (e, n) =>
+        `Yra ${n.plural(e.optionCount, {
+            one: () => `${n.number(e.optionCount)} parinktis`,
+            other: () => `${n.number(e.optionCount)} parinktys (-i\u{173})`
         })}.`,
-    focusAnnouncement: (e, t) =>
-        `${t.select(
+    focusAnnouncement: (e, n) =>
+        `${n.select(
             {
                 true: () =>
-                    `\u{12E}vesta grup\u{117} ${e.groupTitle}, su ${t.plural(e.groupCount, {
-                        one: () => `${t.number(e.groupCount)} parinktimi`,
-                        other: () => `${t.number(e.groupCount)} parinktimis (-i\u{173})`
+                    `\u{12E}vesta grup\u{117} ${e.groupTitle}, su ${n.plural(e.groupCount, {
+                        one: () => `${n.number(e.groupCount)} parinktimi`,
+                        other: () => `${n.number(e.groupCount)} parinktimis (-i\u{173})`
                     })}. `,
                 other: ''
             },
             e.isGroupChange
-        )}${e.optionText}${t.select(
+        )}${e.optionText}${n.select(
             {
                 true: ', pasirinkta',
                 other: ''

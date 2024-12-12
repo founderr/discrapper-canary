@@ -1,43 +1,43 @@
-n.d(t, {
+r.d(n, {
     H: function () {
-        return s;
+        return u;
     },
     j: function () {
-        return a;
+        return l;
     }
-}),
-    n(47120),
-    n(653041);
-var r = n(392711),
-    i = n.n(r);
-function a(e) {
-    let t = (e, t) => e.subscriptionPlanId === t.subscriptionPlanId && e.subscriptionPlanPrice === t.subscriptionPlanPrice && e.amount === t.amount && i().isEqual(e.discounts, t.discounts),
-        n = [],
-        r = new Set();
+});
+var i = r(47120);
+var a = r(653041);
+var s = r(392711),
+    o = r.n(s);
+function l(e) {
+    let n = (e, n) => e.subscriptionPlanId === n.subscriptionPlanId && e.subscriptionPlanPrice === n.subscriptionPlanPrice && e.amount === n.amount && o().isEqual(e.discounts, n.discounts),
+        r = [],
+        i = new Set();
     return (
         e.map((e) => {
-            for (let i of n)
-                if (t(i, e)) {
-                    r.add(i.subscriptionPlanId), (i.quantity += e.quantity);
+            for (let a of r)
+                if (n(a, e)) {
+                    i.add(a.subscriptionPlanId), (a.quantity += e.quantity);
                     return;
                 }
-            n.push({ ...e });
+            r.push({ ...e });
         }),
-        n.map((e) => {
-            let t = { ...e };
+        r.map((e) => {
+            let n = { ...e };
             return (
-                r.has(e.subscriptionPlanId) &&
-                    ((t.amount = t.amount * t.quantity),
-                    (t.discounts = t.discounts.map((e) => ({
+                i.has(e.subscriptionPlanId) &&
+                    ((n.amount = n.amount * n.quantity),
+                    (n.discounts = n.discounts.map((e) => ({
                         ...e,
-                        amount: e.amount * t.quantity
+                        amount: e.amount * n.quantity
                     })))),
-                t
+                n
             );
         })
     );
 }
-function s(e) {
+function u(e) {
     return {
         id: e.id,
         subscriptionPlanId: e.subscription_plan_id,

@@ -1,13 +1,13 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var r = n(192379),
-    i = n(667397);
-let a = [];
-function s(e, t) {
-    let n = (0, r.useRef)(),
-        s = (0, r.useRef)(a);
-    return s.current === a ? ((n.current = e()), (s.current = t)) : !(0, i.Z)(t, s.current) && ((n.current = e()), (s.current = t)), n.current;
+var i = r(192379),
+    a = r(667397);
+let s = [];
+function o(e, n) {
+    let r = (0, i.useRef)(),
+        o = (0, i.useRef)(s);
+    return o.current === s ? ((r.current = e()), (o.current = n)) : !(0, a.Z)(n, o.current) && ((r.current = e()), (o.current = n)), r.current;
 }

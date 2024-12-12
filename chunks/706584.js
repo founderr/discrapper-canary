@@ -1,6 +1,6 @@
-(t.encrypt = function (e, t) {
-    return e._cipher.encryptBlock(t);
+(n.encrypt = function (e, n) {
+    return e._cipher.encryptBlock(n);
 }),
-    (t.decrypt = function (e, t) {
-        return e._cipher.decryptBlock(t);
+    (n.decrypt = function (e, n) {
+        return e._cipher.decryptBlock(n);
     });

@@ -1,32 +1,32 @@
-n.d(t, {
+r.d(n, {
     R: function () {
-        return l;
+        return c;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(442837),
-    s = n(481060),
-    o = n(607070);
-function l(e) {
-    let { animationData: t, className: n } = e,
-        [l, u] = (0, i.useState)(0),
-        c = (0, a.e7)([o.Z], () => o.Z.useReducedMotion);
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(442837),
+    l = r(481060),
+    u = r(607070);
+function c(e) {
+    let { animationData: n, className: r } = e,
+        [i, c] = (0, s.useState)(0),
+        d = (0, o.e7)([u.Z], () => u.Z.useReducedMotion);
     return (
-        (0, i.useEffect)(() => {
-            let e = l + 1;
-            e < t.length && t[e]();
-        }, [l, t]),
-        (0, r.jsx)(s.LottieAnimation, {
-            importData: t[l],
-            className: n,
-            shouldAnimate: !c,
-            versionKey: l,
+        (0, s.useEffect)(() => {
+            let e = i + 1;
+            e < n.length && n[e]();
+        }, [i, n]),
+        (0, a.jsx)(l.LottieAnimation, {
+            importData: n[i],
+            className: r,
+            shouldAnimate: !d,
+            versionKey: i,
             onComplete: () => {
-                l < t.length - 1 && u(l + 1);
+                i < n.length - 1 && c(i + 1);
             },
-            loop: l === t.length - 1
+            loop: i === n.length - 1
         })
     );
 }

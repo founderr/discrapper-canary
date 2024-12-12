@@ -1,33 +1,33 @@
-n.d(t, {
+r.d(n, {
     Gk: function () {
-        return o;
+        return l;
     },
     Ni: function () {
-        return s;
+        return o;
     },
     PV: function () {
-        return a;
+        return s;
     },
     d$: function () {
-        return i;
+        return a;
     }
 });
-var r = n(570140);
-function i() {
-    r.Z.dispatch({ type: 'FRIENDS_LIST_GIFT_INTENTS_SHOWN' });
+var i = r(570140);
+function a() {
+    i.Z.dispatch({ type: 'FRIENDS_LIST_GIFT_INTENTS_SHOWN' });
 }
-function a(e) {
-    r.Z.dispatch({
+function s(e) {
+    i.Z.dispatch({
         type: 'MESSAGE_GIFT_INTENT_SHOWN',
         recipientUserId: e
     });
 }
-function s(e) {
-    r.Z.dispatch({
+function o(e) {
+    i.Z.dispatch({
         type: 'GIFT_INTENT_FLOW_PURCHASED_GIFT',
         recipientUserId: e
     });
 }
-function o() {
-    r.Z.dispatch({ type: 'FRIENDS_TAB_BADGE_DISMISS' });
+function l() {
+    i.Z.dispatch({ type: 'FRIENDS_TAB_BADGE_DISMISS' });
 }

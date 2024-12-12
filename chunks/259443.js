@@ -1,85 +1,85 @@
-n.d(t, {
+r.d(n, {
     Bl: function () {
-        return l;
+        return c;
     },
     Yd: function () {
-        return u;
+        return d;
     },
     _n: function () {
-        return s;
+        return l;
     }
-}),
-    n(47120);
-var r = n(247071);
-function i(e, t, n) {
+});
+var i = r(47120);
+var a = r(247071);
+function s(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
-}
-let a = () => {};
-function s(e) {
-    a = e;
 }
 let o = () => {};
 function l(e) {
     o = e;
 }
-class u {
+let u = () => {};
+function c(e) {
+    u = e;
+}
+class d {
     enableNativeLogger(e) {
         this.nativeLoggerEnabled = e;
     }
     constructor(e = 'default') {
-        var t = this;
-        i(this, 'name', void 0),
-            i(this, 'nativeLoggerEnabled', void 0),
-            i(this, 'logDangerously', function (e) {
-                for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++) r[i - 1] = arguments[i];
-                a(t.name, 'log', e, ...r), t.nativeLoggerEnabled && (null == o || o(t.name, 'log', e, ...r));
+        var n = this;
+        s(this, 'name', void 0),
+            s(this, 'nativeLoggerEnabled', void 0),
+            s(this, 'logDangerously', function (e) {
+                for (var r = arguments.length, i = Array(r > 1 ? r - 1 : 0), a = 1; a < r; a++) i[a - 1] = arguments[a];
+                o(n.name, 'log', e, ...i), n.nativeLoggerEnabled && (null == u || u(n.name, 'log', e, ...i));
             }),
-            i(this, 'log', function (e) {
-                for (var n = arguments.length, i = Array(n > 1 ? n - 1 : 0), s = 1; s < n; s++) i[s - 1] = arguments[s];
-                (0, r.c)(e, ...i), a(t.name, 'log', e, ...i), t.nativeLoggerEnabled && (null == o || o(t.name, 'log', e, ...i));
+            s(this, 'log', function (e) {
+                for (var r = arguments.length, i = Array(r > 1 ? r - 1 : 0), s = 1; s < r; s++) i[s - 1] = arguments[s];
+                (0, a.c)(e, ...i), o(n.name, 'log', e, ...i), n.nativeLoggerEnabled && (null == u || u(n.name, 'log', e, ...i));
             }),
-            i(this, 'verboseDangerously', function (e) {
-                for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++) r[i - 1] = arguments[i];
-                a(t.name, 'debug', e, ...r), t.nativeLoggerEnabled && (null == o || o(t.name, 'debug', e, ...r));
+            s(this, 'verboseDangerously', function (e) {
+                for (var r = arguments.length, i = Array(r > 1 ? r - 1 : 0), a = 1; a < r; a++) i[a - 1] = arguments[a];
+                o(n.name, 'debug', e, ...i), n.nativeLoggerEnabled && (null == u || u(n.name, 'debug', e, ...i));
             }),
-            i(this, 'verbose', function (e) {
-                for (var n = arguments.length, i = Array(n > 1 ? n - 1 : 0), s = 1; s < n; s++) i[s - 1] = arguments[s];
-                (0, r.c)(e, ...i), a(t.name, 'debug', e, ...i), t.nativeLoggerEnabled && (null == o || o(t.name, 'debug', e, ...i));
+            s(this, 'verbose', function (e) {
+                for (var r = arguments.length, i = Array(r > 1 ? r - 1 : 0), s = 1; s < r; s++) i[s - 1] = arguments[s];
+                (0, a.c)(e, ...i), o(n.name, 'debug', e, ...i), n.nativeLoggerEnabled && (null == u || u(n.name, 'debug', e, ...i));
             }),
-            i(this, 'info', function (e) {
-                for (var n = arguments.length, i = Array(n > 1 ? n - 1 : 0), s = 1; s < n; s++) i[s - 1] = arguments[s];
-                (0, r.c)(e, ...i), a(t.name, 'info', e, ...i), t.nativeLoggerEnabled && (null == o || o(t.name, 'info', e, ...i));
+            s(this, 'info', function (e) {
+                for (var r = arguments.length, i = Array(r > 1 ? r - 1 : 0), s = 1; s < r; s++) i[s - 1] = arguments[s];
+                (0, a.c)(e, ...i), o(n.name, 'info', e, ...i), n.nativeLoggerEnabled && (null == u || u(n.name, 'info', e, ...i));
             }),
-            i(this, 'warn', function (e) {
-                for (var n = arguments.length, i = Array(n > 1 ? n - 1 : 0), s = 1; s < n; s++) i[s - 1] = arguments[s];
-                (0, r.c)(e, ...i), a(t.name, 'warn', e, ...i), t.nativeLoggerEnabled && (null == o || o(t.name, 'warn', e, ...i));
+            s(this, 'warn', function (e) {
+                for (var r = arguments.length, i = Array(r > 1 ? r - 1 : 0), s = 1; s < r; s++) i[s - 1] = arguments[s];
+                (0, a.c)(e, ...i), o(n.name, 'warn', e, ...i), n.nativeLoggerEnabled && (null == u || u(n.name, 'warn', e, ...i));
             }),
-            i(this, 'error', function (e) {
-                for (var n = arguments.length, i = Array(n > 1 ? n - 1 : 0), s = 1; s < n; s++) i[s - 1] = arguments[s];
-                (0, r.c)(e, ...i), a(t.name, 'error', e, ...i), t.nativeLoggerEnabled && (null == o || o(t.name, 'error', e, ...i));
+            s(this, 'error', function (e) {
+                for (var r = arguments.length, i = Array(r > 1 ? r - 1 : 0), s = 1; s < r; s++) i[s - 1] = arguments[s];
+                (0, a.c)(e, ...i), o(n.name, 'error', e, ...i), n.nativeLoggerEnabled && (null == u || u(n.name, 'error', e, ...i));
             }),
-            i(this, 'trace', function (e) {
-                for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++) r[i - 1] = arguments[i];
-                a(t.name, 'trace', e, ...r), t.nativeLoggerEnabled && (null == o || o(t.name, 'trace', e, ...r));
+            s(this, 'trace', function (e) {
+                for (var r = arguments.length, i = Array(r > 1 ? r - 1 : 0), a = 1; a < r; a++) i[a - 1] = arguments[a];
+                o(n.name, 'trace', e, ...i), n.nativeLoggerEnabled && (null == u || u(n.name, 'trace', e, ...i));
             }),
-            i(this, 'time', (e, t) => {
-                let n = Date.now(),
-                    r = t();
-                return this.log(e, Date.now() - n), r;
+            s(this, 'time', (e, n) => {
+                let r = Date.now(),
+                    i = n();
+                return this.log(e, Date.now() - r), i;
             }),
-            i(this, 'fileOnly', function (e) {
-                for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++) r[i - 1] = arguments[i];
-                a(t.name, 'file-only', e, ...r), t.nativeLoggerEnabled && (null == o || o(t.name, 'file-only', e, ...r));
+            s(this, 'fileOnly', function (e) {
+                for (var r = arguments.length, i = Array(r > 1 ? r - 1 : 0), a = 1; a < r; a++) i[a - 1] = arguments[a];
+                o(n.name, 'file-only', e, ...i), n.nativeLoggerEnabled && (null == u || u(n.name, 'file-only', e, ...i));
             }),
             (this.name = e),
             (this.nativeLoggerEnabled = !1);

@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     calendar: 'Calendrier',
     day: 'jour',
     dayPeriod: 'cadran',

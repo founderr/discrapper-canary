@@ -1,6 +1,6 @@
-var r = n(660401),
-    i = n(741373),
-    a = n(141327),
-    s = a.Z && a.Z.isTypedArray,
-    o = s ? (0, i.Z)(s) : r.Z;
-t.Z = o;
+var i = r(660401),
+    a = r(741373),
+    s = r(141327),
+    o = s.Z && s.Z.isTypedArray,
+    l = o ? (0, a.Z)(o) : i.Z;
+n.Z = l;

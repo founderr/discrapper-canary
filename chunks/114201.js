@@ -1,153 +1,153 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return I;
+        return y;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(99815),
-    a = n(442837),
-    s = n(481060),
-    o = n(239091),
-    l = n(314897),
-    u = n(553795),
-    c = n(430824),
-    d = n(496675),
-    f = n(626135),
-    _ = n(70956),
-    p = n(425128),
-    h = n(979192),
-    m = n(703733),
-    g = n(981631),
-    E = n(388032),
-    v = n(234032);
-function I(e) {
-    let { guildId: t, leaderboardId: I } = e,
-        T = (0, a.e7)([l.default], () => l.default.getId()),
-        b = (0, a.e7)([u.Z], () => u.Z.getAccount(null, g.ABu.RIOT_GAMES)),
-        S = (0, a.e7)([u.Z], () => u.Z.getAccount(null, g.ABu.LEAGUE_OF_LEGENDS)),
-        { leaderboardsDisabled: y } = (0, h.O)(t, I),
-        A =
-            null != S && null != b
+var i = r(200651);
+r(192379);
+var a = r(99815),
+    s = r(442837),
+    o = r(481060),
+    l = r(239091),
+    u = r(314897),
+    c = r(553795),
+    d = r(430824),
+    f = r(496675),
+    _ = r(626135),
+    h = r(70956),
+    p = r(425128),
+    m = r(979192),
+    g = r(703733),
+    E = r(981631),
+    v = r(388032),
+    I = r(234032);
+function T(e) {
+    if (e > h.Z.Seconds.DAYS_30) {
+        let n = Math.round(e / h.Z.Seconds.DAYS_30);
+        return v.intl.formatToPlainString(v.t['HF7p4+'], { count: n });
+    }
+    if (e > 2 * h.Z.Seconds.DAY) {
+        let n = Math.round(e / h.Z.Seconds.DAY);
+        return v.intl.formatToPlainString(v.t.HkESOj, { count: n });
+    }
+    if (e > h.Z.Seconds.DAY) return v.intl.string(v.t.gvgh9P);
+    else if (e > h.Z.Seconds.HOUR) {
+        let n = Math.round(e / h.Z.Seconds.HOUR);
+        return v.intl.formatToPlainString(v.t.mW55WV, { count: n });
+    } else {
+        if (!(e > h.Z.Seconds.MINUTE)) return v.intl.string(v.t.tT0mdn);
+        let n = Math.round(e / h.Z.Seconds.MINUTE);
+        return v.intl.formatToPlainString(v.t['1mNjX1'], { count: n });
+    }
+}
+function b(e, n) {
+    if (null == e)
+        return {
+            disabled: !1,
+            subtext: void 0
+        };
+    let r = (Date.now() - e.getTime()) / h.Z.Millis.SECOND;
+    if (r < 0)
+        return {
+            disabled: !1,
+            subtext: void 0
+        };
+    let i = null != n ? e.getTime() > n.getTime() && r < h.Z.Seconds.HOUR : r < h.Z.Seconds.HOUR,
+        a = i ? v.intl.string(v.t['3gPhoa']) : T(r);
+    return {
+        disabled: i,
+        subtext: a
+    };
+}
+function y(e) {
+    let { guildId: n, leaderboardId: h } = e,
+        T = (0, s.e7)([u.default], () => u.default.getId()),
+        y = (0, s.e7)([c.Z], () => c.Z.getAccount(null, E.ABu.RIOT_GAMES)),
+        S = (0, s.e7)([c.Z], () => c.Z.getAccount(null, E.ABu.LEAGUE_OF_LEGENDS)),
+        { leaderboardsDisabled: A } = (0, m.O)(n, h),
+        N =
+            null != S && null != y
                 ? () => {
-                      f.default.track(g.rMx.LEADERBOARD_USER_DATA_REFRESH_REQUESTED, {
-                          leaderboard_id: I,
-                          guild_id: t
+                      _.default.track(E.rMx.LEADERBOARD_USER_DATA_REFRESH_REQUESTED, {
+                          leaderboard_id: h,
+                          guild_id: n
                       }),
                           (0, p._7)({
-                              riotConnectionId: b.id,
+                              riotConnectionId: y.id,
                               lolConnectionId: S.id
                           });
                   }
-                : g.dG4,
-        N = null == b || y ? E.intl.string(E.t['0yRXHx']) : E.intl.string(E.t['KWpU6+']),
-        { lastUpdateRequested: C, statisticLastUpdatedDate: R } = (0, m.Z)({
+                : E.dG4,
+        C = null == y || A ? v.intl.string(v.t['0yRXHx']) : v.intl.string(v.t['KWpU6+']),
+        { lastUpdateRequested: R, statisticLastUpdatedDate: O } = (0, g.Z)({
             userId: T,
-            guildId: t,
-            leaderboardId: I,
-            statisticId: i.E.LOL_TOTAL_KILLS
+            guildId: n,
+            leaderboardId: h,
+            statisticId: a.E.LOL_TOTAL_KILLS
         }),
-        { disabled: O, subtext: D } = (function (e, t) {
-            if (null == e)
-                return {
-                    disabled: !1,
-                    subtext: void 0
-                };
-            let n = (Date.now() - e.getTime()) / _.Z.Millis.SECOND;
-            if (n < 0)
-                return {
-                    disabled: !1,
-                    subtext: void 0
-                };
-            let r = null != t ? e.getTime() > t.getTime() && n < _.Z.Seconds.HOUR : n < _.Z.Seconds.HOUR,
-                i = r
-                    ? E.intl.string(E.t['3gPhoa'])
-                    : (function (e) {
-                          if (e > _.Z.Seconds.DAYS_30) {
-                              let t = Math.round(e / _.Z.Seconds.DAYS_30);
-                              return E.intl.formatToPlainString(E.t['HF7p4+'], { count: t });
-                          }
-                          if (e > 2 * _.Z.Seconds.DAY) {
-                              let t = Math.round(e / _.Z.Seconds.DAY);
-                              return E.intl.formatToPlainString(E.t.HkESOj, { count: t });
-                          }
-                          if (e > _.Z.Seconds.DAY) return E.intl.string(E.t.gvgh9P);
-                          else if (e > _.Z.Seconds.HOUR) {
-                              let t = Math.round(e / _.Z.Seconds.HOUR);
-                              return E.intl.formatToPlainString(E.t.mW55WV, { count: t });
-                          } else {
-                              if (!(e > _.Z.Seconds.MINUTE)) return E.intl.string(E.t.tT0mdn);
-                              let t = Math.round(e / _.Z.Seconds.MINUTE);
-                              return E.intl.formatToPlainString(E.t['1mNjX1'], { count: t });
-                          }
-                      })(n);
-            return {
-                disabled: r,
-                subtext: i
-            };
-        })(C, R),
-        L = (0, a.e7)(
-            [d.Z, c.Z],
+        { disabled: D, subtext: L } = b(R, O),
+        x = (0, s.e7)(
+            [f.Z, d.Z],
             () => {
-                let e = c.Z.getGuild(t);
-                return d.Z.can(g.Plq.ADMINISTRATOR, e);
+                let e = d.Z.getGuild(n);
+                return f.Z.can(E.Plq.ADMINISTRATOR, e);
             },
-            [t]
+            [n]
         );
-    return (0, r.jsx)(s.Popout, {
+    return (0, i.jsx)(o.Popout, {
         align: 'top',
         position: 'right',
         disablePointerEvents: !1,
         renderPopout: (e) => {
-            let { closePopout: i } = e;
-            return (0, r.jsx)(s.Menu, {
+            let { closePopout: a } = e;
+            return (0, i.jsx)(o.Menu, {
                 navId: 'leaderboard-popout-context-menu',
                 onClose: () => {
-                    (0, o.Zy)(), i();
+                    (0, l.Zy)(), a();
                 },
-                'aria-label': E.intl.string(E.t.BjCuf3),
+                'aria-label': v.intl.string(v.t.BjCuf3),
                 onSelect: void 0,
-                children: (0, r.jsx)(r.Fragment, {
-                    children: (0, r.jsxs)(s.MenuGroup, {
+                children: (0, i.jsx)(i.Fragment, {
+                    children: (0, i.jsxs)(o.MenuGroup, {
                         children: [
-                            null != b &&
-                                (0, r.jsx)(s.MenuItem, {
+                            null != y &&
+                                (0, i.jsx)(o.MenuItem, {
                                     id: 'refresh-my-data',
-                                    label: E.intl.string(E.t.iopWUV),
-                                    action: A,
-                                    disabled: O,
-                                    subtext: D
+                                    label: v.intl.string(v.t.iopWUV),
+                                    action: N,
+                                    disabled: D,
+                                    subtext: L
                                 }),
-                            (0, r.jsx)(s.MenuItem, {
+                            (0, i.jsx)(o.MenuItem, {
                                 id: 'leaderboard-modal',
-                                label: N,
+                                label: C,
                                 action: () => {
-                                    (0, s.openModalLazy)(async () => {
-                                        let { default: e } = await n.e('73217').then(n.bind(n, 139964));
-                                        return (n) =>
-                                            (0, r.jsx)(e, {
-                                                ...n,
-                                                guildId: t
+                                    (0, o.openModalLazy)(async () => {
+                                        let { default: e } = await r.e('73217').then(r.bind(r, 139964));
+                                        return (r) =>
+                                            (0, i.jsx)(e, {
+                                                ...r,
+                                                guildId: n
                                             });
                                     }),
-                                        null == i || i();
+                                        null == a || a();
                                 }
                             }),
-                            L
-                                ? (0, r.jsx)(s.MenuItem, {
+                            x
+                                ? (0, i.jsx)(o.MenuItem, {
                                       id: 'leaderboard-settings-modal',
-                                      label: E.intl.string(E.t['QV4/6u']),
+                                      label: v.intl.string(v.t['QV4/6u']),
                                       action: () => {
-                                          (0, s.openModalLazy)(async () => {
-                                              let { default: e } = await n.e('25526').then(n.bind(n, 262918));
-                                              return (n) =>
-                                                  (0, r.jsx)(e, {
-                                                      ...n,
-                                                      guildId: t,
-                                                      leaderboardId: I
+                                          (0, o.openModalLazy)(async () => {
+                                              let { default: e } = await r.e('25526').then(r.bind(r, 262918));
+                                              return (r) =>
+                                                  (0, i.jsx)(e, {
+                                                      ...r,
+                                                      guildId: n,
+                                                      leaderboardId: h
                                                   });
                                           }),
-                                              null == i || i();
+                                              null == a || a();
                                       }
                                   })
                                 : null
@@ -157,14 +157,14 @@ function I(e) {
             });
         },
         children: (e) =>
-            (0, r.jsx)(s.Tooltip, {
-                text: E.intl.string(E.t.UKOtz8),
-                children: (t) =>
-                    (0, r.jsx)(s.Clickable, {
-                        ...t,
-                        className: v.menuIcon,
+            (0, i.jsx)(o.Tooltip, {
+                text: v.intl.string(v.t.UKOtz8),
+                children: (n) =>
+                    (0, i.jsx)(o.Clickable, {
+                        ...n,
+                        className: I.menuIcon,
                         ...e,
-                        children: (0, r.jsx)(s.MoreHorizontalIcon, {
+                        children: (0, i.jsx)(o.MoreHorizontalIcon, {
                             color: 'currentColor',
                             size: 'custom',
                             width: 16,

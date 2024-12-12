@@ -1,28 +1,28 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     buttonLabel: `Wy\u{15B}wietlaj sugestie`,
-    countAnnouncement: (e, t) =>
-        `dost\u{119}pna/dost\u{119}pne(-nych) ${t.plural(e.optionCount, {
-            one: () => `${t.number(e.optionCount)} opcja`,
-            other: () => `${t.number(e.optionCount)} opcje(-i)`
+    countAnnouncement: (e, n) =>
+        `dost\u{119}pna/dost\u{119}pne(-nych) ${n.plural(e.optionCount, {
+            one: () => `${n.number(e.optionCount)} opcja`,
+            other: () => `${n.number(e.optionCount)} opcje(-i)`
         })}.`,
-    focusAnnouncement: (e, t) =>
-        `${t.select(
+    focusAnnouncement: (e, n) =>
+        `${n.select(
             {
                 true: () =>
-                    `Do\u{142}\u{105}czono do grupy ${e.groupTitle}, z ${t.plural(e.groupCount, {
-                        one: () => `${t.number(e.groupCount)} opcj\u{105}`,
-                        other: () => `${t.number(e.groupCount)} opcjami`
+                    `Do\u{142}\u{105}czono do grupy ${e.groupTitle}, z ${n.plural(e.groupCount, {
+                        one: () => `${n.number(e.groupCount)} opcj\u{105}`,
+                        other: () => `${n.number(e.groupCount)} opcjami`
                     })}. `,
                 other: ''
             },
             e.isGroupChange
-        )}${e.optionText}${t.select(
+        )}${e.optionText}${n.select(
             {
                 true: ', wybrano',
                 other: ''

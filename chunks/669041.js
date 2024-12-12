@@ -1,131 +1,131 @@
-n.r(t),
-    n.d(t, {
+r.r(n),
+    r.d(n, {
         QuestsRewardModalUnverified: function () {
-            return _;
+            return p;
         },
         openRewardModalUnverified: function () {
-            return p;
+            return m;
         }
-    }),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(442837),
-    s = n(481060),
-    o = n(893776),
-    l = n(594174),
-    u = n(918701),
-    c = n(388032),
-    d = n(162023),
-    f = n(800010);
-function _(e) {
-    let { transitionState: t, onClose: n } = e,
-        _ = (0, a.e7)([l.default], () => {
+    });
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(442837),
+    l = r(481060),
+    u = r(893776),
+    c = r(594174),
+    d = r(918701),
+    f = r(388032),
+    _ = r(162023),
+    h = r(800010);
+function p(e) {
+    let { transitionState: n, onClose: r } = e,
+        i = (0, o.e7)([c.default], () => {
             var e;
-            return null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.email;
+            return null === (e = c.default.getCurrentUser()) || void 0 === e ? void 0 : e.email;
         }),
-        [p, h] = i.useState({ status: 'unknown' });
-    i.useEffect(() => {
-        h({ status: 'loading' }),
-            o.Z.verifyResend().then(
-                () => h({ status: 'success' }),
+        [p, m] = s.useState({ status: 'unknown' });
+    s.useEffect(() => {
+        m({ status: 'loading' }),
+            u.Z.verifyResend().then(
+                () => m({ status: 'success' }),
                 (e) => {
-                    h({ status: 'error' }), (0, u.ys)(e, { tags: { location: 'QuestsRewardModalUnverified' } });
+                    m({ status: 'error' }), (0, d.ys)(e, { tags: { location: 'QuestsRewardModalUnverified' } });
                 }
             );
     }, []);
-    let m = () =>
-        (0, r.jsx)(s.ModalFooter, {
-            className: d.modalFooter,
-            children: (0, r.jsx)(s.Button, {
-                color: s.Button.Colors.BRAND,
-                size: s.Button.Sizes.MEDIUM,
-                onClick: n,
-                children: c.intl.string(c.t.cpT0Cg)
+    let g = () =>
+        (0, a.jsx)(l.ModalFooter, {
+            className: _.modalFooter,
+            children: (0, a.jsx)(l.Button, {
+                color: l.Button.Colors.BRAND,
+                size: l.Button.Sizes.MEDIUM,
+                onClick: r,
+                children: f.intl.string(f.t.cpT0Cg)
             })
         });
-    return (0, r.jsxs)(s.ModalRoot, {
-        transitionState: t,
+    return (0, a.jsxs)(l.ModalRoot, {
+        transitionState: n,
         disableTrack: !0,
         children: [
-            (0, r.jsx)('img', {
+            (0, a.jsx)('img', {
                 alt: '',
-                className: d.headerImage,
-                src: f
+                className: _.headerImage,
+                src: h
             }),
-            (0, r.jsxs)(s.ModalHeader, {
+            (0, a.jsxs)(l.ModalHeader, {
                 separator: !1,
-                className: d.header,
+                className: _.header,
                 children: [
-                    (0, r.jsx)(s.Heading, {
-                        className: d.title,
+                    (0, a.jsx)(l.Heading, {
+                        className: _.title,
                         variant: 'heading-xl/bold',
-                        children: c.intl.string(c.t.c8eASE)
+                        children: f.intl.string(f.t.c8eASE)
                     }),
-                    (0, r.jsx)(s.ModalCloseButton, {
-                        onClick: n,
-                        className: d.modalCloseButton
+                    (0, a.jsx)(l.ModalCloseButton, {
+                        onClick: r,
+                        className: _.modalCloseButton
                     })
                 ]
             }),
             'loading' === p.status &&
-                (0, r.jsx)(s.ModalContent, {
-                    className: d.content,
-                    children: (0, r.jsx)(s.Spinner, {})
+                (0, a.jsx)(l.ModalContent, {
+                    className: _.content,
+                    children: (0, a.jsx)(l.Spinner, {})
                 }),
             'error' === p.status &&
-                (0, r.jsxs)(r.Fragment, {
+                (0, a.jsxs)(a.Fragment, {
                     children: [
-                        (0, r.jsx)(s.ModalContent, {
-                            className: d.content,
-                            children: (0, r.jsx)(s.Text, {
+                        (0, a.jsx)(l.ModalContent, {
+                            className: _.content,
+                            children: (0, a.jsx)(l.Text, {
                                 variant: 'text-md/normal',
-                                children: c.intl.string(c.t.vjyinp)
+                                children: f.intl.string(f.t.vjyinp)
                             })
                         }),
-                        m()
+                        g()
                     ]
                 }),
             'success' === p.status &&
-                (0, r.jsxs)(r.Fragment, {
+                (0, a.jsxs)(a.Fragment, {
                     children: [
-                        (0, r.jsx)(s.ModalContent, {
-                            className: d.content,
-                            children: (0, r.jsx)(s.Text, {
+                        (0, a.jsx)(l.ModalContent, {
+                            className: _.content,
+                            children: (0, a.jsx)(l.Text, {
                                 variant: 'text-md/normal',
-                                children: c.intl.format(c.t.qP5xYW, {
-                                    emailAddress: _,
-                                    emailAddressLink: 'mailto:'.concat(_)
+                                children: f.intl.format(f.t.qP5xYW, {
+                                    emailAddress: i,
+                                    emailAddressLink: 'mailto:'.concat(i)
                                 })
                             })
                         }),
-                        (0, r.jsx)(s.ModalContent, {
-                            className: d.content,
-                            children: (0, r.jsxs)('div', {
-                                className: d.tooltip,
+                        (0, a.jsx)(l.ModalContent, {
+                            className: _.content,
+                            children: (0, a.jsxs)('div', {
+                                className: _.tooltip,
                                 children: [
-                                    (0, r.jsx)(s.CircleInformationIcon, {
+                                    (0, a.jsx)(l.CircleInformationIcon, {
                                         size: 'xs',
                                         color: 'currentColor',
-                                        className: d.infoFilledIcon
+                                        className: _.infoFilledIcon
                                     }),
-                                    (0, r.jsx)(s.Text, {
-                                        className: d.tooltipText,
+                                    (0, a.jsx)(l.Text, {
+                                        className: _.tooltipText,
                                         variant: 'text-sm/normal',
-                                        children: c.intl.string(c.t.yb7itb)
+                                        children: f.intl.string(f.t.yb7itb)
                                     })
                                 ]
                             })
                         }),
-                        m()
+                        g()
                     ]
                 })
         ]
     });
 }
-function p() {
-    (0, s.openModalLazy)(async () => {
-        let { QuestsRewardModalUnverified: e } = await Promise.resolve().then(n.bind(n, 669041));
-        return (t) => (0, r.jsx)(e, { ...t });
+function m() {
+    (0, l.openModalLazy)(async () => {
+        let { QuestsRewardModalUnverified: e } = await Promise.resolve().then(r.bind(r, 669041));
+        return (n) => (0, a.jsx)(e, { ...n });
     });
 }

@@ -1,9 +1,9 @@
-var r = {
+var i = {
     current: function (e) {
-        return n.g.requestAnimationFrame(e);
+        return r.g.requestAnimationFrame(e);
     },
     inject: function (e) {
-        r.current = e;
+        i.current = e;
     }
 };
-e.exports = r;
+e.exports = i;

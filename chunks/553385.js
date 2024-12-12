@@ -1,73 +1,73 @@
-n.d(t, {
+r.d(n, {
     N7: function () {
-        return f;
+        return _;
     },
     XP: function () {
         return p;
     },
     j8: function () {
-        return _;
+        return h;
     },
     z$: function () {
-        return h;
+        return m;
     }
 });
-var r = n(544891),
-    i = n(430742),
-    a = n(904245),
-    s = n(623292),
-    o = n(592125),
-    l = n(703558),
-    u = n(375954),
-    c = n(585483),
-    d = n(981631);
-function f(e) {
-    r.tn.post({
-        url: d.ANM.INITIATE_CHANNEL_PROMPTS,
+var i = r(544891),
+    a = r(430742),
+    s = r(904245),
+    o = r(623292),
+    l = r(592125),
+    u = r(703558),
+    c = r(375954),
+    d = r(585483),
+    f = r(981631);
+function _(e) {
+    i.tn.post({
+        url: f.ANM.INITIATE_CHANNEL_PROMPTS,
         body: { guild_ids: e },
         rejectWithError: !0
     });
 }
-function _(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.uaV.GUILD_DEADCHAT_REVIVE_PROMPT;
-    r.tn.post({
-        url: d.ANM.FORCE_SEND_PROMPT(e),
-        body: { prompt_type: t },
+function h(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f.uaV.GUILD_DEADCHAT_REVIVE_PROMPT;
+    i.tn.post({
+        url: f.ANM.FORCE_SEND_PROMPT(e),
+        body: { prompt_type: n },
         rejectWithError: !0
     });
 }
-async function p(e, t, n) {
-    await r.tn.post({
-        url: d.ANM.SEND_GAMING_STATS(t),
+async function p(e, n, r) {
+    await i.tn.post({
+        url: f.ANM.SEND_GAMING_STATS(n),
         body: {
             message_reference: {
                 guild_id: e,
-                channel_id: t,
-                message_id: n
+                channel_id: n,
+                message_id: r
             }
         },
         rejectWithError: !1
     }),
-        m(t);
+        g(n);
 }
-async function h(e) {
-    let t = await r.tn.patch({
-        url: d.ANM.UPDATE_GAMING_STATS(e.channel_id, e.id),
+async function m(e) {
+    let n = await i.tn.patch({
+        url: f.ANM.UPDATE_GAMING_STATS(e.channel_id, e.id),
         rejectWithError: !1
     });
-    if (null != t.text && '' !== t.text) {
-        let n = o.Z.getChannel(e.channel_id);
-        null != n &&
-            ((0, s.fE)({
-                channel: n,
+    if (null != n.text && '' !== n.text) {
+        let r = l.Z.getChannel(e.channel_id);
+        null != r &&
+            ((0, o.fE)({
+                channel: r,
                 message: e,
                 shouldMention: !1,
                 showMentionToggle: !1
             }),
-            m(n.id)),
-            i.Z.saveDraft(e.channel_id, t.text, l.d.ChannelMessage);
+            g(r.id)),
+            a.Z.saveDraft(e.channel_id, n.text, u.d.ChannelMessage);
     }
 }
-function m(e) {
-    u.Z.getMessages(e).hasMoreAfter ? a.Z.jumpToPresent(e, d.AQB) : c.S.dispatch(d.CkL.SCROLLTO_PRESENT);
+function g(e) {
+    c.Z.getMessages(e).hasMoreAfter ? s.Z.jumpToPresent(e, f.AQB) : d.S.dispatch(f.CkL.SCROLLTO_PRESENT);
 }

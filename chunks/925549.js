@@ -1,47 +1,47 @@
-var r = n(570140);
-t.Z = {
-    updateChannelDimensions(e, t, n, i, a) {
-        r.Z.wait(() => {
-            r.Z.dispatch({
+var i = r(570140);
+n.Z = {
+    updateChannelDimensions(e, n, r, a, s) {
+        i.Z.wait(() => {
+            i.Z.dispatch({
                 type: 'UPDATE_CHANNEL_DIMENSIONS',
                 channelId: e,
-                scrollTop: t,
-                scrollHeight: n,
-                offsetHeight: i
+                scrollTop: n,
+                scrollHeight: r,
+                offsetHeight: a
             }),
-                null != a && a();
+                null != s && s();
         });
     },
-    updateChannelListScroll(e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-        r.Z.dispatch({
+    updateChannelListScroll(e, n) {
+        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+        i.Z.dispatch({
             type: 'UPDATE_CHANNEL_LIST_DIMENSIONS',
             guildId: e,
-            scrollTop: t,
-            channelIds: n
+            scrollTop: n,
+            channelIds: r
         });
     },
-    channelListScrollTo(e, t) {
-        r.Z.dispatch({
+    channelListScrollTo(e, n) {
+        i.Z.dispatch({
             type: 'UPDATE_CHANNEL_LIST_DIMENSIONS',
             guildId: e,
-            scrollTo: t,
+            scrollTo: n,
             channelIds: []
         });
     },
     clearChannelListScrollTo(e) {
-        r.Z.dispatch({
+        i.Z.dispatch({
             type: 'UPDATE_CHANNEL_LIST_DIMENSIONS',
             guildId: e,
             scrollTo: null,
             channelIds: []
         });
     },
-    clearChannelDimensions(e, t) {
-        this.updateChannelDimensions(e, null, null, null, t);
+    clearChannelDimensions(e, n) {
+        this.updateChannelDimensions(e, null, null, null, n);
     },
     updateGuildListScrollTo(e) {
-        r.Z.dispatch({
+        i.Z.dispatch({
             type: 'UPDATE_GUILD_LIST_DIMENSIONS',
             scrollTop: e
         });

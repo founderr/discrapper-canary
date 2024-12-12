@@ -1,43 +1,43 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return c;
+        return f;
     }
-}),
-    n(47120);
-var r = n(192379),
-    i = n(442837),
-    a = n(135869),
-    s = n(763296),
-    o = n(242291),
-    l = n(22382),
-    u = n(747071);
-function c(e, t) {
-    let { currentPreviewRef: n } = r.useContext(a.Z),
-        [c, d] = r.useState(!1),
-        f = (0, i.e7)([s.Z], () => s.Z.isPlayingSound(e.soundId), [e]),
-        _ = r.useCallback(
-            (r) => {
-                null != n.current && n.current.pause(), null != t && (0, o.GN)(e, t, r);
+});
+var i = r(47120);
+var a = r(192379),
+    s = r(442837),
+    o = r(135869),
+    l = r(763296),
+    u = r(242291),
+    c = r(22382),
+    d = r(747071);
+function f(e, n) {
+    let { currentPreviewRef: r } = a.useContext(o.Z),
+        [i, f] = a.useState(!1),
+        _ = (0, s.e7)([l.Z], () => l.Z.isPlayingSound(e.soundId), [e]),
+        h = a.useCallback(
+            (i) => {
+                null != r.current && r.current.pause(), null != n && (0, u.GN)(e, n, i);
             },
-            [e, n, t]
+            [e, r, n]
         ),
-        p = r.useCallback(() => {
-            let t = new Audio((0, l.Z)(e.soundId));
-            null != n.current && n.current.pause(), (n.current = t), (t.currentTime = 0), (t.volume = (0, u.Z)(e.volume)), t.play(), d(!0), t.addEventListener('pause', () => d(!1), { once: !0 });
-        }, [e, n]);
+        p = a.useCallback(() => {
+            let n = new Audio((0, c.Z)(e.soundId));
+            null != r.current && r.current.pause(), (r.current = n), (n.currentTime = 0), (n.volume = (0, d.Z)(e.volume)), n.play(), f(!0), n.addEventListener('pause', () => f(!1), { once: !0 });
+        }, [e, r]);
     return (
-        r.useCallback(
+        a.useCallback(
             () => () => {
                 var e;
-                return null === (e = n.current) || void 0 === e ? void 0 : e.pause();
+                return null === (e = r.current) || void 0 === e ? void 0 : e.pause();
             },
-            [n]
+            [r]
         ),
         {
-            playSoundboardSound: _,
-            isPlayingSound: f,
+            playSoundboardSound: h,
+            isPlayingSound: _,
             previewSound: p,
-            isPreviewingSound: c
+            isPreviewingSound: i
         }
     );
 }

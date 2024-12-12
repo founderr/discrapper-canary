@@ -1,36 +1,36 @@
-n.d(t, {
+r.d(n, {
     j: function () {
-        return o;
+        return l;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(692547),
-    a = n(331595),
-    s = n(267843);
-let o = (e) => {
-    var t, n;
-    let { size: o = 'md', width: l, height: u, color: c = i.Z.colors.INTERACTIVE_NORMAL, colorClass: d = '', ...f } = e,
-        _ = (0, s.m)(o),
-        p = null !== (t = null == _ ? void 0 : _.width) && void 0 !== t ? t : l,
-        h = null !== (n = null == _ ? void 0 : _.height) && void 0 !== n ? n : u;
-    return (0, r.jsxs)('svg', {
-        ...(0, a.Z)(f),
+var i = r(200651);
+r(192379);
+var a = r(692547),
+    s = r(331595),
+    o = r(267843);
+let l = (e) => {
+    var n, r;
+    let { size: l = 'md', width: u, height: c, color: d = a.Z.colors.INTERACTIVE_NORMAL, colorClass: f = '', ..._ } = e,
+        h = (0, o.m)(l),
+        p = null !== (n = null == h ? void 0 : h.width) && void 0 !== n ? n : u,
+        m = null !== (r = null == h ? void 0 : h.height) && void 0 !== r ? r : c;
+    return (0, i.jsxs)('svg', {
+        ...(0, s.Z)(_),
         xmlns: 'http://www.w3.org/2000/svg',
         width: p,
-        height: h,
+        height: m,
         fill: 'none',
         viewBox: '0 0 24 24',
         children: [
-            (0, r.jsx)('path', {
-                fill: 'string' == typeof c ? c : c.css,
+            (0, i.jsx)('path', {
+                fill: 'string' == typeof d ? d : d.css,
                 d: 'M16 4a3 3 0 1 1-5.98-.31c.03-.35-.21-.69-.56-.69H7a3 3 0 0 0-3 3v2.5c0 .28-.23.5-.5.54a3 3 0 0 0 0 5.92c.27.04.5.26.5.54V18a3 3 0 0 0 3 3h4.65c.43 0 .69-.55.54-.95A3 3 0 0 1 15 16h.5a.5.5 0 0 0 .5-.5V15a3 3 0 1 1 6 0V6a3 3 0 0 0-3-3h-2.46c-.35 0-.6.34-.56.69L16 4Z',
-                className: d
+                className: f
             }),
-            (0, r.jsx)('path', {
-                fill: 'string' == typeof c ? c : c.css,
+            (0, i.jsx)('path', {
+                fill: 'string' == typeof d ? d : d.css,
                 d: 'M19 14a1 1 0 0 1 1 1v3h3a1 1 0 0 1 0 2h-3v3a1 1 0 0 1-2 0v-3h-3a1 1 0 1 1 0-2h3v-3a1 1 0 0 1 1-1Z',
-                className: d
+                className: f
             })
         ]
     });

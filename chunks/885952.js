@@ -1,14 +1,14 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = {
+var i = {
     start: 'end',
     end: 'start'
 };
-function i(e) {
+function a(e) {
     return e.replace(/start|end/g, function (e) {
-        return r[e];
+        return i[e];
     });
 }

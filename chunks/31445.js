@@ -1,27 +1,27 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return o;
     },
     t: function () {
-        return o;
+        return l;
     }
 });
-var r = n(442837),
-    i = n(160404),
-    a = n(981631);
-function s(e) {
+var i = r(442837),
+    a = r(160404),
+    s = r(981631);
+function o(e) {
     return (
-        (0, r.e7)([i.Z], () => {
+        (0, i.e7)([a.Z], () => {
             if ((null == e ? void 0 : e.id) == null) return !1;
-            let t = i.Z.isFullServerPreview(e.id),
-                n = i.Z.isOnboardingEnabled(e.id);
-            return t && n;
-        }) || (null == e ? void 0 : e.hasFeature(a.oNc.GUILD_ONBOARDING_HAS_PROMPTS))
+            let n = a.Z.isFullServerPreview(e.id),
+                r = a.Z.isOnboardingEnabled(e.id);
+            return n && r;
+        }) || (null == e ? void 0 : e.hasFeature(s.oNc.GUILD_ONBOARDING_HAS_PROMPTS))
     );
 }
-function o(e) {
+function l(e) {
     if (null == e) return !1;
-    let t = i.Z.isFullServerPreview(e.id),
-        n = i.Z.isOnboardingEnabled(e.id);
-    return (t && n) || e.hasFeature(a.oNc.GUILD_ONBOARDING_HAS_PROMPTS);
+    let n = a.Z.isFullServerPreview(e.id),
+        r = a.Z.isOnboardingEnabled(e.id);
+    return (n && r) || e.hasFeature(s.oNc.GUILD_ONBOARDING_HAS_PROMPTS);
 }

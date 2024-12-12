@@ -1,47 +1,47 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return o;
+        return c;
     }
-}),
-    n(724458),
-    n(653041);
-var r = n(979554),
-    i = n(778787),
-    a = n(803358);
-function s(e, t, n) {
+});
+var i = r(724458);
+var a = r(653041);
+var s = r(979554),
+    o = r(778787),
+    l = r(803358);
+function u(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-class o extends a.Z {
+class c extends l.Z {
     static fromServer(e) {
-        let { products: t, logo: n, hero_ranking: a, pdp_bg: s, mobile_bg: l, success_modal_bg: u, mobile_banner: c, hero_banner: d, featured_block: f, hero_logo: _, ...p } = e;
-        return new o({
+        let { products: n, logo: r, hero_ranking: i, pdp_bg: a, mobile_bg: l, success_modal_bg: u, mobile_banner: d, hero_banner: f, featured_block: _, hero_logo: h, ...p } = e;
+        return new c({
             ...super.fromServer(p),
-            products: t.reduce((e, t) => {
-                let n = i.Z.fromServer(t);
-                return 0 === (n.type !== r.Z.VARIANTS_GROUP && n.items.length) ? e : (e.push(n), e);
+            products: n.reduce((e, n) => {
+                let r = o.Z.fromServer(n);
+                return 0 === (r.type !== s.Z.VARIANTS_GROUP && r.items.length) ? e : (e.push(r), e);
             }, []),
-            logo: n,
-            heroRanking: a,
-            pdpBg: s,
+            logo: r,
+            heroRanking: i,
+            pdpBg: a,
             mobileBg: l,
             successModalBg: u,
-            mobileBanner: c,
-            heroBanner: d,
-            featuredBlock: f,
-            heroLogo: _
+            mobileBanner: d,
+            heroBanner: f,
+            featuredBlock: _,
+            heroLogo: h
         });
     }
     constructor(e) {
-        super(e), s(this, 'products', void 0), s(this, 'logo', void 0), s(this, 'heroRanking', void 0), s(this, 'pdpBg', void 0), s(this, 'mobileBg', void 0), s(this, 'successModalBg', void 0), s(this, 'mobileBanner', void 0), s(this, 'heroBanner', void 0), s(this, 'featuredBlock', void 0), s(this, 'heroLogo', void 0), (this.products = e.products), (this.logo = e.logo), (this.heroRanking = e.heroRanking), (this.pdpBg = e.pdpBg), (this.mobileBg = e.mobileBg), (this.successModalBg = e.successModalBg), (this.mobileBanner = e.mobileBanner), (this.heroBanner = e.heroBanner), (this.featuredBlock = e.featuredBlock), (this.heroLogo = e.heroLogo);
+        super(e), u(this, 'products', void 0), u(this, 'logo', void 0), u(this, 'heroRanking', void 0), u(this, 'pdpBg', void 0), u(this, 'mobileBg', void 0), u(this, 'successModalBg', void 0), u(this, 'mobileBanner', void 0), u(this, 'heroBanner', void 0), u(this, 'featuredBlock', void 0), u(this, 'heroLogo', void 0), (this.products = e.products), (this.logo = e.logo), (this.heroRanking = e.heroRanking), (this.pdpBg = e.pdpBg), (this.mobileBg = e.mobileBg), (this.successModalBg = e.successModalBg), (this.mobileBanner = e.mobileBanner), (this.heroBanner = e.heroBanner), (this.featuredBlock = e.featuredBlock), (this.heroLogo = e.heroLogo);
     }
 }

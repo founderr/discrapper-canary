@@ -1,26 +1,26 @@
-n.d(t, {
+r.d(n, {
     $T: function () {
-        return s;
+        return o;
     },
     Bs: function () {
-        return l;
+        return u;
     },
     TL: function () {
-        return r;
-    },
-    js: function () {
-        return a;
-    },
-    qu: function () {
         return i;
     },
+    js: function () {
+        return s;
+    },
+    qu: function () {
+        return a;
+    },
     rp: function () {
-        return o;
+        return l;
     }
 });
-var r = 'dnd-core/INIT_COORDS',
-    i = 'dnd-core/BEGIN_DRAG',
-    a = 'dnd-core/PUBLISH_DRAG_SOURCE',
-    s = 'dnd-core/HOVER',
-    o = 'dnd-core/DROP',
-    l = 'dnd-core/END_DRAG';
+var i = 'dnd-core/INIT_COORDS',
+    a = 'dnd-core/BEGIN_DRAG',
+    s = 'dnd-core/PUBLISH_DRAG_SOURCE',
+    o = 'dnd-core/HOVER',
+    l = 'dnd-core/DROP',
+    u = 'dnd-core/END_DRAG';

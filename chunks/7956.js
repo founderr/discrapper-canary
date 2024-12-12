@@ -1,36 +1,36 @@
-n.d(t, {
+r.d(n, {
     i: function () {
-        return a;
+        return s;
     }
 });
-var r = n(804739),
-    i = n(981631);
-function a(e, t, n) {
-    let a = t.getState(e.id, e.branchId),
-        s = n.getQueuePosition(e.id, e.branchId),
-        o = n.paused;
-    if (null != a) {
-        if (null == s || -1 === s)
-            switch (a.type) {
-                case i.vxO.INSTALLING:
-                    return i.apO.INSTALL;
-                case i.vxO.UPDATING:
-                case i.vxO.UPDATE_REQUIRED:
-                    return i.apO.UPDATE;
+var i = r(804739),
+    a = r(981631);
+function s(e, n, r) {
+    let s = n.getState(e.id, e.branchId),
+        o = r.getQueuePosition(e.id, e.branchId),
+        l = r.paused;
+    if (null != s) {
+        if (null == o || -1 === o)
+            switch (s.type) {
+                case a.vxO.INSTALLING:
+                    return a.apO.INSTALL;
+                case a.vxO.UPDATING:
+                case a.vxO.UPDATE_REQUIRED:
+                    return a.apO.UPDATE;
             }
-        switch (a.type) {
-            case i.vxO.INSTALLING:
-            case i.vxO.UPDATING:
-            case i.vxO.UPDATE_REQUIRED:
-            case i.vxO.REPAIRING:
-                if (s > 0) return i.apO.MOVE_UP;
-                if (o) return i.apO.RESUME;
-                return i.apO.PAUSE;
-            case i.vxO.UP_TO_DATE:
-                return i.apO.PLAY;
-            case i.vxO.UNINSTALLING:
+        switch (s.type) {
+            case a.vxO.INSTALLING:
+            case a.vxO.UPDATING:
+            case a.vxO.UPDATE_REQUIRED:
+            case a.vxO.REPAIRING:
+                if (o > 0) return a.apO.MOVE_UP;
+                if (l) return a.apO.RESUME;
+                return a.apO.PAUSE;
+            case a.vxO.UP_TO_DATE:
+                return a.apO.PLAY;
+            case a.vxO.UNINSTALLING:
                 return null;
         }
     }
-    return null != s && s > 0 ? i.apO.MOVE_UP : (0, r.Q)() ? i.apO.INSTALL : null;
+    return null != o && o > 0 ? a.apO.MOVE_UP : (0, i.Q)() ? a.apO.INSTALL : null;
 }

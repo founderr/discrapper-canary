@@ -1,16 +1,16 @@
 e.exports = function (e) {
-    var t = e.idGenerator,
-        n = e.stateHandler.getState;
+    var n = e.idGenerator,
+        r = e.stateHandler.getState;
     return {
-        get: function (e) {
-            var t = n(e);
-            return t && void 0 !== t.id ? t.id : null;
+        get: function e(e) {
+            var n = r(e);
+            return n && void 0 !== n.id ? n.id : null;
         },
-        set: function (e) {
-            var r = n(e);
-            if (!r) throw Error('setId required the element to have a resize detection state.');
-            var i = t.generate();
-            return (r.id = i), i;
+        set: function e(e) {
+            var i = r(e);
+            if (!i) throw Error('setId required the element to have a resize detection state.');
+            var a = n.generate();
+            return (i.id = a), a;
         }
     };
 };

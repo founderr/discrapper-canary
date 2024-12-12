@@ -1,64 +1,64 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return _;
+        return h;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(442837),
-    a = n(481060),
-    s = n(594174),
-    o = n(5192),
-    l = n(371583),
-    u = n(864138),
-    c = n(69589),
-    d = n(388032),
-    f = n(352682);
-function _(e) {
-    let { userId: t, leaderboard: n } = e,
-        _ = (0, i.e7)([s.default], () => s.default.getUser(t));
-    if (null == _) return null;
-    let p = (0, l.K)(n),
-        h = o.ZP.getName(n.guild_id, void 0, _);
-    return (0, r.jsx)(u.z, {
+var i = r(200651);
+r(192379);
+var a = r(442837),
+    s = r(481060),
+    o = r(594174),
+    l = r(5192),
+    u = r(371583),
+    c = r(864138),
+    d = r(69589),
+    f = r(388032),
+    _ = r(352682);
+function h(e) {
+    let { userId: n, leaderboard: r } = e,
+        h = (0, a.e7)([o.default], () => o.default.getUser(n));
+    if (null == h) return null;
+    let p = (0, u.K)(r),
+        m = l.ZP.getName(r.guild_id, void 0, h);
+    return (0, i.jsx)(c.z, {
         imageUrl: p,
-        children: (0, r.jsxs)('div', {
-            className: f.userContainer,
+        children: (0, i.jsxs)('div', {
+            className: _.userContainer,
             children: [
-                (0, r.jsx)(c.Z, {
-                    user: _,
+                (0, i.jsx)(d.Z, {
+                    user: h,
                     rank: 1,
                     rankBadgeVisibility: 'hidden'
                 }),
-                (0, r.jsx)(a.Spacer, {
+                (0, i.jsx)(s.Spacer, {
                     size: 8,
                     horizontal: !0
                 }),
-                (0, r.jsxs)('div', {
+                (0, i.jsxs)('div', {
                     children: [
-                        (0, r.jsxs)('div', {
-                            className: f.userNameContainer,
+                        (0, i.jsxs)('div', {
+                            className: _.userNameContainer,
                             children: [
-                                (0, r.jsx)(a.Text, {
+                                (0, i.jsx)(s.Text, {
                                     variant: 'text-sm/semibold',
-                                    className: f.userName,
-                                    children: h
+                                    className: _.userName,
+                                    children: m
                                 }),
-                                (0, r.jsx)(a.Spacer, {
+                                (0, i.jsx)(s.Spacer, {
                                     size: 4,
                                     horizontal: !0
                                 }),
-                                (0, r.jsx)(a.LeagueOfLegendsBrandIcon, {
+                                (0, i.jsx)(s.LeagueOfLegendsBrandIcon, {
                                     size: 'custom',
                                     width: 14,
                                     height: 14
                                 })
                             ]
                         }),
-                        (0, r.jsx)(a.Text, {
+                        (0, i.jsx)(s.Text, {
                             variant: 'text-xs/normal',
-                            className: f.userSubtitle,
-                            children: d.intl.string(d.t['0ScUkZ'])
+                            className: _.userSubtitle,
+                            children: f.intl.string(f.t['0ScUkZ'])
                         })
                     ]
                 })

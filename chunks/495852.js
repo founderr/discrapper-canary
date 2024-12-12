@@ -1,82 +1,82 @@
-n.d(t, {
+r.d(n, {
     C: function () {
-        return m;
+        return g;
     }
 });
-var r = n(36056),
-    i = n(950697),
-    a = n(614456),
-    s = n(528046),
-    o = n(727037),
-    l = n(297584),
-    u = n(349992),
-    c = n(320215),
-    d = n(660284),
-    f = n(838390),
-    _ = n(284267),
-    p = n(973408),
-    h = n(647943);
-class m {
-    constructor(e, t, n) {
-        (this.defaultCheckDepth = 16), (this.typeName = e), (this.fields = t.map(r.nb)), (this.options = null != n ? n : {}), (this.refTypeCheck = new i.Z(this)), (this.refJsonReader = new a.C(this)), (this.refJsonWriter = new s.k(this)), (this.refBinReader = new o.I(this)), (this.refBinWriter = new l.R(this));
+var i = r(36056),
+    a = r(950697),
+    s = r(614456),
+    o = r(528046),
+    l = r(727037),
+    u = r(297584),
+    c = r(349992),
+    d = r(320215),
+    f = r(660284),
+    _ = r(838390),
+    h = r(284267),
+    p = r(973408),
+    m = r(647943);
+class g {
+    constructor(e, n, r) {
+        (this.defaultCheckDepth = 16), (this.typeName = e), (this.fields = n.map(i.nb)), (this.options = null != r ? r : {}), (this.refTypeCheck = new a.Z(this)), (this.refJsonReader = new s.C(this)), (this.refJsonWriter = new o.k(this)), (this.refBinReader = new l.I(this)), (this.refBinWriter = new u.R(this));
     }
     create(e) {
-        let t = (0, u.t)(this);
-        return void 0 !== e && (0, c.l)(this, t, e), t;
+        let n = (0, c.t)(this);
+        return void 0 !== e && (0, d.l)(this, n, e), n;
     }
     clone(e) {
-        let t = this.create();
-        return (0, c.l)(this, t, e), t;
+        let n = this.create();
+        return (0, d.l)(this, n, e), n;
     }
-    equals(e, t) {
-        return (0, _.Y)(this, e, t);
+    equals(e, n) {
+        return (0, h.Y)(this, e, n);
     }
-    is(e, t = this.defaultCheckDepth) {
-        return this.refTypeCheck.is(e, t, !1);
+    is(e, n = this.defaultCheckDepth) {
+        return this.refTypeCheck.is(e, n, !1);
     }
-    isAssignable(e, t = this.defaultCheckDepth) {
-        return this.refTypeCheck.is(e, t, !0);
+    isAssignable(e, n = this.defaultCheckDepth) {
+        return this.refTypeCheck.is(e, n, !0);
     }
-    mergePartial(e, t) {
-        (0, c.l)(this, e, t);
+    mergePartial(e, n) {
+        (0, d.l)(this, e, n);
     }
-    fromBinary(e, t) {
-        let n = (0, h.Z)(t);
-        return this.internalBinaryRead(n.readerFactory(e), e.byteLength, n);
+    fromBinary(e, n) {
+        let r = (0, m.Z)(n);
+        return this.internalBinaryRead(r.readerFactory(e), e.byteLength, r);
     }
-    fromJson(e, t) {
-        return this.internalJsonRead(e, (0, f.jl)(t));
+    fromJson(e, n) {
+        return this.internalJsonRead(e, (0, _.jl)(n));
     }
-    fromJsonString(e, t) {
-        let n = JSON.parse(e);
-        return this.fromJson(n, t);
+    fromJsonString(e, n) {
+        let r = JSON.parse(e);
+        return this.fromJson(r, n);
     }
-    toJson(e, t) {
-        return this.internalJsonWrite(e, (0, f.P2)(t));
+    toJson(e, n) {
+        return this.internalJsonWrite(e, (0, _.P2)(n));
     }
-    toJsonString(e, t) {
-        var n;
-        return JSON.stringify(this.toJson(e, t), null, null !== (n = null == t ? void 0 : t.prettySpaces) && void 0 !== n ? n : 0);
+    toJsonString(e, n) {
+        var r;
+        return JSON.stringify(this.toJson(e, n), null, null !== (r = null == n ? void 0 : n.prettySpaces) && void 0 !== r ? r : 0);
     }
-    toBinary(e, t) {
-        let n = (0, p.X)(t);
-        return this.internalBinaryWrite(e, n.writerFactory(), n).finish();
+    toBinary(e, n) {
+        let r = (0, p.X)(n);
+        return this.internalBinaryWrite(e, r.writerFactory(), r).finish();
     }
-    internalJsonRead(e, t, n) {
+    internalJsonRead(e, n, r) {
         if (null !== e && 'object' == typeof e && !Array.isArray(e)) {
-            let r = null != n ? n : this.create();
-            return this.refJsonReader.read(e, r, t), r;
+            let i = null != r ? r : this.create();
+            return this.refJsonReader.read(e, i, n), i;
         }
-        throw Error(`Unable to parse message ${this.typeName} from JSON ${(0, d.Z)(e)}.`);
+        throw Error(`Unable to parse message ${this.typeName} from JSON ${(0, f.Z)(e)}.`);
     }
-    internalJsonWrite(e, t) {
-        return this.refJsonWriter.write(e, t);
+    internalJsonWrite(e, n) {
+        return this.refJsonWriter.write(e, n);
     }
-    internalBinaryWrite(e, t, n) {
-        return this.refBinWriter.write(e, t, n), t;
+    internalBinaryWrite(e, n, r) {
+        return this.refBinWriter.write(e, n, r), n;
     }
-    internalBinaryRead(e, t, n, r) {
-        let i = null != r ? r : this.create();
-        return this.refBinReader.read(e, i, n, t), i;
+    internalBinaryRead(e, n, r, i) {
+        let a = null != i ? i : this.create();
+        return this.refBinReader.read(e, a, r, n), a;
     }
 }

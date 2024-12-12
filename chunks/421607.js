@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     decrease: (e) => `Suma\u{17E}inti ${e.fieldLabel}`,
     increase: (e) => `Padidinti ${e.fieldLabel}`,
     numberField: 'Numerio laukas'

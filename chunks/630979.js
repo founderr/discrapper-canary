@@ -1,82 +1,82 @@
-var r = function (e) {
+var i = function (e) {
         return String(Number(e)) === e ? Number(e) : e;
     },
-    i = function (e, t, n, i) {
-        if (i && !n) t[i] = r(e[1]);
-        else for (var a = 0; a < n.length; a += 1) null != e[a + 1] && (t[n[a]] = r(e[a + 1]));
+    a = function (e, n, r, a) {
+        if (a && !r) n[a] = i(e[1]);
+        else for (var s = 0; s < r.length; s += 1) null != e[s + 1] && (n[r[s]] = i(e[s + 1]));
     },
-    a = function (e, t, n) {
-        var r = e.name && e.names;
-        e.push && !t[e.push] ? (t[e.push] = []) : r && !t[e.name] && (t[e.name] = {});
-        var a = e.push ? {} : r ? t[e.name] : t;
-        i(n.match(e.reg), a, e.names, e.name), e.push && t[e.push].push(a);
+    s = function (e, n, r) {
+        var i = e.name && e.names;
+        e.push && !n[e.push] ? (n[e.push] = []) : i && !n[e.name] && (n[e.name] = {});
+        var s = e.push ? {} : i ? n[e.name] : n;
+        a(r.match(e.reg), s, e.names, e.name), e.push && n[e.push].push(s);
     },
-    s = n(767172),
-    o = RegExp.prototype.test.bind(/^([a-z])=(.*)/);
-t.parse = function (e) {
-    var t = {},
-        n = [],
-        r = t;
+    o = r(767172),
+    l = RegExp.prototype.test.bind(/^([a-z])=(.*)/);
+n.parse = function (e) {
+    var n = {},
+        r = [],
+        i = n;
     return (
         e
             .split(/(\r\n|\r|\n)/)
-            .filter(o)
+            .filter(l)
             .forEach(function (e) {
-                var t = e[0],
-                    i = e.slice(2);
-                'm' === t &&
-                    (n.push({
+                var n = e[0],
+                    a = e.slice(2);
+                'm' === n &&
+                    (r.push({
                         rtp: [],
                         fmtp: []
                     }),
-                    (r = n[n.length - 1]));
-                for (var o = 0; o < (s[t] || []).length; o += 1) {
-                    var l = s[t][o];
-                    if (l.reg.test(i)) return a(l, r, i);
+                    (i = r[r.length - 1]));
+                for (var l = 0; l < (o[n] || []).length; l += 1) {
+                    var u = o[n][l];
+                    if (u.reg.test(a)) return s(u, i, a);
                 }
             }),
-        (t.media = n),
-        t
+        (n.media = r),
+        n
     );
 };
-var l = function (e, t) {
-    var n = t.split(/=(.+)/, 2);
-    return 2 === n.length && (e[n[0]] = r(n[1])), e;
+var u = function (e, n) {
+    var r = n.split(/=(.+)/, 2);
+    return 2 === r.length && (e[r[0]] = i(r[1])), e;
 };
-(t.parseParams = function (e) {
-    return e.split(/\;\s?/).reduce(l, {});
+(n.parseParams = function (e) {
+    return e.split(/\;\s?/).reduce(u, {});
 }),
-    (t.parseFmtpConfig = t.parseParams),
-    (t.parsePayloads = function (e) {
+    (n.parseFmtpConfig = n.parseParams),
+    (n.parsePayloads = function (e) {
         return e.split(' ').map(Number);
     }),
-    (t.parseRemoteCandidates = function (e) {
-        for (var t = [], n = e.split(' ').map(r), i = 0; i < n.length; i += 3)
-            t.push({
-                component: n[i],
-                ip: n[i + 1],
-                port: n[i + 2]
+    (n.parseRemoteCandidates = function (e) {
+        for (var n = [], r = e.split(' ').map(i), a = 0; a < r.length; a += 3)
+            n.push({
+                component: r[a],
+                ip: r[a + 1],
+                port: r[a + 2]
             });
-        return t;
+        return n;
     }),
-    (t.parseImageAttributes = function (e) {
+    (n.parseImageAttributes = function (e) {
         return e.split(' ').map(function (e) {
             return e
                 .substring(1, e.length - 1)
                 .split(',')
-                .reduce(l, {});
+                .reduce(u, {});
         });
     }),
-    (t.parseSimulcastStreamList = function (e) {
+    (n.parseSimulcastStreamList = function (e) {
         return e.split(';').map(function (e) {
             return e.split(',').map(function (e) {
-                var t,
-                    n = !1;
+                var n,
+                    r = !1;
                 return (
-                    '~' !== e[0] ? (t = r(e)) : ((t = r(e.substring(1, e.length))), (n = !0)),
+                    '~' !== e[0] ? (n = i(e)) : ((n = i(e.substring(1, e.length))), (r = !0)),
                     {
-                        scid: t,
-                        paused: n
+                        scid: n,
+                        paused: r
                     }
                 );
             });

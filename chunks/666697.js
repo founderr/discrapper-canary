@@ -34,7 +34,7 @@ t.Z = function (e) {
         r.useEffect(() => {
             a.T4({ applicationId: t });
         }, [t]),
-        r.useEffect(() => () => L(!1), [L]);
+        r.useEffect(() => () => L(!0), [L]);
     let R = null == P ? void 0 : P.storefront_available,
         [j, D] = r.useState(null != Z ? Z : N.GlobalDiscoveryAppsSections.ABOUT),
         M = r.useCallback(

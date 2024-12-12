@@ -1,9 +1,9 @@
-var r = n(257693);
-(t.encrypt = function (e, t) {
-    var n = r(t, e._prev);
-    return (e._prev = e._cipher.encryptBlock(n)), e._prev;
+var i = r(257693);
+(n.encrypt = function (e, n) {
+    var r = i(n, e._prev);
+    return (e._prev = e._cipher.encryptBlock(r)), e._prev;
 }),
-    (t.decrypt = function (e, t) {
-        var n = e._prev;
-        return (e._prev = t), r(e._cipher.decryptBlock(t), n);
+    (n.decrypt = function (e, n) {
+        var r = e._prev;
+        return (e._prev = n), i(e._cipher.decryptBlock(n), r);
     });

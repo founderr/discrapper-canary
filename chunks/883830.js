@@ -1,11 +1,11 @@
-let r;
-n.d(t, {
+let i;
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-let i = new Uint8Array(16);
-function a() {
-    if (!r && !(r = 'undefined' != typeof crypto && crypto.getRandomValues && crypto.getRandomValues.bind(crypto))) throw Error('crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported');
-    return r(i);
+let a = new Uint8Array(16);
+function s() {
+    if (!i && !(i = 'undefined' != typeof crypto && crypto.getRandomValues && crypto.getRandomValues.bind(crypto))) throw Error('crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported');
+    return i(a);
 }

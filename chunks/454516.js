@@ -1,7 +1,7 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = { Empty: `Vac\xedo` };
+var i = {};
+i = { Empty: `Vac\xedo` };

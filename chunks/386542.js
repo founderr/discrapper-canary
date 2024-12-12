@@ -1,21 +1,21 @@
-n.d(t, {
+r.d(n, {
     k: function () {
-        return s;
+        return o;
     }
 });
-var r = n(442837),
-    i = n(114064),
-    a = n(485731);
-function s(e) {
-    let { available: t, activated: n } = (0, r.cj)([i.Z], () => ({
-            available: i.Z.isAvailable(e),
-            activated: i.Z.hasActiveDemo(e)
+var i = r(442837),
+    a = r(114064),
+    s = r(485731);
+function o(e) {
+    let { available: n, activated: r } = (0, i.cj)([a.Z], () => ({
+            available: a.Z.isAvailable(e),
+            activated: a.Z.hasActiveDemo(e)
         })),
-        s = (0, r.cj)([a.Z], () => a.Z.getState());
+        o = (0, i.cj)([s.Z], () => s.Z.getState());
     return {
-        available: t,
-        activated: n,
-        hqStreamingState: s,
-        shouldShowOptInPopout: (0, r.e7)([a.Z], () => a.Z.shouldShowOptInPopout())
+        available: n,
+        activated: r,
+        hqStreamingState: o,
+        shouldShowOptInPopout: (0, i.e7)([s.Z], () => s.Z.shouldShowOptInPopout())
     };
 }

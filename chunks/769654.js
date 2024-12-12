@@ -1,11 +1,11 @@
-n.d(t, {
+r.d(n, {
     X: function () {
-        return s;
+        return o;
     }
 });
-var r = n(35225),
-    i = n(703656),
-    a = n(981631);
-function s(e, t) {
-    (0, i.uL)(a.Z5c.CHANNEL(e, (0, r.V)(e)), t);
+var i = r(35225),
+    a = r(703656),
+    s = r(981631);
+function o(e, n) {
+    (0, a.uL)(s.Z5c.CHANNEL(e, (0, i.V)(e)), n);
 }

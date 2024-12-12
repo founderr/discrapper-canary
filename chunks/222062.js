@@ -1,13 +1,13 @@
-n.d(t, {
+r.d(n, {
     M: function () {
-        return o;
+        return l;
     }
 });
-var r = n(442837),
-    i = n(594174),
-    a = n(111361),
-    s = n(474936);
-function o() {
+var i = r(442837),
+    a = r(594174),
+    s = r(111361),
+    o = r(474936);
+function l() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return !(0, r.e7)([i.default], () => a.ZP.isPremium(i.default.getCurrentUser(), s.p9.TIER_2)) && !e;
+    return !(0, i.e7)([a.default], () => s.ZP.isPremium(a.default.getCurrentUser(), o.p9.TIER_2)) && !e;
 }

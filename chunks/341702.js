@@ -1,30 +1,30 @@
-n.d(t, {
+r.d(n, {
     t: function () {
-        return i;
+        return a;
     }
 });
-var r = n(887490);
-function i(e, t, n, i) {
-    var a, s;
-    let o = 0;
-    for (let a = 0; a < n.length; a++) {
-        let s = n[a];
-        if (null == s) continue;
-        let l = o + s.length;
-        if (i <= l) {
-            let n = r.C0.child(t, a),
-                s = r.bN.node(e, n)[0];
-            if (r.LC.isText(s))
+var i = r(887490);
+function a(e, n, r, a) {
+    var s, o;
+    let l = 0;
+    for (let s = 0; s < r.length; s++) {
+        let o = r[s];
+        if (null == o) continue;
+        let u = l + o.length;
+        if (a <= u) {
+            let r = i.C0.child(n, s),
+                o = i.bN.node(e, r)[0];
+            if (i.LC.isText(o))
                 return {
-                    path: n,
-                    offset: Math.min(Math.max(i - o, 0), s.text.length)
+                    path: r,
+                    offset: Math.min(Math.max(a - l, 0), o.text.length)
                 };
         }
-        o = l;
+        l = u;
     }
-    let l = n.length - 1;
+    let u = r.length - 1;
     return {
-        path: r.C0.child(t, l),
-        offset: null !== (s = null === (a = n[l]) || void 0 === a ? void 0 : a.length) && void 0 !== s ? s : 0
+        path: i.C0.child(n, u),
+        offset: null !== (o = null === (s = r[u]) || void 0 === s ? void 0 : s.length) && void 0 !== o ? o : 0
     };
 }

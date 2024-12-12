@@ -1,10 +1,10 @@
-var r = n(413135).Buffer,
-    i = n(257693);
-t.encrypt = function (e, t) {
-    for (; e._cache.length < t.length; ) {
-        var n;
-        e._cache = r.concat([e._cache, (((n = e)._prev = n._cipher.encryptBlock(n._prev)), n._prev)]);
-    }
-    var a = e._cache.slice(0, t.length);
-    return (e._cache = e._cache.slice(t.length)), i(t, a);
+var i = r(413135).Buffer,
+    a = r(257693);
+function s(e) {
+    return (e._prev = e._cipher.encryptBlock(e._prev)), e._prev;
+}
+n.encrypt = function (e, n) {
+    for (; e._cache.length < n.length; ) e._cache = i.concat([e._cache, s(e)]);
+    var r = e._cache.slice(0, n.length);
+    return (e._cache = e._cache.slice(n.length)), a(n, r);
 };

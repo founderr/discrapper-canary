@@ -1,7 +1,7 @@
-function t(e, t) {
-    if (!e) throw Error(t || 'Assertion failed');
+function n(e, n) {
+    if (!e) throw Error(n || 'Assertion failed');
 }
-(e.exports = t),
-    (t.equal = function (e, t, n) {
-        if (e != t) throw Error(n || 'Assertion failed: ' + e + ' != ' + t);
+(e.exports = n),
+    (n.equal = function (e, n, r) {
+        if (e != n) throw Error(r || 'Assertion failed: ' + e + ' != ' + n);
     });

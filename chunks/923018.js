@@ -1,3 +1,3 @@
-var r = n(985547),
-    i = n(121328);
-r.default.__addLocaleData(i.default), (r.default.defaultLocale = 'en'), (t.default = r.default);
+var i = r(985547),
+    a = r(121328);
+i.default.__addLocaleData(a.default), (i.default.defaultLocale = 'en'), (n.default = i.default);

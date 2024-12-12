@@ -1,31 +1,31 @@
-function r(e, t, n) {
+function i(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-class i {
-    constructor(e, t, n) {
-        r(this, 'name', void 0),
-            r(this, 'description', void 0),
-            r(this, 'getFeatureValue', void 0),
+class a {
+    constructor(e, n, r) {
+        i(this, 'name', void 0),
+            i(this, 'description', void 0),
+            i(this, 'getFeatureValue', void 0),
             (this.name = e),
-            (this.description = n),
-            (this.getFeatureValue = t),
+            (this.description = r),
+            (this.getFeatureValue = n),
             Object.defineProperty(this, 'getFeatureValue', {
-                value: t,
+                value: n,
                 configurable: !1,
                 writable: !1
             });

@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     V: function () {
-        return r;
+        return i;
     }
 }),
-    n(192379);
-class r {
+    r(192379);
+class i {
     *[Symbol.iterator]() {
         yield* [...this.rows];
     }
@@ -15,12 +15,12 @@ class r {
         return this.keyMap.keys();
     }
     getKeyBefore(e) {
-        let t = this.keyMap.get(e);
-        return t ? t.prevKey : null;
+        let n = this.keyMap.get(e);
+        return n ? n.prevKey : null;
     }
     getKeyAfter(e) {
-        let t = this.keyMap.get(e);
-        return t ? t.nextKey : null;
+        let n = this.keyMap.get(e);
+        return n ? n.nextKey : null;
     }
     getFirstKey() {
         var e;
@@ -28,38 +28,38 @@ class r {
     }
     getLastKey() {
         var e;
-        let t = [...this.rows];
-        return null === (e = t[t.length - 1]) || void 0 === e ? void 0 : e.key;
+        let n = [...this.rows];
+        return null === (e = n[n.length - 1]) || void 0 === e ? void 0 : e.key;
     }
     getItem(e) {
         return this.keyMap.get(e);
     }
     at(e) {
-        let t = [...this.getKeys()];
-        return this.getItem(t[e]);
+        let n = [...this.getKeys()];
+        return this.getItem(n[e]);
     }
     getChildren(e) {
-        let t = this.keyMap.get(e);
-        return (null == t ? void 0 : t.childNodes) || [];
+        let n = this.keyMap.get(e);
+        return (null == n ? void 0 : n.childNodes) || [];
     }
     constructor(e) {
-        let t;
+        let n;
         (this.keyMap = new Map()), (this.keyMap = new Map()), (this.columnCount = null == e ? void 0 : e.columnCount), (this.rows = []);
-        let n = (t) => {
-                let i,
-                    a = this.keyMap.get(t.key);
-                e.visitNode && (t = e.visitNode(t)), this.keyMap.set(t.key, t);
-                let s = new Set();
-                for (let e of t.childNodes) 'cell' === e.type && null == e.parentKey && (e.parentKey = t.key), s.add(e.key), i ? ((i.nextKey = e.key), (e.prevKey = i.key)) : (e.prevKey = null), n(e), (i = e);
-                if ((i && (i.nextKey = null), a)) for (let e of a.childNodes) !s.has(e.key) && r(e);
+        let r = (n) => {
+                let a,
+                    s = this.keyMap.get(n.key);
+                e.visitNode && (n = e.visitNode(n)), this.keyMap.set(n.key, n);
+                let o = new Set();
+                for (let e of n.childNodes) 'cell' === e.type && null == e.parentKey && (e.parentKey = n.key), o.add(e.key), a ? ((a.nextKey = e.key), (e.prevKey = a.key)) : (e.prevKey = null), r(e), (a = e);
+                if ((a && (a.nextKey = null), s)) for (let e of s.childNodes) !o.has(e.key) && i(e);
             },
-            r = (e) => {
-                for (let t of (this.keyMap.delete(e.key), e.childNodes)) this.keyMap.get(t.key) === t && r(t);
+            i = (e) => {
+                for (let n of (this.keyMap.delete(e.key), e.childNodes)) this.keyMap.get(n.key) === n && i(n);
             };
-        e.items.forEach((e, r) => {
-            let i = {
+        e.items.forEach((e, i) => {
+            let a = {
                 level: 0,
-                key: 'row-' + r,
+                key: 'row-' + i,
                 type: 'row',
                 value: void 0,
                 hasChildNodes: !0,
@@ -68,8 +68,8 @@ class r {
                 textValue: void 0,
                 ...e
             };
-            t ? ((t.nextKey = i.key), (i.prevKey = t.key)) : (i.prevKey = null), this.rows.push(i), n(i), (t = i);
+            n ? ((n.nextKey = a.key), (a.prevKey = n.key)) : (a.prevKey = null), this.rows.push(a), r(a), (n = a);
         }),
-            t && (t.nextKey = null);
+            n && (n.nextKey = null);
     }
 }

@@ -1,62 +1,62 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return o;
+        return l;
     }
 });
-var r = n(126387),
-    i = n(632471),
-    a = n(205208),
-    s = n(740078);
-function o(e) {
-    var t,
-        n = e.reference,
-        o = e.element,
-        l = e.placement,
-        u = l ? (0, r.Z)(l) : null,
-        c = l ? (0, i.Z)(l) : null,
-        d = n.x + n.width / 2 - o.width / 2,
-        f = n.y + n.height / 2 - o.height / 2;
-    switch (u) {
-        case s.we:
-            t = {
-                x: d,
-                y: n.y - o.height
+var i = r(126387),
+    a = r(632471),
+    s = r(205208),
+    o = r(740078);
+function l(e) {
+    var n,
+        r = e.reference,
+        l = e.element,
+        u = e.placement,
+        c = u ? (0, i.Z)(u) : null,
+        d = u ? (0, a.Z)(u) : null,
+        f = r.x + r.width / 2 - l.width / 2,
+        _ = r.y + r.height / 2 - l.height / 2;
+    switch (c) {
+        case o.we:
+            n = {
+                x: f,
+                y: r.y - l.height
             };
             break;
-        case s.I:
-            t = {
-                x: d,
-                y: n.y + n.height
+        case o.I:
+            n = {
+                x: f,
+                y: r.y + r.height
             };
             break;
-        case s.F2:
-            t = {
-                x: n.x + n.width,
-                y: f
+        case o.F2:
+            n = {
+                x: r.x + r.width,
+                y: _
             };
             break;
-        case s.t$:
-            t = {
-                x: n.x - o.width,
-                y: f
+        case o.t$:
+            n = {
+                x: r.x - l.width,
+                y: _
             };
             break;
         default:
-            t = {
-                x: n.x,
-                y: n.y
+            n = {
+                x: r.x,
+                y: r.y
             };
     }
-    var _ = u ? (0, a.Z)(u) : null;
-    if (null != _) {
-        var p = 'y' === _ ? 'height' : 'width';
-        switch (c) {
-            case s.BL:
-                t[_] = t[_] - (n[p] / 2 - o[p] / 2);
+    var h = c ? (0, s.Z)(c) : null;
+    if (null != h) {
+        var p = 'y' === h ? 'height' : 'width';
+        switch (d) {
+            case o.BL:
+                n[h] = n[h] - (r[p] / 2 - l[p] / 2);
                 break;
-            case s.ut:
-                t[_] = t[_] + (n[p] / 2 - o[p] / 2);
+            case o.ut:
+                n[h] = n[h] + (r[p] / 2 - l[p] / 2);
         }
     }
-    return t;
+    return n;
 }

@@ -1,29 +1,29 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(259105);
-function s(e) {
-    return i.forwardRef(function (t, n) {
-        let s = i.useRef();
+var i = r(200651),
+    a = r(192379),
+    s = r(259105);
+function o(e) {
+    return a.forwardRef(function (n, r) {
+        let o = a.useRef();
         return (
-            i.useImperativeHandle(n, () => ({
+            a.useImperativeHandle(r, () => ({
                 triggerResize: () => {
                     var e;
-                    null === (e = s.current) || void 0 === e || e.onResize();
+                    null === (e = o.current) || void 0 === e || e.onResize();
                 }
             })),
-            (0, r.jsx)(a.default, {
-                ref: s,
-                children: (n) => {
-                    let { width: i, height: a } = n;
-                    return (0, r.jsx)(e, {
-                        ...t,
-                        width: i,
-                        height: a
+            (0, i.jsx)(s.default, {
+                ref: o,
+                children: (r) => {
+                    let { width: a, height: s } = r;
+                    return (0, i.jsx)(e, {
+                        ...n,
+                        width: a,
+                        height: s
                     });
                 }
             })

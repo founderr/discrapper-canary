@@ -1,53 +1,53 @@
-n(47120);
-var r = n(147913),
-    i = n(716364),
-    a = n(474873),
-    s = n(135906),
-    o = n(378364),
-    l = n(197344),
-    u = n(860973),
-    c = n(871465);
-function d(e, t, n) {
+var i = r(47120);
+var a = r(147913),
+    s = r(716364),
+    o = r(474873),
+    l = r(135906),
+    u = r(378364),
+    c = r(197344),
+    d = r(860973),
+    f = r(871465);
+function _(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-class f extends r.Z {
+class h extends a.Z {
     _initialize() {
-        this.subscription = l.Z.subscribe(this.handleExperimentUpdated);
+        this.subscription = c.Z.subscribe(this.handleExperimentUpdated);
     }
     _terminate() {
-        var e;
-        null === (e = this.subscription) || void 0 === e || e.call(this), (this.subscription = void 0);
+        var e, n;
+        null === (e = (n = this).subscription) || void 0 === e || e.call(n), (this.subscription = void 0);
     }
     updateSoundpack() {
-        let e = a.Z.getSoundpack(),
-            t = a.Z.getLastSoundpackExperimentId(),
-            n = o.Z.experiment.definition.id,
-            r = l.Z.isEligible();
-        r || (null == t && e === c.YC.CLASSIC) ? r && null != o.Z.soundpack && n !== t && e !== o.Z.soundpack && (0, i.c)(o.Z.soundpack, n) : (0, i.c)(c.YC.CLASSIC, null);
+        let e = o.Z.getSoundpack(),
+            n = o.Z.getLastSoundpackExperimentId(),
+            r = u.Z.experiment.definition.id,
+            i = c.Z.isEligible();
+        i || (null == n && e === f.YC.CLASSIC) ? i && null != u.Z.soundpack && r !== n && e !== u.Z.soundpack && (0, s.c)(u.Z.soundpack, r) : (0, s.c)(f.YC.CLASSIC, null);
     }
     updateRingtone() {
-        if (l.Z.isEligible()) {
-            let e = (0, s.Z)(a.Z.getSoundpack());
-            null != e.call_ringing && (0, u._)('call_ringing', e.call_ringing + '.mp3');
-        } else (0, u._)('call_ringing', 'call_ringing.mp3');
+        if (c.Z.isEligible()) {
+            let e = (0, l.Z)(o.Z.getSoundpack());
+            null != e.call_ringing && (0, d._)('call_ringing', e.call_ringing + '.mp3');
+        } else (0, d._)('call_ringing', 'call_ringing.mp3');
     }
     constructor(...e) {
         super(...e),
-            d(this, 'actions', { NOTIFICATIONS_SET_DISABLED_SOUNDS: this.updateRingtone }),
-            d(this, 'subscription', void 0),
-            d(this, 'handleExperimentUpdated', () => {
+            _(this, 'actions', { NOTIFICATIONS_SET_DISABLED_SOUNDS: this.updateRingtone }),
+            _(this, 'subscription', void 0),
+            _(this, 'handleExperimentUpdated', () => {
                 this.updateSoundpack(), this.updateRingtone();
             });
     }
 }
-t.Z = new f();
+n.Z = new h();

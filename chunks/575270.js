@@ -1,4 +1,4 @@
 e.exports = {
-    RBTree: n(379104),
-    BinTree: n(429338)
+    RBTree: r(379104),
+    BinTree: r(429338)
 };

@@ -1,24 +1,24 @@
-e.exports = function (e, t, n, r) {
-    (t = t || '&'), (n = n || '=');
-    var i = {};
-    if ('string' != typeof e || 0 === e.length) return i;
-    var a = /\+/g;
-    e = e.split(t);
-    var s = 1000;
-    r && 'number' == typeof r.maxKeys && (s = r.maxKeys);
-    var o = e.length;
-    s > 0 && o > s && (o = s);
-    for (var l = 0; l < o; ++l) {
-        var u,
-            c,
-            d,
+function n(e, n) {
+    return Object.prototype.hasOwnProperty.call(e, n);
+}
+e.exports = function (e, r, i, a) {
+    (r = r || '&'), (i = i || '=');
+    var s = {};
+    if ('string' != typeof e || 0 === e.length) return s;
+    var o = /\+/g;
+    e = e.split(r);
+    var l = 1000;
+    a && 'number' == typeof a.maxKeys && (l = a.maxKeys);
+    var u = e.length;
+    l > 0 && u > l && (u = l);
+    for (var c = 0; c < u; ++c) {
+        var d,
             f,
             _,
-            p,
-            h = e[l].replace(a, '%20'),
-            m = h.indexOf(n);
-        if ((m >= 0 ? ((d = h.substr(0, m)), (f = h.substr(m + 1))) : ((d = h), (f = '')), (_ = decodeURIComponent(d)), (p = decodeURIComponent(f)), (u = i), (c = _), Object.prototype.hasOwnProperty.call(u, c))) Array.isArray(i[_]) ? i[_].push(p) : (i[_] = [i[_], p]);
-        else i[_] = p;
+            h,
+            p = e[c].replace(o, '%20'),
+            m = p.indexOf(i);
+        m >= 0 ? ((d = p.substr(0, m)), (f = p.substr(m + 1))) : ((d = p), (f = '')), (_ = decodeURIComponent(d)), (h = decodeURIComponent(f)), n(s, _) ? (Array.isArray(s[_]) ? s[_].push(h) : (s[_] = [s[_], h])) : (s[_] = h);
     }
-    return i;
+    return s;
 };

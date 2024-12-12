@@ -1,28 +1,28 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     buttonLabel: `Mostrar sugest\xf5es`,
-    countAnnouncement: (e, t) =>
-        `${t.plural(e.optionCount, {
-            one: () => `${t.number(e.optionCount)} op\xe7\xe3o`,
-            other: () => `${t.number(e.optionCount)} op\xe7\xf5es`
+    countAnnouncement: (e, n) =>
+        `${n.plural(e.optionCount, {
+            one: () => `${n.number(e.optionCount)} op\xe7\xe3o`,
+            other: () => `${n.number(e.optionCount)} op\xe7\xf5es`
         })} dispon\xedvel.`,
-    focusAnnouncement: (e, t) =>
-        `${t.select(
+    focusAnnouncement: (e, n) =>
+        `${n.select(
             {
                 true: () =>
-                    `Grupo inserido ${e.groupTitle}, com ${t.plural(e.groupCount, {
-                        one: () => `${t.number(e.groupCount)} op\xe7\xe3o`,
-                        other: () => `${t.number(e.groupCount)} op\xe7\xf5es`
+                    `Grupo inserido ${e.groupTitle}, com ${n.plural(e.groupCount, {
+                        one: () => `${n.number(e.groupCount)} op\xe7\xe3o`,
+                        other: () => `${n.number(e.groupCount)} op\xe7\xf5es`
                     })}. `,
                 other: ''
             },
             e.isGroupChange
-        )}${e.optionText}${t.select(
+        )}${e.optionText}${n.select(
             {
                 true: ', selecionado',
                 other: ''

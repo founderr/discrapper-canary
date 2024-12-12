@@ -1,7 +1,7 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = { 'Clear search': `Rensa s\xf6kning` };
+var i = {};
+i = { 'Clear search': `Rensa s\xf6kning` };

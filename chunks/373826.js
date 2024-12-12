@@ -1,37 +1,37 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(111028),
-    s = n(652853),
-    o = n(228168),
-    l = n(249942);
-function u(e) {
-    let { text: t, onClick: n, ...u } = e,
-        { profileType: c } = (0, s.z)(),
-        d = 'string' == typeof t ? t.trim() : t;
-    if (null == d || '' === d) return null;
-    let f = () =>
-        c === o.y0.FULL_SIZE
-            ? (0, r.jsx)(i.Text, {
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(111028),
+    o = r(652853),
+    l = r(228168),
+    u = r(249942);
+function c(e) {
+    let { text: n, onClick: r, ...c } = e,
+        { profileType: d } = (0, o.z)(),
+        f = 'string' == typeof n ? n.trim() : n;
+    if (null == f || '' === f) return null;
+    let _ = () =>
+        d === l.y0.FULL_SIZE
+            ? (0, i.jsx)(a.Text, {
                   color: 'text-normal',
-                  ...u,
-                  children: d
+                  ...c,
+                  children: f
               })
-            : (0, r.jsx)(i.Text, {
+            : (0, i.jsx)(a.Text, {
                   color: 'text-normal',
-                  ...u,
-                  children: (0, r.jsx)(a.Z, { children: d })
+                  ...c,
+                  children: (0, i.jsx)(s.Z, { children: f })
               });
-    return null != n
-        ? (0, r.jsx)(i.Clickable, {
-              onClick: n,
-              className: l.clickableText,
-              children: f()
+    return null != r
+        ? (0, i.jsx)(a.Clickable, {
+              onClick: r,
+              className: u.clickableText,
+              children: _()
           })
-        : f();
+        : _();
 }

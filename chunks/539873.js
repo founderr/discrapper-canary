@@ -1,140 +1,140 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return y;
+        return N;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(442837),
-    l = n(481060),
-    u = n(570140),
-    c = n(100527),
-    d = n(313201),
-    f = n(98278),
-    _ = n(311476),
-    p = n(587446),
-    h = n(996073),
-    m = n(327943),
-    g = n(997945),
-    E = n(401460),
-    v = n(441319),
-    I = n(981631),
-    T = n(526761),
-    b = n(388032),
-    S = n(337910);
-function y(e) {
-    let { className: t, disabled: a, isEditor: y, renderCTAButtons: A } = e,
-        [N, C] = (0, o.Wu)([m.Z], () => [m.Z.getCurrentDesktopIcon(), m.Z.isUpsellPreview]),
-        { enabled: R } = _.Z.getCurrentConfig(
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(120356),
+    l = r.n(o),
+    u = r(442837),
+    c = r(481060),
+    d = r(570140),
+    f = r(100527),
+    _ = r(313201),
+    h = r(98278),
+    p = r(311476),
+    m = r(587446),
+    g = r(996073),
+    E = r(327943),
+    v = r(997945),
+    I = r(401460),
+    T = r(441319),
+    b = r(981631),
+    y = r(526761),
+    S = r(388032),
+    A = r(337910);
+function N(e) {
+    let { className: n, disabled: i, isEditor: o, renderCTAButtons: N } = e,
+        [C, R] = (0, u.Wu)([E.Z], () => [E.Z.getCurrentDesktopIcon(), E.Z.isUpsellPreview]),
+        { enabled: O } = p.Z.getCurrentConfig(
             { location: 'UserSettingsAppearanceInAppIcon' },
             {
-                autoTrackExposure: C,
-                disable: !C
+                autoTrackExposure: R,
+                disable: !R
             }
         ),
-        O = i.useRef(null);
-    (0, h.Z)(O, T.h1.CUSTOM_APP_ICONS);
-    let D = (0, d.Dt)(),
-        L = (0, l.useRadioGroup)({
+        D = s.useRef(null);
+    (0, g.Z)(D, y.h1.CUSTOM_APP_ICONS);
+    let L = (0, _.Dt)(),
+        x = (0, c.useRadioGroup)({
             orientation: 'horizontal',
-            labelledBy: D
+            labelledBy: L
         }),
-        x = (e) => {
-            if (R && !y && e !== g.aH.DEFAULT) {
-                (0, l.openModalLazy)(async () => {
-                    let { default: e } = await n.e('69052').then(n.bind(n, 184250));
-                    return (t) =>
-                        (0, r.jsx)(e, {
-                            analyticsSource: c.Z.APP_ICON_SELECTOR,
+        w = (e) => {
+            if (O && !o && e !== v.aH.DEFAULT) {
+                (0, c.openModalLazy)(async () => {
+                    let { default: e } = await r.e('69052').then(r.bind(r, 184250));
+                    return (n) =>
+                        (0, a.jsx)(e, {
+                            analyticsSource: f.Z.APP_ICON_SELECTOR,
                             analyticsLocation: {
-                                section: I.jXE.SETTINGS_APPEARANCE_APP_ICON_PICKER,
-                                object: I.qAy.BUTTON_ICON
+                                section: b.jXE.SETTINGS_APPEARANCE_APP_ICON_PICKER,
+                                object: b.qAy.BUTTON_ICON
                             },
-                            ...t
+                            ...n
                         });
                 });
                 return;
             }
-            u.Z.dispatch({
+            d.Z.dispatch({
                 type: 'APP_ICON_UPDATED',
                 id: e
             });
         };
-    return (0, r.jsx)('div', {
-        ref: O,
-        children: (0, r.jsx)('div', {
-            ...L,
-            className: S.__invalid_container,
-            children: (0, r.jsxs)('div', {
-                className: t,
+    return (0, a.jsx)('div', {
+        ref: D,
+        children: (0, a.jsx)('div', {
+            ...x,
+            className: A.__invalid_container,
+            children: (0, a.jsxs)('div', {
+                className: n,
                 children: [
-                    (0, r.jsxs)('div', {
-                        className: S.header,
+                    (0, a.jsxs)('div', {
+                        className: A.header,
                         children: [
-                            (0, r.jsxs)('div', {
-                                className: S.headings,
+                            (0, a.jsxs)('div', {
+                                className: A.headings,
                                 children: [
-                                    !y &&
-                                        (0, r.jsxs)('div', {
-                                            className: S.title,
+                                    !o &&
+                                        (0, a.jsxs)('div', {
+                                            className: A.title,
                                             children: [
-                                                (0, r.jsx)(l.Heading, {
+                                                (0, a.jsx)(c.Heading, {
                                                     variant: 'text-md/medium',
-                                                    children: b.intl.string(b.t.NThqT0)
+                                                    children: S.intl.string(S.t.NThqT0)
                                                 }),
-                                                !R && (0, r.jsx)(p.Z, { className: S.premiumIcon })
+                                                !O && (0, a.jsx)(m.Z, { className: A.premiumIcon })
                                             ]
                                         }),
-                                    R
-                                        ? y
+                                    O
+                                        ? o
                                             ? null
-                                            : (0, r.jsxs)('div', {
-                                                  className: S.description,
+                                            : (0, a.jsxs)('div', {
+                                                  className: A.description,
                                                   children: [
-                                                      (0, r.jsx)(l.NitroWheelIcon, {
+                                                      (0, a.jsx)(c.NitroWheelIcon, {
                                                           size: 'md',
                                                           color: 'currentColor',
-                                                          className: S.nitroWheel
+                                                          className: A.nitroWheel
                                                       }),
-                                                      (0, r.jsx)(l.Heading, {
+                                                      (0, a.jsx)(c.Heading, {
                                                           variant: 'text-sm/normal',
-                                                          children: b.intl.format(b.t.x2dQxM, {
+                                                          children: S.intl.format(S.t.x2dQxM, {
                                                               onClick: () => {
-                                                                  (0, f.$)();
+                                                                  (0, h.$)();
                                                               }
                                                           })
                                                       })
                                                   ]
                                               })
-                                        : (0, r.jsx)(l.Heading, {
+                                        : (0, a.jsx)(c.Heading, {
                                               variant: 'text-sm/normal',
-                                              children: b.intl.string(b.t.IgENJi)
+                                              children: S.intl.string(S.t.IgENJi)
                                           })
                                 ]
                             }),
-                            null == A ? void 0 : A()
+                            null == N ? void 0 : N()
                         ]
                     }),
-                    (0, r.jsx)('div', {
-                        className: s()(S.presets, { [S.presetsJustified]: R && y }),
-                        children: (0, v.wu)()
+                    (0, a.jsx)('div', {
+                        className: l()(A.presets, { [A.presetsJustified]: O && o }),
+                        children: (0, T.wu)()
                             .filter((e) => {
-                                let { isHidden: t } = e;
-                                return !t;
+                                let { isHidden: n } = e;
+                                return !n;
                             })
-                            .map((e, t) =>
-                                (0, r.jsx)(
-                                    E.Z,
+                            .map((e, n) =>
+                                (0, a.jsx)(
+                                    I.Z,
                                     {
                                         icon: e,
-                                        isSelected: N === e.id,
-                                        onSelect: (e) => x(e),
-                                        disabled: a,
-                                        tabIndex: 0 !== t || a ? void 0 : 0,
-                                        locked: R && !y && e.id !== g.aH.DEFAULT
+                                        isSelected: C === e.id,
+                                        onSelect: (e) => w(e),
+                                        disabled: i,
+                                        tabIndex: 0 !== n || i ? void 0 : 0,
+                                        locked: O && !o && e.id !== v.aH.DEFAULT
                                     },
                                     e.id
                                 )

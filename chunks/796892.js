@@ -1,23 +1,23 @@
-var r = n(192379),
-    i = n(476400),
-    a = n.n(i),
-    s = n(723184),
-    o = n(877837),
-    l =
+var i = r(192379),
+    a = r(476400),
+    s = r.n(a),
+    o = r(723184),
+    l = r(877837),
+    u =
         Object.assign ||
         function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+            for (var n = 1; n < arguments.length; n++) {
+                var r = arguments[n];
+                for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
             }
             return e;
         },
-    u = function (e) {
-        var t = e.colors,
-            n = e.onClick,
-            i = void 0 === n ? function () {} : n,
-            a = e.onSwatchHover,
-            u = (0, s.default)(
+    c = function (e) {
+        var n = e.colors,
+            r = e.onClick,
+            a = void 0 === r ? function () {} : r,
+            s = e.onSwatchHover,
+            c = (0, o.default)(
                 {
                     default: {
                         colors: {
@@ -40,54 +40,54 @@ var r = n(192379),
                     },
                     'no-presets': { colors: { display: 'none' } }
                 },
-                { 'no-presets': !t || !t.length }
+                { 'no-presets': !n || !n.length }
             ),
-            c = function (e, t) {
-                i(
+            d = function (e, n) {
+                a(
                     {
                         hex: e,
                         source: 'hex'
                     },
-                    t
+                    n
                 );
             };
-        return r.createElement(
+        return i.createElement(
             'div',
             {
-                style: u.colors,
+                style: c.colors,
                 className: 'flexbox-fix'
             },
-            t.map(function (e) {
-                var t = 'string' == typeof e ? { color: e } : e,
-                    n = '' + t.color + (t.title || '');
-                return r.createElement(
+            n.map(function (e) {
+                var n = 'string' == typeof e ? { color: e } : e,
+                    r = '' + n.color + (n.title || '');
+                return i.createElement(
                     'div',
                     {
-                        key: n,
-                        style: u.swatchWrap
+                        key: r,
+                        style: c.swatchWrap
                     },
-                    r.createElement(
-                        o.m4,
-                        l({}, t, {
-                            style: u.swatch,
-                            onClick: c,
-                            onHover: a,
-                            focusStyle: { boxShadow: 'inset 0 0 0 1px rgba(0,0,0,.15), 0 0 4px ' + t.color }
+                    i.createElement(
+                        l.m4,
+                        u({}, n, {
+                            style: c.swatch,
+                            onClick: d,
+                            onHover: s,
+                            focusStyle: { boxShadow: 'inset 0 0 0 1px rgba(0,0,0,.15), 0 0 4px ' + n.color }
                         })
                     )
                 );
             })
         );
     };
-(u.propTypes = {
-    colors: a().arrayOf(
-        a().oneOfType([
-            a().string,
-            a().shape({
-                color: a().string,
-                title: a().string
+(c.propTypes = {
+    colors: s().arrayOf(
+        s().oneOfType([
+            s().string,
+            s().shape({
+                color: s().string,
+                title: s().string
             })
         ])
     ).isRequired
 }),
-    (t.Z = u);
+    (n.Z = c);

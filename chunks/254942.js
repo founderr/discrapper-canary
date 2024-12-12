@@ -1,44 +1,44 @@
-n.d(t, {
+r.d(n, {
     Y: function () {
-        return f;
+        return _;
     }
 });
-var r = n(558030),
-    i = n(246733),
-    a = n(165352),
-    s = n(152450),
-    o = n(516558),
-    l = n(281257),
-    u = n(742442),
-    c = n(554385),
-    d = n(546914);
-function f(e) {
+var i = r(558030),
+    a = r(246733),
+    s = r(165352),
+    o = r(152450),
+    l = r(516558),
+    u = r(281257),
+    c = r(742442),
+    d = r(554385),
+    f = r(546914);
+function _(e) {
     switch (e) {
         case 'buddhist':
-            return new r.M();
+            return new i.M();
         case 'ethiopic':
-            return new i.Wt();
+            return new a.Wt();
         case 'ethioaa':
-            return new i.zY();
+            return new a.zY();
         case 'coptic':
-            return new i.Y0();
+            return new a.Y0();
         case 'hebrew':
-            return new s.H();
+            return new o.H();
         case 'indian':
-            return new o.t();
+            return new l.t();
         case 'islamic-civil':
-            return new l.$0();
+            return new u.$0();
         case 'islamic-tbla':
-            return new l.CF();
+            return new u.CF();
         case 'islamic-umalqura':
-            return new l.lw();
+            return new u.lw();
         case 'japanese':
-            return new u.o();
+            return new c.o();
         case 'persian':
-            return new c.r();
+            return new d.r();
         case 'roc':
-            return new d.t();
+            return new f.t();
         default:
-            return new a.IQ();
+            return new s.IQ();
     }
 }

@@ -1,37 +1,37 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return f;
+        return _;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(442837),
-    a = n(314897),
-    s = n(984173),
-    o = n(295937),
-    l = n(718107),
-    u = n(611428),
-    c = n(4517),
-    d = n(48274);
-function f(e) {
-    let { user: t, location: n, ...f } = e,
-        { statusReactReplyEnabled: _ } = (0, l.t)({ location: n }),
-        { allProfileReactReplyEnabled: p } = (0, s.F)({ location: n }),
-        { simplifiedCustomStatusBubbleEnabled: h } = (0, o.l)({ location: n }),
-        m = !(0, i.e7)([a.default], () => a.default.getId() === t.id) && !t.bot && (_ || p);
-    return h
-        ? (0, r.jsx)(u.Z, {
-              user: t,
-              reactReplyEnabled: m,
-              ...f
+var i = r(200651);
+r(192379);
+var a = r(442837),
+    s = r(314897),
+    o = r(984173),
+    l = r(295937),
+    u = r(718107),
+    c = r(611428),
+    d = r(4517),
+    f = r(48274);
+function _(e) {
+    let { user: n, location: r, ..._ } = e,
+        { statusReactReplyEnabled: h } = (0, u.t)({ location: r }),
+        { allProfileReactReplyEnabled: p } = (0, o.F)({ location: r }),
+        { simplifiedCustomStatusBubbleEnabled: m } = (0, l.l)({ location: r }),
+        g = !(0, a.e7)([s.default], () => s.default.getId() === n.id) && !n.bot && (h || p);
+    return m
+        ? (0, i.jsx)(c.Z, {
+              user: n,
+              reactReplyEnabled: g,
+              ..._
           })
-        : m
-          ? (0, r.jsx)(d.Z, {
-                user: t,
-                ...f
+        : g
+          ? (0, i.jsx)(f.Z, {
+                user: n,
+                ..._
             })
-          : (0, r.jsx)(c.Z, {
-                user: t,
-                ...f
+          : (0, i.jsx)(d.Z, {
+                user: n,
+                ..._
             });
 }

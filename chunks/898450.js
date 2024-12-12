@@ -1,8 +1,8 @@
-function r(e) {
+function i(e) {
     return Array.isArray(e) ? e[0] : e;
 }
-n.d(t, {
+r.d(n, {
     d: function () {
-        return r;
+        return i;
     }
 });

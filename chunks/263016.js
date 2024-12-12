@@ -1,19 +1,19 @@
-n.d(t, {
+r.d(n, {
     W1: function () {
-        return l;
+        return u;
     }
 });
-var r = n(59973),
-    i = n(202373),
-    a = n(556532),
-    s = n(509883),
-    o = n(713011);
-function l(e) {
+var i = r(59973),
+    a = r(202373),
+    s = r(556532),
+    o = r(509883),
+    l = r(713011);
+function u(e) {
     return {
-        beginDrag: (0, r.m)(e),
-        publishDragSource: (0, i.U)(e),
-        hover: (0, a.s)(e),
-        drop: (0, s._)(e),
-        endDrag: (0, o.F)(e)
+        beginDrag: (0, i.m)(e),
+        publishDragSource: (0, a.U)(e),
+        hover: (0, s.s)(e),
+        drop: (0, o._)(e),
+        endDrag: (0, l.F)(e)
     };
 }

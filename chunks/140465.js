@@ -1,82 +1,82 @@
-n.d(t, {
+r.d(n, {
     Nx: function () {
-        return h;
-    },
-    UV: function () {
-        return I;
-    },
-    WR: function () {
-        return v;
-    },
-    lr: function () {
         return g;
     },
+    UV: function () {
+        return b;
+    },
+    WR: function () {
+        return T;
+    },
+    lr: function () {
+        return v;
+    },
     t7: function () {
-        return m;
+        return E;
     },
     x8: function () {
-        return T;
+        return y;
     }
-}),
-    n(47120);
-var r = n(192379),
-    i = n(913527),
-    a = n.n(i),
-    s = n(442837),
-    o = n(544891),
-    l = n(78839),
-    u = n(775412),
-    c = n(769415),
-    d = n(104494),
-    f = n(639119),
-    _ = n(474936),
-    p = n(981631);
-function h() {
-    let e = (0, f.N)(),
-        t = (0, u._O)(),
-        n = (0, d.Ng)(),
-        r = m();
-    return null != e || t || null != n || r;
+});
+var i = r(47120);
+var a = r(192379),
+    s = r(913527),
+    o = r.n(s),
+    l = r(442837),
+    u = r(544891),
+    c = r(78839),
+    d = r(775412),
+    f = r(769415),
+    _ = r(104494),
+    h = r(639119),
+    p = r(474936),
+    m = r(981631);
+function g() {
+    let e = (0, h.N)(),
+        n = (0, d._O)(),
+        r = (0, _.Ng)(),
+        i = E();
+    return null != e || n || null != r || i;
 }
-let m = () => {
+let E = () => {
         var e;
-        let t = (0, s.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
-            n = null == t ? void 0 : null === (e = t.metadata) || void 0 === e ? void 0 : e.active_discount_expires_at;
-        return null != n && a()(Date.now()) <= a()(n);
+        let n = (0, l.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription()),
+            r = null == n ? void 0 : null === (e = n.metadata) || void 0 === e ? void 0 : e.active_discount_expires_at;
+        return null != r && o()(Date.now()) <= o()(r);
     },
-    g = () => {
+    v = () => {
         var e;
-        let t = (0, s.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription());
-        switch (null == t ? void 0 : null === (e = t.metadata) || void 0 === e ? void 0 : e.active_discount_id) {
-            case _.dT:
-            case _.rB:
+        let n = (0, l.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription());
+        switch (null == n ? void 0 : null === (e = n.metadata) || void 0 === e ? void 0 : e.active_discount_id) {
+            case p.dT:
+            case p.rB:
                 return {
                     duration: 1,
                     percentage: 30
                 };
-            case _.dB:
-            case _.hs:
-            case _.RU:
+            case p.dB:
+            case p.hs:
+            case p.RU:
                 return {
                     duration: 3,
                     percentage: 30
                 };
-            case _.ih:
+            case p.ih:
                 return {
                     duration: 1,
                     percentage: 40
                 };
-            case _.gW:
+            case p.gW:
                 return {
                     duration: 1,
                     percentage: 20
                 };
-            case _.Nl:
+            case p.Nl:
                 return {
                     duration: 1,
                     percentage: 25
                 };
-            case _.n5:
+            case p.n5:
                 return {
                     duration: 1,
                     percentage: 40
@@ -85,66 +85,66 @@ let m = () => {
                 return;
         }
     },
-    E = async () => {
+    I = async () => {
         let e = null;
         try {
-            var t;
-            let n = await o.tn.post({
-                url: p.ANM.CHURN_USER_OFFER,
+            var n;
+            let r = await u.tn.post({
+                url: m.ANM.CHURN_USER_OFFER,
                 rejectWithError: !0
             });
-            e = null !== (t = n.body.offer) && void 0 !== t ? t : null;
+            e = null !== (n = r.body.offer) && void 0 !== n ? n : null;
         } catch (e) {}
         return e;
     },
-    v = (e) => {
-        let [t, n] = r.useState(!1),
-            [i, a] = r.useState(!1),
-            [s, o] = r.useState(null);
+    T = (e) => {
+        let [n, r] = a.useState(!1),
+            [i, s] = a.useState(!1),
+            [o, l] = a.useState(null);
         if (e)
             return {
-                churnUserDiscountOffer: s,
+                churnUserDiscountOffer: o,
                 isFetchingChurnDiscountOffer: i
             };
-        let l = () => {
-            n(!0), a(!1);
+        let u = () => {
+            r(!0), s(!1);
         };
         return (
             !i &&
-                !t &&
-                (a(!0),
-                E()
+                !n &&
+                (s(!0),
+                I()
                     .then((e) => {
-                        o(e), l();
+                        l(e), u();
                     })
                     .catch((e) => {
-                        l();
+                        u();
                     })),
             {
-                churnUserDiscountOffer: s,
+                churnUserDiscountOffer: o,
                 isFetchingChurnDiscountOffer: i
             }
         );
     },
-    I = () => {
-        let e = (0, s.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
-            t = m(),
-            n = null !== e && e.hasPremiumNitroMonthly,
-            r = null != e && null != e.trialId;
-        return n && !r && !t;
+    b = () => {
+        let e = (0, l.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription()),
+            n = E(),
+            r = null !== e && e.hasPremiumNitroMonthly,
+            i = null != e && null != e.trialId;
+        return r && !i && !n;
     },
-    T = (e) => {
-        let t = (0, s.e7)([l.ZP], () => l.ZP.inReverseTrial()),
-            n = (0, s.e7)([l.ZP], () => {
+    y = (e) => {
+        let n = (0, l.e7)([c.ZP], () => c.ZP.inReverseTrial()),
+            r = (0, l.e7)([c.ZP], () => {
                 var e;
-                return (null === (e = l.ZP.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialId) === _.jz;
+                return (null === (e = c.ZP.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialId) === p.jz;
             }),
-            r = c.Z.useExperiment(
+            i = f.Z.useExperiment(
                 { location: e },
                 {
-                    disable: !n,
-                    autoTrackExposure: n
+                    disable: !r,
+                    autoTrackExposure: r
                 }
             ).enabled;
-        return t || r;
+        return n || i;
     };

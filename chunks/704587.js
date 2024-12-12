@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     G: function () {
-        return i;
+        return a;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
     kind: 'user',
     id: '2024-04_dm_settings_upsell',
     label: 'DM Settings Upsell',
@@ -21,7 +21,7 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i(e) {
-    let { location: t, autoTrackExposure: n = !1 } = e;
-    return r.getCurrentConfig({ location: t }, { autoTrackExposure: n }).enabled;
+function a(e) {
+    let { location: n, autoTrackExposure: r = !1 } = e;
+    return i.getCurrentConfig({ location: n }, { autoTrackExposure: r }).enabled;
 }

@@ -1,4 +1,4 @@
-var r = n(371017)(function (e, t, n) {
-    return e + (n ? '-' : '') + t.toLowerCase();
+var i = r(371017)(function (e, n, r) {
+    return e + (r ? '-' : '') + n.toLowerCase();
 });
-e.exports = r;
+e.exports = i;

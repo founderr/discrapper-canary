@@ -1,41 +1,41 @@
-n.d(t, {
+r.d(n, {
     R: function () {
-        return o;
+        return l;
     }
 });
-var r = n(661763),
-    i = n(662845),
-    a = n(192379),
-    s = n(726983);
-function o(e, t) {
-    let { role: n = 'dialog' } = e,
-        o = (0, r.mp)();
-    o = e['aria-label'] ? void 0 : o;
-    let l = (0, a.useRef)(!1);
+var i = r(661763),
+    a = r(662845),
+    s = r(192379),
+    o = r(726983);
+function l(e, n) {
+    let { role: r = 'dialog' } = e,
+        l = (0, i.mp)();
+    l = e['aria-label'] ? void 0 : l;
+    let u = (0, s.useRef)(!1);
     return (
-        (0, a.useEffect)(() => {
-            if (t.current && !t.current.contains(document.activeElement)) {
-                (0, i.ex)(t.current);
+        (0, s.useEffect)(() => {
+            if (n.current && !n.current.contains(document.activeElement)) {
+                (0, a.ex)(n.current);
                 let e = setTimeout(() => {
-                    document.activeElement === t.current && ((l.current = !0), t.current && (t.current.blur(), (0, i.ex)(t.current)), (l.current = !1));
+                    document.activeElement === n.current && ((u.current = !0), n.current && (n.current.blur(), (0, a.ex)(n.current)), (u.current = !1));
                 }, 500);
                 return () => {
                     clearTimeout(e);
                 };
             }
-        }, [t]),
-        (0, s.Bq)(),
+        }, [n]),
+        (0, o.Bq)(),
         {
             dialogProps: {
-                ...(0, r.zL)(e, { labelable: !0 }),
-                role: n,
+                ...(0, i.zL)(e, { labelable: !0 }),
+                role: r,
                 tabIndex: -1,
-                'aria-labelledby': e['aria-labelledby'] || o,
+                'aria-labelledby': e['aria-labelledby'] || l,
                 onBlur: (e) => {
-                    l.current && e.stopPropagation();
+                    u.current && e.stopPropagation();
                 }
             },
-            titleProps: { id: o }
+            titleProps: { id: l }
         }
     );
 }

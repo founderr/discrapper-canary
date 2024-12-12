@@ -1,21 +1,21 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return o;
+        return l;
     }
 });
-var r = n(846027),
-    i = n(872810),
-    a = n(314897),
-    s = n(569545);
-function o(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+var i = r(846027),
+    a = r(872810),
+    s = r(314897),
+    o = r(569545);
+function l(e) {
+    let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     if (null == e) return;
-    let { streamType: n, guildId: o, channelId: l, ownerId: u } = e,
-        c = (0, s.V9)({
-            streamType: n,
-            guildId: o,
-            channelId: l,
-            ownerId: u
+    let { streamType: r, guildId: l, channelId: u, ownerId: c } = e,
+        d = (0, o.V9)({
+            streamType: r,
+            guildId: l,
+            channelId: u,
+            ownerId: c
         });
-    u === a.default.getId() && r.Z.setGoLiveSource(null), i.g(c, t);
+    c === s.default.getId() && i.Z.setGoLiveSource(null), a.g(d, n);
 }

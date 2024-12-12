@@ -1,33 +1,33 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return f;
+        return _;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(442837),
-    a = n(692547),
-    s = n(981729),
-    o = n(481060),
-    l = n(621853),
-    u = n(228168),
-    c = n(388032),
-    d = n(100757);
-function f(e) {
-    let { userId: t } = e;
+var i = r(200651);
+r(192379);
+var a = r(442837),
+    s = r(692547),
+    o = r(981729),
+    l = r(481060),
+    u = r(621853),
+    c = r(228168),
+    d = r(388032),
+    f = r(100757);
+function _(e) {
+    let { userId: n } = e;
     return null ==
-        (0, i.e7)([l.Z], () => {
+        (0, a.e7)([u.Z], () => {
             var e;
-            return null === (e = l.Z.getUserProfile(t)) || void 0 === e ? void 0 : e.fetchError;
+            return null === (e = u.Z.getUserProfile(n)) || void 0 === e ? void 0 : e.fetchError;
         })
         ? null
-        : (0, r.jsx)(s.DY, {
-              className: d.container,
-              text: c.intl.string(c.t.p3Q9Y2),
-              delay: u.vB,
-              children: (0, r.jsx)(o.CircleWarningIcon, {
+        : (0, i.jsx)(o.DY, {
+              className: f.container,
+              text: d.intl.string(d.t.p3Q9Y2),
+              delay: c.vB,
+              children: (0, i.jsx)(l.CircleWarningIcon, {
                   size: 'xs',
-                  color: a.Z.colors.STATUS_WARNING.css
+                  color: s.Z.colors.STATUS_WARNING.css
               })
           });
 }

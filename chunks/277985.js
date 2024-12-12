@@ -1,25 +1,25 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(302463),
-    i = n(981631);
-class a {
+var i = r(302463),
+    a = r(981631);
+class s {
     getCreateAttachmentURL(e) {
-        return i.ANM.GUILD_PRODUCT_CREATE_ATTACHMENT_UPLOAD(e);
+        return a.ANM.GUILD_PRODUCT_CREATE_ATTACHMENT_UPLOAD(e);
     }
     getDeleteUploadURL(e) {
-        return i.ANM.MESSAGE_DELETE_UPLOAD(e);
+        return a.ANM.MESSAGE_DELETE_UPLOAD(e);
     }
     getMaxFileSize(e) {
-        return r.ve;
+        return i.ve;
     }
     getMaxAttachmentsCount() {
-        return r.pt;
+        return i.pt;
     }
     getMaxTotalAttachmentSize() {
-        return r.S5;
+        return i.S5;
     }
     get shouldReactNativeCompressUploads() {
         return !1;

@@ -1,46 +1,46 @@
-n.d(t, {
+r.d(n, {
     T: function () {
-        return h;
+        return m;
     },
     Z: function () {
         return p;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(442837),
-    a = n(481060),
-    s = n(100527),
-    o = n(432877),
-    l = n(726521),
-    u = n(87620),
-    c = n(314897),
-    d = n(594174),
-    f = n(981631),
-    _ = n(388032);
+var i = r(200651);
+r(192379);
+var a = r(442837),
+    s = r(481060),
+    o = r(100527),
+    l = r(432877),
+    u = r(726521),
+    c = r(87620),
+    d = r(314897),
+    f = r(594174),
+    _ = r(981631),
+    h = r(388032);
 function p(e) {
-    let { user: t, guildId: n, color: o, onAction: d, location: p = s.Z.CONTEXT_MENU } = e,
-        h = (0, u.oV)(p),
-        m = (0, i.e7)([c.default], () => c.default.getId() === t.id);
-    return !h || m || t.isNonUserBot()
+    let { user: n, guildId: r, color: l, onAction: f, location: p = o.Z.CONTEXT_MENU } = e,
+        m = (0, c.oV)(p),
+        g = (0, a.e7)([d.default], () => d.default.getId() === n.id);
+    return !m || g || n.isNonUserBot()
         ? null
-        : (0, r.jsx)(a.MenuItem, {
+        : (0, i.jsx)(s.MenuItem, {
               id: 'report-user',
-              color: o,
-              label: _.intl.string(_.t.A1MM3N),
-              action: () => (0, l.pX)(t, n === f.ME ? void 0 : n, d)
+              color: l,
+              label: h.intl.string(h.t.A1MM3N),
+              action: () => (0, u.pX)(n, r === _.ME ? void 0 : r, f)
           });
 }
-function h(e) {
-    let { user: t, guildId: n, color: s, onAction: u } = e,
-        c = (0, i.e7)([o.ZP], () => o.ZP.get('iar_testing')),
-        _ = (0, i.e7)([d.default], () => d.default.getCurrentUser());
-    return null != _ && (t.id === _.id || t.isNonUserBot() || !_.isStaff() || !c)
+function m(e) {
+    let { user: n, guildId: r, color: o, onAction: c } = e,
+        d = (0, a.e7)([l.ZP], () => l.ZP.get('iar_testing')),
+        h = (0, a.e7)([f.default], () => f.default.getCurrentUser());
+    return null != h && (n.id === h.id || n.isNonUserBot() || !h.isStaff() || !d)
         ? null
-        : (0, r.jsx)(a.MenuItem, {
+        : (0, i.jsx)(s.MenuItem, {
               id: 'staff-test-report-user',
-              color: s,
+              color: o,
               label: '[STAFF] Test Profile Report',
-              action: () => (0, l.I6)(t, n === f.ME ? void 0 : n, u)
+              action: () => (0, u.I6)(n, r === _.ME ? void 0 : r, c)
           });
 }

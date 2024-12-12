@@ -1,39 +1,39 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return f;
+        return _;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(481060),
-    s = n(287734),
-    o = n(411840),
-    l = n(585483),
-    u = n(871499),
-    c = n(981631),
-    d = n(388032);
-function f(e) {
-    let { channel: t, centerButton: n = !1, ...f } = e,
-        _ = n ? u.d : u.Z,
-        p = t.isManaged() || !t.isPrivate() ? d.intl.string(d.t.S0W8Z2) : d.intl.string(d.t['0D/6R0']),
-        { groupedButtons: h } = (0, o.Z)({ location: 'JoinCallButton' }),
-        m = i.useCallback(() => s.default.selectVoiceChannel(t.id), [t.id]);
+var i = r(200651),
+    a = r(192379),
+    s = r(481060),
+    o = r(287734),
+    l = r(411840),
+    u = r(585483),
+    c = r(871499),
+    d = r(981631),
+    f = r(388032);
+function _(e) {
+    let { channel: n, centerButton: r = !1, ..._ } = e,
+        h = r ? c.d : c.Z,
+        p = n.isManaged() || !n.isPrivate() ? f.intl.string(f.t.S0W8Z2) : f.intl.string(f.t['0D/6R0']),
+        { groupedButtons: m } = (0, l.Z)({ location: 'JoinCallButton' }),
+        g = a.useCallback(() => o.default.selectVoiceChannel(n.id), [n.id]);
     return (
-        i.useEffect(
+        a.useEffect(
             () => (
-                l.S.subscribe(c.CkL.CALL_ACCEPT, m),
+                u.S.subscribe(d.CkL.CALL_ACCEPT, g),
                 () => {
-                    l.S.unsubscribe(c.CkL.CALL_ACCEPT, m);
+                    u.S.unsubscribe(d.CkL.CALL_ACCEPT, g);
                 }
             ),
-            [m]
+            [g]
         ),
-        (0, r.jsx)(_, {
-            ...f,
-            iconComponent: a.PhoneCallIcon,
+        (0, i.jsx)(h, {
+            ..._,
+            iconComponent: s.PhoneCallIcon,
             label: p,
-            onClick: m,
-            fullRegionButton: h
+            onClick: g,
+            fullRegionButton: m
         })
     );
 }

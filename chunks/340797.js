@@ -1,44 +1,44 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(946273),
-    s = n(441110),
-    o = n(388032),
-    l = n(673094);
-function u(e) {
-    let { guild: t, message: n } = e;
-    return (0, a.vV)(t.id, n.author.id)
-        ? (0, r.jsx)(i.Popout, {
-              animation: i.Popout.Animation.TRANSLATE,
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(946273),
+    o = r(441110),
+    l = r(388032),
+    u = r(673094);
+function c(e) {
+    let { guild: n, message: r } = e;
+    return (0, s.vV)(n.id, r.author.id)
+        ? (0, i.jsx)(a.Popout, {
+              animation: a.Popout.Animation.TRANSLATE,
               align: 'center',
               autoInvert: !0,
               nudgeAlignIntoViewport: !0,
               position: 'right',
               renderPopout: (e) => {
-                  let { closePopout: i } = e;
-                  return (0, r.jsx)(s.Z, {
-                      guild: t,
-                      message: n,
-                      onClose: i
+                  let { closePopout: a } = e;
+                  return (0, i.jsx)(o.Z, {
+                      guild: n,
+                      message: r,
+                      onClose: a
                   });
               },
               children: (e) => {
-                  let { onClick: t } = e;
-                  return (0, r.jsx)(i.Clickable, {
-                      onClick: t,
+                  let { onClick: n } = e;
+                  return (0, i.jsx)(a.Clickable, {
+                      onClick: n,
                       tag: 'span',
-                      children: (0, r.jsx)(i.Tooltip, {
-                          text: o.intl.string(o.t['v/OYd3']),
+                      children: (0, i.jsx)(a.Tooltip, {
+                          text: l.intl.string(l.t['v/OYd3']),
                           children: (e) =>
-                              (0, r.jsx)('div', {
-                                  className: l.newMemberBadge,
+                              (0, i.jsx)('div', {
+                                  className: u.newMemberBadge,
                                   ...e,
-                                  children: (0, r.jsx)(i.NewUserIcon, {
+                                  children: (0, i.jsx)(a.NewUserIcon, {
                                       size: 'custom',
                                       color: 'currentColor',
                                       width: 20,

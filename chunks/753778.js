@@ -1,72 +1,72 @@
-n.d(t, {
+r.d(n, {
     w: function () {
-        return d;
+        return f;
     }
 });
-var r = n(259630),
-    i = n(731750),
-    a = n(19929),
-    s = n(548097),
-    o = n(739292);
-function l(e, t) {
-    return Object.keys(e).reduce(function (n, i) {
-        return (n[i] = (0, r.pi)({ timeZone: t }, e[i])), n;
+var i = r(259630),
+    a = r(731750),
+    s = r(19929),
+    o = r(548097),
+    l = r(739292);
+function u(e, n) {
+    return Object.keys(e).reduce(function (r, a) {
+        return (r[a] = (0, i.pi)({ timeZone: n }, e[a])), r;
     }, {});
 }
-function u(e, t) {
-    return Object.keys((0, r.pi)((0, r.pi)({}, e), t)).reduce(function (n, i) {
-        return (n[i] = (0, r.pi)((0, r.pi)({}, e[i] || {}), t[i] || {})), n;
+function c(e, n) {
+    return Object.keys((0, i.pi)((0, i.pi)({}, e), n)).reduce(function (r, a) {
+        return (r[a] = (0, i.pi)((0, i.pi)({}, e[a] || {}), n[a] || {})), r;
     }, {});
 }
-function c(e, t) {
-    if (!t) return e;
-    var n = a.C.formats;
-    return (0, r.pi)((0, r.pi)((0, r.pi)({}, n), e), {
-        date: u(l(n.date, t), l(e.date || {}, t)),
-        time: u(l(n.time, t), l(e.time || {}, t))
+function d(e, n) {
+    if (!n) return e;
+    var r = s.C.formats;
+    return (0, i.pi)((0, i.pi)((0, i.pi)({}, r), e), {
+        date: c(u(r.date, n), u(e.date || {}, n)),
+        time: c(u(r.time, n), u(e.time || {}, n))
     });
 }
-var d = function (e, t, n, a, l) {
-    var u = e.locale,
-        d = e.formats,
-        f = e.messages,
-        _ = e.defaultLocale,
+var f = function (e, n, r, s, u) {
+    var c = e.locale,
+        f = e.formats,
+        _ = e.messages,
+        h = e.defaultLocale,
         p = e.defaultFormats,
-        h = e.fallbackOnEmptyString,
-        m = e.onError,
-        g = e.timeZone,
-        E = e.defaultRichTextElements;
-    void 0 === n && (n = { id: '' });
-    var v = n.id,
-        I = n.defaultMessage;
-    (0, i.kG)(!!v, '[@formatjs/intl] An `id` must be provided to format a message. You can either:\n1. Configure your build toolchain with [babel-plugin-formatjs](https://formatjs.io/docs/tooling/babel-plugin)\nor [@formatjs/ts-transformer](https://formatjs.io/docs/tooling/ts-transformer) OR\n2. Configure your `eslint` config to include [eslint-plugin-formatjs](https://formatjs.io/docs/tooling/linter#enforce-id)\nto autofix this issue');
-    var T = String(v),
-        b = f && Object.prototype.hasOwnProperty.call(f, T) && f[T];
-    if (Array.isArray(b) && 1 === b.length && b[0].type === o.wD.literal) return b[0].value;
-    if (!a && b && 'string' == typeof b && !E) return b.replace(/'\{(.*?)\}'/gi, '{$1}');
-    if (((a = (0, r.pi)((0, r.pi)({}, E), a || {})), (d = c(d, g)), (p = c(p, g)), !b)) {
-        if (!1 === h && '' === b) return b;
-        if (((!I || (u && u.toLowerCase() !== _.toLowerCase())) && m(new s.$6(n, u)), I))
+        m = e.fallbackOnEmptyString,
+        g = e.onError,
+        E = e.timeZone,
+        v = e.defaultRichTextElements;
+    void 0 === r && (r = { id: '' });
+    var I = r.id,
+        T = r.defaultMessage;
+    (0, a.kG)(!!I, '[@formatjs/intl] An `id` must be provided to format a message. You can either:\n1. Configure your build toolchain with [babel-plugin-formatjs](https://formatjs.io/docs/tooling/babel-plugin)\nor [@formatjs/ts-transformer](https://formatjs.io/docs/tooling/ts-transformer) OR\n2. Configure your `eslint` config to include [eslint-plugin-formatjs](https://formatjs.io/docs/tooling/linter#enforce-id)\nto autofix this issue');
+    var b = String(I),
+        y = _ && Object.prototype.hasOwnProperty.call(_, b) && _[b];
+    if (Array.isArray(y) && 1 === y.length && y[0].type === l.wD.literal) return y[0].value;
+    if (!s && y && 'string' == typeof y && !v) return y.replace(/'\{(.*?)\}'/gi, '{$1}');
+    if (((s = (0, i.pi)((0, i.pi)({}, v), s || {})), (f = d(f, E)), (p = d(p, E)), !y)) {
+        if (!1 === m && '' === y) return y;
+        if (((!T || (c && c.toLowerCase() !== h.toLowerCase())) && g(new o.$6(r, c)), T))
             try {
-                var S = t.getMessageFormat(I, _, p, l);
-                return S.format(a);
+                var S = n.getMessageFormat(T, h, p, u);
+                return S.format(s);
             } catch (e) {
-                return m(new s.X9('Error formatting default message for: "'.concat(T, '", rendering default message verbatim'), u, n, e)), 'string' == typeof I ? I : T;
+                return g(new o.X9('Error formatting default message for: "'.concat(b, '", rendering default message verbatim'), c, r, e)), 'string' == typeof T ? T : b;
             }
-        return T;
+        return b;
     }
     try {
-        var S = t.getMessageFormat(b, u, d, (0, r.pi)({ formatters: t }, l || {}));
-        return S.format(a);
+        var S = n.getMessageFormat(y, c, f, (0, i.pi)({ formatters: n }, u || {}));
+        return S.format(s);
     } catch (e) {
-        m(new s.X9('Error formatting message: "'.concat(T, '", using ').concat(I ? 'default message' : 'id', ' as fallback.'), u, n, e));
+        g(new o.X9('Error formatting message: "'.concat(b, '", using ').concat(T ? 'default message' : 'id', ' as fallback.'), c, r, e));
     }
-    if (I)
+    if (T)
         try {
-            var S = t.getMessageFormat(I, _, p, l);
-            return S.format(a);
+            var S = n.getMessageFormat(T, h, p, u);
+            return S.format(s);
         } catch (e) {
-            m(new s.X9('Error formatting the default message for: "'.concat(T, '", rendering message verbatim'), u, n, e));
+            g(new o.X9('Error formatting the default message for: "'.concat(b, '", rendering message verbatim'), c, r, e));
         }
-    return 'string' == typeof b ? b : 'string' == typeof I ? I : T;
+    return 'string' == typeof y ? y : 'string' == typeof T ? T : b;
 };

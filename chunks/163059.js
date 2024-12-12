@@ -1,28 +1,28 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     buttonLabel: 'Mostrar sugerencias',
-    countAnnouncement: (e, t) =>
-        `${t.plural(e.optionCount, {
-            one: () => `${t.number(e.optionCount)} opci\xf3n`,
-            other: () => `${t.number(e.optionCount)} opciones`
+    countAnnouncement: (e, n) =>
+        `${n.plural(e.optionCount, {
+            one: () => `${n.number(e.optionCount)} opci\xf3n`,
+            other: () => `${n.number(e.optionCount)} opciones`
         })} disponible(s).`,
-    focusAnnouncement: (e, t) =>
-        `${t.select(
+    focusAnnouncement: (e, n) =>
+        `${n.select(
             {
                 true: () =>
-                    `Se ha unido al grupo ${e.groupTitle}, con ${t.plural(e.groupCount, {
-                        one: () => `${t.number(e.groupCount)} opci\xf3n`,
-                        other: () => `${t.number(e.groupCount)} opciones`
+                    `Se ha unido al grupo ${e.groupTitle}, con ${n.plural(e.groupCount, {
+                        one: () => `${n.number(e.groupCount)} opci\xf3n`,
+                        other: () => `${n.number(e.groupCount)} opciones`
                     })}. `,
                 other: ''
             },
             e.isGroupChange
-        )}${e.optionText}${t.select(
+        )}${e.optionText}${n.select(
             {
                 true: ', seleccionado',
                 other: ''

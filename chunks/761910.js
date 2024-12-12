@@ -1,14 +1,14 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(739754);
-function a(e) {
+var i = r(200651);
+r(192379);
+var a = r(739754);
+function s(e) {
     return {
-        content: (0, r.jsx)(i.ZP, { message: e }),
+        content: (0, i.jsx)(a.ZP, { message: e }),
         hasSpoilerEmbeds: !1
     };
 }

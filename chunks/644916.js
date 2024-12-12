@@ -1,26 +1,26 @@
-n.d(t, {
+r.d(n, {
     t: function () {
-        return l;
+        return u;
     }
 });
-var r = n(115434),
-    i = n(704215),
-    a = n(874703),
-    s = n(906690),
-    o = n(580130);
-function l(e) {
+var i = r(115434),
+    a = r(704215),
+    s = r(874703),
+    o = r(906690),
+    l = r(580130);
+function u(e) {
     switch (e) {
-        case i.z.COLLECTIBLES_SHOP_ENTRY_MARKETING:
-            var t, n;
-            return null !== (n = null === (t = a.Z.getMarketingBySurface(r.K.DESKTOP_SHOP_BUTTON)) || void 0 === t ? void 0 : t.version) && void 0 !== n ? n : 0;
-        case i.z.GIFTING_PROMOTION_ICON:
-        case i.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK:
-        case i.z.GIFTING_PROMOTION_MOBILE_FIRST_TIME_HALFSHEET:
-        case i.z.GIFTING_PROMOTION_REMINDER:
-            return s.JY;
-        case i.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL:
-            let l = o.Z.getFractionalPremium(!1);
-            if ((null == l ? void 0 : l.length) > 0) return Number(l[0].id);
+        case a.z.COLLECTIBLES_SHOP_ENTRY_MARKETING:
+            var n, r;
+            return null !== (r = null === (n = s.Z.getMarketingBySurface(i.K.DESKTOP_SHOP_BUTTON)) || void 0 === n ? void 0 : n.version) && void 0 !== r ? r : 0;
+        case a.z.GIFTING_PROMOTION_ICON:
+        case a.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK:
+        case a.z.GIFTING_PROMOTION_MOBILE_FIRST_TIME_HALFSHEET:
+        case a.z.GIFTING_PROMOTION_REMINDER:
+            return o.JY;
+        case a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL:
+            let u = l.Z.getFractionalPremium(!1);
+            if ((null == u ? void 0 : u.length) > 0) return Number(u[0].id);
             return 0;
         default:
             return 0;

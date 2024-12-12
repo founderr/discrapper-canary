@@ -1,13 +1,13 @@
-e.exports = (e, t) => (
-    (t = t || (() => {})),
+e.exports = (e, n) => (
+    (n = n || (() => {})),
     e.then(
         (e) =>
             new Promise((e) => {
-                e(t());
+                e(n());
             }).then(() => e),
         (e) =>
             new Promise((e) => {
-                e(t());
+                e(n());
             }).then(() => {
                 throw e;
             })

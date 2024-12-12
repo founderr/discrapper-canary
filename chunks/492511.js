@@ -1,14 +1,14 @@
-n.r(t),
-    n.d(t, {
+r.r(n),
+    r.d(n, {
         default: function () {
-            return a;
+            return s;
         }
     });
-var r = n(528734),
-    i = n(951516);
-function a(e, t) {
-    (0, i.Z)(2, arguments);
-    var n = (0, r.default)(e),
-        a = (0, r.default)(t);
-    return n.getFullYear() - a.getFullYear();
+var i = r(528734),
+    a = r(951516);
+function s(e, n) {
+    (0, a.Z)(2, arguments);
+    var r = (0, i.default)(e),
+        s = (0, i.default)(n);
+    return r.getFullYear() - s.getFullYear();
 }

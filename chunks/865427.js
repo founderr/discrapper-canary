@@ -1,55 +1,56 @@
-n.d(t, {
+r.d(n, {
     Ce: function () {
-        return f;
+        return m;
     },
     Ji: function () {
-        return c;
-    },
-    _G: function () {
-        return g;
-    },
-    _I: function () {
-        return _;
-    },
-    _S: function () {
         return h;
     },
-    fD: function () {
-        return p;
+    _G: function () {
+        return T;
     },
-    mG: function () {
+    _I: function () {
+        return g;
+    },
+    _S: function () {
         return v;
     },
+    fD: function () {
+        return E;
+    },
+    mG: function () {
+        return y;
+    },
     pU: function () {
-        return d;
+        return p;
     },
     r4: function () {
-        return b;
+        return R;
     }
-}),
-    n(642549),
-    n(47120);
-var r = n(973361),
-    i = n(729594),
-    a = n(544891),
-    s = n(358085),
-    o = n(591759),
-    l = n(908442);
-n(981631);
-let u = void 0,
-    c = (0, s.isAndroid)() ? u.Version.split(' - ')[0] : (0, s.isIOS)() ? u.Version : void 0;
-function d(e) {
+});
+var i = r(642549);
+var a = r(47120);
+var s = r(973361),
+    o = r(729594),
+    l = r(544891),
+    u = r(358085),
+    c = r(591759),
+    d = r(908442);
+r(981631);
+let f = void 0,
+    _ = '/__development/build_overrides',
+    h = (0, u.isAndroid)() ? f.Version.split(' - ')[0] : (0, u.isIOS)() ? f.Version : void 0;
+function p(e) {
     return ''.concat(location.protocol, '//').concat(location.host).concat(e);
 }
-function f() {
-    let e = o.Z.safeParseWithQuery(d('/__development/build_overrides'));
+function m() {
+    let e = c.Z.safeParseWithQuery(p(_));
     return null == e
         ? Promise.resolve(null)
         : ((e.search = null),
-          c && (e.query.version = c),
-          a.tn
+          h && (e.query.version = h),
+          l.tn
               .get({
-                  url: i.format(e),
+                  url: o.format(e),
                   oldFormErrors: !0,
                   rejectWithError: !1
               })
@@ -58,36 +59,18 @@ function f() {
                   () => null
               ));
 }
-function _(e) {
-    if (v(e))
-        return Promise.resolve(
-            (function (e) {
-                let t = e.match(E);
-                if (null == t || 2 !== t.length) return null;
-                let n = (0, s.getNativePlatform)(),
-                    r = t[1];
-                return {
-                    targetBuildOverride: {
-                        ['discord_'.concat(n)]: {
-                            type: 'branch',
-                            id: r
-                        }
-                    },
-                    validForUserIds: [],
-                    expiresAt: 'Mon, 1 Jan 2038 00:00:00 GMT'
-                };
-            })(e)
-        );
-    let t = o.Z.safeParseWithQuery(e);
-    return null == t
+function g(e) {
+    if (y(e)) return Promise.resolve(S(e));
+    let n = c.Z.safeParseWithQuery(e);
+    return null == n
         ? Promise.resolve(null)
-        : ((t.search = null),
-          (t.query.meta = 'true'),
-          c && (t.query.version = c),
-          (t.host = window.location.host),
-          a.tn
+        : ((n.search = null),
+          (n.query.meta = 'true'),
+          h && (n.query.version = h),
+          (n.host = window.location.host),
+          l.tn
               .get({
-                  url: i.format(t),
+                  url: o.format(n),
                   oldFormErrors: !0,
                   rejectWithError: !1
               })
@@ -96,41 +79,58 @@ function _(e) {
                   () => null
               ));
 }
-function p() {
-    return -1 !== window.document.cookie.indexOf(''.concat(l.ZF, '='));
+function E() {
+    return -1 !== window.document.cookie.indexOf(''.concat(d.ZF, '='));
 }
-function h() {
+function v() {
     try {
         var e;
-        let t = r.parse(window.document.cookie)[l.ZF];
-        if (null == t) return {};
-        let n = JSON.parse(atob(t.substring(t.indexOf('.') + 1)));
-        return null !== (e = n.$meta.experiments) && void 0 !== e ? e : {};
+        let n = s.parse(window.document.cookie)[d.ZF];
+        if (null == n) return {};
+        let r = JSON.parse(atob(n.substring(n.indexOf('.') + 1)));
+        return null !== (e = r.$meta.experiments) && void 0 !== e ? e : {};
     } catch (e) {
         return {};
     }
 }
-let m = RegExp('^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link?[\\S]+$', 'i');
-function g(e) {
-    return null != e && m.test(e);
+let I = RegExp('^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link?[\\S]+$', 'i');
+function T(e) {
+    return null != e && I.test(e);
 }
-let E = RegExp('^dev://branch/([\\w-./]+)$', 'i');
-function v(e) {
-    return null != e && E.test(e);
+let b = RegExp('^dev://branch/([\\w-./]+)$', 'i');
+function y(e) {
+    return null != e && b.test(e);
 }
-let I = new Set(['canary.discord.com', 'ptb.discord.com', 'discord.com', 'canary.discordapp.com', 'ptb.discordapp.com', 'discordapp.com']),
-    T = new Set(['/__development/link', '/__development/link/']);
-function b(e) {
-    if (v(e))
+function S(e) {
+    let n = e.match(b);
+    if (null == n || 2 !== n.length) return null;
+    let r = (0, u.getNativePlatform)(),
+        i = n[1];
+    return {
+        targetBuildOverride: {
+            ['discord_'.concat(r)]: {
+                type: 'branch',
+                id: i
+            }
+        },
+        validForUserIds: [],
+        expiresAt: 'Mon, 1 Jan 2038 00:00:00 GMT'
+    };
+}
+let A = 's',
+    N = new Set(['canary.discord.com', 'ptb.discord.com', 'discord.com', 'canary.discordapp.com', 'ptb.discordapp.com', 'discordapp.com']),
+    C = new Set(['/__development/link', '/__development/link/']);
+function R(e) {
+    if (y(e))
         return {
             payload: null,
             url: e
         };
-    let t = o.Z.safeParseWithQuery(e);
-    if (null == t || !I.has(t.hostname) || !('s' in t.query) || !T.has(t.pathname)) return null;
-    for (let e in t.query) 's' !== e && delete t.query[e];
+    let n = c.Z.safeParseWithQuery(e);
+    if (null == n || !N.has(n.hostname) || !(A in n.query) || !C.has(n.pathname)) return null;
+    for (let e in n.query) e !== A && delete n.query[e];
     return {
-        payload: t.query.s,
-        url: i.format(t)
+        payload: n.query[A],
+        url: o.format(n)
     };
 }

@@ -1,13 +1,13 @@
-n.d(t, {
+r.d(n, {
     W: function () {
-        return i;
+        return a;
     }
 });
-var r = n(726074);
-class i {
+var i = r(726074);
+class a {
     enqueueTask(e) {
-        let { queue: t, requestFlush: n } = this;
-        !t.length && (n(), (this.flushing = !0)), (t[t.length] = e);
+        let { queue: n, requestFlush: r } = this;
+        !n.length && (r(), (this.flushing = !0)), (n[n.length] = e);
     }
     constructor() {
         (this.queue = []),
@@ -18,9 +18,9 @@ class i {
             (this.flush = () => {
                 let { queue: e } = this;
                 for (; this.index < e.length; ) {
-                    let t = this.index;
-                    if ((this.index++, e[t].call(), this.index > this.capacity)) {
-                        for (let t = 0, n = e.length - this.index; t < n; t++) e[t] = e[t + this.index];
+                    let n = this.index;
+                    if ((this.index++, e[n].call(), this.index > this.capacity)) {
+                        for (let n = 0, r = e.length - this.index; n < r; n++) e[n] = e[n + this.index];
                         (e.length -= this.index), (this.index = 0);
                     }
                 }
@@ -29,8 +29,8 @@ class i {
             (this.registerPendingError = (e) => {
                 this.pendingErrors.push(e), this.requestErrorThrow();
             }),
-            (this.requestFlush = (0, r.tX)(this.flush)),
-            (this.requestErrorThrow = (0, r.as)(() => {
+            (this.requestFlush = (0, i.tX)(this.flush)),
+            (this.requestErrorThrow = (0, i.as)(() => {
                 if (this.pendingErrors.length) throw this.pendingErrors.shift();
             }));
     }

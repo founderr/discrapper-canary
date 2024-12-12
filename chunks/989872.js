@@ -1,10 +1,10 @@
-var r = n(794399),
-    i = n(741346),
-    a = n(956656),
-    s = n(900013),
-    o = a(function (e, t) {
+var i = r(794399),
+    a = r(741346),
+    s = r(956656),
+    o = r(900013),
+    l = s(function (e, n) {
         if (null == e) return [];
-        var n = t.length;
-        return n > 1 && s(e, t[0], t[1]) ? (t = []) : n > 2 && s(t[0], t[1], t[2]) && (t = [t[0]]), i(e, r(t, 1), []);
+        var r = n.length;
+        return r > 1 && o(e, n[0], n[1]) ? (n = []) : r > 2 && o(n[0], n[1], n[2]) && (n = [n[0]]), a(e, i(n, 1), []);
     });
-e.exports = o;
+e.exports = l;

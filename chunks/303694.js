@@ -1,35 +1,35 @@
-n.d(t, {
+r.d(n, {
     W: function () {
-        return s;
+        return o;
     },
     l: function () {
-        return a;
+        return s;
     }
 });
-var r = n(430824),
-    i = n(388032);
-let a = (e) => {
+var i = r(430824),
+    a = r(388032);
+let s = (e) => {
         switch (e) {
             case 'home':
             case 'guide':
-                return i.intl.string(i.t.VbpLyc);
+                return a.intl.string(a.t.VbpLyc);
             case 'browse':
-                return i.intl.string(i.t.et6wam);
+                return a.intl.string(a.t.et6wam);
             case 'customize':
-                return i.intl.string(i.t.h9mGOD);
+                return a.intl.string(a.t.h9mGOD);
             case 'linked-roles':
-                return i.intl.string(i.t.ghtnsr);
+                return a.intl.string(a.t.ghtnsr);
         }
         return null;
     },
-    s = (e, t, n) => {
+    o = (e, n, r) => {
         switch (e) {
             case 'linked-roles':
-                var i;
-                if (null == n) break;
-                let a = r.Z.getRole(n, t);
-                if (null == a || (null === (i = a.tags) || void 0 === i ? void 0 : i.guild_connections) !== null) break;
-                return a.name;
+                var a;
+                if (null == r) break;
+                let s = i.Z.getRole(r, n);
+                if (null == s || (null === (a = s.tags) || void 0 === a ? void 0 : a.guild_connections) !== null) break;
+                return s.name;
         }
         return null;
     };

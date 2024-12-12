@@ -1,21 +1,21 @@
-function r(e, t) {
-    return ''.concat(e, ':').concat(t);
-}
-function i(e) {
-    let t = e.split(':');
-    if (2 !== t.length) return null;
-    let [n, r] = t;
-    return {
-        applicationId: n,
-        skuId: r
-    };
-}
-n.d(t, {
+r.d(n, {
     Q: function () {
-        return i;
+        return s;
     },
     l: function () {
-        return r;
+        return a;
     }
-}),
-    n(47120);
+});
+var i = r(47120);
+function a(e, n) {
+    return ''.concat(e, ':').concat(n);
+}
+function s(e) {
+    let n = e.split(':');
+    if (2 !== n.length) return null;
+    let [r, i] = n;
+    return {
+        applicationId: r,
+        skuId: i
+    };
+}

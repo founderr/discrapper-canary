@@ -1,95 +1,95 @@
-n(47120);
-var r = n(259443),
-    i = n(442837),
-    a = n(570140),
-    s = n(186102),
-    o = n(873741),
-    l = n(592125),
-    u = n(650774),
-    c = n(866960),
-    d = n(626135),
-    f = n(981631);
-let _ = new r.Yd('MessageRoundtripTrackerStore');
-function p(e) {
+var i = r(47120);
+var a = r(259443),
+    s = r(442837),
+    o = r(570140),
+    l = r(186102),
+    u = r(873741),
+    c = r(592125),
+    d = r(650774),
+    f = r(866960),
+    _ = r(626135),
+    h = r(981631);
+function p(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let m = new a.Yd('MessageRoundtripTrackerStore');
+function g(e) {
     return null != e.apiResponseTimestamp && null != e.gatewaySeenTimestamp;
 }
-function h(e) {
-    let t = l.Z.getBasicChannel(e.channelId);
-    if (null == t) {
-        _.warn('Ignoring a messageData for channel '.concat(e.channelId, " because we can't find that channel."));
+function E(e) {
+    let n = c.Z.getBasicChannel(e.channelId);
+    if (null == n) {
+        m.warn('Ignoring a messageData for channel '.concat(e.channelId, " because we can't find that channel."));
         return;
     }
     if (Math.random() > 0.1) return;
-    let n = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
-        r = null == e.gatewaySeenTimestamp ? null : e.gatewaySeenTimestamp - e.initialSendTimestamp,
-        i = (0, o.d)();
-    d.default.track(f.rMx.SEND_MESSAGE_ROUNDTRIP, {
-        ...(0, s.Z)(),
-        api_latency_ms: n,
-        gateway_latency_ms: r,
-        channel_id: t.id,
-        channel_type: t.type,
-        guild_id: t.guild_id,
-        guild_size: u.Z.getMemberCount(t.guild_id),
-        mobile_network_type: c.Z.getType(),
-        ...(null != i && { mobile_signal_strength_level: i })
+    let r = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
+        i = null == e.gatewaySeenTimestamp ? null : e.gatewaySeenTimestamp - e.initialSendTimestamp,
+        a = (0, u.d)();
+    _.default.track(h.rMx.SEND_MESSAGE_ROUNDTRIP, {
+        ...(0, l.Z)(),
+        api_latency_ms: r,
+        gateway_latency_ms: i,
+        channel_id: n.id,
+        channel_type: n.type,
+        guild_id: n.guild_id,
+        guild_size: d.Z.getMemberCount(n.guild_id),
+        mobile_network_type: f.Z.getType(),
+        ...(null != a && { mobile_signal_strength_level: a })
     });
 }
-class m extends i.ZP.Store {
-    recordMessageSendAttempt(e, t) {
-        let n = {
+function v(e) {
+    let { optimistic: n, message: r } = e,
+        i = r.nonce;
+    if (!n && null != i) T.recordGatewayResponse(i);
+}
+class I extends s.ZP.Store {
+    recordMessageSendAttempt(e, n) {
+        let r = {
             initialSendTimestamp: Date.now(),
             apiResponseTimestamp: null,
             gatewaySeenTimestamp: null,
             channelId: e
         };
-        this.pendingMessages.set(t, n),
+        this.pendingMessages.set(n, r),
             setTimeout(() => {
-                let e = this.pendingMessages.get(t);
-                null != e && (h(e), this.pendingMessages.delete(t));
+                let e = this.pendingMessages.get(n);
+                null != e && (E(e), this.pendingMessages.delete(n));
             }, 30000);
     }
     recordMessageSendApiResponse(e) {
-        let t = this.pendingMessages.get(e);
-        if (null != t) {
-            let n = {
-                ...t,
+        let n = this.pendingMessages.get(e);
+        if (null != n) {
+            let r = {
+                ...n,
                 apiResponseTimestamp: Date.now()
             };
-            p(n) ? (h(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
+            g(r) ? (E(r), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, r);
         }
     }
     recordGatewayResponse(e) {
-        let t = this.pendingMessages.get(e);
-        if (null != t) {
-            let n = {
-                ...t,
+        let n = this.pendingMessages.get(e);
+        if (null != n) {
+            let r = {
+                ...n,
                 gatewaySeenTimestamp: Date.now()
             };
-            p(n) ? (h(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
+            g(r) ? (E(r), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, r);
         }
     }
     constructor(...e) {
-        var t, n, r;
-        super(...e),
-            (t = this),
-            (n = 'pendingMessages'),
-            (r = new Map()),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+        super(...e), p(this, 'pendingMessages', new Map());
     }
 }
-let g = new m(a.Z, {
-    MESSAGE_CREATE: function (e) {
-        let { optimistic: t, message: n } = e,
-            r = n.nonce;
-        if (!t && null != r) g.recordGatewayResponse(r);
-    }
-});
-t.Z = g;
+let T = new I(o.Z, { MESSAGE_CREATE: v });
+n.Z = T;

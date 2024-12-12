@@ -1,12 +1,12 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var r = n(358085),
-    i = n(924557),
-    a = n(65154);
-function s(e) {
-    let { ignorePlatformRestriction: t } = i.NV.getCurrentConfig({ location: 'isClipsClientCapable' }, { autoTrackExposure: !1 });
-    return t || (r.isDesktop() && e.getMediaEngine().supports(a.AN.CLIPS));
+var i = r(358085),
+    a = r(924557),
+    s = r(65154);
+function o(e) {
+    let { ignorePlatformRestriction: n } = a.NV.getCurrentConfig({ location: 'isClipsClientCapable' }, { autoTrackExposure: !1 });
+    return n || (i.isDesktop() && e.getMediaEngine().supports(s.AN.CLIPS));
 }

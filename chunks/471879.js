@@ -1,44 +1,44 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return l;
+        return u;
     },
     i: function () {
-        return u;
+        return c;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(442837),
-    a = n(481060),
-    s = n(699516),
-    o = n(142416);
-function l(e) {
-    let { user: t, guildId: n } = e;
-    return (0, r.jsx)('div', {
-        className: o.avatarHalo,
-        children: (0, r.jsx)(a.Avatar, {
-            className: o.avatar,
-            size: a.AvatarSizes.SIZE_40,
-            src: t.getAvatarURL(n, 40),
-            'aria-label': t.username
+var i = r(200651);
+r(192379);
+var a = r(442837),
+    s = r(481060),
+    o = r(699516),
+    l = r(142416);
+function u(e) {
+    let { user: n, guildId: r } = e;
+    return (0, i.jsx)('div', {
+        className: l.avatarHalo,
+        children: (0, i.jsx)(s.Avatar, {
+            className: l.avatar,
+            size: s.AvatarSizes.SIZE_40,
+            src: n.getAvatarURL(r, 40),
+            'aria-label': n.username
         })
     });
 }
-function u(e) {
-    let { user: t, guildId: n } = e,
-        l = (0, i.e7)([s.Z], () => s.Z.isBlocked(t.id));
-    return (0, r.jsxs)('div', {
-        className: o.container,
+function c(e) {
+    let { user: n, guildId: r } = e,
+        u = (0, a.e7)([o.Z], () => o.Z.isBlocked(n.id));
+    return (0, i.jsxs)('div', {
+        className: l.container,
         children: [
-            (0, r.jsx)(a.Avatar, {
-                className: o.avatar,
-                size: a.AvatarSizes.SIZE_56,
-                src: t.getAvatarURL(n, 64),
-                'aria-label': t.username
+            (0, i.jsx)(s.Avatar, {
+                className: l.avatar,
+                size: s.AvatarSizes.SIZE_56,
+                src: n.getAvatarURL(r, 64),
+                'aria-label': n.username
             }),
-            (0, r.jsx)('div', {
-                className: o.avatarIconContainer,
-                children: l ? (0, r.jsx)(a.DenyIcon, {}) : (0, r.jsx)(a.EyeSlashIcon, {})
+            (0, i.jsx)('div', {
+                className: l.avatarIconContainer,
+                children: u ? (0, i.jsx)(s.DenyIcon, {}) : (0, i.jsx)(s.EyeSlashIcon, {})
             })
         ]
     });

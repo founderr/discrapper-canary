@@ -1,17 +1,17 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(952265);
-function a(e) {
-    (0, i.ZD)(async () => {
-        let { default: t } = await n.e('60082').then(n.bind(n, 874406));
-        return (n) =>
-            (0, r.jsx)(t, {
-                ...n,
+var i = r(200651);
+r(192379);
+var a = r(952265);
+function s(e) {
+    (0, a.ZD)(async () => {
+        let { default: n } = await r.e('60082').then(r.bind(r, 874406));
+        return (r) =>
+            (0, i.jsx)(n, {
+                ...r,
                 incomingRequestCount: e
             });
     });

@@ -1,29 +1,29 @@
 !(function () {
-    var t = {}.hasOwnProperty;
-    function n() {
-        for (var e = [], r = 0; r < arguments.length; r++) {
-            var i = arguments[r];
-            if (i) {
-                var a = typeof i;
-                if ('string' === a || 'number' === a) e.push(i);
-                else if (Array.isArray(i)) {
-                    if (i.length) {
-                        var s = n.apply(null, i);
-                        s && e.push(s);
+    var n = {}.hasOwnProperty;
+    function r() {
+        for (var e = [], i = 0; i < arguments.length; i++) {
+            var a = arguments[i];
+            if (a) {
+                var s = typeof a;
+                if ('string' === s || 'number' === s) e.push(a);
+                else if (Array.isArray(a)) {
+                    if (a.length) {
+                        var o = r.apply(null, a);
+                        o && e.push(o);
                     }
-                } else if ('object' === a) {
-                    if (i.toString === Object.prototype.toString) for (var o in i) t.call(i, o) && i[o] && e.push(o);
-                    else e.push(i.toString());
+                } else if ('object' === s) {
+                    if (a.toString === Object.prototype.toString) for (var l in a) n.call(a, l) && a[l] && e.push(l);
+                    else e.push(a.toString());
                 }
             }
         }
         return e.join(' ');
     }
     e.exports
-        ? ((n.default = n), (e.exports = n))
+        ? ((r.default = r), (e.exports = r))
         : 'function' == typeof define && 'object' == typeof define.amd && define.amd
           ? define('classnames', [], function () {
-                return n;
+                return r;
             })
-          : (window.classNames = n);
+          : (window.classNames = r);
 })();

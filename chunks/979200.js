@@ -1,50 +1,50 @@
-n.d(t, {
+r.d(n, {
     PM: function () {
-        return u;
+        return c;
     },
     ZC: function () {
-        return i.u$;
+        return a.u$;
     },
     de: function () {
-        return o;
+        return l;
     },
     x9: function () {
-        return l;
+        return u;
     }
 });
-var r = n(544891),
-    i = n(921072),
-    a = n(981631),
-    s = n(388032);
-async function o(e) {
-    let t = a.ANM.APPLICATION_DISCLOSURES(e),
-        n = await r.tn.get({
-            url: t,
+var i = r(544891),
+    a = r(921072),
+    s = r(981631),
+    o = r(388032);
+async function l(e) {
+    let n = s.ANM.APPLICATION_DISCLOSURES(e),
+        r = await i.tn.get({
+            url: n,
             retries: 3,
             rejectWithError: !1
         }),
-        i = n.body.disclosures,
-        s = n.body.acked_disclosures;
+        a = r.body.disclosures,
+        o = r.body.acked_disclosures;
     return {
-        disclosures: i,
-        ackedDisclosures: s,
-        allAcked: n.body.all_acked
+        disclosures: a,
+        ackedDisclosures: o,
+        allAcked: r.body.all_acked
     };
 }
-async function l(e, t) {
-    let n = a.ANM.APPLICATION_DISCLOSURES(e);
-    await r.tn.post({
-        url: n,
-        body: { disclosures: t },
+async function u(e, n) {
+    let r = s.ANM.APPLICATION_DISCLOSURES(e);
+    await i.tn.post({
+        url: r,
+        body: { disclosures: n },
         rejectWithError: !1
     });
 }
-function u(e) {
+function c(e) {
     switch (e) {
-        case i.u$.IP_LOCATION:
-            return s.intl.string(s.t['6wPmjo']);
-        case i.u$.DISPLAYS_ADVERTISEMENTS:
-            return s.intl.string(s.t['/uOMKS']);
+        case a.u$.IP_LOCATION:
+            return o.intl.string(o.t['6wPmjo']);
+        case a.u$.DISPLAYS_ADVERTISEMENTS:
+            return o.intl.string(o.t['/uOMKS']);
         default:
             return null;
     }

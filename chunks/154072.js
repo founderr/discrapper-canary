@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     decrease: (e) => `Reduser ${e.fieldLabel}`,
     increase: (e) => `\xd8k ${e.fieldLabel}`,
     numberField: 'Tallfelt'

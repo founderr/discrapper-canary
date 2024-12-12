@@ -1,15 +1,15 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(761119);
-function a(e) {
-    let { children: t } = e;
-    return (0, r.jsxs)('span', {
-        className: i.nowrap,
-        children: [t, '\u2060']
+var i = r(200651);
+r(192379);
+var a = r(761119);
+function s(e) {
+    let { children: n } = e;
+    return (0, i.jsxs)('span', {
+        className: a.nowrap,
+        children: [n, '\u2060']
     });
 }

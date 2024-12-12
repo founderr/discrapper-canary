@@ -1,40 +1,40 @@
-n(47120);
-var r,
-    i,
-    a = n(192379),
-    s = n(112724);
-function o(e, t, n) {
+var i,
+    a,
+    s = r(47120);
+var o = r(192379),
+    l = r(112724);
+function u(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-function l(e, t, n) {
-    return Math.min(Math.max(Math.floor(e / t), 1), n);
+function c(e, n, r) {
+    return Math.min(Math.max(Math.floor(e / n), 1), r);
 }
-t.Z = (0, s.Z)(
-    ((i = class extends (r = a.Component) {
-        static getDerivedStateFromProps(e, t) {
-            let { width: n, desiredItemWidth: r, maxColumns: i } = e,
-                a = l(n, r, i);
-            return a !== t.columns ? { columns: a } : null;
+n.Z = (0, l.Z)(
+    ((a = class extends (i = o.Component) {
+        static getDerivedStateFromProps(e, n) {
+            let { width: r, desiredItemWidth: i, maxColumns: a } = e,
+                s = c(r, i, a);
+            return s !== n.columns ? { columns: s } : null;
         }
         render() {
-            let { width: e, height: t, children: n } = this.props,
-                { columns: r } = this.state;
-            return n(r, e, t);
+            let { width: e, height: n, children: r } = this.props,
+                { columns: i } = this.state;
+            return r(i, e, n);
         }
         constructor(...e) {
-            super(...e), o(this, 'state', { columns: l(this.props.width, this.props.desiredItemWidth, this.props.maxColumns) });
+            super(...e), u(this, 'state', { columns: c(this.props.width, this.props.desiredItemWidth, this.props.maxColumns) });
         }
     }),
-    o(i, 'defaultProps', { desiredItemWidth: 200 }),
-    i)
+    u(a, 'defaultProps', { desiredItemWidth: 200 }),
+    a)
 );

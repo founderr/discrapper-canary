@@ -1,12 +1,12 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return o;
+        return l;
     }
 });
-var r = n(978003),
-    i = n(786761),
-    a = n(901461),
-    s = n(981631);
-function o(e, t) {
-    return !(null == t || e.author.id !== t || e.state !== s.yb.SENT || (0, a.Z)(e) || !(0, i.lp)(e) || e.hasFlag(s.iLy.IS_VOICE_MESSAGE) || null != e.referralTrialOfferId || e.isPoll() || (0, r.Z)(e)) && !0;
+var i = r(978003),
+    a = r(786761),
+    s = r(901461),
+    o = r(981631);
+function l(e, n) {
+    return !(null == n || e.author.id !== n || e.state !== o.yb.SENT || (0, s.Z)(e) || !(0, a.lp)(e) || e.hasFlag(o.iLy.IS_VOICE_MESSAGE) || null != e.referralTrialOfferId || e.isPoll() || (0, i.Z)(e)) && !0;
 }

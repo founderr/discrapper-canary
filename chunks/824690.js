@@ -1,19 +1,19 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return l;
     }
-}),
-    n(47120);
-var r = n(192379),
-    i = n(695346),
-    a = n(36703);
-function s() {
-    let [e, t] = r.useState(i.AY.getSetting());
+});
+var i = r(47120);
+var a = r(192379),
+    s = r(695346),
+    o = r(36703);
+function l() {
+    let [e, n] = a.useState(s.AY.getSetting());
     return {
         volume: e,
-        onVolumeChange: r.useCallback((e) => {
-            let n = (0, a.A)(e);
-            t(n), i.AY.updateSetting(n);
+        onVolumeChange: a.useCallback((e) => {
+            let r = (0, o.A)(e);
+            n(r), s.AY.updateSetting(r);
         }, [])
     };
 }

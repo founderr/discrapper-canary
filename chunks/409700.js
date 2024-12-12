@@ -1,127 +1,127 @@
-n.d(t, {
+r.d(n, {
     Dp: function () {
-        return S;
-    },
-    Hh: function () {
-        return y;
-    },
-    P6: function () {
-        return b;
-    },
-    ZP: function () {
         return A;
     },
+    Hh: function () {
+        return N;
+    },
+    P6: function () {
+        return S;
+    },
+    ZP: function () {
+        return C;
+    },
     hq: function () {
-        return T;
+        return y;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(831209),
-    l = n(442837),
-    u = n(481060),
-    c = n(914010),
-    d = n(594174),
-    f = n(36703),
-    _ = n(74538),
-    p = n(125900),
-    h = n(824690),
-    m = n(240479),
-    g = n(710111),
-    E = n(388032),
-    v = n(89107),
-    I = n(965965);
-function T() {
-    let { volume: e, onVolumeChange: t } = (0, h.Z)();
-    return (0, r.jsxs)(u.Clickable, {
-        className: v.sliderContainer,
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(120356),
+    l = r.n(o),
+    u = r(831209),
+    c = r(442837),
+    d = r(481060),
+    f = r(914010),
+    _ = r(594174),
+    h = r(36703),
+    p = r(74538),
+    m = r(125900),
+    g = r(824690),
+    E = r(240479),
+    v = r(710111),
+    I = r(388032),
+    T = r(89107),
+    b = r(965965);
+function y() {
+    let { volume: e, onVolumeChange: n } = (0, g.Z)();
+    return (0, a.jsxs)(d.Clickable, {
+        className: T.sliderContainer,
         onClick: (e) => e.stopPropagation(),
         children: [
-            (0, r.jsx)(u.Text, {
+            (0, a.jsx)(d.Text, {
                 variant: 'text-sm/normal',
-                children: E.intl.string(E.t['2JbvKy'])
+                children: I.intl.string(I.t['2JbvKy'])
             }),
-            (0, r.jsx)(u.Slider, {
-                onValueChange: t,
-                className: v.slider,
-                initialValue: (0, f.P)(e),
+            (0, a.jsx)(d.Slider, {
+                onValueChange: n,
+                className: T.slider,
+                initialValue: (0, h.P)(e),
                 maxValue: 100
             })
         ]
     });
 }
-function b(e) {
-    let { sound: t, forceShowBetaLabel: n = !1 } = e,
-        i = (0, p.V2)({ location: 'SoundmojiBanner' }),
-        a = (0, l.e7)([d.default], () => _.ZP.canUseSoundboardEverywhere(d.default.getCurrentUser())),
-        s = (0, l.e7)([c.Z], () => c.Z.getGuildId());
-    return n || a || t.guildId === g.X8 || t.guildId === s || !i
-        ? (0, r.jsx)('div', {
-              children: (0, r.jsx)(u.TextBadge, {
+function S(e) {
+    let { sound: n, forceShowBetaLabel: r = !1 } = e,
+        i = (0, m.V2)({ location: 'SoundmojiBanner' }),
+        s = (0, c.e7)([_.default], () => p.ZP.canUseSoundboardEverywhere(_.default.getCurrentUser())),
+        o = (0, c.e7)([f.Z], () => f.Z.getGuildId());
+    return r || s || n.guildId === v.X8 || n.guildId === o || !i
+        ? (0, a.jsx)('div', {
+              children: (0, a.jsx)(d.TextBadge, {
                   text: 'BETA',
-                  color: o.Z.BG_BRAND,
-                  className: v.betaBadge
+                  color: u.Z.BG_BRAND,
+                  className: T.betaBadge
               })
           })
-        : (0, r.jsxs)('div', {
-              className: v.infoNitroContainer,
+        : (0, a.jsxs)('div', {
+              className: T.infoNitroContainer,
               children: [
-                  (0, r.jsx)('div', { className: v.infoNitroBackground }),
-                  (0, r.jsxs)('div', {
-                      className: v.infoNitroTextContainer,
+                  (0, a.jsx)('div', { className: T.infoNitroBackground }),
+                  (0, a.jsxs)('div', {
+                      className: T.infoNitroTextContainer,
                       children: [
-                          (0, r.jsx)(u.NitroWheelIcon, {
+                          (0, a.jsx)(d.NitroWheelIcon, {
                               size: 'xxs',
                               color: 'white',
-                              className: v.infoNitroIcon
+                              className: T.infoNitroIcon
                           }),
-                          (0, r.jsx)(u.Text, {
+                          (0, a.jsx)(d.Text, {
                               variant: 'text-xs/medium',
                               color: 'always-white',
-                              className: v.infoNitroText,
-                              children: E.intl.string(E.t['BMw+7O'])
+                              className: T.infoNitroText,
+                              children: I.intl.string(I.t['BMw+7O'])
                           }),
-                          (0, r.jsx)(u.TextBadge, {
+                          (0, a.jsx)(d.TextBadge, {
                               text: 'BETA',
-                              color: o.Z.BG_BRAND,
-                              className: v.infoNitroBadge
+                              color: u.Z.BG_BRAND,
+                              className: T.infoNitroBadge
                           })
                       ]
                   })
               ]
           });
 }
-function S(e) {
-    let { sound: t } = e;
-    return (0, r.jsxs)('div', {
-        className: v.infoContainer,
+function A(e) {
+    let { sound: n } = e;
+    return (0, a.jsxs)('div', {
+        className: T.infoContainer,
         children: [
-            (0, r.jsx)(b, { sound: t }),
-            (0, r.jsxs)('div', {
-                className: v.infoSoundContainer,
+            (0, a.jsx)(S, { sound: n }),
+            (0, a.jsxs)('div', {
+                className: T.infoSoundContainer,
                 children: [
-                    (0, r.jsxs)('div', {
-                        className: v.infoSoundInnerContainer,
+                    (0, a.jsxs)('div', {
+                        className: T.infoSoundInnerContainer,
                         children: [
-                            (0, r.jsx)(u.SoundboardIcon, {
+                            (0, a.jsx)(d.SoundboardIcon, {
                                 size: 'sm',
-                                className: v.infoSoundIcon
+                                className: T.infoSoundIcon
                             }),
-                            (0, r.jsx)(u.Text, {
+                            (0, a.jsx)(d.Text, {
                                 variant: 'text-md/semibold',
                                 color: 'header-primary',
-                                children: t.name
+                                children: n.name
                             })
                         ]
                     }),
-                    (0, r.jsx)('div', {
-                        className: v.infoSoundInnerContainer,
-                        children: (0, r.jsx)(u.Text, {
+                    (0, a.jsx)('div', {
+                        className: T.infoSoundInnerContainer,
+                        children: (0, a.jsx)(d.Text, {
                             variant: 'text-sm/normal',
-                            children: E.intl.string(E.t.D6eYmZ)
+                            children: I.intl.string(I.t.D6eYmZ)
                         })
                     })
                 ]
@@ -129,93 +129,93 @@ function S(e) {
         ]
     });
 }
-function y(e) {
-    let { renderPopout: t, position: n, tooltipText: a, children: o, setTooltipShowing: l, clickableClassName: c } = e,
-        [d, f] = i.useState(!1),
-        [_, p] = i.useState(String(Date.now())),
-        h = i.useCallback(
+function N(e) {
+    let { renderPopout: n, position: r, tooltipText: i, children: o, setTooltipShowing: u, clickableClassName: c } = e,
+        [f, _] = s.useState(!1),
+        [h, p] = s.useState(String(Date.now())),
+        m = s.useCallback(
             (e) => {
-                e.stopPropagation(), f(!d);
+                e.stopPropagation(), _(!f);
             },
-            [d]
+            [f]
         ),
-        m = i.useCallback(() => {
+        g = s.useCallback(() => {
             p(String(Date.now()));
         }, []),
-        g = i.useRef(null);
+        E = s.useRef(null);
     return (
-        i.useEffect(() => {
-            var e, t;
-            d ? null === (e = g.current) || void 0 === e || e.focus() : null === (t = g.current) || void 0 === t || t.blur(), null == l || l(d);
-        }, [d, l]),
-        (0, r.jsx)(u.Popout, {
+        s.useEffect(() => {
+            var e, n;
+            f ? null === (e = E.current) || void 0 === e || e.focus() : null === (n = E.current) || void 0 === n || n.blur(), null == u || u(f);
+        }, [f, u]),
+        (0, a.jsx)(d.Popout, {
             renderPopout: (e) =>
-                (0, r.jsx)(u.Clickable, {
+                (0, a.jsx)(d.Clickable, {
                     onClick: (e) => e.stopPropagation(),
                     onMouseOver: (e) => e.stopPropagation(),
-                    children: t({
+                    children: n({
                         ...e,
-                        refreshPosition: m
+                        refreshPosition: g
                     })
                 }),
             align: 'center',
             nudgeAlignIntoViewport: !0,
-            position: n,
-            shouldShow: d,
-            onRequestClose: () => f(!1),
+            position: r,
+            shouldShow: f,
+            onRequestClose: () => _(!1),
             animationPosition: 'bottom',
-            positionKey: _,
+            positionKey: h,
             closeOnScroll: !0,
             children: (e) =>
-                (0, r.jsx)(u.Tooltip, {
-                    onTooltipHide: () => (null == l ? void 0 : l(!1)),
-                    onTooltipShow: () => (null == l ? void 0 : l(!0)),
-                    text: a,
+                (0, a.jsx)(d.Tooltip, {
+                    onTooltipHide: () => (null == u ? void 0 : u(!1)),
+                    onTooltipShow: () => (null == u ? void 0 : u(!0)),
+                    text: i,
                     position: 'top',
-                    shouldShow: !d,
-                    children: (t) =>
-                        (0, r.jsx)(u.Clickable, {
-                            innerRef: g,
-                            ...t,
+                    shouldShow: !f,
+                    children: (n) =>
+                        (0, a.jsx)(d.Clickable, {
+                            innerRef: E,
+                            ...n,
                             ...e,
-                            'aria-label': a,
-                            onClick: h,
-                            className: s()(I.secondaryButtonRefresh, c),
+                            'aria-label': i,
+                            onClick: m,
+                            className: l()(b.secondaryButtonRefresh, c),
                             children: o
                         })
                 })
         })
     );
 }
-function A(e) {
-    let { sound: t, channel: n, setTooltipShowing: i } = e;
-    return (0, r.jsxs)(r.Fragment, {
+function C(e) {
+    let { sound: n, channel: r, setTooltipShowing: i } = e;
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, r.jsx)(y, {
+            (0, a.jsx)(N, {
                 setTooltipShowing: i,
-                renderPopout: () => (0, r.jsx)(T, {}),
-                tooltipText: E.intl.string(E.t['19lt29']),
+                renderPopout: () => (0, a.jsx)(y, {}),
+                tooltipText: I.intl.string(I.t['19lt29']),
                 position: 'top',
-                children: (0, r.jsx)(u.VoiceNormalIcon, {
+                children: (0, a.jsx)(d.VoiceNormalIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: I.secondaryIcon
+                    className: b.secondaryIcon
                 })
             }),
-            (0, r.jsx)(y, {
+            (0, a.jsx)(N, {
                 setTooltipShowing: i,
                 renderPopout: (e) =>
-                    (0, r.jsx)(m.Z, {
-                        sound: t,
-                        channel: n,
+                    (0, a.jsx)(E.Z, {
+                        sound: n,
+                        channel: r,
                         ...e
                     }),
-                tooltipText: E.intl.string(E.t.KVbJU1),
+                tooltipText: I.intl.string(I.t.KVbJU1),
                 position: 'right',
-                children: (0, r.jsx)(u.CircleInformationIcon, {
+                children: (0, a.jsx)(d.CircleInformationIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: I.secondaryIcon
+                    className: b.secondaryIcon
                 })
             })
         ]

@@ -1,18 +1,18 @@
-n.d(t, {
+r.d(n, {
     $V: function () {
-        return r;
-    },
-    jR: function () {
-        return s;
-    },
-    o: function () {
         return i;
     },
-    z3: function () {
+    jR: function () {
+        return o;
+    },
+    o: function () {
         return a;
+    },
+    z3: function () {
+        return s;
     }
 });
-let r = 3,
-    i = 0.5,
-    a = 1,
-    s = 2.5;
+let i = 3,
+    a = 0.5,
+    s = 1,
+    o = 2.5;

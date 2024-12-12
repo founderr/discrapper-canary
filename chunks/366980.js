@@ -1,18 +1,18 @@
-function r() {
+function i() {
     let e,
-        t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : '',
-        n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        r = window.GLOBAL_ENV.INVITE_HOST;
+        n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : '',
+        r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        i = window.GLOBAL_ENV.INVITE_HOST;
     return (
-        (e = '/'.concat(t)),
+        (e = '/'.concat(n)),
         ''
-            .concat(n ? ''.concat(location.protocol, '//') : '')
-            .concat(r)
+            .concat(r ? ''.concat(location.protocol, '//') : '')
+            .concat(i)
             .concat(e)
     );
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

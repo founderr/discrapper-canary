@@ -1,20 +1,20 @@
-var r = n(317770),
-    i = n(626135),
-    a = n(358085),
-    s = n(998502),
-    o = n(981631);
-class l extends r.Z {
+var i = r(317770),
+    a = r(626135),
+    s = r(358085),
+    o = r(998502),
+    l = r(981631);
+class u extends i.Z {
     _initialize() {
-        if (!!a.isPlatformEmbedded)
-            s.ZP.on('APP_PUSH_ANALYTICS', (e, t) => {
-                this._handleEventResponse(t);
+        if (!!s.isPlatformEmbedded)
+            o.ZP.on('APP_PUSH_ANALYTICS', (e, n) => {
+                this._handleEventResponse(n);
             }),
                 this.processModuleEvents();
     }
     _terminate() {}
     processModuleEvents() {
         try {
-            s.ZP.send('APP_GET_ANALYTICS_EVENTS');
+            o.ZP.send('APP_GET_ANALYTICS_EVENTS');
         } catch (e) {
             console.error('[analytics] failed to send analytics events query: '.concat(e));
         }
@@ -22,8 +22,8 @@ class l extends r.Z {
     _handleEventResponse(e) {
         if (null != e)
             e.forEach((e) => {
-                'cdm' === e.type && (e.name === o.rMx.CDM_LOAD_STATUS || e.name === o.rMx.CDM_READY_COMPLETE ? i.default.track(e.name, e.data) : console.log('[analytics] received unknown cdm analytic event '.concat(e.name)));
+                'cdm' === e.type && (e.name === l.rMx.CDM_LOAD_STATUS || e.name === l.rMx.CDM_READY_COMPLETE ? a.default.track(e.name, e.data) : console.log('[analytics] received unknown cdm analytic event '.concat(e.name)));
             });
     }
 }
-t.Z = new l();
+n.Z = new u();

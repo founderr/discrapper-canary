@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     $: function () {
-        return i;
+        return a;
     }
 });
-var r = n(881824);
-function i(e) {
-    r.$Q(e);
+var i = r(881824);
+function a(e) {
+    i.$Q(e);
 }

@@ -1,12 +1,12 @@
-n.d(t, {
+r.d(n, {
     Hr: function () {
-        return i;
+        return a;
     },
     Ku: function () {
-        return a;
+        return s;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
     kind: 'user',
     id: '2024-01_voice_user_game_activity',
     label: 'Voice User Game Activity',
@@ -19,12 +19,12 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i(e, t) {
-    let { showGameIcon: n } = r.useExperiment({ location: e }, { autoTrackExposure: t });
-    return n;
+function a(e, n) {
+    let { showGameIcon: r } = i.useExperiment({ location: e }, { autoTrackExposure: n });
+    return r;
 }
-function a(e, t) {
-    let { showGameIcon: n } = r.getCurrentConfig({ location: e }, { autoTrackExposure: t });
-    return n;
+function s(e, n) {
+    let { showGameIcon: r } = i.getCurrentConfig({ location: e }, { autoTrackExposure: n });
+    return r;
 }
-t.ZP = r;
+n.ZP = i;

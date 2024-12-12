@@ -1,36 +1,36 @@
-n.d(t, {
+r.d(n, {
     Y$: function () {
-        return i;
-    },
-    a8: function () {
-        return o;
-    },
-    jS: function () {
         return a;
     },
-    tZ: function () {
+    a8: function () {
+        return l;
+    },
+    jS: function () {
         return s;
+    },
+    tZ: function () {
+        return o;
     }
 });
-var r = n(570140);
-function i() {
-    r.Z.dispatch({ type: 'DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE' });
+var i = r(570140);
+function a() {
+    i.Z.dispatch({ type: 'DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE' });
 }
-function a(e) {
-    r.Z.dispatch({
+function s(e) {
+    i.Z.dispatch({
         type: 'DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE',
         activityUrlOverride: e
     });
 }
-function s(e) {
-    r.Z.dispatch({
+function o(e) {
+    i.Z.dispatch({
         type: 'DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED',
         applicationId: e,
         timestamp: new Date().getTime()
     });
 }
-function o(e) {
-    r.Z.dispatch({
+function l(e) {
+    i.Z.dispatch({
         type: 'DEVELOPER_ACTIVITY_SHELF_UPDATE_FILTER',
         filter: e
     });

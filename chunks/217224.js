@@ -1,10 +1,10 @@
-function r(e) {
+function i(e) {
     if (null === e || !0 === e || !1 === e) return NaN;
-    var t = Number(e);
-    return isNaN(t) ? t : t < 0 ? Math.ceil(t) : Math.floor(t);
+    var n = Number(e);
+    return isNaN(n) ? n : n < 0 ? Math.ceil(n) : Math.floor(n);
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

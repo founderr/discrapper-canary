@@ -1,60 +1,60 @@
-n(47120);
-var r,
-    i = n(442837),
-    a = n(570140),
-    s = n(168232),
-    o = n(430824),
-    l = n(594174),
-    u = n(987338),
-    c = n(48541);
-function d(e, t, n) {
+var i,
+    a = r(47120);
+var s = r(442837),
+    o = r(570140),
+    l = r(168232),
+    u = r(430824),
+    c = r(594174),
+    d = r(987338),
+    f = r(48541);
+function _(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let f = 'production' === c.C.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === c.C.STAGING;
-function _() {
-    f = (0, s.QI)(l.default.getCurrentUser());
+let h = 'production' === f.C.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === f.C.STAGING;
+function p() {
+    h = (0, l.QI)(c.default.getCurrentUser());
 }
-class p extends (r = i.ZP.Store) {
+class m extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(l.default, o.Z),
+        this.waitFor(c.default, u.Z),
             Object.defineProperties(this, {
                 isDeveloper: {
                     configurable: !1,
-                    get: () => f,
+                    get: () => h,
                     set: () => {}
                 }
             }),
-            _(),
+            p(),
             setTimeout(() => Object.freeze(this));
     }
     getExperimentDescriptor() {
-        return f
+        return h
             ? {
                   type: 'developer',
                   name: 'discord_dev_testing',
                   revision: 1,
                   override: !0,
-                  bucket: u.NZ.TREATMENT_1
+                  bucket: d.NZ.TREATMENT_1
               }
             : null;
     }
     constructor(...e) {
-        super(...e), d(this, 'isDeveloper', !1);
+        super(...e), _(this, 'isDeveloper', !1);
     }
 }
-d(p, 'displayName', 'DeveloperExperimentStore'),
-    (t.Z = new p(a.Z, {
-        CONNECTION_OPEN: _,
-        OVERLAY_INITIALIZE: _,
-        CURRENT_USER_UPDATE: _
+_(m, 'displayName', 'DeveloperExperimentStore'),
+    (n.Z = new m(o.Z, {
+        CONNECTION_OPEN: p,
+        OVERLAY_INITIALIZE: p,
+        CURRENT_USER_UPDATE: p
     }));

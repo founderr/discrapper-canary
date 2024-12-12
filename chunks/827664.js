@@ -1,48 +1,48 @@
-var r = n(444675),
-    i =
+var i = r(444675),
+    a =
         Object.keys ||
         function (e) {
-            var t = [];
-            for (var n in e) t.push(n);
-            return t;
+            var n = [];
+            for (var r in e) n.push(r);
+            return n;
         };
-e.exports = c;
-var a = n(555170),
-    s = n(833327);
-n(689118)(c, a);
-for (var o = i(s.prototype), l = 0; l < o.length; l++) {
-    var u = o[l];
-    !c.prototype[u] && (c.prototype[u] = s.prototype[u]);
+e.exports = d;
+var s = r(555170),
+    o = r(833327);
+r(689118)(d, s);
+for (var l = a(o.prototype), u = 0; u < l.length; u++) {
+    var c = l[u];
+    !d.prototype[c] && (d.prototype[c] = o.prototype[c]);
 }
-function c(e) {
-    if (!(this instanceof c)) return new c(e);
-    a.call(this, e), s.call(this, e), (this.allowHalfOpen = !0), e && (!1 === e.readable && (this.readable = !1), !1 === e.writable && (this.writable = !1), !1 === e.allowHalfOpen && ((this.allowHalfOpen = !1), this.once('end', d)));
+function d(e) {
+    if (!(this instanceof d)) return new d(e);
+    s.call(this, e), o.call(this, e), (this.allowHalfOpen = !0), e && (!1 === e.readable && (this.readable = !1), !1 === e.writable && (this.writable = !1), !1 === e.allowHalfOpen && ((this.allowHalfOpen = !1), this.once('end', f)));
 }
-function d() {
-    !this._writableState.ended && r.nextTick(f, this);
+function f() {
+    !this._writableState.ended && i.nextTick(_, this);
 }
-function f(e) {
+function _(e) {
     e.end();
 }
-Object.defineProperty(c.prototype, 'writableHighWaterMark', {
+Object.defineProperty(d.prototype, 'writableHighWaterMark', {
     enumerable: !1,
     get: function () {
         return this._writableState.highWaterMark;
     }
 }),
-    Object.defineProperty(c.prototype, 'writableBuffer', {
+    Object.defineProperty(d.prototype, 'writableBuffer', {
         enumerable: !1,
         get: function () {
             return this._writableState && this._writableState.getBuffer();
         }
     }),
-    Object.defineProperty(c.prototype, 'writableLength', {
+    Object.defineProperty(d.prototype, 'writableLength', {
         enumerable: !1,
         get: function () {
             return this._writableState.length;
         }
     }),
-    Object.defineProperty(c.prototype, 'destroyed', {
+    Object.defineProperty(d.prototype, 'destroyed', {
         enumerable: !1,
         get: function () {
             return void 0 !== this._readableState && void 0 !== this._writableState && this._readableState.destroyed && this._writableState.destroyed;

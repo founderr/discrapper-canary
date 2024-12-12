@@ -1,31 +1,31 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return s;
     }
-}),
-    n(47120);
-var r = n(191532);
-function i(e, t, n, i) {
-    let a = (0, r.Z)(e, t, i),
-        s = (e, t) => n.computeScrollPosition(e, t);
+});
+var i = r(47120);
+var a = r(191532);
+function s(e, n, r, i) {
+    let s = (0, a.Z)(e, n, i),
+        o = (e, n) => r.computeScrollPosition(e, n);
     return {
-        ...a,
-        getScrollPosition: s,
-        isItemVisible(e, n) {
-            let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                [i, a] = s(e, n),
-                o = t();
-            return r ? i >= o.scrollTop && i + a <= o.scrollTop + o.offsetHeight : i + a >= o.scrollTop && i <= o.scrollTop + o.offsetHeight;
+        ...s,
+        getScrollPosition: o,
+        isItemVisible(e, r) {
+            let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                [a, s] = o(e, r),
+                l = n();
+            return i ? a >= l.scrollTop && a + s <= l.scrollTop + l.offsetHeight : a + s >= l.scrollTop && a <= l.scrollTop + l.offsetHeight;
         },
         scrollToIndex(e) {
-            let { section: t, row: n, animate: r, callback: i, padding: o = 0 } = e,
-                [l, u] = s(t, n);
-            a.scrollIntoViewRect({
-                start: l,
-                end: l + u,
-                padding: o,
-                animate: r,
-                callback: i
+            let { section: n, row: r, animate: i, callback: a, padding: l = 0 } = e,
+                [u, c] = o(n, r);
+            s.scrollIntoViewRect({
+                start: u,
+                end: u + c,
+                padding: l,
+                animate: i,
+                callback: a
             });
         }
     };

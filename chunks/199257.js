@@ -1,31 +1,31 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return l;
+        return u;
     },
     _: function () {
-        return o;
+        return l;
     }
 });
-var r = n(399606),
-    i = n(339085),
-    a = n(185923);
-let s = [];
-function o(e) {
-    let { emojiStoreInstance: t = i.ZP, guildId: n, pickerIntention: r } = e;
+var i = r(399606),
+    a = r(339085),
+    s = r(185923);
+let o = [];
+function l(e) {
+    let { emojiStoreInstance: n = a.ZP, guildId: r, pickerIntention: i } = e;
     return {
-        topEmojis: r !== a.Hz.REACTION ? t.getTopEmoji(n) : s,
-        newlyAddedEmojis: r !== a.Hz.REACTION ? t.getNewlyAddedEmoji(n) : s
+        topEmojis: i !== s.Hz.REACTION ? n.getTopEmoji(r) : o,
+        newlyAddedEmojis: i !== s.Hz.REACTION ? n.getNewlyAddedEmoji(r) : o
     };
 }
-function l(e, t) {
-    return (0, r.cj)(
-        [i.ZP],
+function u(e, n) {
+    return (0, i.cj)(
+        [a.ZP],
         () =>
-            o({
-                emojiStoreInstance: i.ZP,
+            l({
+                emojiStoreInstance: a.ZP,
                 guildId: e,
-                pickerIntention: t
+                pickerIntention: n
             }),
-        [e, t]
+        [e, n]
     );
 }

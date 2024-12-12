@@ -1,76 +1,76 @@
-n.d(t, {
+r.d(n, {
     U: function () {
-        return c;
+        return h;
     },
     Z: function () {
-        return d;
+        return p;
     }
-}),
-    n(47120),
-    n(390547),
-    n(411104);
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(887490),
-    o = n(982862),
-    l = n(223979),
-    u = n(354431);
-let c = {
-    strong: o.bold,
-    em: o.italics,
-    u: o.underline,
-    s: o.strikethrough,
-    inlineCode: o.inlineCode,
-    link: o.fakeLink,
-    url: o.fakeLink,
-    autolink: o.fakeLink,
-    silentPrefix: o.fakeLink,
-    spoiler: a()(u.spoilerContent, u.spoilerMarkdownContent, u.obscuredTextContent, o.spoiler),
-    staticRouteLink: o.fakeLink,
-    syntaxBefore: o.syntaxBefore,
-    syntaxAfter: o.syntaxAfter,
-    codeBlockText: o.codeBlockText,
-    codeBlockSyntax: o.codeBlockSyntax,
-    codeBlockLang: o.codeBlockLang,
-    subtext: o.subtext
+});
+var i = r(47120);
+var a = r(390547);
+var s = r(411104);
+var o = r(200651);
+r(192379);
+var l = r(120356),
+    u = r.n(l),
+    c = r(887490),
+    d = r(982862),
+    f = r(223979),
+    _ = r(354431);
+let h = {
+    strong: d.bold,
+    em: d.italics,
+    u: d.underline,
+    s: d.strikethrough,
+    inlineCode: d.inlineCode,
+    link: d.fakeLink,
+    url: d.fakeLink,
+    autolink: d.fakeLink,
+    silentPrefix: d.fakeLink,
+    spoiler: u()(_.spoilerContent, _.spoilerMarkdownContent, _.obscuredTextContent, d.spoiler),
+    staticRouteLink: d.fakeLink,
+    syntaxBefore: d.syntaxBefore,
+    syntaxAfter: d.syntaxAfter,
+    codeBlockText: d.codeBlockText,
+    codeBlockSyntax: d.codeBlockSyntax,
+    codeBlockLang: d.codeBlockLang,
+    subtext: d.subtext
 };
-function d(e, t) {
-    let n;
-    let { attributes: i, children: u, leaf: d, text: f } = t,
+function p(e, n) {
+    let r;
+    let { attributes: i, children: a, leaf: s, text: l } = n,
         _ = !1,
-        [p] = s.bN.node(e, s.C0.parent(s.bN.findPath(e, f)));
-    switch (s.bN.isEditor(p) ? 'editor' : p.type) {
+        [p] = c.bN.node(e, c.C0.parent(c.bN.findPath(e, l)));
+    switch (c.bN.isEditor(p) ? 'editor' : p.type) {
         case 'line':
         case 'blockQuote': {
             _ = void 0;
-            let e = Object.entries(d)
+            let e = Object.entries(s)
                 .filter((e) => {
-                    let [t] = e;
-                    return 'text' !== t;
+                    let [n] = e;
+                    return 'text' !== n;
                 })
                 .flatMap((e) => {
-                    let [t, n] = e;
-                    if ('hljsTypes' === t) return n;
-                    if (!0 === n) {
-                        if ((('codeBlockLang' === t || 'codeBlockSyntax' === t) && (_ = !1), t.startsWith('before_') || t.startsWith('after_'))) return [o[t]];
-                        if (t in c) return [c[t]];
-                        throw Error('Slate: Unknown decoration attribute: '.concat(t));
+                    let [n, r] = e;
+                    if ('hljsTypes' === n) return r;
+                    if (!0 === r) {
+                        if ((('codeBlockLang' === n || 'codeBlockSyntax' === n) && (_ = !1), n.startsWith('before_') || n.startsWith('after_'))) return [d[n]];
+                        if (n in h) return [h[n]];
+                        throw Error('Slate: Unknown decoration attribute: '.concat(n));
                     }
                 })
                 .filter((e) => null != e)
                 .join(' ');
-            n = a()(e, { [o.syntaxOverride]: '||' === d.text || '\\' === d.text });
+            r = u()(e, { [d.syntaxOverride]: '||' === s.text || '\\' === s.text });
         }
     }
     return (
-        (n = a()(n, { [l.emptyText]: '' === f.text })),
-        (0, r.jsx)('span', {
+        (r = u()(r, { [f.emptyText]: '' === l.text })),
+        (0, o.jsx)('span', {
             ...i,
-            className: n,
+            className: r,
             spellCheck: _,
-            children: u
+            children: a
         })
     );
 }

@@ -1,44 +1,57 @@
-n(653041);
-var r = n(200651),
-    i = n(192379),
-    a = n(834427),
-    s = n(579806),
-    o = n(403182),
-    l = n(358085),
-    u = n(861990);
-function c(e) {
-    let t = ['openFile'];
-    e.multiple && t.push('multiSelections');
-    let n = e.filters;
-    s.Z.fileManager
+var i = r(653041);
+var a = r(200651),
+    s = r(192379),
+    o = r(834427),
+    l = r(579806),
+    u = r(403182),
+    c = r(358085),
+    d = r(861990);
+function f(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+function _(e) {
+    let n = ['openFile'];
+    e.multiple && n.push('multiSelections');
+    let r = e.filters;
+    l.Z.fileManager
         .openFiles(
             {
-                properties: t,
-                filters: n
+                properties: n,
+                filters: r
             },
-            u.zz
+            d.zz
         )
-        .then((t) => {
-            let n = t.map((e) => o.qF(e));
-            null != n &&
+        .then((n) => {
+            let r = n.map((e) => u.qF(e));
+            null != r &&
                 e.onChange({
                     stopPropagation: () => null,
                     preventDefault: () => null,
-                    currentTarget: { files: n }
+                    currentTarget: { files: r }
                 });
         })
-        .catch((t) => {
+        .catch((n) => {
             e.onChange({
                 stopPropagation: () => null,
                 preventDefault: () => null,
                 currentTarget: {
                     files: null,
-                    err: t
+                    err: n
                 }
             });
         });
 }
-class d extends i.Component {
+class h extends s.Component {
     activateUploadDialogue() {
         if (null != this._ref) return this._ref.activateUploadDialogue();
     }
@@ -46,28 +59,15 @@ class d extends i.Component {
         this._ref = e;
     }
     render() {
-        return (0, r.jsx)(a.S, {
+        return (0, a.jsx)(o.S, {
             ref: this.setRef,
-            handleNativeClick: c,
-            embedded: (0, l.isDesktop)(),
+            handleNativeClick: _,
+            embedded: (0, c.isDesktop)(),
             ...this.props
         });
     }
     constructor(e) {
-        var t, n, r;
-        super(e),
-            (t = this),
-            (n = '_ref'),
-            (r = i.createRef()),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r),
-            (this.setRef = this.setRef.bind(this));
+        super(e), f(this, '_ref', s.createRef()), (this.setRef = this.setRef.bind(this));
     }
 }
-t.Z = d;
+n.Z = h;

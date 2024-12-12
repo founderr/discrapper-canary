@@ -1,29 +1,29 @@
-n.d(t, {
+r.d(n, {
     T: function () {
-        return o;
+        return l;
     },
     k: function () {
-        return s;
+        return o;
     }
 });
-var r = n(311570),
-    i = n(228624),
-    a = n(388032);
-let s = (e) => {
-        let t = (0, i.hv)('useProductName') === r.v.VARIANTS_GROUP;
+var i = r(311570),
+    a = r(228624),
+    s = r(388032);
+let o = (e) => {
+        let n = (0, a.hv)('useProductName') === i.v.VARIANTS_GROUP;
         if (null == e) return '';
-        let n = a.intl.string(a.t.z7y5vL);
-        return t && 'baseVariantName' in e && null != e.baseVariantName && e.variantLabel !== n
-            ? a.intl.formatToPlainString(a.t.BZN5k5, {
+        let r = s.intl.string(s.t.z7y5vL);
+        return n && 'baseVariantName' in e && null != e.baseVariantName && e.variantLabel !== r
+            ? s.intl.formatToPlainString(s.t.BZN5k5, {
                   baseVariantName: e.baseVariantName,
                   variantLabel: e.variantLabel
               })
             : e.name;
     },
-    o = (e) => {
-        let t = (0, i.hv)('useProductName') === r.v.VARIANTS_GROUP;
+    l = (e) => {
+        let n = (0, a.hv)('useProductName') === i.v.VARIANTS_GROUP;
         if (null == e) return '';
-        if (t) {
+        if (n) {
             if ('baseVariantName' in e && null != e.baseVariantName) return e.baseVariantName;
             if (null != e.variants && e.variants.length > 0) return e.variants[0].baseVariantName;
         }

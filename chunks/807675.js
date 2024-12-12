@@ -1,46 +1,46 @@
-n.d(t, {
+r.d(n, {
     K: function () {
-        return c;
+        return f;
     },
     y: function () {
-        return d;
+        return _;
     }
-}),
-    n(653041);
-var r = n(593473),
-    i = n(243814),
-    a = n(149765),
-    s = n(592125),
-    o = n(914010),
-    l = n(700785),
-    u = n(713938);
-function c(e) {
-    let t = e.filter((e) => !u.up.includes(e));
-    return t.includes(i.x.BOT) && !t.includes(i.x.APPLICATIONS_COMMANDS) && t.push(i.x.APPLICATIONS_COMMANDS), t;
+});
+var i = r(653041);
+var a = r(593473),
+    s = r(243814),
+    o = r(149765),
+    l = r(592125),
+    u = r(914010),
+    c = r(700785),
+    d = r(713938);
+function f(e) {
+    let n = e.filter((e) => !d.up.includes(e));
+    return n.includes(s.x.BOT) && !n.includes(s.x.APPLICATIONS_COMMANDS) && n.push(s.x.APPLICATIONS_COMMANDS), n;
 }
-function d(e) {
-    var t, n, i, u, c, d;
-    let f = (0, r.parse)(e, { arrayFormat: 'bracket' }),
-        _ = l.Hn;
+function _(e) {
+    var n, r, i, s, d, f;
+    let _ = (0, a.parse)(e, { arrayFormat: 'bracket' }),
+        h = c.Hn;
     try {
-        _ = a.vB(null != f.permissions && '' !== f.permissions ? f.permissions : '0');
+        h = o.vB(null != _.permissions && '' !== _.permissions ? _.permissions : '0');
     } catch (e) {}
-    let p = f.channel_id,
-        h = null !== (u = null !== (i = null !== (n = f.guild_id) && void 0 !== n ? n : null === (t = s.Z.getChannel(p)) || void 0 === t ? void 0 : t.guild_id) && void 0 !== i ? i : o.Z.getGuildId()) && void 0 !== u ? u : void 0;
+    let p = _.channel_id,
+        m = null !== (s = null !== (i = null !== (r = _.guild_id) && void 0 !== r ? r : null === (n = l.Z.getChannel(p)) || void 0 === n ? void 0 : n.guild_id) && void 0 !== i ? i : u.Z.getGuildId()) && void 0 !== s ? s : void 0;
     return {
-        clientId: null !== (c = f.client_id) && void 0 !== c ? c : '',
-        scopes: (null !== (d = f.scope) && void 0 !== d ? d : '').split(' ').filter((e) => e.length > 0),
-        responseType: f.response_type,
-        redirectUri: f.redirect_uri,
-        codeChallenge: f.code_challenge,
-        codeChallengeMethod: f.code_challenge_method,
-        state: f.state,
-        permissions: _,
+        clientId: null !== (d = _.client_id) && void 0 !== d ? d : '',
+        scopes: (null !== (f = _.scope) && void 0 !== f ? f : '').split(' ').filter((e) => e.length > 0),
+        responseType: _.response_type,
+        redirectUri: _.redirect_uri,
+        codeChallenge: _.code_challenge,
+        codeChallengeMethod: _.code_challenge_method,
+        state: _.state,
+        permissions: h,
         channelId: p,
-        guildId: h,
-        prompt: f.prompt,
-        disableGuildSelect: 'true' === f.disable_guild_select,
-        integrationType: null == f.integration_type ? void 0 : Number(f.integration_type),
-        nonce: f.nonce
+        guildId: m,
+        prompt: _.prompt,
+        disableGuildSelect: 'true' === _.disable_guild_select,
+        integrationType: null == _.integration_type ? void 0 : Number(_.integration_type),
+        nonce: _.nonce
     };
 }

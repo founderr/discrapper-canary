@@ -1,45 +1,45 @@
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(210313),
-    o = n(430229);
-let l = Object.freeze({
-        STANDARD: s.colorStandard,
-        MUTED: s.colorMuted,
-        ERROR: s.colorError,
-        BRAND: s.colorBrand,
-        LINK: s.colorLink,
-        HEADER_PRIMARY: s.colorHeaderPrimary,
-        HEADER_SECONDARY: s.colorHeaderSecondary,
-        STATUS_YELLOW: s.colorStatusYellow,
-        STATUS_GREEN: s.colorStatusGreen,
-        STATUS_RED: s.colorStatusRed,
-        INTERACTIVE_ACTIVE: s.colorInteractiveActive,
-        INTERACTIVE_NORMAL: s.colorInteractiveNormal,
-        ALWAYS_WHITE: s.colorWhite,
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(210313),
+    l = r(430229);
+let u = Object.freeze({
+        STANDARD: o.colorStandard,
+        MUTED: o.colorMuted,
+        ERROR: o.colorError,
+        BRAND: o.colorBrand,
+        LINK: o.colorLink,
+        HEADER_PRIMARY: o.colorHeaderPrimary,
+        HEADER_SECONDARY: o.colorHeaderSecondary,
+        STATUS_YELLOW: o.colorStatusYellow,
+        STATUS_GREEN: o.colorStatusGreen,
+        STATUS_RED: o.colorStatusRed,
+        INTERACTIVE_ACTIVE: o.colorInteractiveActive,
+        INTERACTIVE_NORMAL: o.colorInteractiveNormal,
+        ALWAYS_WHITE: o.colorWhite,
         CUSTOM: null
     }),
-    u = Object.freeze({
-        SIZE_10: o.size10,
-        SIZE_12: o.size12,
-        SIZE_14: o.size14,
-        SIZE_16: o.size16,
-        SIZE_20: o.size20,
-        SIZE_24: o.size24,
-        SIZE_32: o.size32
+    c = Object.freeze({
+        SIZE_10: l.size10,
+        SIZE_12: l.size12,
+        SIZE_14: l.size14,
+        SIZE_16: l.size16,
+        SIZE_20: l.size20,
+        SIZE_24: l.size24,
+        SIZE_32: l.size32
     }),
-    c = (e) => {
-        let { className: t, color: n = l.STANDARD, size: i = u.SIZE_14, tag: o = 'div', selectable: c = !1, strong: d = !1, children: f, style: _, 'aria-label': p, ...h } = e;
-        return (0, r.jsx)(o, {
+    d = (e) => {
+        let { className: n, color: r = u.STANDARD, size: a = c.SIZE_14, tag: l = 'div', selectable: d = !1, strong: f = !1, children: _, style: h, 'aria-label': p, ...m } = e;
+        return (0, i.jsx)(l, {
             'aria-label': p,
-            className: a()(n, i, t, {
-                [s.selectable]: c,
-                [s.strong]: d
+            className: s()(r, a, n, {
+                [o.selectable]: d,
+                [o.strong]: f
             }),
-            style: _,
-            ...h,
-            children: f
+            style: h,
+            ...m,
+            children: _
         });
     };
-(c.Colors = l), (c.Sizes = u), (t.Z = c);
+(d.Colors = u), (d.Sizes = c), (n.Z = d);

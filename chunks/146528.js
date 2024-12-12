@@ -1,29 +1,29 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var r = n(81825),
-    i = n(591548);
-function a(e, t, n) {
+var i = r(81825),
+    a = r(591548);
+function s(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-class s extends r.Z {
+class o extends i.Z {
     static createInvoiceFromServer(e) {
-        var t;
-        return new s({
+        var n;
+        return new o({
             id: e.id,
-            invoiceItems: null === (t = e.invoice_items) || void 0 === t ? void 0 : t.map(i.H),
+            invoiceItems: null === (n = e.invoice_items) || void 0 === n ? void 0 : n.map(a.H),
             total: e.total,
             subtotal: e.subtotal,
             currency: e.currency,
@@ -35,6 +35,6 @@ class s extends r.Z {
         });
     }
     constructor(e) {
-        super(), a(this, 'id', void 0), a(this, 'invoiceItems', void 0), a(this, 'total', void 0), a(this, 'subtotal', void 0), a(this, 'currency', void 0), a(this, 'tax', void 0), a(this, 'taxInclusive', void 0), a(this, 'subscriptionPeriodStart', void 0), a(this, 'subscriptionPeriodEnd', void 0), a(this, 'status', void 0), (this.id = e.id), (this.invoiceItems = e.invoiceItems), (this.total = e.total), (this.subtotal = e.subtotal), (this.currency = e.currency), (this.tax = e.tax), (this.taxInclusive = e.taxInclusive), (this.subscriptionPeriodStart = e.subscriptionPeriodStart), (this.subscriptionPeriodEnd = e.subscriptionPeriodEnd), (this.status = e.status);
+        super(), s(this, 'id', void 0), s(this, 'invoiceItems', void 0), s(this, 'total', void 0), s(this, 'subtotal', void 0), s(this, 'currency', void 0), s(this, 'tax', void 0), s(this, 'taxInclusive', void 0), s(this, 'subscriptionPeriodStart', void 0), s(this, 'subscriptionPeriodEnd', void 0), s(this, 'status', void 0), (this.id = e.id), (this.invoiceItems = e.invoiceItems), (this.total = e.total), (this.subtotal = e.subtotal), (this.currency = e.currency), (this.tax = e.tax), (this.taxInclusive = e.taxInclusive), (this.subscriptionPeriodStart = e.subscriptionPeriodStart), (this.subscriptionPeriodEnd = e.subscriptionPeriodEnd), (this.status = e.status);
     }
 }

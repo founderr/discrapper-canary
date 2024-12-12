@@ -1,29 +1,29 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return u;
+        return d;
     }
-}),
-    n(789020);
-var r = n(200651),
-    i = n(192379),
-    a = n(865427),
-    s = n(853425),
-    o = n(830121);
-let l = RegExp('^' + o.oO.source, o.oO.flags);
-function u(e) {
+});
+var i = r(789020);
+var a = r(200651),
+    s = r(192379),
+    o = r(865427),
+    l = r(853425),
+    u = r(830121);
+let c = RegExp('^' + u.oO.source, u.oO.flags);
+function d(e) {
     return {
-        match: (e, t) => (t.allowLinks && t.allowDevLinks ? l.exec(e) : null),
-        parse: (e, t) => ({
+        match: (e, n) => (n.allowLinks && n.allowDevLinks ? c.exec(e) : null),
+        parse: (e, n) => ({
             target: e,
             type: 'devLink'
         }),
-        react: (e, t, n) => {
-            let o = e.target[0];
-            return (0, a.mG)(o)
-                ? (0, r.jsxs)(r.Fragment, {
-                      children: [(0, r.jsx)('span', { children: o }), (0, r.jsx)(i.Fragment, { children: (0, r.jsx)(s.Z, { url: o }, o) }, n.key)]
+        react: (e, n, r) => {
+            let i = e.target[0];
+            return (0, o.mG)(i)
+                ? (0, a.jsxs)(a.Fragment, {
+                      children: [(0, a.jsx)('span', { children: i }), (0, a.jsx)(s.Fragment, { children: (0, a.jsx)(l.Z, { url: i }, i) }, r.key)]
                   })
-                : (0, r.jsx)('span', { children: o });
+                : (0, a.jsx)('span', { children: i });
         },
         order: 6
     };

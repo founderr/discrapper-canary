@@ -1,131 +1,131 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return h;
+        return m;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(100527),
-    s = n(906732),
-    o = n(299206),
-    l = n(389052),
-    u = n(158508),
-    c = n(710631),
-    d = n(622724),
-    f = n(785717),
-    _ = n(475413),
-    p = n(388032);
-function h(e) {
-    let { user: t, guildId: n, viewProfileItem: h } = e,
-        { trackUserProfileAction: m } = (0, f.KZ)(),
-        { analyticsLocations: g, newestAnalyticsLocation: E } = (0, s.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU),
-        v = (0, c.Z)({
-            user: t,
-            guildId: n,
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(100527),
+    o = r(906732),
+    l = r(299206),
+    u = r(389052),
+    c = r(158508),
+    d = r(710631),
+    f = r(622724),
+    _ = r(785717),
+    h = r(475413),
+    p = r(388032);
+function m(e) {
+    let { user: n, guildId: r, viewProfileItem: m } = e,
+        { trackUserProfileAction: g } = (0, _.KZ)(),
+        { analyticsLocations: E, newestAnalyticsLocation: v } = (0, o.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
+        I = (0, d.Z)({
+            user: n,
+            guildId: r,
             onAction: () =>
-                m({
+                g({
                     action: 'PRESS_INVITE_TO_SERVER',
-                    analyticsLocations: g
-                })
-        }),
-        I = (0, l.Z)({
-            user: t,
-            guildId: n,
-            location: E,
-            color: 'danger',
-            onBlock: () =>
-                m({
-                    action: 'BLOCK',
-                    analyticsLocations: g
-                }),
-            onIgnore: () =>
-                m({
-                    action: 'IGNORE',
-                    analyticsLocations: g
-                }),
-            onUnblock: () =>
-                m({
-                    action: 'UNBLOCK',
-                    analyticsLocations: g
+                    analyticsLocations: E
                 })
         }),
         T = (0, u.Z)({
-            user: t,
-            guildId: n,
-            location: E,
+            user: n,
+            guildId: r,
+            location: v,
+            color: 'danger',
             onBlock: () =>
-                m({
+                g({
                     action: 'BLOCK',
-                    analyticsLocations: g
+                    analyticsLocations: E
                 }),
             onIgnore: () =>
-                m({
+                g({
                     action: 'IGNORE',
-                    analyticsLocations: g
+                    analyticsLocations: E
+                }),
+            onUnblock: () =>
+                g({
+                    action: 'UNBLOCK',
+                    analyticsLocations: E
+                })
+        }),
+        b = (0, c.Z)({
+            user: n,
+            guildId: r,
+            location: v,
+            onBlock: () =>
+                g({
+                    action: 'BLOCK',
+                    analyticsLocations: E
+                }),
+            onIgnore: () =>
+                g({
+                    action: 'IGNORE',
+                    analyticsLocations: E
                 }),
             onUnignore: () =>
-                m({
+                g({
                     action: 'UNIGNORE',
-                    analyticsLocations: g
+                    analyticsLocations: E
                 })
         }),
-        b = (0, d.Z)({
-            user: t,
-            guildId: n,
-            location: E,
+        y = (0, f.Z)({
+            user: n,
+            guildId: r,
+            location: v,
             color: 'danger',
             onAction: () =>
-                m({
+                g({
                     action: 'REPORT',
-                    analyticsLocations: g
+                    analyticsLocations: E
                 })
         }),
-        S = (0, d.T)({
-            user: t,
-            guildId: n,
-            location: E,
+        S = (0, f.T)({
+            user: n,
+            guildId: r,
+            location: v,
             color: 'danger',
             onAction: () =>
-                m({
+                g({
                     action: 'REPORT',
-                    analyticsLocations: g
+                    analyticsLocations: E
                 })
         }),
-        y = [
-            [h, v],
-            [T, I, b, S],
+        A = [
+            [m, I],
+            [b, T, y, S],
             [
-                (0, o.Z)({
-                    id: t.id,
+                (0, l.Z)({
+                    id: n.id,
                     label: p.intl.string(p.t['/AXYnJ']),
                     onSuccess: () =>
-                        m({
+                        g({
                             action: 'COPY_USER_ID',
-                            analyticsLocations: g
+                            analyticsLocations: E
                         })
                 })
             ]
         ];
-    return y.every((e) => e.every((e) => null == e))
+    return A.every((e) => e.every((e) => null == e))
         ? null
-        : (0, r.jsx)(s.Gt, {
-              value: g,
-              children: (0, r.jsx)(i.Popout, {
+        : (0, i.jsx)(o.Gt, {
+              value: E,
+              children: (0, i.jsx)(a.Popout, {
                   renderPopout: (e) => {
-                      let { closePopout: t } = e;
-                      return (0, r.jsx)(i.Menu, {
+                      let { closePopout: n } = e;
+                      return (0, i.jsx)(a.Menu, {
                           navId: 'user-profile-overflow-menu',
                           onSelect: void 0,
-                          onClose: t,
+                          onClose: n,
                           'aria-label': p.intl.string(p.t.AXIHpa),
-                          children: y.map((e, t) => (0, r.jsx)(i.MenuGroup, { children: e.map((e) => e) }, t))
+                          children: A.map((e, n) => (0, i.jsx)(a.MenuGroup, { children: e.map((e) => e) }, n))
                       });
                   },
                   children: (e) =>
-                      (0, r.jsx)(_.oY, {
+                      (0, i.jsx)(h.oY, {
                           action: 'PRESS_OPTIONS',
-                          icon: i.MoreHorizontalIcon,
+                          icon: a.MoreHorizontalIcon,
                           tooltipText: p.intl.string(p.t.UKOtz8),
                           ...e
                       })

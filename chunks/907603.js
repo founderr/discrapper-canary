@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     calendar: `\u{41A}\u{430}\u{43B}\u{435}\u{43D}\u{434}\u{430}\u{440}`,
     day: `\u{434}\u{435}\u{43D}\u{44C}`,
     dayPeriod: `\u{434}\u{43F}/\u{43F}\u{43F}`,

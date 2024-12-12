@@ -1,16 +1,16 @@
-n.d(t, {
+r.d(n, {
     l: function () {
-        return a;
+        return s;
     }
 });
-var r = n(661763),
-    i = n(921336);
-function a(e, t) {
-    let n = (0, r.zL)(e, { labelable: !0 }),
-        { hoverProps: a } = (0, i.XI)({
-            onHoverStart: () => (null == t ? void 0 : t.open(!0)),
-            onHoverEnd: () => (null == t ? void 0 : t.close())
+var i = r(661763),
+    a = r(921336);
+function s(e, n) {
+    let r = (0, i.zL)(e, { labelable: !0 }),
+        { hoverProps: s } = (0, a.XI)({
+            onHoverStart: () => (null == n ? void 0 : n.open(!0)),
+            onHoverEnd: () => (null == n ? void 0 : n.close())
         });
-    return { tooltipProps: (0, r.dG)(n, a, { role: 'tooltip' }) };
+    return { tooltipProps: (0, i.dG)(r, s, { role: 'tooltip' }) };
 }
-n(192379);
+r(192379);

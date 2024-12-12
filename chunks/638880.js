@@ -1,71 +1,71 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return E;
+        return v;
     }
 });
-var r = n(812206),
-    i = n(592125),
-    a = n(944486),
-    s = n(594174),
-    o = n(595519),
-    l = n(636449),
-    u = n(566620),
-    c = n(317381),
-    d = n(882347),
-    f = n(224189),
-    _ = n(574952),
-    p = n(917107),
-    h = n(89425),
-    m = n(197386),
-    g = n(701488);
-function E(e) {
-    return (0, l.C)(() => v(e));
+var i = r(812206),
+    a = r(592125),
+    s = r(944486),
+    o = r(594174),
+    l = r(595519),
+    u = r(636449),
+    c = r(566620),
+    d = r(317381),
+    f = r(882347),
+    _ = r(224189),
+    h = r(574952),
+    p = r(917107),
+    m = r(89425),
+    g = r(197386),
+    E = r(701488);
+function v(e) {
+    return (0, u.C)(() => I(e));
 }
-async function v(e) {
-    let t,
-        { applicationId: n, activityChannelId: l, locationObject: E, analyticsLocations: v, componentId: I, sectionName: T, source: b, partyId: S } = e,
-        y = (0, _.Z)(),
-        A = i.Z.getChannel(l),
-        N = null == A ? void 0 : A.getGuildId(),
-        C = null == N || '' === N,
-        R = s.default.getCurrentUser();
-    if (null == A || (C && !A.isPrivate()) || null == l || null == R) return Promise.resolve(!1);
-    let O = c.ZP.getCurrentEmbeddedActivity();
-    if (((null == O ? void 0 : O.applicationId) != null && (t = r.Z.getApplication(null == O ? void 0 : O.applicationId)), a.Z.getVoiceChannelId() === l && (null == O ? void 0 : O.applicationId) === n && (null == O ? void 0 : O.channelId) === a.Z.getVoiceChannelId())) return (0, m.Z)(N, l), Promise.resolve(!0);
+async function I(e) {
+    let n,
+        { applicationId: r, activityChannelId: u, locationObject: v, analyticsLocations: I, componentId: T, sectionName: b, source: y, partyId: S } = e,
+        A = (0, h.Z)(),
+        N = a.Z.getChannel(u),
+        C = null == N ? void 0 : N.getGuildId(),
+        R = null == C || '' === C,
+        O = o.default.getCurrentUser();
+    if (null == N || (R && !N.isPrivate()) || null == u || null == O) return Promise.resolve(!1);
+    let D = d.ZP.getCurrentEmbeddedActivity();
+    if (((null == D ? void 0 : D.applicationId) != null && (n = i.Z.getApplication(null == D ? void 0 : D.applicationId)), s.Z.getVoiceChannelId() === u && (null == D ? void 0 : D.applicationId) === r && (null == D ? void 0 : D.channelId) === s.Z.getVoiceChannelId())) return (0, g.Z)(C, u), Promise.resolve(!0);
     if (
-        !(await (0, d.p)({
-            applicationId: n,
-            application: await (0, f.Z)(n, l),
-            channel: A,
-            currentEmbeddedApplication: t,
-            embeddedActivitiesManager: y,
-            user: R
+        !(await (0, f.p)({
+            applicationId: r,
+            application: await (0, _.Z)(r, u),
+            channel: N,
+            currentEmbeddedApplication: n,
+            embeddedActivitiesManager: A,
+            user: O
         }))
     )
         return !1;
-    let D = (0, p.Z)(A.id),
-        L = g.wP.includes(A.type);
-    if (D) {
+    let L = (0, p.Z)(N.id),
+        x = E.wP.includes(N.type);
+    if (L) {
         if (
-            !(await (0, h.Z)({
-                channelId: A.id,
-                bypassChangeModal: null != t
+            !(await (0, m.Z)({
+                channelId: N.id,
+                bypassChangeModal: null != n
             }))
         )
             return !1;
-    } else if (!(0, o.WS)(A) || !L) return !1;
+    } else if (!(0, l.WS)(N) || !x) return !1;
     return (
-        (0, u.cG)(l, n),
-        await (0, u.af)({
-            channelId: l,
-            applicationId: n,
+        (0, c.cG)(u, r),
+        await (0, c.af)({
+            channelId: u,
+            applicationId: r,
             isStart: !1,
-            embeddedActivitiesManager: y,
-            analyticsLocations: v,
-            locationObject: E,
-            componentId: I,
-            sectionName: T,
-            source: b,
+            embeddedActivitiesManager: A,
+            analyticsLocations: I,
+            locationObject: v,
+            componentId: T,
+            sectionName: b,
+            source: y,
             partyId: S
         })
     );

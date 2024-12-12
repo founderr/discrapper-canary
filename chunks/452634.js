@@ -1,15 +1,15 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var r = n(131704),
-    i = n(592125),
-    a = n(979651);
-function s(e) {
-    var t;
-    let { channelId: n, userId: s, activity: o } = e,
-        l = i.Z.getChannel(n),
-        u = (null == o ? void 0 : o.session_id) == null || (null != l && (0, r.Qm)(l.type)) ? n : null === (t = a.Z.getVoiceStateForSession(s, null == o ? void 0 : o.session_id)) || void 0 === t ? void 0 : t.channelId;
-    return null != u ? u : void 0;
+var i = r(131704),
+    a = r(592125),
+    s = r(979651);
+function o(e) {
+    var n;
+    let { channelId: r, userId: o, activity: l } = e,
+        u = a.Z.getChannel(r),
+        c = (null == l ? void 0 : l.session_id) == null || (null != u && (0, i.Qm)(u.type)) ? r : null === (n = s.Z.getVoiceStateForSession(o, null == l ? void 0 : l.session_id)) || void 0 === n ? void 0 : n.channelId;
+    return null != c ? c : void 0;
 }

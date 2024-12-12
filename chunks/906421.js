@@ -1,26 +1,26 @@
-n.d(t, {
+r.d(n, {
     d: function () {
-        return a;
+        return s;
     }
 });
-var r = n(192379),
-    i = n(239700);
-function a(e) {
-    let [t, n] = (0, i.zk)(e.isOpen, e.defaultOpen || !1, e.onOpenChange),
-        a = (0, r.useCallback)(() => {
-            n(!0);
-        }, [n]),
-        s = (0, r.useCallback)(() => {
-            n(!1);
-        }, [n]),
-        o = (0, r.useCallback)(() => {
-            n(!t);
-        }, [n, t]);
+var i = r(192379),
+    a = r(239700);
+function s(e) {
+    let [n, r] = (0, a.zk)(e.isOpen, e.defaultOpen || !1, e.onOpenChange),
+        s = (0, i.useCallback)(() => {
+            r(!0);
+        }, [r]),
+        o = (0, i.useCallback)(() => {
+            r(!1);
+        }, [r]),
+        l = (0, i.useCallback)(() => {
+            r(!n);
+        }, [r, n]);
     return {
-        isOpen: t,
-        setOpen: n,
-        open: a,
-        close: s,
-        toggle: o
+        isOpen: n,
+        setOpen: r,
+        open: s,
+        close: o,
+        toggle: l
     };
 }

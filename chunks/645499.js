@@ -1,8 +1,8 @@
-function r(e) {
+function i(e) {
     return /^(?:discord:\/)?\/[a-zA-Z0-9_-]/.test(e);
 }
-n.d(t, {
+r.d(n, {
     B: function () {
-        return r;
+        return i;
     }
 });

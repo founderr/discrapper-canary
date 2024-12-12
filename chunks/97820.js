@@ -1,39 +1,39 @@
-n.d(t, {
+r.d(n, {
     u: function () {
-        return l;
+        return u;
     }
 });
-var r = n(964742),
-    i = n(40284),
-    a = n(304832),
-    s = n(603565),
-    o = n(144459);
-function l() {
-    arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s.Hn;
+var i = r(964742),
+    a = r(40284),
+    s = r(304832),
+    o = r(603565),
+    l = r(144459);
+function u() {
+    arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : o.Hn;
     var e = arguments.length > 1 ? arguments[1] : void 0;
     switch (e.type) {
-        case r.$T:
+        case i.$T:
             break;
-        case i.fu:
-        case i.Rd:
-        case i.IS:
-        case i.SG:
-            return s.Hn;
-        case r.qu:
-        case r.js:
-        case r.Bs:
-        case r.rp:
+        case a.fu:
+        case a.Rd:
+        case a.IS:
+        case a.SG:
+            return o.Hn;
+        case i.qu:
+        case i.js:
+        case i.Bs:
+        case i.rp:
         default:
-            return s.QN;
+            return o.QN;
     }
-    var t = e.payload,
-        n = t.targetIds,
-        l = void 0 === n ? [] : n,
-        u = t.prevTargetIds,
-        c = void 0 === u ? [] : u,
-        d = (0, o.dl)(l, c);
-    if (!(d.length > 0 || !(0, a.Hj)(l, c))) return s.Hn;
-    var f = c[c.length - 1],
-        _ = l[l.length - 1];
-    return f !== _ && (f && d.push(f), _ && d.push(_)), d;
+    var n = e.payload,
+        r = n.targetIds,
+        u = void 0 === r ? [] : r,
+        c = n.prevTargetIds,
+        d = void 0 === c ? [] : c,
+        f = (0, l.dl)(u, d);
+    if (!(f.length > 0 || !(0, s.Hj)(u, d))) return o.Hn;
+    var _ = d[d.length - 1],
+        h = u[u.length - 1];
+    return _ !== h && (_ && f.push(_), h && f.push(h)), f;
 }

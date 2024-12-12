@@ -1,6 +1,6 @@
-n.d(t, {
+r.d(n, {
     p: function () {
-        return r;
+        return i;
     }
 });
-var r = /[ \xA0\u1680\u2000-\u200A\u202F\u205F\u3000]/;
+var i = /[ \xA0\u1680\u2000-\u200A\u202F\u205F\u3000]/;

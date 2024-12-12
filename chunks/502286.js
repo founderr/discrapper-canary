@@ -1,20 +1,20 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(594190);
-function i(e) {
-    let t, n;
+var i = r(594190);
+function a(e) {
+    let n, r;
     if (null == e) return {};
-    let i = e.sourcePid;
-    if (null != i) {
-        let e = r.ZP.getGameForPID(i);
-        (t = null == e ? void 0 : e.name), (n = null == e ? void 0 : e.id);
+    let a = e.sourcePid;
+    if (null != a) {
+        let e = i.ZP.getGameForPID(a);
+        (n = null == e ? void 0 : e.name), (r = null == e ? void 0 : e.id);
     }
     return {
         soundshare_session: e.soundshareSession,
-        share_game_name: t,
-        share_game_id: n
+        share_game_name: n,
+        share_game_id: r
     };
 }

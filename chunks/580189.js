@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     X: function () {
-        return i;
+        return a;
     }
 });
-var r = n(981631);
-function i(e) {
-    var t;
-    return !e.ok && (null === (t = e.body) || void 0 === t ? void 0 : t.code) === r.evJ.BLOCKED_BY_PROXY;
+var i = r(981631);
+function a(e) {
+    var n;
+    return !e.ok && (null === (n = e.body) || void 0 === n ? void 0 : n.code) === i.evJ.BLOCKED_BY_PROXY;
 }

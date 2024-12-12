@@ -1,7 +1,7 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = { Empty: `\u{5E8}\u{5D9}\u{5E7}` };
+var i = {};
+i = { Empty: `\u{5E8}\u{5D9}\u{5E7}` };

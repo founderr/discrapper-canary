@@ -1,11 +1,11 @@
-n.d(t, {
+r.d(n, {
     H: function () {
-        return i;
+        return a;
     }
 });
-var r = n(570140);
-let i = (e) => {
-    r.Z.dispatch({
+var i = r(570140);
+let a = (e) => {
+    i.Z.dispatch({
         type: 'PURCHASED_ITEMS_FESTIVITY_SET_CAN_PLAY_WOW_MOMENT',
         value: e
     });

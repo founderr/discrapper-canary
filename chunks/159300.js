@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     b: function () {
-        return i;
+        return a;
     }
 });
-var r = n(981631);
-function i(e, t, n, i) {
-    let a = null != n ? n : t;
-    return (null != a && e.can(r.Plq.CREATE_INSTANT_INVITE, a)) || (null != t && null != t.vanityURLCode) || (null == i ? void 0 : i.invite_code) != null;
+var i = r(981631);
+function a(e, n, r, a) {
+    let s = null != r ? r : n;
+    return (null != s && e.can(i.Plq.CREATE_INSTANT_INVITE, s)) || (null != n && null != n.vanityURLCode) || (null == a ? void 0 : a.invite_code) != null;
 }

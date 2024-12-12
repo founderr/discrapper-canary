@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     R: function () {
-        return i;
+        return a;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
     kind: 'user',
     id: '2023-10_social_proofing_message_nitro_badge',
     label: 'Social Proofing Message Nitro Badge',
@@ -30,7 +30,7 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i(e, t) {
-    let n = r.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
-    return n.enabled && (!n.hideNitroBadgeWhenRoleBadgePresent || (n.hideNitroBadgeWhenRoleBadgePresent && !e));
+function a(e, n) {
+    let r = i.getCurrentConfig({ location: n }, { autoTrackExposure: !0 });
+    return r.enabled && (!r.hideNitroBadgeWhenRoleBadgePresent || (r.hideNitroBadgeWhenRoleBadgePresent && !e));
 }

@@ -1,16 +1,16 @@
-function r(e) {
-    let t = document.body;
-    if (null == t) throw Error('[Utils] ClipboardUtils.copy(): assert failed: document.body != null');
-    let n = document.createRange(),
-        r = window.getSelection(),
-        i = document.createElement('textarea');
-    (i.value = e), (i.contentEditable = 'true'), (i.style.visibility = 'none'), t.appendChild(i), n.selectNodeContents(i), null == r || r.removeAllRanges(), null == r || r.addRange(n), i.focus(), i.setSelectionRange(0, e.length);
-    let a = document.execCommand('copy');
-    return t.removeChild(i), a;
-}
-n.d(t, {
+r.d(n, {
     J: function () {
-        return r;
+        return a;
     }
-}),
-    n(411104);
+});
+var i = r(411104);
+function a(e) {
+    let n = document.body;
+    if (null == n) throw Error('[Utils] ClipboardUtils.copy(): assert failed: document.body != null');
+    let r = document.createRange(),
+        i = window.getSelection(),
+        a = document.createElement('textarea');
+    (a.value = e), (a.contentEditable = 'true'), (a.style.visibility = 'none'), n.appendChild(a), r.selectNodeContents(a), null == i || i.removeAllRanges(), null == i || i.addRange(r), a.focus(), a.setSelectionRange(0, e.length);
+    let s = document.execCommand('copy');
+    return n.removeChild(a), s;
+}

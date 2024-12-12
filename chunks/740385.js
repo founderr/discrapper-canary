@@ -1,28 +1,28 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     buttonLabel: `N\xe4yt\xe4 ehdotukset`,
-    countAnnouncement: (e, t) =>
-        `${t.plural(e.optionCount, {
-            one: () => `${t.number(e.optionCount)} vaihtoehto`,
-            other: () => `${t.number(e.optionCount)} vaihtoehdot`
+    countAnnouncement: (e, n) =>
+        `${n.plural(e.optionCount, {
+            one: () => `${n.number(e.optionCount)} vaihtoehto`,
+            other: () => `${n.number(e.optionCount)} vaihtoehdot`
         })} saatavilla.`,
-    focusAnnouncement: (e, t) =>
-        `${t.select(
+    focusAnnouncement: (e, n) =>
+        `${n.select(
             {
                 true: () =>
-                    `Mentiin ryhm\xe4\xe4n ${e.groupTitle}, ${t.plural(e.groupCount, {
-                        one: () => `${t.number(e.groupCount)} vaihtoehdon`,
-                        other: () => `${t.number(e.groupCount)} vaihtoehdon`
+                    `Mentiin ryhm\xe4\xe4n ${e.groupTitle}, ${n.plural(e.groupCount, {
+                        one: () => `${n.number(e.groupCount)} vaihtoehdon`,
+                        other: () => `${n.number(e.groupCount)} vaihtoehdon`
                     })} kanssa.`,
                 other: ''
             },
             e.isGroupChange
-        )}${e.optionText}${t.select(
+        )}${e.optionText}${n.select(
             {
                 true: ', valittu',
                 other: ''

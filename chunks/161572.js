@@ -1,32 +1,32 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return l;
+        return u;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(837411),
-    a = n(705556),
-    s = n(955418),
-    o = n(591156);
-function l(e) {
-    let { user: t, guildId: n, channelId: l, onClose: u } = e,
-        c = (0, i.Z)(t.id, n);
-    return (0, r.jsxs)('footer', {
-        className: o.footer,
+var i = r(200651);
+r(192379);
+var a = r(837411),
+    s = r(705556),
+    o = r(955418),
+    l = r(591156);
+function u(e) {
+    let { user: n, guildId: r, channelId: u, onClose: c } = e,
+        d = (0, a.Z)(n.id, r);
+    return (0, i.jsxs)('footer', {
+        className: l.footer,
         children: [
-            c &&
-                (0, r.jsx)(s.Z, {
-                    user: t,
-                    guildId: n,
-                    channelId: l,
-                    onClose: u
+            d &&
+                (0, i.jsx)(o.Z, {
+                    user: n,
+                    guildId: r,
+                    channelId: u,
+                    onClose: c
                 }),
-            !c &&
-                (0, r.jsx)(a.Z, {
-                    user: t,
-                    guildId: n,
-                    onClose: u,
+            !d &&
+                (0, i.jsx)(s.Z, {
+                    user: n,
+                    guildId: r,
+                    onClose: c,
                     fullWidth: !0
                 })
         ]

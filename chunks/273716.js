@@ -1,18 +1,18 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return o;
+        return l;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(871499),
-    s = n(388032);
-function o(e) {
-    let { label: t, ...n } = e;
-    return (0, r.jsx)(a.Z, {
-        label: null != t ? t : s.intl.string(s.t.cpT0Cg),
-        iconComponent: i.XSmallBoldIcon,
-        ...n
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(871499),
+    o = r(388032);
+function l(e) {
+    let { label: n, ...r } = e;
+    return (0, i.jsx)(s.Z, {
+        label: null != n ? n : o.intl.string(o.t.cpT0Cg),
+        iconComponent: a.XSmallBoldIcon,
+        ...r
     });
 }

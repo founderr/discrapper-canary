@@ -1,33 +1,33 @@
-var r = n(570140);
-t.Z = {
-    clearDraft(e, t) {
-        r.Z.dispatch({
+var i = r(570140);
+n.Z = {
+    clearDraft(e, n) {
+        i.Z.dispatch({
             type: 'DRAFT_CLEAR',
             channelId: e,
-            draftType: t
+            draftType: n
         });
     },
-    saveDraft(e, t, n) {
-        r.Z.dispatch({
+    saveDraft(e, n, r) {
+        i.Z.dispatch({
             type: 'DRAFT_SAVE',
             channelId: e,
-            draft: t,
-            draftType: n
+            draft: n,
+            draftType: r
         });
     },
-    changeDraft(e, t, n) {
-        r.Z.dispatch({
+    changeDraft(e, n, r) {
+        i.Z.dispatch({
             type: 'DRAFT_CHANGE',
             channelId: e,
-            draft: t,
-            draftType: n
+            draft: n,
+            draftType: r
         });
     },
-    changeThreadSettings(e, t) {
-        r.Z.dispatch({
+    changeThreadSettings(e, n) {
+        i.Z.dispatch({
             type: 'THREAD_SETTINGS_DRAFT_CHANGE',
             channelId: e,
-            draft: t
+            draft: n
         });
     }
 };

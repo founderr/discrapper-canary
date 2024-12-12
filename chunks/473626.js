@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     dateRange: (e) => `${e.startDate} tot ${e.endDate}`,
     dateSelected: (e) => `${e.date} geselecteerd`,
     finishRangeSelectionPrompt: 'Klik om de selectie van het datumbereik te voltooien',

@@ -6,7 +6,7 @@ e.exports = {
     spinnerItem: 'spinnerItem_dd4f85',
     colorBrandInverted: 'colorBrandInverted_dd4f85',
     lookOutlined: 'lookOutlined_dd4f85',
-    lookLink: 'lookLink_dd4f85 ' + n('864435').lowSaturationUnderline,
+    lookLink: 'lookLink_dd4f85 ' + r('864435').lowSaturationUnderline,
     colorPrimary: 'colorPrimary_dd4f85',
     colorLink: 'colorLink_dd4f85',
     colorWhite: 'colorWhite_dd4f85',

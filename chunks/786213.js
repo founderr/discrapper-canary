@@ -1,11 +1,11 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return s;
     }
-}),
-    n(789020);
-var r = n(981631);
-function i(e) {
-    var t;
-    return ((null !== (t = e.flags) && void 0 !== t ? t : 0) & r.xW$.STAFF) === r.xW$.STAFF || (null == e ? void 0 : e.personal_connection_id) != null;
+});
+var i = r(789020);
+var a = r(981631);
+function s(e) {
+    var n;
+    return ((null !== (n = e.flags) && void 0 !== n ? n : 0) & a.xW$.STAFF) === a.xW$.STAFF || (null == e ? void 0 : e.personal_connection_id) != null;
 }

@@ -1,12 +1,12 @@
-n.d(t, {
+r.d(n, {
     CM: function () {
-        return I;
+        return T;
     },
     Cf: function () {
-        return E;
+        return v;
     },
     ID: function () {
-        return v;
+        return I;
     },
     Xz: function () {
         return S;
@@ -15,166 +15,166 @@ n.d(t, {
         return p;
     },
     c_: function () {
-        return b;
-    },
-    f4: function () {
         return y;
     },
-    g_: function () {
-        return g;
-    },
-    ho: function () {
-        return m;
-    },
-    pG: function () {
-        return h;
-    },
-    rf: function () {
+    f4: function () {
         return A;
     },
-    x3: function () {
+    g_: function () {
+        return E;
+    },
+    ho: function () {
+        return g;
+    },
+    pG: function () {
+        return m;
+    },
+    rf: function () {
         return N;
     },
+    x3: function () {
+        return C;
+    },
     z5: function () {
-        return T;
+        return b;
     }
 });
-var r = n(544891),
-    i = n(570140),
-    a = n(881052),
-    s = n(957730),
-    o = n(695346),
-    l = n(594174),
-    u = n(626135),
-    c = n(956664),
-    d = n(981631),
-    f = n(474936);
-function _(e) {
-    u.default.track(d.rMx.PREMIUM_FEATURE_TRY_OUT, {
+var i = r(544891),
+    a = r(570140),
+    s = r(881052),
+    o = r(957730),
+    l = r(695346),
+    u = r(594174),
+    c = r(626135),
+    d = r(956664),
+    f = r(981631),
+    _ = r(474936);
+function h(e) {
+    c.default.track(f.rMx.PREMIUM_FEATURE_TRY_OUT, {
         feature_name: e,
-        feature_tier: f.h1.PREMIUM_STANDARD
+        feature_tier: _.h1.PREMIUM_STANDARD
     });
 }
-async function p(e, t) {
-    var n, u, c;
-    let f = null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
-    if (null == f) return;
-    let _ = o.dN.getSetting();
-    null != e.bio && _ && (e.bio = s.ZP.parse(void 0, e.bio).content);
+async function p(e, n) {
+    var r, c, d;
+    let _ = null === (r = u.default.getCurrentUser()) || void 0 === r ? void 0 : r.id;
+    if (null == _) return;
+    let h = l.dN.getSetting();
+    null != e.bio && h && (e.bio = o.ZP.parse(void 0, e.bio).content);
     try {
-        i.Z.dispatch({
+        a.Z.dispatch({
             type: 'USER_PROFILE_UPDATE_START',
-            userId: f
+            userId: _
         });
-        let n = await r.tn.patch({
-            url: null != t ? d.ANM.GUILD_PROFILE(t, d.ME) : d.ANM.USER_PROFILE(d.ME),
+        let r = await i.tn.patch({
+            url: null != n ? f.ANM.GUILD_PROFILE(n, f.ME) : f.ANM.USER_PROFILE(f.ME),
             body: e,
             rejectWithError: !1
         });
-        if (n.ok) {
-            let e = null === (u = n.body.profile_effect) || void 0 === u ? void 0 : u.id,
-                t = null === (c = n.body.profile_effect) || void 0 === c ? void 0 : c.expires_at;
-            i.Z.dispatch({
+        if (r.ok) {
+            let e = null === (c = r.body.profile_effect) || void 0 === c ? void 0 : c.id,
+                n = null === (d = r.body.profile_effect) || void 0 === d ? void 0 : d.expires_at;
+            a.Z.dispatch({
                 type: 'USER_PROFILE_UPDATE_SUCCESS',
-                userId: f,
+                userId: _,
                 profileEffectId: e,
-                profileEffectExpiresAt: t,
-                ...n.body
+                profileEffectExpiresAt: n,
+                ...r.body
             });
         } else {
-            let e = new a.Hx(n);
-            i.Z.dispatch({
+            let e = new s.Hx(r);
+            a.Z.dispatch({
                 type: 'USER_PROFILE_UPDATE_FAILURE',
-                errors: n.body,
+                errors: r.body,
                 apiError: e
             });
         }
-        return n;
-    } catch (t) {
-        let e = new a.Hx(t);
+        return r;
+    } catch (n) {
+        let e = new s.Hx(n);
         return (
-            i.Z.dispatch({
+            a.Z.dispatch({
                 type: 'USER_PROFILE_UPDATE_FAILURE',
                 errors: {},
                 apiError: e
             }),
-            t
+            n
         );
     }
 }
-function h() {
-    i.Z.dispatch({ type: 'USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES' });
+function m() {
+    a.Z.dispatch({ type: 'USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES' });
 }
-function m(e) {
+function g(e) {
     (null == e ? void 0 : e.startsWith('https:')) === !0
         ? fetch(e)
               .then((e) => e.blob())
-              .then((e) => (0, c.fD)(e))
-              .then((e) => g(e))
-        : null != e && g(e);
+              .then((e) => (0, d.fD)(e))
+              .then((e) => E(e))
+        : null != e && E(e);
 }
-function g(e) {
-    i.Z.dispatch({
+function E(e) {
+    a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER',
         banner: e
     });
 }
-function E(e) {
-    i.Z.dispatch({
+function v(e) {
+    a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_BIO',
         bio: e
     });
 }
-function v(e) {
-    i.Z.dispatch({
+function I(e) {
+    a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS',
         pronouns: e
     });
 }
-function I(e) {
-    i.Z.dispatch({
+function T(e) {
+    a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR',
         color: e
     });
 }
-function T(e) {
-    i.Z.dispatch({
+function b(e) {
+    a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS',
         themeColors: e
     });
 }
-function b(e) {
-    i.Z.dispatch({
+function y(e) {
+    a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR',
         avatar: e
     }),
-        _(f.QP.ANIMATED_AVATAR);
+        h(_.QP.ANIMATED_AVATAR);
 }
 function S(e) {
-    i.Z.dispatch({
+    a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION',
         avatarDecoration: e
     }),
-        _(f.QP.AVATAR_DECORATION);
+        h(_.QP.AVATAR_DECORATION);
 }
-function y(e) {
-    i.Z.dispatch({
+function A(e) {
+    a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER',
         banner: e
     }),
-        _(f.QP.PROFILE_BANNER);
+        h(_.QP.PROFILE_BANNER);
 }
-function A(e) {
-    i.Z.dispatch({
+function N(e) {
+    a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS',
         themeColors: e
     }),
-        _(f.QP.PROFILE_THEME_COLOR);
+        h(_.QP.PROFILE_THEME_COLOR);
 }
-function N(e) {
-    i.Z.dispatch({
+function C(e) {
+    a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET',
         preset: e
     }),
-        _(f.QP.PRESET);
+        h(_.QP.PRESET);
 }

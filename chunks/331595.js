@@ -1,10 +1,10 @@
-function r(e) {
-    var t, n;
-    let r = null != e['aria-label'];
-    return (e['aria-hidden'] = null !== (t = e['aria-hidden']) && void 0 !== t ? t : !r), (e.role = null !== (n = e.role) && void 0 !== n ? n : 'img'), e;
+function i(e) {
+    var n, r;
+    let i = null != e['aria-label'];
+    return (e['aria-hidden'] = null !== (n = e['aria-hidden']) && void 0 !== n ? n : !i), (e.role = null !== (r = e.role) && void 0 !== r ? r : 'img'), e;
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     B: function () {
-        return i;
+        return a;
     }
 });
-var r = n(131704);
-function i(e) {
-    return (0, r.r8)(e) || (0, r.bw)(e);
+var i = r(131704);
+function a(e) {
+    return (0, i.r8)(e) || (0, i.bw)(e);
 }

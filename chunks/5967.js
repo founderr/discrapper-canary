@@ -1,26 +1,26 @@
-n.d(t, {
+r.d(n, {
     VG: function () {
-        return s;
+        return l;
     },
     uB: function () {
-        return o;
+        return u;
     }
-}),
-    n(47120);
-let r = /input/i,
-    i = /textarea/i,
-    a = new Set(['text', 'password', 'number', 'date', 'datetime-local', 'time', 'week', 'month', 'email', 'search', 'tel', 'url']);
-function s(e) {
+});
+var i = r(47120);
+let a = /input/i,
+    s = /textarea/i,
+    o = new Set(['text', 'password', 'number', 'date', 'datetime-local', 'time', 'week', 'month', 'email', 'search', 'tel', 'url']);
+function l(e) {
     if (null == e) return !1;
-    if ('true' === e.getAttribute('contenteditable') || i.test(e.tagName)) return !0;
-    if (r.test(e.tagName)) {
-        var t;
-        let n = null !== (t = e.getAttribute('type')) && void 0 !== t ? t : 'text';
-        if (a.has(n)) return !0;
+    if ('true' === e.getAttribute('contenteditable') || s.test(e.tagName)) return !0;
+    if (a.test(e.tagName)) {
+        var n;
+        let r = null !== (n = e.getAttribute('type')) && void 0 !== n ? n : 'text';
+        if (o.has(r)) return !0;
     }
     return !1;
 }
-function o(e) {
-    let { target: t } = e;
-    return null == t ? null : 'ownerDocument' in t ? t.ownerDocument : 'document' in t ? t.document : (console.warn('Unable to get owner document from event', e.type), null);
+function u(e) {
+    let { target: n } = e;
+    return null == n ? null : 'ownerDocument' in n ? n.ownerDocument : 'document' in n ? n.document : (console.warn('Unable to get owner document from event', e.type), null);
 }

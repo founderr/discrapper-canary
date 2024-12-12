@@ -1,105 +1,105 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return D;
+        return w;
     }
-}),
-    n(773603),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(913527),
-    l = n.n(o),
-    u = n(235874),
-    c = n(481060),
-    d = n(37234),
-    f = n(100527),
-    _ = n(906732),
-    p = n(626135),
-    h = n(55935),
-    m = n(63063),
-    g = n(281494),
-    E = n(790368),
-    v = n(474936),
-    I = n(981631),
-    T = n(388032),
-    b = n(735633),
-    S = n(751599),
-    y = n(397293),
-    A = n(352175),
-    N = n(90351);
-let C = async (e, t, n) => {
-        n(!0),
-            await (0, g.Eo)(e)
+});
+var i = r(773603);
+var a = r(47120);
+var s = r(200651),
+    o = r(192379),
+    l = r(120356),
+    u = r.n(l),
+    c = r(913527),
+    d = r.n(c),
+    f = r(235874),
+    _ = r(481060),
+    h = r(37234),
+    p = r(100527),
+    m = r(906732),
+    g = r(626135),
+    E = r(55935),
+    v = r(63063),
+    I = r(281494),
+    T = r(790368),
+    b = r(474936),
+    y = r(981631),
+    S = r(388032),
+    A = r(735633),
+    N = r(751599),
+    C = r(397293),
+    R = r(352175),
+    O = r(90351);
+let D = async (e, n, r) => {
+        r(!0),
+            await (0, I.Eo)(e)
                 .then(() => {
-                    t(), (0, d.Ou)();
+                    n(), (0, h.Ou)();
                 })
                 .finally(() => {
-                    n(!1);
+                    r(!1);
                 });
     },
-    R = (e) => {
-        let { onClose: t, referralsRemaining: n, recipient: a, analyticsLocations: o, shouldShowBirthdayUX: l } = e,
-            [u, d] = i.useState(!1),
-            f = n - 1;
-        return (0, r.jsxs)('div', {
-            className: b.confirmationContainer,
+    L = (e) => {
+        let { onClose: n, referralsRemaining: r, recipient: i, analyticsLocations: a, shouldShowBirthdayUX: l } = e,
+            [c, d] = o.useState(!1),
+            f = r - 1;
+        return (0, s.jsxs)('div', {
+            className: A.confirmationContainer,
             children: [
-                (0, r.jsxs)('div', {
-                    className: s()({
-                        [b.confirmationBody]: !l,
-                        [b.confirmationBirthdayBody]: l
+                (0, s.jsxs)('div', {
+                    className: u()({
+                        [A.confirmationBody]: !l,
+                        [A.confirmationBirthdayBody]: l
                     }),
                     children: [
-                        (0, r.jsx)(c.ModalCloseButton, {
-                            onClick: t,
-                            className: b.closeButton
+                        (0, s.jsx)(_.ModalCloseButton, {
+                            onClick: n,
+                            className: A.closeButton
                         }),
-                        (0, r.jsx)('img', {
+                        (0, s.jsx)('img', {
                             alt: '',
-                            src: l ? y : A,
-                            className: b.confirmationImage
+                            src: l ? C : R,
+                            className: A.confirmationImage
                         }),
-                        (0, r.jsx)(c.Heading, {
+                        (0, s.jsx)(_.Heading, {
                             variant: 'heading-xl/bold',
                             color: 'interactive-active',
-                            className: b.confirmationHeading,
-                            children: T.intl.string(T.t.dF5azM)
+                            className: A.confirmationHeading,
+                            children: S.intl.string(S.t.dF5azM)
                         }),
-                        (0, r.jsx)(c.Text, {
-                            className: b.confirmationBodyCopy,
+                        (0, s.jsx)(_.Text, {
+                            className: A.confirmationBodyCopy,
                             variant: 'text-md/medium',
                             color: 'header-primary',
-                            children: f > 0 ? T.intl.formatToPlainString(T.t['J/tYnp'], { count: f }) : T.intl.string(T.t.vVnRxc)
+                            children: f > 0 ? S.intl.formatToPlainString(S.t['J/tYnp'], { count: f }) : S.intl.string(S.t.vVnRxc)
                         }),
-                        (0, r.jsx)('hr', { className: b.confirmationBodySeparator })
+                        (0, s.jsx)('hr', { className: A.confirmationBodySeparator })
                     ]
                 }),
-                (0, r.jsxs)('div', {
-                    className: b.confirmationButtonContainer,
+                (0, s.jsxs)('div', {
+                    className: A.confirmationButtonContainer,
                     children: [
-                        (0, r.jsx)(c.Button, {
-                            className: b.confirmationShareButton,
-                            submitting: u,
+                        (0, s.jsx)(_.Button, {
+                            className: A.confirmationShareButton,
+                            submitting: c,
                             onClick: () => {
-                                C(a, t, d),
-                                    p.default.track(I.rMx.SHARE_NITRO_FLOW_STEPS, {
-                                        location_stack: o,
-                                        step: v.fz.FLOW_COMPLETED,
-                                        other_user_id: Number(a)
+                                D(i, n, d),
+                                    g.default.track(y.rMx.SHARE_NITRO_FLOW_STEPS, {
+                                        location_stack: a,
+                                        step: b.fz.FLOW_COMPLETED,
+                                        other_user_id: Number(i)
                                     });
                             },
-                            children: T.intl.string(T.t['zxlx6+'])
+                            children: S.intl.string(S.t['zxlx6+'])
                         }),
-                        (0, r.jsx)('div', {
-                            className: b.confirmationCancelButtonContainer,
-                            children: (0, r.jsx)(c.Clickable, {
-                                onClick: t,
-                                children: (0, r.jsx)(c.Text, {
+                        (0, s.jsx)('div', {
+                            className: A.confirmationCancelButtonContainer,
+                            children: (0, s.jsx)(_.Clickable, {
+                                onClick: n,
+                                children: (0, s.jsx)(_.Text, {
                                     variant: 'text-sm/medium',
-                                    className: b.confirmationCancelCopy,
-                                    children: T.intl.string(T.t['ETE/oK'])
+                                    className: A.confirmationCancelCopy,
+                                    children: S.intl.string(S.t['ETE/oK'])
                                 })
                             })
                         })
@@ -108,116 +108,116 @@ let C = async (e, t, n) => {
             ]
         });
     };
-function O(e) {
-    let { referralsRemaining: t, channel: n, onClose: a, isResending: o } = e,
-        [u, d] = i.useState(!1),
-        [g, A] = i.useState(!1),
-        O = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null,
-        { analyticsLocations: D } = (0, _.ZP)(f.Z.REFERRAL_TRIALS_POPOUT),
-        { enabled: L } = E.Z.useExperiment({ location: '200c24_1' }, { autoTrackExposure: !0 }),
-        x = new Date('2023-06-15T08:00:00-08:00');
-    return null == O
+function x(e) {
+    let { referralsRemaining: n, channel: r, onClose: i, isResending: a } = e,
+        [l, c] = o.useState(!1),
+        [f, h] = o.useState(!1),
+        I = r.isDM() && void 0 !== r.recipients ? r.recipients[0] : null,
+        { analyticsLocations: R } = (0, m.ZP)(p.Z.REFERRAL_TRIALS_POPOUT),
+        { enabled: x } = T.Z.useExperiment({ location: '200c24_1' }, { autoTrackExposure: !0 }),
+        w = new Date('2023-06-15T08:00:00-08:00');
+    return null == I
         ? null
-        : u
-          ? (0, r.jsx)(R, {
-                onClose: a,
-                referralsRemaining: t,
-                recipient: O,
-                analyticsLocations: D,
-                shouldShowBirthdayUX: L
+        : l
+          ? (0, s.jsx)(L, {
+                onClose: i,
+                referralsRemaining: n,
+                recipient: I,
+                analyticsLocations: R,
+                shouldShowBirthdayUX: x
             })
-          : (0, r.jsxs)('div', {
-                className: b.generalContainer,
+          : (0, s.jsxs)('div', {
+                className: A.generalContainer,
                 children: [
-                    (0, r.jsxs)('div', {
-                        className: b.generalBodyContainer,
+                    (0, s.jsxs)('div', {
+                        className: A.generalBodyContainer,
                         children: [
-                            (0, r.jsx)('img', {
+                            (0, s.jsx)('img', {
                                 alt: '',
-                                src: L ? y : N,
-                                className: b.generalBodyImage
+                                src: x ? C : O,
+                                className: A.generalBodyImage
                             }),
-                            (0, r.jsxs)('div', {
-                                className: b.innerContent,
+                            (0, s.jsxs)('div', {
+                                className: A.innerContent,
                                 children: [
-                                    (0, r.jsx)(c.ModalCloseButton, {
-                                        onClick: a,
-                                        className: b.closeButton
+                                    (0, s.jsx)(_.ModalCloseButton, {
+                                        onClick: i,
+                                        className: A.closeButton
                                     }),
-                                    (0, r.jsx)(c.Heading, {
-                                        className: b.generalHeading,
+                                    (0, s.jsx)(_.Heading, {
+                                        className: A.generalHeading,
                                         variant: 'heading-xl/bold',
-                                        children: o ? T.intl.string(T.t.yCN5Qk) : T.intl.string(T.t.c1wxcX)
+                                        children: a ? S.intl.string(S.t.yCN5Qk) : S.intl.string(S.t.c1wxcX)
                                     }),
-                                    (0, r.jsxs)(c.Text, {
-                                        className: b.generalBodyCopy,
+                                    (0, s.jsxs)(_.Text, {
+                                        className: A.generalBodyCopy,
                                         variant: 'text-md/normal',
                                         children: [
-                                            (0, r.jsx)(c.Anchor, {
-                                                className: s()(b.learnMore, { [b.learnMoreResendUnderlinedText]: o }),
-                                                href: m.Z.getArticleURL(I.BhN.SHARE_NITRO_FAQ),
-                                                children: o ? T.intl.string(T.t.yJfqPT) : T.intl.format(T.t['+Z4ey8'], { count: t })
+                                            (0, s.jsx)(_.Anchor, {
+                                                className: u()(A.learnMore, { [A.learnMoreResendUnderlinedText]: a }),
+                                                href: v.Z.getArticleURL(y.BhN.SHARE_NITRO_FAQ),
+                                                children: a ? S.intl.string(S.t.yJfqPT) : S.intl.format(S.t['+Z4ey8'], { count: n })
                                             }),
-                                            o
-                                                ? (0, r.jsx)('div', {
-                                                      className: b.shareNitroResendCopySuffix,
-                                                      children: T.intl.string(T.t['b0B69/'])
+                                            a
+                                                ? (0, s.jsx)('div', {
+                                                      className: A.shareNitroResendCopySuffix,
+                                                      children: S.intl.string(S.t['b0B69/'])
                                                   })
-                                                : (0, r.jsx)('div', { children: T.intl.format(T.t['58lPt7'], { date: (0, h.vc)(l()(x), 'LL') }) })
+                                                : (0, s.jsx)('div', { children: S.intl.format(S.t['58lPt7'], { date: (0, E.vc)(d()(w), 'LL') }) })
                                         ]
                                     })
                                 ]
                             }),
-                            L &&
-                                (0, r.jsx)('img', {
+                            x &&
+                                (0, s.jsx)('img', {
                                     alt: '',
-                                    src: S,
-                                    className: b.birthdayBackgroundImage
+                                    src: N,
+                                    className: A.birthdayBackgroundImage
                                 })
                         ]
                     }),
-                    (0, r.jsx)('div', {
-                        className: b.generalButtonContainer,
-                        children: (0, r.jsx)(c.Button, {
-                            className: b.generalShareButton,
-                            submitting: g,
+                    (0, s.jsx)('div', {
+                        className: A.generalButtonContainer,
+                        children: (0, s.jsx)(_.Button, {
+                            className: A.generalShareButton,
+                            submitting: f,
                             onClick: () => {
-                                o
-                                    ? C(O, a, A)
-                                    : (d(!0),
-                                      p.default.track(I.rMx.SHARE_NITRO_FLOW_STEPS, {
-                                          location_stack: D,
-                                          step: v.fz.FLOW_STARTED,
-                                          other_user_id: Number(O)
+                                a
+                                    ? D(I, i, h)
+                                    : (c(!0),
+                                      g.default.track(y.rMx.SHARE_NITRO_FLOW_STEPS, {
+                                          location_stack: R,
+                                          step: b.fz.FLOW_STARTED,
+                                          other_user_id: Number(I)
                                       }));
                             },
-                            children: o ? T.intl.string(T.t.awsERE) : T.intl.string(T.t.Ago7Zm)
+                            children: a ? S.intl.string(S.t.awsERE) : S.intl.string(S.t.Ago7Zm)
                         })
                     })
                 ]
             });
 }
-function D(e) {
-    let { shouldShowPopout: t, referralsRemaining: n, channel: i, onClose: a, isResending: s } = e;
-    return t
-        ? (0, r.jsx)('div', {
+function w(e) {
+    let { shouldShowPopout: n, referralsRemaining: r, channel: i, onClose: a, isResending: o } = e;
+    return n
+        ? (0, s.jsx)('div', {
               onMouseDown: (e) => e.stopPropagation(),
-              children: (0, r.jsx)(u.y, {
+              children: (0, s.jsx)(f.y, {
                   shouldShow: !0,
                   position: 'top',
                   align: 'center',
                   renderPopout: (e) =>
-                      (0, r.jsx)(O, {
+                      (0, s.jsx)(x, {
                           ...e,
-                          referralsRemaining: n,
+                          referralsRemaining: r,
                           channel: i,
                           onClose: a,
-                          isResending: s
+                          isResending: o
                       }),
                   onRequestClose: () => void 0,
                   closeOnScroll: !1,
                   ignoreModalClicks: !0,
-                  children: () => (0, r.jsx)('div', { className: b.__invalid_popoutTarget })
+                  children: () => (0, s.jsx)('div', { className: A.__invalid_popoutTarget })
               })
           })
         : null;

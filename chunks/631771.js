@@ -1,22 +1,22 @@
-n.d(t, {
+r.d(n, {
     Gi: function () {
-        return o;
-    },
-    MP: function () {
         return l;
     },
-    Qs: function () {
+    MP: function () {
         return u;
     },
-    YN: function () {
+    Qs: function () {
         return c;
+    },
+    YN: function () {
+        return d;
     }
 });
-var r = n(818083),
-    i = n(380684),
-    a = n(311476),
-    s = n(474936);
-let o = (0, r.B)({
+var i = r(818083),
+    a = r(380684),
+    s = r(311476),
+    o = r(474936);
+let l = (0, i.B)({
         id: '2024-06_premium_emoji_desktop_upsell',
         label: 'Premium Emoji Desktop Upsell',
         kind: 'user',
@@ -43,7 +43,7 @@ let o = (0, r.B)({
             }
         ]
     }),
-    l = (0, r.B)({
+    u = (0, i.B)({
         id: '2024-05_file_upload_desktop_upsell',
         label: 'File Upload Desktop Upsell',
         kind: 'user',
@@ -70,7 +70,7 @@ let o = (0, r.B)({
             }
         ]
     }),
-    u = (0, r.B)({
+    c = (0, i.B)({
         id: '2024-06_premium_soundboard_desktop_upsell',
         label: 'Premium Soundboard Desktop Upsell',
         kind: 'user',
@@ -109,18 +109,18 @@ let o = (0, r.B)({
             }
         ]
     });
-function c(e) {
+function d(e) {
     switch (e) {
-        case s.cd.UPLOAD_ERROR_UPSELL:
-            return l.getCurrentConfig({ location: 'File Upload Roadblock' }, { autoTrackExposure: !1 }).addSocialProof && !(0, i.XS)();
-        case s.cd.CLIENT_THEMES_UPSELL:
-        case s.cd.APP_ICON_UPSELL:
-            return a.Z.getCurrentConfig({ location: 'shouldShowSocialProof' }, { autoTrackExposure: !1 }).addSocialProof;
-        case s.cd.ANIMATED_AVATAR_MODAL_UPSELL:
-        case s.cd.ANIMATED_BANNER_MODAL_UPSELL:
-        case s.cd.PROFILE_EFFECT_MODAL_UPSELL:
-        case s.cd.AVATAR_DECORATION_MODAL_UPSELL:
-        case s.cd.FOR_LATER_MODAL_UPSELL:
+        case o.cd.UPLOAD_ERROR_UPSELL:
+            return u.getCurrentConfig({ location: 'File Upload Roadblock' }, { autoTrackExposure: !1 }).addSocialProof && !(0, a.XS)();
+        case o.cd.CLIENT_THEMES_UPSELL:
+        case o.cd.APP_ICON_UPSELL:
+            return s.Z.getCurrentConfig({ location: 'shouldShowSocialProof' }, { autoTrackExposure: !1 }).addSocialProof;
+        case o.cd.ANIMATED_AVATAR_MODAL_UPSELL:
+        case o.cd.ANIMATED_BANNER_MODAL_UPSELL:
+        case o.cd.PROFILE_EFFECT_MODAL_UPSELL:
+        case o.cd.AVATAR_DECORATION_MODAL_UPSELL:
+        case o.cd.FOR_LATER_MODAL_UPSELL:
             return !0;
         default:
             return !1;

@@ -1,71 +1,71 @@
-n(47120);
-var r = n(268146),
-    i = n(46973),
-    a = n(147913),
-    s = n(314897),
-    o = n(998502),
-    l = n(981631);
-let u = new Set();
-function c(e) {
+var i = r(47120);
+var a = r(268146),
+    s = r(46973),
+    o = r(147913),
+    l = r(314897),
+    u = r(998502),
+    c = r(981631);
+function d(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let f = new Set();
+function _() {
+    for (let e of [a.X4.HasRTCConnection, a.X4.IsSendingVideo, a.X4.IsSendingStream, a.X4.IsReceivingVideo, a.X4.IsReceivingStream]) u.ZP.setCrashInformation(e, 0);
+}
+function h(e) {
     switch (e) {
-        case i.Yn.DEFAULT:
-            return r.X4.VideoMediaSessionId;
-        case i.Yn.STREAM:
-            return r.X4.StreamMediaSessionId;
+        case s.Yn.DEFAULT:
+            return a.X4.VideoMediaSessionId;
+        case s.Yn.STREAM:
+            return a.X4.StreamMediaSessionId;
     }
 }
-function d(e) {
-    var t;
-    o.ZP.setCrashInformation(c(e.context), null !== (t = e.mediaSessionId) && void 0 !== t ? t : null);
+function p(e) {
+    var n;
+    u.ZP.setCrashInformation(h(e.context), null !== (n = e.mediaSessionId) && void 0 !== n ? n : null);
 }
-function f(e) {
-    var t;
-    let n = (null !== (t = e.channelId) && void 0 !== t ? t : 'unknown') + e.context;
+function m(e) {
+    var n;
+    let r = (null !== (n = e.channelId) && void 0 !== n ? n : 'unknown') + e.context;
     switch (e.state) {
-        case l.hes.RTC_CONNECTED:
-            u.add(n), o.ZP.setCrashInformation(r.X4.HasRTCConnection, 1);
+        case c.hes.RTC_CONNECTED:
+            f.add(r), u.ZP.setCrashInformation(a.X4.HasRTCConnection, 1);
             break;
-        case l.hes.DISCONNECTED:
-            o.ZP.setCrashInformation(c(e.context), null),
-                u.delete(n),
-                0 === u.size &&
-                    !(function () {
-                        for (let e of [r.X4.HasRTCConnection, r.X4.IsSendingVideo, r.X4.IsSendingStream, r.X4.IsReceivingVideo, r.X4.IsReceivingStream]) o.ZP.setCrashInformation(e, 0);
-                    })();
+        case c.hes.DISCONNECTED:
+            u.ZP.setCrashInformation(h(e.context), null), f.delete(r), 0 === f.size && _();
     }
 }
-function _(e) {
-    let t = e.userId === s.default.getId(),
-        n = null != e.streamId,
-        a = null;
+function g(e) {
+    let n = e.userId === l.default.getId(),
+        r = null != e.streamId,
+        i = null;
     switch (e.context) {
-        case i.Yn.DEFAULT:
-            a = t ? r.X4.IsSendingVideo : r.X4.IsReceivingVideo;
+        case s.Yn.DEFAULT:
+            i = n ? a.X4.IsSendingVideo : a.X4.IsReceivingVideo;
             break;
-        case i.Yn.STREAM:
-            a = t ? r.X4.IsSendingStream : r.X4.IsReceivingStream;
+        case s.Yn.STREAM:
+            i = n ? a.X4.IsSendingStream : a.X4.IsReceivingStream;
     }
-    o.ZP.setCrashInformation(a, n ? 1 : 0);
+    u.ZP.setCrashInformation(i, r ? 1 : 0);
 }
-class p extends a.Z {
+class E extends o.Z {
     constructor(...e) {
-        var t, n, r;
         super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = {
-                RTC_CONNECTION_STATE: f,
-                RTC_CONNECTION_VIDEO: _,
-                MEDIA_SESSION_JOINED: d
-            }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+            d(this, 'actions', {
+                RTC_CONNECTION_STATE: m,
+                RTC_CONNECTION_VIDEO: g,
+                MEDIA_SESSION_JOINED: p
+            });
     }
 }
-t.Z = new p();
+n.Z = new E();

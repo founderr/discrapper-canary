@@ -1,20 +1,20 @@
-function r(e) {
+function i(e) {
     return e;
 }
-function i(e, t) {
-    return e.hasOwnProperty(t);
+function a(e, n) {
+    return e.hasOwnProperty(n);
 }
-function a(e, t) {
-    return Object.setPrototypeOf(e, t.prototype);
+function s(e, n) {
+    return Object.setPrototypeOf(e, n.prototype);
 }
-n.d(t, {
+r.d(n, {
     gh: function () {
-        return a;
+        return s;
     },
     iG: function () {
-        return r;
+        return i;
     },
     nr: function () {
-        return i;
+        return a;
     }
 });

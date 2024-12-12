@@ -1,73 +1,74 @@
-var r = n(710659),
-    i = n(812975),
-    a = n(686942),
-    s = function (e, t) {
-        return -1 !== e.indexOf(t);
+var i = r(710659),
+    a = r(812975),
+    s = r(686942),
+    o = function (e, n) {
+        return -1 !== e.indexOf(n);
     },
-    o = function (e) {
+    l = function (e) {
         return e.toString();
     },
-    l = function (e, t, n) {
-        return ''.concat(t, ' ').concat(n, ', ').concat(e);
+    u = function (e, n, r) {
+        return ''.concat(n, ' ').concat(r, ', ').concat(e);
     },
-    u = (function () {
-        function e(e, t, n, i) {
-            if ((void 0 === t && (t = o), void 0 === n && (n = r.Z), void 0 === i && (i = l), (this.text = []), (this.language = n || r.Z), (this.gettext = t), (this.dateFormatter = i), (this.rrule = e), (this.options = e.options), (this.origOptions = e.origOptions), this.origOptions.bymonthday)) {
-                var s = [].concat(this.options.bymonthday),
-                    u = [].concat(this.options.bynmonthday);
-                s.sort(function (e, t) {
-                    return e - t;
+    c = (function () {
+        function e(e, n, r, a) {
+            if ((void 0 === n && (n = l), void 0 === r && (r = i.Z), void 0 === a && (a = u), (this.text = []), (this.language = r || i.Z), (this.gettext = n), (this.dateFormatter = a), (this.rrule = e), (this.options = e.options), (this.origOptions = e.origOptions), this.origOptions.bymonthday)) {
+                var o = [].concat(this.options.bymonthday),
+                    c = [].concat(this.options.bynmonthday);
+                o.sort(function (e, n) {
+                    return e - n;
                 }),
-                    u.sort(function (e, t) {
-                        return t - e;
+                    c.sort(function (e, n) {
+                        return n - e;
                     }),
-                    (this.bymonthday = s.concat(u)),
+                    (this.bymonthday = o.concat(c)),
                     !this.bymonthday.length && (this.bymonthday = null);
             }
-            if ((0, a.EN)(this.origOptions.byweekday)) {
-                var c = (0, a.kJ)(this.origOptions.byweekday) ? this.origOptions.byweekday : [this.origOptions.byweekday],
-                    d = String(c);
+            if ((0, s.EN)(this.origOptions.byweekday)) {
+                var d = (0, s.kJ)(this.origOptions.byweekday) ? this.origOptions.byweekday : [this.origOptions.byweekday],
+                    f = String(d);
                 this.byweekday = {
-                    allWeeks: c.filter(function (e) {
+                    allWeeks: d.filter(function (e) {
                         return !e.n;
                     }),
-                    someWeeks: c.filter(function (e) {
+                    someWeeks: d.filter(function (e) {
                         return !!e.n;
                     }),
-                    isWeekdays: -1 !== d.indexOf('MO') && -1 !== d.indexOf('TU') && -1 !== d.indexOf('WE') && -1 !== d.indexOf('TH') && -1 !== d.indexOf('FR') && -1 === d.indexOf('SA') && -1 === d.indexOf('SU'),
-                    isEveryDay: -1 !== d.indexOf('MO') && -1 !== d.indexOf('TU') && -1 !== d.indexOf('WE') && -1 !== d.indexOf('TH') && -1 !== d.indexOf('FR') && -1 !== d.indexOf('SA') && -1 !== d.indexOf('SU')
+                    isWeekdays: -1 !== f.indexOf('MO') && -1 !== f.indexOf('TU') && -1 !== f.indexOf('WE') && -1 !== f.indexOf('TH') && -1 !== f.indexOf('FR') && -1 === f.indexOf('SA') && -1 === f.indexOf('SU'),
+                    isEveryDay: -1 !== f.indexOf('MO') && -1 !== f.indexOf('TU') && -1 !== f.indexOf('WE') && -1 !== f.indexOf('TH') && -1 !== f.indexOf('FR') && -1 !== f.indexOf('SA') && -1 !== f.indexOf('SU')
                 };
-                var f = function (e, t) {
-                    return e.weekday - t.weekday;
+                var _ = function (e, n) {
+                    return e.weekday - n.weekday;
                 };
-                this.byweekday.allWeeks.sort(f), this.byweekday.someWeeks.sort(f), !this.byweekday.allWeeks.length && (this.byweekday.allWeeks = null), !this.byweekday.someWeeks.length && (this.byweekday.someWeeks = null);
+                this.byweekday.allWeeks.sort(_), this.byweekday.someWeeks.sort(_), !this.byweekday.allWeeks.length && (this.byweekday.allWeeks = null), !this.byweekday.someWeeks.length && (this.byweekday.someWeeks = null);
             } else this.byweekday = null;
         }
         return (
-            (e.isFullyConvertible = function (t) {
-                if (!(t.options.freq in e.IMPLEMENTED) || (t.origOptions.until && t.origOptions.count)) return !1;
-                for (var n in t.origOptions) {
-                    if (s(['dtstart', 'wkst', 'freq'], n)) break;
-                    if (!s(e.IMPLEMENTED[t.options.freq], n)) return !1;
+            (e.isFullyConvertible = function (n) {
+                var r = !0;
+                if (!(n.options.freq in e.IMPLEMENTED) || (n.origOptions.until && n.origOptions.count)) return !1;
+                for (var i in n.origOptions) {
+                    if (o(['dtstart', 'wkst', 'freq'], i)) return !0;
+                    if (!o(e.IMPLEMENTED[n.options.freq], i)) return !1;
                 }
-                return !0;
+                return r;
             }),
             (e.prototype.isFullyConvertible = function () {
                 return e.isFullyConvertible(this.rrule);
             }),
             (e.prototype.toString = function () {
-                var t = this.gettext;
-                if (!(this.options.freq in e.IMPLEMENTED)) return t('RRule error: Unable to fully convert this rrule to text');
-                if (((this.text = [t('every')]), this[i.Ci.FREQUENCIES[this.options.freq]](), this.options.until)) {
-                    this.add(t('until'));
-                    var n = this.options.until;
-                    this.add(this.dateFormatter(n.getUTCFullYear(), this.language.monthNames[n.getUTCMonth()], n.getUTCDate()));
+                var n = this.gettext;
+                if (!(this.options.freq in e.IMPLEMENTED)) return n('RRule error: Unable to fully convert this rrule to text');
+                if (((this.text = [n('every')]), this[a.Ci.FREQUENCIES[this.options.freq]](), this.options.until)) {
+                    this.add(n('until'));
+                    var r = this.options.until;
+                    this.add(this.dateFormatter(r.getUTCFullYear(), this.language.monthNames[r.getUTCMonth()], r.getUTCDate()));
                 } else
                     this.options.count &&
-                        this.add(t('for'))
+                        this.add(n('for'))
                             .add(this.options.count.toString())
-                            .add(t(this.plural(this.options.count) ? 'times' : 'time'));
-                return !this.isFullyConvertible() && this.add(t('(~ approximate)')), this.text.join('');
+                            .add(n(this.plural(this.options.count) ? 'times' : 'time'));
+                return !this.isFullyConvertible() && this.add(n('(~ approximate)')), this.text.join('');
             }),
             (e.prototype.HOURLY = function () {
                 var e = this.gettext;
@@ -124,35 +125,35 @@ var r = n(710659),
             }),
             (e.prototype.nth = function (e) {
                 e = parseInt(e.toString(), 10);
-                var t,
-                    n = this.gettext;
-                if (-1 === e) return n('last');
-                var r = Math.abs(e);
-                switch (r) {
+                var n,
+                    r = this.gettext;
+                if (-1 === e) return r('last');
+                var i = Math.abs(e);
+                switch (i) {
                     case 1:
                     case 21:
                     case 31:
-                        t = r + n('st');
+                        n = i + r('st');
                         break;
                     case 2:
                     case 22:
-                        t = r + n('nd');
+                        n = i + r('nd');
                         break;
                     case 3:
                     case 23:
-                        t = r + n('rd');
+                        n = i + r('rd');
                         break;
                     default:
-                        t = r + n('th');
+                        n = i + r('th');
                 }
-                return e < 0 ? t + ' ' + n('last') : t;
+                return e < 0 ? n + ' ' + r('last') : n;
             }),
             (e.prototype.monthtext = function (e) {
                 return this.language.monthNames[e - 1];
             }),
             (e.prototype.weekdaytext = function (e) {
-                var t = (0, a.hj)(e) ? (e + 1) % 7 : e.getJsWeekday();
-                return (e.n ? this.nth(e.n) + ' ' : '') + this.language.dayNames[t];
+                var n = (0, s.hj)(e) ? (e + 1) % 7 : e.getJsWeekday();
+                return (e.n ? this.nth(e.n) + ' ' : '') + this.language.dayNames[n];
             }),
             (e.prototype.plural = function (e) {
                 return e % 100 != 1;
@@ -160,25 +161,24 @@ var r = n(710659),
             (e.prototype.add = function (e) {
                 return this.text.push(' '), this.text.push(e), this;
             }),
-            (e.prototype.list = function (e, t, n, r) {
-                var i = this;
-                void 0 === r && (r = ','), !(0, a.kJ)(e) && (e = [e]);
-                t =
-                    t ||
+            (e.prototype.list = function (e, n, r, i) {
+                var a = this;
+                void 0 === i && (i = ','), !(0, s.kJ)(e) && (e = [e]);
+                var o = function (e, n, r) {
+                    for (var i = '', a = 0; a < e.length; a++) 0 !== a && (a === e.length - 1 ? (i += ' ' + r + ' ') : (i += n + ' ')), (i += e[a]);
+                    return i;
+                };
+                n =
+                    n ||
                     function (e) {
                         return e.toString();
                     };
-                var s = function (e) {
-                    return t && t.call(i, e);
+                var l = function (e) {
+                    return n && n.call(a, e);
                 };
-                return n
-                    ? (function (e, t, n) {
-                          for (var r = '', i = 0; i < e.length; i++) 0 !== i && (i === e.length - 1 ? (r += ' ' + n + ' ') : (r += t + ' ')), (r += e[i]);
-                          return r;
-                      })(e.map(s), r, n)
-                    : e.map(s).join(r + ' ');
+                return r ? o(e.map(l), i, r) : e.map(l).join(i + ' ');
             }),
             e
         );
     })();
-t.Z = u;
+n.Z = c;

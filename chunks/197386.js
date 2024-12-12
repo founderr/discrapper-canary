@@ -1,24 +1,24 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return d;
+        return f;
     }
 });
-var r = n(475179),
-    i = n(812206),
-    a = n(776862),
-    s = n(703656),
-    o = n(317381),
-    l = n(531826),
-    u = n(917107),
-    c = n(981631);
-function d(e, t) {
-    let n = o.ZP.getSelfEmbeddedActivityForChannel(t),
-        d = i.Z.getApplication(null == n ? void 0 : n.applicationId),
-        f = (0, l.ZP)({
-            application: d,
-            channelId: t
+var i = r(475179),
+    a = r(812206),
+    s = r(776862),
+    o = r(703656),
+    l = r(317381),
+    u = r(531826),
+    c = r(917107),
+    d = r(981631);
+function f(e, n) {
+    let r = l.ZP.getSelfEmbeddedActivityForChannel(n),
+        f = a.Z.getApplication(null == r ? void 0 : r.applicationId),
+        _ = (0, u.ZP)({
+            application: f,
+            channelId: n
         });
-    null == f ? (0, s.uL)(c.Z5c.CHANNEL(e, t)) : (0, a.Z)(f);
-    let _ = o.ZP.getSelfEmbeddedActivityForChannel(t);
-    null != _ && (0, u.Z)(t) && (r.Z.selectParticipant(t, _.applicationId), r.Z.updateLayout(t, c.AEg.NO_CHAT));
+    null == _ ? (0, o.uL)(d.Z5c.CHANNEL(e, n)) : (0, s.Z)(_);
+    let h = l.ZP.getSelfEmbeddedActivityForChannel(n);
+    null != h && (0, c.Z)(n) && (i.Z.selectParticipant(n, h.applicationId), i.Z.updateLayout(n, d.AEg.NO_CHAT));
 }

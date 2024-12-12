@@ -1,7 +1,7 @@
-let r;
-var i = n(358085),
-    a = n(374023),
-    s = n(865033);
-if ((n(58406), s.Z.initialize(), a.s.isDiscordTestSet())) r = n(903387).Z;
-else r = (0, i.isDesktop)() ? n(716546).Z : n(903387).Z;
-t.Z = r;
+let i;
+var a = r(358085),
+    s = r(374023),
+    o = r(865033);
+if ((r(58406), o.Z.initialize(), s.s.isDiscordTestSet())) i = r(903387).Z;
+else i = (0, a.isDesktop)() ? r(716546).Z : r(903387).Z;
+n.Z = i;

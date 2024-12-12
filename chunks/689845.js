@@ -1,28 +1,28 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     buttonLabel: `Visa f\xf6rslag`,
-    countAnnouncement: (e, t) =>
-        `${t.plural(e.optionCount, {
-            one: () => `${t.number(e.optionCount)} alternativ`,
-            other: () => `${t.number(e.optionCount)} alternativ`
+    countAnnouncement: (e, n) =>
+        `${n.plural(e.optionCount, {
+            one: () => `${n.number(e.optionCount)} alternativ`,
+            other: () => `${n.number(e.optionCount)} alternativ`
         })} tillg\xe4ngliga.`,
-    focusAnnouncement: (e, t) =>
-        `${t.select(
+    focusAnnouncement: (e, n) =>
+        `${n.select(
             {
                 true: () =>
-                    `Ingick i gruppen ${e.groupTitle} med ${t.plural(e.groupCount, {
-                        one: () => `${t.number(e.groupCount)} alternativ`,
-                        other: () => `${t.number(e.groupCount)} alternativ`
+                    `Ingick i gruppen ${e.groupTitle} med ${n.plural(e.groupCount, {
+                        one: () => `${n.number(e.groupCount)} alternativ`,
+                        other: () => `${n.number(e.groupCount)} alternativ`
                     })}. `,
                 other: ''
             },
             e.isGroupChange
-        )}${e.optionText}${t.select(
+        )}${e.optionText}${n.select(
             {
                 true: ', valda',
                 other: ''

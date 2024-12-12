@@ -1,4 +1,4 @@
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
     id: '2023-11_adyen_auth_without_capture',
     label: 'Adyen auth without capture rollout',
     kind: 'user',
@@ -11,4 +11,4 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-t.Z = r;
+n.Z = i;

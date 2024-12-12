@@ -1,37 +1,37 @@
-n.d(t, {
+r.d(n, {
     G: function () {
-        return f;
+        return h;
     },
     QI: function () {
-        return c;
+        return f;
     },
     VR: function () {
-        return d;
+        return _;
     },
     jX: function () {
-        return l;
+        return c;
     }
-}),
-    n(789020);
-var r = n(512722),
-    i = n.n(r),
-    a = n(630388),
-    s = n(48541),
-    o = n(981631);
-function l(e, t, n) {
-    !e && void 0 !== t && i()(n === t, 'Premium type should not change for non-staff users');
-}
-function u(e) {
-    return 'production' === s.C.TEST && null != e ? e : 'production';
-}
-function c(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0;
-    return u(t) === s.C.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === s.C.STAGING || (null != e && (e.isStaff() || e.isStaffPersonal()));
+});
+var i = r(789020);
+var a = r(512722),
+    s = r.n(a),
+    o = r(630388),
+    l = r(48541),
+    u = r(981631);
+function c(e, n, r) {
+    !e && void 0 !== n && s()(r === n, 'Premium type should not change for non-staff users');
 }
 function d(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0;
-    return u(t) === s.C.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === s.C.STAGING || (null != e && (!!(null != e.flags && (0, a.yE)(e.flags, o.xW$.STAFF)) || null != e.personal_connection_id));
+    return 'production' === l.C.TEST && null != e ? e : 'production';
 }
 function f(e) {
-    return void 0 !== e ? (e === o.WND ? null : e) : e;
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0;
+    return d(n) === l.C.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === l.C.STAGING || (null != e && (e.isStaff() || e.isStaffPersonal()));
+}
+function _(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0;
+    return d(n) === l.C.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === l.C.STAGING || (null != e && (!!(null != e.flags && (0, o.yE)(e.flags, u.xW$.STAFF)) || null != e.personal_connection_id));
+}
+function h(e) {
+    return void 0 !== e ? (e === u.WND ? null : e) : e;
 }

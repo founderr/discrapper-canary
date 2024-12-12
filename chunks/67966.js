@@ -1,18 +1,18 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(882159);
-function i(e, t) {
-    var n = t.getRootNode && t.getRootNode();
-    if (e.contains(t)) return !0;
-    if (n && (0, r.Zq)(n)) {
-        var i = t;
+var i = r(882159);
+function a(e, n) {
+    var r = n.getRootNode && n.getRootNode();
+    if (e.contains(n)) return !0;
+    if (r && (0, i.Zq)(r)) {
+        var a = n;
         do {
-            if (i && e.isSameNode(i)) return !0;
-            i = i.parentNode || i.host;
-        } while (i);
+            if (a && e.isSameNode(a)) return !0;
+            a = a.parentNode || a.host;
+        } while (a);
     }
     return !1;
 }

@@ -1,43 +1,43 @@
-n.d(t, {
+r.d(n, {
     n: function () {
-        return s;
+        return o;
     }
 });
-var r = n(661763),
-    i = n(662845),
-    a = n(921336);
-function s(e, t) {
-    let { elementType: n = 'a', onPress: s, onPressStart: o, onPressEnd: l, onClick: u, isDisabled: c, ...d } = e,
-        f = {};
-    'a' !== n &&
-        (f = {
+var i = r(661763),
+    a = r(662845),
+    s = r(921336);
+function o(e, n) {
+    let { elementType: r = 'a', onPress: o, onPressStart: l, onPressEnd: u, onClick: c, isDisabled: d, ...f } = e,
+        _ = {};
+    'a' !== r &&
+        (_ = {
             role: 'link',
-            tabIndex: c ? void 0 : 0
+            tabIndex: d ? void 0 : 0
         });
-    let { focusableProps: _ } = (0, i.kc)(e, t),
-        { pressProps: p, isPressed: h } = (0, a.r7)({
-            onPress: s,
-            onPressStart: o,
-            onPressEnd: l,
-            isDisabled: c,
-            ref: t
+    let { focusableProps: h } = (0, a.kc)(e, n),
+        { pressProps: p, isPressed: m } = (0, s.r7)({
+            onPress: o,
+            onPressStart: l,
+            onPressEnd: u,
+            isDisabled: d,
+            ref: n
         }),
-        m = (0, r.zL)(d, {
+        g = (0, i.zL)(f, {
             labelable: !0,
-            isLink: 'a' === n
+            isLink: 'a' === r
         }),
-        g = (0, r.dG)(_, p),
-        E = (0, r.tv)();
+        E = (0, i.dG)(h, p),
+        v = (0, i.tv)();
     return {
-        isPressed: h,
-        linkProps: (0, r.dG)(m, {
-            ...g,
-            ...f,
-            'aria-disabled': c || void 0,
+        isPressed: m,
+        linkProps: (0, i.dG)(g, {
+            ...E,
+            ..._,
+            'aria-disabled': d || void 0,
             'aria-current': e['aria-current'],
             onClick: (e) => {
-                var t;
-                null === (t = p.onClick) || void 0 === t || t.call(p, e), u && (u(e), console.warn('onClick is deprecated, please use onPress')), !E.isNative && e.currentTarget instanceof HTMLAnchorElement && e.currentTarget.href && !e.isDefaultPrevented() && (0, r.b0)(e.currentTarget, e) && (e.preventDefault(), E.open(e.currentTarget, e));
+                var n;
+                null === (n = p.onClick) || void 0 === n || n.call(p, e), c && (c(e), console.warn('onClick is deprecated, please use onPress')), !v.isNative && e.currentTarget instanceof HTMLAnchorElement && e.currentTarget.href && !e.isDefaultPrevented() && (0, i.b0)(e.currentTarget, e) && (e.preventDefault(), v.open(e.currentTarget, e));
             }
         })
     };

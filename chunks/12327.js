@@ -1,8 +1,8 @@
-function r(e, t) {
-    return '<sound:'.concat(e, ':').concat(t, '>');
+function i(e, n) {
+    return '<sound:'.concat(e, ':').concat(n, '>');
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

@@ -1,30 +1,30 @@
-n.d(t, {
+r.d(n, {
     k: function () {
-        return l;
+        return u;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(939350),
-    o = n(450793);
-function l(e) {
-    let { contents: t, label: n, className: i, color: l = 'default' } = e;
-    return 0 === t.length
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(939350),
+    l = r(450793);
+function u(e) {
+    let { contents: n, label: r, className: a, color: u = 'default' } = e;
+    return 0 === n.length
         ? null
-        : (0, r.jsxs)('div', {
-              'aria-label': n,
+        : (0, i.jsxs)('div', {
+              'aria-label': r,
               role: 'group',
-              className: i,
+              className: a,
               children: [
-                  null != n
-                      ? (0, r.jsx)('div', {
-                            className: a()(o.groupLabel, o.hideInteraction, s._[l]),
-                            children: n
+                  null != r
+                      ? (0, i.jsx)('div', {
+                            className: s()(l.groupLabel, l.hideInteraction, o._[u]),
+                            children: r
                         })
                       : null,
-                  t
+                  n
               ]
           });
 }

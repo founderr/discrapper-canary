@@ -1,4 +1,4 @@
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
     kind: 'user',
     id: '2024-01_auto_disable_video_mobile_v2',
     label: 'Mobile performance: VideoHealthManager (v2)',
@@ -56,10 +56,10 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-t.Z = {
+n.Z = {
     isFeatureSupportedOnPlatform: () => !1,
     getConfig(e) {
-        let t = r.getCurrentConfig({ location: '508d6c_1' }, { autoTrackExposure: e });
-        return !this.isFeatureSupportedOnPlatform() && (t.featureEnabled = !1), t;
+        let n = i.getCurrentConfig({ location: '508d6c_1' }, { autoTrackExposure: e });
+        return !this.isFeatureSupportedOnPlatform() && (n.featureEnabled = !1), n;
     }
 };

@@ -1,13 +1,13 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var r = n(200651),
-    i = n(481060),
-    a = n(346610);
-function s(e) {
-    let { useOldIcon: t } = (0, a.yk)({ location: 'MessagesConnected' }, { autoTrackExposure: !1 }),
-        n = t ? i.ArrowAngleRightUpIcon : i.ChatArrowRightIcon;
-    return (0, r.jsx)(n, { ...e });
+var i = r(200651),
+    a = r(481060),
+    s = r(346610);
+function o(e) {
+    let { useOldIcon: n } = (0, s.yk)({ location: 'MessagesConnected' }, { autoTrackExposure: !1 }),
+        r = n ? a.ArrowAngleRightUpIcon : a.ChatArrowRightIcon;
+    return (0, i.jsx)(r, { ...e });
 }

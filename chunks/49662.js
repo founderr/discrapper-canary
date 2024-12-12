@@ -1,8 +1,8 @@
-var r = n(690244)('%Object.getOwnPropertyDescriptor%', !0);
-if (r)
+var i = r(690244)('%Object.getOwnPropertyDescriptor%', !0);
+if (i)
     try {
-        r([], 'length');
+        i([], 'length');
     } catch (e) {
-        r = null;
+        i = null;
     }
-e.exports = r;
+e.exports = i;

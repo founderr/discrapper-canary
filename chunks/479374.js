@@ -1,37 +1,37 @@
-var r = n(161581),
-    i = n(955903),
-    a = n(354848),
-    s = n(474180),
-    o = n(943329),
-    l = n(641236),
-    u = n(531379),
-    c = n(42024),
-    d = n(992051),
-    f = n(106295),
-    _ = i && i.prototype,
-    p = l('species'),
-    h = !1,
-    m = a(r.PromiseRejectionEvent),
-    g = s('Promise', function () {
-        var e = o(i),
-            t = e !== String(i);
-        if ((!t && 66 === f) || (d && !(_.catch && _.finally))) return !0;
-        if (!f || f < 51 || !/native code/.test(e)) {
-            var n = new i(function (e) {
+var i = r(161581),
+    a = r(955903),
+    s = r(354848),
+    o = r(474180),
+    l = r(943329),
+    u = r(641236),
+    c = r(531379),
+    d = r(42024),
+    f = r(992051),
+    _ = r(106295),
+    h = a && a.prototype,
+    p = u('species'),
+    m = !1,
+    g = s(i.PromiseRejectionEvent),
+    E = o('Promise', function () {
+        var e = l(a),
+            n = e !== String(a);
+        if ((!n && 66 === _) || (f && !(h.catch && h.finally))) return !0;
+        if (!_ || _ < 51 || !/native code/.test(e)) {
+            var r = new a(function (e) {
                     e(1);
                 }),
-                r = function (e) {
+                i = function (e) {
                     e(
                         function () {},
                         function () {}
                     );
                 };
-            if ((((n.constructor = {})[p] = r), !(h = n.then(function () {}) instanceof r))) return !0;
+            if ((((r.constructor = {})[p] = i), !(m = r.then(function () {}) instanceof i))) return !0;
         }
-        return !t && (u || c) && !m;
+        return !n && (c || d) && !g;
     });
 e.exports = {
-    CONSTRUCTOR: g,
-    REJECTION_EVENT: m,
-    SUBCLASSING: h
+    CONSTRUCTOR: E,
+    REJECTION_EVENT: g,
+    SUBCLASSING: m
 };

@@ -1,32 +1,32 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return f;
+        return _;
     }
 });
-var r = n(192379),
-    i = n(719711),
-    a = n(433517),
-    s = n(579806),
-    o = n(626135),
-    l = n(998502),
-    u = n(286035),
-    c = n(981631);
-function d(e) {
-    var t;
-    return null == e ? void 0 : null === (t = e._state) || void 0 === t ? void 0 : t.lastTestTimestamp;
+var i = r(192379),
+    a = r(719711),
+    s = r(433517),
+    o = r(579806),
+    l = r(626135),
+    u = r(998502),
+    c = r(286035),
+    d = r(981631);
+function f(e) {
+    var n;
+    return null == e ? void 0 : null === (n = e._state) || void 0 === n ? void 0 : n.lastTestTimestamp;
 }
-function f() {
+function _() {
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             window.location.origin === window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN &&
-                !0 !== a.K.get(i.SV) &&
-                l.ZP.supportsFeature(c.eRX.USER_DATA_CACHE) &&
-                (u.Te(),
-                s.Z.userDataCache.getCached().then((e) => {
+                !0 !== s.K.get(a.SV) &&
+                u.ZP.supportsFeature(d.eRX.USER_DATA_CACHE) &&
+                (c.Te(),
+                o.Z.userDataCache.getCached().then((e) => {
                     if (null == e) {
-                        u.kb(),
-                            o.default.track(
-                                c.rMx.DOMAIN_MIGRATED,
+                        c.kb(),
+                            l.default.track(
+                                d.rMx.DOMAIN_MIGRATED,
                                 {
                                     success: !1,
                                     has_data: !1
@@ -35,33 +35,33 @@ function f() {
                             );
                         return;
                     }
-                    let t = Object.keys(e),
-                        n = 0 !== t.length,
-                        r = null != e.token,
-                        l = null == e.RTCRegionStore ? null : JSON.parse(e.RTCRegionStore),
-                        f = null == l || null == d(l) || d(l) <= d(a.K.get('RTCRegionStore'));
-                    n &&
-                        r &&
-                        !f &&
-                        (a.K.clear(),
-                        t.forEach((t) => {
-                            let n = e[t];
+                    let n = Object.keys(e),
+                        r = 0 !== n.length,
+                        i = null != e.token,
+                        u = null == e.RTCRegionStore ? null : JSON.parse(e.RTCRegionStore),
+                        _ = null == u || null == f(u) || f(u) <= f(s.K.get('RTCRegionStore'));
+                    r &&
+                        i &&
+                        !_ &&
+                        (s.K.clear(),
+                        n.forEach((n) => {
+                            let r = e[n];
                             try {
-                                a.K.set(t, JSON.parse(n));
+                                s.K.set(n, JSON.parse(r));
                             } catch (e) {}
                         })),
-                        o.default.track(
-                            c.rMx.DOMAIN_MIGRATED,
+                        l.default.track(
+                            d.rMx.DOMAIN_MIGRATED,
                             {
                                 success: !0,
-                                current_is_newer: f,
-                                has_data: n
+                                current_is_newer: _,
+                                has_data: r
                             },
                             { flush: !0 }
                         ),
-                        a.K.set(i.SV, !0),
-                        s.Z.userDataCache.deleteCache(),
-                        u.Pg();
+                        s.K.set(a.SV, !0),
+                        o.Z.userDataCache.deleteCache(),
+                        c.Pg();
                 }));
         }, []),
         null

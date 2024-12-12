@@ -1,15 +1,15 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var r = n(399606),
-    i = n(339085),
-    a = n(633302);
-function s(e, t) {
-    let n = (0, r.e7)([i.ZP], () => (null != e ? i.ZP.getCustomEmojiById(e) : null), [e]);
+var i = r(399606),
+    a = r(339085),
+    s = r(633302);
+function o(e, n) {
+    let r = (0, i.e7)([a.ZP], () => (null != e ? a.ZP.getCustomEmojiById(e) : null), [e]);
     return {
-        customEmoji: n,
-        unicodeEmoji: null != t ? a.ZP.getByName(a.ZP.convertSurrogateToName(t, !1)) : null
+        customEmoji: r,
+        unicodeEmoji: null != n ? s.ZP.getByName(s.ZP.convertSurrogateToName(n, !1)) : null
     };
 }

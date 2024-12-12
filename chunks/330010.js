@@ -1,17 +1,17 @@
-n.d(t, {
+r.d(n, {
     i: function () {
-        return l;
+        return u;
     }
 });
-var r = n(544891),
-    i = n(570140),
-    a = n(973616),
-    s = n(598077),
-    o = n(981631);
-async function l(e) {
-    let t = (
-        await r.tn.get({
-            url: o.ANM.GUILD_INTEGRATIONS(e),
+var i = r(544891),
+    a = r(570140),
+    s = r(973616),
+    o = r(598077),
+    l = r(981631);
+async function u(e) {
+    let n = (
+        await i.tn.get({
+            url: l.ANM.GUILD_INTEGRATIONS(e),
             query: {
                 include_applications: !0,
                 include_role_connections_metadata: !0
@@ -21,15 +21,15 @@ async function l(e) {
         })
     ).body.map((e) => ({
         ...e,
-        application: 'application' in e && null != e.application ? a.ZN.createFromServer(e.application) : void 0,
-        user: 'user' in e && null != e.user ? new s.Z(e.user) : void 0
+        application: 'application' in e && null != e.application ? s.ZN.createFromServer(e.application) : void 0,
+        user: 'user' in e && null != e.user ? new o.Z(e.user) : void 0
     }));
     return (
-        i.Z.dispatch({
+        a.Z.dispatch({
             type: 'GUILD_SETTINGS_LOADED_INTEGRATIONS',
             guildId: e,
-            integrations: t
+            integrations: n
         }),
-        t
+        n
     );
 }

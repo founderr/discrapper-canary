@@ -1,23 +1,23 @@
-n.r(t),
-    n.d(t, {
+r.r(n),
+    r.d(n, {
         OVERLAY_TILE_MARGIN: function () {
-            return o;
+            return l;
         },
         OVERLAY_TILE_MIN_WIDTH: function () {
-            return s;
+            return o;
         },
         OVERLAY_TILE_WIDTH: function () {
-            return a;
+            return s;
         },
         OVERLAY_V3_KEY: function () {
-            return r;
+            return i;
         },
         OVERLAY_V3_LAYOUT_ID: function () {
-            return i;
+            return a;
         }
     });
-let r = 'DISCORD_OutOfProcessOverlay',
-    i = 'overlay_v3_default',
-    a = 192,
-    s = 120,
-    o = 4;
+let i = 'DISCORD_OutOfProcessOverlay',
+    a = 'overlay_v3_default',
+    s = 192,
+    o = 120,
+    l = 4;

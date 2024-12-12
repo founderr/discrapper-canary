@@ -1,28 +1,28 @@
-n.d(t, {
+r.d(n, {
     NR: function () {
-        return a;
-    },
-    Ob: function () {
-        return l;
-    },
-    ZI: function () {
         return s;
     },
-    m1: function () {
+    Ob: function () {
         return u;
     },
-    uc: function () {
+    ZI: function () {
         return o;
+    },
+    m1: function () {
+        return c;
+    },
+    uc: function () {
+        return l;
     }
 });
-var r = n(987170),
-    i = n(987338);
-let a = (0, r.Z)({
+var i = r(987170),
+    a = r(987338);
+let s = (0, i.Z)({
         kind: 'user',
         id: '2024-07_ctp_open_user_settings_vanilla',
         label: 'CTP open user settings - A/A test - Vanilla',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: i.$P.OPEN_USER_SETTINGS,
+        commonTriggerPoint: a.$P.OPEN_USER_SETTINGS,
         treatments: [
             {
                 id: 1,
@@ -31,12 +31,12 @@ let a = (0, r.Z)({
             }
         ]
     }),
-    s = (0, r.Z)({
+    o = (0, i.Z)({
         kind: 'user',
         id: '2024-07_ctp_open_user_settings_filters',
         label: 'CTP open user settings - A/A test - Filters',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: i.$P.OPEN_USER_SETTINGS,
+        commonTriggerPoint: a.$P.OPEN_USER_SETTINGS,
         treatments: [
             {
                 id: 1,
@@ -45,12 +45,12 @@ let a = (0, r.Z)({
             }
         ]
     }),
-    o = (0, r.Z)({
+    l = (0, i.Z)({
         kind: 'user',
         id: '2024-07_ctp_open_user_settings_multiple_buckets',
         label: 'CTP open user settings - A/A test - Multiple buckets',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: i.$P.OPEN_USER_SETTINGS,
+        commonTriggerPoint: a.$P.OPEN_USER_SETTINGS,
         treatments: [
             {
                 id: 1,
@@ -64,12 +64,12 @@ let a = (0, r.Z)({
             }
         ]
     }),
-    l = (0, r.Z)({
+    u = (0, i.Z)({
         kind: 'user',
         id: '2024-07_ctp_open_user_settings_everyone',
         label: 'CTP open user settings - A/A test - Everyone',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: i.$P.OPEN_USER_SETTINGS,
+        commonTriggerPoint: a.$P.OPEN_USER_SETTINGS,
         treatments: [
             {
                 id: 1,
@@ -78,12 +78,12 @@ let a = (0, r.Z)({
             }
         ]
     }),
-    u = (0, r.Z)({
+    c = (0, i.Z)({
         kind: 'user',
         id: '2024-07_ctp_open_user_settings_uneven_buckets',
         label: 'CTP open user settings - A/A test - Uneven buckets',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: i.$P.OPEN_USER_SETTINGS,
+        commonTriggerPoint: a.$P.OPEN_USER_SETTINGS,
         treatments: [
             {
                 id: 1,

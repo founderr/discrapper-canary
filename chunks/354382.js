@@ -1,7 +1,7 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = { breadcrumbs: `Atpaka\u{13C}ce\u{13C}i` };
+var i = {};
+i = { breadcrumbs: `Atpaka\u{13C}ce\u{13C}i` };

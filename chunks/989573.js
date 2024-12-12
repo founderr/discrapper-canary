@@ -1,16 +1,16 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var r = n(399606),
-    i = n(592125),
-    a = n(594174);
-function s(e) {
-    let { channelId: t } = e,
-        n = (0, r.e7)([i.Z], () => i.Z.getChannel(t));
-    return (0, r.e7)([a.default], () => {
+var i = r(399606),
+    a = r(592125),
+    s = r(594174);
+function o(e) {
+    let { channelId: n } = e,
+        r = (0, i.e7)([a.Z], () => a.Z.getChannel(n));
+    return (0, i.e7)([s.default], () => {
         var e;
-        return null != n && n.isDM() && 1 === n.recipients.length && (null === (e = a.default.getUser(n.recipients[0])) || void 0 === e ? void 0 : e.bot) === !0;
+        return null != r && r.isDM() && 1 === r.recipients.length && (null === (e = s.default.getUser(r.recipients[0])) || void 0 === e ? void 0 : e.bot) === !0;
     });
 }

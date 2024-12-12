@@ -1,12 +1,12 @@
-var r = n(816569),
-    i = 'object' == typeof exports && exports && !exports.nodeType && exports,
-    a = i && 'object' == typeof module && module && !module.nodeType && module,
-    s = a && a.exports === i && r.Z.process,
-    o = (function () {
+var i = r(816569),
+    a = 'object' == typeof exports && exports && !exports.nodeType && exports,
+    s = a && 'object' == typeof module && module && !module.nodeType && module,
+    o = s && s.exports === a && i.Z.process,
+    l = (function () {
         try {
-            var e = a && a.require && a.require('util').types;
+            var e = s && s.require && s.require('util').types;
             if (e) return e;
-            return s && s.binding && s.binding('util');
+            return o && o.binding && o.binding('util');
         } catch (e) {}
     })();
-t.Z = o;
+n.Z = l;

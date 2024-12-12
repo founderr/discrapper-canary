@@ -1,112 +1,112 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return p;
+        return g;
     }
-}),
-    n(47120),
-    n(773603);
-var r = n(990547),
-    i = n(283693),
-    a = n(131704),
-    s = n(314897),
-    o = n(626135),
-    l = n(573261),
-    u = n(264229),
-    c = n(245335),
-    d = n(981631);
-function f(e) {
-    let t = null;
+});
+var i = r(47120);
+var a = r(773603);
+var s = r(990547),
+    o = r(283693),
+    l = r(131704),
+    u = r(314897),
+    c = r(626135),
+    d = r(573261),
+    f = r(264229),
+    _ = r(245335),
+    h = r(981631);
+function p(e) {
+    let n = null;
     if (null != e && null != e.channel) {
-        let n = e.channel;
-        t = e.target_type === c.Iq.STREAM ? d.dAT.STREAM : e.target_type === c.Iq.EMBEDDED_APPLICATION ? d.dAT.APPLICATION : (0, a.bc)(n.type) ? d.dAT.GDM_INVITE : null == n || (0, a.hv)(n.type) ? d.dAT.FRIEND_INVITE : d.dAT.SERVER_INVITE;
+        let r = e.channel;
+        n = e.target_type === _.Iq.STREAM ? h.dAT.STREAM : e.target_type === _.Iq.EMBEDDED_APPLICATION ? h.dAT.APPLICATION : (0, l.bc)(r.type) ? h.dAT.GDM_INVITE : null == r || (0, l.hv)(r.type) ? h.dAT.FRIEND_INVITE : h.dAT.SERVER_INVITE;
     }
-    return t;
+    return n;
 }
-let _ = new Map();
-function p(e, t, n) {
-    if ((o.default.track(d.rMx.INVITE_OPENED, { invite_code: e }), _.has(e))) return _.get(e);
-    let a = (0, u.fU)(e),
-        c = {
-            ...n,
+let m = new Map();
+function g(e, n, r) {
+    if ((c.default.track(h.rMx.INVITE_OPENED, { invite_code: e }), m.has(e))) return m.get(e);
+    let i = (0, f.fU)(e),
+        a = {
+            ...r,
             with_counts: !0,
             with_expiration: !0,
-            guild_scheduled_event_id: a.guildScheduledEventId
+            guild_scheduled_event_id: i.guildScheduledEventId
         },
-        p = l.Z.get({
-            url: d.ANM.INVITE(a.baseCode),
-            query: c,
+        l = d.Z.get({
+            url: h.ANM.INVITE(i.baseCode),
+            query: a,
             oldFormErrors: !0,
             trackedActionData: {
-                event: r.NetworkActionNames.INVITE_RESOLVE,
+                event: s.NetworkActionNames.INVITE_RESOLVE,
                 properties: (e) => {
-                    var r, o, l, u, c, _;
-                    let p = e.body,
-                        h = (null === (r = e.body) || void 0 === r ? void 0 : r.code) === d.evJ.USER_BANNED;
-                    return (0, i.iG)({
+                    var a, s, l, c, d, f;
+                    let _ = e.body,
+                        m = (null === (a = e.body) || void 0 === a ? void 0 : a.code) === h.evJ.USER_BANNED;
+                    return (0, o.iG)({
                         resolved: e.ok,
-                        guild_id: null == p ? void 0 : null === (o = p.guild) || void 0 === o ? void 0 : o.id,
-                        channel_id: null == p ? void 0 : null === (l = p.channel) || void 0 === l ? void 0 : l.id,
-                        channel_type: null == p ? void 0 : null === (u = p.channel) || void 0 === u ? void 0 : u.type,
-                        inviter_id: null == p ? void 0 : null === (c = p.inviter) || void 0 === c ? void 0 : c.id,
-                        code: a.baseCode,
-                        input_value: null == n ? void 0 : n.inputValue,
-                        location: t,
-                        authenticated: s.default.isAuthenticated(),
-                        size_total: null == p ? void 0 : p.approximate_member_count,
-                        size_online: null == p ? void 0 : p.approximate_presence_count,
-                        destination_user_id: null == p ? void 0 : null === (_ = p.target_user) || void 0 === _ ? void 0 : _.id,
-                        invite_type: f(p),
-                        user_banned: h
+                        guild_id: null == _ ? void 0 : null === (s = _.guild) || void 0 === s ? void 0 : s.id,
+                        channel_id: null == _ ? void 0 : null === (l = _.channel) || void 0 === l ? void 0 : l.id,
+                        channel_type: null == _ ? void 0 : null === (c = _.channel) || void 0 === c ? void 0 : c.type,
+                        inviter_id: null == _ ? void 0 : null === (d = _.inviter) || void 0 === d ? void 0 : d.id,
+                        code: i.baseCode,
+                        input_value: null == r ? void 0 : r.inputValue,
+                        location: n,
+                        authenticated: u.default.isAuthenticated(),
+                        size_total: null == _ ? void 0 : _.approximate_member_count,
+                        size_online: null == _ ? void 0 : _.approximate_presence_count,
+                        destination_user_id: null == _ ? void 0 : null === (f = _.target_user) || void 0 === f ? void 0 : f.id,
+                        invite_type: p(_),
+                        user_banned: m
                     });
                 }
             },
             rejectWithError: !1
         })
             .then(
-                (r) => {
-                    let i = r.body;
+                (a) => {
+                    let s = a.body;
                     return (
-                        null != t &&
-                            o.default.track(
-                                d.rMx.INVITE_RESOLVED,
+                        null != n &&
+                            c.default.track(
+                                h.rMx.INVITE_RESOLVED,
                                 {
                                     resolved: !0,
-                                    guild_id: null != i.guild ? i.guild.id : null,
-                                    channel_id: null != i.channel ? i.channel.id : null,
-                                    channel_type: null != i.channel ? i.channel.type : null,
-                                    inviter_id: i.inviter ? i.inviter.id : null,
-                                    code: a.baseCode,
-                                    input_value: null == n ? void 0 : n.inputValue,
-                                    location: t,
-                                    authenticated: s.default.isAuthenticated(),
-                                    size_total: i.approximate_member_count,
-                                    size_online: i.approximate_presence_count,
-                                    destination_user_id: null != i.target_user ? i.target_user.id : null,
-                                    invite_type: f(i)
+                                    guild_id: null != s.guild ? s.guild.id : null,
+                                    channel_id: null != s.channel ? s.channel.id : null,
+                                    channel_type: null != s.channel ? s.channel.type : null,
+                                    inviter_id: s.inviter ? s.inviter.id : null,
+                                    code: i.baseCode,
+                                    input_value: null == r ? void 0 : r.inputValue,
+                                    location: n,
+                                    authenticated: u.default.isAuthenticated(),
+                                    size_total: s.approximate_member_count,
+                                    size_online: s.approximate_presence_count,
+                                    destination_user_id: null != s.target_user ? s.target_user.id : null,
+                                    invite_type: p(s)
                                 },
                                 { flush: !0 }
                             ),
                         {
-                            invite: i,
+                            invite: s,
                             code: e
                         }
                     );
                 },
-                (r) => {
-                    let i = null != r.body && r.body.code === d.evJ.USER_BANNED;
-                    if (null != t) {
-                        var l, u;
-                        o.default.track(
-                            d.rMx.INVITE_RESOLVED,
+                (a) => {
+                    let s = null != a.body && a.body.code === h.evJ.USER_BANNED;
+                    if (null != n) {
+                        var o, l;
+                        c.default.track(
+                            h.rMx.INVITE_RESOLVED,
                             {
                                 resolved: !1,
-                                code: a.baseCode,
-                                input_value: null == n ? void 0 : n.inputValue,
-                                location: t,
-                                authenticated: s.default.isAuthenticated(),
-                                user_banned: i,
-                                error_code: null === (l = r.body) || void 0 === l ? void 0 : l.code,
-                                error_message: null === (u = r.body) || void 0 === u ? void 0 : u.message
+                                code: i.baseCode,
+                                input_value: null == r ? void 0 : r.inputValue,
+                                location: n,
+                                authenticated: u.default.isAuthenticated(),
+                                user_banned: s,
+                                error_code: null === (o = a.body) || void 0 === o ? void 0 : o.code,
+                                error_message: null === (l = a.body) || void 0 === l ? void 0 : l.message
                             },
                             { flush: !0 }
                         );
@@ -114,12 +114,12 @@ function p(e, t, n) {
                     return {
                         invite: null,
                         code: e,
-                        banned: i
+                        banned: s
                     };
                 }
             )
             .finally(() => {
-                _.delete(e);
+                m.delete(e);
             });
-    return _.set(e, p), p;
+    return m.set(e, l), l;
 }

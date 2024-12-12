@@ -1,36 +1,36 @@
-var r = n(544891),
-    i = n(570140),
-    a = n(367907),
-    s = n(957730),
-    o = n(592125),
-    l = n(493683),
-    u = n(904245),
-    c = n(981631);
-t.Z = {
+var i = r(544891),
+    a = r(570140),
+    s = r(367907),
+    o = r(957730),
+    l = r(592125),
+    u = r(493683),
+    c = r(904245),
+    d = r(981631);
+n.Z = {
     updateActivity(e) {
-        let { applicationId: t, distributor: n, shareActivity: a, token: s = null, duration: o = 0, closed: l = !1, exePath: u = null, voiceChannelId: d = null, sessionId: f = null, mediaSessionId: _ = null } = e;
-        i.Z.wait(() =>
-            i.Z.dispatch({
+        let { applicationId: n, distributor: r, shareActivity: s, token: o = null, duration: l = 0, closed: u = !1, exePath: c = null, voiceChannelId: f = null, sessionId: _ = null, mediaSessionId: h = null } = e;
+        a.Z.wait(() =>
+            a.Z.dispatch({
                 type: 'ACTIVITY_UPDATE_START',
-                applicationId: t,
-                duration: o,
-                distributor: n
+                applicationId: n,
+                duration: l,
+                distributor: r
             })
         ),
-            r.tn
+            i.tn
                 .post({
-                    url: c.ANM.ACTIVITIES,
+                    url: d.ANM.ACTIVITIES,
                     body: {
-                        application_id: t,
-                        token: s,
-                        duration: o,
-                        share_activity: a,
-                        distributor: n,
-                        closed: l,
-                        exePath: u,
-                        voice_channel_id: d,
-                        session_id: f,
-                        media_session_id: _
+                        application_id: n,
+                        token: o,
+                        duration: l,
+                        share_activity: s,
+                        distributor: r,
+                        closed: u,
+                        exePath: c,
+                        voice_channel_id: f,
+                        session_id: _,
+                        media_session_id: h
                     },
                     retries: 1,
                     oldFormErrors: !0,
@@ -38,70 +38,70 @@ t.Z = {
                 })
                 .then((e) => {
                     let {
-                        body: { token: r }
+                        body: { token: i }
                     } = e;
-                    i.Z.dispatch({
+                    a.Z.dispatch({
                         type: 'ACTIVITY_UPDATE_SUCCESS',
-                        applicationId: t,
-                        token: r,
-                        duration: o,
-                        distributor: n
+                        applicationId: n,
+                        token: i,
+                        duration: l,
+                        distributor: r
                     });
                 })
                 .catch(() => {
-                    i.Z.dispatch({
+                    a.Z.dispatch({
                         type: 'ACTIVITY_UPDATE_FAIL',
-                        applicationId: t
+                        applicationId: n
                     });
                 });
     },
     sendActivityInvite(e) {
-        let { channelId: t, type: n, activity: r, content: i, location: l } = e,
-            d = o.Z.getChannel(t);
-        if (null == d) return Promise.resolve(null);
-        let f = s.ZP.parse(d, null != i ? i : '');
-        return u.Z.sendMessage(d.id, f, !1, {
+        let { channelId: n, type: r, activity: i, content: a, location: u } = e,
+            f = l.Z.getChannel(n);
+        if (null == f) return Promise.resolve(null);
+        let _ = o.ZP.parse(f, null != a ? a : '');
+        return c.Z.sendMessage(f.id, _, !1, {
             activityAction: {
-                type: n,
-                activity: r
+                type: r,
+                activity: i
             }
         }).then(
             (e) => (
-                a.ZP.trackWithMetadata(c.rMx.INVITE_SENT, {
-                    location: l,
-                    invite_type: r.type === c.IIU.LISTENING ? c.dAT.SPOTIFY : c.dAT.APPLICATION,
-                    application_id: r.application_id,
-                    guild_id: d.getGuildId(),
-                    channel_id: d.id,
+                s.ZP.trackWithMetadata(d.rMx.INVITE_SENT, {
+                    location: u,
+                    invite_type: i.type === d.IIU.LISTENING ? d.dAT.SPOTIFY : d.dAT.APPLICATION,
+                    application_id: i.application_id,
+                    guild_id: f.getGuildId(),
+                    channel_id: f.id,
                     message_id: null != e ? e.body.id : null
                 }),
-                Promise.resolve(d)
+                Promise.resolve(f)
             ),
             (e) => Promise.reject(e)
         );
     },
     sendActivityInviteUser(e) {
-        let { userId: t, type: n, activity: r, content: i, location: a } = e;
-        return l.Z.ensurePrivateChannel(t).then((e) =>
+        let { userId: n, type: r, activity: i, content: a, location: s } = e;
+        return u.Z.ensurePrivateChannel(n).then((e) =>
             this.sendActivityInvite({
                 channelId: e,
-                type: n,
-                activity: r,
-                content: i,
-                location: a
+                type: r,
+                activity: i,
+                content: a,
+                location: s
             })
         );
     },
-    async getJoinSecret(e, t, n, i, a) {
-        let s = {};
+    async getJoinSecret(e, n, r, a, s) {
+        let o = {};
         return (
-            null != i && (s.channel_id = i),
-            null != a && (s.message_id = a),
+            null != a && (o.channel_id = a),
+            null != s && (o.message_id = s),
             (
-                await r.tn.get({
-                    url: c.ANM.USER_ACTIVITY_JOIN(e, t, n),
+                await i.tn.get({
+                    url: d.ANM.USER_ACTIVITY_JOIN(e, n, r),
                     retries: 3,
-                    query: s,
+                    query: o,
                     rejectWithError: !1
                 })
             ).body.secret

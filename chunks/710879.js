@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     decrease: (e) => `Upadati ${e.fieldLabel}`,
     increase: (e) => `Pove\u{10D}ajte ${e.fieldLabel}`,
     numberField: `\u{160}tevil\u{10D}no polje`

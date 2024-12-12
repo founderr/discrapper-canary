@@ -1,31 +1,31 @@
-function r(e, t, n) {
+r.d(n, {
+    S: function () {
+        return o;
+    }
+});
+var i = r(47120);
+function a(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-n.d(t, {
-    S: function () {
-        return a;
-    }
-}),
-    n(47120);
-let i = Symbol.iterator;
-class a {
+let s = Symbol.iterator;
+class o {
     get length() {
         return this.items.size;
     }
     get capacity() {
         return this.limit;
     }
-    [i]() {
+    [s]() {
         return this.items.entries();
     }
     entries() {
@@ -49,11 +49,11 @@ class a {
     get(e) {
         return this.items.get(e);
     }
-    put(e, t) {
-        if ((this.items.delete(e), this.items.set(e, t), !!(this.items.size > this.limit))) {
+    put(e, n) {
+        if ((this.items.delete(e), this.items.set(e, n), !!(this.items.size > this.limit))) {
             let e = this.oldestKey(),
-                t = this.items.get(e);
-            return this.items.delete(e), [e, t];
+                n = this.items.get(e);
+            return this.items.delete(e), [e, n];
         }
     }
     delete(e) {
@@ -63,6 +63,6 @@ class a {
         return this.items.keys().next().value;
     }
     constructor(e) {
-        r(this, 'items', void 0), r(this, 'limit', void 0), (this.items = new Map()), (this.limit = e);
+        a(this, 'items', void 0), a(this, 'limit', void 0), (this.items = new Map()), (this.limit = e);
     }
 }

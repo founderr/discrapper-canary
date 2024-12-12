@@ -1,12 +1,12 @@
-n.d(t, {
+r.d(n, {
     OR: function () {
-        return o;
+        return l;
     },
     ot: function () {
-        return s;
+        return o;
     }
 });
-let { Layer: r, LayerContainer: i, LayerProvider: a } = (0, n(302901).Xv)('Verification'),
-    s = i,
-    o = a;
-t.ZP = r;
+let { Layer: i, LayerContainer: a, LayerProvider: s } = (0, r(302901).Xv)('Verification'),
+    o = a,
+    l = s;
+n.ZP = i;

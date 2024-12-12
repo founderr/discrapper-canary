@@ -1,45 +1,45 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return f;
+        return _;
     }
 });
-var r = n(592125),
-    i = n(594174),
-    a = n(585483),
-    s = n(636449),
-    o = n(337682),
-    l = n(566620),
-    u = n(224189),
-    c = n(574952),
-    d = n(981631);
-function f(e) {
-    return (0, s.C)(() => _(e));
+var i = r(592125),
+    a = r(594174),
+    s = r(585483),
+    o = r(636449),
+    l = r(337682),
+    u = r(566620),
+    c = r(224189),
+    d = r(574952),
+    f = r(981631);
+function _(e) {
+    return (0, o.C)(() => h(e));
 }
-async function _(e) {
-    let { targetApplicationId: t, locationObject: n, channelId: s, analyticsLocations: f, componentId: _, commandOrigin: p, sectionName: h, source: m, onExecutedCallback: g, referrerId: E, customId: v } = e,
-        I = (0, c.Z)(),
-        T = i.default.getCurrentUser();
-    if (null == t) return !1;
-    let b = await (0, u.Z)(t, s);
-    return null == s
-        ? (a.S.dispatch(d.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: t }), !1)
-        : null != r.Z.getChannel(s) &&
-              null != T &&
+async function h(e) {
+    let { targetApplicationId: n, locationObject: r, channelId: o, analyticsLocations: _, componentId: h, commandOrigin: p, sectionName: m, source: g, onExecutedCallback: E, referrerId: v, customId: I } = e,
+        T = (0, d.Z)(),
+        b = a.default.getCurrentUser();
+    if (null == n) return !1;
+    let y = await (0, c.Z)(n, o);
+    return null == o
+        ? (s.S.dispatch(f.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: n }), !1)
+        : null != i.Z.getChannel(o) &&
               null != b &&
-              (o.tZ(b.id),
-              await (0, l.af)({
-                  channelId: s,
-                  applicationId: b.id,
+              null != y &&
+              (l.tZ(y.id),
+              await (0, u.af)({
+                  channelId: o,
+                  applicationId: y.id,
                   isStart: !0,
-                  embeddedActivitiesManager: I,
-                  componentId: _,
+                  embeddedActivitiesManager: T,
+                  componentId: h,
                   commandOrigin: p,
-                  sectionName: h,
-                  locationObject: n,
-                  analyticsLocations: f,
-                  source: m,
-                  onExecutedCallback: g,
-                  referrerId: E,
-                  customId: v
+                  sectionName: m,
+                  locationObject: r,
+                  analyticsLocations: _,
+                  source: g,
+                  onExecutedCallback: E,
+                  referrerId: v,
+                  customId: I
               }));
 }

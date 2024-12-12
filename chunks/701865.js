@@ -1,6 +1,6 @@
-n.d(t, {
+r.d(n, {
     U: function () {
-        return r;
+        return i;
     }
 });
-let r = 'Zoomed Media Modal';
+let i = 'Zoomed Media Modal';

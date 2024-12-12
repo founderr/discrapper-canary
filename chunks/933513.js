@@ -1,9 +1,9 @@
-function r(e) {
-    let t = null == e ? void 0 : e.activeElement;
-    return ['INPUT', 'TEXTAREA'].includes(null == t ? void 0 : t.tagName) || (null == t ? void 0 : t.isContentEditable);
+function i(e) {
+    let n = null == e ? void 0 : e.activeElement;
+    return ['INPUT', 'TEXTAREA'].includes(null == n ? void 0 : n.tagName) || (null == n ? void 0 : n.isContentEditable);
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

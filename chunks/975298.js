@@ -1,63 +1,63 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return g;
+        return I;
     }
-}),
-    n(47120),
-    n(411104);
-var r = n(192379),
-    i = n(512722),
-    a = n.n(i),
-    s = n(913527),
-    o = n.n(s),
-    l = n(442837),
-    u = n(496929),
-    c = n(594174),
-    d = n(78839),
-    f = n(580130),
-    _ = n(122289),
-    p = n(111361),
-    h = n(981631),
-    m = n(474936);
-function g() {
+});
+var i = r(47120);
+var a = r(411104);
+var s = r(192379),
+    o = r(512722),
+    l = r.n(o),
+    u = r(913527),
+    c = r.n(u),
+    d = r(442837),
+    f = r(496929),
+    _ = r(594174),
+    h = r(78839),
+    p = r(580130),
+    m = r(122289),
+    g = r(111361),
+    E = r(981631),
+    v = r(474936);
+function I() {
     let { forceFetch: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : { forceFetch: !1 },
-        t = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
-        n = (0, l.Wu)([f.Z], () => f.Z.getFractionalPremium(!1)),
-        i = (0, l.e7)([d.ZP], () => d.ZP.getPremiumTypeSubscription()),
-        [s, g] = r.useState({
-            fractionalState: m.a$.NONE,
-            endsAt: o()(0),
+        n = (0, d.e7)([_.default], () => _.default.getCurrentUser()),
+        r = (0, d.Wu)([p.Z], () => p.Z.getFractionalPremium(!1)),
+        i = (0, d.e7)([h.ZP], () => h.ZP.getPremiumTypeSubscription()),
+        [a, o] = s.useState({
+            fractionalState: v.a$.NONE,
+            endsAt: c()(0),
             currentEntitlementId: ''
         });
     return (
-        r.useEffect(() => {
-            if ((null != t && !!(0, p.I5)(t)) || !!e) !f.Z.fetchingAllEntitlements && (0, u.p0)({ entitlementType: h.qc2.FRACTIONAL_REDEMPTION });
+        s.useEffect(() => {
+            if ((null != n && !!(0, g.I5)(n)) || !!e) !p.Z.fetchingAllEntitlements && (0, f.p0)({ entitlementType: E.qc2.FRACTIONAL_REDEMPTION });
         }, []),
-        r.useEffect(() => {
-            if (null == t || !(0, p.I5)(t) || 0 === n.length) {
-                g((e) =>
-                    e.endsAt.isSame(o()(0)) && e.fractionalState === m.a$.NONE
+        s.useEffect(() => {
+            if (null == n || !(0, g.I5)(n) || 0 === r.length) {
+                o((e) =>
+                    e.endsAt.isSame(c()(0)) && e.fractionalState === v.a$.NONE
                         ? e
                         : {
-                              fractionalState: m.a$.NONE,
-                              endsAt: o()(0),
+                              fractionalState: v.a$.NONE,
+                              endsAt: c()(0),
                               currentEntitlementId: ''
                           }
                 );
                 return;
             }
-            let e = n.filter((e) => null != e.endsAt && null != e.startsAt).sort((e, t) => ((a()(null != e.endsAt && null != t.endsAt, 'endsAt should not be null'), e.endsAt < t.endsAt) ? -1 : e.endsAt > t.endsAt ? 1 : 0));
-            if ((e.reverse(), e.length !== n.length || null == e[0].endsAt)) {
-                let e = Array.from(n.values()).map((e) => e.id),
-                    t = 'fractional redemption entitlements should have startsAt/endsAt';
-                throw ((0, _.g9)(t, { extra: { entitlementIds: e } }), Error(t));
+            let e = r.filter((e) => null != e.endsAt && null != e.startsAt).sort((e, n) => ((l()(null != e.endsAt && null != n.endsAt, 'endsAt should not be null'), e.endsAt < n.endsAt) ? -1 : e.endsAt > n.endsAt ? 1 : 0));
+            if ((e.reverse(), e.length !== r.length || null == e[0].endsAt)) {
+                let e = Array.from(r.values()).map((e) => e.id),
+                    n = 'fractional redemption entitlements should have startsAt/endsAt';
+                throw ((0, m.g9)(n, { extra: { entitlementIds: e } }), Error(n));
             }
-            g({
-                fractionalState: null == i || h.JwP.INACTIVE.has(i.status) || i.isBoostOnly ? m.a$.FP_ONLY : m.a$.FP_SUB_PAUSED,
-                endsAt: o()(e[0].endsAt),
+            o({
+                fractionalState: null == i || E.JwP.INACTIVE.has(i.status) || i.isBoostOnly ? v.a$.FP_ONLY : v.a$.FP_SUB_PAUSED,
+                endsAt: c()(e[0].endsAt),
                 currentEntitlementId: e.length > 0 ? e[0].id : ''
             });
-        }, [t, n, i]),
-        s
+        }, [n, r, i]),
+        a
     );
 }

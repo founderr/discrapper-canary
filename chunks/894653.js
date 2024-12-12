@@ -1,34 +1,34 @@
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140);
-let u = [],
-    c = null;
-class d extends (s = o.ZP.Store) {
+var i,
+    a = r(442837),
+    s = r(570140);
+function o(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let l = [],
+    u = null;
+function c(e) {
+    let { categories: n } = e;
+    (l = n), (u = Date.now());
+}
+class d extends (i = a.ZP.Store) {
     getLastFetchTimeMs() {
-        return c;
-    }
-    getCategories() {
         return u;
     }
+    getCategories() {
+        return l;
+    }
     getCategory(e) {
-        return u.find((t) => t.id === e);
+        return l.find((n) => n.id === e);
     }
 }
-(a = 'ApplicationDirectoryCategoriesStore'),
-    (i = 'displayName') in (r = d)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.Z = new d(l.Z, {
-        APPLICATION_DIRECTORY_FETCH_CATEGORIES_SUCCESS: function (e) {
-            let { categories: t } = e;
-            (u = t), (c = Date.now());
-        }
-    }));
+o(d, 'displayName', 'ApplicationDirectoryCategoriesStore'), (n.Z = new d(s.Z, { APPLICATION_DIRECTORY_FETCH_CATEGORIES_SUCCESS: c }));

@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     calendar: `\u{397}\u{3BC}\u{3B5}\u{3C1}\u{3BF}\u{3BB}\u{3CC}\u{3B3}\u{3B9}\u{3BF}`,
     day: `\u{3B7}\u{3BC}\u{3AD}\u{3C1}\u{3B1}`,
     dayPeriod: `\u{3C0}.\u{3BC}./\u{3BC}.\u{3BC}.`,

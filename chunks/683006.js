@@ -1,19 +1,19 @@
-var r = n(896859);
-function i() {}
+var i = r(896859);
 function a() {}
-(a.resetWarningCache = i),
+function s() {}
+(s.resetWarningCache = a),
     (e.exports = function () {
-        function e(e, t, n, i, a, s) {
-            if (s !== r) {
-                var o = Error('Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types');
-                throw ((o.name = 'Invariant Violation'), o);
+        function e(e, n, r, a, s, o) {
+            if (o !== i) {
+                var l = Error('Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types');
+                throw ((l.name = 'Invariant Violation'), l);
             }
         }
-        function t() {
+        function n() {
             return e;
         }
         e.isRequired = e;
-        var n = {
+        var r = {
             array: e,
             bool: e,
             func: e,
@@ -22,18 +22,18 @@ function a() {}
             string: e,
             symbol: e,
             any: e,
-            arrayOf: t,
+            arrayOf: n,
             element: e,
             elementType: e,
-            instanceOf: t,
+            instanceOf: n,
             node: e,
-            objectOf: t,
-            oneOf: t,
-            oneOfType: t,
-            shape: t,
-            exact: t,
-            checkPropTypes: a,
-            resetWarningCache: i
+            objectOf: n,
+            oneOf: n,
+            oneOfType: n,
+            shape: n,
+            exact: n,
+            checkPropTypes: s,
+            resetWarningCache: a
         };
-        return (n.PropTypes = n), n;
+        return (r.PropTypes = r), r;
     });

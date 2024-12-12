@@ -1,12 +1,12 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var r = n(442837),
-    i = n(706454),
-    a = n(388032);
-function s(e) {
-    let t = (0, r.e7)([i.default], () => i.default.locale.startsWith('en-'));
-    return ':pizza:' === e && t ? a.intl.formatToPlainString(a.t['1knDPD'], { emojiName: e }) : e;
+var i = r(442837),
+    a = r(706454),
+    s = r(388032);
+function o(e) {
+    let n = (0, i.e7)([a.default], () => a.default.locale.startsWith('en-'));
+    return ':pizza:' === e && n ? s.intl.formatToPlainString(s.t['1knDPD'], { emojiName: e }) : e;
 }

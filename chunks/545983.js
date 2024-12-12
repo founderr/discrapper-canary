@@ -1,9 +1,9 @@
-var r = n(286233),
-    i = n(315016);
+var i = r(286233),
+    a = r(315016);
 e.exports = function () {
-    var e = i();
+    var e = a();
     return (
-        r(
+        i(
             String.prototype,
             { trim: e },
             {

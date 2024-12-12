@@ -1,14 +1,14 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return l;
+        return c;
     }
-}),
-    n(47120);
-var r = n(192379),
-    i = n(663507),
-    a = n(924428),
-    s = n(151973);
-let o = Object.freeze({
+});
+var i = r(47120);
+var a = r(192379),
+    s = r(663507),
+    o = r(924428),
+    l = r(151973);
+let u = Object.freeze({
     coordsMap: {},
     visibleSections: {},
     totalHeight: 0,
@@ -17,54 +17,54 @@ let o = Object.freeze({
         coordinates: {}
     }
 });
-function l(e) {
-    let { sections: t, columns: n, getItemKey: l, getItemHeight: u, getSectionHeight: c, chunkSize: d = 250, getScrollerState: f, maxBufferWidth: _, itemGutter: p, removeEdgeItemGutters: h, sectionGutter: m, padding: g, paddingVertical: E, paddingHorizontal: v, dir: I } = e,
-        T = (0, a.Z)(),
-        b = (0, r.useRef)(o),
-        [S] = (0, r.useState)(() => new i.ZP()),
-        y = f(),
-        A = Math.min(null != _ ? _ : 1 / 0, y.offsetWidth),
-        N = null != _ ? Math.max(0, y.offsetWidth - _) : 0,
+function c(e) {
+    let { sections: n, columns: r, getItemKey: i, getItemHeight: c, getSectionHeight: d, chunkSize: f = 250, getScrollerState: _, maxBufferWidth: h, itemGutter: p, removeEdgeItemGutters: m, sectionGutter: g, padding: E, paddingVertical: v, paddingHorizontal: I, dir: T } = e,
+        b = (0, o.Z)(),
+        y = (0, a.useRef)(u),
+        [S] = (0, a.useState)(() => new s.ZP()),
+        A = _(),
+        N = Math.min(null != h ? h : 1 / 0, A.offsetWidth),
+        C = null != h ? Math.max(0, A.offsetWidth - h) : 0,
         {
-            dirty: C,
-            chunkStart: R,
-            chunkEnd: O,
-            forceUpdateOnChunkChange: D
-        } = (0, s.Z)({
-            chunkSize: d,
-            getScrollerState: f,
-            forceUpdate: T
+            dirty: R,
+            chunkStart: O,
+            chunkEnd: D,
+            forceUpdateOnChunkChange: L
+        } = (0, l.Z)({
+            chunkSize: f,
+            getScrollerState: _,
+            forceUpdate: b
         });
     return (
-        (b.current = (0, r.useMemo)(
+        (y.current = (0, a.useMemo)(
             () =>
-                C > 0
-                    ? b.current
+                R > 0
+                    ? y.current
                     : (S.mergeProps({
-                          sections: t,
-                          columns: n,
-                          getItemKey: l,
-                          getItemHeight: u,
-                          getSectionHeight: c,
-                          bufferWidth: A,
+                          sections: n,
+                          columns: r,
+                          getItemKey: i,
+                          getItemHeight: c,
+                          getSectionHeight: d,
+                          bufferWidth: N,
                           itemGutter: p,
-                          removeEdgeItemGutters: h,
-                          sectionGutter: m,
-                          padding: g,
-                          paddingVertical: E,
-                          paddingHorizontal: v,
-                          marginLeft: N / 2,
-                          dir: I
+                          removeEdgeItemGutters: m,
+                          sectionGutter: g,
+                          padding: E,
+                          paddingVertical: v,
+                          paddingHorizontal: I,
+                          marginLeft: C / 2,
+                          dir: T
                       }),
-                      S.computeVisibleSections(Math.max(0, R * d), O * d),
+                      S.computeVisibleSections(Math.max(0, O * f), D * f),
                       S.getState()),
-            [C, S, t, n, l, u, c, R, O, d, p, h, m, g, E, v, A, I]
+            [R, S, n, r, i, c, d, O, D, f, p, m, g, E, v, I, N, T]
         )),
         {
-            ...b.current,
+            ...y.current,
             masonryComputer: S,
-            forceUpdateOnChunkChange: D,
-            forceUpdate: T
+            forceUpdateOnChunkChange: L,
+            forceUpdate: b
         }
     );
 }

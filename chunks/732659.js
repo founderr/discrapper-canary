@@ -1,22 +1,22 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var r = n(192379),
-    i = n(270445),
-    a = n(887490);
-function s(e, t, n) {
-    r.useEffect(() => {
-        let r = i.F3.findDocumentOrShadowRoot(e).defaultView;
-        if ((null == r ? void 0 : r.ResizeObserver) == null) return;
-        let s = a.bN.toDOMNode(e, e),
-            o = s.offsetHeight;
-        null == n || n(o);
-        let l = new r.ResizeObserver(() => {
-            let r = a.bN.toDOMNode(e, e).offsetHeight;
-            o !== r && (null != t.current && (t.current.style.height = ''.concat(r, 'px')), (o = r), null == n || n(r));
+var i = r(192379),
+    a = r(270445),
+    s = r(887490);
+function o(e, n, r) {
+    i.useEffect(() => {
+        let i = a.F3.findDocumentOrShadowRoot(e).defaultView;
+        if ((null == i ? void 0 : i.ResizeObserver) == null) return;
+        let o = s.bN.toDOMNode(e, e),
+            l = o.offsetHeight;
+        null == r || r(l);
+        let u = new i.ResizeObserver(() => {
+            let i = s.bN.toDOMNode(e, e).offsetHeight;
+            l !== i && (null != n.current && (n.current.style.height = ''.concat(i, 'px')), (l = i), null == r || r(i));
         });
-        return l.observe(s), () => l.disconnect();
-    }, [t, e, n]);
+        return u.observe(o), () => u.disconnect();
+    }, [n, e, r]);
 }

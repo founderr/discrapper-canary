@@ -1,58 +1,58 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return c;
+        return d;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(502762),
-    s = n(63063),
-    o = n(388032),
-    l = n(483434);
-let u = {
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(502762),
+    o = r(63063),
+    l = r(388032),
+    u = r(483434);
+let c = {
     profile: {
-        Wrapper: a.Z.Overlay,
-        className: l.profile,
+        Wrapper: s.Z.Overlay,
+        className: u.profile,
         headerVariant: 'heading-sm/semibold',
         bodyVariant: 'text-xs/medium'
     },
     profile_modal: {
-        Wrapper: a.Z.Overlay,
-        className: l.profile,
+        Wrapper: s.Z.Overlay,
+        className: u.profile,
         headerVariant: 'text-xs/semibold',
         bodyVariant: 'text-sm/normal'
     },
     channel_header: {
         Wrapper: 'div',
-        className: l.channelHeader,
+        className: u.channelHeader,
         headerVariant: 'text-md/semibold',
         bodyVariant: 'text-md/normal'
     }
 };
-function c(e) {
-    let { look: t } = e,
-        { Wrapper: n, className: a, headerVariant: c, bodyVariant: d } = u[t];
-    return (0, r.jsx)(n, {
-        className: a,
-        children: (0, r.jsxs)('div', {
-            className: l.layoutContainer,
+function d(e) {
+    let { look: n } = e,
+        { Wrapper: r, className: s, headerVariant: d, bodyVariant: f } = c[n];
+    return (0, i.jsx)(r, {
+        className: s,
+        children: (0, i.jsxs)('div', {
+            className: u.layoutContainer,
             children: [
-                (0, r.jsx)(i.CircleInformationIcon, {
+                (0, i.jsx)(a.CircleInformationIcon, {
                     size: 'md',
-                    className: l.icon
+                    className: u.icon
                 }),
-                (0, r.jsxs)('div', {
+                (0, i.jsxs)('div', {
                     children: [
-                        (0, r.jsx)(i.Heading, {
-                            variant: c,
-                            color: 'text-normal',
-                            children: o.intl.string(o.t.Iyka0d)
-                        }),
-                        (0, r.jsx)(i.Text, {
+                        (0, i.jsx)(a.Heading, {
                             variant: d,
                             color: 'text-normal',
-                            children: o.intl.format(o.t['q+N8Ly'], { helpdeskArticle: s.Z.getArticleURL('') })
+                            children: l.intl.string(l.t.Iyka0d)
+                        }),
+                        (0, i.jsx)(a.Text, {
+                            variant: f,
+                            color: 'text-normal',
+                            children: l.intl.format(l.t['q+N8Ly'], { helpdeskArticle: o.Z.getArticleURL('') })
                         })
                     ]
                 })

@@ -1,66 +1,66 @@
-n.d(t, {
+r.d(n, {
     bW: function () {
-        return u;
+        return d;
     },
     hN: function () {
-        return c;
+        return f;
     },
     vW: function () {
-        return l;
+        return c;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(679136),
-    s = n(580747);
-let o = i.createContext({
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(679136),
+    l = r(580747);
+let u = s.createContext({
     enabled: !1,
     highlight: !1
 });
-function l(e) {
-    let { children: t, overwriteValue: n } = e,
-        { enabled: l } = a.Z.useExperiment({ location: 'web redesign icon context' }),
-        u = (0, s.Z)('highlight_redesigned_icons'),
-        c = i.useMemo(
+function c(e) {
+    let { children: n, overwriteValue: r } = e,
+        { enabled: i } = o.Z.useExperiment({ location: 'web redesign icon context' }),
+        c = (0, l.Z)('highlight_redesigned_icons'),
+        d = s.useMemo(
             () => ({
-                enabled: l,
-                highlight: u
+                enabled: i,
+                highlight: c
             }),
-            [l, u]
+            [i, c]
         );
-    return (0, r.jsx)(o.Provider, {
-        value: null != n ? n : c,
-        children: t
+    return (0, a.jsx)(u.Provider, {
+        value: null != r ? r : d,
+        children: n
     });
 }
-function u() {
-    return i.useContext(o);
+function d() {
+    return s.useContext(u);
 }
-function c(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0,
+function f(e, n) {
+    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0,
         i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { size: 24 };
-    return function (a) {
-        let { enabled: s, highlight: o } = u();
-        if (!s) return (0, r.jsx)(e, { ...a });
+    return function (s) {
+        let { enabled: o, highlight: l } = d();
+        if (!o) return (0, a.jsx)(e, { ...s });
         {
-            var l, c;
-            let e = { ...a };
-            for (let [t, r] of Object.entries(
-                (n = {
+            var u, c, f, _;
+            let e = { ...s };
+            for (let [n, i] of Object.entries(
+                (r = {
                     foreground: 'colorClass',
                     color: 'color',
-                    ...(null != n ? n : {})
+                    ...(null != r ? r : {})
                 })
             )) {
-                let n = a[t];
-                if ((null == n && 'color' === t && (n = o ? 'yellow' : 'currentColor'), 'remove' === r)) {
-                    delete e[t];
+                let r = s[n];
+                if ((null == r && 'color' === n && (r = l ? 'yellow' : 'currentColor'), 'remove' === i)) {
+                    delete e[n];
                     continue;
                 }
-                e[r] = n;
+                e[i] = r;
             }
-            return (null !== (l = e.width) && void 0 !== l) || (e.width = i.size), (null !== (c = e.height) && void 0 !== c) || (e.height = i.size), (0, r.jsx)(t, { ...e });
+            return (null !== (f = (u = e).width) && void 0 !== f) || (u.width = i.size), (null !== (_ = (c = e).height) && void 0 !== _) || (c.height = i.size), (0, a.jsx)(n, { ...e });
         }
     };
 }

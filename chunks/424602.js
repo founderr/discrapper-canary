@@ -1,23 +1,23 @@
-n.d(t, {
+r.d(n, {
     T: function () {
-        return a;
-    },
-    _f: function () {
-        return u;
-    },
-    aq: function () {
-        return l;
-    },
-    m1: function () {
         return s;
     },
-    nS: function () {
+    _f: function () {
+        return c;
+    },
+    aq: function () {
+        return u;
+    },
+    m1: function () {
         return o;
+    },
+    nS: function () {
+        return l;
     }
 });
-var r = n(818083),
-    i = n(987338);
-let a = (0, r.B)({
+var i = r(818083),
+    a = r(987338);
+let s = (0, i.B)({
         kind: 'user',
         id: '2023-11_app_launcher_desktop',
         label: 'App Launcher - Desktop',
@@ -30,7 +30,7 @@ let a = (0, r.B)({
             }
         ]
     }),
-    s = (0, r.B)({
+    o = (0, i.B)({
         kind: 'user',
         id: '2024-06_desktop_app_launcher_in_activities_shelf',
         label: 'Desktop App Launcher In Activities Shelf',
@@ -57,7 +57,7 @@ let a = (0, r.B)({
             }
         ]
     }),
-    o = (0, r.B)({
+    l = (0, i.B)({
         kind: 'user',
         id: '2024-07_open_platform_app_launcher',
         label: 'Open Platform App Launcher',
@@ -70,11 +70,11 @@ let a = (0, r.B)({
             }
         ]
     }),
-    l = (0, r.B)({
+    u = (0, i.B)({
         kind: 'user',
         id: '2024-08_open_platform_app_launcher_holdout',
         label: 'Open Platform App Launcher Holdout',
-        commonTriggerPoint: i.$P.VOICE_CALL,
+        commonTriggerPoint: a.$P.VOICE_CALL,
         defaultConfig: { clickOnHomeActivityOpensAppDetail: !0 },
         treatments: [
             {
@@ -89,7 +89,7 @@ let a = (0, r.B)({
             }
         ]
     }),
-    u = (0, r.B)({
+    c = (0, i.B)({
         kind: 'user',
         id: '2024-09_user_app_install_education',
         label: 'User App Install Education Experiment',
@@ -97,7 +97,7 @@ let a = (0, r.B)({
             enabled: !1,
             showsTooltip: !1
         },
-        commonTriggerPoint: i.$P.CONNECTION_OPEN,
+        commonTriggerPoint: a.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,

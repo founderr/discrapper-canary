@@ -1,53 +1,53 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return d;
+        return f;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(752877),
-    o = n(481060),
-    l = n(583350);
-let u = Object.freeze({
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(752877),
+    l = r(481060),
+    u = r(583350);
+let c = Object.freeze({
         tension: 400,
         friction: 30
     }),
-    c = Object.freeze({
+    d = Object.freeze({
         opacity: 0,
         height: 8,
         x: -4
     });
-function d(e) {
-    let { selected: t = !1, hovered: n = !1, unread: i = !1, disabled: d = !1, className: f } = e;
-    (t = !d && t), (n = !d && n), (i = !d && i);
-    let _ = {
+function f(e) {
+    let { selected: n = !1, hovered: r = !1, unread: a = !1, disabled: f = !1, className: _ } = e;
+    (n = !f && n), (r = !f && r), (a = !f && a);
+    let h = {
             opacity: 1,
-            height: t ? 40 : n ? 20 : 8,
+            height: n ? 40 : r ? 20 : 8,
             x: 0
         },
-        p = (0, o.useTransition)(
-            t || n || i,
+        p = (0, l.useTransition)(
+            n || r || a,
             {
-                config: u,
+                config: c,
                 keys: (e) => (e ? 'pill' : 'empty'),
-                initial: t || n || i ? _ : null,
-                from: c,
-                leave: c,
-                enter: _,
-                update: _
+                initial: n || r || a ? h : null,
+                from: d,
+                leave: d,
+                enter: h,
+                update: h
             },
-            n || document.hasFocus() ? 'animate-always' : 'animate-never'
+            r || document.hasFocus() ? 'animate-always' : 'animate-never'
         );
-    return (0, r.jsx)('div', {
-        className: a()(f, l.wrapper),
+    return (0, i.jsx)('div', {
+        className: s()(_, u.wrapper),
         'aria-hidden': !0,
         children: p(
-            (e, t) =>
-                t &&
-                (0, r.jsx)(s.animated.span, {
-                    className: l.item,
+            (e, n) =>
+                n &&
+                (0, i.jsx)(o.animated.span, {
+                    className: u.item,
                     style: e
                 })
         )

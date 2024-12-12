@@ -1,13 +1,13 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var r = n(358085),
-    i = n(998502),
-    a = n(522474);
-function s(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = a.Z.getWindow(e);
-    if (null != n && !n.closed) r.isPlatformEmbedded ? i.ZP.focus(e, t) : n.focus();
+var i = r(358085),
+    a = r(998502),
+    s = r(522474);
+function o(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        r = s.Z.getWindow(e);
+    if (null != r && !r.closed) i.isPlatformEmbedded ? a.ZP.focus(e, n) : r.focus();
 }

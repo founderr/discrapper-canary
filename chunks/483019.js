@@ -1,78 +1,78 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return d;
+        return _;
     }
-}),
-    n(47120);
-var r = n(392711),
-    i = n.n(r),
-    a = n(846519),
-    s = n(710845),
-    o = n(70956),
-    l = n(709054);
-function u(e, t, n) {
+});
+var i = r(47120);
+var a = r(392711),
+    s = r.n(a),
+    o = r(846519),
+    l = r(710845),
+    u = r(70956),
+    c = r(709054);
+function d(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let c = 1 * o.Z.Millis.MINUTE;
-class d {
+let f = 1 * u.Z.Millis.MINUTE;
+class _ {
     reset() {
         (this._subscriptions = {}), (this._unsubscriptions = {}), this._unsubscribe.cancel();
     }
     get(e) {
-        var t;
-        let n = null !== (t = this._subscriptions[e]) && void 0 !== t ? t : {};
-        return l.default.keys(n);
+        var n;
+        let r = null !== (n = this._subscriptions[e]) && void 0 !== n ? n : {};
+        return c.default.keys(r);
     }
     clear(e) {
         delete this._subscriptions[e], delete this._unsubscriptions[e];
     }
-    subscribe(e, t) {
-        var n, r;
-        let i = null !== (n = this._subscriptions[e]) && void 0 !== n ? n : {};
-        (i[t] = (null !== (r = i[t]) && void 0 !== r ? r : 0) + 1), (this._subscriptions[e] = i), 1 === i[t] && this._onChange(e, this.get(e)), this.checkForLeaks(e, t);
+    subscribe(e, n) {
+        var r, i;
+        let a = null !== (r = this._subscriptions[e]) && void 0 !== r ? r : {};
+        (a[n] = (null !== (i = a[n]) && void 0 !== i ? i : 0) + 1), (this._subscriptions[e] = a), 1 === a[n] && this._onChange(e, this.get(e)), this.checkForLeaks(e, n);
     }
-    isSubscribed(e, t) {
-        return null != this._subscriptions[e] && null != this._subscriptions[e][t];
+    isSubscribed(e, n) {
+        return null != this._subscriptions[e] && null != this._subscriptions[e][n];
     }
     isSubscribedToAnyMember(e) {
         return this.get(e).length > 0;
     }
-    unsubscribe(e, t) {
-        var n, r;
-        if (!this.isSubscribed(e, t)) return;
-        let i = null !== (n = this._unsubscriptions[e]) && void 0 !== n ? n : {};
-        (i[t] = (null !== (r = i[t]) && void 0 !== r ? r : 0) + 1), (this._unsubscriptions[e] = i), 1 === i[t] && this._unsubscribe.delay(!1);
+    unsubscribe(e, n) {
+        var r, i;
+        if (!this.isSubscribed(e, n)) return;
+        let a = null !== (r = this._unsubscriptions[e]) && void 0 !== r ? r : {};
+        (a[n] = (null !== (i = a[n]) && void 0 !== i ? i : 0) + 1), (this._unsubscriptions[e] = a), 1 === a[n] && this._unsubscribe.delay(!1);
     }
-    checkForLeaks(e, t) {
-        var n, r, i, a;
-        let o = null !== (i = null === (n = this._subscriptions[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== i ? i : 0,
-            l = o - (null !== (a = null === (r = this._unsubscriptions[e]) || void 0 === r ? void 0 : r[t]) && void 0 !== a ? a : 0);
-        l > 5 && new s.Z('GuildMemberSubscriptions').warn('GuildMemberSubscriptions.subscribe(...): Potential reference leak! ('.concat(l, ' subscriptions)'));
+    checkForLeaks(e, n) {
+        var r, i, a, s;
+        let o = null !== (a = null === (r = this._subscriptions[e]) || void 0 === r ? void 0 : r[n]) && void 0 !== a ? a : 0,
+            u = o - (null !== (s = null === (i = this._unsubscriptions[e]) || void 0 === i ? void 0 : i[n]) && void 0 !== s ? s : 0);
+        u > 5 && new l.Z('GuildMemberSubscriptions').warn('GuildMemberSubscriptions.subscribe(...): Potential reference leak! ('.concat(u, ' subscriptions)'));
     }
     flushUnsubscriptions() {
-        if (!i().isEmpty(this._unsubscriptions))
-            i().forEach(this._unsubscriptions, (e, t) => {
-                let n = this._subscriptions[t];
-                i().forEach(e, (e, t) => {
-                    var r;
-                    (n[t] = (null !== (r = n[t]) && void 0 !== r ? r : 0) - e), n[t] <= 0 && delete n[t];
+        if (!s().isEmpty(this._unsubscriptions))
+            s().forEach(this._unsubscriptions, (e, n) => {
+                let r = this._subscriptions[n];
+                s().forEach(e, (e, n) => {
+                    var i;
+                    (r[n] = (null !== (i = r[n]) && void 0 !== i ? i : 0) - e), r[n] <= 0 && delete r[n];
                 }),
-                    i().isEmpty(n) && delete this._subscriptions[t],
-                    this._onChange(t, this.get(t));
+                    s().isEmpty(r) && delete this._subscriptions[n],
+                    this._onChange(n, this.get(n));
             }),
                 (this._unsubscriptions = {});
     }
     constructor(e) {
-        u(this, '_subscriptions', {}), u(this, '_unsubscriptions', {}), u(this, '_onChange', void 0), u(this, '_unsubscribe', new a.sW(c, () => this.flushUnsubscriptions())), (this._onChange = e);
+        d(this, '_subscriptions', {}), d(this, '_unsubscriptions', {}), d(this, '_onChange', void 0), d(this, '_unsubscribe', new o.sW(f, () => this.flushUnsubscriptions())), (this._onChange = e);
     }
 }

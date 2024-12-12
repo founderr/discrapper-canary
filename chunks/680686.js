@@ -1,19 +1,19 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return l;
+        return u;
     }
 });
-var r = n(626135),
-    i = n(647162),
-    a = n(616922),
-    s = n(981631);
-let o = [a.kG.USER_ACTIVITY_SYNC, a.kG.EMBED_SYNC];
-function l(e, t, n, a) {
-    r.default.track(s.rMx.SPOTIFY_BUTTON_CLICKED, {
+var i = r(626135),
+    a = r(647162),
+    s = r(616922),
+    o = r(981631);
+let l = [s.kG.USER_ACTIVITY_SYNC, s.kG.EMBED_SYNC];
+function u(e, n, r, s) {
+    i.default.track(o.rMx.SPOTIFY_BUTTON_CLICKED, {
         type: e,
-        source: a,
-        is_premium: (0, i.Wo)(),
-        party_id: o.includes(e) && (null == n ? void 0 : n.party) != null ? n.party.id : null,
-        other_user_id: t.id
+        source: s,
+        is_premium: (0, a.Wo)(),
+        party_id: l.includes(e) && (null == r ? void 0 : r.party) != null ? r.party.id : null,
+        other_user_id: n.id
     });
 }

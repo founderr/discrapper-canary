@@ -1,33 +1,33 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return d;
+        return f;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(40851),
-    s = n(906732),
-    o = n(785717),
-    l = n(171368),
-    u = n(981631),
-    c = n(388032);
-function d(e) {
-    let { label: t, onAction: n, ...d } = e,
-        { analyticsLocations: f } = (0, s.ZP)(),
-        { context: _ } = (0, o.KZ)(),
-        p = (0, a.Aq)();
-    return (0, r.jsx)(i.MenuItem, {
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(40851),
+    o = r(906732),
+    l = r(785717),
+    u = r(171368),
+    c = r(981631),
+    d = r(388032);
+function f(e) {
+    let { label: n, onAction: r, ...f } = e,
+        { analyticsLocations: _ } = (0, o.ZP)(),
+        { context: h } = (0, l.KZ)(),
+        p = (0, s.Aq)();
+    return (0, i.jsx)(a.MenuItem, {
         id: 'user-profile',
-        label: null != t ? t : c.intl.string(c.t.LYju5O),
+        label: null != n ? n : d.intl.string(d.t.LYju5O),
         action: () => {
-            null == n || n(),
-                (0, l.openUserProfileModal)({
-                    sourceAnalyticsLocations: f,
-                    ..._,
-                    ...d
+            null == r || r(),
+                (0, u.openUserProfileModal)({
+                    sourceAnalyticsLocations: _,
+                    ...h,
+                    ...f
                 }),
-                p.dispatch(u.CkL.POPOUT_CLOSE);
+                p.dispatch(c.CkL.POPOUT_CLOSE);
         }
     });
 }

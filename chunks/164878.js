@@ -1,12 +1,12 @@
-n.d(t, {
+r.d(n, {
     k: function () {
-        return a;
+        return s;
     },
     v: function () {
-        return i;
+        return a;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
     kind: 'user',
     id: '2023-11_soundboard_recently_heard_frequently_played',
     label: 'Soundboard Recently Heard & Frequently Played',
@@ -41,11 +41,11 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i(e) {
-    let { location: t, autoTrackExposure: n } = e;
-    return r.getCurrentConfig({ location: t }, { autoTrackExposure: n });
-}
 function a(e) {
-    let { autoTrackExposure: t, location: n } = e;
-    return r.useExperiment({ location: n }, { autoTrackExposure: t });
+    let { location: n, autoTrackExposure: r } = e;
+    return i.getCurrentConfig({ location: n }, { autoTrackExposure: r });
+}
+function s(e) {
+    let { autoTrackExposure: n, location: r } = e;
+    return i.useExperiment({ location: r }, { autoTrackExposure: n });
 }

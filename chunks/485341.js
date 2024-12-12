@@ -1,32 +1,32 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return c;
+        return d;
     },
     i: function () {
-        return l;
+        return u;
     }
 });
-var r = n(399606),
-    i = n(695346),
-    a = n(246946),
-    s = n(594174),
-    o = n(388032);
-let l = 'quest_completed',
-    u = 'legacy_username';
-function c(e) {
-    var t;
-    let n = i.R_.useSetting(),
-        l = (0, r.e7)([s.default], () => s.default.getCurrentUser()),
-        c = (0, r.e7)([a.Z], () => a.Z.hidePersonalInformation);
+var i = r(399606),
+    a = r(695346),
+    s = r(246946),
+    o = r(594174),
+    l = r(388032);
+let u = 'quest_completed',
+    c = 'legacy_username';
+function d(e) {
+    var n;
+    let r = a.R_.useSetting(),
+        u = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
+        d = (0, i.e7)([s.Z], () => s.Z.hidePersonalInformation);
     if (null == e) return [];
-    let d = null !== (t = null == e ? void 0 : e.getBadges()) && void 0 !== t ? t : [];
+    let f = null !== (n = null == e ? void 0 : e.getBadges()) && void 0 !== n ? n : [];
     return (
-        null != l && l.id === e.userId && n && (d = d.filter((e) => e.id !== u)),
-        c &&
-            (d = d.map((e) => ({
+        null != u && u.id === e.userId && r && (f = f.filter((e) => e.id !== c)),
+        d &&
+            (f = f.map((e) => ({
                 ...e,
-                description: e.id === u ? o.intl.string(o.t.Br1ls7) : e.description
+                description: e.id === c ? l.intl.string(l.t.Br1ls7) : e.description
             }))),
-        d
+        f
     );
 }

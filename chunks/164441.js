@@ -1,18 +1,18 @@
-n.d(t, {
+r.d(n, {
     u: function () {
-        return i;
+        return a;
     }
 });
-var r = n(40284);
-function i() {
+var i = r(40284);
+function a() {
     var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-        t = arguments.length > 1 ? arguments[1] : void 0;
-    switch (t.type) {
-        case r.fu:
-        case r.Rd:
+        n = arguments.length > 1 ? arguments[1] : void 0;
+    switch (n.type) {
+        case i.fu:
+        case i.Rd:
             return e + 1;
-        case r.SG:
-        case r.IS:
+        case i.SG:
+        case i.IS:
             return e - 1;
         default:
             return e;

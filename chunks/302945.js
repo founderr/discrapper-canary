@@ -1,54 +1,54 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return f;
+        return _;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(793030),
-    l = n(422034),
-    u = n(182294),
-    c = n(388032),
-    d = n(865048);
-function f(e) {
-    let { affinities: t, className: n } = e,
-        a = (e) => (null != e.globalName ? e.globalName : e.username),
-        f = i.useMemo(
+var i = r(200651),
+    a = r(192379),
+    s = r(120356),
+    o = r.n(s),
+    l = r(793030),
+    u = r(422034),
+    c = r(182294),
+    d = r(388032),
+    f = r(865048);
+function _(e) {
+    let { affinities: n, className: r } = e,
+        s = (e) => (null != e.globalName ? e.globalName : e.username),
+        _ = a.useMemo(
             () =>
-                t.length > 1
-                    ? c.intl.formatToPlainString(c.t.HaVk0d, {
-                          username: a(t[0]),
-                          numFriends: t.length - 1
+                n.length > 1
+                    ? d.intl.formatToPlainString(d.t.HaVk0d, {
+                          username: s(n[0]),
+                          numFriends: n.length - 1
                       })
                     : '',
-            [t]
+            [n]
         );
-    if (t.length <= 1) return null;
-    let _ = t.map((e, n) =>
-        (0, r.jsx)(
-            l.O,
+    if (n.length <= 1) return null;
+    let h = n.map((e, r) =>
+        (0, i.jsx)(
+            u.O,
             {
                 affinity: e,
-                applyMask: n !== t.length - 1,
-                size: u.EF.SIZE_20
+                applyMask: r !== n.length - 1,
+                size: c.EF.SIZE_20
             },
             e.id
         )
     );
-    return (0, r.jsxs)('div', {
-        className: s()(d.container, n),
+    return (0, i.jsxs)('div', {
+        className: o()(f.container, r),
         children: [
-            (0, r.jsx)('div', {
-                className: d.iconContainer,
-                children: _
+            (0, i.jsx)('div', {
+                className: f.iconContainer,
+                children: h
             }),
-            (0, r.jsx)('div', {
-                className: d.textContainer,
-                children: (0, r.jsx)(o.xv, {
+            (0, i.jsx)('div', {
+                className: f.textContainer,
+                children: (0, i.jsx)(l.xv, {
                     variant: 'text-sm/medium',
-                    children: f
+                    children: _
                 })
             })
         ]

@@ -1,28 +1,28 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return o;
+        return l;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(512969),
-    a = n(990547),
-    s = n(213609);
-function o(e) {
-    var t;
-    let { impressionName: n, impressionProperties: o, disableTrack: l, ...u } = e,
-        c = o;
+var i = r(200651);
+r(192379);
+var a = r(512969),
+    s = r(990547),
+    o = r(213609);
+function l(e) {
+    var n;
+    let { impressionName: r, impressionProperties: l, disableTrack: u, ...c } = e,
+        d = l;
     return (
-        'function' == typeof c && (c = c(u)),
-        (0, s.Z)(
+        'function' == typeof d && (d = d(c)),
+        (0, o.Z)(
             {
-                type: a.ImpressionTypes.PAGE,
-                name: n,
-                properties: c
+                type: s.ImpressionTypes.PAGE,
+                name: r,
+                properties: d
             },
-            { disableTrack: l },
-            [null === (t = u.location) || void 0 === t ? void 0 : t.pathname]
+            { disableTrack: u },
+            [null === (n = c.location) || void 0 === n ? void 0 : n.pathname]
         ),
-        (0, r.jsx)(i.AW, { ...u })
+        (0, i.jsx)(a.AW, { ...c })
     );
 }

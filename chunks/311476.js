@@ -1,4 +1,4 @@
-let r = (0, n(987170).Z)({
+let i = (0, r(987170).Z)({
     id: '2024-06_premium_feature_apperance_upsell_desktop',
     label: 'Premium Client Themes / App Icons Desktop Upsell',
     kind: 'user',
@@ -25,4 +25,4 @@ let r = (0, n(987170).Z)({
         }
     ]
 });
-t.Z = r;
+n.Z = i;

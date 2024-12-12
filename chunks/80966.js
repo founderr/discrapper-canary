@@ -1,64 +1,64 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return c;
+        return d;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(403182),
-    s = n(124347),
-    o = n(640108),
-    l = n(981631),
-    u = n(388032);
-class c extends i.Component {
+var i = r(200651),
+    a = r(192379),
+    s = r(403182),
+    o = r(124347),
+    l = r(640108),
+    u = r(981631),
+    c = r(388032);
+class d extends a.Component {
     render() {
-        let { src: e, fileSize: t, className: n, mediaPlayerClassName: i, poster: c, fileName: d, naturalWidth: f, naturalHeight: _, playable: p, downloadable: h = !0, volume: m, autoPlay: g, autoMute: E, responsive: v, mediaLayoutType: I, mimeType: T, renderOverlayContent: b, renderLinkComponent: S, onClick: y, onPlay: A, onPause: N, onEnded: C, onControlsShow: R, onControlsHide: O, onVolumeChange: D, onMute: L, alt: x = u.intl.string(u.t.FlNoSU), ...w } = this.props;
-        return (0, r.jsx)(s.ZP, {
-            alt: x,
-            className: n,
-            src: c,
-            ...w,
-            minWidth: o.ZP.minWidth,
-            minHeight: o.ZP.minHeight,
+        let { src: e, fileSize: n, className: r, mediaPlayerClassName: a, poster: d, fileName: f, naturalWidth: _, naturalHeight: h, playable: p, downloadable: m = !0, volume: g, autoPlay: E, autoMute: v, responsive: I, mediaLayoutType: T, mimeType: b, renderOverlayContent: y, renderLinkComponent: S, onClick: A, onPlay: N, onPause: C, onEnded: R, onControlsShow: O, onControlsHide: D, onVolumeChange: L, onMute: x, alt: w = c.intl.string(c.t.FlNoSU), ...P } = this.props;
+        return (0, i.jsx)(o.ZP, {
+            alt: w,
+            className: r,
+            src: d,
+            ...P,
+            minWidth: l.ZP.minWidth,
+            minHeight: l.ZP.minHeight,
             shouldLink: !1,
             shouldAnimate: !1,
-            mediaLayoutType: I,
-            responsive: v,
-            children: (n) => {
+            mediaLayoutType: T,
+            responsive: I,
+            children: (r) => {
                 let {
-                        src: s,
-                        size: { width: u, height: c }
-                    } = n,
-                    x = !((f <= l.N_j && _ <= l.XKF) || (f <= l.XKF && _ <= l.N_j));
-                return (0, r.jsx)(o.ZP, {
-                    className: i,
-                    forceExternal: x,
+                        src: o,
+                        size: { width: c, height: d }
+                    } = r,
+                    w = !((_ <= u.N_j && h <= u.XKF) || (_ <= u.XKF && h <= u.N_j));
+                return (0, i.jsx)(l.ZP, {
+                    className: a,
+                    forceExternal: w,
                     src: e,
-                    poster: s,
-                    width: u,
-                    height: c,
-                    responsive: v,
-                    volume: m,
-                    autoPlay: null != g && g,
-                    autoMute: null != E && E,
-                    type: o.ZP.Types.VIDEO,
-                    mediaLayoutType: I,
-                    fileName: d,
-                    fileSize: null == t ? void 0 : (0, a.Ng)(t),
-                    fileSizeBytes: null == t ? void 0 : t,
+                    poster: o,
+                    width: c,
+                    height: d,
+                    responsive: I,
+                    volume: g,
+                    autoPlay: null != E && E,
+                    autoMute: null != v && v,
+                    type: l.ZP.Types.VIDEO,
+                    mediaLayoutType: T,
+                    fileName: f,
+                    fileSize: null == n ? void 0 : (0, s.Ng)(n),
+                    fileSizeBytes: null == n ? void 0 : n,
                     playable: p,
                     renderLinkComponent: S,
-                    renderOverlayContent: b,
-                    onClick: y,
-                    onPlay: A,
-                    onPause: N,
-                    onEnded: C,
-                    onVolumeChange: D,
-                    onMute: L,
-                    onControlsShow: R,
-                    onControlsHide: O,
-                    mimeType: T,
-                    downloadable: h
+                    renderOverlayContent: y,
+                    onClick: A,
+                    onPlay: N,
+                    onPause: C,
+                    onEnded: R,
+                    onVolumeChange: L,
+                    onMute: x,
+                    onControlsShow: O,
+                    onControlsHide: D,
+                    mimeType: b,
+                    downloadable: m
                 });
             }
         });

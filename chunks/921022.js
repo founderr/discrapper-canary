@@ -1,18 +1,18 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(192379),
-    i = n(931609);
-function a(e) {
-    let { delay: t, disable: n = !1 } = e,
-        a = (0, i.Z)();
-    r.useEffect(() => {
-        if (t <= 0 || n) return;
+var i = r(192379),
+    a = r(931609);
+function s(e) {
+    let { delay: n, disable: r = !1 } = e,
+        s = (0, a.Z)();
+    i.useEffect(() => {
+        if (n <= 0 || r) return;
         let e = setTimeout(() => {
-            a();
-        }, t);
+            s();
+        }, n);
         return () => clearTimeout(e);
-    }, [t, n, a]);
+    }, [n, r, s]);
 }

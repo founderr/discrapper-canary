@@ -1,8 +1,8 @@
-n.d(t, {
+r.d(n, {
     f: function () {
-        return i;
+        return a;
     }
 });
-var r = n(752877);
-let i = new (n(603767).Z)();
-r.Globals.assign({ frameLoop: i });
+var i = r(752877);
+let a = new (r(603767).Z)();
+i.Globals.assign({ frameLoop: a });

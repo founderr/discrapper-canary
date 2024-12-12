@@ -1,58 +1,58 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return _;
+        return h;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(481060),
-    o = n(194359),
-    l = n(906732),
-    u = n(5192),
-    c = n(785717),
-    d = n(388032),
-    f = n(117191);
-function _(e) {
-    let { user: t, guildId: n, channelId: i, friendToken: _, className: p } = e,
-        h = u.ZP.getName(n, i, t),
-        { trackUserProfileAction: m } = (0, c.KZ)(),
-        { newestAnalyticsLocation: g } = (0, l.ZP)();
-    return (0, r.jsxs)('div', {
-        className: a()(f.container, p),
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(481060),
+    l = r(194359),
+    u = r(906732),
+    c = r(5192),
+    d = r(785717),
+    f = r(388032),
+    _ = r(117191);
+function h(e) {
+    let { user: n, guildId: r, channelId: a, friendToken: h, className: p } = e,
+        m = c.ZP.getName(r, a, n),
+        { trackUserProfileAction: g } = (0, d.KZ)(),
+        { newestAnalyticsLocation: E } = (0, u.ZP)();
+    return (0, i.jsxs)('div', {
+        className: s()(_.container, p),
         children: [
-            (0, r.jsx)(s.Text, {
+            (0, i.jsx)(o.Text, {
                 variant: 'text-sm/normal',
-                children: d.intl.format(d.t.uIomX1, { username: h })
+                children: f.intl.format(f.t.uIomX1, { username: m })
             }),
-            (0, r.jsxs)('div', {
-                className: f.buttonContainer,
+            (0, i.jsxs)('div', {
+                className: _.buttonContainer,
                 children: [
-                    (0, r.jsx)(s.Button, {
-                        look: s.Button.Looks.FILLED,
-                        color: a()(s.Button.Colors.BRAND, f.color),
-                        size: s.Button.Sizes.SMALL,
-                        className: f.button,
+                    (0, i.jsx)(o.Button, {
+                        look: o.Button.Looks.FILLED,
+                        color: s()(o.Button.Colors.BRAND, _.color),
+                        size: o.Button.Sizes.SMALL,
+                        className: _.button,
                         onClick: () => {
-                            m({ action: 'ACCEPT_FRIEND_REQUEST' }),
-                                o.Z.addRelationship({
-                                    userId: t.id,
-                                    friendToken: _,
-                                    context: { location: g }
+                            g({ action: 'ACCEPT_FRIEND_REQUEST' }),
+                                l.Z.addRelationship({
+                                    userId: n.id,
+                                    friendToken: h,
+                                    context: { location: E }
                                 });
                         },
-                        children: d.intl.string(d.t.ZcibdX)
+                        children: f.intl.string(f.t.ZcibdX)
                     }),
-                    (0, r.jsx)(s.Button, {
-                        look: s.Button.Looks.FILLED,
-                        color: s.Button.Colors.PRIMARY,
-                        size: s.Button.Sizes.SMALL,
-                        className: f.button,
+                    (0, i.jsx)(o.Button, {
+                        look: o.Button.Looks.FILLED,
+                        color: o.Button.Colors.PRIMARY,
+                        size: o.Button.Sizes.SMALL,
+                        className: _.button,
                         onClick: () => {
-                            m({ action: 'IGNORE_FRIEND_REQUEST' }), o.Z.cancelFriendRequest(t.id, { location: g });
+                            g({ action: 'IGNORE_FRIEND_REQUEST' }), l.Z.cancelFriendRequest(n.id, { location: E });
                         },
-                        children: d.intl.string(d.t.xuio0N)
+                        children: f.intl.string(f.t.xuio0N)
                     })
                 ]
             })

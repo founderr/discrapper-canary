@@ -1,10 +1,10 @@
-var t = {
+var n = {
     current: {
         createInteractionHandle: function () {},
         clearInteractionHandle: function () {}
     },
     inject: function (e) {
-        t.current = e;
+        n.current = e;
     }
 };
-e.exports = t;
+e.exports = n;

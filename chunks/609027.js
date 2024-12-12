@@ -1,19 +1,19 @@
-function r(e) {
-    var t;
+function i(e) {
+    var n;
     return function () {
         return (
-            !t &&
-                (t = new Promise(function (n) {
+            !n &&
+                (n = new Promise(function (r) {
                     Promise.resolve().then(function () {
-                        (t = void 0), n(e());
+                        (n = void 0), r(e());
                     });
                 })),
-            t
+            n
         );
     };
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

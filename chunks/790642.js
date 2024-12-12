@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     Io: function () {
-        return i;
+        return a;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
     kind: 'user',
     id: '2024-06_content_entry_embed',
     label: 'Content Inventory Embed',
@@ -16,7 +16,7 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i(e) {
-    let { enabled: t } = r.getCurrentConfig({ location: e });
-    return t;
+function a(e) {
+    let { enabled: n } = i.getCurrentConfig({ location: e });
+    return n;
 }

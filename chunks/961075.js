@@ -1,7 +1,7 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = { dismiss: 'Avvisa' };
+var i = {};
+i = { dismiss: 'Avvisa' };

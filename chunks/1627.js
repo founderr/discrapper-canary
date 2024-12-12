@@ -1,19 +1,19 @@
-var r = n(481060),
-    i = n(703656),
-    a = n(302155),
-    s = n(71509),
-    o = n(981631),
-    l = n(388032);
-t.Z = new a.Z({
-    onSwitchSuccess(e, t) {
+var i = r(481060),
+    a = r(703656),
+    s = r(302155),
+    o = r(71509),
+    l = r(981631),
+    u = r(388032);
+n.Z = new s.Z({
+    onSwitchSuccess(e, n) {
         setTimeout(() => {
-            t && (0, i.uL)(o.Z5c.ME), (0, r.showToast)((0, r.createToast)(l.intl.formatToPlainString(l.t.wx7O3N, { username: e.username }), r.ToastType.SUCCESS));
+            n && (0, a.uL)(l.Z5c.ME), (0, i.showToast)((0, i.createToast)(u.intl.formatToPlainString(u.t.wx7O3N, { username: e.username }), i.ToastType.SUCCESS));
         }, 100);
     },
     onSwitchError() {
-        (0, r.showToast)((0, r.createToast)(l.intl.string(l.t.pqvKWF), r.ToastType.FAILURE));
+        (0, i.showToast)((0, i.createToast)(u.intl.string(u.t.pqvKWF), i.ToastType.FAILURE));
     },
     onTokenSet() {
-        (0, r.closeModal)(s.Ui);
+        (0, i.closeModal)(o.Ui);
     }
 });

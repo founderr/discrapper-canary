@@ -1,6 +1,6 @@
 IntlMessageFormat.__addLocaleData({
     locale: 'zh',
-    pluralRuleFunction: function (e, t) {
+    pluralRuleFunction: function (e, n) {
         return 'other';
     }
 }),
@@ -22,7 +22,7 @@ IntlMessageFormat.__addLocaleData({
     }),
     IntlMessageFormat.__addLocaleData({
         locale: 'zh-Hant',
-        pluralRuleFunction: function (e, t) {
+        pluralRuleFunction: function (e, n) {
             return 'other';
         }
     }),

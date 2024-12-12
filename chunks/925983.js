@@ -1,72 +1,72 @@
-var r = n(767172),
-    i = /%[sdv%]/g,
-    a = function (e) {
-        var t = 1,
-            n = arguments,
-            r = n.length;
-        return e.replace(i, function (e) {
-            if (t >= r) return e;
-            var i = n[t];
-            switch (((t += 1), e)) {
+var i = r(767172),
+    a = /%[sdv%]/g,
+    s = function (e) {
+        var n = 1,
+            r = arguments,
+            i = r.length;
+        return e.replace(a, function (e) {
+            if (n >= i) return e;
+            var a = r[n];
+            switch (((n += 1), e)) {
                 case '%%':
                     return '%';
                 case '%s':
-                    return String(i);
+                    return String(a);
                 case '%d':
-                    return Number(i);
+                    return Number(a);
                 case '%v':
                     return '';
             }
         });
     },
-    s = function (e, t, n) {
-        var r = [e + '=' + (t.format instanceof Function ? t.format(t.push ? n : n[t.name]) : t.format)];
-        if (t.names)
-            for (var i = 0; i < t.names.length; i += 1) {
-                var s = t.names[i];
-                t.name ? r.push(n[t.name][s]) : r.push(n[t.names[i]]);
+    o = function (e, n, r) {
+        var i = [e + '=' + (n.format instanceof Function ? n.format(n.push ? r : r[n.name]) : n.format)];
+        if (n.names)
+            for (var a = 0; a < n.names.length; a += 1) {
+                var o = n.names[a];
+                n.name ? i.push(r[n.name][o]) : i.push(r[n.names[a]]);
             }
-        else r.push(n[t.name]);
-        return a.apply(null, r);
+        else i.push(r[n.name]);
+        return s.apply(null, i);
     },
-    o = ['v', 'o', 's', 'i', 'u', 'e', 'p', 'c', 'b', 't', 'r', 'z', 'a'],
-    l = ['i', 'c', 'b', 'a'];
-e.exports = function (e, t) {
-    (t = t || {}),
+    l = ['v', 'o', 's', 'i', 'u', 'e', 'p', 'c', 'b', 't', 'r', 'z', 'a'],
+    u = ['i', 'c', 'b', 'a'];
+e.exports = function (e, n) {
+    (n = n || {}),
         null == e.version && (e.version = 0),
         null == e.name && (e.name = ' '),
         e.media.forEach(function (e) {
             null == e.payloads && (e.payloads = '');
         });
-    var n = t.outerOrder || o,
-        i = t.innerOrder || l,
-        a = [];
+    var r = n.outerOrder || l,
+        a = n.innerOrder || u,
+        s = [];
     return (
-        n.forEach(function (t) {
-            r[t].forEach(function (n) {
-                n.name in e && null != e[n.name]
-                    ? a.push(s(t, n, e))
-                    : n.push in e &&
-                      null != e[n.push] &&
-                      e[n.push].forEach(function (e) {
-                          a.push(s(t, n, e));
+        r.forEach(function (n) {
+            i[n].forEach(function (r) {
+                r.name in e && null != e[r.name]
+                    ? s.push(o(n, r, e))
+                    : r.push in e &&
+                      null != e[r.push] &&
+                      e[r.push].forEach(function (e) {
+                          s.push(o(n, r, e));
                       });
             });
         }),
         e.media.forEach(function (e) {
-            a.push(s('m', r.m[0], e)),
-                i.forEach(function (t) {
-                    r[t].forEach(function (n) {
-                        n.name in e && null != e[n.name]
-                            ? a.push(s(t, n, e))
-                            : n.push in e &&
-                              null != e[n.push] &&
-                              e[n.push].forEach(function (e) {
-                                  a.push(s(t, n, e));
+            s.push(o('m', i.m[0], e)),
+                a.forEach(function (n) {
+                    i[n].forEach(function (r) {
+                        r.name in e && null != e[r.name]
+                            ? s.push(o(n, r, e))
+                            : r.push in e &&
+                              null != e[r.push] &&
+                              e[r.push].forEach(function (e) {
+                                  s.push(o(n, r, e));
                               });
                     });
                 });
         }),
-        a.join('\r\n') + '\r\n'
+        s.join('\r\n') + '\r\n'
     );
 };

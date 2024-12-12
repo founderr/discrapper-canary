@@ -1,56 +1,56 @@
-var r = n(957578).Buffer,
-    i = n(108381),
-    a = n(477260),
-    s = n(689118),
-    o = n(510838),
-    l = n(517145),
-    u = n(873213);
-function c(e) {
-    a.Writable.call(this);
-    var t = u[e];
-    if (!t) throw Error('Unknown message digest');
-    (this._hashType = t.hash), (this._hash = i(t.hash)), (this._tag = t.id), (this._signType = t.sign);
-}
+var i = r(957578).Buffer,
+    a = r(108381),
+    s = r(477260),
+    o = r(689118),
+    l = r(510838),
+    u = r(517145),
+    c = r(873213);
 function d(e) {
-    a.Writable.call(this);
-    var t = u[e];
-    if (!t) throw Error('Unknown message digest');
-    (this._hash = i(t.hash)), (this._tag = t.id), (this._signType = t.sign);
+    s.Writable.call(this);
+    var n = c[e];
+    if (!n) throw Error('Unknown message digest');
+    (this._hashType = n.hash), (this._hash = a(n.hash)), (this._tag = n.id), (this._signType = n.sign);
 }
 function f(e) {
-    return new c(e);
+    s.Writable.call(this);
+    var n = c[e];
+    if (!n) throw Error('Unknown message digest');
+    (this._hash = a(n.hash)), (this._tag = n.id), (this._signType = n.sign);
 }
 function _(e) {
     return new d(e);
 }
-Object.keys(u).forEach(function (e) {
-    (u[e].id = r.from(u[e].id, 'hex')), (u[e.toLowerCase()] = u[e]);
+function h(e) {
+    return new f(e);
+}
+Object.keys(c).forEach(function (e) {
+    (c[e].id = i.from(c[e].id, 'hex')), (c[e.toLowerCase()] = c[e]);
 }),
-    s(c, a.Writable),
-    (c.prototype._write = function (e, t, n) {
-        this._hash.update(e), n();
+    o(d, s.Writable),
+    (d.prototype._write = function (e, n, r) {
+        this._hash.update(e), r();
     }),
-    (c.prototype.update = function (e, t) {
-        return 'string' == typeof e && (e = r.from(e, t)), this._hash.update(e), this;
+    (d.prototype.update = function (e, n) {
+        return 'string' == typeof e && (e = i.from(e, n)), this._hash.update(e), this;
     }),
-    (c.prototype.sign = function (e, t) {
+    (d.prototype.sign = function (e, n) {
         this.end();
-        var n = o(this._hash.digest(), e, this._hashType, this._signType, this._tag);
-        return t ? n.toString(t) : n;
+        var r = l(this._hash.digest(), e, this._hashType, this._signType, this._tag);
+        return n ? r.toString(n) : r;
     }),
-    s(d, a.Writable),
-    (d.prototype._write = function (e, t, n) {
-        this._hash.update(e), n();
+    o(f, s.Writable),
+    (f.prototype._write = function (e, n, r) {
+        this._hash.update(e), r();
     }),
-    (d.prototype.update = function (e, t) {
-        return 'string' == typeof e && (e = r.from(e, t)), this._hash.update(e), this;
+    (f.prototype.update = function (e, n) {
+        return 'string' == typeof e && (e = i.from(e, n)), this._hash.update(e), this;
     }),
-    (d.prototype.verify = function (e, t, n) {
-        return 'string' == typeof t && (t = r.from(t, n)), this.end(), l(t, this._hash.digest(), e, this._signType, this._tag);
+    (f.prototype.verify = function (e, n, r) {
+        return 'string' == typeof n && (n = i.from(n, r)), this.end(), u(n, this._hash.digest(), e, this._signType, this._tag);
     }),
     (e.exports = {
-        Sign: f,
-        Verify: _,
-        createSign: f,
-        createVerify: _
+        Sign: _,
+        Verify: h,
+        createSign: _,
+        createVerify: h
     });

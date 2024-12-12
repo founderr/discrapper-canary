@@ -1,20 +1,20 @@
-function r(e) {
-    return function (t, n) {
-        var r;
-        if ('formatting' === (null != n && n.context ? String(n.context) : 'standalone') && e.formattingValues) {
-            var i = e.defaultFormattingWidth || e.defaultWidth,
-                a = null != n && n.width ? String(n.width) : i;
-            r = e.formattingValues[a] || e.formattingValues[i];
+function i(e) {
+    return function (n, r) {
+        var i;
+        if ('formatting' === (null != r && r.context ? String(r.context) : 'standalone') && e.formattingValues) {
+            var a = e.defaultFormattingWidth || e.defaultWidth,
+                s = null != r && r.width ? String(r.width) : a;
+            i = e.formattingValues[s] || e.formattingValues[a];
         } else {
-            var s = e.defaultWidth,
-                o = null != n && n.width ? String(n.width) : e.defaultWidth;
-            r = e.values[o] || e.values[s];
+            var o = e.defaultWidth,
+                l = null != r && r.width ? String(r.width) : e.defaultWidth;
+            i = e.values[l] || e.values[o];
         }
-        return r[e.argumentCallback ? e.argumentCallback(t) : t];
+        return i[e.argumentCallback ? e.argumentCallback(n) : n];
     };
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

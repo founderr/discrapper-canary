@@ -1,5 +1,5 @@
-var r = n(690244)('%TypeError%');
-e.exports = function (e, t) {
-    if (null == e) throw new r(t || 'Cannot call method on ' + e);
+var i = r(690244)('%TypeError%');
+e.exports = function (e, n) {
+    if (null == e) throw new i(n || 'Cannot call method on ' + e);
     return e;
 };

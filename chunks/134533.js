@@ -1,13 +1,13 @@
-var r = n(583584),
-    i = function () {
-        return !!r;
+var i = r(583584),
+    a = function () {
+        return !!i;
     };
-(i.hasArrayLengthDefineBug = function () {
-    if (!r) return null;
+(a.hasArrayLengthDefineBug = function () {
+    if (!i) return null;
     try {
-        return 1 !== r([], 'length', { value: 1 }).length;
+        return 1 !== i([], 'length', { value: 1 }).length;
     } catch (e) {
         return !0;
     }
 }),
-    (e.exports = i);
+    (e.exports = a);

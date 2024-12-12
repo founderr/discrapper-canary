@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(592125),
-    i = n(596401);
-function a(e) {
-    return null != e && e === r.Z.getDMFromUserId(i.sP);
+var i = r(592125),
+    a = r(596401);
+function s(e) {
+    return null != e && e === i.Z.getDMFromUserId(a.sP);
 }

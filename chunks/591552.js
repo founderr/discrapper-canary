@@ -1,7 +1,7 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = { 'Clear search': `Vymaza\u{165} vyh\u{13E}ad\xe1vanie` };
+var i = {};
+i = { 'Clear search': `Vymaza\u{165} vyh\u{13E}ad\xe1vanie` };

@@ -1,42 +1,42 @@
-n.d(t, {
+r.d(n, {
     z: function () {
-        return u;
+        return d;
     }
-}),
-    n(411104);
-var r = n(200651),
-    i = n(192379),
-    a = n(803997),
-    s = n.n(a),
-    o = n(489948),
-    l = n(780900);
-function u(e, t) {
-    let n = (0, l.G6)(e);
-    return i.forwardRef(function (a, u) {
-        let { children: c, className: d, dir: f = 'ltr', orientation: _ = 'vertical', paddingFix: p = !0, fade: h = !1, onScroll: m, style: g, ...E } = a,
-            v = i.useRef(null),
-            I = (0, l.tT)({
+});
+var i = r(411104);
+var a = r(200651),
+    s = r(192379),
+    o = r(803997),
+    l = r.n(o),
+    u = r(489948),
+    c = r(780900);
+function d(e, n) {
+    let r = (0, c.G6)(e);
+    return s.forwardRef(function (i, o) {
+        let { children: d, className: f, dir: _ = 'ltr', orientation: h = 'vertical', paddingFix: p = !0, fade: m = !1, onScroll: g, style: E, ...v } = i,
+            I = s.useRef(null),
+            T = (0, c.tT)({
                 paddingFix: p,
-                orientation: _,
-                dir: f,
-                className: d,
-                scrollerRef: v,
-                specs: n
+                orientation: h,
+                dir: _,
+                className: f,
+                scrollerRef: I,
+                specs: r
             });
-        return (0, r.jsx)('div', {
+        return (0, a.jsx)('div', {
             ref: (e) => {
-                'function' == typeof u ? u(e) : null != u && (u.current = e), (v.current = e);
+                'function' == typeof o ? o(e) : null != o && (o.current = e), (I.current = e);
             },
-            className: s()(d, {
+            className: l()(f, {
                 [e]: !0,
-                [t]: h
+                [n]: m
             }),
-            style: (0, l.uT)(g, _),
-            dir: f,
-            ...E,
-            children: (0, r.jsxs)(o.Jc, {
-                containerRef: v,
-                children: [c, I]
+            style: (0, c.uT)(E, h),
+            dir: _,
+            ...v,
+            children: (0, a.jsxs)(u.Jc, {
+                containerRef: I,
+                children: [d, T]
             })
         });
     });

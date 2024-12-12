@@ -1,54 +1,54 @@
-n.d(t, {
+r.d(n, {
     BT: function () {
-        return c;
+        return d;
     },
     IS: function () {
-        return s;
-    },
-    Rd: function () {
-        return i;
-    },
-    SG: function () {
-        return a;
-    },
-    fu: function () {
-        return r;
-    },
-    j1: function () {
         return o;
     },
-    jn: function () {
+    Rd: function () {
+        return a;
+    },
+    SG: function () {
+        return s;
+    },
+    fu: function () {
+        return i;
+    },
+    j1: function () {
         return l;
     },
-    wZ: function () {
+    jn: function () {
         return u;
+    },
+    wZ: function () {
+        return c;
     }
 });
-var r = 'dnd-core/ADD_SOURCE',
-    i = 'dnd-core/ADD_TARGET',
-    a = 'dnd-core/REMOVE_SOURCE',
-    s = 'dnd-core/REMOVE_TARGET';
-function o(e) {
-    return {
-        type: r,
-        payload: { sourceId: e }
-    };
-}
+var i = 'dnd-core/ADD_SOURCE',
+    a = 'dnd-core/ADD_TARGET',
+    s = 'dnd-core/REMOVE_SOURCE',
+    o = 'dnd-core/REMOVE_TARGET';
 function l(e) {
     return {
         type: i,
-        payload: { targetId: e }
+        payload: { sourceId: e }
     };
 }
 function u(e) {
     return {
         type: a,
-        payload: { sourceId: e }
+        payload: { targetId: e }
     };
 }
 function c(e) {
     return {
         type: s,
+        payload: { sourceId: e }
+    };
+}
+function d(e) {
+    return {
+        type: o,
         payload: { targetId: e }
     };
 }

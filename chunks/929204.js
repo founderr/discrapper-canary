@@ -1,20 +1,20 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return o;
+        return l;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(626135),
-    s = n(981631);
-function o(e) {
-    a.default.track(s.rMx.OPEN_MODAL, {
-        type: s.jXE.STICKER_PREMIUM_TIER_2_UPSELL_MODAL,
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(626135),
+    o = r(981631);
+function l(e) {
+    s.default.track(o.rMx.OPEN_MODAL, {
+        type: o.jXE.STICKER_PREMIUM_TIER_2_UPSELL_MODAL,
         location: e
     }),
-        (0, i.openModalLazy)(async () => {
-            let { default: e } = await n.e('75613').then(n.bind(n, 72691));
-            return (t) => (0, r.jsx)(e, { ...t });
+        (0, a.openModalLazy)(async () => {
+            let { default: e } = await r.e('75613').then(r.bind(r, 72691));
+            return (n) => (0, i.jsx)(e, { ...n });
         });
 }

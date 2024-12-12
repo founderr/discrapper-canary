@@ -1,25 +1,25 @@
-var r = n(200651);
-n(192379);
-var i = n(433517),
-    a = n(481060),
-    s = n(704587),
-    o = n(920133),
-    l = n(338096);
-t.Z = {
+var i = r(200651);
+r(192379);
+var a = r(433517),
+    s = r(481060),
+    o = r(704587),
+    l = r(920133),
+    u = r(338096);
+n.Z = {
     openDmSettingsUpsellModal(e) {
-        if (!(0, s.G)({ location: 'DmSettingsUpsellManager' })) return;
-        let t = i.K.get(l.G),
-            u = Date.now();
-        null == t || u - t > l.k
-            ? (i.K.set(l.G, u),
-              (0, a.openModalLazy)(async () => {
-                  let { default: t } = await n.e('35489').then(n.bind(n, 582712));
-                  return (n) =>
-                      (0, r.jsx)(t, {
-                          ...n,
+        if (!(0, o.G)({ location: 'DmSettingsUpsellManager' })) return;
+        let n = a.K.get(u.G),
+            c = Date.now();
+        null == n || c - n > u.k
+            ? (a.K.set(u.G, c),
+              (0, s.openModalLazy)(async () => {
+                  let { default: n } = await r.e('35489').then(r.bind(r, 582712));
+                  return (r) =>
+                      (0, i.jsx)(n, {
+                          ...r,
                           guildId: e
                       });
               }))
-            : (0, o.L)(o.Q.SUPPRESSED_BY_COOLDOWN, e);
+            : (0, l.L)(l.Q.SUPPRESSED_BY_COOLDOWN, e);
     }
 };

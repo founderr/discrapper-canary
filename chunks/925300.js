@@ -1,20 +1,20 @@
-function r(e) {
-    return function (t) {
-        var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            r = t.match(e.matchPattern);
-        if (!r) return null;
-        var i = r[0],
-            a = t.match(e.parsePattern);
-        if (!a) return null;
-        var s = e.valueCallback ? e.valueCallback(a[0]) : a[0];
+function i(e) {
+    return function (n) {
+        var r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            i = n.match(e.matchPattern);
+        if (!i) return null;
+        var a = i[0],
+            s = n.match(e.parsePattern);
+        if (!s) return null;
+        var o = e.valueCallback ? e.valueCallback(s[0]) : s[0];
         return {
-            value: (s = n.valueCallback ? n.valueCallback(s) : s),
-            rest: t.slice(i.length)
+            value: (o = r.valueCallback ? r.valueCallback(o) : o),
+            rest: n.slice(a.length)
         };
     };
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

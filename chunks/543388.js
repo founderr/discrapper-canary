@@ -1,81 +1,81 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return f;
+        return _;
     },
     j: function () {
-        return d;
+        return f;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(913527),
-    a = n.n(i),
-    s = n(481060),
-    o = n(925329),
-    l = n(388032),
-    u = n(319900);
-function c(e) {
-    let { application: t, timestamp: n } = e;
-    return (0, r.jsxs)(r.Fragment, {
+var i = r(200651);
+r(192379);
+var a = r(913527),
+    s = r.n(a),
+    o = r(481060),
+    l = r(925329),
+    u = r(388032),
+    c = r(319900);
+function d(e) {
+    let { application: n, timestamp: r } = e;
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsx)(o.Z, {
-                size: o.Z.Sizes.LARGE,
-                game: t
+            (0, i.jsx)(l.Z, {
+                size: l.Z.Sizes.LARGE,
+                game: n
             }),
-            (0, r.jsxs)('div', {
-                className: u.textContainer,
+            (0, i.jsxs)('div', {
+                className: c.textContainer,
                 children: [
-                    (0, r.jsx)(s.Text, {
-                        className: u.timestamp,
+                    (0, i.jsx)(o.Text, {
+                        className: c.timestamp,
                         variant: 'text-xs/medium',
                         color: 'text-muted',
-                        children: a()(n).format('LLLL')
+                        children: s()(r).format('LLLL')
                     }),
-                    (0, r.jsx)(s.Text, {
+                    (0, i.jsx)(o.Text, {
                         variant: 'text-md/normal',
                         color: 'interactive-active',
-                        children: l.intl.format(l.t.J3s8JC, { applicationName: t.name })
+                        children: u.intl.format(u.t.J3s8JC, { applicationName: n.name })
                     })
                 ]
             })
         ]
     });
 }
-function d(e) {
-    let { application: t, timestamp: n, children: i } = e;
-    return (0, r.jsx)(s.Tooltip, {
+function f(e) {
+    let { application: n, timestamp: r, children: a } = e;
+    return (0, i.jsx)(o.Tooltip, {
         hideOnClick: !0,
         position: 'top',
-        'aria-label': l.intl.string(l.t['5nMcv7']),
-        tooltipClassName: u.gameMessageTooltip,
-        tooltipContentClassName: u.gameMessageTooltipContent,
-        text: (0, r.jsx)(c, {
-            application: t,
-            timestamp: n
+        'aria-label': u.intl.string(u.t['5nMcv7']),
+        tooltipClassName: c.gameMessageTooltip,
+        tooltipContentClassName: c.gameMessageTooltipContent,
+        text: (0, i.jsx)(d, {
+            application: n,
+            timestamp: r
         }),
         children: (e) =>
-            (0, r.jsx)(s.Clickable, {
+            (0, i.jsx)(o.Clickable, {
                 tag: 'span',
                 ...e,
-                children: i
+                children: a
             })
     });
 }
-function f(e) {
-    let { application: t, timestamp: n, compact: i, children: a } = e;
-    return (0, r.jsxs)(d, {
-        application: t,
-        timestamp: n,
+function _(e) {
+    let { application: n, timestamp: r, compact: a, children: s } = e;
+    return (0, i.jsxs)(f, {
+        application: n,
+        timestamp: r,
         children: [
-            i
+            a
                 ? null
-                : (0, r.jsx)(s.GameControllerIcon, {
-                      className: u.gameIcon,
+                : (0, i.jsx)(o.GameControllerIcon, {
+                      className: c.gameIcon,
                       size: 'custom',
                       width: 14,
                       height: 14
                   }),
-            a
+            s
         ]
     });
 }

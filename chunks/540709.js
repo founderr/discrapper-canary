@@ -1,13 +1,13 @@
-var r = n(200651);
-n(192379);
-var i = n(952265);
-t.Z = {
+var i = r(200651);
+r(192379);
+var a = r(952265);
+n.Z = {
     show(e) {
-        (0, i.ZD)(async () => {
-            let { default: t } = await n.e('27751').then(n.bind(n, 783576));
-            return (n) =>
-                (0, r.jsx)(t, {
-                    ...n,
+        (0, a.ZD)(async () => {
+            let { default: n } = await r.e('27751').then(r.bind(r, 783576));
+            return (r) =>
+                (0, i.jsx)(n, {
+                    ...r,
                     href: e
                 });
         });

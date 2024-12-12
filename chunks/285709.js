@@ -1,13 +1,13 @@
-e = n.nmd(e);
-var r = n(788255),
-    i = t && !t.nodeType && t,
-    a = i && e && !e.nodeType && e,
-    s = a && a.exports === i && r.process,
-    o = (function () {
+e = r.nmd(e);
+var i = r(788255),
+    a = n && !n.nodeType && n,
+    s = a && e && !e.nodeType && e,
+    o = s && s.exports === a && i.process,
+    l = (function () {
         try {
-            var e = a && a.require && a.require('util').types;
+            var e = s && s.require && s.require('util').types;
             if (e) return e;
-            return s && s.binding && s.binding('util');
+            return o && o.binding && o.binding('util');
         } catch (e) {}
     })();
-e.exports = o;
+e.exports = l;

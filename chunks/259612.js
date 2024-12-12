@@ -1,30 +1,30 @@
-n.d(t, {
+r.d(n, {
     R: function () {
-        return a;
+        return o;
     },
     W: function () {
-        return i;
+        return s;
     }
-}),
-    n(411104);
-var r = n(356659);
-function i(e) {
-    let t = document.createElement('canvas');
-    (t.width = e.width), (t.height = e.height);
-    let n = t.getContext('2d');
-    if (null == n) throw Error('Could not create canvas context');
-    return n.putImageData(new ImageData(e.data, e.width, e.height), 0, 0), t.toDataURL('image/jpeg', 0.9);
+});
+var i = r(411104);
+var a = r(356659);
+function s(e) {
+    let n = document.createElement('canvas');
+    (n.width = e.width), (n.height = e.height);
+    let r = n.getContext('2d');
+    if (null == r) throw Error('Could not create canvas context');
+    return r.putImageData(new ImageData(e.data, e.width, e.height), 0, 0), n.toDataURL('image/jpeg', 0.9);
 }
-async function a(e, t) {
-    let n = document.createElement('video');
-    (n.muted = !0), (n.src = e), (n.currentTime = t), await n.play(), n.pause();
-    let i = r.f_ / n.videoWidth,
-        a = Math.min(i, r.wD / n.videoHeight),
-        s = n.videoWidth * a,
-        o = n.videoHeight * a,
-        l = document.createElement('canvas');
-    (l.width = s), (l.height = o);
-    let u = l.getContext('2d');
-    if (null == u) throw Error('Could not create canvas context');
-    return u.drawImage(n, 0, 0, n.videoWidth, n.videoHeight, 0, 0, s, o), l.toDataURL('image/jpeg', 0.9);
+async function o(e, n) {
+    let r = document.createElement('video');
+    (r.muted = !0), (r.src = e), (r.currentTime = n), await r.play(), r.pause();
+    let i = a.f_ / r.videoWidth,
+        s = Math.min(i, a.wD / r.videoHeight),
+        o = r.videoWidth * s,
+        l = r.videoHeight * s,
+        u = document.createElement('canvas');
+    (u.width = o), (u.height = l);
+    let c = u.getContext('2d');
+    if (null == c) throw Error('Could not create canvas context');
+    return c.drawImage(r, 0, 0, r.videoWidth, r.videoHeight, 0, 0, o, l), u.toDataURL('image/jpeg', 0.9);
 }

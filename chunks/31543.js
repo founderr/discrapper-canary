@@ -1,71 +1,71 @@
-var r = n(200651),
-    i = n(192379),
-    a = n(232713),
-    s = n(260866),
-    o = n(481060),
-    l = n(806966),
-    u = n(28546),
-    c = n(453070),
-    d = n(611480),
-    f = n(388032),
-    _ = n(844094);
-let p = i.forwardRef(function (e, t) {
-    let { onKeyDown: n, stickersListRef: p, channel: h } = e,
-        m = (0, c.fQ)(h),
-        g = i.useRef(null),
-        { searchQuery: E, isSearchSuggestion: v } = (0, u.Iu)(
+var i = r(200651),
+    a = r(192379),
+    s = r(232713),
+    o = r(260866),
+    l = r(481060),
+    u = r(806966),
+    c = r(28546),
+    d = r(453070),
+    f = r(611480),
+    _ = r(388032),
+    h = r(844094);
+let p = a.forwardRef(function (e, n) {
+    let { onKeyDown: r, stickersListRef: p, channel: m } = e,
+        g = (0, d.fQ)(m),
+        E = a.useRef(null),
+        { searchQuery: v, isSearchSuggestion: I } = (0, c.Iu)(
             (e) => ({
                 searchQuery: e.searchQuery,
                 isSearchSuggestion: e.isSearchSuggestion
             }),
-            a.X
+            s.X
         ),
-        I = l.ZN.useStore((e) => e.searchPlaceholder),
-        T = l.ZN.useStore((e) => e.inspectedExpressionPosition, a.X),
-        b = i.useCallback(
+        T = u.ZN.useStore((e) => e.searchPlaceholder),
+        b = u.ZN.useStore((e) => e.inspectedExpressionPosition, s.X),
+        y = a.useCallback(
             (e) => {
-                var t;
-                l.ZN.setActiveCategoryIndex('' === e ? 0 : d.c), l.ZN.setInspectedExpressionPosition(0, 0), l.ZN.setSearchPlaceholder(null), (0, u.ql)(e), null === (t = p.current) || void 0 === t || t.scrollTo(0);
+                var n;
+                u.ZN.setActiveCategoryIndex('' === e ? 0 : f.c), u.ZN.setInspectedExpressionPosition(0, 0), u.ZN.setSearchPlaceholder(null), (0, c.ql)(e), null === (n = p.current) || void 0 === n || n.scrollTo(0);
             },
             [p]
         ),
-        S = i.useCallback(() => {
-            (0, u.ql)('');
+        S = a.useCallback(() => {
+            (0, c.ql)('');
         }, []);
     return (
-        i.useImperativeHandle(t, () => ({
+        a.useImperativeHandle(n, () => ({
             focus: () => {
                 var e;
-                return null === (e = g.current) || void 0 === e ? void 0 : e.focus();
+                return null === (e = E.current) || void 0 === e ? void 0 : e.focus();
             }
         })),
-        i.useLayoutEffect(() => {
-            if (v) {
+        a.useLayoutEffect(() => {
+            if (I) {
                 var e;
-                null === (e = g.current) || void 0 === e || e.focus();
+                null === (e = E.current) || void 0 === e || e.focus();
             }
-        }, [v]),
-        (0, r.jsx)('div', {
-            className: _.wrapper,
-            children: (0, r.jsx)(o.SearchBar, {
-                autoFocus: m,
-                disabled: !m,
-                query: E,
-                ref: g,
-                size: o.SearchBar.Sizes.MEDIUM,
-                placeholder: null != I ? I : m ? f.intl.string(f.t.dt5h1N) : f.intl.string(f.t['Pck/4e']),
+        }, [I]),
+        (0, i.jsx)('div', {
+            className: h.wrapper,
+            children: (0, i.jsx)(l.SearchBar, {
+                autoFocus: g,
+                disabled: !g,
+                query: v,
+                ref: E,
+                size: l.SearchBar.Sizes.MEDIUM,
+                placeholder: null != T ? T : g ? _.intl.string(_.t.dt5h1N) : _.intl.string(_.t['Pck/4e']),
                 onClear: S,
-                onKeyDown: n,
-                onChange: b,
-                className: _.__invalid_searchBar,
+                onKeyDown: r,
+                onChange: y,
+                className: h.__invalid_searchBar,
                 inputProps: {
                     'aria-haspopup': 'grid',
-                    'aria-controls': d.Vr,
+                    'aria-controls': f.Vr,
                     'aria-expanded': !0,
-                    'aria-activedescendant': (0, s.NE)(d.Vr, T.columnIndex, T.rowIndex)
+                    'aria-activedescendant': (0, o.NE)(f.Vr, b.columnIndex, b.rowIndex)
                 }
             })
         })
     );
 });
-t.Z = p;
+n.Z = p;

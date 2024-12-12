@@ -1,81 +1,81 @@
-n(47120);
-var r = n(704215),
-    i = n(570140),
-    a = n(147913),
-    s = n(605236),
-    o = n(430824),
-    l = n(496675),
-    u = n(619574),
-    c = n(876612),
-    d = n(828312),
-    f = n(994840),
-    _ = n(981631);
-function p(e, t, n) {
+var i = r(47120);
+var a = r(704215),
+    s = r(570140),
+    o = r(147913),
+    l = r(605236),
+    u = r(430824),
+    c = r(496675),
+    d = r(619574),
+    f = r(876612),
+    _ = r(828312),
+    h = r(994840),
+    p = r(981631);
+function m(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-class h extends a.Z {
+class g extends o.Z {
     constructor(...e) {
         super(...e),
-            p(this, 'actions', {
+            m(this, 'actions', {
                 POST_CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
                 CHANNEL_SELECT: (e) => this.handleChannelSelect(e)
             }),
-            p(this, 'handleConnectionOpen', (e) => {
-                let t = (0, f.jZ)('SignUpManager'),
-                    n = (0, d.t)('SignUpManager', !1),
-                    a = (0, s.un)(r.z.GAME_ONE_USER_SIGNUPS),
-                    o = (0, c.v)('SignUpManager'),
-                    l = (0, u.e)('SignUpManager', !1),
-                    _ = (0, s.un)(r.z.GENSHIN_USER_SIGNUPS);
-                if (t && !n && !a) {
-                    i.Z.dispatch({
+            m(this, 'handleConnectionOpen', (e) => {
+                let n = (0, h.jZ)('SignUpManager'),
+                    r = (0, _.t)('SignUpManager', !1),
+                    i = (0, l.un)(a.z.GAME_ONE_USER_SIGNUPS),
+                    o = (0, f.v)('SignUpManager'),
+                    u = (0, d.e)('SignUpManager', !1),
+                    c = (0, l.un)(a.z.GENSHIN_USER_SIGNUPS);
+                if (n && !r && !i) {
+                    s.Z.dispatch({
                         type: 'ENABLE_USER_SIGN_UP',
                         key: 'valorant-user'
                     });
                     return;
                 }
-                if (o && !l && !_) {
-                    i.Z.dispatch({
+                if (o && !u && !c) {
+                    s.Z.dispatch({
                         type: 'ENABLE_USER_SIGN_UP',
                         key: 'genshin-user'
                     });
                     return;
                 }
             }),
-            p(this, 'handleChannelSelect', (e) => {
-                let { guildId: t } = e;
-                if (null == t) return;
-                let n = (0, s.un)(r.z.GAME_ONE_USER_SIGNUPS),
-                    a = (0, s.un)(r.z.GENSHIN_USER_SIGNUPS);
-                if (n && a) return;
-                let c = (0, d.t)('SignUpManager'),
-                    f = (0, u.e)('SignUpManager');
-                if (!c && !f) return;
-                let p = o.Z.getGuild(t);
-                if (null != p) {
-                    if (p.hasFeature(_.oNc.VALORANT_L30) && l.Z.can(_.Plq.MANAGE_GUILD, p) && !n) {
-                        i.Z.dispatch({
+            m(this, 'handleChannelSelect', (e) => {
+                let { guildId: n } = e;
+                if (null == n) return;
+                let r = (0, l.un)(a.z.GAME_ONE_USER_SIGNUPS),
+                    i = (0, l.un)(a.z.GENSHIN_USER_SIGNUPS);
+                if (r && i) return;
+                let o = (0, _.t)('SignUpManager'),
+                    f = (0, d.e)('SignUpManager');
+                if (!o && !f) return;
+                let h = u.Z.getGuild(n);
+                if (null != h) {
+                    if (h.hasFeature(p.oNc.VALORANT_L30) && c.Z.can(p.Plq.MANAGE_GUILD, h) && !r) {
+                        s.Z.dispatch({
                             type: 'ENABLE_GUILD_SIGN_UP',
                             key: 'valorant-admin',
-                            guildId: t
+                            guildId: n
                         });
                         return;
                     }
-                    if (p.hasFeature(_.oNc.GENSHIN_L30) && l.Z.can(_.Plq.MANAGE_GUILD, p) && !a) {
-                        i.Z.dispatch({
+                    if (h.hasFeature(p.oNc.GENSHIN_L30) && c.Z.can(p.Plq.MANAGE_GUILD, h) && !i) {
+                        s.Z.dispatch({
                             type: 'ENABLE_GUILD_SIGN_UP',
                             key: 'genshin-admin',
-                            guildId: t
+                            guildId: n
                         });
                         return;
                     }
@@ -83,4 +83,4 @@ class h extends a.Z {
             });
     }
 }
-t.Z = new h();
+n.Z = new g();

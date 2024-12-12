@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(192379);
-function i() {
-    let [, e] = (0, r.useState)({});
-    return (0, r.useCallback)(() => e({}), []);
+var i = r(192379);
+function a() {
+    let [, e] = (0, i.useState)({});
+    return (0, i.useCallback)(() => e({}), []);
 }

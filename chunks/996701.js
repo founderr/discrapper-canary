@@ -1,83 +1,83 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(782568),
-    s = n(388032),
-    o = n(746711);
-let l = (e) => {
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(782568),
+    o = r(388032),
+    l = r(746711);
+let u = (e) => {
     let {
-        data: { url: t, link_text: n, link_description: s, is_localized: l }
+        data: { url: n, link_text: r, link_description: o, is_localized: u }
     } = e;
-    return l
-        ? (0, r.jsxs)(i.Clickable, {
-              role: 'link',
-              className: o.linkButton,
-              onClick: () => {
-                  (0, a.Z)(t);
-              },
-              children: [
-                  (0, r.jsxs)('div', {
-                      className: o.linkTextContainer,
-                      children: [
-                          (0, r.jsx)(i.Text, {
-                              className: o.__invalid_linkText,
-                              variant: 'text-md/semibold',
-                              children: n
-                          }),
-                          null != s &&
-                              '' !== s &&
-                              (0, r.jsx)(i.Text, {
-                                  variant: 'text-md/normal',
-                                  color: 'text-muted',
-                                  children: s
-                              })
-                      ]
-                  }),
-                  (0, r.jsx)(i.LinkExternalSmallIcon, {
-                      size: 'sm',
-                      color: 'currentColor',
-                      className: o.linkIcon
-                  })
-              ]
-          })
-        : null;
+    if (!u) return null;
+    let c = () => {
+        (0, s.Z)(n);
+    };
+    return (0, i.jsxs)(a.Clickable, {
+        role: 'link',
+        className: l.linkButton,
+        onClick: c,
+        children: [
+            (0, i.jsxs)('div', {
+                className: l.linkTextContainer,
+                children: [
+                    (0, i.jsx)(a.Text, {
+                        className: l.__invalid_linkText,
+                        variant: 'text-md/semibold',
+                        children: r
+                    }),
+                    null != o &&
+                        '' !== o &&
+                        (0, i.jsx)(a.Text, {
+                            variant: 'text-md/normal',
+                            color: 'text-muted',
+                            children: o
+                        })
+                ]
+            }),
+            (0, i.jsx)(a.LinkExternalSmallIcon, {
+                size: 'sm',
+                color: 'currentColor',
+                className: l.linkIcon
+            })
+        ]
+    });
 };
-function u(e) {
-    let { elements: t } = e;
+function c(e) {
+    let { elements: n } = e;
     if (
-        null == t ||
-        0 === t.length ||
+        null == n ||
+        0 === n.length ||
         null ==
-            t.find((e) => {
-                let { data: t } = e;
-                return t.is_localized;
+            n.find((e) => {
+                let { data: n } = e;
+                return n.is_localized;
             })
     )
         return null;
-    let n = t.map((e, t) => {
-            let { data: n } = e;
-            return (0, r.jsx)(l, { data: n }, 'external-link+'.concat(t));
+    let r = n.map((e, n) => {
+            let { data: r } = e;
+            return (0, i.jsx)(u, { data: r }, 'external-link+'.concat(n));
         }),
-        a = t.some((e) => {
-            let { data: t } = e;
-            return t.is_header_hidden;
+        s = n.some((e) => {
+            let { data: n } = e;
+            return n.is_header_hidden;
         });
-    return (0, r.jsxs)('div', {
-        className: o.linksContainer,
+    return (0, i.jsxs)('div', {
+        className: l.linksContainer,
         children: [
-            !a &&
-                (0, r.jsx)(i.Heading, {
+            !s &&
+                (0, i.jsx)(a.Heading, {
                     variant: 'heading-sm/semibold',
                     color: 'header-secondary',
-                    className: o.header,
-                    children: s.intl.string(s.t.hvVgAQ)
+                    className: l.header,
+                    children: o.intl.string(o.t.hvVgAQ)
                 }),
-            n
+            r
         ]
     });
 }

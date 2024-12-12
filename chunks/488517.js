@@ -1,6 +1,6 @@
-Object.defineProperty(t, '__esModule', { value: !0 }),
-    (t.DEFAULT_FORMAT_CONFIG = void 0),
-    (t.DEFAULT_FORMAT_CONFIG = {
+Object.defineProperty(n, '__esModule', { value: !0 }),
+    (n.DEFAULT_FORMAT_CONFIG = void 0),
+    (n.DEFAULT_FORMAT_CONFIG = {
         number: {
             integer: { maximumFractionDigits: 0 },
             currency: { style: 'currency' },

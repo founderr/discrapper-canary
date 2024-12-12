@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     calendar: 'Kalendarz',
     day: `dzie\u{144}`,
     dayPeriod: `rano / po po\u{142}udniu / wieczorem`,

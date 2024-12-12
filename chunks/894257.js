@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     I: function () {
-        return r;
+        return i;
     },
     _: function () {
-        return i;
+        return a;
     }
 });
-let r = '643945264868098049',
-    i = 'URGENT_MESSAGE_MODAL';
+let i = '643945264868098049',
+    a = 'URGENT_MESSAGE_MODAL';

@@ -1,23 +1,23 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var r = n(192379),
-    i = n(442837),
-    a = n(626135),
-    s = n(327943),
-    o = n(981631),
-    l = n(474936);
-function u() {
-    let { previewPaneVariant: e, originalIcon: t } = (0, i.cj)([s.Z], () => ({
-        previewPaneVariant: s.Z.isUpsellPreview ? l.h1.FREE : l.h1.PREMIUM_STANDARD,
-        originalIcon: s.Z.getCurrentDesktopIcon()
+var i = r(192379),
+    a = r(442837),
+    s = r(626135),
+    o = r(327943),
+    l = r(981631),
+    u = r(474936);
+function c() {
+    let { previewPaneVariant: e, originalIcon: n } = (0, a.cj)([o.Z], () => ({
+        previewPaneVariant: o.Z.isUpsellPreview ? u.h1.FREE : u.h1.PREMIUM_STANDARD,
+        originalIcon: o.Z.getCurrentDesktopIcon()
     }));
-    return r.useCallback(() => {
-        a.default.track(o.rMx.APP_ICON_PREVIEW_VIEWED, {
+    return i.useCallback(() => {
+        s.default.track(l.rMx.APP_ICON_PREVIEW_VIEWED, {
             preview_pane_variant: e,
-            original_icon: t
+            original_icon: n
         });
     }, [e]);
 }

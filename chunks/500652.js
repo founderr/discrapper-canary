@@ -1,28 +1,28 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     buttonLabel: `Prika\u{17E}i predloge`,
-    countAnnouncement: (e, t) =>
-        `Na voljo je ${t.plural(e.optionCount, {
-            one: () => `${t.number(e.optionCount)} opcija`,
-            other: () => `${t.number(e.optionCount)} opcije`
+    countAnnouncement: (e, n) =>
+        `Na voljo je ${n.plural(e.optionCount, {
+            one: () => `${n.number(e.optionCount)} opcija`,
+            other: () => `${n.number(e.optionCount)} opcije`
         })}.`,
-    focusAnnouncement: (e, t) =>
-        `${t.select(
+    focusAnnouncement: (e, n) =>
+        `${n.select(
             {
                 true: () =>
-                    `Vnesena skupina ${e.groupTitle}, z ${t.plural(e.groupCount, {
-                        one: () => `${t.number(e.groupCount)} opcija`,
-                        other: () => `${t.number(e.groupCount)} opcije`
+                    `Vnesena skupina ${e.groupTitle}, z ${n.plural(e.groupCount, {
+                        one: () => `${n.number(e.groupCount)} opcija`,
+                        other: () => `${n.number(e.groupCount)} opcije`
                     })}. `,
                 other: ''
             },
             e.isGroupChange
-        )}${e.optionText}${t.select(
+        )}${e.optionText}${n.select(
             {
                 true: ', izbrano',
                 other: ''

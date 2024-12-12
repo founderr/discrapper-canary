@@ -1,24 +1,24 @@
-n.d(t, {
+r.d(n, {
     ZP: function () {
-        return s;
+        return o;
     }
 });
-let r = Object.freeze({
+let i = Object.freeze({
         overflowY: 'scroll',
         overflowX: 'hidden'
     }),
-    i = Object.freeze({
+    a = Object.freeze({
         overflowX: 'scroll',
         overflowY: 'hidden'
     }),
-    a = Object.freeze({ overflow: 'auto' });
-function s(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'vertical',
-        n = 'vertical' === t ? r : 'horizontal' === t ? i : a;
+    s = Object.freeze({ overflow: 'auto' });
+function o(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'vertical',
+        r = 'vertical' === n ? i : 'horizontal' === n ? a : s;
     return null != e
         ? {
-              ...n,
+              ...r,
               ...e
           }
-        : n;
+        : r;
 }

@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     g: function () {
-        return r;
+        return i;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
     kind: 'user',
     id: '2024-11_connection_flow_refactor_v2',
     label: 'Connection Flow Refactor',

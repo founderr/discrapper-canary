@@ -1,18 +1,18 @@
-n.d(t, {
+r.d(n, {
     Y: function () {
-        return s;
+        return o;
     },
     o: function () {
-        return o;
+        return l;
     }
 });
-var r = n(18323),
-    i = n(358085),
-    a = n(616922);
-function s(e) {
-    let t = null;
-    !(0, i.isDesktop)() && (t = window.open('', '_blank')), null != t ? (t.location.href = e) : window.open(e);
+var i = r(18323),
+    a = r(358085),
+    s = r(616922);
+function o(e) {
+    let n = null;
+    !(0, a.isDesktop)() && (n = window.open('', '_blank')), null != n ? (n.location.href = e) : window.open(e);
 }
-function o(e, t) {
-    s(r.Z.isProtocolRegistered() ? a.C7.PLAYER_OPEN(e, t) : a.C7.WEB_OPEN(e, t));
+function l(e, n) {
+    o(i.Z.isProtocolRegistered() ? s.C7.PLAYER_OPEN(e, n) : s.C7.WEB_OPEN(e, n));
 }

@@ -1,9 +1,9 @@
-var t = {
+var n = {
     current: function (e) {
         return e;
     },
     inject: function (e) {
-        t.current = e;
+        n.current = e;
     }
 };
-e.exports = t;
+e.exports = n;

@@ -1,68 +1,68 @@
-n.d(t, {
+r.d(n, {
     CP: function () {
-        return l;
-    },
-    Je: function () {
-        return p;
-    },
-    KJ: function () {
-        return f;
-    },
-    OT: function () {
-        return u;
-    },
-    Tu: function () {
-        return o;
-    },
-    d0: function () {
         return d;
     },
+    Je: function () {
+        return g;
+    },
+    KJ: function () {
+        return p;
+    },
+    OT: function () {
+        return f;
+    },
+    Tu: function () {
+        return c;
+    },
+    d0: function () {
+        return h;
+    },
     lK: function () {
-        return _;
+        return m;
     },
     xI: function () {
-        return c;
+        return _;
     }
-}),
-    n(47120),
-    n(724458);
-var r = n(695346),
-    i = n(594174),
-    a = n(55563),
-    s = n(981631);
-function o(e, t) {
-    return ''.concat(e, ':').concat(t);
+});
+var i = r(47120);
+var a = r(724458);
+var s = r(695346),
+    o = r(594174),
+    l = r(55563),
+    u = r(981631);
+function c(e, n) {
+    return ''.concat(e, ':').concat(n);
 }
-function l(e) {
-    let [t, n] = e.split(':');
+function d(e) {
+    let [n, r] = e.split(':');
     return {
-        applicationId: t,
-        branchId: n
+        applicationId: n,
+        branchId: r
     };
 }
-function u(e, t) {
-    if (!r.G6.getSetting() || r.co.getSetting() === s.Skl.INVISIBLE) return !1;
-    let n = t.getActiveLibraryApplication(e);
-    return null == n || !n.hasFlag(s.eHb.PRIVATE);
+function f(e, n) {
+    if (!s.G6.getSetting() || s.co.getSetting() === u.Skl.INVISIBLE) return !1;
+    let r = n.getActiveLibraryApplication(e);
+    return null == r || !r.hasFlag(u.eHb.PRIVATE);
 }
-function c(e, t) {
-    return 0 === t ? 100 : (e / t) * 100;
+function _(e, n) {
+    return 0 === n ? 100 : (e / n) * 100;
 }
-function d(e, t, n) {
-    return !(null == t || (n.enabled && t.hasFlag(s.eHb.PRIVATE))) && !t.isHidden();
+function h(e, n, r) {
+    return !(null == n || (r.enabled && n.hasFlag(u.eHb.PRIVATE))) && !n.isHidden();
 }
-function f(e) {
-    return null == e ? null : e.type === s.vxO.INSTALLING || e.type === s.vxO.UPDATING || e.type === s.vxO.UNINSTALLING ? e : null;
+function p(e) {
+    return null == e ? null : e.type === u.vxO.INSTALLING || e.type === u.vxO.UPDATING || e.type === u.vxO.UNINSTALLING ? e : null;
 }
-function _(e) {
+function m(e) {
     return e.reduce(
-        (e, t) => {
-            let n = f(t);
-            return null == n || t.type === s.vxO.UP_TO_DATE
+        (e, n) => {
+            let r = p(n);
+            return null == r || n.type === u.vxO.UP_TO_DATE
                 ? e
                 : {
-                      total: e.total + Number(n.total),
-                      progress: e.progress + Number(n.progress)
+                      total: e.total + Number(r.total),
+                      progress: e.progress + Number(r.progress)
                   };
         },
         {
@@ -71,6 +71,6 @@ function _(e) {
         }
     );
 }
-function p(e) {
-    return !!e.isDiscordApplication() && e.isEntitled(i.default.getCurrentUser(), a.Z);
+function g(e) {
+    return !!e.isDiscordApplication() && e.isEntitled(o.default.getCurrentUser(), l.Z);
 }

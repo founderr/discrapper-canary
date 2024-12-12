@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     dateRange: (e) => `${e.startDate} do ${e.endDate}`,
     dateSelected: (e) => `${e.date} izabran`,
     finishRangeSelectionPrompt: `Kliknite da dovr\u{161}ite opseg izabranih datuma`,

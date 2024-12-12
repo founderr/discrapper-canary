@@ -1,67 +1,67 @@
-var r = n(200651);
-n(192379);
-var i = n(704215),
-    a = n(952265),
-    s = n(468026),
-    o = n(231757),
-    l = n(605236),
-    u = n(131951),
-    c = n(626135),
-    d = n(542238),
-    f = n(927923),
-    _ = n(981631),
-    p = n(388032),
-    h = n(902406);
-let m = 'game_console_alert_modal',
-    g = 'game_console_ptt_alert_modal';
-t.Z = {
+var i = r(200651);
+r(192379);
+var a = r(704215),
+    s = r(952265),
+    o = r(468026),
+    l = r(231757),
+    u = r(605236),
+    c = r(131951),
+    d = r(626135),
+    f = r(542238),
+    _ = r(927923),
+    h = r(981631),
+    p = r(388032),
+    m = r(902406);
+let g = 'game_console_alert_modal',
+    E = 'game_console_ptt_alert_modal';
+n.Z = {
     maybeShowPTTAlert(e) {
-        if (u.Z.getMode() !== _.pM4.PUSH_TO_TALK || (0, l.un)(i.z.CONSOLE_PTT_DISABLE_ALERT)) return Promise.resolve();
-        let t = {
-            [_.ABu.XBOX]: p.intl.string(p.t.bVZ7v7),
-            [_.ABu.PLAYSTATION]: p.intl.string(p.t['6iqUsb']),
-            [_.ABu.PLAYSTATION_STAGING]: p.intl.string(p.t['6iqUsb'])
+        if (c.Z.getMode() !== h.pM4.PUSH_TO_TALK || (0, u.un)(a.z.CONSOLE_PTT_DISABLE_ALERT)) return Promise.resolve();
+        let n = {
+            [h.ABu.XBOX]: p.intl.string(p.t.bVZ7v7),
+            [h.ABu.PLAYSTATION]: p.intl.string(p.t['6iqUsb']),
+            [h.ABu.PLAYSTATION_STAGING]: p.intl.string(p.t['6iqUsb'])
         }[e];
-        return null == t
+        return null == n
             ? Promise.resolve()
             : new Promise((e) => {
-                  let n = () => {
-                          (0, l.EW)(i.z.CONSOLE_PTT_DISABLE_ALERT), e();
+                  let r = () => {
+                          (0, u.EW)(a.z.CONSOLE_PTT_DISABLE_ALERT), e();
                       },
-                      o = (e) =>
-                          (0, r.jsx)(s.default, {
+                      l = (e) =>
+                          (0, i.jsx)(o.default, {
                               ...e,
-                              title: t,
+                              title: n,
                               body: p.intl.string(p.t.bL21zs),
-                              onConfirm: n,
-                              titleClassName: h.title
+                              onConfirm: r,
+                              titleClassName: m.title
                           });
-                  (0, a.nf)(g) ? (0, a.o)(g, o) : (0, a.h7)(o, { modalKey: g });
+                  (0, s.nf)(E) ? (0, s.o)(E, l) : (0, s.h7)(l, { modalKey: E });
               });
     },
     showSelfDismissableAlert(e) {
-        let { title: t, body: n, errorCodeMessage: i, reconnectPlatformType: l } = e,
-            u = (0, r.jsx)(d.t, {
-                body: n,
-                errorCodeMessage: i,
-                dismissCallback: () => (0, a.Mr)(m)
+        let { title: n, body: r, errorCodeMessage: a, reconnectPlatformType: u } = e,
+            c = (0, i.jsx)(f.t, {
+                body: r,
+                errorCodeMessage: a,
+                dismissCallback: () => (0, s.Mr)(g)
             });
         function p() {
-            null != l &&
-                ((0, o.Z)({ platformType: l }),
-                c.default.track(_.rMx.ACCOUNT_LINK_STEP, {
-                    previous_step: f.Lw,
+            null != u &&
+                ((0, l.Z)({ platformType: u }),
+                d.default.track(h.rMx.ACCOUNT_LINK_STEP, {
+                    previous_step: _.Lw,
                     current_step: 'desktop oauth',
-                    platform_type: l
+                    platform_type: u
                 }));
         }
-        let h = (e) =>
-            (0, r.jsx)(s.default, {
+        let m = (e) =>
+            (0, i.jsx)(o.default, {
                 ...e,
-                title: t,
-                body: u,
+                title: n,
+                body: c,
                 onConfirm: p
             });
-        (0, a.nf)(m) ? (0, a.o)(m, h) : (0, a.h7)(h, { modalKey: m });
+        (0, s.nf)(g) ? (0, s.o)(g, m) : (0, s.h7)(m, { modalKey: g });
     }
 };

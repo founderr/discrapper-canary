@@ -1,42 +1,42 @@
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(481060),
-    o = n(972623),
-    l = n(430229);
-let u = Object.freeze({
-        SIZE_10: l.size10,
-        SIZE_12: l.size12,
-        SIZE_14: l.size14,
-        SIZE_16: l.size16,
-        SIZE_20: l.size20,
-        SIZE_24: l.size24,
-        SIZE_32: l.size32
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(481060),
+    l = r(972623),
+    u = r(430229);
+let c = Object.freeze({
+        SIZE_10: u.size10,
+        SIZE_12: u.size12,
+        SIZE_14: u.size14,
+        SIZE_16: u.size16,
+        SIZE_20: u.size20,
+        SIZE_24: u.size24,
+        SIZE_32: u.size32
     }),
-    c = (e) => {
-        let { id: t, muted: n = !1, className: i = o.wrapper, size: l = u.SIZE_14, selectable: c = !1, children: d, color: f, onClick: _, onContextMenu: p, style: h, title: m, uppercase: g } = e;
-        return (0, r.jsx)(s.H, {
-            role: null != _ ? 'button' : void 0,
-            onClick: _,
+    d = (e) => {
+        let { id: n, muted: r = !1, className: a = l.wrapper, size: u = c.SIZE_14, selectable: d = !1, children: f, color: _, onClick: h, onContextMenu: p, style: m, title: g, uppercase: E } = e;
+        return (0, i.jsx)(o.H, {
+            role: null != h ? 'button' : void 0,
+            onClick: h,
             onContextMenu: p,
-            id: t,
-            className: a()(i, {
-                [o.base]: !0,
-                [l]: !0,
-                [o.selectable]: c,
-                [o.muted]: n,
-                [o.uppercase]: g
+            id: n,
+            className: s()(a, {
+                [l.base]: !0,
+                [u]: !0,
+                [l.selectable]: d,
+                [l.muted]: r,
+                [l.uppercase]: E
             }),
-            title: m,
+            title: g,
             style:
-                null != f
+                null != _
                     ? {
-                          ...h,
-                          color: f
+                          ...m,
+                          color: _
                       }
-                    : h,
-            children: d
+                    : m,
+            children: f
         });
     };
-(c.Sizes = u), (t.Z = c);
+(d.Sizes = c), (n.Z = d);

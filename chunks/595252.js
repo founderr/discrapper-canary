@@ -1,4 +1,4 @@
-n.r(
+r.r(
     (e.exports = {
         'spinner-wandering-cubes': 'spinner-wandering-cubes_b6db20',
         'spinner-chasing-dots-rotate': 'spinner-chasing-dots-rotate_b6db20',

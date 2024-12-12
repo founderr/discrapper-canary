@@ -1,26 +1,26 @@
-n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(623113);
-t.Z = i.forwardRef(function (e, t) {
-    let { muted: n, volume: s, playing: o, ...l } = e,
-        [u, c] = (0, a.Z)(t);
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(623113);
+n.Z = s.forwardRef(function (e, n) {
+    let { muted: r, volume: i, playing: l, ...u } = e,
+        [c, d] = (0, o.Z)(n);
     return (
-        i.useEffect(() => {
-            let e = u.current;
-            if (null != e) void 0 !== n && (e.muted = n);
-        }, [u, n]),
-        i.useEffect(() => {
-            let e = u.current;
-            if (null != e) void 0 !== s && (e.volume = s);
-        }, [u, s]),
-        i.useEffect(() => {
-            let e = u.current;
-            if (null != e) void 0 !== o && (o ? e.play() : e.pause());
-        }, [u, o]),
-        (0, r.jsx)('audio', {
-            ref: c,
-            ...l
+        s.useEffect(() => {
+            let e = c.current;
+            if (null != e) void 0 !== r && (e.muted = r);
+        }, [c, r]),
+        s.useEffect(() => {
+            let e = c.current;
+            if (null != e) void 0 !== i && (e.volume = i);
+        }, [c, i]),
+        s.useEffect(() => {
+            let e = c.current;
+            if (null != e) void 0 !== l && (l ? e.play() : e.pause());
+        }, [c, l]),
+        (0, a.jsx)('audio', {
+            ref: d,
+            ...u
         })
     );
 });

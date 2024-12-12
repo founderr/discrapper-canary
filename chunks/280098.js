@@ -1,13 +1,13 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var r = n(267642),
-    i = n(74538),
-    a = n(474936);
-function s(e, t, n, s) {
-    if (null == e || (null == e.quality && null == e.guildPremiumTier) || (null == s ? void 0 : s.isHDStreamSplashed)) return !0;
-    let o = !1;
-    return null != e.quality && (e.quality === a.ys.HIGH_STREAMING_QUALITY ? (o = o || i.ZP.canStreamQuality(i.ZP.StreamQuality.HIGH, t)) : e.quality === a.ys.MID_STREAMING_QUALITY && (o = o || i.ZP.canStreamQuality(i.ZP.StreamQuality.MID, t))), null != e.guildPremiumTier && (o = o || (0, r.tb)(n, e.guildPremiumTier)), o;
+var i = r(267642),
+    a = r(74538),
+    s = r(474936);
+function o(e, n, r, o) {
+    if (null == e || (null == e.quality && null == e.guildPremiumTier) || (null == o ? void 0 : o.isHDStreamSplashed)) return !0;
+    let l = !1;
+    return null != e.quality && (e.quality === s.ys.HIGH_STREAMING_QUALITY ? (l = l || a.ZP.canStreamQuality(a.ZP.StreamQuality.HIGH, n)) : e.quality === s.ys.MID_STREAMING_QUALITY && (l = l || a.ZP.canStreamQuality(a.ZP.StreamQuality.MID, n))), null != e.guildPremiumTier && (l = l || (0, i.tb)(r, e.guildPremiumTier)), l;
 }

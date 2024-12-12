@@ -1,29 +1,29 @@
-n.d(t, {
+r.d(n, {
     a: function () {
-        return l;
+        return u;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(481060),
-    o = n(660384);
-function l(e) {
-    let { children: t, onClick: n, className: i, tooltip: l } = e;
-    return (0, r.jsx)(s.Tooltip, {
-        text: l,
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(481060),
+    l = r(660384);
+function u(e) {
+    let { children: n, onClick: r, className: a, tooltip: u } = e;
+    return (0, i.jsx)(o.Tooltip, {
+        text: u,
         children: (e) => {
-            let { onClick: l, ...u } = e;
-            return (0, r.jsx)(s.Button, {
-                ...u,
+            let { onClick: u, ...c } = e;
+            return (0, i.jsx)(o.Button, {
+                ...c,
                 onClick: (e) => {
-                    null == n || n(e), null == l || l();
+                    null == r || r(e), null == u || u();
                 },
-                innerClassName: o.buttonReset,
-                color: a()(o.cta, i),
-                size: s.Button.Sizes.MIN,
-                children: t
+                innerClassName: l.buttonReset,
+                color: s()(l.cta, a),
+                size: o.Button.Sizes.MIN,
+                children: n
             });
         }
     });

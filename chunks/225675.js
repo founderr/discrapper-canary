@@ -1,9 +1,9 @@
-var r, i;
-n.d(t, {
+var i;
+r.d(n, {
     z: function () {
-        return r;
+        return i;
     }
 }),
-    ((i = r || (r = {})).ROLES = 'ROLES'),
-    (i.NEW_MEMBER = 'NEW_MEMBER'),
-    (i.SERVER_SHOP = 'SERVER_SHOP');
+    !(function (e) {
+        (e.ROLES = 'ROLES'), (e.NEW_MEMBER = 'NEW_MEMBER'), (e.SERVER_SHOP = 'SERVER_SHOP');
+    })(i || (i = {}));

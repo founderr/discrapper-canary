@@ -1,18 +1,18 @@
 e.exports = function (e) {
-    var t = e.stateHandler.getState;
+    var n = e.stateHandler.getState;
     return {
-        isDetectable: function (e) {
-            var n = t(e);
-            return n && !!n.isDetectable;
+        isDetectable: function e(e) {
+            var r = n(e);
+            return r && !!r.isDetectable;
         },
-        markAsDetectable: function (e) {
-            t(e).isDetectable = !0;
+        markAsDetectable: function e(e) {
+            n(e).isDetectable = !0;
         },
-        isBusy: function (e) {
-            return !!t(e).busy;
+        isBusy: function e(e) {
+            return !!n(e).busy;
         },
-        markBusy: function (e, n) {
-            t(e).busy = !!n;
+        markBusy: function e(e, r) {
+            n(e).busy = !!r;
         }
     };
 };

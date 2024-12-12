@@ -1,21 +1,21 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return s;
     }
-}),
-    n(47120);
-var r = n(192379);
-function i() {
-    let [e, t] = r.useState(null),
-        n = r.useRef(null);
+});
+var i = r(47120);
+var a = r(192379);
+function s() {
+    let [e, n] = a.useState(null),
+        r = a.useRef(null);
     return (
-        r.useEffect(() => {
-            null != e && null != n.current && n.current.scrollIntoView({ behavior: 'smooth' });
+        a.useEffect(() => {
+            null != e && null != r.current && r.current.scrollIntoView({ behavior: 'smooth' });
         }, [e]),
         {
             purchaseError: e,
-            setPurchaseError: t,
-            purchaseErrorBlockRef: n
+            setPurchaseError: n,
+            purchaseErrorBlockRef: r
         }
     );
 }

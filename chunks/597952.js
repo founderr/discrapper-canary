@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(358085);
-function i() {
+var i = r(358085);
+function a() {
     let e = '';
-    return (0, r.isWindows)() ? (e = 'platform-win') : (0, r.isMac)() ? (e = 'platform-osx') : (0, r.isLinux)() ? (e = 'platform-linux') : (0, r.isWeb)() && (e = 'platform-web'), __OVERLAY__ ? ''.concat(e, ' platform-overlay') : e;
+    return (0, i.isWindows)() ? (e = 'platform-win') : (0, i.isMac)() ? (e = 'platform-osx') : (0, i.isLinux)() ? (e = 'platform-linux') : (0, i.isWeb)() && (e = 'platform-web'), __OVERLAY__ ? ''.concat(e, ' platform-overlay') : e;
 }

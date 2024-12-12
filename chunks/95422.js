@@ -1,16 +1,16 @@
-n.d(t, {
+r.d(n, {
     a: function () {
-        return a;
+        return s;
     }
 });
-var r = n(228624),
-    i = n(388032);
-let a = (e) => {
-    let t = (0, r.ed)('usePurchasedProductName');
+var i = r(228624),
+    a = r(388032);
+let s = (e) => {
+    let n = (0, i.ed)('usePurchasedProductName');
     if (null == e) return '';
-    let n = i.intl.string(i.t.z7y5vL);
-    return t && null != e.baseVariantName && e.variantLabel !== n
-        ? i.intl.formatToPlainString(i.t.BZN5k5, {
+    let r = a.intl.string(a.t.z7y5vL);
+    return n && null != e.baseVariantName && e.variantLabel !== r
+        ? a.intl.formatToPlainString(a.t.BZN5k5, {
               baseVariantName: e.baseVariantName,
               variantLabel: e.variantLabel
           })

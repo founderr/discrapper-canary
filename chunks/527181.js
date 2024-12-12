@@ -1,4 +1,4 @@
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
     kind: 'user',
     id: '2024-12_dcf_dismissal_no_op',
     label: 'DCF Dismissal No Op',
@@ -11,4 +11,4 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-t.Z = r;
+n.Z = i;

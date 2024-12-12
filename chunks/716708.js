@@ -1,39 +1,39 @@
-var r = n(192379),
-    i = n(723184),
-    a = n(602984),
-    s =
+var i = r(192379),
+    a = r(723184),
+    s = r(602984),
+    o =
         Object.assign ||
         function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+            for (var n = 1; n < arguments.length; n++) {
+                var r = arguments[n];
+                for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
             }
             return e;
         },
-    o = function (e) {
-        var t = e.white,
-            n = e.grey,
-            o = e.size,
-            l = e.renderers,
-            u = e.borderRadius,
-            c = e.boxShadow,
-            d = e.children,
-            f = (0, i.default)({
+    l = function (e) {
+        var n = e.white,
+            r = e.grey,
+            l = e.size,
+            u = e.renderers,
+            c = e.borderRadius,
+            d = e.boxShadow,
+            f = e.children,
+            _ = (0, a.default)({
                 default: {
                     grid: {
-                        borderRadius: u,
-                        boxShadow: c,
+                        borderRadius: c,
+                        boxShadow: d,
                         absolute: '0px 0px 0px 0px',
-                        background: 'url(' + a.U(t, n, o, l.canvas) + ') center left'
+                        background: 'url(' + s.U(n, r, l, u.canvas) + ') center left'
                     }
                 }
             });
-        return (0, r.isValidElement)(d) ? r.cloneElement(d, s({}, d.props, { style: s({}, d.props.style, f.grid) })) : r.createElement('div', { style: f.grid });
+        return (0, i.isValidElement)(f) ? i.cloneElement(f, o({}, f.props, { style: o({}, f.props.style, _.grid) })) : i.createElement('div', { style: _.grid });
     };
-(o.defaultProps = {
+(l.defaultProps = {
     size: 8,
     white: 'transparent',
     grey: 'rgba(0,0,0,.08)',
     renderers: {}
 }),
-    (t.Z = o);
+    (n.Z = l);

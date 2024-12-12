@@ -1,49 +1,49 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return _;
+        return h;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(510659),
-    o = n(899007),
-    l = n(287954),
-    u = n(660579),
-    c = n(64621),
-    d = n(228168),
-    f = n(882636);
-function _(e) {
-    let { user: t, profileType: n, animateOnHover: i, onOpenProfile: _, ...p } = e,
-        h = d.n_.AVATAR,
-        { interactionSource: m } = (0, s.Xo)(),
-        g = a()(f.avatar, {
-            [f.hoisted]: m === d.n_.AVATAR || m === d.n_.STATUS,
-            [f.biteSize]: n === d.y0.BITE_SIZE,
-            [f.fullSize]: n === d.y0.FULL_SIZE,
-            [f.panel]: n === d.y0.PANEL
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(510659),
+    l = r(899007),
+    u = r(287954),
+    c = r(660579),
+    d = r(64621),
+    f = r(228168),
+    _ = r(882636);
+function h(e) {
+    let { user: n, profileType: r, animateOnHover: a, onOpenProfile: h, ...p } = e,
+        m = f.n_.AVATAR,
+        { interactionSource: g } = (0, o.Xo)(),
+        E = s()(_.avatar, {
+            [_.hoisted]: g === f.n_.AVATAR || g === f.n_.STATUS,
+            [_.biteSize]: r === f.y0.BITE_SIZE,
+            [_.fullSize]: r === f.y0.FULL_SIZE,
+            [_.panel]: r === f.y0.PANEL
         });
-    return (0, r.jsx)(c.Z, {
-        sourceType: d.n_.AVATAR,
-        user: t,
-        children: (0, r.jsx)(l.Z, {
-            user: t,
-            className: g,
-            profileType: n,
-            sourceType: h,
+    return (0, i.jsx)(d.Z, {
+        sourceType: f.n_.AVATAR,
+        user: n,
+        children: (0, i.jsx)(u.Z, {
+            user: n,
+            className: E,
+            profileType: r,
+            sourceType: m,
             ...p,
             children: () =>
-                (0, r.jsx)(u.Z, {
-                    className: g,
-                    user: t,
-                    sourceType: h,
-                    children: (0, r.jsx)(o.Z, {
-                        user: t,
-                        animateOnHover: i,
-                        onOpenProfile: _,
-                        profileType: n,
-                        className: f.withReactReply,
+                (0, i.jsx)(c.Z, {
+                    className: E,
+                    user: n,
+                    sourceType: m,
+                    children: (0, i.jsx)(l.Z, {
+                        user: n,
+                        animateOnHover: a,
+                        onOpenProfile: h,
+                        profileType: r,
+                        className: _.withReactReply,
                         ...p
                     })
                 })

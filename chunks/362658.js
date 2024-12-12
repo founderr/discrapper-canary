@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     z: function () {
-        return i;
+        return a;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
         kind: 'user',
         id: '2021-09_favorites_server',
         label: 'Favorites Server',
@@ -56,5 +56,5 @@ let r = (0, n(818083).B)({
             }
         ]
     }),
-    i = (e) => r.useExperiment({ location: e }, { autoTrackExposure: !0 });
-t.Z = r;
+    a = (e) => i.useExperiment({ location: e }, { autoTrackExposure: !0 });
+n.Z = i;

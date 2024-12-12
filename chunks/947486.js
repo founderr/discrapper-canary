@@ -1,12 +1,12 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(413135).Buffer;
-function i(e) {
+var i = r(413135).Buffer;
+function a(e) {
     try {
-        return r.from(JSON.stringify(e)).toString('base64');
+        return i.from(JSON.stringify(e)).toString('base64');
     } catch (e) {
         return null;
     }

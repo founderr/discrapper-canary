@@ -1,8 +1,8 @@
-n.r(t),
-    n.d(t, {
+r.r(n),
+    r.d(n, {
         useLayoutEffect: function () {
-            return i;
+            return a;
         }
     });
-var r = n(192379),
-    i = 'undefined' != typeof window && window.document && window.document.createElement ? r.useLayoutEffect : r.useEffect;
+var i = r(192379),
+    a = 'undefined' != typeof window && window.document && window.document.createElement ? i.useLayoutEffect : i.useEffect;

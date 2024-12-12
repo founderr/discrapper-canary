@@ -1,9 +1,9 @@
-var r = n(660326),
-    i = n(435080),
-    a = n(814640);
-function s(e) {
-    var t = -1,
-        n = null == e ? 0 : e.length;
-    for (this.__data__ = new r(); ++t < n; ) this.add(e[t]);
+var i = r(660326),
+    a = r(435080),
+    s = r(814640);
+function o(e) {
+    var n = -1,
+        r = null == e ? 0 : e.length;
+    for (this.__data__ = new i(); ++n < r; ) this.add(e[n]);
 }
-(s.prototype.add = s.prototype.push = i), (s.prototype.has = a), (e.exports = s);
+(o.prototype.add = o.prototype.push = a), (o.prototype.has = s), (e.exports = o);

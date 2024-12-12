@@ -1,5 +1,5 @@
-var t = Math.floor;
-e.exports = function (e, n) {
-    var r = e % n;
-    return t(r >= 0 ? r : r + n);
+var n = Math.floor;
+e.exports = function (e, r) {
+    var i = e % r;
+    return n(i >= 0 ? i : i + r);
 };

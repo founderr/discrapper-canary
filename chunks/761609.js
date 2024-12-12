@@ -1,38 +1,38 @@
-n.d(t, {
+r.d(n, {
     R: function () {
-        return u;
+        return c;
     }
 });
-var r = n(654861),
-    i = n.n(r),
-    a = n(413135);
-function s(e, t, n) {
+var i = r(654861),
+    a = r.n(i),
+    s = r(413135);
+function o(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-function o(e) {
+function l(e) {
     return 0 | e.mod(4294967296).toJSNumber();
 }
-function l(e) {
+function u(e) {
     return 0 | e.shiftRight(32).toJSNumber();
 }
-class u {
+class c {
     generate(e) {
-        let t = i()(e),
-            n = 0 | this._sequenceNumber++,
-            r = new a.Buffer(24);
-        return r.writeInt32LE(o(t), 0, !0), r.writeInt32LE(l(t), 4, !0), r.writeInt32LE(this._randomPrefix, 8, !0), r.writeInt32LE(o(this._creationTime), 12, !0), r.writeInt32LE(l(this._creationTime), 16, !0), r.writeInt32LE(n, 20, !0), r.toString('base64');
+        let n = a()(e),
+            r = 0 | this._sequenceNumber++,
+            i = new s.Buffer(24);
+        return i.writeInt32LE(l(n), 0, !0), i.writeInt32LE(u(n), 4, !0), i.writeInt32LE(this._randomPrefix, 8, !0), i.writeInt32LE(l(this._creationTime), 12, !0), i.writeInt32LE(u(this._creationTime), 16, !0), i.writeInt32LE(r, 20, !0), i.toString('base64');
     }
     constructor() {
-        s(this, '_randomPrefix', 0 | Math.floor(4294967296 * Math.random())), s(this, '_creationTime', i()(Date.now())), s(this, '_sequenceNumber', 0);
+        o(this, '_randomPrefix', 0 | Math.floor(4294967296 * Math.random())), o(this, '_creationTime', a()(Date.now())), o(this, '_sequenceNumber', 0);
     }
 }

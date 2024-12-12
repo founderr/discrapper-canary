@@ -1,26 +1,26 @@
-n.d(t, {
+r.d(n, {
     V: function () {
-        return i;
+        return a;
     }
 });
-let { Themes: r } = n(15202).V,
-    i = {
+let { Themes: i } = r(15202).V,
+    a = {
         SemanticColorExperiments: {
             ACTIVITY_CARD_BACKGROUND: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_67',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_1',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_91',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_79',
                         opacity: 1
                     }
@@ -28,19 +28,19 @@ let { Themes: r } = n(15202).V,
             },
             AUTOCOMPLETE_BG: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_67',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_1',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_91',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_79',
                         opacity: 1
                     }
@@ -48,19 +48,19 @@ let { Themes: r } = n(15202).V,
             },
             BACKGROUND_FLOATING: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_67',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_1',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_91',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_79',
                         opacity: 1
                     }
@@ -68,19 +68,19 @@ let { Themes: r } = n(15202).V,
             },
             BACKGROUND_MENTIONED: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'OPACITY_YELLOW_8',
                         opacity: 0.0784313725490196
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'OPACITY_YELLOW_8',
                         opacity: 0.0784313725490196
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'OPACITY_YELLOW_8',
                         opacity: 0.0784313725490196
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'OPACITY_YELLOW_8',
                         opacity: 0.0784313725490196
                     }
@@ -88,19 +88,19 @@ let { Themes: r } = n(15202).V,
             },
             BACKGROUND_MENTIONED_HOVER: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'OPACITY_YELLOW_16',
                         opacity: 0.1607843137254902
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'OPACITY_YELLOW_12',
                         opacity: 0.12156862745098039
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'OPACITY_YELLOW_16',
                         opacity: 0.1607843137254902
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'OPACITY_YELLOW_16',
                         opacity: 0.1607843137254902
                     }
@@ -108,19 +108,19 @@ let { Themes: r } = n(15202).V,
             },
             BACKGROUND_MESSAGE_HOVER: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_75',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_3',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_94',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_89',
                         opacity: 1
                     }
@@ -128,19 +128,19 @@ let { Themes: r } = n(15202).V,
             },
             BACKGROUND_MODIFIER_ACCENT: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'OPACITY_12',
                         opacity: 0.12156862745098039
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'OPACITY_20',
                         opacity: 0.2
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'OPACITY_20',
                         opacity: 0.2
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'OPACITY_12',
                         opacity: 0.12156862745098039
                     }
@@ -148,19 +148,19 @@ let { Themes: r } = n(15202).V,
             },
             BACKGROUND_MODIFIER_HOVER: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'OPACITY_8',
                         opacity: 0.0784313725490196
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'OPACITY_8',
                         opacity: 0.0784313725490196
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'OPACITY_16',
                         opacity: 0.1607843137254902
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'OPACITY_8',
                         opacity: 0.0784313725490196
                     }
@@ -168,19 +168,19 @@ let { Themes: r } = n(15202).V,
             },
             BACKGROUND_MODIFIER_SELECTED: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'OPACITY_16',
                         opacity: 0.1607843137254902
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'OPACITY_16',
                         opacity: 0.1607843137254902
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'OPACITY_24',
                         opacity: 0.23921568627450981
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'OPACITY_16',
                         opacity: 0.1607843137254902
                     }
@@ -188,19 +188,19 @@ let { Themes: r } = n(15202).V,
             },
             BACKGROUND_PRIMARY: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_70',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_2',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_95',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_82',
                         opacity: 1
                     }
@@ -208,19 +208,19 @@ let { Themes: r } = n(15202).V,
             },
             BACKGROUND_SECONDARY: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_73',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_2',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_97',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_86',
                         opacity: 1
                     }
@@ -228,19 +228,19 @@ let { Themes: r } = n(15202).V,
             },
             BACKGROUND_TERTIARY: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_76',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_4',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_100',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_92',
                         opacity: 1
                     }
@@ -248,19 +248,19 @@ let { Themes: r } = n(15202).V,
             },
             BG_BASE_PRIMARY: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_70',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_2',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_95',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_82',
                         opacity: 1
                     }
@@ -268,19 +268,19 @@ let { Themes: r } = n(15202).V,
             },
             BG_BASE_SECONDARY: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_73',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_2',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_97',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_86',
                         opacity: 1
                     }
@@ -288,19 +288,19 @@ let { Themes: r } = n(15202).V,
             },
             BG_BASE_TERTIARY: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_76',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_4',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_100',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_92',
                         opacity: 1
                     }
@@ -308,19 +308,19 @@ let { Themes: r } = n(15202).V,
             },
             BG_MOD_FAINT: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'OPACITY_8',
                         opacity: 0.0784313725490196
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'OPACITY_8',
                         opacity: 0.0784313725490196
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'OPACITY_16',
                         opacity: 0.1607843137254902
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'OPACITY_8',
                         opacity: 0.0784313725490196
                     }
@@ -328,19 +328,19 @@ let { Themes: r } = n(15202).V,
             },
             BG_MOD_STRONG: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'OPACITY_24',
                         opacity: 0.23921568627450981
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'OPACITY_24',
                         opacity: 0.23921568627450981
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'OPACITY_32',
                         opacity: 0.3215686274509804
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'OPACITY_24',
                         opacity: 0.23921568627450981
                     }
@@ -348,19 +348,19 @@ let { Themes: r } = n(15202).V,
             },
             BG_MOD_SUBTLE: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'OPACITY_16',
                         opacity: 0.1607843137254902
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'OPACITY_16',
                         opacity: 0.1607843137254902
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'OPACITY_24',
                         opacity: 0.23921568627450981
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'OPACITY_16',
                         opacity: 0.1607843137254902
                     }
@@ -368,19 +368,19 @@ let { Themes: r } = n(15202).V,
             },
             BORDER_FAINT: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'OPACITY_4',
                         opacity: 0.0392156862745098
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'OPACITY_12',
                         opacity: 0.12156862745098039
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'OPACITY_12',
                         opacity: 0.12156862745098039
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'OPACITY_4',
                         opacity: 0.0392156862745098
                     }
@@ -388,19 +388,19 @@ let { Themes: r } = n(15202).V,
             },
             BORDER_STRONG: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'OPACITY_44',
                         opacity: 0.4392156862745098
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'OPACITY_48',
                         opacity: 0.47843137254901963
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'OPACITY_48',
                         opacity: 0.47843137254901963
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'OPACITY_44',
                         opacity: 0.4392156862745098
                     }
@@ -408,19 +408,19 @@ let { Themes: r } = n(15202).V,
             },
             BORDER_SUBTLE: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'OPACITY_12',
                         opacity: 0.12156862745098039
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'OPACITY_20',
                         opacity: 0.2
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'OPACITY_20',
                         opacity: 0.2
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'OPACITY_12',
                         opacity: 0.12156862745098039
                     }
@@ -428,19 +428,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_DANGER_BACKGROUND: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'RED_NEW_50',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'RED_NEW_50',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'RED_NEW_50',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'RED_NEW_50',
                         opacity: 1
                     }
@@ -448,19 +448,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_DANGER_BACKGROUND_ACTIVE: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'RED_NEW_61',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'RED_NEW_61',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'RED_NEW_61',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'RED_NEW_61',
                         opacity: 1
                     }
@@ -468,19 +468,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_DANGER_BACKGROUND_DISABLED: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'RED_NEW_50',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'RED_NEW_50',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'RED_NEW_50',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'RED_NEW_50',
                         opacity: 1
                     }
@@ -488,19 +488,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_DANGER_BACKGROUND_HOVER: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'RED_NEW_57',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'RED_NEW_57',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'RED_NEW_57',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'RED_NEW_57',
                         opacity: 1
                     }
@@ -508,19 +508,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_DANGER_BORDER: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'WHITE_500',
                         opacity: 0.1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'WHITE_500',
                         opacity: 0.1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'WHITE_500',
                         opacity: 0.1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'WHITE_500',
                         opacity: 0.1
                     }
@@ -528,19 +528,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_FILLED_BRAND_BORDER: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'WHITE_500',
                         opacity: 0.1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'WHITE_500',
                         opacity: 0.1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'WHITE_500',
                         opacity: 0.1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'WHITE_500',
                         opacity: 0.1
                     }
@@ -548,19 +548,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_FILLED_BRAND_INVERTED_BACKGROUND_ACTIVE: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_17',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_17',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_17',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_17',
                         opacity: 1
                     }
@@ -568,19 +568,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_FILLED_BRAND_INVERTED_BACKGROUND_HOVER: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_9',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_9',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_9',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_9',
                         opacity: 1
                     }
@@ -588,19 +588,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_FILLED_BRAND_INVERTED_TEXT: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'BLACK',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'BLACK',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'BLACK',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'BLACK',
                         opacity: 1
                     }
@@ -608,19 +608,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_FILLED_WHITE_BACKGROUND_ACTIVE: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_17',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_17',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_17',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_17',
                         opacity: 1
                     }
@@ -628,19 +628,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_FILLED_WHITE_BACKGROUND_HOVER: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_9',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_9',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_9',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_9',
                         opacity: 1
                     }
@@ -648,19 +648,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_FILLED_WHITE_TEXT: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'BLACK',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'BLACK',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'BLACK',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'BLACK',
                         opacity: 1
                     }
@@ -668,19 +668,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_OUTLINE_DANGER_BACKGROUND: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'OPACITY_12',
                         opacity: 0.12156862745098039
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'OPACITY_16',
                         opacity: 0.1607843137254902
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'OPACITY_12',
                         opacity: 0.12156862745098039
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'OPACITY_12',
                         opacity: 0.12156862745098039
                     }
@@ -688,19 +688,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_OUTLINE_DANGER_BACKGROUND_ACTIVE: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'PRIMARY_500',
                         opacity: 0.3
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'PRIMARY_400',
                         opacity: 0.08
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'PRIMARY_500',
                         opacity: 0.3
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'PRIMARY_500',
                         opacity: 0.3
                     }
@@ -708,19 +708,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_OUTLINE_DANGER_BACKGROUND_HOVER: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'OPACITY_20',
                         opacity: 0.2
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'OPACITY_28',
                         opacity: 0.2784313725490196
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'OPACITY_20',
                         opacity: 0.2
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'OPACITY_20',
                         opacity: 0.2
                     }
@@ -728,19 +728,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_OUTLINE_DANGER_BORDER: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'OPACITY_4',
                         opacity: 0.0392156862745098
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'OPACITY_16',
                         opacity: 0.1607843137254902
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'OPACITY_4',
                         opacity: 0.0392156862745098
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'OPACITY_4',
                         opacity: 0.0392156862745098
                     }
@@ -748,19 +748,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_OUTLINE_DANGER_BORDER_ACTIVE: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'OPACITY_4',
                         opacity: 0.0392156862745098
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'OPACITY_8',
                         opacity: 0.0784313725490196
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'OPACITY_4',
                         opacity: 0.0392156862745098
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'OPACITY_4',
                         opacity: 0.0392156862745098
                     }
@@ -768,19 +768,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_OUTLINE_DANGER_BORDER_HOVER: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'OPACITY_4',
                         opacity: 0.0392156862745098
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'OPACITY_8',
                         opacity: 0.0784313725490196
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'OPACITY_4',
                         opacity: 0.0392156862745098
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'OPACITY_4',
                         opacity: 0.0392156862745098
                     }
@@ -788,19 +788,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_OUTLINE_DANGER_TEXT: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'RED_345',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'RED_500',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'RED_345',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'RED_345',
                         opacity: 1
                     }
@@ -808,19 +808,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_OUTLINE_DANGER_TEXT_ACTIVE: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'RED_345',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'RED_500',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'RED_345',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'RED_345',
                         opacity: 1
                     }
@@ -828,19 +828,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_OUTLINE_DANGER_TEXT_HOVER: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'RED_345',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'RED_500',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'RED_345',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'RED_345',
                         opacity: 1
                     }
@@ -848,19 +848,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_POSITIVE_BACKGROUND: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'GREEN_NEW_50',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'GREEN_NEW_50',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'GREEN_NEW_50',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'GREEN_NEW_50',
                         opacity: 1
                     }
@@ -868,19 +868,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_POSITIVE_BACKGROUND_ACTIVE: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'GREEN_NEW_57',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'GREEN_NEW_57',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'GREEN_NEW_57',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'GREEN_NEW_57',
                         opacity: 1
                     }
@@ -888,19 +888,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_POSITIVE_BACKGROUND_DISABLED: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'GREEN_NEW_50',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'GREEN_NEW_50',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'GREEN_NEW_50',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'GREEN_NEW_50',
                         opacity: 1
                     }
@@ -908,19 +908,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_POSITIVE_BACKGROUND_HOVER: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'GREEN_NEW_53',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'GREEN_NEW_53',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'GREEN_NEW_53',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'GREEN_NEW_53',
                         opacity: 1
                     }
@@ -928,19 +928,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_POSITIVE_BORDER: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'WHITE_500',
                         opacity: 0.1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'WHITE_500',
                         opacity: 0.1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'WHITE_500',
                         opacity: 0.1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'WHITE_500',
                         opacity: 0.1
                     }
@@ -948,19 +948,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_SECONDARY_BACKGROUND: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'OPACITY_12',
                         opacity: 0.12156862745098039
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'OPACITY_16',
                         opacity: 0.1607843137254902
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'OPACITY_12',
                         opacity: 0.12156862745098039
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'OPACITY_12',
                         opacity: 0.12156862745098039
                     }
@@ -968,19 +968,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_SECONDARY_BACKGROUND_ACTIVE: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'PRIMARY_500',
                         opacity: 0.3
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'PRIMARY_400',
                         opacity: 0.08
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'PRIMARY_500',
                         opacity: 0.3
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'PRIMARY_500',
                         opacity: 0.3
                     }
@@ -988,19 +988,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_SECONDARY_BACKGROUND_DISABLED: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'OPACITY_12',
                         opacity: 0.12156862745098039
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'OPACITY_16',
                         opacity: 0.1607843137254902
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'OPACITY_12',
                         opacity: 0.12156862745098039
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'OPACITY_12',
                         opacity: 0.12156862745098039
                     }
@@ -1008,19 +1008,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_SECONDARY_BACKGROUND_HOVER: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'OPACITY_20',
                         opacity: 0.2
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'OPACITY_28',
                         opacity: 0.2784313725490196
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'OPACITY_20',
                         opacity: 0.2
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'OPACITY_20',
                         opacity: 0.2
                     }
@@ -1028,19 +1028,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_SECONDARY_TEXT: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_6',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_95',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_6',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_6',
                         opacity: 1
                     }
@@ -1048,19 +1048,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_TRANSPARENT_BACKGROUND: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'OPACITY_12',
                         opacity: 0.12156862745098039
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'OPACITY_16',
                         opacity: 0.1607843137254902
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'OPACITY_12',
                         opacity: 0.12156862745098039
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'OPACITY_12',
                         opacity: 0.12156862745098039
                     }
@@ -1068,19 +1068,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_TRANSPARENT_BACKGROUND_ACTIVE: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'PRIMARY_500',
                         opacity: 0.3
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'PRIMARY_400',
                         opacity: 0.08
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'PRIMARY_500',
                         opacity: 0.3
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'PRIMARY_500',
                         opacity: 0.3
                     }
@@ -1088,19 +1088,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_TRANSPARENT_BACKGROUND_HOVER: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'OPACITY_20',
                         opacity: 0.2
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'OPACITY_28',
                         opacity: 0.2784313725490196
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'OPACITY_20',
                         opacity: 0.2
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'OPACITY_20',
                         opacity: 0.2
                     }
@@ -1108,19 +1108,19 @@ let { Themes: r } = n(15202).V,
             },
             BUTTON_TRANSPARENT_TEXT: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_6',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_95',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_6',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_6',
                         opacity: 1
                     }
@@ -1128,19 +1128,19 @@ let { Themes: r } = n(15202).V,
             },
             CHANNEL_ICON: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_16',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_44',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_27',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_22',
                         opacity: 1
                     }
@@ -1148,19 +1148,19 @@ let { Themes: r } = n(15202).V,
             },
             CHANNELS_DEFAULT: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_23',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_38',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_33',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_29',
                         opacity: 1
                     }
@@ -1168,19 +1168,19 @@ let { Themes: r } = n(15202).V,
             },
             HEADER_MUTED: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_23',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_38',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_33',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_29',
                         opacity: 1
                     }
@@ -1188,19 +1188,19 @@ let { Themes: r } = n(15202).V,
             },
             HEADER_PRIMARY: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_1',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_71',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_7',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_2',
                         opacity: 1
                     }
@@ -1208,19 +1208,19 @@ let { Themes: r } = n(15202).V,
             },
             HEADER_SECONDARY: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_5',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_55',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_17',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_13',
                         opacity: 1
                     }
@@ -1228,19 +1228,19 @@ let { Themes: r } = n(15202).V,
             },
             ICON_MUTED: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_23',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_38',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_33',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_29',
                         opacity: 1
                     }
@@ -1248,19 +1248,19 @@ let { Themes: r } = n(15202).V,
             },
             ICON_PRIMARY: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_2',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_59',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_14',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_10',
                         opacity: 1
                     }
@@ -1268,19 +1268,19 @@ let { Themes: r } = n(15202).V,
             },
             ICON_SECONDARY: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_16',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_44',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_27',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_22',
                         opacity: 1
                     }
@@ -1288,19 +1288,19 @@ let { Themes: r } = n(15202).V,
             },
             INFO_DANGER_BACKGROUND: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'RED_NEW_72',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'RED_NEW_1',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'RED_NEW_88',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'RED_NEW_81',
                         opacity: 1
                     }
@@ -1308,19 +1308,19 @@ let { Themes: r } = n(15202).V,
             },
             INFO_DANGER_TEXT: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'RED_NEW_1',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'RED_NEW_74',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'RED_NEW_16',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'RED_NEW_9',
                         opacity: 1
                     }
@@ -1328,19 +1328,19 @@ let { Themes: r } = n(15202).V,
             },
             INFO_HELP_BACKGROUND: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'BLUE_NEW_93',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'BLUE_NEW_9',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'BLUE_NEW_93',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'BLUE_NEW_93',
                         opacity: 1
                     }
@@ -1348,19 +1348,19 @@ let { Themes: r } = n(15202).V,
             },
             INFO_HELP_TEXT: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'BLUE_NEW_27',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'BLUE_NEW_49',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'BLUE_NEW_42',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'BLUE_NEW_36',
                         opacity: 1
                     }
@@ -1368,19 +1368,19 @@ let { Themes: r } = n(15202).V,
             },
             INFO_POSITIVE_BACKGROUND: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'GREEN_NEW_93',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'GREEN_NEW_9',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'GREEN_NEW_93',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'GREEN_NEW_93',
                         opacity: 1
                     }
@@ -1388,19 +1388,19 @@ let { Themes: r } = n(15202).V,
             },
             INFO_POSITIVE_TEXT: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'GREEN_NEW_27',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'GREEN_NEW_48',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'GREEN_NEW_41',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'GREEN_NEW_36',
                         opacity: 1
                     }
@@ -1408,19 +1408,19 @@ let { Themes: r } = n(15202).V,
             },
             INFO_WARNING_BACKGROUND: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'YELLOW_NEW_93',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'YELLOW_NEW_9',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'YELLOW_NEW_93',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'YELLOW_NEW_93',
                         opacity: 1
                     }
@@ -1428,19 +1428,19 @@ let { Themes: r } = n(15202).V,
             },
             INFO_WARNING_TEXT: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'YELLOW_NEW_25',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'YELLOW_NEW_47',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'YELLOW_NEW_40',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'YELLOW_NEW_34',
                         opacity: 1
                     }
@@ -1448,19 +1448,19 @@ let { Themes: r } = n(15202).V,
             },
             INPUT_BACKGROUND: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'OPACITY_BLACK_8',
                         opacity: 0.0784313725490196
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'OPACITY_BLACK_8',
                         opacity: 0.0784313725490196
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'OPACITY_BLACK_8',
                         opacity: 0.0784313725490196
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'OPACITY_BLACK_8',
                         opacity: 0.0784313725490196
                     }
@@ -1468,19 +1468,19 @@ let { Themes: r } = n(15202).V,
             },
             INPUT_BORDER: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'OPACITY_12',
                         opacity: 0.12156862745098039
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'OPACITY_20',
                         opacity: 0.2
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'OPACITY_20',
                         opacity: 0.2
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'OPACITY_12',
                         opacity: 0.12156862745098039
                     }
@@ -1488,11 +1488,11 @@ let { Themes: r } = n(15202).V,
             },
             INPUT_FOCUSED_BORDER: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'WHITE',
                         opacity: 0.04
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'BLACK',
                         opacity: 0.04
                     }
@@ -1500,19 +1500,19 @@ let { Themes: r } = n(15202).V,
             },
             INTERACTIVE_ACTIVE: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_1',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_71',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_7',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_2',
                         opacity: 1
                     }
@@ -1520,19 +1520,19 @@ let { Themes: r } = n(15202).V,
             },
             INTERACTIVE_HOVER: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_16',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_44',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_27',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_22',
                         opacity: 1
                     }
@@ -1540,19 +1540,19 @@ let { Themes: r } = n(15202).V,
             },
             INTERACTIVE_NORMAL: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_16',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_44',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_27',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_22',
                         opacity: 1
                     }
@@ -1560,19 +1560,19 @@ let { Themes: r } = n(15202).V,
             },
             MENTION_BACKGROUND: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'OPACITY_BLURPLE_24',
                         opacity: 0.23921568627450981
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'OPACITY_BLURPLE_24',
                         opacity: 0.23921568627450981
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'OPACITY_BLURPLE_24',
                         opacity: 0.23921568627450981
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'OPACITY_BLURPLE_24',
                         opacity: 0.23921568627450981
                     }
@@ -1580,19 +1580,19 @@ let { Themes: r } = n(15202).V,
             },
             MENTION_FOREGROUND: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'BLURPLE_11',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'BLURPLE_71',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'BLURPLE_26',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'BLURPLE_19',
                         opacity: 1
                     }
@@ -1600,19 +1600,19 @@ let { Themes: r } = n(15202).V,
             },
             SCROLLBAR_AUTO_SCROLLBAR_COLOR_THUMB: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_38',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_31',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_45',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_43',
                         opacity: 1
                     }
@@ -1620,19 +1620,19 @@ let { Themes: r } = n(15202).V,
             },
             SCROLLBAR_AUTO_SCROLLBAR_COLOR_TRACK: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_75',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_3',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_98',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_90',
                         opacity: 1
                     }
@@ -1640,19 +1640,19 @@ let { Themes: r } = n(15202).V,
             },
             SCROLLBAR_AUTO_THUMB: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_38',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_30',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_45',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_42',
                         opacity: 1
                     }
@@ -1660,19 +1660,19 @@ let { Themes: r } = n(15202).V,
             },
             SCROLLBAR_AUTO_TRACK: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'TRANSPARENT',
                         opacity: 0
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'TRANSPARENT',
                         opacity: 0
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'TRANSPARENT',
                         opacity: 0
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'TRANSPARENT',
                         opacity: 0
                     }
@@ -1680,19 +1680,19 @@ let { Themes: r } = n(15202).V,
             },
             SCROLLBAR_THIN_THUMB: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_39',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_32',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_46',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_44',
                         opacity: 1
                     }
@@ -1700,19 +1700,19 @@ let { Themes: r } = n(15202).V,
             },
             TEXT_BRAND: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'BLURPLE_26',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'BLURPLE_49',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'BLURPLE_41',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'BLURPLE_35',
                         opacity: 1
                     }
@@ -1720,19 +1720,19 @@ let { Themes: r } = n(15202).V,
             },
             TEXT_LINK: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'BLUE_NEW_27',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'BLUE_NEW_49',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'BLUE_NEW_42',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'BLUE_NEW_36',
                         opacity: 1
                     }
@@ -1740,19 +1740,19 @@ let { Themes: r } = n(15202).V,
             },
             TEXT_MUTED: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_23',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_38',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_33',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_29',
                         opacity: 1
                     }
@@ -1760,19 +1760,19 @@ let { Themes: r } = n(15202).V,
             },
             TEXT_NORMAL: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_5',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_55',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_17',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_13',
                         opacity: 1
                     }
@@ -1780,19 +1780,19 @@ let { Themes: r } = n(15202).V,
             },
             TEXT_POSITIVE: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'GREEN_NEW_27',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'GREEN_NEW_48',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'GREEN_NEW_41',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'GREEN_NEW_36',
                         opacity: 1
                     }
@@ -1800,19 +1800,19 @@ let { Themes: r } = n(15202).V,
             },
             TEXT_PRIMARY: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_1',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_71',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_7',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_2',
                         opacity: 1
                     }
@@ -1820,19 +1820,19 @@ let { Themes: r } = n(15202).V,
             },
             TEXT_SECONDARY: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'NEUTRAL_16',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'NEUTRAL_44',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'NEUTRAL_27',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'NEUTRAL_22',
                         opacity: 1
                     }
@@ -1840,19 +1840,19 @@ let { Themes: r } = n(15202).V,
             },
             TEXT_WARNING: {
                 'visual-refresh': {
-                    [r.DARK]: {
+                    [i.DARK]: {
                         raw: 'YELLOW_NEW_25',
                         opacity: 1
                     },
-                    [r.LIGHT]: {
+                    [i.LIGHT]: {
                         raw: 'YELLOW_NEW_47',
                         opacity: 1
                     },
-                    [r.MIDNIGHT]: {
+                    [i.MIDNIGHT]: {
                         raw: 'YELLOW_NEW_40',
                         opacity: 1
                     },
-                    [r.DARKER]: {
+                    [i.DARKER]: {
                         raw: 'YELLOW_NEW_34',
                         opacity: 1
                     }

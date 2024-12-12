@@ -1,19 +1,19 @@
-n.r(t);
-var r = n(212059),
-    i = n(667895),
-    a = n(11608),
-    s = n(682751),
-    o = n(109515),
-    l = {
+r.r(n);
+var i = r(212059),
+    a = r(667895),
+    s = r(11608),
+    o = r(682751),
+    l = r(109515),
+    u = {
         code: 'en-US',
-        formatDistance: r.Z,
-        formatLong: i.Z,
-        formatRelative: a.Z,
-        localize: s.Z,
-        match: o.Z,
+        formatDistance: i.Z,
+        formatLong: a.Z,
+        formatRelative: s.Z,
+        localize: o.Z,
+        match: l.Z,
         options: {
             weekStartsOn: 0,
             firstWeekContainsDate: 1
         }
     };
-t.default = l;
+n.default = u;

@@ -1,55 +1,55 @@
-n.r(t),
-    n.d(t, {
+r.r(n),
+    r.d(n, {
         default: function () {
-            return o;
+            return u;
         }
-    }),
-    n(411104);
-var r = n(592125),
-    i = n(19780),
-    a = n(981631),
-    s = n(176505);
-function o(e, t) {
-    let n;
+    });
+var i = r(411104);
+var a = r(592125),
+    s = r(19780),
+    o = r(981631),
+    l = r(176505);
+function u(e, n) {
+    let r;
     switch (e) {
-        case a.rMx.CHANNEL_OPENED_CLICKSTREAM:
-            var o, l;
-            let u = (n = t).channelId;
-            switch (u) {
-                case s.oC.CHANNEL_BROWSER:
-                case s.oC.GUILD_HOME:
-                case s.oC.GUILD_SHOP:
-                case s.oC.MEMBER_APPLICATIONS:
-                case s.oC.ROLE_SUBSCRIPTIONS:
-                case s.oC.CUSTOMIZE_COMMUNITY:
-                case s.oC.MEMBER_SAFETY:
-                case s.oC.GUILD_ONBOARDING:
+        case o.rMx.CHANNEL_OPENED_CLICKSTREAM:
+            var i, u;
+            let c = (r = n).channelId;
+            switch (c) {
+                case l.oC.CHANNEL_BROWSER:
+                case l.oC.GUILD_HOME:
+                case l.oC.GUILD_SHOP:
+                case l.oC.MEMBER_APPLICATIONS:
+                case l.oC.ROLE_SUBSCRIPTIONS:
+                case l.oC.CUSTOMIZE_COMMUNITY:
+                case l.oC.MEMBER_SAFETY:
+                case l.oC.GUILD_ONBOARDING:
                     return;
             }
-            let c = null !== (l = null === (o = r.Z.getChannel(u)) || void 0 === o ? void 0 : o.type) && void 0 !== l ? l : a.d4z.UNKNOWN;
+            let d = null !== (u = null === (i = a.Z.getChannel(c)) || void 0 === i ? void 0 : i.type) && void 0 !== u ? u : o.d4z.UNKNOWN;
             return {
                 timestamp: new Date(),
-                rtc_state: i.Z.getState(),
-                channelId: u,
-                channelType: c
+                rtc_state: s.Z.getState(),
+                channelId: c,
+                channelType: d
             };
-        case a.rMx.GUILD_VIEWED_CLICKSTREAM:
-            let d = (n = t).guildId;
+        case o.rMx.GUILD_VIEWED_CLICKSTREAM:
+            let f = (r = n).guildId;
             return {
                 timestamp: new Date(),
-                rtc_state: i.Z.getState(),
-                guildId: d
+                rtc_state: s.Z.getState(),
+                guildId: f
             };
-        case a.rMx.FRIENDS_LIST_VIEWED_CLICKSTREAM:
+        case o.rMx.FRIENDS_LIST_VIEWED_CLICKSTREAM:
             return (
-                (n = t),
+                (r = n),
                 {
                     timestamp: new Date(),
-                    rtc_state: i.Z.getState(),
-                    tab_opened: n.tab_opened,
-                    num_friends: n.num_friends,
-                    now_playing_visible: n.now_playing_visible,
-                    now_playing_num_cards: n.now_playing_num_cards
+                    rtc_state: s.Z.getState(),
+                    tab_opened: r.tab_opened,
+                    num_friends: r.num_friends,
+                    now_playing_visible: r.now_playing_visible,
+                    now_playing_num_cards: r.now_playing_num_cards
                 }
             );
         default:

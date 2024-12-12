@@ -1,58 +1,58 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return d;
+        return _;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(481060),
-    s = n(100527),
-    o = n(906732),
-    l = n(960870),
-    u = n(848966),
-    c = n(388032);
-function d(e) {
-    let { children: t, user: n, activity: d, entry: f, display: _, onSelect: p, onClose: h } = e,
-        [m, g] = i.useState(!1),
-        { analyticsLocations: E } = (0, o.ZP)(s.Z.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
-        v = (0, l.Z)({
-            display: _,
-            user: n,
-            activity: d,
-            entry: f,
-            analyticsLocations: E
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(481060),
+    l = r(100527),
+    u = r(906732),
+    c = r(960870),
+    d = r(848966),
+    f = r(388032);
+function _(e) {
+    let { children: n, user: r, activity: i, entry: _, display: h, onSelect: p, onClose: m } = e,
+        [g, E] = s.useState(!1),
+        { analyticsLocations: v } = (0, u.ZP)(l.Z.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
+        I = (0, c.Z)({
+            display: h,
+            user: r,
+            activity: i,
+            entry: _,
+            analyticsLocations: v
         }),
-        I = (0, u.Z)({
-            entry: f,
-            activity: d,
-            user: n,
-            display: _,
-            onClose: h,
-            onAction: v,
-            isMenuOpen: m
+        T = (0, d.Z)({
+            entry: _,
+            activity: i,
+            user: r,
+            display: h,
+            onClose: m,
+            onAction: I,
+            isMenuOpen: g
         });
-    return 0 === I.length || n.bot
+    return 0 === T.length || r.bot
         ? null
-        : (0, r.jsx)(a.Popout, {
+        : (0, a.jsx)(o.Popout, {
               align: 'top',
               position: 'right',
               disablePointerEvents: !1,
               onRequestOpen: () => {
-                  v({ action: 'OPEN_MENU' }), g(!0);
+                  I({ action: 'OPEN_MENU' }), E(!0);
               },
               renderPopout: (e) => {
-                  let { closePopout: t } = e;
-                  return (0, r.jsx)(a.Menu, {
+                  let { closePopout: n } = e;
+                  return (0, a.jsx)(o.Menu, {
                       navId: 'content-inventory-context',
                       onClose: () => {
-                          t(), g(!1);
+                          n(), E(!1);
                       },
-                      'aria-label': c.intl.string(c.t.PlAQz8),
+                      'aria-label': f.intl.string(f.t.PlAQz8),
                       onSelect: p,
-                      children: (0, r.jsx)(a.MenuGroup, { children: I })
+                      children: (0, a.jsx)(o.MenuGroup, { children: T })
                   });
               },
-              children: t
+              children: n
           });
 }

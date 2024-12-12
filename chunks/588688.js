@@ -1,53 +1,53 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return l;
+        return c;
     }
-}),
-    n(47120);
-var r = n(200651);
-n(192379);
-var i = n(278074),
-    a = n(788307),
-    s = n(26033),
-    o = n(388032);
-function l(e) {
-    let { entry: t, className: n, textClassName: l } = e,
-        { message: u, title: c } = (0, i.EQ)(t)
-            .when(s.dX, (e) => {
-                let { extra: t } = e;
+});
+var i = r(47120);
+var a = r(200651);
+r(192379);
+var s = r(278074),
+    o = r(788307),
+    l = r(26033),
+    u = r(388032);
+function c(e) {
+    let { entry: n, className: r, textClassName: i } = e,
+        { message: c, title: d } = (0, s.EQ)(n)
+            .when(l.dX, (e) => {
+                let { extra: n } = e;
                 return {
-                    message: o.t['wgtd/f'],
-                    title: t.game_name
+                    message: u.t['wgtd/f'],
+                    title: n.game_name
                 };
             })
-            .when(s.Mq, (e) => {
-                let { extra: t } = e;
+            .when(l.Mq, (e) => {
+                let { extra: n } = e;
                 return {
-                    message: o.t['wgtd/f'],
-                    title: t.activity_name
+                    message: u.t['wgtd/f'],
+                    title: n.activity_name
                 };
             })
-            .when(s.y0, (e) => {
-                let { extra: t } = e;
+            .when(l.y0, (e) => {
+                let { extra: n } = e;
                 return {
-                    message: o.t.nCCdMD,
-                    title: t.media_title
+                    message: u.t.nCCdMD,
+                    title: n.media_title
                 };
             })
-            .when(s.dU, (e) => {
-                var t, n;
-                let { extra: r } = e;
+            .when(l.dU, (e) => {
+                var n, r;
+                let { extra: i } = e;
                 return {
-                    message: o.t.PYEeFh,
-                    title: null === (n = r.entries[0]) || void 0 === n ? void 0 : null === (t = n.media) || void 0 === t ? void 0 : t.title
+                    message: u.t.PYEeFh,
+                    title: null === (r = i.entries[0]) || void 0 === r ? void 0 : null === (n = r.media) || void 0 === n ? void 0 : n.title
                 };
             })
             .exhaustive();
-    return (0, r.jsx)('div', {
-        className: n,
-        children: (0, r.jsx)(a.DD, {
-            text: o.intl.format(u, { title: c }),
-            className: l
+    return (0, a.jsx)('div', {
+        className: r,
+        children: (0, a.jsx)(o.DD, {
+            text: u.intl.format(c, { title: d }),
+            className: i
         })
     });
 }

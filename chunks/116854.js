@@ -1,19 +1,19 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(272277);
-function s(e) {
-    let { user: t, nickname: n } = e,
-        s = null != n;
-    return (0, r.jsx)(i.Avatar, {
-        src: t.getAvatarURL(void 0, s ? 16 : 24),
-        size: s ? i.AvatarSizes.SIZE_16 : i.AvatarSizes.SIZE_24,
-        className: s ? a.miniAvatar : a.largeAvatar,
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(272277);
+function o(e) {
+    let { user: n, nickname: r } = e,
+        o = null != r;
+    return (0, i.jsx)(a.Avatar, {
+        src: n.getAvatarURL(void 0, o ? 16 : 24),
+        size: o ? a.AvatarSizes.SIZE_16 : a.AvatarSizes.SIZE_24,
+        className: o ? s.miniAvatar : s.largeAvatar,
         'aria-hidden': !0
     });
 }

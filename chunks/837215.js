@@ -1,35 +1,35 @@
-n.d(t, {
+r.d(n, {
     s: function () {
-        return l;
+        return u;
     }
 });
-var r = n(192379),
-    i = n(820282),
-    a = n.n(i),
-    s = n(298503),
-    o = n(632590);
-function l(e) {
-    var t = e.children,
-        n = e.innerRef,
-        i = r.useContext(s.mq),
-        l = r.useCallback(
+var i = r(192379),
+    a = r(820282),
+    s = r.n(a),
+    o = r(298503),
+    l = r(632590);
+function u(e) {
+    var n = e.children,
+        r = e.innerRef,
+        a = i.useContext(o.mq),
+        u = i.useCallback(
             function (e) {
-                (0, o.k$)(n, e), (0, o.DL)(i, e);
+                (0, l.k$)(r, e), (0, l.DL)(a, e);
             },
-            [n, i]
+            [r, a]
         );
     return (
-        r.useEffect(function () {
+        i.useEffect(function () {
             return function () {
-                return (0, o.k$)(n, null);
+                return (0, l.k$)(r, null);
             };
         }, []),
-        r.useEffect(
+        i.useEffect(
             function () {
-                a()(!!i, '`Reference` should not be used outside of a `Manager` component.');
+                s()(!!a, '`Reference` should not be used outside of a `Manager` component.');
             },
-            [i]
+            [a]
         ),
-        (0, o.$p)(t)({ ref: l })
+        (0, l.$p)(n)({ ref: u })
     );
 }

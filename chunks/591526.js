@@ -1,34 +1,34 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return l;
     }
-}),
-    n(47120);
-var r = n(710845),
-    i = n(287328);
-let a = new r.Z('ChannelReader');
-class s {
-    static getSync(e, t) {
-        let n = performance.now(),
-            r = i.Z.channels(e).getManySyncUnsafe(t),
-            s = performance.now() - n;
-        return a.log('synchronously loaded in '.concat(s, 'ms (guild: ').concat(t, ', channels: ').concat(r.length, ')')), [r, s];
+});
+var i = r(47120);
+var a = r(710845),
+    s = r(287328);
+let o = new a.Z('ChannelReader');
+class l {
+    static getSync(e, n) {
+        let r = performance.now(),
+            i = s.Z.channels(e).getManySyncUnsafe(n),
+            a = performance.now() - r;
+        return o.log('synchronously loaded in '.concat(a, 'ms (guild: ').concat(n, ', channels: ').concat(i.length, ')')), [i, a];
     }
-    static async getAsync(e, t) {
-        let n = performance.now(),
-            r = await i.Z.channels(e).getMany(t),
-            s = performance.now() - n;
-        return a.verbose('loaded in '.concat(s, 'ms (guild: ').concat(t, ', channels: ').concat(r.length, ')')), r;
+    static async getAsync(e, n) {
+        let r = performance.now(),
+            i = await s.Z.channels(e).getMany(n),
+            a = performance.now() - r;
+        return o.verbose('loaded in '.concat(a, 'ms (guild: ').concat(n, ', channels: ').concat(i.length, ')')), i;
     }
     static async getGuildIds() {
         try {
             var e;
-            let t = i.Z.channels();
-            if (null == t) return new Set();
-            let n = (null !== (e = await t.getGuildIds()) && void 0 !== e ? e : []).filter((e) => null !== e && 'string' == typeof e);
-            return new Set(n);
+            let n = s.Z.channels();
+            if (null == n) return new Set();
+            let r = (null !== (e = await n.getGuildIds()) && void 0 !== e ? e : []).filter((e) => null !== e && 'string' == typeof e);
+            return new Set(r);
         } catch (e) {
-            return a.warn("couldn't get guild ids", e), new Set();
+            return o.warn("couldn't get guild ids", e), new Set();
         }
     }
 }

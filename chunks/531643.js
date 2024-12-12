@@ -1,54 +1,54 @@
-n.r(t),
-    n.d(t, {
+r.r(n),
+    r.d(n, {
         UPLOAD_ERROR_MODAL_KEY: function () {
             return p;
         },
         default: function () {
-            return _;
+            return h;
         },
         openUploadError: function () {
-            return h;
+            return m;
         }
     });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(952265),
-    o = n(466377),
-    l = n(313201),
-    u = n(355314),
-    c = n(310752),
-    d = n(731994),
-    f = n(55720);
-function _(e) {
-    let { title: t, help: n, showPremiumUpsell: i, transitionState: s, icons: _, fileSize: p, onClose: h } = e,
-        m = (0, l.Dt)(),
-        g = null != _ ? _ : d.J6;
-    return i
-        ? (0, r.jsx)(u.Z, {
-              transitionState: s,
-              onClose: h,
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(952265),
+    l = r(466377),
+    u = r(313201),
+    c = r(355314),
+    d = r(310752),
+    f = r(731994),
+    _ = r(55720);
+function h(e) {
+    let { title: n, help: r, showPremiumUpsell: a, transitionState: o, icons: h, fileSize: p, onClose: m } = e,
+        g = (0, u.Dt)(),
+        E = null != h ? h : f.J6;
+    return a
+        ? (0, i.jsx)(c.Z, {
+              transitionState: o,
+              onClose: m,
               fileSize: p
           })
-        : (0, r.jsx)(o.Y0, {
-              size: o.Cg.DYNAMIC,
-              'aria-labelledby': m,
-              transitionState: s,
-              children: (0, r.jsx)('div', {
-                  className: a()(f.uploadDropModal, f.error),
-                  children: (0, r.jsxs)('div', {
-                      className: f.inner,
+        : (0, i.jsx)(l.Y0, {
+              size: l.Cg.DYNAMIC,
+              'aria-labelledby': g,
+              transitionState: o,
+              children: (0, i.jsx)('div', {
+                  className: s()(_.uploadDropModal, _.error),
+                  children: (0, i.jsxs)('div', {
+                      className: _.inner,
                       children: [
-                          (0, r.jsx)(c.Z, { icons: g }),
-                          (0, r.jsx)('div', {
-                              id: m,
-                              className: f.title,
-                              children: t
-                          }),
-                          (0, r.jsx)('div', {
-                              className: f.instructions,
+                          (0, i.jsx)(d.Z, { icons: E }),
+                          (0, i.jsx)('div', {
+                              id: g,
+                              className: _.title,
                               children: n
+                          }),
+                          (0, i.jsx)('div', {
+                              className: _.instructions,
+                              children: r
                           })
                       ]
                   })
@@ -56,11 +56,11 @@ function _(e) {
           });
 }
 let p = 'UPLOAD_ERROR_MODAL_KEY';
-function h(e) {
-    (0, s.h7)(
-        (t) =>
-            (0, r.jsx)(_, {
-                ...t,
+function m(e) {
+    (0, o.h7)(
+        (n) =>
+            (0, i.jsx)(h, {
+                ...n,
                 ...e
             }),
         { modalKey: p }

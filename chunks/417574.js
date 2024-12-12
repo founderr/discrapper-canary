@@ -1,6 +1,6 @@
-n.d(t, {
+r.d(n, {
     X: function () {
-        return r;
+        return i;
     }
 });
-let r = /^<@!?(\d+)>/u;
+let i = /^<@!?(\d+)>/u;

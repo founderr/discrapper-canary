@@ -1,27 +1,27 @@
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140);
-let u = !1;
-class c extends (s = o.ZP.Store) {
+var i,
+    a = r(442837),
+    s = r(570140);
+function o(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let l = !1;
+function u(e) {
+    let { isRegistered: n } = e;
+    l = n;
+}
+class c extends (i = a.ZP.Store) {
     isProtocolRegistered() {
-        return u;
+        return l;
     }
 }
-(a = 'SpotifyProtocolStore'),
-    (i = 'displayName') in (r = c)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.Z = new c(l.Z, {
-        SPOTIFY_SET_PROTOCOL_REGISTERED: function (e) {
-            let { isRegistered: t } = e;
-            u = t;
-        }
-    }));
+o(c, 'displayName', 'SpotifyProtocolStore'), (n.Z = new c(s.Z, { SPOTIFY_SET_PROTOCOL_REGISTERED: u }));

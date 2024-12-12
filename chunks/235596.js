@@ -1,19 +1,19 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     deselectedItem: (e) => `${e.item} no seleccionado.`,
     longPressToSelect: `Mantenga pulsado para abrir el modo de selecci\xf3n.`,
     select: 'Seleccionar',
     selectedAll: 'Todos los elementos seleccionados.',
-    selectedCount: (e, t) =>
-        `${t.plural(e.count, {
+    selectedCount: (e, n) =>
+        `${n.plural(e.count, {
             '=0': `Ning\xfan elemento seleccionado`,
-            one: () => `${t.number(e.count)} elemento seleccionado`,
-            other: () => `${t.number(e.count)} elementos seleccionados`
+            one: () => `${n.number(e.count)} elemento seleccionado`,
+            other: () => `${n.number(e.count)} elementos seleccionados`
         })}.`,
     selectedItem: (e) => `${e.item} seleccionado.`
 };

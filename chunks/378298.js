@@ -1,72 +1,72 @@
-n.d(t, {
+r.d(n, {
     Dl: function () {
-        return f;
+        return _;
     },
     Ms: function () {
-        return l;
+        return u;
     },
     Ot: function () {
-        return c;
-    },
-    T: function () {
-        return o;
-    },
-    Uj: function () {
         return d;
     },
+    T: function () {
+        return l;
+    },
+    Uj: function () {
+        return f;
+    },
     wS: function () {
-        return u;
+        return c;
     }
 });
-var r = n(544891),
-    i = n(570140),
-    a = n(359119),
-    s = n(981631);
-function o(e, t) {
+var i = r(544891),
+    a = r(570140),
+    s = r(359119),
+    o = r(981631);
+function l(e, n) {
     return (
-        i.Z.dispatch({
+        a.Z.dispatch({
             type: 'DISMISS_CHANNEL_SAFETY_WARNINGS',
             channelId: e,
-            warningIds: t
+            warningIds: n
         }),
-        r.tn.post({
-            url: s.ANM.CHANNEL_SAFETY_WARNINGS_ACK(e),
-            body: { warning_ids: t },
+        i.tn.post({
+            url: o.ANM.CHANNEL_SAFETY_WARNINGS_ACK(e),
+            body: { warning_ids: n },
             oldFormErrors: !0,
             rejectWithError: !1
         })
     );
 }
-function l(e, t, n) {
-    i.Z.dispatch({
+function u(e, n, r) {
+    a.Z.dispatch({
         type: 'CHANNEL_SAFETY_WARNING_FEEDBACK',
         channelId: e,
-        warningId: t,
-        feedbackType: n
+        warningId: n,
+        feedbackType: r
     });
 }
-function u(e) {
-    i.Z.dispatch({
+function c(e) {
+    a.Z.dispatch({
         type: 'CLEAR_CHANNEL_SAFETY_WARNINGS',
         channelId: e
     });
 }
-function c(e) {
-    i.Z.dispatch({
+function d(e) {
+    a.Z.dispatch({
         type: 'ACKNOWLEDGE_CHANNEL_SAFETY_WARNING_TOOLTIP',
         channelId: e
     });
 }
-function d(e) {
-    return r.tn.post({
-        url: s.ANM.SAFETY_WARNING_FALSE_POSITIVE(e),
+function f(e) {
+    return i.tn.post({
+        url: o.ANM.SAFETY_WARNING_FALSE_POSITIVE(e),
         rejectWithError: !1
     });
 }
-function f(e) {
-    return r.tn.post({
-        url: s.ANM.ADD_SAFETY_WARNING(e),
-        body: { safety_warning_type: a.pj.STRANGER_DANGER },
+function _(e) {
+    return i.tn.post({
+        url: o.ANM.ADD_SAFETY_WARNING(e),
+        body: { safety_warning_type: s.pj.STRANGER_DANGER },
         rejectWithError: !1
     });
 }

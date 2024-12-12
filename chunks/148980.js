@@ -1,26 +1,26 @@
-n.d(t, {
+r.d(n, {
     f: function () {
-        return u;
+        return c;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(801787),
-    o = n(663002),
-    l = n(168551);
-function u(e) {
-    var t;
-    let { theme: n, gradient: i, disableAdaptiveTheme: u, children: c } = e;
-    return (0, r.jsx)(s.ze, {
-        theme: n,
-        gradient: i,
-        disableAdaptiveTheme: u,
-        children: c(
-            a()((0, o.Qe)(null !== (t = null == i ? void 0 : i.theme) && void 0 !== t ? t : n), {
-                [l.e3]: null != i,
-                'disable-adaptive-theme': u
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(801787),
+    l = r(663002),
+    u = r(168551);
+function c(e) {
+    var n;
+    let { theme: r, gradient: a, disableAdaptiveTheme: c, children: d } = e;
+    return (0, i.jsx)(o.ze, {
+        theme: r,
+        gradient: a,
+        disableAdaptiveTheme: c,
+        children: d(
+            s()((0, l.Qe)(null !== (n = null == a ? void 0 : a.theme) && void 0 !== n ? n : r), {
+                [u.e3]: null != a,
+                'disable-adaptive-theme': c
             })
         )
     });

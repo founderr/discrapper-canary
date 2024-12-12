@@ -1,12 +1,12 @@
-n.d(t, {
+r.d(n, {
     e: function () {
-        return u;
+        return c;
     }
 });
-var r,
-    i = n(796075),
-    a = n(803997),
-    s = n.n(a),
-    o = n(355336),
-    l = n(553624);
-let u = (0, o.$)(s()(l.auto, l.disableScrollAnchor), null !== (r = window.ResizeObserver) && void 0 !== r ? r : i.d);
+var i,
+    a = r(796075),
+    s = r(803997),
+    o = r.n(s),
+    l = r(355336),
+    u = r(553624);
+let c = (0, l.$)(o()(u.auto, u.disableScrollAnchor), null !== (i = window.ResizeObserver) && void 0 !== i ? i : a.d);

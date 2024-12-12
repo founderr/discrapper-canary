@@ -1,55 +1,55 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return f;
+        return h;
     }
-}),
-    n(47120);
-var r = n(192379),
-    i = n(392711),
-    a = n(442837),
-    s = n(208826),
-    o = n(40851),
-    l = n(607070),
-    u = n(585483),
-    c = n(981631);
-let d = (0, i.debounce)((e) => {
+});
+var i = r(47120);
+var a = r(192379),
+    s = r(392711);
+var o = r(442837),
+    l = r(208826),
+    u = r(40851),
+    c = r(607070),
+    d = r(585483),
+    f = r(981631);
+let _ = (0, s.debounce)((e) => {
     setTimeout(() => {
-        var t;
-        null === (t = e.current) || void 0 === t || t.focus();
+        var n;
+        null === (n = e.current) || void 0 === n || n.focus();
     }, 0);
 }, 50);
-function f(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : window,
-        i = (0, a.e7)([l.Z], () => l.Z.keyboardModeEnabled),
-        f = (0, s.Z)(),
-        [_, p] = r.useState(!1),
-        h = (0, o.Aq)();
+function h(e, n) {
+    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : window,
+        i = (0, o.e7)([c.Z], () => c.Z.keyboardModeEnabled),
+        s = (0, l.Z)(),
+        [h, p] = a.useState(!1),
+        m = (0, u.Aq)();
     return (
-        r.useEffect(() => {
-            if (t) return n.addEventListener('blur', e), () => n.removeEventListener('blur', e);
+        a.useEffect(() => {
+            if (n) return r.addEventListener('blur', e), () => r.removeEventListener('blur', e);
             function e() {
-                f && (h.dispatch(c.CkL.POPOUT_CLOSE), u.S.dispatch(c.CkL.CONTEXT_MENU_CLOSE));
+                s && (m.dispatch(f.CkL.POPOUT_CLOSE), d.S.dispatch(f.CkL.CONTEXT_MENU_CLOSE));
             }
-        }, [n, f, t, h]),
-        r.useEffect(() => {
-            var r, a, s;
-            if (i || !_ || !t) return;
-            let o = f;
-            function l(t) {
-                let n = t.relatedTarget;
+        }, [r, s, n, m]),
+        a.useEffect(() => {
+            var a, o, l;
+            if (i || !h || !n) return;
+            let u = s;
+            function c(n) {
+                let r = n.relatedTarget;
                 setTimeout(() => {
-                    (null == n || 'BUTTON' === n.tagName) && !o && d(e);
+                    (null == r || 'BUTTON' === r.tagName) && !u && _(e);
                 }, 100);
             }
             return (
-                null === (r = e.current) || void 0 === r || r.addEventListener('focusout', l),
-                (null === (a = n.document.activeElement) || void 0 === a ? void 0 : a.tagName) !== 'IFRAME' && !o && (null === (s = e.current) || void 0 === s || s.focus()),
+                null === (a = e.current) || void 0 === a || a.addEventListener('focusout', c),
+                (null === (o = r.document.activeElement) || void 0 === o ? void 0 : o.tagName) !== 'IFRAME' && !u && (null === (l = e.current) || void 0 === l || l.focus()),
                 () => {
-                    var t;
-                    null === (t = e.current) || void 0 === t || t.removeEventListener('focusout', l), (o = !0);
+                    var n;
+                    null === (n = e.current) || void 0 === n || n.removeEventListener('focusout', c), (u = !0);
                 }
             );
-        }, [t, _, i, e, n, f]),
+        }, [n, h, i, e, r, s]),
         p
     );
 }

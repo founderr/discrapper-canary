@@ -1,25 +1,25 @@
-n.d(t, {
+r.d(n, {
     I: function () {
-        return a;
+        return s;
     },
     K: function () {
-        return i;
+        return a;
     }
 });
-var r = n(99815);
-function i(e) {
-    var t;
-    let i = e.users[0],
-        a = null == i ? void 0 : null === (t = i.statistics[r.E.LOL_MOST_PLAYED_CHAMPION_ID]) || void 0 === t ? void 0 : t.value;
+var i = r(99815);
+function a(e) {
+    var n;
+    let a = e.users[0],
+        s = null == a ? void 0 : null === (n = a.statistics[i.E.LOL_MOST_PLAYED_CHAMPION_ID]) || void 0 === n ? void 0 : n.value;
     try {
-        return null != a ? n(624119)('./champion_'.concat(a, '.jpg')).default : n(721191).Z;
+        return null != s ? r(624119)('./champion_'.concat(s, '.jpg')).default : r(721191).Z;
     } catch {
-        return n(721191).Z;
+        return r(721191).Z;
     }
 }
-function a(e) {
+function s(e) {
     try {
-        return null != e ? n(692425)('./champion_'.concat(e, '.jpg')).default : null;
+        return null != e ? r(692425)('./champion_'.concat(e, '.jpg')).default : null;
     } catch {
         return null;
     }

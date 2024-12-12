@@ -1,44 +1,44 @@
-n.d(t, {
+r.d(n, {
     b: function () {
-        return a;
+        return l;
     }
-}),
-    n(653041),
-    n(47120);
-var r = n(508385);
-function i(e, t, n) {
+});
+var i = r(653041);
+var a = r(47120);
+var s = r(508385);
+function o(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-class a {
+class l {
     addSample(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        (this.total += e * t), (this.totalWeight += t), this.samples++, r.TDigest.prototype.push.call(this.digest, e, t), this.digest.check_continuous();
+        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        (this.total += e * n), (this.totalWeight += n), this.samples++, s.TDigest.prototype.push.call(this.digest, e, n), this.digest.check_continuous();
     }
     getReport() {
-        var e, t, n, r;
-        let i = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [25, 50, 75, 90, 95],
-            a = {};
-        for (let t of i) a[t] = null !== (e = this.digest.percentile(t / 100)) && void 0 !== e ? e : 0;
+        var e, n, r, i;
+        let a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [25, 50, 75, 90, 95],
+            s = {};
+        for (let n of a) s[n] = null !== (e = this.digest.percentile(n / 100)) && void 0 !== e ? e : 0;
         return {
-            min: null !== (t = this.digest.percentile(0)) && void 0 !== t ? t : 0,
-            max: null !== (n = this.digest.percentile(1)) && void 0 !== n ? n : 0,
-            count: null !== (r = this.digest.size()) && void 0 !== r ? r : 0,
-            percentiles: a,
+            min: null !== (n = this.digest.percentile(0)) && void 0 !== n ? n : 0,
+            max: null !== (r = this.digest.percentile(1)) && void 0 !== r ? r : 0,
+            count: null !== (i = this.digest.size()) && void 0 !== i ? i : 0,
+            percentiles: s,
             mean: this.totalWeight > 0 ? this.total / this.totalWeight : 0,
             samples: this.samples
         };
     }
     constructor() {
-        i(this, 'digest', new r.Digest()), i(this, 'total', 0), i(this, 'samples', 0), i(this, 'totalWeight', 0);
+        o(this, 'digest', new s.Digest()), o(this, 'total', 0), o(this, 'samples', 0), o(this, 'totalWeight', 0);
     }
 }

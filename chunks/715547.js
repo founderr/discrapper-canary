@@ -1,22 +1,22 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return l;
+        return u;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(655922),
-    a = n(420660),
-    s = n(475413),
-    o = n(388032);
-function l(e) {
-    let { activity: t, onAction: n } = e,
-        l = (0, i.Z)(t);
-    return (0, a.Z)(t) && null != l
-        ? (0, r.jsx)(s.tG, {
-              text: o.intl.string(o.t['I6JG4+']),
+var i = r(200651);
+r(192379);
+var a = r(655922),
+    s = r(420660),
+    o = r(475413),
+    l = r(388032);
+function u(e) {
+    let { activity: n, onAction: r } = e,
+        u = (0, a.Z)(n);
+    return (0, s.Z)(n) && null != u
+        ? (0, i.jsx)(o.tG, {
+              text: l.intl.string(l.t['I6JG4+']),
               fullWidth: !0,
-              onClick: () => (null == n || n({ action: 'PRESS_WATCH_BUTTON' }), window.open(l))
+              onClick: () => (null == r || r({ action: 'PRESS_WATCH_BUTTON' }), window.open(u))
           })
         : null;
 }

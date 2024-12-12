@@ -1,21 +1,21 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(192379),
-    i = n(570140);
-function a(e) {
-    let { channel: t, userActivity: n } = e,
-        a = t.id,
-        s = null == n ? void 0 : n.applicationId;
-    r.useEffect(() => {
-        null != a &&
-            null != s &&
-            i.Z.dispatch({
+var i = r(192379),
+    a = r(570140);
+function s(e) {
+    let { channel: n, userActivity: r } = e,
+        s = n.id,
+        o = null == r ? void 0 : r.applicationId;
+    i.useEffect(() => {
+        null != s &&
+            null != o &&
+            a.Z.dispatch({
                 type: 'EMBEDDED_ACTIVITY_OPEN',
-                channelId: a,
-                applicationId: s
+                channelId: s,
+                applicationId: o
             });
-    }, [a, s]);
+    }, [s, o]);
 }

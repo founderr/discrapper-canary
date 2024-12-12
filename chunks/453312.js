@@ -1,7 +1,7 @@
-var r = n(690244)('%Array%'),
-    i = !r.isArray && n(192853)('Object.prototype.toString');
+var i = r(690244)('%Array%'),
+    a = !i.isArray && r(192853)('Object.prototype.toString');
 e.exports =
-    r.isArray ||
+    i.isArray ||
     function (e) {
-        return '[object Array]' === i(e);
+        return '[object Array]' === a(e);
     };

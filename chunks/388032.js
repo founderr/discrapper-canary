@@ -1,87 +1,87 @@
-n.r(t),
-    n.d(t, {
+r.r(n),
+    r.d(n, {
         getAvailableLocales: function () {
-            return l.u5;
+            return c.u5;
         },
         getLanguages: function () {
-            return l.Vb;
+            return c.Vb;
         },
         getSystemLocale: function () {
-            return f;
-        },
-        initialLocale: function () {
-            return p;
-        },
-        international: function () {
-            return c.Z;
-        },
-        intl: function () {
             return h;
         },
+        initialLocale: function () {
+            return m;
+        },
+        international: function () {
+            return f.Z;
+        },
+        intl: function () {
+            return g;
+        },
         systemLocale: function () {
-            return _;
+            return p;
         },
         t: function () {
-            return m;
+            return E;
         }
-    }),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(436772),
-    s = n(302454),
-    o = n.n(s),
-    l = n(424395),
-    u = n(786738),
-    c = n(604568),
-    d = n(681276);
-function f(e) {
+    });
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(436772);
+var l = r(302454),
+    u = r.n(l),
+    c = r(424395),
+    d = r(786738),
+    f = r(604568),
+    _ = r(681276);
+function h(e) {
     return [Array.isArray(navigator.languages) ? navigator.languages[0] : null, navigator.language, navigator.browserLanguage, navigator.userLanguage, e].find((e) => null != e && '' !== e);
 }
-let _ = f('en-US'),
-    p = (0, l.YI)(_, 'en-US'),
-    h = new a.IntlManager({
-        initialLocale: p,
+let p = h('en-US'),
+    m = (0, c.YI)(p, 'en-US'),
+    g = new o.IntlManager({
+        initialLocale: m,
         defaultLocale: 'en-US'
     }).withFormatters({
-        format: (0, a.makeReactFormatter)({
-            $i: (e, t) => (0, r.jsx)('em', { children: e }, t),
-            $b: (e, t) => (0, r.jsx)('strong', { children: e }, t),
-            $del: (e, t) => (0, r.jsx)('del', { children: e }, t),
-            $p: (e, t) => (0, r.jsx)('p', { children: e }, t),
-            $code: (e, t) => (0, r.jsx)('code', { children: e }, t),
-            $link: (e, t, r) => {
-                let [a] = r,
-                    { Anchor: s } = n(756715),
+        format: (0, o.makeReactFormatter)({
+            $i: (e, n) => (0, a.jsx)('em', { children: e }, n),
+            $b: (e, n) => (0, a.jsx)('strong', { children: e }, n),
+            $del: (e, n) => (0, a.jsx)('del', { children: e }, n),
+            $p: (e, n) => (0, a.jsx)('p', { children: e }, n),
+            $code: (e, n) => (0, a.jsx)('code', { children: e }, n),
+            $link: (e, n, i) => {
+                let [a] = i,
+                    { Anchor: o } = r(756715),
                     l = {};
                 switch (typeof a) {
                     case 'string':
-                        l.href = o().sanitizeUrl(a);
+                        l.href = u().sanitizeUrl(a);
                         break;
                     case 'function':
                     default:
                         l.onClick = a;
                         break;
                     case 'object':
-                        var u;
+                        var c;
                         if (null == a) break;
-                        (l.onClick = null !== (u = a.onClick) && void 0 !== u ? u : a), (l.onContextMenu = a.onContextMenu);
+                        (l.onClick = null !== (c = a.onClick) && void 0 !== c ? c : a), (l.onContextMenu = a.onContextMenu);
                 }
-                return (0, i.createElement)(
-                    s,
+                return (0, s.createElement)(
+                    o,
                     {
                         ...l,
-                        key: t
+                        key: n
                     },
                     e
                 );
             }
         }),
-        formatToPlainString: a.stringFormatter,
-        formatToMarkdownString: a.markdownFormatter,
-        formatToParts: a.astFormatter
+        formatToPlainString: o.stringFormatter,
+        formatToMarkdownString: o.markdownFormatter,
+        formatToParts: o.astFormatter
     }),
-    m = {
-        ...u.Z,
-        ...d.Z
+    E = {
+        ...d.Z,
+        ..._.Z
     };

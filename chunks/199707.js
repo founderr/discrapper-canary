@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     calendar: `\u{B2EC}\u{B825}`,
     day: `\u{C77C}`,
     dayPeriod: `\u{C624}\u{C804}/\u{C624}\u{D6C4}`,

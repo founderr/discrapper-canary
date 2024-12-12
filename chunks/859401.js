@@ -1,46 +1,46 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return o;
+        return c;
     }
-}),
-    n(653041),
-    n(47120);
-var r = n(392711),
-    i = n.n(r);
-function a(e, t, n) {
+});
+var i = r(653041);
+var a = r(47120);
+var s = r(392711),
+    o = r.n(s);
+function l(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let s = [];
-class o {
+let u = [];
+class c {
     static create() {
-        let e = new o();
-        return s.push(e), e.record;
+        let e = new c();
+        return u.push(e), e.record;
     }
     getTotalBytes() {
-        return i().sum(Object.values(this.bytes));
+        return o().sum(Object.values(this.bytes));
     }
     constructor() {
-        a(this, 'bytes', {}),
-            a(this, 'record', (e) => {
+        l(this, 'bytes', {}),
+            l(this, 'record', (e) => {
                 if (null != e) {
-                    for (let t in e.rtp.inbound)
-                        for (let n of e.rtp.inbound[t]) {
-                            let e = 'inbound-'.concat(t, '-').concat(n.type);
-                            !(e in this.bytes) && (this.bytes[e] = 0), (this.bytes[e] = n.bytesReceived);
+                    for (let n in e.rtp.inbound)
+                        for (let r of e.rtp.inbound[n]) {
+                            let e = 'inbound-'.concat(n, '-').concat(r.type);
+                            !(e in this.bytes) && (this.bytes[e] = 0), (this.bytes[e] = r.bytesReceived);
                         }
-                    for (let t of e.rtp.outbound) {
-                        let e = 'outbound-'.concat(t.type);
-                        !(e in this.bytes) && (this.bytes[e] = 0), (this.bytes[e] = t.bytesSent);
+                    for (let n of e.rtp.outbound) {
+                        let e = 'outbound-'.concat(n.type);
+                        !(e in this.bytes) && (this.bytes[e] = 0), (this.bytes[e] = n.bytesSent);
                     }
                 }
             });

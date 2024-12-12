@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     H: function () {
-        return i;
+        return a;
     }
 });
-let r = (0, n(987170).Z)({
+let i = (0, r(987170).Z)({
     kind: 'user',
     id: '2023-08_overlay3_out_of_process_enablement',
     label: 'Overlay3 - Out of Process Enablement',
@@ -16,7 +16,7 @@ let r = (0, n(987170).Z)({
         }
     ]
 });
-function i() {
-    let e = r.getCurrentConfig({ location: 'isOOPExperimentEnabled' }, { autoTrackExposure: !0 });
+function a() {
+    let e = i.getCurrentConfig({ location: 'isOOPExperimentEnabled' }, { autoTrackExposure: !0 });
     return null != e && e.useGlobalOverlay;
 }

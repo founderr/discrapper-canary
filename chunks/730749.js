@@ -1,22 +1,22 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(626135);
-function s(e) {
-    var t;
-    let n = i.forwardRef((t, n) =>
-        (0, r.jsx)(a.AnalyticsContext.Consumer, {
-            children: (i) =>
-                (0, r.jsx)(e, {
-                    ...t,
-                    ref: n,
-                    analyticsContext: i
+var i = r(200651),
+    a = r(192379),
+    s = r(626135);
+function o(e) {
+    var n;
+    let r = a.forwardRef((n, r) =>
+        (0, i.jsx)(s.AnalyticsContext.Consumer, {
+            children: (a) =>
+                (0, i.jsx)(e, {
+                    ...n,
+                    ref: r,
+                    analyticsContext: a
                 })
         })
     );
-    return (n.displayName = 'withAnalyticsContext('.concat(null !== (t = e.displayName) && void 0 !== t ? t : e.name, ')')), n;
+    return (r.displayName = 'withAnalyticsContext('.concat(null !== (n = e.displayName) && void 0 !== n ? n : e.name, ')')), r;
 }

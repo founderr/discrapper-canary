@@ -1,70 +1,70 @@
-var r, i, a, s, o, l, u, c;
-function d(e) {
+var i, a, s, o;
+function l(e) {
     return !((null == e ? void 0 : e.type) !== 0 && (null == e ? void 0 : e.type) !== 1);
 }
-function f(e) {
+function u(e) {
     return (null == e ? void 0 : e.type) === 2;
 }
-function _(e) {
+function c(e) {
     return (null == e ? void 0 : e.type) === 3;
 }
-n.d(t, {
+r.d(n, {
     $i: function () {
-        return h;
-    },
-    I: function () {
-        return _;
-    },
-    Io: function () {
         return f;
     },
+    I: function () {
+        return c;
+    },
+    Io: function () {
+        return u;
+    },
     Rv: function () {
-        return m;
+        return _;
     },
     _5: function () {
-        return d;
+        return l;
     },
     cL: function () {
-        return s;
+        return o;
     },
     dF: function () {
-        return i;
+        return a;
     },
     e5: function () {
-        return g;
+        return h;
     },
     fO: function () {
-        return r;
+        return i;
     },
     l8: function () {
-        return p;
+        return d;
     },
     wR: function () {
-        return a;
+        return s;
     }
 }),
-    ((o = r || (r = {}))[(o.STREAM = 0)] = 'STREAM'),
-    (o[(o.HIDDEN_STREAM = 1)] = 'HIDDEN_STREAM'),
-    (o[(o.USER = 2)] = 'USER'),
-    (o[(o.ACTIVITY = 3)] = 'ACTIVITY'),
-    ((l = i || (i = {})).NONE = 'NONE'),
-    (l.AUTO = 'AUTO'),
-    ((u = a || (a = {}))[(u.DESKTOP = 0)] = 'DESKTOP'),
-    (u[(u.MOBILE = 1)] = 'MOBILE'),
-    (u[(u.XBOX = 2)] = 'XBOX'),
-    (u[(u.PLAYSTATION = 3)] = 'PLAYSTATION'),
-    ((c = s || (s = {}))[(c.VIDEO = 0)] = 'VIDEO'),
-    (c[(c.CAMERA_PREVIEW = 1)] = 'CAMERA_PREVIEW');
-let p = {
+    !(function (e) {
+        (e[(e.STREAM = 0)] = 'STREAM'), (e[(e.HIDDEN_STREAM = 1)] = 'HIDDEN_STREAM'), (e[(e.USER = 2)] = 'USER'), (e[(e.ACTIVITY = 3)] = 'ACTIVITY');
+    })(i || (i = {})),
+    !(function (e) {
+        (e.NONE = 'NONE'), (e.AUTO = 'AUTO');
+    })(a || (a = {})),
+    !(function (e) {
+        (e[(e.DESKTOP = 0)] = 'DESKTOP'), (e[(e.MOBILE = 1)] = 'MOBILE'), (e[(e.XBOX = 2)] = 'XBOX'), (e[(e.PLAYSTATION = 3)] = 'PLAYSTATION');
+    })(s || (s = {})),
+    !(function (e) {
+        (e[(e.VIDEO = 0)] = 'VIDEO'), (e[(e.CAMERA_PREVIEW = 1)] = 'CAMERA_PREVIEW');
+    })(o || (o = {}));
+let d = {
         0: 320,
         1: 160
     },
-    h = {
+    f = {
         0: 960,
         1: 480
     },
-    m = {
+    _ = {
         0: 200,
         1: 160
     },
-    g = 8;
+    h = 8;

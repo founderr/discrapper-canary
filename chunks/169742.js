@@ -1,6 +1,6 @@
-var r = ['BigInt64Array', 'BigUint64Array', 'Float32Array', 'Float64Array', 'Int16Array', 'Int32Array', 'Int8Array', 'Uint16Array', 'Uint32Array', 'Uint8Array', 'Uint8ClampedArray'],
-    i = 'undefined' == typeof globalThis ? n.g : globalThis;
+var i = ['BigInt64Array', 'BigUint64Array', 'Float32Array', 'Float64Array', 'Int16Array', 'Int32Array', 'Int8Array', 'Uint16Array', 'Uint32Array', 'Uint8Array', 'Uint8ClampedArray'],
+    a = 'undefined' == typeof globalThis ? r.g : globalThis;
 e.exports = function () {
-    for (var e = [], t = 0; t < r.length; t++) 'function' == typeof i[r[t]] && (e[e.length] = r[t]);
+    for (var e = [], n = 0; n < i.length; n++) 'function' == typeof a[i[n]] && (e[e.length] = i[n]);
     return e;
 };

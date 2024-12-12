@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     a: function () {
-        return r;
+        return i;
     }
 });
-let r = {
+let i = {
     GIFT_INVENTORY_SETTINGS_BADGE: 1,
     QUEST_BAR: 2,
     QUEST_BAR_V2: 2,

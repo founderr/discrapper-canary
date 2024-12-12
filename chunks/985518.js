@@ -1,87 +1,87 @@
-n.d(t, {
+r.d(n, {
     Ct: function () {
-        return c;
+        return _;
     },
     UP: function () {
-        return l;
-    },
-    ZP: function () {
         return d;
     },
+    ZP: function () {
+        return p;
+    },
     rj: function () {
-        return u;
+        return f;
     }
-}),
-    n(653041),
-    n(47120);
-var r = n(929991),
-    i = n(480739),
-    a = n(228392),
-    s = n(6496);
-function o(e, t, n) {
+});
+var i = r(653041);
+var a = r(47120);
+var s = r(929991),
+    o = r(480739),
+    l = r(228392),
+    u = r(6496);
+function c(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-function l(e) {
-    return ''.concat(i.AT.FORUM_CHANNEL, '_').concat(e);
+function d(e) {
+    return ''.concat(o.AT.FORUM_CHANNEL, '_').concat(e);
 }
-function u(e, t, n) {
-    (0, r.a8)(l(e), t, n);
+function f(e, n, r) {
+    (0, s.a8)(d(e), n, r);
 }
-function c(e, t, n) {
-    (0, r.FL)(l(e), t, n);
+function _(e, n, r) {
+    (0, s.FL)(d(e), n, r);
 }
-class d extends i.zQ {
-    constructor({ guildId: e, channelId: t, windowId: n, isPaused: r }) {
+function h(e) {
+    let { guildId: n, channelId: r, sessionId: i, trackedFeedItems: a, isForcedFlush: s } = e,
+        o = [],
+        u = [];
+    for (let e of Object.keys(a)) {
+        let n = a[e].computeSeenTimeDestructive(s);
+        n > 0 && (o.push(e), u.push(n));
+    }
+    0 !== o.length &&
+        (0, l.qs)({
+            guildId: n,
+            channelId: r,
+            sessionId: i,
+            postIds: o,
+            additionalTimes: u
+        });
+}
+class p extends o.zQ {
+    constructor({ guildId: e, channelId: n, windowId: r, isPaused: i }) {
         super({
-            windowId: n,
-            isPaused: r,
-            id: l(t)
+            windowId: r,
+            isPaused: i,
+            id: d(n)
         }),
-            o(this, 'guildId', void 0),
-            o(this, 'channelId', void 0),
-            o(this, 'sessionId', void 0),
-            o(this, 'createFlushSeenItemsFunction', (e) => {
-                let t = this.trackedFeedItems,
-                    n = this.channelId,
-                    r = this.guildId,
-                    i = {
-                        guildId: r,
-                        channelId: n,
+            c(this, 'guildId', void 0),
+            c(this, 'channelId', void 0),
+            c(this, 'sessionId', void 0),
+            c(this, 'createFlushSeenItemsFunction', (e) => {
+                let n = this.trackedFeedItems,
+                    r = this.channelId,
+                    i = this.guildId,
+                    a = {
+                        guildId: i,
+                        channelId: r,
                         sessionId: this.sessionId,
-                        trackedFeedItems: t,
+                        trackedFeedItems: n,
                         isForcedFlush: null != e
                     };
-                return () =>
-                    (function (e) {
-                        let { guildId: t, channelId: n, sessionId: r, trackedFeedItems: i, isForcedFlush: s } = e,
-                            o = [],
-                            l = [];
-                        for (let e of Object.keys(i)) {
-                            let t = i[e].computeSeenTimeDestructive(s);
-                            t > 0 && (o.push(e), l.push(t));
-                        }
-                        0 !== o.length &&
-                            (0, a.qs)({
-                                guildId: t,
-                                channelId: n,
-                                sessionId: r,
-                                postIds: o,
-                                additionalTimes: l
-                            });
-                    })(i);
+                return () => h(a);
             }),
             (this.guildId = e),
-            (this.channelId = t),
-            (this.sessionId = (0, s.WW)(t));
+            (this.channelId = n),
+            (this.sessionId = (0, u.WW)(n));
     }
 }

@@ -1,31 +1,31 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var r = n(5192),
-    i = n(981631),
-    a = n(388032);
-function s(e, t, n, s) {
-    if (e.state === i.jm8.RECONNECTING)
+var i = r(5192),
+    a = r(981631),
+    s = r(388032);
+function o(e, n, r, o) {
+    if (e.state === a.jm8.RECONNECTING)
         return {
-            mainText: a.intl.string(a.t.pdFFKy),
-            supportingText: a.intl.string(a.t['+PuO2N'])
+            mainText: s.intl.string(s.t.pdFFKy),
+            supportingText: s.intl.string(s.t['+PuO2N'])
         };
-    if (e.state === i.jm8.PAUSED)
-        return n
+    if (e.state === a.jm8.PAUSED)
+        return r
             ? {
-                  mainText: a.intl.string(a.t['5q17w8']),
-                  supportingText: a.intl.string(a.t.LV1NSE)
+                  mainText: s.intl.string(s.t['5q17w8']),
+                  supportingText: s.intl.string(s.t.LV1NSE)
               }
             : {
-                  mainText: a.intl.string(a.t['5q17w8']),
-                  supportingText: a.intl.formatToPlainString(a.t.meVVlZ, { username: r.ZP.getName(e.guildId, e.channelId, t) })
+                  mainText: s.intl.string(s.t['5q17w8']),
+                  supportingText: s.intl.formatToPlainString(s.t.meVVlZ, { username: i.ZP.getName(e.guildId, e.channelId, n) })
               };
-    return s
+    return o
         ? {
-              mainText: a.intl.string(a.t.JmaKtL),
-              supportingText: a.intl.string(a.t['hC3+BA'])
+              mainText: s.intl.string(s.t.JmaKtL),
+              supportingText: s.intl.string(s.t['hC3+BA'])
           }
         : null;
 }

@@ -1,25 +1,25 @@
-n.d(t, {
+r.d(n, {
     XS: function () {
-        return u;
+        return c;
     },
     h6: function () {
-        return c;
+        return d;
     }
 });
-var r = n(502087),
-    i = n(684259),
-    a = n(111361),
-    s = n(981631),
-    o = n(474936);
-let l = !1;
-function u() {
-    return l;
+var i = r(502087),
+    a = r(684259),
+    s = r(111361),
+    o = r(981631),
+    l = r(474936);
+let u = !1;
+function c() {
+    return u;
 }
-function c(e) {
-    if (null == e) return s.mBz;
-    let t = r.Z.getPremiumTypeOverride();
-    return e.isStaff() && t === o.F_ ? s.PRK : null != e.premiumType && (0, a.I5)(e) ? o.a1[e.premiumType].fileSize : l ? s.WKe : s.mBz;
+function d(e) {
+    if (null == e) return o.mBz;
+    let n = i.Z.getPremiumTypeOverride();
+    return e.isStaff() && n === l.F_ ? o.PRK : null != e.premiumType && (0, s.I5)(e) ? l.a1[e.premiumType].fileSize : c() ? o.WKe : o.mBz;
 }
-i.Z.subscribe({ location: 'PremiumFeatureUtils' }, (e) => {
-    l = e.enabled;
+a.Z.subscribe({ location: 'PremiumFeatureUtils' }, (e) => {
+    u = e.enabled;
 });

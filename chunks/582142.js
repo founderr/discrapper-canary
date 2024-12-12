@@ -1,8 +1,8 @@
-function r(e) {
+function i(e) {
     return null == e.guild_id;
 }
-n.d(t, {
+r.d(n, {
     p: function () {
-        return r;
+        return i;
     }
 });

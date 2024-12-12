@@ -1,27 +1,27 @@
-n.d(t, {
+r.d(n, {
     x: function () {
-        return o;
+        return u;
     }
-}),
-    n(47120);
-var r = n(594174),
-    i = n(768581),
-    a = n(823379),
-    s = n(981631);
-function o(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 32,
-        n = arguments.length > 2 ? arguments[2] : void 0;
+});
+var i = r(47120);
+var a = r(594174),
+    s = r(768581),
+    o = r(823379),
+    l = r(981631);
+function u(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 32,
+        r = arguments.length > 2 ? arguments[2] : void 0;
     switch (e.type) {
-        case s.d4z.DM:
-            let [o] = e.recipients.map(r.default.getUser).filter(a.lm);
-            if (null == o) return null;
-            return o.getAvatarURL(void 0, t, n);
-        case s.d4z.GROUP_DM:
-            return i.ZP.getChannelIconURL({
+        case l.d4z.DM:
+            let [i] = e.recipients.map(a.default.getUser).filter(o.lm);
+            if (null == i) return null;
+            return i.getAvatarURL(void 0, n, r);
+        case l.d4z.GROUP_DM:
+            return s.ZP.getChannelIconURL({
                 id: e.id,
                 icon: e.icon,
                 applicationId: e.getApplicationId(),
-                size: t
+                size: n
             });
     }
 }

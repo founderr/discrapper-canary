@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     n: function () {
-        return r;
+        return i;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
     kind: 'guild',
     id: '2024-04_hang_status_v2',
     label: 'Hang Statuses - V2 experiment',

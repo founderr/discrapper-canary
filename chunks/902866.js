@@ -1,50 +1,50 @@
-n.d(t, {
+r.d(n, {
     Y: function () {
-        return o;
+        return l;
     }
 });
-var r = n(912860),
-    i = n(873546),
-    a = n(330711);
-function s() {
+var i = r(912860),
+    a = r(873546),
+    s = r(330711);
+function o() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-    if (null != a.Z.Messages.SELF_XSS_HEADER) {
-        if ((console.log('%c'.concat(a.Z.Messages.SELF_XSS_HEADER), 'color: #5865f2; -webkit-text-stroke: 2px black; font-size: 72px; font-weight: bold;'), console.log('%c'.concat(a.Z.Messages.SELF_XSS_LINE_1), 'font-size: 16px;'), console.log('%c'.concat(a.Z.Messages.SELF_XSS_LINE_2), 'font-size: 18px; font-weight: bold; color: red;'), e >= 4)) {
-            console.log('%c'.concat(a.Z.Messages.SELF_XSS_LINE_3), 'font-size: 16px;');
-            let e = a.Z.Messages.SELF_XSS_LINE_4.format({ url: ''.concat(location.protocol).concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/jobs') });
+    if (null != s.Z.Messages.SELF_XSS_HEADER) {
+        if ((console.log('%c'.concat(s.Z.Messages.SELF_XSS_HEADER), 'color: #5865f2; -webkit-text-stroke: 2px black; font-size: 72px; font-weight: bold;'), console.log('%c'.concat(s.Z.Messages.SELF_XSS_LINE_1), 'font-size: 16px;'), console.log('%c'.concat(s.Z.Messages.SELF_XSS_LINE_2), 'font-size: 18px; font-weight: bold; color: red;'), e >= 4)) {
+            console.log('%c'.concat(s.Z.Messages.SELF_XSS_LINE_3), 'font-size: 16px;');
+            let e = s.Z.Messages.SELF_XSS_LINE_4.format({ url: ''.concat(location.protocol).concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/jobs') });
             console.log('%c'.concat(e), 'font-size: 16px;');
-        } else setTimeout(() => s(e + 1), 1000);
+        } else setTimeout(() => o(e + 1), 1000);
     }
 }
-function o(e, t) {
-    if (null != t && '0.0.0' === t.remoteApp.getVersion()) return;
-    let n = new r.b();
-    if (null != t) {
-        if (null != t.window.setDevtoolsCallbacks)
-            t.window.setDevtoolsCallbacks(
+function l(e, n) {
+    if (null != n && '0.0.0' === n.remoteApp.getVersion()) return;
+    let r = new i.b();
+    if (null != n) {
+        if (null != n.window.setDevtoolsCallbacks)
+            n.window.setDevtoolsCallbacks(
                 () => {
-                    e.hideToken(), s();
+                    e.hideToken(), o();
                 },
                 () => {
                     e.showToken();
                 }
             );
         else {
-            let n = t.window.webContents;
-            n.removeAllListeners('devtools-opened'),
-                n.on('devtools-opened', () => {
-                    e.hideToken(), s();
+            let r = n.window.webContents;
+            r.removeAllListeners('devtools-opened'),
+                r.on('devtools-opened', () => {
+                    e.hideToken(), o();
                 }),
-                n.on('devtools-closed', e.showToken);
+                r.on('devtools-closed', e.showToken);
         }
     } else
-        !i.tq &&
-            !i.Em &&
-            n.on('changed', (t) => {
-                let { open: n } = t;
-                n ? (e.hideToken(), s()) : e.showToken();
+        !a.tq &&
+            !a.Em &&
+            r.on('changed', (n) => {
+                let { open: r } = n;
+                r ? (e.hideToken(), o()) : e.showToken();
             });
-    window.addEventListener('beforeunload', (t) => {
-        t.isTrusted && e.showToken();
+    window.addEventListener('beforeunload', (n) => {
+        n.isTrusted && e.showToken();
     });
 }

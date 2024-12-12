@@ -1,85 +1,85 @@
-var r,
-    i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    o = n.n(s),
-    l = n(481060),
-    u = n(370624);
-function c(e, t, n) {
+var i,
+    a = r(200651),
+    s = r(192379),
+    o = r(120356),
+    l = r.n(o),
+    u = r(481060),
+    c = r(370624);
+function d(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let d = {
-    SMALL: u.sizeSmall,
-    MEDIUM: u.sizeMedium,
-    LARGE: u.sizeLarge
+let f = {
+    SMALL: c.sizeSmall,
+    MEDIUM: c.sizeMedium,
+    LARGE: c.sizeLarge
 };
-class f extends (r = a.PureComponent) {
+class _ extends (i = s.PureComponent) {
     calculateScroll() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this._scroller;
         if (null == e) return;
-        let { scrollTop: t } = e.getScrollerState(),
-            { hideSeparator: n } = this.state;
-        0 !== t || n ? t > 0 && n && this.setState({ hideSeparator: !1 }) : this.setState({ hideSeparator: !0 });
+        let { scrollTop: n } = e.getScrollerState(),
+            { hideSeparator: r } = this.state;
+        0 !== n || r ? n > 0 && r && this.setState({ hideSeparator: !1 }) : this.setState({ hideSeparator: !0 });
     }
     getScroller() {
         return this._scroller;
     }
     renderChildren() {
         let { hideSeparator: e } = this.state;
-        return a.Children.map(this.props.children, (t) =>
-            a.isValidElement(t)
-                ? t.type === l.ModalContent || t.type === l.ModalListContent
-                    ? a.cloneElement(t, {
+        return s.Children.map(this.props.children, (n) =>
+            s.isValidElement(n)
+                ? n.type === u.ModalContent || n.type === u.ModalListContent
+                    ? s.cloneElement(n, {
                           scrollerRef: this.setRef,
                           onScroll: this.handleScroll,
                           onResize: this.handleScroll
                       })
-                    : t.type === l.ModalHeader && e
-                      ? a.cloneElement(t, { separator: !1 })
-                      : t
-                : t
+                    : n.type === u.ModalHeader && e
+                      ? s.cloneElement(n, { separator: !1 })
+                      : n
+                : n
         );
     }
     render() {
-        let { className: e, children: t, tag: n, size: r, fullscreenOnMobile: a, ...s } = this.props;
-        return (0, i.jsx)(n, {
-            className: o()(u.modal, e, r, { [u.fullscreenOnMobile]: a }),
-            ...s,
+        let { className: e, children: n, tag: r, size: i, fullscreenOnMobile: s, ...o } = this.props;
+        return (0, a.jsx)(r, {
+            className: l()(c.modal, e, i, { [c.fullscreenOnMobile]: s }),
+            ...o,
             children: this.renderChildren()
         });
     }
     constructor(e) {
         super(e),
-            c(this, '_scroller', null),
-            c(this, 'setRef', (e) => {
+            d(this, '_scroller', null),
+            d(this, 'setRef', (e) => {
                 (this._scroller = e), null != e && this.calculateScroll();
             }),
-            c(this, 'handleScroll', (e) => {
+            d(this, 'handleScroll', (e) => {
                 this.calculateScroll();
-                let { onScroll: t } = this.props;
-                null == t || t(e);
+                let { onScroll: n } = this.props;
+                null == n || n(e);
             }),
             (this.state = { hideSeparator: !1 });
     }
 }
-c(f, 'Header', l.ModalHeader),
-    c(f, 'Footer', l.ModalFooter),
-    c(f, 'Content', l.ModalContent),
-    c(f, 'ListContent', l.ModalListContent),
-    c(f, 'CloseButton', l.ModalCloseButton),
-    c(f, 'Sizes', d),
-    c(f, 'defaultProps', {
+d(_, 'Header', u.ModalHeader),
+    d(_, 'Footer', u.ModalFooter),
+    d(_, 'Content', u.ModalContent),
+    d(_, 'ListContent', u.ModalListContent),
+    d(_, 'CloseButton', u.ModalCloseButton),
+    d(_, 'Sizes', f),
+    d(_, 'defaultProps', {
         fullscreenOnMobile: !0,
-        size: d.SMALL,
+        size: f.SMALL,
         tag: 'div'
     });

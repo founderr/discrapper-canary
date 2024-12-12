@@ -1,14 +1,14 @@
-n.d(t, {
+r.d(n, {
     C: function () {
-        return a;
+        return s;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(450793);
-function a() {
-    return (0, r.jsx)('div', {
+var i = r(200651);
+r(192379);
+var a = r(450793);
+function s() {
+    return (0, i.jsx)('div', {
         role: 'separator',
-        className: i.separator
+        className: a.separator
     });
 }

@@ -1,4 +1,4 @@
-var r = {
+var i = {
     './champion_1.jpg': '337818',
     './champion_10.jpg': '489367',
     './champion_101.jpg': '744865',
@@ -169,19 +169,19 @@ var r = {
     './champion_98.jpg': '988032',
     './champion_99.jpg': '974179'
 };
-function i(e) {
-    return n(a(e));
-}
 function a(e) {
-    if (!n.o(r, e)) {
-        var t = Error("Cannot find module '" + e + "'");
-        throw ((t.code = 'MODULE_NOT_FOUND'), t);
-    }
-    return r[e];
+    return r(s(e));
 }
-(i.keys = function () {
-    return Object.keys(r);
+function s(e) {
+    if (!r.o(i, e)) {
+        var n = Error("Cannot find module '" + e + "'");
+        throw ((n.code = 'MODULE_NOT_FOUND'), n);
+    }
+    return i[e];
+}
+(a.keys = function () {
+    return Object.keys(i);
 }),
-    (i.resolve = a),
-    (e.exports = i),
-    (i.id = '692425');
+    (a.resolve = s),
+    (e.exports = a),
+    (a.id = '692425');

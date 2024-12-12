@@ -1,14 +1,14 @@
-n.d(t, {
+r.d(n, {
     I: function () {
-        return s;
+        return o;
     },
     g: function () {
-        return a;
+        return s;
     }
 });
-var r = n(818083),
-    i = n(987338);
-let a = (0, r.B)({
+var i = r(818083),
+    a = r(987338);
+let s = (0, i.B)({
     kind: 'user',
     id: '2024-10_rapidash_discovery_plus',
     label: 'Rapidash Discovery Plus',
@@ -16,7 +16,7 @@ let a = (0, r.B)({
         enabled: !1,
         treatment: 'control'
     },
-    commonTriggerPoint: i.$P.CONNECTION_OPEN,
+    commonTriggerPoint: a.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,
@@ -28,6 +28,6 @@ let a = (0, r.B)({
         }
     ]
 });
-function s() {
-    return a.useExperiment({ location: 'RapidashDiscoveryPlusExperiment' }, { autoTrackExposure: !1 });
+function o() {
+    return s.useExperiment({ location: 'RapidashDiscoveryPlusExperiment' }, { autoTrackExposure: !1 });
 }

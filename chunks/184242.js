@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     Ac: function () {
-        return i;
+        return a;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
     kind: 'user',
     id: '2024-08_user_profile_blockee_hide_mutuals',
     label: 'User Profile Blockee Hide Mutuals',
@@ -16,8 +16,8 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i(e) {
-    let { location: t, autoTrackExposure: n = !0 } = e,
-        { enabled: i } = r.useExperiment({ location: t }, { autoTrackExposure: n });
-    return i;
+function a(e) {
+    let { location: n, autoTrackExposure: r = !0 } = e,
+        { enabled: a } = i.useExperiment({ location: n }, { autoTrackExposure: r });
+    return a;
 }

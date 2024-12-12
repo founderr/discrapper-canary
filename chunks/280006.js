@@ -1,12 +1,12 @@
-n.d(t, {
+r.d(n, {
     E: function () {
-        return r;
+        return i;
     },
     f: function () {
-        return i;
+        return a;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
     kind: 'user',
     id: '2024-07_gdm_blocked_user_warning',
     label: 'GDM Blocked User Warning',
@@ -36,8 +36,8 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i(e) {
-    let { location: t } = e,
-        n = r.getCurrentConfig({ location: t }, { autoTrackExposure: !1 });
-    return n.enabled && n.showAsBanner;
+function a(e) {
+    let { location: n } = e,
+        r = i.getCurrentConfig({ location: n }, { autoTrackExposure: !1 });
+    return r.enabled && r.showAsBanner;
 }

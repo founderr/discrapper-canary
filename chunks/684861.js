@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     dateRange: (e) => `${e.startDate} a\u{17E} ${e.endDate}`,
     dateSelected: (e) => `Vybr\xe1no ${e.date}`,
     finishRangeSelectionPrompt: `Kliknut\xedm dokon\u{10D}\xedte v\xfdb\u{11B}r rozsahu dat`,

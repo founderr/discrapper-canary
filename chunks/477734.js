@@ -1,13 +1,13 @@
-n.d(t, {
+r.d(n, {
     X$: function () {
-        return i;
+        return a;
     },
     _f: function () {
-        return a;
+        return s;
     }
 }),
-    n(906732);
-let r = (0, n(818083).B)({
+    r(906732);
+let i = (0, r(818083).B)({
     kind: 'user',
     id: '2023-08_remix_ga',
     label: 'Remix General Available',
@@ -46,9 +46,9 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i() {
-    return r.useExperiment({ location: 'canSeeRemixBadge' }, { autoTrackExposure: !0 }).canSeeRemixBadge;
-}
 function a() {
-    return !!r.useExperiment({ location: 'isRemixANitroPerkHook' }, { autoTrackExposure: !0 }).isNitroPerk;
+    return i.useExperiment({ location: 'canSeeRemixBadge' }, { autoTrackExposure: !0 }).canSeeRemixBadge;
+}
+function s() {
+    return !!i.useExperiment({ location: 'isRemixANitroPerkHook' }, { autoTrackExposure: !0 }).isNitroPerk;
 }

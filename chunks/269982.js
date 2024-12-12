@@ -1,55 +1,55 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return d;
+        return f;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(979554),
-    s = n(481060),
-    o = n(436774),
-    l = n(981631),
-    u = n(388032),
-    c = n(339506);
-function d(e) {
-    let { product: t, onSecondaryClick: d } = e,
-        f = i.useCallback(() => {
-            if (null != t)
-                (0, s.openModalLazy)(async () => {
-                    let { default: e } = await n.e('43360').then(n.bind(n, 73415));
-                    return (n) =>
-                        (0, r.jsx)(e, {
-                            collectableType: null == t ? void 0 : t.type,
-                            analyticsSource: l.Sbl.PROFILE_PANEL,
+var i = r(200651),
+    a = r(192379),
+    s = r(979554),
+    o = r(481060),
+    l = r(436774),
+    u = r(981631),
+    c = r(388032),
+    d = r(339506);
+function f(e) {
+    let { product: n, onSecondaryClick: f } = e,
+        _ = a.useCallback(() => {
+            if (null != n)
+                (0, o.openModalLazy)(async () => {
+                    let { default: e } = await r.e('43360').then(r.bind(r, 73415));
+                    return (r) =>
+                        (0, i.jsx)(e, {
+                            collectableType: null == n ? void 0 : n.type,
+                            analyticsSource: u.Sbl.PROFILE_PANEL,
                             analyticsLocation: {
-                                section: l.jXE.USER_PROFILE,
-                                object: l.qAy.BUTTON_CTA
+                                section: u.jXE.USER_PROFILE,
+                                object: u.qAy.BUTTON_CTA
                             },
-                            onSecondaryClick: d,
-                            ...n
+                            onSecondaryClick: f,
+                            ...r
                         });
                 });
-        }, [t, d]),
-        _ = i.useMemo(() => {
-            switch (null == t ? void 0 : t.type) {
-                case a.Z.AVATAR_DECORATION:
-                    return u.intl.format(u.t['aFR/EB'], { onClick: f });
-                case a.Z.PROFILE_EFFECT:
-                    return u.intl.format(u.t.eWNOND, { onClick: f });
+        }, [n, f]),
+        h = a.useMemo(() => {
+            switch (null == n ? void 0 : n.type) {
+                case s.Z.AVATAR_DECORATION:
+                    return c.intl.format(c.t['aFR/EB'], { onClick: _ });
+                case s.Z.PROFILE_EFFECT:
+                    return c.intl.format(c.t.eWNOND, { onClick: _ });
             }
-        }, [null == t ? void 0 : t.type, f]);
-    return (0, r.jsxs)('div', {
-        className: c.nitroUpsellContainer,
+        }, [null == n ? void 0 : n.type, _]);
+    return (0, i.jsxs)('div', {
+        className: d.nitroUpsellContainer,
         children: [
-            (0, r.jsx)(s.NitroWheelIcon, {
-                className: c.nitroWheel,
+            (0, i.jsx)(o.NitroWheelIcon, {
+                className: d.nitroWheel,
                 size: 'md',
-                color: o.JX.PREMIUM_TIER_2
+                color: l.JX.PREMIUM_TIER_2
             }),
-            (0, r.jsx)(s.Text, {
-                className: c.nitroText,
+            (0, i.jsx)(o.Text, {
+                className: d.nitroText,
                 variant: 'text-md/medium',
-                children: _
+                children: h
             })
         ]
     });

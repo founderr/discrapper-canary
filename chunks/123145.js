@@ -1,30 +1,30 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return o;
+        return l;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(739566),
-    a = n(421399),
-    s = n(47930);
-function o(e) {
-    var t, n;
-    let o = (0, i.ZP)(e.message),
-        l = (0, s.x)({
+var i = r(200651);
+r(192379);
+var a = r(739566),
+    s = r(421399),
+    o = r(47930);
+function l(e) {
+    var n, r;
+    let l = (0, a.ZP)(e.message),
+        u = (0, o.x)({
             message: e.message,
             channel: e.channel,
-            user: null !== (n = null === (t = e.message) || void 0 === t ? void 0 : t.author) && void 0 !== n ? n : e.userOverride,
+            user: null !== (r = null === (n = e.message) || void 0 === n ? void 0 : n.author) && void 0 !== r ? r : e.userOverride,
             compact: !!e.compact,
             isRepliedMessage: !!e.isRepliedMessage
         }),
-        u = {};
+        c = {};
     return (
-        null != l && (u[a.a.SYSTEM_TAG] = l),
-        (0, r.jsx)(a.Z, {
+        null != u && (c[s.a.SYSTEM_TAG] = u),
+        (0, i.jsx)(s.Z, {
             ...e,
-            author: o,
-            decorations: u
+            author: l,
+            decorations: c
         })
     );
 }

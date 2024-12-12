@@ -1,13 +1,13 @@
-n.d(t, {
+r.d(n, {
     WT: function () {
-        return l;
+        return u;
     },
     yk: function () {
-        return u;
+        return c;
     }
 });
-var r = n(818083);
-let i = (0, r.B)({
+var i = r(818083);
+let a = (0, i.B)({
         kind: 'user',
         id: '2024-05_message_forwarding',
         label: 'Message forwarding',
@@ -34,7 +34,7 @@ let i = (0, r.B)({
             }
         ]
     }),
-    a = (0, r.B)({
+    s = (0, i.B)({
         kind: 'user',
         id: '2024-07_message_forwarding_iterations',
         label: 'Message forwarding iterations',
@@ -79,7 +79,7 @@ let i = (0, r.B)({
             }
         ]
     }),
-    s = (0, r.B)({
+    o = (0, i.B)({
         kind: 'user',
         id: '2024-08_message_forwarding_icon',
         label: 'Message forwarding icon change',
@@ -103,7 +103,7 @@ let i = (0, r.B)({
             }
         ]
     }),
-    o = (0, r.B)({
+    l = (0, i.B)({
         kind: 'user',
         id: '2024-09_message_forwarding_gtm',
         label: 'Message forwarding GTM',
@@ -123,27 +123,27 @@ let i = (0, r.B)({
             }
         ]
     });
-function l(e, t) {
-    let n = i.getCurrentConfig(e, t),
-        r = a.getCurrentConfig(e, t),
-        l = s.getCurrentConfig(e, t),
-        u = o.getCurrentConfig(e, t);
+function u(e, n) {
+    let r = a.getCurrentConfig(e, n),
+        i = s.getCurrentConfig(e, n),
+        u = o.getCurrentConfig(e, n),
+        c = l.getCurrentConfig(e, n);
     return {
-        ...n,
         ...r,
-        ...l,
-        ...u
+        ...i,
+        ...u,
+        ...c
     };
 }
-function u(e, t) {
-    let n = i.useExperiment(e, t),
-        r = a.useExperiment(e, t),
-        l = s.useExperiment(e, t),
-        u = o.useExperiment(e, t);
+function c(e, n) {
+    let r = a.useExperiment(e, n),
+        i = s.useExperiment(e, n),
+        u = o.useExperiment(e, n),
+        c = l.useExperiment(e, n);
     return {
-        ...n,
         ...r,
-        ...l,
-        ...u
+        ...i,
+        ...u,
+        ...c
     };
 }

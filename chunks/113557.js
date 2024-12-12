@@ -1,17 +1,17 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return l;
+        return u;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(984173),
-    a = n(718107),
-    s = n(899007),
-    o = n(995250);
-function l(e) {
-    let { location: t, ...n } = e,
-        { avatarReactReplyEnabled: l } = (0, a.t)({ location: t }),
-        { allProfileReactReplyEnabled: u } = (0, i.F)({ location: t });
-    return l || u ? (0, r.jsx)(o.Z, { ...n }) : (0, r.jsx)(s.Z, { ...n });
+var i = r(200651);
+r(192379);
+var a = r(984173),
+    s = r(718107),
+    o = r(899007),
+    l = r(995250);
+function u(e) {
+    let { location: n, ...r } = e,
+        { avatarReactReplyEnabled: u } = (0, s.t)({ location: n }),
+        { allProfileReactReplyEnabled: c } = (0, a.F)({ location: n });
+    return u || c ? (0, i.jsx)(l.Z, { ...r }) : (0, i.jsx)(o.Z, { ...r });
 }

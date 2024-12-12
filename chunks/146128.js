@@ -1,93 +1,93 @@
-n.d(t, {
+r.d(n, {
     BV: function () {
-        return E;
+        return I;
     },
     Rm: function () {
-        return m;
+        return E;
     },
     aO: function () {
-        return I;
+        return b;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(442837),
-    s = n(40851),
-    o = n(607070),
-    l = n(633302),
-    u = n(375954),
-    c = n(378364),
-    d = n(197344),
-    f = n(978636),
-    _ = n(131333),
-    p = n(981631);
-function h(e) {
-    if (null == e || null == c.Z.emojiAnimationTriggers) return !1;
-    for (let t of c.Z.emojiAnimationTriggers) {
-        let n = l.ZP.getByName(t);
-        if (null != n) {
-            if (':'.concat(n.uniqueName, ':') === e) return !0;
-            for (let t in n.diversityChildren) {
-                let r = n.diversityChildren[t];
-                if (':'.concat(r.uniqueName, ':') === e) return !0;
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(442837),
+    l = r(40851),
+    u = r(607070),
+    c = r(633302),
+    d = r(375954),
+    f = r(378364),
+    _ = r(197344),
+    h = r(978636),
+    p = r(131333),
+    m = r(981631);
+function g(e) {
+    if (null == e || null == f.Z.emojiAnimationTriggers) return !1;
+    for (let n of f.Z.emojiAnimationTriggers) {
+        let r = c.ZP.getByName(n);
+        if (null != r) {
+            if (':'.concat(r.uniqueName, ':') === e) return !0;
+            for (let n in r.diversityChildren) {
+                let i = r.diversityChildren[n];
+                if (':'.concat(i.uniqueName, ':') === e) return !0;
             }
         }
     }
     return !1;
 }
-let m = i.createContext({
+let E = s.createContext({
     triggerAnimation: () => {}
 });
-function g(e) {
-    let { children: t } = e,
-        { triggerAnimation: n } = i.useContext(m),
-        a = (0, s.bp)(),
-        o = i.useMemo(
+function v(e) {
+    let { children: n } = e,
+        { triggerAnimation: r } = s.useContext(E),
+        i = (0, l.bp)(),
+        o = s.useMemo(
             () => ({
                 triggerAnimation: (e) => {
-                    a === p.IlC.APP && h(e) && n(e);
+                    i === m.IlC.APP && g(e) && r(e);
                 }
             }),
-            [a, n]
+            [i, r]
         );
-    return (0, r.jsx)(m.Provider, {
+    return (0, a.jsx)(E.Provider, {
         value: o,
-        children: t
+        children: n
     });
 }
-function E(e) {
-    let { children: t } = e,
-        n = d.Z.useIsEligible(),
-        a = i.useCallback((e, t) => {
-            if (t === c.O.THROW_EMOJI) return (0, r.jsx)(_.t, { children: e });
+function I(e) {
+    let { children: n } = e,
+        r = _.Z.useIsEligible(),
+        i = s.useCallback((e, n) => {
+            if (n === f.O.THROW_EMOJI) return (0, a.jsx)(p.t, { children: e });
         }, []);
-    return n && null != c.Z.emojiAnimationType ? a((0, r.jsx)(g, { children: t }), c.Z.emojiAnimationType) : (0, r.jsx)(r.Fragment, { children: t });
+    return r && null != f.Z.emojiAnimationType ? i((0, a.jsx)(v, { children: n }), f.Z.emojiAnimationType) : (0, a.jsx)(a.Fragment, { children: n });
 }
-function v(e) {
-    let { emojiRef: t, channelId: n, messageId: r, emojiName: s } = e,
-        o = (0, a.e7)([u.Z], () => u.Z.getMessage(n, r)),
-        { triggerAnimation: l } = i.useContext(m);
+function T(e) {
+    let { emojiRef: n, channelId: r, messageId: i, emojiName: a } = e,
+        l = (0, o.e7)([d.Z], () => d.Z.getMessage(r, i)),
+        { triggerAnimation: u } = s.useContext(E);
     return (
-        i.useEffect(() => {
-            if (!c.Z.triggerEmojiAnimationFromSentMessage || (null == o ? void 0 : o.state) !== p.yb.SENT || (0, f.JL)(r)) return;
-            let { top: e, bottom: n } = t.getBoundingClientRect();
-            if (!!(e >= 0 && n <= window.innerHeight)) l(s), (0, f.i9)(r);
-        }, [s, t, null == o ? void 0 : o.state, r, l]),
+        s.useEffect(() => {
+            if (!f.Z.triggerEmojiAnimationFromSentMessage || (null == l ? void 0 : l.state) !== m.yb.SENT || (0, h.JL)(i)) return;
+            let { top: e, bottom: r } = n.getBoundingClientRect();
+            if (!!(e >= 0 && r <= window.innerHeight)) u(a), (0, h.i9)(i);
+        }, [a, n, null == l ? void 0 : l.state, i, u]),
         null
     );
 }
-function I(e) {
-    let { channelId: t, messageId: n, emojiName: i, disable: l, emojiRef: u } = e,
-        c = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
-        f = d.Z.useIsEligible(),
-        _ = (0, s.bp)();
-    return l || _ !== p.IlC.APP || !f || null == n || null == t || c || null == u || !h(i)
+function b(e) {
+    let { channelId: n, messageId: r, emojiName: i, disable: s, emojiRef: c } = e,
+        d = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+        f = _.Z.useIsEligible(),
+        h = (0, l.bp)();
+    return s || h !== m.IlC.APP || !f || null == r || null == n || d || null == c || !g(i)
         ? null
-        : (0, r.jsx)(v, {
-              emojiRef: u,
-              channelId: t,
-              messageId: n,
+        : (0, a.jsx)(T, {
+              emojiRef: c,
+              channelId: n,
+              messageId: r,
               emojiName: i
           });
 }

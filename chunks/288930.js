@@ -1,6 +1,6 @@
-n.d(t, {
+r.d(n, {
     C: function () {
-        return r;
+        return i;
     }
 });
-var r = 'undefined' != typeof window ? window : {};
+var i = 'undefined' != typeof window ? window : {};

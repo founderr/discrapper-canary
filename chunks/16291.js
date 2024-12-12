@@ -1,14 +1,14 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var r = n(665771),
-    i = n(964415),
-    a = n(951516);
-function s(e) {
-    (0, a.Z)(1, arguments);
-    var t = (0, r.Z)(e),
-        n = new Date(0);
-    return n.setUTCFullYear(t, 0, 4), n.setUTCHours(0, 0, 0, 0), (0, i.Z)(n);
+var i = r(665771),
+    a = r(964415),
+    s = r(951516);
+function o(e) {
+    (0, s.Z)(1, arguments);
+    var n = (0, i.Z)(e),
+        r = new Date(0);
+    return r.setUTCFullYear(n, 0, 4), r.setUTCHours(0, 0, 0, 0), (0, a.Z)(r);
 }

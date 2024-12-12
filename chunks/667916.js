@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     dateRange: (e) => `${e.startDate} do ${e.endDate}`,
     dateSelected: (e) => `Wybrano ${e.date}`,
     finishRangeSelectionPrompt: `Kliknij, aby zako\u{144}czy\u{107} wyb\xf3r zakresu dat`,

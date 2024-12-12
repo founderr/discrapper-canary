@@ -1,21 +1,21 @@
-n.d(t, {
+r.d(n, {
     h: function () {
-        return i;
+        return a;
     }
 });
-var r = n(558883);
-function i(e, t, n) {
-    let { labelProps: i, inputProps: a, isSelected: s, isPressed: o, isDisabled: l, isReadOnly: u } = (0, r.O)(e, t, n);
+var i = r(558883);
+function a(e, n, r) {
+    let { labelProps: a, inputProps: s, isSelected: o, isPressed: l, isDisabled: u, isReadOnly: c } = (0, i.O)(e, n, r);
     return {
-        labelProps: i,
+        labelProps: a,
         inputProps: {
-            ...a,
+            ...s,
             role: 'switch',
-            checked: s
+            checked: o
         },
-        isSelected: s,
-        isPressed: o,
-        isDisabled: l,
-        isReadOnly: u
+        isSelected: o,
+        isPressed: l,
+        isDisabled: u,
+        isReadOnly: c
     };
 }

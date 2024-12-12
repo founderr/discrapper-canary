@@ -1,19 +1,19 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     deselectedItem: (e) => `${e.item} neselectat.`,
     longPressToSelect: `Ap\u{103}sa\u{21B}i lung pentru a intra \xeen modul de selectare.`,
     select: 'Selectare',
     selectedAll: 'Toate elementele selectate.',
-    selectedCount: (e, t) =>
-        `${t.plural(e.count, {
+    selectedCount: (e, n) =>
+        `${n.plural(e.count, {
             '=0': 'Niciun element selectat',
-            one: () => `${t.number(e.count)} element selectat`,
-            other: () => `${t.number(e.count)} elemente selectate`
+            one: () => `${n.number(e.count)} element selectat`,
+            other: () => `${n.number(e.count)} elemente selectate`
         })}.`,
     selectedItem: (e) => `${e.item} selectat.`
 };

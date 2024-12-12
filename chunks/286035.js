@@ -1,21 +1,21 @@
-n.d(t, {
+r.d(n, {
     Pg: function () {
-        return s;
+        return o;
     },
     Te: function () {
-        return i;
+        return a;
     },
     kb: function () {
-        return a;
+        return s;
     }
 });
-var r = n(570140);
-function i() {
-    r.Z.wait(() => r.Z.dispatch({ type: 'DOMAIN_MIGRATION_START' }));
-}
+var i = r(570140);
 function a() {
-    r.Z.dispatch({ type: 'DOMAIN_MIGRATION_FAILURE' });
+    i.Z.wait(() => i.Z.dispatch({ type: 'DOMAIN_MIGRATION_START' }));
 }
 function s() {
+    i.Z.dispatch({ type: 'DOMAIN_MIGRATION_FAILURE' });
+}
+function o() {
     window.location.reload();
 }

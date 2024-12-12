@@ -1,24 +1,24 @@
-function r(e, t, n) {
+r.d(n, {
+    B: function () {
+        return a;
+    },
+    J: function () {
+        return s;
+    }
+});
+var i = r(411104);
+function a(e, n, r) {
     return new MouseEvent(e, {
-        screenX: t,
-        screenY: n,
-        clientX: t,
-        clientY: n,
+        screenX: n,
+        screenY: r,
+        clientX: n,
+        clientY: r,
         bubbles: !0,
         view: window
     });
 }
-function i(e, t, n) {
-    let r = document.elementFromPoint(t, n);
-    if (null == r) throw Error();
-    r.dispatchEvent(e);
+function s(e, n, r) {
+    let i = document.elementFromPoint(n, r);
+    if (null == i) throw Error();
+    i.dispatchEvent(e);
 }
-n.d(t, {
-    B: function () {
-        return r;
-    },
-    J: function () {
-        return i;
-    }
-}),
-    n(411104);

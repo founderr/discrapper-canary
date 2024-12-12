@@ -1,7 +1,7 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = { longPressMessage: `Mantenga pulsado o pulse Alt + flecha abajo para abrir el men\xfa` };
+var i = {};
+i = { longPressMessage: `Mantenga pulsado o pulse Alt + flecha abajo para abrir el men\xfa` };

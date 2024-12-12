@@ -1,21 +1,21 @@
-n.d(t, {
+r.d(n, {
     x: function () {
-        return o;
+        return l;
     }
 });
-var r = n(594174),
-    i = n(130402),
-    a = n(174065),
-    s = n(353842);
-async function o() {
+var i = r(594174),
+    a = r(130402),
+    s = r(174065),
+    o = r(353842);
+async function l() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'unknown';
-    if (null == r.default.getCurrentUser()) return;
-    let { isEmojiTextMatchSuggestionsEnabled: t } = s.Z.getCurrentConfig({ location: e });
-    if (!t) {
-        a.Z.hasPersistedState() && a.Z.clear();
+    if (null == i.default.getCurrentUser()) return;
+    let { isEmojiTextMatchSuggestionsEnabled: n } = o.Z.getCurrentConfig({ location: e });
+    if (!n) {
+        s.Z.hasPersistedState() && s.Z.clear();
         return;
     }
-    if (a.Z.getIsFetching()) return;
-    let n = a.Z.getEmojiCaptionsTTL();
-    if (!(null != n && Date.now() < n)) await (0, i.n)();
+    if (s.Z.getIsFetching()) return;
+    let r = s.Z.getEmojiCaptionsTTL();
+    if (!(null != r && Date.now() < r)) await (0, a.n)();
 }

@@ -1,26 +1,26 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return c;
+        return d;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(531301),
-    s = n(475413),
-    o = n(228168),
-    l = n(388032),
-    u = n(734570);
-function c(e) {
-    let { userId: t, isHovering: n, onOpenProfile: c } = e,
-        { note: d } = (0, a.Z)(t),
-        f = null != d && '' !== d;
-    return (0, r.jsx)(s.y, {
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(531301),
+    o = r(475413),
+    l = r(228168),
+    u = r(388032),
+    c = r(734570);
+function d(e) {
+    let { userId: n, isHovering: r, onOpenProfile: d } = e,
+        { note: f } = (0, s.Z)(n),
+        _ = null != f && '' !== f;
+    return (0, i.jsx)(o.y, {
         action: 'PRESS_ADD_NOTE',
-        icon: f ? i.PaperIcon : i.PaperPlusIcon,
-        tooltipText: f ? d : l.intl.string(l.t.Dglxra),
-        tooltipClassName: f ? u.tooltip : void 0,
-        isHovering: n,
-        onClick: () => (null == c ? void 0 : c({ subsection: o.Tb.NOTE }))
+        icon: _ ? a.PaperIcon : a.PaperPlusIcon,
+        tooltipText: _ ? f : u.intl.string(u.t.Dglxra),
+        tooltipClassName: _ ? c.tooltip : void 0,
+        isHovering: r,
+        onClick: () => (null == d ? void 0 : d({ subsection: l.Tb.NOTE }))
     });
 }

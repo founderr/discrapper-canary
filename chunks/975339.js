@@ -1,6 +1,6 @@
-n.d(t, {
+r.d(n, {
     $: function () {
-        return r.$;
+        return i.$;
     }
 });
-var r = n(355336);
+var i = r(355336);

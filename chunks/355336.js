@@ -1,87 +1,87 @@
-n.d(t, {
+r.d(n, {
     $: function () {
-        return c;
+        return f;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(803997),
-    s = n.n(a),
-    o = n(84735),
-    l = n(780900),
-    u = n(553624);
-function c(e, t) {
-    let n = new Map(),
-        a = new t((e) => {
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(803997),
+    l = r.n(o),
+    u = r(84735),
+    c = r(780900),
+    d = r(553624);
+function f(e, n) {
+    let r = new Map(),
+        i = new n((e) => {
             e.forEach((e) => {
-                var t;
-                let { target: r } = e;
-                null === (t = n.get(r)) || void 0 === t || t(e);
+                var n;
+                let { target: i } = e;
+                null === (n = r.get(i)) || void 0 === n || n(e);
             });
         });
-    return i.forwardRef(function (t, c) {
-        let { children: d, className: f, onResize: _, contentClassName: p, onScroll: h, dir: m = 'ltr', fade: g = !1, customTheme: E = !1, style: v, ...I } = t,
-            T = i.useRef(null),
-            b = i.useRef(null),
-            [S, y] = i.useState(!1),
-            { scrollerRef: A, getScrollerState: N } = (0, l.Ke)(),
-            C = (0, l.t2)(A);
-        i.useImperativeHandle(
-            c,
+    return s.forwardRef(function (n, o) {
+        let { children: f, className: _, onResize: h, contentClassName: p, onScroll: m, dir: g = 'ltr', fade: E = !1, customTheme: v = !1, style: I, ...T } = n,
+            b = s.useRef(null),
+            y = s.useRef(null),
+            [S, A] = s.useState(!1),
+            { scrollerRef: N, getScrollerState: C } = (0, c.Ke)(),
+            R = (0, c.t2)(N);
+        s.useImperativeHandle(
+            o,
             () => ({
-                getScrollerNode: () => A.current,
-                isScrolling: () => null != T.current,
-                getScrollerState: N,
-                ...(0, l.Ue)(A, N, C)
+                getScrollerNode: () => N.current,
+                isScrolling: () => null != b.current,
+                getScrollerState: C,
+                ...(0, c.Ue)(N, C, R)
             }),
-            [A, N, C]
+            [N, C, R]
         );
-        let R = i.useCallback(
+        let O = s.useCallback(
             (e) => {
-                null == T.current ? y(!0) : clearTimeout(T.current),
-                    (T.current = setTimeout(() => {
-                        (T.current = null), y(!1);
+                null == b.current ? A(!0) : clearTimeout(b.current),
+                    (b.current = setTimeout(() => {
+                        (b.current = null), A(!1);
                     }, 200)),
-                    null != h && h(e);
+                    null != m && m(e);
             },
-            [h]
+            [m]
         );
         return (
-            i.useEffect(() => () => clearTimeout(T.current), []),
-            (0, l.zn)({
-                ref: A,
+            s.useEffect(() => () => clearTimeout(b.current), []),
+            (0, c.zn)({
+                ref: N,
                 key: 'container',
-                onUpdate: _,
-                resizeObserver: a,
-                listenerMap: n
+                onUpdate: h,
+                resizeObserver: i,
+                listenerMap: r
             }),
-            (0, l.zn)({
-                ref: b,
+            (0, c.zn)({
+                ref: y,
                 key: 'content',
-                onUpdate: _,
-                resizeObserver: a,
-                listenerMap: n
+                onUpdate: h,
+                resizeObserver: i,
+                listenerMap: r
             }),
-            (0, r.jsx)('div', {
-                ref: A,
-                className: s()(f, {
-                    [u.fade]: g,
-                    [u.customTheme]: E,
+            (0, a.jsx)('div', {
+                ref: N,
+                className: l()(_, {
+                    [d.fade]: E,
+                    [d.customTheme]: v,
                     [e]: !0,
-                    [u.managedReactiveScroller]: !0,
-                    [u.scrolling]: S && g
+                    [d.managedReactiveScroller]: !0,
+                    [d.scrolling]: S && E
                 }),
-                style: v,
-                dir: m,
-                onScroll: R,
-                ...I,
-                children: (0, r.jsx)(o.J, {
-                    containerRef: b,
-                    children: (0, r.jsxs)('div', {
-                        ref: b,
-                        className: s()(p, u.content),
-                        children: [d, S && (0, r.jsx)('div', { className: u.pointerCover })]
+                style: I,
+                dir: g,
+                onScroll: O,
+                ...T,
+                children: (0, a.jsx)(u.J, {
+                    containerRef: y,
+                    children: (0, a.jsxs)('div', {
+                        ref: y,
+                        className: l()(p, d.content),
+                        children: [f, S && (0, a.jsx)('div', { className: d.pointerCover })]
                     })
                 })
             })

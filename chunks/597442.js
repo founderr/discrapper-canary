@@ -1,32 +1,32 @@
-n.d(t, {
+r.d(n, {
     E: function () {
-        return c;
+        return d;
     },
     T: function () {
-        return u;
+        return c;
     }
 });
-var r,
-    i = n(192379),
-    a = n(610521),
-    s = n(442837),
-    o = n(607070);
-let l = null !== (r = document.getElementById('app-mount')) && void 0 !== r ? r : document;
-function u(e) {
-    var t;
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        r = (0, s.e7)([o.Z], () => o.Z.keyboardModeEnabled),
-        u = i.useRef(!1);
+var i,
+    a = r(192379),
+    s = r(610521),
+    o = r(442837),
+    l = r(607070);
+let u = null !== (i = document.getElementById('app-mount')) && void 0 !== i ? i : document;
+function c(e) {
+    var n;
+    let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        i = (0, o.e7)([l.Z], () => l.Z.keyboardModeEnabled),
+        c = a.useRef(!1);
     return (
-        (u.current = !r),
-        (0, a.ZP)(e, {
-            ...n,
-            disableReturnRef: u,
-            attachTo: null !== (t = n.attachTo) && void 0 !== t ? t : l,
-            returnRef: n.returnRef
+        (c.current = !i),
+        (0, s.ZP)(e, {
+            ...r,
+            disableReturnRef: c,
+            attachTo: null !== (n = r.attachTo) && void 0 !== n ? n : u,
+            returnRef: r.returnRef
         })
     );
 }
-function c(e) {
-    return u(e.containerRef), e.children;
+function d(e) {
+    return c(e.containerRef), e.children;
 }

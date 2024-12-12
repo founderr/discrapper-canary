@@ -1,83 +1,83 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return v;
+        return I;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(442837),
-    o = n(481060),
-    l = n(100527),
-    u = n(906732),
-    c = n(849522),
-    d = n(639119),
-    f = n(594174),
-    _ = n(74538),
-    p = n(694320),
-    h = n(981631),
-    m = n(474936),
-    g = n(388032),
-    E = n(454816);
-function v(e) {
-    var t, n, i, v;
-    let { type: I, textValue: T, maxCharacterCount: b, showRemainingCharsAfterCount: S, className: y } = e,
-        A = (0, s.e7)([f.default], () => _.ZP.canUseIncreasedMessageLength(f.default.getCurrentUser())),
-        N = (0, c.Z)(),
-        C = null != b ? b : N,
-        R = null !== (v = null != S ? S : b) && void 0 !== v ? v : N / 10,
-        O = T.length,
-        D = null != I.upsellLongMessages && (null != O ? O : 0) > h.J6R && A,
-        L = null != I.upsellLongMessages && !A,
-        x = (null === (n = (0, d.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === m.Si.TIER_2,
-        w = C - O,
-        P = w > R,
-        M = w < 0 && x,
-        k = 0 === w ? g.intl.string(g.t.tU6YQ0) : w > 0 ? g.intl.formatToPlainString(g.t.qH8uFR, { count: w }) : g.intl.string(g.t.YSRIqa),
-        { analyticsLocations: U } = (0, u.ZP)(l.Z.CHARACTER_COUNT);
-    return (D && w >= 0) || !P || (L && !P)
-        ? (0, r.jsx)(u.Gt, {
-              value: U,
-              children: (0, r.jsxs)('div', {
-                  className: a()(y, E.characterCount, { [E.error]: w < 0 }),
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(442837),
+    l = r(481060),
+    u = r(100527),
+    c = r(906732),
+    d = r(849522),
+    f = r(639119),
+    _ = r(594174),
+    h = r(74538),
+    p = r(694320),
+    m = r(981631),
+    g = r(474936),
+    E = r(388032),
+    v = r(454816);
+function I(e) {
+    var n, r, a, I;
+    let { type: T, textValue: b, maxCharacterCount: y, showRemainingCharsAfterCount: S, className: A } = e,
+        N = (0, o.e7)([_.default], () => h.ZP.canUseIncreasedMessageLength(_.default.getCurrentUser())),
+        C = (0, d.Z)(),
+        R = null != y ? y : C,
+        O = null !== (I = null != S ? S : y) && void 0 !== I ? I : C / 10,
+        D = b.length,
+        L = null != T.upsellLongMessages && (null != D ? D : 0) > m.J6R && N,
+        x = null != T.upsellLongMessages && !N,
+        w = (null === (r = (0, f.N)()) || void 0 === r ? void 0 : null === (n = r.subscription_trial) || void 0 === n ? void 0 : n.sku_id) === g.Si.TIER_2,
+        P = R - D,
+        M = P > O,
+        k = P < 0 && w,
+        U = 0 === P ? E.intl.string(E.t.tU6YQ0) : P > 0 ? E.intl.formatToPlainString(E.t.qH8uFR, { count: P }) : E.intl.string(E.t.YSRIqa),
+        { analyticsLocations: B } = (0, c.ZP)(u.Z.CHARACTER_COUNT);
+    return (L && P >= 0) || !M || (x && !M)
+        ? (0, i.jsx)(c.Gt, {
+              value: B,
+              children: (0, i.jsxs)('div', {
+                  className: s()(A, v.characterCount, { [v.error]: P < 0 }),
                   children: [
-                      (0, r.jsxs)('div', {
-                          className: E.flairContainer,
+                      (0, i.jsxs)('div', {
+                          className: v.flairContainer,
                           children: [
-                              D && w >= 0
-                                  ? (0, r.jsx)(o.Tooltip, {
-                                        text: g.intl.formatToPlainString(g.t.vcvHa2, { maxLength: C }),
+                              L && P >= 0
+                                  ? (0, i.jsx)(l.Tooltip, {
+                                        text: E.intl.formatToPlainString(E.t.vcvHa2, { maxLength: R }),
                                         position: 'top',
                                         children: (e) =>
-                                            (0, r.jsx)(o.NitroWheelIcon, {
+                                            (0, i.jsx)(l.NitroWheelIcon, {
                                                 size: 'md',
                                                 color: 'currentColor',
-                                                className: E.premiumFlair,
+                                                className: v.premiumFlair,
                                                 ...e
                                             })
                                     })
                                   : null,
-                              P || M
+                              M || k
                                   ? null
-                                  : (0, r.jsx)(o.Tooltip, {
-                                        text: k,
+                                  : (0, i.jsx)(l.Tooltip, {
+                                        text: U,
                                         position: 'top',
                                         children: (e) =>
-                                            (0, r.jsx)('span', {
+                                            (0, i.jsx)('span', {
                                                 'aria-hidden': !0,
                                                 ...e,
-                                                children: w
+                                                children: P
                                             })
                                     })
                           ]
                       }),
-                      (0, r.jsx)(o.HiddenVisually, { children: g.intl.format(g.t.qH8uFR, { count: w }) }),
-                      L && !P
-                          ? (0, r.jsx)(p.Z, {
-                                className: E.upsell,
-                                iconOnly: (null === (i = I.upsellLongMessages) || void 0 === i ? void 0 : i.iconOnly) || !1,
-                                remaining: w
+                      (0, i.jsx)(l.HiddenVisually, { children: E.intl.format(E.t.qH8uFR, { count: P }) }),
+                      x && !M
+                          ? (0, i.jsx)(p.Z, {
+                                className: v.upsell,
+                                iconOnly: (null === (a = T.upsellLongMessages) || void 0 === a ? void 0 : a.iconOnly) || !1,
+                                remaining: P
                             })
                           : null
                   ]

@@ -1,30 +1,30 @@
-n.d(t, {
+r.d(n, {
     Q: function () {
-        return o;
+        return l;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(692547),
-    a = n(331595),
-    s = n(267843);
-let o = (e) => {
-    var t, n;
-    let { size: o = 'md', width: l, height: u, color: c = i.Z.colors.INTERACTIVE_NORMAL, colorClass: d = '', ...f } = e,
-        _ = (0, s.m)(o),
-        p = null !== (t = null == _ ? void 0 : _.width) && void 0 !== t ? t : l,
-        h = null !== (n = null == _ ? void 0 : _.height) && void 0 !== n ? n : u;
-    return (0, r.jsx)('svg', {
-        ...(0, a.Z)(f),
+var i = r(200651);
+r(192379);
+var a = r(692547),
+    s = r(331595),
+    o = r(267843);
+let l = (e) => {
+    var n, r;
+    let { size: l = 'md', width: u, height: c, color: d = a.Z.colors.INTERACTIVE_NORMAL, colorClass: f = '', ..._ } = e,
+        h = (0, o.m)(l),
+        p = null !== (n = null == h ? void 0 : h.width) && void 0 !== n ? n : u,
+        m = null !== (r = null == h ? void 0 : h.height) && void 0 !== r ? r : c;
+    return (0, i.jsx)('svg', {
+        ...(0, s.Z)(_),
         xmlns: 'http://www.w3.org/2000/svg',
         width: p,
-        height: h,
+        height: m,
         fill: 'none',
         viewBox: '0 0 24 24',
-        children: (0, r.jsx)('path', {
-            fill: 'string' == typeof c ? c : c.css,
+        children: (0, i.jsx)('path', {
+            fill: 'string' == typeof d ? d : d.css,
             d: 'm20.75 7.51.01.59c0 5.96-4.54 12.84-12.84 12.84-2.45 0-4.86-.7-6.92-2.03a9.06 9.06 0 0 0 6.68-1.87 4.52 4.52 0 0 1-4.22-3.13c.68.13 1.38.1 2.04-.08A4.51 4.51 0 0 1 1.88 9.4v-.05c.63.35 1.33.54 2.05.56a4.52 4.52 0 0 1-1.4-6.02 12.81 12.81 0 0 0 9.3 4.71 4.52 4.52 0 0 1 7.7-4.12 9.06 9.06 0 0 0 2.86-1.1 4.53 4.53 0 0 1-1.98 2.5c.9-.1 1.77-.34 2.59-.7-.6.9-1.37 1.7-2.25 2.33Z',
-            className: d
+            className: f
         })
     });
 };

@@ -1,7 +1,7 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = { dismiss: `\u{53D6}\u{6D88}` };
+var i = {};
+i = { dismiss: `\u{53D6}\u{6D88}` };

@@ -1,19 +1,19 @@
-n.r(t),
-    n.d(t, {
+r.r(n),
+    r.d(n, {
         FILE: function () {
-            return r;
+            return i;
         },
         HTML: function () {
-            return s;
+            return o;
         },
         TEXT: function () {
-            return a;
+            return s;
         },
         URL: function () {
-            return i;
+            return a;
         }
     });
-var r = '__NATIVE_FILE__',
-    i = '__NATIVE_URL__',
-    a = '__NATIVE_TEXT__',
-    s = '__NATIVE_HTML__';
+var i = '__NATIVE_FILE__',
+    a = '__NATIVE_URL__',
+    s = '__NATIVE_TEXT__',
+    o = '__NATIVE_HTML__';

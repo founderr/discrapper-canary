@@ -1,74 +1,74 @@
-n.d(t, {
+r.d(n, {
     v: function () {
-        return o;
+        return u;
     }
-}),
-    n(47120);
-var r = n(887003),
-    i = n(497505);
-function a(e) {
-    let t = {};
-    for (let n of Object.keys(e)) {
-        let r = parseInt(n);
-        i.xw.has(r) && (t[r] = e[n]);
+});
+var i = r(47120);
+var a = r(887003),
+    s = r(497505);
+function o(e) {
+    let n = {};
+    for (let r of Object.keys(e)) {
+        let i = parseInt(r);
+        s.xw.has(i) && (n[i] = e[r]);
     }
-    return t;
+    return n;
 }
-let s = (e) => {
-        let t = {
+let l = (e) => {
+        let n = {
             skuId: e.sku_id,
             asset: e.asset,
             assetVideo: e.asset_video
         };
         switch (e.type) {
-            case r.w.REWARD_CODE:
+            case a.w.REWARD_CODE:
                 return {
-                    type: r.w.REWARD_CODE,
+                    type: a.w.REWARD_CODE,
                     messages: {
-                        redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
+                        redemptionInstructionsByPlatform: o(e.messages.redemption_instructions_by_platform),
                         name: e.messages.name,
                         nameWithArticle: e.messages.name_with_article
                     },
                     approximateCount: e.approximate_count,
-                    ...t
+                    ...n
                 };
-            case r.w.COLLECTIBLE:
+            case a.w.COLLECTIBLE:
                 return {
-                    type: r.w.COLLECTIBLE,
+                    type: a.w.COLLECTIBLE,
                     messages: {
-                        redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
+                        redemptionInstructionsByPlatform: o(e.messages.redemption_instructions_by_platform),
                         name: e.messages.name,
                         nameWithArticle: e.messages.name_with_article
                     },
                     expiresAt: e.expires_at,
-                    ...t
+                    ...n
                 };
-            case r.w.FRACTIONAL_PREMIUM:
+            case a.w.FRACTIONAL_PREMIUM:
                 return {
-                    type: r.w.FRACTIONAL_PREMIUM,
+                    type: a.w.FRACTIONAL_PREMIUM,
                     quantity: e.quantity,
                     messages: {
-                        redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
+                        redemptionInstructionsByPlatform: o(e.messages.redemption_instructions_by_platform),
                         name: e.messages.name,
                         nameWithArticle: e.messages.name_with_article
                     },
-                    ...t
+                    ...n
                 };
-            case r.w.IN_GAME:
+            case a.w.IN_GAME:
                 return {
-                    type: r.w.IN_GAME,
+                    type: a.w.IN_GAME,
                     messages: {
-                        redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
+                        redemptionInstructionsByPlatform: o(e.messages.redemption_instructions_by_platform),
                         name: e.messages.name,
                         nameWithArticle: e.messages.name_with_article
                     },
-                    ...t
+                    ...n
                 };
         }
     },
-    o = (e) => ({
+    u = (e) => ({
         assignmentMethod: e.assignment_method,
-        rewards: e.rewards.map(s),
+        rewards: e.rewards.map(l),
         rewardsExpireAt: e.rewards_expire_at,
         platforms: e.platforms
     });

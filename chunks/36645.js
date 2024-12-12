@@ -1,17 +1,17 @@
-n.d(t, {
+r.d(n, {
     Co: function () {
-        return r;
+        return i;
     },
     WL: function () {
-        return a;
+        return s;
     },
     at: function () {
-        return i;
+        return a;
     }
 });
-let r = 450,
-    i = 360,
-    a = (e) => {
-        let { maxWidth: t, minWidth: n } = e;
-        return t <= n;
+let i = 450,
+    a = 360,
+    s = (e) => {
+        let { maxWidth: n, minWidth: r } = e;
+        return n <= r;
     };

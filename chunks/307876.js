@@ -1,54 +1,54 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
         return p;
     }
 });
-var r = n(232567),
-    i = n(147913),
-    a = n(592125),
-    s = n(944486),
-    o = n(594174),
-    l = n(894257),
-    u = n(981631);
-function c(e, t, n) {
+var i = r(232567),
+    a = r(147913),
+    s = r(592125),
+    o = r(944486),
+    l = r(594174),
+    u = r(894257),
+    c = r(981631);
+function d(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let d = !1;
-function f(e) {
-    if (__OVERLAY__) return;
-    let t = o.default.getCurrentUser();
-    if (null == t) return;
-    let n = s.Z.getChannelId(),
-        r = a.Z.getDMFromUserId(l.I);
-    if (!t.hasUrgentMessages() || r === n) return _({ channelId: n });
-    !d && ((d = !0), e());
-}
+let f = !1;
 function _(e) {
-    let { channelId: t } = e,
-        n = o.default.getCurrentUser(),
-        i = t === a.Z.getDMFromUserId(l.I);
-    null != n && n.hasUrgentMessages() && i && ((d = !1), r.mB(u.xW$.HAS_UNREAD_URGENT_MESSAGES, !1));
+    if (__OVERLAY__) return;
+    let n = l.default.getCurrentUser();
+    if (null == n) return;
+    let r = o.Z.getChannelId(),
+        i = s.Z.getDMFromUserId(u.I);
+    if (!n.hasUrgentMessages() || i === r) return h({ channelId: r });
+    !f && ((f = !0), e());
 }
-class p extends i.Z {
+function h(e) {
+    let { channelId: n } = e,
+        r = l.default.getCurrentUser(),
+        a = n === s.Z.getDMFromUserId(u.I);
+    null != r && r.hasUrgentMessages() && a && ((f = !1), i.mB(c.xW$.HAS_UNREAD_URGENT_MESSAGES, !1));
+}
+class p extends a.Z {
     constructor(e) {
         super(),
-            c(this, 'handleShowUrgentMessageAlert', void 0),
-            c(this, 'actions', void 0),
+            d(this, 'handleShowUrgentMessageAlert', void 0),
+            d(this, 'actions', void 0),
             (this.handleShowUrgentMessageAlert = e),
             (this.actions = {
-                POST_CONNECTION_OPEN: () => f(this.handleShowUrgentMessageAlert),
-                MESSAGE_CREATE: () => f(this.handleShowUrgentMessageAlert),
-                CHANNEL_SELECT: _
+                POST_CONNECTION_OPEN: () => _(this.handleShowUrgentMessageAlert),
+                MESSAGE_CREATE: () => _(this.handleShowUrgentMessageAlert),
+                CHANNEL_SELECT: h
             });
     }
 }

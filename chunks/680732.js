@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     u: function () {
-        return i;
+        return a;
     }
 });
-var r = n(408160);
-let i = {
-    announce: r.announce,
-    clearAnnouncements: r.clearAnnouncer
+var i = r(408160);
+let a = {
+    announce: i.announce,
+    clearAnnouncements: i.clearAnnouncer
 };

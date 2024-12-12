@@ -1,16 +1,16 @@
-n.d(t, {
+r.d(n, {
     h2: function () {
-        return s;
+        return o;
     },
     xV: function () {
-        return a;
+        return s;
     },
     yW: function () {
-        return o;
+        return l;
     }
 });
-var r = n(49402),
-    i = n(553624);
-let a = (0, r.I)(i.none, i.fade, i.customTheme),
-    s = (0, r.I)(i.thin, i.fade, i.customTheme),
-    o = (0, r.I)(i.auto, i.fade, i.customTheme);
+var i = r(49402),
+    a = r(553624);
+let s = (0, i.I)(a.none, a.fade, a.customTheme),
+    o = (0, i.I)(a.thin, a.fade, a.customTheme),
+    l = (0, i.I)(a.auto, a.fade, a.customTheme);

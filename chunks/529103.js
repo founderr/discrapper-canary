@@ -1,13 +1,13 @@
-var r = n(570140);
-t.Z = {
+var i = r(570140);
+n.Z = {
     setSection(e) {
-        r.Z.dispatch({
+        i.Z.dispatch({
             type: 'FRIENDS_SET_SECTION',
             section: e
         });
     },
     setInitialSection(e) {
-        r.Z.dispatch({
+        i.Z.dispatch({
             type: 'FRIENDS_SET_INITIAL_SECTION',
             section: e
         });

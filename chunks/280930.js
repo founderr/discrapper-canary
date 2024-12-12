@@ -1,67 +1,67 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return g;
+        return I;
     },
     m: function () {
-        return E;
+        return T;
     }
-}),
-    n(47120),
-    n(653041);
-var r = n(192379),
-    i = n(954955),
-    a = n.n(i),
-    s = n(442837),
-    o = n(285651),
-    l = n(268350),
-    u = n(453070),
-    c = n(926491),
-    d = n(594174),
-    f = n(483360),
-    _ = n(251625),
-    p = n(606301),
-    h = n(549058);
-let m = (0, _.ad)(l.$p, h.J7),
-    g = (e, t, n) => {
-        let i = (0, u.fQ)(n),
-            a = (0, s.e7)([d.default], () => d.default.getCurrentUser());
-        return r.useMemo(() => {
-            let r = (0, p.wN)(e);
-            if (t || null == e || '' === e || r.length > h.t7 || !i) return [];
-            let s = [],
+});
+var i = r(47120);
+var a = r(653041);
+var s = r(192379),
+    o = r(954955),
+    l = r.n(o),
+    u = r(442837),
+    c = r(285651),
+    d = r(268350),
+    f = r(453070),
+    _ = r(926491),
+    h = r(594174),
+    p = r(483360),
+    m = r(251625),
+    g = r(606301),
+    E = r(549058);
+let v = (0, m.ad)(d.$p, E.J7),
+    I = (e, n, r) => {
+        let i = (0, f.fQ)(r),
+            a = (0, u.e7)([h.default], () => h.default.getCurrentUser());
+        return s.useMemo(() => {
+            let s = (0, g.wN)(e);
+            if (n || null == e || '' === e || s.length > E.t7 || !i) return [];
+            let o = [],
                 l = [],
-                u = (0, p.kT)(e),
-                c = u === r[0] ? r : [u, ...r];
-            f.ZP.queryStickers(c, !1).forEach((e) => {
-                let { sticker: t } = e,
-                    r = (0, o.cO)(t, a, n),
-                    i = {
-                        sticker: t,
-                        sendability: r
+                u = (0, g.kT)(e),
+                d = u === s[0] ? s : [u, ...s];
+            p.ZP.queryStickers(d, !1).forEach((e) => {
+                let { sticker: n } = e,
+                    i = (0, c.cO)(n, a, r),
+                    s = {
+                        sticker: n,
+                        sendability: i
                     };
-                r === o.eb.SENDABLE ? s.push(i) : r === o.eb.SENDABLE_WITH_PREMIUM && l.push(i);
+                i === c.eb.SENDABLE ? o.push(s) : i === c.eb.SENDABLE_WITH_PREMIUM && l.push(s);
             });
-            let d = [];
-            return s.length > 0 && ((d = s.slice(0, h.qm)), 0 !== l.length && (d.length === h.qm && d.pop(), d.push(l[0]))), d;
-        }, [e, n, i, t, a]);
+            let f = [];
+            return o.length > 0 && ((f = o.slice(0, E.qm)), 0 !== l.length && (f.length === E.qm && f.pop(), f.push(l[0]))), f;
+        }, [e, r, i, n, a]);
     },
-    E = (e) => {
-        let { setTextInputValue: t, setHasDismissed: n, setHasSelection: i, setFocusedSuggestionType: s, delayBeforeSuggestions: o } = e,
-            l = r.useRef(null),
-            u = r.useRef(!1),
-            d = r.useRef(!1),
-            f = r.useMemo(() => a()(t, null != o ? o : h.gf), [t, o]);
+    T = (e) => {
+        let { setTextInputValue: n, setHasDismissed: r, setHasSelection: i, setFocusedSuggestionType: a, delayBeforeSuggestions: o } = e,
+            u = s.useRef(null),
+            c = s.useRef(!1),
+            d = s.useRef(!1),
+            f = s.useMemo(() => l()(n, null != o ? o : E.gf), [n, o]);
         return {
             handleTextChange: async (e) => {
-                var r;
-                if (null == e || '' === e) f.cancel(), null == t || t(''), null == n || n(!1), null == i || i(!1), null == s || s(null), (l.current = null), (u.current = !1);
-                else if (!u.current && e.trim() !== (null === (r = l.current) || void 0 === r ? void 0 : r.trim())) {
-                    if (((l.current = e), (0, p.wN)(e).length > h.t7)) {
-                        (u.current = !0), f.cancel(), t('');
+                var s;
+                if (null == e || '' === e) f.cancel(), null == n || n(''), null == r || r(!1), null == i || i(!1), null == a || a(null), (u.current = null), (c.current = !1);
+                else if (!c.current && e.trim() !== (null === (s = u.current) || void 0 === s ? void 0 : s.trim())) {
+                    if (((u.current = e), (0, g.wN)(e).length > E.t7)) {
+                        (c.current = !0), f.cancel(), n('');
                         return;
                     }
                     if (!0 === d.current) return;
-                    !c.Z.hasLoadedStickerPacks && ((d.current = !0), await m(), (d.current = !1)), f(l.current);
+                    !_.Z.hasLoadedStickerPacks && ((d.current = !0), await v(), (d.current = !1)), f(u.current);
                 }
             },
             debouncedSetTextInputValue: f

@@ -1,31 +1,31 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return E;
     }
-}),
-    n(47120),
-    n(518263),
-    n(970173),
-    n(520712),
-    n(268111),
-    n(941497),
-    n(32026),
-    n(480839),
-    n(744285),
-    n(492257),
-    n(873817);
-var r = n(512722),
-    i = n.n(r),
-    a = n(735630);
-async function s(e) {
-    let t;
-    let n = a.createFile(!1),
-        r = new Promise((e) => {
-            n.onReady = e;
+});
+var i = r(47120);
+var a = r(518263);
+var s = r(970173);
+var o = r(520712);
+var l = r(268111);
+var u = r(941497);
+var c = r(32026);
+var d = r(480839);
+var f = r(744285);
+var _ = r(492257);
+var h = r(873817);
+var p = r(512722),
+    m = r.n(p),
+    g = r(735630);
+async function E(e) {
+    let n;
+    let r = g.createFile(!1),
+        i = new Promise((e) => {
+            r.onReady = e;
         }),
-        s = await e.arrayBuffer();
-    for (let e of ((s.fileStart = 0), n.appendBuffer(s), n.flush(), await r, i()(null != n.boxes, 'mp4boxInputFile.boxes should not be null after parsing'), n.boxes)) 'uuid' === e.type && (t = e.start);
-    let o = e.slice(0, t, e.type),
-        l = e.slice(t + 4, t + 8 + 16, e.type);
-    return new Blob([o, new Uint8Array([0, 0, 0, 24]), l], { type: e.type });
+        a = await e.arrayBuffer();
+    for (let e of ((a.fileStart = 0), r.appendBuffer(a), r.flush(), await i, m()(null != r.boxes, 'mp4boxInputFile.boxes should not be null after parsing'), r.boxes)) 'uuid' === e.type && (n = e.start);
+    let s = e.slice(0, n, e.type),
+        o = e.slice(n + 4, n + 8 + 16, e.type);
+    return new Blob([s, new Uint8Array([0, 0, 0, 24]), o], { type: e.type });
 }

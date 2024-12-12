@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(388032);
-function i(e) {
-    return null != e && '' !== e ? e : r.intl.string(r.t['2YCamp']);
+var i = r(388032);
+function a(e) {
+    return null != e && '' !== e ? e : i.intl.string(i.t['2YCamp']);
 }

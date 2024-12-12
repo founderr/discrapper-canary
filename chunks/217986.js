@@ -1,4 +1,4 @@
-t.Z = [
+n.Z = [
     {
         name: 'Afghanistan',
         alpha2: 'AF',

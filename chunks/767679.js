@@ -1,7 +1,7 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = { longPressMessage: 'Long press or press Alt + ArrowDown to open menu' };
+var i = {};
+i = { longPressMessage: 'Long press or press Alt + ArrowDown to open menu' };

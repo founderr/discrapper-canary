@@ -1,5 +1,5 @@
-var r = n(818083);
-t.Z = (0, r.B)({
+var i = r(818083);
+n.Z = (0, i.B)({
     kind: 'user',
     id: '2023-12_nv_relaxed_rate_control',
     label: 'Alternative rate control proposal for Nvidia encoder',

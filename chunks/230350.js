@@ -1,8 +1,8 @@
-function r(e, t) {
-    return t.get ? t.get.call(e) : t.value;
+function i(e, n) {
+    return n.get ? n.get.call(e) : n.value;
 }
-n.d(t, {
+r.d(n, {
     e: function () {
-        return r;
+        return i;
     }
 });

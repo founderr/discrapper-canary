@@ -1,31 +1,31 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(392711),
-    a = n(485341),
-    s = n(184325),
-    o = n(228168);
-let l = {
-    [o.y0.BITE_SIZE]: 12,
-    [o.y0.FULL_SIZE]: 26,
-    [o.y0.PANEL]: 13
+var i = r(200651);
+r(192379);
+var a = r(392711);
+var s = r(485341),
+    o = r(184325),
+    l = r(228168);
+let u = {
+    [l.y0.BITE_SIZE]: 12,
+    [l.y0.FULL_SIZE]: 26,
+    [l.y0.PANEL]: 13
 };
-function u(e) {
-    let { displayProfile: t, profileType: n, onClose: o } = e,
-        u = (0, a.Z)(t);
-    return 0 === u.length
+function c(e) {
+    let { displayProfile: n, profileType: r, onClose: l } = e,
+        c = (0, s.Z)(n);
+    return 0 === c.length
         ? null
-        : (0, r.jsx)(r.Fragment, {
-              children: (0, i.chunk)(u, l[n]).map((e) =>
-                  (0, r.jsx)(
-                      s.Z,
+        : (0, i.jsx)(i.Fragment, {
+              children: (0, a.chunk)(c, u[r]).map((e) =>
+                  (0, i.jsx)(
+                      o.Z,
                       {
                           badges: e,
-                          onClose: o
+                          onClose: l
                       },
                       e[0].id
                   )

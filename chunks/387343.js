@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(131704),
-    i = n(981631);
-function a(e, t) {
-    return (0, r.hv)(e.type) || t.canBasicChannel(i.S7T.CONNECT | i.S7T.VIEW_CHANNEL, e);
+var i = r(131704),
+    a = r(981631);
+function s(e, n) {
+    return (0, i.hv)(e.type) || n.canBasicChannel(a.S7T.CONNECT | a.S7T.VIEW_CHANNEL, e);
 }

@@ -1,77 +1,77 @@
-n.d(t, {
+r.d(n, {
     C: function () {
         return p;
     },
     Z: function () {
-        return _;
+        return h;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(75735),
-    l = n(40851),
-    u = n(67844),
-    c = n(411840),
-    d = n(871499),
-    f = n(541234);
-function _(e) {
-    let t = (0, u.X)(e),
-        { enabled: n, cameraUnavailable: a, onChange: s, onCameraUnavailable: c, hasPermission: d, children: f, channelLimitReached: _ = !1, join: p } = e,
-        h = (0, l.bp)(),
-        m = a ? () => c() : () => s(!e.enabled, h),
-        { Component: g, play: E, events: v } = (0, o.o)(p || n ? 'disable' : 'enable');
+var i = r(200651),
+    a = r(192379),
+    s = r(120356),
+    o = r.n(s),
+    l = r(75735),
+    u = r(40851),
+    c = r(67844),
+    d = r(411840),
+    f = r(871499),
+    _ = r(541234);
+function h(e) {
+    let n = (0, c.X)(e),
+        { enabled: r, cameraUnavailable: s, onChange: o, onCameraUnavailable: d, hasPermission: f, children: _, channelLimitReached: h = !1, join: p } = e,
+        m = (0, u.bp)(),
+        g = s ? () => d() : () => o(!e.enabled, m),
+        { Component: E, play: v, events: I } = (0, l.o)(p || r ? 'disable' : 'enable');
     return (
-        i.useEffect(() => () => E(), [n, E]),
-        (0, r.jsx)(r.Fragment, {
-            children: f({
-                onClick: m,
-                isActive: n,
-                disabled: !n && (!d || _),
-                iconComponent: g,
+        a.useEffect(() => () => v(), [r, v]),
+        (0, i.jsx)(i.Fragment, {
+            children: _({
+                onClick: g,
+                isActive: r,
+                disabled: !r && (!f || h),
+                iconComponent: E,
                 iconColor: 'currentColor',
-                label: t,
-                unavailable: a,
-                onMouseEnter: p ? void 0 : v.onMouseEnter,
-                onMouseLeave: p ? void 0 : v.onMouseLeave
+                label: n,
+                unavailable: s,
+                onMouseEnter: p ? void 0 : I.onMouseEnter,
+                onMouseLeave: p ? void 0 : I.onMouseLeave
             })
         })
     );
 }
 function p(e) {
-    let { enabled: t, join: n, channel: i, onChange: a, onCameraUnavailable: o, cameraUnavailable: l, hasPermission: u, className: p, channelLimitReached: h, channelLimit: m, centerButton: g = !1, onPopoutClick: E, ...v } = e,
-        I = g ? d.d : d.Z,
-        { mode: T } = (0, c.Z)({ location: 'VideoButton' });
-    return (0, r.jsx)(_, {
-        enabled: t,
-        join: n,
-        channel: i,
-        onChange: a,
-        onCameraUnavailable: o,
-        cameraUnavailable: l,
-        hasPermission: u,
-        channelLimitReached: h,
-        channelLimit: m,
+    let { enabled: n, join: r, channel: a, onChange: s, onCameraUnavailable: l, cameraUnavailable: u, hasPermission: c, className: p, channelLimitReached: m, channelLimit: g, centerButton: E = !1, onPopoutClick: v, ...I } = e,
+        T = E ? f.d : f.Z,
+        { mode: b } = (0, d.Z)({ location: 'VideoButton' });
+    return (0, i.jsx)(h, {
+        enabled: n,
+        join: r,
+        channel: a,
+        onChange: s,
+        onCameraUnavailable: l,
+        cameraUnavailable: u,
+        hasPermission: c,
+        channelLimitReached: m,
+        channelLimit: g,
         children: (e) => {
-            let { unavailable: t, onMouseEnter: i, onMouseLeave: a, isActive: o, ...l } = e;
-            return (0, r.jsx)(I, {
-                ...l,
-                ...v,
-                color: T === c.B.GroupedButtonsRedMic && o ? 'green' : v.color,
-                ignoreColorForCaret: T === c.B.GroupedButtonsRedMic && !n,
-                isActive: o,
+            let { unavailable: n, onMouseEnter: a, onMouseLeave: s, isActive: l, ...u } = e;
+            return (0, i.jsx)(T, {
+                ...u,
+                ...I,
+                color: b === d.B.GroupedButtonsRedMic && l ? 'green' : I.color,
+                ignoreColorForCaret: b === d.B.GroupedButtonsRedMic && !r,
+                isActive: l,
                 onMouseEnter: (e) => {
-                    var t;
-                    null === (t = v.onMouseEnter) || void 0 === t || t.call(v, e), null == i || i();
+                    var n;
+                    null === (n = I.onMouseEnter) || void 0 === n || n.call(I, e), null == a || a();
                 },
                 onMouseLeave: (e) => {
-                    var t;
-                    null === (t = v.onMouseLeave) || void 0 === t || t.call(v, e), null == a || a();
+                    var n;
+                    null === (n = I.onMouseLeave) || void 0 === n || n.call(I, e), null == s || s();
                 },
-                className: s()(p, { [f.fauxDisabled]: t }),
-                onPopoutClick: E,
-                fullRegionButton: n
+                className: o()(p, { [_.fauxDisabled]: n }),
+                onPopoutClick: v,
+                fullRegionButton: r
             });
         }
     });

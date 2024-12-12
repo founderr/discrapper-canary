@@ -1,45 +1,45 @@
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    l = n(600164),
-    u = n(186133);
-class c extends i.PureComponent {
+var i = r(200651),
+    a = r(192379),
+    s = r(120356),
+    o = r.n(s),
+    l = r(481060),
+    u = r(600164),
+    c = r(186133);
+class d extends a.PureComponent {
     render() {
-        let { note: e, title: t, action: n, className: i } = this.props;
-        return (0, r.jsx)('div', {
-            className: s()(u.wrapper, i),
-            children: (0, r.jsxs)(l.Z, {
-                className: u.flexWrapper,
-                direction: l.Z.Direction.VERTICAL,
-                align: l.Z.Align.CENTER,
-                justify: l.Z.Justify.CENTER,
+        let { note: e, title: n, action: r, className: a } = this.props;
+        return (0, i.jsx)('div', {
+            className: o()(c.wrapper, a),
+            children: (0, i.jsxs)(u.Z, {
+                className: c.flexWrapper,
+                direction: u.Z.Direction.VERTICAL,
+                align: u.Z.Align.CENTER,
+                justify: u.Z.Justify.CENTER,
                 children: [
-                    (0, r.jsx)(l.Z.Child, {
+                    (0, i.jsx)(u.Z.Child, {
                         grow: 0,
-                        className: u.image
+                        className: c.image
                     }),
-                    (0, r.jsxs)(l.Z.Child, {
+                    (0, i.jsxs)(u.Z.Child, {
                         grow: 0,
-                        className: u.text,
+                        className: c.text,
                         children: [
-                            (0, r.jsx)(o.H, {
-                                className: u.title,
-                                children: t
+                            (0, i.jsx)(l.H, {
+                                className: c.title,
+                                children: n
                             }),
                             null != e
-                                ? (0, r.jsx)('div', {
-                                      className: u.note,
+                                ? (0, i.jsx)('div', {
+                                      className: c.note,
                                       children: e
                                   })
                                 : null
                         ]
                     }),
-                    n
+                    r
                 ]
             })
         });
     }
 }
-t.Z = c;
+n.Z = d;

@@ -1,12 +1,12 @@
-n.d(t, {
+r.d(n, {
     YC: function () {
-        return i;
+        return a;
     },
     cC: function () {
-        return a;
+        return s;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
     kind: 'user',
     id: '2024-10_blocking_context',
     label: 'Blocking Context',
@@ -33,11 +33,11 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i(e) {
-    let { location: t } = e;
-    return r.useExperiment({ location: t }, { autoTrackExposure: !0 }).condensed;
-}
 function a(e) {
-    let { location: t } = e;
-    return r.getCurrentConfig({ location: t }, { autoTrackExposure: !0 }).enabled;
+    let { location: n } = e;
+    return i.useExperiment({ location: n }, { autoTrackExposure: !0 }).condensed;
+}
+function s(e) {
+    let { location: n } = e;
+    return i.getCurrentConfig({ location: n }, { autoTrackExposure: !0 }).enabled;
 }

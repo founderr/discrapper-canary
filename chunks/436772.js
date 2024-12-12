@@ -1,82 +1,82 @@
-var r =
+var i =
         (this && this.__createBinding) ||
         (Object.create
-            ? function (e, t, n, r) {
-                  void 0 === r && (r = n);
-                  var i = Object.getOwnPropertyDescriptor(t, n);
-                  (!i || ('get' in i ? !t.__esModule : i.writable || i.configurable)) &&
-                      (i = {
+            ? function (e, n, r, i) {
+                  void 0 === i && (i = r);
+                  var a = Object.getOwnPropertyDescriptor(n, r);
+                  (!a || ('get' in a ? !n.__esModule : a.writable || a.configurable)) &&
+                      (a = {
                           enumerable: !0,
                           get: function () {
-                              return t[n];
+                              return n[r];
                           }
                       }),
-                      Object.defineProperty(e, r, i);
+                      Object.defineProperty(e, i, a);
               }
-            : function (e, t, n, r) {
-                  void 0 === r && (r = n), (e[r] = t[n]);
+            : function (e, n, r, i) {
+                  void 0 === i && (i = r), (e[i] = n[r]);
               }),
-    i =
+    a =
         (this && this.__exportStar) ||
-        function (e, t) {
-            for (var n in e) 'default' !== n && !Object.prototype.hasOwnProperty.call(t, n) && r(t, e, n);
+        function (e, n) {
+            for (var r in e) 'default' !== r && !Object.prototype.hasOwnProperty.call(n, r) && i(n, e, r);
         };
-Object.defineProperty(t, '__esModule', { value: !0 }), (t.MessageLoader = t.waitForAllDefaultIntlMessagesLoaded = t.loadAllMessagesInLocale = t.createLoader = t.DEFAULT_LOCALE = t.IntlManager = t.runtimeHashMessageKey = t.bindFormatValues = t.FormatBuilder = void 0), i(n(581213), t);
-var a = n(200232);
-Object.defineProperty(t, 'FormatBuilder', {
+Object.defineProperty(n, '__esModule', { value: !0 }), (n.MessageLoader = n.waitForAllDefaultIntlMessagesLoaded = n.loadAllMessagesInLocale = n.createLoader = n.DEFAULT_LOCALE = n.IntlManager = n.runtimeHashMessageKey = n.bindFormatValues = n.FormatBuilder = void 0), a(r(581213), n);
+var s = r(200232);
+Object.defineProperty(n, 'FormatBuilder', {
     enumerable: !0,
     get: function () {
-        return a.FormatBuilder;
+        return s.FormatBuilder;
     }
 }),
-    Object.defineProperty(t, 'bindFormatValues', {
+    Object.defineProperty(n, 'bindFormatValues', {
         enumerable: !0,
         get: function () {
-            return a.bindFormatValues;
+            return s.bindFormatValues;
         }
     });
-var s = n(141918);
-Object.defineProperty(t, 'runtimeHashMessageKey', {
+var o = r(141918);
+Object.defineProperty(n, 'runtimeHashMessageKey', {
     enumerable: !0,
     get: function () {
-        return s.runtimeHashMessageKey;
+        return o.runtimeHashMessageKey;
     }
 });
-var o = n(343071);
-Object.defineProperty(t, 'IntlManager', {
+var l = r(343071);
+Object.defineProperty(n, 'IntlManager', {
     enumerable: !0,
     get: function () {
-        return o.IntlManager;
+        return l.IntlManager;
     }
 }),
-    Object.defineProperty(t, 'DEFAULT_LOCALE', {
+    Object.defineProperty(n, 'DEFAULT_LOCALE', {
         enumerable: !0,
         get: function () {
-            return o.DEFAULT_LOCALE;
+            return l.DEFAULT_LOCALE;
         }
     });
-var l = n(129393);
-Object.defineProperty(t, 'createLoader', {
+var u = r(129393);
+Object.defineProperty(n, 'createLoader', {
     enumerable: !0,
     get: function () {
-        return l.createLoader;
+        return u.createLoader;
     }
 }),
-    Object.defineProperty(t, 'loadAllMessagesInLocale', {
+    Object.defineProperty(n, 'loadAllMessagesInLocale', {
         enumerable: !0,
         get: function () {
-            return l.loadAllMessagesInLocale;
+            return u.loadAllMessagesInLocale;
         }
     }),
-    Object.defineProperty(t, 'waitForAllDefaultIntlMessagesLoaded', {
+    Object.defineProperty(n, 'waitForAllDefaultIntlMessagesLoaded', {
         enumerable: !0,
         get: function () {
-            return l.waitForAllDefaultIntlMessagesLoaded;
+            return u.waitForAllDefaultIntlMessagesLoaded;
         }
     }),
-    Object.defineProperty(t, 'MessageLoader', {
+    Object.defineProperty(n, 'MessageLoader', {
         enumerable: !0,
         get: function () {
-            return l.MessageLoader;
+            return u.MessageLoader;
         }
     });

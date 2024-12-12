@@ -1,13 +1,13 @@
-function r(e) {
+function i(e) {
     if (null == e) return window;
     if ('[object Window]' !== e.toString()) {
-        var t = e.ownerDocument;
-        return (t && t.defaultView) || window;
+        var n = e.ownerDocument;
+        return (n && n.defaultView) || window;
     }
     return e;
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

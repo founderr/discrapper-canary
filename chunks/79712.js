@@ -1,23 +1,23 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(325767);
-function a(e) {
-    let { width: t = 24, height: n = 24, color: a = 'currentColor', ...s } = e;
-    return (0, r.jsx)('svg', {
-        ...(0, i.Z)(s),
-        width: t,
-        height: n,
+var i = r(200651);
+r(192379);
+var a = r(325767);
+function s(e) {
+    let { width: n = 24, height: r = 24, color: s = 'currentColor', ...o } = e;
+    return (0, i.jsx)('svg', {
+        ...(0, a.Z)(o),
+        width: n,
+        height: r,
         viewBox: '0 0 4 4',
-        children: (0, r.jsx)('circle', {
+        children: (0, i.jsx)('circle', {
             cx: '2',
             cy: '2',
             r: '2',
-            fill: a
+            fill: s
         })
     });
 }

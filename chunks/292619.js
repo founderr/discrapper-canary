@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     w: function () {
-        return i;
+        return a;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
     kind: 'user',
     id: '2024-03_web_audio_api_rollout',
     label: 'Web Audio API Rollout',
@@ -16,8 +16,8 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i(e) {
-    let { location: t } = e,
-        { enabled: n } = r.getCurrentConfig({ location: t }, { autoTrackExposure: !1 });
-    return n;
+function a(e) {
+    let { location: n } = e,
+        { enabled: r } = i.getCurrentConfig({ location: n }, { autoTrackExposure: !1 });
+    return r;
 }

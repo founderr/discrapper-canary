@@ -1,12 +1,12 @@
-n.d(t, {
+r.d(n, {
     CC: function () {
-        return i;
+        return a;
     },
     ov: function () {
-        return a;
+        return s;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
         kind: 'user',
         id: '2024-01_uu_forced_migration',
         label: 'Unique Username Forced Migration UI',
@@ -19,11 +19,11 @@ let r = (0, n(818083).B)({
             }
         ]
     }),
-    i = () => {
-        let { enabled: e } = r.useExperiment({ location: 'force_migration' }, { autoTrackExposure: !1 });
+    a = () => {
+        let { enabled: e } = i.useExperiment({ location: 'force_migration' }, { autoTrackExposure: !1 });
         return e;
     },
-    a = () => {
-        let { enabled: e } = r.getCurrentConfig({ location: 'force_migration' }, { autoTrackExposure: !1 });
+    s = () => {
+        let { enabled: e } = i.getCurrentConfig({ location: 'force_migration' }, { autoTrackExposure: !1 });
         return e;
     };

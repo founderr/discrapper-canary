@@ -1,10 +1,10 @@
-var r = n(690244),
-    i = n(192853),
-    a = r('%TypeError%'),
-    s = n(156700),
-    o = r('%Reflect.apply%', !0) || i('Function.prototype.apply');
-e.exports = function (e, t) {
-    var n = arguments.length > 2 ? arguments[2] : [];
-    if (!s(n)) throw new a('Assertion failed: optional `argumentsList`, if provided, must be a List');
-    return o(e, t, n);
+var i = r(690244),
+    a = r(192853),
+    s = i('%TypeError%'),
+    o = r(156700),
+    l = i('%Reflect.apply%', !0) || a('Function.prototype.apply');
+e.exports = function (e, n) {
+    var r = arguments.length > 2 ? arguments[2] : [];
+    if (!o(r)) throw new s('Assertion failed: optional `argumentsList`, if provided, must be a List');
+    return l(e, n, r);
 };

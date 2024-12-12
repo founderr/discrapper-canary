@@ -1,21 +1,21 @@
-n.d(t, {
+r.d(n, {
     n: function () {
-        return o;
+        return l;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(398015);
-function o(e) {
-    let { id: t, tag: n = 'span', showOnFocus: i, children: o } = e;
-    return (0, r.jsx)(n, {
-        id: t,
-        className: a()({
-            [s.hiddenVisually]: !i,
-            [s.showOnFocus]: i
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(398015);
+function l(e) {
+    let { id: n, tag: r = 'span', showOnFocus: a, children: l } = e;
+    return (0, i.jsx)(r, {
+        id: n,
+        className: s()({
+            [o.hiddenVisually]: !a,
+            [o.showOnFocus]: a
         }),
-        children: o
+        children: l
     });
 }

@@ -1,46 +1,46 @@
-n.d(t, {
+r.d(n, {
     Fl: function () {
-        return o;
-    },
-    c1: function () {
         return l;
     },
-    cv: function () {
+    c1: function () {
         return u;
     },
+    cv: function () {
+        return c;
+    },
     lp: function () {
-        return s;
+        return o;
     }
 });
-var r = n(149765),
-    i = n(231338),
-    a = n(388032);
-let s = 2,
-    o = 2,
-    l = () => [
+var i = r(149765),
+    a = r(231338),
+    s = r(388032);
+let o = 2,
+    l = 2,
+    u = () => [
         {
             value: 1,
-            label: a.intl.string(a.t['GA/d4O'])
+            label: s.intl.string(s.t['GA/d4O'])
         },
         {
             value: 2,
-            label: a.intl.string(a.t['+rHFen'])
+            label: s.intl.string(s.t['+rHFen'])
         },
         {
             value: 4,
-            label: a.intl.string(a.t['5CNt/P'])
+            label: s.intl.string(s.t['5CNt/P'])
         },
         {
             value: 6,
-            label: a.intl.string(a.t.oQ4PND)
+            label: s.intl.string(s.t.oQ4PND)
         },
         {
             value: 12,
-            label: a.intl.string(a.t.LOQ0j4)
+            label: s.intl.string(s.t.LOQ0j4)
         },
         {
             value: 24,
-            label: a.intl.string(a.t['W0+Lsb'])
+            label: s.intl.string(s.t['W0+Lsb'])
         }
     ],
-    u = r.$e(i.Pl.ADMINISTRATOR, i.Pl.MANAGE_GUILD, i.Pl.BAN_MEMBERS, i.Pl.KICK_MEMBERS, i.Pl.MODERATE_MEMBERS);
+    c = i.$e(a.Pl.ADMINISTRATOR, a.Pl.MANAGE_GUILD, a.Pl.BAN_MEMBERS, a.Pl.KICK_MEMBERS, a.Pl.MODERATE_MEMBERS);

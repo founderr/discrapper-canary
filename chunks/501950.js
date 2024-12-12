@@ -1,48 +1,48 @@
-n.d(t, {
+r.d(n, {
     C1: function () {
-        return o;
+        return c;
     },
     HS: function () {
-        return u;
+        return f;
     },
     Hg: function () {
-        return l;
+        return d;
     },
     l0: function () {
-        return c;
+        return _;
     }
-}),
-    n(757143),
-    n(733860);
-var r = n(264344),
-    i = n.n(r),
-    a = n(992774),
-    s = n(149396);
-function o(e, t) {
-    var n;
-    let r = !1,
-        a = t.map((t, n) => {
-            let { guid: i, guid: a, name: o, name: l, index: u } = t;
+});
+var i = r(757143);
+var a = r(733860);
+var s = r(264344),
+    o = r.n(s),
+    l = r(992774),
+    u = r(149396);
+function c(e, n) {
+    var r;
+    let i = !1,
+        a = n.map((n, r) => {
+            let { guid: a, guid: s, name: o, name: l, index: c } = n;
             return (
-                /^default/.test(o) ? ((r = !0), (i = s.w5), (o = o.replace('default', 'Default'))) : (i = null != i && '' !== i ? i : o),
-                null != u && (n = u),
+                /^default/.test(o) ? ((i = !0), (a = u.w5), (o = o.replace('default', 'Default'))) : (a = null != a && '' !== a ? a : o),
+                null != c && (r = c),
                 {
-                    id: i,
+                    id: a,
                     type: e,
-                    index: n,
+                    index: r,
                     name: o,
                     originalName: l,
-                    originalId: a
+                    originalId: s
                 }
             );
         });
     return (
-        e !== s.h7.VIDEO_INPUT &&
-            !r &&
-            (null === i() || void 0 === i() ? void 0 : null === (n = i().os) || void 0 === n ? void 0 : n.family) != null &&
-            /^win/i.test(i().os.family) &&
+        e !== u.h7.VIDEO_INPUT &&
+            !i &&
+            (null === o() || void 0 === o() ? void 0 : null === (r = o().os) || void 0 === r ? void 0 : r.family) != null &&
+            /^win/i.test(o().os.family) &&
             a.unshift({
-                id: s.w5,
+                id: u.w5,
                 type: e,
                 index: -1,
                 name: 'Default'
@@ -50,18 +50,18 @@ function o(e, t) {
         a
     );
 }
-function l() {
+function d() {
     return new Promise((e) => {
-        (0, a.zS)().getInputDevices((t) => e(o(s.h7.AUDIO_INPUT, t)));
+        (0, l.zS)().getInputDevices((n) => e(c(u.h7.AUDIO_INPUT, n)));
     });
 }
-function u() {
+function f() {
     return new Promise((e) => {
-        (0, a.zS)().getOutputDevices((t) => e(o(s.h7.AUDIO_OUTPUT, t)));
+        (0, l.zS)().getOutputDevices((n) => e(c(u.h7.AUDIO_OUTPUT, n)));
     });
 }
-function c() {
+function _() {
     return new Promise((e) => {
-        (0, a.zS)().getVideoInputDevices((t) => e(o(s.h7.VIDEO_INPUT, t)));
+        (0, l.zS)().getVideoInputDevices((n) => e(c(u.h7.VIDEO_INPUT, n)));
     });
 }

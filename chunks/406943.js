@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     D: function () {
-        return i;
+        return a;
     }
 });
-var r = n(674563);
-function i(e) {
-    let t;
-    return e.isSystemUser() ? (t = r.Hb.SYSTEM_DM) : e.isClyde() ? (t = r.Hb.AI) : e.bot && (t = r.Hb.BOT), t;
+var i = r(674563);
+function a(e) {
+    let n;
+    return e.isSystemUser() ? (n = i.Hb.SYSTEM_DM) : e.isClyde() ? (n = i.Hb.AI) : e.bot && (n = i.Hb.BOT), n;
 }

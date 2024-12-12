@@ -1,39 +1,39 @@
-n.d(t, {
+r.d(n, {
     $: function () {
-        return s;
+        return o;
     }
 });
-var r = n(381129),
-    i = n(981631),
-    a = n(388032);
-let s = [
+var i = r(381129),
+    a = r(981631),
+    s = r(388032);
+let o = [
     {
-        check(e, t, n) {
-            if (!n || null == t.getGuildId()) return !1;
-            let i = r.Z.extractEveryoneRole(e, t);
-            if (null == i || !r.Z.shouldShowEveryoneGuard(i, t)) return !1;
-            let s = r.Z.everyoneMemberCount(i, t),
-                o = Math.pow(10, Math.floor(Math.log10(s))),
-                l = a.t['47E5R0'];
+        check(e, n, r) {
+            if (!r || null == n.getGuildId()) return !1;
+            let a = i.Z.extractEveryoneRole(e, n);
+            if (null == a || !i.Z.shouldShowEveryoneGuard(a, n)) return !1;
+            let o = i.Z.everyoneMemberCount(a, n),
+                l = Math.pow(10, Math.floor(Math.log10(o))),
+                u = s.t['47E5R0'];
             return (
-                t.isForumPost() ? (l = a.t.sYW2c3) : t.isThread() && (l = a.t['2YaiQ0']),
+                n.isForumPost() ? (u = s.t.sYW2c3) : n.isThread() && (u = s.t['2YaiQ0']),
                 {
-                    body: a.intl.formatToPlainString(l, {
-                        role: i,
-                        count: (Math.trunc(s / o) * o).toLocaleString()
+                    body: s.intl.formatToPlainString(u, {
+                        role: a,
+                        count: (Math.trunc(o / l) * l).toLocaleString()
                     }),
-                    footer: a.intl.string(a.t.mVyrtr)
+                    footer: s.intl.string(s.t.mVyrtr)
                 }
             );
         },
         analyticsType: '@Everyone Warning',
         animation: {
-            dark: () => n.e('83323').then(n.t.bind(n, 510465, 19)),
-            light: () => n.e('36052').then(n.t.bind(n, 570227, 19))
+            dark: () => r.e('83323').then(r.t.bind(r, 510465, 19)),
+            light: () => r.e('36052').then(r.t.bind(r, 570227, 19))
         }
     },
     {
-        check: (e) => !!i.Jn9.test(e) && { body: a.intl.string(a.t.sTwS1d) },
+        check: (e) => !!a.Jn9.test(e) && { body: s.intl.string(s.t.sTwS1d) },
         analyticsType: 'API Token Warning'
     }
 ];

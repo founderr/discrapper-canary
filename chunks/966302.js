@@ -1,243 +1,243 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return H;
+        return W;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(752877),
-    l = n(442837),
-    u = n(481060),
-    c = n(26151),
-    d = n(922555),
-    f = n(287734),
-    _ = n(249000),
-    p = n(43267),
-    h = n(933557),
-    m = n(703656),
-    g = n(932724),
-    E = n(672339),
-    v = n(898531),
-    I = n(923973),
-    T = n(189771),
-    b = n(411840),
-    S = n(560688),
-    y = n(88479),
-    A = n(136995),
-    N = n(25827),
-    C = n(131951),
-    R = n(594174),
-    O = n(451478),
-    D = n(358221),
-    L = n(584511),
-    x = n(793865),
-    w = n(981631),
-    P = n(65154),
-    M = n(388032),
-    k = n(622492),
-    U = n(616926);
-let B = {
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(120356),
+    l = r.n(o),
+    u = r(752877),
+    c = r(442837),
+    d = r(481060),
+    f = r(26151),
+    _ = r(922555),
+    h = r(287734),
+    p = r(249000),
+    m = r(43267),
+    g = r(933557),
+    E = r(703656),
+    v = r(932724),
+    I = r(672339),
+    T = r(898531),
+    b = r(923973),
+    y = r(189771),
+    S = r(411840),
+    A = r(560688),
+    N = r(88479),
+    C = r(136995),
+    R = r(25827),
+    O = r(131951),
+    D = r(594174),
+    L = r(451478),
+    x = r(358221),
+    w = r(584511),
+    P = r(793865),
+    M = r(981631),
+    k = r(65154),
+    U = r(388032),
+    B = r(622492),
+    G = r(616926);
+let Z = {
         width: 232,
         height: 315
     },
-    G = {
+    F = {
         width: 232,
         height: 267
     },
-    Z = 475,
-    F = 267;
-function V(e) {
-    let { header: t } = e,
-        n = C.Z.getCameraComponent(),
-        a = (0, l.e7)([C.Z], () => C.Z.getVideoDeviceId()),
-        s = (0, v.Z)();
+    V = 475,
+    j = 267;
+function H(e) {
+    let { header: n } = e,
+        r = O.Z.getCameraComponent(),
+        i = (0, c.e7)([O.Z], () => O.Z.getVideoDeviceId()),
+        o = (0, T.Z)();
     return (
-        i.useEffect(() => {
-            let e = R.default.getCurrentUser();
-            if (s && null != e) {
-                let t = (0, g.P)(e);
-                (0, E.FU)(t, a, { track: !1 }).catch(w.dG4);
+        s.useEffect(() => {
+            let e = D.default.getCurrentUser();
+            if (o && null != e) {
+                let n = (0, v.P)(e);
+                (0, I.FU)(n, i, { track: !1 }).catch(M.dG4);
             }
-        }, [s, a]),
-        (0, r.jsxs)('div', {
-            className: k.previewRoot,
+        }, [o, i]),
+        (0, a.jsxs)('div', {
+            className: B.previewRoot,
             children: [
-                (0, r.jsx)(u.Spinner, {}),
-                (0, r.jsx)('div', {
-                    className: k.preview,
-                    children: (0, r.jsx)(n, {
+                (0, a.jsx)(d.Spinner, {}),
+                (0, a.jsx)('div', {
+                    className: B.preview,
+                    children: (0, a.jsx)(r, {
                         disabled: !1,
-                        deviceId: a,
-                        width: Z,
-                        height: F
+                        deviceId: i,
+                        width: V,
+                        height: j
                     })
                 }),
-                (0, r.jsx)('div', {
-                    className: k.previewChannelHeader,
-                    children: t
+                (0, a.jsx)('div', {
+                    className: B.previewChannelHeader,
+                    children: n
                 })
             ]
         })
     );
 }
-function j(e) {
-    let { canVideo: t, channel: n, numVideoDevices: i } = e,
-        { cameraUnavailable: a, enabled: o } = (0, I.Z)(),
-        l = (0, T.Z)(n),
-        { groupedButtons: d } = (0, b.Z)({ location: 'CallActionButtons' });
-    return (0, r.jsxs)('div', {
-        className: s()(k.wrapper, d ? k.experimentActions : k.actions),
+function Y(e) {
+    let { canVideo: n, channel: r, numVideoDevices: i } = e,
+        { cameraUnavailable: s, enabled: o } = (0, b.Z)(),
+        u = (0, y.Z)(r),
+        { groupedButtons: c } = (0, S.Z)({ location: 'CallActionButtons' });
+    return (0, a.jsxs)('div', {
+        className: l()(B.wrapper, c ? B.experimentActions : B.actions),
         children: [
-            (0, r.jsx)(y.Z, {
-                iconComponent: u.XSmallIcon,
-                label: M.intl.string(M.t.WAI6xs),
-                className: k.actionButton,
-                fullRegionButton: d,
-                onClick: () => c.Z.stopRinging(n.id)
+            (0, a.jsx)(N.Z, {
+                iconComponent: d.XSmallIcon,
+                label: U.intl.string(U.t.WAI6xs),
+                className: B.actionButton,
+                fullRegionButton: c,
+                onClick: () => f.Z.stopRinging(r.id)
             }),
-            t &&
-                (0, r.jsx)(u.Popout, {
+            n &&
+                (0, a.jsx)(d.Popout, {
                     renderPopout: (e) => {
-                        let { closePopout: t } = e;
-                        return (0, r.jsx)(x.Z, { onClose: t });
+                        let { closePopout: n } = e;
+                        return (0, a.jsx)(P.Z, { onClose: n });
                     },
                     position: 'top',
                     align: 'center',
-                    animation: u.Popout.Animation.FADE,
-                    children: (e, t) => {
-                        let { onClick: s } = e,
-                            { isShown: u } = t;
-                        return (0, r.jsx)(N.C, {
+                    animation: d.Popout.Animation.FADE,
+                    children: (e, n) => {
+                        let { onClick: l } = e,
+                            { isShown: c } = n;
+                        return (0, a.jsx)(R.C, {
                             join: !0,
                             enabled: o,
-                            className: k.actionButton,
+                            className: B.actionButton,
                             color: 'green',
                             centerButton: !0,
-                            hasPermission: l,
-                            cameraUnavailable: a,
-                            channel: n,
-                            onPopoutClick: i > 1 ? s : null,
-                            popoutOpen: u,
-                            onCameraUnavailable: S.Z,
+                            hasPermission: u,
+                            cameraUnavailable: s,
+                            channel: r,
+                            onPopoutClick: i > 1 ? l : null,
+                            popoutOpen: c,
+                            onCameraUnavailable: A.Z,
                             onChange: () => {
-                                f.default.selectVoiceChannel(n.id, !0), (0, m.XU)(w.ME, n.id);
+                                h.default.selectVoiceChannel(r.id, !0), (0, E.XU)(M.ME, r.id);
                             }
                         });
                     }
                 }),
-            (0, r.jsx)(A.Z, {
-                channel: n,
+            (0, a.jsx)(C.Z, {
+                channel: r,
                 color: 'green',
                 centerButton: !0,
-                className: k.actionButton
+                className: B.actionButton
             })
         ]
     });
 }
-function H(e) {
-    let { animatedStyle: t, y: n, x: a, channel: f } = e,
-        [m, g] = i.useState(!1),
-        E = (0, p.x)(f, 128, !0),
-        v = (0, h.ZP)(f),
-        [I, T] = (0, l.Wu)([C.Z], () => [C.Z.supports(P.AN.VIDEO), Object.keys(C.Z.getVideoDevices()).length]),
-        b = (0, l.e7)([O.Z], () => O.Z.isFocused()),
-        S = (0, l.e7)([D.Z], () => D.Z.getMode(f.id)),
-        y = i.useCallback((e) => {
-            null != e.top && null != e.left && d.Z.move(e.left, e.top);
+function W(e) {
+    let { animatedStyle: n, y: r, x: i, channel: o } = e,
+        [h, E] = s.useState(!1),
+        v = (0, m.x)(o, 128, !0),
+        I = (0, g.ZP)(o),
+        [T, b] = (0, c.Wu)([O.Z], () => [O.Z.supports(k.AN.VIDEO), Object.keys(O.Z.getVideoDevices()).length]),
+        y = (0, c.e7)([L.Z], () => L.Z.isFocused()),
+        S = (0, c.e7)([x.Z], () => x.Z.getMode(o.id)),
+        A = s.useCallback((e) => {
+            null != e.top && null != e.left && _.Z.move(e.left, e.top);
         }, []),
-        A = (0, u.useSpring)(
+        N = (0, d.useSpring)(
             {
-                value: m ? 1 : 0,
+                value: h ? 1 : 0,
                 config: {
-                    ...o.config.stiff,
+                    ...u.config.stiff,
                     clamp: !0
                 }
             },
             'animate-always'
         );
-    i.useEffect(() => {
+    s.useEffect(() => {
         let e = (e) => {
-            e.keyCode === w.yXg.ESCAPE && c.Z.stopRinging(f.id);
+            e.keyCode === M.yXg.ESCAPE && f.Z.stopRinging(o.id);
         };
         return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
-    }, [f]);
-    let N = S === w.WtW.VIDEO && I && T > 0,
-        R = (0, r.jsxs)(r.Fragment, {
+    }, [o]);
+    let C = S === M.WtW.VIDEO && T && b > 0,
+        R = (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, r.jsx)(L.Z, {
-                    className: k.icon,
-                    ringing: b,
-                    src: null != E ? E : '',
-                    ringingType: L.Z.RingingType.INCOMING,
-                    size: m ? u.AvatarSizes.SIZE_40 : u.AvatarSizes.SIZE_80
+                (0, a.jsx)(w.Z, {
+                    className: B.icon,
+                    ringing: y,
+                    src: null != v ? v : '',
+                    ringingType: w.Z.RingingType.INCOMING,
+                    size: h ? d.AvatarSizes.SIZE_40 : d.AvatarSizes.SIZE_80
                 }),
-                (0, r.jsxs)('div', {
-                    className: k.titleGroup,
+                (0, a.jsxs)('div', {
+                    className: B.titleGroup,
                     children: [
-                        (0, r.jsx)(u.Text, {
-                            className: k.title,
+                        (0, a.jsx)(d.Text, {
+                            className: B.title,
                             color: 'header-primary',
-                            variant: m ? 'text-md/semibold' : 'text-lg/semibold',
-                            children: v
+                            variant: h ? 'text-md/semibold' : 'text-lg/semibold',
+                            children: I
                         }),
-                        (0, r.jsx)(u.Text, {
+                        (0, a.jsx)(d.Text, {
                             color: 'header-secondary',
-                            className: k.subtitle,
-                            variant: m ? 'text-sm/normal' : 'text-md/normal',
-                            children: S === w.WtW.VOICE ? M.intl.string(M.t.Js8cKy) : M.intl.string(M.t.KcnWCA)
+                            className: B.subtitle,
+                            variant: h ? 'text-sm/normal' : 'text-md/normal',
+                            children: S === M.WtW.VOICE ? U.intl.string(U.t.Js8cKy) : U.intl.string(U.t.KcnWCA)
                         })
                     ]
                 })
             ]
         }),
-        x = N ? B : G,
-        H = (0, l.e7)([O.Z], () => O.Z.windowSize());
-    return (0, r.jsx)(_.Z, {
-        className: k.wrapper,
-        selector: '.'.concat(k.root),
+        D = C ? Z : F,
+        P = (0, c.e7)([L.Z], () => L.Z.windowSize());
+    return (0, a.jsx)(p.Z, {
+        className: B.wrapper,
+        selector: '.'.concat(B.root),
         initialPosition: {
-            left: a,
-            top: n
+            left: i,
+            top: r
         },
-        maxX: H.width,
-        maxY: H.height,
-        onDragEnd: y,
+        maxX: P.width,
+        maxY: P.height,
+        onDragEnd: A,
         dragAnywhere: !0,
-        children: (0, r.jsx)(u.ThemeProvider, {
-            theme: m ? w.BRd.DARK : void 0,
+        children: (0, a.jsx)(d.ThemeProvider, {
+            theme: h ? M.BRd.DARK : void 0,
             children: (e) =>
-                (0, r.jsxs)(o.animated.div, {
-                    className: s()(k.root, U.elevationHigh, { [k.previewCamera]: m }, e),
+                (0, a.jsxs)(u.animated.div, {
+                    className: l()(B.root, G.elevationHigh, { [B.previewCamera]: h }, e),
                     style: {
-                        ...t,
-                        width: A.value.interpolate([0, 1], [x.width, Z]),
-                        minHeight: A.value.interpolate([0, 1], [x.height, F]),
-                        translateX: A.value.interpolate([0, 1], [0, (-1 * Math.abs(Z - x.width)) / 2])
+                        ...n,
+                        width: N.value.interpolate([0, 1], [D.width, V]),
+                        minHeight: N.value.interpolate([0, 1], [D.height, j]),
+                        translateX: N.value.interpolate([0, 1], [0, (-1 * Math.abs(V - D.width)) / 2])
                     },
                     children: [
-                        m
-                            ? (0, r.jsx)(V, { header: R })
-                            : (0, r.jsx)('div', {
-                                  className: k.mainChannelInfo,
+                        h
+                            ? (0, a.jsx)(H, { header: R })
+                            : (0, a.jsx)('div', {
+                                  className: B.mainChannelInfo,
                                   children: R
                               }),
-                        (0, r.jsx)(j, {
-                            canVideo: N,
-                            channel: f,
-                            numVideoDevices: T
+                        (0, a.jsx)(Y, {
+                            canVideo: C,
+                            channel: o,
+                            numVideoDevices: b
                         }),
-                        N && !m
-                            ? (0, r.jsx)(u.Button, {
-                                  size: u.Button.Sizes.SMALL,
+                        C && !h
+                            ? (0, a.jsx)(d.Button, {
+                                  size: d.Button.Sizes.SMALL,
                                   fullWidth: !0,
-                                  look: u.Button.Looks.LINK,
-                                  color: u.Button.Colors.PRIMARY,
-                                  className: k.previewButton,
-                                  onClick: () => g(!0),
-                                  children: M.intl.string(M.t['8B0UDg'])
+                                  look: d.Button.Looks.LINK,
+                                  color: d.Button.Colors.PRIMARY,
+                                  className: B.previewButton,
+                                  onClick: () => E(!0),
+                                  children: U.intl.string(U.t['8B0UDg'])
                               })
                             : null
                     ]

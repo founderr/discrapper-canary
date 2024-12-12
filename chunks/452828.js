@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(192379);
-let i = Object.freeze({
+var i = r(192379);
+let a = Object.freeze({
     scrollTop: 0,
     scrollLeft: 0,
     scrollHeight: 0,
@@ -13,38 +13,38 @@ let i = Object.freeze({
     offsetWidth: 0,
     dirty: 2
 });
-function a() {
-    let e = (0, r.useRef)(null),
-        t = (0, r.useRef)(i),
-        n = (0, r.useCallback)(() => {
-            let { current: n } = e,
-                { dirty: r } = t.current;
-            if (null == n || 0 === r) return t.current;
-            if (1 === r) {
-                let { scrollTop: e, scrollLeft: r } = n;
-                t.current = {
-                    ...t.current,
+function s() {
+    let e = (0, i.useRef)(null),
+        n = (0, i.useRef)(a),
+        r = (0, i.useCallback)(() => {
+            let { current: r } = e,
+                { dirty: i } = n.current;
+            if (null == r || 0 === i) return n.current;
+            if (1 === i) {
+                let { scrollTop: e, scrollLeft: i } = r;
+                n.current = {
+                    ...n.current,
                     scrollTop: e,
-                    scrollLeft: r,
+                    scrollLeft: i,
                     dirty: 0
                 };
             } else {
-                let { scrollTop: e, scrollLeft: r, scrollHeight: i, scrollWidth: a, offsetHeight: s, offsetWidth: o } = n;
-                t.current = {
+                let { scrollTop: e, scrollLeft: i, scrollHeight: a, scrollWidth: s, offsetHeight: o, offsetWidth: l } = r;
+                n.current = {
                     scrollTop: e,
-                    scrollLeft: r,
-                    scrollHeight: i,
-                    scrollWidth: a,
-                    offsetHeight: s,
-                    offsetWidth: o,
+                    scrollLeft: i,
+                    scrollHeight: a,
+                    scrollWidth: s,
+                    offsetHeight: o,
+                    offsetWidth: l,
                     dirty: 0
                 };
             }
-            return t.current;
+            return n.current;
         }, []);
     return {
         scrollerRef: e,
-        scrollerState: t,
-        getScrollerState: n
+        scrollerState: n,
+        getScrollerState: r
     };
 }

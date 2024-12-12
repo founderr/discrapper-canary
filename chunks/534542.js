@@ -1,18 +1,18 @@
-n.d(t, {
+r.d(n, {
     R: function () {
-        return c;
+        return d;
     },
     g: function () {
-        return l;
+        return u;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(118012),
-    o = n(249096);
-let l = {
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(118012),
+    l = r(249096);
+let u = {
         DEFAULT: 'default',
         INPUT_PLACEHOLDER: 'placeholder',
         DESCRIPTION: 'description',
@@ -22,22 +22,22 @@ let l = {
         ERROR: 'error',
         SUCCESS: 'success'
     },
-    u = {
+    c = {
         DEFAULT: 'modeDefault',
         DISABLED: 'modeDisabled',
         SELECTABLE: 'modeSelectable'
     };
-function c(e) {
-    let { type: t = l.DEFAULT, className: n, disabled: i, selectable: c, children: d, style: f, ..._ } = e,
-        p = u.DEFAULT;
+function d(e) {
+    let { type: n = u.DEFAULT, className: r, disabled: a, selectable: d, children: f, style: _, ...h } = e,
+        p = c.DEFAULT;
     return (
-        i ? (p = u.DISABLED) : c && (p = u.SELECTABLE),
-        (0, r.jsx)(s.Z, {
-            className: a()(o[t], n, o[p]),
-            style: f,
-            ..._,
-            children: d
+        a ? (p = c.DISABLED) : d && (p = c.SELECTABLE),
+        (0, i.jsx)(o.Z, {
+            className: s()(l[n], r, l[p]),
+            style: _,
+            ...h,
+            children: f
         })
     );
 }
-c.Types = l;
+d.Types = u;

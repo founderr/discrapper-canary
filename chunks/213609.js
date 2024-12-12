@@ -1,86 +1,86 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return E;
+        return v;
     },
     h: function () {
-        return g;
+        return E;
     }
 });
-var r = n(192379),
-    i = n(348327),
-    a = n.n(i),
-    s = n(97613),
-    o = n.n(s),
-    l = n(990547),
-    u = n(570140),
-    c = n(592125),
-    d = n(944486),
-    f = n(914010),
-    _ = n(626135),
-    p = n(367907),
-    h = n(565384);
-let m = (0, l.trackMaker)({
-    analyticEventConfigs: _.AnalyticEventConfigs,
-    dispatcher: u.Z,
+var i = r(192379),
+    a = r(348327),
+    s = r.n(a),
+    o = r(97613),
+    l = r.n(o),
+    u = r(990547),
+    c = r(570140),
+    d = r(592125),
+    f = r(944486),
+    _ = r(914010),
+    h = r(626135),
+    p = r(367907),
+    m = r(565384);
+let g = (0, u.trackMaker)({
+    analyticEventConfigs: h.AnalyticEventConfigs,
+    dispatcher: c.Z,
     TRACK_ACTION_NAME: 'TRACK'
 });
-function g(e) {
-    var t, n;
-    let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { name: i, type: a, properties: s } = e;
+function E(e) {
+    var n, r;
+    let i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        { name: a, type: s, properties: o } = e;
     if (
-        e.type === l.ImpressionTypes.MODAL &&
+        e.type === u.ImpressionTypes.MODAL &&
         null == e.name &&
-        (0, h.Ez)().some((e) => {
-            var t;
-            return null === (t = e._stackContext) || void 0 === t ? void 0 : t.isSlide;
+        (0, m.Ez)().some((e) => {
+            var n;
+            return null === (n = e._stackContext) || void 0 === n ? void 0 : n.isSlide;
         })
     )
         return;
-    (0, h.Ps)(e);
-    let o = null !== (t = null == s ? void 0 : s.guild_id) && void 0 !== t ? t : f.Z.getGuildId(),
-        u = null !== (n = null == s ? void 0 : s.channel_id) && void 0 !== n ? n : d.Z.getChannelId(o),
-        g = (0, _.expandEventProperties)({
-            impression_type: a,
-            location: (0, h.k$)(),
-            ...(0, p.hH)(o),
-            ...(0, p.v_)(c.Z.getChannel(u)),
-            ...s
+    (0, m.Ps)(e);
+    let l = null !== (n = null == o ? void 0 : o.guild_id) && void 0 !== n ? n : _.Z.getGuildId(),
+        c = null !== (r = null == o ? void 0 : o.channel_id) && void 0 !== r ? r : f.Z.getChannelId(l),
+        E = (0, h.expandEventProperties)({
+            impression_type: s,
+            location: (0, m.k$)(),
+            ...(0, p.hH)(l),
+            ...(0, p.v_)(d.Z.getChannel(c)),
+            ...o
         });
-    if (r) {
-        (0, h.dT)(null, null);
+    if (i) {
+        (0, m.dT)(null, null);
         return;
     }
-    null != i && null != a && ((0, _.debugLogEvent)(i, g), m(i, g)), (0, h.dT)(i, g);
+    null != a && null != s && ((0, h.debugLogEvent)(a, E), g(a, E)), (0, m.dT)(a, E);
 }
-function E(e) {
-    let t =
+function v(e) {
+    let n =
             arguments.length > 1 && void 0 !== arguments[1]
                 ? arguments[1]
                 : {
                       disableTrack: !1,
                       trackOnInitialLoad: !1
                   },
-        n = arguments.length > 2 ? arguments[2] : void 0,
-        i = r.useRef(),
-        s = r.useRef();
-    r.useEffect(
+        r = arguments.length > 2 ? arguments[2] : void 0,
+        a = i.useRef(),
+        o = i.useRef();
+    i.useEffect(
         () => {
-            let r = !a()(i.current, e);
-            r && (i.current = e);
-            let l = !a()(s.current, n);
-            if ((l && (s.current = n), !r && !l)) return;
-            let u = {
+            let i = !s()(a.current, e);
+            i && (a.current = e);
+            let u = !s()(o.current, r);
+            if ((u && (o.current = r), !i && !u)) return;
+            let c = {
                 ...e,
-                sequenceId: o()('impression_')
+                sequenceId: l()('impression_')
             };
             return (
-                g(u, t.disableTrack),
+                E(c, n.disableTrack),
                 () => {
-                    null != u && (0, h.dw)(u);
+                    null != c && (0, m.dw)(c);
                 }
             );
         },
-        t.trackOnInitialLoad ? [] : void 0
+        n.trackOnInitialLoad ? [] : void 0
     );
 }

@@ -1,73 +1,73 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return d;
+        return f;
     }
 });
-var r,
-    i = n(200651),
-    a = n(192379),
-    s = n(772848),
-    o = n(626135),
-    l = n(251625),
-    u = n(981631);
-function c(e, t, n) {
+var i,
+    a = r(200651),
+    s = r(192379),
+    o = r(772848),
+    l = r(626135),
+    u = r(251625),
+    c = r(981631);
+function d(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-class d extends (r = a.Component) {
+class f extends (i = s.Component) {
     renderProvider(e) {
-        var t, n;
-        let { section: r, page: a, object: s, objectType: l, children: u } = this.props,
-            c = this.mergeLocation(e.location, this.getLocation(a, r, s, l)),
-            d = this.getContext(c, null !== (t = this._loadDate) && void 0 !== t ? t : e.loadDate, null !== (n = this._loadId) && void 0 !== n ? n : e.loadId);
-        return (0, i.jsx)(o.AnalyticsContext.Provider, {
-            value: d,
-            children: u
+        var n, r;
+        let { section: i, page: s, object: o, objectType: u, children: c } = this.props,
+            d = this.mergeLocation(e.location, this.getLocation(s, i, o, u)),
+            f = this.getContext(d, null !== (n = this._loadDate) && void 0 !== n ? n : e.loadDate, null !== (r = this._loadId) && void 0 !== r ? r : e.loadId);
+        return (0, a.jsx)(l.AnalyticsContext.Provider, {
+            value: f,
+            children: c
         });
     }
     render() {
         let { context: e } = this.props;
-        return null != e ? this.renderProvider(e) : (0, i.jsx)(o.AnalyticsContext.Consumer, { children: (e) => this.renderProvider(e) });
+        return null != e ? this.renderProvider(e) : (0, a.jsx)(l.AnalyticsContext.Consumer, { children: (e) => this.renderProvider(e) });
     }
     constructor(e) {
         super(e),
-            c(this, '_loadId', null),
-            c(this, '_loadDate', this.props.root ? Date.now() : null),
-            c(
+            d(this, '_loadId', null),
+            d(this, '_loadDate', this.props.root ? Date.now() : null),
+            d(
                 this,
                 'getLocation',
-                (0, l.oH)((e, t, n, r) => {
-                    let i = {};
-                    return null != e && (i.page = e), null != t && (i.section = t), null != n && (i.object = n), null != r && (i.objectType = r), i;
+                (0, u.oH)((e, n, r, i) => {
+                    let a = {};
+                    return null != e && (a.page = e), null != n && (a.section = n), null != r && (a.object = r), null != i && (a.objectType = i), a;
                 })
             ),
-            c(
+            d(
                 this,
                 'mergeLocation',
-                (0, l.oH)((e, t) => ({
+                (0, u.oH)((e, n) => ({
                     ...e,
-                    ...t
+                    ...n
                 }))
             ),
-            c(
+            d(
                 this,
                 'getContext',
-                (0, l.oH)((e, t, n) => ({
+                (0, u.oH)((e, n, r) => ({
                     location: e,
-                    loadDate: t,
-                    loadId: n
+                    loadDate: n,
+                    loadId: r
                 }))
             ),
-            null != e.loadId ? (this._loadId = e.loadId) : e.root && (this._loadId = (0, s.Z)());
+            null != e.loadId ? (this._loadId = e.loadId) : e.root && (this._loadId = (0, o.Z)());
     }
 }
-c(d, 'Pages', u.ZY5), c(d, 'Sections', u.jXE), c(d, 'Objects', u.qAy), c(d, 'ObjectTypes', u.Qqv), c(d, 'defaultProps', { root: !1 });
+d(f, 'Pages', c.ZY5), d(f, 'Sections', c.jXE), d(f, 'Objects', c.qAy), d(f, 'ObjectTypes', c.Qqv), d(f, 'defaultProps', { root: !1 });

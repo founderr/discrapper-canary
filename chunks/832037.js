@@ -1,10 +1,10 @@
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(204623),
-    s = n(155221);
-t.Z = {
-    App: () => (0, r.jsx)(i.DnDProvider, { children: (0, r.jsx)(s.Z, {}) }),
-    Overlay: () => (0, r.jsx)(i.DnDProvider, { children: (0, r.jsx)(s.a, {}) }),
-    OutdatedClient: a.Z
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(204623),
+    o = r(155221);
+n.Z = {
+    App: () => (0, i.jsx)(a.DnDProvider, { children: (0, i.jsx)(o.Z, {}) }),
+    Overlay: () => (0, i.jsx)(a.DnDProvider, { children: (0, i.jsx)(o.a, {}) }),
+    OutdatedClient: s.Z
 };

@@ -1,88 +1,88 @@
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(568611),
-    l = n(481060),
-    u = n(317767);
-let c = i.forwardRef(function (e, t) {
-    var n;
-    let { avatar: i, name: a, children: c, subText: d, decorators: f, onClick: _, selected: p, muted: h, to: m, avatarClassName: g, selectedClassName: E, innerClassName: v, wrapContent: I, highlighted: T, focusProps: b, ...S } = e;
-    (S.className = s()(S.className, u.container, {
-        [u.selected]: p,
-        [u.highlighted]: T,
-        [null != E ? E : '']: p,
-        [u.clickable]: !p && (null != m || null != _)
+var i = r(200651),
+    a = r(192379),
+    s = r(120356),
+    o = r.n(s),
+    l = r(568611),
+    u = r(481060),
+    c = r(317767);
+let d = a.forwardRef(function (e, n) {
+    var r;
+    let { avatar: a, name: s, children: d, subText: f, decorators: _, onClick: h, selected: p, muted: m, to: g, avatarClassName: E, selectedClassName: v, innerClassName: I, wrapContent: T, highlighted: b, focusProps: y, ...S } = e;
+    (S.className = o()(S.className, c.container, {
+        [c.selected]: p,
+        [c.highlighted]: b,
+        [null != v ? v : '']: p,
+        [c.clickable]: !p && (null != g || null != h)
     })),
-        (S['aria-selected'] = null !== (n = S['aria-selected']) && void 0 !== n ? n : p);
-    let y = (0, r.jsxs)('div', {
-        className: s()(v, u.layout, {
-            [u.muted]: !p && h,
-            [u.wrappedLayout]: I
+        (S['aria-selected'] = null !== (r = S['aria-selected']) && void 0 !== r ? r : p);
+    let A = (0, i.jsxs)('div', {
+        className: o()(I, c.layout, {
+            [c.muted]: !p && m,
+            [c.wrappedLayout]: T
         }),
         children: [
-            (0, r.jsx)('div', {
-                className: s()(u.avatar, g),
-                children: i
+            (0, i.jsx)('div', {
+                className: o()(c.avatar, E),
+                children: a
             }),
-            (0, r.jsxs)('div', {
-                className: u.content,
+            (0, i.jsxs)('div', {
+                className: c.content,
                 children: [
-                    (0, r.jsxs)('div', {
-                        className: u.nameAndDecorators,
+                    (0, i.jsxs)('div', {
+                        className: c.nameAndDecorators,
                         children: [
-                            (0, r.jsx)('div', {
-                                className: s()(u.name, { [u.wrappedName]: I }),
-                                children: a
+                            (0, i.jsx)('div', {
+                                className: o()(c.name, { [c.wrappedName]: T }),
+                                children: s
                             }),
-                            f
+                            _
                         ]
                     }),
-                    null != d
-                        ? (0, r.jsx)('div', {
-                              className: u.subText,
-                              children: d
+                    null != f
+                        ? (0, i.jsx)('div', {
+                              className: c.subText,
+                              children: f
                           })
                         : null
                 ]
             }),
-            null != c
-                ? (0, r.jsx)('div', {
-                      className: u.children,
-                      children: c
+            null != d
+                ? (0, i.jsx)('div', {
+                      className: c.children,
+                      children: d
                   })
                 : null
         ]
     });
-    return null != m
-        ? (0, r.jsx)(l.FocusRing, {
-              ...b,
-              children: (0, r.jsx)(o.rU, {
-                  to: m,
-                  onClick: _,
+    return null != g
+        ? (0, i.jsx)(u.FocusRing, {
+              ...y,
+              children: (0, i.jsx)(l.rU, {
+                  to: g,
+                  onClick: h,
                   ...S,
                   role: 'listitem',
-                  ref: t,
-                  children: y
+                  ref: n,
+                  children: A
               })
           })
-        : null != _
-          ? (0, r.jsx)(l.Clickable, {
-                onClick: _,
-                focusProps: b,
+        : null != h
+          ? (0, i.jsx)(u.Clickable, {
+                onClick: h,
+                focusProps: y,
                 ...S,
                 role: 'listitem',
-                innerRef: t,
-                children: y
+                innerRef: n,
+                children: A
             })
-          : (0, r.jsx)(l.FocusRing, {
-                ...b,
-                children: (0, r.jsx)('div', {
+          : (0, i.jsx)(u.FocusRing, {
+                ...y,
+                children: (0, i.jsx)('div', {
                     ...S,
                     role: 'listitem',
-                    ref: t,
-                    children: y
+                    ref: n,
+                    children: A
                 })
             });
 });
-t.Z = c;
+n.Z = d;

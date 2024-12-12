@@ -1,19 +1,19 @@
-var r = n(570140);
-t.Z = {
-    show(e, t, n, i, a) {
-        r.Z.dispatch({
+var i = r(570140);
+n.Z = {
+    show(e, n, r, a, s) {
+        i.Z.dispatch({
             type: 'NOTICE_SHOW',
             notice: {
-                id: a,
+                id: s,
                 type: e,
-                message: t,
-                buttonText: n,
-                callback: i
+                message: n,
+                buttonText: r,
+                callback: a
             }
         });
     },
     dismiss(e) {
-        r.Z.dispatch({
+        i.Z.dispatch({
             type: 'NOTICE_DISMISS',
             ...e
         });

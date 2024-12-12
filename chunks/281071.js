@@ -1,43 +1,43 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(302454);
-function a(e) {
+var i = r(200651);
+r(192379);
+var a = r(302454);
+function s(e) {
     return (
-        (e.heading = i.defaultRules.heading),
-        (e.lheading = i.defaultRules.lheading),
-        (e.list = i.defaultRules.list),
+        (e.heading = a.defaultRules.heading),
+        (e.lheading = a.defaultRules.lheading),
+        (e.list = a.defaultRules.list),
         (e.paragraph = {
             ...e.paragraph,
-            react: function (e, t, n) {
-                return (0, r.jsx)('p', { children: t(e.content, n) }, n.key);
+            react: function (e, n, r) {
+                return (0, i.jsx)('p', { children: n(e.content, r) }, r.key);
             }
         }),
         (e.link = {
             ...e.link,
-            react: function (e, t, n) {
-                let a = {};
+            react: function (e, n, r) {
+                let s = {};
                 if (null != e.context) {
-                    let t = e.context[e.target];
-                    t && t.onClick ? ((a.onClick = t.onClick), (a.onContextMenu = t.onContextMenu)) : (a.onClick = t);
+                    let n = e.context[e.target];
+                    n && n.onClick ? ((s.onClick = n.onClick), (s.onContextMenu = n.onContextMenu)) : (s.onClick = n);
                 }
-                if (null == a.onClick) {
-                    var s;
-                    (a.href = null !== (s = (0, i.sanitizeUrl)(e.target)) && void 0 !== s ? s : void 0), (a.target = '_blank');
+                if (null == s.onClick) {
+                    var o;
+                    (s.href = null !== (o = (0, a.sanitizeUrl)(e.target)) && void 0 !== o ? o : void 0), (s.target = '_blank');
                 }
-                return (0, r.jsx)(
+                return (0, i.jsx)(
                     'a',
                     {
                         title: e.title,
-                        ...a,
+                        ...s,
                         rel: 'noreferrer',
-                        children: t(e.content, n)
+                        children: n(e.content, r)
                     },
-                    n.key
+                    r.key
                 );
             }
         }),

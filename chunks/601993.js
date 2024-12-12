@@ -1,68 +1,68 @@
-n.d(t, {
+r.d(n, {
     Gb: function () {
-        return o;
+        return l;
     },
     RD: function () {
-        return h;
+        return m;
     },
     Rs: function () {
-        return _;
+        return h;
     },
     WA: function () {
-        return f;
+        return _;
     },
     _2: function () {
         return p;
     },
     f5: function () {
-        return d;
+        return f;
     },
     fG: function () {
-        return c;
+        return d;
     },
     gL: function () {
-        return u;
+        return c;
     }
 });
-var r = n(579806),
-    i = n(405826),
-    a = n(358085);
-function s() {
-    return (null === r.Z || void 0 === r.Z ? void 0 : r.Z.spellCheck) != null;
-}
+var i = r(579806),
+    a = r(405826),
+    s = r(358085);
 function o() {
-    return (0, a.isDesktop)() && s();
+    return (null === i.Z || void 0 === i.Z ? void 0 : i.Z.spellCheck) != null;
 }
-let l = o() ? (0, i.N)() : null;
-async function u(e) {
-    let t = await l;
-    if (null != t) t.enabled = e;
+function l() {
+    return (0, s.isDesktop)() && o();
 }
+let u = l() ? (0, a.N)() : null;
 async function c(e) {
-    let t = await l;
-    if (null != t) t.setLearnedWords(e);
+    let n = await u;
+    if (null != n) n.enabled = e;
 }
 async function d(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = await l;
-    return null != n && n.isMisspelled(e, t);
+    let n = await u;
+    if (null != n) n.setLearnedWords(e);
 }
 async function f(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 5,
-        r = await l;
-    return null == r ? [] : r.getCorrectionsForMisspelling(e, t).slice(0, n);
+    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        r = await u;
+    return null != r && r.isMisspelled(e, n);
 }
 async function _(e) {
-    let t = await l;
-    if (null != t) t.replaceMisspelling(e);
+    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 5,
+        i = await u;
+    return null == i ? [] : i.getCorrectionsForMisspelling(e, n).slice(0, r);
+}
+async function h(e) {
+    let n = await u;
+    if (null != n) n.replaceMisspelling(e);
 }
 async function p(e) {
-    let t = await l;
-    if (null != t) t.setAppLocale(e);
+    let n = await u;
+    if (null != n) n.setAppLocale(e);
 }
-function h(e) {
-    if (!s()) return () => {};
-    let t = r.Z.spellCheck.on('spellcheck-result', e);
-    return null != t ? t : () => {};
+function m(e) {
+    if (!o()) return () => {};
+    let n = i.Z.spellCheck.on('spellcheck-result', e);
+    return null != n ? n : () => {};
 }

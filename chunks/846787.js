@@ -1,9 +1,9 @@
-function r(e, t, n) {
-    let r = new n.constructor(n.toJS());
-    return (r.position_ = t.order), null != t.nickname && (r.name = t.nickname), null != t.parentId && t.parentId in e && (r.parent_id = t.parentId), r;
+function i(e, n, r) {
+    let i = new r.constructor(r.toJS());
+    return (i.position_ = n.order), null != n.nickname && (i.name = n.nickname), null != n.parentId && n.parentId in e && (i.parent_id = n.parentId), i;
 }
-n.d(t, {
+r.d(n, {
     r: function () {
-        return r;
+        return i;
     }
 });

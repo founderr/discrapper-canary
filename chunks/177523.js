@@ -1,40 +1,40 @@
-n.d(t, {
+r.d(n, {
     KV: function () {
-        return s.KV;
+        return l.KV;
     },
     ZP: function () {
-        return f;
+        return h;
     }
-}),
-    n(47120);
-var r = n(392711),
-    i = n.n(r),
-    a = n(846519),
-    s = n(509848),
-    o = n(483019),
-    l = n(945689),
-    u = n(981631);
-function c(e, t, n) {
+});
+var i = r(47120);
+var a = r(392711),
+    s = r.n(a),
+    o = r(846519),
+    l = r(509848),
+    u = r(483019),
+    c = r(945689),
+    d = r(981631);
+function f(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-function d(e) {
-    return null != e && 'null' !== e && e !== u.ME && 'undefined' !== e && e !== u.I_8;
+function _(e) {
+    return null != e && 'null' !== e && e !== d.ME && 'undefined' !== e && e !== d.I_8;
 }
-class f {
-    _enqueue(e, t) {
+class h {
+    _enqueue(e, n) {
         (this._pending[e] = {
             ...this._pending[e],
-            ...t
+            ...n
         }),
             this._flush.delay();
     }
@@ -59,58 +59,58 @@ class f {
         return this._threads.has(e);
     }
     isSubscribedToAnyMember(e) {
-        var t;
-        return null !== (t = this._members.isSubscribedToAnyMember(e)) && void 0 !== t && t;
+        var n;
+        return null !== (n = this._members.isSubscribedToAnyMember(e)) && void 0 !== n && n;
     }
     isSubscribedToMemberUpdates(e) {
-        var t;
-        return null !== (t = this.get(e).member_updates) && void 0 !== t && t;
+        var n;
+        return null !== (n = this.get(e).member_updates) && void 0 !== n && n;
     }
     forEach(e) {
         this._subscribed.forEach(e);
     }
-    clearWithoutFlushing(e, t) {
-        (t || !this._threads.has(e)) && this._subscribed.delete(e), delete this._pending[e], this._members.clear(e), this._channels.clear(e), this._threadMemberLists.clear(e), this._typing.delete(e), this._memberUpdates.delete(e), t && this._threads.delete(e), this._activities.delete(e);
+    clearWithoutFlushing(e, n) {
+        (n || !this._threads.has(e)) && this._subscribed.delete(e), delete this._pending[e], this._members.clear(e), this._channels.clear(e), this._threadMemberLists.clear(e), this._typing.delete(e), this._memberUpdates.delete(e), n && this._threads.delete(e), this._activities.delete(e);
     }
     flush() {
-        i().forEach(this._pending, (e, t) => {
-            this._subscribed.add(t);
+        s().forEach(this._pending, (e, n) => {
+            this._subscribed.add(n);
         }),
             this._onChange(this._pending),
             (this._pending = {});
     }
-    subscribeUser(e, t) {
-        d(e) && this._members.subscribe(e, t);
+    subscribeUser(e, n) {
+        _(e) && this._members.subscribe(e, n);
     }
-    unsubscribeUser(e, t) {
-        d(e) && this._members.unsubscribe(e, t);
+    unsubscribeUser(e, n) {
+        _(e) && this._members.unsubscribe(e, n);
     }
-    subscribeChannel(e, t, n) {
-        return !!d(e) && this._channels.subscribe(e, t, n);
+    subscribeChannel(e, n, r) {
+        return !!_(e) && this._channels.subscribe(e, n, r);
     }
     subscribeToMemberUpdates(e) {
-        if (!d(e)) return !1;
+        if (!_(e)) return !1;
         this._enqueue(e, { member_updates: !0 }), this._memberUpdates.add(e);
     }
     unsubscribeFromMemberUpdates(e) {
-        if (!d(e)) return !1;
+        if (!_(e)) return !1;
         this._enqueue(e, { member_updates: !1 });
     }
-    subscribeThreadMemberList(e, t, n) {
-        return !!d(e) && this._threadMemberLists.subscribe(e, t, n);
+    subscribeThreadMemberList(e, n, r) {
+        return !!_(e) && this._threadMemberLists.subscribe(e, n, r);
     }
-    unsubscribeThreadMemberList(e, t) {
-        return !!d(e) && this._threadMemberLists.unsubscribe(e, t);
+    unsubscribeThreadMemberList(e, n) {
+        return !!_(e) && this._threadMemberLists.unsubscribe(e, n);
     }
     subscribeToGuild(e) {
         this._subscribeToFeature(e, this._typing, { typing: !0 }), this._subscribeToFeature(e, this._activities, { activities: !0 }), this._subscribeToFeature(e, this._threads, { threads: !0 });
     }
-    _subscribeToFeature(e, t, n) {
-        if (d(e)) {
-            if (!t.has(e)) t.add(e), this._enqueue(e, n);
+    _subscribeToFeature(e, n, r) {
+        if (_(e)) {
+            if (!n.has(e)) n.add(e), this._enqueue(e, r);
         }
     }
     constructor(e) {
-        c(this, '_members', new o.Z((e, t) => this._enqueue(e, { members: t }))), c(this, '_channels', new s.ZP((e, t) => this._enqueue(e, { channels: t }))), c(this, '_threadMemberLists', new l.Z((e, t) => this._enqueue(e, { thread_member_lists: t }))), c(this, '_typing', new Set()), c(this, '_threads', new Set()), c(this, '_activities', new Set()), c(this, '_memberUpdates', new Set()), c(this, '_subscribed', new Set()), c(this, '_pending', {}), c(this, '_flush', new a.sW(0, () => this.flush())), c(this, '_onChange', void 0), (this._onChange = e);
+        f(this, '_members', new u.Z((e, n) => this._enqueue(e, { members: n }))), f(this, '_channels', new l.ZP((e, n) => this._enqueue(e, { channels: n }))), f(this, '_threadMemberLists', new c.Z((e, n) => this._enqueue(e, { thread_member_lists: n }))), f(this, '_typing', new Set()), f(this, '_threads', new Set()), f(this, '_activities', new Set()), f(this, '_memberUpdates', new Set()), f(this, '_subscribed', new Set()), f(this, '_pending', {}), f(this, '_flush', new o.sW(0, () => this.flush())), f(this, '_onChange', void 0), (this._onChange = e);
     }
 }

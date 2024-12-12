@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     dateRange: (e) => `No ${e.startDate} l\u{12B}dz ${e.endDate}`,
     dateSelected: (e) => `Atlas\u{12B}ts: ${e.date}`,
     finishRangeSelectionPrompt: `Noklik\u{161}\u{137}iniet, lai pabeigtu datumu diapazona atlasi`,

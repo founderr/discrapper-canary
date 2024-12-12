@@ -1,78 +1,78 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var r = n(192379),
-    i = n(998698),
-    a = n(436660),
-    s = n(515270),
-    o = n(417662),
-    l = n(981631);
-function u(e) {
-    let { editor: t, channel: n, disableEnterToSubmit: u, onKeyDown: c, onKeyUp: d, onTab: f, onEnter: _, allowNewLines: p, submit: h, hideAutocomplete: m, moveSelection: g } = e,
-        E = r.useCallback(
+var i = r(192379),
+    a = r(998698),
+    s = r(436660),
+    o = r(515270),
+    l = r(417662),
+    u = r(981631);
+function c(e) {
+    let { editor: n, channel: r, disableEnterToSubmit: c, onKeyDown: d, onKeyUp: f, onTab: _, onEnter: h, allowNewLines: p, submit: m, hideAutocomplete: g, moveSelection: E } = e,
+        v = i.useCallback(
             (e) => {
-                var r;
+                var i;
                 switch (e.which) {
-                    case l.yXg.ARROW_UP:
-                        if (g(-1)) {
+                    case u.yXg.ARROW_UP:
+                        if (E(-1)) {
                             e.preventDefault();
                             return;
                         }
                         break;
-                    case l.yXg.ARROW_DOWN:
-                        if (g(1)) {
+                    case u.yXg.ARROW_DOWN:
+                        if (E(1)) {
                             e.preventDefault();
                             return;
                         }
                         break;
-                    case l.yXg.P:
-                        if ((0, o.E)(e, { ctrl: !0 }) && g(-1)) {
+                    case u.yXg.P:
+                        if ((0, l.E)(e, { ctrl: !0 }) && E(-1)) {
                             e.preventDefault();
                             return;
                         }
                         break;
-                    case l.yXg.N:
-                        if ((0, o.E)(e, { ctrl: !0 }) && g(1)) {
+                    case u.yXg.N:
+                        if ((0, l.E)(e, { ctrl: !0 }) && E(1)) {
                             e.preventDefault();
                             return;
                         }
                         break;
-                    case l.yXg.ESCAPE:
-                        null == m || m();
+                    case u.yXg.ESCAPE:
+                        null == g || g();
                         break;
-                    case l.yXg.TAB:
-                        if ((0, o.E)(e, {}) && (null == f ? void 0 : f())) {
+                    case u.yXg.TAB:
+                        if ((0, l.E)(e, {}) && (null == _ ? void 0 : _())) {
                             e.preventDefault(), e.stopPropagation();
                             return;
                         }
-                        if (null != i.Z.getActiveCommand(n.id)) {
-                            e.preventDefault(), e.stopPropagation(), e.shiftKey ? a.Q.selectPreviousCommandOption(t) : a.Q.selectNextCommandOption(t);
+                        if (null != a.Z.getActiveCommand(r.id)) {
+                            e.preventDefault(), e.stopPropagation(), e.shiftKey ? s.Q.selectPreviousCommandOption(n) : s.Q.selectNextCommandOption(n);
                             return;
                         }
                         break;
-                    case l.yXg.ENTER:
-                        if ((0, o.E)(e, {}) && (null == _ ? void 0 : _(e))) {
+                    case u.yXg.ENTER:
+                        if ((0, l.E)(e, {}) && (null == h ? void 0 : h(e))) {
                             e.preventDefault(), e.stopPropagation();
                             return;
                         }
                 }
-                if ((null === (r = t.onKeyDown) || void 0 === r ? void 0 : r.call(t, e)) === !0) {
+                if ((null === (i = n.onKeyDown) || void 0 === i ? void 0 : i.call(n, e)) === !0) {
                     e.preventDefault(), e.stopPropagation();
                     return;
                 }
-                e.which === l.yXg.ENTER && ((!e.altKey && !e.shiftKey && (!u || e.ctrlKey) && !(0, s.L6)(t)) || !p) && (e.preventDefault(), e.stopPropagation(), h()), null == c || c(e);
+                e.which === u.yXg.ENTER && ((!e.altKey && !e.shiftKey && (!c || e.ctrlKey) && !(0, o.L6)(n)) || !p) && (e.preventDefault(), e.stopPropagation(), m()), null == d || d(e);
             },
-            [p, n.id, u, t, m, g, _, c, f, h]
+            [p, r.id, c, n, g, E, h, d, _, m]
         );
     return {
-        handleKeyDown: E,
-        handleKeyUp: r.useCallback(
+        handleKeyDown: v,
+        handleKeyUp: i.useCallback(
             (e) => {
-                null == d || d(e);
+                null == f || f(e);
             },
-            [d]
+            [f]
         )
     };
 }

@@ -1,88 +1,88 @@
-n(47120), n(757143), n(653041);
-var r = n(879443),
-    i = n.n(r),
-    a = n(414861),
-    s = n.n(a),
-    o = n(360038),
-    l = n(710845),
-    u = n(626135),
-    c = n(358085),
-    d = n(981631);
-let f = {},
-    _ = [],
-    p = !1,
-    h = s()(new (i())(window)),
-    m = (0, c.isMac)() || (0, c.isMacWeb)() ? 'cmd' : 'ctrl',
-    g = (0, c.isMac)() || (0, c.isMacWeb)() ? 'opt' : 'alt',
-    E = (0, c.isMac)() || (0, c.isMacWeb)() ? 'return' : 'enter',
-    v = [...o.u.binds, 'mod+shift+[', 'mod+shift+]', 'mod+[', 'mod+]', 'alt+[', 'alt+]', 'ctrl+shift+tab', 'ctrl+tab', 'mod+n', 'mod+t', 'mod+shift+t', 'mod+plus', 'mod+minus', 'mod+0'].map((e) => e.replace('mod', m)),
-    I = () => [],
-    T = [];
-function b(e) {
-    let t = [];
-    for (let n of Object.values(e)) null != n && t.push(...n.binds);
-    return t.map((e) => e.replace('mod', m));
+var i = r(47120);
+var a = r(757143);
+var s = r(653041);
+var o = r(879443),
+    l = r.n(o),
+    u = r(414861),
+    c = r.n(u),
+    d = r(360038),
+    f = r(710845),
+    _ = r(626135),
+    h = r(358085),
+    p = r(981631);
+let m = {},
+    g = [],
+    E = !1,
+    v = c()(new (l())(window)),
+    I = (0, h.isMac)() || (0, h.isMacWeb)() ? 'cmd' : 'ctrl',
+    T = (0, h.isMac)() || (0, h.isMacWeb)() ? 'opt' : 'alt',
+    b = (0, h.isMac)() || (0, h.isMacWeb)() ? 'return' : 'enter',
+    y = [...d.u.binds, 'mod+shift+[', 'mod+shift+]', 'mod+[', 'mod+]', 'alt+[', 'alt+]', 'ctrl+shift+tab', 'ctrl+tab', 'mod+n', 'mod+t', 'mod+shift+t', 'mod+plus', 'mod+minus', 'mod+0'].map((e) => e.replace('mod', I)),
+    S = () => [],
+    A = [];
+function N(e, n) {
+    let r = (e) => n(e, e.key);
+    document.addEventListener(e, r), A.push(() => document.removeEventListener(e, r));
 }
-function S(e, t) {
-    return (n, r) => (u.default.track(d.rMx.KEYBOARD_SHORTCUT_USED, { shortcut_name: e }), t(n, r));
+function C(e) {
+    let n = [];
+    for (let r of Object.values(e)) null != r && n.push(...r.binds);
+    return n.map((e) => e.replace('mod', I));
 }
-function y(e) {
-    for (let [t, n] of Object.entries(e)) {
-        if (null == n) continue;
-        let e = I();
-        !c.isPlatformEmbedded && (e = e.concat(v));
-        let r = n.binds.filter((t) => ((t = t.replace('mod', m)), 0 > e.indexOf(t)));
-        if (0 === r.length) continue;
-        let i = n.comboKeysBindGlobal ? h.bindGlobal : h.bind;
-        if ((null != n.action && i.call(h, r, S(t, n.action)), null != n.keyup && i.call(h, r, S(t, n.keyup), 'keyup'), null != n.keydown)) {
-            let e = r.indexOf('any-character');
-            -1 !== e &&
-                (!(function (e, t) {
-                    let n = (e) => t(e, e.key);
-                    document.addEventListener(e, n), T.push(() => document.removeEventListener(e, n));
-                })('keydown', n.keydown),
-                r.splice(e, 1)),
-                r.length > 0 && i.call(h, r, S(t, n.keydown), 'keydown');
+function R(e, n) {
+    return (r, i) => (_.default.track(p.rMx.KEYBOARD_SHORTCUT_USED, { shortcut_name: e }), n(r, i));
+}
+function O(e) {
+    for (let [n, r] of Object.entries(e)) {
+        if (null == r) continue;
+        let e = S();
+        !h.isPlatformEmbedded && (e = e.concat(y));
+        let i = r.binds.filter((n) => ((n = n.replace('mod', I)), 0 > e.indexOf(n)));
+        if (0 === i.length) continue;
+        let a = r.comboKeysBindGlobal ? v.bindGlobal : v.bind;
+        if ((null != r.action && a.call(v, i, R(n, r.action)), null != r.keyup && a.call(v, i, R(n, r.keyup), 'keyup'), null != r.keydown)) {
+            let e = i.indexOf('any-character');
+            -1 !== e && (N('keydown', r.keydown), i.splice(e, 1)), i.length > 0 && a.call(v, i, R(n, r.keydown), 'keydown');
         }
-        null != n.keypress && i.call(h, r, S(t, n.keypress), 'keypress');
+        null != r.keypress && a.call(v, i, R(n, r.keypress), 'keypress');
     }
 }
-(0, c.isDesktop)() && new (i())(document.documentElement).bind('backspace', (e) => e.preventDefault()),
-    (t.Z = {
-        combokeys: h,
-        modKey: m,
-        altKey: g,
-        returnKey: E,
+(0, h.isDesktop)() && new (l())(document.documentElement).bind('backspace', (e) => e.preventDefault()),
+    (n.Z = {
+        combokeys: v,
+        modKey: I,
+        altKey: T,
+        returnKey: b,
         setGetKeybindList(e) {
-            I = e;
+            S = e;
         },
         checkDupes(e) {
-            let t = new Set(),
-                n = [];
-            for (let r of b(e)) t.has(r) && n.push(r), t.add(r);
-            n.length > 0 && new l.Z('Keybinds').warn('Duplicate keyboard shortcuts defined:', n);
+            let n = new Set(),
+                r = [];
+            for (let i of C(e)) n.has(i) && r.push(i), n.add(i);
+            r.length > 0 && new f.Z('Keybinds').warn('Duplicate keyboard shortcuts defined:', r);
         },
         setLayout(e) {
-            f = e;
+            m = e;
         },
         enable() {
-            if (!p) (p = !0), this.checkDupes(f), y(f);
+            if (!E) (E = !0), this.checkDupes(m), O(m);
         },
         enableTemp(e) {
-            _.push(f), (f = e), y(e), (p = !0);
+            g.push(m), (m = e), O(e), (E = !0);
         },
         disableTemp() {
-            let e = _.pop();
-            null != e && (f = e), this.disable(), this.enable();
+            let e = g.pop();
+            null != e && (m = e), this.disable(), this.enable();
         },
         disable() {
-            if (!!p) (p = !1), T.forEach((e) => e()), (T = []), h.reset();
+            if (!!E) (E = !1), A.forEach((e) => e()), (A = []), v.reset();
         },
         validateKeybind(e) {
-            if (!!p && !!this.hasBind(e)) h.unbind(e);
+            if (!!E && !!this.hasBind(e)) v.unbind(e);
         },
         hasBind(e) {
-            let t = b(f);
-            return (e = (e = e.replace('meta', 'cmd')).replace(/right |left /i, '').trim()), t.includes(e);
+            let n = C(m);
+            return (e = (e = e.replace('meta', 'cmd')).replace(/right |left /i, '').trim()), n.includes(e);
         }
     });

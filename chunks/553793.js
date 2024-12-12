@@ -1,7 +1,7 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = { 'Clear search': `T\xf8m s\xf8k` };
+var i = {};
+i = { 'Clear search': `T\xf8m s\xf8k` };

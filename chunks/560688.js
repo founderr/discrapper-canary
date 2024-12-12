@@ -1,43 +1,43 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return l;
+        return u;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(131951),
-    s = n(65154),
-    o = n(388032);
-function l(e) {
-    a.Z.supports(s.AN.VIDEO)
-        ? (0, i.openModalLazy)(async () => {
-              let { default: t } = await n.e('67753').then(n.bind(n, 873809));
-              return (n) =>
-                  (0, r.jsx)(t, {
-                      ...n,
-                      header: o.intl.string(o.t['8jSzSU']),
-                      body: o.intl.string(o.t.bhqSWl),
-                      confirmText: o.intl.string(o.t.BddRzc),
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(131951),
+    o = r(65154),
+    l = r(388032);
+function u(e) {
+    s.Z.supports(o.AN.VIDEO)
+        ? (0, a.openModalLazy)(async () => {
+              let { default: n } = await r.e('67753').then(r.bind(r, 873809));
+              return (r) =>
+                  (0, i.jsx)(n, {
+                      ...r,
+                      header: l.intl.string(l.t['8jSzSU']),
+                      body: l.intl.string(l.t.bhqSWl),
+                      confirmText: l.intl.string(l.t.BddRzc),
                       onConfirm: e
                   });
           })
-        : (0, i.openModalLazy)(async () => {
-              let { default: t } = await n.e('67753').then(n.bind(n, 873809));
-              return (a) =>
-                  (0, r.jsx)(t, {
-                      ...a,
-                      header: o.intl.string(o.t.XLw6FB),
-                      body: o.intl.string(o.t.wVjKGh),
-                      confirmText: o.intl.string(o.t.BK8LKy),
+        : (0, a.openModalLazy)(async () => {
+              let { default: n } = await r.e('67753').then(r.bind(r, 873809));
+              return (s) =>
+                  (0, i.jsx)(n, {
+                      ...s,
+                      header: l.intl.string(l.t.XLw6FB),
+                      body: l.intl.string(l.t.wVjKGh),
+                      confirmText: l.intl.string(l.t.BK8LKy),
                       onConfirm: () => {
                           null == e || e(),
-                              (0, i.openModalLazy)(async () => {
-                                  let { default: e } = await n.e('82935').then(n.bind(n, 431583));
-                                  return (t) =>
-                                      (0, r.jsx)(e, {
+                              (0, a.openModalLazy)(async () => {
+                                  let { default: e } = await r.e('82935').then(r.bind(r, 431583));
+                                  return (n) =>
+                                      (0, i.jsx)(e, {
                                           source: 'Video unsupported browser',
-                                          ...t
+                                          ...n
                                       });
                               });
                       }

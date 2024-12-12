@@ -1,17 +1,17 @@
-n.d(t, {
+r.d(n, {
     D: function () {
-        return o;
+        return l;
     }
 });
-var r = n(192379),
-    i = n(442837),
-    a = n(675478),
-    s = n(581883);
-function o() {
+var i = r(192379),
+    a = r(442837),
+    s = r(675478),
+    o = r(581883);
+function l() {
     return (
-        r.useEffect(() => {
-            a.DZ.loadIfNecessary();
+        i.useEffect(() => {
+            s.DZ.loadIfNecessary();
         }, []),
-        (0, i.e7)([s.Z], () => s.Z.frecencyWithoutFetchingLatest)
+        (0, a.e7)([o.Z], () => o.Z.frecencyWithoutFetchingLatest)
     );
 }

@@ -1,7 +1,7 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = { longPressMessage: `Langt tryk eller tryk p\xe5 Alt + pil ned for at \xe5bne menuen` };
+var i = {};
+i = { longPressMessage: `Langt tryk eller tryk p\xe5 Alt + pil ned for at \xe5bne menuen` };

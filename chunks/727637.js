@@ -1,30 +1,30 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return s;
     }
-}),
-    n(47120);
-var r = n(192379);
-function i(e) {
-    let [t, n] = (0, r.useState)(!1),
-        i = (0, r.useRef)(e.current);
+});
+var i = r(47120);
+var a = r(192379);
+function s(e) {
+    let [n, r] = (0, a.useState)(!1),
+        i = (0, a.useRef)(e.current);
     return (
-        (0, r.useEffect)(() => {
+        (0, a.useEffect)(() => {
             i.current = e.current;
         }, [e]),
-        (0, r.useEffect)(() => {
+        (0, a.useEffect)(() => {
             let e = i.current;
             if (null == e) return;
-            let t = () => n(!0),
-                r = () => n(!1);
+            let n = () => r(!0),
+                a = () => r(!1);
             return (
-                e.addEventListener('mouseenter', t),
-                e.addEventListener('mouseleave', r),
+                e.addEventListener('mouseenter', n),
+                e.addEventListener('mouseleave', a),
                 () => {
-                    e.removeEventListener('mouseenter', t), e.removeEventListener('mouseleave', r);
+                    e.removeEventListener('mouseenter', n), e.removeEventListener('mouseleave', a);
                 }
             );
         }, [i]),
-        t
+        n
     );
 }

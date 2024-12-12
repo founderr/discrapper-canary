@@ -1,15 +1,15 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return o;
+        return l;
     }
 });
-var r = n(70956),
-    i = n(564990),
-    a = n(353647);
-let s = r.Z.Millis.MINUTE;
-function o(e, t) {
-    var n, r;
-    if (a.Z.isFetchingUserOutbox(e)) return;
-    let o = null !== (r = null === (n = a.Z.getUserOutbox(e)) || void 0 === n ? void 0 : n.lastFetched) && void 0 !== r ? r : 0;
-    if (!(Date.now() - o < s)) return (0, i.JX)(e, t);
+var i = r(70956),
+    a = r(564990),
+    s = r(353647);
+let o = i.Z.Millis.MINUTE;
+function l(e, n) {
+    var r, i;
+    if (s.Z.isFetchingUserOutbox(e)) return;
+    let l = null !== (i = null === (r = s.Z.getUserOutbox(e)) || void 0 === r ? void 0 : r.lastFetched) && void 0 !== i ? i : 0;
+    if (!(Date.now() - l < o)) return (0, a.JX)(e, n);
 }

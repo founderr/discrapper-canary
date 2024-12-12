@@ -1,39 +1,39 @@
-n.d(t, {
+r.d(n, {
     Kq: function () {
-        return s;
-    },
-    Mo: function () {
         return o;
     },
-    kj: function () {
+    Mo: function () {
         return l;
     },
+    kj: function () {
+        return u;
+    },
     xs: function () {
-        return a;
+        return s;
     },
     zO: function () {
-        return i;
+        return a;
     }
 });
-var r = n(570140);
-let i = (e) => {
-        r.Z.dispatch({
+var i = r(570140);
+let a = (e) => {
+        i.Z.dispatch({
             type: 'UPDATE_BACKGROUND_GRADIENT_PRESET',
             presetId: e
         });
     },
-    a = () => {
-        r.Z.dispatch({
+    s = () => {
+        i.Z.dispatch({
             type: 'UPDATE_BACKGROUND_GRADIENT_PRESET',
             presetId: null
         });
     },
-    s = () => {
-        r.Z.dispatch({ type: 'CLIENT_THEMES_EDITOR_OPEN' });
-    },
     o = () => {
-        r.Z.dispatch({ type: 'CLIENT_THEMES_EDITOR_CLOSE' });
+        i.Z.dispatch({ type: 'CLIENT_THEMES_EDITOR_OPEN' });
     },
     l = () => {
-        r.Z.dispatch({ type: 'RESET_PREVIEW_CLIENT_THEME' });
+        i.Z.dispatch({ type: 'CLIENT_THEMES_EDITOR_CLOSE' });
+    },
+    u = () => {
+        i.Z.dispatch({ type: 'RESET_PREVIEW_CLIENT_THEME' });
     };

@@ -1,30 +1,30 @@
-n.d(t, {
+r.d(n, {
     E: function () {
-        return a;
+        return s;
     }
 });
-var r = n(264181);
-function i(e, t, n) {
+var i = r(264181);
+function a(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-class a {
+class s {
     static fromServer(e) {
-        return new a({
+        return new s({
             ...e,
             dismissibleContent: e.dismissible_content
         });
     }
     constructor(e) {
-        i(this, 'dismissibleContent', void 0), i(this, 'version', void 0), (this.type = r.Z.BADGE), (this.dismissibleContent = e.dismissibleContent), (this.version = e.version);
+        a(this, 'dismissibleContent', void 0), a(this, 'version', void 0), (this.type = i.Z.BADGE), (this.dismissibleContent = e.dismissibleContent), (this.version = e.version);
     }
 }

@@ -1,32 +1,32 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var r = n(81825),
-    i = n(598077);
-function a(e, t, n) {
+var i = r(81825),
+    a = r(598077);
+function s(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-class s extends r.Z {
+class o extends i.Z {
     static createFromServer(e) {
-        return new s({
+        return new o({
             ...e,
-            user: new i.Z(e.user)
+            user: new a.Z(e.user)
         });
     }
     constructor(e) {
-        var t;
-        super(), a(this, 'id', void 0), a(this, 'name', void 0), a(this, 'type', void 0), a(this, 'user', void 0), a(this, 'displayName', void 0), (this.id = e.id), (this.name = e.name), (this.type = e.type), (this.user = e.user), (this.displayName = null !== (t = e.name_localized) && void 0 !== t ? t : e.name);
+        var n;
+        super(), s(this, 'id', void 0), s(this, 'name', void 0), s(this, 'type', void 0), s(this, 'user', void 0), s(this, 'displayName', void 0), (this.id = e.id), (this.name = e.name), (this.type = e.type), (this.user = e.user), (this.displayName = null !== (n = e.name_localized) && void 0 !== n ? n : e.name);
     }
 }

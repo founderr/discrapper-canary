@@ -1,4 +1,4 @@
-function r() {
+function i() {
     var e = navigator.userAgentData;
     return null != e && e.brands && Array.isArray(e.brands)
         ? e.brands
@@ -8,8 +8,8 @@ function r() {
               .join(' ')
         : navigator.userAgent;
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

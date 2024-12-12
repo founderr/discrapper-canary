@@ -1,22 +1,22 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return l;
+        return u;
     }
 });
-var r = n(906732),
-    i = n(202527),
-    a = n(168308),
-    s = n(547972),
-    o = n(332325);
-function l(e) {
-    let { onClose: t } = e,
-        { shouldMergeGameSettings: n } = i.b.getCurrentConfig({ location: 'useOpenGameSettings' }),
-        { analyticsLocations: l } = (0, r.ZP)();
-    if (!!(0, a.Jw)())
+var i = r(906732),
+    a = r(202527),
+    s = r(168308),
+    o = r(547972),
+    l = r(332325);
+function u(e) {
+    let { onClose: n } = e,
+        { shouldMergeGameSettings: r } = a.b.getCurrentConfig({ location: 'useOpenGameSettings' }),
+        { analyticsLocations: u } = (0, i.ZP)();
+    if (!!(0, s.Jw)())
         return () => {
-            (0, s.Z)(n ? o.Z.MY_GAMES : o.Z.ACTIVITY_PRIVACY, {
-                analyticsLocations: l,
-                onClose: t
+            (0, o.Z)(r ? l.Z.MY_GAMES : l.Z.ACTIVITY_PRIVACY, {
+                analyticsLocations: u,
+                onClose: n
             });
         };
 }

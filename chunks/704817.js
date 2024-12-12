@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(330711);
-function i() {
-    return r.Z.Messages.DYNAMIC_LINKS_IOS_APP_PREVIEW_DESCRIPTION;
+var i = r(330711);
+function a() {
+    return i.Z.Messages.DYNAMIC_LINKS_IOS_APP_PREVIEW_DESCRIPTION;
 }

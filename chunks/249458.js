@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     G: function () {
-        return r;
+        return i;
     }
 });
-let r = n(192379).createContext({
+let i = r(192379).createContext({
     disableInteractions: !1,
     disableAnimations: !1
 });

@@ -1,31 +1,31 @@
-n.d(t, {
+r.d(n, {
     C: function () {
-        return l;
+        return u;
     },
     R: function () {
-        return o;
+        return l;
     }
 });
-var r = n(570140),
-    i = n(788983),
-    a = n(214629),
-    s = n(981631);
-function o() {
+var i = r(570140),
+    a = r(788983),
+    s = r(214629),
+    o = r(981631);
+function l() {
     var e;
-    let t = a.ZP.getCurrentConfig({ location: 'shouldOpenActivityInPopoutWindow' }).enabled;
-    return (null === (e = platform) || void 0 === e ? void 0 : e.name) !== 'Firefox' && t;
+    let n = s.ZP.getCurrentConfig({ location: 'shouldOpenActivityInPopoutWindow' }).enabled;
+    return (null === (e = platform) || void 0 === e ? void 0 : e.name) !== 'Firefox' && n;
 }
-async function l(e) {
-    let t;
-    let n = o();
-    n &&
-        r.Z.wait(() => {
-            r.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' });
+async function u(e) {
+    let n;
+    let r = l();
+    r &&
+        i.Z.wait(() => {
+            i.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' });
         });
     try {
-        t = await e();
+        n = await e();
     } catch {
-        t = !1;
+        n = !1;
     }
-    return !t && n && i.xv(s.KJ3.ACTIVITY_POPOUT), t;
+    return !n && r && a.xv(o.KJ3.ACTIVITY_POPOUT), n;
 }

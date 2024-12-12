@@ -1,8 +1,8 @@
 e.exports = function (e) {
-    var t, r;
-    if (((t = n(618336)), (r = n(919089)), 'keypress' === e.type)) {
-        var i = String.fromCharCode(e.which);
-        return !e.shiftKey && (i = i.toLowerCase()), i;
+    var n, i;
+    if (((n = r(618336)), (i = r(919089)), 'keypress' === e.type)) {
+        var a = String.fromCharCode(e.which);
+        return !e.shiftKey && (a = a.toLowerCase()), a;
     }
-    return t[e.which] ? t[e.which] : r[e.which] ? r[e.which] : String.fromCharCode(e.which).toLowerCase();
+    return n[e.which] ? n[e.which] : i[e.which] ? i[e.which] : String.fromCharCode(e.which).toLowerCase();
 };

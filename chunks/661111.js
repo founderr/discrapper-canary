@@ -1,79 +1,79 @@
-var r = n(544891),
-    i = n(570140),
-    a = n(802098),
-    s = n(695346),
-    o = n(981631),
-    l = n(596401);
-function u() {
+var i = r(544891),
+    a = r(570140),
+    s = r(802098),
+    o = r(695346),
+    l = r(981631),
+    u = r(596401);
+function c() {
     let e = new Date().getMinutes();
     return 'x='.concat(Math.floor(e / 5));
 }
-t.Z = {
+n.Z = {
     lockChangeLog(e) {
-        i.Z.dispatch({
+        a.Z.dispatch({
             type: 'CHANGE_LOG_LOCK',
             key: e
         });
     },
     unlockChangeLog(e) {
-        i.Z.dispatch({
+        a.Z.dispatch({
             type: 'CHANGE_LOG_UNLOCK',
             key: e
         });
     },
-    markChangelogAsSeen(e, t) {
-        i.Z.dispatch({
+    markChangelogAsSeen(e, n) {
+        a.Z.dispatch({
             type: 'CHANGE_LOG_MARK_SEEN',
             changelogId: e,
-            changelogDate: t
+            changelogDate: n
         }),
-            s.l4.updateSetting(e);
+            o.l4.updateSetting(e);
     },
     setChangelogOverride(e) {
-        i.Z.dispatch({
+        a.Z.dispatch({
             type: 'CHANGE_LOG_SET_OVERRIDE',
             id: e
         }),
             null != e && this.sendChangelogMessage(e);
     },
     sendChangelogMessage(e) {
-        r.tn.post({
-            url: o.ANM.CHANGELOG_MESSAGES,
+        i.tn.post({
+            url: l.ANM.CHANGELOG_MESSAGES,
             body: { changelog_id: e },
             rejectWithError: !0
         });
     },
     fetchChangelogConfig() {
-        let e = l.Vw.DESKTOP;
-        return r.tn.get({
-            url: 'https://cdn.discordapp.com/changelogs/config_'.concat(e, '.json?').concat(u()),
+        let e = u.Vw.DESKTOP;
+        return i.tn.get({
+            url: 'https://cdn.discordapp.com/changelogs/config_'.concat(e, '.json?').concat(c()),
             rejectWithError: !0
         });
     },
-    async fetchChangelog(e, t) {
-        if ((arguments.length > 2 && void 0 !== arguments[2] && arguments[2], null != a.Z.getChangelog(e, t))) return null;
-        let n = l.Vw.DESKTOP;
+    async fetchChangelog(e, n) {
+        if ((arguments.length > 2 && void 0 !== arguments[2] && arguments[2], null != s.Z.getChangelog(e, n))) return null;
+        let r = u.Vw.DESKTOP;
         try {
-            let a = await r.tn.get({
-                url: 'https://cdn.discordapp.com/changelogs/'.concat(n, '/').concat(e, '/').concat(t, '.json?').concat(u()),
+            let s = await i.tn.get({
+                url: 'https://cdn.discordapp.com/changelogs/'.concat(r, '/').concat(e, '/').concat(n, '.json?').concat(c()),
                 rejectWithError: !0
             });
             return (
-                i.Z.dispatch({
+                a.Z.dispatch({
                     type: 'CHANGE_LOG_FETCH_SUCCESS',
                     id: e,
-                    changelog: a.body
+                    changelog: s.body
                 }),
-                a.body
+                s.body
             );
         } catch {
             if (
-                (i.Z.dispatch({
+                (a.Z.dispatch({
                     type: 'CHANGE_LOG_FETCH_FAILED',
                     id: e,
-                    locale: t
+                    locale: n
                 }),
-                'en-US' !== t)
+                'en-US' !== n)
             )
                 return await this.fetchChangelog(e, 'en-US');
             return null;

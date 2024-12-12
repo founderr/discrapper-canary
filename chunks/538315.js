@@ -1,13 +1,13 @@
-var r = Array.prototype.slice,
-    i = n(560640),
-    a = Object.keys,
-    s = a
+var i = Array.prototype.slice,
+    a = r(560640),
+    s = Object.keys,
+    o = s
         ? function (e) {
-              return a(e);
+              return s(e);
           }
-        : n(973351),
-    o = Object.keys;
-(s.shim = function () {
+        : r(973351),
+    l = Object.keys;
+(o.shim = function () {
     return (
         Object.keys
             ? !(function () {
@@ -15,10 +15,10 @@ var r = Array.prototype.slice,
                   return e && e.length === arguments.length;
               })(1, 2) &&
               (Object.keys = function (e) {
-                  return i(e) ? o(r.call(e)) : o(e);
+                  return a(e) ? l(i.call(e)) : l(e);
               })
-            : (Object.keys = s),
-        Object.keys || s
+            : (Object.keys = o),
+        Object.keys || o
     );
 }),
-    (e.exports = s);
+    (e.exports = o);

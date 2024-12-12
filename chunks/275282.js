@@ -1,21 +1,21 @@
-n.d(t, {
+r.d(n, {
     R: function () {
-        return o;
+        return l;
     }
 });
-var r = n(52948),
-    i = n(548097),
-    a = n(968735),
-    s = ['type'];
-function o(e, t, n, o) {
-    var l = e.locale,
-        u = e.onError;
-    void 0 === o && (o = {}), !Intl.PluralRules && u(new a.u_('Intl.PluralRules is not available in this environment.\nTry polyfilling it using "@formatjs/intl-pluralrules"\n', a.jK.MISSING_INTL_API));
-    var c = (0, r.L6)(o, s);
+var i = r(52948),
+    a = r(548097),
+    s = r(968735),
+    o = ['type'];
+function l(e, n, r, l) {
+    var u = e.locale,
+        c = e.onError;
+    void 0 === l && (l = {}), !Intl.PluralRules && c(new s.u_('Intl.PluralRules is not available in this environment.\nTry polyfilling it using "@formatjs/intl-pluralrules"\n', s.jK.MISSING_INTL_API));
+    var d = (0, i.L6)(l, o);
     try {
-        return t(l, c).select(n);
+        return n(u, d).select(r);
     } catch (e) {
-        u(new i.Qe('Error formatting plural.', l, e));
+        c(new a.Qe('Error formatting plural.', u, e));
     }
     return 'other';
 }

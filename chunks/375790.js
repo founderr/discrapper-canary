@@ -1,6 +1,6 @@
-n.d(t, {
+r.d(n, {
     O: function () {
-        return r;
+        return i;
     }
 });
-let r = ['ignore_users', 'block_users', 'leave_guild', 'delete_message', 'deauthorize_app'];
+let i = ['ignore_users', 'block_users', 'leave_guild', 'delete_message', 'deauthorize_app'];

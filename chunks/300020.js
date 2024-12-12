@@ -1,19 +1,19 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(616922),
-    i = n(388032);
-function a(e, t) {
-    switch (t) {
-        case r.kG.USER_ACTIVITY_PLAY:
-            return e.hasSpotifyAccount ? i.intl.formatToPlainString(i.t.LEgD7u, { platform: r.ai }) : i.intl.formatToPlainString(i.t.XWSHTU, { platform: r.ai });
-        case r.kG.EMBED_SYNC:
-            if (!e.hasSpotifyAccount) return i.intl.formatToPlainString(i.t.XWSHTU, { platform: r.ai });
-            if (e.syncingWithUser || e.syncingWithParty) return i.intl.string(i.t.KC26NT);
-            return i.intl.string(i.t.VJlc0d);
-        case r.kG.USER_ACTIVITY_SYNC:
+var i = r(616922),
+    a = r(388032);
+function s(e, n) {
+    switch (n) {
+        case i.kG.USER_ACTIVITY_PLAY:
+            return e.hasSpotifyAccount ? a.intl.formatToPlainString(a.t.LEgD7u, { platform: i.ai }) : a.intl.formatToPlainString(a.t.XWSHTU, { platform: i.ai });
+        case i.kG.EMBED_SYNC:
+            if (!e.hasSpotifyAccount) return a.intl.formatToPlainString(a.t.XWSHTU, { platform: i.ai });
+            if (e.syncingWithUser || e.syncingWithParty) return a.intl.string(a.t.KC26NT);
+            return a.intl.string(a.t.VJlc0d);
+        case i.kG.USER_ACTIVITY_SYNC:
         default:
             return;
     }

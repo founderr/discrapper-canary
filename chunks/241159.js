@@ -1,34 +1,34 @@
-n.d(t, {
+r.d(n, {
     k: function () {
-        return s;
+        return o;
     }
 });
-var r = n(544891),
-    i = n(570140),
-    a = n(981631);
-function s(e) {
+var i = r(544891),
+    a = r(570140),
+    s = r(981631);
+function o(e) {
     return (
-        i.Z.dispatch({
+        a.Z.dispatch({
             type: 'APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING',
             applicationId: e
         }),
-        r.tn
+        i.tn
             .get({
-                url: a.ANM.STORE_LAYOUT(e),
+                url: s.ANM.STORE_LAYOUT(e),
                 rejectWithError: !0
             })
             .then(
-                (t) => (
-                    i.Z.dispatch({
+                (n) => (
+                    a.Z.dispatch({
                         type: 'APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS',
                         applicationId: e,
-                        layout: t.body
+                        layout: n.body
                     }),
-                    t.body
+                    n.body
                 )
             )
             .catch(() => {
-                i.Z.dispatch({
+                a.Z.dispatch({
                     type: 'APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_FAILED',
                     applicationId: e
                 });

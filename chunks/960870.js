@@ -1,38 +1,38 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var r = n(192379),
-    i = n(442837),
-    a = n(906732),
-    s = n(353647),
-    o = n(785717),
-    l = n(221292);
-function u(e) {
-    let { user: t, display: n, activity: u, entry: c, stream: d, analyticsLocations: f } = e,
-        { context: _, trackUserProfileAction: p } = (0, o.KZ)(),
-        { analyticsLocations: h } = (0, a.ZP)(),
-        m = null != f ? f : h,
-        g = (0, i.e7)([s.Z], () => s.Z.getUserOutbox(t.id));
-    return (0, r.useCallback)(
+var i = r(192379),
+    a = r(442837),
+    s = r(906732),
+    o = r(353647),
+    l = r(785717),
+    u = r(221292);
+function c(e) {
+    let { user: n, display: r, activity: c, entry: d, stream: f, analyticsLocations: _ } = e,
+        { context: h, trackUserProfileAction: p } = (0, l.KZ)(),
+        { analyticsLocations: m } = (0, s.ZP)(),
+        g = null != _ ? _ : m,
+        E = (0, a.e7)([o.Z], () => o.Z.getUserOutbox(n.id));
+    return (0, i.useCallback)(
         (e) => {
-            let { action: t } = e;
+            let { action: n } = e;
             p({
-                action: t,
-                analyticsLocations: m
+                action: n,
+                analyticsLocations: g
             }),
-                (0, l.z7)({
-                    action: t,
-                    display: n,
-                    activity: u,
-                    entry: c,
-                    stream: d,
-                    outbox: g,
-                    analyticsLocations: m,
-                    ..._
+                (0, u.z7)({
+                    action: n,
+                    display: r,
+                    activity: c,
+                    entry: d,
+                    stream: f,
+                    outbox: E,
+                    analyticsLocations: g,
+                    ...h
                 });
         },
-        [p, _, n, u, d, c, g, m]
+        [p, h, r, c, f, d, E, g]
     );
 }

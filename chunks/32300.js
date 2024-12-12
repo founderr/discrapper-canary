@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     R: function () {
-        return i;
+        return a;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
     kind: 'user',
     id: '2024-10_overlay_v3',
     label: 'Overlay V3 Shared Context OOP',
@@ -16,7 +16,7 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i() {
-    return r.getCurrentConfig({ location: 'overlay_v3_enabled' }).useOverlayV3;
+function a() {
+    return i.getCurrentConfig({ location: 'overlay_v3_enabled' }).useOverlayV3;
 }
-t.Z = r;
+n.Z = i;

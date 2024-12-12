@@ -1,20 +1,20 @@
-var r = n(81825);
-function i(e, t, n) {
+var i = r(81825);
+function a(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-class a extends r.Z {
-    static createFromServer(e, t) {
-        return new a({
+class s extends i.Z {
+    static createFromServer(e, n) {
+        return new s({
             id: e.id,
             subscriptionId: e.subscription_id,
             premiumGuildSubscription:
@@ -26,7 +26,7 @@ class a extends r.Z {
                     : null,
             canceled: e.canceled,
             cooldownEndsAt: e.cooldown_ends_at,
-            subscription: t
+            subscription: n
         });
     }
     isOnCooldown() {
@@ -36,7 +36,7 @@ class a extends r.Z {
         return null == this.premiumGuildSubscription && !this.isOnCooldown();
     }
     constructor(e) {
-        super(), i(this, 'id', void 0), i(this, 'subscriptionId', void 0), i(this, 'premiumGuildSubscription', void 0), i(this, 'canceled', void 0), i(this, 'cooldownEndsAt', void 0), i(this, 'subscription', void 0), (this.id = e.id), (this.subscriptionId = e.subscriptionId), (this.premiumGuildSubscription = e.premiumGuildSubscription), (this.canceled = e.canceled), (this.cooldownEndsAt = e.cooldownEndsAt), (this.subscription = e.subscription);
+        super(), a(this, 'id', void 0), a(this, 'subscriptionId', void 0), a(this, 'premiumGuildSubscription', void 0), a(this, 'canceled', void 0), a(this, 'cooldownEndsAt', void 0), a(this, 'subscription', void 0), (this.id = e.id), (this.subscriptionId = e.subscriptionId), (this.premiumGuildSubscription = e.premiumGuildSubscription), (this.canceled = e.canceled), (this.cooldownEndsAt = e.cooldownEndsAt), (this.subscription = e.subscription);
     }
 }
-t.Z = a;
+n.Z = s;

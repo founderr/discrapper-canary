@@ -1,35 +1,35 @@
-n.d(t, {
+r.d(n, {
     FL: function () {
-        return a;
+        return s;
     },
     a8: function () {
-        return i;
+        return a;
     },
     rS: function () {
-        return s;
+        return o;
     }
 });
-var r = n(570140);
-function i(e, t, n) {
-    r.Z.dispatch({
+var i = r(570140);
+function a(e, n, r) {
+    i.Z.dispatch({
         type: 'ANALYTICS_FEED_ITEM_SEEN',
         id: e,
-        feedItemId: t,
-        timestampMillis: n
+        feedItemId: n,
+        timestampMillis: r
     });
 }
-function a(e, t, n) {
-    r.Z.dispatch({
+function s(e, n, r) {
+    i.Z.dispatch({
         type: 'ANALYTICS_FEED_ITEM_UNSEEN',
         id: e,
-        feedItemId: t,
-        timestampMillis: n
+        feedItemId: n,
+        timestampMillis: r
     });
 }
-function s(e, t) {
-    r.Z.dispatch({
+function o(e, n) {
+    i.Z.dispatch({
         type: 'ANALYTICS_FEED_FLUSH',
         id: e,
-        force: t
+        force: n
     });
 }

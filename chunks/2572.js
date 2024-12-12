@@ -1,8 +1,8 @@
-function r(e) {
+function i(e) {
     return null != e.member && null != e.member.joined_at && '' !== e.member.user.username;
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

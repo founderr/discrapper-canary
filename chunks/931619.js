@@ -1,20 +1,20 @@
-let r;
-n(653041);
-r = n(538036).Z;
-let i = [],
-    a = !1;
-t.Z = {
-    ...r,
+let i;
+var a = r(653041);
+i = r(538036).Z;
+let s = [],
+    o = !1;
+n.Z = {
+    ...i,
     awaitOnline: () =>
         new Promise((e) => {
-            if (r.isOnline()) return e();
+            if (i.isOnline()) return e();
             {
-                if ((i.push(e), a)) return;
-                a = !0;
-                let t = () => {
-                    i.forEach((e) => e()), (i.length = 0), (a = !1), r.removeOnlineCallback(t);
+                if ((s.push(e), o)) return;
+                o = !0;
+                let n = () => {
+                    s.forEach((e) => e()), (s.length = 0), (o = !1), i.removeOnlineCallback(n);
                 };
-                r.addOnlineCallback(t);
+                i.addOnlineCallback(n);
             }
         })
 };

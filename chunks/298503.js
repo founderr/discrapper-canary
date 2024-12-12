@@ -1,30 +1,30 @@
-n.d(t, {
+r.d(n, {
     C8: function () {
-        return i;
+        return a;
     },
     dK: function () {
-        return s;
+        return o;
     },
     mq: function () {
-        return a;
+        return s;
     }
 });
-var r = n(192379),
-    i = r.createContext(),
-    a = r.createContext();
-function s(e) {
-    var t = e.children,
-        n = r.useState(null),
-        s = n[0],
-        o = n[1],
-        l = r.useRef(!1);
-    r.useEffect(function () {
+var i = r(192379),
+    a = i.createContext(),
+    s = i.createContext();
+function o(e) {
+    var n = e.children,
+        r = i.useState(null),
+        o = r[0],
+        l = r[1],
+        u = i.useRef(!1);
+    i.useEffect(function () {
         return function () {
-            l.current = !0;
+            u.current = !0;
         };
     }, []);
-    var u = r.useCallback(function (e) {
-        !l.current && o(e);
+    var c = i.useCallback(function (e) {
+        !u.current && l(e);
     }, []);
-    return r.createElement(i.Provider, { value: s }, r.createElement(a.Provider, { value: u }, t));
+    return i.createElement(a.Provider, { value: o }, i.createElement(s.Provider, { value: c }, n));
 }

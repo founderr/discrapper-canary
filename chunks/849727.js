@@ -1,4 +1,4 @@
-let r = (0, n(987170).Z)({
+let i = (0, r(987170).Z)({
     kind: 'user',
     id: '2024-10_web_display_animated_webp_embeds',
     label: 'Web Display Animated WebP Embeds Experiment',
@@ -16,4 +16,4 @@ let r = (0, n(987170).Z)({
         }
     ]
 });
-t.Z = r;
+n.Z = i;

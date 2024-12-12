@@ -1,4 +1,4 @@
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
     kind: 'user',
     id: '2024-10_golive_simulcast',
     label: 'GoLive Simulcast',
@@ -17,7 +17,7 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-t.Z = {
-    getConfig: () => r.getCurrentConfig({ location: 'getConfig' }, { autoTrackExposure: !1 }),
-    simulcastEnabled: () => r.getCurrentConfig({ location: 'simulcastEnabled' }, { autoTrackExposure: !0 }).simulcastEnabled
+n.Z = {
+    getConfig: () => i.getCurrentConfig({ location: 'getConfig' }, { autoTrackExposure: !1 }),
+    simulcastEnabled: () => i.getCurrentConfig({ location: 'simulcastEnabled' }, { autoTrackExposure: !0 }).simulcastEnabled
 };

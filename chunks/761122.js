@@ -1,16 +1,16 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(911969);
-function i(e) {
+var i = r(911969);
+function a(e) {
     switch (e) {
         case 'android':
-            return r.C3.ANDROID;
+            return i.C3.ANDROID;
         case 'ios':
-            return r.C3.IOS;
+            return i.C3.IOS;
         default:
-            return r.C3.WEB;
+            return i.C3.WEB;
     }
 }

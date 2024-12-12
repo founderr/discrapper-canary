@@ -1,51 +1,51 @@
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    l = n(906732),
-    u = n(785717),
-    c = n(456644),
-    d = n(502762),
-    f = n(652853),
-    _ = n(171368),
-    p = n(228168),
-    h = n(388032),
-    m = n(249942);
-t.Z = i.forwardRef(function (e, t) {
-    let { children: n, className: i, subsection: a, onAction: g, onClose: E, ...v } = e,
-        { profileType: I } = (0, f.z)(),
-        { analyticsLocations: T } = (0, l.ZP)(),
-        { context: b } = (0, u.KZ)(),
-        { recentActivityEnabled: S } = (0, c.i)({
+var i = r(200651),
+    a = r(192379),
+    s = r(120356),
+    o = r.n(s),
+    l = r(481060),
+    u = r(906732),
+    c = r(785717),
+    d = r(456644),
+    f = r(502762),
+    _ = r(652853),
+    h = r(171368),
+    p = r(228168),
+    m = r(388032),
+    g = r(249942);
+n.Z = a.forwardRef(function (e, n) {
+    let { children: r, className: a, subsection: s, onAction: E, onClose: v, ...I } = e,
+        { profileType: T } = (0, _.z)(),
+        { analyticsLocations: b } = (0, u.ZP)(),
+        { context: y } = (0, c.KZ)(),
+        { recentActivityEnabled: S } = (0, d.i)({
             location: 'UserProfileActivityCardContainer',
             autoTrackExposure: !1
         });
-    return I !== p.y0.FULL_SIZE && (null == b ? void 0 : b.userId) != null && S
-        ? (0, r.jsx)(o.Clickable, {
-              className: m.clickableContainer,
-              'aria-label': h.intl.string(h.t.pD1L1t),
+    return T !== p.y0.FULL_SIZE && (null == y ? void 0 : y.userId) != null && S
+        ? (0, i.jsx)(l.Clickable, {
+              className: g.clickableContainer,
+              'aria-label': m.intl.string(m.t.pD1L1t),
               onClick: () => {
-                  null == g || g({ action: 'PRESS_CARD' }),
-                      (0, _.openUserProfileModal)({
+                  null == E || E({ action: 'PRESS_CARD' }),
+                      (0, h.openUserProfileModal)({
                           section: p.oh.ACTIVITY,
-                          sourceAnalyticsLocations: T,
-                          subsection: a,
-                          ...b
+                          sourceAnalyticsLocations: b,
+                          subsection: s,
+                          ...y
                       }),
-                      null == E || E();
+                      null == v || v();
               },
-              children: (0, r.jsx)(d.Z.Overlay, {
-                  ref: t,
-                  className: s()(m.card, i),
-                  ...v,
-                  children: n
+              children: (0, i.jsx)(f.Z.Overlay, {
+                  ref: n,
+                  className: o()(g.card, a),
+                  ...I,
+                  children: r
               })
           })
-        : (0, r.jsx)(d.Z.Overlay, {
-              ref: t,
-              className: s()(m.card, i),
-              ...v,
-              children: n
+        : (0, i.jsx)(f.Z.Overlay, {
+              ref: n,
+              className: o()(g.card, a),
+              ...I,
+              children: r
           });
 });

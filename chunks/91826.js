@@ -1,63 +1,63 @@
-var r = n(606862),
-    i = n(169742),
-    a = n(160171),
-    s = n(192853),
-    o = n(49662),
-    l = s('Object.prototype.toString'),
-    u = n(703825)(),
-    c = 'undefined' == typeof globalThis ? n.g : globalThis,
-    d = i(),
-    f = s('String.prototype.slice'),
-    _ = Object.getPrototypeOf,
+var i = r(606862),
+    a = r(169742),
+    s = r(160171),
+    o = r(192853),
+    l = r(49662),
+    u = o('Object.prototype.toString'),
+    c = r(703825)(),
+    d = 'undefined' == typeof globalThis ? r.g : globalThis,
+    f = a(),
+    _ = o('String.prototype.slice'),
+    h = Object.getPrototypeOf,
     p =
-        s('Array.prototype.indexOf', !0) ||
-        function (e, t) {
-            for (var n = 0; n < e.length; n += 1) if (e[n] === t) return n;
+        o('Array.prototype.indexOf', !0) ||
+        function (e, n) {
+            for (var r = 0; r < e.length; r += 1) if (e[r] === n) return r;
             return -1;
         },
-    h = { __proto__: null };
-u && o && _
-    ? r(d, function (e) {
-          var t = new c[e]();
-          if (Symbol.toStringTag in t) {
-              var n = _(t),
-                  r = o(n, Symbol.toStringTag);
-              !r && (r = o(_(n), Symbol.toStringTag)), (h['$' + e] = a(r.get));
+    m = { __proto__: null };
+c && l && h
+    ? i(f, function (e) {
+          var n = new d[e]();
+          if (Symbol.toStringTag in n) {
+              var r = h(n),
+                  i = l(r, Symbol.toStringTag);
+              !i && (i = l(h(r), Symbol.toStringTag)), (m['$' + e] = s(i.get));
           }
       })
-    : r(d, function (e) {
-          var t = new c[e]();
-          h['$' + e] = a(t.slice);
+    : i(f, function (e) {
+          var n = new d[e]();
+          m['$' + e] = s(n.slice);
       });
-var m = function (e) {
-        var t = !1;
+var g = function (e) {
+        var n = !1;
         return (
-            r(h, function (n, r) {
-                if (!t)
+            i(m, function (r, i) {
+                if (!n)
                     try {
-                        '$' + n(e) === r && (t = f(r, 1));
+                        '$' + r(e) === i && (n = _(i, 1));
                     } catch (e) {}
             }),
-            t
+            n
         );
     },
-    g = function (e) {
-        var t = !1;
+    E = function (e) {
+        var n = !1;
         return (
-            r(h, function (n, r) {
-                if (!t)
+            i(m, function (r, i) {
+                if (!n)
                     try {
-                        n(e), (t = f(r, 1));
+                        r(e), (n = _(i, 1));
                     } catch (e) {}
             }),
-            t
+            n
         );
     };
 e.exports = function (e) {
     if (!e || 'object' != typeof e) return !1;
-    if (!u) {
-        var t = f(l(e), 8, -1);
-        return p(d, t) > -1 ? t : 'Object' === t && g(e);
+    if (!c) {
+        var n = _(u(e), 8, -1);
+        return p(f, n) > -1 ? n : 'Object' === n && E(e);
     }
-    return o ? m(e) : null;
+    return l ? g(e) : null;
 };

@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     j: function () {
-        return i;
+        return a;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
         id: '2024-10_quests_dismissal_survey',
         kind: 'user',
         label: 'Quests Dismissal Survey',
@@ -21,7 +21,7 @@ let r = (0, n(818083).B)({
             }
         ]
     }),
-    i = (e) => {
-        let { location: t } = e;
-        return r.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
+    a = (e) => {
+        let { location: n } = e;
+        return i.getCurrentConfig({ location: n }, { autoTrackExposure: !1 }).enabled;
     };

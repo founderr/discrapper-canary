@@ -1,22 +1,22 @@
-n.d(t, {
+r.d(n, {
     DQ: function () {
-        return r;
-    },
-    LH: function () {
-        return a;
-    },
-    Wj: function () {
-        return s;
-    },
-    aQ: function () {
         return i;
     },
-    pL: function () {
+    LH: function () {
+        return s;
+    },
+    Wj: function () {
         return o;
+    },
+    aQ: function () {
+        return a;
+    },
+    pL: function () {
+        return l;
     }
 });
-let r = 'hello',
-    i = 'version',
-    a = 'force-resync-version',
-    s = 3,
-    o = 'stable-53';
+let i = 'hello',
+    a = 'version',
+    s = 'force-resync-version',
+    o = 3,
+    l = 'stable-53';

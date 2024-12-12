@@ -1,11 +1,11 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return s;
     }
-}),
-    n(47120);
-var r = n(192379);
-function i() {
-    let [, e] = (0, r.useState)(0);
-    return (0, r.useCallback)(() => e((e) => e + 1), []);
+});
+var i = r(47120);
+var a = r(192379);
+function s() {
+    let [, e] = (0, a.useState)(0);
+    return (0, a.useCallback)(() => e((e) => e + 1), []);
 }

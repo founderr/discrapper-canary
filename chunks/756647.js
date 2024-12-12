@@ -1,14 +1,14 @@
-function r(e) {
+function i(e) {
     return e.split('.')[0];
 }
-function i(e) {
-    return null == e ? null : r(e);
+function a(e) {
+    return null == e ? null : i(e);
 }
-n.d(t, {
+r.d(n, {
     K: function () {
-        return i;
+        return a;
     },
     s: function () {
-        return r;
+        return i;
     }
 });

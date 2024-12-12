@@ -1,10 +1,10 @@
-let r;
-function i() {
-    return null != r
-        ? r
-        : (r = (async () => {
-              let { default: e } = await n.e('20353').then(n.t.bind(n, 62994, 23)),
-                  t = new e({
+let i;
+function a() {
+    return null != i
+        ? i
+        : (i = (async () => {
+              let { default: e } = await r.e('20353').then(r.t.bind(r, 62994, 23)),
+                  n = new e({
                       params: {
                           logProcessStats: !1,
                           useSharedArrayBuffer: !1,
@@ -17,11 +17,11 @@ function i() {
                           }
                       }
                   });
-              return await t.init(), t;
+              return await n.init(), n;
           })());
 }
-n.d(t, {
+r.d(n, {
     n: function () {
-        return i;
+        return a;
     }
 });

@@ -1,68 +1,68 @@
-var r = n(21841),
-    i = n(689118),
-    a = n(726315),
-    s = n(449348);
-function o() {
+var i = r(21841),
+    a = r(689118),
+    s = r(726315),
+    o = r(449348);
+function l() {
     (this.tmp = [, ,]), (this.keys = null);
 }
-function l(e) {
-    s.call(this, e);
-    var t = new o();
-    (this._desState = t), this.deriveKeys(t, e.key);
+function u(e) {
+    o.call(this, e);
+    var n = new l();
+    (this._desState = n), this.deriveKeys(n, e.key);
 }
-i(l, s),
-    (e.exports = l),
-    (l.create = function (e) {
-        return new l(e);
+a(u, o),
+    (e.exports = u),
+    (u.create = function (e) {
+        return new u(e);
     });
-var u = [1, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1];
-(l.prototype.deriveKeys = function (e, t) {
-    (e.keys = Array(32)), r.equal(t.length, this.blockSize, 'Invalid key length');
-    var n = a.readUInt32BE(t, 0),
-        i = a.readUInt32BE(t, 4);
-    a.pc1(n, i, e.tmp, 0), (n = e.tmp[0]), (i = e.tmp[1]);
-    for (var s = 0; s < e.keys.length; s += 2) {
-        var o = u[s >>> 1];
-        (n = a.r28shl(n, o)), (i = a.r28shl(i, o)), a.pc2(n, i, e.keys, s);
+var c = [1, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1];
+(u.prototype.deriveKeys = function (e, n) {
+    (e.keys = Array(32)), i.equal(n.length, this.blockSize, 'Invalid key length');
+    var r = s.readUInt32BE(n, 0),
+        a = s.readUInt32BE(n, 4);
+    s.pc1(r, a, e.tmp, 0), (r = e.tmp[0]), (a = e.tmp[1]);
+    for (var o = 0; o < e.keys.length; o += 2) {
+        var l = c[o >>> 1];
+        (r = s.r28shl(r, l)), (a = s.r28shl(a, l)), s.pc2(r, a, e.keys, o);
     }
 }),
-    (l.prototype._update = function (e, t, n, r) {
-        var i = this._desState,
-            s = a.readUInt32BE(e, t),
-            o = a.readUInt32BE(e, t + 4);
-        a.ip(s, o, i.tmp, 0), (s = i.tmp[0]), (o = i.tmp[1]), 'encrypt' === this.type ? this._encrypt(i, s, o, i.tmp, 0) : this._decrypt(i, s, o, i.tmp, 0), (s = i.tmp[0]), (o = i.tmp[1]), a.writeUInt32BE(n, s, r), a.writeUInt32BE(n, o, r + 4);
+    (u.prototype._update = function (e, n, r, i) {
+        var a = this._desState,
+            o = s.readUInt32BE(e, n),
+            l = s.readUInt32BE(e, n + 4);
+        s.ip(o, l, a.tmp, 0), (o = a.tmp[0]), (l = a.tmp[1]), 'encrypt' === this.type ? this._encrypt(a, o, l, a.tmp, 0) : this._decrypt(a, o, l, a.tmp, 0), (o = a.tmp[0]), (l = a.tmp[1]), s.writeUInt32BE(r, o, i), s.writeUInt32BE(r, l, i + 4);
     }),
-    (l.prototype._pad = function (e, t) {
+    (u.prototype._pad = function (e, n) {
         if (!1 === this.padding) return !1;
-        for (var n = e.length - t, r = t; r < e.length; r++) e[r] = n;
+        for (var r = e.length - n, i = n; i < e.length; i++) e[i] = r;
         return !0;
     }),
-    (l.prototype._unpad = function (e) {
+    (u.prototype._unpad = function (e) {
         if (!1 === this.padding) return e;
-        for (var t = e[e.length - 1], n = e.length - t; n < e.length; n++) r.equal(e[n], t);
-        return e.slice(0, e.length - t);
+        for (var n = e[e.length - 1], r = e.length - n; r < e.length; r++) i.equal(e[r], n);
+        return e.slice(0, e.length - n);
     }),
-    (l.prototype._encrypt = function (e, t, n, r, i) {
-        for (var s = t, o = n, l = 0; l < e.keys.length; l += 2) {
-            var u = e.keys[l],
-                c = e.keys[l + 1];
-            a.expand(o, e.tmp, 0), (u ^= e.tmp[0]), (c ^= e.tmp[1]);
-            var d = a.substitute(u, c),
-                f = a.permute(d),
-                _ = o;
-            (o = (s ^ f) >>> 0), (s = _);
+    (u.prototype._encrypt = function (e, n, r, i, a) {
+        for (var o = n, l = r, u = 0; u < e.keys.length; u += 2) {
+            var c = e.keys[u],
+                d = e.keys[u + 1];
+            s.expand(l, e.tmp, 0), (c ^= e.tmp[0]), (d ^= e.tmp[1]);
+            var f = s.substitute(c, d),
+                _ = s.permute(f),
+                h = l;
+            (l = (o ^ _) >>> 0), (o = h);
         }
-        a.rip(o, s, r, i);
+        s.rip(l, o, i, a);
     }),
-    (l.prototype._decrypt = function (e, t, n, r, i) {
-        for (var s = n, o = t, l = e.keys.length - 2; l >= 0; l -= 2) {
-            var u = e.keys[l],
-                c = e.keys[l + 1];
-            a.expand(s, e.tmp, 0), (u ^= e.tmp[0]), (c ^= e.tmp[1]);
-            var d = a.substitute(u, c),
-                f = a.permute(d),
-                _ = s;
-            (s = (o ^ f) >>> 0), (o = _);
+    (u.prototype._decrypt = function (e, n, r, i, a) {
+        for (var o = r, l = n, u = e.keys.length - 2; u >= 0; u -= 2) {
+            var c = e.keys[u],
+                d = e.keys[u + 1];
+            s.expand(o, e.tmp, 0), (c ^= e.tmp[0]), (d ^= e.tmp[1]);
+            var f = s.substitute(c, d),
+                _ = s.permute(f),
+                h = o;
+            (o = (l ^ _) >>> 0), (l = h);
         }
-        a.rip(s, o, r, i);
+        s.rip(o, l, i, a);
     });

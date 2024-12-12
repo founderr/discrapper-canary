@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     decrease: (e) => `${e.fieldLabel} verringern`,
     increase: (e) => `${e.fieldLabel} erh\xf6hen`,
     numberField: 'Nummernfeld'

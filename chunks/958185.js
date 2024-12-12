@@ -1,12 +1,12 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(981631);
-function i(e) {
-    let { LayerStore: t, PopoutWindowStore: n } = e,
-        i = t.hasLayers(),
-        a = n.getWindowOpen(r.KJ3.CHANNEL_CALL_POPOUT) || n.getWindowOpen(r.KJ3.ACTIVITY_POPOUT);
-    return i && !a;
+var i = r(981631);
+function a(e) {
+    let { LayerStore: n, PopoutWindowStore: r } = e,
+        a = n.hasLayers(),
+        s = r.getWindowOpen(i.KJ3.CHANNEL_CALL_POPOUT) || r.getWindowOpen(i.KJ3.ACTIVITY_POPOUT);
+    return a && !s;
 }

@@ -1,67 +1,67 @@
-n.d(t, {
+r.d(n, {
     KK: function () {
-        return l;
-    },
-    Z5: function () {
         return c;
     },
+    Z5: function () {
+        return f;
+    },
     aG: function () {
-        return u;
+        return d;
     },
     d$: function () {
-        return d;
+        return _;
     }
-}),
-    n(411104);
-var r = n(358085),
-    i = n(18323),
-    a = n(647162),
-    s = n(616922);
-function o(e, t, n) {
-    let o;
-    !(0, r.isDesktop)() && (o = window.open('', '_blank')),
-        (0, a.iy)(e, t)
-            .then((e) => n(e))
+});
+var i = r(411104);
+var a = r(358085),
+    s = r(18323),
+    o = r(647162),
+    l = r(616922);
+function u(e, n, r) {
+    let i;
+    !(0, a.isDesktop)() && (i = window.open('', '_blank')),
+        (0, o.iy)(e, n)
+            .then((e) => r(e))
             .then((e) => {
-                let { resourceType: t, resourceId: n } = e,
-                    r = i.Z.isProtocolRegistered() ? s.C7.PLAYER_OPEN(t, n) : s.C7.WEB_OPEN(t, n);
-                null != o ? (o.location.href = r) : window.open(r);
+                let { resourceType: n, resourceId: r } = e,
+                    a = s.Z.isProtocolRegistered() ? l.C7.PLAYER_OPEN(n, r) : l.C7.WEB_OPEN(n, r);
+                null != i ? (i.location.href = a) : window.open(a);
             })
             .catch(() => {
-                null != o && o.close();
+                null != i && i.close();
             });
 }
-function l() {
-    window.open(s.C7.PREMIUM_SITE);
+function c() {
+    window.open(l.C7.PREMIUM_SITE);
 }
-function u(e) {
-    var t;
-    let { sync_id: n, metadata: r } = e;
-    if (null == n) return;
-    let a = (0, s.c8)(null !== (t = null == r ? void 0 : r.type) && void 0 !== t ? t : s.Hw.TRACK);
+function d(e) {
+    var n;
+    let { sync_id: r, metadata: i } = e;
+    if (null == r) return;
+    let a = (0, l.c8)(null !== (n = null == i ? void 0 : i.type) && void 0 !== n ? n : l.Hw.TRACK);
     if (null == a) return;
-    let o = i.Z.isProtocolRegistered() ? s.C7.PLAYER_OPEN(a, n) : s.C7.WEB_OPEN(a, n);
+    let o = s.Z.isProtocolRegistered() ? l.C7.PLAYER_OPEN(a, r) : l.C7.WEB_OPEN(a, r);
     window.open(o);
 }
-function c(e, t) {
-    o(e, t, (t) => {
-        var n;
-        let { album_id: r } = t;
+function f(e, n) {
+    u(e, n, (n) => {
+        var r;
+        let { album_id: i } = n;
         return {
-            resourceType: (0, s.c8)(null === (n = e.metadata) || void 0 === n ? void 0 : n.type) === s.Hw.EPISODE ? s.Hw.SHOW : s.Hw.ALBUM,
-            resourceId: r
+            resourceType: (0, l.c8)(null === (r = e.metadata) || void 0 === r ? void 0 : r.type) === l.Hw.EPISODE ? l.Hw.SHOW : l.Hw.ALBUM,
+            resourceId: i
         };
     });
 }
-function d(e, t, n) {
-    o(e, t, (e) => {
-        let { artist_ids: t } = e;
-        if (null == t) throw Error('no artist ids in metadata');
-        let r = t[n];
-        if (null == r) throw Error('invalid artist index');
+function _(e, n, r) {
+    u(e, n, (e) => {
+        let { artist_ids: n } = e;
+        if (null == n) throw Error('no artist ids in metadata');
+        let i = n[r];
+        if (null == i) throw Error('invalid artist index');
         return {
-            resourceType: s.Hw.ARTIST,
-            resourceId: r
+            resourceType: l.Hw.ARTIST,
+            resourceId: i
         };
     });
 }

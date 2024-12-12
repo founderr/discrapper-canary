@@ -1,22 +1,22 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var r = n(544891),
-    i = n(981631),
-    a = n(388032);
-class s extends r.yZ {
-    constructor(e, t) {
+var i = r(544891),
+    a = r(981631),
+    s = r(388032);
+class o extends i.yZ {
+    constructor(e, n) {
         super(
             e,
-            t,
-            null != t
-                ? a.intl.formatToPlainString(a.t.aKRa0d, {
-                      statusPageURL: i.yXt.STATUS,
-                      details: ''.concat(t)
+            n,
+            null != n
+                ? s.intl.formatToPlainString(s.t.aKRa0d, {
+                      statusPageURL: a.yXt.STATUS,
+                      details: ''.concat(n)
                   })
-                : a.intl.formatToPlainString(a.t.aTVNen, { statusPageURL: i.yXt.STATUS })
+                : s.intl.formatToPlainString(s.t.aTVNen, { statusPageURL: a.yXt.STATUS })
         );
     }
 }

@@ -23,7 +23,7 @@ e.exports = {
     userJoinSystemMessageIcon: 'userJoinSystemMessageIcon_f9f2ca',
     ticketIcon: 'ticketIcon_f9f2ca',
     commandIcon: 'commandIcon_f9f2ca',
-    username: 'username_f9f2ca ' + n('864435').desaturateUserColors,
+    username: 'username_f9f2ca ' + r('864435').desaturateUserColors,
     roleDot: 'roleDot_f9f2ca',
     commandName: 'commandName_f9f2ca',
     appsIcon: 'appsIcon_f9f2ca',

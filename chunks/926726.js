@@ -1,8 +1,8 @@
-function r(e, t) {
-    return e - t * Math.floor(e / t);
+function i(e, n) {
+    return e - n * Math.floor(e / n);
 }
-n.d(t, {
+r.d(n, {
     wQ: function () {
-        return r;
+        return i;
     }
 });

@@ -71,7 +71,7 @@ let _ = (e, t, n, i) => {
             withBottomBorder: !1
         },
         11: {
-            label: (0, a.jsx)(f, { text: m.intl.string(m.t['y+HHLy']) }),
+            label: (0, a.jsx)(f, { text: m.intl.string(m.t['svn/YW']) }),
             tier0Column: (0, a.jsx)(p, {
                 includes: !0,
                 isTier0: !0
@@ -97,7 +97,7 @@ let _ = (e, t, n, i) => {
         },
         19: {
             label: (0, a.jsx)(f, {
-                text: m.intl.string(m.t['2pECgo']),
+                text: m.intl.string(m.t.Wme3nZ),
                 variant: 'text-lg/bold'
             }),
             withBottomBorder: !1
@@ -119,7 +119,7 @@ let _ = (e, t, n, i) => {
             tier2Column: (0, a.jsx)(p, { includes: !0 })
         },
         3: {
-            label: (0, a.jsx)(f, { text: m.intl.string(m.t.OuItFh) }),
+            label: (0, a.jsx)(f, { text: m.intl.string(m.t.Uukj4u) }),
             tier0Column: (0, a.jsx)(p, {
                 includes: !0,
                 isTier0: !0
@@ -145,7 +145,7 @@ let _ = (e, t, n, i) => {
         },
         20: {
             label: (0, a.jsx)(f, {
-                text: m.intl.string(m.t.aMqOdX),
+                text: m.intl.string(m.t['6b3ydH']),
                 variant: 'text-lg/bold'
             }),
             withBottomBorder: !1

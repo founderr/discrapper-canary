@@ -1,30 +1,30 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return d;
+        return f;
     },
     q: function () {
-        return f;
+        return _;
     }
 });
-var r = n(192379),
-    i = n(392711),
-    a = n.n(i),
-    s = n(442837),
-    o = n(902704),
-    l = n(823379),
-    u = n(728345),
-    c = n(812206);
-function d(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = r.useRef([]);
+var i = r(192379),
+    a = r(392711),
+    s = r.n(a),
+    o = r(442837),
+    l = r(902704),
+    u = r(823379),
+    c = r(728345),
+    d = r(812206);
+function f(e) {
+    let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        r = i.useRef([]);
     return (
-        r.useEffect(() => {
-            t && !(0, o.E)(e, n.current) && (u.ZP.fetchApplications(a()(e).filter(l.lm).uniq().value(), !1), (n.current = e));
-        }, [e, t]),
-        (0, s.Wu)([c.Z], () => e.map((e) => (null != e ? c.Z.getApplication(e) : void 0)))
+        i.useEffect(() => {
+            n && !(0, l.E)(e, r.current) && (c.ZP.fetchApplications(s()(e).filter(u.lm).uniq().value(), !1), (r.current = e));
+        }, [e, n]),
+        (0, o.Wu)([d.Z], () => e.map((e) => (null != e ? d.Z.getApplication(e) : void 0)))
     );
 }
-function f(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return d(null != e ? [e] : [], t)[0];
+function _(e) {
+    let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    return f(null != e ? [e] : [], n)[0];
 }

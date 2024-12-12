@@ -1,24 +1,24 @@
-n.d(t, {
+r.d(n, {
     DQ: function () {
-        return l;
+        return u;
     },
     He: function () {
-        return o;
+        return l;
     },
     P1: function () {
-        return s;
+        return o;
     }
 });
-var r = n(825829),
-    i = n(594174),
-    a = n(981631);
-function s(e) {
-    return void 0 !== e && e.type !== a.d4z.DM;
-}
+var i = r(825829),
+    a = r(594174),
+    s = r(981631);
 function o(e) {
-    var t, n;
-    return null !== (n = null === (t = i.default.getUser(e)) || void 0 === t ? void 0 : t.hasFlag(a.xW$.SPAMMER)) && void 0 !== n && n;
+    return void 0 !== e && e.type !== s.d4z.DM;
 }
 function l(e) {
-    return o(e.author.id) && !(0, r.nY)(e);
+    var n, r;
+    return null !== (r = null === (n = a.default.getUser(e)) || void 0 === n ? void 0 : n.hasFlag(s.xW$.SPAMMER)) && void 0 !== r && r;
+}
+function u(e) {
+    return l(e.author.id) && !(0, i.nY)(e);
 }

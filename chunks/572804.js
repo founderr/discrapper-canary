@@ -1,50 +1,50 @@
-n.d(t, {
+r.d(n, {
     Hl: function () {
-        return o;
-    },
-    Sz: function () {
         return l;
     },
+    Sz: function () {
+        return u;
+    },
     ZP: function () {
-        return s;
+        return o;
     }
 });
-var r = n(592125),
-    i = n(271383),
-    a = n(430824);
-function s(e) {
-    let { message: t, userId: n, suppressEveryone: r = !1, suppressRoles: i = !1 } = e;
-    return l({
-        userId: n,
-        channelId: t.channel_id,
-        mentionEveryone: t.mentionEveryone,
-        mentionUsers: t.mentions,
-        mentionRoles: t.mentionRoles,
-        suppressEveryone: r,
-        suppressRoles: i
-    });
-}
+var i = r(592125),
+    a = r(271383),
+    s = r(430824);
 function o(e) {
-    var t, n, r, i;
-    let { rawMessage: a, userId: s, suppressEveryone: o = !1, suppressRoles: u = !1 } = e;
-    return l({
-        userId: s,
-        channelId: a.channel_id,
-        mentionEveryone: null !== (n = a.mention_everyone) && void 0 !== n && n,
-        mentionUsers: null !== (r = null === (t = a.mentions) || void 0 === t ? void 0 : t.map((e) => e.id)) && void 0 !== r ? r : [],
-        mentionRoles: null !== (i = a.mention_roles) && void 0 !== i ? i : [],
-        suppressEveryone: o,
-        suppressRoles: u
+    let { message: n, userId: r, suppressEveryone: i = !1, suppressRoles: a = !1 } = e;
+    return u({
+        userId: r,
+        channelId: n.channel_id,
+        mentionEveryone: n.mentionEveryone,
+        mentionUsers: n.mentions,
+        mentionRoles: n.mentionRoles,
+        suppressEveryone: i,
+        suppressRoles: a
     });
 }
 function l(e) {
-    let { userId: t, channelId: n, mentionEveryone: s, mentionUsers: o, mentionRoles: l, suppressEveryone: u = !1, suppressRoles: c = !1 } = e;
-    if ((s && !u) || o.includes(t)) return !0;
-    if (c || null == l || 0 === l.length) return !1;
-    let d = r.Z.getChannel(n);
-    if (null == d) return !1;
-    let f = d.getGuildId();
-    if (null == f || null == a.Z.getGuild(f)) return !1;
-    let _ = i.ZP.getMember(f, t);
-    return null != _ && l.some((e) => _.roles.includes(e));
+    var n, r, i, a;
+    let { rawMessage: s, userId: o, suppressEveryone: l = !1, suppressRoles: c = !1 } = e;
+    return u({
+        userId: o,
+        channelId: s.channel_id,
+        mentionEveryone: null !== (r = s.mention_everyone) && void 0 !== r && r,
+        mentionUsers: null !== (i = null === (n = s.mentions) || void 0 === n ? void 0 : n.map((e) => e.id)) && void 0 !== i ? i : [],
+        mentionRoles: null !== (a = s.mention_roles) && void 0 !== a ? a : [],
+        suppressEveryone: l,
+        suppressRoles: c
+    });
+}
+function u(e) {
+    let { userId: n, channelId: r, mentionEveryone: o, mentionUsers: l, mentionRoles: u, suppressEveryone: c = !1, suppressRoles: d = !1 } = e;
+    if ((o && !c) || l.includes(n)) return !0;
+    if (d || null == u || 0 === u.length) return !1;
+    let f = i.Z.getChannel(r);
+    if (null == f) return !1;
+    let _ = f.getGuildId();
+    if (null == _ || null == s.Z.getGuild(_)) return !1;
+    let h = a.ZP.getMember(_, n);
+    return null != h && u.some((e) => h.roles.includes(e));
 }

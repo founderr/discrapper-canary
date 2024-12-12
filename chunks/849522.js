@@ -1,12 +1,12 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return o;
+        return l;
     }
 });
-var r = n(442837),
-    i = n(594174),
-    a = n(74538),
-    s = n(981631);
-function o() {
-    return (0, r.e7)([i.default], () => a.ZP.canUseIncreasedMessageLength(i.default.getCurrentUser())) ? s.en1 : s.J6R;
+var i = r(442837),
+    a = r(594174),
+    s = r(74538),
+    o = r(981631);
+function l() {
+    return (0, i.e7)([a.default], () => s.ZP.canUseIncreasedMessageLength(a.default.getCurrentUser())) ? o.en1 : o.J6R;
 }

@@ -1,17 +1,17 @@
-n.d(t, {
+r.d(n, {
     y: function () {
-        return a;
+        return s;
     }
 });
-var r = n(927923),
-    i = n(981631);
-function a(e) {
+var i = r(927923),
+    a = r(981631);
+function s(e) {
     switch (e) {
-        case i.ABu.XBOX:
-            return r.YE.XBOX;
-        case i.ABu.PLAYSTATION:
-        case i.ABu.PLAYSTATION_STAGING:
-            return r.YE.PLAYSTATION;
+        case a.ABu.XBOX:
+            return i.YE.XBOX;
+        case a.ABu.PLAYSTATION:
+        case a.ABu.PLAYSTATION_STAGING:
+            return i.YE.PLAYSTATION;
         default:
             return null;
     }

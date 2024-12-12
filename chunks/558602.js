@@ -1,23 +1,23 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return l;
+        return u;
     }
 });
-var r = n(339085),
-    i = n(131704),
-    a = n(176354),
-    s = n(700785),
-    o = n(981631);
-function l(e, t, n) {
-    if (e.type !== o.IIU.CUSTOM_STATUS || null == e.emoji) return !1;
-    let l = e.emoji;
-    if (null == l.id || null == n || !(0, i.zi)(n.type)) return !0;
-    let u = r.ZP.getUsableCustomEmojiById(l.id),
-        c = a.ZP.isInternalEmojiForGuildId(u, n.getGuildId()),
-        d = s.BT({
-            permission: o.Plq.USE_EXTERNAL_EMOJIS,
-            user: t,
-            context: n
+var i = r(339085),
+    a = r(131704),
+    s = r(176354),
+    o = r(700785),
+    l = r(981631);
+function u(e, n, r) {
+    if (e.type !== l.IIU.CUSTOM_STATUS || null == e.emoji) return !1;
+    let u = e.emoji;
+    if (null == u.id || null == r || !(0, a.zi)(r.type)) return !0;
+    let c = i.ZP.getUsableCustomEmojiById(u.id),
+        d = s.ZP.isInternalEmojiForGuildId(c, r.getGuildId()),
+        f = o.BT({
+            permission: l.Plq.USE_EXTERNAL_EMOJIS,
+            user: n,
+            context: r
         });
-    return !c || d;
+    return !d || f;
 }

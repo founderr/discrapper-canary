@@ -1,3 +1,3 @@
-let { createLoader: r } = n(436772),
-    i = r(['cgdAs7'], { 'en-US': () => n.e('4071').then(n.bind(n, 126436)) }, 'en-US').getBinds();
-t.Z = i;
+let { createLoader: i } = r(436772),
+    a = i(['cgdAs7'], { 'en-US': () => r.e('4071').then(r.bind(r, 126436)) }, 'en-US').getBinds();
+n.Z = a;

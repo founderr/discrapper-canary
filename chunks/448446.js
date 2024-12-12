@@ -1,70 +1,70 @@
-n.d(t, {
+r.d(n, {
     U: function () {
-        return s;
+        return o;
     },
     k: function () {
-        return o;
+        return l;
     }
 });
-var r = n(661763),
-    i = n(662845),
-    a = n(921336);
-function s(e, t) {
-    let n,
-        { elementType: s = 'button', isDisabled: o, onPress: l, onPressStart: u, onPressEnd: c, onPressUp: d, onPressChange: f, preventFocusOnPress: _, allowFocusWhenDisabled: p, onClick: h, href: m, target: g, rel: E, type: v = 'button' } = e;
-    n =
-        'button' === s
+var i = r(661763),
+    a = r(662845),
+    s = r(921336);
+function o(e, n) {
+    let r,
+        { elementType: o = 'button', isDisabled: l, onPress: u, onPressStart: c, onPressEnd: d, onPressUp: f, onPressChange: _, preventFocusOnPress: h, allowFocusWhenDisabled: p, onClick: m, href: g, target: E, rel: v, type: I = 'button' } = e;
+    r =
+        'button' === o
             ? {
-                  type: v,
-                  disabled: o
+                  type: I,
+                  disabled: l
               }
             : {
                   role: 'button',
-                  tabIndex: o ? void 0 : 0,
-                  href: 'a' === s && o ? void 0 : m,
-                  target: 'a' === s ? g : void 0,
-                  type: 'input' === s ? v : void 0,
-                  disabled: 'input' === s ? o : void 0,
-                  'aria-disabled': o && 'input' !== s ? o : void 0,
-                  rel: 'a' === s ? E : void 0
+                  tabIndex: l ? void 0 : 0,
+                  href: 'a' === o && l ? void 0 : g,
+                  target: 'a' === o ? E : void 0,
+                  type: 'input' === o ? I : void 0,
+                  disabled: 'input' === o ? l : void 0,
+                  'aria-disabled': l && 'input' !== o ? l : void 0,
+                  rel: 'a' === o ? v : void 0
               };
-    let { pressProps: I, isPressed: T } = (0, a.r7)({
-            onPressStart: u,
-            onPressEnd: c,
-            onPressChange: f,
-            onPress: l,
-            onPressUp: d,
-            isDisabled: o,
-            preventFocusOnPress: _,
-            ref: t
+    let { pressProps: T, isPressed: b } = (0, s.r7)({
+            onPressStart: c,
+            onPressEnd: d,
+            onPressChange: _,
+            onPress: u,
+            onPressUp: f,
+            isDisabled: l,
+            preventFocusOnPress: h,
+            ref: n
         }),
-        { focusableProps: b } = (0, i.kc)(e, t);
-    p && (b.tabIndex = o ? -1 : b.tabIndex);
-    let S = (0, r.dG)(b, I, (0, r.zL)(e, { labelable: !0 }));
+        { focusableProps: y } = (0, a.kc)(e, n);
+    p && (y.tabIndex = l ? -1 : y.tabIndex);
+    let S = (0, i.dG)(y, T, (0, i.zL)(e, { labelable: !0 }));
     return {
-        isPressed: T,
-        buttonProps: (0, r.dG)(n, S, {
+        isPressed: b,
+        buttonProps: (0, i.dG)(r, S, {
             'aria-haspopup': e['aria-haspopup'],
             'aria-expanded': e['aria-expanded'],
             'aria-controls': e['aria-controls'],
             'aria-pressed': e['aria-pressed'],
             onClick: (e) => {
-                h && (h(e), console.warn('onClick is deprecated, please use onPress'));
+                m && (m(e), console.warn('onClick is deprecated, please use onPress'));
             }
         })
     };
 }
-function o(e, t, n) {
-    let { isSelected: i } = t,
-        { isPressed: a, buttonProps: o } = s(
+function l(e, n, r) {
+    let { isSelected: a } = n,
+        { isPressed: s, buttonProps: l } = o(
             {
                 ...e,
-                onPress: (0, r.tS)(t.toggle, e.onPress)
+                onPress: (0, i.tS)(n.toggle, e.onPress)
             },
-            n
+            r
         );
     return {
-        isPressed: a,
-        buttonProps: (0, r.dG)(o, { 'aria-pressed': i })
+        isPressed: s,
+        buttonProps: (0, i.dG)(l, { 'aria-pressed': a })
     };
 }

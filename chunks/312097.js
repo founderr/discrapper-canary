@@ -1,29 +1,29 @@
-n.d(t, {
+r.d(n, {
     K: function () {
-        return o;
+        return l;
     }
 });
-var r = n(200651),
-    i = n(481060),
-    a = n(982330),
-    s = n(701865);
-function o(e) {
-    let { location: t, contextKey: o, onCloseCallback: l, ...u } = e,
-        c = (0, a.Kc)(t);
-    (0, i.openModalLazy)(
+var i = r(200651),
+    a = r(481060),
+    s = r(982330),
+    o = r(701865);
+function l(e) {
+    let { location: n, contextKey: l, onCloseCallback: u, ...c } = e,
+        d = (0, s.Kc)(n);
+    (0, a.openModalLazy)(
         async () => {
-            let { default: e } = c ? await n.e('39476').then(n.bind(n, 97594)) : await n.e('87267').then(n.bind(n, 950120));
-            return (t) =>
-                (0, r.jsx)(e, {
-                    ...t,
-                    ...u
+            let { default: e } = d ? await r.e('39476').then(r.bind(r, 97594)) : await r.e('87267').then(r.bind(r, 950120));
+            return (n) =>
+                (0, i.jsx)(e, {
+                    ...n,
+                    ...c
                 });
         },
         {
-            modalKey: s.U,
-            contextKey: o,
-            onCloseCallback: l,
-            backdropStyle: i.BackdropStyles.IMMERSIVE
+            modalKey: o.U,
+            contextKey: l,
+            onCloseCallback: u,
+            backdropStyle: a.BackdropStyles.IMMERSIVE
         }
     );
 }

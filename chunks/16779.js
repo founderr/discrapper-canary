@@ -1,45 +1,45 @@
-n.d(t, {
+r.d(n, {
     Rg: function () {
-        return p;
+        return m;
     },
     Xh: function () {
-        return _;
+        return p;
     },
     ho: function () {
-        return f;
+        return h;
     }
-}),
-    n(627341);
-var r = n(200651);
-n(192379);
-var i = n(278074),
-    a = n(481060),
-    s = n(841784),
-    o = n(297781),
-    l = n(371991),
-    u = n(561308),
-    c = n(232174),
-    d = n(981631);
-function f(e) {
-    var t, n, u;
-    let { activity: f } = e,
-        _ = null !== (u = null === (t = f.timestamps) || void 0 === t ? void 0 : t.start) && void 0 !== u ? u : f.created_at;
-    if (null == _ || (0, c.Z)(f)) return null;
-    let p = (0, i.EQ)(f)
-        .when(s.Z, () => a.ActivitiesIcon)
-        .with({ type: d.IIU.LISTENING }, () => a.RecordPlayerIcon)
-        .with({ type: d.IIU.WATCHING }, () => a.TvIcon)
-        .otherwise(() => a.GameControllerIcon);
-    return (0, r.jsxs)(o.m7, {
+});
+var i = r(627341);
+var a = r(200651);
+r(192379);
+var s = r(278074),
+    o = r(481060),
+    l = r(841784),
+    u = r(297781),
+    c = r(371991),
+    d = r(561308),
+    f = r(232174),
+    _ = r(981631);
+function h(e) {
+    var n, r, i;
+    let { activity: d } = e,
+        h = null !== (i = null === (n = d.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== i ? i : d.created_at;
+    if (null == h || (0, f.Z)(d)) return null;
+    let p = (0, s.EQ)(d)
+        .when(l.Z, () => o.ActivitiesIcon)
+        .with({ type: _.IIU.LISTENING }, () => o.RecordPlayerIcon)
+        .with({ type: _.IIU.WATCHING }, () => o.TvIcon)
+        .otherwise(() => o.GameControllerIcon);
+    return (0, a.jsxs)(u.m7, {
         children: [
-            (0, r.jsx)(p, {
+            (0, a.jsx)(p, {
                 size: 'xxs',
-                color: a.tokens.colors.TEXT_POSITIVE
+                color: o.tokens.colors.TEXT_POSITIVE
             }),
-            (0, r.jsx)(l.x3, {
+            (0, a.jsx)(c.x3, {
                 entry: {
-                    start: _,
-                    end: null === (n = f.timestamps) || void 0 === n ? void 0 : n.end
+                    start: h,
+                    end: null === (r = d.timestamps) || void 0 === r ? void 0 : r.end
                 },
                 textColor: 'text-positive',
                 bold: !0
@@ -47,25 +47,25 @@ function f(e) {
         ]
     });
 }
-function _(e) {
-    let { activity: t } = e;
-    if ((0, s.Z)(t) || null == t.party) return null;
-    let n = (0, u.bT)(t.state, t.party);
-    return null == n
+function p(e) {
+    let { activity: n } = e;
+    if ((0, l.Z)(n) || null == n.party) return null;
+    let r = (0, d.bT)(n.state, n.party);
+    return null == r
         ? null
-        : (0, r.jsx)(o.ej, {
-              Icon: a.GroupIcon,
-              text: n
+        : (0, a.jsx)(u.ej, {
+              Icon: o.GroupIcon,
+              text: r
           });
 }
-function p(e) {
-    var t;
-    let { activity: n } = e,
-        i = (0, u.ap)(null === (t = n.assets) || void 0 === t ? void 0 : t.large_text);
+function m(e) {
+    var n;
+    let { activity: r } = e,
+        i = (0, d.ap)(null === (n = r.assets) || void 0 === n ? void 0 : n.large_text);
     return null == i
         ? null
-        : (0, r.jsx)(o.ej, {
-              Icon: a.TopicsIcon,
+        : (0, a.jsx)(u.ej, {
+              Icon: o.TopicsIcon,
               text: i
           });
 }

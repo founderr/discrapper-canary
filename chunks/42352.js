@@ -1,16 +1,16 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(75060),
-    i = n(991240);
-async function a() {
+var i = r(75060),
+    a = r(991240);
+async function s() {
     let e = null;
     try {
-        e = await r.Z.getThermalState();
+        e = await i.Z.getThermalState();
     } catch (e) {
-        if (e.message === i.n) return Promise.resolve(null);
+        if (e.message === a.n) return Promise.resolve(null);
         throw e;
     }
     return Promise.resolve(e);

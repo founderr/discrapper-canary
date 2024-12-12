@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(607033);
-function i(e) {
-    return Object.assign({}, (0, r.Z)(), e);
+var i = r(607033);
+function a(e) {
+    return Object.assign({}, (0, i.Z)(), e);
 }

@@ -1,25 +1,25 @@
-n.d(t, {
+r.d(n, {
     x: function () {
-        return l;
+        return u;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(385499),
-    a = n(245315),
-    s = n(368859),
-    o = n(507304);
-function l(e) {
-    let t,
-        { message: n, channel: l, user: u, compact: c, isRepliedMessage: d, hideIcon: f = !1, children: _ } = e;
-    return ((null == n ? void 0 : n.isSystemDM()) ? (t = i.Z.Types.SYSTEM_DM) : null != n && (0, s.Z)(n) ? (t = (0, a.cp)(n) ? i.Z.Types.OFFICIAL : i.Z.Types.SERVER) : (null == u ? void 0 : u.bot) ? (t = i.Z.Types.BOT) : null != l && l.isForumPost() && l.ownerId === (null == u ? void 0 : u.id) && !d && (t = i.Z.Types.ORIGINAL_POSTER), null == t)
+var i = r(200651);
+r(192379);
+var a = r(385499),
+    s = r(245315),
+    o = r(368859),
+    l = r(507304);
+function u(e) {
+    let n,
+        { message: r, channel: u, user: c, compact: d, isRepliedMessage: f, hideIcon: _ = !1, children: h } = e;
+    return ((null == r ? void 0 : r.isSystemDM()) ? (n = a.Z.Types.SYSTEM_DM) : null != r && (0, o.Z)(r) ? (n = (0, s.cp)(r) ? a.Z.Types.OFFICIAL : a.Z.Types.SERVER) : (null == c ? void 0 : c.bot) ? (n = a.Z.Types.BOT) : null != u && u.isForumPost() && u.ownerId === (null == c ? void 0 : c.id) && !f && (n = a.Z.Types.ORIGINAL_POSTER), null == n)
         ? null
-        : (0, r.jsx)(i.Z, {
-              className: c ? o.botTagCompact : o.botTagCozy,
-              type: t,
-              verified: null == u ? void 0 : u.isVerifiedBot(),
-              hideIcon: f,
+        : (0, i.jsx)(a.Z, {
+              className: d ? l.botTagCompact : l.botTagCozy,
+              type: n,
+              verified: null == c ? void 0 : c.isVerifiedBot(),
+              hideIcon: _,
               useRemSizes: !0,
-              children: _
+              children: h
           });
 }

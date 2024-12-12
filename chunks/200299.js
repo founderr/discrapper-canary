@@ -1,6 +1,6 @@
-n.d(t, {
+r.d(n, {
     B: function () {
-        return r;
+        return i;
     }
 });
-let r = 10485760;
+let i = 10485760;

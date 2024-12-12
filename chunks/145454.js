@@ -28,7 +28,7 @@ function C(e, t, n) {
 }
 class y extends i.PureComponent {
     async componentDidMount() {
-        let [e, { default: t }] = await Promise.all([n.e('93198').then(n.t.bind(n, 140523, 19)), n.e('23755').then(n.t.bind(n, 500923, 23))]);
+        let [e, { default: t }] = await Promise.all([n.e('93198').then(n.t.bind(n, 140523, 19)), Promise.resolve().then(n.t.bind(n, 500923, 23))]);
         null != this._lottieRef &&
             (this._animItem = t.loadAnimation({
                 container: this._lottieRef,

@@ -1,9 +1,9 @@
-var r = n(192379),
-    i = n(723184),
-    a = n(476400),
-    s = n.n(a),
-    o = function (e) {
-        var t = (0, i.default)({
+var i = r(192379),
+    a = r(723184),
+    s = r(476400),
+    o = r.n(s),
+    l = function (e) {
+        var n = (0, a.default)({
             default: {
                 picker: {
                     width: '20px',
@@ -15,17 +15,17 @@ var r = n(192379),
                 }
             }
         });
-        return r.createElement('div', { style: t.picker });
+        return i.createElement('div', { style: n.picker });
     };
-(o.propTypes = {
-    hsl: s().shape({
-        h: s().number,
-        s: s().number,
-        l: s().number,
-        a: s().number
+(l.propTypes = {
+    hsl: o().shape({
+        h: o().number,
+        s: o().number,
+        l: o().number,
+        a: o().number
     })
 }),
-    (o.defaultProps = {
+    (l.defaultProps = {
         hsl: {
             a: 1,
             h: 249.94,
@@ -33,4 +33,4 @@ var r = n(192379),
             s: 0.5
         }
     }),
-    (t.Z = o);
+    (n.Z = l);

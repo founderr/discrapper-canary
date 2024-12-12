@@ -1,20 +1,20 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(481060);
-async function a(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    await (0, i.openModalLazy)(async () => {
-        let { default: i } = await Promise.all([n.e('85342'), n.e('26239')]).then(n.bind(n, 193049));
-        return (n) =>
-            (0, r.jsx)(i, {
+var i = r(200651);
+r(192379);
+var a = r(481060);
+async function s(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    await (0, a.openModalLazy)(async () => {
+        let { default: a } = await Promise.all([r.e('85342'), r.e('26239')]).then(r.bind(r, 193049));
+        return (r) =>
+            (0, i.jsx)(a, {
                 source: e,
-                oneClickFlow: t,
-                ...n
+                oneClickFlow: n,
+                ...r
             });
     });
 }

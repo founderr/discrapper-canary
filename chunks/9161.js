@@ -1,12 +1,12 @@
-n.d(t, {
+r.d(n, {
     O: function () {
-        return i;
+        return a;
     },
     x: function () {
-        return a;
+        return s;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
         kind: 'user',
         id: '2024-12_user_profile_modal_recent_activity',
         label: 'User Profile Modal Recent Activity',
@@ -19,11 +19,11 @@ let r = (0, n(818083).B)({
             }
         ]
     }),
-    i = (e) => {
-        let { location: t, autoTrackExposure: n = !0 } = e;
-        return r.useExperiment({ location: t }, { autoTrackExposure: n });
-    },
     a = (e) => {
-        let { location: t, autoTrackExposure: n = !0 } = e;
-        return r.getCurrentConfig({ location: t }, { autoTrackExposure: n });
+        let { location: n, autoTrackExposure: r = !0 } = e;
+        return i.useExperiment({ location: n }, { autoTrackExposure: r });
+    },
+    s = (e) => {
+        let { location: n, autoTrackExposure: r = !0 } = e;
+        return i.getCurrentConfig({ location: n }, { autoTrackExposure: r });
     };

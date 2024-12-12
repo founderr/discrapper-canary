@@ -1,28 +1,28 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     buttonLabel: `R\u{101}d\u{12B}t ieteikumus`,
-    countAnnouncement: (e, t) =>
-        `Pieejamo opciju skaits: ${t.plural(e.optionCount, {
-            one: () => `${t.number(e.optionCount)} opcija`,
-            other: () => `${t.number(e.optionCount)} opcijas`
+    countAnnouncement: (e, n) =>
+        `Pieejamo opciju skaits: ${n.plural(e.optionCount, {
+            one: () => `${n.number(e.optionCount)} opcija`,
+            other: () => `${n.number(e.optionCount)} opcijas`
         })}.`,
-    focusAnnouncement: (e, t) =>
-        `${t.select(
+    focusAnnouncement: (e, n) =>
+        `${n.select(
             {
                 true: () =>
-                    `Ievad\u{12B}ta grupa ${e.groupTitle}, ar ${t.plural(e.groupCount, {
-                        one: () => `${t.number(e.groupCount)} opciju`,
-                        other: () => `${t.number(e.groupCount)} opcij\u{101}m`
+                    `Ievad\u{12B}ta grupa ${e.groupTitle}, ar ${n.plural(e.groupCount, {
+                        one: () => `${n.number(e.groupCount)} opciju`,
+                        other: () => `${n.number(e.groupCount)} opcij\u{101}m`
                     })}. `,
                 other: ''
             },
             e.isGroupChange
-        )}${e.optionText}${t.select(
+        )}${e.optionText}${n.select(
             {
                 true: `, atlas\u{12B}ta`,
                 other: ''

@@ -1,45 +1,45 @@
-n.d(t, {
+r.d(n, {
     f: function () {
-        return l;
+        return c;
     }
-}),
-    n(47120);
-var r = n(456007),
-    i = n(895924),
-    a = n(351133),
-    s = n(689079),
-    o = n(388032);
-function l(e) {
-    let { option: t, content: n, guildId: l, channelId: u, allowEmptyValues: c, commandOrigin: d = i.bB.CHAT } = e,
-        f = null != n ? (0, r.KF)({ content: n }, 'content').trim() : '',
-        _ = t.required,
-        p = '' === f;
-    if (!(null != n))
-        return _
+});
+var i = r(47120);
+var a = r(456007),
+    s = r(895924),
+    o = r(351133),
+    l = r(689079),
+    u = r(388032);
+function c(e) {
+    let { option: n, content: r, guildId: i, channelId: c, allowEmptyValues: d, commandOrigin: f = s.bB.CHAT } = e,
+        _ = null != r ? (0, a.KF)({ content: r }, 'content').trim() : '',
+        h = n.required,
+        p = '' === _;
+    if (!(null != r))
+        return h
             ? {
                   success: !1,
-                  error: o.intl.string(o.t.JZJQLy)
+                  error: u.intl.string(u.t.JZJQLy)
               }
             : { success: !0 };
     if (p)
-        return c
+        return d
             ? { success: !0 }
-            : _
+            : h
               ? {
                     success: !1,
-                    error: o.intl.string(o.t.JZJQLy)
+                    error: u.intl.string(u.t.JZJQLy)
                 }
               : {
                     success: !1,
-                    error: (0, s.al)(t)
+                    error: (0, l.al)(n)
                 };
-    let h =
-            n.length > 1
+    let m =
+            r.length > 1
                 ? {
                       type: 'text',
-                      text: f
+                      text: _
                   }
-                : n[0],
-        m = a.Z[t.type](h, t, u, l, d);
-    return !m.success && null == m.error && (m.error = (0, s.al)(t)), m;
+                : r[0],
+        g = o.Z[n.type](m, n, c, i, f);
+    return !g.success && null == g.error && (g.error = (0, l.al)(n)), g;
 }

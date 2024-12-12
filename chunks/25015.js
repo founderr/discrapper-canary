@@ -1,50 +1,50 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return d;
+        return f;
     }
 });
-var r = n(192379),
-    i = n(905405),
-    a = n(626135),
-    s = n(937889),
-    o = n(761910),
-    l = n(981631),
-    u = n(388032),
-    c = n(617768);
-function d(e, t) {
-    let { hideSimpleEmbedContent: n, formatInline: d = !1, noStyleAndInteraction: f = !1, isInteracting: _ = !1, allowHeading: p = !1, allowList: h = !1, allowLinks: m = !1, allowDevLinks: g = !1, allowSubtext: E = !1, previewLinkTarget: v = !1, viewingChannelId: I } = t,
-        T = (0, i.p)();
-    return r.useMemo(
+var i = r(192379),
+    a = r(905405),
+    s = r(626135),
+    o = r(937889),
+    l = r(761910),
+    u = r(981631),
+    c = r(388032),
+    d = r(617768);
+function f(e, n) {
+    let { hideSimpleEmbedContent: r, formatInline: f = !1, noStyleAndInteraction: _ = !1, isInteracting: h = !1, allowHeading: p = !1, allowList: m = !1, allowLinks: g = !1, allowDevLinks: E = !1, allowSubtext: v = !1, previewLinkTarget: I = !1, viewingChannelId: T } = n,
+        b = (0, a.p)();
+    return i.useMemo(
         () =>
             null != e.customRenderedContent
                 ? e.customRenderedContent
                 : e.isUnsupported
                   ? {
-                        content: u.intl.string(u.t.sWi5ER),
+                        content: c.intl.string(c.t.sWi5ER),
                         hasSpoilerEmbeds: !1
                     }
-                  : (e.isCommandType() && 0 === e.content.length) || e.hasFlag(l.iLy.LOADING)
-                    ? (0, o.Z)(e)
-                    : e.type === l.uaV.CHANGELOG
-                      ? (0, s.n0)(e, c, {
-                            track: (e, t) => {
-                                a.default.track(e, t);
+                  : (e.isCommandType() && 0 === e.content.length) || e.hasFlag(u.iLy.LOADING)
+                    ? (0, l.Z)(e)
+                    : e.type === u.uaV.CHANGELOG
+                      ? (0, o.n0)(e, d, {
+                            track: (e, n) => {
+                                s.default.track(e, n);
                             }
                         })
-                      : (0, s.ZP)(e, {
-                            hideSimpleEmbedContent: n,
-                            formatInline: d,
-                            noStyleAndInteraction: f,
-                            isInteracting: _,
+                      : (0, o.ZP)(e, {
+                            hideSimpleEmbedContent: r,
+                            formatInline: f,
+                            noStyleAndInteraction: _,
+                            isInteracting: h,
                             allowHeading: p,
-                            allowList: h,
-                            allowLinks: m,
-                            allowSubtext: E,
-                            allowDevLinks: g,
-                            previewLinkTarget: v,
-                            shouldFilterKeywords: T,
-                            viewingChannelId: I
+                            allowList: m,
+                            allowLinks: g,
+                            allowSubtext: v,
+                            allowDevLinks: E,
+                            previewLinkTarget: I,
+                            shouldFilterKeywords: b,
+                            viewingChannelId: T
                         }),
-        [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, n, d, f, _, p, h, m, v, E, T]
+        [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, r, f, _, h, p, m, g, I, v, b]
     );
 }

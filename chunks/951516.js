@@ -1,8 +1,8 @@
-function r(e, t) {
-    if (t.length < e) throw TypeError(e + ' argument' + (e > 1 ? 's' : '') + ' required, but only ' + t.length + ' present');
+function i(e, n) {
+    if (n.length < e) throw TypeError(e + ' argument' + (e > 1 ? 's' : '') + ' required, but only ' + n.length + ' present');
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

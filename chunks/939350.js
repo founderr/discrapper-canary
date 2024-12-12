@@ -1,14 +1,14 @@
-n.d(t, {
+r.d(n, {
     _: function () {
-        return i;
+        return a;
     }
 });
-var r = n(450793);
-let i = {
-    default: r.colorDefault,
-    brand: r.colorBrand,
-    danger: r.colorDanger,
-    premium: r.colorPremium,
-    'premium-gradient': r.colorPremiumGradient,
-    success: r.colorSuccess
+var i = r(450793);
+let a = {
+    default: i.colorDefault,
+    brand: i.colorBrand,
+    danger: i.colorDanger,
+    premium: i.colorPremium,
+    'premium-gradient': i.colorPremiumGradient,
+    success: i.colorSuccess
 };

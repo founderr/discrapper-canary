@@ -1,19 +1,19 @@
-n.d(t, {
+r.d(n, {
     U: function () {
-        return a;
+        return s;
     }
 });
-var r = {},
-    i = function (e, t, n, r) {
-        if ('undefined' == typeof document && !r) return null;
-        var i = r ? new r() : document.createElement('canvas');
-        (i.width = 2 * n), (i.height = 2 * n);
-        var a = i.getContext('2d');
-        return a ? ((a.fillStyle = e), a.fillRect(0, 0, i.width, i.height), (a.fillStyle = t), a.fillRect(0, 0, n, n), a.translate(n, n), a.fillRect(0, 0, n, n), i.toDataURL()) : null;
+var i = {},
+    a = function (e, n, r, i) {
+        if ('undefined' == typeof document && !i) return null;
+        var a = i ? new i() : document.createElement('canvas');
+        (a.width = 2 * r), (a.height = 2 * r);
+        var s = a.getContext('2d');
+        return s ? ((s.fillStyle = e), s.fillRect(0, 0, a.width, a.height), (s.fillStyle = n), s.fillRect(0, 0, r, r), s.translate(r, r), s.fillRect(0, 0, r, r), a.toDataURL()) : null;
     },
-    a = function (e, t, n, a) {
-        var s = e + '-' + t + '-' + n + (a ? '-server' : '');
-        if (r[s]) return r[s];
-        var o = i(e, t, n, a);
-        return (r[s] = o), o;
+    s = function (e, n, r, s) {
+        var o = e + '-' + n + '-' + r + (s ? '-server' : '');
+        if (i[o]) return i[o];
+        var l = a(e, n, r, s);
+        return (i[o] = l), l;
     };

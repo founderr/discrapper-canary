@@ -1,11 +1,11 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(871465);
-let i = {
-    [r.YC.CLASSIC]: {
+var i = r(871465);
+let a = {
+    [i.YC.CLASSIC]: {
         discodo: 'discodo',
         message1: 'message1',
         deafen: 'deafen',
@@ -29,13 +29,13 @@ let i = {
         poggermode_achievement_unlock: 'poggermode_achievement_unlock',
         stage_waiting: 'stage_waiting'
     },
-    [r.YC.RETRO]: { message1: 'bit_message1' },
-    [r.YC.BUBBLE]: { message1: 'bop_message1' },
-    [r.YC.DUCKY]: { message1: 'ducky_message1' },
-    [r.YC.LOFI]: { message1: 'lofi_message1' },
-    [r.YC.ASMR]: { message1: 'asmr_message1' },
-    [r.YC.DISCODO]: { message1: 'discodo' },
-    [r.YC.HALLOWEEN]: {
+    [i.YC.RETRO]: { message1: 'bit_message1' },
+    [i.YC.BUBBLE]: { message1: 'bop_message1' },
+    [i.YC.DUCKY]: { message1: 'ducky_message1' },
+    [i.YC.LOFI]: { message1: 'lofi_message1' },
+    [i.YC.ASMR]: { message1: 'asmr_message1' },
+    [i.YC.DISCODO]: { message1: 'discodo' },
+    [i.YC.HALLOWEEN]: {
         call_calling: 'halloween_call_calling',
         call_ringing: 'halloween_call_ringing',
         message1: 'halloween_message1',
@@ -48,6 +48,6 @@ let i = {
         user_leave: 'halloween_user_leave'
     }
 };
-function a(e) {
-    return i[e];
+function s(e) {
+    return a[e];
 }

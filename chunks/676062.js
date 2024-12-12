@@ -1,67 +1,67 @@
-n.d(t, {
+r.d(n, {
     f: function () {
-        return o;
+        return _;
     }
 });
-var r = n(192379),
-    i = n(181034),
-    a = n(668193);
-function s(e, t) {
-    (null == t || t > e.length) && (t = e.length);
-    for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
-    return r;
+var i = r(192379),
+    a = r(181034),
+    s = r(668193);
+function o(e, n) {
+    return f(e) || d(e, n) || u(e, n) || l();
 }
-function o(e) {
-    var t,
-        n,
-        o = (0, i.N)().getMonitor();
-    var l =
-            ((n = 2),
-            (function (e) {
-                if (Array.isArray(e)) return e;
-            })((t = (0, a.r)(o, e))) ||
-                (function (e, t) {
-                    var n,
-                        r,
-                        i = null == e ? null : ('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator'];
-                    if (null != i) {
-                        var a = [],
-                            s = !0,
-                            o = !1;
-                        try {
-                            for (i = i.call(e); !(s = (n = i.next()).done) && (a.push(n.value), !t || a.length !== t); s = !0);
-                        } catch (e) {
-                            (o = !0), (r = e);
-                        } finally {
-                            try {
-                                !s && null != i.return && i.return();
-                            } finally {
-                                if (o) throw r;
-                            }
-                        }
-                        return a;
-                    }
-                })(t, 2) ||
-                (function (e, t) {
-                    if (e) {
-                        if ('string' == typeof e) return s(e, t);
-                        var n = Object.prototype.toString.call(e).slice(8, -1);
-                        if (('Object' === n && e.constructor && (n = e.constructor.name), 'Map' === n || 'Set' === n)) return Array.from(e);
-                        if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return s(e, t);
-                    }
-                })(t, n) ||
-                (function () {
-                    throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
-                })()),
-        u = l[0],
-        c = l[1];
+function l() {
+    throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
+}
+function u(e, n) {
+    if (e) {
+        if ('string' == typeof e) return c(e, n);
+        var r = Object.prototype.toString.call(e).slice(8, -1);
+        if (('Object' === r && e.constructor && (r = e.constructor.name), 'Map' === r || 'Set' === r)) return Array.from(e);
+        if ('Arguments' === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)) return c(e, n);
+    }
+}
+function c(e, n) {
+    (null == n || n > e.length) && (n = e.length);
+    for (var r = 0, i = Array(n); r < n; r++) i[r] = e[r];
+    return i;
+}
+function d(e, n) {
+    var r,
+        i,
+        a = null == e ? null : ('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator'];
+    if (null != a) {
+        var s = [],
+            o = !0,
+            l = !1;
+        try {
+            for (a = a.call(e); !(o = (r = a.next()).done) && (s.push(r.value), !n || s.length !== n); o = !0);
+        } catch (e) {
+            (l = !0), (i = e);
+        } finally {
+            try {
+                !o && null != a.return && a.return();
+            } finally {
+                if (l) throw i;
+            }
+        }
+        return s;
+    }
+}
+function f(e) {
+    if (Array.isArray(e)) return e;
+}
+function _(e) {
+    var n = (0, a.N)().getMonitor(),
+        r = o((0, s.r)(n, e), 2),
+        l = r[0],
+        u = r[1];
     return (
-        (0, r.useEffect)(function () {
-            return o.subscribeToOffsetChange(c);
+        (0, i.useEffect)(function () {
+            return n.subscribeToOffsetChange(u);
         }),
-        (0, r.useEffect)(function () {
-            return o.subscribeToStateChange(c);
+        (0, i.useEffect)(function () {
+            return n.subscribeToStateChange(u);
         }),
-        u
+        l
     );
 }

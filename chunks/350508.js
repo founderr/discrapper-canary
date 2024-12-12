@@ -1,4 +1,4 @@
-function r(e) {
+function i(e) {
     if ('object' != typeof e || null === e || !e.hasOwnProperty('oneofKind')) return !1;
     switch (typeof e.oneofKind) {
         case 'string':
@@ -10,8 +10,8 @@ function r(e) {
             return !1;
     }
 }
-n.d(t, {
+r.d(n, {
     Li: function () {
-        return r;
+        return i;
     }
 });

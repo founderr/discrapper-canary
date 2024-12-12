@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     calendar: `Kalend\xe1\u{159}`,
     day: 'den',
     dayPeriod: `\u{10D}\xe1st dne`,

@@ -1,35 +1,35 @@
-var r, i, a, s, o, l, u, c;
-n.d(t, {
+var i, a, s, o;
+r.d(n, {
     G: function () {
-        return f;
+        return u;
     },
     Kd: function () {
-        return i;
+        return a;
     },
     YN: function () {
-        return r;
+        return i;
     },
     k4: function () {
-        return d;
+        return l;
     },
     kG: function () {
-        return s;
+        return o;
     },
     xP: function () {
-        return a;
+        return s;
     }
 }),
-    ((o = r || (r = {})).GLOBAL_FEED = 'global feed'),
-    (o.GAME_PROFILE_FEED = 'game profile feed'),
-    ((l = i || (i = {}))[(l.GUILD_MEMBER_LIST = 1)] = 'GUILD_MEMBER_LIST'),
-    ((u = a || (a = {}))[(u.CARD_POPOUT_OPEN = 2)] = 'CARD_POPOUT_OPEN'),
-    (u[(u.REACTION_EMOJI_REACT_SENT = 3)] = 'REACTION_EMOJI_REACT_SENT'),
-    (u[(u.DM_REACTION_MESSAGE_SENT = 4)] = 'DM_REACTION_MESSAGE_SENT'),
-    (u[(u.CHANNEL_REACTION_MESSAGE_SENT = 5)] = 'CHANNEL_REACTION_MESSAGE_SENT'),
-    (u[(u.VOICE_CHANNEL_JOINED = 6)] = 'VOICE_CHANNEL_JOINED'),
-    (u[(u.VOICE_CHANNEL_PREVIEWED = 7)] = 'VOICE_CHANNEL_PREVIEWED'),
-    (u[(u.OPENED_GAME_PROFILE = 8)] = 'OPENED_GAME_PROFILE'),
-    (u[(u.COPIED_LEADERBOARD_ROW = 9)] = 'COPIED_LEADERBOARD_ROW');
-let d = 10000,
-    f = 7;
-((c = s || (s = {}))[(c.SPOTIFY = 1)] = 'SPOTIFY'), (c[(c.CRUNCHYROLL = 2)] = 'CRUNCHYROLL'), (c[(c.XBOX = 3)] = 'XBOX'), (c[(c.PLAYSTATION = 4)] = 'PLAYSTATION');
+    !(function (e) {
+        (e.GLOBAL_FEED = 'global feed'), (e.GAME_PROFILE_FEED = 'game profile feed');
+    })(i || (i = {})),
+    !(function (e) {
+        e[(e.GUILD_MEMBER_LIST = 1)] = 'GUILD_MEMBER_LIST';
+    })(a || (a = {})),
+    !(function (e) {
+        (e[(e.CARD_POPOUT_OPEN = 2)] = 'CARD_POPOUT_OPEN'), (e[(e.REACTION_EMOJI_REACT_SENT = 3)] = 'REACTION_EMOJI_REACT_SENT'), (e[(e.DM_REACTION_MESSAGE_SENT = 4)] = 'DM_REACTION_MESSAGE_SENT'), (e[(e.CHANNEL_REACTION_MESSAGE_SENT = 5)] = 'CHANNEL_REACTION_MESSAGE_SENT'), (e[(e.VOICE_CHANNEL_JOINED = 6)] = 'VOICE_CHANNEL_JOINED'), (e[(e.VOICE_CHANNEL_PREVIEWED = 7)] = 'VOICE_CHANNEL_PREVIEWED'), (e[(e.OPENED_GAME_PROFILE = 8)] = 'OPENED_GAME_PROFILE'), (e[(e.COPIED_LEADERBOARD_ROW = 9)] = 'COPIED_LEADERBOARD_ROW');
+    })(s || (s = {}));
+let l = 10000,
+    u = 7;
+!(function (e) {
+    (e[(e.SPOTIFY = 1)] = 'SPOTIFY'), (e[(e.CRUNCHYROLL = 2)] = 'CRUNCHYROLL'), (e[(e.XBOX = 3)] = 'XBOX'), (e[(e.PLAYSTATION = 4)] = 'PLAYSTATION');
+})(o || (o = {}));

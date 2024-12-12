@@ -1,21 +1,21 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(175922);
-function i(e) {
-    var t = (0, r.Z)(e),
-        n = e.offsetWidth,
-        i = e.offsetHeight;
+var i = r(175922);
+function a(e) {
+    var n = (0, i.Z)(e),
+        r = e.offsetWidth,
+        a = e.offsetHeight;
     return (
-        1 >= Math.abs(t.width - n) && (n = t.width),
-        1 >= Math.abs(t.height - i) && (i = t.height),
+        1 >= Math.abs(n.width - r) && (r = n.width),
+        1 >= Math.abs(n.height - a) && (a = n.height),
         {
             x: e.offsetLeft,
             y: e.offsetTop,
-            width: n,
-            height: i
+            width: r,
+            height: a
         }
     );
 }

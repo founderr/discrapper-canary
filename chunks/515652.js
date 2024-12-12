@@ -1,26 +1,26 @@
-n.d(t, {
+r.d(n, {
     s: function () {
-        return o;
+        return l;
     }
 });
-var r,
-    i = n(778882),
-    a = n(401010);
-function s(e, t, n) {
+var i,
+    a = r(778882),
+    s = r(401010);
+function o(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-var o =
-    (s((r = {}), i.FILE, {
+var l =
+    (o((i = {}), a.FILE, {
         exposeProperties: {
             files: function (e) {
                 return Array.prototype.slice.call(e.files);
@@ -31,28 +31,28 @@ var o =
         },
         matchesTypes: ['Files']
     }),
-    s(r, i.HTML, {
+    o(i, a.HTML, {
         exposeProperties: {
-            html: function (e, t) {
-                return (0, a.R)(e, t, '');
+            html: function (e, n) {
+                return (0, s.R)(e, n, '');
             }
         },
         matchesTypes: ['Html', 'text/html']
     }),
-    s(r, i.URL, {
+    o(i, a.URL, {
         exposeProperties: {
-            urls: function (e, t) {
-                return (0, a.R)(e, t, '').split('\n');
+            urls: function (e, n) {
+                return (0, s.R)(e, n, '').split('\n');
             }
         },
         matchesTypes: ['Url', 'text/uri-list']
     }),
-    s(r, i.TEXT, {
+    o(i, a.TEXT, {
         exposeProperties: {
-            text: function (e, t) {
-                return (0, a.R)(e, t, '');
+            text: function (e, n) {
+                return (0, s.R)(e, n, '');
             }
         },
         matchesTypes: ['Text', 'text/plain']
     }),
-    r);
+    i);

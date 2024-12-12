@@ -1,33 +1,33 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(153867),
-    s = n(468026),
-    o = n(740492),
-    l = n(388032);
-function u(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => {},
-        n = () => {
-            a.ZP.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: !0 }), e();
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(153867),
+    o = r(468026),
+    l = r(740492),
+    u = r(388032);
+function c(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => {},
+        r = () => {
+            s.ZP.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: !0 }), e();
         };
-    o.ZP.disableEmbeddedActivityPopOutAlert
+    l.ZP.disableEmbeddedActivityPopOutAlert
         ? e()
-        : (0, i.openModal)((i) =>
-              (0, r.jsx)(s.default, {
-                  confirmText: l.intl.string(l.t.efSOLC),
-                  secondaryConfirmText: l.intl.string(l.t['JdIQ/f']),
-                  title: l.intl.string(l.t.pVr7Cg),
-                  cancelText: l.intl.string(l.t.EwoEOT),
+        : (0, a.openModal)((a) =>
+              (0, i.jsx)(o.default, {
+                  confirmText: u.intl.string(u.t.efSOLC),
+                  secondaryConfirmText: u.intl.string(u.t['JdIQ/f']),
+                  title: u.intl.string(u.t.pVr7Cg),
+                  cancelText: u.intl.string(u.t.EwoEOT),
                   onConfirm: e,
-                  onConfirmSecondary: n,
-                  onCancel: t,
-                  body: l.intl.string(l.t.Tfj539),
-                  ...i
+                  onConfirmSecondary: r,
+                  onCancel: n,
+                  body: u.intl.string(u.t.Tfj539),
+                  ...a
               })
           );
 }

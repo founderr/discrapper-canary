@@ -1,25 +1,25 @@
-function r(e, t, n) {
+r.d(n, {
+    t: function () {
+        return l;
+    }
+});
+var i = r(47120);
+function a(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-n.d(t, {
-    t: function () {
-        return s;
-    }
-}),
-    n(47120);
-let i = Symbol.iterator;
-class a {
-    [i]() {
+let s = Symbol.iterator;
+class o {
+    [s]() {
         return this;
     }
     next() {
@@ -34,10 +34,10 @@ class a {
         };
     }
     constructor(e) {
-        r(this, 'index', void 0), r(this, 'items', void 0), (this.index = 0), (this.items = e);
+        a(this, 'index', void 0), a(this, 'items', void 0), (this.index = 0), (this.items = e);
     }
 }
-function s() {
-    for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-    return new a(t);
+function l() {
+    for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
+    return new o(n);
 }

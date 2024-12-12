@@ -143,8 +143,8 @@ let ep = l.memo((e) => {
         { hqStreamingState: e1 } = (0, R.k)(s.q.STREAM_HIGH_QUALITY),
         e2 = (0, L.Z)(),
         e3 = e0 && e$ && null != e2,
-        e7 = (0, P.o)(C, eW),
-        e9 = (0, j.lL)('CallTile', !0, eW, e7),
+        e9 = (0, P.o)(C, eW),
+        e7 = (0, j.lL)('CallTile', !0, eW, e9),
         e4 = (0, o.e7)([F.Z], () => (C.type === eo.fO.USER && null != eB ? F.Z.getEffectForUserId(eB) : null)),
         e8 = (0, o.e7)([q.Z], () => q.Z.getVoicePlatformForChannel(eI.id, null != eB ? eB : es.lds)),
         { enableHangStatus: e6 } = Z.n.useExperiment({
@@ -229,7 +229,7 @@ let ep = l.memo((e) => {
                     width: e_,
                     focused: eT,
                     idle: th,
-                    premiumIndicator: e3 || e9.enabled
+                    premiumIndicator: e3 || e7.enabled
                 })),
                 (tI = em.intl.formatToPlainString(em.t.gHPz3d, { streamerName: C.user.username }));
             break;

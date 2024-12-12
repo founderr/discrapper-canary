@@ -1,124 +1,124 @@
-(e.exports = s), (s.default = s), (s.stable = u), (s.stableStringify = u);
-var t = '[...]',
-    n = '[Circular]',
-    r = [],
-    i = [];
-function a() {
+(e.exports = o), (o.default = o), (o.stable = d), (o.stableStringify = d);
+var n = '[...]',
+    r = '[Circular]',
+    i = [],
+    a = [];
+function s() {
     return {
         depthLimit: Number.MAX_SAFE_INTEGER,
         edgesLimit: Number.MAX_SAFE_INTEGER
     };
 }
-function s(e, s, l, u) {
-    void 0 === u && (u = a()),
-        (function e(r, i, a, s, l, u, c) {
-            if (((u += 1), 'object' == typeof r && null !== r)) {
-                for (d = 0; d < s.length; d++)
-                    if (s[d] === r) {
-                        o(n, r, i, l);
-                        return;
-                    }
-                if ((void 0 !== c.depthLimit && u > c.depthLimit) || (void 0 !== c.edgesLimit && a + 1 > c.edgesLimit)) {
-                    o(t, r, i, l);
-                    return;
-                }
-                if ((s.push(r), Array.isArray(r))) for (d = 0; d < r.length; d++) e(r[d], d, d, s, r, u, c);
-                else {
-                    var d,
-                        f = Object.keys(r);
-                    for (d = 0; d < f.length; d++) {
-                        var _ = f[d];
-                        e(r[_], _, d, s, r, u, c);
-                    }
-                }
-                s.pop();
+function o(e, n, r, o) {
+    void 0 === o && (o = s()), u(e, '', 0, [], void 0, 0, o);
+    try {
+        l = 0 === a.length ? JSON.stringify(e, n, r) : JSON.stringify(e, _(n), r);
+    } catch (e) {
+        return JSON.stringify('[unable to serialize, circular reference is too complex to analyze]');
+    } finally {
+        for (; 0 !== i.length; ) {
+            var l,
+                c = i.pop();
+            4 === c.length ? Object.defineProperty(c[0], c[1], c[3]) : (c[0][c[1]] = c[2]);
+        }
+    }
+    return l;
+}
+function l(e, n, r, s) {
+    var o = Object.getOwnPropertyDescriptor(s, r);
+    void 0 !== o.get ? (o.configurable ? (Object.defineProperty(s, r, { value: e }), i.push([s, r, n, o])) : a.push([n, r, e])) : ((s[r] = e), i.push([s, r, n]));
+}
+function u(e, i, a, s, o, c, d) {
+    if (((c += 1), 'object' == typeof e && null !== e)) {
+        for (f = 0; f < s.length; f++)
+            if (s[f] === e) {
+                l(r, e, i, o);
+                return;
             }
-        })(e, '', 0, [], void 0, 0, u);
+        if ((void 0 !== d.depthLimit && c > d.depthLimit) || (void 0 !== d.edgesLimit && a + 1 > d.edgesLimit)) {
+            l(n, e, i, o);
+            return;
+        }
+        if ((s.push(e), Array.isArray(e))) for (f = 0; f < e.length; f++) u(e[f], f, f, s, e, c, d);
+        else {
+            var f,
+                _ = Object.keys(e);
+            for (f = 0; f < _.length; f++) {
+                var h = _[f];
+                u(e[h], h, f, s, e, c, d);
+            }
+        }
+        s.pop();
+    }
+}
+function c(e, n) {
+    return e < n ? -1 : e > n ? 1 : 0;
+}
+function d(e, n, r, o) {
+    void 0 === o && (o = s());
+    var l,
+        u = f(e, '', 0, [], void 0, 0, o) || e;
     try {
-        d = 0 === i.length ? JSON.stringify(e, s, l) : JSON.stringify(e, c(s), l);
+        l = 0 === a.length ? JSON.stringify(u, n, r) : JSON.stringify(u, _(n), r);
     } catch (e) {
         return JSON.stringify('[unable to serialize, circular reference is too complex to analyze]');
     } finally {
-        for (; 0 !== r.length; ) {
-            var d,
-                f = r.pop();
-            4 === f.length ? Object.defineProperty(f[0], f[1], f[3]) : (f[0][f[1]] = f[2]);
+        for (; 0 !== i.length; ) {
+            var c = i.pop();
+            4 === c.length ? Object.defineProperty(c[0], c[1], c[3]) : (c[0][c[1]] = c[2]);
         }
     }
-    return d;
+    return l;
 }
-function o(e, t, n, a) {
-    var s = Object.getOwnPropertyDescriptor(a, n);
-    void 0 !== s.get ? (s.configurable ? (Object.defineProperty(a, n, { value: e }), r.push([a, n, t, s])) : i.push([t, n, e])) : ((a[n] = e), r.push([a, n, t]));
-}
-function l(e, t) {
-    return e < t ? -1 : e > t ? 1 : 0;
-}
-function u(e, s, u, d) {
-    void 0 === d && (d = a());
-    var f,
-        _ =
-            (function e(i, a, s, u, c, d, f) {
-                if (((d += 1), 'object' == typeof i && null !== i)) {
-                    for (_ = 0; _ < u.length; _++)
-                        if (u[_] === i) {
-                            o(n, i, a, c);
-                            return;
-                        }
-                    try {
-                        if ('function' == typeof i.toJSON) return;
-                    } catch (e) {
-                        return;
-                    }
-                    if ((void 0 !== f.depthLimit && d > f.depthLimit) || (void 0 !== f.edgesLimit && s + 1 > f.edgesLimit)) {
-                        o(t, i, a, c);
-                        return;
-                    }
-                    if ((u.push(i), Array.isArray(i))) for (_ = 0; _ < i.length; _++) e(i[_], _, _, u, i, d, f);
-                    else {
-                        var _,
-                            p = {},
-                            h = Object.keys(i).sort(l);
-                        for (_ = 0; _ < h.length; _++) {
-                            var m = h[_];
-                            e(i[m], m, _, u, i, d, f), (p[m] = i[m]);
-                        }
-                        if (void 0 === c) return p;
-                        r.push([c, a, i]), (c[a] = p);
-                    }
-                    u.pop();
-                }
-            })(e, '', 0, [], void 0, 0, d) || e;
-    try {
-        f = 0 === i.length ? JSON.stringify(_, s, u) : JSON.stringify(_, c(s), u);
-    } catch (e) {
-        return JSON.stringify('[unable to serialize, circular reference is too complex to analyze]');
-    } finally {
-        for (; 0 !== r.length; ) {
-            var p = r.pop();
-            4 === p.length ? Object.defineProperty(p[0], p[1], p[3]) : (p[0][p[1]] = p[2]);
+function f(e, a, s, o, u, d, _) {
+    if (((d += 1), 'object' == typeof e && null !== e)) {
+        for (h = 0; h < o.length; h++)
+            if (o[h] === e) {
+                l(r, e, a, u);
+                return;
+            }
+        try {
+            if ('function' == typeof e.toJSON) return;
+        } catch (e) {
+            return;
         }
+        if ((void 0 !== _.depthLimit && d > _.depthLimit) || (void 0 !== _.edgesLimit && s + 1 > _.edgesLimit)) {
+            l(n, e, a, u);
+            return;
+        }
+        if ((o.push(e), Array.isArray(e))) for (h = 0; h < e.length; h++) f(e[h], h, h, o, e, d, _);
+        else {
+            var h,
+                p = {},
+                m = Object.keys(e).sort(c);
+            for (h = 0; h < m.length; h++) {
+                var g = m[h];
+                f(e[g], g, h, o, e, d, _), (p[g] = e[g]);
+            }
+            if (void 0 === u) return p;
+            i.push([u, a, e]), (u[a] = p);
+        }
+        o.pop();
     }
-    return f;
 }
-function c(e) {
+function _(e) {
     return (
         (e =
             void 0 !== e
                 ? e
-                : function (e, t) {
-                      return t;
+                : function (e, n) {
+                      return n;
                   }),
-        function (t, n) {
-            if (i.length > 0)
-                for (var r = 0; r < i.length; r++) {
-                    var a = i[r];
-                    if (a[1] === t && a[0] === n) {
-                        (n = a[2]), i.splice(r, 1);
+        function (n, r) {
+            if (a.length > 0)
+                for (var i = 0; i < a.length; i++) {
+                    var s = a[i];
+                    if (s[1] === n && s[0] === r) {
+                        (r = s[2]), a.splice(i, 1);
                         break;
                     }
                 }
-            return e.call(this, t, n);
+            return e.call(this, n, r);
         }
     );
 }

@@ -1,11 +1,11 @@
-function r(e, t) {
-    let n = 0,
-        r = Math.min(e.length, t.length);
-    for (let i = 0; i < r; i++) n |= e.charCodeAt(i) ^ t.charCodeAt(i);
-    return 0 === n && e.length === t.length;
+function i(e, n) {
+    let r = 0,
+        i = Math.min(e.length, n.length);
+    for (let a = 0; a < i; a++) r |= e.charCodeAt(a) ^ n.charCodeAt(a);
+    return 0 === r && e.length === n.length;
 }
-n.d(t, {
+r.d(n, {
     y: function () {
-        return r;
+        return i;
     }
 });

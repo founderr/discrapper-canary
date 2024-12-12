@@ -1,80 +1,80 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return c;
+        return f;
     }
-}),
-    n(653041);
-var r = n(200651);
-n(192379);
-var i = n(243814),
-    a = n(993365),
-    s = n(481060),
-    o = n(981631),
-    l = n(388032),
-    u = n(908453);
-function c(e) {
-    let t,
-        { accountScopes: n } = e,
-        a = [];
-    return (n.includes(i.x.SDK_SOCIAL_LAYER) &&
-        ((t = l.intl.string(l.t.ex4sMT)),
-        a.push(
+});
+var i = r(653041);
+var a = r(200651);
+r(192379);
+var s = r(243814),
+    o = r(993365),
+    l = r(481060),
+    u = r(981631),
+    c = r(388032),
+    d = r(908453);
+function f(e) {
+    let n,
+        { accountScopes: r } = e,
+        i = [];
+    return (r.includes(s.x.SDK_SOCIAL_LAYER) &&
+        ((n = c.intl.string(c.t.ex4sMT)),
+        i.push(
             {
-                icon: s.FriendsIcon,
-                text: l.intl.formatToPlainString(l.t.WNKzo6, { maxFriends: o.L4X })
+                icon: l.FriendsIcon,
+                text: c.intl.formatToPlainString(c.t.WNKzo6, { maxFriends: u.L4X })
             },
             {
-                icon: s.ChatSmileIcon,
-                text: l.intl.string(l.t.j7peBg)
+                icon: l.ChatSmileIcon,
+                text: c.intl.string(c.t.j7peBg)
             },
             {
-                icon: s.GameControllerIcon,
-                text: l.intl.string(l.t['feD3+v'])
+                icon: l.GameControllerIcon,
+                text: c.intl.string(c.t['feD3+v'])
             },
             {
-                icon: s.SettingsIcon,
-                text: l.intl.string(l.t.YFFVMz)
+                icon: l.SettingsIcon,
+                text: c.intl.string(c.t.YFFVMz)
             }
         )),
-    0 === a.length)
+    0 === i.length)
         ? null
-        : (0, r.jsxs)('div', {
-              className: u.applicationEducation,
+        : (0, a.jsxs)('div', {
+              className: d.applicationEducation,
               children: [
-                  null != t && t.length > 0
-                      ? (0, r.jsx)(s.Heading, {
+                  null != n && n.length > 0
+                      ? (0, a.jsx)(l.Heading, {
                             variant: 'heading-sm/normal',
-                            className: u.sectionLabel,
-                            children: t
+                            className: d.sectionLabel,
+                            children: n
                         })
                       : null,
-                  a.map((e, t) => {
-                      let { icon: n, text: i } = e;
-                      return (0, r.jsx)(
-                          d,
+                  i.map((e, n) => {
+                      let { icon: r, text: i } = e;
+                      return (0, a.jsx)(
+                          _,
                           {
-                              icon: n,
+                              icon: r,
                               text: i
                           },
-                          t
+                          n
                       );
                   })
               ]
           });
 }
-function d(e) {
-    let { icon: t, text: n } = e;
-    return (0, r.jsxs)('div', {
-        className: u.entry,
+function _(e) {
+    let { icon: n, text: r } = e;
+    return (0, a.jsxs)('div', {
+        className: d.entry,
         children: [
-            (0, r.jsx)(t, {
-                className: u.entryIcon,
+            (0, a.jsx)(n, {
+                className: d.entryIcon,
                 color: 'currentColor'
             }),
-            (0, r.jsx)(a.x, {
+            (0, a.jsx)(o.x, {
                 variant: 'text-md/normal',
-                className: u.entryText,
-                children: n
+                className: d.entryText,
+                children: r
             })
         ]
     });

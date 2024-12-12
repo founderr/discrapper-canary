@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(359110);
-function i(e) {
-    (0, r.Kh)(e.channelId);
+var i = r(359110);
+function a(e) {
+    (0, i.Kh)(e.channelId);
 }

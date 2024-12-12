@@ -1,26 +1,26 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(481060),
-    o = n(388032),
-    l = n(750014);
-function u(e) {
-    let { text: t = o.intl.string(o.t['5AFxuL']), className: n } = e;
-    return (0, r.jsx)(s.Tooltip, {
-        text: t,
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(481060),
+    l = r(388032),
+    u = r(750014);
+function c(e) {
+    let { text: n = l.intl.string(l.t['5AFxuL']), className: r } = e;
+    return (0, i.jsx)(o.Tooltip, {
+        text: n,
         children: (e) =>
-            (0, r.jsx)(s.Clickable, {
+            (0, i.jsx)(o.Clickable, {
                 ...e,
-                children: (0, r.jsx)(s.NitroWheelIcon, {
+                children: (0, i.jsx)(o.NitroWheelIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: a()(l.nitroWheel, n)
+                    className: s()(u.nitroWheel, r)
                 })
             })
     });

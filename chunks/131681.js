@@ -1,11 +1,11 @@
-n.d(t, {
+r.d(n, {
     U: function () {
-        return i;
+        return a;
     }
 });
-var r = n(695346);
-let i = () => {
+var i = r(695346);
+let a = () => {
     var e;
-    let { profanity: t = !1, slurs: n = !1, sexualContent: i = !1 } = r.gw.getSetting();
-    return null !== (e = t || n || i) && void 0 !== e && e;
+    let { profanity: n = !1, slurs: r = !1, sexualContent: a = !1 } = i.gw.getSetting();
+    return null !== (e = n || r || a) && void 0 !== e && e;
 };

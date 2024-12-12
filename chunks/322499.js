@@ -1,5 +1,5 @@
-var r = 'undefined' != typeof Symbol && Symbol,
-    i = n(882171);
+var i = 'undefined' != typeof Symbol && Symbol,
+    a = r(882171);
 e.exports = function () {
-    return 'function' == typeof r && 'function' == typeof Symbol && 'symbol' == typeof r('foo') && 'symbol' == typeof Symbol('bar') && i();
+    return 'function' == typeof i && 'function' == typeof Symbol && 'symbol' == typeof i('foo') && 'symbol' == typeof Symbol('bar') && a();
 };

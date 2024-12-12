@@ -1,52 +1,52 @@
-n.d(t, {
+r.d(n, {
     J: function () {
-        return h;
+        return g;
     },
     q: function () {
-        return m;
+        return E;
     }
-}),
-    n(47120);
-var r = n(192379),
-    i = n(442837),
-    a = n(524437),
-    s = n(781391),
-    o = n(740492),
-    l = n(581883),
-    u = n(626135),
-    c = n(238302),
-    d = n(514361),
-    f = n(981631),
-    _ = n(474936),
-    p = n(874893);
-let h = () => {
-        let e = (0, i.e7)([d.Z], () => d.Z.gradientPreset),
-            t = (0, i.e7)([o.ZP], () => o.ZP.useSystemTheme === p.K.ON),
-            [n, a] = (0, r.useState)(t);
+});
+var i = r(47120);
+var a = r(192379),
+    s = r(442837),
+    o = r(524437),
+    l = r(781391),
+    u = r(740492),
+    c = r(581883),
+    d = r(626135),
+    f = r(238302),
+    _ = r(514361),
+    h = r(981631),
+    p = r(474936),
+    m = r(874893);
+let g = () => {
+        let e = (0, s.e7)([_.Z], () => _.Z.gradientPreset),
+            n = (0, s.e7)([u.ZP], () => u.ZP.useSystemTheme === m.K.ON),
+            [r, i] = (0, a.useState)(n);
         return (
-            (0, r.useEffect)(() => {
-                if (null == e) a(t);
-            }, [e, t]),
-            (0, r.useCallback)(() => {
+            (0, a.useEffect)(() => {
+                if (null == e) i(n);
+            }, [e, n]),
+            (0, a.useCallback)(() => {
                 if (null == e) return;
-                if (((0, c.kj)(), !!n)) (0, s.hi)(p.K.ON);
-            }, [e, n])
+                if (((0, f.kj)(), !!r)) (0, l.hi)(m.K.ON);
+            }, [e, r])
         );
     },
-    m = () => {
-        let { previewPaneVariant: e } = (0, i.cj)([d.Z], () => ({ previewPaneVariant: d.Z.isPreview ? _.h1.FREE : _.h1.PREMIUM_STANDARD })),
-            t = (0, i.e7)([l.Z], () => {
+    E = () => {
+        let { previewPaneVariant: e } = (0, s.cj)([_.Z], () => ({ previewPaneVariant: _.Z.isPreview ? p.h1.FREE : p.h1.PREMIUM_STANDARD })),
+            n = (0, s.e7)([c.Z], () => {
                 var e;
-                let t = null === (e = l.Z.settings.appearance) || void 0 === e ? void 0 : e.theme;
-                return 'default '.concat(t === a.Q2.LIGHT ? f.BRd.LIGHT : f.BRd.DARK);
+                let n = null === (e = c.Z.settings.appearance) || void 0 === e ? void 0 : e.theme;
+                return 'default '.concat(n === o.Q2.LIGHT ? h.BRd.LIGHT : h.BRd.DARK);
             });
-        return (0, r.useCallback)(
-            (n) => {
-                u.default.track(n, {
+        return (0, a.useCallback)(
+            (r) => {
+                d.default.track(r, {
                     preview_pane_variant: e,
-                    original_theme: t
+                    original_theme: n
                 });
             },
-            [e, t]
+            [e, n]
         );
     };

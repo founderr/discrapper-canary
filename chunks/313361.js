@@ -1,10 +1,10 @@
-var r, i;
-n.d(t, {
+r.d(n, {
     X: function () {
-        return r;
+        return i;
     }
-}),
-    n(47120),
-    ((i = r || (r = {}))[(i.DEFAULT = 0)] = 'DEFAULT'),
-    (i[(i.LIST = 1)] = 'LIST'),
-    (i[(i.GRID = 2)] = 'GRID');
+});
+var i,
+    a = r(47120);
+!(function (e) {
+    (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.LIST = 1)] = 'LIST'), (e[(e.GRID = 2)] = 'GRID');
+})(i || (i = {}));

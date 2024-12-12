@@ -1,57 +1,57 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return f;
+        return _;
     },
     s: function () {
-        return d;
+        return f;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(763472),
-    a = n(394821),
-    s = n(49012),
-    o = n(591759),
-    l = n(475413),
-    u = n(388032),
-    c = n(249942);
-async function d(e) {
-    let { activity: t, user: n, index: r } = e;
+var i = r(200651);
+r(192379);
+var a = r(763472),
+    s = r(394821),
+    o = r(49012),
+    l = r(591759),
+    u = r(475413),
+    c = r(388032),
+    d = r(249942);
+async function f(e) {
+    let { activity: n, user: r, index: i } = e;
     try {
-        let e = await (0, i.sd)(t, n.id);
-        if (e.button_urls.length <= r) return;
-        let a = e.button_urls[r];
-        if ('string' != typeof a) return;
-        let l = o.Z.safeParseWithQuery(a);
-        if ((null == l ? void 0 : l.protocol) == null || (null == l ? void 0 : l.hostname) == null) return;
-        (0, s.q)({
-            href: o.Z.format(l),
+        let e = await (0, a.sd)(n, r.id);
+        if (e.button_urls.length <= i) return;
+        let s = e.button_urls[i];
+        if ('string' != typeof s) return;
+        let u = l.Z.safeParseWithQuery(s);
+        if ((null == u ? void 0 : u.protocol) == null || (null == u ? void 0 : u.hostname) == null) return;
+        (0, o.q)({
+            href: l.Z.format(u),
             trusted: !1
         });
     } catch (e) {}
 }
-function f(e) {
-    let { user: t, activity: n, onAction: i } = e;
-    if ((null == n ? void 0 : n.buttons) == null || n.buttons.length < 1) return null;
-    let s = (0, a.Z)(n);
-    return (0, r.jsx)(r.Fragment, {
-        children: n.buttons.map((e, a) =>
-            (0, r.jsx)(
-                l.tG,
+function _(e) {
+    let { user: n, activity: r, onAction: a } = e;
+    if ((null == r ? void 0 : r.buttons) == null || r.buttons.length < 1) return null;
+    let o = (0, s.Z)(r);
+    return (0, i.jsx)(i.Fragment, {
+        children: r.buttons.map((e, s) =>
+            (0, i.jsx)(
+                u.tG,
                 {
-                    text: s ? u.intl.string(u.t['I6JG4+']) : e,
-                    className: c.customButton,
+                    text: o ? c.intl.string(c.t['I6JG4+']) : e,
+                    className: d.customButton,
                     fullWidth: !0,
                     onClick: () => {
-                        null == i || i({ action: s ? 'PRESS_WATCH_ON_CRUNCHYROLL_BUTTON' : 'PRESS_CUSTOM_BUTTON' }),
-                            d({
-                                user: t,
-                                activity: n,
-                                index: a
+                        null == a || a({ action: o ? 'PRESS_WATCH_ON_CRUNCHYROLL_BUTTON' : 'PRESS_CUSTOM_BUTTON' }),
+                            f({
+                                user: n,
+                                activity: r,
+                                index: s
                             });
                     }
                 },
-                a
+                s
             )
         )
     });

@@ -1,25 +1,25 @@
-n.d(t, {
+r.d(n, {
     r: function () {
-        return u;
+        return c;
     },
     u: function () {
-        return l;
+        return u;
     }
 });
-var r = n(674180),
-    i = n(994592),
-    a = n(652515),
-    s = n(550951),
-    o = n(981631);
-function l(e) {
-    let t = (0, a.RF)(null == e ? void 0 : e.id, 'channel_list'),
-        n = (0, i.mY)(null == e ? void 0 : e.id),
-        l = (0, s.g)(e, 'channel_list'),
-        { shouldHideGuildPurchaseEntryPoints: u } = (0, r.uP)(null == e ? void 0 : e.id);
-    return null != e && !u && (e.hasFeature(o.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE) || (t && n) || l);
+var i = r(674180),
+    a = r(994592),
+    s = r(652515),
+    o = r(550951),
+    l = r(981631);
+function u(e) {
+    let n = (0, s.RF)(null == e ? void 0 : e.id, 'channel_list'),
+        r = (0, a.mY)(null == e ? void 0 : e.id),
+        u = (0, o.g)(e, 'channel_list'),
+        { shouldHideGuildPurchaseEntryPoints: c } = (0, i.uP)(null == e ? void 0 : e.id);
+    return null != e && !c && (e.hasFeature(l.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE) || (n && r) || u);
 }
-function u(e, t) {
-    let n = (0, a.C4)(null == e ? void 0 : e.id, 'channel_list'),
-        r = (0, i.on)(null == e ? void 0 : e.id, t);
-    return null != e && (e.hasFeature(o.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE) || (n && r));
+function c(e, n) {
+    let r = (0, s.C4)(null == e ? void 0 : e.id, 'channel_list'),
+        i = (0, a.on)(null == e ? void 0 : e.id, n);
+    return null != e && (e.hasFeature(l.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE) || (r && i));
 }

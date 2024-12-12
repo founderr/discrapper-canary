@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     c: function () {
-        return r;
+        return i;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
     kind: 'user',
     id: '2022-08_churro_experiment',
     label: 'PS5 Voice Experiment',

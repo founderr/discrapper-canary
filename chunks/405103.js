@@ -1,11 +1,11 @@
-function r(e) {
+function i(e) {
     return {
         scrollLeft: e.scrollLeft,
         scrollTop: e.scrollTop
     };
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

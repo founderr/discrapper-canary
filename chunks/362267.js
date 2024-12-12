@@ -1,17 +1,17 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var r = n(442837),
-    i = n(780384),
-    a = n(410030),
-    s = n(358221),
-    o = n(944486),
-    l = n(981631);
-function u(e, t) {
-    let n = (0, r.e7)([o.Z], () => o.Z.getVoiceChannelId()),
-        u = (0, r.e7)([s.Z], () => (null != n ? s.Z.getMode(n) : null)),
-        c = (0, a.ZP)();
-    return null != e ? e : u === l.WtW.VOICE && (0, i.ap)(c) ? (t ? 'activeLight' : 'primaryLight') : t ? 'white' : 'primaryDark';
+var i = r(442837),
+    a = r(780384),
+    s = r(410030),
+    o = r(358221),
+    l = r(944486),
+    u = r(981631);
+function c(e, n) {
+    let r = (0, i.e7)([l.Z], () => l.Z.getVoiceChannelId()),
+        c = (0, i.e7)([o.Z], () => (null != r ? o.Z.getMode(r) : null)),
+        d = (0, s.ZP)();
+    return null != e ? e : c === u.WtW.VOICE && (0, a.ap)(d) ? (n ? 'activeLight' : 'primaryLight') : n ? 'white' : 'primaryDark';
 }

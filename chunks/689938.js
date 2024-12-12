@@ -1,5 +1,5 @@
-let r = new (n(627420).ZP)({
+let i = new (r(627420).ZP)({
     getMessages: () => ({}),
-    getLanguages: () => n(515297)
+    getLanguages: () => r(515297)
 });
-t.Z = r;
+n.Z = i;

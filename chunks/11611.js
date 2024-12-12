@@ -1,16 +1,16 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(693598);
-function i(e, t) {
-    if ('object' != (0, r.Z)(e) || !e) return e;
-    var n = e[Symbol.toPrimitive];
-    if (void 0 !== n) {
-        var i = n.call(e, t || 'default');
-        if ('object' != (0, r.Z)(i)) return i;
+var i = r(693598);
+function a(e, n) {
+    if ('object' != (0, i.Z)(e) || !e) return e;
+    var r = e[Symbol.toPrimitive];
+    if (void 0 !== r) {
+        var a = r.call(e, n || 'default');
+        if ('object' != (0, i.Z)(a)) return a;
         throw TypeError('@@toPrimitive must return a primitive value.');
     }
-    return ('string' === t ? String : Number)(e);
+    return ('string' === n ? String : Number)(e);
 }

@@ -1,72 +1,72 @@
-n.d(t, {
+r.d(n, {
     KZ: function () {
-        return d;
+        return f;
     },
     Mt: function () {
-        return u;
+        return c;
     },
     ZB: function () {
-        return c;
+        return d;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(772848),
-    s = n(906732),
-    o = n(221292);
-let l = i.createContext(null),
-    u = (e) => {
-        let { value: t, children: n, shouldTrackViewOnMount: a = !0 } = e,
-            { analyticsLocations: u } = (0, s.ZP)();
+var i = r(200651),
+    a = r(192379),
+    s = r(772848),
+    o = r(906732),
+    l = r(221292);
+let u = a.createContext(null),
+    c = (e) => {
+        let { value: n, children: r, shouldTrackViewOnMount: s = !0 } = e,
+            { analyticsLocations: c } = (0, o.ZP)();
         return (
-            i.useEffect(() => {
-                if (!!a)
-                    (0, o.pQ)({
+            a.useEffect(() => {
+                if (!!s)
+                    (0, l.pQ)({
                         action: 'VIEW',
-                        analyticsLocations: u,
-                        ...t
+                        analyticsLocations: c,
+                        ...n
                     });
-            }, [a]),
-            (0, r.jsx)(l.Provider, {
-                value: t,
-                children: n
+            }, [s]),
+            (0, i.jsx)(u.Provider, {
+                value: n,
+                children: r
             })
         );
     },
-    c = (e) => {
-        var t;
-        let { layout: n, userId: r, guildId: s, channelId: o, messageId: u, roleId: c, sourceSessionId: d, showGuildProfile: f = !0 } = e,
-            _ = null === (t = i.useContext(l)) || void 0 === t ? void 0 : t.sessionId;
-        return i.useMemo(
+    d = (e) => {
+        var n;
+        let { layout: r, userId: i, guildId: o, channelId: l, messageId: c, roleId: d, sourceSessionId: f, showGuildProfile: _ = !0 } = e,
+            h = null === (n = a.useContext(u)) || void 0 === n ? void 0 : n.sessionId;
+        return a.useMemo(
             () => ({
-                sessionId: (0, a.Z)(),
-                sourceSessionId: null != d ? d : _,
-                layout: n,
-                userId: r,
-                guildId: s,
-                channelId: o,
-                messageId: u,
-                roleId: c,
-                showGuildProfile: f
+                sessionId: (0, s.Z)(),
+                sourceSessionId: null != f ? f : h,
+                layout: r,
+                userId: i,
+                guildId: o,
+                channelId: l,
+                messageId: c,
+                roleId: d,
+                showGuildProfile: _
             }),
-            [_, n, r, s, o, u, c, d, f]
+            [h, r, i, o, l, c, d, f, _]
         );
     },
-    d = () => {
-        let e = i.useContext(l),
-            { analyticsLocations: t } = (0, s.ZP)();
+    f = () => {
+        let e = a.useContext(u),
+            { analyticsLocations: n } = (0, o.ZP)();
         return {
             context: e,
-            trackUserProfileAction: i.useCallback(
-                (n) => {
+            trackUserProfileAction: a.useCallback(
+                (r) => {
                     if (null != e)
-                        (0, o.pQ)({
-                            analyticsLocations: t,
+                        (0, l.pQ)({
+                            analyticsLocations: n,
                             ...e,
-                            ...n
+                            ...r
                         });
                 },
-                [e, t]
+                [e, n]
             )
         };
     };

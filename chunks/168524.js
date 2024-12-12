@@ -1,24 +1,24 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(492423),
-    i = n(774073);
-function a(e) {
-    let { onOpened: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { applicationId: n } = e,
-        a = (0, i.ZP)(e);
-    return a.shouldOpenGameProfile && null != n
-        ? (i) => {
-              i.stopPropagation(),
-                  i.preventDefault(),
-                  r.Z.openGameProfileModal({
+var i = r(492423),
+    a = r(774073);
+function s(e) {
+    let { onOpened: n } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        { applicationId: r } = e,
+        s = (0, a.ZP)(e);
+    return s.shouldOpenGameProfile && null != r
+        ? (a) => {
+              a.stopPropagation(),
+                  a.preventDefault(),
+                  i.Z.openGameProfileModal({
                       ...e,
-                      applicationId: n,
-                      gameProfileModalChecks: a
+                      applicationId: r,
+                      gameProfileModalChecks: s
                   }),
-                  null == t || t();
+                  null == n || n();
           }
         : void 0;
 }

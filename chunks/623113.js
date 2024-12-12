@@ -1,16 +1,16 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(192379);
-function i(e) {
-    let t = r.useRef(null),
-        n = r.useCallback(
-            (n) => {
-                null != e && ('function' == typeof e ? e(n) : (e.current = n), (t.current = n));
+var i = r(192379);
+function a(e) {
+    let n = i.useRef(null),
+        r = i.useCallback(
+            (r) => {
+                null != e && ('function' == typeof e ? e(r) : (e.current = r), (n.current = r));
             },
             [e]
         );
-    return [t, n];
+    return [n, r];
 }

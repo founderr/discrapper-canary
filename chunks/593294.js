@@ -1,22 +1,22 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return o;
+        return u;
     }
-}),
-    n(47120);
-var r = n(442837),
-    i = n(317381),
-    a = n(835473),
-    s = n(719247);
-function o(e) {
-    let t = (0, r.e7)([s.Z], () => s.Z.getMatchingActivity(e)),
-        [n, o] = (0, a.Z)([null == t ? void 0 : t.application_id, 'application_id' in e.extra ? e.extra.application_id : void 0]),
-        l = (0, r.e7)([i.ZP], () => i.ZP.getEmbeddedActivityForUserId(e.author_id, null == n ? void 0 : n.id));
+});
+var i = r(47120);
+var a = r(442837),
+    s = r(317381),
+    o = r(835473),
+    l = r(719247);
+function u(e) {
+    let n = (0, a.e7)([l.Z], () => l.Z.getMatchingActivity(e)),
+        [r, i] = (0, o.Z)([null == n ? void 0 : n.application_id, 'application_id' in e.extra ? e.extra.application_id : void 0]),
+        u = (0, a.e7)([s.ZP], () => s.ZP.getEmbeddedActivityForUserId(e.author_id, null == r ? void 0 : r.id));
     return {
-        activity: t,
-        embeddedActivity: l,
-        anyMatchingApplication: null != n ? n : o,
-        activityApplication: n,
-        fallbackApplication: o
+        activity: n,
+        embeddedActivity: u,
+        anyMatchingApplication: null != r ? r : i,
+        activityApplication: r,
+        fallbackApplication: i
     };
 }

@@ -1,33 +1,33 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(778787);
-function i(e, t, n) {
+var i = r(778787);
+function a(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-class a extends r.q {
+class s extends i.q {
     static fromServer(e) {
-        let { purchased_at: t, purchase_type: n, expires_at: r, ...i } = e;
-        return new a({
-            ...super.fromServer(i),
-            purchaseType: n,
-            purchasedAt: null != t ? new Date(t) : t,
-            expiresAt: null != r ? new Date(r) : null
+        let { purchased_at: n, purchase_type: r, expires_at: i, ...a } = e;
+        return new s({
+            ...super.fromServer(a),
+            purchaseType: r,
+            purchasedAt: null != n ? new Date(n) : n,
+            expiresAt: null != i ? new Date(i) : null
         });
     }
     constructor(e) {
-        super(e), i(this, 'purchaseType', void 0), i(this, 'purchasedAt', void 0), i(this, 'expiresAt', void 0), (this.purchasedAt = e.purchasedAt), (this.purchaseType = e.purchaseType), (this.expiresAt = e.expiresAt);
+        super(e), a(this, 'purchaseType', void 0), a(this, 'purchasedAt', void 0), a(this, 'expiresAt', void 0), (this.purchasedAt = e.purchasedAt), (this.purchaseType = e.purchaseType), (this.expiresAt = e.expiresAt);
     }
 }

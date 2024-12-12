@@ -1,24 +1,24 @@
-var r = n(538315),
-    i = 'function' == typeof Symbol && 'symbol' == typeof Symbol('foo'),
-    a = Object.prototype.toString,
-    s = Array.prototype.concat,
-    o = n(445086),
-    l = n(768175)(),
-    u = function (e, t, n, r) {
-        if (t in e) {
-            if (!0 === r) {
-                if (e[t] === n) return;
-            } else {
-                var i;
-                if (!('function' == typeof (i = r) && '[object Function]' === a.call(i)) || !r()) return;
-            }
-        }
-        l ? o(e, t, n, !0) : o(e, t, n);
+var i = r(538315),
+    a = 'function' == typeof Symbol && 'symbol' == typeof Symbol('foo'),
+    s = Object.prototype.toString,
+    o = Array.prototype.concat,
+    l = r(445086),
+    u = function (e) {
+        return 'function' == typeof e && '[object Function]' === s.call(e);
     },
-    c = function (e, t) {
-        var n = arguments.length > 2 ? arguments[2] : {},
-            a = r(t);
-        i && (a = s.call(a, Object.getOwnPropertySymbols(t)));
-        for (var o = 0; o < a.length; o += 1) u(e, a[o], t[a[o]], n[a[o]]);
+    c = r(768175)(),
+    d = function (e, n, r, i) {
+        if (n in e) {
+            if (!0 === i) {
+                if (e[n] === r) return;
+            } else if (!u(i) || !i()) return;
+        }
+        c ? l(e, n, r, !0) : l(e, n, r);
+    },
+    f = function (e, n) {
+        var r = arguments.length > 2 ? arguments[2] : {},
+            s = i(n);
+        a && (s = o.call(s, Object.getOwnPropertySymbols(n)));
+        for (var l = 0; l < s.length; l += 1) d(e, s[l], n[s[l]], r[s[l]]);
     };
-(c.supportsDescriptors = !!l), (e.exports = c);
+(f.supportsDescriptors = !!c), (e.exports = f);

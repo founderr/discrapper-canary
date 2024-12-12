@@ -1,57 +1,57 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return p;
+        return E;
     }
-}),
-    n(390547),
-    n(47120),
-    n(653041);
-var r = n(392711),
-    i = n.n(r),
-    a = n(45114),
-    s = n(45966),
-    o = n(601070),
-    l = n(984933),
-    u = n(306680),
-    c = n(626135),
-    d = n(709054),
-    f = n(981631),
-    _ = n(490897);
-function p(e, t, n) {
-    let r = i()
+});
+var i = r(390547);
+var a = r(47120);
+var s = r(653041);
+var o = r(392711),
+    l = r.n(o),
+    u = r(45114),
+    c = r(45966),
+    d = r(601070),
+    f = r(984933),
+    _ = r(306680),
+    h = r(626135),
+    p = r(709054),
+    m = r(981631),
+    g = r(490897);
+function E(e, n, r) {
+    let i = l()
         .flatMap(e, (e) => {
-            let t = l.ZP.getSelectableChannelIds(e),
-                n = [...t, ...l.ZP.getVocalChannelIds(e)],
-                r = o.Z.getActiveJoinedThreadsForGuild(e);
-            for (let e of t) {
-                var i;
-                let t = null !== (i = r[e]) && void 0 !== i ? i : {};
-                for (let e in t) n.push(e);
+            let n = f.ZP.getSelectableChannelIds(e),
+                r = [...n, ...f.ZP.getVocalChannelIds(e)],
+                i = d.Z.getActiveJoinedThreadsForGuild(e);
+            for (let e of n) {
+                var a;
+                let n = null !== (a = i[e]) && void 0 !== a ? a : {};
+                for (let e in n) r.push(e);
             }
-            return n;
+            return r;
         })
         .map((e) => ({
             channelId: e,
-            readStateType: _.W.CHANNEL,
-            messageId: u.ZP.lastMessageId(e)
+            readStateType: g.W.CHANNEL,
+            messageId: _.ZP.lastMessageId(e)
         }));
     return (
         e.forEach((e) => {
-            r.push({
-                channelId: d.default.cast(e),
-                readStateType: _.W.GUILD_EVENT,
-                messageId: u.ZP.lastMessageId(e, _.W.GUILD_EVENT)
+            i.push({
+                channelId: p.default.cast(e),
+                readStateType: g.W.GUILD_EVENT,
+                messageId: _.ZP.lastMessageId(e, g.W.GUILD_EVENT)
             }),
-                r.push({
-                    channelId: d.default.cast(e),
-                    readStateType: _.W.GUILD_ONBOARDING_QUESTION,
-                    messageId: s.Z.ackIdForGuild(e)
+                i.push({
+                    channelId: p.default.cast(e),
+                    readStateType: g.W.GUILD_ONBOARDING_QUESTION,
+                    messageId: c.Z.ackIdForGuild(e)
                 });
         }),
-        c.default.track(f.rMx.MARK_AS_READ, {
-            source: t,
+        h.default.track(m.rMx.MARK_AS_READ, {
+            source: n,
             type: 'guild'
         }),
-        (0, a.y5)(r, n)
+        (0, u.y5)(i, r)
     );
 }

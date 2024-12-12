@@ -1,35 +1,35 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return _;
+        return h;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    l = n(40966),
-    u = n(580552),
-    c = n(249458),
-    d = n(240991),
-    f = n(665162);
-function _(e) {
-    let { userBio: t, className: n, animateOnHover: a = !1, isHovering: _ = !1, lineClamp: p = 6, setLineClamp: h = !0, textColor: m, userId: g } = e,
-        E = i.useMemo(() => ((0, u.Z)(g) ? (0, r.jsx)(l.Z, {}) : null == t || '' === t ? null : (0, d.parseBioReact)(t)), [g, t]);
-    return null == E
+var i = r(200651),
+    a = r(192379),
+    s = r(120356),
+    o = r.n(s),
+    l = r(481060),
+    u = r(40966),
+    c = r(580552),
+    d = r(249458),
+    f = r(240991),
+    _ = r(665162);
+function h(e) {
+    let { userBio: n, className: r, animateOnHover: s = !1, isHovering: h = !1, lineClamp: p = 6, setLineClamp: m = !0, textColor: g, userId: E } = e,
+        v = a.useMemo(() => ((0, c.Z)(E) ? (0, i.jsx)(u.Z, {}) : null == n || '' === n ? null : (0, f.parseBioReact)(n)), [E, n]);
+    return null == v
         ? null
-        : (0, r.jsx)('div', {
-              className: s()(n, f.markup),
-              children: (0, r.jsx)(o.Text, {
+        : (0, i.jsx)('div', {
+              className: o()(r, _.markup),
+              children: (0, i.jsx)(l.Text, {
                   variant: 'text-sm/normal',
-                  lineClamp: h ? p : void 0,
-                  color: void 0 !== m ? m : void 0,
-                  children: (0, r.jsx)(c.G.Provider, {
+                  lineClamp: m ? p : void 0,
+                  color: void 0 !== g ? g : void 0,
+                  children: (0, i.jsx)(d.G.Provider, {
                       value: {
-                          disableAnimations: a && !_,
+                          disableAnimations: s && !h,
                           disableInteractions: !1
                       },
-                      children: E
+                      children: v
                   })
               })
           });

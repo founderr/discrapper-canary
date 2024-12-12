@@ -1,55 +1,55 @@
-var r = n(21841),
-    i = n(689118),
-    a = n(449348),
-    s = n(922689);
-function o(e, t) {
-    r.equal(t.length, 24, 'Invalid key length');
-    var n = t.slice(0, 8),
-        i = t.slice(8, 16),
-        a = t.slice(16, 24);
+var i = r(21841),
+    a = r(689118),
+    s = r(449348),
+    o = r(922689);
+function l(e, n) {
+    i.equal(n.length, 24, 'Invalid key length');
+    var r = n.slice(0, 8),
+        a = n.slice(8, 16),
+        s = n.slice(16, 24);
     'encrypt' === e
         ? (this.ciphers = [
-              s.create({
+              o.create({
                   type: 'encrypt',
-                  key: n
+                  key: r
               }),
-              s.create({
+              o.create({
                   type: 'decrypt',
-                  key: i
-              }),
-              s.create({
-                  type: 'encrypt',
                   key: a
+              }),
+              o.create({
+                  type: 'encrypt',
+                  key: s
               })
           ])
         : (this.ciphers = [
-              s.create({
+              o.create({
                   type: 'decrypt',
+                  key: s
+              }),
+              o.create({
+                  type: 'encrypt',
                   key: a
               }),
-              s.create({
-                  type: 'encrypt',
-                  key: i
-              }),
-              s.create({
+              o.create({
                   type: 'decrypt',
-                  key: n
+                  key: r
               })
           ]);
 }
-function l(e) {
-    a.call(this, e);
-    var t = new o(this.type, this.options.key);
-    this._edeState = t;
+function u(e) {
+    s.call(this, e);
+    var n = new l(this.type, this.options.key);
+    this._edeState = n;
 }
-i(l, a),
-    (e.exports = l),
-    (l.create = function (e) {
-        return new l(e);
+a(u, s),
+    (e.exports = u),
+    (u.create = function (e) {
+        return new u(e);
     }),
-    (l.prototype._update = function (e, t, n, r) {
-        var i = this._edeState;
-        i.ciphers[0]._update(e, t, n, r), i.ciphers[1]._update(n, r, n, r), i.ciphers[2]._update(n, r, n, r);
+    (u.prototype._update = function (e, n, r, i) {
+        var a = this._edeState;
+        a.ciphers[0]._update(e, n, r, i), a.ciphers[1]._update(r, i, r, i), a.ciphers[2]._update(r, i, r, i);
     }),
-    (l.prototype._pad = s.prototype._pad),
-    (l.prototype._unpad = s.prototype._unpad);
+    (u.prototype._pad = o.prototype._pad),
+    (u.prototype._unpad = o.prototype._unpad);

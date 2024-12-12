@@ -1,104 +1,104 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return f;
+        return _;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(149765),
-    s = n(178940),
-    o = n(993365),
-    l = n(481060),
-    u = n(422559),
-    c = n(388032),
-    d = n(355662);
-function f(e) {
-    let { application: t, permissions: n, deniedPermissions: f, onPermissionsChange: _, guild: p } = e,
-        h = i.useMemo(() => a.U_(p.permissions), [p.permissions]);
-    i.useEffect(() => {
-        _(!1, a.hX(n, h));
-    }, [h, _, n]);
-    let m = u.VY.filter((e) => a.e$(n, e)),
-        g = m
-            .filter((e) => !a.e$(h, e))
+var i = r(200651),
+    a = r(192379),
+    s = r(149765),
+    o = r(178940),
+    l = r(993365),
+    u = r(481060),
+    c = r(422559),
+    d = r(388032),
+    f = r(355662);
+function _(e) {
+    let { application: n, permissions: r, deniedPermissions: _, onPermissionsChange: h, guild: p } = e,
+        m = a.useMemo(() => s.U_(p.permissions), [p.permissions]);
+    a.useEffect(() => {
+        h(!1, s.hX(r, m));
+    }, [m, h, r]);
+    let g = c.VY.filter((e) => s.e$(r, e)),
+        E = g
+            .filter((e) => !s.e$(m, e))
             .map((e) => {
-                let t = (0, u.wt)(e),
-                    n = !a.e$(f, e);
-                return (0, r.jsx)(
+                let n = (0, c.wt)(e),
+                    r = !s.e$(_, e);
+                return (0, i.jsx)(
                     'li',
                     {
-                        className: d.permission,
-                        children: (0, r.jsx)(s.X, {
-                            value: n,
-                            onChange: (t, n) => _(n, e),
-                            type: s.X.Types.INVERTED,
-                            children: (0, r.jsx)(o.x, {
+                        className: f.permission,
+                        children: (0, i.jsx)(o.X, {
+                            value: r,
+                            onChange: (n, r) => h(r, e),
+                            type: o.X.Types.INVERTED,
+                            children: (0, i.jsx)(l.x, {
                                 variant: 'text-md/normal',
-                                children: t
+                                children: n
                             })
                         })
                     },
                     String(e)
                 );
             }),
-        E = m
-            .filter((e) => a.e$(h, e))
+        v = g
+            .filter((e) => s.e$(m, e))
             .map((e) => {
-                let t = (0, u.wt)(e);
-                return (0, r.jsxs)(
+                let n = (0, c.wt)(e);
+                return (0, i.jsxs)(
                     'li',
                     {
-                        className: d.permission,
+                        className: f.permission,
                         children: [
-                            (0, r.jsx)('div', {
-                                className: d.disabledPermissionIcon,
-                                children: (0, r.jsx)(l.XSmallIcon, {
+                            (0, i.jsx)('div', {
+                                className: f.disabledPermissionIcon,
+                                children: (0, i.jsx)(u.XSmallIcon, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: d.icon
+                                    className: f.icon
                                 })
                             }),
-                            (0, r.jsx)(o.x, {
+                            (0, i.jsx)(l.x, {
                                 variant: 'text-md/normal',
-                                children: t
+                                children: n
                             })
                         ]
                     },
                     String(e)
                 );
             });
-    return (0, r.jsxs)('div', {
-        className: d.botPermissions,
+    return (0, i.jsxs)('div', {
+        className: f.botPermissions,
         children: [
-            g.length > 0
-                ? (0, r.jsxs)('div', {
+            E.length > 0
+                ? (0, i.jsxs)('div', {
                       children: [
-                          (0, r.jsx)(o.x, {
+                          (0, i.jsx)(l.x, {
                               variant: 'text-sm/medium',
                               color: 'header-secondary',
-                              children: c.intl.format(c.t.sOaT2t, {
-                                  applicationName: t.name,
+                              children: d.intl.format(d.t.sOaT2t, {
+                                  applicationName: n.name,
                                   guildName: p.name
                               })
                           }),
-                          (0, r.jsx)('ul', {
-                              className: d.permissionsList,
-                              children: g
+                          (0, i.jsx)('ul', {
+                              className: f.permissionsList,
+                              children: E
                           })
                       ]
                   })
                 : null,
-            E.length > 0
-                ? (0, r.jsxs)('div', {
+            v.length > 0
+                ? (0, i.jsxs)('div', {
                       children: [
-                          (0, r.jsx)(o.x, {
+                          (0, i.jsx)(l.x, {
                               variant: 'text-sm/medium',
                               color: 'header-secondary',
-                              children: c.intl.format(c.t.fsOkFx, { applicationName: t.name })
+                              children: d.intl.format(d.t.fsOkFx, { applicationName: n.name })
                           }),
-                          (0, r.jsx)('ul', {
-                              className: d.permissionsList,
-                              children: E
+                          (0, i.jsx)('ul', {
+                              className: f.permissionsList,
+                              children: v
                           })
                       ]
                   })

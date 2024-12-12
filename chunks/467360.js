@@ -1,4 +1,4 @@
-var r = n(177624),
-    i = n(195168),
-    a = (0, r.Z)(i.Z, 'DataView');
-t.Z = a;
+var i = r(177624),
+    a = r(195168),
+    s = (0, i.Z)(a.Z, 'DataView');
+n.Z = s;

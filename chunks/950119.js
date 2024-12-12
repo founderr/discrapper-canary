@@ -1,37 +1,37 @@
-n.r(t),
-    n.d(t, {
+r.r(n),
+    r.d(n, {
         ErrorCode: function () {
-            return i.jK;
+            return a.jK;
         },
         FormatError: function () {
-            return i.u_;
+            return a.u_;
         },
         IntlMessageFormat: function () {
-            return r.C;
+            return i.C;
         },
         IntlMessageFormat: function () {
-            return r.C;
+            return i.C;
         },
         InvalidValueError: function () {
-            return i.C8;
+            return a.C8;
         },
         InvalidValueTypeError: function () {
-            return i.YR;
+            return a.YR;
         },
         MissingValueError: function () {
-            return i.HR;
+            return a.HR;
         },
         PART_TYPE: function () {
-            return a.du;
+            return s.du;
         },
         formatToParts: function () {
-            return a.FK;
+            return s.FK;
         },
         isFormatXMLElementFn: function () {
-            return a.Gt;
+            return s.Gt;
         }
     });
-var r = n(19929),
-    i = n(968735),
-    a = n(650117);
-t.default = r.C;
+var i = r(19929),
+    a = r(968735),
+    s = r(650117);
+n.default = i.C;

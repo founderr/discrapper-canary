@@ -1,50 +1,50 @@
-n.d(t, {
+r.d(n, {
     EJ: function () {
-        return h;
-    },
-    XV: function () {
-        return _;
-    },
-    Z4: function () {
-        return g;
-    },
-    Zp: function () {
         return m;
     },
-    f6: function () {
+    XV: function () {
+        return h;
+    },
+    Z4: function () {
         return E;
     },
+    Zp: function () {
+        return g;
+    },
+    f6: function () {
+        return v;
+    },
     ky: function () {
-        return I;
+        return T;
     },
     p0: function () {
-        return b;
+        return y;
     },
     pY: function () {
-        return T;
+        return b;
     },
     vh: function () {
         return p;
     }
 });
-var r = n(108131),
-    i = n.n(r),
-    a = n(442837),
-    s = n(607070),
-    o = n(715903),
-    l = n(271383),
-    u = n(594174),
-    c = n(308083),
-    d = n(981631),
-    f = n(388032);
-function _(e, t) {
-    let n = Array.from(e);
+var i = r(108131),
+    a = r.n(i),
+    s = r(442837),
+    o = r(607070),
+    l = r(715903),
+    u = r(271383),
+    c = r(594174),
+    d = r(308083),
+    f = r(981631),
+    _ = r(388032);
+function h(e, n) {
+    let r = Array.from(e);
     return (
-        n.sort((e, n) => {
-            let r = i().v3(''.concat(e).concat(t));
-            return r - i().v3(''.concat(n).concat(t));
+        r.sort((e, r) => {
+            let i = a().v3(''.concat(e).concat(n));
+            return i - a().v3(''.concat(r).concat(n));
         }),
-        n
+        r
     );
 }
 function p(e) {
@@ -56,74 +56,74 @@ function p(e) {
           }
         : {};
 }
-function h(e) {
-    return null != e && e.hasFeature(d.oNc.CLAN);
+function m(e) {
+    return null != e && e.hasFeature(f.oNc.CLAN);
 }
-function m(e, t) {
-    var n, r;
-    return null != t && t.identityGuildId === (null == e ? void 0 : e.id) && (((null == e ? void 0 : null === (n = e.clan) || void 0 === n ? void 0 : n.tag) != null && (null == e ? void 0 : null === (r = e.clan) || void 0 === r ? void 0 : r.tag) !== t.tag) || null == t.identityEnabled);
+function g(e, n) {
+    var r, i;
+    return null != n && n.identityGuildId === (null == e ? void 0 : e.id) && (((null == e ? void 0 : null === (r = e.clan) || void 0 === r ? void 0 : r.tag) != null && (null == e ? void 0 : null === (i = e.clan) || void 0 === i ? void 0 : i.tag) !== n.tag) || null == n.identityEnabled);
 }
-function g(e, t) {
-    return (null != e && null != t && null != t.identityGuildId && t.identityGuildId === e && !!t.identityEnabled) || !1;
+function E(e, n) {
+    return (null != e && null != n && null != n.identityGuildId && n.identityGuildId === e && !!n.identityEnabled) || !1;
 }
-let E = (e, t) => {
+let v = (e, n) => {
         if (0 === e.length) return null;
         if (1 === e.length) return e[1];
         if (2 === e.length)
-            return f.intl.formatToPlainString(f.t['+v1gGx'], {
+            return _.intl.formatToPlainString(_.t['+v1gGx'], {
                 item1: e[0],
                 item2: e[1]
             });
-        if (null != t && e.length > t) {
-            let n = e.slice(0, t).join(', '),
-                r = f.intl.formatToPlainString(f.t['+E2fNj'], { n: e.length - t });
-            return f.intl.formatToPlainString(f.t.hZNSNz, {
+        if (null != n && e.length > n) {
+            let r = e.slice(0, n).join(', '),
+                i = _.intl.formatToPlainString(_.t['+E2fNj'], { n: e.length - n });
+            return _.intl.formatToPlainString(_.t.hZNSNz, {
+                items: r,
+                last: i
+            });
+        }
+        {
+            let n = e.slice(0, -1).join(', '),
+                r = e[e.length - 1];
+            return _.intl.formatToPlainString(_.t.hZNSNz, {
                 items: n,
                 last: r
             });
         }
-        {
-            let t = e.slice(0, -1).join(', '),
-                n = e[e.length - 1];
-            return f.intl.formatToPlainString(f.t.hZNSNz, {
-                items: t,
-                last: n
-            });
-        }
     },
-    v = {
-        [c.NC.SIZE_12]: 16,
-        [c.NC.SIZE_16]: 16,
-        [c.NC.SIZE_24]: 24,
-        [c.NC.SIZE_32]: 32,
-        [c.NC.SIZE_36]: 40
+    I = {
+        [d.NC.SIZE_12]: 16,
+        [d.NC.SIZE_16]: 16,
+        [d.NC.SIZE_24]: 24,
+        [d.NC.SIZE_32]: 32,
+        [d.NC.SIZE_36]: 40
     };
-function I(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.NC.SIZE_12;
-    if (null == t) return;
+function T(e, n) {
+    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.NC.SIZE_12;
+    if (null == n) return;
+    let { CDN_HOST: i } = window.GLOBAL_ENV;
+    if (null == i) return;
+    let a = I[r];
+    return ''.concat(location.protocol, '//').concat(i, '/clan-badges/').concat(e, '/').concat(n, '.png?size=').concat(a);
+}
+d.NC.SIZE_12, d.NC.SIZE_16, d.NC.SIZE_24, d.NC.SIZE_32, d.NC.SIZE_36;
+function b(e, n) {
+    if (null == n) return;
     let { CDN_HOST: r } = window.GLOBAL_ENV;
-    if (null == r) return;
-    let i = v[n];
-    return ''.concat(location.protocol, '//').concat(r, '/clan-badges/').concat(e, '/').concat(t, '.png?size=').concat(i);
+    if (null != r) return ''.concat(location.protocol, '//').concat(r, '/clan-banners/').concat(e, '/').concat(n, '.png?size=512');
 }
-function T(e, t) {
-    if (null == t) return;
-    let { CDN_HOST: n } = window.GLOBAL_ENV;
-    if (null != n) return ''.concat(location.protocol, '//').concat(n, '/clan-banners/').concat(e, '/').concat(t, '.png?size=512');
-}
-function b(e, t) {
-    let n = (0, a.e7)([s.Z], () => s.Z.hideTags),
-        r = (0, a.e7)([u.default], () => u.default.getUser(e), [e]),
-        i = (0, a.e7)(
-            [l.ZP],
+function y(e, n) {
+    let r = (0, s.e7)([o.Z], () => o.Z.hideTags),
+        i = (0, s.e7)([c.default], () => c.default.getUser(e), [e]),
+        a = (0, s.e7)(
+            [u.ZP],
             () => {
-                if (null == t || null == e) return null;
-                let n = l.ZP.getMember(t, e);
-                return (0, o.EY)(n);
+                if (null == n || null == e) return null;
+                let r = u.ZP.getMember(n, e);
+                return (0, l.EY)(r);
             },
-            [t, e]
+            [n, e]
         ),
-        { tag: c, guildId: d } = p(null == r ? void 0 : r.clan);
-    return !n && null != d && null != c && !i && !0;
+        { tag: d, guildId: f } = p(null == i ? void 0 : i.clan);
+    return !r && null != f && null != d && !a && !0;
 }
-c.NC.SIZE_12, c.NC.SIZE_16, c.NC.SIZE_24, c.NC.SIZE_32, c.NC.SIZE_36;

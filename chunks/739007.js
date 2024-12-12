@@ -1,47 +1,47 @@
-n.d(t, {
+r.d(n, {
     _: function () {
-        return l;
+        return u;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(561779),
-    s = n(960451);
-let o = (e) => ''.concat(e.toFixed(0), '%'),
-    l = i.forwardRef(function (e, t) {
-        let { value: n, minValue: l = 0, maxValue: u = 100, onChange: c, renderValue: d = o, 'aria-label': f } = e,
-            _ = i.useRef(null);
+var i = r(200651),
+    a = r(192379),
+    s = r(561779),
+    o = r(960451);
+let l = (e) => ''.concat(e.toFixed(0), '%'),
+    u = a.forwardRef(function (e, n) {
+        let { value: r, minValue: u = 0, maxValue: c = 100, onChange: d, renderValue: f = l, 'aria-label': _ } = e,
+            h = a.useRef(null);
         return (
-            i.useImperativeHandle(
-                t,
+            a.useImperativeHandle(
+                n,
                 () => ({
                     focus: () => {
                         var e;
-                        return null === (e = _.current) || void 0 === e ? void 0 : e.focus();
+                        return null === (e = h.current) || void 0 === e ? void 0 : e.focus();
                     },
                     blur: () => {
                         var e;
-                        return null === (e = _.current) || void 0 === e ? void 0 : e.blur();
+                        return null === (e = h.current) || void 0 === e ? void 0 : e.blur();
                     },
                     activate: () => !1
                 }),
                 []
             ),
-            (0, r.jsx)('div', {
-                className: s.sliderContainer,
-                children: (0, r.jsx)(a.i, {
-                    ref: _,
+            (0, i.jsx)('div', {
+                className: o.sliderContainer,
+                children: (0, i.jsx)(s.i, {
+                    ref: h,
                     mini: !0,
                     handleSize: 16,
-                    className: s.slider,
-                    initialValue: n,
-                    minValue: l,
-                    maxValue: u,
-                    onValueChange: c,
-                    asValueChanges: c,
-                    onValueRender: d,
+                    className: o.slider,
+                    initialValue: r,
+                    minValue: u,
+                    maxValue: c,
+                    onValueChange: d,
+                    asValueChanges: d,
+                    onValueRender: f,
                     orientation: 'horizontal',
-                    'aria-label': f
+                    'aria-label': _
                 })
             })
         );

@@ -1,41 +1,41 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
         return p;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(512722),
-    a = n.n(i),
-    s = n(442837),
-    o = n(481060),
-    l = n(410575),
-    u = n(594174),
-    c = n(907285),
-    d = n(737013),
-    f = n(981631),
-    _ = n(388032);
+var i = r(200651);
+r(192379);
+var a = r(512722),
+    s = r.n(a),
+    o = r(442837),
+    l = r(481060),
+    u = r(410575),
+    c = r(594174),
+    d = r(907285),
+    f = r(737013),
+    _ = r(981631),
+    h = r(388032);
 function p(e) {
-    let { onClose: t, onSelect: n } = e,
-        i = (0, s.e7)([u.default], () => {
-            let e = u.default.getCurrentUser();
-            return a()(null != e, 'VideoDeviceMenu: currentUser cannot be undefined'), e;
+    let { onClose: n, onSelect: r } = e,
+        a = (0, o.e7)([c.default], () => {
+            let e = c.default.getCurrentUser();
+            return s()(null != e, 'VideoDeviceMenu: currentUser cannot be undefined'), e;
         }),
-        p = (0, c.Z)(),
-        h = (0, d.Z)(i.id);
-    return (0, r.jsx)(l.Z, {
-        object: f.qAy.CONTEXT_MENU,
-        children: (0, r.jsxs)(o.Menu, {
-            onClose: t,
+        p = (0, d.Z)(),
+        m = (0, f.Z)(a.id);
+    return (0, i.jsx)(u.Z, {
+        object: _.qAy.CONTEXT_MENU,
+        children: (0, i.jsxs)(l.Menu, {
+            onClose: n,
             navId: 'video-device-context',
-            'aria-label': _.intl.string(_.t.F122Gx),
-            onSelect: n,
+            'aria-label': h.intl.string(h.t.F122Gx),
+            onSelect: r,
             children: [
-                (0, r.jsx)(o.MenuGroup, {
-                    label: _.intl.string(_.t.F122Gx),
+                (0, i.jsx)(l.MenuGroup, {
+                    label: h.intl.string(h.t.F122Gx),
                     children: p
                 }),
-                (0, r.jsx)(o.MenuGroup, { children: h })
+                (0, i.jsx)(l.MenuGroup, { children: m })
             ]
         })
     });

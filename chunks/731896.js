@@ -1,19 +1,19 @@
-n.d(t, {
+r.d(n, {
     V: function () {
-        return o;
+        return l;
     }
 });
-var r = n(192379),
-    i = n(442837),
-    a = n(365943),
-    s = n(25251);
-let o = (e) => {
-    let t = (0, i.e7)([s.Z], () => s.Z.getProfileEffectById(e)),
-        n = null != t;
+var i = r(192379),
+    a = r(442837),
+    s = r(365943),
+    o = r(25251);
+let l = (e) => {
+    let n = (0, a.e7)([o.Z], () => o.Z.getProfileEffectById(e)),
+        r = null != n;
     return (
-        r.useEffect(() => {
-            null != e && !n && (0, a.z)(!0);
-        }, [e, n]),
-        t
+        i.useEffect(() => {
+            null != e && !r && (0, s.z)(!0);
+        }, [e, r]),
+        n
     );
 };

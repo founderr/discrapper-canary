@@ -1,21 +1,21 @@
-var r = {
+var i = {
     './spritesheet-emoji-32.png': '63215',
     './spritesheet-emoji-40.png': '926720',
     './spritesheet-emoji-48.png': '178915'
 };
-function i(e) {
-    return n(a(e));
-}
 function a(e) {
-    if (!n.o(r, e)) {
-        var t = Error("Cannot find module '" + e + "'");
-        throw ((t.code = 'MODULE_NOT_FOUND'), t);
-    }
-    return r[e];
+    return r(s(e));
 }
-(i.keys = function () {
-    return Object.keys(r);
+function s(e) {
+    if (!r.o(i, e)) {
+        var n = Error("Cannot find module '" + e + "'");
+        throw ((n.code = 'MODULE_NOT_FOUND'), n);
+    }
+    return i[e];
+}
+(a.keys = function () {
+    return Object.keys(i);
 }),
-    (i.resolve = a),
-    (e.exports = i),
-    (i.id = '604901');
+    (a.resolve = s),
+    (e.exports = a),
+    (a.id = '604901');

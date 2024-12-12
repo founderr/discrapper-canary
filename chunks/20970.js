@@ -1,53 +1,53 @@
-n.d(t, {
+r.d(n, {
     j: function () {
         return p;
     }
 });
-var r = n(302454);
-let { newline: i, paragraph: a, url: s, link: o, strong: l, u, br: c, em: d, image: f, text: _ } = r.defaultRules,
+var i = r(302454);
+let { newline: a, paragraph: s, url: o, link: l, strong: u, u: c, br: d, em: f, image: _, text: h } = i.defaultRules,
     p = {
-        newline: i,
-        paragraph: a,
-        url: s,
+        newline: a,
+        paragraph: s,
+        url: o,
         link: {
-            ...o,
-            parse(e, t, n) {
-                let r = o.parse(e, t, n);
-                return (r.context = n.context), r;
+            ...l,
+            parse(e, n, r) {
+                let i = l.parse(e, n, r);
+                return (i.context = r.context), i;
             }
         },
-        strong: l,
-        u,
-        br: c,
-        em: d,
-        image: f,
+        strong: u,
+        u: c,
+        br: d,
+        em: f,
+        image: _,
         hook: {
-            order: _.order,
-            match: (0, r.inlineRegex)(/^\$\[(.*?)\]\((\w+)\)/),
-            parse(e, t, n) {
-                let { context: r } = n;
+            order: h.order,
+            match: (0, i.inlineRegex)(/^\$\[(.*?)\]\((\w+)\)/),
+            parse(e, n, r) {
+                let { context: i } = r;
                 return {
-                    render: r[e[2]],
-                    content: t(e[1], n)
+                    render: i[e[2]],
+                    content: n(e[1], r)
                 };
             },
-            react: (e, t, n) => e.render(t(e.content, n), n.key)
+            react: (e, n, r) => e.render(n(e.content, r), r.key)
         },
         noparse: {
-            order: _.order,
-            match: (0, r.inlineRegex)(/^!!(\d+?)!!/),
-            parse(e, t, n) {
-                let { unsafeContext: r } = n,
-                    i = r[e[1]];
+            order: h.order,
+            match: (0, i.inlineRegex)(/^!!(\d+?)!!/),
+            parse(e, n, r) {
+                let { unsafeContext: i } = r,
+                    a = i[e[1]];
                 return (
-                    'string' != typeof i && (i = null != i ? i.toString() : ''),
+                    'string' != typeof a && (a = null != a ? a.toString() : ''),
                     {
                         type: 'text',
-                        content: i
+                        content: a
                     }
                 );
             },
             react: (e) => e.content
         },
-        text: _
+        text: h
     };

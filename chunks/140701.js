@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     W: function () {
-        return i;
+        return a;
     }
 });
-var r = n(592125);
-function i(e, t) {
-    let n = r.Z.getChannel(t);
-    return null != n && e.bot && n.isPrivate() && null == n.rawRecipients.find((t) => t.id === e.id);
+var i = r(592125);
+function a(e, n) {
+    let r = i.Z.getChannel(n);
+    return null != r && e.bot && r.isPrivate() && null == r.rawRecipients.find((n) => n.id === e.id);
 }

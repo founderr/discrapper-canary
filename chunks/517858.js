@@ -1,12 +1,12 @@
-n.d(t, {
+r.d(n, {
     C3: function () {
-        return a;
+        return s;
     },
     GW: function () {
-        return i;
+        return a;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
     kind: 'user',
     id: '2024-08_keyword_filter_upsells',
     label: 'Language Filter Upsells',
@@ -19,13 +19,13 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i(e) {
-    let { location: t } = e,
-        { enabled: n } = r.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
-    return n;
-}
 function a(e) {
-    let { location: t } = e,
-        { enabled: n } = r.useExperiment({ location: t }, { autoTrackExposure: !0 });
-    return n;
+    let { location: n } = e,
+        { enabled: r } = i.getCurrentConfig({ location: n }, { autoTrackExposure: !0 });
+    return r;
+}
+function s(e) {
+    let { location: n } = e,
+        { enabled: r } = i.useExperiment({ location: n }, { autoTrackExposure: !0 });
+    return r;
 }

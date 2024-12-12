@@ -1,7 +1,7 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 }),
     window.GLOBAL_ENV.RELEASE_CHANNEL;
-let r = window.GLOBAL_ENV.RELEASE_CHANNEL;
+let i = window.GLOBAL_ENV.RELEASE_CHANNEL;

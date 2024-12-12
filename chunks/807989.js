@@ -1,87 +1,87 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return m;
+        return S;
     }
-}),
-    n(789020),
-    n(315314),
-    n(610138),
-    n(216116),
-    n(78328),
-    n(815648),
-    n(47120);
-var r = n(200651);
-n(192379);
-var i = n(243814),
-    a = n(993365),
-    s = n(481060),
-    o = n(979200),
-    l = n(630388),
-    u = n(709054),
-    c = n(941532),
-    d = n(713938),
-    f = n(981631),
-    _ = n(388032),
-    p = n(452398);
-let h = (e) => {
+});
+var i = r(789020);
+var a = r(315314);
+var s = r(610138);
+var o = r(216116);
+var l = r(78328);
+var u = r(815648);
+var c = r(47120);
+var d = r(200651);
+r(192379);
+var f = r(243814),
+    _ = r(993365),
+    h = r(481060),
+    p = r(979200),
+    m = r(630388),
+    g = r(709054),
+    E = r(941532),
+    v = r(713938),
+    I = r(981631),
+    T = r(388032),
+    b = r(452398);
+let y = (e) => {
     switch (e) {
-        case o.ZC.IP_LOCATION:
-            return s.GlobeEarthIcon;
-        case o.ZC.DISPLAYS_ADVERTISEMENTS:
-            return s.EmbedIcon;
+        case p.ZC.IP_LOCATION:
+            return h.GlobeEarthIcon;
+        case p.ZC.DISPLAYS_ADVERTISEMENTS:
+            return h.EmbedIcon;
         default:
             return null;
     }
 };
-function m(e) {
-    var t;
-    let n,
-        { application: a, scopes: m, redirectUri: E, approximateGuildCount: v, isEmbeddedFlow: I, disclosures: T } = e,
-        b = new Date(u.default.extractTimestamp(a.id)),
-        S = (0, d.W3)(m),
-        y = (0, l.yE)(null !== (t = a.flags) && void 0 !== t ? t : 0, f.udG.EMBEDDED);
-    if (null != E && !y && !I)
+function S(e) {
+    var n;
+    let r,
+        { application: i, scopes: a, redirectUri: s, approximateGuildCount: o, isEmbeddedFlow: l, disclosures: u } = e,
+        c = new Date(g.default.extractTimestamp(i.id)),
+        _ = (0, v.W3)(a),
+        S = (0, m.yE)(null !== (n = i.flags) && void 0 !== n ? n : 0, I.udG.EMBEDDED);
+    if (null != s && !S && !l)
         try {
-            let e = new URL(E);
-            n = null != e.host && e.host.length > 0 ? e.origin : e.href;
+            let e = new URL(s);
+            r = null != e.host && e.host.length > 0 ? e.origin : e.href;
         } catch (e) {
-            n = null;
+            r = null;
         }
-    return (0, r.jsxs)('div', {
-        className: p.applicationDetails,
+    return (0, d.jsxs)('div', {
+        className: b.applicationDetails,
         children: [
-            null != n
-                ? (0, r.jsx)(g, {
-                      icon: s.LinkIcon,
-                      text: _.intl.format(_.t['5k5OKC'], { origin: n })
+            null != r
+                ? (0, d.jsx)(A, {
+                      icon: h.LinkIcon,
+                      text: T.intl.format(T.t['5k5OKC'], { origin: r })
                   })
                 : null,
-            (0, r.jsx)(g, {
-                icon: s.LockIcon,
-                text: (0, c.i)(a)
+            (0, d.jsx)(A, {
+                icon: h.LockIcon,
+                text: (0, E.i)(i)
             }),
-            (0, r.jsx)(g, {
-                icon: s.ClockIcon,
-                text: _.intl.formatToPlainString(_.t['+1bjc3'], { date: b })
+            (0, d.jsx)(A, {
+                icon: h.ClockIcon,
+                text: T.intl.formatToPlainString(T.t['+1bjc3'], { date: c })
             }),
-            m.includes(i.x.BOT) && null != v
-                ? (0, r.jsx)(g, {
-                      icon: s.RobotIcon,
-                      text: _.intl.formatToPlainString(_.t.UHGHSE, { guildCount: v })
+            a.includes(f.x.BOT) && null != o
+                ? (0, d.jsx)(A, {
+                      icon: h.RobotIcon,
+                      text: T.intl.formatToPlainString(T.t.UHGHSE, { guildCount: o })
                   })
                 : null,
-            (0, r.jsx)(g, {
-                icon: s.ShieldIcon,
-                text: S
+            (0, d.jsx)(A, {
+                icon: h.ShieldIcon,
+                text: _
             }),
-            null != T
-                ? T.map((e) => {
-                      let t = (0, o.PM)(e),
-                          n = h(e);
-                      return null != n && null != t
-                          ? (0, r.jsx)(g, {
-                                icon: n,
-                                text: t
+            null != u
+                ? u.map((e) => {
+                      let n = (0, p.PM)(e),
+                          r = y(e);
+                      return null != r && null != n
+                          ? (0, d.jsx)(A, {
+                                icon: r,
+                                text: n
                             })
                           : null;
                   })
@@ -89,19 +89,19 @@ function m(e) {
         ]
     });
 }
-function g(e) {
-    let { icon: t, text: n } = e;
-    return (0, r.jsxs)('div', {
-        className: p.entry,
+function A(e) {
+    let { icon: n, text: r } = e;
+    return (0, d.jsxs)('div', {
+        className: b.entry,
         children: [
-            (0, r.jsx)(t, {
-                className: p.entryIcon,
+            (0, d.jsx)(n, {
+                className: b.entryIcon,
                 color: 'currentColor'
             }),
-            (0, r.jsx)(a.x, {
+            (0, d.jsx)(_.x, {
                 variant: 'text-xs/normal',
-                className: p.entryInner,
-                children: n
+                className: b.entryInner,
+                children: r
             })
         ]
     });

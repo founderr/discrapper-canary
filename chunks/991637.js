@@ -1,17 +1,17 @@
-var r = n(705806),
-    i = n(286233),
-    a = n(535213),
-    s = n(383252),
-    o = n(234268),
-    l = n(751340);
-a();
-var u = r(o()),
-    c = function (e) {
-        return u(void 0 === this ? Promise : this, e);
+var i = r(705806),
+    a = r(286233),
+    s = r(535213),
+    o = r(383252),
+    l = r(234268),
+    u = r(751340);
+s();
+var c = i(l()),
+    d = function (e) {
+        return c(void 0 === this ? Promise : this, e);
     };
-i(c, {
-    getPolyfill: o,
-    implementation: s,
-    shim: l
+a(d, {
+    getPolyfill: l,
+    implementation: o,
+    shim: u
 }),
-    (e.exports = c);
+    (e.exports = d);

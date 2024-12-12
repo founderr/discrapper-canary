@@ -1,7 +1,7 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = { longPressMessage: `Premere a lungo o premere Alt + Freccia gi\xf9 per aprire il menu` };
+var i = {};
+i = { longPressMessage: `Premere a lungo o premere Alt + Freccia gi\xf9 per aprire il menu` };

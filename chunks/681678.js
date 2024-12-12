@@ -1,29 +1,29 @@
-var r = n(481060),
-    i = n(633182),
-    a = n(484710);
-t.Z = {
-    showIgnoreSuccessToast(e, t) {
-        (0, r.showToast)((0, r.createToast)((0, i.o)(a.w.IGNORE_SUCCESS, e, t), r.ToastType.SUCCESS));
+var i = r(481060),
+    a = r(633182),
+    s = r(484710);
+n.Z = {
+    showIgnoreSuccessToast(e, n) {
+        (0, i.showToast)((0, i.createToast)((0, a.o)(s.w.IGNORE_SUCCESS, e, n), i.ToastType.SUCCESS));
     },
-    showUnignoreSuccessToast(e, t) {
-        (0, r.showToast)((0, r.createToast)((0, i.o)(a.w.UNIGNORE_SUCCESS, e, t), r.ToastType.SUCCESS));
+    showUnignoreSuccessToast(e, n) {
+        (0, i.showToast)((0, i.createToast)((0, a.o)(s.w.UNIGNORE_SUCCESS, e, n), i.ToastType.SUCCESS));
     },
-    showBlockSuccessToast(e, t) {
-        (0, r.showToast)((0, r.createToast)((0, i.o)(a.w.BLOCK_SUCCESS, e, t), r.ToastType.SUCCESS));
+    showBlockSuccessToast(e, n) {
+        (0, i.showToast)((0, i.createToast)((0, a.o)(s.w.BLOCK_SUCCESS, e, n), i.ToastType.SUCCESS));
     },
-    showUnblockSuccessToast(e, t) {
-        (0, r.showToast)((0, r.createToast)((0, i.o)(a.w.UNBLOCK_SUCCESS, e, t), r.ToastType.SUCCESS));
+    showUnblockSuccessToast(e, n) {
+        (0, i.showToast)((0, i.createToast)((0, a.o)(s.w.UNBLOCK_SUCCESS, e, n), i.ToastType.SUCCESS));
     },
-    showMuteSuccessToast(e, t) {
-        (0, r.showToast)((0, r.createToast)((0, i.o)(a.w.MUTE_SUCCESS, e, t), r.ToastType.SUCCESS));
+    showMuteSuccessToast(e, n) {
+        (0, i.showToast)((0, i.createToast)((0, a.o)(s.w.MUTE_SUCCESS, e, n), i.ToastType.SUCCESS));
     },
-    showUnmuteSuccessToast(e, t) {
-        (0, r.showToast)((0, r.createToast)((0, i.o)(a.w.UNMUTE_SUCCESS, e, t), r.ToastType.SUCCESS));
+    showUnmuteSuccessToast(e, n) {
+        (0, i.showToast)((0, i.createToast)((0, a.o)(s.w.UNMUTE_SUCCESS, e, n), i.ToastType.SUCCESS));
     },
-    showReportSuccessToast(e, t) {
-        (0, r.showToast)((0, r.createToast)((0, i.o)(a.w.REPORT_SUCCESS, e, t), r.ToastType.SUCCESS));
+    showReportSuccessToast(e, n) {
+        (0, i.showToast)((0, i.createToast)((0, a.o)(s.w.REPORT_SUCCESS, e, n), i.ToastType.SUCCESS));
     },
     showFailedToast() {
-        (0, r.showToast)((0, r.createToast)((0, i.o)(a.w.GENERIC_ERROR), r.ToastType.FAILURE));
+        (0, i.showToast)((0, i.createToast)((0, a.o)(s.w.GENERIC_ERROR), i.ToastType.FAILURE));
     }
 };

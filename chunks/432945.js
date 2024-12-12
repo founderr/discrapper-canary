@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     S: function () {
-        return i;
+        return a;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
         id: '2024-03_quests_activity_quest',
         kind: 'user',
         label: 'Activity Quest',
@@ -21,7 +21,7 @@ let r = (0, n(818083).B)({
             }
         ]
     }),
-    i = (e) => {
-        let { location: t, autoTrackExposure: n } = e;
-        return r.getCurrentConfig({ location: t }, { autoTrackExposure: n }).enabled;
+    a = (e) => {
+        let { location: n, autoTrackExposure: r } = e;
+        return i.getCurrentConfig({ location: n }, { autoTrackExposure: r }).enabled;
     };

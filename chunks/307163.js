@@ -1,6 +1,6 @@
 IntlMessageFormat.__addLocaleData({
     locale: 'ko',
-    pluralRuleFunction: function (e, t) {
+    pluralRuleFunction: function (e, n) {
         return 'other';
     }
 }),

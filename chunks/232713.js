@@ -1,28 +1,28 @@
-n.d(t, {
+r.d(n, {
     X: function () {
-        return o;
+        return l;
     }
 });
-let r = (e) => Symbol.iterator in e,
-    i = (e) => 'entries' in e,
-    a = (e, t) => {
-        let n = e instanceof Map ? e : new Map(e.entries()),
-            r = t instanceof Map ? t : new Map(t.entries());
-        if (n.size !== r.size) return !1;
-        for (let [e, t] of n) if (!Object.is(t, r.get(e))) return !1;
+let i = (e) => Symbol.iterator in e,
+    a = (e) => 'entries' in e,
+    s = (e, n) => {
+        let r = e instanceof Map ? e : new Map(e.entries()),
+            i = n instanceof Map ? n : new Map(n.entries());
+        if (r.size !== i.size) return !1;
+        for (let [e, n] of r) if (!Object.is(n, i.get(e))) return !1;
         return !0;
     },
-    s = (e, t) => {
-        let n = e[Symbol.iterator](),
-            r = t[Symbol.iterator](),
-            i = n.next(),
-            a = r.next();
-        for (; !i.done && !a.done; ) {
-            if (!Object.is(i.value, a.value)) return !1;
-            (i = n.next()), (a = r.next());
+    o = (e, n) => {
+        let r = e[Symbol.iterator](),
+            i = n[Symbol.iterator](),
+            a = r.next(),
+            s = i.next();
+        for (; !a.done && !s.done; ) {
+            if (!Object.is(a.value, s.value)) return !1;
+            (a = r.next()), (s = i.next());
         }
-        return !!i.done && !!a.done;
+        return !!a.done && !!s.done;
     };
-function o(e, t) {
-    return !!Object.is(e, t) || ('object' == typeof e && null !== e && 'object' == typeof t && null !== t && (r(e) && r(t) ? (i(e) && i(t) ? a(e, t) : s(e, t)) : a({ entries: () => Object.entries(e) }, { entries: () => Object.entries(t) })));
+function l(e, n) {
+    return !!Object.is(e, n) || ('object' == typeof e && null !== e && 'object' == typeof n && null !== n && (i(e) && i(n) ? (a(e) && a(n) ? s(e, n) : o(e, n)) : s({ entries: () => Object.entries(e) }, { entries: () => Object.entries(n) })));
 }

@@ -1,8 +1,8 @@
-function r(e) {
+function i(e) {
     return e.split('-')[1];
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

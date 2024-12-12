@@ -1,11 +1,11 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(192379);
-let i = {};
-function a(e) {
-    let t = (0, r.useRef)(i);
-    return t.current === i && (t.current = e()), t.current;
+var i = r(192379);
+let a = {};
+function s(e) {
+    let n = (0, i.useRef)(a);
+    return n.current === a && (n.current = e()), n.current;
 }

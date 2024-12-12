@@ -1,50 +1,50 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return d;
+        return f;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(442837),
-    l = n(481060),
-    u = n(607070),
-    c = n(721148);
-function d(e) {
-    let { children: t, heading: n, subheading: a, className: d, scrollIntoView: f = !1, headingColor: _ = 'header-secondary' } = e,
-        p = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-        h = i.useRef(null);
+var i = r(200651),
+    a = r(192379),
+    s = r(120356),
+    o = r.n(s),
+    l = r(442837),
+    u = r(481060),
+    c = r(607070),
+    d = r(721148);
+function f(e) {
+    let { children: n, heading: r, subheading: s, className: f, scrollIntoView: _ = !1, headingColor: h = 'header-secondary' } = e,
+        p = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
+        m = a.useRef(null);
     return (
-        i.useEffect(() => {
-            let e = h.current;
+        a.useEffect(() => {
+            let e = m.current;
             if (null == e) return;
-            let t = requestAnimationFrame(() => {
+            let n = requestAnimationFrame(() => {
                 e.scrollIntoView({ behavior: p ? 'auto' : 'smooth' });
             });
-            return () => cancelAnimationFrame(t);
+            return () => cancelAnimationFrame(n);
         }, [p]),
-        (0, r.jsxs)('section', {
-            ref: f ? h : void 0,
-            className: s()(c.section, d),
+        (0, i.jsxs)('section', {
+            ref: _ ? m : void 0,
+            className: o()(d.section, f),
             children: [
-                null != n &&
-                    (0, r.jsxs)('div', {
-                        className: c.headings,
+                null != r &&
+                    (0, i.jsxs)('div', {
+                        className: d.headings,
                         children: [
-                            (0, r.jsx)(l.Heading, {
+                            (0, i.jsx)(u.Heading, {
                                 variant: 'text-xs/semibold',
-                                color: _,
-                                children: n
+                                color: h,
+                                children: r
                             }),
-                            null != a &&
-                                (0, r.jsx)(l.Text, {
+                            null != s &&
+                                (0, i.jsx)(u.Text, {
                                     variant: 'text-xs/normal',
-                                    children: a
+                                    children: s
                                 })
                         ]
                     }),
-                t
+                n
             ]
         })
     );

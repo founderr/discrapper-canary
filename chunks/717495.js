@@ -1,6 +1,6 @@
-n.d(t, {
+r.d(n, {
     F: function () {
-        return r;
+        return i;
     }
 });
-let r = { immediate: !0 };
+let i = { immediate: !0 };

@@ -1,45 +1,45 @@
-n.d(t, {
+r.d(n, {
     J1: function () {
-        return l;
-    },
-    Vk: function () {
         return u;
     },
+    Vk: function () {
+        return c;
+    },
     cD: function () {
-        return o;
+        return l;
     },
     hP: function () {
-        return i;
-    },
-    pM: function () {
         return a;
     },
-    qA: function () {
+    pM: function () {
         return s;
+    },
+    qA: function () {
+        return o;
     }
 });
-var r = n(570140);
-function i() {
-    r.Z.dispatch({ type: 'PERMIUM_PERKS_DEMO_FRAME_ANIMATION_PLAYED' });
-}
+var i = r(570140);
 function a() {
-    r.Z.dispatch({ type: 'PREMIUM_PERKS_DEMO_POPOUT_DISMISSED' });
+    i.Z.dispatch({ type: 'PERMIUM_PERKS_DEMO_FRAME_ANIMATION_PLAYED' });
 }
 function s() {
-    r.Z.dispatch({ type: 'PREMIUM_PERKS_DEMO_OPT_IN_POPOUT_DISMISSED' });
+    i.Z.dispatch({ type: 'PREMIUM_PERKS_DEMO_POPOUT_DISMISSED' });
 }
-function o(e) {
-    r.Z.dispatch({
+function o() {
+    i.Z.dispatch({ type: 'PREMIUM_PERKS_DEMO_OPT_IN_POPOUT_DISMISSED' });
+}
+function l(e) {
+    i.Z.dispatch({
         type: 'PREMIUM_PERKS_DEMO_OPT_IN_POPOUT_SHOULD_SHOW',
         shouldShow: e
     });
 }
-function l(e) {
-    r.Z.dispatch({
+function u(e) {
+    i.Z.dispatch({
         type: 'PREMIUM_PERKS_DEMO_ENABLED',
         enabled: e
     });
 }
-function u() {
-    r.Z.dispatch({ type: 'PREMIUM_PERKS_DEMO_UI_RESET' });
+function c() {
+    i.Z.dispatch({ type: 'PREMIUM_PERKS_DEMO_UI_RESET' });
 }

@@ -1,33 +1,33 @@
-var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(433517),
-    u = n(570140);
-let c = 'GuildNSFWAgreeStore',
-    d = {};
-class f extends (s = o.ZP.Store) {
+var i,
+    a = r(442837),
+    s = r(433517),
+    o = r(570140);
+function l(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+let u = 'GuildNSFWAgreeStore',
+    c = {};
+function d(e) {
+    let { guildId: n } = e;
+    (c[n] = !0), s.K.set(u, c);
+}
+class f extends (i = a.ZP.Store) {
     initialize() {
         var e;
-        d = null !== (e = l.K.get(c)) && void 0 !== e ? e : d;
+        c = null !== (e = s.K.get(u)) && void 0 !== e ? e : c;
     }
     didAgree(e) {
-        return null != e && (d[e] || !1);
+        return null != e && (c[e] || !1);
     }
 }
-(a = 'GuildNSFWAgreeStore'),
-    (i = 'displayName') in (r = f)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.Z = new f(u.Z, {
-        GUILD_NSFW_AGREE: function (e) {
-            let { guildId: t } = e;
-            (d[t] = !0), l.K.set(c, d);
-        }
-    }));
+l(f, 'displayName', 'GuildNSFWAgreeStore'), (n.Z = new f(o.Z, { GUILD_NSFW_AGREE: d }));

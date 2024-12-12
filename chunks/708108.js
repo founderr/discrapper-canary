@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(388032);
-function i(e) {
-    return void 0 === e ? r.intl.string(r.t['0mTJ3t']) : 0 === e ? r.intl.string(r.t.n9g3a2) : r.intl.formatToPlainString(r.t['5s9jl5'], { count: e });
+var i = r(388032);
+function a(e) {
+    return void 0 === e ? i.intl.string(i.t['0mTJ3t']) : 0 === e ? i.intl.string(i.t.n9g3a2) : i.intl.formatToPlainString(i.t['5s9jl5'], { count: e });
 }

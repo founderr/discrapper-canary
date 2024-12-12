@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     P: function () {
-        return i;
+        return a;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
     kind: 'user',
     id: '2024-08_private_channel_hiding',
     label: 'Private Channel Hiding',
@@ -30,6 +30,6 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i() {
-    return r.getCurrentConfig({ location: '1' }).enableObfuscation;
+function a() {
+    return i.getCurrentConfig({ location: '1' }).enableObfuscation;
 }

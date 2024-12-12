@@ -1,13 +1,13 @@
-n.d(t, {
+r.d(n, {
     n: function () {
-        return o;
+        return l;
     }
 });
-var r = n(192379),
-    i = n(442837),
-    a = n(40851),
-    s = n(451478);
-function o() {
-    let { windowId: e } = r.useContext(a.ZP);
-    return (0, i.e7)([s.Z], () => s.Z.isFocused(e), [e]);
+var i = r(192379),
+    a = r(442837),
+    s = r(40851),
+    o = r(451478);
+function l() {
+    let { windowId: e } = i.useContext(s.ZP);
+    return (0, a.e7)([o.Z], () => o.Z.isFocused(e), [e]);
 }

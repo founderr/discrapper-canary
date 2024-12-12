@@ -1,33 +1,33 @@
-n.d(t, {
+r.d(n, {
     ZP: function () {
-        return i;
+        return s;
     },
     _$: function () {
-        return a;
+        return o;
     },
     d7: function () {
-        return s;
+        return l;
     }
-}),
-    n(47120);
-var r = n(149765);
-function i(e) {
-    for (let { permissionOverwrites_: t } of e)
-        if (null != t)
-            for (let e in t) {
-                let n = t[e];
-                (n.allow = r.vB(n.allow)), (n.deny = r.vB(n.deny));
+});
+var i = r(47120);
+var a = r(149765);
+function s(e) {
+    for (let { permissionOverwrites_: n } of e)
+        if (null != n)
+            for (let e in n) {
+                let r = n[e];
+                (r.allow = a.vB(r.allow)), (r.deny = a.vB(r.deny));
             }
 }
-function a(e) {
-    for (let [t, n] of e) i(n);
+function o(e) {
+    for (let [n, r] of e) s(r);
 }
-function s(e) {
-    let { permissionOverwrites_: t } = e;
-    if (null != t)
-        for (let e in t) {
-            let n = t[e];
-            (n.allow = r.vB(n.allow)), (n.deny = r.vB(n.deny));
+function l(e) {
+    let { permissionOverwrites_: n } = e;
+    if (null != n)
+        for (let e in n) {
+            let r = n[e];
+            (r.allow = a.vB(r.allow)), (r.deny = a.vB(r.deny));
         }
     return e;
 }

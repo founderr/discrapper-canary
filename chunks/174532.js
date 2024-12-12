@@ -1,25 +1,25 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return l;
     }
-}),
-    n(47120);
-var r = n(445686),
-    i = n(379649);
-function a(e, t, n) {
+});
+var i = r(47120);
+var a = r(445686),
+    s = r(379649);
+function o(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-class s {
+class l {
     start() {
         this.listeningUsers.clear(),
             this.listening.reset(),
@@ -27,15 +27,15 @@ class s {
             this.participation.reset(),
             this.connected.reset(),
             this.connected.start(),
-            this.connection.on(r.S.Speaking, (e, t, n) => {
-                this.userId === e ? this.onSpeaking(0 !== t) : this.onListening(0 !== t, e);
+            this.connection.on(a.S.Speaking, (e, n, r) => {
+                this.userId === e ? this.onSpeaking(0 !== n) : this.onListening(0 !== n, e);
             });
     }
     onSpeaking(e) {
         e ? (this.speaking.start(), this.participation.start()) : (this.speaking.stop(), !this.listening.isRunning() && this.participation.stop());
     }
-    onListening(e, t) {
-        e ? (this.listeningUsers.add(t), this.listening.start(), this.participation.start()) : this.listeningUsers.delete(t) && 0 === this.listeningUsers.size && (this.listening.stop(), !this.speaking.isRunning() && this.participation.stop());
+    onListening(e, n) {
+        e ? (this.listeningUsers.add(n), this.listening.start(), this.participation.start()) : this.listeningUsers.delete(n) && 0 === this.listeningUsers.size && (this.listening.stop(), !this.speaking.isRunning() && this.participation.stop());
     }
     stop() {
         this.speaking.stop(), this.listening.stop(), this.participation.stop(), this.connected.stop();
@@ -48,7 +48,7 @@ class s {
             duration_connected_ms: this.connected.elapsed().asMilliseconds()
         };
     }
-    constructor(e, t, n = i.Z_) {
-        a(this, 'userId', void 0), a(this, 'connection', void 0), a(this, 'timestampProducer', void 0), a(this, 'listeningUsers', void 0), a(this, 'listening', void 0), a(this, 'speaking', void 0), a(this, 'participation', void 0), a(this, 'connected', void 0), (this.userId = e), (this.connection = t), (this.timestampProducer = n), (this.listeningUsers = new Set()), (this.listening = new i.G9(this.timestampProducer)), (this.speaking = new i.G9(this.timestampProducer)), (this.participation = new i.G9(this.timestampProducer)), (this.connected = new i.G9(this.timestampProducer));
+    constructor(e, n, r = s.Z_) {
+        o(this, 'userId', void 0), o(this, 'connection', void 0), o(this, 'timestampProducer', void 0), o(this, 'listeningUsers', void 0), o(this, 'listening', void 0), o(this, 'speaking', void 0), o(this, 'participation', void 0), o(this, 'connected', void 0), (this.userId = e), (this.connection = n), (this.timestampProducer = r), (this.listeningUsers = new Set()), (this.listening = new s.G9(this.timestampProducer)), (this.speaking = new s.G9(this.timestampProducer)), (this.participation = new s.G9(this.timestampProducer)), (this.connected = new s.G9(this.timestampProducer));
     }
 }

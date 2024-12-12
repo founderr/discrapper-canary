@@ -1,20 +1,20 @@
-n.d(t, {
+r.d(n, {
     Q: function () {
-        return a;
+        return s;
     },
     t: function () {
-        return s;
+        return o;
     }
 });
-var r = n(780570),
-    i = n(358085);
-function a() {
-    return (0, i.isWindows)() || (0, i.isMac)();
+var i = r(780570),
+    a = r(358085);
+function s() {
+    return (0, a.isWindows)() || (0, a.isMac)();
 }
-function s(e) {
-    let { LibraryApplicationStore: t, LaunchableGameStore: n, DispatchApplicationStore: i, ConnectedAppsStore: a, applicationId: s, branchId: o } = e;
-    if (a.isConnected(s)) return !0;
-    if ((null == o && (o = s), i.isLaunchable(s, o))) return !0;
-    let l = t.getLibraryApplication(s, o);
-    return !(null != l && (0, r.Je)(l)) && n.isLaunchable(s);
+function o(e) {
+    let { LibraryApplicationStore: n, LaunchableGameStore: r, DispatchApplicationStore: a, ConnectedAppsStore: s, applicationId: o, branchId: l } = e;
+    if (s.isConnected(o)) return !0;
+    if ((null == l && (l = o), a.isLaunchable(o, l))) return !0;
+    let u = n.getLibraryApplication(o, l);
+    return !(null != u && (0, i.Je)(u)) && r.isLaunchable(o);
 }

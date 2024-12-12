@@ -1,8 +1,8 @@
-n.d(t, {
+r.d(n, {
     v: function () {
-        return r;
+        return i;
     }
 });
-var r = function (e) {
+var i = function (e) {
     return Object.freeze(e);
 };

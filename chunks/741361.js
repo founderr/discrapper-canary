@@ -1,75 +1,75 @@
-n.d(t, {
+r.d(n, {
     Aj: function () {
-        return o;
-    },
-    S1: function () {
-        return u;
-    },
-    d$: function () {
         return l;
     },
-    hw: function () {
+    S1: function () {
         return c;
     },
-    kU: function () {
+    d$: function () {
+        return u;
+    },
+    hw: function () {
         return d;
     },
+    kU: function () {
+        return f;
+    },
     kY: function () {
-        return s;
+        return o;
     }
 });
-var r = n(570140),
-    i = n(156699),
-    a = n(493683);
-async function s(e, t, n, a) {
-    let s = e.getGuildId();
-    if (null != s && t === s && !(await (0, i.u)(e, a, n))) return !1;
-    r.Z.dispatch({
+var i = r(570140),
+    a = r(156699),
+    s = r(493683);
+async function o(e, n, r, s) {
+    let o = e.getGuildId();
+    if (null != o && n === o && !(await (0, a.u)(e, s, r))) return !1;
+    i.Z.dispatch({
         type: 'CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION',
-        id: t,
-        allow: n,
-        deny: a
+        id: n,
+        allow: r,
+        deny: s
     });
 }
-function o(e) {
-    r.Z.dispatch({
+function l(e) {
+    i.Z.dispatch({
         type: 'CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION',
         id: e
     });
 }
-function l(e) {
-    r.Z.dispatch({
+function u(e) {
+    i.Z.dispatch({
         type: 'CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE',
         advancedMode: e
     });
 }
-function u() {
-    r.Z.dispatch({ type: 'CHANNEL_SETTINGS_PERMISSIONS_INIT' });
+function c() {
+    i.Z.dispatch({ type: 'CHANNEL_SETTINGS_PERMISSIONS_INIT' });
 }
-function c(e, t, n) {
-    return d(e, t, [], n);
+function d(e, n, r) {
+    return f(e, n, [], r);
 }
-function d(e, t, n, i) {
+function f(e, n, r, a) {
     return (
-        r.Z.dispatch({ type: 'CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING' }),
-        new Promise((r) => {
-            let i = () => {
-                if (0 === t.length && 0 === n.length) return r();
-                if (t.length > 0) {
-                    let n = t.pop();
-                    if (null == n) return i();
-                    a.Z.updatePermissionOverwrite(e, n).then(i, i);
+        i.Z.dispatch({ type: 'CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING' }),
+        new Promise((i) => {
+            let a = () => {
+                if (0 === n.length && 0 === r.length) return i();
+                if (n.length > 0) {
+                    let r = n.pop();
+                    if (null == r) return a();
+                    s.Z.updatePermissionOverwrite(e, r).then(a, a);
                 } else {
-                    let t = n.pop();
-                    if (null == t) return i();
-                    a.Z.clearPermissionOverwrite(e, t).then(i, i);
+                    let n = r.pop();
+                    if (null == n) return a();
+                    s.Z.clearPermissionOverwrite(e, n).then(a, a);
                 }
             };
-            i();
+            a();
         }).then(() => {
-            r.Z.dispatch({
+            i.Z.dispatch({
                 type: 'CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS',
-                silent: i
+                silent: a
             });
         })
     );

@@ -1,10 +1,10 @@
-var r = n(413135).Buffer,
-    i = n(136924),
-    a = n(814033);
+var i = r(413135).Buffer,
+    a = r(136924),
+    s = r(814033);
 e.exports = function (e) {
-    return new o(e);
+    return new l(e);
 };
-var s = {
+var o = {
     secp256k1: {
         name: 'secp256k1',
         byteLength: 32
@@ -34,41 +34,41 @@ var s = {
         byteLength: 66
     }
 };
-function o(e) {
-    (this.curveType = s[e]), !this.curveType && (this.curveType = { name: e }), (this.curve = new i.ec(this.curveType.name)), (this.keys = void 0);
+function l(e) {
+    (this.curveType = o[e]), !this.curveType && (this.curveType = { name: e }), (this.curve = new a.ec(this.curveType.name)), (this.keys = void 0);
 }
-function l(e, t, n) {
+function u(e, n, r) {
     !Array.isArray(e) && (e = e.toArray());
-    var i = new r(e);
-    if (n && i.length < n) {
-        var a = new r(n - i.length);
-        a.fill(0), (i = r.concat([a, i]));
+    var a = new i(e);
+    if (r && a.length < r) {
+        var s = new i(r - a.length);
+        s.fill(0), (a = i.concat([s, a]));
     }
-    return t ? i.toString(t) : i;
+    return n ? a.toString(n) : a;
 }
-(s.p224 = s.secp224r1),
-    (s.p256 = s.secp256r1 = s.prime256v1),
-    (s.p192 = s.secp192r1 = s.prime192v1),
-    (s.p384 = s.secp384r1),
-    (s.p521 = s.secp521r1),
-    (o.prototype.generateKeys = function (e, t) {
-        return (this.keys = this.curve.genKeyPair()), this.getPublicKey(e, t);
+(o.p224 = o.secp224r1),
+    (o.p256 = o.secp256r1 = o.prime256v1),
+    (o.p192 = o.secp192r1 = o.prime192v1),
+    (o.p384 = o.secp384r1),
+    (o.p521 = o.secp521r1),
+    (l.prototype.generateKeys = function (e, n) {
+        return (this.keys = this.curve.genKeyPair()), this.getPublicKey(e, n);
     }),
-    (o.prototype.computeSecret = function (e, t, n) {
-        return (t = t || 'utf8'), !r.isBuffer(e) && (e = new r(e, t)), l(this.curve.keyFromPublic(e).getPublic().mul(this.keys.getPrivate()).getX(), n, this.curveType.byteLength);
+    (l.prototype.computeSecret = function (e, n, r) {
+        return (n = n || 'utf8'), !i.isBuffer(e) && (e = new i(e, n)), u(this.curve.keyFromPublic(e).getPublic().mul(this.keys.getPrivate()).getX(), r, this.curveType.byteLength);
     }),
-    (o.prototype.getPublicKey = function (e, t) {
-        var n = this.keys.getPublic('compressed' === t, !0);
-        return 'hybrid' === t && (n[n.length - 1] % 2 ? (n[0] = 7) : (n[0] = 6)), l(n, e);
+    (l.prototype.getPublicKey = function (e, n) {
+        var r = this.keys.getPublic('compressed' === n, !0);
+        return 'hybrid' === n && (r[r.length - 1] % 2 ? (r[0] = 7) : (r[0] = 6)), u(r, e);
     }),
-    (o.prototype.getPrivateKey = function (e) {
-        return l(this.keys.getPrivate(), e);
+    (l.prototype.getPrivateKey = function (e) {
+        return u(this.keys.getPrivate(), e);
     }),
-    (o.prototype.setPublicKey = function (e, t) {
-        return (t = t || 'utf8'), !r.isBuffer(e) && (e = new r(e, t)), this.keys._importPublic(e), this;
+    (l.prototype.setPublicKey = function (e, n) {
+        return (n = n || 'utf8'), !i.isBuffer(e) && (e = new i(e, n)), this.keys._importPublic(e), this;
     }),
-    (o.prototype.setPrivateKey = function (e, t) {
-        (t = t || 'utf8'), !r.isBuffer(e) && (e = new r(e, t));
-        var n = new a(e);
-        return (n = n.toString(16)), (this.keys = this.curve.genKeyPair()), this.keys._importPrivate(n), this;
+    (l.prototype.setPrivateKey = function (e, n) {
+        (n = n || 'utf8'), !i.isBuffer(e) && (e = new i(e, n));
+        var r = new s(e);
+        return (r = r.toString(16)), (this.keys = this.curve.genKeyPair()), this.keys._importPrivate(r), this;
     });

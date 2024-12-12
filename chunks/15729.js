@@ -1,22 +1,22 @@
-n.d(t, {
+r.d(n, {
     U: function () {
-        return o;
+        return u;
     }
 });
-var r = n(192379),
-    i = n(5907);
-let a = (e) => e,
-    s = (e) => {
-        let t = (0, i.M)(e),
-            n = (e) =>
-                (function (e, t = a) {
-                    let n = r.useSyncExternalStore(
-                        e.subscribe,
-                        () => t(e.getState()),
-                        () => t(e.getInitialState())
-                    );
-                    return r.useDebugValue(n), n;
-                })(t, e);
-        return Object.assign(n, t), n;
+var i = r(192379),
+    a = r(5907);
+let s = (e) => e;
+function o(e, n = s) {
+    let r = i.useSyncExternalStore(
+        e.subscribe,
+        () => n(e.getState()),
+        () => n(e.getInitialState())
+    );
+    return i.useDebugValue(r), r;
+}
+let l = (e) => {
+        let n = (0, a.M)(e),
+            r = (e) => o(n, e);
+        return Object.assign(r, n), r;
     },
-    o = (e) => (e ? s(e) : s);
+    u = (e) => (e ? l(e) : l);

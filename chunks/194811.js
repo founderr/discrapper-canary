@@ -1,51 +1,51 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return d;
+        return f;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(481060),
-    o = n(111028),
-    l = n(652853),
-    u = n(228168),
-    c = n(249942);
-function d(e) {
-    let { text: t, tags: n, platformIcon: i, contextMenu: d } = e,
-        { profileType: f } = (0, l.z)();
-    return (null == t || '' === t) && null == d
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(481060),
+    l = r(111028),
+    u = r(652853),
+    c = r(228168),
+    d = r(249942);
+function f(e) {
+    let { text: n, tags: r, platformIcon: a, contextMenu: f } = e,
+        { profileType: _ } = (0, u.z)();
+    return (null == n || '' === n) && null == f
         ? null
-        : null == t || '' === t
-          ? (0, r.jsx)('div', {
-                className: a()(c.headerContextMenu, c.absolute),
-                children: d
+        : null == n || '' === n
+          ? (0, i.jsx)('div', {
+                className: s()(d.headerContextMenu, d.absolute),
+                children: f
             })
-          : (0, r.jsxs)('header', {
-                className: c.header,
+          : (0, i.jsxs)('header', {
+                className: d.header,
                 children: [
-                    (0, r.jsxs)(s.Heading, {
-                        className: c.headerText,
-                        variant: f === u.y0.PANEL ? 'text-xs/semibold' : 'text-xs/medium',
+                    (0, i.jsxs)(o.Heading, {
+                        className: d.headerText,
+                        variant: _ === c.y0.PANEL ? 'text-xs/semibold' : 'text-xs/medium',
                         color: 'header-primary',
                         children: [
-                            (0, r.jsx)(o.Z, { children: t }),
-                            null != i &&
-                                (0, r.jsx)('div', {
-                                    className: c.platformIcon,
+                            (0, i.jsx)(l.Z, { children: n }),
+                            null != a &&
+                                (0, i.jsx)('div', {
+                                    className: d.platformIcon,
                                     style: {
-                                        maskImage: 'url('.concat(i.whiteSVG, ')'),
-                                        WebkitMaskImage: 'url('.concat(i.whiteSVG, ')')
+                                        maskImage: 'url('.concat(a.whiteSVG, ')'),
+                                        WebkitMaskImage: 'url('.concat(a.whiteSVG, ')')
                                     }
                                 }),
-                            n
+                            r
                         ]
                     }),
-                    null != d &&
-                        (0, r.jsx)('div', {
-                            className: c.headerContextMenu,
-                            children: d
+                    null != f &&
+                        (0, i.jsx)('div', {
+                            className: d.headerContextMenu,
+                            children: f
                         })
                 ]
             });

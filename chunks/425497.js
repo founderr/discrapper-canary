@@ -1,4 +1,4 @@
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
     kind: 'user',
     id: '2024-10_mobile_video_disable',
     label: 'Backgrounding Mobile App Disables Incoming Video',
@@ -11,4 +11,4 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-t.Z = { stopVideoWhenHidden: () => r.getCurrentConfig({ location: 'stopVideoWhenHidden' }, { autoTrackExposure: !0 }).stopVideoWhenHidden };
+n.Z = { stopVideoWhenHidden: () => i.getCurrentConfig({ location: 'stopVideoWhenHidden' }, { autoTrackExposure: !0 }).stopVideoWhenHidden };

@@ -1,40 +1,40 @@
-n.d(t, {
+r.d(n, {
     O: function () {
-        return u;
+        return c;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(626135),
-    s = n(799352),
-    o = n(110223),
-    l = n(981631);
-function u(e) {
-    let { channelId: t, blockedUserIds: u, ignoredUserIds: c } = e;
-    (0, i.openModalLazy)(
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(626135),
+    o = r(799352),
+    l = r(110223),
+    u = r(981631);
+function c(e) {
+    let { channelId: n, blockedUserIds: c, ignoredUserIds: d } = e;
+    (0, a.openModalLazy)(
         async () => {
-            let { default: e } = await n.e('87337').then(n.bind(n, 164375));
-            return (n) => {
-                let { transitionState: i, onClose: a } = n;
-                return (0, r.jsx)(e, {
-                    channelId: t,
-                    blockedUserIds: u,
-                    ignoredUserIds: c,
-                    transitionState: i,
-                    onClose: a
+            let { default: e } = await r.e('87337').then(r.bind(r, 164375));
+            return (r) => {
+                let { transitionState: a, onClose: s } = r;
+                return (0, i.jsx)(e, {
+                    channelId: n,
+                    blockedUserIds: c,
+                    ignoredUserIds: d,
+                    transitionState: a,
+                    onClose: s
                 });
             };
         },
         {
             onCloseCallback: () => {
-                (0, s.O)(t),
-                    a.default.track(l.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                        action: o.q.DISMISS,
-                        channel_id: t,
-                        warning_medium: o.WR.MODAL,
-                        blocked_user_ids: u,
-                        ignored_user_ids: c
+                (0, o.O)(n),
+                    s.default.track(u.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                        action: l.q.DISMISS,
+                        channel_id: n,
+                        warning_medium: l.WR.MODAL,
+                        blocked_user_ids: c,
+                        ignored_user_ids: d
                     });
             }
         }

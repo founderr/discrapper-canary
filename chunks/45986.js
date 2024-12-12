@@ -1,20 +1,20 @@
-n.d(t, {
+r.d(n, {
     o: function () {
-        return i;
+        return a;
     },
     u: function () {
-        return a;
+        return s;
     }
 });
-var r = n(570140);
-function i(e) {
-    r.Z.dispatch({
+var i = r(570140);
+function a(e) {
+    i.Z.dispatch({
         type: 'MASKED_LINK_ADD_TRUSTED_DOMAIN',
         url: e
     });
 }
-function a(e) {
-    r.Z.dispatch({
+function s(e) {
+    i.Z.dispatch({
         type: 'MASKED_LINK_ADD_TRUSTED_PROTOCOL',
         url: e
     });

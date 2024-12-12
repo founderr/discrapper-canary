@@ -1,66 +1,66 @@
-n.d(t, {
+r.d(n, {
     O8: function () {
         return p;
     },
     V: function () {
-        return f;
+        return _;
     },
     tV: function () {
-        return _;
+        return h;
     }
 });
-var r = n(981631),
-    i = n(388032),
-    a = n(337258),
-    s = n(705196),
-    o = n(190878),
-    l = n(991254),
-    u = n(485686),
-    c = n(400976),
-    d = n(443909);
-let f = () => ({
-        [r.tNA.CHILLING]: {
-            title: i.intl.string(i.t['vkpn7+']),
-            icon: s,
+var i = r(981631),
+    a = r(388032),
+    s = r(337258),
+    o = r(705196),
+    l = r(190878),
+    u = r(991254),
+    c = r(485686),
+    d = r(400976),
+    f = r(443909);
+let _ = () => ({
+        [i.tNA.CHILLING]: {
+            title: a.intl.string(a.t['vkpn7+']),
+            icon: o,
             color: '#567C7E'
         },
-        [r.tNA.GAMING]: {
-            title: i.intl.string(i.t.lZslwM),
-            icon: o,
+        [i.tNA.GAMING]: {
+            title: a.intl.string(a.t.lZslwM),
+            icon: l,
             color: '#685F8C'
         },
-        [r.tNA.FOCUSING]: {
-            title: i.intl.string(i.t.b6AscH),
-            icon: u,
+        [i.tNA.FOCUSING]: {
+            title: a.intl.string(a.t.b6AscH),
+            icon: c,
             color: '#7F6956'
         },
-        [r.tNA.BRB]: {
-            title: i.intl.string(i.t['30yqZW']),
-            icon: a,
+        [i.tNA.BRB]: {
+            title: a.intl.string(a.t['30yqZW']),
+            icon: s,
             color: '#76567E'
         },
-        [r.tNA.EATING]: {
-            title: i.intl.string(i.t.UVSEhY),
-            icon: l,
+        [i.tNA.EATING]: {
+            title: a.intl.string(a.t.UVSEhY),
+            icon: u,
             color: '#717B54'
         },
-        [r.tNA.IN_TRANSIT]: {
-            title: i.intl.string(i.t['l0q9/f']),
-            icon: c,
+        [i.tNA.IN_TRANSIT]: {
+            title: a.intl.string(a.t['l0q9/f']),
+            icon: d,
             color: '#56697F'
         },
-        [r.tNA.WATCHING]: {
-            title: i.intl.string(i.t.di6IFx),
-            icon: d,
+        [i.tNA.WATCHING]: {
+            title: a.intl.string(a.t.di6IFx),
+            icon: f,
             color: '#7C5571'
         }
     }),
-    _ = (e) => {
-        if ((null == e ? void 0 : e.type) !== r.IIU.HANG_STATUS || (null == e ? void 0 : e.state) == null) return null;
-        let t = e.state;
-        return t === r.tNA.CUSTOM ? null : f()[t];
+    h = (e) => {
+        if ((null == e ? void 0 : e.type) !== i.IIU.HANG_STATUS || (null == e ? void 0 : e.state) == null) return null;
+        let n = e.state;
+        return n === i.tNA.CUSTOM ? null : _()[n];
     },
     p = (e) => {
-        var t;
-        return ((null == e ? void 0 : e.state) != null ? e.state : null) === r.tNA.CUSTOM ? (null == e ? void 0 : e.details) : null === (t = _(e)) || void 0 === t ? void 0 : t.title;
+        var n;
+        return ((null == e ? void 0 : e.state) != null ? e.state : null) === i.tNA.CUSTOM ? (null == e ? void 0 : e.details) : null === (n = h(e)) || void 0 === n ? void 0 : n.title;
     };

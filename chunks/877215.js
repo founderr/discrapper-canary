@@ -1,8 +1,8 @@
-function r(e) {
-    (0, n(226106).Z)(e);
+function i(e) {
+    (0, r(226106).Z)(e);
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

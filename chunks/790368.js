@@ -1,4 +1,4 @@
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
     kind: 'user',
     id: '2023-05_referral_trials_birthday_moment',
     label: 'Referral Trials Birthday Moment',
@@ -11,4 +11,4 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-t.Z = r;
+n.Z = i;

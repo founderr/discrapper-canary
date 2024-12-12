@@ -1,44 +1,44 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return l;
+        return u;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(499033),
-    s = n(388032),
-    o = n(454227);
-function l() {
-    return (0, r.jsxs)('div', {
-        className: o.container,
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(499033),
+    o = r(388032),
+    l = r(454227);
+function u() {
+    return (0, i.jsxs)('div', {
+        className: l.container,
         children: [
-            (0, r.jsxs)('div', {
-                className: o.iconContainer,
+            (0, i.jsxs)('div', {
+                className: l.iconContainer,
                 children: [
-                    (0, r.jsx)('div', {
-                        className: o.icon,
-                        children: (0, r.jsx)(i.TopicsIcon, {
+                    (0, i.jsx)('div', {
+                        className: l.icon,
+                        children: (0, i.jsx)(a.TopicsIcon, {
                             size: 'custom',
                             color: 'currentColor',
-                            className: o.iconOffset,
+                            className: l.iconOffset,
                             width: 28,
                             height: 28
                         })
                     }),
-                    (0, r.jsx)(a.Z, { className: o.stars })
+                    (0, i.jsx)(s.Z, { className: l.stars })
                 ]
             }),
-            (0, r.jsx)(i.Heading, {
-                className: o.header,
+            (0, i.jsx)(a.Heading, {
+                className: l.header,
                 variant: 'heading-xl/semibold',
-                children: s.intl.string(s.t.yJHJen)
+                children: o.intl.string(o.t.yJHJen)
             }),
-            (0, r.jsx)(i.Text, {
-                className: o.text,
+            (0, i.jsx)(a.Text, {
+                className: l.text,
                 color: 'header-secondary',
                 variant: 'text-md/normal',
-                children: s.intl.string(s.t.p2dIh4)
+                children: o.intl.string(o.t.p2dIh4)
             })
         ]
     });

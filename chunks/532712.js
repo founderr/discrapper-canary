@@ -1,17 +1,17 @@
-n.d(t, {
+r.d(n, {
     g: function () {
-        return i;
+        return a;
     },
     n: function () {
-        return a;
+        return s;
     }
 });
-var r = n(200651);
-let i = n(192379).createContext(!1);
-function a(e) {
-    let { children: t } = e;
-    return (0, r.jsx)(i.Provider, {
+var i = r(200651);
+let a = r(192379).createContext(!1);
+function s(e) {
+    let { children: n } = e;
+    return (0, i.jsx)(a.Provider, {
         value: !0,
-        children: t
+        children: n
     });
 }

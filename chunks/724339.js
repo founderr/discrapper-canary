@@ -1,7 +1,7 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = { longPressMessage: 'Pressione e segure ou pressione Alt + Seta para baixo para abrir o menu' };
+var i = {};
+i = { longPressMessage: 'Pressione e segure ou pressione Alt + Seta para baixo para abrir o menu' };

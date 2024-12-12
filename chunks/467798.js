@@ -1,13 +1,13 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     },
     v: function () {
-        return i;
+        return a;
     }
 });
-let r = '@silent',
-    i = new RegExp('^'.concat(r, '(\\s|$)'));
-function a(e) {
-    return null == e ? [!1, ''] : null == e.match(i) ? [!1, e] : [!0, e.substring(r.length).trim()];
+let i = '@silent',
+    a = new RegExp('^'.concat(i, '(\\s|$)'));
+function s(e) {
+    return null == e ? [!1, ''] : null == e.match(a) ? [!1, e] : [!0, e.substring(i.length).trim()];
 }

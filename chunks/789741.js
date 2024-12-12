@@ -1,11 +1,11 @@
-n.d(t, {
+r.d(n, {
     p: function () {
-        return i;
+        return a;
     }
 });
-var r = n(554887),
-    i = function (e) {
-        (0, r.G)(function () {
+var i = r(554887),
+    a = function (e) {
+        (0, i.G)(function () {
             requestAnimationFrame(e);
         });
     };

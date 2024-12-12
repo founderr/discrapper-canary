@@ -1,40 +1,40 @@
-n.d(t, {
+r.d(n, {
     i: function () {
-        return o;
+        return l;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(692547),
-    a = n(331595),
-    s = n(267843);
-let o = (e) => {
-    var t, n;
-    let { size: o = 'md', width: l, height: u, secondaryColor: c = 'transparent', secondaryColorClass: d = '', color: f = i.Z.colors.INTERACTIVE_NORMAL, colorClass: _ = '', ...p } = e,
-        h = (0, s.m)(o),
-        m = null !== (t = null == h ? void 0 : h.width) && void 0 !== t ? t : l,
-        g = null !== (n = null == h ? void 0 : h.height) && void 0 !== n ? n : u;
-    return (0, r.jsxs)('svg', {
-        ...(0, a.Z)(p),
+var i = r(200651);
+r(192379);
+var a = r(692547),
+    s = r(331595),
+    o = r(267843);
+let l = (e) => {
+    var n, r;
+    let { size: l = 'md', width: u, height: c, secondaryColor: d = 'transparent', secondaryColorClass: f = '', color: _ = a.Z.colors.INTERACTIVE_NORMAL, colorClass: h = '', ...p } = e,
+        m = (0, o.m)(l),
+        g = null !== (n = null == m ? void 0 : m.width) && void 0 !== n ? n : u,
+        E = null !== (r = null == m ? void 0 : m.height) && void 0 !== r ? r : c;
+    return (0, i.jsxs)('svg', {
+        ...(0, s.Z)(p),
         xmlns: 'http://www.w3.org/2000/svg',
-        width: m,
-        height: g,
+        width: g,
+        height: E,
         fill: 'none',
         viewBox: '0 0 24 24',
         children: [
-            (0, r.jsx)('circle', {
+            (0, i.jsx)('circle', {
                 cx: '12',
                 cy: '12',
                 r: '10',
-                fill: 'string' == typeof c ? c : c.css,
-                className: d
+                fill: 'string' == typeof d ? d : d.css,
+                className: f
             }),
-            (0, r.jsx)('path', {
-                fill: 'string' == typeof f ? f : f.css,
+            (0, i.jsx)('path', {
+                fill: 'string' == typeof _ ? _ : _.css,
                 fillRule: 'evenodd',
                 d: 'M12 23a11 11 0 1 0 0-22 11 11 0 0 0 0 22Zm-.28-16c-.98 0-1.81.47-2.27 1.14A1 1 0 1 1 7.8 7.01 4.73 4.73 0 0 1 11.72 5c2.5 0 4.65 1.88 4.65 4.38 0 2.1-1.54 3.77-3.52 4.24l.14 1a1 1 0 0 1-1.98.27l-.28-2a1 1 0 0 1 .99-1.14c1.54 0 2.65-1.14 2.65-2.38 0-1.23-1.1-2.37-2.65-2.37ZM13 17.88a1.13 1.13 0 1 1-2.25 0 1.13 1.13 0 0 1 2.25 0Z',
                 clipRule: 'evenodd',
-                className: _
+                className: h
             })
         ]
     });

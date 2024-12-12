@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     T: function () {
-        return i;
+        return a;
     },
     _: function () {
-        return r;
+        return i;
     }
 });
-let r = n(152057).v.LEAGUE_OF_LEGENDS_WEEKLY,
-    i = ['356869127241072640', '401518684763586560'];
+let i = r(152057).v.LEAGUE_OF_LEGENDS_WEEKLY,
+    a = ['356869127241072640', '401518684763586560'];

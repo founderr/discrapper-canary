@@ -1,8 +1,8 @@
-function r(e, t) {
-    return 'activityembed:'.concat(e, ':').concat(t);
+function i(e, n) {
+    return 'activityembed:'.concat(e, ':').concat(n);
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

@@ -1,82 +1,82 @@
-n.d(t, {
+r.d(n, {
     Sc: function () {
-        return _;
-    },
-    UP: function () {
         return p;
     },
+    UP: function () {
+        return m;
+    },
     Zx: function () {
-        return d;
+        return _;
     },
     _s: function () {
-        return f;
+        return h;
     }
-}),
-    n(47120);
-var r = n(570140),
-    i = n(339085),
-    a = n(592125),
-    s = n(19780),
-    o = n(944486),
-    l = n(626135),
-    u = n(106301),
-    c = n(981631);
-function d(e, t) {
-    var n;
+});
+var i = r(47120);
+var a = r(570140),
+    s = r(339085),
+    o = r(592125),
+    l = r(19780),
+    u = r(944486),
+    c = r(626135),
+    d = r(106301),
+    f = r(981631);
+function _(e, n) {
+    var r;
     if (null == e) {
-        _(t);
+        p(n);
         return;
     }
-    r.Z.dispatch({
+    a.Z.dispatch({
         type: 'UPDATE_HANG_STATUS',
-        status: e,
-        saveAsDefault: t
-    }),
-        l.default.track(c.rMx.SET_HANG_STATUS, {
-            status_type: e,
-            channel_id: o.Z.getVoiceChannelId(),
-            guild_id: null === (n = a.Z.getChannel(o.Z.getVoiceChannelId())) || void 0 === n ? void 0 : n.guild_id,
-            media_session_id: s.Z.getMediaSessionId()
-        });
-}
-function f(e, t, n) {
-    var i;
-    if ('' === e || null == t) {
-        _(n);
-        return;
-    }
-    r.Z.dispatch({
-        type: 'UPDATE_HANG_STATUS_CUSTOM',
-        emoji: t,
         status: e,
         saveAsDefault: n
     }),
-        l.default.track(c.rMx.SET_HANG_STATUS, {
+        c.default.track(f.rMx.SET_HANG_STATUS, {
             status_type: e,
-            channel_id: o.Z.getVoiceChannelId(),
-            guild_id: null === (i = a.Z.getChannel(o.Z.getVoiceChannelId())) || void 0 === i ? void 0 : i.guild_id,
-            media_session_id: s.Z.getMediaSessionId()
+            channel_id: u.Z.getVoiceChannelId(),
+            guild_id: null === (r = o.Z.getChannel(u.Z.getVoiceChannelId())) || void 0 === r ? void 0 : r.guild_id,
+            media_session_id: l.Z.getMediaSessionId()
         });
 }
-function _(e) {
-    var t;
-    r.Z.dispatch({
+function h(e, n, r) {
+    var i;
+    if ('' === e || null == n) {
+        p(r);
+        return;
+    }
+    a.Z.dispatch({
+        type: 'UPDATE_HANG_STATUS_CUSTOM',
+        emoji: n,
+        status: e,
+        saveAsDefault: r
+    }),
+        c.default.track(f.rMx.SET_HANG_STATUS, {
+            status_type: e,
+            channel_id: u.Z.getVoiceChannelId(),
+            guild_id: null === (i = o.Z.getChannel(u.Z.getVoiceChannelId())) || void 0 === i ? void 0 : i.guild_id,
+            media_session_id: l.Z.getMediaSessionId()
+        });
+}
+function p(e) {
+    var n;
+    a.Z.dispatch({
         type: 'CLEAR_HANG_STATUS',
         saveAsDefault: e
     }),
-        l.default.track(c.rMx.CLEAR_HANG_STATUS, {
-            channel_id: o.Z.getVoiceChannelId(),
-            guild_id: null === (t = a.Z.getChannel(o.Z.getVoiceChannelId())) || void 0 === t ? void 0 : t.guild_id,
-            media_session_id: s.Z.getMediaSessionId()
+        c.default.track(f.rMx.CLEAR_HANG_STATUS, {
+            channel_id: u.Z.getVoiceChannelId(),
+            guild_id: null === (n = o.Z.getChannel(u.Z.getVoiceChannelId())) || void 0 === n ? void 0 : n.guild_id,
+            media_session_id: l.Z.getMediaSessionId()
         });
 }
-function p() {
-    let e = [u.Z.getCustomHangStatus(), ...u.Z.getRecentCustomStatuses()].filter((e) => {
-        var t;
-        return null != e && null != e.emoji && (null === (t = e.emoji) || void 0 === t ? void 0 : t.id) != null && null == i.ZP.getCustomEmojiById(e.emoji.id);
+function m() {
+    let e = [d.Z.getCustomHangStatus(), ...d.Z.getRecentCustomStatuses()].filter((e) => {
+        var n;
+        return null != e && null != e.emoji && (null === (n = e.emoji) || void 0 === n ? void 0 : n.id) != null && null == s.ZP.getCustomEmojiById(e.emoji.id);
     });
     e.length > 0 &&
-        r.Z.dispatch({
+        a.Z.dispatch({
             type: 'DELETE_INVALID_HANG_STATUSES',
             statuses: e
         });

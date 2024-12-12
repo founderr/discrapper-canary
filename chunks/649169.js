@@ -1,7 +1,7 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = { 'Clear search': `Obri\u{161}i pretragu` };
+var i = {};
+i = { 'Clear search': `Obri\u{161}i pretragu` };

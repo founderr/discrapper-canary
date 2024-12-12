@@ -1,22 +1,22 @@
-n.d(t, {
+r.d(n, {
     g: function () {
-        return c;
+        return d;
     }
 });
-var r = n(399606),
-    i = n(704215),
-    a = n(605236),
-    s = n(352981),
-    o = n(496675),
-    l = n(652515),
-    u = n(981631);
-function c(e, t) {
-    var n;
-    let c = (0, l.yV)(t),
-        d = (0, a.wE)(i.z.SERVER_SHOP_PHANTOM_PREVIEW),
-        f = (0, r.e7)([o.Z], () => null != e && o.Z.can(u.Plq.ADMINISTRATOR, e)),
-        _ = null !== (n = null == e ? void 0 : e.hasFeature(u.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) && void 0 !== n && n,
-        p = (0, s.y)(null == e ? void 0 : e.id, 'useGuildShopPreviewVisible'),
-        h = [u.oNc.CREATOR_MONETIZABLE, u.oNc.CREATOR_MONETIZABLE_PROVISIONAL, u.oNc.ROLE_SUBSCRIPTIONS_ENABLED].some((t) => (null == e ? void 0 : e.hasFeature(t)) === !0);
-    return null != e && f && !_ && h && c && p && !d;
+var i = r(399606),
+    a = r(704215),
+    s = r(605236),
+    o = r(352981),
+    l = r(496675),
+    u = r(652515),
+    c = r(981631);
+function d(e, n) {
+    var r;
+    let d = (0, u.yV)(n),
+        f = (0, s.wE)(a.z.SERVER_SHOP_PHANTOM_PREVIEW),
+        _ = (0, i.e7)([l.Z], () => null != e && l.Z.can(c.Plq.ADMINISTRATOR, e)),
+        h = null !== (r = null == e ? void 0 : e.hasFeature(c.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) && void 0 !== r && r,
+        p = (0, o.y)(null == e ? void 0 : e.id, 'useGuildShopPreviewVisible'),
+        m = [c.oNc.CREATOR_MONETIZABLE, c.oNc.CREATOR_MONETIZABLE_PROVISIONAL, c.oNc.ROLE_SUBSCRIPTIONS_ENABLED].some((n) => (null == e ? void 0 : e.hasFeature(n)) === !0);
+    return null != e && _ && !h && m && d && p && !f;
 }

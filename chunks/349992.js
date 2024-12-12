@@ -1,33 +1,33 @@
-n.d(t, {
+r.d(n, {
     t: function () {
-        return a;
+        return s;
     }
 });
-var r = n(436759),
-    i = n(240773);
-function a(e) {
-    let t = {};
-    for (let n of (Object.defineProperty(t, i.C, {
+var i = r(436759),
+    a = r(240773);
+function s(e) {
+    let n = {};
+    for (let r of (Object.defineProperty(n, a.C, {
         enumerable: !1,
         value: e
     }),
     e.fields)) {
-        let e = n.localName;
-        if (!n.opt) {
-            if (n.oneof) t[n.oneof] = { oneofKind: void 0 };
-            else if (n.repeat) t[e] = [];
+        let e = r.localName;
+        if (!r.opt) {
+            if (r.oneof) n[r.oneof] = { oneofKind: void 0 };
+            else if (r.repeat) n[e] = [];
             else
-                switch (n.kind) {
+                switch (r.kind) {
                     case 'scalar':
-                        t[e] = (0, r.N)(n.T, n.L);
+                        n[e] = (0, i.N)(r.T, r.L);
                         break;
                     case 'enum':
-                        t[e] = 0;
+                        n[e] = 0;
                         break;
                     case 'map':
-                        t[e] = {};
+                        n[e] = {};
                 }
         }
     }
-    return t;
+    return n;
 }

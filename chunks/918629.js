@@ -1,16 +1,16 @@
-n.d(t, {
+r.d(n, {
     M: function () {
-        return i;
+        return a;
     }
 });
-var r = n(508833);
-function i(e) {
-    let { progressBarProps: t, labelProps: n } = (0, r.D)(e);
+var i = r(508833);
+function a(e) {
+    let { progressBarProps: n, labelProps: r } = (0, i.D)(e);
     return {
         meterProps: {
-            ...t,
+            ...n,
             role: 'meter progressbar'
         },
-        labelProps: n
+        labelProps: r
     };
 }

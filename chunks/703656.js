@@ -1,139 +1,139 @@
-let r, i, a;
-n.d(t, {
+let i, a, s;
+r.d(n, {
     At: function () {
-        return b;
-    },
-    DB: function () {
-        return N;
-    },
-    DR: function () {
-        return S;
-    },
-    Wf: function () {
         return A;
     },
-    XU: function () {
-        return E;
+    DB: function () {
+        return O;
     },
-    dL: function () {
-        return I;
+    DR: function () {
+        return N;
     },
-    eH: function () {
+    Wf: function () {
         return R;
     },
-    m1: function () {
-        return y;
-    },
-    op: function () {
-        return C;
-    },
-    s1: function () {
+    XU: function () {
         return T;
     },
+    dL: function () {
+        return y;
+    },
+    eH: function () {
+        return L;
+    },
+    m1: function () {
+        return C;
+    },
+    op: function () {
+        return D;
+    },
+    s1: function () {
+        return S;
+    },
     uL: function () {
-        return g;
+        return I;
     },
     uv: function () {
-        return v;
+        return b;
     }
-}),
-    n(653041),
-    n(757143);
-var s = n(539528),
-    o = n(710845),
-    l = n(585483),
-    u = n(143816),
-    c = n(981631);
-let d = new o.Z('Routing/Utils'),
-    f = [c.E07.DEVELOPER_PORTAL];
-r = __OVERLAY__ ? (0, s.PP)() : (0, s.lX)();
-let _ = !1,
-    p = r.listen((e, t) => {
-        'REPLACE' !== t && ((_ = !0), p());
+});
+var o = r(653041);
+var l = r(757143);
+var u = r(539528),
+    c = r(710845),
+    d = r(585483),
+    f = r(143816),
+    _ = r(981631);
+let h = new c.Z('Routing/Utils'),
+    p = [_.E07.DEVELOPER_PORTAL];
+i = __OVERLAY__ ? (0, u.PP)() : (0, u.lX)();
+let m = !1,
+    g = i.listen((e, n) => {
+        'REPLACE' !== n && ((m = !0), g());
     });
-function h() {
-    return !l.S.hasSubscribers(c.CkL.MODAL_CLOSE) && (n(574254).Z.close(), !0);
+function E() {
+    return !d.S.hasSubscribers(_.CkL.MODAL_CLOSE) && (r(574254).Z.close(), !0);
 }
-function m(e, t) {
-    return !!('string' == typeof e && f.some((t) => e.startsWith(t))) && (d.log(''.concat(t, ' - route to external path ').concat(e)), window.dispatchEvent(new Event('beforeunload')), window.location[t](e), !0);
+function v(e, n) {
+    return !!('string' == typeof e && p.some((n) => e.startsWith(n))) && (h.log(''.concat(n, ' - route to external path ').concat(e)), window.dispatchEvent(new Event('beforeunload')), window.location[n](e), !0);
 }
-function g(e, t) {
-    if (m(e, 'assign')) return;
-    d.log('transitionTo - Transitioning to '.concat(e));
-    let n = null == t ? void 0 : t.source;
-    null == t || delete t.source;
-    let s = null == t ? void 0 : t.sourceLocationStack;
-    null == t || delete t.sourceLocationStack,
-        null == t
-            ? r.push(e)
-            : r.push({
+function I(e, n) {
+    if (v(e, 'assign')) return;
+    h.log('transitionTo - Transitioning to '.concat(e));
+    let r = null == n ? void 0 : n.source;
+    null == n || delete n.source;
+    let o = null == n ? void 0 : n.sourceLocationStack;
+    null == n || delete n.sourceLocationStack,
+        null == n
+            ? i.push(e)
+            : i.push({
                   pathname: e,
-                  ...t
+                  ...n
               }),
-        (i = n),
-        (a = s);
+        (a = r),
+        (s = o);
 }
-function E(e, t, n, r) {
-    d.log(
+function T(e, n, r, i) {
+    h.log(
         'transitionToGuild - Transitioning to '.concat(
             JSON.stringify({
                 guildId: e,
-                channelId: t,
-                messageId: n
+                channelId: n,
+                messageId: r
             })
         )
     ),
-        g(c.Z5c.CHANNEL(e, t, n), r);
-}
-function v() {
-    return null != i && u.H.has(i);
-}
-function I(e, t, n) {
-    !m(e, 'replace') && (d.log('Replacing route with '.concat(e)), 'string' == typeof e ? r.replace(e, t) : r.replace(e), (i = n));
-}
-function T() {
-    return r;
+        I(_.Z5c.CHANNEL(e, n, r), i);
 }
 function b() {
-    return i;
+    return null != a && f.H.has(a);
+}
+function y(e, n, r) {
+    !v(e, 'replace') && (h.log('Replacing route with '.concat(e)), 'string' == typeof e ? i.replace(e, n) : i.replace(e), (a = r));
 }
 function S() {
+    return i;
+}
+function A() {
     return a;
 }
-function y(e) {
-    if (null == e) {
-        var t;
-        e = null !== (t = r.location.pathname) && void 0 !== t ? t : '';
-    }
-    return !e.startsWith(c.Z5c.HANDOFF) && !0;
+function N() {
+    return s;
 }
-function A(e) {
+function C(e) {
     if (null == e) {
-        var t;
-        e = null !== (t = r.location.pathname) && void 0 !== t ? t : '';
+        var n;
+        e = null !== (n = i.location.pathname) && void 0 !== n ? n : '';
     }
-    if (e.startsWith(c.Z5c.LOGIN)) return c.Usc.LOGIN;
-    if (e.startsWith(c.Z5c.REGISTER)) return c.Usc.REGISTER;
-    if (e.startsWith(c.Z5c.INVITE(''))) return c.Usc.INVITE;
-    else if (e.startsWith(c.Z5c.VERIFY)) return c.Usc.VERIFY;
-    else if (e.startsWith(c.Z5c.DISABLE_EMAIL_NOTIFICATIONS)) return c.Usc.DISABLE_EMAIL_NOTIFICATIONS;
-    else if (e.startsWith(c.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS)) return c.Usc.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS;
-    else if (e.startsWith(c.Z5c.REJECT_IP)) return c.Usc.REJECT_IP;
-    else if (e.startsWith(c.Z5c.REJECT_MFA)) return c.Usc.REJECT_MFA;
-    else if (e.startsWith(c.Z5c.AUTHORIZE_IP)) return c.Usc.AUTHORIZE_IP;
-    else if (e.startsWith(c.Z5c.AUTHORIZE_PAYMENT)) return c.Usc.AUTHORIZE_PAYMENT;
-    else if (e.startsWith(c.Z5c.RESET)) return c.Usc.RESET;
-    else if (e.startsWith(c.Z5c.REPORT)) return c.Usc.REPORT;
-    else if (e.startsWith(c.Z5c.REPORT_SECOND_LOOK)) return c.Usc.REPORT_SECOND_LOOK;
-    else if (e.startsWith(c.Z5c.ACCOUNT_REVERT(''))) return c.Usc.ACCOUNT_REVERT;
+    return !e.startsWith(_.Z5c.HANDOFF) && !0;
+}
+function R(e) {
+    if (null == e) {
+        var n;
+        e = null !== (n = i.location.pathname) && void 0 !== n ? n : '';
+    }
+    if (e.startsWith(_.Z5c.LOGIN)) return _.Usc.LOGIN;
+    if (e.startsWith(_.Z5c.REGISTER)) return _.Usc.REGISTER;
+    if (e.startsWith(_.Z5c.INVITE(''))) return _.Usc.INVITE;
+    else if (e.startsWith(_.Z5c.VERIFY)) return _.Usc.VERIFY;
+    else if (e.startsWith(_.Z5c.DISABLE_EMAIL_NOTIFICATIONS)) return _.Usc.DISABLE_EMAIL_NOTIFICATIONS;
+    else if (e.startsWith(_.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS)) return _.Usc.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS;
+    else if (e.startsWith(_.Z5c.REJECT_IP)) return _.Usc.REJECT_IP;
+    else if (e.startsWith(_.Z5c.REJECT_MFA)) return _.Usc.REJECT_MFA;
+    else if (e.startsWith(_.Z5c.AUTHORIZE_IP)) return _.Usc.AUTHORIZE_IP;
+    else if (e.startsWith(_.Z5c.AUTHORIZE_PAYMENT)) return _.Usc.AUTHORIZE_PAYMENT;
+    else if (e.startsWith(_.Z5c.RESET)) return _.Usc.RESET;
+    else if (e.startsWith(_.Z5c.REPORT)) return _.Usc.REPORT;
+    else if (e.startsWith(_.Z5c.REPORT_SECOND_LOOK)) return _.Usc.REPORT_SECOND_LOOK;
+    else if (e.startsWith(_.Z5c.ACCOUNT_REVERT(''))) return _.Usc.ACCOUNT_REVERT;
     return e;
 }
-function N() {
-    return _;
+function O() {
+    return m;
 }
-function C() {
-    h() && ((i = null), r.goBack());
+function D() {
+    E() && ((a = null), i.goBack());
 }
-function R() {
-    h() && ((i = null), r.goForward());
+function L() {
+    E() && ((a = null), i.goForward());
 }

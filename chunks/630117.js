@@ -1,21 +1,21 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(441319),
-    a = n(388032);
-function s(e) {
-    let { id: t, width: n = i.M9 } = e,
-        s = (0, i.aW)(t);
-    return null == s
+var i = r(200651);
+r(192379);
+var a = r(441319),
+    s = r(388032);
+function o(e) {
+    let { id: n, width: r = a.M9 } = e,
+        o = (0, a.aW)(n);
+    return null == o
         ? null
-        : (0, r.jsx)('img', {
-              src: s.iconSource,
-              width: n,
-              alt: a.intl.string(a.t.N4YDam),
+        : (0, i.jsx)('img', {
+              src: o.iconSource,
+              width: r,
+              alt: s.intl.string(s.t.N4YDam),
               draggable: !1
           });
 }

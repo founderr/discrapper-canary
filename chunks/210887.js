@@ -1,153 +1,153 @@
-let r;
-var i,
-    a,
-    s = n(442837),
-    o = n(524437),
-    l = n(692547),
-    u = n(780384),
-    c = n(570140),
-    d = n(607070),
-    f = n(47760),
-    _ = n(540059),
-    p = n(541049);
-n(449934);
-var h = n(12647),
-    m = n(358085),
-    g = n(238514),
-    E = n(740492),
-    v = n(581883),
-    I = n(874893),
-    T = n(981631),
-    b = n(469115);
-function S(e, t, n) {
+let i;
+var a,
+    s,
+    o = r(442837),
+    l = r(524437),
+    u = r(692547),
+    c = r(780384),
+    d = r(570140),
+    f = r(607070),
+    _ = r(47760),
+    h = r(540059),
+    p = r(541049);
+r(449934);
+var m = r(12647),
+    g = r(358085),
+    E = r(238514),
+    v = r(740492),
+    I = r(581883),
+    T = r(874893),
+    b = r(981631),
+    y = r(469115);
+function S(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let y = null !== (i = (0, p.Z)()) && void 0 !== i ? i : T.BRd.DARK,
-    A = null,
-    N = !1;
-function C() {
-    let e = (function () {
-        var e, t;
-        if (__OVERLAY__) return T.BRd.DARK;
-        if (d.Z.syncForcedColors && 'active' === d.Z.systemForcedColors && null != r) return r;
-        let n = E.ZP.useSystemTheme;
-        if (n === I.K.ON && null != r) return r;
-        let i = null === (e = g.Z.getAppearanceSettings()) || void 0 === e ? void 0 : e.theme;
-        if (null != i) return i;
-        let a = null === (t = v.Z.settings.appearance) || void 0 === t ? void 0 : t.theme;
-        if (null == a) return y;
-        if (!(0, _.i9)('ThemeStore')) return a === o.Q2.LIGHT ? T.BRd.LIGHT : T.BRd.DARK;
-        switch (a) {
-            case o.Q2.LIGHT:
-                return T.BRd.LIGHT;
-            case o.Q2.DARK:
-                return T.BRd.DARK;
-            case o.Q2.DARKER:
-                return T.BRd.DARKER;
-            case o.Q2.MIDNIGHT:
-                return T.BRd.MIDNIGHT;
-            default:
-                return T.BRd.DARK;
-        }
-    })();
-    return e;
-}
+let A = null !== (a = (0, p.Z)()) && void 0 !== a ? a : b.BRd.DARK,
+    N = null,
+    C = !1;
 function R() {
-    return D();
+    var e, n;
+    if (__OVERLAY__) return b.BRd.DARK;
+    if (f.Z.syncForcedColors && 'active' === f.Z.systemForcedColors && null != i) return i;
+    let r = v.ZP.useSystemTheme;
+    if (r === T.K.ON && null != i) return i;
+    let a = null === (e = E.Z.getAppearanceSettings()) || void 0 === e ? void 0 : e.theme;
+    if (null != a) return a;
+    let s = null === (n = I.Z.settings.appearance) || void 0 === n ? void 0 : n.theme;
+    if (null == s) return A;
+    if (!(0, h.i9)('ThemeStore')) return s === l.Q2.LIGHT ? b.BRd.LIGHT : b.BRd.DARK;
+    switch (s) {
+        case l.Q2.LIGHT:
+            return b.BRd.LIGHT;
+        case l.Q2.DARK:
+            return b.BRd.DARK;
+        case l.Q2.DARKER:
+            return b.BRd.DARKER;
+        case l.Q2.MIDNIGHT:
+            return b.BRd.MIDNIGHT;
+        default:
+            return b.BRd.DARK;
+    }
 }
 function O() {
-    return D();
+    let e = R();
+    return e;
 }
 function D() {
-    let e = C();
-    return e !== y && ((y = e), !0);
+    return B();
 }
-class L extends (a = s.ZP.PersistedStore) {
+function L() {
+    return B();
+}
+function x() {
+    return (0, c.ap)(O());
+}
+function w(e) {
+    return !e.isSwitchingAccount && A !== b.BRd.DARK && ((A = b.BRd.DARK), G(), B());
+}
+function P(e) {
+    let { systemTheme: n } = e;
+    return (N = n), B();
+}
+function M(e) {
+    return (i = e.systemPrefersColorScheme), B();
+}
+function k(e) {
+    var n, r;
+    let { presetId: i } = e;
+    A = null != i && null !== (r = null === (n = y.qt[i]) || void 0 === n ? void 0 : n.theme) && void 0 !== r ? r : O();
+    let a = null != i;
+    return C !== a ? ((C = a), !0) : U();
+}
+function U() {
+    let e = O();
+    return !(0, _.qu)(A, e) && ((A = e), !0);
+}
+function B() {
+    let e = O();
+    return e !== A && ((A = e), !0);
+}
+function G() {
+    !__OVERLAY__ && g.isPlatformEmbedded && m.Z.setApplicationBackgroundColor((0, c.wj)(O()) ? u.Z.unsafe_rawColors.PRIMARY_700.resolve({ saturation: f.Z.saturation }).hsl() : u.Z.unsafe_rawColors.WHITE_500.resolve({ saturation: f.Z.saturation }).hsl());
+}
+class Z extends (s = o.ZP.PersistedStore) {
     initialize(e) {
-        (null == e ? void 0 : e.theme) != null && (y = e.theme), this.waitFor(E.ZP, g.Z, v.Z, d.Z);
+        (null == e ? void 0 : e.theme) != null && (A = e.theme), this.waitFor(v.ZP, E.Z, I.Z, f.Z);
     }
     getState() {
         return { theme: this.theme };
     }
     get darkSidebar() {
-        return (0, u.ap)(this.theme) && E.ZP.darkSidebar && !N;
+        return (0, c.ap)(this.theme) && v.ZP.darkSidebar && !C;
     }
     get theme() {
-        return C();
+        return O();
     }
     get systemTheme() {
-        return A;
+        return N;
     }
     get systemPrefersColorScheme() {
-        return r;
+        return i;
     }
     get isSystemThemeAvailable() {
-        return null !== A;
+        return null !== N;
     }
 }
-S(L, 'displayName', 'ThemeStore'),
-    S(L, 'persistKey', 'ThemeStore'),
-    S(L, 'migrations', [
+S(Z, 'displayName', 'ThemeStore'),
+    S(Z, 'persistKey', 'ThemeStore'),
+    S(Z, 'migrations', [
         (e) => {
-            let t = e.theme;
+            let n = e.theme;
             return (
-                'amoled' === t && (t = 'midnight'),
+                'amoled' === n && (n = 'midnight'),
                 {
                     ...e,
-                    theme: t
+                    theme: n
                 }
             );
         }
     ]),
-    (t.Z = new L(c.Z, {
-        CACHE_LOADED: R,
-        CONNECTION_OPEN: R,
-        LOGOUT: function (e) {
-            return (
-                !e.isSwitchingAccount &&
-                y !== T.BRd.DARK &&
-                ((y = T.BRd.DARK),
-                (function () {
-                    !__OVERLAY__ && m.isPlatformEmbedded && h.Z.setApplicationBackgroundColor((0, u.wj)(C()) ? l.Z.unsafe_rawColors.PRIMARY_700.resolve({ saturation: d.Z.saturation }).hsl() : l.Z.unsafe_rawColors.WHITE_500.resolve({ saturation: d.Z.saturation }).hsl());
-                })(),
-                D())
-            );
-        },
-        OVERLAY_INITIALIZE: R,
-        SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: O,
-        UNSYNCED_USER_SETTINGS_UPDATE: O,
-        USER_SETTINGS_PROTO_UPDATE: R,
-        UPDATE_BACKGROUND_GRADIENT_PRESET: function (e) {
-            var t, n;
-            let { presetId: r } = e;
-            y = null != r && null !== (n = null === (t = b.qt[r]) || void 0 === t ? void 0 : t.theme) && void 0 !== n ? n : C();
-            let i = null != r;
-            return N !== i
-                ? ((N = i), !0)
-                : (function () {
-                      let e = C();
-                      return !(0, f.qu)(y, e) && ((y = e), !0);
-                  })();
-        },
-        RESET_PREVIEW_CLIENT_THEME: R,
-        SYSTEM_THEME_CHANGE: function (e) {
-            let { systemTheme: t } = e;
-            return (A = t), D();
-        },
-        ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: function (e) {
-            return (r = e.systemPrefersColorScheme), D();
-        },
-        ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: function () {
-            return (0, u.ap)(C());
-        }
+    (n.Z = new Z(d.Z, {
+        CACHE_LOADED: D,
+        CONNECTION_OPEN: D,
+        LOGOUT: w,
+        OVERLAY_INITIALIZE: D,
+        SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: L,
+        UNSYNCED_USER_SETTINGS_UPDATE: L,
+        USER_SETTINGS_PROTO_UPDATE: D,
+        UPDATE_BACKGROUND_GRADIENT_PRESET: k,
+        RESET_PREVIEW_CLIENT_THEME: D,
+        SYSTEM_THEME_CHANGE: P,
+        ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: M,
+        ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: x
     }));

@@ -1,14 +1,14 @@
-n.d(t, {
+r.d(n, {
     T: function () {
-        return i;
+        return a;
     }
 });
-var r = n(964742);
-function i(e, t) {
+var i = r(964742);
+function a(e, n) {
     return {
-        type: r.TL,
+        type: i.TL,
         payload: {
-            sourceClientOffset: t || null,
+            sourceClientOffset: n || null,
             clientOffset: e || null
         }
     };

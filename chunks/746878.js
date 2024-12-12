@@ -1,14 +1,14 @@
-function r(e, t, n) {
-    return 'string' == typeof e.content || void 0 === e.content ? e.content : t(e.content, n);
+function i(e, n, r) {
+    return 'string' == typeof e.content || void 0 === e.content ? e.content : n(e.content, r);
 }
-function i(e) {
+function a(e) {
     return 'home' === e || 'browse' === e || 'customize' === e || 'guide' === e || 'linked-roles' === e;
 }
-n.d(t, {
+r.d(n, {
     S: function () {
-        return r;
+        return i;
     },
     k: function () {
-        return i;
+        return a;
     }
 });

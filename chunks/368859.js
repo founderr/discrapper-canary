@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(981631);
-function i(e) {
-    return e.type === r.uaV.DEFAULT && null != e.messageReference && e.messageReference.type !== r.Uvt.FORWARD;
+var i = r(981631);
+function a(e) {
+    return e.type === i.uaV.DEFAULT && null != e.messageReference && e.messageReference.type !== i.Uvt.FORWARD;
 }

@@ -1,11 +1,11 @@
-function r(e, t) {
-    let [, n] = e,
-        [, r] = t;
-    return n === r;
-}
-n.d(t, {
+r.d(n, {
     Q: function () {
-        return r;
+        return a;
     }
-}),
-    n(47120);
+});
+var i = r(47120);
+function a(e, n) {
+    let [, r] = e,
+        [, i] = n;
+    return r === i;
+}

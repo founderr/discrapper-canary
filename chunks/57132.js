@@ -1,7 +1,7 @@
-function r() {}
-n.d(t, {
+function i() {}
+r.d(n, {
     P: function () {
-        return r;
+        return i;
     }
 }),
-    n(777639);
+    r(777639);

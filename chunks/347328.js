@@ -1,41 +1,41 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
         return p;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(442837),
-    a = n(481060),
-    s = n(230711),
-    o = n(726542),
-    l = n(394821),
-    u = n(740605),
-    c = n(180335),
-    d = n(553795),
-    f = n(981631),
-    _ = n(388032);
+var i = r(200651);
+r(192379);
+var a = r(442837),
+    s = r(481060),
+    o = r(230711),
+    l = r(726542),
+    u = r(394821),
+    c = r(740605),
+    d = r(180335),
+    f = r(553795),
+    _ = r(981631),
+    h = r(388032);
 function p(e) {
-    let { activity: t, entry: n, display: p, onAction: h, onClose: m } = e,
-        g = (0, i.e7)([d.Z], () => null != d.Z.getAccount(null, f.ABu.CRUNCHYROLL));
-    if (!(0, l.Z)(t) && !(0, c.gr)(n)) return null;
-    if (!g)
-        return (0, r.jsx)(a.MenuItem, {
+    let { activity: n, entry: r, display: p, onAction: m, onClose: g } = e,
+        E = (0, a.e7)([f.Z], () => null != f.Z.getAccount(null, _.ABu.CRUNCHYROLL));
+    if (!(0, u.Z)(n) && !(0, d.gr)(r)) return null;
+    if (!E)
+        return (0, i.jsx)(s.MenuItem, {
             id: 'connect-crunchyroll',
-            label: _.intl.formatToPlainString(_.t.XWSHTU, { platform: o.Z.get(f.ABu.CRUNCHYROLL).name }),
+            label: h.intl.formatToPlainString(h.t.XWSHTU, { platform: l.Z.get(_.ABu.CRUNCHYROLL).name }),
             action: () => {
-                null == h || h({ action: 'PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM' }), s.Z.open(f.oAB.CONNECTIONS), null == m || m();
+                null == m || m({ action: 'PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM' }), o.Z.open(_.oAB.CONNECTIONS), null == g || g();
             }
         });
-    if ('live' === p || !(0, c.gr)(n)) return null;
-    let E = n.extra.url;
-    return null == E || '' === E
+    if ('live' === p || !(0, d.gr)(r)) return null;
+    let v = r.extra.url;
+    return null == v || '' === v
         ? null
-        : (0, r.jsx)(a.MenuItem, {
+        : (0, i.jsx)(s.MenuItem, {
               id: 'watch-on-crunchyroll',
-              label: _.intl.string(_.t.OpxQVF),
+              label: h.intl.string(h.t.OpxQVF),
               action: () => {
-                  null == h || h({ action: 'PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM' }), (0, u.Y)(E);
+                  null == m || m({ action: 'PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM' }), (0, c.Y)(v);
               }
           });
 }

@@ -1,4 +1,4 @@
-n.r(
+r.r(
     (e.exports = {
         emojiButton: 'emojiButton_d91a75',
         emojiButtonNormal: 'emojiButtonNormal_d91a75 emojiButton_d91a75',

@@ -1,17 +1,17 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(192379);
-function i() {
-    let e = r.useRef(null);
+var i = r(192379);
+function a() {
+    let e = i.useRef(null);
     return (
         null === e.current && (e.current = new AbortController()),
-        r.useEffect(
+        i.useEffect(
             () => () => {
-                var t;
-                null === (t = e.current) || void 0 === t || t.abort();
+                var n;
+                null === (n = e.current) || void 0 === n || n.abort();
             },
             []
         ),

@@ -1,36 +1,36 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(442837),
-    a = n(481060),
-    s = n(194359),
-    o = n(699516),
-    l = n(388032);
-function u(e) {
-    let { user: t, color: n, location: u, onAction: c } = e;
-    return !(0, i.e7)([o.Z], () => o.Z.isFriend(t.id)) || t.isNonUserBot()
+var i = r(200651);
+r(192379);
+var a = r(442837),
+    s = r(481060),
+    o = r(194359),
+    l = r(699516),
+    u = r(388032);
+function c(e) {
+    let { user: n, color: r, location: c, onAction: d } = e;
+    return !(0, a.e7)([l.Z], () => l.Z.isFriend(n.id)) || n.isNonUserBot()
         ? null
-        : (0, r.jsx)(a.MenuItem, {
+        : (0, i.jsx)(s.MenuItem, {
               id: 'remove-friend',
-              color: n,
-              label: l.intl.string(l.t.cvSt1N),
+              color: r,
+              label: u.intl.string(u.t.cvSt1N),
               action: () => {
-                  (0, a.openModal)((e) =>
-                      (0, r.jsx)(a.ConfirmModal, {
-                          header: l.intl.formatToPlainString(l.t.fPLvZW, { name: t.username }),
-                          confirmText: l.intl.string(l.t.cvSt1N),
-                          cancelText: l.intl.string(l.t['ETE/oK']),
+                  (0, s.openModal)((e) =>
+                      (0, i.jsx)(s.ConfirmModal, {
+                          header: u.intl.formatToPlainString(u.t.fPLvZW, { name: n.username }),
+                          confirmText: u.intl.string(u.t.cvSt1N),
+                          cancelText: u.intl.string(u.t['ETE/oK']),
                           onConfirm: () => {
-                              null == c || c(), s.Z.removeFriend(t.id, null != u ? { location: u } : void 0);
+                              null == d || d(), o.Z.removeFriend(n.id, null != c ? { location: c } : void 0);
                           },
                           ...e,
-                          children: (0, r.jsx)(a.Text, {
+                          children: (0, i.jsx)(s.Text, {
                               variant: 'text-md/normal',
-                              children: l.intl.format(l.t.l5FFq6, { name: t.username })
+                              children: u.intl.format(u.t.l5FFq6, { name: n.username })
                           })
                       })
                   );

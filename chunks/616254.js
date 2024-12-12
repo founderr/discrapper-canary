@@ -1,3 +1,3 @@
-var r,
-    i = n(995295);
-(t.createRoot = i.createRoot), i.hydrateRoot;
+var i,
+    a = r(995295);
+(n.createRoot = a.createRoot), a.hydrateRoot;

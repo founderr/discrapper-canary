@@ -1,32 +1,32 @@
-n.d(t, {
+r.d(n, {
     RO: function () {
-        return f;
-    },
-    TX: function () {
         return h;
     },
+    TX: function () {
+        return g;
+    },
     Ys: function () {
-        return _;
+        return p;
     },
     rK: function () {
-        return p;
+        return m;
     }
-}),
-    n(47120);
-var r = n(192379),
-    i = n(913527),
-    a = n.n(i),
-    s = n(846519),
-    o = n(987170),
-    l = n(987338);
-let u = new Date('2025-01-06T07:59:59.000Z'),
-    c = a()(u),
-    d = (0, o.Z)({
+});
+var i = r(47120);
+var a = r(192379),
+    s = r(913527),
+    o = r.n(s),
+    l = r(846519),
+    u = r(987170),
+    c = r(987338);
+let d = new Date('2025-01-06T07:59:59.000Z'),
+    f = o()(d),
+    _ = (0, u.Z)({
         id: '2024-11_seasonal_gifting',
         label: 'Seasonal Gifting 2024',
         kind: 'user',
         defaultConfig: { enabled: !1 },
-        commonTriggerPoint: l.$P.CONNECTION_OPEN,
+        commonTriggerPoint: c.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -35,7 +35,7 @@ let u = new Date('2025-01-06T07:59:59.000Z'),
             }
         ]
     }),
-    f = (0, o.Z)({
+    h = (0, u.Z)({
         id: '2023-11_seasonal_gifting_marketing_2023',
         label: 'Seasonal Gifting Marketing 2023',
         kind: 'user',
@@ -48,12 +48,12 @@ let u = new Date('2025-01-06T07:59:59.000Z'),
             }
         ]
     }),
-    _ = (0, o.Z)({
+    p = (0, u.Z)({
         id: '2024-11_seasonal_gifting_reminder',
         label: 'Seasonal Gifting Reminder 2024',
         kind: 'user',
         defaultConfig: { enabled: !1 },
-        commonTriggerPoint: l.$P.CONNECTION_OPEN,
+        commonTriggerPoint: c.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -62,27 +62,27 @@ let u = new Date('2025-01-06T07:59:59.000Z'),
             }
         ]
     });
-function p() {
-    let [e, t] = r.useState(() => c.isAfter(Date.now()));
+function m() {
+    let [e, n] = a.useState(() => f.isAfter(Date.now()));
     return (
-        r.useEffect(() => {
+        a.useEffect(() => {
             if (!e) return;
-            let n = new s.V7(),
-                r = () => {
-                    let e = Math.min(c.diff(Date.now(), 'millisecond'), 86400000);
-                    null == n ||
-                        n.start(e, () => {
-                            c.isBefore(Date.now()) ? t(!1) : r();
+            let r = new l.V7(),
+                i = () => {
+                    let e = Math.min(f.diff(Date.now(), 'millisecond'), 86400000);
+                    null == r ||
+                        r.start(e, () => {
+                            f.isBefore(Date.now()) ? n(!1) : i();
                         });
                 };
-            return r(), () => n.stop();
+            return i(), () => r.stop();
         }, [e]),
         e
     );
 }
-function h() {
-    let e = p(),
-        { enabled: t } = d.useExperiment({ location: 'useIsInSeasonalGiftingXPAndSeasonalGiftingActive' }, { autoTrackExposure: !1 });
-    return e && t;
+function g() {
+    let e = m(),
+        { enabled: n } = _.useExperiment({ location: 'useIsInSeasonalGiftingXPAndSeasonalGiftingActive' }, { autoTrackExposure: !1 });
+    return e && n;
 }
-t.ZP = d;
+n.ZP = _;

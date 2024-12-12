@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     dateRange: (e) => `${e.startDate} til ${e.endDate}`,
     dateSelected: (e) => `${e.date} valgt`,
     finishRangeSelectionPrompt: `Klikk for \xe5 fullf\xf8re valg av datoomr\xe5de`,

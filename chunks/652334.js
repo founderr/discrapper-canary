@@ -1,22 +1,22 @@
-n.d(t, {
+r.d(n, {
     v: function () {
-        return l;
+        return u;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(1561),
-    o = n(997249);
-function l(e) {
-    let { as: t, muted: n = !1, selected: i = !1, className: l, ...u } = e,
-        c = null != t ? t : s.P;
-    return (0, r.jsx)(c, {
-        ...u,
-        className: a()(o.interactive, l, {
-            [o.muted]: n,
-            [o.selected]: i
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(1561),
+    l = r(997249);
+function u(e) {
+    let { as: n, muted: r = !1, selected: a = !1, className: u, ...c } = e,
+        d = null != n ? n : o.P;
+    return (0, i.jsx)(d, {
+        ...c,
+        className: s()(l.interactive, u, {
+            [l.muted]: r,
+            [l.selected]: a
         })
     });
 }

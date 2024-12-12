@@ -1,57 +1,57 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return m;
+        return _;
     }
 });
-var i = n(200651),
-    l = n(192379),
-    a = n(392711),
-    r = n(500923),
-    s = n.n(r),
-    o = n(963838),
-    c = n(353368),
-    u = n(786287);
-let d = async (e) => {
-    var t;
-    let { animationType: n, animationId: i, url: l, shouldResize: r } = e,
-        s = null !== (t = o.Jw[n]) && void 0 !== t ? t : o.Jw[c.q.BASIC],
-        u = JSON.parse(JSON.stringify(null != i && i < s.length ? s[i] : (0, a.sample)(s)));
-    return (u.assets[0].p = r ? await (0, o.lv)(l) : l), u;
+var i = r(200651),
+    a = r(192379),
+    s = r(392711);
+var o = r(500923),
+    l = r.n(o),
+    u = r(963838),
+    c = r(353368),
+    d = r(114250);
+let f = async (e) => {
+    var n;
+    let { animationType: r, animationId: i, url: a, shouldResize: o } = e,
+        l = null !== (n = u.Jw[r]) && void 0 !== n ? n : u.Jw[c.q.BASIC],
+        d = JSON.parse(JSON.stringify(null != i && i < l.length ? l[i] : (0, s.sample)(l)));
+    return (d.assets[0].p = o ? await (0, u.lv)(a) : a), d;
 };
-function m(e) {
-    let { containerDimensions: t, effect: n, onComplete: a } = e,
-        r = l.useRef(null);
+function _(e) {
+    let { containerDimensions: n, effect: r, onComplete: s } = e,
+        o = a.useRef(null);
     return (
-        l.useEffect(() => {
+        a.useEffect(() => {
             let e;
             return (
                 !(async function () {
-                    if (null != r.current) {
-                        let t = await d(n);
-                        (e = s().loadAnimation({
-                            container: r.current,
+                    if (null != o.current) {
+                        let n = await f(r);
+                        (e = l().loadAnimation({
+                            container: o.current,
                             renderer: 'svg',
                             loop: !1,
                             autoplay: !0,
-                            animationData: t,
+                            animationData: n,
                             rendererSettings: { preserveAspectRatio: 'xMidYMax slice' }
                         })),
-                            n.animationType === c.q.PREMIUM && e.setSpeed(0.8),
-                            e.addEventListener('complete', () => (null == a ? void 0 : a(n.id)));
+                            r.animationType === c.q.PREMIUM && e.setSpeed(0.8),
+                            e.addEventListener('complete', () => (null == s ? void 0 : s(r.id)));
                     }
                 })(),
                 () => {
                     null == e || e.destroy();
                 }
             );
-        }, [a, n]),
+        }, [s, r]),
         (0, i.jsx)('div', {
-            className: u.effect,
+            className: d.effect,
             style: {
-                height: t.height,
-                width: t.width
+                height: n.height,
+                width: n.width
             },
-            ref: r
+            ref: o
         })
     );
 }

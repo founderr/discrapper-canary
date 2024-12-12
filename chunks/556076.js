@@ -1,14 +1,14 @@
-n.d(t, {
+r.d(n, {
     y: function () {
-        return a;
+        return s;
     }
 });
-var r = n(544891),
-    i = n(981631);
-function a(e, t) {
-    r.tn.post({
-        url: i.ANM.VOICE_CHANNEL_NOTIFICATIONS(e),
-        query: { first_user: t },
+var i = r(544891),
+    a = r(981631);
+function s(e, n) {
+    i.tn.post({
+        url: a.ANM.VOICE_CHANNEL_NOTIFICATIONS(e),
+        query: { first_user: n },
         rejectWithError: !0
     });
 }

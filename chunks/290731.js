@@ -1,7 +1,7 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = { Empty: `Bo\u{15F}` };
+var i = {};
+i = { Empty: `Bo\u{15F}` };

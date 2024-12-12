@@ -1,22 +1,22 @@
-n.d(t, {
+r.d(n, {
     S5: function () {
-        return a;
-    },
-    Yz: function () {
-        return r;
-    },
-    dD: function () {
-        return o;
-    },
-    pt: function () {
         return s;
     },
-    ve: function () {
+    Yz: function () {
         return i;
+    },
+    dD: function () {
+        return l;
+    },
+    pt: function () {
+        return o;
+    },
+    ve: function () {
+        return a;
     }
 });
-let r = 'guild-product-edit-modal',
-    i = 1073741824,
+let i = 'guild-product-edit-modal',
     a = 1073741824,
-    s = 10,
-    o = 30;
+    s = 1073741824,
+    o = 10,
+    l = 30;

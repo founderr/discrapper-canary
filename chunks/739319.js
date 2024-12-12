@@ -1,65 +1,65 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return f;
+        return h;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    l = n(454585),
-    u = n(572004),
-    c = n(388032),
-    d = n(417336);
-function f(e) {
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(120356),
+    l = r.n(o),
+    u = r(481060),
+    c = r(454585),
+    d = r(572004),
+    f = r(388032),
+    _ = r(417336);
+function h(e) {
     let {
             element: {
-                data: { title: t, body: n, sms: a, is_localized: f }
+                data: { title: n, body: r, sms: i, is_localized: o }
             }
         } = e,
-        [_, p] = i.useState(!1),
-        h = i.useRef(l.Z.reactParserFor(l.Z.defaultRules));
-    return f
-        ? (0, r.jsxs)('div', {
-              className: d.container,
-              children: [
-                  (0, r.jsx)(o.Heading, {
-                      variant: 'heading-sm/semibold',
-                      color: 'header-secondary',
-                      className: d.header,
-                      children: t
-                  }),
-                  (0, r.jsx)(o.Text, {
-                      variant: 'text-sm/normal',
-                      className: d.bodyText,
-                      children: h.current(n)
-                  }),
-                  (0, r.jsx)('div', {
-                      className: d.__invalid_smsInfoContainer,
-                      children: (0, r.jsxs)('div', {
-                          className: s()(d.smsNumberContainer, { [d.copied]: _ }),
-                          children: [
-                              (0, r.jsx)(o.Text, {
-                                  variant: 'text-md/normal',
-                                  selectable: !0,
-                                  className: d.smsNumberText,
-                                  children: a
-                              }),
-                              (0, r.jsx)(o.Button, {
-                                  size: o.Button.Sizes.SMALL,
-                                  className: d.__invalid_trailingButton,
-                                  onClick: () => {
-                                      (0, u.JG)(a) && p(!0);
-                                  },
-                                  color: o.Button.Colors.PRIMARY,
-                                  children: _ ? c.intl.string(c.t['t5VZ8/']) : c.intl.string(c.t.OpuAlJ)
-                              })
-                          ]
-                      })
-                  })
-              ]
-          })
-        : null;
+        [h, p] = s.useState(!1),
+        m = s.useRef(c.Z.reactParserFor(c.Z.defaultRules));
+    if (!o) return null;
+    let g = () => {
+        (0, d.JG)(i) && p(!0);
+    };
+    return (0, a.jsxs)('div', {
+        className: _.container,
+        children: [
+            (0, a.jsx)(u.Heading, {
+                variant: 'heading-sm/semibold',
+                color: 'header-secondary',
+                className: _.header,
+                children: n
+            }),
+            (0, a.jsx)(u.Text, {
+                variant: 'text-sm/normal',
+                className: _.bodyText,
+                children: m.current(r)
+            }),
+            (0, a.jsx)('div', {
+                className: _.__invalid_smsInfoContainer,
+                children: (0, a.jsxs)('div', {
+                    className: l()(_.smsNumberContainer, { [_.copied]: h }),
+                    children: [
+                        (0, a.jsx)(u.Text, {
+                            variant: 'text-md/normal',
+                            selectable: !0,
+                            className: _.smsNumberText,
+                            children: i
+                        }),
+                        (0, a.jsx)(u.Button, {
+                            size: u.Button.Sizes.SMALL,
+                            className: _.__invalid_trailingButton,
+                            onClick: g,
+                            color: u.Button.Colors.PRIMARY,
+                            children: h ? f.intl.string(f.t['t5VZ8/']) : f.intl.string(f.t.OpuAlJ)
+                        })
+                    ]
+                })
+            })
+        ]
+    });
 }

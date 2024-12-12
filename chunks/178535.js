@@ -1,24 +1,24 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(607070),
-    i = n(981631);
-function a(e, t, n) {
-    var a, s, o, l, u, c, d, f;
-    let _ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+var i = r(607070),
+    a = r(981631);
+function s(e, n, r) {
+    var s, o, l, u, c, d, f, _;
+    let h = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
     return {
-        key: null !== (s = null !== (a = t.key) && void 0 !== a ? a : _) && void 0 !== s ? s : 'modal',
+        key: null !== (o = null !== (s = n.key) && void 0 !== s ? s : h) && void 0 !== o ? o : 'modal',
         modal: e,
-        animation: null !== (o = t.animation) && void 0 !== o ? o : r.Z.useReducedMotion ? i.fMv.FADE : i.fMv.SLIDE_UP,
-        shouldPersistUnderModals: null !== (l = t.shouldPersistUnderModals) && void 0 !== l && l,
-        props: n,
-        backdropStyle: null !== (u = t.backdropStyle) && void 0 !== u ? u : null,
-        backdropInstant: null !== (c = t.backdropInstant) && void 0 !== c && c,
-        disableAnimation: null !== (d = t.disableAnimation) && void 0 !== d && d,
-        closable: 'boolean' != typeof t.closable || t.closable,
-        label: null !== (f = t.label) && void 0 !== f ? f : '',
+        animation: null !== (l = n.animation) && void 0 !== l ? l : i.Z.useReducedMotion ? a.fMv.FADE : a.fMv.SLIDE_UP,
+        shouldPersistUnderModals: null !== (u = n.shouldPersistUnderModals) && void 0 !== u && u,
+        props: r,
+        backdropStyle: null !== (c = n.backdropStyle) && void 0 !== c ? c : null,
+        backdropInstant: null !== (d = n.backdropInstant) && void 0 !== d && d,
+        disableAnimation: null !== (f = n.disableAnimation) && void 0 !== f && f,
+        closable: 'boolean' != typeof n.closable || n.closable,
+        label: null !== (_ = n.label) && void 0 !== _ ? _ : '',
         callbacks: {}
     };
 }

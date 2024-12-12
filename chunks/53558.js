@@ -1,56 +1,56 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return f;
+        return _;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(442837),
-    a = n(481060),
-    s = n(970321),
-    o = n(283836),
-    l = n(621853),
-    u = n(475413),
-    c = n(388032);
-function d(e) {
-    let { user: t, onClick: n, ...i } = e;
+var i = r(200651);
+r(192379);
+var a = r(442837),
+    s = r(481060),
+    o = r(970321),
+    l = r(283836),
+    u = r(621853),
+    c = r(475413),
+    d = r(388032);
+function f(e) {
+    let { user: n, onClick: r, ...a } = e;
     return (
-        (0, o.q)(t.id),
-        (0, r.jsx)(u.tG, {
+        (0, l.q)(n.id),
+        (0, i.jsx)(c.tG, {
             action: 'PRESS_APP_STOREFRONT',
-            icon: a.ShopIcon,
-            text: c.intl.string(c.t.V7j5aW),
-            color: a.ButtonColors.BRAND,
+            icon: s.ShopIcon,
+            text: d.intl.string(d.t.V7j5aW),
+            color: s.ButtonColors.BRAND,
             themeColor: 'none',
-            onClick: n,
-            ...i
+            onClick: r,
+            ...a
         })
     );
 }
-function f(e) {
-    var t;
-    let { user: o, guildId: u, ...c } = e,
-        f = (0, i.e7)([l.Z], () => {
+function _(e) {
+    var n;
+    let { user: l, guildId: c, ...d } = e,
+        _ = (0, a.e7)([u.Z], () => {
             var e;
-            return null === (e = l.Z.getUserProfile(o.id)) || void 0 === e ? void 0 : e.application;
+            return null === (e = u.Z.getUserProfile(l.id)) || void 0 === e ? void 0 : e.application;
         }),
-        _ = (0, s.R)(null !== (t = null == f ? void 0 : f.id) && void 0 !== t ? t : '');
-    return null != f && _
-        ? (0, r.jsx)(d, {
-              user: o,
-              guildId: u,
-              onClick: () => {
-                  (0, a.openModalLazy)(async () => {
-                      let { default: e } = await Promise.all([n.e('73503'), n.e('74891'), n.e('77803'), n.e('92566')]).then(n.bind(n, 7225));
-                      return (t) =>
-                          (0, r.jsx)(e, {
-                              appId: f.id,
-                              guildId: u,
-                              ...t
-                          });
-                  });
-              },
-              ...c
-          })
-        : null;
+        h = (0, o.R)(null !== (n = null == _ ? void 0 : _.id) && void 0 !== n ? n : '');
+    if (null == _ || !h) return null;
+    let p = () => {
+        (0, s.openModalLazy)(async () => {
+            let { default: e } = await Promise.all([r.e('73503'), r.e('74891'), r.e('77803'), r.e('92566')]).then(r.bind(r, 7225));
+            return (n) =>
+                (0, i.jsx)(e, {
+                    appId: _.id,
+                    guildId: c,
+                    ...n
+                });
+        });
+    };
+    return (0, i.jsx)(f, {
+        user: l,
+        guildId: c,
+        onClick: p,
+        ...d
+    });
 }

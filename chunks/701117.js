@@ -1,44 +1,44 @@
-let r;
-n.d(t, {
+let i;
+r.d(n, {
     y: function () {
-        return a;
+        return l;
     }
 });
-var i = n(37082);
+var a = r(37082);
 try {
-    r = window.sessionStorage;
+    i = window.sessionStorage;
 } catch (e) {}
 try {
     delete window.sessionStorage;
 } catch (e) {}
-let a = !(function () {
+function s() {
     let e = 'test';
     try {
-        return r.setItem(e, e), r.removeItem(e), !0;
+        return i.setItem(e, e), i.removeItem(e), !0;
     } catch (e) {
         return !1;
     }
-})()
-    ? new i.R()
-    : new (class e {
-          get(e, t) {
-              let n = r.getItem(e);
-              if (null != n)
-                  try {
-                      n = JSON.parse(n);
-                  } catch (e) {
-                      n = t;
-                  }
-              else n = t;
-              return n;
-          }
-          set(e, t) {
-              r.setItem(e, JSON.stringify(t));
-          }
-          remove(e) {
-              r.removeItem(e);
-          }
-          clear() {
-              r.clear();
-          }
-      })();
+}
+class o {
+    get(e, n) {
+        let r = i.getItem(e);
+        if (null != r)
+            try {
+                r = JSON.parse(r);
+            } catch (e) {
+                r = n;
+            }
+        else r = n;
+        return r;
+    }
+    set(e, n) {
+        i.setItem(e, JSON.stringify(n));
+    }
+    remove(e) {
+        i.removeItem(e);
+    }
+    clear() {
+        i.clear();
+    }
+}
+let l = s() ? new o() : new a.R();

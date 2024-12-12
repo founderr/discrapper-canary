@@ -1,104 +1,104 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return v;
+        return T;
     }
-}),
-    n(47120);
-var r = n(192379),
-    i = n(931609),
-    a = n(442837),
-    s = n(456007),
-    o = n(998698),
-    l = n(541716),
-    u = n(797610),
-    c = n(271383),
-    d = n(496675),
-    f = n(246946),
-    _ = n(594174),
-    p = n(106824),
-    h = n(691841),
-    m = n(981631),
-    g = n(377668),
-    E = n(185923);
-function v(e, t, n) {
-    var v, I, T, b, S, y, A;
-    let { channel: N, type: C } = e,
-        [R, O] = r.useState(() => (0, p.P)()),
-        D = (0, i.Z)(),
-        L = (0, a.e7)([c.ZP], () => {
+});
+var i = r(47120);
+var a = r(192379),
+    s = r(931609),
+    o = r(442837),
+    l = r(456007),
+    u = r(998698),
+    c = r(541716),
+    d = r(797610),
+    f = r(271383),
+    _ = r(496675),
+    h = r(246946),
+    p = r(594174),
+    m = r(106824),
+    g = r(691841),
+    E = r(981631),
+    v = r(377668),
+    I = r(185923);
+function T(e, n, r) {
+    var i, T, b, y, S, A, N;
+    let { channel: C, type: R } = e,
+        [O, D] = a.useState(() => (0, m.P)()),
+        L = (0, s.Z)(),
+        x = (0, o.e7)([f.ZP], () => {
             if (null != e.guild) {
-                var t;
-                return null != c.ZP.getMember(null === (t = e.guild) || void 0 === t ? void 0 : t.id, g.fL);
+                var n;
+                return null != f.ZP.getMember(null === (n = e.guild) || void 0 === n ? void 0 : n.id, v.fL);
             }
             return !1;
         }),
-        x = (0, u.Ib)(e.guild, e.channel) && !L && !(0, u.g0)(e.guild),
-        w = (0, a.e7)([c.ZP, _.default], () => {
-            var e, t;
-            let n = _.default.getCurrentUser();
-            return null !== (t = null != N.guild_id && null != n ? (null === (e = c.ZP.getMember(N.guild_id, n.id)) || void 0 === e ? void 0 : e.isPending) : null) && void 0 !== t && t;
+        w = (0, d.Ib)(e.guild, e.channel) && !x && !(0, d.g0)(e.guild),
+        P = (0, o.e7)([f.ZP, p.default], () => {
+            var e, n;
+            let r = p.default.getCurrentUser();
+            return null !== (n = null != C.guild_id && null != r ? (null === (e = f.ZP.getMember(C.guild_id, r.id)) || void 0 === e ? void 0 : e.isPending) : null) && void 0 !== n && n;
         }),
-        { canMentionEveryone: P, hidePersonalInformation: M } = (0, a.cj)(
-            [d.Z, f.Z],
+        { canMentionEveryone: M, hidePersonalInformation: k } = (0, o.cj)(
+            [_.Z, h.Z],
             () => ({
-                canMentionEveryone: N.isPrivate() || w || C === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, N),
-                hidePersonalInformation: f.Z.hidePersonalInformation
+                canMentionEveryone: C.isPrivate() || P || R === c.Ie.RULES_INPUT || _.Z.can(E.Plq.MENTION_EVERYONE, C),
+                hidePersonalInformation: h.Z.hidePersonalInformation
             }),
-            [N, C, w]
+            [C, R, P]
         ),
-        { activeCommand: k, activeCommandOption: U } = (0, a.cj)([o.Z], () => ({
-            activeCommand: o.Z.getActiveCommand(N.id),
-            activeCommandOption: o.Z.getActiveOption(N.id)
+        { activeCommand: U, activeCommandOption: B } = (0, o.cj)([u.Z], () => ({
+            activeCommand: u.Z.getActiveCommand(C.id),
+            activeCommandOption: u.Z.getActiveOption(C.id)
         })),
-        B = (0, h.Z)({
+        G = (0, g.Z)({
             navId: 'channel-autocomplete',
-            scrollerRef: n,
-            state: R,
-            onFocus: (e) => F.setSelectedIndex(e)
+            scrollerRef: r,
+            state: O,
+            onFocus: (e) => V.setSelectedIndex(e)
         }),
-        G = null === (v = e.editorRef.current) || void 0 === v ? void 0 : v.getCurrentWord(),
-        Z = {
+        Z = null === (i = e.editorRef.current) || void 0 === i ? void 0 : i.getCurrentWord(),
+        F = {
             ...e,
-            navigator: B,
-            activeCommand: k,
-            activeCommandOption: U,
-            canMentionUsers: null !== (S = null === (I = C.users) || void 0 === I ? void 0 : I.allowMentioning) && void 0 !== S && S,
-            canMentionEveryone: P,
-            canMentionClyde: x,
-            hidePersonalInformation: M,
-            hideMentionDescription: C === l.Ie.RULES_INPUT,
-            emojiIntention: C === l.Ie.RULES_INPUT ? E.Hz.COMMUNITY_CONTENT : E.Hz.CHAT,
-            currentWord: null !== (y = null == G ? void 0 : G.word) && void 0 !== y ? y : '',
-            currentWordIsAtStart: (null == G ? void 0 : G.isAtStart) === !0,
-            optionText: null != U ? (0, s.KF)({ [U.name]: null !== (A = null === (T = e.editorRef.current) || void 0 === T ? void 0 : T.getCurrentCommandOptionValue()) && void 0 !== A ? A : [] }, U.name) : ''
+            navigator: G,
+            activeCommand: U,
+            activeCommandOption: B,
+            canMentionUsers: null !== (S = null === (T = R.users) || void 0 === T ? void 0 : T.allowMentioning) && void 0 !== S && S,
+            canMentionEveryone: M,
+            canMentionClyde: w,
+            hidePersonalInformation: k,
+            hideMentionDescription: R === c.Ie.RULES_INPUT,
+            emojiIntention: R === c.Ie.RULES_INPUT ? I.Hz.COMMUNITY_CONTENT : I.Hz.CHAT,
+            currentWord: null !== (A = null == Z ? void 0 : Z.word) && void 0 !== A ? A : '',
+            currentWordIsAtStart: (null == Z ? void 0 : Z.isAtStart) === !0,
+            optionText: null != B ? (0, l.KF)({ [B.name]: null !== (N = null === (b = e.editorRef.current) || void 0 === b ? void 0 : b.getCurrentCommandOptionValue()) && void 0 !== N ? N : [] }, B.name) : ''
         },
-        [F] = r.useState(() => new p.Z(Z));
+        [V] = a.useState(() => new m.Z(F));
     return (
-        r.useEffect(() => {
-            F.updateProps(Z);
+        a.useEffect(() => {
+            V.updateProps(F);
         }),
-        r.useImperativeHandle(t, () => F, [F]),
-        r.useEffect(() => {
-            let e = (e) => O(e);
+        a.useImperativeHandle(n, () => V, [V]),
+        a.useEffect(() => {
+            let e = (e) => D(e);
             return (
-                F.on('change', e),
-                F.on('update', D),
+                V.on('change', e),
+                V.on('update', L),
                 () => {
-                    F.off('change', e), F.off('update', D);
+                    V.off('change', e), V.off('update', L);
                 }
             );
-        }, [D, F]),
-        r.useEffect(() => {
+        }, [L, V]),
+        a.useEffect(() => {
             var e;
-            let t = null === (e = R.query) || void 0 === e ? void 0 : e.typeInfo.stores;
-            if (null != t) {
-                let e = () => F.queryResults();
-                for (let n of t) n.addChangeListener(e);
+            let n = null === (e = O.query) || void 0 === e ? void 0 : e.typeInfo.stores;
+            if (null != n) {
+                let e = () => V.queryResults();
+                for (let r of n) r.addChangeListener(e);
                 return () => {
-                    for (let n of t) n.removeChangeListener(e);
+                    for (let r of n) r.removeChangeListener(e);
                 };
             }
-        }, [F, null === (b = R.query) || void 0 === b ? void 0 : b.typeInfo]),
-        [R, F, B]
+        }, [V, null === (y = O.query) || void 0 === y ? void 0 : y.typeInfo]),
+        [O, V, G]
     );
 }

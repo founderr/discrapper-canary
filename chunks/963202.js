@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     i: function () {
-        return i;
+        return a;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
     kind: 'user',
     id: '2024-07_rapidash_m3_joiners',
     label: 'Rapidash M3 Users',
@@ -16,7 +16,7 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return r.useExperiment({ location: e }, { autoTrackExposure: t }).enableM3Experience;
+function a(e) {
+    let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    return i.useExperiment({ location: e }, { autoTrackExposure: n }).enableM3Experience;
 }

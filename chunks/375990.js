@@ -1,20 +1,20 @@
-function n(e) {
-    let t = {};
+function r(e) {
+    let n = {};
     return (
-        Object.keys(e).forEach(function (n) {
-            (0 | n) == n && (n |= 0), (t[e[n]] = n);
+        Object.keys(e).forEach(function (r) {
+            (0 | r) == r && (r |= 0), (n[e[r]] = r);
         }),
-        t
+        n
     );
 }
-(t.tagClass = {
+(n.tagClass = {
     0: 'universal',
     1: 'application',
     2: 'context',
     3: 'private'
 }),
-    (t.tagClassByName = n(t.tagClass)),
-    (t.tag = {
+    (n.tagClassByName = r(n.tagClass)),
+    (n.tag = {
         0: 'end',
         1: 'bool',
         2: 'int',
@@ -45,4 +45,4 @@ function n(e) {
         29: 'charstr',
         30: 'bmpstr'
     }),
-    (t.tagByName = n(t.tag));
+    (n.tagByName = r(n.tag));

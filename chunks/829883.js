@@ -1,46 +1,46 @@
-n.d(t, {
+r.d(n, {
     _b: function () {
-        return h;
+        return g;
     },
     o: function () {
-        return f;
+        return h;
     },
     zt: function () {
-        return p;
+        return m;
     },
     zy: function () {
-        return d;
+        return _;
     }
-}),
-    n(757143);
-var r = n(633302),
-    i = n(134432),
-    a = n(768581),
-    s = n(358085),
-    o = n(981631);
-let l = ''.concat(location.protocol, '//').concat(window.GLOBAL_ENV.CDN_HOST, '/role-icons'),
-    u = ''.concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT),
-    c = (0, s.isAndroid)(),
-    d = (e, t) => {
+});
+var i = r(757143);
+var a = r(633302),
+    s = r(134432),
+    o = r(768581),
+    l = r(358085),
+    u = r(981631);
+let c = ''.concat(location.protocol, '//').concat(window.GLOBAL_ENV.CDN_HOST, '/role-icons'),
+    d = ''.concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT),
+    f = (0, l.isAndroid)(),
+    _ = (e, n) => {
         if (null == e) return null;
-        let n = null != e.unicodeEmoji ? r.ZP.getByName(r.ZP.convertSurrogateToName(e.unicodeEmoji, !1)) : void 0;
+        let r = null != e.unicodeEmoji ? a.ZP.getByName(a.ZP.convertSurrogateToName(e.unicodeEmoji, !1)) : void 0;
         return {
-            customIconSrc: _(e, t),
-            unicodeEmoji: null != n ? n : void 0
+            customIconSrc: p(e, n),
+            unicodeEmoji: null != r ? r : void 0
         };
     },
-    f = (e, t) => e.replace(/size=[0-9]+/g, 'size='.concat((0, i.oO)(t * (0, i.x_)()))),
-    _ = (e, t) => {
-        let { id: n, icon: r } = e;
-        if (null == r) return;
-        if (r.startsWith('data:')) return r;
-        let s = a.$k ? 'webp' : 'png',
-            d = '',
-            f = 'quality=lossless';
-        return (null != t && ((d = 'size=' + (0, i.oO)(t * (0, i.x_)())), (f = c ? '' : '&' + f)), null != window.GLOBAL_ENV.CDN_HOST) ? ''.concat(l, '/').concat(n, '/').concat(r, '.').concat(s, '?').concat(d).concat(f) : ''.concat(u).concat(o.ANM.ROLE_ICON(n, r), '?').concat(d);
+    h = (e, n) => e.replace(/size=[0-9]+/g, 'size='.concat((0, s.oO)(n * (0, s.x_)()))),
+    p = (e, n) => {
+        let { id: r, icon: i } = e;
+        if (null == i) return;
+        if (i.startsWith('data:')) return i;
+        let a = o.$k ? 'webp' : 'png',
+            l = '',
+            _ = 'quality=lossless';
+        return (null != n && ((l = 'size=' + (0, s.oO)(n * (0, s.x_)())), (_ = f ? '' : '&' + _)), null != window.GLOBAL_ENV.CDN_HOST) ? ''.concat(c, '/').concat(r, '/').concat(i, '.').concat(a, '?').concat(l).concat(_) : ''.concat(d).concat(u.ANM.ROLE_ICON(r, i), '?').concat(l);
     },
-    p = (e) => e.startsWith(l) || (e.startsWith(''.concat(u, '/roles')) && e.includes('/icons/')),
-    h = (e, t) => {
-        var n;
-        return (null == t ? void 0 : null === (n = t.tags) || void 0 === n ? void 0 : n.subscription_listing_id) != null || e.features.has(o.oNc.ROLE_ICONS);
+    m = (e) => e.startsWith(c) || (e.startsWith(''.concat(d, '/roles')) && e.includes('/icons/')),
+    g = (e, n) => {
+        var r;
+        return (null == n ? void 0 : null === (r = n.tags) || void 0 === r ? void 0 : r.subscription_listing_id) != null || e.features.has(u.oNc.ROLE_ICONS);
     };

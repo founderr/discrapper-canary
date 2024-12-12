@@ -1,12 +1,12 @@
-n.d(t, {
+r.d(n, {
     r: function () {
-        return s;
+        return o;
     }
 });
-var r = n(709054);
-let i = 0,
-    a = new r.SnowflakeSequence();
-function s() {
+var i = r(709054);
+let a = 0,
+    s = new i.SnowflakeSequence();
+function o() {
     let e = Date.now();
-    return i !== e && (a.reset(), (i = e)), r.default.fromTimestampWithSequence(e, a);
+    return a !== e && (s.reset(), (a = e)), i.default.fromTimestampWithSequence(e, s);
 }

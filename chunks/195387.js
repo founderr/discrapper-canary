@@ -1,42 +1,42 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return m;
+        return g;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(442837),
-    a = n(481060),
-    s = n(906732),
-    o = n(189432),
-    l = n(189357),
-    u = n(434404),
-    c = n(314897),
-    d = n(944486),
-    f = n(475413),
-    _ = n(176505),
-    p = n(50493),
-    h = n(388032);
-function m(e) {
-    let { user: t, guildId: n, channelId: m, onClose: g, shouldShowTooltip: E } = e,
-        { newestAnalyticsLocation: v } = (0, s.ZP)(),
-        I = (0, i.e7)([c.default], () => c.default.getId() === (null == t ? void 0 : t.id)),
-        T = (0, l.ms)(null != n ? n : null, !0),
-        b = (0, i.e7)([d.Z], () => (null != m ? m : d.Z.getChannelId(n, !0)), [m, n]);
-    return null == n || !T || I
+var i = r(200651);
+r(192379);
+var a = r(442837),
+    s = r(481060),
+    o = r(906732),
+    l = r(189432),
+    u = r(189357),
+    c = r(434404),
+    d = r(314897),
+    f = r(944486),
+    _ = r(475413),
+    h = r(176505),
+    p = r(50493),
+    m = r(388032);
+function g(e) {
+    let { user: n, guildId: r, channelId: g, onClose: E, shouldShowTooltip: v } = e,
+        { newestAnalyticsLocation: I } = (0, o.ZP)(),
+        T = (0, a.e7)([d.default], () => d.default.getId() === (null == n ? void 0 : n.id)),
+        b = (0, u.ms)(null != r ? r : null, !0),
+        y = (0, a.e7)([f.Z], () => (null != g ? g : f.Z.getChannelId(r, !0)), [g, r]);
+    return null == r || !b || T
         ? null
-        : (0, r.jsx)(f.oY, {
+        : (0, i.jsx)(_.oY, {
               action: 'PRESS_MOD_VIEW',
-              icon: a.ModerationIcon,
-              shouldShowTooltip: E,
-              tooltipText: h.intl.string(h.t.kj3tz8),
+              icon: s.ModerationIcon,
+              shouldShowTooltip: v,
+              tooltipText: m.intl.string(m.t.kj3tz8),
               onClick: () => {
-                  u.Z.close(),
-                      (0, o.r)(n, t.id, null != b ? b : _.oC.MEMBER_SAFETY, {
+                  c.Z.close(),
+                      (0, l.r)(r, n.id, null != y ? y : h.oC.MEMBER_SAFETY, {
                           modViewPanel: p.k.INFO,
-                          sourceLocation: v
+                          sourceLocation: I
                       }),
-                      null == g || g();
+                      null == E || E();
               }
           });
 }

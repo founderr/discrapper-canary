@@ -1,80 +1,80 @@
-var r = n(200651),
-    i = n(192379),
-    a = n(477690),
-    s = n(481060),
-    o = n(880949),
-    l = n(806966),
-    u = n(65029),
-    c = n(430824),
-    d = n(624138),
-    f = n(926491),
-    _ = n(373228),
-    p = n(378233),
-    h = n(419922),
-    m = n(388032),
-    g = n(797479);
-let E = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
-    v = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
-    I = (e) => {
-        let t = null,
-            n = null;
+var i = r(200651),
+    a = r(192379),
+    s = r(477690),
+    o = r(481060),
+    l = r(880949),
+    u = r(806966),
+    c = r(65029),
+    d = r(430824),
+    f = r(624138),
+    _ = r(926491),
+    h = r(373228),
+    p = r(378233),
+    m = r(419922),
+    g = r(388032),
+    E = r(797479);
+let v = (0, f.Mg)(s.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
+    I = (0, f.Mg)(s.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
+    T = (e) => {
+        let n = null,
+            r = null;
         if ((!(0, p.jl)(e) && !(0, p.J8)(e)) || (0, p.J8)(e)) {
-            let i = c.Z.getGuild(e.guild_id);
-            null != i && ((t = m.intl.format(m.t.cZOkbm, { source: i.name })), (n = (0, r.jsx)(o.Z, { guild: i })));
+            let a = d.Z.getGuild(e.guild_id);
+            null != a && ((n = g.intl.format(g.t.cZOkbm, { source: a.name })), (r = (0, i.jsx)(l.Z, { guild: a })));
         } else if ((0, p.jl)(e)) {
-            let i = f.Z.getStickerPack(e.pack_id);
-            null != i &&
-                ((t = m.intl.format(m.t.cZOkbm, { source: i.name })),
-                (n = (0, r.jsx)(h.ZP, {
-                    size: v,
-                    sticker: (0, p.Zt)(i),
+            let a = _.Z.getStickerPack(e.pack_id);
+            null != a &&
+                ((n = g.intl.format(g.t.cZOkbm, { source: a.name })),
+                (r = (0, i.jsx)(m.ZP, {
+                    size: I,
+                    sticker: (0, p.Zt)(a),
                     disableAnimation: !0
                 })));
         }
         return {
-            title: t,
-            graphic: n
+            title: n,
+            graphic: r
         };
     },
-    T = i.memo(function (e) {
-        let { stickersGrid: t } = e,
-            n = l.ZN.useStore((e) => e.inspectedExpressionPosition),
-            a = i.useMemo(() => {
+    b = a.memo(function (e) {
+        let { stickersGrid: n } = e,
+            r = u.ZN.useStore((e) => e.inspectedExpressionPosition),
+            s = a.useMemo(() => {
                 var e;
-                let { rowIndex: r, columnIndex: i } = n,
-                    a = null === (e = t[r]) || void 0 === e ? void 0 : e[i];
-                return (null == a ? void 0 : a.type) === _.al.CREATE_STICKER
+                let { rowIndex: i, columnIndex: a } = r,
+                    s = null === (e = n[i]) || void 0 === e ? void 0 : e[a];
+                return (null == s ? void 0 : s.type) === h.al.CREATE_STICKER
                     ? {
-                          guild_id: a.guild_id,
-                          name: a.name
+                          guild_id: s.guild_id,
+                          name: s.name
                       }
-                    : (null == a ? void 0 : a.type) !== _.al.STICKER
+                    : (null == s ? void 0 : s.type) !== h.al.STICKER
                       ? null
-                      : a.sticker;
-            }, [t, n]);
-        if (null == a) return null;
-        let { graphic: o, title: c } = I(a),
-            d =
-                (0, p.jl)(a) || (0, p.J8)(a)
-                    ? (0, r.jsx)(h.ZP, {
+                      : s.sticker;
+            }, [n, r]);
+        if (null == s) return null;
+        let { graphic: l, title: d } = T(s),
+            f =
+                (0, p.jl)(s) || (0, p.J8)(s)
+                    ? (0, i.jsx)(m.ZP, {
                           isInteracting: !0,
-                          size: E,
-                          sticker: a,
+                          size: v,
+                          sticker: s,
                           disableAnimation: !0
                       })
-                    : (0, r.jsx)('div', {
-                          className: g.iconWrapper,
-                          children: (0, r.jsx)(s.PlusSmallIcon, {
+                    : (0, i.jsx)('div', {
+                          className: E.iconWrapper,
+                          children: (0, i.jsx)(o.PlusSmallIcon, {
                               size: 'md',
                               color: 'currentColor',
-                              className: g.icon
+                              className: E.icon
                           })
                       });
-        return (0, r.jsx)(u.Z, {
-            graphicPrimary: d,
-            graphicSecondary: o,
-            titlePrimary: a.name,
-            titleSecondary: (0, p.jl)(a) || (0, p.J8)(a) ? c : null
+        return (0, i.jsx)(c.Z, {
+            graphicPrimary: f,
+            graphicSecondary: l,
+            titlePrimary: s.name,
+            titleSecondary: (0, p.jl)(s) || (0, p.J8)(s) ? d : null
         });
     });
-t.Z = T;
+n.Z = b;

@@ -1,28 +1,28 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     buttonLabel: 'Mostra suggerimenti',
-    countAnnouncement: (e, t) =>
-        `${t.plural(e.optionCount, {
-            one: () => `${t.number(e.optionCount)} opzione disponibile`,
-            other: () => `${t.number(e.optionCount)} opzioni disponibili`
+    countAnnouncement: (e, n) =>
+        `${n.plural(e.optionCount, {
+            one: () => `${n.number(e.optionCount)} opzione disponibile`,
+            other: () => `${n.number(e.optionCount)} opzioni disponibili`
         })}.`,
-    focusAnnouncement: (e, t) =>
-        `${t.select(
+    focusAnnouncement: (e, n) =>
+        `${n.select(
             {
                 true: () =>
-                    `Ingresso nel gruppo ${e.groupTitle}, con ${t.plural(e.groupCount, {
-                        one: () => `${t.number(e.groupCount)} opzione`,
-                        other: () => `${t.number(e.groupCount)} opzioni`
+                    `Ingresso nel gruppo ${e.groupTitle}, con ${n.plural(e.groupCount, {
+                        one: () => `${n.number(e.groupCount)} opzione`,
+                        other: () => `${n.number(e.groupCount)} opzioni`
                     })}. `,
                 other: ''
             },
             e.isGroupChange
-        )}${e.optionText}${t.select(
+        )}${e.optionText}${n.select(
             {
                 true: ', selezionato',
                 other: ''

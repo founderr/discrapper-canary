@@ -1,47 +1,47 @@
-Object.defineProperty(t, '__esModule', { value: !0 }), (t.stringFormatter = t.DEFAULT_REACT_RICH_TEXT_ELEMENTS = t.makeReactFormatter = t.reactFormatter = t.markdownFormatter = t.RichTextNodeType = t.astFormatter = void 0);
-var r = n(631242);
-Object.defineProperty(t, 'astFormatter', {
+Object.defineProperty(n, '__esModule', { value: !0 }), (n.stringFormatter = n.DEFAULT_REACT_RICH_TEXT_ELEMENTS = n.makeReactFormatter = n.reactFormatter = n.markdownFormatter = n.RichTextNodeType = n.astFormatter = void 0);
+var i = r(631242);
+Object.defineProperty(n, 'astFormatter', {
     enumerable: !0,
     get: function () {
-        return r.astFormatter;
+        return i.astFormatter;
     }
 }),
-    Object.defineProperty(t, 'RichTextNodeType', {
+    Object.defineProperty(n, 'RichTextNodeType', {
         enumerable: !0,
         get: function () {
-            return r.RichTextNodeType;
+            return i.RichTextNodeType;
         }
     });
-var i = n(966944);
-Object.defineProperty(t, 'markdownFormatter', {
+var a = r(966944);
+Object.defineProperty(n, 'markdownFormatter', {
     enumerable: !0,
     get: function () {
-        return i.markdownFormatter;
+        return a.markdownFormatter;
     }
 });
-var a = n(627739);
-Object.defineProperty(t, 'reactFormatter', {
+var s = r(627739);
+Object.defineProperty(n, 'reactFormatter', {
     enumerable: !0,
     get: function () {
-        return a.reactFormatter;
+        return s.reactFormatter;
     }
 }),
-    Object.defineProperty(t, 'makeReactFormatter', {
+    Object.defineProperty(n, 'makeReactFormatter', {
         enumerable: !0,
         get: function () {
-            return a.makeReactFormatter;
+            return s.makeReactFormatter;
         }
     }),
-    Object.defineProperty(t, 'DEFAULT_REACT_RICH_TEXT_ELEMENTS', {
+    Object.defineProperty(n, 'DEFAULT_REACT_RICH_TEXT_ELEMENTS', {
         enumerable: !0,
         get: function () {
-            return a.DEFAULT_REACT_RICH_TEXT_ELEMENTS;
+            return s.DEFAULT_REACT_RICH_TEXT_ELEMENTS;
         }
     });
-var s = n(166827);
-Object.defineProperty(t, 'stringFormatter', {
+var o = r(166827);
+Object.defineProperty(n, 'stringFormatter', {
     enumerable: !0,
     get: function () {
-        return s.stringFormatter;
+        return o.stringFormatter;
     }
 });

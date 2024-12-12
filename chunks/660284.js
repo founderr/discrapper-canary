@@ -1,19 +1,19 @@
-function r(e) {
-    let t = typeof e;
-    if ('object' == t) {
+function i(e) {
+    let n = typeof e;
+    if ('object' == n) {
         if (Array.isArray(e)) return 'array';
         if (null === e) return 'null';
     }
-    return t;
+    return n;
 }
-function i(e) {
+function a(e) {
     return null !== e && 'object' == typeof e && !Array.isArray(e);
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     },
     b: function () {
-        return i;
+        return a;
     }
 });

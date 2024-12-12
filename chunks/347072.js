@@ -1,63 +1,63 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return d;
+        return f;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(481060),
-    o = n(357156),
-    l = n(343747),
-    u = n(388032),
-    c = n(795287);
-function d(e) {
-    let { guild: t, focused: n, onSelectItem: i, refreshEnabled: d, ...f } = e,
-        { canCreateExpressions: _ } = (0, o.XJ)(t);
-    return (0, r.jsx)(s.Tooltip, {
-        text: u.intl.string(u.t['fHo+z8']),
-        shouldShow: !_,
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(481060),
+    l = r(357156),
+    u = r(343747),
+    c = r(388032),
+    d = r(795287);
+function f(e) {
+    let { guild: n, focused: r, onSelectItem: a, refreshEnabled: f, ..._ } = e,
+        { canCreateExpressions: h } = (0, l.XJ)(n);
+    return (0, i.jsx)(o.Tooltip, {
+        text: c.intl.string(c.t['fHo+z8']),
+        shouldShow: !h,
         children: (e) =>
-            (0, r.jsx)('li', {
-                className: c.soundButtonWrapper,
+            (0, i.jsx)('li', {
+                className: d.soundButtonWrapper,
                 ...e,
-                children: (0, r.jsx)(s.ClickableContainer, {
-                    ...f,
-                    'aria-label': u.intl.formatToPlainString(u.t.c1qVYm, { guildName: t.name }),
-                    className: a()(d ? c.soundAddButtonRefresh : c.soundAddButton, {
-                        [c.focused]: n,
-                        [c.disabled]: !_
+                children: (0, i.jsx)(o.ClickableContainer, {
+                    ..._,
+                    'aria-label': c.intl.formatToPlainString(c.t.c1qVYm, { guildName: n.name }),
+                    className: s()(f ? d.soundAddButtonRefresh : d.soundAddButton, {
+                        [d.focused]: r,
+                        [d.disabled]: !h
                     }),
-                    onClick: () => (null != i ? i() : (0, l.Z)(t.id)),
-                    children: d
-                        ? (0, r.jsxs)('div', {
-                              className: c.soundAddInfoRefresh,
+                    onClick: () => (null != a ? a() : (0, u.Z)(n.id)),
+                    children: f
+                        ? (0, i.jsxs)('div', {
+                              className: d.soundAddInfoRefresh,
                               children: [
-                                  (0, r.jsx)(s.CirclePlusIcon, {
+                                  (0, i.jsx)(o.CirclePlusIcon, {
                                       size: 'md',
                                       color: 'currentColor',
-                                      className: c.soundAddIconRefresh
+                                      className: d.soundAddIconRefresh
                                   }),
-                                  (0, r.jsx)(s.Text, {
+                                  (0, i.jsx)(o.Text, {
                                       variant: 'text-xs/medium',
-                                      color: _ ? void 0 : 'text-muted',
-                                      className: c.soundAddTextRefresh,
-                                      children: u.intl.string(u.t['8Fu/S0'])
+                                      color: h ? void 0 : 'text-muted',
+                                      className: d.soundAddTextRefresh,
+                                      children: c.intl.string(c.t['8Fu/S0'])
                                   })
                               ]
                           })
-                        : (0, r.jsxs)(r.Fragment, {
+                        : (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, r.jsx)(s.PlusSmallIcon, {
+                                  (0, i.jsx)(o.PlusSmallIcon, {
                                       size: 'md',
                                       color: 'currentColor',
-                                      className: c.soundAddIcon
+                                      className: d.soundAddIcon
                                   }),
-                                  (0, r.jsx)(s.Text, {
+                                  (0, i.jsx)(o.Text, {
                                       variant: 'text-xs/normal',
-                                      color: _ ? 'header-primary' : 'text-muted',
-                                      children: u.intl.string(u.t['8Fu/S0'])
+                                      color: h ? 'header-primary' : 'text-muted',
+                                      children: c.intl.string(c.t['8Fu/S0'])
                                   })
                               ]
                           })

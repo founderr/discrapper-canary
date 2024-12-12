@@ -1,36 +1,36 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return c;
+        return f;
     }
-}),
-    n(411104);
-var r = n(493683),
-    i = n(904245),
-    a = n(541716),
-    s = n(656709),
-    o = n(957730),
-    l = n(592125),
-    u = n(838440);
-let c = async (e) => {
-    let { userId: t, content: n, location: c, openChannel: d = !0, whenReady: f, entry: _ } = e,
-        { valid: p, failureReason: h } = await (0, u.v)({
-            type: a.Ie.NORMAL,
-            content: n,
+});
+var i = r(411104);
+var a = r(493683),
+    s = r(904245),
+    o = r(541716),
+    l = r(656709),
+    u = r(957730),
+    c = r(592125),
+    d = r(838440);
+let f = async (e) => {
+    let { userId: n, content: r, location: i, openChannel: f = !0, whenReady: _, entry: h } = e,
+        { valid: p, failureReason: m } = await (0, d.v)({
+            type: o.Ie.NORMAL,
+            content: r,
             channel: null
         });
-    if (!p) throw Error(h);
-    let m = d ? await r.Z.openPrivateChannel(t, !1, !1, c) : await r.Z.getOrEnsurePrivateChannel(t),
-        g = l.Z.getChannel(m);
-    if (null == g) throw Error('Failed to open private channel');
-    if (null != _)
-        (0, s.p)({
-            channel: g,
-            content: n,
-            entry: _,
-            whenReady: f
+    if (!p) throw Error(m);
+    let g = f ? await a.Z.openPrivateChannel(n, !1, !1, i) : await a.Z.getOrEnsurePrivateChannel(n),
+        E = c.Z.getChannel(g);
+    if (null == E) throw Error('Failed to open private channel');
+    if (null != h)
+        (0, l.p)({
+            channel: E,
+            content: r,
+            entry: h,
+            whenReady: _
         });
     else {
-        let e = o.ZP.parse(g, n);
-        return i.Z.sendMessage(g.id, e, f);
+        let e = u.ZP.parse(E, r);
+        return s.Z.sendMessage(E.id, e, _);
     }
 };

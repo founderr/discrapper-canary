@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     L: function () {
-        return r;
+        return i;
     }
 });
-let r = {
+let i = {
     __proto__: null,
     bg: {
         group: ' ',

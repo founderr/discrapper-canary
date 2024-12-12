@@ -1,41 +1,41 @@
-n.d(t, {
+r.d(n, {
     n: function () {
-        return o;
+        return l;
     }
 });
-var r = n(442837),
-    i = n(594174),
-    a = n(26033),
-    s = n(593294);
-function o(e) {
-    var t, n, o, l, u;
-    let c = (0, r.e7)([i.default], () => i.default.getUser(e.author_id)),
-        { activity: d, embeddedActivity: f } = (0, s.Z)(e);
-    if (null == d)
+var i = r(442837),
+    a = r(594174),
+    s = r(26033),
+    o = r(593294);
+function l(e) {
+    var n, r, l, u, c;
+    let d = (0, i.e7)([a.default], () => a.default.getUser(e.author_id)),
+        { activity: f, embeddedActivity: _ } = (0, o.Z)(e);
+    if (null == f)
         return {
             isRich: !1,
-            appName: (0, a.dX)(e) ? e.extra.game_name : void 0,
-            user: c,
+            appName: (0, s.dX)(e) ? e.extra.game_name : void 0,
+            user: d,
             activity: void 0,
             embeddedActivity: void 0,
             state: void 0,
             details: void 0,
             party: void 0
         };
-    let _ = (null === (t = d.assets) || void 0 === t ? void 0 : t.large_image) != null || (null === (n = d.assets) || void 0 === n ? void 0 : n.small_image) != null,
-        p = (null === (o = d.assets) || void 0 === o ? void 0 : o.large_text) != null || (null === (l = d.assets) || void 0 === l ? void 0 : l.small_text) != null,
-        h = null !== (u = d.name) && void 0 !== u ? u : 'game_name' in e.extra ? e.extra.game_name : void 0,
-        m = d.details,
-        g = d.state,
-        E = d.party;
+    let h = (null === (n = f.assets) || void 0 === n ? void 0 : n.large_image) != null || (null === (r = f.assets) || void 0 === r ? void 0 : r.small_image) != null,
+        p = (null === (l = f.assets) || void 0 === l ? void 0 : l.large_text) != null || (null === (u = f.assets) || void 0 === u ? void 0 : u.small_text) != null,
+        m = null !== (c = f.name) && void 0 !== c ? c : 'game_name' in e.extra ? e.extra.game_name : void 0,
+        g = f.details,
+        E = f.state,
+        v = f.party;
     return {
-        isRich: _ || p || null != m || null != g || null != E,
-        user: c,
-        activity: d,
-        state: g,
-        details: m,
-        party: E,
-        appName: h,
-        embeddedActivity: f
+        isRich: h || p || null != g || null != E || null != v,
+        user: d,
+        activity: f,
+        state: E,
+        details: g,
+        party: v,
+        appName: m,
+        embeddedActivity: _
     };
 }

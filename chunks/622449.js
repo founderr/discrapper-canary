@@ -1,9 +1,9 @@
-var r, i;
-n.d(t, {
+var i;
+r.d(n, {
     F: function () {
-        return r;
+        return i;
     }
 }),
-    ((i = r || (r = {}))[(i.QUEUED = 0)] = 'QUEUED'),
-    (i[(i.CREATED = 1)] = 'CREATED'),
-    (i[(i.FAILED = 2)] = 'FAILED');
+    !(function (e) {
+        (e[(e.QUEUED = 0)] = 'QUEUED'), (e[(e.CREATED = 1)] = 'CREATED'), (e[(e.FAILED = 2)] = 'FAILED');
+    })(i || (i = {}));

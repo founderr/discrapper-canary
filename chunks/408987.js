@@ -1,24 +1,24 @@
-var r = n(570140),
-    i = n(496675),
-    a = n(751189),
-    s = n(981631);
-t.Z = {
+var i = r(570140),
+    a = r(496675),
+    s = r(751189),
+    o = r(981631);
+n.Z = {
     async checkGuildTemplateDirty(e) {
-        if (!i.Z.canWithPartialContext(s.Plq.MANAGE_GUILD, { guildId: e })) return;
-        let t = await a.Z.loadTemplatesForGuild(e);
-        t.body.length > 0 &&
-            r.Z.dispatch({
+        if (!a.Z.canWithPartialContext(o.Plq.MANAGE_GUILD, { guildId: e })) return;
+        let n = await s.Z.loadTemplatesForGuild(e);
+        n.body.length > 0 &&
+            i.Z.dispatch({
                 type: 'GUILD_TEMPLATE_DIRTY_TOOLTIP_REFRESH',
-                guildTemplate: t.body[0]
+                guildTemplate: n.body[0]
             });
     },
     hideGuildTemplateDirtyTooltip(e) {
-        r.Z.dispatch({
+        i.Z.dispatch({
             type: 'GUILD_TEMPLATE_DIRTY_TOOLTIP_HIDE',
             guildId: e
         });
     },
     hideGuildTemplatePromotionTooltip() {
-        r.Z.dispatch({ type: 'GUILD_TEMPLATE_PROMOTION_TOOLTIP_HIDE' });
+        i.Z.dispatch({ type: 'GUILD_TEMPLATE_PROMOTION_TOOLTIP_HIDE' });
     }
 };

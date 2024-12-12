@@ -1,7 +1,7 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = { longPressMessage: 'Prima continuamente ou prima Alt + Seta Para Baixo para abrir o menu' };
+var i = {};
+i = { longPressMessage: 'Prima continuamente ou prima Alt + Seta Para Baixo para abrir o menu' };

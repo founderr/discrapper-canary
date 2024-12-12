@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     d: function () {
-        return a;
+        return s;
     }
 });
-var r = n(392711),
-    i = n.n(r);
-let a = (e) => ('function' == typeof e ? e() : e);
-i().curry((e, t, n) => (a(t) ? e(n) : n({})));
+var i = r(392711),
+    a = r.n(i);
+let s = (e) => ('function' == typeof e ? e() : e);
+a().curry((e, n, r) => (s(n) ? e(r) : r({})));

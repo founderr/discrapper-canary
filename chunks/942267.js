@@ -1,98 +1,98 @@
-n.r(t),
-    n.d(t, {
+r.r(n),
+    r.d(n, {
         DEFAULT_INTL_CONFIG: function () {
-            return r.Z0;
+            return i.Z0;
         },
         IntlError: function () {
-            return i.Rw;
+            return a.Rw;
         },
         IntlErrorCode: function () {
-            return i.bc;
+            return a.bc;
         },
         IntlFormatError: function () {
-            return i.Qe;
+            return a.Qe;
         },
         InvalidConfigError: function () {
-            return i.OV;
+            return a.OV;
         },
         MessageFormatError: function () {
-            return i.X9;
+            return a.X9;
         },
         MissingDataError: function () {
-            return i.gb;
+            return a.gb;
         },
         MissingTranslationError: function () {
-            return i.$6;
+            return a.$6;
         },
         UnsupportedFormatterError: function () {
-            return i.wI;
+            return a.wI;
         },
         createFormatters: function () {
-            return r.ax;
+            return i.ax;
         },
         createIntl: function () {
-            return f.d;
+            return _.d;
         },
         createIntlCache: function () {
-            return r.Sn;
+            return i.Sn;
         },
         defineMessage: function () {
             return p;
         },
         defineMessages: function () {
-            return _;
+            return h;
         },
         filterProps: function () {
-            return r.L6;
+            return i.L6;
         },
         formatDate: function () {
-            return s.p6;
+            return o.p6;
         },
         formatDateToParts: function () {
-            return s.OI;
+            return o.OI;
         },
         formatDisplayName: function () {
-            return o.I;
-        },
-        formatList: function () {
             return l.I;
         },
+        formatList: function () {
+            return u.I;
+        },
         formatMessage: function () {
-            return a.w;
+            return s.w;
         },
         formatNumber: function () {
-            return d.uf;
+            return f.uf;
         },
         formatNumberToParts: function () {
-            return d.T;
+            return f.T;
         },
         formatPlural: function () {
-            return u.R;
+            return c.R;
         },
         formatRelativeTime: function () {
-            return c.S;
+            return d.S;
         },
         formatTime: function () {
-            return s.mr;
+            return o.mr;
         },
         formatTimeToParts: function () {
-            return s.uE;
+            return o.uE;
         },
         getNamedFormat: function () {
-            return r.TB;
+            return i.TB;
         }
     });
-var r = n(52948),
-    i = n(548097),
-    a = n(753778),
-    s = n(735896),
-    o = n(667358),
-    l = n(280999),
-    u = n(275282),
-    c = n(222987),
-    d = n(33251),
-    f = n(57288);
-function _(e) {
+var i = r(52948),
+    a = r(548097),
+    s = r(753778),
+    o = r(735896),
+    l = r(667358),
+    u = r(280999),
+    c = r(275282),
+    d = r(222987),
+    f = r(33251),
+    _ = r(57288);
+function h(e) {
     return e;
 }
 function p(e) {

@@ -1,48 +1,48 @@
-n.d(t, {
+r.d(n, {
     Am: function () {
-        return c;
+        return f;
     },
     ZP: function () {
-        return d;
+        return _;
     },
     s$: function () {
-        return u;
+        return c;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(442837),
-    a = n(481060),
-    s = n(430824),
-    o = n(275759),
-    l = n(388032);
-let u = 'guild-connection-roles';
-function c(e) {
-    (0, a.openModalLazy)(
-        async () => {
-            let { default: t } = await n.e('40897').then(n.bind(n, 507294));
-            return (n) =>
-                (0, r.jsx)(t, {
-                    ...n,
-                    guildId: e
-                });
-        },
-        {
-            modalKey: u,
-            contextKey: a.DEFAULT_MODAL_CONTEXT,
-            onCloseRequest: () => {
-                (0, a.closeModal)(u, a.DEFAULT_MODAL_CONTEXT);
-            }
+var i = r(200651);
+r(192379);
+var a = r(442837),
+    s = r(481060),
+    o = r(430824),
+    l = r(275759),
+    u = r(388032);
+let c = 'guild-connection-roles';
+function d() {
+    return {
+        modalKey: c,
+        contextKey: s.DEFAULT_MODAL_CONTEXT,
+        onCloseRequest: () => {
+            (0, s.closeModal)(c, s.DEFAULT_MODAL_CONTEXT);
         }
-    );
+    };
 }
-function d(e) {
-    return (0, i.e7)([s.Z], () => (0, o.kQ)(e, s.Z.getRoles(e.id)), [e])
-        ? (0, r.jsx)(a.MenuItem, {
+function f(e) {
+    (0, s.openModalLazy)(async () => {
+        let { default: n } = await r.e('40897').then(r.bind(r, 507294));
+        return (r) =>
+            (0, i.jsx)(n, {
+                ...r,
+                guildId: e
+            });
+    }, d());
+}
+function _(e) {
+    return (0, a.e7)([o.Z], () => (0, l.kQ)(e, o.Z.getRoles(e.id)), [e])
+        ? (0, i.jsx)(s.MenuItem, {
               id: 'guild-connection-roles',
-              label: l.intl.string(l.t.ghtnsr),
-              icon: a.LinkIcon,
-              action: () => c(e.id)
+              label: u.intl.string(u.t.ghtnsr),
+              icon: s.LinkIcon,
+              action: () => f(e.id)
           })
         : null;
 }

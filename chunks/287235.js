@@ -1,76 +1,76 @@
-n.d(t, {
+r.d(n, {
     JD: function () {
-        return _;
+        return h;
     },
     Wd: function () {
-        return d;
+        return f;
     },
     mF: function () {
-        return c;
+        return d;
     }
 }),
-    n(200651);
-var r = n(192379),
-    i = n(372817),
-    a = n(5967),
-    s = n(420212);
-let o = 'data-jump-section',
-    l = 'global',
-    u = r.createContext(l);
-function c() {
-    let e = r.useContext(u);
-    return r.useMemo(() => ({ [o]: e }), [e]);
+    r(200651);
+var i = r(192379),
+    a = r(372817),
+    s = r(5967),
+    o = r(420212);
+let l = 'data-jump-section',
+    u = 'global',
+    c = i.createContext(u);
+function d() {
+    let e = i.useContext(c);
+    return i.useMemo(() => ({ [l]: e }), [e]);
 }
-function d(e) {
-    let t = c();
-    return e.children(t);
+function f(e) {
+    let n = d();
+    return e.children(n);
 }
-async function f(e) {
-    var t, n, r, u;
-    if (e.key !== s.LT) return;
-    let c = (0, a.uB)(e);
-    if (null == c) return;
-    let d = null,
-        f = null,
-        _ = e.target;
-    for (; null != _; ) {
-        if (_.hasAttribute(o)) {
-            (d = _.getAttribute(o)), (f = _);
+async function _(e) {
+    var n, r, i, c;
+    if (e.key !== o.LT) return;
+    let d = (0, s.uB)(e);
+    if (null == d) return;
+    let f = null,
+        _ = null,
+        h = e.target;
+    for (; null != h; ) {
+        if (h.hasAttribute(l)) {
+            (f = h.getAttribute(l)), (_ = h);
             break;
         }
-        _ = _.parentElement;
+        h = h.parentElement;
     }
-    let p = (0, i.E)({
-        getFocusableElements: () => Array.from(c.querySelectorAll('['.concat(o, '="').concat(null != d ? d : l, '"]'))),
-        getActiveElement: () => c.activeElement
+    let p = (0, a.E)({
+        getFocusableElements: () => Array.from(d.querySelectorAll('['.concat(l, '="').concat(null != f ? f : u, '"]'))),
+        getActiveElement: () => d.activeElement
     });
-    if ((null === (t = (0, a.uB)(e)) || void 0 === t ? void 0 : t.activeElement) == null || null == f) {
-        null === (n = p.getFirstFocusableElement()) || void 0 === n || n.focus();
+    if ((null === (n = (0, s.uB)(e)) || void 0 === n ? void 0 : n.activeElement) == null || null == _) {
+        null === (r = p.getFirstFocusableElement()) || void 0 === r || r.focus();
         return;
     }
     e.getModifierState('Shift')
         ? null ===
-              (r = await p.getPreviousFocusableElement({
+              (i = await p.getPreviousFocusableElement({
                   wrap: !0,
-                  from: f
+                  from: _
               })) ||
-          void 0 === r ||
-          r.focus()
+          void 0 === i ||
+          i.focus()
         : null ===
-              (u = await p.getNextFocusableElement({
+              (c = await p.getNextFocusableElement({
                   wrap: !0,
-                  from: f
+                  from: _
               })) ||
-          void 0 === u ||
-          u.focus();
+          void 0 === c ||
+          c.focus();
 }
-function _(e) {
-    r.useEffect(() => {
+function h(e) {
+    i.useEffect(() => {
         if (e)
             return (
-                window.addEventListener('keydown', f),
+                window.addEventListener('keydown', _),
                 () => {
-                    window.removeEventListener('keydown', f);
+                    window.removeEventListener('keydown', _);
                 }
             );
     }, [e]);

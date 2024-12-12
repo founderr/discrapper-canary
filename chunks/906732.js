@@ -1,42 +1,42 @@
-n.d(t, {
+r.d(n, {
     Gt: function () {
-        return c;
+        return f;
     },
     LZ: function () {
-        return u;
+        return d;
     },
     ZP: function () {
-        return f;
+        return h;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(348327),
-    s = n.n(a),
-    o = n(392711),
-    l = n.n(o);
-let u = i.createContext([]);
-function c(e) {
-    let { children: t, value: n } = e;
-    return (0, r.jsx)(u.Provider, {
-        value: n,
-        children: t
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(348327),
+    l = r.n(o),
+    u = r(392711),
+    c = r.n(u);
+let d = s.createContext([]);
+function f(e) {
+    let { children: n, value: r } = e;
+    return (0, a.jsx)(d.Provider, {
+        value: r,
+        children: n
     });
 }
-function d(e, t) {
-    return 0 === t.length ? e : [...e, ...l().flatten(t)];
+function _(e, n) {
+    return 0 === n.length ? e : [...e, ...c().flatten(n)];
 }
-function f() {
-    for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-    let [a, o] = i.useState(n),
-        l = i.useContext(u),
-        c = i.useMemo(() => d(l, a), [a, l]),
-        f = i.useMemo(() => d(l, a.slice(0, a.length - 1)), [a, l]);
+function h() {
+    for (var e, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
+    let [a, o] = s.useState(r),
+        u = s.useContext(d),
+        c = s.useMemo(() => _(u, a), [a, u]),
+        f = s.useMemo(() => _(u, a.slice(0, a.length - 1)), [a, u]);
     return (
-        i.useEffect(() => {
-            !s()(n, a) && o(n);
-        }, [n]),
+        s.useEffect(() => {
+            !l()(r, a) && o(r);
+        }, [r]),
         {
             analyticsLocations: c,
             sourceAnalyticsLocations: f,

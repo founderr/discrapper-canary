@@ -1,38 +1,38 @@
-var r = n(814033),
-    i = n(685053),
-    a = i.assert,
-    s = i.cachedProperty,
-    o = i.parseBytes;
-function l(e, t) {
+var i = r(814033),
+    a = r(685053),
+    s = a.assert,
+    o = a.cachedProperty,
+    l = a.parseBytes;
+function u(e, n) {
     (this.eddsa = e),
-        'object' != typeof t && (t = o(t)),
-        Array.isArray(t) &&
-            (t = {
-                R: t.slice(0, e.encodingLength),
-                S: t.slice(e.encodingLength)
+        'object' != typeof n && (n = l(n)),
+        Array.isArray(n) &&
+            (n = {
+                R: n.slice(0, e.encodingLength),
+                S: n.slice(e.encodingLength)
             }),
-        a(t.R && t.S, 'Signature without R or S'),
-        e.isPoint(t.R) && (this._R = t.R),
-        t.S instanceof r && (this._S = t.S),
-        (this._Rencoded = Array.isArray(t.R) ? t.R : t.Rencoded),
-        (this._Sencoded = Array.isArray(t.S) ? t.S : t.Sencoded);
+        s(n.R && n.S, 'Signature without R or S'),
+        e.isPoint(n.R) && (this._R = n.R),
+        n.S instanceof i && (this._S = n.S),
+        (this._Rencoded = Array.isArray(n.R) ? n.R : n.Rencoded),
+        (this._Sencoded = Array.isArray(n.S) ? n.S : n.Sencoded);
 }
-s(l, 'S', function () {
+o(u, 'S', function () {
     return this.eddsa.decodeInt(this.Sencoded());
 }),
-    s(l, 'R', function () {
+    o(u, 'R', function () {
         return this.eddsa.decodePoint(this.Rencoded());
     }),
-    s(l, 'Rencoded', function () {
+    o(u, 'Rencoded', function () {
         return this.eddsa.encodePoint(this.R());
     }),
-    s(l, 'Sencoded', function () {
+    o(u, 'Sencoded', function () {
         return this.eddsa.encodeInt(this.S());
     }),
-    (l.prototype.toBytes = function () {
+    (u.prototype.toBytes = function () {
         return this.Rencoded().concat(this.Sencoded());
     }),
-    (l.prototype.toHex = function () {
-        return i.encode(this.toBytes(), 'hex').toUpperCase();
+    (u.prototype.toHex = function () {
+        return a.encode(this.toBytes(), 'hex').toUpperCase();
     }),
-    (e.exports = l);
+    (e.exports = u);

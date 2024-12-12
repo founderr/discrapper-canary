@@ -1,74 +1,74 @@
-var r = n(544891),
-    i = n(570140),
-    a = n(523746),
-    s = n(699516),
-    o = n(594174),
-    l = n(626135),
-    u = n(668781),
-    c = n(194359),
-    d = n(287734),
-    f = n(981631),
-    _ = n(388032);
-t.Z = {
-    call(e, t, n, i, a) {
-        let p = (n) => {
-            d.default.selectVoiceChannel(e, t), n && this.ring(e), null == a || a(e);
+var i = r(544891),
+    a = r(570140),
+    s = r(523746),
+    o = r(699516),
+    l = r(594174),
+    u = r(626135),
+    c = r(668781),
+    d = r(194359),
+    f = r(287734),
+    _ = r(981631),
+    h = r(388032);
+n.Z = {
+    call(e, n, r, a, s) {
+        let p = (r) => {
+            f.default.selectVoiceChannel(e, n), r && this.ring(e), null == s || s(e);
         };
-        if (null != i) {
-            if (s.Z.isBlocked(i)) return;
-            let t = o.default.getUser(i);
-            r.tn
+        if (null != a) {
+            if (o.Z.isBlocked(a)) return;
+            let n = l.default.getUser(a);
+            i.tn
                 .get({
-                    url: f.ANM.CALL(e),
+                    url: _.ANM.CALL(e),
                     oldFormErrors: !0,
                     rejectWithError: !0
                 })
                 .then(
                     (e) => {
-                        p(n && e.body.ringable);
+                        p(r && e.body.ringable);
                     },
                     () => {
-                        l.default.track(f.rMx.OPEN_POPOUT, {
+                        u.default.track(_.rMx.OPEN_POPOUT, {
                             type: 'Not Friend',
                             source: 'Call'
                         }),
-                            u.Z.show({
-                                title: _.intl.string(_.t.My50nZ),
-                                body: _.intl.format(_.t.IdKo29, { username: null != t ? t.username : '' }),
-                                confirmText: _.intl.string(_.t['PMsq/f']),
-                                cancelText: _.intl.string(_.t.BddRzc),
+                            c.Z.show({
+                                title: h.intl.string(h.t.My50nZ),
+                                body: h.intl.format(h.t.IdKo29, { username: null != n ? n.username : '' }),
+                                confirmText: h.intl.string(h.t['PMsq/f']),
+                                cancelText: h.intl.string(h.t.BddRzc),
                                 onConfirm() {
-                                    c.Z.addRelationship({
-                                        userId: i,
+                                    d.Z.addRelationship({
+                                        userId: a,
                                         context: { location: 'Call' }
                                     });
                                 }
                             });
                     }
                 );
-        } else p(n);
+        } else p(r);
     },
-    ring(e, t) {
-        let n = a.Z.getCall(e);
-        if (null != n && null != n.messageId && !a.Z.isCallUnavailable(e)) {
-            r.tn.post({
-                url: f.ANM.CALL_RING(e),
-                body: { recipients: t },
+    ring(e, n) {
+        let r = s.Z.getCall(e);
+        if (null != r && null != r.messageId && !s.Z.isCallUnavailable(e)) {
+            i.tn.post({
+                url: _.ANM.CALL_RING(e),
+                body: { recipients: n },
                 oldFormErrors: !0,
                 rejectWithError: !0
             });
             return;
         }
-        i.Z.dispatch({
+        a.Z.dispatch({
             type: 'CALL_ENQUEUE_RING',
             channelId: e,
-            recipients: t
+            recipients: n
         });
     },
-    stopRinging: (e, t) =>
-        r.tn.post({
-            url: f.ANM.CALL_STOP_RINGING(e),
-            body: { recipients: t },
+    stopRinging: (e, n) =>
+        i.tn.post({
+            url: _.ANM.CALL_STOP_RINGING(e),
+            body: { recipients: n },
             oldFormErrors: !0,
             rejectWithError: !0
         })

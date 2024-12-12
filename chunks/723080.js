@@ -1,4 +1,4 @@
-var r = {
+var i = {
     './1f004.svg': '35121',
     './1f0cf.svg': '854093',
     './1f170.svg': '538289',
@@ -3838,19 +3838,19 @@ var r = {
     './ae.svg': '813577',
     './e50a.svg': '2707'
 };
-function i(e) {
-    return n(a(e));
-}
 function a(e) {
-    if (!n.o(r, e)) {
-        var t = Error("Cannot find module '" + e + "'");
-        throw ((t.code = 'MODULE_NOT_FOUND'), t);
-    }
-    return r[e];
+    return r(s(e));
 }
-(i.keys = function () {
-    return Object.keys(r);
+function s(e) {
+    if (!r.o(i, e)) {
+        var n = Error("Cannot find module '" + e + "'");
+        throw ((n.code = 'MODULE_NOT_FOUND'), n);
+    }
+    return i[e];
+}
+(a.keys = function () {
+    return Object.keys(i);
 }),
-    (i.resolve = a),
-    (e.exports = i),
-    (i.id = '723080');
+    (a.resolve = s),
+    (e.exports = a),
+    (a.id = '723080');

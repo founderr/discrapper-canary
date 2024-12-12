@@ -1,7 +1,7 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = { longPressMessage: `Langt trykk eller trykk Alt + PilNed for \xe5 \xe5pne menyen` };
+var i = {};
+i = { longPressMessage: `Langt trykk eller trykk Alt + PilNed for \xe5 \xe5pne menyen` };

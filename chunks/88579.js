@@ -1,13 +1,13 @@
-var r = n(706627),
-    i = Object.create,
-    a = (function () {
+var i = r(706627),
+    a = Object.create,
+    s = (function () {
         function e() {}
-        return function (t) {
-            if (!r(t)) return {};
-            if (i) return i(t);
-            e.prototype = t;
-            var n = new e();
-            return (e.prototype = void 0), n;
+        return function (n) {
+            if (!i(n)) return {};
+            if (a) return a(n);
+            e.prototype = n;
+            var r = new e();
+            return (e.prototype = void 0), r;
         };
     })();
-e.exports = a;
+e.exports = s;

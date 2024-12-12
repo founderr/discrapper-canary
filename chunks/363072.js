@@ -1,69 +1,69 @@
-n.d(t, {
+r.d(n, {
     B: function () {
-        return o;
+        return l;
     }
 });
-var r = n(141106);
-function i(e, t, n) {
+var i = r(141106);
+function a(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let a = (e) => ('*' === e.charAt(e.length - 1) ? r.dQ.PrefixMatch : r.dQ.ExactMatch);
-class s {
-    _internalAdd(e, t, n) {
-        let r = e.charAt(0),
-            i = this.suffix[r];
-        null == i && ((i = new s()), (this.suffix[r] = i), null != n ? (i.value = n.slice(0, n.length - e.length + 1)) : (i.value = r)), e.length > 1 && '*' !== e.charAt(1) ? i._internalAdd(e.substring(1), t, null != n ? n : e) : ((i.strategy = a(t)), (i.isWord = !0));
+let s = (e) => ('*' === e.charAt(e.length - 1) ? i.dQ.PrefixMatch : i.dQ.ExactMatch);
+class o {
+    _internalAdd(e, n, r) {
+        let i = e.charAt(0),
+            a = this.suffix[i];
+        null == a && ((a = new o()), (this.suffix[i] = a), null != r ? (a.value = r.slice(0, r.length - e.length + 1)) : (a.value = i)), e.length > 1 && '*' !== e.charAt(1) ? a._internalAdd(e.substring(1), n, null != r ? r : e) : ((a.strategy = s(n)), (a.isWord = !0));
     }
     add(e) {
         this._internalAdd(e, e);
     }
     constructor() {
-        i(this, 'isWord', void 0), i(this, 'value', void 0), i(this, 'suffix', {}), i(this, 'strategy', void 0), (this.isWord = null), (this.value = null), (this.suffix = {}), (this.strategy = r.dQ.ExactMatch);
+        a(this, 'isWord', void 0), a(this, 'value', void 0), a(this, 'suffix', {}), a(this, 'strategy', void 0), (this.isWord = null), (this.value = null), (this.suffix = {}), (this.strategy = i.dQ.ExactMatch);
     }
 }
-class o {
+class l {
     static fromSnapshot(e) {
-        let t = new o();
-        return (t.trie = e.trie), t;
+        let n = new l();
+        return (n.trie = e.trie), n;
     }
     search(e) {
-        let t = this.trie,
-            n = null,
-            i = null,
-            a = {};
-        for (let l = 0; l <= e.length; l++)
-            if (((n = e.charAt(l)), (t = null != (i = t.suffix[n]) ? i : null != this.trie.suffix[n] ? this.trie.suffix[n] : this.trie).isWord)) {
-                var s, o;
-                let n = t.strategy,
-                    i = l + 1 - (null !== (o = null === (s = t.value) || void 0 === s ? void 0 : s.length) && void 0 !== o ? o : 0),
-                    u = l;
-                if ((0, r.BD)(e, i, u, n)) {
-                    let t = (0, r.jO)(e, i, u, n);
-                    (null == a[t.start] || a[t.start].end < t.end) && (a[t.start] = t);
+        let n = this.trie,
+            r = null,
+            a = null,
+            s = {};
+        for (let u = 0; u <= e.length; u++)
+            if (((r = e.charAt(u)), (n = null != (a = n.suffix[r]) ? a : null != this.trie.suffix[r] ? this.trie.suffix[r] : this.trie).isWord)) {
+                var o, l;
+                let r = n.strategy,
+                    a = u + 1 - (null !== (l = null === (o = n.value) || void 0 === o ? void 0 : o.length) && void 0 !== l ? l : 0),
+                    c = u;
+                if ((0, i.BD)(e, a, c, r)) {
+                    let n = (0, i.jO)(e, a, c, r);
+                    (null == s[n.start] || s[n.start].end < n.end) && (s[n.start] = n);
                 }
             }
-        return a;
+        return s;
     }
     addWord(e) {
-        null == this.trie && (this.trie = new s()), this.trie.add(e);
+        null == this.trie && (this.trie = new o()), this.trie.add(e);
     }
     addWords(e) {
         e.forEach((e) => this.addWord(e));
     }
     clear() {
-        this.trie = new s();
+        this.trie = new o();
     }
     constructor() {
-        i(this, 'trie', void 0), (this.trie = new s());
+        a(this, 'trie', void 0), (this.trie = new o());
     }
 }

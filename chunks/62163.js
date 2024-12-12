@@ -1,19 +1,19 @@
-n.r(t),
-    n.d(t, {
+r.r(n),
+    r.d(n, {
         Manager: function () {
-            return i.dK;
+            return a.dK;
         },
         Popper: function () {
-            return r.r;
+            return i.r;
         },
         Reference: function () {
-            return a.s;
+            return s.s;
         },
         usePopper: function () {
-            return s.D;
+            return o.D;
         }
     });
-var r = n(636074),
-    i = n(298503),
-    a = n(837215),
-    s = n(283209);
+var i = r(636074),
+    a = r(298503),
+    s = r(837215),
+    o = r(283209);

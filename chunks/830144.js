@@ -1,7 +1,7 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = { breadcrumbs: 'Struktura nawigacyjna' };
+var i = {};
+i = { breadcrumbs: 'Struktura nawigacyjna' };

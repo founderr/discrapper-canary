@@ -1,30 +1,30 @@
-n.d(t, {
+r.d(n, {
     X: function () {
-        return o;
+        return l;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(692547),
-    a = n(331595),
-    s = n(267843);
-let o = (e) => {
-    var t, n;
-    let { size: o = 'md', width: l, height: u, color: c = i.Z.colors.INTERACTIVE_NORMAL, colorClass: d = '', ...f } = e,
-        _ = (0, s.m)(o),
-        p = null !== (t = null == _ ? void 0 : _.width) && void 0 !== t ? t : l,
-        h = null !== (n = null == _ ? void 0 : _.height) && void 0 !== n ? n : u;
-    return (0, r.jsx)('svg', {
-        ...(0, a.Z)(f),
+var i = r(200651);
+r(192379);
+var a = r(692547),
+    s = r(331595),
+    o = r(267843);
+let l = (e) => {
+    var n, r;
+    let { size: l = 'md', width: u, height: c, color: d = a.Z.colors.INTERACTIVE_NORMAL, colorClass: f = '', ..._ } = e,
+        h = (0, o.m)(l),
+        p = null !== (n = null == h ? void 0 : h.width) && void 0 !== n ? n : u,
+        m = null !== (r = null == h ? void 0 : h.height) && void 0 !== r ? r : c;
+    return (0, i.jsx)('svg', {
+        ...(0, s.Z)(_),
         xmlns: 'http://www.w3.org/2000/svg',
         width: p,
-        height: h,
+        height: m,
         fill: 'none',
         viewBox: '0 0 24 24',
-        children: (0, r.jsx)('path', {
+        children: (0, i.jsx)('path', {
             d: 'M19 16A3 3 0 1 0 21 21.25a1 1 0 0 1 1.32 1.5 4.98 4.98 0 0 1-8.3-3.75 4.99 4.99 0 0 1 8-4 1 1 0 0 1 2 0v3a1 1 0 0 1-1 1h-3a1 1 0 0 1 0-2h1.23A3 3 0 0 0 19 16ZM15.04 12.88c.17.1.38.1.55.01.27-.15.55-.28.83-.4.41-.16.52-.75.15-1L9.73 6.93a1 1 0 0 0-1.11 1.66l6.42 4.29ZM21.44 12.44c.34-.2.73-.35 1.14-.4l.38-.39a1 1 0 0 0 0-1.41l-9.19-9.2a1 1 0 0 0-1.41 0L12 1.4a1 1 0 0 0 0 1.41l.35.35-1 1.01a1 1 0 0 0 .08 1.58l9.13 6.43c.3.07.6.15.88.26ZM12.2 15.69c.25.17.59.07.74-.2a7 7 0 0 1 .47-.7.53.53 0 0 0-.1-.77L6.9 9.76a1 1 0 1 0-1.12 1.66l6.4 4.27ZM3.03 11.54l8.8 6.2c.16.1.24.29.22.48a7.07 7.07 0 0 0 .04 1.88.52.52 0 0 1-.14.45l-.3.3.35.35a1 1 0 0 1 0 1.41l-.35.35a1 1 0 0 1-1.41 0l-9.2-9.19a1 1 0 0 1 0-1.41l.7-.7a1 1 0 0 1 1.3-.12Z',
-            fill: 'string' == typeof c ? c : c.css,
-            className: d
+            fill: 'string' == typeof d ? d : d.css,
+            className: f
         })
     });
 };

@@ -1,68 +1,68 @@
-n.d(t, {
+r.d(n, {
     GR: function () {
-        return u;
+        return c;
     },
     b8: function () {
-        return l;
+        return u;
     },
     ul: function () {
-        return c;
+        return d;
     }
 });
-var r = n(544891),
-    i = n(570140),
-    a = n(85521),
-    s = n(73346),
-    o = n(981631);
-async function l() {
+var i = r(544891),
+    a = r(570140),
+    s = r(85521),
+    o = r(73346),
+    l = r(981631);
+async function u() {
     try {
-        let e = await (0, s.Kb)(
+        let e = await (0, o.Kb)(
             {
-                url: o.ANM.LIBRARY,
+                url: l.ANM.LIBRARY,
                 oldFormErrors: !0,
                 rejectWithError: !1
             },
             !1
         );
-        i.Z.dispatch({
+        a.Z.dispatch({
             type: 'LIBRARY_FETCH_SUCCESS',
             libraryApplications: e.body
         });
     } catch (e) {
-        i.Z.dispatch({
+        a.Z.dispatch({
             type: 'LIBRARY_FETCH_FAIL',
             error: e
         });
     }
 }
-async function u(e) {
-    let t = e.primarySkuId;
-    if (null == t) return;
-    let n = (
-        await r.tn
+async function c(e) {
+    let n = e.primarySkuId;
+    if (null == n) return;
+    let r = (
+        await i.tn
             .get({
-                url: o.ANM.APPLICATION_BRANCH_LIST(e.id),
+                url: l.ANM.APPLICATION_BRANCH_LIST(e.id),
                 oldFormErrors: !0,
                 rejectWithError: !1
             })
             .then((e) => e.body)
-    ).map((n) =>
-        a.Z.createForTestMode({
+    ).map((r) =>
+        s.Z.createForTestMode({
             id: e.id,
-            skuId: t,
-            branch: n
+            skuId: n,
+            branch: r
         })
     );
-    i.Z.dispatch({
+    a.Z.dispatch({
         type: 'LIBRARY_APPLICATIONS_TEST_MODE_ENABLED',
-        libraryApplications: n
+        libraryApplications: r
     });
 }
-function c(e, t, n) {
-    i.Z.dispatch({
+function d(e, n, r) {
+    a.Z.dispatch({
         type: 'LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE',
         applicationId: e,
-        branchId: t,
-        launchOptionId: n
+        branchId: n,
+        launchOptionId: r
     });
 }

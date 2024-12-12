@@ -1,61 +1,61 @@
-n.d(t, {
+r.d(n, {
     p: function () {
-        return f;
+        return _;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(752877),
-    o = n(481060),
-    l = n(436774),
-    u = n(197115),
-    c = n(474936),
-    d = n(998663);
-function f(e) {
-    let { showUpsell: t, text: n, textVariant: i, button: f, buttonAnalyticsObject: _, className: p, onSubscribeModalClose: h, showShadow: m = !0, position: g = 'floating' } = e,
-        E = (0, o.useSpring)({
-            transform: t ? 'translateY(0%)' : 'translateY(120%)',
-            opacity: t ? 1 : 0,
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(752877),
+    l = r(481060),
+    u = r(436774),
+    c = r(197115),
+    d = r(474936),
+    f = r(998663);
+function _(e) {
+    let { showUpsell: n, text: r, textVariant: a, button: _, buttonAnalyticsObject: h, className: p, onSubscribeModalClose: m, showShadow: g = !0, position: E = 'floating' } = e,
+        v = (0, l.useSpring)({
+            transform: n ? 'translateY(0%)' : 'translateY(120%)',
+            opacity: n ? 1 : 0,
             config: {
                 tension: 120,
                 friction: 14
             }
         });
-    return (0, r.jsxs)(s.animated.div, {
-        style: { ...E },
-        className: a()(
-            d.upsellContainer,
+    return (0, i.jsxs)(o.animated.div, {
+        style: { ...v },
+        className: s()(
+            f.upsellContainer,
             {
-                [d.upsellContainerShadow]: m,
-                [d.upsellContainerFloating]: 'floating' === g,
-                [d.upsellContainerInline]: 'inline' === g
+                [f.upsellContainerShadow]: g,
+                [f.upsellContainerFloating]: 'floating' === E,
+                [f.upsellContainerInline]: 'inline' === E
             },
             p
         ),
         children: [
-            (0, r.jsx)(o.NitroWheelIcon, {
+            (0, i.jsx)(l.NitroWheelIcon, {
                 size: 'md',
-                color: l.JX.PREMIUM_TIER_2
+                color: u.JX.PREMIUM_TIER_2
             }),
-            (0, r.jsx)(o.Text, {
-                variant: null != i ? i : 'text-sm/medium',
+            (0, i.jsx)(l.Text, {
+                variant: null != a ? a : 'text-sm/medium',
                 color: 'header-primary',
-                className: d.upsellText,
-                children: n
+                className: f.upsellText,
+                children: r
             }),
-            'string' == typeof f
-                ? (0, r.jsx)(u.Z, {
-                      className: d.upsellButton,
-                      shinyButtonClassName: d.upsellButton,
-                      subscriptionTier: c.Si.TIER_2,
-                      buttonText: f,
-                      premiumModalAnalyticsLocation: _,
-                      tabIndex: t ? 0 : -1,
-                      onSubscribeModalClose: h
+            'string' == typeof _
+                ? (0, i.jsx)(c.Z, {
+                      className: f.upsellButton,
+                      shinyButtonClassName: f.upsellButton,
+                      subscriptionTier: d.Si.TIER_2,
+                      buttonText: _,
+                      premiumModalAnalyticsLocation: h,
+                      tabIndex: n ? 0 : -1,
+                      onSubscribeModalClose: m
                   })
-                : f
+                : _
         ]
     });
 }

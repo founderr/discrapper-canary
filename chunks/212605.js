@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-let r = {
+let i = {
     xxs: 12,
     xs: 16,
     sm: 18,

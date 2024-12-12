@@ -1,19 +1,19 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     deselectedItem: (e) => `Stavka ${e.item} nije odabrana.`,
     longPressToSelect: `Dugo pritisnite za ulazak u na\u{10D}in odabira.`,
     select: 'Odaberite',
     selectedAll: 'Odabrane su sve stavke.',
-    selectedCount: (e, t) =>
-        `${t.plural(e.count, {
+    selectedCount: (e, n) =>
+        `${n.plural(e.count, {
             '=0': 'Nije odabrana nijedna stavka',
-            one: () => `Odabrana je ${t.number(e.count)} stavka`,
-            other: () => `Odabrano je ${t.number(e.count)} stavki`
+            one: () => `Odabrana je ${n.number(e.count)} stavka`,
+            other: () => `Odabrano je ${n.number(e.count)} stavki`
         })}.`,
     selectedItem: (e) => `Stavka ${e.item} je odabrana.`
 };

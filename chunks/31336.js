@@ -1,25 +1,25 @@
-n.d(t, {
+r.d(n, {
     Qh: function () {
-        return a;
-    },
-    SO: function () {
         return s;
     },
-    Zw: function () {
+    SO: function () {
         return o;
+    },
+    Zw: function () {
+        return l;
     }
 });
-var r = n(570140),
-    i = n(19759);
-function a(e) {
-    r.Z.dispatch({
+var i = r(570140),
+    a = r(19759);
+function s(e) {
+    i.Z.dispatch({
         type: 'DEV_TOOLS_SETTINGS_UPDATE',
         settings: e
     });
 }
-function s() {
-    a({ displayTools: !i.Z.displayTools });
-}
 function o() {
-    r.Z.dispatch({ type: 'ANALYTICS_LOG_CLEAR' });
+    s({ displayTools: !a.Z.displayTools });
+}
+function l() {
+    i.Z.dispatch({ type: 'ANALYTICS_LOG_CLEAR' });
 }

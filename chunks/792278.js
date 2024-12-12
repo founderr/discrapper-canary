@@ -1,8 +1,8 @@
-function r(e) {
+function i(e) {
     return 'x' === e ? 'y' : 'x';
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

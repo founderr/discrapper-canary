@@ -1,26 +1,26 @@
-var r = n(700312).charAt,
-    i = n(714050),
-    a = n(644659),
-    s = n(828114),
-    o = n(535586),
-    l = 'String Iterator',
-    u = a.set,
-    c = a.getterFor(l);
-s(
+var i = r(700312).charAt,
+    a = r(714050),
+    s = r(644659),
+    o = r(828114),
+    l = r(535586),
+    u = 'String Iterator',
+    c = s.set,
+    d = s.getterFor(u);
+o(
     String,
     'String',
     function (e) {
-        u(this, {
-            type: l,
-            string: i(e),
+        c(this, {
+            type: u,
+            string: a(e),
             index: 0
         });
     },
     function () {
         var e,
-            t = c(this),
-            n = t.string,
-            i = t.index;
-        return i >= n.length ? o(void 0, !0) : ((e = r(n, i)), (t.index += e.length), o(e, !1));
+            n = d(this),
+            r = n.string,
+            a = n.index;
+        return a >= r.length ? l(void 0, !0) : ((e = i(r, a)), (n.index += e.length), l(e, !1));
     }
 );

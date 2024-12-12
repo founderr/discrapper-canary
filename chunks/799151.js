@@ -1,42 +1,42 @@
-n.d(t, {
+r.d(n, {
     c: function () {
-        return _;
+        return h;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(752877),
-    s = n(442837),
-    o = n(710593),
-    l = n(481060),
-    u = n(607070),
-    c = n(79320),
-    d = n(388032),
-    f = n(481320);
-function _() {
+var i = r(200651),
+    a = r(192379),
+    s = r(752877),
+    o = r(442837),
+    l = r(710593),
+    u = r(481060),
+    c = r(607070),
+    d = r(79320),
+    f = r(388032),
+    _ = r(481320);
+function h() {
     let e = [
             {
                 keybinds: ['Spacebar', 'Enter'],
-                name: d.intl.string(d.t['cs/HVF'])
+                name: f.intl.string(f.t['cs/HVF'])
             },
             {
                 keybinds: ['up', 'down'],
-                name: d.intl.string(d.t.dmMqa2)
+                name: f.intl.string(f.t.dmMqa2)
             },
             {
                 keybinds: ['ESC'],
-                name: d.intl.string(d.t['1ioMJS'])
+                name: f.intl.string(f.t['1ioMJS'])
             }
         ],
-        t = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
-        n = (0, c.zP)();
-    return (0, l.useTransition)(
-        n,
+        n = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
+        r = (0, d.zP)();
+    return (0, u.useTransition)(
+        r,
         {
             enter: {
                 from: {
                     opacity: 0,
-                    y: t ? 0 : 80
+                    y: n ? 0 : 80
                 },
                 to: {
                     opacity: 1,
@@ -45,43 +45,43 @@ function _() {
             },
             leave: {
                 opacity: 0,
-                y: t ? 0 : 80
+                y: n ? 0 : 80
             },
-            config: a.config.stiff
+            config: s.config.stiff
         },
         'animate-always'
-    )((t, n) =>
-        n
-            ? (0, r.jsx)('div', {
-                  className: f.positioner,
-                  children: (0, r.jsx)(a.animated.div, {
-                      className: f.container,
-                      style: t,
-                      children: e.map((t, n) => {
-                          let { keybinds: a, name: s } = t;
-                          return (0, r.jsxs)(
-                              i.Fragment,
+    )((n, r) =>
+        r
+            ? (0, i.jsx)('div', {
+                  className: _.positioner,
+                  children: (0, i.jsx)(s.animated.div, {
+                      className: _.container,
+                      style: n,
+                      children: e.map((n, r) => {
+                          let { keybinds: s, name: o } = n;
+                          return (0, i.jsxs)(
+                              a.Fragment,
                               {
                                   children: [
-                                      (0, r.jsx)(l.Text, {
+                                      (0, i.jsx)(u.Text, {
                                           variant: 'text-md/semibold',
-                                          className: f.bindName,
-                                          children: s
+                                          className: _.bindName,
+                                          children: o
                                       }),
-                                      a.map((e) =>
-                                          (0, r.jsx)(
-                                              o.M,
+                                      s.map((e) =>
+                                          (0, i.jsx)(
+                                              l.M,
                                               {
                                                   shortcut: e,
-                                                  className: f.shortcut
+                                                  className: _.shortcut
                                               },
                                               e
                                           )
                                       ),
-                                      n < e.length - 1 ? (0, r.jsx)('span', { className: f.separator }) : null
+                                      r < e.length - 1 ? (0, i.jsx)('span', { className: _.separator }) : null
                                   ]
                               },
-                              s
+                              o
                           );
                       })
                   })

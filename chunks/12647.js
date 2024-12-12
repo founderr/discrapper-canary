@@ -1,19 +1,19 @@
-var r = n(998502);
-t.Z = {
+var i = r(998502);
+n.Z = {
     flushDNSCache() {
-        r.ZP.flushDNSCache();
+        i.ZP.flushDNSCache();
     },
-    flushCookies: () => r.ZP.flushCookies(),
+    flushCookies: () => i.ZP.flushCookies(),
     setApplicationBackgroundColor(e) {
-        r.ZP.setApplicationBackgroundColor(e);
+        i.ZP.setApplicationBackgroundColor(e);
     },
-    setZoomFactor: (e) => r.ZP.setZoomFactor(e),
+    setZoomFactor: (e) => i.ZP.setZoomFactor(e),
     focus(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        r.ZP.focus(e, t);
+        let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        i.ZP.focus(e, n);
     },
-    submitLiveCrashReport: (e) => r.ZP.submitLiveCrashReport(e),
-    getPidFromDesktopSource: (e) => r.ZP.getPidFromDesktopSource(e),
-    getAudioPid: (e) => r.ZP.getAudioPid(e),
-    generateSessionFromPid: (e) => r.ZP.generateSessionFromPid(e)
+    submitLiveCrashReport: (e) => i.ZP.submitLiveCrashReport(e),
+    getPidFromDesktopSource: (e) => i.ZP.getPidFromDesktopSource(e),
+    getAudioPid: (e) => i.ZP.getAudioPid(e),
+    generateSessionFromPid: (e) => i.ZP.generateSessionFromPid(e)
 };

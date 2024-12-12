@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(104576);
-function i(e, t) {
-    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (0, r.Z)(e, t);
+var i = r(104576);
+function a(e, n) {
+    (e.prototype = Object.create(n.prototype)), (e.prototype.constructor = e), (0, i.Z)(e, n);
 }

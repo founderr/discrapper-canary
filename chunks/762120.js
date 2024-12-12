@@ -1,28 +1,28 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     buttonLabel: 'Suggesties weergeven',
-    countAnnouncement: (e, t) =>
-        `${t.plural(e.optionCount, {
-            one: () => `${t.number(e.optionCount)} optie`,
-            other: () => `${t.number(e.optionCount)} opties`
+    countAnnouncement: (e, n) =>
+        `${n.plural(e.optionCount, {
+            one: () => `${n.number(e.optionCount)} optie`,
+            other: () => `${n.number(e.optionCount)} opties`
         })} beschikbaar.`,
-    focusAnnouncement: (e, t) =>
-        `${t.select(
+    focusAnnouncement: (e, n) =>
+        `${n.select(
             {
                 true: () =>
-                    `Groep ${e.groupTitle} ingevoerd met ${t.plural(e.groupCount, {
-                        one: () => `${t.number(e.groupCount)} optie`,
-                        other: () => `${t.number(e.groupCount)} opties`
+                    `Groep ${e.groupTitle} ingevoerd met ${n.plural(e.groupCount, {
+                        one: () => `${n.number(e.groupCount)} optie`,
+                        other: () => `${n.number(e.groupCount)} opties`
                     })}. `,
                 other: ''
             },
             e.isGroupChange
-        )}${e.optionText}${t.select(
+        )}${e.optionText}${n.select(
             {
                 true: ', geselecteerd',
                 other: ''

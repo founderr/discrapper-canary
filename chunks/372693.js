@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     dateRange: (e) => `${e.startDate} kuni ${e.endDate}`,
     dateSelected: (e) => `${e.date} valitud`,
     finishRangeSelectionPrompt: `Kl\xf5psake kuup\xe4evavahemiku valimise l\xf5petamiseks`,

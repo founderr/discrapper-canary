@@ -1,15 +1,15 @@
-n.d(t, {
+r.d(n, {
     G: function () {
-        return a;
+        return s;
     },
     v: function () {
-        return i;
+        return a;
     }
 });
-var r = n(708644),
-    i = (0, r.HP)(function () {
+var i = r(708644),
+    a = (0, i.HP)(function () {
         return /firefox/i.test(navigator.userAgent);
     }),
-    a = (0, r.HP)(function () {
+    s = (0, i.HP)(function () {
         return !!window.safari;
     });

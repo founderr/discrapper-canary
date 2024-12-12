@@ -1,37 +1,37 @@
-function r(e, t, n) {
+function i(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-n.d(t, {
+r.d(n, {
     GR: function () {
-        return o;
+        return l;
     },
     V7: function () {
-        return i;
+        return a;
     },
     Xp: function () {
-        return s;
+        return o;
     },
     sW: function () {
-        return a;
+        return s;
     }
 });
-class i {
-    start(e, t) {
-        let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-        if (!this.isStarted() || !!n)
+class a {
+    start(e, n) {
+        let r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
+        if (!this.isStarted() || !!r)
             this.stop(),
                 (this._ref = window.setTimeout(() => {
-                    (this._ref = null), t();
+                    (this._ref = null), n();
                 }, e));
     }
     stop() {
@@ -41,10 +41,10 @@ class i {
         return null != this._ref;
     }
     constructor() {
-        r(this, '_ref', void 0);
+        i(this, '_ref', void 0);
     }
 }
-class a {
+class s {
     set(e) {
         return (this._delay = e), this;
     }
@@ -58,13 +58,13 @@ class a {
     isDelayed() {
         return this._timeout.isStarted();
     }
-    constructor(e, t) {
-        r(this, '_timeout', void 0), r(this, '_delay', void 0), r(this, '_handler', void 0), (this._delay = e), (this._handler = t), (this._timeout = new i());
+    constructor(e, n) {
+        i(this, '_timeout', void 0), i(this, '_delay', void 0), i(this, '_handler', void 0), (this._delay = e), (this._handler = n), (this._timeout = new a());
     }
 }
-class s {
-    start(e, t) {
-        this.stop(), (this._ref = window.setInterval(t, e));
+class o {
+    start(e, n) {
+        this.stop(), (this._ref = window.setInterval(n, e));
     }
     stop() {
         null != this._ref && (clearInterval(this._ref), (this._ref = null));
@@ -73,11 +73,11 @@ class s {
         return null != this._ref;
     }
     constructor() {
-        r(this, '_ref', void 0);
+        i(this, '_ref', void 0);
     }
 }
-function o(e) {
-    return new Promise((t) => {
-        setTimeout(() => t(), e);
+function l(e) {
+    return new Promise((n) => {
+        setTimeout(() => n(), e);
     });
 }

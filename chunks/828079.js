@@ -1,28 +1,28 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     buttonLabel: `Zobrazit doporu\u{10D}en\xed`,
-    countAnnouncement: (e, t) =>
-        `K dispozici ${t.plural(e.optionCount, {
-            one: () => `je ${t.number(e.optionCount)} mo\u{17E}nost`,
-            other: () => `jsou/je ${t.number(e.optionCount)} mo\u{17E}nosti/-\xed`
+    countAnnouncement: (e, n) =>
+        `K dispozici ${n.plural(e.optionCount, {
+            one: () => `je ${n.number(e.optionCount)} mo\u{17E}nost`,
+            other: () => `jsou/je ${n.number(e.optionCount)} mo\u{17E}nosti/-\xed`
         })}.`,
-    focusAnnouncement: (e, t) =>
-        `${t.select(
+    focusAnnouncement: (e, n) =>
+        `${n.select(
             {
                 true: () =>
-                    `Zadan\xe1 skupina \u{201E}${e.groupTitle}\u{201C} ${t.plural(e.groupCount, {
-                        one: () => `s ${t.number(e.groupCount)} mo\u{17E}nost\xed`,
-                        other: () => `se ${t.number(e.groupCount)} mo\u{17E}nostmi`
+                    `Zadan\xe1 skupina \u{201E}${e.groupTitle}\u{201C} ${n.plural(e.groupCount, {
+                        one: () => `s ${n.number(e.groupCount)} mo\u{17E}nost\xed`,
+                        other: () => `se ${n.number(e.groupCount)} mo\u{17E}nostmi`
                     })}. `,
                 other: ''
             },
             e.isGroupChange
-        )}${e.optionText}${t.select(
+        )}${e.optionText}${n.select(
             {
                 true: ` (vybr\xe1no)`,
                 other: ''

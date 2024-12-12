@@ -1,14 +1,14 @@
-n.d(t, {
+r.d(n, {
     M: function () {
-        return a;
+        return s;
     }
 });
-var r = n(960048),
-    i = n(536150);
-async function a(e, t) {
+var i = r(960048),
+    a = r(536150);
+async function s(e, n) {
     try {
-        await (0, i.i)(e, { is_sharing: t });
+        await (0, a.i)(e, { is_sharing: n });
     } catch (e) {
-        r.Z.captureException(e);
+        i.Z.captureException(e);
     }
 }

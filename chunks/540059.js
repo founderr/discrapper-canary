@@ -1,21 +1,21 @@
-n.d(t, {
+r.d(n, {
     Q3: function () {
-        return u;
-    },
-    TH: function () {
         return c;
     },
+    TH: function () {
+        return d;
+    },
     i9: function () {
-        return o;
+        return l;
     },
     o9: function () {
-        return l;
+        return u;
     }
 });
-var r = n(442837),
-    i = n(818083),
-    a = n(740492);
-let s = (0, i.B)({
+var i = r(442837),
+    a = r(818083),
+    s = r(740492);
+let o = (0, a.B)({
     id: '2024-05_desktop_visual_refresh',
     label: 'Desktop Visual Refresh',
     kind: 'user',
@@ -50,21 +50,21 @@ let s = (0, i.B)({
         }
     ]
 });
-function o(e) {
-    let t = s.getCurrentConfig({ location: e }).enabled,
-        n = a.ZP.disableVisualRefresh;
-    return !!t && !n;
-}
 function l(e) {
-    return s.useExperiment({ location: e }, { autoTrackExposure: !0 }).enabled;
+    let n = o.getCurrentConfig({ location: e }).enabled,
+        r = s.ZP.disableVisualRefresh;
+    return !!n && !r;
 }
 function u(e) {
-    let t = l(e),
-        n = (0, r.e7)([a.ZP], () => a.ZP.disableVisualRefresh);
-    return !!t && !n;
+    return o.useExperiment({ location: e }, { autoTrackExposure: !0 }).enabled;
 }
 function c(e) {
-    let t = u(e),
-        n = s.useExperiment({ location: e }, { autoTrackExposure: !0 }).enableCollapsibleSidebar;
-    return !!t && n;
+    let n = u(e),
+        r = (0, i.e7)([s.ZP], () => s.ZP.disableVisualRefresh);
+    return !!n && !r;
+}
+function d(e) {
+    let n = c(e),
+        r = o.useExperiment({ location: e }, { autoTrackExposure: !0 }).enableCollapsibleSidebar;
+    return !!n && r;
 }

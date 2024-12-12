@@ -1,8 +1,8 @@
-var r = n(690244)('%Object.defineProperty%', !0) || !1;
-if (r)
+var i = r(690244)('%Object.defineProperty%', !0) || !1;
+if (i)
     try {
-        r({}, 'a', { value: 1 });
+        i({}, 'a', { value: 1 });
     } catch (e) {
-        r = !1;
+        i = !1;
     }
-e.exports = r;
+e.exports = i;

@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(808506);
-function i() {
-    let e = r.Z.getFocusedPID();
-    return null != e && (r.Z.isReady(e) || r.Z.isCrashed(e)) ? e : null;
+var i = r(808506);
+function a() {
+    let e = i.Z.getFocusedPID();
+    return null != e && (i.Z.isReady(e) || i.Z.isCrashed(e)) ? e : null;
 }

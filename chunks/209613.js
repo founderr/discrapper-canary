@@ -1,26 +1,26 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return l;
+        return u;
     }
 });
-var r = n(924826),
-    i = n(442837),
-    a = n(607070);
-function s() {
+var i = r(924826),
+    a = r(442837),
+    s = r(607070);
+function o() {
     return Promise.resolve();
 }
-function o(e) {
-    let t = document.querySelector(e);
-    null != t && t.focus();
+function l(e) {
+    let n = document.querySelector(e);
+    null != n && n.focus();
 }
-function l(e, t) {
-    let n = (0, i.e7)([a.Z], () => a.Z.keyboardModeEnabled);
-    return (0, r.ZP)({
+function u(e, n) {
+    let r = (0, a.e7)([s.Z], () => s.Z.keyboardModeEnabled);
+    return (0, i.ZP)({
         id: e,
-        isEnabled: n,
-        orientation: t,
-        setFocus: o,
-        scrollToStart: s,
-        scrollToEnd: s
+        isEnabled: r,
+        orientation: n,
+        setFocus: l,
+        scrollToStart: o,
+        scrollToEnd: o
     });
 }

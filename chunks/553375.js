@@ -1,73 +1,73 @@
-n.d(t, {
+r.d(n, {
     ZP: function () {
-        return _;
+        return h;
     },
     nK: function () {
-        return d;
+        return f;
     },
     uj: function () {
-        return f;
+        return _;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(26033),
-    s = n(810568),
-    o = n(168524),
-    l = n(858042),
-    u = n(981631),
-    c = n(388032);
-function d(e) {
-    let { user: t, activity: n, entry: r } = e;
-    return null != r
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(26033),
+    o = r(810568),
+    l = r(168524),
+    u = r(858042),
+    c = r(981631),
+    d = r(388032);
+function f(e) {
+    let { user: n, activity: r, entry: i } = e;
+    return null != i
         ? {
-              applicationId: (0, a.dX)(r) ? r.extra.application_id : void 0,
-              sourceUserId: r.author_id
+              applicationId: (0, s.dX)(i) ? i.extra.application_id : void 0,
+              sourceUserId: i.author_id
           }
-        : null != n
+        : null != r
           ? {
-                applicationId: n.type === u.IIU.PLAYING && null != n.application_id ? n.application_id : void 0,
-                sourceUserId: t.id
+                applicationId: r.type === c.IIU.PLAYING && null != r.application_id ? r.application_id : void 0,
+                sourceUserId: n.id
             }
           : {
                 applicationId: void 0,
                 sourceUserId: void 0
             };
 }
-function f(e) {
-    let { user: t, activity: n, entry: r } = e,
-        { applicationId: i } = d({
-            activity: n,
-            entry: r,
-            user: t
+function _(e) {
+    let { user: n, activity: r, entry: i } = e,
+        { applicationId: a } = f({
+            activity: r,
+            entry: i,
+            user: n
         });
-    return (0, l.M)({
-        applicationId: i,
+    return (0, u.M)({
+        applicationId: a,
         showOutdatedInfoOption: !1
     });
 }
-function _(e) {
-    let { user: t, activity: n, entry: a, onAction: l, isMenuOpen: u } = e,
-        { applicationId: f, sourceUserId: _ } = d({
-            activity: n,
-            entry: a,
-            user: t
+function h(e) {
+    let { user: n, activity: r, entry: s, onAction: u, isMenuOpen: c } = e,
+        { applicationId: _, sourceUserId: h } = f({
+            activity: r,
+            entry: s,
+            user: n
         }),
-        p = (0, o.Z)({
+        p = (0, l.Z)({
             location: 'UserProfileActivityContextMenu',
-            source: s.m1.UserProfileCardContextMenu,
-            trackEntryPointImpression: u,
-            applicationId: f,
-            sourceUserId: _
+            source: o.m1.UserProfileCardContextMenu,
+            trackEntryPointImpression: c,
+            applicationId: _,
+            sourceUserId: h
         });
     return null == p
         ? null
-        : (0, r.jsx)(i.MenuItem, {
+        : (0, i.jsx)(a.MenuItem, {
               id: 'game-profile',
-              label: c.intl.string(c.t.ajHoOj),
+              label: d.intl.string(d.t.ajHoOj),
               action: (e) => {
-                  null == l || l({ action: 'PRESS_VIEW_GAME_PROFILE_MENU_ITEM' }), p(e);
+                  null == u || u({ action: 'PRESS_VIEW_GAME_PROFILE_MENU_ITEM' }), p(e);
               }
           });
 }

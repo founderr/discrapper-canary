@@ -1,7 +1,7 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = { 'Clear search': `Wyczy\u{15B}\u{107} zawarto\u{15B}\u{107} wyszukiwania` };
+var i = {};
+i = { 'Clear search': `Wyczy\u{15B}\u{107} zawarto\u{15B}\u{107} wyszukiwania` };

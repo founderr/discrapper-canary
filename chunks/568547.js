@@ -1,13 +1,13 @@
-n.d(t, {
+r.d(n, {
     o: function () {
-        return i;
+        return a;
     }
 });
-var r = n(727785);
-function i(e) {
+var i = r(727785);
+function a(e) {
     return {
-        type: r.h8.HEADER,
-        record: new r.X5(e),
+        type: i.h8.HEADER,
+        record: new i.X5(e),
         score: 0
     };
 }

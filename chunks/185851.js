@@ -1,14 +1,14 @@
 IntlMessageFormat.__addLocaleData({
     locale: 'uk',
-    pluralRuleFunction: function (e, t) {
-        var n = String(e).split('.'),
-            r = n[0],
-            i = !n[1],
-            a = Number(n[0]) == e,
-            s = a && n[0].slice(-1),
-            o = a && n[0].slice(-2),
-            l = r.slice(-1),
-            u = r.slice(-2);
-        return t ? (3 == s && 13 != o ? 'few' : 'other') : i && 1 == l && 11 != u ? 'one' : i && l >= 2 && l <= 4 && (u < 12 || u > 14) ? 'few' : (i && 0 == l) || (i && l >= 5 && l <= 9) || (i && u >= 11 && u <= 14) ? 'many' : 'other';
+    pluralRuleFunction: function (e, n) {
+        var r = String(e).split('.'),
+            i = r[0],
+            a = !r[1],
+            s = Number(r[0]) == e,
+            o = s && r[0].slice(-1),
+            l = s && r[0].slice(-2),
+            u = i.slice(-1),
+            c = i.slice(-2);
+        return n ? (3 == o && 13 != l ? 'few' : 'other') : a && 1 == u && 11 != c ? 'one' : a && u >= 2 && u <= 4 && (c < 12 || c > 14) ? 'few' : (a && 0 == u) || (a && u >= 5 && u <= 9) || (a && c >= 11 && c <= 14) ? 'many' : 'other';
     }
 });

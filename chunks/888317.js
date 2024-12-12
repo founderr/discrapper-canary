@@ -1,23 +1,23 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return c;
+        return d;
     }
 });
-var r = n(200651),
-    i = n(481060),
-    a = n(499254),
-    s = n(827498),
-    o = n(541716),
-    l = n(26033),
-    u = n(388032);
-function c(e) {
-    let { display: t, entry: n, onAction: c, onClose: d } = e;
-    return 'live' !== t && (0, l.Mq)(n)
-        ? (0, r.jsx)(i.MenuItem, {
+var i = r(200651),
+    a = r(481060),
+    s = r(499254),
+    o = r(827498),
+    l = r(541716),
+    u = r(26033),
+    c = r(388032);
+function d(e) {
+    let { display: n, entry: r, onAction: d, onClose: f } = e;
+    return 'live' !== n && (0, u.Mq)(r)
+        ? (0, i.jsx)(a.MenuItem, {
               id: 'view-activity',
-              label: u.intl.string(u.t.GDWYR0),
+              label: c.intl.string(c.t.GDWYR0),
               action: () => {
-                  null == c || c({ action: 'PRESS_VIEW_ACTIVITY_MENU_ITEM' }), null == d || d(), (0, a.__)(s._b.TEXT, o.Ie.NORMAL, { applicationId: n.extra.application_id });
+                  null == d || d({ action: 'PRESS_VIEW_ACTIVITY_MENU_ITEM' }), null == f || f(), (0, s.__)(o._b.TEXT, l.Ie.NORMAL, { applicationId: r.extra.application_id });
               }
           })
         : null;

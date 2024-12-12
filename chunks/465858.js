@@ -1,21 +1,21 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(192379);
-function i(e) {
-    let t = null == e ? void 0 : e.getBoundingClientRect(),
-        n = null == t ? void 0 : t.left,
-        i = null == t ? void 0 : t.top;
-    return (0, r.useMemo)(
+var i = r(192379);
+function a(e) {
+    let n = null == e ? void 0 : e.getBoundingClientRect(),
+        r = null == n ? void 0 : n.left,
+        a = null == n ? void 0 : n.top;
+    return (0, i.useMemo)(
         () =>
-            null != n && null != i
+            null != r && null != a
                 ? {
-                      x: n,
-                      y: i
+                      x: r,
+                      y: a
                   }
                 : null,
-        [n, i]
+        [r, a]
     );
 }

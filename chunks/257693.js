@@ -1,5 +1,5 @@
-var r = n(413135).Buffer;
-e.exports = function (e, t) {
-    for (var n = Math.min(e.length, t.length), i = new r(n), a = 0; a < n; ++a) i[a] = e[a] ^ t[a];
-    return i;
+var i = r(413135).Buffer;
+e.exports = function (e, n) {
+    for (var r = Math.min(e.length, n.length), a = new i(r), s = 0; s < r; ++s) a[s] = e[s] ^ n[s];
+    return a;
 };

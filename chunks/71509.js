@@ -1,14 +1,14 @@
-n.d(t, {
+r.d(n, {
     $H: function () {
-        return r;
+        return i;
     },
     Ip: function () {
-        return a;
+        return s;
     },
     Ui: function () {
-        return i;
+        return a;
     }
 });
-let r = 5,
-    i = 'switch-accounts-modal',
-    a = 'multiaccount_cta_tooltip_seen';
+let i = 5,
+    a = 'switch-accounts-modal',
+    s = 'multiaccount_cta_tooltip_seen';

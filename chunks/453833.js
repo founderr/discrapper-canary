@@ -1,28 +1,28 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     buttonLabel: 'Vis forslag',
-    countAnnouncement: (e, t) =>
-        `${t.plural(e.optionCount, {
-            one: () => `${t.number(e.optionCount)} mulighed tilg\xe6ngelig`,
-            other: () => `${t.number(e.optionCount)} muligheder tilg\xe6ngelige`
+    countAnnouncement: (e, n) =>
+        `${n.plural(e.optionCount, {
+            one: () => `${n.number(e.optionCount)} mulighed tilg\xe6ngelig`,
+            other: () => `${n.number(e.optionCount)} muligheder tilg\xe6ngelige`
         })}.`,
-    focusAnnouncement: (e, t) =>
-        `${t.select(
+    focusAnnouncement: (e, n) =>
+        `${n.select(
             {
                 true: () =>
-                    `Angivet gruppe ${e.groupTitle}, med ${t.plural(e.groupCount, {
-                        one: () => `${t.number(e.groupCount)} mulighed`,
-                        other: () => `${t.number(e.groupCount)} muligheder`
+                    `Angivet gruppe ${e.groupTitle}, med ${n.plural(e.groupCount, {
+                        one: () => `${n.number(e.groupCount)} mulighed`,
+                        other: () => `${n.number(e.groupCount)} muligheder`
                     })}. `,
                 other: ''
             },
             e.isGroupChange
-        )}${e.optionText}${t.select(
+        )}${e.optionText}${n.select(
             {
                 true: ', valgt',
                 other: ''

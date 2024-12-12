@@ -1,6 +1,6 @@
-function t(n) {
+function n(r) {
     return (
-        (e.exports = t =
+        (e.exports = n =
             Object.setPrototypeOf
                 ? Object.getPrototypeOf.bind()
                 : function (e) {
@@ -8,7 +8,7 @@ function t(n) {
                   }),
         (e.exports.__esModule = !0),
         (e.exports.default = e.exports),
-        t(n)
+        n(r)
     );
 }
-(e.exports = t), (e.exports.__esModule = !0), (e.exports.default = e.exports);
+(e.exports = n), (e.exports.__esModule = !0), (e.exports.default = e.exports);

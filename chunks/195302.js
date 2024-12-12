@@ -1,60 +1,60 @@
-n.d(t, {
+r.d(n, {
     d: function () {
-        return c;
+        return f;
     },
     p: function () {
-        return u;
+        return d;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(775953),
-    s = n(512722),
-    o = n.n(s);
-let l = i.createContext(void 0);
-function u(e) {
-    let { children: t } = e,
-        [n, a] = i.useState(null),
-        s = i.useMemo(() => ({ setComponentToSnapshot: a }), [a]);
-    return (0, r.jsxs)(l.Provider, {
-        value: s,
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(775953),
+    l = r(512722),
+    u = r.n(l);
+let c = s.createContext(void 0);
+function d(e) {
+    let { children: n } = e,
+        [r, i] = s.useState(null),
+        o = s.useMemo(() => ({ setComponentToSnapshot: i }), [i]);
+    return (0, a.jsxs)(c.Provider, {
+        value: o,
         children: [
-            t,
-            null != n &&
-                (0, r.jsx)('div', {
+            n,
+            null != r &&
+                (0, a.jsx)('div', {
                     id: 'component-to-image-container',
                     style: {
                         position: 'fixed',
                         top: '-1000px',
                         right: '-1000px'
                     },
-                    children: n
+                    children: r
                 })
         ]
     });
 }
-function c(e) {
-    let { renderComponent: t, imageOptions: n } = e,
-        r = i.useContext(l);
-    o()(null != r, 'useComponentToImageContext must be used within a ComponentToImageProvider');
-    let [s, u] = i.useState(!1);
+function f(e) {
+    let { renderComponent: n, imageOptions: r } = e,
+        i = s.useContext(c);
+    u()(null != i, 'useComponentToImageContext must be used within a ComponentToImageProvider');
+    let [a, l] = s.useState(!1);
     return {
-        generatingImage: s,
+        generatingImage: a,
         generateImage: () =>
-            new Promise((e, i) => {
-                u(!0);
-                let s = async (t) => {
+            new Promise((e, a) => {
+                l(!0);
+                let s = async (n) => {
                     try {
-                        let r = await (0, a.SE)(t, n);
-                        o()(null != r, 'Unable to generate image'), e(r);
+                        let i = await (0, o.SE)(n, r);
+                        u()(null != i, 'Unable to generate image'), e(i);
                     } catch (e) {
-                        i(e);
+                        a(e);
                     } finally {
-                        u(!1), r.setComponentToSnapshot(null);
+                        l(!1), i.setComponentToSnapshot(null);
                     }
                 };
-                r.setComponentToSnapshot(t({ generateImageRef: s }));
+                i.setComponentToSnapshot(n({ generateImageRef: s }));
             })
     };
 }

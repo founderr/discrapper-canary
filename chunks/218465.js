@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     dateRange: (e) => `${e.startDate} ~ ${e.endDate}`,
     dateSelected: (e) => `${e.date} \u{C120}\u{D0DD}\u{B428}`,
     finishRangeSelectionPrompt: `\u{B0A0}\u{C9DC} \u{BC94}\u{C704} \u{C120}\u{D0DD}\u{C744} \u{C644}\u{B8CC}\u{D558}\u{B824}\u{BA74} \u{D074}\u{B9AD}\u{D558}\u{C2ED}\u{C2DC}\u{C624}.`,

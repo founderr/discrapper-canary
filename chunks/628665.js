@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     Y: function () {
-        return r;
+        return i;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
     id: '2024-10_quests_video_dismissal_survey',
     kind: 'user',
     label: 'Video Quests Dismissal Survey',

@@ -1,22 +1,22 @@
-n.d(t, {
+r.d(n, {
     J$: function () {
-        return a;
-    },
-    _J: function () {
         return s;
     },
-    xG: function () {
+    _J: function () {
         return o;
+    },
+    xG: function () {
+        return l;
     }
 });
-var r = n(818083),
-    i = n(987338);
-let a = (0, r.B)({
+var i = r(818083),
+    a = r(987338);
+let s = (0, i.B)({
     kind: 'user',
     id: '2024-06_game_profile_experiment',
     label: 'Enables the Game Profile',
     defaultConfig: { enabled: !1 },
-    commonTriggerPoint: i.$P.CONNECTION_OPEN,
+    commonTriggerPoint: a.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,
@@ -25,13 +25,13 @@ let a = (0, r.B)({
         }
     ]
 });
-function s(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        { enabled: n } = a.getCurrentConfig({ location: e }, { autoTrackExposure: t });
-    return n;
-}
 function o(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        { enabled: n } = a.useExperiment({ location: e }, { autoTrackExposure: t });
-    return n;
+    let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        { enabled: r } = s.getCurrentConfig({ location: e }, { autoTrackExposure: n });
+    return r;
+}
+function l(e) {
+    let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        { enabled: r } = s.useExperiment({ location: e }, { autoTrackExposure: n });
+    return r;
 }

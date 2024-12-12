@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     U: function () {
-        return i;
+        return a;
     }
 });
-var r = n(513431);
-function i(e) {
-    let t = getComputedStyle(document.documentElement).getPropertyValue('--space-'.concat(e));
-    return (0, r.M)(t);
+var i = r(513431);
+function a(e) {
+    let n = getComputedStyle(document.documentElement).getPropertyValue('--space-'.concat(e));
+    return (0, i.M)(n);
 }

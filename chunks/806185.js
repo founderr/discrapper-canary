@@ -1,31 +1,31 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(264181);
-function i(e, t, n) {
+var i = r(264181);
+function a(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-class a {
+class s {
     static fromServer(e) {
-        return new a({
+        return new s({
             ...e,
             dismissibleContent: e.dismissible_content,
             refTargetBackground: e.ref_target_background
         });
     }
     constructor(e) {
-        i(this, 'title', void 0), i(this, 'body', void 0), i(this, 'avatar', void 0), i(this, 'decorations', void 0), i(this, 'dismissibleContent', void 0), i(this, 'version', void 0), i(this, 'refTargetBackground', void 0), (this.type = r.Z.COACHTIP), (this.title = e.title), (this.body = e.body), (this.avatar = e.avatar), (this.decorations = e.decorations), (this.dismissibleContent = e.dismissibleContent), (this.version = e.version), (this.refTargetBackground = e.refTargetBackground);
+        a(this, 'title', void 0), a(this, 'body', void 0), a(this, 'avatar', void 0), a(this, 'decorations', void 0), a(this, 'dismissibleContent', void 0), a(this, 'version', void 0), a(this, 'refTargetBackground', void 0), (this.type = i.Z.COACHTIP), (this.title = e.title), (this.body = e.body), (this.avatar = e.avatar), (this.decorations = e.decorations), (this.dismissibleContent = e.dismissibleContent), (this.version = e.version), (this.refTargetBackground = e.refTargetBackground);
     }
 }

@@ -1,71 +1,71 @@
-var r = n(957578).Buffer;
-function i(e) {
-    !r.isBuffer(e) && (e = r.from(e));
-    for (var t = (e.length / 4) | 0, n = Array(t), i = 0; i < t; i++) n[i] = e.readUInt32BE(4 * i);
-    return n;
-}
+var i = r(957578).Buffer;
 function a(e) {
-    for (; 0 < e.length; e++) e[0] = 0;
+    !i.isBuffer(e) && (e = i.from(e));
+    for (var n = (e.length / 4) | 0, r = Array(n), a = 0; a < n; a++) r[a] = e.readUInt32BE(4 * a);
+    return r;
 }
-function s(e, t, n, r, i) {
-    for (var a, s, o, l, u = n[0], c = n[1], d = n[2], f = n[3], _ = e[0] ^ t[0], p = e[1] ^ t[1], h = e[2] ^ t[2], m = e[3] ^ t[3], g = 4, E = 1; E < i; E++) (a = u[_ >>> 24] ^ c[(p >>> 16) & 255] ^ d[(h >>> 8) & 255] ^ f[255 & m] ^ t[g++]), (s = u[p >>> 24] ^ c[(h >>> 16) & 255] ^ d[(m >>> 8) & 255] ^ f[255 & _] ^ t[g++]), (o = u[h >>> 24] ^ c[(m >>> 16) & 255] ^ d[(_ >>> 8) & 255] ^ f[255 & p] ^ t[g++]), (l = u[m >>> 24] ^ c[(_ >>> 16) & 255] ^ d[(p >>> 8) & 255] ^ f[255 & h] ^ t[g++]), (_ = a), (p = s), (h = o), (m = l);
-    return (a = ((r[_ >>> 24] << 24) | (r[(p >>> 16) & 255] << 16) | (r[(h >>> 8) & 255] << 8) | r[255 & m]) ^ t[g++]), (s = ((r[p >>> 24] << 24) | (r[(h >>> 16) & 255] << 16) | (r[(m >>> 8) & 255] << 8) | r[255 & _]) ^ t[g++]), (o = ((r[h >>> 24] << 24) | (r[(m >>> 16) & 255] << 16) | (r[(_ >>> 8) & 255] << 8) | r[255 & p]) ^ t[g++]), (l = ((r[m >>> 24] << 24) | (r[(_ >>> 16) & 255] << 16) | (r[(p >>> 8) & 255] << 8) | r[255 & h]) ^ t[g++]), [(a >>>= 0), (s >>>= 0), (o >>>= 0), (l >>>= 0)];
+function s(e) {
+    for (var n = 0; n < e.length; e++) e[n] = 0;
 }
-var o = [0, 1, 2, 4, 8, 16, 32, 64, 128, 27, 54],
-    l = (function () {
-        for (var e = Array(256), t = 0; t < 256; t++) t < 128 ? (e[t] = t << 1) : (e[t] = (t << 1) ^ 283);
-        for (var n = [], r = [], i = [[], [], [], []], a = [[], [], [], []], s = 0, o = 0, l = 0; l < 256; ++l) {
-            var u = o ^ (o << 1) ^ (o << 2) ^ (o << 3) ^ (o << 4);
-            (u = (u >>> 8) ^ (255 & u) ^ 99), (n[s] = u), (r[u] = s);
-            var c = e[s],
-                d = e[c],
+function o(e, n, r, i, a) {
+    for (var s, o, l, u, c = r[0], d = r[1], f = r[2], _ = r[3], h = e[0] ^ n[0], p = e[1] ^ n[1], m = e[2] ^ n[2], g = e[3] ^ n[3], E = 4, v = 1; v < a; v++) (s = c[h >>> 24] ^ d[(p >>> 16) & 255] ^ f[(m >>> 8) & 255] ^ _[255 & g] ^ n[E++]), (o = c[p >>> 24] ^ d[(m >>> 16) & 255] ^ f[(g >>> 8) & 255] ^ _[255 & h] ^ n[E++]), (l = c[m >>> 24] ^ d[(g >>> 16) & 255] ^ f[(h >>> 8) & 255] ^ _[255 & p] ^ n[E++]), (u = c[g >>> 24] ^ d[(h >>> 16) & 255] ^ f[(p >>> 8) & 255] ^ _[255 & m] ^ n[E++]), (h = s), (p = o), (m = l), (g = u);
+    return (s = ((i[h >>> 24] << 24) | (i[(p >>> 16) & 255] << 16) | (i[(m >>> 8) & 255] << 8) | i[255 & g]) ^ n[E++]), (o = ((i[p >>> 24] << 24) | (i[(m >>> 16) & 255] << 16) | (i[(g >>> 8) & 255] << 8) | i[255 & h]) ^ n[E++]), (l = ((i[m >>> 24] << 24) | (i[(g >>> 16) & 255] << 16) | (i[(h >>> 8) & 255] << 8) | i[255 & p]) ^ n[E++]), (u = ((i[g >>> 24] << 24) | (i[(h >>> 16) & 255] << 16) | (i[(p >>> 8) & 255] << 8) | i[255 & m]) ^ n[E++]), [(s >>>= 0), (o >>>= 0), (l >>>= 0), (u >>>= 0)];
+}
+var l = [0, 1, 2, 4, 8, 16, 32, 64, 128, 27, 54],
+    u = (function () {
+        for (var e = Array(256), n = 0; n < 256; n++) n < 128 ? (e[n] = n << 1) : (e[n] = (n << 1) ^ 283);
+        for (var r = [], i = [], a = [[], [], [], []], s = [[], [], [], []], o = 0, l = 0, u = 0; u < 256; ++u) {
+            var c = l ^ (l << 1) ^ (l << 2) ^ (l << 3) ^ (l << 4);
+            (c = (c >>> 8) ^ (255 & c) ^ 99), (r[o] = c), (i[c] = o);
+            var d = e[o],
                 f = e[d],
-                _ = (257 * e[u]) ^ (16843008 * u);
-            (i[0][s] = (_ << 24) | (_ >>> 8)), (i[1][s] = (_ << 16) | (_ >>> 16)), (i[2][s] = (_ << 8) | (_ >>> 24)), (i[3][s] = _), (_ = (16843009 * f) ^ (65537 * d) ^ (257 * c) ^ (16843008 * s)), (a[0][u] = (_ << 24) | (_ >>> 8)), (a[1][u] = (_ << 16) | (_ >>> 16)), (a[2][u] = (_ << 8) | (_ >>> 24)), (a[3][u] = _), 0 === s ? (s = o = 1) : ((s = c ^ e[e[e[f ^ c]]]), (o ^= e[e[o]]));
+                _ = e[f],
+                h = (257 * e[c]) ^ (16843008 * c);
+            (a[0][o] = (h << 24) | (h >>> 8)), (a[1][o] = (h << 16) | (h >>> 16)), (a[2][o] = (h << 8) | (h >>> 24)), (a[3][o] = h), (h = (16843009 * _) ^ (65537 * f) ^ (257 * d) ^ (16843008 * o)), (s[0][c] = (h << 24) | (h >>> 8)), (s[1][c] = (h << 16) | (h >>> 16)), (s[2][c] = (h << 8) | (h >>> 24)), (s[3][c] = h), 0 === o ? (o = l = 1) : ((o = d ^ e[e[e[_ ^ d]]]), (l ^= e[e[l]]));
         }
         return {
-            SBOX: n,
-            INV_SBOX: r,
-            SUB_MIX: i,
-            INV_SUB_MIX: a
+            SBOX: r,
+            INV_SBOX: i,
+            SUB_MIX: a,
+            INV_SUB_MIX: s
         };
     })();
-function u(e) {
-    (this._key = i(e)), this._reset();
+function c(e) {
+    (this._key = a(e)), this._reset();
 }
-(u.blockSize = 16),
-    (u.keySize = 32),
-    (u.prototype.blockSize = u.blockSize),
-    (u.prototype.keySize = u.keySize),
-    (u.prototype._reset = function () {
-        for (var e = this._key, t = e.length, n = t + 6, r = (n + 1) * 4, i = [], a = 0; a < t; a++) i[a] = e[a];
-        for (a = t; a < r; a++) {
-            var s = i[a - 1];
-            a % t == 0 ? ((s = (s << 8) | (s >>> 24)), (s = ((l.SBOX[s >>> 24] << 24) | (l.SBOX[(s >>> 16) & 255] << 16) | (l.SBOX[(s >>> 8) & 255] << 8) | l.SBOX[255 & s]) ^ (o[(a / t) | 0] << 24))) : t > 6 && a % t == 4 && (s = (l.SBOX[s >>> 24] << 24) | (l.SBOX[(s >>> 16) & 255] << 16) | (l.SBOX[(s >>> 8) & 255] << 8) | l.SBOX[255 & s]), (i[a] = i[a - t] ^ s);
+(c.blockSize = 16),
+    (c.keySize = 32),
+    (c.prototype.blockSize = c.blockSize),
+    (c.prototype.keySize = c.keySize),
+    (c.prototype._reset = function () {
+        for (var e = this._key, n = e.length, r = n + 6, i = (r + 1) * 4, a = [], s = 0; s < n; s++) a[s] = e[s];
+        for (s = n; s < i; s++) {
+            var o = a[s - 1];
+            s % n == 0 ? ((o = (o << 8) | (o >>> 24)), (o = ((u.SBOX[o >>> 24] << 24) | (u.SBOX[(o >>> 16) & 255] << 16) | (u.SBOX[(o >>> 8) & 255] << 8) | u.SBOX[255 & o]) ^ (l[(s / n) | 0] << 24))) : n > 6 && s % n == 4 && (o = (u.SBOX[o >>> 24] << 24) | (u.SBOX[(o >>> 16) & 255] << 16) | (u.SBOX[(o >>> 8) & 255] << 8) | u.SBOX[255 & o]), (a[s] = a[s - n] ^ o);
         }
-        for (var u = [], c = 0; c < r; c++) {
-            var d = r - c,
-                f = i[d - (c % 4 ? 0 : 4)];
-            c < 4 || d <= 4 ? (u[c] = f) : (u[c] = l.INV_SUB_MIX[0][l.SBOX[f >>> 24]] ^ l.INV_SUB_MIX[1][l.SBOX[(f >>> 16) & 255]] ^ l.INV_SUB_MIX[2][l.SBOX[(f >>> 8) & 255]] ^ l.INV_SUB_MIX[3][l.SBOX[255 & f]]);
+        for (var c = [], d = 0; d < i; d++) {
+            var f = i - d,
+                _ = a[f - (d % 4 ? 0 : 4)];
+            d < 4 || f <= 4 ? (c[d] = _) : (c[d] = u.INV_SUB_MIX[0][u.SBOX[_ >>> 24]] ^ u.INV_SUB_MIX[1][u.SBOX[(_ >>> 16) & 255]] ^ u.INV_SUB_MIX[2][u.SBOX[(_ >>> 8) & 255]] ^ u.INV_SUB_MIX[3][u.SBOX[255 & _]]);
         }
-        (this._nRounds = n), (this._keySchedule = i), (this._invKeySchedule = u);
+        (this._nRounds = r), (this._keySchedule = a), (this._invKeySchedule = c);
     }),
-    (u.prototype.encryptBlockRaw = function (e) {
-        return s((e = i(e)), this._keySchedule, l.SUB_MIX, l.SBOX, this._nRounds);
+    (c.prototype.encryptBlockRaw = function (e) {
+        return o((e = a(e)), this._keySchedule, u.SUB_MIX, u.SBOX, this._nRounds);
     }),
-    (u.prototype.encryptBlock = function (e) {
-        var t = this.encryptBlockRaw(e),
-            n = r.allocUnsafe(16);
-        return n.writeUInt32BE(t[0], 0), n.writeUInt32BE(t[1], 4), n.writeUInt32BE(t[2], 8), n.writeUInt32BE(t[3], 12), n;
+    (c.prototype.encryptBlock = function (e) {
+        var n = this.encryptBlockRaw(e),
+            r = i.allocUnsafe(16);
+        return r.writeUInt32BE(n[0], 0), r.writeUInt32BE(n[1], 4), r.writeUInt32BE(n[2], 8), r.writeUInt32BE(n[3], 12), r;
     }),
-    (u.prototype.decryptBlock = function (e) {
-        var t = (e = i(e))[1];
-        (e[1] = e[3]), (e[3] = t);
-        var n = s(e, this._invKeySchedule, l.INV_SUB_MIX, l.INV_SBOX, this._nRounds),
-            a = r.allocUnsafe(16);
-        return a.writeUInt32BE(n[0], 0), a.writeUInt32BE(n[3], 4), a.writeUInt32BE(n[2], 8), a.writeUInt32BE(n[1], 12), a;
+    (c.prototype.decryptBlock = function (e) {
+        var n = (e = a(e))[1];
+        (e[1] = e[3]), (e[3] = n);
+        var r = o(e, this._invKeySchedule, u.INV_SUB_MIX, u.INV_SBOX, this._nRounds),
+            s = i.allocUnsafe(16);
+        return s.writeUInt32BE(r[0], 0), s.writeUInt32BE(r[3], 4), s.writeUInt32BE(r[2], 8), s.writeUInt32BE(r[1], 12), s;
     }),
-    (u.prototype.scrub = function () {
-        a(this._keySchedule), a(this._invKeySchedule), a(this._key);
+    (c.prototype.scrub = function () {
+        s(this._keySchedule), s(this._invKeySchedule), s(this._key);
     }),
-    (e.exports.AES = u);
+    (e.exports.AES = c);

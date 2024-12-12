@@ -1,93 +1,93 @@
-n.d(t, {
+r.d(n, {
     HZ: function () {
-        return h;
-    },
-    IB: function () {
         return E;
     },
+    IB: function () {
+        return T;
+    },
     cr: function () {
-        return p;
-    },
-    cu: function () {
-        return m;
-    },
-    lk: function () {
-        return v;
-    },
-    tM: function () {
         return g;
     },
-    xi: function () {
+    cu: function () {
+        return v;
+    },
+    lk: function () {
+        return b;
+    },
+    tM: function () {
         return I;
     },
+    xi: function () {
+        return y;
+    },
     zb: function () {
-        return T;
+        return S;
     }
-}),
-    n(653041),
-    n(47120);
-var r = n(911969),
-    i = n(555573),
-    a = n(998698),
-    s = n(509716),
-    o = n(703558),
-    l = n(117530),
-    u = n(752305),
-    c = n(925994),
-    d = n(887490),
-    f = n(42530);
-let _ = /([\p{L}\p{N}\p{sc=Deva}\p{sc=Thai}_-]+):/gu;
-function p(e) {
-    let t = d.bN.richValue(e)[0];
-    return null == t || 'applicationCommand' !== t.type ? null : [t, f.YD];
+});
+var i = r(653041);
+var a = r(47120);
+var s = r(911969),
+    o = r(555573),
+    l = r(998698),
+    u = r(509716),
+    c = r(703558),
+    d = r(117530),
+    f = r(752305),
+    _ = r(925994),
+    h = r(887490),
+    p = r(42530);
+let m = /([\p{L}\p{N}\p{sc=Deva}\p{sc=Thai}_-]+):/gu;
+function g(e) {
+    let n = h.bN.richValue(e)[0];
+    return null == n || 'applicationCommand' !== n.type ? null : [n, p.YD];
 }
-function h(e) {
-    var t, n;
+function E(e) {
+    var n, r;
     if (null == e.selection) return null;
-    let r =
+    let i =
         null !==
-            (t = d.bN.above(e, {
+            (n = h.bN.above(e, {
                 at: e.selection.focus,
-                match: (e) => d.aj.isType(e, 'applicationCommandOption')
-            })) && void 0 !== t
-            ? t
+                match: (e) => h.aj.isType(e, 'applicationCommandOption')
+            })) && void 0 !== n
+            ? n
             : null;
-    return null != r || d.M8.isCollapsed(e.selection)
-        ? r
+    return null != i || h.M8.isCollapsed(e.selection)
+        ? i
         : null !==
-                (n = d.bN.above(e, {
+                (r = h.bN.above(e, {
                     at: e.selection.anchor,
-                    match: (e) => d.aj.isType(e, 'applicationCommandOption')
-                })) && void 0 !== n
-          ? n
+                    match: (e) => h.aj.isType(e, 'applicationCommandOption')
+                })) && void 0 !== r
+          ? r
           : null;
 }
-function m(e) {
-    let t = p(e),
-        n = [],
-        r = null == t ? void 0 : t[0].children;
-    if (null != r) for (let e of r) d.aj.isType(e, 'applicationCommandOption') && n.push(e.optionName);
-    return n;
-}
-function g(e, t, n) {
-    let r = {};
-    if (null == t.options) return {};
-    let i = p(e),
-        a = Object.fromEntries(t.options.map((e) => [e.name, e])),
-        s = null == i ? void 0 : i[0].children;
-    if (null != s) {
-        for (let t of s)
-            if (d.aj.isType(t, 'applicationCommandOption')) {
-                let i = a[t.optionName];
-                null != i && (r[t.optionName] = E(e, i, t, n));
-            }
-    }
+function v(e) {
+    let n = g(e),
+        r = [],
+        i = null == n ? void 0 : n[0].children;
+    if (null != i) for (let e of i) h.aj.isType(e, 'applicationCommandOption') && r.push(e.optionName);
     return r;
 }
-function E(e, t, n, i) {
-    let a = n.children.map((n) => {
-        if (t.type === r.jw.ATTACHMENT) {
-            let e = l.Z.getUpload(i, t.name, o.d.SlashCommand);
+function I(e, n, r) {
+    let i = {};
+    if (null == n.options) return {};
+    let a = g(e),
+        s = Object.fromEntries(n.options.map((e) => [e.name, e])),
+        o = null == a ? void 0 : a[0].children;
+    if (null != o) {
+        for (let n of o)
+            if (h.aj.isType(n, 'applicationCommandOption')) {
+                let a = s[n.optionName];
+                null != a && (i[n.optionName] = T(e, a, n, r));
+            }
+    }
+    return i;
+}
+function T(e, n, r, i) {
+    let a = r.children.map((r) => {
+        if (n.type === s.jw.ATTACHMENT) {
+            let e = d.Z.getUpload(i, n.name, c.d.SlashCommand);
             if (null != e) {
                 var a;
                 return {
@@ -96,143 +96,143 @@ function E(e, t, n, i) {
                 };
             }
         }
-        if (d.LC.isText(n))
+        if (h.LC.isText(r))
             return {
                 type: 'text',
-                text: n.text
+                text: r.text
             };
-        if (d.bN.isVoid(e, n)) {
-            let e = (0, u.VI)(n);
+        if (h.bN.isVoid(e, r)) {
+            let e = (0, f.VI)(r);
             if (null != e) return e;
         }
         return {
             type: 'text',
-            text: (0, c.sg)(n, { mode: 'raw' })
+            text: (0, _.sg)(r, { mode: 'raw' })
         };
     });
-    if (t.type !== r.jw.STRING) {
+    if (n.type !== s.jw.STRING) {
         for (; a.length > 0 && 'text' === a[0].type && '' === a[0].text.trim(); ) a.shift();
         for (; a.length > 0 && 'text' === a[a.length - 1].type && '' === a[a.length - 1].text.trim(); ) a.pop();
     }
     return a;
 }
-function v(e, t, n, r, a) {
+function b(e, n, r, i, a) {
     if (null == e.options) return {};
-    let o = Object.fromEntries(
+    let s = Object.fromEntries(
         e.options.map((e) => {
-            var i;
+            var s;
             return [
                 e.name,
-                s.f({
+                u.f({
                     option: e,
-                    content: null !== (i = r[e.name]) && void 0 !== i ? i : null,
-                    guildId: t,
-                    channelId: n,
+                    content: null !== (s = i[e.name]) && void 0 !== s ? s : null,
+                    guildId: n,
+                    channelId: r,
                     allowEmptyValues: a
                 })
             ];
         })
     );
-    return i.VP(n, o), o;
+    return o.VP(r, s), s;
 }
-function I(e, t, n, r, o) {
-    var l;
-    let [u] = r,
-        c = a.Z.getActiveCommand(n),
-        d = null == c ? void 0 : null === (l = c.options) || void 0 === l ? void 0 : l.find((e) => e.name === u.optionName);
-    if (null == d) return;
-    let f = E(e, d, u, n),
-        _ = s.f({
-            option: d,
-            content: f,
-            guildId: t,
-            channelId: n,
-            allowEmptyValues: o
+function y(e, n, r, i, a) {
+    var s;
+    let [c] = i,
+        d = l.Z.getActiveCommand(r),
+        f = null == d ? void 0 : null === (s = d.options) || void 0 === s ? void 0 : s.find((e) => e.name === c.optionName);
+    if (null == f) return;
+    let _ = T(e, f, c, r),
+        h = u.f({
+            option: f,
+            content: _,
+            guildId: n,
+            channelId: r,
+            allowEmptyValues: a
         });
-    return i.g7(n, { [u.optionName]: { lastValidationResult: _ } }), _;
+    return o.g7(r, { [c.optionName]: { lastValidationResult: h } }), h;
 }
-function T(e, t) {
-    if (null == t.options || 0 === t.options.length) return [];
-    let n = d.bN.richValue(e),
-        r = [],
-        i = new Set(m(e)),
-        a = {},
-        s = new Set();
-    for (let e of t.options) (a[e.displayName] = e), !i.has(e.name) && s.add(e.displayName);
-    let o = null;
-    for (let t = 0; t < n.length; t++) {
-        let i = n[t];
-        if ('line' === i.type || 'applicationCommand' === i.type)
-            for (let u = 0; u < i.children.length; u++) {
-                let f;
-                let p = i.children[u],
-                    h = [t, u];
-                if (d.aj.isType(p, 'applicationCommandOption')) {
-                    if (null != o) {
-                        var l;
-                        (o.valueRange.focus = null !== (l = d.bN.before(e, h)) && void 0 !== l ? l : d.bN.start(e, [])),
-                            (o.text = (0, c.sk)(n, {
+function S(e, n) {
+    if (null == n.options || 0 === n.options.length) return [];
+    let r = h.bN.richValue(e),
+        i = [],
+        a = new Set(v(e)),
+        s = {},
+        o = new Set();
+    for (let e of n.options) (s[e.displayName] = e), !a.has(e.name) && o.add(e.displayName);
+    let l = null;
+    for (let n = 0; n < r.length; n++) {
+        let a = r[n];
+        if ('line' === a.type || 'applicationCommand' === a.type)
+            for (let c = 0; c < a.children.length; c++) {
+                let d;
+                let f = a.children[c],
+                    p = [n, c];
+                if (h.aj.isType(f, 'applicationCommandOption')) {
+                    if (null != l) {
+                        var u;
+                        (l.valueRange.focus = null !== (u = h.bN.before(e, p)) && void 0 !== u ? u : h.bN.start(e, [])),
+                            (l.text = (0, _.sk)(r, {
                                 mode: 'raw',
-                                range: o.valueRange
+                                range: l.valueRange
                             }).trim()),
-                            r.push(o),
-                            (o = null);
+                            i.push(l),
+                            (l = null);
                     }
                     continue;
                 }
-                if (!!d.LC.isText(p))
-                    for (_.lastIndex = 0; null != (f = _.exec(p.text)); ) {
-                        if (0 !== f.index && null == p.text.charAt(f.index - 1).match(/(\t|\s)/)) continue;
-                        let e = f[1];
-                        if (!s.has(e)) continue;
-                        s.delete(e);
-                        let t = a[e];
-                        if (null == t) continue;
-                        let i = {
-                                path: h,
-                                offset: f.index
-                            },
-                            l = {
-                                path: h,
-                                offset: i.offset + f[0].length
+                if (!!h.LC.isText(f))
+                    for (m.lastIndex = 0; null != (d = m.exec(f.text)); ) {
+                        if (0 !== d.index && null == f.text.charAt(d.index - 1).match(/(\t|\s)/)) continue;
+                        let e = d[1];
+                        if (!o.has(e)) continue;
+                        o.delete(e);
+                        let n = s[e];
+                        if (null == n) continue;
+                        let a = {
+                                path: p,
+                                offset: d.index
                             },
                             u = {
-                                path: h,
-                                offset: l.offset
+                                path: p,
+                                offset: a.offset + d[0].length
                             },
-                            d = {
-                                name: t.name,
-                                displayName: t.displayName,
-                                type: t.type,
+                            c = {
+                                path: p,
+                                offset: u.offset
+                            },
+                            h = {
+                                name: n.name,
+                                displayName: n.displayName,
+                                type: n.type,
                                 keyRange: {
-                                    anchor: i,
-                                    focus: l
+                                    anchor: a,
+                                    focus: u
                                 },
                                 valueRange: {
-                                    anchor: u,
-                                    focus: u
+                                    anchor: c,
+                                    focus: c
                                 },
                                 text: ''
                             };
-                        null != o &&
-                            ((o.valueRange.focus = d.keyRange.anchor),
-                            (o.text = (0, c.sk)(n, {
+                        null != l &&
+                            ((l.valueRange.focus = h.keyRange.anchor),
+                            (l.text = (0, _.sk)(r, {
                                 mode: 'raw',
-                                range: o.valueRange
+                                range: l.valueRange
                             }).trim()),
-                            r.push(o)),
-                            (o = d);
+                            i.push(l)),
+                            (l = h);
                     }
             }
     }
     return (
-        null != o &&
-            ((o.valueRange.focus = d.bN.end(e, [])),
-            (o.text = (0, c.sk)(n, {
+        null != l &&
+            ((l.valueRange.focus = h.bN.end(e, [])),
+            (l.text = (0, _.sk)(r, {
                 mode: 'raw',
-                range: o.valueRange
+                range: l.valueRange
             }).trim()),
-            r.push(o)),
-        r
+            i.push(l)),
+        i
     );
 }

@@ -1,16 +1,16 @@
-var r = n(147913),
-    i = n(31996),
-    a = n(728675),
-    s = n(981631);
-function o(e) {
-    var t;
-    if ((null === (t = e.message_reference) || void 0 === t ? void 0 : t.type) !== s.Uvt.FORWARD) return;
-    let n = e.message_reference.guild_id;
-    if (null != n) (0, i.Q)(n);
+var i = r(147913),
+    a = r(31996),
+    s = r(728675),
+    o = r(981631);
+function l(e) {
+    var n;
+    if ((null === (n = e.message_reference) || void 0 === n ? void 0 : n.type) !== o.Uvt.FORWARD) return;
+    let r = e.message_reference.guild_id;
+    if (null != r) (0, a.Q)(r);
 }
-class l extends r.Z {
+class u extends i.Z {
     constructor() {
-        super(), (0, a.Z)(this, o);
+        super(), (0, s.Z)(this, l);
     }
 }
-t.Z = new l();
+n.Z = new u();

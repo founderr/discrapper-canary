@@ -1,24 +1,24 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return c;
+        return d;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(481060),
-    o = n(871499),
-    l = n(388032),
-    u = n(558352);
-function c(e) {
-    let { popoutOpen: t, onClosePopout: n, onOpenPopout: i, ...c } = e,
-        d = t ? l.intl.string(l.t['7Dwcnp']) : l.intl.string(l.t.JzWez8);
-    return (0, r.jsx)(o.Z, {
-        label: d,
-        onClick: t ? n : i,
-        iconComponent: s.WindowLaunchIcon,
-        iconClassName: a()({ [u.popIn]: t }),
-        ...c
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(481060),
+    l = r(871499),
+    u = r(388032),
+    c = r(558352);
+function d(e) {
+    let { popoutOpen: n, onClosePopout: r, onOpenPopout: a, ...d } = e,
+        f = n ? u.intl.string(u.t['7Dwcnp']) : u.intl.string(u.t.JzWez8);
+    return (0, i.jsx)(l.Z, {
+        label: f,
+        onClick: n ? r : a,
+        iconComponent: o.WindowLaunchIcon,
+        iconClassName: s()({ [c.popIn]: n }),
+        ...d
     });
 }

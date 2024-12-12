@@ -1,27 +1,27 @@
-n.d(t, {
+r.d(n, {
     S: function () {
-        return u;
+        return d;
     }
-}),
-    n(47120);
-var r,
-    i = n(200651),
-    a = n(192379);
-function s(e, t, n) {
+});
+var i,
+    a = r(47120);
+var s = r(200651),
+    o = r(192379);
+function l(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let o = 'file-input',
-    l = (e) => ({
+let u = 'file-input',
+    c = (e) => ({
         position: 'absolute',
         top: 0,
         left: 0,
@@ -31,39 +31,39 @@ let o = 'file-input',
         cursor: e ? 'not-allowed' : 'pointer',
         fontSize: 0
     });
-class u extends (r = a.Component) {
+class d extends (i = o.Component) {
     render() {
-        let { disabled: e, tabIndex: t, className: n, name: r, 'aria-label': a, 'aria-hidden': s, id: u } = this.props;
+        let { disabled: e, tabIndex: n, className: r, name: i, 'aria-label': a, 'aria-hidden': o, id: l } = this.props;
         if (this.props.embedded)
-            return (0, i.jsx)('div', {
+            return (0, s.jsx)('div', {
                 role: 'button',
-                style: l(e),
-                className: n || o,
-                tabIndex: t,
+                style: c(e),
+                className: r || u,
+                tabIndex: n,
                 onKeyDown: e ? void 0 : this.handleNativeKeyDown,
                 onClick: e ? void 0 : this.handleNativeClick,
                 'aria-disabled': e,
                 'aria-label': a,
-                'aria-hidden': s || void 0
+                'aria-hidden': o || void 0
             });
         {
-            let c = '';
+            let d = '';
             return (
-                this.props.filters && (c = this.props.filters.map((e) => e.extensions.map((e) => '.'.concat(e)).join(',')).join(',')),
-                (0, i.jsx)('input', {
-                    id: u,
-                    style: l(e),
-                    className: n || o,
+                this.props.filters && (d = this.props.filters.map((e) => e.extensions.map((e) => '.'.concat(e)).join(',')).join(',')),
+                (0, s.jsx)('input', {
+                    id: l,
+                    style: c(e),
+                    className: r || u,
                     disabled: e,
                     type: 'file',
-                    tabIndex: t,
+                    tabIndex: n,
                     onMouseDown: this.handleBrowserInputMouseDown,
                     onChange: this.props.onChange,
                     multiple: this.props.multiple,
-                    accept: c,
-                    name: r,
+                    accept: d,
+                    name: i,
                     'aria-label': a,
-                    'aria-hidden': s || void 0,
+                    'aria-hidden': o || void 0,
                     ref: (e) => (this._input = e)
                 })
             );
@@ -71,22 +71,22 @@ class u extends (r = a.Component) {
     }
     constructor(...e) {
         super(...e),
-            s(this, '_input', null),
-            s(this, 'activateUploadDialogue', () => {
+            l(this, '_input', null),
+            l(this, 'activateUploadDialogue', () => {
                 this.props.embedded ? this.handleNativeClick() : this._input && this._input.click();
             }),
-            s(this, 'handleNativeClick', () => {
+            l(this, 'handleNativeClick', () => {
                 this.props.handleNativeClick && this.props.handleNativeClick(this.props);
             }),
-            s(this, 'handleNativeKeyDown', (e) => {
+            l(this, 'handleNativeKeyDown', (e) => {
                 (' ' === e.key || 'Enter' === e.key) && this.handleNativeClick();
             }),
-            s(this, 'handleBrowserInputMouseDown', (e) => {
+            l(this, 'handleBrowserInputMouseDown', (e) => {
                 e.currentTarget.value = null;
             });
     }
 }
-s(u, 'defaultProps', {
+l(d, 'defaultProps', {
     multiple: !1,
     disabled: !1,
     tabIndex: 0

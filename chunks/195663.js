@@ -1,11 +1,11 @@
-n.d(t, {
+r.d(n, {
     s: function () {
-        return i;
+        return a;
     }
 });
-var r = n(314897);
-function i(e) {
-    var t, n;
-    let i = r.default.getId();
-    return null != i && (!!((null === (t = e.removedMemberIds) || void 0 === t ? void 0 : t.includes(i)) || (null === (n = e.addedMembers) || void 0 === n ? void 0 : n.some((e) => e.userId === i))) || !1);
+var i = r(314897);
+function a(e) {
+    var n, r;
+    let a = i.default.getId();
+    return null != a && (!!((null === (n = e.removedMemberIds) || void 0 === n ? void 0 : n.includes(a)) || (null === (r = e.addedMembers) || void 0 === r ? void 0 : r.some((e) => e.userId === a))) || !1);
 }

@@ -1,21 +1,21 @@
-var r = n(147018),
-    i = n(339718),
-    a = n(49693),
-    s = n(959318),
-    o = n(345374);
-r(
+var i = r(147018),
+    a = r(339718),
+    s = r(49693),
+    o = r(959318),
+    l = r(345374);
+i(
     {
         target: 'Array',
         proto: !0
     },
     {
         at: function (e) {
-            var t = i(this),
-                n = a(t),
-                r = s(e),
-                o = r >= 0 ? r : n + r;
-            return o < 0 || o >= n ? void 0 : t[o];
+            var n = a(this),
+                r = s(n),
+                i = o(e),
+                l = i >= 0 ? i : r + i;
+            return l < 0 || l >= r ? void 0 : n[l];
         }
     }
 ),
-    o('at');
+    l('at');

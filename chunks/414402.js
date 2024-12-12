@@ -1,23 +1,23 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(620662),
-    a = n(710845),
-    s = n(475413),
-    o = n(981631),
-    l = n(388032);
-function u(e) {
-    let { user: t, activity: n, onAction: u } = e;
-    return (0, i.Z)(n, o.xjy.INSTANCE)
-        ? (0, r.jsx)(s.tG, {
-              text: l.intl.string(l.t.vwl1PD),
+var i = r(200651);
+r(192379);
+var a = r(620662),
+    s = r(710845),
+    o = r(475413),
+    l = r(981631),
+    u = r(388032);
+function c(e) {
+    let { user: n, activity: r, onAction: c } = e;
+    return (0, a.Z)(r, l.xjy.INSTANCE)
+        ? (0, i.jsx)(o.tG, {
+              text: u.intl.string(u.t.vwl1PD),
               fullWidth: !0,
               onClick: () => {
-                  null == u || u({ action: 'PRESS_NOTIFY_BUTTON' }), new a.Z('UserActivityActions').log('notify', t.id, n);
+                  null == c || c({ action: 'PRESS_NOTIFY_BUTTON' }), new s.Z('UserActivityActions').log('notify', n.id, r);
               }
           })
         : null;

@@ -1,42 +1,42 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return d;
+        return f;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    l = n(249458),
-    u = n(388032),
-    c = n(267954);
-function d(e) {
-    let { onPlay: t, className: n, inactive: a } = e,
-        d = i.useRef(null),
-        f = (0, r.jsx)('div', {
-            className: c.iconWrapper,
-            ref: d,
-            children: (0, r.jsx)(o.PlayIcon, {
+var i = r(200651),
+    a = r(192379),
+    s = r(120356),
+    o = r.n(s),
+    l = r(481060),
+    u = r(249458),
+    c = r(388032),
+    d = r(267954);
+function f(e) {
+    let { onPlay: n, className: r, inactive: s } = e,
+        f = a.useRef(null),
+        _ = (0, i.jsx)('div', {
+            className: d.iconWrapper,
+            ref: f,
+            children: (0, i.jsx)(l.PlayIcon, {
                 size: 'xs',
                 color: 'currentColor',
-                className: s()(c.icon)
+                className: o()(d.icon)
             })
         });
-    return (0, r.jsx)(l.G.Consumer, {
+    return (0, i.jsx)(u.G.Consumer, {
         children: (e) =>
-            a || null == t
-                ? (0, r.jsx)('div', {
-                      className: c.cover,
-                      children: f
+            s || null == n
+                ? (0, i.jsx)('div', {
+                      className: d.cover,
+                      children: _
                   })
-                : (0, r.jsx)(o.Clickable, {
-                      className: s()(n, c.cover, { [c.active]: !e.disableInteractions }),
-                      onClick: t,
+                : (0, i.jsx)(l.Clickable, {
+                      className: o()(r, d.cover, { [d.active]: !e.disableInteractions }),
+                      onClick: n,
                       tabIndex: 0,
-                      'aria-label': u.intl.string(u.t.RscU7O),
-                      focusProps: { ringTarget: d },
-                      children: f
+                      'aria-label': c.intl.string(c.t.RscU7O),
+                      focusProps: { ringTarget: f },
+                      children: _
                   })
     });
 }

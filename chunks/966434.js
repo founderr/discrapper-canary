@@ -1,22 +1,22 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var r = n(668781),
-    i = n(624138),
-    a = n(388032);
-function s(e, t, n, s) {
-    var o;
-    r.Z.show({
-        title: a.intl.string(a.t.XkIWkp),
-        cancelText: a.intl.string(a.t['ETE/oK']),
-        confirmText: a.intl.string(a.t['cY+Ooa']),
-        onConfirm: n,
-        onCancel: s,
-        body: a.intl.format(a.t['5/Xorq'], {
-            currentApplicationName: null !== (o = null == e ? void 0 : e.name) && void 0 !== o ? o : a.intl.string(a.t.G99XFh),
-            currentApplicationChannelName: (0, i.Ew)(null == t ? void 0 : t.name) ? a.intl.string(a.t.OGUjmp) : null == t ? void 0 : t.name
+var i = r(668781),
+    a = r(624138),
+    s = r(388032);
+function o(e, n, r, o) {
+    var l;
+    i.Z.show({
+        title: s.intl.string(s.t.XkIWkp),
+        cancelText: s.intl.string(s.t['ETE/oK']),
+        confirmText: s.intl.string(s.t['cY+Ooa']),
+        onConfirm: r,
+        onCancel: o,
+        body: s.intl.format(s.t['5/Xorq'], {
+            currentApplicationName: null !== (l = null == e ? void 0 : e.name) && void 0 !== l ? l : s.intl.string(s.t.G99XFh),
+            currentApplicationChannelName: (0, a.Ew)(null == n ? void 0 : n.name) ? s.intl.string(s.t.OGUjmp) : null == n ? void 0 : n.name
         })
     });
 }

@@ -1,22 +1,22 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return l;
+        return u;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(228168),
-    o = n(673471);
-function l(e) {
-    let { profileType: t, children: n } = e;
-    return (0, r.jsx)('div', {
-        className: a()(o.wrapper, {
-            [o.biteSize]: t === s.y0.BITE_SIZE,
-            [o.fullSize]: t === s.y0.FULL_SIZE,
-            [o.panel]: t === s.y0.PANEL
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(228168),
+    l = r(673471);
+function u(e) {
+    let { profileType: n, children: r } = e;
+    return (0, i.jsx)('div', {
+        className: s()(l.wrapper, {
+            [l.biteSize]: n === o.y0.BITE_SIZE,
+            [l.fullSize]: n === o.y0.FULL_SIZE,
+            [l.panel]: n === o.y0.PANEL
         }),
-        children: n
+        children: r
     });
 }

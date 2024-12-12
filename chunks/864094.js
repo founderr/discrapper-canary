@@ -1,12 +1,12 @@
-n.d(t, {
+r.d(n, {
     P: function () {
-        return o;
+        return l;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(709014);
-let s = {
+var i = r(200651),
+    a = r(192379),
+    s = r(709014);
+let o = {
         enable: {
             name: 'enable',
             start: 0,
@@ -28,41 +28,41 @@ let s = {
             duration: 40
         }
     },
-    o = (e) => {
-        let t = i.useRef(null),
-            o = i.useRef(e);
-        o.current = e;
-        let l = i.useMemo(
+    l = (e) => {
+        let n = a.useRef(null),
+            l = a.useRef(e);
+        l.current = e;
+        let u = a.useMemo(
                 () => () => {
-                    null != t.current && t.current.play(e);
+                    null != n.current && n.current.play(e);
                 },
                 [e]
             ),
-            u = i.useCallback(() => {
-                if (null == t.current) return;
-                let n = 'enable' === e ? 'hover_disabled' : 'hover_enabled';
-                t.current.play(n);
+            c = a.useCallback(() => {
+                if (null == n.current) return;
+                let r = 'enable' === e ? 'hover_disabled' : 'hover_enabled';
+                n.current.play(r);
             }, [e]),
-            c = i.useCallback(() => {
-                if (null == t.current) return;
-                let n = 'enable' === e ? 'hover_disabled' : 'hover_enabled';
-                t.current.stopIfPlaying(n);
+            d = a.useCallback(() => {
+                if (null == n.current) return;
+                let r = 'enable' === e ? 'hover_disabled' : 'hover_enabled';
+                n.current.stopIfPlaying(r);
             }, [e]);
         return {
             events: {
-                onClick: l,
-                onMouseEnter: u,
-                onMouseLeave: c
+                onClick: u,
+                onMouseEnter: c,
+                onMouseLeave: d
             },
-            play: l,
-            Component: i.useCallback(
+            play: u,
+            Component: a.useCallback(
                 (e) =>
-                    (0, r.jsx)(a.L, {
+                    (0, i.jsx)(s.L, {
                         ...e,
-                        src: () => n.e('59682').then(n.t.bind(n, 126683, 19)),
-                        ref: t,
-                        initialAnimation: o.current,
-                        markers: s
+                        src: () => r.e('59682').then(r.t.bind(r, 126683, 19)),
+                        ref: n,
+                        initialAnimation: l.current,
+                        markers: o
                     }),
                 []
             )

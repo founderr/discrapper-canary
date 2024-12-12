@@ -1,5 +1,5 @@
-var r = n(45331);
-e.exports = function (e, t) {
-    if (e === t) return 0 !== e || 1 / e == 1 / t;
-    return r(e) && r(t);
+var i = r(45331);
+e.exports = function (e, n) {
+    if (e === n) return 0 !== e || 1 / e == 1 / n;
+    return i(e) && i(n);
 };

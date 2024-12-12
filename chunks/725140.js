@@ -1,31 +1,31 @@
-n(47120);
-var r = n(147913),
-    i = n(579806),
-    a = n(246946);
-let s = !1;
-function o() {
-    var e;
-    let t = null === i.Z || void 0 === i.Z ? void 0 : null === (e = i.Z.window) || void 0 === e ? void 0 : e.setContentProtection;
-    if (null == t) return;
-    let n = a.Z.enableContentProtection;
-    n !== s && (t(n), (s = n));
+var i = r(47120);
+var a = r(147913),
+    s = r(579806),
+    o = r(246946);
+function l(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
 }
-class l extends r.Z {
+let u = !1;
+function c() {
+    var e;
+    let n = null === s.Z || void 0 === s.Z ? void 0 : null === (e = s.Z.window) || void 0 === e ? void 0 : e.setContentProtection;
+    if (null == n) return;
+    let r = o.Z.enableContentProtection;
+    r !== u && (n(r), (u = r));
+}
+class d extends a.Z {
     constructor() {
-        var e, t, n;
-        o(),
-            super(),
-            (e = this),
-            (t = 'stores'),
-            (n = new Map().set(a.Z, o)),
-            t in e
-                ? Object.defineProperty(e, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (e[t] = n);
+        c(), super(), l(this, 'stores', new Map().set(o.Z, c));
     }
 }
-t.Z = new l();
+n.Z = new d();

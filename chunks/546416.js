@@ -1,11 +1,11 @@
-n.d(t, {
+r.d(n, {
     V: function () {
-        return i;
+        return a;
     }
 });
-var r = n(594190);
-function i() {
-    let e = r.ZP.getCurrentGameForAnalytics();
+var i = r(594190);
+function a() {
+    let e = i.ZP.getCurrentGameForAnalytics();
     return {
         game_name: null != e ? e.name : null,
         game_id: null != e ? e.id : null

@@ -1,6 +1,6 @@
-n.d(t, {
+r.d(n, {
     n: function () {
-        return r;
+        return i;
     }
 });
-let r = 'getThermalState not implemented for this client platform';
+let i = 'getThermalState not implemented for this client platform';

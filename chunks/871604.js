@@ -1,97 +1,97 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return y;
+        return A;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(442837),
-    s = n(481060),
-    o = n(580587),
-    l = n(499254),
-    u = n(827498),
-    c = n(311819),
-    d = n(541716),
-    f = n(433355),
-    _ = n(592125),
-    p = n(944486),
-    h = n(626135),
-    m = n(572004),
-    g = n(591759),
-    E = n(135431),
-    v = n(621853),
-    I = n(429974),
-    T = n(475413),
-    b = n(981631),
-    S = n(388032);
-function y(e) {
-    let { user: t, closePopout: n, ...y } = e,
-        A = (0, a.e7)([v.Z], () => {
+var i = r(200651),
+    a = r(192379),
+    s = r(442837),
+    o = r(481060),
+    l = r(580587),
+    u = r(499254),
+    c = r(827498),
+    d = r(311819),
+    f = r(541716),
+    _ = r(433355),
+    h = r(592125),
+    p = r(944486),
+    m = r(626135),
+    g = r(572004),
+    E = r(591759),
+    v = r(135431),
+    I = r(621853),
+    T = r(429974),
+    b = r(475413),
+    y = r(981631),
+    S = r(388032);
+function A(e) {
+    let { user: n, closePopout: r, ...A } = e,
+        N = (0, s.e7)([I.Z], () => {
             var e;
-            return null === (e = v.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
+            return null === (e = I.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application;
         }),
-        N = (0, a.e7)([p.Z], () => p.Z.getChannelId()),
-        C = (0, a.e7)([_.Z], () => {
+        C = (0, s.e7)([p.Z], () => p.Z.getChannelId()),
+        R = (0, s.e7)([h.Z], () => {
             var e;
-            return null === (e = _.Z.getChannel(N)) || void 0 === e ? void 0 : e.guild_id;
+            return null === (e = h.Z.getChannel(C)) || void 0 === e ? void 0 : e.guild_id;
         }),
-        R = (0, o.Z)({ channelId: null != N ? N : void 0 }),
-        O = t.id,
-        D = i.useCallback(() => {
-            if (null != A) {
-                if (R) {
+        O = (0, l.Z)({ channelId: null != C ? C : void 0 }),
+        D = n.id,
+        L = a.useCallback(() => {
+            if (null != N) {
+                if (O) {
                     let e = p.Z.getCurrentlySelectedChannelId(),
-                        t = _.Z.getChannel(e),
-                        r = null != f.ZP.getSidebarState(e) || (null == t ? void 0 : t.isGuildVocal()) ? d.Ie.SIDEBAR : d.Ie.NORMAL;
-                    l.__(u._b.TEXT, r, { applicationId: A.id }), (0, s.closeModal)((0, I.z)(O, C)), null == n || n(), h.default.track(b.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: A.id });
+                        n = h.Z.getChannel(e),
+                        i = null != _.ZP.getSidebarState(e) || (null == n ? void 0 : n.isGuildVocal()) ? f.Ie.SIDEBAR : f.Ie.NORMAL;
+                    u.__(c._b.TEXT, i, { applicationId: N.id }), (0, o.closeModal)((0, T.z)(D, R)), null == r || r(), m.default.track(y.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: N.id });
                 } else
-                    (0, E.LO)({
-                        applicationId: A.id,
-                        ...A
+                    (0, v.LO)({
+                        applicationId: N.id,
+                        ...N
                     });
             }
-        }, [R, A, O, C, n]),
-        L = R ? S.intl.string(S.t['Cia+Aw']) : S.intl.string(S.t.NgXl3N);
-    if (null == A || !(0, E.Eb)(A)) return null;
-    let { customInstallUrl: x } = A,
-        w = null == x || g.Z.isDiscordUrl(x) ? s.PlusSmallIcon : s.LinkExternalSmallIcon,
-        P = R ? void 0 : w;
-    return m.wS
-        ? (0, r.jsx)(s.Popout, {
+        }, [O, N, D, R, r]),
+        x = O ? S.intl.string(S.t['Cia+Aw']) : S.intl.string(S.t.NgXl3N);
+    if (null == N || !(0, v.Eb)(N)) return null;
+    let { customInstallUrl: w } = N,
+        P = null == w || E.Z.isDiscordUrl(w) ? o.PlusSmallIcon : o.LinkExternalSmallIcon,
+        M = O ? void 0 : P;
+    return g.wS
+        ? (0, i.jsx)(o.Popout, {
               renderPopout: (e) => {
-                  let { closePopout: t } = e;
-                  return (0, r.jsx)(s.Menu, {
+                  let { closePopout: n } = e;
+                  return (0, i.jsx)(o.Menu, {
                       navId: 'user-bot-profile-add-app',
-                      onClose: t,
+                      onClose: n,
                       'aria-label': S.intl.string(S.t.dbkxVl),
                       onSelect: void 0,
-                      children: (0, r.jsx)(s.MenuGroup, {
-                          children: (0, r.jsx)(s.MenuItem, {
+                      children: (0, i.jsx)(o.MenuGroup, {
+                          children: (0, i.jsx)(o.MenuItem, {
                               id: 'copy',
                               label: S.intl.string(S.t.XWDiho),
-                              action: () => (0, m.JG)((0, c.J)(A))
+                              action: () => (0, g.JG)((0, d.J)(N))
                           })
                       })
                   });
               },
               children: (e) => {
-                  let { onClick: t, ...n } = e;
-                  return (0, r.jsx)(T.tG, {
+                  let { onClick: n, ...r } = e;
+                  return (0, i.jsx)(b.tG, {
                       action: 'PRESS_ADD_APP',
-                      text: L,
-                      icon: P,
-                      onContextMenu: t,
-                      onClick: D,
-                      ...n,
-                      ...y
+                      text: x,
+                      icon: M,
+                      onContextMenu: n,
+                      onClick: L,
+                      ...r,
+                      ...A
                   });
               }
           })
-        : (0, r.jsx)(T.tG, {
+        : (0, i.jsx)(b.tG, {
               action: 'PRESS_ADD_APP',
-              text: L,
-              icon: P,
-              onClick: D,
-              ...y
+              text: x,
+              icon: M,
+              onClick: L,
+              ...A
           });
 }

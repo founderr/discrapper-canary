@@ -1,19 +1,19 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     deselectedItem: (e) => `${e.item} niet geselecteerd.`,
     longPressToSelect: 'Druk lang om de selectiemodus te openen.',
     select: 'Selecteren',
     selectedAll: 'Alle items geselecteerd.',
-    selectedCount: (e, t) =>
-        `${t.plural(e.count, {
+    selectedCount: (e, n) =>
+        `${n.plural(e.count, {
             '=0': 'Geen items geselecteerd',
-            one: () => `${t.number(e.count)} item geselecteerd`,
-            other: () => `${t.number(e.count)} items geselecteerd`
+            one: () => `${n.number(e.count)} item geselecteerd`,
+            other: () => `${n.number(e.count)} items geselecteerd`
         })}.`,
     selectedItem: (e) => `${e.item} geselecteerd.`
 };

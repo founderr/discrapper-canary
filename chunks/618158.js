@@ -1,46 +1,46 @@
-n.d(t, {
+r.d(n, {
     Y: function () {
-        return s;
+        return o;
     },
     Z: function () {
-        return o;
+        return l;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(937995);
-function s(e) {
-    let { onPreventIdle: t, onAllowIdle: n, onActive: r } = i.useContext(a.nM),
-        s = i.useCallback(() => {
-            t(e);
-        }, [e, t]);
-    return {
-        preventIdle: s,
-        allowIdle: i.useCallback(() => {
+var i = r(200651),
+    a = r(192379),
+    s = r(937995);
+function o(e) {
+    let { onPreventIdle: n, onAllowIdle: r, onActive: i } = a.useContext(s.nM),
+        o = a.useCallback(() => {
             n(e);
-        }, [e, n]),
-        onActive: r
+        }, [e, n]);
+    return {
+        preventIdle: o,
+        allowIdle: a.useCallback(() => {
+            r(e);
+        }, [e, r]),
+        onActive: i
     };
 }
-function o(e) {
-    let { children: t, className: n } = e,
-        { onForceIdle: o, onActive: l } = i.useContext(a.nM),
-        { preventIdle: u, allowIdle: c } = s('interact');
-    i.useEffect(() => () => c(), [c]);
-    let d = i.useCallback(
+function l(e) {
+    let { children: n, className: r } = e,
+        { onForceIdle: l, onActive: u } = a.useContext(s.nM),
+        { preventIdle: c, allowIdle: d } = o('interact');
+    a.useEffect(() => () => d(), [d]);
+    let f = a.useCallback(
         (e) => {
-            var t;
-            let n = null !== (t = e.target.ownerDocument) && void 0 !== t ? t : document;
-            if (!e.currentTarget.contains(n.activeElement)) o();
+            var n;
+            let r = null !== (n = e.target.ownerDocument) && void 0 !== n ? n : document;
+            if (!e.currentTarget.contains(r.activeElement)) l();
         },
-        [o]
+        [l]
     );
-    return (0, r.jsx)('div', {
-        className: n,
-        onMouseEnter: u,
-        onMouseLeave: c,
-        onFocus: l,
-        onBlur: d,
-        children: t
+    return (0, i.jsx)('div', {
+        className: r,
+        onMouseEnter: c,
+        onMouseLeave: d,
+        onFocus: u,
+        onBlur: f,
+        children: n
     });
 }

@@ -1,28 +1,28 @@
-n.d(t, {
+r.d(n, {
     g: function () {
-        return s;
+        return o;
     },
     p: function () {
-        return o;
+        return l;
     }
 });
-var r = n(399606),
-    i = n(581883),
-    a = n(592204);
-let s = () => {
-        var e, t, n;
-        let a = (0, r.cj)([i.Z], () => {
-            var e, t;
-            return null !== (t = null === (e = i.Z.settings.textAndImages) || void 0 === e ? void 0 : e.keywordFilterSettings) && void 0 !== t ? t : {};
+var i = r(399606),
+    a = r(581883),
+    s = r(592204);
+let o = () => {
+        var e, n, r;
+        let s = (0, i.cj)([a.Z], () => {
+            var e, n;
+            return null !== (n = null === (e = a.Z.settings.textAndImages) || void 0 === e ? void 0 : e.keywordFilterSettings) && void 0 !== n ? n : {};
         });
         return {
-            profanity: null === (e = a.profanity) || void 0 === e ? void 0 : e.value,
-            sexualContent: null === (t = a.sexualContent) || void 0 === t ? void 0 : t.value,
-            slurs: null === (n = a.slurs) || void 0 === n ? void 0 : n.value
+            profanity: null === (e = s.profanity) || void 0 === e ? void 0 : e.value,
+            sexualContent: null === (n = s.sexualContent) || void 0 === n ? void 0 : n.value,
+            slurs: null === (r = s.slurs) || void 0 === r ? void 0 : r.value
         };
     },
-    o = () => {
+    l = () => {
         var e;
-        let { profanity: t, sexualContent: n, slurs: r } = s();
-        return !!(0, a.Xo)({ location: 'use-should-filter-keywords' }) && null !== (e = t || n || r) && void 0 !== e && e;
+        let { profanity: n, sexualContent: r, slurs: i } = o();
+        return !!(0, s.Xo)({ location: 'use-should-filter-keywords' }) && null !== (e = n || r || i) && void 0 !== e && e;
     };

@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(981631);
-function i(e) {
-    return (null == e ? void 0 : e.platform) === r.M7m.PS4 || (null == e ? void 0 : e.platform) === r.M7m.PS5;
+var i = r(981631);
+function a(e) {
+    return (null == e ? void 0 : e.platform) === i.M7m.PS4 || (null == e ? void 0 : e.platform) === i.M7m.PS5;
 }

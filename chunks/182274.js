@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     U: function () {
-        return i;
+        return a;
     }
 });
-var r = n(594174);
-let i = () => {
+var i = r(594174);
+let a = () => {
     var e;
-    return (null === (e = r.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) === !1;
+    return (null === (e = i.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) === !1;
 };

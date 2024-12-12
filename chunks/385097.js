@@ -1,11 +1,11 @@
-var r = n(192853),
-    i = n(690244),
-    a = n(148025),
-    s = r('RegExp.prototype.exec'),
-    o = i('%TypeError%');
+var i = r(192853),
+    a = r(690244),
+    s = r(148025),
+    o = i('RegExp.prototype.exec'),
+    l = a('%TypeError%');
 e.exports = function (e) {
-    if (!a(e)) throw new o('`regex` must be a RegExp');
-    return function (t) {
-        return null !== s(e, t);
+    if (!s(e)) throw new l('`regex` must be a RegExp');
+    return function (n) {
+        return null !== o(e, n);
     };
 };

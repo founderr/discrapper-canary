@@ -1,20 +1,20 @@
-n.d(t, {
+r.d(n, {
     Hj: function () {
-        return a;
+        return s;
     },
     YJ: function () {
-        return i;
+        return a;
     }
 });
-var r = function (e, t) {
-    return e === t;
+var i = function (e, n) {
+    return e === n;
 };
-function i(e, t) {
-    return (!e && !t) || (!!e && !!t && e.x === t.x && e.y === t.y);
+function a(e, n) {
+    return (!e && !n) || (!!e && !!n && e.x === n.x && e.y === n.y);
 }
-function a(e, t) {
-    var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r;
-    if (e.length !== t.length) return !1;
-    for (var i = 0; i < e.length; ++i) if (!n(e[i], t[i])) return !1;
+function s(e, n) {
+    var r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i;
+    if (e.length !== n.length) return !1;
+    for (var a = 0; a < e.length; ++a) if (!r(e[a], n[a])) return !1;
     return !0;
 }

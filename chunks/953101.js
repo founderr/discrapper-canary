@@ -1,12 +1,12 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return s;
     }
-}),
-    n(47120);
-let r = ['allow-pointer-lock', 'allow-scripts', 'allow-same-origin', 'allow-forms'];
-function i(e) {
-    let { allowPopups: t } = e,
-        n = r;
-    return t && (n = [...r, 'allow-popups', 'allow-popups-to-escape-sandbox']), n.join(' ');
+});
+var i = r(47120);
+let a = ['allow-pointer-lock', 'allow-scripts', 'allow-same-origin', 'allow-forms'];
+function s(e) {
+    let { allowPopups: n } = e,
+        r = a;
+    return n && (r = [...a, 'allow-popups', 'allow-popups-to-escape-sandbox']), r.join(' ');
 }

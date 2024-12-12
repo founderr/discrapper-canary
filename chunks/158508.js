@@ -1,79 +1,79 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return E;
+        return I;
     }
-}),
-    n(47120);
-var r = n(200651);
-n(192379);
-var i = n(442837),
-    a = n(704215),
-    s = n(481060),
-    o = n(194359),
-    l = n(377171),
-    u = n(243778),
-    c = n(922611),
-    d = n(240515),
-    f = n(699516),
-    _ = n(594174),
-    p = n(921944),
-    h = n(388032),
-    m = n(469619);
-function g() {
-    return (0, r.jsx)(s.TextBadge, {
-        color: l.Z.BG_BRAND,
-        text: h.intl.string(h.t.y2b7CA)
+});
+var i = r(47120);
+var a = r(200651);
+r(192379);
+var s = r(442837),
+    o = r(704215),
+    l = r(481060),
+    u = r(194359),
+    c = r(377171),
+    d = r(243778),
+    f = r(922611),
+    _ = r(240515),
+    h = r(699516),
+    p = r(594174),
+    m = r(921944),
+    g = r(388032),
+    E = r(469619);
+function v() {
+    return (0, a.jsx)(l.TextBadge, {
+        color: c.Z.BG_BRAND,
+        text: g.intl.string(g.t.y2b7CA)
     });
 }
-function E(e) {
-    let { user: t, guildId: n, channelId: l, onBlock: E, onIgnore: v, onUnignore: I, location: T = 'ContextMenu' } = e,
-        { id: b } = t,
-        S = (0, i.e7)(
-            [_.default],
+function I(e) {
+    let { user: n, guildId: r, channelId: i, onBlock: c, onIgnore: I, onUnignore: T, location: b = 'ContextMenu' } = e,
+        { id: y } = n,
+        S = (0, s.e7)(
+            [p.default],
             () => {
                 var e;
-                return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === b;
+                return (null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === y;
             },
-            [b]
+            [y]
         ),
-        { isIgnored: y, isBlocked: A } = (0, i.cj)(
-            [f.Z],
+        { isIgnored: A, isBlocked: N } = (0, s.cj)(
+            [h.Z],
             () => ({
-                isIgnored: f.Z.isIgnored(b),
-                isBlocked: f.Z.isBlocked(b)
+                isIgnored: h.Z.isIgnored(y),
+                isBlocked: h.Z.isBlocked(y)
             }),
-            [b]
+            [y]
         ),
-        N = (0, c.Do)({ location: 'use-block-user-item-web' }),
-        C = N ? [a.z.IGNORE_USER_NEW_BADGE] : [],
-        [R, O] = (0, u.US)(C),
-        D = R === a.z.IGNORE_USER_NEW_BADGE;
-    return !N || S || A
+        C = (0, f.Do)({ location: 'use-block-user-item-web' }),
+        R = C ? [o.z.IGNORE_USER_NEW_BADGE] : [],
+        [O, D] = (0, d.US)(R),
+        L = O === o.z.IGNORE_USER_NEW_BADGE;
+    return !C || S || N
         ? null
-        : (0, r.jsx)(s.MenuItem, {
+        : (0, a.jsx)(l.MenuItem, {
               id: 'ignore',
               color: 'default',
-              label: y
-                  ? h.intl.string(h.t['8wXU9P'])
-                  : (0, r.jsxs)('div', {
-                        className: m.label,
-                        children: [h.intl.string(h.t.ytCpKi), D ? (0, r.jsx)(g, {}) : null]
+              label: A
+                  ? g.intl.string(g.t['8wXU9P'])
+                  : (0, a.jsxs)('div', {
+                        className: E.label,
+                        children: [g.intl.string(g.t.ytCpKi), L ? (0, a.jsx)(v, {}) : null]
                     }),
-              action: y
+              action: A
                   ? () => {
-                        null == I || I(), o.Z.unignoreUser(b, null != T ? T : 'use-ignore-user-item-web', null != l ? l : void 0);
+                        null == T || T(), u.Z.unignoreUser(y, null != b ? b : 'use-ignore-user-item-web', null != i ? i : void 0);
                     }
                   : () => {
-                        D && O(p.L.TAKE_ACTION),
-                            (0, s.openModal)((e) =>
-                                (0, r.jsx)(d.Z, {
+                        L && D(m.L.TAKE_ACTION),
+                            (0, l.openModal)((e) =>
+                                (0, a.jsx)(_.Z, {
                                     ...e,
-                                    guildId: n,
-                                    channelId: l,
-                                    user: t,
-                                    onIgnore: v,
-                                    onBlock: E,
-                                    location: T
+                                    guildId: r,
+                                    channelId: i,
+                                    user: n,
+                                    onIgnore: I,
+                                    onBlock: c,
+                                    location: b
                                 })
                             );
                     }

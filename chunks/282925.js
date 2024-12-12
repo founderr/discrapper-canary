@@ -1,79 +1,79 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return c;
+        return d;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(921944),
-    s = n(388032),
-    o = n(844451),
-    l = n(905287);
-function u(e) {
-    let { onDismissClick: t, onCheckItOutClick: n } = e;
-    return (0, r.jsxs)('div', {
-        className: o.container,
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(921944),
+    o = r(388032),
+    l = r(844451),
+    u = r(905287);
+function c(e) {
+    let { onDismissClick: n, onCheckItOutClick: r } = e;
+    return (0, i.jsxs)('div', {
+        className: l.container,
         children: [
-            (0, r.jsx)('img', {
-                src: l.Z,
-                className: o.image,
+            (0, i.jsx)('img', {
+                src: u.Z,
+                className: l.image,
                 alt: 'Nitroween Gift Box'
             }),
-            (0, r.jsx)(i.ModalCloseButton, {
-                onClick: t,
+            (0, i.jsx)(a.ModalCloseButton, {
+                onClick: n,
                 withCircleBackground: !0,
-                className: o.closeButton,
-                innerClassName: o.popoutCloseButton
+                className: l.closeButton,
+                innerClassName: l.popoutCloseButton
             }),
-            (0, r.jsxs)('div', {
-                className: o.body,
+            (0, i.jsxs)('div', {
+                className: l.body,
                 children: [
-                    (0, r.jsx)(i.Heading, {
-                        className: o.text,
+                    (0, i.jsx)(a.Heading, {
+                        className: l.text,
                         variant: 'heading-sm/semibold',
-                        children: s.intl.string(s.t['YMI+UV'])
+                        children: o.intl.string(o.t['YMI+UV'])
                     }),
-                    (0, r.jsx)(i.Text, {
-                        className: o.text,
+                    (0, i.jsx)(a.Text, {
+                        className: l.text,
                         variant: 'text-sm/normal',
-                        children: s.intl.string(s.t.BIBwbm)
+                        children: o.intl.string(o.t.BIBwbm)
                     })
                 ]
             }),
-            (0, r.jsx)('div', {
-                className: o.buttonContainer,
-                children: (0, r.jsx)(i.Button, {
-                    className: o.ctaButton,
-                    color: i.Button.Colors.BRAND_INVERTED,
-                    onClick: () => n(),
-                    children: s.intl.string(s.t.RzWDqa)
+            (0, i.jsx)('div', {
+                className: l.buttonContainer,
+                children: (0, i.jsx)(a.Button, {
+                    className: l.ctaButton,
+                    color: a.Button.Colors.BRAND_INVERTED,
+                    onClick: () => r(),
+                    children: o.intl.string(o.t.RzWDqa)
                 })
             }),
-            (0, r.jsx)('div', { className: o.pointer })
+            (0, i.jsx)('div', { className: l.pointer })
         ]
     });
 }
-function c(e) {
-    let { onComplete: t, onCheckItOutClick: n, markAsDismissed: s } = e;
-    return (0, r.jsx)(i.Popout, {
+function d(e) {
+    let { onComplete: n, onCheckItOutClick: r, markAsDismissed: o } = e;
+    return (0, i.jsx)(a.Popout, {
         spacing: 0,
         shouldShow: !0,
         position: 'top',
         align: 'center',
         renderPopout: (e) =>
-            (0, r.jsx)(u, {
+            (0, i.jsx)(c, {
                 ...e,
                 onDismissClick: () => {
-                    t(), s(a.L.USER_DISMISS);
+                    n(), o(s.L.USER_DISMISS);
                 },
                 onCheckItOutClick: () => {
-                    n(), t(), s(a.L.TAKE_ACTION);
+                    r(), n(), o(s.L.TAKE_ACTION);
                 }
             }),
         onRequestClose: () => void 0,
         closeOnScroll: !1,
         ignoreModalClicks: !0,
-        children: () => (0, r.jsx)('div', { className: o.popoutTarget })
+        children: () => (0, i.jsx)('div', { className: l.popoutTarget })
     });
 }

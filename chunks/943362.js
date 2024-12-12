@@ -1,62 +1,62 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return m;
+        return g;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(481060),
-    o = n(239091),
-    l = n(782568),
-    u = n(364640),
-    c = n(124072),
-    d = n(198620),
-    f = n(746878),
-    _ = n(981631),
-    p = n(694206),
-    h = n(400357);
-function m(e) {
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(481060),
+    l = r(239091),
+    u = r(782568),
+    c = r(364640),
+    d = r(124072),
+    f = r(198620),
+    _ = r(746878),
+    h = r(981631),
+    p = r(694206),
+    m = r(400357);
+function g(e) {
     return {
-        react(t, i, m) {
-            let g = m.noStyleAndInteraction
+        react(n, a, g) {
+            let E = g.noStyleAndInteraction
                     ? void 0
-                    : async (n) => {
-                          let r = await (0, d.B_)(t.attachmentUrl);
-                          e.shouldStopPropagation && (null == n || n.stopPropagation()), u.Z.trackLinkClicked(r), e.shouldCloseDefaultModals && (0, s.closeAllModals)(), (0, l.Z)(r);
+                    : async (r) => {
+                          let i = await (0, f.B_)(n.attachmentUrl);
+                          e.shouldStopPropagation && (null == r || r.stopPropagation()), c.Z.trackLinkClicked(i), e.shouldCloseDefaultModals && (0, o.closeAllModals)(), (0, u.Z)(i);
                       },
-                E = m.noStyleAndInteraction
-                    ? _.dG4
+                v = g.noStyleAndInteraction
+                    ? h.dG4
                     : (e) => {
-                          (0, o.jW)(e, async () => {
-                              let { default: e } = await n.e('98466').then(n.bind(n, 151578));
-                              return (n) =>
-                                  (0, r.jsx)(e, {
-                                      ...n,
-                                      attachmentUrl: t.attachmentUrl,
-                                      attachmentName: t.attachmentName
+                          (0, l.jW)(e, async () => {
+                              let { default: e } = await r.e('98466').then(r.bind(r, 151578));
+                              return (r) =>
+                                  (0, i.jsx)(e, {
+                                      ...r,
+                                      attachmentUrl: n.attachmentUrl,
+                                      attachmentName: n.attachmentName
                                   });
                           });
                       };
-            return (0, r.jsxs)(
-                c.Z,
+            return (0, i.jsxs)(
+                d.Z,
                 {
                     role: 'link',
-                    href: t.attachmentUrl,
-                    onClick: g,
-                    onContextMenu: E,
+                    href: n.attachmentUrl,
+                    onClick: E,
+                    onContextMenu: v,
                     className: 'attachmentLink',
                     children: [
-                        (0, r.jsx)(s.AttachmentIcon, {
+                        (0, i.jsx)(o.AttachmentIcon, {
                             size: 'xs',
-                            className: a()(h.icon, p.icon),
-                            color: s.tokens.colors.MENTION_FOREGROUND
+                            className: s()(m.icon, p.icon),
+                            color: o.tokens.colors.MENTION_FOREGROUND
                         }),
-                        (0, f.S)(t, i, m)
+                        (0, _.S)(n, a, g)
                     ]
                 },
-                m.key
+                g.key
             );
         }
     };

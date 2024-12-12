@@ -1,6 +1,6 @@
-var r = n(408746),
-    i = n(939556),
-    a = n(285709),
-    s = a && a.isTypedArray,
-    o = s ? i(s) : r;
-e.exports = o;
+var i = r(408746),
+    a = r(939556),
+    s = r(285709),
+    o = s && s.isTypedArray,
+    l = o ? a(o) : i;
+e.exports = l;

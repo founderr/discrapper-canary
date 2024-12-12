@@ -1,55 +1,55 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return h;
+        return m;
     }
 });
-var r = n(570140),
-    i = n(367907),
-    a = n(932724),
-    s = n(634041),
-    o = n(647177),
-    l = n(592125),
-    u = n(131951),
-    c = n(19780),
-    d = n(944486),
-    f = n(594174);
-let _ = (e, t) => ({
+var i = r(570140),
+    a = r(367907),
+    s = r(932724),
+    o = r(634041),
+    l = r(647177),
+    u = r(592125),
+    c = r(131951),
+    d = r(19780),
+    f = r(944486),
+    _ = r(594174);
+let h = (e, n) => ({
         channel_id: e.id,
         channel_type: e.type,
         guild_id: e.getGuildId(),
-        rtc_connection_id: c.Z.getRTCConnectionId(),
-        duration: c.Z.getDuration(),
-        media_session_id: c.Z.getMediaSessionId(),
-        ...(0, i.kO)(c.Z.getGuildId(), c.Z.getChannelId(), t)
+        rtc_connection_id: d.Z.getRTCConnectionId(),
+        duration: d.Z.getDuration(),
+        media_session_id: d.Z.getMediaSessionId(),
+        ...(0, a.kO)(d.Z.getGuildId(), d.Z.getChannelId(), n)
     }),
     p = () => {
         var e;
-        let t = (0, a.P)(f.default.getCurrentUser());
+        let n = (0, s.P)(_.default.getCurrentUser());
         return {
-            video_device_name: null === (e = u.Z.getVideoDevices()[u.Z.getVideoDeviceId()]) || void 0 === e ? void 0 : e.name,
-            video_hardware_scaling_enabled: u.Z.getHardwareEncoding(),
-            video_effect_type: (0, o.TA)(t),
-            video_effect_detail: (0, o.V$)(t)
+            video_device_name: null === (e = c.Z.getVideoDevices()[c.Z.getVideoDeviceId()]) || void 0 === e ? void 0 : e.name,
+            video_hardware_scaling_enabled: c.Z.getHardwareEncoding(),
+            video_effect_type: (0, l.TA)(n),
+            video_effect_detail: (0, l.V$)(n)
         };
     };
-function h(e, t, n, i) {
-    let a = d.Z.getVoiceChannelId(),
-        o = l.Z.getChannel(a);
-    if (null == t && null != a && null != o) {
-        let t = _(o, i);
-        if ((e(), s.Z.hasUsedBackgroundInCall)) {
+function m(e, n, r, a) {
+    let s = f.Z.getVoiceChannelId(),
+        l = u.Z.getChannel(s);
+    if (null == n && null != s && null != l) {
+        let n = h(l, a);
+        if ((e(), o.Z.hasUsedBackgroundInCall)) {
             let e = {
-                ...t,
+                ...n,
                 ...p()
             };
-            r.Z.dispatch({
+            i.Z.dispatch({
                 type: 'VIDEO_BACKGROUND_SHOW_FEEDBACK',
                 analyticsData: e
             });
         } else
-            r.Z.dispatch({
+            i.Z.dispatch({
                 type: 'VOICE_CHANNEL_SHOW_FEEDBACK',
-                analyticsData: t
+                analyticsData: n
             });
     } else e();
 }

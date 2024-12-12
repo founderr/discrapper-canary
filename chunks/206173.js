@@ -1,17 +1,17 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     deselectedItem: (e) => `${e.item} not selected.`,
     select: 'Select',
-    selectedCount: (e, t) =>
-        `${t.plural(e.count, {
+    selectedCount: (e, n) =>
+        `${n.plural(e.count, {
             '=0': 'No items selected',
-            one: () => `${t.number(e.count)} item selected`,
-            other: () => `${t.number(e.count)} items selected`
+            one: () => `${n.number(e.count)} item selected`,
+            other: () => `${n.number(e.count)} items selected`
         })}.`,
     selectedAll: 'All items selected.',
     selectedItem: (e) => `${e.item} selected.`,

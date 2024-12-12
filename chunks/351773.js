@@ -1,15 +1,15 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(192379);
-function i(e, t) {
-    let n = r.useRef(e);
+var i = r(192379);
+function a(e, n) {
+    let r = i.useRef(e);
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             function e(e) {
-                null != n.current && !n.current.contains(e.target) && t();
+                null != r.current && !r.current.contains(e.target) && n();
             }
             return (
                 document.addEventListener('mousedown', e),
@@ -17,7 +17,7 @@ function i(e, t) {
                     document.removeEventListener('mousedown', e);
                 }
             );
-        }, [n, t]),
-        n
+        }, [r, n]),
+        r
     );
 }

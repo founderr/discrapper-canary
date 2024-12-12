@@ -1,33 +1,33 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(570140);
-async function s(e) {
-    let t = await (0, i.openModalLazy)(
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(570140);
+async function o(e) {
+    let n = await (0, a.openModalLazy)(
         async () => {
-            let { default: t } = await Promise.all([n.e('8739'), n.e('57650')]).then(n.bind(n, 677012));
-            return (n) =>
-                (0, r.jsx)(t, {
-                    ...n,
+            let { default: n } = await Promise.all([r.e('8739'), r.e('57650')]).then(r.bind(r, 677012));
+            return (r) =>
+                (0, i.jsx)(n, {
+                    ...r,
                     ...e
                 });
         },
         {
             onCloseCallback: () => {
-                a.Z.dispatch({
+                s.Z.dispatch({
                     type: 'INTERACTION_IFRAME_MODAL_CLOSE',
                     applicationId: e.application.id
                 });
             }
         }
     );
-    a.Z.dispatch({
+    s.Z.dispatch({
         type: 'INTERACTION_IFRAME_MODAL_KEY_CREATE',
-        modalKey: t
+        modalKey: n
     });
 }

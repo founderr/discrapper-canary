@@ -1,84 +1,84 @@
-var r = n(570140);
-t.Z = {
+var i = r(570140);
+n.Z = {
     popFirstFile(e) {
-        r.Z.dispatch({
+        i.Z.dispatch({
             type: 'UPLOAD_ATTACHMENT_POP_FILE',
             channelId: e
         });
     },
     addFiles(e) {
-        let { files: t, channelId: n, showLargeMessageDialog: i, draftType: a } = e;
-        r.Z.dispatch({
+        let { files: n, channelId: r, showLargeMessageDialog: a, draftType: s } = e;
+        i.Z.dispatch({
             type: 'UPLOAD_ATTACHMENT_ADD_FILES',
-            channelId: n,
-            files: t,
-            showLargeMessageDialog: i,
-            draftType: a
+            channelId: r,
+            files: n,
+            showLargeMessageDialog: a,
+            draftType: s
         });
     },
     addFile(e) {
-        let { file: t, channelId: n, showLargeMessageDialog: i, draftType: a } = e;
-        r.Z.dispatch({
+        let { file: n, channelId: r, showLargeMessageDialog: a, draftType: s } = e;
+        i.Z.dispatch({
             type: 'UPLOAD_ATTACHMENT_ADD_FILES',
-            channelId: n,
-            files: [t],
-            showLargeMessageDialog: i,
-            draftType: a
+            channelId: r,
+            files: [n],
+            showLargeMessageDialog: a,
+            draftType: s
         });
     },
-    remove(e, t, n) {
-        r.Z.dispatch({
+    remove(e, n, r) {
+        i.Z.dispatch({
             type: 'UPLOAD_ATTACHMENT_REMOVE_FILE',
             channelId: e,
-            id: t,
-            draftType: n
+            id: n,
+            draftType: r
         });
     },
-    removeFiles(e, t, n) {
-        r.Z.dispatch({
+    removeFiles(e, n, r) {
+        i.Z.dispatch({
             type: 'UPLOAD_ATTACHMENT_REMOVE_FILES',
             channelId: e,
-            attachmentIds: t,
-            draftType: n
+            attachmentIds: n,
+            draftType: r
         });
     },
-    clearAll(e, t) {
-        r.Z.dispatch({
+    clearAll(e, n) {
+        i.Z.dispatch({
             type: 'UPLOAD_ATTACHMENT_CLEAR_ALL_FILES',
             channelId: e,
-            draftType: t
+            draftType: n
         });
     },
-    update(e, t, n, i) {
-        let { description: a, filename: s, spoiler: o, thumbnail: l } = i;
-        r.Z.dispatch({
+    update(e, n, r, a) {
+        let { description: s, filename: o, spoiler: l, thumbnail: u } = a;
+        i.Z.dispatch({
             type: 'UPLOAD_ATTACHMENT_UPDATE_FILE',
             channelId: e,
-            id: t,
-            filename: s,
-            description: a,
-            thumbnail: l,
-            spoiler: o,
-            draftType: n
+            id: n,
+            filename: o,
+            description: s,
+            thumbnail: u,
+            spoiler: l,
+            draftType: r
         });
     },
     setUploads(e) {
-        let { uploads: t, channelId: n, draftType: i, resetState: a } = e;
-        r.Z.dispatch({
+        let { uploads: n, channelId: r, draftType: a, resetState: s } = e;
+        i.Z.dispatch({
             type: 'UPLOAD_ATTACHMENT_SET_UPLOADS',
-            channelId: n,
-            uploads: a ? t.map((e) => e.resetState()) : t,
-            draftType: i
+            channelId: r,
+            uploads: s ? n.map((e) => e.resetState()) : n,
+            draftType: a
         });
     },
     setFile(e) {
-        let { file: t, channelId: n, id: i, draftType: a } = e;
-        r.Z.dispatch({
+        let { file: n, channelId: r, id: a, draftType: s } = e;
+        i.Z.dispatch({
             type: 'UPLOAD_ATTACHMENT_SET_FILE',
-            channelId: n,
-            id: i,
-            file: t,
-            draftType: a
+            channelId: r,
+            id: a,
+            file: n,
+            draftType: s
         });
     }
 };

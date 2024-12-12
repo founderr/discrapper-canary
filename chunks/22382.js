@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(981631);
-function i(e) {
-    let { CDN_HOST: t, PROJECT_ENV: n } = window.GLOBAL_ENV;
-    return 'development' !== n ? ''.concat(location.protocol, '//').concat(t).concat(r.ANM.SOUNDBOARD_SOUND(e)) : ''.concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT).concat(r.ANM.SOUNDBOARD_SOUND(e));
+var i = r(981631);
+function a(e) {
+    let { CDN_HOST: n, PROJECT_ENV: r } = window.GLOBAL_ENV;
+    return 'development' !== r ? ''.concat(location.protocol, '//').concat(n).concat(i.ANM.SOUNDBOARD_SOUND(e)) : ''.concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT).concat(i.ANM.SOUNDBOARD_SOUND(e));
 }

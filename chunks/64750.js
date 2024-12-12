@@ -1,20 +1,20 @@
-var r = n(977791),
-    i = SyntaxError,
-    a = 'object' == typeof StopIteration ? StopIteration : null;
+var i = r(977791),
+    a = SyntaxError,
+    s = 'object' == typeof StopIteration ? StopIteration : null;
 e.exports = function (e) {
-    if (!a) throw new i('this environment lacks StopIteration');
-    r.set(e, '[[Done]]', !1);
-    var t = {
+    if (!s) throw new a('this environment lacks StopIteration');
+    i.set(e, '[[Done]]', !1);
+    var n = {
         next: function () {
-            var e = r.get(this, '[[Iterator]]'),
-                t = r.get(e, '[[Done]]');
+            var e = i.get(this, '[[Iterator]]'),
+                n = i.get(e, '[[Done]]');
             try {
                 return {
-                    done: t,
-                    value: t ? void 0 : e.next()
+                    done: n,
+                    value: n ? void 0 : e.next()
                 };
-            } catch (t) {
-                if ((r.set(e, '[[Done]]', !0), t !== a)) throw t;
+            } catch (n) {
+                if ((i.set(e, '[[Done]]', !0), n !== s)) throw n;
                 return {
                     done: !0,
                     value: void 0
@@ -22,5 +22,5 @@ e.exports = function (e) {
             }
         }
     };
-    return r.set(t, '[[Iterator]]', e), t;
+    return i.set(n, '[[Iterator]]', e), n;
 };

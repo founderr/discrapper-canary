@@ -1,19 +1,19 @@
-n.d(t, {
+r.d(n, {
     z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(661763);
-function i(e) {
-    let t,
-        n = (0, r.zL)(e, { labelable: !0 });
-    return ('vertical' === e.orientation && (t = 'vertical'), 'hr' !== e.elementType)
+var i = r(661763);
+function a(e) {
+    let n,
+        r = (0, i.zL)(e, { labelable: !0 });
+    return ('vertical' === e.orientation && (n = 'vertical'), 'hr' !== e.elementType)
         ? {
               separatorProps: {
-                  ...n,
+                  ...r,
                   role: 'separator',
-                  'aria-orientation': t
+                  'aria-orientation': n
               }
           }
-        : { separatorProps: n };
+        : { separatorProps: r };
 }

@@ -1,18 +1,18 @@
-var r = n(390976),
-    i = n(690244),
-    a = n(781421),
-    s = n(815329),
-    o = i('%Function.prototype.apply%'),
-    l = i('%Function.prototype.call%'),
-    u = i('%Reflect.apply%', !0) || r.call(l, o),
-    c = n(583584),
-    d = i('%Math.max%');
+var i = r(390976),
+    a = r(690244),
+    s = r(781421),
+    o = r(815329),
+    l = a('%Function.prototype.apply%'),
+    u = a('%Function.prototype.call%'),
+    c = a('%Reflect.apply%', !0) || i.call(u, l),
+    d = r(583584),
+    f = a('%Math.max%');
 e.exports = function (e) {
-    if ('function' != typeof e) throw new s('a function is required');
-    var t = u(r, l, arguments);
-    return a(t, 1 + d(0, e.length - (arguments.length - 1)), !0);
+    if ('function' != typeof e) throw new o('a function is required');
+    var n = c(i, u, arguments);
+    return s(n, 1 + f(0, e.length - (arguments.length - 1)), !0);
 };
-var f = function () {
-    return u(r, o, arguments);
+var _ = function () {
+    return c(i, l, arguments);
 };
-c ? c(e.exports, 'apply', { value: f }) : (e.exports.apply = f);
+d ? d(e.exports, 'apply', { value: _ }) : (e.exports.apply = _);

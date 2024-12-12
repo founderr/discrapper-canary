@@ -1,23 +1,23 @@
-function r(e, t, n) {
+function i(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-class i {
-    constructor(e, t) {
-        r(this, 'skuId', void 0), r(this, 'skuFeatures', void 0), (this.skuId = e), (this.skuFeatures = t);
+class a {
+    constructor(e, n) {
+        i(this, 'skuId', void 0), i(this, 'skuFeatures', void 0), (this.skuId = e), (this.skuFeatures = n);
     }
 }

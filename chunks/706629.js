@@ -1,5 +1,5 @@
-var r = n(818083);
-t.Z = (0, r.B)({
+var i = r(818083);
+n.Z = (0, i.B)({
     kind: 'guild',
     id: '2024-04_audio_short_circuit_guild',
     label: 'Audio processing short circuiting (guild)',

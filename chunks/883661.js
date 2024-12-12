@@ -1,45 +1,45 @@
-var r = n(200651),
-    i = n(192379),
-    a = n(481060),
-    s = n(149203);
-let o = (e) => {
+var i = r(200651),
+    a = r(192379),
+    s = r(481060),
+    o = r(149203);
+let l = (e) => {
         switch (e) {
-            case s.UX.RECENT:
-                return a.ClockIcon;
-            case s.UX.FAVORITES:
-                return a.StarIcon;
-            case s.UX.TOP_GUILD_EMOJI:
-                return a.TrophyIcon;
-            case s.UX.PEOPLE:
-                return a.ReactionIcon;
-            case s.UX.NATURE:
-                return a.NatureIcon;
-            case s.UX.FOOD:
-                return a.FoodIcon;
-            case s.UX.ACTIVITY:
-                return a.GameControllerIcon;
-            case s.UX.TRAVEL:
-                return a.BicycleIcon;
-            case s.UX.OBJECTS:
-                return a.ObjectIcon;
-            case s.UX.SYMBOLS:
-                return a.HeartIcon;
-            case s.UX.FLAGS:
-                return a.FlagIcon;
-            case s.UX.PREMIUM_UPSELL:
-                return a.NitroWheelIcon;
+            case o.UX.RECENT:
+                return s.ClockIcon;
+            case o.UX.FAVORITES:
+                return s.StarIcon;
+            case o.UX.TOP_GUILD_EMOJI:
+                return s.TrophyIcon;
+            case o.UX.PEOPLE:
+                return s.ReactionIcon;
+            case o.UX.NATURE:
+                return s.NatureIcon;
+            case o.UX.FOOD:
+                return s.FoodIcon;
+            case o.UX.ACTIVITY:
+                return s.GameControllerIcon;
+            case o.UX.TRAVEL:
+                return s.BicycleIcon;
+            case o.UX.OBJECTS:
+                return s.ObjectIcon;
+            case o.UX.SYMBOLS:
+                return s.HeartIcon;
+            case o.UX.FLAGS:
+                return s.FlagIcon;
+            case o.UX.PREMIUM_UPSELL:
+                return s.NitroWheelIcon;
             default:
                 return;
         }
     },
-    l = i.memo(function (e) {
-        let { categoryId: t, ...n } = e,
-            i = o(t);
-        return null == i
+    u = a.memo(function (e) {
+        let { categoryId: n, ...r } = e,
+            a = l(n);
+        return null == a
             ? null
-            : (0, r.jsx)(i, {
+            : (0, i.jsx)(a, {
                   color: 'currentColor',
-                  ...n
+                  ...r
               });
     });
-t.Z = l;
+n.Z = u;

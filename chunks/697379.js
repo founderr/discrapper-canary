@@ -1,34 +1,34 @@
-n.d(t, {
+r.d(n, {
     W: function () {
-        return f;
+        return _;
     },
     v: function () {
-        return d;
+        return f;
     }
 });
-var r = n(192379),
-    i = n(442837),
-    a = n(430824),
-    s = n(496675),
-    o = n(863249),
-    l = n(944163),
-    u = n(246364),
-    c = n(981631);
-function d(e) {
-    let t = a.Z.getGuild(e);
-    return null != t && t.hasFeature(c.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) && s.Z.can(c.Plq.KICK_MEMBERS, t);
-}
+var i = r(192379),
+    a = r(442837),
+    s = r(430824),
+    o = r(496675),
+    l = r(863249),
+    u = r(944163),
+    c = r(246364),
+    d = r(981631);
 function f(e) {
-    let t = (0, i.e7)([a.Z], () => a.Z.getGuild(e)),
-        n = s.Z.can(c.Plq.KICK_MEMBERS, t) || s.Z.can(c.Plq.MANAGE_GUILD, t),
-        d = null != t && t.hasFeature(c.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) && n && t.hasVerificationGate(),
-        f = (0, i.e7)([l.Z], () => l.Z.get(e), [e]);
-    r.useEffect(() => {
-        d && o.ZP.fetchVerificationForm(e);
-    }, [d, e]);
-    let _ = r.useMemo(() => {
+    let n = s.Z.getGuild(e);
+    return null != n && n.hasFeature(d.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) && o.Z.can(d.Plq.KICK_MEMBERS, n);
+}
+function _(e) {
+    let n = (0, a.e7)([s.Z], () => s.Z.getGuild(e)),
+        r = o.Z.can(d.Plq.KICK_MEMBERS, n) || o.Z.can(d.Plq.MANAGE_GUILD, n),
+        f = null != n && n.hasFeature(d.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) && r && n.hasVerificationGate(),
+        _ = (0, a.e7)([u.Z], () => u.Z.get(e), [e]);
+    i.useEffect(() => {
+        f && l.ZP.fetchVerificationForm(e);
+    }, [f, e]);
+    let h = i.useMemo(() => {
         var e;
-        return (null !== (e = null == f ? void 0 : f.formFields) && void 0 !== e ? e : []).some((e) => !(0, u.J)(e));
-    }, [null == f ? void 0 : f.formFields]);
-    return d && _;
+        return (null !== (e = null == _ ? void 0 : _.formFields) && void 0 !== e ? e : []).some((e) => !(0, c.J)(e));
+    }, [null == _ ? void 0 : _.formFields]);
+    return f && h;
 }

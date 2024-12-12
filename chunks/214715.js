@@ -1,41 +1,41 @@
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    l = n(611528);
-let u = i.memo(function (e) {
-    let { text: t, variant: n = 'text-xs/medium', color: a = 'text-normal', icon: u, className: c, selected: d, onMouseEnter: f, onMouseLeave: _, onClick: p } = e,
-        h = i.useMemo(() => {
-            if (null != p) return () => p(t);
-        }, [p, t]);
-    return (0, r.jsxs)(o.Clickable, {
+var i = r(200651),
+    a = r(192379),
+    s = r(120356),
+    o = r.n(s),
+    l = r(481060),
+    u = r(611528);
+let c = a.memo(function (e) {
+    let { text: n, variant: r = 'text-xs/medium', color: s = 'text-normal', icon: c, className: d, selected: f, onMouseEnter: _, onMouseLeave: h, onClick: p } = e,
+        m = a.useMemo(() => {
+            if (null != p) return () => p(n);
+        }, [p, n]);
+    return (0, i.jsxs)(l.Clickable, {
         tabIndex: null == p ? -1 : 0,
-        className: s()(
-            l.trait,
+        className: o()(
+            u.trait,
             {
-                [l.selectable]: null != h && !d,
-                [l.selected]: d,
-                [l.clickable]: null != h
+                [u.selectable]: null != m && !f,
+                [u.selected]: f,
+                [u.clickable]: null != m
             },
-            c
+            d
         ),
-        onMouseEnter: f,
-        onMouseLeave: _,
-        onClick: h,
+        onMouseEnter: _,
+        onMouseLeave: h,
+        onClick: m,
         children: [
-            null != u &&
-                (0, r.jsx)(u, {
+            null != c &&
+                (0, i.jsx)(c, {
                     size: 'xs',
                     color: 'currentColor'
                 }),
-            (0, r.jsx)(o.Text, {
-                variant: n,
-                color: a,
+            (0, i.jsx)(l.Text, {
+                variant: r,
+                color: s,
                 lineClamp: 1,
-                children: t
+                children: n
             })
         ]
     });
 });
-t.Z = u;
+n.Z = c;

@@ -1,80 +1,80 @@
-n.d(t, {
+r.d(n, {
     A8: function () {
-        return c;
+        return y;
     },
     D5: function () {
-        return I;
+        return w;
     },
     Gm: function () {
-        return b;
+        return M;
     },
     T4: function () {
-        return m;
+        return O;
     },
     r1: function () {
-        return f;
+        return A;
     },
     wA: function () {
-        return p;
+        return C;
     },
     yC: function () {
-        return E;
+        return L;
     }
-}),
-    n(47120),
-    n(411104),
-    n(518263),
-    n(970173),
-    n(520712),
-    n(268111),
-    n(941497),
-    n(32026),
-    n(480839),
-    n(744285),
-    n(492257),
-    n(873817);
-var r = n(36056),
-    i = n(230367),
-    a = n(320215),
-    s = n(240773),
-    o = n(495852);
-class l extends o.C {
-    internalJsonWrite(e, t) {
+});
+var i = r(47120);
+var a = r(411104);
+var s = r(518263);
+var o = r(970173);
+var l = r(520712);
+var u = r(268111);
+var c = r(941497);
+var d = r(32026);
+var f = r(480839);
+var _ = r(744285);
+var h = r(492257);
+var p = r(873817);
+var m = r(36056),
+    g = r(230367),
+    E = r(320215),
+    v = r(240773),
+    I = r(495852);
+class T extends I.C {
+    internalJsonWrite(e, n) {
         return this.refJsonWriter.scalar(2, e.value, 'value', !1, !0);
     }
-    internalJsonRead(e, t, n) {
-        return !n && (n = this.create()), (n.value = this.refJsonReader.scalar(e, 1, void 0, 'value')), n;
+    internalJsonRead(e, n, r) {
+        return !r && (r = this.create()), (r.value = this.refJsonReader.scalar(e, 1, void 0, 'value')), r;
     }
     create(e) {
-        let t = { value: 0 };
+        let n = { value: 0 };
         return (
-            globalThis.Object.defineProperty(t, s.C, {
+            globalThis.Object.defineProperty(n, v.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, a.l)(this, t, e),
-            t
+            void 0 !== e && (0, E.l)(this, n, e),
+            n
         );
     }
-    internalBinaryRead(e, t, n, r) {
-        let a = null != r ? r : this.create(),
-            s = e.pos + t;
+    internalBinaryRead(e, n, r, i) {
+        let a = null != i ? i : this.create(),
+            s = e.pos + n;
         for (; e.pos < s; ) {
-            let [t, r] = e.tag();
-            if (1 === t) a.value = e.double();
+            let [n, i] = e.tag();
+            if (1 === n) a.value = e.double();
             else {
-                let s = n.readUnknownField;
-                if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-                let o = e.skip(r);
-                !1 !== s && (!0 === s ? i.z.onRead : s)(this.typeName, a, t, r, o);
+                let s = r.readUnknownField;
+                if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(n, ' (wire type ').concat(i, ') for ').concat(this.typeName));
+                let o = e.skip(i);
+                !1 !== s && (!0 === s ? g.z.onRead : s)(this.typeName, a, n, i, o);
             }
         }
         return a;
     }
-    internalBinaryWrite(e, t, n) {
-        0 !== e.value && t.tag(1, i.TD.Bit64).double(e.value);
-        let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? i.z.onWrite : r)(this.typeName, e, t), t;
+    internalBinaryWrite(e, n, r) {
+        0 !== e.value && n.tag(1, g.TD.Bit64).double(e.value);
+        let i = r.writeUnknownFields;
+        return !1 !== i && (!0 == i ? g.z.onWrite : i)(this.typeName, e, n), n;
     }
     constructor() {
         super('google.protobuf.DoubleValue', [
@@ -87,44 +87,44 @@ class l extends o.C {
         ]);
     }
 }
-new l();
-class u extends o.C {
-    internalJsonWrite(e, t) {
+new T();
+class b extends I.C {
+    internalJsonWrite(e, n) {
         return this.refJsonWriter.scalar(1, e.value, 'value', !1, !0);
     }
-    internalJsonRead(e, t, n) {
-        return !n && (n = this.create()), (n.value = this.refJsonReader.scalar(e, 1, void 0, 'value')), n;
+    internalJsonRead(e, n, r) {
+        return !r && (r = this.create()), (r.value = this.refJsonReader.scalar(e, 1, void 0, 'value')), r;
     }
     create(e) {
-        let t = { value: 0 };
+        let n = { value: 0 };
         return (
-            globalThis.Object.defineProperty(t, s.C, {
+            globalThis.Object.defineProperty(n, v.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, a.l)(this, t, e),
-            t
+            void 0 !== e && (0, E.l)(this, n, e),
+            n
         );
     }
-    internalBinaryRead(e, t, n, r) {
-        let a = null != r ? r : this.create(),
-            s = e.pos + t;
+    internalBinaryRead(e, n, r, i) {
+        let a = null != i ? i : this.create(),
+            s = e.pos + n;
         for (; e.pos < s; ) {
-            let [t, r] = e.tag();
-            if (1 === t) a.value = e.float();
+            let [n, i] = e.tag();
+            if (1 === n) a.value = e.float();
             else {
-                let s = n.readUnknownField;
-                if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-                let o = e.skip(r);
-                !1 !== s && (!0 === s ? i.z.onRead : s)(this.typeName, a, t, r, o);
+                let s = r.readUnknownField;
+                if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(n, ' (wire type ').concat(i, ') for ').concat(this.typeName));
+                let o = e.skip(i);
+                !1 !== s && (!0 === s ? g.z.onRead : s)(this.typeName, a, n, i, o);
             }
         }
         return a;
     }
-    internalBinaryWrite(e, t, n) {
-        0 !== e.value && t.tag(1, i.TD.Bit32).float(e.value);
-        let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? i.z.onWrite : r)(this.typeName, e, t), t;
+    internalBinaryWrite(e, n, r) {
+        0 !== e.value && n.tag(1, g.TD.Bit32).float(e.value);
+        let i = r.writeUnknownFields;
+        return !1 !== i && (!0 == i ? g.z.onWrite : i)(this.typeName, e, n), n;
     }
     constructor() {
         super('google.protobuf.FloatValue', [
@@ -137,44 +137,44 @@ class u extends o.C {
         ]);
     }
 }
-let c = new u();
-class d extends o.C {
-    internalJsonWrite(e, t) {
-        return this.refJsonWriter.scalar(r.wx.INT64, e.value, 'value', !1, !0);
+let y = new b();
+class S extends I.C {
+    internalJsonWrite(e, n) {
+        return this.refJsonWriter.scalar(m.wx.INT64, e.value, 'value', !1, !0);
     }
-    internalJsonRead(e, t, n) {
-        return !n && (n = this.create()), (n.value = this.refJsonReader.scalar(e, r.wx.INT64, r.pz.STRING, 'value')), n;
+    internalJsonRead(e, n, r) {
+        return !r && (r = this.create()), (r.value = this.refJsonReader.scalar(e, m.wx.INT64, m.pz.STRING, 'value')), r;
     }
     create(e) {
-        let t = { value: '0' };
+        let n = { value: '0' };
         return (
-            globalThis.Object.defineProperty(t, s.C, {
+            globalThis.Object.defineProperty(n, v.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, a.l)(this, t, e),
-            t
+            void 0 !== e && (0, E.l)(this, n, e),
+            n
         );
     }
-    internalBinaryRead(e, t, n, r) {
-        let a = null != r ? r : this.create(),
-            s = e.pos + t;
+    internalBinaryRead(e, n, r, i) {
+        let a = null != i ? i : this.create(),
+            s = e.pos + n;
         for (; e.pos < s; ) {
-            let [t, r] = e.tag();
-            if (1 === t) a.value = e.int64().toString();
+            let [n, i] = e.tag();
+            if (1 === n) a.value = e.int64().toString();
             else {
-                let s = n.readUnknownField;
-                if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-                let o = e.skip(r);
-                !1 !== s && (!0 === s ? i.z.onRead : s)(this.typeName, a, t, r, o);
+                let s = r.readUnknownField;
+                if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(n, ' (wire type ').concat(i, ') for ').concat(this.typeName));
+                let o = e.skip(i);
+                !1 !== s && (!0 === s ? g.z.onRead : s)(this.typeName, a, n, i, o);
             }
         }
         return a;
     }
-    internalBinaryWrite(e, t, n) {
-        '0' !== e.value && t.tag(1, i.TD.Varint).int64(e.value);
-        let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? i.z.onWrite : r)(this.typeName, e, t), t;
+    internalBinaryWrite(e, n, r) {
+        '0' !== e.value && n.tag(1, g.TD.Varint).int64(e.value);
+        let i = r.writeUnknownFields;
+        return !1 !== i && (!0 == i ? g.z.onWrite : i)(this.typeName, e, n), n;
     }
     constructor() {
         super('google.protobuf.Int64Value', [
@@ -187,44 +187,44 @@ class d extends o.C {
         ]);
     }
 }
-let f = new d();
-class _ extends o.C {
-    internalJsonWrite(e, t) {
-        return this.refJsonWriter.scalar(r.wx.UINT64, e.value, 'value', !1, !0);
+let A = new S();
+class N extends I.C {
+    internalJsonWrite(e, n) {
+        return this.refJsonWriter.scalar(m.wx.UINT64, e.value, 'value', !1, !0);
     }
-    internalJsonRead(e, t, n) {
-        return !n && (n = this.create()), (n.value = this.refJsonReader.scalar(e, r.wx.UINT64, r.pz.STRING, 'value')), n;
+    internalJsonRead(e, n, r) {
+        return !r && (r = this.create()), (r.value = this.refJsonReader.scalar(e, m.wx.UINT64, m.pz.STRING, 'value')), r;
     }
     create(e) {
-        let t = { value: '0' };
+        let n = { value: '0' };
         return (
-            globalThis.Object.defineProperty(t, s.C, {
+            globalThis.Object.defineProperty(n, v.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, a.l)(this, t, e),
-            t
+            void 0 !== e && (0, E.l)(this, n, e),
+            n
         );
     }
-    internalBinaryRead(e, t, n, r) {
-        let a = null != r ? r : this.create(),
-            s = e.pos + t;
+    internalBinaryRead(e, n, r, i) {
+        let a = null != i ? i : this.create(),
+            s = e.pos + n;
         for (; e.pos < s; ) {
-            let [t, r] = e.tag();
-            if (1 === t) a.value = e.uint64().toString();
+            let [n, i] = e.tag();
+            if (1 === n) a.value = e.uint64().toString();
             else {
-                let s = n.readUnknownField;
-                if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-                let o = e.skip(r);
-                !1 !== s && (!0 === s ? i.z.onRead : s)(this.typeName, a, t, r, o);
+                let s = r.readUnknownField;
+                if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(n, ' (wire type ').concat(i, ') for ').concat(this.typeName));
+                let o = e.skip(i);
+                !1 !== s && (!0 === s ? g.z.onRead : s)(this.typeName, a, n, i, o);
             }
         }
         return a;
     }
-    internalBinaryWrite(e, t, n) {
-        '0' !== e.value && t.tag(1, i.TD.Varint).uint64(e.value);
-        let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? i.z.onWrite : r)(this.typeName, e, t), t;
+    internalBinaryWrite(e, n, r) {
+        '0' !== e.value && n.tag(1, g.TD.Varint).uint64(e.value);
+        let i = r.writeUnknownFields;
+        return !1 !== i && (!0 == i ? g.z.onWrite : i)(this.typeName, e, n), n;
     }
     constructor() {
         super('google.protobuf.UInt64Value', [
@@ -237,44 +237,44 @@ class _ extends o.C {
         ]);
     }
 }
-let p = new _();
-class h extends o.C {
-    internalJsonWrite(e, t) {
+let C = new N();
+class R extends I.C {
+    internalJsonWrite(e, n) {
         return this.refJsonWriter.scalar(5, e.value, 'value', !1, !0);
     }
-    internalJsonRead(e, t, n) {
-        return !n && (n = this.create()), (n.value = this.refJsonReader.scalar(e, 5, void 0, 'value')), n;
+    internalJsonRead(e, n, r) {
+        return !r && (r = this.create()), (r.value = this.refJsonReader.scalar(e, 5, void 0, 'value')), r;
     }
     create(e) {
-        let t = { value: 0 };
+        let n = { value: 0 };
         return (
-            globalThis.Object.defineProperty(t, s.C, {
+            globalThis.Object.defineProperty(n, v.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, a.l)(this, t, e),
-            t
+            void 0 !== e && (0, E.l)(this, n, e),
+            n
         );
     }
-    internalBinaryRead(e, t, n, r) {
-        let a = null != r ? r : this.create(),
-            s = e.pos + t;
+    internalBinaryRead(e, n, r, i) {
+        let a = null != i ? i : this.create(),
+            s = e.pos + n;
         for (; e.pos < s; ) {
-            let [t, r] = e.tag();
-            if (1 === t) a.value = e.int32();
+            let [n, i] = e.tag();
+            if (1 === n) a.value = e.int32();
             else {
-                let s = n.readUnknownField;
-                if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-                let o = e.skip(r);
-                !1 !== s && (!0 === s ? i.z.onRead : s)(this.typeName, a, t, r, o);
+                let s = r.readUnknownField;
+                if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(n, ' (wire type ').concat(i, ') for ').concat(this.typeName));
+                let o = e.skip(i);
+                !1 !== s && (!0 === s ? g.z.onRead : s)(this.typeName, a, n, i, o);
             }
         }
         return a;
     }
-    internalBinaryWrite(e, t, n) {
-        0 !== e.value && t.tag(1, i.TD.Varint).int32(e.value);
-        let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? i.z.onWrite : r)(this.typeName, e, t), t;
+    internalBinaryWrite(e, n, r) {
+        0 !== e.value && n.tag(1, g.TD.Varint).int32(e.value);
+        let i = r.writeUnknownFields;
+        return !1 !== i && (!0 == i ? g.z.onWrite : i)(this.typeName, e, n), n;
     }
     constructor() {
         super('google.protobuf.Int32Value', [
@@ -287,44 +287,44 @@ class h extends o.C {
         ]);
     }
 }
-let m = new h();
-class g extends o.C {
-    internalJsonWrite(e, t) {
+let O = new R();
+class D extends I.C {
+    internalJsonWrite(e, n) {
         return this.refJsonWriter.scalar(13, e.value, 'value', !1, !0);
     }
-    internalJsonRead(e, t, n) {
-        return !n && (n = this.create()), (n.value = this.refJsonReader.scalar(e, 13, void 0, 'value')), n;
+    internalJsonRead(e, n, r) {
+        return !r && (r = this.create()), (r.value = this.refJsonReader.scalar(e, 13, void 0, 'value')), r;
     }
     create(e) {
-        let t = { value: 0 };
+        let n = { value: 0 };
         return (
-            globalThis.Object.defineProperty(t, s.C, {
+            globalThis.Object.defineProperty(n, v.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, a.l)(this, t, e),
-            t
+            void 0 !== e && (0, E.l)(this, n, e),
+            n
         );
     }
-    internalBinaryRead(e, t, n, r) {
-        let a = null != r ? r : this.create(),
-            s = e.pos + t;
+    internalBinaryRead(e, n, r, i) {
+        let a = null != i ? i : this.create(),
+            s = e.pos + n;
         for (; e.pos < s; ) {
-            let [t, r] = e.tag();
-            if (1 === t) a.value = e.uint32();
+            let [n, i] = e.tag();
+            if (1 === n) a.value = e.uint32();
             else {
-                let s = n.readUnknownField;
-                if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-                let o = e.skip(r);
-                !1 !== s && (!0 === s ? i.z.onRead : s)(this.typeName, a, t, r, o);
+                let s = r.readUnknownField;
+                if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(n, ' (wire type ').concat(i, ') for ').concat(this.typeName));
+                let o = e.skip(i);
+                !1 !== s && (!0 === s ? g.z.onRead : s)(this.typeName, a, n, i, o);
             }
         }
         return a;
     }
-    internalBinaryWrite(e, t, n) {
-        0 !== e.value && t.tag(1, i.TD.Varint).uint32(e.value);
-        let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? i.z.onWrite : r)(this.typeName, e, t), t;
+    internalBinaryWrite(e, n, r) {
+        0 !== e.value && n.tag(1, g.TD.Varint).uint32(e.value);
+        let i = r.writeUnknownFields;
+        return !1 !== i && (!0 == i ? g.z.onWrite : i)(this.typeName, e, n), n;
     }
     constructor() {
         super('google.protobuf.UInt32Value', [
@@ -337,44 +337,44 @@ class g extends o.C {
         ]);
     }
 }
-let E = new g();
-class v extends o.C {
-    internalJsonWrite(e, t) {
+let L = new D();
+class x extends I.C {
+    internalJsonWrite(e, n) {
         return e.value;
     }
-    internalJsonRead(e, t, n) {
-        return !n && (n = this.create()), (n.value = this.refJsonReader.scalar(e, 8, void 0, 'value')), n;
+    internalJsonRead(e, n, r) {
+        return !r && (r = this.create()), (r.value = this.refJsonReader.scalar(e, 8, void 0, 'value')), r;
     }
     create(e) {
-        let t = { value: !1 };
+        let n = { value: !1 };
         return (
-            globalThis.Object.defineProperty(t, s.C, {
+            globalThis.Object.defineProperty(n, v.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, a.l)(this, t, e),
-            t
+            void 0 !== e && (0, E.l)(this, n, e),
+            n
         );
     }
-    internalBinaryRead(e, t, n, r) {
-        let a = null != r ? r : this.create(),
-            s = e.pos + t;
+    internalBinaryRead(e, n, r, i) {
+        let a = null != i ? i : this.create(),
+            s = e.pos + n;
         for (; e.pos < s; ) {
-            let [t, r] = e.tag();
-            if (1 === t) a.value = e.bool();
+            let [n, i] = e.tag();
+            if (1 === n) a.value = e.bool();
             else {
-                let s = n.readUnknownField;
-                if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-                let o = e.skip(r);
-                !1 !== s && (!0 === s ? i.z.onRead : s)(this.typeName, a, t, r, o);
+                let s = r.readUnknownField;
+                if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(n, ' (wire type ').concat(i, ') for ').concat(this.typeName));
+                let o = e.skip(i);
+                !1 !== s && (!0 === s ? g.z.onRead : s)(this.typeName, a, n, i, o);
             }
         }
         return a;
     }
-    internalBinaryWrite(e, t, n) {
-        !1 !== e.value && t.tag(1, i.TD.Varint).bool(e.value);
-        let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? i.z.onWrite : r)(this.typeName, e, t), t;
+    internalBinaryWrite(e, n, r) {
+        !1 !== e.value && n.tag(1, g.TD.Varint).bool(e.value);
+        let i = r.writeUnknownFields;
+        return !1 !== i && (!0 == i ? g.z.onWrite : i)(this.typeName, e, n), n;
     }
     constructor() {
         super('google.protobuf.BoolValue', [
@@ -387,44 +387,44 @@ class v extends o.C {
         ]);
     }
 }
-let I = new v();
-class T extends o.C {
-    internalJsonWrite(e, t) {
+let w = new x();
+class P extends I.C {
+    internalJsonWrite(e, n) {
         return e.value;
     }
-    internalJsonRead(e, t, n) {
-        return !n && (n = this.create()), (n.value = this.refJsonReader.scalar(e, 9, void 0, 'value')), n;
+    internalJsonRead(e, n, r) {
+        return !r && (r = this.create()), (r.value = this.refJsonReader.scalar(e, 9, void 0, 'value')), r;
     }
     create(e) {
-        let t = { value: '' };
+        let n = { value: '' };
         return (
-            globalThis.Object.defineProperty(t, s.C, {
+            globalThis.Object.defineProperty(n, v.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, a.l)(this, t, e),
-            t
+            void 0 !== e && (0, E.l)(this, n, e),
+            n
         );
     }
-    internalBinaryRead(e, t, n, r) {
-        let a = null != r ? r : this.create(),
-            s = e.pos + t;
+    internalBinaryRead(e, n, r, i) {
+        let a = null != i ? i : this.create(),
+            s = e.pos + n;
         for (; e.pos < s; ) {
-            let [t, r] = e.tag();
-            if (1 === t) a.value = e.string();
+            let [n, i] = e.tag();
+            if (1 === n) a.value = e.string();
             else {
-                let s = n.readUnknownField;
-                if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-                let o = e.skip(r);
-                !1 !== s && (!0 === s ? i.z.onRead : s)(this.typeName, a, t, r, o);
+                let s = r.readUnknownField;
+                if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(n, ' (wire type ').concat(i, ') for ').concat(this.typeName));
+                let o = e.skip(i);
+                !1 !== s && (!0 === s ? g.z.onRead : s)(this.typeName, a, n, i, o);
             }
         }
         return a;
     }
-    internalBinaryWrite(e, t, n) {
-        '' !== e.value && t.tag(1, i.TD.LengthDelimited).string(e.value);
-        let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? i.z.onWrite : r)(this.typeName, e, t), t;
+    internalBinaryWrite(e, n, r) {
+        '' !== e.value && n.tag(1, g.TD.LengthDelimited).string(e.value);
+        let i = r.writeUnknownFields;
+        return !1 !== i && (!0 == i ? g.z.onWrite : i)(this.typeName, e, n), n;
     }
     constructor() {
         super('google.protobuf.StringValue', [
@@ -437,44 +437,44 @@ class T extends o.C {
         ]);
     }
 }
-let b = new T();
-class S extends o.C {
-    internalJsonWrite(e, t) {
+let M = new P();
+class k extends I.C {
+    internalJsonWrite(e, n) {
         return this.refJsonWriter.scalar(12, e.value, 'value', !1, !0);
     }
-    internalJsonRead(e, t, n) {
-        return !n && (n = this.create()), (n.value = this.refJsonReader.scalar(e, 12, void 0, 'value')), n;
+    internalJsonRead(e, n, r) {
+        return !r && (r = this.create()), (r.value = this.refJsonReader.scalar(e, 12, void 0, 'value')), r;
     }
     create(e) {
-        let t = { value: new Uint8Array(0) };
+        let n = { value: new Uint8Array(0) };
         return (
-            globalThis.Object.defineProperty(t, s.C, {
+            globalThis.Object.defineProperty(n, v.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, a.l)(this, t, e),
-            t
+            void 0 !== e && (0, E.l)(this, n, e),
+            n
         );
     }
-    internalBinaryRead(e, t, n, r) {
-        let a = null != r ? r : this.create(),
-            s = e.pos + t;
+    internalBinaryRead(e, n, r, i) {
+        let a = null != i ? i : this.create(),
+            s = e.pos + n;
         for (; e.pos < s; ) {
-            let [t, r] = e.tag();
-            if (1 === t) a.value = e.bytes();
+            let [n, i] = e.tag();
+            if (1 === n) a.value = e.bytes();
             else {
-                let s = n.readUnknownField;
-                if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-                let o = e.skip(r);
-                !1 !== s && (!0 === s ? i.z.onRead : s)(this.typeName, a, t, r, o);
+                let s = r.readUnknownField;
+                if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(n, ' (wire type ').concat(i, ') for ').concat(this.typeName));
+                let o = e.skip(i);
+                !1 !== s && (!0 === s ? g.z.onRead : s)(this.typeName, a, n, i, o);
             }
         }
         return a;
     }
-    internalBinaryWrite(e, t, n) {
-        e.value.length && t.tag(1, i.TD.LengthDelimited).bytes(e.value);
-        let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? i.z.onWrite : r)(this.typeName, e, t), t;
+    internalBinaryWrite(e, n, r) {
+        e.value.length && n.tag(1, g.TD.LengthDelimited).bytes(e.value);
+        let i = r.writeUnknownFields;
+        return !1 !== i && (!0 == i ? g.z.onWrite : i)(this.typeName, e, n), n;
     }
     constructor() {
         super('google.protobuf.BytesValue', [
@@ -487,4 +487,4 @@ class S extends o.C {
         ]);
     }
 }
-new S();
+new k();

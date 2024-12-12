@@ -1,55 +1,55 @@
-n.d(t, {
+r.d(n, {
     K: function () {
-        return _;
+        return h;
     }
 });
-var r = n(200651),
-    i = n(120356),
-    a = n.n(i),
-    s = n(442837),
-    o = n(481060),
-    l = n(607070),
-    u = n(987209),
-    c = n(286961),
-    d = n(897942),
-    f = n(870705);
-function _() {
+var i = r(200651),
+    a = r(120356),
+    s = r.n(a),
+    o = r(442837),
+    l = r(481060),
+    u = r(607070),
+    c = r(987209),
+    d = r(286961),
+    f = r(897942),
+    _ = r(870705);
+function h() {
     var e;
-    let t = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
-        { claimableRewards: n } = (0, u.wD)(),
-        i = null === (e = (0, c.Z)()) || void 0 === e ? void 0 : e.planSelection;
-    return null == i || null == n || 0 === n.length
+    let n = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+        { claimableRewards: r } = (0, c.wD)(),
+        a = null === (e = (0, d.Z)()) || void 0 === e ? void 0 : e.planSelection;
+    return null == a || null == r || 0 === r.length
         ? null
-        : (0, r.jsxs)('div', {
-              className: f.promotionalGiftMessage,
+        : (0, i.jsxs)('div', {
+              className: _.promotionalGiftMessage,
               children: [
-                  (0, r.jsxs)('div', {
-                      className: f.promotionalTextSection,
+                  (0, i.jsxs)('div', {
+                      className: _.promotionalTextSection,
                       children: [
-                          (0, r.jsx)(o.Text, {
-                              className: f.promotionalGiftMessageText,
+                          (0, i.jsx)(l.Text, {
+                              className: _.promotionalGiftMessageText,
                               variant: 'text-sm/bold',
-                              children: i.heading()
+                              children: a.heading()
                           }),
-                          null != i.subheading &&
-                              n.length > 1 &&
-                              (0, r.jsx)(o.Text, {
-                                  className: f.promotionalGiftMessageText,
+                          null != a.subheading &&
+                              r.length > 1 &&
+                              (0, i.jsx)(l.Text, {
+                                  className: _.promotionalGiftMessageText,
                                   variant: 'text-sm/normal',
-                                  children: i.subheading(n.length)
+                                  children: a.subheading(r.length)
                               })
                       ]
                   }),
-                  (0, r.jsx)('div', {
-                      className: a()({
-                          [f.promotionalAvatarMaxRewards]: n.length > 2,
-                          [f.promotionalAvatarTwoRewards]: 2 === n.length,
-                          [f.promotionalAvatarSingleReward]: 1 === n.length
+                  (0, i.jsx)('div', {
+                      className: s()({
+                          [_.promotionalAvatarMaxRewards]: r.length > 2,
+                          [_.promotionalAvatarTwoRewards]: 2 === r.length,
+                          [_.promotionalAvatarSingleReward]: 1 === r.length
                       }),
-                      children: (0, r.jsx)(d.Z, {
-                          maxRewardImageSrc: i.getImageUrl(!0, t),
-                          claimableRewards: n,
-                          size: o.AvatarSizes.SIZE_56
+                      children: (0, i.jsx)(f.Z, {
+                          maxRewardImageSrc: a.getImageUrl(!0, n),
+                          claimableRewards: r,
+                          size: l.AvatarSizes.SIZE_56
                       })
                   })
               ]

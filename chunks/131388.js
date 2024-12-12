@@ -1,22 +1,22 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return o;
     }
-}),
-    n(47120);
-var r = n(192379),
-    i = n(40851);
-function a(e) {
-    let { renderWindow: t } = (0, r.useContext)(i.ZP),
-        [n, a] = (0, r.useState)(() => t.matchMedia(e).matches);
+});
+var i = r(47120);
+var a = r(192379),
+    s = r(40851);
+function o(e) {
+    let { renderWindow: n } = (0, a.useContext)(s.ZP),
+        [r, i] = (0, a.useState)(() => n.matchMedia(e).matches);
     return (
-        (0, r.useEffect)(() => {
-            let n = t.matchMedia(e),
-                r = (e) => {
-                    a(null == e ? void 0 : e.matches);
+        (0, a.useEffect)(() => {
+            let r = n.matchMedia(e),
+                a = (e) => {
+                    i(null == e ? void 0 : e.matches);
                 };
-            return r(n), n.addListener(r), () => n.removeListener(r);
-        }, [e, t]),
-        n
+            return a(r), r.addListener(a), () => r.removeListener(a);
+        }, [e, n]),
+        r
     );
 }

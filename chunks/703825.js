@@ -1,4 +1,4 @@
-var r = n(882171);
+var i = r(882171);
 e.exports = function () {
-    return r() && !!Symbol.toStringTag;
+    return i() && !!Symbol.toStringTag;
 };

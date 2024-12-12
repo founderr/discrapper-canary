@@ -1,20 +1,20 @@
-function r(e) {
+function i(e) {
     return ''.concat(location.protocol, '//').concat(window.GLOBAL_ENV.INVITE_HOST, '/').concat(e);
 }
-function i(e) {
+function a(e) {
     return ''.concat(location.protocol, '//').concat(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST, '/').concat(e);
 }
-function a() {
+function s() {
     return ''.concat(location.protocol, '//').concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT, '/channels/@me');
 }
-n.d(t, {
+r.d(n, {
     Gk: function () {
-        return a;
+        return s;
     },
     Oh: function () {
-        return i;
+        return a;
     },
     z0: function () {
-        return r;
+        return i;
     }
 });

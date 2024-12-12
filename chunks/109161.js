@@ -1,76 +1,76 @@
-n.d(t, {
+r.d(n, {
     F: function () {
-        return u;
+        return c;
     },
     x: function () {
-        return c;
+        return d;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(981729),
-    o = n(783733);
-function l(e) {
-    let { color: t, className: n, background: i = !0 } = e;
-    return null == t
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(981729),
+    l = r(783733);
+function u(e) {
+    let { color: n, className: r, background: a = !0 } = e;
+    return null == n
         ? null
-        : (0, r.jsxs)('svg', {
-              className: a()(o.svg, n),
+        : (0, i.jsxs)('svg', {
+              className: s()(l.svg, r),
               viewBox: '0 0 20 20',
               fill: 'none',
               children: [
-                  i &&
-                      (0, r.jsx)('path', {
-                          className: o.background,
+                  a &&
+                      (0, i.jsx)('path', {
+                          className: l.background,
                           d: 'M0 4C0 1.79086 1.79086 0 4 0H16C18.2091 0 20 1.79086 20 4V16C20 18.2091 18.2091 20 16 20H4C1.79086 20 0 18.2091 0 16V4Z'
                       }),
-                  (0, r.jsx)('circle', {
-                      className: o.dotBorderBase,
+                  (0, i.jsx)('circle', {
+                      className: l.dotBorderBase,
                       cx: '10',
                       cy: '10',
                       r: '6'
                   }),
-                  (0, r.jsx)('circle', {
-                      className: o.dotBorderColor,
+                  (0, i.jsx)('circle', {
+                      className: l.dotBorderColor,
                       cx: '10',
                       cy: '10',
                       r: '6',
-                      fill: t
+                      fill: n
                   }),
-                  (0, r.jsx)('circle', {
-                      className: o.dot,
+                  (0, i.jsx)('circle', {
+                      className: l.dot,
                       cx: '10',
                       cy: '10',
                       r: '5',
-                      fill: t
+                      fill: n
                   })
               ]
           });
 }
-function u(e) {
-    let { color: t, name: n, tooltip: i = !0 } = e;
-    return null == t
+function c(e) {
+    let { color: n, name: r, tooltip: a = !0 } = e;
+    return null == n
         ? null
-        : i
-          ? (0, r.jsx)(s.u, {
-                text: n,
-                children: (t) =>
-                    (0, r.jsx)('span', {
-                        ...t,
+        : a
+          ? (0, i.jsx)(o.u, {
+                text: r,
+                children: (n) =>
+                    (0, i.jsx)('span', {
+                        ...n,
                         'aria-hidden': !0,
-                        children: (0, r.jsx)(l, { ...e })
+                        children: (0, i.jsx)(u, { ...e })
                     })
             })
-          : (0, r.jsx)(l, { ...e });
+          : (0, i.jsx)(u, { ...e });
 }
-function c(e) {
-    let { color: t, className: n } = e;
-    return null == t
+function d(e) {
+    let { color: n, className: r } = e;
+    return null == n
         ? null
-        : (0, r.jsx)('span', {
-              className: a()(o.roleCircle, n),
-              style: { backgroundColor: t }
+        : (0, i.jsx)('span', {
+              className: s()(l.roleCircle, r),
+              style: { backgroundColor: n }
           });
 }

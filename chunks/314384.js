@@ -1,38 +1,38 @@
-n.d(t, {
+r.d(n, {
     NW: function () {
-        return a;
+        return s;
     },
     tf: function () {
-        return i;
+        return a;
     },
     zH: function () {
-        return s;
+        return o;
     }
 });
-var r = n(192379),
-    i = function (e) {
-        return (0, r.useEffect)(e, []);
+var i = r(192379),
+    a = function (e) {
+        return (0, i.useEffect)(e, []);
     },
-    a = function () {
-        var e = (0, r.useState)(0)[1],
-            t = (0, r.useRef)(!1);
+    s = function () {
+        var e = (0, i.useState)(0)[1],
+            n = (0, i.useRef)(!1);
         return (
-            i(function () {
+            a(function () {
                 return function () {
-                    t.current = !0;
+                    n.current = !0;
                 };
             }),
             function () {
-                !t.current && e({});
+                !n.current && e({});
             }
         );
     };
-function s(e) {
-    var t = (0, r.useRef)(void 0);
+function o(e) {
+    var n = (0, i.useRef)(void 0);
     return (
-        (0, r.useEffect)(function () {
-            t.current = e;
+        (0, i.useEffect)(function () {
+            n.current = e;
         }),
-        t.current
+        n.current
     );
 }

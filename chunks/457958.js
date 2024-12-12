@@ -1,13 +1,13 @@
-var t = {
-    current: function (e, t) {
+var n = {
+    current: function (e, n) {
         if (!e.setNativeProps) return !1;
-        e.setNativeProps(t);
+        e.setNativeProps(n);
     },
     transformStyles: function (e) {
         return e;
     },
-    inject: function (e, n) {
-        (t.current = e), (t.transformStyles = n);
+    inject: function (e, r) {
+        (n.current = e), (n.transformStyles = r);
     }
 };
-e.exports = t;
+e.exports = n;

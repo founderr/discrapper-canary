@@ -1,132 +1,132 @@
-n.d(t, {
+r.d(n, {
     ZP: function () {
-        return N;
+        return C;
     },
     wz: function () {
-        return A;
+        return N;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(442837),
-    s = n(481060),
-    o = n(555573),
-    l = n(10718),
-    u = n(895924),
-    c = n(124072),
-    d = n(665906),
-    f = n(695346),
-    _ = n(592125),
-    p = n(703558),
-    h = n(496675),
-    m = n(944486),
-    g = n(585483),
-    E = n(981631),
-    v = n(689079),
-    I = n(665692),
-    T = n(388032),
-    b = n(170686);
-function S(e, t, n, i, a) {
+var i = r(200651),
+    a = r(192379),
+    s = r(442837),
+    o = r(481060),
+    l = r(555573),
+    u = r(10718),
+    c = r(895924),
+    d = r(124072),
+    f = r(665906),
+    _ = r(695346),
+    h = r(592125),
+    p = r(703558),
+    m = r(496675),
+    g = r(944486),
+    E = r(585483),
+    v = r(981631),
+    I = r(689079),
+    T = r(665692),
+    b = r(388032),
+    y = r(170686);
+function S(e, n, r, a, s) {
     if (null == e) return;
-    let c = () => {
-        let r = _.Z.getChannel(e);
-        if (null == r) return;
-        let { command: s, application: c } = l.Xq(r, n, a);
-        if (null != s && s.untranslatedName === t) {
-            var d, f;
-            g.S.dispatch(E.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
-            let t =
-                null != c
+    let d = () => {
+        let i = h.Z.getChannel(e);
+        if (null == i) return;
+        let { command: o, application: d } = u.Xq(i, r, s);
+        if (null != o && o.untranslatedName === n) {
+            var f, _;
+            E.S.dispatch(v.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
+            let n =
+                null != d
                     ? {
-                          type: u.Qi.APPLICATION,
-                          id: c.id,
-                          icon: c.icon,
-                          name: null !== (f = null == c ? void 0 : null === (d = c.bot) || void 0 === d ? void 0 : d.username) && void 0 !== f ? f : c.name,
-                          application: c
+                          type: c.Qi.APPLICATION,
+                          id: d.id,
+                          icon: d.icon,
+                          name: null !== (_ = null == d ? void 0 : null === (f = d.bot) || void 0 === f ? void 0 : f.username) && void 0 !== _ ? _ : d.name,
+                          application: d
                       }
                     : null;
-            o.Po({
+            l.Po({
                 channelId: e,
                 command: null,
                 section: null
             }),
-                o.Po({
+                l.Po({
                     channelId: e,
-                    command: s,
-                    section: t,
-                    location: i
+                    command: o,
+                    section: n,
+                    location: a
                 });
         }
     };
     '' !== p.Z.getDraft(e, p.d.ChannelMessage)
-        ? (0, s.openModal)((t) =>
-              (0, r.jsx)(s.ConfirmModal, {
-                  header: T.intl.string(T.t.pe26Cg),
-                  confirmText: T.intl.string(T.t.VkKicX),
-                  cancelText: T.intl.string(T.t['ETE/oK']),
-                  onConfirm: () => c(),
-                  confirmButtonColor: s.Button.Colors.BRAND,
+        ? (0, o.openModal)((n) =>
+              (0, i.jsx)(o.ConfirmModal, {
+                  header: b.intl.string(b.t.pe26Cg),
+                  confirmText: b.intl.string(b.t.VkKicX),
+                  cancelText: b.intl.string(b.t['ETE/oK']),
+                  onConfirm: () => d(),
+                  confirmButtonColor: o.Button.Colors.BRAND,
                   onCloseCallback: () => {
-                      g.S.dispatch(E.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
+                      E.S.dispatch(v.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
                   },
-                  ...t,
-                  children: (0, r.jsx)(s.Text, {
+                  ...n,
+                  children: (0, i.jsx)(o.Text, {
                       variant: 'text-md/normal',
-                      children: T.intl.string(T.t['+awCIy'])
+                      children: b.intl.string(b.t['+awCIy'])
                   })
               })
           )
-        : c();
+        : d();
 }
-function y(e) {
-    var t;
-    let { node: n, output: o, state: p } = e,
-        g = (0, a.e7)(
-            [_.Z, m.Z],
+function A(e) {
+    var n;
+    let { node: r, output: l, state: p } = e,
+        E = (0, s.e7)(
+            [h.Z, g.Z],
             () => {
                 var e;
-                return _.Z.getChannel(null !== (e = n.channelId) && void 0 !== e ? e : m.Z.getChannelId());
+                return h.Z.getChannel(null !== (e = r.channelId) && void 0 !== e ? e : g.Z.getChannelId());
             },
-            [n.channelId]
+            [r.channelId]
         ),
-        { hasSendMessagePerm: T, hasUseAppCommandsPerm: b } = (0, a.cj)([h.Z], () => {
-            let e = h.Z.can(E.Plq.SEND_MESSAGES, g);
+        { hasSendMessagePerm: b, hasUseAppCommandsPerm: y } = (0, s.cj)([m.Z], () => {
+            let e = m.Z.can(v.Plq.SEND_MESSAGES, E);
             return {
                 hasSendMessagePerm: e,
-                hasUseAppCommandsPerm: h.Z.can(E.Plq.USE_APPLICATION_COMMANDS, g)
+                hasUseAppCommandsPerm: m.Z.can(v.Plq.USE_APPLICATION_COMMANDS, E)
             };
         }),
-        { command: y } = l.YZ(g, null !== (t = n.commandKey) && void 0 !== t ? t : ''),
-        A = f.dN.useSetting(),
-        N = i.useMemo(() => {
-            if (null == y || null == g || y.untranslatedName !== n.commandName || A) return !1;
-            let e = g.isPrivate();
-            if ((0, d.xl)(g) || (!e && !T)) return !1;
-            let t = (null == y ? void 0 : y.applicationId) === v.bi.BUILT_IN;
-            return !!e || !!t || !!b || !1;
-        }, [g, y, T, b, n.commandName, A]),
-        C = i.useCallback(
+        { command: A } = u.YZ(E, null !== (n = r.commandKey) && void 0 !== n ? n : ''),
+        N = _.dN.useSetting(),
+        C = a.useMemo(() => {
+            if (null == A || null == E || A.untranslatedName !== r.commandName || N) return !1;
+            let e = E.isPrivate();
+            if ((0, f.xl)(E) || (!e && !b)) return !1;
+            let n = (null == A ? void 0 : A.applicationId) === I.bi.BUILT_IN;
+            return !!e || !!n || !!y || !1;
+        }, [E, A, b, y, r.commandName, N]),
+        R = a.useCallback(
             (e) => {
-                null == e || e.stopPropagation(), null != g && null != n.commandName && null != n.commandKey && S(g.id, n.commandName, n.commandKey, u.Vh.MENTION);
+                null == e || e.stopPropagation(), null != E && null != r.commandName && null != r.commandKey && S(E.id, r.commandName, r.commandKey, c.Vh.MENTION);
             },
-            [g, n.commandKey, n.commandName]
+            [E, r.commandKey, r.commandName]
         );
-    return N
-        ? (0, r.jsx)(
-              s.Tooltip,
+    return C
+        ? (0, i.jsx)(
+              o.Tooltip,
               {
-                  text: n.output,
+                  text: r.output,
                   position: 'top',
                   children: (e) => {
-                      let { onMouseEnter: t, onMouseLeave: i } = e;
-                      return (0, r.jsxs)(
-                          c.Z,
+                      let { onMouseEnter: n, onMouseLeave: a } = e;
+                      return (0, i.jsxs)(
+                          d.Z,
                           {
                               role: 'link',
-                              onClick: C,
-                              onMouseEnter: t,
-                              onMouseLeave: i,
-                              children: [I.GI, o(n.content, p)]
+                              onClick: R,
+                              onMouseEnter: n,
+                              onMouseLeave: a,
+                              children: [T.GI, l(r.content, p)]
                           },
                           p.key
                       );
@@ -134,40 +134,40 @@ function y(e) {
               },
               p.key
           )
-        : (0, r.jsxs)('span', {
-              children: [I.GI, o(n.content, p)]
+        : (0, i.jsxs)('span', {
+              children: [T.GI, l(r.content, p)]
           });
 }
-function A(e) {
-    let { commandId: t, commandName: n, commandDescription: i, applicationId: o, onClick: l } = e,
-        c = (0, a.e7)([m.Z], () => m.Z.getChannelId()),
-        d = (e) => {
-            null == e || e.stopPropagation(), S(c, n, t, u.Vh.POPULAR_COMMANDS, o), null == l || l(t);
+function N(e) {
+    let { commandId: n, commandName: r, commandDescription: a, applicationId: l, onClick: u } = e,
+        d = (0, s.e7)([g.Z], () => g.Z.getChannelId()),
+        f = (e) => {
+            null == e || e.stopPropagation(), S(d, r, n, c.Vh.POPULAR_COMMANDS, l), null == u || u(n);
         };
-    return (0, r.jsx)(s.Tooltip, {
-        text: i,
+    return (0, i.jsx)(o.Tooltip, {
+        text: a,
         position: 'top',
-        tooltipContentClassName: b.tooltip,
+        tooltipContentClassName: y.tooltip,
         children: (e) => {
-            let { onMouseEnter: t, onMouseLeave: i } = e;
-            return (0, r.jsxs)(s.Button, {
-                color: s.ButtonColors.PRIMARY,
-                size: s.ButtonSizes.ICON,
-                onClick: d,
-                onMouseEnter: t,
-                onMouseLeave: i,
-                children: ['/', n]
+            let { onMouseEnter: n, onMouseLeave: a } = e;
+            return (0, i.jsxs)(o.Button, {
+                color: o.ButtonColors.PRIMARY,
+                size: o.ButtonSizes.ICON,
+                onClick: f,
+                onMouseEnter: n,
+                onMouseLeave: a,
+                children: ['/', r]
             });
         }
     });
 }
-function N(e) {
+function C(e) {
     return {
-        react: (e, t, n) =>
-            (0, r.jsx)(y, {
+        react: (e, n, r) =>
+            (0, i.jsx)(A, {
                 node: e,
-                output: t,
-                state: n
+                output: n,
+                state: r
             })
     };
 }

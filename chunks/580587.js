@@ -1,12 +1,12 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(404295),
-    i = n(989573);
-function a(e) {
-    let { channelId: t } = e,
-        n = (0, i.Z)({ channelId: t });
-    return (0, r.bG)('useShowOpenAppButton') && !n;
+var i = r(404295),
+    a = r(989573);
+function s(e) {
+    let { channelId: n } = e,
+        r = (0, a.Z)({ channelId: n });
+    return (0, i.bG)('useShowOpenAppButton') && !r;
 }

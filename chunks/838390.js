@@ -1,21 +1,21 @@
-n.d(t, {
+r.d(n, {
     P2: function () {
-        return s;
+        return o;
     },
     jl: function () {
-        return a;
+        return s;
     }
 });
-let r = {
+let i = {
         emitDefaultValues: !1,
         enumAsInteger: !1,
         useProtoFieldName: !1,
         prettySpaces: 0
     },
-    i = { ignoreUnknownFields: !1 };
-function a(e) {
-    return e ? Object.assign(Object.assign({}, i), e) : i;
-}
+    a = { ignoreUnknownFields: !1 };
 function s(e) {
-    return e ? Object.assign(Object.assign({}, r), e) : r;
+    return e ? Object.assign(Object.assign({}, a), e) : a;
+}
+function o(e) {
+    return e ? Object.assign(Object.assign({}, i), e) : i;
 }

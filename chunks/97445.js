@@ -1,15 +1,15 @@
-var r = n(465407),
-    i = n(370873),
-    a = Object.prototype,
-    s = a.hasOwnProperty,
-    o = a.propertyIsEnumerable,
-    l = (0, r.Z)(
+var i = r(465407),
+    a = r(370873),
+    s = Object.prototype,
+    o = s.hasOwnProperty,
+    l = s.propertyIsEnumerable,
+    u = (0, i.Z)(
         (function () {
             return arguments;
         })()
     )
-        ? r.Z
+        ? i.Z
         : function (e) {
-              return (0, i.Z)(e) && s.call(e, 'callee') && !o.call(e, 'callee');
+              return (0, a.Z)(e) && o.call(e, 'callee') && !l.call(e, 'callee');
           };
-t.Z = l;
+n.Z = u;

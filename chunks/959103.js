@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     ascending: 'stigande',
     ascendingSort: (e) => `sorterat p\xe5 kolumn ${e.columnName} i stigande ordning`,
     columnSize: (e) => `${e.value} pixlar`,

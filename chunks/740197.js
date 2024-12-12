@@ -1,56 +1,56 @@
-n.d(t, {
+r.d(n, {
     HS: function () {
-        return d;
+        return h;
     },
     Hg: function () {
-        return c;
-    },
-    PW: function () {
         return _;
     },
+    PW: function () {
+        return m;
+    },
     S5: function () {
-        return i;
+        return o;
     },
     ZA: function () {
-        return a;
+        return l;
     },
     l0: function () {
-        return f;
+        return p;
     }
-}),
-    n(177593),
-    n(653041);
-var r = n(65154);
-let i = null != navigator.mediaDevices && null != navigator.mediaDevices.enumerateDevices,
-    a = i && 'setSinkId' in HTMLAudioElement.prototype;
-function s(e) {
+});
+var i = r(177593);
+var a = r(653041);
+var s = r(65154);
+let o = null != navigator.mediaDevices && null != navigator.mediaDevices.enumerateDevices,
+    l = o && 'setSinkId' in HTMLAudioElement.prototype;
+function u(e) {
     return {
-        id: r.w5,
+        id: s.w5,
         type: e,
         index: 0,
         name: 'Default'
     };
 }
-function o() {
-    return [s(r.h7.AUDIO_INPUT), s(r.h7.AUDIO_OUTPUT), s(r.h7.VIDEO_INPUT)];
+function c() {
+    return [u(s.h7.AUDIO_INPUT), u(s.h7.AUDIO_OUTPUT), u(s.h7.VIDEO_INPUT)];
 }
-function l(e, t) {
-    return e.filter((e) => e.type === t);
+function d(e, n) {
+    return e.filter((e) => e.type === n);
 }
-function u() {
-    return i
+function f() {
+    return o
         ? navigator.mediaDevices
               .enumerateDevices()
               .then((e) => {
-                  let t = 0,
-                      n = 0,
+                  let n = 0,
+                      r = 0,
                       i = 0;
                   return e
                       .filter((e) => {
                           switch (e.kind) {
-                              case r.h7.AUDIO_INPUT:
-                              case r.h7.AUDIO_OUTPUT:
-                              case r.h7.VIDEO_INPUT:
+                              case s.h7.AUDIO_INPUT:
+                              case s.h7.AUDIO_OUTPUT:
+                              case s.h7.VIDEO_INPUT:
                                   return !0;
                               default:
                                   return !1;
@@ -59,13 +59,13 @@ function u() {
                       .map((e) => {
                           let a;
                           switch (e.kind) {
-                              case r.h7.AUDIO_INPUT:
-                                  a = t++;
-                                  break;
-                              case r.h7.AUDIO_OUTPUT:
+                              case s.h7.AUDIO_INPUT:
                                   a = n++;
                                   break;
-                              case r.h7.VIDEO_INPUT:
+                              case s.h7.AUDIO_OUTPUT:
+                                  a = r++;
+                                  break;
+                              case s.h7.VIDEO_INPUT:
                               default:
                                   a = i++;
                           }
@@ -77,22 +77,22 @@ function u() {
                           };
                       });
               })
-              .then((e) => (!a && (e = e.filter((e) => e.type !== r.h7.AUDIO_OUTPUT)).push(s(r.h7.AUDIO_OUTPUT)), e))
-              .catch(o)
+              .then((e) => (!l && (e = e.filter((e) => e.type !== s.h7.AUDIO_OUTPUT)).push(u(s.h7.AUDIO_OUTPUT)), e))
+              .catch(c)
         : new Promise((e) => {
-              setImmediate(() => e(o()));
+              setImmediate(() => e(c()));
           });
 }
-async function c() {
-    return l(await u(), r.h7.AUDIO_INPUT);
-}
-async function d() {
-    return l(await u(), r.h7.AUDIO_OUTPUT);
-}
-async function f() {
-    return l(await u(), r.h7.VIDEO_INPUT);
-}
 async function _() {
-    let e = await u();
-    return [l(e, r.h7.AUDIO_INPUT), l(e, r.h7.AUDIO_OUTPUT), l(e, r.h7.VIDEO_INPUT)];
+    return d(await f(), s.h7.AUDIO_INPUT);
+}
+async function h() {
+    return d(await f(), s.h7.AUDIO_OUTPUT);
+}
+async function p() {
+    return d(await f(), s.h7.VIDEO_INPUT);
+}
+async function m() {
+    let e = await f();
+    return [d(e, s.h7.AUDIO_INPUT), d(e, s.h7.AUDIO_OUTPUT), d(e, s.h7.VIDEO_INPUT)];
 }

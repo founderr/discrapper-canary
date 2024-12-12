@@ -1,29 +1,29 @@
-n.d(t, {
+r.d(n, {
     Tk: function () {
-        return f;
+        return h;
     },
     kT: function () {
-        return c;
+        return f;
     },
     wN: function () {
-        return d;
+        return _;
     }
-}),
-    n(757143);
-var r = n(299608),
-    i = n.n(r),
-    a = n(626135),
-    s = n(549058),
-    o = n(981631);
-let l = /(!|\.|;|,|-|—|–|\?|"|')/g,
-    u = /(\n|\t|\s)/g,
-    c = (e) => e.replace(l, '').replace(u, ' '),
-    d = (e) => (null == e ? [] : c(e).trim().split(' ')),
-    f = i()(
+});
+var i = r(757143);
+var a = r(299608),
+    s = r.n(a),
+    o = r(626135),
+    l = r(549058),
+    u = r(981631);
+let c = /(!|\.|;|,|-|—|–|\?|"|')/g,
+    d = /(\n|\t|\s)/g,
+    f = (e) => e.replace(c, '').replace(d, ' '),
+    _ = (e) => (null == e ? [] : f(e).trim().split(' ')),
+    h = s()(
         (e) => {
-            a.default.track(o.rMx.AUTO_SUGGEST_DISPLAYED, { suggestion_trigger: e });
+            o.default.track(u.rMx.AUTO_SUGGEST_DISPLAYED, { suggestion_trigger: e });
         },
-        s.xv,
+        l.xv,
         {
             leading: !0,
             trailing: !1

@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(620662),
-    i = n(981631);
-function a(e) {
-    return (0, r.Z)(e, i.xjy.EMBEDDED);
+var i = r(620662),
+    a = r(981631);
+function s(e) {
+    return (0, i.Z)(e, a.xjy.EMBEDDED);
 }

@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     T: function () {
-        return r;
+        return i;
     }
 });
-let r = (0, n(987170).Z)({
+let i = (0, r(987170).Z)({
     kind: 'guild',
     id: '2023-08_improved_bans_page',
     label: 'Guild Settings Improved Bans Page',

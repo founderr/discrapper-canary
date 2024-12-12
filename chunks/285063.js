@@ -1,24 +1,24 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return o;
+        return l;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(916752),
-    s = n(665162);
-function o(e) {
-    let { node: t } = e,
-        n = (0, a.Z)(t);
-    return (0, r.jsx)(i.Tooltip, {
-        text: t.full,
-        tooltipClassName: s.timestampTooltip,
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(916752),
+    o = r(665162);
+function l(e) {
+    let { node: n } = e,
+        r = (0, s.Z)(n);
+    return (0, i.jsx)(a.Tooltip, {
+        text: n.full,
+        tooltipClassName: o.timestampTooltip,
         children: (e) =>
-            (0, r.jsx)('span', {
+            (0, i.jsx)('span', {
                 ...e,
-                className: s.timestamp,
-                children: n
+                className: o.timestamp,
+                children: r
             })
     });
 }

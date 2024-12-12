@@ -1,26 +1,26 @@
-n.d(t, {
+r.d(n, {
     I5: function () {
-        return a;
-    },
-    M5: function () {
         return s;
     },
+    M5: function () {
+        return o;
+    },
     yd: function () {
-        return i;
+        return a;
     }
 });
-var r = n(474936);
-function i(e, t) {
-    return null == t || (null != e && r.$e[e] >= r.$e[t]);
+var i = r(474936);
+function a(e, n) {
+    return null == n || (null != e && i.$e[e] >= i.$e[n]);
 }
-function a(e, t) {
-    return null != e && null != e.premiumType && i(e.premiumType, t);
+function s(e, n) {
+    return null != e && null != e.premiumType && a(e.premiumType, n);
 }
-function s(e, t) {
-    return null != e && e.premiumType === t;
+function o(e, n) {
+    return null != e && e.premiumType === n;
 }
-t.ZP = {
-    isPremiumAtLeast: i,
-    isPremium: a,
-    isPremiumExactly: s
+n.ZP = {
+    isPremiumAtLeast: a,
+    isPremium: s,
+    isPremiumExactly: o
 };

@@ -1,24 +1,24 @@
-n.d(t, {
+r.d(n, {
     Ou: function () {
-        return s;
+        return o;
     },
     jN: function () {
-        return i;
+        return a;
     },
     xf: function () {
-        return a;
+        return s;
     }
 });
-var r = n(570140);
-function i(e) {
-    r.Z.dispatch({
+var i = r(570140);
+function a(e) {
+    i.Z.dispatch({
         type: 'LAYER_PUSH',
         component: e
     });
 }
-function a() {
-    r.Z.dispatch({ type: 'LAYER_POP' });
-}
 function s() {
-    r.Z.dispatch({ type: 'LAYER_POP_ALL' });
+    i.Z.dispatch({ type: 'LAYER_POP' });
+}
+function o() {
+    i.Z.dispatch({ type: 'LAYER_POP_ALL' });
 }

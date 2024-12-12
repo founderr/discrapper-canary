@@ -1,43 +1,43 @@
-n.d(t, {
+r.d(n, {
     T: function () {
-        return d;
+        return f;
     },
     z: function () {
-        return f;
+        return _;
     }
 });
-var r = n(493683),
-    i = n(529103),
-    a = n(292556),
-    s = n(703656),
-    o = n(768581),
-    l = n(981631),
-    u = n(388032);
-function c(e, t, n) {
-    a.default.showNotification(
-        o.ZP.getUserAvatarURL(e),
+var i = r(493683),
+    a = r(529103),
+    s = r(292556),
+    o = r(703656),
+    l = r(768581),
+    u = r(981631),
+    c = r(388032);
+function d(e, n, r) {
+    s.default.showNotification(
+        l.ZP.getUserAvatarURL(e),
         e.username,
-        t,
+        n,
         {},
         {
             omitViewTracking: !0,
             omitClickTracking: !0,
             tag: e.id,
-            onClick: n
+            onClick: r
         }
     );
 }
-function d(e) {
-    c(e, u.intl.string(u.t['t3+Af3']), () => {
+function f(e) {
+    d(e, c.intl.string(c.t['t3+Af3']), () => {
         {
-            let { openUserProfileModal: t } = n(171368);
-            t({ userId: e.id });
+            let { openUserProfileModal: n } = r(171368);
+            n({ userId: e.id });
         }
-        (0, s.uL)(l.Z5c.FRIENDS), i.Z.setSection(l.pJs.PENDING);
+        (0, o.uL)(u.Z5c.FRIENDS), a.Z.setSection(u.pJs.PENDING);
     });
 }
-function f(e) {
-    c(e, u.intl.string(u.t.MYr3KS), () => {
-        r.Z.openPrivateChannel(e.id);
+function _(e) {
+    d(e, c.intl.string(c.t.MYr3KS), () => {
+        i.Z.openPrivateChannel(e.id);
     });
 }

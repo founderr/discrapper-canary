@@ -1,5 +1,5 @@
-var r = n(818083);
-t.Z = (0, r.B)({
+var i = r(818083);
+n.Z = (0, i.B)({
     kind: 'user',
     id: '2024-07_native_screen_share_picker',
     label: 'Use system picker for screen sharing',

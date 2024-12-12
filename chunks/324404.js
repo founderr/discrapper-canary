@@ -1,64 +1,64 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return o;
+        return u;
     }
-}),
-    n(47120);
-var r = n(995295),
-    i = n(374470);
-function a(e, t, n) {
+});
+var i = r(47120);
+var a = r(995295),
+    s = r(374470);
+function o(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-let s = {
+let l = {
     root: null,
     rootMargin: '0px',
     threshold: 0.5
 };
-class o {
+class u {
     isVisible(e) {
         return null == this._observer || this._visibleComponents.has(e);
     }
     observe(e) {
-        let t = this._observer;
-        if (null == t) return;
+        let n = this._observer;
+        if (null == n) return;
         this.unobserve(e);
-        let n = (0, r.findDOMNode)(e);
-        (0, i.k)(n, HTMLElement) && (this._nodes.set(n, e), this._components.set(e, n), t.observe(n));
+        let r = (0, a.findDOMNode)(e);
+        (0, s.k)(r, HTMLElement) && (this._nodes.set(r, e), this._components.set(e, r), n.observe(r));
     }
     unobserve(e) {
-        let t = this._observer;
-        if (null == t) return;
-        let n = this._components.get(e);
-        null != n && (this._nodes.delete(n), this._components.delete(e), this._visibleComponents.delete(e), t.unobserve(n));
+        let n = this._observer;
+        if (null == n) return;
+        let r = this._components.get(e);
+        null != r && (this._nodes.delete(r), this._components.delete(e), this._visibleComponents.delete(e), n.unobserve(r));
     }
-    constructor(e = s) {
-        a(this, '_observer', void 0),
-            a(this, '_options', void 0),
-            a(this, '_nodes', new WeakMap()),
-            a(this, '_components', new WeakMap()),
-            a(this, '_visibleComponents', new WeakSet()),
-            a(this, '_handleEntries', (e) => {
+    constructor(e = l) {
+        o(this, '_observer', void 0),
+            o(this, '_options', void 0),
+            o(this, '_nodes', new WeakMap()),
+            o(this, '_components', new WeakMap()),
+            o(this, '_visibleComponents', new WeakSet()),
+            o(this, '_handleEntries', (e) => {
                 e.forEach((e) => {
-                    let t;
-                    if (null != e.isIntersecting) t = e.isIntersecting;
+                    let n;
+                    if (null != e.isIntersecting) n = e.isIntersecting;
                     else {
-                        let { threshold: n } = this._options;
-                        t = null == n ? e.intersectionRatio > 0 : Array.isArray(n) ? n.some((t) => e.intersectionRatio > t) : e.intersectionRatio > n;
+                        let { threshold: r } = this._options;
+                        n = null == r ? e.intersectionRatio > 0 : Array.isArray(r) ? r.some((n) => e.intersectionRatio > n) : e.intersectionRatio > r;
                     }
-                    let n = this._nodes.get(e.target);
-                    if (null != n) {
+                    let r = this._nodes.get(e.target);
+                    if (null != r) {
                         let e = !1;
-                        t ? !this._visibleComponents.has(n) && (this._visibleComponents.add(n), (e = !0)) : this._visibleComponents.has(n) && (this._visibleComponents.delete(n), (e = !0)), e && n.forceUpdate();
+                        n ? !this._visibleComponents.has(r) && (this._visibleComponents.add(r), (e = !0)) : this._visibleComponents.has(r) && (this._visibleComponents.delete(r), (e = !0)), e && r.forceUpdate();
                     }
                 });
             }),

@@ -1,11 +1,11 @@
-Object.defineProperty(t, '__esModule', { value: !0 }), (t.stringFormatter = t.StringBuilder = void 0), (t.formatToPlainString = a);
-let r = n(200232);
-class i extends r.FormatBuilder {
+Object.defineProperty(n, '__esModule', { value: !0 }), (n.stringFormatter = n.StringBuilder = void 0), (n.formatToPlainString = s);
+let i = r(200232);
+class a extends i.FormatBuilder {
     constructor() {
         super(...arguments), (this.result = '');
     }
-    pushRichTextTag(e, t, n) {
-        for (let e of t) this.result += e;
+    pushRichTextTag(e, n, r) {
+        for (let e of n) this.result += e;
     }
     pushLiteralText(e) {
         this.result += e;
@@ -17,11 +17,11 @@ class i extends r.FormatBuilder {
         return [this.result];
     }
 }
-function a(e, t) {
-    return 'string' == typeof e ? e : this.bindFormatValues(i, e, t)[0];
+function s(e, n) {
+    return 'string' == typeof e ? e : this.bindFormatValues(a, e, n)[0];
 }
-(t.StringBuilder = i),
-    (t.stringFormatter = {
-        format: a,
-        builder: i
+(n.StringBuilder = a),
+    (n.stringFormatter = {
+        format: s,
+        builder: a
     });

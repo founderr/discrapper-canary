@@ -1,9 +1,9 @@
-function r() {
+function i() {
     var e;
     return null !== (e = window.devicePixelRatio) && void 0 !== e ? e : 1;
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

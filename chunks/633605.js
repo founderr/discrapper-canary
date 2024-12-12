@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     j: function () {
-        return i;
+        return a;
     }
 });
-var r = {};
-function i() {
-    return r;
+var i = {};
+function a() {
+    return i;
 }

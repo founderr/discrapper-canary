@@ -1,20 +1,20 @@
-var r = n(990547),
-    i = n(570140),
-    a = n(844889),
-    s = n(314897),
-    o = n(981631);
-(0, r.analyticsTrackingStoreMaker)({
-    dispatcher: i.Z,
+var i = r(990547),
+    a = r(570140),
+    s = r(844889),
+    o = r(314897),
+    l = r(981631);
+(0, i.analyticsTrackingStoreMaker)({
+    dispatcher: a.Z,
     actionHandler: {
-        CONNECTION_OPEN: (e) => r.AnalyticsActionHandlers.handleConnectionOpen(e),
-        OVERLAY_INITIALIZE: (e) => r.AnalyticsActionHandlers.handleConnectionOpen(e),
-        CURRENT_USER_UPDATE: (e) => r.AnalyticsActionHandlers.handleConnectionOpen(e),
-        CONNECTION_CLOSED: () => r.AnalyticsActionHandlers.handleConnectionClosed(),
-        FINGERPRINT: () => r.AnalyticsActionHandlers.handleFingerprint(),
-        TRACK: (e) => r.AnalyticsActionHandlers.handleTrack(e)
+        CONNECTION_OPEN: (e) => i.AnalyticsActionHandlers.handleConnectionOpen(e),
+        OVERLAY_INITIALIZE: (e) => i.AnalyticsActionHandlers.handleConnectionOpen(e),
+        CURRENT_USER_UPDATE: (e) => i.AnalyticsActionHandlers.handleConnectionOpen(e),
+        CONNECTION_CLOSED: () => i.AnalyticsActionHandlers.handleConnectionClosed(),
+        FINGERPRINT: () => i.AnalyticsActionHandlers.handleFingerprint(),
+        TRACK: (e) => i.AnalyticsActionHandlers.handleTrack(e)
     },
-    TRACKING_URL: o.ANM.TRACK,
-    waitFor: [s.default],
-    getFingerprint: s.default.getFingerprint,
-    getSessionId: () => (0, a.Gg)().then((e) => ({ sessionId: null == e ? void 0 : e.uuid }))
+    TRACKING_URL: l.ANM.TRACK,
+    waitFor: [o.default],
+    getFingerprint: o.default.getFingerprint,
+    getSessionId: () => (0, s.Gg)().then((e) => ({ sessionId: null == e ? void 0 : e.uuid }))
 });

@@ -1,29 +1,29 @@
-Object.defineProperty(t, '__esModule', { value: !0 }),
-    (t.calculateChange = function (e, t, n, r) {
-        var i = r.clientWidth,
-            a = r.clientHeight,
-            s = 'number' == typeof e.pageX ? e.pageX : e.touches[0].pageX,
-            o = 'number' == typeof e.pageY ? e.pageY : e.touches[0].pageY,
-            l = s - (r.getBoundingClientRect().left + window.pageXOffset),
-            u = o - (r.getBoundingClientRect().top + window.pageYOffset);
-        if ('vertical' === t) {
-            var c = void 0;
-            if (((c = u < 0 ? 359 : u > a ? 0 : (360 * (-((100 * u) / a) + 100)) / 100), n.h !== c))
+Object.defineProperty(n, '__esModule', { value: !0 }),
+    (n.calculateChange = function (e, n, r, i) {
+        var a = i.clientWidth,
+            s = i.clientHeight,
+            o = 'number' == typeof e.pageX ? e.pageX : e.touches[0].pageX,
+            l = 'number' == typeof e.pageY ? e.pageY : e.touches[0].pageY,
+            u = o - (i.getBoundingClientRect().left + window.pageXOffset),
+            c = l - (i.getBoundingClientRect().top + window.pageYOffset);
+        if ('vertical' === n) {
+            var d = void 0;
+            if (((d = c < 0 ? 359 : c > s ? 0 : (360 * (-((100 * c) / s) + 100)) / 100), r.h !== d))
                 return {
-                    h: c,
-                    s: n.s,
-                    l: n.l,
-                    a: n.a,
+                    h: d,
+                    s: r.s,
+                    l: r.l,
+                    a: r.a,
                     source: 'hsl'
                 };
         } else {
-            var d = void 0;
-            if (((d = l < 0 ? 0 : l > i ? 359 : (((100 * l) / i) * 360) / 100), n.h !== d))
+            var f = void 0;
+            if (((f = u < 0 ? 0 : u > a ? 359 : (((100 * u) / a) * 360) / 100), r.h !== f))
                 return {
-                    h: d,
-                    s: n.s,
-                    l: n.l,
-                    a: n.a,
+                    h: f,
+                    s: r.s,
+                    l: r.l,
+                    a: r.a,
                     source: 'hsl'
                 };
         }

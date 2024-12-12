@@ -1,80 +1,80 @@
-n.d(t, {
+r.d(n, {
     $Z: function () {
-        return o;
-    },
-    Ao: function () {
         return l;
     },
-    Cp: function () {
-        return s;
-    },
-    Cz: function () {
-        return c;
-    },
-    bA: function () {
-        return i;
-    },
-    d7: function () {
+    Ao: function () {
         return u;
     },
-    k3: function () {
+    Cp: function () {
+        return o;
+    },
+    Cz: function () {
         return d;
     },
-    xv: function () {
+    bA: function () {
         return a;
+    },
+    d7: function () {
+        return c;
+    },
+    k3: function () {
+        return f;
+    },
+    xv: function () {
+        return s;
     }
 });
-var r = n(570140);
-function i(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    r.Z.dispatch({
+var i = r(570140);
+function a(e, n) {
+    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    i.Z.dispatch({
         type: 'PICTURE_IN_PICTURE_OPEN',
         id: e,
-        component: t,
-        props: n
+        component: n,
+        props: r
     });
 }
-function a(e) {
-    r.Z.dispatch({
+function s(e) {
+    i.Z.dispatch({
         type: 'PICTURE_IN_PICTURE_CLOSE',
         id: e
     });
 }
-function s(e) {
-    r.Z.dispatch({
+function o(e) {
+    i.Z.dispatch({
         type: 'PICTURE_IN_PICTURE_HIDE',
         id: e
     });
 }
-function o(e) {
-    r.Z.dispatch({
+function l(e) {
+    i.Z.dispatch({
         type: 'PICTURE_IN_PICTURE_SHOW',
         id: e
     });
 }
-function l(e, t) {
-    r.Z.dispatch({
+function u(e, n) {
+    i.Z.dispatch({
         type: 'PICTURE_IN_PICTURE_MOVE',
         id: e,
-        position: t
+        position: n
     });
 }
-function u(e, t) {
-    r.Z.dispatch({
+function c(e, n) {
+    i.Z.dispatch({
         type: 'PICTURE_IN_PICTURE_RESIZE',
         width: e,
-        pipType: t
+        pipType: n
     });
 }
-function c(e, t) {
-    r.Z.dispatch({
+function d(e, n) {
+    i.Z.dispatch({
         type: 'PICTURE_IN_PICTURE_UPDATE_RECT',
         id: e,
-        rect: t
+        rect: n
     });
 }
-function d(e) {
-    r.Z.dispatch({
+function f(e) {
+    i.Z.dispatch({
         type: 'PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW',
         id: e
     });

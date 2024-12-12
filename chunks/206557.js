@@ -1,44 +1,44 @@
-n.d(t, {
+r.d(n, {
     S: function () {
-        return f;
+        return _;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(979714),
-    a = n(434706),
-    s = n(780384),
-    o = n(79320),
-    l = n(600795);
-let u = (0, a.vQ)('keydown', (e) => !!(0, l.Tm)(e) && (e.preventDefault(), !0)),
-    c = (0, a.vQ)('mousedown', (e) => -1 === e.type.indexOf('touch') && -1 !== e.type.indexOf('mouse') && ((0, o.Yk)(!1), !0)),
-    d = {
+var i = r(200651);
+r(192379);
+var a = r(979714),
+    s = r(434706),
+    o = r(780384),
+    l = r(79320),
+    u = r(600795);
+let c = (0, s.vQ)('keydown', (e) => !!(0, u.Tm)(e) && (e.preventDefault(), !0)),
+    d = (0, s.vQ)('mousedown', (e) => -1 === e.type.indexOf('touch') && -1 !== e.type.indexOf('mouse') && ((0, l.Yk)(!1), !0)),
+    f = {
         backends: [
             {
                 id: 'html5',
-                backend: i.PD,
-                transition: c
+                backend: a.PD,
+                transition: d
             },
             {
                 id: 'keyboard',
-                backend: l.ZP,
+                backend: u.ZP,
                 context: {
                     window,
                     document
                 },
                 options: {
-                    onDndModeChanged: o.Yk,
-                    announcer: s.uv
+                    onDndModeChanged: l.Yk,
+                    announcer: o.uv
                 },
                 preview: !0,
-                transition: u
+                transition: c
             }
         ]
     };
-function f(e) {
-    let { children: t } = e;
-    return (0, r.jsx)(a.WG, {
-        options: d,
-        children: t
+function _(e) {
+    let { children: n } = e;
+    return (0, i.jsx)(s.WG, {
+        options: f,
+        children: n
     });
 }

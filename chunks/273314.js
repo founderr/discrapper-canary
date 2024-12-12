@@ -1,12 +1,12 @@
-var r = n(690244),
-    i = r('%TypeError%'),
-    a = r('%Number%'),
-    s = n(814277),
-    o = n(444685),
-    l = n(537631);
+var i = r(690244),
+    a = i('%TypeError%'),
+    s = i('%Number%'),
+    o = r(814277),
+    l = r(444685),
+    u = r(537631);
 e.exports = function (e) {
-    var t = s(e) ? e : o(e, a);
-    if ('symbol' == typeof t) throw new i('Cannot convert a Symbol value to a number');
-    if ('bigint' == typeof t) throw new i("Conversion from 'BigInt' to 'number' is not allowed.");
-    return 'string' == typeof t ? l(t) : a(t);
+    var n = o(e) ? e : l(e, s);
+    if ('symbol' == typeof n) throw new a('Cannot convert a Symbol value to a number');
+    if ('bigint' == typeof n) throw new a("Conversion from 'BigInt' to 'number' is not allowed.");
+    return 'string' == typeof n ? u(n) : s(n);
 };

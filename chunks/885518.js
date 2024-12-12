@@ -1,6 +1,6 @@
-n.d(t, {
+r.d(n, {
     A: function () {
-        return r;
+        return i;
     }
 });
-let r = 0.4;
+let i = 0.4;

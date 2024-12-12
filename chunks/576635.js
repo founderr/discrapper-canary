@@ -1,37 +1,37 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return d;
+        return _;
     }
-}),
-    n(47120);
-var r = n(866442),
-    i = n(442837),
-    a = n(410030),
-    s = n(607070),
-    o = n(220082),
-    l = n(44315),
-    u = n(168631),
-    c = n(981631);
-function d(e) {
-    var t, n, d;
-    let { user: f, displayProfile: _, pendingThemeColors: p, pendingAvatar: h, isPreview: m } = e,
-        g = (0, a.ZP)(),
-        E = (0, i.e7)([s.Z], () => s.Z.syncProfileThemeWithUserTheme),
-        v = null != h ? h : null == f ? void 0 : f.getAvatarURL(null == _ ? void 0 : _.guildId, 80),
-        I = (0, l.Sl)(c.Ilk.PRIMARY_530).hex,
-        [T, b] = (0, o.Cf)(v, I, !1);
-    if (!(null == _ ? void 0 : _.canEditThemes) && !m)
+});
+var i = r(47120);
+var a = r(866442),
+    s = r(442837),
+    o = r(410030),
+    l = r(607070),
+    u = r(220082),
+    c = r(44315),
+    d = r(168631),
+    f = r(981631);
+function _(e) {
+    var n, r, i;
+    let { user: _, displayProfile: h, pendingThemeColors: p, pendingAvatar: m, isPreview: g } = e,
+        E = (0, o.ZP)(),
+        v = (0, s.e7)([l.Z], () => l.Z.syncProfileThemeWithUserTheme),
+        I = null != m ? m : null == _ ? void 0 : _.getAvatarURL(null == h ? void 0 : h.guildId, 80),
+        T = (0, c.Sl)(f.Ilk.PRIMARY_530).hex,
+        [b, y] = (0, u.Cf)(I, T, !1);
+    if (!(null == h ? void 0 : h.canEditThemes) && !g)
         return {
-            theme: g,
+            theme: E,
             primaryColor: null,
             secondaryColor: null
         };
-    let S = null == _ ? void 0 : _.getPreviewThemeColors(p),
-        y = null !== (t = null == S ? void 0 : S[0]) && void 0 !== t ? t : (0, r._i)(T),
-        A = null !== (n = null == S ? void 0 : S[1]) && void 0 !== n ? n : (0, r._i)(b);
+    let S = null == h ? void 0 : h.getPreviewThemeColors(p),
+        A = null !== (n = null == S ? void 0 : S[0]) && void 0 !== n ? n : (0, a._i)(b),
+        N = null !== (r = null == S ? void 0 : S[1]) && void 0 !== r ? r : (0, a._i)(y);
     return {
-        theme: E ? g : null !== (d = (0, u.V3)(y)) && void 0 !== d ? d : g,
-        primaryColor: y,
-        secondaryColor: A
+        theme: v ? E : null !== (i = (0, d.V3)(A)) && void 0 !== i ? i : E,
+        primaryColor: A,
+        secondaryColor: N
     };
 }

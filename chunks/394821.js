@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(728151);
-function i(e) {
-    return (null == e ? void 0 : e.application_id) === r.sp;
+var i = r(728151);
+function a(e) {
+    return (null == e ? void 0 : e.application_id) === i.sp;
 }

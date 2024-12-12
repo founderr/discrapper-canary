@@ -1,69 +1,69 @@
-var r = n(754793),
-    i = !0,
-    a = !0;
+var i = r(754793),
+    a = !0,
+    s = !0;
 try {
     String.fromCharCode.apply(null, [0]);
 } catch (e) {
-    i = !1;
+    a = !1;
 }
 try {
     String.fromCharCode.apply(null, new Uint8Array(1));
 } catch (e) {
-    a = !1;
+    s = !1;
 }
-for (var s = new r.Buf8(256), o = 0; o < 256; o++) s[o] = o >= 252 ? 6 : o >= 248 ? 5 : o >= 240 ? 4 : o >= 224 ? 3 : o >= 192 ? 2 : 1;
-function l(e, t) {
-    if (t < 65534 && ((e.subarray && a) || (!e.subarray && i))) return String.fromCharCode.apply(null, r.shrinkBuf(e, t));
-    for (var n = '', s = 0; s < t; s++) n += String.fromCharCode(e[s]);
-    return n;
+for (var o = new i.Buf8(256), l = 0; l < 256; l++) o[l] = l >= 252 ? 6 : l >= 248 ? 5 : l >= 240 ? 4 : l >= 224 ? 3 : l >= 192 ? 2 : 1;
+function u(e, n) {
+    if (n < 65534 && ((e.subarray && s) || (!e.subarray && a))) return String.fromCharCode.apply(null, i.shrinkBuf(e, n));
+    for (var r = '', o = 0; o < n; o++) r += String.fromCharCode(e[o]);
+    return r;
 }
-(s[254] = s[254] = 1),
-    (t.string2buf = function (e) {
-        var t,
-            n,
+(o[254] = o[254] = 1),
+    (n.string2buf = function (e) {
+        var n,
+            r,
+            a,
+            s,
+            o,
+            l = e.length,
+            u = 0;
+        for (s = 0; s < l; s++) (64512 & (r = e.charCodeAt(s))) == 55296 && s + 1 < l && (64512 & (a = e.charCodeAt(s + 1))) == 56320 && ((r = 65536 + ((r - 55296) << 10) + (a - 56320)), s++), (u += r < 128 ? 1 : r < 2048 ? 2 : r < 65536 ? 3 : 4);
+        for (o = 0, n = new i.Buf8(u), s = 0; o < u; s++) (64512 & (r = e.charCodeAt(s))) == 55296 && s + 1 < l && (64512 & (a = e.charCodeAt(s + 1))) == 56320 && ((r = 65536 + ((r - 55296) << 10) + (a - 56320)), s++), r < 128 ? (n[o++] = r) : (r < 2048 ? (n[o++] = 192 | (r >>> 6)) : (r < 65536 ? (n[o++] = 224 | (r >>> 12)) : ((n[o++] = 240 | (r >>> 18)), (n[o++] = 128 | ((r >>> 12) & 63))), (n[o++] = 128 | ((r >>> 6) & 63))), (n[o++] = 128 | (63 & r)));
+        return n;
+    }),
+    (n.buf2binstring = function (e) {
+        return u(e, e.length);
+    }),
+    (n.binstring2buf = function (e) {
+        for (var n = new i.Buf8(e.length), r = 0, a = n.length; r < a; r++) n[r] = e.charCodeAt(r);
+        return n;
+    }),
+    (n.buf2string = function (e, n) {
+        var r,
             i,
             a,
             s,
-            o = e.length,
-            l = 0;
-        for (a = 0; a < o; a++) (64512 & (n = e.charCodeAt(a))) == 55296 && a + 1 < o && (64512 & (i = e.charCodeAt(a + 1))) == 56320 && ((n = 65536 + ((n - 55296) << 10) + (i - 56320)), a++), (l += n < 128 ? 1 : n < 2048 ? 2 : n < 65536 ? 3 : 4);
-        for (s = 0, t = new r.Buf8(l), a = 0; s < l; a++) (64512 & (n = e.charCodeAt(a))) == 55296 && a + 1 < o && (64512 & (i = e.charCodeAt(a + 1))) == 56320 && ((n = 65536 + ((n - 55296) << 10) + (i - 56320)), a++), n < 128 ? (t[s++] = n) : (n < 2048 ? (t[s++] = 192 | (n >>> 6)) : (n < 65536 ? (t[s++] = 224 | (n >>> 12)) : ((t[s++] = 240 | (n >>> 18)), (t[s++] = 128 | ((n >>> 12) & 63))), (t[s++] = 128 | ((n >>> 6) & 63))), (t[s++] = 128 | (63 & n)));
-        return t;
-    }),
-    (t.buf2binstring = function (e) {
-        return l(e, e.length);
-    }),
-    (t.binstring2buf = function (e) {
-        for (var t = new r.Buf8(e.length), n = 0, i = t.length; n < i; n++) t[n] = e.charCodeAt(n);
-        return t;
-    }),
-    (t.buf2string = function (e, t) {
-        var n,
-            r,
-            i,
-            a,
-            o = t || e.length,
-            u = Array(2 * o);
-        for (r = 0, n = 0; n < o; ) {
-            if ((i = e[n++]) < 128) {
-                u[r++] = i;
+            l = n || e.length,
+            c = Array(2 * l);
+        for (i = 0, r = 0; r < l; ) {
+            if ((a = e[r++]) < 128) {
+                c[i++] = a;
                 continue;
             }
-            if ((a = s[i]) > 4) {
-                (u[r++] = 65533), (n += a - 1);
+            if ((s = o[a]) > 4) {
+                (c[i++] = 65533), (r += s - 1);
                 continue;
             }
-            for (i &= 2 === a ? 31 : 3 === a ? 15 : 7; a > 1 && n < o; ) (i = (i << 6) | (63 & e[n++])), a--;
-            if (a > 1) {
-                u[r++] = 65533;
+            for (a &= 2 === s ? 31 : 3 === s ? 15 : 7; s > 1 && r < l; ) (a = (a << 6) | (63 & e[r++])), s--;
+            if (s > 1) {
+                c[i++] = 65533;
                 continue;
             }
-            i < 65536 ? (u[r++] = i) : ((i -= 65536), (u[r++] = 55296 | ((i >> 10) & 1023)), (u[r++] = 56320 | (1023 & i)));
+            a < 65536 ? (c[i++] = a) : ((a -= 65536), (c[i++] = 55296 | ((a >> 10) & 1023)), (c[i++] = 56320 | (1023 & a)));
         }
-        return l(u, r);
+        return u(c, i);
     }),
-    (t.utf8border = function (e, t) {
-        var n;
-        for ((t = t || e.length) > e.length && (t = e.length), n = t - 1; n >= 0 && (192 & e[n]) == 128; ) n--;
-        return n < 0 || 0 === n ? t : n + s[e[n]] > t ? n : t;
+    (n.utf8border = function (e, n) {
+        var r;
+        for ((n = n || e.length) > e.length && (n = e.length), r = n - 1; r >= 0 && (192 & e[r]) == 128; ) r--;
+        return r < 0 || 0 === r ? n : r + o[e[r]] > n ? r : n;
     });

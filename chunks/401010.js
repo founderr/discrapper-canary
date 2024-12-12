@@ -1,11 +1,11 @@
-function r(e, t, n) {
-    var r = t.reduce(function (t, n) {
-        return t || e.getData(n);
+function i(e, n, r) {
+    var i = n.reduce(function (n, r) {
+        return n || e.getData(r);
     }, '');
-    return null != r ? r : n;
+    return null != i ? i : r;
 }
-n.d(t, {
+r.d(n, {
     R: function () {
-        return r;
+        return i;
     }
 });

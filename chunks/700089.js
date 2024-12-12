@@ -1,17 +1,17 @@
-n.d(t, {
+r.d(n, {
     R: function () {
-        return l;
+        return u;
     }
 });
-var r = n(192379),
-    i = n(442837),
-    a = n(675478),
-    s = n(654455),
-    o = n(526761);
-function l(e) {
-    r.useEffect(() => {
-        a.DZ.loadIfUncached(o.yP.FRECENCY_AND_FAVORITES_SETTINGS);
+var i = r(192379),
+    a = r(442837),
+    s = r(675478),
+    o = r(654455),
+    l = r(526761);
+function u(e) {
+    i.useEffect(() => {
+        s.DZ.loadIfUncached(l.yP.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
-    let t = (0, i.e7)([s.ZP], () => s.ZP.getTopCommandsWithoutLoadingLatest());
-    return r.useMemo(() => (0, s.LU)(t, e), [t, e]);
+    let n = (0, a.e7)([o.ZP], () => o.ZP.getTopCommandsWithoutLoadingLatest());
+    return i.useMemo(() => (0, o.LU)(n, e), [n, e]);
 }

@@ -1,13 +1,13 @@
-n.d(t, {
+r.d(n, {
     Om: function () {
-        return s;
+        return o;
     },
     Qf: function () {
-        return a;
+        return s;
     }
 });
-var r = n(100527);
-let i = (0, n(818083).B)({
+var i = r(100527);
+let a = (0, r(818083).B)({
         kind: 'guild',
         id: '2023-08_guild_member_mod_view',
         label: 'Guild Member Mod View',
@@ -20,31 +20,31 @@ let i = (0, n(818083).B)({
             }
         ]
     }),
-    a = function (e) {
-        let { autoTrackExposure: t = !1, disable: n = !1, location: a = r.Z.GUILD_MEMBER_MOD_VIEW } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            { enabled: s } = i.getCurrentConfig(
+    s = function (e) {
+        let { autoTrackExposure: n = !1, disable: r = !1, location: s = i.Z.GUILD_MEMBER_MOD_VIEW } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            { enabled: o } = a.getCurrentConfig(
                 {
                     guildId: e,
-                    location: a
+                    location: s
                 },
                 {
-                    autoTrackExposure: t,
-                    disable: n
+                    autoTrackExposure: n,
+                    disable: r
                 }
             );
-        return s;
+        return o;
     },
-    s = function (e) {
-        let { autoTrackExposure: t = !1, disable: n = !1, location: a = r.Z.GUILD_MEMBER_MOD_VIEW } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            { enabled: s } = i.useExperiment(
+    o = function (e) {
+        let { autoTrackExposure: n = !1, disable: r = !1, location: s = i.Z.GUILD_MEMBER_MOD_VIEW } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            { enabled: o } = a.useExperiment(
                 {
                     guildId: null != e ? e : void 0,
-                    location: a
+                    location: s
                 },
                 {
-                    autoTrackExposure: t,
-                    disable: n
+                    autoTrackExposure: n,
+                    disable: r
                 }
             );
-        return s;
+        return o;
     };

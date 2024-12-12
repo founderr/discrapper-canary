@@ -1,13 +1,13 @@
-n.d(t, {
+r.d(n, {
     Kh: function () {
-        return s;
+        return o;
     },
     yh: function () {
-        return o;
+        return l;
     }
 });
-var r = n(818083);
-let i = (0, r.B)({
+var i = r(818083);
+let a = (0, i.B)({
         kind: 'user',
         id: '2023-08_explicit_media_redaction',
         label: 'Explicit Media Redaction',
@@ -20,7 +20,7 @@ let i = (0, r.B)({
             }
         ]
     }),
-    a = (0, r.B)({
+    s = (0, i.B)({
         kind: 'user',
         id: '2023-08_explicit_media_redaction_teen',
         label: 'Explicit Media Redaction for Teens',
@@ -33,13 +33,13 @@ let i = (0, r.B)({
             }
         ]
     });
-function s() {
-    let { enabled: e } = i.getCurrentConfig({ location: '686da2_1' }, { autoTrackExposure: !0 }),
-        { enabled: t } = a.getCurrentConfig({ location: '686da2_1' }, { autoTrackExposure: !0 });
-    return e || t;
-}
 function o() {
-    let { enabled: e } = i.useExperiment({ location: '686da2_2' }, { autoTrackExposure: !0 }),
-        { enabled: t } = a.useExperiment({ location: '686da2_2' }, { autoTrackExposure: !0 });
-    return e || t;
+    let { enabled: e } = a.getCurrentConfig({ location: '686da2_1' }, { autoTrackExposure: !0 }),
+        { enabled: n } = s.getCurrentConfig({ location: '686da2_1' }, { autoTrackExposure: !0 });
+    return e || n;
+}
+function l() {
+    let { enabled: e } = a.useExperiment({ location: '686da2_2' }, { autoTrackExposure: !0 }),
+        { enabled: n } = s.useExperiment({ location: '686da2_2' }, { autoTrackExposure: !0 });
+    return e || n;
 }

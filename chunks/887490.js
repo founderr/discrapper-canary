@@ -1,64 +1,64 @@
-n.d(t, {
+r.d(n, {
     C0: function () {
-        return p;
-    },
-    Ew: function () {
-        return g;
-    },
-    Jz: function () {
-        return h;
-    },
-    LC: function () {
-        return _;
-    },
-    M8: function () {
         return m;
     },
+    Ew: function () {
+        return v;
+    },
+    Jz: function () {
+        return g;
+    },
+    LC: function () {
+        return p;
+    },
+    M8: function () {
+        return E;
+    },
     aj: function () {
-        return d;
+        return _;
     },
     bN: function () {
-        return c;
+        return f;
     },
     lP: function () {
-        return T;
+        return y;
     },
     q: function () {
-        return f;
+        return h;
     }
-}),
-    n(47120);
-var r = n(512722),
-    i = n.n(r),
-    a = n(327432),
-    s = n(270445),
-    o = n(339227),
-    l = n(42530);
-n(789952);
-let u = !1;
+});
+var i = r(47120);
+var a = r(512722),
+    s = r.n(a),
+    o = r(327432),
+    l = r(270445),
+    u = r(339227),
+    c = r(42530);
+r(789952);
+let d = !1;
 {
-    let e = s.F3.findDocumentOrShadowRoot;
-    (s.F3.findDocumentOrShadowRoot = (t) => {
-        var n, r;
-        return null !== (r = null === (n = t.windowContext) || void 0 === n ? void 0 : n.renderWindow.document) && void 0 !== r ? r : e(t);
+    let e = l.F3.findDocumentOrShadowRoot;
+    (l.F3.findDocumentOrShadowRoot = (n) => {
+        var r, i;
+        return null !== (i = null === (r = n.windowContext) || void 0 === r ? void 0 : r.renderWindow.document) && void 0 !== i ? i : e(n);
     }),
-        (u = !0);
+        (d = !0);
 }
-let c = {
-        ...a.ML,
-        ...s.F3,
+let f = {
+        ...o.ML,
+        ...l.F3,
         richValue: (e) => e.children,
-        blocks: (e) => c.richValue(e).map((e, t) => [e, [t]]),
-        isBlock: (e, t) => f.isElement(t) && a.ML.isBlock(e, t),
-        isInline: (e, t) => f.isElement(t) && a.ML.isInline(e, t),
-        isVoid: (e, t) => f.isElement(t) && a.ML.isVoid(e, t),
+        blocks: (e) => f.richValue(e).map((e, n) => [e, [n]]),
+        isBlock: (e, n) => h.isElement(n) && o.ML.isBlock(e, n),
+        isInline: (e, n) => h.isElement(n) && o.ML.isInline(e, n),
+        isVoid: (e, n) => h.isElement(n) && o.ML.isVoid(e, n),
         isEditorEmpty(e) {
-            let t = c.richValue(e);
-            return !(t.length > 1) && (0 === t.length || ('line' === t[0].type && f.isEmpty(t[0])));
+            let n = f.richValue(e);
+            return !(n.length > 1) && (0 === n.length || ('line' === n[0].type && h.isEmpty(n[0])));
         },
         getFirstText(e) {
-            let t = c.node(e, l.u9);
-            return _.isText(t[0]) ? t[0] : null;
+            let n = f.node(e, c.u9);
+            return p.isText(n[0]) ? n[0] : null;
         },
         getCurrentBlock(e) {
             return null == e.selection ? null : this.getParentBlock(e, e.selection);
@@ -73,368 +73,368 @@ let c = {
             return null == e.selection ? null : this.getParentVoid(e, e.selection);
         },
         getCurrentText(e) {
-            let t = null != e.selection ? m.toPoint(e.selection) : null;
-            return null == t ? null : c.node(e, t.path);
+            let n = null != e.selection ? E.toPoint(e.selection) : null;
+            return null == n ? null : f.node(e, n.path);
         },
-        getParentBlock(e, t) {
-            var n;
+        getParentBlock(e, n) {
+            var r;
             return null !==
-                (n = c.above(e, {
-                    at: t,
-                    match: (t) => f.isElement(t) && c.isBlock(e, t),
+                (r = f.above(e, {
+                    at: n,
+                    match: (n) => h.isElement(n) && f.isBlock(e, n),
                     mode: 'lowest'
-                })) && void 0 !== n
-                ? n
+                })) && void 0 !== r
+                ? r
                 : null;
         },
-        getParentElement(e, t) {
-            var n;
+        getParentElement(e, n) {
+            var r;
             return null !==
-                (n = c.above(e, {
-                    at: t,
-                    match: (e) => f.isElement(e),
+                (r = f.above(e, {
+                    at: n,
+                    match: (e) => h.isElement(e),
                     mode: 'lowest'
-                })) && void 0 !== n
-                ? n
+                })) && void 0 !== r
+                ? r
                 : null;
         },
-        getParentInline(e, t) {
-            var n;
+        getParentInline(e, n) {
+            var r;
             return null !==
-                (n = c.above(e, {
-                    at: t,
-                    match: (t) => c.isInline(e, t),
+                (r = f.above(e, {
+                    at: n,
+                    match: (n) => f.isInline(e, n),
                     mode: 'lowest'
-                })) && void 0 !== n
-                ? n
+                })) && void 0 !== r
+                ? r
                 : null;
         },
-        getParentVoid(e, t) {
-            var n;
+        getParentVoid(e, n) {
+            var r;
             return null !==
-                (n = c.above(e, {
-                    at: t,
-                    match: (t) => c.isVoid(e, t),
+                (r = f.above(e, {
+                    at: n,
+                    match: (n) => f.isVoid(e, n),
                     mode: 'lowest'
-                })) && void 0 !== n
-                ? n
+                })) && void 0 !== r
+                ? r
                 : null;
         },
         getSelectedVoid(e) {
-            let t;
+            let n;
             if (null == e.selection) return null;
-            if (m.isExpanded(e.selection)) {
-                let [n, r] = m.edges(e.selection),
-                    i = c.after(e, n, { unit: 'offset' }),
-                    a = c.before(e, r, { unit: 'offset' });
-                if (null == i || null == a || !h.equals(i, a)) return null;
-                t = i;
-            } else t = e.selection.anchor;
-            return null == t ? null : c.getParentVoid(e, t);
+            if (E.isExpanded(e.selection)) {
+                let [r, i] = E.edges(e.selection),
+                    a = f.after(e, r, { unit: 'offset' }),
+                    s = f.before(e, i, { unit: 'offset' });
+                if (null == a || null == s || !g.equals(a, s)) return null;
+                n = a;
+            } else n = e.selection.anchor;
+            return null == n ? null : f.getParentVoid(e, n);
         },
-        getSelectedText(e, t) {
-            let n = null;
-            if (t) {
-                let t = s.F3.findDocumentOrShadowRoot(e).getSelection();
-                if (null != t && t.rangeCount > 0) {
-                    let r = t.getRangeAt(0);
-                    null != r &&
-                        (n = s.F3.toSlateRange(e, r, {
+        getSelectedText(e, n) {
+            let r = null;
+            if (n) {
+                let n = l.F3.findDocumentOrShadowRoot(e).getSelection();
+                if (null != n && n.rangeCount > 0) {
+                    let i = n.getRangeAt(0);
+                    null != i &&
+                        (r = l.F3.toSlateRange(e, i, {
                             exactMatch: !0,
                             suppressThrow: !0
                         }));
                 }
-            } else n = e.selection;
-            return null == n ? '' : this.getTextFromRange(e, n);
+            } else r = e.selection;
+            return null == r ? '' : this.getTextFromRange(e, r);
         },
-        getTextFromRange(e, t) {
-            let [n, r] = m.edges(t),
-                i = c.nodes(e, {
-                    at: t,
+        getTextFromRange(e, n) {
+            let [r, i] = E.edges(n),
+                a = f.nodes(e, {
+                    at: n,
                     mode: 'lowest',
-                    match: (e) => _.isText(e)
+                    match: (e) => p.isText(e)
                 }),
-                a = '';
-            for (let [e, t] of i) {
-                let i = p.equals(t, n.path) ? n.offset : 0,
-                    s = p.equals(t, r.path) ? r.offset : 0;
-                a += e.text.substring(i, s);
+                s = '';
+            for (let [e, n] of a) {
+                let a = m.equals(n, r.path) ? r.offset : 0,
+                    o = m.equals(n, i.path) ? i.offset : 0;
+                s += e.text.substring(a, o);
             }
-            return a;
+            return s;
         },
-        withoutNormalizing(e, t) {
-            let n = c.isNormalizing(e);
-            c.setNormalizing(e, !1);
+        withoutNormalizing(e, n) {
+            let r = f.isNormalizing(e);
+            f.setNormalizing(e, !1);
             try {
-                t();
+                n();
             } finally {
-                c.setNormalizing(e, n);
+                f.setNormalizing(e, r);
             }
-            !1 !== n && c.normalize(e);
+            !1 !== r && f.normalize(e);
         },
         areStylesDisabled(e) {
-            var t;
+            var n;
             if (!e.previewMarkdown) return !0;
-            let n = c.richValue(e),
-                r = n[0],
-                i = (null == r ? void 0 : r.type) === 'line' ? r.children[0] : null;
-            if (null == i || !_.isText(i)) return !1;
-            let a = e.chatInputType,
-                s = i.text;
-            return 1 === n.length && 1 === r.children.length && ((!0 === a.sedReplace && s.startsWith('s/')) || ((null === (t = a.autocomplete) || void 0 === t ? void 0 : t.reactions) === !0 && s.startsWith('+')));
+            let r = f.richValue(e),
+                i = r[0],
+                a = (null == i ? void 0 : i.type) === 'line' ? i.children[0] : null;
+            if (null == a || !p.isText(a)) return !1;
+            let s = e.chatInputType,
+                o = a.text;
+            return 1 === r.length && 1 === i.children.length && ((!0 === s.sedReplace && o.startsWith('s/')) || ((null === (n = s.autocomplete) || void 0 === n ? void 0 : n.reactions) === !0 && o.startsWith('+')));
         },
         focus(e) {
-            !s.F3.isFocused(e) && (s.F3.focus(e), s.F3.deselect(e));
+            !l.F3.isFocused(e) && (l.F3.focus(e), l.F3.deselect(e));
         },
-        getSelectionOverlap(e, t) {
+        getSelectionOverlap(e, n) {
             if (null == e.selection)
                 return {
                     anchor: null,
                     focus: null
                 };
-            if (p.isPath(t)) {
-                let n = c.range(e, t),
-                    [r] = c.node(e, t);
-                if (f.isElement(r)) {
-                    let r = c.before(e, t),
-                        i = c.after(e, t);
-                    t = {
-                        anchor: null != r ? r : n.anchor,
-                        focus: null != i ? i : n.focus
+            if (m.isPath(n)) {
+                let r = f.range(e, n),
+                    [i] = f.node(e, n);
+                if (h.isElement(i)) {
+                    let i = f.before(e, n),
+                        a = f.after(e, n);
+                    n = {
+                        anchor: null != i ? i : r.anchor,
+                        focus: null != a ? a : r.focus
                     };
-                } else t = n;
+                } else n = r;
             }
-            let [n, r] = m.edges(t),
-                i = null,
-                a = null;
+            let [r, i] = E.edges(n),
+                a = null,
+                s = null;
             return (
-                h.equals(e.selection.anchor, n) ? (i = 'start') : h.equals(e.selection.anchor, r) ? (i = 'end') : m.includes(t, e.selection.anchor) && (i = 'inside'),
-                h.equals(e.selection.focus, n) ? (a = 'start') : h.equals(e.selection.focus, r) ? (a = 'end') : m.includes(t, e.selection.focus) && (a = 'inside'),
+                g.equals(e.selection.anchor, r) ? (a = 'start') : g.equals(e.selection.anchor, i) ? (a = 'end') : E.includes(n, e.selection.anchor) && (a = 'inside'),
+                g.equals(e.selection.focus, r) ? (s = 'start') : g.equals(e.selection.focus, i) ? (s = 'end') : E.includes(n, e.selection.focus) && (s = 'inside'),
                 {
-                    anchor: i,
-                    focus: a
+                    anchor: a,
+                    focus: s
                 }
             );
         }
     },
-    d = {
-        ...a.NB,
-        isType: (e, t) => a.W_.isElement(e) && e.type === t,
-        isInTypes: (e, t) => a.W_.isElement(e) && t.has(e.type)
+    _ = {
+        ...o.NB,
+        isType: (e, n) => o.W_.isElement(e) && e.type === n,
+        isInTypes: (e, n) => o.W_.isElement(e) && n.has(e.type)
     },
-    f = {
-        ...a.W_,
-        updateElement(e, t) {
-            let n = c.node(e, t[1]);
-            return i()(!c.isEditor(t[0]), 'Element is the root node'), i()(null != n, 'Failed to find element'), i()(f.isElement(n[0]), 'Node at this path is no longer an element'), i()(n[0].type === t[0].type, 'Node at this path is a different type'), n;
+    h = {
+        ...o.W_,
+        updateElement(e, n) {
+            let r = f.node(e, n[1]);
+            return s()(!f.isEditor(n[0]), 'Element is the root node'), s()(null != r, 'Failed to find element'), s()(h.isElement(r[0]), 'Node at this path is no longer an element'), s()(r[0].type === n[0].type, 'Node at this path is a different type'), r;
         },
-        markdown(e, t, n) {
-            var r;
-            let i = 'line' === e.type && (null === (r = e.codeBlockState) || void 0 === r ? void 0 : r.wasInCodeBlock) === !0,
-                a = e.children.map((e) => (_.isText(e) ? e.text : '?')),
-                s = a.join('');
+        markdown(e, n, r) {
+            var i;
+            let a = 'line' === e.type && (null === (i = e.codeBlockState) || void 0 === i ? void 0 : i.wasInCodeBlock) === !0,
+                s = e.children.map((e) => (p.isText(e) ? e.text : '?')),
+                o = s.join('');
             return {
-                entries: o.Q(s, null != t ? t : null, i, n),
-                serializedChildren: a
+                entries: u.Q(o, null != n ? n : null, a, r),
+                serializedChildren: s
             };
         },
         isEmpty(e) {
             if (e.children.length > 1) return !1;
             if (0 === e.children.length) return !0;
-            let t = e.children[0];
-            return _.isText(t) && 0 === t.text.length;
+            let n = e.children[0];
+            return p.isText(n) && 0 === n.text.length;
         }
     },
-    _ = { ...a.xv },
-    p = {
-        ...a.y$,
-        isFirstEditorBlock: (e) => p.equals(e, l.YD),
-        isFirstEditorText: (e) => p.equals(e, l.u9),
-        isFirstChild: (e, t) => p.equals(t, p.child(e, 0)),
-        child: (e, t) => [...e, t]
+    p = { ...o.xv },
+    m = {
+        ...o.y$,
+        isFirstEditorBlock: (e) => m.equals(e, c.YD),
+        isFirstEditorText: (e) => m.equals(e, c.u9),
+        isFirstChild: (e, n) => m.equals(n, m.child(e, 0)),
+        child: (e, n) => [...e, n]
     },
-    h = {
-        ...a.E9,
+    g = {
+        ...o.E9,
         start(e) {
-            let [, t] = e;
+            let [, n] = e;
             return {
-                path: p.child(t, 0),
+                path: m.child(n, 0),
                 offset: 0
             };
         },
         end(e) {
-            let [t, n] = e,
-                r = t.children[t.children.length - 1];
+            let [n, r] = e,
+                i = n.children[n.children.length - 1];
             return {
-                path: p.child(n, t.children.length - 1),
-                offset: _.isText(r) ? r.text.length : 0
+                path: m.child(r, n.children.length - 1),
+                offset: p.isText(i) ? i.text.length : 0
             };
         },
-        isAtStart(e, t) {
-            return h.equals(e, this.start(t));
+        isAtStart(e, n) {
+            return g.equals(e, this.start(n));
         },
-        isAtEnd(e, t) {
-            return h.equals(e, this.end(t));
+        isAtEnd(e, n) {
+            return g.equals(e, this.end(n));
         },
-        clamp(e, t) {
-            let [n, r] = m.edges(t);
-            return h.isBefore(e, n) && (e = n), h.isAfter(e, r) && (e = r), e;
+        clamp(e, n) {
+            let [r, i] = E.edges(n);
+            return g.isBefore(e, r) && (e = r), g.isAfter(e, i) && (e = i), e;
         }
     },
-    m = {
-        ...a.e6,
-        toPoint: (e) => (null == e || m.isExpanded(e) ? null : e.anchor),
+    E = {
+        ...o.e6,
+        toPoint: (e) => (null == e || E.isExpanded(e) ? null : e.anchor),
         children(e) {
-            let [t, n] = e,
-                r = t.children[t.children.length - 1];
+            let [n, r] = e,
+                i = n.children[n.children.length - 1];
             return {
                 anchor: {
-                    path: p.child(n, 0),
+                    path: m.child(r, 0),
                     offset: 0
                 },
                 focus: {
-                    path: p.child(n, t.children.length - 1),
-                    offset: _.isText(r) ? r.text.length : 0
+                    path: m.child(r, n.children.length - 1),
+                    offset: p.isText(i) ? i.text.length : 0
                 }
             };
         },
-        clamp(e, t) {
-            let [n, r] = m.edges(e),
-                [i, a] = m.edges(t);
-            return (h.isBefore(n, i) && (n = i), h.isAfter(r, a) && (r = a), m.isForward(e))
+        clamp(e, n) {
+            let [r, i] = E.edges(e),
+                [a, s] = E.edges(n);
+            return (g.isBefore(r, a) && (r = a), g.isAfter(i, s) && (i = s), E.isForward(e))
                 ? {
-                      anchor: n,
-                      focus: r
+                      anchor: r,
+                      focus: i
                   }
                 : {
-                      anchor: r,
-                      focus: n
+                      anchor: i,
+                      focus: r
                   };
         }
     },
-    g = {
-        equals: (e, t) => (null == e && null == t) || (null != e && null != t && m.equals(e, t)),
-        isValid(e, t) {
-            if (null == t) return !1;
-            let { anchor: n, focus: r } = t;
-            if (!c.hasPath(e, n.path) || !c.hasPath(e, r.path)) return !1;
-            let [i] = c.node(e, n.path),
-                [a] = c.node(e, r.path);
-            return _.isText(i) && _.isText(a) && n.offset <= i.text.length && r.offset <= a.text.length;
+    v = {
+        equals: (e, n) => (null == e && null == n) || (null != e && null != n && E.equals(e, n)),
+        isValid(e, n) {
+            if (null == n) return !1;
+            let { anchor: r, focus: i } = n;
+            if (!f.hasPath(e, r.path) || !f.hasPath(e, i.path)) return !1;
+            let [a] = f.node(e, r.path),
+                [s] = f.node(e, i.path);
+            return p.isText(a) && p.isText(s) && r.offset <= a.text.length && i.offset <= s.text.length;
         }
     },
-    E = (e, t) => {
-        let n = (t.top + t.bottom) / 2;
-        return e.top <= n && e.bottom >= n;
+    I = (e, n) => {
+        let r = (n.top + n.bottom) / 2;
+        return e.top <= r && e.bottom >= r;
     },
-    v = (e, t, n) => {
-        let r = c.toDOMRange(e, t).getBoundingClientRect(),
-            i = c.toDOMRange(e, n).getBoundingClientRect();
-        return E(r, i) && E(i, r);
+    T = (e, n, r) => {
+        let i = f.toDOMRange(e, n).getBoundingClientRect(),
+            a = f.toDOMRange(e, r).getBoundingClientRect();
+        return I(i, a) && I(a, i);
     },
-    I = (e, t, n, r) => {
-        let i = {
-                anchor: t,
-                focus: t
+    b = (e, n, r, i) => {
+        let a = {
+                anchor: n,
+                focus: n
             },
-            a = 0,
-            s = n.length,
-            o = Math.floor((a + s) / 2);
-        for (; o !== a; )
+            s = 0,
+            o = r.length,
+            l = Math.floor((s + o) / 2);
+        for (; l !== s; )
             if (
-                (v(
+                (T(
                     e,
                     {
-                        anchor: n[o],
-                        focus: n[o]
+                        anchor: r[l],
+                        focus: r[l]
                     },
-                    i
+                    a
                 )
-                    ? r
-                        ? (s = o)
-                        : (a = o)
-                    : r
-                      ? (a = o)
-                      : (s = o),
-                (o = Math.floor((a + s) / 2)),
-                !r && o === n.length - 2 && s === n.length - 1)
+                    ? i
+                        ? (o = l)
+                        : (s = l)
+                    : i
+                      ? (s = l)
+                      : (o = l),
+                (l = Math.floor((s + o) / 2)),
+                !i && l === r.length - 2 && o === r.length - 1)
             ) {
-                let t = n[n.length - 1];
-                v(
+                let n = r[r.length - 1];
+                T(
                     e,
                     {
-                        anchor: t,
-                        focus: t
+                        anchor: n,
+                        focus: n
                     },
-                    i
-                ) && (o = s);
+                    a
+                ) && (l = o);
             }
-        return n[o];
+        return r[l];
     },
-    T = {
-        getLineStart(e, t, n) {
-            let r;
-            let i = c.getParentElement(e, t);
-            if (null == i) return null;
-            let a = c.previous(e, {
-                at: t,
-                match: (t) => c.isInline(e, t) && !c.isVoid(e, t) && t !== i[0]
+    y = {
+        getLineStart(e, n, r) {
+            let i;
+            let a = f.getParentElement(e, n);
+            if (null == a) return null;
+            let s = f.previous(e, {
+                at: n,
+                match: (n) => f.isInline(e, n) && !f.isVoid(e, n) && n !== a[0]
             });
-            null != a && (r = c.after(e, a[1])), null == r && (r = c.start(e, i[1]));
-            let s = {
-                    anchor: r,
-                    focus: t
+            null != s && (i = f.after(e, s[1])), null == i && (i = f.start(e, a[1]));
+            let o = {
+                    anchor: i,
+                    focus: n
                 },
-                o = Array.from(c.positions(e, { at: s })),
-                l = I(e, t, o, !0);
-            if (n && h.equals(t, l) && !h.isAtEnd(t, i)) {
-                let n = c.after(e, t);
-                if (null == n) return l;
-                l = I(e, n, o, !0);
+                l = Array.from(f.positions(e, { at: o })),
+                u = b(e, n, l, !0);
+            if (r && g.equals(n, u) && !g.isAtEnd(n, a)) {
+                let r = f.after(e, n);
+                if (null == r) return u;
+                u = b(e, r, l, !0);
             }
-            return l;
+            return u;
         },
-        getLineEnd(e, t, n) {
-            let r;
-            let i = c.getParentElement(e, t);
-            if (null == i) return null;
-            let a = c.next(e, {
-                at: t,
-                match: (t) => c.isInline(e, t) && !c.isVoid(e, t) && t !== i[0]
+        getLineEnd(e, n, r) {
+            let i;
+            let a = f.getParentElement(e, n);
+            if (null == a) return null;
+            let s = f.next(e, {
+                at: n,
+                match: (n) => f.isInline(e, n) && !f.isVoid(e, n) && n !== a[0]
             });
-            null != a && (r = c.before(e, a[1])), null == r && (r = c.end(e, i[1]));
-            let s = {
-                    anchor: t,
-                    focus: r
+            null != s && (i = f.before(e, s[1])), null == i && (i = f.end(e, a[1]));
+            let o = {
+                    anchor: n,
+                    focus: i
                 },
-                o = Array.from(c.positions(e, { at: s })),
-                l = I(e, t, o, !1);
-            if (n && h.equals(t, l) && !h.isAtEnd(t, i)) {
-                let n = c.after(e, t);
-                if (null == n) return l;
-                l = I(e, n, o, !1);
+                l = Array.from(f.positions(e, { at: o })),
+                u = b(e, n, l, !1);
+            if (r && g.equals(n, u) && !g.isAtEnd(n, a)) {
+                let r = f.after(e, n);
+                if (null == r) return u;
+                u = b(e, r, l, !1);
             }
-            return l;
+            return u;
         },
-        getLineActionRange(e, t) {
-            let n = m.toPoint(e.selection);
-            if (null == n) return null;
-            if (t) {
-                let t = T.getLineStart(e, n, !1);
-                return null == t
-                    ? null
-                    : {
-                          anchor: t,
-                          focus: n
-                      };
-            }
-            {
-                let t = T.getLineEnd(e, n, !0);
-                return null == t
+        getLineActionRange(e, n) {
+            let r = E.toPoint(e.selection);
+            if (null == r) return null;
+            if (n) {
+                let n = y.getLineStart(e, r, !1);
+                return null == n
                     ? null
                     : {
                           anchor: n,
-                          focus: t
+                          focus: r
+                      };
+            }
+            {
+                let n = y.getLineEnd(e, r, !0);
+                return null == n
+                    ? null
+                    : {
+                          anchor: r,
+                          focus: n
                       };
             }
         }

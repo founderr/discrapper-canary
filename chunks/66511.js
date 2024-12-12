@@ -1,59 +1,59 @@
-var r = n(200651);
-n(192379);
-var i = n(952265),
-    a = n(626135),
-    s = n(863249),
-    o = n(266395),
-    l = n(592286),
-    u = n(981631);
-let c = () => {
-        a.default.track(u.rMx.MODAL_DISMISSED, { type: l.N4 });
+var i = r(200651);
+r(192379);
+var a = r(952265),
+    s = r(626135),
+    o = r(863249),
+    l = r(266395),
+    u = r(592286),
+    c = r(981631);
+let d = () => {
+        s.default.track(c.rMx.MODAL_DISMISSED, { type: u.N4 });
     },
-    d = (e) => {
-        a.default.track(u.rMx.OPEN_MODAL, {
-            type: l.N4,
+    f = (e) => {
+        s.default.track(c.rMx.OPEN_MODAL, {
+            type: u.N4,
             guild_id: e
         });
     };
-t.Z = {
-    openMemberVerificationModal(e, t) {
+n.Z = {
+    openMemberVerificationModal(e, n) {
         if (__OVERLAY__) return;
-        d(e);
-        let a = async (t) => {
-            await s.ZP.submitVerificationForm(e, t);
+        f(e);
+        let s = async (n) => {
+            await o.ZP.submitVerificationForm(e, n);
         };
-        (0, i.ZD)(
+        (0, a.ZD)(
             async () => {
-                let { default: t } = await Promise.all([n.e('80026'), n.e('70669')]).then(n.bind(n, 645264));
-                return (n) =>
-                    (0, r.jsx)(t, {
-                        ...n,
+                let { default: n } = await Promise.all([r.e('80026'), r.e('70669')]).then(r.bind(r, 645264));
+                return (r) =>
+                    (0, i.jsx)(n, {
+                        ...r,
                         guildId: e,
-                        onComplete: a,
+                        onComplete: s,
                         onClose: function () {
                             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                             if (!e) {
-                                if (o.rb.getState().hasUnsubmittedChanges) {
-                                    (0, o.PE)(!0);
+                                if (l.rb.getState().hasUnsubmittedChanges) {
+                                    (0, l.PE)(!0);
                                     return;
                                 }
-                                c();
+                                d();
                             }
-                            n.onClose();
+                            r.onClose();
                         }
                     });
             },
             {
-                modalKey: l.Pn,
+                modalKey: u.Pn,
                 onCloseRequest: () => {
-                    c(), o.rb.getState().hasUnsubmittedChanges ? (0, o.PE)(!0) : (0, i.Mr)(l.Pn);
+                    d(), l.rb.getState().hasUnsubmittedChanges ? (0, l.PE)(!0) : (0, a.Mr)(u.Pn);
                 },
-                onCloseCallback: t
+                onCloseCallback: n
             }
         );
     },
     closeMemberVerificationModal() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        !e && c(), (0, i.Mr)(l.Pn);
+        !e && d(), (0, a.Mr)(u.Pn);
     }
 };

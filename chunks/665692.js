@@ -1,26 +1,26 @@
-n.d(t, {
+r.d(n, {
     GI: function () {
-        return l;
+        return u;
     },
     Iv: function () {
-        return a;
-    },
-    ME: function () {
-        return r;
-    },
-    a4: function () {
         return s;
     },
-    jp: function () {
+    ME: function () {
+        return i;
+    },
+    a4: function () {
         return o;
     },
+    jp: function () {
+        return l;
+    },
     zy: function () {
-        return i;
+        return a;
     }
 });
-let r = '@',
-    i = '#',
-    a = ':',
-    s = '+:',
-    o = ':',
-    l = '/';
+let i = '@',
+    a = '#',
+    s = ':',
+    o = '+:',
+    l = ':',
+    u = '/';

@@ -1,37 +1,37 @@
-n.d(t, {
+r.d(n, {
     l: function () {
-        return c;
+        return d;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(766646),
-    o = n(481060),
-    l = n(388032),
-    u = n(558328);
-function c(e) {
-    let { children: t, className: n, disabled: i, required: c = !1, ...d } = e;
-    return (0, r.jsxs)(o.Text, {
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    s = r.n(a),
+    o = r(766646),
+    l = r(481060),
+    u = r(388032),
+    c = r(558328);
+function d(e) {
+    let { children: n, className: r, disabled: a, required: d = !1, ...f } = e;
+    return (0, i.jsxs)(l.Text, {
         tag: 'label',
         variant: 'heading-deprecated-12/normal',
-        className: a()(u.label, n, {
-            [u.defaultMargin]: null == n,
-            [u.disabled]: i
+        className: s()(c.label, r, {
+            [c.defaultMargin]: null == r,
+            [c.disabled]: a
         }),
-        ...d,
+        ...f,
         children: [
-            t,
-            c &&
-                (0, r.jsxs)(r.Fragment, {
+            n,
+            d &&
+                (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, r.jsx)('span', {
-                            className: u.required,
+                        (0, i.jsx)('span', {
+                            className: c.required,
                             'aria-hidden': !0,
                             children: '*'
                         }),
-                        (0, r.jsx)(s.n, { children: l.intl.string(l.t.EkokLy) })
+                        (0, i.jsx)(o.n, { children: u.intl.string(u.t.EkokLy) })
                     ]
                 })
         ]

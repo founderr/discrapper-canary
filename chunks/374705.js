@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     decrease: (e) => `Zmniejsz ${e.fieldLabel}`,
     increase: (e) => `Zwi\u{119}ksz ${e.fieldLabel}`,
     numberField: 'Pole numeru'

@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     t: function () {
-        return i;
+        return a;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
         kind: 'user',
         id: '2024-06_profile_react_reply',
         label: 'Simplified Profile React Reply',
@@ -38,13 +38,13 @@ let r = (0, n(818083).B)({
             }
         ]
     }),
-    i = (e) => {
-        let { location: t, autoTrackExposure: n = !0, trackExposureOptions: i = {} } = e;
-        return r.useExperiment(
-            { location: t },
+    a = (e) => {
+        let { location: n, autoTrackExposure: r = !0, trackExposureOptions: a = {} } = e;
+        return i.useExperiment(
+            { location: n },
             {
-                autoTrackExposure: n,
-                trackExposureOptions: i
+                autoTrackExposure: r,
+                trackExposureOptions: a
             }
         );
     };

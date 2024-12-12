@@ -1,8 +1,8 @@
-function r(e) {
+function i(e) {
     return ['top', 'bottom'].indexOf(e) >= 0 ? 'x' : 'y';
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

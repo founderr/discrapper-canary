@@ -1,20 +1,20 @@
-var r = n(546299),
-    i = n(21841);
-function a(e, t, n) {
-    if (!(this instanceof a)) return new a(e, t, n);
-    (this.Hash = e), (this.blockSize = e.blockSize / 8), (this.outSize = e.outSize / 8), (this.inner = null), (this.outer = null), this._init(r.toArray(t, n));
+var i = r(546299),
+    a = r(21841);
+function s(e, n, r) {
+    if (!(this instanceof s)) return new s(e, n, r);
+    (this.Hash = e), (this.blockSize = e.blockSize / 8), (this.outSize = e.outSize / 8), (this.inner = null), (this.outer = null), this._init(i.toArray(n, r));
 }
-(e.exports = a),
-    (a.prototype._init = function (e) {
-        e.length > this.blockSize && (e = new this.Hash().update(e).digest()), i(e.length <= this.blockSize);
-        for (var t = e.length; t < this.blockSize; t++) e.push(0);
-        for (t = 0; t < e.length; t++) e[t] ^= 54;
-        for (t = 0, this.inner = new this.Hash().update(e); t < e.length; t++) e[t] ^= 106;
+(e.exports = s),
+    (s.prototype._init = function (e) {
+        e.length > this.blockSize && (e = new this.Hash().update(e).digest()), a(e.length <= this.blockSize);
+        for (var n = e.length; n < this.blockSize; n++) e.push(0);
+        for (n = 0; n < e.length; n++) e[n] ^= 54;
+        for (n = 0, this.inner = new this.Hash().update(e); n < e.length; n++) e[n] ^= 106;
         this.outer = new this.Hash().update(e);
     }),
-    (a.prototype.update = function (e, t) {
-        return this.inner.update(e, t), this;
+    (s.prototype.update = function (e, n) {
+        return this.inner.update(e, n), this;
     }),
-    (a.prototype.digest = function (e) {
+    (s.prototype.digest = function (e) {
         return this.outer.update(this.inner.digest()), this.outer.digest(e);
     });

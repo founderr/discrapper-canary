@@ -1,44 +1,44 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return o;
     }
-}),
-    n(47120);
-var r = n(192379);
-function i(e, t) {
-    let n = e.getBoundingClientRect();
-    return Math.min(1, Math.max(0, (t.clientX - n.left) / n.width));
+});
+var i = r(47120);
+var a = r(192379);
+function s(e, n) {
+    let r = e.getBoundingClientRect();
+    return Math.min(1, Math.max(0, (n.clientX - r.left) / r.width));
 }
-function a(e) {
-    let { ref: t, onDrag: n, onDragStart: a, onDragEnd: s } = e,
-        [o, l] = r.useState(!1);
+function o(e) {
+    let { ref: n, onDrag: r, onDragStart: i, onDragEnd: o } = e,
+        [l, u] = a.useState(!1);
     return (
-        r.useEffect(() => {
-            if (!!o)
+        a.useEffect(() => {
+            if (!!l)
                 return (
                     window.addEventListener('mouseup', e),
-                    window.addEventListener('mousemove', r),
+                    window.addEventListener('mousemove', i),
                     () => {
-                        window.removeEventListener('mouseup', e), window.removeEventListener('mousemove', r);
+                        window.removeEventListener('mouseup', e), window.removeEventListener('mousemove', i);
                     }
                 );
             function e() {
-                null == s || s(), l(!1);
+                null == o || o(), u(!1);
             }
-            function r(e) {
-                let r = t.current;
-                if (null != r) null == n || n(i(r, e));
+            function i(e) {
+                let i = n.current;
+                if (null != i) null == r || r(s(i, e));
             }
-        }, [t, o, s, n]),
+        }, [n, l, o, r]),
         [
-            o,
-            r.useCallback(
+            l,
+            a.useCallback(
                 (e) => {
                     e.preventDefault();
-                    let r = t.current;
-                    if (null != r) l(!0), null == a || a(), null == n || n(i(r, e));
+                    let a = n.current;
+                    if (null != a) u(!0), null == i || i(), null == r || r(s(a, e));
                 },
-                [t, a, n]
+                [n, i, r]
             )
         ]
     );

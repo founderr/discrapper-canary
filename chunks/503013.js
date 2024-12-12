@@ -1,35 +1,35 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var r = n(81825),
-    i = n(388032);
-function a(e, t, n) {
+var i = r(81825),
+    a = r(388032);
+function s(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-class s extends r.Z {
+class o extends i.Z {
     static createFromServer(e) {
-        return new s({
+        return new o({
             id: e.id,
             liveBuildId: e.live_build_id,
             name: e.name
         });
     }
     getName(e) {
-        return null != this.name ? this.name : this.id === e ? i.intl.string(i.t.AHqj6e) : i.intl.string(i.t['62f4nJ']);
+        return null != this.name ? this.name : this.id === e ? a.intl.string(a.t.AHqj6e) : a.intl.string(a.t['62f4nJ']);
     }
     constructor(e) {
-        super(), a(this, 'id', void 0), a(this, 'liveBuildId', void 0), a(this, 'name', void 0), (this.id = e.id), (this.liveBuildId = e.liveBuildId), (this.name = e.name);
+        super(), s(this, 'id', void 0), s(this, 'liveBuildId', void 0), s(this, 'name', void 0), (this.id = e.id), (this.liveBuildId = e.liveBuildId), (this.name = e.name);
     }
 }

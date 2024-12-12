@@ -1,59 +1,59 @@
-var r = n(814033),
-    i = n(526808);
-function a(e) {
-    this.rand = e || new i.Rand();
+var i = r(814033),
+    a = r(526808);
+function s(e) {
+    this.rand = e || new a.Rand();
 }
-(e.exports = a),
-    (a.create = function (e) {
-        return new a(e);
+(e.exports = s),
+    (s.create = function (e) {
+        return new s(e);
     }),
-    (a.prototype._randbelow = function (e) {
-        var t = Math.ceil(e.bitLength() / 8);
-        do var n = new r(this.rand.generate(t));
-        while (n.cmp(e) >= 0);
-        return n;
+    (s.prototype._randbelow = function (e) {
+        var n = Math.ceil(e.bitLength() / 8);
+        do var r = new i(this.rand.generate(n));
+        while (r.cmp(e) >= 0);
+        return r;
     }),
-    (a.prototype._randrange = function (e, t) {
-        var n = t.sub(e);
-        return e.add(this._randbelow(n));
+    (s.prototype._randrange = function (e, n) {
+        var r = n.sub(e);
+        return e.add(this._randbelow(r));
     }),
-    (a.prototype.test = function (e, t, n) {
-        var i = e.bitLength(),
-            a = r.mont(e),
-            s = new r(1).toRed(a);
-        !t && (t = Math.max(1, (i / 48) | 0));
-        for (var o = e.subn(1), l = 0; !o.testn(l); l++);
-        for (var u = e.shrn(l), c = o.toRed(a); t > 0; t--) {
-            var d = this._randrange(new r(2), o);
-            n && n(d);
-            var f = d.toRed(a).redPow(u);
-            if (0 !== f.cmp(s) && 0 !== f.cmp(c)) {
-                for (var _ = 1; _ < l; _++) {
-                    if (0 === (f = f.redSqr()).cmp(s)) return !1;
-                    if (0 === f.cmp(c)) break;
+    (s.prototype.test = function (e, n, r) {
+        var a = e.bitLength(),
+            s = i.mont(e),
+            o = new i(1).toRed(s);
+        !n && (n = Math.max(1, (a / 48) | 0));
+        for (var l = e.subn(1), u = 0; !l.testn(u); u++);
+        for (var c = e.shrn(u), d = l.toRed(s), f = !0; n > 0; n--) {
+            var _ = this._randrange(new i(2), l);
+            r && r(_);
+            var h = _.toRed(s).redPow(c);
+            if (0 !== h.cmp(o) && 0 !== h.cmp(d)) {
+                for (var p = 1; p < u; p++) {
+                    if (0 === (h = h.redSqr()).cmp(o)) return !1;
+                    if (0 === h.cmp(d)) break;
                 }
-                if (_ === l) return !1;
+                if (p === u) return !1;
             }
         }
-        return !0;
+        return f;
     }),
-    (a.prototype.getDivisor = function (e, t) {
-        var n = e.bitLength(),
-            i = r.mont(e),
-            a = new r(1).toRed(i);
-        !t && (t = Math.max(1, (n / 48) | 0));
-        for (var s = e.subn(1), o = 0; !s.testn(o); o++);
-        for (var l = e.shrn(o), u = s.toRed(i); t > 0; t--) {
-            var c = this._randrange(new r(2), s),
-                d = e.gcd(c);
-            if (0 !== d.cmpn(1)) return d;
-            var f = c.toRed(i).redPow(l);
-            if (0 !== f.cmp(a) && 0 !== f.cmp(u)) {
-                for (var _ = 1; _ < o; _++) {
-                    if (0 === (f = f.redSqr()).cmp(a)) return f.fromRed().subn(1).gcd(e);
-                    if (0 === f.cmp(u)) break;
+    (s.prototype.getDivisor = function (e, n) {
+        var r = e.bitLength(),
+            a = i.mont(e),
+            s = new i(1).toRed(a);
+        !n && (n = Math.max(1, (r / 48) | 0));
+        for (var o = e.subn(1), l = 0; !o.testn(l); l++);
+        for (var u = e.shrn(l), c = o.toRed(a); n > 0; n--) {
+            var d = this._randrange(new i(2), o),
+                f = e.gcd(d);
+            if (0 !== f.cmpn(1)) return f;
+            var _ = d.toRed(a).redPow(u);
+            if (0 !== _.cmp(s) && 0 !== _.cmp(c)) {
+                for (var h = 1; h < l; h++) {
+                    if (0 === (_ = _.redSqr()).cmp(s)) return _.fromRed().subn(1).gcd(e);
+                    if (0 === _.cmp(c)) break;
                 }
-                if (_ === o) return (f = f.redSqr()).fromRed().subn(1).gcd(e);
+                if (h === l) return (_ = _.redSqr()).fromRed().subn(1).gcd(e);
             }
         }
         return !1;

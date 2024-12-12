@@ -1,4 +1,4 @@
-n.r(
+r.r(
     (e.exports = {
         'heading-sm/normal': 'heading-sm/normal_dc00ef',
         fontScaling: 'fontScaling_dc00ef',

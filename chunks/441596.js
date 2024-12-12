@@ -1,6 +1,6 @@
-var r = n(807985),
-    i = n(682581),
-    a = n(632384);
+var i = r(807985),
+    a = r(682581),
+    s = r(632384);
 e.exports = function (e) {
-    return void 0 !== e && r(a, 'Property Descriptor', 'Desc', e), i(e);
+    return void 0 !== e && i(s, 'Property Descriptor', 'Desc', e), a(e);
 };

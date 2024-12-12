@@ -1,23 +1,23 @@
-var r = n(859209),
-    i = n(581031),
-    a = n(714050),
-    s = n(202934),
-    o = URLSearchParams,
-    l = o.prototype,
-    u = i(l.getAll),
-    c = i(l.has),
-    d = new o('a=1');
-(d.has('a', 2) || !d.has('a', void 0)) &&
-    r(
-        l,
+var i = r(859209),
+    a = r(581031),
+    s = r(714050),
+    o = r(202934),
+    l = URLSearchParams,
+    u = l.prototype,
+    c = a(u.getAll),
+    d = a(u.has),
+    f = new l('a=1');
+(f.has('a', 2) || !f.has('a', void 0)) &&
+    i(
+        u,
         'has',
         function (e) {
-            var t = arguments.length,
-                n = t < 2 ? void 0 : arguments[1];
-            if (t && void 0 === n) return c(this, e);
-            var r = u(this, e);
-            s(t, 1);
-            for (var i = a(n), o = 0; o < r.length; ) if (r[o++] === i) return !0;
+            var n = arguments.length,
+                r = n < 2 ? void 0 : arguments[1];
+            if (n && void 0 === r) return d(this, e);
+            var i = c(this, e);
+            o(n, 1);
+            for (var a = s(r), l = 0; l < i.length; ) if (i[l++] === a) return !0;
             return !1;
         },
         {

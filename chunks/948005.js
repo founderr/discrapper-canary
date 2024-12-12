@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     ascending: 'ascendente',
     ascendingSort: (e) => `Ordenar por coluna ${e.columnName} em ordem ascendente`,
     columnSize: (e) => `${e.value} pixels`,

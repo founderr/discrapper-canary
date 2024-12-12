@@ -1,25 +1,25 @@
-e.exports = function e(t, n) {
-    if (t === n) return !0;
-    if (t && n && 'object' == typeof t && 'object' == typeof n) {
-        if (t.constructor !== n.constructor) return !1;
-        if (Array.isArray(t)) {
-            if ((r = t.length) != n.length) return !1;
-            for (i = r; 0 != i--; ) if (!e(t[i], n[i])) return !1;
+e.exports = function e(n, r) {
+    if (n === r) return !0;
+    if (n && r && 'object' == typeof n && 'object' == typeof r) {
+        if (n.constructor !== r.constructor) return !1;
+        if (Array.isArray(n)) {
+            if ((i = n.length) != r.length) return !1;
+            for (a = i; 0 != a--; ) if (!e(n[a], r[a])) return !1;
             return !0;
         }
-        if (t.constructor === RegExp) return t.source === n.source && t.flags === n.flags;
-        if (t.valueOf !== Object.prototype.valueOf) return t.valueOf() === n.valueOf();
-        if (t.toString !== Object.prototype.toString) return t.toString() === n.toString();
-        if ((r = (a = Object.keys(t)).length) !== Object.keys(n).length) return !1;
-        for (i = r; 0 != i--; ) if (!Object.prototype.hasOwnProperty.call(n, a[i])) return !1;
-        for (i = r; 0 != i--; ) {
-            var r,
-                i,
+        if (n.constructor === RegExp) return n.source === r.source && n.flags === r.flags;
+        if (n.valueOf !== Object.prototype.valueOf) return n.valueOf() === r.valueOf();
+        if (n.toString !== Object.prototype.toString) return n.toString() === r.toString();
+        if ((i = (s = Object.keys(n)).length) !== Object.keys(r).length) return !1;
+        for (a = i; 0 != a--; ) if (!Object.prototype.hasOwnProperty.call(r, s[a])) return !1;
+        for (a = i; 0 != a--; ) {
+            var i,
                 a,
-                s = a[i];
-            if (!e(t[s], n[s])) return !1;
+                s,
+                o = s[a];
+            if (!e(n[o], r[o])) return !1;
         }
         return !0;
     }
-    return t != t && n != n;
+    return n != n && r != r;
 };

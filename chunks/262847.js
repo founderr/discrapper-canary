@@ -1,6 +1,6 @@
-var r = n(526761);
-let i = {
-    [r.yP.PRELOADED_USER_SETTINGS]: [],
-    [r.yP.FRECENCY_AND_FAVORITES_SETTINGS]: []
+var i = r(526761);
+let a = {
+    [i.yP.PRELOADED_USER_SETTINGS]: [],
+    [i.yP.FRECENCY_AND_FAVORITES_SETTINGS]: []
 };
-t.Z = i;
+n.Z = a;

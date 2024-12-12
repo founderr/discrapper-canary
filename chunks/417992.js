@@ -1,7 +1,7 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = { 'Clear search': `Aramay\u{131} temizle` };
+var i = {};
+i = { 'Clear search': `Aramay\u{131} temizle` };

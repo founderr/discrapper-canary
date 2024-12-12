@@ -1,20 +1,20 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return o;
+        return l;
     }
 });
-var r = n(200651),
-    i = n(481060),
-    a = n(475413),
-    s = n(388032);
-function o(e) {
-    let { isBlocked: t, onClick: n, size: o = i.ButtonSizes.SMALL } = e;
-    return (0, r.jsx)(a.tG, {
-        size: o,
-        action: t ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
-        text: s.intl.string(s.t['UJKH/v']),
+var i = r(200651),
+    a = r(481060),
+    s = r(475413),
+    o = r(388032);
+function l(e) {
+    let { isBlocked: n, onClick: r, size: l = a.ButtonSizes.SMALL } = e;
+    return (0, i.jsx)(s.tG, {
+        size: l,
+        action: n ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
+        text: o.intl.string(o.t['UJKH/v']),
         autoFocus: !0,
         fullWidth: !1,
-        onClick: n
+        onClick: r
     });
 }

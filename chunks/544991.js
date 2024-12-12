@@ -1,10 +1,10 @@
-function r(e, t) {
+function i(e, n) {
     if (null == e) throw TypeError('assign requires that input parameter not be null or undefined');
-    for (var n in t) Object.prototype.hasOwnProperty.call(t, n) && (e[n] = t[n]);
+    for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
     return e;
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

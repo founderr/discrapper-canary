@@ -1,28 +1,28 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     buttonLabel: 'Kuva soovitused',
-    countAnnouncement: (e, t) =>
-        `${t.plural(e.optionCount, {
-            one: () => `${t.number(e.optionCount)} valik`,
-            other: () => `${t.number(e.optionCount)} valikud`
+    countAnnouncement: (e, n) =>
+        `${n.plural(e.optionCount, {
+            one: () => `${n.number(e.optionCount)} valik`,
+            other: () => `${n.number(e.optionCount)} valikud`
         })} saadaval.`,
-    focusAnnouncement: (e, t) =>
-        `${t.select(
+    focusAnnouncement: (e, n) =>
+        `${n.select(
             {
                 true: () =>
-                    `Sisestatud r\xfchm ${e.groupTitle}, valikuga ${t.plural(e.groupCount, {
-                        one: () => `${t.number(e.groupCount)} valik`,
-                        other: () => `${t.number(e.groupCount)} valikud`
+                    `Sisestatud r\xfchm ${e.groupTitle}, valikuga ${n.plural(e.groupCount, {
+                        one: () => `${n.number(e.groupCount)} valik`,
+                        other: () => `${n.number(e.groupCount)} valikud`
                     })}. `,
                 other: ''
             },
             e.isGroupChange
-        )}${e.optionText}${t.select(
+        )}${e.optionText}${n.select(
             {
                 true: ', valitud',
                 other: ''

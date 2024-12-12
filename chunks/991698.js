@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     dateRange: (e) => `${e.startDate} bis ${e.endDate}`,
     dateSelected: (e) => `${e.date} ausgew\xe4hlt`,
     finishRangeSelectionPrompt: 'Klicken, um die Auswahl des Datumsbereichs zu beenden',

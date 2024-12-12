@@ -1,7 +1,7 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = { breadcrumbs: `Naviga\u{10D}n\xe9 prvky Breadcrumbs` };
+var i = {};
+i = { breadcrumbs: `Naviga\u{10D}n\xe9 prvky Breadcrumbs` };

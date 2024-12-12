@@ -1,29 +1,29 @@
-n.d(t, {
+r.d(n, {
     s: function () {
-        return a;
+        return s;
     }
 });
-let r = (e, t) => ({
-        x: e.x - t.x,
-        y: e.y - t.y
+let i = (e, n) => ({
+        x: e.x - n.x,
+        y: e.y - n.y
     }),
-    i = (e) => {
-        let t = e.getInitialClientOffset(),
-            n = e.getInitialSourceClientOffset();
-        return null === t || null === n
+    a = (e) => {
+        let n = e.getInitialClientOffset(),
+            r = e.getInitialSourceClientOffset();
+        return null === n || null === r
             ? {
                   x: 0,
                   y: 0
               }
-            : r(t, n);
+            : i(n, r);
     },
-    a = (e, t) => {
-        let n = e.getClientOffset();
-        if (null === n) return null;
-        if (!t.current || !t.current.getBoundingClientRect) return r(n, i(e));
-        let a = t.current.getBoundingClientRect();
-        return r(n, {
-            x: a.width / 2,
-            y: a.height / 2
+    s = (e, n) => {
+        let r = e.getClientOffset();
+        if (null === r) return null;
+        if (!n.current || !n.current.getBoundingClientRect) return i(r, a(e));
+        let s = n.current.getBoundingClientRect();
+        return i(r, {
+            x: s.width / 2,
+            y: s.height / 2
         });
     };

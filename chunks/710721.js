@@ -1,19 +1,19 @@
-var r = n(55935),
-    i = n(70956),
-    a = n(34756),
-    s = n(388032);
-class o extends a.Z {
+var i = r(55935),
+    a = r(70956),
+    s = r(34756),
+    o = r(388032);
+class l extends s.Z {
     _getMessageFromRateLimit(e) {
-        let t = e.body.retry_after,
-            n = (0, r.TD)(0, t * i.Z.Millis.SECOND);
-        return (0, r.QX)(n, {
-            days: s.t['iXc/IS'],
-            hours: s.t['WW9P5+'],
-            minutes: s.t.I7rYen
+        let n = e.body.retry_after,
+            r = (0, i.TD)(0, n * a.Z.Millis.SECOND);
+        return (0, i.QX)(r, {
+            days: o.t['iXc/IS'],
+            hours: o.t['WW9P5+'],
+            minutes: o.t.I7rYen
         });
     }
-    constructor(e, t) {
-        super(e, t), 429 === this.status && (this.message = this._getMessageFromRateLimit(e));
+    constructor(e, n) {
+        super(e, n), 429 === this.status && (this.message = this._getMessageFromRateLimit(e));
     }
 }
-t.Z = o;
+n.Z = l;

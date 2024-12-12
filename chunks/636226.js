@@ -1,13 +1,13 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(49691);
-function i(e) {
-    var t = (0, r.Z)(e);
+var i = r(49691);
+function a(e) {
+    var n = (0, i.Z)(e);
     return {
-        scrollLeft: t.pageXOffset,
-        scrollTop: t.pageYOffset
+        scrollLeft: n.pageXOffset,
+        scrollTop: n.pageYOffset
     };
 }

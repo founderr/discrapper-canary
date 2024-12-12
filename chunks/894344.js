@@ -1,30 +1,30 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(763472),
-    s = n(647162),
-    o = n(680686),
-    l = n(131303);
-async function u(e, t, u) {
-    let { hasSpotifyAccount: c, activity: d, user: f } = e;
-    (0, l.Z)(c) &&
-        null != d &&
-        null != d.sync_id &&
-        (await (0, s.KV)(),
-        await (0, s.yp)().catch(
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(763472),
+    o = r(647162),
+    l = r(680686),
+    u = r(131303);
+async function c(e, n, c) {
+    let { hasSpotifyAccount: d, activity: f, user: _ } = e;
+    (0, u.Z)(d) &&
+        null != f &&
+        null != f.sync_id &&
+        (await (0, o.KV)(),
+        await (0, o.yp)().catch(
             (e) => (
-                (0, i.openModalLazy)(async () => {
-                    let { default: e } = await n.e('46317').then(n.bind(n, 841178));
-                    return (t) => (0, r.jsx)(e, { ...t });
+                (0, a.openModalLazy)(async () => {
+                    let { default: e } = await r.e('46317').then(r.bind(r, 841178));
+                    return (n) => (0, i.jsx)(e, { ...n });
                 }),
                 Promise.reject(e)
             )
         ),
-        a.Z_(d, f.id),
-        (0, o.Z)(t, f, d, u));
+        s.Z_(f, _.id),
+        (0, l.Z)(n, _, f, c));
 }

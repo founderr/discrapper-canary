@@ -1,23 +1,23 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return c;
+        return d;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    l = n(603368),
-    u = n(557298);
-function c(e) {
-    let { themeColor: t, color: n, className: a, ...c } = e,
-        d = (0, o.useToken)(o.tokens.colors.BG_SURFACE_OVERLAY),
-        f = i.useMemo(() => (0, l.j1)(t, d.hex()), [t]);
-    return (0, r.jsx)(o.Button, {
-        ...c,
-        style: f,
-        className: s()(a, { [u.customButton]: null != f }),
-        color: null != f ? o.Button.Colors.CUSTOM : n
+var i = r(200651),
+    a = r(192379),
+    s = r(120356),
+    o = r.n(s),
+    l = r(481060),
+    u = r(603368),
+    c = r(557298);
+function d(e) {
+    let { themeColor: n, color: r, className: s, ...d } = e,
+        f = (0, l.useToken)(l.tokens.colors.BG_SURFACE_OVERLAY),
+        _ = a.useMemo(() => (0, u.j1)(n, f.hex()), [n]);
+    return (0, i.jsx)(l.Button, {
+        ...d,
+        style: _,
+        className: o()(s, { [c.customButton]: null != _ }),
+        color: null != _ ? l.Button.Colors.CUSTOM : r
     });
 }

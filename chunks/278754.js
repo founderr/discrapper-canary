@@ -1,24 +1,24 @@
-n.d(t, {
+r.d(n, {
     AW: function () {
-        return a;
-    },
-    Ju: function () {
         return s;
     },
-    pR: function () {
+    Ju: function () {
         return o;
+    },
+    pR: function () {
+        return l;
     }
 });
-var r = n(695346),
-    i = n(990266);
-function a(e) {
-    r.up.updateSetting(e);
-}
-function s() {
-    let { disabled: e } = i.Z.useExperiment({ location: 'ExpressionSuggestions' });
-    return e;
+var i = r(695346),
+    a = r(990266);
+function s(e) {
+    i.up.updateSetting(e);
 }
 function o() {
-    let e = r.up.useSetting();
-    return !s() && e;
+    let { disabled: e } = a.Z.useExperiment({ location: 'ExpressionSuggestions' });
+    return e;
+}
+function l() {
+    let e = i.up.useSetting();
+    return !o() && e;
 }

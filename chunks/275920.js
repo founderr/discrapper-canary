@@ -1,24 +1,24 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var r = n(626135),
-    i = n(981631);
-function a(e) {
-    let { type: t, source: n, userId: a, guildId: s, channelId: o, channelType: l, applicationId: u, partyId: c, messageId: d, locationObject: f, analyticsLocations: _, referrerId: p } = e;
-    r.default.track(i.rMx.APPLICATION_OPENED, {
-        type: t,
-        source: n,
-        guild_id: s,
-        channel_id: o,
-        channel_type: l,
-        application_id: u,
-        party_id: null != c ? c : void 0,
-        other_user_id: a,
-        message_id: d,
-        location: f,
-        location_stack: _,
+var i = r(626135),
+    a = r(981631);
+function s(e) {
+    let { type: n, source: r, userId: s, guildId: o, channelId: l, channelType: u, applicationId: c, partyId: d, messageId: f, locationObject: _, analyticsLocations: h, referrerId: p } = e;
+    i.default.track(a.rMx.APPLICATION_OPENED, {
+        type: n,
+        source: r,
+        guild_id: o,
+        channel_id: l,
+        channel_type: u,
+        application_id: c,
+        party_id: null != d ? d : void 0,
+        other_user_id: s,
+        message_id: f,
+        location: _,
+        location_stack: h,
         referrer_id: p
     });
 }

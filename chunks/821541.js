@@ -1,39 +1,39 @@
-n.d(t, {
+r.d(n, {
     K: function () {
-        return c;
+        return _;
     }
-}),
-    n(724458),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(803997),
-    s = n.n(a),
-    o = n(530892),
-    l = n.n(o),
-    u = n(943361);
-let c = i.forwardRef(function (e, t) {
-        let { as: n = 'div', gap: i = 8, direction: a = 'vertical', align: o = 'stretch', justify: l = 'start', padding: c = 0, style: _, className: p, children: h, ...m } = e;
-        return (0, r.jsx)(n, {
-            ref: t,
+});
+var i = r(724458);
+var a = r(47120);
+var s = r(200651),
+    o = r(192379),
+    l = r(803997),
+    u = r.n(l),
+    c = r(530892),
+    d = r.n(c),
+    f = r(943361);
+let _ = o.forwardRef(function (e, n) {
+        let { as: r = 'div', gap: i = 8, direction: a = 'vertical', align: o = 'stretch', justify: l = 'start', padding: c = 0, style: d, className: _, children: m, ...g } = e;
+        return (0, s.jsx)(r, {
+            ref: n,
             'data-align': o,
             'data-justify': l,
             'data-direction': a,
-            className: s()(u.stack, p),
+            className: u()(f.stack, _),
             style: {
-                ..._,
-                gap: d(i),
-                ...f(c)
+                ...d,
+                gap: h(i),
+                ...p(c)
             },
-            ...m,
-            children: h
+            ...g,
+            children: m
         });
     }),
-    d = (e) => 'var(--space-'.concat(e, ')'),
-    f = (e) =>
+    h = (e) => 'var(--space-'.concat(e, ')'),
+    p = (e) =>
         'number' == typeof e || 'string' == typeof e
-            ? { padding: d(e) }
-            : Object.entries(e).reduce((e, t) => {
-                  let [n, r] = t;
-                  return (e['padding'.concat(l()(n))] = d(r)), e;
+            ? { padding: h(e) }
+            : Object.entries(e).reduce((e, n) => {
+                  let [r, i] = n;
+                  return (e['padding'.concat(d()(r))] = h(i)), e;
               }, {});

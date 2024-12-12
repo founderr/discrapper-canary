@@ -1,9 +1,9 @@
-var r = n(286233),
-    i = n(673555);
+var i = r(286233),
+    a = r(673555);
 e.exports = function () {
-    var e = i();
+    var e = a();
     return (
-        r(
+        i(
             Array.prototype,
             { map: e },
             {

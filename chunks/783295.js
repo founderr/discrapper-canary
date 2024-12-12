@@ -1,54 +1,54 @@
-n(47120);
-var r = n(147913),
-    i = n(314897),
-    a = n(592125),
-    s = n(242291),
-    o = n(981631);
-function l(e, t, n) {
+var i = r(47120);
+var a = r(147913),
+    s = r(314897),
+    o = r(592125),
+    l = r(242291),
+    u = r(981631);
+function c(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-class u extends r.Z {
+class d extends a.Z {
     constructor(...e) {
         super(...e),
-            l(this, 'prevConnected', !1),
-            l(this, 'tempMutedChannel', null),
-            l(this, 'handleRTCConnectionState', (e) => {
-                let { state: t, channelId: n } = e,
-                    r = t === o.hes.RTC_CONNECTED,
-                    i = r && !this.prevConnected,
-                    l = a.Z.getChannel(n),
-                    u = null == l ? void 0 : l.getGuildId(),
-                    c = this.tempMutedChannel === n;
-                i && null != u && (c ? (this.tempMutedChannel = null) : (0, s.M2)(u)), (this.prevConnected = r);
+            c(this, 'prevConnected', !1),
+            c(this, 'tempMutedChannel', null),
+            c(this, 'handleRTCConnectionState', (e) => {
+                let { state: n, channelId: r } = e,
+                    i = n === u.hes.RTC_CONNECTED,
+                    a = i && !this.prevConnected,
+                    s = o.Z.getChannel(r),
+                    c = null == s ? void 0 : s.getGuildId(),
+                    d = this.tempMutedChannel === r;
+                a && null != c && (d ? (this.tempMutedChannel = null) : (0, l.M2)(c)), (this.prevConnected = i);
             }),
-            l(this, 'handleMute', (e) => {
-                let { channelId: t } = e;
-                this.tempMutedChannel = t;
+            c(this, 'handleMute', (e) => {
+                let { channelId: n } = e;
+                this.tempMutedChannel = n;
             }),
-            l(this, 'handleVoiceStateUpdates', (e) => {
-                let { voiceStates: t } = e,
-                    n = i.default.getId(),
-                    r = i.default.getSessionId();
-                t.forEach((e) => {
-                    let { userId: t, channelId: i, sessionId: a } = e;
-                    t === n && a !== r && null != i && (this.tempMutedChannel = i);
+            c(this, 'handleVoiceStateUpdates', (e) => {
+                let { voiceStates: n } = e,
+                    r = s.default.getId(),
+                    i = s.default.getSessionId();
+                n.forEach((e) => {
+                    let { userId: n, channelId: a, sessionId: s } = e;
+                    n === r && s !== i && null != a && (this.tempMutedChannel = a);
                 });
             }),
-            l(this, 'actions', {
+            c(this, 'actions', {
                 RTC_CONNECTION_STATE: this.handleRTCConnectionState,
                 SOUNDBOARD_MUTE_JOIN_SOUND: this.handleMute,
                 VOICE_STATE_UPDATES: this.handleVoiceStateUpdates
             });
     }
 }
-t.Z = new u();
+n.Z = new d();

@@ -1,21 +1,21 @@
-var r = n(706165),
-    i = n(690244)('%TypeError%'),
-    a = n(632384),
-    s = n(710157),
-    o = n(713720);
+var i = r(706165),
+    a = r(690244)('%TypeError%'),
+    s = r(632384),
+    o = r(710157),
+    l = r(713720);
 e.exports = function (e) {
-    if ('Object' !== a(e)) throw new i('ToPropertyDescriptor requires an object');
-    var t = {};
-    if ((r(e, 'enumerable') && (t['[[Enumerable]]'] = s(e.enumerable)), r(e, 'configurable') && (t['[[Configurable]]'] = s(e.configurable)), r(e, 'value') && (t['[[Value]]'] = e.value), r(e, 'writable') && (t['[[Writable]]'] = s(e.writable)), r(e, 'get'))) {
-        var n = e.get;
-        if (void 0 !== n && !o(n)) throw new i('getter must be a function');
-        t['[[Get]]'] = n;
+    if ('Object' !== s(e)) throw new a('ToPropertyDescriptor requires an object');
+    var n = {};
+    if ((i(e, 'enumerable') && (n['[[Enumerable]]'] = o(e.enumerable)), i(e, 'configurable') && (n['[[Configurable]]'] = o(e.configurable)), i(e, 'value') && (n['[[Value]]'] = e.value), i(e, 'writable') && (n['[[Writable]]'] = o(e.writable)), i(e, 'get'))) {
+        var r = e.get;
+        if (void 0 !== r && !l(r)) throw new a('getter must be a function');
+        n['[[Get]]'] = r;
     }
-    if (r(e, 'set')) {
-        var l = e.set;
-        if (void 0 !== l && !o(l)) throw new i('setter must be a function');
-        t['[[Set]]'] = l;
+    if (i(e, 'set')) {
+        var u = e.set;
+        if (void 0 !== u && !l(u)) throw new a('setter must be a function');
+        n['[[Set]]'] = u;
     }
-    if ((r(t, '[[Get]]') || r(t, '[[Set]]')) && (r(t, '[[Value]]') || r(t, '[[Writable]]'))) throw new i('Invalid property descriptor. Cannot both specify accessors and a value or writable attribute');
-    return t;
+    if ((i(n, '[[Get]]') || i(n, '[[Set]]')) && (i(n, '[[Value]]') || i(n, '[[Writable]]'))) throw new a('Invalid property descriptor. Cannot both specify accessors and a value or writable attribute');
+    return n;
 };

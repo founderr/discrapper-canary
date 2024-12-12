@@ -1,6 +1,6 @@
-n.d(t, {
+r.d(n, {
     T: function () {
-        return r;
+        return i;
     }
 });
-let r = 1000;
+let i = 1000;

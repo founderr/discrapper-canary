@@ -1,29 +1,29 @@
-n.d(t, {
+r.d(n, {
     O: function () {
-        return i;
+        return a;
     },
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = ['MO', 'TU', 'WE', 'TH', 'FR', 'SA', 'SU'],
-    i = (function () {
-        function e(e, t) {
-            if (0 === t) throw Error("Can't create weekday with n == 0");
-            (this.weekday = e), (this.n = t);
+var i = ['MO', 'TU', 'WE', 'TH', 'FR', 'SA', 'SU'],
+    a = (function () {
+        function e(e, n) {
+            if (0 === n) throw Error("Can't create weekday with n == 0");
+            (this.weekday = e), (this.n = n);
         }
         return (
-            (e.fromStr = function (t) {
-                return new e(r.indexOf(t));
+            (e.fromStr = function (n) {
+                return new e(i.indexOf(n));
             }),
-            (e.prototype.nth = function (t) {
-                return this.n === t ? this : new e(this.weekday, t);
+            (e.prototype.nth = function (n) {
+                return this.n === n ? this : new e(this.weekday, n);
             }),
             (e.prototype.equals = function (e) {
                 return this.weekday === e.weekday && this.n === e.n;
             }),
             (e.prototype.toString = function () {
-                var e = r[this.weekday];
+                var e = i[this.weekday];
                 return this.n && (e = (this.n > 0 ? '+' : '') + String(this.n) + e), e;
             }),
             (e.prototype.getJsWeekday = function () {

@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(65154);
-function i(e) {
-    return e.supportsInApp(r.AN.VIDEO);
+var i = r(65154);
+function a(e) {
+    return e.supportsInApp(i.AN.VIDEO);
 }

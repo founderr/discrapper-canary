@@ -1,28 +1,28 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     buttonLabel: `Zobrazi\u{165} n\xe1vrhy`,
-    countAnnouncement: (e, t) =>
-        `${t.plural(e.optionCount, {
-            one: () => `${t.number(e.optionCount)} mo\u{17E}nos\u{165}`,
-            other: () => `${t.number(e.optionCount)} mo\u{17E}nosti/-\xed`
+    countAnnouncement: (e, n) =>
+        `${n.plural(e.optionCount, {
+            one: () => `${n.number(e.optionCount)} mo\u{17E}nos\u{165}`,
+            other: () => `${n.number(e.optionCount)} mo\u{17E}nosti/-\xed`
         })} k dispoz\xedcii.`,
-    focusAnnouncement: (e, t) =>
-        `${t.select(
+    focusAnnouncement: (e, n) =>
+        `${n.select(
             {
                 true: () =>
-                    `Zadan\xe1 skupina ${e.groupTitle}, s ${t.plural(e.groupCount, {
-                        one: () => `${t.number(e.groupCount)} mo\u{17E}nos\u{165}ou`,
-                        other: () => `${t.number(e.groupCount)} mo\u{17E}nos\u{165}ami`
+                    `Zadan\xe1 skupina ${e.groupTitle}, s ${n.plural(e.groupCount, {
+                        one: () => `${n.number(e.groupCount)} mo\u{17E}nos\u{165}ou`,
+                        other: () => `${n.number(e.groupCount)} mo\u{17E}nos\u{165}ami`
                     })}. `,
                 other: ''
             },
             e.isGroupChange
-        )}${e.optionText}${t.select(
+        )}${e.optionText}${n.select(
             {
                 true: `, vybrat\xe9`,
                 other: ''

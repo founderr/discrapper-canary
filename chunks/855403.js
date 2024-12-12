@@ -1,8 +1,8 @@
-function r(e, t) {
-    return null != t && e.startsWith('window:'.concat(t));
+function i(e, n) {
+    return null != n && e.startsWith('window:'.concat(n));
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

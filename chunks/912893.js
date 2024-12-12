@@ -1,26 +1,26 @@
-n.d(t, {
+r.d(n, {
     G: function () {
-        return a;
+        return s;
     },
     U: function () {
-        return i;
+        return a;
     }
 });
-var r = n(570140);
-function i(e, t, n, i) {
-    r.Z.dispatch({
+var i = r(570140);
+function a(e, n, r, a) {
+    i.Z.dispatch({
         type: 'BURST_REACTION_PICKER_ANIMATION_ADD',
         messageId: e,
-        emojiName: t,
-        emojiId: n,
-        startPosition: i
+        emojiName: n,
+        emojiId: r,
+        startPosition: a
     });
 }
-function a(e, t, n) {
-    r.Z.dispatch({
+function s(e, n, r) {
+    i.Z.dispatch({
         type: 'BURST_REACTION_PICKER_ANIMATION_CLEAR',
         messageId: e,
-        emojiName: t,
-        emojiId: n
+        emojiName: n,
+        emojiId: r
     });
 }

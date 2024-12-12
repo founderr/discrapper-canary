@@ -1,32 +1,32 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return c;
+        return d;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    l = n(951394),
-    u = n(390689);
-function c(e) {
-    let { onClick: t, children: n, tooltip: a, dangerous: c = !1, className: d, 'aria-label': f } = e;
-    return (0, r.jsx)(o.Tooltip, {
-        text: a,
+var i = r(200651),
+    a = r(192379),
+    s = r(120356),
+    o = r.n(s),
+    l = r(481060),
+    u = r(951394),
+    c = r(390689);
+function d(e) {
+    let { onClick: n, children: r, tooltip: s, dangerous: d = !1, className: f, 'aria-label': _ } = e;
+    return (0, i.jsx)(l.Tooltip, {
+        text: s,
         hideOnClick: !0,
         children: (e) => {
-            let { onMouseEnter: o, onMouseLeave: _, onClick: p } = e;
-            return (0, r.jsx)(l.zx, {
-                onMouseEnter: o,
-                onMouseLeave: _,
+            let { onMouseEnter: l, onMouseLeave: h, onClick: p } = e;
+            return (0, i.jsx)(u.zx, {
+                onMouseEnter: l,
+                onMouseLeave: h,
                 onClick: (e) => {
-                    e.stopPropagation(), null == p || p(), t(e);
+                    e.stopPropagation(), null == p || p(), n(e);
                 },
-                dangerous: c,
-                'aria-label': null != f ? f : a,
-                className: d,
-                children: i.Children.map(n, (e) => (i.isValidElement(e) ? i.cloneElement(e, { className: s()(e.props.className, u.actionBarIcon) }) : e))
+                dangerous: d,
+                'aria-label': null != _ ? _ : s,
+                className: f,
+                children: a.Children.map(r, (e) => (a.isValidElement(e) ? a.cloneElement(e, { className: o()(e.props.className, c.actionBarIcon) }) : e))
             });
         }
     });

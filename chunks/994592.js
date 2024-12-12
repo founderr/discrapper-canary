@@ -1,42 +1,42 @@
-n.d(t, {
+r.d(n, {
     j0: function () {
-        return p;
+        return m;
     },
     mY: function () {
-        return _;
+        return p;
     },
     on: function () {
-        return f;
+        return h;
     }
-}),
-    n(47120);
-var r = n(442837),
-    i = n(652515),
-    a = n(200876),
-    s = n(674180),
-    o = n(160404),
-    l = n(430824),
-    u = n(772021),
-    c = n(981631);
-function d(e) {
-    let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [l.Z, o.Z],
-        r = t.getGuild(e);
-    if (null == r) return !1;
-    let i = (0, a.l)(r),
-        s = r.hasFeature(c.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
-    return !!((i && s) || n.isViewingServerShop(e)) || !1;
-}
-function f(e, t) {
-    return !!d(e) || (0, u.U)(e, t);
-}
+});
+var i = r(47120);
+var a = r(442837),
+    s = r(652515),
+    o = r(200876),
+    l = r(674180),
+    u = r(160404),
+    c = r(430824),
+    d = r(772021),
+    f = r(981631);
 function _(e) {
-    let t = (0, u.Z)(e),
-        n = (0, r.e7)([l.Z, o.Z], () => d(e, [l.Z, o.Z]), [e]),
-        { shouldHideGuildPurchaseEntryPoints: i } = (0, s.uP)(e);
-    return !i && (n || t);
+    let [n, r] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [c.Z, u.Z],
+        i = n.getGuild(e);
+    if (null == i) return !1;
+    let a = (0, o.l)(i),
+        s = i.hasFeature(f.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
+    return !!((a && s) || r.isViewingServerShop(e)) || !1;
+}
+function h(e, n) {
+    return !!_(e) || (0, d.U)(e, n);
 }
 function p(e) {
-    let t = _(e),
-        n = (0, i.RF)(e, 'useShowRoleSubscriptionsInChannelList');
-    return t && !n;
+    let n = (0, d.Z)(e),
+        r = (0, a.e7)([c.Z, u.Z], () => _(e, [c.Z, u.Z]), [e]),
+        { shouldHideGuildPurchaseEntryPoints: i } = (0, l.uP)(e);
+    return !i && (r || n);
+}
+function m(e) {
+    let n = p(e),
+        r = (0, s.RF)(e, 'useShowRoleSubscriptionsInChannelList');
+    return n && !r;
 }

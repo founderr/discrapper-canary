@@ -1,99 +1,99 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return l;
+        return d;
     },
     r: function () {
-        return u;
+        return f;
     }
-}),
-    n(411104),
-    n(47120);
-var r = n(192379),
-    i = n(134158),
-    a = n(924428),
-    s = n(151973);
-let o = Object.freeze({
+});
+var i = r(411104);
+var a = r(47120);
+var s = r(192379),
+    o = r(134158),
+    l = r(924428),
+    u = r(151973);
+let c = Object.freeze({
     spacerTop: 0,
     totalHeight: 0,
     items: [],
     isSidebarVisible: !1
 });
-function l(e) {
-    let { sections: t, sectionHeight: n, rowHeight: l, footerHeight: u, sidebarHeight: c, listHeaderHeight: d, chunkSize: f = 256, paddingTop: _ = 0, paddingBottom: p = 0, getScrollerState: h, getAnchorId: m } = e,
-        g = (0, a.Z)(),
-        E = (0, r.useRef)(o),
-        [v] = (0, r.useState)(() => new i.Z()),
+function d(e) {
+    let { sections: n, sectionHeight: r, rowHeight: i, footerHeight: a, sidebarHeight: d, listHeaderHeight: f, chunkSize: _ = 256, paddingTop: h = 0, paddingBottom: p = 0, getScrollerState: m, getAnchorId: g } = e,
+        E = (0, l.Z)(),
+        v = (0, s.useRef)(c),
+        [I] = (0, s.useState)(() => new o.Z()),
         {
-            dirty: I,
-            chunkStart: T,
-            chunkEnd: b,
+            dirty: T,
+            chunkStart: b,
+            chunkEnd: y,
             forceUpdateOnChunkChange: S
-        } = (0, s.Z)({
-            chunkSize: f,
-            getScrollerState: h,
-            forceUpdate: g
+        } = (0, u.Z)({
+            chunkSize: _,
+            getScrollerState: m,
+            forceUpdate: E
         }),
-        { items: y } = E.current,
-        A = null,
-        { scrollTop: N } = h();
-    for (let e of y) {
-        if (0 === N) break;
+        { items: A } = v.current,
+        N = null,
+        { scrollTop: C } = m();
+    for (let e of A) {
+        if (0 === C) break;
         if ('footer' === e.type || 'header' === e.type || null == e.anchorId) continue;
-        let t = 'row' === e.type ? e.row : void 0;
-        if (e.offsetTop >= N) {
-            A = {
+        let n = 'row' === e.type ? e.row : void 0;
+        if (e.offsetTop >= C) {
+            N = {
                 id: e.anchorId,
                 section: e.section,
-                row: t,
-                scrollOffset: e.offsetTop - N
+                row: n,
+                scrollOffset: e.offsetTop - C
             };
             break;
         }
     }
-    let C = (0, r.useMemo)(() => {
-            let e = Math.max(0, T * f);
-            return null != c && e < c;
-        }, [f, T, c]),
-        R = (0, r.useMemo)(
+    let R = (0, s.useMemo)(() => {
+            let e = Math.max(0, b * _);
+            return null != d && e < d;
+        }, [_, b, d]),
+        O = (0, s.useMemo)(
             () =>
-                I > 0
-                    ? E.current
-                    : (v.mergeProps({
-                          sectionHeight: n,
-                          rowHeight: l,
-                          footerHeight: u,
-                          listHeaderHeight: d,
+                T > 0
+                    ? v.current
+                    : (I.mergeProps({
+                          sectionHeight: r,
+                          rowHeight: i,
+                          footerHeight: a,
+                          listHeaderHeight: f,
                           paddingBottom: p,
-                          paddingTop: _,
-                          sections: t,
-                          getAnchorId: m
+                          paddingTop: h,
+                          sections: n,
+                          getAnchorId: g
                       }),
-                      v.compute(Math.max(0, T * f), b * f)),
-            [I, T, b, n, l, u, d, p, _, t, v, f, m]
+                      I.compute(Math.max(0, b * _), y * _)),
+            [T, b, y, r, i, a, f, p, h, n, I, _, g]
         );
     return (
-        (0, r.useLayoutEffect)(() => void (E.current = R)),
+        (0, s.useLayoutEffect)(() => void (v.current = O)),
         {
-            ...R,
-            listComputer: v,
+            ...O,
+            listComputer: I,
             forceUpdateOnChunkChange: S,
-            anchor: A,
-            isSidebarVisible: C
+            anchor: N,
+            isSidebarVisible: R
         }
     );
 }
-function u(e) {
-    let { scrollerRef: t, anchor: n, getScrollerState: i, listComputer: a, getAnchorId: s, totalHeight: o } = e;
-    (0, r.useLayoutEffect)(() => {
-        let { current: e } = t,
-            { scrollTop: r } = i();
-        if (null == n || null == n.row || null == e || null == s || 0 === r) return;
-        let o = (t) => {
-            if (t < 0 || t >= a.sections[n.section] || s(n.section, n.row) !== n.id) return !1;
-            let [i] = a.computeScrollPosition(n.section, t),
-                o = i - n.scrollOffset;
-            return r !== o && (e.scrollTop = o), !0;
+function f(e) {
+    let { scrollerRef: n, anchor: r, getScrollerState: i, listComputer: a, getAnchorId: o, totalHeight: l } = e;
+    (0, s.useLayoutEffect)(() => {
+        let { current: e } = n,
+            { scrollTop: s } = i();
+        if (null == r || null == r.row || null == e || null == o || 0 === s) return;
+        let l = (n) => {
+            if (n < 0 || n >= a.sections[r.section] || o(r.section, r.row) !== r.id) return !1;
+            let [i] = a.computeScrollPosition(r.section, n),
+                l = i - r.scrollOffset;
+            return s !== l && (e.scrollTop = l), !0;
         };
-        if (!o(n.row)) !o(n.row - 1) && o(n.row + 1);
-    }, [o]);
+        if (!l(r.row)) !l(r.row - 1) && l(r.row + 1);
+    }, [l]);
 }

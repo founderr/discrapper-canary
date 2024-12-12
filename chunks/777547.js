@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     m: function () {
-        return r;
+        return i;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
     kind: 'user',
     id: '2024-04_markdown_subtext',
     label: 'Subtext Markdown',

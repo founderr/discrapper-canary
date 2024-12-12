@@ -1,22 +1,22 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(765053),
-    s = n(512969),
-    o = n(304445),
-    l = n(703656);
-function u(e) {
-    let { children: t } = e;
+var i = r(200651),
+    a = r(192379),
+    s = r(765053),
+    o = r(512969),
+    l = r(304445),
+    u = r(703656);
+function c(e) {
+    let { children: n } = e;
     return (
-        i.useEffect(() => (o.Z.initialize(), () => o.Z.cleanup()), []),
-        (0, r.jsx)(a.B6, {
-            children: (0, r.jsx)(s.F0, {
-                history: (0, l.s1)(),
-                children: t
+        a.useEffect(() => (l.Z.initialize(), () => l.Z.cleanup()), []),
+        (0, i.jsx)(s.B6, {
+            children: (0, i.jsx)(o.F0, {
+                history: (0, u.s1)(),
+                children: n
             })
         })
     );

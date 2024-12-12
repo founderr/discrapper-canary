@@ -1,183 +1,183 @@
-n.d(t, {
+r.d(n, {
     Y: function () {
-        return I;
+        return b;
     },
     c: function () {
-        return v;
+        return T;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(772848),
-    l = n(481060),
-    u = n(596454),
-    c = n(367907),
-    d = n(130402),
-    f = n(626135),
-    _ = n(183023),
-    p = n(524444),
-    h = n(981631),
-    m = n(185923),
-    g = n(474936),
-    E = n(782317);
-let v = (e) => {
-        var t;
-        let { node: n, tooltipPosition: a = p.b_.position, enableClick: o = !0, channelId: c, messageId: d } = e,
-            f = null === (t = n.originalMatch) || void 0 === t ? void 0 : t[0],
-            h = null != f ? f : n.name,
-            [m, g] = i.useState(!1),
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(120356),
+    l = r.n(o),
+    u = r(772848),
+    c = r(481060),
+    d = r(596454),
+    f = r(367907),
+    _ = r(130402),
+    h = r(626135),
+    p = r(183023),
+    m = r(524444),
+    g = r(981631),
+    E = r(185923),
+    v = r(474936),
+    I = r(782317);
+let T = (e) => {
+        var n;
+        let { node: r, tooltipPosition: i = m.b_.position, enableClick: o = !0, channelId: u, messageId: f } = e,
+            _ = null === (n = r.originalMatch) || void 0 === n ? void 0 : n[0],
+            h = null != _ ? _ : r.name,
+            [g, E] = s.useState(!1),
             v = (e) =>
-                (0, r.jsx)(u.Z, {
+                (0, a.jsx)(d.Z, {
                     ...e,
-                    emojiName: n.name,
-                    size: n.jumboable ? 'jumbo' : 'default',
-                    src: n.src,
-                    alt: f,
+                    emojiName: r.name,
+                    size: r.jumboable ? 'jumbo' : 'default',
+                    src: r.src,
+                    alt: _,
                     animated: !1,
-                    channelId: c,
-                    messageId: d
+                    channelId: u,
+                    messageId: f
                 }),
-            I = (e) =>
-                (0, r.jsx)(l.Tooltip, {
-                    text: (0, p.Y)(n.name, o),
+            T = (e) =>
+                (0, a.jsx)(c.Tooltip, {
+                    text: (0, m.Y)(r.name, o),
                     'aria-label': h,
-                    ...p.b_,
-                    position: a,
-                    shouldShow: !m,
+                    ...m.b_,
+                    position: i,
+                    shouldShow: !g,
                     onTooltipShow: () => {
                         o &&
-                            T({
-                                emojiNode: n,
+                            y({
+                                emojiNode: r,
                                 isCustomEmoji: !1
                             });
                     },
-                    children: (t) =>
-                        (0, r.jsx)(l.Clickable, {
+                    children: (n) =>
+                        (0, a.jsx)(c.Clickable, {
                             ...e,
                             tag: 'span',
-                            onClick: (t) => {
-                                var n;
-                                g(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t);
+                            onClick: (n) => {
+                                var r;
+                                E(!0), null == e || null === (r = e.onClick) || void 0 === r || r.call(e, n);
                             },
-                            className: s()(E.emojiContainer, {
-                                [E.emojiContainerClickable]: o,
-                                [E.emojiJumbo]: n.jumboable
+                            className: l()(I.emojiContainer, {
+                                [I.emojiContainerClickable]: o,
+                                [I.emojiJumbo]: r.jumboable
                             }),
-                            children: v(t)
+                            children: v(n)
                         })
                 });
-        return o
-            ? (0, r.jsx)(l.Popout, {
-                  animation: l.Popout.Animation.TRANSLATE,
-                  align: 'center',
-                  autoInvert: !0,
-                  nudgeAlignIntoViewport: !0,
-                  position: 'right',
-                  onRequestClose: () => {
-                      g(!1);
-                  },
-                  renderPopout: (e) =>
-                      (0, r.jsx)(_.Az, {
-                          ...e,
-                          node: n
-                      }),
-                  children: I
-              })
-            : I();
+        if (!o) return T();
+        let b = (e) =>
+            (0, a.jsx)(p.Az, {
+                ...e,
+                node: r
+            });
+        return (0, a.jsx)(c.Popout, {
+            animation: c.Popout.Animation.TRANSLATE,
+            align: 'center',
+            autoInvert: !0,
+            nudgeAlignIntoViewport: !0,
+            position: 'right',
+            onRequestClose: () => {
+                E(!1);
+            },
+            renderPopout: b,
+            children: T
+        });
     },
-    I = (e) => {
-        let { node: t, isInteracting: n, tooltipPosition: a = p.b_.position, enableClick: c = !0, channelId: g, messageId: v } = e,
-            [I, b] = i.useState(String(Date.now())),
-            [S, y] = i.useState(!1),
-            [A, N] = i.useState(!1),
-            C = function () {
+    b = (e) => {
+        let { node: n, isInteracting: r, tooltipPosition: i = m.b_.position, enableClick: o = !0, channelId: f, messageId: v } = e,
+            [T, b] = s.useState(String(Date.now())),
+            [S, A] = s.useState(!1),
+            [N, C] = s.useState(!1),
+            R = function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                return (0, r.jsx)(u.Z, {
+                return (0, a.jsx)(d.Z, {
                     ...e,
-                    emojiName: t.name,
-                    size: t.jumboable ? 'jumbo' : 'default',
-                    emojiId: t.emojiId,
-                    animated: t.animated,
-                    isInteracting: n,
-                    channelId: g,
+                    emojiName: n.name,
+                    size: n.jumboable ? 'jumbo' : 'default',
+                    emojiId: n.emojiId,
+                    animated: n.animated,
+                    isInteracting: r,
+                    channelId: f,
                     messageId: v
                 });
             },
-            R = (0, o.Z)(),
-            O = (e) =>
-                (0, r.jsx)(l.Tooltip, {
-                    text: (0, p.Y)(t.name, c),
-                    'aria-label': t.name,
-                    ...p.b_,
-                    position: a,
-                    shouldShow: !A,
+            O = (0, u.Z)(),
+            D = (e) =>
+                (0, a.jsx)(c.Tooltip, {
+                    text: (0, m.Y)(n.name, o),
+                    'aria-label': n.name,
+                    ...m.b_,
+                    position: i,
+                    shouldShow: !N,
                     onTooltipShow: () => {
-                        y(!0),
-                            c &&
-                                (T({
-                                    emojiNode: t,
+                        A(!0),
+                            o &&
+                                (y({
+                                    emojiNode: n,
                                     isCustomEmoji: !0,
-                                    nonce: R
+                                    nonce: O
                                 }),
-                                (0, d.x)(m.qR.CustomEmojiTooltipShown));
+                                (0, _.x)(E.qR.CustomEmojiTooltipShown));
                     },
-                    children: (n) =>
-                        (0, r.jsx)(l.Clickable, {
+                    children: (r) =>
+                        (0, a.jsx)(c.Clickable, {
                             ...e,
                             onMouseEnter: () => {
-                                var t;
-                                null == e || null === (t = e.onMouseEnter) || void 0 === t || t.call(e);
+                                var n;
+                                null == e || null === (n = e.onMouseEnter) || void 0 === n || n.call(e);
                             },
-                            onClick: c
-                                ? (t) => {
-                                      var n;
-                                      y(!1), N(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t);
+                            onClick: o
+                                ? (n) => {
+                                      var r;
+                                      A(!1), C(!0), null == e || null === (r = e.onClick) || void 0 === r || r.call(e, n);
                                   }
                                 : void 0,
                             onMouseLeave: () => {
-                                S && (f.default.track(h.rMx.CLOSE_POPOUT, { nonce: R }), y(!1));
+                                S && (h.default.track(g.rMx.CLOSE_POPOUT, { nonce: O }), A(!1));
                             },
                             tag: 'span',
-                            className: s()(E.emojiContainer, {
-                                [E.emojiContainerClickable]: c,
-                                [E.emojiJumbo]: t.jumboable
+                            className: l()(I.emojiContainer, {
+                                [I.emojiContainerClickable]: o,
+                                [I.emojiJumbo]: n.jumboable
                             }),
-                            children: C(n)
+                            children: R(r)
                         })
                 });
-        return c
-            ? (0, r.jsx)(l.Popout, {
-                  animation: l.Popout.Animation.FADE,
-                  align: 'center',
-                  onRequestClose: () => {
-                      f.default.track(h.rMx.CLOSE_POPOUT, { nonce: R }), y(!1), N(!1);
-                  },
-                  autoInvert: !0,
-                  nudgeAlignIntoViewport: !0,
-                  position: 'right',
-                  renderPopout: (e) =>
-                      (0, r.jsx)(_.vk, {
-                          ...e,
-                          node: t,
-                          refreshPositionKey: () => b(String(Date.now())),
-                          nonce: R
-                      }),
-                  positionKey: I,
-                  children: O
-              })
-            : O();
+        if (!o) return D();
+        let L = (e) =>
+            (0, a.jsx)(p.vk, {
+                ...e,
+                node: n,
+                refreshPositionKey: () => b(String(Date.now())),
+                nonce: O
+            });
+        return (0, a.jsx)(c.Popout, {
+            animation: c.Popout.Animation.FADE,
+            align: 'center',
+            onRequestClose: () => {
+                h.default.track(g.rMx.CLOSE_POPOUT, { nonce: O }), A(!1), C(!1);
+            },
+            autoInvert: !0,
+            nudgeAlignIntoViewport: !0,
+            position: 'right',
+            renderPopout: L,
+            positionKey: T,
+            children: D
+        });
     },
-    T = (e) => {
-        let { emojiNode: t, isCustomEmoji: n, nonce: r } = e;
-        c.ZP.trackWithMetadata(h.rMx.EXPRESSION_TOOLTIP_VIEWED, {
-            type: g.cd.EMOJI_IN_MESSAGE_HOVER,
-            expression_id: t.emojiId,
-            expression_name: t.name,
-            is_animated: t.animated,
-            is_custom: n,
-            nonce: r
+    y = (e) => {
+        let { emojiNode: n, isCustomEmoji: r, nonce: i } = e;
+        f.ZP.trackWithMetadata(g.rMx.EXPRESSION_TOOLTIP_VIEWED, {
+            type: v.cd.EMOJI_IN_MESSAGE_HOVER,
+            expression_id: n.emojiId,
+            expression_name: n.name,
+            is_animated: n.animated,
+            is_custom: r,
+            nonce: i
         });
     };

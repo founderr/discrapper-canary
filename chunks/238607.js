@@ -1,186 +1,186 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return B;
+        return Z;
     }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(442837),
-    s = n(481060),
-    o = n(278323),
-    l = n(224706),
-    u = n(287734),
-    c = n(566620),
-    d = n(317381),
-    f = n(638880),
-    _ = n(255621),
-    p = n(452634),
-    h = n(620662),
-    m = n(841784),
-    g = n(275920),
-    E = n(906732),
-    v = n(835473),
-    I = n(592745),
-    T = n(592125),
-    b = n(757266),
-    S = n(650774),
-    y = n(430824),
-    A = n(283595),
-    N = n(496675),
-    C = n(699516),
-    R = n(944486),
-    O = n(979651),
-    D = n(181106),
-    L = n(417363),
-    x = n(358085),
-    w = n(804739),
-    P = n(475413),
-    M = n(981631),
-    k = n(701488),
-    U = n(388032);
-function B(e) {
-    let { user: t, currentUser: n, activity: B, onAction: G, onClose: Z } = e,
-        { analyticsLocations: F, newestAnalyticsLocation: V } = (0, E.ZP)(),
-        [j] = (0, v.Z)([null == B ? void 0 : B.application_id]),
-        H = (0, m.Z)(B),
-        Y = null == B ? void 0 : B.application_id,
-        W = null == B ? void 0 : B.session_id,
-        K = (0, p.Z)({
-            activity: B,
-            userId: t.id,
+});
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(442837),
+    l = r(481060),
+    u = r(278323),
+    c = r(224706),
+    d = r(287734),
+    f = r(566620),
+    _ = r(317381),
+    h = r(638880),
+    p = r(255621),
+    m = r(452634),
+    g = r(620662),
+    E = r(841784),
+    v = r(275920),
+    I = r(906732),
+    T = r(835473),
+    b = r(592745),
+    y = r(592125),
+    S = r(757266),
+    A = r(650774),
+    N = r(430824),
+    C = r(283595),
+    R = r(496675),
+    O = r(699516),
+    D = r(944486),
+    L = r(979651),
+    x = r(181106),
+    w = r(417363),
+    P = r(358085),
+    M = r(804739),
+    k = r(475413),
+    U = r(981631),
+    B = r(701488),
+    G = r(388032);
+function Z(e) {
+    let { user: n, currentUser: r, activity: i, onAction: Z, onClose: F } = e,
+        { analyticsLocations: V, newestAnalyticsLocation: j } = (0, I.ZP)(),
+        [H] = (0, T.Z)([null == i ? void 0 : i.application_id]),
+        Y = (0, E.Z)(i),
+        W = null == i ? void 0 : i.application_id,
+        K = null == i ? void 0 : i.session_id,
+        z = (0, m.Z)({
+            activity: i,
+            userId: n.id,
             channelId: void 0
         }),
-        z =
-            (0, a.e7)(
-                [A.Z, I.Z, L.Z, b.Z],
+        q =
+            (0, o.e7)(
+                [C.Z, b.Z, w.Z, S.Z],
                 () =>
-                    null != Y &&
-                    (0, w.t)({
-                        applicationId: Y,
-                        LibraryApplicationStore: A.Z,
-                        LaunchableGameStore: I.Z,
-                        DispatchApplicationStore: L.Z,
-                        ConnectedAppsStore: b.Z
+                    null != W &&
+                    (0, M.t)({
+                        applicationId: W,
+                        LibraryApplicationStore: C.Z,
+                        LaunchableGameStore: b.Z,
+                        DispatchApplicationStore: w.Z,
+                        ConnectedAppsStore: S.Z
                     })
-            ) || H,
-        q = (0, a.e7)([d.ZP], () =>
-            [...d.ZP.getSelfEmbeddedActivities().values()].some((e) => {
-                let { applicationId: t, channelId: n } = e;
-                return t === Y && n === K;
+            ) || Y,
+        Q = (0, o.e7)([_.ZP], () =>
+            [..._.ZP.getSelfEmbeddedActivities().values()].some((e) => {
+                let { applicationId: n, channelId: r } = e;
+                return n === W && r === z;
             })
         ),
-        Q = (0, a.e7)([D.Z], () => null != Y && D.Z.getState(Y, M.mFx.JOIN) === M.OcF.LOADING),
-        X = (0, a.e7)([T.Z, y.Z, S.Z, C.Z, R.Z, O.Z, N.Z], () =>
-            (0, _.Z)({
-                user: t,
-                activity: B,
-                application: j,
-                channelId: K,
-                currentUser: n,
-                isEmbedded: H,
-                ChannelStore: T.Z,
-                GuildStore: y.Z,
-                GuildMemberCountStore: S.Z,
-                RelationshipStore: C.Z,
-                SelectedChannelStore: R.Z,
-                VoiceStateStore: O.Z,
-                PermissionStore: N.Z
+        X = (0, o.e7)([x.Z], () => null != W && x.Z.getState(W, U.mFx.JOIN) === U.OcF.LOADING),
+        J = (0, o.e7)([y.Z, N.Z, A.Z, O.Z, D.Z, L.Z, R.Z], () =>
+            (0, p.Z)({
+                user: n,
+                activity: i,
+                application: H,
+                channelId: z,
+                currentUser: r,
+                isEmbedded: Y,
+                ChannelStore: y.Z,
+                GuildStore: N.Z,
+                GuildMemberCountStore: A.Z,
+                RelationshipStore: O.Z,
+                SelectedChannelStore: D.Z,
+                VoiceStateStore: L.Z,
+                PermissionStore: R.Z
             })
         ),
-        [J, $] = i.useState(!1),
-        ee = J || q || (x.isPlatformEmbedded && !z);
-    if (null == Y || !X || (!(0, h.Z)(B, M.xjy.JOIN) && !H)) return null;
-    let et = async () => {
+        [$, ee] = s.useState(!1),
+        et = $ || Q || (P.isPlatformEmbedded && !q);
+    if (null == W || !J || (!(0, g.Z)(i, U.xjy.JOIN) && !Y)) return null;
+    let en = async () => {
             if (
-                H &&
-                X &&
-                null != K &&
-                null != Y &&
-                (await (0, f.Z)({
-                    applicationId: Y,
-                    activityChannelId: K,
-                    locationObject: { page: M.ZY5.USER_PROFILE },
-                    analyticsLocations: F
+                Y &&
+                J &&
+                null != z &&
+                null != W &&
+                (await (0, h.Z)({
+                    applicationId: W,
+                    activityChannelId: z,
+                    locationObject: { page: U.ZY5.USER_PROFILE },
+                    analyticsLocations: V
                 }))
             ) {
-                null == Z || Z();
+                null == F || F();
                 return;
             }
-            if (X && null != Y && null != W) {
-                var e, n;
-                let r = R.Z.getVoiceChannelId(),
-                    i = T.Z.getChannel(r);
-                await l.Z.join({
-                    userId: t.id,
-                    sessionId: W,
-                    applicationId: Y,
-                    channelId: r,
+            if (J && null != W && null != K) {
+                var e, r;
+                let a = D.Z.getVoiceChannelId(),
+                    s = y.Z.getChannel(a);
+                await c.Z.join({
+                    userId: n.id,
+                    sessionId: K,
+                    applicationId: W,
+                    channelId: a,
                     messageId: null,
-                    intent: k.Ws.PLAY,
-                    embedded: H,
-                    partyId: null == B ? void 0 : null === (e = B.party) || void 0 === e ? void 0 : e.id,
-                    locationObject: { page: M.ZY5.USER_PROFILE },
-                    analyticsLocations: F
+                    intent: B.Ws.PLAY,
+                    embedded: Y,
+                    partyId: null == i ? void 0 : null === (e = i.party) || void 0 === e ? void 0 : e.id,
+                    locationObject: { page: U.ZY5.USER_PROFILE },
+                    analyticsLocations: V
                 }),
-                    !H &&
-                        (0, g.Z)({
-                            type: M.q5t.JOIN,
-                            userId: t.id,
-                            guildId: null == i ? void 0 : i.guild_id,
-                            channelId: r,
-                            channelType: null == i ? void 0 : i.type,
-                            partyId: null == B ? void 0 : null === (n = B.party) || void 0 === n ? void 0 : n.id,
-                            applicationId: Y,
-                            analyticsLocations: F
+                    !Y &&
+                        (0, v.Z)({
+                            type: U.q5t.JOIN,
+                            userId: n.id,
+                            guildId: null == s ? void 0 : s.guild_id,
+                            channelId: a,
+                            channelType: null == s ? void 0 : s.type,
+                            partyId: null == i ? void 0 : null === (r = i.party) || void 0 === r ? void 0 : r.id,
+                            applicationId: W,
+                            analyticsLocations: V
                         });
             }
-            if (($(!0), null != K && null != Y))
-                return c.pu({
-                    channelId: K,
-                    applicationId: Y,
-                    userId: t.id,
-                    location: V
+            if ((ee(!0), null != z && null != W))
+                return f.pu({
+                    channelId: z,
+                    applicationId: W,
+                    userId: n.id,
+                    location: j
                 });
-            if (null != B) {
-                let e = await o.Z.sendActivityInviteUser({
-                    type: M.mFx.JOIN_REQUEST,
-                    userId: t.id,
-                    activity: B,
-                    location: M.Sbl.PROFILE_POPOUT
+            if (null != i) {
+                let e = await u.Z.sendActivityInviteUser({
+                    type: U.mFx.JOIN_REQUEST,
+                    userId: n.id,
+                    activity: i,
+                    location: U.Sbl.PROFILE_POPOUT
                 });
-                null != e && u.default.selectPrivateChannel(e.id);
+                null != e && d.default.selectPrivateChannel(e.id);
             }
         },
-        en = () => (t.id === n.id ? U.intl.string(U.t['0OiwfH']) : x.isPlatformEmbedded && !z && null != B ? U.intl.formatToPlainString(U.t.SqJBnJ, { name: B.name }) : null);
-    return H
-        ? (0, r.jsx)(s.Tooltip, {
-              text: en(),
+        er = () => (n.id === r.id ? G.intl.string(G.t['0OiwfH']) : P.isPlatformEmbedded && !q && null != i ? G.intl.formatToPlainString(G.t.SqJBnJ, { name: i.name }) : null);
+    return Y
+        ? (0, a.jsx)(l.Tooltip, {
+              text: er(),
               children: (e) =>
-                  (0, r.jsx)(P.tG, {
+                  (0, a.jsx)(k.tG, {
                       ...e,
-                      icon: s.ActivitiesIcon,
-                      text: U.intl.string(U.t['4i2vj4']),
-                      disabled: ee,
-                      submitting: Q,
+                      icon: l.ActivitiesIcon,
+                      text: G.intl.string(G.t['4i2vj4']),
+                      disabled: et,
+                      submitting: X,
                       fullWidth: !0,
                       onClick: () => {
-                          null == G || G({ action: 'PRESS_JOIN_BUTTON' }), et();
+                          null == Z || Z({ action: 'PRESS_JOIN_BUTTON' }), en();
                       }
                   })
           })
-        : (0, r.jsx)(s.Tooltip, {
-              text: en(),
+        : (0, a.jsx)(l.Tooltip, {
+              text: er(),
               children: (e) =>
-                  (0, r.jsx)(P.tG, {
+                  (0, a.jsx)(k.tG, {
                       ...e,
-                      icon: s.GameControllerIcon,
-                      text: X ? U.intl.string(U.t.VJlc0d) : U.intl.string(U.t.OKsSCQ),
-                      disabled: ee,
-                      submitting: Q,
+                      icon: l.GameControllerIcon,
+                      text: J ? G.intl.string(G.t.VJlc0d) : G.intl.string(G.t.OKsSCQ),
+                      disabled: et,
+                      submitting: X,
                       fullWidth: !0,
                       onClick: () => {
-                          null == G || G({ action: 'PRESS_ASK_TO_JOIN_BUTTON' }), et();
+                          null == Z || Z({ action: 'PRESS_ASK_TO_JOIN_BUTTON' }), en();
                       }
                   })
           });

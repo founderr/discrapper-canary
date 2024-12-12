@@ -1,44 +1,44 @@
-n.d(t, {
+r.d(n, {
     v: function () {
-        return s;
+        return l;
     }
-}),
-    n(47120);
-var r = n(591759);
-let i = new Set(n(821445)),
-    a = {
+});
+var i = r(47120);
+var a = r(591759);
+let s = new Set(r(821445)),
+    o = {
         'github.com': RegExp('/releases\\S*/download|archive/refs/\\S*|/i/raw/i/\\S*|/user-attachments\\S*'),
         'bitbucket.org': RegExp('/downloads\\S*/[^/]*'),
         'gitlab.com': RegExp('/downloads\\S*/[^/]*')
     };
-function s(e) {
-    var t, n;
-    let { pathname: s, hostname: o } = null !== (n = r.Z.toURLSafe(e)) && void 0 !== n ? n : {};
-    if (null == o) return null;
-    let l = a[o];
-    if ((null != l && null != s && !l.test(s)) || null == s) return null;
-    let u = s;
+function l(e) {
+    var n, r;
+    let { pathname: i, hostname: l } = null !== (r = a.Z.toURLSafe(e)) && void 0 !== r ? r : {};
+    if (null == l) return null;
+    let u = o[l];
+    if ((null != u && null != i && !u.test(i)) || null == i) return null;
+    let c = i;
     try {
-        u = decodeURIComponent(s);
+        c = decodeURIComponent(i);
     } catch (e) {}
-    let c = u.split('/'),
-        d = null,
-        f = 0;
-    for (let e = c.length - 1; e >= 0; e--) {
-        let t = c[e];
-        if ('' !== t && '.' !== t) {
-            if ('..' === t) {
-                f++;
+    let d = c.split('/'),
+        f = null,
+        _ = 0;
+    for (let e = d.length - 1; e >= 0; e--) {
+        let n = d[e];
+        if ('' !== n && '.' !== n) {
+            if ('..' === n) {
+                _++;
                 continue;
             }
-            if (f > e) break;
-            d = c[e - f];
+            if (_ > e) break;
+            f = d[e - _];
             break;
         }
     }
-    if (null == d) return null;
-    let _ = d.split('.');
-    if (_.length < 2) return null;
-    let p = null === (t = _.pop()) || void 0 === t ? void 0 : t.toLowerCase();
-    return null != p && i.has(p) ? p : null;
+    if (null == f) return null;
+    let h = f.split('.');
+    if (h.length < 2) return null;
+    let p = null === (n = h.pop()) || void 0 === n ? void 0 : n.toLowerCase();
+    return null != p && s.has(p) ? p : null;
 }

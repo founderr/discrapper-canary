@@ -1,4 +1,4 @@
-n.r(
+r.r(
     (e.exports = {
         art: 'art_e5cc00',
         small: 'small_e5cc00',

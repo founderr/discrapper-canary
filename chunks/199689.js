@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(981631);
-function i(e) {
-    return !(__OVERLAY__ || null == e || e.id === r.ME || e.id === r.I_8 || !e.hasFeature(r.oNc.COMMUNITY) || !e.hasFeature(r.oNc.GUILD_SERVER_GUIDE) || !e.hasFeature(r.oNc.GUILD_ONBOARDING));
+var i = r(981631);
+function a(e) {
+    return !(__OVERLAY__ || null == e || e.id === i.ME || e.id === i.I_8 || !e.hasFeature(i.oNc.COMMUNITY) || !e.hasFeature(i.oNc.GUILD_SERVER_GUIDE) || !e.hasFeature(i.oNc.GUILD_ONBOARDING));
 }

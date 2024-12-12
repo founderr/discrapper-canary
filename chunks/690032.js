@@ -1,29 +1,29 @@
-n.d(t, {
+r.d(n, {
     o: function () {
-        return s;
+        return _;
     }
-}),
-    n(315314),
-    n(610138),
-    n(216116),
-    n(78328),
-    n(815648),
-    n(47120);
-var r = n(593473),
-    i = n(591759);
-let a = (e) => {
+});
+var i = r(315314);
+var a = r(610138);
+var s = r(216116);
+var o = r(78328);
+var l = r(815648);
+var u = r(47120);
+var c = r(593473),
+    d = r(591759);
+let f = (e) => {
         if (null == e || '' === e) return null;
         try {
-            let t = new URL(e);
-            return i.Z.isDiscordHostname(t.hostname) || window.location.host === t.host ? t : null;
+            let n = new URL(e);
+            return d.Z.isDiscordHostname(n.hostname) || window.location.host === n.host ? n : null;
         } catch (e) {
             return null;
         }
     },
-    s = (e) => {
-        let t = (0, r.parse)(e);
+    _ = (e) => {
+        let n = (0, c.parse)(e);
         return {
-            desktop: a(t.desktop_link),
-            mobile: a(t.mobile_link)
+            desktop: f(n.desktop_link),
+            mobile: f(n.mobile_link)
         };
     };

@@ -1,12 +1,12 @@
-n.d(t, {
+r.d(n, {
     mG: function () {
-        return i;
+        return a;
     },
     y0: function () {
-        return a;
+        return s;
     }
 });
-let r = (0, n(818083).B)({
+let i = (0, r(818083).B)({
     kind: 'user',
     id: '2024-01_inappropriate_conversation_warning',
     label: 'Inappropriate Conversation Warning',
@@ -19,13 +19,13 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i(e) {
-    let { location: t, autoTrackExposure: n = !1 } = e,
-        { enabled: i } = r.getCurrentConfig({ location: t }, { autoTrackExposure: n });
-    return i;
-}
 function a(e) {
-    let { location: t, autoTrackExposure: n = !1 } = e,
-        { enabled: i } = r.useExperiment({ location: t }, { autoTrackExposure: n });
-    return i;
+    let { location: n, autoTrackExposure: r = !1 } = e,
+        { enabled: a } = i.getCurrentConfig({ location: n }, { autoTrackExposure: r });
+    return a;
+}
+function s(e) {
+    let { location: n, autoTrackExposure: r = !1 } = e,
+        { enabled: a } = i.useExperiment({ location: n }, { autoTrackExposure: r });
+    return a;
 }

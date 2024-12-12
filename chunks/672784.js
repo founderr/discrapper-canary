@@ -1,15 +1,15 @@
-function r(e) {
-    let t = e.getContext('2d');
-    return null == t
+function i(e) {
+    let n = e.getContext('2d');
+    return null == n
         ? null
         : {
               render: (e) => {
-                  t.putImageData(e, 0, 0);
+                  n.putImageData(e, 0, 0);
               }
           };
 }
-n.d(t, {
+r.d(n, {
     y: function () {
-        return r;
+        return i;
     }
 });

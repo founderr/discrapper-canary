@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     dateRange: (e) => `Nuo ${e.startDate} iki ${e.endDate}`,
     dateSelected: (e) => `Pasirinkta ${e.date}`,
     finishRangeSelectionPrompt: `Spustel\u{117}kite, kad baigtum\u{117}te pasirinkti dat\u{173} interval\u{105}`,

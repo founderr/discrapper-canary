@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(316138);
-function i(e) {
-    return ['table', 'td', 'th'].indexOf((0, r.Z)(e)) >= 0;
+var i = r(316138);
+function a(e) {
+    return ['table', 'td', 'th'].indexOf((0, i.Z)(e)) >= 0;
 }

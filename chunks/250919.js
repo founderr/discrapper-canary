@@ -1,44 +1,44 @@
-n.d(t, {
+r.d(n, {
     F: function () {
-        return a;
+        return o;
     }
-}),
-    n(411104);
-var r = n(153102);
-function i(e, t, n) {
+});
+var i = r(411104);
+var a = r(153102);
+function s(e, n, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }
-class a {
+class o {
     attach(e) {
-        let { stores: t } = this;
-        t.forEach((t, n) => {
-            if (null == t) throw Error(''.concat(e, " tried to load a non-existent store. Either it isn't defined or there is a circular dependency. Loaded ").concat(n, ' stores before error.'));
-            t.addReactChangeListener(this.handleStoreChange);
+        let { stores: n } = this;
+        n.forEach((n, r) => {
+            if (null == n) throw Error(''.concat(e, " tried to load a non-existent store. Either it isn't defined or there is a circular dependency. Loaded ").concat(r, ' stores before error.'));
+            n.addReactChangeListener(this.handleStoreChange);
         });
     }
     detach() {
         let { stores: e } = this;
         e.forEach((e) => e.removeReactChangeListener(this.handleStoreChange));
     }
-    constructor(e, t) {
-        i(this, 'stores', void 0),
-            i(this, 'changeCallback', void 0),
-            i(this, 'storeVersionHandled', void 0),
-            i(this, 'handleStoreChange', () => {
-                let e = r.Z.getChangeSentinel();
+    constructor(e, n) {
+        s(this, 'stores', void 0),
+            s(this, 'changeCallback', void 0),
+            s(this, 'storeVersionHandled', void 0),
+            s(this, 'handleStoreChange', () => {
+                let e = a.Z.getChangeSentinel();
                 if (this.storeVersionHandled !== e) this.changeCallback(), (this.storeVersionHandled = e);
             }),
             (this.stores = e),
-            (this.changeCallback = t);
+            (this.changeCallback = n);
     }
 }

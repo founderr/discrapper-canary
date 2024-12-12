@@ -1,35 +1,35 @@
-n.d(t, {
+r.d(n, {
     ZP: function () {
-        return d;
+        return f;
     },
     wQ: function () {
-        return c;
+        return d;
     }
 });
-var r = n(442837),
-    i = n(496675),
-    a = n(700785),
-    s = n(231338);
-let o = [s.Pl.SET_VOICE_CHANNEL_STATUS, s.Pl.CONNECT, s.Pl.VIEW_CHANNEL],
-    l = [s.Pl.SET_VOICE_CHANNEL_STATUS];
-function u(e, t, n, r) {
-    return (n ? l : o).every((n) =>
-        null == r
-            ? t.can(n, e)
-            : a.BT({
-                  permission: n,
-                  user: r,
+var i = r(442837),
+    a = r(496675),
+    s = r(700785),
+    o = r(231338);
+let l = [o.Pl.SET_VOICE_CHANNEL_STATUS, o.Pl.CONNECT, o.Pl.VIEW_CHANNEL],
+    u = [o.Pl.SET_VOICE_CHANNEL_STATUS];
+function c(e, n, r, i) {
+    return (r ? u : l).every((r) =>
+        null == i
+            ? n.can(r, e)
+            : s.BT({
+                  permission: r,
+                  user: i,
                   context: e
               })
     );
 }
-function c(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = arguments.length > 2 ? arguments[2] : void 0;
-    return u(e, i.Z, t, n);
-}
 function d(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = arguments.length > 2 ? arguments[2] : void 0;
-    return (0, r.e7)([i.Z], () => u(e, i.Z, t, n), [e, t, n]);
+    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        r = arguments.length > 2 ? arguments[2] : void 0;
+    return c(e, a.Z, n, r);
+}
+function f(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        r = arguments.length > 2 ? arguments[2] : void 0;
+    return (0, i.e7)([a.Z], () => c(e, a.Z, n, r), [e, n, r]);
 }

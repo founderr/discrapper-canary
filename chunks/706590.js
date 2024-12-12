@@ -1,35 +1,35 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return _;
+        return p;
     },
     z: function () {
-        return f;
+        return h;
     }
-}),
-    n(47120);
-var r = n(392711),
-    i = n.n(r),
-    a = n(442837),
-    s = n(592125),
-    o = n(496675),
-    l = n(709054),
-    u = n(853856),
-    c = n(362658),
-    d = n(231338);
-function f(e, t, n) {
-    let { canShow: r, isFavoritesPerk: a } = c.Z.getCurrentConfig({ location: 'isFavoritesGuildVisible' }, { autoTrackExposure: !1 });
+});
+var i = r(47120);
+var a = r(392711),
+    s = r.n(a),
+    o = r(442837),
+    l = r(592125),
+    u = r(496675),
+    c = r(709054),
+    d = r(853856),
+    f = r(362658),
+    _ = r(231338);
+function h(e, n, r) {
+    let { canShow: i, isFavoritesPerk: a } = f.Z.getCurrentConfig({ location: 'isFavoritesGuildVisible' }, { autoTrackExposure: !1 });
     if (a) return !0;
-    if (!r) return !1;
-    let s = e.getFavoriteChannels();
-    if (i().isEmpty(s)) return !1;
-    let o = l.default.keys(s).filter((e) => {
-        let r = t.getChannel(e);
-        return null != r && (!!r.isPrivate() || n.can(d.Pl.VIEW_CHANNEL, r));
+    if (!i) return !1;
+    let o = e.getFavoriteChannels();
+    if (s().isEmpty(o)) return !1;
+    let l = c.default.keys(o).filter((e) => {
+        let i = n.getChannel(e);
+        return null != i && (!!i.isPrivate() || r.can(_.Pl.VIEW_CHANNEL, i));
     });
-    return !i().isEmpty(o) && !0;
+    return !s().isEmpty(l) && !0;
 }
-function _() {
-    let { canShow: e, isFavoritesPerk: t } = (0, c.z)('useIsFavoritesGuildVisible'),
-        n = (0, a.e7)([u.Z, s.Z, o.Z], () => e && f(u.Z, s.Z, o.Z));
-    return !!t || n;
+function p() {
+    let { canShow: e, isFavoritesPerk: n } = (0, f.z)('useIsFavoritesGuildVisible'),
+        r = (0, o.e7)([d.Z, l.Z, u.Z], () => e && h(d.Z, l.Z, u.Z));
+    return !!n || r;
 }

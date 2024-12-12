@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = n(49691);
-function i(e) {
-    return (0, r.Z)(e).getComputedStyle(e);
+var i = r(49691);
+function a(e) {
+    return (0, i.Z)(e).getComputedStyle(e);
 }

@@ -1,11 +1,11 @@
-n.d(t, {
+r.d(n, {
     U: function () {
-        return i;
+        return a;
     }
 });
-var r = n(964742);
-function i(e) {
+var i = r(964742);
+function a(e) {
     return function () {
-        if (e.getMonitor().isDragging()) return { type: r.js };
+        if (e.getMonitor().isDragging()) return { type: i.js };
     };
 }

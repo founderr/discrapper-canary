@@ -1,16 +1,16 @@
-n.d(t, {
+r.d(n, {
     T: function () {
-        return c;
+        return f;
     }
-}),
-    n(757143);
-var r = n(200651),
-    i = n(818083),
-    a = n(424218),
-    s = n(380684),
-    o = n(474936),
-    l = n(388032);
-let u = (0, i.B)({
+});
+var i = r(757143);
+var a = r(200651),
+    s = r(818083),
+    o = r(424218),
+    l = r(380684),
+    u = r(474936),
+    c = r(388032);
+let d = (0, s.B)({
     kind: 'user',
     id: '2024-09_sky_load',
     label: 'Sky Load',
@@ -23,15 +23,15 @@ let u = (0, i.B)({
         }
     ]
 });
-function c(e) {
-    let { user: t, onClick: n } = e,
-        i = (0, a.BU)((0, s.h6)(t) / 1024, { useKibibytes: !0 }),
-        u = (0, a.BU)(o.Uq / 1024, { useKibibytes: !0 }),
-        c = l.intl.formatToPlainString(l.t.q5fTZm, { maxSize: i }),
-        d = l.intl.formatToPlainString(l.t.htbuIS, { premiumMaxSize: u }),
-        f = l.intl.format(l.t.fjSvsL, { onClick: n });
-    return (0, r.jsxs)(r.Fragment, {
-        children: [c, ' ', d.replace('\n', ' '), '. ', f]
+function f(e) {
+    let { user: n, onClick: r } = e,
+        i = (0, o.BU)((0, l.h6)(n) / 1024, { useKibibytes: !0 }),
+        s = (0, o.BU)(u.Uq / 1024, { useKibibytes: !0 }),
+        d = c.intl.formatToPlainString(c.t.q5fTZm, { maxSize: i }),
+        f = c.intl.formatToPlainString(c.t.htbuIS, { premiumMaxSize: s }),
+        _ = c.intl.format(c.t.fjSvsL, { onClick: r });
+    return (0, a.jsxs)(a.Fragment, {
+        children: [d, ' ', f.replace('\n', ' '), '. ', _]
     });
 }
-t.Z = u;
+n.Z = d;

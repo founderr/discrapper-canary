@@ -1,12 +1,12 @@
-var r;
-function i(e) {}
-function a(e, t) {}
-n.d(t, {
+var i;
+function a(e) {}
+function s(e, n) {}
+r.d(n, {
     B1: function () {
-        return i;
+        return a;
     },
     L8: function () {
-        return a;
+        return s;
     }
 }),
-    (r = n.g.performance);
+    (i = r.g.performance);

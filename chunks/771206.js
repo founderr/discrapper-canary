@@ -1,20 +1,20 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return s;
+        return l;
     }
-}),
-    n(47120);
-var r = n(192379),
-    i = n(122289),
-    a = n(622999);
-function s() {
-    let [e, t] = r.useState(null);
+});
+var i = r(47120);
+var a = r(192379),
+    s = r(122289),
+    o = r(622999);
+function l() {
+    let [e, n] = a.useState(null);
     return (
-        r.useEffect(() => {
-            (0, a.d2)()
-                .then((e) => t(e))
+        a.useEffect(() => {
+            (0, o.d2)()
+                .then((e) => n(e))
                 .catch((e) => {
-                    (0, i.q2)(e);
+                    (0, s.q2)(e);
                 });
         }, []),
         e

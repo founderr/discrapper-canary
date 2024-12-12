@@ -1,16 +1,16 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var r = {
+var i = {
     left: 'right',
     right: 'left',
     bottom: 'top',
     top: 'bottom'
 };
-function i(e) {
+function a(e) {
     return e.replace(/left|right|bottom|top/g, function (e) {
-        return r[e];
+        return i[e];
     });
 }

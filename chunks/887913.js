@@ -1,8 +1,8 @@
-var r = n(177624),
-    i = (function () {
+var i = r(177624),
+    a = (function () {
         try {
-            var e = (0, r.Z)(Object, 'defineProperty');
+            var e = (0, i.Z)(Object, 'defineProperty');
             return e({}, '', {}), e;
         } catch (e) {}
     })();
-t.Z = i;
+n.Z = a;

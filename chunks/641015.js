@@ -1,23 +1,23 @@
-n.d(t, {
+r.d(n, {
     D: function () {
-        return o;
+        return l;
     },
     Z: function () {
-        return l;
+        return u;
     }
 });
-var r = n(592125),
-    i = n(496675),
-    a = n(944486),
-    s = n(981631);
-function o() {
-    let e = a.Z.getVoiceChannelId();
-    return l(r.Z.getChannel(e));
+var i = r(592125),
+    a = r(496675),
+    s = r(944486),
+    o = r(981631);
+function l() {
+    let e = s.Z.getVoiceChannelId();
+    return u(i.Z.getChannel(e));
 }
-function l(e) {
+function u(e) {
     if (null == e) return !1;
-    if (s.TPd.CALLABLE.has(e.type)) return !0;
-    let t = i.Z.can(s.Plq.USE_SOUNDBOARD, e),
-        n = i.Z.can(s.Plq.SPEAK, e);
-    return e.type === s.d4z.GUILD_VOICE && t && n;
+    if (o.TPd.CALLABLE.has(e.type)) return !0;
+    let n = a.Z.can(o.Plq.USE_SOUNDBOARD, e),
+        r = a.Z.can(o.Plq.SPEAK, e);
+    return e.type === o.d4z.GUILD_VOICE && n && r;
 }

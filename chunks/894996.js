@@ -1,12 +1,12 @@
 IntlMessageFormat.__addLocaleData({
     locale: 'ru',
-    pluralRuleFunction: function (e, t) {
-        var n = String(e).split('.'),
-            r = n[0],
-            i = !n[1],
-            a = r.slice(-1),
-            s = r.slice(-2);
-        return t ? 'other' : i && 1 == a && 11 != s ? 'one' : i && a >= 2 && a <= 4 && (s < 12 || s > 14) ? 'few' : (i && 0 == a) || (i && a >= 5 && a <= 9) || (i && s >= 11 && s <= 14) ? 'many' : 'other';
+    pluralRuleFunction: function (e, n) {
+        var r = String(e).split('.'),
+            i = r[0],
+            a = !r[1],
+            s = i.slice(-1),
+            o = i.slice(-2);
+        return n ? 'other' : a && 1 == s && 11 != o ? 'one' : a && s >= 2 && s <= 4 && (o < 12 || o > 14) ? 'few' : (a && 0 == s) || (a && s >= 5 && s <= 9) || (a && o >= 11 && o <= 14) ? 'many' : 'other';
     }
 }),
     IntlMessageFormat.__addLocaleData({

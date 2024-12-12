@@ -1,20 +1,20 @@
-n.d(t, {
+r.d(n, {
     I: function () {
-        return o;
+        return l;
     }
 });
-var r = n(52948),
-    i = n(968735),
-    a = n(548097),
-    s = ['style', 'type', 'fallback', 'languageDisplay'];
-function o(e, t, n, o) {
-    var l = e.locale,
-        u = e.onError;
-    !Intl.DisplayNames && u(new i.u_('Intl.DisplayNames is not available in this environment.\nTry polyfilling it using "@formatjs/intl-displaynames"\n', i.jK.MISSING_INTL_API));
-    var c = (0, r.L6)(o, s);
+var i = r(52948),
+    a = r(968735),
+    s = r(548097),
+    o = ['style', 'type', 'fallback', 'languageDisplay'];
+function l(e, n, r, l) {
+    var u = e.locale,
+        c = e.onError;
+    !Intl.DisplayNames && c(new a.u_('Intl.DisplayNames is not available in this environment.\nTry polyfilling it using "@formatjs/intl-displaynames"\n', a.jK.MISSING_INTL_API));
+    var d = (0, i.L6)(l, o);
     try {
-        return t(l, c).of(n);
+        return n(u, d).of(r);
     } catch (e) {
-        u(new a.Qe('Error formatting display name.', l, e));
+        c(new s.Qe('Error formatting display name.', u, e));
     }
 }

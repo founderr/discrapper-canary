@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var r = {};
-r = {
+var i = {};
+i = {
     calendar: 'Kalenteri',
     day: `p\xe4iv\xe4`,
     dayPeriod: 'vuorokaudenaika',
