@@ -1,7 +1,4 @@
 r.d(n, {
-    DT: function () {
-        return h;
-    },
     Qg: function () {
         return f;
     },
@@ -51,7 +48,4 @@ function f(e) {
 }
 function _(e, n) {
     return d(o()(e).darken(n));
-}
-function h(e, n) {
-    return d(o()(e).brighten(n));
 }
