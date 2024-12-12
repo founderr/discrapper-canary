@@ -16,7 +16,7 @@ var o = r(772848),
     d = r(317770),
     f = r(728345),
     _ = r(358221),
-    h = r(42352),
+    h = r(75060),
     p = r(233764),
     m = r(375824),
     g = r(188597),
@@ -101,7 +101,7 @@ async function z(e) {
             activityConfigs: m
         }),
         { releasePhase: E } = W(g),
-        v = await (0, h.Z)();
+        v = await h.Z.getRawThermalState();
     A.default.track(Z.rMx.ACTIVITY_SESSION_LEFT, {
         channel_id: f.id,
         guild_id: p,
@@ -154,7 +154,7 @@ async function q(e) {
         }),
         B = 1 + k.findIndex((e) => e === l),
         { releasePhase: G } = W(U),
-        F = await (0, h.Z)(),
+        F = await h.Z.getRawThermalState(),
         V = null != v ? [v] : [],
         j = {
             activitySessionId: y,
@@ -302,7 +302,7 @@ class X extends d.Z {
                     }
                 this.showLaunchErrorModal(f);
                 let v = T.Z.getChannel(o),
-                    I = await (0, h.Z)();
+                    I = await h.Z.getRawThermalState();
                 A.default.track(Z.rMx.ACTIVITY_SESSION_JOIN_FAILED, {
                     channel_id: o,
                     guild_id: l,

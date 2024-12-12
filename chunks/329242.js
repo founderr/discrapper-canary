@@ -9,7 +9,7 @@ t.Z = (e) => {
     let { user: t, fill: n } = e,
         r = '\xA0(@'.concat(l.ZP.getUserTag(t, { decoration: 'never' }), ')');
     return (0, i.jsxs)(s.Text, {
-        className: a()([o.text, { [o.fill]: n }]),
+        className: a()([{ [o.fill]: n }]),
         variant: 'text-md/medium',
         children: [
             (0, i.jsx)('span', {

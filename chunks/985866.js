@@ -27,8 +27,8 @@ var n = r(200651),
     T = r(569984),
     I = r(497505),
     S = r(918701),
-    y = r(804127),
-    v = r(566078),
+    v = r(804127),
+    y = r(566078),
     B = r(617889),
     R = r(652380),
     j = r(644646),
@@ -61,7 +61,7 @@ function L(e) {
                           idx: null !== (n = null == s ? void 0 : s.tier) && void 0 !== n ? n : null === (r = a.userStatus) || void 0 === r ? void 0 : r.claimedTier
                       })
                     : null,
-                p = v.r.build(a.config),
+                p = y.r.build(a.config),
                 u = null != c && null !== (o = c.messages.name) && void 0 !== o ? o : p.defaultReward.messages.name,
                 m = i ? q.intl.string(q.t.cfY4PD) : p.defaultReward.messages.name;
             return {
@@ -125,7 +125,7 @@ function L(e) {
 }
 function P(e) {
     let t = (0, l.e7)([T.Z], () => T.Z.getQuest(e.questId));
-    return null != t
+    return (null == t && null != e.previewQuest && (t = e.previewQuest), null != t)
         ? (0, n.jsx)(M, {
               ...e,
               quest: t,
@@ -140,7 +140,7 @@ function M(e) {
             var e;
             return (null === (e = s.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null;
         }, []),
-        B = v.r.build(s.config).rewardPlatforms,
+        B = y.r.build(s.config).rewardPlatforms,
         j = B.length > 1,
         [P, M] = o.useState(j ? null : B[0]),
         k = o.useRef(new i.qA()),
@@ -157,26 +157,26 @@ function M(e) {
             isFetchingRewardCode: T.Z.isFetchingRewardCode(s.id),
             isClaimingReward: T.Z.isClaimingReward(s.id)
         })),
-        z = (0, S.oo)({ quest: s }),
-        Q = !0 === m ? (0, R.b)(s) : G,
-        J = j && (null === (t = s.userStatus) || void 0 === t ? void 0 : t.claimedAt) == null && null == Q,
+        Q = (0, S.oo)({ quest: s }),
+        z = !0 === m ? (0, R.b)(s) : G,
+        J = j && (null === (t = s.userStatus) || void 0 === t ? void 0 : t.claimedAt) == null && null == z,
         {
             claimCode: Y,
             fetchCode: $,
             hasError: V,
             setHasError: K
-        } = (0, y.u)({
+        } = (0, v.u)({
             isClaimingReward: X,
             isFetchingRewardCode: H,
             quest: s,
             questContent: d,
             requiresPlatformSelection: J,
-            rewardCode: Q,
+            rewardCode: z,
             selectedPlatformType: P,
             preview: m
         }),
         ee = null;
-    b && null != Q ? (ee = q.intl.string(q.t.srzsU1)) : null != Q ? (ee = q.intl.string(q.t.PJBpdX)) : J && (ee = q.intl.string(q.t.JRU8dn));
+    b && null != z ? (ee = q.intl.string(q.t.srzsU1)) : null != z ? (ee = q.intl.string(q.t.PJBpdX)) : J && (ee = q.intl.string(q.t.JRU8dn));
     let et =
             null != ee
                 ? (0, n.jsx)(p.Heading, {
@@ -188,7 +188,7 @@ function M(e) {
                 : null,
         er = (function (e) {
             let { quest: t, selectedPlatform: r, requiresPlatformSelection: o, rewardCode: a, hasTieredRewardCodes: s } = e,
-                i = v.r.build(t.config);
+                i = y.r.build(t.config);
             if (o)
                 return (0, n.jsx)(p.Text, {
                     variant: 'text-sm/normal',
@@ -214,8 +214,8 @@ function M(e) {
             quest: s,
             selectedPlatform: P,
             requiresPlatformSelection: J,
-            rewardCode: Q,
-            hasTieredRewardCodes: z
+            rewardCode: z,
+            hasTieredRewardCodes: Q
         }),
         en = o.useMemo(
             () =>
@@ -264,18 +264,18 @@ function M(e) {
                 V ? (0, n.jsx)(p.InputError, { error: q.intl.string(q.t.rbZBMT) }) : null
             ]
         }));
-    let ea = null == Q && (H || X),
+    let ea = null == z && (H || X),
         es = ea && !J ? (0, n.jsx)(p.Spinner, {}) : null,
         ei = null;
-    null != Q
+    null != z
         ? (ei = (0, n.jsx)(p.FormItem, {
               title: q.intl.string(q.t.srzsU1),
               children: (0, n.jsx)(u.Z, {
-                  value: F ? q.intl.string(q.t['0n2u0t']) : Q.code,
+                  value: F ? q.intl.string(q.t['0n2u0t']) : z.code,
                   delay: 1000,
                   buttonColor: p.Button.Colors.BRAND,
                   onCopy: () => {
-                      F && (0, h.JG)(Q.code),
+                      F && (0, h.JG)(z.code),
                           (0, w._3)({
                               questId: s.id,
                               questContent: d,
@@ -295,7 +295,7 @@ function M(e) {
                   inputClassName: A.errorInput
               })
           }));
-    let el = (0, y.G)({
+    let el = (0, v.G)({
             claimCode: Y,
             fetchCode: $,
             hasError: V,
@@ -310,8 +310,8 @@ function M(e) {
         ec = !ed && ((J && null == P) || ea),
         ep = q.intl.string(q.t['23SS+/']);
     J ? (ep = q.intl.string(q.t.SLZMi4)) : !J && V && (ep = q.intl.string(q.t.gNJHHh));
-    let eu = !U && null != Q && !b && !V,
-        em = null != es && z,
+    let eu = !U && null != z && !b && !V,
+        em = null != es && Q,
         ef = (0, x.Gd)(s.id);
     return (0, n.jsxs)(n.Fragment, {
         children: [
@@ -339,8 +339,8 @@ function M(e) {
                                         questId: s.id,
                                         children: (0, n.jsx)(L, {
                                             quest: s,
-                                            rewardCode: Q,
-                                            hasTieredRewardCodes: z
+                                            rewardCode: z,
+                                            hasTieredRewardCodes: Q
                                         })
                                     }),
                                 (0, n.jsxs)('div', {

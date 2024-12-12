@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(317381),
     r = n(573979),
-    l = n(42352);
+    l = n(75060);
 n(817938);
 var a = n(238679),
     o = n(981631),
@@ -24,7 +24,7 @@ async function c(e, t, n) {
             return null != n ? { layout_mode: n } : null;
         }
         case o.zMe.THERMAL_STATE_UPDATE: {
-            let e = await (0, l.Z)();
+            let e = await l.Z.getRawThermalState();
             if (null == e) return null;
             return { thermal_state: (0, r.Z)(e) };
         }
