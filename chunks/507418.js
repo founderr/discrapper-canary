@@ -16,12 +16,13 @@ var r = n(512722),
 function m(e, t) {
     if ((0, o.cp)(t)) return (0, i.jsx)(s.Z, {});
     if ((0, d.Z)(t)) {
-        let { guild_id: e, channel_id: n, message_id: r } = t.messageReference;
-        if (null != e)
+        let { guild_id: n, channel_id: r, message_id: l } = t.messageReference;
+        if (null != n)
             return (0, i.jsx)(a.ZP, {
-                guildId: e,
-                channelId: n,
-                messageId: r
+                setPopoutRef: e.setPopoutRef,
+                guildId: n,
+                channelId: r,
+                messageId: l
             });
     }
     if (null != t.interaction && 'SENDING' === t.state) return (0, i.jsx)(i.Fragment, {});

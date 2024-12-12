@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return o;
+        return c;
     }
 });
 var l = t(200651),
@@ -8,23 +8,33 @@ var l = t(200651),
     r = t(481060),
     a = t(934269),
     s = t(910200),
-    c = t(313340);
-function o(e) {
-    let { guildId: n } = e,
-        { guildProfile: t, fetchGuildProfile: o } = (0, a.u)(n);
-    return (i.useEffect(() => {
-        o();
-    }, [o]),
-    null == t)
-        ? (0, l.jsx)('div', {
-              className: c.container,
-              children: (0, l.jsx)(r.Spinner, {})
-          })
-        : (0, l.jsx)(r.Dialog, {
-              'aria-label': t.name,
-              children: (0, l.jsx)('div', {
-                  className: c.container,
-                  children: (0, l.jsx)(s.Z, { profile: t })
-              })
-          });
+    o = t(313340);
+function c(e) {
+    let { guildId: n, setPopoutRef: t } = e,
+        { guildProfile: c, fetchGuildProfile: u } = (0, a.u)(n),
+        d = i.useRef(null);
+    i.useEffect(() => {
+        u();
+    }, [u]),
+        i.useEffect(() => {
+            null == t || t(null == d ? void 0 : d.current);
+        }, [d, t]);
+    let h = null;
+    return (
+        (h =
+            null == c
+                ? (0, l.jsx)('div', {
+                      className: o.container,
+                      children: (0, l.jsx)(r.Spinner, {})
+                  })
+                : (0, l.jsx)('div', {
+                      className: o.container,
+                      children: (0, l.jsx)(s.Z, { profile: c })
+                  })),
+        (0, l.jsx)(r.Dialog, {
+            ref: d,
+            'aria-label': null == c ? void 0 : c.name,
+            children: h
+        })
+    );
 }

@@ -3,7 +3,7 @@ t.d(n, {
         return A;
     },
     ZP: function () {
-        return D;
+        return Z;
     },
     sK: function () {
         return O;
@@ -15,8 +15,8 @@ var l = t(200651),
     r = t(120356),
     a = t.n(r),
     s = t(442837),
-    c = t(692547),
-    o = t(780384),
+    o = t(692547),
+    c = t(780384),
     u = t(481060),
     d = t(410030),
     h = t(686546),
@@ -76,7 +76,7 @@ function A() {
             className: C.body,
             children: [
                 (0, l.jsx)('img', {
-                    src: (0, o.wj)(e) ? I : S,
+                    src: (0, c.wj)(e) ? I : S,
                     className: C.unavailableIcon,
                     width: 80,
                     height: 80,
@@ -97,13 +97,13 @@ function A() {
 }
 function O(e) {
     var n, t;
-    let { guild: r, channelId: o, messageId: d } = e,
+    let { guild: r, channelId: c, messageId: d } = e,
         { name: p, id: E, discoverySplash: N, icon: P, description: I, presenceCount: S, memberCount: y, emojis: A } = r,
         O = (0, s.e7)([x.default], () => x.default.getId()),
         w = (0, s.e7)([_.ZP], () => _.ZP.isMember(E, O), [E, O]),
-        [D, Z] = i.useState(!1),
+        [Z, D] = i.useState(!1),
         U = (e) => {
-            if ((e.stopPropagation(), w)) (0, g.XU)(E, o, d);
+            if ((e.stopPropagation(), w)) (0, g.XU)(E, c, d);
             else {
                 let e = {
                     page: T.ZY5.GUILD_CHANNEL,
@@ -112,7 +112,7 @@ function O(e) {
                 };
                 (0, v.Ub)(E, e);
             }
-            Z(!0);
+            D(!0);
         },
         R = j.ZP.getGuildDiscoverySplashURL({
             id: E,
@@ -179,7 +179,7 @@ function O(e) {
                                           guild: r,
                                           tooltipPosition: 'top',
                                           tooltipColor: u.Tooltip.Colors.PRIMARY,
-                                          badgeColor: c.Z.unsafe_rawColors.PRIMARY_500.css
+                                          badgeColor: o.Z.unsafe_rawColors.PRIMARY_500.css
                                       }),
                                       (0, l.jsx)(u.Text, {
                                           variant: 'text-md/semibold',
@@ -286,7 +286,7 @@ function O(e) {
                             color: u.Button.Colors.BRAND,
                             size: u.Button.Sizes.SMALL,
                             onClick: U,
-                            submitting: D,
+                            submitting: Z,
                             autoFocus: !0,
                             children: b.intl.string(b.t['K+WeR0'])
                         })
@@ -300,8 +300,8 @@ function w(e) {
     let { guildId: n, channelId: t, messageId: r } = e,
         {
             loading: a,
-            unavailable: c,
-            guild: o
+            unavailable: o,
+            guild: c
         } = (0, s.cj)(
             [E.Z],
             () => ({
@@ -312,22 +312,27 @@ function w(e) {
             [n]
         );
     return (i.useEffect(() => {
-        null == o && !a && !c && (0, p.P)(n);
-    }, [o, n, a, c]),
+        null == c && !a && !o && (0, p.P)(n);
+    }, [c, n, a, o]),
     a)
         ? (0, l.jsx)(u.Dialog, {
               'aria-label': b.intl.string(b.t.ZTNur6),
               className: C.guildPopout,
               children: (0, l.jsx)(y, {})
           })
-        : null == o || c
+        : null == c || o
           ? (0, l.jsx)(A, {})
           : (0, l.jsx)(O, {
-                guild: o,
+                guild: c,
                 channelId: t,
                 messageId: r
             });
 }
-function D(e) {
-    return (0, N.h)() ? (0, l.jsx)(P.Z, { guildId: e.guildId }) : (0, l.jsx)(w, { ...e });
+function Z(e) {
+    return (0, N.h)()
+        ? (0, l.jsx)(P.Z, {
+              setPopoutRef: e.setPopoutRef,
+              guildId: e.guildId
+          })
+        : (0, l.jsx)(w, { ...e });
 }
