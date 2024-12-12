@@ -31,6 +31,9 @@ class l {
     trigger() {
         o(this.triggerPoint, this.experiments, this.params);
     }
+    getExperiments() {
+        return this.experiments;
+    }
     constructor(e, n, r) {
         s(this, 'experiments', void 0), s(this, 'triggerPoint', void 0), s(this, 'params', void 0);
         (this.experiments = e), (this.triggerPoint = n), (this.params = r);
