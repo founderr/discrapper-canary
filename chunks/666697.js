@@ -143,7 +143,7 @@ t.Z = function (e) {
                                                   }),
                                               H,
                                               (0, i.jsx)(v.Z, {
-                                                  applicationId: y.id,
+                                                  applicationId: t,
                                                   fetchState: k,
                                                   similarApplications: G,
                                                   onSelectApplication: M,

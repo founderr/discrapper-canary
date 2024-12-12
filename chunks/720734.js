@@ -32,8 +32,8 @@ var i = n(200651),
     x = n(865427),
     Z = n(571250),
     L = n(628581),
-    y = n(55311),
-    P = n(575175),
+    P = n(55311),
+    y = n(575175),
     O = n(64220),
     R = n(377171),
     j = n(600164),
@@ -98,8 +98,8 @@ function eZ(e, t, n) {
     );
 }
 let eL = eC.ZP.getEnableHardwareAcceleration() ? m.AnimatedAvatar : m.Avatar,
-    ey = 2 * ef.Z.Millis.MINUTE,
-    eP = 30 * ef.Z.Millis.DAY;
+    eP = 2 * ef.Z.Millis.MINUTE,
+    ey = 30 * ef.Z.Millis.DAY;
 function eO(e) {
     let { speaking: t, streaming: n, currentUser: r, status: l, handleMouseLeave: o, renderNameTag: s } = e,
         c = (0, w.Q3)('RTC Avatar'),
@@ -362,11 +362,11 @@ class eR extends r.PureComponent {
             }),
             eZ(this, 'handleToggleSelfMute', () => {
                 let { serverMute: e, suppress: t } = this.props;
-                (0, P.Z)(e, t, eT.jXE.ACCOUNT_PANEL);
+                (0, y.Z)(e, t, eT.jXE.ACCOUNT_PANEL);
             }),
             eZ(this, 'handleToggleSelfDeaf', () => {
                 let { serverDeaf: e } = this.props;
-                (0, y.Z)(e, eT.jXE.ACCOUNT_PANEL);
+                (0, P.Z)(e, eT.jXE.ACCOUNT_PANEL);
             }),
             eZ(this, 'handleOpenAccountSettings', () => {
                 this.handleOpenSettings();
@@ -467,7 +467,7 @@ class eR extends r.PureComponent {
             eZ(this, 'handleSpeakingWhileMutedChanged', () => {
                 let { selfMute: e, serverMute: t, suppress: n, speakingWhileMuted: i, occluded: r } = this.props,
                     { hoveringOnMute: l } = this.state,
-                    a = void 0 === this.lastSpeakingWhileMutedNotificationTime || Date.now() - this.lastSpeakingWhileMutedNotificationTime > ey;
+                    a = void 0 === this.lastSpeakingWhileMutedNotificationTime || Date.now() - this.lastSpeakingWhileMutedNotificationTime > eP;
                 i
                     ? !l &&
                       e &&
@@ -513,9 +513,9 @@ function ej() {
             return (0, x.fD)() ? (null === (e = A.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
         L = (0, o.e7)([eh.ZP], () => eh.ZP.getPremiumTypeSubscription()),
-        y = (0, o.e7)([eo.Z], () => eo.Z.getSpeakingWhileMuted()),
-        P = (0, o.e7)([ea.Z], () => ea.Z.hasLayers()),
-        O = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || P || eE.s.isDisallowPopupsSet(),
+        P = (0, o.e7)([eo.Z], () => eo.Z.getSpeakingWhileMuted()),
+        y = (0, o.e7)([ea.Z], () => ea.Z.hasLayers()),
+        O = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || y || eE.s.isDisallowPopupsSet(),
         R = (0, V.b)(),
         j = (0, o.e7)([G.Z], () => null != G.Z.getAwaitingRemoteSessionInfo()),
         M = (0, W.D)(),
@@ -540,7 +540,7 @@ function ej() {
                 { enabled: a } = z.Z.useExperiment({ location: '08bd40_1' }, { autoTrackExposure: !0 }),
                 c = r.useMemo(() => {
                     let e = new Date().getTime();
-                    return null != l && (l.status === eT.O0b.ACTIVE || e - l.currentPeriodEnd.getTime() < eP);
+                    return null != l && (l.status === eT.O0b.ACTIVE || e - l.currentPeriodEnd.getTime() < ey);
                 }, [l]);
             return (
                 r.useEffect(() => {
@@ -578,7 +578,7 @@ function ej() {
                 serverDeaf: b,
                 serverMute: f,
                 speaking: d,
-                speakingWhileMuted: y,
+                speakingWhileMuted: P,
                 status: c,
                 streaming: a,
                 suppress: v,

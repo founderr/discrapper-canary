@@ -30,8 +30,8 @@ var i = n(200651),
     x = n(681837),
     Z = n(502762),
     L = n(530),
-    y = n(309494),
-    P = n(495804),
+    P = n(309494),
+    y = n(495804),
     O = n(171368),
     R = n(420654),
     j = n(695346),
@@ -328,7 +328,7 @@ function ee(e) {
                                     profileType: W.y0.BITE_SIZE,
                                     onOpenProfile: ee ? void 0 : eg
                                 }),
-                                (0, i.jsx)(P.Z, {
+                                (0, i.jsx)(y.Z, {
                                     location: 'AccountProfilePopout',
                                     user: n,
                                     profileType: W.y0.BITE_SIZE,
@@ -359,7 +359,7 @@ function ee(e) {
                                     nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                         children: [
                                             (0, i.jsx)(x.Z, { userId: n.id }),
-                                            (0, i.jsx)(y.Z, {
+                                            (0, i.jsx)(P.Z, {
                                                 user: n,
                                                 isHovering: el
                                             })

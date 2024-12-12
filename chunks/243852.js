@@ -26,13 +26,13 @@ let T = 'ActivityTrackingStore',
     x = null !== (i = c.K.get(T)) && void 0 !== i ? i : {},
     Z = {},
     L = !1;
-function y(e) {
+function P(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    t && P(e, !0);
+    t && y(e, !0);
     let n = Z[e.applicationId];
     null != n && (n.stop(), delete Z[e.applicationId]), delete x[e.applicationId], c.K.set(T, x);
 }
-function P(e) {
+function y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = Date.now(),
         i = null != e.updatedAt ? n - e.updatedAt : 0;
@@ -55,7 +55,7 @@ function P(e) {
     }),
         (e.updatedAt = n);
     let s = Z[e.applicationId];
-    null == s && (s = Z[e.applicationId] = new d.Xp()).start(b, () => P(e)), !t && ((x[e.applicationId] = e), c.K.set(T, x));
+    null == s && (s = Z[e.applicationId] = new d.Xp()).start(b, () => y(e)), !t && ((x[e.applicationId] = e), c.K.set(T, x));
 }
 function O() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
@@ -66,17 +66,17 @@ function O() {
         if (null != t)
             n.add(t.id),
                 !(t.id in x) &&
-                    P({
+                    y({
                         applicationId: t.id,
                         updatedAt: Date.now(),
                         distributor: i,
                         exePath: (0, m.N6)(null != r ? r : '')
                     });
     }
-    for (let t of Object.keys(x)) !n.has(t) && y(x[t], e);
+    for (let t of Object.keys(x)) !n.has(t) && P(x[t], e);
 }
 function R() {
-    for (let e of Object.keys(x)) y(x[e]);
+    for (let e of Object.keys(x)) P(x[e]);
     L = !1;
 }
 class j extends (r = s.ZP.Store) {
@@ -100,7 +100,7 @@ class j extends (r = s.ZP.Store) {
         RUNNING_GAMES_CHANGE: () => O(),
         CONNECTION_OPEN: function () {
             if (L) return !1;
-            for (let e of Object.keys(x)) P(x[e]);
+            for (let e of Object.keys(x)) y(x[e]);
             O(!1), (L = !0);
         },
         CONNECTION_CLOSED: function (e) {

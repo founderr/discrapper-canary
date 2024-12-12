@@ -32,8 +32,8 @@ var i = n(200651),
     x = n(271383),
     Z = n(430824),
     L = n(131951),
-    y = n(375954),
-    P = n(19780),
+    P = n(375954),
+    y = n(19780),
     O = n(944486),
     R = n(914010),
     j = n(885110),
@@ -66,16 +66,16 @@ class Y extends r.PureComponent {
                 channel_type: e.voiceChannelType,
                 channel_bitrate: e.voiceChannelBitrate,
                 guild_id: e.voiceChannelGuildId,
-                rtc_connection_id: P.Z.getRTCConnectionId(),
+                rtc_connection_id: y.Z.getRTCConnectionId(),
                 game_name: n,
-                duration: P.Z.getDuration(),
+                duration: y.Z.getDuration(),
                 game_platform: this.props.gamePlatform,
                 game_id: this.props.gameId,
-                media_session_id: P.Z.getMediaSessionId(),
+                media_session_id: y.Z.getMediaSessionId(),
                 stage_instance_id: null == i ? void 0 : i.id,
                 guild_scheduled_event_id: null == r ? void 0 : r.id,
                 ...(0, c.kO)(e.voiceChannelGuildId, e.voiceChannelId, e.videoEnabled),
-                ...P.Z.getVoiceStateStats(),
+                ...y.Z.getVoiceStateStats(),
                 ...p.Z.getSelectedParticipantStats(e.voiceChannelId)
             });
         }
@@ -183,7 +183,7 @@ class Y extends r.PureComponent {
                 n = b.Z.getChannel(t),
                 r = Z.Z.getGuild(null == n ? void 0 : n.getGuildId());
             if (null != t && null != n && null != r && r.publicUpdatesChannelId === t) {
-                let e = y.Z.getMessages(t),
+                let e = P.Z.getMessages(t),
                     l = e
                         .toArray()
                         .reverse()
@@ -258,8 +258,8 @@ function W() {
         N = (0, l.e7)([j.Z], () => j.Z.getPrimaryActivity(), []),
         T = (0, l.e7)([_.ZP], () => _.ZP.getCurrentGameForAnalytics(), []),
         A = (0, I.Z)(c),
-        y = (0, l.e7)([S.Z], () => S.Z.getMessageRequestsCount(), []),
-        P = {
+        P = (0, l.e7)([S.Z], () => S.Z.getMessageRequestsCount(), []),
+        y = {
             selectedChannelId: t,
             isNSFWChannel: a,
             selectedGuildId: c,
@@ -282,7 +282,7 @@ function W() {
             isMemberPending: h,
             postableChannelCount: A,
             isTextInVoice: r,
-            numMessageRequests: y
+            numMessageRequests: P
         };
-    return (0, i.jsx)(Y, { ...P });
+    return (0, i.jsx)(Y, { ...y });
 }

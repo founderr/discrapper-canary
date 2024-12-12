@@ -32,7 +32,7 @@ var i,
     x = n(981631),
     Z = n(388032),
     L = n(399210);
-function y(e, t, n) {
+function P(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function y(e, t, n) {
         e
     );
 }
-let P = (0, b.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
+let y = (0, b.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
     O = (0, b.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
     R = Object.freeze({
         [x.iEv.PLATFORM]: 'Platform',
@@ -226,14 +226,14 @@ class w extends (i = l.PureComponent) {
         let t = this.props.activeRowKey;
         if (null != t && e.activeRowKey !== t && this.props.isNavigatingByKeyboard) {
             let e = this._rowRefs[t];
-            null != e && (m.Z.wait(p.Zy), this.props.scrollToRow(e, P));
+            null != e && (m.Z.wait(p.Zy), this.props.scrollToRow(e, y));
         }
     }
     handleHighlightedApplicationKey() {
         let { highlightedApplicationKey: e } = this.state;
         null != e &&
             null != this._rowRefs[e] &&
-            (this.props.scrollToRow(this._rowRefs[e], P),
+            (this.props.scrollToRow(this._rowRefs[e], y),
             new d.V7().start(O, () => {
                 !this._didUnmount && this.setState({ highlightedApplicationKey: null });
             }));
@@ -364,28 +364,28 @@ class w extends (i = l.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            y(this, '_didUnmount', !1),
-            y(this, '_rowRefs', {}),
-            y(this, 'state', {
+            P(this, '_didUnmount', !1),
+            P(this, '_rowRefs', {}),
+            P(this, 'state', {
                 overflowMenuRowKey: null,
                 highlightedApplicationKey: null != this.props.location.state ? this.props.location.state.applicationId : null
             }),
-            y(this, 'setActiveRowKey', (e) => {
+            P(this, 'setActiveRowKey', (e) => {
                 this.setState({ overflowMenuRowKey: e.key });
             }),
-            y(this, 'clearActiveRowKey', () => {
+            P(this, 'clearActiveRowKey', () => {
                 !this._didUnmount && this.setState({ overflowMenuRowKey: null });
             }),
-            y(this, 'handleRowMouseEnter', (e) => {
+            P(this, 'handleRowMouseEnter', (e) => {
                 !this.props.isNavigatingByKeyboard && g.wX(e.key);
             }),
-            y(this, 'handleRowMouseLeave', () => {
+            P(this, 'handleRowMouseLeave', () => {
                 !this.props.isNavigatingByKeyboard && g.wX(null);
             }),
-            y(this, 'setRowRef', (e, t) => {
+            P(this, 'setRowRef', (e, t) => {
                 this._rowRefs[t] = e;
             }),
-            y(this, 'handleApplicationContextMenu', (e, t) => {
+            P(this, 'handleApplicationContextMenu', (e, t) => {
                 this.setActiveRowKey(t);
                 let { analyticsContext: i } = this.props;
                 (0, p.jW)(
@@ -441,4 +441,4 @@ function k(e) {
         isNavigatingByKeyboard: m
     });
 }
-y(w, 'defaultProps', { stickyHeader: !1 });
+P(w, 'defaultProps', { stickyHeader: !1 });

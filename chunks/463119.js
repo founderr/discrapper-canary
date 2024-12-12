@@ -38,7 +38,7 @@ let L = (e) => {
             text: x.intl.string(x.t.y2b7CA)
         });
     },
-    y = (e) => {
+    P = (e) => {
         let { selected: t, locationState: n, icon: l, onMouseEnter: a, onMouseLeave: s, children: c, ...u } = e,
             m = (0, o.JA)('shop'),
             p = g.Z.HOME_PAGE_SHOP_TAB,
@@ -65,9 +65,9 @@ let L = (e) => {
             children: c
         });
     },
-    P = (e) => {
+    y = (e) => {
         let { selected: t, locationState: n } = e;
-        return (0, i.jsx)(y, {
+        return (0, i.jsx)(P, {
             selected: t,
             locationState: n,
             children: (0, i.jsx)(L, {})
@@ -115,7 +115,7 @@ let L = (e) => {
         var t, n, l, o, u, h, g, f, _, E, I, v;
         let S, N;
         let { selected: T, locationState: b, displayOptions: A } = e,
-            P = (0, s.e7)([p.Z], () => p.Z.useReducedMotion),
+            y = (0, s.e7)([p.Z], () => p.Z.useReducedMotion),
             [R, j] = r.useState(0),
             [D, M] = r.useState(!1),
             w = (0, m.ZP)(),
@@ -136,7 +136,7 @@ let L = (e) => {
             text: (0, i.jsx)(O, {
                 displayOptions: A,
                 assetId: A.assetIds[R],
-                reducedMotion: P
+                reducedMotion: y
             }),
             tooltipClassName: Z.marketingBadgeTooltip,
             position: 'right',
@@ -145,7 +145,7 @@ let L = (e) => {
             hideOnClick: !1,
             'aria-label': 'string' == typeof H ? H : x.intl.string(x.t.rSXaxc),
             children: (e) =>
-                (0, i.jsxs)(y, {
+                (0, i.jsxs)(P, {
                     className: null != A.entryPointClassName ? (0, C.l)(Z, A.entryPointClassName) : void 0,
                     selected: T,
                     locationState: b,
@@ -167,7 +167,7 @@ let L = (e) => {
                                 })
                         }),
                         null != k &&
-                            !P &&
+                            !y &&
                             (0, i.jsx)('img', {
                                 src: (0, c.wj)(w) ? k.srcDark : k.srcLight,
                                 className: a()(Z.marketingButtonImage, { [Z.marketingButtonImageHovered]: D }),
@@ -198,7 +198,7 @@ let L = (e) => {
             hideOnClick: !1,
             'aria-label': l.title(),
             children: (e) =>
-                (0, i.jsx)(y, {
+                (0, i.jsx)(P, {
                     selected: t,
                     locationState: n,
                     ...e,
@@ -226,7 +226,7 @@ let L = (e) => {
                         displayOptions: r
                     });
                 case b.k2.BADGE:
-                    return (0, i.jsx)(P, {
+                    return (0, i.jsx)(y, {
                         selected: t,
                         locationState: n
                     });
@@ -234,7 +234,7 @@ let L = (e) => {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 l && (0, i.jsx)(D, {}),
-                (0, i.jsx)(y, {
+                (0, i.jsx)(P, {
                     selected: t,
                     locationState: n
                 })

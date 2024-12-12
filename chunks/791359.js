@@ -31,8 +31,8 @@ var i = n(200651),
     x = n(674563),
     Z = n(388032),
     L = n(721925);
-let y = 15 * I.Z.Millis.MINUTE,
-    P = (0, b.Z)(function (e) {
+let P = 15 * I.Z.Millis.MINUTE,
+    y = (0, b.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
             o = (0, i.jsx)(S.Z, {
                 party: t,
@@ -63,7 +63,7 @@ let y = 15 * I.Z.Millis.MINUTE,
                     games_detected: e
                 });
             }, [g, f, _, I, m]),
-            b = s()(C, y);
+            b = s()(C, P);
         return null != o || null != c
             ? (0, i.jsx)(d.Popout, {
                   position: 'left',
@@ -131,7 +131,7 @@ function R() {
                   ? e.map((e) => {
                         let { party: t } = e;
                         return (0, i.jsx)(
-                            P,
+                            y,
                             {
                                 party: t,
                                 quest: s.get(t.id)

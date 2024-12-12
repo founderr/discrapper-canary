@@ -27,8 +27,8 @@ var r = n(243814),
     x = n(591759),
     Z = n(228488),
     L = n(996106),
-    y = n(914946),
-    P = n(452426),
+    P = n(914946),
+    y = n(452426),
     O = n(561205),
     R = n(600027),
     j = n(852926),
@@ -38,7 +38,7 @@ var r = n(243814),
 async function k(e, t, n, i) {
     let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : '',
         l = v.Z.getApplicationActivity(t);
-    if (null == l || null == l.secrets || !(0, y.t9)(i, l.party, l.secrets)) throw new L.Z({ errorCode: M.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
+    if (null == l || null == l.secrets || !(0, P.t9)(i, l.party, l.secrets)) throw new L.Z({ errorCode: M.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
     let a = (0, g.Z)(l, S.Z);
     if (a) {
         let { lock: t } = (0, j.jU)(e);
@@ -86,7 +86,7 @@ t.Z = {
             [D.Gp.ANY]: [r.x.RPC, D.lH]
         },
         validation: (e) =>
-            (0, P.Z)(e)
+            (0, y.Z)(e)
                 .required()
                 .keys({
                     user_id: e.string().required(),
@@ -109,7 +109,7 @@ t.Z = {
             [D.Gp.ANY]: [r.x.RPC, D.lH]
         },
         validation: (e) =>
-            (0, P.Z)(e)
+            (0, y.Z)(e)
                 .required()
                 .keys({
                     type: e.number().required().valid([M.mFx.JOIN]),
@@ -227,7 +227,7 @@ t.Z = {
                 socket: n,
                 args: { mediaUrl: i }
             } = e;
-            (0, y.bu)(n.transport);
+            (0, P.bu)(n.transport);
             let r = n.application.id;
             if (null == r) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No application.');
             if (!(0, T.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, M.udG.EMBEDDED)) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'This application cannot access this API');
@@ -250,7 +250,7 @@ t.Z = {
                     socket: i,
                     args: { command: r, preview_image: l, components: a, content: o }
                 } = e;
-            (0, y.bu)(i.transport);
+            (0, P.bu)(i.transport);
             let s = i.application.id;
             if (null == s) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No application.');
             if (!w.Cr.includes(s)) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'Unsupported application.');

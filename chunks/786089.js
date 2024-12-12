@@ -26,7 +26,7 @@ var i = n(200651),
 t.Z = (0, r.memo)(function (e) {
     var t, n, l, x, Z;
     let { quest: L } = e,
-        [y, P] = (0, r.useState)(!1),
+        [P, y] = (0, r.useState)(!1),
         [O, R] = (0, r.useState)(24),
         [j, D] = (0, r.useState)(!1),
         M = (0, r.useRef)(null),
@@ -56,15 +56,15 @@ t.Z = (0, r.memo)(function (e) {
     let X = (0, c.wj)(H),
         Q = (0, r.useMemo)(() => null != L.config.cosponsorMetadata, [L]),
         J = (0, r.useMemo)(() => (0, v.fh)(L, v.eC.REWARD), [L]),
-        $ = y ? B + 8 : 0,
+        $ = P ? B + 8 : 0,
         ee = () => {
-            P(!0),
+            y(!0),
                 _.default.track(T.rMx.QUEST_HOVER, {
                     quest_id: L.id,
                     ...(0, E.mH)(C.jn.TROPHY_CASE_CARD)
                 });
         },
-        et = () => P(!1),
+        et = () => y(!1),
         en = (e) => {
             D(!0),
                 _.default.track(T.rMx.QUEST_ASSET_LOADING_FAILURE, {
@@ -83,7 +83,7 @@ t.Z = (0, r.memo)(function (e) {
                   onBlur: et,
                   onMouseEnter: ee,
                   onMouseLeave: et,
-                  className: a()(A.container, { [A.hovered]: y }),
+                  className: a()(A.container, { [A.hovered]: P }),
                   children: [
                       null != U &&
                           Y &&

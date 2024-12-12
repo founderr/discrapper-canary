@@ -29,12 +29,12 @@ function L(e) {
         n = { ...e.permissionOverwrites };
     return null != t && null == n[t] && (n[t] = p.we(t)), n;
 }
-function y() {
+function P() {
     if (((T = g.Z.getChannel()), (b = g.Z.getCategory()), null == T)) return !1;
     let e = T.getGuildId();
     (N = S = L(T)), null == S[A] && (A = e), (r = null != b), (i = p.o4(T, b)), (x = null), (v = !1), (C = _.QZA.CLOSED), I.clear();
 }
-class P extends (l = u.ZP.Store) {
+class y extends (l = u.ZP.Store) {
     initialize() {
         this.waitFor(g.Z, f.Z);
     }
@@ -76,7 +76,7 @@ class P extends (l = u.ZP.Store) {
     }
 }
 (s = 'ChannelSettingsPermissionsStore'),
-    (o = 'displayName') in (a = P)
+    (o = 'displayName') in (a = y)
         ? Object.defineProperty(a, o, {
               value: s,
               enumerable: !0,
@@ -84,13 +84,13 @@ class P extends (l = u.ZP.Store) {
               writable: !0
           })
         : (a[o] = s),
-    (t.Z = new P(m.Z, {
+    (t.Z = new y(m.Z, {
         CHANNEL_SETTINGS_SET_SECTION: function (e) {
             let { section: t } = e;
             if (null != T || t !== _.CoT.PERMISSIONS) return !1;
-            y();
+            P();
         },
-        CHANNEL_SETTINGS_PERMISSIONS_INIT: y,
+        CHANNEL_SETTINGS_PERMISSIONS_INIT: P,
         CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION: function (e) {
             let { id: t, allow: n, deny: r } = e,
                 l = null == S ? void 0 : S[t];
@@ -156,7 +156,7 @@ class P extends (l = u.ZP.Store) {
         },
         CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS: function (e) {
             let { silent: t } = e;
-            t ? (C = _.QZA.OPEN) : ((C = _.QZA.CLOSED), y());
+            t ? (C = _.QZA.OPEN) : ((C = _.QZA.CLOSED), P());
         },
         CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function (e) {
             let { advancedMode: t } = e;

@@ -26,8 +26,8 @@ var i = n(200651),
     x = n(6025),
     Z = n(897473),
     L = n(108427),
-    y = n(970731),
-    P = n(187819),
+    P = n(970731),
+    y = n(187819),
     O = n(210887),
     R = n(433355),
     j = n(592125),
@@ -179,14 +179,14 @@ function ei(e) {
 }
 let er = function (e) {
         let { markAsDismissed: t } = e;
-        return (0, i.jsx)(y.ZP, {
+        return (0, i.jsx)(P.ZP, {
             header: $.intl.string($.t.hRT8tb),
             content: $.intl.string($.t.apPgJC),
             buttonCTA: $.intl.string($.t.LNoAQU),
             className: ee.messageRequestCoachmark,
             onClick: () => t(Q.L.UNKNOWN),
             markAsDismissed: t,
-            caretPosition: y.DF.TOP_CENTER,
+            caretPosition: P.DF.TOP_CENTER,
             headerClassName: ee.__invalid_header
         });
     },
@@ -194,7 +194,7 @@ let er = function (e) {
         let t = (0, U.Z)(),
             n = () => D.Z.hasLayers() || (0, u.hasAnyModalOpen)(),
             l = (0, c.e7)([f.Z], () => f.Z.useReducedMotion),
-            a = (0, P._p)({ location: 'message-request-coachmark' });
+            a = (0, y._p)({ location: 'message-request-coachmark' });
         return (
             r.useEffect(() => {
                 (0, S.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
@@ -208,7 +208,7 @@ let er = function (e) {
                             renderPopout: () =>
                                 t
                                     ? (0, i.jsx)(er, { markAsDismissed: s })
-                                    : (0, i.jsx)(y.ZP, {
+                                    : (0, i.jsx)(P.ZP, {
                                           header: $.intl.string($.t.hRT8tb),
                                           content: $.intl.string($.t['8JWodn']),
                                           buttonCTA: $.intl.string($.t.JN6EOD),
@@ -218,7 +218,7 @@ let er = function (e) {
                                               e.stopPropagation(), a ? m.Z.open(X.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: J.to.MESSAGE_REQUESTS_V2 }) : m.Z.open(X.oAB.PRIVACY_AND_SAFETY, null, { scrollPosition: J.to.MESSAGE_REQUESTS });
                                           },
                                           markAsDismissed: s,
-                                          caretPosition: y.DF.TOP_CENTER,
+                                          caretPosition: P.DF.TOP_CENTER,
                                           headerClassName: ee.__invalid_header
                                       }),
                             position: 'bottom',

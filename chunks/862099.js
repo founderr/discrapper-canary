@@ -37,8 +37,8 @@ var i,
     x = n(15274),
     Z = n(924301),
     L = n(504160),
-    y = n(151864),
-    P = n(835184),
+    P = n(151864),
+    y = n(835184),
     O = n(725436),
     R = n(497656),
     j = n(79874),
@@ -164,7 +164,7 @@ function z(e) {
     let { guildEvent: t, noticeType: n } = e,
         i = (0, w.DK)(t),
         r = (0, c.e7)([Z.ZP], () => Z.ZP.isInterestedInEventRecurrence(t.id, i), [t.id, i]),
-        a = (0, c.e7)([P.Z], () => P.Z.getUpcomingNoticeSeenTime(t.id), [t.id]);
+        a = (0, c.e7)([y.Z], () => y.Z.getUpcomingNoticeSeenTime(t.id), [t.id]);
     return (
         !r && null == a && (0, L._6)(t.id),
         (0, l.jsxs)(d.Button, {
@@ -445,10 +445,10 @@ function Q(e) {
             a = (0, D.Vm)(t.id),
             o = (0, c.e7)([v.Z], () => v.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]),
             { isStageNoticeHidden: s, isEventNoticeHidden: d } = (0, c.cj)(
-                [y.Z],
+                [P.Z],
                 () => ({
-                    isStageNoticeHidden: y.Z.isLiveChannelNoticeHidden({ stageId: null == o ? void 0 : o.id }),
-                    isEventNoticeHidden: y.Z.isLiveChannelNoticeHidden({ eventId: null == r ? void 0 : r.id })
+                    isStageNoticeHidden: P.Z.isLiveChannelNoticeHidden({ stageId: null == o ? void 0 : o.id }),
+                    isEventNoticeHidden: P.Z.isLiveChannelNoticeHidden({ eventId: null == r ? void 0 : r.id })
                 }),
                 [o, r]
             ),

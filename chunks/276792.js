@@ -73,7 +73,7 @@ function _(e) {
                 src: v ? _.heroArtImageLinkLightTheme : _.heroArtImageLinkDarkTheme
             });
     let L = v ? u.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL,
-        y =
+        P =
             '' !== _.modalTopPill
                 ? () =>
                       (0, i.jsx)(u.Cy, {
@@ -85,7 +85,7 @@ function _(e) {
     return {
         renderModalProps: E,
         header: _.header,
-        modalTopExtra: y,
+        modalTopExtra: P,
         subHeader: _.subheader,
         subHeaderExtra: x,
         body: _.body,

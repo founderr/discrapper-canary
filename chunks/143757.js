@@ -31,8 +31,8 @@ var i = n(200651),
     x = n(812206),
     Z = n(981631),
     L = n(388032),
-    y = n(914333),
-    P = n(312565);
+    P = n(914333),
+    y = n(312565);
 async function O(e, t, n) {
     t(e.id);
     let i = e.bot;
@@ -90,32 +90,32 @@ function R(e) {
         p = n === t.id,
         g = null != n;
     return (0, i.jsx)(s.Clickable, {
-        className: a()(y.clickable, { [y.disabledClickable]: g }),
+        className: a()(P.clickable, { [P.disabledClickable]: g }),
         onClick: () => (m || g ? null : O(t, r, c)),
         'aria-label': L.intl.formatToPlainString(L.t['zLhr9/'], {
             applicationName: t.name,
             applicationDescription: t.description
         }),
         children: (0, i.jsx)(s.Tooltip, {
-            tooltipContentClassName: y.tooltipContent,
+            tooltipContentClassName: P.tooltipContent,
             text: t.name,
             children: (e) => {
                 let { ...n } = e;
                 return (0, i.jsxs)('div', {
-                    className: y.iconContainer,
+                    className: P.iconContainer,
                     ...n,
                     children: [
                         (0, i.jsx)(f.Z, {
                             application: t,
-                            className: y.iconCard,
+                            className: P.iconCard,
                             'aria-hidden': !0,
                             rendersPlaceholder: !0
                         }),
                         p || m
                             ? (0, i.jsx)(s.Spinner, {
                                   type: s.Spinner.Type.PULSING_ELLIPSIS,
-                                  className: y.spinner,
-                                  itemClassName: m ? y.spinnerInnerRunning : void 0
+                                  className: P.spinner,
+                                  itemClassName: m ? P.spinnerInnerRunning : void 0
                               })
                             : null
                     ]
@@ -127,7 +127,7 @@ function R(e) {
 function j(e) {
     let { frecentApps: t, loadingAppId: n, setLoadingAppId: r, analyticsLocations: l } = e;
     return (0, i.jsx)('div', {
-        className: y.itemContainer,
+        className: P.itemContainer,
         children: t.map((e) => {
             var t;
             return (0, i.jsx)(
@@ -176,15 +176,15 @@ function M() {
     }, [c, h, d]),
     c)
         ? (0, i.jsxs)('div', {
-              className: y.container,
+              className: P.container,
               onContextMenu: D,
               children: [
                   (0, i.jsx)(I.Z, {
-                      className: a()(y.headerContainer, P.privateChannelsHeaderContainer),
+                      className: a()(P.headerContainer, y.privateChannelsHeaderContainer),
                       children: (0, i.jsx)('div', {
-                          className: y.textContainer,
+                          className: P.textContainer,
                           children: (0, i.jsx)('span', {
-                              className: P.headerText,
+                              className: y.headerText,
                               children: L.intl.string(L.t.vayAzs)
                           })
                       })

@@ -53,7 +53,7 @@ function A() {
         {},
         [A.toString()]
     );
-    let y = () => {
+    let P = () => {
             (0, u.FD)(),
                 (0, s.openModalLazy)(
                     async () => {
@@ -66,7 +66,7 @@ function A() {
                     }
                 );
         },
-        P = () => {
+        y = () => {
             (0, s.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e('76540'), n.e('93399')]).then(n.bind(n, 607018));
@@ -109,7 +109,7 @@ function A() {
                     {
                         modalKey: b,
                         Layer: g.ZP,
-                        onCloseCallback: y
+                        onCloseCallback: P
                     }
                 );
         }, [A, L]),
@@ -130,7 +130,7 @@ function A() {
             },
             theme: t,
             onClick: (e) => {
-                e === v.PUi.EMAIL_OR_PHONE || e === v.PUi.EMAIL || e === v.PUi.REVERIFY_EMAIL ? y() : P();
+                e === v.PUi.EMAIL_OR_PHONE || e === v.PUi.EMAIL || e === v.PUi.REVERIFY_EMAIL ? P() : y();
             },
             onLogout: () => {
                 (0, s.openModalLazy)(

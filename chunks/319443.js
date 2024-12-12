@@ -26,8 +26,8 @@ var i = n(200651),
     x = n(119014),
     Z = n(258971),
     L = n(133743),
-    y = n(726941),
-    P = n(666697),
+    P = n(726941),
+    y = n(666697),
     O = n(548514),
     R = n(370648),
     j = n(569527),
@@ -209,7 +209,7 @@ t.Z = function () {
                 ]
             }),
             ee
-                ? (0, i.jsx)(P.Z, {
+                ? (0, i.jsx)(y.Z, {
                       onScroll: (e) => eg(e, Z.m_.APPLICATION),
                       onSelectApplication: eu,
                       applicationId: O,
@@ -226,7 +226,7 @@ t.Z = function () {
                           onScroll: (e) => eg(e, Z.m_.HOME),
                           onSelectApplication: eu
                       })
-                    : (0, i.jsx)(y.Z, {
+                    : (0, i.jsx)(P.Z, {
                           tabId: Number(W),
                           onScroll: (e) => eg(e, Z.m_.CATEGORY),
                           onSelectApplication: eu

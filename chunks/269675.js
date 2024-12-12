@@ -33,17 +33,17 @@ function Z(e) {
         n = (0, a.e7)([f.Z], () => f.Z.getGuild(t), [t]),
         Z = (0, a.e7)([p.Z], () => p.Z.isConnected()),
         L = (0, h.Z)(t),
-        y = (0, I.Z)(t),
-        P = (0, a.e7)([_.Z], () => _.Z.isSubscriptionFetching),
+        P = (0, I.Z)(t),
+        y = (0, a.e7)([_.Z], () => _.Z.isSubscriptionFetching),
         O = (0, E.f)(),
         { shouldHideGuildPurchaseEntryPoints: R, restrictionsLoading: j } = (0, m.uP)(t),
-        D = null == n || !O || P || j;
+        D = null == n || !O || y || j;
     (0, d.Tt)({
         subsection: A.intl.string(A.t['KzCF//']),
         location: null == n ? void 0 : n.name
     }),
         (0, c.Z)(l.tq ? 'role-subscriptions-overview' : void 0);
-    let M = Z && (null == n || !(L || y) || (R && !j));
+    let M = Z && (null == n || !(L || P) || (R && !j));
     if (
         (r.useEffect(() => {
             s.jg();

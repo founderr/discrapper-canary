@@ -26,7 +26,7 @@ t.Z = function () {
     let { selectedTab: e, onSelectTab: t, tabs: n } = (0, S.z)(),
         { onScroll: x, scrollPosition: Z } = (0, c.M)(),
         L = I.Z.getState().getUtmCurrentContext(),
-        y = (0, E._)({ location: N.dr.QUEST_HOME_DESKTOP }) ? v.Z : v.j;
+        P = (0, E._)({ location: N.dr.QUEST_HOME_DESKTOP }) ? v.Z : v.j;
     r.useEffect(() => {
         (0, o.h)({
             name: l.ImpressionNames.QUEST_HOME,
@@ -40,7 +40,7 @@ t.Z = function () {
             }
         });
     }, [e]);
-    let P = r.useCallback(() => {
+    let y = r.useCallback(() => {
         window.open(f.Z.getArticleURL(T.BhN.QUESTS_LEARN_MORE));
     }, []);
     return (
@@ -60,7 +60,7 @@ t.Z = function () {
                             description: b.intl.string(b.t.oWCrBg),
                             button: (0, i.jsx)(d.u, {
                                 text: b.intl.string(b.t.hvVgAQ),
-                                onClick: P
+                                onClick: y
                             }),
                             className: A.bannerContainer,
                             children: (0, i.jsx)('div', {
@@ -76,7 +76,7 @@ t.Z = function () {
                                     onTabSelect: t,
                                     className: A.tabs
                                 }),
-                                e === _.e5.CLAIMED ? (0, i.jsx)(y, { onSelectTab: t }) : (0, i.jsx)(C.Z, {})
+                                e === _.e5.CLAIMED ? (0, i.jsx)(P, { onSelectTab: t }) : (0, i.jsx)(C.Z, {})
                             ]
                         })
                     ]

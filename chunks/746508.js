@@ -26,8 +26,8 @@ var i = n(200651),
     x = n(374065),
     Z = n(451576),
     L = n(119315),
-    y = n(403404),
-    P = n(100527),
+    P = n(403404),
+    y = n(100527),
     O = n(906732),
     R = n(424602),
     j = n(793865),
@@ -80,8 +80,8 @@ var i = n(200651),
     ex = n(51144),
     eZ = n(870569),
     eL = n(345243),
-    ey = n(594117),
-    eP = n(226323),
+    eP = n(594117),
+    ey = n(226323),
     eO = n(981631),
     eR = n(190378),
     ej = n(388032),
@@ -285,9 +285,9 @@ function eH(e) {
         I = (0, A.a)(),
         C = p !== x.jy.CAN_LAUNCH,
         { enabled: v } = R.nS.useExperiment({ location: 'RTCConnection' }, { autoTrackExposure: !0 }),
-        { Component: b, events: Z, play: P } = (0, u.s)(),
+        { Component: b, events: Z, play: y } = (0, u.s)(),
         { Component: j, events: D, play: M } = (0, h.w)();
-    return (v ? ((t = D), (n = M)) : ((t = Z), (n = P)), l)
+    return (v ? ((t = D), (n = M)) : ((t = Z), (n = y)), l)
         ? (0, i.jsx)(f.Tooltip, {
               text: g,
               children: (e) =>
@@ -299,7 +299,7 @@ function eH(e) {
                       onClick: () => {
                           var t;
                           n(),
-                              (0, y.Z)({
+                              (0, P.Z)({
                                   channel: r,
                                   guildId: r.guild_id,
                                   locationObject: E.location,
@@ -369,7 +369,7 @@ function eV(e) {
         A = null != C,
         { Component: x, events: Z, play: L } = (0, m.P)(A ? 'disable' : 'enable');
     r.useEffect(() => () => L(), [L, A]);
-    let y = (0, i.jsx)(x, {
+    let P = (0, i.jsx)(x, {
         size: c ? 'md' : 'sm',
         color: 'currentColor',
         className: a()(eD.buttonIcon, { [eD.withText]: !b })
@@ -417,10 +417,10 @@ function eV(e) {
                         innerClassName: eD.buttonContents,
                         wrapperClassName: eD.button,
                         children: b
-                            ? y
+                            ? P
                             : (0, i.jsxs)(M.Z, {
                                   align: M.Z.Align.CENTER,
-                                  children: [y, ej.intl.string(ej.t['r0/+v7'])]
+                                  children: [P, ej.intl.string(ej.t['r0/+v7'])]
                               })
                     })
             });
@@ -502,7 +502,7 @@ class eF extends r.PureComponent {
     renderVoiceStates() {
         let { channel: e, voiceStates: t, showVoiceStates: n } = this.props;
         return null != e && n && 0 !== t.length
-            ? (0, i.jsx)(eP.Z, {
+            ? (0, i.jsx)(ey.Z, {
                   voiceStates: t,
                   channel: e,
                   className: eD.voiceUsers
@@ -582,7 +582,7 @@ class eF extends r.PureComponent {
                                           grow: 0,
                                           shrink: 0,
                                           className: eD.voiceButtonsContainer,
-                                          children: [t ? this.renderNoiseCancellation() : null, (0, i.jsx)(ey.Z, { channel: e })]
+                                          children: [t ? this.renderNoiseCancellation() : null, (0, i.jsx)(eP.Z, { channel: e })]
                                       })
                                   ]
                               }),
@@ -736,11 +736,11 @@ t.Z = (0, v.Z)(function (e) {
     r.useEffect(() => {
         (I || C) && L(!1);
     }, [I, C, L]);
-    let { analyticsLocations: y } = (0, O.ZP)(P.Z.RTC_PANEL),
+    let { analyticsLocations: P } = (0, O.ZP)(y.Z.RTC_PANEL),
         R = (0, b.Z)(null != u ? u : eO.lds, null == c ? void 0 : c.id),
         j = (0, Z.Z)(null == c ? void 0 : c.id);
     return (0, i.jsx)(O.Gt, {
-        value: y,
+        value: P,
         children: (0, i.jsxs)('div', {
             className: eD.wrapper,
             children: [
@@ -765,7 +765,7 @@ t.Z = (0, v.Z)(function (e) {
                     showVoiceStates: v,
                     shouldShowVoicePanelIntroduction: p,
                     isPrivateChannelWithEnabledActivities: j,
-                    analyticsLocations: y,
+                    analyticsLocations: P,
                     isVisualRefreshEnabled: t
                 }),
                 !x && I && null != u

@@ -38,12 +38,12 @@ async function T(e, t, n) {
         c,
         d,
         v,
-        { client_id: N, response_type: T = 'code', redirect_uri: b, code_challenge: A, code_challenge_method: x, state: Z, nonce: L, scope: y, permissions: P, guild_id: O, channel_id: R, prompt: j, disable_guild_select: D, integration_type: M, pid: w, signal: k } = e;
+        { client_id: N, response_type: T = 'code', redirect_uri: b, code_challenge: A, code_challenge_method: x, state: Z, nonce: L, scope: P, permissions: y, guild_id: O, channel_id: R, prompt: j, disable_guild_select: D, integration_type: M, pid: w, signal: k } = e;
     if (null == k ? void 0 : k.aborted) throw new C.Z({ errorCode: S.lTL.UNKNOWN_ERROR }, 'Request aborted');
     if (null == N) throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'No Client ID provided');
     if (null != b) throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
     let U = [];
-    if (('string' == typeof y ? (U = y.split(' ').filter((e) => e.length > 0)) : Array.isArray(y) && (U = y), null == _.default.getCurrentUser())) throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'Client is not logged in');
+    if (('string' == typeof P ? (U = P.split(' ').filter((e) => e.length > 0)) : Array.isArray(P) && (U = P), null == _.default.getCurrentUser())) throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'Client is not logged in');
     let G = null !== (l = u.Z.getApplication(N)) && void 0 !== l ? l : null;
     (null == G ||
         (function (e) {
@@ -99,7 +99,7 @@ async function T(e, t, n) {
     null == n || n(c.application, R, w);
     let H = I.Hn;
     try {
-        H = a.vB(null != P ? P : 0);
+        H = a.vB(null != y ? y : 0);
     } catch (e) {}
     return (
         null != c.integration_type && Object.values(r.Y).includes(c.integration_type) && (o = new Map()).set(c.integration_type, c),

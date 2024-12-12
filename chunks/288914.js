@@ -30,8 +30,8 @@ var i = n(200651),
     x = n(867176),
     Z = n(483424),
     L = n(681837),
-    y = n(502762),
-    P = n(530),
+    P = n(502762),
+    y = n(530),
     O = n(309494),
     R = n(495804),
     j = n(171368),
@@ -312,7 +312,7 @@ function en(e) {
             children: (0, i.jsx)(c.Dialog, {
                 ref: ea,
                 'aria-label': n.username,
-                children: (0, i.jsxs)(y.Z, {
+                children: (0, i.jsxs)(P.Z, {
                     className: Q.themeContainer,
                     user: n,
                     displayProfile: ei,
@@ -348,7 +348,7 @@ function en(e) {
                         (0, i.jsxs)(c.Scroller, {
                             className: Q.body,
                             children: [
-                                (0, i.jsx)(P.Z, {
+                                (0, i.jsx)(y.Z, {
                                     user: n,
                                     className: Q.username,
                                     profileType: q.y0.BITE_SIZE,
@@ -384,7 +384,7 @@ function en(e) {
                                 (0, i.jsxs)('div', {
                                     className: Q.menus,
                                     children: [
-                                        (0, i.jsx)(y.Z.Overlay, {
+                                        (0, i.jsx)(P.Z.Overlay, {
                                             className: Q.menuOverlay,
                                             children: (0, i.jsxs)(Y.PB, {
                                                 id: 'profile-'.concat(n.id),
@@ -439,7 +439,7 @@ function en(e) {
                                                 ]
                                             })
                                         }),
-                                        (0, i.jsx)(y.Z.Overlay, {
+                                        (0, i.jsx)(P.Z.Overlay, {
                                             className: Q.menuOverlay,
                                             children: (0, i.jsxs)(Y.PB, {
                                                 id: 'account-'.concat(n.id),
@@ -521,7 +521,7 @@ function en(e) {
                                         !__OVERLAY__ &&
                                             U.wS &&
                                             eu &&
-                                            (0, i.jsx)(y.Z.Overlay, {
+                                            (0, i.jsx)(P.Z.Overlay, {
                                                 className: Q.menuOverlay,
                                                 children: (0, i.jsx)(Y.PB, {
                                                     id: 'dev-'.concat(n.id),

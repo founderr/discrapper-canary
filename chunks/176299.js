@@ -31,8 +31,8 @@ var i = n(200651),
     x = n(540059),
     Z = n(724383),
     L = n(135864),
-    y = n(372900),
-    P = n(6039),
+    P = n(372900),
+    y = n(6039),
     O = n(637853),
     R = n(326145),
     j = n(269675),
@@ -219,7 +219,7 @@ let eg = 'resizable-sidebar-width-2',
     eZ = (e) => {
         let { match: t } = e;
         return null != t.params.guildId
-            ? (0, i.jsx)(P.Z, {
+            ? (0, i.jsx)(y.Z, {
                   guildId: t.params.guildId,
                   inviteCode: t.params.inviteCode
               })
@@ -234,8 +234,8 @@ let eg = 'resizable-sidebar-width-2',
               })
             : null;
     },
-    ey = () => (0, i.jsx)(ec.Z, {}),
-    eP = () => (0, i.jsx)(ed.Z, {}),
+    eP = () => (0, i.jsx)(ec.Z, {}),
+    ey = () => (0, i.jsx)(ed.Z, {}),
     eO = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         return function (t) {
@@ -360,8 +360,8 @@ function eU(e) {
         l)
     )
         return null;
-    let y = I ? 'div' : r.Fragment,
-        P = I ? { className: ep.sidebarList } : {};
+    let P = I ? 'div' : r.Fragment,
+        y = I ? { className: ep.sidebarList } : {};
     return (0, i.jsx)(m.ThemeProvider, {
         theme: n,
         children: (e) =>
@@ -381,8 +381,8 @@ function eU(e) {
                             className: ep.guilds,
                             themeOverride: n
                         }),
-                    (0, i.jsx)(y, {
-                        ...P,
+                    (0, i.jsx)(P, {
+                        ...y,
                         children: (0, i.jsx)(eb, {})
                     }),
                     I
@@ -459,7 +459,7 @@ function eG() {
                         className: ep.guilds,
                         themeOverride: n
                     }),
-                (0, i.jsx)(y.Z.Provider, {
+                (0, i.jsx)(P.Z.Provider, {
                     value: (null == p ? void 0 : p.params.guildId) === eu.ME ? void 0 : null == p ? void 0 : p.params.guildId,
                     children: (0, i.jsxs)('div', {
                         className: ep.base,
@@ -500,13 +500,13 @@ function eG() {
                                                     }),
                                                     (0, i.jsx)(I.Z, {
                                                         path: eu.Z5c.APPLICATION_LIBRARY,
-                                                        render: ey,
+                                                        render: eP,
                                                         impressionName: s.ImpressionNames.APPLICATION_LIBRARY,
                                                         disableTrack: !0
                                                     }),
                                                     (0, i.jsx)(I.Z, {
                                                         path: eu.Z5c.APPLICATION_STORE,
-                                                        render: eP,
+                                                        render: ey,
                                                         impressionName: s.ImpressionNames.APPLICATION_STORE,
                                                         disableTrack: !0
                                                     }),

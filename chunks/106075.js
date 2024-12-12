@@ -30,7 +30,7 @@ function T() {
         { tabs: b, selectedTab: A, setSelectedTab: x } = (0, _.Y)(),
         Z = (0, m.lg)(A),
         L = !C.MU.has(A),
-        { searchQuery: y, onSearchTextChange: P, onClearSearch: O, onSearchSubmit: R, isSearchVisible: j } = (0, f.H)({ loadId: e.current }),
+        { searchQuery: P, onSearchTextChange: y, onClearSearch: O, onSearchSubmit: R, isSearchVisible: j } = (0, f.H)({ loadId: e.current }),
         D = p.Z.useField('searchBarState'),
         {
             onTabsAvailableWidthChange: M,
@@ -39,7 +39,7 @@ function T() {
             tabsClassName: U
         } = (0, o.U)({
             isSearchBarVisible: L,
-            isSearchBarEmpty: '' === y.trim(),
+            isSearchBarEmpty: '' === P.trim(),
             searchBarState: D,
             setSearchBarState: (e) => p.Z.setState({ searchBarState: e })
         }),
@@ -105,9 +105,9 @@ function T() {
                             }),
                         L &&
                             (0, i.jsx)(d.Z, {
-                                query: y,
+                                query: P,
                                 placeholder: S.intl.string(S.t['5h0QOD']),
-                                onTextChange: P,
+                                onTextChange: y,
                                 onClear: O,
                                 onSubmit: R,
                                 onCollapsedClick: w,

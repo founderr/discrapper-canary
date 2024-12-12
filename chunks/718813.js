@@ -64,11 +64,11 @@ let N = (0, g.Un)({
     },
     Z = 'SHOWN',
     L = 'HIDDEN',
-    y = {
+    P = {
         friction: 10,
         tension: 100
     };
-function P() {
+function y() {
     return l.useEffect(() => (p.Z.enable(), p.Z.enableTemp(m.u), () => p.Z.disableTemp()), []), null;
 }
 class O extends (i = l.PureComponent) {
@@ -98,11 +98,11 @@ class O extends (i = l.PureComponent) {
         s.Z.parallel([
             s.Z.spring(t, {
                 toValue: 1,
-                ...y
+                ...P
             }),
             s.Z.spring(n, {
                 toValue: 1,
-                ...y
+                ...P
             })
         ]).start(() => this.animateComplete(e));
     }
@@ -113,11 +113,11 @@ class O extends (i = l.PureComponent) {
             s.Z.parallel([
                 s.Z.spring(t, {
                     toValue: 0,
-                    ...y
+                    ...P
                 }),
                 s.Z.spring(n, {
                     toValue: 1.1,
-                    ...y
+                    ...P
                 })
             ]).start(() => {
                 e(), I.S.dispatch(C.CkL.LAYER_POP_COMPLETE);
@@ -129,11 +129,11 @@ class O extends (i = l.PureComponent) {
         s.Z.parallel([
             s.Z.spring(e, {
                 toValue: 0,
-                ...y
+                ...P
             }),
             s.Z.spring(t, {
                 toValue: 0.93,
-                ...y
+                ...P
             })
         ]).start(() => this.animateComplete());
     }
@@ -220,7 +220,7 @@ class R extends l.PureComponent {
                 O,
                 {
                     mode: t === n - 1 ? Z : L,
-                    children: [(0, r.jsx)(P, {}), i]
+                    children: [(0, r.jsx)(y, {}), i]
                 },
                 'layer-'.concat(t)
             )

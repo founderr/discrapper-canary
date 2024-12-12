@@ -72,7 +72,7 @@ let N = [],
         });
     };
 function A(e) {
-    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: T, modalDismissibleContent: A, modalTopExtra: x, header: Z, headerClassName: L, subHeader: y, subHeaderExtra: P, featureCards: O, changeLogId: R, button: j, body: D } = e,
+    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: T, modalDismissibleContent: A, modalTopExtra: x, header: Z, headerClassName: L, subHeader: P, subHeaderExtra: y, featureCards: O, changeLogId: R, button: j, body: D } = e,
         { onClose: M, transitionState: w } = n,
         k = (0, h.Dt)(),
         U = O.length % 2 == 0,
@@ -254,7 +254,7 @@ function A(e) {
                         (0, i.jsxs)(s.Heading, {
                             variant: 'heading-lg/semibold',
                             className: S.subHeader,
-                            children: [y, null == P ? void 0 : P()]
+                            children: [P, null == y ? void 0 : y()]
                         }),
                         null != D &&
                             (0, i.jsx)(s.Heading, {

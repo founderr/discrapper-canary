@@ -37,8 +37,8 @@ var i = n(200651),
 function L(e) {
     var t;
     let { onSelectApplication: n, onScroll: L } = e,
-        y = r.useRef(null),
-        P = (0, l.TH)(),
+        P = r.useRef(null),
+        y = (0, l.TH)(),
         O = r.useRef(null),
         {
             query: R,
@@ -46,7 +46,7 @@ function L(e) {
             categoryId: D
         } = r.useMemo(() => {
             var e, t;
-            let n = new URLSearchParams(P.search),
+            let n = new URLSearchParams(y.search),
                 i = n.get('page'),
                 r = null != i ? Number(i) : 1;
             return {
@@ -54,7 +54,7 @@ function L(e) {
                 page: r,
                 categoryId: null !== (t = Number(n.get('category_id'))) && void 0 !== t ? t : A.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID
             };
-        }, [P.search]),
+        }, [y.search]),
         M = (0, s.e7)([m.Z], () => m.Z.getCategories()),
         w = r.useMemo(() => (null == M ? void 0 : M.find((e) => e.id === D)), [M, D]),
         k = r.useCallback(
@@ -72,7 +72,7 @@ function L(e) {
         );
     r.useEffect(() => {
         var e;
-        null === (e = y.current) || void 0 === e || e.scrollTo({ to: 0 }),
+        null === (e = P.current) || void 0 === e || e.scrollTo({ to: 0 }),
             R !== O.current &&
                 ((O.current = R),
                 u.yC({
@@ -162,7 +162,7 @@ function L(e) {
         className: Z.container,
         children: [
             (0, i.jsx)(E.Z, {
-                ref: y,
+                ref: P,
                 onScroll: L,
                 children: (0, i.jsx)(_.Z, {
                     children: (0, i.jsxs)('div', {

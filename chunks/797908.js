@@ -36,8 +36,8 @@ t.Z = function (e) {
                     : void 0,
             [T, I]
         ),
-        y = (null !== (_ = null === (n = I.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== _ ? _ : 0) > 0 || S.length > 0,
-        P = (0, i.jsx)(s.Z, {
+        P = (null !== (_ = null === (n = I.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== _ ? _ : 0) > 0 || S.length > 0,
+        y = (0, i.jsx)(s.Z, {
             application: I,
             textVariant: 'text-xs/medium',
             mutualGuilds: S,
@@ -143,10 +143,10 @@ t.Z = function (e) {
                                 lineClamp: O || x ? 2 : 3,
                                 children: null !== (E = null === (f = I.directory_entry) || void 0 === f ? void 0 : f.short_description) && void 0 !== E ? E : I.description
                             }),
-                            y
+                            P
                                 ? (0, i.jsx)('div', {
                                       className: p.memberDetails,
-                                      children: P
+                                      children: y
                                   })
                                 : null
                         ]

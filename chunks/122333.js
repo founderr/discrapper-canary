@@ -57,7 +57,7 @@ class L extends o.Z {
             (null == e ? void 0 : e.hasVerificationGate()) && ((o = !0), (0, m.RM)(e.id));
         }
         let L = () => 0 === g.Z.totalGuilds && !C.isPlatformEmbedded,
-            y = s.b();
+            P = s.b();
         (e = [
             {
                 key: 'Unified NUF Modal',
@@ -112,7 +112,7 @@ class L extends o.Z {
             {
                 key: 'New User Age Gate',
                 open: c.i,
-                predicate: () => y && !L() && !A.a
+                predicate: () => P && !L() && !A.a
             },
             {
                 key: 'Claim Account Modal',

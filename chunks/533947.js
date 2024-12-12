@@ -29,7 +29,7 @@ function x() {
     (N = I.QZA.OPEN), (T = {}), (b = !1);
 }
 let Z = u().debounce(() => {
-    b && ((null == v || u().isEqual(v, L(v.id))) && (b = !1), !b && P.emitChange());
+    b && ((null == v || u().isEqual(v, L(v.id))) && (b = !1), !b && y.emitChange());
 }, 500);
 function L(e) {
     return C.find((t) => {
@@ -37,7 +37,7 @@ function L(e) {
         return n === e;
     });
 }
-class y extends (a = h.ZP.Store) {
+class P extends (a = h.ZP.Store) {
     initialize() {
         this.waitFor(g.Z, f.Z, E.Z, _.Z);
     }
@@ -73,7 +73,7 @@ class y extends (a = h.ZP.Store) {
     }
 }
 (c = 'ChannelSettingsIntegrationsStore'),
-    (s = 'displayName') in (o = y)
+    (s = 'displayName') in (o = P)
         ? Object.defineProperty(o, s, {
               value: c,
               enumerable: !0,
@@ -81,7 +81,7 @@ class y extends (a = h.ZP.Store) {
               writable: !0
           })
         : (o[s] = c);
-let P = new y(
+let y = new P(
     m.Z,
     __OVERLAY__
         ? {}
@@ -155,4 +155,4 @@ let P = new y(
               }
           }
 );
-t.Z = P;
+t.Z = y;

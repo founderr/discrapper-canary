@@ -19,15 +19,15 @@ t.Z = (0, p.Z)(
         let { clientId: n, authorizations: d, scopes: u, parsedPermissions: h, responseType: p, redirectUri: _, codeChallenge: E, codeChallengeMethod: I, state: C, guildId: v, channelId: S, prompt: N, disableGuildSelect: T, disclosures: b, integrationType: A, pid: x } = e,
             Z = 'OAuth2Authorize_'.concat(n, '_').concat(v, '_').concat(S),
             L = null != A ? (null == d ? void 0 : d.get(A)) : void 0,
-            y = null !== (t = null == L ? void 0 : L.application) && void 0 !== t ? t : o.Z.getApplication(n);
+            P = null !== (t = null == L ? void 0 : L.application) && void 0 !== t ? t : o.Z.getApplication(n);
         return new Promise((e, t) => {
             let o = (0, g.jU)(x),
                 L = (i) => {
                     let { clientId: r, location: a } = i;
                     if (null == r || r === n) o.lock(), l.Z.unsubscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', L), null != location ? e(a) : t(new m.Z({ errorCode: f.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));
                 },
-                P = (0, c.R)();
-            if (o.context === f.IlC.OVERLAY && !P) {
+                y = (0, c.R)();
+            if (o.context === f.IlC.OVERLAY && !y) {
                 l.Z.subscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', L),
                     l.Z.dispatch({
                         type: 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN',
@@ -79,10 +79,10 @@ t.Z = (0, p.Z)(
                         (0, r.closeModal)(Z), t(new m.Z({ errorCode: f.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));
                     }
                 },
-                null != y &&
+                null != P &&
                     null !=
                         (0, a.ZP)({
-                            application: y,
+                            application: P,
                             channelId: S
                         })
                     ? r.POPOUT_MODAL_CONTEXT

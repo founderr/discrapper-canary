@@ -26,15 +26,15 @@ t.Z = (e) => {
     let { guildId: b, inviteCode: A } = e,
         [x, Z] = r.useState(v.hO.INITIAL),
         L = (0, l.e7)([p.Z], () => p.Z.get(b)),
-        y = (0, l.e7)([f.Z], () => f.Z.getRequest(b)),
-        P = (0, l.e7)([c.Z], () => c.Z.getGuild(b)),
+        P = (0, l.e7)([f.Z], () => f.Z.getRequest(b)),
+        y = (0, l.e7)([c.Z], () => c.Z.getGuild(b)),
         { hasFetchedRequestToJoinGuilds: O, guildPreviewDisabled: R } = (0, l.cj)([f.Z], () => ({
             hasFetchedRequestToJoinGuilds: f.Z.hasFetchedRequestToJoinGuilds,
             guildPreviewDisabled: f.Z.getJoinRequestGuild(b)
         }));
     r.useEffect(() => {
-        null != P && (0, s.uL)(C.Z5c.CHANNEL(b));
-    }, [P, b]),
+        null != y && (0, s.uL)(C.Z5c.CHANNEL(b));
+    }, [y, b]),
         r.useEffect(() => {
             !O && h.Z.fetchRequestToJoinGuilds();
         }, [O]);
@@ -89,7 +89,7 @@ t.Z = (e) => {
                 (0, i.jsx)('div', {
                     className: N.contentWrapper,
                     children: (() => {
-                        switch (null == y ? void 0 : y.applicationStatus) {
+                        switch (null == P ? void 0 : P.applicationStatus) {
                             case g.wB.SUBMITTED:
                                 return (0, i.jsx)(E.Z, {
                                     onWithdrawApplication: w,
@@ -101,7 +101,7 @@ t.Z = (e) => {
                                     onReapply: M,
                                     confirmText: S.intl.string(S.t.mqtdmZ),
                                     onWithdrawApplication: w,
-                                    rejectionReason: null == y ? void 0 : y.rejectionReason,
+                                    rejectionReason: null == P ? void 0 : P.rejectionReason,
                                     guild: R
                                 });
                             default:

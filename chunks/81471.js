@@ -43,9 +43,9 @@ let N = r.memo(function (e) {
                     : { content: null },
             [N, T]
         ),
-        y = null;
+        P = null;
     if (l)
-        y = (0, i.jsx)(s.Text, {
+        P = (0, i.jsx)(s.Text, {
             className: v.messageReplacement,
             variant: 'text-sm/normal',
             color: 'text-muted',
@@ -53,14 +53,14 @@ let N = r.memo(function (e) {
         });
     else if (n) {
         if (null != N && b)
-            y = (0, i.jsx)(s.Text, {
+            P = (0, i.jsx)(s.Text, {
                 className: v.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 children: C.intl.string(C.t['WPe+xM'])
             });
         else if (null != N && A)
-            y = (0, i.jsx)(s.Text, {
+            P = (0, i.jsx)(s.Text, {
                 className: v.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
@@ -72,7 +72,7 @@ let N = r.memo(function (e) {
                 trailingIconClass: v.messageContentIcon,
                 iconSize: I.WW
             });
-            y =
+            P =
                 null != t
                     ? (0, i.jsx)(s.Text, {
                           variant: 'text-sm/normal',
@@ -88,18 +88,18 @@ let N = r.memo(function (e) {
                           children: e
                       });
         } else
-            y = (0, i.jsx)(s.Text, {
+            P = (0, i.jsx)(s.Text, {
                 className: v.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 children: C.intl.string(C.t['0KfDxM'])
             });
-    } else y = null;
+    } else P = null;
     return (0, i.jsx)(c.a.Provider, {
         value: (0, u.Z)(Z, x),
         children: (0, i.jsx)(s.FocusBlock, {
             className: v.messageFocusBlock,
-            children: y
+            children: P
         })
     });
 });

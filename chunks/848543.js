@@ -30,9 +30,9 @@ var i = n(200651),
 function A(e) {
     let { channel: t, iconClassName: l, className: A, innerClassName: x, ...Z } = e,
         L = (0, p.Q3)('SoundBoardRTCPanelButton'),
-        { mute: y, suppress: P } = (0, f.Z)(t),
+        { mute: P, suppress: y } = (0, f.Z)(t),
         O = (0, o.e7)([_.Z], () => _.Z.isDeaf()),
-        R = y || P || O,
+        R = P || y || O,
         [j, D] = r.useState(!1),
         M = t.getGuildId(),
         w = (0, I.sR)({ isSoundboardButtonDisabled: R }),
@@ -123,8 +123,8 @@ function A(e) {
             value: G,
             children: (0, i.jsx)(d.Tooltip, {
                 text: (function () {
-                    if (y) return T.intl.string(T.t['Ox4/zc']);
-                    if (P) return T.intl.string(T.t['+YBKYG']);
+                    if (P) return T.intl.string(T.t['Ox4/zc']);
+                    if (y) return T.intl.string(T.t['+YBKYG']);
                     if (O) return T.intl.string(T.t.X1lQlp);
                     return T.intl.string(T.t['6EJvHh']);
                 })(),

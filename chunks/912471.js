@@ -90,7 +90,7 @@ function b() {
         })();
 }
 function A() {
-    m.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), c.Z.addChangeListener(Z), r.Z.subscribe('WINDOW_FOCUS', L), r.Z.subscribe('APP_STATE_UPDATE', y), r.Z.subscribe('LOGIN_SUCCESS', x), b();
+    m.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), c.Z.addChangeListener(Z), r.Z.subscribe('WINDOW_FOCUS', L), r.Z.subscribe('APP_STATE_UPDATE', P), r.Z.subscribe('LOGIN_SUCCESS', x), b();
 }
 function x() {
     S();
@@ -103,7 +103,7 @@ function L(e) {
     let { focused: t } = e;
     (T = t), b();
 }
-function y(e) {
+function P(e) {
     let { state: t } = e;
     (T = t === g.$7l.ACTIVE), b();
 }

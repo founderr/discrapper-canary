@@ -34,12 +34,12 @@ function N(e) {
         L = r.useCallback(() => {
             f.Z.closeChannelSidebar(_.uZ), A && T && (0, g.Kh)(t.id), x && b && (0, g.Kh)(t.id);
         }, [t.id, x, b, A, T]),
-        y = r.useCallback(() => {
+        P = r.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(C.intl.string(C.t.pIQ3h4), a.ToastType.FAILURE));
         }, []),
-        { markAsNotSpam: P } = (0, m.m)({
+        { markAsNotSpam: y } = (0, m.m)({
             onAcceptSuccess: L,
-            onError: y
+            onError: P
         });
     if (null == t || !t.isDM()) return null;
     let O = [
@@ -76,7 +76,7 @@ function N(e) {
                         (0, i.jsx)(a.Button, {
                             className: S.hamBannerButton,
                             size: a.ButtonSizes.SMALL,
-                            onClick: () => P(t, Z),
+                            onClick: () => y(t, Z),
                             children: C.intl.string(C.t.koqL3d)
                         })
                     ]

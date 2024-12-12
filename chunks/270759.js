@@ -26,7 +26,7 @@ var i = n(200651),
     x = n(723359),
     Z = n(388032),
     L = n(224602);
-function y() {
+function P() {
     return (0, i.jsx)('div', {
         className: L.inviteToolbar,
         children: (0, i.jsx)(E.Z, { tooltip: Z.intl.string(Z.t.HfOgAw) })
@@ -52,7 +52,7 @@ t.Z = function (e) {
         r.useEffect(() => {
             null != t && m.Z.setInitialSection(t);
         }, [t]);
-    let P = (0, c.e7)([S.Z], () => S.Z.theme),
+    let y = (0, c.e7)([S.Z], () => S.Z.theme),
         { section: O, pendingCount: R } = (0, c.cj)([N.ZP], () => N.ZP.getState()),
         j = (0, c.e7)([f.Z], () => f.Z.getSuggestionCount()),
         D = (e) => {
@@ -66,11 +66,11 @@ t.Z = function (e) {
         children: [
             (0, i.jsx)(p.yY, { location: Z.intl.string(Z.t.TdEu5e) }),
             (0, i.jsx)(d.ThemeProvider, {
-                theme: P,
+                theme: y,
                 children: (e) =>
                     (0, i.jsxs)(_.Z, {
                         className: e,
-                        toolbar: (0, i.jsx)(y, {}),
+                        toolbar: (0, i.jsx)(P, {}),
                         scrollable: s.tq,
                         role: 'navigation',
                         'aria-labelledby': M,

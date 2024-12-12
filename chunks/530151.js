@@ -26,8 +26,8 @@ var i = n(200651),
     x = n(417363),
     Z = n(941128),
     L = n(451478),
-    y = n(424218),
-    P = n(780570),
+    P = n(424218),
+    y = n(780570),
     O = n(353042),
     R = n(86826),
     j = n(981631),
@@ -83,7 +83,7 @@ function B(e, t) {
         case j.f07.ALLOCATING_DISK:
             return ''.concat(e);
         default:
-            return (0, y.BU)(e, { useKibibytes: !0 });
+            return (0, P.BU)(e, { useKibibytes: !0 });
     }
 }
 let H = {
@@ -296,7 +296,7 @@ class K extends r.PureComponent {
             if (null != i && null != r) {
                 let n = B(r, l),
                     a = B(i, l),
-                    o = Math.floor((t = P.xI(i, r)));
+                    o = Math.floor((t = y.xI(i, r)));
                 e =
                     l === j.f07.PAUSING
                         ? D.intl.formatToPlainString(D.t.vjxhWl, {
@@ -327,15 +327,15 @@ class K extends r.PureComponent {
         if (null == e) return null;
         let { progress: n, total: i } = e;
         if (null == n || null == i) return null;
-        let r = P.xI(n, i),
+        let r = y.xI(n, i),
             l = Math.floor(r),
             a =
                 0 === n && 1 === i
                     ? D.intl.string(D.t['+pfsFR'])
                     : D.intl.formatToPlainString(D.t['+feX8f'], {
                           percent: l,
-                          progress: (0, y.BU)(n),
-                          total: (0, y.BU)(i)
+                          progress: (0, P.BU)(n),
+                          total: (0, P.BU)(i)
                       });
         return this.renderBody({
             message: a,
@@ -355,7 +355,7 @@ class K extends r.PureComponent {
         if (null == e) return null;
         let { total: t, progress: n, stage: i, type: r } = e;
         if (null == t || null == n || null == i) return null;
-        let l = P.xI(n, t),
+        let l = y.xI(n, t),
             a = Math.floor(l);
         return this.renderBody({
             percent: l,
@@ -395,8 +395,8 @@ class K extends r.PureComponent {
                 if (null == n) return null;
                 let { stage: i, progress: r, total: l, type: a, readerProgress: o } = n;
                 if (null == r || null == l || null == i) return null;
-                let s = P.xI(r, l),
-                    c = P.xI(null != o ? o : 0, l),
+                let s = y.xI(r, l),
+                    c = y.xI(null != o ? o : 0, l),
                     d = (e[e.length - 1] / t) * 1000,
                     u = l - r,
                     h = F({

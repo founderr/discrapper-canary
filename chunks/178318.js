@@ -105,7 +105,7 @@ class L extends g.Z {
         this._socket = e;
     }
 }
-class y extends g.Z {
+class P extends g.Z {
     send(e) {
         (d.default.isLoggingOverlayEvents || e.cmd !== E.Etm.OVERLAY) && N.info('Socket Emit: '.concat(this.id), e), this._sendCallback(e);
     }
@@ -117,7 +117,7 @@ class y extends g.Z {
         (this._sendCallback = e), (this._closeCallback = t);
     }
 }
-class P extends l.EventEmitter {
+class y extends l.EventEmitter {
     handleRequest(e, t) {
         let [n, i] = b(e.url).split('?'),
             r = b(e.method);
@@ -134,7 +134,7 @@ class P extends l.EventEmitter {
                     let { protocol: r, host: l } = null !== (i = u.Z.toURLSafe(null !== (e = n.get('callback')) && void 0 !== e ? e : '')) && void 0 !== i ? i : {};
                     r === location.protocol && l === location.host ? t.setHeader('Location', n.get('callback')) : t.setHeader('Location', S), t.writeHead(301), t.end();
                 },
-                s = new y(l ? x.bind(null, e, t) : o, l ? Z.bind(null, e, t, 400) : o, Number(n.get('v')), r);
+                s = new P(l ? x.bind(null, e, t) : o, l ? Z.bind(null, e, t, 400) : o, Number(n.get('v')), r);
             if (l)
                 (0, f.em)(s, b(e.headers).origin, n.get('client_id'))
                     .then(() => {
@@ -206,4 +206,4 @@ class P extends l.EventEmitter {
         new v.ws.Server(n).on('connection', (e) => this.handleConnection(e));
     }
 }
-t.Z = new P();
+t.Z = new y();

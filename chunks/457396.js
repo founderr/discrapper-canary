@@ -31,8 +31,8 @@ var i,
     x = n(74538),
     Z = n(502087),
     L = n(657041),
-    y = n(769415),
-    P = n(650032),
+    P = n(769415),
+    y = n(650032),
     O = n(767870),
     R = n(104494),
     j = n(639119),
@@ -87,11 +87,11 @@ let en = (e) => {
         eb = (0, d.e7)([Z.Z], () => Z.Z.getCreatedAtOverride()),
         eA = (0, d.e7)([S.Z], () => S.Z.hasLayers()),
         { fractionalState: ex, endsAt: eZ, currentEntitlementId: eL } = (0, I.Z)({ forceFetch: !0 }),
-        [ey, eP] = (0, v.XR)(ex !== z.a$.NONE ? u.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, ex !== z.a$.NONE ? Number(eL) : 0),
+        [eP, ey] = (0, v.XR)(ex !== z.a$.NONE ? u.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, ex !== z.a$.NONE ? Number(eL) : 0),
         eO = null != eb ? eb : null == el ? void 0 : el.createdAt,
         eR = o || null != em || null != ep || eE || eN || eT || null != eC || null != ev || eu,
-        { enabled: ej } = P._.useExperiment({ location: ee }, { autoTrackExposure: !1 }),
-        { enabled: eD } = y.Z.useExperiment(
+        { enabled: ej } = y._.useExperiment({ location: ee }, { autoTrackExposure: !1 }),
+        { enabled: eD } = P.Z.useExperiment(
             { location: ee },
             {
                 autoTrackExposure: ef,
@@ -186,7 +186,7 @@ let en = (e) => {
         text: K.intl.string(K.t.Ipxkoq),
         locationState: ei,
         onClick: () => {
-            ey === u.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eP(W.L.TAKE_ACTION),
+            eP === u.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && ey(W.L.TAKE_ACTION),
                 A.default.track(Y.rMx.NITRO_TAB_VISITED, {
                     badge_decorator: r,
                     has_premium: eu

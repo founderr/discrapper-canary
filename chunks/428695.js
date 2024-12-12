@@ -58,7 +58,7 @@ t.Z = function (e) {
               color: 'text-muted',
               children: l
           }));
-    let y = null != _ ? ''.concat(_, 'px') : '16px';
+    let P = null != _ ? ''.concat(_, 'px') : '16px';
     return (0, i.jsxs)('div', {
         className: a()(m.container, A),
         children: [
@@ -81,8 +81,8 @@ t.Z = function (e) {
                     className: m.imageContainer,
                     style: {
                         marginTop: ''.concat(E, 'px'),
-                        marginLeft: y,
-                        marginRight: y
+                        marginLeft: P,
+                        marginRight: P
                     },
                     children: (0, i.jsx)('img', {
                         className: m.image,

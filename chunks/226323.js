@@ -59,8 +59,8 @@ function S(e) {
             checkSoundSharing: !0
         }),
         L = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0,
-        y = p.getAvatarURL(l.guild_id, 24),
-        P = null != S ? S : f.ZP.getName(p),
+        P = p.getAvatarURL(l.guild_id, 24),
+        y = null != S ? S : f.ZP.getName(p),
         {
             icon: O,
             colorize: R,
@@ -85,10 +85,10 @@ function S(e) {
         D =
             null != j
                 ? E.intl.formatToPlainString(E.t['1+MVBA'], {
-                      userName: P,
+                      userName: y,
                       status: j()
                   })
-                : P;
+                : y;
     function M(e) {
         null != L
             ? (0, c.jW)(e, async () => {
@@ -141,7 +141,7 @@ function S(e) {
                             isShaking: Z,
                             children: (0, i.jsx)('div', {
                                 className: a()(I.avatar, { [I.speaking]: Z }),
-                                style: { backgroundImage: 'url('.concat(y, ')') },
+                                style: { backgroundImage: 'url('.concat(P, ')') },
                                 children:
                                     null != O
                                         ? (0, i.jsx)(O, {

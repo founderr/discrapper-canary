@@ -26,8 +26,8 @@ var i = n(200651),
     x = n(42575),
     Z = n(617015),
     L = n(981631),
-    y = n(388032),
-    P = n(732144);
+    P = n(388032),
+    y = n(732144);
 t.Z = function (e) {
     let { sectionFilter: t, titleId: l } = e,
         { analyticsLocations: O } = (0, p.ZP)(m.Z.FRIENDS_LIST),
@@ -73,7 +73,7 @@ t.Z = function (e) {
         0 === z.length && '' === U[t])
     )
         return (0, i.jsx)('div', {
-            className: P.emptyStateContainer,
+            className: y.emptyStateContainer,
             children: (0, i.jsx)(
                 S.Z,
                 {
@@ -100,29 +100,29 @@ t.Z = function (e) {
             children: [
                 k && w && (0, i.jsx)(b.R, {}),
                 (0, i.jsx)(s.SearchBar, {
-                    className: a()(P.searchBar, W ? P.searchEmptyState : null),
+                    className: a()(y.searchBar, W ? y.searchEmptyState : null),
                     query: U[t],
                     onChange: H,
                     onClear: V,
                     size: s.SearchBar.Sizes.MEDIUM
                 }),
                 (0, i.jsxs)('div', {
-                    className: P.sectionTitle,
+                    className: y.sectionTitle,
                     children: [
                         (0, i.jsx)(A.Z, {
                             id: l,
                             title: (function (e, t) {
                                 switch (e) {
                                     case L.pJs.ONLINE:
-                                        return y.intl.formatToPlainString(y.t.BagU2d, { online: t.toString() });
+                                        return P.intl.formatToPlainString(P.t.BagU2d, { online: t.toString() });
                                     case L.pJs.PENDING:
-                                        return y.intl.formatToPlainString(y.t.XIpar6, { count: t.toString() });
+                                        return P.intl.formatToPlainString(P.t.XIpar6, { count: t.toString() });
                                     case L.pJs.SUGGESTIONS:
-                                        return y.intl.formatToPlainString(y.t['DYMZ/v'], { count: t.toString() });
+                                        return P.intl.formatToPlainString(P.t['DYMZ/v'], { count: t.toString() });
                                     case L.pJs.BLOCKED:
-                                        return y.intl.formatToPlainString(y.t.M83kKy, { count: t.toString() });
+                                        return P.intl.formatToPlainString(P.t.M83kKy, { count: t.toString() });
                                     default:
-                                        return y.intl.formatToPlainString(y.t.rHRrhI, { count: t.toString() });
+                                        return P.intl.formatToPlainString(P.t.rHRrhI, { count: t.toString() });
                                 }
                             })(t, z.length)
                         }),
@@ -130,19 +130,19 @@ t.Z = function (e) {
                             (0, i.jsx)(s.Button, {
                                 look: s.ButtonLooks.LINK,
                                 color: s.ButtonColors.LINK,
-                                className: P.clearButton,
+                                className: y.clearButton,
                                 size: s.Button.Sizes.TINY,
                                 onClick: (e) => {
                                     e.stopPropagation(), d.Z.confirmClearPendingRelationships(K);
                                 },
-                                'aria-label': y.intl.string(y.t.T3uOb2),
-                                children: y.intl.string(y.t.T3uOb2)
+                                'aria-label': P.intl.string(P.t.T3uOb2),
+                                children: P.intl.string(P.t.T3uOb2)
                             })
                     ]
                 }),
                 W
                     ? (0, i.jsx)('div', {
-                          className: P.emptyStateContainer,
+                          className: y.emptyStateContainer,
                           children: (0, i.jsx)(S.Z, { type: S.j.SECTION_NO_RESULTS }, j)
                       })
                     : (0, i.jsx)(T.Z, {
@@ -185,13 +185,13 @@ t.Z = function (e) {
                           footer: F
                               ? (0, i.jsx)(s.Button, {
                                     look: s.Button.Looks.LINK,
-                                    color: P.viewSpamButtonColor,
-                                    className: P.viewSpamButton,
+                                    color: y.viewSpamButtonColor,
+                                    className: y.viewSpamButton,
                                     onClick: () => B(),
                                     size: s.ButtonSizes.TINY,
                                     children: (0, i.jsx)(s.Text, {
                                         variant: 'text-xs/medium',
-                                        children: k ? y.intl.string(y.t.R40bU1) : y.intl.string(y.t.rXl8fn)
+                                        children: k ? P.intl.string(P.t.R40bU1) : P.intl.string(P.t.rXl8fn)
                                     })
                                 })
                               : null

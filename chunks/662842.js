@@ -31,8 +31,8 @@ var i,
     x = n(501655),
     Z = n(427679),
     L = n(448206),
-    y = n(184301),
-    P = n(347475),
+    P = n(184301),
+    y = n(347475),
     O = n(496675),
     R = n(594174),
     j = n(662868),
@@ -328,9 +328,9 @@ function U(e) {
                                   (0, l.jsx)(
                                       u.Popout,
                                       {
-                                          preload: () => (0, y.Z)(e, { guildId: t.id }),
+                                          preload: () => (0, P.Z)(e, { guildId: t.id }),
                                           renderPopout: (n) =>
-                                              (0, l.jsx)(P.Z, {
+                                              (0, l.jsx)(y.Z, {
                                                   ...n,
                                                   userId: e.id,
                                                   guildId: t.id,

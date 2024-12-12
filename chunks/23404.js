@@ -26,7 +26,7 @@ var i = n(200651),
     x = n(981631),
     Z = n(388032),
     L = n(444865);
-function y(e) {
+function P(e) {
     var t;
     let { quest: n } = e,
         r = (0, m.B6)(n.config.expiresAt),
@@ -66,7 +66,7 @@ t.Z = function (e) {
         d = (0, o.e7)([p.Z], () => p.Z.isEnrolling(s.id), [s]),
         [E, I] = r.useState(!1),
         x = r.useCallback(() => I(!0), []),
-        P = r.useCallback(() => I(!1), []),
+        y = r.useCallback(() => I(!1), []),
         O = r.useCallback((e) => {
             e.stopPropagation();
         }, []),
@@ -125,13 +125,13 @@ t.Z = function (e) {
                       onKeyPress: O,
                       onFocus: x,
                       onMouseEnter: x,
-                      onBlur: P,
-                      onMouseLeave: P,
+                      onBlur: y,
+                      onMouseLeave: y,
                       children: [
                           (0, i.jsxs)('div', {
                               className: L.utils,
                               children: [
-                                  k ? (0, i.jsx)(y, { quest: s }) : (0, i.jsx)(v.Z, { textOpacity: 0.5 }),
+                                  k ? (0, i.jsx)(P, { quest: s }) : (0, i.jsx)(v.Z, { textOpacity: 0.5 }),
                                   (0, i.jsx)(S.r, {
                                       quest: s,
                                       questContent: g.jn.ACTIVITY_PANEL,
@@ -153,7 +153,7 @@ t.Z = function (e) {
                           !k &&
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      (0, i.jsx)(y, { quest: s }),
+                                      (0, i.jsx)(P, { quest: s }),
                                       (0, i.jsx)(c.Text, {
                                           className: L.instructions,
                                           variant: 'text-sm/normal',

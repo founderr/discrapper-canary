@@ -40,7 +40,7 @@ function L(e) {
     } = e;
     if (null != t && null == d.Z.getChannel(t)) throw new _.Z({ errorCode: b.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
 }
-let y = {
+let P = {
     [b.zMe.GUILD_STATUS]: {
         scope: l.x.RPC,
         validation: (e) => (0, C.Z)(e).required().keys({ guild_id: e.string().required() }),
@@ -340,4 +340,4 @@ let y = {
         }
     }
 };
-t.Z = y;
+t.Z = P;
