@@ -10,8 +10,8 @@ var i,
     d = n(388905),
     h = n(108427),
     g = n(598077),
-    p = n(896797),
-    m = n(981631),
+    m = n(896797),
+    p = n(981631),
     f = n(930441),
     _ = n(388032),
     x = n(232186);
@@ -35,7 +35,7 @@ class I extends (i = s.PureComponent) {
             t = (0, l.parse)(this.props.location.search);
         o.tn
             .post({
-                url: m.ANM.DISABLE_EMAIL_NOTIFICATIONS,
+                url: p.ANM.DISABLE_EMAIL_NOTIFICATIONS,
                 body: {
                     token: e,
                     pixel_uuid: t.hash,
@@ -88,7 +88,7 @@ class I extends (i = s.PureComponent) {
                     className: x.marginTop8,
                     color: d.zx.Colors.LINK,
                     look: d.zx.Looks.LINK,
-                    onClick: () => i(m.Z5c.SETTINGS('notifications', f.vG)),
+                    onClick: () => i(p.Z5c.SETTINGS('notifications', f.vG)),
                     children: _.intl.string(_.t.YYTira)
                 })
             ]
@@ -156,4 +156,4 @@ class I extends (i = s.PureComponent) {
             });
     }
 }
-E(I, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }), (t.Z = a.ZP.connectStores([p.Z], () => ({ defaultRoute: p.Z.defaultRoute }))(I));
+E(I, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }), (t.Z = a.ZP.connectStores([m.Z], () => ({ defaultRoute: m.Z.defaultRoute }))(I));

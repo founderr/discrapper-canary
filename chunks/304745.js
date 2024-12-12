@@ -78,7 +78,8 @@ function A(e) {
                 (0, i.jsx)(s.Popout, {
                     fixed: !0,
                     shouldShow: k && (A === Z.D.ACTIVITY || null == A),
-                    animationPosition: 'bottom',
+                    animation: B ? s.Popout.Animation.FADE : s.Popout.Animation.TRANSLATE,
+                    animationPosition: B ? 'top' : 'bottom',
                     position: 'bottom',
                     align: 'center',
                     spacing: 16,
@@ -129,8 +130,7 @@ function A(e) {
                                         ? (0, i.jsx)(g.r, {
                                               top: 0,
                                               right: 0,
-                                              size: 6,
-                                              maskColor: g.T.BLACK
+                                              size: 6
                                           })
                                         : (0, i.jsx)(g.r, {
                                               top: 4,

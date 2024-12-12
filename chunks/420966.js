@@ -36,7 +36,7 @@ function p(e) {
             },
             [f]
         ),
-        v = (0, l.e7)(
+        _ = (0, l.e7)(
             [d.Z],
             () => {
                 var e;
@@ -44,11 +44,11 @@ function p(e) {
             },
             [x.id, t.id]
         ),
-        _ = (0, o.pM)(t.id, x.id),
-        I = (0, u.Z)(x);
+        I = (0, o.pM)(t.id, x.id),
+        v = (0, u.Z)(x);
     r.useEffect(() => {
-        _ && f(m.ZI.PERMISSIONS);
-    }, [_, f]);
+        I && f(m.ZI.PERMISSIONS);
+    }, [I, f]);
     let N = (0, c.useHasGuildRoleItems)(t, x);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -84,10 +84,10 @@ function p(e) {
                         : null
                 ]
             }),
-            null != I
+            null != v
                 ? (0, i.jsx)(s.HelpMessage, {
                       messageType: s.HelpMessageTypes.WARNING,
-                      children: I
+                      children: v
                   })
                 : null,
             (0, i.jsxs)(s.TabBar, {
@@ -101,7 +101,7 @@ function p(e) {
                     (0, i.jsx)(s.TabBar.Item, {
                         className: g.tabBarItem,
                         id: m.ZI.DISPLAY,
-                        disabled: _,
+                        disabled: I,
                         children: h.intl.string(h.t.hmdom5)
                     }),
                     (0, i.jsx)(s.TabBar.Item, {
@@ -112,14 +112,14 @@ function p(e) {
                     (0, i.jsx)(s.TabBar.Item, {
                         className: g.tabBarItem,
                         id: m.ZI.VERIFICATIONS,
-                        disabled: _,
+                        disabled: I,
                         children: h.intl.string(h.t['5//Mur'])
                     }),
                     (0, i.jsx)(s.TabBar.Item, {
                         className: g.tabBarItem,
                         id: m.ZI.MEMBERS,
-                        disabled: _,
-                        children: _ ? h.intl.string(h.t['kg//+/']) : h.intl.formatToPlainString(h.t.bHnZWV, { numMembers: String(v) })
+                        disabled: I,
+                        children: I ? h.intl.string(h.t['kg//+/']) : h.intl.formatToPlainString(h.t.bHnZWV, { numMembers: String(_) })
                     })
                 ]
             })

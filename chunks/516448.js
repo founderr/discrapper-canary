@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return I;
     }
 }),
     n(47120);
@@ -20,14 +20,14 @@ var i = n(200651),
     p = n(574085),
     f = n(293810),
     C = n(388032),
-    v = n(83701);
-function _(e) {
+    _ = n(83701);
+function I(e) {
     let { allSubscriptionListings: t } = e,
-        { editStateId: n, guildId: _ } = (0, o.N)(),
-        [I, N] = c.UE(n),
+        { editStateId: n, guildId: I } = (0, o.N)(),
+        [v, N] = c.UE(n),
         [T, b] = c.R7(n),
         j = r.useMemo(() => t.filter((e) => e.id !== n), [t, n]),
-        { isFullServerGating: S } = (0, d.Z)(_),
+        { isFullServerGating: S } = (0, d.Z)(I),
         E = (0, s.Dt)(),
         R = (0, a.mY)();
     return (0, i.jsxs)(u.Z, {
@@ -40,12 +40,12 @@ function _(e) {
                 children: [
                     (0, i.jsx)(l.FormText, {
                         type: l.FormText.Types.DESCRIPTION,
-                        className: v.formDescription,
+                        className: _.formDescription,
                         disabled: R,
                         children: C.intl.string(C.t.kHalVF)
                     }),
                     (0, i.jsx)(m.Z, {
-                        channelBenefits: I,
+                        channelBenefits: v,
                         intangibleBenefits: T,
                         subscriptionListings: j,
                         onImport: function (e, t) {
@@ -54,7 +54,7 @@ function _(e) {
                     }),
                     (0, i.jsx)(l.Spacer, { size: 8 }),
                     (0, i.jsx)(m.w, {
-                        guildId: _,
+                        guildId: I,
                         onImport: function (e) {
                             N((t) => {
                                 let n = new Set(
@@ -86,7 +86,7 @@ function _(e) {
                 children: [
                     (0, i.jsx)(l.FormText, {
                         type: l.FormText.Types.DESCRIPTION,
-                        className: v.formDescription,
+                        className: _.formDescription,
                         disabled: R,
                         children: C.intl.string(C.t['5a4Axc'])
                     }),
@@ -110,7 +110,7 @@ function _(e) {
                 children: [
                     (0, i.jsx)(l.FormText, {
                         type: l.FormText.Types.DESCRIPTION,
-                        className: v.formDescription,
+                        className: _.formDescription,
                         disabled: R,
                         children: C.intl.string(C.t.zAww7e)
                     }),

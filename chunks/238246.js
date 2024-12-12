@@ -19,8 +19,8 @@ var i,
     _ = n(496616),
     x = n(100527),
     E = n(906732),
-    Z = n(168551),
-    C = n(597952),
+    C = n(168551),
+    Z = n(597952),
     y = n(628123),
     b = n(686546),
     T = n(80006),
@@ -102,13 +102,13 @@ class H extends (i = a.Component) {
             n = t.document,
             i = (0, n.head);
         c()(null != i, 'Window document '.concat('head', ' was null'));
-        let l = i.querySelector('style['.concat(Z.PQ, ']'));
+        let l = i.querySelector('style['.concat(C.PQ, ']'));
         if (null != l) {
             l.textContent = e;
             return;
         }
         let a = n.createElement('style');
-        a.setAttribute(Z.PQ, 'true'), (a.textContent = e), i.appendChild(a);
+        a.setAttribute(C.PQ, 'true'), (a.textContent = e), i.appendChild(a);
     }
     updateForcedColors() {
         let { useForcedColors: e, systemForcedColors: t, guestWindow: n } = this.props;
@@ -134,7 +134,7 @@ class H extends (i = a.Component) {
                                 children: (0, l.jsx)('div', {
                                     'data-popout-root': !0,
                                     ref: this.rootRef,
-                                    className: s()(e, (0, C.Z)(), E, S, _),
+                                    className: s()(e, (0, Z.Z)(), E, S, _),
                                     children: (0, l.jsx)(f.FocusRingScope, {
                                         containerRef: this.rootRef,
                                         children: (0, l.jsx)(v.Z, {
@@ -223,7 +223,7 @@ let Y = a.forwardRef(function (e, t) {
     (0, N.Z)(n, !1);
     let g = (0, w.Z)(n, i),
         { analyticsLocations: v } = (0, E.ZP)(x.Z.POPOUT_WINDOW),
-        { clientThemesClassName: S, clientThemesCSS: _ } = (0, Z.ZP)();
+        { clientThemesClassName: S, clientThemesCSS: _ } = (0, C.ZP)();
     return null == n
         ? null
         : (0, l.jsx)(f.DnDProvider, {

@@ -15,9 +15,9 @@ var i = n(200651),
     p = n(690221),
     f = n(706454),
     C = n(650774),
-    v = n(430824),
-    _ = n(246946),
-    I = n(626135),
+    _ = n(430824),
+    I = n(246946),
+    v = n(626135),
     N = n(771212),
     T = n(434404),
     b = n(146596),
@@ -31,8 +31,8 @@ var i = n(200651),
     L = n(287837),
     D = n(573189),
     O = n(899947),
-    k = n(117831),
-    P = n(996737),
+    P = n(117831),
+    k = n(996737),
     M = n(21846),
     w = n(280632),
     B = n(44234),
@@ -67,7 +67,7 @@ let G = function (e, t, n) {
                 });
     };
 function H(e) {
-    I.default.track(E.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
+    v.default.track(E.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
     let t = null == e ? E.E07.DEVELOPER_PORTAL : E.E07.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
         n = (0, l.Z)();
     return o.tn
@@ -263,7 +263,7 @@ function W(e) {
                                                       (0, i.jsx)('img', {
                                                           alt: '',
                                                           className: A.actionIcon,
-                                                          src: k
+                                                          src: P
                                                       }),
                                                       (0, i.jsx)(u.Text, {
                                                           className: A.actionText,
@@ -327,7 +327,7 @@ function W(e) {
                                           (0, i.jsx)('img', {
                                               alt: '',
                                               className: A.actionIcon,
-                                              src: P
+                                              src: k
                                           }),
                                           (0, i.jsx)(u.Text, {
                                               className: A.actionText,
@@ -363,13 +363,13 @@ function W(e) {
 t.Z = () => {
     let e = (0, a.e7)([S.Z], () => S.Z.getGuildId()),
         t = (0, a.e7)([C.Z], () => C.Z.getMemberCount(e)),
-        n = (0, a.e7)([v.Z], () => v.Z.getGuild(e)),
+        n = (0, a.e7)([_.Z], () => _.Z.getGuild(e)),
         l = (0, a.e7)([f.default], () => f.default.locale),
         { analytics: s, errorCode: o } = (0, a.cj)([j.Z], () => ({
             analytics: null != e ? j.Z.getOverviewAnalytics(e) : null,
             errorCode: j.Z.getError()
         })),
-        c = (0, a.e7)([_.Z], () => _.Z.getSettings().enabled),
+        c = (0, a.e7)([I.Z], () => I.Z.getSettings().enabled),
         d = null == t || null == n || (null != t && t < 500 && null != n && !n.hasFeature(E.oNc.PARTNERED) && !n.hasFeature(E.oNc.VERIFIED));
     r.useEffect(() => {
         null != e && !d && ((0, b.Vk)(e), (0, b.SR)(e), (0, b.xl)(e));

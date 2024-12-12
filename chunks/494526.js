@@ -16,8 +16,8 @@ var i,
     d = n(399606),
     h = n(544891),
     g = n(481060),
-    p = n(893776),
-    m = n(99690),
+    m = n(893776),
+    p = n(99690),
     f = n(937154),
     _ = n(388905),
     x = n(198993),
@@ -116,7 +116,7 @@ function y(e) {
                                               let t = (0, c.wz)(JSON.parse(e));
                                               return (0, c.U2)(t).then((e) => JSON.stringify(e));
                                           };
-                                p.Z.authenticatePasswordless({
+                                m.Z.authenticatePasswordless({
                                     authenticateFunc: t,
                                     conditionalMediationAbortController: e
                                 }).catch(() => {});
@@ -130,7 +130,7 @@ function y(e) {
             let { user: e } = t;
             return (0, a.jsxs)(a.Fragment, {
                 children: [
-                    (0, a.jsx)(m.Z, {
+                    (0, a.jsx)(p.Z, {
                         className: Z.qrAvatar,
                         user: e,
                         size: g.AvatarSizes.SIZE_120,
@@ -177,16 +177,16 @@ function k(e) {
             g.current = o.useCallback(() => {
                 l({ step: 0 }), d ? n((e) => e + 1) : (P.info('document is not visible, will defer reconnection when document becomes visible.'), r(!0));
             }, [d]);
-            let p = o.useCallback(() => {
+            let m = o.useCallback(() => {
                     (function (e) {
                         let { current: t } = e;
                         if (void 0 === t) throw Error('tried to unwrap an undefined value.');
                         return t;
                     })(g)();
                 }, [g]),
-                m = o.useCallback(() => {
-                    P.error('Could not complete QR code login, trying to restart with a new QR code.'), l({ step: 0 }), !h.pending && h.fail(p);
-                }, [p, h]);
+                p = o.useCallback(() => {
+                    P.error('Could not complete QR code login, trying to restart with a new QR code.'), l({ step: 0 }), !h.pending && h.fail(m);
+                }, [m, h]);
             return (
                 o.useEffect(() => {
                     d && i && 0 === s.step && (P.info('reconnecting, now that document is visible'), r(!1), n((e) => e + 1));
@@ -208,7 +208,7 @@ function k(e) {
                         throw Error('No key pair set');
                     }
                     let _ = () => {
-                        g ? ((g = !1), r.send(JSON.stringify({ op: 'heartbeat' }))) : (s('heartbeat timeout, reconnecting.'), r.close(), m());
+                        g ? ((g = !1), r.send(JSON.stringify({ op: 'heartbeat' }))) : (s('heartbeat timeout, reconnecting.'), r.close(), p());
                     };
                     return (
                         (r.onmessage = async (t) => {
@@ -240,7 +240,7 @@ function k(e) {
                                 }
                                 case 'pending_login': {
                                     let e = i.ticket;
-                                    null == e && m(),
+                                    null == e && p(),
                                         l({
                                             step: 4,
                                             ticket: e
@@ -272,7 +272,7 @@ function k(e) {
                                     return;
                                 }
                                 case 'cancel':
-                                    s('remote auth handshake cancelled.'), p();
+                                    s('remote auth handshake cancelled.'), m();
                                     return;
                                 case 'hello': {
                                     s('got hello, auth timeout='.concat(i.timeout_ms, 'ms'));
@@ -302,25 +302,25 @@ function k(e) {
                                 c(a);
                         }),
                         (r.onclose = (e) => {
-                            s('disconnected, code: '.concat(e.code, ' ').concat(e.reason)), m();
+                            s('disconnected, code: '.concat(e.code, ' ').concat(e.reason)), p();
                         }),
                         (r.onerror = (e) => {
-                            s('disconnected, error: '.concat(JSON.stringify(e))), m();
+                            s('disconnected, error: '.concat(JSON.stringify(e))), p();
                         }),
                         () => {
                             s('cleaning up'), (r.onopen = () => null), (r.onmessage = () => null), (r.onclose = () => null), (r.onerror = () => null), r.close(1000), h.cancel(), null != d && clearTimeout(d), null != u && clearInterval(u);
                         }
                     );
-                }, [p, e, t, h, m]),
+                }, [m, e, t, h, p]),
                 {
                     state: s,
                     rsaKeyPair: a,
-                    cancel: p,
-                    handleFailure: m
+                    cancel: m,
+                    handleFailure: p
                 }
             );
         })(t),
-        p = (function (e) {
+        m = (function (e) {
             switch (e) {
                 case 0:
                 case 1:
@@ -363,7 +363,7 @@ function k(e) {
                 (0, a.jsx)(g.Sequencer, {
                     fillParent: !0,
                     className: Z.qrLogin,
-                    step: p,
+                    step: m,
                     steps: [0, 1],
                     children: (0, a.jsx)('div', {
                         className: Z.qrLoginInner,

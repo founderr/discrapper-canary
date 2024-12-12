@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return I;
     }
 }),
     n(47120);
@@ -20,16 +20,16 @@ var i = n(200651),
     p = n(290511),
     f = n(388032),
     C = n(554205);
-function v(e) {
+function _(e) {
     let { guild: t, prejoinOnly: n, postjoinOnly: l } = e,
         c = (0, a.e7)([g.Z], () => g.Z.editedOnboardingPrompts),
         u = c.filter((e) => e.inOnboarding),
         m = u.length,
         {
             drag: x,
-            drop: v,
-            dragSourcePosition: _,
-            setIsDraggable: I
+            drop: _,
+            dragSourcePosition: I,
+            setIsDraggable: v
         } = (0, d.Z)({
             type: 'ONBOARDING_PROMPT_CARD',
             index: m,
@@ -41,16 +41,16 @@ function v(e) {
         N = r.useRef(null);
     return (
         r.useEffect(() => {
-            I(!1);
-        }, [I]),
+            v(!1);
+        }, [v]),
         r.useEffect(() => {
-            x(v(N));
-        }, [x, v, N]),
+            x(_(N));
+        }, [x, _, N]),
         (0, i.jsxs)('div', {
             ref: N,
             className: s()(C.separatorSection, {
-                [C.dropIndicatorBefore]: null != _ && m < _,
-                [C.dropIndicatorAfter]: null != _ && m > _
+                [C.dropIndicatorBefore]: null != I && m < I,
+                [C.dropIndicatorAfter]: null != I && m > I
             }),
             children: [
                 !l && u.length < p.b3
@@ -94,14 +94,14 @@ function v(e) {
         })
     );
 }
-function _(e) {
+function I(e) {
     let { guildId: t, prejoinOnly: n, postjoinOnly: r, includeCount: l, singleColumn: s } = e,
         d = (0, a.e7)([m.Z], () => m.Z.getGuild(t)),
-        _ = (0, a.e7)([g.Z], () => g.Z.editedOnboardingPrompts),
-        I = _.filter((e) => e.inOnboarding),
-        N = _.filter((e) => !0 !== e.inOnboarding),
+        I = (0, a.e7)([g.Z], () => g.Z.editedOnboardingPrompts),
+        v = I.filter((e) => e.inOnboarding),
+        N = I.filter((e) => !0 !== e.inOnboarding),
         T = [
-            ...I.map((e) => ({
+            ...v.map((e) => ({
                 id: e.id,
                 data: e
             })),
@@ -162,7 +162,7 @@ function _(e) {
                                               })
                                           ]
                                       }),
-                                I.map((e, t) =>
+                                v.map((e, t) =>
                                     (0, i.jsx)(
                                         x.Z,
                                         {
@@ -182,7 +182,7 @@ function _(e) {
                                 )
                             ]
                         }),
-                  (0, i.jsx)(v, {
+                  (0, i.jsx)(_, {
                       guild: d,
                       prejoinOnly: n,
                       postjoinOnly: r
@@ -197,8 +197,8 @@ function _(e) {
                                         {
                                             guild: d,
                                             prompt: e,
-                                            promptIndex: t + I.length,
-                                            dragIndex: t + I.length + 1,
+                                            promptIndex: t + v.length,
+                                            dragIndex: t + v.length + 1,
                                             onPromptDragStart: b,
                                             onPromptDragReset: j,
                                             onPromptDragComplete: S
@@ -206,10 +206,10 @@ function _(e) {
                                         e.id
                                     )
                                 ),
-                                _.length < p.YW
+                                I.length < p.YW
                                     ? (0, i.jsxs)(o.Clickable, {
                                           className: C.addPrompt,
-                                          onClick: () => (0, h.tS)(d, [..._, (0, p.yZ)(!1)], !1),
+                                          onClick: () => (0, h.tS)(d, [...I, (0, p.yZ)(!1)], !1),
                                           children: [
                                               (0, i.jsx)(o.CirclePlusIcon, {
                                                   size: 'custom',

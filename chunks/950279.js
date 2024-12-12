@@ -15,13 +15,13 @@ function x(e) {
     let { gameApplicationIds: t, preventGameRemoval: n, onUpdateGames: l, minGames: o = 1, error: x } = e,
         { options: p, matchSorterOptions: f } = (0, c.P)(),
         C = r.useMemo(() => Array.from(t), [t]),
-        v = r.useCallback(
+        _ = r.useCallback(
             (e) => {
                 if (!(e.length < o)) l(new Set(e));
             },
             [o, l]
         ),
-        _ = r.useCallback(
+        I = r.useCallback(
             (e) => {
                 if (n) return;
                 let i = new Set(t);
@@ -29,7 +29,7 @@ function x(e) {
             },
             [n, t, l]
         ),
-        I = r.useCallback(() => null, []);
+        v = r.useCallback(() => null, []);
     return (0, i.jsx)('div', {
         className: h.inputContainer,
         children: (0, i.jsxs)(a.FormItem, {
@@ -43,12 +43,12 @@ function x(e) {
                     options: p,
                     value: C,
                     placeholder: m.intl.string(m.t.acyezc),
-                    onChange: v,
+                    onChange: _,
                     isDisabled: t.size === u.cm,
                     matchSorterOptions: f,
                     clearQueryOnSelect: !0,
                     customPillContainerClassName: h.pills,
-                    renderCustomPill: I
+                    renderCustomPill: v
                 }),
                 C.length > 0 &&
                     (0, i.jsxs)('div', {
@@ -78,7 +78,7 @@ function x(e) {
                                                             imageContainerClassName: t.size > o ? h.clickableGame : void 0,
                                                             selected: !0,
                                                             locked: n,
-                                                            onClick: _
+                                                            onClick: I
                                                         },
                                                         e
                                                     )

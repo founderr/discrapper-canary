@@ -36,8 +36,8 @@ var i = n(200651),
     d = n(372769),
     h = n(768581),
     g = n(51144),
-    p = n(245335),
-    m = n(981631),
+    m = n(245335),
+    p = n(981631),
     f = n(888592),
     _ = n(388032),
     x = n(105401);
@@ -50,10 +50,10 @@ let E = 100,
         };
         return 0 === i.memberCount && 0 === i.memberCount ? null : i;
     },
-    v = (e) => e.target_type === p.Iq.STREAM && null != e.target_user,
+    v = (e) => e.target_type === m.Iq.STREAM && null != e.target_user,
     N = (e) => {
         var t;
-        return (null === (t = e.channel) || void 0 === t ? void 0 : t.type) === m.d4z.GROUP_DM;
+        return (null === (t = e.channel) || void 0 === t ? void 0 : t.type) === p.d4z.GROUP_DM;
     },
     b = (e) => null == e.channel && null == e.guild && null != e.inviter,
     C = (e) => {
@@ -61,7 +61,7 @@ let E = 100,
         let n = I(e);
         return (null !== (t = null == n ? void 0 : n.memberCount) && void 0 !== t ? t : 0) > E;
     },
-    S = (e) => e.state === m.r2o.ACCEPTED,
+    S = (e) => e.state === p.r2o.ACCEPTED,
     A = (e) => {
         let { guild_scheduled_event: t } = e;
         return null != t || !1;
@@ -134,9 +134,9 @@ function L(e) {
     let t,
         n,
         r,
-        { user: s, guild: l, channel: u, application: h, showBigUserIcon: p } = e;
+        { user: s, guild: l, channel: u, application: h, showBigUserIcon: m } = e;
     if (null != l)
-        p &&
+        m &&
             null == h &&
             (t = (0, i.jsx)(o.Vj, {
                 guild: l,

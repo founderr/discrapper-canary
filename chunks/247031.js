@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return k;
     }
 }),
     n(47120),
@@ -21,9 +21,9 @@ var i = n(200651),
     p = n(246946),
     f = n(594174),
     C = n(251625),
-    v = n(226951),
-    _ = n(51144),
-    I = n(434404),
+    _ = n(226951),
+    I = n(51144),
+    v = n(434404),
     N = n(372454),
     T = n(999382),
     b = n(84613),
@@ -71,7 +71,7 @@ function L(e) {
                     (0, i.jsx)(g.Z, {
                         size: g.Z.Sizes.SIZE_24,
                         className: y.userUsername,
-                        children: _.ZP.getUserTag(l, {
+                        children: I.ZP.getUserTag(l, {
                             mode: 'username',
                             identifiable: a ? 'never' : 'always'
                         })
@@ -143,7 +143,7 @@ class D extends r.PureComponent {
                 (0, i.jsxs)('div', {
                     className: y.username,
                     children: [
-                        _.ZP.getUserTag(e, {
+                        I.ZP.getUserTag(e, {
                             mode: 'username',
                             identifiable: t ? 'never' : 'always'
                         }),
@@ -188,7 +188,7 @@ class O extends r.PureComponent {
     makeFilter(e) {
         if (null == e || 0 === e.length) return (e) => null != e;
         {
-            let t = RegExp('^'.concat(v.Z.escape(e)), 'i');
+            let t = RegExp('^'.concat(_.Z.escape(e)), 'i');
             return (n) => null != n && (n.id === e || t.test(n.username));
         }
     }
@@ -205,13 +205,13 @@ class O extends r.PureComponent {
         });
     }
     handleModerationClick() {
-        I.Z.setSection(E.pNK.SAFETY), (0, b.K)(j.u.DM_AND_SPAM_PROTECTION);
+        v.Z.setSection(E.pNK.SAFETY), (0, b.K)(j.u.DM_AND_SPAM_PROTECTION);
     }
     handleQueryChange(e) {
-        I.Z.setSearchQuery(e);
+        v.Z.setSearchQuery(e);
     }
     handleQueryClear() {
-        I.Z.setSearchQuery('');
+        v.Z.setSearchQuery('');
     }
     constructor(...e) {
         super(...e),
@@ -331,7 +331,7 @@ class O extends r.PureComponent {
             });
     }
 }
-let k = o.ZP.connectStores([T.Z, x.Z, p.Z], () => {
+let P = o.ZP.connectStores([T.Z, x.Z, p.Z], () => {
     let { bans: e, guild: t, searchQuery: n } = T.Z.getProps();
     return {
         searchQuery: null != n ? n : '',
@@ -341,7 +341,7 @@ let k = o.ZP.connectStores([T.Z, x.Z, p.Z], () => {
         streamerMode: p.Z.hidePersonalInformation
     };
 })(O);
-function P() {
+function k() {
     var e;
     let { guild: t } = (0, o.e7)([T.Z], () => T.Z.getProps(), [], a.isEqual),
         { enabled: n } = N.T.useExperiment(
@@ -351,5 +351,5 @@ function P() {
             },
             { autoTrackExposure: !0 }
         );
-    return n ? (0, i.jsx)(S.Z, {}) : (0, i.jsx)(k, {});
+    return n ? (0, i.jsx)(S.Z, {}) : (0, i.jsx)(P, {});
 }

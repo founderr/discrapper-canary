@@ -17,12 +17,12 @@ function m(e) {
     let { guildId: t, existingRules: n } = e,
         { cancelEditingRule: m, isLoading: h, hasChanges: g, editingRule: x, errorMessage: p, saveEditingRule: f } = (0, c.w)(),
         { updateRule: C } = (0, o.pH)(t),
-        v = null != x,
-        _ = v && !(0, a.Vb)(x),
-        I = v || g || _,
+        _ = null != x,
+        I = _ && !(0, a.Vb)(x),
+        v = _ || g || I,
         N = async () => {
-            if (!g && !_) return m();
-            null != x && !_ && C(x);
+            if (!g && !I) return m();
+            null != x && !I && C(x);
             let e = n.find((e) => {
                 let { id: t } = e;
                 return t === (null == x ? void 0 : x.id);
@@ -35,7 +35,7 @@ function m(e) {
             }
         },
         T = d.intl.string(d.t['ETE/oK']),
-        b = !g && v ? d.intl.formatToPlainString(d.t.nula39, { ruleName: null == x ? void 0 : x.name }) : void 0;
+        b = !g && _ ? d.intl.formatToPlainString(d.t.nula39, { ruleName: null == x ? void 0 : x.name }) : void 0;
     return (
         null != p &&
             (b = (0, i.jsx)(l.Text, {
@@ -48,7 +48,7 @@ function m(e) {
             component: 'div',
             className: u.saveNoticeContainer,
             children:
-                I &&
+                v &&
                 (0, i.jsx)(l.SlideIn, {
                     children: (0, i.jsx)(s.Z, {
                         submitting: h,

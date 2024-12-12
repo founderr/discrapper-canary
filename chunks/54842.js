@@ -15,9 +15,9 @@ var i = n(200651),
     p = n(388032),
     f = n(905697),
     C = n(438825),
-    v = n(236140),
-    _ = n(37069),
-    I = n(518513),
+    _ = n(236140),
+    I = n(37069),
+    v = n(518513),
     N = n(168179),
     T = n(348986),
     b = n(930065),
@@ -88,7 +88,7 @@ let S = () => [
             rightAlign: !0
         },
         {
-            iconSrc: I,
+            iconSrc: v,
             name: 'Learn Latin',
             position: [-280, -30],
             faded: !0
@@ -105,7 +105,7 @@ let S = () => [
             position: [-250, 40]
         },
         {
-            iconSrc: _,
+            iconSrc: I,
             name: 'Hogwarts School',
             position: [-270, 40],
             faded: !0,
@@ -169,10 +169,10 @@ t.Z = (e) => {
     let { guild: t } = e,
         [n, l] = r.useState(0),
         [s, o] = r.useState(0),
-        [_, I] = r.useState(),
+        [I, v] = r.useState(),
         N = (0, a.e7)([m.Z], () => m.Z.can(g.Plq.ADMINISTRATOR, t)),
-        T = null == _ ? void 0 : _.offsetWidth,
-        b = null == _ ? void 0 : _.offsetHeight;
+        T = null == I ? void 0 : I.offsetWidth,
+        b = null == I ? void 0 : I.offsetHeight;
     r.useEffect(() => {
         null != T && l(T / 2), null != b && o(b / 2);
     }, [T, b, l, o]),
@@ -187,7 +187,7 @@ t.Z = (e) => {
         children: [
             (0, i.jsxs)('div', {
                 className: f.banner,
-                ref: (e) => I(e),
+                ref: (e) => v(e),
                 children: [
                     E.map((e) =>
                         (0, i.jsx)(
@@ -207,7 +207,7 @@ t.Z = (e) => {
                     }),
                     (0, i.jsx)('img', {
                         alt: '',
-                        src: v,
+                        src: _,
                         className: f.sparkles
                     })
                 ]

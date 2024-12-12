@@ -20,9 +20,9 @@ var i = n(200651),
     p = n(393238),
     f = n(313201),
     C = n(345861),
-    v = n(208567),
-    _ = n(73346),
-    I = n(624138),
+    _ = n(208567),
+    I = n(73346),
+    v = n(624138),
     N = n(584825),
     T = n(723047),
     b = n(927954),
@@ -32,7 +32,7 @@ var i = n(200651),
     R = n(333866),
     y = n(388032),
     Z = n(848720);
-let A = (0, I.Mg)(h.Z.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_OVERVIEW_SETTINGS_MAX_WIDTH);
+let A = (0, v.Mg)(h.Z.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_OVERVIEW_SETTINGS_MAX_WIDTH);
 function L() {
     return [
         {
@@ -95,12 +95,12 @@ function O(e) {
         a = (0, N.YB)(n.id),
         c = r.useCallback(() => {
             var e;
-            return (null == a ? void 0 : null === (e = a.cover_image_asset) || void 0 === e ? void 0 : e.application_id) == null ? null : (0, _._W)(a.cover_image_asset.application_id, a.cover_image_asset, A);
+            return (null == a ? void 0 : null === (e = a.cover_image_asset) || void 0 === e ? void 0 : e.application_id) == null ? null : (0, I._W)(a.cover_image_asset.application_id, a.cover_image_asset, A);
         }, [a]),
         [u, h] = r.useState(s),
-        [p, I] = r.useState(null !== (t = null == a ? void 0 : a.description) && void 0 !== t ? t : ''),
+        [p, v] = r.useState(null !== (t = null == a ? void 0 : a.description) && void 0 !== t ? t : ''),
         [L, O] = r.useState(c),
-        [k, P] = r.useState(null == a ? void 0 : a.store_page_guild_products_default_sort),
+        [P, k] = r.useState(null == a ? void 0 : a.store_page_guild_products_default_sort),
         [M, w] = r.useState(null == a ? void 0 : a.server_shop_tab_order),
         { loading: B, error: U, updateSubscriptionsSettings: G } = (0, N.QV)(),
         { imageCTA: F, imageAriaLabel: H, setFilename: z } = (0, b.Z)(null == a ? void 0 : a.cover_image_asset),
@@ -112,12 +112,12 @@ function O(e) {
     }
     let q = r.useMemo(() => {
             var e;
-            return (null != p && p !== (null !== (e = null == a ? void 0 : a.description) && void 0 !== e ? e : '')) || (null == L ? void 0 : L.startsWith('data:')) === !0 || u !== s || (null == a ? void 0 : a.store_page_guild_products_default_sort) !== k || (null == a ? void 0 : a.server_shop_tab_order) !== M;
-        }, [L, s, p, a, u, k, M]),
+            return (null != p && p !== (null !== (e = null == a ? void 0 : a.description) && void 0 !== e ? e : '')) || (null == L ? void 0 : L.startsWith('data:')) === !0 || u !== s || (null == a ? void 0 : a.store_page_guild_products_default_sort) !== P || (null == a ? void 0 : a.server_shop_tab_order) !== M;
+        }, [L, s, p, a, u, P, M]),
         X = null != p && '' !== p && null != L;
     r.useEffect(() => {
         var e;
-        (null == a ? void 0 : null === (e = a.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null && O((0, _._W)(a.cover_image_asset.application_id, a.cover_image_asset, A));
+        (null == a ? void 0 : null === (e = a.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null && O((0, I._W)(a.cover_image_asset.application_id, a.cover_image_asset, A));
     }, [null == a ? void 0 : a.cover_image_asset]);
     let Q = (0, T.mY)(),
         J = r.useMemo(
@@ -200,7 +200,7 @@ function O(e) {
                     value: p,
                     rows: 2,
                     autosize: !0,
-                    onChange: I,
+                    onChange: v,
                     'aria-labelledby': V,
                     disabled: Q
                 })
@@ -216,7 +216,7 @@ function O(e) {
                         disabled: Q,
                         children: y.intl.string(y.t.i2rCwc)
                     }),
-                    (0, i.jsx)(v.Z, {
+                    (0, i.jsx)(_.Z, {
                         image: L,
                         hint: F,
                         showIcon: !0,
@@ -257,10 +257,10 @@ function O(e) {
                                       children: y.intl.string(y.t.TILN8v)
                                   }),
                                   (0, i.jsx)(g.SingleSelect, {
-                                      value: k,
+                                      value: P,
                                       placeholder: y.intl.string(y.t.XqMe3N),
                                       options: J,
-                                      onChange: (e) => P(e)
+                                      onChange: (e) => k(e)
                                   })
                               ]
                           })
@@ -303,12 +303,12 @@ function O(e) {
                             disabled: !X,
                             onReset: () => {
                                 var e;
-                                h(s), I(null !== (e = null == a ? void 0 : a.description) && void 0 !== e ? e : ''), O(c), P(null == a ? void 0 : a.store_page_guild_products_default_sort), w(null == a ? void 0 : a.server_shop_tab_order);
+                                h(s), v(null !== (e = null == a ? void 0 : a.description) && void 0 !== e ? e : ''), O(c), k(null == a ? void 0 : a.store_page_guild_products_default_sort), w(null == a ? void 0 : a.server_shop_tab_order);
                             },
                             onSave: () => {
                                 o()(null != a, 'Settings must be defined');
                                 let e = {};
-                                p !== a.description && (e.description = p), null != L && L.startsWith('data:') && (e.cover_image = L), u !== s && (e.full_server_gate = u === E.e3.ALL_CHANNELS), k !== a.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = k), M !== a.server_shop_tab_order && (e.server_shop_tab_order = M), !d().isEmpty(e) && G(n.id, e);
+                                p !== a.description && (e.description = p), null != L && L.startsWith('data:') && (e.cover_image = L), u !== s && (e.full_server_gate = u === E.e3.ALL_CHANNELS), P !== a.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = P), M !== a.server_shop_tab_order && (e.server_shop_tab_order = M), !d().isEmpty(e) && G(n.id, e);
                             },
                             saveButtonTooltip: X ? void 0 : y.intl.string(y.t['6HRvio'])
                         })

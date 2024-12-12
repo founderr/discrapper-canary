@@ -25,8 +25,8 @@ function I(e) {
         { emoji: m, sentAt: I } = n,
         _ = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
         [x, E] = l.useState(!0),
-        Z = !_,
-        C = (0, c.useTransition)(x, {
+        C = !_,
+        Z = (0, c.useTransition)(x, {
             from: { rotate: -120 },
             enter: { rotate: 0 },
             leave: { rotate: -120 },
@@ -43,18 +43,18 @@ function I(e) {
                 ? (0, f.H)(t)
                 : (e = setTimeout(
                       () => {
-                          E(!1), Z && (0, f.H)(t);
+                          E(!1), C && (0, f.H)(t);
                       },
-                      Z ? h : g
+                      C ? h : g
                   )),
             () => {
                 null != e && clearTimeout(e);
             }
         );
-    }, [I, t, Z]),
-    Z)
+    }, [I, t, C]),
+    C)
         ? null
-        : C((e, t) => {
+        : Z((e, t) => {
               var n;
               let { rotate: l } = e;
               return (

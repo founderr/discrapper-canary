@@ -6,7 +6,7 @@ n.d(t, {
         return o;
     },
     Rq: function () {
-        return m;
+        return p;
     },
     W_: function () {
         return l;
@@ -15,7 +15,7 @@ n.d(t, {
         return a;
     },
     qd: function () {
-        return p;
+        return m;
     }
 }),
     n(518263),
@@ -84,10 +84,10 @@ async function g(e, t) {
         i = await h(e, u(t));
     return n.decode(i);
 }
-async function p(e, t) {
+async function m(e, t) {
     return c(await h(e, u(t)));
 }
-async function m(e, t) {
+async function p(e, t) {
     t = await g(e, t);
     let n = t.match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
     if (null == n) throw Error('Invalid encoded user record.');

@@ -71,7 +71,7 @@ function T(e) {
         case p.Skl.ONLINE:
             return p.Ilk.GREEN_NEW_38;
         case p.Skl.IDLE:
-            return p.Ilk.YELLOW_NEW_38;
+            return p.Ilk.YELLOW_NEW_30;
         case p.Skl.DND:
             return p.Ilk.RED_NEW_46;
         case p.Skl.STREAMING:

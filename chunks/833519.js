@@ -27,8 +27,8 @@ var i = n(200651),
     _ = n(590076),
     x = n(507675),
     E = n(199902),
-    Z = n(314897),
-    C = n(592125),
+    C = n(314897),
+    Z = n(592125),
     y = n(131951),
     b = n(451478),
     T = n(685203),
@@ -51,7 +51,7 @@ function W(e) {
         u = (0, s.e7)([E.Z], () => E.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)),
         d = (0, O.K)(o),
         [p, g] = l.useState(!1),
-        h = (0, s.e7)([C.Z], () => C.Z.getChannel(null == u ? void 0 : u.channelId));
+        h = (0, s.e7)([Z.Z], () => Z.Z.getChannel(null == u ? void 0 : u.channelId));
     return (
         (0, f.J)(h, () => {
             let e = setTimeout(() => {
@@ -84,10 +84,10 @@ function W(e) {
 function B(e) {
     let { participant: t, selected: n, onVideoResize: a, paused: m, fit: f, inPopout: p, width: S, focused: M, wrapperClassName: O } = e,
         W = y.Z.getVideoComponent(),
-        B = (0, s.e7)([Z.default], () => Z.default.getId()),
+        B = (0, s.e7)([C.default], () => C.default.getId()),
         G = (0, g.Z)(),
         { stream: z, user: H, streamId: Y } = t,
-        J = (0, s.e7)([C.Z], () => C.Z.getChannel(z.channelId)),
+        J = (0, s.e7)([Z.Z], () => Z.Z.getChannel(z.channelId)),
         q = (0, s.e7)([E.Z], () => E.Z.getActiveStreamForUser(H.id, z.guildId), [H.id, z.guildId]),
         X = (0, s.e7)([E.Z], () => E.Z.getAllActiveStreams().length > 0),
         K = (0, s.e7)([b.Z], () => b.Z.isFocused()),

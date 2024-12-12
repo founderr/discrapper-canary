@@ -15,9 +15,9 @@ var i = n(200651),
     p = n(933557),
     f = n(471445),
     C = n(339085),
-    v = n(565138),
-    _ = n(372769),
-    I = n(690221),
+    _ = n(565138),
+    I = n(372769),
+    v = n(690221),
     N = n(524329),
     T = n(575258),
     b = n(514698),
@@ -31,35 +31,35 @@ var i = n(200651),
     L = n(231338),
     D = n(388032),
     O = n(86592);
-let k = 'WELCOME_CHANNEL',
-    P = (e) => {
+let P = 'WELCOME_CHANNEL',
+    k = (e) => {
         var t;
         let l,
-            { guildId: a, welcomeChannel: o, onEdit: x, onChannelReorder: v, isDropHovered: _, index: I } = e,
+            { guildId: a, welcomeChannel: o, onEdit: x, onChannelReorder: _, isDropHovered: I, index: v } = e,
             [N, T] = r.useState(!1),
             E = r.useRef(null),
             y = (0, u.e7)([j.Z], () => j.Z.getChannel(o.channel_id)),
             Z = (0, u.e7)([C.ZP], () => (null != o.emoji_id ? C.ZP.getUsableCustomEmojiById(o.emoji_id) : null)),
-            P = null != y && R.Uu(A.Plq.VIEW_CHANNEL, y),
+            k = null != y && R.Uu(A.Plq.VIEW_CHANNEL, y),
             M = null !== (t = (0, f.KS)(y)) && void 0 !== t ? t : m.TextIcon,
             w = (0, p.ZP)(y, !1),
             [, B] = (0, c.c)({
-                type: k,
+                type: P,
                 item: {
                     channel: o,
-                    index: I
+                    index: v
                 },
                 end: (e, t) => {
-                    null != e && !t.didDrop() && v(e.channel, null, !0);
+                    null != e && !t.didDrop() && _(e.channel, null, !0);
                 }
             }),
             [, U] = (0, d.L)({
-                accept: k,
+                accept: P,
                 hover: (e) => {
-                    v(e.channel, I, !1);
+                    _(e.channel, v, !1);
                 },
                 drop: (e) => {
-                    v(e.channel, I, !0);
+                    _(e.channel, v, !0);
                 }
             });
         return (
@@ -72,7 +72,7 @@ let k = 'WELCOME_CHANNEL',
                 ),
                 [B, U]
             ),
-            (l = P
+            (l = k
                 ? null != Z || null != o.emoji_name
                     ? (0, i.jsx)(g.Z, {
                           emojiId: null == Z ? void 0 : Z.id,
@@ -90,7 +90,7 @@ let k = 'WELCOME_CHANNEL',
                       className: O.warningIcon
                   })),
             (0, i.jsxs)('div', {
-                className: s()(O.welcomeChannel, { [O.dragging]: _ }),
+                className: s()(O.welcomeChannel, { [O.dragging]: I }),
                 ref: E,
                 'data-dnd-name': o.description,
                 onContextMenu: (e) => {
@@ -101,10 +101,10 @@ let k = 'WELCOME_CHANNEL',
                                 ...t,
                                 guildId: a,
                                 welcomeChannel: o,
-                                onChannelReorder: v,
+                                onChannelReorder: _,
                                 setShowConfirmModal: T,
                                 onEdit: x,
-                                index: I
+                                index: v
                             });
                     });
                 },
@@ -119,7 +119,7 @@ let k = 'WELCOME_CHANNEL',
                                 children: o.description
                             }),
                             (0, i.jsxs)(m.Text, {
-                                className: P ? void 0 : O.channelWarning,
+                                className: k ? void 0 : O.channelWarning,
                                 variant: 'text-xs/normal',
                                 color: 'header-secondary',
                                 children: [
@@ -128,7 +128,7 @@ let k = 'WELCOME_CHANNEL',
                                         size: 'xxs',
                                         color: 'currentColor'
                                     }),
-                                    (0, i.jsx)('span', { children: P ? w : D.intl.string(D.t.zFuCsL) })
+                                    (0, i.jsx)('span', { children: k ? w : D.intl.string(D.t.zFuCsL) })
                                 ]
                             })
                         ]
@@ -171,7 +171,7 @@ t.Z = (e) => {
         [g, p] = r.useState(!1),
         [f, C] = r.useState(!1),
         { description: b, channels: j, enabled: R } = s,
-        k = () => {
+        P = () => {
             if (null != t) b !== a.description && ((0, N.Es)(t.id, { description: null == b ? void 0 : b.trim() }), p(!0));
         },
         M = (e) => {
@@ -259,7 +259,7 @@ t.Z = (e) => {
                                   (0, i.jsx)(S.Z, { className: O.noticeIcon }),
                                   D.intl.format(D.t.oj2vi4, {
                                       onboardingLink: (e) =>
-                                          (0, i.jsx)(I.Z, {
+                                          (0, i.jsx)(v.Z, {
                                               onClick: H,
                                               children: e
                                           })
@@ -306,8 +306,8 @@ t.Z = (e) => {
                           (0, i.jsxs)('div', {
                               className: O.welcomeHeader,
                               children: [
-                                  (0, i.jsx)(v.Z, {
-                                      size: v.Z.Sizes.LARGER,
+                                  (0, i.jsx)(_.Z, {
+                                      size: _.Z.Sizes.LARGER,
                                       className: O.icon,
                                       guild: t,
                                       animate: !0,
@@ -323,7 +323,7 @@ t.Z = (e) => {
                                                   'span',
                                                   {
                                                       children: [
-                                                          (0, i.jsx)(_.Z, {
+                                                          (0, i.jsx)(I.Z, {
                                                               guild: t,
                                                               className: O.headerGuildBadge,
                                                               flowerStarClassName: O.flowerStar
@@ -344,7 +344,7 @@ t.Z = (e) => {
                                               (0, N.VP)({ description: e });
                                           },
                                           onBlur: () => {
-                                              k();
+                                              P();
                                           },
                                           onKeyDown: (e) => {
                                               e.keyCode === A.yXg.ENTER && e.preventDefault();
@@ -370,7 +370,7 @@ t.Z = (e) => {
                                       ? void 0
                                       : j.map((e, n) =>
                                             (0, i.jsx)(
-                                                P,
+                                                k,
                                                 {
                                                     guildId: t.id,
                                                     welcomeChannel: e,

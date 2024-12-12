@@ -75,15 +75,15 @@ t.Z = (e) => {
     let { onChange: t, multiple: o = !0, disabled: c, className: d, tabIndex: m = -1, 'aria-label': h, filters: g, setLoading: x } = e,
         p = r.createRef(),
         f = r.useRef(null),
-        [C, v] = r.useState(!1);
+        [C, _] = r.useState(!1);
     r.useEffect(() => {
-        C && _();
+        C && I();
     }, [C]);
-    let _ = () => {
+    let I = () => {
             null !== f.current && ((0, l.closeModal)(f.current), (f.current = null));
         },
-        I = async (e) => {
-            null == x || x(!0), await u(e, t), v(!0), null == x || x(!1);
+        v = async (e) => {
+            null == x || x(!0), await u(e, t), _(!0), null == x || x(!1);
         },
         N = async (e) => {
             var t, r, s;
@@ -93,7 +93,7 @@ t.Z = (e) => {
                 let { default: e } = await n.e('16169').then(n.bind(n, 935333));
                 return (t) =>
                     (0, i.jsx)(e, {
-                        processFiles: () => I(a),
+                        processFiles: () => v(a),
                         ...t
                     });
             });

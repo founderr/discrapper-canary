@@ -17,30 +17,30 @@ var i = n(200651),
     g = n(318668);
 function x(e) {
     var t, n, x, p, f, C;
-    let { rule: v, onChangeRule: _ } = e,
-        I = r.useCallback(
+    let { rule: _, onChangeRule: I } = e,
+        v = r.useCallback(
             (e) => {
-                _({
-                    ...v,
+                I({
+                    ..._,
                     triggerMetadata: {
-                        ...v.triggerMetadata,
+                        ..._.triggerMetadata,
                         keywordFilter: e
                     }
                 });
             },
-            [_, v]
+            [I, _]
         ),
         N = r.useCallback(
             (e) => {
-                _({
-                    ...v,
+                I({
+                    ..._,
                     triggerMetadata: {
-                        ...v.triggerMetadata,
+                        ..._.triggerMetadata,
                         allowList: e
                     }
                 });
             },
-            [_, v]
+            [I, _]
         );
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
@@ -51,20 +51,20 @@ function x(e) {
                     header: h.intl.string(h.t['ue+tnZ']),
                     children: [
                         (0, i.jsx)(o.Z, {
-                            onChangeText: I,
+                            onChangeText: v,
                             maxWordCount: m.RH,
-                            initialValue: null === (t = v.triggerMetadata) || void 0 === t ? void 0 : t.keywordFilter
+                            initialValue: null === (t = _.triggerMetadata) || void 0 === t ? void 0 : t.keywordFilter
                         }),
                         (0, i.jsx)(a.Z, {
-                            rule: v,
-                            onChangeRule: _,
-                            collapsed: (null == v ? void 0 : null === (n = v.triggerMetadata) || void 0 === n ? void 0 : n.regexPatterns) == null || (null == v ? void 0 : null === (x = v.triggerMetadata) || void 0 === x ? void 0 : x.regexPatterns.length) === 0
+                            rule: _,
+                            onChangeRule: I,
+                            collapsed: (null == _ ? void 0 : null === (n = _.triggerMetadata) || void 0 === n ? void 0 : n.regexPatterns) == null || (null == _ ? void 0 : null === (x = _.triggerMetadata) || void 0 === x ? void 0 : x.regexPatterns.length) === 0
                         }),
                         (0, i.jsx)(l.Z, {
                             onChange: N,
-                            initialValue: null === (p = v.triggerMetadata) || void 0 === p ? void 0 : p.allowList,
+                            initialValue: null === (p = _.triggerMetadata) || void 0 === p ? void 0 : p.allowList,
                             maxWordCount: m.n4,
-                            collapsed: (null === (f = v.triggerMetadata) || void 0 === f ? void 0 : f.allowList) == null || (null === (C = v.triggerMetadata) || void 0 === C ? void 0 : C.allowList.length) === 0
+                            collapsed: (null === (f = _.triggerMetadata) || void 0 === f ? void 0 : f.allowList) == null || (null === (C = _.triggerMetadata) || void 0 === C ? void 0 : C.allowList.length) === 0
                         })
                     ]
                 }),
@@ -73,8 +73,8 @@ function x(e) {
                     step: 2,
                     header: h.intl.string(h.t['18TOiY']),
                     children: (0, i.jsx)(s.Z, {
-                        rule: v,
-                        onChangeRule: _
+                        rule: _,
+                        onChangeRule: I
                     })
                 }),
                 (0, i.jsx)(u.Z, { type: u.Z.Type.CROSS }),
@@ -82,8 +82,8 @@ function x(e) {
                     step: 3,
                     header: h.intl.string(h.t.eq3gjo),
                     children: (0, i.jsx)(c.Z, {
-                        rule: v,
-                        onChangeRule: _
+                        rule: _,
+                        onChangeRule: I
                     })
                 })
             ]

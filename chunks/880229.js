@@ -24,9 +24,9 @@ var i,
     p = n(596454),
     f = n(471445),
     C = n(605436),
-    v = n(91218),
-    _ = n(313201),
-    I = n(339085),
+    _ = n(91218),
+    I = n(313201),
+    v = n(339085),
     N = n(518738),
     T = n(131704),
     b = n(324067),
@@ -40,13 +40,13 @@ var i,
     L = n(981631),
     D = n(388032),
     O = n(846605);
-let k = (0, _.hQ)(),
-    P = (0, _.hQ)(),
+let P = (0, I.hQ)(),
+    k = (0, I.hQ)(),
     M = (0, E.Mg)(g.Z.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
 function w(e) {
     var t;
     let { emojiId: n, emojiName: i, className: r } = e,
-        s = (0, m.e7)([I.ZP], () => (null != n ? I.ZP.getCustomEmojiById(n) : void 0));
+        s = (0, m.e7)([v.ZP], () => (null != n ? v.ZP.getCustomEmojiById(n) : void 0));
     return (0, l.jsx)(p.Z, {
         emojiId: n,
         emojiName: i,
@@ -171,8 +171,8 @@ function G(e) {
         p = s.useMemo(() => c.filter(R.lL), [c]),
         f = s.useMemo(() => new Set(g.filter((e) => i.some((t) => t.ref_id === e.ref_id))), [g, i]),
         C = s.useMemo(() => new Set(p.filter((e) => r.some((t) => (0, h.Z)(e, t)))), [r, p]),
-        v = (0, _.Dt)();
-    function I(e, t) {
+        _ = (0, I.Dt)();
+    function v(e, t) {
         u((n) => {
             let i = new Set(n);
             return t ? i.add(e) : i.delete(e), i;
@@ -191,12 +191,12 @@ function G(e) {
         },
         children: (0, l.jsxs)(x.ModalRoot, {
             transitionState: t,
-            'aria-labelledby': v,
+            'aria-labelledby': _,
             children: [
                 (0, l.jsxs)(x.ModalHeader, {
                     children: [
                         (0, l.jsx)(x.Heading, {
-                            id: v,
+                            id: _,
                             variant: 'heading-md/semibold',
                             children: D.intl.format(D.t['7zpiYG'], { tierName: n.name })
                         }),
@@ -215,7 +215,7 @@ function G(e) {
                             benefits: g,
                             dupeBenefits: f,
                             selectedBenefits: d,
-                            onToggleBenefit: I
+                            onToggleBenefit: v
                         }),
                         (0, l.jsx)(U, {
                             title: D.intl.string(D.t.RdwKw8),
@@ -223,7 +223,7 @@ function G(e) {
                             benefits: p,
                             dupeBenefits: C,
                             selectedBenefits: d,
-                            onToggleBenefit: I
+                            onToggleBenefit: v
                         })
                     ]
                 }),
@@ -261,7 +261,7 @@ function F(e) {
                 className: O.rowIconWrapper,
                 children:
                     null != a
-                        ? (0, l.jsx)(v.Z, { ...a })
+                        ? (0, l.jsx)(_.Z, { ...a })
                         : (0, l.jsx)(x.ShieldUserIcon, {
                               size: 'custom',
                               width: 23,
@@ -358,7 +358,7 @@ function z(e) {
                   (0, l.jsxs)(x.ModalHeader, {
                       children: [
                           (0, l.jsx)(x.Heading, {
-                              id: k,
+                              id: P,
                               variant: 'heading-md/semibold',
                               children: D.intl.string(D.t['3JrZ/P'])
                           }),
@@ -414,7 +414,7 @@ function W(e) {
             (0, l.jsxs)(x.ModalHeader, {
                 children: [
                     (0, l.jsx)(x.Heading, {
-                        id: P,
+                        id: k,
                         variant: 'heading-md/semibold',
                         children: D.intl.format(D.t.iuPodH, { roleName: d.name })
                     }),
@@ -500,7 +500,7 @@ function V(e) {
         [a, o] = s.useState();
     return (0, l.jsx)(x.ModalRoot, {
         transitionState: t,
-        'aria-labelledby': null == a ? k : P,
+        'aria-labelledby': null == a ? P : k,
         children: (0, l.jsxs)(x.Slides, {
             contentDisplay: 'flex',
             activeSlide: null == a ? 0 : 1,

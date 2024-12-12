@@ -3,7 +3,7 @@ n.d(t, {
         return f;
     },
     u: function () {
-        return m;
+        return p;
     }
 });
 var i = n(200651);
@@ -18,18 +18,18 @@ var r = n(120356),
     d = n(388032),
     h = n(897927),
     g = n(652849),
-    p = n(232186);
-function m(e) {
+    m = n(232186);
+function p(e) {
     let { text: t, buttonCta: r, onClick: u } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(o.Ee, { src: n(689411) }),
             (0, i.jsx)(o.Dx, {
-                className: s()(p.marginTop20, p.marginBottom8, g.flexCenter),
+                className: s()(m.marginTop20, m.marginBottom8, g.flexCenter),
                 children: d.intl.string(d.t.eL5z0t)
             }),
             (0, i.jsx)(o.DK, {
-                className: p.marginBottom40,
+                className: m.marginBottom40,
                 children: d.intl.string(d.t['poAv6+'])
             }),
             (0, i.jsxs)(a.Card, {
@@ -75,7 +75,7 @@ function f(e) {
     let { text: t, buttonCta: n, theme: r = u.BRd.DARK, onClick: s } = e;
     return (0, i.jsx)(o.ZP, {
         theme: r,
-        children: (0, i.jsx)(m, {
+        children: (0, i.jsx)(p, {
             text: t,
             buttonCta: n,
             onClick: s

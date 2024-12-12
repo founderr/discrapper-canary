@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(980591),
     h = n(605782),
     g = n(133853),
-    p = n(568154),
-    m = n(353926),
+    m = n(568154),
+    p = n(353926),
     f = n(703656),
     _ = n(981631),
     x = n(687000);
@@ -31,7 +31,7 @@ function C(e) {
                 l = (function () {
                     return null;
                 })(),
-                a = (0, c.e7)([m.Z], () => m.Z.hasLoadedExperiments);
+                a = (0, c.e7)([p.Z], () => p.Z.hasLoadedExperiments);
             return ((0, d.Z)(() => {}, 300), void 0 !== i)
                 ? i
                 : !n && a
@@ -107,7 +107,7 @@ class S extends s.Component {
                                       show: !0,
                                       className: a()(x.logo)
                                   }),
-                                  (0, r.jsx)(p.h, {
+                                  (0, r.jsx)(m.h, {
                                       splash: e,
                                       children: t
                                   })

@@ -74,7 +74,7 @@ function C(e) {
         ]
     });
 }
-function v(e) {
+function _(e) {
     let { quote: t, quoteAttribution: n, quoteAttributionTitle: r } = e;
     return (0, i.jsxs)('div', {
         className: p.guildCardQuote,
@@ -95,7 +95,7 @@ function v(e) {
         ]
     });
 }
-function _(e) {
+function I(e) {
     let { emojisToShow: t, notShownEmojiCount: n, storePageUrl: r } = e,
         c = null != t && t.length > 0,
         d = () => {
@@ -165,7 +165,7 @@ function _(e) {
               })
     });
 }
-function I(e) {
+function v(e) {
     let { highlightedCreatorGuild: t } = e,
         { guild_id: n, quote: r, quote_attribution: l, quote_attribution_title: a } = t,
         o = (0, m.Z)(n, 4, 60),
@@ -176,7 +176,7 @@ function I(e) {
             children: (0, i.jsx)(s.Spinner, {})
         });
     if (!d) return null;
-    let { guildIcon: u, guildName: h, guildAvatarUrl: g, subscriberCount: x, emojisToShow: f, notShownEmojiCount: I, storePageUrl: N } = o.details;
+    let { guildIcon: u, guildName: h, guildAvatarUrl: g, subscriberCount: x, emojisToShow: f, notShownEmojiCount: v, storePageUrl: N } = o.details;
     return (0, i.jsxs)('div', {
         className: p.guildCard,
         children: [
@@ -186,14 +186,14 @@ function I(e) {
                 guildAvatarUrl: g,
                 subscriberCount: x
             }),
-            (0, i.jsx)(v, {
+            (0, i.jsx)(_, {
                 quote: r,
                 quoteAttribution: l,
                 quoteAttributionTitle: a
             }),
-            (0, i.jsx)(_, {
+            (0, i.jsx)(I, {
                 emojisToShow: f,
-                notShownEmojiCount: I,
+                notShownEmojiCount: v,
                 storePageUrl: N
             })
         ]
@@ -212,7 +212,7 @@ function N(e) {
             (0, i.jsx)(h.Z, {
                 carouselClassName: p.creatorGuildCarousel,
                 items: t,
-                renderItem: (e) => (0, i.jsx)(I, { highlightedCreatorGuild: e }),
+                renderItem: (e) => (0, i.jsx)(v, { highlightedCreatorGuild: e }),
                 intervalBetweenAutomaticItemRotations: 7000
             })
         ]

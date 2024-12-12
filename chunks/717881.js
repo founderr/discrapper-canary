@@ -23,8 +23,8 @@ var i = n(200651),
     _ = n(574176),
     x = n(952164),
     E = n(199902),
-    Z = n(592125),
-    C = n(430824),
+    C = n(592125),
+    Z = n(430824),
     y = n(496675),
     b = n(979651),
     T = n(626135),
@@ -52,9 +52,9 @@ function P(e) {
 let R = d.Z.Types;
 t.Z = function (e) {
     let { activity: t, user: n, useStoreStream: a = !0, showActions: o = !0, hideHeader: u = !1, showChannelDetails: m = !1, analyticsParams: A, ...R } = e,
-        M = (0, s.e7)([b.Z, Z.Z], () => {
+        M = (0, s.e7)([b.Z, C.Z], () => {
             var e;
-            return Z.Z.getChannel(null === (e = b.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
+            return C.Z.getChannel(null === (e = b.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
         }),
         { enableHangStatus: O } = _.n.useExperiment(
             {
@@ -66,11 +66,11 @@ t.Z = function (e) {
         L = (0, s.e7)([E.Z], () => (a ? E.Z.getAnyStreamForUser(n.id) : null)),
         k = O && y.Z.can(N.Plq.CONNECT, M),
         D = (null == t ? void 0 : t.type) === N.IIU.HANG_STATUS && k ? M : null,
-        U = (0, s.e7)([C.Z, b.Z, Z.Z], () => {
+        U = (0, s.e7)([Z.Z, b.Z, C.Z], () => {
             var e, i;
-            return (0, c.Z)(t, N.xjy.EMBEDDED) ? C.Z.getGuild(null === (e = Z.Z.getChannel(null === (i = b.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != D ? C.Z.getGuild(D.getGuildId()) : null;
+            return (0, c.Z)(t, N.xjy.EMBEDDED) ? Z.Z.getGuild(null === (e = C.Z.getChannel(null === (i = b.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != D ? Z.Z.getGuild(D.getGuildId()) : null;
         }),
-        V = (0, s.e7)([C.Z], () => (null != L ? C.Z.getGuild(L.guildId) : null)),
+        V = (0, s.e7)([Z.Z], () => (null != L ? Z.Z.getGuild(L.guildId) : null)),
         F = (0, s.e7)([f.Z], () => {
             if (null != t) return null != t.application_id ? f.Z.getApplication(t.application_id) : f.Z.getApplicationByName(t.name);
             return null;

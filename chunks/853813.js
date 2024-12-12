@@ -19,9 +19,9 @@ var i = n(200651),
     p = n(946724),
     f = n(999382),
     C = n(130341),
-    v = n(981975),
-    _ = n(660962),
-    I = n(442182),
+    _ = n(981975),
+    I = n(660962),
+    v = n(442182),
     N = n(322816),
     T = n(266665),
     b = n(203377),
@@ -46,7 +46,7 @@ function E(e) {
     let L = (0, a.e7)([m.Z], () => m.Z.getHighestRole(y), [y]),
         D = (0, a.e7)([m.Z], () => !m.Z.isRoleHigher(y, L, Z)),
         O = r.useRef(null),
-        k = (0, a.e7)([f.Z], () => f.Z.getProps().integrations);
+        P = (0, a.e7)([f.Z], () => f.Z.getProps().integrations);
     if (
         (r.useEffect(() => {
             var e, t;
@@ -71,7 +71,7 @@ function E(e) {
         return null;
     switch (E) {
         case b.ZI.DISPLAY:
-            t = (0, i.jsx)(_.ZP, {
+            t = (0, i.jsx)(I.ZP, {
                 guild: y,
                 role: Z,
                 locked: D,
@@ -89,16 +89,16 @@ function E(e) {
             });
             break;
         case b.ZI.VERIFICATIONS:
-            t = (0, i.jsx)(v.Z, {
+            t = (0, i.jsx)(_.Z, {
                 guild: y,
                 role: Z,
                 locked: D,
                 setSelectedSection: R,
-                integrations: null != k ? k : void 0
+                integrations: null != P ? P : void 0
             });
             break;
         case b.ZI.MEMBERS:
-            t = (0, i.jsx)(I.ZP, {
+            t = (0, i.jsx)(v.ZP, {
                 guild: y,
                 role: Z,
                 locked: D,

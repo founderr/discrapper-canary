@@ -21,9 +21,9 @@ var i = n(200651),
     p = n(134432),
     f = n(813197),
     C = n(208567),
-    v = n(183023),
-    _ = n(984933),
-    I = n(496675),
+    _ = n(183023),
+    I = n(984933),
+    v = n(496675),
     N = n(699516),
     T = n(594174),
     b = n(768581),
@@ -37,8 +37,8 @@ var i = n(200651),
     L = n(96788),
     D = n(654351),
     O = n(354051),
-    k = n(347604),
-    P = n(203377),
+    P = n(347604),
+    k = n(203377),
     M = n(929834),
     w = n(981631),
     B = n(128449),
@@ -264,7 +264,7 @@ class z extends r.PureComponent {
                 }),
                 null != d &&
                     d.isDiscoverable() &&
-                    (0, i.jsx)(v.UA, {
+                    (0, i.jsx)(_.UA, {
                         sourceType: m.w6.GUILD,
                         expressionSourceApplication: null,
                         expressionSourceGuild: d,
@@ -375,8 +375,8 @@ class z extends r.PureComponent {
                     tags: t.keywords,
                     onRemoveTag: this.handleRemoveKeyword,
                     onAddTag: this.handleAddKeyword,
-                    maxTags: P.G7,
-                    maxTaxLength: P._0,
+                    maxTags: k.G7,
+                    maxTaxLength: k._0,
                     disabled: !e
                 }),
                 (null == n ? void 0 : n.keywords) != null
@@ -395,7 +395,7 @@ class z extends r.PureComponent {
         if (null == e || null == t) return null;
         switch ((0, D.TJ)(e, t)) {
             case D.d5.INTRO:
-                return (0, i.jsx)(k.Z, {
+                return (0, i.jsx)(P.Z, {
                     guild: e,
                     onEnableDiscovery: this.handleEnableDiscovery,
                     isGuildAdmin: n
@@ -458,7 +458,7 @@ class z extends r.PureComponent {
             F(this, 'handleAddKeyword', (e) => {
                 let { guild: t, guildMetadata: n } = this.props,
                     { keywords: i } = n;
-                if ((null == t ? void 0 : t.id) != null) !(i.length >= P.G7) && (0, g.zH)(t.id, [...i, e]);
+                if ((null == t ? void 0 : t.id) != null) !(i.length >= k.G7) && (0, g.zH)(t.id, [...i, e]);
             }),
             F(this, 'handleToggleEmojiDiscoverability', () => {
                 let { guild: e, guildMetadata: t } = this.props,
@@ -467,15 +467,15 @@ class z extends r.PureComponent {
             });
     }
 }
-t.Z = s.ZP.connectStores([E.Z, I.Z, Z.ZP, _.ZP, x.Z, T.default, N.Z], () => {
+t.Z = s.ZP.connectStores([E.Z, v.Z, Z.ZP, I.ZP, x.Z, T.default, N.Z], () => {
     let { guild: e, errors: t, submitting: n, guildMetadata: i } = E.Z.getProps(),
-        r = I.Z.can(w.Plq.MANAGE_GUILD, e),
-        l = I.Z.can(w.Plq.ADMINISTRATOR, e),
+        r = v.Z.can(w.Plq.MANAGE_GUILD, e),
+        l = v.Z.can(w.Plq.ADMINISTRATOR, e),
         s = null != e ? Z.ZP.getDiscoveryChecklist(e.id) : null,
-        a = null != e ? _.ZP.getChannels(e.id) : null,
+        a = null != e ? I.ZP.getChannels(e.id) : null,
         o = [];
     null != a &&
-        a[_.sH].forEach((e) => {
+        a[I.sH].forEach((e) => {
             let { channel: t } = e;
             t.type === w.d4z.GUILD_TEXT &&
                 o.push({

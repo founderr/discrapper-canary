@@ -22,18 +22,18 @@ var l = n(990547),
     v = n(126741);
 function S(e) {
     let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: S = !1, renderInputModes: I = !1, renderInputVolume: _ = !1, renderOutputVolume: x = !1, onSelect: E } = e,
-        { analyticsLocations: Z } = (0, s.ZP)();
+        { analyticsLocations: C } = (0, s.ZP)();
     (0, o.Z)({
         type: l.ImpressionTypes.MENU,
         name: l.ImpressionNames.AUDIO_DEVICE_MENU,
-        properties: { location_stack: Z }
+        properties: { location_stack: C }
     });
-    let C = (0, p.Z)(),
-        y = (0, m.Z)(Z),
-        b = (0, f.Z)(Z),
-        T = (0, c.Z)(Z),
-        A = (0, u.Z)(Z),
-        N = (0, d.Z)(Z);
+    let Z = (0, p.Z)(),
+        y = (0, m.Z)(C),
+        b = (0, f.Z)(C),
+        T = (0, c.Z)(C),
+        A = (0, u.Z)(C),
+        N = (0, d.Z)(C);
     return (0, i.jsx)(r.Z, {
         object: g.qAy.CONTEXT_MENU,
         children: (0, i.jsxs)(a.Menu, {
@@ -62,7 +62,7 @@ function S(e) {
                       })
                     : null,
                 (0, i.jsxs)(a.MenuGroup, {
-                    children: [_ ? A : null, x ? N : null, C]
+                    children: [_ ? A : null, x ? N : null, Z]
                 })
             ]
         })

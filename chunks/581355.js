@@ -16,8 +16,8 @@ var l = t(200651),
     m = t(609776),
     x = t(289584),
     h = t(180899),
-    g = t(157925),
-    f = t(388032),
+    f = t(157925),
+    g = t(388032),
     v = t(456249);
 function _(e) {
     let { guild: n, channel: t, stageInstance: i, headerId: a, onClose: o, loading: s, error: c, onSave: u, defaultOptions: x, isSlideReady: h } = e;
@@ -43,13 +43,13 @@ function _(e) {
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
                         className: v.headerTitle,
-                        children: null == i ? f.intl.string(f.t.DDF0cH) : f.intl.string(f.t.YPdQOj)
+                        children: null == i ? g.intl.string(g.t.DDF0cH) : g.intl.string(g.t.YPdQOj)
                     }),
                     (0, l.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
                         className: v.headerSubtitle,
-                        children: null == i ? f.intl.string(f.t.bqQIwc) : f.intl.string(f.t['I+9bLy'])
+                        children: null == i ? g.intl.string(g.t.bqQIwc) : g.intl.string(g.t['I+9bLy'])
                     })
                 ]
             }),
@@ -68,7 +68,7 @@ function _(e) {
 }
 function j(e) {
     let { channel: n, onClose: t, transitionState: d, ...m } = e,
-        f = (0, o.Dt)(),
+        g = (0, o.Dt)(),
         j = (0, a.e7)([s.Z], () => s.Z.getGuild(n.guild_id)),
         I = i.useMemo(() => c.Z.getStageInstanceByChannel(n.id), [n.id]),
         { loading: N, error: C, onSave: p } = (0, x.Z)(n, t),
@@ -82,7 +82,7 @@ function j(e) {
             handleDelayedSave: B
         } = (0, h.Z)({
             stageInstance: I,
-            defaultStep: g.lv.STAGE_CHANNEL_SETTINGS,
+            defaultStep: f.lv.STAGE_CHANNEL_SETTINGS,
             error: C,
             onSave: p
         });
@@ -93,7 +93,7 @@ function j(e) {
         ? null
         : (0, l.jsx)(r.ModalRoot, {
               transitionState: d,
-              'aria-labelledby': f,
+              'aria-labelledby': g,
               ...m,
               size: r.ModalSize.SMALL,
               children: (0, l.jsxs)(r.Slides, {
@@ -102,36 +102,36 @@ function j(e) {
                   onSlideReady: k,
                   children: [
                       (0, l.jsx)(r.Slide, {
-                          id: g.lv.STAGE_CHANNEL_SETTINGS,
+                          id: f.lv.STAGE_CHANNEL_SETTINGS,
                           children: (0, l.jsx)('div', {
                               className: v.slideContainer,
                               children: (0, l.jsx)(_, {
                                   guild: j,
                                   channel: n,
                                   stageInstance: I,
-                                  headerId: f,
+                                  headerId: g,
                                   onClose: t,
                                   loading: N,
                                   error: C,
                                   onSave: Z,
                                   defaultOptions: E,
-                                  isSlideReady: T === g.lv.STAGE_CHANNEL_SETTINGS
+                                  isSlideReady: T === f.lv.STAGE_CHANNEL_SETTINGS
                               })
                           })
                       }),
                       (0, l.jsx)(r.Slide, {
-                          id: g.lv.PUBLIC_STAGE_PREVIEW,
+                          id: f.lv.PUBLIC_STAGE_PREVIEW,
                           children: (0, l.jsx)('div', {
                               className: v.slideContainer,
                               children: (0, l.jsx)(u.Z, {
-                                  headerId: f,
+                                  headerId: g,
                                   guild: j,
                                   channel: n,
                                   stageData: E,
                                   loading: N,
                                   onNext: B,
                                   onCancel: t,
-                                  onBack: () => b(g.lv.STAGE_CHANNEL_SETTINGS)
+                                  onBack: () => b(f.lv.STAGE_CHANNEL_SETTINGS)
                               })
                           })
                       })

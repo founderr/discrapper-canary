@@ -3,7 +3,7 @@ n.d(t, {
         return f;
     },
     ZP: function () {
-        return m;
+        return p;
     }
 });
 var i = n(913527),
@@ -17,8 +17,8 @@ var i = n(913527),
     d = n(573261),
     h = n(959776),
     g = n(981631),
-    p = n(723359);
-function m(e) {
+    m = n(723359);
+function p(e) {
     let { invite: t = null, giftCodeSKUId: n = null, ...i } = e;
     return f({
         ...i,
@@ -27,7 +27,7 @@ function m(e) {
     });
 }
 function f(e) {
-    let { email: t, phoneToken: n, username: i, globalName: m, consent: f, password: _, guildTemplateCode: x, birthday: E, invite: I = null, giftCodeSKUId: v = null, multiStep: N = !1, promoEmailConsent: b = null, usedUsernameSuggestion: C = null } = e;
+    let { email: t, phoneToken: n, username: i, globalName: p, consent: f, password: _, guildTemplateCode: x, birthday: E, invite: I = null, giftCodeSKUId: v = null, multiStep: N = !1, promoEmailConsent: b = null, usedUsernameSuggestion: C = null } = e;
     return (
         l.Z.dispatch({
             type: 'REGISTER',
@@ -36,8 +36,8 @@ function f(e) {
         null != E &&
             ((0, h.Z)(E, g.jXE.REGISTER),
             u.default.track(g.rMx.AGE_GATE_ACTION, {
-                source: p.L0.REGISTER,
-                action: p.Al.AGE_GATE_SUBMITTED
+                source: m.L0.REGISTER,
+                action: m.Al.AGE_GATE_SUBMITTED
             }),
             !(function (e) {
                 let t;
@@ -50,7 +50,7 @@ function f(e) {
                 fingerprint: c.default.getFingerprint(),
                 email: t,
                 username: i,
-                global_name: m,
+                global_name: p,
                 password: _,
                 invite: I,
                 consent: f,
@@ -78,8 +78,8 @@ function f(e) {
                     token: e.body.token
                 }),
                     u.default.track(g.rMx.AGE_GATE_ACTION, {
-                        source: p.L0.REGISTER,
-                        action: p.Al.AGE_GATE_SUCCESS
+                        source: m.L0.REGISTER,
+                        action: m.Al.AGE_GATE_SUCCESS
                     });
             },
             (e) => {
@@ -89,7 +89,7 @@ function f(e) {
                         type: 'REGISTER_FAILURE',
                         error: t
                     }),
-                    null != t.getFieldErrors('date_of_birth') && o.wE(p.L0.REGISTER),
+                    null != t.getFieldErrors('date_of_birth') && o.wE(m.L0.REGISTER),
                     u.default.track(g.rMx.REGISTER_SUBMIT_ERRORED, {
                         is_unique_username_registration: !0,
                         email_error_reason: t.getFirstFieldErrorMessage('email'),

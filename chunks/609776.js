@@ -16,8 +16,8 @@ var l = t(200651),
     m = t(13664),
     x = t(440371),
     h = t(810788),
-    g = t(699516),
-    f = t(594174),
+    f = t(699516),
+    g = t(594174),
     v = t(626135),
     _ = t(570188),
     j = t(427679),
@@ -42,7 +42,7 @@ function E(e) {
                       value: t.id,
                       options: n.map((e) => ({
                           value: e.id,
-                          label: (0, c.F6)(e, f.default, g.Z, !0)
+                          label: (0, c.F6)(e, g.default, f.Z, !0)
                       })),
                       onChange: (e) => {
                           let t = n.find((n) => n.id === e);
@@ -59,13 +59,13 @@ function E(e) {
           });
 }
 function Z(e) {
-    var n, t, a, g, f, Z, B, D;
+    var n, t, a, f, g, Z, B, D;
     let { channel: R, guild: A, header: L, error: y, loading: P, onSave: G, onEventSave: w, onClose: F, onSelectChannel: M, isEvent: z = !1, defaultOptions: U, isSlideReady: O = !0 } = e,
         H = i.useMemo(() => j.Z.getStageInstanceByChannel(R.id), [R.id]),
         [V, q] = i.useState(null !== (t = null !== (n = null == U ? void 0 : U.topic) && void 0 !== n ? n : null == H ? void 0 : H.topic) && void 0 !== t ? t : ''),
-        [K, W] = i.useState(null !== (a = null == U ? void 0 : U.description) && void 0 !== a ? a : ''),
+        [W, K] = i.useState(null !== (a = null == U ? void 0 : U.description) && void 0 !== a ? a : ''),
         [Y] = i.useState(z),
-        [J, Q] = i.useState(null !== (g = null == U ? void 0 : U.schedule) && void 0 !== g ? g : { startDate: (0, u.ib)() }),
+        [J, Q] = i.useState(null !== (f = null == U ? void 0 : U.schedule) && void 0 !== f ? f : { startDate: (0, u.ib)() }),
         [X, $] = i.useState(Y && (null == U ? void 0 : U.schedule) != null),
         ee = (0, _.J)(R),
         en = (0, _.U)(R),
@@ -73,15 +73,15 @@ function Z(e) {
         [el, ei] = i.useState(et && en),
         ea = (0, o.e7)([h.Z], () => h.Z.hasHotspot(b.v.LIVE_STAGE_NOTIFICATION_BADGE)),
         er = S.j8.GUILD_ONLY,
-        [eo] = i.useState(null !== (Z = null !== (f = null == U ? void 0 : U.privacyLevel) && void 0 !== f ? f : null == H ? void 0 : H.privacy_level) && void 0 !== Z ? Z : er),
+        [eo] = i.useState(null !== (Z = null !== (g = null == U ? void 0 : U.privacyLevel) && void 0 !== g ? g : null == H ? void 0 : H.privacy_level) && void 0 !== Z ? Z : er),
         [es, ec] = i.useState(null == U ? void 0 : U.recurrenceRule),
         ed = (0, I._d)(R.id),
         eu = (0, I.K3)(R.id),
         [em, ex] = i.useState(!1),
         eh = (0, c.ZP)(R),
-        eg = (0, d.q)(A),
-        ef = null != M,
-        ev = eg.length > 1;
+        ef = (0, d.q)(A),
+        eg = null != M,
+        ev = ef.length > 1;
     i.useEffect(() => {
         v.default.track(p.rMx.START_STAGE_OPENED, {
             stage_instance_id: null == H ? void 0 : H.id,
@@ -105,7 +105,7 @@ function Z(e) {
                 w({
                     ...n,
                     schedule: J,
-                    description: K,
+                    description: W,
                     entityType: S.WX.STAGE_INSTANCE
                 });
             return;
@@ -185,9 +185,9 @@ function Z(e) {
                                         : null
                                 ]
                             }),
-                            ef && ev
+                            eg && ev
                                 ? (0, l.jsx)(E, {
-                                      stageChannelsInGuild: eg,
+                                      stageChannelsInGuild: ef,
                                       channel: R,
                                       onSelectChannel: M
                                   })
@@ -223,8 +223,8 @@ function Z(e) {
                                     className: k.formItem,
                                     children: (0, l.jsx)(s.TextArea, {
                                         placeholder: T.intl.string(T.t['kWO/Ex']),
-                                        value: K,
-                                        onChange: (e) => W(e),
+                                        value: W,
+                                        onChange: (e) => K(e),
                                         maxLength: S.wm
                                     })
                                 }),
@@ -235,7 +235,7 @@ function Z(e) {
                                       showNotificationNewBadge: ea
                                   })
                                 : null,
-                            ef && !ev
+                            eg && !ev
                                 ? (0, l.jsx)(s.Text, {
                                       color: 'header-secondary',
                                       variant: 'text-xs/normal',

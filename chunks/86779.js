@@ -10,8 +10,8 @@ var i,
     d = n(433517),
     h = n(481060),
     g = n(570140),
-    p = n(893776),
-    m = n(314897),
+    m = n(893776),
+    p = n(314897),
     f = n(626135),
     _ = n(70956),
     x = n(970648),
@@ -28,7 +28,7 @@ let S = new Set(['nonce_missing', 'nonce_expired', 'handoff_exchange']),
         d.K.remove(N), d.K.remove(b);
     };
 t.Z = () => {
-    let e = (0, c.e7)([m.default], () => m.default.getFingerprint()),
+    let e = (0, c.e7)([p.default], () => p.default.getFingerprint()),
         { fingerprint: t, handoff_token: n } = (0, a.parse)(window.location.search),
         i = Array.isArray(t) ? (t.length > 1 ? t[0] : null) : t,
         r = null != i ? i : null !== e ? e : void 0;
@@ -79,7 +79,7 @@ t.Z = () => {
                         },
                         rejectWithError: !0
                     })
-                    .then((e) => p.Z.loginToken(e.body.token, !1))
+                    .then((e) => m.Z.loginToken(e.body.token, !1))
                     .then(() => {
                         f.default.track(E.rMx.LOGIN_SUCCESSFUL, {
                             source: E.uRl.MOBILE_WEB_HANDOFF,

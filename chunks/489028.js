@@ -15,9 +15,9 @@ var i = n(200651),
     p = n(626135),
     f = n(584825),
     C = n(723047),
-    v = n(416867),
-    _ = n(903773),
-    I = n(215124),
+    _ = n(416867),
+    I = n(903773),
+    v = n(215124),
     N = n(326578),
     T = n(981631),
     b = n(674563),
@@ -54,7 +54,7 @@ function y(e) {
         p = async () => {
             (await d(t, a, b.wW.GUILD_ROLE_SUBSCRIPTIONS)) &&
                 (h(t.id),
-                (0, v.B)({
+                (0, _.B)({
                     Icon: N.Z,
                     title: S.intl.string(S.t['AP/2qa']),
                     body: S.intl.string(S.t.kHMgaG)
@@ -98,14 +98,14 @@ t.Z = (e) => {
         c = t.isOwner(n),
         f = (0, o.Ob)(t),
         C = (0, l.e7)([x.Z], () => x.Z.isFocused()),
-        { teams: v, loading: N } = (0, h.Z)({ refreshOnDepChange: C }),
+        { teams: _, loading: N } = (0, h.Z)({ refreshOnDepChange: C }),
         b = r.useMemo(
             () =>
-                v.filter((e) => {
+                _.filter((e) => {
                     var t;
                     return e.payout_account_status !== j.C.BLOCKED && (0, m.Z)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : T.lds, e);
                 }),
-            [v, n]
+            [_, n]
         ),
         Z = b.length > 0,
         A = r.useCallback(async () => {
@@ -133,7 +133,7 @@ t.Z = (e) => {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   !c &&
-                      (0, i.jsx)(_.Z, {
+                      (0, i.jsx)(I.Z, {
                           className: E.nonOwnerNotice,
                           children: S.intl.string(S.t.t56qWF)
                       }),
@@ -162,7 +162,7 @@ t.Z = (e) => {
                   (0, i.jsx)(s.FormSection, {
                       title: S.intl.string(S.t['0n7R2d']),
                       className: E.selfDemonetization,
-                      children: (0, i.jsx)(I.Z, {
+                      children: (0, i.jsx)(v.Z, {
                           guildId: t.id,
                           allPeriods: []
                       })

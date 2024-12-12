@@ -21,9 +21,9 @@ var i = n(200651),
     p = n(764260),
     f = n(631969),
     C = n(95242),
-    v = n(420966),
-    _ = n(275296),
-    I = n(203377),
+    _ = n(420966),
+    I = n(275296),
+    v = n(203377),
     N = n(981631),
     T = n(388032),
     b = n(105452),
@@ -146,7 +146,7 @@ function R(e) {
             }))
             .filter((e) => e.permissions.length > 0),
         { headerHeight: x, headerRef: p } = (0, C.Z)(0),
-        { scrolledToTop: f, handleScroll: S } = (0, v.V)(),
+        { scrolledToTop: f, handleScroll: S } = (0, _.V)(),
         R = r.useRef(!1);
     return (
         r.useEffect(() => {
@@ -163,15 +163,15 @@ function R(e) {
                         className: s()(j.header, j.stickyHeader, { [j.stickyHeaderElevated]: !f }),
                         ref: p,
                         children: [
-                            (0, i.jsx)(v.Z, {
+                            (0, i.jsx)(_.Z, {
                                 guild: t,
                                 role: n,
-                                selectedSection: I.ZI.PERMISSIONS,
+                                selectedSection: v.ZI.PERMISSIONS,
                                 setSelectedSection: a
                             }),
                             (0, i.jsx)('div', {
                                 className: b.noticeContainer,
-                                children: (0, i.jsx)(_.Z, { role: n })
+                                children: (0, i.jsx)(I.Z, { role: n })
                             }),
                             (0, i.jsx)('div', {
                                 className: b.searchContainer,

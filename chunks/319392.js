@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return f;
     }
 });
 var o = n(200651);
@@ -14,8 +14,8 @@ var r = n(481060),
     d = n(927923),
     u = n(388032),
     x = n(961324),
-    p = n(418811);
-function f() {
+    C = n(418811);
+function p() {
     return (0, o.jsxs)('div', {
         className: x.getXboxApp,
         children: [
@@ -60,18 +60,18 @@ function f() {
         ]
     });
 }
-function C(e) {
+function f(e) {
     let { onClose: t } = e;
     return (0, o.jsx)(l.L, {
         img: (0, o.jsx)('img', {
-            src: p,
+            src: C,
             width: '232',
             height: '113',
             alt: ''
         }),
         title: u.intl.string(u.t['7QsHmp']),
         body: u.intl.string(u.t.byYNPT),
-        content: (0, o.jsx)(f, {}),
+        content: (0, o.jsx)(p, {}),
         onClose: t
     });
 }

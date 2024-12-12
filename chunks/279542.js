@@ -26,9 +26,9 @@ var i = n(200651),
     p = n(594174),
     f = n(63063),
     C = n(78451),
-    v = n(434404),
-    _ = n(999382),
-    I = n(181339),
+    _ = n(434404),
+    I = n(999382),
+    v = n(181339),
     N = n(193544),
     T = n(981631),
     b = n(388032),
@@ -40,7 +40,7 @@ function S(e) {
             async (e) => {
                 let { value: n } = e;
                 try {
-                    await v.Z.saveGuild(t.id, { verificationLevel: n }), v.Z.updateGuild({ verificationLevel: n });
+                    await _.Z.saveGuild(t.id, { verificationLevel: n }), _.Z.updateGuild({ verificationLevel: n });
                 } catch (e) {
                     (0, c.showToast)((0, c.createToast)(b.intl.string(b.t['46Rs3t']), c.ToastType.FAILURE));
                 }
@@ -90,7 +90,7 @@ function E(e) {
             async (e) => {
                 let { value: n } = e;
                 try {
-                    await v.Z.saveGuild(t.id, { explicitContentFilter: n }), v.Z.updateGuild({ explicitContentFilter: n });
+                    await _.Z.saveGuild(t.id, { explicitContentFilter: n }), _.Z.updateGuild({ explicitContentFilter: n });
                 } catch (e) {
                     (0, c.showToast)((0, c.createToast)(b.intl.string(b.t['46Rs3t']), c.ToastType.FAILURE));
                 }
@@ -141,7 +141,7 @@ function E(e) {
 async function R(e, t) {
     if (e.hasFeature(T.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) === t) return;
     let n = e.features;
-    return t ? n.add(T.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) : n.delete(T.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY), await v.Z.saveGuild(e.id, { features: n });
+    return t ? n.add(T.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) : n.delete(T.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY), await _.Z.saveGuild(e.id, { features: n });
 }
 function y(e) {
     let { guild: t } = e,
@@ -215,7 +215,7 @@ function Z(e) {
         h = n === T.BpS.ELEVATED,
         x = (0, a.throttle)(async (e) => {
             if (!!u && !m)
-                await v.Z.updateMFALevel({
+                await _.Z.updateMFALevel({
                     guildId: t.id,
                     level: e ? T.BpS.ELEVATED : T.BpS.NONE,
                     isEnabled: !e
@@ -267,7 +267,7 @@ function Z(e) {
         : null;
 }
 function A() {
-    let { guild: e, mfaLevel: t } = (0, o.cj)([_.Z], () => _.Z.getProps(), []),
+    let { guild: e, mfaLevel: t } = (0, o.cj)([I.Z], () => I.Z.getProps(), []),
         n = (0, o.e7)([x.Z], () => x.Z.enabled, []);
     return null == e
         ? null
@@ -288,7 +288,7 @@ function A() {
                     (0, i.jsx)(c.FormDivider, { className: j.divider }),
                     (0, i.jsx)('div', {
                         className: s()(j.setupContainer),
-                        children: (0, i.jsx)(I.w, { guild: e })
+                        children: (0, i.jsx)(v.w, { guild: e })
                     })
                 ]
             });

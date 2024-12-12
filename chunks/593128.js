@@ -15,9 +15,9 @@ var i = n(200651),
     p = n(389134),
     f = n(35313),
     C = n(94963),
-    v = n(745628),
-    _ = n(950279),
-    I = n(796918),
+    _ = n(745628),
+    I = n(950279),
+    v = n(796918),
     N = n(513532),
     T = n(741595),
     b = n(974842),
@@ -176,8 +176,8 @@ t.Z = (e) => {
         [R, L] = r.useState(S.Wy.GAMES),
         {
             initialSettings: O,
-            settings: k,
-            errors: P,
+            settings: P,
+            errors: k,
             submitting: M,
             dirty: w
         } = (0, s.cj)([p.Z], () => {
@@ -230,11 +230,11 @@ t.Z = (e) => {
             w ? h.S.dispatch(E.CkL.EMPHASIZE_NOTICE) : n();
         }, [w, n]),
         Y = async () => {
-            await (0, g.Ii)(t, k), (0, x.Af)(t);
+            await (0, g.Ii)(t, P), (0, x.Af)(t);
         },
-        K = r.useMemo(() => null != P && Object.values(P).some((e) => null != e), [P]);
-    if (null == k) return null;
-    let q = A(P);
+        K = r.useMemo(() => null != k && Object.values(k).some((e) => null != e), [k]);
+    if (null == P) return null;
+    let q = A(k);
     return (0, i.jsxs)(l.animated.div, {
         style: U,
         className: Z.modal,
@@ -322,12 +322,12 @@ t.Z = (e) => {
                                     switch (R) {
                                         case S.Wy.GAMES:
                                             var e;
-                                            return (0, i.jsx)(_.Z, {
+                                            return (0, i.jsx)(I.Z, {
                                                 title: y.intl.string(y.t.t6Mbq6),
                                                 description: y.intl.string(y.t.E7Ymwc),
                                                 onUpdateGames: F,
-                                                gameApplicationIds: null !== (e = k.gameApplicationIds) && void 0 !== e ? e : new Set(),
-                                                error: P.gameApplicationIds,
+                                                gameApplicationIds: null !== (e = P.gameApplicationIds) && void 0 !== e ? e : new Set(),
+                                                error: k.gameApplicationIds,
                                                 guildId: t,
                                                 includeSuggestedGames: !0
                                             });
@@ -336,8 +336,8 @@ t.Z = (e) => {
                                                 title: y.intl.string(y.t.W0h7pa),
                                                 description: y.intl.string(y.t.JHYekZ),
                                                 onUpdatePlaystyle: H,
-                                                playstyle: k.playstyle,
-                                                error: P.playstyle
+                                                playstyle: P.playstyle,
+                                                error: k.playstyle
                                             });
                                         case S.Wy.UTILITY_TRAITS:
                                             return (0, i.jsx)(j.Z, {
@@ -345,30 +345,30 @@ t.Z = (e) => {
                                                 title: y.intl.string(y.t.G4tP09),
                                                 description: y.intl.string(y.t['6Eos19']),
                                                 onUpdateTraits: z,
-                                                progress: k
+                                                progress: P
                                             });
                                         case S.Wy.INTERESTS:
-                                            return (0, i.jsx)(I.Z, {
-                                                guildId: t,
-                                                handleUpdate: W,
-                                                progress: k,
-                                                error: P.interests
-                                            });
-                                        case S.Wy.DESCRIPTION:
                                             return (0, i.jsx)(v.Z, {
                                                 guildId: t,
                                                 handleUpdate: W,
-                                                progress: k,
-                                                errors: P
+                                                progress: P,
+                                                error: k.interests
+                                            });
+                                        case S.Wy.DESCRIPTION:
+                                            return (0, i.jsx)(_.Z, {
+                                                guildId: t,
+                                                handleUpdate: W,
+                                                progress: P,
+                                                errors: k
                                             });
                                         case S.Wy.CUSTOMIZE_TAG_BADGE:
                                             return (0, i.jsx)(b.Z, {
                                                 handleUpdate: W,
-                                                tag: k.tag,
-                                                error: P.tag,
-                                                badge: k.badgeKind,
-                                                primaryColor: k.badgePrimaryColor,
-                                                secondaryColor: k.badgeSecondaryColor,
+                                                tag: P.tag,
+                                                error: k.tag,
+                                                badge: P.badgeKind,
+                                                primaryColor: P.badgePrimaryColor,
+                                                secondaryColor: P.badgeSecondaryColor,
                                                 furthestStep: S.Wy.CUSTOMIZE_TAG_BADGE,
                                                 inSettings: !0
                                             });
@@ -376,13 +376,13 @@ t.Z = (e) => {
                                             return (0, i.jsx)(N.Z, {
                                                 guildId: t,
                                                 inSettings: !0,
-                                                error: P.verificationForm
+                                                error: k.verificationForm
                                             });
                                         case S.Wy.CUSTOMIZE_BANNER:
                                             return (0, i.jsx)(C.Z, {
                                                 guildId: t,
                                                 handleUpdate: W,
-                                                progress: k
+                                                progress: P
                                             });
                                         default:
                                             return null;
@@ -401,7 +401,7 @@ t.Z = (e) => {
                                             onReset: () => {
                                                 (0, g.mf)(t, O);
                                             },
-                                            errorMessage: Object.values(P).find((e) => null != e)
+                                            errorMessage: Object.values(k).find((e) => null != e)
                                         })
                                     })
                             })

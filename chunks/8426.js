@@ -15,7 +15,7 @@ n.d(t, {
         return x;
     },
     ad: function () {
-        return _;
+        return I;
     },
     bj: function () {
         return Z;
@@ -24,7 +24,7 @@ n.d(t, {
         return f;
     },
     hS: function () {
-        return v;
+        return _;
     },
     lq: function () {
         return b;
@@ -39,7 +39,7 @@ n.d(t, {
         return y;
     },
     r2: function () {
-        return I;
+        return v;
     },
     vR: function () {
         return p;
@@ -83,13 +83,13 @@ function C(e) {
         channelId: e
     });
 }
-function v(e) {
+function _(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_REORDER_NEW_MEMBER_ACTION',
         actions: e
     });
 }
-async function _(e, t, n, i) {
+async function I(e, t, n, i) {
     if (!i) return Promise.resolve();
     try {
         let i = await l.tn.patch({
@@ -120,7 +120,7 @@ async function _(e, t, n, i) {
         );
     }
 }
-function I(e) {
+function v(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_ADD_RESOURCE_CHANNEL',
         resourceChannel: e

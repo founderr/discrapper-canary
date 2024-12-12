@@ -15,9 +15,9 @@ var i = n(200651),
     p = n(210887),
     f = n(387667),
     C = n(598077),
-    v = n(592125),
-    _ = n(430824),
-    I = n(246946),
+    _ = n(592125),
+    I = n(430824),
+    v = n(246946),
     N = n(594174),
     T = n(823379),
     b = n(51144),
@@ -31,7 +31,7 @@ var i = n(200651),
     L = n(600216),
     D = n(670189),
     O = n(616926);
-function k(e, t, n) {
+function P(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,7 +44,7 @@ function k(e, t, n) {
         e
     );
 }
-class P extends r.PureComponent {
+class k extends r.PureComponent {
     render() {
         let { onHeaderClick: e, guildId: t, guild: n, ...r } = this.props;
         return null == t
@@ -61,11 +61,11 @@ class P extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            k(this, 'handleHeaderClick', () => {
+            P(this, 'handleHeaderClick', () => {
                 let { onHeaderClick: e, log: t } = this.props;
                 null == e || e(t);
             }),
-            k(this, 'handleUserContextMenu', (e) => {
+            P(this, 'handleUserContextMenu', (e) => {
                 let { log: t, guildId: r } = this.props,
                     { user: l } = t;
                 null != l &&
@@ -80,9 +80,9 @@ class P extends r.PureComponent {
                             });
                     });
             }),
-            k(this, 'handleChannelContextMenu', (e) => {
+            P(this, 'handleChannelContextMenu', (e) => {
                 let { log: t, guildId: r } = this.props,
-                    l = _.Z.getGuild(r);
+                    l = I.Z.getGuild(r);
                 null != t.options.channel &&
                     'string' != typeof t.options.channel &&
                     null != l &&
@@ -97,13 +97,13 @@ class P extends r.PureComponent {
                                 : null;
                     });
             }),
-            k(this, 'handleTargetContextMenu', (e) => {
+            P(this, 'handleTargetContextMenu', (e) => {
                 let { log: t, guildId: r } = this.props;
                 switch (t.targetType) {
                     case Z.KFR.CHANNEL:
                     case Z.KFR.CHANNEL_OVERWRITE:
-                        let l = v.Z.getChannel(t.targetId),
-                            s = _.Z.getGuild(r);
+                        let l = _.Z.getChannel(t.targetId),
+                            s = I.Z.getGuild(r);
                         if (null != l && null != s)
                             return (0, h.jW)(e, async () => {
                                 let { default: e } = await Promise.all([n.e('38902'), n.e('51529')]).then(n.bind(n, 228620));
@@ -158,7 +158,7 @@ function M(e) {
                         let t = s === e.id,
                             r = a === e.id;
                         return (0, i.jsx)(
-                            P,
+                            k,
                             {
                                 guildId: n,
                                 guild: l,
@@ -308,18 +308,18 @@ class w extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            k(this, '_clickedInside', !1),
-            k(this, '_scrollerRef', null),
-            k(this, '_expandedRef', void 0),
-            k(this, '_lastExpandedRef', void 0),
-            k(this, '_prevRects', this.getRects()),
-            k(this, '_contentRef', r.createRef()),
-            k(this, 'state', {
+            P(this, '_clickedInside', !1),
+            P(this, '_scrollerRef', null),
+            P(this, '_expandedRef', void 0),
+            P(this, '_lastExpandedRef', void 0),
+            P(this, '_prevRects', this.getRects()),
+            P(this, '_contentRef', r.createRef()),
+            P(this, 'state', {
                 expandedId: null,
                 lastExpandedId: null,
                 actionFilterQuery: ''
             }),
-            k(this, 'renderActionQuickSelectItem', (e, t) => {
+            P(this, 'renderActionQuickSelectItem', (e, t) => {
                 var n;
                 let { actionFilter: r } = this.props,
                     l = (0, f.Pw)(e.value),
@@ -346,7 +346,7 @@ class w extends r.PureComponent {
                     null !== (n = e.key) && void 0 !== n ? n : t
                 );
             }),
-            k(this, 'renderUserQuickSelectItem', (e, t) => {
+            P(this, 'renderUserQuickSelectItem', (e, t) => {
                 var n;
                 if (e.user instanceof C.Z) {
                     let t = e.user;
@@ -405,7 +405,7 @@ class w extends r.PureComponent {
                     null !== (n = e.key) && void 0 !== n ? n : t
                 );
             }),
-            k(this, 'renderHeaderDropdowns', () => {
+            P(this, 'renderHeaderDropdowns', () => {
                 var e, t;
                 let { actionFilter: n, hide: r, userIdFilter: l, moderators: a } = this.props;
                 if (r) return null;
@@ -474,7 +474,7 @@ class w extends r.PureComponent {
                     ]
                 });
             }),
-            k(this, 'renderLoadMore', () => {
+            P(this, 'renderLoadMore', () => {
                 let { showLoadMore: e, hasOlderLogs: t, hide: n } = this.props;
                 if (e && t && !n)
                     return (0, i.jsx)(u.Button, {
@@ -484,13 +484,13 @@ class w extends r.PureComponent {
                         children: A.intl.string(A.t['Q/LSXl'])
                     });
             }),
-            k(this, 'handleFilterActionChange', (e) => {
+            P(this, 'handleFilterActionChange', (e) => {
                 (0, m.ZX)(e, this.props.guildId);
             }),
-            k(this, 'handleFilterUserChange', (e) => {
+            P(this, 'handleFilterUserChange', (e) => {
                 (0, m.uo)(e, this.props.guildId);
             }),
-            k(this, 'handleHeaderClick', (e) => {
+            P(this, 'handleHeaderClick', (e) => {
                 let { expandedId: t } = this.state;
                 t !== e.id
                     ? ((this._clickedInside = !0),
@@ -507,7 +507,7 @@ class w extends r.PureComponent {
                           lastExpandedId: null
                       }));
             }),
-            k(this, 'handleOutsideClick', () => {
+            P(this, 'handleOutsideClick', () => {
                 null == this.state.expandedId || this._clickedInside
                     ? null != this.state.expandedId && (this._clickedInside = !1)
                     : ((this._expandedRef = null),
@@ -518,35 +518,35 @@ class w extends r.PureComponent {
                       }),
                       (this._prevRects = this.getRects()));
             }),
-            k(this, 'handleContentClick', (e) => {
+            P(this, 'handleContentClick', (e) => {
                 (this._clickedInside = !0), e.stopPropagation();
             }),
-            k(this, 'handleSetScrollerRef', (e) => {
+            P(this, 'handleSetScrollerRef', (e) => {
                 this._scrollerRef = e;
             }),
-            k(this, 'handleOnScroll', () => {
+            P(this, 'handleOnScroll', () => {
                 this.isScrollerAtBottom() && this.handleFetchNextPage();
             }),
-            k(this, 'handleFetchNextPage', () => {
+            P(this, 'handleFetchNextPage', () => {
                 (0, m.OY)(this.props.guildId);
             }),
-            k(this, 'handleActionFilterQueryChange', (e) => {
+            P(this, 'handleActionFilterQueryChange', (e) => {
                 this.setState({ actionFilterQuery: e });
             }),
-            k(this, 'handleActionFilterQueryClear', () => {
+            P(this, 'handleActionFilterQueryClear', () => {
                 this.setState({ actionFilterQuery: '' });
             }),
-            k(this, 'handleSetExpandedRef', (e) => {
+            P(this, 'handleSetExpandedRef', (e) => {
                 this._expandedRef = e;
             }),
-            k(this, 'handleSetLastExpandedRef', (e) => {
+            P(this, 'handleSetLastExpandedRef', (e) => {
                 this._lastExpandedRef = e;
             });
     }
 }
-t.Z = d.ZP.connectStores([j.Z, S.Z, _.Z, p.Z, I.Z, N.default], () => {
+t.Z = d.ZP.connectStores([j.Z, S.Z, I.Z, p.Z, v.Z, N.default], () => {
     let e = S.Z.getGuildId(),
-        t = _.Z.getGuild(e),
+        t = I.Z.getGuild(e),
         n = j.Z.logs;
     return {
         guildId: e,
@@ -562,6 +562,6 @@ t.Z = d.ZP.connectStores([j.Z, S.Z, _.Z, p.Z, I.Z, N.default], () => {
         actionFilter: j.Z.actionFilter,
         userIdFilter: j.Z.userIdFilter,
         theme: p.Z.theme,
-        hide: I.Z.enabled
+        hide: v.Z.enabled
     };
 })(w);

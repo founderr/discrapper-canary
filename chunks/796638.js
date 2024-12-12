@@ -87,15 +87,15 @@ function v(e, t) {
             let _ = null == S || m ? e : e - i - o,
                 x = Math.max(0, Math.min(Math.floor((_ - o) / (s + o)), u, t.length)),
                 E = Math.min((_ - o) / x - o, i),
-                Z = Math.max(0, x - p.length),
-                C = p.slice(0, x),
-                y = f.slice(0, Z),
-                b = Array(Z);
-            if (Z > 0) {
+                C = Math.max(0, x - p.length),
+                Z = p.slice(0, x),
+                y = f.slice(0, C),
+                b = Array(C);
+            if (C > 0) {
                 let e = [];
                 for (let t of y) {
                     let n = I.current[t.id];
-                    null != n && n < Z ? (b[n] = t) : e.push(t);
+                    null != n && n < C ? (b[n] = t) : e.push(t);
                 }
                 for (let t = 0; t < b.length; t++) {
                     if (null != b[t]) continue;
@@ -107,7 +107,7 @@ function v(e, t) {
             let T = b.filter(c.lm),
                 A = (0, a.keyBy)((0, a.range)(T.length), (e) => T[e].id);
             I.current = A;
-            let N = [...C, ...T];
+            let N = [...Z, ...T];
             return (
                 null != S && (m && N.length >= x ? (N[Math.max(0, N.length - 1)] = S) : N.push(S)),
                 {

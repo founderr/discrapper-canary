@@ -12,8 +12,8 @@ var r = n(212598),
     l = n(397995),
     a = n(848499);
 function d(e) {
-    let { isWaitingForConnection: t, onWaitingForConnection: n, expectedCallbackState: d, onAuthToken: u, onError: x, onClose: p } = e,
-        f = t
+    let { isWaitingForConnection: t, onWaitingForConnection: n, expectedCallbackState: d, onAuthToken: u, onError: x, onClose: C } = e,
+        p = t
             ? (0, o.jsx)('img', {
                   src: a,
                   width: '168',
@@ -26,7 +26,7 @@ function d(e) {
                   height: '124',
                   alt: ''
               }),
-        C = t ? s.intl.string(s.t.EuwcxM) : s.intl.string(s.t.a3MfQU),
+        f = t ? s.intl.string(s.t.EuwcxM) : s.intl.string(s.t.a3MfQU),
         g = t ? s.intl.string(s.t['1GjS/f']) : s.intl.string(s.t['Y+UQDg']);
     return (0, o.jsx)(r.t, {
         platformType: i.ABu.XBOX,
@@ -35,9 +35,9 @@ function d(e) {
         expectedCallbackState: d,
         onAuthToken: u,
         onError: x,
-        onClose: p,
-        img: f,
-        title: C,
+        onClose: C,
+        img: p,
+        title: f,
         body: g,
         redirectDestination: c.zM
     });

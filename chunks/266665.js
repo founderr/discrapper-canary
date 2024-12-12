@@ -20,9 +20,9 @@ var i = n(200651),
     p = n(134433),
     f = n(325476),
     C = n(496675),
-    v = n(671533),
-    _ = n(946724),
-    I = n(970129),
+    _ = n(671533),
+    I = n(946724),
+    v = n(970129),
     N = n(712181),
     T = n(420966),
     b = n(203377),
@@ -33,18 +33,18 @@ let R = 'DRAGGABLE_ROLE';
 function y(e) {
     var t, r;
     let l,
-        { guild: d, role: h, highestRole: g, selectedItem: f, onClick: C, currentPosition: v, onDragStart: _, onDragReset: N, onDragComplete: T, roleStyle: b } = e,
-        S = (0, I.T)(d, g, h),
+        { guild: d, role: h, highestRole: g, selectedItem: f, onClick: C, currentPosition: _, onDragStart: I, onDragReset: N, onDragComplete: T, roleStyle: b } = e,
+        S = (0, v.T)(d, g, h),
         y = (0, x.pM)(d.id, h.id),
         Z = null == S && !y,
         A = (null === (t = h.tags) || void 0 === t ? void 0 : t.guild_connections) !== void 0,
         [, L] = (0, a.c)({
             type: R,
             item: () => (
-                _(h.id),
+                I(h.id),
                 {
                     id: h.id,
-                    position: v
+                    position: _
                 }
             ),
             canDrag: () => Z,
@@ -66,7 +66,7 @@ function y(e) {
             },
             drop: () => ({ roleId: h.id })
         }),
-        k = null !== (r = h.colorString) && void 0 !== r ? r : (0, c.Rf)(j.p6O);
+        P = null !== (r = h.colorString) && void 0 !== r ? r : (0, c.Rf)(j.p6O);
     return (
         (l = A
             ? (0, i.jsx)(p.Z, {
@@ -76,15 +76,15 @@ function y(e) {
               })
             : 'dot' === b
               ? (0, i.jsx)(u.RoleDot, {
-                    color: k,
+                    color: P,
                     background: !1,
                     tooltip: !1
                 })
-              : (0, i.jsx)(u.RoleCircle, { color: k })),
+              : (0, i.jsx)(u.RoleCircle, { color: P })),
         (0, i.jsxs)(u.TabBar.Item, {
             className: s()(E.row, {
-                [E.dragBefore]: null !== D && v < D,
-                [E.dragAfter]: null !== D && v > D
+                [E.dragBefore]: null !== D && _ < D,
+                [E.dragAfter]: null !== D && _ > D
             }),
             id: h.id,
             selectedItem: f,
@@ -109,7 +109,7 @@ function y(e) {
             children: [
                 l,
                 null != S
-                    ? (0, i.jsx)(I.Z, {
+                    ? (0, i.jsx)(v.Z, {
                           className: E.lock,
                           tooltipText: S
                       })
@@ -126,11 +126,11 @@ function y(e) {
 }
 function Z(e) {
     let { guild: t, currentRoleId: n, setCurrentRoleId: l, setSelectedSection: a } = e,
-        o = (0, d.e7)([_.Z], () => _.Z.roles),
+        o = (0, d.e7)([I.Z], () => I.Z.roles),
         c = (0, d.e7)([C.Z], () => C.Z.getHighestRole(t)),
         m = (0, d.e7)([g.Z], () => g.Z.roleStyle),
         [x, p] = r.useState(o.length),
-        { scrolledToTop: I, handleScroll: j } = (0, T.V)(),
+        { scrolledToTop: v, handleScroll: j } = (0, T.V)(),
         { handleDragStart: R, handleDragReset: Z, handleDragComplete: A } = (0, N.Z)(o),
         L = r.useRef(null),
         D = r.useCallback(
@@ -156,13 +156,13 @@ function Z(e) {
             className: E.container,
             children: [
                 (0, i.jsxs)('div', {
-                    className: s()(E.titleContainer, { [E.titleElevated]: !I }),
+                    className: s()(E.titleContainer, { [E.titleElevated]: !v }),
                     children: [
                         (0, i.jsxs)(u.Clickable, {
                             className: E.title,
                             onClick: () => l(null),
                             children: [
-                                (0, i.jsx)(v.Z, { direction: v.Z.Directions.LEFT }),
+                                (0, i.jsx)(_.Z, { direction: _.Z.Directions.LEFT }),
                                 (0, i.jsx)(u.Text, {
                                     className: E.titleText,
                                     variant: 'text-md/semibold',

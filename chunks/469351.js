@@ -21,9 +21,9 @@ var i,
     p = n(962086),
     f = n(225675),
     C = n(703656),
-    v = n(430824),
-    _ = n(594174),
-    I = n(63063),
+    _ = n(430824),
+    I = n(594174),
+    v = n(63063),
     N = n(267101),
     T = n(294294),
     b = n(310800),
@@ -35,15 +35,15 @@ var i,
 function Z(e) {
     let { guildId: t, hasValidApplication: n } = e,
         { listingsLoaded: i } = (0, N.eD)(t),
-        r = (0, o.e7)([v.Z], () => v.Z.getGuild(t)),
-        Z = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
+        r = (0, o.e7)([_.Z], () => _.Z.getGuild(t)),
+        Z = (0, o.e7)([I.default], () => I.default.getCurrentUser()),
         A = (null == r ? void 0 : r.isOwner(Z)) === !0,
         { loading: L } = (0, d.H)(t),
         [D, O] = s.useState(n ? 'manage_listings' : 'payment');
     (0, h.P)(r);
-    let k = s.useCallback(() => {
+    let P = s.useCallback(() => {
         if (null == r) return;
-        let e = v.Z.getRole(r.id, r.getEveryoneRoleId());
+        let e = _.Z.getRole(r.id, r.getEveryoneRoleId());
         if (null == e) return;
         x.Z.close();
         let t = { [e.id]: e };
@@ -57,7 +57,7 @@ function Z(e) {
     }, [r]);
     if (!i || L) return (0, l.jsx)(c.Spinner, {});
     if (null == r) return null;
-    let P = (0, l.jsxs)(l.Fragment, {
+    let k = (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(c.FormTitle, {
                     tag: c.FormTitleTags.H1,
@@ -66,8 +66,8 @@ function Z(e) {
                 (0, l.jsx)(c.FormText, {
                     type: c.FormText.Types.DESCRIPTION,
                     children: R.intl.format(R.t.xiYuDg, {
-                        monetizationPolicyLink: I.Z.getArticleURL(S.BhN.CREATOR_POLICY),
-                        serverProductsSupportLink: I.Z.getCreatorSupportArticleURL(S.BhN.SERVER_PRODUCTS)
+                        monetizationPolicyLink: v.Z.getArticleURL(S.BhN.CREATOR_POLICY),
+                        serverProductsSupportLink: v.Z.getCreatorSupportArticleURL(S.BhN.SERVER_PRODUCTS)
                     })
                 })
             ]
@@ -103,7 +103,7 @@ function Z(e) {
                     ? (0, l.jsx)('div', {
                           className: y.previewButton,
                           children: (0, l.jsx)(c.Button, {
-                              onClick: k,
+                              onClick: P,
                               color: c.Button.Colors.PRIMARY,
                               size: c.Button.Sizes.SMALL,
                               look: c.Button.Looks.OUTLINED,
@@ -127,7 +127,7 @@ function Z(e) {
     return (0, l.jsxs)(u.AL, {
         guildId: t,
         children: [
-            P,
+            k,
             (0, l.jsx)(g.Z, { guild: r }),
             (0, l.jsx)('div', {
                 className: y.tabBarContainer,

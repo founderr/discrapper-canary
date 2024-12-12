@@ -19,8 +19,8 @@ var l = n(120356),
     _ = n(802856),
     x = n(387903),
     E = n(606925),
-    Z = n(719216),
-    C = n(429589),
+    C = n(719216),
+    Z = n(429589),
     y = n(276149),
     b = n(636245),
     T = n(697761),
@@ -159,7 +159,7 @@ t.Z = (0, u.Z)((e) => {
                                 'watch-button'
                             ),
                             (0, i.jsx)(
-                                C.Z,
+                                Z.Z,
                                 {
                                     activity: t,
                                     embeddedActivity: n,
@@ -183,7 +183,7 @@ t.Z = (0, u.Z)((e) => {
                                 'notify-button'
                             ),
                             (0, i.jsx)(
-                                Z.Z,
+                                C.Z,
                                 {
                                     user: l,
                                     color: k,

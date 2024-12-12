@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     },
     Z: function () {
-        return v;
+        return _;
     }
 });
 var i = n(200651);
@@ -49,12 +49,12 @@ function C(e) {
               })
           });
 }
-function v(e) {
+function _(e) {
     let { guild: t } = e,
         n = (0, c.Z)(t),
         { eligibilityLoading: m, eligibilityError: h, eligibility: g } = n,
         p = (0, a.j)(g),
-        { isLoading: v, error: _, creatorMonetizationOnboardingMarketing: I } = (0, o.Z)(t.id);
+        { isLoading: _, error: I, creatorMonetizationOnboardingMarketing: v } = (0, o.Z)(t.id);
     return ((0, s.Z)(
         {
             type: r.ImpressionTypes.PANE,
@@ -68,7 +68,7 @@ function v(e) {
         },
         { disableTrack: null == t.id || null == g }
     ),
-    m || null == g || v)
+    m || null == g || _)
         ? (0, i.jsx)(l.Spinner, {})
         : g.actionRequired
           ? (0, i.jsx)(x.Z, { guild: t })
@@ -82,8 +82,8 @@ function v(e) {
                           monetizationEligibility: n
                       }),
                       (0, i.jsx)(C, {
-                          onboardingMarketing: I,
-                          onboardingMarketingError: _
+                          onboardingMarketing: v,
+                          onboardingMarketingError: I
                       })
                   ]
               });

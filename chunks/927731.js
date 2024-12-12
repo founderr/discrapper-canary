@@ -20,9 +20,9 @@ var i = n(200651),
     p = n(295141),
     f = n(723047),
     C = n(290348),
-    v = n(450215),
-    _ = n(981631),
-    I = n(388032),
+    _ = n(450215),
+    I = n(981631),
+    v = n(388032),
     N = n(26405);
 let T = 'guild-role-subscription-tier-template-selector',
     b = (e) => {
@@ -61,7 +61,7 @@ function j(e) {
         },
         D = (0, g.ss)(t),
         O = (0, g.Gp)(),
-        k = r.useCallback(() => {
+        P = r.useCallback(() => {
             O &&
                 h.jJ.trackExposure({
                     guildId: t,
@@ -84,19 +84,19 @@ function j(e) {
                       )
                     : S();
         }, [t, E, S, l, O, D]),
-        P = C.Lo(A),
+        k = C.Lo(A),
         M = r.useCallback(() => A.forEach(C.GM), [A]),
         w = (0, f.mY)(),
         B = (0, o.e7)([m.Z], () => m.Z.getProps().subsection);
     return (
         r.useEffect(
             () => (
-                B === _.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && k(),
+                B === I.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && P(),
                 () => {
                     (0, d.closeModal)(T);
                 }
             ),
-            [B, k]
+            [B, P]
         ),
         (0, i.jsxs)(i.Fragment, {
             children: [
@@ -105,7 +105,7 @@ function j(e) {
                     children: [
                         A.map((e) =>
                             (0, i.jsx)(
-                                v.Z,
+                                _.Z,
                                 {
                                     guildId: t,
                                     initialEditStateId: e,
@@ -120,7 +120,7 @@ function j(e) {
                             )
                         ),
                         (0, i.jsxs)(d.Clickable, {
-                            onClick: w ? void 0 : k,
+                            onClick: w ? void 0 : P,
                             className: s()(N.createTierButton, { [N.disabled]: w }),
                             'aria-disabled': w,
                             children: [
@@ -132,7 +132,7 @@ function j(e) {
                                 (0, i.jsx)(d.Text, {
                                     variant: 'text-md/normal',
                                     color: 'interactive-active',
-                                    children: I.intl.string(I.t.PiFnn5)
+                                    children: v.intl.string(v.t.PiFnn5)
                                 })
                             ]
                         })
@@ -141,7 +141,7 @@ function j(e) {
                 (0, i.jsx)(c.W, {
                     component: 'div',
                     className: N.contentRegion,
-                    children: P && (0, i.jsx)(d.SlideIn, { children: (0, i.jsx)(u.Z, { onReset: M }) })
+                    children: k && (0, i.jsx)(d.SlideIn, { children: (0, i.jsx)(u.Z, { onReset: M }) })
                 })
             ]
         })
@@ -154,12 +154,12 @@ function S(e) {
         { maxTiers: l } = (0, g.s1)(t),
         s = r.map((e) => e.id);
     return (0, i.jsxs)(d.FormSection, {
-        title: I.intl.string(I.t['72+Soq']),
+        title: v.intl.string(v.t['72+Soq']),
         className: N.container,
         children: [
             (0, i.jsx)(d.FormText, {
                 type: d.FormText.Types.DESCRIPTION,
-                children: I.intl.format(I.t.nHRSvL, { maxTiers: l })
+                children: v.intl.format(v.t.nHRSvL, { maxTiers: l })
             }),
             (0, i.jsx)(d.Spacer, { size: 16 }),
             (0, i.jsx)(j, {

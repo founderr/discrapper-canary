@@ -27,8 +27,8 @@ var i,
     _ = n(884338),
     x = n(719296),
     E = n(958185),
-    Z = n(100527),
-    C = n(906732),
+    C = n(100527),
+    Z = n(906732),
     y = n(890280),
     b = n(835473),
     T = n(522474),
@@ -84,7 +84,7 @@ function k(e) {
                 .filter(j.lm)
         ),
         E = (0, c.e7)([m.ZP], () => m.ZP.getEmbeddedActivitiesForChannel(v.id).find((e) => e.applicationId === h.id)),
-        { analyticsLocations: Z } = (0, C.ZP)(),
+        { analyticsLocations: C } = (0, Z.ZP)(),
         b = (0, d.O)(),
         T = P.ZP.getName(v.getGuildId(), v.id, null == x ? void 0 : x[0]),
         N =
@@ -143,7 +143,7 @@ function k(e) {
                                       applicationId: E.applicationId,
                                       activityChannelId: v.id,
                                       locationObject: b.location,
-                                      analyticsLocations: Z,
+                                      analyticsLocations: C,
                                       componentId: k
                                   });
                           },
@@ -169,7 +169,7 @@ function k(e) {
 }
 function D(e) {
     let { participant: t, width: n, selected: i, interactible: l, channel: s } = e,
-        { analyticsLocations: o } = (0, C.ZP)(Z.Z.ACTIVITY_TILE),
+        { analyticsLocations: o } = (0, Z.ZP)(C.Z.ACTIVITY_TILE),
         { id: u } = t,
         d = (0, h.Z)(),
         m = (null == d ? void 0 : d.channelId) === s.id && d.applicationId === u,
@@ -195,7 +195,7 @@ function D(e) {
                 (0, I.jy)(e);
             }
         }, [g, d, A]),
-        (0, a.jsx)(C.Gt, {
+        (0, a.jsx)(Z.Gt, {
             value: o,
             children: (0, a.jsx)('div', {
                 className: M.container,

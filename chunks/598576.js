@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return f;
+            return p;
         }
     });
 var o = n(200651);
@@ -15,16 +15,16 @@ var r = n(481060),
     d = n(319392),
     u = n(798930),
     x = n(981631),
-    p = n(38920);
-function f(e) {
-    let { transitionState: t, onClose: n, analyticsLocation: f } = e,
-        { slide: C, gotoNext: g, gotoError: h, handleWaitingForConnection: b, handleAuthToken: _, expectedCallbackState: j, callbackData: A } = (0, i.k)(f, x.ABu.XBOX);
+    C = n(38920);
+function p(e) {
+    let { transitionState: t, onClose: n, analyticsLocation: p } = e,
+        { slide: f, gotoNext: g, gotoError: h, handleWaitingForConnection: b, handleAuthToken: _, expectedCallbackState: j, callbackData: A } = (0, i.k)(p, x.ABu.XBOX);
     return (0, o.jsx)(r.ModalRoot, {
-        className: p.modal,
+        className: C.modal,
         transitionState: t,
         disableTrack: !0,
         children: (0, o.jsxs)(r.Slides, {
-            activeSlide: C,
+            activeSlide: f,
             width: 408,
             children: [
                 (0, o.jsx)(r.Slide, {

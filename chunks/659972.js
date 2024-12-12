@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return g;
+        return f;
     },
     k: function () {
         return i;
@@ -19,8 +19,8 @@ var r = t(120356),
     m = t(131154),
     x = t(38981),
     h = t(820331);
-function g(e) {
-    let { guild: n, stageInstance: t, showGuildPopout: l, setShowGuildPopout: i, handleGuildNameClick: r, source: g, speakers: f, speakerCount: v, audienceCount: _, channelName: j } = e,
+function f(e) {
+    let { guild: n, stageInstance: t, showGuildPopout: l, setShowGuildPopout: i, handleGuildNameClick: r, source: f, speakers: g, speakerCount: v, audienceCount: _, channelName: j } = e,
         I = n.id;
     return (0, a.jsx)('div', {
         className: h.contentContainer,
@@ -62,7 +62,7 @@ function g(e) {
                         (0, a.jsxs)('div', {
                             className: h.rightJustifiedContent,
                             children: [
-                                6 === g &&
+                                6 === f &&
                                     (0, a.jsx)('div', {
                                         className: h.featuredTag,
                                         children: (0, a.jsx)(s.Text, {
@@ -93,7 +93,7 @@ function g(e) {
                 }),
                 (0, a.jsx)(m.Z, {
                     guild: n,
-                    speakers: f,
+                    speakers: g,
                     speakerCount: v,
                     className: h.speakers
                 }),

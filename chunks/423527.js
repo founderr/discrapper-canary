@@ -17,8 +17,8 @@ var i,
     d = n(442837),
     h = n(846519),
     g = n(481060),
-    p = n(893776),
-    m = n(899370),
+    m = n(893776),
+    p = n(899370),
     f = n(224841),
     _ = n(13430),
     x = n(213609),
@@ -112,7 +112,7 @@ class ea extends (i = s.PureComponent) {
             },
             { flush: !0 }
         ),
-            null == this.props.consentRequired && p.Z.getLocationMetadata(),
+            null == this.props.consentRequired && m.Z.getLocationMetadata(),
             (0, M.e)('register');
     }
     componentWillUnmount() {
@@ -161,8 +161,8 @@ class ea extends (i = s.PureComponent) {
             { invite: l, guildTemplate: a, giftCode: o, onRegister: c, usernameSuggestion: u, isMobileWebInviteRegistration: d } = this.props,
             h = null != l ? l.code : null,
             g = null != o ? o.skuId : null,
-            p = E.MD.getState(),
-            m = (0, H.Ew)(u) ? null : t === u,
+            m = E.MD.getState(),
+            p = (0, H.Ew)(u) ? null : t === u,
             f = Q.a ? await (0, T.K)(t) : t,
             _ = Q.a ? await (0, T.K)(n) : n;
         V.S.dispatch(Y.CkL.WAVE_EMPHASIZE);
@@ -175,17 +175,17 @@ class ea extends (i = s.PureComponent) {
                       consent: r,
                       password: i,
                       invite: h,
-                      usedUsernameSuggestion: m,
+                      usedUsernameSuggestion: p,
                       guildTemplateCode: null == a ? void 0 : a.code,
                       giftCodeSKUId: g,
                       birthday: s,
-                      promoEmailConsent: p.required ? p : null
+                      promoEmailConsent: m.required ? m : null
                   })
                 : await (0, v.ZP)({
                       consent: r,
                       invite: h,
                       giftCodeSKUId: g,
-                      usedUsernameSuggestion: m,
+                      usedUsernameSuggestion: p,
                       globalName: _
                   }),
                 null == c || c();
@@ -421,7 +421,7 @@ class ea extends (i = s.PureComponent) {
               });
     }
     renderFull(e, t) {
-        let { email: n, username: i, globalName: l, password: o, consent: c, parsedDateOfBirth: u, globalNameFocused: d, emailClientError: h, usernameClientError: p, passwordClientError: m, dateOfBirthClientError: f } = this.state,
+        let { email: n, username: i, globalName: l, password: o, consent: c, parsedDateOfBirth: u, globalNameFocused: d, emailClientError: h, usernameClientError: m, passwordClientError: p, dateOfBirthClientError: f } = this.state,
             {
                 registering: x,
                 consentRequired: E,
@@ -513,7 +513,7 @@ class ea extends (i = s.PureComponent) {
                                         usernameClientError: 0 === e.length ? et.intl.string(et.t.EkokLy) : null
                                     });
                                 },
-                                error: null != p ? p : el(A),
+                                error: null != m ? m : el(A),
                                 setRef: (e) => {
                                     this.usernameRef = e;
                                 },
@@ -531,7 +531,7 @@ class ea extends (i = s.PureComponent) {
                                 password: e,
                                 passwordClientError: 0 === e.length ? et.intl.string(et.t.EkokLy) : null
                             }),
-                        error: null != m ? m : el(j),
+                        error: null != p ? p : el(j),
                         type: 'password',
                         setRef: (e) => {
                             this.passwordRef = e;
@@ -660,7 +660,7 @@ class ea extends (i = s.PureComponent) {
                     return;
                 }
                 let h = null != l ? (0, o.parse)(l.search) : {};
-                null != s ? (t = Y.Z5c.INVITE_LOGIN(s.code)) : null != i ? (t = Y.Z5c.GIFT_CODE_LOGIN(i.code)) : null != r ? (t = Y.Z5c.GUILD_TEMPLATE_LOGIN(r.code)) : null != c ? ((t = Y.Z5c.LOGIN), (h.redirect_to = c)) : ((t = Y.Z5c.LOGIN), '' !== n && (h = { email: n })), p.Z.loginReset(), u(t, { search: (0, o.stringify)(h) }), null == a || a(e), V.S.dispatch(Y.CkL.WAVE_EMPHASIZE);
+                null != s ? (t = Y.Z5c.INVITE_LOGIN(s.code)) : null != i ? (t = Y.Z5c.GIFT_CODE_LOGIN(i.code)) : null != r ? (t = Y.Z5c.GUILD_TEMPLATE_LOGIN(r.code)) : null != c ? ((t = Y.Z5c.LOGIN), (h.redirect_to = c)) : ((t = Y.Z5c.LOGIN), '' !== n && (h = { email: n })), m.Z.loginReset(), u(t, { search: (0, o.stringify)(h) }), null == a || a(e), V.S.dispatch(Y.CkL.WAVE_EMPHASIZE);
             }),
             er(this, 'handleSubmit', (e) => {
                 null == e || e.preventDefault();
@@ -714,12 +714,12 @@ class ea extends (i = s.PureComponent) {
     }
 }
 function eo(e) {
-    let t = (0, d.cj)([U.Z, G.default, m.Z, P.Z, R.Z], () => ({
+    let t = (0, d.cj)([U.Z, G.default, p.Z, P.Z, R.Z], () => ({
             consentRequired: U.Z.getAuthenticationConsentRequired(),
             registering: G.default.getRegisterStatus() === Y.$ib.REGISTERING,
             apiErrors: G.default.getErrors(),
             authenticated: G.default.isAuthenticated(),
-            isUnderage: m.Z.isUnderageAnonymous(),
+            isUnderage: p.Z.isUnderageAnonymous(),
             country: P.Z.getCountryCode(),
             hasLoggedInAccounts: R.Z.getHasLoggedInAccounts()
         })),

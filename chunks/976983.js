@@ -1,6 +1,6 @@
 n.d(t, {
     B: function () {
-        return v;
+        return _;
     },
     Z: function () {
         return C;
@@ -25,9 +25,9 @@ var r = n(120356),
     f = n(439217);
 function C(e) {
     var t, r, s, c;
-    let { guild: u, prompt: C, singleColumn: v, promptIndex: _, option: I, hasError: N, onDragStart: T, onDragComplete: b, onDragReset: j } = e,
+    let { guild: u, prompt: C, singleColumn: _, promptIndex: I, option: v, hasError: N, onDragStart: T, onDragComplete: b, onDragReset: j } = e,
         S = null,
-        E = a().findIndex(C.options, (e) => e.id === I.id),
+        E = a().findIndex(C.options, (e) => e.id === v.id),
         {
             drag: R,
             dragSourcePosition: y,
@@ -36,20 +36,20 @@ function C(e) {
         } = (0, d.Z)({
             type: 'ONBOARDING_PROMPT_OPTION_CARD-'.concat(C.id),
             index: E,
-            optionId: I.id,
+            optionId: v.id,
             onDragStart: T,
             onDragComplete: b,
             onDragReset: j
         }),
-        { customEmoji: L, unicodeEmoji: D } = (0, m.Z)(null === (t = I.emoji) || void 0 === t ? void 0 : t.id, null === (r = I.emoji) || void 0 === r ? void 0 : r.name);
+        { customEmoji: L, unicodeEmoji: D } = (0, m.Z)(null === (t = v.emoji) || void 0 === t ? void 0 : t.id, null === (r = v.emoji) || void 0 === r ? void 0 : r.name);
     return (
-        !((0, x.Oq)(I.emoji) || null != L || null != D) && (S = p.intl.string(p.t['61wfmp'])),
+        !((0, x.Oq)(v.emoji) || null != L || null != D) && (S = p.intl.string(p.t['61wfmp'])),
         (0, i.jsxs)(o.Clickable, {
             className: l()(f.optionCard, {
                 [f.hasError]: N || null != S,
                 [f.dropIndicatorBefore]: null != y && E < y,
                 [f.dropIndicatorAfter]: null != y && E > y,
-                [f.singleColumn]: v
+                [f.singleColumn]: _
             }),
             onClick: () =>
                 (0, o.openModalLazy)(async () => {
@@ -59,13 +59,13 @@ function C(e) {
                             ...t,
                             guild: u,
                             prompt: C,
-                            option: I,
-                            index: _,
+                            option: v,
+                            index: I,
                             onSave: (e) => {
-                                (0, g.Kk)(u, C.id, { options: C.options.map((t) => (t.id === I.id ? e : t)) });
+                                (0, g.Kk)(u, C.id, { options: C.options.map((t) => (t.id === v.id ? e : t)) });
                             },
                             onDelete: () => {
-                                (0, g.Kk)(u, C.id, { options: C.options.filter((e) => e.id !== I.id) });
+                                (0, g.Kk)(u, C.id, { options: C.options.filter((e) => e.id !== v.id) });
                             }
                         });
                 }),
@@ -87,8 +87,8 @@ function C(e) {
                         (0, i.jsx)('div', {
                             className: f.emoji,
                             children: (0, i.jsx)(h.Z, {
-                                emojiId: null === (s = I.emoji) || void 0 === s ? void 0 : s.id,
-                                emojiName: null === (c = I.emoji) || void 0 === c ? void 0 : c.name,
+                                emojiId: null === (s = v.emoji) || void 0 === s ? void 0 : s.id,
+                                emojiName: null === (c = v.emoji) || void 0 === c ? void 0 : c.name,
                                 defaultComponent: null
                             })
                         }),
@@ -99,14 +99,14 @@ function C(e) {
                                     variant: 'text-md/medium',
                                     color: 'header-primary',
                                     lineClamp: 1,
-                                    children: I.title
+                                    children: v.title
                                 }),
-                                '' !== I.description &&
+                                '' !== v.description &&
                                     (0, i.jsx)(o.Text, {
                                         className: f.description,
                                         variant: 'text-xs/normal',
                                         color: 'header-secondary',
-                                        children: I.description
+                                        children: v.description
                                     })
                             ]
                         })
@@ -122,7 +122,7 @@ function C(e) {
         })
     );
 }
-function v(e) {
+function _(e) {
     let { guild: t, prompt: r, promptIndex: s, singleColumn: a } = e,
         { dropdownsAllowed: d } = (0, u.Ug)(t.id),
         m = () => {

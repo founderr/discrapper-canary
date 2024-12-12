@@ -29,8 +29,8 @@ var i,
     _ = n(51144),
     x = n(981631),
     E = n(354459),
-    Z = n(927923),
-    C = n(388032),
+    C = n(927923),
+    Z = n(388032),
     y = n(939214);
 function b(e, t, n) {
     return (
@@ -60,7 +60,7 @@ let T = (e) => {
                   o.TooltipContainer,
                   {
                       className: y.iconSpacing,
-                      text: C.intl.string(C.t.qstQub),
+                      text: Z.intl.string(Z.t.qstQub),
                       children: (0, l.jsx)(o.PlusLargeIcon, { className: s()(y.icon, n) })
                   },
                   'add-status'
@@ -97,7 +97,7 @@ function N(e) {
                       o.TooltipContainer,
                       {
                           className: y.iconSpacing,
-                          text: C.intl.string(C.t['PXMZ//']),
+                          text: Z.intl.string(Z.t['PXMZ//']),
                           children: (0, l.jsx)(o.VideoSlashIcon, {
                               size: 'md',
                               color: 'currentColor',
@@ -113,7 +113,7 @@ function N(e) {
                       o.TooltipContainer,
                       {
                           className: y.iconSpacing,
-                          text: C.intl.string(C.t.FlNoSU),
+                          text: Z.intl.string(Z.t.FlNoSU),
                           children: (0, l.jsx)(o.VideoIcon, {
                               size: 'md',
                               color: 'currentColor',
@@ -129,7 +129,7 @@ function N(e) {
                     o.TooltipContainer,
                     {
                         className: y.iconSpacing,
-                        text: C.intl.string(C.t.HFwRpq),
+                        text: Z.intl.string(Z.t.HFwRpq),
                         children: (0, l.jsx)(o.CircleWarningIcon, {
                             className: s()(y.icon, b),
                             color: o.tokens.colors.STATUS_WARNING_BACKGROUND
@@ -154,7 +154,7 @@ function N(e) {
                     'activity'
                 )
             ),
-        N === Z.YE.XBOX || w === E.wR.XBOX
+        N === C.YE.XBOX || w === E.wR.XBOX
             ? B.push(
                   (0, l.jsx)(
                       'div',
@@ -165,7 +165,7 @@ function N(e) {
                       'xbox'
                   )
               )
-            : (N === Z.YE.PLAYSTATION || w === E.wR.PLAYSTATION) &&
+            : (N === C.YE.PLAYSTATION || w === E.wR.PLAYSTATION) &&
               B.push(
                   (0, l.jsx)(
                       'div',
@@ -193,7 +193,7 @@ function N(e) {
                       o.TooltipContainer,
                       {
                           className: y.iconSpacing,
-                          text: C.intl.string(C.t.JH1SJy),
+                          text: Z.intl.string(Z.t.JH1SJy),
                           children: (0, l.jsx)(o.EyeIcon, {
                               size: 'xs',
                               color: 'currentColor',
@@ -248,7 +248,7 @@ class w extends (i = a.Component) {
         let { speaking: e, priority: t, collapsed: n, mute: i, serverMute: a } = this.props;
         return t && !n
             ? (0, l.jsx)(o.Tooltip, {
-                  text: C.intl.string(C.t.BVK71t),
+                  text: Z.intl.string(Z.t.BVK71t),
                   children: (t) =>
                       (0, l.jsx)('div', {
                           className: s()(y.iconPriortySpeaker, { [y.iconPriortySpeakerSpeaking]: !i && !a && e }),
@@ -280,7 +280,7 @@ class w extends (i = a.Component) {
                     c
                         ? (0, l.jsxs)('span', {
                               className: y.guestSuffix,
-                              children: ['\xA0', C.intl.string(C.t['pFO/Pj'])]
+                              children: ['\xA0', Z.intl.string(Z.t['pFO/Pj'])]
                           })
                         : ''
                 ]
@@ -375,8 +375,8 @@ function j(e) {
                 });
         }, [t.id, r, i, u, m]),
         (0, l.jsx)(o.TooltipContainer, {
-            text: C.intl.formatToPlainString(C.t.Sq9xJy, { game: t.name }),
-            'aria-label': C.intl.formatToPlainString(C.t.Sq9xJy, { game: t.name }),
+            text: Z.intl.formatToPlainString(Z.t.Sq9xJy, { game: t.name }),
+            'aria-label': Z.intl.formatToPlainString(Z.t.Sq9xJy, { game: t.name }),
             className: y.iconSpacing,
             children: (0, l.jsx)('div', {
                 ref: g,
@@ -421,7 +421,7 @@ function P(e) {
             (0, l.jsx)(
                 o.TooltipContainer,
                 {
-                    text: i ? C.intl.string(C.t.Q8Uzoa) : a ? C.intl.string(C.t.uLddbW) : C.intl.string(C.t.tjtv3N),
+                    text: i ? Z.intl.string(Z.t.Q8Uzoa) : a ? Z.intl.string(Z.t.uLddbW) : Z.intl.string(Z.t.tjtv3N),
                     className: y.iconSpacing,
                     children: e
                 },
@@ -448,7 +448,7 @@ function P(e) {
                 o.TooltipContainer,
                 {
                     className: y.iconSpacing,
-                    text: c ? C.intl.string(C.t.btxSdH) : C.intl.string(C.t.NjmiOD),
+                    text: c ? Z.intl.string(Z.t.btxSdH) : Z.intl.string(Z.t.NjmiOD),
                     children: e
                 },
                 'deaf'

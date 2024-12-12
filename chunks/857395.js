@@ -5,14 +5,14 @@ t.d(n, {
 });
 var l = t(200651),
     i = t(192379),
-    a = t(442837),
-    s = t(481060),
-    r = t(249842),
+    r = t(442837),
+    a = t(481060),
+    s = t(249842),
     c = t(838367),
     o = t(83474);
 function u(e) {
     let { guildId: n, channelId: t, messageId: u, ...d } = e,
-        { unavailable: h, guild: m } = (0, a.cj)(
+        { unavailable: h, guild: m } = (0, r.cj)(
             [c.Z],
             () => ({
                 guild: c.Z.getGuild(n),
@@ -20,21 +20,21 @@ function u(e) {
             }),
             [n]
         ),
-        g = null != m,
-        f = i.useCallback(async () => {
+        f = null != m,
+        g = i.useCallback(async () => {
             try {
-                !g && (await (0, r.P)(n));
+                !f && (await (0, s.P)(n));
             } catch {}
-        }, [g, n]);
+        }, [f, n]);
     return h
-        ? (0, l.jsx)(s.Popout, {
+        ? (0, l.jsx)(a.Popout, {
               position: 'right',
               renderPopout: (e) => (0, l.jsx)(o.SK, {}),
               ...d
           })
-        : (0, l.jsx)(s.Popout, {
+        : (0, l.jsx)(a.Popout, {
               position: 'right',
-              preload: f,
+              preload: g,
               renderPopout: (e) =>
                   null == m
                       ? (0, l.jsx)(l.Fragment, {})

@@ -15,9 +15,9 @@ var i = n(200651),
     p = n(267642),
     f = n(268350),
     C = n(926491),
-    v = n(386937),
-    _ = n(316350),
-    I = n(863562),
+    _ = n(386937),
+    I = n(316350),
+    v = n(863562),
     N = n(981631),
     T = n(388032),
     b = n(744488);
@@ -167,29 +167,29 @@ t.Z = (e) => {
                 })
             }
         ];
-    return (0, i.jsx)(v.Z, {
+    return (0, i.jsx)(_.Z, {
         tiers: L,
         renderTier: (e) => {
             let r,
                 { isAnimatedTo: l, onSetRef: a, tier: c, tiers: u, tierIndex: h } = e,
                 { canCreateExpressions: x, canManageGuildExpression: f } = (0, g.Gw)(t),
                 C = u[h - 1],
-                v = null != C ? (0, p.A3)(C.tier) : 0,
+                _ = null != C ? (0, p.A3)(C.tier) : 0,
                 S = (0, p.A3)(c.tier, t),
                 L = (0, p.ig)(c.tier),
-                D = d.slice(v, S),
+                D = d.slice(_, S),
                 O = D.length > 0,
-                k = E < c.tier,
-                P = j(d.length, t),
-                M = x && !k && P === c.tier && S !== D.length,
+                P = E < c.tier,
+                k = j(d.length, t),
+                M = x && !P && k === c.tier && S !== D.length,
                 w = M || D.length > 0,
-                B = S - v,
+                B = S - _,
                 U = n(872732),
                 G = L - D.length,
                 F = M ? Math.min(5 - ((D.length + 0) % 5), G) : 0,
                 H = [];
             for (let e = 0; e < F; e++) H.push((0, i.jsx)(R, {}, 'placeholder-'.concat(e)));
-            let z = P === h + 1 && P > E,
+            let z = k === h + 1 && k > E,
                 W = M || z || h > E;
             return (
                 z
@@ -208,7 +208,7 @@ t.Z = (e) => {
                       }))
                     : M && (r = (0, i.jsx)(y, { guild: t })),
                 (0, i.jsxs)(
-                    _.Z,
+                    I.Z,
                     {
                         subscriptionCount: Z,
                         tier: c,
@@ -226,9 +226,9 @@ t.Z = (e) => {
                                     children: [
                                         D.map((e) =>
                                             (0, i.jsx)(
-                                                I.Z,
+                                                v.Z,
                                                 {
-                                                    isDisabled: k,
+                                                    isDisabled: P,
                                                     sticker: e,
                                                     canManageSticker: f(e)
                                                 },
@@ -238,7 +238,7 @@ t.Z = (e) => {
                                         H
                                     ]
                                 }),
-                            !k &&
+                            !P &&
                                 !M &&
                                 0 === D.length &&
                                 (0, i.jsx)('div', {
@@ -249,7 +249,7 @@ t.Z = (e) => {
                                         children: T.intl.string(T.t.lqwv0N)
                                     })
                                 }),
-                            k &&
+                            P &&
                                 !O &&
                                 (0, i.jsxs)('div', {
                                     className: b.emptyTierWrapper,

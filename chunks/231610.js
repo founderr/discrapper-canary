@@ -22,7 +22,7 @@ function x() {
         [, x] = a.p9(e, t),
         [p, f] = a.Ek(e, t),
         C = a.qs(e, t);
-    function v() {
+    function _() {
         (0, r.openModalLazy)(async () => {
             let { default: e } = await n.e('22942').then(n.bind(n, 660727));
             return (n) =>
@@ -42,18 +42,18 @@ function x() {
                 });
         });
     }
-    let _ = (0, l.mY)();
+    let I = (0, l.mY)();
     return (0, i.jsxs)(o.Z, {
         title: m.intl.string(m.t['Ah+sQ0']),
         description: m.intl.string(m.t.ixbWiI),
         children: [
             (0, i.jsx)(r.FormSection, {
                 title: m.intl.string(m.t['6OUqDQ']),
-                disabled: _,
+                disabled: I,
                 children: (0, i.jsx)(d.Z, {
                     value: p,
                     onChange: f,
-                    disabled: _
+                    disabled: I
                 })
             }),
             (0, i.jsx)(r.Spacer, { size: 24 }),
@@ -61,12 +61,12 @@ function x() {
                 className: h.__invalid_iconSection,
                 children: (0, i.jsxs)(r.FormSection, {
                     title: m.intl.string(m.t['zn8/AQ']),
-                    disabled: _,
+                    disabled: I,
                     children: [
                         (0, i.jsx)(r.FormText, {
                             type: r.FormText.Types.DESCRIPTION,
                             className: h.formDescription,
-                            disabled: _,
+                            disabled: I,
                             children: m.intl.string(m.t.AqHUra)
                         }),
                         (0, i.jsxs)('div', {
@@ -75,15 +75,15 @@ function x() {
                                 (0, i.jsx)(u.Z, {
                                     role: C,
                                     'aria-label': m.intl.string(m.t.mD1oGB),
-                                    onClick: v,
-                                    disabled: _
+                                    onClick: _,
+                                    disabled: I
                                 }),
                                 (0, i.jsx)(r.Button, {
                                     look: r.Button.Looks.OUTLINED,
                                     color: r.Button.Colors.PRIMARY,
                                     className: h.__invalid_imageUploadButtonCTA,
-                                    onClick: v,
-                                    disabled: _,
+                                    onClick: _,
+                                    disabled: I,
                                     children: m.intl.string(m.t.mD1oGB)
                                 })
                             ]

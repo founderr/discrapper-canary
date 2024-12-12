@@ -10,8 +10,8 @@ var i = n(200651),
     d = n(353926),
     h = n(82554),
     g = n(726521),
-    p = n(185625),
-    m = n(314897),
+    m = n(185625),
+    p = n(314897),
     f = n(63063),
     _ = n(981631),
     x = n(388032),
@@ -36,9 +36,9 @@ let v = (e) => {
         },
         o = (e) => {
             let t = async () => {
-                    await (0, p.yL)(r, e);
+                    await (0, m.yL)(r, e);
                 },
-                l = async (t) => await (0, p.RV)(r, e, t),
+                l = async (t) => await (0, m.RV)(r, e, t),
                 o = (e) => {
                     let t = null == e ? void 0 : e.token;
                     r === h.BM.MESSAGE ? (0, g.eE)(t) : r === h.BM.USER && (0, g.JM)(t);
@@ -73,10 +73,10 @@ let v = (e) => {
 t.Z = () => {
     let [e, t] = r.useState(!0),
         [n, s] = r.useState(!1),
-        g = (0, l.e7)([m.default], () => m.default.isAuthenticated()),
+        g = (0, l.e7)([p.default], () => p.default.isAuthenticated()),
         N = (0, l.e7)([d.Z], () => d.Z.hasLoadedExperiments),
         b = () => {
-            (0, p.qJ)()
+            (0, m.qJ)()
                 .then(() => {
                     t(!1), s(!0);
                 })

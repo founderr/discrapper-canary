@@ -17,8 +17,8 @@ var i = n(200651),
     d = n(585483),
     h = n(573261),
     g = n(720196),
-    p = n(981631),
-    m = n(388032),
+    m = n(981631),
+    p = n(388032),
     f = n(114969),
     _ = n(232186);
 function x(e) {
@@ -41,7 +41,7 @@ function x(e) {
                     src: null == C ? n(26230) : n(935227),
                     className: l()(_.marginBottom20, _.marginTop8)
                 }),
-                (0, i.jsx)(u.Dx, { children: m.intl.string(m.t['IfBQ5+']) }),
+                (0, i.jsx)(u.Dx, { children: p.intl.string(p.t['IfBQ5+']) }),
                 null != C && '' !== C
                     ? (0, i.jsx)(o.Text, {
                           variant: 'text-sm/normal',
@@ -55,7 +55,7 @@ function x(e) {
                         (0, i.jsx)(u.II, {
                             name: 'password',
                             type: 'password',
-                            label: m.intl.string(m.t['8dM4FB']),
+                            label: p.intl.string(p.t['8dM4FB']),
                             setRef: j,
                             className: _.marginBottom20,
                             value: A,
@@ -63,14 +63,14 @@ function x(e) {
                             error: N,
                             autoComplete: 'new-password',
                             maxLength: 72,
-                            placeholder: m.intl.string(m.t['yY/PXV'])
+                            placeholder: p.intl.string(p.t['yY/PXV'])
                         }),
                         (0, i.jsx)(u.zx, {
                             className: _.marginTop8,
                             onClick: () => {
                                 if (!I) {
                                     if (0 === A.length) {
-                                        b(m.intl.string(m.t.R98xDw)), d.S.dispatch(p.CkL.WAVE_EMPHASIZE);
+                                        b(p.intl.string(p.t.R98xDw)), d.S.dispatch(m.CkL.WAVE_EMPHASIZE);
                                         return;
                                     }
                                     return (
@@ -79,7 +79,7 @@ function x(e) {
                                         t(''),
                                         v(!0),
                                         h.Z.post({
-                                            url: p.ANM.ACCOUNT_REVERT,
+                                            url: m.ANM.ACCOUNT_REVERT,
                                             body: {
                                                 token: E,
                                                 password: A
@@ -94,7 +94,7 @@ function x(e) {
                                                 T(''), t(n), s(g.n.SUCCESS);
                                             })
                                             .catch((e) => {
-                                                if (e instanceof Error) S(m.intl.formatToPlainString(m.t.aTVNen, { statusPageURL: p.yXt.STATUS }));
+                                                if (e instanceof Error) S(p.intl.formatToPlainString(p.t.aTVNen, { statusPageURL: m.yXt.STATUS }));
                                                 else {
                                                     let t = new c.Z(e);
                                                     t.hasFieldErrors()
@@ -102,19 +102,19 @@ function x(e) {
                                                         : S(
                                                               (function (e) {
                                                                   switch (e) {
-                                                                      case p.evJ.ACCOUNT_REVERT_INVALID_TOKEN:
-                                                                          return m.intl.string(m.t['11zzGR']);
-                                                                      case p.evJ.ACCOUNT_REVERT_EMAIL_ALREADY_TAKEN:
-                                                                          return m.intl.string(m.t['6qmgaG']);
-                                                                      case p.evJ.ACCOUNT_REVERT_ACCOUNT_NOT_FOUND:
-                                                                          return m.intl.string(m.t.bChnKi);
+                                                                      case m.evJ.ACCOUNT_REVERT_INVALID_TOKEN:
+                                                                          return p.intl.string(p.t['11zzGR']);
+                                                                      case m.evJ.ACCOUNT_REVERT_EMAIL_ALREADY_TAKEN:
+                                                                          return p.intl.string(p.t['6qmgaG']);
+                                                                      case m.evJ.ACCOUNT_REVERT_ACCOUNT_NOT_FOUND:
+                                                                          return p.intl.string(p.t.bChnKi);
                                                                       default:
-                                                                          return m.intl.format(m.t.aTVNen, { statusPageURL: p.yXt.STATUS });
+                                                                          return p.intl.format(p.t.aTVNen, { statusPageURL: m.yXt.STATUS });
                                                                   }
                                                               })(t.code).toString()
                                                           );
                                                 }
-                                                d.S.dispatch(p.CkL.WAVE_EMPHASIZE);
+                                                d.S.dispatch(m.CkL.WAVE_EMPHASIZE);
                                             })
                                             .finally(() => {
                                                 v(!1);
@@ -124,7 +124,7 @@ function x(e) {
                             },
                             submitting: I,
                             disabled: I,
-                            children: m.intl.string(m.t.ezv91d)
+                            children: p.intl.string(p.t.ezv91d)
                         })
                     ]
                 }),
@@ -135,7 +135,7 @@ function x(e) {
                         onClick: () => {
                             T(''), s(g.n.START);
                         },
-                        children: m.intl.string(m.t.rzxnQ0)
+                        children: p.intl.string(p.t.rzxnQ0)
                     })
                 })
             ]

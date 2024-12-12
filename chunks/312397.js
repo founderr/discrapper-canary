@@ -3,7 +3,7 @@ n.d(t, {
         return ef;
     },
     Z: function () {
-        return ev;
+        return e_;
     }
 }),
     n(47120),
@@ -24,9 +24,9 @@ var i = n(200651),
     p = n(902840),
     f = n(410030),
     C = n(100527),
-    v = n(367907),
-    _ = n(906732),
-    I = n(740504),
+    _ = n(367907),
+    I = n(906732),
+    v = n(740504),
     N = n(933557),
     T = n(471445),
     b = n(890477),
@@ -40,8 +40,8 @@ var i = n(200651),
     L = n(536442),
     D = n(142497),
     O = n(884858),
-    k = n(516129),
-    P = n(813197),
+    P = n(516129),
+    k = n(813197),
     M = n(208567),
     w = n(592125),
     B = n(324067),
@@ -244,7 +244,7 @@ class eC extends r.PureComponent {
                                     onClick: this.handleUploadImage,
                                     children: [
                                         en.intl.string(en.t['MsUY/f']),
-                                        (0, i.jsx)(P.ZP, {
+                                        (0, i.jsx)(k.ZP, {
                                             ref: this._imageInputRef,
                                             onChange: this.handleOpenImageCroppingModal,
                                             disabled: !n
@@ -555,7 +555,7 @@ class eC extends r.PureComponent {
         let { guild: e, canManageGuild: t } = this.props,
             n = e.hasFeature(J.oNc.INVITE_SPLASH),
             r = t && n,
-            l = (0, i.jsx)(k.Z, {
+            l = (0, i.jsx)(P.Z, {
                 image: e.splash,
                 makeURL: (t) =>
                     null != t
@@ -612,7 +612,7 @@ class eC extends r.PureComponent {
                                           className: ei.marginTop16,
                                           children: [
                                               en.intl.string(en.t.yG2pUl),
-                                              (0, i.jsx)(P.ZP, {
+                                              (0, i.jsx)(k.ZP, {
                                                   disabled: !r,
                                                   onChange: this.handleSplashChange,
                                                   maxFileSizeBytes: et.B,
@@ -646,7 +646,7 @@ class eC extends r.PureComponent {
             r = e.hasFeature(J.oNc.BANNER),
             l = e.hasFeature(J.oNc.ANIMATED_BANNER),
             s = r && t,
-            a = (0, i.jsx)(k.Z, {
+            a = (0, i.jsx)(P.Z, {
                 image: e.banner,
                 makeURL: (t) =>
                     null != t
@@ -662,7 +662,7 @@ class eC extends r.PureComponent {
                 onChange: this.handleBannerChange,
                 hint: en.intl.string(en.t.uPvxqK),
                 onOpenImageSelectModal: () =>
-                    e_(
+                    eI(
                         ee.pC.GUILD_BANNER,
                         et.B,
                         this.handleBannerChange,
@@ -680,7 +680,7 @@ class eC extends r.PureComponent {
                 color: g.Button.Colors.BRAND,
                 className: ei.marginTop16,
                 onClick: () =>
-                    e_(
+                    eI(
                         ee.pC.GUILD_BANNER,
                         et.B,
                         this.handleBannerChange,
@@ -897,7 +897,7 @@ class eC extends r.PureComponent {
             es(this, 'handleShowModalUpsell', (e, t, n, i) => {
                 e.preventDefault(), e.stopPropagation();
                 let { guild: r, analyticsLocations: l } = this.props;
-                (0, v.yw)(J.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                (0, _.yw)(J.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                     location: {
                         section: t,
                         object: J.qAy.LEARN_MORE
@@ -963,24 +963,24 @@ class eC extends r.PureComponent {
             );
     }
 }
-function ev() {
+function e_() {
     var e;
     let { guild: t, errors: n, submitting: l, subsection: s } = (0, u.cj)([X.Z], () => X.Z.getProps()),
         a = (0, f.ZP)(),
-        { analyticsLocations: c } = (0, _.ZP)(C.Z.OVERVIEW);
+        { analyticsLocations: c } = (0, I.ZP)(C.Z.OVERVIEW);
     r.useEffect(() => {
         (0, D.Kw)(L.v6.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL);
     }, []);
     let d = (0, u.e7)([B.Z], () => B.Z.getCategories(null == t ? void 0 : t.id)),
-        m = r.useMemo(() => (0, I.Z)(d._categories, d), [d]),
+        m = r.useMemo(() => (0, v.Z)(d._categories, d), [d]),
         { canManageGuild: h, isGuildAdmin: g } = (0, u.cj)([G.Z], () => ({
             canManageGuild: G.Z.can(J.Plq.MANAGE_GUILD, t),
             isGuildAdmin: G.Z.can(J.Plq.ADMINISTRATOR, t)
         })),
         x = (0, u.e7)([U.Z], () => U.Z.getMemberCount(null == t ? void 0 : t.id)),
         p = (0, j.E)(t),
-        v = (0, u.e7)([H.default], () => H.default.getCurrentUser());
-    o()(null != v, 'GuildSettingsOverview: currentUser cannot be undefined');
+        _ = (0, u.e7)([H.default], () => H.default.getCurrentUser());
+    o()(null != _, 'GuildSettingsOverview: currentUser cannot be undefined');
     let { enableDeadchat: N } = b.Z.useExperiment(
         {
             guildId: null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : J.lds,
@@ -993,7 +993,7 @@ function ev() {
     );
     return null == t
         ? null
-        : (0, i.jsx)(_.Gt, {
+        : (0, i.jsx)(I.Gt, {
               value: c,
               children: (0, i.jsx)(eC, {
                   channels: m,
@@ -1003,7 +1003,7 @@ function ev() {
                   guild: t,
                   errors: n,
                   submitting: l,
-                  currentUser: v,
+                  currentUser: _,
                   guildMemberCount: x,
                   isInventoryFeedEnabled: p,
                   theme: a,
@@ -1012,7 +1012,7 @@ function ev() {
               })
           });
 }
-function e_(e, t, r) {
+function eI(e, t, r) {
     let l = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
         s = arguments.length > 4 ? arguments[4] : void 0,
         a = arguments.length > 5 ? arguments[5] : void 0;

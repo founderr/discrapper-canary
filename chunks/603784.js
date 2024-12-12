@@ -14,9 +14,9 @@ var i = n(200651),
     p = n(210887),
     f = n(598077),
     C = n(699516),
-    v = n(594174),
-    _ = n(259580),
-    I = n(51144),
+    _ = n(594174),
+    I = n(259580),
+    v = n(51144),
     N = n(426563),
     T = n(909746),
     b = n(501801),
@@ -32,7 +32,7 @@ class R extends r.PureComponent {
             children: [
                 (0, i.jsx)(d.Text, {
                     variant: 'text-md/normal',
-                    children: I.ZP.getUserTag(e, { mode: 'username' })
+                    children: v.ZP.getUserTag(e, { mode: 'username' })
                 }),
                 '0' !== e.discriminator &&
                     (0, i.jsxs)(d.Text, {
@@ -96,7 +96,7 @@ class y extends r.PureComponent {
                                     r
                                 ),
                       count: a.count,
-                      channel: null == a.channel || 'string' == typeof a.channel ? a.channel : (0, h.F6)(a.channel, v.default, C.Z, !0),
+                      channel: null == a.channel || 'string' == typeof a.channel ? a.channel : (0, h.F6)(a.channel, _.default, C.Z, !0),
                       channelHook: (e, t) =>
                           (0, i.jsx)(
                               'span',
@@ -218,7 +218,7 @@ class y extends r.PureComponent {
                                     ]
                                 }),
                                 o
-                                    ? (0, i.jsx)(_.Z, {
+                                    ? (0, i.jsx)(I.Z, {
                                           className: E.expand,
                                           foreground: E.expandForeground,
                                           expanded: r,

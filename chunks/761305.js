@@ -10,8 +10,8 @@ var i,
     d = n(896797),
     h = n(129293),
     g = n(388905),
-    p = n(981631),
-    m = n(388032),
+    m = n(981631),
+    p = n(388032),
     f = n(232186);
 function _(e, t, n) {
     return (
@@ -33,7 +33,7 @@ class x extends (i = s.PureComponent) {
             t = (0, l.parse)(this.props.location.search);
         o.tn
             .post({
-                url: p.ANM.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
+                url: m.ANM.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
                 body: {
                     token: e,
                     pixel_uuid: t.hash,
@@ -72,22 +72,22 @@ class x extends (i = s.PureComponent) {
             children: [
                 (0, r.jsx)(g.Dx, {
                     className: f.marginBottom8,
-                    children: m.intl.string(m.t.Z33eiI)
+                    children: p.intl.string(p.t.Z33eiI)
                 }),
-                (0, r.jsx)(g.DK, { children: m.intl.format(m.t.NRWtfH, { guildName: n.name }) }),
+                (0, r.jsx)(g.DK, { children: p.intl.format(p.t.NRWtfH, { guildName: n.name }) }),
                 (0, r.jsx)(g.zx, {
                     className: f.marginTop40,
                     onClick: () => t(e),
-                    children: m.intl.string(m.t.fIv16O)
+                    children: p.intl.string(p.t.fIv16O)
                 }),
                 (0, r.jsx)(g.zx, {
                     className: f.marginTop8,
                     color: g.zx.Colors.LINK,
                     look: g.zx.Looks.LINK,
                     onClick: () => {
-                        t(p.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(n.id));
+                        t(m.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(n.id));
                     },
-                    children: m.intl.string(m.t['cGmT/P'])
+                    children: p.intl.string(p.t['cGmT/P'])
                 })
             ]
         });
@@ -102,13 +102,13 @@ class x extends (i = s.PureComponent) {
                 }),
                 (0, r.jsx)(g.Dx, {
                     className: f.marginBottom8,
-                    children: m.intl.string(m.t.ox9hIS)
+                    children: p.intl.string(p.t.ox9hIS)
                 }),
-                (0, r.jsx)(g.DK, { children: m.intl.string(m.t['/dcuR0']) }),
+                (0, r.jsx)(g.DK, { children: p.intl.string(p.t['/dcuR0']) }),
                 (0, r.jsx)(g.zx, {
                     className: f.marginTop40,
                     onClick: () => t(e),
-                    children: m.intl.string(m.t.fIv16O)
+                    children: p.intl.string(p.t.fIv16O)
                 })
             ]
         });

@@ -96,24 +96,24 @@ let h = r.forwardRef(function (e, t) {
             });
 });
 function g(e) {
-    let { value: t, onChange: n, onBlur: l, onFocus: g, onRemove: x, isSelected: p, isSelecting: f, error: C, forceShowErrorTooltip: v } = e,
-        _ = r.useRef(null),
+    let { value: t, onChange: n, onBlur: l, onFocus: g, onRemove: x, isSelected: p, isSelecting: f, error: C, forceShowErrorTooltip: _ } = e,
         I = r.useRef(null),
+        v = r.useRef(null),
         [N, T] = r.useState(!1),
         { ref: b, width: j = 0 } = (0, c.Z)(N),
         { ref: S, width: E = 0 } = (0, c.Z)(N),
         R = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
-        [y, Z] = r.useState(v),
+        [y, Z] = r.useState(_),
         A = r.useRef(null),
         L = j > E ? j : E;
     r.useEffect(() => {
-        v
+        _
             ? (Z(!0),
               (A.current = setTimeout(() => {
                   Z(!1), (A.current = null);
               }, u.I5)))
             : Z(!1);
-    }, [v]),
+    }, [_]),
         r.useEffect(
             () => () => {
                 clearTimeout(A.current);
@@ -129,22 +129,22 @@ function g(e) {
         O = r.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                if ((t.trim().length <= 0 && x(), null != _.current && null != b.current && null != I.current)) {
+                if ((t.trim().length <= 0 && x(), null != I.current && null != b.current && null != v.current)) {
                     var n;
-                    _.current.scrollTo(0, 0), _.current.setSelectionRange(0, 0), (_.current.scrollLeft = 0), (b.current.scrollLeft = 0), (null === (n = I.current) || void 0 === n ? void 0 : n.ref) != null && (I.current.ref.scrollLeft = 0);
+                    I.current.scrollTo(0, 0), I.current.setSelectionRange(0, 0), (I.current.scrollLeft = 0), (b.current.scrollLeft = 0), (null === (n = v.current) || void 0 === n ? void 0 : n.ref) != null && (v.current.ref.scrollLeft = 0);
                 }
                 T(!1), l(e);
             },
             [t, b, l, x]
         ),
-        k = r.useCallback(
+        P = r.useCallback(
             (e) => {
                 let n = t.trim().length <= 0;
                 u.ye.has(e.key) ? (e.preventDefault(), e.stopPropagation(), O(!0)) : 'Backspace' === e.key && n && (e.preventDefault(), e.stopPropagation(), O(!0));
             },
             [O, t]
         ),
-        P = r.useCallback(
+        k = r.useCallback(
             (e) => {
                 let t = e.metaKey || e.ctrlKey;
                 g(t), t ? e.preventDefault() : T(!0), e.stopPropagation();
@@ -172,7 +172,7 @@ function g(e) {
                 (0, i.jsxs)(o.Clickable, {
                     tag: 'div',
                     onBlur: () => O(!1),
-                    onClick: P,
+                    onClick: k,
                     ignoreKeyPress: !0,
                     onMouseEnter: () => Z(!0),
                     onMouseLeave: () => Z(!1),
@@ -180,16 +180,16 @@ function g(e) {
                         [m.isSelecting]: f,
                         [m.isEditing]: N
                     }),
-                    ref: I,
+                    ref: v,
                     children: [
                         (0, i.jsx)('input', {
                             className: s()(m.chipletInput, {
                                 [m.isEditing]: N,
                                 [m.isSelecting]: f
                             }),
-                            ref: _,
+                            ref: I,
                             onChange: D,
-                            onKeyDownCapture: k,
+                            onKeyDownCapture: P,
                             value: t,
                             style: { width: L > 0 ? L : 'calc('.concat(t.length, 'ch + 10px)') }
                         }),

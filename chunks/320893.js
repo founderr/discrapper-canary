@@ -20,10 +20,10 @@ var r = n(780384),
     p = n(458050),
     f = n(334364),
     C = n(431712);
-function v(e) {
+function _(e) {
     return (0, r.wj)(e) ? c.revenueSharePercentageDark : c.revenueSharePercentageLight;
 }
-function _() {
+function I() {
     let e = (0, s.ZP)(),
         t = { backgroundColor: (0, r.wj)(e) ? '#2e3638' : 'var(--background-primary)' };
     return (0, i.jsxs)('div', {
@@ -40,7 +40,7 @@ function _() {
                     (0, i.jsx)(l.Spacer, { size: 8 }),
                     (0, i.jsx)(l.Heading, {
                         variant: 'heading-md/bold',
-                        className: v(e),
+                        className: _(e),
                         children: o.intl.string(o.t.LdjJGx)
                     })
                 ]
@@ -53,7 +53,7 @@ function _() {
         ]
     });
 }
-function I() {
+function v() {
     let e = (0, s.ZP)();
     function t(e) {
         let { length: t, horizontal: n } = e;
@@ -134,9 +134,9 @@ function N() {
                 children: o.intl.string(o.t['9CdmS0'])
             }),
             (0, i.jsx)(l.Spacer, { size: 32 }),
-            (0, i.jsx)(_, {}),
+            (0, i.jsx)(I, {}),
             (0, i.jsx)(l.Spacer, { size: 24 }),
-            (0, i.jsx)(I, {})
+            (0, i.jsx)(v, {})
         ]
     });
 }
@@ -171,7 +171,7 @@ function b() {
             (0, i.jsxs)('div', {
                 children: [
                     (0, i.jsxs)(l.Heading, {
-                        className: v(e),
+                        className: _(e),
                         style: {
                             fontSize: '50px',
                             lineHeight: '52px'

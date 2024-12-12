@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: function () {
-        return k;
+        return P;
     }
 }),
     n(47120);
@@ -20,9 +20,9 @@ var i = n(200651),
     p = n(594174),
     f = n(626135),
     C = n(243730),
-    v = n(434404),
-    _ = n(946724),
-    I = n(130341),
+    _ = n(434404),
+    I = n(946724),
+    v = n(130341),
     N = n(95242),
     T = n(420966),
     b = n(566476),
@@ -34,7 +34,7 @@ var i = n(200651),
 async function Z(e, t, n) {
     let r = e.roles.filter((e) => e !== n);
     try {
-        await v.Z.updateMemberRoles(t, e.id, r, [], [n]);
+        await _.Z.updateMemberRoles(t, e.id, r, [], [n]);
     } catch (t) {
         let e = new d.Z(t);
         (0, o.openModal)((t) =>
@@ -62,7 +62,7 @@ function A(e) {
                 return;
             }
             !(function (e, t, n) {
-                let r = _.Z.getRole(n);
+                let r = I.Z.getRole(n);
                 (0, o.openModal)((l) =>
                     (0, i.jsxs)(o.ConfirmModal, {
                         ...l,
@@ -194,8 +194,8 @@ function D(e) {
     let { guildId: t, roleId: n, query: l, headerHeight: s, locked: a, onScroll: c, roleMembers: d, handleAddClick: u } = e,
         { analyticsLocations: g } = (0, h.ZP)(m.Z.MEMBER_LIST),
         x = r.useMemo(() => l.trim().toLowerCase(), [l]);
-    (0, I.rY)(t, x);
-    let p = r.useMemo(() => d.filter((e) => (0, I.eg)(x, e)), [d, x]),
+    (0, v.rY)(t, x);
+    let p = r.useMemo(() => d.filter((e) => (0, v.eg)(x, e)), [d, x]),
         f = r.useMemo(() => p.sort((e, t) => e.name.localeCompare(t.name)), [p]);
     return (0, i.jsx)(h.Gt, {
         value: g,
@@ -256,18 +256,18 @@ function O(e) {
         ]
     });
 }
-function k(e) {
+function P(e) {
     let { guild: t, role: l, locked: c, setSelectedSection: d } = e,
         [u, m] = r.useState(''),
         { headerHeight: h, headerRef: g } = (0, N.Z)(0),
         { scrolledToTop: x, handleScroll: p } = (0, T.V)(),
-        v = l.managed || c,
-        _ = (0, I.e)(t.id, l.id),
+        _ = l.managed || c,
+        I = (0, v.e)(t.id, l.id),
         b =
             (0, a.e7)([C.Z], () => {
                 var e, n;
                 return null !== (n = null === (e = C.Z.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[l.id]) && void 0 !== n ? n : 0;
-            }) > _.length,
+            }) > I.length,
         Z = () => {
             f.default.track(S.rMx.OPEN_MODAL, {
                 type: 'Add Role Members',
@@ -304,7 +304,7 @@ function k(e) {
                             (0, i.jsx)(O, {
                                 query: u,
                                 setQuery: m,
-                                locked: v,
+                                locked: _,
                                 handleAddClick: Z
                             }),
                             b
@@ -323,9 +323,9 @@ function k(e) {
                 query: u,
                 guildId: t.id,
                 roleId: l.id,
-                locked: v,
+                locked: _,
                 onScroll: p,
-                roleMembers: _,
+                roleMembers: I,
                 handleAddClick: Z
             })
         ]

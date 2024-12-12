@@ -16,8 +16,8 @@ var i = n(200651),
     d = n(893607),
     h = n(703656),
     g = n(314897),
-    p = n(781428),
-    m = n(981631),
+    m = n(781428),
+    p = n(981631),
     f = n(176505);
 function _(e) {
     let t = r.useCallback(
@@ -25,7 +25,7 @@ function _(e) {
                 if (
                     (function (e) {
                         var t;
-                        let n = (0, l.LX)(e, { path: m.Z5c.CHANNEL(d.Hw.guildId(), d.Hw.channelId()) });
+                        let n = (0, l.LX)(e, { path: p.Z5c.CHANNEL(d.Hw.guildId(), d.Hw.channelId()) });
                         return (null == n ? void 0 : null === (t = n.params) || void 0 === t ? void 0 : t.channelId) === f.oC.ROLE_SUBSCRIPTIONS || !1;
                     })(t)
                 )
@@ -73,9 +73,9 @@ function _(e) {
             }
         }
     }, []),
-    I || _ === m.u34.LOGGING_IN)
-        ? (0, i.jsx)(p.q, {})
-        : (0, i.jsx)(p.Z, {
+    I || _ === p.u34.LOGGING_IN)
+        ? (0, i.jsx)(m.q, {})
+        : (0, i.jsx)(m.Z, {
               ...e,
               transitionTo: t
           });

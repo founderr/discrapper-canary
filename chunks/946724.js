@@ -13,9 +13,9 @@ var s,
     p = n(561654),
     f = n(430824),
     C = n(990492),
-    v = n(823379),
-    _ = n(700785),
-    I = n(999382),
+    _ = n(823379),
+    I = n(700785),
+    v = n(999382),
     N = n(981631);
 let T = new Set(),
     b = N.QZA.CLOSED,
@@ -54,11 +54,11 @@ function D() {
 function O(e) {
     let { section: t } = e;
     if (null != i || t !== N.pNK.ROLES) return !1;
-    k();
+    P();
 }
-function k() {
+function P() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    (i = I.Z.getProps().guild),
+    (i = v.Z.getProps().guild),
         (j = !1),
         (S = !1),
         (l = void 0),
@@ -84,7 +84,7 @@ function k() {
                 L.set(t, [...e]);
             }));
 }
-let P = u().debounce(() => {
+let k = u().debounce(() => {
     let e = !1;
     S && !(S = D().length > 0) && (e = !0),
         [...T].forEach((t) => {
@@ -109,7 +109,7 @@ function M(e, t) {
         ...e,
         ...t
     };
-    (E[n] = i), (E = [...E]), (j = !0), T.add(i.id), P();
+    (E[n] = i), (E = [...E]), (j = !0), T.add(i.id), k();
 }
 function w(e) {
     return E.find((t) => {
@@ -120,7 +120,7 @@ function w(e) {
 function B(e) {
     let { guildId: t } = e;
     if (null == i || t !== i.id || b === N.QZA.SUBMITTING) return !1;
-    i = I.Z.getProps().guild;
+    i = v.Z.getProps().guild;
     let n = [];
     null != i &&
         (n = u()(f.Z.getRoles(i.id))
@@ -148,7 +148,7 @@ function B(e) {
 }
 class U extends (s = g.ZP.Store) {
     initialize() {
-        this.waitFor(I.Z, p.Z, f.Z);
+        this.waitFor(v.Z, p.Z, f.Z);
     }
     hasChanges() {
         return j || S || y;
@@ -207,13 +207,13 @@ let G = new U(
     __OVERLAY__
         ? {}
         : {
-              GUILD_SETTINGS_ROLES_INIT: () => k(),
+              GUILD_SETTINGS_ROLES_INIT: () => P(),
               GUILD_SETTINGS_INIT: O,
               GUILD_SETTINGS_SET_SECTION: O,
               GUILD_SETTINGS_ROLES_SORT_UPDATE: function (e) {
                   let { roles: t } = e;
                   if (null != E && t.length !== E.length) return !1;
-                  (E = t.map((e) => w(e)).filter(v.lm)), (S = !0), P();
+                  (E = t.map((e) => w(e)).filter(_.lm)), (S = !0), k();
               },
               GUILD_SETTINGS_ROLES_UPDATE_PERMISSIONS: function (e) {
                   let { id: t, flag: n, allow: i } = e,
@@ -230,7 +230,7 @@ let G = new U(
               GUILD_SETTINGS_ROLES_CLEAR_PERMISSIONS: function (e) {
                   let { id: t } = e,
                       n = w(t);
-                  return null != n && M(n, { permissions: _.Hn });
+                  return null != n && M(n, { permissions: I.Hn });
               },
               GUILD_SETTINGS_ROLES_UPDATE_NAME: function (e) {
                   let { id: t, name: n } = e,
@@ -283,7 +283,7 @@ let G = new U(
                           M(t, t);
                           return;
                       }
-                      (E = [...E, t]), P();
+                      (E = [...E, t]), k();
                   }
               },
               GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS: function (e) {
@@ -292,13 +292,13 @@ let G = new U(
                   if (null == i) return !1;
                   let r = A.get(i.id);
                   if (u().isEqual(r, n)) return !1;
-                  L.set(i.id, n), A.set(i.id, n), P();
+                  L.set(i.id, n), A.set(i.id, n), k();
               },
               GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS: function (e) {
                   let { roleId: t, roleConnectionConfigurations: n } = e,
                       i = w(t);
                   if (null == i) return !1;
-                  (y = !0), Z.add(i.id), L.set(i.id, n), P();
+                  (y = !0), Z.add(i.id), L.set(i.id, n), k();
               },
               GUILD_SETTINGS_CLOSE: function () {
                   (i = null), (R = E = []), A.clear(), T.clear(), L.clear(), (Z = new Set()), (j = !1), (S = !1), (y = !1), (b = N.QZA.CLOSED);
@@ -316,7 +316,7 @@ let G = new U(
                   (b = N.QZA.OPEN), (l = t);
               },
               GUILD_SETTINGS_ROLES_SAVE_SUCCESS: function () {
-                  k(!1);
+                  P(!1);
               }
           }
 );

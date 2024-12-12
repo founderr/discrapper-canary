@@ -22,10 +22,10 @@ function f(e) {
     let { guildId: t, handleCreateOrEditProduct: u } = e,
         f = (0, c.ue)(t, { publishedOnly: !1 }),
         { shouldRestrictUpdatingCreatorMonetizationSettings: C } = (0, a.gX)(t),
-        v = (e) => {
+        _ = (e) => {
             (0, o.Je)(t, e, { published: !1 });
         },
-        _ = (e, r) => {
+        I = (e, r) => {
             (0, l.openModalLazy)(async () => {
                 let { default: l } = await n.e('95925').then(n.bind(n, 673078));
                 return (n) =>
@@ -37,7 +37,7 @@ function f(e) {
                     });
             });
         },
-        I = (e, t) => {
+        v = (e, t) => {
             (0, r.J)((0, d.ar)(e, t));
         },
         N = f.length > 0;
@@ -60,9 +60,9 @@ function f(e) {
                                       guildId: t,
                                       product: e,
                                       onEditProduct: () => u(e.id),
-                                      onUnpublishProduct: () => v(e.id),
-                                      onDeleteProduct: () => _(e.id, e.name),
-                                      onCopyProductLink: () => I(t, e.id),
+                                      onUnpublishProduct: () => _(e.id),
+                                      onDeleteProduct: () => I(e.id, e.name),
+                                      onCopyProductLink: () => v(t, e.id),
                                       onTestDownload: () =>
                                           m.Z.open({
                                               guildId: t,

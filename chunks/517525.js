@@ -19,8 +19,8 @@ var i = n(200651),
     _ = n(557457),
     x = n(475674),
     E = n(981631),
-    Z = n(474936),
-    C = n(388032),
+    C = n(474936),
+    Z = n(388032),
     y = n(891252);
 let b = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     T = {
@@ -61,7 +61,7 @@ let b = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
         let R = t || a,
             { location: M } = (0, f.O)(),
             O = (0, c.e7)([v.default], () => v.default.getCurrentUser()),
-            L = o && !I.ZP.isPremium(O, Z.p9.TIER_1) && !I.ZP.canStreamQuality(I.ZP.StreamQuality.MID, O),
+            L = o && !I.ZP.isPremium(O, C.p9.TIER_1) && !I.ZP.canStreamQuality(I.ZP.StreamQuality.MID, O),
             k = l.useCallback(() => {
                 L &&
                     R &&
@@ -79,7 +79,7 @@ let b = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                 !b &&
                     R &&
                     (S.default.track(E.rMx.PREMIUM_UPSELL_VIEWED, {
-                        type: Z.cd.STREAM_QUALITY_INDICATOR,
+                        type: C.cd.STREAM_QUALITY_INDICATOR,
                         has_premium_stream_fps: t,
                         has_premium_stream_resolution: a,
                         location_stack: j
@@ -90,7 +90,7 @@ let b = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
         )
             return null;
         let D = (0, i.jsx)(m.Tooltip, {
-            text: P ? C.intl.string(C.t.q8TiVl) : R ? C.intl.string(C.t.IHgpEh) : C.intl.string(C.t.vLb0VV),
+            text: P ? Z.intl.string(Z.t.q8TiVl) : R ? Z.intl.string(Z.t.IHgpEh) : Z.intl.string(Z.t.vLb0VV),
             position: 'bottom',
             color: m.Tooltip.Colors.GREY,
             children: (e) =>

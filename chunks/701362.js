@@ -24,8 +24,8 @@ var i = n(200651),
     _ = n(626135),
     x = n(102172),
     E = n(687516),
-    Z = n(718805),
-    C = n(871118),
+    C = n(718805),
+    Z = n(871118),
     y = n(981631),
     b = n(388032),
     T = n(846450);
@@ -47,7 +47,7 @@ class A extends l.PureComponent {
             onClick: t,
             className: T.previewContainer,
             children: [
-                (0, i.jsx)(C.Z, {
+                (0, i.jsx)(Z.Z, {
                     className: T.previewImage,
                     stream: e
                 }),
@@ -58,7 +58,7 @@ class A extends l.PureComponent {
                               variant: 'text-sm/normal',
                               color: 'none',
                               className: T.white,
-                              children: (0, Z.Z)(e, n, l, r)
+                              children: (0, C.Z)(e, n, l, r)
                           })
                       })
                     : null
@@ -124,10 +124,10 @@ function N(e) {
         d = (0, s.e7)([p.Z], () => p.Z.getActiveStreamForApplicationStream(c)),
         m = (0, s.e7)([g.default], () => g.default.getId()),
         _ = (0, E.Cf)(c),
-        Z = (0, s.e7)([S.Z], () => (0, E.Um)(c, S.Z)),
-        C = l.useMemo(() => ({ [n.guild_id]: [t.id] }), [n.guild_id, t.id]);
+        C = (0, s.e7)([S.Z], () => (0, E.Um)(c, S.Z)),
+        Z = l.useMemo(() => ({ [n.guild_id]: [t.id] }), [n.guild_id, t.id]);
     return (
-        (0, u.$)(C),
+        (0, u.$)(Z),
         (0, i.jsx)(A, {
             ...a,
             canWatch: r,
@@ -137,7 +137,7 @@ function N(e) {
             stream: c,
             activeStream: d,
             currentUserId: m,
-            activity: Z
+            activity: C
         })
     );
 }

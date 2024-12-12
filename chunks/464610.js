@@ -116,7 +116,7 @@ function f(e) {
     (0, s.RD)(t.id);
     let f = (0, a.Z6)(t.id),
         { rulesByTriggerType: C } = (0, s.pH)(t.id),
-        { numEnabledRules: v, numRules: _ } = r.useMemo(() => {
+        { numEnabledRules: _, numRules: I } = r.useMemo(() => {
             let e = 0,
                 t = 0;
             return null == C
@@ -142,10 +142,10 @@ function f(e) {
                       numRules: t
                   });
         }, [f, C]),
-        I = (0, m.Q)(t),
-        N = I[u.u.CAPTCHA_AND_RAID_PROTECTION],
-        T = I[u.u.DM_AND_SPAM_PROTECTION],
-        b = I[u.u.PERMISSIONS],
+        v = (0, m.Q)(t),
+        N = v[u.u.CAPTCHA_AND_RAID_PROTECTION],
+        T = v[u.u.DM_AND_SPAM_PROTECTION],
+        b = v[u.u.PERMISSIONS],
         j = (0, o.pr)(t.id);
     return (0, i.jsxs)('div', {
         children: [
@@ -186,8 +186,8 @@ function f(e) {
                                     icon: n(145136),
                                     title: h.intl.string(h.t.uRelg4),
                                     subtitle: h.intl.formatToPlainString(h.t.TG7NYG, {
-                                        enabled: v,
-                                        total: _
+                                        enabled: _,
+                                        total: I
                                     }),
                                     page: u.u.AUTOMOD
                                 }),

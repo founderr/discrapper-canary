@@ -1,9 +1,9 @@
 n.d(t, {
     p: function () {
-        return v;
+        return _;
     },
     s: function () {
-        return _;
+        return I;
     }
 });
 var i = n(200651),
@@ -22,18 +22,18 @@ var i = n(200651),
     p = n(388032),
     f = n(290803);
 function C(e) {
-    let { guildId: t, emojiId: n, emojiName: l, title: a, description: c, targetType: d, index: u, dndName: h, onEdit: g, onMove: C, disabled: v = !1 } = e,
-        _ = r.useRef(null),
+    let { guildId: t, emojiId: n, emojiName: l, title: a, description: c, targetType: d, index: u, dndName: h, onEdit: g, onMove: C, disabled: _ = !1 } = e,
         I = r.useRef(null),
-        { drag: N, dragPreview: T, drop: b, isDragging: j } = (0, x.Z)(_, d, u, C);
+        v = r.useRef(null),
+        { drag: N, dragPreview: T, drop: b, isDragging: j } = (0, x.Z)(I, d, u, C);
     return (
-        N(I),
-        T(b(_)),
+        N(v),
+        T(b(I)),
         (0, i.jsxs)('div', {
-            ref: _,
+            ref: I,
             className: s()(f.card, {
                 [f.cardDragging]: j,
-                [f.disabled]: v
+                [f.disabled]: _
             }),
             children: [
                 (0, i.jsxs)('div', {
@@ -45,9 +45,9 @@ function C(e) {
                             emojiName: l,
                             className: f.emoji
                         }),
-                        !v &&
+                        !_ &&
                             (0, i.jsx)('div', {
-                                ref: I,
+                                ref: v,
                                 className: f.dragIconWrapper,
                                 'data-dnd-name': h,
                                 children: (0, i.jsx)(o.DragIcon, {
@@ -76,12 +76,12 @@ function C(e) {
                 (0, i.jsx)('div', {
                     className: f.cardActions,
                     children:
-                        !v &&
+                        !_ &&
                         (0, i.jsx)(o.Clickable, {
                             className: f.cardActionButton,
-                            onClick: v ? void 0 : g,
+                            onClick: _ ? void 0 : g,
                             'aria-label': p.intl.string(p.t.Eoo8h4),
-                            'aria-disabled': v,
+                            'aria-disabled': _,
                             children: (0, i.jsx)(o.PencilIcon, {
                                 size: 'xs',
                                 color: 'currentColor',
@@ -93,7 +93,7 @@ function C(e) {
         })
     );
 }
-function v(e) {
+function _(e) {
     let { benefits: t, onEdit: n, onMove: l, guildId: o } = e,
         m = (0, c.Dt)(),
         { isDragging: x } = (0, a.f)((e) => ({ isDragging: e.getItemType() === m })),
@@ -128,7 +128,7 @@ function v(e) {
               )
           });
 }
-function _(e) {
+function I(e) {
     let { onClick: t, children: n, disabled: r = !1 } = e;
     return (0, i.jsx)(o.Clickable, {
         className: f.container,

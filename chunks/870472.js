@@ -161,7 +161,7 @@ function c(e, t) {
             },
             [u]
         ),
-        v = i.useCallback(
+        _ = i.useCallback(
             (e) => {
                 var t;
                 u((e) => {
@@ -178,7 +178,7 @@ function c(e, t) {
             },
             [r, u]
         ),
-        _ = i.useCallback(
+        I = i.useCallback(
             (e) => {
                 u((t) => {
                     let { tags: n } = t;
@@ -192,7 +192,7 @@ function c(e, t) {
             },
             [u]
         ),
-        I = i.useCallback(
+        v = i.useCallback(
             function (e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                     i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
@@ -292,34 +292,34 @@ function c(e, t) {
         ),
         j = i.useCallback(
             (e) => {
-                e.relatedTarget !== e.currentTarget && I(e, !1, !1);
+                e.relatedTarget !== e.currentTarget && v(e, !1, !1);
             },
-            [I]
+            [v]
         ),
         S = i.useCallback(
             (e) => {
                 let t = e.metaKey || e.ctrlKey;
-                if ('Meta' !== e.key) a.ye.has(e.key) ? I(e) : 'Backspace' === e.key ? N(e) : 'Escape' === e.key ? v(e) : 'a' === e.key && t ? b(e) : a.Bd.has(e.key) && t && T(e);
+                if ('Meta' !== e.key) a.ye.has(e.key) ? v(e) : 'Backspace' === e.key ? N(e) : 'Escape' === e.key ? _(e) : 'a' === e.key && t ? b(e) : a.Bd.has(e.key) && t && T(e);
             },
-            [I, N, v, b, T]
+            [v, N, _, b, T]
         );
     return {
         handlePasteEvent: g,
-        handleInputChange: _,
+        handleInputChange: I,
         handleKeyDown: S,
         handleContainerKeyUp: i.useCallback(
             (e) => {
                 if (document.activeElement !== l.current) return;
                 let t = e.metaKey || e.ctrlKey;
-                'Backspace' === e.key ? N(e) : 'a' === e.key && t ? b(e) : 'Escape' === e.key ? v(e) : a.Bd.has(e.key) && t ? T(e) : 'Meta' !== e.key && v(e);
+                'Backspace' === e.key ? N(e) : 'a' === e.key && t ? b(e) : 'Escape' === e.key ? _(e) : a.Bd.has(e.key) && t ? T(e) : 'Meta' !== e.key && _(e);
             },
-            [T, N, b, v, l]
+            [T, N, b, _, l]
         ),
         handleRemoveTag: x,
         handleTagChangeEvent: p,
         handleSelectTag: f,
         handleUnselectTag: C,
-        handleResetTagSelections: v,
+        handleResetTagSelections: _,
         handleInputBlurEvent: j
     };
 }

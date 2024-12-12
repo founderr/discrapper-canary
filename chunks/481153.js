@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(925329),
     h = n(479446),
     g = n(981632),
-    p = n(594174),
-    m = n(509545),
+    m = n(594174),
+    p = n(509545),
     f = n(55563),
     _ = n(296848),
     x = n(981631),
@@ -19,7 +19,7 @@ var i = n(200651),
     v = n(93008),
     N = n(652849),
     b = n(232186);
-t.Z = a.ZP.connectStores([f.Z, c.Z, m.Z, p.default], (e) => {
+t.Z = a.ZP.connectStores([f.Z, c.Z, p.Z, m.default], (e) => {
     let { giftCode: t } = e,
         n = f.Z.get(t.skuId),
         { subscriptionPlanId: i } = t;
@@ -27,17 +27,17 @@ t.Z = a.ZP.connectStores([f.Z, c.Z, m.Z, p.default], (e) => {
         sku: n,
         subscriptionPlan: null != i ? (0, _.oE)(i) : null,
         application: c.Z.getApplication(n.applicationId),
-        gifter: p.default.getUser(t.userId)
+        gifter: m.default.getUser(t.userId)
     };
 })((e) => {
-    let { error: t, giftCode: n, gifter: s, sku: a, application: c, subscriptionPlan: p } = e,
-        m = null == s ? I.intl.string(I.t.lTGZAg) : I.intl.formatToPlainString(I.t.TjWdPT, { username: s.username }),
+    let { error: t, giftCode: n, gifter: s, sku: a, application: c, subscriptionPlan: m } = e,
+        p = null == s ? I.intl.string(I.t.lTGZAg) : I.intl.formatToPlainString(I.t.TjWdPT, { username: s.username }),
         f = a.name;
     return (
-        null != p &&
-            (f = I.intl.formatToPlainString(p.interval === E.rV.MONTH ? I.t.CTpcCQ : I.t.rgPWGx, {
+        null != m &&
+            (f = I.intl.formatToPlainString(m.interval === E.rV.MONTH ? I.t.CTpcCQ : I.t.rgPWGx, {
                 skuName: a.name,
-                intervalCount: p.intervalCount
+                intervalCount: m.intervalCount
             })),
         (0, i.jsxs)(r.Fragment, {
             children: [
@@ -58,7 +58,7 @@ t.Z = a.ZP.connectStores([f.Z, c.Z, m.Z, p.default], (e) => {
                       })
                     : (0, i.jsxs)(r.Fragment, {
                           children: [
-                              (0, i.jsx)(u.DK, { children: m }),
+                              (0, i.jsx)(u.DK, { children: p }),
                               (0, i.jsxs)(u.Dx, {
                                   className: l()(b.marginTop8, N.flexCenter),
                                   children: [

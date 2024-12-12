@@ -23,9 +23,9 @@ var i = n(200651),
     p = n(26323),
     f = n(307707),
     C = n(734893),
-    v = n(216701),
-    _ = n(150512),
-    I = n(516129),
+    _ = n(216701),
+    I = n(150512),
+    v = n(516129),
     N = n(813197),
     T = n(210887),
     b = n(314897),
@@ -39,8 +39,8 @@ var i = n(200651),
     L = n(999382),
     D = n(8426),
     O = n(969632),
-    k = n(535907),
-    P = n(981631),
+    P = n(535907),
+    k = n(981631),
     M = n(30513),
     w = n(486324),
     B = n(200299),
@@ -79,7 +79,7 @@ function V(e) {
               className: G.editWelcomeSection,
               onClick: o,
               children: [
-                  (0, i.jsx)(_.Z, {
+                  (0, i.jsx)(I.Z, {
                       guildId: t,
                       welcomeMessage: {
                           authorIds: l.authorIds.length > 0 ? l.authorIds : [d],
@@ -106,7 +106,7 @@ function V(e) {
 }
 function Y(e) {
     var t, l, o, d, u;
-    let { guildId: g, action: x, actionIndex: p, onChange: _, onDelete: I, onDragStart: N, onDragComplete: T, onDragReset: b } = e,
+    let { guildId: g, action: x, actionIndex: p, onChange: I, onDelete: v, onDragStart: N, onDragComplete: T, onDragReset: b } = e,
         S = (0, a.e7)([j.Z], () => j.Z.getChannel(x.channelId)),
         R = (0, a.e7)([E.Z], () => E.Z.getGuild(g)),
         { customEmoji: Z, unicodeEmoji: A } = (0, f.Z)(null === (t = x.emoji) || void 0 === t ? void 0 : t.id, null === (l = x.emoji) || void 0 === l ? void 0 : l.name),
@@ -118,8 +118,8 @@ function Y(e) {
         O = null;
     null != S && (0, C.kb)(S) ? !L && (O = U.intl.string(U.t.wAkIZW)) : (O = U.intl.string(U.t.CbTEKC));
     let {
-            drag: k,
-            dragSourcePosition: P,
+            drag: P,
+            dragSourcePosition: k,
             drop: M,
             setIsDraggable: w
         } = (0, h.Z)({
@@ -139,11 +139,11 @@ function Y(e) {
                             ...t,
                             guildId: g,
                             action: x,
-                            onSave: (e, t, n) => _(p, e, t, n),
-                            onDelete: () => I(p)
+                            onSave: (e, t, n) => I(p, e, t, n),
+                            onDelete: () => v(p)
                         });
                 });
-        }, [g, x, p, _, I]);
+        }, [g, x, p, I, v]);
     if (null == S || null == R) return null;
     let F = null !== (u = (0, m.KS)(S)) && void 0 !== u ? u : c.TextIcon;
     return (0, i.jsxs)('div', {
@@ -151,11 +151,11 @@ function Y(e) {
         children: [
             (0, i.jsxs)('div', {
                 className: s()(G.actionItem, {
-                    [G.dropIndicatorBefore]: null != P && p < P,
-                    [G.dropIndicatorAfter]: null != P && p > P,
+                    [G.dropIndicatorBefore]: null != k && p < k,
+                    [G.dropIndicatorAfter]: null != k && p > k,
                     [G.actionItemError]: null != O
                 }),
-                ref: (e) => k(M(e)),
+                ref: (e) => P(M(e)),
                 children: [
                     (0, i.jsx)('div', {
                         className: G.dragContainer,
@@ -181,10 +181,10 @@ function Y(e) {
                           })
                         : (0, i.jsx)('div', {
                               className: G.actionItemEmojiWrapper,
-                              children: (0, i.jsx)(v.Z, {
+                              children: (0, i.jsx)(_.Z, {
                                   emojiId: null === (o = x.emoji) || void 0 === o ? void 0 : o.id,
                                   emojiName: null === (d = x.emoji) || void 0 === d ? void 0 : d.name,
-                                  size: v.R.MEDIUM,
+                                  size: _.R.MEDIUM,
                                   defaultComponent: (0, i.jsx)(F, {})
                               })
                           }),
@@ -417,7 +417,7 @@ function J(e) {
     var t;
     let { guildId: l } = e,
         s = (0, a.e7)([E.Z], () => E.Z.getGuild(l)),
-        o = null !== (t = null == s ? void 0 : s.hasFeature(P.oNc.BANNER)) && void 0 !== t && t,
+        o = null !== (t = null == s ? void 0 : s.hasFeature(k.oNc.BANNER)) && void 0 !== t && t,
         d = r.useCallback(
             (e, t) => {
                 if (null != l) {
@@ -445,10 +445,10 @@ function J(e) {
                 e.preventDefault(),
                     e.stopPropagation(),
                     null != s &&
-                        ((0, u.yw)(P.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                        ((0, u.yw)(k.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                             location: {
-                                section: P.jXE.GUILD_SETTINGS_ONBOARDING,
-                                object: P.qAy.LEARN_MORE
+                                section: k.jXE.GUILD_SETTINGS_ONBOARDING,
+                                object: k.qAy.LEARN_MORE
                             },
                             guild_id: null == s ? void 0 : s.id,
                             location_stack: []
@@ -456,9 +456,9 @@ function J(e) {
                         (0, p.Z)({
                             analyticsLocations: [],
                             analyticsSourceLocation: {
-                                section: P.jXE.GUILD_SETTINGS_ONBOARDING,
-                                object: P.qAy.ONBOARDING_EDIT,
-                                page: P.ZY5.GUILD_SETTINGS
+                                section: k.jXE.GUILD_SETTINGS_ONBOARDING,
+                                object: k.qAy.ONBOARDING_EDIT,
+                                page: k.ZY5.GUILD_SETTINGS
                             },
                             guild: s,
                             perks: (0, M.XO)()
@@ -467,7 +467,7 @@ function J(e) {
             [s]
         );
     if (null == s) return null;
-    let h = (0, i.jsx)(I.Z, {
+    let h = (0, i.jsx)(v.Z, {
         image: s.homeHeader,
         makeURL: (e) =>
             null != e
@@ -496,7 +496,7 @@ function J(e) {
                           (0, i.jsx)(x.Z, {
                               className: G.boostIndicator,
                               guild: s,
-                              guildFeature: P.oNc.BANNER,
+                              guildFeature: k.oNc.BANNER,
                               onClick: m
                           })
                       ]
@@ -543,7 +543,7 @@ function J(e) {
                           (0, i.jsx)(x.Z, {
                               className: G.boostIndicator,
                               guild: s,
-                              guildFeature: P.oNc.BANNER,
+                              guildFeature: k.oNc.BANNER,
                               onClick: m
                           })
                       ]
@@ -595,10 +595,10 @@ function $(e) {
     let { guildId: t, resourceChannel: l, index: o, onDragComplete: d, onDragStart: u, onDragReset: m } = e,
         g = (0, a.e7)([E.Z], () => E.Z.getGuild(t)),
         { title: x, channelId: p, description: f } = l,
-        v = j.Z.getChannel(p),
-        _ = null;
-    (null == v || !(0, C.k3)(v)) && (_ = U.intl.string(U.t.kTdL8f));
-    let I = null == f || 0 === f.length,
+        _ = j.Z.getChannel(p),
+        I = null;
+    (null == _ || !(0, C.k3)(_)) && (I = U.intl.string(U.t.kTdL8f));
+    let v = null == f || 0 === f.length,
         N = y.ZP.getResourceChannelIconURL({
             channelId: l.channelId,
             icon: l.icon
@@ -649,7 +649,7 @@ function $(e) {
                         });
                 });
         }, [t, l, Z, A]);
-    return null == g || null == v
+    return null == g || null == _
         ? null
         : (0, i.jsxs)('div', {
               className: s()(G.resourceChannelContainer),
@@ -658,7 +658,7 @@ function $(e) {
                       className: s()(G.resourceChannel, {
                           [G.dropIndicatorBefore]: null != b && o < b,
                           [G.dropIndicatorAfter]: null != b && o > b,
-                          [G.resourceChannelError]: null != _
+                          [G.resourceChannelError]: null != I
                       }),
                       ref: (e) => T(S(e)),
                       children: [
@@ -693,7 +693,7 @@ function $(e) {
                                       color: 'header-primary',
                                       children: x
                                   }),
-                                  !I &&
+                                  !v &&
                                       (0, i.jsx)(c.Text, {
                                           className: G.resourceChannelDescription,
                                           variant: 'text-xs/medium',
@@ -723,11 +723,11 @@ function $(e) {
                           })
                       ]
                   }),
-                  null != _ &&
+                  null != I &&
                       (0, i.jsx)(c.Text, {
                           variant: 'text-xs/medium',
                           color: 'text-danger',
-                          children: _
+                          children: I
                       })
               ]
           });
@@ -781,7 +781,7 @@ function et(e) {
         }),
         s = (0, a.Wu)([O.Z], () => O.Z.getDismissedSuggestedChannelIds(t)),
         o = (0, a.e7)([S.ZP], () => (null == t ? [] : S.ZP.getSelectableChannels(t)))
-            .filter((e) => !s.includes(e.channel.id) && !l.includes(e.channel.id) && e.channel.type === P.d4z.GUILD_TEXT && Z.Uu(P.Plq.VIEW_CHANNEL, e.channel) && !Z.Uu(P.Plq.SEND_MESSAGES, e.channel) && e.channel.id !== (null == n ? void 0 : n.rulesChannelId))
+            .filter((e) => !s.includes(e.channel.id) && !l.includes(e.channel.id) && e.channel.type === k.d4z.GUILD_TEXT && Z.Uu(k.Plq.VIEW_CHANNEL, e.channel) && !Z.Uu(k.Plq.SEND_MESSAGES, e.channel) && e.channel.id !== (null == n ? void 0 : n.rulesChannelId))
             .slice(0, 5),
         d = r.useCallback(() => {
             let e = o.map((e) => e.channel.id);
@@ -929,7 +929,7 @@ function er(e) {
     let { saveOnClose: t, guildId: n } = e,
         l = (0, a.cj)([O.Z], () => {
             var e;
-            return null !== (e = O.Z.getSettings().welcomeMessage) && void 0 !== e ? e : k.z;
+            return null !== (e = O.Z.getSettings().welcomeMessage) && void 0 !== e ? e : P.z;
         }),
         [s, d] = r.useState('new'),
         u = [

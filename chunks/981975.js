@@ -22,9 +22,9 @@ var i = n(200651),
     p = n(764260),
     f = n(946724),
     C = n(95242),
-    v = n(530198),
-    _ = n(420966),
-    I = n(203377),
+    _ = n(530198),
+    I = n(420966),
+    v = n(203377),
     N = n(981631),
     T = n(856651),
     b = n(388032),
@@ -64,7 +64,7 @@ function y(e) {
 function Z(e) {
     let { guild: t, role: n, locked: l, setSelectedSection: a, integrations: o } = e,
         { headerHeight: h, headerRef: Z } = (0, C.Z)(0),
-        { scrolledToTop: A, handleScroll: L } = (0, _.V)(),
+        { scrolledToTop: A, handleScroll: L } = (0, I.V)(),
         D = (0, c.e7)(
             [x.Z],
             () => {
@@ -77,12 +77,12 @@ function Z(e) {
             var e;
             return null !== (e = f.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) && void 0 !== e ? e : [];
         }),
-        k = O.length > 1 ? m.O1.OR : m.O1.AND,
-        P = r.useMemo(() => (k === m.O1.OR ? O.flat() : null != O && O.length > 0 ? O[0] : []), [k, O]),
-        M = r.useMemo(() => new Set(P.map((e) => e.connectionType)), [P]);
+        P = O.length > 1 ? m.O1.OR : m.O1.AND,
+        k = r.useMemo(() => (P === m.O1.OR ? O.flat() : null != O && O.length > 0 ? O[0] : []), [P, O]),
+        M = r.useMemo(() => new Set(k.map((e) => e.connectionType)), [k]);
     function w(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-            i = [...P];
+            i = [...k];
         i.push({
             connectionType: e,
             connectionMetadataField: void 0,
@@ -90,7 +90,7 @@ function Z(e) {
             operator: void 0,
             value: void 0
         }),
-            (0, p.d_)(n.id, R(i, k));
+            (0, p.d_)(n.id, R(i, P));
     }
     function B() {
         u.Z.dispatch({
@@ -102,15 +102,15 @@ function Z(e) {
         });
     }
     let U = null;
-    if (0 === P.length)
+    if (0 === k.length)
         U = (0, i.jsx)(y, {
             handleAddVerificationClicked: B,
             locked: l
         });
-    else if (P.length > 0) {
+    else if (k.length > 0) {
         var G, F;
         let e = null;
-        P.length < 10 &&
+        k.length < 10 &&
             (e = (0, i.jsx)(d.Button, {
                 className: s()(j.addVerificationButton, j.addVerificationButtonAppend),
                 size: d.Button.Sizes.LARGE,
@@ -184,7 +184,7 @@ function Z(e) {
                                 'aria-labelledby': E
                             })
                         });
-                    })(l, n.id, k, P, (e, t) => (0, p.d_)(n.id, R(e, t))),
+                    })(l, n.id, P, k, (e, t) => (0, p.d_)(n.id, R(e, t))),
                     (function (e, t, n, r, l) {
                         function s(n, i) {
                             let r = [];
@@ -237,7 +237,7 @@ function Z(e) {
                             className: j.configurationsContainer,
                             children: Array.from(a.values()).map((e) =>
                                 (0, i.jsx)(
-                                    v.Z,
+                                    _.Z,
                                     {
                                         configurationItems: e,
                                         onConfigurationChange: s,
@@ -248,7 +248,7 @@ function Z(e) {
                                 )
                             )
                         });
-                    })(P, (e) => (0, p.d_)(n.id, R(e, k)), l, n.id, o),
+                    })(k, (e) => (0, p.d_)(n.id, R(e, P)), l, n.id, o),
                     e
                 ]
             }));
@@ -263,10 +263,10 @@ function Z(e) {
                 (0, i.jsx)('div', {
                     className: s()(S.header, S.stickyHeader, { [S.stickyHeaderElevated]: !A }),
                     ref: Z,
-                    children: (0, i.jsx)(_.Z, {
+                    children: (0, i.jsx)(I.Z, {
                         guild: t,
                         role: n,
-                        selectedSection: I.ZI.VERIFICATIONS,
+                        selectedSection: v.ZI.VERIFICATIONS,
                         setSelectedSection: a
                     })
                 }),

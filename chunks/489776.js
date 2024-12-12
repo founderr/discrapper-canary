@@ -20,36 +20,36 @@ function g(e) {
         g = r.useMemo(() => () => (0, o.ep)(t, n), [t, n]),
         [x] = r.useState(g),
         [p, f] = r.useState(!1),
-        { editingRule: C, createNewEditingRule: v } = (0, d.V)(),
-        { getDefaultRuleName: _ } = c.I6[n],
-        I = !(0, o.Vb)(C) && (null == C ? void 0 : C.triggerType) === n,
-        [N, T] = r.useState(I ? C : x),
+        { editingRule: C, createNewEditingRule: _ } = (0, d.V)(),
+        { getDefaultRuleName: I } = c.I6[n],
+        v = !(0, o.Vb)(C) && (null == C ? void 0 : C.triggerType) === n,
+        [N, T] = r.useState(v ? C : x),
         b = (0, a.useSpring)({
-            opacity: I ? 0 : 1,
-            pointerEvents: I ? 'none' : 'all',
+            opacity: v ? 0 : 1,
+            pointerEvents: v ? 'none' : 'all',
             config: {
                 ...l.config.stiff,
                 clamp: !0
             }
         }),
         j = (0, a.useSpring)({
-            opacity: I ? 1 : 0,
-            pointerEvents: I ? 'all' : 'none',
+            opacity: v ? 1 : 0,
+            pointerEvents: v ? 'all' : 'none',
             config: {
                 ...l.config.stiff,
                 clamp: !0
             },
             onStart: () => {
-                T(I ? C : x);
+                T(v ? C : x);
             },
             onRest: () => {
-                T(I ? C : x), f(I);
+                T(v ? C : x), f(v);
             }
         });
-    return null == C || I
+    return null == C || v
         ? (0, i.jsxs)('div', {
               className: h.mainRuleContainer,
-              style: { height: I ? 'auto' : '60px' },
+              style: { height: v ? 'auto' : '60px' },
               children: [
                   (0, i.jsx)(l.animated.div, {
                       className: h.animatedRuleCardContainer,
@@ -65,7 +65,7 @@ function g(e) {
                       children: (0, i.jsxs)(a.Clickable, {
                           className: h.addAnotherRuleCardContainer,
                           onClick: () => {
-                              v(t, n);
+                              _(t, n);
                           },
                           children: [
                               (0, i.jsx)(a.CirclePlusIcon, {
@@ -78,7 +78,7 @@ function g(e) {
                               (0, i.jsx)(a.Text, {
                                   variant: 'text-md/semibold',
                                   color: 'text-link',
-                                  children: m.intl.format(m.t.dNjRAQ, { ruleName: _() })
+                                  children: m.intl.format(m.t.dNjRAQ, { ruleName: I() })
                               })
                           ]
                       })

@@ -20,9 +20,9 @@ var i = n(200651),
     p = n(852860),
     f = n(782568),
     C = n(367907),
-    v = n(674180),
-    _ = n(999382),
-    I = n(626135),
+    _ = n(674180),
+    I = n(999382),
+    v = n(626135),
     N = n(730647),
     T = n(584825),
     b = n(981631),
@@ -35,33 +35,33 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
         var t, n;
         let { guild: l, canEnable: a } = e,
             c = (0, T.YB)(l.id),
-            { loading: u, updateSubscriptionsSettings: _ } = (0, T.QV)(),
+            { loading: u, updateSubscriptionsSettings: I } = (0, T.QV)(),
             [N, Z] = r.useState(l.hasFeature(b.oNc.CREATOR_STORE_PAGE)),
             [A, L] = r.useState(null !== (t = null == c ? void 0 : c.store_page_primary_color) && void 0 !== t ? t : y),
             [D, O] = r.useState(null == c ? void 0 : c.store_page_trailer_url),
-            k = null == D || null != D.match(R),
-            [P, M] = r.useState(null !== (n = null == c ? void 0 : c.store_page_show_subscriber_count) && void 0 !== n && n),
+            P = null == D || null != D.match(R),
+            [k, M] = r.useState(null !== (n = null == c ? void 0 : c.store_page_show_subscriber_count) && void 0 !== n && n),
             w = r.useRef(null == c ? void 0 : c.store_page_slug).current,
-            B = N !== l.hasFeature(b.oNc.CREATOR_STORE_PAGE) || ((null == c ? void 0 : c.store_page_primary_color) == null && A !== y) || ((null == c ? void 0 : c.store_page_primary_color) != null && A !== (null == c ? void 0 : c.store_page_primary_color)) || D !== (null == c ? void 0 : c.store_page_trailer_url) || (null != P && P !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
+            B = N !== l.hasFeature(b.oNc.CREATOR_STORE_PAGE) || ((null == c ? void 0 : c.store_page_primary_color) == null && A !== y) || ((null == c ? void 0 : c.store_page_primary_color) != null && A !== (null == c ? void 0 : c.store_page_primary_color)) || D !== (null == c ? void 0 : c.store_page_trailer_url) || (null != k && k !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
             U = async () => {
                 o()(null != c, 'Settings must be defined');
                 let e = {};
                 N !== l.hasFeature(b.oNc.CREATOR_STORE_PAGE) && (e.store_page_enabled = N),
                     (((null == c ? void 0 : c.store_page_primary_color) == null && A !== y) || ((null == c ? void 0 : c.store_page_primary_color) != null && A !== (null == c ? void 0 : c.store_page_primary_color))) && (e.store_page_primary_color = A),
                     D !== (null == c ? void 0 : c.store_page_trailer_url) && (e.store_page_trailer_url = D),
-                    P !== (null == c ? void 0 : c.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = P),
+                    k !== (null == c ? void 0 : c.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = k),
                     !d().isEmpty(e) &&
-                        (await _(l.id, e),
+                        (await I(l.id, e),
                         'store_page_enabled' in e &&
-                            I.default.track(b.rMx.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_TOGGLED, {
+                            v.default.track(b.rMx.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_TOGGLED, {
                                 enabled: N,
                                 ...(0, C.hH)(l.id)
                             }));
             },
             G = b.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(w),
             F = null != D && D === (null == c ? void 0 : c.store_page_trailer_url),
-            { shouldRestrictUpdatingCreatorMonetizationSettings: H } = (0, v.gX)(l.id),
-            z = H || !k;
+            { shouldRestrictUpdatingCreatorMonetizationSettings: H } = (0, _.gX)(l.id),
+            z = H || !P;
         return (0, i.jsxs)('div', {
             children: [
                 (0, i.jsx)(g.FormTitle, {
@@ -148,15 +148,15 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                         (0, i.jsx)(g.TextInput, {
                             value: null != D ? D : void 0,
                             onChange: (e) => O('' === e ? null : e),
-                            error: k ? null : j.intl.string(j.t['1kL79f']),
+                            error: P ? null : j.intl.string(j.t['1kL79f']),
                             placeholder: j.intl.string(j.t['+I4gdX']),
                             className: S.trailerInputWrapper,
                             inputClassName: s()(S.trailerInput, {
-                                [S.error]: !k,
-                                [S.trailerInputWithCheckmark]: F || !k
+                                [S.error]: !P,
+                                [S.trailerInputWithCheckmark]: F || !P
                             }),
                             prefixElement:
-                                k &&
+                                P &&
                                 F &&
                                 (0, i.jsx)(g.CircleCheckIcon, {
                                     size: 'md',
@@ -179,7 +179,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                         }),
                         (0, i.jsx)(g.FormSwitch, {
                             className: S.premiumMemberCountSwitchContainer,
-                            value: P,
+                            value: k,
                             hideBorder: !0,
                             onChange: (e) => M(e),
                             disabled: H,
@@ -236,7 +236,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
         });
     };
 function A() {
-    let e = (0, u.e7)([_.Z], () => _.Z.getGuild()),
+    let e = (0, u.e7)([I.Z], () => I.Z.getGuild()),
         t = (0, N.f)(),
         n = (0, T.qi)(null == e ? void 0 : e.id).some((e) => e.published);
     return null != e && t
@@ -247,7 +247,7 @@ function A() {
         : (0, i.jsx)(g.Spinner, {});
 }
 function L() {
-    let e = (0, u.e7)([_.Z], () => _.Z.getGuild());
+    let e = (0, u.e7)([I.Z], () => I.Z.getGuild());
     return (0, i.jsx)(N.l, {
         guildId: null == e ? void 0 : e.id,
         refetchOnMount: !0,

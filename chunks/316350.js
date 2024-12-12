@@ -20,14 +20,14 @@ var i,
     p = n(402766),
     f = n(267642),
     C = n(981631),
-    v = n(388032),
-    _ = n(534560);
-let I = {
+    _ = n(388032),
+    I = n(534560);
+let v = {
         tension: 200,
         friction: 20
     },
     N = {
-        ...I,
+        ...v,
         clamp: !0
     };
 function T(e) {
@@ -42,7 +42,7 @@ function T(e) {
         c = 2 === t,
         g = 1 === t;
     if (!(!(i >= r) && i / r >= 0.8) || c) return null;
-    let x = g || c ? _.hidden : null,
+    let x = g || c ? I.hidden : null,
         p = g ? h.Z.Stages.FLYING : h.Z.Stages.HOVERING;
     return (0, a.jsx)(m.Spring, {
         from: { opacity: 0 },
@@ -51,25 +51,25 @@ function T(e) {
         shouldAnimate: 'animate-always',
         children: (e) =>
             (0, a.jsxs)(u.animated.div, {
-                className: _.tierClose,
+                className: I.tierClose,
                 style: e,
                 children: [
                     (0, a.jsx)(h.Z, {
-                        className: _.tierCloseMechaWumpus,
+                        className: I.tierCloseMechaWumpus,
                         stage: p,
                         onFlyingComplete: s
                     }),
                     (0, a.jsx)('div', {
-                        className: d()(_.tierCloseHint, x),
-                        children: v.intl.format(v.t.qV3Erq, { numLeft: r - i })
+                        className: d()(I.tierCloseHint, x),
+                        children: _.intl.format(_.t.qV3Erq, { numLeft: r - i })
                     }),
                     (0, a.jsx)(m.Clickable, {
                         onClick: l,
-                        className: d()(_.tierCloseClose, x),
+                        className: d()(I.tierCloseClose, x),
                         children: (0, a.jsx)(m.CircleXIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: _.tierCloseCloseIcon
+                            className: I.tierCloseCloseIcon
                         })
                     })
                 ]
@@ -89,27 +89,27 @@ function b(e) {
         (0, a.jsx)(m.Spring, {
             from: { unlockedTranslateY: 50 },
             to: { unlockedTranslateY: 0 === f ? 50 : 0 },
-            config: I,
+            config: v,
             children: (e) =>
                 (0, a.jsx)('div', {
                     className: d()(
                         {
-                            [_.tierHeaderWithoutCardBody]: !t,
-                            [_.tierHeaderUnlocked]: i,
-                            [_.tierHeaderLocked]: !i
+                            [I.tierHeaderWithoutCardBody]: !t,
+                            [I.tierHeaderUnlocked]: i,
+                            [I.tierHeaderLocked]: !i
                         },
                         g
                     ),
                     ref: x,
                     children: (0, a.jsxs)('div', {
-                        className: _.tierHeaderContent,
+                        className: I.tierHeaderContent,
                         children: [
                             (0, a.jsx)(p.Z, {
                                 tier: l.tier,
-                                className: d()(_.tierIcon, { [_.tierIconLocked]: !i })
+                                className: d()(I.tierIcon, { [I.tierIconLocked]: !i })
                             }),
                             (0, a.jsx)('div', {
-                                className: d()(_.tierTitle, { [_.tierTitleActive]: i }),
+                                className: d()(I.tierTitle, { [I.tierTitleActive]: i }),
                                 children: l.title
                             }),
                             s
@@ -133,7 +133,7 @@ function b(e) {
 function j(e) {
     let { children: t, subscriptionCount: n, onSetRef: i, tier: r, isAnimatedTo: l, hasBottomMargin: s, headerButton: o = null, withCardBody: c = !0, guildId: u, showHeaderLockStatus: h = !0 } = e,
         p = (0, f.vn)(u)[r.tier],
-        I = l && n >= p,
+        v = l && n >= p,
         N = r.tier !== C.Eu4.NONE && r.tier !== C.Eu4.TIER_1,
         T = (e, t) => {
             var n;
@@ -141,31 +141,31 @@ function j(e) {
             return (0, a.jsxs)(
                 'div',
                 {
-                    className: _.perk,
+                    className: I.perk,
                     children: [
                         (0, a.jsx)(x.Z, {
                             name: String(e.icon),
                             icon: i,
-                            className: _.perkIcon,
+                            className: I.perkIcon,
                             iconClassName: r
                         }),
                         (0, a.jsxs)('div', {
-                            className: _.perkText,
+                            className: I.perkText,
                             children: [
                                 (0, a.jsxs)('div', {
-                                    className: _.perkTitle,
+                                    className: I.perkTitle,
                                     children: [
                                         e.title,
                                         e.isNew
                                             ? (0, a.jsx)(m.TextBadge, {
-                                                  className: _.newBadge,
-                                                  text: v.intl.string(v.t.y2b7CA)
+                                                  className: I.newBadge,
+                                                  text: _.intl.string(_.t.y2b7CA)
                                               })
                                             : null
                                     ]
                                 }),
                                 (0, a.jsx)('div', {
-                                    className: _.perkDescription,
+                                    className: I.perkDescription,
                                     children: e.description
                                 })
                             ]
@@ -178,7 +178,7 @@ function j(e) {
     return (0, a.jsxs)(
         'div',
         {
-            className: d()(_.tier, { [_.tierBottomMargin]: s }),
+            className: d()(I.tier, { [I.tierBottomMargin]: s }),
             children: [
                 (0, a.jsx)(b, {
                     subscriptionCount: n,
@@ -192,11 +192,11 @@ function j(e) {
                     guildId: u,
                     hasBottomMargin: s,
                     subscriptionsRequired: p,
-                    hasAnimatedUnlocked: I,
+                    hasAnimatedUnlocked: v,
                     isAnimatedTo: l
                 }),
                 (0, a.jsx)('div', {
-                    className: d()({ [_.tierBody]: c }),
+                    className: d()({ [I.tierBody]: c }),
                     children:
                         null != t
                             ? t
@@ -204,14 +204,14 @@ function j(e) {
                                   children: [
                                       N
                                           ? (0, a.jsx)('div', {
-                                                className: _.previousPerks,
-                                                children: v.intl.string(v.t.oKzyRU)
+                                                className: I.previousPerks,
+                                                children: _.intl.string(_.t.oKzyRU)
                                             })
                                           : null,
                                       null != r.perks &&
                                           (0, a.jsx)('div', {
-                                              className: _.perks,
-                                              children: r.perks.map((e) => T(e, I))
+                                              className: I.perks,
+                                              children: r.perks.map((e) => T(e, v))
                                           })
                                   ]
                               })
@@ -230,8 +230,8 @@ let S = (e) => {
         let { transform: t } = e;
         return (0, a.jsx)(u.animated.div, {
             style: { transform: t },
-            className: _.tierUnlocked,
-            children: v.intl.string(v.t.dNGM0t)
+            className: I.tierUnlocked,
+            children: _.intl.string(_.t.dNGM0t)
         });
     },
     R = (e) => {
@@ -239,13 +239,13 @@ let S = (e) => {
         return (0, a.jsxs)(a.Fragment, {
             children: [
                 (0, a.jsx)('div', {
-                    className: _.tierRequirement,
-                    children: v.intl.format(v.t.t2Wbo6, { required: t })
+                    className: I.tierRequirement,
+                    children: _.intl.format(_.t.t2Wbo6, { required: t })
                 }),
                 (0, a.jsx)(m.LockIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: _.tierLock
+                    className: I.tierLock
                 })
             ]
         });

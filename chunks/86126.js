@@ -21,22 +21,22 @@ var i = n(200651),
 function C(e) {
     var t;
     let { onDeleteEditState: l } = e,
-        { editStateId: C, guildId: v, groupListingId: _ } = (0, m.N)(),
-        I = (0, a.e7)([u.Z], () => u.Z.getSubscriptionListing(C)),
-        N = null == I ? void 0 : I.id,
-        T = (0, h.Z)(v),
+        { editStateId: C, guildId: _, groupListingId: I } = (0, m.N)(),
+        v = (0, a.e7)([u.Z], () => u.Z.getSubscriptionListing(C)),
+        N = null == v ? void 0 : v.id,
+        T = (0, h.Z)(_),
         b = r.useMemo(() => {
             var e;
-            return null != T && null != I && (null !== (e = T[I.role_id]) && void 0 !== e ? e : 0);
-        }, [T, I]),
+            return null != T && null != v && (null !== (e = T[v.role_id]) && void 0 !== e ? e : 0);
+        }, [T, v]),
         j = 0 === b,
         S = null == N,
-        E = null !== (t = null == I ? void 0 : I.archived) && void 0 !== t && t,
+        E = null !== (t = null == v ? void 0 : v.archived) && void 0 !== t && t,
         { deleteSubscriptionListing: R, submitting: y } = (0, d.r4)(),
         { archiveSubscriptionListing: Z, submitting: A } = (0, d._1)(),
         L = () => {
             let e = async () => {
-                if (!!S || (s()(null != _, 'group listing doesnt exist'), s()(null != N, 'subscription listing doesnt exist'), !!(await R(v, _, N)))) null == l || l();
+                if (!!S || (s()(null != I, 'group listing doesnt exist'), s()(null != N, 'subscription listing doesnt exist'), !!(await R(_, I, N)))) null == l || l();
             };
             (0, o.openModalLazy)(async () => {
                 let { ConfirmModal: t } = await Promise.resolve().then(n.bind(n, 481060));
@@ -57,8 +57,8 @@ function C(e) {
                     });
             });
         },
-        { allowSelfRemoveMonetization: D } = (0, c.gX)(v);
-    return null == I
+        { allowSelfRemoveMonetization: D } = (0, c.gX)(_);
+    return null == v
         ? null
         : (0, i.jsx)(g.Z, {
               title: x.intl.string(x.t['7Si8Ul']),
@@ -103,7 +103,7 @@ function C(e) {
                                 wrapperClassName: f.deleteListingButton,
                                 color: o.Button.Colors.RED,
                                 onClick: () => {
-                                    s()(null != _, 'group listing doesnt exist'),
+                                    s()(null != I, 'group listing doesnt exist'),
                                         s()(null != N, 'subscription listing doesnt exist'),
                                         (0, o.openModalLazy)(async () => {
                                             let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 481060));
@@ -113,7 +113,7 @@ function C(e) {
                                                     confirmText: x.intl.string(x.t.RL0wjo),
                                                     cancelText: x.intl.string(x.t['ETE/oK']),
                                                     onConfirm: () => {
-                                                        Z(v, _, N);
+                                                        Z(_, I, N);
                                                     },
                                                     confirmButtonColor: o.Button.Colors.RED,
                                                     ...t,

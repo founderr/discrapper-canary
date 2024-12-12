@@ -17,12 +17,12 @@ var i = t(442837),
     m = t(659972),
     x = t(981631),
     h = t(765305),
-    g = t(388032),
-    f = t(338456);
+    f = t(388032),
+    g = t(338456);
 function v(e) {
     let { icon: n } = e;
     return (0, l.jsx)('div', {
-        className: f.iconContainer,
+        className: g.iconContainer,
         children: (0, l.jsx)(n, {
             color: 'currentColor',
             size: 'md'
@@ -32,14 +32,14 @@ function v(e) {
 function _(e) {
     let { icon: n, text: t } = e;
     return (0, l.jsxs)('div', {
-        className: f.listItemContainer,
+        className: g.listItemContainer,
         children: [
             (0, l.jsx)('div', {
-                className: f.listItemIconContainer,
+                className: g.listItemIconContainer,
                 children: n
             }),
             (0, l.jsx)(a.Text, {
-                className: f.listItemText,
+                className: g.listItemText,
                 variant: 'text-md/normal',
                 color: 'header-secondary',
                 children: t
@@ -59,9 +59,9 @@ function j(e) {
             description: o.description,
             privacy_level: null !== (n = o.privacyLevel) && void 0 !== n ? n : h.j8.PUBLIC
         },
-        g = (0, d.w8)(a.id, u.pV.SPEAKER),
+        f = (0, d.w8)(a.id, u.pV.SPEAKER),
         v = (0, d.Rk)(a.id, u.pV.AUDIENCE),
-        _ = g.slice(0, 5);
+        _ = f.slice(0, 5);
     return (
         null ==
             _.find((e) => {
@@ -73,9 +73,9 @@ function j(e) {
                 userNick: c.ZP.getName(t.id, a.id, s)
             }),
         (0, l.jsx)('div', {
-            className: f.previewCardContainer,
+            className: g.previewCardContainer,
             children: (0, l.jsx)('div', {
-                className: f.previewCard,
+                className: g.previewCard,
                 children: (0, l.jsx)(m.Z, {
                     guild: t,
                     stageInstance: x,
@@ -83,7 +83,7 @@ function j(e) {
                     setShowGuildPopout: () => {},
                     source: m.k.UNSPECIFIED,
                     speakers: _,
-                    speakerCount: g.length,
+                    speakerCount: f.length,
                     audienceCount: Math.max(1337, v),
                     channelName: a.name
                 })
@@ -103,48 +103,48 @@ function I(e) {
                       stageData: i
                   }),
                   (0, l.jsxs)(a.ModalContent, {
-                      className: f.container,
+                      className: g.container,
                       children: [
                           (0, l.jsxs)('div', {
-                              className: f.header,
+                              className: g.header,
                               children: [
                                   (0, l.jsx)(a.Heading, {
                                       id: r,
-                                      className: f.__invalid_title,
+                                      className: g.__invalid_title,
                                       variant: 'heading-xl/semibold',
-                                      children: g.intl.string(g.t.GXpXTE)
+                                      children: f.intl.string(f.t.GXpXTE)
                                   }),
                                   (0, l.jsx)(a.Text, {
-                                      className: f.subtitle,
+                                      className: g.subtitle,
                                       color: 'header-secondary',
                                       variant: 'text-sm/normal',
-                                      children: g.intl.string(g.t.JaYMvL)
+                                      children: f.intl.string(f.t.JaYMvL)
                                   })
                               ]
                           }),
                           (0, l.jsxs)('div', {
-                              className: f.__invalid_list,
+                              className: g.__invalid_list,
                               children: [
                                   (0, l.jsx)(_, {
                                       icon: (0, l.jsx)(v, { icon: a.CompassIcon }),
-                                      text: g.intl.string(g.t.u6oOcn)
+                                      text: f.intl.string(f.t.u6oOcn)
                                   }),
                                   (0, l.jsx)(_, {
                                       icon: (0, l.jsx)(v, { icon: a.FriendsIcon }),
-                                      text: g.intl.string(g.t.QC8ymZ)
+                                      text: f.intl.string(f.t.QC8ymZ)
                                   }),
                                   (0, l.jsx)(_, {
                                       icon: (0, l.jsx)(v, { icon: a.PencilIcon }),
-                                      text: g.intl.string(g.t.mgGOT0)
+                                      text: f.intl.string(f.t.mgGOT0)
                                   }),
                                   (0, l.jsx)(_, {
                                       icon: (0, l.jsx)(o.Z, {
-                                          className: f.badgeIconBackground,
-                                          foreground: f.badgeIconForeground,
+                                          className: g.badgeIconBackground,
+                                          foreground: g.badgeIconForeground,
                                           width: 40,
                                           height: 40
                                       }),
-                                      text: g.intl.format(g.t.qLmNLC, { articleURL: s.Z.getArticleURL(x.BhN.STAGE_CHANNEL_GUIDELINES) })
+                                      text: f.intl.format(f.t.qLmNLC, { articleURL: s.Z.getArticleURL(x.BhN.STAGE_CHANNEL_GUIDELINES) })
                                   })
                               ]
                           })
@@ -156,21 +156,21 @@ function I(e) {
                               color: a.Button.Colors.GREEN,
                               onClick: d,
                               submitting: c,
-                              children: g.intl.string(g.t.s8mM8P)
+                              children: f.intl.string(f.t.s8mM8P)
                           }),
                           (0, l.jsx)(a.Button, {
                               color: a.Button.Colors.PRIMARY,
-                              className: f.cancelButton,
+                              className: g.cancelButton,
                               onClick: u,
-                              children: g.intl.string(g.t['ETE/oK'])
+                              children: f.intl.string(f.t['ETE/oK'])
                           }),
                           (0, l.jsx)(a.Button, {
                               look: a.Button.Looks.LINK,
                               color: a.Button.Colors.LINK,
-                              className: f.backButton,
+                              className: g.backButton,
                               onClick: m,
                               size: a.Button.Sizes.MIN,
-                              children: g.intl.string(g.t['13/7kZ'])
+                              children: f.intl.string(f.t['13/7kZ'])
                           })
                       ]
                   })

@@ -39,10 +39,10 @@ function x(e) {
 function p(e) {
     var t;
     let { guildId: n, progress: l, traitsToHighlight: u, maskDescription: p, maskTraits: f, onTraitClick: C } = e,
-        v = (0, a.e7)([c.Z], () => c.Z.getGuild(n)),
-        { interests: _, description: I, playstyle: N, wildcardDescriptors: T, brandPrimaryColor: b } = l,
+        _ = (0, a.e7)([c.Z], () => c.Z.getGuild(n)),
+        { interests: I, description: v, playstyle: N, wildcardDescriptors: T, brandPrimaryColor: b } = l,
         j = (0, o.useToken)(o.tokens.colors.TEXT_BRAND),
-        S = Array.from(_),
+        S = Array.from(I),
         E = r.useMemo(() => (null != u ? new Set(u) : new Set()), [u]);
     return (0, i.jsxs)('div', {
         children: [
@@ -54,7 +54,7 @@ function p(e) {
                         variant: 'heading-md/medium',
                         color: 'header-primary',
                         lineClamp: 1,
-                        children: null == v ? void 0 : v.name
+                        children: null == _ ? void 0 : _.name
                     }),
                     (0, i.jsxs)('div', {
                         className: g.clanInfoRow,
@@ -74,7 +74,7 @@ function p(e) {
                                 className: g.clanInfoItem,
                                 children: null !== (t = (0, m.mv)(N)) && void 0 !== t ? t : h.intl.string(h.t.JijC4O)
                             }),
-                            null != v &&
+                            null != _ &&
                                 (0, i.jsx)(d.cS, {
                                     wildcardDescriptors: T,
                                     primaryColor: null != b ? b : j.hex()
@@ -85,7 +85,7 @@ function p(e) {
                         variant: 'text-xs/medium',
                         color: 'header-secondary',
                         className: g.descriptionText,
-                        children: (null == I ? void 0 : I.length) > 0 ? I : h.intl.string(h.t['/pfXKi'])
+                        children: (null == v ? void 0 : v.length) > 0 ? v : h.intl.string(h.t['/pfXKi'])
                     })
                 ]
             }),

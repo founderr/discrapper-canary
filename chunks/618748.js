@@ -20,9 +20,9 @@ var r = n(442837),
     p = n(823379),
     f = n(730647),
     C = n(584825),
-    v = n(723047),
-    _ = n(303737),
-    I = n(568074),
+    _ = n(723047),
+    I = n(303737),
+    v = n(568074),
     N = n(411667),
     T = n(903773),
     b = n(822531),
@@ -36,7 +36,7 @@ var r = n(442837),
     L = n(829857),
     D = n(388032),
     O = n(665393);
-function k(e) {
+function P(e) {
     let { application: t, guild: n } = e,
         l = (0, C.YB)(n.id),
         s = (0, C.qi)(n.id),
@@ -92,7 +92,7 @@ function k(e) {
         ];
     return (0, i.jsx)(S.Z, { children: m });
 }
-function P(e) {
+function k(e) {
     let { application: t } = e,
         { teams: n } = (0, h.Z)({ refreshOnDepChange: !1 }),
         r = n.find((e) => {
@@ -122,7 +122,7 @@ function M(e) {
         (0, i.jsx)(f.l, {
             guildId: n.id,
             refetchOnMount: !0,
-            children: (0, i.jsx)(v.in, {
+            children: (0, i.jsx)(_.in, {
                 guildId: n.id,
                 children: (0, i.jsx)(R.M7, {
                     initialTab: t,
@@ -140,9 +140,9 @@ function w(e) {
         { guild: n, application: a } = e,
         c = null != a && n.hasFeature(Z.oNc.ROLE_SUBSCRIPTIONS_ENABLED),
         { currentTab: h, setCurrentTab: C } = (0, R.dw)(),
-        v = (0, f.f)(),
+        _ = (0, f.f)(),
         T = (0, r.e7)([x.default], () => x.default.getCurrentUser()),
-        S = (0, I.Z)(n.id),
+        S = (0, v.Z)(n.id),
         L = n.isOwner(T),
         M = () => {
             let e = g.Z.getRole(n.id, n.getEveryoneRoleId());
@@ -155,10 +155,10 @@ function w(e) {
                 initialTab: 'role_subscriptions',
                 returnToSection: Z.pNK.ROLE_SUBSCRIPTIONS
             }),
-                (0, _.be)(n.id),
+                (0, I.be)(n.id),
                 (0, m.uL)(Z.Z5c.CHANNEL(n.id, A.oC.ROLE_SUBSCRIPTIONS));
         };
-    if (!v) return (0, i.jsx)(l.Spinner, {});
+    if (!_) return (0, i.jsx)(l.Spinner, {});
     switch (h) {
         case R.ue.BASIC_INFO:
             t = (0, i.jsx)(j.Z, { guild: n });
@@ -190,7 +190,7 @@ function w(e) {
                         children: D.intl.string(D.t.KyGv0t)
                     }),
                     (0, i.jsx)(N.Z, { guild: n }),
-                    c && (0, i.jsx)(P, { application: a }),
+                    c && (0, i.jsx)(k, { application: a }),
                     (0, i.jsxs)('div', {
                         className: O.tabBarContainer,
                         children: [
@@ -256,7 +256,7 @@ function w(e) {
                     t
                 ]
             }),
-            (0, i.jsx)(k, {
+            (0, i.jsx)(P, {
                 application: a,
                 guild: n
             })

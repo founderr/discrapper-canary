@@ -23,9 +23,9 @@ var i = n(200651),
     p = n(592125),
     f = n(984933),
     C = n(496675),
-    v = n(699516),
-    _ = n(594174),
-    I = n(434404),
+    _ = n(699516),
+    I = n(594174),
+    v = n(434404),
     N = n(449226),
     T = n(981631),
     b = n(388032),
@@ -34,11 +34,11 @@ function S(e) {
     let { guild: t, isExpanded: n, selectedChannelId: l, className: a } = e,
         x = (0, h.BT)(t),
         f = t.canHaveRaidActivityAlerts(),
-        [C, v] = r.useState(f),
-        _ = (0, o.e7)([p.Z], () => p.Z.getChannel(l), [l]),
-        I = (0, u.ZP)(_),
+        [C, _] = r.useState(f),
+        I = (0, o.e7)([p.Z], () => p.Z.getChannel(l), [l]),
+        v = (0, u.ZP)(I),
         S = async () => {
-            v(!C);
+            _(!C);
             try {
                 var e;
                 await (0, m.f6)(t, !f);
@@ -54,7 +54,7 @@ function S(e) {
                     (0, d.yw)(T.rMx.GUILD_RAID_ALERTS_SETUP, e);
                 }
             } catch (e) {
-                (0, c.showToast)((0, c.createToast)(b.intl.string(b.t['46Rs3t']), c.ToastType.FAILURE)), v(!f);
+                (0, c.showToast)((0, c.createToast)(b.intl.string(b.t['46Rs3t']), c.ToastType.FAILURE)), _(!f);
             }
         };
     return (0, i.jsxs)('div', {
@@ -85,7 +85,7 @@ function S(e) {
                                       color: 'currentColor'
                                   }),
                                   ' ',
-                                  I
+                                  v
                               ]
                           })
                 ]
@@ -103,7 +103,7 @@ function E(e) {
     let { guild: n, selectedChannelId: r, setSelectedChannelId: l, className: m } = e,
         h = null !== (t = n.safetyAlertsChannelId) && void 0 !== t ? t : null,
         x = (0, o.Wu)(
-            [f.ZP, _.default, v.Z, C.Z],
+            [f.ZP, I.default, _.Z, C.Z],
             () => {
                 let e = f.ZP.getChannels(n.id)
                     [f.sH].filter((e) => {
@@ -114,7 +114,7 @@ function E(e) {
                         let { channel: t } = e;
                         return {
                             value: t.id,
-                            label: (0, u.F6)(t, _.default, v.Z, !0)
+                            label: (0, u.F6)(t, I.default, _.Z, !0)
                         };
                     });
                 return null != h ? e : [...e];
@@ -124,7 +124,7 @@ function E(e) {
         p = async (e) => {
             l(e);
             try {
-                if ((e !== h && (await I.Z.saveGuild(n.id, { safetyAlertsChannelId: e }, { throwErr: !0 }), I.Z.updateGuild({ safetyAlertsChannelId: e })), null != e)) {
+                if ((e !== h && (await v.Z.saveGuild(n.id, { safetyAlertsChannelId: e }, { throwErr: !0 }), v.Z.updateGuild({ safetyAlertsChannelId: e })), null != e)) {
                     let t = {
                         raid_alert_type: g.wR.JOIN_RAID,
                         enabled: n.canHaveRaidActivityAlerts(),

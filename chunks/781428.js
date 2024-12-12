@@ -14,8 +14,8 @@ var i,
     d = n(442837),
     h = n(481060),
     g = n(570140),
-    p = n(893776),
-    m = n(899742),
+    m = n(893776),
+    p = n(899742),
     f = n(579806),
     _ = n(743142),
     x = n(388905),
@@ -70,7 +70,7 @@ class J extends (i = s.PureComponent) {
     }
     componentDidMount() {
         let { handoffAvailable: e, authenticated: t, giftCodeSKU: n, invite: i, location: r } = this.props;
-        e && !t ? (0, m.is)() : t && this.loginOrSSO(t, r, !0),
+        e && !t ? (0, p.is)() : t && this.loginOrSSO(t, r, !0),
             y.default.track(
                 F.rMx.LOGIN_VIEWED,
                 {
@@ -96,7 +96,7 @@ class J extends (i = s.PureComponent) {
                                         .then(
                                             (e) => (
                                                 g.Z.dispatch({ type: 'PASSWORDLESS_START' }),
-                                                p.Z.loginWebAuthn({
+                                                m.Z.loginWebAuthn({
                                                     ticket: n,
                                                     credential: JSON.stringify(e),
                                                     source: this.loginSource,
@@ -111,7 +111,7 @@ class J extends (i = s.PureComponent) {
                             })
                             .catch(() => {});
                 }),
-            p.Z.getLocationMetadata(),
+            m.Z.getLocationMetadata(),
             (0, R.e)('login');
     }
     componentDidUpdate(e) {
@@ -143,7 +143,7 @@ class J extends (i = s.PureComponent) {
     }
     loginOrSSO(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (!!e && null != t) this.setState({ redirecting: !0 }), n ? p.Z.verifySSOToken().then(() => this.transitionSSO(t)) : this.transitionSSO(t);
+        if (!!e && null != t) this.setState({ redirecting: !0 }), n ? m.Z.verifySSOToken().then(() => this.transitionSSO(t)) : this.transitionSSO(t);
     }
     transitionSSO(e) {
         let { transitionTo: t, redirectTo: n, replaceWith: i } = this.props,
@@ -514,7 +514,7 @@ class J extends (i = s.PureComponent) {
                 subtitle: V.intl.format(V.t.CfRZBg, { onResendClick: this.handleResendCode }),
                 error: t,
                 onSubmit: this.handleIPAuthorize,
-                onCancel: p.Z.loginReset
+                onCancel: m.Z.loginReset
             })
         });
     }
@@ -529,7 +529,7 @@ class J extends (i = s.PureComponent) {
                 subtitle: V.intl.format(V.t.ef4uZ2, { onResendClick: this.handleResendCode }),
                 error: t,
                 onSubmit: this.handlePasswordReset,
-                onCancel: p.Z.loginReset
+                onCancel: m.Z.loginReset
             })
         });
     }
@@ -581,7 +581,7 @@ class J extends (i = s.PureComponent) {
             W(this, 'passwordRef', void 0),
             W(this, 'codeRef', void 0),
             W(this, 'handleAuthToken', async (e) => {
-                await p.Z.loginToken(e, !1),
+                await m.Z.loginToken(e, !1),
                     y.default.track(F.rMx.LOGIN_SUCCESSFUL, {
                         source: F.uRl.QR_CODE,
                         login_source: this.loginSource,
@@ -613,7 +613,7 @@ class J extends (i = s.PureComponent) {
             W(this, 'handleLogin', (e) => {
                 let { password: t, undelete: n } = this.state;
                 null != e && e.preventDefault(),
-                    p.Z.login({
+                    m.Z.login({
                         login: this.getFullLogin(),
                         password: t,
                         undelete: n,
@@ -628,8 +628,8 @@ class J extends (i = s.PureComponent) {
                     i = this.getFullLogin();
                 try {
                     let { token: r } = await T.Z.verifyPhone(i, e, !1);
-                    await p.Z.authorizeIPAddress(r),
-                        p.Z.login({
+                    await m.Z.authorizeIPAddress(r),
+                        m.Z.login({
                             login: i,
                             password: t,
                             undelete: n,
@@ -660,7 +660,7 @@ class J extends (i = s.PureComponent) {
                 let { mfaType: t, data: n, ticket: i } = e;
                 return (
                     k.S.dispatch(F.CkL.WAVE_EMPHASIZE),
-                    p.Z.loginMFAv2({
+                    m.Z.loginMFAv2({
                         code: n,
                         ticket: i,
                         mfaType: t,
@@ -674,7 +674,7 @@ class J extends (i = s.PureComponent) {
                 let t = this.getFullLogin();
                 try {
                     k.S.dispatch(F.CkL.WAVE_EMPHASIZE),
-                        await p.Z.forgotPassword(t),
+                        await m.Z.forgotPassword(t),
                         (0, h.openModal)((e) =>
                             (0, r.jsx)(h.ConfirmModal, {
                                 header: V.intl.string(V.t.f5Pi7O),
@@ -695,7 +695,7 @@ class J extends (i = s.PureComponent) {
             }),
             W(this, 'handleReset', (e) => {
                 null != e && e.preventDefault(),
-                    p.Z.loginReset(),
+                    m.Z.loginReset(),
                     this.setState({
                         password: '',
                         loginPrefix: '',
@@ -715,7 +715,7 @@ class J extends (i = s.PureComponent) {
                 let { login: t } = this.state,
                     { invite: n, giftCode: i, guildTemplate: r, location: s, transitionTo: l, redirectTo: a } = this.props,
                     o = null != s ? (0, c.parse)(s.search) : {};
-                '' !== t && (o.email = t), null != n ? ((o.mode = 'register'), (e = F.Z5c.INVITE(n.code))) : null != i ? ((o.mode = 'register'), (e = F.Z5c.GIFT_CODE(i.code))) : null != r ? (e = F.Z5c.GUILD_TEMPLATE(r.code)) : null != a ? ((e = F.Z5c.REGISTER), (o.redirect_to = a)) : (e = F.Z5c.REGISTER), p.Z.loginReset(), l(e, { search: (0, c.stringify)(o) }), k.S.dispatch(F.CkL.WAVE_EMPHASIZE);
+                '' !== t && (o.email = t), null != n ? ((o.mode = 'register'), (e = F.Z5c.INVITE(n.code))) : null != i ? ((o.mode = 'register'), (e = F.Z5c.GIFT_CODE(i.code))) : null != r ? (e = F.Z5c.GUILD_TEMPLATE(r.code)) : null != a ? ((e = F.Z5c.REGISTER), (o.redirect_to = a)) : (e = F.Z5c.REGISTER), m.Z.loginReset(), l(e, { search: (0, c.stringify)(o) }), k.S.dispatch(F.CkL.WAVE_EMPHASIZE);
             });
         let i = null != e.location ? (0, c.parse)(e.location.search) : {};
         this.state = {

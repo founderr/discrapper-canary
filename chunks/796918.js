@@ -16,27 +16,27 @@ var i = n(200651),
     f = n(240938);
 t.Z = (e) => {
     let { guildId: t, handleUpdate: n, progress: l, error: C } = e,
-        { interests: v } = l,
-        [_, I] = r.useState(''),
+        { interests: _ } = l,
+        [I, v] = r.useState(''),
         [N, T] = r.useState(0),
         b = (0, c.e7)([d.default], () => d.default.getId()),
         j = r.useMemo(() => (0, a.chunk)((0, u.XV)(g.i6, b), 9), [b]),
         S = [...j[N], ...j[(N + 1) % j.length]],
-        E = r.useMemo(() => Array.from(v), [v]),
+        E = r.useMemo(() => Array.from(_), [_]),
         R = r.useMemo(() => E.filter((e) => !g.WZ.has(e) && !g.gh.has(e)), [E]),
         y = (e) => {
-            let t = new Set(v);
+            let t = new Set(_);
             t.delete(e), n({ interests: t });
         },
         Z = r.useCallback(
             (e) => {
-                if (v.size === g.c4) return;
-                let t = null != e ? e : _.trim();
+                if (_.size === g.c4) return;
+                let t = null != e ? e : I.trim();
                 if (0 === t.length) return;
-                let i = new Set(v);
-                i.add(t), n({ interests: i }), I('');
+                let i = new Set(_);
+                i.add(t), n({ interests: i }), v('');
             },
-            [n, _, v]
+            [n, I, _]
         ),
         A = r.useCallback(
             (e) => {
@@ -90,16 +90,16 @@ t.Z = (e) => {
                                     (0, i.jsx)(o.TextInput, {
                                         autoFocus: !0,
                                         inputClassName: f.input,
-                                        value: _,
+                                        value: I,
                                         onKeyDown: A,
-                                        onChange: I,
+                                        onChange: v,
                                         placeholder: x.intl.string(x.t.axCpsL),
                                         maxLength: g.Sq,
-                                        disabled: v.size === g.c4
+                                        disabled: _.size === g.c4
                                     }),
-                                    _.length > 0 &&
+                                    I.length > 0 &&
                                         (0, i.jsx)(o.Clickable, {
-                                            onClick: () => Z(_.trim()),
+                                            onClick: () => Z(I.trim()),
                                             className: s()(f.plusIcon, f.clickable),
                                             children: (0, i.jsx)(o.PlusSmallIcon, {
                                                 size: 'md',
@@ -107,7 +107,7 @@ t.Z = (e) => {
                                                 className: f.icon
                                             })
                                         }),
-                                    _.length > 0 &&
+                                    I.length > 0 &&
                                         (0, i.jsx)(o.Text, {
                                             color: 'text-muted',
                                             variant: 'text-xs/normal',
@@ -131,8 +131,8 @@ t.Z = (e) => {
                                             variant: 'text-xs/semibold',
                                             color: 'interactive-normal',
                                             text: e,
-                                            selected: v.has(e),
-                                            onClick: v.has(e) ? y : Z
+                                            selected: _.has(e),
+                                            onClick: _.has(e) ? y : Z
                                         },
                                         e
                                     ),

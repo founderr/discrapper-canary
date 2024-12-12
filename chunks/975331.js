@@ -23,17 +23,17 @@ function C() {
     var e;
     let { editStateId: t } = (0, u.N)(),
         [n, l] = m.TT(t),
-        [C, v] = m.F2(t),
-        _ = (0, c.oC)(t),
-        { options: I } = (0, g.Z)(null !== (e = null == _ ? void 0 : _.active_trial) && void 0 !== e ? e : null),
+        [C, _] = m.F2(t),
+        I = (0, c.oC)(t),
+        { options: v } = (0, g.Z)(null !== (e = null == I ? void 0 : I.active_trial) && void 0 !== e ? e : null),
         N = (0, h.Z)(),
         T = null != n,
         b = r.useCallback(
             (e) => {
-                let t = I.find((e) => e.isDefault);
+                let t = v.find((e) => e.isDefault);
                 s()(null != t, 'Missing default trial duartion option'), l(e ? t.value : null);
             },
-            [l, I]
+            [l, v]
         ),
         j = (0, d.mY)(),
         S = (0, o.Dt)(),
@@ -63,7 +63,7 @@ function C() {
                     (0, i.jsx)(a.Spacer, { size: 8 }),
                     (0, i.jsx)(a.SingleSelect, {
                         'aria-labelledby': S,
-                        options: I,
+                        options: v,
                         className: f.formInput,
                         placeholder: p.intl.string(p.t.WZG1BQ),
                         value: n,
@@ -91,7 +91,7 @@ function C() {
                         options: N,
                         className: f.formInput,
                         value: C,
-                        onChange: v,
+                        onChange: _,
                         maxVisibleItems: 5,
                         isDisabled: !T || j,
                         look: a.SelectLooks.CUSTOM

@@ -20,9 +20,9 @@ var i = n(200651),
     p = n(646892),
     f = n(741247),
     C = n(518738),
-    v = n(549631),
-    _ = n(496675),
-    I = n(626135),
+    _ = n(549631),
+    I = n(496675),
+    v = n(626135),
     N = n(480608),
     T = n(243730),
     b = n(130341),
@@ -37,18 +37,18 @@ let L = 'DRAGGABLE_ROLE';
 function D(e) {
     let { setEditRoleId: t, guild: n, everyoneRole: l, otherRoles: s, setSelectedSection: a, renderHeader: o, headerHeight: c, query: u } = e,
         m = (0, d.e7)([T.Z], () => T.Z.getRoleMemberCount(n.id), [n.id]),
-        g = (0, d.e7)([_.Z], () => _.Z.getHighestRole(n), [n]),
+        g = (0, d.e7)([I.Z], () => I.Z.getHighestRole(n), [n]),
         x = u.trim();
     r.useEffect(() => {
         (0, N.E)(n.id);
     }, [n.id]);
     let p = r.useRef(!1);
     r.useEffect(() => {
-        if (!p.current && '' !== u.trimStart()) I.default.track(R.rMx.SEARCH_STARTED, { search_type: 'Roles' }), (p.current = !0);
+        if (!p.current && '' !== u.trimStart()) v.default.track(R.rMx.SEARCH_STARTED, { search_type: 'Roles' }), (p.current = !0);
     }, [u]);
     let f = r.useMemo(() => s.filter((e) => (0, b.uo)(e, x)), [s, x]),
         C = r.useMemo(() => [...s, l], [s, l]),
-        { draggingId: v, handleDragStart: j, handleDragReset: E, handleDragComplete: y } = (0, S.Z)(C),
+        { draggingId: _, handleDragStart: j, handleDragReset: E, handleDragComplete: y } = (0, S.Z)(C),
         Z = r.useCallback(
             (e) => {
                 var r;
@@ -56,7 +56,7 @@ function D(e) {
                 if (0 === f.length) return (0, i.jsx)(O, {}, 'empty-role');
                 let o = f[l];
                 return (0, i.jsx)(
-                    k,
+                    P,
                     {
                         role: o,
                         guild: n,
@@ -66,7 +66,7 @@ function D(e) {
                         onDragStart: j,
                         onDragReset: E,
                         onDragComplete: y,
-                        disableHover: null != v,
+                        disableHover: null != _,
                         disableDrag: s.length !== f.length,
                         setEditRoleId: t,
                         setSelectedSection: a
@@ -74,7 +74,7 @@ function D(e) {
                     o.id
                 );
             },
-            [f, n, g, m, j, E, y, v, s, t, a]
+            [f, n, g, m, j, E, y, _, s, t, a]
         );
     return (0, i.jsx)(h.Xi, {
         sections: [Math.max(f.length, 1)],
@@ -102,23 +102,23 @@ function O() {
         ]
     });
 }
-function k(e) {
+function P(e) {
     var t, l, c;
-    let { role: d, guild: h, highestRole: x, currentPosition: C, memberCount: _, onDragStart: I, onDragReset: N, onDragComplete: T, disableHover: b, disableDrag: S, setEditRoleId: R, setSelectedSection: D } = e,
+    let { role: d, guild: h, highestRole: x, currentPosition: C, memberCount: I, onDragStart: v, onDragReset: N, onDragComplete: T, disableHover: b, disableDrag: S, setEditRoleId: R, setSelectedSection: D } = e,
         O = (0, j.T)(h, x, d),
-        k = null != O,
+        P = null != O,
         [M, w] = r.useState(!1),
         B = r.useMemo(
             () => ({
                 type: L,
                 item: () => (
-                    I(d.id),
+                    v(d.id),
                     {
                         id: d.id,
                         position: C
                     }
                 ),
-                canDrag: () => M && !k,
+                canDrag: () => M && !P,
                 collect: (e) => ({ isDragging: e.isDragging() }),
                 end: (e, t) => {
                     let n = t.getDropResult();
@@ -129,20 +129,20 @@ function k(e) {
                     T(n.roleId);
                 }
             }),
-            [d, I, N, T, k, M]
+            [d, v, N, T, P, M]
         ),
         [{ isDragging: U }, G] = (0, a.c)(B),
         F = r.useMemo(
             () => ({
                 accept: L,
-                canDrop: () => !k,
+                canDrop: () => !P,
                 collect: (e) => {
                     let t = e.getItem();
                     return null != t && e.isOver() && e.canDrop() ? { dragSourcePosition: t.position } : { dragSourcePosition: null };
                 },
                 drop: () => ({ roleId: d.id })
             }),
-            [k, d]
+            [P, d]
         ),
         [{ dragSourcePosition: H }, z] = (0, o.L)(F),
         W = r.useCallback(
@@ -183,11 +183,11 @@ function k(e) {
         'data-dnd-name': d.name,
         'aria-label': y.intl.formatToPlainString(y.t.Vu0AcX, {
             name: d.name,
-            count: ''.concat(_)
+            count: ''.concat(I)
         }),
         children: [
             (0, i.jsx)('div', {
-                className: s()(Z.dragIcon, A.dragSpacing, { [Z.dragIconHidden]: k || S }),
+                className: s()(Z.dragIcon, A.dragSpacing, { [Z.dragIconHidden]: P || S }),
                 onMouseEnter: () => w(!0),
                 onMouseLeave: () => w(!1),
                 children: (0, i.jsx)(u.DragIcon, {
@@ -204,7 +204,7 @@ function k(e) {
                               color: d.colorString,
                               size: 24
                           })
-                        : (0, i.jsx)(P, {
+                        : (0, i.jsx)(k, {
                               guildId: h.id,
                               role: d,
                               size: 24,
@@ -224,7 +224,7 @@ function k(e) {
                         children: d.name
                     }),
                     (null === (l = d.tags) || void 0 === l ? void 0 : l.subscription_listing_id) != null &&
-                        (0, i.jsx)(v.Z, {
+                        (0, i.jsx)(_.Z, {
                             className: Z.subscriptionRoleIcon,
                             'aria-label': y.intl.string(y.t.a2Ak8f)
                         }),
@@ -233,7 +233,7 @@ function k(e) {
             }),
             (0, i.jsx)(u.Tooltip, {
                 text: y.intl.string(y.t.CW75t7),
-                'aria-label': y.intl.formatToPlainString(y.t.Fgs8fH, { count: ''.concat(_) }),
+                'aria-label': y.intl.formatToPlainString(y.t.Fgs8fH, { count: ''.concat(I) }),
                 position: 'right',
                 children: (e) =>
                     (0, i.jsxs)(u.Clickable, {
@@ -244,7 +244,7 @@ function k(e) {
                             (0, i.jsx)(u.Text, {
                                 variant: 'text-md/normal',
                                 color: 'none',
-                                children: _
+                                children: I
                             }),
                             (0, i.jsx)(u.UserIcon, {
                                 size: 'custom',
@@ -261,10 +261,10 @@ function k(e) {
                 children: [
                     (0, i.jsx)(u.CircleIconButton, {
                         className: s()(Z.circleButton, Z.editButton),
-                        tooltip: k ? y.intl.string(y.t['HO/oXl']) : y.intl.string(y.t.bt75u7),
+                        tooltip: P ? y.intl.string(y.t['HO/oXl']) : y.intl.string(y.t.bt75u7),
                         color: u.CircleIconButtonColors.SECONDARY,
                         size: u.CircleIconButtonSizes.SIZE_36,
-                        icon: k
+                        icon: P
                             ? (0, i.jsx)(u.EyeIcon, {
                                   size: 'custom',
                                   color: 'currentColor',
@@ -298,7 +298,7 @@ function k(e) {
         ]
     });
 }
-function P(e) {
+function k(e) {
     var t;
     let { guildId: n, role: r, size: l, enableTooltip: a, className: o, defaultIconClassName: d } = e,
         m = (0, C.p9)({

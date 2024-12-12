@@ -15,8 +15,8 @@ var i,
     d = n(587444),
     h = n(393238),
     g = n(388905),
-    p = n(108427),
-    m = n(314897),
+    m = n(108427),
+    p = n(314897),
     f = n(701190),
     _ = n(626135),
     x = n(768581),
@@ -75,9 +75,9 @@ function R(e) {
     let { children: t, cardChildren: n, startAnimHeightPx: i, innerStyle: r, ...o } = e,
         { invite: u } = o,
         [d, g] = l.useState(j(u)),
-        { ref: p, height: m } = (0, h.Z)(),
+        { ref: m, height: p } = (0, h.Z)(),
         f = (0, c.useSpring)({
-            height: null != m && 0 !== m ? ''.concat(m, 'px') : ''.concat(i, 'px'),
+            height: null != p && 0 !== p ? ''.concat(p, 'px') : ''.concat(i, 'px'),
             config: a.config.stiff
         });
     return (
@@ -93,7 +93,7 @@ function R(e) {
                     className: A.inviteChildContainer,
                     style: f,
                     children: (0, s.jsx)('section', {
-                        ref: p,
+                        ref: m,
                         className: null == r ? void 0 : r(d),
                         children: t(d)
                     })
@@ -179,7 +179,7 @@ function D(e) {
         i = (0, o.e7)([f.Z], () => f.Z.getInvite(t));
     return (
         l.useEffect(() => {
-            (0, p.e)('invite_mobile');
+            (0, m.e)('invite_mobile');
         }, []),
         l.useEffect(() => {
             null != i &&
@@ -206,8 +206,8 @@ function D(e) {
                             inviter_id: null == n ? void 0 : null === (s = n.inviter) || void 0 === s ? void 0 : s.id
                         });
                     let l = null != n && n.state !== C.r2o.EXPIRED && n.state !== C.r2o.BANNED ? t : void 0,
-                        a = m.default.getFingerprint(),
-                        o = null != a ? a : m.default.getId(),
+                        a = p.default.getFingerprint(),
+                        o = null != a ? a : p.default.getId(),
                         c = null != n && (null == n ? void 0 : n.type) != null ? Number(null == n ? void 0 : n.type) : void 0;
                     u.Z.openApp(l, void 0, o, void 0, c);
                 })(e, t, i);

@@ -23,11 +23,11 @@ function x(e) {
         p = (0, l.e7)([o.Z], () => null != n && o.Z.can(m.Plq.MANAGE_GUILD, n), [n]),
         f = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
         C = n.isOwner(f),
-        v = null == f ? void 0 : f.mfaEnabled,
-        _ = x === m.BpS.ELEVATED,
-        I = C && v,
+        _ = null == f ? void 0 : f.mfaEnabled,
+        I = x === m.BpS.ELEVATED,
+        v = C && _,
         N = (0, r.throttle)(async (e) => {
-            if (!!I)
+            if (!!v)
                 await d.Z.updateMFALevel({
                     guildId: n.id,
                     level: e ? m.BpS.ELEVATED : m.BpS.NONE,
@@ -35,7 +35,7 @@ function x(e) {
                 });
         }, 1000);
     if (!p) return null;
-    !I && (t = C ? h.intl.format(h.t.nFwNyc, { settingsHook: () => a.Z.open(m.oAB.ACCOUNT) }) : h.intl.string(h.t['9Ghu4+']));
+    !v && (t = C ? h.intl.format(h.t.nFwNyc, { settingsHook: () => a.Z.open(m.oAB.ACCOUNT) }) : h.intl.string(h.t['9Ghu4+']));
     let T = n.hasFeature(m.oNc.DISCOVERABLE);
     return (0, i.jsxs)('div', {
         className: g.simpleItemWrapper,
@@ -55,12 +55,12 @@ function x(e) {
                     })
                 ]
             }),
-            !I || (_ && T)
+            !v || (I && T)
                 ? (0, i.jsx)(s.Tooltip, {
                       text: T ? h.intl.string(h.t['KG1V/P']) : C ? h.intl.string(h.t.NmsheX) : h.intl.string(h.t.LieBtb),
                       children: (e) =>
                           (0, i.jsx)(u.Z, {
-                              checked: _,
+                              checked: I,
                               disabled: !0,
                               onChange: N,
                               className: g.bringToFront,
@@ -68,7 +68,7 @@ function x(e) {
                           })
                   })
                 : (0, i.jsx)(u.Z, {
-                      checked: _,
+                      checked: I,
                       onChange: N,
                       className: g.bringToFront
                   })

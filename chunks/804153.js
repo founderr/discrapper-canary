@@ -15,9 +15,9 @@ var i = n(200651),
     p = n(246946),
     f = n(594174),
     C = n(434404),
-    v = n(999382),
-    _ = n(981631),
-    I = n(388032),
+    _ = n(999382),
+    I = n(981631),
+    v = n(388032),
     N = n(359963);
 function T(e, t, n) {
     return (
@@ -33,7 +33,7 @@ function T(e, t, n) {
     );
 }
 let b = 'NO_INSTANT_INVITE',
-    j = a.$e(_.Plq.VIEW_CHANNEL, _.Plq.CREATE_INSTANT_INVITE);
+    j = a.$e(I.Plq.VIEW_CHANNEL, I.Plq.CREATE_INSTANT_INVITE);
 class S extends r.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let { widgetEnabled: n } = e,
@@ -68,10 +68,10 @@ class S extends r.PureComponent {
         return (
             r.unshift({
                 value: b,
-                label: I.intl.string(I.t.u197b2)
+                label: v.intl.string(v.t.u197b2)
             }),
             (0, i.jsxs)(c.FormItem, {
-                title: I.intl.string(I.t.LUo0Q0),
+                title: v.intl.string(v.t.LUo0Q0),
                 children: [
                     (0, i.jsx)(c.SingleSelect, {
                         className: N.spacing,
@@ -81,7 +81,7 @@ class S extends r.PureComponent {
                     }),
                     (0, i.jsx)(c.FormText, {
                         type: c.FormTextTypes.DESCRIPTION,
-                        children: I.intl.string(I.t.LxVR9P)
+                        children: v.intl.string(v.t.LxVR9P)
                     })
                 ]
             })
@@ -93,12 +93,12 @@ class S extends r.PureComponent {
             className: N.infoWrapper,
             children: [
                 (0, i.jsx)(c.FormItem, {
-                    title: I.intl.string(I.t.TRyLUl),
+                    title: v.intl.string(v.t.TRyLUl),
                     className: N.infoItem,
                     children: (0, i.jsx)(u.Z, { value: e.id })
                 }),
                 (0, i.jsx)(c.FormItem, {
-                    title: I.intl.string(I.t.VECJcH),
+                    title: v.intl.string(v.t.VECJcH),
                     className: N.infoItem,
                     children: (0, i.jsx)(u.Z, { value: t })
                 })
@@ -113,12 +113,12 @@ class S extends r.PureComponent {
                 children: [
                     (0, i.jsxs)(c.FormItem, {
                         className: N.infoItem,
-                        title: I.intl.string(I.t.XVGbn5),
+                        title: v.intl.string(v.t.XVGbn5),
                         children: [
                             (0, i.jsx)(u.Z, { value: '<iframe src="'.concat(t, '" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>') }),
                             (0, i.jsx)(c.FormText, {
                                 type: c.FormTextTypes.DESCRIPTION,
-                                children: I.intl.format(I.t['+baN19'], {})
+                                children: v.intl.format(v.t['+baN19'], {})
                             })
                         ]
                     }),
@@ -140,7 +140,7 @@ class S extends r.PureComponent {
               ? (0, i.jsx)(d.Z, {})
               : (0, i.jsxs)(c.FormSection, {
                     tag: c.FormTitleTags.H1,
-                    title: I.intl.string(I.t.qlhNb2),
+                    title: v.intl.string(v.t.qlhNb2),
                     children: [this.renderToggle(), this.renderChannelSelect(e), (0, i.jsx)(c.FormDivider, { className: N.divider }), this.renderAPIInfo(e), (0, i.jsx)(c.FormDivider, { className: N.divider }), this.renderWidget(e)]
                 });
     }
@@ -155,7 +155,7 @@ class S extends r.PureComponent {
                     className: N.spacing,
                     value: this.state.internalEnabled,
                     onChange: this.handleToggleWidget,
-                    children: I.intl.string(I.t.NR6hub)
+                    children: v.intl.string(v.t.NR6hub)
                 })
             ),
             T(this, 'handleToggleWidget', (e) => {
@@ -168,8 +168,8 @@ class S extends r.PureComponent {
             });
     }
 }
-t.Z = o.ZP.connectStores([v.Z, p.Z], () => {
-    let { guild: e, embedChannelId: t, embedEnabled: n } = v.Z.getProps();
+t.Z = o.ZP.connectStores([_.Z, p.Z], () => {
+    let { guild: e, embedChannelId: t, embedEnabled: n } = _.Z.getProps();
     return {
         guild: e,
         widgetChannelId: t,

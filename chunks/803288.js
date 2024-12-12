@@ -24,9 +24,9 @@ var i = n(200651),
     p = n(26323),
     f = n(366980),
     C = n(246946),
-    v = n(709586),
-    _ = n(267642),
-    I = n(999382),
+    _ = n(709586),
+    I = n(267642),
+    v = n(999382),
     N = n(621319),
     T = n(44550),
     b = n(770270),
@@ -47,9 +47,9 @@ function y(e, t, n) {
         e
     );
 }
-let Z = a.ZP.connectStores([I.Z, T.Z], () => {
+let Z = a.ZP.connectStores([v.Z, T.Z], () => {
     let e = T.Z.vanityURLCode,
-        t = I.Z.getGuildId();
+        t = v.Z.getGuildId();
     return {
         vanityURLCode: e,
         guildId: t,
@@ -114,7 +114,7 @@ class A extends r.PureComponent {
             innerClassName: R.upsellButton,
             onClick: this.handleVanityUrlUpsellButton,
             children: [
-                (0, i.jsx)(v.Z, {
+                (0, i.jsx)(_.Z, {
                     height: 16,
                     width: 16,
                     className: R.premiumUpsellBadge
@@ -203,7 +203,7 @@ class A extends r.PureComponent {
                         location: {
                             section: n,
                             object: j.qAy.LEARN_MORE,
-                            objectType: (0, _.ge)(t),
+                            objectType: (0, I.ge)(t),
                             location_stack: s
                         },
                         guild_id: null == l ? void 0 : l.id
@@ -228,7 +228,7 @@ class A extends r.PureComponent {
     }
 }
 function L() {
-    let e = (0, a.e7)([I.Z], () => I.Z.getGuild()),
+    let e = (0, a.e7)([v.Z], () => v.Z.getGuild()),
         t = (0, a.cj)([T.Z], () => ({
             vanityURLCode: T.Z.vanityURLCode,
             vanityURLUses: T.Z.vanityURLUses,

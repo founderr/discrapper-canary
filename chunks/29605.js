@@ -23,9 +23,9 @@ var i = n(200651),
     p = n(225433),
     f = n(327802),
     C = n(110924),
-    v = n(200876),
-    _ = n(730089),
-    I = n(372444),
+    _ = n(200876),
+    I = n(730089),
+    v = n(372444),
     N = n(889564),
     T = n(372129),
     b = n(357156),
@@ -39,8 +39,8 @@ var i = n(200651),
     L = n(471613),
     D = n(999382),
     O = n(981631),
-    k = n(185923),
-    P = n(388032),
+    P = n(185923),
+    k = n(388032),
     M = n(525274),
     w = n(684309);
 let B = d().throttle(x.OQ, 1000),
@@ -63,7 +63,7 @@ let B = d().throttle(x.OQ, 1000),
                 (0, i.jsx)('div', {
                     className: M.emojiColumn,
                     children: (0, i.jsx)(h.Tooltip, {
-                        text: n.available ? null : P.intl.string(P.t['KUzI7+']),
+                        text: n.available ? null : k.intl.string(k.t['KUzI7+']),
                         children: (e) =>
                             (0, i.jsx)('div', {
                                 ...e,
@@ -78,7 +78,7 @@ let B = d().throttle(x.OQ, 1000),
                         (0, i.jsx)(h.TextInput, {
                             className: s()(M.emojiAliasInput, { [M.emojiAliasInputDisabled]: a }),
                             inputClassName: M.emojiInput,
-                            placeholder: P.intl.string(P.t.qUpzYG),
+                            placeholder: k.intl.string(k.t.qUpzYG),
                             onKeyPress: U,
                             onChange: c,
                             onBlur: () => {
@@ -91,14 +91,14 @@ let B = d().throttle(x.OQ, 1000),
                             },
                             size: h.TextInput.Sizes.MINI,
                             value: o,
-                            maxLength: k.Yc,
+                            maxLength: P.Yc,
                             disabled: a
                         }),
                         (0, i.jsx)('div', {
                             className: M.emojiAliasPlaceholder,
                             children: (0, i.jsx)('div', {
                                 className: M.emojiAliasPlaceholderContent,
-                                children: o.length > 0 ? o : P.intl.string(P.t.qUpzYG)
+                                children: o.length > 0 ? o : k.intl.string(k.t.qUpzYG)
                             })
                         })
                     ]
@@ -120,7 +120,7 @@ let B = d().throttle(x.OQ, 1000),
                 null != l &&
                     !a &&
                     (0, i.jsx)(h.Clickable, {
-                        'aria-label': P.intl.string(P.t.bt75u7),
+                        'aria-label': k.intl.string(k.t.bt75u7),
                         className: M.editEmojiRolesButton,
                         onClick: () => l(n, t),
                         children: (0, i.jsx)(h.PencilIcon, {
@@ -137,8 +137,8 @@ let B = d().throttle(x.OQ, 1000),
                                 let { status: t } = e;
                                 429 === t &&
                                     g.Z.show({
-                                        title: P.intl.string(P.t.iufib2),
-                                        body: P.intl.string(P.t['Whhv4+'])
+                                        title: k.intl.string(k.t.iufib2),
+                                        body: k.intl.string(k.t['Whhv4+'])
                                     });
                             });
                         }
@@ -165,15 +165,15 @@ let B = d().throttle(x.OQ, 1000),
                             height: 212
                         }),
                         (0, i.jsx)(h.EmptyStateText, {
-                            note: P.intl.string(P.t.RBbtMz),
-                            children: P.intl.string(P.t.lxsmBQ)
+                            note: k.intl.string(k.t.RBbtMz),
+                            children: k.intl.string(k.t.lxsmBQ)
                         })
                     ]
                 })
               : (0, i.jsxs)('div', {
                     children: [
                         (0, i.jsx)(H, {
-                            title: P.intl.string(P.t.sMOuub),
+                            title: k.intl.string(k.t.sMOuub),
                             maxSlots: a.getMaxEmojiSlots(),
                             emojiCount: r.length
                         }),
@@ -182,7 +182,7 @@ let B = d().throttle(x.OQ, 1000),
                             guild: a
                         }),
                         (0, i.jsx)(H, {
-                            title: P.intl.string(P.t.wWjQyc),
+                            title: k.intl.string(k.t.wWjQyc),
                             maxSlots: a.getMaxEmojiSlots(),
                             emojiCount: l.length
                         }),
@@ -201,7 +201,7 @@ let B = d().throttle(x.OQ, 1000),
             children: [
                 t,
                 (0, i.jsxs)('span', {
-                    children: [' \u2014 ', P.intl.format(P.t.sgL8sL, { count: n - r })]
+                    children: [' \u2014 ', k.intl.format(k.t.sgL8sL, { count: n - r })]
                 })
             ]
         });
@@ -214,7 +214,7 @@ let B = d().throttle(x.OQ, 1000),
             ? (0, i.jsx)(h.FormText, {
                   type: h.FormTextTypes.DESCRIPTION,
                   className: M.content,
-                  children: P.intl.string(P.t.SpxYoa)
+                  children: k.intl.string(k.t.SpxYoa)
               })
             : (0, i.jsxs)(h.FormSection, {
                   className: M.content,
@@ -225,17 +225,17 @@ let B = d().throttle(x.OQ, 1000),
                               (0, i.jsx)(h.FormText, {
                                   type: h.FormTextTypes.DESCRIPTION,
                                   className: M.emojiColumn,
-                                  children: P.intl.string(P.t.Z0i3Gh)
+                                  children: k.intl.string(k.t.Z0i3Gh)
                               }),
                               (0, i.jsx)(h.FormText, {
                                   type: h.FormTextTypes.DESCRIPTION,
                                   className: M.columnLabel,
-                                  children: P.intl.string(P.t.giajw8)
+                                  children: k.intl.string(k.t.giajw8)
                               }),
                               (0, i.jsx)(h.FormText, {
                                   type: h.FormTextTypes.DESCRIPTION,
                                   className: M.columnLabel,
-                                  children: P.intl.string(P.t.edavpq)
+                                  children: k.intl.string(k.t.edavpq)
                               })
                           ]
                       }),
@@ -265,8 +265,8 @@ let B = d().throttle(x.OQ, 1000),
             u = (0, y.FZ)(d, a.id);
         return null == u || d === O.Eu4.TIER_3 || c > 0
             ? null
-            : (c > o ? ((t = P.intl.formatToPlainString(P.t.j0UH0t, { level: u })), (n = P.intl.formatToPlainString(P.t.VQeyKy, { level: u })), (r = O.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL)) : ((t = P.intl.string(P.t.zT9Sxc)), (n = P.intl.formatToPlainString(P.t.dBZ1RU, { level: u })), (r = O.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL)),
-              (0, i.jsx)(I.Z, {
+            : (c > o ? ((t = k.intl.formatToPlainString(k.t.j0UH0t, { level: u })), (n = k.intl.formatToPlainString(k.t.VQeyKy, { level: u })), (r = O.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL)) : ((t = k.intl.string(k.t.zT9Sxc)), (n = k.intl.formatToPlainString(k.t.dBZ1RU, { level: u })), (r = O.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL)),
+              (0, i.jsx)(v.Z, {
                   header: t,
                   text: n,
                   guild: a,
@@ -289,7 +289,7 @@ t.ZP = () => {
             emojis: L.Z.getEmojis(e.id)
         })),
         x = (0, C.Z)(c),
-        [p, I] = r.useState(!1),
+        [p, v] = r.useState(!1),
         [E, R] = r.useState(!1),
         y = r.useRef(null);
     r.useEffect(() => {
@@ -309,7 +309,7 @@ t.ZP = () => {
         U = e.getMaxEmojiSlots(),
         G = Math.max(U - Z.length, U - w.length),
         H = (n, i, r) =>
-            (0, _.G)({
+            (0, I.G)({
                 data: n,
                 file: i,
                 image: r,
@@ -324,7 +324,7 @@ t.ZP = () => {
                     upload_id: t
                 }),
                 await (0, T._)(n, H),
-                I(!0);
+                v(!0);
         },
         V = () => {
             null !== y.current && ((0, h.closeModal)(y.current), (y.current = null));
@@ -339,7 +339,7 @@ t.ZP = () => {
                     });
             });
         },
-        K = (0, v.l)(e);
+        K = (0, _.l)(e);
     return (0, i.jsxs)('div', {
         className: M.emojiSettings,
         children: [
@@ -351,7 +351,7 @@ t.ZP = () => {
                   }),
             (0, i.jsxs)(h.FormSection, {
                 tag: h.FormTitleTags.H1,
-                title: P.intl.string(P.t.sMOuub),
+                title: k.intl.string(k.t.sMOuub),
                 children: [
                     (0, i.jsx)(W, {
                         guild: e,
@@ -363,19 +363,19 @@ t.ZP = () => {
                         children: [
                             (0, i.jsx)(h.FormText, {
                                 type: h.FormTextTypes.DESCRIPTION,
-                                children: P.intl.format(P.t.TA1BR0, { count: U })
+                                children: k.intl.format(k.t.TA1BR0, { count: U })
                             }),
                             K &&
                                 (0, i.jsx)(h.FormText, {
                                     type: h.FormTextTypes.DESCRIPTION,
-                                    children: P.intl.format(P.t.uMkfTk, { onClick: () => A.Z.open(e.id, O.pNK.ROLE_SUBSCRIPTIONS, void 0, O.KsC.ROLE_SUBSCRIPTION_EMOJI) })
+                                    children: k.intl.format(k.t.uMkfTk, { onClick: () => A.Z.open(e.id, O.pNK.ROLE_SUBSCRIPTIONS, void 0, O.KsC.ROLE_SUBSCRIPTION_EMOJI) })
                                 }),
                             (0, i.jsxs)('div', {
                                 children: [
                                     (0, i.jsx)(h.FormTitle, {
                                         tag: h.FormTitleTags.H2,
                                         className: M.emojiUploadUploadRequirementsHeading,
-                                        children: P.intl.string(P.t.jrXfy8)
+                                        children: k.intl.string(k.t.jrXfy8)
                                     }),
                                     (0, i.jsxs)('ul', {
                                         className: M.emojiUploadUploadRequirementsList,
@@ -383,25 +383,25 @@ t.ZP = () => {
                                             (0, i.jsx)('li', {
                                                 children: (0, i.jsx)(h.FormText, {
                                                     type: h.FormTextTypes.DESCRIPTION,
-                                                    children: P.intl.string(P.t.N2qTQ0)
+                                                    children: k.intl.string(k.t.N2qTQ0)
                                                 })
                                             }),
                                             (0, i.jsx)('li', {
                                                 children: (0, i.jsx)(h.FormText, {
                                                     type: h.FormTextTypes.DESCRIPTION,
-                                                    children: P.intl.format(P.t.gfAXoa, { maxSize: k.xG })
+                                                    children: k.intl.format(k.t.gfAXoa, { maxSize: P.xG })
                                                 })
                                             }),
                                             (0, i.jsx)('li', {
                                                 children: (0, i.jsx)(h.FormText, {
                                                     type: h.FormTextTypes.DESCRIPTION,
-                                                    children: P.intl.string(P.t.rnwKPD)
+                                                    children: k.intl.string(k.t.rnwKPD)
                                                 })
                                             }),
                                             (0, i.jsx)('li', {
                                                 children: (0, i.jsx)(h.FormText, {
                                                     type: h.FormTextTypes.DESCRIPTION,
-                                                    children: P.intl.string(P.t['8Vr5QU'])
+                                                    children: k.intl.string(k.t['8Vr5QU'])
                                                 })
                                             })
                                         ]
@@ -423,7 +423,7 @@ t.ZP = () => {
                                 submitting: E,
                                 focusProps: { within: !0 },
                                 children: [
-                                    P.intl.string(P.t.DU0dy8),
+                                    k.intl.string(k.t.DU0dy8),
                                     G > 0
                                         ? (0, i.jsx)(T.Z, {
                                               disabled: E || 0 === G || !a,

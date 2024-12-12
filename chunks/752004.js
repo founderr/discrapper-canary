@@ -10,7 +10,7 @@ var i,
     d = n(388905),
     h = n(703656),
     g = n(388032),
-    p = n(232186);
+    m = n(232186);
 ((r = i || (i = {}))[(r.INITIAL = 0)] = 'INITIAL'), (r[(r.RPC_CONNECTED = 1)] = 'RPC_CONNECTED'), (r[(r.APP_OPENING = 2)] = 'APP_OPENING'), (r[(r.APP_OPENED = 3)] = 'APP_OPENED');
 t.Z = function (e) {
     let { match: t, location: n, attemptDeepLink: i } = e,
@@ -29,7 +29,7 @@ t.Z = function (e) {
             let e = setTimeout(() => (0, h.uL)((0, u.M)()), 3000);
             return () => clearTimeout(e);
         }, [r]);
-    let m = l.useCallback(
+    let p = l.useCallback(
         async (e, t) => {
             try {
                 a(2), await i(e, t), a(3);
@@ -45,17 +45,17 @@ t.Z = function (e) {
             return (0, s.jsxs)(d.ZP, {
                 children: [
                     (0, s.jsx)(d.Dx, {
-                        className: p.marginBottom8,
+                        className: m.marginBottom8,
                         children: g.intl.string(g.t.qllnGh)
                     }),
                     (0, s.jsx)(d.DK, { children: g.intl.string(g.t.SXCxyc) }),
                     (0, s.jsx)(d.zx, {
-                        className: p.marginTop40,
-                        onClick: () => m(t, n),
+                        className: m.marginTop40,
+                        onClick: () => p(t, n),
                         children: g.intl.string(g.t.UQvCf3)
                     }),
                     (0, s.jsx)(d.zx, {
-                        className: o()(p.marginTop8, p.marginCenterHorz),
+                        className: o()(m.marginTop8, m.marginCenterHorz),
                         color: d.zx.Colors.LINK,
                         look: d.zx.Looks.LINK,
                         onClick: () => (0, h.uL)((0, u.M)()),
@@ -72,7 +72,7 @@ t.Z = function (e) {
             return (0, s.jsxs)(d.ZP, {
                 children: [
                     (0, s.jsx)(d.Dx, {
-                        className: p.marginBottom8,
+                        className: m.marginBottom8,
                         children: g.intl.string(g.t.csrAMD)
                     }),
                     (0, s.jsx)(d.DK, { children: g.intl.string(g.t.ghBJz8) })
