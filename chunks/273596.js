@@ -95,8 +95,8 @@ function L(e) {
             });
         }, [R, s, t, y, j, N]);
     let z = r.useCallback((e) => n(e, y), [n, y]),
-        W = r.useMemo(() => (m && !P ? [s.length, 0] : [s.length]), [s.length, P, m]),
-        Y = r.useCallback(
+        Y = r.useMemo(() => (m && !P ? [s.length, 0] : [s.length]), [s.length, P, m]),
+        W = r.useCallback(
             (e, n, r) => {
                 switch (e) {
                     case 0:
@@ -237,12 +237,12 @@ function L(e) {
         children: (0, i.jsx)(c.MasonryList, {
             ref: H,
             className: T.masonryList,
-            sections: W,
+            sections: Y,
             columns: U,
             itemGutter: 16,
             padding: ee,
             renderItem: J,
-            renderSection: Y,
+            renderSection: W,
             getSectionHeight: K,
             getItemKey: q,
             getItemHeight: X,

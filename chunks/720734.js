@@ -48,8 +48,8 @@ var i = n(200651),
     V = n(332473),
     F = n(240504),
     z = n(637906),
-    W = n(39370),
-    Y = n(19199),
+    Y = n(39370),
+    W = n(19199),
     K = n(111653),
     q = n(866483),
     X = n(14357),
@@ -290,7 +290,7 @@ class eR extends r.PureComponent {
                                                           position: 'top',
                                                           align: 'center',
                                                           shouldShow: !0,
-                                                          renderPopout: () => (0, i.jsx)(W.Z, {}),
+                                                          renderPopout: () => (0, i.jsx)(Y.Z, {}),
                                                           children: this.renderSettingsGear
                                                       });
                                                   case s.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK:
@@ -518,18 +518,18 @@ function ej() {
         O = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || P || eE.s.isDisallowPopupsSet(),
         R = (0, V.b)(),
         j = (0, o.e7)([G.Z], () => null != G.Z.getAwaitingRemoteSessionInfo()),
-        M = (0, Y.D)(),
+        M = (0, W.D)(),
         w = (0, E.u)(),
         U = (0, K.t)(),
         B = e_.ZP.canUsePremiumGuildMemberProfile(t),
         H = (null == t ? void 0 : null === (e = t.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === eb.rL,
-        W = 'account';
+        Y = 'account';
     (0, I.j)({
-        location: W + ' auto on',
+        location: Y + ' auto on',
         autoTrackExposure: !0
     }),
         (0, I.j)({
-            location: W + ' auto off',
+            location: Y + ' auto off',
             autoTrackExposure: !1
         });
     let q = (0, o.e7)([J.Z], () => J.Z.hasHadOtherUserPlaySoundInSession()),

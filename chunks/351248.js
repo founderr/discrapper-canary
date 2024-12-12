@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return N;
     }
 }),
     n(653041),
@@ -49,7 +49,7 @@ let _ = {
     },
     E = 200,
     b = 125;
-class N extends l.PureComponent {
+class Z extends l.PureComponent {
     componentDidMount() {
         this.componentDidAppear();
     }
@@ -155,7 +155,7 @@ class N extends l.PureComponent {
         super(...e), v(this, 'scaleAnimation', new s.Z.Value(0)), v(this, 'spriteAnimation', new s.Z.Value(0)), v(this, 'spriteOpacity', new s.Z.Value(0)), v(this, 'widthAnimation', new s.Z.Value(0));
     }
 }
-function Z(e) {
+function N(e) {
     var t, n;
     let { participants: l, onContextMenu: r, className: s, onClick: d, width: C, guildId: x } = e,
         v = (0, h.ZP)();
@@ -166,7 +166,7 @@ function Z(e) {
             if (e.type !== f.fO.USER) return null;
             let { user: l, voiceState: a, speaking: s, ringing: o } = e;
             return (0, i.jsx)(
-                N,
+                Z,
                 {
                     className: g.participant,
                     width: (0, u.getAvatarSize)(_),

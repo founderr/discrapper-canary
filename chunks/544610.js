@@ -20,23 +20,23 @@ var l,
     I = n(699516),
     E = n(594174),
     b = n(981631);
-let N = !1,
-    Z = '',
+let Z = !1,
+    N = '',
     S = 0,
     T = [],
     j = !1,
     A = new Set(),
     y = null;
 function P() {
-    (Z = ''), (S = 0), (T = []), (A = new Set()), (N = !1), (y = null);
+    (N = ''), (S = 0), (T = []), (A = new Set()), (Z = !1), (y = null);
 }
 function M(e) {
-    (Z = e), (S = 0), R();
+    (N = e), (S = 0), R();
 }
 function R() {
-    if (!N) return !1;
+    if (!Z) return !1;
     let e = x.Z.getChannel(y);
-    if (0 === Z.trim().length)
+    if (0 === N.trim().length)
         return (
             null != i && i.clearQuery(),
             (T = (function (e) {
@@ -63,7 +63,7 @@ function R() {
     return (
         null != i &&
             i.setQuery(
-                Z,
+                N,
                 {
                     friends: !0,
                     provisional: !1
@@ -94,7 +94,7 @@ function R() {
     );
 }
 function L() {
-    if (!N) return !1;
+    if (!Z) return !1;
     let e = j;
     return (j = c().some(I.Z.getRelationships(), (e) => e === b.OGo.FRIEND)) !== e;
 }
@@ -109,7 +109,7 @@ function k(e, t) {
 }
 function O(e) {
     let { results: t } = e;
-    if (!N || '' === Z) return;
+    if (!Z || '' === N) return;
     let n = [];
     for (let { id: e, comparator: i } of t) {
         let t = E.default.getUser(e);
@@ -126,7 +126,7 @@ function D() {
 }
 function w(e) {
     if (e.key !== b.vTt) return !1;
-    (N = !0), L(), (i = D()), (y = null), M('');
+    (Z = !0), L(), (i = D()), (y = null), M('');
 }
 function B(e) {
     if (e.key !== b.vTt) return !1;
@@ -149,11 +149,11 @@ class H extends (l = d.ZP.Store) {
         return A;
     }
     getQuery() {
-        return Z;
+        return N;
     }
     getState() {
         return {
-            query: Z,
+            query: N,
             selectedRow: S,
             selectedUsers: A,
             results: T,
@@ -177,13 +177,13 @@ let G = new H(u.Z, {
     CHANNEL_SELECT: function (e) {
         let { guildId: t, channelId: n } = e;
         if (null != t) return !1;
-        let i = N;
-        return P(), (N = i), (y = n), R();
+        let i = Z;
+        return P(), (Z = i), (y = n), R();
     },
     MODAL_PUSH: w,
     SHOW_ACTION_SHEET: w,
     PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function (e) {
-        (N = !0), L(), (i = D()), (y = e.channelId), M('');
+        (Z = !0), L(), (i = D()), (y = e.channelId), M('');
     },
     MODAL_POP: B,
     HIDE_ACTION_SHEET: B,

@@ -25,7 +25,7 @@ var i = n(200651),
     I = n(127379),
     E = n(388032);
 function b(e) {
-    let { channel: t, themeable: b, whichPopoutIsOpen: N, setWhichPopoutIsOpen: Z } = e,
+    let { channel: t, themeable: b, whichPopoutIsOpen: Z, setWhichPopoutIsOpen: N } = e,
         S = t.getGuildId(),
         { mute: T, suppress: j } = (0, p.Z)(t),
         A = (0, r.e7)([C.Z], () => C.Z.isDeaf()),
@@ -62,9 +62,9 @@ function b(e) {
         }),
         (0, i.jsx)(v.Z, {
             ref: B,
-            isPopoutBlocked: null != N && N !== I.D.SOUNDBOARD,
-            onPopoutClose: () => (null == Z ? void 0 : Z(void 0)),
-            onPopoutOpen: () => (null == Z ? void 0 : Z(I.D.SOUNDBOARD)),
+            isPopoutBlocked: null != Z && Z !== I.D.SOUNDBOARD,
+            onPopoutClose: () => (null == N ? void 0 : N(void 0)),
+            onPopoutOpen: () => (null == N ? void 0 : N(I.D.SOUNDBOARD)),
             align: L ? 'center' : 'left',
             renderPopout: (e) => {
                 let { closePopout: n } = e;

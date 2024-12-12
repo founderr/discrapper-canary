@@ -25,8 +25,8 @@ var i = n(200651),
     I = n(213652),
     E = n(320427),
     b = n(145010),
-    N = n(933686),
-    Z = n(361057),
+    Z = n(933686),
+    N = n(361057),
     S = n(997614),
     T = n(159909),
     j = n(981631),
@@ -66,7 +66,7 @@ function y(e) {
                     channel: t,
                     themeable: r
                 }),
-            !P && F && (0, i.jsx)(N.Z, { channel: t }),
+            !P && F && (0, i.jsx)(Z.Z, { channel: t }),
             O && D && (0, i.jsx)(I.Z, { channel: t }),
             H &&
                 (0, i.jsx)(d.t, {
@@ -75,7 +75,7 @@ function y(e) {
                     markAsDismissed: U
                 }),
             M &&
-                (0, i.jsx)(Z.Z, {
+                (0, i.jsx)(N.Z, {
                     ref: R,
                     channel: t,
                     glow: H

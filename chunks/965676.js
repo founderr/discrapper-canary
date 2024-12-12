@@ -4,7 +4,7 @@ e.exports = {
     minimum: 'minimum_d880dc',
     video: 'video_d880dc',
     noChat: 'noChat_d880dc',
-    chatSidebarOpen: 'chatSidebarOpen_d880dc',
+    sidebarOpen: 'sidebarOpen_d880dc',
     fullScreen: 'fullScreen_d880dc',
     popout: 'popout_d880dc',
     poppedOut: 'poppedOut_d880dc',

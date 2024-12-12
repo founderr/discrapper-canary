@@ -74,11 +74,11 @@ function _(e) {
             setIsExecutingLaunchInteraction: I,
             analyticsLocations: E
         }),
-        N = m ? s.Button.Colors.RED : s.Button.Colors.BRAND;
+        Z = m ? s.Button.Colors.RED : s.Button.Colors.BRAND;
     return (0, i.jsx)(s.Button, {
         className: a()(x.entryPointAppCommandButton, C.Id),
         size: s.Button.Sizes.LARGE,
-        color: N,
+        color: Z,
         submitting: h,
         onClick: b,
         buttonRef: o,

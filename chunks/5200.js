@@ -30,8 +30,8 @@ function _(e) {
         {
             onActivityItemSelected: E,
             imageBackground: b,
-            activityAction: N,
-            labelType: Z
+            activityAction: Z,
+            labelType: N
         } = (0, u.ZP)({
             channel: n,
             activityItem: i,
@@ -57,14 +57,14 @@ function _(e) {
                         className: C.badgeContainer,
                         children: (0, r.jsx)(p.Z, {
                             name: i.application.name,
-                            labelType: Z
+                            labelType: N
                         })
                     })
                 }),
-            [i.application.name, Z]
+            [i.application.name, N]
         ),
         P = a.useMemo(() => {
-            switch (N) {
+            switch (Z) {
                 case u.JS.JOIN:
                     return (0, r.jsx)('div', {
                         className: C.activityAction,
@@ -93,7 +93,7 @@ function _(e) {
                 default:
                     return (0, r.jsx)(r.Fragment, {});
             }
-        }, [N]);
+        }, [Z]);
     return (0, r.jsx)(d.Button, {
         onClick: E,
         color: 'transparent',

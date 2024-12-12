@@ -47,8 +47,8 @@ var i = n(200651),
     V = n(179742),
     F = n(270759),
     z = n(918701),
-    W = n(905423),
-    Y = n(304445),
+    Y = n(905423),
+    W = n(304445),
     K = n(893607),
     q = n(187819),
     X = n(210887),
@@ -194,7 +194,7 @@ let eg = 'resizable-sidebar-width-2',
         return (0, i.jsx)(v.Z, {});
     },
     eb = r.memo(function () {
-        let { guildId: e, channelId: t } = (0, W.Z)(),
+        let { guildId: e, channelId: t } = (0, Y.Z)(),
             n = (0, u.e7)([ee.Z], () => (null != t ? t : ee.Z.getChannelId(e)));
         return (function () {
             return window.location.pathname.startsWith(eu.Z5c.GLOBAL_DISCOVERY);
@@ -408,7 +408,7 @@ function eG() {
             return (
                 r.useEffect(
                     () =>
-                        Y.Z.addRouteChangeListener((e) => {
+                        W.Z.addRouteChangeListener((e) => {
                             t(e.pathname.startsWith(eu.Z5c.GUILD_MEMBER_VERIFICATION('')));
                         }),
                     []
@@ -421,7 +421,7 @@ function eG() {
             return (
                 r.useEffect(
                     () =>
-                        Y.Z.addRouteChangeListener((e) => {
+                        W.Z.addRouteChangeListener((e) => {
                             t(e.pathname.startsWith(eu.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB('')));
                         }),
                     []

@@ -27,8 +27,8 @@ var i = n(200651),
     I = n(907179),
     E = n(475413),
     b = n(228168),
-    N = n(388032),
-    Z = n(562296),
+    Z = n(388032),
+    N = n(562296),
     S = n(321975);
 function T(e) {
     let { user: t, channel: n, onViewBlockedProfileClick: r } = e,
@@ -53,16 +53,16 @@ function T(e) {
                 themeOverride: o,
                 children: (0, i.jsx)(s.u2, {
                     children: (0, i.jsxs)('div', {
-                        className: Z.container,
+                        className: N.container,
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
                                 src: S,
-                                className: Z.previewForCollected,
+                                className: N.previewForCollected,
                                 'aria-hidden': !0
                             }),
                             (0, i.jsxs)('div', {
-                                className: Z.body,
+                                className: N.body,
                                 children: [
                                     (0, i.jsx)(x.Z, {
                                         user: t,
@@ -70,21 +70,21 @@ function T(e) {
                                     }),
                                     (0, i.jsx)(c.Heading, {
                                         variant: 'heading-lg/bold',
-                                        className: Z.header,
-                                        children: N.intl.string(N.t.VNJ7UF)
+                                        className: N.header,
+                                        children: Z.intl.string(Z.t.VNJ7UF)
                                     }),
                                     (0, i.jsx)(c.Text, {
                                         variant: 'text-sm/medium',
-                                        children: N.intl.format(N.t.LXbngo, { username: t.username })
+                                        children: Z.intl.format(Z.t.LXbngo, { username: t.username })
                                     }),
                                     (0, i.jsx)(c.Text, {
                                         variant: 'text-sm/medium',
-                                        children: N.intl.string(N.t['20WzZ2'])
+                                        children: Z.intl.string(Z.t['20WzZ2'])
                                     }),
                                     (0, i.jsx)(E.tG, {
-                                        className: Z.centeredButton,
+                                        className: N.centeredButton,
                                         action: 'VIEW_BLOCKED_PROFILE',
-                                        text: N.intl.string(N.t.iXAna2),
+                                        text: Z.intl.string(Z.t.iXAna2),
                                         autoFocus: !0,
                                         fullWidth: !1,
                                         onClick: () => {
@@ -129,28 +129,28 @@ function j(e) {
                 themeOverride: T,
                 children: (0, i.jsx)(s.u2, {
                     children: (0, i.jsxs)('div', {
-                        className: Z.container,
+                        className: N.container,
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
                                 src: S,
-                                className: Z.previewForCollected,
+                                className: N.previewForCollected,
                                 'aria-hidden': !0
                             }),
                             (0, i.jsxs)('div', {
-                                className: a()(Z.body, Z.bodySpacing),
+                                className: a()(N.body, N.bodySpacing),
                                 children: [
                                     (0, i.jsxs)('div', {
-                                        className: Z.headerContainer,
+                                        className: N.headerContainer,
                                         children: [
                                             (0, i.jsx)(x.i, { user: t }),
                                             (0, i.jsx)(c.Heading, {
                                                 variant: 'heading-lg/bold',
-                                                children: N.intl.string(N.t.b33pLC)
+                                                children: Z.intl.string(Z.t.b33pLC)
                                             }),
                                             (0, i.jsx)(c.Text, {
                                                 variant: 'text-sm/medium',
-                                                children: N.intl.format(j ? N.t['8F+WNz'] : N.t['/cZp5u'], { username: m.ZP.getName(n.guild_id, n.id, t) })
+                                                children: Z.intl.format(j ? Z.t['8F+WNz'] : Z.t['/cZp5u'], { username: m.ZP.getName(n.guild_id, n.id, t) })
                                             })
                                         ]
                                     }),

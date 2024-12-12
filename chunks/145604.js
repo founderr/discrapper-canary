@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Y;
+        return W;
     }
 }),
     n(789020),
@@ -48,14 +48,14 @@ var i = n(200651),
     V = n(998502),
     F = n(981631),
     z = n(987650);
-class W extends r.PureComponent {
+class Y extends r.PureComponent {
     componentDidMount() {
         let { selectedChannelId: e, connected: t, isNSFWChannel: n, isTextInVoice: i } = this.props;
         t && null != e && ((0, c.yw)(F.rMx.CHANNEL_OPENED, { ...(0, c.$H)(e) }), (0, u.a)(F.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: e }), i && (0, c.yw)(F.rMx.TEXT_IN_VOICE_OPENED, { channel_is_nsfw: n }));
     }
     componentDidUpdate(e) {
         var t, n, i;
-        let { voiceChannelId: r, voiceChannelGuildId: l, voiceChannelType: s, voiceChannelBitrate: E, videoEnabled: I, isScreenSharing: S, runningGame: x, runningGamePid: L, selectedChannelId: O, selectedGuildId: M, connected: w, homeLink: k, friendsTabSection: W, isNSFWChannel: Y, isMemberPending: K, hasPreviewEnabled: q, postableChannelCount: X, isTextInVoice: Q, numMessageRequests: J } = this.props;
+        let { voiceChannelId: r, voiceChannelGuildId: l, voiceChannelType: s, voiceChannelBitrate: E, videoEnabled: I, isScreenSharing: S, runningGame: x, runningGamePid: L, selectedChannelId: O, selectedGuildId: M, connected: w, homeLink: k, friendsTabSection: Y, isNSFWChannel: W, isMemberPending: K, hasPreviewEnabled: q, postableChannelCount: X, isTextInVoice: Q, numMessageRequests: J } = this.props;
         if (e.voiceChannelId !== r && null != e.voiceChannelId) {
             let t = _.ZP.getCurrentGameForAnalytics(),
                 n = null != t ? t.name : '',
@@ -177,7 +177,7 @@ class W extends r.PureComponent {
                 num_recent_channels: v.Z.recentsChannelCount(M)
             };
             (0, c.yw)(F.rMx.GUILD_VIEWED, e), (0, u.a)(F.rMx.GUILD_VIEWED_CLICKSTREAM, { guildId: M });
-        } else w && null == M && k === F.Z5c.FRIENDS && (!e.connected || W !== e.friendsTabSection || k !== e.homeLink) ? (0, h.Z)({ tab_opened: W }) : w && null == M && k === F.Z5c.MESSAGE_REQUESTS && (!e.connected || k !== e.homeLink) && !this.isMessageRequestsInitialized && ((this.isMessageRequestsInitialized = !0), G.default.track(F.rMx.MESSAGE_REQUESTS_INITIALIZED, { num_message_requests: J }));
+        } else w && null == M && k === F.Z5c.FRIENDS && (!e.connected || Y !== e.friendsTabSection || k !== e.homeLink) ? (0, h.Z)({ tab_opened: Y }) : w && null == M && k === F.Z5c.MESSAGE_REQUESTS && (!e.connected || k !== e.homeLink) && !this.isMessageRequestsInitialized && ((this.isMessageRequestsInitialized = !0), G.default.track(F.rMx.MESSAGE_REQUESTS_INITIALIZED, { num_message_requests: J }));
         if (w && null != O && (!e.connected || O !== e.selectedChannelId || M !== e.selectedGuildId)) {
             let t = e.selectedChannelId,
                 n = b.Z.getChannel(t),
@@ -205,7 +205,7 @@ class W extends r.PureComponent {
                 ...(0, c.$H)(O)
             }),
                 (0, u.a)(F.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: O }),
-                Q && (0, c.yw)(F.rMx.TEXT_IN_VOICE_OPENED, { channel_is_nsfw: Y });
+                Q && (0, c.yw)(F.rMx.TEXT_IN_VOICE_OPENED, { channel_is_nsfw: W });
         }
     }
     getGameMetadata() {
@@ -234,7 +234,7 @@ class W extends r.PureComponent {
                 : (t[n] = i);
     }
 }
-function Y() {
+function W() {
     let [e, t] = (0, l.Wu)([O.Z], () => [O.Z.getVoiceChannelId(), O.Z.getChannelId()], []),
         n = (0, l.e7)([b.Z], () => b.Z.getChannel(t), [t]),
         r = (0, l.e7)([p.Z], () => (null == n ? void 0 : n.id) != null && p.Z.getChatOpen(n.id), [n]),
@@ -284,5 +284,5 @@ function Y() {
             isTextInVoice: r,
             numMessageRequests: y
         };
-    return (0, i.jsx)(W, { ...P });
+    return (0, i.jsx)(Y, { ...P });
 }

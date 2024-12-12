@@ -22,14 +22,14 @@ t.Z = function (e) {
         }, [x.id, x.guild_id, _]),
         E = p.filter((e) => e.type === m.Ui.VOICE),
         b = 4 === E.length ? 2 : 3,
-        N = (0, r.Wu)([o.Z], () => E.map((e) => o.Z.getParticipant(x.id, e.id)).filter(h.lm), [x.id, E]);
+        Z = (0, r.Wu)([o.Z], () => E.map((e) => o.Z.getParticipant(x.id, e.id)).filter(h.lm), [x.id, E]);
     return (0, i.jsxs)('div', {
         className: g.container,
         children: [
             (0, i.jsx)('div', {
                 className: g.tiles,
                 style: { maxWidth: 168 * b },
-                children: N.slice(0, 5).map((e) =>
+                children: Z.slice(0, 5).map((e) =>
                     (0, i.jsx)(
                         u.ZP,
                         {

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return N;
     }
 }),
     n(789020),
@@ -42,7 +42,7 @@ function b(e) {
         C = (0, r.e7)([p.Z], () => p.Z.getGuild(f), [f]),
         x = t.type === _.d4z.GUILD_ANNOUNCEMENT,
         b = null != C && C.hasFeature(_.oNc.NEWS),
-        Z = x && b,
+        N = x && b,
         {
             editingMessage: S,
             editingTextValue: T,
@@ -62,13 +62,13 @@ function b(e) {
                 let { content: l } = i,
                     r = m.Z.can(_.Plq.MANAGE_MESSAGES, t),
                     o = null != S && null != S.author ? S.author.id : null;
-                return Z && (o === A || r) && null != S && (0, g.yE)(S.flags, _.iLy.CROSSPOSTED) ? s.Z.confirmEdit(e, n, l) : a.Z.editMessage(e, n, { content: l }), Promise.resolve();
+                return N && (o === A || r) && null != S && (0, g.yE)(S.flags, _.iLy.CROSSPOSTED) ? s.Z.confirmEdit(e, n, l) : a.Z.editMessage(e, n, { content: l }), Promise.resolve();
             },
-            [S, Z, A, t]
+            [S, N, A, t]
         ),
         P = l.useCallback(
             (e) =>
-                (0, l.createElement)(N, {
+                (0, l.createElement)(Z, {
                     ...e,
                     className: I.channelTextArea,
                     key: c
@@ -93,7 +93,7 @@ function b(e) {
           })
         : null;
 }
-function N(e) {
+function Z(e) {
     let { textValue: t, richValue: n, message: r, channel: a, onChange: s, onSubmit: d, onKeyDown: u, renderLeftAccessories: h } = e,
         [p, m] = l.useState(!0),
         g = l.useCallback(() => m(!0), []),
@@ -132,7 +132,7 @@ function N(e) {
         )
     );
 }
-function Z(e, t, n) {
+function N(e, t, n) {
     let { message: l, channel: r } = e;
     return n
         ? (0, i.jsx)(b, {

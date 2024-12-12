@@ -26,12 +26,12 @@ var i = n(200651),
     I = n(370595),
     E = n(351127),
     b = n(981631),
-    N = n(388032),
-    Z = n(758570),
+    Z = n(388032),
+    N = n(758570),
     S = n(227893);
 function T(e) {
     var t, n, r, s;
-    let { permission: o, roleIds: g, guild: v, specMap: _, categoryTitle: I, userId: Z } = e,
+    let { permission: o, roleIds: g, guild: v, specMap: _, categoryTitle: I, userId: N } = e,
         T = (0, c.e7)([C.Z], () => C.Z.getRoles(v.id)),
         j = b.Plq[o],
         A = null !== (r = null === (t = _[j.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== r ? r : (0, f.wt)(j),
@@ -79,7 +79,7 @@ function T(e) {
                                                         color: d.tokens.colors.INTERACTIVE_MUTED.css
                                                     }),
                                                     (0, i.jsx)(d.Tooltip, {
-                                                        text: N.intl.string(N.t.GZvXuL),
+                                                        text: Z.intl.string(Z.t.GZvXuL),
                                                         children: (e) =>
                                                             (0, i.jsxs)(d.Clickable, {
                                                                 className: S.elevatedPermissionContainer,
@@ -94,7 +94,7 @@ function T(e) {
                                                                     (0, i.jsx)(d.Text, {
                                                                         variant: 'text-xs/normal',
                                                                         color: 'text-brand',
-                                                                        children: N.intl.string(N.t.k7Kqj4)
+                                                                        children: Z.intl.string(Z.t.k7Kqj4)
                                                                     })
                                                                 ]
                                                             })
@@ -116,7 +116,7 @@ function T(e) {
                                                         children: (0, i.jsx)(d.Text, {
                                                             variant: 'text-xs/normal',
                                                             color: 'header-muted',
-                                                            children: N.intl.string(N.t.IfqUEB)
+                                                            children: Z.intl.string(Z.t.IfqUEB)
                                                         })
                                                     })
                                                 ]
@@ -128,7 +128,7 @@ function T(e) {
                     (0, i.jsx)(d.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-normal',
-                        children: N.intl.format(N.t.KmJI4O, { roleCount: R })
+                        children: Z.intl.format(Z.t.KmJI4O, { roleCount: R })
                     })
                 ]
             }),
@@ -144,7 +144,7 @@ function T(e) {
             (0, i.jsx)('div', {
                 className: S.permissionItemRoleContainer,
                 children: g.map((e) =>
-                    (0, E.Ov)(e, Z)
+                    (0, E.Ov)(e, N)
                         ? (0, i.jsx)(
                               'div',
                               {
@@ -154,7 +154,7 @@ function T(e) {
                                       children: (0, i.jsx)(d.Text, {
                                           variant: 'text-xs/medium',
                                           color: 'text-normal',
-                                          children: N.intl.string(N.t.pclUFB)
+                                          children: Z.intl.string(Z.t.pclUFB)
                                       })
                                   })
                               },
@@ -207,7 +207,7 @@ function A(e) {
             if (0 === A)
                 return (0, i.jsx)(d.Text, {
                     variant: 'text-sm/normal',
-                    children: N.intl.string(N.t.DEBGqK)
+                    children: Z.intl.string(Z.t.DEBGqK)
                 });
             let e = [];
             return (
@@ -226,7 +226,7 @@ function A(e) {
                                         i = n.title,
                                         l = E._o.has(r),
                                         s = E.Qn.includes(a),
-                                        p = l ? N.intl.string(N.t.k7Kqj4) : s ? N.intl.string(N.t.IfqUEB) : null,
+                                        p = l ? Z.intl.string(Z.t.k7Kqj4) : s ? Z.intl.string(Z.t.IfqUEB) : null,
                                         m = j(L, e),
                                         g = j(L, t),
                                         C = j(L, i),
@@ -256,7 +256,7 @@ function A(e) {
     return null == h || null == m
         ? null
         : (0, i.jsxs)('div', {
-              className: a()(Z.container, s),
+              className: a()(N.container, s),
               children: [
                   (0, i.jsx)(I.Z, {
                       guildId: n,
@@ -266,14 +266,14 @@ function A(e) {
                   (0, i.jsx)(d.Scroller, {
                       className: S.permissionsGroupContainer,
                       children: (0, i.jsx)(d.FormItem, {
-                          title: N.intl.string(N.t.BBWnpq),
+                          title: Z.intl.string(Z.t.BBWnpq),
                           children: (0, i.jsxs)('div', {
                               className: S.permissionsItemContainer,
                               children: [
                                   (0, i.jsx)(d.SearchBar, {
                                       className: S.searchBar,
                                       query: M,
-                                      placeholder: N.intl.string(N.t['yD9+dH']),
+                                      placeholder: Z.intl.string(Z.t['yD9+dH']),
                                       onChange: D,
                                       onClear: w,
                                       autoComplete: 'off',

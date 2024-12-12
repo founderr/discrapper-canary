@@ -43,10 +43,10 @@ var r = n(200651),
     U = n(709999),
     G = n(373113),
     z = n(802022),
-    K = n(558117),
-    $ = n(141594),
-    Y = n(566564),
-    J = n(531864),
+    $ = n(558117),
+    K = n(141594),
+    J = n(566564),
+    Y = n(531864),
     q = n(302800),
     Q = n(215023),
     X = n(981631),
@@ -110,7 +110,7 @@ function ei(e) {
             },
             [o, n]
         ),
-        { revealed: u } = (0, K.R)('CollectiblesShop'),
+        { revealed: u } = (0, $.R)('CollectiblesShop'),
         m = !u && t.skuId === s.T.STORM && l.length <= 15;
     return (0, r.jsx)(ea, {
         products: l,
@@ -174,7 +174,7 @@ t.default = function (e) {
         { analyticsSource: s, analyticsLocations: p } = (0, c.cj)([L.Z], () => L.Z.getAnalytics()),
         { analyticsLocations: _ } = (0, g.ZP)([...p, f.Z.COLLECTIBLES_SHOP]),
         { sessionId: k, scrollerRef: w, scrollHandler: R } = (0, C._)(X.rMx.COLLECTIBLES_SHOP_SCROLLED, s),
-        { feedState: H, catalogState: U, transitionToCatalog: z, transitionToFeed: K } = (0, A.B)(i, w),
+        { feedState: H, catalogState: U, transitionToCatalog: z, transitionToFeed: $ } = (0, A.B)(i, w),
         [q, ea] = a.useState(!1),
         [ei, es] = a.useState(Q.IV),
         [eo, ec] = a.useState(),
@@ -214,7 +214,7 @@ t.default = function (e) {
                     location_stack: _
                 });
         }, [i, eg, _, s, k, H, U, eo, ec, ed]);
-    let { dismissCollectiblesShopTabNewBadge: eN } = (0, $.Z)();
+    let { dismissCollectiblesShopTabNewBadge: eN } = (0, K.Z)();
     a.useEffect(() => {
         if ((eN(), !(0, v.un)(d.z.COLLECTIBLES_GIFTING_COACHMARK)))
             (0, v.EW)(d.z.COLLECTIBLES_GIFTING_COACHMARK, {
@@ -303,7 +303,7 @@ t.default = function (e) {
                                             isCatalogView: !1,
                                             transparent: !0
                                         }),
-                                        (0, r.jsx)(Y.Z, {
+                                        (0, r.jsx)(J.Z, {
                                             handleTransition: ew,
                                             numVisibleItems: ei
                                         })
@@ -323,7 +323,7 @@ t.default = function (e) {
                                             onClose: ep,
                                             isCatalogView: i,
                                             transparent: i,
-                                            handleTransition: K
+                                            handleTransition: $
                                         }),
                                         (0, r.jsx)('div', {
                                             className: er.pageWrapper,
@@ -377,11 +377,11 @@ t.default = function (e) {
                     U !== Q.f7.VISIBLE &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(J.Z, {
+                            (0, r.jsx)(Y.Z, {
                                 peaking: q,
                                 transitioning: H === Q.f7.OUT
                             }),
-                            (0, r.jsx)(J.Z, {
+                            (0, r.jsx)(Y.Z, {
                                 style: { left: 1850 },
                                 peaking: q,
                                 transitioning: H === Q.f7.OUT

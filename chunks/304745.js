@@ -25,8 +25,8 @@ var i = n(200651),
     I = n(579185),
     E = n(301076),
     b = n(411840),
-    N = n(127379),
-    Z = n(981631),
+    Z = n(127379),
+    N = n(981631),
     S = n(921944),
     T = n(388032),
     j = n(812801);
@@ -48,7 +48,7 @@ function A(e) {
             [D]
         ),
         V = (0, o.O)(),
-        z = (0, c.bp)() === Z.IlC.POPOUT,
+        z = (0, c.bp)() === N.IlC.POPOUT,
         { analyticsLocations: W } = (0, x.ZP)(),
         K = W.length > 0 ? W[W.length - 1] : 'open-activity-shelf';
     v.m1.useExperiment({ location: K }, { autoTrackExposure: !0 });
@@ -77,7 +77,7 @@ function A(e) {
                 J.current !== o && (J.current = o),
                 (0, i.jsx)(s.Popout, {
                     fixed: !0,
-                    shouldShow: k && (A === N.D.ACTIVITY || null == A),
+                    shouldShow: k && (A === Z.D.ACTIVITY || null == A),
                     animationPosition: 'bottom',
                     position: 'bottom',
                     align: 'center',

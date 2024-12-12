@@ -46,8 +46,8 @@ var i = n(200651),
     V = n(474376),
     F = n(435478),
     z = n(383832),
-    W = n(981631),
-    Y = n(228168),
+    Y = n(981631),
+    W = n(228168),
     K = n(388032),
     q = n(602654),
     X = n(591156);
@@ -123,7 +123,7 @@ function J(e, t, n) {
         },
         action: () => (0, H.Z)(e, t),
         dontCloseOnAction: !0,
-        children: e !== W.Skl.ONLINE ? r : void 0
+        children: e !== Y.Skl.ONLINE ? r : void 0
     });
 }
 function $(e, t, n) {
@@ -182,7 +182,7 @@ function ee(e) {
                 r = (0, g.p)(),
                 a = f.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || r,
                 o = j.fv.useSetting(),
-                s = e === W.Skl.DND,
+                s = e === Y.Skl.DND,
                 d = (t) => {
                     let i =
                         null != n && '0' !== n
@@ -197,9 +197,9 @@ function ee(e) {
                             : void 0;
                     if (e === t && null != i) return i;
                     switch (t) {
-                        case W.Skl.DND:
+                        case Y.Skl.DND:
                             return a ? K.intl.string(K.t.day5Aw) : K.intl.string(K.t.U9Vv19);
-                        case W.Skl.INVISIBLE:
+                        case Y.Skl.INVISIBLE:
                             return K.intl.string(K.t.MqanVF);
                         default:
                             return;
@@ -224,11 +224,11 @@ function ee(e) {
                 });
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    $(W.Skl.ONLINE, e),
+                    $(Y.Skl.ONLINE, e),
                     (0, i.jsx)(c.MenuSeparator, {}, 'menu-separator-statuses'),
-                    t ? J(W.Skl.IDLE, e, d(W.Skl.IDLE)) : $(W.Skl.IDLE, e, d(W.Skl.IDLE)),
-                    t ? J(W.Skl.DND, e, d(W.Skl.DND)) : $(W.Skl.DND, e, d(W.Skl.DND)),
-                    t ? J(W.Skl.INVISIBLE, e, d(W.Skl.INVISIBLE)) : $(W.Skl.INVISIBLE, e, d(W.Skl.INVISIBLE)),
+                    t ? J(Y.Skl.IDLE, e, d(Y.Skl.IDLE)) : $(Y.Skl.IDLE, e, d(Y.Skl.IDLE)),
+                    t ? J(Y.Skl.DND, e, d(Y.Skl.DND)) : $(Y.Skl.DND, e, d(Y.Skl.DND)),
+                    t ? J(Y.Skl.INVISIBLE, e, d(Y.Skl.INVISIBLE)) : $(Y.Skl.INVISIBLE, e, d(Y.Skl.INVISIBLE)),
                     a || r
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
@@ -312,7 +312,7 @@ function ee(e) {
                     className: q.themeContainer,
                     user: n,
                     displayProfile: et,
-                    profileType: Y.y0.BITE_SIZE,
+                    profileType: W.y0.BITE_SIZE,
                     children: [
                         (0, i.jsxs)('header', {
                             className: X.header,
@@ -320,18 +320,18 @@ function ee(e) {
                                 (0, i.jsx)(T.Z, {
                                     user: n,
                                     displayProfile: et,
-                                    profileType: Y.y0.BITE_SIZE
+                                    profileType: W.y0.BITE_SIZE
                                 }),
                                 (0, i.jsx)(S.Z, {
                                     user: n,
                                     displayProfile: et,
-                                    profileType: Y.y0.BITE_SIZE,
+                                    profileType: W.y0.BITE_SIZE,
                                     onOpenProfile: ee ? void 0 : eg
                                 }),
                                 (0, i.jsx)(P.Z, {
                                     location: 'AccountProfilePopout',
                                     user: n,
-                                    profileType: Y.y0.BITE_SIZE,
+                                    profileType: W.y0.BITE_SIZE,
                                     onCloseProfile: k
                                 })
                             ]
@@ -347,13 +347,13 @@ function ee(e) {
                                 (0, i.jsx)(L.Z, {
                                     user: n,
                                     className: q.username,
-                                    profileType: Y.y0.BITE_SIZE,
+                                    profileType: W.y0.BITE_SIZE,
                                     nickname: U.ZP.getName(null, null, n),
                                     onOpenProfile: ee ? void 0 : eg,
                                     pronouns: null == et ? void 0 : et.pronouns,
                                     tags: (0, i.jsx)(N.Z, {
                                         displayProfile: et,
-                                        profileType: Y.y0.BITE_SIZE,
+                                        profileType: W.y0.BITE_SIZE,
                                         onClose: k
                                     }),
                                     nicknameIcons: (0, i.jsxs)(i.Fragment, {
@@ -409,7 +409,7 @@ function ee(e) {
                                                                 status: ea,
                                                                 size: 12
                                                             }),
-                                                        hint: (es || ea === W.Skl.DND) && (0, i.jsx)(c.BellSlashIcon, { size: 'xxs' }),
+                                                        hint: (es || ea === Y.Skl.DND) && (0, i.jsx)(c.BellSlashIcon, { size: 'xxs' }),
                                                         renderSubmenu: a.tq
                                                             ? void 0
                                                             : (e) => {

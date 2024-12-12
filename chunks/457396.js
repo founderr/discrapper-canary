@@ -47,8 +47,8 @@ var i,
     V = n(938736),
     F = n(227140),
     z = n(474936),
-    W = n(981631),
-    Y = n(921944),
+    Y = n(981631),
+    W = n(921944),
     K = n(388032),
     q = n(398645),
     X = n(693988),
@@ -170,7 +170,7 @@ let en = (e) => {
                           ? eS
                               ? ((i = (0, l.jsx)(G.lH, {
                                     isSelected: o,
-                                    onSelect: () => (0, C.EW)(u.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, { dismissAction: Y.L.TAKE_ACTION })
+                                    onSelect: () => (0, C.EW)(u.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, { dismissAction: W.L.TAKE_ACTION })
                                 })),
                                 (r = 6))
                               : e_ && ((i = (0, l.jsx)(w.k, { entryPoint: w.U.PrivateMessages })), !o && (t = q.localizeBadge), (r = 5))
@@ -186,12 +186,12 @@ let en = (e) => {
         text: K.intl.string(K.t.Ipxkoq),
         locationState: ei,
         onClick: () => {
-            ey === u.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eP(Y.L.TAKE_ACTION),
-                A.default.track(W.rMx.NITRO_TAB_VISITED, {
+            ey === u.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eP(W.L.TAKE_ACTION),
+                A.default.track(Y.rMx.NITRO_TAB_VISITED, {
                     badge_decorator: r,
                     has_premium: eu
                 }),
-                eN || eT ? ((0, C.EW)(u.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: Y.L.TAKE_ACTION }), eT && (0, C.EW)(u.z.REFERRAL_INCENTIVE_AWARDED_INFO, { dismissAction: Y.L.TAKE_ACTION })) : null != ew && ek(Y.L.USER_DISMISS);
+                eN || eT ? ((0, C.EW)(u.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: W.L.TAKE_ACTION }), eT && (0, C.EW)(u.z.REFERRAL_INCENTIVE_AWARDED_INFO, { dismissAction: W.L.TAKE_ACTION })) : null != ew && ek(W.L.USER_DISMISS);
         },
         onMouseEnter: () => {
             ed(!0);

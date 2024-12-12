@@ -29,8 +29,8 @@ var i = n(200651),
     I = n(585483),
     E = n(63063),
     b = n(358085),
-    N = n(709054),
-    Z = n(967128),
+    Z = n(709054),
+    N = n(967128),
     S = n(981631),
     T = n(231873),
     j = n(388032),
@@ -76,7 +76,7 @@ function y(e) {
 function P(e) {
     let { channel: t } = e,
         r = (0, c.e7)([x.Z], () => (null != t ? x.Z.getGuild(t.getGuildId()) : null), [t]),
-        h = null != r && N.default.extractTimestamp(r.id) < Date.now() - S._8R,
+        h = null != r && Z.default.extractTimestamp(r.id) < Date.now() - S._8R,
         _ = (0, c.e7)([C.default], () => (null == r ? void 0 : r.ownerId) === C.default.getId(), [r]),
         { canInvite: P, canManageGuild: M, canMessage: R } = (0, m.TE)(t, r),
         L = (0, c.e7)([v.default], () => {
@@ -328,7 +328,7 @@ function P(e) {
     let X = _ ? j.intl.string(j.t['1ach9P']) : j.intl.string(j.t['ezm+/v']);
     h && (X = j.intl.string(j.t['gwyU/P']));
     let J = ''.concat(E.Z.getArticleURL(S.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
-    return (0, i.jsx)(Z.ZP, {
+    return (0, i.jsx)(N.ZP, {
         channelId: t.id,
         children: (0, i.jsx)('div', {
             className: A.container,

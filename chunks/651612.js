@@ -28,7 +28,7 @@ function v(e) {
             let e = I ? f.MI.NO_CHAT : f.MI.RESIZABLE;
             (0, p.gC)(e);
         }, [I]),
-        { unreadCount: b, mentionCount: N } = (function (e) {
+        { unreadCount: b, mentionCount: Z } = (function (e) {
             let t = (0, a.e7)([u.Z], () => !(0, r.isEmpty)(u.Z.getTypingUsers(e)), [e]),
                 { unreadCount: n, mentionCount: i } = (0, a.cj)(
                     [d.ZP],
@@ -44,19 +44,19 @@ function v(e) {
                 isTyping: t
             };
         })(t),
-        Z = l.useCallback(() => {
+        N = l.useCallback(() => {
             var e;
             null === (e = _.current) || void 0 === e || e.focus();
         }, []);
     (0, h.yp)({
         event: g.CkL.FOCUS_CHAT_BUTTON,
-        handler: Z
+        handler: N
     });
     let S = I ? C.intl.string(C.t['5MstTk']) : C.intl.string(C.t.kkKapK),
         T = [S];
-    N > 0 && T.push(C.intl.formatToPlainString(C.t['3l1GOz'], { mentionCount: N })), b > 0 && T.push(C.intl.string(C.t.x5zAGR));
+    Z > 0 && T.push(C.intl.formatToPlainString(C.t['3l1GOz'], { mentionCount: Z })), b > 0 && T.push(C.intl.string(C.t.x5zAGR));
     let j = (0, a.e7)([m.ZP], () => m.ZP.getFocusedLayout()),
-        A = N > 0 ? N : b,
+        A = Z > 0 ? Z : b,
         y = A > 0;
     return (0, i.jsxs)('div', {
         className: x.wrapper,
@@ -74,7 +74,7 @@ function v(e) {
             }),
             y
                 ? (0, i.jsx)(o.Z, {
-                      hasMentions: N > 0,
+                      hasMentions: Z > 0,
                       truncatedCount: A > 99 ? '99+' : A,
                       className: x.badge
                   })

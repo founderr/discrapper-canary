@@ -157,8 +157,8 @@ let { Themes: r } = n(15202).V,
                         opacity: 0.0784313725490196
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'OPACITY_8',
-                        opacity: 0.0784313725490196
+                        raw: 'OPACITY_16',
+                        opacity: 0.1607843137254902
                     },
                     [r.DARKER]: {
                         raw: 'OPACITY_8',
@@ -177,8 +177,8 @@ let { Themes: r } = n(15202).V,
                         opacity: 0.1607843137254902
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'OPACITY_16',
-                        opacity: 0.1607843137254902
+                        raw: 'OPACITY_24',
+                        opacity: 0.23921568627450981
                     },
                     [r.DARKER]: {
                         raw: 'OPACITY_16',
@@ -317,8 +317,8 @@ let { Themes: r } = n(15202).V,
                         opacity: 0.0784313725490196
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'OPACITY_8',
-                        opacity: 0.0784313725490196
+                        raw: 'OPACITY_16',
+                        opacity: 0.1607843137254902
                     },
                     [r.DARKER]: {
                         raw: 'OPACITY_8',
@@ -337,8 +337,8 @@ let { Themes: r } = n(15202).V,
                         opacity: 0.23921568627450981
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'OPACITY_24',
-                        opacity: 0.23921568627450981
+                        raw: 'OPACITY_32',
+                        opacity: 0.3215686274509804
                     },
                     [r.DARKER]: {
                         raw: 'OPACITY_24',
@@ -357,8 +357,8 @@ let { Themes: r } = n(15202).V,
                         opacity: 0.1607843137254902
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'OPACITY_16',
-                        opacity: 0.1607843137254902
+                        raw: 'OPACITY_24',
+                        opacity: 0.23921568627450981
                     },
                     [r.DARKER]: {
                         raw: 'OPACITY_16',

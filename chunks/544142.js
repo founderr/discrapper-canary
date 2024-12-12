@@ -42,7 +42,7 @@ function I(e) {
         });
     }
     let b = null !== (l = null !== (t = null == I ? void 0 : I.nick) && void 0 !== t ? t : g.ZP.getName(v)) && void 0 !== l ? l : '???',
-        N = null == I ? void 0 : I.colorString;
+        Z = null == I ? void 0 : I.colorString;
     return null == v
         ? (0, i.jsx)('span', {
               className: r()(_.threadCreatorName, _.unknownCreatorName),
@@ -73,7 +73,7 @@ function I(e) {
                           onContextMenu: E,
                           children: (0, i.jsx)(s.NameWithRole, {
                               name: b,
-                              color: null != N ? N : void 0
+                              color: null != Z ? Z : void 0
                           })
                       })
               })

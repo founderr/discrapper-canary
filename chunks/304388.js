@@ -31,7 +31,7 @@ t.Z = l.forwardRef(function (e, t) {
     function b() {
         !f && _();
     }
-    function N(e) {
+    function Z(e) {
         I(), g(!f), f ? null == m || m() : null == p || p(), (!C || f) && e();
     }
     l.useImperativeHandle(
@@ -43,10 +43,10 @@ t.Z = l.forwardRef(function (e, t) {
         }),
         [x, g]
     );
-    let Z = (C && !h) || f;
+    let N = (C && !h) || f;
     return (0, i.jsx)(r.Popout, {
         animation: r.Popout.Animation.FADE,
-        shouldShow: Z,
+        shouldShow: N,
         animationPosition: 'top',
         position: 'top',
         align: u,
@@ -56,7 +56,7 @@ t.Z = l.forwardRef(function (e, t) {
         },
         renderPopout: (e) =>
             (0, i.jsx)(c, {
-                isHovered: Z,
+                isHovered: N,
                 onFocus: () => g(!0),
                 onMouseEnter: v,
                 onMouseLeave: b,
@@ -67,10 +67,10 @@ t.Z = l.forwardRef(function (e, t) {
             let { onClick: t, onKeyDown: n } = e;
             return (0, i.jsx)(i.Fragment, {
                 children: d({
-                    onClick: (e) => N(() => t(e)),
+                    onClick: (e) => Z(() => t(e)),
                     onKeyDown: (e) => {
                         var t, i;
-                        return (t = e), (i = n), void ((t.key === s.vn.ENTER || t.key === s.vn.SPACE) && N(() => i(t)));
+                        return (t = e), (i = n), void ((t.key === s.vn.ENTER || t.key === s.vn.SPACE) && Z(() => i(t)));
                     },
                     className: o.actionBarButton,
                     onMouseEnter: E,

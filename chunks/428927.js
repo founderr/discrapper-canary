@@ -3,7 +3,7 @@ n.d(t, {
         return b;
     },
     Z: function () {
-        return N;
+        return Z;
     }
 });
 var i = n(200651);
@@ -83,7 +83,7 @@ function b(e) {
         ]
     });
 }
-function N(e) {
+function Z(e) {
     let { user: t, onClose: n } = e,
         { trackUserProfileAction: l } = (0, f.KZ)(),
         { mutualGuilds: r, isFetching: a } = (0, g.Z)(t.id),

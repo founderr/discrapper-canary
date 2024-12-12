@@ -25,8 +25,8 @@ var i = n(200651),
     I = n(578976),
     E = n(981631),
     b = n(37113),
-    N = n(388032),
-    Z = n(540964),
+    Z = n(388032),
+    N = n(540964),
     S = n(454120);
 let T = (e) => 1 - Math.pow(1 - e, 3);
 function j(e) {
@@ -69,25 +69,25 @@ function j(e) {
     if (null == G || null == r || null == y) return null;
     let F = o()(G).diff(o()(), 'hours'),
         V = j
-            ? N.intl.format(N.t['6LrV9f'], {
+            ? Z.intl.format(Z.t['6LrV9f'], {
                   username: U,
                   num: F,
                   helpCenterLink: x.Z.getArticleURL(E.BhN.HD_STREAMING_POTION)
               })
             : r.id === y.id
-              ? N.intl.string(N.t.IjKvNT)
+              ? Z.intl.string(Z.t.IjKvNT)
               : !0 === P
-                ? N.intl.format(N.t.JkWoqK, {
+                ? Z.intl.format(Z.t.JkWoqK, {
                       username: U,
                       helpCenterLink: x.Z.getArticleURL(E.BhN.HD_STREAMING_POTION)
                   })
-                : N.intl.formatToPlainString(N.t.vNbVXF, { username: U }),
-        z = R ? N.intl.string(N.t.o7NIjY) : H ? N.intl.string(N.t.r6xhBw) : N.intl.string(N.t.yKw8Dg);
+                : Z.intl.formatToPlainString(Z.t.vNbVXF, { username: U }),
+        z = R ? Z.intl.string(Z.t.o7NIjY) : H ? Z.intl.string(Z.t.r6xhBw) : Z.intl.string(Z.t.yKw8Dg);
     return null == r || null == y
         ? null
         : (0, i.jsxs)(c.animated.div, {
               style: D,
-              className: Z.banner,
+              className: N.banner,
               children: [
                   (0, i.jsxs)('div', {
                       children: [
@@ -98,7 +98,7 @@ function j(e) {
                               ...B
                           }),
                           (0, i.jsx)('img', {
-                              className: Z.potion,
+                              className: N.potion,
                               src: S,
                               alt: ''
                           })
@@ -109,7 +109,7 @@ function j(e) {
                       children: V
                   }),
                   (0, i.jsxs)('div', {
-                      className: Z.subsection,
+                      className: N.subsection,
                       children: [
                           (0, i.jsx)(u.Button, {
                               onClick: () => {
@@ -138,12 +138,12 @@ function j(e) {
                                   }),
                                       s();
                               },
-                              className: a()({ [Z.actionButton]: !0 !== P }),
+                              className: a()({ [N.actionButton]: !0 !== P }),
                               children: z
                           }),
                           !H &&
                               (0, i.jsx)(u.Clickable, {
-                                  className: Z.x,
+                                  className: N.x,
                                   onClick: s,
                                   children: (0, i.jsx)(u.XSmallIcon, { name: 'close' })
                               })

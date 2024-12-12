@@ -20,8 +20,8 @@ var i = n(200651),
     I = n(536442),
     E = n(79390),
     b = n(665906),
-    N = n(706454),
-    Z = n(695346),
+    Z = n(706454),
+    N = n(695346),
     S = n(433355),
     T = n(819640),
     j = n(375954),
@@ -61,7 +61,7 @@ t.Z = l.memo(function (e) {
         eh = (0, g.Go)() && (ee || ec),
         ep = W.isPrivate(),
         em = (0, s.e7)([A.Z], () => ep || (A.Z.can(B.Plq.ATTACH_FILES, W) && A.Z.can(B.Plq.SEND_MESSAGES, W))),
-        ef = (0, s.e7)([N.default], () => N.default.locale),
+        ef = (0, s.e7)([Z.default], () => Z.default.locale),
         eg = ['en-US', 'en-GB'].includes(ef) ? G.intl.string(G.t.d56gCQ) : G.intl.string(G.t.PdRCRk),
         eC = (0, u.Z)(et);
     (null == eC ? void 0 : eC.newClipIds.length) !== (null == et ? void 0 : et.newClipIds.length) && (null !== (t = null == et ? void 0 : et.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ed && ea && ei && !es && !el && !eo && eu('recentClips');
@@ -103,9 +103,9 @@ t.Z = l.memo(function (e) {
     });
     let eI = (0, b.NE)(W),
         eE = (0, b.Xu)(W),
-        eb = !Z.dN.useSetting() && !(0, L.isAndroidWeb)() && null != window.ResizeObserver,
-        eN = (0, E.UI)(null != W ? W : void 0),
-        eZ = (0, c.useRedesignIconContext)().enabled,
+        eb = !N.dN.useSetting() && !(0, L.isAndroidWeb)() && null != window.ResizeObserver,
+        eZ = (0, E.UI)(null != W ? W : void 0),
+        eN = (0, c.useRedesignIconContext)().enabled,
         eS = (0, p.qB)(W.id, 'ChannelAttachButton'),
         eT = null !== (r = null == en ? void 0 : en.length) && void 0 !== r ? r : 0,
         ej = (0, w.Z)({
@@ -117,7 +117,7 @@ t.Z = l.memo(function (e) {
             channel: W,
             activities: $,
             newClipsCount: eT,
-            canPostPolls: eN,
+            canPostPolls: eZ,
             canLaunchActivities: eS,
             appContext: J
         }),
@@ -125,7 +125,7 @@ t.Z = l.memo(function (e) {
     if (0 === ej.length) return null;
     let ey = $.some((e) => (0, m.Z)(e, B.xjy.SYNC)),
         eP = $.some((e) => (0, m.Z)(e, B.xjy.JOIN) && !(0, m.Z)(e, B.xjy.EMBEDDED)) || ey;
-    V = eZ
+    V = eN
         ? (0, i.jsx)(c.CirclePlusIcon, {
               size: eA ? 'refresh_sm' : void 0,
               colorClass: F.attachButtonPlus

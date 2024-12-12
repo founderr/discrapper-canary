@@ -16,21 +16,21 @@ var i = n(200651),
     x = n(354459),
     v = n(288135);
 t.Z = (0, s.Z)((e) => {
-    let { participants: t, filteredParticipants: n, selectedParticipant: r, participantsVersion: s, layout: _, onSelectParticipant: I, onContextMenuParticipant: E, onFullscreenParticipant: b, channel: N, hasConnectPermission: Z, className: S, inCall: T, showParticipants: j = !0, paused: A = !1, width: y, height: P, idle: M, mode: R, popoutWindow: L, awaitingRemoteSessionInfo: k, callContainerDimensions: O } = e;
+    let { participants: t, filteredParticipants: n, selectedParticipant: r, participantsVersion: s, layout: _, onSelectParticipant: I, onContextMenuParticipant: E, onFullscreenParticipant: b, channel: Z, hasConnectPermission: N, className: S, inCall: T, showParticipants: j = !0, paused: A = !1, width: y, height: P, idle: M, mode: R, popoutWindow: L, awaitingRemoteSessionInfo: k, callContainerDimensions: O } = e;
     l.useEffect(() => {
         u.S.dispatch(C.CkL.REMEASURE_TARGET);
     }, [y, P, O.width, O.height]);
     let D = l.useMemo(() => n.filter((e) => e.type !== x.fO.ACTIVITY || !e.participants.some((e) => (0, o.J)(e))), [n, s]);
-    if ((null == k ? void 0 : k.channelId) === N.id) return (0, i.jsx)(p.Z, { height: P });
-    if ((null == N ? void 0 : N.isGuildVocal()) && !T)
+    if ((null == k ? void 0 : k.channelId) === Z.id) return (0, i.jsx)(p.Z, { height: P });
+    if ((null == Z ? void 0 : Z.isGuildVocal()) && !T)
         return (0, i.jsx)(h.Z, {
-            channel: N,
+            channel: Z,
             participants: t,
-            hasConnectPermission: Z
+            hasConnectPermission: N
         });
     if (R === C.WtW.VOICE)
         return (0, i.jsx)(c.Z, {
-            guildId: N.guild_id,
+            guildId: Z.guild_id,
             width: y,
             className: v.voiceCallWrapper,
             participants: t,
@@ -40,7 +40,7 @@ t.Z = (0, s.Z)((e) => {
         return 0 === n.length
             ? (0, i.jsx)(g.Z, {
                   className: a()(v.videoGrid, v.hiddenParticipants),
-                  channelId: N.id,
+                  channelId: Z.id,
                   width: y
               })
             : (0, i.jsx)(d.Z, {
@@ -48,7 +48,7 @@ t.Z = (0, s.Z)((e) => {
                   justify: d.Z.Justify.CENTER,
                   align: d.Z.Align.CENTER,
                   children: (0, i.jsx)(m.Z, {
-                      channel: N,
+                      channel: Z,
                       className: v.videoGrid,
                       participants: D,
                       totalNumberOfParticipants: t.length,
@@ -73,7 +73,7 @@ t.Z = (0, s.Z)((e) => {
         width: y,
         layout: _,
         inCall: T,
-        channel: N,
+        channel: Z,
         showParticipants: j
     });
 });

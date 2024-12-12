@@ -26,8 +26,8 @@ var i = n(200651),
     I = n(100527),
     E = n(367907),
     b = n(906732),
-    N = n(493324),
-    Z = n(611064),
+    Z = n(493324),
+    N = n(611064),
     S = n(677432),
     T = n(178762),
     j = n(868671),
@@ -241,7 +241,7 @@ class ei extends l.Component {
         return e.channel.id !== this.props.channel.id || e.version !== this.props.version || e.groups.length !== this.props.groups.length;
     }
     componentDidMount() {
-        this.updateSubscription(), this.trackMemberListViewed(), (this._areActivitiesExperimentallyHidden = (0, N.$)('ChannelMembers'));
+        this.updateSubscription(), this.trackMemberListViewed(), (this._areActivitiesExperimentallyHidden = (0, Z.$)('ChannelMembers'));
     }
     componentDidUpdate(e) {
         e.channel.id !== this.props.channel.id && this.updateSubscription(), this.trackMemberListViewed(), this.updateMaxContentFeedRowSeen();
@@ -337,8 +337,8 @@ class ei extends l.Component {
                 let { section: t } = e,
                     { groups: n, channel: r } = this.props,
                     a = n[t];
-                return (0, Z.R)(a)
-                    ? (0, l.createElement)(Z.Z, {
+                return (0, N.R)(a)
+                    ? (0, l.createElement)(N.Z, {
                           ...a,
                           key: 'section-'.concat(t)
                       })
@@ -429,7 +429,7 @@ class ei extends l.Component {
             ),
             q(this, 'getContentFeedGroup', () => {
                 let e = this.props.groups[j.T];
-                if ((0, Z.R)(e)) return e;
+                if ((0, N.R)(e)) return e;
             }),
             q(this, 'hasContentFeed', () => null != this.getContentFeedGroup()),
             q(this, 'getRowHeightComputer', () => {

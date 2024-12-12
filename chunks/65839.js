@@ -118,14 +118,14 @@ function E(e) {
     });
 }
 t.Z = (e) => {
-    let { channel: t, directoryEntries: n, handleCreateOrAddGuild: r, searchQuery: a, setSearchQuery: c, handleClearSearch: u, handleSearchKeyPress: h, currentCategoryId: v, handleSelectCategory: _, categoryCounts: b, allEntriesCount: N, isLoading: Z } = e,
+    let { channel: t, directoryEntries: n, handleCreateOrAddGuild: r, searchQuery: a, setSearchQuery: c, handleClearSearch: u, handleSearchKeyPress: h, currentCategoryId: v, handleSelectCategory: _, categoryCounts: b, allEntriesCount: Z, isLoading: N } = e,
         S = (0, s.e7)([d.Z], () => d.Z.getGuild(t.getGuildId()));
     return null != S && S.hasFeature(f.oNc.SHARD)
         ? (0, i.jsx)(E, {
               guild: S,
               directoryEntries: n,
               handleCreateOrAddGuild: r,
-              isLoading: Z
+              isLoading: N
           })
         : (0, i.jsx)('div', {
               className: C.pageContainer,
@@ -154,7 +154,7 @@ t.Z = (e) => {
                                       {
                                           className: x.tabBarItem,
                                           id: m.AR.ALL,
-                                          children: ''.concat(g.intl.string(g.t.hEAa2d), ' (').concat(N, ')')
+                                          children: ''.concat(g.intl.string(g.t.hEAa2d), ' (').concat(Z, ')')
                                       },
                                       m.AR.ALL
                                   ),
@@ -173,7 +173,7 @@ t.Z = (e) => {
                               ]
                           })
                       }),
-                      Z && null == n
+                      N && null == n
                           ? (0, i.jsx)(o.Spinner, { className: C.spinner })
                           : null == n
                             ? void 0
