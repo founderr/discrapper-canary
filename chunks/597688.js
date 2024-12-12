@@ -33,30 +33,32 @@ let E = new Map(),
     N = null,
     C = !1,
     R = new Set();
-let O = {},
-    D = (e) => {
-        let { skuId: n } = e;
-        (R = new Set(R)).add(n), (i = void 0), (s = void 0);
-    },
-    L = (e) => {
-        let { skuId: n, error: r } = e;
-        (R = new Set(R)).delete(n), (i = r), (s = Date.now());
-    },
+let O = new Map(),
+    D = new Map();
+let L = {},
     x = (e) => {
-        let { skuId: n, product: r } = e;
-        y.set(n, r), (R = new Set(R)).delete(n), (i = void 0), (s = void 0);
+        let { skuId: n } = e;
+        (R = new Set(R)).add(n), (O = new Map(O)).delete(n), (D = new Map(D)).delete(n);
     },
     w = (e) => {
-        (C = !0), (i = void 0), (s = void 0), (O = e.options);
+        let { skuId: n, error: r } = e;
+        (R = new Set(R)).delete(n), (O = new Map(O)).set(n, r), (D = new Map(D)).set(n, Date.now());
     },
     P = (e) => {
+        let { skuId: n, product: r } = e;
+        y.set(n, r), (R = new Set(R)).delete(n), (O = new Map(O)).delete(n), (D = new Map(D)).delete(n);
+    },
+    M = (e) => {
+        (C = !0), (i = void 0), (s = void 0), (L = e.options);
+    },
+    k = (e) => {
         let { error: n } = e;
         (b = E), (y = v), (A = T), (C = !1), (R = new Set()), (i = n), (s = Date.now());
     },
-    M = (e) => {
-        0 === e.categories.length ? ((b = E), (y = v)) : !(0, u.isEqual)([...b.values()], e.categories) && ((b = new Map(e.categories.map((e) => [e.skuId, e]))), (y = new Map((0, p.Cs)(b, !0).map((e) => [e.skuId, e]))), (S = new Map((0, p.Cs)(b, !1).map((e) => [e.storeListingId, e])))), k(e.categories, y), (a = Date.now()), (C = !1), (i = void 0), (s = void 0);
+    U = (e) => {
+        0 === e.categories.length ? ((b = E), (y = v)) : !(0, u.isEqual)([...b.values()], e.categories) && ((b = new Map(e.categories.map((e) => [e.skuId, e]))), (y = new Map((0, p.Cs)(b, !0).map((e) => [e.skuId, e]))), (S = new Map((0, p.Cs)(b, !1).map((e) => [e.storeListingId, e])))), B(e.categories, y), (a = Date.now()), (C = !1), (i = void 0), (s = void 0);
     },
-    k = (e, n) => {
+    B = (e, n) => {
         if (0 === e.length) {
             A = T;
             return;
@@ -73,17 +75,17 @@ let O = {},
                 A = T;
         }
     },
-    U = () => {
-        (b = E), (y = v), (A = T), (a = void 0), (C = !1), (R = new Set()), (i = void 0), (s = void 0), (O = {});
+    G = () => {
+        (b = E), (y = v), (A = T), (a = void 0), (C = !1), (R = new Set()), (i = void 0), (s = void 0), (L = {});
     },
-    B = () => {
+    Z = () => {
         if (!f.Z.hasLoadedExperiments) return;
         let { giftRecommendationAlgorithm: e } = _.G.getCurrentConfig({ location: 'CollectiblesCategoryStore handleExperimentChange' }, { autoTrackExposure: !1 });
         e !== N && (a = void 0), (N = e);
     };
-class G extends (o = c.ZP.Store) {
+class F extends (o = c.ZP.Store) {
     initialize() {
-        this.syncWith([h.default], U), this.syncWith([f.Z], B);
+        this.syncWith([h.default], G), this.syncWith([f.Z], Z);
     }
     get isFetchingCategories() {
         return C;
@@ -101,7 +103,7 @@ class G extends (o = c.ZP.Store) {
         return a;
     }
     get lastFetchOptions() {
-        return O;
+        return L;
     }
     get categories() {
         return b;
@@ -118,6 +120,12 @@ class G extends (o = c.ZP.Store) {
     getProduct(e) {
         return null != e ? y.get(e) : void 0;
     }
+    getProductFetchError(e) {
+        return null != e ? O.get(e) : void 0;
+    }
+    getProductFetchErrorTimestamp(e) {
+        return null != e ? D.get(e) : void 0;
+    }
     getProductByStoreListingId(e) {
         return null != e ? S.get(e) : void 0;
     }
@@ -126,13 +134,13 @@ class G extends (o = c.ZP.Store) {
         return this.getCategory(null == n ? void 0 : n.categorySkuId);
     }
 }
-g(G, 'displayName', 'CollectiblesCategoryStore'),
-    (n.Z = new G(d.Z, {
-        COLLECTIBLES_CATEGORIES_FETCH: w,
-        COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: M,
-        COLLECTIBLES_CATEGORIES_FETCH_FAILURE: P,
-        COLLECTIBLES_PRODUCT_FETCH: D,
-        COLLECTIBLES_PRODUCT_FETCH_SUCCESS: x,
-        COLLECTIBLES_PRODUCT_FETCH_FAILURE: L,
-        LOGOUT: U
+g(F, 'displayName', 'CollectiblesCategoryStore'),
+    (n.Z = new F(d.Z, {
+        COLLECTIBLES_CATEGORIES_FETCH: M,
+        COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: U,
+        COLLECTIBLES_CATEGORIES_FETCH_FAILURE: k,
+        COLLECTIBLES_PRODUCT_FETCH: x,
+        COLLECTIBLES_PRODUCT_FETCH_SUCCESS: P,
+        COLLECTIBLES_PRODUCT_FETCH_FAILURE: w,
+        LOGOUT: G
     }));
