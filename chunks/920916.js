@@ -164,32 +164,30 @@ function F(e) {
                         controls: !1,
                         poster: o
                     }),
-                    (0, s.jsxs)('div', {
+                    (0, s.jsx)('div', {
                         className: k.headerForeground,
-                        children: [
-                            (0, s.jsx)('div', {
-                                className: k.previewContainer,
-                                children: (0, s.jsx)(g.Z, {
-                                    user: r,
-                                    guildId: null,
-                                    avatarDecorationOverride: i
-                                })
-                            }),
-                            (0, s.jsx)(_.ModalCloseButton, {
-                                className: k.close,
-                                withCircleBackground: !0,
-                                onClick: u
-                            })
-                        ]
+                        children: (0, s.jsx)(_.ModalCloseButton, {
+                            className: k.close,
+                            withCircleBackground: !0,
+                            onClick: u
+                        })
                     })
                 ]
             }),
             (0, s.jsx)(_.ModalFooter, {
-                className: k.footerContainer,
                 separator: !1,
                 children: (0, s.jsxs)('div', {
-                    className: k.gradient,
+                    className: k.footerBody,
                     children: [
+                        (0, s.jsx)('div', {
+                            className: k.previewContainer,
+                            children: (0, s.jsx)(g.Z, {
+                                user: r,
+                                guildId: null,
+                                avatarDecorationOverride: i,
+                                avatarSize: _.AvatarSizes.SIZE_152
+                            })
+                        }),
                         (0, s.jsx)(_.Heading, {
                             variant: 'heading-lg/bold',
                             color: 'header-primary',
