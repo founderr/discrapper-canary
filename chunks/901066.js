@@ -1,47 +1,197 @@
 t.d(n, {
     Z: function () {
-        return b;
+        return p;
     }
 });
 var l = t(200651),
-    r = t(192379),
-    i = t(442837),
-    a = t(252618),
-    o = t(693546),
-    s = t(863249),
-    c = t(328977),
-    d = t(853486),
-    u = t(598077),
-    x = t(430824),
-    m = t(388032),
-    h = t(861683);
-function b(e) {
+    i = t(192379),
+    r = t(120356),
+    a = t.n(r),
+    s = t(442837),
+    o = t(481060),
+    c = t(906732),
+    d = t(979264),
+    u = t(252618),
+    m = t(693546),
+    x = t(328977),
+    h = t(666233),
+    b = t(360328),
+    C = t(171368),
+    j = t(598077),
+    g = t(430824),
+    f = t(51144),
+    v = t(981631),
+    N = t(308083),
+    _ = t(388032),
+    E = t(861683),
+    T = t(125712);
+function I(e) {
+    let { icon: n, label: t, onClick: i, disabled: r } = e;
+    return (0, l.jsxs)(o.Clickable, {
+        className: a()(E.actionButton, { [E.disabled]: r }),
+        onClick: r ? v.dG4 : i,
+        'aria-label': t,
+        children: [
+            (0, l.jsx)(n, {
+                size: 'custom',
+                color: 'currentColor',
+                width: 20,
+                height: 20
+            }),
+            (0, l.jsx)(o.Text, {
+                variant: 'text-sm/normal',
+                color: 'none',
+                children: t
+            })
+        ]
+    });
+}
+function S(e) {
+    let { user: n, guildId: t, joinRequest: i } = e,
+        { analyticsLocations: r } = (0, c.ZP)(),
+        { approveRequest: s, rejectRequest: u, handleOpenInterview: x, submitting: h } = (0, b.s)(t, n.id, i.joinRequestId, i.interviewChannelId),
+        j = () => {
+            (0, C.openUserProfileModal)({
+                userId: n.id,
+                joinRequestId: i.joinRequestId,
+                sourceAnalyticsLocations: r,
+                analyticsLocation: {
+                    section: v.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
+                    object: v.qAy.JOIN_REQUEST
+                }
+            });
+        };
+    return (0, l.jsxs)(l.Fragment, {
+        children: [
+            (0, l.jsxs)('div', {
+                className: E.infoContainer,
+                children: [
+                    (0, l.jsxs)('div', {
+                        className: T.memberNameContainer,
+                        children: [
+                            (0, l.jsx)(o.Clickable, {
+                                onClick: j,
+                                className: a()(E.clickable, T.memberAvatar),
+                                children: (0, l.jsx)(o.Avatar, {
+                                    src: n.getAvatarURL(t, 48),
+                                    'aria-label': n.username,
+                                    size: o.AvatarSizes.SIZE_48
+                                })
+                            }),
+                            (0, l.jsxs)('div', {
+                                className: T.memberNameAndTagContainer,
+                                children: [
+                                    (0, l.jsxs)('div', {
+                                        className: T.memberNameTextContainer,
+                                        children: [
+                                            (0, l.jsx)(o.Clickable, {
+                                                onClick: j,
+                                                className: E.clickable,
+                                                children: (0, l.jsx)(o.Text, {
+                                                    variant: 'text-lg/medium',
+                                                    children: null == n ? void 0 : n.globalName
+                                                })
+                                            }),
+                                            (0, l.jsx)(d.ZP, {
+                                                clan: null == n ? void 0 : n.clan,
+                                                userId: null == n ? void 0 : n.id,
+                                                contextGuildId: t,
+                                                badgeSize: N.NC.SIZE_16,
+                                                textVariant: 'heading-md/semibold',
+                                                className: T.memberClanTag,
+                                                containerClassName: T.memberClanTagContainer
+                                            })
+                                        ]
+                                    }),
+                                    (0, l.jsx)(o.Clickable, {
+                                        onClick: j,
+                                        className: E.clickable,
+                                        children: (0, l.jsx)(o.Text, {
+                                            variant: 'text-md/medium',
+                                            color: 'text-normal',
+                                            children: f.ZP.getUserTag(n)
+                                        })
+                                    })
+                                ]
+                            })
+                        ]
+                    }),
+                    (0, l.jsx)(o.Clickable, {
+                        className: T.closeAction,
+                        onClick: () => m.Z.setSelectedGuildJoinRequest(t, null),
+                        children: (0, l.jsx)(o.XSmallIcon, {
+                            size: 'md',
+                            color: 'currentColor'
+                        })
+                    })
+                ]
+            }),
+            (0, l.jsxs)('div', {
+                className: E.actionRow,
+                children: [
+                    (0, l.jsx)(I, {
+                        icon: o.CircleCheckIcon,
+                        label: _.intl.string(_.t.BzjDQE),
+                        onClick: s,
+                        disabled: h
+                    }),
+                    (0, l.jsx)(I, {
+                        icon: o.CircleXIcon,
+                        label: _.intl.string(_.t.hDtbs7),
+                        onClick: u,
+                        disabled: h
+                    }),
+                    (0, l.jsx)(I, {
+                        icon: o.ChatIcon,
+                        label: _.intl.string(_.t.KQeYoK),
+                        onClick: x,
+                        disabled: h
+                    })
+                ]
+            })
+        ]
+    });
+}
+function p(e) {
     let { guildId: n } = e,
-        t = (0, c.L)({ guildId: n }),
-        { user: b } = null != t ? t : {},
-        _ = r.useMemo(() => (null != b ? new u.Z(b) : null), [b]),
-        C = (0, i.e7)([x.Z], () => x.Z.getGuild(n), [n]);
-    return ((0, a.Tt)({
-        subsection: m.intl.string(m.t.nqrK8f),
-        location: null == C ? void 0 : C.name
+        t = (0, x.L)({ guildId: n }),
+        { user: r } = null != t ? t : {},
+        c = i.useMemo(() => {
+            var e;
+            return null !== (e = null == t ? void 0 : t.formResponses) && void 0 !== e ? e : [];
+        }, [null == t ? void 0 : t.formResponses]),
+        d = i.useMemo(() => (null != r ? new j.Z(r) : null), [r]),
+        m = (0, s.e7)([g.Z], () => g.Z.getGuild(n), [n]);
+    return ((0, u.Tt)({
+        subsection: _.intl.string(_.t.nqrK8f),
+        location: null == m ? void 0 : m.name
     }),
-    r.useEffect(() => {
-        s.ZP.fetchVerificationForm(n);
-    }, [n]),
-    null != t && null != C && null != _)
-        ? (0, l.jsxs)(l.Fragment, {
-              children: [
-                  (0, l.jsx)('div', { className: h.sidebarSeparator }),
-                  (0, l.jsx)('section', {
-                      className: h.sidebar,
-                      children: (0, l.jsx)(d.Z, {
-                          guild: C,
-                          guildJoinRequest: t,
-                          guildJoinRequestUser: _,
-                          onClose: () => o.Z.setSelectedGuildJoinRequest(n, null)
-                      })
+    null != t && null != m && null != d && null != r)
+        ? (0, l.jsx)('section', {
+              className: E.sidebar,
+              children: (0, l.jsx)(o.Scroller, {
+                  children: (0, l.jsxs)('div', {
+                      className: E.innerContainer,
+                      children: [
+                          (0, l.jsx)('div', {
+                              className: E.cardContainer,
+                              children: (0, l.jsx)(S, {
+                                  user: d,
+                                  guildId: n,
+                                  joinRequest: t
+                              })
+                          }),
+                          (0, l.jsx)('div', {
+                              className: a()(E.cardContainer, E.responsesContainer),
+                              children: (0, l.jsx)(h.Z, {
+                                  guildId: m.id,
+                                  formFields: c,
+                                  user: d
+                              })
+                          })
+                      ]
                   })
-              ]
+              })
           })
         : null;
 }

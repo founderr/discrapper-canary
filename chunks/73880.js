@@ -6,7 +6,7 @@ t.d(n, {
         return d;
     },
     lX: function () {
-        return f;
+        return m;
     }
 });
 var o = t(200651);
@@ -27,7 +27,8 @@ function u(e) {
         onChange: r,
         disabled: s,
         autoFocus: d,
-        autosize: !0
+        autosize: !0,
+        showRemainingCharacterCount: !s
     });
 }
 function d(e) {
@@ -41,7 +42,7 @@ function d(e) {
         })
     });
 }
-function f(e) {
+function m(e) {
     let { formField: n, autofocus: t, onChange: r } = e;
     return (0, o.jsx)(s.hK, {
         title: n.label,
