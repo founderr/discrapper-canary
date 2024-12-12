@@ -304,8 +304,7 @@ let es = (e) => {
                     ),
                     (0, i.jsx)(er, { selected: (null != r && r.startsWith(q.Z5c.FAMILY_CENTER)) || (null != c && c.startsWith(q.Z5c.FAMILY_CENTER)) }, 'family-center'),
                     (0, i.jsx)(ec, {}),
-                    (0, i.jsx)(I.Z, {}, 'dm-quick-launcher'),
-                    (0, i.jsx)(ec, {})
+                    (0, i.jsx)(I.Z, { bottomDivider: ec() }, 'dm-quick-launcher')
                 ]
             })
         ]

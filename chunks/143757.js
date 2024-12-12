@@ -150,51 +150,57 @@ let D = (e) => {
         return (t) => (0, i.jsx)(e, { ...t });
     });
 };
-function M() {
-    let e = (0, b.en)(m.Z.APP_DMS_QUICK_LAUNCHER),
-        { frecentApps: t } = (0, g.f)({
+function M(e) {
+    let { bottomDivider: t } = e,
+        n = (0, b.en)(m.Z.APP_DMS_QUICK_LAUNCHER),
+        { frecentApps: l } = (0, g.f)({
             channel: void 0,
             onlyActivityApps: !0,
-            allowCommandFetch: e,
+            allowCommandFetch: n,
             includeAuthorizedAppsAndFetch: !1
         }),
-        [n, l] = r.useState(void 0),
-        { analyticsLocations: s } = (0, p.ZP)(m.Z.APP_DMS_QUICK_LAUNCHER),
-        c = (0, o.e7)([C.ZP], () => C.ZP.showPlayAgain) && e && t.length > 0,
-        [d, u] = r.useState(!1),
-        h = r.useMemo(
+        [s, c] = r.useState(void 0),
+        { analyticsLocations: d } = (0, p.ZP)(m.Z.APP_DMS_QUICK_LAUNCHER),
+        u = (0, o.e7)([C.ZP], () => C.ZP.showPlayAgain) && n && l.length > 0,
+        [h, f] = r.useState(!1),
+        _ = r.useMemo(
             () =>
-                t
+                l
                     .map((e) => e.application)
                     .filter(T.lm)
                     .slice(0, 5),
-            [t]
+            [l]
         );
     return (r.useLayoutEffect(() => {
         var e;
-        if (!d && !!c) u(!0), N.default.track(Z.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = h.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
-    }, [c, h, d]),
-    c)
-        ? (0, i.jsxs)('div', {
-              className: P.container,
-              onContextMenu: D,
+        if (!h && !!u) f(!0), N.default.track(Z.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = _.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
+    }, [u, _, h]),
+    u)
+        ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(I.Z, {
-                      className: a()(P.headerContainer, y.privateChannelsHeaderContainer),
-                      children: (0, i.jsx)('div', {
-                          className: P.textContainer,
-                          children: (0, i.jsx)('span', {
-                              className: y.headerText,
-                              children: L.intl.string(L.t.vayAzs)
+                  (0, i.jsxs)('div', {
+                      className: P.container,
+                      onContextMenu: D,
+                      children: [
+                          (0, i.jsx)(I.Z, {
+                              className: a()(P.headerContainer, y.privateChannelsHeaderContainer),
+                              children: (0, i.jsx)('div', {
+                                  className: P.textContainer,
+                                  children: (0, i.jsx)('span', {
+                                      className: y.headerText,
+                                      children: L.intl.string(L.t.vayAzs)
+                                  })
+                              })
+                          }),
+                          (0, i.jsx)(j, {
+                              frecentApps: _,
+                              loadingAppId: s,
+                              setLoadingAppId: c,
+                              analyticsLocations: d
                           })
-                      })
+                      ]
                   }),
-                  (0, i.jsx)(j, {
-                      frecentApps: h,
-                      loadingAppId: n,
-                      setLoadingAppId: l,
-                      analyticsLocations: s
-                  })
+                  t
               ]
           })
         : null;
