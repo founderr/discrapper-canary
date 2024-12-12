@@ -137,7 +137,7 @@ t.Z = new (class e extends p {
             h(this, '_backendSearchManager', new f()),
             h(this, '_algoliaSearchManager', new g()),
             h(this, 'loadMoreCategoryResults', async (e) => {
-                let { query: t, categoryId: n, languageCode: i } = e;
+                let { query: t, categoryId: n, languageCode: i, offset: l } = e;
                 if (
                     !s.Z.getIsFetching({
                         query: t,
@@ -149,21 +149,32 @@ t.Z = new (class e extends p {
                         query: t,
                         categoryId: n,
                         languageCode: i
-                    }) && (await this.manager.loadMoreCategoryResults(e));
+                    }) &&
+                        (r.qn({
+                            withCounts: !1,
+                            offset: l
+                        }),
+                        await this.manager.loadMoreCategoryResults(e));
             }),
             h(this, 'loadCategoryResults', async (e) => {
                 let { query: t, categoryId: n, languageCode: i } = e,
-                    r = s.Z.getIsFetching({
+                    l = s.Z.getIsFetching({
                         query: t,
                         categoryId: n,
                         languageCode: i
                     }),
-                    l = s.Z.getIsInitialFetchComplete({
+                    a = s.Z.getIsInitialFetchComplete({
                         query: t,
                         categoryId: n,
                         languageCode: i
                     });
-                !r && !l && (await this.manager.loadCategoryResults(e));
+                !l &&
+                    !a &&
+                    (r.qn({
+                        withCounts: !1,
+                        offset: 0
+                    }),
+                    await this.manager.loadCategoryResults(e));
             }),
             h(this, 'loadCategoryResultsAndCounts', async (e) => {
                 let { query: t, loadId: n, categoryId: i } = e;
@@ -177,6 +188,10 @@ t.Z = new (class e extends p {
                         resultsQuery: ''
                     }),
                     r.tI(n, i),
+                    r.qn({
+                        withCounts: !0,
+                        offset: 0
+                    }),
                     await this.manager.loadCategoryResultsAndCounts(e),
                     c.Z.setState({ resultsQuery: t }));
             });

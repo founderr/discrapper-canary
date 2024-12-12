@@ -4353,6 +4353,7 @@ let on = Object.freeze({
     (ah.GIF_UNFAVORITED = 'gif_unfavorited'),
     (ah.GUILD_DISCOVERY_VIEWED = 'guild_discovery_viewed'),
     (ah.GUILD_DISCOVERY_SEARCH_FAILED = 'guild_discovery_search_failed'),
+    (ah.GUILD_DISCOVERY_SEARCH_START = 'guild_discovery_search_start'),
     (ah.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED = 'guild_discovery_get_featured_guilds_failed'),
     (ah.GUILD_DISCOVERY_GUILD_SELECTED = 'guild_discovery_guild_selected'),
     (ah.GUILD_DISCOVERY_GUILD_JOIN_CLICKED = 'guild_discovery_guild_join_clicked'),
