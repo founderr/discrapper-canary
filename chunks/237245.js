@@ -1,6 +1,6 @@
 n.d(t, {
     w: function () {
-        return m;
+        return x;
     }
 }),
     n(47120);
@@ -10,36 +10,47 @@ var i = n(200651),
     s = n(852860),
     a = n(881052),
     o = n(863249),
-    c = n(245762),
-    d = n(894376),
-    u = n(999382);
-function m() {
+    c = n(983736),
+    d = n(245762),
+    u = n(894376),
+    m = n(446495),
+    h = n(999382),
+    g = n(388032);
+function x() {
     let [e, t] = r.useState(!1),
-        [n, m] = r.useState(null),
-        h = (0, l.e7)([u.Z], () => {
+        [n, x] = r.useState(null),
+        p = (0, l.e7)([h.Z], () => {
             var e;
-            return null === (e = u.Z.getProps().guild) || void 0 === e ? void 0 : e.id;
+            return null === (e = h.Z.getProps().guild) || void 0 === e ? void 0 : e.id;
         }),
-        g = (0, l.e7)([d.Z], () => d.Z.pendingVerificationFields),
-        x = r.useCallback(() => {
-            c.ZP.reset();
+        f = (0, l.e7)([u.Z], () => u.Z.pendingState),
+        C = r.useCallback(() => {
+            x(null), d.Z.reset();
         }, []),
-        p = r.useCallback(async () => {
-            if (null != h && null != g) {
-                t(!0);
-                try {
-                    await o.ZP.updateVerificationForm(h, g), m(null);
-                } catch (e) {
-                    m(new a.Hx(e).getAnyErrorMessage());
-                } finally {
-                    t(!1);
+        _ = r.useCallback(async () => {
+            if (null != p && null != f) {
+                if (f.joinType === m.A.APPLY) {
+                    let { pendingVerificationFields: e } = f;
+                    if (null == e) return;
+                    if (!e.some((e) => (0, c._C)(e))) {
+                        x(g.intl.string(g.t.HGVrIy));
+                        return;
+                    }
+                    try {
+                        t(!0), await o.ZP.updateVerificationForm(p, e), x(null);
+                    } catch (e) {
+                        x(new a.Hx(e).getAnyErrorMessage());
+                    } finally {
+                        t(!1);
+                    }
+                    return;
                 }
             }
-        }, [g, h]);
+        }, [f, p]);
     return (0, i.jsx)(s.Z, {
         submitting: e,
         errorMessage: n,
-        onReset: x,
-        onSave: p
+        onReset: C,
+        onSave: _
     });
 }

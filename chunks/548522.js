@@ -24,40 +24,40 @@ function x(e) {
     let g = null !== (t = (0, o.A)({ guildId: n.id })) && void 0 !== t ? t : 0,
         [x, f] = r.useState(null),
         C = r.useMemo(() => (null == s ? void 0 : s.some((e) => (0, a.J)(e))), [s]),
-        v = r.useMemo(() => s.length === m.nx, [s]),
-        _ = r.useCallback(
+        _ = r.useMemo(() => s.length === m.nx, [s]),
+        I = r.useCallback(
             (e) => {
-                u.ZP.setPendingMemberVerificationRules(n.id, e), h(e), null != x && f(null);
+                u.Z.setPendingMemberVerificationRules(n.id, e), h(e), null != x && f(null);
             },
             [x, n.id]
         ),
-        I = r.useCallback(
+        v = r.useCallback(
             (e) => {
-                _([...s, e]);
+                I([...s, e]);
             },
-            [s, _]
+            [s, I]
         ),
         N = r.useCallback(
             (e) => {
-                _([...s.slice(0, e), ...s.slice(e + 1)]);
+                I([...s.slice(0, e), ...s.slice(e + 1)]);
             },
-            [s, _]
+            [s, I]
         ),
         T = r.useCallback(
             (e, t) => {
                 if (s[e] === t) return;
                 let n = [...s];
-                (n[e] = t), _(n);
+                (n[e] = t), I(n);
             },
-            [s, _]
+            [s, I]
         ),
         b = r.useCallback(
             (e, t, n) => {
                 let i = s.indexOf(e),
                     r = [...s];
-                null != t && t !== i && (r.splice(i, 1), r.splice(t, 0, e), h(r)), n ? (_(r), null !== x && f(null)) : x !== t && f(t);
+                null != t && t !== i && (r.splice(i, 1), r.splice(t, 0, e), h(r)), n ? (I(r), null !== x && f(null)) : x !== t && f(t);
             },
-            [x, s, _]
+            [x, s, I]
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -77,13 +77,13 @@ function x(e) {
                     fieldStyle: a.it.COMPACT
                 })
             ),
-            !v &&
+            !_ &&
                 (0, i.jsx)(c.Z, {
-                    addFormField: I,
+                    addFormField: v,
                     guild: n,
                     allowTerms: !C
                 }),
-            !v && (0, i.jsx)(p, { addFormField: I })
+            !_ && (0, i.jsx)(p, { addFormField: v })
         ]
     });
 }
@@ -141,6 +141,7 @@ function p(e) {
                             className: g.pill,
                             onClick: e.onClick,
                             children: (0, i.jsx)(l.xv, {
+                                tag: 'span',
                                 variant: 'text-sm/medium',
                                 color: 'interactive-normal',
                                 children: e.text

@@ -1,106 +1,104 @@
 n.d(t, {
-    A: function () {
-        return r;
-    },
     h: function () {
-        return h;
+        return m;
     }
 });
-var i,
-    r,
-    l = n(200651),
-    s = n(192379),
-    a = n(120356),
-    o = n.n(a),
-    c = n(481060),
-    d = n(981631),
-    u = n(388032),
-    m = n(676919);
-function h(e) {
-    let { activeType: t, onTypePicked: n, guild: i } = e,
-        r = i.hasFeature(d.oNc.COMMUNITY),
-        a = i.hasFeature(d.oNc.DISCOVERABLE),
-        h = s.useMemo(
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    s = n.n(l),
+    a = n(481060),
+    o = n(446495),
+    c = n(981631),
+    d = n(388032),
+    u = n(676919);
+function m(e) {
+    let { activeType: t, onTypePicked: n, guild: l } = e,
+        m = l.hasFeature(c.oNc.COMMUNITY),
+        h = l.hasFeature(c.oNc.DISCOVERABLE),
+        g = r.useMemo(
             () => [
                 {
-                    id: 'invite',
-                    title: u.intl.string(u.t['HQVS/P']),
-                    body: u.intl.string(u.t.KzXzFR),
-                    icon: c.LockIcon,
+                    id: o.A.INVITE,
+                    title: d.intl.string(d.t['HQVS/P']),
+                    body: d.intl.string(d.t.KzXzFR),
+                    icon: a.LockIcon,
                     enabled: !0,
                     ineligibleText: null
                 },
                 {
-                    id: 'apply',
-                    title: u.intl.string(u.t.LrFEYW),
-                    body: u.intl.string(u.t.kJj2oK),
-                    icon: c.LockUnlockedIcon,
-                    enabled: !a,
-                    ineligibleText: u.intl.string(u.t.dUXCFh)
+                    id: o.A.APPLY,
+                    title: d.intl.string(d.t.LrFEYW),
+                    body: d.intl.string(d.t.kJj2oK),
+                    icon: a.LockUnlockedIcon,
+                    enabled: !h,
+                    ineligibleText: d.intl.string(d.t.dUXCFh)
                 },
                 {
-                    id: 'discoverable',
-                    title: u.intl.string(u.t.lhOHLy),
-                    body: u.intl.string(u.t.pqQylZ),
-                    icon: c.GlobeEarthIcon,
-                    enabled: r,
-                    ineligibleText: u.intl.string(u.t['5TQ+eH'])
+                    id: o.A.DISCOVERABLE,
+                    title: d.intl.string(d.t.lhOHLy),
+                    body: d.intl.string(d.t.pqQylZ),
+                    icon: a.GlobeEarthIcon,
+                    enabled: m,
+                    ineligibleText: d.intl.string(d.t['5TQ+eH'])
                 }
             ],
-            [r, a]
+            [m, h]
         );
-    return (0, l.jsxs)('div', {
+    return (0, i.jsxs)('div', {
         children: [
-            (0, l.jsx)(c.Heading, {
+            (0, i.jsx)(a.Heading, {
                 color: 'header-primary',
                 variant: 'text-md/semibold',
-                children: u.intl.string(u.t['N+GnPz'])
+                children: d.intl.string(d.t['N+GnPz'])
             }),
-            (0, l.jsx)(c.Text, {
+            (0, i.jsx)(a.Text, {
                 color: 'text-secondary',
                 variant: 'text-sm/medium',
-                className: m.bodyText,
-                children: u.intl.string(u.t.nBJ89v)
+                className: u.bodyText,
+                children: d.intl.string(d.t.nBJ89v)
             }),
-            (0, l.jsx)(c.TabBar, {
+            (0, i.jsx)(a.TabBar, {
                 selectedItem: t,
                 onItemSelect: n,
                 orientation: 'horizontal',
-                className: m.joinOptions,
-                children: h.map((e) => {
+                className: u.joinOptions,
+                children: g.map((e) => {
                     let n = e.id === t;
-                    return (0, l.jsx)(
-                        c.TabBar.Item,
+                    return (0, i.jsx)(
+                        a.TabBar.Item,
                         {
                             id: e.id,
                             selectedItem: t,
                             disableItemStyles: !0,
-                            className: m.joinOptionTab,
+                            className: u.joinOptionTab,
                             disabled: !e.enabled,
                             'aria-label': e.title,
-                            children: (0, l.jsx)(c.TooltipContainer, {
+                            children: (0, i.jsx)(a.TooltipContainer, {
                                 text: e.ineligibleText,
                                 position: 'bottom',
                                 shouldShow: !e.enabled,
                                 spacing: 16,
                                 hideOnClick: !1,
-                                tooltipClassName: m.tooltip,
-                                children: (0, l.jsxs)('div', {
-                                    className: o()(m.joinOptionContent, {
-                                        [m.active]: n,
-                                        [m.uninteractive]: !e.enabled
+                                tooltipClassName: u.tooltip,
+                                children: (0, i.jsxs)('div', {
+                                    className: s()(u.joinOptionContent, {
+                                        [u.active]: n,
+                                        [u.uninteractive]: !e.enabled
                                     }),
                                     children: [
-                                        (0, l.jsx)(e.icon, {
+                                        (0, i.jsx)(e.icon, {
                                             size: 'md',
-                                            color: n ? c.tokens.colors.INTERACTIVE_ACTIVE : c.tokens.colors.TEXT_MUTED
+                                            color: n ? a.tokens.colors.INTERACTIVE_ACTIVE : a.tokens.colors.TEXT_MUTED
                                         }),
-                                        (0, l.jsx)(c.Text, {
+                                        (0, i.jsx)(a.Text, {
+                                            tag: 'strong',
                                             color: n ? 'interactive-active' : 'text-muted',
                                             variant: 'text-md/semibold',
                                             children: e.title
                                         }),
-                                        (0, l.jsx)(c.Text, {
+                                        (0, i.jsx)(a.Text, {
+                                            tag: 'span',
                                             color: n ? 'interactive-active' : 'text-muted',
                                             variant: 'text-xs/medium',
                                             children: e.body
@@ -116,4 +114,3 @@ function h(e) {
         ]
     });
 }
-((i = r || (r = {})).INVITE = 'invite'), (i.APPLY = 'apply'), (i.DISCOVERABLE = 'discoverable');

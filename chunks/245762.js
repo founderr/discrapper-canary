@@ -1,5 +1,5 @@
 var i = n(570140);
-t.ZP = {
+t.Z = {
     setPendingMemberVerificationRules: function (e, t) {
         i.Z.dispatch({
             type: 'GUILD_SETTINGS_JOIN_RULES_SET_PENDING_FORM_FIELDS',
@@ -9,5 +9,12 @@ t.ZP = {
     },
     reset: function () {
         i.Z.dispatch({ type: 'GUILD_SETTINGS_JOIN_RULES_RESET' });
+    },
+    setSelectedJoinType: function (e, t) {
+        i.Z.dispatch({
+            type: 'GUILD_SETTINGS_JOIN_RULES_SET_SELECTED_TYPE',
+            guildId: e,
+            joinType: t
+        });
     }
 };
