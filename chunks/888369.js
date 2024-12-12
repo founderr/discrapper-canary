@@ -49,7 +49,8 @@ function P(e) {
         unread: !1,
         unreadByType: {},
         unreadChannelId: null,
-        mentionCount: 0,
+        lowImportanceMentionCount: 0,
+        highImportanceMentionCount: 0,
         mentionCounts: {},
         ncMentionCount: 0,
         sentinel: null !== (n = null == r ? void 0 : r.sentinel) && void 0 !== n ? n : 0
@@ -105,7 +106,16 @@ function W() {
     if (null != e) return T.ZP.getNotifCenterReadState(e.id);
 }
 function K(e, n, r) {
-    return H(n), (n.mentionCount = l()(n.mentionCounts).values().sum()), (n.unread !== r.unread || n.mentionCount !== r.mentionCount) && ((L[null != e ? e : D] = n), null != e && (n.unread ? x.add(e) : x.delete(e)), w++, k(null != e ? e : D), Y(n, r), !0);
+    return (
+        H(n),
+        (n.lowImportanceMentionCount = 0),
+        (n.highImportanceMentionCount = 0),
+        m.default.forEach(n.mentionCounts, (e) => {
+            let { count: r, isMentionLowImportance: i } = e;
+            i ? (n.lowImportanceMentionCount += r) : (n.highImportanceMentionCount += r);
+        }),
+        (n.unread !== r.unread || n.lowImportanceMentionCount !== r.lowImportanceMentionCount || n.highImportanceMentionCount !== r.highImportanceMentionCount) && ((L[null != e ? e : D] = n), null != e && (n.unread ? x.add(e) : x.delete(e)), w++, k(null != e ? e : D), Y(n, r), !0)
+    );
 }
 function z(e, n) {
     let r = F(e),
@@ -124,7 +134,13 @@ function z(e, n) {
             if (n.getGuildId() !== r) return;
             let i = l ? d.Z.getMentionCountForChannel(e) : 0,
                 s = T.ZP.getMentionCount(e) - i;
-            null !== r && !c && T.ZP.hasUnread(n.id) && B(n, s, !0) && ((c = !0), (a.unreadChannelId = n.id)), s > 0 && B(n, s) ? (a.mentionCounts[n.id] = s) : delete a.mentionCounts[n.id];
+            null !== r && !c && T.ZP.hasUnread(n.id) && B(n, s, !0) && ((c = !0), (a.unreadChannelId = n.id)),
+                s > 0 && B(n, s)
+                    ? (a.mentionCounts[n.id] = {
+                          count: s,
+                          isMentionLowImportance: T.ZP.getIsMentionLowImportance(e)
+                      })
+                    : delete a.mentionCounts[n.id];
         }),
         (a.unreadByType[R.W.CHANNEL] = c),
         a.unreadByType[R.W.CHANNEL] !== i.unreadByType[R.W.CHANNEL] && !a.unreadByType[R.W.CHANNEL])
@@ -151,7 +167,13 @@ function Q(e, n) {
         for (let n in e) {
             let r = e[n],
                 a = T.ZP.getMentionCount(n);
-            a > 0 && B(r, a) && ((i.mentionCount += a), (i.mentionCounts[r.id] = a));
+            a > 0 &&
+                B(r, a) &&
+                ((i.highImportanceMentionCount += a),
+                (i.mentionCounts[r.id] = {
+                    count: a,
+                    isMentionLowImportance: !1
+                }));
         }
     } else {
         let e = S.ZP.isMuted(r);
@@ -164,27 +186,37 @@ function Q(e, n) {
             let r = u[n],
                 c = e || a.has(n) || (null != r.parent_id && a.has(r.parent_id)),
                 f = i.unreadByType[R.W.CHANNEL],
-                { mentionCount: _, unread: h } = T.ZP.getGuildChannelUnreadState(r, l, s, c, f),
-                p = _ > 0;
-            if (!p && c) continue;
-            let m = !f && (!c || p) && h;
-            if ((m || p) && Z(r, _, l) && (m && ((i.unreadByType[R.W.CHANNEL] = !0), (i.unreadChannelId = n)), p)) {
-                let e = o ? d.Z.getMentionCountForChannel(r.id) : 0;
-                (i.mentionCount += Math.max(_ - e, 0)), (i.mentionCounts[r.id] = Math.max(_ - e, 0));
+                { mentionCount: _, unread: h, isMentionLowImportance: p } = T.ZP.getGuildChannelUnreadState(r, l, s, c, f),
+                m = _ > 0;
+            if (!m && c) continue;
+            let g = !f && (!c || m) && h;
+            if ((g || m) && Z(r, _, l) && (g && ((i.unreadByType[R.W.CHANNEL] = !0), (i.unreadChannelId = n)), m)) {
+                let e = Math.max(_ - (o ? d.Z.getMentionCountForChannel(r.id) : 0), 0);
+                p ? (i.lowImportanceMentionCount += e) : (i.highImportanceMentionCount += e),
+                    (i.mentionCounts[r.id] = {
+                        count: e,
+                        isMentionLowImportance: p
+                    });
             }
         }
         let h = f.Z.getActiveJoinedThreadsForGuild(r);
         for (let n in h)
             for (let r in h[n]) {
                 !i.unreadByType[R.W.CHANNEL] && T.ZP.hasUnread(r) && !_.Z.isMuted(r) && !e && ((i.unreadByType[R.W.CHANNEL] = !0), (i.unreadChannelId = r));
-                let n = T.ZP.getMentionCount(r);
-                n > 0 && ((i.mentionCount += n), (i.mentionCounts[r] = n));
+                let n = T.ZP.getMentionCount(r),
+                    a = T.ZP.getIsMentionLowImportance(r);
+                n > 0 &&
+                    (a ? (i.lowImportanceMentionCount += n) : (i.highImportanceMentionCount += n),
+                    (i.mentionCounts[r] = {
+                        count: n,
+                        isMentionLowImportance: a
+                    }));
             }
         !i.unreadByType[R.W.GUILD_EVENT] && V(r, R.W.GUILD_EVENT) && (i.unreadByType[R.W.GUILD_EVENT] = !0);
     }
     H(i);
     let l = M(r);
-    return (i.unread !== l.unread || i.mentionCount !== l.mentionCount) && ((L[null != r ? r : D] = i), null != r && (i.unread ? x.add(r) : x.delete(r)), w++, k(null != r ? r : D), Y(i, l), !0);
+    return (i.unread !== l.unread || i.highImportanceMentionCount !== l.highImportanceMentionCount || i.lowImportanceMentionCount !== l.lowImportanceMentionCount) && ((L[null != r ? r : D] = i), null != r && (i.unread ? x.add(r) : x.delete(r)), w++, k(null != r ? r : D), Y(i, l), !0);
 }
 function X(e) {
     let { guilds: n } = e;
@@ -392,10 +424,11 @@ class eA extends y.Z {
         return x.has(e);
     }
     getMentionCount(e) {
-        return M(e).mentionCount;
+        let n = M(e);
+        return n.highImportanceMentionCount + n.lowImportanceMentionCount;
     }
-    getMutableGuildReadState(e) {
-        return M(e);
+    getIsMentionLowImportance(e) {
+        return 0 === M(e).highImportanceMentionCount;
     }
     getGuildHasUnreadIgnoreMuted(e) {
         let n = E.Z.getMutableGuildChannelsForGuild(e);
@@ -416,7 +449,7 @@ class eA extends y.Z {
         let n = 0;
         for (let r in L) {
             let i = L[r];
-            if (!0 !== e || r !== D) n += i.mentionCount;
+            if (!0 !== e || r !== D) n += i.highImportanceMentionCount;
         }
         return n;
     }
@@ -431,18 +464,7 @@ class eA extends y.Z {
     getPrivateChannelMentionCount() {
         var e;
         let n = L[D];
-        return null !== (e = null == n ? void 0 : n.mentionCount) && void 0 !== e ? e : 0;
-    }
-    getMentionCountForChannels(e, n) {
-        let r = 0,
-            i = L[e];
-        return null == i
-            ? 0
-            : (n.forEach((e) => {
-                  let n = i.mentionCounts[e];
-                  r += null != n ? n : 0;
-              }),
-              r);
+        return null !== (e = null == n ? void 0 : n.highImportanceMentionCount) && void 0 !== e ? e : 0;
     }
     getMentionCountForPrivateChannel(e) {
         var n, r;

@@ -30,60 +30,65 @@ var l = n(442837),
     N = n(518360);
 function y(e) {
     var t;
-    let { channel: n, isChannelSelected: y, isChannelCollapsed: T, voiceStates: j, enableConnectedUserLimit: A, enableActivities: P, isSubscriptionGated: R, needSubscriptionToAccess: M, isNewChannel: L, muted: w, resolvedUnreadSetting: D } = e,
+    let { channel: n, isChannelSelected: y, isChannelCollapsed: T, voiceStates: j, enableConnectedUserLimit: A, enableActivities: P, isSubscriptionGated: R, needSubscriptionToAccess: M, isNewChannel: w, muted: L, resolvedUnreadSetting: D } = e,
         O = (0, l.e7)([m.ZP], () => m.ZP.getMentionCount(n.id)),
-        k = (0, a.ZP)(n),
-        U = (0, l.e7)([p.Z], () => !p.Z.can(E.Plq.CONNECT, n)),
-        G = (0, l.e7)([f.Z], () => f.Z.hasVideo(n.id)),
-        B = (0, u.PK)(n.id) && n.isGuildStageVoice(),
-        H = (0, _.ZP)({
+        k = (0, l.e7)([m.ZP], () => m.ZP.getIsMentionLowImportance(n.id)),
+        U = (0, a.ZP)(n),
+        G = (0, l.e7)([p.Z], () => !p.Z.can(E.Plq.CONNECT, n)),
+        B = (0, l.e7)([f.Z], () => f.Z.hasVideo(n.id)),
+        H = (0, u.PK)(n.id) && n.isGuildStageVoice(),
+        V = (0, _.ZP)({
             channel: n,
-            locked: U,
-            video: G || B,
+            locked: G,
+            video: B || H,
             selected: y
         }),
-        V = (0, l.e7)([d.Z], () => d.Z.getNewThreadCount(n.guild_id, n.id)),
-        F = (0, s.n2)(n.guild_id, n.id),
-        W = (0, l.e7)([h.Z], () => {
+        F = (0, l.e7)([d.Z], () => d.Z.getNewThreadCount(n.guild_id, n.id)),
+        W = (0, s.n2)(n.guild_id, n.id),
+        z = (0, l.e7)([h.Z], () => {
             var e, t;
             return null !== (t = null === (e = h.Z.getGuild(n.guild_id)) || void 0 === e ? void 0 : e.hasFeature(E.oNc.COMMUNITY)) && void 0 !== t && t;
         });
-    if ((0, v.Z)(O)) return (0, i.jsx)(b.Z, { mentionsCount: O });
+    if ((0, v.Z)(O))
+        return (0, i.jsx)(b.Z, {
+            mentionsCount: O,
+            isMentionLowImportance: k
+        });
     if ((0, c.O)(R)) return (0, i.jsx)(c.Z, { locked: M });
-    if (L)
+    if (w)
         return (0, i.jsx)(o.TextBadge, {
             text: Z.intl.string(Z.t.y2b7CA),
             color: r.Z.unsafe_rawColors.BRAND_260.css,
             className: N.newChannel
         });
-    if (!w && D === S.i.ALL_MESSAGES && n.isForumLikeChannel() && null != V && V > 0)
+    if (!L && D === S.i.ALL_MESSAGES && n.isForumLikeChannel() && null != F && F > 0)
         return (0, i.jsx)(o.Text, {
             variant: 'text-xs/semibold',
             color: 'text-brand',
-            children: Z.intl.format(Z.t.GkAbqa, { count: (0, o.getBadgeCountString)(V) })
+            children: Z.intl.format(Z.t.GkAbqa, { count: (0, o.getBadgeCountString)(F) })
         });
-    if (!w && n.isForumLikeChannel() && null != F && F > 0)
+    if (!L && n.isForumLikeChannel() && null != W && W > 0)
         return (0, i.jsx)(o.Text, {
             variant: 'text-xs/semibold',
             color: 'text-muted',
-            children: (0, o.getBadgeCountString)(F)
+            children: (0, o.getBadgeCountString)(W)
         });
-    let z = null !== (t = null == j ? void 0 : j.length) && void 0 !== t ? t : 0;
-    return null != A && A && H
+    let Y = null !== (t = null == j ? void 0 : j.length) && void 0 !== t ? t : 0;
+    return null != A && A && V
         ? (0, i.jsx)(I.Z, {
-              userCount: z,
-              video: G || B,
+              userCount: Y,
+              video: B || H,
               channel: n
           })
-        : T && (0, g.a)(j) && W
+        : T && (0, g.a)(j) && z
           ? (0, i.jsx)(o.TextBadge, {
                 text: Z.intl.string(Z.t.dI3q4u),
                 color: r.Z.unsafe_rawColors.RED_400.css
             })
-          : null != P && P && (0, C.u)(k)
+          : null != P && P && (0, C.u)(U)
             ? (0, i.jsx)(x.Z, {
-                  embeddedApps: k,
-                  muted: w
+                  embeddedApps: U,
+                  muted: L
               })
             : null;
 }

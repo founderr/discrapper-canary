@@ -48,8 +48,8 @@ function M(e, t, n) {
         e
     );
 }
-let L = 10,
-    w = () =>
+let w = 10,
+    L = () =>
         (0, l.jsxs)('div', {
             className: R.emptyState,
             children: [
@@ -84,6 +84,7 @@ let O = c.ZP.connectStores([I.ZP, v.Z], (e) => {
         return {
             unread: I.ZP.hasUnread(t.id),
             mentions: I.ZP.getMentionCount(t.id),
+            isMentionLowImportance: I.ZP.getIsMentionLowImportance(t.id),
             category: v.Z.getChannel(t.parent_id)
         };
     })(D),
@@ -179,7 +180,7 @@ class V extends r.PureComponent {
         let { query: e } = this.state,
             { results: t } = this.props;
         return 0 === t.length && e.length > 0
-            ? (0, l.jsx)(w, {})
+            ? (0, l.jsx)(L, {})
             : 0 === t.length
               ? null
               : (0, l.jsx)(u.ListAuto, {
@@ -189,7 +190,7 @@ class V extends r.PureComponent {
                     ref: this.scrollerRef,
                     sectionHeight: 0,
                     rowHeight: 34,
-                    paddingBottom: L,
+                    paddingBottom: w,
                     sections: [t.length],
                     className: R.scroller,
                     renderRow: this.renderRow,
