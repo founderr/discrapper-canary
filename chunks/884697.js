@@ -111,7 +111,7 @@ let p = (e) => (null == e ? void 0 : e.premiumType) != null,
             ? T
             : {
                   original: r,
-                  discountPercentage: Math.floor(((r - i.amount) / r) * 100)
+                  discountPercentage: Math.round(((r - i.amount) / r) * 100)
               };
     },
     y = (e) => {
