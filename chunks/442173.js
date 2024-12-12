@@ -5,9 +5,9 @@ n.r(t),
         }
     });
 var l = n(200651),
-    o = n(192379),
+    r = n(192379),
     a = n(481060),
-    r = n(144535),
+    o = n(144535),
     i = n(332664),
     s = n(142497),
     c = n(626135),
@@ -18,33 +18,33 @@ var l = n(200651),
     m = n(388032);
 function h(e) {
     let { reportId: t, reportType: h, ...x } = e;
-    o.useEffect(() => {
+    r.useEffect(() => {
         c.default.track(b.rMx.IAR_FEEDBACK_MODAL_VIEWED, {
             report_id: t,
             report_type: h
         });
     }, [t, h]);
-    let p = (0, r.I)('CALL_FEEDBACK_OPTION_OTHER');
+    let g = (0, o.I)('CALL_FEEDBACK_OPTION_OTHER');
     return (0, l.jsx)(i.Z, {
         modalType: 'in_app_report',
         header: m.intl.string(m.t.MP5lDg),
         body: m.intl.string(m.t['7Ct0Dg']),
         problemTitle: m.intl.string(m.t.FJmoxM),
         problems: (0, u.Z)(),
-        feedbackProblems: [p],
+        feedbackProblems: [g],
         onSubmit: function (e) {
-            let { rating: o, problem: r, dontShowAgain: i, feedback: c } = e;
+            let { rating: r, problem: o, dontShowAgain: i, feedback: c } = e;
             if (
                 (i && (0, s.Kw)(f.v.IN_APP_REPORTS_FEEDBACK),
                 (0, d.Z)({
-                    rating: o,
-                    problem: r,
+                    rating: r,
+                    problem: o,
                     feedback: c,
                     reportId: t,
                     reportType: h,
                     dontShowAgain: i
                 }),
-                null != o && null != r)
+                null != r && null != o)
             )
                 (0, a.openModalLazy)(async () => {
                     let { default: e } = await n.e('14466').then(n.bind(n, 729328));
@@ -55,7 +55,7 @@ function h(e) {
                         });
                 });
         },
-        otherKey: p,
+        otherKey: g,
         ...x
     });
 }

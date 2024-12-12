@@ -106,14 +106,14 @@ function y(e) {
             clearTimeout(e);
         };
     }, [C]);
-    let { id: k, expires_at: I, redeemed_at: E, trial_id: w, subscription_trial: Z, referrer: R } = s,
+    let { id: k, expires_at: I, redeemed_at: w, trial_id: E, subscription_trial: Z, referrer: R } = s,
         O =
             null !==
                 (n =
                     null ===
                         (t = u.find((e) => {
                             let { value: t } = e;
-                            return t === w;
+                            return t === E;
                         })) || void 0 === t
                         ? void 0
                         : t.label) && void 0 !== n
@@ -198,13 +198,13 @@ function y(e) {
                 (0, r.jsxs)(c.Clickable, {
                     className: i()(v.row, v.idRow),
                     onClick: () => {
-                        (0, m.JG)(w), j(!0);
+                        (0, m.JG)(E), j(!0);
                     },
                     children: [
                         (0, r.jsxs)(c.Text, {
                             variant: 'eyebrow',
                             color: 'always-white',
-                            children: ['Trial: ', w]
+                            children: ['Trial: ', E]
                         }),
                         b
                             ? (0, r.jsx)(c.CheckmarkLargeIcon, {
@@ -249,7 +249,7 @@ function y(e) {
                                 children: D
                             })
                         }),
-                        null != E &&
+                        null != w &&
                             (0, r.jsx)('div', {
                                 className: i()(v.badge, v.__invalid_badgeBottom, v.redeemed),
                                 children: (0, r.jsx)(c.Text, {
@@ -297,10 +297,10 @@ function k(e) {
                         : t.label) && void 0 !== n
                 ? n
                 : 'Unknown',
-        E = null != S,
-        w = null != S && new Date(S).getTime() < Date.now(),
+        w = null != S,
+        E = null != S && new Date(S).getTime() < Date.now(),
         Z = async () => {
-            g(!0), E ? await T(C, 'discount') : await (0, d.a)(void 0, l), s(), g(!1);
+            g(!0), w ? await T(C, 'discount') : await (0, d.a)(void 0, l), s(), g(!1);
         };
     a.useEffect(() => {
         if (u) {
@@ -322,8 +322,8 @@ function k(e) {
     }, [u, x]);
     let R = 'Active';
     return (
-        w && (R = 'Expired'),
-        E && (R = 'Acknowledged'),
+        E && (R = 'Expired'),
+        w && (R = 'Acknowledged'),
         (0, r.jsxs)('div', {
             className: i()(v.card, v.discount),
             children: [
@@ -409,8 +409,8 @@ function k(e) {
                         (0, r.jsx)(c.Clickable, {
                             onClick: Z,
                             className: i()(v.badge, v.clickable, {
-                                [v.acked]: E,
-                                [v.expired]: w
+                                [v.acked]: w,
+                                [v.expired]: E
                             }),
                             children: (0, r.jsx)(c.Text, {
                                 variant: 'eyebrow',
@@ -444,9 +444,9 @@ function I() {
         [x, p] = a.useState(),
         [g, _] = a.useState([]),
         [T, I] = a.useState([]),
-        [E, w] = a.useState(!0);
+        [w, E] = a.useState(!0);
     a.useEffect(() => {
-        (0 === e.length || 0 === n.length || E) &&
+        (0 === e.length || 0 === n.length || w) &&
             j().then((e) => {
                 let n = Object.keys(e.trial).map((t) => ({
                         label: t,
@@ -458,24 +458,24 @@ function I() {
                     }));
                 t(n), l(r), null == o && m(n[0].value), null == x && p(r[0].value);
             });
-    }, [e, n, o, x, E]),
+    }, [e, n, o, x, w]),
         a.useEffect(() => {
-            E &&
-                (w(!1),
+            w &&
+                (E(!1),
                 h.Z.forceReset(),
                 (0, d.T)(),
                 S().then((e) => {
                     _(e.trial.sort((e, t) => e.id.localeCompare(t.id))), I(e.discount.sort((e, t) => e.id.localeCompare(t.id)));
                 }));
-        }, [E]);
+        }, [w]);
     let Z = async () => {
-            null != o && (await C(o, 'trial'), w(!0));
+            null != o && (await C(o, 'trial'), E(!0));
         },
         R = async () => {
-            null != x && (await C(x, 'discount'), w(!0));
+            null != x && (await C(x, 'discount'), E(!0));
         },
         O = async () => {
-            await N(), w(!0);
+            await N(), E(!0);
         };
     return (0, r.jsx)(c.ScrollerThin, {
         className: i()(b.panel),
@@ -504,7 +504,7 @@ function I() {
                                 }),
                                 (0, r.jsx)(c.Button, {
                                     size: c.Button.Sizes.SMALL,
-                                    onClick: () => w(!0),
+                                    onClick: () => E(!0),
                                     children: 'Refresh DevTools'
                                 })
                             ]
@@ -579,7 +579,7 @@ function I() {
                                     {
                                         offer: t,
                                         offerOptions: e,
-                                        forceRefetch: () => w(!0)
+                                        forceRefetch: () => E(!0)
                                     },
                                     t.id
                                 )
@@ -600,7 +600,7 @@ function I() {
                                     {
                                         offer: e,
                                         offerOptions: n,
-                                        forceRefetch: () => w(!0)
+                                        forceRefetch: () => E(!0)
                                     },
                                     e.id
                                 )

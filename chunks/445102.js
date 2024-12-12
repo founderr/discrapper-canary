@@ -11,12 +11,12 @@ function a(e, t, n, a, s) {
         u = o.Z.getInputDeviceId(),
         c = o.Z.getInputDevices()[u],
         d = o.Z.getOutputDeviceId(),
-        b = o.Z.getOutputDevices()[d],
-        m = o.Z.getVideoDeviceId(),
-        h = o.Z.getVideoDevices()[m],
+        m = o.Z.getOutputDevices()[d],
+        b = o.Z.getVideoDeviceId(),
+        h = o.Z.getVideoDevices()[b],
         _ = o.Z.getNoiseCancellation(),
-        p = o.Z.getMediaEngine().getAudioSubsystem(),
-        g = o.Z.getMediaEngine().getAudioLayer();
+        g = o.Z.getMediaEngine().getAudioSubsystem(),
+        p = o.Z.getMediaEngine().getAudioLayer();
     i.default.track(l.rMx.CALL_REPORT_PROBLEM, {
         rating: null != e ? e : 'no response',
         reason_code: t,
@@ -31,10 +31,10 @@ function a(e, t, n, a, s) {
         voice_output_volume: r.outputVolume,
         noise_cancellation_enabled: _,
         input_device_name: null == c ? void 0 : c.name,
-        output_device_name: null == b ? void 0 : b.name,
+        output_device_name: null == m ? void 0 : m.name,
         video_device_name: null == h ? void 0 : h.name,
-        audio_subsystem: p,
-        audio_layer: g,
+        audio_subsystem: g,
+        audio_layer: p,
         automatic_audio_subsystem: r.automaticAudioSubsystem,
         ...s
     });

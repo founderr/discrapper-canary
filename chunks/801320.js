@@ -4,14 +4,14 @@ n.r(t),
             return a;
         },
         default: function () {
-            return x;
+            return f;
         }
     });
 var l,
     a,
     i = n(200651),
-    o = n(192379),
-    r = n(481060),
+    r = n(192379),
+    o = n(481060),
     s = n(332664),
     c = n(142497),
     u = n(626135),
@@ -19,11 +19,11 @@ var l,
     b = n(190378),
     m = n(388032);
 ((l = a || (a = {})).BAD_OUTLINE = 'BAD_OUTLINE'), (l.BACKGROUND_DETECTION_ACCURACY = 'BACKGROUND_DETECTION_ACCURACY'), (l.FLICKERING = 'FLICKERING'), (l.BACKGROUND_DETECTION_LAG = 'BACKGROUND_DETECTION_LAG'), (l.OTHER = 'OTHER');
-let f = ['OTHER'];
-function x(e) {
+let x = ['OTHER'];
+function f(e) {
     let { analyticsData: t, transitionState: l, onClose: a } = e;
     return (
-        o.useEffect(() => {
+        r.useEffect(() => {
             u.default.track(d.rMx.OPEN_MODAL, { type: 'Video Background Feedback' });
         }, []),
         (0, i.jsx)(s.Z, {
@@ -53,23 +53,23 @@ function x(e) {
                     label: m.intl.string(m.t['emlT9/'])
                 }
             ],
-            feedbackProblems: f,
+            feedbackProblems: x,
             onSubmit: function (e) {
-                var l, a, o, s;
-                let { rating: f, problem: x, dontShowAgain: C, feedback: h } = e;
-                if ((C && (0, c.Kw)(b.v.VIDEO_BACKGROUND_FEEDBACK), null != f))
-                    (l = f),
-                        (a = x),
-                        (o = h),
+                var l, a, r, s;
+                let { rating: x, problem: f, dontShowAgain: C, feedback: h } = e;
+                if ((C && (0, c.Kw)(b.v.VIDEO_BACKGROUND_FEEDBACK), null != x))
+                    (l = x),
+                        (a = f),
+                        (r = h),
                         (s = t),
                         u.default.track(d.rMx.VIDEO_BACKGROUND_FEEDBACK, {
                             ...s,
                             reason: a,
                             rating: l,
-                            feedback: o
+                            feedback: r
                         }),
-                        null != x &&
-                            (0, r.openModalLazy)(async () => {
+                        null != f &&
+                            (0, o.openModalLazy)(async () => {
                                 let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                                 return (t) =>
                                     (0, i.jsx)(e, {

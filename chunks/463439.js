@@ -4,8 +4,8 @@ e.d(n, {
     }
 }),
     e(47120);
-var o,
-    r,
+var r,
+    o,
     i = e(200651),
     s = e(192379),
     a = e(481060),
@@ -16,9 +16,9 @@ var o,
     E = e(485664),
     N = e(681678),
     h = e(699516),
-    I = e(863653),
-    f = e(473092),
-    _ = e(650408),
+    f = e(863653),
+    _ = e(473092),
+    I = e(650408),
     C = e(850165),
     T = e(134612),
     A = e(981631),
@@ -26,13 +26,13 @@ var o,
     g = e(461247),
     m = e(149355);
 function S(t) {
-    let { senderId: n, channelId: e, hasReported: o, onReport: r, trackAnalyticsEvent: S } = t,
+    let { senderId: n, channelId: e, hasReported: r, onReport: o, trackAnalyticsEvent: S } = t,
         b = (0, c.e7)([h.Z], () => h.Z.isBlocked(n)),
         [x, R] = s.useState(b),
         M = (0, E.o)(),
-        L = (0, I.zF)('ic-take-action-web'),
+        L = (0, f.zF)('ic-take-action-web'),
         [j, v] = s.useState(!1),
-        O = (0, _.q)(e),
+        O = (0, I.q)(e),
         B = s.useMemo(() => (M ? 0 : L ? 2 : 1), [M, L]),
         D = () => {
             R(!0),
@@ -41,11 +41,11 @@ function S(t) {
                     context: { location: T.DL },
                     type: A.OGo.BLOCKED
                 }),
-                S(f.NM.USER_TAKEOVER_MODAL_BLOCK),
+                S(_.NM.USER_TAKEOVER_MODAL_BLOCK),
                 N.Z.showBlockSuccessToast(n, e);
         },
         Z = () => {
-            R(!1), l.Z.unblockUser(n, { location: T.DL }), S(f.NM.USER_TAKEOVER_MODAL_UNBLOCK), N.Z.showUnblockSuccessToast(n, e);
+            R(!1), l.Z.unblockUser(n, { location: T.DL }), S(_.NM.USER_TAKEOVER_MODAL_UNBLOCK), N.Z.showUnblockSuccessToast(n, e);
         },
         y = async () => {
             if (null != O)
@@ -53,19 +53,19 @@ function S(t) {
                     await (0, d.J7)(
                         O,
                         () => {
-                            N.Z.showReportSuccessToast(n, e), r();
+                            N.Z.showReportSuccessToast(n, e), o();
                         },
                         () => {
                             N.Z.showFailedToast();
                         }
                     ),
                     v(!1),
-                    S(f.NM.USER_TAKEOVER_MODAL_REPORT);
+                    S(_.NM.USER_TAKEOVER_MODAL_REPORT);
         },
-        k = (t) => {
-            0 === t ? ((0, u.Z)(T.EI), S(f.NM.USER_TAKEOVER_MODAL_CTL)) : 2 === t ? ((0, u.Z)(T.$l), S(f.NM.USER_TAKEOVER_MODAL_THROUGHLINE)) : ((0, u.Z)(T.n4), S(f.NM.USER_TAKEOVER_MODAL_NO_FILTR));
+        w = (t) => {
+            0 === t ? ((0, u.Z)(T.EI), S(_.NM.USER_TAKEOVER_MODAL_CTL)) : 2 === t ? ((0, u.Z)(T.$l), S(_.NM.USER_TAKEOVER_MODAL_THROUGHLINE)) : ((0, u.Z)(T.n4), S(_.NM.USER_TAKEOVER_MODAL_NO_FILTR));
         },
-        w = s.useMemo(() => {
+        k = s.useMemo(() => {
             switch (B) {
                 case 0:
                     return p.intl.string(p.t.sZf6c3);
@@ -96,8 +96,8 @@ function S(t) {
                             size: 'custom',
                             height: 20,
                             width: 20,
-                            color: a.tokens.colors.WHITE,
-                            className: g.buttonIcon
+                            className: g.buttonIcon,
+                            color: 'currentColor'
                         }),
                         x ? p.intl.string(p.t.XyHpKC) : p.intl.string(p.t.l4EmaW)
                     ]
@@ -109,16 +109,16 @@ function S(t) {
                     innerClassName: g.buttonInner,
                     onClick: y,
                     submitting: j,
-                    disabled: o,
+                    disabled: r,
                     children: [
                         (0, i.jsx)(a.FlagIcon, {
                             size: 'custom',
                             height: 20,
                             width: 20,
-                            color: a.tokens.colors.WHITE,
-                            className: g.buttonIcon
+                            className: g.buttonIcon,
+                            color: 'currentColor'
                         }),
-                        o ? p.intl.string(p.t.QvwOJy) : p.intl.string(p.t['7fHyEx'])
+                        r ? p.intl.string(p.t.QvwOJy) : p.intl.string(p.t['7fHyEx'])
                     ]
                 }),
                 (0, i.jsxs)(a.Button, {
@@ -126,20 +126,20 @@ function S(t) {
                     size: a.Button.Sizes.LARGE,
                     className: g.button,
                     innerClassName: g.buttonInner,
-                    onClick: () => k(B),
+                    onClick: () => w(B),
                     children: [
                         (0, i.jsx)(a.ChatIcon, {
                             size: 'custom',
                             height: 20,
                             width: 20,
-                            color: a.tokens.colors.WHITE,
-                            className: g.buttonIcon
+                            className: g.buttonIcon,
+                            color: 'currentColor'
                         }),
-                        w
+                        k
                     ]
                 })
             ]
         })
     });
 }
-((r = o || (o = {}))[(r.CTL = 0)] = 'CTL'), (r[(r.NO_FILTR = 1)] = 'NO_FILTR'), (r[(r.THROUGHLINE = 2)] = 'THROUGHLINE');
+((o = r || (r = {}))[(o.CTL = 0)] = 'CTL'), (o[(o.NO_FILTR = 1)] = 'NO_FILTR'), (o[(o.THROUGHLINE = 2)] = 'THROUGHLINE');

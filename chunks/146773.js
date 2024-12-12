@@ -11,8 +11,8 @@ var l = n(155281),
     a = n(481060),
     s = n(749210),
     c = n(170509),
-    u = n(740504),
-    d = n(117984),
+    d = n(740504),
+    u = n(117984),
     h = n(398758),
     p = n(680089),
     m = n(592125),
@@ -43,15 +43,15 @@ function Z(e) {
                     r = t.getItem(),
                     o = (0, x.if)(S(l, r.id), r.position, e.channel, e.position, r.channelList);
                 if (null == o) return;
-                let u = S(l, r.id);
-                if (null == u) return;
+                let d = S(l, r.id);
+                if (null == d) return;
                 let h = f.Z.getCategories(l),
                     p = C.Z.getGuild(l);
                 if (null == p) return;
-                let g = (0, x.Dn)(u, S(l, o.referenceId), o.parentId, h);
+                let g = (0, x.Dn)(d, S(l, o.referenceId), o.parentId, h);
                 if (0 !== g.length) {
                     if (l === b.I_8) {
-                        (0, d.s3)(g);
+                        (0, u.s3)(g);
                         return;
                     }
                     if (
@@ -62,14 +62,14 @@ function Z(e) {
                             let i = m.Z.getChannel(n.parent_id);
                             return n.type === b.d4z.GUILD_CATEGORY || null == i ? v.Z.can(b.Plq.MANAGE_CHANNELS, p) : v.Z.can(b.Plq.MANAGE_CHANNELS, i);
                         })),
-                        u.parent_id !== o.parentId &&
+                        d.parent_id !== o.parentId &&
                             g.find((e) => {
-                                if (e.id !== u.id) return !1;
+                                if (e.id !== d.id) return !1;
                                 let t = m.Z.getChannel(e.parent_id);
-                                if (!(null != t && v.Z.can(b.Plq.MANAGE_ROLES, u) && v.Z.can(b.Plq.MANAGE_ROLES, t))) return !0;
-                                let i = I.o4(u, t),
-                                    l = I.o4(u, m.Z.getChannel(u.parent_id));
-                                return ((null == u.parent_id && !i) || (l && !i)) && (n = e), !0;
+                                if (!(null != t && v.Z.can(b.Plq.MANAGE_ROLES, d) && v.Z.can(b.Plq.MANAGE_ROLES, t))) return !0;
+                                let i = I.o4(d, t),
+                                    l = I.o4(d, m.Z.getChannel(d.parent_id));
+                                return ((null == d.parent_id && !i) || (l && !i)) && (n = e), !0;
                             }),
                         null != n)
                     ) {
@@ -78,7 +78,7 @@ function Z(e) {
                             (0, a.openModal)((t) =>
                                 (0, i.jsx)(c.default, {
                                     ...t,
-                                    channel: u,
+                                    channel: d,
                                     category: e,
                                     onConfirm: () => {
                                         null != n && ((n.lock_permissions = !0), s.Z.batchChannelUpdate(l, g));
@@ -104,8 +104,8 @@ function Z(e) {
                     a = m.Z.getChannel(i.parent_id),
                     s = v.Z.can(b.Plq.MANAGE_CHANNELS, r),
                     c = null != a ? v.Z.can(b.Plq.MANAGE_CHANNELS, a) : s,
-                    u = null != o ? v.Z.can(b.Plq.MANAGE_CHANNELS, o) : s;
-                return c && u;
+                    d = null != o ? v.Z.can(b.Plq.MANAGE_CHANNELS, o) : s;
+                return c && d;
             }
         },
         (e, t) => {
@@ -161,7 +161,7 @@ function Z(e) {
                         position: r,
                         parentId: n,
                         type: l,
-                        channelList: (0, u.Z)(a._categories, a, (e) => {
+                        channelList: (0, d.Z)(a._categories, a, (e) => {
                             let { channel: t } = e;
                             if (t.type === b.d4z.GUILD_CATEGORY && null != a[t.id] && 0 === a[t.id].length) return o === b.I_8 || (v.Z.can(b.Plq.MANAGE_CHANNELS, t) && v.Z.can(b.Plq.VIEW_CHANNEL, t));
                             return !p.Z.isCollapsed(t.parent_id);

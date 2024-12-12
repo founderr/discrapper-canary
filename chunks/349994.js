@@ -6,10 +6,10 @@ n.r(t),
     }),
     n(47120);
 var a = n(200651),
-    o = n(192379),
-    i = n(481060),
-    s = n(313201),
-    l = n(332664),
+    s = n(192379),
+    o = n(481060),
+    l = n(313201),
+    i = n(332664),
     r = n(429506),
     c = n(981631),
     d = n(531578),
@@ -28,32 +28,32 @@ let b = [
     }
 ];
 function x(e) {
-    let [t, d] = o.useState(null),
-        x = (0, s.Dt)();
-    return (0, a.jsxs)(i.ModalRoot, {
+    let [t, d] = s.useState(null),
+        x = (0, l.Dt)();
+    return (0, a.jsxs)(o.ModalRoot, {
         transitionState: e.transitionState,
         'aria-labelledby': x,
         children: [
-            (0, a.jsxs)(i.ModalHeader, {
+            (0, a.jsxs)(o.ModalHeader, {
                 separator: !1,
                 className: m.headerContainer,
                 children: [
-                    (0, a.jsx)(i.Heading, {
+                    (0, a.jsx)(o.Heading, {
                         id: x,
                         variant: 'heading-xl/extrabold',
                         color: 'none',
                         children: u.intl.string(u.t.BIbnR0)
                     }),
-                    (0, a.jsx)(i.Text, {
+                    (0, a.jsx)(o.Text, {
                         variant: 'text-md/normal',
                         className: m.ratingBody,
                         children: u.intl.string(u.t.j2kf2t)
                     })
                 ]
             }),
-            (0, a.jsx)(i.ModalContent, {
+            (0, a.jsx)(o.ModalContent, {
                 className: m.modalBody,
-                children: (0, a.jsx)(l.L, {
+                children: (0, a.jsx)(i.L, {
                     ratingConfigs: b,
                     className: m.ratingsSelector,
                     selectedRating: t,
@@ -63,7 +63,7 @@ function x(e) {
                                 if (null != t)
                                     (0, r.Z)({ rating: t }),
                                         e.onClose(),
-                                        (0, i.openModalLazy)(async () => {
+                                        (0, o.openModalLazy)(async () => {
                                             let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                                             return (t) =>
                                                 (0, a.jsx)(e, {
@@ -75,9 +75,9 @@ function x(e) {
                     }
                 })
             }),
-            (0, a.jsx)(i.ModalFooter, {
+            (0, a.jsx)(o.ModalFooter, {
                 className: m.ratingsFooter,
-                children: (0, a.jsx)(i.Text, {
+                children: (0, a.jsx)(o.Text, {
                     variant: 'text-md/normal',
                     children: u.intl.format(u.t.zru1Ky, { safetyCenterUrl: c.EYA.SAFETY_CENTER })
                 })

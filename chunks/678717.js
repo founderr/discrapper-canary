@@ -33,8 +33,8 @@ var v = n(392750),
     y = n(916790),
     k = n(645973),
     I = n(903502),
-    E = n(912072),
-    w = n(272193),
+    w = n(912072),
+    E = n(272193),
     Z = n(735959),
     R = n(246992),
     O = n(496025),
@@ -148,7 +148,7 @@ function q() {
                 e.push({
                     id: 'overlays',
                     name: 'Dev Overlays',
-                    render: () => (0, r.jsx)(E.Z, { devSettingsCategory: b.zU.OVERLAYS })
+                    render: () => (0, r.jsx)(w.Z, { devSettingsCategory: b.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
@@ -158,7 +158,7 @@ function q() {
                 e.push({
                     id: 'reporting',
                     name: 'Reporting',
-                    render: () => (0, r.jsx)(E.Z, { devSettingsCategory: b.zU.REPORTING })
+                    render: () => (0, r.jsx)(w.Z, { devSettingsCategory: b.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',
@@ -210,7 +210,7 @@ function q() {
                 e.push({
                     id: 'gifting_intent',
                     name: 'Gifting Intent',
-                    render: () => (0, r.jsx)(w.Z, {})
+                    render: () => (0, r.jsx)(E.Z, {})
                 }),
                 e
             );

@@ -6,8 +6,8 @@ var i,
     a = n.n(o),
     s = n(748780),
     c = n(846519),
-    u = n(481060),
-    d = n(585483),
+    d = n(481060),
+    u = n(585483),
     h = n(981631),
     p = n(388032),
     m = n(159381);
@@ -30,10 +30,10 @@ let g = {
 };
 class C extends (i = r.PureComponent) {
     componentDidMount() {
-        this.setState({ shown: !0 }), d.S.subscribe(h.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
+        this.setState({ shown: !0 }), u.S.subscribe(h.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
     }
     componentWillUnmount() {
-        this.focusTimeout.stop(), d.S.unsubscribe(h.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
+        this.focusTimeout.stop(), u.S.unsubscribe(h.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
     }
     componentDidUpdate() {
         let { hasQuery: e } = this.props;
@@ -144,4 +144,4 @@ class C extends (i = r.PureComponent) {
             });
     }
 }
-f(C, 'contextType', u.AccessibilityPreferencesContext), (t.Z = C);
+f(C, 'contextType', d.AccessibilityPreferencesContext), (t.Z = C);

@@ -1,53 +1,53 @@
-t.r(n), t(47120), t(757143);
-var r = t(200651),
-    o = t(192379),
-    i = t(481060),
-    a = t(239091),
-    l = t(230711),
-    c = t(493544),
-    u = t(108843),
-    s = t(100527),
-    d = t(906732),
-    g = t(386506),
-    m = t(366953),
-    b = t(991346),
-    f = t(606669),
-    p = t(53432),
-    h = t(74869),
-    _ = t(45570),
-    S = t(308512),
-    x = t(594791),
-    C = t(393431),
-    M = t(69021),
-    Z = t(981631),
-    k = t(388032);
-n.default = (0, u.Z)(
+n.r(t), n(47120), n(757143);
+var i = n(200651),
+    r = n(192379),
+    o = n(481060),
+    l = n(239091),
+    a = n(230711),
+    c = n(493544),
+    u = n(108843),
+    s = n(100527),
+    d = n(906732),
+    g = n(386506),
+    m = n(366953),
+    b = n(991346),
+    p = n(606669),
+    f = n(53432),
+    h = n(74869),
+    _ = n(45570),
+    S = n(308512),
+    x = n(594791),
+    C = n(393431),
+    M = n(69021),
+    Z = n(981631),
+    k = n(388032);
+t.default = (0, u.Z)(
     function (e) {
-        let { webBuildOverride: n, onSelect: t } = e,
-            [u, s] = o.useState(!1),
-            v = (0, _.Z)(),
-            I = (0, S.Z)(),
-            j = (0, p.Z)(),
-            B = (0, f.Z)(),
+        let { webBuildOverride: t, onSelect: n } = e,
+            [u, s] = r.useState(!1),
+            I = (0, _.Z)(),
+            v = (0, S.Z)(),
+            j = (0, f.Z)(),
+            B = (0, p.Z)(),
             E = (0, C.Z)(),
             R = (0, x.Z)(),
-            T = (0, h.Z)(),
-            D = (0, M.Z)(),
-            { analyticsLocations: G } = (0, d.ZP)(),
-            O = o.useMemo(() => (0, m.j)(), []);
-        async function w() {
+            y = (0, h.Z)(),
+            T = (0, M.Z)(),
+            { analyticsLocations: D } = (0, d.ZP)(),
+            G = r.useMemo(() => (0, m.j)(), []);
+        async function U() {
             try {
                 s(!0), await (0, g.bF)(), window.location.reload(!0);
             } catch (e) {
                 s(!1);
             }
         }
-        let U = (e) => {
+        let O = (e) => {
                 switch (e) {
                     case Z.oAB.GAMES:
-                        return v;
-                    case Z.oAB.STREAMER_MODE:
                         return I;
+                    case Z.oAB.STREAMER_MODE:
+                        return v;
                     case Z.oAB.APPEARANCE:
                         return j;
                     case Z.oAB.ACCESSIBILITY:
@@ -57,62 +57,62 @@ n.default = (0, u.Z)(
                     case Z.oAB.TEXT:
                         return R;
                     case Z.oAB.EXPERIMENTS:
-                        return T;
+                        return y;
                     case Z.oAB.DEVELOPER_OPTIONS:
-                        return D;
+                        return T;
                     default:
                         return null;
                 }
             },
-            y = (0, b.VO)()
+            w = (0, b.VO)()
                 .filter((e) => {
-                    let { section: n } = e;
-                    return n !== c.ID.HEADER && n !== c.ID.CUSTOM && n !== c.ID.DIVIDER && 'logout' !== n;
+                    let { section: t } = e;
+                    return t !== c.ID.HEADER && t !== c.ID.CUSTOM && t !== c.ID.DIVIDER && 'logout' !== t;
                 })
                 .filter((e) => null == e.predicate || e.predicate());
-        return (0, r.jsx)(d.Gt, {
-            value: G,
-            children: (0, r.jsxs)(i.Menu, {
+        return (0, i.jsx)(d.Gt, {
+            value: D,
+            children: (0, i.jsxs)(o.Menu, {
                 navId: 'user-settings-cog',
-                onClose: a.Zy,
+                onClose: l.Zy,
                 'aria-label': k.intl.string(k.t.opYYHh),
-                onSelect: t,
+                onSelect: n,
                 children: [
-                    y.map((e) => {
-                        let { section: n, label: t, onClick: o } = e,
-                            a = n.replace(/\W/gi, '_');
-                        return (0, r.jsx)(
-                            i.MenuItem,
+                    w.map((e) => {
+                        let { section: t, label: n, onClick: r } = e,
+                            l = t.replace(/\W/gi, '_');
+                        return (0, i.jsx)(
+                            o.MenuItem,
                             {
-                                id: a,
-                                label: t,
+                                id: l,
+                                label: n,
                                 action: () =>
-                                    null != o
-                                        ? o()
-                                        : (function (e, n) {
-                                              let t = Object.values(Z.oAB).filter((n) => n === e)[0];
-                                              null != t && l.Z.open(t, void 0, { analyticsLocations: n });
-                                          })(n, G),
-                                children: U(n)
+                                    null != r
+                                        ? r()
+                                        : (function (e, t) {
+                                              let n = Object.values(Z.oAB).filter((t) => t === e)[0];
+                                              null != n && a.Z.open(n, void 0, { analyticsLocations: t });
+                                          })(t, D),
+                                children: O(t)
                             },
-                            a
+                            l
                         );
                     }),
-                    e.user.isStaff() && O.length > 0
-                        ? (0, r.jsx)(i.MenuItem, {
+                    e.user.isStaff() && G.length > 0
+                        ? (0, i.jsx)(o.MenuItem, {
                               label: 'Build overrides',
                               id: 'build_overrides',
-                              children: (0, r.jsx)(i.MenuGroup, {
-                                  children: O.map((e) =>
-                                      (0, r.jsx)(
-                                          i.MenuRadioItem,
+                              children: (0, i.jsx)(o.MenuGroup, {
+                                  children: G.map((e) =>
+                                      (0, i.jsx)(
+                                          o.MenuRadioItem,
                                           {
                                               id: 'input-'.concat(e.payload),
                                               group: 'build_overrides',
                                               label: e.id,
-                                              checked: (null == n ? void 0 : n.id) === e.id,
+                                              checked: (null == t ? void 0 : t.id) === e.id,
                                               action: async () => {
-                                                  if ((null == n ? void 0 : n.id) !== e.id) 200 === (await (0, g.f0)(e.payload)).status && window.location.reload(!0);
+                                                  if ((null == t ? void 0 : t.id) !== e.id) 200 === (await (0, g.f0)(e.payload)).status && window.location.reload(!0);
                                               }
                                           },
                                           'input-'.concat(e.payload)
@@ -121,13 +121,13 @@ n.default = (0, u.Z)(
                               })
                           })
                         : null,
-                    null != n
-                        ? (0, r.jsx)(i.MenuGroup, {
-                              children: (0, r.jsx)(i.MenuItem, {
+                    null != t
+                        ? (0, i.jsx)(o.MenuGroup, {
+                              children: (0, i.jsx)(o.MenuItem, {
                                   id: 'clear-build-override',
                                   disabled: u,
                                   label: k.intl.string(k.t['/Nz9ra']),
-                                  action: w,
+                                  action: U,
                                   color: 'danger'
                               })
                           })

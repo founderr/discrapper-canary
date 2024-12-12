@@ -14,8 +14,8 @@ var l = n(120356),
     a = n.n(o),
     s = n(442837),
     c = n(481060),
-    u = n(317381),
-    d = n(884338),
+    d = n(317381),
+    u = n(884338),
     h = n(540059),
     p = n(565799),
     m = n(501655),
@@ -40,7 +40,7 @@ function N(e, t) {
                       className: S.activityIcon,
                       color: 'currentColor'
                   }),
-                  (0, i.jsx)(d.Z, {
+                  (0, i.jsx)(u.Z, {
                       guildId: void 0,
                       users: t,
                       max: 6
@@ -94,9 +94,9 @@ function y() {
             [l]
         ),
         T = (0, s.Wu)(
-            [u.ZP],
+            [d.ZP],
             () => {
-                let e = u.ZP.getEmbeddedActivitiesByChannel(),
+                let e = d.ZP.getEmbeddedActivitiesByChannel(),
                     t = [];
                 for (let r of l) {
                     var n, i;
@@ -125,7 +125,7 @@ function y() {
                               color: 'currentColor',
                               className: S.activityIcon
                           }),
-                          (0, i.jsx)(d.Z, {
+                          (0, i.jsx)(u.Z, {
                               guildId: void 0,
                               users: e,
                               max: 3
@@ -151,9 +151,9 @@ function y() {
             c.ScreenArrowIcon,
             A.filter((e) => null != e && !T.includes(e.id))
         ),
-        L = N(c.ActivitiesIcon, j);
+        w = N(c.ActivitiesIcon, j);
     return (0, i.jsxs)(i.Fragment, {
-        children: [R, P, M, L]
+        children: [R, P, M, w]
     });
 }
 function T() {

@@ -42,7 +42,7 @@ function b(t) {
         x ? ((0, d.JO)(), l.default.track(I.rMx.VIBING_WUMPUS_ACTION, { action: _.G.PLAY })) : ((0, d.hW)(), l.default.track(I.rMx.VIBING_WUMPUS_ACTION, { action: _.G.PAUSE })), h(!x);
     };
     async function m() {
-        let { default: t } = await e.e('39062').then(e.t.bind(e, 937359, 19));
+        let { default: t } = await e.e('29641').then(e.t.bind(e, 937359, 19));
         return t;
     }
     return (0, i.jsxs)(i.Fragment, {

@@ -11,8 +11,8 @@ var l = n(120356),
     a = n(589440),
     s = n(481060),
     c = n(23202),
-    u = n(831746),
-    d = n(193877);
+    d = n(831746),
+    u = n(193877);
 function h(e) {
     var t;
     let { id: n, className: l, innerClassName: h, renderIcon: p, text: m, selected: f, trailing: g, showUnread: C = !1, ...v } = e,
@@ -41,20 +41,20 @@ function h(e) {
                     : (e) => {
                           e.stopPropagation();
                       },
-            className: r()(u.containerDefault, d.wrapper, { [d.modeSelected]: f }, l),
+            className: r()(d.containerDefault, u.wrapper, { [u.modeSelected]: f }, l),
             children: [
-                C ? (0, i.jsx)('div', { className: r()(d.unread, d.unreadImportant) }) : null,
+                C ? (0, i.jsx)('div', { className: r()(u.unread, u.unreadImportant) }) : null,
                 (0, i.jsx)('div', {
-                    className: r()([d.link, d.basicChannelRowLink, h]),
+                    className: r()([u.link, u.basicChannelRowLink, h]),
                     children: (0, i.jsxs)('div', {
                         className: c.content,
                         children: [
                             (0, i.jsx)('div', {
-                                className: d.iconContainer,
-                                children: p(d.icon)
+                                className: u.iconContainer,
+                                children: p(u.icon)
                             }),
                             (0, i.jsx)('div', {
-                                className: d.name,
+                                className: u.name,
                                 'aria-hidden': !0,
                                 children: m
                             }),

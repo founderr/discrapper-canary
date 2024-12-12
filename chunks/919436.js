@@ -6,8 +6,8 @@ var i,
     a = n(91192),
     s = n(442837),
     c = n(481060),
-    u = n(239091),
-    d = n(358221),
+    d = n(239091),
+    u = n(358221),
     h = n(43267),
     p = n(933557),
     m = n(93687),
@@ -115,7 +115,7 @@ class P extends (i = r.PureComponent) {
         return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, h.x)(e);
     }
     render() {
-        let { channel: e, channelName: t, selected: n, badge: i, audio: r, video: s, stream: u, isCurrentUserInThisDMCall: d, unread: h, isGDMFacepileEnabled: p } = this.props,
+        let { channel: e, channelName: t, selected: n, badge: i, audio: r, video: s, stream: d, isCurrentUserInThisDMCall: u, unread: h, isGDMFacepileEnabled: p } = this.props,
             { hovered: m, animating: g } = this.state,
             C = e.isMultiUserDM() && null == e.icon && p;
         return (0, l.jsx)(o.animated.div, {
@@ -137,8 +137,8 @@ class P extends (i = r.PureComponent) {
                             upperBadge: (0, Z.Or)({
                                 audio: r,
                                 video: s,
-                                screenshare: u,
-                                isCurrentUserConnected: d
+                                screenshare: d,
+                                isCurrentUserConnected: u
                             }),
                             lowerBadgeSize: { width: (0, c.getBadgeWidthForValue)(i) },
                             children: (0, l.jsx)(a.mh, {
@@ -187,7 +187,7 @@ class P extends (i = r.PureComponent) {
                 let { channel: t } = this.props,
                     i = t.type === N.d4z.DM ? x.default.getUser(t.getRecipientId()) : null;
                 null != i
-                    ? (0, u.jW)(e, async () => {
+                    ? (0, d.jW)(e, async () => {
                           let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('56826'), n.e('5606')]).then(n.bind(n, 131404));
                           return (n) =>
                               (0, l.jsx)(e, {
@@ -196,7 +196,7 @@ class P extends (i = r.PureComponent) {
                                   user: i
                               });
                       })
-                    : (0, u.jW)(e, async () => {
+                    : (0, d.jW)(e, async () => {
                           let { default: e } = await Promise.all([n.e('79695'), n.e('25421')]).then(n.bind(n, 354741));
                           return (n) =>
                               (0, l.jsx)(e, {
@@ -218,10 +218,10 @@ T(P, 'defaultProps', {
         let n = e.channel.id,
             i = (0, p.ZP)(e.channel),
             r = (0, s.e7)([C.Z], () => C.Z.getChannelId(), []),
-            o = (0, s.e7)([d.Z], () => (null != r ? d.Z.getMode(r) : N.WtW.VOICE), [r]),
+            o = (0, s.e7)([u.Z], () => (null != r ? u.Z.getMode(r) : N.WtW.VOICE), [r]),
             a = (0, s.e7)([g.Z], () => g.Z.getAllApplicationStreamsForChannel(n).length > 0),
             c = (0, s.e7)([_.Z], () => _.Z.getChannelId(), []),
-            u = (0, s.e7)([v.ZP], () => v.ZP.getMentionCount(n), [n]),
+            d = (0, s.e7)([v.ZP], () => v.ZP.getMentionCount(n), [n]),
             { isFacepileEnabled: h } = m.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
             f = r === n,
             x = !1,
@@ -232,9 +232,9 @@ T(P, 'defaultProps', {
                 ...e,
                 ref: t,
                 channelName: i,
-                unread: u > 0,
+                unread: d > 0,
                 selected: c === n,
-                badge: u,
+                badge: d,
                 audio: x,
                 video: I,
                 stream: a,

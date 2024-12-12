@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return b;
+            return m;
         }
     });
 var o = n(200651);
@@ -14,8 +14,8 @@ var i = n(481060),
     u = n(445102),
     c = n(190378),
     d = n(388032);
-function b(e) {
-    let { onClose: t, transitionState: b, analyticsData: m } = e,
+function m(e) {
+    let { onClose: t, transitionState: m, analyticsData: b } = e,
         h = (0, l.I)('CALL_FEEDBACK_OPTION_OTHER');
     return (0, o.jsx)(a.Z, {
         modalType: 'voice',
@@ -26,9 +26,9 @@ function b(e) {
         feedbackProblems: [h],
         onSubmit: function (e) {
             var t, l, a;
-            let { rating: b, problem: h, dontShowAgain: _, feedback: p } = e;
-            if ((_ && (0, s.Kw)(c.v.VOICE_CALL_FEEDBACK), null != b))
-                (0, u.Z)(b, ((t = h), null !== (a = null === (l = (0, r.Z)(!1).find((e) => e.label === t)) || void 0 === l ? void 0 : l.code) && void 0 !== a ? a : null), h, p, m),
+            let { rating: m, problem: h, dontShowAgain: _, feedback: g } = e;
+            if ((_ && (0, s.Kw)(c.v.VOICE_CALL_FEEDBACK), null != m))
+                (0, u.Z)(m, ((t = h), null !== (a = null === (l = (0, r.Z)(!1).find((e) => e.label === t)) || void 0 === l ? void 0 : l.code) && void 0 !== a ? a : null), h, g, b),
                     null != h &&
                         (0, i.openModalLazy)(async () => {
                             let { default: e } = await n.e('14466').then(n.bind(n, 729328));
@@ -40,7 +40,7 @@ function b(e) {
                         });
         },
         onClose: t,
-        transitionState: b,
+        transitionState: m,
         otherKey: h
     });
 }

@@ -79,28 +79,28 @@ let N = (0, v.IC)(96),
               });
     };
 function L(e) {
-    var t, n, a;
-    let { category: i, className: u, hideLimitedTimeBadge: m = !1 } = e,
-        { backgroundColors: h } = (0, b.Z)(i.styles),
-        p = (0, S.ZS)(i.skuId),
-        C = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
-        j = (0, o.e7)([f.Z], () => f.Z.isFocused());
-    if (i.skuId === s.T.CHANCE) return (0, r.jsx)(k.O, { category: i });
-    let E = !!(null == p ? void 0 : p.showDarkBannerText),
-        L = null == p ? void 0 : p.animatedBanner;
+    var t, n, a, i, u, m, h;
+    let { category: p, className: C, hideLimitedTimeBadge: j = !1 } = e,
+        { backgroundColors: E } = (0, b.Z)(p.styles),
+        L = (0, S.ZS)(p.skuId),
+        P = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
+        Z = (0, o.e7)([f.Z], () => f.Z.isFocused());
+    if (p.skuId === s.T.CHANCE) return (0, r.jsx)(k.O, { category: p });
+    let O = !!(null == L ? void 0 : L.showDarkBannerText),
+        w = null !== (m = null == L ? void 0 : L.animatedBanner) && void 0 !== m ? m : null === (t = p.bannerAsset) || void 0 === t ? void 0 : t.animated;
     return (0, r.jsxs)(x.Z, {
-        asset: i.banner,
-        className: l()(T.shopBanner, u),
+        asset: null !== (h = null === (n = p.bannerAsset) || void 0 === n ? void 0 : n.static) && void 0 !== h ? h : p.banner,
+        className: l()(T.shopBanner, C),
         style:
-            null != h
+            null != E
                 ? {
-                      background: ''.concat((0, I.nH)(h), ' border-box border-box'),
-                      outlineColor: h.border.toHslString()
+                      background: ''.concat((0, I.nH)(E), ' border-box border-box'),
+                      outlineColor: E.border.toHslString()
                   }
                 : void 0,
         children: [
-            !C && void 0 !== L && j && (0, r.jsx)(y, { src: L }),
-            (null === (t = S.Ve[i.skuId]) || void 0 === t ? void 0 : t.addAttributionLogo)
+            !P && void 0 !== w && Z && (0, r.jsx)(y, { src: w }),
+            (null === (a = S.Ve[p.skuId]) || void 0 === a ? void 0 : a.addAttributionLogo)
                 ? (0, r.jsxs)('div', {
                       className: T.discordLogo,
                       children: [
@@ -115,22 +115,22 @@ function L(e) {
                       ]
                   })
                 : (0, r.jsx)(c.Spacer, { size: 28 }),
-            (null === (n = S.Ve[i.skuId]) || void 0 === n ? void 0 : n.addLogo)
+            (null === (i = S.Ve[p.skuId]) || void 0 === i ? void 0 : i.addLogo)
                 ? (0, r.jsx)('img', {
                       className: T.categoryLogo,
-                      src: (0, v.uV)(i.logo, { size: N }),
-                      alt: i.name,
-                      style: { maxWidth: null === (a = S.Ve[i.skuId]) || void 0 === a ? void 0 : a.logoMaxWidth }
+                      src: (0, v.uV)(p.logo, { size: N }),
+                      alt: p.name,
+                      style: { maxWidth: null === (u = S.Ve[p.skuId]) || void 0 === u ? void 0 : u.logoMaxWidth }
                   })
                 : (0, r.jsx)(c.Spacer, { size: 96 }),
             (0, r.jsx)(c.Text, {
-                className: l()(T.summary, { [T.blackSummary]: E }),
+                className: l()(T.summary, { [T.blackSummary]: O }),
                 variant: 'text-md/normal',
-                children: i.skuId === s.T.DISXCORE ? (0, r.jsx)(B, { category: i }) : i.summary
+                children: p.skuId === s.T.DISXCORE ? (0, r.jsx)(B, { category: p }) : p.summary
             }),
-            !m &&
+            !j &&
                 (0, r.jsx)(_.Z, {
-                    category: i,
+                    category: p,
                     className: T.limitedTimeBadge,
                     display: 'banner'
                 })

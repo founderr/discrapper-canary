@@ -10,8 +10,8 @@ var i = n(200651),
     a = n(442837),
     s = n(239091),
     c = n(410030),
-    u = n(377171),
-    d = n(682662),
+    d = n(377171),
+    u = n(682662),
     h = n(662146),
     p = n(678513),
     m = n(981631),
@@ -62,7 +62,7 @@ function C(e) {
             ]
         }),
         x = (0, c.Fg)();
-    return (0, i.jsxs)(d.H, {
+    return (0, i.jsxs)(u.H, {
         children: [
             (0, i.jsx)(o.ThemeContextProvider, {
                 theme: m.BRd.DARK,
@@ -75,13 +75,13 @@ function C(e) {
                         children: (0, i.jsx)(o.BlobMask, {
                             lowerBadge: (0, i.jsx)(o.NumberBadge, {
                                 count: 1,
-                                color: u.Z.BG_BRAND
+                                color: d.Z.BG_BRAND
                             }),
                             children: (0, i.jsx)(o.NavItem, {
                                 ...a,
                                 onClick: p,
                                 onContextMenu: C,
-                                children: (0, i.jsx)(o.BellIcon, { color: u.Z.TEXT_NORMAL })
+                                children: (0, i.jsx)(o.BellIcon, { color: d.Z.TEXT_NORMAL })
                             })
                         })
                     })

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return w;
     }
 }),
     n(47120);
@@ -187,7 +187,7 @@ let I = [
         }
     }
 ];
-function E() {
+function w() {
     let e = a.useRef(null),
         [t, n] = a.useState(''),
         l = (function (e) {
@@ -260,7 +260,7 @@ function E() {
             T.current = null;
         }, []);
     let y = t.trim().length > 0,
-        E = a.useMemo(() => (y ? x : p ? c : s), [s, x, y, p, c]);
+        w = a.useMemo(() => (y ? x : p ? c : s), [s, x, y, p, c]);
     return (0, r.jsxs)('div', {
         ref: e,
         className: i()(_.panel, C.panel),
@@ -287,7 +287,7 @@ function E() {
             }),
             (0, r.jsx)(v.Z, {
                 columns: I,
-                data: E,
+                data: w,
                 selectedRowKey: null == b ? void 0 : b.id.toString(),
                 onClickRow: (e) => j(e.actionLog)
             }),

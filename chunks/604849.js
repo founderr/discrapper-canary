@@ -1,17 +1,17 @@
-e.d(t, {
+n.d(t, {
     c: function () {
-        return a;
+        return o;
     }
 });
-var r = e(442837),
-    i = e(581883),
-    u = e(594174),
-    l = e(981312);
-let a = () => {
-    let n = u.default.getCurrentUser(),
-        t = (0, r.e7)([i.Z], () => {
-            var n, t, e;
-            return null === (e = null === (t = i.Z.settings.privacy) || void 0 === t ? void 0 : null === (n = t.inappropriateConversationWarnings) || void 0 === n ? void 0 : n.value) || void 0 === e || e;
+var i = n(442837),
+    r = n(581883),
+    l = n(594174),
+    a = n(981312);
+let o = () => {
+    let e = l.default.getCurrentUser(),
+        t = (0, i.e7)([r.Z], () => {
+            var e, t, n;
+            return null === (n = null === (t = r.Z.settings.privacy) || void 0 === t ? void 0 : null === (e = t.inappropriateConversationWarnings) || void 0 === e ? void 0 : e.value) || void 0 === n || n;
         });
-    return ((0, l.U)() || (null == n ? void 0 : n.isStaff()) === !0) && t;
+    return ((0, a.U)() || (null == e ? void 0 : e.isStaff()) === !0) && t;
 };

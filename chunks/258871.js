@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(554747),
     s = n(434479),
     c = n(593364),
-    u = n(703656),
-    d = n(944486),
+    d = n(703656),
+    u = n(944486),
     h = n(147754),
     p = n(688438),
     m = n(981631),
@@ -43,7 +43,7 @@ let g = [
                 className: e
             }),
         getName: () => f.intl.string(f.t.K50GHR),
-        handler: (e, t) => (0, u.XU)(e.id, t.id)
+        handler: (e, t) => (0, d.XU)(e.id, t.id)
     },
     {
         key: 'ADD_SERVERS',
@@ -92,32 +92,32 @@ t.Z = (e) => {
             location: '543af8_1'
         });
     }, [t.id]);
-    let { showHubEventsList: u } = h.Z.useExperiment(
+    let { showHubEventsList: d } = h.Z.useExperiment(
             {
                 guildId: t.id,
                 location: '543af8_2'
             },
             { autoTrackExposure: !1 }
         ),
-        m = (0, r.e7)([d.Z], () => null != n && d.Z.getChannelId() === n.id),
+        m = (0, r.e7)([u.Z], () => null != n && u.Z.getChannelId() === n.id),
         f = l.useMemo(() => ({ numEvents: o.length }), [o.length]),
         C = (0, p.t)(n);
     return (0, i.jsx)(i.Fragment, {
         children: g.map((e) => {
             let { key: l, getName: r, handler: o, renderIcon: a } = e;
-            if (!u && 'EVENTS' === l) return null;
-            let d = ''.concat(l, '-').concat(t.id);
+            if (!d && 'EVENTS' === l) return null;
+            let u = ''.concat(l, '-').concat(t.id);
             return (0, i.jsx)(
                 s.m,
                 {
-                    id: d,
+                    id: u,
                     renderIcon: a,
                     text: r(f),
                     selected: m && 'JOIN_SERVERS' === l,
                     onClick: null != n ? () => o(t, n) : void 0,
                     trailing: 'JOIN_SERVERS' === l && C > 0 ? (0, c.N)(C) : null
                 },
-                d
+                u
             );
         })
     });

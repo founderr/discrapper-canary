@@ -6,8 +6,8 @@ var i = n(200651),
     a = n(392711),
     s = n.n(a),
     c = n(512969),
-    u = n(91192),
-    d = n(374470),
+    d = n(91192),
+    u = n(374470),
     h = n(442837),
     p = n(902704),
     m = n(846519),
@@ -30,13 +30,13 @@ var i = n(200651),
     P = n(358085),
     R = n(709054),
     M = n(727258),
-    L = n(605951),
-    w = n(474109),
+    w = n(605951),
+    L = n(474109),
     D = n(741616),
     O = n(187835),
     k = n(118122),
-    U = n(193154),
-    G = n(602147),
+    G = n(193154),
+    U = n(602147),
     B = n(416637),
     H = n(222059),
     V = n(751277),
@@ -120,7 +120,7 @@ class et {
                     if ((null == t ? void 0 : t.parentId) == null) break;
                     i = this.nodeRefs[t.parentId];
                 }
-                null != i && (0, d.k)(i)
+                null != i && (0, u.k)(i)
                     ? n.scrollIntoViewNode({
                           node: i,
                           animate: t,
@@ -170,7 +170,7 @@ class et {
 function en(e) {
     let { disableAppDownload: t = P.isPlatformEmbedded, isOverlay: n = !1, className: r, themeOverride: a } = e,
         s = (0, I.Q3)('GuildsBar'),
-        { density: d } = (0, f.useThemeContext)(),
+        { density: u } = (0, f.useThemeContext)(),
         [p] = (0, h.Wu)([A.ZP], () => {
             let e = A.ZP.getGuildsTree();
             return [e, e.version];
@@ -185,10 +185,10 @@ function en(e) {
         ea = l.useCallback(() => eo(!0), []),
         es = l.useCallback(() => eo(!1), []),
         ec = l.useRef(!1),
-        [eu] = l.useState(() => new m.V7()),
-        ed = l.useRef(null),
+        [ed] = l.useState(() => new m.V7()),
+        eu = l.useRef(null),
         eh = l.useRef(null),
-        { ref: ep, ...em } = (0, u.OP)(),
+        { ref: ep, ...em } = (0, d.OP)(),
         ef = (0, f.useFocusJumpSection)(),
         [eg, eC] = l.useState(!1),
         [ev, e_] = l.useState(!1),
@@ -200,7 +200,7 @@ function en(e) {
                     e_,
                     () => {
                         var e, t;
-                        null === (e = ed.current) || void 0 === e || e.calculateState(), null === (t = eh.current) || void 0 === t || t.calculateState();
+                        null === (e = eu.current) || void 0 === e || e.calculateState(), null === (t = eh.current) || void 0 === t || t.calculateState();
                     },
                     (function (e, t) {
                         let n = e ? 40 : 44,
@@ -215,9 +215,9 @@ function en(e) {
                             separatorSize: r,
                             heightBeforeIcons: ee + r
                         };
-                    })(s, d)
+                    })(s, u)
                 ),
-            [d, p, s]
+            [u, p, s]
         );
     l.useEffect(
         () => (
@@ -243,7 +243,7 @@ function en(e) {
                         animate: !1
                     });
                 }
-                return (ec.current = !0), () => eu.stop();
+                return (ec.current = !0), () => ed.stop();
             }
         }
     }, []),
@@ -296,13 +296,13 @@ function en(e) {
                 return null;
         }
     }
-    (0, L.Z)(ex.scrollToGuild);
+    (0, w.Z)(ex.scrollToGuild);
     let ey = p.getRoots(),
         eT = (0, b.Z)(),
         ej = (0, N.U)(),
         eA = el.map((e) =>
             (0, i.jsx)(
-                U.Z,
+                G.Z,
                 {
                     id: e.id,
                     name: e.name,
@@ -326,8 +326,8 @@ function en(e) {
                         role: 'tree',
                         className: X.tree,
                         children: [
-                            (0, i.jsx)(w.Z, {
-                                ref: ed,
+                            (0, i.jsx)(L.Z, {
+                                ref: eu,
                                 isVisible: ex.isItemVisible,
                                 onJumpTo: ex.handleJumpToGuild,
                                 className: X.unreadMentionsIndicatorTop,
@@ -379,14 +379,14 @@ function en(e) {
                                         ? null
                                         : (0, i.jsx)(B.g, {
                                               hideGradient: ev,
-                                              children: (0, i.jsx)(G.Z, {
+                                              children: (0, i.jsx)(U.Z, {
                                                   selected: eE,
                                                   className: X.fixedDiscoveryIcon
                                               })
                                           })
                                 ]
                             }),
-                            (0, i.jsx)(w.Z, {
+                            (0, i.jsx)(L.Z, {
                                 reverse: !0,
                                 ref: eh,
                                 isVisible: ex.isItemVisible,
@@ -403,7 +403,7 @@ function en(e) {
 t.Z = l.memo(
     function (e) {
         let t = (0, C.Z)('guildsnav');
-        return (0, i.jsx)(u.bG, {
+        return (0, i.jsx)(d.bG, {
             navigator: t,
             children: (0, i.jsx)(en, { ...e })
         });

@@ -21,8 +21,8 @@ var l = n(120356),
     a = n(44315),
     s = n(246364),
     c = n(460562),
-    u = n(981631),
-    d = n(940722);
+    d = n(981631),
+    u = n(940722);
 function h(e, t) {
     return (0, i.jsx)(o.NumberBadge, {
         count: e,
@@ -33,7 +33,7 @@ function p() {
     return (0, i.jsx)(o.IconBadge, {
         icon: (0, o.makeIconCompat)(c.Z),
         disableColor: !0,
-        className: d.unavailableBadge
+        className: u.unavailableBadge
     });
 }
 function m(e) {
@@ -60,9 +60,9 @@ function f(e) {
                 case s.wB.SUBMITTED:
                     return [void 0, o.ClockIcon];
                 case s.wB.REJECTED:
-                    return [u.Ilk.RED_400, o.XSmallIcon];
+                    return [d.Ilk.RED_400, o.XSmallIcon];
                 case s.wB.APPROVED:
-                    return [u.Ilk.GREEN_360, o.CheckmarkLargeIcon];
+                    return [d.Ilk.GREEN_360, o.CheckmarkLargeIcon];
                 default:
                     return [void 0, o.PencilIcon];
             }
@@ -77,7 +77,7 @@ function g(e) {
         s = null == n ? { disableColor: !0 } : { color: (0, a.Lq)(n) };
     return (0, i.jsx)(o.IconBadge, {
         icon: t,
-        className: r()(d.iconBadge, { [d.isCurrentUserConnected]: l }),
+        className: r()(u.iconBadge, { [u.isCurrentUserConnected]: l }),
         ...s
     });
 }

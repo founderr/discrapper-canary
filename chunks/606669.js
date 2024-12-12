@@ -1,24 +1,24 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return u;
     }
 });
-var r = t(200651);
-t(192379);
-var o = t(442837),
-    i = t(481060),
-    a = t(857595),
-    l = t(607070),
-    c = t(388032);
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    o = n(481060),
+    l = n(857595),
+    a = n(607070),
+    c = n(388032);
 function u() {
     let {
             saturation: e,
-            useReducedMotion: n,
-            roleStyle: t
-        } = (0, o.cj)([l.Z], () => ({
-            saturation: l.Z.saturation,
-            useReducedMotion: l.Z.useReducedMotion,
-            roleStyle: l.Z.roleStyle
+            useReducedMotion: t,
+            roleStyle: n
+        } = (0, r.cj)([a.Z], () => ({
+            saturation: a.Z.saturation,
+            useReducedMotion: a.Z.useReducedMotion,
+            roleStyle: a.Z.roleStyle
         })),
         u = [
             {
@@ -35,54 +35,54 @@ function u() {
             }
         ];
     return [
-        (0, r.jsx)(
-            i.MenuGroup,
+        (0, i.jsx)(
+            o.MenuGroup,
             {
-                children: (0, r.jsx)(i.MenuCheckboxItem, {
+                children: (0, i.jsx)(o.MenuCheckboxItem, {
                     id: 'reduced-motion',
                     label: c.intl.string(c.t.b3XBzs),
-                    checked: n,
-                    action: () => (0, a.Zt)(n ? 'no-preference' : 'reduce')
+                    checked: t,
+                    action: () => (0, l.Zt)(t ? 'no-preference' : 'reduce')
                 })
             },
             'reduced-motion'
         ),
-        (0, r.jsx)(
-            i.MenuGroup,
+        (0, i.jsx)(
+            o.MenuGroup,
             {
-                children: (0, r.jsx)(i.MenuControlItem, {
+                children: (0, i.jsx)(o.MenuControlItem, {
                     id: 'input',
                     label: c.intl.string(c.t['5PWWCQ']),
-                    control: (n, t) =>
-                        (0, r.jsx)(i.MenuSliderControl, {
-                            ...n,
-                            ref: t,
+                    control: (t, n) =>
+                        (0, i.jsx)(o.MenuSliderControl, {
+                            ...t,
+                            ref: n,
                             value: 100 * e,
-                            onChange: (e) => (0, a.o2)(e / 100),
+                            onChange: (e) => (0, l.o2)(e / 100),
                             'aria-label': c.intl.string(c.t['5PWWCQ'])
                         })
                 })
             },
             'input'
         ),
-        (0, r.jsx)(
-            i.MenuGroup,
+        (0, i.jsx)(
+            o.MenuGroup,
             {
-                children: (0, r.jsx)(i.MenuItem, {
+                children: (0, i.jsx)(o.MenuItem, {
                     id: 'role-colors',
                     label: c.intl.string(c.t.uSOPWl),
                     children: u.map((e) => {
-                        let { name: n, value: o } = e;
-                        return (0, r.jsx)(
-                            i.MenuRadioItem,
+                        let { name: t, value: r } = e;
+                        return (0, i.jsx)(
+                            o.MenuRadioItem,
                             {
-                                id: o,
+                                id: r,
                                 group: 'role-colors',
-                                checked: o === t,
-                                label: n,
-                                action: () => (0, a.u1)(o)
+                                checked: r === n,
+                                label: t,
+                                action: () => (0, l.u1)(r)
                             },
-                            o
+                            r
                         );
                     })
                 })

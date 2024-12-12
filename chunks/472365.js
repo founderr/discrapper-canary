@@ -11,8 +11,8 @@ var i = n(200651),
     a = n(399606),
     s = n(481060),
     c = n(588705),
-    u = n(100527),
-    d = n(906732),
+    d = n(100527),
+    u = n(906732),
     h = n(388905),
     p = n(792766),
     m = n(600164),
@@ -35,8 +35,8 @@ var i = n(200651),
     P = n(388032),
     R = n(939661),
     M = n(232186);
-function L() {
-    let { analyticsLocations: e, sourceAnalyticsLocations: t } = (0, d.ZP)(u.Z.PREMIUM_UPSELL_TOOLTIP);
+function w() {
+    let { analyticsLocations: e, sourceAnalyticsLocations: t } = (0, u.ZP)(d.Z.PREMIUM_UPSELL_TOOLTIP);
     return (
         l.useEffect(() => {
             E.default.track(j.rMx.PREMIUM_UPSELL_VIEWED, {
@@ -74,7 +74,7 @@ function L() {
         })
     );
 }
-function w(e) {
+function L(e) {
     let { className: t } = e;
     return (0, i.jsxs)('div', {
         'aria-hidden': 'true',
@@ -95,8 +95,8 @@ function w(e) {
 function D(e) {
     let { transitionState: t } = e,
         n = (0, g.Dt)(),
-        { analyticsLocations: l } = (0, d.ZP)(u.Z.INVITE_MODAL);
-    return (0, i.jsx)(d.Gt, {
+        { analyticsLocations: l } = (0, u.ZP)(d.Z.INVITE_MODAL);
+    return (0, i.jsx)(u.Gt, {
         value: l,
         children: (0, i.jsx)(s.ModalRoot, {
             size: s.ModalSize.DYNAMIC,
@@ -105,7 +105,7 @@ function D(e) {
             children: (0, i.jsxs)(s.ModalContent, {
                 className: R.errorContent,
                 children: [
-                    (0, i.jsx)(w, { className: R.errorImage }),
+                    (0, i.jsx)(L, { className: R.errorImage }),
                     (0, i.jsx)(s.Heading, {
                         id: n,
                         variant: 'heading-xl/semibold',
@@ -140,30 +140,30 @@ function O(e) {
         !__OVERLAY__ && Z.isPlatformEmbedded && ((0, Z.isWindows)() ? N.ZP.minimize() : N.ZP.restore(), N.ZP.focus());
     }, []);
     let b = (0, g.Dt)(),
-        { analyticsLocations: E } = (0, d.ZP)(u.Z.INVITE_MODAL);
+        { analyticsLocations: E } = (0, u.ZP)(d.Z.INVITE_MODAL);
     if (null == f) return null;
     if (f.state === j.r2o.EXPIRED || f.state === j.r2o.BANNED || f.state === j.r2o.ERROR) return (0, i.jsx)(D, { transitionState: r });
     if (null == f.channel) return null;
     function A() {
         null != f && y.Z.acceptInvite(f);
     }
-    let { guild: w, channel: O, inviter: k, target_application: U } = f,
-        G = null != w,
+    let { guild: L, channel: O, inviter: k, target_application: G } = f,
+        U = null != L,
         B = null != f.stage_instance,
         H = null == f.guild && null == f.channel && null != f.inviter;
-    if (null != U) (t = null == w ? void 0 : w.name), (n = _.ZP.createFromServer(U).getCoverImageURL(1024));
-    else if (null != w)
-        (t = w.name),
+    if (null != G) (t = null == L ? void 0 : L.name), (n = _.ZP.createFromServer(G).getCoverImageURL(1024));
+    else if (null != L)
+        (t = L.name),
             (n = S.ZP.getGuildSplashURL({
-                id: w.id,
-                splash: w.splash
+                id: L.id,
+                splash: L.splash
             }));
     else if (((null == (t = O.name) || '' === t) && null != k && (t = k.username), null == t)) throw Error('no name for group DM invite');
     let V = (0, C.yU)(),
         F = B ? P.intl.string(P.t['5UKyUl']) : P.intl.format(P.t.QD7BDA, { guildName: t });
     return (
         H && (F = P.intl.string(P.t['e/6Ogo'])),
-        (0, i.jsx)(d.Gt, {
+        (0, i.jsx)(u.Gt, {
             value: E,
             children: (0, i.jsxs)(s.ModalRoot, {
                 size: s.ModalSize.DYNAMIC,
@@ -185,24 +185,24 @@ function O(e) {
                                         className: M.marginBottom20,
                                         children: (0, i.jsx)(c.Z, {
                                             invite: f,
-                                            disableUser: G,
+                                            disableUser: U,
                                             error: v
                                         })
                                     }),
-                                    B && null != w
+                                    B && null != L
                                         ? (0, i.jsx)('div', {
                                               className: o()(M.marginBottom20, R.stage),
                                               children: (0, i.jsx)(p.Z, {
                                                   isCard: !0,
                                                   stageInstance: f.stage_instance,
-                                                  guild: w
+                                                  guild: L
                                               })
                                           })
                                         : null,
                                     (0, i.jsxs)('div', {
                                         children: [
-                                            V ? (0, i.jsx)(L, {}) : null,
-                                            null == U
+                                            V ? (0, i.jsx)(w, {}) : null,
+                                            null == G
                                                 ? (0, i.jsx)(s.Tooltip, {
                                                       text: V ? P.intl.string(P.t.iLyuDA) : null,
                                                       position: 'bottom',

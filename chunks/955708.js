@@ -1,12 +1,12 @@
 e.r(n),
     e.d(n, {
         InappropriateConversationModalSlideKeys: function () {
-            return o;
+            return r;
         }
     }),
     e(47120);
-var o,
-    r,
+var r,
+    o,
     i = e(200651),
     s = e(192379),
     a = e(481060),
@@ -17,19 +17,19 @@ var o,
     E = e(463439),
     N = e(388032),
     h = e(515562);
-((r = o || (o = {}))[(r.INTRO = 0)] = 'INTRO'), (r[(r.SAFETY_TIPS = 1)] = 'SAFETY_TIPS'), (r[(r.TAKE_ACTION = 2)] = 'TAKE_ACTION');
+((o = r || (r = {}))[(o.INTRO = 0)] = 'INTRO'), (o[(o.SAFETY_TIPS = 1)] = 'SAFETY_TIPS'), (o[(o.TAKE_ACTION = 2)] = 'TAKE_ACTION');
 n.default = (t) => {
-    let { warningId: n, warningType: e, senderId: o, modalProps: r, channelId: I } = t,
-        [f, _] = s.useState(0),
+    let { warningId: n, warningType: e, senderId: r, modalProps: o, channelId: f } = t,
+        [_, I] = s.useState(0),
         C = s.useMemo(
             () => ({
-                channelId: I,
-                senderId: o,
+                channelId: f,
+                senderId: r,
                 warningId: n,
                 warningType: e,
                 isNudgeWarning: !1
             }),
-            [I, o, n, e]
+            [f, r, n, e]
         );
     s.useEffect(() => {
         (0, l.KQ)({
@@ -48,16 +48,16 @@ n.default = (t) => {
         ),
         [A, p] = s.useState(!1);
     function g(t) {
-        _(t);
+        I(t);
     }
     return (0, i.jsxs)(a.ModalRoot, {
-        transitionState: r.transitionState,
+        transitionState: o.transitionState,
         children: [
             (0, i.jsx)('div', {
                 className: h.container,
                 children: (0, i.jsxs)(a.Slides, {
                     width: 440,
-                    activeSlide: f,
+                    activeSlide: _,
                     centered: !1,
                     overflow: 'visible',
                     contentDisplay: 'flex',
@@ -66,7 +66,7 @@ n.default = (t) => {
                             id: 0,
                             children: (0, i.jsx)(u.Z, {
                                 warningId: n,
-                                senderId: o,
+                                senderId: r,
                                 trackAnalyticsEvent: T,
                                 onNavigate: g
                             })
@@ -75,7 +75,7 @@ n.default = (t) => {
                             id: 1,
                             children: (0, i.jsx)(d.Z, {
                                 warningId: n,
-                                senderId: o,
+                                senderId: r,
                                 trackAnalyticsEvent: T
                             })
                         }),
@@ -83,9 +83,9 @@ n.default = (t) => {
                             id: 2,
                             children: (0, i.jsx)(E.Z, {
                                 warningId: n,
-                                senderId: o,
+                                senderId: r,
                                 trackAnalyticsEvent: T,
-                                channelId: I,
+                                channelId: f,
                                 hasReported: A,
                                 onReport: function () {
                                     p(!0);
@@ -104,11 +104,11 @@ n.default = (t) => {
                         color: a.Button.Colors.CUSTOM,
                         size: a.Button.Sizes.MIN,
                         onClick: function () {
-                            r.onClose(), (0, c.T)(I, [n]), T(l.NM.USER_TAKEOVER_MODAL_DISMISS);
+                            o.onClose(), (0, c.T)(f, [n]), T(l.NM.USER_TAKEOVER_MODAL_DISMISS);
                         },
                         children: N.intl.string(N.t.cpT0Cg)
                     }),
-                    0 !== f &&
+                    0 !== _ &&
                         (0, i.jsx)(a.Button, {
                             className: h.footerButton,
                             look: a.Button.Looks.LINK,

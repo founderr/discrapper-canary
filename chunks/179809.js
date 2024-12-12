@@ -11,8 +11,8 @@ var i = n(200651),
     a = n(999153),
     s = n(752877),
     c = n(91192),
-    u = n(477690),
-    d = n(481060),
+    d = n(477690),
+    u = n(481060),
     h = n(153867),
     p = n(540059),
     m = n(771845),
@@ -27,11 +27,11 @@ var i = n(200651),
     E = n(388032),
     S = n(10448),
     Z = n(284923);
-let N = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
-    y = (0, s.animated)(d.Stack);
+let N = (0, f.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
+    y = (0, s.animated)(u.Stack);
 function T(e) {
     var t;
-    let { folderNode: n, setNodeRef: r, selected: s, expanded: u, mediaState: f, mentionCount: T = 0, isMentionLowImportance: j, unread: A = !1, defaultFolderName: P, useCircleMask: R = !1, draggable: M = !1, sorting: w = !1, onDragStart: L, onDragEnd: D, onExpandCollapse: O, onContextMenu: k, renderChildNode: U, folderIconContent: G } = e,
+    let { folderNode: n, setNodeRef: r, selected: s, expanded: d, mediaState: f, mentionCount: T = 0, isMentionLowImportance: j, unread: A = !1, defaultFolderName: P, useCircleMask: R = !1, draggable: M = !1, sorting: w = !1, onDragStart: L, onDragEnd: D, onExpandCollapse: O, onContextMenu: k, renderChildNode: G, folderIconContent: U } = e,
         { id: B, name: H, children: V } = n,
         F = (0, p.Q3)('FolderItem'),
         [W, z] = l.useState(!1),
@@ -59,9 +59,9 @@ function T(e) {
         }, []),
         $ = l.useCallback(
             (e) => {
-                (('ArrowRight' === e.key && !u) || ('ArrowLeft' === e.key && u)) && O();
+                (('ArrowRight' === e.key && !d) || ('ArrowLeft' === e.key && d)) && O();
             },
-            [O, u]
+            [O, d]
         ),
         ee = null != H && '' !== H ? H : null != P && '' !== P ? P : E.intl.string(E.t.xV9hVl),
         et = (0, c.Ie)(''.concat(B)),
@@ -71,7 +71,7 @@ function T(e) {
             iconMargin: 8
         },
         er = V.length * (ei + el) - (F ? 4 : 0),
-        eo = (0, d.useTransition)(!Q && u, {
+        eo = (0, u.useTransition)(!Q && d, {
             from: { height: 0 },
             enter: { height: 1 },
             leave: { height: 0 },
@@ -81,7 +81,7 @@ function T(e) {
         es = (0, i.jsxs)(I.H, {
             children: [
                 (0, i.jsx)(C.Z, {
-                    disabled: Q || u,
+                    disabled: Q || d,
                     hovered: W,
                     selected: s,
                     unread: A,
@@ -94,13 +94,13 @@ function T(e) {
                     disableWrapper: !0,
                     children: (0, i.jsx)('div', {
                         ref: M ? J : void 0,
-                        className: o()(S.folderIcon, { [Z.wobble]: !Q && Y && !u }),
+                        className: o()(S.folderIcon, { [Z.wobble]: !Q && Y && !d }),
                         'data-dnd-name': ee,
                         children: Q
                             ? (0, i.jsx)(x.Z, {})
                             : (0, i.jsx)(v.Z, {
                                   folderNode: n,
-                                  expanded: u,
+                                  expanded: d,
                                   forceCircular: R,
                                   sorting: w,
                                   mediaState: f,
@@ -113,7 +113,7 @@ function T(e) {
                                   onHoverChange: z,
                                   onKeyDown: $,
                                   treeItemProps: et,
-                                  folderIconContent: G
+                                  folderIconContent: U
                               })
                     })
                 }),
@@ -128,12 +128,12 @@ function T(e) {
         });
     return (0, i.jsxs)('div', {
         ref: ea,
-        className: o()(S.wrapper, u && S.isExpanded),
+        className: o()(S.wrapper, d && S.isExpanded),
         children: [
             !Q &&
                 (0, i.jsx)('span', {
                     className: o()(S.expandedFolderBackground, {
-                        [S.collapsed]: !u,
+                        [S.collapsed]: !d,
                         [S.hover]: q
                     })
                 }),
@@ -150,13 +150,13 @@ function T(e) {
                             id: en,
                             style: { height: e.height.to((e) => e * er) },
                             role: 'group',
-                            children: V.map(U)
+                            children: V.map(G)
                         },
                         l
                     )
                 );
             }),
-            M && u
+            M && d
                 ? (0, i.jsx)(_.Zu, {
                       name: ee,
                       targetNode: n

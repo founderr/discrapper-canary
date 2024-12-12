@@ -13,8 +13,8 @@ var i = n(200651),
     a = n(481060),
     s = n(988298),
     c = n(636449),
-    u = n(620662),
-    d = n(513202),
+    d = n(620662),
+    u = n(513202),
     h = n(311352),
     p = n(803647),
     m = n(131704),
@@ -24,16 +24,16 @@ var i = n(200651),
     v = n(388032),
     _ = n(272371);
 function x(e, t, n) {
-    return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === C.IIU.PLAYING && (0, u.Z)(t, C.xjy.JOIN));
+    return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === C.IIU.PLAYING && (0, d.Z)(t, C.xjy.JOIN));
 }
 let I = l.memo(function (e) {
     let t,
         r,
-        u,
+        d,
         I,
         { stream: b, canGoLive: E, guildId: S, isStreaming: Z, channel: N, canStream: y, runningGame: T, embeddedActivity: j, activity: A, application: P, analyticsContext: R } = e,
         M = x(P, A, j),
-        L = l.useCallback(() => {
+        w = l.useCallback(() => {
             o()(null != A, 'Received null activity'),
                 f.default.track(C.rMx.OPEN_MODAL, {
                     type: 'Send Join Invite',
@@ -42,9 +42,9 @@ let I = l.memo(function (e) {
                 }),
                 (0, s.h7)(A, !1);
         }, [A, R]),
-        w = l.useCallback(
+        L = l.useCallback(
             (e, t) => () => {
-                d.Z.leaveActivity({
+                u.Z.leaveActivity({
                     channelId: t.id,
                     applicationId: e,
                     showFeedback: !0
@@ -71,38 +71,38 @@ let I = l.memo(function (e) {
         }, [N, S]);
     let k =
             (null != T || null == j || (0, c.R)()) && (Z || E)
-                ? (Z ? ((t = !1), (r = D), (u = a.ScreenXIcon), (I = v.intl.string(v.t.S5anIS))) : y ? ((t = !1), (r = O), (u = a.ScreenArrowIcon), (I = null != T ? v.intl.formatToPlainString(v.t.AB5gT0, { game: T.name }) : v.intl.string(v.t.FeUKeH))) : ((t = !0), (r = null), (u = a.ScreenArrowIcon), (I = null != N && (0, m.vd)(N.type) ? v.intl.string(v.t.uQn9Bw) : null != S ? v.intl.string(v.t.fBXEoK) : v.intl.string(v.t.n3feND))),
+                ? (Z ? ((t = !1), (r = D), (d = a.ScreenXIcon), (I = v.intl.string(v.t.S5anIS))) : y ? ((t = !1), (r = O), (d = a.ScreenArrowIcon), (I = null != T ? v.intl.formatToPlainString(v.t.AB5gT0, { game: T.name }) : v.intl.string(v.t.FeUKeH))) : ((t = !0), (r = null), (d = a.ScreenArrowIcon), (I = null != N && (0, m.vd)(N.type) ? v.intl.string(v.t.uQn9Bw) : null != S ? v.intl.string(v.t.fBXEoK) : v.intl.string(v.t.n3feND))),
                   (0, i.jsx)('div', {
                       className: _.panelButtonContainer,
                       children: (0, i.jsx)(g.Z, {
                           tooltipText: I,
                           disabled: t,
                           onClick: r,
-                          icon: u
+                          icon: d
                       })
                   }))
                 : null,
-        U =
+        G =
             M && null == j
                 ? (0, i.jsx)(g.Z, {
                       tooltipText: v.intl.string(v.t['hC/Ze3']),
-                      onClick: L,
+                      onClick: w,
                       icon: a.GroupPlusIcon
                   })
                 : null,
-        G =
+        U =
             null == j || null == N
                 ? null
                 : (0, i.jsx)(g.Z, {
                       tooltipText: v.intl.string(v.t['R/FK4O']),
-                      onClick: w(j.applicationId, N),
+                      onClick: L(j.applicationId, N),
                       icon: a.DoorExitIcon
                   }),
         B = null == b ? null : (0, i.jsx)(h.Z, {});
-    return null == k && null == U && null == G
+    return null == k && null == G && null == U
         ? null
         : (0, i.jsxs)('div', {
               className: _.actions,
-              children: [k, U, null != G ? G : B]
+              children: [k, G, null != U ? U : B]
           });
 });

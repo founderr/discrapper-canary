@@ -1,21 +1,21 @@
-var i = n(200651);
-n(192379);
-var r = n(120356),
-    l = n.n(r),
-    a = n(843950);
-t.Z = (e) => {
-    let { value: t = 0, text: n, className: r, ...o } = e;
-    return null != n
-        ? (0, i.jsx)('div', {
-              className: l()(a.wrapper, r),
+var s = t(200651);
+t(192379);
+var r = t(120356),
+    i = t.n(r),
+    l = t(843950);
+n.Z = (e) => {
+    let { value: n = 0, text: t, className: r, lowImportance: a, ...o } = e;
+    return null != t
+        ? (0, s.jsx)('div', {
+              className: i()(l.wrapper, r, a && l.lowImportance),
               ...o,
-              children: n
+              children: t
           })
-        : t > 0
-          ? (0, i.jsx)('div', {
-                className: l()(a.wrapper, r),
+        : n > 0
+          ? (0, s.jsx)('div', {
+                className: i()(l.wrapper, r, a && l.lowImportance),
                 ...o,
-                children: t
+                children: n
             })
           : null;
 };

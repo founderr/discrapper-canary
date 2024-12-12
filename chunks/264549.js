@@ -6,8 +6,8 @@ var i = n(200651),
     a = n(392711),
     s = n.n(a),
     c = n(714338),
-    u = n(585483),
-    d = n(981631),
+    d = n(585483),
+    u = n(981631),
     h = n(727688);
 function p(e, t, n) {
     return (
@@ -190,7 +190,7 @@ let C = 240;
 class v extends l.PureComponent {
     componentDidMount() {
         this.setTimeout(() => {
-            this.setState({ visible: !0 }), u.S.dispatch(d.CkL.SHAKE_APP, { duration: 2400 });
+            this.setState({ visible: !0 }), d.S.dispatch(u.CkL.SHAKE_APP, { duration: 2400 });
         }, 1800),
             this.setTimeout(this.createExplosion, 1800);
     }

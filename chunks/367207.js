@@ -7,8 +7,8 @@ var l = n(392711),
     a = n(570140),
     s = n(904245),
     c = n(317770),
-    u = n(100527),
-    d = n(358221),
+    d = n(100527),
+    u = n(358221),
     h = n(963249),
     p = n(93127),
     m = n(361291),
@@ -31,13 +31,13 @@ var l = n(392711),
     P = n(276444),
     R = n(684259),
     M = n(937579),
-    L = n(1163),
-    w = n(841174),
+    w = n(1163),
+    L = n(841174),
     D = n(522558),
     O = n(879463),
     k = n(822070),
-    U = n(520540),
-    G = n(11352),
+    G = n(520540),
+    U = n(11352),
     B = n(474936),
     H = n(981631),
     V = n(354459),
@@ -80,7 +80,7 @@ class Y extends c.Z {
         if (P.Z.getIsFetchingReferralIncentiveEligibility() || !(0, x.I5)(e)) return;
         let t = { location: 'PremiumManager' },
             n = { autoTrackExposure: !1 };
-        if (!!U.g.getCurrentConfig(t, n).enabled && !O.eP.getCurrentConfig(t, n).enabled) k.$.getCurrentConfig(t, n).enabled && (0, A.bq)();
+        if (!!G.g.getCurrentConfig(t, n).enabled && !O.eP.getCurrentConfig(t, n).enabled) k.$.getCurrentConfig(t, n).enabled && (0, A.bq)();
     }
     openPremiumPaymentModalInApp(e) {
         if (__OVERLAY__) throw Error('Should not use this function from the overlay, use ModalAPI.openModal instead');
@@ -109,7 +109,7 @@ class Y extends c.Z {
         });
     }
     maybeShowHDStreamingPerksDemoPostUpsellModal(e) {
-        let { enabled: t } = L.Z.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
+        let { enabled: t } = w.Z.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
         if (!t || e.state !== H.hes.DISCONNECTED || e.willReconnect) return;
         let n = f.Z.getChannel(e.channelId);
         if (null == n) return;
@@ -124,7 +124,7 @@ class Y extends c.Z {
         )
             return;
         let { resolution: l, fps: o } = m.Z.getState();
-        !(0, j.mc)(l, o) && (0, w.Z)(n.guild_id);
+        !(0, j.mc)(l, o) && (0, L.Z)(n.guild_id);
     }
     constructor(...e) {
         super(...e),
@@ -147,7 +147,7 @@ class Y extends c.Z {
                 e && (0, p.W)();
             }),
             z(this, '_trackCustomNotificationSoundsExposure', () => {
-                G.Y.trackExposure({ location: 'PremiumManager' });
+                U.Y.trackExposure({ location: 'PremiumManager' });
             }),
             z(this, '_trackSkyLoadExposure', () => {
                 R.Z.trackExposure({ location: 'PremiumManager' });
@@ -155,7 +155,7 @@ class Y extends c.Z {
             z(this, '_handlePremiumPaymentModalOpen', (e) => {
                 (0, h.Z)({
                     ...e,
-                    analyticsLocations: [u.Z.OVERLAY],
+                    analyticsLocations: [d.Z.OVERLAY],
                     onClose: (e) => {
                         a.Z.dispatch({
                             type: 'PREMIUM_PAYMENT_MODAL_CLOSE',
@@ -177,18 +177,18 @@ class Y extends c.Z {
                 '_maybeSendViewerUpsellMessage',
                 (0, l.debounce)((e, t, n) => {
                     var i, l;
-                    let r = d.Z.getSelectedParticipant(e),
+                    let r = u.Z.getSelectedParticipant(e),
                         o = (0, y.o)(r, n),
                         { sendNitroMessage: a } = (0, Z.TD)(o),
                         c = null !== (l = null === (i = g.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : H.Eu4.NONE;
                     if (N.Z.cooldownIsActive() || !a || c >= H.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== V.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
                     S.I();
-                    let u = W.intl.formatToPlainString(W.t.AbyeZG, {
+                    let d = W.intl.formatToPlainString(W.t.AbyeZG, {
                         nickname: r.userNick,
                         resolution: (0, F.o6)(r.maxResolution.height),
                         fps: (0, I.bp)(r.maxFrameRate)
                     });
-                    s.Z.sendNitroSystemMessage(e, u),
+                    s.Z.sendNitroSystemMessage(e, d),
                         _.default.track(H.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
                             type: B.cd.HD_STREAMING_VIEWER_UPSELL,
                             location_section: null != t ? H.jXE.TEXT_IN_VOICE : H.jXE.CHANNEL_TEXT_AREA,

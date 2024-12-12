@@ -11,8 +11,8 @@ var l = n(512969),
     a = n(893607),
     s = n(601964),
     c = n(701190),
-    u = n(836040),
-    d = n(603592),
+    d = n(836040),
+    u = n(603592),
     h = n(981631),
     p = n(388032);
 function m(e) {
@@ -27,11 +27,11 @@ function m(e) {
         g = (null == f ? void 0 : f.guild) != null ? new s.ZP(null == f ? void 0 : f.guild) : null;
     return n
         ? null != g && null != f
-            ? (0, i.jsx)(u.Z, {
+            ? (0, i.jsx)(d.Z, {
                   guild: g,
                   invite: f
               })
-            : (0, i.jsx)(d.Z, {
+            : (0, i.jsx)(u.Z, {
                   tooltip: p.intl.string(p.t.rn9HIS),
                   id: 'guild-hub-button',
                   icon: o.HubIcon

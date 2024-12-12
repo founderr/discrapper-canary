@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return o;
     }
 });
 var l,
-    o,
+    r,
     a = n(388032);
-function r() {
+function o() {
     return [
         {
             label: a.intl.string(a.t.cigGCQ),
@@ -25,4 +25,4 @@ function r() {
         }
     ];
 }
-((l = o || (o = {})).COULD_NOT_FIND = "I couldn't find what I was looking for"), (l.CONFUSING_LANGUAGE = 'I found the language confusing'), (l.OTHER = 'Other');
+((l = r || (r = {})).COULD_NOT_FIND = "I couldn't find what I was looking for"), (l.CONFUSING_LANGUAGE = 'I found the language confusing'), (l.OTHER = 'Other');

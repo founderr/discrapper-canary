@@ -65,7 +65,7 @@ function F(e, t, n) {
         e
     );
 }
-((l = i || (i = {}))[(l.Favorite = 0)] = 'Favorite'), (l[(l.PrivateChannel = 1)] = 'PrivateChannel'), (l[(l.Mentioned = 2)] = 'Mentioned'), (l[(l.AllMessagesNotifications = 3)] = 'AllMessagesNotifications'), (l[(l.GuildChannel = 4)] = 'GuildChannel'), (l[(l.OldChannel = 5)] = 'OldChannel'), (l[(l.NoNotifications = 6)] = 'NoNotifications'), (l[(l.ReallyOldChannel = 7)] = 'ReallyOldChannel'), ((a = r || (r = {})).Loading = 'loading'), (a.Loaded = 'loaded'), (a.Done = 'done');
+((l = i || (i = {}))[(l.Favorite = 0)] = 'Favorite'), (l[(l.PrivateChannel = 1)] = 'PrivateChannel'), (l[(l.HighImportanceMentioned = 2)] = 'HighImportanceMentioned'), (l[(l.LowImportanceMentioned = 3)] = 'LowImportanceMentioned'), (l[(l.AllMessagesNotifications = 4)] = 'AllMessagesNotifications'), (l[(l.GuildChannel = 5)] = 'GuildChannel'), (l[(l.OldChannel = 6)] = 'OldChannel'), (l[(l.NoNotifications = 7)] = 'NoNotifications'), (l[(l.ReallyOldChannel = 8)] = 'ReallyOldChannel'), ((a = r || (r = {})).Loading = 'loading'), (a.Loaded = 'loaded'), (a.Done = 'done');
 let G = 25;
 class V extends s.EventEmitter {
     loadMore() {
@@ -407,20 +407,20 @@ function W(e, t, n, i) {
             let i = b.Z.getChannel(t);
             if (g.Z.isFavorite(t)) return 0;
             if (i.isPrivate()) return 1;
-            if (y.ZP.getMentionCount(t) > 0) return 2;
+            if (y.ZP.getMentionCount(t) > 0) return y.ZP.getIsMentionLowImportance(t) ? 3 : 2;
             if (null != n) {
                 let e = B.default.extractTimestamp(n);
-                if (Date.now() - e > Y) return 7;
-                if (Date.now() - e > K) return 5;
+                if (Date.now() - e > Y) return 8;
+                if (Date.now() - e > K) return 6;
             }
             if (i.isThread()) {
                 let e = (0, v.J)(i);
-                return e === w.iN.ALL_MESSAGES ? 3 : e === w.iN.NO_MESSAGES ? 6 : 4;
+                return e === w.iN.ALL_MESSAGES ? 4 : e === w.iN.NO_MESSAGES ? 7 : 5;
             }
             {
                 let n = M.ZP.getChannelMessageNotifications(e, t),
                     i = n === U.bL.NULL ? M.ZP.getMessageNotifications(e) : n;
-                return i === U.bL.ALL_MESSAGES ? 3 : i === U.bL.NO_MESSAGES ? 6 : 4;
+                return i === U.bL.ALL_MESSAGES ? 4 : i === U.bL.NO_MESSAGES ? 7 : 5;
             }
         })(n, i, o),
         order: 0

@@ -24,16 +24,16 @@ e.d(n, {
         return s;
     },
     zr: function () {
-        return r;
+        return o;
     }
 });
-var o = e(388032);
-let r = 'SAFETY_WARNING_BANNER_WEB',
+var r = e(388032);
+let o = 'SAFETY_WARNING_BANNER_WEB',
     i = 'https://www.crisistextline.org/',
     s = 'https://nofiltr.org/resources-hub/',
     a = 'https://discord.findahelpline.com/',
     c = 'InappropriateConversationModal-web',
     l = 'PRIVATE_DM_SAFETY_TOOLS_MODAL',
     u = 'SafetyToolsActionSheet-web',
-    d = () => [o.intl.string(o.t['26fDv7']), o.intl.string(o.t.togDfn), o.intl.string(o.t.O4LjcX)],
-    E = () => [o.intl.string(o.t.bCWw8v), o.intl.string(o.t.mzSuc3), o.intl.string(o.t.ZkmC7u)];
+    d = () => [r.intl.string(r.t['26fDv7']), r.intl.string(r.t.togDfn), r.intl.string(r.t.O4LjcX)],
+    E = () => [r.intl.string(r.t.bCWw8v), r.intl.string(r.t.mzSuc3), r.intl.string(r.t.ZkmC7u)];

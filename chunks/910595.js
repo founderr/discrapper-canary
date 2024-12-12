@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 });
 var i = n(200651);
@@ -11,7 +11,7 @@ var l = n(481060),
     a = n(981631),
     s = n(176505),
     c = n(388032);
-function u(e) {
+function d(e) {
     let { guild: t, selected: n } = e;
     return (0, i.jsx)(o.m, {
         id: 'home-tab-'.concat(t.id),

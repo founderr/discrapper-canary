@@ -6,8 +6,8 @@ var i = n(200651),
     a = n(752877),
     s = n(873546),
     c = n(481060),
-    u = n(540059),
-    d = n(666188),
+    d = n(540059),
+    u = n(666188),
     h = n(695346),
     p = n(768581),
     m = n(358555),
@@ -18,18 +18,18 @@ var i = n(200651),
 function _(e) {
     var t;
     let { guild: n, controller: l, guildBanner: r, animate: c } = e,
-        { value: d } = l.springs,
+        { value: u } = l.springs,
         m = h.QK.getSetting(),
-        f = (0, u.Q3)('AnimatedBanner') ? 150 : 90;
+        f = (0, d.Q3)('AnimatedBanner') ? 150 : 90;
     return (0, i.jsx)(a.animated.div, {
         className: v.animatedContainer,
         style: {
-            opacity: d,
-            transform: d.to((e) => 'translateY(-'.concat((1 - e) * f, 'px)'))
+            opacity: u,
+            transform: u.to((e) => 'translateY(-'.concat((1 - e) * f, 'px)'))
         },
         children: (0, i.jsx)(a.animated.div, {
             className: o()(v.bannerImage, { [v.bannerImgFullWidth]: s.tq }),
-            style: { transform: d.to((e) => (m ? 'translateY('.concat((1 - e) * f * (2 / 3), 'px) scale(').concat(1 + (1 - e) * 0.2, ')') : 'translateY('.concat((1 - e) * f, 'px)'))) },
+            style: { transform: u.to((e) => (m ? 'translateY('.concat((1 - e) * f * (2 / 3), 'px) scale(').concat(1 + (1 - e) * 0.2, ')') : 'translateY('.concat((1 - e) * f, 'px)'))) },
             children: (0, i.jsx)('img', {
                 className: o()(v.bannerImg, { [v.bannerImgFullWidth]: s.tq }),
                 src:
@@ -52,11 +52,11 @@ function _(e) {
 function x(e) {
     let { guild: t, controller: n, hasBanner: l, hasSubheader: r } = e,
         { value: s } = n.springs,
-        u = t.hasFeature(f.oNc.DISCOVERABLE),
-        d = (0, i.jsx)('div', {
+        d = t.hasFeature(f.oNc.DISCOVERABLE),
+        u = (0, i.jsx)('div', {
             className: v.communityInfo,
             children:
-                u &&
+                d &&
                 (0, i.jsx)(c.Tooltip, {
                     text: C.intl.string(C.t.O8lDIy),
                     position: 'right',
@@ -84,12 +84,12 @@ function x(e) {
     return r
         ? (0, i.jsx)('div', {
               className: o()(v.communityInfoContainer, v.hasSubheader),
-              children: d
+              children: u
           })
         : (0, i.jsx)(a.animated.div, {
               className: v.communityInfoContainer,
               style: l ? { opacity: s } : { height: s.to((e) => ''.concat(20 * e, 'px')) },
-              children: d
+              children: u
           });
 }
 function I() {
@@ -103,12 +103,12 @@ function I() {
 }
 t.ZP = l.memo(function (e) {
     let { bannerVisible: t, controller: n, className: r, onClick: a, onContextMenu: b, onMouseDown: E, disableBannerAnimation: S, 'aria-expanded': Z, 'aria-controls': N, guild: y, guildBanner: T, animationOverlayHeight: j, children: A, headerClassName: P, communityInfoVisible: R, hasSubheader: M } = e,
-        L = y.hasFeature(f.oNc.ANIMATED_BANNER),
-        w = (0, d.Z)(y),
-        D = !w && y.hasCommunityInfoSubheader(),
-        O = !w && R,
-        k = (0, p.xR)(T) && L && !S,
-        [U, G] = l.useState(!1),
+        w = y.hasFeature(f.oNc.ANIMATED_BANNER),
+        L = (0, u.Z)(y),
+        D = !L && y.hasCommunityInfoSubheader(),
+        O = !L && R,
+        k = (0, p.xR)(T) && w && !S,
+        [G, U] = l.useState(!1),
         B = l.useRef(),
         H = l.useRef(null),
         V = l.useRef(),
@@ -116,9 +116,9 @@ t.ZP = l.memo(function (e) {
     l.useEffect(() => {
         if (k && t && !B.current && F)
             return (
-                G(!0),
+                U(!0),
                 (V.current = setTimeout(() => {
-                    G(!1);
+                    U(!1);
                 }, 5000)),
                 () => {
                     clearTimeout(V.current);
@@ -132,7 +132,7 @@ t.ZP = l.memo(function (e) {
             let { renderBanner: t, guildBanner: n } = e;
             return null != n && !t;
         },
-        z = (0, u.Q3)('GuildHeader');
+        z = (0, d.Q3)('GuildHeader');
     return (0, i.jsx)(c.ThemeProvider, {
         theme: t ? f.BRd.DARK : void 0,
         children: (e) => {
@@ -204,7 +204,7 @@ t.ZP = l.memo(function (e) {
                                       guild: y,
                                       controller: n,
                                       guildBanner: T,
-                                      animate: U
+                                      animate: G
                                   })
                                 : null
                         ]
@@ -213,9 +213,9 @@ t.ZP = l.memo(function (e) {
                         ? (0, i.jsx)('div', {
                               className: v.animatedBannerHoverLayer,
                               onMouseEnter: () => {
-                                  G(!0), clearTimeout(V.current);
+                                  U(!0), clearTimeout(V.current);
                               },
-                              onMouseLeave: () => G(!1),
+                              onMouseLeave: () => U(!1),
                               style: { height: j }
                           })
                         : null

@@ -1,8 +1,8 @@
-var r, i;
-e.d(t, {
+var i, l;
+n.d(t, {
     K: function () {
-        return r;
+        return i;
     }
 }),
-    ((i = r || (r = {}))[(i.STREAM = 0)] = 'STREAM'),
-    (i[(i.VIDEO = 1)] = 'VIDEO');
+    ((l = i || (i = {}))[(l.STREAM = 0)] = 'STREAM'),
+    (l[(l.VIDEO = 1)] = 'VIDEO');

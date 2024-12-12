@@ -1,64 +1,64 @@
-e.d(t, {
+t.d(e, {
     P: function () {
-        return g;
+        return j;
     },
     l: function () {
         return M;
     }
 }),
-    e(47120);
-var i = e(200651);
-e(192379);
-var r = e(392711),
-    l = e.n(r),
-    u = e(442837),
-    a = e(481060),
-    d = e(984933),
-    o = e(853856),
-    s = e(117984),
-    c = e(593214),
-    f = e(362658),
-    Z = e(981631),
-    h = e(388032);
-function _(n, t) {
-    return n.type === Z.d4z.GROUP_DM ? (t ? h.intl.string(h.t['0BWmSE']) : h.intl.string(h.t.uuVTOD)) : n.type === Z.d4z.DM ? (t ? h.intl.string(h.t['2wfKGh']) : h.intl.string(h.t.wPbAsb)) : t ? h.intl.string(h.t.Bou7lZ) : h.intl.string(h.t['4wcdEx']);
+    t(47120);
+var i = t(200651);
+t(192379);
+var r = t(392711),
+    l = t.n(r),
+    a = t(442837),
+    u = t(481060),
+    o = t(984933),
+    d = t(853856),
+    c = t(117984),
+    s = t(593214),
+    h = t(362658),
+    f = t(981631),
+    Z = t(388032);
+function p(n, e) {
+    return n.type === f.d4z.GROUP_DM ? (e ? Z.intl.string(Z.t['0BWmSE']) : Z.intl.string(Z.t.uuVTOD)) : n.type === f.d4z.DM ? (e ? Z.intl.string(Z.t['2wfKGh']) : Z.intl.string(Z.t.wPbAsb)) : e ? Z.intl.string(Z.t.Bou7lZ) : Z.intl.string(Z.t['4wcdEx']);
 }
 function M(n) {
-    let t = (0, u.e7)([d.ZP], () => d.ZP.getChannels(Z.I_8))[Z.d4z.GUILD_CATEGORY],
-        { isFavoritesPerk: e } = (0, f.z)('58e21a_1'),
-        { notifyFavoriteAdded: r } = (0, c.up)();
-    if (!(0, c.li)(n)) return null;
-    let [[o], h] = l().partition(t, (n) => 'null' === n.channel.id);
-    function M(t) {
-        r(), (0, s.kj)(n.id, t);
+    let e = (0, a.e7)([o.ZP], () => o.ZP.getChannels(f.I_8))[f.d4z.GUILD_CATEGORY],
+        { isFavoritesPerk: t } = (0, h.z)('58e21a_1'),
+        { notifyFavoriteAdded: r } = (0, s.up)();
+    if (!(0, s.li)(n)) return null;
+    let [[d], Z] = l().partition(e, (n) => 'null' === n.channel.id);
+    function M(e) {
+        r(), (0, c.kj)(n.id, e);
     }
-    return 0 === h.length
-        ? (0, i.jsx)(a.MenuItem, {
+    return 0 === Z.length
+        ? (0, i.jsx)(u.MenuItem, {
               id: 'favorite-channel',
-              label: _(n, !1),
+              label: p(n, !1),
               action: () => M(null)
           })
-        : (0, i.jsxs)(a.MenuItem, {
+        : (0, i.jsxs)(u.MenuItem, {
               id: 'favorite-channel',
-              label: _(n, !1),
+              label: p(n, !1),
               action: () => M(null),
               children: [
-                  e &&
-                      (0, i.jsx)(a.MenuGroup, {
+                  t &&
+                      (0, i.jsx)(u.MenuGroup, {
                           children: (0, i.jsx)(
-                              a.MenuItem,
+                              u.MenuItem,
                               {
-                                  id: 'favorite-'.concat(o.channel.id),
-                                  label: o.channel.name,
-                                  action: () => M('null' === o.channel.id ? null : o.channel.id)
+                                  id: 'favorite-'.concat(d.channel.id),
+                                  label: d.channel.name,
+                                  action: () => M('null' === d.channel.id ? null : d.channel.id)
                               },
-                              o.channel.id
+                              d.channel.id
                           )
                       }),
-                  (0, i.jsx)(a.MenuGroup, {
-                      children: h.map((n) =>
+                  (0, i.jsx)(u.MenuGroup, {
+                      children: Z.map((n) =>
                           (0, i.jsx)(
-                              a.MenuItem,
+                              u.MenuItem,
                               {
                                   id: 'favorite-'.concat(n.channel.id),
                                   label: n.channel.name,
@@ -71,27 +71,27 @@ function M(n) {
               ]
           });
 }
-function g(n) {
-    let t = (0, u.e7)([o.Z], () => o.Z.isFavorite(n.id));
-    return __OVERLAY__ || !t
+function j(n) {
+    let e = (0, a.e7)([d.Z], () => d.Z.isFavorite(n.id));
+    return __OVERLAY__ || !e
         ? null
-        : (0, i.jsx)(a.MenuItem, {
+        : (0, i.jsx)(u.MenuItem, {
               id: 'favorite-channel',
-              label: _(n, !0),
+              label: p(n, !0),
               color: 'danger',
               action: () =>
-                  n.type === Z.d4z.GUILD_CATEGORY
-                      ? (0, a.openModalLazy)(async () => {
-                            let { default: t } = await e.e('37720').then(e.bind(e, 357632));
-                            return (e) =>
-                                (0, i.jsx)(t, {
-                                    ...e,
+                  n.type === f.d4z.GUILD_CATEGORY
+                      ? (0, u.openModalLazy)(async () => {
+                            let { default: e } = await t.e('37720').then(t.bind(t, 357632));
+                            return (t) =>
+                                (0, i.jsx)(e, {
+                                    ...t,
                                     onConfirm: () => {
-                                        e.onClose(), (0, s.oC)(n.id);
+                                        t.onClose(), (0, c.oC)(n.id);
                                     },
                                     channel: n
                                 });
                         })
-                      : (0, s.oC)(n.id)
+                      : (0, c.oC)(n.id)
           });
 }
