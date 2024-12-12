@@ -29214,14 +29214,6 @@ div.popoutCloseButton_d523a2:hover {
     padding: 12px 8px
 }
 
-.avatarCoachmark_a3e4b5 {
-    width: 210px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 8px 12px
-}
-
 .profileCoachmark_a3e4b5 {
     width: 210px;
     display: flex;
@@ -29230,25 +29222,11 @@ div.popoutCloseButton_d523a2:hover {
     padding: 54px 8px 12px
 }
 
-.statusCoachmark_a3e4b5 {
-    width: 210px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 8px 12px
-}
-
 .tooltipHeader_a3e4b5 {
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
     line-height: 18px
-}
-
-.avatarImage_a3e4b5 {
-    position: absolute;
-    left: 27px;
-    top: -38px
 }
 
 .profileImage_a3e4b5 {
