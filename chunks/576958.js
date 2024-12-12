@@ -37,7 +37,7 @@ function d(e) {
                 : null,
             (0, i.jsx)('ul', {
                 className: c.list,
-                children: t.map((e) =>
+                children: t.map((e, t) =>
                     (0, i.jsx)(
                         r.Z,
                         {
@@ -45,11 +45,12 @@ function d(e) {
                             children: (0, i.jsx)(u, {
                                 className: o,
                                 application: e,
-                                onClick: (t) => {
-                                    let { mutualGuilds: n } = t;
+                                onClick: (n) => {
+                                    let { mutualGuilds: i } = n;
                                     return m({
                                         application: e,
-                                        mutualGuilds: n
+                                        mutualGuilds: i,
+                                        index: t
                                     });
                                 }
                             })

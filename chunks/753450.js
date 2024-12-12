@@ -297,12 +297,13 @@ function eS(e) {
     }, [m, h]);
     let eQ = a.useCallback(
             (e) => {
-                let { application: t, mutualGuilds: n } = e;
+                let { application: t, mutualGuilds: n, index: i } = e;
                 (null == eZ ? void 0 : eZ.id) != null &&
                     H.default.track(ep.rMx.APP_DIRECTORY_RECOMMENDATION_CLICKED, {
                         current_page: 'product',
                         application_id: eZ.id,
                         suggested_application_id: t.id,
+                        position: i,
                         load_id: ey,
                         guild_id: h,
                         shown_mutual_guilds_count: n.length
