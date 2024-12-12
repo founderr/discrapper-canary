@@ -15,5 +15,6 @@ e.exports = {
     userAvatars: 'userAvatars_a1527b',
     footerButtons: 'footerButtons_a1527b',
     flex: 'flex_a1527b',
-    avatar: 'avatar_a1527b'
+    avatar: 'avatar_a1527b',
+    buttonSection: 'buttonSection_a1527b'
 };
