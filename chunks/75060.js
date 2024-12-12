@@ -1,3 +1,6 @@
-var i = r(411104);
-var a = r(991240);
-n.Z = { getThermalState: () => Promise.reject(Error(a.n)) };
+n.Z = {
+    getRawThermalState: () => Promise.resolve(void 0),
+    addListener: (e) => ({
+        remove: () => {}
+    })
+};
