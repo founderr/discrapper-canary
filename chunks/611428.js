@@ -168,23 +168,24 @@ function R(e) {
 }
 function O(e) {
     let { emoji: n, text: r, user: i, guildId: o, channelId: l, profileType: u, ...c } = e,
-        { interactionType: d, interactionSource: f, resetInteraction: _ } = (0, E.Xo)(),
-        h = f === y.n_.STATUS && d === y.P.REACT,
-        m = f === y.n_.STATUS && d === y.P.REPLY,
-        g = h || m,
-        b = s.useRef(n),
-        S = s.useRef(r);
+        { trackUserProfileAction: d } = (0, g.KZ)(),
+        { interactionType: f, interactionSource: _, resetInteraction: h } = (0, E.Xo)(),
+        m = _ === y.n_.STATUS && f === y.P.REACT,
+        b = _ === y.n_.STATUS && f === y.P.REPLY,
+        S = m || b,
+        N = s.useRef(n),
+        R = s.useRef(r);
     s.useEffect(() => {
-        if (f === y.n_.STATUS) (b.current !== n || S.current !== r) && _(), (b.current = n), (S.current = r);
-    }, [f, _, n, r]);
-    let [N, R] = s.useState(!1),
-        O = s.useCallback(
+        if (_ === y.n_.STATUS) (N.current !== n || R.current !== r) && h(), (N.current = n), (R.current = r);
+    }, [_, h, n, r]);
+    let [O, D] = s.useState(!1),
+        L = s.useCallback(
             (e) => {
-                if (!!e || !g) R(e);
+                if (!!e || !S) D(e);
             },
-            [g]
+            [S]
         ),
-        D = () => {
+        x = () => {
             if (null == n) return r;
             let e = null != n.id ? '`' + ':'.concat(n.name, ':') + '`' : p.ZP.translateSurrogatesToInlineEmoji(n.name);
             return null == r ? e : ''.concat(e, ' ').concat(r);
@@ -194,9 +195,10 @@ function O(e) {
         guildId: o,
         channelId: l,
         profileType: u,
-        sourceDetails: D(),
+        sourceDetails: x(),
         sourceType: y.n_.STATUS,
-        onClose: () => R(!1),
+        onAction: d,
+        onClose: () => D(!1),
         children: () =>
             (0, a.jsx)(T.Z, {
                 sourceType: y.n_.STATUS,
@@ -206,13 +208,14 @@ function O(e) {
                     emoji: n,
                     text: r,
                     profileType: u,
-                    className: g ? A.hoisted : void 0,
-                    onShowToolbar: O,
+                    className: S ? A.hoisted : void 0,
+                    onShowToolbar: L,
                     toolbar: (0, a.jsx)(I.ZP, {
                         user: i,
                         sourceType: y.n_.STATUS,
-                        isVisible: N && !g,
-                        isExpandable: !1
+                        isVisible: O && !S,
+                        isExpandable: !1,
+                        onAction: d
                     })
                 })
             })

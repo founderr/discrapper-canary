@@ -294,7 +294,8 @@ function U(e) {
                                   user: n,
                                   sourceType: N.n_.STATUS,
                                   isVisible: eb && !ep,
-                                  isExpandable: eI
+                                  isExpandable: eI,
+                                  onAction: H
                               })
                     ]
                 })
@@ -314,6 +315,7 @@ function U(e) {
                           profileType: U,
                           sourceDetails: eF(),
                           sourceType: N.n_.STATUS,
+                          onAction: H,
                           onClose: () => {
                               ey(!1), eR(!1);
                           },

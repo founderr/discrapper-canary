@@ -139,12 +139,15 @@ function M(e) {
                 sourceDetails: null == Y ? (0, v.Z)(M) : null,
                 entry: Y,
                 sourceType: w.n_.ACTIVITY,
+                onAction: q,
                 children: () =>
                     (0, i.jsx)(b.Z, {
                         user: r,
                         className: P.toolbarContainer,
                         sourceType: w.n_.ACTIVITY,
                         interactionSourceId: et,
+                        onAction: q,
+                        onShowToolbar: () => q({ action: 'HOVER_ACTIVITY_CARD' }),
                         renderMoreButtonPopout: (e) =>
                             (0, i.jsx)(x.Z, {
                                 display: 'live',
@@ -154,7 +157,6 @@ function M(e) {
                                 onClose: G,
                                 children: e
                             }),
-                        onShowToolbar: () => q({ action: 'HOVER_ACTIVITY_CARD' }),
                         children: (0, i.jsxs)(N.Z, {
                             ref: Q,
                             className: o()(B, { [P.hoisted]: en }),

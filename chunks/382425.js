@@ -270,12 +270,15 @@ function $(e) {
                 sourceId: eC,
                 sourceDetails: eO,
                 sourceType: W.n_.ACTIVITY,
+                onAction: eu,
                 children: () =>
                     (0, a.jsx)(U.Z, {
                         user: n,
                         className: q.toolbarContainer,
                         interactionSourceId: eC,
                         sourceType: W.n_.ACTIVITY,
+                        onAction: eu,
+                        onShowToolbar: () => eu({ action: 'HOVER_ACTIVITY_CARD' }),
                         renderMoreButtonPopout: (e) =>
                             (0, a.jsx)(Y.Z, {
                                 display: 'live',
@@ -283,7 +286,6 @@ function $(e) {
                                 onClose: $,
                                 children: e
                             }),
-                        onShowToolbar: () => eu({ action: 'HOVER_ACTIVITY_CARD' }),
                         children: (0, a.jsxs)(Z.Z, {
                             ref: ec,
                             className: l()(o, { [q.hoisted]: eR }),

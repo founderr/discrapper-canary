@@ -27,34 +27,32 @@ function d(e, n) {
           };
 }
 function f(e) {
-    let { user: n, guildId: r, channelId: f, profileType: _, sourceType: h, sourceDetails: p, sourceId: m, onClose: g, children: E, entry: v } = e,
-        { interactionType: I, interactionSource: T, resetInteraction: b, interactionSourceId: y } = (0, s.Xo)(),
-        S = _ === c.y0.FULL_SIZE ? (0, u.z)(n.id, r) : void 0,
-        A = T === h && I === c.P.REACT,
-        N = T === h && I === c.P.REPLY,
-        C = (A || N) && y === m;
+    let { user: n, guildId: r, channelId: f, profileType: _, onClose: h, children: p, ...m } = e,
+        { interactionType: g, interactionSource: E, resetInteraction: v, interactionSourceId: I } = (0, s.Xo)(),
+        T = _ === c.y0.FULL_SIZE ? (0, u.z)(n.id, r) : void 0,
+        b = E === m.sourceType && g === c.P.REACT,
+        y = E === m.sourceType && g === c.P.REPLY,
+        S = (b || y) && I === m.sourceId;
     return (0, i.jsx)(a.Popout, {
         renderPopout: (e) => {
             let { setPopoutRef: a } = e,
-                s = A ? o.Z : l.Z;
+                s = b ? o.Z : l.Z;
             return (0, i.jsx)(s, {
                 user: n,
                 guildId: r,
                 channelId: f,
                 profileType: _,
-                sourceType: h,
-                sourceDetails: p,
-                entry: v,
-                onClose: g,
-                modalKey: S,
-                setPopoutRef: a
+                onClose: h,
+                modalKey: T,
+                setPopoutRef: a,
+                ...m
             });
         },
         onRequestClose: () => {
-            b(), null == g || g();
+            v(), null == h || h();
         },
-        shouldShow: C,
-        ...d(I, _),
-        children: E
+        shouldShow: S,
+        ...d(g, _),
+        children: p
     });
 }

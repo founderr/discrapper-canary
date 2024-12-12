@@ -43,6 +43,7 @@ function I(e) {
                       profileType: S,
                       sourceId: r.id,
                       entry: r,
+                      onAction: C,
                       sourceType: E.n_.ACTIVITY,
                       children: () =>
                           (0, i.jsx)(_.Z, {
@@ -50,6 +51,7 @@ function I(e) {
                               className: v.toolbarContainer,
                               interactionSourceId: r.id,
                               sourceType: E.n_.ACTIVITY,
+                              onAction: C,
                               onShowToolbar: () => C({ action: 'HOVER_ACTIVITY_CARD' }),
                               renderMoreButtonPopout: b
                                   ? void 0

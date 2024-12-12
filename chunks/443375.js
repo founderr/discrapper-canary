@@ -277,6 +277,7 @@ function K(e) {
                 sourceId: eb,
                 sourceDetails: null == ea ? (0, A.Z)(K) : null,
                 entry: ea,
+                onAction: eo,
                 sourceType: V.n_.ACTIVITY,
                 children: () =>
                     (0, i.jsx)(O.Z, {
@@ -284,6 +285,7 @@ function K(e) {
                         className: W.toolbarContainer,
                         interactionSourceId: eb,
                         sourceType: V.n_.ACTIVITY,
+                        onAction: eo,
                         renderMoreButtonPopout: (e) =>
                             (0, i.jsx)(Z.Z, {
                                 display: 'live',

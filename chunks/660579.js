@@ -8,34 +8,31 @@ var a = r(200651),
     s = r(192379),
     o = r(810097);
 function l(e) {
-    let { user: n, sourceType: r, className: i, children: l, interactionSourceId: u, onShowToolbar: c, renderMoreButtonPopout: d } = e,
-        f = s.useRef(null),
-        [_, h] = s.useState(!1),
-        p = () => {
-            null == c || c(), h(!0);
+    let { children: n, className: r, onShowToolbar: i, ...l } = e,
+        u = s.useRef(null),
+        [c, d] = s.useState(!1),
+        f = () => {
+            null == i || i(), d(!0);
         },
-        m = () => {
-            h(!1);
+        _ = () => {
+            d(!1);
         };
     return (0, a.jsxs)('div', {
-        className: i,
-        onMouseEnter: p,
-        onMouseLeave: m,
-        onFocus: p,
+        className: r,
+        onMouseEnter: f,
+        onMouseLeave: _,
+        onFocus: f,
         onBlur: (e) => {
             var n;
-            !(null === (n = f.current) || void 0 === n ? void 0 : n.contains(e.relatedTarget)) && m();
+            !(null === (n = u.current) || void 0 === n ? void 0 : n.contains(e.relatedTarget)) && _();
         },
-        ref: f,
+        ref: u,
         children: [
-            l,
+            n,
             (0, a.jsx)(o.ZP, {
-                user: n,
-                sourceType: r,
-                isVisible: _,
+                isVisible: c,
                 isExpandable: !1,
-                interactionSourceId: u,
-                renderMoreButtonPopout: d
+                ...l
             })
         ]
     });
