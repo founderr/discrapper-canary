@@ -23,9 +23,9 @@ function u(e, n, r) {
 }
 class c extends l.Z {
     static fromServer(e) {
-        let { products: n, logo: r, hero_ranking: i, pdp_bg: a, mobile_bg: l, success_modal_bg: u, mobile_banner: d, hero_banner: f, featured_block: _, hero_logo: h, ...p } = e;
+        let { products: n, logo: r, hero_ranking: i, pdp_bg: a, mobile_bg: l, success_modal_bg: u, mobile_banner: d, hero_banner: f, hero_banner_asset: _, featured_block: h, hero_logo: p, ...m } = e;
         return new c({
-            ...super.fromServer(p),
+            ...super.fromServer(m),
             products: n.reduce((e, n) => {
                 let r = o.Z.fromServer(n);
                 return 0 === (r.type !== s.Z.VARIANTS_GROUP && r.items.length) ? e : (e.push(r), e);
@@ -37,11 +37,12 @@ class c extends l.Z {
             successModalBg: u,
             mobileBanner: d,
             heroBanner: f,
-            featuredBlock: _,
-            heroLogo: h
+            heroBannerAsset: _,
+            featuredBlock: h,
+            heroLogo: p
         });
     }
     constructor(e) {
-        super(e), u(this, 'products', void 0), u(this, 'logo', void 0), u(this, 'heroRanking', void 0), u(this, 'pdpBg', void 0), u(this, 'mobileBg', void 0), u(this, 'successModalBg', void 0), u(this, 'mobileBanner', void 0), u(this, 'heroBanner', void 0), u(this, 'featuredBlock', void 0), u(this, 'heroLogo', void 0), (this.products = e.products), (this.logo = e.logo), (this.heroRanking = e.heroRanking), (this.pdpBg = e.pdpBg), (this.mobileBg = e.mobileBg), (this.successModalBg = e.successModalBg), (this.mobileBanner = e.mobileBanner), (this.heroBanner = e.heroBanner), (this.featuredBlock = e.featuredBlock), (this.heroLogo = e.heroLogo);
+        super(e), u(this, 'products', void 0), u(this, 'logo', void 0), u(this, 'heroRanking', void 0), u(this, 'pdpBg', void 0), u(this, 'mobileBg', void 0), u(this, 'successModalBg', void 0), u(this, 'mobileBanner', void 0), u(this, 'heroBanner', void 0), u(this, 'heroBannerAsset', void 0), u(this, 'featuredBlock', void 0), u(this, 'heroLogo', void 0), (this.products = e.products), (this.logo = e.logo), (this.heroRanking = e.heroRanking), (this.pdpBg = e.pdpBg), (this.mobileBg = e.mobileBg), (this.successModalBg = e.successModalBg), (this.mobileBanner = e.mobileBanner), (this.heroBanner = e.heroBanner), (this.featuredBlock = e.featuredBlock), (this.heroLogo = e.heroLogo), (this.heroBannerAsset = e.heroBannerAsset);
     }
 }
