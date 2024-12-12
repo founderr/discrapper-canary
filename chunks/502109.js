@@ -36,9 +36,7 @@ class E extends r.Component {
     }
     componentDidMount() {
         (0, u.d2)().then((e) => {
-            this.initPaymentRequest(e).then((e) => {
-                this.initPaymentRequestCallback(e), this.setState({ submitting: !1 });
-            });
+            this.initPaymentRequest(e);
         });
     }
     renderLoadingState() {
@@ -149,12 +147,17 @@ class E extends r.Component {
                 let a = await t.canMakePayment();
                 return (
                     A.info('PaymentRequest availablity check', a),
-                    this.setState({
-                        submitting: !1,
-                        paymentRequest: t,
-                        canMakePayment: !!a,
-                        canMakePaymentResult: a
-                    }),
+                    this.setState(
+                        {
+                            submitting: !1,
+                            paymentRequest: t,
+                            canMakePayment: !!a,
+                            canMakePaymentResult: a
+                        },
+                        () => {
+                            this.initPaymentRequestCallback(a);
+                        }
+                    ),
                     a
                 );
             }),
