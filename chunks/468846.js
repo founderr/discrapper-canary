@@ -3,14 +3,9 @@ l.d(t, {
         return c;
     },
     pn: function () {
-        return n;
+        return i;
     }
-}),
-    l(610138),
-    l(216116),
-    l(78328),
-    l(815648),
-    l(47120);
+});
 var n,
     i,
     r = l(200651),
@@ -19,13 +14,13 @@ var n,
     o = l(340702);
 function d(e, t) {
     let l = s.Z.toURLSafe(null != e ? e : '');
-    return null === l
-        ? ''
-        : ((l.search = new URLSearchParams({
-              ...l.searchParams,
-              ...t
-          }).toString()),
-          l.toString());
+    if (null === l) return '';
+    if (null == t) return l.toString();
+    for (let e in t) {
+        let n = t[e];
+        null != n && l.searchParams.set(e, n);
+    }
+    return l.toString();
 }
 function u(e) {
     let { src: t, autoMute: l, ...n } = e,
@@ -104,4 +99,4 @@ function c(e) {
             return (0, r.jsx)(h, { ...e });
     }
 }
-((i = n || (n = {})).YOUTUBE = 'YouTube'), (i.TIKTOK = 'TikTok');
+((n = i || (i = {})).YOUTUBE = 'YouTube'), (n.TIKTOK = 'TikTok');
