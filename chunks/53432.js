@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return S;
     }
 }),
     n(653041);
@@ -17,32 +17,33 @@ var r = n(442837),
     g = n(210887),
     m = n(740492),
     b = n(695346),
-    p = n(874893),
-    f = n(981631),
-    h = n(388032);
-function _() {
+    f = n(874893),
+    p = n(981631),
+    h = n(969943),
+    _ = n(388032);
+function S() {
     let e = b.jU.useSetting(),
         { analyticsLocations: t } = (0, u.ZP)(),
         {
             theme: n,
-            useSystemTheme: _,
-            useForcedColors: S,
-            listDensity: x
+            useSystemTheme: S,
+            useForcedColors: x,
+            listDensity: C
         } = (0, r.cj)([g.Z, m.ZP, c.Z], () => ({
             theme: g.Z.theme,
             useSystemTheme: m.ZP.useSystemTheme,
             useForcedColors: c.Z.useForcedColors,
             listDensity: m.ZP.listDensity
         })),
-        C = (0, d.Q3)('appearance_settings'),
-        M = (0, d.o9)('appearance_settings'),
-        Z = (e, r) =>
+        M = (0, d.Q3)('appearance_settings'),
+        Z = (0, d.o9)('appearance_settings'),
+        k = (e, r) =>
             (0, i.jsx)(o.MenuRadioItem, {
                 id: e,
                 group: 'input-modes',
                 label: r,
-                disabled: S,
-                checked: _ === p.K.ON ? 'system' === e : e === n,
+                disabled: x,
+                checked: S === f.K.ON ? 'system' === e : e === n,
                 action: () => {
                     (0, s.Yk)({
                         isPersisted: !0,
@@ -52,18 +53,18 @@ function _() {
                         (0, l.ZI)({ theme: e });
                 }
             }),
-        k = [
+        I = [
             (0, i.jsxs)(
                 o.MenuGroup,
                 {
                     children: [
-                        Z(f.BRd.DARK, h.intl.string(h.t.b8Cei4)),
-                        Z(f.BRd.LIGHT, h.intl.string(h.t.K2sFfn)),
-                        C &&
+                        k(p.BRd.DARK, _.intl.string(_.t.b8Cei4)),
+                        k(p.BRd.LIGHT, _.intl.string(_.t.K2sFfn)),
+                        M &&
                             (0, i.jsxs)(i.Fragment, {
-                                children: [Z(f.BRd.DARKER, 'Darker'), Z(f.BRd.MIDNIGHT, h.intl.string(h.t.pQwSpa))]
+                                children: [k(p.BRd.DARKER, 'Darker'), k(p.BRd.MIDNIGHT, _.intl.string(_.t.pQwSpa))]
                             }),
-                        Z('system', h.intl.string(h.t['7rOU6u']))
+                        k('system', _.intl.string(_.t['7rOU6u']))
                     ]
                 },
                 'theme-items'
@@ -73,7 +74,7 @@ function _() {
                 {
                     children: (0, i.jsx)(o.MenuItem, {
                         id: 'compact-mode',
-                        label: e ? h.intl.string(h.t.CTpwDw) : h.intl.string(h.t['J/FISU']),
+                        label: e ? _.intl.string(_.t.CTpwDw) : _.intl.string(_.t['J/FISU']),
                         action: () => {
                             b.jU.updateSetting(!e), (0, a.ZZ)();
                         }
@@ -83,8 +84,8 @@ function _() {
             )
         ];
     return (
-        M &&
-            (k.push(
+        Z &&
+            (I.push(
                 (0, i.jsxs)(
                     o.MenuGroup,
                     {
@@ -93,18 +94,18 @@ function _() {
                                 id: 'compact',
                                 group: 'list-density',
                                 label: 'Compact lists',
-                                checked: 'compact' === x,
+                                checked: 'compact' === C,
                                 action: () => {
-                                    l.ZP.updatedUnsyncedSettings({ listDensity: 'compact' });
+                                    l.ZP.updatedUnsyncedSettings({ listDensity: h.fx.COMPACT });
                                 }
                             }),
                             (0, i.jsx)(o.MenuRadioItem, {
                                 id: 'cozy',
                                 group: 'list-density',
                                 label: 'Cozy lists',
-                                checked: 'cozy' === x,
+                                checked: 'cozy' === C,
                                 action: () => {
-                                    l.ZP.updatedUnsyncedSettings({ listDensity: 'cozy' });
+                                    l.ZP.updatedUnsyncedSettings({ listDensity: h.fx.COZY });
                                 }
                             })
                         ]
@@ -112,7 +113,7 @@ function _() {
                     'list-density'
                 )
             ),
-            k.push(
+            I.push(
                 (0, i.jsx)(
                     o.MenuGroup,
                     {
@@ -120,14 +121,14 @@ function _() {
                             id: 'desktop-refresh-override',
                             label: 'Enable Desktop Refresh',
                             action: () => {
-                                l.ZP.updatedUnsyncedSettings({ disableVisualRefresh: C });
+                                l.ZP.updatedUnsyncedSettings({ disableVisualRefresh: M });
                             },
-                            checked: C
+                            checked: M
                         })
                     },
                     'refresh-experiment'
                 )
             )),
-        k
+        I
     );
 }

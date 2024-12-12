@@ -1,7 +1,10 @@
-var i, a;
+var i, a, s;
 r.d(n, {
     Oe: function () {
         return i;
+    },
+    fx: function () {
+        return s;
     },
     mX: function () {
         return a;
@@ -12,4 +15,7 @@ r.d(n, {
     })(i || (i = {})),
     !(function (e) {
         (e.REDUCED_MOTION = 'REDUCED_MOTION'), (e.REDUCED_MOTION_STICKERS = 'REDUCED_MOTION_STICKERS');
-    })(a || (a = {}));
+    })(a || (a = {})),
+    !(function (e) {
+        (e.COMPACT = 'compact'), (e.COZY = 'cozy');
+    })(s || (s = {}));
