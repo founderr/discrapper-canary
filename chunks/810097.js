@@ -1,12 +1,12 @@
 r.d(n, {
     ZP: function () {
-        return D;
+        return O;
     },
     _1: function () {
-        return C;
+        return N;
     },
     jd: function () {
-        return R;
+        return C;
     }
 });
 var i = r(627341);
@@ -23,177 +23,172 @@ var d = r(278074),
     p = r(951394),
     m = r(605236),
     g = r(314897),
-    E = r(9161),
-    v = r(490231),
-    I = r(456644),
-    T = r(837411),
-    b = r(510659),
-    y = r(652853),
-    S = r(228168),
-    A = r(388032),
-    N = r(518919);
-let C = 2700,
-    R = '> -# *',
-    O = (e, n) =>
+    E = r(490231),
+    v = r(456644),
+    I = r(837411),
+    T = r(510659),
+    b = r(652853),
+    y = r(228168),
+    S = r(388032),
+    A = r(518919);
+let N = 2700,
+    C = '> -# *',
+    R = (e, n) =>
         (0, d.EQ)({
             interactionType: e,
             sourceType: n
         })
             .with(
                 {
-                    interactionType: S.P.REPLY,
-                    sourceType: S.n_.AVATAR
+                    interactionType: y.P.REPLY,
+                    sourceType: y.n_.AVATAR
                 },
-                () => A.intl.string(A.t.xvN0fX)
+                () => S.intl.string(S.t.xvN0fX)
             )
             .with(
                 {
-                    interactionType: S.P.REACT,
-                    sourceType: S.n_.AVATAR
+                    interactionType: y.P.REACT,
+                    sourceType: y.n_.AVATAR
                 },
-                () => A.intl.string(A.t['fEUP/v'])
+                () => S.intl.string(S.t['fEUP/v'])
             )
             .with(
                 {
-                    interactionType: S.P.REPLY,
-                    sourceType: S.n_.STATUS
+                    interactionType: y.P.REPLY,
+                    sourceType: y.n_.STATUS
                 },
-                () => A.intl.string(A.t['C/vzS0'])
+                () => S.intl.string(S.t['C/vzS0'])
             )
             .with(
                 {
-                    interactionType: S.P.REACT,
-                    sourceType: S.n_.STATUS
+                    interactionType: y.P.REACT,
+                    sourceType: y.n_.STATUS
                 },
-                () => A.intl.string(A.t.TKdBCw)
+                () => S.intl.string(S.t.TKdBCw)
             )
             .with(
                 {
-                    interactionType: S.P.REPLY,
-                    sourceType: S.n_.ACTIVITY
+                    interactionType: y.P.REPLY,
+                    sourceType: y.n_.ACTIVITY
                 },
-                () => A.intl.string(A.t.ObfsSk)
+                () => S.intl.string(S.t.ObfsSk)
             )
             .with(
                 {
-                    interactionType: S.P.REACT,
-                    sourceType: S.n_.ACTIVITY
+                    interactionType: y.P.REACT,
+                    sourceType: y.n_.ACTIVITY
                 },
-                () => A.intl.string(A.t.bSe71N)
+                () => S.intl.string(S.t.bSe71N)
             )
             .exhaustive();
-function D(e) {
-    let { user: n, sourceType: r, isVisible: i, isExpandable: a, interactionSourceId: l, onAction: d, renderMoreButtonPopout: C } = e,
-        R = (0, f.e7)([g.default], () => g.default.getId() === n.id),
-        D = (0, T.Z)(n.id),
-        { profileType: L } = (0, y.z)(),
-        { onInteraction: x } = (0, b.Xo)(),
-        w = L !== S.y0.FULL_SIZE && r !== S.n_.AVATAR,
-        { fadeInAndOutEnabled: P } = (0, v.o)({
+function O(e) {
+    let { user: n, sourceType: r, isVisible: i, isExpandable: a, interactionSourceId: l, onAction: d, renderMoreButtonPopout: N } = e,
+        C = (0, f.e7)([g.default], () => g.default.getId() === n.id),
+        O = (0, I.Z)(n.id),
+        { profileType: D } = (0, b.z)(),
+        { onInteraction: L } = (0, T.Xo)(),
+        x = D !== y.y0.FULL_SIZE && r !== y.n_.AVATAR,
+        { fadeInAndOutEnabled: w } = (0, E.o)({
             location: 'UserProfileInteractionToolbar',
-            autoTrackExposure: w
+            autoTrackExposure: x
         }),
-        { recentActivityTabEnabled: M } = (0, E.O)({
-            location: 'UserProfileInteractionToolbar',
-            autoTrackExposure: !1
-        }),
-        { recentActivityEnabled: k } = (0, I.i)({
+        { recentActivityEnabled: P } = (0, v.i)({
             location: 'UserProfileInteractionToolbar',
             autoTrackExposure: !1
         }),
-        U = (P || M || k) && w && !i,
-        [B, G] = o.useState(U);
+        M = (w || P) && x && !i,
+        [k, U] = o.useState(M);
     if (
         (o.useEffect(() => {
-            B && !U && G(!1);
-        }, [B, U]),
-        n.bot || R || !D)
+            k && !M && U(!1);
+        }, [k, M]),
+        n.bot || C || !O)
     )
         return null;
-    let Z = () => {
-            r === S.n_.AVATAR ? d({ action: 'PRESS_REACT_AVATAR' }) : r === S.n_.STATUS ? d({ action: 'PRESS_REACT_CUSTOM_STATUS' }) : d({ action: 'PRESS_REACT_ACTIVITY' }),
-                null == x ||
-                    x({
-                        interactionType: S.P.REACT,
+    let B = () => {
+            r === y.n_.AVATAR ? d({ action: 'PRESS_REACT_AVATAR' }) : r === y.n_.STATUS ? d({ action: 'PRESS_REACT_CUSTOM_STATUS' }) : d({ action: 'PRESS_REACT_ACTIVITY' }),
+                null == L ||
+                    L({
+                        interactionType: y.P.REACT,
                         interactionSource: r,
                         interactionSourceId: l
                     }),
-                L === S.y0.BITE_SIZE && (0, m.EW)(_.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
+                D === y.y0.BITE_SIZE && (0, m.EW)(_.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
         },
-        F = () => {
-            r === S.n_.AVATAR ? d({ action: 'PRESS_REPLY_AVATAR' }) : r === S.n_.STATUS ? d({ action: 'PRESS_REPLY_CUSTOM_STATUS' }) : d({ action: 'PRESS_REPLY_ACTIVITY' }),
-                null == x ||
-                    x({
-                        interactionType: S.P.REPLY,
+        G = () => {
+            r === y.n_.AVATAR ? d({ action: 'PRESS_REPLY_AVATAR' }) : r === y.n_.STATUS ? d({ action: 'PRESS_REPLY_CUSTOM_STATUS' }) : d({ action: 'PRESS_REPLY_ACTIVITY' }),
+                null == L ||
+                    L({
+                        interactionType: y.P.REPLY,
                         interactionSource: r,
                         interactionSourceId: l
                     }),
-                L === S.y0.BITE_SIZE && (0, m.EW)(_.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
+                D === y.y0.BITE_SIZE && (0, m.EW)(_.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
         },
-        V = (e) => {
-            e.animationName === (0, c.get)(N, 'fadeInAndOut') && G(!1);
+        Z = (e) => {
+            e.animationName === (0, c.get)(A, 'fadeInAndOut') && U(!1);
         };
     return (0, s.jsxs)(p.ZP, {
-        className: u()(N.popover, {
-            [N.fadeInAndOut]: B,
-            [N.visible]: i,
-            [N.expandable]: a,
-            [N.statusPopover]: r === S.n_.STATUS,
-            [N.avatarPopover]: r === S.n_.AVATAR,
-            [N.activityPopover]: r === S.n_.ACTIVITY
+        className: u()(A.popover, {
+            [A.fadeInAndOut]: k,
+            [A.visible]: i,
+            [A.expandable]: a,
+            [A.statusPopover]: r === y.n_.STATUS,
+            [A.avatarPopover]: r === y.n_.AVATAR,
+            [A.activityPopover]: r === y.n_.ACTIVITY
         }),
-        onAnimationEnd: B ? V : void 0,
+        onAnimationEnd: k ? Z : void 0,
         children: [
             (0, s.jsx)(h.TooltipContainer, {
-                text: A.intl.string(A.t.nhaI4e),
+                text: S.intl.string(S.t.nhaI4e),
                 shouldShow: i,
-                className: N.tooltipContainer,
+                className: A.tooltipContainer,
                 delay: 0,
                 'aria-label': !1,
                 children: (0, s.jsx)(p.zx, {
-                    onClick: Z,
-                    className: N.button,
-                    'aria-label': O(S.P.REACT, r),
+                    onClick: B,
+                    className: A.button,
+                    'aria-label': R(y.P.REACT, r),
                     'aria-haspopup': 'dialog',
                     children: (0, s.jsx)(h.ReactionIcon, {
                         size: 'xs',
-                        className: N.icon
+                        className: A.icon
                     })
                 })
             }),
             (0, s.jsx)(h.TooltipContainer, {
-                text: A.intl.string(A.t.RmDYKC),
+                text: S.intl.string(S.t.RmDYKC),
                 shouldShow: i,
-                className: N.tooltipContainer,
+                className: A.tooltipContainer,
                 delay: 0,
                 'aria-label': !1,
                 children: (0, s.jsx)(p.zx, {
-                    onClick: F,
-                    className: N.button,
-                    'aria-label': O(S.P.REPLY, r),
+                    onClick: G,
+                    className: A.button,
+                    'aria-label': R(y.P.REPLY, r),
                     'aria-haspopup': 'dialog',
                     children: (0, s.jsx)(h.ArrowAngleLeftUpIcon, {
                         size: 'xs',
-                        className: N.icon
+                        className: A.icon
                     })
                 })
             }),
-            null == C
+            null == N
                 ? void 0
-                : C((e) =>
+                : N((e) =>
                       (0, s.jsx)(h.TooltipContainer, {
-                          text: A.intl.string(A.t.UKOtz8),
+                          text: S.intl.string(S.t.UKOtz8),
                           shouldShow: i,
-                          className: N.tooltipContainer,
+                          className: A.tooltipContainer,
                           delay: 0,
                           'aria-label': !1,
                           children: (0, s.jsx)(p.zx, {
                               ...e,
-                              className: N.button,
-                              'aria-label': A.intl.string(A.t.UKOtz8),
+                              className: A.button,
+                              'aria-label': S.intl.string(S.t.UKOtz8),
                               children: (0, s.jsx)(h.MoreHorizontalIcon, {
                                   size: 'xs',
-                                  className: N.icon
+                                  className: A.icon
                               })
                           })
                       })

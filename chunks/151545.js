@@ -16,8 +16,8 @@ var i = r(200651),
     h = r(496675),
     p = r(979651),
     m = r(626135),
-    g = r(984173),
-    E = r(9161),
+    g = r(9161),
+    E = r(490231),
     v = r(456644),
     I = r(409057),
     T = r(443375),
@@ -39,8 +39,11 @@ function A(e) {
         ),
         L = D && h.Z.can(S.Plq.CONNECT, O),
         x = (null == A ? void 0 : A.type) === S.IIU.HANG_STATUS && L ? O : null,
-        { activityReactReplyEnabled: w } = (0, g.F)({ location: 'UserProfileActivityCardWrapper' }),
-        { recentActivityTabEnabled: P } = (0, E.O)({
+        { fadeInAndOutEnabled: w } = (0, E.o)({
+            location: 'UserProfileActivityCardWrapper',
+            autoTrackExposure: !1
+        }),
+        { recentActivityTabEnabled: P } = (0, g.O)({
             location: 'UserProfileActivityCardWrapper',
             autoTrackExposure: !1
         }),

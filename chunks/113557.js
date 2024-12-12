@@ -5,13 +5,19 @@ r.d(n, {
 });
 var i = r(200651);
 r(192379);
-var a = r(984173),
-    s = r(718107),
+var a = r(490231),
+    s = r(456644),
     o = r(899007),
     l = r(995250);
 function u(e) {
     let { location: n, ...r } = e,
-        { avatarReactReplyEnabled: u } = (0, s.t)({ location: n }),
-        { allProfileReactReplyEnabled: c } = (0, a.F)({ location: n });
+        { fadeInAndOutEnabled: u } = (0, a.o)({
+            location: n,
+            autoTrackExposure: !1
+        }),
+        { allProfileReactReplyEnabled: c } = (0, s.i)({
+            location: n,
+            autoTrackExposure: !1
+        });
     return u || c ? (0, i.jsx)(l.Z, { ...r }) : (0, i.jsx)(o.Z, { ...r });
 }

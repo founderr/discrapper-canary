@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return I;
+        return b;
     }
 });
 var i = r(47120);
@@ -16,18 +16,28 @@ var o = r(442837),
     h = r(158776),
     p = r(699516),
     m = r(626135),
-    g = r(981631);
-let E = [],
-    v = [];
-function I(e) {
-    let n = (0, o.e7)([h.Z], () => h.Z.getActivities(e)),
-        r = (0, o.e7)([u.Z], () => u.Z.getUserOutbox(e)),
-        { enabled: i, analyticsEligible: I } = (0, l.R4)('use-user-profile-activity'),
-        { stream: T, nonExperimentStream: b } = (0, o.cj)(
+    g = r(9161),
+    E = r(456644),
+    v = r(981631);
+let I = [],
+    T = [];
+function b(e) {
+    let { recentActivityTabEnabled: n } = (0, g.O)({
+            location: 'useUserProfileActivity',
+            autoTrackExposure: !1
+        }),
+        { recentActivityEnabled: r } = (0, E.i)({
+            location: 'useUserProfileActivity',
+            autoTrackExposure: !1
+        }),
+        i = (0, o.e7)([h.Z], () => h.Z.getActivities(e)),
+        b = (0, o.e7)([u.Z], () => (n || r ? u.Z.getUserOutbox(e) : void 0)),
+        { enabled: y, analyticsEligible: S } = (0, l.R4)('use-user-profile-activity'),
+        { stream: A, nonExperimentStream: N } = (0, o.cj)(
             [_.Z],
             () => {
                 let n = _.Z.getAnyStreamForUser(e);
-                return i
+                return y
                     ? {
                           stream: _.Z.getAnyDiscoverableStreamForUser(e),
                           nonExperimentStream: n
@@ -37,39 +47,39 @@ function I(e) {
                           nonExperimentStream: n
                       };
             },
-            [i, e]
+            [y, e]
         ),
-        y = (0, o.e7)([p.Z], () => p.Z.getRelationshipType(e));
+        C = (0, o.e7)([p.Z], () => p.Z.getRelationshipType(e));
     (0, a.useEffect)(() => {
-        if (I && null != b) {
+        if (S && null != N) {
             var n;
-            m.default.track(g.rMx.USER_VOICE_ACTIVITY_VIEWED, {
+            m.default.track(v.rMx.USER_VOICE_ACTIVITY_VIEWED, {
                 activity_user_id: e,
-                discoverable: null === (n = null == b ? void 0 : b.discoverable) || void 0 === n || n,
+                discoverable: null === (n = null == N ? void 0 : N.discoverable) || void 0 === n || n,
                 surface: 'user-profile-activity',
-                relationship_type: y,
-                treatment: i && (null == b ? void 0 : b.discoverable) === !1 ? l.h9.HIDE : l.h9.SHOW
+                relationship_type: C,
+                treatment: y && (null == N ? void 0 : N.discoverable) === !1 ? l.h9.HIDE : l.h9.SHOW
             });
         }
-    }, [b, i, I, e, y]);
-    let { live: S, recent: A } = (0, a.useMemo)(() => {
+    }, [N, y, S, e, C]);
+    let { live: R, recent: O } = (0, a.useMemo)(() => {
         let e = (0, s.uniqWith)(
-                n.filter((e) => {
+                i.filter((e) => {
                     let { type: n } = e;
-                    return n !== g.IIU.CUSTOM_STATUS;
+                    return n !== v.IIU.CUSTOM_STATUS;
                 }),
                 (e, n) => (null != e.application_id && null != n.application_id && e.application_id === n.application_id) || (null != e.name && null != n.name && e.name === n.name)
             ),
-            i = null == r ? void 0 : r.entries.filter((n) => !(0, f.Jg)(n) && ((0, c.dU)(n) ? n.extra.entries.length > 0 && !e.some((e) => null != e && (0, d.pB)(n, e)) : (0, c.y0)(n) ? !e.some((e) => null != e && (0, d.RL)(n, e)) : (0, c.Rh)(n)));
+            n = null == b ? void 0 : b.entries.filter((n) => !(0, f.Jg)(n) && ((0, c.dU)(n) ? n.extra.entries.length > 0 && !e.some((e) => null != e && (0, d.pB)(n, e)) : (0, c.y0)(n) ? !e.some((e) => null != e && (0, d.RL)(n, e)) : (0, c.Rh)(n)));
         return {
-            live: 0 === e.length ? E : e,
-            recent: null == i || 0 === i.length ? v : i
+            live: 0 === e.length ? I : e,
+            recent: null == n || 0 === n.length ? T : n
         };
-    }, [n, null == r ? void 0 : r.entries]);
+    }, [i, null == b ? void 0 : b.entries]);
     return {
-        live: S,
-        recent: A,
-        stream: T,
-        outbox: r
+        live: R,
+        recent: O,
+        stream: A,
+        outbox: b
     };
 }
