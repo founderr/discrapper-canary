@@ -43,12 +43,12 @@ var i = n(200651),
     L = n(312097),
     R = n(422559),
     k = n(703656),
-    B = n(280885),
-    O = n(706454),
+    O = n(280885),
+    B = n(706454),
     Z = n(314897),
     w = n(451478),
-    H = n(626135),
-    D = n(768581),
+    D = n(626135),
+    H = n(768581),
     F = n(572004),
     M = n(823379),
     U = n(900849),
@@ -138,22 +138,22 @@ function eS(e) {
             [m]
         ),
         ek = (0, _.e7)([w.Z], () => w.Z.isFocused()),
-        eB = (0, _.e7)([O.default], () => O.default.locale),
-        eO = a.useRef(m),
+        eO = (0, _.e7)([B.default], () => B.default.locale),
+        eB = a.useRef(m),
         eZ = (0, _.e7)([V.Z], () => {
             let e = V.Z.getApplication(m);
-            return null == e ? (e = V.Z.getApplication(eO.current)) : (eO.current = m), e;
+            return null == e ? (e = V.Z.getApplication(eB.current)) : (eB.current = m), e;
         }),
         ew = (0, ei.Z)({ application: eZ }),
-        eH = (0, _.e7)([Z.default], () => Z.default.getSessionId());
+        eD = (0, _.e7)([Z.default], () => Z.default.getSessionId());
     (0, y.Tt)({ location: null == eZ ? void 0 : eZ.name });
-    let eD = a.useCallback(async () => {
+    let eH = a.useCallback(async () => {
         try {
             var e;
             let t = null == eZ ? void 0 : null === (e = eZ.guild) || void 0 === e ? void 0 : e.id;
             if (null != t) {
                 (null == eZ ? void 0 : eZ.id) != null &&
-                    H.default.track(ep.rMx.APP_DIRECTORY_SUPPORT_SERVER_JOINED, {
+                    D.default.track(ep.rMx.APP_DIRECTORY_SUPPORT_SERVER_JOINED, {
                         application_id: eZ.id,
                         guild_id: h,
                         support_guild_id: t
@@ -166,16 +166,16 @@ function eS(e) {
     a.useEffect(() => {
         if (null == eZ) return;
         let e = new URL(location.href);
-        if (T && null != eH && 'true' === e.searchParams.get(ex)) {
+        if (T && null != eD && 'true' === e.searchParams.get(ex)) {
             e.searchParams.delete(ex);
             let t = e.pathname + e.search;
-            (0, k.dL)(t), eD();
+            (0, k.dL)(t), eH();
         }
-    }, [T, eD, eH, eZ]);
+    }, [T, eH, eD, eZ]);
     let eF = a.useCallback(() => {
             var e;
-            null != (null == eZ ? void 0 : null === (e = eZ.guild) || void 0 === e ? void 0 : e.id) && (T ? eD() : (0, X.rf)({ [ex]: 'true' }));
-        }, [eZ, T, eD]),
+            null != (null == eZ ? void 0 : null === (e = eZ.guild) || void 0 === e ? void 0 : e.id) && (T ? eH() : (0, X.rf)({ [ex]: 'true' }));
+        }, [eZ, T, eH]),
         eM = a.useCallback(() => {
             (0, en.replaceAppDirectoryURLWith)(''.concat(ep.Z5c.APPLICATION_DIRECTORY_PROFILE(m)).concat(location.search));
         }, [m]);
@@ -205,7 +205,7 @@ function eS(e) {
                     : eL(void 0);
             }
         }, [eZ]);
-    let eU = D.ZP.getApplicationIconURL({
+    let eU = H.ZP.getApplicationIconURL({
             id: null !== (l = null == eZ ? void 0 : eZ.id) && void 0 !== l ? l : '-1',
             icon: null == eZ ? void 0 : eZ.icon,
             size: ev
@@ -218,7 +218,7 @@ function eS(e) {
         eW = null === (t = (0, et.getPreviousView)()) || void 0 === t ? void 0 : t.type;
     a.useEffect(() => {
         (null == eZ ? void 0 : eZ.id) != null &&
-            H.default.track(ep.rMx.APP_DIRECTORY_PAGE_VIEWED, {
+            D.default.track(ep.rMx.APP_DIRECTORY_PAGE_VIEWED, {
                 current_page: 'product',
                 previous_page: eW,
                 application_id: eZ.id,
@@ -237,7 +237,7 @@ function eS(e) {
             (e) => {
                 eR(e),
                     (null == eZ ? void 0 : eZ.id) != null &&
-                        H.default.track(ep.rMx.APP_DIRECTORY_PROFILE_TAB_CLICKED, {
+                        D.default.track(ep.rMx.APP_DIRECTORY_PROFILE_TAB_CLICKED, {
                             application_id: eZ.id,
                             guild_id: h,
                             tab_name: e
@@ -277,7 +277,7 @@ function eS(e) {
         eJ = a.useCallback(
             (e) => {
                 (null == eZ ? void 0 : eZ.id) != null &&
-                    H.default.track(ep.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
+                    D.default.track(ep.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
                         current_page: 'product',
                         category: e.name,
                         category_id: e.id,
@@ -299,7 +299,7 @@ function eS(e) {
             (e) => {
                 let { application: t, mutualGuilds: n, index: i } = e;
                 (null == eZ ? void 0 : eZ.id) != null &&
-                    H.default.track(ep.rMx.APP_DIRECTORY_RECOMMENDATION_CLICKED, {
+                    D.default.track(ep.rMx.APP_DIRECTORY_RECOMMENDATION_CLICKED, {
                         current_page: 'product',
                         application_id: eZ.id,
                         suggested_application_id: t.id,
@@ -318,10 +318,10 @@ function eS(e) {
                     (0, er.G)({
                         id: eZ.id,
                         name: eZ.name,
-                        locale: eB
+                        locale: eO
                     })
                 );
-        }, [eB, eZ]),
+        }, [eO, eZ]),
         e0 = a.useCallback(
             (e) =>
                 (0, i.jsxs)(g.Menu, {
@@ -346,7 +346,7 @@ function eS(e) {
         [e1, e6] = (0, b.Z)(!1, 1000),
         e2 = a.useCallback(() => {
             if (null != eZ)
-                H.default.track(ep.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, {
+                D.default.track(ep.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, {
                     application_id: eZ.id,
                     guild_id: h
                 }),
@@ -377,7 +377,7 @@ function eS(e) {
                 }
                 T
                     ? eV('product_page')
-                    : (H.default.track(ep.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
+                    : (D.default.track(ep.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
                           application_id: m,
                           guild_id: h,
                           auth_type: null != eZ.custom_install_url ? 'custom_url' : 'in_app',
@@ -456,7 +456,7 @@ function eS(e) {
                             )
                           : (null == eZ ? void 0 : eZ.description) != null &&
                             e.push(
-                                (0, i.jsx)(B.Z, {
+                                (0, i.jsx)(O.Z, {
                                     className: ef.description,
                                     userBio: eZ.description
                                 })
@@ -520,7 +520,7 @@ function eS(e) {
                                     let { src: t, loadTimeMs: n } = e;
                                     null != n &&
                                         null != eZ &&
-                                        H.default.track(ep.rMx.APP_DIRECTORY_CAROUSEL_IMAGE_LOADED, {
+                                        D.default.track(ep.rMx.APP_DIRECTORY_CAROUSEL_IMAGE_LOADED, {
                                             application_id: eZ.id,
                                             load_time_ms: n,
                                             src: t
@@ -763,6 +763,7 @@ function eS(e) {
                                                                         (0, i.jsx)($.Z, {
                                                                             loading: es,
                                                                             children: (0, i.jsx)(J.Z, {
+                                                                                applicationId: m,
                                                                                 applications: eP,
                                                                                 onViewOne: eQ
                                                                             })
@@ -863,15 +864,15 @@ function eT(e) {
         l = a.useMemo(() => {
             let e = { backgroundColor: r };
             if (null != o) {
-                let t = (0, D.aN)({
+                let t = (0, H.aN)({
                     id: o.id,
                     banner: o.banner,
                     size: 1024,
                     canAnimate: !1
                 });
                 null != t && ((e['--custom-background-static'] = 'url('.concat(t)), (e.height = 'auto'));
-                let n = (0, D.xR)(o.banner)
-                    ? (0, D.aN)({
+                let n = (0, H.xR)(o.banner)
+                    ? (0, H.aN)({
                           id: o.id,
                           banner: o.banner,
                           size: 1024,

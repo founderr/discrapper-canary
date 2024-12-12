@@ -1,53 +1,80 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return _;
     }
-});
-var i = n(200651);
-n(192379);
-var a = n(481060),
-    r = n(463571),
-    o = n(744142),
-    l = n(981631),
-    s = n(388032),
-    c = n(535040);
-function d(e) {
-    let { applications: t, className: n, listingClassName: o, title: d, showViewAll: p, onViewOne: m, onViewAll: _ } = e;
+}),
+    n(47120);
+var i = n(200651),
+    a = n(192379),
+    r = n(481060),
+    o = n(434650),
+    l = n(626135),
+    s = n(463571),
+    c = n(744142),
+    d = n(132871),
+    u = n(981631),
+    p = n(388032),
+    m = n(535040);
+function _(e) {
+    let { applicationId: t, applications: n, className: c, listingClassName: _, title: h, showViewAll: g, onViewOne: I, onViewAll: v } = e,
+        x = (function (e) {
+            let { applicationId: t, similarAppIds: n } = e,
+                i = (0, d.useApplicationDirectoryHistory)((e) => e.guildId),
+                [r, s] = a.useState(),
+                c = (0, o.O)((e) => {
+                    e && s(t);
+                });
+            return (
+                a.useEffect(() => {
+                    r === t &&
+                        l.default.track(u.rMx.APP_DIRECTORY_RECOMMENDATIONS_VIEWED, {
+                            application_id: t,
+                            suggested_application_ids: n,
+                            guild_id: i
+                        });
+                }, [r, t, n, i]),
+                c
+            );
+        })({
+            applicationId: t,
+            similarAppIds: a.useMemo(() => n.map((e) => e.id), [n])
+        });
     return (0, i.jsxs)('div', {
-        className: n,
+        className: c,
+        ref: x,
         children: [
-            null != d
+            null != h
                 ? (0, i.jsxs)('div', {
-                      className: c.header,
+                      className: m.header,
                       children: [
-                          (0, i.jsx)(a.Heading, {
+                          (0, i.jsx)(r.Heading, {
                               variant: 'heading-lg/semibold',
-                              children: d
+                              children: h
                           }),
-                          p
-                              ? (0, i.jsx)(a.Button, {
-                                    look: a.Button.Looks.LINK,
-                                    color: a.Button.Colors.LINK,
-                                    onClick: _,
-                                    children: s.intl.string(s.t['e+T3go'])
+                          g
+                              ? (0, i.jsx)(r.Button, {
+                                    look: r.Button.Looks.LINK,
+                                    color: r.Button.Colors.LINK,
+                                    onClick: v,
+                                    children: p.intl.string(p.t['e+T3go'])
                                 })
                               : null
                       ]
                   })
                 : null,
             (0, i.jsx)('ul', {
-                className: c.list,
-                children: t.map((e, t) =>
+                className: m.list,
+                children: n.map((e, t) =>
                     (0, i.jsx)(
-                        r.Z,
+                        s.Z,
                         {
-                            href: l.Z5c.APPLICATION_DIRECTORY_PROFILE(e.id),
-                            children: (0, i.jsx)(u, {
-                                className: o,
+                            href: u.Z5c.APPLICATION_DIRECTORY_PROFILE(e.id),
+                            children: (0, i.jsx)(f, {
+                                className: _,
                                 application: e,
                                 onClick: (n) => {
                                     let { mutualGuilds: i } = n;
-                                    return m({
+                                    return I({
                                         application: e,
                                         mutualGuilds: i,
                                         index: t
@@ -62,6 +89,6 @@ function d(e) {
         ]
     });
 }
-function u(e) {
-    return (0, i.jsx)(o.Z, { ...e });
+function f(e) {
+    return (0, i.jsx)(c.Z, { ...e });
 }

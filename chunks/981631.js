@@ -4757,6 +4757,7 @@ let on = Object.freeze({
     (ah.APP_DIRECTORY_APPLICATION_EXTERNAL_LINK_CLICKED = 'app_directory_application_external_link_clicked'),
     (ah.APP_DIRECTORY_APPLICATION_LINK_COPIED = 'app_directory_application_link_copied'),
     (ah.APP_DIRECTORY_RECOMMENDATION_CLICKED = 'app_directory_recommendation_clicked'),
+    (ah.APP_DIRECTORY_RECOMMENDATIONS_VIEWED = 'app_directory_recommendations_viewed'),
     (ah.APP_DIRECTORY_SEARCH_RESULT_CLICKED = 'app_directory_search_result_clicked'),
     (ah.APP_DIRECTORY_PROFILE_TAB_CLICKED = 'app_directory_profile_tab_clicked'),
     (ah.APP_DIRECTORY_CAROUSEL_IMAGE_LOADED = 'app_directory_carousel_image_loaded'),
