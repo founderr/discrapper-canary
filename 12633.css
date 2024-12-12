@@ -11159,6 +11159,23 @@ div.modalHeader_c5e09c {
     right: -8px
 }
 
+.effect_efd76b {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1001;
+    bottom: 0;
+    width: var(--custom-voice-channel-effect-voice-channel-effect-animation-size)
+}
+
+.effects_b5b75b {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    pointer-events: none
+}
+
 .soundButtonWrapper_f40049 {
     list-style: none;
     position: relative

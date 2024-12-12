@@ -1,4 +1,3 @@
-n(47120);
 var i = n(200651),
     r = n(192379),
     a = n(120356),
@@ -16,10 +15,10 @@ var i = n(200651),
     h = n(388032),
     E = n(909007);
 let b = (e) => {
-    let { name: t, title: n, description: a, descriptionCta: h, previewImage: b, videoUrl: x, shouldLoadVideo: C, index: T, isCompact: v, onClick: N } = e,
-        I = (0, g.rO)(),
-        S = r.useRef(null),
-        [R, A] = r.useState(0),
+    let { name: t, title: n, description: a, descriptionCta: h, previewImage: b, videoUrl: x, shouldLoadVideo: C, index: T, isCompact: v, isReducedMotion: N, onClick: I } = e,
+        S = (0, g.rO)(),
+        R = r.useRef(null),
+        A = r.useRef(0),
         j = (function (e) {
             let t;
             switch (e) {
@@ -53,10 +52,10 @@ let b = (e) => {
             m.default.track(p.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
         }, 800),
         O = () => {
-            null != S.current && ((S.current.currentTime = R), S.current.play());
+            null != R.current && !N && ((R.current.currentTime = A.current), R.current.play());
         },
         w = () => {
-            null != S.current && (A(S.current.currentTime), S.current.pause());
+            null != R.current && !N && ((A.current = R.current.currentTime), R.current.pause());
         },
         k = () =>
             (0, i.jsxs)('div', {
@@ -81,13 +80,13 @@ let b = (e) => {
                         children: a
                     }),
                     null != h &&
-                        null != N &&
+                        null != I &&
                         (0, i.jsx)(c.Button, {
                             look: c.ButtonLooks.OUTLINED,
                             color: M,
                             className: s()(E.whatsNewBoxButton, Z ? E.whatsNewBoxButtonWhite : E.whatsNewBoxButtonBrand),
                             onClick: () => {
-                                B(), N();
+                                B(), I();
                             },
                             children: h
                         })
@@ -100,23 +99,27 @@ let b = (e) => {
                     [E.whatsNewArtContainer]: !v,
                     [E.compactBoxArtContainer]: v
                 }),
-                children: (0, i.jsx)(u.Z, {
-                    playsInline: !0,
-                    preload: C ? 'auto' : 'none',
-                    muted: !0,
-                    poster: b,
-                    loop: !0,
-                    className: s()({
-                        [E.perkBoxVideo]: !v,
-                        [E.leftSideArt]: t && !v,
-                        [E.compactBoxVideo]: v
-                    }),
-                    ref: S,
-                    children: (0, i.jsx)('source', {
-                        src: x,
-                        type: I ? _.m.MP4 : _.m.WEBM
-                    })
-                })
+                children: (0, i.jsx)(
+                    u.Z,
+                    {
+                        playsInline: !0,
+                        preload: C ? 'auto' : 'none',
+                        muted: !0,
+                        poster: b,
+                        loop: !0,
+                        className: s()({
+                            [E.perkBoxVideo]: !v,
+                            [E.leftSideArt]: t && !v,
+                            [E.compactBoxVideo]: v
+                        }),
+                        ref: R,
+                        children: (0, i.jsx)('source', {
+                            src: x,
+                            type: S ? _.m.MP4 : _.m.WEBM
+                        })
+                    },
+                    x
+                )
             });
         },
         L = T % 2 == 0;
@@ -139,9 +142,9 @@ let b = (e) => {
     });
 };
 t.Z = r.memo(function (e) {
-    let { className: t, shouldLoadVideo: n, isBestOfNitro: r = !1 } = e,
-        a = Object.values((0, f.ZP)(r)),
-        l = r ? Object.values((0, f.__)()) : null;
+    let { className: t, shouldLoadVideo: n, isBestOfNitro: r = !1, isReducedMotion: a } = e,
+        l = Object.values((0, f.ZP)(r)),
+        o = r ? Object.values((0, f.__)()) : null;
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
             className: s()(E.boxBackdrop, t),
@@ -152,26 +155,28 @@ t.Z = r.memo(function (e) {
                     color: 'header-primary',
                     children: r ? h.intl.string(h.t.EnzW2N) : h.intl.string(h.t.LRmNAg)
                 }),
-                a.map((e, t) =>
+                l.map((e, t) =>
                     (0, i.jsx)(
                         b,
                         {
                             shouldLoadVideo: n,
+                            isReducedMotion: a,
                             index: t,
                             ...e
                         },
                         e.name
                     )
                 ),
-                null != l &&
+                null != o &&
                     (0, i.jsxs)('div', {
                         className: E.compactBoxOuterContainer,
                         children: [
-                            l.map((e, t) =>
+                            o.map((e, t) =>
                                 (0, i.jsx)(
                                     b,
                                     {
                                         shouldLoadVideo: n,
+                                        isReducedMotion: a,
                                         index: t,
                                         ...e
                                     },
