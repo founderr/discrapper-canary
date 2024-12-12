@@ -1,4 +1,5 @@
-var a = r(961499);
-e.exports = function (e) {
-    return a(this, e).has(e);
-};
+var i = r(961499);
+function a(e) {
+    return i(this, e).has(e);
+}
+e.exports = a;

@@ -1,24 +1,9 @@
-var a, n;
-r.d(t, {
+var i;
+r.d(n, {
     h: function () {
-        return a;
+        return i;
     }
 }),
-    ((n = a || (a = {})).IMAGE = 'image'),
-    (n.VIDEO = 'video'),
-    (n.LINK = 'link'),
-    (n.ARTICLE = 'article'),
-    (n.TWEET = 'tweet'),
-    (n.RICH = 'rich'),
-    (n.GIFV = 'gifv'),
-    (n.APPLICATION_NEWS = 'application_news'),
-    (n.AUTO_MODERATION_MESSAGE = 'auto_moderation_message'),
-    (n.AUTO_MODERATION_NOTIFICATION = 'auto_moderation_notification'),
-    (n.TEXT = 'text'),
-    (n.POST_PREVIEW = 'post_preview'),
-    (n.GIFT = 'gift'),
-    (n.SAFETY_POLICY_NOTICE = 'safety_policy_notice'),
-    (n.SAFETY_SYSTEM_NOTIFICATION = 'safety_system_notification'),
-    (n.VOICE_CHANNEL = 'voice_channel'),
-    (n.GAMING_PROFILE = 'gaming_profile'),
-    (n.POLL_RESULT = 'poll_result');
+    !(function (e) {
+        (e.IMAGE = 'image'), (e.VIDEO = 'video'), (e.LINK = 'link'), (e.ARTICLE = 'article'), (e.TWEET = 'tweet'), (e.RICH = 'rich'), (e.GIFV = 'gifv'), (e.APPLICATION_NEWS = 'application_news'), (e.AUTO_MODERATION_MESSAGE = 'auto_moderation_message'), (e.AUTO_MODERATION_NOTIFICATION = 'auto_moderation_notification'), (e.TEXT = 'text'), (e.POST_PREVIEW = 'post_preview'), (e.GIFT = 'gift'), (e.SAFETY_POLICY_NOTICE = 'safety_policy_notice'), (e.SAFETY_SYSTEM_NOTIFICATION = 'safety_system_notification'), (e.VOICE_CHANNEL = 'voice_channel'), (e.GAMING_PROFILE = 'gaming_profile'), (e.POLL_RESULT = 'poll_result');
+    })(i || (i = {}));

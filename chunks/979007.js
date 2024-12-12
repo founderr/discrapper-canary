@@ -1,24 +1,26 @@
-var a, n;
-r.r(t),
-    r.d(t, {
+var i;
+r.r(n),
+    r.d(n, {
         EMPTY_QUERY: function () {
-            return o;
+            return s;
         },
         GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID: function () {
-            return _;
-        },
-        GlobalDiscoveryAppsSections: function () {
             return a;
         },
+        GlobalDiscoveryAppsSections: function () {
+            return i;
+        },
         MAX_PAGES: function () {
-            return E;
+            return o;
         },
         PAGE_SIZE: function () {
-            return i;
+            return l;
         }
     });
-let _ = 0,
-    o = '',
-    E = 100,
-    i = 48;
-((n = a || (a = {})).ABOUT = 'about'), (n.STORE = 'store');
+let a = 0,
+    s = '',
+    o = 100,
+    l = 48;
+!(function (e) {
+    (e.ABOUT = 'about'), (e.STORE = 'store');
+})(i || (i = {}));

@@ -1,7 +1,12 @@
-var a = r(657398),
-    n = r(706627);
-e.exports = function (e) {
-    if (!n(e)) return !1;
-    var t = a(e);
-    return '[object Function]' == t || '[object GeneratorFunction]' == t || '[object AsyncFunction]' == t || '[object Proxy]' == t;
-};
+var i = r(657398),
+    a = r(706627),
+    s = '[object AsyncFunction]',
+    o = '[object Function]',
+    l = '[object GeneratorFunction]',
+    u = '[object Proxy]';
+function c(e) {
+    if (!a(e)) return !1;
+    var n = i(e);
+    return n == o || n == l || n == s || n == u;
+}
+e.exports = c;

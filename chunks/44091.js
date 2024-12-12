@@ -1,4 +1,5 @@
-var a = r(217185);
-e.exports = function (e) {
-    return null == e ? '' : a(e);
-};
+var i = r(217185);
+function a(e) {
+    return null == e ? '' : i(e);
+}
+e.exports = a;

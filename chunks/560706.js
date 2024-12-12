@@ -1,15 +1,16 @@
-var a = r(196322),
-    n = r(443735),
-    _ = r(402428),
+var i = r(196322),
+    a = r(443735),
+    s = r(402428),
     o = r(830911),
-    E = r(406705),
-    i = r(828091);
-e.exports = function (e, t, r) {
-    t = a(t, e);
-    for (var c = -1, s = t.length, l = !1; ++c < s; ) {
-        var I = i(t[c]);
-        if (!(l = null != e && r(e, I))) break;
-        e = e[I];
+    l = r(406705),
+    u = r(828091);
+function c(e, n, r) {
+    n = i(n, e);
+    for (var c = -1, d = n.length, f = !1; ++c < d; ) {
+        var _ = u(n[c]);
+        if (!(f = null != e && r(e, _))) break;
+        e = e[_];
     }
-    return l || ++c != s ? l : !!(s = null == e ? 0 : e.length) && E(s) && o(I, s) && (_(e) || n(e));
-};
+    return f || ++c != d ? f : !!(d = null == e ? 0 : e.length) && l(d) && o(_, d) && (s(e) || a(e));
+}
+e.exports = c;

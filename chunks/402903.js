@@ -1,13 +1,14 @@
-var a = r(580897),
-    n = r(289399),
-    _ = r(161757);
-e.exports = function (e, t) {
+var i = r(580897),
+    a = r(289399),
+    s = r(161757);
+function o(e, n) {
     var r = {};
     return (
-        (t = _(t, 3)),
-        n(e, function (e, n, _) {
-            a(r, n, t(e, n, _));
+        (n = s(n, 3)),
+        a(e, function (e, a, s) {
+            i(r, a, n(e, a, s));
         }),
         r
     );
-};
+}
+e.exports = o;

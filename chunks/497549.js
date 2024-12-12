@@ -1,11 +1,12 @@
-var a = r(46166),
-    n = r(107378),
-    _ = r(849513);
-e.exports = function (e) {
-    var t = n(e);
-    return 1 == t.length && t[0][2]
-        ? _(t[0][0], t[0][1])
+var i = r(46166),
+    a = r(107378),
+    s = r(849513);
+function o(e) {
+    var n = a(e);
+    return 1 == n.length && n[0][2]
+        ? s(n[0][0], n[0][1])
         : function (r) {
-              return r === e || a(r, e, t);
+              return r === e || i(r, e, n);
           };
-};
+}
+e.exports = o;

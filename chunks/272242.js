@@ -1,12 +1,10 @@
-var a, n;
-r.r(t),
-    r.d(t, {
+var i;
+r.r(n),
+    r.d(n, {
         ApplicationDirectoryProfileSections: function () {
-            return a;
+            return i;
         }
     }),
-    ((n = a || (a = {})).GENERAL = 'general'),
-    (n.IMAGES = 'images'),
-    (n.PREMIUM_DEPRECATED = 'premium'),
-    (n.STORE = 'store'),
-    (n.PRIVACY = 'privacy');
+    !(function (e) {
+        (e.GENERAL = 'general'), (e.IMAGES = 'images'), (e.PREMIUM_DEPRECATED = 'premium'), (e.STORE = 'store'), (e.PRIVACY = 'privacy');
+    })(i || (i = {}));

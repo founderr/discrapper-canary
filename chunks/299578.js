@@ -1,19 +1,21 @@
-var a = r(807419),
-    n = r(143283),
-    _ = r(706627),
+var i = r(807419),
+    a = r(143283),
+    s = r(706627),
     o = r(19235),
-    E = /^\[object .+?Constructor\]$/,
-    i = Object.prototype,
-    c = Function.prototype.toString,
-    s = i.hasOwnProperty,
-    l = RegExp(
+    l = /[\\^$.*+?()[\]{}|]/g,
+    u = /^\[object .+?Constructor\]$/,
+    c = Object.prototype,
+    d = Function.prototype.toString,
+    f = c.hasOwnProperty,
+    _ = RegExp(
         '^' +
-            c
-                .call(s)
-                .replace(/[\\^$.*+?()[\]{}|]/g, '\\$&')
+            d
+                .call(f)
+                .replace(l, '\\$&')
                 .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') +
             '$'
     );
-e.exports = function (e) {
-    return !(!_(e) || n(e)) && (a(e) ? l : E).test(o(e));
-};
+function h(e) {
+    return !(!s(e) || a(e)) && (i(e) ? _ : u).test(o(e));
+}
+e.exports = h;

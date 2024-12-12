@@ -1,73 +1,74 @@
-r.d(t, {
+r.d(n, {
     Ft: function () {
-        return _;
+        return u;
     },
     Ui: function () {
-        return a;
+        return s;
     },
     Zn: function () {
-        return n;
+        return o;
     }
-}),
-    r(47120);
-function a(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : '',
-        a = null != window.GLOBAL_ENV.WEBAPP_ENDPOINT ? window.GLOBAL_ENV.WEBAPP_ENDPOINT : '',
-        n = null != e ? '?redirect_to='.concat(encodeURIComponent(e)) : '';
+});
+var i = r(47120);
+function a(e, n, r) {
     return (
-        0 !== r.length && (r = 0 === n.length ? '?'.concat(r) : '&'.concat(r)),
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+function s(e) {
+    let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : '',
+        i = null != window.GLOBAL_ENV.WEBAPP_ENDPOINT ? window.GLOBAL_ENV.WEBAPP_ENDPOINT : '',
+        a = null != e ? '?redirect_to='.concat(encodeURIComponent(e)) : '';
+    return (
+        0 !== r.length && (r = 0 === a.length ? '?'.concat(r) : '&'.concat(r)),
         ''
-            .concat(t ? a : '', '/login')
-            .concat(n)
+            .concat(n ? i : '', '/login')
+            .concat(a)
             .concat(r)
     );
 }
-class n {
+class o {
     toString() {
         return this.value;
     }
     constructor(e) {
-        var t, r, a;
-        (t = this),
-            (a = void 0),
-            (r = 'value') in t
-                ? Object.defineProperty(t, r, {
-                      value: a,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[r] = a),
-            (this.value = e);
+        a(this, 'value', void 0), (this.value = e);
     }
 }
-function _(e, t) {
+function l(e, n) {
+    return e.map((e) =>
+        null == e
+            ? e
+            : e instanceof o
+              ? e.toString()
+              : null == n
+                ? encodeURIComponent(e)
+                : String(e)
+                      .split('')
+                      .map((e) => (null != n && n.includes(e) ? e : encodeURIComponent(e)))
+                      .join('')
+    );
+}
+function u(e, n) {
     let r = {};
-    for (let a of Object.keys(e)) {
-        let _ = e[a];
-        if ('function' != typeof _) {
-            r[a] = _;
+    for (let i of Object.keys(e)) {
+        let a = e[i];
+        if ('function' != typeof a) {
+            r[i] = a;
             continue;
         }
-        r[a] = function () {
-            for (var e = arguments.length, r = Array(e), a = 0; a < e; a++) r[a] = arguments[a];
-            return _(
-                ...(function (e, t) {
-                    return e.map((e) =>
-                        null == e
-                            ? e
-                            : e instanceof n
-                              ? e.toString()
-                              : null == t
-                                ? encodeURIComponent(e)
-                                : String(e)
-                                      .split('')
-                                      .map((e) => (null != t && t.includes(e) ? e : encodeURIComponent(e)))
-                                      .join('')
-                    );
-                })(r, t)
-            );
+        r[i] = function () {
+            for (var e = arguments.length, r = Array(e), i = 0; i < e; i++) r[i] = arguments[i];
+            return a(...l(r, n));
         };
     }
     return r;

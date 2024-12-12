@@ -1,14 +1,15 @@
-var a = r(466293),
-    n = r(467631),
-    _ = r(402428),
+var i = r(466293),
+    a = r(467631),
+    s = r(402428),
     o = r(42848),
-    E = 1 / 0,
-    i = a ? a.prototype : void 0,
-    c = i ? i.toString : void 0;
-e.exports = function e(t) {
-    if ('string' == typeof t) return t;
-    if (_(t)) return n(t, e) + '';
-    if (o(t)) return c ? c.call(t) : '';
-    var r = t + '';
-    return '0' == r && 1 / t == -E ? '-0' : r;
-};
+    l = 1 / 0,
+    u = i ? i.prototype : void 0,
+    c = u ? u.toString : void 0;
+function d(e) {
+    if ('string' == typeof e) return e;
+    if (s(e)) return a(e, d) + '';
+    if (o(e)) return c ? c.call(e) : '';
+    var n = e + '';
+    return '0' == n && 1 / e == -l ? '-0' : n;
+}
+e.exports = d;

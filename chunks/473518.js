@@ -1,5 +1,6 @@
-e.exports = function (e, t) {
+function n(e, n) {
     return function (r) {
-        return e(t(r));
+        return e(n(r));
     };
-};
+}
+e.exports = n;
