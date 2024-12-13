@@ -13,8 +13,8 @@ var i,
     a = n.n(o),
     s = n(748780),
     c = n(442837),
-    d = n(692547),
-    u = n(215569),
+    u = n(692547),
+    d = n(215569),
     h = n(481060),
     p = n(812206),
     m = n(707409),
@@ -121,11 +121,11 @@ class Z extends r.PureComponent {
                 if (null == r || null == o || null == l) return null;
                 let s = (e[e.length - 1] / t) * 1000,
                     c = 0 !== s ? Math.max(1, (o - r) / s) : null,
-                    d = S[a],
-                    u = null != d ? Object.keys(d) : [],
-                    { unit: h, time: p } = (0, m.CI)(null != c ? c / 60 : null, u);
-                if (null != d && null != h) {
-                    let e = d[h];
+                    u = S[a],
+                    d = null != u ? Object.keys(u) : [],
+                    { unit: h, time: p } = (0, m.CI)(null != c ? c / 60 : null, d);
+                if (null != u && null != h) {
+                    let e = u[h];
                     return null != e ? e(i.name, p) : null;
                 }
                 return null;
@@ -173,7 +173,7 @@ class N extends (i = r.PureComponent) {
                         ...n,
                         children: (0, l.jsx)(h.ProgressCircle, {
                             percent: e,
-                            colorOverride: t ? d.Z.unsafe_rawColors.PRIMARY_500.css : null,
+                            colorOverride: t ? u.Z.unsafe_rawColors.PRIMARY_500.css : null,
                             children: (0, l.jsx)(h.DownloadIcon, {
                                 size: 'md',
                                 color: 'currentColor',
@@ -214,7 +214,7 @@ t.Z = c.ZP.connectStores([C.Z, g.Z, p.Z], () => {
 })((e) => {
     let { determineOwnVisibility: t = !0, ...n } = e;
     return t
-        ? (0, l.jsx)(u.W, {
+        ? (0, l.jsx)(d.W, {
               component: r.Fragment,
               children: n.percent > 0 && n.percent < 100 ? (0, l.jsx)(N, { ...n }) : null
           })

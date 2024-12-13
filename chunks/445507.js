@@ -1,9 +1,9 @@
 n.d(t, {
     Q3: function () {
-        return u;
+        return d;
     },
     Zl: function () {
-        return d;
+        return u;
     },
     mC: function () {
         return o;
@@ -107,7 +107,7 @@ let s = {
             }
         ]
     },
-    d = {
+    u = {
         key: 'genshin-user',
         type: 'user',
         title: 'Preview new features for Genshin Impact players on Discord',
@@ -141,7 +141,7 @@ let s = {
             }
         ]
     },
-    u = {
+    d = {
         key: 'genshin-admin',
         type: 'guild',
         title: 'Interested in recruiting more Genshin Impact players for your server?',

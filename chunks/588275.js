@@ -11,8 +11,8 @@ var l = n(442837),
     a = n(937111),
     s = n(914010),
     c = n(451478),
-    d = n(325257),
-    u = n(674552),
+    u = n(325257),
+    d = n(674552),
     h = n(981631);
 function p(e, t) {
     (0, r.jW)(e, async () => {
@@ -33,7 +33,7 @@ function m(e) {
         g = (0, l.e7)([s.Z], () => s.Z.getGuildId());
     return null == m
         ? null
-        : (0, i.jsx)(d.Z, {
+        : (0, i.jsx)(u.Z, {
               guildNode: t,
               guild: m,
               animatable: f,
@@ -41,7 +41,7 @@ function m(e) {
               selected: n === g,
               preloadOnClick: !1,
               contextMenu: p,
-              lowerBadge: (null == r ? void 0 : r.applicationStatus) === o.wB.REJECTED ? (0, u.jt)({ guildJoinRequestStatus: r.applicationStatus }) : void 0,
+              lowerBadge: (null == r ? void 0 : r.applicationStatus) === o.wB.REJECTED ? (0, d.jt)({ guildJoinRequestStatus: r.applicationStatus }) : void 0,
               route: h.Z5c.GUILD_MEMBER_VERIFICATION(n)
           });
 }

@@ -14,8 +14,8 @@ var i = n(200651),
     a = n(512722),
     s = n.n(a),
     c = n(568611),
-    d = n(91192),
-    u = n(873546),
+    u = n(91192),
+    d = n(873546),
     h = n(442837),
     p = n(481060),
     m = n(493683),
@@ -96,9 +96,9 @@ let z = B.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
         });
 class X extends l.Component {
     render() {
-        let { route: e, selected: t, icon: n, iconClassName: l, avatarWithTextClassName: r, interactiveClassName: a, text: s, children: d, locationState: h, onClick: m, className: f, role: g, 'aria-posinset': C, 'aria-setsize': _, ...x } = this.props;
+        let { route: e, selected: t, icon: n, iconClassName: l, avatarWithTextClassName: r, interactiveClassName: a, text: s, children: u, locationState: h, onClick: m, className: f, role: g, 'aria-posinset': C, 'aria-setsize': _, ...x } = this.props;
         return (0, i.jsx)(Z.Z, {
-            className: o()(W.channel, { [W.fullWidth]: u.tq }, f),
+            className: o()(W.channel, { [W.fullWidth]: d.tq }, f),
             onClick: m,
             role: g,
             focusProps: {
@@ -129,7 +129,7 @@ class X extends l.Component {
                             name: s,
                             innerClassName: o()(W.avatarWithText, r)
                         }),
-                        d
+                        u
                     ]
                 })
             })
@@ -138,7 +138,7 @@ class X extends l.Component {
 }
 function $(e) {
     var t;
-    let { channel: r, isGDMFacepileEnabled: a, selected: u = !1, user: T, activities: P, applicationStream: M, entry: w, isTyping: O, status: G, isMobile: U, 'aria-posinset': B, 'aria-setsize': X } = e,
+    let { channel: r, isGDMFacepileEnabled: a, selected: d = !1, user: T, activities: P, applicationStream: M, entry: w, isTyping: O, status: G, isMobile: U, 'aria-posinset': B, 'aria-setsize': X } = e,
         [$, ee] = l.useState(!1),
         et = l.useRef(null),
         en = l.useRef(null),
@@ -149,7 +149,7 @@ function $(e) {
         } = (0, R.Z)({
             user: T,
             size: p.AvatarSizes.SIZE_32,
-            animateOnHover: !(u || $)
+            animateOnHover: !(d || $)
         }),
         eo = (0, h.e7)([k.ZP], () => k.ZP.isChannelMuted(r.getGuildId(), r.id)),
         { ignored: ea, blocked: es } = (0, h.cj)([D.Z], () => ({
@@ -157,8 +157,8 @@ function $(e) {
             blocked: D.Z.isBlocked(r.getRecipientId())
         })),
         ec = (0, h.e7)([L.ZP], () => L.ZP.getMentionCount(r.id) > 0),
-        ed = (0, b.ZP)(r),
-        eu = (0, h.e7)([y.Z], () => y.Z.isFavorite(r.id)),
+        eu = (0, b.ZP)(r),
+        ed = (0, h.e7)([y.Z], () => y.Z.isFavorite(r.id)),
         eh = () => {
             ee(!0);
         },
@@ -167,7 +167,7 @@ function $(e) {
         },
         em = function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            null != e && (e.preventDefault(), e.stopPropagation()), m.Z.closePrivateChannel(r.id, u, t);
+            null != e && (e.preventDefault(), e.stopPropagation()), m.Z.closePrivateChannel(r.id, d, t);
         },
         ef = () => {
             m.Z.preload(V.ME, r.id);
@@ -191,7 +191,7 @@ function $(e) {
                               (0, i.jsx)(e, {
                                   ...t,
                                   channel: r,
-                                  selected: u
+                                  selected: d
                               });
                       },
                       { noBlurEvent: !0 }
@@ -203,15 +203,15 @@ function $(e) {
                               ...t,
                               user: T,
                               channel: r,
-                              channelSelected: u
+                              channelSelected: d
                           });
                   });
         },
         e_ = (e) => {
             e.preventDefault(), e.stopPropagation();
-            let t = F.intl.formatToPlainString(F.t.hJ5Ap6, { name: ed }),
-                l = F.intl.format(F.t.SSIVOj, { name: ed });
-            r.isManaged() && ((t = F.intl.formatToPlainString(F.t.hVGjER, { name: ed })), (l = F.intl.format(F.t.IK1Qvr, { name: ed }))),
+            let t = F.intl.formatToPlainString(F.t.hJ5Ap6, { name: eu }),
+                l = F.intl.format(F.t.SSIVOj, { name: eu });
+            r.isManaged() && ((t = F.intl.formatToPlainString(F.t.hVGjER, { name: eu })), (l = F.intl.format(F.t.IK1Qvr, { name: eu }))),
                 (0, p.openModalLazy)(async () => {
                     let { default: e } = await n.e('14604').then(n.bind(n, 960670));
                     return (n) =>
@@ -301,7 +301,7 @@ function $(e) {
         ej = eN
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
-                      ed,
+                      eu,
                       (0, i.jsx)(E.ZP, {
                           clan: null == T ? void 0 : T.clan,
                           userId: null == T ? void 0 : T.id,
@@ -311,9 +311,9 @@ function $(e) {
                       })
                   ]
               })
-            : ed,
+            : eu,
         eA = null !== (t = eo || ey || eT) && void 0 !== t && t;
-    return (0, i.jsx)(d.mh, {
+    return (0, i.jsx)(u.mh, {
         id: r.id,
         children: (e) => {
             let { role: t, ...n } = e;
@@ -335,12 +335,12 @@ function $(e) {
                 children: (0, i.jsxs)(p.Interactive, {
                     className: o()(W.interactive, {
                         [W.interactiveSystemDM]: eS && eE,
-                        [W.interactiveSelected]: u
+                        [W.interactiveSelected]: d
                     }),
                     as: 'div',
                     onClick: eC,
                     muted: eA,
-                    selected: u,
+                    selected: d,
                     children: [
                         (0, i.jsx)(c.rU, {
                             innerRef: et,
@@ -353,7 +353,7 @@ function $(e) {
                             ...n,
                             children: (0, i.jsx)(v.Z, {
                                 avatar: eI(),
-                                selected: u,
+                                selected: d,
                                 highlighted: ec,
                                 muted: eA,
                                 subText: ex(),
@@ -370,7 +370,7 @@ function $(e) {
                                     : null
                             })
                         }),
-                        eu ? (0, i.jsx)(q, {}) : null,
+                        ed ? (0, i.jsx)(q, {}) : null,
                         ey ? (0, i.jsx)(Q, {}) : null,
                         eT ? (0, i.jsx)(J, {}) : null,
                         (0, i.jsx)(K, {
@@ -389,7 +389,7 @@ t.ZP = (e) => {
         r = (0, h.e7)([G.default], () => G.default.getUser(t.getRecipientId())),
         { isStatusIndicatorEnabled: o, isTypingIndicatorEnabled: a, isFacepileEnabled: s } = T.Z.useExperiment({ location: 'private_channel' }, { autoTrackExposure: !0 }),
         c = null == r ? void 0 : r.id,
-        d = (0, h.cj)(
+        u = (0, h.cj)(
             [w.Z, M.Z],
             () => {
                 let e;
@@ -408,7 +408,7 @@ t.ZP = (e) => {
             },
             [t, c, o]
         ),
-        u = (0, P.Z)(null == r ? void 0 : r.id, 'PrivateChannel'),
+        d = (0, P.Z)(null == r ? void 0 : r.id, 'PrivateChannel'),
         p = (0, h.e7)(
             [G.default, O.Z],
             () => {
@@ -430,7 +430,7 @@ t.ZP = (e) => {
               channel: t,
               selected: n,
               isTyping: p,
-              status: d.status === V.Skl.ONLINE ? V.Skl.ONLINE : void 0,
+              status: u.status === V.Skl.ONLINE ? V.Skl.ONLINE : void 0,
               isGDMFacepileEnabled: s,
               ...l
           })
@@ -438,9 +438,9 @@ t.ZP = (e) => {
               channel: t,
               selected: n,
               user: r,
-              entry: u,
+              entry: d,
               isTyping: p,
               ...l,
-              ...d
+              ...u
           });
 };

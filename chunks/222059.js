@@ -11,8 +11,8 @@ var i = n(200651),
     a = n(433517),
     s = n(481060),
     c = n(339149),
-    d = n(327943),
-    u = n(864682),
+    u = n(327943),
+    d = n(864682),
     h = n(899740),
     p = n(155409),
     m = n(699516),
@@ -48,7 +48,7 @@ let M = {
 };
 function w(e) {
     let { selected: t, user: n, badge: h, link: m, showProgressBadge: f } = e,
-        g = (0, o.e7)([d.Z], () => d.Z.isEditorOpen),
+        g = (0, o.e7)([u.Z], () => u.Z.isEditorOpen),
         [C, v] = l.useState(!1),
         [_, x] = l.useState(!1),
         [I, E] = l.useState(null),
@@ -102,7 +102,7 @@ function w(e) {
                         }
                     }
                 },
-                children: (0, i.jsx)(u.Z, {})
+                children: (0, i.jsx)(d.Z, {})
             })
         });
     return (0, i.jsx)('div', {
@@ -145,16 +145,16 @@ function L() {
             unviewedDiscountCount: C.Z.getUnacknowledgedDiscountOffers().length
         })),
         s = r + a,
-        d = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
-        u = (0, h.q)(),
-        p = n + s + u,
-        b = p === s && s > 0 && n + u === 0,
+        u = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
+        d = (0, h.q)(),
+        p = n + s + d,
+        b = p === s && s > 0 && n + d === 0,
         S = v.Z.getHomeLink();
     return (
         b && (S = T.Z5c.APPLICATION_STORE),
         (0, i.jsx)(w, {
             selected: e,
-            user: d,
+            user: u,
             selectedChannelId: f.Z.getChannelId(T.ME),
             badge: p,
             link: S,

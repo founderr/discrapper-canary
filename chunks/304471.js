@@ -14,8 +14,8 @@ var l = n(481060),
 function c(e) {
     let { channel: t, onAction: n } = e,
         c = (0, r.ZP)(t),
-        d = Array.from((0, r.uF)(c).values());
-    return 0 === d.length
+        u = Array.from((0, r.uF)(c).values());
+    return 0 === u.length
         ? null
         : (0, i.jsxs)(l.Scroller, {
               className: s.container,
@@ -25,7 +25,7 @@ function c(e) {
                       children: (0, i.jsx)(a.Z, { channel: t })
                   }),
                   (0, i.jsx)('div', { className: s.headerDivider }),
-                  d.map((e, l) => {
+                  u.map((e, l) => {
                       var r;
                       return (0, i.jsx)(
                           o.Z,

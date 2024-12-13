@@ -101,7 +101,7 @@ async function z(e) {
             activityConfigs: m
         }),
         { releasePhase: E } = W(g),
-        v = await h.Z.getRawThermalState();
+        v = h.Z.getRawThermalState();
     A.default.track(Z.rMx.ACTIVITY_SESSION_LEFT, {
         channel_id: f.id,
         guild_id: p,
@@ -130,7 +130,7 @@ async function z(e) {
         }),
         delete H[a];
 }
-async function q(e) {
+function q(e) {
     var n, r, i, a;
     let { channelId: s, applicationId: l, isFirstActivityInChannel: u, isStart: d, participants: f, embeddedActivity: p } = e,
         m = I.default.getId(),
@@ -154,7 +154,7 @@ async function q(e) {
         }),
         B = 1 + k.findIndex((e) => e === l),
         { releasePhase: G } = W(U),
-        F = await h.Z.getRawThermalState(),
+        F = h.Z.getRawThermalState(),
         V = null != v ? [v] : [],
         j = {
             activitySessionId: y,
@@ -302,7 +302,7 @@ class X extends d.Z {
                     }
                 this.showLaunchErrorModal(f);
                 let v = T.Z.getChannel(o),
-                    I = await h.Z.getRawThermalState();
+                    I = h.Z.getRawThermalState();
                 A.default.track(Z.rMx.ACTIVITY_SESSION_JOIN_FAILED, {
                     channel_id: o,
                     guild_id: l,

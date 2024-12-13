@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(746916),
     s = n(965638),
     c = n(905423),
-    d = n(486472),
-    u = n(888369),
+    u = n(486472),
+    d = n(888369),
     h = n(430824),
     p = n(451478),
     m = n(61634),
@@ -18,17 +18,17 @@ t.Z = l.memo(function (e) {
         v = (0, r.e7)([h.Z], () => h.Z.getGuild(C)),
         _ = (0, a.E)(v),
         x = (0, r.e7)([p.Z], () => p.Z.isFocused()),
-        I = (0, r.e7)([d.Z], () => d.Z.isUnavailable(C)),
+        I = (0, r.e7)([u.Z], () => u.Z.isUnavailable(C)),
         b = (0, c.Z)((e) => e.guildId),
         E = (0, m.Z)(C),
         {
             badge: S,
             unread: Z,
             isMentionLowImportance: N
-        } = (0, r.cj)([u.default], () => ({
-            badge: u.default.getMentionCount(C),
-            isMentionLowImportance: u.default.getIsMentionLowImportance(C),
-            unread: u.default.hasUnread(C)
+        } = (0, r.cj)([d.default], () => ({
+            badge: d.default.getMentionCount(C),
+            isMentionLowImportance: d.default.getIsMentionLowImportance(C),
+            unread: d.default.hasUnread(C)
         })),
         y = (0, s.I)(v) && 0 === S,
         T = l.useMemo(

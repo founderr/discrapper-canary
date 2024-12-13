@@ -11,8 +11,8 @@ var i = n(200651),
     a = n(752877),
     s = n(866442),
     c = n(442837),
-    d = n(477690),
-    u = n(481060),
+    u = n(477690),
+    d = n(481060),
     h = n(377171),
     p = n(540059),
     m = n(565138),
@@ -22,8 +22,8 @@ var i = n(200651),
     v = n(981631),
     _ = n(388032),
     x = n(10448);
-let I = (0, g.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
-    b = (0, g.Mg)(d.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
+let I = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
+    b = (0, g.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
     E = ['12px 4px 4px 4px', '4px 12px 4px 4px', '4px 4px 4px 12px', '4px 4px 12px 4px'];
 function S(e) {
     let { guildId: t, animate: n, index: l } = e,
@@ -47,14 +47,14 @@ function Z(e) {
     let t,
         n,
         { folderNode: r, hovered: o, expanded: c } = e,
-        d = (0, p.Q3)('FolderIconContent'),
+        u = (0, p.Q3)('FolderIconContent'),
         { color: h, children: m } = r,
         f = null != h ? h : v.Wyy,
         g = m.map((e) => e.id),
         [C, _] = l.useState(!1),
         [E, Z] = l.useState(c),
         N = c ? 0 : -b,
-        y = (0, u.useSpring)(
+        y = (0, d.useSpring)(
             {
                 transform: 'translate3d(0, '.concat(N, 'px, 0)'),
                 config: { duration: I },
@@ -73,8 +73,8 @@ function Z(e) {
             (t = (0, i.jsx)(a.animated.div, {
                 style: T,
                 className: x.expandedFolderIconWrapper,
-                children: (0, i.jsx)(u.FolderIcon, {
-                    size: d ? 'sm' : 'md',
+                children: (0, i.jsx)(d.FolderIcon, {
+                    size: u ? 'sm' : 'md',
                     color: 'currentColor',
                     style: { color: (0, s.Rf)(f) }
                 })
@@ -111,7 +111,7 @@ function N(e) {
             sorting: a,
             mediaState: s,
             mentionCount: c = 0,
-            isMentionLowImportance: d,
+            isMentionLowImportance: u,
             tooltipName: m,
             folderGroupId: f,
             folderIconContent: g,
@@ -130,8 +130,8 @@ function N(e) {
         }, [a, b]),
         P = (0, p.Q3)('FolderHeader'),
         R = r || null == s ? null : (0, C.Or)(s),
-        M = !r && c > 0 ? (0, C.Ne)(c, d ? h.Z.BACKGROUND_ACCENT : h.Z.STATUS_DANGER) : null;
-    return (0, i.jsx)(u.BlobMask, {
+        M = !r && c > 0 ? (0, C.Ne)(c, u ? h.Z.BACKGROUND_ACCENT : h.Z.STATUS_DANGER) : null;
+    return (0, i.jsx)(d.BlobMask, {
         isFolder: !0,
         style: P
             ? {
@@ -142,8 +142,8 @@ function N(e) {
         selected: !!P || !n,
         upperBadge: R,
         lowerBadge: M,
-        lowerBadgeSize: { width: (0, u.getBadgeWidthForValue)(c) },
-        children: (0, i.jsx)(u.Clickable, {
+        lowerBadgeSize: { width: (0, d.getBadgeWidthForValue)(c) },
+        children: (0, i.jsx)(d.Clickable, {
             className: o()(x.folder, { [x.hover]: y }),
             onClick: v,
             onContextMenu: I,

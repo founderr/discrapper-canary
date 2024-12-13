@@ -5,13 +5,13 @@ var i = n(200651),
     a = n(442837),
     s = n(592125),
     c = n(938475),
-    d = n(823379),
-    u = n(734190),
+    u = n(823379),
+    d = n(734190),
     h = n(388032),
     p = n(329986);
 t.Z = l.memo(function (e) {
     let { channel: t, selectedChannel: n, selectedVoiceChannelId: l, sortedThreadIds: r, withGuildIcon: m } = e,
-        f = (0, a.Wu)([s.Z], () => r.map((e) => s.Z.getChannel(e)).filter(d.lm), [r]),
+        f = (0, a.Wu)([s.Z], () => r.map((e) => s.Z.getChannel(e)).filter(u.lm), [r]),
         g = (0, a.e7)([c.ZP], () => {
             let e = f[f.length - 1];
             if (null == e) return 0;
@@ -30,7 +30,7 @@ t.Z = l.memo(function (e) {
                 }),
                 f.map((e, t) =>
                     (0, i.jsx)(
-                        u.Z,
+                        d.Z,
                         {
                             thread: e,
                             isSelectedChannel: (null == n ? void 0 : n.id) === e.id,

@@ -10,8 +10,8 @@ var i = n(200651),
     a = n(239091),
     s = n(906732),
     c = n(560067),
-    d = n(540059),
-    u = n(451603),
+    u = n(540059),
+    d = n(451603),
     h = n(885714),
     p = n(155409),
     m = n(430824),
@@ -48,12 +48,12 @@ function S(e) {
         N = l.useMemo(() => S.some((e) => e.isOwner(Z)), [S, Z]),
         y = (0, o.useModalsStore)((e) => (0, o.hasModalOpenSelector)(e, _.PU)),
         { analyticsLocations: T } = (0, s.ZP)(),
-        j = (0, d.Q3)('CreateJoinGuildButton'),
+        j = (0, u.Q3)('CreateJoinGuildButton'),
         A = (0, i.jsx)(C.Z, {
             showPill: !1,
             id: 'create-join-button',
             onClick: () => {
-                (0, u.yU)()
+                (0, d.yU)()
                     ? (0, h.Z)({
                           analyticsSource: { page: v.Sbl.CREATE_JOIN_GUILD_MODAL },
                           analyticsLocation: {

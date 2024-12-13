@@ -13,8 +13,8 @@ var i = n(200651),
     a = n(91192),
     s = n(442837),
     c = n(481060),
-    d = n(493683),
-    u = n(239091),
+    u = n(493683),
+    d = n(239091),
     h = n(317381),
     p = n(276952),
     m = n(682662),
@@ -71,15 +71,15 @@ function R() {
                     })
                 ),
                 c = o.length > 0,
-                d = !1,
                 u = !1,
+                d = !1,
                 p = !1,
                 m = !1;
             return (
-                n ? ((d = !r), (u = r), (p = i), (m = a)) : ((p = l), (m = c)),
+                n ? ((u = !r), (d = r), (p = i), (m = a)) : ((p = l), (m = c)),
                 (0, f.Or)({
-                    audio: d,
-                    video: u,
+                    audio: u,
+                    video: d,
                     screenshare: p,
                     liveStage: !1,
                     isCurrentUserConnected: n,
@@ -120,10 +120,10 @@ function R() {
                             onMouseEnter: () => M(!0),
                             onMouseLeave: () => M(!1),
                             onMouseDown: function () {
-                                if (null != O) d.Z.preload(O.guild_id, O.id);
+                                if (null != O) u.Z.preload(O.guild_id, O.id);
                             },
                             onContextMenu: function (e) {
-                                (0, u.jW)(e, async () => {
+                                (0, d.jW)(e, async () => {
                                     let { default: e } = await n.e('3190').then(n.bind(n, 631981));
                                     return (t) => (0, i.jsx)(e, { ...t });
                                 });

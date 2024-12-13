@@ -10,8 +10,8 @@ var i = n(200651),
     a = n(692547),
     s = n(481060),
     c = n(239091),
-    d = n(605236),
-    u = n(45966),
+    u = n(605236),
+    d = n(45966),
     h = n(31445),
     p = n(22082),
     m = n(703656),
@@ -27,12 +27,12 @@ var i = n(200651),
 function S(e) {
     let { guild: t, selected: S } = e,
         Z = (0, h.Z)(t),
-        N = (0, d.wE)(o.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
+        N = (0, u.wE)(o.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
         y = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
         T = (0, r.e7)([f.ZP], () => f.ZP.hasUnread(t.id, I.W.GUILD_ONBOARDING_QUESTION)),
         j = y.length > C.Cb,
-        A = (0, r.e7)([u.Z, f.ZP], () => {
-            let e = u.Z.lastFetchedAt(t.id),
+        A = (0, r.e7)([d.Z, f.ZP], () => {
+            let e = d.Z.lastFetchedAt(t.id),
                 n = f.ZP.lastMessageId(t.id, I.W.GUILD_ONBOARDING_QUESTION);
             if (null == n) return !1;
             let i = g.default.extractTimestamp(n);

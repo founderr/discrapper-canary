@@ -27,7 +27,7 @@ t.Z = {
                     args: c,
                     socket: n
                 }),
-                h = await (0, a.V)(n, s, c);
+                h = (0, a.V)(n, s, c);
             return new Promise((e) => {
                 setImmediate(() => {
                     t.addSubscription(n, s, c, u), null != h && t.dispatchToSubscriptions(s, (e) => e.socket.id === n.id, h);

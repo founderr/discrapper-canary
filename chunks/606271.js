@@ -8,7 +8,7 @@ var i = n(392711),
     r = n.n(i),
     l = n(442837),
     a = n(570140),
-    o = n(573979),
+    o = n(176787),
     s = n(814443),
     c = n(592125),
     d = n(271383),
@@ -164,10 +164,10 @@ class L {
         this.rpcServer.dispatchToSubscriptions(b.zMe.ACTIVITY_LAYOUT_MODE_UPDATE, (e) => e.socket.application.id === t, { layout_mode: n });
     }
     handleThermalStateChange(e) {
-        let { applicationId: t, rawThermalState: n } = e;
+        let { applicationId: t } = e;
         if (0 === this.rpcServer.subscriptions.length || null == t) return;
-        let i = { thermal_state: (0, o.Z)(n) };
-        this.rpcServer.dispatchToSubscriptions(b.zMe.THERMAL_STATE_UPDATE, (e) => e.socket.application.id === t, i);
+        let n = { thermal_state: (0, o.bY)() };
+        this.rpcServer.dispatchToSubscriptions(b.zMe.THERMAL_STATE_UPDATE, (e) => e.socket.application.id === t, n);
     }
     handleScreenOrientationUpdate(e) {
         let { screenOrientation: t } = e;

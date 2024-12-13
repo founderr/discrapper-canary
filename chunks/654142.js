@@ -6,8 +6,8 @@ var i = n(200651),
     a = n(749210),
     s = n(905423),
     c = n(664915),
-    d = n(888369),
-    u = n(430824),
+    u = n(888369),
+    d = n(430824),
     h = n(823379),
     p = n(179809),
     m = n(652376),
@@ -22,7 +22,7 @@ t.Z = l.memo(function (e) {
             let t = e.children
                     .map((e) => {
                         let t = e.id,
-                            n = u.Z.getGuild(t);
+                            n = d.Z.getGuild(t);
                         return null != n ? n.name : null;
                     })
                     .filter(h.lm),
@@ -36,10 +36,10 @@ t.Z = l.memo(function (e) {
             mentionCount: N,
             isMentionLowImportance: y,
             unread: T
-        } = (0, r.cj)([d.default], () => ({
-            mentionCount: I.map((e) => d.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
-            isMentionLowImportance: I.every((e) => d.default.getIsMentionLowImportance(e)),
-            unread: I.some((e) => d.default.hasUnread(e))
+        } = (0, r.cj)([u.default], () => ({
+            mentionCount: I.map((e) => u.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
+            isMentionLowImportance: I.every((e) => u.default.getIsMentionLowImportance(e)),
+            unread: I.some((e) => u.default.hasUnread(e))
         })),
         j = l.useCallback(() => {
             a.Z.toggleGuildFolderExpand(C);

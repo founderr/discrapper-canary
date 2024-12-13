@@ -12,8 +12,8 @@ var i = n(200651),
     a = n(110924),
     s = n(693546),
     c = n(863249),
-    d = n(937111),
-    u = n(914010),
+    u = n(937111),
+    d = n(914010),
     h = n(289090),
     p = n(727258),
     m = n(234383),
@@ -23,8 +23,8 @@ var i = n(200651),
     v = n(738945);
 function _(e) {
     let { onActivate: t, children: n } = e,
-        s = (0, r.e7)([d.Z], () => d.Z.hasJoinRequestCoackmark()),
-        u = l.useCallback(() => {
+        s = (0, r.e7)([u.Z], () => u.Z.hasJoinRequestCoackmark()),
+        d = l.useCallback(() => {
             c.ZP.clearCoachmark();
         }, []),
         h = (0, a.Z)(s),
@@ -67,7 +67,7 @@ function _(e) {
                                             fullWidth: !0,
                                             size: o.ButtonSizes.SMALL,
                                             color: o.ButtonColors.BRAND,
-                                            onClick: u,
+                                            onClick: d,
                                             children: C.intl.string(C.t.E0MgHh)
                                         })
                                     ]
@@ -93,8 +93,8 @@ function _(e) {
 function x(e) {
     let { onActivate: t } = e,
         [n, x] = l.useState(!1),
-        I = (0, r.e7)([u.Z], () => u.Z.getGuildId()),
-        b = (0, r.e7)([d.Z], () => d.Z.hasFetchedRequestToJoinGuilds),
+        I = (0, r.e7)([d.Z], () => d.Z.getGuildId()),
+        b = (0, r.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
         E = (0, m.Z)(),
         S = (0, a.Z)(I),
         Z = l.useMemo(() => {

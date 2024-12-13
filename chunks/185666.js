@@ -6,7 +6,7 @@ var l = n(481060),
     a = n(472365),
     s = n(590965);
 let c = 'INVITE_MODAL_KEY';
-class d extends o.Z {
+class u extends o.Z {
     _initialize() {
         r.Z.subscribe('INVITE_MODAL_OPEN', this.handleOpenModal), r.Z.subscribe('INVITE_MODAL_CLOSE', this.handleCloseModal);
     }
@@ -25,4 +25,4 @@ class d extends o.Z {
         (0, l.closeModal)(c);
     }
 }
-t.Z = new d();
+t.Z = new u();

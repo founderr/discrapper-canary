@@ -850,9 +850,9 @@ class ev extends g.Z {
         let n = this._connection;
         null != n && null != this.protocol ? n.setSDP(e) : this.logger.warn('Cannot set SDP on connection with protocol:', this.protocol);
     }
-    async _handleMediaSessionId(e) {
+    _handleMediaSessionId(e) {
         (this._mediaSessionId = e), this.logger.info('Setting media-session-id: '.concat(e, ' for rtc-connection-id: ').concat(this.getRTCConnectionId()));
-        let n = await N.Z.getRawThermalState();
+        let n = N.Z.getRawThermalState();
         j.default.track(es.rMx.MEDIA_SESSION_JOINED, {
             ...this._getAnalyticsProperties(),
             media_session_id: this.getMediaSessionId(),

@@ -14,8 +14,8 @@ var i = n(200651),
     a = n(752877),
     s = n(91192),
     c = n(442837),
-    d = n(477690),
-    u = n(481060),
+    u = n(477690),
+    d = n(481060),
     h = n(239091),
     p = n(100527),
     m = n(367907),
@@ -33,21 +33,21 @@ var i = n(200651),
     N = n(981631),
     y = n(388032),
     T = n(976019);
-let j = (0, I.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
+let j = (0, I.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     A = (e) => {
         let { guild: t, onSelect: n } = e,
             [r, o] = l.useState(t.premiumProgressBarEnabled),
             [a, s] = l.useState(!1),
-            d = (0, c.e7)([v.Z], () => v.Z.can(N.Plq.MANAGE_GUILD, t)),
+            u = (0, c.e7)([v.Z], () => v.Z.can(N.Plq.MANAGE_GUILD, t)),
             p = async () => {
-                if (!!d) s(!0), await C.Z.saveGuild(t.id, { premiumProgressBarEnabled: !r }), o(!r), s(!1);
+                if (!!u) s(!0), await C.Z.saveGuild(t.id, { premiumProgressBarEnabled: !r }), o(!r), s(!1);
             };
-        return (0, i.jsx)(u.Menu, {
+        return (0, i.jsx)(d.Menu, {
             navId: 'progress-bar-context',
             onClose: h.Zy,
             'aria-label': y.intl.string(y.t['m85s/v']),
             onSelect: n,
-            children: (0, i.jsx)(u.MenuCheckboxItem, {
+            children: (0, i.jsx)(d.MenuCheckboxItem, {
                 id: 'progress-bar-enabled',
                 label: y.intl.string(y.t['0CJWPz']),
                 checked: r,
@@ -65,7 +65,7 @@ let j = (0, I.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
 t.ZP = (e) => {
     let { guild: t, withMargin: n } = e,
         r = (0, g.Q3)('GuildBoostingSidebarDisplay'),
-        { analyticsLocations: d } = (0, f.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
+        { analyticsLocations: u } = (0, f.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
         { premiumSubscriberCount: C, id: I } = t,
         j = (0, x.rF)(C, I),
         P = (0, x.FZ)(j, t.id),
@@ -86,15 +86,15 @@ t.ZP = (e) => {
             to: { width: O },
             config: M
         },
-        [U, B] = (0, u.useSpring)(() => G),
+        [U, B] = (0, d.useSpring)(() => G),
         H = () => {
             (0, m.yw)(N.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                 location: { section: N.jXE.PREMIUM_GUILD_PROGRESS_BAR },
                 guild_id: I,
-                location_stack: d
+                location_stack: u
             }),
                 (0, S.Z)({
-                    analyticsLocations: d,
+                    analyticsLocations: u,
                     analyticsSourceLocation: {
                         page: N.ZY5.GUILD_CHANNEL,
                         section: N.jXE.PREMIUM_GUILD_PROGRESS_BAR,
@@ -113,14 +113,14 @@ t.ZP = (e) => {
     R && ((V = (0, x.e9)(w)), (F = y.intl.format(y.t.B2byER, { numBoosts: C }))), r && (V = V.toLocaleLowerCase());
     let W = (0, s.JA)('boosts-'.concat(t.id));
     return (0, i.jsx)('li', {
-        children: (0, i.jsx)(u.Tooltip, {
+        children: (0, i.jsx)(d.Tooltip, {
             text: R ? y.intl.string(y.t['Y+V9go']) : y.intl.formatToPlainString(y.t.UyDKl5, { levelName: (0, x.nW)(w) }),
-            color: u.Tooltip.Colors.BLACK,
+            color: d.Tooltip.Colors.BLACK,
             position: 'top',
             delay: 200,
             hideOnClick: !0,
             children: (e) =>
-                (0, i.jsxs)(u.Clickable, {
+                (0, i.jsxs)(d.Clickable, {
                     ...W,
                     ...e,
                     'aria-label': void 0,
@@ -147,13 +147,13 @@ t.ZP = (e) => {
                             );
                     },
                     children: [
-                        (0, i.jsx)(u.HiddenVisually, { children: e['aria-label'] }),
+                        (0, i.jsx)(d.HiddenVisually, { children: e['aria-label'] }),
                         (0, i.jsxs)('div', {
                             className: T.textArea,
                             children: [
                                 (0, i.jsx)('div', {
                                     className: T.goalTextContainer,
-                                    children: (0, i.jsx)(u.Text, {
+                                    children: (0, i.jsx)(d.Text, {
                                         className: T.goalText,
                                         color: r ? 'none' : 'interactive-active',
                                         variant: r ? 'text-sm/medium' : 'text-xs/bold',
@@ -163,7 +163,7 @@ t.ZP = (e) => {
                                 (0, i.jsxs)('div', {
                                     className: T.progressFraction,
                                     children: [
-                                        (0, i.jsx)(u.Text, {
+                                        (0, i.jsx)(d.Text, {
                                             color: r ? 'none' : 'interactive-normal',
                                             variant: r ? 'text-sm/medium' : 'text-xs/normal',
                                             className: T.progressText,

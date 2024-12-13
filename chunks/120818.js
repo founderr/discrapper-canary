@@ -10,8 +10,8 @@ var i = n(200651),
     a = n(481060),
     s = n(44315),
     c = n(563534),
-    d = n(846121),
-    u = n(703656),
+    u = n(846121),
+    d = n(703656),
     h = n(259580),
     p = n(981631),
     m = n(176505),
@@ -31,7 +31,7 @@ function C(e, t) {
 let v = l.memo(function (e) {
     let { guild: t } = e,
         n = (0, o.e7)([c.Z], () => c.Z.getNewMemberActions(t.id), [t.id]),
-        v = (0, o.e7)([d.Z], () => d.Z.getCompletedActions(t.id)),
+        v = (0, o.e7)([u.Z], () => u.Z.getCompletedActions(t.id)),
         _ = l.useMemo(() => {
             if (null == n || null == v) return 0;
             let e = 0;
@@ -52,7 +52,7 @@ let v = l.memo(function (e) {
                 focusProps: { offset: { right: 4 } },
                 className: g.progressBarContainer,
                 onClick: function () {
-                    (0, u.uL)(p.Z5c.CHANNEL(t.id, m.oC.GUILD_HOME));
+                    (0, d.uL)(p.Z5c.CHANNEL(t.id, m.oC.GUILD_HOME));
                 },
                 children: [
                     (0, i.jsxs)('div', {

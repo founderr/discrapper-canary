@@ -3,7 +3,7 @@ n.d(t, {
         return h;
     },
     if: function () {
-        return u;
+        return d;
     },
     ig: function () {
         return a;
@@ -56,18 +56,18 @@ function c(e, t) {
         i
     );
 }
-function d(e) {
+function u(e) {
     return {
         referenceId: e.id,
         parentId: e.parent_id
     };
 }
-function u(e, t, n, i, r) {
+function d(e, t, n, i, r) {
     if (null == e || null == n) return null;
-    let { GUILD_CATEGORY: u } = o.d4z;
-    if (e.type === u)
+    let { GUILD_CATEGORY: d } = o.d4z;
+    if (e.type === d)
         return i === t || (i < t && e.type === n.type)
-            ? d(n)
+            ? u(n)
             : i > t
               ? (function (e, t, n) {
                     var i;
@@ -84,9 +84,9 @@ function u(e, t, n, i, r) {
                           : null;
                 })(e, n, r)
               : null;
-    if (a(e.type, n.type)) return d(n);
+    if (a(e.type, n.type)) return u(n);
     if (i < t)
-        return n.type === u
+        return n.type === d
             ? (function (e, t, n) {
                   var i;
                   let r = n[(null !== (i = c(t, n, !0)) && void 0 !== i ? i : 0) - 1],
@@ -126,7 +126,7 @@ function u(e, t, n, i, r) {
                             parentId: null
                         };
               })(e, n, r);
-    return n.type === u
+    return n.type === d
         ? (function (e, t, n) {
               var i;
               let r = n[(null !== (i = c(t, n, !0)) && void 0 !== i ? i : 0) + 1],
@@ -178,8 +178,8 @@ function u(e, t, n, i, r) {
 function h(e, t, n, o) {
     let a,
         s,
-        d = [],
         u = [],
+        d = [],
         h = o._categories,
         p = (t) => {
             var n, i, l, o;
@@ -187,7 +187,7 @@ function h(e, t, n, o) {
             if (null == a || null == s || ((n = e), (i = a), (l = s), (o = t), null != i && null != l && null != o[i] && o[i].channel === n && null != o[l] ? 0 : 1)) c = [...t];
             else c = r.ZP.moveItemFromTo(t, a, s);
             return (
-                (d = d.concat(
+                (u = u.concat(
                     r.ZP.calculatePositionDeltas({
                         oldOrdering: t,
                         newOrdering: c,
@@ -206,10 +206,10 @@ function h(e, t, n, o) {
         };
     if (e.isCategory()) {
         let n = [...h].slice(1);
-        (a = c(e, n)), (s = c(t, n)), (u = p(n)).unshift(h[0]);
+        (a = c(e, n)), (s = c(t, n)), (d = p(n)).unshift(h[0]);
     }
     if ((0, l.r8)(e.type) || e.isCategory()) {
-        let n = (0, i.Z)(u.length > 0 ? u : h, o, (e) => {
+        let n = (0, i.Z)(d.length > 0 ? d : h, o, (e) => {
             let {
                 channel: { type: t }
             } = e;
@@ -218,7 +218,7 @@ function h(e, t, n, o) {
         (a = c(e, n)), (s = c(t, n)), p(n);
     }
     if (e.isGuildVocal() || e.isCategory()) {
-        let n = (0, i.Z)(u.length > 0 ? u : h, o, (e) => {
+        let n = (0, i.Z)(d.length > 0 ? d : h, o, (e) => {
             let { channel: t } = e;
             return t.isGuildVocal();
         });
@@ -226,12 +226,12 @@ function h(e, t, n, o) {
     }
     if (e.parent_id !== n) {
         let t = !1;
-        d.find((i) => i.id === e.id && ((i.parent_id = n), (t = !0))),
+        u.find((i) => i.id === e.id && ((i.parent_id = n), (t = !0))),
             !t &&
-                d.push({
+                u.push({
                     id: e.id,
                     parent_id: n
                 });
     }
-    return d;
+    return u;
 }

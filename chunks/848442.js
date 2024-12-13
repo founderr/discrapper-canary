@@ -11,8 +11,8 @@ var l = n(120356),
     a = n(704215),
     s = n(433517),
     c = n(481060),
-    d = n(239091),
-    u = n(607070),
+    u = n(239091),
+    d = n(607070),
     h = n(367907),
     p = n(357352),
     m = n(652515),
@@ -31,11 +31,11 @@ var l = n(120356),
     y = n(273595);
 function T(e) {
     let { guildId: t, selected: n, handleClick: l } = e,
-        d = (0, m.RF)(t, 'guild_shop_channel_row'),
+        u = (0, m.RF)(t, 'guild_shop_channel_row'),
         f = (0, o.e7)([x.Z], () => x.Z.getGuild(t)),
         S = (null == f ? void 0 : f.hasFeature(E.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
         T = 'false' === s.K.get(Z.tM, 'false'),
-        j = (0, o.e7)([u.Z], () => u.Z.useReducedMotion);
+        j = (0, o.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, i.jsx)(b.m, {
         id: 'shop-'.concat(t),
         className: r()(y.previewChannelRow, {
@@ -77,7 +77,7 @@ function T(e) {
                                     ...(0, h.hH)(t),
                                     action_taken: Z.mz.DISMISS_CHANNEL_ROW
                                 }),
-                                !d || !S)
+                                !u || !S)
                             ) {
                                 var n;
                                 (0, v.dL)(E.Z5c.CHANNEL(t, null === (n = _.ZP.getDefaultChannel(t)) || void 0 === n ? void 0 : n.id));
@@ -118,7 +118,7 @@ function j(e) {
               onClick: o,
               onContextMenu: (e) => {
                   null != t &&
-                      (0, d.jW)(e, async () => {
+                      (0, u.jW)(e, async () => {
                           let { default: e } = await n.e('66050').then(n.bind(n, 376573));
                           return (n) =>
                               (0, i.jsx)(e, {

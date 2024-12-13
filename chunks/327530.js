@@ -6,7 +6,7 @@ n.d(t, {
         return c;
     },
     Hb: function () {
-        return u;
+        return d;
     },
     JD: function () {
         return g;
@@ -15,7 +15,7 @@ n.d(t, {
         return v;
     },
     NY: function () {
-        return d;
+        return u;
     },
     Pw: function () {
         return r;
@@ -55,8 +55,8 @@ let i = 8,
     a = 12,
     s = 34,
     c = 41.5,
-    d = 16,
-    u = 32,
+    u = 16,
+    d = 32,
     h = 8,
     p = 84,
     m = 135,
