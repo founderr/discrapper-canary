@@ -71,32 +71,34 @@ let g = (e) => {
                 onSubmit: w,
                 className: m.form,
                 children: [
+                    (0, i.jsx)(c.xB, {
+                        children:
+                            null != C && D
+                                ? (0, i.jsx)(f.Heading, {
+                                      variant: 'heading-lg/semibold',
+                                      className: s()(m.title, O),
+                                      children: C
+                                  })
+                                : (0, i.jsx)(u.v, {
+                                      tag: 'h2',
+                                      className: s()(m.title, O),
+                                      children: C
+                                  })
+                    }),
                     (0, i.jsx)(c.hz, {
                         className: m.modalContent,
-                        children: (0, i.jsxs)(_.Z, {
+                        children: (0, i.jsx)(_.Z, {
                             direction: _.Z.Direction.VERTICAL,
                             justify: D ? _.Z.Justify.START : _.Z.Justify.CENTER,
                             className: m.content,
-                            children: [
-                                null != C && D
-                                    ? (0, i.jsx)(f.Heading, {
-                                          variant: 'heading-lg/semibold',
-                                          className: s()(m.title, O),
-                                          children: C
-                                      })
-                                    : (0, i.jsx)(u.v, {
-                                          tag: 'h2',
-                                          className: s()(m.title, O),
-                                          children: C
-                                      }),
+                            children:
                                 null != g &&
-                                    (0, i.jsx)(d.x, {
-                                        variant: 'text-md/normal',
-                                        className: m.body,
-                                        color: D ? 'header-secondary' : 'text-normal',
-                                        children: g
-                                    })
-                            ]
+                                (0, i.jsx)(d.x, {
+                                    variant: 'text-md/normal',
+                                    className: m.body,
+                                    color: D ? 'header-secondary' : 'text-normal',
+                                    children: g
+                                })
                         })
                     }),
                     (0, i.jsxs)(c.mz, {

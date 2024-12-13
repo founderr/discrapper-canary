@@ -146,6 +146,26 @@ let { Themes: i } = r(15202).V,
                     }
                 }
             },
+            BACKGROUND_MODIFIER_ACTIVE: {
+                'visual-refresh': {
+                    [i.DARK]: {
+                        raw: 'OPACITY_16',
+                        opacity: 0.1607843137254902
+                    },
+                    [i.LIGHT]: {
+                        raw: 'OPACITY_16',
+                        opacity: 0.1607843137254902
+                    },
+                    [i.MIDNIGHT]: {
+                        raw: 'OPACITY_20',
+                        opacity: 0.2
+                    },
+                    [i.DARKER]: {
+                        raw: 'OPACITY_16',
+                        opacity: 0.1607843137254902
+                    }
+                }
+            },
             BACKGROUND_MODIFIER_HOVER: {
                 'visual-refresh': {
                     [i.DARK]: {
@@ -153,12 +173,12 @@ let { Themes: i } = r(15202).V,
                         opacity: 0.0784313725490196
                     },
                     [i.LIGHT]: {
-                        raw: 'OPACITY_16',
-                        opacity: 0.1607843137254902
+                        raw: 'OPACITY_8',
+                        opacity: 0.0784313725490196
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'OPACITY_16',
-                        opacity: 0.1607843137254902
+                        raw: 'OPACITY_12',
+                        opacity: 0.12156862745098039
                     },
                     [i.DARKER]: {
                         raw: 'OPACITY_8',
@@ -169,20 +189,20 @@ let { Themes: i } = r(15202).V,
             BACKGROUND_MODIFIER_SELECTED: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'OPACITY_16',
-                        opacity: 0.1607843137254902
+                        raw: 'OPACITY_24',
+                        opacity: 0.23921568627450981
                     },
                     [i.LIGHT]: {
                         raw: 'OPACITY_24',
                         opacity: 0.23921568627450981
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'OPACITY_24',
-                        opacity: 0.23921568627450981
+                        raw: 'OPACITY_28',
+                        opacity: 0.2784313725490196
                     },
                     [i.DARKER]: {
-                        raw: 'OPACITY_16',
-                        opacity: 0.1607843137254902
+                        raw: 'OPACITY_24',
+                        opacity: 0.23921568627450981
                     }
                 }
             },
@@ -313,12 +333,12 @@ let { Themes: i } = r(15202).V,
                         opacity: 0.0784313725490196
                     },
                     [i.LIGHT]: {
-                        raw: 'OPACITY_16',
-                        opacity: 0.1607843137254902
+                        raw: 'OPACITY_8',
+                        opacity: 0.0784313725490196
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'OPACITY_16',
-                        opacity: 0.1607843137254902
+                        raw: 'OPACITY_12',
+                        opacity: 0.12156862745098039
                     },
                     [i.DARKER]: {
                         raw: 'OPACITY_8',
@@ -333,12 +353,12 @@ let { Themes: i } = r(15202).V,
                         opacity: 0.23921568627450981
                     },
                     [i.LIGHT]: {
-                        raw: 'OPACITY_32',
-                        opacity: 0.3215686274509804
+                        raw: 'OPACITY_24',
+                        opacity: 0.23921568627450981
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'OPACITY_32',
-                        opacity: 0.3215686274509804
+                        raw: 'OPACITY_28',
+                        opacity: 0.2784313725490196
                     },
                     [i.DARKER]: {
                         raw: 'OPACITY_24',
@@ -353,12 +373,12 @@ let { Themes: i } = r(15202).V,
                         opacity: 0.1607843137254902
                     },
                     [i.LIGHT]: {
-                        raw: 'OPACITY_24',
-                        opacity: 0.23921568627450981
+                        raw: 'OPACITY_16',
+                        opacity: 0.1607843137254902
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'OPACITY_24',
-                        opacity: 0.23921568627450981
+                        raw: 'OPACITY_20',
+                        opacity: 0.2
                     },
                     [i.DARKER]: {
                         raw: 'OPACITY_16',
@@ -1701,20 +1721,20 @@ let { Themes: i } = r(15202).V,
             SPINE_DEFAULT: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'OPACITY_12',
-                        opacity: 0.12156862745098039
+                        raw: 'OPACITY_44',
+                        opacity: 0.4392156862745098
                     },
                     [i.LIGHT]: {
-                        raw: 'OPACITY_28',
-                        opacity: 0.2784313725490196
+                        raw: 'OPACITY_48',
+                        opacity: 0.47843137254901963
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'OPACITY_28',
-                        opacity: 0.2784313725490196
+                        raw: 'OPACITY_48',
+                        opacity: 0.47843137254901963
                     },
                     [i.DARKER]: {
-                        raw: 'OPACITY_12',
-                        opacity: 0.12156862745098039
+                        raw: 'OPACITY_44',
+                        opacity: 0.4392156862745098
                     }
                 }
             },

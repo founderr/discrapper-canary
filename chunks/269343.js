@@ -16,7 +16,6 @@ e.exports = {
     notFriends: 'notFriends_e6af9c',
     noFriends: 'noFriends_e6af9c',
     partyFull: 'partyFull_e6af9c',
-    footerSeparator: 'footerSeparator_e6af9c',
     footer: 'footer_e6af9c',
     selectExistingFormHeader: 'selectExistingFormHeader_e6af9c',
     confirmChannelItemContainer: 'confirmChannelItemContainer_e6af9c',
