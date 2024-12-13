@@ -8,8 +8,8 @@ var a = n(200651),
     r = n(192379),
     l = n(481060),
     i = n(710845),
-    o = n(219929),
-    s = n(526167),
+    s = n(219929),
+    o = n(526167),
     c = n(358085),
     u = n(622999),
     d = n(981631),
@@ -54,18 +54,18 @@ class E extends r.Component {
     }
     renderButton(e) {
         var t, n;
-        let { iconType: r, buttonText: i, ...s } = e;
+        let { iconType: r, buttonText: i, ...o } = e;
         return (0, a.jsx)(
             l.Button,
             {
                 onClick: this.attemptPaymentRequest,
                 className: null !== (t = this.props.className) && void 0 !== t ? t : p.button,
                 submitting: this.state.submitting,
-                ...s,
+                ...o,
                 children: (0, a.jsxs)('div', {
                     className: p.centerContainer,
                     children: [
-                        (0, a.jsx)(o.ZP, {
+                        (0, a.jsx)(s.ZP, {
                             className: null !== (n = this.props.iconClassName) && void 0 !== n ? n : p.buttonIcon,
                             type: r
                         }),
@@ -87,8 +87,8 @@ class E extends r.Component {
             });
         let t = (0, c.isAndroidChrome)(),
             n = t ? m.intl.string(m.t.p2jr2N) : m.intl.string(m.t.f19PPT),
-            r = t ? o.ZP.Types.G_PAY : o.ZP.Types.PAYMENT_REQUEST,
-            { className: i, iconClassName: s } = this.props;
+            r = t ? s.ZP.Types.G_PAY : s.ZP.Types.PAYMENT_REQUEST,
+            { className: i, iconClassName: o } = this.props;
         return (0, a.jsx)(
             l.Button,
             {
@@ -97,8 +97,8 @@ class E extends r.Component {
                 children: (0, a.jsxs)('div', {
                     className: p.centerContainer,
                     children: [
-                        (0, a.jsx)(o.ZP, {
-                            className: null != s ? s : p.buttonIcon,
+                        (0, a.jsx)(s.ZP, {
+                            className: null != o ? o : p.buttonIcon,
                             type: r
                         }),
                         n
@@ -117,6 +117,7 @@ class E extends r.Component {
                 canMakePaymentResult: null
             }),
             h(this, 'state', { ...this.initialState }),
+            h(this, 'disableWallets', void 0),
             h(this, 'initPaymentRequest', async (e) => {
                 if (null == e) return;
                 this.setState({
@@ -133,6 +134,7 @@ class E extends r.Component {
                         amount: 0,
                         pending: !0
                     },
+                    disableWallets: this.disableWallets,
                     requestPayerName: !0
                 });
                 null != this.props.paymentRequestRef && (this.props.paymentRequestRef.current = t);
@@ -181,11 +183,11 @@ class N extends E {
         void 0 !== this.props.onValidGooglePay && this.props.onValidGooglePay();
     }
     isBrowserCompatible() {
-        return (0, s.vu)() >= 61;
+        return (0, o.vu)() >= 61;
     }
     renderGooglePayButton(e) {
         return this.renderButton({
-            iconType: o.ZP.Types.G_PAY,
+            iconType: s.ZP.Types.G_PAY,
             buttonText: m.intl.string(m.t.p2jr2N),
             submitting: !(0, c.isDesktop)() && this.state.submitting,
             ...e
@@ -195,9 +197,9 @@ class N extends E {
         return (0, a.jsxs)('div', {
             className: this.props.className,
             children: [
-                (0, a.jsx)(o.ZP, {
-                    type: o.ZP.Types.G_PAY,
-                    size: o.Uy.MEDIUM,
+                (0, a.jsx)(s.ZP, {
+                    type: s.ZP.Types.G_PAY,
+                    size: s.Uy.MEDIUM,
                     className: p.googlePayIcon
                 }),
                 (0, a.jsx)(l.Text, {
@@ -223,6 +225,7 @@ class N extends E {
     constructor(...e) {
         super(...e),
             h(this, 'state', { ...this.initialState }),
+            h(this, 'disableWallets', ['applePay', 'link', 'browserCard']),
             h(this, 'validateGooglePay', () => {
                 let { paymentRequest: e, canMakePaymentResult: t } = this.state;
                 if (!this.isBrowserCompatible()) {
