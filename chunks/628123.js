@@ -6,12 +6,12 @@ var a = r(200651),
     u = r(818405),
     c = r(587158),
     d = r(286379),
-    f = r(442837),
-    _ = r(481060),
-    h = r(386506),
-    p = r(304761),
-    m = r(865427),
-    g = r(97145),
+    f = r(903772),
+    _ = r(442837),
+    h = r(481060),
+    p = r(386506),
+    m = r(304761),
+    g = r(865427),
     E = r(406128),
     v = r(797614),
     I = r(703656),
@@ -38,21 +38,21 @@ function R() {
     let [e, n] = s.useState(!1);
     if (
         null ==
-        (0, f.e7)([p.C], () => {
+        (0, _.e7)([m.C], () => {
             var e;
-            return (0, m.fD)() ? (null === (e = p.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
+            return (0, g.fD)() ? (null === (e = m.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         })
     )
         return null;
     let r = async () => {
         try {
-            n(!0), await (0, h.bF)(), window.location.reload(!0);
+            n(!0), await (0, p.bF)(), window.location.reload(!0);
         } catch (e) {
             n(!1);
         }
     };
-    return (0, a.jsx)(_.Button, {
-        size: _.ButtonSizes.LARGE,
+    return (0, a.jsx)(h.Button, {
+        size: h.ButtonSizes.LARGE,
         onClick: r,
         submitting: e,
         className: N.clearOverrideButton,
@@ -82,7 +82,7 @@ class D extends s.PureComponent {
             error: e,
             info: n
         });
-        let i = (0, g.eQ)(),
+        let i = (0, f.e)(),
             a = b.Z.captureCrash(e, { extra: n });
         T.default.track(S.rMx.APP_CRASHED, {
             path: r.pathname,
@@ -120,8 +120,8 @@ class D extends s.PureComponent {
                 r = (0, a.jsxs)('div', {
                     className: N.buttons,
                     children: [
-                        (0, a.jsx)(_.Button, {
-                            size: _.ButtonSizes.LARGE,
+                        (0, a.jsx)(h.Button, {
+                            size: h.ButtonSizes.LARGE,
                             onClick: this._handleSubmitReport,
                             children: A.intl.string(A.t['+hivLS'])
                         }),

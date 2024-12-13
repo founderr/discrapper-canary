@@ -351,7 +351,7 @@ function X(e, n) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         i = String(e);
     if (
-        (!f.R7.includes(i) &&
+        (!f.R.includes(i) &&
             m.Z.addBreadcrumb({
                 category: 'analytics',
                 message: ''.concat(i)

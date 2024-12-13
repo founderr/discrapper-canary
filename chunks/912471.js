@@ -4,10 +4,10 @@ n.d(t, {
     }
 }),
     n(411104);
-var i = n(433517),
-    r = n(570140),
-    l = n(188471),
-    a = n(97145),
+var i = n(903772),
+    r = n(433517),
+    l = n(570140),
+    a = n(188471),
     o = n(581567),
     s = n(594190),
     c = n(19780),
@@ -24,7 +24,7 @@ let f = 'LATEST_HEARTBEAST_EVENT_TIMESTAMP',
 async function C() {
     if (I) return;
     (I = !0), (0, p.fr)(!0), m.Z.addBreadcrumb({ message: 'Start Analytics Heartbeat' });
-    let e = await i.K.getAfterRefresh(f).then(p.Hg);
+    let e = await r.K.getAfterRefresh(f).then(p.Hg);
     if (!I) return;
     let t = Date.now(),
         n = 15 * u.Z.Millis.MINUTE + e - t;
@@ -61,19 +61,19 @@ async function S() {
         message: 'Tracking Heartbeat',
         data: { initialized: t.initialized }
     });
-    let r = {
+    let l = {
             client_heartbeat_initialization_timestamp: t.initialized,
             client_heartbeat_version: 17
         },
         c = h.Z.getMemoryUsageElectronRenderer();
-    null != c && (r.client_heartbeat_renderer_memory = c);
+    null != c && (l.client_heartbeat_renderer_memory = c);
     let u = h.Z.getMemoryUsageElectronRendererUsedHeapSize();
-    null != u && (r.client_heartbeat_renderer_memory_used_heap = u);
+    null != u && (l.client_heartbeat_renderer_memory_used_heap = u);
     {
         let e = s.ZP.getCurrentGameForAnalytics();
-        null != e && ((r.client_heartbeat_current_game_id = e.id), (r.client_heartbeat_current_game_name = e.name), (r.client_heartbeat_current_game_executable = (0, o.N6)(e.exePath)), (r.client_heartbeat_current_game_distributor = e.distributor), (r.uses_client_mods = (0, a.eQ)()));
+        null != e && ((l.client_heartbeat_current_game_id = e.id), (l.client_heartbeat_current_game_name = e.name), (l.client_heartbeat_current_game_executable = (0, o.N6)(e.exePath)), (l.client_heartbeat_current_game_distributor = e.distributor), (l.uses_client_mods = (0, i.e)()));
     }
-    d.default.track(g.rMx.CLIENT_HEARTBEAT, r), i.K.set(f, Date.now().toString()), (0, l.Z)();
+    d.default.track(g.rMx.CLIENT_HEARTBEAT, l), r.K.set(f, Date.now().toString()), (0, a.Z)();
 }
 let N = null,
     T = !0;
@@ -86,11 +86,11 @@ function b() {
         }
     else
         !(function () {
-            if (!!I) (I = !1), m.Z.addBreadcrumb({ message: 'Stopping Analytics Heartbeat' }), (0, p.fr)(!1), v(), (0, l.Z)();
+            if (!!I) (I = !1), m.Z.addBreadcrumb({ message: 'Stopping Analytics Heartbeat' }), (0, p.fr)(!1), v(), (0, a.Z)();
         })();
 }
 function A() {
-    m.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), c.Z.addChangeListener(Z), r.Z.subscribe('WINDOW_FOCUS', L), r.Z.subscribe('APP_STATE_UPDATE', P), r.Z.subscribe('LOGIN_SUCCESS', x), b();
+    m.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), c.Z.addChangeListener(Z), l.Z.subscribe('WINDOW_FOCUS', L), l.Z.subscribe('APP_STATE_UPDATE', P), l.Z.subscribe('LOGIN_SUCCESS', x), b();
 }
 function x() {
     S();

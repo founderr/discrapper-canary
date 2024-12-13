@@ -24,7 +24,7 @@ var i = n(200651),
     x = n(10448);
 let I = (0, g.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
     b = (0, g.Mg)(d.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
-    E = ['12px 4px 4px 4px', '4px 12px 4px 4px', '4px 4px 4px 12px', '4px 4px 12px 4px'];
+    E = ['13px 4px 4px 4px', '4px 13px 4px 4px', '4px 4px 4px 13px', '4px 4px 13px 4px'];
 function S(e) {
     let { guildId: t, animate: n, index: l } = e,
         r = (0, c.e7)([f.Z], () => f.Z.getGuild(t), [t]),
