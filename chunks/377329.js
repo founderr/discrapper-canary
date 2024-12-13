@@ -9,8 +9,8 @@ var l = t(200651),
     a = t(481060),
     s = t(471445),
     o = t(41776),
-    c = t(592125),
-    d = t(430824),
+    d = t(592125),
+    c = t(430824),
     u = t(594174),
     m = t(236373),
     x = t(230900),
@@ -23,20 +23,20 @@ function p(e) {
     let { guildId: f, guildEvent: I, guildEventId: N, error: C } = e,
         E = i.useMemo(() => (0, m.Gb)(I, f), [I, f]),
         { channel_id: S, name: T, image: y, description: b } = E,
-        Z = (0, r.e7)([c.Z], () => c.Z.getChannel(S), [S]),
-        R = (0, r.e7)([d.Z], () => d.Z.getGuild(f), [f]),
-        _ = (0, x.cS)(E),
+        Z = (0, r.e7)([d.Z], () => d.Z.getChannel(S), [S]),
+        _ = (0, r.e7)([c.Z], () => c.Z.getGuild(f), [f]),
+        R = (0, x.cS)(E),
         k = (0, r.e7)([u.default], () => (null != I.creatorId ? u.default.getUser(I.creatorId) : u.default.getCurrentUser()), [I.creatorId]),
         A = (0, r.e7)([o.Z], () => o.Z.isLurking(f), [f]),
-        D = (0, s.KS)(Z, R);
+        D = (0, s.KS)(Z, _);
     return (0, l.jsxs)('div', {
         className: j.content,
         children: [
             (0, l.jsx)(g.Z, {
                 className: j.previewCard,
-                guild: R,
+                guild: _,
                 channel: Z,
-                location: null != _ ? _ : void 0,
+                location: null != R ? R : void 0,
                 creator: k,
                 name: T,
                 description: b,
@@ -85,7 +85,7 @@ function p(e) {
                                                             width: 18,
                                                             className: j.locationIcon
                                                         }),
-                                                  null !== (e = null == Z ? void 0 : Z.name) && void 0 !== e ? e : _
+                                                  null !== (e = null == Z ? void 0 : Z.name) && void 0 !== e ? e : R
                                               ]
                                           });
                                       }

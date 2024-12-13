@@ -10,8 +10,8 @@ var l = t(200651),
     a = t.n(r),
     s = t(481060),
     o = t(516129),
-    c = t(813197),
-    d = t(930180),
+    d = t(813197),
+    c = t(930180),
     u = t(46920),
     m = t(924301),
     x = t(236373),
@@ -66,9 +66,9 @@ function N(e) {
 }
 function C(e) {
     let { guildEvent: n, guildEventId: r, guildId: C, editBroadcastInfoData: E, error: S, validationErrorMessage: T, onChange: y, canSetFocus: b = !1 } = e,
-        { entityType: Z, channelId: R, description: _, name: k, image: A, scheduledEndTime: D, scheduledStartTime: L, recurrenceRule: B } = n,
-        M = (0, d._d)(R),
-        z = (0, d.K3)(R),
+        { entityType: Z, channelId: _, description: R, name: k, image: A, scheduledEndTime: D, scheduledStartTime: L, recurrenceRule: B } = n,
+        M = (0, c._d)(_),
+        z = (0, c.K3)(_),
         U = null != n && (0, m.xt)(n),
         P = i.useMemo(() => {
             let e = (0, h.v1)(n);
@@ -107,7 +107,7 @@ function C(e) {
         children: [
             (0, l.jsx)('div', {
                 className: I.blockedUsersContainer,
-                children: null != R && !U && (M > 0 || z > 0) && (0, l.jsx)(u.mv, { channelId: R })
+                children: null != _ && !U && (M > 0 || z > 0) && (0, l.jsx)(u.mv, { channelId: _ })
             }),
             (0, l.jsxs)('div', {
                 className: I.form,
@@ -173,7 +173,7 @@ function C(e) {
                         children: (0, l.jsx)(s.TextArea, {
                             className: I.__invalid_descriptionInput,
                             placeholder: f.intl.string(f.t['kWO/Ex']),
-                            value: _,
+                            value: R,
                             onChange: (e) => {
                                 y({ description: e });
                             },
@@ -219,7 +219,7 @@ function C(e) {
                                   })
                                 : (0, l.jsxs)(s.Button, {
                                       size: s.Button.Sizes.SMALL,
-                                      children: [f.intl.string(f.t.vKCGYW), (0, l.jsx)(c.ZP, { onChange: O })]
+                                      children: [f.intl.string(f.t.vKCGYW), (0, l.jsx)(d.ZP, { onChange: O })]
                                   })
                         ]
                     }),

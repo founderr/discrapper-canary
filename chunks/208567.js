@@ -10,8 +10,8 @@ var l,
     a = t(120356),
     s = t.n(a),
     o = t(512722),
-    c = t.n(o),
-    d = t(481060),
+    d = t.n(o),
+    c = t(481060),
     u = t(624138),
     m = t(813197),
     x = t(981631),
@@ -32,7 +32,7 @@ function v(e, n, t) {
 }
 function j(e) {
     let { className: n, icon: t = null } = e;
-    return (0, i.jsx)(d.ThemeProvider, {
+    return (0, i.jsx)(c.ThemeProvider, {
         theme: x.BRd.LIGHT,
         children: (e) =>
             (0, i.jsx)('div', {
@@ -43,21 +43,21 @@ function j(e) {
 }
 class p extends (l = r.PureComponent) {
     handleExternalFileChange(e) {
-        c()(null != this.inputRef.current, 'ImageInputRef asked to handleExternalFileChange when not mounted'), this.inputRef.current.handleFileChange(e);
+        d()(null != this.inputRef.current, 'ImageInputRef asked to handleExternalFileChange when not mounted'), this.inputRef.current.handleFileChange(e);
     }
     render() {
         var e;
         let n, t, l, r;
-        let { image: a, hint: o, name: c, makeURL: v, disabled: p, onChange: f, showIcon: I, showIconDisabled: N, className: C, imageClassName: E, iconClassName: S, iconWrapperClassName: T, icon: y, hideSize: b, imageStyle: Z, showRemoveButton: R, maxFileSizeBytes: _, onFileSizeError: k, onOpenImageSelectModal: A, 'aria-label': D } = this.props;
+        let { image: a, hint: o, name: d, makeURL: v, disabled: p, onChange: f, showIcon: I, showIconDisabled: N, className: C, imageClassName: E, iconClassName: S, iconWrapperClassName: T, icon: y, hideSize: b, imageStyle: Z, showRemoveButton: _, maxFileSizeBytes: R, onFileSizeError: k, onOpenImageSelectModal: A, 'aria-label': D } = this.props;
         if (
             (null != (n = null != a && /^data:/.test(a) ? a : v(a))
                 ? (t = 'url("'.concat(n, '")'))
-                : null != c &&
-                  (l = (0, i.jsx)(d.Heading, {
+                : null != d &&
+                  (l = (0, i.jsx)(c.Heading, {
                       variant: 'heading-xxl/normal',
                       color: 'always-white',
                       className: g.imageUploaderAcronym,
-                      children: (0, u.Zg)(c)
+                      children: (0, u.Zg)(d)
                   })),
             p)
         )
@@ -80,7 +80,7 @@ class p extends (l = r.PureComponent) {
                 })
             });
         null != a
-            ? (r = (0, i.jsx)(d.Anchor, {
+            ? (r = (0, i.jsx)(c.Anchor, {
                   className: g.removeButton,
                   onClick: this.handleRemove,
                   children: h.intl.string(h.t.N86XcH)
@@ -94,7 +94,7 @@ class p extends (l = r.PureComponent) {
         return (0, i.jsxs)('div', {
             className: s()(g.imageUploader, C),
             children: [
-                (0, i.jsx)(d.FocusRing, {
+                (0, i.jsx)(c.FocusRing, {
                     within: !0,
                     children: (0, i.jsxs)('div', {
                         className: I ? s()(g.imageUploaderIconWrapper, T) : void 0,
@@ -111,7 +111,7 @@ class p extends (l = r.PureComponent) {
                                         children: l
                                     }),
                                     null != A
-                                        ? (0, i.jsx)(d.Clickable, {
+                                        ? (0, i.jsx)(c.Clickable, {
                                               className: g.imageUploaderFileInput,
                                               'aria-label': L,
                                               onClick: A
@@ -122,7 +122,7 @@ class p extends (l = r.PureComponent) {
                                               className: g.imageUploaderFileInput,
                                               'aria-label': L,
                                               tabIndex: 0,
-                                              maxFileSizeBytes: _,
+                                              maxFileSizeBytes: R,
                                               onFileSizeError: k
                                           })
                                 ]
@@ -141,7 +141,7 @@ class p extends (l = r.PureComponent) {
                         ]
                     })
                 }),
-                R ? r : null
+                _ ? r : null
             ]
         });
     }

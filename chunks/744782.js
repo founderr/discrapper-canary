@@ -10,8 +10,8 @@ var i = t(442837),
     a = t(264229),
     s = t(366980),
     o = t(603236),
-    c = t(939863),
-    d = t(984933),
+    d = t(939863),
+    c = t(984933),
     u = t(430824),
     m = t(341165),
     x = t(626135),
@@ -27,16 +27,16 @@ function C(e) {
     let { onClose: E, event: S } = e,
         T = null == S ? void 0 : S.guild_id,
         y = (0, i.e7)(
-            [d.ZP],
+            [c.ZP],
             () => {
                 var e;
-                return null != T ? (null === (e = d.ZP.getDefaultChannel(T)) || void 0 === e ? void 0 : e.id) : null;
+                return null != T ? (null === (e = c.ZP.getDefaultChannel(T)) || void 0 === e ? void 0 : e.id) : null;
             },
             [T]
         ),
         b = (0, i.e7)([u.Z], () => u.Z.getGuild(T), [T]),
-        { channel_id: Z, id: R } = null != S ? S : {},
-        _ = (0, i.e7)(
+        { channel_id: Z, id: _ } = null != S ? S : {},
+        R = (0, i.e7)(
             [m.Z],
             () => {
                 let e = null != Z ? Z : y;
@@ -45,18 +45,18 @@ function C(e) {
             [Z, y]
         );
     if (null == S) return E(), null;
-    let k = null !== (n = null == b ? void 0 : b.vanityURLCode) && void 0 !== n ? n : null == _ ? void 0 : _.code,
+    let k = null !== (n = null == b ? void 0 : b.vanityURLCode) && void 0 !== n ? n : null == R ? void 0 : R.code,
         A =
             null != k
                 ? (0, a.tV)({
                       baseCode: k,
-                      guildScheduledEventId: R
+                      guildScheduledEventId: _
                   })
                 : null,
-        D = null == A || null == _,
+        D = null == A || null == R,
         L = (0, s.Z)(null != A ? A : ''),
-        B = null !== (t = null == _ ? void 0 : _.maxAge) && void 0 !== t ? t : I.value,
-        M = null !== (C = null == _ ? void 0 : _.maxUses) && void 0 !== C ? C : N.value;
+        B = null !== (t = null == R ? void 0 : R.maxAge) && void 0 !== t ? t : I.value,
+        M = null !== (C = null == R ? void 0 : R.maxUses) && void 0 !== C ? C : N.value;
     return (0, l.jsxs)('div', {
         className: f.container,
         children: [
@@ -69,7 +69,7 @@ function C(e) {
                     color: 'currentColor'
                 })
             }),
-            (0, l.jsx)(c.Z, {
+            (0, l.jsx)(d.Z, {
                 children: (0, l.jsx)('div', {
                     className: f.iconContainer,
                     children: (0, l.jsx)(r.CalendarIcon, {
@@ -107,7 +107,7 @@ function C(e) {
                                 channel: Z,
                                 channel_type: n,
                                 location: j.t4x.GUILD_EVENTS,
-                                code: _.code,
+                                code: R.code,
                                 guild_scheduled_event_id: null == S ? void 0 : S.id
                             });
                         }

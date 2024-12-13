@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return d;
+        return c;
     }
 });
 var l = t(200651),
@@ -9,14 +9,14 @@ var l = t(200651),
     a = t(377171),
     s = t(854698),
     o = t(388032),
-    c = t(195197);
-function d(e) {
-    let { startDate: n, recurrenceRule: t, onRecurrenceChange: d } = e,
+    d = t(195197);
+function c(e) {
+    let { startDate: n, recurrenceRule: t, onRecurrenceChange: c } = e,
         u = i.useMemo(() => (0, s.zi)(n, t), [t, n]),
         m = (0, s.P8)(n),
         x = (e) => e.toString(),
         h = (0, l.jsxs)('div', {
-            className: c.title,
+            className: d.title,
             children: [
                 o.intl.string(o.t['59TVxM']),
                 (0, l.jsx)(r.TextBadge, {
@@ -31,7 +31,7 @@ function d(e) {
         children: (0, l.jsx)(r.Select, {
             placeholder: 'gaming',
             options: m,
-            select: d,
+            select: c,
             serialize: x,
             isSelected: (e) => null != u && x(e) === x(u)
         })

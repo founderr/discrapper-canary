@@ -300,7 +300,7 @@ function X(e) {
             children: (0, i.jsx)(p.FocusJumpSection, {
                 children: (e) =>
                     (0, i.jsx)('div', {
-                        className: a()(V.membersWrap, V.hiddenMembers),
+                        className: a()(V.membersWrap, V.hiddenMembers, F.container),
                         children: (0, i.jsx)(
                             p.List,
                             {

@@ -20,22 +20,22 @@ var l = n(200651),
     g = n(572004),
     m = n(823379),
     E = n(859155),
-    p = n(822869),
-    I = n(346610),
+    I = n(822869),
+    p = n(346610),
     S = n(895442),
     A = n(757853),
     C = n(388275),
     v = n(912332),
     L = n(646746),
-    b = n(819727),
-    T = n(388032),
+    T = n(819727),
+    b = n(388032),
     N = n(190417),
     x = n(621054);
 function P(e) {
-    let { channelId: t, messageId: P, message: y, initialSelectedDestinations: Z, forwardOptions: R, onClose: w, onRequestSent: O, ...D } = e,
-        { hasOneTapSendButton: M, hasMessageInput: j, hasPreview: U } = (0, I.yk)({ location: 'ForwardModal' }),
+    let { channelId: t, messageId: P, message: y, initialSelectedDestinations: Z, forwardOptions: O, onClose: R, onRequestSent: w, ...D } = e,
+        { hasOneTapSendButton: M, hasMessageInput: j, hasPreview: U } = (0, p.yk)({ location: 'ForwardModal' }),
         k = i.useMemo(() => (0, u.dL)(t), [t]),
-        [G, F] = i.useState(!1),
+        [F, G] = i.useState(!1),
         W = (0, r.e7)(
             [f.Z],
             () => {
@@ -44,14 +44,14 @@ function P(e) {
             },
             [t, P, y]
         ),
-        H = (0, r.e7)([h.Z], () => h.Z.getChannel(t), [t]),
-        z = (0, p.ZF)(),
-        B = (0, p.mh)(),
+        B = (0, r.e7)([h.Z], () => h.Z.getChannel(t), [t]),
+        H = (0, I.ZF)(),
+        z = (0, I.mh)(),
         Q = i.useRef(0),
         V = i.useRef(0),
         [K, Y] = i.useState(Z),
         q = K.length,
-        X = q >= b.G,
+        X = q >= T.G,
         [J, $] = i.useState(''),
         { results: ee, updateSearchText: et } = (0, d.s)({
             selectedDestinations: K,
@@ -60,24 +60,24 @@ function P(e) {
         }),
         en = i.useCallback(
             (e) => {
-                $(e), et(e), (V.current += 1), '' !== e && B(t, P);
+                $(e), et(e), (V.current += 1), '' !== e && z(t, P);
             },
-            [t, P, B, et]
+            [t, P, z, et]
         ),
         el = i.useCallback(() => {
-            (0, p.sF)({
+            (0, I.sF)({
                 channelId: t,
                 messageId: P,
                 numDestinationChanges: Q.current,
                 numQueryChanges: V.current
             }),
-                w();
-        }, [t, P, w]),
+                R();
+        }, [t, P, R]),
         ei = i.useCallback(() => {
             var e;
             let n = null === (e = h.Z.getChannel(t)) || void 0 === e ? void 0 : e.guild_id,
                 l = (0, _.wR)(n, t, P);
-            (0, s.showToast)((0, s.createToast)(T.intl.string(T.t['L/PwZW']), s.ToastType.LINK)), (0, g.JG)(l), (0, p.xp)(t, P);
+            (0, s.showToast)((0, s.createToast)(b.intl.string(b.t['L/PwZW']), s.ToastType.LINK)), (0, g.JG)(l), (0, I.xp)(t, P);
         }, [t, P]),
         ea = i.useCallback(() => {
             $('');
@@ -93,7 +93,7 @@ function P(e) {
             () =>
                 (0, a.throttle)(
                     () => {
-                        (0, s.showToast)((0, s.createToast)(T.intl.string(T.t.kwmYkp), s.ToastType.FORWARD));
+                        (0, s.showToast)((0, s.createToast)(b.intl.string(b.t.kwmYkp), s.ToastType.FORWARD));
                     },
                     3000,
                     {
@@ -105,7 +105,7 @@ function P(e) {
         ),
         eo = i.useCallback(
             (e) => {
-                z(t, P, '' !== J),
+                H(t, P, '' !== J),
                     Y((t) => {
                         let n = t.findIndex((t) => {
                             let { type: n, id: l } = t;
@@ -116,7 +116,7 @@ function P(e) {
                         return l.splice(n, 1), (Q.current += 1), l;
                     });
             },
-            [t, X, P, J, z]
+            [t, X, P, J, H]
         ),
         ec = i.useCallback(
             async function (e) {
@@ -124,10 +124,10 @@ function P(e) {
                 let { withMessage: a, transitionToDestination: r, closeAfterSend: d } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                     _ = null !== (i = f.Z.getMessage(t, P)) && void 0 !== i ? i : y;
                 if (null == _) {
-                    (0, s.showToast)((0, s.createToast)(T.intl.string(T.t.R0RpRU), s.ToastType.FAILURE));
+                    (0, s.showToast)((0, s.createToast)(b.intl.string(b.t.R0RpRU), s.ToastType.FAILURE));
                     return;
                 }
-                F(!0);
+                G(!0);
                 let g = (await Promise.all(e.map(u.qx))).filter(m.lm);
                 if (
                     (0, S.Z)(_, g) &&
@@ -143,12 +143,12 @@ function P(e) {
                         });
                     }))
                 ) {
-                    F(!1);
+                    G(!1);
                     return;
                 }
-                d && (0, v.mc)(), null == O || O(), r && (await o.Z.fetchMessages({ channelId: g[0] }), (0, c.Kh)(g[0]));
-                let I = await E.Z.sendForwards(_, g, {
-                        ...R,
+                d && (0, v.mc)(), null == w || w(), r && (await o.Z.fetchMessages({ channelId: g[0] }), (0, c.Kh)(g[0]));
+                let p = await E.Z.sendForwards(_, g, {
+                        ...O,
                         withMessage: a
                     }),
                     A = g.some((e) => {
@@ -156,12 +156,12 @@ function P(e) {
                         return null != t && t.rateLimitPerUser > 0;
                     });
                 if (
-                    I.every((e) => {
+                    p.every((e) => {
                         let { status: t } = e;
                         return 'fulfilled' === t;
                     })
                 ) {
-                    (0, p.gP)({
+                    (0, I.gP)({
                         channelId: t,
                         messageId: P,
                         hasError: !1,
@@ -174,7 +174,7 @@ function P(e) {
                         es();
                     return;
                 }
-                (0, p.gP)({
+                (0, I.gP)({
                     channelId: t,
                     messageId: P,
                     hasError: !0,
@@ -184,16 +184,16 @@ function P(e) {
                     numQueryChanges: V.current,
                     anyDestinationHasSlowmode: A
                 });
-                let C = e.filter((e, t) => 'rejected' === I[t].status);
+                let C = e.filter((e, t) => 'rejected' === p[t].status);
                 (0, v.Np)({
                     messageId: P,
                     channelId: t,
                     message: _,
                     failedDestinations: C,
-                    forwardOptions: R
+                    forwardOptions: O
                 });
             },
-            [t, R, P, y, O, es]
+            [t, O, P, y, w, es]
         ),
         eu = i.useCallback(
             (e) => {
@@ -216,7 +216,7 @@ function P(e) {
             },
             [ec]
         );
-    if (null == W || null == H) return null;
+    if (null == W || null == B) return null;
     let ef =
             ee.length > 0
                 ? (0, l.jsx)(A.F, {
@@ -225,7 +225,7 @@ function P(e) {
                       rowData: ee,
                       rowMode: M ? A.G.SEND : A.G.TOGGLE,
                       message: W,
-                      originChannel: H,
+                      originChannel: B,
                       handleToggleDestination: M ? eh : eo,
                       selectedDestinations: K,
                       disableSelection: X
@@ -241,14 +241,14 @@ function P(e) {
                           (0, l.jsx)(s.Text, {
                               variant: 'text-md/normal',
                               color: 'text-muted',
-                              children: T.intl.string(T.t.V6nAfH)
+                              children: b.intl.string(b.t.V6nAfH)
                           })
                       ]
                   }),
-        e_ = q <= 1 ? T.intl.string(T.t.TXNS7e) : T.intl.formatToPlainString(T.t.jWtYUl, { count: q });
+        e_ = q <= 1 ? b.intl.string(b.t.TXNS7e) : b.intl.formatToPlainString(b.t.jWtYUl, { count: q });
     return (0, l.jsxs)(s.ModalRoot, {
         className: N.modal,
-        'aria-label': T.intl.string(T.t['+SkRRk']),
+        'aria-label': b.intl.string(b.t['+SkRRk']),
         ...D,
         children: [
             (0, l.jsxs)(s.ModalHeader, {
@@ -262,19 +262,19 @@ function P(e) {
                                 children: (0, l.jsx)(s.HeadingLevel, {
                                     component: (0, l.jsx)(s.Heading, {
                                         variant: 'heading-lg/semibold',
-                                        children: T.intl.string(T.t['+SkRRk'])
+                                        children: b.intl.string(b.t['+SkRRk'])
                                     }),
                                     children: X
                                         ? (0, l.jsx)(s.Text, {
                                               variant: 'text-sm/normal',
                                               color: 'text-warning',
-                                              children: T.intl.format(T.t['3Fbkio'], { count: b.G })
+                                              children: b.intl.format(b.t['3Fbkio'], { count: T.G })
                                           })
                                         : (M || j) &&
                                           (0, l.jsx)(s.Heading, {
                                               variant: 'heading-sm/normal',
                                               color: 'header-muted',
-                                              children: T.intl.string(T.t['VA+btL'])
+                                              children: b.intl.string(b.t['VA+btL'])
                                           })
                                 })
                             }),
@@ -290,7 +290,7 @@ function P(e) {
                             className: N.forwardPreviewWrapperInset,
                             children: (0, l.jsx)(L.O, {
                                 message: W,
-                                forwardOptions: R
+                                forwardOptions: O
                             })
                         }),
                     (0, l.jsx)(s.SearchBar, {
@@ -299,8 +299,8 @@ function P(e) {
                         query: J,
                         onChange: en,
                         onClear: ea,
-                        placeholder: T.intl.string(T.t['5h0QOD']),
-                        'aria-label': T.intl.string(T.t['5h0QOD']),
+                        placeholder: b.intl.string(b.t['5h0QOD']),
+                        'aria-label': b.intl.string(b.t['5h0QOD']),
                         autoFocus: !0
                     })
                 ]
@@ -310,11 +310,11 @@ function P(e) {
                 (j
                     ? (0, l.jsx)(C.n, {
                           message: W,
-                          forwardOptions: R,
+                          forwardOptions: O,
                           sendLabel: e_,
                           canSend: q > 0,
                           selectedDestinations: K,
-                          isSending: G,
+                          isSending: F,
                           onSend: eu,
                           showPreview: U
                       })
@@ -322,7 +322,7 @@ function P(e) {
                           className: N.footer,
                           children: [
                               (0, l.jsx)(s.Button, {
-                                  submitting: G,
+                                  submitting: F,
                                   disabled: 0 === q,
                                   onClick: ed,
                                   children: e_
@@ -331,7 +331,7 @@ function P(e) {
                                   onClick: ei,
                                   look: s.Button.Looks.OUTLINED,
                                   color: s.Button.Colors.PRIMARY,
-                                  children: T.intl.string(T.t.WqhZsr)
+                                  children: b.intl.string(b.t.WqhZsr)
                               })
                           ]
                       }))

@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     },
     nm: function () {
-        return I;
+        return p;
     },
     pU: function () {
         return A;
@@ -29,8 +29,8 @@ var l = n(192379),
     g = n(408433),
     m = n(823379),
     E = n(981631),
-    p = n(388032);
-function I(e) {
+    I = n(388032);
+function p(e) {
     let t = e.map(s.hl).find(m.lm),
         n = (0, a.e7)([d.Z], () => d.Z.getChannel(t), [t]);
     return l.useMemo(
@@ -46,10 +46,10 @@ function I(e) {
 }
 function S(e, t, n) {
     let l = n instanceof u.Sf;
-    if (t.isNSFW() && !(l && n.isNSFW())) return { label: p.intl.string(p.t.KgPx1N) };
+    if (t.isNSFW() && !(l && n.isNSFW())) return { label: I.intl.string(I.t.KgPx1N) };
     if (l && (0, u.Km)(n.type)) {
-        if ((e.attachments.length > 0 || e.messageSnapshots.some((e) => e.message.attachments.length > 0)) && !h.Z.can(E.Plq.ATTACH_FILES, n)) return { label: p.intl.string(p.t.P7yvbm) };
-        if ((e.embeds.length > 0 || e.messageSnapshots.some((e) => e.message.embeds.length > 0)) && !(0, g.eC)(n, h.Z) && !(0, g.En)(e)) return { label: p.intl.string(p.t.Wr4RIS) };
+        if ((e.attachments.length > 0 || e.messageSnapshots.some((e) => e.message.attachments.length > 0)) && !h.Z.can(E.Plq.ATTACH_FILES, n)) return { label: I.intl.string(I.t.P7yvbm) };
+        if ((e.embeds.length > 0 || e.messageSnapshots.some((e) => e.message.embeds.length > 0)) && !(0, g.eC)(n, h.Z) && !(0, g.En)(e)) return { label: I.intl.string(I.t.Wr4RIS) };
         let t = [
             ...(0, c.cv)(e),
             ...e.messageSnapshots.flatMap((e) => {
@@ -67,8 +67,8 @@ function S(e, t, n) {
                 })(e, n)
             )
         )
-            return { label: p.intl.string(p.t['0Yyrub']) };
-        if ((e.hasFlag(E.iLy.IS_VOICE_MESSAGE) || e.messageSnapshots.some((e) => e.message.hasFlag(E.iLy.IS_VOICE_MESSAGE))) && !h.Z.can(E.Plq.SEND_VOICE_MESSAGES, n)) return { label: p.intl.string(p.t.quj4DQ) };
+            return { label: I.intl.string(I.t['0Yyrub']) };
+        if ((e.hasFlag(E.iLy.IS_VOICE_MESSAGE) || e.messageSnapshots.some((e) => e.message.hasFlag(E.iLy.IS_VOICE_MESSAGE))) && !h.Z.can(E.Plq.SEND_VOICE_MESSAGES, n)) return { label: I.intl.string(I.t.quj4DQ) };
     }
 }
 function A(e, t) {
