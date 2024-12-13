@@ -31,10 +31,10 @@ var i = t(200651),
     N = t(602683),
     w = t(916028),
     y = t(749912),
-    I = t(815183),
-    b = t(899457),
+    b = t(815183),
+    I = t(899457),
     A = t(102787);
-function _(e, s, t) {
+function L(e, s, t) {
     return (
         s in e
             ? Object.defineProperty(e, s, {
@@ -47,8 +47,8 @@ function _(e, s, t) {
         e
     );
 }
-let L = ['png', 'gif', 'webp'],
-    D = [...L, 'jpg', 'jpeg'],
+let _ = ['png', 'gif', 'webp'],
+    D = [..._, 'jpg', 'jpeg'],
     M = Array.from(new Set([...D, 'gif', 'mp4', 'webm']));
 function V(e) {
     var s, t;
@@ -148,10 +148,10 @@ let k = '1193992107035983872',
         userStatus: null,
         targetedContent: []
     };
-function Z() {
-    var e, s, r, o, d, _, V, k, Z, B, H, K, q, Y;
-    let [Q, U] = a.useState(R),
-        [X, W] = a.useState(b.a.UNENROLLED),
+function B() {
+    var e, s, r, o, d, L, V, k, B, Z, H, K, q, Y;
+    let [Q, X] = a.useState(R),
+        [U, W] = a.useState(I.a.UNENROLLED),
         [z, G] = a.useState(!1),
         [J, $] = a.useState(!1),
         [ee, es] = a.useState(null);
@@ -163,7 +163,7 @@ function Z() {
     function ei(e, s) {
         var t, i;
         if ('hero' === e || 'questBarHero' === e || 'gameTile' === e || 'logotype' === e || 'heroVideo' === e || 'questBarHeroVideo' === e)
-            U({
+            X({
                 ...Q,
                 config:
                     ((t = Q.config),
@@ -181,7 +181,7 @@ function Z() {
     }
     function ea(e, s) {
         var t, i, a;
-        U({
+        X({
             ...Q,
             config: {
                 ...Q.config,
@@ -199,7 +199,7 @@ function Z() {
     function en(e, s) {
         var t, i;
         if ('questName' === e || 'gameTitle' === e || 'gamePublisher' === e)
-            U({
+            X({
                 ...Q,
                 config:
                     ((t = Q.config),
@@ -217,7 +217,7 @@ function Z() {
     }
     function el(e, s) {
         var t, i, a;
-        U({
+        X({
             ...Q,
             config: {
                 ...Q.config,
@@ -235,7 +235,7 @@ function Z() {
     function er(e, s, t) {
         var i, a, l;
         if ('name' === e || 'nameWithArticle' === e)
-            U({
+            X({
                 ...Q,
                 config:
                     ((i = Q.config),
@@ -263,7 +263,7 @@ function Z() {
             });
     }
     function eo(e, s) {
-        U({
+        X({
             ...Q,
             config: {
                 ...Q.config,
@@ -300,7 +300,19 @@ function Z() {
                 className: A.fields,
                 children: (0, i.jsx)(w.Z, {
                     onSelect: function (e) {
-                        if ((es(e), null != e)) U(e);
+                        if ((es(e), null != e))
+                            W(
+                                (function (e) {
+                                    if (null == e.userStatus) return I.a.UNENROLLED;
+                                    if (null != e.userStatus.claimedAt) return I.a.CLAIMED;
+                                    if (null != e.userStatus.completedAt) return I.a.COMPLETED_100;
+                                    let s = (0, m.il)(e),
+                                        t = s.progressSeconds,
+                                        i = s.targetSeconds;
+                                    return t / i >= 1 ? I.a.COMPLETED_100 : t / i >= 0.75 ? I.a.COMPLETED_75 : t / i >= 0.5 ? I.a.COMPLETED_50 : t / i >= 0.25 ? I.a.COMPLETED_25 : I.a.ENROLLED;
+                                })(e)
+                            ),
+                                X(e);
                     },
                     quest: ee
                 })
@@ -316,7 +328,7 @@ function Z() {
                     taskDuration: ec,
                     taskConfig: Q.config.taskConfig,
                     onSelect: function (e) {
-                        U({
+                        X({
                             ...Q,
                             config: {
                                 ...Q.config,
@@ -424,7 +436,7 @@ function Z() {
                         title: 'Logotype',
                         assetKey: 'logotype',
                         onFileChange: ei,
-                        filters: [...L, 'svg'],
+                        filters: [..._, 'svg'],
                         initialValue: Q.config.assets.logotype
                     }),
                     eu &&
@@ -449,7 +461,7 @@ function Z() {
                                     assetKey: 'videoPlayerThumbnail',
                                     onFileChange: ea,
                                     filters: D,
-                                    initialValue: null === (V = Q.config.videoMetadata) || void 0 === V ? void 0 : null === (_ = V.assets) || void 0 === _ ? void 0 : _.videoPlayerThumbnail
+                                    initialValue: null === (V = Q.config.videoMetadata) || void 0 === V ? void 0 : null === (L = V.assets) || void 0 === L ? void 0 : L.videoPlayerThumbnail
                                 }),
                                 (0, i.jsx)(O.Z, {
                                     title: 'Quest Bar Preview Video (optional)',
@@ -463,7 +475,7 @@ function Z() {
                                     assetKey: 'questHomeVideo',
                                     onFileChange: ea,
                                     filters: M,
-                                    initialValue: null === (Z = Q.config.videoMetadata) || void 0 === Z ? void 0 : Z.assets.questHomeVideo
+                                    initialValue: null === (B = Q.config.videoMetadata) || void 0 === B ? void 0 : B.assets.questHomeVideo
                                 })
                             ]
                         })
@@ -501,7 +513,7 @@ function Z() {
                                             (function (e, s, t) {
                                                 var i, a, l;
                                                 if ('asset' === e)
-                                                    U({
+                                                    X({
                                                         ...Q,
                                                         config:
                                                             ((i = Q.config),
@@ -574,73 +586,73 @@ function Z() {
                     }),
                     (0, i.jsx)('div', {
                         className: A.fields,
-                        children: (0, i.jsx)(I.Z, {})
+                        children: (0, i.jsx)(b.Z, {})
                     }),
-                    (0, i.jsx)(b.Z, {
+                    (0, i.jsx)(I.Z, {
                         onChange: function (e) {
                             switch ((W(e), e)) {
-                                case b.a.UNENROLLED:
-                                    U({
+                                case I.a.UNENROLLED:
+                                    X({
                                         ...Q,
                                         userStatus: null
                                     });
                                     break;
-                                case b.a.ENROLLED:
-                                    U({
+                                case I.a.ENROLLED:
+                                    X({
                                         ...Q,
                                         userStatus: F({ enrolledAt: new Date().toISOString() })
                                     });
                                     break;
-                                case b.a.COMPLETED_25:
-                                    U({
+                                case I.a.COMPLETED_25:
+                                    X({
                                         ...Q,
                                         userStatus: F({
                                             enrolledAt: new Date().toISOString(),
-                                            streamProgressSeconds: ec * u.Z.Seconds.MINUTE * 0.25
+                                            streamProgressSeconds: 0.25 * ec
                                         })
                                     });
                                     break;
-                                case b.a.COMPLETED_50:
-                                    U({
+                                case I.a.COMPLETED_50:
+                                    X({
                                         ...Q,
                                         userStatus: F({
                                             enrolledAt: new Date().toISOString(),
-                                            streamProgressSeconds: ec * u.Z.Seconds.MINUTE * 0.5
+                                            streamProgressSeconds: 0.5 * ec
                                         })
                                     });
                                     break;
-                                case b.a.COMPLETED_75:
-                                    U({
+                                case I.a.COMPLETED_75:
+                                    X({
                                         ...Q,
                                         userStatus: F({
                                             enrolledAt: new Date().toISOString(),
-                                            streamProgressSeconds: ec * u.Z.Seconds.MINUTE * 0.75
+                                            streamProgressSeconds: 0.75 * ec
                                         })
                                     });
                                     break;
-                                case b.a.COMPLETED_100:
-                                    U({
+                                case I.a.COMPLETED_100:
+                                    X({
                                         ...Q,
                                         userStatus: F({
                                             completedAt: new Date().toISOString(),
                                             enrolledAt: new Date().toISOString(),
-                                            streamProgressSeconds: ec * u.Z.Seconds.MINUTE
+                                            streamProgressSeconds: ec
                                         })
                                     });
                                     break;
-                                case b.a.CLAIMED:
-                                    U({
+                                case I.a.CLAIMED:
+                                    X({
                                         ...Q,
                                         userStatus: F({
                                             claimedAt: new Date().toISOString(),
                                             completedAt: new Date().toISOString(),
                                             enrolledAt: new Date().toISOString(),
-                                            streamProgressSeconds: ec * u.Z.Seconds.MINUTE
+                                            streamProgressSeconds: ec
                                         })
                                     });
                             }
                         },
-                        value: X
+                        value: U
                     })
                 ]
             }),
@@ -659,7 +671,7 @@ function Z() {
                             (0, i.jsxs)('div', {
                                 className: A.questBarPreviewWrapper,
                                 children: [
-                                    (null === (B = Q.userStatus) || void 0 === B ? void 0 : B.claimedAt) != null &&
+                                    (null === (Z = Q.userStatus) || void 0 === Z ? void 0 : Z.claimedAt) != null &&
                                         (0, i.jsx)(c.Text, {
                                             color: 'text-secondary',
                                             variant: 'text-sm/normal',
@@ -795,7 +807,7 @@ function Z() {
         ]
     });
 }
-class B extends a.Component {
+class Z extends a.Component {
     componentDidCatch(e) {
         this.setState({ error: e });
     }
@@ -825,15 +837,15 @@ class B extends a.Component {
                           })
                   ]
               })
-            : (0, i.jsx)(Z, {}, s);
+            : (0, i.jsx)(B, {}, s);
     }
     constructor(...e) {
         super(...e),
-            _(this, 'state', {
+            L(this, 'state', {
                 error: null,
                 renderKey: 0
             }),
-            _(this, 'handleResetState', () => {
+            L(this, 'handleResetState', () => {
                 this.setState((e) => ({
                     error: null,
                     renderKey: e.renderKey + 1
@@ -841,4 +853,4 @@ class B extends a.Component {
             });
     }
 }
-s.Z = B;
+s.Z = Z;
