@@ -13,12 +13,12 @@ let s = (e) => {
     let { size: s = 'md', width: a, height: u, color: c = i.Z.colors.INTERACTIVE_NORMAL, ...d } = e,
         m = (0, l.m)(s),
         v = null !== (t = null == m ? void 0 : m.width) && void 0 !== t ? t : a,
-        p = null !== (n = null == m ? void 0 : m.height) && void 0 !== n ? n : u;
+        E = null !== (n = null == m ? void 0 : m.height) && void 0 !== n ? n : u;
     return (0, r.jsxs)('svg', {
         ...(0, o.Z)(d),
         xmlns: 'http://www.w3.org/2000/svg',
         width: v,
-        height: p,
+        height: E,
         fill: 'none',
         viewBox: '0 0 32 32',
         children: [

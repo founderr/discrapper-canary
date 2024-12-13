@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return E;
     }
 }),
     n(47120);
@@ -19,18 +19,18 @@ function m(e, t, n) {
 function v(e, t, n) {
     return n.left + (e / t) * n.width;
 }
-function p(e) {
-    let { percent: t, animate: n, interactionEnabled: l, backgroundColor: p, preloadedBuffers: E, duration: f, maxSeekableTime: C, onClick: g, onScrubBack: S, onScrubForward: x } = e,
+function E(e) {
+    let { percent: t, animate: n, interactionEnabled: l, backgroundColor: E, preloadedBuffers: p, duration: f, maxSeekableTime: C, onClick: S, onScrubBack: g, onScrubForward: x } = e,
         [h, _] = i.useState(null),
-        [T, N] = i.useState(null),
-        [I, D] = i.useState(null),
+        [T, D] = i.useState(null),
+        [N, I] = i.useState(null),
         [A, j] = i.useState(!1),
         b = i.useRef(null),
         L = (e) => {
             (b.current = e), _(e);
         };
     i.useEffect(() => {
-        null != h && (null == C ? D(null) : D(v(C, f, h)));
+        null != h && (null == C ? I(null) : I(v(C, f, h)));
     }, [h, C, f]);
     let k = (0, a.y)(() => {
         if (null != k.current) L(k.current.getBoundingClientRect());
@@ -44,21 +44,21 @@ function p(e) {
             };
             return window.addEventListener('resize', e), () => window.removeEventListener('resize', e);
         }, [k]);
-    let O = (e) => {
-            N(e.clientX);
+    let R = (e) => {
+            D(e.clientX);
         },
-        M = i.useCallback(
+        O = i.useCallback(
             (e) => {
                 let { key: t } = e;
-                t === c.mR.ArrowLeft && null != S ? (e.preventDefault(), e.stopPropagation(), S()) : t === c.mR.ArrowRight && null != x && (e.preventDefault(), e.stopPropagation(), x());
+                t === c.mR.ArrowLeft && null != g ? (e.preventDefault(), e.stopPropagation(), g()) : t === c.mR.ArrowRight && null != x && (e.preventDefault(), e.stopPropagation(), x());
             },
-            [S, x]
+            [g, x]
         ),
-        y = null != T && null != h ? m(T, h, f) : 0,
-        R = (0, u.yv)(y),
-        P = null != h ? h.right - v((t / 100) * f, f, h) : null,
-        w = null != T && null != h ? h.right - T : null,
-        B = null != I && null != h ? h.right - I : null;
+        M = null != T && null != h ? m(T, h, f) : 0,
+        P = (0, u.yv)(M),
+        y = null != h ? h.right - v((t / 100) * f, f, h) : null,
+        q = null != T && null != h ? h.right - T : null,
+        w = null != N && null != h ? h.right - N : null;
     return (0, r.jsxs)('div', {
         className: d.cont,
         ref: k,
@@ -67,18 +67,18 @@ function p(e) {
                 className: o()(d.hitboxArea, { [d.interactionEnabled]: l }),
                 ignoreKeyPress: !0,
                 onClick: (e) => {
-                    if (!!l && null != g) g(m(e.clientX, e.currentTarget.getBoundingClientRect(), f));
+                    if (!!l && null != S) S(m(e.clientX, e.currentTarget.getBoundingClientRect(), f));
                 },
                 onMouseEnter: (e) => {
-                    if (!!l) null != k.current && L(k.current.getBoundingClientRect()), j(!0), O(e);
+                    if (!!l) null != k.current && L(k.current.getBoundingClientRect()), j(!0), R(e);
                 },
                 onMouseLeave: (e) => {
-                    if (!!l) j(!1), N(null);
+                    if (!!l) j(!1), D(null);
                 },
                 onMouseMove: (e) => {
-                    if (!!l) A && O(e);
+                    if (!!l) A && R(e);
                 },
-                onKeyDown: M,
+                onKeyDown: O,
                 tabIndex: l ? void 0 : -1,
                 focusProps: {
                     offset: {
@@ -87,9 +87,9 @@ function p(e) {
                     }
                 },
                 children: [
-                    null == E
+                    null == p
                         ? void 0
-                        : E.map((e) =>
+                        : p.map((e) =>
                               (0, r.jsx)(
                                   'div',
                                   {
@@ -103,40 +103,40 @@ function p(e) {
                               )
                           ),
                     !l &&
-                        null != B &&
-                        B > 0 &&
+                        null != w &&
+                        w > 0 &&
                         (0, r.jsx)('div', {
                             className: d.seekableBar,
                             style: {
-                                right: null != B ? ''.concat(B, 'px') : 'auto',
-                                opacity: null != B ? 1 : 0
+                                right: null != w ? ''.concat(w, 'px') : 'auto',
+                                opacity: null != w ? 1 : 0
                             }
                         }),
                     (0, r.jsx)(s.Progress, {
                         className: d.progress,
                         percent: t,
                         foregroundColor: '#FFFFFF',
-                        backgroundColor: null != p ? p : void 0,
+                        backgroundColor: null != E ? E : void 0,
                         size: A ? s.Progress.Sizes.XSMALL : s.Progress.Sizes.XXSMALL,
                         animate: n
                     }),
                     A &&
-                        null != R &&
+                        null != P &&
                         (0, r.jsx)(s.Text, {
                             className: d.timeDisplay,
                             variant: 'text-xs/normal',
                             style: {
-                                right: null != w ? ''.concat(w - 10, 'px') : 'auto',
+                                right: null != q ? ''.concat(q - 10, 'px') : 'auto',
                                 color: '#FFFFFF'
                             },
-                            children: R
+                            children: P
                         }),
                     A &&
                         l &&
-                        null != P &&
+                        null != y &&
                         (0, r.jsx)('div', {
                             className: d.grabber,
-                            style: { right: ''.concat(P - 6, 'px') }
+                            style: { right: ''.concat(y - 6, 'px') }
                         })
                 ]
             }),

@@ -3,10 +3,10 @@ n.d(e, {
         return s;
     }
 });
-var i = n(442837),
-    o = n(375954);
+var o = n(442837),
+    i = n(375954);
 let s = (t) =>
-    (0, i.e7)([o.Z], () => {
+    (0, o.e7)([i.Z], () => {
         var e;
-        return null !== (e = o.Z.getLastNonCurrentUserMessage(t)) && void 0 !== e ? e : o.Z.getLastMessage(t);
+        return null !== (e = i.Z.getLastNonCurrentUserMessage(t)) && void 0 !== e ? e : i.Z.getLastMessage(t);
     });

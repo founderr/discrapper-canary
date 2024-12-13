@@ -1,6 +1,6 @@
 n(47120);
-var i,
-    o,
+var o,
+    i,
     s = n(200651),
     l = n(192379),
     r = n(120356),
@@ -16,8 +16,8 @@ var i,
     b = n(681678),
     p = n(699516),
     E = n(863653),
-    R = n(650408),
-    h = n(367408),
+    h = n(650408),
+    R = n(367408),
     C = n(423932),
     N = n(473092),
     L = n(611446),
@@ -33,7 +33,7 @@ function j(t) {
     });
 }
 function M(t) {
-    let { title: e, subTitle: n, buttonText: i, buttonColor: o, onPress: l, disabled: r } = t;
+    let { title: e, subTitle: n, buttonText: o, buttonColor: i, onPress: l, disabled: r } = t;
     return (0, s.jsxs)('div', {
         className: f.actionRow,
         children: [
@@ -54,19 +54,19 @@ function M(t) {
             }),
             (0, s.jsx)(d.Button, {
                 size: d.Button.Sizes.SMALL,
-                color: o,
+                color: i,
                 onClick: l,
                 disabled: r,
-                children: i
+                children: o
             })
         ]
     });
 }
 function B(t) {
-    let { title: e, subTitle: n, onPress: i } = t;
+    let { title: e, subTitle: n, onPress: o } = t;
     return (0, s.jsxs)(d.Clickable, {
         className: a()(f.actionRow, f.clickableActionRow),
-        onClick: i,
+        onClick: o,
         children: [
             (0, s.jsxs)('div', {
                 className: f.actionButtonDetails,
@@ -92,28 +92,28 @@ function B(t) {
         ]
     });
 }
-((o = i || (i = {}))[(o.ButtonRow = 0)] = 'ButtonRow'), (o[(o.ClickableRow = 1)] = 'ClickableRow');
+((i = o || (o = {}))[(i.ButtonRow = 0)] = 'ButtonRow'), (i[(i.ClickableRow = 1)] = 'ClickableRow');
 e.Z = function (t) {
-    let { otherUserId: e, channelId: i, warningId: o, warningType: r, transitionToSlide: a } = t,
+    let { otherUserId: e, channelId: o, warningId: i, warningType: r, transitionToSlide: a } = t,
         u = (0, x.o)(),
         f = (0, E.zF)('web_safety-tools-action-slide'),
-        I = (0, R.q)(i),
-        F = null != (0, h.M)(i),
-        k = (0, A.Do)({ location: O.cH }),
-        y = (0, c.e7)([p.Z], () => p.Z.isIgnored(e), [e]),
+        I = (0, h.q)(o),
+        y = null != (0, R.M)(o),
+        F = (0, A.Do)({ location: O.cH }),
+        k = (0, c.e7)([p.Z], () => p.Z.isIgnored(e), [e]),
         Y = (0, c.e7)([p.Z], () => p.Z.isBlocked(e), [e]),
         v = l.useCallback(
             (t) => {
                 (0, N.qc)({
-                    channelId: i,
-                    warningId: o,
+                    channelId: o,
+                    warningId: i,
                     senderId: e,
                     warningType: r,
                     cta: t,
-                    isNudgeWarning: F
+                    isNudgeWarning: y
                 });
             },
-            [i, o, e, r, F]
+            [o, i, e, r, y]
         ),
         Z = l.useCallback(() => {
             (0, d.closeModal)(O.X_), v(N.NM.USER_SAFETY_TOOLS_BLOCK_CONFIRM);
@@ -126,17 +126,17 @@ e.Z = function (t) {
         }, [v]),
         w = l.useMemo(
             () => [
-                ...(k
+                ...(F
                     ? [
                           {
                               type: 0,
                               title: m.intl.string(m.t.B7ZT09),
                               subTitle: m.intl.string(m.t['fCfp4+']),
-                              buttonText: y ? m.intl.string(m.t['9e0wLi']) : m.intl.string(m.t.B7ZT09),
+                              buttonText: k ? m.intl.string(m.t['9e0wLi']) : m.intl.string(m.t.B7ZT09),
                               buttonColor: d.ButtonColors.PRIMARY,
                               disabled: Y,
                               onPress: () => {
-                                  y ? (T.Z.unignoreUser(e, O.cH, i), v(N.NM.USER_SAFETY_TOOLS_UNIGNORE)) : (T.Z.ignoreUser(e, O.cH, i), v(N.NM.USER_SAFETY_TOOLS_IGNORE));
+                                  k ? (T.Z.unignoreUser(e, O.cH, o), v(N.NM.USER_SAFETY_TOOLS_UNIGNORE)) : (T.Z.ignoreUser(e, O.cH, o), v(N.NM.USER_SAFETY_TOOLS_IGNORE));
                               }
                           }
                       ]
@@ -149,13 +149,13 @@ e.Z = function (t) {
                     buttonColor: d.ButtonColors.BRAND,
                     onPress: () => {
                         Y
-                            ? (U(), b.Z.showUnblockSuccessToast(e, i))
+                            ? (U(), b.Z.showUnblockSuccessToast(e, o))
                             : (0, d.openModalLazy)(async () => {
                                   let { default: t } = await n.e('19538').then(n.bind(n, 699783));
                                   return (n) => {
-                                      let { transitionState: o, onClose: l } = n;
+                                      let { transitionState: i, onClose: l } = n;
                                       return (0, s.jsx)(t, {
-                                          transitionState: o,
+                                          transitionState: i,
                                           onBlock: Z,
                                           onBlockAndReport: P,
                                           onCancel: () => {
@@ -163,7 +163,7 @@ e.Z = function (t) {
                                           },
                                           onClose: l,
                                           userId: e,
-                                          channelId: i
+                                          channelId: o
                                       });
                                   };
                               });
@@ -180,7 +180,7 @@ e.Z = function (t) {
                     }
                 }
             ],
-            [y, k, Y, v, U, Z, P, e, i, I]
+            [k, F, Y, v, U, Z, P, e, o, I]
         ),
         D = l.useMemo(() => {
             let t = {
@@ -249,14 +249,14 @@ e.Z = function (t) {
         ),
         z = (t) => {
             if (0 === t.type) {
-                let { type: e, title: n, subTitle: i, buttonText: o, buttonColor: l, onPress: r, disabled: a } = t;
+                let { type: e, title: n, subTitle: o, buttonText: i, buttonColor: l, onPress: r, disabled: a } = t;
                 return (0, s.jsx)(
                     M,
                     {
                         type: e,
                         title: n,
-                        subTitle: i,
-                        buttonText: o,
+                        subTitle: o,
+                        buttonText: i,
                         buttonColor: l,
                         onPress: r,
                         disabled: a
@@ -265,14 +265,14 @@ e.Z = function (t) {
                 );
             }
             if (1 === t.type) {
-                let { type: e, title: n, subTitle: i, onPress: o } = t;
+                let { type: e, title: n, subTitle: o, onPress: i } = t;
                 return (0, s.jsx)(
                     B,
                     {
                         type: e,
                         title: n,
-                        subTitle: i,
-                        onPress: o
+                        subTitle: o,
+                        onPress: i
                     },
                     n
                 );

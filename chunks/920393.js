@@ -11,7 +11,7 @@ function i(e) {
         d = (0, r.useRef)(null),
         m = (0, r.useRef)(Date.now()),
         v = (0, r.useRef)(!1),
-        p = (0, r.useCallback)(
+        E = (0, r.useCallback)(
             (e) => {
                 if (!(e.segmentEndSec < e.segmentStartSec))
                     o({
@@ -25,7 +25,7 @@ function i(e) {
             },
             [o]
         ),
-        E = (0, r.useCallback)(() => {
+        p = (0, r.useCallback)(() => {
             if (null != t.current && i && l) {
                 let e = Date.now(),
                     n = t.current.currentTime;
@@ -44,7 +44,7 @@ function i(e) {
             if (e - m.current < s) return;
             let n = t.current.currentTime;
             if (!(n - u.segmentStartSec < a / 1000))
-                p({
+                E({
                     ...u,
                     endTime: e,
                     segmentEndSec: n
@@ -56,14 +56,14 @@ function i(e) {
                         segmentEndSec: n
                     }),
                     (m.current = e);
-        }, [u, p, s, t, a]);
+        }, [u, E, s, t, a]);
     return (
         (0, r.useEffect)(() => {
             (!i || !l) && (c(null), (v.current = !1));
         }, [i, l]),
         (0, r.useEffect)(() => {
             if (n && i && l)
-                !v.current && E(),
+                !v.current && p(),
                     (d.current = window.setInterval(() => {
                         f();
                     }, 200));
@@ -72,7 +72,7 @@ function i(e) {
                     let e = Date.now(),
                         n = t.current.currentTime;
                     n - u.segmentStartSec > 0.2 &&
-                        p({
+                        E({
                             ...u,
                             endTime: e,
                             segmentEndSec: n
@@ -83,14 +83,14 @@ function i(e) {
             return () => {
                 null != d.current && (clearInterval(d.current), (d.current = null));
             };
-        }, [n, i, l, u, f, p, t, E]),
+        }, [n, i, l, u, f, E, t, p]),
         {
             forceSendCurrentSegment: (0, r.useCallback)(() => {
                 if (null != u && null != t.current) {
                     let e = Date.now(),
                         n = t.current.currentTime;
                     n - u.segmentStartSec > 0.2 &&
-                        p({
+                        E({
                             ...u,
                             endTime: e,
                             segmentEndSec: n
@@ -98,7 +98,7 @@ function i(e) {
                         c(null),
                         (v.current = !1);
                 }
-            }, [u, p, t]),
+            }, [u, E, t]),
             isInitialized: v.current
         }
     );

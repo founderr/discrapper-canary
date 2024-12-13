@@ -65,7 +65,7 @@ let b = (e) => {
                 }),
                 children: [
                     (0, i.jsx)(c.Heading, {
-                        variant: 'display-sm',
+                        variant: 'heading-xxl/extrabold',
                         color: 'header-primary',
                         className: s()({
                             [E.whatsNewBoxHeader]: !v,
