@@ -1,15 +1,23 @@
-var r, i, l, o;
+var r, i, l, o, s, a;
 n.d(t, {
-    r: function () {
+    CY: function () {
+        return l;
+    },
+    rq: function () {
         return r;
     },
-    y: function () {
+    yE: function () {
         return i;
     }
 }),
-    ((l = r || (r = {})).PLAYING = 'playing'),
-    (l.PAUSED = 'paused'),
-    (l.ENDED = 'ended'),
-    ((o = i || (i = {})).PAUSE_BUTTON = 'PAUSE_BUTTON'),
-    (o.LOST_FOCUS = 'LOST_FOCUS'),
-    (o.MODAL_CLOSED = 'MODAL_CLOSED');
+    ((o = r || (r = {})).PLAYING = 'playing'),
+    (o.PAUSED = 'paused'),
+    (o.ENDED = 'ended'),
+    ((s = i || (i = {})).PAUSE_BUTTON = 'PAUSE_BUTTON'),
+    (s.LOST_FOCUS = 'LOST_FOCUS'),
+    (s.MODAL_CLOSED = 'MODAL_CLOSED'),
+    ((a = l || (l = {})).ERROR = 'ERROR'),
+    (a.ABORT = 'ABORT'),
+    (a.EMPTIED = 'EMPTIED'),
+    (a.STALLED = 'STALLED'),
+    (a.SUSPEND = 'SUSPEND');
