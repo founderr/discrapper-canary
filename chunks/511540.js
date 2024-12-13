@@ -1,6 +1,6 @@
-n.d(e, {
+n.d(t, {
     c: function () {
-        return l;
+        return c;
     }
 }),
     n(47120);
@@ -8,33 +8,33 @@ var a = n(192379),
     r = n(489863),
     o = n(828878),
     i = n(388032);
-function l(t, e, n) {
-    let [l, s] = a.useState(!1),
-        [c, u] = a.useState(null),
-        d = a.useCallback(async () => {
+function c(e, t, n) {
+    let [c, l] = a.useState(!1),
+        [s, d] = a.useState(null),
+        u = a.useCallback(async () => {
             try {
-                s(!0);
-                let n = await (0, r.tV)(t);
-                s(!1),
-                    e({
-                        userCode: t,
+                l(!0);
+                let n = await (0, r.tV)(e);
+                l(!1),
+                    t({
+                        userCode: e,
                         clientId: n.body.client_id,
                         scopes: n.body.scopes,
                         twoWayLinkCode: n.body.two_way_link_code
                     });
-            } catch (t) {
+            } catch (e) {
                 var a;
-                u(429 === (a = null == t ? void 0 : t.status) ? i.intl.string(i.t.BPmZvr) : 404 === a || 400 === a ? i.intl.string(i.t.aWa1Pz) : i.intl.string(i.t.JNQRU1)), s(!1), (null == t ? void 0 : t.status) === 401 && n();
+                d(429 === (a = null == e ? void 0 : e.status) ? i.intl.string(i.t.BPmZvr) : 404 === a || 400 === a ? i.intl.string(i.t.aWa1Pz) : i.intl.string(i.t.JNQRU1)), l(!1), (null == e ? void 0 : e.status) === 401 && n();
             }
-        }, [t, e, n]);
+        }, [e, t, n]);
     return (
         a.useEffect(() => {
-            t.length === o.A.USER_CODE_LENGTH ? d() : u(null);
-        }, [t, d]),
+            e.length === o.A.USER_CODE_LENGTH ? u() : d(null);
+        }, [e, u]),
         {
-            manualSubmit: d,
-            error: c,
-            submitting: l
+            manualSubmit: u,
+            error: s,
+            submitting: c
         }
     );
 }

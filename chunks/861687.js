@@ -1254,7 +1254,7 @@ class ev extends g.Z {
                 });
         } else
             a === eo.Yn.STREAM &&
-                ((this._goLiveQualityManager = new R.Z(!1)),
+                ((this._goLiveQualityManager = new R.Z(!0)),
                 this._goLiveQualityManager.on(R.y.RequestedSSRCsUpdate, (e, n, r) => {
                     var i;
                     null === (i = this._connection) || void 0 === i || i.createUser(e, n, r);

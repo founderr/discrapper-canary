@@ -2,18 +2,18 @@ var a = n(200651),
     r = n(192379),
     l = n(442837),
     i = n(481060),
-    o = n(873115),
-    s = n(219929),
+    s = n(873115),
+    o = n(219929),
     c = n(618541),
     u = n(975060),
     d = n(388032),
     m = n(574194);
 class p extends r.PureComponent {
     componentDidMount() {
-        null != this.props.venmoClient && o.by();
+        null != this.props.venmoClient && s.by();
     }
     componentWillUnmount() {
-        o.RS().then(() => o.ib());
+        s.RS().then(() => s.ib());
     }
     render() {
         let { venmoUsername: e, className: t, venmoClient: n } = this.props,
@@ -21,9 +21,9 @@ class p extends r.PureComponent {
         return (0, a.jsxs)('div', {
             className: t,
             children: [
-                (0, a.jsx)(s.ZP, {
-                    type: s.ZP.Types.VENMO,
-                    size: s.Uy.MEDIUM,
+                (0, a.jsx)(o.ZP, {
+                    type: o.ZP.Types.VENMO,
+                    size: o.Uy.MEDIUM,
                     className: m.venmoIcon
                 }),
                 r

@@ -11,8 +11,8 @@ n(192379);
 var r = n(512722),
     l = n.n(r),
     i = n(481060),
-    o = n(563132),
-    s = n(185139),
+    s = n(563132),
+    o = n(185139),
     c = n(388032);
 let u = (e) => {
     let { className: t } = e;
@@ -23,14 +23,14 @@ let u = (e) => {
 };
 function d(e) {
     let { steps: t, currentStep: n, paymentError: r, className: i } = e,
-        { steps: c, step: d, paymentError: m } = (0, o.usePaymentContext)();
+        { steps: c, step: d, paymentError: m } = (0, s.usePaymentContext)();
     return (
         (t = null != t ? t : c),
         null == n && null != d && (n = d),
         l()(n, 'step should be set'),
         l()(t, 'step should be set'),
         (r = null != r ? r : m),
-        (0, a.jsx)(s.Z, {
+        (0, a.jsx)(o.Z, {
             steps: t,
             currentStep: n,
             paymentError: r,

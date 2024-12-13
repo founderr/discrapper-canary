@@ -3,8 +3,8 @@ var a,
     r,
     l,
     i,
-    o,
     s,
+    o,
     c,
     u = n(200651),
     d = n(192379),
@@ -42,7 +42,7 @@ let b = ['AE', 'AG', 'AN', 'AO', 'AW', 'BF', 'BI', 'BJ', 'BM', 'BO', 'BQ', 'BS',
     v = (0, E.hQ)(),
     x = (0, E.hQ)(),
     R = (0, E.hQ)();
-((o = a || (a = {})).NAME = 'name'), (o.COUNTRY = 'country'), (o.LINE1 = 'line1'), (o.LINE2 = 'line2'), (o.CITY = 'city'), (o.POSTAL_CODE = 'postalCode'), (o.STATE = 'state'), ((s = r || (r = {})).MODAL_US = 'modalUS'), (s.MODAL_INTL = 'modalInternational'), (s.MODAL_US_WITH_NAME = 'modalUSWithName'), (s.MODAL_INTL_WITH_NAME = 'modalInternationalWithName'), (s.SETTINGS_US = 'settingsUS'), (s.SETTINGS_INTL = 'settingsInternational'), (s.SETTINGS_INTL_NO_NAME = 'settingsInternationalWithoutName'), (s.SETTINGS_US_MOBILE = 'settingsUSMobile'), (s.SETTINGS_INTL_MOBILE = 'settingsInternationalMobile'), (s.SETTINGS_INTL_NO_NAME_MOBILE = 'settingsInternationalWithoutNameMobile'), ((c = l || (l = {})).EDIT = 'edit'), (c.CREATE = 'create');
+((s = a || (a = {})).NAME = 'name'), (s.COUNTRY = 'country'), (s.LINE1 = 'line1'), (s.LINE2 = 'line2'), (s.CITY = 'city'), (s.POSTAL_CODE = 'postalCode'), (s.STATE = 'state'), ((o = r || (r = {})).MODAL_US = 'modalUS'), (o.MODAL_INTL = 'modalInternational'), (o.MODAL_US_WITH_NAME = 'modalUSWithName'), (o.MODAL_INTL_WITH_NAME = 'modalInternationalWithName'), (o.SETTINGS_US = 'settingsUS'), (o.SETTINGS_INTL = 'settingsInternational'), (o.SETTINGS_INTL_NO_NAME = 'settingsInternationalWithoutName'), (o.SETTINGS_US_MOBILE = 'settingsUSMobile'), (o.SETTINGS_INTL_MOBILE = 'settingsInternationalMobile'), (o.SETTINGS_INTL_NO_NAME_MOBILE = 'settingsInternationalWithoutNameMobile'), ((c = l || (l = {})).EDIT = 'edit'), (c.CREATE = 'create');
 let L = {
         US: h.G,
         CA: m.X
@@ -277,16 +277,16 @@ class Y extends (i = d.PureComponent) {
             { layout: n, mode: a, className: r, error: l } = this.props,
             i = k[n];
         if (null == i) throw Error('Provide a proper layout property.');
-        let o = t.country,
-            s = i
+        let s = t.country,
+            o = i
                 .map((e) => {
-                    let t = e.map((e) => e(null != o ? o : '')).filter(N.lm);
+                    let t = e.map((e) => e(null != s ? s : '')).filter(N.lm);
                     return t.length > 0 ? { fields: t } : null;
                 })
                 .filter(N.lm);
         return (0, u.jsx)(f.Z, {
             className: r,
-            form: s,
+            form: o,
             layout: n,
             values: t,
             errors: e,

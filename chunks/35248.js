@@ -16,8 +16,8 @@ var a = n(200651),
     r = n(192379),
     l = n(772848),
     i = n(544891),
-    o = n(481060),
-    s = n(355467),
+    s = n(481060),
+    o = n(355467),
     c = n(821849),
     u = n(600164),
     d = n(311821),
@@ -46,13 +46,13 @@ let g = (e) => {
                         var e;
                         if (!L)
                             M(!0),
-                                (0, s.r5)(x.loadId),
+                                (0, o.r5)(x.loadId),
                                 !(function (e, t, n, a, r) {
-                                    let o = y.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, n, r),
-                                        s = new URL(m.Z.makeUrl(y.Z5c.BILLING_LOGIN_HANDOFF)),
+                                    let s = y.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, n, r),
+                                        o = new URL(m.Z.makeUrl(y.Z5c.BILLING_LOGIN_HANDOFF)),
                                         c = (0, l.Z)();
-                                    s.searchParams.append('handoff_key', c),
-                                        s.searchParams.append('redirect_to', o),
+                                    o.searchParams.append('handoff_key', c),
+                                        o.searchParams.append('redirect_to', s),
                                         i.tn
                                             .post({
                                                 url: y.ANM.HANDOFF,
@@ -62,7 +62,7 @@ let g = (e) => {
                                             })
                                             .then(
                                                 (e) => {
-                                                    s.searchParams.append('handoff_token', e.body.handoff_token), window.open(s.href);
+                                                    o.searchParams.append('handoff_token', e.body.handoff_token), window.open(o.href);
                                                 },
                                                 () => {
                                                     a();
@@ -75,16 +75,16 @@ let g = (e) => {
                 return () => clearTimeout(e);
             }, [d, R, x, u, M, L, O, D.delay]),
             r.useEffect(() => {
-                null !== S && (_.YQ.includes(S) && ((0, c.GZ)(S), (0, s.jg)()), C(S)), null !== v && g(v), I === x.loadId && T === f.Y.DONE && n();
+                null !== S && (_.YQ.includes(S) && ((0, c.GZ)(S), (0, o.jg)()), C(S)), null !== v && g(v), I === x.loadId && T === f.Y.DONE && n();
             }, [C, g, T, I, S, v, x, n]),
             (0, a.jsxs)('div', {
                 className: b.body,
                 children: [
-                    (0, a.jsx)(o.Heading, {
+                    (0, a.jsx)(s.Heading, {
                         variant: 'heading-xl/bold',
                         children: P.intl.string(P.t.C4HYf3)
                     }),
-                    (0, a.jsx)(o.Text, {
+                    (0, a.jsx)(s.Text, {
                         variant: 'text-md/normal',
                         className: b.description,
                         children: P.intl.string(P.t.xfG7Ji)
@@ -96,7 +96,7 @@ let g = (e) => {
     C = (e) => {
         let { onPrimaryClick: t, onBackClick: n } = e;
         return (0, a.jsx)('div', {
-            children: (0, a.jsxs)(o.ModalFooter, {
+            children: (0, a.jsxs)(s.ModalFooter, {
                 justify: u.Z.Justify.BETWEEN,
                 align: u.Z.Align.CENTER,
                 children: [

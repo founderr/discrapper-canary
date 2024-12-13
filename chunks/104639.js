@@ -2,8 +2,8 @@ function i() {
     return {
         logsUploaded: new Date().toISOString(),
         releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-        buildNumber: '353288',
-        versionHash: 'ecda70670e7eba8970789c2cf8b26decaaa93b33'
+        buildNumber: '353360',
+        versionHash: 'c59f672fd314819f4b08356e9073e9c63482e252'
     };
 }
 r.d(n, {

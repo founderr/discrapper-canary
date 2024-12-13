@@ -1,17 +1,17 @@
 n.d(t, {
     z: function () {
-        return s;
+        return o;
     }
 });
 var a = n(200651),
     r = n(481060),
     l = n(502109),
     i = n(388032),
-    o = n(458065);
-function s(e) {
-    let { onChooseType: t, onStripePaymentMethodReceived: n, onPaymentRequestFailure: s, onValidGooglePay: c, paymentRequestRef: u } = e;
+    s = n(458065);
+function o(e) {
+    let { onChooseType: t, onStripePaymentMethodReceived: n, onPaymentRequestFailure: o, onValidGooglePay: c, paymentRequestRef: u } = e;
     return (0, a.jsx)('div', {
-        className: o.body,
+        className: s.body,
         children: (0, a.jsx)(r.FormSection, {
             title: i.intl.string(i.t.eQ2bLi),
             children: (0, a.jsx)(l.T, {
@@ -19,7 +19,7 @@ function s(e) {
                 paymentRequestRef: u,
                 renderConnectorView: !0,
                 onStripePaymentMethodReceived: n,
-                onPaymentRequestFailure: s,
+                onPaymentRequestFailure: o,
                 onValidGooglePay: c,
                 onChooseType: t,
                 loadingComponent: (0, a.jsx)(r.Button, {

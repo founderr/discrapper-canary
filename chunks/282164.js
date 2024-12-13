@@ -2,18 +2,18 @@ var a = n(200651),
     r = n(192379),
     l = n(442837),
     i = n(481060),
-    o = n(873115),
-    s = n(219929),
+    s = n(873115),
+    o = n(219929),
     c = n(618541),
     u = n(975060),
     d = n(388032),
     m = n(262249);
 class p extends r.PureComponent {
     componentDidMount() {
-        null != this.props.paypalClient && o.f6();
+        null != this.props.paypalClient && s.f6();
     }
     componentWillUnmount() {
-        o.Nj().then(() => o.Dz());
+        s.Nj().then(() => s.Dz());
     }
     render() {
         let { braintreeEmail: e, className: t, paypalClient: n } = this.props;
@@ -23,8 +23,8 @@ class p extends r.PureComponent {
             children: (0, a.jsxs)('div', {
                 className: m.inputWrapper,
                 children: [
-                    (0, a.jsx)(s.ZP, {
-                        type: s.ZP.Types.PAYPAL,
+                    (0, a.jsx)(o.ZP, {
+                        type: o.ZP.Types.PAYPAL,
                         className: m.paypalIcon
                     }),
                     (0, a.jsx)(i.TextInput, {

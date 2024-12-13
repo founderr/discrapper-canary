@@ -33,8 +33,8 @@ var a = n(544891),
     r = n(570140),
     l = n(618541),
     i = n(751767),
-    o = n(358085),
-    s = n(355467),
+    s = n(358085),
+    o = n(355467),
     c = n(981631);
 function u() {
     (0, i.S)().then((e) => {
@@ -118,7 +118,7 @@ function p() {
     if (null == e) throw Error('braintree paypal client must be initialized before calling this');
     r.Z.dispatch({ type: 'BRAINTREE_TOKENIZE_PAYPAL_START' });
     let t = Promise.resolve('');
-    (0, o.isDesktop)() && (t = (0, s.EH)(c.HeQ.PAYPAL)),
+    (0, s.isDesktop)() && (t = (0, o.EH)(c.HeQ.PAYPAL)),
         t
             .then(() => e.tokenize({ flow: 'vault' }))
             .then((e) => {

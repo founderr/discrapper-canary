@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     content: 'content_a4fc79',
     innerContent: 'innerContent_a4fc79',
     text: 'text_a4fc79',

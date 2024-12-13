@@ -8,13 +8,13 @@ n(192379);
 var r = n(120356),
     l = n.n(r),
     i = n(481060),
-    o = n(388032),
-    s = n(912626);
+    s = n(388032),
+    o = n(912626);
 let c = (e) => {
     let { className: t, onClick: n, children: r } = e;
     return (0, a.jsx)(i.Anchor, {
         onClick: n,
-        className: l()(s.link, t),
+        className: l()(o.link, t),
         children: r
     });
 };
@@ -23,6 +23,6 @@ t.Z = (e) => {
     return (0, a.jsx)(c, {
         className: t,
         onClick: n,
-        children: o.intl.string(o.t['13/7kZ'])
+        children: s.intl.string(s.t['13/7kZ'])
     });
 };

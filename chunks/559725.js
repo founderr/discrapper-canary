@@ -11,8 +11,8 @@ var a = n(175145),
     r = n(544891),
     l = n(570140),
     i = n(355467),
-    o = n(987032),
-    s = n(559407),
+    s = n(987032),
+    o = n(559407),
     c = n(122289),
     u = n(439041),
     d = n(981631),
@@ -26,7 +26,7 @@ async function p() {
 }
 async function h() {
     try {
-        let { enabledPaymentTypes: e } = o.ZP.getCurrentConfig({ location: '40c266_2' }, { autoTrackExposure: !1 });
+        let { enabledPaymentTypes: e } = s.ZP.getCurrentConfig({ location: '40c266_2' }, { autoTrackExposure: !1 });
         if (!e.includes(d.HeQ.CASH_APP)) return;
         let t = await p(),
             n = await (0, a.Z)({
@@ -48,7 +48,7 @@ async function h() {
                         (function () {
                             var e;
                             if (null == u.Z.cashAppPayComponent) throw Error('Adyen CashAppPay component must be created before mounting.');
-                            null === (e = u.Z.cashAppPayComponent) || void 0 === e || e.mount('#'.concat(s.F));
+                            null === (e = u.Z.cashAppPayComponent) || void 0 === e || e.mount('#'.concat(o.F));
                         })();
                     return;
                 }
@@ -82,7 +82,7 @@ async function h() {
                             }
                         }
                     })
-                    .mount('#'.concat(s.F));
+                    .mount('#'.concat(o.F));
                 l.Z.dispatch({
                     type: 'ADYEN_CREATE_CASH_APP_PAY_COMPONENT_SUCCESS',
                     component: t
