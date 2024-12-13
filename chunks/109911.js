@@ -57,6 +57,21 @@ let o = (0, a.B)({
                 id: 2,
                 label: 'Enables ICYMI - (ml) sorting will be controlled by backend exp',
                 config: { enabled: !0 }
+            },
+            {
+                id: 3,
+                label: 'Enables ICYMI - (ml) sorting will be controlled by backend exp',
+                config: { enabled: !0 }
+            },
+            {
+                id: 4,
+                label: 'Enables ICYMI - (ml) sorting will be controlled by backend exp',
+                config: { enabled: !0 }
+            },
+            {
+                id: 5,
+                label: 'Enables ICYMI - (ml) sorting will be controlled by backend exp',
+                config: { enabled: !0 }
             }
         ]
     });
