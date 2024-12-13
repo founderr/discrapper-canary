@@ -98,16 +98,22 @@ function A(e) {
     });
 }
 function y(e) {
-    let { tag: t = 'div', disabled: n, children: l, onClick: a, ...o } = e;
-    return (0, i.jsx)(s.Clickable, {
-        ...o,
-        tag: t,
-        className: r()(j.bottomRowAction, { [j.bottomRowActionDisabled]: n }),
-        onClick: n ? void 0 : a,
-        children: (0, i.jsx)('div', {
-            className: j.innerBottomRowAction,
-            children: l
-        })
+    let { tag: t = 'div', text: n, disabled: l, children: a, onClick: o, ...c } = e;
+    return (0, i.jsx)(s.Tooltip, {
+        text: n,
+        children: (e) =>
+            (0, i.jsx)(s.Clickable, {
+                ...c,
+                ...e,
+                tag: t,
+                'aria-label': n,
+                className: r()(j.bottomRowAction, { [j.bottomRowActionDisabled]: l }),
+                onClick: l ? void 0 : o,
+                children: (0, i.jsx)('div', {
+                    className: j.innerBottomRowAction,
+                    children: a
+                })
+            })
     });
 }
 function P(e) {
@@ -137,29 +143,22 @@ function P(e) {
     return (0, i.jsxs)('div', {
         className: j.bottomRow,
         children: [
-            (0, i.jsxs)(y, {
+            (0, i.jsx)(y, {
                 disabled: P,
-                'aria-label': T.intl.string(T.t['g33r/P']),
+                text: T.intl.string(T.t['g33r/P']),
                 onClick: () => {
                     o.Z.openPrivateChannel(t.id);
                 },
-                children: [
-                    (0, i.jsx)(s.ChatIcon, {
-                        size: 'custom',
-                        color: 'currentColor',
-                        width: 22,
-                        height: 22
-                    }),
-                    (0, i.jsx)(s.Text, {
-                        variant: 'text-sm/normal',
-                        color: 'none',
-                        children: T.intl.string(T.t['g33r/P'])
-                    })
-                ]
+                children: (0, i.jsx)(s.ChatIcon, {
+                    size: 'custom',
+                    color: 'currentColor',
+                    width: 24,
+                    height: 24
+                })
             }),
-            (0, i.jsxs)(y, {
+            (0, i.jsx)(y, {
                 disabled: !g,
-                'aria-label': T.intl.string(T.t['3glT6e']),
+                text: T.intl.string(T.t['3glT6e']),
                 onClick: () => {
                     (0, s.openModalLazy)(async () => {
                         let { default: e } = await n.e('5454').then(n.bind(n, 854360));
@@ -172,23 +171,16 @@ function P(e) {
                             });
                     });
                 },
-                children: [
-                    (0, i.jsx)(s.UserMinusIcon, {
-                        size: 'custom',
-                        width: 22,
-                        height: 22,
-                        color: s.tokens.colors.TEXT_NORMAL.css
-                    }),
-                    (0, i.jsx)(s.Text, {
-                        variant: 'text-sm/normal',
-                        color: 'none',
-                        children: T.intl.string(T.t['3glT6e'])
-                    })
-                ]
+                children: (0, i.jsx)(s.UserMinusIcon, {
+                    size: 'custom',
+                    width: 24,
+                    height: 24,
+                    color: s.tokens.colors.TEXT_NORMAL.css
+                })
             }),
-            (0, i.jsxs)(y, {
+            (0, i.jsx)(y, {
                 disabled: !v,
-                'aria-label': T.intl.string(T.t['5MBJ5O']),
+                text: T.intl.string(T.t['5MBJ5O']),
                 onClick: () => {
                     (0, s.openModalLazy)(async () => {
                         let { default: e } = await n.e('43350').then(n.bind(n, 98746));
@@ -201,23 +193,16 @@ function P(e) {
                             });
                     });
                 },
-                children: [
-                    (0, i.jsx)(s.HammerIcon, {
-                        size: 'custom',
-                        width: 22,
-                        height: 22,
-                        color: s.tokens.colors.TEXT_NORMAL.css
-                    }),
-                    (0, i.jsx)(s.Text, {
-                        variant: 'text-sm/normal',
-                        color: 'none',
-                        children: T.intl.string(T.t['5MBJ5O'])
-                    })
-                ]
+                children: (0, i.jsx)(s.HammerIcon, {
+                    size: 'custom',
+                    width: 24,
+                    height: 24,
+                    color: s.tokens.colors.TEXT_NORMAL.css
+                })
             }),
-            (0, i.jsxs)(y, {
+            (0, i.jsx)(y, {
                 disabled: !_,
-                'aria-label': T.intl.string(T.t.kTlLr6),
+                text: b ? T.intl.string(T.t.N86XcH) : T.intl.string(T.t.kTlLr6),
                 onClick: () => {
                     b
                         ? (0, h.q)({
@@ -231,39 +216,25 @@ function P(e) {
                               anaylticsLocations: Z
                           });
                 },
-                children: [
-                    (0, i.jsx)(s.ClockWarningIcon, {
-                        size: 'custom',
-                        width: 22,
-                        height: 22,
-                        color: s.tokens.colors.TEXT_NORMAL.css
-                    }),
-                    (0, i.jsx)(s.Text, {
-                        variant: 'text-sm/normal',
-                        color: 'none',
-                        children: b ? T.intl.string(T.t.N86XcH) : T.intl.string(T.t.kTlLr6)
-                    })
-                ]
+                children: (0, i.jsx)(s.ClockWarningIcon, {
+                    size: 'custom',
+                    width: 24,
+                    height: 24,
+                    color: s.tokens.colors.TEXT_NORMAL.css
+                })
             }),
-            (0, i.jsxs)(y, {
-                'aria-label': T.intl.string(T.t.IHTjzM),
+            (0, i.jsx)(y, {
+                text: T.intl.string(T.t.IHTjzM),
                 onClick: () => {
                     A(m.jQ.COPY_ID), (0, E.JG)(t.id);
                 },
                 disabled: !E.wS,
-                children: [
-                    (0, i.jsx)(s.IdIcon, {
-                        size: 'custom',
-                        width: 22,
-                        height: 22,
-                        color: s.tokens.colors.TEXT_NORMAL.css
-                    }),
-                    (0, i.jsx)(s.Text, {
-                        variant: 'text-sm/normal',
-                        color: 'none',
-                        children: T.intl.string(T.t.IHTjzM)
-                    })
-                ]
+                children: (0, i.jsx)(s.IdIcon, {
+                    size: 'custom',
+                    width: 24,
+                    height: 24,
+                    color: s.tokens.colors.TEXT_NORMAL.css
+                })
             })
         ]
     });
