@@ -50,7 +50,12 @@ let o = (0, a.B)({
         treatments: [
             {
                 id: 1,
-                label: 'Enables ICYMI - sorting will be controlled by backend exp',
+                label: 'Enables ICYMI - (heuristic) sorting will be controlled by backend exp',
+                config: { enabled: !0 }
+            },
+            {
+                id: 2,
+                label: 'Enables ICYMI - (ml) sorting will be controlled by backend exp',
                 config: { enabled: !0 }
             }
         ]
