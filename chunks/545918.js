@@ -38,8 +38,8 @@ var l = t(200651),
     B = t(241559),
     w = t(575766),
     L = t(901066),
-    D = t(987491),
-    P = t(305473),
+    P = t(987491),
+    D = t(305473),
     y = t(995596),
     G = t(937283),
     O = t(440857),
@@ -194,18 +194,24 @@ function K(e) {
             t === k.e.ALL_MEMBERS
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)(P.Z, { guild: u }),
+                          (0, l.jsx)(D.Z, { guild: u }),
                           (0, l.jsx)(U.Z, {
                               guild: u,
                               onMemberSelect: et
                           })
                       ]
                   })
-                : (0, l.jsx)(D.Z, {
+                : (0, l.jsx)(P.Z, {
                       guildId: u.id,
                       currentTab: t
                   }),
-        ei = t === k.e.ALL_MEMBERS ? (0, l.jsx)(G.Z, { guildId: u.id }) : (0, l.jsx)(L.Z, { guildId: u.id });
+        ei =
+            t === k.e.ALL_MEMBERS
+                ? (0, l.jsx)(G.Z, { guildId: u.id })
+                : (0, l.jsx)(L.Z, {
+                      guildId: u.id,
+                      currentTab: t
+                  });
     return (0, l.jsxs)(d.Gt, {
         value: m,
         children: [
