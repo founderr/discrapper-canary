@@ -21993,10 +21993,11 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
     background-color: var(--background-surface-high);
     border-bottom: 1px solid var(--border-subtle);
     box-shadow: none;
-    padding: var(--custom-gif-picker-gutter-size)
+    padding: var(--custom-gif-picker-gutter-size);
+    padding-top: var(--spacing-16)
 }
 
-.emojiPickerHasTabWrapper_c6ee36 .visual-refresh .header_c6ee36 {
+.visual-refresh .emojiPickerHasTabWrapper_c6ee36 .header_c6ee36 {
     padding: var(--custom-gif-picker-gutter-size)
 }
 
