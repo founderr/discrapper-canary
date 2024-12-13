@@ -1,102 +1,116 @@
-n.r(e), n(47120);
+n.r(t), n(47120);
 var a = n(200651),
     r = n(192379),
-    o = n(702493),
-    i = n(77987),
+    o = n(593473),
+    i = n(702493),
+    c = n(77987),
     l = n(133853),
     s = n(703656),
-    c = n(643366),
+    d = n(643366),
     u = n(94628),
-    d = n(659154),
-    f = n(902928),
-    p = n(521937),
-    h = n(981631),
-    x = n(881579);
-let C = n(575703);
-e.default = (0, i.e)(function () {
-    let t;
-    let [e, n] = r.useState({
-        type: 'user-code-input',
-        usePrefilledCode: !0
+    f = n(659154),
+    x = n(581690),
+    p = n(902928),
+    h = n(521937),
+    C = n(981631),
+    m = n(881579);
+let v = n(575703);
+t.default = (0, c.e)(function () {
+    let e;
+    let [t, n] = r.useState(() => {
+        if (window.location.pathname.endsWith(C.Z5c.ACTIVATE_HANDOFF)) {
+            let { user_code: e } = o.parse(window.location.search);
+            return {
+                type: 'handoff',
+                code: e
+            };
+        }
+        return {
+            type: 'user-code-input',
+            usePrefilledCode: !0
+        };
     });
-    (0, o.Z)(), (0, c.Y)(e);
-    let i = r.useCallback(() => {
+    (0, i.Z)(), (0, d.Y)(t);
+    let c = r.useCallback(() => {
             n({ type: 'user-code-input' });
         }, [n]),
-        _ = r.useCallback(
-            (t) => {
+        g = r.useCallback(
+            (e) => {
                 n({
                     type: 'authorization',
-                    userCodeData: t
+                    userCodeData: e
                 });
             },
             [n]
         ),
-        m = r.useCallback(
-            (t) => {
+        _ = r.useCallback(
+            (e) => {
                 n({
                     type: 'success',
-                    userCodeData: t
+                    userCodeData: e
                 });
             },
             [n]
         ),
-        I = r.useCallback(
-            (t) => {
+        b = r.useCallback(
+            (e) => {
                 n({
                     type: 'error',
-                    userCodeData: t
+                    userCodeData: e
                 });
             },
             [n]
         ),
-        v = !0;
-    switch (e.type) {
+        N = !0;
+    switch (t.type) {
+        case 'handoff':
+            (e = (0, a.jsx)(x.c, { code: t.code })), (N = !1);
+            break;
         case 'user-code-input':
-            t = (0, a.jsx)(p.v, {
-                usePrefilledCode: e.usePrefilledCode || !1,
-                onUserCodeAccepted: _
+            e = (0, a.jsx)(h.v, {
+                usePrefilledCode: t.usePrefilledCode || !1,
+                onUserCodeAccepted: g
             });
             break;
         case 'authorization':
-            (t = (0, a.jsx)(u.B, {
-                data: e.userCodeData,
-                onDenied: i,
-                onError: I,
-                onSuccess: m
+            (e = (0, a.jsx)(u.B, {
+                data: t.userCodeData,
+                onDenied: c,
+                onError: b,
+                onSuccess: _
             })),
-                (v = !1);
+                (N = !1);
             break;
         case 'success':
-            t = (0, a.jsx)(f.u, {
-                onComplete: () => (0, s.uL)(h.Z5c.ME),
-                data: e.userCodeData
+            e = (0, a.jsx)(p.u, {
+                onComplete: () => (0, s.uL)(C.Z5c.ME),
+                data: t.userCodeData
             });
             break;
         case 'error':
-            t = (0, a.jsx)(d.c, { onTryAgain: i });
+            e = (0, a.jsx)(f.c, { onTryAgain: c });
             break;
         default:
-            t = null;
+            e = null;
     }
     return (0, a.jsxs)('div', {
-        className: x.activatePage,
+        className: m.activatePage,
         children: [
             (0, a.jsx)('img', {
-                className: x.artwork,
-                src: C,
+                className: m.artwork,
+                src: v,
                 alt: ''
             }),
             (0, a.jsx)(l.Z, {
                 show: !0,
-                className: x.logo
+                className: m.logo
             }),
-            v
+            N
                 ? (0, a.jsx)('div', {
-                      className: x.content,
-                      children: t
+                      className: m.content,
+                      children: e
                   })
-                : t
+                : e
         ]
     });
 });

@@ -73,7 +73,7 @@ let x = (0, g.Un)({
         name: 'LinkAuthorize'
     }),
     Z = (0, g.Un)({
-        createPromise: () => r.e('49277').then(r.bind(r, 197528)),
+        createPromise: () => Promise.all([r.e('98647'), r.e('49277')]).then(r.bind(r, 197528)),
         webpackId: 197528,
         name: 'ActivateDevice'
     }),
@@ -248,6 +248,10 @@ class et extends s.Component {
                                     }),
                                     (0, a.jsx)(m.Z, {
                                         path: O.Z5c.ACTIVATE,
+                                        component: Z
+                                    }),
+                                    (0, a.jsx)(m.Z, {
+                                        path: O.Z5c.ACTIVATE_HANDOFF,
                                         component: Z
                                     }),
                                     (0, a.jsx)(m.Z, {
