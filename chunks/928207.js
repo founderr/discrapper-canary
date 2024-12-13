@@ -18,54 +18,57 @@ var r = n(120356),
     I = n(278605),
     C = n(299657),
     v = n(594174),
-    S = n(981631),
-    N = n(474936),
-    T = n(388032),
-    b = n(707858);
-let A = s.ZP.connectStores([v.default], () => ({ user: v.default.getCurrentUser() }))(
+    S = n(74538),
+    N = n(981631),
+    T = n(474936),
+    b = n(388032),
+    A = n(707858);
+let x = s.ZP.connectStores([v.default], () => ({ user: v.default.getCurrentUser() }))(
     (0, m.Z)(
         (0, h.Z)((e) => {
-            let { analyticsLocations: t } = (0, f.ZP)(g.Z.HOME_PAGE_PREMIUM_TAB),
-                n = (0, I.xP)('ApplicationStoreHome'),
-                r = (0, p.ZP)(),
-                { isAuthenticated: s, user: h } = e;
-            return s
+            let { isAuthenticated: t, user: n } = e,
+                { analyticsLocations: r } = (0, f.ZP)(g.Z.HOME_PAGE_PREMIUM_TAB),
+                s = (0, I.xP)('ApplicationStoreHome'),
+                h = (0, S.I5)(n),
+                m = s && !h,
+                v = (0, p.ZP)();
+            return t
                 ? (0, i.jsxs)('div', {
-                      className: b.homeWrapperNormal,
+                      className: A.homeWrapperNormal,
                       children: [
                           (0, i.jsx)(u.Z, {
-                              section: S.jXE.NAVIGATION,
+                              section: N.jXE.NAVIGATION,
                               children: (0, i.jsxs)(E.Z, {
-                                  isAuthenticated: s,
-                                  className: l()(b.headerBar, {
-                                      [b.headerBarV2LightBackground]: n && !(0, c.wj)(r),
-                                      [b.headerBarV2DarkBackground]: n && (0, c.wj)(r)
+                                  isAuthenticated: t,
+                                  className: l()(A.headerBar, {
+                                      [A.headerBarV2LightBackground]: m && !(0, c.wj)(v),
+                                      [A.headerBarV2DarkBackground]: m && (0, c.wj)(v)
                                   }),
                                   children: [
                                       (0, i.jsx)(E.Z.Icon, {
                                           icon: d.NitroWheelIcon,
                                           'aria-hidden': !0,
-                                          color: n ? o.Z.PREMIUM_TIER_2_PINK : void 0
+                                          color: m ? o.Z.PREMIUM_TIER_2_PINK : void 0
                                       }),
-                                      (0, i.jsx)(E.Z.Title, { children: T.intl.string(T.t.Ipxkoq) })
+                                      (0, i.jsx)(E.Z.Title, { children: b.intl.string(b.t.Ipxkoq) })
                                   ]
                               })
                           }),
                           (0, i.jsx)(f.Gt, {
-                              value: t,
+                              value: r,
                               children:
-                                  null == h
+                                  null == n
                                       ? (0, i.jsx)(_.Z, {
                                             align: _.Z.Align.CENTER,
                                             justify: _.Z.Justify.CENTER,
-                                            children: (0, i.jsx)(d.Spinner, { className: b.spinner })
+                                            children: (0, i.jsx)(d.Spinner, { className: A.spinner })
                                         })
-                                      : (0, i.jsx)(C.Z, { entrypoint: N.EZ.ApplicationStoreHome })
+                                      : (0, i.jsx)(C.Z, { entrypoint: T.EZ.ApplicationStoreHome })
                           })
                       ]
                   })
-                : (0, i.jsx)(a.l_, { to: S.Z5c.LOGIN });
+                : (0, i.jsx)(a.l_, { to: N.Z5c.LOGIN });
         })
     )
 );
-t.Z = A;
+t.Z = x;
