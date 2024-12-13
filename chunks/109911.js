@@ -1,9 +1,9 @@
 r.d(n, {
     Ji: function () {
-        return f;
+        return _;
     },
     XN: function () {
-        return c;
+        return d;
     }
 });
 var i,
@@ -74,11 +74,24 @@ let o = (0, a.B)({
                 config: { enabled: !0 }
             }
         ]
+    }),
+    u = (0, a.B)({
+        kind: 'user',
+        id: '2024-12_icymi_status_with_media',
+        label: 'Shows media with custom status in ICYMI',
+        defaultConfig: { enabled: !1 },
+        treatments: [
+            {
+                id: 1,
+                label: 'Enables showing media with custom status in ICYMI',
+                config: { enabled: !0 }
+            }
+        ]
     });
 !(function (e) {
     (e[(e.NO_BADGE = 1)] = 'NO_BADGE'), (e[(e.RED_BADGE = 2)] = 'RED_BADGE'), (e[(e.BLUE_BADGE = 3)] = 'BLUE_BADGE');
 })(i || (i = {}));
-let u = (0, a.B)({
+let c = (0, a.B)({
     kind: 'user',
     id: '2024-10_merge_notifications_tab',
     label: 'Merge notifications tab',
@@ -126,15 +139,15 @@ let u = (0, a.B)({
         }
     ]
 });
-function c(e) {
+function d(e) {
     let { location: n, autoTrackExposure: r = !0 } = e,
         i = s.Z.get('hide_icymi_tab'),
-        a = f(n, !1),
+        a = _(n, !1),
         {
             enabled: o,
             tabBadgeVariant: l,
-            removeHomeMentionBadges: c
-        } = u.getCurrentConfig(
+            removeHomeMentionBadges: u
+        } = c.getCurrentConfig(
             { location: n },
             {
                 autoTrackExposure: r,
@@ -144,10 +157,10 @@ function c(e) {
     return {
         enabled: o && !i && a,
         tabBadgeVariant: l,
-        removeHomeMentionBadges: c
+        removeHomeMentionBadges: u
     };
 }
-function d(e) {
+function f(e) {
     let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         r = o.useExperiment(
             { location: e },
@@ -165,7 +178,7 @@ function d(e) {
         );
     return r.enabled || i.enabled;
 }
-function f(e) {
+function _(e) {
     let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         r = o.getCurrentConfig(
             { location: e },

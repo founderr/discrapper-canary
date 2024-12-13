@@ -1,42 +1,49 @@
 r.d(n, {
     F: function () {
-        return d;
+        return f;
     },
     e: function () {
         return i;
     }
 });
 var i,
-    a = r(277985),
-    s = r(592125),
-    o = r(403182),
-    l = r(861990),
-    u = r(981631);
-class c {
+    a = r(123146),
+    s = r(277985),
+    o = r(592125),
+    l = r(403182),
+    u = r(861990),
+    c = r(981631);
+class d {
     getCreateAttachmentURL(e) {
-        return u.ANM.MESSAGE_CREATE_ATTACHMENT_UPLOAD(e);
+        return c.ANM.MESSAGE_CREATE_ATTACHMENT_UPLOAD(e);
     }
     getDeleteUploadURL(e) {
-        return u.ANM.MESSAGE_DELETE_UPLOAD(e);
+        return c.ANM.MESSAGE_DELETE_UPLOAD(e);
     }
     getMaxFileSize(e) {
-        let n = s.Z.getBasicChannel(e);
-        return o.dg(null == n ? void 0 : n.guild_id);
+        let n = o.Z.getBasicChannel(e);
+        return l.dg(null == n ? void 0 : n.guild_id);
     }
     getMaxAttachmentsCount() {
-        return u.dN1;
+        return c.dN1;
     }
     getMaxTotalAttachmentSize() {
-        return l.zz;
+        return u.zz;
     }
     get shouldReactNativeCompressUploads() {
         return !0;
     }
 }
-function d(e) {
-    if (1 === e) return new a.Z();
-    return new c();
+function f(e) {
+    switch (e) {
+        case 1:
+            return new s.Z();
+        case 2:
+            return new a.Z();
+        default:
+            return new d();
+    }
 }
 !(function (e) {
-    (e[(e.MESSAGE_ATTACHMENT = 0)] = 'MESSAGE_ATTACHMENT'), (e[(e.GUILD_PRODUCT_ATTACHMENT = 1)] = 'GUILD_PRODUCT_ATTACHMENT');
+    (e[(e.MESSAGE_ATTACHMENT = 0)] = 'MESSAGE_ATTACHMENT'), (e[(e.GUILD_PRODUCT_ATTACHMENT = 1)] = 'GUILD_PRODUCT_ATTACHMENT'), (e[(e.GRAVITY_ATTACHMENT = 2)] = 'GRAVITY_ATTACHMENT');
 })(i || (i = {}));
