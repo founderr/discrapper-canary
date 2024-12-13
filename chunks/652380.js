@@ -516,7 +516,8 @@ function Z() {
                                                                             s === l
                                                                                 ? {
                                                                                       ...e,
-                                                                                      asset: a
+                                                                                      asset: a,
+                                                                                      skuId: ''
                                                                                   }
                                                                                 : e
                                                                         )

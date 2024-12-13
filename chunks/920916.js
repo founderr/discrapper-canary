@@ -77,8 +77,10 @@ function G(e) {
     let M = () => {
             w('applying'), m().finally(i);
         },
-        U = null == S || null == h || 'loading' === L,
-        B = !y && !O && 'claimed' === L;
+        U = !0 === g && null === h && (null == d ? void 0 : d.skuId) !== '',
+        B = null == h && !0 !== g,
+        G = null == S || B || U || 'loading' === L,
+        Z = !y && !O && 'claimed' === L;
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(c.O_, {
@@ -91,9 +93,9 @@ function G(e) {
                 children: (0, s.jsx)(_.ModalRoot, {
                     transitionState: r,
                     size: _.ModalSize.DYNAMIC,
-                    className: u()(k.rootContainer, { [k.rootContainerLoading]: U }),
+                    className: u()(k.rootContainer, { [k.rootContainerLoading]: G }),
                     hideShadow: !0,
-                    children: U
+                    children: G
                         ? (0, s.jsx)(_.Spinner, { type: _.Spinner.Type.SPINNING_CIRCLE })
                         : 'error' === L
                           ? (0, s.jsx)(x.Z, { onClose: i })
@@ -109,7 +111,7 @@ function G(e) {
                             })
                 })
             }),
-            B &&
+            Z &&
                 (0, s.jsx)(v.Z, {
                     confettiTarget: E.current,
                     confettiCanvas: I,
@@ -142,7 +144,8 @@ function Z(e) {
 function F(e) {
     let { quest: n, user: r, decoration: i, decorationName: a, backgroundUrl: o, isSaving: l, onClose: u, onConfirm: c } = e,
         d = (0, O.Kr)(n.config),
-        f =
+        f = (0, D.fh)(n, D.eC.REWARD).url,
+        h =
             null == d
                 ? M.intl.formatToPlainString(M.t.l9uXLy, { decorationName: a })
                 : M.intl.formatToPlainString(M.t.tTlItr, {
@@ -185,7 +188,8 @@ function F(e) {
                                 user: r,
                                 guildId: null,
                                 avatarDecorationOverride: i,
-                                avatarSize: _.AvatarSizes.SIZE_152
+                                avatarSize: _.AvatarSizes.SIZE_152,
+                                questPreviewRewardAssetUrl: f
                             })
                         }),
                         (0, s.jsx)(_.Heading, {
@@ -198,7 +202,7 @@ function F(e) {
                             variant: 'text-sm/normal',
                             color: 'text-normal',
                             className: k.text,
-                            children: f
+                            children: h
                         }),
                         (0, s.jsx)(_.Button, {
                             submitting: l,
