@@ -17,10 +17,7 @@ n.Z = a.forwardRef(function (e, n) {
         { profileType: T } = (0, _.z)(),
         { analyticsLocations: b } = (0, u.ZP)(),
         { context: y } = (0, c.KZ)(),
-        { recentActivityEnabled: S } = (0, d.i)({
-            location: 'UserProfileActivityCardContainer',
-            autoTrackExposure: !1
-        });
+        { recentActivityEnabled: S } = (0, d.i)({ location: 'UserProfileActivityCardContainer' });
     return T !== p.y0.FULL_SIZE && (null == y ? void 0 : y.userId) != null && S
         ? (0, i.jsx)(l.Clickable, {
               className: g.clickableContainer,

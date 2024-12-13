@@ -50,18 +50,9 @@ function C(e) {
 function R(e) {
     let { sourceType: n, children: r, user: i } = e,
         { profileType: b } = (0, E.z)(),
-        { fadeInAndOutEnabled: y } = (0, m.o)({
-            location: 'UserProfilePopoutInteractionCoachmark',
-            autoTrackExposure: !1
-        }),
-        { recentActivityTabEnabled: A } = (0, p.O)({
-            location: 'UserProfilePopoutInteractionCoachmark',
-            autoTrackExposure: !1
-        }),
-        { recentActivityEnabled: N, allProfileReactReplyEnabled: R } = (0, g.i)({
-            location: 'UserProfilePopoutInteractionCoachmark',
-            autoTrackExposure: !1
-        }),
+        { fadeInAndOutEnabled: y } = (0, m.o)({ location: 'UserProfilePopoutInteractionCoachmark' }),
+        { recentActivityTabEnabled: A } = (0, p.O)({ location: 'UserProfilePopoutInteractionCoachmark' }),
+        { recentActivityEnabled: N, allProfileReactReplyEnabled: R } = (0, g.i)({ location: 'UserProfilePopoutInteractionCoachmark' }),
         O = (0, o.e7)([h.default], () => {
             var e;
             return (null === (e = h.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === i.id;

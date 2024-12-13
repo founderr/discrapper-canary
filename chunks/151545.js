@@ -39,18 +39,9 @@ function A(e) {
         ),
         L = D && h.Z.can(S.Plq.CONNECT, O),
         x = (null == A ? void 0 : A.type) === S.IIU.HANG_STATUS && L ? O : null,
-        { fadeInAndOutEnabled: w } = (0, E.o)({
-            location: 'UserProfileActivityCardWrapper',
-            autoTrackExposure: !1
-        }),
-        { recentActivityTabEnabled: P } = (0, g.O)({
-            location: 'UserProfileActivityCardWrapper',
-            autoTrackExposure: !1
-        }),
-        { recentActivityEnabled: M } = (0, v.i)({
-            location: 'UserProfileActivityCardWrapper',
-            autoTrackExposure: !1
-        }),
+        { fadeInAndOutEnabled: w } = (0, E.o)({ location: 'UserProfileActivityCardWrapper' }),
+        { recentActivityTabEnabled: P } = (0, g.O)({ location: 'UserProfileActivityCardWrapper' }),
+        { recentActivityEnabled: M } = (0, v.i)({ location: 'UserProfileActivityCardWrapper' }),
         k = n.id === r.id,
         U = (w || P || M) && !k && !n.bot,
         B = (0, s.e7)([_.Z, p.Z, f.Z], () => {

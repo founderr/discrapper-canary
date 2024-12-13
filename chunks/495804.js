@@ -16,14 +16,8 @@ var a = r(442837),
 function _(e) {
     let { user: n, location: r, ..._ } = e,
         { simplifiedCustomStatusBubbleEnabled: h } = (0, o.l)({ location: r }),
-        { fadeInAndOutEnabled: p } = (0, l.o)({
-            location: r,
-            autoTrackExposure: !1
-        }),
-        { allProfileReactReplyEnabled: m } = (0, u.i)({
-            location: r,
-            autoTrackExposure: !1
-        }),
+        { fadeInAndOutEnabled: p } = (0, l.o)({ location: r }),
+        { allProfileReactReplyEnabled: m } = (0, u.i)({ location: r }),
         g = !(0, a.e7)([s.default], () => s.default.getId() === n.id) && !n.bot && (p || m);
     return h
         ? (0, i.jsx)(c.Z, {

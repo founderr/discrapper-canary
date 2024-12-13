@@ -22,14 +22,8 @@ var o = r(442837),
 let I = [],
     T = [];
 function b(e) {
-    let { recentActivityTabEnabled: n } = (0, g.O)({
-            location: 'useUserProfileActivity',
-            autoTrackExposure: !1
-        }),
-        { recentActivityEnabled: r } = (0, E.i)({
-            location: 'useUserProfileActivity',
-            autoTrackExposure: !1
-        }),
+    let { recentActivityTabEnabled: n } = (0, g.O)({ location: 'useUserProfileActivity' }),
+        { recentActivityEnabled: r } = (0, E.i)({ location: 'useUserProfileActivity' }),
         i = (0, o.e7)([h.Z], () => h.Z.getActivities(e)),
         b = (0, o.e7)([u.Z], () => (n || r ? u.Z.getUserOutbox(e) : void 0)),
         { enabled: y, analyticsEligible: S } = (0, l.R4)('use-user-profile-activity'),

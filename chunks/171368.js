@@ -22,10 +22,7 @@ let h = (0, a.getAvatarSize)(a.AvatarSizes.SIZE_120),
     m = async (e) => {
         let n = u.default.getId() === e,
             { recentActivityTabEnabled: r } = (0, d.x)({ location: 'UserProfileModalActionCreators' }),
-            { recentActivityEnabled: i } = (0, f.G)({
-                location: 'UserProfileModalActionCreators',
-                autoTrackExposure: !1
-            });
+            { recentActivityEnabled: i } = (0, f.G)({ location: 'UserProfileModalActionCreators' });
         if (!!r || !!i || !!n)
             try {
                 await (0, l.Z)(e);

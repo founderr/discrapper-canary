@@ -88,14 +88,8 @@ function O(e) {
         { profileType: D } = (0, b.z)(),
         { onInteraction: L } = (0, T.Xo)(),
         x = D !== y.y0.FULL_SIZE && r !== y.n_.AVATAR,
-        { fadeInAndOutEnabled: w } = (0, E.o)({
-            location: 'UserProfileInteractionToolbar',
-            autoTrackExposure: x
-        }),
-        { recentActivityEnabled: P } = (0, v.i)({
-            location: 'UserProfileInteractionToolbar',
-            autoTrackExposure: !1
-        }),
+        { fadeInAndOutEnabled: w } = (0, E.o)({ location: 'UserProfileInteractionToolbar' }),
+        { recentActivityEnabled: P } = (0, v.i)({ location: 'UserProfileInteractionToolbar' }),
         M = (w || P) && x && !i,
         [k, U] = o.useState(M);
     if (

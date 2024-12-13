@@ -15,10 +15,7 @@ let f = 300,
     _ = new s.Yd('preloadUserProfileForPopout'),
     h = async (e) => {
         let n = u.default.getId() === e,
-            { recentActivityEnabled: r } = (0, c.G)({
-                location: 'preloadUserProfileForPopout',
-                autoTrackExposure: !1
-            });
+            { recentActivityEnabled: r } = (0, c.G)({ location: 'preloadUserProfileForPopout' });
         if (!!r && !!n)
             try {
                 await Promise.race([(0, o.Z)(e), new Promise((e) => setTimeout(e, f))]);
