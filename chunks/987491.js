@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return D;
+        return P;
     }
 });
 var l = t(200651),
@@ -249,7 +249,7 @@ let B = i.memo(function (e) {
             ]
         });
     };
-function D(e) {
+function P(e) {
     let { guildId: n, currentTab: t } = e,
         r = i.useRef(null),
         s = (0, c.e7)([I.Z], () => I.Z.getGuild(n)),

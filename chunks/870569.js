@@ -11,17 +11,17 @@ var l = n(120356),
     a = n(686546),
     s = n(32986);
 function c(e) {
-    let { tooltipText: t, children: n, onContextMenu: l, onClick: c, disabled: u, icon: d, iconForeground: h, innerClassName: p, tooltipClassName: m, onMouseEnter: f, onMouseLeave: g, 'aria-label': C, 'aria-checked': v, role: _, tooltipColor: x, tooltipForceOpen: I, tooltipContentClassName: b } = e,
+    let { tooltipText: t, children: n, onContextMenu: l, onClick: c, disabled: d, icon: u, iconForeground: h, innerClassName: p, tooltipClassName: m, onMouseEnter: f, onMouseLeave: g, 'aria-label': C, 'aria-checked': v, role: _, tooltipColor: x, tooltipForceOpen: I, tooltipContentClassName: b } = e,
         E =
-            'function' == typeof d
-                ? (0, i.jsx)(d, {
+            'function' == typeof u
+                ? (0, i.jsx)(u, {
                       width: 20,
                       height: 20,
                       size: 'custom',
                       colorClass: null != h ? h : '',
                       color: 'currentColor'
                   })
-                : d;
+                : u;
     return (0, i.jsx)(o.Tooltip, {
         tooltipClassName: m,
         text: t,
@@ -30,23 +30,23 @@ function c(e) {
         tooltipContentClassName: b,
         forceOpen: I,
         children: (e) => {
-            let { onClick: t, onMouseEnter: d, onMouseLeave: h, ...m } = e;
+            let { onClick: t, onMouseEnter: u, onMouseLeave: h, ...m } = e;
             return (0, i.jsxs)(o.Button, {
                 ...m,
                 look: o.Button.Looks.BLANK,
                 size: o.Button.Sizes.NONE,
-                disabled: u,
+                disabled: d,
                 innerClassName: p,
                 wrapperClassName: s.button,
                 className: r()(s.button, {
-                    [s.disabled]: u,
-                    [s.enabled]: !u
+                    [s.disabled]: d,
+                    [s.enabled]: !d
                 }),
                 onClick: (e) => {
                     null != t && t(), null != c && c(e);
                 },
                 onMouseEnter: () => {
-                    null == d || d(), null == f || f();
+                    null == u || u(), null == f || f();
                 },
                 onMouseLeave: () => {
                     null == h || h(), null == g || g();

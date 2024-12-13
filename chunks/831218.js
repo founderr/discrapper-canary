@@ -6,8 +6,8 @@ var i,
     a = n(192379),
     s = n(299608),
     c = n.n(s),
-    u = n(91192),
-    d = n(924826),
+    d = n(91192),
+    u = n(924826),
     h = n(442837),
     p = n(902704),
     m = n(481060),
@@ -30,8 +30,8 @@ var i,
     P = n(158776),
     R = n(55589),
     M = n(515753),
-    w = n(981631),
-    L = n(388032),
+    L = n(981631),
+    w = n(388032),
     D = n(312565);
 function O(e, t, n) {
     return (
@@ -242,7 +242,7 @@ class G extends (l = a.Component) {
     render() {
         let { privateChannelIds: e, padding: t } = this.props,
             { preRenderedChildren: n } = this.state;
-        return (0, o.jsx)(u.SJ, {
+        return (0, o.jsx)(d.SJ, {
             children: (i) => {
                 let { ref: l, role: r, ...a } = i;
                 return (0, o.jsx)(m.FocusJumpSection, {
@@ -250,7 +250,7 @@ class G extends (l = a.Component) {
                         (0, o.jsx)(m.List, {
                             fade: !0,
                             innerRole: r,
-                            innerAriaLabel: L.intl.string(L.t.YUU0RE),
+                            innerAriaLabel: w.intl.string(w.t.YUU0RE),
                             innerTag: 'ul',
                             ref: (e) => {
                                 var t;
@@ -295,13 +295,13 @@ class G extends (l = a.Component) {
                     o = r > n.length ? n.slice(0, r + 1) : n,
                     s = o.map((e) => (null != i[e] ? i[e].getRecipientId() : null)),
                     c = n.some((e) => (0, _.Z)(e)),
-                    u = {
+                    d = {
                         num_users_visible: o.length,
                         num_users_visible_with_mobile_indicator: s.filter((e) => null != e && P.Z.isMobileOnline(e)).length
                     };
                 (this.hasReportedAnalytics = !0),
-                    C.ZP.trackWithMetadata(w.rMx.DM_LIST_VIEWED, {
-                        ...u,
+                    C.ZP.trackWithMetadata(L.rMx.DM_LIST_VIEWED, {
+                        ...d,
                         ...(0, v.X)(),
                         visible_user_ids: s.filter((e) => null != e),
                         changelog_dm_visible: c
@@ -317,7 +317,7 @@ class G extends (l = a.Component) {
                 c()(() => {
                     if (null != this._list) {
                         let e = this._list.getScrollerNode();
-                        null != e && f.Z.updateChannelListScroll(w.ME, e.scrollTop);
+                        null != e && f.Z.updateChannelListScroll(L.ME, e.scrollTop);
                     }
                 }, 100)
             ),
@@ -364,10 +364,10 @@ class G extends (l = a.Component) {
                               children: [
                                   (0, o.jsx)('span', {
                                       className: D.headerText,
-                                      children: L.intl.string(L.t.YUU0RE)
+                                      children: w.intl.string(w.t.YUU0RE)
                                   }),
                                   (0, o.jsx)(Z.Z, {
-                                      tooltip: L.intl.string(L.t['6Urw1t']),
+                                      tooltip: w.intl.string(w.t['6Urw1t']),
                                       tooltipPosition: 'top',
                                       popoutAlign: 'left',
                                       iconClassName: D.privateChannelRecipientsInviteButtonIcon,
@@ -417,7 +417,7 @@ t.Z = (e) => {
         );
     (0, S.z)(E.R);
     let f = (0, h.cj)([g.Z, j.Z, A.Z], () => ({
-            theme: j.Z.darkSidebar ? w.BRd.DARK : i,
+            theme: j.Z.darkSidebar ? L.BRd.DARK : i,
             keyboardModeEnabled: g.Z.keyboardModeEnabled,
             version: null != n ? ''.concat(n, ':').concat(A.Z.getPrivateChannelsVersion()) : A.Z.getPrivateChannelsVersion()
         })),
@@ -460,7 +460,7 @@ t.Z = (e) => {
             []
         ),
         Z = (0, I.Dt)(),
-        P = (0, d.ZP)({
+        P = (0, u.ZP)({
             id: 'private-channels-'.concat(Z),
             isEnabled: f.keyboardModeEnabled,
             scrollToStart: _,
@@ -468,7 +468,7 @@ t.Z = (e) => {
             defaultFocused: (s + (r ? 1 : 0)).toString(),
             setFocus: v
         });
-    return (0, o.jsx)(u.bG, {
+    return (0, o.jsx)(d.bG, {
         navigator: P,
         children: (0, o.jsx)(G, {
             isVisualRefreshEnabled: t,

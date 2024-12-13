@@ -11,8 +11,8 @@ var o = n(442837),
     a = n(481060),
     s = n(893776),
     c = n(391650),
-    u = n(313201),
-    d = n(144114),
+    d = n(313201),
+    u = n(144114),
     h = n(607744),
     p = n(594174),
     m = n(981631),
@@ -22,7 +22,7 @@ var o = n(442837),
 (i = l || (l = {}))[(i.VOICE = 0)] = 'VOICE';
 t.Z = (e) => {
     let { type: t, guildId: i, closePopout: l } = e,
-        v = (0, u.Dt)(),
+        v = (0, d.Dt)(),
         { notClaimed: _, notEmailVerified: x, notPhoneVerified: I, newAccount: b, newMember: E } = (0, o.e7)([h.Z], () => h.Z.getCheck(i), [i]),
         S = 0 === t ? g.intl.string(g.t['6zY8BA']) : null,
         Z = null,
@@ -65,7 +65,7 @@ t.Z = (e) => {
                                                                 let { default: e } = await Promise.all([n.e('76540'), n.e('51501')]).then(n.bind(n, 607018));
                                                                 return (t) =>
                                                                     (0, r.jsx)(e, {
-                                                                        reason: d.L.GUILD_PHONE_REQUIRED,
+                                                                        reason: u.L.GUILD_PHONE_REQUIRED,
                                                                         ...t
                                                                     });
                                                             },

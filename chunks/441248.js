@@ -11,8 +11,8 @@ var l = n(120356),
     a = n(925329),
     s = n(810568),
     c = n(168524),
-    u = n(115530),
-    d = n(388032),
+    d = n(115530),
+    u = n(388032),
     h = n(832926);
 function p(e) {
     let { name: t, applicationId: n } = e,
@@ -25,7 +25,7 @@ function p(e) {
     return (0, i.jsx)(o.Clickable, {
         onClick: l,
         className: r()(null != l && h.clickableGameName),
-        children: (0, i.jsx)(u.Z, {
+        children: (0, i.jsx)(d.Z, {
             className: h.gameName,
             children: t
         })
@@ -34,7 +34,7 @@ function p(e) {
 function m(e) {
     var t, n;
     let { isStreaming: l, application: r, game: s } = e;
-    let c = ((t = r), (n = s), null != t ? t.name : null != n ? n.name : d.intl.string(d.t['UQMV/P']));
+    let c = ((t = r), (n = s), null != t ? t.name : null != n ? n.name : u.intl.string(u.t['UQMV/P']));
     return (0, i.jsxs)('div', {
         className: h.gameWrapper,
         children: [

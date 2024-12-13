@@ -13,8 +13,8 @@ function c(e) {
     var t;
     let n = (0, l.e7)([a.Z], () => a.Z.getGuildId()),
         c = e.children.map((e) => e.id),
-        u = null != n && c.includes(n),
-        d = !1,
+        d = null != n && c.includes(n),
+        u = !1,
         h = !1,
         p = !1,
         m = (0, l.e7)([a.Z], () => a.Z.getChannelId()),
@@ -23,16 +23,16 @@ function c(e) {
         C = (0, l.e7)([s.Z], () => null != m && s.Z.hasVideo(m), [m]),
         v = (0, l.e7)([o.Z], () => o.Z.getCurrentUserActiveStream());
     return (
-        u && ((d = !C), (h = C), (p = null != v && null != v.guildId && c.includes(v.guildId))),
+        d && ((u = !C), (h = C), (p = null != v && null != v.guildId && c.includes(v.guildId))),
         i.useMemo(
             () => ({
-                audio: d,
+                audio: u,
                 video: h,
                 screenshare: p,
                 liveStage: g,
-                isCurrentUserConnected: u
+                isCurrentUserConnected: d
             }),
-            [d, h, p, g, u]
+            [u, h, p, g, d]
         )
     );
 }

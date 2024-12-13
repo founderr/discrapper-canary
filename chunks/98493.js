@@ -1,9 +1,9 @@
 n.d(t, {
     m: function () {
-        return d;
+        return u;
     },
     p: function () {
-        return u;
+        return d;
     }
 }),
     n(47120);
@@ -14,11 +14,11 @@ var i = n(192379),
     a = n(709054),
     s = n(693546),
     c = n(246364);
-let u = c.tB * c.hW;
-function d(e) {
+let d = c.tB * c.hW;
+function u(e) {
     let { guildId: t, guildJoinRequests: n } = e,
         l = i.useRef(!1),
-        [d, h] = i.useState(null),
+        [u, h] = i.useState(null),
         p = i.useRef(null),
         m = i.useRef(!1);
     return {
@@ -28,7 +28,7 @@ function d(e) {
                 let f = ''.concat(e, '-').concat(i),
                     g = !1;
                 if ((f !== p.current && ((p.current = f), (m.current = !1), (g = !0)), m.current)) return;
-                null != d && h(null);
+                null != u && h(null);
                 let C = (function (e, t, n, i) {
                     let l = n === c.wB.SUBMITTED;
                     if (t === c.Nw.TIMESTAMP_DESC) {
@@ -49,13 +49,13 @@ function d(e) {
                     let e = await s.Z.fetchGuildJoinRequests({
                         guildId: t,
                         status: i,
-                        limit: u,
+                        limit: d,
                         force: !0,
                         ...C
                     });
                     if (null != e) {
                         let { guild_join_requests: t } = e.body;
-                        t.length < u && (m.current = !0);
+                        t.length < d && (m.current = !0);
                     }
                 } catch (e) {
                     h(new o.Hx(e).getAnyErrorMessage());
@@ -63,8 +63,8 @@ function d(e) {
                     l.current = !1;
                 }
             },
-            [d, t, n]
+            [u, t, n]
         ),
-        error: d
+        error: u
     };
 }

@@ -12,14 +12,14 @@ var l = n(442837),
     a = n(594174),
     s = n(74538),
     c = n(327943),
-    u = n(997945),
-    d = n(630117),
+    d = n(997945),
+    u = n(630117),
     h = n(441319);
 function p() {
     let e = (0, o.Q3)('AppIconHome'),
         [t, n, p] = (0, l.Wu)([a.default, c.Z], () => [c.Z.getCurrentDesktopIcon(), c.Z.isEditorOpen, s.ZP.isPremium(a.default.getCurrentUser())]),
         m = (0, h.aW)(t),
-        f = t !== u.aH.DEFAULT && (p || n),
+        f = t !== d.aH.DEFAULT && (p || n),
         g = e ? 24 : 30,
         C = (0, i.jsx)(r.ClydeIcon, {
             size: 'custom',
@@ -28,7 +28,7 @@ function p() {
             height: g
         });
     return null != m && f
-        ? (0, i.jsx)(d.Z, {
+        ? (0, i.jsx)(u.Z, {
               id: t,
               width: 48
           })

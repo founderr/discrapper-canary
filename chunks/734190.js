@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(91192),
     s = n(442837),
     c = n(481060),
-    u = n(493683),
-    d = n(239091),
+    d = n(493683),
+    u = n(239091),
     h = n(111028),
     p = n(569471),
     m = n(488131),
@@ -45,8 +45,8 @@ t.Z = l.memo(function (e) {
         R = (0, s.e7)([v.ZP], () => v.ZP.getVoiceStatesForChannel(t), [t]),
         M = (0, s.e7)([C.Z], () => C.Z.hasVideo(t.id)),
         {
-            unread: w,
-            mentionCount: L,
+            unread: L,
+            mentionCount: w,
             isMentionLowImportance: D
         } = (0, s.cj)([g.ZP], () => ({
             unread: g.ZP.hasUnread(t.id),
@@ -61,13 +61,13 @@ t.Z = l.memo(function (e) {
             [t]
         ),
         G = l.useCallback(() => {
-            u.Z.preload(t.guild_id, t.id);
+            d.Z.preload(t.guild_id, t.id);
         }, [t.guild_id, t.id]),
         U = l.useCallback(
             (e) => {
                 let l = f.Z.getChannel(t.id);
                 null != l &&
-                    (0, d.jW)(e, async () => {
+                    (0, u.jW)(e, async () => {
                         let { default: e } = await n.e('40157').then(n.bind(n, 422200));
                         return (t) =>
                             (0, i.jsx)(e, {
@@ -82,12 +82,12 @@ t.Z = l.memo(function (e) {
         { role: H, ...V } = (0, a.JA)(t.id),
         F = l.useRef(null),
         W =
-            L > 0
+            w > 0
                 ? Z.intl.formatToPlainString(Z.t['ZL7+Iy'], {
                       channelName: t.name,
-                      mentionCount: L
+                      mentionCount: w
                   })
-                : w
+                : L
                   ? Z.intl.formatToPlainString(Z.t.YlVvmZ, { channelName: t.name })
                   : Z.intl.formatToPlainString(Z.t['0nZpiI'], { channelName: t.name });
     return (0, i.jsxs)('li', {
@@ -113,13 +113,13 @@ t.Z = l.memo(function (e) {
                     className: o()(N.iconVisibility, y.wrapper, y.typeThread, {
                         [y.modeSelected]: r,
                         [y.modeMuted]: !r && O,
-                        [y.modeUnreadImportant]: !O && !r && w,
+                        [y.modeUnreadImportant]: !O && !r && L,
                         [y.withGuildIcon]: P
                     }),
                     onMouseDown: G,
                     onContextMenu: U,
                     children: [
-                        !w || O || r ? null : (0, i.jsx)('div', { className: o()(y.unread, y.unreadImportant) }),
+                        !L || O || r ? null : (0, i.jsx)('div', { className: o()(y.unread, y.unreadImportant) }),
                         (0, i.jsx)(c.Clickable, {
                             ...V,
                             innerRef: F,
@@ -145,9 +145,9 @@ t.Z = l.memo(function (e) {
                                                       channel: t
                                                   })
                                                 : null,
-                                            (0, _.Z)(L)
+                                            (0, _.Z)(w)
                                                 ? (0, i.jsx)(I.Z, {
-                                                      mentionsCount: L,
+                                                      mentionsCount: w,
                                                       isMentionLowImportance: D
                                                   })
                                                 : null

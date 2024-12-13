@@ -91,21 +91,21 @@ function S() {
                     {
                         children: [
                             (0, i.jsx)(o.MenuRadioItem, {
-                                id: 'compact',
-                                group: 'list-density',
-                                label: 'Compact lists',
-                                checked: 'compact' === C,
-                                action: () => {
-                                    l.ZP.updatedUnsyncedSettings({ listDensity: h.fx.COMPACT });
-                                }
-                            }),
-                            (0, i.jsx)(o.MenuRadioItem, {
                                 id: 'cozy',
                                 group: 'list-density',
                                 label: 'Cozy lists',
                                 checked: 'cozy' === C,
                                 action: () => {
                                     l.ZP.updatedUnsyncedSettings({ listDensity: h.fx.COZY });
+                                }
+                            }),
+                            (0, i.jsx)(o.MenuRadioItem, {
+                                id: 'compact',
+                                group: 'list-density',
+                                label: 'Compact lists',
+                                checked: 'compact' === C,
+                                action: () => {
+                                    l.ZP.updatedUnsyncedSettings({ listDensity: h.fx.COMPACT });
                                 }
                             })
                         ]

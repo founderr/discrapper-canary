@@ -6,8 +6,8 @@ var l = n(120356),
     a = n(481060),
     s = n(717881),
     c = n(503438),
-    u = n(850827),
-    d = n(952164),
+    d = n(850827),
+    u = n(952164),
     h = n(237583),
     p = n(131704),
     m = n(314897),
@@ -88,9 +88,9 @@ t.Z = (e) => {
                           user: C,
                           channel: t,
                           sortedVoiceStates: l,
-                          onOpenSpotifyTrack: b ? d.aG : void 0,
-                          onOpenSpotifyArtist: b ? d.d$ : void 0,
-                          onOpenSpotifyAlbum: b ? d.Z5 : void 0
+                          onOpenSpotifyTrack: b ? u.aG : void 0,
+                          onOpenSpotifyArtist: b ? u.d$ : void 0,
+                          onOpenSpotifyAlbum: b ? u.Z5 : void 0
                       })
                     : (0, i.jsx)(s.Z, {
                           type: s.P.VOICE_CHANNEL,
@@ -111,7 +111,7 @@ t.Z = (e) => {
             }),
             (0, i.jsx)('div', {
                 className: _.activityActionsContainer,
-                children: (0, i.jsx)(u.Z, {
+                children: (0, i.jsx)(d.Z, {
                     type: s.P.VOICE_CHANNEL,
                     activity: n,
                     embeddedActivity: null == r ? void 0 : r.embeddedActivity,

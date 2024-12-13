@@ -6,8 +6,8 @@ var i = n(200651),
     a = n(442837),
     s = n(493683),
     c = n(239091),
-    u = n(146773),
-    d = n(201895),
+    d = n(146773),
+    u = n(201895),
     h = n(703656),
     p = n(592125),
     m = n(430824),
@@ -49,7 +49,7 @@ class E extends g.ZP {
                     onMouseDown: b,
                     onContextMenu: this.handleContextMenu,
                     connectDragPreview: a ? r : null,
-                    'aria-label': (0, d.ZP)({ channel: e }),
+                    'aria-label': (0, u.ZP)({ channel: e }),
                     resolvedUnreadSetting: _.i.ONLY_MENTIONS,
                     children: [this.renderInviteButton(), this.renderEditButton()]
                 })
@@ -89,7 +89,7 @@ class E extends g.ZP {
             });
     }
 }
-let S = (0, u.B)(E);
+let S = (0, d.B)(E);
 t.Z = l.memo(function (e) {
     let { channel: t, guild: n, disableSorting: l } = e,
         r = (0, a.cj)([p.Z, f.Z], () => {

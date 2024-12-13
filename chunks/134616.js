@@ -1,6 +1,6 @@
 n.d(t, {
     u: function () {
-        return u;
+        return d;
     }
 });
 var i = n(374470),
@@ -10,7 +10,7 @@ var i = n(374470),
     a = n(585483),
     s = n(547420),
     c = n(981631);
-let u = {
+let d = {
     POP_LAYER: {
         binds: ['esc'],
         comboKeysBindGlobal: !0,

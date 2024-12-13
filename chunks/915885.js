@@ -10,8 +10,8 @@ var i = n(200651),
     a = n(481060),
     s = n(566840),
     c = n(693546),
-    u = n(826581),
-    d = n(63568),
+    d = n(826581),
+    u = n(63568),
     h = n(246364),
     p = n(98493),
     m = n(434479),
@@ -21,9 +21,9 @@ var i = n(200651),
     v = n(388032);
 function _(e) {
     let { guild: t, selected: n } = e,
-        _ = (0, d.jS)(t.id, 'Guild Sidebar'),
+        _ = (0, u.jS)(t.id, 'Guild Sidebar'),
         x = (0, r.e7)([f.Z], () => f.Z.can(C.Plq.KICK_MEMBERS, t)),
-        I = (0, r.e7)([u.Z], () => u.Z.getSubmittedGuildJoinRequestTotal(t.id)),
+        I = (0, r.e7)([d.Z], () => d.Z.getSubmittedGuildJoinRequestTotal(t.id)),
         b = _ && x && null != I ? I : 0;
     l.useEffect(() => {
         x &&

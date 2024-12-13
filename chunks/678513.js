@@ -6,21 +6,21 @@ var i,
     a = n(442837),
     s = n(570140),
     c = n(445507);
-let u = {
+let d = {
         'valorant-user': c.qJ,
         'valorant-admin': c.xQ,
         'genshin-user': c.Zl,
         'genshin-admin': c.Q3
     },
-    d = null,
+    u = null,
     h = {},
     p = new Set();
 function m() {
-    for (let e in ((d = null), h)) delete h[e];
+    for (let e in ((u = null), h)) delete h[e];
 }
 class f extends (i = a.ZP.Store) {
     getActiveUserSignUp() {
-        return d;
+        return u;
     }
     getActiveGuildSignUp(e) {
         var t;
@@ -42,13 +42,13 @@ class f extends (i = a.ZP.Store) {
     (t.Z = new f(s.Z, {
         ENABLE_USER_SIGN_UP: function (e) {
             let { key: t } = e,
-                n = u[t];
-            (0, c.u9)(n) && 0 === Object.keys(h).length && (d = n);
+                n = d[t];
+            (0, c.u9)(n) && 0 === Object.keys(h).length && (u = n);
         },
         ENABLE_GUILD_SIGN_UP: function (e) {
             let { key: t, guildId: n } = e,
-                i = u[t];
-            (0, c.mC)(i) && ((h[n] = i), (d = null));
+                i = d[t];
+            (0, c.mC)(i) && ((h[n] = i), (u = null));
         },
         COMPLETE_SIGN_UP: function (e) {
             let { targetKey: t } = e;

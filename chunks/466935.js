@@ -10,8 +10,8 @@ var i = n(200651),
     a = n(970606),
     s = n(693546),
     c = n(826581),
-    u = n(246364),
-    d = n(98493),
+    d = n(246364),
+    u = n(98493),
     h = n(703656),
     p = n(496675),
     m = n(785195),
@@ -29,8 +29,8 @@ function _(e) {
             _ &&
                 s.Z.fetchGuildJoinRequests({
                     guildId: t.id,
-                    status: u.wB.SUBMITTED,
-                    limit: d.p
+                    status: d.wB.SUBMITTED,
+                    limit: u.p
                 });
         }, [_, t.id]),
         (0, i.jsx)(f.m, {

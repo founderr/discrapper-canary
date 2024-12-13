@@ -11,8 +11,8 @@ var i = n(200651),
     a = n(442837),
     s = n(481060),
     c = n(99690),
-    u = n(359110),
-    d = n(601070),
+    d = n(359110),
+    u = n(601070),
     h = n(91159),
     p = n(488131),
     m = n(496675),
@@ -26,12 +26,12 @@ var i = n(200651),
     b = n(247472);
 function E(e) {
     let { channel: t } = e,
-        r = (0, a.Wu)([d.Z, f.ZP, m.Z], () => {
-            let e = d.Z.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id);
-            return o()(d.Z.getActiveJoinedThreadsForParent(t.guild_id, t.id))
+        r = (0, a.Wu)([u.Z, f.ZP, m.Z], () => {
+            let e = u.Z.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id);
+            return o()(u.Z.getActiveJoinedThreadsForParent(t.guild_id, t.id))
                 .values()
                 .map((e) => e.channel)
-                .concat(o().values(d.Z.getActiveUnjoinedThreadsForParent(t.guild_id, t.id)))
+                .concat(o().values(u.Z.getActiveUnjoinedThreadsForParent(t.guild_id, t.id)))
                 .filter((t) => !(t.id in e) && m.Z.can(_.Plq.VIEW_CHANNEL, t))
                 .sort((e, t) => {
                     let n = f.ZP.lastMessageId(e.id),
@@ -64,7 +64,7 @@ function E(e) {
                     className: b.more,
                     onClick: () => {
                         t.isForumLikeChannel()
-                            ? (0, u.Kh)(t.id)
+                            ? (0, d.Kh)(t.id)
                             : (0, s.openModalLazy)(async () => {
                                   let { default: e } = await n.e('36970').then(n.bind(n, 223901));
                                   return (n) =>

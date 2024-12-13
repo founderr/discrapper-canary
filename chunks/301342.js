@@ -19,8 +19,8 @@ var i = n(200651),
     a = n(91192),
     s = n(442837),
     c = n(481060),
-    u = n(211739),
-    d = n(239091),
+    d = n(211739),
+    u = n(239091),
     h = n(146773),
     p = n(82295),
     m = n(111028),
@@ -45,15 +45,15 @@ let N = l.memo(function (e) {
         R = (0, s.e7)([g.Z], () => g.Z.isCollapsed(r.id)),
         M = (0, s.e7)([v.Z], () => v.Z.can(b.Plq.MANAGE_CHANNELS, r));
     t = null != y ? (N > y ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
-    let w = l.useCallback(() => {
-            R ? (0, u.mJ)(r.id) : (0, u.c4)(r.id);
+    let L = l.useCallback(() => {
+            R ? (0, d.mJ)(r.id) : (0, d.c4)(r.id);
         }, [r.id, R]),
-        L = l.useCallback(
+        w = l.useCallback(
             (e) => {
                 if ('null' !== r.id) {
                     let t = C.Z.getGuild(r.getGuildId());
                     null != t &&
-                        (0, d.jW)(e, async () => {
+                        (0, u.jW)(e, async () => {
                             let { default: e } = await n.e('8965').then(n.bind(n, 139035));
                             return (n) =>
                                 (0, i.jsx)(e, {
@@ -102,14 +102,14 @@ let N = l.memo(function (e) {
                             [S.muted]: P,
                             [S.clickable]: !0
                         }),
-                        onContextMenu: L,
+                        onContextMenu: w,
                         children: [
                             (0, i.jsxs)(c.Clickable, {
                                 innerRef: U,
                                 className: S.mainContent,
                                 tabIndex: k,
                                 ...G,
-                                onClick: w,
+                                onClick: L,
                                 'aria-label': E.intl.formatToPlainString(E.t.y5l3Jy, { categoryName: r.name }),
                                 'aria-expanded': !R,
                                 focusProps: { enabled: !1 },

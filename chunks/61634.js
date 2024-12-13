@@ -11,8 +11,8 @@ var i = n(106351),
     a = n(470883),
     s = n(750881),
     c = n(554747),
-    u = n(146085),
-    d = n(427679),
+    d = n(146085),
+    u = n(427679),
     h = n(131704),
     p = n(199902),
     m = n(314897),
@@ -73,7 +73,7 @@ function Z(e) {
         ),
         A = m.default.getId();
     return (0, l.cj)(
-        [_.Z, f.Z, o.ZP, d.Z, p.Z, C.Z],
+        [_.Z, f.Z, o.ZP, u.Z, p.Z, C.Z],
         () => {
             var t, l, r;
             let s = _.Z.getVoiceChannelId(),
@@ -94,14 +94,14 @@ function Z(e) {
                     activity: S,
                     isCurrentUserConnected: !1
                 };
-            let P = b.default.keys(d.Z.getStageInstancesByGuild(e)).some((e) => {
+            let P = b.default.keys(u.Z.getStageInstancesByGuild(e)).some((e) => {
                     let t = f.Z.getChannel(e);
-                    return null != t && C.Z.can(u.gl, t);
+                    return null != t && C.Z.can(d.gl, t);
                 }),
                 R = c && null !== (r = null === (l = f.Z.getChannel(s)) || void 0 === l ? void 0 : l.isGuildStageVoice()) && void 0 !== r && r,
                 M = !!c && null != p.Z.getActiveStreamForUser(A, e),
-                w = (E ? (0, a.aK)(p.Z.getAllApplicationStreams()) : p.Z.getAllApplicationStreams()).some((t) => t.guildId === e),
-                L = c && j,
+                L = (E ? (0, a.aK)(p.Z.getAllApplicationStreams()) : p.Z.getAllApplicationStreams()).some((t) => t.guildId === e),
+                w = c && j,
                 D = (() => {
                     if (N) return Z.length > 0;
                     for (let e of Z) {
@@ -112,7 +112,7 @@ function Z(e) {
                 })(),
                 O = o.ZP.getEmbeddedActivitiesForGuild(e).length > 0;
             return (
-                c ? ((m = !0), (g = (null == i ? void 0 : i.channel_id) === s), (v = R), (x = L), (I = M), (S = O)) : ((m = y), (g = null != i), (v = P), (x = T), (I = w), (S = D)),
+                c ? ((m = !0), (g = (null == i ? void 0 : i.channel_id) === s), (v = R), (x = w), (I = M), (S = O)) : ((m = y), (g = null != i), (v = P), (x = T), (I = L), (S = D)),
                 {
                     audio: m,
                     video: x,

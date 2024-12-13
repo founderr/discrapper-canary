@@ -1,6 +1,6 @@
 n.d(t, {
     u: function () {
-        return L;
+        return w;
     }
 }),
     n(47120);
@@ -11,8 +11,8 @@ var i = n(200651),
     a = n(433517),
     s = n(481060),
     c = n(339149),
-    u = n(327943),
-    d = n(864682),
+    d = n(327943),
+    u = n(864682),
     h = n(899740),
     p = n(155409),
     m = n(699516),
@@ -46,16 +46,16 @@ let M = {
         y: 0
     }
 };
-function w(e) {
+function L(e) {
     let { selected: t, user: n, badge: h, link: m, showProgressBadge: f } = e,
-        g = (0, o.e7)([u.Z], () => u.Z.isEditorOpen),
+        g = (0, o.e7)([d.Z], () => d.Z.isEditorOpen),
         [C, v] = l.useState(!1),
         [_, x] = l.useState(!1),
         [I, E] = l.useState(null),
-        [j, w] = l.useState(0),
-        L = (0, r.Ie)('home'),
+        [j, L] = l.useState(0),
+        w = (0, r.Ie)('home'),
         D = () => {
-            E(null), w(0), clearTimeout(I);
+            E(null), L(0), clearTimeout(I);
         };
     if (null == n) return null;
     let O = P.intl.string(P.t.YUU0RE);
@@ -77,7 +77,7 @@ function w(e) {
                 onMouseEnter: () => v(!0),
                 onMouseLeave: () => v(!1),
                 onClick: () => {
-                    if (!__OVERLAY__ && (null != I && clearTimeout(I), E(setTimeout(D, 500)), w(j + 1), 15 === j)) {
+                    if (!__OVERLAY__ && (null != I && clearTimeout(I), E(setTimeout(D, 500)), L(j + 1), 15 === j)) {
                         D();
                         let e = !a.K.get(T.wli);
                         a.K.set(T.wli, e),
@@ -91,7 +91,7 @@ function w(e) {
                 },
                 selected: G,
                 ariaLabel: P.intl.string(P.t.YUU0RE),
-                ...L,
+                ...w,
                 to: {
                     pathname: m,
                     state: {
@@ -102,7 +102,7 @@ function w(e) {
                         }
                     }
                 },
-                children: (0, i.jsx)(d.Z, {})
+                children: (0, i.jsx)(u.Z, {})
             })
         });
     return (0, i.jsx)('div', {
@@ -130,7 +130,7 @@ function w(e) {
         })
     });
 }
-function L() {
+function w() {
     let e = (0, E.n)(),
         t = (0, o.e7)([x.Z, _.Z], () => {
             let e = (0, c.E)(x.Z.activeItems, _.Z),
@@ -145,16 +145,16 @@ function L() {
             unviewedDiscountCount: C.Z.getUnacknowledgedDiscountOffers().length
         })),
         s = r + a,
-        u = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
-        d = (0, h.q)(),
-        p = n + s + d,
-        b = p === s && s > 0 && n + d === 0,
+        d = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
+        u = (0, h.q)(),
+        p = n + s + u,
+        b = p === s && s > 0 && n + u === 0,
         S = v.Z.getHomeLink();
     return (
         b && (S = T.Z5c.APPLICATION_STORE),
-        (0, i.jsx)(w, {
+        (0, i.jsx)(L, {
             selected: e,
-            user: u,
+            user: d,
             selectedChannelId: f.Z.getChannelId(T.ME),
             badge: p,
             link: S,

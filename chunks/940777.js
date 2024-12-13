@@ -13,8 +13,8 @@ var i = n(200651),
     a = n(91192),
     s = n(442837),
     c = n(481060),
-    u = n(493683),
-    d = n(239091),
+    d = n(493683),
+    u = n(239091),
     h = n(317381),
     p = n(276952),
     m = n(682662),
@@ -45,14 +45,14 @@ function R() {
     let e = (0, a.Ie)('favorites'),
         { favoriteAdded: t, clearFavoriteAdded: r } = (0, S.up)(),
         [R, M] = l.useState(!1),
-        { favoriteServerMuted: w, favoriteChannels: L } = (0, s.cj)([E.Z], () => ({
+        { favoriteServerMuted: L, favoriteChannels: w } = (0, s.cj)([E.Z], () => ({
             favoriteChannels: E.Z.getFavoriteChannels(),
             favoriteServerMuted: E.Z.favoriteServerMuted
         })),
         D = (0, s.e7)([x.Z], () => x.Z.getChannelId(T.I_8)),
         O = (0, s.e7)([_.Z], () => _.Z.getChannel(D)),
         k = (0, C.Z)((e) => e.guildId) === T.I_8,
-        { badge: G, unread: U } = (0, Z.Z)(L),
+        { badge: G, unread: U } = (0, Z.Z)(w),
         B = (function (e) {
             let t = (0, s.e7)([x.Z], () => x.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
@@ -71,22 +71,22 @@ function R() {
                     })
                 ),
                 c = o.length > 0,
-                u = !1,
                 d = !1,
+                u = !1,
                 p = !1,
                 m = !1;
             return (
-                n ? ((u = !r), (d = r), (p = i), (m = a)) : ((p = l), (m = c)),
+                n ? ((d = !r), (u = r), (p = i), (m = a)) : ((p = l), (m = c)),
                 (0, f.Or)({
-                    audio: u,
-                    video: d,
+                    audio: d,
+                    video: u,
                     screenshare: p,
                     liveStage: !1,
                     isCurrentUserConnected: n,
                     activity: m
                 })
             );
-        })(L),
+        })(w),
         H = G > 0 ? (0, g.N)(G) : null,
         V = l.useCallback(() => {
             r();
@@ -96,7 +96,7 @@ function R() {
             (0, i.jsx)(p.Z, {
                 selected: k,
                 hovered: R,
-                unread: U && !w,
+                unread: U && !L,
                 className: A.pill
             }),
             (0, i.jsx)(y.Z, {
@@ -120,10 +120,10 @@ function R() {
                             onMouseEnter: () => M(!0),
                             onMouseLeave: () => M(!1),
                             onMouseDown: function () {
-                                if (null != O) u.Z.preload(O.guild_id, O.id);
+                                if (null != O) d.Z.preload(O.guild_id, O.id);
                             },
                             onContextMenu: function (e) {
-                                (0, d.jW)(e, async () => {
+                                (0, u.jW)(e, async () => {
                                     let { default: e } = await n.e('3190').then(n.bind(n, 631981));
                                     return (t) => (0, i.jsx)(e, { ...t });
                                 });

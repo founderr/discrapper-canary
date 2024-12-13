@@ -6,8 +6,8 @@ var i = n(200651),
     a = n(512722),
     s = n.n(a),
     c = n(442837),
-    u = n(481060),
-    d = n(570140),
+    d = n(481060),
+    u = n(570140),
     h = n(475179),
     p = n(925549),
     m = n(438139),
@@ -30,8 +30,8 @@ var i = n(200651),
     P = n(989941),
     R = n(690221),
     M = n(231664),
-    w = n(759198),
-    L = n(131704),
+    L = n(759198),
+    w = n(131704),
     D = n(199902),
     O = n(314897),
     k = n(592125),
@@ -65,7 +65,7 @@ class ei extends l.PureComponent {
         }
         return (0, i.jsx)('div', {
             className: et.sparkleContainer,
-            children: (0, i.jsx)(u.LottieAnimation, {
+            children: (0, i.jsx)(d.LottieAnimation, {
                 importData: t,
                 shouldAnimate: !e,
                 className: et.sparkles
@@ -104,11 +104,11 @@ class ei extends l.PureComponent {
                             (0, i.jsxs)('div', {
                                 className: et.perksDemoContainer,
                                 children: [
-                                    (0, i.jsx)(u.NitroWheelIcon, {
+                                    (0, i.jsx)(d.NitroWheelIcon, {
                                         size: 'xxs',
                                         color: S.JX.PREMIUM_TIER_2
                                     }),
-                                    (0, i.jsx)(w.Z, {
+                                    (0, i.jsx)(L.Z, {
                                         className: et.perksDemoText,
                                         variant: 'text-xxs/semibold',
                                         children: n
@@ -154,7 +154,7 @@ class ei extends l.PureComponent {
                                 children: t.name
                             })
                         }),
-                        (0, L.Qm)(l.type) ? c : (0, i.jsx)(en, { timestamps: a })
+                        (0, w.Qm)(l.type) ? c : (0, i.jsx)(en, { timestamps: a })
                     ]
                 })
             ]
@@ -180,7 +180,7 @@ class ei extends l.PureComponent {
             (i = () => {
                 var e;
                 let { channel: t, embeddedActivity: n } = this.props;
-                s()(null != t, 'Channel is null during navigation click'), s()(null != n, 'Activity null during navigation click'), p.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : $.ME, t.id), (0, C.R)() ? d.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' }) : ((0, L.vd)(t.type) && h.Z.selectParticipant(t.id, n.applicationId), (0, L.Qm)(t.type) && (0, _.tg)(ee.Ez.PANEL));
+                s()(null != t, 'Channel is null during navigation click'), s()(null != n, 'Activity null during navigation click'), p.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : $.ME, t.id), (0, C.R)() ? u.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' }) : ((0, w.vd)(t.type) && h.Z.selectParticipant(t.id, n.applicationId), (0, w.Qm)(t.type) && (0, _.tg)(ee.Ez.PANEL));
             }),
             n in t
                 ? Object.defineProperty(t, n, {
@@ -199,11 +199,11 @@ t.Z = (0, f.Z)(function (e) {
         o = (0, c.e7)([Z.ZP, Y.Z], () => (0, P.Z)(Z.ZP, Y.Z)),
         a = (0, c.e7)([W.Z, k.Z], () => k.Z.getChannel(W.Z.getVoiceChannelId())),
         s = (0, c.e7)([x.ZP], () => x.ZP.getConnectedActivityChannelId()),
-        u = (0, c.e7)([k.Z], () => k.Z.getChannel(s)),
-        d = (0, c.e7)([U.Z], () => U.Z.getGuild(null == u ? void 0 : u.guild_id)),
+        d = (0, c.e7)([k.Z], () => k.Z.getChannel(s)),
+        u = (0, c.e7)([U.Z], () => U.Z.getGuild(null == d ? void 0 : d.guild_id)),
         [h, p] = (0, c.Wu)([D.Z], () => [D.Z.getCurrentUserActiveStream(), D.Z.getStreamerActiveStreamMetadata()]),
         m = (0, c.e7)([g.Z], () => g.Z.useReducedMotion),
-        f = (0, c.e7)([x.ZP], () => (null != u ? x.ZP.getSelfEmbeddedActivityForChannel(u.id) : null)),
+        f = (0, c.e7)([x.ZP], () => (null != d ? x.ZP.getSelfEmbeddedActivityForChannel(d.id) : null)),
         _ = (0, c.e7)([U.Z, H.Z, G.ZP], () => (null != a ? y.JL(a, U.Z, H.Z, !1) : null != n && y.h_(G.ZP.getChannels(n), U.Z, H.Z).length > 0)),
         [E] = (0, I.Z)([
             null !==
@@ -220,8 +220,8 @@ t.Z = (0, f.Z)(function (e) {
         j = (0, c.e7)([B.Z], () => (0, T.Z)(B.Z) && (0, K.isWindows)()),
         A = (0, c.e7)([V.Z], () => (null != r ? V.Z.findActivity(r, (e) => e.type === $.IIU.PLAYING) : null)),
         R = null != h && h.ownerId === r && h.state !== $.jm8.ENDED,
-        w = (0, c.e7)([z.default, F.Z], () => (null != u ? (0, b.F6)(u, z.default, F.Z) : void 0)),
-        L = (0, M.Z)();
+        L = (0, c.e7)([z.default, F.Z], () => (null != d ? (0, b.F6)(d, z.default, F.Z) : void 0)),
+        w = (0, M.Z)();
     return (0, i.jsx)(ei, {
         ...l,
         guildId: n,
@@ -233,12 +233,12 @@ t.Z = (0, f.Z)(function (e) {
         application: E,
         useReducedMotion: m,
         isStreaming: R,
-        channel: u,
+        channel: d,
         canStream: _,
         stream: h,
         streamMetadata: p,
-        channelName: w,
-        guildForConnectedChannel: d,
-        streamQualityIndicator: L
+        channelName: L,
+        guildForConnectedChannel: u,
+        streamQualityIndicator: w
     });
 });

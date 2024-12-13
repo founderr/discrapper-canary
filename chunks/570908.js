@@ -9,7 +9,7 @@ var l = n(120356),
     r = n.n(l),
     o = n(743483);
 function a(e) {
-    let { selected: t, muted: n = !1, highlighted: l = !1, wrapContent: a = !1, avatar: s, decorators: c, name: u, subText: d, avatarClassName: h, innerClassName: p } = e;
+    let { selected: t, muted: n = !1, highlighted: l = !1, wrapContent: a = !1, avatar: s, decorators: c, name: d, subText: u, avatarClassName: h, innerClassName: p } = e;
     return (0, i.jsxs)('div', {
         className: r()(p, o.layout, {
             [o.muted]: !t && n,
@@ -29,15 +29,15 @@ function a(e) {
                         children: [
                             (0, i.jsx)('div', {
                                 className: r()(o.name, { [o.wrappedName]: a }),
-                                children: u
+                                children: d
                             }),
                             c
                         ]
                     }),
-                    null != d
+                    null != u
                         ? (0, i.jsx)('div', {
                               className: o.subText,
-                              children: d
+                              children: u
                           })
                         : null
                 ]

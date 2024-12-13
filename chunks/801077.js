@@ -6,8 +6,8 @@ var i,
     a = n(392711),
     s = n.n(a),
     c = n(278074),
-    u = n(442837),
-    d = n(570140),
+    d = n(442837),
+    u = n(570140),
     h = n(782769),
     p = n(527805),
     m = n(841784),
@@ -30,8 +30,8 @@ var i,
     P = n(480294),
     R = n(831506),
     M = n(731290),
-    w = n(430824),
-    L = n(496675),
+    L = n(430824),
+    w = n(496675),
     D = n(158776),
     O = n(699516),
     k = n(594174),
@@ -84,16 +84,16 @@ function en(e) {
 }
 function ei(e) {
     let t = G.Z.getVoiceStateForUser(e);
-    return (null == t ? void 0 : t.channelId) != null && L.Z.canWithPartialContext(H.Plq.VIEW_CHANNEL, { channelId: t.channelId }) ? t.channelId : null;
+    return (null == t ? void 0 : t.channelId) != null && w.Z.canWithPartialContext(H.Plq.VIEW_CHANNEL, { channelId: t.channelId }) ? t.channelId : null;
 }
 function el(e) {
     return O.Z.isFriend(e.id);
 }
 function er(e, t, n) {
     var i, l, r, o, a, c;
-    let u;
-    let d = k.default.getCurrentUser(),
-        f = null !== (i = null == d ? void 0 : d.nsfwAllowed) && void 0 !== i && i,
+    let d;
+    let u = k.default.getCurrentUser(),
+        f = null !== (i = null == u ? void 0 : u.nsfwAllowed) && void 0 !== i && i,
         g = t.map((e) => e.id),
         C = t.filter((t) => e.has(t.id)),
         v = !1,
@@ -119,7 +119,7 @@ function er(e, t, n) {
         let c = (0, E.Z)(a);
         if (null == c) continue;
         Z = c === N.XB;
-        let u = (function (e) {
+        let d = (function (e) {
                 let t = _.Z.getApplication(e);
                 return null != t ? t : 'string' != typeof e ? (new I.Z('NowPlayingViewStore').error('Unknown type for applicationId: '.concat(typeof e, ', value: ').concat(e), { tags: { source: 'ACTIVITIES' } }), null) : e === N.XB ? N.r9 : e.startsWith(T.H) ? $(e.slice(T.H.length)) : e.startsWith(y._) ? ee(e.slice(y._.length)) : (et(e), null);
             })(c),
@@ -130,21 +130,21 @@ function er(e, t, n) {
                 (0, p.ZP)({
                     activity: a,
                     userId: e.id,
-                    application: u,
+                    application: d,
                     channelId: null === (r = G.Z.getVoiceStateForUser(e.id)) || void 0 === r ? void 0 : r.channelId,
-                    currentUser: d,
+                    currentUser: u,
                     isActivitiesEnabledForCurrentPlatform: t,
                     ChannelStore: A.Z,
                     VoiceStateStore: G.Z,
-                    PermissionStore: L.Z,
-                    GuildStore: w.Z
+                    PermissionStore: w.Z,
+                    GuildStore: L.Z
                 }) !== p.Fw.CAN_JOIN
             )
                 continue;
         } else if (null == g) continue;
-        if (!S.JE(a) || null == u || b.has(u.id)) continue;
+        if (!S.JE(a) || null == d || b.has(d.id)) continue;
         let C = null != a ? en(a) : null;
-        (null == C || C.id !== u.id) && (a = null);
+        (null == C || C.id !== d.id) && (a = null);
         let D = [];
         (D =
             null != a && null != a.party && null != a.party.id
@@ -155,12 +155,12 @@ function er(e, t, n) {
                 : t.filter((e) => {
                       let t = X(e.id),
                           n = null != t ? en(t) : null;
-                      return null != n && n.id === u.id;
+                      return null != n && n.id === d.id;
                   })),
             (D = s().orderBy(D, [el], ['desc'])).length !== t.length && (v = !0),
-            b.add(u.id),
+            b.add(d.id),
             x.push({
-                game: u,
+                game: d,
                 activity: a,
                 activityUser: e,
                 startedPlayingTime: g,
@@ -175,8 +175,8 @@ function er(e, t, n) {
         let n = ei(e.id),
             i = A.Z.getChannel(n),
             l = null != i ? i.getGuildId() : null,
-            r = w.Z.getGuild(l);
-        if ((V.has(l) && H.has(n)) || null == i || null == r || i.id === r.afkChannelId) null == i && ((u = null), (O = !0));
+            r = L.Z.getGuild(l);
+        if ((V.has(l) && H.has(n)) || null == i || null == r || i.id === r.afkChannelId) null == i && ((d = null), (O = !0));
         else {
             let e = G.Z.getVoiceStatesForChannel(i.id),
                 o = s()(e)
@@ -188,7 +188,7 @@ function er(e, t, n) {
                     .orderBy([el], ['desc'])
                     .value();
             o.filter((e) => !g.includes(e.id)).forEach((e) => t.push(e)),
-                O ? !V.has(l) && (u = null) : ((u = r), (O = !0)),
+                O ? !V.has(l) && (d = null) : ((d = r), (O = !0)),
                 V.add(l),
                 H.add(n),
                 U.push({
@@ -209,7 +209,7 @@ function er(e, t, n) {
         })),
         partiedMembers: t,
         showPlayingMembers: v,
-        guildContext: u,
+        guildContext: d,
         currentActivities: ((a = x),
         (c = (e) => {
             var t;
@@ -245,7 +245,7 @@ function es(e) {
 function ec() {
     return V && b.Z.isConnected();
 }
-let eu = s().throttle(() => {
+let ed = s().throttle(() => {
     !(function () {
         var e;
         if (!ec()) return;
@@ -334,12 +334,12 @@ let eu = s().throttle(() => {
     })(),
         ep.emitChange();
 }, 1000);
-function ed() {
-    return !!ec() && (eu(), !1);
+function eu() {
+    return !!ec() && (ed(), !1);
 }
-class eh extends (i = u.ZP.Store) {
+class eh extends (i = d.ZP.Store) {
     initialize() {
-        this.syncWith([k.default, _.Z, D.Z, R.Z, G.Z, j.Z, O.Z, P.Z, Z.Z], ed), this.waitFor(b.Z, w.Z, _.Z, k.default, Z.Z);
+        this.syncWith([k.default, _.Z, D.Z, R.Z, G.Z, j.Z, O.Z, P.Z, Z.Z], eu), this.waitFor(b.Z, L.Z, _.Z, k.default, Z.Z);
     }
     get currentActivityParties() {
         return W;
@@ -363,12 +363,12 @@ class eh extends (i = u.ZP.Store) {
               writable: !0
           })
         : (l[r] = o);
-let ep = new eh(d.Z, {
+let ep = new eh(u.Z, {
     LOGOUT: function () {
         (V = !1), (W = []), (z = []), q.clear();
     },
     NOW_PLAYING_MOUNTED: function () {
-        (V = !0), eu();
+        (V = !0), ed();
     },
     NOW_PLAYING_UNMOUNTED: function () {
         V = !1;

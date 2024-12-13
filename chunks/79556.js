@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return w;
     }
 }),
     n(47120);
@@ -12,8 +12,8 @@ var l = n(120356),
     a = n(481060),
     s = n(493683),
     c = n(239091),
-    u = n(146773),
-    d = n(595519),
+    d = n(146773),
+    u = n(595519),
     h = n(619915),
     p = n(201895),
     m = n(873696),
@@ -64,7 +64,7 @@ class M extends Z.ZP {
               });
     }
     render() {
-        let { channel: e, guild: t, selected: n, muted: l, unread: o, hasActiveThreads: s, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: f, canReorderChannel: g, isSubscriptionGated: C, isFavoriteSuggestion: v, subtitle: _, forceTopLevelThread: x, embeddedApps: I, resolvedUnreadSetting: b, withGuildIcon: E, enableActivities: S } = this.props,
+        let { channel: e, guild: t, selected: n, muted: l, unread: o, hasActiveThreads: s, hasMoreActiveThreads: c, mentionCount: d, connectChannelDropTarget: u, connectChannelDragSource: h, connectDragPreview: f, canReorderChannel: g, isSubscriptionGated: C, isFavoriteSuggestion: v, subtitle: _, forceTopLevelThread: x, embeddedApps: I, resolvedUnreadSetting: b, withGuildIcon: E, enableActivities: S } = this.props,
             Z = S && null != I && I.length > 0,
             N = (0, m.D)(_),
             T = (0, i.jsx)('li', {
@@ -89,7 +89,7 @@ class M extends Z.ZP {
                             selected: !v && n,
                             muted: l,
                             unread: o,
-                            mentionCount: u,
+                            mentionCount: d,
                             hasActiveThreads: s,
                             subtitle: null == N ? void 0 : N.subtitle,
                             subtitleColor: null == N ? void 0 : N.color,
@@ -103,14 +103,14 @@ class M extends Z.ZP {
                             'aria-label': (0, p.ZP)({
                                 channel: e,
                                 unread: o,
-                                mentionCount: u,
+                                mentionCount: d,
                                 isSubscriptionGated: C
                             }),
                             children: [v && this.renderAcceptSuggestionButton(), v && this.renderRemoveSuggestionButton(), !v && this.renderInviteButton(), !v && this.renderEditButton(), !v && this.renderChannelInfo()]
                         })
                 })
             });
-        return g ? d(h(T)) : T;
+        return g ? u(h(T)) : T;
     }
     constructor(...e) {
         super(...e),
@@ -204,10 +204,10 @@ class M extends Z.ZP {
             });
     }
 }
-let w = (0, u.B)(M);
-function L(e) {
+let L = (0, d.B)(M);
+function w(e) {
     let { channel: t, guild: n, disableSorting: l, isFavoriteCategory: r, muted: a, selected: s } = e,
-        { hasActiveThreads: c, hasMoreActiveThreads: u } = (0, C.JQ)(t),
+        { hasActiveThreads: c, hasMoreActiveThreads: d } = (0, C.JQ)(t),
         p = (0, o.cj)([I.ZP], () => ({
             unread: I.ZP.hasUnread(t.id),
             ackMessageId: I.ZP.ackMessageId(t.id),
@@ -232,7 +232,7 @@ function L(e) {
             },
             [t]
         ),
-        R = (0, d.NX)(t.id),
+        R = (0, u.NX)(t.id),
         M = (0, N.Z)({
             channel: t,
             isChannelCollapsed: !1,
@@ -244,20 +244,20 @@ function L(e) {
             enableActivities: R,
             resolvedUnreadSetting: m
         }),
-        L = (0, h.ZP)(t);
-    return (0, i.jsx)(w, {
+        w = (0, h.ZP)(t);
+    return (0, i.jsx)(L, {
         ...p,
         ..._,
         ...e,
         hasActiveThreads: c,
-        hasMoreActiveThreads: u,
+        hasMoreActiveThreads: d,
         isSubscriptionGated: y,
         needSubscriptionToAccess: Z,
         isNewChannel: S && e.canBeNewChannel,
         isFavoriteSuggestion: r && !T,
         canShowThreadPreviewForUser: P,
         channelInfo: M,
-        embeddedApps: L,
+        embeddedApps: w,
         resolvedUnreadSetting: m,
         hasChannelInfo: null != M,
         enableActivities: R

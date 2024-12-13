@@ -1,6 +1,6 @@
 n.d(t, {
     JE: function () {
-        return u;
+        return d;
     },
     ct: function () {
         return c;
@@ -39,7 +39,7 @@ function c(e) {
         );
     }
 }
-function u(e) {
+function d(e) {
     var t;
     let n = e.application_id;
     if (null == n) return !0;

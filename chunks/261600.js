@@ -10,20 +10,20 @@ var i = n(200651),
     a = n(592125),
     s = n(922482),
     c = n(750154),
-    u = n(427679),
-    d = n(388032);
+    d = n(427679),
+    u = n(388032);
 function h(e) {
     var t, n;
     let { activity: h } = e,
         { channelId: p } = null !== (t = (0, c.rq)(h)) && void 0 !== t ? t : {},
-        m = (0, r.e7)([u.Z], () => u.Z.getStageInstanceByChannel(p), [p]),
+        m = (0, r.e7)([d.Z], () => d.Z.getStageInstanceByChannel(p), [p]),
         f = l.useRef(null),
         g = l.useCallback(() => {
             let e = a.Z.getChannel(p);
             null != e && s.Cq(e);
         }, [p]),
         C = null !== (n = null == m ? void 0 : m.topic) && void 0 !== n ? n : h.name,
-        v = d.intl.formatToPlainString(d.t['T+DNAA'], { channel: C });
+        v = u.intl.formatToPlainString(u.t['T+DNAA'], { channel: C });
     return (0, i.jsx)('div', {
         ref: f,
         children: (0, i.jsx)(o.Clickable, {
@@ -42,7 +42,7 @@ class p {
     }
     createHeader(e) {
         return {
-            subtitle: d.intl.string(d.t['+AJFJy']),
+            subtitle: u.intl.string(u.t['+AJFJy']),
             icon: null
         };
     }

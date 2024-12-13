@@ -3,7 +3,7 @@ n.d(t, {
         return T;
     },
     ZP: function () {
-        return w;
+        return L;
     },
     eP: function () {
         return P;
@@ -22,8 +22,8 @@ var i,
     a = n(200651),
     s = n(192379),
     c = n(120356),
-    u = n.n(c),
-    d = n(442837),
+    d = n.n(c),
+    u = n(442837),
     h = n(481060),
     p = n(787014),
     m = n(924301),
@@ -48,7 +48,7 @@ function j(e, t) {
 }
 function A(e) {
     let { channel: t, disableManageChannels: n, tabIndex: i, forceShowButtons: l, hasChannelInfo: r = !1 } = e;
-    if ((0, d.e7)([b.Z, E.Z], () => n || E.Z.getGuildId() === Z.I_8 || (!b.Z.can(Z.Plq.MANAGE_CHANNELS, t) && !b.Z.can(Z.Plq.MANAGE_ROLES, t) && !b.Z.can(Z.Plq.MANAGE_WEBHOOKS, t)) || ((0, _.r8)(t.type) && !b.Z.can(Z.Plq.VIEW_CHANNEL, t)) || (t.isGuildVocal() && !b.Z.can(Z.Plq.CONNECT, t)) || !_.dF.has(t.type))) return null;
+    if ((0, u.e7)([b.Z, E.Z], () => n || E.Z.getGuildId() === Z.I_8 || (!b.Z.can(Z.Plq.MANAGE_CHANNELS, t) && !b.Z.can(Z.Plq.MANAGE_ROLES, t) && !b.Z.can(Z.Plq.MANAGE_WEBHOOKS, t)) || ((0, _.r8)(t.type) && !b.Z.can(Z.Plq.VIEW_CHANNEL, t)) || (t.isGuildVocal() && !b.Z.can(Z.Plq.CONNECT, t)) || !_.dF.has(t.type))) return null;
     function o() {
         p.ZP.open(t.id);
     }
@@ -57,7 +57,7 @@ function A(e) {
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: n, onFocus: s, onBlur: c } = e;
             return (0, a.jsx)(h.Clickable, {
-                className: u()(y.iconItem, l ? y.alwaysShown : void 0, r ? y.iconWithChannelInfo : y.iconNoChannelInfo),
+                className: d()(y.iconItem, l ? y.alwaysShown : void 0, r ? y.iconWithChannelInfo : y.iconNoChannelInfo),
                 onClick: o,
                 tabIndex: i,
                 'aria-label': N.intl.string(N.t['3gUsJS']),
@@ -76,11 +76,11 @@ function A(e) {
 }
 function P(e) {
     let { channel: t, isDefaultChannel: i = !1, locked: l, tabIndex: r, forceShowButtons: o, hasChannelInfo: s = !1 } = e,
-        c = (0, d.e7)([I.Z], () => I.Z.getGuild(t.getGuildId())),
-        p = (0, d.e7)([C.Z], () => C.Z.getStageInstanceByChannel(t.id), [t.id]),
-        g = (0, d.e7)([m.ZP], () => m.ZP.getActiveEventByChannel(t.id), [t.id]),
-        _ = (0, d.e7)([b.Z], () => (0, f.b)(b.Z, c, t, p)),
-        E = (0, d.e7)([b.Z], () => (b.Z.can(Z.Plq.CREATE_INSTANT_INVITE, t) ? N.intl.string(N.t.zJrgTE) : N.intl.string(N.t.Sd8Ix8)));
+        c = (0, u.e7)([I.Z], () => I.Z.getGuild(t.getGuildId())),
+        p = (0, u.e7)([C.Z], () => C.Z.getStageInstanceByChannel(t.id), [t.id]),
+        g = (0, u.e7)([m.ZP], () => m.ZP.getActiveEventByChannel(t.id), [t.id]),
+        _ = (0, u.e7)([b.Z], () => (0, f.b)(b.Z, c, t, p)),
+        E = (0, u.e7)([b.Z], () => (b.Z.can(Z.Plq.CREATE_INSTANT_INVITE, t) ? N.intl.string(N.t.zJrgTE) : N.intl.string(N.t.Sd8Ix8)));
     if (l || !_) return null;
     function S() {
         if (null != c) {
@@ -115,7 +115,7 @@ function P(e) {
             text: E,
             children: (e) =>
                 (0, a.jsx)(h.Clickable, {
-                    className: u()(y.iconItem, o ? y.alwaysShown : void 0, s ? y.iconWithChannelInfo : y.iconNoChannelInfo),
+                    className: d()(y.iconItem, o ? y.alwaysShown : void 0, s ? y.iconWithChannelInfo : y.iconNoChannelInfo),
                     ...e,
                     onClick: S,
                     tabIndex: r,
@@ -167,7 +167,7 @@ function M(e) {
             })
     });
 }
-class w extends (o = s.PureComponent) {
+class L extends (o = s.PureComponent) {
     renderEditButton() {
         return (0, a.jsx)(A, { ...this.props });
     }
@@ -190,7 +190,7 @@ class w extends (o = s.PureComponent) {
     }
 }
 (r = { isDefaultChannel: !1 }),
-    (l = 'defaultProps') in (i = w)
+    (l = 'defaultProps') in (i = L)
         ? Object.defineProperty(i, l, {
               value: r,
               enumerable: !0,

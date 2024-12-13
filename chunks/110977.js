@@ -10,8 +10,8 @@ var i = n(200651),
     a = n(481060),
     s = n(540059),
     c = n(593214),
-    u = n(981631),
-    d = n(388032),
+    d = n(981631),
+    u = n(388032),
     h = n(134123),
     p = n(782451),
     m = n(572488);
@@ -20,7 +20,7 @@ function f() {
         className: o()(p.row, p.rowGuildName),
         children: (0, i.jsx)('span', {
             className: o()(p.guildNameText, p.guildNameTextLimitedSize, h.tooltipText),
-            children: d.intl.string(d.t['4tSWQk'])
+            children: u.intl.string(u.t['4tSWQk'])
         })
     });
 }
@@ -56,8 +56,8 @@ let g = l.memo(function (e) {
         children: (e) =>
             (0, i.jsx)('div', {
                 ...e,
-                onMouseEnter: u.dG4,
-                onMouseLeave: u.dG4,
+                onMouseEnter: d.dG4,
+                onMouseLeave: d.dG4,
                 children: n
             })
     });
