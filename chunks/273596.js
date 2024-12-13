@@ -61,12 +61,11 @@ function L(e) {
         H = r.useRef(null),
         V = r.useCallback(
             (e) => {
-                var t;
-                if (y || O || m) return;
-                let n = null === (t = H.current) || void 0 === t ? void 0 : t.getScrollerState();
-                null != n && null != e && n.scrollHeight <= e.height && L();
+                if (null == e || y || O || m) return;
+                let t = s.length / U;
+                336 * t <= e.height && L();
             },
-            [y, L, m, O]
+            [y, O, m, s.length, U, L]
         ),
         F = (0, d.y)((e) => {
             let t = null == e ? void 0 : e.getBoundingClientRect();
@@ -80,7 +79,7 @@ function L(e) {
     r.useLayoutEffect(() => {
         var e;
         V(null === (e = F.current) || void 0 === e ? void 0 : e.getBoundingClientRect());
-    }, [F, s, V]),
+    }, [F, V]),
         r.useEffect(() => {
             D((0, f.PM)());
         }, [N]),
