@@ -84,20 +84,26 @@ function E(e) {
         : null;
 }
 function I(e) {
-    let { item: n } = e;
+    let { item: n } = e,
+        [t, r] = a.useState(!1);
     if (!('VIDEO' === n.type || (m.isPlatformEmbedded && null == n.children && 'IMAGE' === n.type && (0, d.gS)(n.url)))) return null;
-    let t = (0, d.s$)(n.url);
-    async function a() {
-        if (('VIDEO' === n.type && (0, h.q)({ href: t }), 'IMAGE' === n.type))
+    let l = (0, d.s$)(n.url);
+    async function s() {
+        if (('VIDEO' === n.type && (0, h.q)({ href: l }), 'IMAGE' === n.type)) {
+            r(!0);
             try {
-                await p.ZP.saveImage(t), (0, o.showToast)((0, o.createToast)(_.intl.string(_.t.cqpdJS), o.ToastType.SUCCESS));
+                await p.ZP.saveImage(l), (0, o.showToast)((0, o.createToast)(_.intl.string(_.t.cqpdJS), o.ToastType.SUCCESS));
             } catch (e) {
                 (0, o.showToast)((0, o.createToast)(_.intl.string(_.t['8Ve/S0']), o.ToastType.FAILURE));
+            } finally {
+                r(!1);
             }
+        }
     }
     return (0, i.jsx)(S, {
-        onClick: a,
+        onClick: s,
         tooltipText: _.intl.string('VIDEO' === n.type ? _.t.JVuuz8 : _.t['S/xNKS']),
+        submitting: t,
         children: (0, i.jsx)(o.DownloadIcon, {})
     });
 }
