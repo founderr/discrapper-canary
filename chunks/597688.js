@@ -25,73 +25,75 @@ function g(e, n, r) {
 let E = new Map(),
     v = new Map(),
     I = new Map(),
-    T = [],
-    b = E,
-    y = v,
-    S = I,
-    A = T,
-    N = null,
-    C = !1,
-    R = new Set();
-let O = new Map(),
-    D = new Map();
-let L = {},
-    x = (e) => {
-        let { skuId: n } = e;
-        (R = new Set(R)).add(n), (O = new Map(O)).delete(n), (D = new Map(D)).delete(n);
-    },
-    w = (e) => {
-        let { skuId: n, error: r } = e;
-        (R = new Set(R)).delete(n), (O = new Map(O)).set(n, r), (D = new Map(D)).set(n, Date.now());
-    },
+    T = new Map(),
+    b = [],
+    y = E,
+    S = v,
+    A = I,
+    N = T,
+    C = b,
+    R = null,
+    O = !1,
+    D = new Set();
+let L = new Map(),
+    x = new Map();
+let w = {},
     P = (e) => {
-        let { skuId: n, product: r } = e;
-        y.set(n, r), (R = new Set(R)).delete(n), (O = new Map(O)).delete(n), (D = new Map(D)).delete(n);
+        let { skuId: n } = e;
+        (D = new Set(D)).add(n), (L = new Map(L)).delete(n), (x = new Map(x)).delete(n);
     },
     M = (e) => {
-        (C = !0), (i = void 0), (s = void 0), (L = e.options);
+        let { skuId: n, error: r } = e;
+        (D = new Set(D)).delete(n), (L = new Map(L)).set(n, r), (x = new Map(x)).set(n, Date.now());
     },
     k = (e) => {
-        let { error: n } = e;
-        (b = E), (y = v), (A = T), (C = !1), (R = new Set()), (i = n), (s = Date.now());
+        let { skuId: n, product: r } = e;
+        S.set(n, r), (D = new Set(D)).delete(n), (L = new Map(L)).delete(n), (x = new Map(x)).delete(n);
     },
     U = (e) => {
-        0 === e.categories.length ? ((b = E), (y = v)) : !(0, u.isEqual)([...b.values()], e.categories) && ((b = new Map(e.categories.map((e) => [e.skuId, e]))), (y = new Map((0, p.Cs)(b, !0).map((e) => [e.skuId, e]))), (S = new Map((0, p.Cs)(b, !1).map((e) => [e.storeListingId, e])))), B(e.categories, y), (a = Date.now()), (C = !1), (i = void 0), (s = void 0);
+        (O = !0), (i = void 0), (s = void 0), (w = e.options);
     },
-    B = (e, n) => {
+    B = (e) => {
+        let { error: n } = e;
+        (y = E), (S = v), (C = b), (O = !1), (D = new Set()), (i = n), (s = Date.now());
+    },
+    G = (e) => {
+        0 === e.categories.length ? ((y = E), (S = v)) : !(0, u.isEqual)([...y.values()], e.categories) && ((y = new Map(e.categories.map((e) => [e.skuId, e]))), (N = new Map(e.categories.map((e) => [e.storeListingId, e]))), (S = new Map((0, p.Cs)(y, !0).map((e) => [e.skuId, e]))), (A = new Map((0, p.Cs)(y, !1).map((e) => [e.storeListingId, e])))), Z(e.categories, S), (a = Date.now()), (O = !1), (i = void 0), (s = void 0);
+    },
+    Z = (e, n) => {
         if (0 === e.length) {
-            A = T;
+            C = b;
             return;
         }
-        switch (N) {
+        switch (R) {
             case _.u.POPULAR:
-                A = m.HU;
+                C = m.HU;
                 break;
             case _.u.RECENT:
-                A = (0, p.x0)(e, n);
+                C = (0, p.x0)(e, n);
                 break;
             case _.u.NONE:
             default:
-                A = T;
+                C = b;
         }
     },
-    G = () => {
-        (b = E), (y = v), (A = T), (a = void 0), (C = !1), (R = new Set()), (i = void 0), (s = void 0), (L = {});
+    F = () => {
+        (y = E), (S = v), (C = b), (a = void 0), (O = !1), (D = new Set()), (i = void 0), (s = void 0), (w = {});
     },
-    Z = () => {
+    V = () => {
         if (!f.Z.hasLoadedExperiments) return;
         let { giftRecommendationAlgorithm: e } = _.G.getCurrentConfig({ location: 'CollectiblesCategoryStore handleExperimentChange' }, { autoTrackExposure: !1 });
-        e !== N && (a = void 0), (N = e);
+        e !== R && (a = void 0), (R = e);
     };
-class F extends (o = c.ZP.Store) {
+class j extends (o = c.ZP.Store) {
     initialize() {
-        this.syncWith([h.default], G), this.syncWith([f.Z], Z);
+        this.syncWith([h.default], F), this.syncWith([f.Z], V);
     }
     get isFetchingCategories() {
-        return C;
+        return O;
     }
     isFetchingProduct(e) {
-        return null != e && R.has(e);
+        return null != e && D.has(e);
     }
     get error() {
         return i;
@@ -103,44 +105,47 @@ class F extends (o = c.ZP.Store) {
         return a;
     }
     get lastFetchOptions() {
-        return L;
+        return w;
     }
     get categories() {
-        return b;
-    }
-    get products() {
         return y;
     }
+    get products() {
+        return S;
+    }
     get recommendedGiftSkuIds() {
-        return A;
+        return C;
     }
     getCategory(e) {
-        return null != e ? b.get(e) : void 0;
-    }
-    getProduct(e) {
         return null != e ? y.get(e) : void 0;
     }
+    getProduct(e) {
+        return null != e ? S.get(e) : void 0;
+    }
     getProductFetchError(e) {
-        return null != e ? O.get(e) : void 0;
+        return null != e ? L.get(e) : void 0;
     }
     getProductFetchErrorTimestamp(e) {
-        return null != e ? D.get(e) : void 0;
+        return null != e ? x.get(e) : void 0;
     }
     getProductByStoreListingId(e) {
-        return null != e ? S.get(e) : void 0;
+        return null != e ? A.get(e) : void 0;
+    }
+    getCategoryByStoreListingId(e) {
+        return null != e ? N.get(e) : void 0;
     }
     getCategoryForProduct(e) {
         let n = this.getProduct(e);
         return this.getCategory(null == n ? void 0 : n.categorySkuId);
     }
 }
-g(F, 'displayName', 'CollectiblesCategoryStore'),
-    (n.Z = new F(d.Z, {
-        COLLECTIBLES_CATEGORIES_FETCH: M,
-        COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: U,
-        COLLECTIBLES_CATEGORIES_FETCH_FAILURE: k,
-        COLLECTIBLES_PRODUCT_FETCH: x,
-        COLLECTIBLES_PRODUCT_FETCH_SUCCESS: P,
-        COLLECTIBLES_PRODUCT_FETCH_FAILURE: w,
-        LOGOUT: G
+g(j, 'displayName', 'CollectiblesCategoryStore'),
+    (n.Z = new j(d.Z, {
+        COLLECTIBLES_CATEGORIES_FETCH: U,
+        COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: G,
+        COLLECTIBLES_CATEGORIES_FETCH_FAILURE: B,
+        COLLECTIBLES_PRODUCT_FETCH: P,
+        COLLECTIBLES_PRODUCT_FETCH_SUCCESS: k,
+        COLLECTIBLES_PRODUCT_FETCH_FAILURE: M,
+        LOGOUT: F
     }));
