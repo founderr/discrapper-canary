@@ -1,88 +1,103 @@
 n.d(t, {
     dt: function () {
-        return p;
+        return f;
     },
     eo: function () {
-        return m;
+        return g;
     }
-});
+}),
+    n(653041),
+    n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(884338),
-    o = n(934415),
-    a = n(540126),
-    s = n(700026),
-    c = n(301342),
-    d = n(327530),
-    u = n(607686);
-let h = l.memo(function (e) {
+    r = n(442837),
+    o = n(884338),
+    a = n(9156),
+    s = n(934415),
+    c = n(540126),
+    u = n(700026),
+    d = n(301342),
+    h = n(327530),
+    p = n(607686);
+let m = l.memo(function (e) {
     let { guildChannels: t, guildChannelsVersion: n } = e,
         r = l.useMemo(() => t.getCategoryFromSection(t.voiceChannelsSectionNumber), [t, n]);
-    return null == r ? null : (0, i.jsx)(c.Qo, { category: r });
+    return null == r ? null : (0, i.jsx)(d.Qo, { category: r });
 });
-function p(e) {
-    let { sectionIndex: t, guildChannels: n, voiceStates: i, selectedChannelId: l, selectedVoiceChannelId: r, optInEnabled: o, visualRefreshEnabled: c } = e;
+function f(e) {
+    let { sectionIndex: t, guildChannels: n, voiceStates: i, selectedChannelId: l, selectedVoiceChannelId: r, optInEnabled: o, visualRefreshEnabled: a } = e;
     if (t === n.voiceChannelsSectionNumber) return 44;
-    let { hasDivider: u, canHaveVoiceSummary: h } = (0, s.ie)(n, o, t),
-        p = u ? d.QP : 0;
-    if (!h || t === a.wZ) return p;
+    let { hasDivider: s, canHaveVoiceSummary: d } = (0, u.ie)(n, o, t),
+        p = s ? h.QP : 0;
+    if (!d || t === c.wZ) return p;
     let m = n.getNamedCategoryFromSection(t);
     return null == m
         ? p
-        : (0, s.V5)({
+        : (0, u.V5)({
                 category: m,
                 selectedChannelId: l,
                 selectedVoiceChannelId: r,
                 voiceStates: i
             })
-          ? (c ? 38 : d.Vf) + p
+          ? (a ? 38 : h.Vf) + p
           : p;
 }
-function m(e, t, n) {
+function g(e, t, n) {
     if (e === t.voiceChannelsSectionNumber) return 'voice-channels-button';
-    let { hasDivider: i, canHaveVoiceSummary: l } = (0, s.ie)(t, n, e);
+    let { hasDivider: i, canHaveVoiceSummary: l } = (0, u.ie)(t, n, e);
     return 'section-footer-'
         .concat(e)
         .concat(i ? '-divider' : '')
         .concat(l ? '-voice-summary' : '');
 }
 t.ZP = l.memo(function (e) {
-    let { sectionIndex: t, guildChannels: n, guildChannelsVersion: c, voiceStates: d, guildId: p, selectedChannelId: m, selectedVoiceChannelId: f, optInEnabled: g } = e,
-        { hasDivider: C, canHaveVoiceSummary: v } = l.useMemo(() => (0, s.ie)(n, g, t), [n, g, t, c]),
-        _ = l.useMemo(() => (t === a.wZ ? null : n.getCategoryFromSection(t)), [n, t, c]),
-        x = l.useMemo(
+    let { sectionIndex: t, guildChannels: n, guildChannelsVersion: d, voiceStates: h, guildId: f, selectedChannelId: g, selectedVoiceChannelId: C, optInEnabled: v } = e,
+        { hasDivider: _, canHaveVoiceSummary: x } = l.useMemo(() => (0, u.ie)(n, v, t), [n, v, t, d]),
+        I = l.useMemo(() => (t === c.wZ ? null : n.getCategoryFromSection(t)), [n, t, d]),
+        b = (0, r.Wu)(
+            [a.ZP],
+            () => {
+                if (null == I || !I.isCollapsed || !x) return [];
+                let e = I.getChannelRecords(),
+                    t = [];
+                for (let n of e) {
+                    if (!!n.isGuildVocal()) a.ZP.isChannelOrParentOptedIn(f, n.id) && t.push(n);
+                }
+                return t;
+            },
+            [I, x, f]
+        ),
+        E = l.useMemo(
             () =>
-                null != _ && _.isCollapsed
-                    ? (0, o.c4)({
-                          channels: _.getChannelRecords(),
-                          selectedChannelId: m,
-                          selectedVoiceChannelId: f,
-                          voiceStates: d
-                      })
-                    : [],
-            [_, m, f, d]
+                (0, s.c4)({
+                    channels: b,
+                    selectedChannelId: g,
+                    selectedVoiceChannelId: C,
+                    voiceStates: h
+                }),
+            [b, g, C, h]
         );
     if (t === n.voiceChannelsSectionNumber)
-        return (0, i.jsx)(h, {
+        return (0, i.jsx)(m, {
             guildChannels: n,
-            guildChannelsVersion: c
+            guildChannelsVersion: d
         });
-    let I = C ? (0, i.jsx)('div', { className: u.sectionDivider }) : null;
-    return v && 0 !== x.length
+    let S = _ ? (0, i.jsx)('div', { className: p.sectionDivider }) : null;
+    return x && 0 !== E.length
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)('div', {
-                      className: u.voiceUserSummary,
-                      children: (0, i.jsx)(r.Z, {
+                      className: p.voiceUserSummary,
+                      children: (0, i.jsx)(o.Z, {
                           renderIcon: !0,
-                          users: x,
+                          users: E,
                           max: 8,
                           showUserPopout: !0,
-                          guildId: p
+                          guildId: f
                       })
                   }),
-                  I
+                  S
               ]
           })
-        : I;
+        : S;
 });
