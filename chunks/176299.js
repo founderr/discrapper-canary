@@ -289,19 +289,19 @@ function ek(e) {
     document.body.style.setProperty('--custom-guild-sidebar-width', ''.concat(e, 'px'));
 }
 function eU(e) {
-    let { hasNotice: t, sidebarTheme: n, hideSidebar: l, isSidebarOpen: o, isOnFullScreenCollectiblesShopRoute: s } = e;
+    let { hasNotice: t, sidebarTheme: n, hideSidebar: l, hideChannelList: o, isSidebarOpen: s, isOnFullScreenCollectiblesShopRoute: c } = e;
     (0, g.t)(!0);
-    let c = 'app view user trigger debugging';
-    p.R6.useExperiment({ location: c }, { autoTrackExposure: !1 }), p.R6.trackExposure({ location: c });
-    let _ = (0, u.e7)([C.Z], () => C.Z.isFullscreenInContext()),
-        E = (0, x.TH)('ChannelSidebar'),
-        I = (0, x.Q3)('ChannelSidebar'),
-        v = (0, T.useAppSidebarState)((e) => !e.isOpen) && E;
+    let _ = 'app view user trigger debugging';
+    p.R6.useExperiment({ location: _ }, { autoTrackExposure: !1 }), p.R6.trackExposure({ location: _ });
+    let E = (0, u.e7)([C.Z], () => C.Z.isFullscreenInContext()),
+        I = (0, x.TH)('ChannelSidebar'),
+        v = (0, x.Q3)('ChannelSidebar'),
+        S = (0, T.useAppSidebarState)((e) => !e.isOpen) && I;
     r.useLayoutEffect(() => {
-        if (E) {
+        if (I) {
             var e;
             let t = parseInt(null !== (e = h.K.get(eg)) && void 0 !== e ? e : '');
-            Number.isNaN(t) && (t = 375), (t = Math.min(Math.max(t, 264), 432)), !E && t <= 76 && (t = 375), ek(t);
+            Number.isNaN(t) && (t = 375), (t = Math.min(Math.max(t, 264), 432)), !I && t <= 76 && (t = 375), ek(t);
             let n = (e) => {
                 e.metaKey && 'b' === e.key && T.useAppSidebarState.setState((e) => ({ isOpen: !e.isOpen }));
             };
@@ -312,89 +312,90 @@ function eU(e) {
                 }
             );
         }
-    }, [E]),
+    }, [I]),
         r.useLayoutEffect(() => {
-            if (v) ek(76);
+            if (S) ek(76);
             else {
                 var e;
                 let t = parseInt(null !== (e = h.K.get(eg)) && void 0 !== e ? e : '');
                 Number.isNaN(t) && (t = 375), ek(t);
             }
-        }, [v]);
-    let S = r.useRef(null),
-        N = r.useCallback(
+        }, [S]);
+    let N = r.useRef(null),
+        b = r.useCallback(
             (e, t) => {
                 var n;
                 ek(e);
                 let i = t < 88;
                 t <= 264 ? document.body.classList.add(ep.draggingMin) : document.body.classList.remove(ep.draggingMin), t >= 432 ? document.body.classList.add(ep.draggingMax) : document.body.classList.remove(ep.draggingMax);
                 let r = t - e;
-                null === (n = S.current) || void 0 === n || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(r / 76), 0.25))), E && (T.useAppSidebarState.setState({ isOpen: !i }), i && ek(76));
+                null === (n = N.current) || void 0 === n || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(r / 76), 0.25))), I && (T.useAppSidebarState.setState({ isOpen: !i }), i && ek(76));
             },
-            [E]
+            [I]
         ),
-        b = r.useCallback(() => {
+        A = r.useCallback(() => {
             document.body.classList.add(ep.dragging);
         }, []),
-        A = r.useCallback((e) => {
+        Z = r.useCallback((e) => {
             var t;
-            document.body.classList.remove(ep.dragging), document.body.classList.remove(ep.draggingMin), document.body.classList.remove(ep.draggingMax), document.body.classList.remove(ep.collapsing), null === (t = S.current) || void 0 === t || t.style.setProperty('--custom-overdrag', '0px'), h.K.set(eg, e);
+            document.body.classList.remove(ep.dragging), document.body.classList.remove(ep.draggingMin), document.body.classList.remove(ep.draggingMax), document.body.classList.remove(ep.collapsing), null === (t = N.current) || void 0 === t || t.style.setProperty('--custom-overdrag', '0px'), h.K.set(eg, e);
         }, []),
-        Z = (0, f.Z)({
+        L = (0, f.Z)({
             minDimension: 264,
             maxDimension: 432,
-            resizableDomNodeRef: S,
-            onElementResize: N,
-            onElementResizeStart: b,
-            onElementResizeEnd: A,
+            resizableDomNodeRef: N,
+            onElementResize: b,
+            onElementResizeStart: A,
+            onElementResizeEnd: Z,
             orientation: f.y.HORIZONTAL_RIGHT,
             throttleDuration: 0
         }),
-        L = r.useCallback(() => {
+        P = r.useCallback(() => {
             T.useAppSidebarState.setState((e) => ({ isOpen: !e.isOpen }));
         }, []);
     if (
         (r.useLayoutEffect(() => {
-            v && ek(76);
-        }, [v]),
-        l)
+            S && ek(76);
+        }, [S]),
+        l || (!v && o))
     )
         return null;
-    let P = I ? 'div' : r.Fragment,
-        y = I ? { className: a()(ep.sidebarList, { [ep.sidebarListRounded]: !t }) } : {};
+    let y = v ? 'div' : r.Fragment,
+        O = v ? { className: a()(ep.sidebarList, { [ep.sidebarListRounded]: !t }) } : {};
     return (0, i.jsx)(m.ThemeProvider, {
         theme: n,
         children: (e) =>
             (0, i.jsxs)('div', {
-                ref: I ? S : void 0,
-                'data-collapsed': v,
+                ref: v ? N : void 0,
+                'data-collapsed': S,
                 className: a()(ep.sidebar, e, {
                     [ep.hasNotice]: t,
                     [ep.fullWidth]: d.tq,
-                    [ep.hidden]: _
+                    [ep.hidden]: E
                 }),
                 children: [
-                    I &&
-                        o &&
-                        !s &&
+                    v &&
+                        s &&
+                        !c &&
                         (0, i.jsx)(M.Z, {
                             className: ep.guilds,
                             themeOverride: n
                         }),
-                    (0, i.jsx)(P, {
-                        ...y,
-                        children: (0, i.jsx)(eb, {})
-                    }),
-                    I
+                    !o &&
+                        (0, i.jsx)(y, {
+                            ...O,
+                            children: (0, i.jsx)(eb, {})
+                        }),
+                    v
                         ? (0, i.jsx)(m.Clickable, {
-                              onClick: L,
+                              onClick: P,
                               'aria-label': 'Resize Sidebar',
                               className: ep.sidebarResizeHandle,
-                              onMouseDown: Z
+                              onMouseDown: L
                           })
                         : null,
                     (0, i.jsx)(er.b, {}),
-                    !I && (0, i.jsx)(ea.Z, {})
+                    !v && (0, i.jsx)(ea.Z, {})
                 ]
             })
     });
@@ -475,7 +476,8 @@ function eG() {
                                         isSidebarOpen: m,
                                         hasNotice: t,
                                         sidebarTheme: n,
-                                        hideSidebar: f || !m
+                                        hideChannelList: f,
+                                        hideSidebar: !m || h
                                     }),
                                     (0, i.jsx)(N, {
                                         className: ep.page,
