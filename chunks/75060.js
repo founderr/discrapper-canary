@@ -1,5 +1,6 @@
 n.Z = {
-    getRawThermalState: () => Promise.resolve(void 0),
+    getRawThermalState() {},
+    useRawThermalState() {},
     addListener: (e) => ({
         remove: () => {}
     })

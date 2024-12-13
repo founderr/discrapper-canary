@@ -1,37 +1,36 @@
 n.d(t, {
     V: function () {
-        return c;
+        return s;
     }
 });
 var i = n(317381),
-    r = n(573979),
-    l = n(75060);
+    r = n(176787);
 n(817938);
-var a = n(238679),
-    o = n(981631),
-    s = n(701488);
-async function c(e, t, n) {
-    var c, d;
+var l = n(238679),
+    a = n(981631),
+    o = n(701488);
+function s(e, t, n) {
+    var s, c;
     switch (t) {
-        case o.zMe.ACTIVITY_PIP_MODE_UPDATE: {
-            let t = null === (c = e.application) || void 0 === c ? void 0 : c.id,
+        case a.zMe.ACTIVITY_PIP_MODE_UPDATE: {
+            let t = null === (s = e.application) || void 0 === s ? void 0 : s.id,
                 n = null != t ? i.ZP.getLayoutModeForApp(t) : null;
-            return null != n ? { is_pip_mode: n !== s.cE.FOCUSED } : null;
+            return null != n ? { is_pip_mode: n !== o.cE.FOCUSED } : null;
         }
-        case o.zMe.ACTIVITY_LAYOUT_MODE_UPDATE: {
-            let t = null === (d = e.application) || void 0 === d ? void 0 : d.id,
+        case a.zMe.ACTIVITY_LAYOUT_MODE_UPDATE: {
+            let t = null === (c = e.application) || void 0 === c ? void 0 : c.id,
                 n = null != t ? i.ZP.getLayoutModeForApp(t) : null;
             return null != n ? { layout_mode: n } : null;
         }
-        case o.zMe.THERMAL_STATE_UPDATE: {
-            let e = await l.Z.getRawThermalState();
-            if (null == e) return null;
-            return { thermal_state: (0, r.Z)(e) };
+        case a.zMe.THERMAL_STATE_UPDATE: {
+            let e = (0, r.bY)();
+            if (e === r.bG.UNHANDLED) return null;
+            return { thermal_state: e };
         }
-        case o.zMe.ORIENTATION_UPDATE:
+        case a.zMe.ORIENTATION_UPDATE:
             return null;
-        case o.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE:
-            return (0, a.dO)();
+        case a.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE:
+            return (0, l.dO)();
         default:
             return null;
     }
