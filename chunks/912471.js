@@ -46,34 +46,35 @@ function v() {
     null != E && (clearTimeout(E), (E = null)), null != _ && (clearInterval(_), (_ = null));
 }
 async function S() {
-    let e = Date.now(),
-        t = await (0, p.Gg)(),
-        n = Date.now();
-    if (null == t) {
-        m.Z.captureException(Error('Null session when tracking session heartbeat. Waited '.concat(n - e, 'ms')));
+    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+        t = Date.now(),
+        n = await (0, p.Gg)(),
+        l = Date.now();
+    if (null == n) {
+        m.Z.captureException(Error('Null session when tracking session heartbeat. Waited '.concat(l - t, 'ms')));
         return;
     }
-    if (!I) {
+    if (!I && !e) {
         m.Z.captureException(Error('Heartbeat scheduler not started when tracking session heartbeat.')), v();
         return;
     }
     m.Z.addBreadcrumb({
         message: 'Tracking Heartbeat',
-        data: { initialized: t.initialized }
+        data: { initialized: n.initialized }
     });
-    let l = {
-            client_heartbeat_initialization_timestamp: t.initialized,
+    let c = {
+            client_heartbeat_initialization_timestamp: n.initialized,
             client_heartbeat_version: 17
         },
-        c = h.Z.getMemoryUsageElectronRenderer();
-    null != c && (l.client_heartbeat_renderer_memory = c);
-    let u = h.Z.getMemoryUsageElectronRendererUsedHeapSize();
-    null != u && (l.client_heartbeat_renderer_memory_used_heap = u);
+        u = h.Z.getMemoryUsageElectronRenderer();
+    null != u && (c.client_heartbeat_renderer_memory = u);
+    let _ = h.Z.getMemoryUsageElectronRendererUsedHeapSize();
+    null != _ && (c.client_heartbeat_renderer_memory_used_heap = _);
     {
         let e = s.ZP.getCurrentGameForAnalytics();
-        null != e && ((l.client_heartbeat_current_game_id = e.id), (l.client_heartbeat_current_game_name = e.name), (l.client_heartbeat_current_game_executable = (0, o.N6)(e.exePath)), (l.client_heartbeat_current_game_distributor = e.distributor), (l.uses_client_mods = (0, i.e)()));
+        null != e && ((c.client_heartbeat_current_game_id = e.id), (c.client_heartbeat_current_game_name = e.name), (c.client_heartbeat_current_game_executable = (0, o.N6)(e.exePath)), (c.client_heartbeat_current_game_distributor = e.distributor), (c.uses_client_mods = (0, i.e)()));
     }
-    d.default.track(g.rMx.CLIENT_HEARTBEAT, l), r.K.set(f, Date.now().toString()), (0, a.Z)();
+    d.default.track(g.rMx.CLIENT_HEARTBEAT, c), r.K.set(f, Date.now().toString()), (0, a.Z)();
 }
 let N = null,
     T = !0;
@@ -93,7 +94,7 @@ function A() {
     m.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), c.Z.addChangeListener(Z), l.Z.subscribe('WINDOW_FOCUS', L), l.Z.subscribe('APP_STATE_UPDATE', P), l.Z.subscribe('LOGIN_SUCCESS', x), b();
 }
 function x() {
-    S();
+    S(!0);
 }
 function Z() {
     let e = c.Z.getState();
