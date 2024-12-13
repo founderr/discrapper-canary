@@ -285,7 +285,8 @@ class ec extends (i = r.PureComponent) {
                             'aria-labelledby': el,
                             'aria-controls': er,
                             'aria-expanded': !0,
-                            'aria-activedescendant': 'user-row-'.concat(r)
+                            'aria-activedescendant': 'user-row-'.concat(r),
+                            autoComplete: 'off'
                         }
                     }),
                     this.renderAddUsersButton()
@@ -308,8 +309,7 @@ class ec extends (i = r.PureComponent) {
                     variant: 'heading-lg/semibold',
                     children: t
                 }),
-                this.renderSubtitle(),
-                this.renderSearchBar()
+                this.renderSubtitle()
             ]
         });
     }
@@ -455,15 +455,9 @@ class ec extends (i = r.PureComponent) {
         if (this.isNotFriends() || !e || this.isPartyFull()) return null;
         let n = null == t || t.isDM() ? this.renderCreateGroupButton() : this.renderInviteLink();
         if (null != n)
-            return (0, l.jsxs)(r.Fragment, {
-                children: [
-                    (0, l.jsx)('div', { className: ee.footerSeparator }),
-                    (0, l.jsx)(j.Z, {
-                        direction: j.Z.Direction.VERTICAL,
-                        className: ee.footer,
-                        children: n
-                    })
-                ]
+            return (0, l.jsx)(m.ModalFooter, {
+                className: ee.footer,
+                children: n
             });
     }
     render() {
@@ -471,7 +465,13 @@ class ec extends (i = r.PureComponent) {
         return (0, l.jsxs)(m.ModalRoot, {
             transitionState: null != e ? e : m.ModalTransitionState.ENTERED,
             className: ee.popout,
-            children: [this.renderHeader(), this.renderBody(), this.renderFooter()]
+            children: [
+                this.renderHeader(),
+                (0, l.jsxs)(m.ModalContent, {
+                    children: [this.renderSearchBar(), this.renderBody()]
+                }),
+                this.renderFooter()
+            ]
         });
     }
     handleAddFriend(e) {
