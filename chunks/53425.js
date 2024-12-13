@@ -3,40 +3,44 @@ var i = n(200651),
     r = n(120356),
     o = n.n(r),
     a = n(442837),
-    s = n(592125),
-    c = n(938475),
-    u = n(823379),
-    d = n(734190),
-    h = n(388032),
-    p = n(329986);
+    s = n(481060),
+    c = n(540059),
+    d = n(592125),
+    u = n(938475),
+    h = n(823379),
+    p = n(734190),
+    m = n(388032),
+    f = n(329986);
 t.Z = l.memo(function (e) {
-    let { channel: t, selectedChannel: n, selectedVoiceChannelId: l, sortedThreadIds: r, withGuildIcon: m } = e,
-        f = (0, a.Wu)([s.Z], () => r.map((e) => s.Z.getChannel(e)).filter(u.lm), [r]),
-        g = (0, a.e7)([c.ZP], () => {
-            let e = f[f.length - 1];
+    let { channel: t, selectedChannel: n, selectedVoiceChannelId: l, sortedThreadIds: r, withGuildIcon: g } = e,
+        { density: C } = (0, s.useThemeContext)(),
+        v = (0, c.Q3)('GuildSidebarThreadList'),
+        _ = (0, a.Wu)([d.Z], () => r.map((e) => d.Z.getChannel(e)).filter(h.lm), [r]),
+        x = (0, a.e7)([u.ZP], () => {
+            let e = _[_.length - 1];
             if (null == e) return 0;
-            let t = c.ZP.getVoiceStates(e.guild_id)[e.id];
+            let t = u.ZP.getVoiceStates(e.guild_id)[e.id];
             return null == t || 0 === t.length ? 0 : l !== e.id ? 40 : 32 * t.length + 8;
         });
     return (0, i.jsx)('li', {
-        className: p.container,
+        className: f.container,
         children: (0, i.jsxs)('ul', {
             role: 'group',
-            'aria-label': h.intl.formatToPlainString(h.t.EiyIi4, { channelName: t.name }),
+            'aria-label': m.intl.formatToPlainString(m.t.EiyIi4, { channelName: t.name }),
             children: [
                 (0, i.jsx)('div', {
-                    className: o()(p.spineBorder, { [p.spineBorderWithGuildIcon]: m }),
-                    style: { bottom: 24 + g }
+                    className: o()(f.spineBorder, { [f.spineBorderWithGuildIcon]: g }),
+                    style: { bottom: (v && 'cozy' === C ? 28 : 24) + x }
                 }),
-                f.map((e, t) =>
+                _.map((e, t) =>
                     (0, i.jsx)(
-                        d.Z,
+                        p.Z,
                         {
                             thread: e,
                             isSelectedChannel: (null == n ? void 0 : n.id) === e.id,
                             isSelectedVoice: l === e.id,
-                            isLast: t === f.length - 1,
-                            withGuildIcon: m
+                            isLast: t === _.length - 1,
+                            withGuildIcon: g
                         },
                         e.id
                     )
