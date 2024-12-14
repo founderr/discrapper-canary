@@ -1,52 +1,54 @@
 r.d(n, {
     Z: function () {
-        return _;
+        return h;
     }
 });
 var i = r(47120);
 var a = r(200651),
     s = r(192379),
     o = r(561308),
-    l = r(369566),
-    u = r(565640),
-    c = r(151545),
-    d = r(744802),
-    f = r(493043);
-function _(e) {
-    let { user: n, currentUser: r, profileGuildId: i, className: _, onClose: h } = e,
-        { live: p, recent: m, stream: g } = (0, l.Z)(n.id),
-        [E] = p,
-        v = n.id === r.id,
-        I = (0, u.Z)(n.id, 'UserProfileFeaturedActivity'),
-        T = s.useMemo(() => (v ? m.find(o.Ae) : I), [v, m, I]);
-    return null != g
-        ? (0, a.jsx)(f.Z, {
+    l = r(456644),
+    u = r(369566),
+    c = r(565640),
+    d = r(151545),
+    f = r(744802),
+    _ = r(493043);
+function h(e) {
+    let { user: n, currentUser: r, profileGuildId: i, className: h, onClose: p } = e,
+        { live: m, recent: g, stream: E } = (0, u.Z)(n.id),
+        [v] = m,
+        { recentActivityEnabled: I } = (0, l.i)({ location: 'UserProfileFeaturedActivity' }),
+        T = n.id === r.id,
+        b = (0, c.Z)(n.id, 'UserProfileFeaturedActivity'),
+        y = s.useMemo(() => (T ? g.find(o.Ae) : b), [T, g, b]);
+    return null != E
+        ? (0, a.jsx)(_.Z, {
               location: 'UserProfileFeaturedActivity',
               user: n,
               currentUser: r,
-              stream: g,
+              stream: E,
               profileGuildId: i,
-              className: _,
-              onClose: h
+              className: h,
+              onClose: p
           })
-        : null != E
-          ? (0, a.jsx)(c.Z, {
+        : null != v
+          ? (0, a.jsx)(d.Z, {
                 user: n,
                 currentUser: r,
-                activity: E,
+                activity: v,
                 profileGuildId: i,
-                className: _,
-                onClose: h
+                className: h,
+                onClose: p
             })
-          : null != T
-            ? (0, a.jsx)(d.Z, {
+          : I && null != y
+            ? (0, a.jsx)(f.Z, {
                   location: 'UserProfileFeaturedActivity',
                   user: n,
                   currentUser: r,
-                  entry: T,
+                  entry: y,
                   profileGuildId: i,
-                  className: _,
-                  onClose: h
+                  className: h,
+                  onClose: p
               })
             : null;
 }
