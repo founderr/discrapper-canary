@@ -22,7 +22,7 @@ function c(e, n) {
     var r;
     let i = !1,
         a = n.map((n, r) => {
-            let { guid: a, guid: s, name: o, name: l, index: c } = n;
+            let { guid: a, guid: s, name: o, name: l, index: c, facing: d } = n;
             return (
                 /^default/.test(o) ? ((i = !0), (a = u.w5), (o = o.replace('default', 'Default'))) : (a = null != a && '' !== a ? a : o),
                 null != c && (r = c),
@@ -32,7 +32,8 @@ function c(e, n) {
                     index: r,
                     name: o,
                     originalName: l,
-                    originalId: s
+                    originalId: s,
+                    facing: d
                 }
             );
         });

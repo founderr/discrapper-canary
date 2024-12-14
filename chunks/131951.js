@@ -696,7 +696,8 @@ function tx(e, n) {
             id: e.id,
             index: e.index,
             name: e.name,
-            disabled: !1
+            disabled: !1,
+            facing: e.facing
         }))
         .keyBy('id')
         .value();
