@@ -18,8 +18,8 @@ var r = n(200651),
     m = n(70097),
     h = n(963249),
     p = n(594174),
-    f = n(451478),
-    g = n(754347),
+    g = n(451478),
+    f = n(754347),
     C = n(74538),
     v = n(884697),
     b = n(624377),
@@ -84,7 +84,7 @@ function L(e) {
         { backgroundColors: E } = (0, b.Z)(p.styles),
         L = (0, S.ZS)(p.skuId),
         P = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
-        Z = (0, o.e7)([f.Z], () => f.Z.isFocused());
+        Z = (0, o.e7)([g.Z], () => g.Z.isFocused());
     if (p.skuId === s.T.CHANCE) return (0, r.jsx)(k.O, { category: p });
     let O = !!(null == L ? void 0 : L.showDarkBannerText),
         w = null !== (m = null == L ? void 0 : L.animatedBanner) && void 0 !== m ? m : null === (t = p.bannerAsset) || void 0 === t ? void 0 : t.animated;
@@ -111,7 +111,7 @@ function L(e) {
                               color: 'currentColor',
                               className: T.discordIcon
                           }),
-                          (0, r.jsx)(g.Z, { className: T.discordWordmark })
+                          (0, r.jsx)(f.Z, { className: T.discordWordmark })
                       ]
                   })
                 : (0, r.jsx)(c.Spacer, { size: 28 }),

@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(481060),
     h = n(150063),
     p = n(434650),
-    f = n(100527),
-    g = n(906732),
+    g = n(100527),
+    f = n(906732),
     C = n(702486),
     v = n(605236),
     b = n(977395),
@@ -123,11 +123,11 @@ function ei(e) {
 function el(e) {
     let { category: t, isPremiumUser: n, initialItemCardRef: i, isGiftEasterEggEnabled: s, setIsGiftEasterEggEnabled: o, showEasterEggToggle: c, isFullScreen: d } = e,
         u = a.useRef(10 + 70 * Math.random()),
-        [h, f] = a.useState(!1),
-        g = (0, q.M7)(t.skuId),
+        [h, g] = a.useState(!1),
+        f = (0, q.M7)(t.skuId),
         C = (0, p.O)(
             (e) => {
-                f(e && null != g);
+                g(e && null != f);
             },
             d ? 0.13 : 0.15
         );
@@ -147,7 +147,7 @@ function el(e) {
                 }),
             (0, r.jsx)(H.Z, {
                 category: t,
-                hideLimitedTimeBadge: null != g
+                hideLimitedTimeBadge: null != f
             }),
             (0, r.jsx)(ei, {
                 category: t,
@@ -155,12 +155,12 @@ function el(e) {
                 isPremiumUser: n,
                 isGiftEasterEggEnabled: s
             }),
-            null != g &&
+            null != f &&
                 null != t.unpublishedAt &&
                 (0, r.jsx)(R.$, {
                     unpublishedAt: t.unpublishedAt,
                     isVisible: h,
-                    displayOptions: g,
+                    displayOptions: f,
                     isFullScreen: d
                 })
         ]
@@ -172,7 +172,7 @@ t.default = function (e) {
     (0, x.z)(b.f);
     let i = (0, P.u)('CollectiblesShop'),
         { analyticsSource: s, analyticsLocations: p } = (0, c.cj)([L.Z], () => L.Z.getAnalytics()),
-        { analyticsLocations: _ } = (0, g.ZP)([...p, f.Z.COLLECTIBLES_SHOP]),
+        { analyticsLocations: _ } = (0, f.ZP)([...p, g.Z.COLLECTIBLES_SHOP]),
         { sessionId: k, scrollerRef: w, scrollHandler: R } = (0, C._)(X.rMx.COLLECTIBLES_SHOP_SCROLLED, s),
         { feedState: H, catalogState: U, transitionToCatalog: z, transitionToFeed: $ } = (0, A.B)(i, w),
         [q, ea] = a.useState(!1),
@@ -182,8 +182,8 @@ t.default = function (e) {
         em = (0, c.e7)([S.Z], () => S.Z.getLayers().includes(X.S9g.COLLECTIBLES_SHOP)),
         eh = (0, u.f9)(),
         { onClose: ep } = (0, M.Db)(),
-        ef = (0, c.e7)([j.default], () => j.default.getCurrentUser()),
-        eg = T.ZP.canUseCollectibles(ef),
+        eg = (0, c.e7)([j.default], () => j.default.getCurrentUser()),
+        ef = T.ZP.canUseCollectibles(eg),
         { categories: eC, isFetchingCategories: ev, fetchCategoriesError: eb, fetchPurchasesError: ex, claimError: e_, refreshCategories: ek } = (0, Z.ZP)({ location: 'CollectiblesShop.web' }),
         eI = null !== (t = null != eb ? eb : ex) && void 0 !== t ? t : e_;
     (0, I.P)();
@@ -208,12 +208,12 @@ t.default = function (e) {
                         category: H === Q.f7.VISIBLE ? void 0 : null === (e = y.Z.getCategory(eo)) || void 0 === e ? void 0 : e.name
                     });
             }
-            !eg &&
+            !ef &&
                 E.default.track(X.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: en.cd.COLLECTIBLES_SHOP,
                     location_stack: _
                 });
-        }, [i, eg, _, s, k, H, U, eo, ec, ed]);
+        }, [i, ef, _, s, k, H, U, eo, ec, ed]);
     let { dismissCollectiblesShopTabNewBadge: eN } = (0, K.Z)();
     a.useEffect(() => {
         if ((eN(), !(0, v.un)(d.z.COLLECTIBLES_GIFTING_COACHMARK)))
@@ -266,7 +266,7 @@ t.default = function (e) {
             var e;
             return null === (e = y.Z.getCategory(eo)) || void 0 === e ? void 0 : e.name;
         });
-    return (0, r.jsx)(g.Gt, {
+    return (0, r.jsx)(f.Gt, {
         value: _,
         children: (0, r.jsxs)(B.k0, {
             newValue: {
@@ -352,7 +352,7 @@ t.default = function (e) {
                                                                             children: (0, r.jsx)(B.k0, {
                                                                                 newValue: { categoryPosition: t },
                                                                                 children: (0, r.jsx)(el, {
-                                                                                    isPremiumUser: eg,
+                                                                                    isPremiumUser: ef,
                                                                                     category: e,
                                                                                     initialItemCardRef: ej,
                                                                                     setIsGiftEasterEggEnabled: eT,

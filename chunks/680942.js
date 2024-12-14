@@ -10,8 +10,8 @@ var r = n(200651),
     m = n(67409),
     h = n(474936),
     p = n(231338),
-    f = n(388032),
-    g = n(74483);
+    g = n(388032),
+    f = n(74483);
 let C = {
     dark: [
         {
@@ -84,18 +84,18 @@ t.Z = (e) => {
     return (0, d.x6)(t)
         ? null
         : (0, r.jsx)(i.Tooltip, {
-              text: f.intl.string(f.t['JCFN//']),
+              text: g.intl.string(g.t['JCFN//']),
               delay: x,
               children: (e) =>
                   (0, r.jsx)(i.Button, {
                       ...e,
                       buttonRef: S,
-                      className: g.giftButton,
+                      className: f.giftButton,
                       color: k ? i.ButtonColors.BRAND : i.ButtonColors.CUSTOM,
                       look: i.Button.Looks.FILLED,
                       size: i.ButtonSizes.ICON,
-                      innerClassName: g.giftButtonInner,
-                      'aria-label': f.intl.string(f.t.PEjaCw),
+                      innerClassName: f.giftButtonInner,
+                      'aria-label': g.intl.string(g.t.PEjaCw),
                       onClick: (e) => {
                           e.stopPropagation(),
                               (0, o.Z)({

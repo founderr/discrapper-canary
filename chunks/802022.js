@@ -10,8 +10,8 @@ var r = n(200651),
     m = n(607070),
     h = n(210887),
     p = n(388032),
-    f = n(176500),
-    g = n(336387),
+    g = n(176500),
+    f = n(336387),
     C = n(458597);
 t.Z = function () {
     let e = a.useRef(null),
@@ -27,29 +27,29 @@ t.Z = function () {
         }, [v, b]);
     return (0, r.jsxs)('div', {
         ref: e,
-        className: l()(i ? f.shopCardDark : f.shopCard, g.notInteractive, {
-            [f.shopCardAnimation]: !n,
-            [i ? f.shopCardDarkHighlighted : f.shopCardHighlighted]: t
+        className: l()(i ? g.shopCardDark : g.shopCard, f.notInteractive, {
+            [g.shopCardAnimation]: !n,
+            [i ? g.shopCardDarkHighlighted : g.shopCardHighlighted]: t
         }),
         children: [
             (0, r.jsx)('div', {
-                className: f.preview,
+                className: g.preview,
                 children: (0, r.jsx)('div', {
-                    className: l()(f.avatarContainer, f.mysteryAvatarContainer),
+                    className: l()(g.avatarContainer, g.mysteryAvatarContainer),
                     children: (0, r.jsx)('img', {
                         src: C,
-                        className: g.spark,
+                        className: f.spark,
                         alt: ''
                     })
                 })
             }),
             (0, r.jsxs)('div', {
-                className: f.cardText,
+                className: g.cardText,
                 children: [
-                    (0, r.jsx)('div', { className: l()(f.cardBackground, i ? f.darkCardBackground : f.lightCardBackground) }),
+                    (0, r.jsx)('div', { className: l()(g.cardBackground, i ? g.darkCardBackground : g.lightCardBackground) }),
                     (0, r.jsx)(c.Text, {
                         variant: 'text-lg/bold',
-                        className: g.productName,
+                        className: f.productName,
                         children: p.intl.string(p.t.ZDfl3d)
                     })
                 ]
@@ -57,7 +57,7 @@ t.Z = function () {
             (0, r.jsx)(c.TextBadge, {
                 text: x,
                 disableColor: !0,
-                className: f.newBadge
+                className: g.newBadge
             })
         ]
     });

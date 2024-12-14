@@ -21,26 +21,26 @@ let d = (e) => (e.length > 5 ? e.replace(/\.00$/, '') : e),
                 icon: m,
                 className: h,
                 discount: p = o.f_,
-                variant: f = 'heading-md/semibold'
+                variant: g = 'heading-md/semibold'
             } = e,
-            g = d((0, s.T4)(n, a)),
+            f = d((0, s.T4)(n, a)),
             C =
                 p !== o.f_ && p.discountPercentage >= 5
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              g,
+                              f,
                               (0, r.jsx)(l.Heading, {
-                                  variant: f,
+                                  variant: g,
                                   color: 'text-positive',
                                   className: c.discount,
                                   children: ' (-'.concat(p.discountPercentage, '%)')
                               })
                           ]
                       })
-                    : g;
+                    : f;
         return (0, r.jsx)(r.Fragment, {
             children: (0, r.jsxs)(l.Heading, {
-                variant: f,
+                variant: g,
                 className: i()(c.container, h),
                 children: [m, null !== (t = null == u ? void 0 : u(C)) && void 0 !== t ? t : C]
             })
