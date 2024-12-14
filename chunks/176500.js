@@ -16,7 +16,6 @@ e.exports = {
     priceTag: 'priceTag_c23530',
     buttonsContainer: 'buttonsContainer_c23530',
     previewButton: 'previewButton_c23530',
-    purchaseButton: 'purchaseButton_c23530',
     previewButtonInner: 'previewButtonInner_c23530',
     premiumWheelTooltipContent: 'premiumWheelTooltipContent_c23530',
     premiumWheelBadge: 'premiumWheelBadge_c23530',

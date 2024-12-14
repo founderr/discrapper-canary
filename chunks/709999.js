@@ -265,7 +265,6 @@ t.Z = function (e) {
                             })
                           : (0, r.jsx)(er, {
                                 disabled: eI,
-                                className: en.purchaseButton,
                                 ...e,
                                 children: ex ? et.intl.string(et.t.zp6caG) : et.intl.formatToPlainString(et.t['cNSL/v'], { price: ev })
                             }),
