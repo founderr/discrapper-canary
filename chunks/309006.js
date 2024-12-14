@@ -18,15 +18,16 @@ var l = r(772848),
     m = r(685596);
 let g = 50;
 function E(e) {
-    let n = null == e ? void 0 : e.getBoundingClientRect();
-    return null == n
+    var n;
+    let r = null == e ? void 0 : null === (n = e.parentElement) || void 0 === n ? void 0 : n.getBoundingClientRect();
+    return null == r
         ? {
               width: 0,
               height: 0
           }
         : {
-              width: n.width,
-              height: n.height
+              width: r.width,
+              height: r.height
           };
 }
 n.Z = s.forwardRef(function (e, n) {

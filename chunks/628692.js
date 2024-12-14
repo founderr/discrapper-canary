@@ -104,7 +104,6 @@ function O(e) {
                         refreshEnabled: !0,
                         onSelectItem: w,
                         isPlayingSoundOverride: O,
-                        isAnimated: !1,
                         isSoundmoji: !0,
                         buttonOverlay: E.Pb.SOUNDMOJI,
                         tooltipClassName: A.tooltip,

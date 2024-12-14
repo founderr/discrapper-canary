@@ -5,9 +5,6 @@ r.d(n, {
     Hh: function () {
         return N;
     },
-    P6: function () {
-        return S;
-    },
     ZP: function () {
         return C;
     },
@@ -59,12 +56,10 @@ function S(e) {
         s = (0, c.e7)([_.default], () => p.ZP.canUseSoundboardEverywhere(_.default.getCurrentUser())),
         o = (0, c.e7)([f.Z], () => f.Z.getGuildId());
     return r || s || n.guildId === v.X8 || n.guildId === o || !i
-        ? (0, a.jsx)('div', {
-              children: (0, a.jsx)(d.TextBadge, {
-                  text: 'BETA',
-                  color: u.Z.BG_BRAND,
-                  className: T.betaBadge
-              })
+        ? (0, a.jsx)(d.TextBadge, {
+              text: 'BETA',
+              color: u.Z.BG_BRAND,
+              className: T.betaBadge
           })
         : (0, a.jsxs)('div', {
               className: T.infoNitroContainer,
@@ -97,7 +92,7 @@ function S(e) {
 function A(e) {
     let { sound: n } = e;
     return (0, a.jsxs)('div', {
-        className: T.infoContainer,
+        className: l()(T.infoContainer, T.infoTooltip),
         children: [
             (0, a.jsx)(S, { sound: n }),
             (0, a.jsxs)('div', {
@@ -143,49 +138,52 @@ function N(e) {
             p(String(Date.now()));
         }, []),
         E = s.useRef(null);
-    return (
-        s.useEffect(() => {
-            var e, n;
-            f ? null === (e = E.current) || void 0 === e || e.focus() : null === (n = E.current) || void 0 === n || n.blur(), null == u || u(f);
-        }, [f, u]),
-        (0, a.jsx)(d.Popout, {
-            renderPopout: (e) =>
-                (0, a.jsx)(d.Clickable, {
-                    onClick: (e) => e.stopPropagation(),
-                    onMouseOver: (e) => e.stopPropagation(),
-                    children: n({
-                        ...e,
-                        refreshPosition: g
-                    })
-                }),
-            align: 'center',
-            nudgeAlignIntoViewport: !0,
-            position: r,
-            shouldShow: f,
-            onRequestClose: () => _(!1),
-            animationPosition: 'bottom',
-            positionKey: h,
-            closeOnScroll: !0,
-            children: (e) =>
-                (0, a.jsx)(d.Tooltip, {
-                    onTooltipHide: () => (null == u ? void 0 : u(!1)),
-                    onTooltipShow: () => (null == u ? void 0 : u(!0)),
-                    text: i,
-                    position: 'top',
-                    shouldShow: !f,
-                    children: (n) =>
-                        (0, a.jsx)(d.Clickable, {
-                            innerRef: E,
-                            ...n,
-                            ...e,
-                            'aria-label': i,
-                            onClick: m,
-                            className: l()(b.secondaryButtonRefresh, c),
-                            children: o
-                        })
+    s.useEffect(() => {
+        var e, n;
+        f ? null === (e = E.current) || void 0 === e || e.focus() : null === (n = E.current) || void 0 === n || n.blur(), null == u || u(f);
+    }, [f, u]);
+    let v = !f;
+    return (0, a.jsx)(d.Popout, {
+        renderPopout: (e) =>
+            (0, a.jsx)(d.Clickable, {
+                onClick: (e) => e.stopPropagation(),
+                onMouseOver: (e) => e.stopPropagation(),
+                children: n({
+                    ...e,
+                    refreshPosition: g
                 })
-        })
-    );
+            }),
+        align: 'center',
+        nudgeAlignIntoViewport: !0,
+        position: r,
+        shouldShow: f,
+        onRequestClose: () => _(!1),
+        animationPosition: 'bottom',
+        positionKey: h,
+        closeOnScroll: !0,
+        children: (e) =>
+            (0, a.jsx)(d.Tooltip, {
+                onTooltipHide: () => {
+                    v && (null == u || u(!1));
+                },
+                onTooltipShow: () => {
+                    v && (null == u || u(!0));
+                },
+                text: i,
+                position: 'top',
+                shouldShow: v,
+                children: (n) =>
+                    (0, a.jsx)(d.Clickable, {
+                        innerRef: E,
+                        ...n,
+                        ...e,
+                        'aria-label': i,
+                        onClick: m,
+                        className: l()(b.secondaryButtonRefresh, c),
+                        children: o
+                    })
+            })
+    });
 }
 function C(e) {
     let { sound: n, channel: r, setTooltipShowing: i } = e;
