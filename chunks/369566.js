@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return b;
+        return y;
     }
 });
 var i = r(47120);
@@ -13,25 +13,27 @@ var o = r(442837),
     d = r(180335),
     f = r(561308),
     _ = r(199902),
-    h = r(158776),
-    p = r(699516),
-    m = r(626135),
-    g = r(9161),
-    E = r(456644),
-    v = r(981631);
-let I = [],
-    T = [];
-function b(e) {
-    let { recentActivityTabEnabled: n } = (0, g.O)({ location: 'useUserProfileActivity' }),
-        { recentActivityEnabled: r } = (0, E.i)({ location: 'useUserProfileActivity' }),
-        i = (0, o.e7)([h.Z], () => h.Z.getActivities(e)),
-        b = (0, o.e7)([u.Z], () => (n || r ? u.Z.getUserOutbox(e) : void 0)),
-        { enabled: y, analyticsEligible: S } = (0, l.R4)('use-user-profile-activity'),
-        { stream: A, nonExperimentStream: N } = (0, o.cj)(
+    h = r(314897),
+    p = r(158776),
+    m = r(699516),
+    g = r(626135),
+    E = r(9161),
+    v = r(456644),
+    I = r(981631);
+let T = [],
+    b = [];
+function y(e) {
+    let { recentActivityTabEnabled: n } = (0, E.O)({ location: 'useUserProfileActivity' }),
+        { recentActivityEnabled: r } = (0, v.i)({ location: 'useUserProfileActivity' }),
+        i = (0, o.e7)([h.default], () => h.default.getId() === e),
+        y = (0, o.e7)([p.Z], () => p.Z.getActivities(e)),
+        S = (0, o.e7)([u.Z], () => (i || n || r ? u.Z.getUserOutbox(e) : void 0)),
+        { enabled: A, analyticsEligible: N } = (0, l.R4)('use-user-profile-activity'),
+        { stream: C, nonExperimentStream: R } = (0, o.cj)(
             [_.Z],
             () => {
                 let n = _.Z.getAnyStreamForUser(e);
-                return y
+                return A
                     ? {
                           stream: _.Z.getAnyDiscoverableStreamForUser(e),
                           nonExperimentStream: n
@@ -41,39 +43,39 @@ function b(e) {
                           nonExperimentStream: n
                       };
             },
-            [y, e]
+            [A, e]
         ),
-        C = (0, o.e7)([p.Z], () => p.Z.getRelationshipType(e));
+        O = (0, o.e7)([m.Z], () => m.Z.getRelationshipType(e));
     (0, a.useEffect)(() => {
-        if (S && null != N) {
+        if (N && null != R) {
             var n;
-            m.default.track(v.rMx.USER_VOICE_ACTIVITY_VIEWED, {
+            g.default.track(I.rMx.USER_VOICE_ACTIVITY_VIEWED, {
                 activity_user_id: e,
-                discoverable: null === (n = null == N ? void 0 : N.discoverable) || void 0 === n || n,
+                discoverable: null === (n = null == R ? void 0 : R.discoverable) || void 0 === n || n,
                 surface: 'user-profile-activity',
-                relationship_type: C,
-                treatment: y && (null == N ? void 0 : N.discoverable) === !1 ? l.h9.HIDE : l.h9.SHOW
+                relationship_type: O,
+                treatment: A && (null == R ? void 0 : R.discoverable) === !1 ? l.h9.HIDE : l.h9.SHOW
             });
         }
-    }, [N, y, S, e, C]);
-    let { live: R, recent: O } = (0, a.useMemo)(() => {
+    }, [R, A, N, e, O]);
+    let { live: D, recent: L } = (0, a.useMemo)(() => {
         let e = (0, s.uniqWith)(
-                i.filter((e) => {
+                y.filter((e) => {
                     let { type: n } = e;
-                    return n !== v.IIU.CUSTOM_STATUS;
+                    return n !== I.IIU.CUSTOM_STATUS;
                 }),
                 (e, n) => (null != e.application_id && null != n.application_id && e.application_id === n.application_id) || (null != e.name && null != n.name && e.name === n.name)
             ),
-            n = null == b ? void 0 : b.entries.filter((n) => !(0, f.Jg)(n) && ((0, c.dU)(n) ? n.extra.entries.length > 0 && !e.some((e) => null != e && (0, d.pB)(n, e)) : (0, c.y0)(n) ? !e.some((e) => null != e && (0, d.RL)(n, e)) : (0, c.Rh)(n)));
+            n = null == S ? void 0 : S.entries.filter((n) => !(0, f.Jg)(n) && ((0, c.dU)(n) ? n.extra.entries.length > 0 && !e.some((e) => null != e && (0, d.pB)(n, e)) : (0, c.y0)(n) ? !e.some((e) => null != e && (0, d.RL)(n, e)) : (0, c.Rh)(n)));
         return {
-            live: 0 === e.length ? I : e,
-            recent: null == n || 0 === n.length ? T : n
+            live: 0 === e.length ? T : e,
+            recent: null == n || 0 === n.length ? b : n
         };
-    }, [i, null == b ? void 0 : b.entries]);
+    }, [y, null == S ? void 0 : S.entries]);
     return {
-        live: R,
-        recent: O,
-        stream: A,
-        outbox: b
+        live: D,
+        recent: L,
+        stream: C,
+        outbox: S
     };
 }
