@@ -164,8 +164,7 @@ function V(e) {
                 className: Q.heroAssetWrapper,
                 style: {
                     backdropFilter: s.to([0, 1], [5, 0]).to((e) => 'blur('.concat(e, 'px)')),
-                    filter: s.to([0, 1], [0.8, 1]).to((e) => 'brightness('.concat(e, ')')),
-                    borderRadius: '12px 12px 0 0'
+                    filter: s.to([0, 1], [0.8, 1]).to((e) => 'brightness('.concat(e, ')'))
                 },
                 children: [
                     (0, o.jsx)(i.animated.div, {
