@@ -36,8 +36,8 @@ var i,
     C = n(56314),
     S = n(231053),
     E = n(944386),
-    R = n(305325),
-    I = n(33154),
+    I = n(305325),
+    R = n(33154),
     N = n(692147),
     Z = n(197115),
     y = n(659215),
@@ -124,7 +124,7 @@ class el extends (i = a.PureComponent) {
     render() {
         let e, t;
         let { count: n, burst_count: i, colors: a, isBurstReaction: s, hideCount: r, emoji: u, readOnly: h, isLurking: f, isGuest: g, isPendingMember: b, className: T, useChatFontScaling: _, message: j, hideEmoji: C, animationStartPosition: S, emojiSize: E } = this.props,
-            { shouldShowTooltip: R, tooltipTextAria: I, reactionRef: Z, tooltipPositionKey: y } = this.state,
+            { shouldShowTooltip: I, tooltipTextAria: R, reactionRef: Z, tooltipPositionKey: y } = this.state,
             A = _ ? et : ee,
             M = {
                 transform: [{ scale: this.scale }],
@@ -142,8 +142,8 @@ class el extends (i = a.PureComponent) {
             U = null == S;
         return (0, o.jsx)(o.Fragment, {
             children: (0, o.jsx)(m.Popout, {
-                shouldShow: R,
-                'aria-label': null != I && I,
+                shouldShow: I,
+                'aria-label': null != R && R,
                 renderPopout: this.renderTooltip,
                 nudgeAlignIntoViewport: !0,
                 position: 'top',
@@ -343,9 +343,9 @@ class el extends (i = a.PureComponent) {
                     a = P.Z.getChannel(n.getChannelId()),
                     s = w.Z.getGuild(null == a ? void 0 : a.getGuildId());
                 return i && null != s
-                    ? (0, o.jsx)(I.Z, {
+                    ? (0, o.jsx)(R.Z, {
                           ctaRef: this.ctaRef,
-                          type: I.s.REACTIONS,
+                          type: R.s.REACTIONS,
                           guild: s,
                           closePopout: t
                       })
@@ -505,7 +505,7 @@ class el extends (i = a.PureComponent) {
                 if (!t) return null;
                 let n = P.Z.getChannel(e.getChannelId()),
                     i = w.Z.getGuild(null == n ? void 0 : n.getGuildId());
-                null != i && (0, R.hk)(i.id);
+                null != i && (0, I.hk)(i.id);
             }),
             ei(this, 'handleSetReactionRef', (e) => {
                 this.setState({ reactionRef: e });
@@ -621,8 +621,8 @@ let er = a.memo((e) => {
             [g, v] = a.useState(null),
             [b, T] = a.useState(!1),
             [x, C] = a.useState(!1),
-            [E, R] = a.useState(!1),
-            I = null != c,
+            [E, I] = a.useState(!1),
+            R = null != c,
             N = null !== (t = null == d ? void 0 : d.isDiscoverable()) && void 0 !== t && t,
             Z = k.Z.getGuildId(),
             y = null != Z && (Z === (null == d ? void 0 : d.id) || Z === (null == c ? void 0 : c.id)),
@@ -631,7 +631,7 @@ let er = a.memo((e) => {
                 sourceType: g,
                 expressionSourceApplication: null != p ? p : null,
                 isPremium: D.ZP.isPremium(A),
-                hasJoinedEmojiSourceGuild: I,
+                hasJoinedEmojiSourceGuild: R,
                 isDiscoverable: N,
                 emojiComesFromCurrentGuild: y,
                 isUnusableRoleSubscriptionEmoji: !1,
@@ -653,10 +653,10 @@ let er = a.memo((e) => {
                                 h(e.guild);
                         }
                     else h(null);
-                    C(!1), R(!0), i();
+                    C(!1), I(!0), i();
                 })();
         }, [n, b, E, i]);
-        if (I) return null;
+        if (R) return null;
         let M = () => {
                 T(!b);
             },
@@ -702,7 +702,7 @@ let er = a.memo((e) => {
                       (0, o.jsx)(ec, {
                           emojiId: n,
                           expressionSourceGuild: d,
-                          hasJoinedExpressionSourceGuild: I,
+                          hasJoinedExpressionSourceGuild: R,
                           onClose: s,
                           popoutData: O,
                           currentGuildId: Z,

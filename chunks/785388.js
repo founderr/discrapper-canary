@@ -31,8 +31,8 @@ var i = n(200651),
     C = n(620652),
     S = n(815605),
     E = n(222677),
-    R = n(995774),
-    I = n(665906),
+    I = n(995774),
+    R = n(665906),
     N = n(210887),
     Z = n(314897),
     y = n(592125),
@@ -192,7 +192,7 @@ function Y(e) {
     let { emoji: t, user: n, message: o, channel: a, guildId: s, reactionType: l, onRemoveReactor: r, disableManage: c = !1 } = e,
         u = (0, d.e7)([Z.default], () => Z.default.getId()),
         m = (0, d.e7)([L.default], () => L.default.getUser(n.id), [n]),
-        g = (0, I.$R)(a),
+        g = (0, R.$R)(a),
         b = (0, d.e7)([P.Z], () => P.Z.can(V.Plq.MANAGE_MESSAGES, a) && g) || u === n.id,
         T = (0, d.e7)([A.ZP, y.Z, w.Z], () => B.ZP.getName(s, a.id, n));
     return (0, i.jsxs)(v.Z, {
@@ -429,7 +429,7 @@ function Q(e) {
                         null ==
                             n.find((e) => {
                                 let t = null != e.me_vote ? j.O.VOTE : e.burst_count > 0 ? j.O.BURST : j.O.NORMAL;
-                                return (0, R.ir)(e.emoji, i.emoji) && t === i.reactionType;
+                                return (0, I.ir)(e.emoji, i.emoji) && t === i.reactionType;
                             }) &&
                         a(t);
                 }, [i, a, n, t]),
@@ -445,17 +445,17 @@ function Q(e) {
                 : null,
             v
         ),
-        I = o.useMemo(() => {
+        R = o.useMemo(() => {
             var e;
-            return null == S ? null : null !== (e = v.find((e) => (0, R.ir)(e.emoji, S.emoji))) && void 0 !== e ? e : null;
+            return null == S ? null : null !== (e = v.find((e) => (0, I.ir)(e.emoji, S.emoji))) && void 0 !== e ? e : null;
         }, [v, S]),
         Z = (0, d.e7)([g.Z], () => g.Z.saturation),
         A = (0, d.e7)([N.Z], () => (0, u.wj)(N.Z.theme));
     if (
         (o.useEffect(() => {
-            (0 === v.length || (null == S && null == I)) && setImmediate(r);
-        }, [r, v.length, I, S]),
-        null == S || null == I)
+            (0 === v.length || (null == S && null == R)) && setImmediate(r);
+        }, [r, v.length, R, S]),
+        null == S || null == R)
     )
         return (0, i.jsx)(h.Spinner, {});
     if (null == p) throw Error('MessageReactions.render: Message does not have a channelId');
@@ -494,7 +494,7 @@ function Q(e) {
                       }),
                 (0, i.jsx)($, {
                     message: n,
-                    reaction: I,
+                    reaction: R,
                     guildId: f,
                     channel: p,
                     reactionType: S.reactionType,

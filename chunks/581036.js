@@ -12,7 +12,7 @@ var u,
     g = t(306680);
 let Z = {},
     m = new Set();
-class v extends (u = d.ZP.Store) {
+class h extends (u = d.ZP.Store) {
     initialize() {
         this.waitFor(s.Z, f.Z, g.ZP);
     }
@@ -24,7 +24,7 @@ class v extends (u = d.ZP.Store) {
     }
 }
 (l = 'ForumPostUnreadCountStore'),
-    (i = 'displayName') in (r = v)
+    (i = 'displayName') in (r = h)
         ? Object.defineProperty(r, i, {
               value: l,
               enumerable: !0,
@@ -32,7 +32,7 @@ class v extends (u = d.ZP.Store) {
               writable: !0
           })
         : (r[i] = l),
-    (n.Z = new v(c.Z, {
+    (n.Z = new h(c.Z, {
         CONNECTION_OPEN: function () {
             (Z = {}), (m = new Set());
         },

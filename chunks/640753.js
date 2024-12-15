@@ -25,8 +25,8 @@ t.Z = o.memo(function (e) {
             [b, _, g, t, n]
         ),
         [S, E] = o.useState(!1),
-        R = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
-        I = c.Yk.useSetting(),
+        I = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
+        R = c.Yk.useSetting(),
         N = o.useCallback(() => {
             s.Z.dispatch({
                 type: 'BURST_REACTION_EFFECT_CLEAR',
@@ -48,13 +48,13 @@ t.Z = o.memo(function (e) {
                     key: d.I.RANDOM
                 }));
         };
-        if (S || (R && !I) || !I) return;
+        if (S || (I && !R) || !R) return;
         e();
         let i = setInterval(e, 5000);
         return () => {
             clearInterval(i);
         };
-    }, [I, t, T, g, g.name, S, n, R]),
+    }, [R, t, T, g, g.name, S, n, I]),
     null == _)
         ? null
         : (0, i.jsx)(h.Z, {
