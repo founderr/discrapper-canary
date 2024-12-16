@@ -381,33 +381,34 @@ class G extends (l = a.Component) {
                     : null;
             }),
             O(this, 'getRowHeight', (e, t) => {
-                let { privateChannelIds: n, isVisualRefreshEnabled: i, channels: l } = this.props,
-                    r = 44;
+                let { privateChannelIds: n, isVisualRefreshEnabled: i, density: l } = this.props,
+                    { nonNullChildren: r } = this.state,
+                    o = 44;
                 if (i) {
                     if (0 === e) {
-                        let { nonNullChildren: e } = this.state,
-                            n = e[t];
-                        if (a.isValidElement(n)) {
-                            var o;
-                            (null === (o = n.key) || void 0 === o ? void 0 : o.startsWith('section-divider')) ? (r = 25) : 'dm-quick-launcher' === n.key && (r = 91);
+                        let e = r[t];
+                        if (a.isValidElement(e)) {
+                            var s;
+                            o = (null === (s = e.key) || void 0 === s ? void 0 : s.startsWith('section-divider')) ? 25 : 'dm-quick-launcher' === e.key ? 67 : 'compact' === l ? 44 : 50;
                         }
-                    } else {
-                        let e = l[n[t]];
-                        r = (null == e ? void 0 : e.isGroupDM()) ? 50 : 48;
-                    }
+                    } else o = 'compact' === l ? 44 : 50;
+                } else if (0 === e) {
+                    let e = r[t];
+                    a.isValidElement(e) && 'dm-quick-launcher' === e.key && (o = 80);
                 }
-                return 1 === e && 0 === t && 0 === n.length ? 428 : r;
+                return 1 === e && 0 === t && 0 === n.length ? 428 : o;
             });
     }
 }
 O(G, 'defaultProps', { padding: 8 });
 t.Z = (e) => {
     let t = (0, b.Q3)('ConnectedPrivateChannelsList'),
-        { version: n, theme: i, children: l, showDMHeader: r } = e,
-        s = a.Children.count(l),
-        c = A.Z.getMutablePrivateChannels(),
-        p = (0, y.k1)(c),
-        m = (0, h.Wu)(
+        { density: n } = (0, m.useThemeContext)(),
+        { version: i, theme: l, children: r, showDMHeader: s } = e,
+        c = a.Children.count(r),
+        p = A.Z.getMutablePrivateChannels(),
+        f = (0, y.k1)(p),
+        C = (0, h.Wu)(
             [R.Z, N.Z, T.Z],
             () => {
                 let e = R.Z.getPrivateChannelIds();
@@ -416,14 +417,14 @@ t.Z = (e) => {
             []
         );
     (0, S.z)(E.R);
-    let f = (0, h.cj)([g.Z, j.Z, A.Z], () => ({
-            theme: j.Z.darkSidebar ? L.BRd.DARK : i,
+    let v = (0, h.cj)([g.Z, j.Z, A.Z], () => ({
+            theme: j.Z.darkSidebar ? L.BRd.DARK : l,
             keyboardModeEnabled: g.Z.keyboardModeEnabled,
-            version: null != n ? ''.concat(n, ':').concat(A.Z.getPrivateChannelsVersion()) : A.Z.getPrivateChannelsVersion()
+            version: null != i ? ''.concat(i, ':').concat(A.Z.getPrivateChannelsVersion()) : A.Z.getPrivateChannelsVersion()
         })),
-        C = a.useRef(null),
-        v = a.useCallback((e) => {
-            let t = C.current,
+        _ = a.useRef(null),
+        x = a.useCallback((e) => {
+            let t = _.current,
                 n = document.querySelector(e);
             null != t &&
                 null != n &&
@@ -437,19 +438,19 @@ t.Z = (e) => {
                     }
                 });
         }, []),
-        _ = a.useCallback(
+        Z = a.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = C.current;
+                    let t = _.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
             []
         ),
-        x = a.useCallback(
+        P = a.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = C.current;
+                    let t = _.current;
                     if (null == t) return e();
                     t.scrollToBottom({
                         callback() {
@@ -459,27 +460,28 @@ t.Z = (e) => {
                 }),
             []
         ),
-        Z = (0, I.Dt)(),
-        P = (0, u.ZP)({
-            id: 'private-channels-'.concat(Z),
-            isEnabled: f.keyboardModeEnabled,
-            scrollToStart: _,
-            scrollToEnd: x,
-            defaultFocused: (s + (r ? 1 : 0)).toString(),
-            setFocus: v
+        M = (0, I.Dt)(),
+        w = (0, u.ZP)({
+            id: 'private-channels-'.concat(M),
+            isEnabled: v.keyboardModeEnabled,
+            scrollToStart: Z,
+            scrollToEnd: P,
+            defaultFocused: (c + (s ? 1 : 0)).toString(),
+            setFocus: x
         });
     return (0, o.jsx)(d.bG, {
-        navigator: P,
+        navigator: w,
         children: (0, o.jsx)(G, {
+            density: n,
             isVisualRefreshEnabled: t,
-            channels: p,
-            privateChannelIds: m,
-            listRef: C,
-            theme: i,
-            version: n,
+            channels: f,
+            privateChannelIds: C,
+            listRef: _,
+            theme: l,
+            version: i,
             ...e,
-            children: l,
-            ...f
+            children: r,
+            ...v
         })
     });
 };

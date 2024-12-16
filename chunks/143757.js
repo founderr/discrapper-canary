@@ -1,5 +1,8 @@
 n.d(t, {
     Z: function () {
+        return w;
+    },
+    n: function () {
         return M;
     }
 }),
@@ -150,7 +153,18 @@ let D = (e) => {
         return (t) => (0, i.jsx)(e, { ...t });
     });
 };
-function M(e) {
+function M() {
+    let e = (0, b.en)(m.Z.APP_DMS_QUICK_LAUNCHER),
+        t = (0, o.e7)([C.ZP], () => C.ZP.showPlayAgain),
+        { frecentApps: n } = (0, g.f)({
+            channel: void 0,
+            onlyActivityApps: !0,
+            allowCommandFetch: e,
+            includeAuthorizedAppsAndFetch: !1
+        });
+    return t && e && n.length > 0;
+}
+function w(e) {
     let { bottomDivider: t } = e,
         n = (0, b.en)(m.Z.APP_DMS_QUICK_LAUNCHER),
         { frecentApps: l } = (0, g.f)({
@@ -159,11 +173,11 @@ function M(e) {
             allowCommandFetch: n,
             includeAuthorizedAppsAndFetch: !1
         }),
-        [s, c] = r.useState(void 0),
-        { analyticsLocations: d } = (0, p.ZP)(m.Z.APP_DMS_QUICK_LAUNCHER),
-        u = (0, o.e7)([C.ZP], () => C.ZP.showPlayAgain) && n && l.length > 0,
-        [h, f] = r.useState(!1),
-        _ = r.useMemo(
+        [o, s] = r.useState(void 0),
+        { analyticsLocations: c } = (0, p.ZP)(m.Z.APP_DMS_QUICK_LAUNCHER),
+        d = M(),
+        [u, h] = r.useState(!1),
+        f = r.useMemo(
             () =>
                 l
                     .map((e) => e.application)
@@ -171,37 +185,37 @@ function M(e) {
                     .slice(0, 5),
             [l]
         );
-    return (r.useLayoutEffect(() => {
-        var e;
-        if (!h && !!u) f(!0), N.default.track(Z.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = _.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
-    }, [u, _, h]),
-    u)
-        ? (0, i.jsxs)(i.Fragment, {
-              children: [
-                  (0, i.jsxs)('div', {
-                      className: P.container,
-                      onContextMenu: D,
-                      children: [
-                          (0, i.jsx)(I.Z, {
-                              className: a()(P.headerContainer, y.privateChannelsHeaderContainer),
-                              children: (0, i.jsx)('div', {
-                                  className: P.textContainer,
-                                  children: (0, i.jsx)('span', {
-                                      className: y.headerText,
-                                      children: L.intl.string(L.t.vayAzs)
-                                  })
-                              })
-                          }),
-                          (0, i.jsx)(j, {
-                              frecentApps: _,
-                              loadingAppId: s,
-                              setLoadingAppId: c,
-                              analyticsLocations: d
-                          })
-                      ]
-                  }),
-                  t
-              ]
-          })
-        : null;
+    return (
+        r.useLayoutEffect(() => {
+            var e;
+            if (!u && !!d) h(!0), N.default.track(Z.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = f.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
+        }, [d, f, u]),
+        (0, i.jsxs)(i.Fragment, {
+            children: [
+                (0, i.jsxs)('div', {
+                    className: P.container,
+                    onContextMenu: D,
+                    children: [
+                        (0, i.jsx)(I.Z, {
+                            className: a()(P.headerContainer, y.privateChannelsHeaderContainer),
+                            children: (0, i.jsx)('div', {
+                                className: P.textContainer,
+                                children: (0, i.jsx)('span', {
+                                    className: y.headerText,
+                                    children: L.intl.string(L.t.vayAzs)
+                                })
+                            })
+                        }),
+                        (0, i.jsx)(j, {
+                            frecentApps: f,
+                            loadingAppId: o,
+                            setLoadingAppId: s,
+                            analyticsLocations: c
+                        })
+                    ]
+                }),
+                t
+            ]
+        })
+    );
 }

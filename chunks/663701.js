@@ -156,26 +156,22 @@ let ee = (e) => {
         let { selected: t } = e,
             n = J.intl.string(J.t.Rkdixs),
             l = (0, c.JA)('family-center'),
-            a = k.Ex.useSetting(),
-            o = (0, x.Z)(),
-            [s, d] = r.useState(!0);
-        return a && o
-            ? (0, i.jsx)(Y.Qj, {
-                  selected: t,
-                  route: q.Z5c.FAMILY_CENTER,
-                  icon: p.GroupIcon,
-                  text: n,
-                  onMouseEnter: () => {
-                      d(!0);
-                  },
-                  onMouseLeave: () => {
-                      d(!1);
-                  },
-                  interactiveClassName: $.familyCenterLinkButton,
-                  ...l,
-                  children: (0, i.jsx)(el, { isParentHovered: s })
-              })
-            : null;
+            [a, o] = r.useState(!0);
+        return (0, i.jsx)(Y.Qj, {
+            selected: t,
+            route: q.Z5c.FAMILY_CENTER,
+            icon: p.GroupIcon,
+            text: n,
+            onMouseEnter: () => {
+                o(!0);
+            },
+            onMouseLeave: () => {
+                o(!1);
+            },
+            interactiveClassName: $.familyCenterLinkButton,
+            ...l,
+            children: (0, i.jsx)(el, { isParentHovered: a })
+        });
     },
     el = (e) => {
         let { isParentHovered: t } = e,
@@ -227,7 +223,15 @@ let es = (e) => {
             let { channelId: t, path: n } = e;
             return [t, n];
         }, o.X),
-        u = (0, S.Q3)('PrivateChannels');
+        u = (0, S.Q3)('PrivateChannels'),
+        h = (0, O.i)({ selected: null == c ? l : c.startsWith(q.Z5c.APPLICATION_STORE) }),
+        m = (0, A.a)(),
+        g = (function () {
+            let e = k.Ex.useSetting(),
+                t = (0, x.Z)();
+            return e && t;
+        })(),
+        f = (0, I.n)();
     return (0, i.jsxs)('nav', {
         className: $.privateChannels,
         'aria-label': J.intl.string(J.t.ZH9aPz),
@@ -272,22 +276,24 @@ let es = (e) => {
                               'library'
                           )
                         : null,
-                    (0, i.jsx)(
-                        O.g,
-                        {
-                            selected: null == c ? l : c.startsWith(q.Z5c.APPLICATION_STORE),
-                            route: q.Z5c.APPLICATION_STORE,
-                            locationState: {
-                                analyticsSource: {
-                                    page: eo(r),
-                                    section: q.jXE.NAVIGATION,
-                                    object: q.qAy.NAVIGATION_LINK
-                                }
-                            }
-                        },
-                        'premium'
-                    ),
-                    (0, i.jsx)(ei, { selected: null == c ? null != r && r.startsWith(q.Z5c.MESSAGE_REQUESTS) : c === q.Z5c.MESSAGE_REQUESTS }, 'message-requests'),
+                    h
+                        ? (0, i.jsx)(
+                              O.g,
+                              {
+                                  selected: null == c ? l : c.startsWith(q.Z5c.APPLICATION_STORE),
+                                  route: q.Z5c.APPLICATION_STORE,
+                                  locationState: {
+                                      analyticsSource: {
+                                          page: eo(r),
+                                          section: q.jXE.NAVIGATION,
+                                          object: q.qAy.NAVIGATION_LINK
+                                      }
+                                  }
+                              },
+                              'premium'
+                          )
+                        : null,
+                    m ? (0, i.jsx)(ei, { selected: null == c ? null != r && r.startsWith(q.Z5c.MESSAGE_REQUESTS) : c === q.Z5c.MESSAGE_REQUESTS }, 'message-requests') : null,
                     (0, i.jsx)(
                         C.i,
                         {
@@ -302,16 +308,16 @@ let es = (e) => {
                         },
                         'discord-shop'
                     ),
-                    (0, i.jsx)(er, { selected: (null != r && r.startsWith(q.Z5c.FAMILY_CENTER)) || (null != c && c.startsWith(q.Z5c.FAMILY_CENTER)) }, 'family-center'),
-                    (0, i.jsx)(ec, {}, 'section-divider-top'),
-                    (0, i.jsx)(I.Z, { bottomDivider: (0, i.jsx)(ec, {}) }, 'dm-quick-launcher')
+                    g ? (0, i.jsx)(er, { selected: (null != r && r.startsWith(q.Z5c.FAMILY_CENTER)) || (null != c && c.startsWith(q.Z5c.FAMILY_CENTER)) }, 'family-center') : null,
+                    u ? (0, i.jsx)(ec, {}, 'section-divider-top') : null,
+                    f ? (0, i.jsx)(I.Z, { bottomDivider: u ? (0, i.jsx)(ec, {}) : null }, 'dm-quick-launcher') : null
                 ]
             })
         ]
     });
 };
 function ec() {
-    return (0, S.Q3)('SectionDivider') ? (0, i.jsx)('div', { className: $.sectionDivider }) : null;
+    return (0, i.jsx)('div', { className: $.sectionDivider });
 }
 function ed() {
     let e = (0, u.e7)([V.Z], () => V.Z.getHomeLink()),
