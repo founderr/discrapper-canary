@@ -1,6 +1,6 @@
 n.d(t, {
     O: function () {
-        return f;
+        return C;
     }
 });
 var i = n(200651),
@@ -13,21 +13,25 @@ var i = n(200651),
     d = n(446495),
     u = n(999382),
     m = n(202905),
-    h = n(307375),
-    g = n(388032),
-    x = n(322825);
-function p(e) {
+    h = n(557359),
+    g = n(307375),
+    x = n(388032),
+    p = n(322825);
+function f(e) {
     let { pendingState: t } = e;
     switch (t.joinType) {
         case d.A.INVITE:
-            return null;
+            return (0, i.jsx)(h.A, {
+                requireTerms: t.requireTerms,
+                rules: t.termRules
+            });
         case d.A.APPLY:
             return (0, i.jsx)(m.r, { pendingFields: t.pendingVerificationFields });
         case d.A.DISCOVERABLE:
             return null;
     }
 }
-function f() {
+function C() {
     let e = (0, l.e7)([u.Z], () => u.Z.getProps().guild),
         t = (0, l.e7)([c.Z], () => c.Z.pendingState);
     r.useEffect(() => {
@@ -40,23 +44,22 @@ function f() {
         [null == e ? void 0 : e.id]
     );
     if (null == e || null == t) return null;
-    let { joinType: m } = t,
-        f = m !== d.A.INVITE;
+    let { joinType: d } = t;
     return (0, i.jsxs)(s.Stack, {
         gap: 32,
         children: [
             (0, i.jsx)(s.Heading, {
                 color: 'header-primary',
                 variant: 'heading-lg/semibold',
-                children: g.intl.string(g.t.oGaVGx)
+                children: x.intl.string(x.t.oGaVGx)
             }),
-            (0, i.jsx)(h.h, {
+            (0, i.jsx)(g.h, {
                 onTypePicked: n,
-                activeType: m,
+                activeType: d,
                 guild: e
             }),
-            f && (0, i.jsx)('div', { className: x.divider }),
-            (0, i.jsx)(p, { pendingState: t })
+            (0, i.jsx)('div', { className: p.divider }),
+            (0, i.jsx)('div', { children: (0, i.jsx)(f, { pendingState: t }) })
         ]
     });
 }

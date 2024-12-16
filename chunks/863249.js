@@ -57,10 +57,13 @@ let v = async (e, n) => {
             });
         }
     },
-    I = async (e, n) => {
-        let { body: r } = await i.tn.patch({
+    I = async (e, n, r) => {
+        let { body: s } = await i.tn.patch({
             url: g.ANM.GUILD_MEMBER_VERIFICATION(e),
-            body: { form_fields: n },
+            body: {
+                form_fields: n,
+                enabled: r
+            },
             oldFormErrors: !0,
             rejectWithError: !1
         });
@@ -68,9 +71,9 @@ let v = async (e, n) => {
             type: 'MEMBER_VERIFICATION_FORM_UPDATE',
             guildId: e,
             form: {
-                version: r.version,
-                description: r.description,
-                formFields: r.form_fields
+                version: s.version,
+                description: s.description,
+                formFields: s.form_fields
             }
         });
     },
