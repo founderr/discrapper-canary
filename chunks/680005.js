@@ -24,8 +24,8 @@ var u = e(860911),
     m = e(937615),
     v = e(110742),
     S = e(981631),
-    h = e(388032),
-    I = e(978733);
+    I = e(388032),
+    h = e(978733);
 ((i = l || (l = {}))[(i.AVAILABLE = 0)] = 'AVAILABLE'), (i[(i.LOADING = 1)] = 'LOADING'), (i[(i.UPCOMING_PLAN = 2)] = 'UPCOMING_PLAN'), (i[(i.SUBSCRIBED = 3)] = 'SUBSCRIBED'), (i[(i.UNAVAILABLE = 4)] = 'UNAVAILABLE');
 function g(n) {
     let { appId: t, className: e, onClick: i, onHasClicked: l, skuId: u, subscriptionPlan: a, icon: o, state: s = 0 } = n,
@@ -41,8 +41,8 @@ function g(n) {
               className: e,
               submitting: d,
               children: (0, r.jsxs)('div', {
-                  className: I.btnContent,
-                  children: [o, null != c ? h.intl.formatToPlainString(h.t.i4T8v7, { rate: c }) : h.intl.string(h.t.uuzaAA)]
+                  className: h.btnContent,
+                  children: [o, null != c ? I.intl.formatToPlainString(I.t.i4T8v7, { rate: c }) : I.intl.string(I.t.uuzaAA)]
               })
           })
         : (0, r.jsx)(A, {
@@ -50,11 +50,11 @@ function g(n) {
               children: (function (n, t) {
                   switch (n) {
                       case 2:
-                          return h.intl.formatToPlainString(h.t.k1ew5O, { rate: t });
+                          return I.intl.formatToPlainString(I.t.k1ew5O, { rate: t });
                       case 3:
-                          return h.intl.formatToPlainString(h.t['Hs3Y+P'], { rate: t });
+                          return I.intl.formatToPlainString(I.t['Hs3Y+P'], { rate: t });
                       case 4:
-                          return h.intl.string(h.t.DLAKbm);
+                          return I.intl.string(I.t.DLAKbm);
                   }
               })(s, null != c ? c : '')
           });
@@ -77,7 +77,7 @@ function E(n) {
         : g
           ? (0, r.jsx)(A, {
                 className: e,
-                children: h.intl.string(h.t['/bUsx8'])
+                children: I.intl.string(I.t['/bUsx8'])
             })
           : (0, r.jsx)(Z, {
                 appId: t,
@@ -87,8 +87,8 @@ function E(n) {
                 },
                 className: e,
                 children: (0, r.jsxs)('div', {
-                    className: I.btnContent,
-                    children: [a, h.intl.format(h.t.Xp5WTk, { price: (0, m.T4)(E.amount, E.currency) })]
+                    className: h.btnContent,
+                    children: [a, I.intl.format(I.t.Xp5WTk, { price: (0, m.T4)(E.amount, E.currency) })]
                 })
             });
 }

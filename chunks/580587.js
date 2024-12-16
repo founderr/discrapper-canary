@@ -8,5 +8,5 @@ var i = r(404295),
 function s(e) {
     let { channelId: n } = e,
         r = (0, a.Z)({ channelId: n });
-    return (0, i.bG)('useShowOpenAppButton') && !r;
+    return (0, i.bG)('useShowOpenAppButton') && r;
 }

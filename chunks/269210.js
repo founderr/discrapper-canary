@@ -22,7 +22,7 @@ var l = e(557533),
     f = e(717729);
 let p = 5;
 function m(n) {
-    let { description: t, imgSrc: e, renderPurchaseButton: l, onPurchase: m, title: v, onDetails: S, benefitItems: h, benefitsSummary: I, subtitle: g, maxBenefits: E = p } = n;
+    let { description: t, imgSrc: e, renderPurchaseButton: l, onPurchase: m, title: v, onDetails: S, benefitItems: I, benefitsSummary: h, subtitle: g, maxBenefits: E = p } = n;
     return (0, i.jsx)(u.tE, {
         children: (0, i.jsxs)('div', {
             className: r()(d.container, f.hoverCard),
@@ -76,17 +76,17 @@ function m(n) {
                         ]
                     })
                 }),
-                null != I &&
+                null != h &&
                     (0, i.jsx)('div', {
                         className: d.benefitsSummary,
                         children: (0, i.jsx)(o.x, {
                             color: 'interactive-normal',
                             variant: 'text-sm/medium',
-                            children: c.Z.Messages.STOREFRONT_BENEFITS_SUMMARY.format({ count: I })
+                            children: c.Z.Messages.STOREFRONT_BENEFITS_SUMMARY.format({ count: h })
                         })
                     }),
-                null != h &&
-                    h.length > 0 &&
+                null != I &&
+                    I.length > 0 &&
                     (0, i.jsx)('div', {
                         className: d.benefits,
                         children: (0, i.jsx)('div', {
@@ -99,18 +99,18 @@ function m(n) {
                                         variant: 'eyebrow',
                                         children: c.Z.Messages.STOREFRONT_BENEFITS_TITLE
                                     }),
-                                    h.length > E
+                                    I.length > E
                                         ? (0, i.jsxs)(i.Fragment, {
                                               children: [
-                                                  h.slice(0, E),
+                                                  I.slice(0, E),
                                                   (0, i.jsx)(o.x, {
                                                       variant: 'text-md/semibold',
                                                       color: 'text-secondary',
-                                                      children: c.Z.Messages.STOREFRONT_MORE_BENEFITS.format({ count: h.length - E })
+                                                      children: c.Z.Messages.STOREFRONT_MORE_BENEFITS.format({ count: I.length - E })
                                                   })
                                               ]
                                           })
-                                        : h
+                                        : I
                                 ]
                             })
                         })

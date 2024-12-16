@@ -95,8 +95,8 @@ let y = {
         green: I.green,
         yellow: I.yellow,
         primaryDark: I.experimentDark,
-        primaryLight: I.primaryLight,
-        activeLight: I.activeLight
+        primaryLight: I.experimentDark,
+        activeLight: I.experimentActiveLight
     };
 function A(e) {
     let { color: n, ignoreColorForCaret: r = !1, isActive: i = !1, className: o, iconClassName: u, onPopoutClick: A, popoutOpen: N = !1, premiumGlow: C = !1, fullRegionButton: R = !1, ...O } = e,

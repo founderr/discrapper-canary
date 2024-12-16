@@ -128,8 +128,8 @@ function A(e) {
                                 U
                                     ? B
                                         ? (0, i.jsx)(g.r, {
-                                              top: 0,
-                                              right: 0,
+                                              top: 2,
+                                              right: 2,
                                               size: 6
                                           })
                                         : (0, i.jsx)(g.r, {

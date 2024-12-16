@@ -20,9 +20,9 @@ var i = e(200651),
     f = e(689011),
     p = e(981631);
 async function m(n) {
-    let { subscriptionPlanId: t, sku: u, subscriptionGroupPlanIds: m, initialSubscribeForGuild: v, analyticsLocations: S, analyticsLocation: h, disableGuildSelector: I = !1 } = n,
+    let { subscriptionPlanId: t, sku: u, subscriptionGroupPlanIds: m, initialSubscribeForGuild: v, analyticsLocations: S, analyticsLocation: I, disableGuildSelector: h = !1 } = n,
         { promise: g, resolve: E } = Promise.withResolvers();
-    if ((0, d.KK)(u.flags) && !1 === I) {
+    if ((0, d.KK)(u.flags) && !1 === h) {
         let { promise: n, resolve: t } = Promise.withResolvers();
         (0, l.openModalLazy)(async () => {
             let { GuildSubscriptionSelectionModal: n } = await e.e('43889').then(e.bind(e, 279875));
@@ -62,7 +62,7 @@ async function m(n) {
                 }),
             analyticsSubscriptionType: p.NYc.APPLICATION,
             analyticsLocations: S,
-            analyticsLocation: h,
+            analyticsLocation: I,
             onComplete: E,
             showBenefitsFirst: !1,
             forcesTransitionToGuild: !1
