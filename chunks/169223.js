@@ -2,20 +2,21 @@ var i = r(47120);
 var a = r(200651);
 r(192379);
 var s = r(481060),
-    o = r(812206),
-    l = r(569545),
-    u = r(687516),
-    c = r(981283),
-    d = r(928518),
-    f = r(314897),
-    _ = r(592125),
-    h = r(158776),
-    p = r(19780),
-    m = r(959457),
-    g = r(178635),
-    E = r(531578),
-    v = r(981631);
-function I(e, n, r) {
+    o = r(16609),
+    l = r(812206),
+    u = r(569545),
+    c = r(687516),
+    d = r(981283),
+    f = r(928518),
+    _ = r(314897),
+    h = r(592125),
+    p = r(158776),
+    m = r(19780),
+    g = r(959457),
+    E = r(178635),
+    v = r(531578),
+    I = r(981631);
+function T(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -28,13 +29,13 @@ function I(e, n, r) {
         e
     );
 }
-class T extends g.Z {
+class b extends E.Z {
     _initialize() {
-        c.Z.init();
+        d.Z.init();
     }
     constructor(...e) {
         super(...e),
-            I(this, 'actions', {
+            T(this, 'actions', {
                 VOICE_CHANNEL_SHOW_FEEDBACK: (e) => this.handleVoiceChannelFeedback(e),
                 STREAM_CLOSE: (e) => this.handleStreamClose(e),
                 VIDEO_BACKGROUND_SHOW_FEEDBACK: (e) => this.handleVideoBackgroundShowFeedback(e),
@@ -43,9 +44,9 @@ class T extends g.Z {
                 USER_DM_MUTE_SHOW_FEEDBACK: (e) => this.handleUserDmMuteFeedback(e),
                 BLOCK_USER_SHOW_FEEDBACK: () => this.handleBlockUserFeedback()
             }),
-            I(this, 'handleVoiceChannelFeedback', (e) => {
+            T(this, 'handleVoiceChannelFeedback', (e) => {
                 let { analyticsData: n } = e;
-                this.possiblyShowFeedbackModal(E.nw.VOICE, () => {
+                this.possiblyShowFeedbackModal(v.nw.VOICE, () => {
                     (0, s.openModalLazy)(async () => {
                         let { default: e } = await r.e('96888').then(r.bind(r, 988645));
                         return (r) =>
@@ -56,37 +57,37 @@ class T extends g.Z {
                     });
                 });
             }),
-            I(this, 'handleStreamClose', (e) => {
+            T(this, 'handleStreamClose', (e) => {
                 var n;
                 let { streamKey: i, canShowFeedback: o } = e,
-                    c = (0, l.my)(i),
-                    d = (0, u.L2)(c, h.Z),
-                    _ = null !== (n = m.Z.getVideoStats(i)) && void 0 !== n ? n : {},
-                    p = {
-                        media_session_id: m.Z.getMediaSessionId(i),
-                        rtc_connection_id: m.Z.getRtcConnectionId(i),
-                        stream_region: m.Z.getRegion(i),
-                        max_viewers: m.Z.getMaxViewers(i),
-                        ..._
+                    l = (0, u.my)(i),
+                    d = (0, c.L2)(l, p.Z),
+                    f = null !== (n = g.Z.getVideoStats(i)) && void 0 !== n ? n : {},
+                    h = {
+                        media_session_id: g.Z.getMediaSessionId(i),
+                        rtc_connection_id: g.Z.getRtcConnectionId(i),
+                        stream_region: g.Z.getRegion(i),
+                        max_viewers: g.Z.getMaxViewers(i),
+                        ...f
                     };
                 o &&
-                    this.possiblyShowFeedbackModal(E.nw.STREAM, () => {
+                    this.possiblyShowFeedbackModal(v.nw.STREAM, () => {
                         (0, s.openModalLazy)(async () => {
                             let { default: e } = await r.e('23657').then(r.bind(r, 142402));
                             return (n) =>
                                 (0, a.jsx)(e, {
-                                    stream: c,
+                                    stream: l,
                                     streamApplication: d,
-                                    isStreamer: c.ownerId === f.default.getId(),
+                                    isStreamer: l.ownerId === _.default.getId(),
                                     ...n,
-                                    analyticsData: p
+                                    analyticsData: h
                                 });
                         });
                     });
             }),
-            I(this, 'handleVideoBackgroundShowFeedback', (e) => {
+            T(this, 'handleVideoBackgroundShowFeedback', (e) => {
                 let { analyticsData: n } = e;
-                this.possiblyShowFeedbackModal(E.nw.VIDEO_BACKGROUND, () => {
+                this.possiblyShowFeedbackModal(v.nw.VIDEO_BACKGROUND, () => {
                     (0, s.openModalLazy)(async () => {
                         let { default: e } = await r.e('11495').then(r.bind(r, 801320));
                         return (r) =>
@@ -97,37 +98,38 @@ class T extends g.Z {
                     });
                 });
             }),
-            I(this, 'handleActivityClose', (e) => {
-                let { applicationId: n, channelId: i, showFeedback: l } = e,
-                    u = o.Z.getApplication(n),
-                    c = _.Z.getChannel(i),
-                    f = {
-                        rtc_connection_id: p.Z.getRTCConnectionId(),
-                        media_session_id: p.Z.getMediaSessionId()
+            T(this, 'handleActivityClose', (e) => {
+                let { applicationId: n, location: i, showFeedback: u } = e,
+                    c = l.Z.getApplication(n),
+                    d = (0, o.p)(i),
+                    _ = h.Z.getChannel(d),
+                    p = {
+                        rtc_connection_id: m.Z.getRTCConnectionId(),
+                        media_session_id: m.Z.getMediaSessionId()
                     },
-                    h = d.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT) ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT;
-                null != u &&
-                    null != c &&
-                    l &&
-                    this.possiblyShowFeedbackModal(E.nw.ACTIVITY, () => {
+                    g = f.Z.getWindowOpen(I.KJ3.CHANNEL_CALL_POPOUT) ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT;
+                null != c &&
+                    null != _ &&
+                    u &&
+                    this.possiblyShowFeedbackModal(v.nw.ACTIVITY, () => {
                         (0, s.openModalLazy)(
                             async () => {
                                 let { default: e } = await r.e('4413').then(r.bind(r, 450634));
                                 return (n) =>
                                     (0, a.jsx)(e, {
                                         ...n,
-                                        activityApplication: u,
-                                        channel: c,
-                                        analyticsData: f
+                                        activityApplication: c,
+                                        channel: _,
+                                        analyticsData: p
                                     });
                             },
-                            { contextKey: h }
+                            { contextKey: g }
                         );
                     });
             }),
-            I(this, 'handleInAppReportsFeedback', (e) => {
+            T(this, 'handleInAppReportsFeedback', (e) => {
                 let { reportId: n, reportType: i } = e;
-                this.possiblyShowFeedbackModal(E.nw.IN_APP_REPORTS, () => {
+                this.possiblyShowFeedbackModal(v.nw.IN_APP_REPORTS, () => {
                     (0, s.openModalLazy)(async () => {
                         let { default: e } = await r.e('72135').then(r.bind(r, 442173));
                         return (r) =>
@@ -139,9 +141,9 @@ class T extends g.Z {
                     });
                 });
             }),
-            I(this, 'handleUserDmMuteFeedback', (e) => {
+            T(this, 'handleUserDmMuteFeedback', (e) => {
                 let { channel: n } = e;
-                this.possiblyShowFeedbackModal(E.nw.USER_DM_MUTE, () => {
+                this.possiblyShowFeedbackModal(v.nw.USER_DM_MUTE, () => {
                     (0, s.openModalLazy)(async () => {
                         let { default: e } = await r.e('10620').then(r.bind(r, 408561));
                         return (r) =>
@@ -152,8 +154,8 @@ class T extends g.Z {
                     });
                 });
             }),
-            I(this, 'handleBlockUserFeedback', () => {
-                this.possiblyShowFeedbackModal(E.nw.BLOCK_USER, () => {
+            T(this, 'handleBlockUserFeedback', () => {
+                this.possiblyShowFeedbackModal(v.nw.BLOCK_USER, () => {
                     (0, s.openModalLazy)(async () => {
                         let { default: e } = await r.e('87995').then(r.bind(r, 180970));
                         return (n) => (0, a.jsx)(e, { ...n });
@@ -162,4 +164,4 @@ class T extends g.Z {
             });
     }
 }
-n.Z = new T();
+n.Z = new b();

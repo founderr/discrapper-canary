@@ -1,15 +1,15 @@
 n.d(t, {
     QN: function () {
-        return f;
-    },
-    ZP: function () {
-        return d;
-    },
-    gb: function () {
         return s;
     },
-    uF: function () {
+    ZP: function () {
+        return f;
+    },
+    gb: function () {
         return p;
+    },
+    uF: function () {
+        return v;
     }
 }),
     n(47120),
@@ -20,29 +20,31 @@ var i = n(192379),
     o = n(158776),
     u = n(594174),
     a = n(823379),
-    c = n(317381);
-function d(e, t) {
-    return s(
+    c = n(317381),
+    d = n(16609);
+function f(e, t) {
+    return p(
         (0, l.Wu)([c.ZP], () => (null != e && null != e.id && '' !== e.id ? c.ZP.getEmbeddedActivitiesForChannel(e.id) : c.i6)),
         t
     );
 }
-function f(e) {
-    let t = s((0, l.e7)([c.ZP], () => (null != e ? c.ZP.getEmbeddedActivitiesForGuild(e) : c.i6)));
+function s(e) {
+    let t = p((0, l.e7)([c.ZP], () => (null != e ? c.ZP.getEmbeddedActivitiesForGuild(e) : c.i6)));
     return i.useMemo(() => {
         let e = new Map();
         return (
             t.forEach((t) => {
                 var n;
-                let i = t.embeddedActivity.channelId,
-                    l = null !== (n = e.get(i)) && void 0 !== n ? n : [];
+                let i = (0, d.p)(t.embeddedActivity.location);
+                if (null == i) return;
+                let l = null !== (n = e.get(i)) && void 0 !== n ? n : [];
                 l.push(t), e.set(i, l);
             }),
             e
         );
     }, [t]);
 }
-function s(e, t) {
+function p(e, t) {
     let n = e.map((e) => e.applicationId),
         o = (0, r.Z)(n),
         c = new Set([]);
@@ -86,7 +88,7 @@ function s(e, t) {
         );
     }, [e, o, d, t]);
 }
-function p(e) {
+function v(e) {
     return (0, l.e7)(
         [o.Z],
         () => {

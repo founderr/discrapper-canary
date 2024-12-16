@@ -230,26 +230,26 @@ function ej(e) {
 }
 ((l = i || (i = {})).ACTIVITY = 'ACTIVITY'), (l.STREAM = 'STREAM'), (l.CALL = 'CALL'), (l.EVENT = 'EVENT');
 let eA = a.memo(function (e) {
-    let { connectedActivityApplicationId: t, currentUser: n, onDisconnectCall: i, channel: l } = e,
-        s = (0, p.e7)([N.Z], () => N.Z.getSelectedParticipant(l.id)),
+    let { currentUser: t, onDisconnectCall: n, channel: i, connectedEmbeddedActivity: l } = e,
+        s = (0, p.e7)([N.Z], () => N.Z.getSelectedParticipant(i.id)),
         { reducedMotion: o } = a.useContext(f.AccessibilityPreferencesContext),
         [c, d] = a.useState(!1),
         h = null == s ? void 0 : s.id,
         m = (0, p.e7)([ei.Z], () => (null != h ? ei.Z.getActiveStreamForStreamKey(h) : null), [h]),
-        g = (null == s ? void 0 : s.type) === eb.fO.STREAM && null != m && m.ownerId !== (null == n ? void 0 : n.id),
+        g = (null == s ? void 0 : s.type) === eb.fO.STREAM && null != m && m.ownerId !== (null == t ? void 0 : t.id),
         v = (0, p.Wu)([ei.Z], () =>
-            ei.Z.getAllActiveStreamsForChannel(l.id).filter((e) => {
-                let { ownerId: t } = e;
-                return t !== (null == n ? void 0 : n.id);
+            ei.Z.getAllActiveStreamsForChannel(i.id).filter((e) => {
+                let { ownerId: n } = e;
+                return n !== (null == t ? void 0 : t.id);
             })
         ),
-        _ = (0, w.qY)(l.id),
+        _ = (0, w.qY)(i.id),
         I = a.useCallback(() => {
-            if ((null == s ? void 0 : s.type) === eb.fO.ACTIVITY && s.id === t) return 'ACTIVITY';
+            if ((null == s ? void 0 : s.type) === eb.fO.ACTIVITY && s.id === (null == l ? void 0 : l.applicationId)) return 'ACTIVITY';
             if (g) return 'STREAM';
             if (null != _) return 'EVENT';
             return 'CALL';
-        }, [s, t, g, _]),
+        }, [s, null == l ? void 0 : l.applicationId, g, _]),
         [E, b] = a.useState(I()),
         { groupedButtons: Z } = (0, eC.Z)({ location: 'DisconnectButton' }),
         S = (0, f.useSpring)(
@@ -276,8 +276,8 @@ let eA = a.memo(function (e) {
             if (null != m) (0, x.g)((0, k.V9)(m));
             else for (let e of v) (0, x.g)((0, k.V9)(e));
         }, [v, m]),
-        j = (e, t) => {
-            let a = Z
+        j = (e, a) => {
+            let o = Z
                 ? {
                       fullRegionButton: !0,
                       centerButton: !0,
@@ -290,50 +290,50 @@ let eA = a.memo(function (e) {
                   };
             switch (E) {
                 case 'ACTIVITY':
-                    if (null == s || null == n) return;
+                    if (null == s || null == t || null == l) return;
                     return (0, r.jsx)(Q.Z, {
-                        ...a,
+                        ...o,
                         applicationId: s.id,
                         color: 'red',
-                        channelId: l.id,
-                        onPopoutClick: v.length > 0 ? t : null
+                        location: l.location,
+                        onPopoutClick: v.length > 0 ? a : null
                     });
                 case 'STREAM':
                     return (0, r.jsx)(et.O, {
-                        ...a,
+                        ...o,
                         hasPermission: !0,
                         streamActive: !0,
                         color: 'red',
                         onClick: T,
-                        onPopoutClick: v.length > 1 ? t : null,
+                        onPopoutClick: v.length > 1 ? a : null,
                         isSelfStream: !1
                     });
                 case 'CALL':
                     return (0, r.jsx)($.Z, {
-                        ...a,
+                        ...o,
                         color: 'red',
-                        onClick: () => (null == i ? void 0 : i()),
-                        onPopoutClick: v.length > 0 ? t : null
+                        onClick: () => (null == n ? void 0 : n()),
+                        onPopoutClick: v.length > 0 ? a : null
                     });
                 case 'EVENT':
                     return (0, r.jsx)(B.Z, {
-                        channelId: l.id,
+                        channelId: i.id,
                         onClick: () => {
-                            C.default.disconnect(), null == i || i();
+                            C.default.disconnect(), null == n || n();
                         }
                     });
             }
         };
     return (0, r.jsx)(f.Popout, {
         renderPopout: (e) => {
-            let { closePopout: t } = e;
+            let { closePopout: n } = e;
             return (0, r.jsx)(eg.Z, {
-                channel: l,
-                currentUser: n,
+                channel: i,
+                currentUser: t,
                 activeStreams: v,
                 handleGoLive: eE.VqG,
                 hideSelfOptions: !0,
-                onClose: t
+                onClose: n
             });
         },
         position: 'top',
@@ -419,10 +419,7 @@ t.ZP = function (e) {
             return (null !== (e = null == w ? void 0 : w.channelId) && void 0 !== e ? e : ea.Z.getVoiceChannelId()) === i.id;
         }),
         F = (0, S.Z)(i, !0),
-        V = (0, p.e7)([I.ZP], () => {
-            let e = I.ZP.getSelfEmbeddedActivityForChannel(i.id);
-            return null != e ? e.applicationId : null;
-        }),
+        V = (0, p.e7)([I.ZP], () => I.ZP.getSelfEmbeddedActivityForChannel(i.id)),
         { reachedLimit: z, limit: W } = (0, eu.Z)(i),
         { analyticsLocations: Y } = (0, Z.ZP)(b.Z.VOICE_CONTROL_TRAY);
     if (!G)
@@ -561,7 +558,7 @@ t.ZP = function (e) {
                                   ]
                               }),
                               (0, r.jsx)(eA, {
-                                  connectedActivityApplicationId: V,
+                                  connectedEmbeddedActivity: V,
                                   currentUser: x,
                                   channel: i,
                                   onDisconnectCall: s
@@ -696,7 +693,7 @@ t.ZP = function (e) {
                                     })
                                   : null,
                               (0, r.jsx)(eA, {
-                                  connectedActivityApplicationId: V,
+                                  connectedEmbeddedActivity: V,
                                   currentUser: x,
                                   channel: i,
                                   onDisconnectCall: s

@@ -64,12 +64,7 @@ function Z(e) {
                         ConnectedAppsStore: S.Z
                     })
             ) || Y,
-        Q = (0, o.e7)([_.ZP], () =>
-            [..._.ZP.getSelfEmbeddedActivities().values()].some((e) => {
-                let { applicationId: n, channelId: r } = e;
-                return n === W && r === z;
-            })
-        ),
+        Q = (0, o.e7)([_.ZP], () => null != _.ZP.getSelfEmbeddedActivityForChannel(z)),
         X = (0, o.e7)([x.Z], () => null != W && x.Z.getState(W, U.mFx.JOIN) === U.OcF.LOADING),
         J = (0, o.e7)([y.Z, N.Z, A.Z, O.Z, D.Z, L.Z, R.Z], () =>
             (0, p.Z)({

@@ -4,40 +4,41 @@ var i = n(230711),
     l = n(636449),
     a = n(317381),
     o = n(611577),
-    s = n(812206),
-    c = n(12647),
-    d = n(49012),
-    u = n(358085),
-    h = n(996106),
-    m = n(914946),
-    p = n(452426),
-    g = n(186901),
-    f = n(981631),
-    _ = n(701488);
-let E = new Set([_.Fu, _.JT]);
+    s = n(16609),
+    c = n(812206),
+    d = n(12647),
+    u = n(49012),
+    h = n(358085),
+    m = n(996106),
+    p = n(914946),
+    g = n(452426),
+    f = n(186901),
+    _ = n(981631),
+    E = n(701488);
+let I = new Set([E.Fu, E.JT]);
 t.Z = {
-    [f.Etm.OPEN_EXTERNAL_LINK]: {
+    [_.Etm.OPEN_EXTERNAL_LINK]: {
         scope: {
-            [g.Gp.ANY]: [g.wE, g.b_]
+            [f.Gp.ANY]: [f.wE, f.b_]
         },
-        validation: (e) => (0, p.Z)(e).required().keys({ url: e.string().required() }),
+        validation: (e) => (0, g.Z)(e).required().keys({ url: e.string().required() }),
         handler(e) {
             let {
                 socket: t,
                 args: { url: n }
             } = e;
-            (0, m.bu)(t.transport);
+            (0, p.bu)(t.transport);
             try {
                 let e = new URL(n).toString();
-                if (u.isPlatformEmbedded) {
-                    let e = (0, l.R)() ? f.KJ3.ACTIVITY_POPOUT : null;
-                    c.Z.focus(e, !0);
+                if (h.isPlatformEmbedded) {
+                    let e = (0, l.R)() ? _.KJ3.ACTIVITY_POPOUT : null;
+                    d.Z.focus(e, !0);
                 }
                 let t = a.ZP.getCurrentEmbeddedActivity(),
-                    i = s.Z.getApplication(null == t ? void 0 : t.applicationId),
-                    h = null == t ? void 0 : t.channelId;
+                    i = c.Z.getApplication(null == t ? void 0 : t.applicationId),
+                    m = (0, s.p)(null == t ? void 0 : t.location);
                 return new Promise((t) =>
-                    (0, d.q)(
+                    (0, u.q)(
                         {
                             href: e,
                             shouldConfirm: !0,
@@ -52,24 +53,24 @@ t.Z = {
                         void 0,
                         (0, o.z)({
                             application: i,
-                            channelId: h
+                            channelId: m
                         })
                     )
                 );
             } catch (e) {
-                throw new h.Z({ errorCode: f.lTL.INVALID_COMMAND }, 'Invalid URL: '.concat(n));
+                throw new m.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'Invalid URL: '.concat(n));
             }
         }
     },
-    [f.Etm.NAVIGATE_TO_CONNECTIONS]: {
-        validation: (e) => (0, p.Z)(e),
-        scope: { [g.Gp.ANY]: [g.wE] },
+    [_.Etm.NAVIGATE_TO_CONNECTIONS]: {
+        validation: (e) => (0, g.Z)(e),
+        scope: { [f.Gp.ANY]: [f.wE] },
         handler(e) {
             let { socket: t } = e;
-            (0, m.bu)(t.transport);
-            let n = (0, m._f)(t.application);
-            if (!E.has(n)) throw new h.Z({ errorCode: f.lTL.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
-            i.Z.open(f.oAB.CONNECTIONS);
+            (0, p.bu)(t.transport);
+            let n = (0, p._f)(t.application);
+            if (!I.has(n)) throw new m.Z({ errorCode: _.lTL.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
+            i.Z.open(_.oAB.CONNECTIONS);
         }
     }
 };

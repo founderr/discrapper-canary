@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return w;
+        return k;
     },
     n: function () {
-        return M;
+        return w;
     }
 }),
     n(47120);
@@ -17,46 +17,47 @@ var i = n(200651),
     d = n(239091),
     u = n(317381),
     h = n(122613),
-    m = n(100527),
-    p = n(906732),
-    g = n(87005),
-    f = n(753972),
-    _ = n(895924),
-    E = n(812236),
-    I = n(82295),
-    C = n(740492),
-    v = n(973616),
-    S = n(592125),
-    N = n(626135),
-    T = n(823379),
-    b = n(404295),
-    A = n(728345),
-    x = n(812206),
-    Z = n(981631),
-    L = n(388032),
-    P = n(914333),
-    y = n(312565);
-async function O(e, t, n) {
+    m = n(16609),
+    p = n(100527),
+    g = n(906732),
+    f = n(87005),
+    _ = n(753972),
+    E = n(895924),
+    I = n(812236),
+    C = n(82295),
+    v = n(740492),
+    S = n(973616),
+    N = n(592125),
+    T = n(626135),
+    b = n(823379),
+    A = n(404295),
+    x = n(728345),
+    Z = n(812206),
+    L = n(981631),
+    P = n(388032),
+    y = n(914333),
+    O = n(312565);
+async function R(e, t, n) {
     t(e.id);
     let i = e.bot;
     if (null == i)
         try {
             var r, l, a;
-            i = null !== (a = null === (r = x.Z.getApplication(e.id)) || void 0 === r ? void 0 : r.bot) && void 0 !== a ? a : null === (l = v.ZP.createFromServer(await (0, A.UM)(e.id))) || void 0 === l ? void 0 : l.bot;
+            i = null !== (a = null === (r = Z.Z.getApplication(e.id)) || void 0 === r ? void 0 : r.bot) && void 0 !== a ? a : null === (l = S.ZP.createFromServer(await (0, x.UM)(e.id))) || void 0 === l ? void 0 : l.bot;
         } catch (e) {
             t(void 0);
             return;
         }
     if (null != i) {
         let r,
-            l = null == S.Z.getDMFromUserId(i.id);
+            l = null == N.Z.getDMFromUserId(i.id);
         try {
-            r = await c.Z.openPrivateChannel([i.id], !1, !1, m.Z.APP_DMS_QUICK_LAUNCHER);
+            r = await c.Z.openPrivateChannel([i.id], !1, !1, p.Z.APP_DMS_QUICK_LAUNCHER);
         } catch (e) {
             t(void 0);
         }
         if (
-            (N.default.track(Z.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
+            (T.default.track(L.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
                 application_id: e.id,
                 is_new_dm: l,
                 channel_id: r
@@ -67,9 +68,9 @@ async function O(e, t, n) {
             return;
         }
         try {
-            await (0, E.ZP)(r, e.id);
+            await (0, I.ZP)(r, e.id);
         } catch (e) {
-            if (e.message === E.sV) {
+            if (e.message === I.sV) {
                 t(void 0);
                 return;
             }
@@ -78,47 +79,47 @@ async function O(e, t, n) {
             targetApplicationId: e.id,
             channelId: r,
             analyticsLocations: n,
-            commandOrigin: _.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
+            commandOrigin: E.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
             onExecutedCallback() {
                 t(void 0);
             }
         });
     } else t(void 0);
 }
-function R(e) {
+function j(e) {
     let { application: t, loadingAppId: n, setLoadingAppId: r, botUserId: l, analyticsLocations: c } = e,
-        d = (0, o.e7)([S.Z], () => S.Z.getDMFromUserId(l)),
+        d = (0, o.e7)([N.Z], () => N.Z.getDMFromUserId(l)),
         h = (0, o.e7)([u.ZP], () => u.ZP.getCurrentEmbeddedActivity()),
-        m = null != h && h.applicationId === t.id && h.channelId === d,
-        p = n === t.id,
-        g = null != n;
+        p = null != h && h.applicationId === t.id && (0, m.p)(h.location) === d,
+        g = n === t.id,
+        f = null != n;
     return (0, i.jsx)(s.Clickable, {
-        className: a()(P.clickable, { [P.disabledClickable]: g }),
-        onClick: () => (m || g ? null : O(t, r, c)),
-        'aria-label': L.intl.formatToPlainString(L.t['zLhr9/'], {
+        className: a()(y.clickable, { [y.disabledClickable]: f }),
+        onClick: () => (p || f ? null : R(t, r, c)),
+        'aria-label': P.intl.formatToPlainString(P.t['zLhr9/'], {
             applicationName: t.name,
             applicationDescription: t.description
         }),
         children: (0, i.jsx)(s.Tooltip, {
-            tooltipContentClassName: P.tooltipContent,
+            tooltipContentClassName: y.tooltipContent,
             text: t.name,
             children: (e) => {
                 let { ...n } = e;
                 return (0, i.jsxs)('div', {
-                    className: P.iconContainer,
+                    className: y.iconContainer,
                     ...n,
                     children: [
-                        (0, i.jsx)(f.Z, {
+                        (0, i.jsx)(_.Z, {
                             application: t,
-                            className: P.iconCard,
+                            className: y.iconCard,
                             'aria-hidden': !0,
                             rendersPlaceholder: !0
                         }),
-                        p || m
+                        g || p
                             ? (0, i.jsx)(s.Spinner, {
                                   type: s.Spinner.Type.PULSING_ELLIPSIS,
-                                  className: P.spinner,
-                                  itemClassName: m ? P.spinnerInnerRunning : void 0
+                                  className: y.spinner,
+                                  itemClassName: p ? y.spinnerInnerRunning : void 0
                               })
                             : null
                     ]
@@ -127,14 +128,14 @@ function R(e) {
         })
     });
 }
-function j(e) {
+function D(e) {
     let { frecentApps: t, loadingAppId: n, setLoadingAppId: r, analyticsLocations: l } = e;
     return (0, i.jsx)('div', {
-        className: P.itemContainer,
+        className: y.itemContainer,
         children: t.map((e) => {
             var t;
             return (0, i.jsx)(
-                R,
+                j,
                 {
                     application: e,
                     loadingAppId: n,
@@ -147,16 +148,16 @@ function j(e) {
         })
     });
 }
-let D = (e) => {
+let M = (e) => {
     (0, d.jW)(e, async () => {
         let { default: e } = await n.e('40706').then(n.bind(n, 610909));
         return (t) => (0, i.jsx)(e, { ...t });
     });
 };
-function M() {
-    let e = (0, b.en)(m.Z.APP_DMS_QUICK_LAUNCHER),
-        t = (0, o.e7)([C.ZP], () => C.ZP.showPlayAgain),
-        { frecentApps: n } = (0, g.f)({
+function w() {
+    let e = (0, A.en)(p.Z.APP_DMS_QUICK_LAUNCHER),
+        t = (0, o.e7)([v.ZP], () => v.ZP.showPlayAgain),
+        { frecentApps: n } = (0, f.f)({
             channel: void 0,
             onlyActivityApps: !0,
             allowCommandFetch: e,
@@ -164,50 +165,50 @@ function M() {
         });
     return t && e && n.length > 0;
 }
-function w(e) {
+function k(e) {
     let { bottomDivider: t } = e,
-        n = (0, b.en)(m.Z.APP_DMS_QUICK_LAUNCHER),
-        { frecentApps: l } = (0, g.f)({
+        n = (0, A.en)(p.Z.APP_DMS_QUICK_LAUNCHER),
+        { frecentApps: l } = (0, f.f)({
             channel: void 0,
             onlyActivityApps: !0,
             allowCommandFetch: n,
             includeAuthorizedAppsAndFetch: !1
         }),
         [o, s] = r.useState(void 0),
-        { analyticsLocations: c } = (0, p.ZP)(m.Z.APP_DMS_QUICK_LAUNCHER),
-        d = M(),
+        { analyticsLocations: c } = (0, g.ZP)(p.Z.APP_DMS_QUICK_LAUNCHER),
+        d = w(),
         [u, h] = r.useState(!1),
-        f = r.useMemo(
+        m = r.useMemo(
             () =>
                 l
                     .map((e) => e.application)
-                    .filter(T.lm)
+                    .filter(b.lm)
                     .slice(0, 5),
             [l]
         );
     return (
         r.useLayoutEffect(() => {
             var e;
-            if (!u && !!d) h(!0), N.default.track(Z.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = f.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
-        }, [d, f, u]),
+            if (!u && !!d) h(!0), T.default.track(L.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = m.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
+        }, [d, m, u]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
-                    className: P.container,
-                    onContextMenu: D,
+                    className: y.container,
+                    onContextMenu: M,
                     children: [
-                        (0, i.jsx)(I.Z, {
-                            className: a()(P.headerContainer, y.privateChannelsHeaderContainer),
+                        (0, i.jsx)(C.Z, {
+                            className: a()(y.headerContainer, O.privateChannelsHeaderContainer),
                             children: (0, i.jsx)('div', {
-                                className: P.textContainer,
+                                className: y.textContainer,
                                 children: (0, i.jsx)('span', {
-                                    className: y.headerText,
-                                    children: L.intl.string(L.t.vayAzs)
+                                    className: O.headerText,
+                                    children: P.intl.string(P.t.vayAzs)
                                 })
                             })
                         }),
-                        (0, i.jsx)(j, {
-                            frecentApps: f,
+                        (0, i.jsx)(D, {
+                            frecentApps: m,
                             loadingAppId: o,
                             setLoadingAppId: s,
                             analyticsLocations: c

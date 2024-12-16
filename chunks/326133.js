@@ -8,134 +8,135 @@ var a = r(200651),
     d = r(481060),
     f = r(595519),
     _ = r(317381),
-    h = r(588468),
-    p = r(30465),
-    m = r(313201),
-    g = r(314910),
-    E = r(549006),
-    v = r(430824),
-    I = r(436896),
-    T = r(590921),
-    b = r(606992),
-    y = r(51062),
-    S = r(918559),
-    A = r(144685);
-let N = 490,
-    C = 490,
-    R = 245,
-    O = 200,
-    D = 175;
+    h = r(16609),
+    p = r(588468),
+    m = r(30465),
+    g = r(313201),
+    E = r(314910),
+    v = r(549006),
+    I = r(430824),
+    T = r(436896),
+    b = r(590921),
+    y = r(606992),
+    S = r(51062),
+    A = r(918559),
+    N = r(144685);
+let C = 490,
+    R = 490,
+    O = 245,
+    D = 200,
+    L = 175;
 n.Z = s.forwardRef(function (e, n) {
-    var r, i, o, L, x;
-    let { channel: w, type: P, editorHeight: M, onVisibilityChange: k } = e,
-        U = (0, m.Dt)(),
-        B = (0, c.e7)(
-            [v.Z],
+    var r, i, o, x, w;
+    let { channel: P, type: M, editorHeight: k, onVisibilityChange: U } = e,
+        B = (0, g.Dt)(),
+        G = (0, c.e7)(
+            [I.Z],
             () => {
                 var e;
-                return null !== (e = v.Z.getGuild(w.guild_id)) && void 0 !== e ? e : null;
+                return null !== (e = I.Z.getGuild(P.guild_id)) && void 0 !== e ? e : null;
             },
-            [w.guild_id]
+            [P.guild_id]
         ),
-        G = s.useRef(),
-        [Z, F, V] = (0, y.Z)(
+        Z = s.useRef(),
+        [F, V, j] = (0, S.Z)(
             {
                 ...e,
-                guild: B
+                guild: G
             },
             n,
-            G
+            Z
         ),
-        j = (null === (r = P.autocomplete) || void 0 === r ? void 0 : r.forceChatLayer) ? E.ZP : g.ZP,
-        H = (0, h.DJ)(Z.selectedIndex);
-    (0, p.KR)(U, Z.isVisible, H), I.Z.trackExposure({ location: '6e9811_1' });
-    let { usePopoutAutocomplete: Y } = I.Z.useExperiment({ location: '6e9811_2' }, { autoTrackExposure: !1 }),
-        W = (0, b.Z)({
-            editorHeight: M,
-            type: P,
-            state: Z,
-            isInPopoutExperiment: Y
+        H = (null === (r = M.autocomplete) || void 0 === r ? void 0 : r.forceChatLayer) ? v.ZP : E.ZP,
+        Y = (0, p.DJ)(F.selectedIndex);
+    (0, m.KR)(B, F.isVisible, Y), T.Z.trackExposure({ location: '6e9811_1' });
+    let { usePopoutAutocomplete: W } = T.Z.useExperiment({ location: '6e9811_2' }, { autoTrackExposure: !1 }),
+        K = (0, y.Z)({
+            editorHeight: k,
+            type: M,
+            state: F,
+            isInPopoutExperiment: W
         }),
-        K = (0, c.e7)(
+        z = (0, c.e7)(
             [_.ZP],
             () => {
-                let e = _.ZP.getSelfEmbeddedActivityForChannel(w.id),
+                let e = _.ZP.getSelfEmbeddedActivityForChannel(P.id),
                     n = _.ZP.getActivityPanelMode();
-                return (0, f.l5)(w) && null != e && e.channelId === w.id && n === S.Ez.PANEL;
+                return (0, f.l5)(P) && null != e && (0, h.p)(e.location) === P.id && n === A.Ez.PANEL;
             },
-            [w]
+            [P]
         ),
-        z = s.useMemo(() => (null == W ? '' : String(Date.now())), [null == W ? void 0 : W.top, null == W ? void 0 : W.left, null == W ? void 0 : W.bottom, null == W ? void 0 : W.right]);
+        q = s.useMemo(() => (null == K ? '' : String(Date.now())), [null == K ? void 0 : K.top, null == K ? void 0 : K.left, null == K ? void 0 : K.bottom, null == K ? void 0 : K.right]);
     if (
         (s.useEffect(() => {
-            k(Z.isVisible);
-        }, [k, Z.isVisible]),
-        !Z.isVisible || null == Z.query || void 0 === W)
+            U(F.isVisible);
+        }, [U, F.isVisible]),
+        !F.isVisible || null == F.query || void 0 === K)
     )
         return null;
-    let q =
+    let Q =
         null !==
-            (i = Z.query.typeInfo.renderResults({
-                results: Z.query.results,
-                selectedIndex: Z.selectedIndex,
-                channel: w,
-                guild: B,
-                query: Z.query.queryText,
-                options: Z.query.options,
-                onHover: (e) => F.onResultHover(e),
-                onClick: (e) => F.onResultClick(e)
+            (i = F.query.typeInfo.renderResults({
+                results: F.query.results,
+                selectedIndex: F.selectedIndex,
+                channel: P,
+                guild: G,
+                query: F.query.queryText,
+                options: F.query.options,
+                onHover: (e) => V.onResultHover(e),
+                onClick: (e) => V.onResultClick(e)
             })) && void 0 !== i
             ? i
             : null;
-    if (null == q) return null;
-    let Q = {
-            [A.autocompleteAttached]: null == W,
-            [A.autocompletePopout]: null != W,
-            [A.bottom]: null == W && 'bottom' === e.position,
-            [A.autocompleteTop]: K
+    if (null == Q) return null;
+    let X = {
+            [N.autocompleteAttached]: null == K,
+            [N.autocompletePopout]: null != K,
+            [N.bottom]: null == K && 'bottom' === e.position,
+            [N.autocompleteTop]: z
         },
-        X = N;
-    null != W && (X = (null === (o = P.autocomplete) || void 0 === o ? void 0 : o.small) ? O : (null === (L = Z.query) || void 0 === L ? void 0 : L.type) === T.eq.EMOJIS_AND_STICKERS ? C : R), (X = Math.min(window.innerHeight - D, X));
-    let J = (0, a.jsx)(h.ZP, {
-        id: U,
-        className: l()(A.autocomplete, Q),
-        innerClassName: A.autocompleteInner,
+        J = C;
+    null != K && (J = (null === (o = M.autocomplete) || void 0 === o ? void 0 : o.small) ? D : (null === (x = F.query) || void 0 === x ? void 0 : x.type) === b.eq.EMOJIS_AND_STICKERS ? R : O), (J = Math.min(window.innerHeight - L, J));
+    let $ = (0, a.jsx)(p.ZP, {
+        id: B,
+        className: l()(N.autocomplete, X),
+        innerClassName: N.autocompleteInner,
         onMouseDown: (e) => e.preventDefault(),
         children: (0, a.jsx)(u.bG, {
-            navigator: V,
+            navigator: j,
             children: (0, a.jsx)(u.SJ, {
                 children: (e) => {
                     let { ref: n, ...r } = e;
                     return (0, a.jsx)(d.AdvancedScrollerThin, {
-                        id: U,
+                        id: B,
                         ref: (e) => {
                             var r;
-                            (n.current = null !== (r = null == e ? void 0 : e.getScrollerNode()) && void 0 !== r ? r : null), (G.current = e);
+                            (n.current = null !== (r = null == e ? void 0 : e.getScrollerNode()) && void 0 !== r ? r : null), (Z.current = e);
                         },
                         ...r,
-                        className: A.scroller,
-                        style: { maxHeight: X },
+                        className: N.scroller,
+                        style: { maxHeight: J },
                         role: 'listbox',
-                        'aria-labelledby': (0, h.rp)(U),
-                        children: q
+                        'aria-labelledby': (0, p.rp)(B),
+                        children: Q
                     });
                 }
             })
         })
     });
-    return null != W
-        ? (0, a.jsx)(j, {
+    return null != K
+        ? (0, a.jsx)(H, {
               children: (0, a.jsx)(d.ReferencePositionLayer, {
                   targetRef: e.targetRef,
-                  overrideTargetRect: W,
-                  positionKey: z,
-                  position: null !== (x = e.position) && void 0 !== x ? x : 'top',
+                  overrideTargetRect: K,
+                  positionKey: q,
+                  position: null !== (w = e.position) && void 0 !== w ? w : 'top',
                   align: 'left',
                   spacing: 8,
                   autoInvert: !0,
                   nudgeAlignIntoViewport: !0,
-                  children: () => J
+                  children: () => $
               })
           })
-        : J;
+        : $;
 });
