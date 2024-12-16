@@ -495,6 +495,12 @@ t.ZP = function (e) {
                                           }
                                       }),
                                       !H &&
+                                          (0, r.jsx)('div', {
+                                              className: eN.avSpacing,
+                                              'aria-hidden': 'true',
+                                              role: 'presentation'
+                                          }),
+                                      !H &&
                                           (0, r.jsx)(f.Popout, {
                                               renderPopout: (e) => {
                                                   let { closePopout: t } = e;

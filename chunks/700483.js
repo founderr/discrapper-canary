@@ -400,6 +400,12 @@ let ec = l.memo(function (e) {
                                             });
                                         }
                                     }),
+                                    G &&
+                                        (0, i.jsx)('div', {
+                                            className: et.avSpacing,
+                                            'aria-hidden': 'true',
+                                            role: 'presentation'
+                                        }),
                                     G && W
                                 ]
                             })
