@@ -21,8 +21,8 @@ var i = n(200651),
     p = n(367907),
     f = n(906732),
     C = n(118012),
-    _ = n(218867),
-    I = n(733026),
+    I = n(218867),
+    _ = n(733026),
     v = n(246946),
     N = n(594174),
     T = n(626135),
@@ -52,12 +52,12 @@ function O(e) {
     var t;
     let { transitionState: n, guild: l, user: s, ban: a, hideDiscriminator: o, onClose: c } = e,
         [u, g] = r.useState(!1),
-        [x, _] = r.useState(null),
-        { analyticsLocations: I } = (0, f.ZP)(),
-        v = null !== (t = null == I ? void 0 : I[0]) && void 0 !== t ? t : null;
+        [x, I] = r.useState(null),
+        { analyticsLocations: _ } = (0, f.ZP)(),
+        v = null !== (t = null == _ ? void 0 : _[0]) && void 0 !== t ? t : null;
     async function N() {
         if (null != l) {
-            _(null), g(!0);
+            I(null), g(!0);
             try {
                 await m.Z.unbanUser(l.id, s.id),
                     c(),
@@ -68,7 +68,7 @@ function O(e) {
                         location: v
                     });
             } catch (e) {
-                _(new h.Z(e)), g(!1);
+                I(new h.Z(e)), g(!1);
             }
         }
     }
@@ -102,11 +102,12 @@ function O(e) {
                 children: [
                     (0, i.jsx)(d.Text, {
                         className: L.reasonHeader,
-                        variant: 'text-xs/normal',
+                        variant: 'text-md/medium',
                         children: Z.intl.string(Z.t['9Ki66O'])
                     }),
                     (0, i.jsx)(d.Text, {
-                        variant: 'text-sm/normal',
+                        variant: 'text-xs/medium',
+                        color: 'text-secondary',
                         children: null != a.reason && '' !== a.reason ? a.reason : Z.intl.string(Z.t['t+2Zcn'])
                     }),
                     null != x
@@ -123,15 +124,15 @@ function O(e) {
                 className: L.footer,
                 children: [
                     (0, i.jsx)(d.Button, {
+                        onClick: c,
+                        children: Z.intl.string(Z.t.i4jeWV)
+                    }),
+                    (0, i.jsx)(d.Button, {
                         onClick: N,
                         look: d.Button.Looks.LINK,
                         color: d.Button.Colors.RED,
                         submitting: u,
                         children: Z.intl.string(Z.t.UPcIa2)
-                    }),
-                    (0, i.jsx)(d.Button, {
-                        onClick: c,
-                        children: Z.intl.string(Z.t.i4jeWV)
                     })
                 ]
             })
@@ -243,7 +244,7 @@ let k = r.forwardRef(function (e, t) {
             },
             [s, n, l, a]
         );
-    return (0, i.jsx)(_.Z, {
+    return (0, i.jsx)(I.Z, {
         role: 'listbox',
         listPadding: [8, 8, 8, 8],
         rowCount: l.length,
@@ -273,7 +274,7 @@ function M(e) {
             if (!a)
                 try {
                     o(!0);
-                    let [e, n] = (0, I.C)(l),
+                    let [e, n] = (0, _.C)(l),
                         i = e[0];
                     S.Z.setSearchQuery(l), await m.Z.searchGuildBans(t, i, n), o(!1);
                 } catch (e) {
@@ -337,7 +338,7 @@ function w() {
         p = (0, g.Z)(h),
         f = h !== p,
         [C] = (0, c.e7)([E.Z], () => E.Z.getBans(), [], b.Q),
-        _ = null !== (e = null == C ? void 0 : C.size) && void 0 !== e ? e : 0,
+        I = null !== (e = null == C ? void 0 : C.size) && void 0 !== e ? e : 0,
         v = (0, x.ZP)(),
         T = null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : A.lds,
         j = r.useRef(null),
@@ -347,7 +348,7 @@ function w() {
                     ? (e) => null != e
                     : (t) => {
                           if (null == t || 0 === e.trim().length) return !1;
-                          let [[n], i] = (0, I.C)(e);
+                          let [[n], i] = (0, _.C)(e);
                           return !!i.includes(t.id) || (null != n && (!!(t.username.toLowerCase().includes(n.toLowerCase()) || (null != t.globalName && t.globalName.toLowerCase().includes(n.toLowerCase()))) || !1));
                       },
             []
@@ -364,7 +365,7 @@ function w() {
             },
             [S]
         ),
-        y = r.useMemo(() => R(C, u, _), [C, R, u, _]),
+        y = r.useMemo(() => R(C, u, I), [C, R, u, I]),
         D = null != C,
         O = y.length % 1000 == 0 && y.length > 0 && D,
         P = 0 === y.length,
