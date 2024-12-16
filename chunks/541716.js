@@ -336,7 +336,8 @@ let l = {
             disableEnterToSubmit: !0
         },
         disableAutoFocus: !0,
-        showCharacterCount: !0
+        showCharacterCount: !0,
+        layout: 1
     },
     A = {
         NORMAL: l,
