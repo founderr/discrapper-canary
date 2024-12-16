@@ -86,16 +86,16 @@ let v = o()((e) => {
     },
     x = (e) => {
         var t, n;
-        let { variantGroupProduct: a, className: i, previewingVariantIndexProps: s, setIsHoveringOnSwitch: o, minimal: u, purchases: g } = e,
-            v = (0, p.o)(a, g),
-            x = s.previewingVariantIndex,
-            _ = null === (t = a.variants) || void 0 === t ? void 0 : t[v],
-            k = null !== x ? (null === (n = a.variants) || void 0 === n ? void 0 : n[x]) : void 0,
-            I = (0, h.Z)('shop-variants-group-'.concat(a.storeListingId), d.hy.HORIZONTAL);
-        if (null == _) return null;
-        let S = null != k ? k.variantLabel : null == _ ? void 0 : _.variantLabel;
+        let { variantGroupProduct: a, className: i, previewingVariantIndexProps: s, setIsHoveringOnSwitch: o, minimal: u, purchases: g, alternativeBackgroundColor: v } = e,
+            x = (0, p.o)(a, g),
+            _ = s.previewingVariantIndex,
+            k = null === (t = a.variants) || void 0 === t ? void 0 : t[x],
+            I = null !== _ ? (null === (n = a.variants) || void 0 === n ? void 0 : n[_]) : void 0,
+            E = (0, h.Z)('shop-variants-group-'.concat(a.storeListingId), d.hy.HORIZONTAL);
+        if (null == k) return null;
+        let S = null != I ? I.variantLabel : null == k ? void 0 : k.variantLabel;
         return (0, r.jsx)(c.bG, {
-            navigator: I,
+            navigator: E,
             children: (0, r.jsx)(c.SJ, {
                 children: (e) => {
                     var t;
@@ -103,7 +103,10 @@ let v = o()((e) => {
                     return (0, r.jsxs)('div', {
                         ref: n,
                         ...c,
-                        className: l()(C.variantsPanel, i, { [C.minimalState]: u }),
+                        className: l()(C.variantsPanel, i, {
+                            [C.minimalState]: u,
+                            [C.alternativeColor]: v
+                        }),
                         onMouseEnter: () => (null == o ? void 0 : o(!0)),
                         onMouseLeave: () => (null == o ? void 0 : o(!1)),
                         children: [
@@ -120,7 +123,7 @@ let v = o()((e) => {
                                                       variantGroupProduct: a,
                                                       variant: e,
                                                       variantIndex: t,
-                                                      selectedVariantIndex: v,
+                                                      selectedVariantIndex: x,
                                                       totalVariants: null !== (i = null === (n = a.variants) || void 0 === n ? void 0 : n.length) && void 0 !== i ? i : 0,
                                                       onEnter: () => s.handleEntering(t),
                                                       onLeave: s.handleLeaving,

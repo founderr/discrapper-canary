@@ -20,9 +20,9 @@ var r = n(200651),
     _ = n(906732),
     k = n(1585),
     I = n(333867),
-    S = n(197115),
-    j = n(300284),
-    E = n(876917),
+    E = n(197115),
+    S = n(300284),
+    j = n(876917),
     T = n(642619),
     N = n(210887),
     B = n(74538),
@@ -86,7 +86,7 @@ let ea = (e) => {
         let { profileEffectId: t, isHighlighted: n, isPurchased: a } = e;
         return (0, r.jsx)('div', {
             className: er.profileEffectShopPreview,
-            children: (0, r.jsx)(E.Z, {
+            children: (0, r.jsx)(j.Z, {
                 profileEffectId: t,
                 isHovering: n,
                 isPurchased: a && !n,
@@ -107,7 +107,7 @@ let ea = (e) => {
         });
     };
 t.Z = function (e) {
-    let { product: t, user: n, category: i, onMount: s, isGiftEasterEggEnabled: E, isInFeedView: K } = e,
+    let { product: t, user: n, category: i, onMount: s, isGiftEasterEggEnabled: j, isInFeedView: K } = e,
         { analyticsLocations: eo } = (0, _.ZP)([...(K ? [x.Z.COLLECTIBLES_SHOP_HOME_SCREEN] : []), x.Z.COLLECTIBLES_SHOP_CARD]),
         ec = a.useRef(null),
         ed = (0, v.Z)(ec),
@@ -122,8 +122,8 @@ t.Z = function (e) {
         ex = a.useMemo(() => (0, Z.BH)(t, ev), [t, ev]),
         e_ = (0, Z.G1)(t),
         ek = (0, Z.rN)(t),
-        [eI, eS, ej] = (0, h.Wu)([L.Z], () => [L.Z.isClaiming === t.skuId, null != L.Z.isClaiming && L.Z.isClaiming !== t.skuId, L.Z.purchases]),
-        eE = (0, Q.o)(t, ej, eg),
+        [eI, eE, eS] = (0, h.Wu)([L.Z], () => [L.Z.isClaiming === t.skuId, null != L.Z.isClaiming && L.Z.isClaiming !== t.skuId, L.Z.purchases]),
+        ej = (0, Q.o)(t, eS, eg),
         eT = (0, h.e7)([N.Z], () => (0, g.wj)(N.Z.theme)),
         eN = (0, A.m)('CollectiblesCollectedModal'),
         eB = (0, Z.x6)(t) || eN,
@@ -132,7 +132,7 @@ t.Z = function (e) {
         eP = i.skuId === u.T.STORM && '1268362891946627103' === t.skuId,
         eZ = (0, O.c)('CollectiblesShopTallCard'),
         eO = (0, R.hv)('CollectiblesShopTallCard'),
-        ew = (0, P.o)(t, ej),
+        ew = (0, P.o)(t, eS),
         eA = (0, q.W)(t, ew),
         { isPurchased: eR, isPartiallyOwnedBundle: eF } = (0, D.L)(eA),
         eH = null !== eg ? eg : ew,
@@ -153,21 +153,21 @@ t.Z = function (e) {
         a.useEffect(() => {
             null == s || s(ec);
         }, [s]);
-    let eW = (0, j.Z)({ analyticsLocations: eo }),
+    let eW = (0, S.Z)({ analyticsLocations: eo }),
         eU = a.useRef(null),
         { handleUseNow: eG, isApplying: ez } = (0, F.W)({ product: eA }),
         e$ = () => {
-            if (((0, C.xf)(), eW(), t.type === m.Z.AVATAR_DECORATION && null != eE)) {
-                o()(eE.type === t.type, "product type is equivlant to first item's check for avatar deco"),
+            if (((0, C.xf)(), eW(), t.type === m.Z.AVATAR_DECORATION && null != ej)) {
+                o()(ej.type === t.type, "product type is equivlant to first item's check for avatar deco"),
                     (0, k.ps)({
-                        initialSelectedDecoration: eE,
+                        initialSelectedDecoration: ej,
                         analyticsLocations: eo
                     });
                 return;
             }
             t.type === m.Z.PROFILE_EFFECT &&
                 (0, T.H)({
-                    initialSelectedEffectId: eE.id,
+                    initialSelectedEffectId: ej.id,
                     analyticsLocations: eo
                 });
         },
@@ -186,10 +186,10 @@ t.Z = function (e) {
         eq = () =>
             (0, r.jsx)('div', {
                 className: er.hoverUpsellContainer,
-                children: (0, r.jsx)(S.Z, {
+                children: (0, r.jsx)(E.Z, {
                     fullWidth: !0,
                     className: er.__invalid_premiumSubscribeButton,
-                    disabled: eS,
+                    disabled: eE,
                     onClick: (e) => e.stopPropagation(),
                     buttonText: en.intl.string(en.t.sEAnVF),
                     subscriptionTier: et.Si.TIER_2
@@ -222,7 +222,7 @@ t.Z = function (e) {
                         product: t,
                         selectedVariantIndex: ew,
                         returnRef: ec,
-                        isGiftEasterEggEnabled: E,
+                        isGiftEasterEggEnabled: j,
                         disableCustomColor: !0,
                         tooltipDelay: 250
                     }),
@@ -260,13 +260,13 @@ t.Z = function (e) {
                         ? null
                         : eR
                           ? (0, r.jsx)(ea, {
-                                disabled: eS,
+                                disabled: eE,
                                 onClick: eB ? eG : e$,
                                 submitting: ez,
                                 children: en.intl.string(en.t.MAS7uL)
                             })
                           : (0, r.jsx)(ea, {
-                                disabled: eS,
+                                disabled: eE,
                                 ...e,
                                 children: e_ ? en.intl.string(en.t.zp6caG) : en.intl.formatToPlainString(en.t['cNSL/v'], { price: eb })
                             }),
@@ -314,16 +314,16 @@ t.Z = function (e) {
                                   .with(m.Z.PROFILE_EFFECT, () =>
                                       (0, r.jsx)(el, {
                                           isHighlighted: eh,
-                                          profileEffectId: eE.id,
+                                          profileEffectId: ej.id,
                                           isPurchased: eR
                                       })
                                   )
                                   .with(
                                       m.Z.AVATAR_DECORATION,
                                       () => (
-                                          o()(eE.type === m.Z.AVATAR_DECORATION, 'ts-match already checked the type'),
+                                          o()(ej.type === m.Z.AVATAR_DECORATION, 'ts-match already checked the type'),
                                           (0, r.jsx)(es, {
-                                              item: eE,
+                                              item: ej,
                                               user: n,
                                               isStormMysteryItem: eP,
                                               isHighlighted: eh,
@@ -384,11 +384,11 @@ t.Z = function (e) {
                               : null,
                           (0, r.jsxs)('div', {
                               className: l()(er.cardText, {
-                                  [er.cardTextBlur]: (null == eE ? void 0 : eE.type) === m.Z.PROFILE_EFFECT,
+                                  [er.cardTextBlur]: (null == ej ? void 0 : ej.type) === m.Z.PROFILE_EFFECT,
                                   [er.variantsGroup]: t.type === m.Z.VARIANTS_GROUP
                               }),
                               children: [
-                                  (0, r.jsx)('div', { className: l()(er.cardBackground, eT ? er.darkCardBackground : er.lightCardBackground, (null == eE ? void 0 : eE.type) === m.Z.PROFILE_EFFECT ? er.cardLowOpacity : null) }),
+                                  (0, r.jsx)('div', { className: l()(er.cardBackground, eT ? er.darkCardBackground : er.lightCardBackground, (null == ej ? void 0 : ej.type) === m.Z.PROFILE_EFFECT ? er.cardLowOpacity : null) }),
                                   (0, r.jsx)(f.Text, {
                                       variant: 'text-lg/bold',
                                       className: er.productName,
@@ -399,8 +399,9 @@ t.Z = function (e) {
                                             variantGroupProduct: t,
                                             previewingVariantIndexProps: ep,
                                             setIsHoveringOnSwitch: eV,
-                                            purchases: ej,
-                                            minimal: !eh
+                                            purchases: eS,
+                                            minimal: !eh,
+                                            alternativeBackgroundColor: (null == ej ? void 0 : ej.type) === m.Z.PROFILE_EFFECT
                                         })
                                       : null,
                                   (0, r.jsxs)('div', {

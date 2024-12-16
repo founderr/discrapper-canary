@@ -7,5 +7,6 @@ e.exports = {
     open: 'open_dee9c5',
     selected: 'selected_dee9c5',
     purchasedIndicator: 'purchasedIndicator_dee9c5',
-    minimalState: 'minimalState_dee9c5'
+    minimalState: 'minimalState_dee9c5',
+    alternativeColor: 'alternativeColor_dee9c5'
 };
