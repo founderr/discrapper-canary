@@ -295,6 +295,7 @@ class e3 extends (i = l.Component) {
                           : (0, r.jsx)(
                                 C.F,
                                 {
+                                    appId: t.applicationId,
                                     skuId: t.skuId,
                                     message: e
                                 },
