@@ -265,6 +265,10 @@ let M = {
         throttlePeriod: N,
         throttleKeys: (e) => [e.voice_channel_id],
         deduplicate: !0
+    },
+    [g.rMx.MEMBER_LIST_SWIPE_PEEK]: {
+        throttlePeriod: 1000,
+        throttleKeys: (e) => [e.channel_id]
     }
 };
 function k(e) {
