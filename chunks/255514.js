@@ -190,7 +190,8 @@ let q = (e) => {
                                     (0, s.jsx)(m.Z, {
                                         user: 'application' === r.name ? r.record.bot : 'user' === r.name ? r.record : r.record.author,
                                         channelId: eg,
-                                        reportId: J
+                                        reportId: J,
+                                        reportType: r
                                     }),
                                 !eC &&
                                     null != W(n, 'mute_users') &&
