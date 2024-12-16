@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return _;
     }
 });
 var i = n(200651),
@@ -14,46 +14,48 @@ var i = n(200651),
     u = n(368478),
     h = n(499254),
     p = n(827498),
-    m = n(541716),
-    f = n(61356),
-    g = n(981631),
-    C = n(314734),
-    x = n(700559);
-function v(e) {
+    m = n(213459),
+    f = n(541716),
+    g = n(61356),
+    C = n(981631),
+    x = n(314734),
+    v = n(700559);
+function _(e) {
     let { channel: t, entryPointCommandButtonRef: n, type: r } = e,
         { isInitialLoading: a, application: s, primaryEntryPointCommand: u } = (0, d.Z)({ channel: t }),
-        C = null == s ? void 0 : s.id,
-        x = (0, f.Z)({ type: r }),
-        v = l.useCallback(() => {
-            x
+        x = null == s ? void 0 : s.id,
+        v = (0, g.Z)({ type: r }),
+        { sectionCommands: _ } = (0, m.If)(t, null != x ? x : ''),
+        E = l.useCallback(() => {
+            v
                 ? h.yT(p.ti.DISMISSED)
-                : (h.__(p._b.TEXT, m.Ie.NORMAL, { applicationId: C }),
-                  (0, c.yw)(g.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
-                      application_id: C,
+                : (h.__(p._b.TEXT, f.Ie.NORMAL, { applicationId: x }),
+                  (0, c.yw)(C.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
+                      application_id: x,
                       location: o.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
                       source: p._b.TEXT
                   }));
-        }, [C, x]);
-    return a || null == s
+        }, [x, v]);
+    return a || null == s || null == _ || 0 === _.length
         ? null
-        : (0, i.jsx)(_, {
+        : (0, i.jsx)(I, {
               channel: t,
               application: s,
               primaryEntryPointCommand: u,
-              onOpenButtonPress: v,
+              onOpenButtonPress: E,
               entryPointCommandButtonRef: n,
               type: r
           });
 }
-function _(e) {
+function I(e) {
     let { channel: t, application: n, primaryEntryPointCommand: l, onOpenButtonPress: r, entryPointCommandButtonRef: o, type: c } = e,
-        d = (0, f.Z)({ type: c }),
+        d = (0, g.Z)({ type: c }),
         {
             isExecutingLaunchInteraction: h,
             buttonText: p,
             hasActiveMatchingEmbeddedActivity: m,
-            isEmbeddedApp: g,
-            currentEmbeddedActivity: v,
+            isEmbeddedApp: f,
+            currentEmbeddedActivity: C,
             channelRecipientUserId: _,
             setIsExecutingLaunchInteraction: I,
             analyticsLocations: E
@@ -66,9 +68,9 @@ function _(e) {
         b = (0, u.J)({
             channel: t,
             application: n,
-            isEmbeddedApp: g,
+            isEmbeddedApp: f,
             hasActiveMatchingEmbeddedActivity: m,
-            currentEmbeddedActivity: v,
+            currentEmbeddedActivity: C,
             onOpenButtonPress: r,
             channelRecipientUserId: _,
             setIsExecutingLaunchInteraction: I,
@@ -76,7 +78,7 @@ function _(e) {
         }),
         Z = m ? s.Button.Colors.RED : s.Button.Colors.BRAND;
     return (0, i.jsx)(s.Button, {
-        className: a()(x.entryPointAppCommandButton, C.Id),
+        className: a()(v.entryPointAppCommandButton, x.Id),
         size: s.Button.Sizes.LARGE,
         color: Z,
         submitting: h,
