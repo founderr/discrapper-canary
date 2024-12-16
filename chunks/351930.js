@@ -94,40 +94,47 @@ function b() {
             className: f.panelInner,
             children: [
                 (0, r.jsx)(s.Text, {
-                    style: { marginBottom: '16px' },
+                    style: { marginBottom: '8px' },
                     variant: 'text-lg/bold',
                     children: 'Manage Subscription'
                 }),
-                (0, r.jsxs)('section', {
-                    className: f.buttons,
-                    children: [
+                (0, r.jsx)('section', {
+                    className: i()([f.section, f.buttons]),
+                    children:
                         null == m &&
-                            (0, r.jsxs)(r.Fragment, {
-                                children: [
-                                    (0, r.jsx)(s.Text, {
-                                        variant: 'text-md/normal',
-                                        children: ' Subscription Type'
-                                    }),
-                                    (0, r.jsx)(s.Select, {
-                                        serialize: (e) => e,
-                                        isSelected: (t) => t === e,
-                                        options: g,
-                                        select: t,
-                                        popoutLayerContext: d.O$
-                                    }),
-                                    (0, r.jsx)(s.Button, {
-                                        size: s.Button.Sizes.SMALL,
-                                        onClick: v,
-                                        children: 'Create Subscription'
-                                    })
-                                ]
-                            }),
-                        (0, r.jsx)(s.Button, {
-                            size: s.Button.Sizes.SMALL,
-                            onClick: j,
-                            children: 'Delete Subscription'
+                        (0, r.jsxs)(r.Fragment, {
+                            children: [
+                                (0, r.jsx)(s.Text, {
+                                    variant: 'text-md/normal',
+                                    children: ' Subscription Type'
+                                }),
+                                (0, r.jsx)(s.Select, {
+                                    serialize: (e) => e,
+                                    isSelected: (t) => t === e,
+                                    options: g,
+                                    select: t,
+                                    popoutLayerContext: d.O$
+                                }),
+                                (0, r.jsx)(s.Button, {
+                                    size: s.Button.Sizes.SMALL,
+                                    onClick: v,
+                                    children: 'Create Subscription'
+                                })
+                            ]
                         })
-                    ]
+                }),
+                (0, r.jsx)(s.Text, {
+                    style: { marginBottom: '8px' },
+                    variant: 'text-lg/bold',
+                    children: 'Bulk action'
+                }),
+                (0, r.jsx)('section', {
+                    className: i()([f.section, f.buttons]),
+                    children: (0, r.jsx)(s.Button, {
+                        size: s.Button.Sizes.SMALL,
+                        onClick: j,
+                        children: 'End All Subscriptions'
+                    })
                 }),
                 null != m &&
                     (0, r.jsxs)(r.Fragment, {

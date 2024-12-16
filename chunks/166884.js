@@ -9,15 +9,25 @@ let i = (0, r(818083).B)({
     treatments: [
         {
             id: 1,
-            label: 'Simulcast @ 1.5Mbps',
+            label: 'Simulcast',
             config: {
                 simulcastEnabled: !0,
                 lqStreamBitrate: 1500000
+            }
+        },
+        {
+            id: 2,
+            label: 'Simulcast, no pacer for LQ',
+            config: {
+                simulcastEnabled: !0,
+                lqStreamBitrate: 1500000,
+                workerExperimentString: 'bandwidth_estimation/trendline-window-duration-3750,robust-estimator/worker-lq-no-pacer'
             }
         }
     ]
 });
 n.Z = {
     getConfig: () => i.getCurrentConfig({ location: 'getConfig' }, { autoTrackExposure: !1 }),
-    simulcastEnabled: () => i.getCurrentConfig({ location: 'simulcastEnabled' }, { autoTrackExposure: !0 }).simulcastEnabled
+    simulcastEnabled: () => i.getCurrentConfig({ location: 'simulcastEnabled' }, { autoTrackExposure: !0 }).simulcastEnabled,
+    workerExperimentString: () => i.getCurrentConfig({ location: 'workerExperimentString' }, { autoTrackExposure: !1 }).workerExperimentString
 };
