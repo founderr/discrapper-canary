@@ -12,8 +12,8 @@ var i,
     a = n.n(o),
     s = n(873546),
     c = n(442837),
-    d = n(481060),
-    u = n(239091),
+    u = n(481060),
+    d = n(239091),
     h = n(134616),
     p = n(714338),
     m = n(212819),
@@ -59,7 +59,7 @@ let L = 10,
                 }),
                 (0, l.jsx)('div', {
                     className: R.emptyStateCTA,
-                    children: (0, l.jsx)(d.Anchor, {
+                    children: (0, l.jsx)(u.Anchor, {
                         href: Z.Z.getArticleURL(A.BhN.QUICK_SWITCHER_TUTORIAL),
                         children: P.intl.string(P.t['4iPfEB'])
                     })
@@ -108,7 +108,7 @@ let O = c.ZP.connectStores([I.ZP, v.Z], (e) => {
     })(T.n5);
 function H(e, t, n) {
     return (0, l.jsx)(
-        d.Tooltip,
+        u.Tooltip,
         {
             text: n,
             children: (e) =>
@@ -153,7 +153,7 @@ class V extends r.PureComponent {
         let { selectedIndex: e, results: t } = this.props,
             { query: n } = this.state,
             i = t.length > 0 && '' !== n;
-        return (0, l.jsx)(d.FocusRing, {
+        return (0, l.jsx)(u.FocusRing, {
             children: (0, l.jsx)('input', {
                 className: R.input,
                 'aria-label': P.intl.string(P.t.ZvKwYW),
@@ -183,7 +183,7 @@ class V extends r.PureComponent {
             ? (0, l.jsx)(w, {})
             : 0 === t.length
               ? null
-              : (0, l.jsx)(d.ListAuto, {
+              : (0, l.jsx)(u.ListAuto, {
                     innerId: this._listId,
                     innerRole: 'listbox',
                     'aria-label': P.intl.string(P.t.Wef5Dg),
@@ -222,9 +222,9 @@ class V extends r.PureComponent {
         return t ? null : (0, l.jsx)(j.Z, { hasQuery: e.length > 0 && n.length > 0 });
     }
     render() {
-        return (0, l.jsx)(d.ModalRoot, {
+        return (0, l.jsx)(u.ModalRoot, {
             'aria-label': P.intl.string(P.t.ZvKwYW),
-            size: d.ModalSize.DYNAMIC,
+            size: u.ModalSize.DYNAMIC,
             transitionState: this.props.transitionState,
             className: a()(R.container, s.tq && R.mobileContainer),
             fullscreenOnMobile: !1,
@@ -262,7 +262,7 @@ class V extends r.PureComponent {
                 let t = this.props.results[this.props.selectedIndex];
                 switch (t.type) {
                     case m.h8.GUILD:
-                        return (0, u.jW)(e, async () => {
+                        return (0, d.jW)(e, async () => {
                             let { default: e } = await Promise.all([n.e('63288'), n.e('33053'), n.e('17298'), n.e('7654'), n.e('42309'), n.e('98479'), n.e('31113'), n.e('60696'), n.e('58227'), n.e('16114'), n.e('54770'), n.e('66780'), n.e('33213'), n.e('22179')]).then(n.bind(n, 545135));
                             return (n) =>
                                 (0, l.jsx)(e, {
@@ -282,7 +282,7 @@ class V extends r.PureComponent {
                             case A.d4z.GUILD_ANNOUNCEMENT:
                             case A.d4z.GUILD_FORUM:
                             case A.d4z.GUILD_MEDIA:
-                                return (0, u.jW)(e, async () => {
+                                return (0, d.jW)(e, async () => {
                                     let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('54310')]).then(n.bind(n, 373651));
                                     return (t) =>
                                         (0, l.jsx)(e, {
@@ -294,7 +294,7 @@ class V extends r.PureComponent {
                                 });
                             case A.d4z.GUILD_VOICE:
                             case A.d4z.GUILD_STAGE_VOICE:
-                                return (0, u.jW)(e, async () => {
+                                return (0, d.jW)(e, async () => {
                                     let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('83331')]).then(n.bind(n, 213202));
                                     return (t) =>
                                         (0, l.jsx)(e, {
@@ -307,7 +307,7 @@ class V extends r.PureComponent {
                             case A.d4z.ANNOUNCEMENT_THREAD:
                             case A.d4z.PUBLIC_THREAD:
                             case A.d4z.PRIVATE_THREAD:
-                                return (0, u.jW)(e, async () => {
+                                return (0, d.jW)(e, async () => {
                                     let { default: e } = await n.e('40157').then(n.bind(n, 422200));
                                     return (t) =>
                                         (0, l.jsx)(e, {
@@ -317,7 +317,7 @@ class V extends r.PureComponent {
                                         });
                                 });
                             case A.d4z.GUILD_STORE:
-                                return (0, u.jW)(e, async () => {
+                                return (0, d.jW)(e, async () => {
                                     let { default: e } = await n.e('99905').then(n.bind(n, 649400));
                                     return (t) =>
                                         (0, l.jsx)(e, {
@@ -328,7 +328,7 @@ class V extends r.PureComponent {
                                         });
                                 });
                             case A.d4z.GUILD_DIRECTORY:
-                                return (0, u.jW)(e, async () => {
+                                return (0, d.jW)(e, async () => {
                                     let { default: e } = await n.e('70623').then(n.bind(n, 99334));
                                     return (t) =>
                                         (0, l.jsx)(e, {
@@ -339,7 +339,7 @@ class V extends r.PureComponent {
                         }
                         break;
                     case m.h8.GROUP_DM:
-                        return (0, u.jW)(e, async () => {
+                        return (0, d.jW)(e, async () => {
                             let { default: e } = await Promise.all([n.e('79695'), n.e('25421')]).then(n.bind(n, 354741));
                             return (n) =>
                                 (0, l.jsx)(e, {
@@ -350,7 +350,7 @@ class V extends r.PureComponent {
                                 });
                         });
                     case m.h8.USER:
-                        return (0, u.jW)(e, async () => {
+                        return (0, d.jW)(e, async () => {
                             let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('95052')]).then(n.bind(n, 881351));
                             return (n) =>
                                 (0, l.jsx)(e, {

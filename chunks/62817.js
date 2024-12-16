@@ -1,8 +1,8 @@
 n(47120), n(177593);
 var i,
     l,
-    r,
     o,
+    r,
     a = n(442837),
     s = n(570140),
     u = n(375954);
@@ -57,15 +57,15 @@ class y extends (i = a.ZP.Store) {
         if (null != t) return p[t];
     }
 }
-(o = 'UploadStore'),
-    (r = 'displayName') in (l = y)
-        ? Object.defineProperty(l, r, {
-              value: o,
+(r = 'UploadStore'),
+    (o = 'displayName') in (l = y)
+        ? Object.defineProperty(l, o, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = o),
+        : (l[o] = r),
     (e.Z = new y(s.Z, {
         CONNECTION_OPEN: function () {
             p = {};
@@ -75,17 +75,17 @@ class y extends (i = a.ZP.Store) {
         },
         UPLOAD_START: function (t) {
             var e;
-            let { channelId: n, file: i, uploader: l, message: r } = t;
+            let { channelId: n, file: i, uploader: l, message: o } = t;
             if (l._aborted || l._errored) return;
-            let o = null !== (e = d[n]) && void 0 !== e ? e : c;
-            (h[i.id] = l), (d[n] = [...o, i]), (f[i.id] = r);
+            let r = null !== (e = d[n]) && void 0 !== e ? e : c;
+            (h[i.id] = l), (d[n] = [...r, i]), (f[i.id] = o);
             let { items: a } = i;
             null != a &&
-                (v[r.id] = {
+                (v[o.id] = {
                     ...i,
                     items: a
                 }),
-                x(r.nonce, i);
+                x(o.nonce, i);
         },
         UPLOAD_COMPRESSION_PROGRESS: function (t) {
             let { channelId: e, file: n } = t;

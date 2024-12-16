@@ -1,13 +1,13 @@
 n.d(e, {
     f: function () {
-        return r;
+        return o;
     }
 }),
     n(411104);
 var i = n(4646),
     l = n(665672);
-async function r(t) {
-    let { assetsToLoad: e, drawImage: r, exportConfigs: o } = t,
+async function o(t) {
+    let { assetsToLoad: e, drawImage: o, exportConfigs: r } = t,
         a = await (0, i.k2)(e);
     await a.loadFonts();
     {
@@ -17,8 +17,8 @@ async function r(t) {
             s = new t(i, a),
             u = new e(),
             c = new l.Z(s, u);
-        r(c.canvas);
-        let d = await c.export(o);
+        o(c.canvas);
+        let d = await c.export(r);
         return i.remove(), d;
     }
 }

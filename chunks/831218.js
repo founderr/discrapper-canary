@@ -6,8 +6,8 @@ var i,
     a = n(192379),
     s = n(299608),
     c = n.n(s),
-    d = n(91192),
-    u = n(924826),
+    u = n(91192),
+    d = n(924826),
     h = n(442837),
     p = n(902704),
     m = n(481060),
@@ -242,7 +242,7 @@ class G extends (l = a.Component) {
     render() {
         let { privateChannelIds: e, padding: t } = this.props,
             { preRenderedChildren: n } = this.state;
-        return (0, o.jsx)(d.SJ, {
+        return (0, o.jsx)(u.SJ, {
             children: (i) => {
                 let { ref: l, role: r, ...a } = i;
                 return (0, o.jsx)(m.FocusJumpSection, {
@@ -295,13 +295,13 @@ class G extends (l = a.Component) {
                     o = r > n.length ? n.slice(0, r + 1) : n,
                     s = o.map((e) => (null != i[e] ? i[e].getRecipientId() : null)),
                     c = n.some((e) => (0, _.Z)(e)),
-                    d = {
+                    u = {
                         num_users_visible: o.length,
                         num_users_visible_with_mobile_indicator: s.filter((e) => null != e && P.Z.isMobileOnline(e)).length
                     };
                 (this.hasReportedAnalytics = !0),
                     C.ZP.trackWithMetadata(L.rMx.DM_LIST_VIEWED, {
-                        ...d,
+                        ...u,
                         ...(0, v.X)(),
                         visible_user_ids: s.filter((e) => null != e),
                         changelog_dm_visible: c
@@ -461,7 +461,7 @@ t.Z = (e) => {
             []
         ),
         M = (0, I.Dt)(),
-        w = (0, u.ZP)({
+        w = (0, d.ZP)({
             id: 'private-channels-'.concat(M),
             isEnabled: v.keyboardModeEnabled,
             scrollToStart: Z,
@@ -469,7 +469,7 @@ t.Z = (e) => {
             defaultFocused: (c + (s ? 1 : 0)).toString(),
             setFocus: x
         });
-    return (0, o.jsx)(d.bG, {
+    return (0, o.jsx)(u.bG, {
         navigator: w,
         children: (0, o.jsx)(G, {
             density: n,

@@ -17,8 +17,8 @@ var l = n(200651),
     u = n(596454),
     d = n(727637),
     m = n(313201),
-    h = n(543241),
-    x = n(318766),
+    x = n(543241),
+    h = n(318766),
     p = n(907040),
     C = n(633302),
     v = n(806966),
@@ -33,7 +33,7 @@ let L = j.Hz.CHAT,
 function N(e) {
     let { emoji: t, isDisabled: n = !1, onClick: i, className: o } = e,
         m = a.useRef(null),
-        h = (0, d.Z)(m);
+        x = (0, d.Z)(m);
     return (0, l.jsx)('span', {
         ref: m,
         children: (0, l.jsx)(c.Button, {
@@ -42,9 +42,9 @@ function N(e) {
             size: c.Button.Sizes.NONE,
             focusProps: { enabled: !n },
             children: (0, l.jsx)(c.Spring, {
-                config: x.u,
+                config: h.u,
                 from: { value: 0 },
-                to: { value: h ? 1 : 0 },
+                to: { value: x ? 1 : 0 },
                 children: (e) => {
                     let { value: a } = e;
                     return (0, l.jsx)(s.animated.div, {
@@ -83,10 +83,10 @@ function y(e) {
     });
 }
 function _(e) {
-    let { channel: t, title: n, closePopout: i, onFocus: s, onSelectEmoji: u, onSelectDisabledEmoji: d, onExpandedToggle: x, emojiSearchProps: C, recentlyUsedEmojis: f, analyticsOverride: _ } = e,
+    let { channel: t, title: n, closePopout: i, onFocus: s, onSelectEmoji: u, onSelectDisabledEmoji: d, onExpandedToggle: h, emojiSearchProps: C, recentlyUsedEmojis: f, analyticsOverride: _ } = e,
         A = (0, m.Dt)(),
         [E, S] = a.useState(!1),
-        R = (0, h.wC)(t.guild_id),
+        R = (0, x.wC)(t.guild_id),
         M = (0, o.uniqBy)([...R, ...T], 'name')
             .filter(
                 (e) =>
@@ -99,7 +99,7 @@ function _(e) {
             .slice(0, I.e5);
     null != f && f.length > 0 && M.splice(M.length - 1, 1, f[0]);
     let k = (e) => {
-            S(e), null == x || x(e);
+            S(e), null == h || h(e);
         },
         w = (e, t) => {
             if (null == e && t) {

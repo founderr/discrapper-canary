@@ -15,8 +15,8 @@ var i = n(200651),
     p = n(259674),
     f = n(845377),
     C = n(981631),
-    _ = n(388032),
-    I = n(442344),
+    I = n(388032),
+    _ = n(442344),
     v = n(716455);
 let N = ['322850917248663552', '172018499005317120', '414234792121597953', '228406572756369408'],
     T = ['620723483965653003', '662246299369734154', '181970867549503489', '102860784329052160'];
@@ -41,34 +41,34 @@ t.Z = (e) => {
         }, [n]),
         D = null;
     return (
-        l ? (y ? (D = _.intl.string(_.t.zP8DFx)) : !R && (D = _.intl.string(_.t.ABFu19))) : (D = _.intl.string(_.t['5VbUBw'])),
+        l ? (y ? (D = I.intl.string(I.t.zP8DFx)) : !R && (D = I.intl.string(I.t.ABFu19))) : (D = I.intl.string(I.t['5VbUBw'])),
         (0, i.jsxs)('div', {
-            className: I.container,
+            className: _.container,
             children: [
                 (0, i.jsx)('img', {
                     alt: '',
                     src: v,
-                    className: I.sparkles
+                    className: _.sparkles
                 }),
                 (0, i.jsxs)('div', {
-                    className: I.discoverPreview,
+                    className: _.discoverPreview,
                     children: [
                         (0, i.jsx)(g.Z, {
-                            className: I.placeholderCard,
+                            className: _.placeholderCard,
                             disabled: !0,
                             small: !0,
                             loading: null == S,
                             guild: S
                         }),
                         (0, i.jsx)(g.Z, {
-                            className: I.previewCard,
+                            className: _.previewCard,
                             guild: t,
-                            description: _.intl.string(_.t['0k7fyM']),
+                            description: I.intl.string(I.t['0k7fyM']),
                             presenceCount: A,
                             memberCount: Z
                         }),
                         (0, i.jsx)(g.Z, {
-                            className: I.placeholderCard,
+                            className: _.placeholderCard,
                             disabled: !0,
                             small: !0,
                             loading: null == E,
@@ -77,15 +77,15 @@ t.Z = (e) => {
                     ]
                 }),
                 (0, i.jsx)(c.Heading, {
-                    className: I.header,
+                    className: _.header,
                     variant: 'heading-xl/semibold',
-                    children: _.intl.string(_.t.UwPrKS)
+                    children: I.intl.string(I.t.UwPrKS)
                 }),
                 (0, i.jsx)(c.Text, {
                     variant: 'text-md/normal',
-                    className: I.valueProp,
+                    className: _.valueProp,
                     color: 'header-secondary',
-                    children: _.intl.format(_.t.BhkgBg, {
+                    children: I.intl.format(I.t.BhkgBg, {
                         onLinkClick: () =>
                             (0, p.lW)({
                                 articleId: C.BhN.SERVER_DISCOVERY,
@@ -96,9 +96,9 @@ t.Z = (e) => {
                 }),
                 (0, i.jsx)(c.Text, {
                     variant: 'text-md/normal',
-                    className: I.byline,
+                    className: _.byline,
                     color: 'header-secondary',
-                    children: _.intl.format(_.t.ALSi8v, {
+                    children: I.intl.format(I.t.ALSi8v, {
                         onGuidelinesClick: () =>
                             (0, p.lW)({
                                 articleId: C.BhN.SERVER_DISCOVERY_GUIDELINES,
@@ -112,16 +112,16 @@ t.Z = (e) => {
                     children: (e) =>
                         (0, i.jsx)(c.Button, {
                             ...e,
-                            className: I.enableButton,
+                            className: _.enableButton,
                             color: c.Button.Colors.BRAND,
                             size: c.Button.Sizes.LARGE,
                             disabled: !R || !l,
                             onClick: L,
-                            children: _.intl.string(_.t.oBIZwc)
+                            children: I.intl.string(I.t.oBIZwc)
                         })
                 }),
                 (0, i.jsx)(f.Z, {
-                    className: I.checklist,
+                    className: _.checklist,
                     guild: t,
                     guildId: t.id
                 })

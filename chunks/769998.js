@@ -19,12 +19,12 @@ function g(e) {
     var t;
     let { action: n, triggerType: g, guildId: x, toggled: p, onToggleAction: f } = e,
         C = (e) => () => f(e),
-        _ = (0, o.c)(n.type, n, g),
-        I = null === (t = n.metadata) || void 0 === t ? void 0 : t.durationSeconds,
-        v = null != I ? (0, u.L9)(I) : null,
+        I = (0, o.c)(n.type, n, g),
+        _ = null === (t = n.metadata) || void 0 === t ? void 0 : t.durationSeconds,
+        v = null != _ ? (0, u.L9)(_) : null,
         N = (0, r.e7)([a.Z, s.Z], () => a.Z.can(d.Plq.MODERATE_MEMBERS, s.Z.getGuild(x)), [x]);
-    if (null == _) return null;
-    let { headerText: T, descriptionText: b, icon: j } = _;
+    if (null == I) return null;
+    let { headerText: T, descriptionText: b, icon: j } = I;
     return (0, i.jsxs)('div', {
         className: h.actionContainer,
         children: [

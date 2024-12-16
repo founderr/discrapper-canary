@@ -20,8 +20,8 @@ var i = n(200651),
     p = n(594174),
     f = n(626135),
     C = n(243730),
-    _ = n(434404),
-    I = n(946724),
+    I = n(434404),
+    _ = n(946724),
     v = n(130341),
     N = n(95242),
     T = n(420966),
@@ -34,7 +34,7 @@ var i = n(200651),
 async function A(e, t, n) {
     let r = e.roles.filter((e) => e !== n);
     try {
-        await _.Z.updateMemberRoles(t, e.id, r, [], [n]);
+        await I.Z.updateMemberRoles(t, e.id, r, [], [n]);
     } catch (t) {
         let e = new d.Z(t);
         (0, o.openModal)((t) =>
@@ -62,7 +62,7 @@ function Z(e) {
                 return;
             }
             !(function (e, t, n) {
-                let r = I.Z.getRole(n);
+                let r = _.Z.getRole(n);
                 (0, o.openModal)((l) =>
                     (0, i.jsxs)(o.ConfirmModal, {
                         ...l,
@@ -261,13 +261,13 @@ function P(e) {
         [u, m] = r.useState(''),
         { headerHeight: h, headerRef: g } = (0, N.Z)(0),
         { scrolledToTop: x, handleScroll: p } = (0, T.V)(),
-        _ = l.managed || c,
-        I = (0, v.e)(t.id, l.id),
+        I = l.managed || c,
+        _ = (0, v.e)(t.id, l.id),
         b =
             (0, a.e7)([C.Z], () => {
                 var e, n;
                 return null !== (n = null === (e = C.Z.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[l.id]) && void 0 !== n ? n : 0;
-            }) > I.length,
+            }) > _.length,
         A = () => {
             f.default.track(S.rMx.OPEN_MODAL, {
                 type: 'Add Role Members',
@@ -304,7 +304,7 @@ function P(e) {
                             (0, i.jsx)(O, {
                                 query: u,
                                 setQuery: m,
-                                locked: _,
+                                locked: I,
                                 handleAddClick: A
                             }),
                             b
@@ -323,9 +323,9 @@ function P(e) {
                 query: u,
                 guildId: t.id,
                 roleId: l.id,
-                locked: _,
+                locked: I,
                 onScroll: p,
-                roleMembers: I,
+                roleMembers: _,
                 handleAddClick: A
             })
         ]

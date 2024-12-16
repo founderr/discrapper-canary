@@ -1,6 +1,6 @@
 n.d(t, {
     B: function () {
-        return _;
+        return I;
     },
     Z: function () {
         return C;
@@ -25,7 +25,7 @@ var r = n(120356),
     f = n(439217);
 function C(e) {
     var t, r, s, c;
-    let { guild: u, prompt: C, singleColumn: _, promptIndex: I, option: v, hasError: N, onDragStart: T, onDragComplete: b, onDragReset: j } = e,
+    let { guild: u, prompt: C, singleColumn: I, promptIndex: _, option: v, hasError: N, onDragStart: T, onDragComplete: b, onDragReset: j } = e,
         S = null,
         E = a().findIndex(C.options, (e) => e.id === v.id),
         {
@@ -49,7 +49,7 @@ function C(e) {
                 [f.hasError]: N || null != S,
                 [f.dropIndicatorBefore]: null != y && E < y,
                 [f.dropIndicatorAfter]: null != y && E > y,
-                [f.singleColumn]: _
+                [f.singleColumn]: I
             }),
             onClick: () =>
                 (0, o.openModalLazy)(async () => {
@@ -60,7 +60,7 @@ function C(e) {
                             guild: u,
                             prompt: C,
                             option: v,
-                            index: I,
+                            index: _,
                             onSave: (e) => {
                                 (0, g.Kk)(u, C.id, { options: C.options.map((t) => (t.id === v.id ? e : t)) });
                             },
@@ -122,7 +122,7 @@ function C(e) {
         })
     );
 }
-function _(e) {
+function I(e) {
     let { guild: t, prompt: r, promptIndex: s, singleColumn: a } = e,
         { dropdownsAllowed: d } = (0, u.Ug)(t.id),
         m = () => {

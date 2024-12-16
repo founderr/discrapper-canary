@@ -47,7 +47,7 @@ function A() {
     let e = g.ZP.getConnectedActivityChannelId(),
         n = g.ZP.getSelfEmbeddedActivityForChannel(null != e ? e : I.lds),
         r = u.Z.getChannel(e);
-    return null == e || null == r || null == n ? b() : T(r, (0, E.Z)(e, n.applicationId));
+    return null == e || null == r || null == n ? b() : T(r, (0, E.Z)(n.location.id, n.applicationId));
 }
 function N() {
     return (0, v.Z)({

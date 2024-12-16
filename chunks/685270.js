@@ -31,13 +31,13 @@ let s = (e, t, n) => ({
         );
     },
     u = async (e) => {
-        let { mediaImageSrc: t, entry: n, avatarSrc: u, description: d, timestamp: m, episodeDescription: h, colors: x, channelId: p } = e,
+        let { mediaImageSrc: t, entry: n, avatarSrc: u, description: d, timestamp: m, episodeDescription: x, colors: h, channelId: p } = e,
             C = n.extra.media_title,
             v = s(u, t);
         return await (0, i.f)({
             assetsToLoad: v,
             drawImage: (e) => {
-                let t = x.map((e, t) => ({
+                let t = h.map((e, t) => ({
                     color: e,
                     stop: t
                 }));
@@ -131,7 +131,7 @@ let s = (e, t, n) => ({
                         },
                         !0
                     );
-                let i = c(m, h);
+                let i = c(m, x);
                 (0, r.J)({
                     canvas: e,
                     badges: i,

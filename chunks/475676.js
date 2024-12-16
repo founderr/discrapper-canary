@@ -14,8 +14,8 @@ var l = n(200651),
     u = n(314897),
     d = n(594174),
     m = n(626135),
-    h = n(5192),
-    x = n(873128),
+    x = n(5192),
+    h = n(873128),
     p = n(246627),
     C = n(709737),
     v = n(69589),
@@ -54,7 +54,7 @@ function T(e) {
     let T,
         { selected: y, channel: _ } = e,
         A = _.guild_id,
-        E = (0, x.Z)({
+        E = (0, h.Z)({
             guildId: A,
             leaderboardId: f._,
             intervalOffset: 0
@@ -73,7 +73,7 @@ function T(e) {
             return [n, l];
         }, [E, S, R]),
         w = (0, i.e7)([d.default], () => d.default.getUser(null == M ? void 0 : M.userId)),
-        O = h.ZP.getName(A, void 0, w);
+        O = x.ZP.getName(A, void 0, w);
     !(function (e) {
         let { leaderboard: t, guildId: n } = e,
             l = null == t ? void 0 : t.leaderboard_id;

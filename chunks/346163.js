@@ -24,7 +24,7 @@ function x(e) {
             let t = s.default.getCurrentUser();
             return (null == e ? void 0 : e.isOwner(t)) === !0;
         }),
-        { error: C, loading: _, createEnableRequest: I, submittedRequest: v } = (0, c.Z)(null == e ? void 0 : e.id),
+        { error: C, loading: I, createEnableRequest: _, submittedRequest: v } = (0, c.Z)(null == e ? void 0 : e.id),
         { loading: N, error: T, refresh: b, eligibility: j } = (0, d.Z)(null == e ? void 0 : e.id),
         { isApplicationRejected: S, requestCooldownDuration: E } = (0, u.Z)(j),
         R = (null == e ? void 0 : e.hasFeature(h.oNc.CREATOR_MONETIZABLE_RESTRICTED)) === !0 || (null == e ? void 0 : e.hasFeature(h.oNc.CREATOR_MONETIZABLE_DISABLED)) === !0,
@@ -49,10 +49,10 @@ function x(e) {
             D && b();
         }, [b, D]),
         {
-            resubmittingEnableRequest: _,
+            resubmittingEnableRequest: I,
             resubmissionError: C,
             isGuildOwner: f,
-            createEnableRequest: I,
+            createEnableRequest: _,
             resubmittedRequest: v,
             eligibilityLoading: N,
             eligibilityError: T,

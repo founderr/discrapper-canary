@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return I;
     }
 });
 var i = n(200651),
@@ -19,11 +19,11 @@ var i = n(200651),
     p = n(981631),
     f = n(674563),
     C = n(838581);
-function _() {
+function I() {
     let e;
     let t = (0, l.e7)([d.Z], () => d.Z.getGuild()),
-        { application: n, loading: _ } = (0, o.Z)(null == t ? void 0 : t.id, f.wW.GUILD_ROLE_SUBSCRIPTIONS),
-        I = r.useRef(null),
+        { application: n, loading: I } = (0, o.Z)(null == t ? void 0 : t.id, f.wW.GUILD_ROLE_SUBSCRIPTIONS),
+        _ = r.useRef(null),
         v = (0, u.Z)(null != t ? t : void 0);
     r.useEffect(() => {
         null != t && (0, m.sO)(t) && (0, c.EW)(s.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE);
@@ -31,7 +31,7 @@ function _() {
     let N = (null == t ? void 0 : t.hasFeature(p.oNc.CREATOR_MONETIZABLE)) === !1 && (null == t ? void 0 : t.hasFeature(p.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
     return (
         (e =
-            null == t || _
+            null == t || I
                 ? (0, i.jsx)(a.Spinner, {})
                 : null != v
                   ? (0, i.jsx)(g.Z, {
@@ -51,10 +51,10 @@ function _() {
                 children: (0, i.jsx)(a.ScrollerAuto, {
                     className: C.settingsScroller,
                     children: (0, i.jsx)('main', {
-                        ref: I,
+                        ref: _,
                         className: C.settingsContent,
                         children: (0, i.jsx)(a.FocusRingScope, {
-                            containerRef: I,
+                            containerRef: _,
                             children: e
                         })
                     })

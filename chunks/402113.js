@@ -11,12 +11,12 @@ var a = r(481060),
     l = r(871499),
     u = r(388032);
 function c(e) {
-    let { channelId: n, applicationId: r, centerButton: c = !1, ...d } = e,
+    let { location: n, applicationId: r, centerButton: c = !1, ...d } = e,
         { groupedButtons: f } = (0, o.Z)({ location: 'LeaveActivityButton' }),
         _ = c ? l.d : l.Z,
         h = () => {
             s.Z.leaveActivity({
-                channelId: n,
+                location: n,
                 applicationId: r,
                 showFeedback: !0
             });

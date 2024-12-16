@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(442837),
     s = n(481060),
     c = n(540059),
-    d = n(592125),
-    u = n(938475),
+    u = n(592125),
+    d = n(938475),
     h = n(823379),
     p = n(734190),
     m = n(388032),
@@ -15,11 +15,11 @@ t.Z = l.memo(function (e) {
     let { channel: t, selectedChannel: n, selectedVoiceChannelId: l, sortedThreadIds: r, withGuildIcon: g } = e,
         { density: C } = (0, s.useThemeContext)(),
         v = (0, c.Q3)('GuildSidebarThreadList'),
-        _ = (0, a.Wu)([d.Z], () => r.map((e) => d.Z.getChannel(e)).filter(h.lm), [r]),
-        x = (0, a.e7)([u.ZP], () => {
+        _ = (0, a.Wu)([u.Z], () => r.map((e) => u.Z.getChannel(e)).filter(h.lm), [r]),
+        x = (0, a.e7)([d.ZP], () => {
             let e = _[_.length - 1];
             if (null == e) return 0;
-            let t = u.ZP.getVoiceStates(e.guild_id)[e.id];
+            let t = d.ZP.getVoiceStates(e.guild_id)[e.id];
             return null == t || 0 === t.length ? 0 : l !== e.id ? 40 : 32 * t.length + 8;
         });
     return (0, i.jsx)('li', {

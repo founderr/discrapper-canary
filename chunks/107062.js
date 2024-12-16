@@ -9,8 +9,8 @@ var l = n(200651),
     u = n(499254),
     d = n(827498),
     m = n(541716),
-    h = n(706454),
-    x = n(823379),
+    x = n(706454),
+    h = n(823379),
     p = n(5192),
     C = n(379357),
     v = n(192918),
@@ -58,7 +58,7 @@ t.ZP = (e) => {
         }),
         { user: S, details: R, activity: M, embeddedActivity: k } = (0, P.n)(n),
         { primaryColor: w, secondaryColor: O } = (0, I.Z)(null == E ? void 0 : E.src),
-        b = (0, i.e7)([h.default], () => h.default.locale),
+        b = (0, i.e7)([x.default], () => x.default.locale),
         { displayParticipants: H, participant1: V, participant2: B, numOtherParticipants: D } = (0, v.Z)(n, 3),
         U = () => {
             u.__(d._b.TEXT, m.Ie.NORMAL, { applicationId: n.extra.application_id });
@@ -123,7 +123,7 @@ t.ZP = (e) => {
             IconComponent: r.AppsIcon,
             children: T.intl.string(T.t.GDWYR0)
         }),
-        J = [W ? q : F].filter(x.lm);
+        J = [W ? q : F].filter(h.lm);
     return (0, l.jsxs)(Z.yR, {
         children: [
             Y,

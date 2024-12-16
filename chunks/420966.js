@@ -36,7 +36,7 @@ function p(e) {
             },
             [f]
         ),
-        _ = (0, l.e7)(
+        I = (0, l.e7)(
             [d.Z],
             () => {
                 var e;
@@ -44,11 +44,11 @@ function p(e) {
             },
             [x.id, t.id]
         ),
-        I = (0, o.pM)(t.id, x.id),
+        _ = (0, o.pM)(t.id, x.id),
         v = (0, u.Z)(x);
     r.useEffect(() => {
-        I && f(m.ZI.PERMISSIONS);
-    }, [I, f]);
+        _ && f(m.ZI.PERMISSIONS);
+    }, [_, f]);
     let N = (0, c.useHasGuildRoleItems)(t, x);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -101,7 +101,7 @@ function p(e) {
                     (0, i.jsx)(s.TabBar.Item, {
                         className: g.tabBarItem,
                         id: m.ZI.DISPLAY,
-                        disabled: I,
+                        disabled: _,
                         children: h.intl.string(h.t.hmdom5)
                     }),
                     (0, i.jsx)(s.TabBar.Item, {
@@ -112,14 +112,14 @@ function p(e) {
                     (0, i.jsx)(s.TabBar.Item, {
                         className: g.tabBarItem,
                         id: m.ZI.VERIFICATIONS,
-                        disabled: I,
+                        disabled: _,
                         children: h.intl.string(h.t['5//Mur'])
                     }),
                     (0, i.jsx)(s.TabBar.Item, {
                         className: g.tabBarItem,
                         id: m.ZI.MEMBERS,
-                        disabled: I,
-                        children: I ? h.intl.string(h.t['kg//+/']) : h.intl.formatToPlainString(h.t.bHnZWV, { numMembers: String(_) })
+                        disabled: _,
+                        children: _ ? h.intl.string(h.t['kg//+/']) : h.intl.formatToPlainString(h.t.bHnZWV, { numMembers: String(I) })
                     })
                 ]
             })

@@ -12,8 +12,8 @@ var i = n(442837),
     a = n(823379),
     s = n(136015),
     c = n(709054),
-    d = n(565799),
-    u = n(501655),
+    u = n(565799),
+    d = n(501655),
     h = n(981631);
 function p(e) {
     let { voiceState: t, userNick: n, user: i } = e,
@@ -27,7 +27,7 @@ function p(e) {
 }
 function m(e) {
     let [t] = (0, i.e7)(
-        [d.Z, r.Z, l.Z],
+        [u.Z, r.Z, l.Z],
         () => {
             let t;
             let n = (t =
@@ -37,15 +37,15 @@ function m(e) {
                           .map((e) => r.Z.getChannel(e))
                           .filter(a.lm)
                           .filter((e) => e.isGuildStageVoice())
-                    : d.Z.getChannels(e)).reduce((e, t) => {
-                let n = d.Z.getMutableParticipants(t.id, u.pV.SPEAKER);
-                return (e[t.id] = n.filter((e) => e.type === u.Ui.VOICE).map(p)), e;
+                    : u.Z.getChannels(e)).reduce((e, t) => {
+                let n = u.Z.getMutableParticipants(t.id, d.pV.SPEAKER);
+                return (e[t.id] = n.filter((e) => e.type === d.Ui.VOICE).map(p)), e;
             }, {});
             return [
                 n,
                 t.reduce((e, t) => {
                     let { id: n } = t;
-                    return e + d.Z.getParticipantsVersion(n);
+                    return e + u.Z.getParticipantsVersion(n);
                 }, 0)
             ];
         },

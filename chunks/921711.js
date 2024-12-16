@@ -1,9 +1,9 @@
 n.d(t, {
     O: function () {
-        return d;
+        return u;
     },
     Z: function () {
-        return u;
+        return d;
     }
 });
 var i = n(200651);
@@ -14,10 +14,10 @@ var l = n(120356),
     a = n(549631),
     s = n(434618),
     c = n(831746);
-function d(e) {
+function u(e) {
     return e;
 }
-function u(e) {
+function d(e) {
     let { locked: t } = e;
     return (0, i.jsx)('div', {
         className: r()(c.iconItem, s.premiumChannelIcon),

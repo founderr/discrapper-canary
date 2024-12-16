@@ -15,8 +15,8 @@ var i = n(200651),
     p = n(389134),
     f = n(35313),
     C = n(94963),
-    _ = n(745628),
-    I = n(950279),
+    I = n(745628),
+    _ = n(950279),
     v = n(796918),
     N = n(513532),
     T = n(741595),
@@ -225,8 +225,8 @@ t.Z = (e) => {
     let F = r.useCallback((e) => (0, g.mf)(t, { gameApplicationIds: e }), [t]),
         H = r.useCallback((e) => (0, g.mf)(t, { playstyle: e }), [t]),
         z = r.useCallback((e) => (0, g.mf)(t, { interests: e }), [t]),
-        W = r.useCallback((e) => (0, g.mf)(t, e), [t]),
-        V = r.useCallback(() => {
+        V = r.useCallback((e) => (0, g.mf)(t, e), [t]),
+        W = r.useCallback(() => {
             w ? h.S.dispatch(E.CkL.EMPHASIZE_NOTICE) : n();
         }, [w, n]),
         Y = async () => {
@@ -251,7 +251,7 @@ t.Z = (e) => {
                     (0, i.jsx)(d.Z, {
                         ...e,
                         className: A.closeButton,
-                        closeAction: V,
+                        closeAction: W,
                         keybind: 'ESC'
                     })
             }),
@@ -322,7 +322,7 @@ t.Z = (e) => {
                                     switch (R) {
                                         case S.Wy.GAMES:
                                             var e;
-                                            return (0, i.jsx)(I.Z, {
+                                            return (0, i.jsx)(_.Z, {
                                                 title: y.intl.string(y.t.t6Mbq6),
                                                 description: y.intl.string(y.t.E7Ymwc),
                                                 onUpdateGames: F,
@@ -350,20 +350,20 @@ t.Z = (e) => {
                                         case S.Wy.INTERESTS:
                                             return (0, i.jsx)(v.Z, {
                                                 guildId: t,
-                                                handleUpdate: W,
+                                                handleUpdate: V,
                                                 progress: P,
                                                 error: k.interests
                                             });
                                         case S.Wy.DESCRIPTION:
-                                            return (0, i.jsx)(_.Z, {
+                                            return (0, i.jsx)(I.Z, {
                                                 guildId: t,
-                                                handleUpdate: W,
+                                                handleUpdate: V,
                                                 progress: P,
                                                 errors: k
                                             });
                                         case S.Wy.CUSTOMIZE_TAG_BADGE:
                                             return (0, i.jsx)(b.Z, {
-                                                handleUpdate: W,
+                                                handleUpdate: V,
                                                 tag: P.tag,
                                                 error: k.tag,
                                                 badge: P.badgeKind,
@@ -381,7 +381,7 @@ t.Z = (e) => {
                                         case S.Wy.CUSTOMIZE_BANNER:
                                             return (0, i.jsx)(C.Z, {
                                                 guildId: t,
-                                                handleUpdate: W,
+                                                handleUpdate: V,
                                                 progress: P
                                             });
                                         default:

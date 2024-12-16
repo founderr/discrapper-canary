@@ -15,13 +15,13 @@ function x(e) {
     let { gameApplicationIds: t, preventGameRemoval: n, onUpdateGames: l, minGames: o = 1, error: x } = e,
         { options: p, matchSorterOptions: f } = (0, c.P)(),
         C = r.useMemo(() => Array.from(t), [t]),
-        _ = r.useCallback(
+        I = r.useCallback(
             (e) => {
                 if (!(e.length < o)) l(new Set(e));
             },
             [o, l]
         ),
-        I = r.useCallback(
+        _ = r.useCallback(
             (e) => {
                 if (n) return;
                 let i = new Set(t);
@@ -43,7 +43,7 @@ function x(e) {
                     options: p,
                     value: C,
                     placeholder: m.intl.string(m.t.acyezc),
-                    onChange: _,
+                    onChange: I,
                     isDisabled: t.size === u.cm,
                     matchSorterOptions: f,
                     clearQueryOnSelect: !0,
@@ -78,7 +78,7 @@ function x(e) {
                                                             imageContainerClassName: t.size > o ? h.clickableGame : void 0,
                                                             selected: !0,
                                                             locked: n,
-                                                            onClick: I
+                                                            onClick: _
                                                         },
                                                         e
                                                     )

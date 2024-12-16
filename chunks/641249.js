@@ -22,8 +22,8 @@ function p() {
     let { editStateId: e, guildId: t } = (0, o.N)(),
         [p, f] = c.XZ(e, t),
         C = (0, d.Z)(t, e),
-        { setCurrentTab: _ } = (0, h.dw)(),
-        I = () => _(h.ue.EMOJIS),
+        { setCurrentTab: I } = (0, h.dw)(),
+        _ = () => I(h.ue.EMOJIS),
         v = (0, r.e7)([s.Z], () => s.Z.getGuild(t)),
         N = null == v ? void 0 : v.getMaxRoleSubscriptionEmojiSlots();
     function T(e) {
@@ -42,7 +42,7 @@ function p() {
                 type: l.FormText.Types.DESCRIPTION,
                 className: x.formDescription,
                 disabled: j,
-                children: [g.intl.format(g.t.zuwel5, { premiumEmojiMaximum: N }), (0, i.jsx)('br', {}), g.intl.format(g.t.sEkgBg, { handleTransitionToManageEmoji: I })]
+                children: [g.intl.format(g.t.zuwel5, { premiumEmojiMaximum: N }), (0, i.jsx)('br', {}), g.intl.format(g.t.sEkgBg, { handleTransitionToManageEmoji: _ })]
             }),
             (0, i.jsx)(m.E, {
                 tierEmojiIds: p,
@@ -74,7 +74,7 @@ function p() {
                                 initialTierEmojiIds: p,
                                 onSubmit: T,
                                 transitionToManageEmoji: () => {
-                                    I(), n.onClose();
+                                    _(), n.onClose();
                                 }
                             });
                     });

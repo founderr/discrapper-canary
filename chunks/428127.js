@@ -10,8 +10,8 @@ var i = n(200651),
     a = n(752877),
     s = n(442837),
     c = n(692547),
-    d = n(481060),
-    u = n(540059),
+    u = n(481060),
+    d = n(540059),
     h = n(492162),
     p = n(237583),
     m = n(451478),
@@ -28,7 +28,7 @@ function x(e) {
     let { guildChannels: n, jumpToVoiceChannels: r } = e,
         a = n.getCategoryFromSection(n.voiceChannelsSectionNumber),
         s = (0, h.Z)(n.id),
-        u = l.useCallback(
+        d = l.useCallback(
             (e) => {
                 e.preventDefault(), e.stopPropagation(), r();
             },
@@ -41,18 +41,18 @@ function x(e) {
             selectedVoiceChannelId: null,
             voiceStates: s
         });
-    return (0, i.jsxs)(d.Clickable, {
+    return (0, i.jsxs)(u.Clickable, {
         className: o()(v.bar),
-        onClick: u,
+        onClick: d,
         children: [
-            (0, i.jsx)(d.VoiceNormalIcon, {
+            (0, i.jsx)(u.VoiceNormalIcon, {
                 size: 'custom',
                 className: v.voiceChannelsIcon,
                 width: 14,
                 height: 14,
                 color: c.Z.unsafe_rawColors.GREEN_330.css
             }),
-            (0, i.jsx)(d.Text, {
+            (0, i.jsx)(u.Text, {
                 variant: 'text-xs/semibold',
                 color: 'text-positive',
                 className: v.barText,
@@ -64,19 +64,19 @@ function x(e) {
                 users: g.slice(0, 4),
                 renderMoreUsers: () => null,
                 max: 4,
-                size: d.AvatarSizes.SIZE_16
+                size: u.AvatarSizes.SIZE_16
             })
         ]
     });
 }
 function I(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: r, jumpToVoiceChannels: c, jumpToChannel: h } = e,
-        p = (0, u.Q3)('UnreadBar'),
+        p = (0, d.Q3)('UnreadBar'),
         { bottomBar: f, topBar: I } = (0, s.cj)([g.Z], () => g.Z.getUnreadStateForGuildId(n.id)),
         b = (0, s.e7)([m.Z], () => m.Z.isFocused()),
         { mode: E, mentionCount: S, targetChannelId: Z } = 'bottom' === t ? f : I,
         N = E === g.x.HIDDEN,
-        y = (0, d.useSpring)(
+        y = (0, u.useSpring)(
             {
                 to: { transform: N ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
                 config: _
@@ -102,26 +102,26 @@ function I(e) {
                 E === g.x.HIDDEN
                     ? (0, i.jsx)('div', { className: o()(v.bar, v.emptyBar) })
                     : E === g.x.UNREAD
-                      ? (0, i.jsxs)(d.Clickable, {
+                      ? (0, i.jsxs)(u.Clickable, {
                             className: v.bar,
                             onClick: T,
                             children: [
                                 'bottom' === t
-                                    ? (0, i.jsx)(d.ChevronSmallDownIcon, {
+                                    ? (0, i.jsx)(u.ChevronSmallDownIcon, {
                                           size: 'custom',
                                           color: 'currentColor',
                                           className: v.unreadIcon,
                                           height: 14,
                                           width: 14
                                       })
-                                    : (0, i.jsx)(d.ChevronSmallUpIcon, {
+                                    : (0, i.jsx)(u.ChevronSmallUpIcon, {
                                           size: 'custom',
                                           color: 'currentColor',
                                           className: v.unreadIcon,
                                           height: 14,
                                           width: 14
                                       }),
-                                (0, i.jsx)(d.Text, {
+                                (0, i.jsx)(u.Text, {
                                     variant: 'text-xs/semibold',
                                     color: 'interactive-normal',
                                     className: v.barText,
@@ -130,10 +130,10 @@ function I(e) {
                             ]
                         })
                       : E === g.x.MENTIONS
-                        ? (0, i.jsx)(d.Clickable, {
+                        ? (0, i.jsx)(u.Clickable, {
                               className: o()(v.bar, v.mentionsBar),
                               onClick: T,
-                              children: (0, i.jsx)(d.Text, {
+                              children: (0, i.jsx)(u.Text, {
                                   variant: 'text-xs/semibold',
                                   color: p ? 'text-primary' : 'status-danger-text',
                                   className: v.barText,

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return _;
     }
 });
 var i = n(200651);
@@ -20,41 +20,41 @@ var r = n(399606),
     p = n(287576),
     f = n(894610),
     C = n(388032);
-function _(e) {
+function I(e) {
     let { listingId: t } = e,
         n = (0, x.r)(t);
     return null == n ? null : (0, i.jsx)(a.bL, { children: n.name });
 }
-function I(e) {
+function _(e) {
     var t, n, a;
     let { guildId: x } = e,
-        I = (0, p.Z)(x),
+        _ = (0, p.Z)(x),
         v = (0, s.f3)(),
         N = (0, r.e7)([g.Z], () => g.Z.getGuild());
-    return I.loading || null == N
+    return _.loading || null == N
         ? (0, i.jsx)(l.Spinner, {})
-        : null == I.application
+        : null == _.application
           ? (0, i.jsx)(u.Z, { guild: N })
           : (0, i.jsxs)(d.Z, {
                 children: [
                     (0, i.jsx)(c.Z, {
-                        revenue: I.metrics.revenue,
-                        revenueTrend: I.metrics.revenuePctChange,
+                        revenue: _.metrics.revenue,
+                        revenueTrend: _.metrics.revenuePctChange,
                         summaryMetricLabel: C.intl.string(C.t.R3PCmZ),
-                        summaryMetricValue: null !== (n = I.metrics.paymentsCount) && void 0 !== n ? n : '-',
-                        summaryMetricTrend: null !== (a = I.metrics.paymentsCountChange) && void 0 !== a ? a : 0,
+                        summaryMetricValue: null !== (n = _.metrics.paymentsCount) && void 0 !== n ? n : '-',
+                        summaryMetricTrend: null !== (a = _.metrics.paymentsCountChange) && void 0 !== a ? a : 0,
                         summaryMetricTrendIsPercent: !1,
                         children: (0, i.jsx)(f.Z, {
                             guildId: x,
-                            earningsData: I
+                            earningsData: _
                         })
                     }),
                     (0, i.jsx)(l.FormSection, {
                         title: C.intl.string(C.t['+5Rmho']),
                         children: (0, i.jsx)(o.Z, {
-                            ListingIdLabel: _,
-                            payoutsByPeriod: I.payoutsByPeriod,
-                            team: null === (t = I.application) || void 0 === t ? void 0 : t.team
+                            ListingIdLabel: I,
+                            payoutsByPeriod: _.payoutsByPeriod,
+                            team: null === (t = _.application) || void 0 === t ? void 0 : t.team
                         })
                     }),
                     (0, i.jsx)(l.FormSection, {
@@ -62,14 +62,14 @@ function I(e) {
                         disabled: v,
                         children: (0, i.jsx)(m.Z, {
                             guildId: x,
-                            application: I.application
+                            application: _.application
                         })
                     }),
                     (0, i.jsx)(l.FormSection, {
                         title: C.intl.string(C.t['0n7R2d']),
                         children: (0, i.jsx)(h.Z, {
                             guildId: x,
-                            allPeriods: I.payoutsByPeriod
+                            allPeriods: _.payoutsByPeriod
                         })
                     })
                 ]

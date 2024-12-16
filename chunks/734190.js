@@ -5,8 +5,8 @@ var i = n(200651),
     a = n(91192),
     s = n(442837),
     c = n(481060),
-    d = n(493683),
-    u = n(239091),
+    u = n(493683),
+    d = n(239091),
     h = n(111028),
     p = n(569471),
     m = n(488131),
@@ -61,13 +61,13 @@ t.Z = l.memo(function (e) {
             [t]
         ),
         G = l.useCallback(() => {
-            d.Z.preload(t.guild_id, t.id);
+            u.Z.preload(t.guild_id, t.id);
         }, [t.guild_id, t.id]),
         U = l.useCallback(
             (e) => {
                 let l = f.Z.getChannel(t.id);
                 null != l &&
-                    (0, u.jW)(e, async () => {
+                    (0, d.jW)(e, async () => {
                         let { default: e } = await n.e('40157').then(n.bind(n, 422200));
                         return (t) =>
                             (0, i.jsx)(e, {

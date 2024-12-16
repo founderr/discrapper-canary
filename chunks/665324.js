@@ -21,8 +21,8 @@ var i = n(200651),
     p = n(357156),
     f = n(208049),
     C = n(763296),
-    _ = n(22382),
-    I = n(747071),
+    I = n(22382),
+    _ = n(747071),
     v = n(286654),
     N = n(171368),
     T = n(430824),
@@ -153,13 +153,13 @@ function F(e) {
     r.useEffect(() => {
         (0, f.w)();
     }, []);
-    let x = r.useMemo(() => l.reduce((e, t) => ((e[t.soundId] = new Audio((0, _.Z)(t.soundId))), e), {}), [l]),
+    let x = r.useMemo(() => l.reduce((e, t) => ((e[t.soundId] = new Audio((0, I.Z)(t.soundId))), e), {}), [l]),
         v = 0 === l.length && !s;
     function N(e) {
         var t;
         null === (t = o.current) || void 0 === t || t.pause();
         let n = x[e.soundId];
-        null != n && ((o.current = n), (n.currentTime = 0), (n.volume = (0, I.Z)(e.volume)), n.play());
+        null != n && ((o.current = n), (n.currentTime = 0), (n.volume = (0, _.Z)(e.volume)), n.play());
     }
     r.useEffect(
         () => () => {
@@ -266,11 +266,11 @@ function F(e) {
 }
 function H(e) {
     let { sound: t, isPlaying: l, onPlaySound: a, guild: o } = e,
-        { soundId: d, name: g, user: x, userId: C, emojiId: _, emojiName: I } = t,
+        { soundId: d, name: g, user: x, userId: C, emojiId: I, emojiName: _ } = t,
         T = (0, c.e7)([b.default], () => (null != x ? x : b.default.getUser(C)), [C, x]),
         { canManageGuildExpression: j } = (0, p.XJ)(o),
         E = r.useMemo(() => j(t), [t, j]),
-        R = null != _ || null != I,
+        R = null != I || null != _,
         [A, Z] = r.useState(!1),
         D = (0, v.z)(t, o.id);
     async function k() {
@@ -303,8 +303,8 @@ function H(e) {
         children: [
             R
                 ? (0, i.jsx)(h.Z, {
-                      emojiId: _,
-                      emojiName: I,
+                      emojiId: I,
+                      emojiName: _,
                       className: P.emoji
                   })
                 : (0, i.jsx)(u.ImageIcon, {

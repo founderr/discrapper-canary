@@ -15,8 +15,8 @@ var i = n(200651),
     a = n(398758),
     s = n(9156),
     c = n(934415),
-    d = n(540126),
-    u = n(700026),
+    u = n(540126),
+    d = n(700026),
     h = n(301342),
     p = n(327530),
     m = n(607686);
@@ -28,13 +28,13 @@ let f = l.memo(function (e) {
 function g(e) {
     let { sectionIndex: t, guildChannels: n, voiceStates: i, selectedChannelId: l, selectedVoiceChannelId: r, optInEnabled: o, visualRefreshEnabled: a, density: s } = e;
     if (t === n.voiceChannelsSectionNumber) return 44;
-    let { hasDivider: c, canHaveVoiceSummary: h } = (0, u.ie)(n, o, t),
+    let { hasDivider: c, canHaveVoiceSummary: h } = (0, d.ie)(n, o, t),
         m = c ? (a ? 9 : p.QP) : 0;
-    if (!h || t === d.wZ) return m;
+    if (!h || t === u.wZ) return m;
     let f = n.getNamedCategoryFromSection(t);
     return null == f
         ? m
-        : (0, u.V5)({
+        : (0, d.V5)({
                 category: f,
                 selectedChannelId: l,
                 selectedVoiceChannelId: r,
@@ -45,7 +45,7 @@ function g(e) {
 }
 function C(e, t, n) {
     if (e === t.voiceChannelsSectionNumber) return 'voice-channels-button';
-    let { hasDivider: i, canHaveVoiceSummary: l } = (0, u.ie)(t, n, e);
+    let { hasDivider: i, canHaveVoiceSummary: l } = (0, d.ie)(t, n, e);
     return 'section-footer-'
         .concat(e)
         .concat(i ? '-divider' : '')
@@ -53,8 +53,8 @@ function C(e, t, n) {
 }
 t.ZP = l.memo(function (e) {
     let { sectionIndex: t, guildChannels: n, guildChannelsVersion: h, voiceStates: p, guildId: g, selectedChannelId: C, selectedVoiceChannelId: v, optInEnabled: _ } = e,
-        { hasDivider: x, canHaveVoiceSummary: I } = l.useMemo(() => (0, u.ie)(n, _, t), [n, _, t, h]),
-        b = l.useMemo(() => (t === d.wZ ? null : n.getCategoryFromSection(t)), [n, t, h]),
+        { hasDivider: x, canHaveVoiceSummary: I } = l.useMemo(() => (0, d.ie)(n, _, t), [n, _, t, h]),
+        b = l.useMemo(() => (t === u.wZ ? null : n.getCategoryFromSection(t)), [n, t, h]),
         E = (0, a.DM)(g),
         S = (0, r.Wu)(
             [s.ZP],

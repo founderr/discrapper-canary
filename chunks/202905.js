@@ -31,7 +31,7 @@ function h(e) {
         x = (0, s.e7)([o.Z], () => o.Z.get(null == h ? void 0 : h.id));
     if (null == h) return null;
     let p = null != t ? t : null == x ? void 0 : x.formFields;
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(l.X6, {
                 variant: 'heading-md/semibold',

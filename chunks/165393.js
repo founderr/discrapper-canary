@@ -11,37 +11,37 @@ var i = n(200651),
     a = n(866442),
     s = n(481060),
     c = n(686546),
-    d = n(494315);
-let u = [1752220, 3066993, 3447003, 10181046, 15277667, 15844367];
+    u = n(494315);
+let d = [1752220, 3066993, 3447003, 10181046, 15277667, 15844367];
 function h(e) {
     return (0, a.Rf)(
-        u[
+        d[
             (function (e) {
                 let t = 5381,
                     n = 0;
                 for (; n < e.length; ) t = (33 * t) ^ e.charCodeAt(n++);
                 return t >>> 0;
-            })(e) % u.length
+            })(e) % d.length
         ]
     );
 }
 function p(e) {
     var t;
     let { title: n, className: r } = e,
-        [a, u] = l.useState(h(n));
+        [a, d] = l.useState(h(n));
     return (
         l.useEffect(() => {
-            u(h(n));
+            d(h(n));
         }, [n]),
         (0, i.jsxs)('div', {
-            className: o()(d.wrapper, r),
+            className: o()(u.wrapper, r),
             children: [
                 (0, i.jsx)(c.ZP, {
                     mask: c.ZP.Masks.STATUS_SCREENSHARE,
                     width: 32,
                     height: 32,
                     children: (0, i.jsx)('div', {
-                        className: d.icon,
+                        className: u.icon,
                         style: { backgroundColor: a },
                         children: null !== (t = n[0]) && void 0 !== t ? t : '?'
                     })
@@ -49,7 +49,7 @@ function p(e) {
                 (0, i.jsx)(s.VideoIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: d.badge
+                    className: u.badge
                 })
             ]
         })

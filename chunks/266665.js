@@ -20,8 +20,8 @@ var i = n(200651),
     p = n(134433),
     f = n(325476),
     C = n(496675),
-    _ = n(671533),
-    I = n(946724),
+    I = n(671533),
+    _ = n(946724),
     v = n(970129),
     N = n(712181),
     T = n(420966),
@@ -33,7 +33,7 @@ let R = 'DRAGGABLE_ROLE';
 function y(e) {
     var t, r;
     let l,
-        { guild: d, role: h, highestRole: g, selectedItem: f, onClick: C, currentPosition: _, onDragStart: I, onDragReset: N, onDragComplete: T, roleStyle: b } = e,
+        { guild: d, role: h, highestRole: g, selectedItem: f, onClick: C, currentPosition: I, onDragStart: _, onDragReset: N, onDragComplete: T, roleStyle: b } = e,
         S = (0, v.T)(d, g, h),
         y = (0, x.pM)(d.id, h.id),
         A = null == S && !y,
@@ -41,10 +41,10 @@ function y(e) {
         [, L] = (0, a.c)({
             type: R,
             item: () => (
-                I(h.id),
+                _(h.id),
                 {
                     id: h.id,
-                    position: _
+                    position: I
                 }
             ),
             canDrag: () => A,
@@ -83,8 +83,8 @@ function y(e) {
               : (0, i.jsx)(u.RoleCircle, { color: P })),
         (0, i.jsxs)(u.TabBar.Item, {
             className: s()(E.row, {
-                [E.dragBefore]: null !== D && _ < D,
-                [E.dragAfter]: null !== D && _ > D
+                [E.dragBefore]: null !== D && I < D,
+                [E.dragAfter]: null !== D && I > D
             }),
             id: h.id,
             selectedItem: f,
@@ -126,7 +126,7 @@ function y(e) {
 }
 function A(e) {
     let { guild: t, currentRoleId: n, setCurrentRoleId: l, setSelectedSection: a } = e,
-        o = (0, d.e7)([I.Z], () => I.Z.roles),
+        o = (0, d.e7)([_.Z], () => _.Z.roles),
         c = (0, d.e7)([C.Z], () => C.Z.getHighestRole(t)),
         m = (0, d.e7)([g.Z], () => g.Z.roleStyle),
         [x, p] = r.useState(o.length),
@@ -162,7 +162,7 @@ function A(e) {
                             className: E.title,
                             onClick: () => l(null),
                             children: [
-                                (0, i.jsx)(_.Z, { direction: _.Z.Directions.LEFT }),
+                                (0, i.jsx)(I.Z, { direction: I.Z.Directions.LEFT }),
                                 (0, i.jsx)(u.Text, {
                                     className: E.titleText,
                                     variant: 'text-md/semibold',

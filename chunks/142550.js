@@ -4,8 +4,8 @@ n.d(e, {
         return i;
     },
     z: function () {
-        return r;
+        return o;
     }
 });
-let r = 200;
+let o = 200;
 ((l = i || (i = {})).ReactBegin = 'React Begin'), (l.ReplyBegin = 'Reply Begin'), (l.ReactSubmit = 'React Submit'), (l.ReplySubmit = 'Reply Submit'), (l.ReactSend = 'React Send'), (l.ReplySend = 'Reply Send');

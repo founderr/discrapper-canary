@@ -15,8 +15,8 @@ var i = n(200651),
     p = n(388032),
     f = n(905697),
     C = n(438825),
-    _ = n(236140),
-    I = n(37069),
+    I = n(236140),
+    _ = n(37069),
     v = n(518513),
     N = n(168179),
     T = n(348986),
@@ -105,7 +105,7 @@ let S = () => [
             position: [-250, 40]
         },
         {
-            iconSrc: I,
+            iconSrc: _,
             name: 'Hogwarts School',
             position: [-270, 40],
             faded: !0,
@@ -169,10 +169,10 @@ t.Z = (e) => {
     let { guild: t } = e,
         [n, l] = r.useState(0),
         [s, o] = r.useState(0),
-        [I, v] = r.useState(),
+        [_, v] = r.useState(),
         N = (0, a.e7)([m.Z], () => m.Z.can(g.Plq.ADMINISTRATOR, t)),
-        T = null == I ? void 0 : I.offsetWidth,
-        b = null == I ? void 0 : I.offsetHeight;
+        T = null == _ ? void 0 : _.offsetWidth,
+        b = null == _ ? void 0 : _.offsetHeight;
     r.useEffect(() => {
         null != T && l(T / 2), null != b && o(b / 2);
     }, [T, b, l, o]),
@@ -207,7 +207,7 @@ t.Z = (e) => {
                     }),
                     (0, i.jsx)('img', {
                         alt: '',
-                        src: _,
+                        src: I,
                         className: f.sparkles
                     })
                 ]

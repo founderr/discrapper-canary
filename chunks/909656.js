@@ -20,8 +20,8 @@ var i = n(200651),
     p = n(393238),
     f = n(313201),
     C = n(345861),
-    _ = n(208567),
-    I = n(73346),
+    I = n(208567),
+    _ = n(73346),
     v = n(624138),
     N = n(584825),
     T = n(723047),
@@ -95,7 +95,7 @@ function O(e) {
         a = (0, N.YB)(n.id),
         c = r.useCallback(() => {
             var e;
-            return (null == a ? void 0 : null === (e = a.cover_image_asset) || void 0 === e ? void 0 : e.application_id) == null ? null : (0, I._W)(a.cover_image_asset.application_id, a.cover_image_asset, Z);
+            return (null == a ? void 0 : null === (e = a.cover_image_asset) || void 0 === e ? void 0 : e.application_id) == null ? null : (0, _._W)(a.cover_image_asset.application_id, a.cover_image_asset, Z);
         }, [a]),
         [u, h] = r.useState(s),
         [p, v] = r.useState(null !== (t = null == a ? void 0 : a.description) && void 0 !== t ? t : ''),
@@ -104,8 +104,8 @@ function O(e) {
         [M, w] = r.useState(null == a ? void 0 : a.server_shop_tab_order),
         { loading: B, error: U, updateSubscriptionsSettings: G } = (0, N.QV)(),
         { imageCTA: F, imageAriaLabel: H, setFilename: z } = (0, b.Z)(null == a ? void 0 : a.cover_image_asset),
-        W = (0, f.Dt)(),
         V = (0, f.Dt)(),
+        W = (0, f.Dt)(),
         Y = (0, f.Dt)();
     function K(e, t) {
         o()(null != e, 'Null value not allowed'), null != t && z(t.name), O(e);
@@ -117,7 +117,7 @@ function O(e) {
         X = null != p && '' !== p && null != L;
     r.useEffect(() => {
         var e;
-        (null == a ? void 0 : null === (e = a.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null && O((0, I._W)(a.cover_image_asset.application_id, a.cover_image_asset, Z));
+        (null == a ? void 0 : null === (e = a.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null && O((0, _._W)(a.cover_image_asset.application_id, a.cover_image_asset, Z));
     }, [null == a ? void 0 : a.cover_image_asset]);
     let Q = (0, T.mY)(),
         J = r.useMemo(
@@ -154,7 +154,7 @@ function O(e) {
                       children: [
                           (0, i.jsxs)(g.FormSection, {
                               title: y.intl.string(y.t['PAVi+/']),
-                              titleId: W,
+                              titleId: V,
                               disabled: Q,
                               children: [
                                   (0, i.jsx)(g.FormText, {
@@ -182,7 +182,7 @@ function O(e) {
                                               ),
                                               h(e);
                                       },
-                                      'aria-labelledby': W,
+                                      'aria-labelledby': V,
                                       disabled: Q
                                   })
                               ]
@@ -192,7 +192,7 @@ function O(e) {
                   }),
             (0, i.jsx)(g.FormSection, {
                 title: y.intl.string(y.t['1+Ho1d']),
-                titleId: V,
+                titleId: W,
                 disabled: Q,
                 children: (0, i.jsx)(g.TextArea, {
                     placeholder: l ? y.intl.string(y.t.SD6LRU) : y.intl.string(y.t['aVhW/f']),
@@ -201,7 +201,7 @@ function O(e) {
                     rows: 2,
                     autosize: !0,
                     onChange: v,
-                    'aria-labelledby': V,
+                    'aria-labelledby': W,
                     disabled: Q
                 })
             }),
@@ -216,7 +216,7 @@ function O(e) {
                         disabled: Q,
                         children: y.intl.string(y.t.i2rCwc)
                     }),
-                    (0, i.jsx)(_.Z, {
+                    (0, i.jsx)(I.Z, {
                         image: L,
                         hint: F,
                         showIcon: !0,

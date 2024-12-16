@@ -11,8 +11,8 @@ var l = n(442837),
     a = n(486472),
     s = n(430824),
     c = n(682662),
-    d = n(662146),
-    u = n(981631),
+    u = n(662146),
+    d = n(981631),
     h = n(388032),
     p = n(768753);
 function m() {
@@ -20,11 +20,11 @@ function m() {
     return e <= 0
         ? null
         : (0, i.jsx)(c.H, {
-              children: (0, i.jsx)(d.Z, {
+              children: (0, i.jsx)(u.Z, {
                   text: h.intl.format(h.t['TnH05+'], { count: e }),
                   color: r.Tooltip.Colors.RED,
                   children: (0, i.jsx)(r.Anchor, {
-                      href: (0, o.Z)(u.RK.TWITTER),
+                      href: (0, o.Z)(d.RK.TWITTER),
                       target: '_blank',
                       className: p.guildsError,
                       'aria-label': h.intl.formatToPlainString(h.t['MEpX+/'], { count: e }),

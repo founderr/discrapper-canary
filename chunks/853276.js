@@ -96,24 +96,24 @@ let h = r.forwardRef(function (e, t) {
             });
 });
 function g(e) {
-    let { value: t, onChange: n, onBlur: l, onFocus: g, onRemove: x, isSelected: p, isSelecting: f, error: C, forceShowErrorTooltip: _ } = e,
-        I = r.useRef(null),
+    let { value: t, onChange: n, onBlur: l, onFocus: g, onRemove: x, isSelected: p, isSelecting: f, error: C, forceShowErrorTooltip: I } = e,
+        _ = r.useRef(null),
         v = r.useRef(null),
         [N, T] = r.useState(!1),
         { ref: b, width: j = 0 } = (0, c.Z)(N),
         { ref: S, width: E = 0 } = (0, c.Z)(N),
         R = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
-        [y, A] = r.useState(_),
+        [y, A] = r.useState(I),
         Z = r.useRef(null),
         L = j > E ? j : E;
     r.useEffect(() => {
-        _
+        I
             ? (A(!0),
               (Z.current = setTimeout(() => {
                   A(!1), (Z.current = null);
               }, u.I5)))
             : A(!1);
-    }, [_]),
+    }, [I]),
         r.useEffect(
             () => () => {
                 clearTimeout(Z.current);
@@ -129,9 +129,9 @@ function g(e) {
         O = r.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                if ((t.trim().length <= 0 && x(), null != I.current && null != b.current && null != v.current)) {
+                if ((t.trim().length <= 0 && x(), null != _.current && null != b.current && null != v.current)) {
                     var n;
-                    I.current.scrollTo(0, 0), I.current.setSelectionRange(0, 0), (I.current.scrollLeft = 0), (b.current.scrollLeft = 0), (null === (n = v.current) || void 0 === n ? void 0 : n.ref) != null && (v.current.ref.scrollLeft = 0);
+                    _.current.scrollTo(0, 0), _.current.setSelectionRange(0, 0), (_.current.scrollLeft = 0), (b.current.scrollLeft = 0), (null === (n = v.current) || void 0 === n ? void 0 : n.ref) != null && (v.current.ref.scrollLeft = 0);
                 }
                 T(!1), l(e);
             },
@@ -187,7 +187,7 @@ function g(e) {
                                 [m.isEditing]: N,
                                 [m.isSelecting]: f
                             }),
-                            ref: I,
+                            ref: _,
                             onChange: D,
                             onKeyDownCapture: P,
                             value: t,

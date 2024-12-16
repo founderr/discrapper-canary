@@ -19,8 +19,8 @@ var i = n(200651),
     p = n(899667),
     f = n(626135),
     C = n(267642),
-    _ = n(63063),
-    I = n(999382),
+    I = n(63063),
+    _ = n(999382),
     v = n(981631),
     N = n(388032),
     T = n(981004);
@@ -86,7 +86,7 @@ function E() {
             (0, o.tZ)(), (0, c.Y2)();
         });
     }, []);
-    let e = (0, l.e7)([I.Z], () => I.Z.getGuild()),
+    let e = (0, l.e7)([_.Z], () => _.Z.getGuild()),
         t = (0, l.e7)([p.Z], () => (null != e ? p.Z.getAppliedGuildBoostsForGuild(e.id) : null)),
         n = (0, u.V)();
     return (0, i.jsxs)(i.Fragment, {
@@ -106,7 +106,7 @@ function E() {
                     (0, i.jsx)(s.FormText, {
                         type: s.FormText.Types.DESCRIPTION,
                         className: T.titleBlurb,
-                        children: N.intl.format(N.t.hLOkp6, { helpdeskArticle: _.Z.getArticleURL(v.BhN.GUILD_SUBSCRIPTIONS) })
+                        children: N.intl.format(N.t.hLOkp6, { helpdeskArticle: I.Z.getArticleURL(v.BhN.GUILD_SUBSCRIPTIONS) })
                     })
                 ]
             }),

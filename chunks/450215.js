@@ -20,8 +20,8 @@ var i = n(200651),
     p = n(723047),
     f = n(727843),
     C = n(290348),
-    _ = n(857081),
-    I = n(869269),
+    I = n(857081),
+    _ = n(869269),
     v = n(981631),
     N = n(388032),
     T = n(83701);
@@ -41,9 +41,9 @@ function b(e) {
         [F] = C._T(A),
         [H] = C.mR(A),
         [z] = C.PK(A),
-        [W] = C.d9(A, 1024),
-        V = '' !== F ? F : N.intl.string(N.t.QWhe9P),
-        Y = '' !== F && null != W && '' !== z && null != H && !G,
+        [V] = C.d9(A, 1024),
+        W = '' !== F ? F : N.intl.string(N.t.QWhe9P),
+        Y = '' !== F && null != V && '' !== z && null != H && !G,
         K = C.rU(A),
         { loading: q, error: X, handleCreateOrUpdateFromEditState: Q } = C.Xo(),
         { submitting: J, error: $, publishSubscriptionListing: ee } = (0, g.HQ)(),
@@ -57,15 +57,15 @@ function b(e) {
                     (0, i.jsx)('div', {
                         className: T.headerImageContainer,
                         children:
-                            null == W
-                                ? (0, i.jsx)(_.Z, {
+                            null == V
+                                ? (0, i.jsx)(I.Z, {
                                       className: T.starIcon,
                                       'aria-hidden': !0
                                   })
                                 : (0, i.jsx)('img', {
                                       className: T.headerImage,
-                                      src: W,
-                                      alt: V
+                                      src: V,
+                                      alt: W
                                   })
                     }),
                     (0, i.jsxs)('div', {
@@ -74,7 +74,7 @@ function b(e) {
                             (0, i.jsx)(d.Text, {
                                 variant: 'text-md/medium',
                                 color: 'interactive-active',
-                                children: V
+                                children: W
                             }),
                             (0, i.jsx)(d.Spacer, { size: 2 }),
                             (0, i.jsxs)('div', {
@@ -153,7 +153,7 @@ function b(e) {
                     editStateId: A,
                     guildId: l,
                     groupListingId: E,
-                    children: (0, i.jsx)(I.Z, {
+                    children: (0, i.jsx)(_.Z, {
                         allSubscriptionListings: b,
                         priceTiers: j,
                         loading: et,

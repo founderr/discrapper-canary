@@ -5,8 +5,8 @@ n.d(e, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    o = n.n(r),
+    o = n(120356),
+    r = n.n(o),
     a = n(442837),
     s = n(481060),
     u = n(543882),
@@ -16,9 +16,9 @@ var i = n(200651),
     f = n(388032),
     v = n(680809);
 function p(t) {
-    let { isLoading: e, noText: n, previewText: l, className: r } = t;
+    let { isLoading: e, noText: n, previewText: l, className: o } = t;
     return (0, i.jsx)('div', {
-        className: o()(v.emptyPreviewContainer, r),
+        className: r()(v.emptyPreviewContainer, o),
         children: e
             ? (0, i.jsx)(s.Spinner, {})
             : (0, i.jsxs)(i.Fragment, {
@@ -37,9 +37,9 @@ function p(t) {
     });
 }
 function x(t) {
-    let { stream: e, className: n, noText: r = !1 } = t,
-        o = (0, a.e7)([c.Z], () => c.Z.getBasicChannel(e.channelId)),
-        s = (0, a.e7)([d.Z], () => null != o && d.Z.canBasicChannel(h.S7T.CONNECT, o)),
+    let { stream: e, className: n, noText: o = !1 } = t,
+        r = (0, a.e7)([c.Z], () => c.Z.getBasicChannel(e.channelId)),
+        s = (0, a.e7)([d.Z], () => null != r && d.Z.canBasicChannel(h.S7T.CONNECT, r)),
         { url: x, isLoading: g } = (0, a.cj)([u.Z], () => ({
             url: s ? u.Z.getPreviewURL(e.guildId, e.channelId, e.ownerId) : null,
             isLoading: s && u.Z.getIsPreviewLoading(e.guildId, e.channelId, e.ownerId)
@@ -53,7 +53,7 @@ function x(t) {
         ? (0, i.jsx)(p, {
               className: n,
               isLoading: g,
-              noText: r,
+              noText: o,
               previewText: s ? void 0 : f.intl.string(f.t.pgUTZG)
           })
         : (0, i.jsx)('div', {

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return I;
     }
 }),
     n(47120);
@@ -218,7 +218,7 @@ function C() {
         })
     );
 }
-function _(e) {
+function I(e) {
     let { guild: t, everyoneRole: n, setEditRoleId: l } = e,
         [s, a] = r.useState(!1),
         u = async () => {

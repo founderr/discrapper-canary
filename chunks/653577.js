@@ -10,8 +10,8 @@ var i = n(200651),
     a = n(442837),
     s = n(481060),
     c = n(362721),
-    d = n(12498),
-    u = n(111028),
+    u = n(12498),
+    d = n(111028),
     h = n(454585),
     p = n(626135),
     m = n(981631),
@@ -20,7 +20,7 @@ var i = n(200651),
     C = n(665162);
 function v(e) {
     let { channel: t, connected: n, hovered: r, subtitle: v, onClick: _, enableHangStatus: x, allowChannelTopic: I } = e,
-        b = (0, a.e7)([d.Z], () => d.Z.getChannelStatus(t)),
+        b = (0, a.e7)([u.Z], () => u.Z.getChannelStatus(t)),
         E = null != b && b.length > 0,
         S = (0, c.ZP)(t, !0),
         Z = (!x || !!I) && S,
@@ -42,7 +42,7 @@ function v(e) {
             children: (0, i.jsx)(s.Text, {
                 variant: 'text-xs/medium',
                 className: o()(g.statusText, C.markup),
-                children: (0, i.jsx)(u.Z, { children: h.Z.parseVoiceChannelStatus(b, !0, { channelId: t.id }) })
+                children: (0, i.jsx)(d.Z, { children: h.Z.parseVoiceChannelStatus(b, !0, { channelId: t.id }) })
             })
         });
     if (n && Z && (!N || r))
@@ -64,6 +64,6 @@ function v(e) {
                 })
             ]
         });
-    if (N) return (0, i.jsx)(u.Z, { children: v });
+    if (N) return (0, i.jsx)(d.Z, { children: v });
     return null;
 }

@@ -57,10 +57,10 @@ class T extends _.Z {
         );
     }
     leaveActivity(e) {
-        let { channelId: n, applicationId: r, showFeedback: i } = e;
+        let { location: n, applicationId: r, showFeedback: i } = e;
         o.Z.wait(() => {
             (0, f.mW)({
-                channelId: n,
+                location: n,
                 applicationId: r,
                 showFeedback: i
             });
@@ -68,8 +68,8 @@ class T extends _.Z {
             (0, d.R)() && (0, c.xv)(g.KJ3.ACTIVITY_POPOUT);
     }
     hidePIPEmbed(e) {
-        let { channelId: n, applicationId: r } = e,
-            i = (0, m.Z)(n, r);
+        let { location: n, applicationId: r } = e,
+            i = (0, m.Z)(n.id, r);
         (0, p.RI)(i);
     }
     releaseWebView() {}
@@ -89,7 +89,7 @@ class T extends _.Z {
                     let e = h.ZP.getCurrentEmbeddedActivity();
                     null != e &&
                         this.leaveActivity({
-                            channelId: e.channelId,
+                            location: e.location,
                             applicationId: e.applicationId
                         });
                 }

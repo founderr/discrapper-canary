@@ -15,8 +15,8 @@ var i = n(200651),
     p = n(690221),
     f = n(706454),
     C = n(650774),
-    _ = n(430824),
-    I = n(246946),
+    I = n(430824),
+    _ = n(246946),
     v = n(626135),
     N = n(771212),
     T = n(434404),
@@ -102,7 +102,7 @@ let z = () => {
         children: A.intl.string(A.t.Uskgx8)
     });
 };
-function W(e) {
+function V(e) {
     let { guildId: t } = e,
         { hasAccessRate: n, accessRate: l } = (0, a.cj)([j.Z], () => j.Z.getMemberInsights(t)),
         s = (0, a.e7)([C.Z], () => {
@@ -363,13 +363,13 @@ function W(e) {
 t.Z = () => {
     let e = (0, a.e7)([S.Z], () => S.Z.getGuildId()),
         t = (0, a.e7)([C.Z], () => C.Z.getMemberCount(e)),
-        n = (0, a.e7)([_.Z], () => _.Z.getGuild(e)),
+        n = (0, a.e7)([I.Z], () => I.Z.getGuild(e)),
         l = (0, a.e7)([f.default], () => f.default.locale),
         { analytics: s, errorCode: o } = (0, a.cj)([j.Z], () => ({
             analytics: null != e ? j.Z.getOverviewAnalytics(e) : null,
             errorCode: j.Z.getError()
         })),
-        c = (0, a.e7)([I.Z], () => I.Z.getSettings().enabled),
+        c = (0, a.e7)([_.Z], () => _.Z.getSettings().enabled),
         d = null == t || null == n || (null != t && t < 500 && null != n && !n.hasFeature(E.oNc.PARTNERED) && !n.hasFeature(E.oNc.VERIFIED));
     r.useEffect(() => {
         null != e && !d && ((0, b.Vk)(e), (0, b.SR)(e), (0, b.xl)(e));
@@ -416,7 +416,7 @@ t.Z = () => {
                 children: A.intl.format(A.t.NIZ60d, {})
             }),
             F(o, d),
-            null != e ? (0, i.jsx)(W, { guildId: e }) : null,
+            null != e ? (0, i.jsx)(V, { guildId: e }) : null,
             (0, i.jsxs)('div', {
                 className: Z.developerPortalCtaWrapper,
                 children: [

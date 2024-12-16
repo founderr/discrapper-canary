@@ -19,9 +19,9 @@ t.Z = (e) => {
     let { className: n } = e,
         r = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
         C = (0, s.e7)([o.default], () => o.default.locale),
-        _ = (0, s.e7)([u.ZP], () => u.ZP.getPremiumTypeSubscription()),
-        I = (0, s.e7)([d.Z], () => (null != _ ? d.Z.get(_.planId) : void 0)),
-        v = null !== (t = (0, s.e7)([d.Z], () => (null != I ? d.Z.getForSkuAndInterval((0, h.Wz)(x.Si.GUILD), I.interval, I.intervalCount) : void 0))) && void 0 !== t ? t : x.GP[x.Xh.PREMIUM_MONTH_GUILD];
+        I = (0, s.e7)([u.ZP], () => u.ZP.getPremiumTypeSubscription()),
+        _ = (0, s.e7)([d.Z], () => (null != I ? d.Z.get(I.planId) : void 0)),
+        v = null !== (t = (0, s.e7)([d.Z], () => (null != _ ? d.Z.getForSkuAndInterval((0, h.Wz)(x.Si.GUILD), _.interval, _.intervalCount) : void 0))) && void 0 !== t ? t : x.GP[x.Xh.PREMIUM_MONTH_GUILD];
     return (0, i.jsxs)('div', {
         className: l()(f.wrapper, n),
         children: [

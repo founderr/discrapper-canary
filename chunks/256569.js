@@ -64,8 +64,8 @@ function p(e) {
     var t;
     let { initialValue: n, onChangeTags: l, onChangeNewTagValue: c, tagErrors: u = {}, placeholder: g, className: p, maxTags: f } = e,
         C = r.useRef(null),
-        _ = r.useRef(null),
         I = r.useRef(null),
+        _ = r.useRef(null),
         v = (0, m.V)(n),
         {
             handlePasteEvent: N,
@@ -79,9 +79,9 @@ function p(e) {
             handleResetTagSelections: A,
             handleInputBlurEvent: Z
         } = (0, m.Q)(v, {
-            scrollerRef: I,
+            scrollerRef: _,
             mainInputRef: C,
-            mainContainerRef: _
+            mainContainerRef: I
         }),
         {
             state: { value: L, tags: D, selections: O, isSelecting: P }
@@ -119,7 +119,7 @@ function p(e) {
                                   null === (e = C.current) || void 0 === e || e.blur(),
                                       setTimeout(() => {
                                           var e;
-                                          return null === (e = _.current) || void 0 === e ? void 0 : e.focus();
+                                          return null === (e = I.current) || void 0 === e ? void 0 : e.focus();
                                       }, 16);
                               }));
                 } else y(e, !0), w(!0);
@@ -128,12 +128,12 @@ function p(e) {
         );
     return (0, i.jsxs)('div', {
         className: s()(h.mainContainer, p),
-        ref: _,
+        ref: I,
         tabIndex: 0,
         onKeyUp: j,
         children: [
             (0, i.jsxs)(x, {
-                ref: I,
+                ref: _,
                 onClick: B,
                 children: [
                     D.map((e, t) =>

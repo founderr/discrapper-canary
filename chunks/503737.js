@@ -6,8 +6,8 @@ var l = n(481060),
     a = n(317770),
     s = n(981631),
     c = n(388032);
-let d = 'ActivityInviteManager',
-    u = () => {
+let u = 'ActivityInviteManager',
+    d = () => {
         r.Z.dispatch({ type: 'ACTIVITY_INVITE_MODAL_CLOSE' });
     };
 class h extends a.Z {
@@ -30,8 +30,8 @@ class h extends a.Z {
                           ...e
                       }),
                   {
-                      onCloseCallback: u,
-                      modalKey: d
+                      onCloseCallback: d,
+                      modalKey: u
                   },
                   h
               )
@@ -41,14 +41,14 @@ class h extends a.Z {
                       return (t) => (0, i.jsx)(e, { ...t });
                   },
                   {
-                      onCloseCallback: u,
-                      modalKey: d,
+                      onCloseCallback: d,
+                      modalKey: u,
                       contextKey: h
                   }
               );
     }
     handleModalClose(e) {
-        (0, l.closeModal)(d);
+        (0, l.closeModal)(u);
     }
 }
 t.Z = new h();

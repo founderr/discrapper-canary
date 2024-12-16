@@ -1,12 +1,12 @@
-var r, a;
+var i, r;
 e.d(n, {
     q: function () {
-        return r;
+        return i;
     }
 }),
-    ((a = r || (r = {})).ACCENT = 'accent'),
-    (a.GREEN = 'statusGreen'),
-    (a.YELLOW = 'statusYellow'),
-    (a.ORANGE = 'statusOrange'),
-    (a.RED = 'statusRed'),
-    (a.NONE = 'transparent');
+    ((r = i || (i = {})).ACCENT = 'accent'),
+    (r.GREEN = 'statusGreen'),
+    (r.YELLOW = 'statusYellow'),
+    (r.ORANGE = 'statusOrange'),
+    (r.RED = 'statusRed'),
+    (r.NONE = 'transparent');

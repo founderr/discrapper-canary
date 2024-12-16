@@ -14,8 +14,8 @@ var i = n(200651),
     a = n(512722),
     s = n.n(a),
     c = n(568611),
-    d = n(91192),
-    u = n(873546),
+    u = n(91192),
+    d = n(873546),
     h = n(442837),
     p = n(481060),
     m = n(493683),
@@ -96,10 +96,10 @@ let Y = H.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
             className: z.favoriteIcon
         });
 function $(e) {
-    let { route: t, selected: n, icon: l, iconClassName: r, avatarWithTextClassName: a, interactiveClassName: s, text: d, children: h, locationState: m, onClick: f, className: g, role: C, 'aria-posinset': _, 'aria-setsize': x, ...I } = e,
+    let { route: t, selected: n, icon: l, iconClassName: r, avatarWithTextClassName: a, interactiveClassName: s, text: u, children: h, locationState: m, onClick: f, className: g, role: C, 'aria-posinset': _, 'aria-setsize': x, ...I } = e,
         b = (0, y.Q3)('PrivateChannelLinkButton');
     return (0, i.jsx)(Z.Z, {
-        className: o()(z.channel, { [z.fullWidth]: u.tq }, g),
+        className: o()(z.channel, { [z.fullWidth]: d.tq }, g),
         onClick: f,
         role: C,
         focusProps: {
@@ -128,7 +128,7 @@ function $(e) {
                             className: o()(z.linkButtonIcon, r),
                             color: 'currentColor'
                         }),
-                        name: d,
+                        name: u,
                         innerClassName: o()(z.avatarWithText, a)
                     }),
                     h
@@ -139,7 +139,7 @@ function $(e) {
 }
 function ee(e) {
     var t;
-    let { channel: r, isGDMFacepileEnabled: a, selected: u = !1, user: y, activities: j, applicationStream: R, entry: L, isTyping: w, status: k, isMobile: U, 'aria-posinset': B, 'aria-setsize': H } = e,
+    let { channel: r, isGDMFacepileEnabled: a, selected: d = !1, user: y, activities: j, applicationStream: R, entry: L, isTyping: w, status: k, isMobile: U, 'aria-posinset': B, 'aria-setsize': H } = e,
         [$, ee] = l.useState(!1),
         et = l.useRef(null),
         en = l.useRef(null),
@@ -150,7 +150,7 @@ function ee(e) {
         } = (0, M.Z)({
             user: y,
             size: p.AvatarSizes.SIZE_32,
-            animateOnHover: !(u || $)
+            animateOnHover: !(d || $)
         }),
         eo = (0, h.e7)([G.ZP], () => G.ZP.isChannelMuted(r.getGuildId(), r.id)),
         { ignored: ea, blocked: es } = (0, h.cj)([O.Z], () => ({
@@ -158,8 +158,8 @@ function ee(e) {
             blocked: O.Z.isBlocked(r.getRecipientId())
         })),
         ec = (0, h.e7)([D.ZP], () => D.ZP.getMentionCount(r.id) > 0),
-        ed = (0, b.ZP)(r),
-        eu = (0, h.e7)([T.Z], () => T.Z.isFavorite(r.id)),
+        eu = (0, b.ZP)(r),
+        ed = (0, h.e7)([T.Z], () => T.Z.isFavorite(r.id)),
         eh = () => {
             ee(!0);
         },
@@ -168,7 +168,7 @@ function ee(e) {
         },
         em = function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            null != e && (e.preventDefault(), e.stopPropagation()), m.Z.closePrivateChannel(r.id, u, t);
+            null != e && (e.preventDefault(), e.stopPropagation()), m.Z.closePrivateChannel(r.id, d, t);
         },
         ef = () => {
             m.Z.preload(F.ME, r.id);
@@ -192,7 +192,7 @@ function ee(e) {
                               (0, i.jsx)(e, {
                                   ...t,
                                   channel: r,
-                                  selected: u
+                                  selected: d
                               });
                       },
                       { noBlurEvent: !0 }
@@ -204,15 +204,15 @@ function ee(e) {
                               ...t,
                               user: y,
                               channel: r,
-                              channelSelected: u
+                              channelSelected: d
                           });
                   });
         },
         e_ = (e) => {
             e.preventDefault(), e.stopPropagation();
-            let t = W.intl.formatToPlainString(W.t.hJ5Ap6, { name: ed }),
-                l = W.intl.format(W.t.SSIVOj, { name: ed });
-            r.isManaged() && ((t = W.intl.formatToPlainString(W.t.hVGjER, { name: ed })), (l = W.intl.format(W.t.IK1Qvr, { name: ed }))),
+            let t = W.intl.formatToPlainString(W.t.hJ5Ap6, { name: eu }),
+                l = W.intl.format(W.t.SSIVOj, { name: eu });
+            r.isManaged() && ((t = W.intl.formatToPlainString(W.t.hVGjER, { name: eu })), (l = W.intl.format(W.t.IK1Qvr, { name: eu }))),
                 (0, p.openModalLazy)(async () => {
                     let { default: e } = await n.e('14604').then(n.bind(n, 960670));
                     return (n) =>
@@ -302,7 +302,7 @@ function ee(e) {
         ej = eN
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
-                      ed,
+                      eu,
                       (0, i.jsx)(E.ZP, {
                           clan: null == y ? void 0 : y.clan,
                           userId: null == y ? void 0 : y.id,
@@ -312,9 +312,9 @@ function ee(e) {
                       })
                   ]
               })
-            : ed,
+            : eu,
         eA = null !== (t = eo || ey || eT) && void 0 !== t && t;
-    return (0, i.jsx)(d.mh, {
+    return (0, i.jsx)(u.mh, {
         id: r.id,
         children: (e) => {
             let { role: t, ...n } = e;
@@ -336,12 +336,12 @@ function ee(e) {
                 children: (0, i.jsxs)(p.Interactive, {
                     className: o()(z.interactive, {
                         [z.interactiveSystemDM]: eS && eE,
-                        [z.interactiveSelected]: u
+                        [z.interactiveSelected]: d
                     }),
                     as: 'div',
                     onClick: eC,
                     muted: eA,
-                    selected: u,
+                    selected: d,
                     children: [
                         (0, i.jsx)(c.rU, {
                             innerRef: et,
@@ -354,7 +354,7 @@ function ee(e) {
                             ...n,
                             children: (0, i.jsx)(v.Z, {
                                 avatar: eI(),
-                                selected: u,
+                                selected: d,
                                 highlighted: ec,
                                 muted: eA,
                                 subText: ex(),
@@ -371,7 +371,7 @@ function ee(e) {
                                     : null
                             })
                         }),
-                        eu ? (0, i.jsx)(Q, {}) : null,
+                        ed ? (0, i.jsx)(Q, {}) : null,
                         ey ? (0, i.jsx)(J, {}) : null,
                         eT ? (0, i.jsx)(X, {}) : null,
                         (0, i.jsx)(q, {
@@ -390,7 +390,7 @@ t.ZP = (e) => {
         r = (0, h.e7)([U.default], () => U.default.getUser(t.getRecipientId())),
         { isStatusIndicatorEnabled: o, isTypingIndicatorEnabled: a, isFacepileEnabled: s } = j.Z.useExperiment({ location: 'private_channel' }, { autoTrackExposure: !0 }),
         c = null == r ? void 0 : r.id,
-        d = (0, h.cj)(
+        u = (0, h.cj)(
             [w.Z, L.Z],
             () => {
                 let e;
@@ -409,7 +409,7 @@ t.ZP = (e) => {
             },
             [t, c, o]
         ),
-        u = (0, R.Z)(null == r ? void 0 : r.id, 'PrivateChannel'),
+        d = (0, R.Z)(null == r ? void 0 : r.id, 'PrivateChannel'),
         p = (0, h.e7)(
             [U.default, k.Z],
             () => {
@@ -431,7 +431,7 @@ t.ZP = (e) => {
               channel: t,
               selected: n,
               isTyping: p,
-              status: d.status === F.Skl.ONLINE ? F.Skl.ONLINE : void 0,
+              status: u.status === F.Skl.ONLINE ? F.Skl.ONLINE : void 0,
               isGDMFacepileEnabled: s,
               ...l
           })
@@ -439,9 +439,9 @@ t.ZP = (e) => {
               channel: t,
               selected: n,
               user: r,
-              entry: u,
+              entry: d,
               isTyping: p,
               ...l,
-              ...d
+              ...u
           });
 };

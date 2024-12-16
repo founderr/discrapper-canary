@@ -15,7 +15,7 @@ var i = n(200651),
     p = n(778916);
 let f = (e) => {
     var t;
-    let { reason: n = '', emoji_name: l, onSetReason: m, onSelectEmoji: x, onClearPressed: f, reasonMinLength: C, reasonMaxLength: _, placeholder: I, position: v } = e,
+    let { reason: n = '', emoji_name: l, onSetReason: m, onSelectEmoji: x, onClearPressed: f, reasonMinLength: C, reasonMaxLength: I, placeholder: _, position: v } = e,
         [N, T] = r.useState(!1),
         b = (0, a.e7)([h.Z], () => h.Z.isGuildMetadataLoaded());
     return (0, i.jsxs)('div', {
@@ -66,10 +66,10 @@ let f = (e) => {
                         o.TextInput,
                         {
                             inputClassName: p.reason,
-                            placeholder: I,
+                            placeholder: _,
                             value: n,
                             minLength: C,
-                            maxLength: _,
+                            maxLength: I,
                             onChange: (e) => {
                                 m(e);
                             },

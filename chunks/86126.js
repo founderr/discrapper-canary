@@ -21,10 +21,10 @@ var i = n(200651),
 function C(e) {
     var t;
     let { onDeleteEditState: l } = e,
-        { editStateId: C, guildId: _, groupListingId: I } = (0, m.N)(),
+        { editStateId: C, guildId: I, groupListingId: _ } = (0, m.N)(),
         v = (0, a.e7)([u.Z], () => u.Z.getSubscriptionListing(C)),
         N = null == v ? void 0 : v.id,
-        T = (0, h.Z)(_),
+        T = (0, h.Z)(I),
         b = r.useMemo(() => {
             var e;
             return null != T && null != v && (null !== (e = T[v.role_id]) && void 0 !== e ? e : 0);
@@ -36,7 +36,7 @@ function C(e) {
         { archiveSubscriptionListing: A, submitting: Z } = (0, d._1)(),
         L = () => {
             let e = async () => {
-                if (!!S || (s()(null != I, 'group listing doesnt exist'), s()(null != N, 'subscription listing doesnt exist'), !!(await R(_, I, N)))) null == l || l();
+                if (!!S || (s()(null != _, 'group listing doesnt exist'), s()(null != N, 'subscription listing doesnt exist'), !!(await R(I, _, N)))) null == l || l();
             };
             (0, o.openModalLazy)(async () => {
                 let { ConfirmModal: t } = await Promise.resolve().then(n.bind(n, 481060));
@@ -57,7 +57,7 @@ function C(e) {
                     });
             });
         },
-        { allowSelfRemoveMonetization: D } = (0, c.gX)(_);
+        { allowSelfRemoveMonetization: D } = (0, c.gX)(I);
     return null == v
         ? null
         : (0, i.jsx)(g.Z, {
@@ -103,7 +103,7 @@ function C(e) {
                                 wrapperClassName: f.deleteListingButton,
                                 color: o.Button.Colors.RED,
                                 onClick: () => {
-                                    s()(null != I, 'group listing doesnt exist'),
+                                    s()(null != _, 'group listing doesnt exist'),
                                         s()(null != N, 'subscription listing doesnt exist'),
                                         (0, o.openModalLazy)(async () => {
                                             let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 481060));
@@ -113,7 +113,7 @@ function C(e) {
                                                     confirmText: x.intl.string(x.t.RL0wjo),
                                                     cancelText: x.intl.string(x.t['ETE/oK']),
                                                     onConfirm: () => {
-                                                        A(_, I, N);
+                                                        A(I, _, N);
                                                     },
                                                     confirmButtonColor: o.Button.Colors.RED,
                                                     ...t,

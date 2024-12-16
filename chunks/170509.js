@@ -13,7 +13,7 @@ var l = n(481060),
 function s(e) {
     let { channel: t, category: n, ...s } = e,
         c = (0, r.ZP)(t, !0),
-        d = (0, r.ZP)(n);
+        u = (0, r.ZP)(n);
     return (0, i.jsx)(l.ConfirmModal, {
         header: o.intl.string(o.t.YWMtRU),
         confirmText: o.intl.string(o.t.eW8Gy8),
@@ -26,7 +26,7 @@ function s(e) {
             selectable: !1,
             children: o.intl.format(o.t['iKW+jY'], {
                 channelName: c,
-                categoryName: d
+                categoryName: u
             })
         })
     });

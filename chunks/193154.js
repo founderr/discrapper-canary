@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 }),
     n(47120);
@@ -11,27 +11,27 @@ var i = n(200651),
     a = n(768581),
     s = n(682662),
     c = n(662146),
-    d = n(285280);
-function u(e) {
-    let [t, u] = l.useState(!1);
+    u = n(285280);
+function d(e) {
+    let [t, d] = l.useState(!1);
     return (0, i.jsx)(s.H, {
         children: (0, i.jsx)(c.Z, {
             text: e.name,
             children: (0, i.jsx)(r.BlobMask, {
-                className: d.circleIconButton,
+                className: u.circleIconButton,
                 selected: t,
                 lowerBadge: (0, i.jsx)(r.IconBadge, {
                     icon: (0, r.makeIconCompat)(o.Z),
                     disableColor: !0,
-                    className: d.geoRestrictedBadge
+                    className: u.geoRestrictedBadge
                 }),
                 children: (0, i.jsx)(r.NavItem, {
                     name: e.name,
                     onMouseEnter: () => {
-                        u(!0);
+                        d(!0);
                     },
                     onMouseLeave: () => {
-                        u(!1);
+                        d(!1);
                     },
                     onClick: () => {
                         (0, r.openModalLazy)(async () => {

@@ -13,8 +13,8 @@ var l = n(200651),
     u = n(420660),
     d = n(429589),
     m = n(757182),
-    h = n(706454),
-    x = n(374129),
+    x = n(706454),
+    h = n(374129),
     p = n(639351),
     C = n(823379),
     v = n(379357),
@@ -40,14 +40,14 @@ let R = {
     [i.z.IOS]: null,
     [i.z.ANDROID]: null,
     [i.z.XBOX]: p.Z,
-    [i.z.PLAYSTATION]: x.Z
+    [i.z.PLAYSTATION]: h.Z
 };
 t.Z = (e) => {
-    let { channel: t, entry: n, disableGameProfileLinks: x, onReaction: p, onVoiceChannelPreview: M, onUserPopoutClosed: k, trackRankingItemInteraction: w } = e,
+    let { channel: t, entry: n, disableGameProfileLinks: h, onReaction: p, onVoiceChannelPreview: M, onUserPopoutClosed: k, trackRankingItemInteraction: w } = e,
         { largeImage: O } = (0, v.rv)({ entry: n }),
         { user: b, details: H, appName: V, activity: B } = (0, A.n)(n),
         { primaryColor: D, secondaryColor: U } = (0, L.Z)(null == O ? void 0 : O.src),
-        G = (0, r.e7)([h.default], () => h.default.locale),
+        G = (0, r.e7)([x.default], () => x.default.locale),
         { streamPreviewUrl: z, stream: Y } = (0, f.Z)(n),
         { displayParticipants: W, participant1: q, participant2: F, numOtherParticipants: J } = (0, g.Z)(n, 3),
         X = n.extra.platform,
@@ -100,7 +100,7 @@ t.Z = (e) => {
                       subtitle: H,
                       badges: et,
                       entry: n,
-                      disableGameProfileLinks: x,
+                      disableGameProfileLinks: h,
                       onUserPopoutClosed: k,
                       trackRankingItemInteraction: w
                   })

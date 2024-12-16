@@ -14,8 +14,8 @@ var i = n(200651),
     p = n(210887),
     f = n(598077),
     C = n(699516),
-    _ = n(594174),
-    I = n(259580),
+    I = n(594174),
+    _ = n(259580),
     v = n(51144),
     N = n(426563),
     T = n(909746),
@@ -96,7 +96,7 @@ class y extends r.PureComponent {
                                     r
                                 ),
                       count: a.count,
-                      channel: null == a.channel || 'string' == typeof a.channel ? a.channel : (0, h.F6)(a.channel, _.default, C.Z, !0),
+                      channel: null == a.channel || 'string' == typeof a.channel ? a.channel : (0, h.F6)(a.channel, I.default, C.Z, !0),
                       channelHook: (e, t) =>
                           (0, i.jsx)(
                               'span',
@@ -218,7 +218,7 @@ class y extends r.PureComponent {
                                     ]
                                 }),
                                 o
-                                    ? (0, i.jsx)(I.Z, {
+                                    ? (0, i.jsx)(_.Z, {
                                           className: E.expand,
                                           foreground: E.expandForeground,
                                           expanded: r,

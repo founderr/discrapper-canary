@@ -1,4 +1,4 @@
-var i, l, r, o, a, s, u, c;
+var i, l, o, r, a, s, u, c;
 n.d(e, {
     GX: function () {
         return i;
@@ -7,10 +7,10 @@ n.d(e, {
         return l;
     },
     kH: function () {
-        return r;
+        return o;
     },
     vP: function () {
-        return o;
+        return r;
     }
 }),
     ((a = i || (i = {}))[(a.None = 0)] = 'None'),
@@ -19,10 +19,10 @@ n.d(e, {
     ((s = l || (l = {}))[(s.Stretch = 0)] = 'Stretch'),
     (s[(s.Contain = 1)] = 'Contain'),
     (s[(s.Cover = 2)] = 'Cover'),
-    ((u = r || (r = {}))[(u.Base64 = 0)] = 'Base64'),
+    ((u = o || (o = {}))[(u.Base64 = 0)] = 'Base64'),
     (u[(u.Blob = 1)] = 'Blob'),
     (u[(u.File = 2)] = 'File'),
     (u[(u.CloudUpload = 3)] = 'CloudUpload'),
-    ((c = o || (o = {}))[(c.Success = 0)] = 'Success'),
+    ((c = r || (r = {}))[(c.Success = 0)] = 'Success'),
     (c[(c.Failure = 1)] = 'Failure'),
     (c[(c.ImageNotLoaded = 2)] = 'ImageNotLoaded');

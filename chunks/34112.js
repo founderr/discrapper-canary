@@ -20,8 +20,8 @@ var i = n(200651),
     p = n(646892),
     f = n(741247),
     C = n(518738),
-    _ = n(549631),
-    I = n(496675),
+    I = n(549631),
+    _ = n(496675),
     v = n(626135),
     N = n(480608),
     T = n(243730),
@@ -37,7 +37,7 @@ let L = 'DRAGGABLE_ROLE';
 function D(e) {
     let { setEditRoleId: t, guild: n, everyoneRole: l, otherRoles: s, setSelectedSection: a, renderHeader: o, headerHeight: c, query: u } = e,
         m = (0, d.e7)([T.Z], () => T.Z.getRoleMemberCount(n.id), [n.id]),
-        g = (0, d.e7)([I.Z], () => I.Z.getHighestRole(n), [n]),
+        g = (0, d.e7)([_.Z], () => _.Z.getHighestRole(n), [n]),
         x = u.trim();
     r.useEffect(() => {
         (0, N.E)(n.id);
@@ -48,7 +48,7 @@ function D(e) {
     }, [u]);
     let f = r.useMemo(() => s.filter((e) => (0, b.uo)(e, x)), [s, x]),
         C = r.useMemo(() => [...s, l], [s, l]),
-        { draggingId: _, handleDragStart: j, handleDragReset: E, handleDragComplete: y } = (0, S.Z)(C),
+        { draggingId: I, handleDragStart: j, handleDragReset: E, handleDragComplete: y } = (0, S.Z)(C),
         A = r.useCallback(
             (e) => {
                 var r;
@@ -66,7 +66,7 @@ function D(e) {
                         onDragStart: j,
                         onDragReset: E,
                         onDragComplete: y,
-                        disableHover: null != _,
+                        disableHover: null != I,
                         disableDrag: s.length !== f.length,
                         setEditRoleId: t,
                         setSelectedSection: a
@@ -74,7 +74,7 @@ function D(e) {
                     o.id
                 );
             },
-            [f, n, g, m, j, E, y, _, s, t, a]
+            [f, n, g, m, j, E, y, I, s, t, a]
         );
     return (0, i.jsx)(h.Xi, {
         sections: [Math.max(f.length, 1)],
@@ -104,7 +104,7 @@ function O() {
 }
 function P(e) {
     var t, l, c;
-    let { role: d, guild: h, highestRole: x, currentPosition: C, memberCount: I, onDragStart: v, onDragReset: N, onDragComplete: T, disableHover: b, disableDrag: S, setEditRoleId: R, setSelectedSection: D } = e,
+    let { role: d, guild: h, highestRole: x, currentPosition: C, memberCount: _, onDragStart: v, onDragReset: N, onDragComplete: T, disableHover: b, disableDrag: S, setEditRoleId: R, setSelectedSection: D } = e,
         O = (0, j.T)(h, x, d),
         P = null != O,
         [M, w] = r.useState(!1),
@@ -145,7 +145,7 @@ function P(e) {
             [P, d]
         ),
         [{ dragSourcePosition: H }, z] = (0, o.L)(F),
-        W = r.useCallback(
+        V = r.useCallback(
             (e) => {
                 (0, m.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 741247));
@@ -159,7 +159,7 @@ function P(e) {
             },
             [h, d]
         ),
-        V = (0, f.useHasGuildRoleItems)(h, d);
+        W = (0, f.useHasGuildRoleItems)(h, d);
     if (U)
         return (0, i.jsx)('div', {
             ref: G,
@@ -178,12 +178,12 @@ function P(e) {
             [A.containerDragAfter]: null != H && C > H
         }),
         onClick: Y,
-        onContextMenu: W,
+        onContextMenu: V,
         innerRef: (e) => G(z(e)),
         'data-dnd-name': d.name,
         'aria-label': y.intl.formatToPlainString(y.t.Vu0AcX, {
             name: d.name,
-            count: ''.concat(I)
+            count: ''.concat(_)
         }),
         children: [
             (0, i.jsx)('div', {
@@ -224,7 +224,7 @@ function P(e) {
                         children: d.name
                     }),
                     (null === (l = d.tags) || void 0 === l ? void 0 : l.subscription_listing_id) != null &&
-                        (0, i.jsx)(_.Z, {
+                        (0, i.jsx)(I.Z, {
                             className: A.subscriptionRoleIcon,
                             'aria-label': y.intl.string(y.t.a2Ak8f)
                         }),
@@ -233,7 +233,7 @@ function P(e) {
             }),
             (0, i.jsx)(u.Tooltip, {
                 text: y.intl.string(y.t.CW75t7),
-                'aria-label': y.intl.formatToPlainString(y.t.Fgs8fH, { count: ''.concat(I) }),
+                'aria-label': y.intl.formatToPlainString(y.t.Fgs8fH, { count: ''.concat(_) }),
                 position: 'right',
                 children: (e) =>
                     (0, i.jsxs)(u.Clickable, {
@@ -244,7 +244,7 @@ function P(e) {
                             (0, i.jsx)(u.Text, {
                                 variant: 'text-md/normal',
                                 color: 'none',
-                                children: I
+                                children: _
                             }),
                             (0, i.jsx)(u.UserIcon, {
                                 size: 'custom',
@@ -290,8 +290,8 @@ function P(e) {
                             width: 20,
                             height: 20
                         }),
-                        onClick: W,
-                        disabled: !V
+                        onClick: V,
+                        disabled: !W
                     })
                 ]
             })

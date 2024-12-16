@@ -1,8 +1,8 @@
 n(411104);
 var i = n(141795),
     l = n(476326),
-    r = n(956664),
-    o = n(693824);
+    o = n(956664),
+    r = n(693824);
 e.Z = class t {
     toDataUrl(t) {
         let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'png',
@@ -11,19 +11,19 @@ e.Z = class t {
     }
     async exportCanvas(t, e) {
         let { format: n, fileType: a = 'png', quality: s = 1, fileName: u } = e;
-        if (n === o.kH.Base64) return this.toDataUrl(t, a, s);
-        if (n === o.kH.Blob) {
+        if (n === r.kH.Base64) return this.toDataUrl(t, a, s);
+        if (n === r.kH.Blob) {
             let e = this.toDataUrl(t, a, s);
-            return (0, r.kD)(e);
+            return (0, o.kD)(e);
         }
-        if (n === o.kH.File) {
+        if (n === r.kH.File) {
             let e = this.toDataUrl(t, a, s);
-            return await (0, r.Bo)(e, u, 'image/png');
+            return await (0, o.Bo)(e, u, 'image/png');
         }
-        if (n === o.kH.CloudUpload) {
+        if (n === r.kH.CloudUpload) {
             let { channelId: n } = e,
-                o = this.toDataUrl(t, a, s),
-                c = await (0, r.Bo)(o, u, 'image/png');
+                r = this.toDataUrl(t, a, s),
+                c = await (0, o.Bo)(r, u, 'image/png');
             return new i.n(
                 {
                     file: c,

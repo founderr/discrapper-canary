@@ -21,8 +21,8 @@ var i = n(200651),
     p = n(134432),
     f = n(813197),
     C = n(208567),
-    _ = n(183023),
-    I = n(984933),
+    I = n(183023),
+    _ = n(984933),
     v = n(496675),
     N = n(699516),
     T = n(594174),
@@ -264,7 +264,7 @@ class z extends r.PureComponent {
                 }),
                 null != d &&
                     d.isDiscoverable() &&
-                    (0, i.jsx)(_.UA, {
+                    (0, i.jsx)(I.UA, {
                         sourceType: m.w6.GUILD,
                         expressionSourceApplication: null,
                         expressionSourceGuild: d,
@@ -467,15 +467,15 @@ class z extends r.PureComponent {
             });
     }
 }
-t.Z = s.ZP.connectStores([E.Z, v.Z, A.ZP, I.ZP, x.Z, T.default, N.Z], () => {
+t.Z = s.ZP.connectStores([E.Z, v.Z, A.ZP, _.ZP, x.Z, T.default, N.Z], () => {
     let { guild: e, errors: t, submitting: n, guildMetadata: i } = E.Z.getProps(),
         r = v.Z.can(w.Plq.MANAGE_GUILD, e),
         l = v.Z.can(w.Plq.ADMINISTRATOR, e),
         s = null != e ? A.ZP.getDiscoveryChecklist(e.id) : null,
-        a = null != e ? I.ZP.getChannels(e.id) : null,
+        a = null != e ? _.ZP.getChannels(e.id) : null,
         o = [];
     null != a &&
-        a[I.sH].forEach((e) => {
+        a[_.sH].forEach((e) => {
             let { channel: t } = e;
             t.type === w.d4z.GUILD_TEXT &&
                 o.push({

@@ -1,7 +1,7 @@
 e.r(n),
     e.d(n, {
         ParagraphFormFieldModal: function () {
-            return m;
+            return p;
         },
         TextInputFormFieldModal: function () {
             return f;
@@ -11,67 +11,67 @@ e.r(n),
     e(757143);
 var a = e(200651),
     r = e(192379),
-    l = e(481060),
-    o = e(881052),
-    i = e(246364),
-    s = e(915509),
-    d = e(592286),
-    u = e(388032);
-function c(t) {
+    o = e(481060),
+    i = e(881052),
+    l = e(246364),
+    d = e(915509),
+    c = e(592286),
+    s = e(388032);
+function u(t) {
     var n;
-    let { type: e, title: i, description: c, field: f, onSave: m, onClose: p } = t,
-        [x, g] = r.useState(null !== (n = null == f ? void 0 : f.label) && void 0 !== n ? n : ''),
-        [_, C] = r.useState(null),
-        h = async () => {
-            null != _ && C(null);
-            let t = x.trim();
+    let { type: e, title: l, description: u, field: f, onSave: p, onClose: m } = t,
+        [g, x] = r.useState(null !== (n = null == f ? void 0 : f.label) && void 0 !== n ? n : ''),
+        [h, _] = r.useState(null),
+        C = async () => {
+            null != h && _(null);
+            let t = g.trim();
             if ('' === t) {
-                C(u.intl.string(u.t['G+TI4+']));
+                _(s.intl.string(s.t['G+TI4+']));
                 return;
             }
             try {
-                await m({
+                await p({
                     field_type: e,
                     label: t,
                     required: !0
                 }),
-                    p();
+                    m();
             } catch (t) {
-                C(new o.Hx(t).getAnyErrorMessage());
+                _(new i.Hx(t).getAnyErrorMessage());
             }
         };
-    return (0, a.jsx)(s.Z, {
+    return (0, a.jsx)(d.Z, {
         ...t,
-        errorText: _,
-        title: i,
-        description: c,
-        onConfirm: h,
-        onCancel: p,
-        children: (0, a.jsx)(l.TextInput, {
+        errorText: h,
+        title: l,
+        description: u,
+        onConfirm: C,
+        onCancel: m,
+        children: (0, a.jsx)(o.TextInput, {
             onChange: (t) => {
-                null != _ && C(null);
+                null != h && _(null);
                 let n = t.replace(/(\r\n|\n|\r)/g, ' ');
-                n.length > d.XN && (n = n.slice(0, d.XN)), g(n);
+                n.length > c.XN && (n = n.slice(0, c.XN)), x(n);
             },
-            placeholder: u.intl.string(u.t.fqVmbG),
-            value: x,
-            onKeyDown: (t) => 'Enter' === t.key && h()
+            placeholder: s.intl.string(s.t.fqVmbG),
+            value: g,
+            onKeyDown: (t) => 'Enter' === t.key && C()
         })
     });
 }
 function f(t) {
-    return (0, a.jsx)(c, {
-        title: u.intl.string(u.t.w6Q9w8),
-        description: u.intl.string(u.t['A6M+qq']),
-        type: i.QJ.TEXT_INPUT,
+    return (0, a.jsx)(u, {
+        title: s.intl.string(s.t.w6Q9w8),
+        description: s.intl.string(s.t['A6M+qq']),
+        type: l.QJ.TEXT_INPUT,
         ...t
     });
 }
-function m(t) {
-    return (0, a.jsx)(c, {
-        title: u.intl.string(u.t.gG0JBA),
-        description: u.intl.string(u.t.SMX0iY),
-        type: i.QJ.PARAGRAPH,
+function p(t) {
+    return (0, a.jsx)(u, {
+        title: s.intl.string(s.t.gG0JBA),
+        description: s.intl.string(s.t.SMX0iY),
+        type: l.QJ.PARAGRAPH,
         ...t
     });
 }

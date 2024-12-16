@@ -23,8 +23,8 @@ var i = n(200651),
     p = n(225433),
     f = n(327802),
     C = n(110924),
-    _ = n(200876),
-    I = n(730089),
+    I = n(200876),
+    _ = n(730089),
     v = n(372444),
     N = n(889564),
     T = n(372129),
@@ -254,7 +254,7 @@ let B = d().throttle(x.OQ, 1000),
                   ]
               });
     },
-    W = (e) => {
+    V = (e) => {
         let t,
             n,
             r,
@@ -293,7 +293,7 @@ t.ZP = () => {
         [E, R] = r.useState(!1),
         y = r.useRef(null);
     r.useEffect(() => {
-        p && V();
+        p && W();
     }, [p]),
         r.useEffect(() => {
             B(e.id);
@@ -309,7 +309,7 @@ t.ZP = () => {
         U = e.getMaxEmojiSlots(),
         G = Math.max(U - A.length, U - w.length),
         H = (n, i, r) =>
-            (0, I.G)({
+            (0, _.G)({
                 data: n,
                 file: i,
                 image: r,
@@ -326,7 +326,7 @@ t.ZP = () => {
                 await (0, T._)(n, H),
                 v(!0);
         },
-        V = () => {
+        W = () => {
             null !== y.current && ((0, h.closeModal)(y.current), (y.current = null));
         },
         Y = async (e) => {
@@ -339,7 +339,7 @@ t.ZP = () => {
                     });
             });
         },
-        K = (0, _.l)(e);
+        K = (0, I.l)(e);
     return (0, i.jsxs)('div', {
         className: M.emojiSettings,
         children: [
@@ -353,7 +353,7 @@ t.ZP = () => {
                 tag: h.FormTitleTags.H1,
                 title: k.intl.string(k.t.sMOuub),
                 children: [
-                    (0, i.jsx)(W, {
+                    (0, i.jsx)(V, {
                         guild: e,
                         staticEmojiCount: A.length,
                         animatedEmojiCount: w.length

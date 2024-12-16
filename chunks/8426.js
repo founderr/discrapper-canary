@@ -15,7 +15,7 @@ n.d(t, {
         return x;
     },
     ad: function () {
-        return I;
+        return _;
     },
     bj: function () {
         return A;
@@ -24,7 +24,7 @@ n.d(t, {
         return f;
     },
     hS: function () {
-        return _;
+        return I;
     },
     lq: function () {
         return b;
@@ -83,13 +83,13 @@ function C(e) {
         channelId: e
     });
 }
-function _(e) {
+function I(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_REORDER_NEW_MEMBER_ACTION',
         actions: e
     });
 }
-async function I(e, t, n, i) {
+async function _(e, t, n, i) {
     if (!i) return Promise.resolve();
     try {
         let i = await l.tn.patch({

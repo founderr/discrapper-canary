@@ -6,12 +6,12 @@ n.d(e, {
 var i = n(200651);
 n(192379);
 var l = n(655922),
-    r = n(420660),
-    o = n(915863),
+    o = n(420660),
+    r = n(915863),
     a = n(388032);
 function s(t) {
-    let { activity: e, onAction: n, ButtonComponent: s = o.Z, ...u } = t;
-    return (0, r.Z)(e)
+    let { activity: e, onAction: n, ButtonComponent: s = r.Z, ...u } = t;
+    return (0, o.Z)(e)
         ? (0, i.jsx)(
               s,
               {

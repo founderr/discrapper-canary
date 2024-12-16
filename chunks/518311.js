@@ -263,7 +263,7 @@ class eo extends (i = r.PureComponent) {
                 null != t && o.push(Y.ZP.getName(t));
             }),
             (0, l.jsxs)(j.Z, {
-                className: s()(ee.searchBar, et.marginTop20),
+                className: s()(ee.searchBar),
                 children: [
                     (0, l.jsx)(b.ZP, {
                         ref: this.searchBarRef,
@@ -299,7 +299,7 @@ class eo extends (i = r.PureComponent) {
         return (0, l.jsxs)(m.ModalHeader, {
             direction: j.Z.Direction.VERTICAL,
             align: j.Z.Align.STRETCH,
-            className: ee.__invalid_header,
+            className: ee.header,
             separator: e,
             children: [
                 h.tq ? this.renderMobileCloseButton() : null,

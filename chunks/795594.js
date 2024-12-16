@@ -12,8 +12,8 @@ var i = t(200651),
     a = t(658722),
     o = t.n(a),
     c = t(15729),
-    d = t(243814),
-    u = t(442837),
+    u = t(243814),
+    d = t(442837),
     m = t(921072),
     x = t(1561),
     p = t(481060),
@@ -46,7 +46,7 @@ var i = t(200651),
     G = t(388032),
     z = t(728513),
     U = t(232186);
-let H = u.ZP.connectStores([b.Z], () => ({ theme: b.Z.theme }))(p.EmptyState);
+let H = d.ZP.connectStores([b.Z], () => ({ theme: b.Z.theme }))(p.EmptyState);
 function W(e) {
     let { application: n } = e;
     return (0, i.jsxs)('div', {
@@ -86,7 +86,7 @@ let Y = (e) => {
         }, [n]);
     },
     X = (e) => {
-        let { scopes: n, application: t, selectedChannelId: r, selectedGuildId: a, onDelete: o, disclosures: c, locale: u, id: m } = e,
+        let { scopes: n, application: t, selectedChannelId: r, selectedGuildId: a, onDelete: o, disclosures: c, locale: d, id: m } = e,
             h = l.useMemo(() => S.ZP.createFromServer(t), [t]),
             f = A.Z.useExperiment({ location: 'Authorized Applications' }, { autoTrackExposure: !0 }).enabled,
             I = () => {
@@ -168,7 +168,7 @@ let Y = (e) => {
                                       })
                                   })
                                 : null,
-                        l = new Date(w.default.extractTimestamp(m)).toLocaleDateString(u);
+                        l = new Date(w.default.extractTimestamp(m)).toLocaleDateString(d);
                     return (0, i.jsxs)('div', {
                         className: s()(z.header, U.marginBottom20),
                         children: [
@@ -267,7 +267,7 @@ let Y = (e) => {
                     })(),
                     (() => {
                         let e = [];
-                        for (let t of n) e.push(...(0, v.CI)(t, n)), t === d.x.APPLICATIONS_COMMANDS && e.push(G.intl.string(G.t.Ls2XRk));
+                        for (let t of n) e.push(...(0, v.CI)(t, n)), t === u.x.APPLICATIONS_COMMANDS && e.push(G.intl.string(G.t.Ls2XRk));
                         if (e.length > 0 || (null != c && c.length > 0))
                             return (0, i.jsx)(p.FormItem, {
                                 faded: !0,
@@ -311,11 +311,11 @@ let Y = (e) => {
     },
     q = (0, c.U)(() => ({ searchQuery: '' }));
 n.Z = () => {
-    let e = (0, u.e7)([k.Z], () => k.Z.hidePersonalInformation),
-        n = (0, u.e7)([L.Z], () => L.Z.getApps()),
-        r = (0, u.e7)([R.default], () => R.default.locale),
-        s = (0, u.e7)([g.ZP], () => g.ZP.getSelfEmbeddedActivities()),
-        a = (0, u.e7)([P.Z, E.Z], () => P.Z.getChannel(E.Z.getChannelId())),
+    let e = (0, d.e7)([k.Z], () => k.Z.hidePersonalInformation),
+        n = (0, d.e7)([L.Z], () => L.Z.getApps()),
+        r = (0, d.e7)([R.default], () => R.default.locale),
+        s = (0, d.e7)([g.ZP], () => g.ZP.getSelfEmbeddedActivities()),
+        a = (0, d.e7)([P.Z, E.Z], () => P.Z.getChannel(E.Z.getChannelId())),
         c = null == a ? void 0 : a.getGuildId();
     l.useEffect(() => {
         h.Z.fetch();
@@ -326,13 +326,13 @@ n.Z = () => {
             },
             []
         );
-    let d = (e) => {
+    let u = (e) => {
             let { id: n, application: t } = e;
             h.Z.delete(n), y.S.safeDispatch(M.CkL.HIDE_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, { applicationId: t.id });
             let i = s.get(t.id);
             null != i &&
                 j.Z.leaveActivity({
-                    channelId: i.channelId,
+                    location: i.location,
                     applicationId: t.id,
                     showFeedback: !1
                 });
@@ -409,7 +409,7 @@ n.Z = () => {
                                                 X,
                                                 {
                                                     locale: r,
-                                                    onDelete: () => d(e),
+                                                    onDelete: () => u(e),
                                                     selectedChannelId: null == a ? void 0 : a.id,
                                                     selectedGuildId: null != c ? c : void 0,
                                                     ...e

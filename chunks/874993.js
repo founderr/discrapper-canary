@@ -21,8 +21,8 @@ var i = n(200651),
     p = n(65912),
     f = n(51248),
     C = n(546513),
-    _ = n(572456),
-    I = n(273504),
+    I = n(572456),
+    _ = n(273504),
     v = n(981631),
     N = n(388032),
     T = n(925144);
@@ -74,7 +74,7 @@ function b(e) {
             return k(null !== (e = null == S ? void 0 : S.id) && void 0 !== e ? e : null, null !== (t = null == S ? void 0 : S.triggerType) && void 0 !== t ? t : null);
         }, [k, S]);
     r.useEffect(() => {
-        j(Z, (0, _.af)(M));
+        j(Z, (0, I.af)(M));
     }, [j, Z, M]);
     let w = (0, g.Z6)(A),
         B = (e) =>
@@ -87,7 +87,7 @@ function b(e) {
                             guildId: A,
                             triggerType: e,
                             rules: null !== (t = D[e]) && void 0 !== t ? t : [],
-                            initWithEdit: y === v.KsC.AUTOMOD_MENTION_SPAM && e === I.fX.MENTION_SPAM
+                            initWithEdit: y === v.KsC.AUTOMOD_MENTION_SPAM && e === _.fX.MENTION_SPAM
                         },
                         e
                     );

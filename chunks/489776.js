@@ -20,8 +20,8 @@ function g(e) {
         g = r.useMemo(() => () => (0, o.ep)(t, n), [t, n]),
         [x] = r.useState(g),
         [p, f] = r.useState(!1),
-        { editingRule: C, createNewEditingRule: _ } = (0, d.V)(),
-        { getDefaultRuleName: I } = c.I6[n],
+        { editingRule: C, createNewEditingRule: I } = (0, d.V)(),
+        { getDefaultRuleName: _ } = c.I6[n],
         v = !(0, o.Vb)(C) && (null == C ? void 0 : C.triggerType) === n,
         [N, T] = r.useState(v ? C : x),
         b = (0, a.useSpring)({
@@ -65,7 +65,7 @@ function g(e) {
                       children: (0, i.jsxs)(a.Clickable, {
                           className: h.addAnotherRuleCardContainer,
                           onClick: () => {
-                              _(t, n);
+                              I(t, n);
                           },
                           children: [
                               (0, i.jsx)(a.CirclePlusIcon, {
@@ -78,7 +78,7 @@ function g(e) {
                               (0, i.jsx)(a.Text, {
                                   variant: 'text-md/semibold',
                                   color: 'text-link',
-                                  children: m.intl.format(m.t.dNjRAQ, { ruleName: I() })
+                                  children: m.intl.format(m.t.dNjRAQ, { ruleName: _() })
                               })
                           ]
                       })

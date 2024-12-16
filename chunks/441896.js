@@ -30,7 +30,7 @@ let l = (e) => {
             (0, i.jsx)('path', {
                 fill: 'string' == typeof d ? d : d.css,
                 fillRule: 'evenodd',
-                d: 'M24 19a5 5 0 1 1-10 0 5 5 0 0 1 10 0Zm-5-3a1 1 0 0 1 1 1v1.59l.7.7a1 1 0 0 1-1.4 1.42l-1-1A1 1 0 0 1 18 19v-2a1 1 0 0 1 1-1Z',
+                d: 'M24 19a5 5 0 1 1-10 0 5 5 0 0 1 10 0Zm-5-3a1 1 0 0 1 1 1v1.59l.7.7a1 1 0 1 1-1.4 1.42l-1-1A1 1 0 0 1 18 19v-2a1 1 0 0 1 1-1Z',
                 clipRule: 'evenodd',
                 className: f
             })

@@ -20,8 +20,8 @@ var r = n(481060),
     p = n(215124),
     f = n(981631),
     C = n(388032),
-    _ = n(899621);
-function I(e) {
+    I = n(899621);
+function _(e) {
     let { payoutsByPeriod: t, team: n } = e,
         l = (0, c.mY)() ? null : C.intl.format(C.t.d1sCiY, { url: null != n ? f.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(n.id) : null });
     return 0 === t.length
@@ -48,7 +48,7 @@ function v(e) {
         : (0, i.jsx)(m.Z, {
               totalPayoutsForPeriod: n,
               guildId: t,
-              className: _.currentMonthEarningsTable
+              className: I.currentMonthEarningsTable
           });
 }
 let N = (e) => {
@@ -67,11 +67,11 @@ let N = (e) => {
                       }),
                   (0, i.jsxs)(r.FormSection, {
                       title: C.intl.string(C.t.ofmOzc),
-                      className: _.formSection,
+                      className: I.formSection,
                       children: [
                           (0, i.jsx)(r.Spacer, { size: 8 }),
                           (0, i.jsxs)('div', {
-                              className: _.metricsContainer,
+                              className: I.metricsContainer,
                               children: [
                                   (0, i.jsx)(g.Z, {
                                       label: C.intl.string(C.t.iY1jW1),
@@ -90,7 +90,7 @@ let N = (e) => {
                                               (0, i.jsx)(r.UserIcon, {
                                                   size: 'md',
                                                   color: 'currentColor',
-                                                  className: _.totalMembersIcon,
+                                                  className: I.totalMembersIcon,
                                                   'aria-hidden': !0
                                               })
                                           ]
@@ -107,8 +107,8 @@ let N = (e) => {
                   }),
                   (0, i.jsx)(r.FormSection, {
                       title: C.intl.string(C.t['+5Rmho']),
-                      className: _.formSection,
-                      children: (0, i.jsx)(I, {
+                      className: I.formSection,
+                      children: (0, i.jsx)(_, {
                           payoutsByPeriod: T,
                           team: h
                       })
@@ -116,7 +116,7 @@ let N = (e) => {
                   (0, i.jsx)(r.FormSection, {
                       title: C.intl.string(C.t.O8cDAA),
                       disabled: S,
-                      className: _.formSection,
+                      className: I.formSection,
                       children: (0, i.jsx)(x.Z, {
                           guildId: a,
                           application: o
@@ -124,7 +124,7 @@ let N = (e) => {
                   }),
                   (0, i.jsx)(r.FormSection, {
                       title: C.intl.string(C.t['0n7R2d']),
-                      className: _.formSection,
+                      className: I.formSection,
                       children: (0, i.jsx)(p.Z, {
                           guildId: a,
                           allPeriods: T

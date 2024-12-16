@@ -41,7 +41,7 @@ let E = (e) => {
             let e = T.get(n.id);
             null != e &&
                 d.Z.leaveActivity({
-                    channelId: e.channelId,
+                    location: e.location,
                     applicationId: n.id,
                     showFeedback: !1
                 });

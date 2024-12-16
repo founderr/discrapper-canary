@@ -9,8 +9,8 @@ n.d(e, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    o = n.n(r),
+    o = n(120356),
+    r = n.n(o),
     a = n(481060),
     s = n(410030),
     u = n(541716),
@@ -28,7 +28,7 @@ let w = (0, v.kt)({
         type: x.d4z.DM
     }),
     y = l.forwardRef(function (t, e) {
-        let { placeholder: n, headerText: l, onEnter: r, showPopout: u, children: c, body: d, hide: h } = t,
+        let { placeholder: n, headerText: l, onEnter: o, showPopout: u, children: c, body: d, hide: h } = t,
             f = (0, s.ZP)();
         return (0, i.jsx)(a.Popout, {
             align: 'right',
@@ -40,7 +40,7 @@ let w = (0, v.kt)({
                     theme: f,
                     children: (t) =>
                         (0, i.jsx)('div', {
-                            className: o()([m.reply, t]),
+                            className: r()([m.reply, t]),
                             ref: e,
                             children: (0, i.jsx)(a.FocusLock, {
                                 containerRef: e,
@@ -54,7 +54,7 @@ let w = (0, v.kt)({
                                         d,
                                         (0, i.jsx)(P, {
                                             onEnter: (t) => {
-                                                r(t), h();
+                                                o(t), h();
                                             },
                                             placeholder: null != n ? n : g.intl.string(g.t['/VQax8'])
                                         })
@@ -67,7 +67,7 @@ let w = (0, v.kt)({
         });
     });
 function P(t) {
-    let { placeholder: e, onEnter: n, setEditorRef: r, showEmojiButton: a = !1, renderAttachButton: s, autoFocus: h = !0, onFocus: f, channel: v, className: x } = t,
+    let { placeholder: e, onEnter: n, setEditorRef: o, showEmojiButton: a = !1, renderAttachButton: s, autoFocus: h = !0, onFocus: f, channel: v, className: x } = t,
         [g, y] = l.useState(''),
         [P, Z] = l.useState((0, c.JM)('')),
         C = () => {
@@ -79,7 +79,7 @@ function P(t) {
         ref: S,
         placeholder: e,
         editorClassName: x,
-        className: o()(m.replyInput, x),
+        className: r()(m.replyInput, x),
         showRemainingCharsAfterCount: -1,
         allowNewLines: !1,
         maxCharacterCount: p.z,
@@ -109,7 +109,7 @@ function P(t) {
                       shouldRefocus: !1
                   }));
         },
-        setEditorRef: r,
+        setEditorRef: o,
         focused: h,
         onFocus: f,
         disableThemedBackground: !0,
@@ -144,19 +144,19 @@ let Z = (t, e) => {
     },
     C = (t) => {
         let { onSelectEmoji: e, onClick: n } = t,
-            r = (0, s.ZP)(),
-            [o, u] = l.useState(!1),
+            o = (0, s.ZP)(),
+            [r, u] = l.useState(!1),
             c = l.useRef(null);
         return (
             Z(() => u(!1), c),
             (0, i.jsx)(a.Popout, {
                 align: 'right',
                 position: 'top',
-                shouldShow: o,
+                shouldShow: r,
                 disablePointerEvents: !1,
                 renderPopout: () =>
                     (0, i.jsx)(a.ThemeProvider, {
-                        theme: r,
+                        theme: o,
                         children: (t) =>
                             (0, i.jsx)('div', {
                                 className: t,
@@ -193,7 +193,7 @@ let Z = (t, e) => {
         );
     };
 e.ZP = (t) => {
-    let { onInteraction: e, showReact: n = !0, showReply: r = !0, popoutProps: s = {} } = t,
+    let { onInteraction: e, showReact: n = !0, showReply: o = !0, popoutProps: s = {} } = t,
         { replyHeaderText: u, replyPlaceholder: c, popoutBody: d } = s,
         [h, f] = l.useState(!1),
         v = l.useRef(null);
@@ -222,7 +222,7 @@ e.ZP = (t) => {
                                     f(!1);
                             }
                         }),
-                    r &&
+                    o &&
                         (0, i.jsx)(y, {
                             hide: () => f(!1),
                             ref: v,
@@ -242,7 +242,7 @@ e.ZP = (t) => {
                                 children: (t) =>
                                     (0, i.jsx)('button', {
                                         ...t,
-                                        className: o()(m.reaction, m.emojiButton),
+                                        className: r()(m.reaction, m.emojiButton),
                                         onClick: () => {
                                             e({
                                                 interactionType: p.L.ReplyBegin,

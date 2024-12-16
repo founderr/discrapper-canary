@@ -11,8 +11,8 @@ var l = n(120356),
     a = n(692547),
     s = n(481060),
     c = n(565138),
-    d = n(252686),
-    u = n(10448);
+    u = n(252686),
+    d = n(10448);
 function h(e) {
     let { guild: t, show: n, active: l, onAnimationStart: h, onAnimationRest: p } = e,
         m = {},
@@ -36,22 +36,22 @@ function h(e) {
                 (0, i.jsx)(
                     'div',
                     {
-                        className: r()(u.folder, u.hover),
+                        className: r()(d.folder, d.hover),
                         children: (0, i.jsx)('div', {
-                            className: u.folderIconWrapper,
+                            className: d.folderIconWrapper,
                             children: (0, i.jsxs)('div', {
-                                className: u.closedFolderIconWrapper,
+                                className: d.closedFolderIconWrapper,
                                 children: [
                                     (0, i.jsx)(o.animated.div, {
-                                        className: u.folderIconPreview,
+                                        className: d.folderIconPreview,
                                         style: e,
                                         children: (0, i.jsx)(c.Z, {
                                             guild: t,
                                             size: c.Z.Sizes.SMOL,
-                                            className: u.guildIcon
+                                            className: d.guildIcon
                                         })
                                     }),
-                                    (0, i.jsx)(d.Z, { className: u.miniPlaceholder })
+                                    (0, i.jsx)(u.Z, { className: d.miniPlaceholder })
                                 ]
                             })
                         })

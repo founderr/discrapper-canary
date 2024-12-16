@@ -22,7 +22,7 @@ let p = (e) => {
         let e = g.get(m.id);
         null != e &&
             c.Z.leaveActivity({
-                channelId: e.channelId,
+                location: e.location,
                 applicationId: m.id
             });
     }

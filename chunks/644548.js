@@ -9,8 +9,8 @@ var l = n(200651),
     u = n(919394),
     d = n(206295),
     m = n(227172),
-    h = n(555672),
-    x = n(297781),
+    x = n(555672),
+    h = n(297781),
     p = n(591853),
     C = n(410441),
     v = n(797342),
@@ -42,7 +42,7 @@ t.Z = (e) => {
         A = (0, c.Nq)(n),
         E = a.useCallback(
             (e) => {
-                if (null != t && null != P && null != _ && null != A && !!(0, h.qy)(A))
+                if (null != t && null != P && null != _ && null != A && !!(0, x.qy)(A))
                     return (0, u.SO)({
                         entry: n,
                         applicationImageSrc: null == Z ? void 0 : Z.src,
@@ -55,7 +55,7 @@ t.Z = (e) => {
             },
             [null == Z ? void 0 : Z.src, t, _, n, N, A, y, P]
         );
-    if (null == P || null == _ || null == A || !(0, h.qy)(A)) return null;
+    if (null == P || null == _ || null == A || !(0, x.qy)(A)) return null;
     let S = null != n.extra.platform ? m.v[n.extra.platform] : null;
     return (0, l.jsxs)(p.yR, {
         children: [
@@ -72,9 +72,9 @@ t.Z = (e) => {
                 userDescription: g.t.rPqqtr,
                 title: T,
                 subtitle: L,
-                badges: (0, l.jsx)(x.Gk, {
-                    location: x.Gt.POPOUT,
-                    children: h.Hs.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
+                badges: (0, l.jsx)(h.Gk, {
+                    location: h.Gt.POPOUT,
+                    children: x.Hs.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
                 }),
                 disableGameProfileLinks: i
             }),

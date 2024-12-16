@@ -11,8 +11,8 @@ var i = n(200651),
     a = n(442837),
     s = n(481060),
     c = n(503438),
-    d = n(39628),
-    u = n(884338),
+    u = n(39628),
+    d = n(884338),
     h = n(528144),
     p = n(424678),
     m = n(594174),
@@ -21,13 +21,13 @@ var i = n(200651),
     C = n(823379),
     v = n(51144),
     _ = n(823469);
-let x = u.u.SIZE_24;
+let x = d.u.SIZE_24;
 function I(e) {
     var t, n;
-    let { activity: r, user: o, embeddedApp: a, onOpenSpotifyAlbum: d } = e,
-        u = null == r ? void 0 : r.assets,
+    let { activity: r, user: o, embeddedApp: a, onOpenSpotifyAlbum: u } = e,
+        d = null == r ? void 0 : r.assets,
         h = null == r ? void 0 : r.application_id;
-    if (null == r || null == u || (null == u.large_image && null == u.small_image))
+    if (null == r || null == d || (null == d.large_image && null == d.small_image))
         return null != a
             ? (function (e) {
                   let t = g.ZP.getApplicationIconURL({
@@ -47,27 +47,27 @@ function I(e) {
                   });
               })(a)
             : null;
-    let p = null !== (t = u.large_image) && void 0 !== t ? t : u.small_image,
+    let p = null !== (t = d.large_image) && void 0 !== t ? t : d.small_image,
         m = (0, c.Z)(r),
         C = m ? _.spotifyLargeImage : _.applicationLargeImage,
         v =
             null != p
                 ? (0, i.jsx)('img', {
-                      alt: null !== (n = u.large_text) && void 0 !== n ? n : '',
+                      alt: null !== (n = d.large_text) && void 0 !== n ? n : '',
                       src: (0, f.getAssetImage)(h, p, [128, 128]),
                       className: C
                   })
                 : null;
-    return m && null != d
+    return m && null != u
         ? ((v = (0, i.jsx)(s.Clickable, {
               className: _.clickable,
               onClick: () => {
-                  d(r, o.id);
+                  u(r, o.id);
               },
               children: v
           })),
           (0, i.jsx)(s.Tooltip, {
-              text: null != u.large_text ? u.large_text : null,
+              text: null != d.large_text ? d.large_text : null,
               position: 'top',
               children: (e) => {
                   let { onClick: t, ...n } = e;
@@ -144,7 +144,7 @@ function Z(e) {
     let { timestamps: n } = t;
     if ((null == n ? void 0 : n.start) == null || (null == n ? void 0 : n.end) == null) return null;
     let { start: l, end: r } = n;
-    return (0, i.jsx)(d.Z, {
+    return (0, i.jsx)(u.Z, {
         start: l,
         end: r,
         className: _.timeBar,
@@ -153,23 +153,23 @@ function Z(e) {
     });
 }
 function N(e) {
-    let { activity: t, embeddedApp: n, user: r, channel: o, sortedVoiceStates: d, onOpenSpotifyTrack: h, onOpenSpotifyArtist: p, onOpenSpotifyAlbum: f } = e,
+    let { activity: t, embeddedApp: n, user: r, channel: o, sortedVoiceStates: u, onOpenSpotifyTrack: h, onOpenSpotifyArtist: p, onOpenSpotifyAlbum: f } = e,
         g = [];
-    null != n ? (g = Array.from(n.embeddedActivity.userIds)) : (0, c.Z)(t) && null != d && (g = d.map((e) => e.user.id));
+    null != n ? (g = Array.from(n.embeddedActivity.userIds)) : (0, c.Z)(t) && null != u && (g = u.map((e) => e.user.id));
     let N = (0, a.Wu)([m.default], () => g.map((e) => m.default.getUser(e)).filter(C.lm)),
         y = null != n || (0, c.Z)(t),
         T = l.useMemo(() => {
             let e = new Map();
             return (
                 y &&
-                    null != d &&
-                    d.forEach((t) => {
+                    null != u &&
+                    u.forEach((t) => {
                         let n = t.member;
                         null != n && e.set(t.user.id, n);
                     }),
                 e
             );
-        }, [d, y]);
+        }, [u, y]);
     return y
         ? (0, i.jsxs)('div', {
               className: _.flexColumn,
@@ -198,7 +198,7 @@ function N(e) {
                                   }),
                                   (0, i.jsx)(S, { activity: t }),
                                   g.length > 0 &&
-                                      (0, i.jsx)(u.Z, {
+                                      (0, i.jsx)(d.Z, {
                                           className: _.usersSummary,
                                           guildId: o.guild_id,
                                           users: N,

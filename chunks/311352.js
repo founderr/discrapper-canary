@@ -6,8 +6,8 @@ var l = n(399606),
     a = n(239091),
     s = n(765585),
     c = n(870569),
-    d = n(819640),
-    u = n(556296),
+    u = n(819640),
+    d = n(556296),
     h = n(13140),
     p = n(924557),
     m = n(435064),
@@ -80,13 +80,13 @@ let I = (e) => {
     });
 };
 t.Z = () => {
-    let e = (0, l.e7)([d.Z], () => d.Z.hasLayers()),
+    let e = (0, l.e7)([u.Z], () => u.Z.hasLayers()),
         t = (0, p.Go)(),
         { clipsEnabled: n, isAtMaxSavingClipsOperations: r } = (0, l.cj)([m.Z], () => ({
             clipsEnabled: m.Z.getSettings().clipsEnabled,
             isAtMaxSavingClipsOperations: m.Z.getIsAtMaxSaveClipOperations()
         })),
-        a = (0, l.e7)([u.Z], () => u.Z.getKeybindForAction(g.kg4.SAVE_CLIP));
+        a = (0, l.e7)([d.Z], () => d.Z.getKeybindForAction(g.kg4.SAVE_CLIP));
     if (!(t && n) || null == a || e) return null;
     let s = h.BB(a.shortcut, !0);
     return (0, i.jsx)(I, {

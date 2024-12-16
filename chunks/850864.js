@@ -23,8 +23,8 @@ var i = n(200651),
     p = n(26323),
     f = n(307707),
     C = n(734893),
-    _ = n(216701),
-    I = n(150512),
+    I = n(216701),
+    _ = n(150512),
     v = n(516129),
     N = n(813197),
     T = n(210887),
@@ -49,8 +49,8 @@ var i = n(200651),
     F = n(91716),
     H = n(470264),
     z = n(710043),
-    W = n(847950);
-function V(e) {
+    V = n(847950);
+function W(e) {
     let { guildId: t, welcomeMessage: l } = e,
         o = r.useCallback(() => {
             if (null != t)
@@ -79,7 +79,7 @@ function V(e) {
               className: G.editWelcomeSection,
               onClick: o,
               children: [
-                  (0, i.jsx)(I.Z, {
+                  (0, i.jsx)(_.Z, {
                       guildId: t,
                       welcomeMessage: {
                           authorIds: l.authorIds.length > 0 ? l.authorIds : [d],
@@ -106,7 +106,7 @@ function V(e) {
 }
 function Y(e) {
     var t, l, o, d, u;
-    let { guildId: g, action: x, actionIndex: p, onChange: I, onDelete: v, onDragStart: N, onDragComplete: T, onDragReset: b } = e,
+    let { guildId: g, action: x, actionIndex: p, onChange: _, onDelete: v, onDragStart: N, onDragComplete: T, onDragReset: b } = e,
         S = (0, a.e7)([j.Z], () => j.Z.getChannel(x.channelId)),
         R = (0, a.e7)([E.Z], () => E.Z.getGuild(g)),
         { customEmoji: A, unicodeEmoji: Z } = (0, f.Z)(null === (t = x.emoji) || void 0 === t ? void 0 : t.id, null === (l = x.emoji) || void 0 === l ? void 0 : l.name),
@@ -139,11 +139,11 @@ function Y(e) {
                             ...t,
                             guildId: g,
                             action: x,
-                            onSave: (e, t, n) => I(p, e, t, n),
+                            onSave: (e, t, n) => _(p, e, t, n),
                             onDelete: () => v(p)
                         });
                 });
-        }, [g, x, p, I, v]);
+        }, [g, x, p, _, v]);
     if (null == S || null == R) return null;
     let F = null !== (u = (0, m.KS)(S)) && void 0 !== u ? u : c.TextIcon;
     return (0, i.jsxs)('div', {
@@ -181,10 +181,10 @@ function Y(e) {
                           })
                         : (0, i.jsx)('div', {
                               className: G.actionItemEmojiWrapper,
-                              children: (0, i.jsx)(_.Z, {
+                              children: (0, i.jsx)(I.Z, {
                                   emojiId: null === (o = x.emoji) || void 0 === o ? void 0 : o.id,
                                   emojiName: null === (d = x.emoji) || void 0 === d ? void 0 : d.name,
-                                  size: _.R.MEDIUM,
+                                  size: I.R.MEDIUM,
                                   defaultComponent: (0, i.jsx)(F, {})
                               })
                           }),
@@ -595,9 +595,9 @@ function $(e) {
     let { guildId: t, resourceChannel: l, index: o, onDragComplete: d, onDragStart: u, onDragReset: m } = e,
         g = (0, a.e7)([E.Z], () => E.Z.getGuild(t)),
         { title: x, channelId: p, description: f } = l,
-        _ = j.Z.getChannel(p),
-        I = null;
-    (null == _ || !(0, C.k3)(_)) && (I = U.intl.string(U.t.kTdL8f));
+        I = j.Z.getChannel(p),
+        _ = null;
+    (null == I || !(0, C.k3)(I)) && (_ = U.intl.string(U.t.kTdL8f));
     let v = null == f || 0 === f.length,
         N = y.ZP.getResourceChannelIconURL({
             channelId: l.channelId,
@@ -649,7 +649,7 @@ function $(e) {
                         });
                 });
         }, [t, l, A, Z]);
-    return null == g || null == _
+    return null == g || null == I
         ? null
         : (0, i.jsxs)('div', {
               className: s()(G.resourceChannelContainer),
@@ -658,7 +658,7 @@ function $(e) {
                       className: s()(G.resourceChannel, {
                           [G.dropIndicatorBefore]: null != b && o < b,
                           [G.dropIndicatorAfter]: null != b && o > b,
-                          [G.resourceChannelError]: null != I
+                          [G.resourceChannelError]: null != _
                       }),
                       ref: (e) => T(S(e)),
                       children: [
@@ -723,11 +723,11 @@ function $(e) {
                           })
                       ]
                   }),
-                  null != I &&
+                  null != _ &&
                       (0, i.jsx)(c.Text, {
                           variant: 'text-xs/medium',
                           color: 'text-danger',
-                          children: I
+                          children: _
                       })
               ]
           });
@@ -973,7 +973,7 @@ function er(e) {
                         }),
                         (0, i.jsx)('div', {
                             className: G.section,
-                            children: (0, i.jsx)(V, {
+                            children: (0, i.jsx)(W, {
                                 guildId: n,
                                 welcomeMessage: l
                             })
@@ -1063,7 +1063,7 @@ function er(e) {
                         }),
                         (0, i.jsx)('img', {
                             className: G.previewImage,
-                            src: (0, o.ap)(m) ? ('existing' === s ? H : W) : 'existing' === s ? F : z,
+                            src: (0, o.ap)(m) ? ('existing' === s ? H : V) : 'existing' === s ? F : z,
                             alt: U.intl.string(U.t.ST4UOz)
                         }),
                         (0, i.jsx)(c.SegmentedControl, {

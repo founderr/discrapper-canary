@@ -20,8 +20,8 @@ var i = n(200651),
     p = n(753206),
     f = n(598077),
     C = n(496675),
-    _ = n(764260),
-    I = n(95242),
+    I = n(764260),
+    _ = n(95242),
     v = n(541575),
     N = n(420966),
     T = n(337344),
@@ -37,7 +37,7 @@ let L = (0, m.Un)({
         createPromise: () => n.e('5609').then(n.bind(n, 336231)),
         webpackId: 336231
     }),
-    D = o().debounce((e, t) => (0, _.Uv)(e, t), 200);
+    D = o().debounce((e, t) => (0, I.Uv)(e, t), 200);
 function O(e) {
     let { role: t, disabled: n } = e,
         [l, s] = r.useState(t.name);
@@ -80,7 +80,7 @@ function P(e) {
                     disabled: n,
                     onChange: (e) =>
                         (function (e, t) {
-                            if (e.color !== t && (t !== S.p6O || 0 !== e.color)) t === S.p6O && (t = 0), (0, _.OW)(e.id, t);
+                            if (e.color !== t && (t !== S.p6O || 0 !== e.color)) t === S.p6O && (t = 0), (0, I.OW)(e.id, t);
                         })(t, e),
                     customPickerPosition: 'right'
                 },
@@ -176,7 +176,7 @@ function M(e) {
             (0, i.jsx)(d.FormSwitch, {
                 disabled: n,
                 value: t.hoist,
-                onChange: (e) => (0, _.we)(t.id, e, t.mentionable),
+                onChange: (e) => (0, I.we)(t.id, e, t.mentionable),
                 hideBorder: !0,
                 children: E.intl.string(E.t.vceJPj)
             }),
@@ -184,7 +184,7 @@ function M(e) {
             (0, i.jsx)(d.FormSwitch, {
                 disabled: n,
                 value: t.mentionable,
-                onChange: (e) => (0, _.we)(t.id, t.hoist, e),
+                onChange: (e) => (0, I.we)(t.id, t.hoist, e),
                 note: E.intl.string(E.t.kRg5W1),
                 hideBorder: !0,
                 children: E.intl.format(E.t.DTXoJS, {})
@@ -197,7 +197,7 @@ function w(e) {
         a = (0, u.pM)(null == t ? void 0 : t.id, n.id),
         o = r || a,
         m = (0, c.e7)([C.Z], () => C.Z.canImpersonateRole(t, n)),
-        { headerHeight: h, headerRef: g } = (0, I.Z)(0),
+        { headerHeight: h, headerRef: g } = (0, _.Z)(0),
         { scrolledToTop: x, handleScroll: p } = (0, N.V)();
     return (0, i.jsx)(d.AdvancedScrollerAuto, {
         className: R.scroller,

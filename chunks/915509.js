@@ -6,30 +6,30 @@ t.d(n, {
     t(47120);
 var l = t(200651),
     a = t(192379),
-    r = t(120356),
-    o = t.n(r),
+    o = t(120356),
+    r = t.n(o),
     i = t(481060),
     s = t(313201),
     c = t(388032),
     d = t(945330);
 function u(e) {
-    let { errorText: n, title: t, description: r, transitionState: u, onCancel: f, onConfirm: m, children: p } = e,
-        x = (0, s.Dt)(),
-        [h, g] = a.useState(!1),
+    let { errorText: n, title: t, description: o, transitionState: u, onCancel: f, onConfirm: m, children: g } = e,
+        h = (0, s.Dt)(),
+        [p, x] = a.useState(!1),
         C = a.useCallback(async () => {
-            g(!0);
+            x(!0);
             try {
                 await m();
             } catch (e) {
                 throw e;
             } finally {
-                g(!1);
+                x(!1);
             }
         }, [m]);
     return (0, l.jsxs)(i.ModalRoot, {
         className: d.modal,
         transitionState: u,
-        'aria-labelledby': x,
+        'aria-labelledby': h,
         size: i.ModalSize.SMALL,
         children: [
             (0, l.jsxs)(i.ModalContent, {
@@ -37,20 +37,20 @@ function u(e) {
                 children: [
                     (0, l.jsx)(i.Heading, {
                         variant: 'heading-md/semibold',
-                        id: x,
+                        id: h,
                         children: t
                     }),
-                    null != r && '' !== r
+                    null != o && '' !== o
                         ? (0, l.jsx)(i.Text, {
                               variant: 'text-sm/normal',
                               color: 'header-secondary',
                               className: d.description,
-                              children: r
+                              children: o
                           })
                         : null,
                     (0, l.jsx)('div', {
                         className: d.body,
-                        children: p
+                        children: g
                     }),
                     null != n && '' !== n
                         ? (0, l.jsx)(i.Text, {
@@ -65,7 +65,7 @@ function u(e) {
             (0, l.jsxs)(i.ModalFooter, {
                 children: [
                     (0, l.jsx)(i.Button, {
-                        submitting: h,
+                        submitting: p,
                         className: d.button,
                         size: i.Button.Sizes.SMALL,
                         color: i.Button.Colors.BRAND,
@@ -73,7 +73,7 @@ function u(e) {
                         children: c.intl.string(c.t.R3BPHx)
                     }),
                     (0, l.jsx)(i.Button, {
-                        className: o()(d.cancelButton, d.button),
+                        className: r()(d.cancelButton, d.button),
                         size: i.Button.Sizes.SMALL,
                         color: i.Button.Colors.PRIMARY,
                         onClick: f,

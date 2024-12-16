@@ -9,8 +9,8 @@ var l = n(200651),
     u = n(5192),
     d = n(591759),
     m = n(379357),
-    h = n(561308),
-    x = n(685270),
+    x = n(561308),
+    h = n(685270),
     p = n(31074),
     C = n(206295),
     v = n(335326),
@@ -43,16 +43,16 @@ t.Z = (e) => {
         { primaryColor: _, secondaryColor: A } = (0, C.Z)(null == y ? void 0 : y.src),
         E = (0, i.e7)([o.default], () => o.default.locale),
         S = (0, p.Z)(j.ABu.CRUNCHYROLL),
-        R = (0, h.ap)(n.extra.media_assets_large_text),
+        R = (0, x.ap)(n.extra.media_assets_large_text),
         M = a.useCallback(
             (e) => {
                 if (null != N && (null == y ? void 0 : y.src) != null)
-                    return (0, x.B)({
+                    return (0, h.B)({
                         entry: n,
                         mediaImageSrc: null == y ? void 0 : y.src,
                         avatarSrc: N.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
                         description: P(n, t, N),
-                        timestamp: (0, h.yh)(n, E),
+                        timestamp: (0, x.yh)(n, E),
                         episodeDescription: R,
                         colors: [_, A],
                         channelId: e
@@ -76,7 +76,7 @@ t.Z = (e) => {
                   (0, l.jsx)(f.wG, {
                       channel: t,
                       entry: n,
-                      userDescription: (0, h.kr)(n) ? Z.t['LH+Z39'] : Z.t.YuKgmp,
+                      userDescription: (0, x.kr)(n) ? Z.t['LH+Z39'] : Z.t.YuKgmp,
                       title: n.extra.media_title,
                       subtitle: n.extra.media_subtitle,
                       headerIcons: (0, l.jsx)(I.Z, {

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return x;
     }
 });
 var l = n(200651);
@@ -14,13 +14,13 @@ var a = n(481060),
     u = n(26033),
     d = n(388032),
     m = n(607655);
-function h(e) {
+function x(e) {
     var t;
-    let { user: n, guildId: h, channel: x, entry: p, onSelect: C, disableGameProfileLinks: v } = e,
+    let { user: n, guildId: x, channel: h, entry: p, onSelect: C, disableGameProfileLinks: v } = e,
         g = (0, c.Z)({
             userId: n.id,
-            guildId: h,
-            channelId: null == x ? void 0 : x.id
+            guildId: x,
+            channelId: null == h ? void 0 : h.id
         }),
         f = (0, r.Z)({
             id: n.id,

@@ -30,11 +30,11 @@ function d(e) {
     let p = null == u ? void 0 : u.applicationId;
     return h !== c.Ez.PANEL || null == p
         ? null
-        : null == d || null == u || (0, s.Z)(d) || null == p
+        : null == d || null == u || (0, s.Z)(d)
           ? null
           : (0, i.jsx)(o.Z, {
                 maxHeight: t,
-                connectedChannelId: d,
+                connectedLocation: u.location,
                 renderExternalHeader: n
             });
 }

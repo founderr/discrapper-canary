@@ -6,8 +6,8 @@ var i = n(200651),
     a = n(999153),
     s = n(91192),
     c = n(399606),
-    d = n(846519),
-    u = n(481060),
+    u = n(846519),
+    d = n(481060),
     h = n(493683),
     p = n(239091),
     m = n(153867),
@@ -54,7 +54,7 @@ t.Z = l.memo(function (e) {
         ei = null !== (t = e.upperBadge) && void 0 !== t ? t : z ? (0, j.Ny)() : null != W ? (0, j.Or)(W) : void 0,
         el = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
     null == el && Y > 0 ? (el = null !== (r = (0, j.Ne)(Y, K ? f.Z.BACKGROUND_ACCENT : f.Z.STATUS_DANGER)) && void 0 !== r ? r : void 0) : null == el && null != $ && (el = null !== (p = (0, j.jt)({ guildJoinRequestStatus: $ })) && void 0 !== p ? p : void 0);
-    let er = null !== (w = e.lowerBadgeSize) && void 0 !== w ? w : { width: (0, u.getBadgeWidthForValue)(Y) },
+    let er = null !== (w = e.lowerBadgeSize) && void 0 !== w ? w : { width: (0, d.getBadgeWidthForValue)(Y) },
         [{ dragging: eo }, ea] = (0, a.c)({
             type: b.eD.GUILD,
             item: () => (
@@ -72,11 +72,11 @@ t.Z = l.memo(function (e) {
             collect: (e) => ({ dragging: e.isDragging() })
         }),
         es = (0, s.Ie)(null != ee ? ee : A.lds),
-        [ec, ed] = l.useState(!1),
-        eu = !J && ec,
+        [ec, eu] = l.useState(!1),
+        ed = !J && ec,
         [eh, ep] = l.useState(!1),
         [em, ef] = l.useState(!1),
-        [eg] = l.useState(() => new d.sW(70, () => ef(!0)));
+        [eg] = l.useState(() => new u.sW(70, () => ef(!0)));
     l.useEffect(() => () => eg.cancel(), [eg]);
     let eC = l.useCallback(() => {
             if (null != U) {
@@ -136,7 +136,7 @@ t.Z = l.memo(function (e) {
                           em || ep(!1);
                       }
                   })
-                : (0, i.jsx)(u.NavItem, {
+                : (0, i.jsx)(d.NavItem, {
                       ariaLabel: P.intl.formatToPlainString(P.t['/uzRsr'], {
                           guildName: B.toString(),
                           mentions: Y
@@ -144,16 +144,16 @@ t.Z = l.memo(function (e) {
                       name: B.toString(),
                       onClick: eC,
                       onMouseEnter: function () {
-                          J || ed(!0);
+                          J || eu(!0);
                       },
                       onMouseLeave: function () {
-                          J || ed(!1);
+                          J || eu(!1);
                       },
                       onMouseDown: ev,
                       onContextMenu: ex,
                       onKeyDown: eI,
-                      icon: B.getIconURL((en ? 44 : 48) * 2, eu && H),
-                      selected: V || eu,
+                      icon: B.getIconURL((en ? 44 : 48) * 2, ed && H),
+                      selected: V || ed,
                       ...es,
                       role: 'treeitem'
                   }),
@@ -167,8 +167,8 @@ t.Z = l.memo(function (e) {
                       [R.wobble]: em,
                       [R.selected]: em || V
                   }),
-                  children: (0, i.jsx)(u.BlobMask, {
-                      selected: !!en || em || V || eu,
+                  children: (0, i.jsx)(d.BlobMask, {
+                      selected: !!en || em || V || ed,
                       upperBadge: ei,
                       lowerBadge: el,
                       lowerBadgeSize: er,
@@ -179,7 +179,7 @@ t.Z = l.memo(function (e) {
         ref: eE,
         children: [
             (0, i.jsx)(E.Z, {
-                hovered: !eo && eu,
+                hovered: !eo && ed,
                 selected: !eo && V,
                 unread: !eo && F,
                 className: R.pill

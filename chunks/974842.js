@@ -15,9 +15,9 @@ var i = n(200651),
     p = n(388032),
     f = n(543286),
     C = n(240938);
-let _ = [g.ZD.SWORD, g.ZD.WATER_DROP, g.ZD.SKULL, g.ZD.TOADSTOOL, g.ZD.MOON, g.ZD.LIGHTNING, g.ZD.LEAF, g.ZD.HEART, g.ZD.FIRE, g.ZD.COMPASS, g.ZD.CROSSHAIRS, g.ZD.FLOWER, g.ZD.FORCE, g.ZD.GEM, g.ZD.LAVA, g.ZD.PSYCHIC, g.ZD.SMOKE, g.ZD.SNOW, g.ZD.SOUND, g.ZD.SUN, g.ZD.WIND];
+let I = [g.ZD.SWORD, g.ZD.WATER_DROP, g.ZD.SKULL, g.ZD.TOADSTOOL, g.ZD.MOON, g.ZD.LIGHTNING, g.ZD.LEAF, g.ZD.HEART, g.ZD.FIRE, g.ZD.COMPASS, g.ZD.CROSSHAIRS, g.ZD.FLOWER, g.ZD.FORCE, g.ZD.GEM, g.ZD.LAVA, g.ZD.PSYCHIC, g.ZD.SMOKE, g.ZD.SNOW, g.ZD.SOUND, g.ZD.SUN, g.ZD.WIND];
 t.Z = (e) => {
-    let { handleUpdate: t, badge: n, primaryColor: l, secondaryColor: a, tag: I, error: v, furthestStep: N, inSettings: T } = e,
+    let { handleUpdate: t, badge: n, primaryColor: l, secondaryColor: a, tag: _, error: v, furthestStep: N, inSettings: T } = e,
         b = r.useMemo(() => {
             let e = (0, g.yf)();
             return {
@@ -38,7 +38,7 @@ t.Z = (e) => {
         }, [b.primary, b.secondary]),
         [S, E] = r.useState(!1),
         R = r.useCallback(() => {
-            let e = _[Math.floor(Math.random() * _.length)],
+            let e = I[Math.floor(Math.random() * I.length)],
                 n = s().random().hex();
             t({
                 badgeKind: e,
@@ -86,7 +86,7 @@ t.Z = (e) => {
                                         }),
                                         (0, i.jsx)('div', {
                                             className: f.pickerGrid,
-                                            children: _.map((e) =>
+                                            children: I.map((e) =>
                                                 (0, i.jsx)(
                                                     d.Clickable,
                                                     {
@@ -186,7 +186,7 @@ t.Z = (e) => {
                                 (0, i.jsx)(d.TextInput, {
                                     className: f.tagInputWrapper,
                                     inputClassName: f.tagInput,
-                                    value: null != I ? I : '',
+                                    value: null != _ ? _ : '',
                                     onChange: (e) => t({ tag: e }),
                                     maxLength: x.cG,
                                     placeholder: p.intl.string(p.t['0V0ZFx']),

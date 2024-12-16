@@ -11,8 +11,8 @@ var l = n(442837),
     a = n(619915),
     s = n(456269),
     c = n(921711),
-    d = n(368442),
-    u = n(601070),
+    u = n(368442),
+    d = n(601070),
     h = n(430824),
     p = n(496675),
     m = n(306680),
@@ -36,14 +36,14 @@ function y(e) {
         G = (0, a.ZP)(n),
         U = (0, l.e7)([p.Z], () => !p.Z.can(E.Plq.CONNECT, n)),
         B = (0, l.e7)([f.Z], () => f.Z.hasVideo(n.id)),
-        H = (0, d.PK)(n.id) && n.isGuildStageVoice(),
+        H = (0, u.PK)(n.id) && n.isGuildStageVoice(),
         V = (0, _.ZP)({
             channel: n,
             locked: U,
             video: B || H,
             selected: y
         }),
-        F = (0, l.e7)([u.Z], () => u.Z.getNewThreadCount(n.guild_id, n.id)),
+        F = (0, l.e7)([d.Z], () => d.Z.getNewThreadCount(n.guild_id, n.id)),
         W = (0, s.n2)(n.guild_id, n.id),
         z = (0, l.e7)([h.Z], () => {
             var e, t;

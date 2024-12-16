@@ -13,20 +13,20 @@ function i(t, e, n) {
 }
 n.d(e, {
     k2: function () {
-        return r;
+        return o;
     }
 }),
     n(47120);
 let l = new (n(259443).Yd)('AssetMap');
-async function r(t) {
-    let e = new o(),
+async function o(t) {
+    let e = new r(),
         n = Object.entries(t).map((t) => {
             let [n, i] = t;
             return e.loadRemoteImage(n, i).catch((t) => l.warn('Failed to load canvas asset', t, n, i));
         });
     return await Promise.all(n), e;
 }
-class o {
+class r {
     loadFonts() {
         return Promise.resolve();
     }

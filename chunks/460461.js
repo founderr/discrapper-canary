@@ -27,8 +27,8 @@ var i = n(200651),
     p = n(134432),
     f = n(813197),
     C = n(208567),
-    _ = n(496675),
-    I = n(768581),
+    I = n(496675),
+    _ = n(768581),
     v = n(63063),
     N = n(434404),
     T = n(999382),
@@ -84,7 +84,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
         r.useEffect(() => {
             !d && null != n && ((0, g.le)(), (0, g.aC)(n.id), (0, g.i3)(n.id), L(!0));
         }, [n, d]);
-        let { canManageGuild: D } = (0, l.cj)([_.Z], () => ({ canManageGuild: _.Z.can(E.Plq.MANAGE_GUILD, n) })),
+        let { canManageGuild: D } = (0, l.cj)([I.Z], () => ({ canManageGuild: I.Z.can(E.Plq.MANAGE_GUILD, n) })),
             O = (0, l.e7)([T.Z], () => T.Z.isGuildMetadataLoaded()),
             P = (0, l.e7)([T.Z], () => (null != n ? T.Z.getMetadata() : null)),
             k = (0, l.e7)([T.Z], () => (null != n && (null == P ? void 0 : P.isPublished) ? T.Z.getSlug() : null)),
@@ -92,7 +92,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             [B, U] = r.useState(!0),
             [G, F] = r.useState([!1]),
             [H, z] = r.useState(['']),
-            W = (e) => {
+            V = (e) => {
                 let t = Object.entries(S.z)
                     .filter((e) => !H.includes(e[1].presentation))
                     .map((e) => ({
@@ -106,7 +106,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                           value: e
                       });
             },
-            V = (e) => {
+            W = (e) => {
                 try {
                     var t, n, i, r;
                     let l = new URL(e).hostname.split('.');
@@ -124,7 +124,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                     t = [];
                 P.socialLinks.forEach((n, i) => {
                     if ('' !== n) {
-                        let r = V(n);
+                        let r = W(n);
                         null !== r ? ((t[i] = r), (e[i] = !0)) : (e[i] = !1);
                     } else e[i] = !0;
                 }),
@@ -386,7 +386,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                     (0, i.jsx)(C.Z, {
                                                                         image: n.discoverySplash,
                                                                         makeURL: (e) =>
-                                                                            I.ZP.getGuildDiscoverySplashURL({
+                                                                            _.ZP.getGuildDiscoverySplashURL({
                                                                                 id: n.id,
                                                                                 splash: e,
                                                                                 size: 512 * (0, p.x_)()
@@ -537,7 +537,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                             a.SingleSelect,
                                                                             {
                                                                                 className: P.isPublished ? A.socialLinksDropdownMax : A.socialLinksDropdownMin,
-                                                                                options: W(H[t]),
+                                                                                options: V(H[t]),
                                                                                 placeholder: y.intl.string(y.t.xSALIC),
                                                                                 value: H[t],
                                                                                 onChange: (e) => et(e, t),

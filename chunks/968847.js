@@ -11,8 +11,8 @@ var i,
     a,
     s,
     c = n(392711),
-    d = n.n(c),
-    u = n(442837),
+    u = n.n(c),
+    d = n(442837),
     h = n(570140),
     p = n(220444),
     m = n(565799),
@@ -64,7 +64,7 @@ function M(e) {
         a = null,
         s = null,
         c = null,
-        u = !0,
+        d = !0,
         h = !0,
         p = !1,
         m = l.getCategoryFromSection(l.voiceChannelsSectionNumber),
@@ -72,33 +72,33 @@ function M(e) {
         [g, C, v] = l.getSlicedChannels(r);
     for (let e = 0; e < C.length; e++) {
         let t = C[e];
-        if (((A(t.id) || d().some(t.threadIds, A)) && (h = !1), (P(t.id) || d().some(t.threadIds, P)) && (u = !1), f.includes(t.id) && (p = !0), !h && !u && p)) break;
+        if (((A(t.id) || u().some(t.threadIds, A)) && (h = !1), (P(t.id) || u().some(t.threadIds, P)) && (d = !1), f.includes(t.id) && (p = !0), !h && !d && p)) break;
     }
     let x = 0,
         I = !1,
         b = 0,
         E = !1;
-    if (h || u)
+    if (h || d)
         for (let e = g.length - 1; e >= 0; e--) {
             let t = g[e];
-            (A(t.id) || d().some(t.threadIds, A)) && (null == a && (a = t.id), (I = !0)), (P(t.id) || d().some(t.threadIds, P)) && (null == o && (o = t.id), (x += _.ZP.getMentionCount(t.id) + d().sumBy(t.threadIds, _.ZP.getMentionCount)));
+            (A(t.id) || u().some(t.threadIds, A)) && (null == a && (a = t.id), (I = !0)), (P(t.id) || u().some(t.threadIds, P)) && (null == o && (o = t.id), (x += _.ZP.getMentionCount(t.id) + u().sumBy(t.threadIds, _.ZP.getMentionCount)));
         }
-    if (h || u)
+    if (h || d)
         for (let e = 0; e < v.length; e++) {
             let t = v[e];
-            if (!h && !u) break;
-            (A(t.id) || d().some(t.threadIds, A)) && (null == c && (c = t.id), (E = !0)), (P(t.id) || d().some(t.threadIds, P)) && (null == s && (s = t.id), (b += _.ZP.getMentionCount(t.id) + d().sumBy(t.threadIds, _.ZP.getMentionCount)));
+            if (!h && !d) break;
+            (A(t.id) || u().some(t.threadIds, A)) && (null == c && (c = t.id), (E = !0)), (P(t.id) || u().some(t.threadIds, P)) && (null == s && (s = t.id), (b += _.ZP.getMentionCount(t.id) + u().sumBy(t.threadIds, _.ZP.getMentionCount)));
         }
     let Z = null,
         y = null,
         M = null !== (i = null == m ? void 0 : m.getChannelRecords()) && void 0 !== i ? i : [];
-    u && b > 0
+    d && b > 0
         ? (Z = {
               mode: 'mentions',
               mentionCount: b,
               targetChannelId: s
           })
-        : !p && d().some(M, R)
+        : !p && u().some(M, R)
           ? (Z = {
                 mode: 'voice-channels',
                 mentionCount: 0,
@@ -111,7 +111,7 @@ function M(e) {
                 mentionCount: 0,
                 targetChannelId: c
             }),
-        u && x > 0
+        d && x > 0
             ? (y = {
                   mode: 'mentions',
                   mentionCount: x,
@@ -134,7 +134,7 @@ function M(e) {
         !0
     );
 }
-let L = d().throttle(M, 200);
+let L = u().throttle(M, 200);
 function w(e) {
     let { guildId: t } = e,
         n = v.Z.getGuild(t);
@@ -165,7 +165,7 @@ function G(e) {
     let { guildId: t } = e;
     return null != t && L(t);
 }
-class U extends (l = u.ZP.Store) {
+class U extends (l = d.ZP.Store) {
     initialize() {
         this.waitFor(S.Z, _.ZP, I.ZP, g.Z, b.ZP, x.Z, v.Z);
     }
@@ -187,13 +187,13 @@ class U extends (l = u.ZP.Store) {
         UPDATE_CHANNEL_LIST_DIMENSIONS: function (e) {
             let { guildId: t, channelIds: n } = e,
                 i = v.Z.getGuild(t);
-            return !!(null != i && i.hasFeature(Z.oNc.COMMUNITY)) && null != n && !d().isEqual(j[t], n) && ((j[t] = n), M(t));
+            return !!(null != i && i.hasFeature(Z.oNc.COMMUNITY)) && null != n && !u().isEqual(j[t], n) && ((j[t] = n), M(t));
         },
         BULK_ACK: function (e) {
             let { channels: t } = e,
                 n = !1;
             return (
-                d()(t)
+                u()(t)
                     .map((e) => {
                         var t;
                         let { channelId: n } = e;

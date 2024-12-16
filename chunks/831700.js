@@ -13,8 +13,8 @@ var l = n(120356),
     a = n(846519),
     s = n(481060),
     c = n(475179),
-    d = n(239091),
-    u = n(146773),
+    u = n(239091),
+    d = n(146773),
     h = n(888651),
     p = n(619915),
     m = n(339340),
@@ -151,7 +151,7 @@ class $ extends H.ZP {
               });
     }
     render() {
-        let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: o, mentionCount: a, locked: c, sorting: d, isUserOver: u, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: m, connectDragPreview: C, canReorderChannel: v, canMoveMembers: _, showTutorial: x, hasActiveEvent: b, embeddedApps: E, isSubscriptionGated: S, isFavoriteSuggestion: Z, withGuildIcon: N } = this.props,
+        let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: o, mentionCount: a, locked: c, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: m, connectDragPreview: C, canReorderChannel: v, canMoveMembers: _, showTutorial: x, hasActiveEvent: b, embeddedApps: E, isSubscriptionGated: S, isFavoriteSuggestion: Z, withGuildIcon: N } = this.props,
             { shouldShowActivities: y, shouldShowGuildVerificationPopout: T } = this.state,
             j = this.getVoiceStatesCount(),
             P = (0, i.jsxs)('li', {
@@ -166,12 +166,12 @@ class $ extends H.ZP {
                             renderPopout: this.renderPopout,
                             spacing: 0,
                             onRequestClose: this.closeGuildVerificationPopout,
-                            shouldShow: (y && !d && !u && !T) || T,
+                            shouldShow: (y && !u && !d && !T) || T,
                             children: () =>
                                 (0, i.jsx)(s.Tooltip, {
                                     text: this.getTooltipText(),
                                     children: (s) => {
-                                        let { onClick: d, onContextMenu: u, ...h } = s;
+                                        let { onClick: u, onContextMenu: d, ...h } = s;
                                         return (0, i.jsx)(I.Z, {
                                             channel: e,
                                             children: (0, i.jsxs)(F.Z, {
@@ -187,10 +187,10 @@ class $ extends H.ZP {
                                                 locked: c,
                                                 subtitle: this.renderSubtitle(),
                                                 onClick: () => {
-                                                    this.handleClick(), null == d || d();
+                                                    this.handleClick(), null == u || u();
                                                 },
                                                 onContextMenu: (e) => {
-                                                    this.handleContextMenu(e), null == u || u();
+                                                    this.handleContextMenu(e), null == d || d();
                                                 },
                                                 connectDragPreview: C,
                                                 isFavoriteSuggestion: Z,
@@ -256,7 +256,7 @@ class $ extends H.ZP {
                 let { channel: t } = this.props,
                     l = L.Z.getGuild(t.getGuildId());
                 null != l &&
-                    (0, d.jW)(e, async () => {
+                    (0, u.jW)(e, async () => {
                         let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('83331')]).then(n.bind(n, 213202));
                         return (n) =>
                             (0, i.jsx)(e, {
@@ -333,7 +333,7 @@ class $ extends H.ZP {
                     return (0, i.jsx)(s.Tooltip, {
                         text: Q.intl.string(Q.t.ZXxLQk),
                         children: (t) => {
-                            let { onMouseEnter: l, onMouseLeave: o, onFocus: a, onBlur: d } = t;
+                            let { onMouseEnter: l, onMouseLeave: o, onFocus: a, onBlur: u } = t;
                             return (0, i.jsx)(s.Clickable, {
                                 className: r()(J.iconItem, n ? J.alwaysShown : null),
                                 onClick: () => {
@@ -343,7 +343,7 @@ class $ extends H.ZP {
                                 onMouseEnter: l,
                                 onMouseLeave: o,
                                 onFocus: a,
-                                onBlur: d,
+                                onBlur: u,
                                 children: (0, i.jsx)(s.ChatIcon, {
                                     size: 'xs',
                                     color: 'currentColor',
@@ -359,14 +359,14 @@ class $ extends H.ZP {
             });
     }
 }
-let ee = (0, u.B)((0, h.Q)($));
+let ee = (0, d.B)((0, h.Q)($));
 function et(e) {
     let { guild: t, channel: n, disableSorting: l, isFavoriteCategory: r, selected: a, collapsed: s, voiceStates: c } = e,
-        d = (0, o.cj)([O.ZP], () => ({
+        u = (0, o.cj)([O.ZP], () => ({
             unread: O.ZP.hasUnread(n.id),
             mentionCount: O.ZP.getMentionCount(n.id)
         })),
-        u = (0, o.e7)([k.ZP], () => k.ZP.resolveUnreadSetting(n)),
+        d = (0, o.e7)([k.ZP], () => k.ZP.resolveUnreadSetting(n)),
         h = (0, o.cj)([M.Z, w.Z, D.Z], () => {
             let e = M.Z.getChannel(n.parent_id),
                 i = w.Z.getCheck(n.guild_id);
@@ -413,7 +413,7 @@ function et(e) {
         hasActiveEvent: null != v,
         isSubscriptionGated: _,
         needSubscriptionToAccess: x,
-        ...d,
+        ...u,
         ...h,
         ...e,
         connected: S,
@@ -422,6 +422,6 @@ function et(e) {
         channelInfo: A,
         enableHangStatus: y,
         allowChannelTopic: j,
-        resolvedUnreadSetting: u
+        resolvedUnreadSetting: d
     });
 }

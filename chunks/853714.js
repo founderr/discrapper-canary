@@ -15,8 +15,8 @@ var i = n(200651),
     p = n(210887),
     f = n(387667),
     C = n(598077),
-    _ = n(592125),
-    I = n(430824),
+    I = n(592125),
+    _ = n(430824),
     v = n(246946),
     N = n(594174),
     T = n(823379),
@@ -82,7 +82,7 @@ class k extends r.PureComponent {
             }),
             P(this, 'handleChannelContextMenu', (e) => {
                 let { log: t, guildId: r } = this.props,
-                    l = I.Z.getGuild(r);
+                    l = _.Z.getGuild(r);
                 null != t.options.channel &&
                     'string' != typeof t.options.channel &&
                     null != l &&
@@ -102,8 +102,8 @@ class k extends r.PureComponent {
                 switch (t.targetType) {
                     case A.KFR.CHANNEL:
                     case A.KFR.CHANNEL_OVERWRITE:
-                        let l = _.Z.getChannel(t.targetId),
-                            s = I.Z.getGuild(r);
+                        let l = I.Z.getChannel(t.targetId),
+                            s = _.Z.getGuild(r);
                         if (null != l && null != s)
                             return (0, h.jW)(e, async () => {
                                 let { default: e } = await Promise.all([n.e('38902'), n.e('51529')]).then(n.bind(n, 228620));
@@ -544,9 +544,9 @@ class w extends r.PureComponent {
             });
     }
 }
-t.Z = d.ZP.connectStores([j.Z, S.Z, I.Z, p.Z, v.Z, N.default], () => {
+t.Z = d.ZP.connectStores([j.Z, S.Z, _.Z, p.Z, v.Z, N.default], () => {
     let e = S.Z.getGuildId(),
-        t = I.Z.getGuild(e),
+        t = _.Z.getGuild(e),
         n = j.Z.logs;
     return {
         guildId: e,

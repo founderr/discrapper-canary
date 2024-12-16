@@ -1,51 +1,51 @@
 e.r(n),
     e.d(n, {
         default: function () {
-            return g;
+            return f;
         }
     }),
     e(47120);
-var r = e(200651),
-    a = e(192379),
-    i = e(481060),
+var i = e(200651),
+    r = e(192379),
+    a = e(481060),
     l = e(881052),
     o = e(434404),
     s = e(78451),
-    u = e(915509),
-    c = e(981631),
-    d = e(388032),
-    f = e(232186);
-function g(t) {
-    let { guild: n, onClose: e, hideColors: g } = t,
-        [m, E] = a.useState(n.verificationLevel),
-        [_, p] = a.useState(null),
-        N = n.hasFeature(c.oNc.COMMUNITY),
-        I = (0, s.IF)(N, g).filter((t) => !t.disabled),
-        R = a.useCallback(async () => {
-            null != _ && p(null);
+    c = e(915509),
+    d = e(981631),
+    u = e(388032),
+    g = e(232186);
+function f(t) {
+    let { guild: n, onClose: e, hideColors: f } = t,
+        [E, m] = r.useState(n.verificationLevel),
+        [_, N] = r.useState(null),
+        I = n.hasFeature(d.oNc.COMMUNITY),
+        R = (0, s.IF)(I, f).filter((t) => !t.disabled),
+        p = r.useCallback(async () => {
+            null != _ && N(null);
             try {
-                await o.Z.saveGuild(n.id, { verificationLevel: m }), o.Z.updateGuild({ verificationLevel: m }), e();
+                await o.Z.saveGuild(n.id, { verificationLevel: E }), o.Z.updateGuild({ verificationLevel: E }), e();
             } catch (t) {
-                p(new l.Hx(t).getAnyErrorMessage());
+                N(new l.Hx(t).getAnyErrorMessage());
             }
-        }, [_, n.id, m, e]);
-    return (0, r.jsx)(u.Z, {
+        }, [_, n.id, E, e]);
+    return (0, i.jsx)(c.Z, {
         ...t,
-        title: d.intl.string(d.t.DpRdYG),
+        title: u.intl.string(u.t.DpRdYG),
         errorText: _,
-        onConfirm: R,
+        onConfirm: p,
         onCancel: e,
-        children: (0, r.jsxs)(i.FormSection, {
+        children: (0, i.jsxs)(a.FormSection, {
             children: [
-                (0, r.jsx)(i.FormText, {
-                    type: i.FormText.Types.DESCRIPTION,
-                    className: f.marginBottom20,
-                    children: d.intl.format(d.t.iuRk2t, {})
+                (0, i.jsx)(a.FormText, {
+                    type: a.FormText.Types.DESCRIPTION,
+                    className: g.marginBottom20,
+                    children: u.intl.format(u.t.iuRk2t, {})
                 }),
-                (0, r.jsx)(i.RadioGroup, {
-                    value: m,
-                    options: I,
-                    onChange: (t) => E(t.value)
+                (0, i.jsx)(a.RadioGroup, {
+                    value: E,
+                    options: R,
+                    onChange: (t) => m(t.value)
                 })
             ]
         })

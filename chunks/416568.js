@@ -6,8 +6,8 @@ var i = n(200651),
     a = n(392711),
     s = n.n(a),
     c = n(512969),
-    d = n(91192),
-    u = n(374470),
+    u = n(91192),
+    d = n(374470),
     h = n(442837),
     p = n(902704),
     m = n(846519),
@@ -120,7 +120,7 @@ class et {
                     if ((null == t ? void 0 : t.parentId) == null) break;
                     i = this.nodeRefs[t.parentId];
                 }
-                null != i && (0, u.k)(i)
+                null != i && (0, d.k)(i)
                     ? n.scrollIntoViewNode({
                           node: i,
                           animate: t,
@@ -170,7 +170,7 @@ class et {
 function en(e) {
     let { disableAppDownload: t = P.isPlatformEmbedded, isOverlay: n = !1, className: r, themeOverride: a } = e,
         s = (0, I.Q3)('GuildsBar'),
-        { density: u } = (0, f.useThemeContext)(),
+        { density: d } = (0, f.useThemeContext)(),
         [p] = (0, h.Wu)([A.ZP], () => {
             let e = A.ZP.getGuildsTree();
             return [e, e.version];
@@ -185,10 +185,10 @@ function en(e) {
         ea = l.useCallback(() => eo(!0), []),
         es = l.useCallback(() => eo(!1), []),
         ec = l.useRef(!1),
-        [ed] = l.useState(() => new m.V7()),
-        eu = l.useRef(null),
+        [eu] = l.useState(() => new m.V7()),
+        ed = l.useRef(null),
         eh = l.useRef(null),
-        { ref: ep, ...em } = (0, d.OP)(),
+        { ref: ep, ...em } = (0, u.OP)(),
         ef = (0, f.useFocusJumpSection)(),
         [eg, eC] = l.useState(!1),
         [ev, e_] = l.useState(!1),
@@ -200,7 +200,7 @@ function en(e) {
                     e_,
                     () => {
                         var e, t;
-                        null === (e = eu.current) || void 0 === e || e.calculateState(), null === (t = eh.current) || void 0 === t || t.calculateState();
+                        null === (e = ed.current) || void 0 === e || e.calculateState(), null === (t = eh.current) || void 0 === t || t.calculateState();
                     },
                     (function (e, t) {
                         let n = e ? 40 : 44,
@@ -215,9 +215,9 @@ function en(e) {
                             separatorSize: r,
                             heightBeforeIcons: ee + r
                         };
-                    })(s, u)
+                    })(s, d)
                 ),
-            [u, p, s]
+            [d, p, s]
         );
     l.useEffect(
         () => (
@@ -243,7 +243,7 @@ function en(e) {
                         animate: !1
                     });
                 }
-                return (ec.current = !0), () => ed.stop();
+                return (ec.current = !0), () => eu.stop();
             }
         }
     }, []),
@@ -327,7 +327,7 @@ function en(e) {
                         className: X.tree,
                         children: [
                             (0, i.jsx)(w.Z, {
-                                ref: eu,
+                                ref: ed,
                                 isVisible: ex.isItemVisible,
                                 onJumpTo: ex.handleJumpToGuild,
                                 className: X.unreadMentionsIndicatorTop,
@@ -403,7 +403,7 @@ function en(e) {
 t.Z = l.memo(
     function (e) {
         let t = (0, C.Z)('guildsnav');
-        return (0, i.jsx)(d.bG, {
+        return (0, i.jsx)(u.bG, {
             navigator: t,
             children: (0, i.jsx)(en, { ...e })
         });

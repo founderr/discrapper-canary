@@ -13,8 +13,8 @@ var l = n(120356),
     a = n(481060),
     s = n(475179),
     c = n(239091),
-    d = n(146773),
-    u = n(888651),
+    u = n(146773),
+    d = n(888651),
     h = n(201895),
     p = n(111028),
     m = n(305325),
@@ -90,7 +90,7 @@ class F extends L.ZP {
         return this.props.channelInfo;
     }
     render() {
-        let { channel: e, selected: t, connected: n, locked: l, connectChannelDropTarget: o, connectChannelDragSource: s, connectUserDropTarget: c, connectDragPreview: d, canReorderChannel: u, canMoveMembers: p, stageInstance: m, isSubscriptionGated: f, needSubscriptionToAccess: g, unread: C, resolvedUnreadSetting: v, mentionCount: _, isFavoriteSuggestion: x } = this.props,
+        let { channel: e, selected: t, connected: n, locked: l, connectChannelDropTarget: o, connectChannelDragSource: s, connectUserDropTarget: c, connectDragPreview: u, canReorderChannel: d, canMoveMembers: p, stageInstance: m, isSubscriptionGated: f, needSubscriptionToAccess: g, unread: C, resolvedUnreadSetting: v, mentionCount: _, isFavoriteSuggestion: x } = this.props,
             { shouldShowGuildVerificationPopout: I } = this.state,
             b = this.getVoiceStatesCount(),
             E = (0, i.jsxs)('li', {
@@ -124,7 +124,7 @@ class F extends L.ZP {
                                         onContextMenu: (e) => {
                                             this.handleContextMenu(e), null == s || s();
                                         },
-                                        connectDragPreview: d,
+                                        connectDragPreview: u,
                                         subtitle: this.renderSubtitle(),
                                         isFavoriteSuggestion: x,
                                         'aria-label': (0, h.ZP)({
@@ -144,7 +144,7 @@ class F extends L.ZP {
                     this.renderVoiceUsers()
                 ]
             });
-        return p && (E = c(E)), u && (E = o(s(E))), E;
+        return p && (E = c(E)), d && (E = o(s(E))), E;
     }
     constructor(...e) {
         super(...e),
@@ -192,7 +192,7 @@ class F extends L.ZP {
                     return (0, i.jsx)(a.Tooltip, {
                         text: U.intl.string(U.t.ZXxLQk),
                         children: (t) => {
-                            let { onMouseEnter: l, onMouseLeave: o, onFocus: c, onBlur: d } = t;
+                            let { onMouseEnter: l, onMouseLeave: o, onFocus: c, onBlur: u } = t;
                             return (0, i.jsx)(a.Clickable, {
                                 className: r()(B.iconItem, n ? B.alwaysShown : null),
                                 onClick: () => {
@@ -202,7 +202,7 @@ class F extends L.ZP {
                                 onMouseEnter: l,
                                 onMouseLeave: o,
                                 onFocus: c,
-                                onBlur: d,
+                                onBlur: u,
                                 children: (0, i.jsx)(a.ChatIcon, {
                                     size: 'xs',
                                     color: 'currentColor',
@@ -223,15 +223,15 @@ class F extends L.ZP {
             });
     }
 }
-let W = (0, d.B)((0, u.Q)(F));
+let W = (0, u.B)((0, d.Q)(F));
 function z(e) {
     let { guild: t, channel: n, disableSorting: l, isFavoriteCategory: r, collapsed: a, voiceStates: s } = e,
         c = (0, o.cj)([A.ZP], () => ({
             unread: A.ZP.hasUnread(n.id),
             mentionCount: A.ZP.getMentionCount(n.id)
         })),
-        d = (0, o.e7)([P.ZP], () => P.ZP.resolveUnreadSetting(n)),
-        u = (0, o.cj)([N.Z, T.Z, j.Z], () => {
+        u = (0, o.e7)([P.ZP], () => P.ZP.resolveUnreadSetting(n)),
+        d = (0, o.cj)([N.Z, T.Z, j.Z], () => {
             let e = N.Z.getChannel(n.parent_id),
                 i = T.Z.getCheck(n.guild_id);
             return {
@@ -268,11 +268,11 @@ function z(e) {
         isSubscriptionGated: C,
         needSubscriptionToAccess: v,
         ...c,
-        ...u,
+        ...d,
         ...e,
         isFavoriteSuggestion: r && !_,
         forceShowButtons: M,
         channelInfo: R,
-        resolvedUnreadSetting: d
+        resolvedUnreadSetting: u
     });
 }

@@ -17,12 +17,12 @@ function m(e) {
     let { guildId: t, existingRules: n } = e,
         { cancelEditingRule: m, isLoading: h, hasChanges: g, editingRule: x, errorMessage: p, saveEditingRule: f } = (0, c.w)(),
         { updateRule: C } = (0, o.pH)(t),
-        _ = null != x,
-        I = _ && !(0, a.Vb)(x),
-        v = _ || g || I,
+        I = null != x,
+        _ = I && !(0, a.Vb)(x),
+        v = I || g || _,
         N = async () => {
-            if (!g && !I) return m();
-            null != x && !I && C(x);
+            if (!g && !_) return m();
+            null != x && !_ && C(x);
             let e = n.find((e) => {
                 let { id: t } = e;
                 return t === (null == x ? void 0 : x.id);
@@ -35,7 +35,7 @@ function m(e) {
             }
         },
         T = d.intl.string(d.t['ETE/oK']),
-        b = !g && _ ? d.intl.formatToPlainString(d.t.nula39, { ruleName: null == x ? void 0 : x.name }) : void 0;
+        b = !g && I ? d.intl.formatToPlainString(d.t.nula39, { ruleName: null == x ? void 0 : x.name }) : void 0;
     return (
         null != p &&
             (b = (0, i.jsx)(l.Text, {

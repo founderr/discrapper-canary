@@ -20,8 +20,8 @@ var i = n(200651),
     p = n(783454),
     f = n(981631),
     C = n(388032),
-    _ = n(83701),
-    I = n(747716);
+    I = n(83701),
+    _ = n(747716);
 function v(e) {
     let { priceTiers: t } = e,
         { editStateId: n } = (0, h.N)(),
@@ -59,10 +59,10 @@ function v(e) {
         intiallyExpanded: !0,
         children: [
             (0, i.jsxs)('div', {
-                className: I.formSplit,
+                className: _.formSplit,
                 children: [
                     (0, i.jsx)('div', {
-                        className: I.formSplitHalf,
+                        className: _.formSplitHalf,
                         children: (0, i.jsx)(s.FormSection, {
                             title: C.intl.string(C.t.grbGJy),
                             titleId: k,
@@ -70,7 +70,7 @@ function v(e) {
                             children: (0, i.jsx)(s.TextInput, {
                                 placeholder: C.intl.string(C.t['So2/xM']),
                                 value: N,
-                                inputClassName: _.formInput,
+                                inputClassName: I.formInput,
                                 onChange: T,
                                 'aria-labelledby': k,
                                 disabled: P
@@ -78,14 +78,14 @@ function v(e) {
                         })
                     }),
                     (0, i.jsx)('div', {
-                        className: I.formSplitHalf,
+                        className: _.formSplitHalf,
                         children: (0, i.jsx)(s.FormSection, {
                             title: C.intl.string(C.t.Ibl4BQ),
                             titleId: M,
                             disabled: P,
                             children: (0, i.jsx)(s.SingleSelect, {
                                 options: D,
-                                className: _.formInput,
+                                className: I.formInput,
                                 isDisabled: P || null == t,
                                 placeholder: C.intl.string(C.t['88XZDg']),
                                 value: b,
@@ -108,7 +108,7 @@ function v(e) {
                     value: S,
                     rows: 2,
                     autosize: !0,
-                    className: _.formInput,
+                    className: I.formInput,
                     onChange: E,
                     'aria-labelledby': w,
                     disabled: P
@@ -116,16 +116,16 @@ function v(e) {
             }),
             (0, i.jsx)(s.Spacer, { size: 24 }),
             (0, i.jsxs)('div', {
-                className: I.iconSection,
+                className: _.iconSection,
                 children: [
                     (0, i.jsxs)(s.FormSection, {
                         title: C.intl.string(C.t.RUBM2t),
-                        className: I.iconSectionDescription,
+                        className: _.iconSectionDescription,
                         disabled: P,
                         children: [
                             (0, i.jsx)(s.FormText, {
                                 type: s.FormText.Types.DESCRIPTION,
-                                className: _.formDescription,
+                                className: I.formDescription,
                                 disabled: P,
                                 children: C.intl.string(C.t['0iUofH'])
                             }),
@@ -145,8 +145,8 @@ function v(e) {
                         showIcon: !0,
                         showRemoveButton: !1,
                         hideSize: !0,
-                        className: I.iconUploader,
-                        imageClassName: I.tierSymbolUploaderInner,
+                        className: _.iconUploader,
+                        imageClassName: _.tierSymbolUploaderInner,
                         onChange: O,
                         'aria-label': Z,
                         disabled: P

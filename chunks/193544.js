@@ -18,8 +18,8 @@ var i = n(200651),
     g = n(975247);
 function x(e) {
     var t, n, l;
-    let { changeTitle: x, value: p, options: f, className: C, onChange: _ } = e,
-        [I, v] = r.useState(p),
+    let { changeTitle: x, value: p, options: f, className: C, onChange: I } = e,
+        [_, v] = r.useState(p),
         [N, T] = r.useState(!1),
         [b, j] = r.useState(!1),
         S = r.useRef(null);
@@ -32,11 +32,11 @@ function x(e) {
             },
             []
         );
-    let E = f.find((e) => e.value === I),
+    let E = f.find((e) => e.value === _),
         R = (e) => {
-            if (!e.disabled && e.value !== I)
+            if (!e.disabled && e.value !== _)
                 j(!0),
-                    null == _ || _(e),
+                    null == I || I(e),
                     v(e.value),
                     (S.current = setTimeout(() => {
                         j(!1), T(!1);
@@ -61,9 +61,9 @@ function x(e) {
                     title: e.title,
                     description: e.description,
                     highlightColor: e.highlightColor,
-                    className: s()(g.groupCollapsedRow, I === e.value && g.selected),
-                    selected: I === e.value,
-                    action: I === e.value ? (0, i.jsx)(c.Z, { className: g.radioItem }) : (0, i.jsx)(o.Z, { className: g.radioItem }),
+                    className: s()(g.groupCollapsedRow, _ === e.value && g.selected),
+                    selected: _ === e.value,
+                    action: _ === e.value ? (0, i.jsx)(c.Z, { className: g.radioItem }) : (0, i.jsx)(o.Z, { className: g.radioItem }),
                     onClick: () => R(e),
                     disabled: e.disabled
                 },

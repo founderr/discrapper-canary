@@ -3,7 +3,7 @@ n.d(t, {
         return s;
     },
     XL: function () {
-        return d;
+        return u;
     }
 });
 var i = n(192379),
@@ -26,7 +26,7 @@ function c(e) {
         return !1;
     }
 }
-function d(e, t) {
+function u(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         l = i.useRef(null);
     return (

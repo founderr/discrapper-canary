@@ -20,8 +20,8 @@ var l = n(200651),
     u = n(704215),
     d = n(481060),
     m = n(239091),
-    h = n(607070),
-    x = n(100527),
+    x = n(607070),
+    h = n(100527),
     p = n(605236),
     C = n(704041),
     v = n(475676),
@@ -147,7 +147,7 @@ let H = (e) => {
                 return (null === (a = n.channel) || void 0 === a ? void 0 : a.guild_id) != null
                     ? (0, l.jsx)(C.Z, {
                           guildId: n.channel.guild_id,
-                          source: x.Z.MEMBER_LIST,
+                          source: h.Z.MEMBER_LIST,
                           trackRankingItemInteraction: n.trackRankingItemInteraction
                       })
                     : null;
@@ -157,25 +157,25 @@ let H = (e) => {
     };
 t.ZP = a.memo((e) => {
     var t;
-    let { index: i, ...x } = e,
+    let { index: i, ...h } = e,
         [C, v] = a.useState('default'),
         g = (0, o.JA)(''.concat(i)),
         j = null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
-        { isRich: Z, appName: P } = (0, M.n)(x.entry),
+        { isRich: Z, appName: P } = (0, M.n)(h.entry),
         L = a.useMemo(
             () => ({
-                entry: x.entry,
-                channelId: x.channel.id,
-                guildId: x.channel.guild_id,
-                requestId: x.requestId,
+                entry: h.entry,
+                channelId: h.channel.id,
+                guildId: h.channel.guild_id,
+                requestId: h.requestId,
                 richPresenceName: Z ? P : void 0
             }),
-            [P, x.channel.guild_id, x.channel.id, x.entry, x.requestId, Z]
+            [P, h.channel.guild_id, h.channel.id, h.entry, h.requestId, Z]
         ),
         T = a.useRef(!1),
         [N, y] = a.useState(!1),
         [_, A] = a.useState(!1),
-        E = (0, c.e7)([h.Z], () => h.Z.keyboardModeEnabled);
+        E = (0, c.e7)([x.Z], () => x.Z.keyboardModeEnabled);
     a.useEffect(() => {
         N && E && A(!0);
     }, [N, E]);
@@ -186,12 +186,12 @@ t.ZP = a.memo((e) => {
                         let { default: e } = await n.e('153').then(n.bind(n, 330150));
                         return () =>
                             (0, l.jsx)(e, {
-                                entry: x.entry,
-                                requestId: x.requestId
+                                entry: h.entry,
+                                requestId: h.requestId
                             });
                     });
             },
-            [x, j]
+            [h, j]
         ),
         R = a.useCallback(() => {
             v(String(Date.now()));
@@ -227,7 +227,7 @@ t.ZP = a.memo((e) => {
         };
     return (0, l.jsx)('div', {
         onMouseEnter: () => {
-            x.entry.content_type === s.s.LEADERBOARD && !(0, p.un)(u.z.LEADERBOARD_NUX_COACHMARK) && (0, p.EW)(u.z.LEADERBOARD_NUX_COACHMARK, { dismissAction: w.L.SECONDARY }),
+            h.entry.content_type === s.s.LEADERBOARD && !(0, p.un)(u.z.LEADERBOARD_NUX_COACHMARK) && (0, p.EW)(u.z.LEADERBOARD_NUX_COACHMARK, { dismissAction: w.L.SECONDARY }),
                 (T.current = !0),
                 setTimeout(() => {
                     T.current && y(!0), b(L);
@@ -241,7 +241,7 @@ t.ZP = a.memo((e) => {
                     closePopout: t,
                     updatePopoutPosition: R,
                     trackRankingItemInteraction: O,
-                    ...x
+                    ...h
                 });
             },
             position: 'left',
@@ -270,7 +270,7 @@ t.ZP = a.memo((e) => {
                     },
                     onContextMenu: S,
                     children: (0, l.jsx)(H, {
-                        ...x,
+                        ...h,
                         selected: n,
                         hovered: T.current
                     })

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return _;
     }
 }),
     n(47120);
@@ -20,15 +20,15 @@ var i = n(200651),
     p = n(290511),
     f = n(388032),
     C = n(554205);
-function _(e) {
+function I(e) {
     let { guild: t, prejoinOnly: n, postjoinOnly: l } = e,
         c = (0, a.e7)([g.Z], () => g.Z.editedOnboardingPrompts),
         u = c.filter((e) => e.inOnboarding),
         m = u.length,
         {
             drag: x,
-            drop: _,
-            dragSourcePosition: I,
+            drop: I,
+            dragSourcePosition: _,
             setIsDraggable: v
         } = (0, d.Z)({
             type: 'ONBOARDING_PROMPT_CARD',
@@ -44,13 +44,13 @@ function _(e) {
             v(!1);
         }, [v]),
         r.useEffect(() => {
-            x(_(N));
-        }, [x, _, N]),
+            x(I(N));
+        }, [x, I, N]),
         (0, i.jsxs)('div', {
             ref: N,
             className: s()(C.separatorSection, {
-                [C.dropIndicatorBefore]: null != I && m < I,
-                [C.dropIndicatorAfter]: null != I && m > I
+                [C.dropIndicatorBefore]: null != _ && m < _,
+                [C.dropIndicatorAfter]: null != _ && m > _
             }),
             children: [
                 !l && u.length < p.b3
@@ -94,12 +94,12 @@ function _(e) {
         })
     );
 }
-function I(e) {
+function _(e) {
     let { guildId: t, prejoinOnly: n, postjoinOnly: r, includeCount: l, singleColumn: s } = e,
         d = (0, a.e7)([m.Z], () => m.Z.getGuild(t)),
-        I = (0, a.e7)([g.Z], () => g.Z.editedOnboardingPrompts),
-        v = I.filter((e) => e.inOnboarding),
-        N = I.filter((e) => !0 !== e.inOnboarding),
+        _ = (0, a.e7)([g.Z], () => g.Z.editedOnboardingPrompts),
+        v = _.filter((e) => e.inOnboarding),
+        N = _.filter((e) => !0 !== e.inOnboarding),
         T = [
             ...v.map((e) => ({
                 id: e.id,
@@ -182,7 +182,7 @@ function I(e) {
                                 )
                             ]
                         }),
-                  (0, i.jsx)(_, {
+                  (0, i.jsx)(I, {
                       guild: d,
                       prejoinOnly: n,
                       postjoinOnly: r
@@ -206,10 +206,10 @@ function I(e) {
                                         e.id
                                     )
                                 ),
-                                I.length < p.YW
+                                _.length < p.YW
                                     ? (0, i.jsxs)(o.Clickable, {
                                           className: C.addPrompt,
-                                          onClick: () => (0, h.tS)(d, [...I, (0, p.yZ)(!1)], !1),
+                                          onClick: () => (0, h.tS)(d, [..._, (0, p.yZ)(!1)], !1),
                                           children: [
                                               (0, i.jsx)(o.CirclePlusIcon, {
                                                   size: 'custom',

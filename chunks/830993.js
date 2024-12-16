@@ -12,8 +12,8 @@ var i = n(200651),
     a = n(616780),
     s = n(619915),
     c = n(620662),
-    d = n(841784),
-    u = n(471445),
+    u = n(841784),
+    d = n(471445),
     h = n(430824),
     p = n(496675),
     m = n(158776),
@@ -28,7 +28,7 @@ var i = n(200651),
     E = n(388032),
     S = n(684393);
 function Z(e) {
-    var t, u;
+    var t, d;
     let { channel: h, guild: p, onAction: f, voiceStates: C, isChannelSelected: _, shouldShowSettingNudge: x } = e;
     !(function (e, t) {
         let n = l.useMemo(() => {
@@ -59,7 +59,7 @@ function Z(e) {
                 return (
                     y.forEach((t) => {
                         let n = m.Z.findActivity(t.user.id, T(t));
-                        if (null != n && !(0, d.Z)(n)) {
+                        if (null != n && !(0, u.Z)(n)) {
                             var i, l, r, o;
                             let a = ''.concat(null !== (l = n.application_id) && void 0 !== l ? l : '', ':').concat(null !== (r = null === (i = n.party) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : t.user.id),
                                 s =
@@ -86,7 +86,7 @@ function Z(e) {
                   (0, i.jsx)(N, {
                       channel: h,
                       isChannelSelected: _,
-                      voiceStatesCount: null !== (u = null == C ? void 0 : C.length) && void 0 !== u ? u : 0
+                      voiceStatesCount: null !== (d = null == C ? void 0 : C.length) && void 0 !== d ? d : 0
                   }),
                   (0, i.jsx)('div', { className: S.headerDivider }),
                   Z.map((e, t) => {
@@ -154,7 +154,7 @@ function N(e) {
             selected: n
         }),
         c = (0, r.e7)([h.Z], () => h.Z.getGuild(t.guild_id));
-    return null == (0, u.KS)(t, c)
+    return null == (0, d.KS)(t, c)
         ? null
         : (0, i.jsxs)('div', {
               className: S.popoutHeaderContainer,

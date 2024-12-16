@@ -15,8 +15,8 @@ var i = n(200651),
     p = n(626135),
     f = n(584825),
     C = n(723047),
-    _ = n(416867),
-    I = n(903773),
+    I = n(416867),
+    _ = n(903773),
     v = n(215124),
     N = n(326578),
     T = n(981631),
@@ -54,7 +54,7 @@ function y(e) {
         p = async () => {
             (await d(t, a, b.wW.GUILD_ROLE_SUBSCRIPTIONS)) &&
                 (h(t.id),
-                (0, _.B)({
+                (0, I.B)({
                     Icon: N.Z,
                     title: S.intl.string(S.t['AP/2qa']),
                     body: S.intl.string(S.t.kHMgaG)
@@ -98,14 +98,14 @@ t.Z = (e) => {
         c = t.isOwner(n),
         f = (0, o.Ob)(t),
         C = (0, l.e7)([x.Z], () => x.Z.isFocused()),
-        { teams: _, loading: N } = (0, h.Z)({ refreshOnDepChange: C }),
+        { teams: I, loading: N } = (0, h.Z)({ refreshOnDepChange: C }),
         b = r.useMemo(
             () =>
-                _.filter((e) => {
+                I.filter((e) => {
                     var t;
                     return e.payout_account_status !== j.C.BLOCKED && (0, m.Z)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : T.lds, e);
                 }),
-            [_, n]
+            [I, n]
         ),
         A = b.length > 0,
         Z = r.useCallback(async () => {
@@ -133,7 +133,7 @@ t.Z = (e) => {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   !c &&
-                      (0, i.jsx)(I.Z, {
+                      (0, i.jsx)(_.Z, {
                           className: E.nonOwnerNotice,
                           children: S.intl.string(S.t.t56qWF)
                       }),

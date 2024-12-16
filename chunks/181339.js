@@ -23,8 +23,8 @@ var i = n(200651),
     p = n(592125),
     f = n(984933),
     C = n(496675),
-    _ = n(699516),
-    I = n(594174),
+    I = n(699516),
+    _ = n(594174),
     v = n(434404),
     N = n(449226),
     T = n(981631),
@@ -34,11 +34,11 @@ function S(e) {
     let { guild: t, isExpanded: n, selectedChannelId: l, className: a } = e,
         x = (0, h.BT)(t),
         f = t.canHaveRaidActivityAlerts(),
-        [C, _] = r.useState(f),
-        I = (0, o.e7)([p.Z], () => p.Z.getChannel(l), [l]),
-        v = (0, u.ZP)(I),
+        [C, I] = r.useState(f),
+        _ = (0, o.e7)([p.Z], () => p.Z.getChannel(l), [l]),
+        v = (0, u.ZP)(_),
         S = async () => {
-            _(!C);
+            I(!C);
             try {
                 var e;
                 await (0, m.f6)(t, !f);
@@ -54,7 +54,7 @@ function S(e) {
                     (0, d.yw)(T.rMx.GUILD_RAID_ALERTS_SETUP, e);
                 }
             } catch (e) {
-                (0, c.showToast)((0, c.createToast)(b.intl.string(b.t['46Rs3t']), c.ToastType.FAILURE)), _(!f);
+                (0, c.showToast)((0, c.createToast)(b.intl.string(b.t['46Rs3t']), c.ToastType.FAILURE)), I(!f);
             }
         };
     return (0, i.jsxs)('div', {
@@ -103,7 +103,7 @@ function E(e) {
     let { guild: n, selectedChannelId: r, setSelectedChannelId: l, className: m } = e,
         h = null !== (t = n.safetyAlertsChannelId) && void 0 !== t ? t : null,
         x = (0, o.Wu)(
-            [f.ZP, I.default, _.Z, C.Z],
+            [f.ZP, _.default, I.Z, C.Z],
             () => {
                 let e = f.ZP.getChannels(n.id)
                     [f.sH].filter((e) => {
@@ -114,7 +114,7 @@ function E(e) {
                         let { channel: t } = e;
                         return {
                             value: t.id,
-                            label: (0, u.F6)(t, I.default, _.Z, !0)
+                            label: (0, u.F6)(t, _.default, I.Z, !0)
                         };
                     });
                 return null != h ? e : [...e];

@@ -89,7 +89,8 @@ function G(e) {
                       onMouseLeave: n,
                       onToggleHeight: ea,
                       isExpanded: C,
-                      hideExpandedButton: i
+                      hideExpandedButton: i,
+                      embeddedActivity: Z
                   })
                 : i
                   ? (0, a.jsx)(a.Fragment, {
@@ -103,7 +104,8 @@ function G(e) {
                             },
                             channel: o,
                             applicationId: Z.applicationId,
-                            users: s
+                            users: s,
+                            embeddedActivity: Z
                         })
                     })
                   : null == z
@@ -125,7 +127,8 @@ function G(e) {
                                   onJumpToChannel: ei,
                                   channel: o,
                                   applicationId: Z.applicationId,
-                                  selectedParticipant: z
+                                  selectedParticipant: z,
+                                  embeddedActivity: Z
                               })
                           ]
                       })
@@ -211,10 +214,7 @@ function G(e) {
 let Z = (e) => {
     let { channel: n, ...r } = e,
         { userActivity: i, inActivity: s } = (0, C.Z)(n.id);
-    (0, N.Z)({
-        channel: n,
-        userActivity: i
-    });
+    (0, N.Z)({ userActivity: i });
     let o = !s;
     return (0, a.jsx)(G, {
         channel: n,

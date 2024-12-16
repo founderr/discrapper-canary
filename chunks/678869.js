@@ -16,8 +16,8 @@ var l = n(200651),
     u = n(768419),
     d = n(424678),
     m = n(239470),
-    h = n(894344),
-    x = n(314897),
+    x = n(894344),
+    h = n(314897),
     p = n(908841),
     C = n(5192),
     v = n(379357),
@@ -95,7 +95,7 @@ function M(e) {
         { activity: B, currentEntry: D, artist: U, title: G, user: z } = (0, Z.pi)(w),
         { primaryColor: Y, secondaryColor: W } = (0, j.Z)(null == V ? void 0 : V.src),
         q = (0, I.Z)(N.ABu.SPOTIFY),
-        F = (0, r.e7)([u.Z, x.default], () => ((null == B ? void 0 : B.type) === N.IIU.LISTENING && null != z ? (0, m.Z)(u.Z, x.default, z, B) : void 0), [B, z], o.Z),
+        F = (0, r.e7)([u.Z, h.default], () => ((null == B ? void 0 : B.type) === N.IIU.LISTENING && null != z ? (0, m.Z)(u.Z, h.default, z, B) : void 0), [B, z], o.Z),
         J = a.useCallback(() => {
             var e;
             if (null == k || null == z) return;
@@ -146,7 +146,7 @@ function M(e) {
                         P.Ll,
                         {
                             onClick: () => {
-                                (0, h.Z)(F, y.kG.USER_ACTIVITY_SYNC), O();
+                                (0, x.Z)(F, y.kG.USER_ACTIVITY_SYNC), O();
                             },
                             IconComponent: s.UserPlayIcon,
                             children: _.intl.string(_.t.eU3inJ)

@@ -35,9 +35,9 @@ var i = t(200651),
     O = t(937784),
     m = t(388032),
     v = t(598599),
-    H = t(138715),
-    Z = t(979770);
-function p(n) {
+    p = t(138715),
+    H = t(979770);
+function Z(n) {
     let { channel: e, ChannelIcon: t, selected: l, onClick: a } = n,
         r = (0, C.ZP)(e);
     return (0, i.jsxs)(d.Clickable, {
@@ -93,7 +93,7 @@ function x(n) {
                           return null == E
                               ? null
                               : (0, i.jsx)(
-                                    p,
+                                    Z,
                                     {
                                         channel: r,
                                         ChannelIcon: E,
@@ -123,8 +123,8 @@ function b(n) {
                   (0, i.jsx)(d.EmptyStateImage, {
                       width: 415,
                       height: 75,
-                      lightSrc: Z,
-                      darkSrc: H
+                      lightSrc: H,
+                      darkSrc: p
                   }),
                   (0, i.jsx)(d.EmptyStateText, { note: m.intl.string(m.t['+Zg0lZ']) })
               ]
@@ -189,8 +189,8 @@ function M(n) {
             [R]
         ),
         G = (0, E.e7)([U.Z], () => U.Z.getGuildId()),
-        { analyticsLocations: H } = (0, c.ZP)(s.Z.CLIPS_SHARE_MODAL);
-    async function Z(n) {
+        { analyticsLocations: p } = (0, c.ZP)(s.Z.CLIPS_SHARE_MODAL);
+    async function H(n) {
         let i = null != n ? n : D;
         if (null != i) {
             L(!0);
@@ -198,7 +198,7 @@ function M(n) {
                 await (0, O.e)(e, {
                     channelId: i,
                     editMetadata: t,
-                    analyticsLocations: H
+                    analyticsLocations: p
                 }),
                     null == n && (0, T.Kh)(i),
                     o.pT();
@@ -208,9 +208,9 @@ function M(n) {
             }
         }
     }
-    async function p(n) {
+    async function Z(n) {
         let e = await u.Z.openPrivateChannel(n);
-        await Z(e);
+        await H(e);
     }
     return (0, i.jsxs)(d.ModalRoot, {
         size: d.ModalSize.SMALL,
@@ -242,7 +242,7 @@ function M(n) {
             (0, i.jsx)(b, {
                 searchQuery: C,
                 friends: f,
-                onShareClip: p,
+                onShareClip: Z,
                 disabled: A
             }),
             null != G &&
@@ -257,7 +257,7 @@ function M(n) {
                         disabled: null == D,
                         submitting: A,
                         color: d.Button.Colors.BRAND,
-                        onClick: () => Z(),
+                        onClick: () => H(),
                         children: m.intl.string(m.t.I8lglZ)
                     }),
                     (0, i.jsx)(d.Button, {

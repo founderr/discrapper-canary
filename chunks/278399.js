@@ -1,9 +1,9 @@
 n.d(t, {
     Ho: function () {
-        return h;
+        return x;
     },
     y9: function () {
-        return x;
+        return h;
     }
 });
 var l = n(200651),
@@ -16,13 +16,13 @@ var l = n(200651),
     u = n(297781),
     d = n(443487),
     m = n(830677);
-let h = [u.An],
-    x = [i._.WEEK];
+let x = [u.An],
+    h = [i._.WEEK];
 t.ZP = a.memo((e) => {
     let { entry: t, channel: n, selected: a } = e,
         { largeImage: i } = (0, o.rv)({ entry: t }),
         p = (0, c.Nq)(t);
-    return null != p && (0, r.Hi)(p, x)
+    return null != p && (0, r.Hi)(p, h)
         ? (0, l.jsxs)(d.Zb, {
               selected: a,
               children: [
@@ -36,7 +36,7 @@ t.ZP = a.memo((e) => {
                           (0, l.jsx)(d.ll, { children: t.extra.artist.name }),
                           (0, l.jsx)(u.Gk, {
                               location: u.Gt.CARD,
-                              children: h.map((e, n) => (0, l.jsx)(e, { entry: t }, n))
+                              children: x.map((e, n) => (0, l.jsx)(e, { entry: t }, n))
                           })
                       ]
                   }),

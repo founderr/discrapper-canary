@@ -30,7 +30,7 @@ let l = (e) => {
                 className: f
             }),
             (0, i.jsx)('path', {
-                d: 'M15 18a1 1 0 1 0 0 2h8a1 1 0 0 0 0-2h-8Z',
+                d: 'M15 18a1 1 0 0 0 0 2h8a1 1 0 1 0 0-2h-8Z',
                 fill: 'string' == typeof d ? d : d.css,
                 className: f
             })

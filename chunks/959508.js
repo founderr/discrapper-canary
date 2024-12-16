@@ -20,8 +20,8 @@ var i = n(200651),
     p = n(570961),
     f = n(208665),
     C = n(976983),
-    _ = n(290511),
-    I = n(388032),
+    I = n(290511),
+    _ = n(388032),
     v = n(530961);
 let N = { optionErrors: [] };
 function T(e) {
@@ -29,7 +29,7 @@ function T(e) {
     let { guild: n, prompt: l, disableAutofocus: d, promptIndex: C, dragIndex: T, includeCount: S, singleColumn: E, onPromptDragComplete: R, onPromptDragStart: y, onPromptDragReset: A } = e,
         { dropdownsAllowed: Z } = (0, m.Ug)(n.id),
         L = (0, a.e7)([x.Z], () => x.Z.editedDefaultChannelIds),
-        D = Z ? _.qm : _.M$,
+        D = Z ? I.qm : I.M$,
         {
             drag: O,
             dragSourcePosition: P,
@@ -51,8 +51,8 @@ function T(e) {
         [G, F] = r.useState(!1),
         H = null !== (t = w.options) && void 0 !== t ? t : w.optionErrors.filter(g.lm)[0],
         z = w.config,
-        W = Z && l.options.length >= _.fY,
-        V = (0, u.kl)(n.id, Array.from(L), [l]).length - L.size,
+        V = Z && l.options.length >= I.fY,
+        W = (0, u.kl)(n.id, Array.from(L), [l]).length - L.size,
         Y = r.useRef(null);
     return (r.useLayoutEffect(() => {
         setTimeout(() => {
@@ -90,7 +90,7 @@ function T(e) {
                           className: v.questionNumber,
                           variant: 'text-xs/semibold',
                           color: 'text-muted',
-                          children: I.intl.format(I.t.yjS3zs, { index: C + 1 })
+                          children: _.intl.format(_.t.yjS3zs, { index: C + 1 })
                       }),
                       (0, i.jsx)(o.Text, {
                           variant: 'text-lg/semibold',
@@ -107,7 +107,7 @@ function T(e) {
                           })
                       }),
                       (0, i.jsx)(o.TooltipContainer, {
-                          text: I.intl.string(I.t['Ku+86e']),
+                          text: _.intl.string(_.t['Ku+86e']),
                           className: v.removeButton,
                           children: (0, i.jsx)(o.Clickable, {
                               className: v.closeIcon,
@@ -147,7 +147,7 @@ function T(e) {
                           className: v.questionNumber,
                           variant: 'text-xs/semibold',
                           color: 'text-muted',
-                          children: I.intl.format(I.t.yjS3zs, { index: C + 1 })
+                          children: _.intl.format(_.t.yjS3zs, { index: C + 1 })
                       }),
                       (0, i.jsx)(o.TextInput, {
                           className: v.title,
@@ -155,8 +155,8 @@ function T(e) {
                           inputRef: Y,
                           value: l.title,
                           onChange: (e) => (0, p.Kk)(n, l.id, { title: e }),
-                          placeholder: I.intl.string(I.t.QMCuCg),
-                          maxLength: _.iU,
+                          placeholder: _.intl.string(_.t.QMCuCg),
+                          maxLength: I.iU,
                           error: w.title
                       }),
                       (0, i.jsx)(b, {
@@ -167,12 +167,12 @@ function T(e) {
                           className: v.optionsHeader,
                           variant: 'text-xs/semibold',
                           color: 'text-muted',
-                          children: W
-                              ? I.intl.formatToPlainString(I.t.AbvhZG, {
+                          children: V
+                              ? _.intl.formatToPlainString(_.t.AbvhZG, {
                                     count: l.options.length,
                                     total: D
                                 })
-                              : I.intl.formatToPlainString(I.t.b7VxYW, {
+                              : _.intl.formatToPlainString(_.t.b7VxYW, {
                                     count: l.options.length,
                                     total: D
                                 })
@@ -199,7 +199,7 @@ function T(e) {
                                           children: (0, i.jsx)(o.Text, {
                                               variant: 'text-sm/normal',
                                               color: 'interactive-normal',
-                                              children: I.intl.string(I.t.uCebZW)
+                                              children: _.intl.string(_.t.uCebZW)
                                           })
                                       }),
                                       l.inOnboarding
@@ -212,7 +212,7 @@ function T(e) {
                                                 children: (0, i.jsx)(o.Text, {
                                                     variant: 'text-sm/normal',
                                                     color: 'interactive-normal',
-                                                    children: S ? I.intl.formatToPlainString(I.t['0re8T0'], { count: V }) : I.intl.string(I.t.Ur8Vrq)
+                                                    children: S ? _.intl.formatToPlainString(_.t['0re8T0'], { count: W }) : _.intl.string(_.t.Ur8Vrq)
                                                 })
                                             })
                                           : null
@@ -228,7 +228,7 @@ function T(e) {
                                   })
                               }),
                               (0, i.jsx)(o.TooltipContainer, {
-                                  text: I.intl.string(I.t['Ku+86e']),
+                                  text: _.intl.string(_.t['Ku+86e']),
                                   className: v.removeButton,
                                   children: (0, i.jsx)(o.Clickable, {
                                       className: v.closeIcon,
@@ -272,11 +272,11 @@ function b(e) {
             (0, i.jsx)(o.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-muted',
-                children: I.intl.string(I.t.ECnSLi)
+                children: _.intl.string(_.t.ECnSLi)
             }),
             (0, i.jsxs)('div', {
                 className: v.examples,
-                children: [a(I.intl.string(I.t['7GZMJS'])), a(I.intl.string(I.t.nItydn)), a(I.intl.string(I.t.evuYbm)), a(I.intl.string(I.t.XWRuOj))]
+                children: [a(_.intl.string(_.t['7GZMJS'])), a(_.intl.string(_.t.nItydn)), a(_.intl.string(_.t.evuYbm)), a(_.intl.string(_.t.XWRuOj))]
             })
         ]
     });
@@ -284,7 +284,7 @@ function b(e) {
 function j(e) {
     let { guild: t, prompt: n, promptIndex: r, singleColumn: l, errors: s } = e,
         { dropdownsAllowed: a } = (0, m.Ug)(t.id),
-        o = a ? _.qm : _.M$,
+        o = a ? I.qm : I.M$,
         { handleDragStart: c, handleDragReset: u, handleDragComplete: h } = (0, d.Z)(n.options, (e) => (0, p.Kk)(t, n.id, { options: e }));
     return (0, i.jsxs)('div', {
         className: v.options,
