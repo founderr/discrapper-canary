@@ -1,75 +1,76 @@
 t.d(n, {
     $K: function () {
-        return _;
-    },
-    IG: function () {
-        return C;
-    },
-    Nb: function () {
         return v;
     },
-    Ts: function () {
-        return p;
-    },
-    Wy: function () {
+    IG: function () {
         return j;
     },
-    di: function () {
+    Nb: function () {
+        return p;
+    },
+    Ts: function () {
+        return C;
+    },
+    Wy: function () {
         return D;
+    },
+    di: function () {
+        return O;
     }
 }),
     t(47120);
 var i = t(570140),
     l = t(668781),
     r = t(479531),
-    s = t(45966),
-    a = t(819553),
-    o = t(637853),
-    c = t(17181),
-    d = t(962086),
-    u = t(225675),
-    m = t(592125),
-    I = t(430824),
-    h = t(823379),
-    N = t(434404),
-    g = t(889369),
-    T = t(570961),
-    f = t(84658),
-    S = t(176505),
-    x = t(290511),
-    E = t(388032);
-function _(e) {
+    s = t(983736),
+    a = t(45966),
+    o = t(819553),
+    c = t(637853),
+    d = t(17181),
+    u = t(962086),
+    m = t(225675),
+    I = t(592125),
+    h = t(430824),
+    N = t(823379),
+    g = t(434404),
+    T = t(889369),
+    f = t(570961),
+    S = t(84658),
+    x = t(176505),
+    E = t(290511),
+    _ = t(388032);
+function v(e) {
     i.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_STEP',
         step: e
     });
 }
-function v(e) {
+function p(e) {
     null != e &&
         i.Z.dispatch({
             type: 'GUILD_SETTINGS_ONBOARDING_EDUCATION_UPSELL_DISMISSED',
             upsellType: e
         });
 }
-async function p(e, n) {
-    let t = s.Z.getEnabled(e),
-        a = Array.from(g.Z.editedDefaultChannelIds).filter((e) => null != m.Z.getChannel(e)),
-        [c, d] = (0, o.d9)(e, [...a]);
-    if (t && n === x.Un.ONBOARDING_DEFAULT && (d.length < x.md || c.length < x.X)) {
+async function C(e, n) {
+    let t = a.Z.getEnabled(e),
+        s = Array.from(T.Z.editedDefaultChannelIds).filter((e) => null != I.Z.getChannel(e)),
+        [o, d] = (0, c.d9)(e, [...s]);
+    if (t && n === E.Un.ONBOARDING_DEFAULT && (d.length < E.md || o.length < E.X)) {
         l.Z.show({
-            title: E.intl.string(E.t.iLdiqa),
-            body: E.intl.string(E.t.JOT74e)
+            title: _.intl.string(_.t.iLdiqa),
+            body: _.intl.string(_.t.JOT74e)
         });
         return;
     }
     try {
-        await (0, T.n_)(e, { mode: n });
+        await (0, f.n_)(e, { mode: n });
     } catch (t) {
         var u;
         let { fieldName: e, error: n } = null !== (u = new r.Z(t).getAnyErrorMessageAndField()) && void 0 !== u ? u : {};
         l.Z.show({
-            title: E.intl.string(E.t.iLdiqa),
-            body: [e, n].filter(h.lm).join(': ')
+            title: _.intl.string(_.t.iLdiqa),
+            body: [e, n].filter(N.lm).join(': ')
         });
     }
     i.Z.dispatch({
@@ -78,35 +79,35 @@ async function p(e, n) {
         mode: n
     });
 }
-function C(e, n) {
-    let t = f.xh.findIndex((e) => e === n);
-    if (-1 !== t && t !== f.xh.length - 1) _(f.xh[t + 1]);
-}
 function j(e, n) {
-    let t = f.xh.findIndex((e) => e === n);
-    if (-1 !== t && 0 !== t) _(f.xh[t - 1]);
+    let t = S.xh.findIndex((e) => e === n);
+    if (-1 !== t && t !== S.xh.length - 1) v(S.xh[t + 1]);
 }
-async function D(e) {
-    let n = I.Z.getGuild(e);
+function D(e, n) {
+    let t = S.xh.findIndex((e) => e === n);
+    if (-1 !== t && 0 !== t) v(S.xh[t - 1]);
+}
+async function O(e) {
+    let n = h.Z.getGuild(e);
     null != n &&
-        (N.Z.close(),
-        (0, d.iD)(n.id, {
-            type: u.z.NEW_MEMBER,
+        (g.Z.close(),
+        (0, u.iD)(n.id, {
+            type: m.z.NEW_MEMBER,
             roles: {},
             optInChannels: new Set(),
             optInEnabled: !1,
             onboardingResponses: new Set(),
             onboardingEnabled: !0,
             memberOptions: {
-                isPending: n.hasVerificationGate(),
+                isPending: (0, s.Dc)(n),
                 flags: 0
             }
         }),
-        a.ZP.resetOnboardingStatus(n.id),
-        (0, c.discardOnboardingPromise)(n.id),
-        await (0, c.default)({
+        o.ZP.resetOnboardingStatus(n.id),
+        (0, d.discardOnboardingPromise)(n.id),
+        await (0, d.default)({
             guildId: n.id,
             isPreview: !0,
-            returnChannelId: S.oC.GUILD_HOME
+            returnChannelId: x.oC.GUILD_HOME
         }));
 }

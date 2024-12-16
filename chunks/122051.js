@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return I;
+        return N;
     }
 }),
     t(47120);
@@ -14,46 +14,47 @@ var i = t(200651),
     d = t(863249),
     u = t(944163),
     m = t(246364),
-    x = t(571728),
-    f = t(755340),
-    h = t(449226),
-    g = t(388032),
-    v = t(232203),
-    j = t(713960);
-function C(e) {
+    x = t(983736),
+    f = t(571728),
+    h = t(755340),
+    g = t(449226),
+    v = t(388032),
+    j = t(232203),
+    C = t(713960);
+function p(e) {
     let { guild: n, isExpanded: a, emptyFormFields: s, hasTermsField: r } = e,
-        c = n.hasVerificationGate(),
+        c = (0, x.Dc)(n),
         [u, m] = l.useState(c),
-        x = (e) => {
+        f = (e) => {
             e.preventDefault(), e.stopPropagation();
         },
-        f = async (e) => {
+        h = async (e) => {
             try {
                 m(e), await d.ZP.enableVerificationForm(n.id, e);
             } catch {
                 m(u);
             }
         },
-        C = (e) => {
+        p = (e) => {
             e && s
                 ? (0, o.openModalLazy)(async () => {
                       let { ConfirmModal: n } = await Promise.resolve().then(t.bind(t, 481060));
                       return (t) =>
                           (0, i.jsx)(n, {
                               ...t,
-                              header: g.intl.string(g.t.eSlxe3),
-                              cancelText: g.intl.string(g.t.BvmRe3),
-                              confirmText: g.intl.string(g.t.PYcfmp),
-                              onConfirm: () => f(e),
+                              header: v.intl.string(v.t.eSlxe3),
+                              cancelText: v.intl.string(v.t.BvmRe3),
+                              confirmText: v.intl.string(v.t.PYcfmp),
+                              onConfirm: () => h(e),
                               children: (0, i.jsx)(o.Text, {
                                   variant: 'text-md/normal',
-                                  children: g.intl.string(g.t.uknrnp)
+                                  children: v.intl.string(v.t.uknrnp)
                               })
                           });
                   })
-                : f(e);
+                : h(e);
         },
-        p = () => {
+        T = () => {
             (0, o.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([t.e('80026'), t.e('18213')]).then(t.bind(t, 645264));
                 return (t) =>
@@ -65,31 +66,31 @@ function C(e) {
             });
         };
     return (0, i.jsxs)('div', {
-        className: v.itemWrapper,
+        className: j.itemWrapper,
         children: [
             (0, i.jsxs)('div', {
-                className: v.itemContent,
+                className: j.itemContent,
                 children: [
                     (0, i.jsx)(o.Heading, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: g.intl.string(g.t.NEXim5)
+                        children: v.intl.string(v.t.NEXim5)
                     }),
                     (a || (s && !u)) &&
                         (0, i.jsx)(o.Text, {
                             variant: 'text-sm/medium',
                             color: 'header-secondary',
-                            children: g.intl.string(g.t['7W5uVl'])
+                            children: v.intl.string(v.t['7W5uVl'])
                         }),
                     !a &&
                         (0, i.jsx)('div', {
-                            className: j.pillRow,
+                            className: C.pillRow,
                             children:
                                 r &&
                                 (0, i.jsxs)(o.Text, {
                                     color: 'interactive-normal',
                                     variant: 'text-xs/medium',
-                                    className: v.valuePill,
+                                    className: j.valuePill,
                                     children: [
                                         (0, i.jsx)(o.BookCheckIcon, {
                                             size: 'custom',
@@ -97,75 +98,75 @@ function C(e) {
                                             width: 16,
                                             height: 16
                                         }),
-                                        g.intl.string(g.t.A2v22t)
+                                        v.intl.string(v.t.A2v22t)
                                     ]
                                 })
                         })
                 ]
             }),
             (0, i.jsx)('div', {
-                className: j.previewAndEnable,
+                className: C.previewAndEnable,
                 children:
                     a || u || !s
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(o.Clickable, {
-                                      onMouseDown: x,
-                                      onMouseUp: x,
+                                      onMouseDown: f,
+                                      onMouseUp: f,
                                       onClick: (e) => {
-                                          x(e), p();
+                                          f(e), T();
                                       },
                                       children: (0, i.jsx)(o.Tooltip, {
-                                          tooltipContentClassName: j.__invalid_tooltip,
-                                          text: g.intl.string(g.t.SKNnqq),
+                                          tooltipContentClassName: C.__invalid_tooltip,
+                                          text: v.intl.string(v.t.SKNnqq),
                                           children: (e) =>
                                               (0, i.jsx)(o.EyeIcon, {
                                                   size: 'md',
                                                   color: 'currentColor',
-                                                  className: j.previewIcon,
+                                                  className: C.previewIcon,
                                                   ...e
                                               })
                                       })
                                   }),
-                                  (0, i.jsx)(h.Z, {
+                                  (0, i.jsx)(g.Z, {
                                       checked: u,
-                                      onChange: () => C(!u)
+                                      onChange: () => p(!u)
                                   })
                               ]
                           })
                         : (0, i.jsx)(o.Button, {
                               size: o.Button.Sizes.SMALL,
-                              children: g.intl.string(g.t.oRs6mJ)
+                              children: v.intl.string(v.t.oRs6mJ)
                           })
             })
         ]
     });
 }
-async function p(e, n) {
+async function T(e, n) {
     await d.ZP.updateVerificationForm(e, n);
 }
-async function T(e, n) {
+async function I(e, n) {
     await d.ZP.updateVerificationFormDescription(e, n);
 }
-function I(e) {
+function N(e) {
     var n, t, a;
-    let { guild: o, isClanContext: h = !1, onFieldsSave: g, onDescriptionSave: I, verificationForm: N } = e,
-        [R, y] = l.useState(h),
+    let { guild: o, isClanContext: x = !1, onFieldsSave: g, onDescriptionSave: v, verificationForm: N } = e,
+        [R, y] = l.useState(x),
         F = l.useRef(!1),
         E = l.useCallback(() => {
             F.current = !0;
         }, []),
-        b = null !== (n = (0, x.A)({ guildId: o.id })) && void 0 !== n ? n : 0,
+        b = null !== (n = (0, f.A)({ guildId: o.id })) && void 0 !== n ? n : 0,
         w = (0, r.e7)([u.Z], () => (null != N ? N : u.Z.get(o.id))),
         M = null !== (t = null == w ? void 0 : w.formFields) && void 0 !== t ? t : [];
     l.useEffect(() => {
         d.ZP.fetchVerificationForm(o.id);
     }, [o.id]);
     let k = null != w,
-        L = !h;
+        L = !x;
     return (0, i.jsx)(c.Z, {
         renderHeader: L
-            ? (0, i.jsx)(C, {
+            ? (0, i.jsx)(p, {
                   guild: o,
                   isExpanded: R,
                   emptyFormFields: (null == M ? void 0 : M.length) == null || (null == M ? void 0 : M.length) === 0,
@@ -174,24 +175,24 @@ function I(e) {
             : null,
         isExpanded: R,
         onExpand: () => y(!R),
-        disableAnimation: h,
+        disableAnimation: x,
         disableBackground: !L,
         children: (0, i.jsx)('div', {
-            className: s()(v.itemBodyContainer, {
-                [v.noPadding]: !L,
-                [j.rulesScreeningItemsNoBorder]: !L
+            className: s()(j.itemBodyContainer, {
+                [j.noPadding]: !L,
+                [C.rulesScreeningItemsNoBorder]: !L
             }),
             children:
                 k &&
-                (0, i.jsx)(f.Z, {
+                (0, i.jsx)(h.Z, {
                     guild: o,
                     submittedGuildJoinRequestsCount: b,
                     formFields: M,
                     onFormFieldUpdate: E,
                     hideVerificationLevelField: !0,
-                    isClanContext: h,
-                    onFieldsSave: null != g ? g : p,
-                    onDescriptionSave: null != I ? I : T,
+                    isClanContext: x,
+                    onFieldsSave: null != g ? g : T,
+                    onDescriptionSave: null != v ? v : I,
                     formDescription: null !== (a = null == w ? void 0 : w.description) && void 0 !== a ? a : ''
                 })
         })
