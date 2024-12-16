@@ -1,5 +1,6 @@
 e.exports = {
     popout: 'popout_e6af9c',
+    header: 'header_e6af9c',
     searchBar: 'searchBar_e6af9c',
     searchBarComponent: 'searchBarComponent_e6af9c',
     addButton: 'addButton_e6af9c',
