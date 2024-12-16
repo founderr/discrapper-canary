@@ -174,6 +174,9 @@ r.r(n),
         BellZIcon: function () {
             return tO.LQn;
         },
+        BergerIcon: function () {
+            return tO.nIo;
+        },
         BicycleIcon: function () {
             return tO.QhB;
         },
@@ -633,8 +636,8 @@ r.r(n),
         ExperimentalMicrophoneSparkleMutedIcon: function () {
             return tO.TYr;
         },
-        ExperimentalPineappleSpongebobIcon: function () {
-            return tO.aW3;
+        ExperimentalPineappleHouseIcon: function () {
+            return tO.tEQ;
         },
         EyeDropperIcon: function () {
             return tO.ilE;
@@ -1037,6 +1040,9 @@ r.r(n),
         },
         ListThin: function () {
             return en.Tv;
+        },
+        ListViewIcon: function () {
+            return tO.Gzi;
         },
         LoadingPopout: function () {
             return ey.x;
