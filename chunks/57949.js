@@ -15,7 +15,8 @@ function u(e) {
     let { guildProductListing: t, guildId: u, sourceAnalyticsLocations: d } = e,
         m = !1,
         h = (0, r.Z)(),
-        f = () => {
+        f = t.id,
+        p = () => {
             m = !0;
         };
     (0, l.openModalLazy)(
@@ -25,14 +26,14 @@ function u(e) {
                 (0, i.jsx)(e, {
                     ...n,
                     applicationId: t.application_id,
-                    skuId: t.id,
+                    skuId: f,
                     sourceAnalyticsLocations: d,
                     guildProductContext: {
                         guildProductListingId: t.id,
                         guildId: u
                     },
                     loadId: h,
-                    onComplete: f
+                    onComplete: p
                 });
         },
         {
@@ -42,6 +43,7 @@ function u(e) {
                         load_id: h,
                         payment_type: c.Zuq[c.GZQ.ONE_TIME],
                         is_gift: !1,
+                        sku_id: f,
                         location_stack: Array.isArray(d) ? d : [d]
                     }),
                     (0, a.fw)(),

@@ -27,7 +27,8 @@ function T(e) {
         H = (0, o.Z)(),
         Y = p.default.getCurrentUser(),
         W = (0, E.M5)(Y, I.p9.TIER_2),
-        K = s()('payment-modal');
+        K = s()('payment-modal'),
+        z = (0, E.Wz)(x);
     return (0, l.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([r.e('77298'), r.e('23357'), r.e('8016'), r.e('12013'), r.e('52249'), r.e('68956'), r.e('73503'), r.e('26182'), r.e('17938'), r.e('95900'), r.e('32776'), r.e('74421'), r.e('54433'), r.e('65994')]).then(r.bind(r, 7305));
@@ -37,7 +38,7 @@ function T(e) {
                     ...o,
                     loadId: H,
                     subscriptionTier: x,
-                    skuId: (0, E.Wz)(x),
+                    skuId: z,
                     isGift: R,
                     giftMessage: O,
                     giftStyle: D,
@@ -86,6 +87,7 @@ function T(e) {
                         source: C,
                         subscription_type: v.NYc.PREMIUM,
                         is_gift: R,
+                        sku_id: z,
                         eligible_for_trial: null != w,
                         application_id: k,
                         location_stack: S

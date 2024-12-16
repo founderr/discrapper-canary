@@ -56,6 +56,7 @@ function C(e) {
                         payment_type: h.Zuq[h.GZQ.ONE_TIME],
                         location: j,
                         is_gift: c,
+                        sku_id: t,
                         location_stack: S
                     }),
                     (0, a.fw)(),
