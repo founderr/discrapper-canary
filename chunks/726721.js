@@ -6,7 +6,12 @@ let i = (0, t(818083).B)({
     treatments: [
         {
             id: 1,
-            label: 'Enable application IAR reporting flow',
+            label: 'Enable application IAR reporting flow (US)',
+            config: { enabled: !0 }
+        },
+        {
+            id: 2,
+            label: 'Enable application IAR reporting flow (EU)',
             config: { enabled: !0 }
         }
     ]
