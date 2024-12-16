@@ -430,30 +430,32 @@ function ew(e, n) {
             showAllButtons: tr,
             children: e5 ? (null == ew ? void 0 : ew()) : null
         }),
-        t6 = e5
-            ? (0, s.jsxs)('div', {
-                  className: eh.accessoryBar,
-                  children: [
-                      (0, s.jsxs)('div', {
-                          className: eh.accessoryBarLeft,
-                          children: [
-                              null == eP ? void 0 : eP(),
-                              tW,
-                              t1
-                                  ? (0, s.jsx)(v.Z, {
-                                        channel: X,
-                                        poggermodeEnabled: !1
-                                    })
-                                  : null
-                          ]
-                      }),
-                      (0, s.jsx)('div', {
-                          className: eh.accessoryBarRight,
-                          children: t4
-                      })
-                  ]
-              })
-            : null;
+        t6 = null != eP && null != tW,
+        t5 =
+            e5 && t6
+                ? (0, s.jsxs)('div', {
+                      className: eh.accessoryBar,
+                      children: [
+                          (0, s.jsxs)('div', {
+                              className: eh.accessoryBarLeft,
+                              children: [
+                                  null == eP ? void 0 : eP(),
+                                  tW,
+                                  t1
+                                      ? (0, s.jsx)(v.Z, {
+                                            channel: X,
+                                            poggermodeEnabled: !1
+                                        })
+                                      : null
+                              ]
+                          }),
+                          (0, s.jsx)('div', {
+                              className: eh.accessoryBarRight,
+                              children: t4
+                          })
+                      ]
+                  })
+                : null;
     return (0, s.jsx)(O.f6, {
         value: tb,
         children: (0, s.jsxs)(y.Gt, {
@@ -581,7 +583,7 @@ function ew(e, n) {
                                             : t4
                                     ]
                                 }),
-                                e5 ? t6 : null
+                                e5 ? t5 : null
                             ]
                         }),
                         tp
