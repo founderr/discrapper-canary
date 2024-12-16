@@ -30,18 +30,18 @@ let S = ['Android', 'iOS', 'Windows Mobile', 'Windows', 'Linux', 'Mac OS X'].map
 function I(e) {
     var t, I, b, C, T;
     let { transitionState: _, onClose: P } = e,
-        k = r.useRef(null),
         w = r.useRef(null),
+        k = r.useRef(null),
         [E, D] = r.useState(''),
-        [L, N] = r.useState(''),
-        [F, M] = r.useState(),
-        [A, O] = r.useState(''),
-        [R, B] = r.useState([]),
+        [M, F] = r.useState(''),
+        [N, A] = r.useState(),
+        [L, R] = r.useState(''),
+        [O, B] = r.useState([]),
         [V, Z] = r.useState(),
         [W, z] = r.useState(),
         [G, H] = r.useState(!1),
         [q, U] = r.useState(''),
-        [K, X] = r.useState(
+        [Y, X] = r.useState(
             (function (e) {
                 switch (e) {
                     case 'windows':
@@ -54,7 +54,7 @@ function I(e) {
                 return '';
             })((0, p.getOS)())
         ),
-        [Y, J] = r.useState(''),
+        [K, J] = r.useState(''),
         [Q, $] = r.useState(''),
         [ee, et] = r.useState(''),
         [en, ei] = r.useState(''),
@@ -69,18 +69,18 @@ function I(e) {
             null == P || P();
         },
         em = (e) => {
-            B(R.filter((t) => t.id !== e));
+            B(O.filter((t) => t.id !== e));
         };
     async function eh() {
         var e;
-        if ((eu(!1), '' === E || null == F)) {
+        if ((eu(!1), '' === E || null == N)) {
             el(!0);
             return;
         }
         let t = null == V ? void 0 : null === (e = V.features) || void 0 === e ? void 0 : e.find((e) => (0, f.pD)(e) === W);
         eo(!0), el(!1);
         let r = (0, g.D)(
-                R.map((e) => {
+                O.map((e) => {
                     let { item: t } = e;
                     return t;
                 })
@@ -90,8 +90,8 @@ function I(e) {
                     ? {
                           overridePlatformInformation: G,
                           device: q,
-                          operatingSystem: K,
-                          operatingSystemVersion: Y,
+                          operatingSystem: Y,
+                          operatingSystemVersion: K,
                           clientVersion: Q,
                           clientBuildNumber: ee,
                           locale: en
@@ -100,10 +100,10 @@ function I(e) {
             a = await (0, f.ZD)(
                 {
                     name: E,
-                    description: L,
-                    priority: F,
+                    description: M,
+                    priority: N,
                     feature: t,
-                    url: A
+                    url: L
                 },
                 l,
                 r
@@ -130,16 +130,16 @@ function I(e) {
             ec && e();
         }, [ec]),
         r.useEffect(() => {
-            if (R.length > 0) {
+            if (O.length > 0) {
                 var e;
-                null === (e = w.current) ||
+                null === (e = k.current) ||
                     void 0 === e ||
                     e.scrollIntoView({
                         behavior: 'smooth',
                         block: 'end'
                     });
             }
-        }, [R]),
+        }, [O]),
         (0, i.jsxs)(o.ModalRoot, {
             transitionState: _,
             'aria-label': j.intl.string(j.t.mCCdws),
@@ -177,8 +177,8 @@ function I(e) {
                                     children: [
                                         (0, i.jsx)(o.TextArea, {
                                             placeholder: 'What did you expect to see?',
-                                            value: L,
-                                            onChange: N
+                                            value: M,
+                                            onChange: F
                                         }),
                                         (0, i.jsx)(o.FormText, {
                                             type: o.FormTextTypes.DESCRIPTION,
@@ -187,7 +187,7 @@ function I(e) {
                                     ]
                                 }),
                                 (0, i.jsx)(o.FormItem, {
-                                    error: er && void 0 === F ? j.intl.string(j.t.EkokLy) : null,
+                                    error: er && void 0 === N ? j.intl.string(j.t.EkokLy) : null,
                                     title: j.intl.string(j.t.xMXLdX),
                                     children: (0, i.jsx)(o.SingleSelect, {
                                         renderOptionLabel: (e) =>
@@ -225,13 +225,13 @@ function I(e) {
                                                     ]
                                                 });
                                             })(e),
-                                        onChange: M,
+                                        onChange: A,
                                         options: (0, f.Tj)().map((e) => ({
                                             priority: e,
                                             value: e.value,
                                             label: e.title
                                         })),
-                                        value: F,
+                                        value: N,
                                         maxVisibleItems: 3,
                                         closeOnSelect: !0
                                     })
@@ -271,9 +271,9 @@ function I(e) {
                                     children: (0, i.jsx)(o.TextInput, {
                                         placeholder: j.intl.string(j.t.HewMzs),
                                         type: 'text',
-                                        value: A,
+                                        value: L,
                                         maxLength: 5000,
-                                        onChange: O
+                                        onChange: R
                                     })
                                 }),
                                 (0, i.jsx)(o.FormItem, {
@@ -297,7 +297,7 @@ function I(e) {
                                               (0, i.jsx)(o.FormItem, {
                                                   title: j.intl.string(j.t.kcHxi4),
                                                   children: (0, i.jsx)(o.SingleSelect, {
-                                                      value: K,
+                                                      value: Y,
                                                       options: S,
                                                       onChange: (e) => X(e)
                                                   })
@@ -306,7 +306,7 @@ function I(e) {
                                                   title: j.intl.string(j.t.rEtxdn),
                                                   children: (0, i.jsx)(o.TextInput, {
                                                       placeholder: 'Operating System Version',
-                                                      value: Y,
+                                                      value: K,
                                                       onChange: (e) => J(e)
                                                   })
                                               }),
@@ -342,12 +342,12 @@ function I(e) {
                                     children: [
                                         j.intl.string(j.t.HVxmOD),
                                         (0, i.jsx)(s.Z, {
-                                            ref: k,
+                                            ref: w,
                                             onChange: (e) => {
                                                 var t, n;
                                                 (null === (n = e.currentTarget) || void 0 === n ? void 0 : null === (t = n.files) || void 0 === t ? void 0 : t[0]) != null &&
                                                     B([
-                                                        ...R,
+                                                        ...O,
                                                         ...Array.from(e.currentTarget.files).map(
                                                             (e) =>
                                                                 new u.ZP({
@@ -362,16 +362,16 @@ function I(e) {
                                         })
                                     ]
                                 }),
-                                R.length > 0
+                                O.length > 0
                                     ? (0, i.jsxs)(o.FormSection, {
                                           children: [
                                               (0, i.jsx)(o.FormTitle, { children: 'Preview' }),
                                               (0, i.jsx)('div', {
-                                                  ref: w,
+                                                  ref: k,
                                                   className: y.attachments,
                                                   children:
-                                                      R.length > 0 &&
-                                                      R.map((e) =>
+                                                      O.length > 0 &&
+                                                      O.map((e) =>
                                                           (0, i.jsxs)(
                                                               'div',
                                                               {
@@ -424,19 +424,24 @@ function I(e) {
                         })
                     })
                 }),
-                (0, i.jsxs)(o.ModalFooter, {
-                    children: [
-                        (0, i.jsx)(o.Button, {
-                            look: o.ButtonLooks.BLANK,
-                            onClick: ed,
-                            children: j.intl.string(j.t['ETE/oK'])
-                        }),
-                        (0, i.jsx)(o.Button, {
-                            submitting: ea,
-                            onClick: eh,
-                            children: 'Submit and Open Report'
-                        })
-                    ]
+                (0, i.jsx)(o.ModalFooter, {
+                    children: (0, i.jsxs)(o.Stack, {
+                        direction: 'horizontal',
+                        gap: 8,
+                        justify: 'end',
+                        children: [
+                            (0, i.jsx)(o.Button, {
+                                submitting: ea,
+                                onClick: eh,
+                                children: 'Submit and Open Report'
+                            }),
+                            (0, i.jsx)(o.Button, {
+                                color: o.Button.Colors.PRIMARY,
+                                onClick: ed,
+                                children: j.intl.string(j.t['ETE/oK'])
+                            })
+                        ]
+                    })
                 })
             ]
         })
