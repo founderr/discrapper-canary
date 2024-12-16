@@ -40,7 +40,7 @@ n.ZP = function (e) {
         h = f === c.sFg.VERY_HIGH ? s.MobilePhoneIcon : s.EnvelopeIcon,
         g = l.useMemo(() => m(f), [f]),
         v = x[f],
-        j = (0, i.jsx)('div', {
+        C = (0, i.jsx)('div', {
             className: u.verificationLevelTitle,
             children: d.intl.format(d.t.OpV87e, {
                 verificationLevelHook: function () {
@@ -57,9 +57,9 @@ n.ZP = function (e) {
                 }
             })
         }),
-        C = f === c.sFg.VERY_HIGH ? d.intl.string(d.t.IlXyd3) : d.intl.string(d.t.JlzMPj);
+        j = f === c.sFg.VERY_HIGH ? d.intl.string(d.t.IlXyd3) : d.intl.string(d.t.JlzMPj);
     return (0, i.jsx)(o.Z, {
-        title: j,
+        title: C,
         children: (0, i.jsxs)('div', {
             className: u.verificationContainer,
             children: [
@@ -73,7 +73,7 @@ n.ZP = function (e) {
                 (0, i.jsx)(s.Text, {
                     className: u.guildVerificationText,
                     variant: 'text-sm/normal',
-                    children: C
+                    children: j
                 }),
                 a &&
                     (0, i.jsx)(s.Clickable, {

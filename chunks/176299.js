@@ -87,7 +87,7 @@ let ef = (0, c.Un)({
         renderLoader: e_
     }),
     eI = (0, c.Un)({
-        createPromise: () => Promise.all([n.e('16114'), n.e('74244')]).then(n.bind(n, 998420)),
+        createPromise: () => Promise.all([n.e('16114'), n.e('57279')]).then(n.bind(n, 998420)),
         webpackId: 998420,
         name: 'GuildMemberApplicationReview',
         renderLoader: e_

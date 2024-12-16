@@ -309,7 +309,7 @@ let l = {
             alwaysUseLayer: !0,
             small: !0
         },
-        showCharacterCount: !0
+        showCharacterCount: !1
     },
     y = {
         analyticsName: 'forum_channel_guidelines',

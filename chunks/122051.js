@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return N;
+        return I;
     }
 }),
     t(47120);
@@ -19,8 +19,8 @@ var i = t(200651),
     h = t(755340),
     g = t(449226),
     v = t(388032),
-    j = t(232203),
-    C = t(713960);
+    C = t(232203),
+    j = t(713960);
 function p(e) {
     let { guild: n, isExpanded: a, emptyFormFields: s, hasTermsField: r } = e,
         c = (0, x.Dc)(n),
@@ -66,10 +66,10 @@ function p(e) {
             });
         };
     return (0, i.jsxs)('div', {
-        className: j.itemWrapper,
+        className: C.itemWrapper,
         children: [
             (0, i.jsxs)('div', {
-                className: j.itemContent,
+                className: C.itemContent,
                 children: [
                     (0, i.jsx)(o.Heading, {
                         variant: 'text-md/semibold',
@@ -84,13 +84,13 @@ function p(e) {
                         }),
                     !a &&
                         (0, i.jsx)('div', {
-                            className: C.pillRow,
+                            className: j.pillRow,
                             children:
                                 r &&
                                 (0, i.jsxs)(o.Text, {
                                     color: 'interactive-normal',
                                     variant: 'text-xs/medium',
-                                    className: j.valuePill,
+                                    className: C.valuePill,
                                     children: [
                                         (0, i.jsx)(o.BookCheckIcon, {
                                             size: 'custom',
@@ -105,7 +105,7 @@ function p(e) {
                 ]
             }),
             (0, i.jsx)('div', {
-                className: C.previewAndEnable,
+                className: j.previewAndEnable,
                 children:
                     a || u || !s
                         ? (0, i.jsxs)(i.Fragment, {
@@ -117,13 +117,13 @@ function p(e) {
                                           f(e), T();
                                       },
                                       children: (0, i.jsx)(o.Tooltip, {
-                                          tooltipContentClassName: C.__invalid_tooltip,
+                                          tooltipContentClassName: j.__invalid_tooltip,
                                           text: v.intl.string(v.t.SKNnqq),
                                           children: (e) =>
                                               (0, i.jsx)(o.EyeIcon, {
                                                   size: 'md',
                                                   color: 'currentColor',
-                                                  className: C.previewIcon,
+                                                  className: j.previewIcon,
                                                   ...e
                                               })
                                       })
@@ -145,19 +145,19 @@ function p(e) {
 async function T(e, n) {
     await d.ZP.updateVerificationForm(e, n);
 }
-async function I(e, n) {
+async function N(e, n) {
     await d.ZP.updateVerificationFormDescription(e, n);
 }
-function N(e) {
+function I(e) {
     var n, t, a;
-    let { guild: o, isClanContext: x = !1, onFieldsSave: g, onDescriptionSave: v, verificationForm: N } = e,
-        [R, y] = l.useState(x),
+    let { guild: o, isClanContext: x = !1, onFieldsSave: g, onDescriptionSave: v, verificationForm: I } = e,
+        [y, R] = l.useState(x),
         F = l.useRef(!1),
         E = l.useCallback(() => {
             F.current = !0;
         }, []),
         b = null !== (n = (0, f.A)({ guildId: o.id })) && void 0 !== n ? n : 0,
-        w = (0, r.e7)([u.Z], () => (null != N ? N : u.Z.get(o.id))),
+        w = (0, r.e7)([u.Z], () => (null != I ? I : u.Z.get(o.id))),
         M = null !== (t = null == w ? void 0 : w.formFields) && void 0 !== t ? t : [];
     l.useEffect(() => {
         d.ZP.fetchVerificationForm(o.id);
@@ -168,19 +168,19 @@ function N(e) {
         renderHeader: L
             ? (0, i.jsx)(p, {
                   guild: o,
-                  isExpanded: R,
+                  isExpanded: y,
                   emptyFormFields: (null == M ? void 0 : M.length) == null || (null == M ? void 0 : M.length) === 0,
                   hasTermsField: null == M ? void 0 : M.some((e) => e.field_type === m.QJ.TERMS)
               })
             : null,
-        isExpanded: R,
-        onExpand: () => y(!R),
+        isExpanded: y,
+        onExpand: () => R(!y),
         disableAnimation: x,
         disableBackground: !L,
         children: (0, i.jsx)('div', {
-            className: s()(j.itemBodyContainer, {
-                [j.noPadding]: !L,
-                [C.rulesScreeningItemsNoBorder]: !L
+            className: s()(C.itemBodyContainer, {
+                [C.noPadding]: !L,
+                [j.rulesScreeningItemsNoBorder]: !L
             }),
             children:
                 k &&
@@ -192,7 +192,7 @@ function N(e) {
                     hideVerificationLevelField: !0,
                     isClanContext: x,
                     onFieldsSave: null != g ? g : T,
-                    onDescriptionSave: null != v ? v : I,
+                    onDescriptionSave: null != v ? v : N,
                     formDescription: null !== (a = null == w ? void 0 : w.description) && void 0 !== a ? a : ''
                 })
         })

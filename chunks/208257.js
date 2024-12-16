@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651),
     r = n(192379),
     a = n(442837),
-    l = n(481060),
-    o = n(970606),
+    o = n(481060),
+    l = n(970606),
     c = n(122051),
     s = n(650774),
     d = n(430824),
@@ -12,10 +12,10 @@ var i = n(200651),
     f = n(246364),
     b = n(98493),
     x = n(985159),
-    h = n(328977),
-    p = n(412222),
-    g = n(223312),
-    C = n(571728),
+    p = n(328977),
+    h = n(412222),
+    C = n(223312),
+    g = n(571728),
     _ = n(572940),
     v = n(80487),
     j = n(146463),
@@ -30,14 +30,14 @@ function E(e) {
             (0, i.jsxs)('div', {
                 className: R.previewContainer,
                 children: [
-                    (0, i.jsx)(l.Heading, {
+                    (0, i.jsx)(o.Heading, {
                         variant: 'heading-lg/bold',
                         children: T.intl.string(T.t.aOQWKi)
                     }),
-                    (0, i.jsxs)(l.Button, {
-                        color: l.Button.Colors.TRANSPARENT,
+                    (0, i.jsxs)(o.Button, {
+                        color: o.Button.Colors.TRANSPARENT,
                         onClick: () => {
-                            (0, l.openModalLazy)(async () => {
+                            (0, o.openModalLazy)(async () => {
                                 let { default: e } = await n.e('52657').then(n.bind(n, 645264));
                                 return (n) =>
                                     (0, i.jsx)(e, {
@@ -47,11 +47,11 @@ function E(e) {
                                     });
                             });
                         },
-                        size: l.ButtonSizes.SMALL,
+                        size: o.ButtonSizes.SMALL,
                         'aria-label': T.intl.string(T.t.rqfRdX),
                         innerClassName: R.previewButton,
                         children: [
-                            (0, i.jsx)(l.EyeIcon, {
+                            (0, i.jsx)(o.EyeIcon, {
                                 size: 'xs',
                                 color: 'currentColor'
                             }),
@@ -60,7 +60,7 @@ function E(e) {
                     })
                 ]
             }),
-            (0, i.jsx)(l.Text, {
+            (0, i.jsx)(o.Text, {
                 className: R.description,
                 variant: 'text-sm/medium',
                 color: 'header-secondary',
@@ -74,10 +74,10 @@ function S(e) {
     let { guildId: S, isSidebarOpen: w } = e,
         A = r.useRef(null),
         [N, B] = r.useState((0, x.z)({ guildId: S })),
-        Z = (0, p.C)({ guildId: S }),
-        P = (0, h.L)({ guildId: S }),
-        k = null !== (t = (0, C.A)({ guildId: S })) && void 0 !== t ? t : 0,
-        { guildJoinRequests: M } = (0, g.j)({
+        Z = (0, h.C)({ guildId: S }),
+        P = (0, p.L)({ guildId: S }),
+        k = null !== (t = (0, g.A)({ guildId: S })) && void 0 !== t ? t : 0,
+        { guildJoinRequests: M } = (0, C.j)({
             guildId: S,
             applicationStatus: 'REVIEW_APPLICATION' === N ? f.wB.SUBMITTED : N,
             sortOrder: Z
@@ -116,7 +116,7 @@ function S(e) {
                 if (N !== e) {
                     if (
                         (B(e),
-                        (0, o.Q2)({
+                        (0, l.Q2)({
                             guildId: S,
                             source: I.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
                             tab: e
@@ -151,7 +151,7 @@ function S(e) {
                 children:
                     'REVIEW_APPLICATION' === N
                         ? null != y
-                            ? (0, i.jsx)(l.ScrollerThin, {
+                            ? (0, i.jsx)(o.ScrollerThin, {
                                   children: (0, i.jsxs)('div', {
                                       className: R.scrollerContent,
                                       children: [
@@ -168,8 +168,8 @@ function S(e) {
                               children: [
                                   D &&
                                       U &&
-                                      (0, i.jsx)(l.HelpMessage, {
-                                          messageType: l.HelpMessageTypes.WARNING,
+                                      (0, i.jsx)(o.HelpMessage, {
+                                          messageType: o.HelpMessageTypes.WARNING,
                                           textVariant: 'text-sm/medium',
                                           className: R.headerWarning,
                                           children: T.intl.format(T.t.o3mLzM, { count: null == y ? void 0 : y.maxMembers })
@@ -182,7 +182,7 @@ function S(e) {
                                           onSortChange: J
                                       })
                                   }),
-                                  (0, i.jsx)(l.Text, {
+                                  (0, i.jsx)(o.Text, {
                                       className: R.description,
                                       variant: 'text-xs/normal',
                                       color: 'header-secondary',

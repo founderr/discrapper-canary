@@ -20,9 +20,9 @@ var r = n(200651),
     _ = n(223143),
     k = n(937510),
     I = n(823941),
-    S = n(752053),
-    j = n(38900),
-    E = n(709999),
+    E = n(752053),
+    S = n(38900),
+    j = n(709999),
     T = n(529180),
     N = n(957058),
     B = n(215023),
@@ -72,9 +72,9 @@ t.Z = (e) => {
             });
     }
     if (null != M)
-        return (0, r.jsx)(S.Z, {
+        return (0, r.jsx)(E.Z, {
             onRetry: el,
-            errorOrigin: S.i.SHOP_PAGE,
+            errorOrigin: E.i.SHOP_PAGE,
             errorMessage: M.message
         });
     let eh = null !== (P = null == eu ? void 0 : eu.heroBanner) && void 0 !== P ? P : void 0,
@@ -164,7 +164,7 @@ t.Z = (e) => {
                             className: l()(L.row, L.feed, L.feedSingleRow),
                             children: V
                                 ? (0, r.jsx)(r.Fragment, {
-                                      children: [void 0, void 0, void 0, void 0].map((e, t) => (0, r.jsx)(j.K, {}, t))
+                                      children: [void 0, void 0, void 0, void 0].map((e, t) => (0, r.jsx)(S.K, {}, t))
                                   })
                                 : (0, r.jsx)(r.Fragment, {
                                       children: eo.map((e, t) => {
@@ -180,7 +180,7 @@ t.Z = (e) => {
                                                             categoryPosition: 0
                                                         },
                                                         children: (0, r.jsx)(
-                                                            E.Z,
+                                                            j.Z,
                                                             {
                                                                 product: e,
                                                                 category: n,
@@ -260,7 +260,7 @@ t.Z = (e) => {
                             className: L.feed,
                             ref: J,
                             children: V
-                                ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(j.K, {}, t + 1)) })
+                                ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(S.K, {}, t + 1)) })
                                 : (0, r.jsx)(r.Fragment, {
                                       children: ed.slice(0, H).map((e, t) => {
                                           let n = C.Z.getCategoryForProduct(e.skuId);
@@ -275,7 +275,7 @@ t.Z = (e) => {
                                                             categoryPosition: 2
                                                         },
                                                         children: (0, r.jsx)(
-                                                            E.Z,
+                                                            j.Z,
                                                             {
                                                                 product: e,
                                                                 category: n,

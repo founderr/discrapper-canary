@@ -68,7 +68,7 @@ function p() {
                         return;
                     }
                     _(async () => {
-                        await o.ZP.updateVerificationForm(f, e, !0);
+                        await o.ZP.updateVerificationForm(f, [...e], !0);
                     });
                 }
             }

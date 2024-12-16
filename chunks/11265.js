@@ -11,29 +11,29 @@ var i = t(200651),
 n.Z = l.memo(function (e) {
     let { renderHeader: n, children: t, isExpanded: a, isStuck: m, onExpand: x, disableAnimation: f, disableBackground: h } = e,
         [g, v] = l.useState(!0),
-        [j, C] = l.useState(!1),
+        [C, j] = l.useState(!1),
         { ref: p, height: T = 0 } = (0, c.Z)(),
-        { ref: I, height: N = 0 } = (0, c.Z)(),
-        [R, y] = l.useState(a),
+        { ref: N, height: I = 0 } = (0, c.Z)(),
+        [y, R] = l.useState(a),
         F = (0, o.useSpring)(
             {
-                height: R ? N + T : T,
+                height: y ? I + T : T,
                 config: {
                     ...r.config.stiff,
                     clamp: !0
                 },
                 onStart: () => {
-                    C(!1);
+                    j(!1);
                 },
                 onRest: () => {
-                    C(!0);
+                    j(!0);
                 }
             },
             g || f ? 'animate-never' : 'respect-motion-settings'
         );
     return (
         l.useLayoutEffect(() => {
-            C(!1), y(a);
+            j(!1), R(a);
         }, [a]),
         l.useLayoutEffect(() => {
             let e = setTimeout(() => {
@@ -47,7 +47,7 @@ n.Z = l.memo(function (e) {
                 [u.noBackground]: h
             }),
             children: (0, i.jsxs)(r.animated.div, {
-                className: s()(u.contentExpandContainer, { [u.showOverflow]: a && j }),
+                className: s()(u.contentExpandContainer, { [u.showOverflow]: a && C }),
                 style: F,
                 children: [
                     (0, i.jsx)(o.Clickable, {
@@ -58,7 +58,7 @@ n.Z = l.memo(function (e) {
                         children: n
                     }),
                     (0, i.jsx)('div', {
-                        ref: I,
+                        ref: N,
                         children: t
                     })
                 ]

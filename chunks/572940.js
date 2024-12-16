@@ -1,19 +1,19 @@
 var i = n(200651),
     r = n(192379),
     a = n(481060),
-    l = n(246364),
-    o = n(388032);
+    o = n(246364),
+    l = n(388032);
 t.Z = function (e) {
     let { className: t, sortOrder: n, onSortChange: c } = e,
         s = r.useMemo(
             () => [
                 {
-                    value: l.Nw.TIMESTAMP_DESC,
-                    label: o.intl.string(o.t.eoXe0t)
+                    value: o.Nw.TIMESTAMP_DESC,
+                    label: l.intl.string(l.t.eoXe0t)
                 },
                 {
-                    value: l.Nw.TIMESTAMP_ASC,
-                    label: o.intl.string(o.t.mmeWUF)
+                    value: o.Nw.TIMESTAMP_ASC,
+                    label: l.intl.string(l.t.mmeWUF)
                 }
             ],
             []

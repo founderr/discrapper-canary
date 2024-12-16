@@ -18,12 +18,12 @@ var l = t(392711),
     u = t(981631),
     m = t(388032);
 function x(e) {
-    let { dropHoveredIndex: n, formField: u, guild: x, index: f, isDragEnabled: g, submittedGuildJoinRequestsCount: v, removeFormField: j, updateFormField: C, updateFormFieldOrder: p, canRemove: T, actionsLocation: I, fieldStyle: N } = e,
-        R = async () => {
-            await j(f);
+    let { dropHoveredIndex: n, formField: u, guild: x, index: f, isDragEnabled: g, submittedGuildJoinRequestsCount: v, removeFormField: C, updateFormField: j, updateFormFieldOrder: p, canRemove: T, actionsLocation: N, fieldStyle: I } = e,
+        y = async () => {
+            await C(f);
         },
-        y = async (e) => {
-            await C(f, e);
+        R = async (e) => {
+            await j(f, e);
         },
         F = async (e, n, t) => {
             await p(e, n, t);
@@ -37,7 +37,7 @@ function x(e) {
             isDropHovered: b,
             onEdit: () => {
                 0 === v
-                    ? h(u, y, x)
+                    ? h(u, R, x)
                     : (0, a.openModalLazy)(async () => {
                           let { default: e } = await t.e('74673').then(t.bind(t, 394045));
                           return (n) =>
@@ -45,21 +45,21 @@ function x(e) {
                                   ...n,
                                   guildId: x.id,
                                   submittedGuildJoinRequestsCount: v,
-                                  onConfirm: () => h(u, y, x)
+                                  onConfirm: () => h(u, R, x)
                               });
                       });
             },
-            onRemove: R,
+            onRemove: y,
             onDrop: F,
             canRemove: T,
-            actionsLocation: I,
-            fieldStyle: N
+            actionsLocation: N,
+            fieldStyle: I
         };
     switch (u.field_type) {
         case s.QJ.TERMS:
             return (0, i.jsx)(c.Z, {
                 channelId: x.rulesChannelId,
-                title: N === s.it.COMPACT ? m.intl.string(m.t['55+giY']) : m.intl.string(m.t['53vNcH']),
+                title: I === s.it.COMPACT ? m.intl.string(m.t['55+giY']) : m.intl.string(m.t['53vNcH']),
                 formField: u,
                 ...w
             });

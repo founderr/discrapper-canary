@@ -76,8 +76,8 @@ class v {
                     body: {
                         metrics: e,
                         client_info: {
-                            built_at: '1734384779210',
-                            build_number: '354123'
+                            built_at: '1734390010874',
+                            build_number: '354196'
                         }
                     },
                     retries: 1,

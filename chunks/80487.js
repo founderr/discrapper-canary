@@ -2,8 +2,8 @@ n(653041), n(47120);
 var i = n(200651),
     r = n(192379),
     a = n(120356),
-    l = n.n(a),
-    o = n(21260),
+    o = n.n(a),
+    l = n(21260),
     c = n(780384),
     s = n(481060),
     d = n(410030),
@@ -12,8 +12,8 @@ var i = n(200651),
     f = n(889711),
     b = n(246364),
     x = n(388032),
-    h = n(315651);
-let p = (e) => {
+    p = n(315651);
+let h = (e) => {
         let { tabs: t, selectedTab: n, onTabSelect: r, onClose: a } = e;
         return (0, i.jsx)(s.Menu, {
             navId: 'member-applications-tabs-overflow-menu',
@@ -42,7 +42,7 @@ let p = (e) => {
             )
         });
     },
-    g = (e, t, n) => {
+    C = (e, t, n) => {
         let i = [];
         return (
             e &&
@@ -66,10 +66,10 @@ let p = (e) => {
             i
         );
     };
-function C(e) {
+function g(e) {
     let { onTabSelect: t, tabs: n, selectedTab: a } = e,
-        o = (0, d.ZP)(),
-        u = (0, c.wj)(o),
+        l = (0, d.ZP)(),
+        u = (0, c.wj)(l),
         m = r.useMemo(
             () =>
                 null !=
@@ -84,7 +84,7 @@ function C(e) {
     return (0, i.jsx)(s.Popout, {
         renderPopout: (e) => {
             let { closePopout: r } = e;
-            return (0, i.jsx)(p, {
+            return (0, i.jsx)(h, {
                 selectedTab: a,
                 onClose: r,
                 tabs: n,
@@ -99,7 +99,7 @@ function C(e) {
                 ...e,
                 id: 'more',
                 color: 'text-muted',
-                className: l()(h.more, { [h.selected]: m }),
+                className: o()(p.more, { [p.selected]: m }),
                 'aria-label': x.intl.string(x.t.UKOtz8),
                 children: [
                     (0, i.jsx)(s.Text, {
@@ -122,16 +122,16 @@ function C(e) {
     });
 }
 t.Z = function (e) {
-    let { pendingGuildJoinRequestsTotal: t, currentTab: n, onTabItemSelect: a, showSetupTab: l, canActionJoinRequests: c, isSidebarOpen: d } = e,
-        [b, p] = r.useState(0),
+    let { pendingGuildJoinRequestsTotal: t, currentTab: n, onTabItemSelect: a, showSetupTab: o, canActionJoinRequests: c, isSidebarOpen: d } = e,
+        [b, h] = r.useState(0),
         _ = r.useRef(null),
         v = r.useRef(b),
-        j = g(l, c, t),
+        j = C(o, c, t),
         {
             lastVisibleIndex: I,
             onItemLayout: T,
             overflowItemsRef: R
-        } = (0, o.zP)({
+        } = (0, l.zP)({
             items: j,
             itemGapPx: 16,
             maxLines: 1,
@@ -142,7 +142,7 @@ t.Z = function (e) {
         w = r.useCallback(() => {
             var e;
             let t = null === (e = _.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
-            null != t && v.current !== t.width && (p(t.width), (v.current = t.width));
+            null != t && v.current !== t.width && (h(t.width), (v.current = t.width));
         }, []);
     return (
         r.useEffect(() => {
@@ -164,19 +164,19 @@ t.Z = function (e) {
                         'aria-label': x.intl.string(x.t.tcvVXF)
                     }),
                     (0, i.jsx)(u.Z.Title, {
-                        className: h.title,
+                        className: p.title,
                         children: x.intl.string(x.t.tcvVXF)
                     }),
-                    (0, i.jsx)(u.Z.Divider, { className: h.divider }),
+                    (0, i.jsx)(u.Z.Divider, { className: p.divider }),
                     (0, i.jsxs)('div', {
-                        className: h.container,
+                        className: p.container,
                         children: [
                             (0, i.jsxs)('div', {
-                                className: h.measurements,
+                                className: p.measurements,
                                 children: [
                                     j.map((e, t) =>
                                         (0, i.jsx)(
-                                            o.AJ,
+                                            l.AJ,
                                             {
                                                 index: t,
                                                 onItemLayout: T,
@@ -191,7 +191,7 @@ t.Z = function (e) {
                                     ),
                                     (0, i.jsx)('div', {
                                         ref: R,
-                                        children: (0, i.jsx)(C, {
+                                        children: (0, i.jsx)(g, {
                                             tabs: S,
                                             onTabSelect: a,
                                             selectedTab: n
@@ -217,7 +217,7 @@ t.Z = function (e) {
                                         )
                                     ),
                                     0 !== S.length
-                                        ? (0, i.jsx)(C, {
+                                        ? (0, i.jsx)(g, {
                                               tabs: S,
                                               onTabSelect: a,
                                               selectedTab: n

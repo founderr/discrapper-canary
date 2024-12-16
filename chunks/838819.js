@@ -20,9 +20,9 @@ var r = n(200651),
     _ = n(479446),
     k = n(981632),
     I = n(290026),
-    S = n(819640),
-    j = n(594174),
-    E = n(626135),
+    E = n(819640),
+    S = n(594174),
+    j = n(626135),
     T = n(74538),
     N = n(335131),
     B = n(381585),
@@ -56,7 +56,7 @@ var r = n(200651),
     er = n(697526);
 function ea(e) {
     let { products: t, handleShopCardMount: n, header: a, category: i, isPremiumUser: l, isGiftEasterEggEnabled: s, showMysteryCard: o = !1 } = e,
-        d = (0, c.e7)([j.default], () => j.default.getCurrentUser());
+        d = (0, c.e7)([S.default], () => S.default.getCurrentUser());
     return null == d || 0 === t.length
         ? null
         : (0, r.jsxs)('div', {
@@ -179,28 +179,28 @@ t.default = function (e) {
         [ei, es] = a.useState(Q.IV),
         [eo, ec] = a.useState(),
         [ed, eu] = a.useState(),
-        em = (0, c.e7)([S.Z], () => S.Z.getLayers().includes(X.S9g.COLLECTIBLES_SHOP)),
+        em = (0, c.e7)([E.Z], () => E.Z.getLayers().includes(X.S9g.COLLECTIBLES_SHOP)),
         eh = (0, u.f9)(),
         { onClose: ep } = (0, M.Db)(),
-        eg = (0, c.e7)([j.default], () => j.default.getCurrentUser()),
+        eg = (0, c.e7)([S.default], () => S.default.getCurrentUser()),
         ef = T.ZP.canUseCollectibles(eg),
         { categories: eC, isFetchingCategories: ev, fetchCategoriesError: eb, fetchPurchasesError: ex, claimError: e_, refreshCategories: ek } = (0, Z.ZP)({ location: 'CollectiblesShop.web' }),
         eI = null !== (t = null != eb ? eb : ex) && void 0 !== t ? t : e_;
     (0, I.P)();
-    let eS = (0, O.O)(eC),
-        ej = a.useRef(null),
-        [eE, eT] = a.useState(!1);
+    let eE = (0, O.O)(eC),
+        eS = a.useRef(null),
+        [ej, eT] = a.useState(!1);
     (0, F.Kp)({
         isFetchingCategories: ev,
         isLayer: em,
-        initialItemCardRef: ej
+        initialItemCardRef: eS
     }),
         a.useEffect(() => {
             if (H === Q.f7.VISIBLE || U === Q.f7.VISIBLE) {
                 var e;
                 let t;
                 (t = i ? (U === Q.f7.VISIBLE ? ed : s) : s),
-                    E.default.track(X.rMx.COLLECTIBLES_SHOP_VIEWED, {
+                    j.default.track(X.rMx.COLLECTIBLES_SHOP_VIEWED, {
                         location_stack: _,
                         source: t,
                         page_session_id: k,
@@ -209,7 +209,7 @@ t.default = function (e) {
                     });
             }
             !ef &&
-                E.default.track(X.rMx.PREMIUM_UPSELL_VIEWED, {
+                j.default.track(X.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: en.cd.COLLECTIBLES_SHOP,
                     location_stack: _
                 });
@@ -338,7 +338,7 @@ t.default = function (e) {
                                                         })
                                                       : (0, r.jsx)('div', {
                                                             className: er.categories,
-                                                            children: eS
+                                                            children: eE
                                                                 .filter((e) => null == e.unpublishedAt || e.unpublishedAt > new Date())
                                                                 .filter((e) => {
                                                                     let { products: t } = e;
@@ -354,9 +354,9 @@ t.default = function (e) {
                                                                                 children: (0, r.jsx)(el, {
                                                                                     isPremiumUser: ef,
                                                                                     category: e,
-                                                                                    initialItemCardRef: ej,
+                                                                                    initialItemCardRef: eS,
                                                                                     setIsGiftEasterEggEnabled: eT,
-                                                                                    isGiftEasterEggEnabled: eE,
+                                                                                    isGiftEasterEggEnabled: ej,
                                                                                     isFullScreen: n
                                                                                 })
                                                                             })
@@ -372,7 +372,7 @@ t.default = function (e) {
                         ]
                     })
                 }),
-                eE && (0, r.jsx)(G.Z, {}),
+                ej && (0, r.jsx)(G.Z, {}),
                 !n &&
                     U !== Q.f7.VISIBLE &&
                     (0, r.jsxs)(r.Fragment, {

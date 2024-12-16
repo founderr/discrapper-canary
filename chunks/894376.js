@@ -38,17 +38,17 @@ function _() {
 }
 function v() {
     let e = I();
-    return null == e
-        ? void 0
-        : 0 === e.length
-          ? [
-                {
-                    field_type: h.QJ.TEXT_INPUT,
-                    label: f.intl.string(f.t['83ZsRU']),
-                    required: !0
-                }
-            ]
-          : [...e];
+    if (null == e) return;
+    let t = e.find((e) => (0, h.J)(e));
+    if (0 === e.length || (1 === e.length && null != t)) {
+        let e = {
+            field_type: h.QJ.TEXT_INPUT,
+            label: f.intl.string(f.t['83ZsRU']),
+            required: !0
+        };
+        return null != t ? [t, e] : [e];
+    }
+    return [...e];
 }
 function N() {
     let e = x.Z.getGuild();

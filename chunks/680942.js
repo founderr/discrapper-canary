@@ -77,9 +77,9 @@ let C = {
 t.Z = (e) => {
     let { product: t, selectedVariantIndex: n, returnRef: v, onSuccess: b, tooltipDelay: x, isGiftEasterEggEnabled: _, disableCustomColor: k = !1 } = e,
         { analyticsLocations: I } = (0, s.ZP)(),
-        S = a.useRef(null),
-        j = (0, l.Z)(S),
-        E = k ? p.BR.DARK : p.BR.LIGHT,
+        E = a.useRef(null),
+        S = (0, l.Z)(E),
+        j = k ? p.BR.DARK : p.BR.LIGHT,
         T = (0, u.hv)('CollectiblesShopGiftButton');
     return (0, d.x6)(t)
         ? null
@@ -89,7 +89,7 @@ t.Z = (e) => {
               children: (e) =>
                   (0, r.jsx)(i.Button, {
                       ...e,
-                      buttonRef: S,
+                      buttonRef: E,
                       className: f.giftButton,
                       color: k ? i.ButtonColors.BRAND : i.ButtonColors.CUSTOM,
                       look: i.Button.Looks.FILLED,
@@ -118,9 +118,9 @@ t.Z = (e) => {
                       },
                       children: _
                           ? (0, r.jsx)(c.e, {
-                                hovered: j,
+                                hovered: S,
                                 isContentDismissed: !0,
-                                themeOverride: E,
+                                themeOverride: j,
                                 boxColors: C
                             })
                           : (0, r.jsx)(i.GiftIcon, {

@@ -12,23 +12,23 @@ n.Z = function (e) {
         [x, f] = l.useState(null),
         [h, g] = l.useState(u),
         v = l.useRef(!1),
-        j = l.useRef(!1);
+        C = l.useRef(!1);
     l.useEffect(
         () => () => {
-            j.current = !0;
+            C.current = !0;
         },
         []
     );
-    let C = l.useCallback(async () => {
+    let j = l.useCallback(async () => {
         if (!v.current) {
             f(null);
             try {
                 await t(n, h);
             } catch (e) {
-                if (j.current) return;
+                if (C.current) return;
                 f(new s.Hx(e).getAnyErrorMessage());
             } finally {
-                if (j.current) return;
+                if (C.current) return;
                 v.current = !1;
             }
         }
@@ -44,7 +44,7 @@ n.Z = function (e) {
                 onChange: (e) => {
                     g(e);
                 },
-                onBlur: C,
+                onBlur: j,
                 autosize: !0,
                 disabled: m
             }),

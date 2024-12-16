@@ -58,7 +58,7 @@ function _(e) {
     var t, s, r;
     let { isTabSelected: i, trialOffer: a } = e,
         o = null === (t = (0, p.N)()) || void 0 === t ? void 0 : t.subscription_trial,
-        l = (0, u.xP)('OfferTabBadge'),
+        l = (0, u.xP)('OfferTabBadge', !0),
         c = (0, d.a5)({
             intervalType: null == o ? void 0 : o.interval,
             intervalCount: null == o ? void 0 : o.interval_count
@@ -73,7 +73,7 @@ function _(e) {
 function m(e) {
     let { isTabSelected: t, userDiscount: s, includesAmountOff: r } = e,
         i = x.intl.formatToPlainString(x.t.iiLbvr, { percent: s.discount.amount }),
-        a = (0, u.xP)('OfferTabBadge');
+        a = (0, u.xP)('OfferTabBadge', !0);
     return (0, n.jsx)(h, {
         isTabSelected: t,
         badgeCopy: r ? i : x.intl.string(x.t['/DTtr6']),
