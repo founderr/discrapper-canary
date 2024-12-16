@@ -1,9 +1,9 @@
 n.d(t, {
     $: function () {
-        return x;
+        return p;
     },
     Z: function () {
-        return p;
+        return f;
     }
 });
 var i = n(200651);
@@ -11,39 +11,42 @@ n(192379);
 var r = n(392711),
     l = n(442837),
     s = n(481060),
-    a = n(241559),
-    o = n(527379),
-    c = n(313364),
-    d = n(434404),
-    u = n(999382),
-    m = n(981631),
-    h = n(388032),
-    g = n(619732);
-function x() {
-    var e;
-    let t = (0, l.e7)([u.Z], () => u.Z.getProps().guild, []),
-        n = null !== (e = null == t ? void 0 : t.isCommunity()) && void 0 !== e && e;
+    a = n(63568),
+    o = n(241559),
+    c = n(527379),
+    d = n(313364),
+    u = n(434404),
+    m = n(999382),
+    h = n(981631),
+    g = n(388032),
+    x = n(619732);
+function p() {
+    var e, t;
+    let n = (0, l.e7)([m.Z], () => m.Z.getProps().guild, []),
+        r = null !== (e = null == n ? void 0 : n.isCommunity()) && void 0 !== e && e,
+        o = (0, a.K2)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : h.lds, 'GuildSettingsMembersRow') && (null == n ? void 0 : n.hasFeature(h.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)),
+        d = r || o;
     return (0, i.jsxs)(s.Clickable, {
         onClick: (e) => {
-            if (null != t) n ? (e.preventDefault(), d.Z.close(), (0, o._X)(t.id)) : d.Z.open(t.id, m.pNK.MEMBERS);
+            if (null != n) d ? (e.preventDefault(), u.Z.close(), (0, c._X)(n.id)) : u.Z.open(n.id, h.pNK.MEMBERS);
         },
-        className: g.rowContainer,
+        className: x.rowContainer,
         children: [
-            (0, i.jsx)('div', { children: h.intl.string(h.t['9Oq93t']) }),
-            n &&
+            (0, i.jsx)('div', { children: g.intl.string(g.t['9Oq93t']) }),
+            d &&
                 (0, i.jsx)(s.WindowLaunchIcon, {
                     size: 'custom',
                     color: 'currentColor',
-                    className: g.linkIcon,
+                    className: x.linkIcon,
                     width: 16,
                     height: 16
                 })
         ]
     });
 }
-function p() {
+function f() {
     var e;
-    let { guild: t } = (0, l.e7)([u.Z], () => u.Z.getProps(), [], r.isEqual),
-        n = null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : m.lds;
-    return (0, a.n2)(n) ? (0, i.jsx)(c.Z, { guildId: n }) : null;
+    let { guild: t } = (0, l.e7)([m.Z], () => m.Z.getProps(), [], r.isEqual),
+        n = null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : h.lds;
+    return (0, o.n2)(n) ? (0, i.jsx)(d.Z, { guildId: n }) : null;
 }

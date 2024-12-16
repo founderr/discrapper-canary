@@ -23149,6 +23149,7 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
 
 .visual-refresh .base_d7ebeb {
     position: static;
+    overflow: auto;
     font-size: 12px;
     font-weight: 500;
     line-height: 16px;
@@ -26647,7 +26648,8 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
 
 .visual-refresh .accessoryBarLeft_bdf0de,
 .visual-refresh .accessoryBarRight_bdf0de {
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
     align-items: center;
     position: relative
 }
