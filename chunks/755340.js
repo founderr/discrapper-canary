@@ -14,151 +14,155 @@ var i = t(200651),
     h = t(446945),
     g = t(700833),
     v = t(592286),
-    j = t(981631),
-    C = t(388032);
+    C = t(981631),
+    j = t(388032),
+    p = t(491490);
 n.Z = function (e) {
-    let { guild: n, submittedGuildJoinRequestsCount: t, onFormFieldUpdate: p, hideVerificationLevelField: T, isClanContext: I, formDescription: N, onFieldsSave: R, onDescriptionSave: y } = e,
-        F = l.useRef(!1),
-        [E, b] = l.useState(null),
-        [w, M] = l.useState(e.formFields);
-    l.useEffect(() => M(e.formFields), [e.formFields]);
-    let k = l.useRef(e.formFields),
-        L = l.useMemo(() => w.filter(d.kT), [w]),
-        P = l.useMemo(() => w.filter(d._C), [w]),
-        S = P.length,
-        A = l.useMemo(() => w.length === v.nx, [w]),
-        Z = l.useMemo(() => w.some(c.J), [w]),
-        _ = l.useMemo(() => w.some((e) => !(0, c.J)(e)), [w]),
-        H = S > 0,
-        J = (0, o.K2)(n.id, 'verification form builder') || n.hasFeature(j.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) || I,
-        D = l.useCallback(() => {
-            (0, s.showToast)((0, s.createToast)(C.intl.string(C.t.R0RpRU), s.ToastType.FAILURE));
+    let { guild: n, submittedGuildJoinRequestsCount: t, onFormFieldUpdate: T, hideVerificationLevelField: N, isClanContext: I, formDescription: y, onFieldsSave: R, onDescriptionSave: F } = e,
+        E = l.useRef(!1),
+        [b, w] = l.useState(null),
+        [M, k] = l.useState(e.formFields);
+    l.useEffect(() => k(e.formFields), [e.formFields]);
+    let L = l.useRef(e.formFields),
+        P = l.useMemo(() => M.filter(d.kT), [M]),
+        S = l.useMemo(() => M.filter(d._C), [M]),
+        A = S.length,
+        Z = l.useMemo(() => M.length === v.nx, [M]),
+        _ = l.useMemo(() => M.some(c.J), [M]),
+        H = l.useMemo(() => M.some((e) => !(0, c.J)(e)), [M]),
+        J = A > 0,
+        D = (0, o.K2)(n.id, 'verification form builder') || n.hasFeature(C.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) || I,
+        B = l.useCallback(() => {
+            (0, s.showToast)((0, s.createToast)(j.intl.string(j.t.R0RpRU), s.ToastType.FAILURE));
         }, []),
-        B = (0, a.e7)([r.Z], () => r.Z.can(j.Plq.MANAGE_GUILD, n)),
-        z = l.useCallback(
-            async (e) => {
-                if (!F.current) {
-                    (F.current = !0), I && (e = e.filter((e) => e.field_type !== c.QJ.TERMS));
-                    try {
-                        await R(n.id, e), p(), M(e), (k.current = e);
-                    } catch (e) {
-                        throw (M(k.current), e);
-                    } finally {
-                        null != E && b(null), (F.current = !1);
-                    }
-                }
-            },
-            [E, n.id, p, R, I]
-        ),
+        z = (0, a.e7)([r.Z], () => r.Z.can(C.Plq.MANAGE_GUILD, n)),
         Q = l.useCallback(
             async (e) => {
-                let n = e.field_type === c.QJ.TERMS ? [e, ...w] : [...w, e];
-                await z(n);
-            },
-            [w, z]
-        ),
-        G = l.useCallback(
-            async (e, n) => {
-                if (w[e] === n) return;
-                let t = [...w];
-                (t[e] = n), await z(t);
-            },
-            [w, z]
-        ),
-        U = l.useCallback(
-            async (e, n, t) => {
-                let i = w.indexOf(e),
-                    l = [...w];
-                if ((null != n && n !== i && (l.splice(i, 1), l.splice(n, 0, e), M(l)), t))
+                if (!E.current) {
+                    (E.current = !0), I && (e = e.filter((e) => e.field_type !== c.QJ.TERMS));
                     try {
-                        await z(l), null !== E && b(null);
+                        await R(n.id, e), T(), k(e), (L.current = e);
                     } catch (e) {
-                        D();
+                        throw (k(L.current), e);
+                    } finally {
+                        null != b && w(null), (E.current = !1);
                     }
-                else E !== n && b(n);
-            },
-            [E, w, z, D]
-        ),
-        O = l.useCallback(
-            async (e) => {
-                try {
-                    await z([...w.slice(0, e), ...w.slice(e + 1)]);
-                } catch (e) {
-                    D();
                 }
             },
-            [w, z, D]
+            [b, n.id, T, R, I]
         ),
-        q = B ? (I ? 'side' : 'footer') : 'none',
-        V = (0, i.jsxs)(i.Fragment, {
+        G = l.useCallback(
+            async (e) => {
+                let n = e.field_type === c.QJ.TERMS ? [e, ...M] : [...M, e];
+                await Q(n);
+            },
+            [M, Q]
+        ),
+        U = l.useCallback(
+            async (e, n) => {
+                if (M[e] === n) return;
+                let t = [...M];
+                (t[e] = n), await Q(t);
+            },
+            [M, Q]
+        ),
+        O = l.useCallback(
+            async (e, n, t) => {
+                let i = M.indexOf(e),
+                    l = [...M];
+                if ((null != n && n !== i && (l.splice(i, 1), l.splice(n, 0, e), k(l)), t))
+                    try {
+                        await Q(l), null !== b && w(null);
+                    } catch (e) {
+                        B();
+                    }
+                else b !== n && w(n);
+            },
+            [b, M, Q, B]
+        ),
+        q = l.useCallback(
+            async (e) => {
+                try {
+                    await Q([...M.slice(0, e), ...M.slice(e + 1)]);
+                } catch (e) {
+                    B();
+                }
+            },
+            [M, Q, B]
+        ),
+        V = z ? (I ? 'side' : 'footer') : 'none',
+        X = (0, i.jsxs)(i.Fragment, {
             children: [
-                !T && (0, i.jsx)(f.ZP, { guild: n }),
+                !N && (0, i.jsx)(f.ZP, { guild: n }),
                 (0, i.jsx)(m.Z, {
-                    formDescription: N,
+                    formDescription: y,
                     guildId: n.id,
-                    onSave: y,
-                    disable: !B
+                    onSave: F,
+                    disable: !z
                 }),
-                B &&
+                z &&
+                    !_ &&
                     !Z &&
-                    !A &&
                     (0, i.jsx)(x.Z, {
-                        addFormField: Q,
+                        addFormField: G,
                         guild: n
                     }),
-                L.map((e) =>
+                P.map((e) =>
                     (0, g.a0)({
-                        dropHoveredIndex: E,
+                        dropHoveredIndex: b,
                         formField: e,
                         guild: n,
-                        index: w.indexOf(e),
+                        index: M.indexOf(e),
                         isDragEnabled: !1,
                         submittedGuildJoinRequestsCount: t,
-                        removeFormField: O,
-                        updateFormField: G,
-                        updateFormFieldOrder: U,
+                        removeFormField: q,
+                        updateFormField: U,
+                        updateFormFieldOrder: O,
                         canRemove: !0,
-                        actionsLocation: q,
+                        actionsLocation: V,
                         fieldStyle: c.it.REGULAR
                     })
                 )
             ]
         });
-    return J
+    return D
         ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  !I && V,
-                  !_ &&
+                  !I && X,
+                  !H &&
                       (0, i.jsx)(u.Z, {
-                          addFormField: Q,
-                          showManualApprovalWarning: !I && !H,
+                          addFormField: G,
+                          showManualApprovalWarning: !I && !J,
                           guild: n,
                           showHeader: !I
                       }),
-                  P.map((e) =>
+                  S.map((e) =>
                       (0, g.a0)({
-                          dropHoveredIndex: E,
+                          dropHoveredIndex: b,
                           formField: e,
                           guild: n,
-                          index: w.indexOf(e),
-                          isDragEnabled: H && B,
+                          index: M.indexOf(e),
+                          isDragEnabled: J && z,
                           submittedGuildJoinRequestsCount: t,
-                          removeFormField: O,
-                          updateFormField: G,
-                          updateFormFieldOrder: U,
-                          canRemove: !(I && P.length <= 1) && B,
-                          actionsLocation: q,
+                          removeFormField: q,
+                          updateFormField: U,
+                          updateFormFieldOrder: O,
+                          canRemove: !(I && S.length <= 1) && z,
+                          actionsLocation: V,
                           fieldStyle: c.it.REGULAR
                       })
                   ),
-                  _ &&
-                      !A &&
-                      B &&
-                      (0, i.jsx)(h.Z, {
-                          addFormField: Q,
-                          guild: n
+                  H &&
+                      !Z &&
+                      z &&
+                      (0, i.jsx)('div', {
+                          className: p.addQuestionsContainer,
+                          children: (0, i.jsx)(h.Z, {
+                              addFormField: G,
+                              guild: n
+                          })
                       })
               ]
           })
-        : V;
+        : X;
 };

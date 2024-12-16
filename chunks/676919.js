@@ -5,5 +5,6 @@ e.exports = {
     joinOptionContent: 'joinOptionContent_fb8619',
     uninteractive: 'uninteractive_fb8619',
     active: 'active_fb8619',
+    tooltipContainer: 'tooltipContainer_fb8619',
     tooltip: 'tooltip_fb8619'
 };

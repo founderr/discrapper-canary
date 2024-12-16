@@ -2,7 +2,8 @@ n.d(t, {
     A: function () {
         return x;
     }
-});
+}),
+    n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -21,7 +22,7 @@ function x(e) {
         x = r.useCallback(
             (e) => {
                 if (null == l || null == n) return null;
-                u.Z.setPendingInviteRules(l.id, e, n);
+                u.Z.setPendingInviteRules(l.id, e, [...n]);
             },
             [l, n]
         ),
@@ -64,11 +65,22 @@ function x(e) {
                         ]
                     }),
                     (0, i.jsx)('div', {
-                        className: s()({ [g.disabled]: !t }),
-                        children: (0, i.jsx)(d.k, {
-                            guild: l,
-                            rules: n,
-                            setRules: p
+                        className: s()(g.rules, { [g.disabled]: !t }),
+                        children: (0, i.jsxs)('div', {
+                            inert: t ? void 0 : '',
+                            children: [
+                                (0, i.jsx)(a.X6, {
+                                    variant: 'text-xs/bold',
+                                    color: 'text-muted',
+                                    className: g.rulesHeader,
+                                    children: h.intl.string(h.t.XcAzbm)
+                                }),
+                                (0, i.jsx)(d.k, {
+                                    guild: l,
+                                    rules: n,
+                                    setRules: p
+                                })
+                            ]
                         })
                     })
                 ]

@@ -51,7 +51,10 @@ function v(e) {
         : (0, i.jsxs)('div', {
               className: g.typeTag,
               children: [
-                  (0, i.jsx)(t.icon, { size: 'xs' }),
+                  (0, i.jsx)(t.icon, {
+                      size: 'xs',
+                      color: 'currentColor'
+                  }),
                   (0, i.jsx)(d.xv, {
                       variant: 'text-sm/medium',
                       tag: 'span',
@@ -60,7 +63,7 @@ function v(e) {
               ]
           });
 }
-function j(e) {
+function C(e) {
     let { title: n, children: t, onEdit: l, onRemove: a, canRemove: r, actionsLocation: o, fieldStyle: c, field: d } = e;
     return (0, i.jsxs)('div', {
         className: g.backgroundContainer,
@@ -118,7 +121,7 @@ function j(e) {
         ]
     });
 }
-let C = 'FORM_FIELD';
+let j = 'FORM_FIELD';
 function p(e) {
     let { index: n, field: t, isDropHovered: a, onDrop: d, fieldStyle: x } = e,
         h = (0, r.debounce)(async (e, n, t) => {
@@ -126,7 +129,7 @@ function p(e) {
         }),
         v = l.useRef(null),
         [, p] = (0, o.c)({
-            type: C,
+            type: j,
             item: {
                 index: n,
                 field: t
@@ -136,7 +139,7 @@ function p(e) {
             }
         }),
         [, T] = (0, c.L)({
-            accept: C,
+            accept: j,
             hover: (e, t) => {
                 var i;
                 let { index: l } = e,
@@ -174,18 +177,18 @@ function p(e) {
                         color: u.Z.unsafe_rawColors.PRIMARY_400.css
                     })
                 }),
-                (0, i.jsx)(j, { ...e })
+                (0, i.jsx)(C, { ...e })
             ]
         })
     );
 }
 function T(e) {
     return (0, i.jsxs)('div', {
-        className: g.formFieldContainer,
+        className: s()(g.formFieldContainer, { [g.compact]: e.fieldStyle === f.it.COMPACT }),
         children: [
             (0, i.jsx)('div', {
                 className: g.spacingContainer,
-                children: e.isDragEnabled ? (0, i.jsx)(p, { ...e }) : (0, i.jsx)(j, { ...e })
+                children: e.isDragEnabled ? (0, i.jsx)(p, { ...e }) : (0, i.jsx)(C, { ...e })
             }),
             'side' === e.actionsLocation &&
                 (0, i.jsxs)('div', {

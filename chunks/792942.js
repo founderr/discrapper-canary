@@ -1,5 +1,4 @@
 e.exports = {
     examplesHeader: 'examplesHeader_d13eb6',
-    examples: 'examples_d13eb6',
-    pill: 'pill_d13eb6'
+    addQuestionsContainer: 'addQuestionsContainer_d13eb6'
 };

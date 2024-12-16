@@ -7,10 +7,10 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(793030),
-    s = n(481060),
-    a = n(246364),
-    o = n(571728),
-    c = n(446945),
+    s = n(246364),
+    a = n(571728),
+    o = n(446945),
+    c = n(681460),
     d = n(700833),
     u = n(245762),
     m = n(592286),
@@ -19,71 +19,74 @@ var i = n(200651),
 function x(e) {
     var t;
     let { guild: n, formFields: l } = e,
-        [s, h] = r.useState(l);
+        [c, h] = r.useState(l);
     r.useEffect(() => h(l), [l]);
-    let g = null !== (t = (0, o.A)({ guildId: n.id })) && void 0 !== t ? t : 0,
-        [x, f] = r.useState(null),
-        C = r.useMemo(() => (null == s ? void 0 : s.some((e) => (0, a.J)(e))), [s]),
-        I = r.useMemo(() => s.length === m.nx, [s]),
-        _ = r.useCallback(
-            (e) => {
-                u.Z.setPendingMemberVerificationRules(n.id, e), h(e), null != x && f(null);
-            },
-            [x, n.id]
-        ),
+    let x = null !== (t = (0, a.A)({ guildId: n.id })) && void 0 !== t ? t : 0,
+        [f, C] = r.useState(null),
+        I = r.useMemo(() => (null == c ? void 0 : c.some((e) => (0, s.J)(e))), [c]),
+        _ = r.useMemo(() => c.length === m.nx, [c]),
         v = r.useCallback(
             (e) => {
-                _([...s, e]);
+                u.Z.setPendingMemberVerificationRules(n.id, e), h(e), null != f && C(null);
             },
-            [s, _]
+            [f, n.id]
         ),
         N = r.useCallback(
             (e) => {
-                _([...s.slice(0, e), ...s.slice(e + 1)]);
+                v([...c, e]);
             },
-            [s, _]
+            [c, v]
         ),
         T = r.useCallback(
-            (e, t) => {
-                if (s[e] === t) return;
-                let n = [...s];
-                (n[e] = t), _(n);
+            (e) => {
+                v([...c.slice(0, e), ...c.slice(e + 1)]);
             },
-            [s, _]
+            [c, v]
         ),
         b = r.useCallback(
-            (e, t, n) => {
-                let i = s.indexOf(e),
-                    r = [...s];
-                null != t && t !== i && (r.splice(i, 1), r.splice(t, 0, e), h(r)), n ? (_(r), null !== x && f(null)) : x !== t && f(t);
+            (e, t) => {
+                if (c[e] === t) return;
+                let n = [...c];
+                (n[e] = t), v(n);
             },
-            [x, s, _]
+            [c, v]
+        ),
+        j = r.useCallback(
+            (e, t, n) => {
+                let i = c.indexOf(e),
+                    r = [...c];
+                null != t && t !== i && (r.splice(i, 1), r.splice(t, 0, e), h(r)), n ? (v(r), null !== f && C(null)) : f !== t && C(t);
+            },
+            [f, c, v]
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            s.map((e) =>
+            c.map((e) =>
                 (0, d.a0)({
-                    dropHoveredIndex: x,
+                    dropHoveredIndex: f,
                     formField: e,
                     guild: n,
-                    index: s.indexOf(e),
+                    index: c.indexOf(e),
                     isDragEnabled: !0,
-                    submittedGuildJoinRequestsCount: g,
-                    removeFormField: N,
-                    updateFormField: T,
-                    updateFormFieldOrder: b,
-                    canRemove: s.length > 1,
+                    submittedGuildJoinRequestsCount: x,
+                    removeFormField: T,
+                    updateFormField: b,
+                    updateFormFieldOrder: j,
+                    canRemove: c.length > 1,
                     actionsLocation: 'side',
-                    fieldStyle: a.it.COMPACT
+                    fieldStyle: s.it.COMPACT
                 })
             ),
-            !I &&
-                (0, i.jsx)(c.Z, {
-                    addFormField: v,
-                    guild: n,
-                    allowTerms: !C
+            !_ &&
+                (0, i.jsx)('div', {
+                    className: g.addQuestionsContainer,
+                    children: (0, i.jsx)(o.Z, {
+                        addFormField: N,
+                        guild: n,
+                        allowTerms: !I
+                    })
                 }),
-            !I && (0, i.jsx)(p, { addFormField: v })
+            !_ && (0, i.jsx)(p, { addFormField: N })
         ]
     });
 }
@@ -95,7 +98,7 @@ function p(e) {
                     text: h.intl.string(h.t.EOwiEh),
                     onClick: () => {
                         t({
-                            field_type: a.QJ.TEXT_INPUT,
+                            field_type: s.QJ.TEXT_INPUT,
                             label: h.intl.string(h.t.EOwiEh),
                             required: !0
                         });
@@ -105,7 +108,7 @@ function p(e) {
                     text: h.intl.string(h.t.jqrNDg),
                     onClick: () => {
                         t({
-                            field_type: a.QJ.TEXT_INPUT,
+                            field_type: s.QJ.TEXT_INPUT,
                             label: h.intl.string(h.t.jqrNDg),
                             required: !0
                         });
@@ -115,7 +118,7 @@ function p(e) {
                     text: h.intl.string(h.t.I5q8vr),
                     onClick: () => {
                         t({
-                            field_type: a.QJ.TEXT_INPUT,
+                            field_type: s.QJ.TEXT_INPUT,
                             label: h.intl.string(h.t.I5q8vr),
                             required: !0
                         });
@@ -132,25 +135,7 @@ function p(e) {
                 className: g.examplesHeader,
                 children: h.intl.string(h.t.ID04cH)
             }),
-            (0, i.jsx)('div', {
-                className: g.examples,
-                children: n.map((e) =>
-                    (0, i.jsx)(
-                        s.Clickable,
-                        {
-                            className: g.pill,
-                            onClick: e.onClick,
-                            children: (0, i.jsx)(l.xv, {
-                                tag: 'span',
-                                variant: 'text-sm/medium',
-                                color: 'interactive-normal',
-                                children: e.text
-                            })
-                        },
-                        e.text
-                    )
-                )
-            })
+            (0, i.jsx)(c.j, { pills: n })
         ]
     });
 }

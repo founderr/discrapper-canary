@@ -80,6 +80,7 @@ function m(e) {
                                 shouldShow: !e.enabled,
                                 spacing: 16,
                                 hideOnClick: !1,
+                                className: u.tooltipContainer,
                                 tooltipClassName: u.tooltip,
                                 children: (0, i.jsxs)('div', {
                                     className: s()(u.joinOptionContent, {
