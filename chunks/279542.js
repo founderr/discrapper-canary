@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: function () {
-        return A;
+        return Z;
     },
     fp: function () {
         return R;
@@ -195,7 +195,7 @@ function y(e) {
               ]
           });
 }
-function Z(e) {
+function A(e) {
     let { guild: t, mfaLevel: n } = e,
         l = (0, o.e7)([g.Z], () => null != t && g.Z.can(T.Plq.MANAGE_GUILD, t), [t]),
         s = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
@@ -266,7 +266,7 @@ function Z(e) {
           })
         : null;
 }
-function A() {
+function Z() {
     let { guild: e, mfaLevel: t } = (0, o.cj)([I.Z], () => I.Z.getProps(), []),
         n = (0, o.e7)([x.Z], () => x.Z.enabled, []);
     return null == e
@@ -280,7 +280,7 @@ function A() {
                 children: [
                     (0, i.jsx)(y, { guild: e }),
                     (0, i.jsx)(S, { guild: e }),
-                    (0, i.jsx)(Z, {
+                    (0, i.jsx)(A, {
                         guild: e,
                         mfaLevel: t
                     }),

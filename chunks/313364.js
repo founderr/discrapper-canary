@@ -45,10 +45,10 @@ function E(e) {
             },
             [l]
         ),
-        Z = r.useRef(null),
-        A = r.useCallback(() => {
+        A = r.useRef(null),
+        Z = r.useCallback(() => {
             var e;
-            null === (e = Z.current) || void 0 === e || e.resetSearchText();
+            null === (e = A.current) || void 0 === e || e.resetSearchText();
         }, []);
     if (null == n) return null;
     let L = (0, _.xb)(!1, !1, R);
@@ -89,14 +89,14 @@ function E(e) {
                                                       children: [
                                                           (0, i.jsx)(N.Z, {
                                                               guild: n,
-                                                              ref: Z
+                                                              ref: A
                                                           }),
                                                           (0, i.jsx)(I.Z, {
                                                               guild: n,
                                                               searchState: L,
                                                               compact: !0,
                                                               onSelectRow: y,
-                                                              onResetForNewMembers: A
+                                                              onResetForNewMembers: Z
                                                           }),
                                                           L !== _.po.SUCCESS_STILL_INDEXING && (0, i.jsx)(v.Z, { guildId: n.id })
                                                       ]

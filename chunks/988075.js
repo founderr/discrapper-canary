@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return h;
+        return x;
     }
 }),
     t(47120);
@@ -16,11 +16,11 @@ var l = t(200651),
     m = t(944486),
     f = t(388032),
     p = t(116803);
-function h(e) {
-    let { file: n, name: t, size: r, spoiler: h } = e,
-        x = (0, o.e7)([m.Z], () => m.Z.getChannelId()),
+function x(e) {
+    let { file: n, name: t, size: r, spoiler: x } = e,
+        h = (0, o.e7)([m.Z], () => m.Z.getChannelId()),
         v = i.useMemo(() => (null != n.contentType && -1 !== n.contentType.indexOf('/') ? n.contentType.split('/') : ['unknown', 'unknown']), [n.contentType]),
-        [_, C] = i.useState(h),
+        [C, _] = i.useState(x),
         g = i.useMemo(
             () => () =>
                 (0, l.jsx)(d.mz, {
@@ -29,9 +29,9 @@ function h(e) {
                     showDownload: !0,
                     showImageAppPicker: !1,
                     isVisualMediaType: !1,
-                    channelId: x
+                    channelId: h
                 }),
-            [n, v, x]
+            [n, v, h]
         ),
         I = (e) =>
             (0, l.jsx)(s.Z, {
@@ -43,12 +43,12 @@ function h(e) {
             });
     return (0, l.jsx)('div', {
         className: p.fileDisplayContainer,
-        children: h
+        children: x
             ? (0, l.jsx)(c.Z, {
                   type: c.Z.Types.ATTACHMENT,
                   reason: u.wk.SPOILER,
-                  obscured: _,
-                  onToggleObscurity: () => C((e) => !e),
+                  obscured: C,
+                  onToggleObscurity: () => _((e) => !e),
                   children: (e) => I(e)
               })
             : I(!1)

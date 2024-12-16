@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return h;
+        return x;
     }
 });
 var l = t(200651),
@@ -15,18 +15,18 @@ var l = t(200651),
     m = t(866040),
     f = t(388032),
     p = t(633942);
-function h(e) {
+function x(e) {
     let { entry: n, channel: t, className: i } = e,
-        { displayParticipants: h, participant1: x, participant2: v, numOtherParticipants: _, orderedParticipants: C } = (0, c.Z)(n),
-        g = [x, v];
+        { displayParticipants: x, participant1: h, participant2: v, numOtherParticipants: C, orderedParticipants: _ } = (0, c.Z)(n),
+        g = [h, v];
     return (0, l.jsxs)('div', {
         className: r()(p.container, i),
         children: [
-            h.length > 0
+            x.length > 0
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(m.Z, {
-                              participants: C,
+                              participants: _,
                               channel: t,
                               children: (e) =>
                                   (0, l.jsx)(a.Clickable, {
@@ -34,7 +34,7 @@ function h(e) {
                                       ...e,
                                       children: (0, l.jsx)(o.Z, {
                                           maxUsers: 3,
-                                          users: h,
+                                          users: x,
                                           size: a.AvatarSizes.SIZE_20,
                                           avatarClassName: p.stackedAvatar,
                                           hideOverflowCount: !0,
@@ -57,7 +57,7 @@ function h(e) {
                 children: f.intl.format(f.t.rH95Gh, {
                     user0: s.ZP.getName(t.guild_id, t.id, g[0]),
                     user1: s.ZP.getName(t.guild_id, t.id, g[1]),
-                    countOthers: _,
+                    countOthers: C,
                     name0Hook: (e, n) =>
                         (0, l.jsx)(
                             d.Z,
@@ -82,7 +82,7 @@ function h(e) {
                         (0, l.jsx)(
                             m.Z,
                             {
-                                participants: C,
+                                participants: _,
                                 channel: t,
                                 children: (n) =>
                                     (0, l.jsx)(u.Z, {

@@ -26,8 +26,8 @@ var i = n(200651),
     E = n(626135),
     R = n(700785),
     y = n(434404),
-    Z = n(92160),
-    A = n(981631),
+    A = n(92160),
+    Z = n(981631),
     L = n(231338),
     D = n(388032),
     O = n(86592);
@@ -39,8 +39,8 @@ let P = 'WELCOME_CHANNEL',
             [N, T] = r.useState(!1),
             E = r.useRef(null),
             y = (0, u.e7)([j.Z], () => j.Z.getChannel(o.channel_id)),
-            Z = (0, u.e7)([C.ZP], () => (null != o.emoji_id ? C.ZP.getUsableCustomEmojiById(o.emoji_id) : null)),
-            k = null != y && R.Uu(A.Plq.VIEW_CHANNEL, y),
+            A = (0, u.e7)([C.ZP], () => (null != o.emoji_id ? C.ZP.getUsableCustomEmojiById(o.emoji_id) : null)),
+            k = null != y && R.Uu(Z.Plq.VIEW_CHANNEL, y),
             M = null !== (t = (0, f.KS)(y)) && void 0 !== t ? t : m.TextIcon,
             w = (0, p.ZP)(y, !1),
             [, B] = (0, c.c)({
@@ -73,11 +73,11 @@ let P = 'WELCOME_CHANNEL',
                 [B, U]
             ),
             (l = k
-                ? null != Z || null != o.emoji_name
+                ? null != A || null != o.emoji_name
                     ? (0, i.jsx)(g.Z, {
-                          emojiId: null == Z ? void 0 : Z.id,
-                          emojiName: null != Z ? Z.name : o.emoji_name,
-                          animated: !!(null == Z ? void 0 : Z.animated)
+                          emojiId: null == A ? void 0 : A.id,
+                          emojiName: null != A ? A.name : o.emoji_name,
+                          animated: !!(null == A ? void 0 : A.animated)
                       })
                     : (0, i.jsx)(M, {
                           size: 'md',
@@ -228,7 +228,7 @@ t.Z = (e) => {
                         j.forEach((t) => {
                             e.push(t.description), n.push(t.channel_id), null != t.emoji_id && (i = !0);
                         }),
-                        E.default.track(A.rMx.GUILD_WELCOME_SCREEN_SETTINGS_UPDATED, {
+                        E.default.track(Z.rMx.GUILD_WELCOME_SCREEN_SETTINGS_UPDATED, {
                             guild_id: null == t ? void 0 : t.id,
                             options: e,
                             options_channel_ids: n,
@@ -242,7 +242,7 @@ t.Z = (e) => {
         ),
         r.useEffect(() => () => (0, N.sm)(), []);
     let H = r.useCallback(() => {
-        null != t && y.Z.open(t.id, A.pNK.ONBOARDING);
+        null != t && y.Z.open(t.id, Z.pNK.ONBOARDING);
     }, [t]);
     return null == t
         ? null
@@ -273,7 +273,7 @@ t.Z = (e) => {
                       variant: 'text-sm/normal',
                       children: D.intl.string(D.t['w2d74+'])
                   }),
-                  (0, i.jsx)(Z.Z, {
+                  (0, i.jsx)(A.Z, {
                       enabled: R,
                       onPreview:
                           (null == j ? void 0 : j.length) === 0
@@ -347,7 +347,7 @@ t.Z = (e) => {
                                               P();
                                           },
                                           onKeyDown: (e) => {
-                                              e.keyCode === A.yXg.ENTER && e.preventDefault();
+                                              e.keyCode === Z.yXg.ENTER && e.preventDefault();
                                           },
                                           value: b,
                                           maxLength: 140,

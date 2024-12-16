@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return A;
     }
 }),
     n(47120);
@@ -36,8 +36,8 @@ function y(e) {
         { guild: d, role: h, highestRole: g, selectedItem: f, onClick: C, currentPosition: _, onDragStart: I, onDragReset: N, onDragComplete: T, roleStyle: b } = e,
         S = (0, v.T)(d, g, h),
         y = (0, x.pM)(d.id, h.id),
-        Z = null == S && !y,
-        A = (null === (t = h.tags) || void 0 === t ? void 0 : t.guild_connections) !== void 0,
+        A = null == S && !y,
+        Z = (null === (t = h.tags) || void 0 === t ? void 0 : t.guild_connections) !== void 0,
         [, L] = (0, a.c)({
             type: R,
             item: () => (
@@ -47,7 +47,7 @@ function y(e) {
                     position: _
                 }
             ),
-            canDrag: () => Z,
+            canDrag: () => A,
             end: (e, t) => {
                 let n = t.getDropResult();
                 if (null == n) {
@@ -59,7 +59,7 @@ function y(e) {
         }),
         [{ dragSourcePosition: D }, O] = (0, o.L)({
             accept: R,
-            canDrop: () => Z,
+            canDrop: () => A,
             collect: (e) => {
                 let t = e.getItem();
                 return null != t && e.isOver() && e.canDrop() ? { dragSourcePosition: t.position } : { dragSourcePosition: null };
@@ -68,7 +68,7 @@ function y(e) {
         }),
         P = null !== (r = h.colorString) && void 0 !== r ? r : (0, c.Rf)(j.p6O);
     return (
-        (l = A
+        (l = Z
             ? (0, i.jsx)(p.Z, {
                   size: 12,
                   color: h.colorString,
@@ -124,14 +124,14 @@ function y(e) {
         })
     );
 }
-function Z(e) {
+function A(e) {
     let { guild: t, currentRoleId: n, setCurrentRoleId: l, setSelectedSection: a } = e,
         o = (0, d.e7)([I.Z], () => I.Z.roles),
         c = (0, d.e7)([C.Z], () => C.Z.getHighestRole(t)),
         m = (0, d.e7)([g.Z], () => g.Z.roleStyle),
         [x, p] = r.useState(o.length),
         { scrolledToTop: v, handleScroll: j } = (0, T.V)(),
-        { handleDragStart: R, handleDragReset: Z, handleDragComplete: A } = (0, N.Z)(o),
+        { handleDragStart: R, handleDragReset: A, handleDragComplete: Z } = (0, N.Z)(o),
         L = r.useRef(null),
         D = r.useCallback(
             (e) => {
@@ -213,8 +213,8 @@ function Z(e) {
                                     onClick: () => l(e.id),
                                     currentPosition: r,
                                     onDragStart: R,
-                                    onDragReset: Z,
-                                    onDragComplete: A,
+                                    onDragReset: A,
+                                    onDragComplete: Z,
                                     roleStyle: m
                                 },
                                 e.id

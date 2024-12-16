@@ -3,7 +3,7 @@ n.d(t, {
         return g;
     },
     H2: function () {
-        return m;
+        return E;
     },
     MO: function () {
         return p;
@@ -65,8 +65,8 @@ function p(e) {
           });
 }
 function g(e) {
-    return (0, l.e7)([a.Z], () => m(e), [e]);
+    return (0, l.e7)([a.Z], () => E(e), [e]);
 }
-function m(e) {
+function E(e) {
     return null != e && a.Z.can(d.Plq.ADMINISTRATOR, e);
 }

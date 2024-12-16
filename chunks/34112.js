@@ -31,8 +31,8 @@ var i = n(200651),
     E = n(203377),
     R = n(981631),
     y = n(388032),
-    Z = n(107959),
-    A = n(147465);
+    A = n(107959),
+    Z = n(147465);
 let L = 'DRAGGABLE_ROLE';
 function D(e) {
     let { setEditRoleId: t, guild: n, everyoneRole: l, otherRoles: s, setSelectedSection: a, renderHeader: o, headerHeight: c, query: u } = e,
@@ -49,7 +49,7 @@ function D(e) {
     let f = r.useMemo(() => s.filter((e) => (0, b.uo)(e, x)), [s, x]),
         C = r.useMemo(() => [...s, l], [s, l]),
         { draggingId: _, handleDragStart: j, handleDragReset: E, handleDragComplete: y } = (0, S.Z)(C),
-        Z = r.useCallback(
+        A = r.useCallback(
             (e) => {
                 var r;
                 let { row: l } = e;
@@ -81,20 +81,20 @@ function D(e) {
         sectionHeight: c,
         renderSection: o,
         rowHeight: 61,
-        renderRow: Z
+        renderRow: A
     });
 }
 function O() {
     return (0, i.jsxs)('div', {
-        className: Z.emptyRoles,
+        className: A.emptyRoles,
         children: [
-            (0, i.jsx)('div', { className: A.dragSpacing }),
+            (0, i.jsx)('div', { className: Z.dragSpacing }),
             (0, i.jsx)(u.GroupIcon, {
                 size: 'md',
                 color: 'currentColor'
             }),
             (0, i.jsx)(u.Text, {
-                className: Z.emptyRolesText,
+                className: A.emptyRolesText,
                 variant: 'text-md/semibold',
                 color: 'text-muted',
                 children: y.intl.string(y.t['vR7M+/'])
@@ -163,7 +163,7 @@ function P(e) {
     if (U)
         return (0, i.jsx)('div', {
             ref: G,
-            className: s()(Z.roleRow, Z.roleRowDragging)
+            className: s()(A.roleRow, A.roleRowDragging)
         });
     function Y() {
         R(d.id);
@@ -172,10 +172,10 @@ function P(e) {
         Y(), D(E.ZI.MEMBERS);
     }
     return (0, i.jsxs)(u.Clickable, {
-        className: s()(Z.roleRow, {
-            [Z.roleRowDisableHover]: b,
-            [Z.containerDragBefore]: null != H && C < H,
-            [Z.containerDragAfter]: null != H && C > H
+        className: s()(A.roleRow, {
+            [A.roleRowDisableHover]: b,
+            [A.containerDragBefore]: null != H && C < H,
+            [A.containerDragAfter]: null != H && C > H
         }),
         onClick: Y,
         onContextMenu: W,
@@ -187,7 +187,7 @@ function P(e) {
         }),
         children: [
             (0, i.jsx)('div', {
-                className: s()(Z.dragIcon, A.dragSpacing, { [Z.dragIconHidden]: P || S }),
+                className: s()(A.dragIcon, Z.dragSpacing, { [A.dragIconHidden]: P || S }),
                 onMouseEnter: () => w(!0),
                 onMouseLeave: () => w(!1),
                 children: (0, i.jsx)(u.DragIcon, {
@@ -196,11 +196,11 @@ function P(e) {
                 })
             }),
             (0, i.jsxs)('div', {
-                className: s()(Z.roleNameContainer, A.roleNameSpacing),
+                className: s()(A.roleNameContainer, Z.roleNameSpacing),
                 children: [
                     (null === (t = d.tags) || void 0 === t ? void 0 : t.guild_connections) === null
                         ? (0, i.jsx)(g.Z, {
-                              className: Z.roleFlowerStar,
+                              className: A.roleFlowerStar,
                               color: d.colorString,
                               size: 24
                           })
@@ -208,24 +208,24 @@ function P(e) {
                               guildId: h.id,
                               role: d,
                               size: 24,
-                              className: Z.roleIcon,
-                              defaultIconClassName: Z.shield
+                              className: A.roleIcon,
+                              defaultIconClassName: A.shield
                           }),
                     null != O
                         ? (0, i.jsx)(j.Z, {
-                              className: Z.lock,
+                              className: A.lock,
                               tooltipText: O
                           })
                         : null,
                     (0, i.jsx)(u.Text, {
-                        className: Z.roleName,
+                        className: A.roleName,
                         color: 'header-primary',
                         variant: 'text-md/medium',
                         children: d.name
                     }),
                     (null === (l = d.tags) || void 0 === l ? void 0 : l.subscription_listing_id) != null &&
                         (0, i.jsx)(_.Z, {
-                            className: Z.subscriptionRoleIcon,
+                            className: A.subscriptionRoleIcon,
                             'aria-label': y.intl.string(y.t.a2Ak8f)
                         }),
                     (null === (c = d.tags) || void 0 === c ? void 0 : c.is_guild_product_role) === !0 && (0, i.jsx)(p.Z, {})
@@ -238,7 +238,7 @@ function P(e) {
                 children: (e) =>
                     (0, i.jsxs)(u.Clickable, {
                         ...e,
-                        className: s()(Z.memberCountContainer, A.memberSpacing),
+                        className: s()(A.memberCountContainer, Z.memberSpacing),
                         onClick: K,
                         children: [
                             (0, i.jsx)(u.Text, {
@@ -249,7 +249,7 @@ function P(e) {
                             (0, i.jsx)(u.UserIcon, {
                                 size: 'custom',
                                 color: 'currentColor',
-                                className: Z.person,
+                                className: A.person,
                                 width: 20,
                                 height: 20
                             })
@@ -257,10 +257,10 @@ function P(e) {
                     })
             }),
             (0, i.jsxs)('div', {
-                className: s()(Z.buttonsContainer, A.buttonsSpacing),
+                className: s()(A.buttonsContainer, Z.buttonsSpacing),
                 children: [
                     (0, i.jsx)(u.CircleIconButton, {
-                        className: s()(Z.circleButton, Z.editButton),
+                        className: s()(A.circleButton, A.editButton),
                         tooltip: P ? y.intl.string(y.t['HO/oXl']) : y.intl.string(y.t.bt75u7),
                         color: u.CircleIconButtonColors.SECONDARY,
                         size: u.CircleIconButtonSizes.SIZE_36,
@@ -280,7 +280,7 @@ function P(e) {
                         onClick: Y
                     }),
                     (0, i.jsx)(u.CircleIconButton, {
-                        className: Z.circleButton,
+                        className: A.circleButton,
                         tooltip: y.intl.string(y.t.UKOtz8),
                         color: u.CircleIconButtonColors.SECONDARY,
                         size: u.CircleIconButtonSizes.SIZE_36,

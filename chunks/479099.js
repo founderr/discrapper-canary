@@ -20,8 +20,8 @@ var i,
     _ = n(596454),
     p = n(607070),
     g = n(339085),
-    m = n(695346),
-    E = n(572004),
+    E = n(695346),
+    m = n(572004),
     I = n(388032),
     h = n(680475);
 function C(e) {
@@ -36,8 +36,8 @@ function C(e) {
         Z = o.useRef(null),
         j = (0, c.e7)([p.Z], () => p.Z.keyboardModeEnabled),
         U = (e) => {
-            let i = m.Sb.getSetting();
-            E.wS &&
+            let i = E.Sb.getSetting();
+            m.wS &&
                 i &&
                 (0, f.jW)(e, async () => {
                     let { default: e } = await n.e('29646').then(n.bind(n, 955116));

@@ -26,10 +26,10 @@ var i = n(200651),
 let N = { optionErrors: [] };
 function T(e) {
     var t;
-    let { guild: n, prompt: l, disableAutofocus: d, promptIndex: C, dragIndex: T, includeCount: S, singleColumn: E, onPromptDragComplete: R, onPromptDragStart: y, onPromptDragReset: Z } = e,
-        { dropdownsAllowed: A } = (0, m.Ug)(n.id),
+    let { guild: n, prompt: l, disableAutofocus: d, promptIndex: C, dragIndex: T, includeCount: S, singleColumn: E, onPromptDragComplete: R, onPromptDragStart: y, onPromptDragReset: A } = e,
+        { dropdownsAllowed: Z } = (0, m.Ug)(n.id),
         L = (0, a.e7)([x.Z], () => x.Z.editedDefaultChannelIds),
-        D = A ? _.qm : _.M$,
+        D = Z ? _.qm : _.M$,
         {
             drag: O,
             dragSourcePosition: P,
@@ -41,7 +41,7 @@ function T(e) {
             optionId: l.id,
             onDragStart: y,
             onDragComplete: R,
-            onDragReset: Z
+            onDragReset: A
         }),
         w = (0, a.cj)([f.Z], () => {
             var e;
@@ -51,7 +51,7 @@ function T(e) {
         [G, F] = r.useState(!1),
         H = null !== (t = w.options) && void 0 !== t ? t : w.optionErrors.filter(g.lm)[0],
         z = w.config,
-        W = A && l.options.length >= _.fY,
+        W = Z && l.options.length >= _.fY,
         V = (0, u.kl)(n.id, Array.from(L), [l]).length - L.size,
         Y = r.useRef(null);
     return (r.useLayoutEffect(() => {

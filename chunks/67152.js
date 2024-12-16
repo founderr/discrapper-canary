@@ -1,6 +1,6 @@
 n.d(t, {
     av: function () {
-        return A;
+        return Z;
     },
     bL: function () {
         return S;
@@ -137,14 +137,14 @@ let j = (e, t, n, i) => {
             children: d()(t).utc().format('MMMM YYYY')
         });
     },
-    Z = (e) => {
+    A = (e) => {
         var t;
         let { listingId: n } = e,
             i = (0, u.e7)([p.Z], () => p.Z.getSubscriptionListing(n)),
             r = null !== (t = null == i ? void 0 : i.name) && void 0 !== t ? t : '['.concat(T.intl.string(T.t['4tEmXV']), ']');
         return (0, l.jsx)(S, { children: r });
     },
-    A = (e) => {
+    Z = (e) => {
         let { children: t } = e;
         return (0, l.jsxs)(S, {
             className: b.subscribersCell,
@@ -216,7 +216,7 @@ let j = (e, t, n, i) => {
             render(e, t) {
                 let { expandedRows: n } = t,
                     i = [(0, l.jsx)(y, { children: e.periodStartingAt }, e.key)];
-                if (n.has(e.key)) for (let t in e.ppgs) i.push((0, l.jsx)(Z, { listingId: t }, t));
+                if (n.has(e.key)) for (let t in e.ppgs) i.push((0, l.jsx)(A, { listingId: t }, t));
                 return i;
             }
         },

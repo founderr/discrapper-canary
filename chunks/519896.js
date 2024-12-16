@@ -1,71 +1,71 @@
 t.r(n),
     t.d(n, {
         SubscriptionDetailsModal: function () {
-            return v;
+            return p;
         }
     });
-var o = t(200651),
-    i = t(192379),
-    l = t(269210),
-    r = t(752843),
-    s = t(481060),
-    a = t(757746),
+var l = t(200651),
+    o = t(192379),
+    i = t(269210),
+    a = t(752843),
+    r = t(481060),
+    s = t(757746),
     c = t(930155),
     d = t(889989),
     u = t(263519),
     m = t(73346),
     x = t(591759),
     h = t(886253),
-    f = t(680005),
-    p = t(938337);
-function v(e) {
+    v = t(680005),
+    f = t(938337);
+function p(e) {
     var n, t;
-    let { appId: v, subscriptionType: _, onClose: j, skuId: I, guildId: N, transitionState: S, onHeaderTitleClick: k } = e,
-        { data: g } = (0, c.H)(I),
-        C = g[0],
-        { data: R } = (0, a.Z)(I),
-        T = i.useMemo(() => {
+    let { appId: p, subscriptionType: _, onClose: j, skuId: N, guildId: I, transitionState: S, onHeaderTitleClick: C } = e,
+        { data: b } = (0, c.H)(N),
+        B = b[0],
+        { data: T } = (0, s.Z)(N),
+        g = o.useMemo(() => {
             var e;
-            return (null == R ? void 0 : R.thumbnail) != null && null !== (e = x.Z.toURLSafe((0, m._W)(v, R.thumbnail, 256))) && void 0 !== e ? e : void 0;
-        }, [v, null == R ? void 0 : R.thumbnail]),
-        E = i.useMemo(() => {
-            let e = null == R ? void 0 : R.benefits;
+            return (null == T ? void 0 : T.thumbnail) != null && null !== (e = x.Z.toURLSafe((0, m._W)(p, T.thumbnail, 256))) && void 0 !== e ? e : void 0;
+        }, [p, null == T ? void 0 : T.thumbnail]),
+        k = o.useMemo(() => {
+            let e = null == T ? void 0 : T.benefits;
             if (null != e && 0 !== e.length)
                 return e.map((e) => ({
                     id: e.id,
                     title: e.name,
                     description: e.description,
-                    icon: (0, d.n)(v, e.icon)
+                    icon: (0, d.n)(p, e.icon)
                 }));
-        }, [v, null == R ? void 0 : R.benefits]),
-        { openModal: Z, subscriptionPurchaseButtonState: b } = (0, u.Z)({
-            skuId: I,
-            initialSubscribeForGuild: null != N ? N : void 0
+        }, [p, null == T ? void 0 : T.benefits]),
+        { openModal: R, subscriptionPurchaseButtonState: E } = (0, u.Z)({
+            skuId: N,
+            initialSubscribeForGuild: null != I ? I : void 0
         });
-    return null == R
+    return null == T
         ? null
-        : (0, o.jsx)(h.A, {
-              appId: v,
-              skuId: I,
+        : (0, l.jsx)(h.A, {
+              appId: p,
+              skuId: N,
               transitionState: S,
-              onHeaderTitleClick: null != k ? k : j,
+              onHeaderTitleClick: null != C ? C : j,
               onClose: j,
-              footer: (0, o.jsx)(f.pV, {
-                  onClick: Z,
-                  appId: v,
+              footer: (0, l.jsx)(v.pV, {
+                  onClick: R,
+                  appId: p,
                   subscriptionType: _,
-                  skuId: I,
-                  subscriptionPlan: C,
-                  state: b
+                  skuId: N,
+                  subscriptionPlan: B,
+                  state: E
               }),
-              children: (0, o.jsx)(p.i, {
-                  appId: v,
-                  skuId: I,
+              children: (0, l.jsx)(f.i, {
+                  appId: p,
+                  skuId: N,
                   benefits:
-                      null != E
-                          ? E.map((e) =>
-                                (0, o.jsx)(
-                                    l.Gm,
+                      null != k
+                          ? k.map((e) =>
+                                (0, l.jsx)(
+                                    i.Gm,
                                     {
                                         header: e.title,
                                         icon: e.icon,
@@ -75,11 +75,11 @@ function v(e) {
                                 )
                             )
                           : void 0,
-                  description: null !== (n = R.description) && void 0 !== n ? n : void 0,
-                  imgSrc: T,
-                  title: null !== (t = null == C ? void 0 : C.name) && void 0 !== t ? t : R.summary,
-                  tag: (0, o.jsx)(r.Z, { type: _ }),
-                  FallbackIcon: s.BadgeIcon
+                  description: null !== (n = T.description) && void 0 !== n ? n : void 0,
+                  imgSrc: g,
+                  title: null !== (t = null == B ? void 0 : B.name) && void 0 !== t ? t : T.summary,
+                  tag: (0, l.jsx)(a.Z, { type: _ }),
+                  FallbackIcon: r.BadgeIcon
               })
           });
 }

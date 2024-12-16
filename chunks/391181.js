@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return m;
     },
     m: function () {
-        return m;
+        return E;
     }
 });
 var i = n(200651);
@@ -20,12 +20,12 @@ var r = n(120356),
     _ = n(388032),
     p = n(24753);
 function g(e) {
-    let { showEditProduct: t, showUnpublishProduct: n, showCopyLink: r, showTestDownload: l, showDeleteProduct: u, showReportProduct: a, onEditProduct: s, onUnpublishProduct: c, onDeleteProduct: d, onCopyLink: f, onTestDownload: g, onReportProduct: m, closePopout: E, onSelect: I } = e;
+    let { showEditProduct: t, showUnpublishProduct: n, showCopyLink: r, showTestDownload: l, showDeleteProduct: u, showReportProduct: a, onEditProduct: s, onUnpublishProduct: c, onDeleteProduct: d, onCopyLink: f, onTestDownload: g, onReportProduct: E, closePopout: m, onSelect: I } = e;
     return (0, i.jsx)('div', {
         className: p.menuContainer,
         children: (0, i.jsxs)(o.Menu, {
             navId: 'guild-product-context',
-            onClose: E,
+            onClose: m,
             'aria-label': _.intl.string(_.t.Z146dH),
             onSelect: I,
             children: [
@@ -77,15 +77,15 @@ function g(e) {
                             id: 'guild-product-report',
                             label: _.intl.string(_.t['6yUzvL']),
                             color: 'danger',
-                            action: m
+                            action: E
                         })
                 })
             ]
         })
     });
 }
-function m(e) {
-    let { product: t, guildId: n, showEditProduct: r, showUnpublishProduct: l, showTestDownload: u, showCopyLink: a, showDeleteProduct: s, showReportProduct: c, onEditProduct: d, onUnpublishProduct: f, onDeleteProduct: m, onCopyProductLink: E, onTestDownload: I, onReportProduct: h } = e;
+function E(e) {
+    let { product: t, guildId: n, showEditProduct: r, showUnpublishProduct: l, showTestDownload: u, showCopyLink: a, showDeleteProduct: s, showReportProduct: c, onEditProduct: d, onUnpublishProduct: f, onDeleteProduct: E, onCopyProductLink: m, onTestDownload: I, onReportProduct: h } = e;
     return (0, i.jsx)('div', {
         onClick: (e) => {
             e.stopPropagation();
@@ -108,8 +108,8 @@ function m(e) {
                     showDeleteProduct: s,
                     onEditProduct: d,
                     onUnpublishProduct: f,
-                    onDeleteProduct: m,
-                    onCopyLink: E,
+                    onDeleteProduct: E,
+                    onCopyLink: m,
                     onTestDownload: I,
                     onReportProduct: h
                 }),
@@ -132,8 +132,8 @@ function m(e) {
         })
     });
 }
-function E(e) {
-    let { product: t, guildId: n, onEditProduct: r, onUnpublishProduct: E, onDeleteProduct: I, onCopyProductLink: h, onTestDownload: C, disabled: S = !1 } = e,
+function m(e) {
+    let { product: t, guildId: n, onEditProduct: r, onUnpublishProduct: m, onDeleteProduct: I, onCopyProductLink: h, onTestDownload: C, disabled: S = !1 } = e,
         T = (0, a.U)(t, 600),
         v = null !== t.price_tier ? (0, s.T4)(t.price_tier, f.pK.USD) : void 0,
         b = (0, c.C)(t);
@@ -156,7 +156,7 @@ function E(e) {
                         showDeleteProduct: !0,
                         showReportProduct: !1,
                         onEditProduct: r,
-                        onUnpublishProduct: E,
+                        onUnpublishProduct: m,
                         onDeleteProduct: I,
                         onCopyLink: h,
                         onTestDownload: C,
@@ -212,7 +212,7 @@ function E(e) {
                         ]
                     }),
                     !S &&
-                        (0, i.jsx)(m, {
+                        (0, i.jsx)(E, {
                             product: t,
                             guildId: n,
                             showEditProduct: !0,
@@ -222,7 +222,7 @@ function E(e) {
                             showDeleteProduct: !0,
                             showReportProduct: !1,
                             onEditProduct: r,
-                            onUnpublishProduct: E,
+                            onUnpublishProduct: m,
                             onDeleteProduct: I,
                             onCopyProductLink: h,
                             onTestDownload: C,

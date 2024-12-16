@@ -9,7 +9,7 @@ n.d(t, {
         return I;
     },
     OU: function () {
-        return m;
+        return E;
     },
     RH: function () {
         return a;
@@ -21,7 +21,7 @@ n.d(t, {
         return d;
     },
     Vg: function () {
-        return E;
+        return m;
     },
     Vk: function () {
         return _;
@@ -68,8 +68,8 @@ let a = 1000,
     _ = 1,
     p = 1,
     g = 260,
-    m = 100,
-    E = 1,
+    E = 100,
+    m = 1,
     I = 50,
     h = 20,
     C = 150,

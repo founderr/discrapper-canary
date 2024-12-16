@@ -32,7 +32,7 @@ function E(e) {
         { editRoleId: n, setEditRoleId: l, selectedSection: E, setSelectedSection: R } = e,
         y = (0, a.e7)([p.Z], () => p.Z.guild, []);
     s()(null != y, 'guildId cannot be null here');
-    let { role: Z, permissionSearchQuery: A } = (0, a.cj)(
+    let { role: A, permissionSearchQuery: Z } = (0, a.cj)(
         [p.Z],
         () => ({
             role: p.Z.getRole(n),
@@ -41,10 +41,10 @@ function E(e) {
         [n]
     );
     r.useEffect(() => {
-        null == Z && l(null);
-    }, [Z, l]);
+        null == A && l(null);
+    }, [A, l]);
     let L = (0, a.e7)([m.Z], () => m.Z.getHighestRole(y), [y]),
-        D = (0, a.e7)([m.Z], () => !m.Z.isRoleHigher(y, L, Z)),
+        D = (0, a.e7)([m.Z], () => !m.Z.isRoleHigher(y, L, A)),
         O = r.useRef(null),
         P = (0, a.e7)([f.Z], () => f.Z.getProps().integrations);
     if (
@@ -56,24 +56,24 @@ function E(e) {
                 tab_opened: i,
                 is_everyone: (0, d.pM)(y.id, n),
                 role_id: n,
-                role_mentionable: null == Z ? void 0 : Z.mentionable,
-                role_hoist: null == Z ? void 0 : Z.hoist,
-                role_permissions: null == Z ? void 0 : Z.permissions.toString(),
+                role_mentionable: null == A ? void 0 : A.mentionable,
+                role_hoist: null == A ? void 0 : A.hoist,
+                role_permissions: null == A ? void 0 : A.permissions.toString(),
                 role_num_members: r,
                 ...(0, c.hH)(y.id)
             });
-        }, [E, y.id, null == Z ? void 0 : Z.id]),
+        }, [E, y.id, null == A ? void 0 : A.id]),
         r.useEffect(() => {
-            if ((null == Z ? void 0 : Z.id) != null) (0, u.sE)(y.id, Z.id);
-        }, [y.id, null == Z ? void 0 : Z.id]),
-        null == Z)
+            if ((null == A ? void 0 : A.id) != null) (0, u.sE)(y.id, A.id);
+        }, [y.id, null == A ? void 0 : A.id]),
+        null == A)
     )
         return null;
     switch (E) {
         case b.ZI.DISPLAY:
             t = (0, i.jsx)(I.ZP, {
                 guild: y,
-                role: Z,
+                role: A,
                 locked: D,
                 highestRole: L,
                 setSelectedSection: R
@@ -82,16 +82,16 @@ function E(e) {
         case b.ZI.PERMISSIONS:
             t = (0, i.jsx)(N.ZP, {
                 guild: y,
-                role: Z,
+                role: A,
                 locked: D,
                 setSelectedSection: R,
-                initialSearchQuery: A
+                initialSearchQuery: Z
             });
             break;
         case b.ZI.VERIFICATIONS:
             t = (0, i.jsx)(_.Z, {
                 guild: y,
-                role: Z,
+                role: A,
                 locked: D,
                 setSelectedSection: R,
                 integrations: null != P ? P : void 0
@@ -100,7 +100,7 @@ function E(e) {
         case b.ZI.MEMBERS:
             t = (0, i.jsx)(v.ZP, {
                 guild: y,
-                role: Z,
+                role: A,
                 locked: D,
                 setSelectedSection: R
             });

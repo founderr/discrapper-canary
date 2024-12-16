@@ -28,8 +28,8 @@ var i = n(200651),
     h = n(477690),
     g = n(481060),
     I = n(995648),
-    v = n(445986),
-    x = n(9807),
+    x = n(445986),
+    v = n(9807),
     b = n(330726),
     C = n(782568),
     S = n(581364),
@@ -43,14 +43,14 @@ var i = n(200651),
     L = n(312097),
     R = n(422559),
     k = n(703656),
-    O = n(280885),
-    B = n(706454),
+    B = n(280885),
+    O = n(706454),
     Z = n(314897),
     w = n(451478),
     D = n(626135),
     H = n(768581),
-    F = n(572004),
-    M = n(823379),
+    M = n(572004),
+    F = n(823379),
     U = n(900849),
     G = n(135431),
     z = n(674588),
@@ -82,8 +82,8 @@ var i = n(200651),
     eh = n(902294);
 let eg = d().parserFor(es.Z),
     eI = d().reactFor(d().ruleOutput(es.Z, 'react')),
-    ev = (0, m.Mg)(h.Z.APPLICATION_DIRECTORY_PROFILE_ICON_SIZE),
-    ex = 'redirect_to_support_server',
+    ex = (0, m.Mg)(h.Z.APPLICATION_DIRECTORY_PROFILE_ICON_SIZE),
+    ev = 'redirect_to_support_server',
     eb = 'start_application_install',
     eC = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(ep.Z5c.APPLICATION_DIRECTORY_PROFILE(e));
 function eS(e) {
@@ -138,11 +138,11 @@ function eS(e) {
             [m]
         ),
         ek = (0, _.e7)([w.Z], () => w.Z.isFocused()),
-        eO = (0, _.e7)([B.default], () => B.default.locale),
-        eB = a.useRef(m),
+        eB = (0, _.e7)([O.default], () => O.default.locale),
+        eO = a.useRef(m),
         eZ = (0, _.e7)([V.Z], () => {
             let e = V.Z.getApplication(m);
-            return null == e ? (e = V.Z.getApplication(eB.current)) : (eB.current = m), e;
+            return null == e ? (e = V.Z.getApplication(eO.current)) : (eO.current = m), e;
         }),
         ew = (0, ei.Z)({ application: eZ }),
         eD = (0, _.e7)([Z.default], () => Z.default.getSessionId());
@@ -166,22 +166,22 @@ function eS(e) {
     a.useEffect(() => {
         if (null == eZ) return;
         let e = new URL(location.href);
-        if (T && null != eD && 'true' === e.searchParams.get(ex)) {
-            e.searchParams.delete(ex);
+        if (T && null != eD && 'true' === e.searchParams.get(ev)) {
+            e.searchParams.delete(ev);
             let t = e.pathname + e.search;
             (0, k.dL)(t), eH();
         }
     }, [T, eH, eD, eZ]);
-    let eF = a.useCallback(() => {
+    let eM = a.useCallback(() => {
             var e;
-            null != (null == eZ ? void 0 : null === (e = eZ.guild) || void 0 === e ? void 0 : e.id) && (T ? eH() : (0, X.rf)({ [ex]: 'true' }));
+            null != (null == eZ ? void 0 : null === (e = eZ.guild) || void 0 === e ? void 0 : e.id) && (T ? eH() : (0, X.rf)({ [ev]: 'true' }));
         }, [eZ, T, eH]),
-        eM = a.useCallback(() => {
+        eF = a.useCallback(() => {
             (0, en.replaceAppDirectoryURLWith)(''.concat(ep.Z5c.APPLICATION_DIRECTORY_PROFILE(m)).concat(location.search));
         }, [m]);
     a.useEffect(() => {
-        f === eu.ApplicationDirectoryProfileSections.GENERAL && eM();
-    }, [eM, f]),
+        f === eu.ApplicationDirectoryProfileSections.GENERAL && eF();
+    }, [eF, f]),
         a.useEffect(() => {
             if (null != m) {
                 let e = 'true' === new URLSearchParams(location.search).get('preview') || void 0;
@@ -208,7 +208,7 @@ function eS(e) {
     let eU = H.ZP.getApplicationIconURL({
             id: null !== (l = null == eZ ? void 0 : eZ.id) && void 0 !== l ? l : '-1',
             icon: null == eZ ? void 0 : eZ.icon,
-            size: ev
+            size: ex
         }),
         eG = (0, P.Z)({
             id: null !== (c = null == eZ ? void 0 : eZ.id) && void 0 !== c ? c : '',
@@ -247,7 +247,7 @@ function eS(e) {
         ),
         eq = a.useMemo(() => {
             var e, t, n;
-            return null !== (n = (null !== (t = null == eZ ? void 0 : null === (e = eZ.directory_entry) || void 0 === e ? void 0 : e.carousel_items) && void 0 !== t ? t : []).map(X.RF).filter(M.lm)) && void 0 !== n ? n : [];
+            return null !== (n = (null !== (t = null == eZ ? void 0 : null === (e = eZ.directory_entry) || void 0 === e ? void 0 : e.carousel_items) && void 0 !== t ? t : []).map(X.RF).filter(F.lm)) && void 0 !== n ? n : [];
         }, [eZ]),
         eX = a.useCallback(
             (e, t) => {
@@ -256,7 +256,7 @@ function eS(e) {
                         n = t.findIndex((t) => t === e);
                     if (n < 0) return;
                     let i = t.map((e) => ({
-                        url: (0, v.Q)(e.src),
+                        url: (0, x.Q)(e.src),
                         original: e.src,
                         width: e.width,
                         height: e.height,
@@ -318,10 +318,10 @@ function eS(e) {
                     (0, er.G)({
                         id: eZ.id,
                         name: eZ.name,
-                        locale: eO
+                        locale: eB
                     })
                 );
-        }, [eO, eZ]),
+        }, [eB, eZ]),
         e0 = a.useCallback(
             (e) =>
                 (0, i.jsxs)(g.Menu, {
@@ -350,7 +350,7 @@ function eS(e) {
                     application_id: eZ.id,
                     guild_id: h
                 }),
-                    (0, F.JG)(eC(eZ.id)),
+                    (0, M.JG)(eC(eZ.id)),
                     e6(!0);
         }, [eZ, e6, h]);
     a.useEffect(() => {
@@ -456,7 +456,7 @@ function eS(e) {
                             )
                           : (null == eZ ? void 0 : eZ.description) != null &&
                             e.push(
-                                (0, i.jsx)(O.Z, {
+                                (0, i.jsx)(B.Z, {
                                     className: ef.description,
                                     userBio: eZ.description
                                 })
@@ -507,7 +507,7 @@ function eS(e) {
                             : (e.alt = e_.intl.string(e_.t['5UVm9/']));
                     }),
                         e.push(
-                            (0, i.jsx)(x.Z, {
+                            (0, i.jsx)(v.Z, {
                                 className: ef.carousel,
                                 themedPagination: !0,
                                 items: eq,
@@ -567,7 +567,7 @@ function eS(e) {
             }
             return (
                 tt(t),
-                0 === e.length && f !== eu.ApplicationDirectoryProfileSections.GENERAL && null != eZ && eM(),
+                0 === e.length && f !== eu.ApplicationDirectoryProfileSections.GENERAL && null != eZ && eF(),
                 e.map((e, t) =>
                     (0, i.jsx)(
                         'div',
@@ -579,7 +579,7 @@ function eS(e) {
                     )
                 )
             );
-        }, [f, eM, eZ, eA, e4, e8, eq, ek, eX, tr, m, ti, ta, eY]),
+        }, [f, eF, eZ, eA, e4, e8, eq, ek, eX, tr, m, ti, ta, eY]),
         tl = a.useMemo(() => {
             let e = [
                 {
@@ -653,8 +653,8 @@ function eS(e) {
                                                       alt: '',
                                                       'aria-hidden': !0,
                                                       src: eU,
-                                                      width: ev,
-                                                      height: ev
+                                                      width: ex,
+                                                      height: ex
                                                   }),
                                                   (0, i.jsx)(Q.Z, {
                                                       application: eZ,
@@ -780,7 +780,7 @@ function eS(e) {
                                               application: eZ,
                                               guildId: h,
                                               onViewCategory: eJ,
-                                              onClickGuildWidget: eF
+                                              onClickGuildWidget: eM
                                           })
                                       ]
                                   })

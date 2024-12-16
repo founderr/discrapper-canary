@@ -36,14 +36,14 @@ function v(e) {
                 });
             return null == v ? void 0 : v.filter((t) => !e.includes(t));
         }, [l, S, v]),
-        Z = null == E,
-        A = null !== (t = null == E ? void 0 : E.published) && void 0 !== t && t,
+        A = null == E,
+        Z = null !== (t = null == E ? void 0 : E.published) && void 0 !== t && t,
         L = null !== (n = null == E ? void 0 : E.archived) && void 0 !== n && n;
     return (0, i.jsxs)('div', {
         className: I.body,
         children: [
             null != T && (0, i.jsx)(m.Z, { children: T.getAnyErrorMessage() }),
-            !A &&
+            !Z &&
                 !R &&
                 !L &&
                 (0, i.jsxs)('div', {
@@ -63,13 +63,13 @@ function v(e) {
                             ]
                         }),
                         (0, i.jsx)(o.Tooltip, {
-                            shouldShow: Z,
+                            shouldShow: A,
                             tooltipClassName: _.autoWidth,
                             text: C.intl.string(C.t.v7lRIi),
                             children: (e) =>
                                 (0, i.jsx)(o.Button, {
                                     ...e,
-                                    disabled: Z,
+                                    disabled: A,
                                     color: o.Button.Colors.CUSTOM,
                                     wrapperClassName: _.autoWidth,
                                     className: s()(I.publishButton, _.autoWidth),

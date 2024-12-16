@@ -76,8 +76,8 @@ function p(e) {
             handleTagChangeEvent: E,
             handleSelectTag: R,
             handleUnselectTag: y,
-            handleResetTagSelections: Z,
-            handleInputBlurEvent: A
+            handleResetTagSelections: A,
+            handleInputBlurEvent: Z
         } = (0, m.Q)(v, {
             scrollerRef: I,
             mainInputRef: C,
@@ -90,8 +90,8 @@ function p(e) {
         [M, w] = r.useState(!1),
         B = r.useCallback(() => {
             var e;
-            w(!1), Z(), null === (e = C.current) || void 0 === e || e.focus({ preventScroll: !0 });
-        }, [Z]);
+            w(!1), A(), null === (e = C.current) || void 0 === e || e.focus({ preventScroll: !0 });
+        }, [A]);
     r.useEffect(() => {
         if (!M && k !== D) l(D);
     }, [l, k, D, M]),
@@ -159,7 +159,7 @@ function p(e) {
                         onChange: T,
                         onKeyDownCapture: b,
                         onPaste: N,
-                        onBlur: A,
+                        onBlur: Z,
                         placeholder: 0 === D.length ? g : void 0,
                         value: L
                     })

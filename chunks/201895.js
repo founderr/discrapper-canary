@@ -17,7 +17,7 @@ function s(e) {
 function c(e) {
     let t,
         { channel: n, unread: c = !1, mentionCount: d = 0, userCount: f, embeddedActivitiesCount: _, isSubscriptionGated: p, needSubscriptionToAccess: g } = e,
-        m = (0, o.F6)(n, l.default, r.Z);
+        E = (0, o.F6)(n, l.default, r.Z);
     switch (n.type) {
         case u.d4z.DM:
             t = c ? a.t.F2MZsr : a.t.fYqXVV;
@@ -35,24 +35,24 @@ function c(e) {
             t = d > 0 ? a.t.sDKIpq : c ? a.t.VM7z8f : a.t.WJ3MPj;
             break;
         case u.d4z.GUILD_VOICE:
-            let E = [a.intl.formatToPlainString(a.t.bkpadH, { channelName: n.name })];
-            if ((d > 0 && E.push(a.intl.formatToPlainString(a.t['3l1GOz'], { mentionCount: d })), c && E.push(a.intl.string(a.t.x5zAGR)), null != f)) {
+            let m = [a.intl.formatToPlainString(a.t.bkpadH, { channelName: n.name })];
+            if ((d > 0 && m.push(a.intl.formatToPlainString(a.t['3l1GOz'], { mentionCount: d })), c && m.push(a.intl.string(a.t.x5zAGR)), null != f)) {
                 let e = n.userLimit;
                 null != e && e > 0
-                    ? E.push(
+                    ? m.push(
                           a.intl.formatToPlainString(a.t['6qgTOD'], {
                               userCount: f,
                               limit: e
                           })
                       )
-                    : E.push(a.intl.formatToPlainString(a.t.GNIiAA, { userCount: f }));
+                    : m.push(a.intl.formatToPlainString(a.t.GNIiAA, { userCount: f }));
             }
-            null != _ && _ > 0 && E.push(a.intl.formatToPlainString(a.t.O6PLYW, { activitiesCount: _ }));
+            null != _ && _ > 0 && m.push(a.intl.formatToPlainString(a.t.O6PLYW, { activitiesCount: _ }));
             let I = s({
                 isSubscriptionGated: p,
                 needSubscriptionToAccess: g
             });
-            return null != I && E.push(I), E.join(', ');
+            return null != I && m.push(I), m.join(', ');
         case u.d4z.GUILD_STAGE_VOICE:
             t = a.t.TPPk2d;
             break;
@@ -61,7 +61,7 @@ function c(e) {
     }
     let h = [
             a.intl.formatToPlainString(t, {
-                channelName: m,
+                channelName: E,
                 mentionCount: d
             })
         ],

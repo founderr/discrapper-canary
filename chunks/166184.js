@@ -28,8 +28,8 @@ t.Z = function (e) {
                 [p.cardDisabled]: I
             })
         });
-    let { name: Z } = l,
-        A =
+    let { name: A } = l,
+        Z =
             null != l.discoverySplash && /^data:/.test(l.discoverySplash)
                 ? l.discoverySplash
                 : h.ZP.getGuildDiscoverySplashURL({
@@ -82,7 +82,7 @@ t.Z = function (e) {
                     (0, i.jsx)('div', {
                         className: p.splash,
                         children: (0, i.jsx)('img', {
-                            src: null != A ? A : L,
+                            src: null != Z ? Z : L,
                             alt: '',
                             className: p.splashImage,
                             onLoad: () => y(!0)
@@ -121,7 +121,7 @@ t.Z = function (e) {
                             (0, i.jsx)(o.Text, {
                                 className: p.guildName,
                                 variant: 'text-md/normal',
-                                children: (0, i.jsx)('span', { children: Z })
+                                children: (0, i.jsx)('span', { children: A })
                             })
                         ]
                     }),

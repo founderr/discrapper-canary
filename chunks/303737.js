@@ -9,7 +9,7 @@ n.d(t, {
         return I;
     },
     m7: function () {
-        return E;
+        return m;
     },
     r4: function () {
         return T;
@@ -38,8 +38,8 @@ var i = n(991637),
     p = n(981631),
     g = n(176505);
 r().shim();
-let m = {};
-function E(e) {
+let E = {};
+function m(e) {
     let t = (0, l.e7)([a.Z], () => a.Z.getChannel(e)),
         n = (0, l.e7)([_.Z], () => _.Z.getChannel(e));
     return null != t ? t : n;
@@ -90,7 +90,7 @@ function h(e) {
 }
 function C(e) {
     let t = h(e);
-    (m[e] = t),
+    (E[e] = t),
         t.forEach((e) => {
             let t = e.set('flags', g.zZ.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
             o.Z.dispatch({
@@ -101,7 +101,7 @@ function C(e) {
 }
 function S(e) {
     var t;
-    (null !== (t = m[e]) && void 0 !== t ? t : h(e)).forEach((e) => {
+    (null !== (t = E[e]) && void 0 !== t ? t : h(e)).forEach((e) => {
         o.Z.dispatch({
             type: 'CHANNEL_DELETE',
             channel: e

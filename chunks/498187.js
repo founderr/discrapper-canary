@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return h;
+        return x;
     }
 });
 var l = t(876215),
@@ -18,20 +18,20 @@ let f = {
         [i.z.PLAYSTATION]: c.kG.PLAYSTATION
     },
     p = { [u._.EMBED]: a.m1.Embed };
-function h(e) {
+function x(e) {
     let n,
         t,
         { entry: i, location: a, baseEntryData: c } = e,
         u = (0, r.q)(i.extra.application_id),
-        h = null == u ? void 0 : u.getIconURL(d.Si.LARGE),
-        x = i.extra.game_name;
+        x = null == u ? void 0 : u.getIconURL(d.Si.LARGE),
+        h = i.extra.game_name;
     if (null != i.extra.platform) {
         let e = f[i.extra.platform];
         null != e && (n = { type: e });
     }
     t = i.content_type === l.s.PLAYED_GAME ? ((0, s.kr)(i) && !(0, s.n2)(i) ? m.t.vPg1JS : m.t.rPqqtr) : m.t.rPqqtr;
     let v = p[a],
-        _ = {
+        C = {
             onClick: (0, o.Z)({
                 location: v,
                 applicationId: i.extra.application_id,
@@ -39,14 +39,14 @@ function h(e) {
                 trackEntryPointImpression: !0,
                 sourceUserId: i.author_id
             }),
-            ariaDescription: m.intl.formatToPlainString(m.t['9sZWVl'], { gameName: x })
+            ariaDescription: m.intl.formatToPlainString(m.t['9sZWVl'], { gameName: h })
         };
     return {
         ...c,
-        thumbnailUrl: h,
-        title: x,
-        titleClickable: _,
-        thumbnailClickable: _,
+        thumbnailUrl: x,
+        title: h,
+        titleClickable: C,
+        thumbnailClickable: C,
         userDescription: t,
         providerIconProps: n
     };

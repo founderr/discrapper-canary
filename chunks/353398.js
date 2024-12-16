@@ -110,14 +110,14 @@ function y() {
                     type: m.FormTextTypes.DESCRIPTION,
                     children: N.intl.format(N.t.c0m8bG, {})
                 }),
-                (0, r.jsx)(A, {}),
+                (0, r.jsx)(Z, {}),
                 (0, r.jsx)(m.FormDivider, { className: T.divider }),
-                (0, r.jsx)(Z, {})
+                (0, r.jsx)(A, {})
             ]
         })
     });
 }
-function Z() {
+function A() {
     let { guild: e } = I.Z.getProps();
     c()(null != e, 'guild cannot be null');
     let t = (0, d.e7)([E], () => E.error),
@@ -185,7 +185,7 @@ function Z() {
         ]
     });
 }
-function A() {
+function Z() {
     return (0, r.jsxs)('div', {
         className: T.descriptionBox,
         children: [

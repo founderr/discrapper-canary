@@ -1,6 +1,6 @@
 n.d(t, {
     g: function () {
-        return m;
+        return E;
     },
     mI: function () {
         return g;
@@ -35,7 +35,7 @@ function g(e) {
         isUnderLockdown: l
     };
 }
-function m() {
+function E() {
     var e;
     let t = (function (e) {
             let t = s.default.getCurrentUser(),

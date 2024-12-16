@@ -11,7 +11,7 @@ var i = n(200651),
     f = n(388032),
     _ = n(410842);
 t.Z = r.forwardRef(function (e, t) {
-    let { body: n, header: l, artClassName: p, headerClassName: g, contentClassName: m, tryItText: E, dismissText: I, onTryFeature: h, onClose: C, className: S, inlineArt: T = !1, isPremiumFeature: v = !1, shouldUseHorizontalButtons: b = !1, showGIFTag: N = !1, dismissibleContent: A, position: O = 'top', align: L = 'center', art: P, isPremiumEarlyAccess: R = !1, maxWidth: M = 280, hideDismissButton: y = !1, pointerClassName: x, dismissIconClassName: Z, dismissIcon: j, onDismissIconClick: U } = e,
+    let { body: n, header: l, artClassName: p, headerClassName: g, contentClassName: E, tryItText: m, dismissText: I, onTryFeature: h, onClose: C, className: S, inlineArt: T = !1, isPremiumFeature: v = !1, shouldUseHorizontalButtons: b = !1, showGIFTag: N = !1, dismissibleContent: A, position: O = 'top', align: L = 'center', art: P, isPremiumEarlyAccess: R = !1, maxWidth: M = 280, hideDismissButton: y = !1, pointerClassName: x, dismissIconClassName: Z, dismissIcon: j, onDismissIconClick: U } = e,
         D = b ? u.Button.Sizes.LARGE : u.Button.Sizes.MAX,
         [F, w] = r.useState(!1),
         { ref: G, width: k } = (0, a.Z)();
@@ -31,7 +31,7 @@ t.Z = r.forwardRef(function (e, t) {
             className: S,
             ref: t,
             children: (0, i.jsxs)('div', {
-                className: o()(_.content, m, {
+                className: o()(_.content, E, {
                     [_.contentNoArt]: null == p || T,
                     [_.contentPremium]: v || R
                 }),
@@ -107,7 +107,7 @@ t.Z = r.forwardRef(function (e, t) {
                                                   null == C || C(e), h(e), B(d.L.PRIMARY);
                                               },
                                               color: v || R ? u.Button.Colors.BRAND_INVERTED : u.Button.Colors.WHITE,
-                                              children: null != E ? E : f.intl.string(f.t.IHf1RE)
+                                              children: null != m ? m : f.intl.string(f.t.IHf1RE)
                                           }),
                                           !y &&
                                               (0, i.jsx)(u.Button, {

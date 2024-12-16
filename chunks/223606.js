@@ -24,8 +24,8 @@ function p(e, t, n) {
     );
 }
 let g = {},
-    m = 0,
-    E = {},
+    E = 0,
+    m = {},
     I = {},
     h = (e, t) => {
         let n = (0, o.hc)(e),
@@ -35,11 +35,11 @@ let g = {},
                 messageData: e,
                 errorMessage: (0, d.uF)(e, t)
             };
-        (g[n] = i), m++;
+        (g[n] = i), E++;
     },
     C = (e) => g[e],
     S = (e) => {
-        null != g[e] && delete g[e], m++;
+        null != g[e] && delete g[e], E++;
     };
 function T(e) {
     let { messageData: t, errorResponseBody: n } = e;
@@ -69,12 +69,12 @@ function v(e) {
 }
 class b extends (i = r.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(s.Z), null != e && ((g = e.automodFailedMessages), (E = e.mentionRaidDetectionByGuild));
+        this.waitFor(s.Z), null != e && ((g = e.automodFailedMessages), (m = e.mentionRaidDetectionByGuild));
     }
     getState() {
         return {
             automodFailedMessages: g,
-            mentionRaidDetectionByGuild: E,
+            mentionRaidDetectionByGuild: m,
             lastIncidentAlertMessage: I
         };
     }
@@ -83,11 +83,11 @@ class b extends (i = r.ZP.PersistedStore) {
         return null == e ? null : null !== (t = C(e)) && void 0 !== t ? t : null;
     }
     getMessagesVersion() {
-        return m;
+        return E;
     }
     getMentionRaidDetected(e) {
         var t;
-        return null !== (t = E[e]) && void 0 !== t ? t : null;
+        return null !== (t = m[e]) && void 0 !== t ? t : null;
     }
     getLastIncidentAlertMessage(e) {
         var t;
@@ -98,7 +98,7 @@ p(b, 'displayName', 'GuildAutomodMessageStore'),
     p(b, 'persistKey', 'GuildAutomodMessages'),
     (t.Z = new b(l.Z, {
         CONNECTION_OPEN: function (e) {
-            return (g = {}), m++, !0;
+            return (g = {}), E++, !0;
         },
         LOAD_MESSAGES_SUCCESS: v,
         LOCAL_MESSAGES_LOADED: v,
@@ -124,7 +124,7 @@ p(b, 'displayName', 'GuildAutomodMessageStore'),
         AUTO_MODERATION_MENTION_RAID_DETECTION: function (e) {
             let { guildId: t, decisionId: n, suspiciousMentionActivityUntil: i } = e;
             return (
-                (E[t] = {
+                (m[t] = {
                     guildId: t,
                     decisionId: n,
                     suspiciousMentionActivityUntil: i
@@ -134,6 +134,6 @@ p(b, 'displayName', 'GuildAutomodMessageStore'),
         },
         AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS: function (e) {
             let { guildId: t } = e;
-            return delete E[t], !0;
+            return delete m[t], !0;
         }
     }));

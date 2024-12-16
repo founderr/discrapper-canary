@@ -17,30 +17,30 @@ function d(e) {
         m = (0, i.q)(t.extra.application_id),
         f = null == m ? void 0 : m.getIconURL(128),
         p = (0, r.getAssetImage)(t.extra.application_id, t.extra.media_assets_large_image, [c.Si.LARGE, c.Si.LARGE]),
-        h = t.extra.media_title,
-        x = t.extra.media_subtitle,
+        x = t.extra.media_title,
+        h = t.extra.media_subtitle,
         v = (0, o.Jg)(t) ? u.t['LH+Z39'] : u.t.YuKgmp,
-        _ = { type: s.kG.CRUNCHYROLL },
-        C = l.useMemo(() => {
+        C = { type: s.kG.CRUNCHYROLL },
+        _ = l.useMemo(() => {
             if (null == t.extra.url) return;
             let e = a.Z.safeParseWithQuery(t.extra.url);
             if (null != e && null != e.protocol && null != e.hostname) return e;
         }, [t.extra.url]);
     return (
-        null != C &&
+        null != _ &&
             (n = {
-                href: a.Z.format(C),
-                ariaDescription: u.intl.formatToPlainString(u.t.aFFQ3t, { title: h })
+                href: a.Z.format(_),
+                ariaDescription: u.intl.formatToPlainString(u.t.aFFQ3t, { title: x })
             }),
         {
             ...d,
             thumbnailUrl: null != p ? p : f,
-            title: h,
+            title: x,
             titleClickable: n,
             thumbnailClickable: n,
-            subtitle: x,
+            subtitle: h,
             userDescription: v,
-            providerIconProps: _
+            providerIconProps: C
         }
     );
 }

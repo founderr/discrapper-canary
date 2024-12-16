@@ -28,7 +28,7 @@ t.Z = (e) => {
             let t = new Set(_);
             t.delete(e), n({ interests: t });
         },
-        Z = r.useCallback(
+        A = r.useCallback(
             (e) => {
                 if (_.size === g.c4) return;
                 let t = null != e ? e : I.trim();
@@ -38,15 +38,15 @@ t.Z = (e) => {
             },
             [n, I, _]
         ),
-        A = r.useCallback(
+        Z = r.useCallback(
             (e) => {
                 switch (e.key) {
                     case 'Enter':
                     case 'Tab':
-                        e.preventDefault(), e.stopPropagation(), Z();
+                        e.preventDefault(), e.stopPropagation(), A();
                 }
             },
-            [Z]
+            [A]
         ),
         L = r.useCallback(() => {
             T((e) => (e + 1) % j.length);
@@ -91,7 +91,7 @@ t.Z = (e) => {
                                         autoFocus: !0,
                                         inputClassName: f.input,
                                         value: I,
-                                        onKeyDown: A,
+                                        onKeyDown: Z,
                                         onChange: v,
                                         placeholder: x.intl.string(x.t.axCpsL),
                                         maxLength: g.Sq,
@@ -99,7 +99,7 @@ t.Z = (e) => {
                                     }),
                                     I.length > 0 &&
                                         (0, i.jsx)(o.Clickable, {
-                                            onClick: () => Z(I.trim()),
+                                            onClick: () => A(I.trim()),
                                             className: s()(f.plusIcon, f.clickable),
                                             children: (0, i.jsx)(o.PlusSmallIcon, {
                                                 size: 'md',
@@ -132,7 +132,7 @@ t.Z = (e) => {
                                             color: 'interactive-normal',
                                             text: e,
                                             selected: _.has(e),
-                                            onClick: _.has(e) ? y : Z
+                                            onClick: _.has(e) ? y : A
                                         },
                                         e
                                     ),

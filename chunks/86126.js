@@ -33,7 +33,7 @@ function C(e) {
         S = null == N,
         E = null !== (t = null == v ? void 0 : v.archived) && void 0 !== t && t,
         { deleteSubscriptionListing: R, submitting: y } = (0, d.r4)(),
-        { archiveSubscriptionListing: Z, submitting: A } = (0, d._1)(),
+        { archiveSubscriptionListing: A, submitting: Z } = (0, d._1)(),
         L = () => {
             let e = async () => {
                 if (!!S || (s()(null != I, 'group listing doesnt exist'), s()(null != N, 'subscription listing doesnt exist'), !!(await R(_, I, N)))) null == l || l();
@@ -113,7 +113,7 @@ function C(e) {
                                                     confirmText: x.intl.string(x.t.RL0wjo),
                                                     cancelText: x.intl.string(x.t['ETE/oK']),
                                                     onConfirm: () => {
-                                                        Z(_, I, N);
+                                                        A(_, I, N);
                                                     },
                                                     confirmButtonColor: o.Button.Colors.RED,
                                                     ...t,
@@ -124,7 +124,7 @@ function C(e) {
                                                 });
                                         });
                                 },
-                                submitting: A,
+                                submitting: Z,
                                 disabled: !D,
                                 children: x.intl.string(x.t.RL0wjo)
                             })

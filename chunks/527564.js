@@ -20,8 +20,8 @@ var i = n(200651),
     h = n(55563),
     g = n(147890),
     I = n(272242),
-    v = n(981631),
-    x = n(388032),
+    x = n(981631),
+    v = n(388032),
     b = n(701672);
 function C(e) {
     let { appId: t } = e,
@@ -61,7 +61,7 @@ function C(e) {
                     children: [
                         (0, i.jsx)(s.Heading, {
                             variant: 'heading-lg/semibold',
-                            children: x.intl.string(x.t.yUGTs7)
+                            children: v.intl.string(v.t.yUGTs7)
                         }),
                         (0, i.jsx)('div', {
                             className: o()(b.productList, b.itemList),
@@ -85,7 +85,7 @@ function C(e) {
                     ]
                 }),
             (0, i.jsx)(c.Z, {
-                path: v.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(':applicationId', ':skuId'),
+                path: x.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(':applicationId', ':skuId'),
                 exact: !0,
                 render: (e) => (0, i.jsx)(S, { ...e })
             })
@@ -104,8 +104,8 @@ function S(e) {
     return (
         a.useLayoutEffect(() => {
             switch (null == r ? void 0 : r.type) {
-                case v.epS.CONSUMABLE:
-                case v.epS.DURABLE:
+                case x.epS.CONSUMABLE:
+                case x.epS.DURABLE:
                     return (function (e, t, n) {
                         (0, s.openModal)(
                             (e) => {
@@ -129,7 +129,7 @@ function S(e) {
                             }
                         );
                     })(c, t, n);
-                case v.epS.SUBSCRIPTION:
+                case x.epS.SUBSCRIPTION:
                     if ((null == o ? void 0 : o.flags) == null) return;
                     return (function (e, t, n, a) {
                         (0, s.openModal)(

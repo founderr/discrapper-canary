@@ -35,8 +35,8 @@ var i = n(200651),
     E = n(63568),
     R = n(745752),
     y = n(45966),
-    Z = n(637853),
-    A = n(526120),
+    A = n(637853),
+    Z = n(526120),
     L = n(352981),
     D = n(610403),
     O = n(923726),
@@ -89,8 +89,8 @@ var i = n(200651),
     eE = n(497666),
     eR = n(324330),
     ey = n(495300),
-    eZ = n(312397),
-    eA = n(651780),
+    eA = n(312397),
+    eZ = n(651780),
     eL = n(279542),
     eD = n(413335),
     eO = n(665324),
@@ -123,7 +123,7 @@ function eq(e, t) {
 }
 function eX(e) {
     var t;
-    let { guild: r, isGuildAdmin: s, canManageGuild: d, canViewAuditLog: m, canManageRoles: h, canManageGuildExpressions: g, canManageWebhooks: b, canUnlinkChannels: E, canManageBans: R, canAccessMembersPage: y, canViewGuildAnalytics: A, isOwner: B, isOwnerWithRequiredMfaLevel: U, showDirtyGuildTemplateIndicator: F, memberCount: z, showAccessRate: W, onboardingStep: V, onboardingEnabled: K, welcomeScreenEmpty: X, guildMetadata: Q, section: J, canAccessClanSettings: et, memberVerificationRolloutEnabled: er } = e,
+    let { guild: r, isGuildAdmin: s, canManageGuild: d, canViewAuditLog: m, canManageRoles: h, canManageGuildExpressions: g, canManageWebhooks: b, canUnlinkChannels: E, canManageBans: R, canAccessMembersPage: y, canViewGuildAnalytics: Z, isOwner: B, isOwnerWithRequiredMfaLevel: U, showDirtyGuildTemplateIndicator: F, memberCount: z, showAccessRate: W, onboardingStep: V, onboardingEnabled: K, welcomeScreenEmpty: X, guildMetadata: Q, section: J, canAccessClanSettings: et, memberVerificationRolloutEnabled: er } = e,
         el = es.$.getCurrentConfig({
             guildId: r.id,
             location: 'generateSections'
@@ -399,8 +399,8 @@ function eX(e) {
                           }
                       ]
                     : [],
-            v = (0, Z.wC)(r.id),
-            N = n && A,
+            v = (0, A.wC)(r.id),
+            N = n && Z,
             P = d && (r.hasFeature(eF.oNc.DISCOVERABLE) || !!(null == Q ? void 0 : Q.isPublished)),
             B = d && !X && !r.hasFeature(eF.oNc.GUILD_SERVER_GUIDE),
             $ =
@@ -591,10 +591,10 @@ function eX(e) {
                 impressionName: l.ImpressionNames.GUILD_SETTINGS_OVERVIEW,
                 label: eV.intl.string(eV.t['/dp6yc']),
                 ariaLabel: eV.intl.string(eV.t['/dp6yc']),
-                element: eZ.Z,
+                element: eA.Z,
                 notice: {
                     stores: [ed.Z],
-                    element: eZ.O
+                    element: eA.O
                 }
             },
             ...e,
@@ -608,7 +608,7 @@ function eX(e) {
                 impressionName: l.ImpressionNames.GUILD_SETTINGS_BOOST_STATUS,
                 label: eV.intl.string(eV.t['8+VX4+']),
                 ariaLabel: eV.intl.string(eV.t['8+VX4+']),
-                element: eA.Z,
+                element: eZ.Z,
                 className: eY.serverBoostTabItem,
                 icon: (0, i.jsx)(eD.Z, { className: eY.icon })
             },
@@ -630,10 +630,10 @@ function eX(e) {
             impressionName: l.ImpressionNames.GUILD_SETTINGS_OVERVIEW,
             label: eV.intl.string(eV.t['/dp6yc']),
             ariaLabel: eV.intl.string(eV.t['/dp6yc']),
-            element: eZ.Z,
+            element: eA.Z,
             notice: {
                 stores: [ed.Z],
-                element: eZ.O
+                element: eA.O
             }
         },
         {
@@ -791,12 +791,12 @@ function eX(e) {
         },
         {
             section: u.ID.DIVIDER,
-            predicate: () => d || A
+            predicate: () => d || Z
         },
         {
             section: u.ID.HEADER,
             label: eV.intl.string(eV.t['1g9A/f']),
-            predicate: () => !et && (d || A)
+            predicate: () => !et && (d || Z)
         },
         {
             section: eF.pNK.CLAN,
@@ -841,7 +841,7 @@ function eX(e) {
                 stores: [eh.Z],
                 element: ep.Z
             },
-            predicate: () => (0, Z.wC)(r.id),
+            predicate: () => (0, A.wC)(r.id),
             decoration: eq(r.id, V)
         },
         {
@@ -852,7 +852,7 @@ function eX(e) {
             element: e_.Z,
             newIndicator: G.Z.hasHotspot(ez.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU),
             newIndicatorDismissibleContentTypes: W ? [a.z.GUILD_INSIGHTS_ACCESS_RATE_NEW] : null,
-            predicate: () => A && r.hasFeature(eF.oNc.COMMUNITY)
+            predicate: () => Z && r.hasFeature(eF.oNc.COMMUNITY)
         },
         e0,
         {
@@ -922,7 +922,7 @@ function eX(e) {
             impressionName: l.ImpressionNames.GUILD_SETTINGS_BOOST_STATUS,
             label: eV.intl.string(eV.t['8+VX4+']),
             ariaLabel: eV.intl.string(eV.t['8+VX4+']),
-            element: eA.Z,
+            element: eZ.Z,
             className: eY.serverBoostTabItem,
             icon: (0, i.jsx)(eD.Z, { className: eY.icon })
         },
@@ -1014,9 +1014,9 @@ class e0 extends r.PureComponent {
     }
     render() {
         var e, t;
-        let { theme: n, sidebarTheme: r, section: l, guild: s, channels: a, isGuildAdmin: o, canManageGuild: u, canViewAuditLog: m, canManageRoles: h, canManageGuildExpressions: g, canManageWebhooks: x, canUnlinkChannels: p, canManageBans: f, canAccessMembersPage: C, canViewGuildAnalytics: _, isOwner: I, isOwnerWithRequiredMfaLevel: v, showDirtyGuildTemplateIndicator: N, memberCount: T, showAccessRate: b, onboardingStep: j, onboardingEnabled: S, welcomeScreenEmpty: E, guildMetadata: R, canAccessClanSettings: y, memberVerificationRolloutEnabled: Z } = this.props;
+        let { theme: n, sidebarTheme: r, section: l, guild: s, channels: a, isGuildAdmin: o, canManageGuild: u, canViewAuditLog: m, canManageRoles: h, canManageGuildExpressions: g, canManageWebhooks: x, canUnlinkChannels: p, canManageBans: f, canAccessMembersPage: C, canViewGuildAnalytics: _, isOwner: I, isOwnerWithRequiredMfaLevel: v, showDirtyGuildTemplateIndicator: N, memberCount: T, showAccessRate: b, onboardingStep: j, onboardingEnabled: S, welcomeScreenEmpty: E, guildMetadata: R, canAccessClanSettings: y, memberVerificationRolloutEnabled: A } = this.props;
         if (null == s) return null;
-        let A = eX({
+        let Z = eX({
                 guild: s,
                 channels: a,
                 isGuildAdmin: o,
@@ -1040,9 +1040,9 @@ class e0 extends r.PureComponent {
                 guildMetadata: R,
                 section: l,
                 canAccessClanSettings: y,
-                memberVerificationRolloutEnabled: Z
+                memberVerificationRolloutEnabled: A
             }),
-            L = (null === (t = A.find((e) => e.section === l)) || void 0 === t ? void 0 : null === (e = t.predicate) || void 0 === e ? void 0 : e.call(t)) !== !1;
+            L = (null === (t = Z.find((e) => e.section === l)) || void 0 === t ? void 0 : null === (e = t.predicate) || void 0 === e ? void 0 : e.call(t)) !== !1;
         return (0, i.jsxs)('div', {
             children: [
                 (0, i.jsx)(d.ZP, {
@@ -1052,7 +1052,7 @@ class e0 extends r.PureComponent {
                     onSetSection: ei.Z.setSection,
                     onClose: c.xf,
                     title: eK(s),
-                    sections: A
+                    sections: Z
                 }),
                 (0, i.jsx)(F.d, { guildId: s.id })
             ]
@@ -1087,11 +1087,11 @@ function e1() {
         null != p && T && ((0, R.eM)(p), (0, V.RM)(p));
     }, [p, T]),
         r.useEffect(() => {
-            null != p && (0, A.cP)(p);
+            null != p && (0, Z.cP)(p);
         }, [p]);
     let { showAccessRate: j } = (0, et.eA)(null == t ? void 0 : t.id, !N || !I || !_),
         S = x.isGuildAdmin && (null == t ? void 0 : t.hasFeature(eF.oNc.CLAN)),
-        Z = (0, s.e7)(
+        A = (0, s.e7)(
             [U.Z],
             () => {
                 var e;
@@ -1119,7 +1119,7 @@ function e1() {
             theme: d,
             sidebarTheme: u,
             channels: h,
-            showDirtyGuildTemplateIndicator: Z,
+            showDirtyGuildTemplateIndicator: A,
             analyticsLocation: l,
             memberCount: L,
             ...x,

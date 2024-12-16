@@ -89,8 +89,8 @@ let b = [
 t.Z = (e) => {
     var t;
     let { handleUpdate: n, progress: l, guildId: a } = e,
-        { banner: S, brandPrimaryColor: E, brandSecondaryColor: R, badgePrimaryColor: y, badgeSecondaryColor: Z } = l,
-        A = (0, u.e7)([g.Z], () => g.Z.getGuild(a)),
+        { banner: S, brandPrimaryColor: E, brandSecondaryColor: R, badgePrimaryColor: y, badgeSecondaryColor: A } = l,
+        Z = (0, u.e7)([g.Z], () => g.Z.getGuild(a)),
         L = null !== (t = (0, u.e7)([h.Z], () => h.Z.getMemberCount(a))) && void 0 !== t ? t : 0,
         D = r.useMemo(
             () => ({
@@ -100,10 +100,10 @@ t.Z = (e) => {
             [E, R]
         ),
         O = r.useMemo(() => {
-            if (E === y && R === Z) return 1;
+            if (E === y && R === A) return 1;
             for (let e = 0; e < I.ym.length; e++) if (I.ym[e].primary === l.brandPrimaryColor && I.ym[e].secondary === l.brandSecondaryColor) return 2 + e;
             return 0;
-        }, [E, R, y, Z, l.brandPrimaryColor, l.brandSecondaryColor]),
+        }, [E, R, y, A, l.brandPrimaryColor, l.brandSecondaryColor]),
         [P, k] = r.useState(!1),
         M = 0 === O,
         w = 1 === O,
@@ -112,7 +112,7 @@ t.Z = (e) => {
             if (w)
                 return {
                     primary: null != y ? y : _.Nh,
-                    secondary: null != Z ? Z : _.vY
+                    secondary: null != A ? A : _.vY
                 };
             {
                 let e = I.ym[O - 2];
@@ -121,7 +121,7 @@ t.Z = (e) => {
                     secondary: e.secondary
                 };
             }
-        }, [D, w, M, y, Z, O]),
+        }, [D, w, M, y, A, O]),
         U = r.useCallback(() => {
             let e = b[Math.floor(Math.random() * b.length)].bannerKind,
                 t = s().random().hex();
@@ -143,8 +143,8 @@ t.Z = (e) => {
         return {
             ...l,
             id: a,
-            name: null !== (e = null == A ? void 0 : A.name) && void 0 !== e ? e : '',
-            icon: null == A ? void 0 : A.icon,
+            name: null !== (e = null == Z ? void 0 : Z.name) && void 0 !== e ? e : '',
+            icon: null == Z ? void 0 : Z.icon,
             memberCount: L,
             games: Array.from(l.gameApplicationIds),
             traits: Array.from(l.interests),
@@ -152,7 +152,7 @@ t.Z = (e) => {
             badge: {
                 badgeKind: l.badgeKind,
                 primaryColor: null != y ? y : I.OH,
-                secondaryColor: null != Z ? Z : I.K_
+                secondaryColor: null != A ? A : I.K_
             },
             branding: {
                 primaryColor: null !== (t = B.primary) && void 0 !== t ? t : I.OH,
@@ -169,7 +169,7 @@ t.Z = (e) => {
                 {}
             )
         };
-    }, [l, a, A, L, S, y, Z, B]);
+    }, [l, a, Z, L, S, y, A, B]);
     return (0, i.jsxs)('div', {
         className: T.slideContent,
         children: [
@@ -232,14 +232,14 @@ t.Z = (e) => {
                                                     onClick: () => {
                                                         n({
                                                             brandPrimaryColor: null != y ? y : I.OH,
-                                                            brandSecondaryColor: null != Z ? Z : I.K_
+                                                            brandSecondaryColor: null != A ? A : I.K_
                                                         });
                                                     },
                                                     className: o()(N.brandItemContainer, { [N.brandItemContainerSelected]: 1 === O }),
                                                     children: (0, i.jsx)(j, {
                                                         name: v.intl.string(v.t['1Pvr/v']),
                                                         primaryColor: y,
-                                                        secondaryColor: Z
+                                                        secondaryColor: A
                                                     })
                                                 }),
                                                 I.ym.map((e, t) =>

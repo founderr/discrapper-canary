@@ -16,11 +16,11 @@ var l = t(200651),
     m = t(551428),
     f = t(74538),
     p = t(937615),
-    h = t(147496),
-    x = t(519896),
+    x = t(147496),
+    h = t(519896),
     v = t(981631),
-    _ = t(388032);
-let C = (0, r.Kb)([d.Z, u.Z, m.Z], {
+    C = t(388032);
+let _ = (0, r.Kb)([d.Z, u.Z, m.Z], {
     queryId: (e) => (null != e ? ['premium-button', e] : null),
     get: (e) => {
         var n;
@@ -65,7 +65,7 @@ let C = (0, r.Kb)([d.Z, u.Z, m.Z], {
     useStateHook: r.cj
 });
 function g(e) {
-    let { data: n } = C(e),
+    let { data: n } = _(e),
         t = null == n ? void 0 : n.parentSku,
         r = null == n ? void 0 : n.sku,
         a = null == n ? void 0 : n.storeListing,
@@ -74,7 +74,7 @@ function g(e) {
             if ((null == r ? void 0 : r.applicationId) == null || (null == r ? void 0 : r.id) == null || (null == r ? void 0 : r.flags) == null) return null;
             (0, o.openModal)((e) => {
                 let { onClose: n, transitionState: t } = e;
-                return (0, l.jsx)(x.SubscriptionDetailsModal, {
+                return (0, l.jsx)(h.SubscriptionDetailsModal, {
                     appId: r.applicationId,
                     subscriptionType: (0, c.KW)(r.flags) ? 'user' : 'guild',
                     onClose: n,
@@ -88,7 +88,7 @@ function g(e) {
             if (null == r) return null;
             (0, o.openModal)((e) => {
                 let { onClose: n, transitionState: t } = e;
-                return (0, l.jsx)(h.ItemDetailsModal, {
+                return (0, l.jsx)(x.ItemDetailsModal, {
                     appId: r.applicationId,
                     skuId: r.id,
                     onClose: n,
@@ -100,19 +100,19 @@ function g(e) {
         if (null == e || (null != r && !r.available))
             return {
                 disabled: !0,
-                label: _.intl.string(_.t.CHa0vL)
+                label: C.intl.string(C.t.CHa0vL)
             };
         if (r.type === v.epS.SUBSCRIPTION) {
             if (null == s || 0 === s.length)
                 return {
                     disabled: !0,
-                    label: _.intl.string(_.t.CHa0vL)
+                    label: C.intl.string(C.t.CHa0vL)
                 };
             let e = s[0],
                 n = (0, f.aS)(e.id);
             return {
                 disabled: !1,
-                label: _.intl.formatToPlainString(_.t['c6Q+Bw'], {
+                label: C.intl.formatToPlainString(C.t['c6Q+Bw'], {
                     skuName: r.name,
                     price: (0, p.T4)(n.amount, n.currency)
                 }),
@@ -122,11 +122,11 @@ function g(e) {
         return null == r.price
             ? {
                   disabled: !0,
-                  label: _.intl.string(_.t.CHa0vL)
+                  label: C.intl.string(C.t.CHa0vL)
               }
             : {
                   disabled: !1,
-                  label: _.intl.formatToPlainString(_.t['c6Q+Bw'], {
+                  label: C.intl.formatToPlainString(C.t['c6Q+Bw'], {
                       skuName: r.name,
                       price: (0, p.T4)(r.price.amount, r.price.currency)
                   }),

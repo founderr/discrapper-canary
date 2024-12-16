@@ -1,6 +1,6 @@
 n.d(t, {
     t: function () {
-        return Z;
+        return A;
     }
 }),
     n(47120),
@@ -32,12 +32,12 @@ var i,
     E = n(176505),
     R = n(388032),
     y = n(969033);
-function Z(e) {
+function A(e) {
     let { guildId: t, hasValidApplication: n } = e,
         { listingsLoaded: i } = (0, N.eD)(t),
         r = (0, o.e7)([_.Z], () => _.Z.getGuild(t)),
-        Z = (0, o.e7)([I.default], () => I.default.getCurrentUser()),
-        A = (null == r ? void 0 : r.isOwner(Z)) === !0,
+        A = (0, o.e7)([I.default], () => I.default.getCurrentUser()),
+        Z = (null == r ? void 0 : r.isOwner(A)) === !0,
         { loading: L } = (0, d.H)(t),
         [D, O] = s.useState(n ? 'manage_listings' : 'payment');
     (0, h.P)(r);
@@ -92,7 +92,7 @@ function Z(e) {
                     disabled: !n,
                     children: R.intl.string(R.t.wlZ1mp)
                 }),
-                A
+                Z
                     ? (0, l.jsx)(c.TabBar.Item, {
                           id: 'payment',
                           className: y.tabBarItem,

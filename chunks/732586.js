@@ -13,34 +13,34 @@ var l = t(200651),
     c = t(234175);
 function u(e) {
     let n;
-    let { type: t, style: u, label: d, placeholder: m, minLength: f, maxLength: p, required: h, value: x } = e,
-        [v, _] = i.useState(null != x ? x : ''),
+    let { type: t, style: u, label: d, placeholder: m, minLength: f, maxLength: p, required: x, value: h } = e,
+        [v, C] = i.useState(null != h ? h : ''),
         {
-            state: C,
+            state: _,
             executeStateUpdate: g,
             error: I
         } = (0, o.Ee)(
             e,
-            null != x
+            null != h
                 ? {
                       type: t,
-                      value: x
+                      value: h
                   }
                 : void 0
         ),
         b = (0, s.hz)(e.id);
     i.useEffect(() => {
-        (null == C ? void 0 : C.type) === t && _(C.value);
-    }, [t, C]);
+        (null == _ ? void 0 : _.type) === t && C(_.value);
+    }, [t, _]);
     let j = {
         name: d,
         value: v,
         placeholder: m,
         minLength: f,
         maxLength: p,
-        required: h,
+        required: x,
         onChange: (e) => {
-            _(e),
+            C(e),
                 g({
                     type: t,
                     value: e
@@ -60,7 +60,7 @@ function u(e) {
     }
     return (0, l.jsx)(r.FormItem, {
         title: d,
-        required: h,
+        required: x,
         className: c.formItem,
         error: I,
         children: n

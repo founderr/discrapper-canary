@@ -16,11 +16,11 @@ var i = n(200651),
     _ = n(594174),
     p = n(5192),
     g = n(981631),
-    m = n(388032),
-    E = n(674055);
+    E = n(388032),
+    m = n(674055);
 function I(e) {
     var t;
-    let { guildId: n, role: l, theme: I, content: h = m.intl.string(m.t['6OSasb']), className: C } = e,
+    let { guildId: n, role: l, theme: I, content: h = E.intl.string(E.t['6OSasb']), className: C } = e,
         S = (0, u.e7)([_.default], () => _.default.getCurrentUser()),
         T = p.ZP.useName(n, null, S),
         v = (0, s.Kz)(l),
@@ -49,7 +49,7 @@ function I(e) {
         theme: I,
         children: (e) =>
             (0, i.jsx)('div', {
-                className: o()(e, E.container, C),
+                className: o()(e, m.container, C),
                 children: (0, i.jsx)(f.Z, {
                     hideTimestamp: !0,
                     author: N,

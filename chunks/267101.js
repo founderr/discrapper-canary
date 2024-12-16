@@ -1,6 +1,6 @@
 n.d(t, {
     SO: function () {
-        return m;
+        return E;
     },
     eD: function () {
         return f;
@@ -57,4 +57,4 @@ let f = (e) => {
         return (0, r.e7)([c.Z, o.Z], () => c.Z.getGuildProductsForGuild(e, { publishedOnly: null != t ? t : !o.Z.isViewingServerShop(e) }));
     },
     g = (e) => (0, r.e7)([c.Z], () => (null == e ? void 0 : c.Z.getGuildProduct(e))),
-    m = (e) => (0, r.e7)([u.Z], () => null != e && u.Z.can(d.Plq.ADMINISTRATOR, e));
+    E = (e) => (0, r.e7)([u.Z], () => null != e && u.Z.can(d.Plq.ADMINISTRATOR, e));

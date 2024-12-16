@@ -20,8 +20,8 @@ var r = n(120356),
     _ = n(434404),
     p = n(703656),
     g = n(944486),
-    m = n(914010),
-    E = n(671533),
+    E = n(914010),
+    m = n(671533),
     I = n(259580),
     h = n(358085),
     C = n(962086),
@@ -53,7 +53,7 @@ function R(e) {
     });
 }
 function M() {
-    let e = (0, o.e7)([m.Z], () => m.Z.getGuildId()),
+    let e = (0, o.e7)([E.Z], () => E.Z.getGuildId()),
         t = (0, o.e7)([g.Z], () => g.Z.getChannelId(e)),
         {
             viewingRoles: n,
@@ -93,10 +93,10 @@ function M() {
                 onClick: () => Z({ backToSettings: !0 }),
                 className: L.backButton,
                 children: [
-                    (0, i.jsx)(E.Z, {
+                    (0, i.jsx)(m.Z, {
                         width: 16,
                         height: 16,
-                        direction: E.Z.Directions.LEFT,
+                        direction: m.Z.Directions.LEFT,
                         className: L.backArrow
                     }),
                     M

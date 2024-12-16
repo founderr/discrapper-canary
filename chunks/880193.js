@@ -33,7 +33,7 @@ function v(e) {
         [b, j] = g.mR(n),
         [S, E] = g.PK(n),
         [R, y] = g.d9(n, 1024),
-        { imageCTA: Z, imageAriaLabel: A, setFilename: L } = (0, x.Z)(v),
+        { imageCTA: A, imageAriaLabel: Z, setFilename: L } = (0, x.Z)(v),
         D = r.useMemo(() => {
             var e;
             return null !==
@@ -131,8 +131,8 @@ function v(e) {
                             }),
                             (0, i.jsx)(o.Z, {
                                 onChange: O,
-                                buttonCTA: Z,
-                                'aria-label': A,
+                                buttonCTA: A,
+                                'aria-label': Z,
                                 disabled: P,
                                 look: s.Button.Looks.OUTLINED,
                                 color: s.Button.Colors.PRIMARY
@@ -141,14 +141,14 @@ function v(e) {
                     }),
                     (0, i.jsx)(c.Z, {
                         image: R,
-                        hint: Z,
+                        hint: A,
                         showIcon: !0,
                         showRemoveButton: !1,
                         hideSize: !0,
                         className: I.iconUploader,
                         imageClassName: I.tierSymbolUploaderInner,
                         onChange: O,
-                        'aria-label': A,
+                        'aria-label': Z,
                         disabled: P
                     })
                 ]

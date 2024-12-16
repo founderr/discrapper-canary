@@ -65,7 +65,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
             errorMessage: e
         });
     },
-    Z = (e) => {
+    A = (e) => {
         let { discoveryEnabled: t, onboardingEnabled: n, guild: l } = e,
             [s, u] = r.useState(!0 === c.K.get(R)),
             m = (0, a.e7)([x.Z], () => {
@@ -184,7 +184,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
                   ]
               });
     },
-    A = () => {
+    Z = () => {
         let e = (0, a.e7)([v.Z], () => v.Z.getGuild()),
             { canManageGuild: t, isGuildAdmin: n } = (0, a.cj)([f.Z], () => ({
                 canManageGuild: f.Z.can(b.Plq.MANAGE_GUILD, e),
@@ -229,7 +229,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
             y = (e) => {
                 I.Z.updateGuild({ publicUpdatesChannelId: e });
             },
-            A = (e) => {
+            Z = (e) => {
                 I.Z.updateGuild({ preferredLocale: e });
             },
             L = (e) => {
@@ -300,7 +300,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
             tag: d.FormTitleTags.H1,
             children: [
                 u
-                    ? (0, i.jsx)(Z, {
+                    ? (0, i.jsx)(A, {
                           discoveryEnabled: e.features.has(b.oNc.DISCOVERABLE),
                           onboardingEnabled: e.features.has(b.oNc.GUILD_ONBOARDING),
                           guild: e
@@ -415,7 +415,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
                             children: (0, i.jsx)(d.SearchableSelect, {
                                 value: e.preferredLocale,
                                 options: o,
-                                onChange: A,
+                                onChange: Z,
                                 isDisabled: !t
                             })
                         })
@@ -484,5 +484,5 @@ let R = 'dismissedCommunityFeaturesUpsell',
     };
 t.Z = () => {
     let e = (0, a.e7)([v.Z], () => v.Z.getGuild());
-    return null == e ? null : e.features.has(b.oNc.COMMUNITY) ? (0, i.jsx)(A, {}) : (0, i.jsx)(N.Z, { guild: e });
+    return null == e ? null : e.features.has(b.oNc.COMMUNITY) ? (0, i.jsx)(Z, {}) : (0, i.jsx)(N.Z, { guild: e });
 };

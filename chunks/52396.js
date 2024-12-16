@@ -1,9 +1,9 @@
 t.d(n, {
     B: function () {
-        return x;
+        return h;
     },
     r: function () {
-        return _;
+        return C;
     }
 }),
     t(411104);
@@ -19,9 +19,9 @@ var l = t(200651),
     m = t(482417),
     f = t(301419),
     p = t(397035);
-let h = i.createContext(void 0);
-function x() {
-    let e = i.useContext(h);
+let x = i.createContext(void 0);
+function h() {
+    let e = i.useContext(x);
     return a()(null != e, 'useEntryDataContext must be used within a EntryDataContextProvider'), e;
 }
 function v(e) {
@@ -60,7 +60,7 @@ function v(e) {
                 ...i
             });
         case o.s.LAUNCHED_ACTIVITY:
-            return (0, l.jsx)(C, {
+            return (0, l.jsx)(_, {
                 entry: n,
                 ...i
             });
@@ -68,20 +68,20 @@ function v(e) {
             throw Error('Unsupported content type: '.concat(n.content_type));
     }
 }
-function _(e) {
+function C(e) {
     let { errorFallback: n, ...t } = e;
     return (0, l.jsx)(s.S, {
         fallback: n,
         children: (0, l.jsx)(v, { ...t })
     });
 }
-function C(e) {
+function _(e) {
     let { entry: n, children: t, ...i } = e,
         r = (0, c.Z)({
             entry: n,
             ...i
         });
-    return (0, l.jsx)(h.Provider, {
+    return (0, l.jsx)(x.Provider, {
         value: {
             parsedEntry: r,
             ...i
@@ -95,7 +95,7 @@ function g(e) {
             entry: n,
             ...i
         });
-    return (0, l.jsx)(h.Provider, {
+    return (0, l.jsx)(x.Provider, {
         value: {
             parsedEntry: r,
             ...i
@@ -109,7 +109,7 @@ function I(e) {
             entry: n,
             ...i
         });
-    return (0, l.jsx)(h.Provider, {
+    return (0, l.jsx)(x.Provider, {
         value: {
             parsedEntry: r,
             ...i
@@ -123,7 +123,7 @@ function b(e) {
             entry: n,
             ...i
         });
-    return (0, l.jsx)(h.Provider, {
+    return (0, l.jsx)(x.Provider, {
         value: {
             parsedEntry: r,
             ...i
@@ -137,7 +137,7 @@ function j(e) {
             entry: n,
             ...i
         });
-    return (0, l.jsx)(h.Provider, {
+    return (0, l.jsx)(x.Provider, {
         value: {
             parsedEntry: r,
             ...i
@@ -151,7 +151,7 @@ function S(e) {
             entry: n,
             ...i
         });
-    return (0, l.jsx)(h.Provider, {
+    return (0, l.jsx)(x.Provider, {
         value: {
             parsedEntry: r,
             ...i

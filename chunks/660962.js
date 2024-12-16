@@ -31,8 +31,8 @@ var i = n(200651),
     E = n(388032),
     R = n(837349),
     y = n(490909),
-    Z = n(179517),
-    A = n(79829);
+    A = n(179517),
+    Z = n(79829);
 let L = (0, m.Un)({
         createPromise: () => n.e('5609').then(n.bind(n, 336231)),
         webpackId: 336231
@@ -119,11 +119,11 @@ function k(e) {
             colorString: null !== (t = s.colorString) && void 0 !== t ? t : void 0
         },
         u = {
-            src: Z,
+            src: A,
             name: s.name
         },
         m = {
-            src: A,
+            src: Z,
             name: s.name
         },
         C = (0, h.oC)(a, s);

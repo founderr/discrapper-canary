@@ -31,10 +31,10 @@ function b(e) {
     let { guildId: b, setPreventNavigation: j = () => {} } = e,
         { editingRule: S, setEditingRule: E } = (0, p.V)(),
         { guild: R, subsection: y } = (0, l.cj)([o.Z], () => o.Z.getProps()),
-        Z = null !== (n = null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : b) && void 0 !== n ? n : v.lds,
-        A = null != S,
-        [L] = (0, h.RD)(Z),
-        { rulesByTriggerType: D } = (0, h.pH)(Z),
+        A = null !== (n = null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : b) && void 0 !== n ? n : v.lds,
+        Z = null != S,
+        [L] = (0, h.RD)(A),
+        { rulesByTriggerType: D } = (0, h.pH)(A),
         O = {
             [g.vh.MEMBERS]: N.intl.string(N.t.sx4E5u),
             [g.vh.CONTENT]: N.intl.string(N.t.fphZb2)
@@ -47,8 +47,8 @@ function b(e) {
             [D]
         );
     r.useEffect(() => {
-        A && E(null);
-    }, [Z]);
+        Z && E(null);
+    }, [A]);
     let k = r.useCallback(
             (e, t) => {
                 if (null != e) {
@@ -74,9 +74,9 @@ function b(e) {
             return k(null !== (e = null == S ? void 0 : S.id) && void 0 !== e ? e : null, null !== (t = null == S ? void 0 : S.triggerType) && void 0 !== t ? t : null);
         }, [k, S]);
     r.useEffect(() => {
-        j(A, (0, _.af)(M));
-    }, [j, A, M]);
-    let w = (0, g.Z6)(Z),
+        j(Z, (0, _.af)(M));
+    }, [j, Z, M]);
+    let w = (0, g.Z6)(A),
         B = (e) =>
             (0, i.jsx)(i.Fragment, {
                 children: e.map((e) => {
@@ -84,7 +84,7 @@ function b(e) {
                     return (0, i.jsx)(
                         C.Z,
                         {
-                            guildId: Z,
+                            guildId: A,
                             triggerType: e,
                             rules: null !== (t = D[e]) && void 0 !== t ? t : [],
                             initWithEdit: y === v.KsC.AUTOMOD_MENTION_SPAM && e === I.fX.MENTION_SPAM
@@ -181,10 +181,10 @@ function b(e) {
                     className: T.explicitContentFilterSection
                 }),
             (0, i.jsx)(f.Z, {
-                guildId: Z,
+                guildId: A,
                 existingRules: P
             }),
-            A && (0, i.jsx)('div', { className: T.endSpacer })
+            Z && (0, i.jsx)('div', { className: T.endSpacer })
         ]
     });
 }

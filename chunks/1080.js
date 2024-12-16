@@ -32,8 +32,8 @@ var i = n(200651),
     E = n(999382),
     R = n(84613),
     y = n(740903),
-    Z = n(981631),
-    A = n(388032),
+    A = n(981631),
+    Z = n(388032),
     L = n(831324);
 function D(e, t, n) {
     return (
@@ -61,7 +61,7 @@ function O(e) {
             try {
                 await m.Z.unbanUser(l.id, s.id),
                     c(),
-                    T.default.track(Z.rMx.GUILD_BAN_REMOVED, {
+                    T.default.track(A.rMx.GUILD_BAN_REMOVED, {
                         ...(0, p.hH)(l.id),
                         target_user_id: s.id,
                         reason: a.reason,
@@ -103,11 +103,11 @@ function O(e) {
                     (0, i.jsx)(d.Text, {
                         className: L.reasonHeader,
                         variant: 'text-xs/normal',
-                        children: A.intl.string(A.t['9Ki66O'])
+                        children: Z.intl.string(Z.t['9Ki66O'])
                     }),
                     (0, i.jsx)(d.Text, {
                         variant: 'text-sm/normal',
-                        children: null != a.reason && '' !== a.reason ? a.reason : A.intl.string(A.t['t+2Zcn'])
+                        children: null != a.reason && '' !== a.reason ? a.reason : Z.intl.string(Z.t['t+2Zcn'])
                     }),
                     null != x
                         ? (0, i.jsx)(d.Text, {
@@ -127,11 +127,11 @@ function O(e) {
                         look: d.Button.Looks.LINK,
                         color: d.Button.Colors.RED,
                         submitting: u,
-                        children: A.intl.string(A.t.UPcIa2)
+                        children: Z.intl.string(Z.t.UPcIa2)
                     }),
                     (0, i.jsx)(d.Button, {
                         onClick: c,
-                        children: A.intl.string(A.t.i4jeWV)
+                        children: Z.intl.string(Z.t.i4jeWV)
                     })
                 ]
             })
@@ -257,7 +257,7 @@ function M(e) {
         [l, s] = r.useState(null != n ? n : ''),
         [a, o] = r.useState(!1),
         c = r.useCallback(() => {
-            S.Z.setSection(Z.pNK.SAFETY), (0, R.K)(y.u.DM_AND_SPAM_PROTECTION);
+            S.Z.setSection(A.pNK.SAFETY), (0, R.K)(y.u.DM_AND_SPAM_PROTECTION);
         }, []),
         u = r.useCallback((e) => {
             s(e), 0 === e.trim().length && S.Z.setSearchQuery(e);
@@ -290,14 +290,14 @@ function M(e) {
         d.FormSection,
         {
             tag: d.FormTitleTags.H1,
-            title: A.intl.string(A.t['7OY0gI']),
+            title: Z.intl.string(Z.t['7OY0gI']),
             children: [
                 (0, i.jsx)('div', {
                     className: L.settingsHeader,
                     children: (0, i.jsx)(d.FormText, {
                         type: d.FormTextTypes.DESCRIPTION,
                         className: L.description,
-                        children: A.intl.format(A.t.JcZ36u, { onModerationClick: c })
+                        children: Z.intl.format(Z.t.JcZ36u, { onModerationClick: c })
                     })
                 }),
                 (0, i.jsxs)('div', {
@@ -306,8 +306,8 @@ function M(e) {
                         (0, i.jsx)(d.SearchBar, {
                             className: L.searchBar,
                             query: null != l ? l : '',
-                            placeholder: A.intl.string(A.t.MiqUmZ),
-                            'aria-label': A.intl.string(A.t.MiqUmZ),
+                            placeholder: Z.intl.string(Z.t.MiqUmZ),
+                            'aria-label': Z.intl.string(Z.t.MiqUmZ),
                             onChange: u,
                             onKeyDown: x,
                             onClear: h,
@@ -321,7 +321,7 @@ function M(e) {
                             disabled: a,
                             submitting: a,
                             className: L.searchButton,
-                            children: A.intl.string(A.t['5h0QOD'])
+                            children: Z.intl.string(Z.t['5h0QOD'])
                         })
                     ]
                 })
@@ -339,7 +339,7 @@ function w() {
         [C] = (0, c.e7)([E.Z], () => E.Z.getBans(), [], b.Q),
         _ = null !== (e = null == C ? void 0 : C.size) && void 0 !== e ? e : 0,
         v = (0, x.ZP)(),
-        T = null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : Z.lds,
+        T = null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : A.lds,
         j = r.useRef(null),
         S = r.useCallback(
             (e) =>
@@ -438,9 +438,9 @@ function w() {
                                           height: 212
                                       }),
                                       (0, i.jsx)(d.EmptyStateText, {
-                                          note: A.intl.string(A.t.zfCsAw),
+                                          note: Z.intl.string(Z.t.zfCsAw),
                                           style: { maxWidth: 300 },
-                                          children: A.intl.string(A.t.ZEiY1N)
+                                          children: Z.intl.string(Z.t.ZEiY1N)
                                       })
                                   ]
                               })

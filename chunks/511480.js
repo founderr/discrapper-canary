@@ -32,8 +32,8 @@ var i = n(200651),
     E = n(999382),
     R = n(450474),
     y = n(209054),
-    Z = n(118215),
-    A = n(166184),
+    A = n(118215),
+    Z = n(166184),
     L = n(96788),
     D = n(654351),
     O = n(354051),
@@ -141,7 +141,7 @@ class z extends r.PureComponent {
                         })
                     ]
                 }),
-                (0, i.jsx)(A.Z, {
+                (0, i.jsx)(Z.Z, {
                     className: G.guildCard,
                     loading: null == e,
                     guild: e
@@ -467,11 +467,11 @@ class z extends r.PureComponent {
             });
     }
 }
-t.Z = s.ZP.connectStores([E.Z, v.Z, Z.ZP, I.ZP, x.Z, T.default, N.Z], () => {
+t.Z = s.ZP.connectStores([E.Z, v.Z, A.ZP, I.ZP, x.Z, T.default, N.Z], () => {
     let { guild: e, errors: t, submitting: n, guildMetadata: i } = E.Z.getProps(),
         r = v.Z.can(w.Plq.MANAGE_GUILD, e),
         l = v.Z.can(w.Plq.ADMINISTRATOR, e),
-        s = null != e ? Z.ZP.getDiscoveryChecklist(e.id) : null,
+        s = null != e ? A.ZP.getDiscoveryChecklist(e.id) : null,
         a = null != e ? I.ZP.getChannels(e.id) : null,
         o = [];
     null != a &&

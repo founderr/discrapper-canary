@@ -1,6 +1,6 @@
 n.d(t, {
     T: function () {
-        return Z;
+        return A;
     },
     Z: function () {
         return L;
@@ -47,7 +47,7 @@ function y(e, t, n) {
         e
     );
 }
-let Z = a.ZP.connectStores([v.Z, T.Z], () => {
+let A = a.ZP.connectStores([v.Z, T.Z], () => {
     let e = T.Z.vanityURLCode,
         t = v.Z.getGuildId();
     return {
@@ -61,7 +61,7 @@ let Z = a.ZP.connectStores([v.Z, T.Z], () => {
         }
     };
 })(d.Z);
-class A extends r.PureComponent {
+class Z extends r.PureComponent {
     componentWillUnmount() {
         (0, N.xv)();
     }
@@ -240,7 +240,7 @@ function L() {
         { analyticsLocations: r } = (0, h.ZP)(u.Z.VANITY_URL);
     return (0, i.jsx)(h.Gt, {
         value: r,
-        children: (0, i.jsx)(A, {
+        children: (0, i.jsx)(Z, {
             guild: e,
             ...t,
             hide: n,

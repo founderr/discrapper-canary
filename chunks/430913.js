@@ -25,8 +25,8 @@ var i = n(200651),
     h = n(290247),
     g = n(981631),
     I = n(388032),
-    v = n(755257);
-let x = (0, I.getAvailableLocales)();
+    x = n(755257);
+let v = (0, I.getAvailableLocales)();
 function b(e) {
     var t, n, a;
     let { onClick: r, url: o, children: c } = e,
@@ -48,7 +48,7 @@ function C(e) {
         m = null;
     null != t
         ? (m = (0, i.jsx)(t, {
-              className: v.listIcon,
+              className: x.listIcon,
               color: null != a ? a : 'currentColor',
               width: 20,
               height: 20,
@@ -56,7 +56,7 @@ function C(e) {
           }))
         : null != n &&
           (m = (0, i.jsx)('img', {
-              className: v.listImage,
+              className: x.listImage,
               src: n,
               alt: ''
           }));
@@ -64,7 +64,7 @@ function C(e) {
         children: [
             m,
             (0, i.jsx)(s.Text, {
-                className: v.listText,
+                className: x.listText,
                 variant: 'text-md/normal',
                 selectable: !0,
                 children: d
@@ -73,7 +73,7 @@ function C(e) {
     });
     return (0, i.jsx)(c.Z, {
         href: r,
-        className: o()(v.listItem, v.linkItem),
+        className: o()(x.listItem, x.linkItem),
         onClick: () => (u(r, l), !1),
         trusted: !p,
         useDefaultUnderlineStyles: !1,
@@ -90,7 +90,7 @@ function S(e) {
         var e;
         if ((null === (e = l.directory_entry) || void 0 === e ? void 0 : e.supported_locales) !== void 0) {
             let e = new Set(l.directory_entry.supported_locales);
-            N(x.filter((t) => e.has(t.value)).map((e) => I.intl.string(e.localizedName)));
+            N(v.filter((t) => e.has(t.value)).map((e) => I.intl.string(e.localizedName)));
         }
     }, [l.directory_entry]);
     let y = (e, t) => {
@@ -108,12 +108,12 @@ function S(e) {
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(s.Heading, {
-                            className: v.sectionHeader,
+                            className: x.sectionHeader,
                             variant: 'eyebrow',
                             children: I.intl.string(I.t.s7ialZ)
                         }),
                         (0, i.jsx)('div', {
-                            className: v.categories,
+                            className: x.categories,
                             children: (null !== (r = l.categories) && void 0 !== r ? r : []).map((e) => {
                                 let t = new URLSearchParams();
                                 return (
@@ -123,7 +123,7 @@ function S(e) {
                                         {
                                             href: ''.concat(g.Z5c.APPLICATION_DIRECTORY_SEARCH, '?').concat(t),
                                             children: (0, i.jsx)(s.Clickable, {
-                                                className: v.category,
+                                                className: x.category,
                                                 onClick: () => u(e),
                                                 children: (0, i.jsx)(s.Text, {
                                                     variant: 'text-sm/normal',
@@ -146,7 +146,7 @@ function S(e) {
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(s.Heading, {
-                            className: v.sectionHeader,
+                            className: x.sectionHeader,
                             variant: 'eyebrow',
                             children: I.intl.string(I.t.Fbjlu7)
                         }),
@@ -159,7 +159,7 @@ function S(e) {
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(s.Heading, {
-                            className: v.sectionHeader,
+                            className: x.sectionHeader,
                             variant: 'eyebrow',
                             children: I.intl.string(I.t.l6DP2t)
                         }),
@@ -201,7 +201,7 @@ function S(e) {
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(s.Heading, {
-                            className: v.sectionHeader,
+                            className: x.sectionHeader,
                             variant: 'eyebrow',
                             children: I.intl.string(I.t.KJEO29)
                         }),
@@ -213,7 +213,7 @@ function S(e) {
                 })
             ),
         (0, i.jsx)('div', {
-            className: o()(v.sidebar, d),
+            className: o()(x.sidebar, d),
             children:
                 j.length > 0
                     ? (0, i.jsx)(i.Fragment, {
@@ -221,7 +221,7 @@ function S(e) {
                               (0, i.jsx)(
                                   'div',
                                   {
-                                      className: v.section,
+                                      className: x.section,
                                       children: e
                                   },
                                   t

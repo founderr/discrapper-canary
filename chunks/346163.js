@@ -29,8 +29,8 @@ function x(e) {
         { isApplicationRejected: S, requestCooldownDuration: E } = (0, u.Z)(j),
         R = (null == e ? void 0 : e.hasFeature(h.oNc.CREATOR_MONETIZABLE_RESTRICTED)) === !0 || (null == e ? void 0 : e.hasFeature(h.oNc.CREATOR_MONETIZABLE_DISABLED)) === !0,
         { isMonetizationReapplicationDisabled: y } = (0, l.eC)(null == e ? void 0 : e.id),
-        Z = v || (null == j ? void 0 : j.isApplicationPending) === !0,
-        A = (null == j ? void 0 : j.canApply) === !0,
+        A = v || (null == j ? void 0 : j.isApplicationPending) === !0,
+        Z = (null == j ? void 0 : j.canApply) === !0,
         L = g.intl.format(g.t.aJUdOj, { faqUrl: a.Z.getArticleURL(h.BhN.CREATOR_FAQ) });
     S && y
         ? (t = !0 === x ? g.intl.format(g.t['0o1Q+v'], { communityGuidelineUrl: h.EYA.GUIDELINES }) : g.intl.format(g.t.b6h59v, { communityGuidelineUrl: h.EYA.GUIDELINES }))
@@ -43,7 +43,7 @@ function x(e) {
     let D = n && f && !1 === p,
         O = n && !1 === x,
         P = (0, m.f)(),
-        k = S && A && f ? g.intl.format(g.t.wbVIUF, {}) : void 0;
+        k = S && Z && f ? g.intl.format(g.t.wbVIUF, {}) : void 0;
     return (
         i.useEffect(() => {
             D && b();
@@ -58,8 +58,8 @@ function x(e) {
             eligibilityError: T,
             refreshEligibility: b,
             eligibility: j,
-            eligibleForMonetization: A,
-            isApplicationPending: Z,
+            eligibleForMonetization: Z,
+            isApplicationPending: A,
             hasPreviousApplicationRejection: S,
             requestRejectedNoticeText: t,
             reapplyNoticeText: k,
