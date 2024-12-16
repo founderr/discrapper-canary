@@ -12,6 +12,7 @@ e.exports = {
     green: 'green_ef18ee',
     yellow: 'yellow_ef18ee',
     experimentDark: 'experimentDark_ef18ee',
+    experimentActiveLight: 'experimentActiveLight_ef18ee',
     centerButton: 'centerButton_ef18ee colorable_ef18ee',
     experimentButton: 'experimentButton_ef18ee colorable_ef18ee',
     fullRegionButton: 'fullRegionButton_ef18ee',
