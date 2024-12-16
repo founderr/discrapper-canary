@@ -9,14 +9,14 @@ var r = n(192379),
     u = n(626135),
     d = n(70956),
     _ = n(997787),
-    h = n(981631);
-let m = 1 * d.Z.Millis.DAY,
+    m = n(981631);
+let h = 1 * d.Z.Millis.DAY,
     p = new Map();
 t.Z = {
     useShouldShowChannelNotice(e) {
         let t = (0, i.e7)([l.Z, c.Z], () => {
             let t = l.Z.getGuild(e);
-            return null != t && c.Z.can(h.Plq.ADMINISTRATOR, t);
+            return null != t && c.Z.can(m.Plq.ADMINISTRATOR, t);
         });
         r.useEffect(() => {
             t &&
@@ -24,11 +24,11 @@ t.Z = {
                     var t;
                     let n = Date.now(),
                         r = null !== (t = p.get(e)) && void 0 !== t ? t : 0;
-                    if (!(n < r + m))
+                    if (!(n < r + h))
                         p.set(e, n),
                             a.tn
                                 .post({
-                                    url: h.ANM.GUILD_MIGRATE_COMMAND_SCOPE(e),
+                                    url: m.ANM.GUILD_MIGRATE_COMMAND_SCOPE(e),
                                     rejectWithError: !0
                                 })
                                 .then(
@@ -62,7 +62,7 @@ t.Z = {
             guildId: e,
             integrationId: t.id
         }),
-            u.default.track(h.rMx.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
+            u.default.track(m.rMx.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
                 ...(0, s.hH)(e),
                 application_id: null === (n = t.application) || void 0 === n ? void 0 : n.id,
                 location: 'overview'
@@ -75,7 +75,7 @@ t.Z = {
                 type: 'COMMANDS_MIGRATION_TOGGLE_TOOLTIP_DISMISSED',
                 integrationId: t.id
             }),
-                u.default.track(h.rMx.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
+                u.default.track(m.rMx.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
                     ...(0, s.hH)(e),
                     application_id: null === (n = t.application) || void 0 === n ? void 0 : n.id,
                     location: 'toggle'

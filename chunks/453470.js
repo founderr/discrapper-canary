@@ -55,7 +55,7 @@ function _(e) {
         b = l.useCallback(() => {
             (0, d.T)(t, [_]);
         }, [t, _]),
-        Z = () => {
+        Z = (e) => {
             s.Z.updateChannelOverrideSettings(null, t, { muted: !0 }, m.ZB.Muted),
                 c.Z.showMuteSuccessToast(I, t),
                 (0, h.qc)({
@@ -63,7 +63,7 @@ function _(e) {
                     warningId: _,
                     senderId: I,
                     warningType: u.pj.LIKELY_ATO,
-                    cta: h.NM.USER_MODAL_MUTE
+                    cta: e
                 }),
                 b();
         },
@@ -109,7 +109,7 @@ function _(e) {
                             channelId: t,
                             warningId: _,
                             onClick: () => {
-                                Z(), r();
+                                Z(h.NM.USER_MODAL_MUTE), r();
                             }
                         }),
                         learnMore: (0, i.jsx)(a.Clickable, {
@@ -167,7 +167,7 @@ function _(e) {
                 {
                     text: C.intl.string(C.t.ftIK2N),
                     color: a.Button.Colors.PRIMARY,
-                    onclick: Z
+                    onclick: () => Z(h.NM.USER_BANNER_MUTE)
                 }
             ]
         })

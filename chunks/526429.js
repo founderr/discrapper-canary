@@ -1,6 +1,6 @@
 n.d(t, {
     j: function () {
-        return m;
+        return h;
     }
 }),
     n(653041),
@@ -15,8 +15,8 @@ var r,
     u = n(570140),
     d = n(823379),
     _ = n(128449),
-    h = n(388032);
-function m(e, t) {
+    m = n(388032);
+function h(e, t) {
     return l().isEqual(
         e.map((e) => [e.categoryId, e.name]),
         t.map((e) => [e.categoryId, e.name])
@@ -35,7 +35,7 @@ class C extends (r = c.ZP.Store) {
         return [
             {
                 categoryId: _.Hk,
-                name: h.intl.string(h.t.Ym2Ri4)
+                name: m.intl.string(m.t.Ym2Ri4)
             },
             ...e
         ];
@@ -45,7 +45,7 @@ class C extends (r = c.ZP.Store) {
         return [
             {
                 categoryId: _.Hk,
-                name: h.intl.string(h.t.QToH29)
+                name: m.intl.string(m.t.QToH29)
             },
             ...e
         ];
@@ -57,7 +57,7 @@ class C extends (r = c.ZP.Store) {
         return p;
     }
     getCategoryName(e) {
-        return e === _.Hk ? h.intl.string(h.t.Ym2Ri4) : T[e];
+        return e === _.Hk ? m.intl.string(m.t.Ym2Ri4) : T[e];
     }
 }
 (o = 'GuildDiscoveryCategoryStore'),

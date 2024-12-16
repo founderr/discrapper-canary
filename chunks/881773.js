@@ -26,7 +26,7 @@ var r = n(200651),
     _ = n(388032),
     T = n(451680);
 let D = '-:--',
-    N = {
+    I = {
         [S.rq.PLAYING]: {
             icon: d.PauseIcon,
             label: _.intl.string(_.t.ZcgDJS)
@@ -40,7 +40,7 @@ let D = '-:--',
             label: _.intl.string(_.t.hsvh0t)
         }
     },
-    I = (e, t) => {
+    N = (e, t) => {
         (0, v.dA)({
             questId: e,
             event: h.rMx.QUEST_VIDEO_VOLUME_CHANGED,
@@ -117,7 +117,7 @@ let j = i.forwardRef(function (e, t) {
 });
 function b(e) {
     var t, n;
-    let { videoRef: l, quest: v, playerState: g, animSpring: h, visible: D, seekForwardEnabled: b, hideCaptionBtn: L, handlePlaybackBtnClick: k, handleTranscriptBtnClick: R, handleCaptionBtnClick: O, handleFullScreenBtnClick: M, handleSeekBackBtnClick: P, handleSeekForwardBtnClick: y, handleControlBarPendingInteraction: q } = e,
+    let { videoRef: l, quest: v, playerState: g, animSpring: h, visible: D, seekForwardEnabled: b, hideCaptionBtn: L, handlePlaybackBtnClick: k, handleTranscriptBtnClick: R, handleCaptionBtnClick: O, handleFullScreenBtnClick: M, handleSeekBackBtnClick: y, handleSeekForwardBtnClick: P, handleControlBarPendingInteraction: q } = e,
         w = (0, E.km)((e) => e.volume),
         B = (0, E.km)((e) => e.setVolume),
         U = (0, E.km)((e) => e.muted),
@@ -126,10 +126,11 @@ function b(e) {
         V = (0, E.km)((e) => e.captionEnabled),
         Y = (0, E.km)((e) => e.fullScreenEnabled),
         G = (0, a.e7)([m.Z], () => m.Z.useReducedMotion),
-        [z, H] = i.useState(U ? 0 : w),
-        [Q, K] = i.useState(!1),
-        [W, X] = i.useState(!1),
-        [{ volumeAnimSpring: J }, $] = (0, d.useSpring)(() => ({
+        z = (0, a.e7)([m.Z], () => m.Z.keyboardModeEnabled),
+        [H, Q] = i.useState(U ? 0 : w),
+        [K, W] = i.useState(!1),
+        [X, J] = i.useState(!1),
+        [{ volumeAnimSpring: $ }, ee] = (0, d.useSpring)(() => ({
             from: { volumeAnimSpring: 0 },
             config: {
                 tension: 100,
@@ -137,37 +138,36 @@ function b(e) {
                 clamp: !0
             }
         })),
-        ee = i.useRef(null),
-        et = i.useCallback(
+        et = i.useRef(null),
+        en = i.useCallback(
             (e) => {
-                if (null != l.current) e !== l.current.volume && (l.current.volume = e), e !== z && H(e);
+                if (null != l.current) e !== l.current.volume && (l.current.volume = e), e !== H && Q(e);
             },
-            [l, z]
+            [l, H]
         ),
-        en = i.useCallback(() => {
-            if (null != l.current) 0 === z ? (et(w), Z(!1), I(v.id, w)) : (B(z), et(0), Z(!0), I(v.id, 0));
-        }, [l, z, w, Z, B, et, v.id]),
-        er = () => {
-            K(!0);
-        },
+        er = i.useCallback(() => {
+            if (null != l.current) 0 === H ? (en(w), Z(!1), N(v.id, w)) : (B(H), en(0), Z(!0), N(v.id, 0));
+        }, [l, H, w, Z, B, en, v.id]),
         ei = () => {
-            K(!1);
+            W(!0);
         },
-        el = i.useCallback(
+        el = () => {
+            W(!1);
+        },
+        eo = i.useCallback(
             (e) => {
                 switch (e.key) {
                     case x.Y1.PLAYBACK:
                         k();
                         break;
                     case x.Y1.SPACE:
-                        let t = document.activeElement;
-                        !((null == t ? void 0 : t.getAttribute('tabindex')) === '0' || (null == t ? void 0 : t.getAttribute('role')) === 'button' || (null == t ? void 0 : t.tagName) === 'BUTTON') && k();
+                        !z && (e.preventDefault(), k());
                         break;
                     case x.Y1.SEEK_BACK:
-                        P();
+                        y();
                         break;
                     case x.Y1.SEEK_FORWARD:
-                        y();
+                        P();
                         break;
                     case x.Y1.CAPTION:
                         O();
@@ -176,56 +176,56 @@ function b(e) {
                         M();
                         break;
                     case x.Y1.MUTE:
-                        en();
+                        er();
                 }
             },
-            [O, M, k, P, y, en]
+            [O, M, k, y, P, er, z]
         );
     i.useEffect(() => {
-        null != ee.current && ee.current.focus();
+        null != et.current && et.current.focus();
     }, []),
         i.useEffect(
             () => (
-                $({
-                    volumeAnimSpring: W || Q ? 1 : 0,
+                ee({
+                    volumeAnimSpring: X || K ? 1 : 0,
                     immediate: G
                 }),
                 () => {
-                    J.stop();
+                    $.stop();
                 }
             ),
-            [W, Q, $, G, J]
+            [X, K, ee, G, $]
         ),
         i.useEffect(
             () => (
-                window.addEventListener('keydown', el),
+                window.addEventListener('keydown', eo),
                 () => {
-                    window.removeEventListener('keydown', el);
+                    window.removeEventListener('keydown', eo);
                 }
             ),
-            [el]
+            [eo]
         );
-    let eo = 0 === z ? d.VoiceXIcon : z < 0.5 ? d.VoiceLowIcon : d.VoiceNormalIcon,
-        { icon: es, label: ea } = N[g];
+    let es = 0 === H ? d.VoiceXIcon : H < 0.5 ? d.VoiceLowIcon : d.VoiceNormalIcon,
+        { icon: ea, label: eu } = I[g];
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
                 className: T.videoControlsGroup,
                 children: [
                     (0, r.jsx)(j, {
-                        iconComponent: es,
+                        iconComponent: ea,
                         animationTime: h,
                         visible: D,
-                        ariaLabel: ea,
-                        tooltipLabel: ea,
+                        ariaLabel: eu,
+                        tooltipLabel: eu,
                         onClick: k,
-                        ref: ee
+                        ref: et
                     }),
                     (0, r.jsx)(j, {
                         iconComponent: f.d,
                         animationTime: h,
                         visible: D,
-                        onClick: P,
+                        onClick: y,
                         ariaLabel: _.intl.string(_.t.r9s3Ul),
                         tooltipLabel: _.intl.string(_.t.r9s3Ul)
                     }),
@@ -233,7 +233,7 @@ function b(e) {
                         iconComponent: C.o,
                         animationTime: h,
                         visible: D,
-                        onClick: y,
+                        onClick: P,
                         disabled: !b,
                         ariaLabel: b ? _.intl.string(_.t.zWDcND) : _.intl.string(_.t.xXh3y8),
                         tooltipLabel: b ? _.intl.string(_.t.zWDcND) : _.intl.string(_.t.xXh3y8),
@@ -256,17 +256,17 @@ function b(e) {
                 },
                 children: [
                     (0, r.jsxs)('div', {
-                        onMouseEnter: er,
-                        onMouseLeave: ei,
-                        onFocus: er,
-                        onBlur: ei,
+                        onMouseEnter: ei,
+                        onMouseLeave: el,
+                        onFocus: ei,
+                        onBlur: el,
                         className: T.volumeControlGroup,
                         children: [
                             (0, r.jsx)(j, {
-                                iconComponent: eo,
+                                iconComponent: es,
                                 animationTime: h,
                                 visible: D,
-                                onClick: en,
+                                onClick: er,
                                 ariaLabel: _.intl.string(_.t['eIl+AA']),
                                 tooltipLabel: _.intl.string(_.t['eIl+AA'])
                             }),
@@ -275,7 +275,7 @@ function b(e) {
                                 style: {
                                     opacity: (0, s.to)(
                                         [
-                                            J.to({
+                                            $.to({
                                                 range: [0, 1],
                                                 output: [0, 1]
                                             })
@@ -284,7 +284,7 @@ function b(e) {
                                     ),
                                     width: (0, s.to)(
                                         [
-                                            J.to({
+                                            $.to({
                                                 range: [0, 1],
                                                 output: [0, 100]
                                             })
@@ -303,15 +303,15 @@ function b(e) {
                                         backgroundColor: u.Z.colors.WHITE.css,
                                         cursor: 'pointer'
                                     },
-                                    initialValue: z,
+                                    initialValue: H,
                                     keyboardStep: 0.1,
                                     minValue: 0,
                                     maxValue: 1,
                                     onValueChange: (e) => {
-                                        et(e), B(e), I(v.id, e), W && (X(!1), q(!1)), U && e > 0 && Z(!1);
+                                        en(e), B(e), N(v.id, e), X && (J(!1), q(!1)), U && e > 0 && Z(!1);
                                     },
                                     asValueChanges: (e) => {
-                                        et(e), !W && (X(!0), q(!0));
+                                        en(e), !X && (J(!0), q(!0));
                                     },
                                     fillStyles: { backgroundColor: u.Z.colors.WHITE.css },
                                     orientation: 'horizontal',

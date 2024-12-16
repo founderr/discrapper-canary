@@ -25,7 +25,7 @@ let _ = (e) =>
         className: e.className,
         children: e.children
     });
-class h extends (r = a.PureComponent) {
+class m extends (r = a.PureComponent) {
     isSortable(e) {
         return null != e.sort && !1 !== e.sort;
     }
@@ -37,8 +37,8 @@ class h extends (r = a.PureComponent) {
         };
     }
     renderHeader() {
-        let { columns: e, data: t, sortDirection: n, sortKey: r, headerCellClassName: a, headerClassName: o, sortedHeaderCellClassName: d, stickyHeader: h } = this.props,
-            m = e.map((e) => {
+        let { columns: e, data: t, sortDirection: n, sortKey: r, headerCellClassName: a, headerClassName: o, sortedHeaderCellClassName: d, stickyHeader: m } = this.props,
+            h = e.map((e) => {
                 let o = null != e.renderHeader ? e.renderHeader(e, t) : e.key,
                     _ = n === c.sHY.ASCENDING ? l.ChevronSmallUpIcon : l.ChevronSmallDownIcon;
                 return (0, i.jsx)(
@@ -55,12 +55,12 @@ class h extends (r = a.PureComponent) {
                 );
             });
         return (0, i.jsx)(_, {
-            className: s()(o, u.row, { [u.stickyHeader]: h }),
-            children: m
+            className: s()(o, u.row, { [u.stickyHeader]: m }),
+            children: h
         });
     }
     renderBody() {
-        let { columns: e, data: t, sortData: n, sortKey: r, sortDirection: i, bodyCellClassName: o, rowClassName: l, cellProps: d, rowProps: _, rowComponent: h, cellComponent: m } = this.props,
+        let { columns: e, data: t, sortData: n, sortKey: r, sortDirection: i, bodyCellClassName: o, rowClassName: l, cellProps: d, rowProps: _, rowComponent: m, cellComponent: h } = this.props,
             p = t;
         if (n) {
             let n =
@@ -78,7 +78,7 @@ class h extends (r = a.PureComponent) {
         return p.map((t, n) => {
             let r = e.map((e) =>
                 (0, a.createElement)(
-                    m,
+                    h,
                     {
                         ...d,
                         key: e.key,
@@ -89,7 +89,7 @@ class h extends (r = a.PureComponent) {
                 )
             );
             return (0, a.createElement)(
-                h,
+                m,
                 {
                     ..._,
                     key: t.key,
@@ -115,8 +115,8 @@ class h extends (r = a.PureComponent) {
             });
     }
 }
-d(h, 'SortDirection', c.sHY),
-    d(h, 'defaultProps', {
+d(m, 'SortDirection', c.sHY),
+    d(m, 'defaultProps', {
         initialSortDirection: c.sHY.ASCENDING,
         rowHeaderComponent: _,
         rowComponent: (e) =>
@@ -133,4 +133,4 @@ d(h, 'SortDirection', c.sHY),
         sortData: !0,
         stickyHeader: !1
     }),
-    (t.Z = h);
+    (t.Z = m);

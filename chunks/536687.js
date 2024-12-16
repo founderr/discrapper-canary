@@ -27,8 +27,8 @@ var r = n(200651),
     _ = n(644646),
     T = n(604162),
     D = n(747717),
-    N = n(963123),
-    I = n(281055),
+    I = n(963123),
+    N = n(281055),
     A = n(46140),
     j = n(981631),
     b = n(388032),
@@ -38,8 +38,8 @@ function k(e) {
     let { transitionState: n, onClose: l, quest: E, autoplay: k, videoSessionId: R } = e,
         O = (0, f.il)(E),
         M = (0, s.e7)([d.Z], () => d.Z.getState().theme),
-        P = (0, a.wj)(M) ? j.BRd.DARK : j.BRd.LIGHT,
-        y = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
+        y = (0, a.wj)(M) ? j.BRd.DARK : j.BRd.LIGHT,
+        P = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
         [q, w] = i.useState(O.progressSeconds),
         [B, U] = i.useState(!1),
         { completedRatio: Z, completedRatioDisplay: F } = (0, v.I)(E),
@@ -73,7 +73,7 @@ function k(e) {
         children: (0, r.jsx)(h.A, {
             questOrQuests: E,
             questContent: p.jn.VIDEO_MODAL,
-            minViewTimeSeconds: I.zw,
+            minViewTimeSeconds: N.zw,
             trackGuildAndChannelMetadata: !0,
             children: (e) => {
                 var t, i;
@@ -97,7 +97,7 @@ function k(e) {
                                                 (0, r.jsx)('img', {
                                                     alt: E.config.messages.gameTitle,
                                                     className: o()(L.contentHeaderLogotype, L.accentOnHover),
-                                                    src: (0, C.fh)(E, C.eC.LOGO_TYPE, P).url
+                                                    src: (0, C.fh)(E, C.eC.LOGO_TYPE, y).url
                                                 }),
                                                 (0, r.jsx)(D.Z, {}),
                                                 (0, r.jsxs)('div', {
@@ -144,7 +144,7 @@ function k(e) {
                                         })
                                     ]
                                 }),
-                                (0, r.jsx)(N.Z, {
+                                (0, r.jsx)(I.Z, {
                                     quest: E,
                                     videoSessionId: R,
                                     parentTransitionState: n,
@@ -174,7 +174,7 @@ function k(e) {
                                                     className: L.claimBtn,
                                                     size: u.Button.Sizes.MEDIUM,
                                                     quest: E,
-                                                    useReducedMotion: y,
+                                                    useReducedMotion: P,
                                                     isExpanded: (null === (t = E.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
                                                     disabled: (null === (i = E.userStatus) || void 0 === i ? void 0 : i.completedAt) == null,
                                                     ctaLabel: G

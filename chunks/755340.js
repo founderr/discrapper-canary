@@ -31,10 +31,10 @@ n.Z = function (e) {
         _ = l.useMemo(() => w.some((e) => !(0, c.J)(e)), [w]),
         H = S > 0,
         J = (0, o.K2)(n.id, 'verification form builder') || n.hasFeature(j.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) || I,
-        B = l.useCallback(() => {
+        D = l.useCallback(() => {
             (0, s.showToast)((0, s.createToast)(C.intl.string(C.t.R0RpRU), s.ToastType.FAILURE));
         }, []),
-        D = (0, a.e7)([r.Z], () => r.Z.can(j.Plq.MANAGE_GUILD, n)),
+        B = (0, a.e7)([r.Z], () => r.Z.can(j.Plq.MANAGE_GUILD, n)),
         z = l.useCallback(
             async (e) => {
                 if (!F.current) {
@@ -50,14 +50,14 @@ n.Z = function (e) {
             },
             [E, n.id, p, R, I]
         ),
-        G = l.useCallback(
+        Q = l.useCallback(
             async (e) => {
                 let n = e.field_type === c.QJ.TERMS ? [e, ...w] : [...w, e];
                 await z(n);
             },
             [w, z]
         ),
-        Q = l.useCallback(
+        G = l.useCallback(
             async (e, n) => {
                 if (w[e] === n) return;
                 let t = [...w];
@@ -73,23 +73,23 @@ n.Z = function (e) {
                     try {
                         await z(l), null !== E && b(null);
                     } catch (e) {
-                        B();
+                        D();
                     }
                 else E !== n && b(n);
             },
-            [E, w, z, B]
+            [E, w, z, D]
         ),
         O = l.useCallback(
             async (e) => {
                 try {
                     await z([...w.slice(0, e), ...w.slice(e + 1)]);
                 } catch (e) {
-                    B();
+                    D();
                 }
             },
-            [w, z, B]
+            [w, z, D]
         ),
-        q = D ? (I ? 'side' : 'footer') : 'none',
+        q = B ? (I ? 'side' : 'footer') : 'none',
         V = (0, i.jsxs)(i.Fragment, {
             children: [
                 !T && (0, i.jsx)(f.ZP, { guild: n }),
@@ -97,13 +97,13 @@ n.Z = function (e) {
                     formDescription: N,
                     guildId: n.id,
                     onSave: y,
-                    disable: !D
+                    disable: !B
                 }),
-                D &&
+                B &&
                     !Z &&
                     !A &&
                     (0, i.jsx)(x.Z, {
-                        addFormField: G,
+                        addFormField: Q,
                         guild: n
                     }),
                 L.map((e) =>
@@ -115,7 +115,7 @@ n.Z = function (e) {
                         isDragEnabled: !1,
                         submittedGuildJoinRequestsCount: t,
                         removeFormField: O,
-                        updateFormField: Q,
+                        updateFormField: G,
                         updateFormFieldOrder: U,
                         canRemove: !0,
                         actionsLocation: q,
@@ -130,7 +130,7 @@ n.Z = function (e) {
                   !I && V,
                   !_ &&
                       (0, i.jsx)(u.Z, {
-                          addFormField: G,
+                          addFormField: Q,
                           showManualApprovalWarning: !I && !H,
                           guild: n,
                           showHeader: !I
@@ -141,21 +141,21 @@ n.Z = function (e) {
                           formField: e,
                           guild: n,
                           index: w.indexOf(e),
-                          isDragEnabled: H && D,
+                          isDragEnabled: H && B,
                           submittedGuildJoinRequestsCount: t,
                           removeFormField: O,
-                          updateFormField: Q,
+                          updateFormField: G,
                           updateFormFieldOrder: U,
-                          canRemove: !(I && P.length <= 1) && D,
+                          canRemove: !(I && P.length <= 1) && B,
                           actionsLocation: q,
                           fieldStyle: c.it.REGULAR
                       })
                   ),
                   _ &&
                       !A &&
-                      D &&
+                      B &&
                       (0, i.jsx)(h.Z, {
-                          addFormField: G,
+                          addFormField: Q,
                           guild: n
                       })
               ]

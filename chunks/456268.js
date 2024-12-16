@@ -1,9 +1,9 @@
 n.d(t, {
     J9: function () {
-        return h;
+        return m;
     },
     K0: function () {
-        return f;
+        return A;
     },
     Kq: function () {
         return C;
@@ -18,7 +18,7 @@ n.d(t, {
         return T;
     },
     W1: function () {
-        return m;
+        return h;
     },
     aC: function () {
         return c;
@@ -74,7 +74,7 @@ async function c(e) {
                 is_published: u,
                 reasons_to_join: d,
                 social_links: _,
-                about: h
+                about: m
             } = (
                 await r.tn.get({
                     url: s.ANM.GUILD_DISCOVERY_METADATA(e),
@@ -82,7 +82,7 @@ async function c(e) {
                     rejectWithError: !0
                 })
             ).body,
-            m = {
+            h = {
                 primaryCategoryId: t,
                 secondaryCategoryIds: n,
                 keywords: a,
@@ -92,15 +92,15 @@ async function c(e) {
                 isPublished: u,
                 reasonsToJoin: d,
                 socialLinks: _,
-                about: h
+                about: m
             };
         return (
             i.Z.dispatch({
                 type: 'GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER',
                 guildId: e,
-                metadata: m
+                metadata: h
             }),
-            m
+            h
         );
     } catch (e) {
         i.Z.dispatch({ type: 'GUILD_DISCOVERY_METADATA_FETCH_FAIL' });
@@ -139,14 +139,14 @@ function _(e, t) {
         keywords: t
     });
 }
-function h(e, t) {
+function m(e, t) {
     i.Z.dispatch({
         type: 'GUILD_UPDATE_DISCOVERY_METADATA',
         guildId: e,
         emojiDiscoverabilityEnabled: t
     });
 }
-function m(e, t) {
+function h(e, t) {
     i.Z.dispatch({
         type: 'GUILD_UPDATE_DISCOVERY_METADATA',
         guildId: e,
@@ -175,19 +175,19 @@ function I(e, t) {
     });
 }
 async function T(e) {
-    let { guildId: t, primaryCategoryId: n, keywords: a, emojiDiscoverabilityEnabled: o, partnerActionedTimestamp: l, partnerApplicationTimestamp: c, isPublished: u, reasonsToJoin: d, socialLinks: _, about: h } = e;
+    let { guildId: t, primaryCategoryId: n, keywords: a, emojiDiscoverabilityEnabled: o, partnerActionedTimestamp: l, partnerApplicationTimestamp: c, isPublished: u, reasonsToJoin: d, socialLinks: _, about: m } = e;
     try {
         let {
             primary_category_id: e,
-            category_ids: m,
+            category_ids: h,
             keywords: p,
             emoji_discoverability_enabled: E,
             partner_actioned_timestamp: I,
             partner_application_timestamp: T,
             is_published: C,
-            reasons_to_join: f,
-            social_links: A,
-            about: N
+            reasons_to_join: A,
+            social_links: N,
+            about: f
         } = (
             await r.tn.patch({
                 url: s.ANM.GUILD_DISCOVERY_METADATA(t),
@@ -200,7 +200,7 @@ async function T(e) {
                     is_published: u,
                     reasons_to_join: d,
                     social_links: _,
-                    about: h
+                    about: m
                 },
                 oldFormErrors: !0,
                 rejectWithError: !1
@@ -211,15 +211,15 @@ async function T(e) {
             guildId: t,
             metadata: {
                 primaryCategoryId: e,
-                secondaryCategoryIds: m,
+                secondaryCategoryIds: h,
                 keywords: p,
                 emojiDiscoverabilityEnabled: E,
                 partnerActionedTimestamp: I,
                 partnerApplicationTimestamp: T,
                 isPublished: C,
-                reasonsToJoin: f,
-                socialLinks: A,
-                about: N
+                reasonsToJoin: A,
+                socialLinks: N,
+                about: f
             }
         });
     } catch (e) {
@@ -255,7 +255,7 @@ function C(e, t) {
             });
         });
 }
-function f(e, t) {
+function A(e, t) {
     r.tn
         .del({
             url: s.ANM.GUILD_DISCOVERY_UPDATE_CATEGORY(e, t),

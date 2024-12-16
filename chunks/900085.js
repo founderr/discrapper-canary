@@ -263,7 +263,7 @@ class V extends r.PureComponent {
                 switch (t.type) {
                     case m.h8.GUILD:
                         return (0, u.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e('63288'), n.e('33053'), n.e('17298'), n.e('7654'), n.e('42309'), n.e('98479'), n.e('31113'), n.e('60696'), n.e('58227'), n.e('16114'), n.e('54770'), n.e('23956'), n.e('33213'), n.e('22179')]).then(n.bind(n, 545135));
+                            let { default: e } = await Promise.all([n.e('63288'), n.e('33053'), n.e('17298'), n.e('7654'), n.e('42309'), n.e('98479'), n.e('31113'), n.e('60696'), n.e('58227'), n.e('16114'), n.e('54770'), n.e('66780'), n.e('33213'), n.e('22179')]).then(n.bind(n, 545135));
                             return (n) =>
                                 (0, l.jsx)(e, {
                                     ...n,
