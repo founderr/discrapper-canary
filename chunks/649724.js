@@ -42,8 +42,8 @@ class g extends (i = o.PureComponent) {
     }
     renderInput(e) {
         var n;
-        let { value: r, mode: i, autoFocus: a, spellCheck: o, inputClassName: l } = this.props,
-            c = null === (n = this.context) || void 0 === n ? void 0 : n.titleId;
+        let { value: r, mode: i, autoFocus: a, spellCheck: o, inputClassName: l, placeholder: c } = this.props,
+            d = null === (n = this.context) || void 0 === n ? void 0 : n.titleId;
         return (0, s.jsx)('input', {
             className: u()((0, f.l)(h, 'input', i), l, { [h.inputHidden]: e }),
             ref: this.inputRef,
@@ -51,9 +51,10 @@ class g extends (i = o.PureComponent) {
             value: r,
             onClick: this.handleInputClick,
             readOnly: !0,
-            'aria-labelledby': c,
+            'aria-labelledby': d,
             autoFocus: a,
-            spellCheck: o
+            spellCheck: o,
+            placeholder: c
         });
     }
     render() {
