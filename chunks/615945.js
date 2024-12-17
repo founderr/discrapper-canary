@@ -15,5 +15,8 @@ e.exports = {
     customGiftMessageWrapper: 'customGiftMessageWrapper_d439ef',
     customGiftMessage: 'customGiftMessage_d439ef',
     selectGiftTitle: 'selectGiftTitle_d439ef',
-    equalDistantBackButton: 'equalDistantBackButton_d439ef'
+    equalDistantBackButton: 'equalDistantBackButton_d439ef',
+    compactSendGiftToUser: 'compactSendGiftToUser_d439ef',
+    compactCustomGiftMessageWrapper: 'compactCustomGiftMessageWrapper_d439ef',
+    compactSelectGiftTitle: 'compactSelectGiftTitle_d439ef'
 };

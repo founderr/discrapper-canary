@@ -7019,6 +7019,23 @@ div.modalHeader_c5e09c {
     border-bottom: 1px solid var(--background-modifier-hover)
 }
 
+.visual-refresh .row_c2f3ef {
+    background-color: var(--background-mod-subtle)
+}
+
+.visual-refresh .row_c2f3ef:hover {
+    background-color: var(--background-mod-normal)
+}
+
+.visual-refresh .row_c2f3ef:not(:last-child) .rowInner_c2f3ef {
+    border-color: var(--border-subtle)
+}
+
+.visual-refresh .rows_c2f3ef {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm)
+}
+
 .rowInner_c2f3ef {
     display: flex;
     align-items: center;
@@ -7061,6 +7078,11 @@ div.modalHeader_c5e09c {
     gap: var(--spacing-8);
     display: flex;
     flex-direction: column
+}
+
+.visual-refresh .overviewContainerNoVideo_c2f3ef {
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-faint)
 }
 
 .titleContainer_c2f3ef {
@@ -32446,6 +32468,10 @@ img.thumbnail_c64476 {
     width: 100%
 }
 
+.visual-refresh .oauth2ModalWrapper_c2b22e .footer_c2b22e {
+    box-sizing: border-box
+}
+
 .wrapper_e1a4cf {
     flex: 1;
     display: flex;
@@ -32539,6 +32565,19 @@ img.thumbnail_c64476 {
     background: var(--background-primary)
 }
 
+.visual-refresh .authorize_c5a065 {
+    background: transparent none repeat 0 0/auto auto padding-box border-box scroll;
+    background: initial;
+    margin: 0
+}
+
+.visual-refresh .footer_c5a065 {
+    background: transparent none repeat 0 0/auto auto padding-box border-box scroll;
+    background: initial;
+    padding-left: 0;
+    padding-right: 0
+}
+
 .spinner_c5a065 {
     position: fixed;
     top: 50%;
@@ -32611,6 +32650,20 @@ img.thumbnail_c64476 {
 
 .contentBackground_c5a065 {
     background: var(--background-secondary)
+}
+
+.visual-refresh .content_c5a065 {
+    margin: 0;
+    padding: var(--space-16)
+}
+
+.visual-refresh .content_c5a065.minimalPadding_c5a065 {
+    padding: var(--space-24)0 var(--space-24)
+}
+
+.visual-refresh .contentBackground_c5a065 {
+    background: var(--background-mod-subtle);
+    border: 1px solid var(--border-faint)
 }
 
 @media(max-width:568px) {
