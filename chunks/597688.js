@@ -58,9 +58,12 @@ let w = {},
         (y = E), (S = v), (C = b), (O = !1), (D = new Set()), (i = n), (s = Date.now());
     },
     G = (e) => {
-        0 === e.categories.length ? ((y = E), (S = v)) : !(0, u.isEqual)([...y.values()], e.categories) && ((y = new Map(e.categories.map((e) => [e.skuId, e]))), (N = new Map(e.categories.map((e) => [e.storeListingId, e]))), (S = new Map((0, p.Cs)(y, !0).map((e) => [e.skuId, e]))), (A = new Map((0, p.Cs)(y, !1).map((e) => [e.storeListingId, e])))), Z(e.categories, S), (a = Date.now()), (O = !1), (i = void 0), (s = void 0);
+        0 === e.categories.length ? ((y = E), (S = v)) : !(0, u.isEqual)([...y.values()], e.categories) && ((y = new Map(e.categories.map((e) => [e.skuId, e]))), (N = new Map(e.categories.map((e) => [e.storeListingId, e]))), (S = new Map((0, p.Cs)(y, !0).map((e) => [e.skuId, e]))), (A = new Map((0, p.Cs)(y, !1).map((e) => [e.storeListingId, e])))), F(e.categories, S), (a = Date.now()), (O = !1), (i = void 0), (s = void 0);
     },
-    Z = (e, n) => {
+    Z = (e) => {
+        0 !== e.shopHome.categories.length && 0 === y.size && (y = new Map(e.shopHome.categories.map((e) => [e.skuId, e])));
+    },
+    F = (e, n) => {
         if (0 === e.length) {
             C = b;
             return;
@@ -77,17 +80,17 @@ let w = {},
                 C = b;
         }
     },
-    F = () => {
+    V = () => {
         (y = E), (S = v), (C = b), (a = void 0), (O = !1), (D = new Set()), (i = void 0), (s = void 0), (w = {});
     },
-    V = () => {
+    j = () => {
         if (!f.Z.hasLoadedExperiments) return;
         let { giftRecommendationAlgorithm: e } = _.G.getCurrentConfig({ location: 'CollectiblesCategoryStore handleExperimentChange' }, { autoTrackExposure: !1 });
         e !== R && (a = void 0), (R = e);
     };
-class j extends (o = c.ZP.Store) {
+class H extends (o = c.ZP.Store) {
     initialize() {
-        this.syncWith([h.default], F), this.syncWith([f.Z], V);
+        this.syncWith([h.default], V), this.syncWith([f.Z], j);
     }
     get isFetchingCategories() {
         return O;
@@ -139,13 +142,14 @@ class j extends (o = c.ZP.Store) {
         return this.getCategory(null == n ? void 0 : n.categorySkuId);
     }
 }
-g(j, 'displayName', 'CollectiblesCategoryStore'),
-    (n.Z = new j(d.Z, {
+g(H, 'displayName', 'CollectiblesCategoryStore'),
+    (n.Z = new H(d.Z, {
         COLLECTIBLES_CATEGORIES_FETCH: U,
         COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: G,
         COLLECTIBLES_CATEGORIES_FETCH_FAILURE: B,
         COLLECTIBLES_PRODUCT_FETCH: P,
         COLLECTIBLES_PRODUCT_FETCH_SUCCESS: k,
         COLLECTIBLES_PRODUCT_FETCH_FAILURE: M,
-        LOGOUT: F
+        COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: Z,
+        LOGOUT: V
     }));
