@@ -53,6 +53,9 @@ class T extends f.Z {
             n = null !== this.input.getVideoStreamId();
         return (0, g.Z)(e, this.getUserIdBySsrc, this.remoteVideoSinkWants, this.localVideoSinkWants, n);
     }
+    getSelfMute() {
+        return this.selfMute;
+    }
     setInputMode(e, n) {
         this.input.setAudioMode(e, {
             delay: n.pttReleaseDelay,
@@ -255,7 +258,7 @@ class T extends f.Z {
                 return arguments.length > 1 && void 0 !== arguments[1] && arguments[1], a.input.setPTTActive(e);
             }),
             I(this, 'setSelfMute', (e) => {
-                this.input.setMute(e), this.emit(_.Sh.Mute, e);
+                (this.selfMute = e), this.input.setMute(e), this.emit(_.Sh.Mute, e);
             }),
             I(this, 'handleAddVideoTrack', () => {
                 this.updateVideoQuality();

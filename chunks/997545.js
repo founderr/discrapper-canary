@@ -301,6 +301,9 @@ class k extends E.Z {
     setSelfMute(e) {
         (this.selfMute = e), this.conn.setSelfMute(e), this.emit(T.Sh.Mute, e);
     }
+    getSelfMute() {
+        return this.selfMute;
+    }
     setSelfDeaf(e) {
         (this.selfDeaf = e), this.conn.setSelfDeafen(e);
     }
@@ -850,7 +853,6 @@ class k extends E.Z {
         super(e, n),
             O(this, 'mediaEngineConnectionId', 'Native-'.concat(w++)),
             O(this, 'goLiveSourceIdentifier', void 0),
-            O(this, 'selfMute', !1),
             O(this, 'selfVideo', !1),
             O(this, 'forceAudioNormal', !1),
             O(this, 'forceAudioPriority', !1),
