@@ -117,17 +117,17 @@ let j = i.forwardRef(function (e, t) {
 });
 function b(e) {
     var t, n;
-    let { videoRef: l, quest: v, playerState: g, animSpring: h, visible: D, seekForwardEnabled: b, hideCaptionBtn: L, handlePlaybackBtnClick: k, handleTranscriptBtnClick: R, handleCaptionBtnClick: O, handleFullScreenBtnClick: M, handleSeekBackBtnClick: y, handleSeekForwardBtnClick: P, handleControlBarPendingInteraction: q } = e,
+    let { videoRef: l, quest: v, playerState: g, animSpring: h, visible: D, seekForwardEnabled: b, hideCaptionBtn: L, handlePlaybackBtnClick: R, handleTranscriptBtnClick: O, handleCaptionBtnClick: k, handleFullScreenBtnClick: M, handleSeekBackBtnClick: y, handleSeekForwardBtnClick: P, handleControlBarPendingInteraction: q } = e,
         w = (0, E.km)((e) => e.volume),
-        B = (0, E.km)((e) => e.setVolume),
-        U = (0, E.km)((e) => e.muted),
+        U = (0, E.km)((e) => e.setVolume),
+        B = (0, E.km)((e) => e.muted),
         Z = (0, E.km)((e) => e.setMuted),
         F = (0, E.km)((e) => e.transcriptEnabled),
         V = (0, E.km)((e) => e.captionEnabled),
         Y = (0, E.km)((e) => e.fullScreenEnabled),
         G = (0, a.e7)([m.Z], () => m.Z.useReducedMotion),
         z = (0, a.e7)([m.Z], () => m.Z.keyboardModeEnabled),
-        [H, Q] = i.useState(U ? 0 : w),
+        [H, Q] = i.useState(B ? 0 : w),
         [K, W] = i.useState(!1),
         [X, J] = i.useState(!1),
         [{ volumeAnimSpring: $ }, ee] = (0, d.useSpring)(() => ({
@@ -146,8 +146,8 @@ function b(e) {
             [l, H]
         ),
         er = i.useCallback(() => {
-            if (null != l.current) 0 === H ? (en(w), Z(!1), N(v.id, w)) : (B(H), en(0), Z(!0), N(v.id, 0));
-        }, [l, H, w, Z, B, en, v.id]),
+            if (null != l.current) 0 === H ? (en(w), Z(!1), N(v.id, w)) : (U(H), en(0), Z(!0), N(v.id, 0));
+        }, [l, H, w, Z, U, en, v.id]),
         ei = () => {
             W(!0);
         },
@@ -158,10 +158,10 @@ function b(e) {
             (e) => {
                 switch (e.key) {
                     case x.Y1.PLAYBACK:
-                        k();
+                        R();
                         break;
                     case x.Y1.SPACE:
-                        !z && (e.preventDefault(), k());
+                        !z && (e.preventDefault(), R());
                         break;
                     case x.Y1.SEEK_BACK:
                         y();
@@ -170,7 +170,7 @@ function b(e) {
                         P();
                         break;
                     case x.Y1.CAPTION:
-                        O();
+                        k();
                         break;
                     case x.Y1.FULLSCREEN:
                         M();
@@ -179,7 +179,7 @@ function b(e) {
                         er();
                 }
             },
-            [O, M, k, y, P, er, z]
+            [k, M, R, y, P, er, z]
         );
     i.useEffect(() => {
         null != et.current && et.current.focus();
@@ -218,7 +218,7 @@ function b(e) {
                         visible: D,
                         ariaLabel: eu,
                         tooltipLabel: eu,
-                        onClick: k,
+                        onClick: R,
                         ref: et
                     }),
                     (0, r.jsx)(j, {
@@ -308,7 +308,7 @@ function b(e) {
                                     minValue: 0,
                                     maxValue: 1,
                                     onValueChange: (e) => {
-                                        en(e), B(e), N(v.id, e), X && (J(!1), q(!1)), U && e > 0 && Z(!1);
+                                        en(e), U(e), N(v.id, e), X && (J(!1), q(!1)), B && e > 0 && Z(!1);
                                     },
                                     asValueChanges: (e) => {
                                         en(e), !X && (J(!0), q(!0));
@@ -333,7 +333,7 @@ function b(e) {
                         iconComponent: d.PaperIcon,
                         animationTime: h,
                         visible: D,
-                        onClick: R,
+                        onClick: O,
                         active: F && g !== S.rq.ENDED,
                         disabled: g === S.rq.ENDED,
                         ariaLabel: _.intl.string(_.t.KCzjTk),
@@ -345,7 +345,7 @@ function b(e) {
                             animationTime: h,
                             visible: D,
                             active: V,
-                            onClick: O,
+                            onClick: k,
                             ariaLabel: _.intl.string(_.t.bDSZOz),
                             tooltipLabel: _.intl.string(_.t.bDSZOz)
                         }),

@@ -1,6 +1,6 @@
 n.d(t, {
     S: function () {
-        return g;
+        return E;
     }
 });
 var i = n(200651),
@@ -15,21 +15,21 @@ var i = n(200651),
     c = n(594174),
     p = n(626135),
     x = n(987209),
-    h = n(563132),
-    f = n(409813),
-    _ = n(614277),
+    _ = n(563132),
+    h = n(409813),
+    f = n(614277),
     j = n(981631),
     m = n(388032),
     L = n(732721);
-function g(e) {
+function E(e) {
     let { handleStepChange: t, handleClose: n } = e,
-        { selectedPlan: s, selectedSkuId: g, step: E } = (0, h.usePaymentContext)(),
-        { setSelectedGiftingPromotionReward: S, selectedGiftingPromotionReward: I, claimableRewards: M } = (0, x.wD)(),
+        { selectedPlan: s, selectedSkuId: E, step: S } = (0, _.usePaymentContext)(),
+        { setSelectedGiftingPromotionReward: g, selectedGiftingPromotionReward: I, claimableRewards: M } = (0, x.wD)(),
         v = (0, a.e7)([c.default], () => c.default.getCurrentUser());
     l.useEffect(() => {
         let e = null != M && M.length > 0;
-        null == I && e && S(M[0]);
-    }, [M, I, S]);
+        null == I && e && g(M[0]);
+    }, [M, I, g]);
     let y = (e) => {
         let t = e.skuId;
         return (0, i.jsx)(
@@ -38,7 +38,7 @@ function g(e) {
                 skuId: t,
                 price: m.intl.string(m.t.QQsaCQ),
                 isSelected: t === (null == I ? void 0 : I.skuId),
-                onSelect: () => S(e),
+                onSelect: () => g(e),
                 className: L.giftSelectItem
             },
             t
@@ -46,8 +46,8 @@ function g(e) {
     };
     return (
         r()(null != s, 'Expected plan to selected'),
-        r()(null != g, 'Expected selectedSkuId'),
-        r()(null != E, 'Step should be set'),
+        r()(null != E, 'Expected selectedSkuId'),
+        r()(null != S, 'Step should be set'),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
@@ -85,7 +85,7 @@ function g(e) {
                         })
                     ]
                 }),
-                (0, i.jsx)(_.O3, {
+                (0, i.jsx)(f.O3, {
                     children: (0, i.jsx)(o.ModalFooter, {
                         className: L.modalFooter,
                         children: (0, i.jsx)(u.y, {
@@ -98,7 +98,7 @@ function g(e) {
                                     }),
                                     t(e);
                             },
-                            onBackClick: () => t(f.h8.PLAN_SELECT),
+                            onBackClick: () => t(h.h8.PLAN_SELECT),
                             shouldRenderUpdatedPaymentModal: !0,
                             showBackButton: !0,
                             planOptions: [s.id],

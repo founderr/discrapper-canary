@@ -1,9 +1,9 @@
 n.d(t, {
     L: function () {
-        return f;
+        return h;
     },
     T: function () {
-        return h;
+        return _;
     }
 }),
     n(47120);
@@ -19,26 +19,26 @@ var i = n(200651),
     c = n(196839),
     p = n(680674),
     x = n(74316);
-let h = { NITRO_BASIC: u.nitroBasic },
-    f = l.memo(function (e) {
-        let { message: t, handleClick: n, handleClose: s, buttonText: f, useInitialGlow: _, useGlowOnHover: j, handleImageClick: m, className: L, analyticsLocations: g, upsellType: E, themeOverride: S = h.NITRO_BASIC } = e,
-            [I, M] = l.useState(_),
+let _ = { NITRO_BASIC: u.nitroBasic },
+    h = l.memo(function (e) {
+        let { message: t, handleClick: n, handleClose: s, buttonText: h, useInitialGlow: f, useGlowOnHover: j, handleImageClick: m, className: L, analyticsLocations: E, upsellType: S, themeOverride: g = _.NITRO_BASIC } = e,
+            [I, M] = l.useState(f),
             [v, y] = l.useState(p);
         return (
             l.useEffect(() => {
                 y(c);
-            }, [S]),
+            }, [g]),
             l.useEffect(() => {
                 setTimeout(() => M(!1), 3000);
             }, []),
             l.useEffect(() => {
                 o.default.track(C.rMx.POST_ACTION_UPSELL_SHOWN, {
-                    type: E,
-                    location: g
+                    type: S,
+                    location: E
                 });
-            }, [E, g]),
+            }, [S, E]),
             (0, i.jsx)('div', {
-                className: r()(u.wrapper, S),
+                className: r()(u.wrapper, g),
                 children: (0, i.jsxs)('div', {
                     className: r()(u.content, I ? u.initialGlowUp : u.initialGlowDown, j ? u.contentGlow : null, L),
                     children: [
@@ -51,8 +51,8 @@ let h = { NITRO_BASIC: u.nitroBasic },
                                         ? {
                                               onClick: () => {
                                                   o.default.track(C.rMx.POST_ACTION_UPSELL_SECONDARY_ACTION_CLICKED, {
-                                                      type: E,
-                                                      location: g
+                                                      type: S,
+                                                      location: E
                                                   }),
                                                       m();
                                               }
@@ -83,8 +83,8 @@ let h = { NITRO_BASIC: u.nitroBasic },
                                 onlyShineOnHover: !0,
                                 onClick: () => {
                                     o.default.track(C.rMx.POST_ACTION_UPSELL_PRIMARY_ACTION_CLICKED, {
-                                        type: E,
-                                        location: g
+                                        type: S,
+                                        location: E
                                     }),
                                         n();
                                 },
@@ -94,7 +94,7 @@ let h = { NITRO_BASIC: u.nitroBasic },
                                         className: u.buttonNitroIcon,
                                         src: x
                                     }),
-                                    f
+                                    h
                                 ]
                             })
                         }),
@@ -103,8 +103,8 @@ let h = { NITRO_BASIC: u.nitroBasic },
                             children: (0, i.jsx)(a.Clickable, {
                                 onClick: () => {
                                     o.default.track(C.rMx.POST_ACTION_UPSELL_DISMISSED, {
-                                        type: E,
-                                        location: g
+                                        type: S,
+                                        location: E
                                     }),
                                         s();
                                 },

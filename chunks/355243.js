@@ -32,22 +32,22 @@ function E(e) {
     i.useEffect(() => {
         null != h && (null == C ? N(null) : N(v(C, f, h)));
     }, [h, C, f]);
-    let k = (0, a.y)(() => {
-        if (null != k.current) L(k.current.getBoundingClientRect());
+    let R = (0, a.y)(() => {
+        if (null != R.current) L(R.current.getBoundingClientRect());
     });
     i.useLayoutEffect(() => {
-        null != k.current && L(k.current.getBoundingClientRect());
-    }, [k]),
+        null != R.current && L(R.current.getBoundingClientRect());
+    }, [R]),
         i.useEffect(() => {
             let e = () => {
-                null != k.current && L(k.current.getBoundingClientRect());
+                null != R.current && L(R.current.getBoundingClientRect());
             };
             return window.addEventListener('resize', e), () => window.removeEventListener('resize', e);
-        }, [k]);
-    let R = (e) => {
+        }, [R]);
+    let O = (e) => {
             D(e.clientX);
         },
-        O = i.useCallback(
+        k = i.useCallback(
             (e) => {
                 let { key: t } = e;
                 t === c.mR.ArrowLeft && null != g ? (e.preventDefault(), e.stopPropagation(), g()) : t === c.mR.ArrowRight && null != x && (e.preventDefault(), e.stopPropagation(), x());
@@ -61,7 +61,7 @@ function E(e) {
         w = null != I && null != h ? h.right - I : null;
     return (0, r.jsxs)('div', {
         className: d.cont,
-        ref: k,
+        ref: R,
         children: [
             (0, r.jsxs)(s.Clickable, {
                 className: o()(d.hitboxArea, { [d.interactionEnabled]: l }),
@@ -70,15 +70,15 @@ function E(e) {
                     if (!!l && null != S) S(m(e.clientX, e.currentTarget.getBoundingClientRect(), f));
                 },
                 onMouseEnter: (e) => {
-                    if (!!l) null != k.current && L(k.current.getBoundingClientRect()), j(!0), R(e);
+                    if (!!l) null != R.current && L(R.current.getBoundingClientRect()), j(!0), O(e);
                 },
                 onMouseLeave: (e) => {
                     if (!!l) j(!1), D(null);
                 },
                 onMouseMove: (e) => {
-                    if (!!l) A && R(e);
+                    if (!!l) A && O(e);
                 },
-                onKeyDown: O,
+                onKeyDown: k,
                 tabIndex: l ? void 0 : -1,
                 focusProps: {
                     offset: {

@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return R;
+            return O;
         }
     }),
     n(47120);
@@ -33,15 +33,15 @@ var r = n(200651),
     j = n(981631),
     b = n(388032),
     L = n(451680);
-function k(e) {
+function R(e) {
     var t;
-    let { transitionState: n, onClose: l, quest: E, autoplay: k, videoSessionId: R } = e,
-        O = (0, f.il)(E),
+    let { transitionState: n, onClose: l, quest: E, autoplay: R, videoSessionId: O } = e,
+        k = (0, f.il)(E),
         M = (0, s.e7)([d.Z], () => d.Z.getState().theme),
         y = (0, a.wj)(M) ? j.BRd.DARK : j.BRd.LIGHT,
         P = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
-        [q, w] = i.useState(O.progressSeconds),
-        [B, U] = i.useState(!1),
+        [q, w] = i.useState(k.progressSeconds),
+        [U, B] = i.useState(!1),
         { completedRatio: Z, completedRatioDisplay: F } = (0, v.I)(E),
         [V, Y] = (0, T.G6)(b.intl.string(b.t.RDE0SU), b.intl.string(b.t['+5kSoa']), 1700),
         G = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null ? b.intl.string(b.t.vTgCW1) : b.intl.string(b.t.cfY4PD),
@@ -59,10 +59,10 @@ function k(e) {
             });
         },
         Q = () => {
-            U(!0);
+            B(!0);
         },
         K = () => {
-            U(!1);
+            B(!1);
         },
         W = i.useMemo(() => S.r.build(E.config).defaultReward.messages.name, [E]),
         X = b.intl.formatToPlainString(b.t['12IWPz'], { rewardName: W });
@@ -130,7 +130,7 @@ function k(e) {
                                                         quest: E,
                                                         size: 48,
                                                         percentComplete: Z,
-                                                        percentCompleteText: B ? F : void 0,
+                                                        percentCompleteText: U ? F : void 0,
                                                         percentCompleteTextVariant: 'text-sm/medium',
                                                         children: (0, r.jsx)(_.Z, {
                                                             className: L.questProgressRewardTile,
@@ -146,10 +146,10 @@ function k(e) {
                                 }),
                                 (0, r.jsx)(I.Z, {
                                     quest: E,
-                                    videoSessionId: R,
+                                    videoSessionId: O,
                                     parentTransitionState: n,
                                     onOptimisticProgressUpdate: w,
-                                    autoplay: k
+                                    autoplay: R
                                 }),
                                 (0, r.jsxs)('div', {
                                     className: L.contentFooter,
@@ -191,12 +191,12 @@ function k(e) {
         })
     });
 }
-function R(e) {
+function O(e) {
     let { questId: t, overrideQuest: n, autoplay: i, ...l } = e,
         o = (0, s.e7)([E.Z], () => E.Z.getQuest(t)),
         a = null != n ? n : o;
     return null != a
-        ? (0, r.jsx)(k, {
+        ? (0, r.jsx)(R, {
               ...l,
               quest: a,
               autoplay: i
