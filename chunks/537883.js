@@ -30,7 +30,6 @@ class m extends (a = o.ZP.Store) {
     (t.Z = new m(s.Z, {
         CONNECTION_OPEN: h,
         GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET: h,
-        GLOBAL_DISCOVERY_SERVERS_SEARCH_BLOCKED: h,
         GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS: function (e) {
             let { query: t } = e,
                 n = c.Z.getCounts(t);

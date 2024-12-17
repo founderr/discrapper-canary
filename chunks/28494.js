@@ -37,13 +37,9 @@ function m(e) {
             var e;
             return null !== (e = s.Z.getIsFetching(d)) && void 0 !== e && e;
         }),
-        p = (0, r.e7)([s.Z], () => {
-            var e;
-            return null === (e = s.Z.getIsBlocked(n)) || void 0 === e || e;
-        }),
-        g = c.Z.useField('resultsQuery'),
-        f = g !== n,
-        _ = i.useCallback(() => {
+        p = c.Z.useField('resultsQuery'),
+        g = p !== n,
+        f = i.useCallback(() => {
             let e = s.Z.getGuildIds(d),
                 n = s.Z.getTotal(d);
             if (null == e || null == n) return;
@@ -63,32 +59,27 @@ function m(e) {
     return i.useMemo(
         () => ({
             guildIds: u,
-            loading: !p && (f || m),
-            searchResultsQuery: g,
-            loadMore: _,
-            searchCategoryId: l,
-            isBlockedSearchQuery: p
+            loading: g || m,
+            searchResultsQuery: p,
+            loadMore: f,
+            searchCategoryId: l
         }),
-        [u, p, f, m, g, _, l]
+        [u, g, m, p, f, l]
     );
 }
 function p(e) {
     let { loadId: t } = e,
         n = u.Z.useField('isSearchVisible'),
-        m = c.Z.useField('query'),
-        p = (0, r.e7)([s.Z], () => s.Z.getIsAlgoliaInitialized());
+        r = c.Z.useField('query');
     i.useEffect(() => {
-        !p && a.Z.createAlgoliaIndex();
-    }, [p]),
-        i.useEffect(() => {
-            (0, d.le)();
-        }, []);
-    let g = i.useCallback((e) => {
+        (0, d.le)();
+    }, []);
+    let s = i.useCallback((e) => {
             c.Z.setState({ query: e });
         }, []),
-        f = i.useCallback(() => {
+        m = i.useCallback(() => {
             l.IZ(t),
-                a.Z.clearAlgoliaSearchResults(),
+                a.Z.clearSearchResults(),
                 a.Z.resetSearchLayout(),
                 c.Z.setState({
                     query: '',
@@ -101,14 +92,14 @@ function p(e) {
                 u.Z.setState({ isSearchVisible: !1 });
         }, [t]);
     return {
-        searchQuery: m,
-        onSearchTextChange: g,
-        onClearSearch: f,
+        searchQuery: r,
+        onSearchTextChange: s,
+        onClearSearch: m,
         onSearchSubmit: i.useCallback(() => {
             let e = c.Z.getField('query'),
                 n = c.Z.getField('fetchedQuery');
             if ('' === e.trim() || e === n) return;
-            a.Z.clearAlgoliaSearchResults();
+            a.Z.clearSearchResults();
             let i = c.Z.getField('languageCode'),
                 r = c.Z.getField('categoryId');
             c.Z.setState({ resultsInitialCategoryId: r }),

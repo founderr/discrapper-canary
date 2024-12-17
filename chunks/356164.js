@@ -19,13 +19,11 @@ function d(e, n, r) {
     );
 }
 let f = new Map(),
-    _ = new Map(),
-    h = new Set(),
-    p = null;
-function m(e) {
+    _ = new Map();
+function h(e) {
     return [c.BP, e.query, c.t0, e.categoryId, c.KL, e.languageCode].join('-');
 }
-class g {
+class p {
     handleSearchStart() {
         (this.error = null), (this.isFetching = !0);
     }
@@ -42,37 +40,37 @@ class g {
         d(this, 'guildIds', []), d(this, 'error', null), d(this, 'offset', null), d(this, 'total', null), d(this, 'isFetching', !1), d(this, 'isInitialFetchComplete', !1), d(this, 'lastFetchTimestamp', null), d(this, 'query', void 0), (this.query = e);
     }
 }
-function E(e) {
+function m(e) {
     var n;
-    let r = m(e),
-        i = null !== (n = f.get(r)) && void 0 !== n ? n : new g({ query: e.query });
+    let r = h(e),
+        i = null !== (n = f.get(r)) && void 0 !== n ? n : new p({ query: e.query });
     return f.set(r, i), i;
 }
-function v(e, n) {
-    let r = m(e),
+function g(e, n) {
+    let r = h(e),
         i = f.get(r);
     return null != i ? n(i) : null;
 }
-function I() {
-    f.clear(), _.clear(), h.clear(), (p = null);
+function E() {
+    f.clear(), _.clear();
 }
-function T(e) {
+function v(e) {
     let { query: n, categoryId: r, languageCode: i, reset: a } = e,
-        s = m({
+        s = h({
             query: n,
             categoryId: r,
             languageCode: i
         });
     a && f.delete(s),
-        E({
+        m({
             query: n,
             categoryId: r,
             languageCode: i
         }).handleSearchStart();
 }
-function b(e) {
+function I(e) {
     let { query: n, categoryId: r, languageCode: i, total: a, guilds: s } = e;
-    E({
+    m({
         query: n,
         categoryId: r,
         languageCode: i
@@ -84,77 +82,58 @@ function b(e) {
             _.set(e.id, e);
         });
 }
-function y(e) {
+function T(e) {
     let { query: n, categoryId: r, languageCode: i, error: a } = e;
-    E({
+    m({
         query: n,
         categoryId: r,
         languageCode: i
     }).handleSearchFailure(a);
 }
-function S(e) {
+function b(e) {
     let { ignoreQueries: n } = e,
         r = new Set(n);
     f.forEach((e, n) => {
         if (null != e.query) !r.has(e.query) && f.delete(n);
     });
 }
-function A(e) {
-    let { algoliaSearchIndex: n } = e;
-    p = n;
-}
-function N(e) {
-    let { query: n } = e;
-    h.add(n);
-}
-class C extends (i = o.ZP.Store) {
+class y extends (i = o.ZP.Store) {
     getGuild(e) {
         return _.get(e);
     }
     getGuildIds(e) {
-        return v(e, (e) => e.guildIds);
+        return g(e, (e) => e.guildIds);
     }
     getIsFetching(e) {
-        return v(e, (e) => e.isFetching);
+        return g(e, (e) => e.isFetching);
     }
     getIsInitialFetchComplete(e) {
-        return v(e, (e) => e.isInitialFetchComplete);
+        return g(e, (e) => e.isInitialFetchComplete);
     }
     getOffset(e) {
-        return v(e, (e) => e.offset);
+        return g(e, (e) => e.offset);
     }
     getTotal(e) {
-        return v(e, (e) => e.total);
+        return g(e, (e) => e.total);
     }
     getLastFetchTimestamp(e) {
-        return v(e, (e) => e.lastFetchTimestamp);
+        return g(e, (e) => e.lastFetchTimestamp);
     }
     getError(e) {
-        return v(e, (e) => e.error);
+        return g(e, (e) => e.error);
     }
     getErrorMessage(e) {
-        return v(e, (e) => {
+        return g(e, (e) => {
             var n;
             return null === (n = e.error) || void 0 === n ? void 0 : n.getAnyErrorMessage();
         });
     }
-    getAlgoliaSearchIndex() {
-        return p;
-    }
-    getIsAlgoliaInitialized() {
-        return null != p;
-    }
-    getIsBlocked(e) {
-        return h.has(e);
-    }
 }
-d(C, 'displayName', 'GlobalDiscoveryServersSearchResultsStore'),
-    (n.Z = new C(l.Z, {
-        CONNECTION_OPEN: I,
-        GLOBAL_DISCOVERY_SERVERS_SEARCH_INITIALIZED: A,
-        GLOBAL_DISCOVERY_SERVERS_SEARCH_START: T,
-        GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS: b,
-        GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE: y,
-        GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: S,
-        GLOBAL_DISCOVERY_SERVERS_SEARCH_BLOCKED: N
+d(y, 'displayName', 'GlobalDiscoveryServersSearchResultsStore'),
+    (n.Z = new y(l.Z, {
+        CONNECTION_OPEN: E,
+        GLOBAL_DISCOVERY_SERVERS_SEARCH_START: v,
+        GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS: I,
+        GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE: T,
+        GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: b
     }));
