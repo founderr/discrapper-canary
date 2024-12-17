@@ -46,6 +46,17 @@ let a = {
         disconnect: 'halloween_disconnect',
         user_join: 'halloween_user_join',
         user_leave: 'halloween_user_leave'
+    },
+    [i.YC.WINTER_HOLIDAY]: {
+        call_calling: 'winter_call_calling',
+        call_ringing: 'winter_call_ringing',
+        deafen: 'winter_deafen',
+        undeafen: 'winter_undeafen',
+        mute: 'winter_mute',
+        unmute: 'winter_unmute',
+        disconnect: 'winter_disconnect',
+        user_join: 'winter_user_join',
+        user_leave: 'winter_user_leave'
     }
 };
 function s(e) {

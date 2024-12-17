@@ -65,7 +65,16 @@ var i = {
     './user_join.mp3': '377100',
     './user_leave.mp3': '351645',
     './user_moved.mp3': '426354',
-    './vibing_wumpus.mp3': '778184'
+    './vibing_wumpus.mp3': '778184',
+    './winter_call_calling.mp3': '848069',
+    './winter_call_ringing.mp3': '870980',
+    './winter_deafen.mp3': '525773',
+    './winter_disconnect.mp3': '718528',
+    './winter_mute.mp3': '199012',
+    './winter_undeafen.mp3': '411069',
+    './winter_unmute.mp3': '293885',
+    './winter_user_join.mp3': '586680',
+    './winter_user_leave.mp3': '597453'
 };
 function a(e) {
     return r(s(e));

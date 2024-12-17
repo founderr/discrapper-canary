@@ -24,7 +24,12 @@ function d() {
     return a() && i.Z.soundpack ? i.Z.soundpack : null;
 }
 function f() {
-    return s() && i.Z.soundpack ? i.Z.soundpack : null;
+    return s() && i.Z.soundpack && null != i.Z.soundpackLabel
+        ? {
+              soundpack: i.Z.soundpack,
+              soundpackLabel: i.Z.soundpackLabel
+          }
+        : null;
 }
 n.Z = {
     subscribe: c,
