@@ -70,12 +70,7 @@ function D() {
     var e;
     let n = null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id;
     if (null == n) return !1;
-    let r = Object.entries(l.Z.getRelevantReferralTrialOffers())
-        .map((e) => {
-            let [n, r] = e;
-            return r;
-        })
-        .filter((e) => e.user_id === n);
+    let r = l.Z.getAllRelevantReferralTrialOffers().filter((e) => e.user_id === n);
     if (r.length > 0) {
         let e = r[0];
         return (v.userTrialOffers[e.trial_id] = e), !0;

@@ -13,6 +13,9 @@ r.d(n, {
     },
     nS: function () {
         return l;
+    },
+    xN: function () {
+        return d;
     }
 });
 var i = r(818083),
@@ -114,6 +117,20 @@ let s = (0, i.B)({
                     enabled: !0,
                     showsTooltip: !1
                 }
+            }
+        ]
+    }),
+    d = (0, i.B)({
+        kind: 'user',
+        id: '2024-10_weighted_sample_activity_shelf',
+        label: 'Weighted Sample Activity Shelf',
+        defaultConfig: { enabled: !1 },
+        commonTriggerPoint: a.$P.VOICE_CALL,
+        treatments: [
+            {
+                id: 1,
+                label: 'Enable weighted sample for activity shelf',
+                config: { enabled: !0 }
             }
         ]
     });

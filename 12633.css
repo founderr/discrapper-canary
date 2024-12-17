@@ -18063,7 +18063,8 @@ span.clanTag_a31c43 {
 }
 
 .visual-refresh .content_c2654d {
-    padding-left: var(--space-4)
+    padding-left: var(--space-4);
+    background: var(--bg-overlay-chat, var(--background-base-lower))
 }
 
 .isUnread_c2654d .content_c2654d {

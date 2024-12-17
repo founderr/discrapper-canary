@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return ev;
+        return eT;
     },
     c: function () {
-        return ex;
+        return eN;
     }
 });
 var i = n(200651),
@@ -82,10 +82,10 @@ let eC = () =>
             children: [
                 (0, i.jsx)(c.NoticeCloseButton, {
                     onClick: () => {
-                        ex(), (0, em.b)();
+                        eN();
                     }
                 }),
-                eg.intl.string(eg.t.nCO9bG),
+                eg.intl.string(eg.t.o3zuY2),
                 (0, i.jsx)(c.NoticeButtonAnchor, {
                     href: ec.Z.getArticleURL(eh.BhN.NO_INPUT_DETECTED),
                     children: eg.intl.string(eg.t.RYKKo6)
@@ -98,7 +98,23 @@ let eC = () =>
             children: [
                 (0, i.jsx)(c.NoticeCloseButton, {
                     onClick: () => {
-                        ex(), (0, em.b)();
+                        eN(), (0, em.b)();
+                    }
+                }),
+                eg.intl.string(eg.t.nCO9bG),
+                (0, i.jsx)(c.NoticeButtonAnchor, {
+                    href: ec.Z.getArticleURL(eh.BhN.NO_INPUT_DETECTED),
+                    children: eg.intl.string(eg.t.RYKKo6)
+                })
+            ]
+        }),
+    ex = () =>
+        (0, i.jsxs)(c.Notice, {
+            color: c.NoticeColors.DANGER,
+            children: [
+                (0, i.jsx)(c.NoticeCloseButton, {
+                    onClick: () => {
+                        eN(), (0, em.b)();
                     }
                 }),
                 eg.intl.string(eg.t.dNAJ19),
@@ -110,27 +126,27 @@ let eC = () =>
                 })
             ]
         });
-function ex(e) {
+function eN(e) {
     p.Z.dismiss(null != e ? { untilAtLeast: a()(e) } : void 0);
 }
-let eN =
+let ev =
     12633 == n.j
         ? r.memo(function () {
               var e, t, l;
               let p = (0, s.e7)([er.default], () => er.default.getCurrentUser()),
                   S = (0, s.e7)([ei.Z], () => ei.Z.getGuildId()),
                   em = (0, s.e7)([eo.ZP], () => eo.ZP.getNotice()),
-                  eN = (0, s.e7)([ee.Z], () => ee.Z.getGuild(S)),
-                  { analyticsLocations: ev } = (0, A.ZP)(),
-                  eT = null == em ? void 0 : em.type,
-                  eS = (0, U.J)(S);
+                  ev = (0, s.e7)([ee.Z], () => ee.Z.getGuild(S)),
+                  { analyticsLocations: eT } = (0, A.ZP)(),
+                  eS = null == em ? void 0 : em.type,
+                  eA = (0, U.J)(S);
               r.useEffect(() => {
-                  null != eT &&
+                  null != eS &&
                       !(function (e, t) {
                           let n = { notice_type: e };
                           null != t && (n.guild_id = t), es.default.track(eh.rMx.APP_NOTICE_VIEWED, n);
-                      })(eT, S);
-              }, [eT, S]),
+                      })(eS, S);
+              }, [eS, S]),
                   r.useEffect(() => {
                       if (null != em && em.type === eh.kVF.SURVEY && null != em.metadata) {
                           let { metadata: e } = em,
@@ -142,23 +158,23 @@ let eN =
                               })();
                       }
                   }, [em]);
-              let eA = null != eT ? eo.o[eT] : null,
-                  eb = (function (e) {
+              let eb = null != eS ? eo.o[eS] : null,
+                  ej = (function (e) {
                       let { enabled: t } = (0, W.ZP)(!0, e !== eh.kVF.PREMIUM_TIER_2_TRIAL_ENDING);
                       return t || null == e ? null : eo.m9[e];
-                  })(eT);
+                  })(eS);
               if (null == em) return null;
-              if (null != eA)
-                  return (0, i.jsx)(L.q, {
-                      dismissibleContent: eA,
-                      noticeType: em.type
-                  });
               if (null != eb)
-                  return (0, i.jsx)(P.A, {
+                  return (0, i.jsx)(L.q, {
                       dismissibleContent: eb,
                       noticeType: em.type
                   });
-              let ej = null === (e = em.metadata) || void 0 === e ? void 0 : e.premiumType;
+              if (null != ej)
+                  return (0, i.jsx)(P.A, {
+                      dismissibleContent: ej,
+                      noticeType: em.type
+                  });
+              let eR = null === (e = em.metadata) || void 0 === e ? void 0 : e.premiumType;
               switch (em.type) {
                   case eh.kVF.LURKING_GUILD:
                       return (0, i.jsx)(H.Z, {});
@@ -167,39 +183,39 @@ let eN =
                   case eh.kVF.INVITED_TO_SPEAK:
                       return (0, i.jsx)(J.Z, {});
                   case eh.kVF.GUILD_RAID_NOTIFICATION:
-                      let { dismissUntil: eR } = em.metadata;
-                      return (0, i.jsx)(M.Z, { onDismiss: () => ex(eR) });
-                  case eh.kVF.WIN32_DEPRECATED_MESSAGE:
                       let { dismissUntil: eZ } = em.metadata;
+                      return (0, i.jsx)(M.Z, { onDismiss: () => eN(eZ) });
+                  case eh.kVF.WIN32_DEPRECATED_MESSAGE:
+                      let { dismissUntil: eP } = em.metadata;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.WARNING,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ex(eZ),
+                                  onClick: () => eN(eP),
                                   noticeType: eh.kVF.WIN32_DEPRECATED_MESSAGE
                               }),
                               eg.intl.format(eg.t['08KQ1N'], { helpCenterLink: ec.Z.getArticleURL(eh.BhN.WIN32_DEPRECATE) })
                           ]
                       });
                   case eh.kVF.WIN7_8_DEPRECATED_MESSAGE:
-                      let { dismissUntil: eP } = em.metadata;
+                      let { dismissUntil: eL } = em.metadata;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.WARNING,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ex(eP),
+                                  onClick: () => eN(eL),
                                   noticeType: eh.kVF.WIN7_8_DEPRECATED_MESSAGE
                               }),
                               eg.intl.format(eg.t['8Je+dX'], { helpCenterLink: ec.Z.getArticleURL(eh.BhN.WIN7_8_DEPRECATE) })
                           ]
                       });
                   case eh.kVF.MACOS_17_18_DEPRECATED_MESSAGE:
-                      let { dismissUntil: eL } = em.metadata;
+                      let { dismissUntil: ey } = em.metadata;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.WARNING,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ex(eL),
+                                  onClick: () => eN(ey),
                                   noticeType: eh.kVF.MACOS_17_18_DEPRECATED_MESSAGE
                               }),
                               eg.intl.format(eg.t.q8VPLi, { helpCenterLink: ec.Z.getArticleURL(eh.BhN.MACOS_17_18_DEPRECATE) })
@@ -210,7 +226,7 @@ let eN =
                           color: c.NoticeColors.DEFAULT,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ex(),
+                                  onClick: () => eN(),
                                   noticeType: eh.kVF.GENERIC
                               }),
                               em.message,
@@ -228,7 +244,7 @@ let eN =
                           color: c.NoticeColors.DANGER,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ex(),
+                                  onClick: () => eN(),
                                   noticeType: eh.kVF.LAUNCH_GAME_FAILURE
                               }),
                               em.message,
@@ -247,7 +263,7 @@ let eN =
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   onClick: () => {
-                                      _.Z.clearRemoteDisconnectVoiceChannelId(), ex();
+                                      _.Z.clearRemoteDisconnectVoiceChannelId(), eN();
                                   },
                                   noticeType: eh.kVF.VOICE_DISABLED
                               }),
@@ -268,7 +284,7 @@ let eN =
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   onClick: () => {
-                                      _.Z.clearLastSessionVoiceChannelId(), ex();
+                                      _.Z.clearLastSessionVoiceChannelId(), eN();
                                   },
                                   noticeType: eh.kVF.VOICE_CONNECTED_LAST_SESSION
                               }),
@@ -284,18 +300,18 @@ let eN =
                           ]
                       });
                   case eh.kVF.SPOTIFY_AUTO_PAUSED:
-                      let ey = T.Z.get(eh.ABu.SPOTIFY);
+                      let eO = T.Z.get(eh.ABu.SPOTIFY);
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.DANGER,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ex(),
+                                  onClick: () => eN(),
                                   noticeType: eh.kVF.SPOTIFY_AUTO_PAUSED
                               }),
                               (0, i.jsx)('img', {
                                   alt: '',
                                   className: eE.platformIcon,
-                                  src: ey.icon.whiteSVG
+                                  src: eO.icon.whiteSVG
                               }),
                               eg.intl.string(eg.t['D8Cp7+']),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
@@ -318,7 +334,7 @@ let eN =
                               eg.intl.string(eg.t['f+Zaoq']),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: eh.kVF.UNCLAIMED_ACCOUNT,
-                                  onClick: () => (eS && null != S ? (0, B.hk)(S) : j.j()),
+                                  onClick: () => (eA && null != S ? (0, B.hk)(S) : j.j()),
                                   children: eg.intl.string(eg.t.fiNVio)
                               })
                           ]
@@ -360,25 +376,27 @@ let eN =
                           ]
                       });
                   case eh.kVF.NO_INPUT_DETECTED:
-                      if (!et.Z.supports(e_.AN.LOOPBACK)) return (0, i.jsx)(eC, {});
-                      return (0, i.jsx)(eI, {});
+                      if (!et.Z.supports(e_.AN.LOOPBACK)) return (0, i.jsx)(eI, {});
+                      return (0, i.jsx)(ex, {});
+                  case eh.kVF.NO_INPUT_DEVICES_DETECTED:
+                      return (0, i.jsx)(eC, {});
                   case eh.kVF.HARDWARE_MUTE:
                       if (null == em.metadata) return null;
-                      let { vendor: eO, model: eM } = em.metadata;
+                      let { vendor: eM, model: ek } = em.metadata;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.DANGER,
                           children: [
                               eg.intl.format(eg.t.qoDex8, {
-                                  vendorName: eO.name,
-                                  modelName: eM.name
+                                  vendorName: eM.name,
+                                  modelName: ek.name
                               }),
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   onClick: () => {
-                                      d.Z.setEnableHardwareMuteNotice(!1), ex();
+                                      d.Z.setEnableHardwareMuteNotice(!1), eN();
                                   }
                               }),
                               (0, i.jsx)(c.NoticeButtonAnchor, {
-                                  href: eM.url,
+                                  href: ek.url,
                                   target: '_blank',
                                   rel: 'noreferrer noopener',
                                   children: eg.intl.string(eg.t['Yl/Rio'])
@@ -390,7 +408,7 @@ let eN =
                           color: c.NoticeColors.STREAMER_MODE,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ex(),
+                                  onClick: () => eN(),
                                   noticeType: eh.kVF.STREAMER_MODE
                               }),
                               eg.intl.string(eg.t.iEgBXl),
@@ -407,7 +425,7 @@ let eN =
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   onClick: () => {
-                                      ex();
+                                      eN();
                                   }
                               }),
                               eg.intl.string(eg.t.HcErZW),
@@ -421,16 +439,16 @@ let eN =
                       });
                   case eh.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
                       if (null == em.metadata) return null;
-                      let { skuId: ek, applicationId: eD } = em.metadata,
-                          eB = el.Z.get(ek),
-                          eU = b.Z.getApplication(eD);
-                      if (null == eB || null == eU) return null;
-                      let ew = { page: eh.ZY5.IN_APP };
+                      let { skuId: eD, applicationId: eB } = em.metadata,
+                          eU = el.Z.get(eD),
+                          ew = b.Z.getApplication(eB);
+                      if (null == eU || null == ew) return null;
+                      let eF = { page: eh.ZY5.IN_APP };
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.PREMIUM_TIER_1,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => h.Z(eB.id),
+                                  onClick: () => h.Z(eU.id),
                                   noticeType: eh.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK
                               }),
                               (0, i.jsx)(c.NitroWheelIcon, {
@@ -439,27 +457,27 @@ let eN =
                                   className: eE.premiumIcon
                               }),
                               eg.intl.format(eg.t['g3MU//'], {
-                                  applicationName: eU.name,
-                                  skuName: eB.name
+                                  applicationName: ew.name,
+                                  skuName: eU.name
                               }),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: eh.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK,
                                   onClick: () =>
                                       (0, eu.S)({
-                                          applicationId: eU.id,
-                                          skuId: eB.id,
+                                          applicationId: ew.id,
+                                          skuId: eU.id,
                                           openPremiumPaymentModal: () => {
                                               (0, z.Z)({
                                                   initialPlanId: null,
                                                   subscriptionTier: ef.Si.TIER_2,
-                                                  analyticsLocations: ev,
-                                                  analyticsObject: ew
+                                                  analyticsLocations: eT,
+                                                  analyticsObject: eF
                                               });
                                           },
-                                          analyticsLocations: ev,
-                                          analyticsLocationObject: ew,
+                                          analyticsLocations: eT,
+                                          analyticsLocationObject: eF,
                                           context: __OVERLAY__ ? eh.IlC.OVERLAY : eh.IlC.APP
-                                      }).then(() => h.Z(eB.id)),
+                                      }).then(() => h.Z(eU.id)),
                                   children: eg.intl.string(eg.t.KEwPY2)
                               })
                           ]
@@ -474,7 +492,7 @@ let eN =
                           color: c.NoticeColors.PREMIUM_TIER_1,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ex(),
+                                  onClick: () => eN(),
                                   noticeType: eh.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL
                               }),
                               (0, i.jsx)(c.NitroWheelIcon, {
@@ -488,7 +506,7 @@ let eN =
                               }),
                               (0, i.jsx)(c.NoticeButton, {
                                   children: (0, i.jsx)(o.rU, {
-                                      onClick: () => ex(),
+                                      onClick: () => eN(),
                                       to: {
                                           pathname: eh.Z5c.APPLICATION_STORE_LISTING_SKU(n.id),
                                           state: { scrollRestoration: !1 }
@@ -530,16 +548,16 @@ let eN =
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   noticeType: eh.kVF.SERVER_USAGE_SURVEY,
                                   onClick: () => {
-                                      ex();
+                                      eN();
                                   }
                               }),
-                              eg.intl.format(eg.t.RomvGB, { guildName: null !== (t = null == eN ? void 0 : eN.name) && void 0 !== t ? t : 'this server' }),
+                              eg.intl.format(eg.t.RomvGB, { guildName: null !== (t = null == ev ? void 0 : ev.name) && void 0 !== t ? t : 'this server' }),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: eh.kVF.SERVER_USAGE_SURVEY,
                                   onClick: () => {
-                                      window.open('https://discord.sjc1.qualtrics.com/jfe/form/SV_9AHPmGasQ0EvpdQ?user_id='.concat(null == p ? void 0 : p.id, '&guild_id=').concat(null == eN ? void 0 : eN.id), '_blank'), ex();
+                                      window.open('https://discord.sjc1.qualtrics.com/jfe/form/SV_9AHPmGasQ0EvpdQ?user_id='.concat(null == p ? void 0 : p.id, '&guild_id=').concat(null == ev ? void 0 : ev.id), '_blank'), eN();
                                   },
-                                  additionalTrackingProps: { guild_id: null == eN ? void 0 : eN.id },
+                                  additionalTrackingProps: { guild_id: null == ev ? void 0 : ev.id },
                                   children: eg.intl.string(eg.t['4RQks7'])
                               })
                           ]
@@ -561,7 +579,7 @@ let eN =
                           color: c.NoticeColors.WARNING,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ex(),
+                                  onClick: () => eN(),
                                   noticeType: eh.kVF.VIDEO_UNSUPPORTED_BROWSER
                               }),
                               eg.intl.string(eg.t.wVjKGh),
@@ -583,15 +601,15 @@ let eN =
                       });
                   case eh.kVF.DISPATCH_ERROR:
                       if (null == em.metadata) return null;
-                      let { error: eF } = em.metadata;
+                      let { error: eG } = em.metadata;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.DANGER,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ex(),
+                                  onClick: () => eN(),
                                   noticeType: eh.kVF.DISPATCH_ERROR
                               }),
-                              null == eF ? void 0 : eF.displayMessage,
+                              null == eG ? void 0 : eG.displayMessage,
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: eh.kVF.DISPATCH_ERROR,
                                   onClick: () =>
@@ -605,26 +623,26 @@ let eN =
                       });
                   case eh.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS:
                       if (null == em.metadata) return null;
-                      let { progress: eG, total: eV, name: eH } = em.metadata;
+                      let { progress: eV, total: eH, name: ez } = em.metadata;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.DEFAULT,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ex(),
+                                  onClick: () => eN(),
                                   noticeType: eh.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS
                               }),
                               (0, i.jsxs)(R.Z, {
                                   justify: R.Z.Justify.CENTER,
                                   children: [
-                                      null != eH
+                                      null != ez
                                           ? eg.intl.formatToPlainString(eg.t['pHj+z8'], {
-                                                name: ''.concat(eH),
-                                                progress: eG,
-                                                total: eV
+                                                name: ''.concat(ez),
+                                                progress: eV,
+                                                total: eH
                                             })
                                           : eg.intl.formatToPlainString(eg.t['lHZn+P'], {
-                                                progress: eG,
-                                                total: eV
+                                                progress: eV,
+                                                total: eH
                                             }),
                                       (0, i.jsx)(c.Spinner, {
                                           type: c.Spinner.Type.PULSING_ELLIPSIS,
@@ -688,13 +706,13 @@ let eN =
                       return (0, i.jsx)(V.Z, {});
                   case eh.kVF.PREMIUM_UNCANCEL:
                       return (0, i.jsxs)(c.Notice, {
-                          color: ej === ef.p9.TIER_1 ? c.NoticeColors.PREMIUM_TIER_1 : ej === ef.p9.TIER_0 ? c.NoticeColors.PREMIUM_TIER_0 : c.NoticeColors.PREMIUM_TIER_2,
+                          color: eR === ef.p9.TIER_1 ? c.NoticeColors.PREMIUM_TIER_1 : eR === ef.p9.TIER_0 ? c.NoticeColors.PREMIUM_TIER_0 : c.NoticeColors.PREMIUM_TIER_2,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   noticeType: eh.kVF.PREMIUM_UNCANCEL,
                                   onClick: () => {
                                       var e, t;
-                                      ex(null === (t = em.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
+                                      eN(null === (t = em.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
                                   }
                               }),
                               (0, i.jsx)(c.NitroWheelIcon, {
@@ -702,44 +720,44 @@ let eN =
                                   color: 'currentColor',
                                   className: eE.premiumIcon
                               }),
-                              ej === ef.p9.TIER_1 ? eg.intl.formatToPlainString(eg.t.fXv4ws, { daysLeft: em.metadata.daysLeft }) : ej === ef.p9.TIER_0 ? eg.intl.formatToPlainString(eg.t.ZOHZMj, { daysLeft: em.metadata.daysLeft }) : eg.intl.formatToPlainString(eg.t.outyHh, { daysLeft: em.metadata.daysLeft }),
+                              eR === ef.p9.TIER_1 ? eg.intl.formatToPlainString(eg.t.fXv4ws, { daysLeft: em.metadata.daysLeft }) : eR === ef.p9.TIER_0 ? eg.intl.formatToPlainString(eg.t.ZOHZMj, { daysLeft: em.metadata.daysLeft }) : eg.intl.formatToPlainString(eg.t.outyHh, { daysLeft: em.metadata.daysLeft }),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: eh.kVF.PREMIUM_UNCANCEL,
                                   onClick: () => {
                                       var e, t;
-                                      ex(null === (t = em.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd),
+                                      eN(null === (t = em.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd),
                                           (0, c.openModalLazy)(async () => {
                                               let { default: e } = await Promise.all([n.e('8016'), n.e('17938'), n.e('9236')]).then(n.bind(n, 561623));
                                               return (t) =>
                                                   (0, i.jsx)(e, {
                                                       ...t,
                                                       daysLeft: em.metadata.daysLeft,
-                                                      premiumType: ej,
+                                                      premiumType: eR,
                                                       analyticsSource: 'Nag Bar',
                                                       premiumSubscription: em.metadata.premiumSubscription
                                                   });
                                           });
                                   },
-                                  children: ej === ef.p9.TIER_1 ? eg.intl.string(eg.t.BkbUPD) : ej === ef.p9.TIER_0 ? eg.intl.string(eg.t.Px978f) : eg.intl.string(eg.t.LW5tCA)
+                                  children: eR === ef.p9.TIER_1 ? eg.intl.string(eg.t.BkbUPD) : eR === ef.p9.TIER_0 ? eg.intl.string(eg.t.Px978f) : eg.intl.string(eg.t.LW5tCA)
                               })
                           ]
                       });
                   case eh.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT:
-                      let { daysPastDue: ez, dismissUntil: eW } = em.metadata;
+                      let { daysPastDue: eW, dismissUntil: eK } = em.metadata;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.WARNING,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  noticeType: eT,
+                                  noticeType: eS,
                                   onClick: () => {
-                                      ex(eW);
+                                      eN(eK);
                                   }
                               }),
-                              eg.intl.format(eg.t.zxU0Ki, { daysPastDue: ez }),
+                              eg.intl.format(eg.t.zxU0Ki, { daysPastDue: eW }),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: eh.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT,
                                   onClick: () => {
-                                      ex(eW), v.Z.open(eh.oAB.SUBSCRIPTIONS);
+                                      eN(eK), v.Z.open(eh.oAB.SUBSCRIPTIONS);
                                   },
                                   children: eg.intl.string(eg.t.q8rxeX)
                               })
@@ -753,7 +771,7 @@ let eN =
                                   noticeType: eh.kVF.PREMIUM_PAST_DUE_INVALID_PAYMENT,
                                   onClick: () => {
                                       var e, t;
-                                      ex(null === (t = em.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
+                                      eN(null === (t = em.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
                                   }
                               }),
                               eg.intl.string(eg.t.LlZaoa),
@@ -761,7 +779,7 @@ let eN =
                                   noticeType: eh.kVF.PREMIUM_PAST_DUE_INVALID_PAYMENT,
                                   onClick: () => {
                                       var e, t;
-                                      ex(null === (t = em.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), v.Z.open(eh.oAB.SUBSCRIPTIONS);
+                                      eN(null === (t = em.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), v.Z.open(eh.oAB.SUBSCRIPTIONS);
                                   },
                                   children: eg.intl.string(eg.t['Zpd+Ym'])
                               })
@@ -775,7 +793,7 @@ let eN =
                                   noticeType: eh.kVF.PREMIUM_PAST_DUE_MISSING_PAYMENT,
                                   onClick: () => {
                                       var e, t;
-                                      ex(null === (t = em.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
+                                      eN(null === (t = em.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
                                   }
                               }),
                               eg.intl.string(eg.t['30YfCg']),
@@ -783,7 +801,7 @@ let eN =
                                   noticeType: eh.kVF.PREMIUM_PAST_DUE_MISSING_PAYMENT,
                                   onClick: () => {
                                       var e, t;
-                                      ex(null === (t = em.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), v.Z.open(eh.oAB.SUBSCRIPTIONS);
+                                      eN(null === (t = em.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), v.Z.open(eh.oAB.SUBSCRIPTIONS);
                                   },
                                   children: eg.intl.string(eg.t.U5pKWF)
                               })
@@ -797,17 +815,17 @@ let eN =
                                   noticeType: eh.kVF.PREMIUM_MISSING_PAYMENT,
                                   onClick: () => {
                                       var e, t;
-                                      ex(null === (t = em.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
+                                      eN(null === (t = em.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
                                   }
                               }),
-                              ej === ef.p9.TIER_1 ? eg.intl.formatToPlainString(eg.t.b6QUvb, { daysLeft: em.metadata.daysLeft }) : ej === ef.p9.TIER_0 ? eg.intl.formatToPlainString(eg.t['tURZ/P'], { daysLeft: em.metadata.daysLeft }) : eg.intl.formatToPlainString(eg.t.AyC74O, { daysLeft: em.metadata.daysLeft }),
+                              eR === ef.p9.TIER_1 ? eg.intl.formatToPlainString(eg.t.b6QUvb, { daysLeft: em.metadata.daysLeft }) : eR === ef.p9.TIER_0 ? eg.intl.formatToPlainString(eg.t['tURZ/P'], { daysLeft: em.metadata.daysLeft }) : eg.intl.formatToPlainString(eg.t.AyC74O, { daysLeft: em.metadata.daysLeft }),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: eh.kVF.PREMIUM_MISSING_PAYMENT,
                                   onClick: () => {
                                       var e, t;
-                                      ex(null === (t = em.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), v.Z.open(eh.oAB.SUBSCRIPTIONS);
+                                      eN(null === (t = em.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), v.Z.open(eh.oAB.SUBSCRIPTIONS);
                                   },
-                                  children: ej === ef.p9.TIER_1 ? eg.intl.string(eg.t.lboF5O) : ej === ef.p9.TIER_0 ? eg.intl.string(eg.t['4UPwOj']) : eg.intl.string(eg.t['P/VvGR'])
+                                  children: eR === ef.p9.TIER_1 ? eg.intl.string(eg.t.lboF5O) : eR === ef.p9.TIER_0 ? eg.intl.string(eg.t['4UPwOj']) : eg.intl.string(eg.t['P/VvGR'])
                               })
                           ]
                       });
@@ -815,14 +833,14 @@ let eN =
                       return (0, i.jsx)(F.h, {
                           buttonText: null !== (l = em.buttonText) && void 0 !== l ? l : eg.intl.string(eg.t['/g10LC']),
                           onGoBack: em.callback,
-                          onDismiss: () => ex(),
+                          onDismiss: () => eN(),
                           showCloseButton: !0
                       });
                   case eh.kVF.AUTOMOD_QUARANTINED_USER_PROFILE: {
                       let e = { page: eh.ZY5.IN_APP };
                       return (0, i.jsx)(D.Z, {
                           guildId: S,
-                          analyticsLocations: ev,
+                          analyticsLocations: eT,
                           analyticsLocation: e
                       });
                   }
@@ -855,28 +873,28 @@ let eN =
                                   children: eg.intl.string(eg.t.hvVgAQ)
                               }),
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ex(),
+                                  onClick: () => eN(),
                                   noticeType: eh.kVF.BLOCKED_BY_PROXY
                               })
                           ]
                       });
                   case eh.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION:
-                      let { dismissUntil: eK, decisionId: eY } = em.metadata;
+                      let { dismissUntil: eY, decisionId: eX } = em.metadata;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.WARNING,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   noticeType: eh.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION,
                                   onClick: () => {
-                                      null != S && (0, k.T9)(S), ex(eK);
+                                      null != S && (0, k.T9)(S), eN(eY);
                                   }
                               }),
                               eg.intl.string(eg.t.B8ruyc),
                               (0, i.jsx)(c.NoticeButton, {
                                   onClick: () => {
                                       null != S &&
-                                          (0, k.UE)(S, eY, () => {
-                                              ex(eK), (0, k.T9)(S);
+                                          (0, k.UE)(S, eX, () => {
+                                              eN(eY), (0, k.T9)(S);
                                           });
                                   },
                                   children: eg.intl.string(eg.t.oX14Eh)
@@ -896,7 +914,7 @@ let eN =
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   noticeType: eh.kVF.SAFETY_USER_SENTIMENT_NAGBAR,
                                   onClick: () => {
-                                      Q.hZ(), ex();
+                                      Q.hZ(), eN();
                                   }
                               }),
                               eg.intl.string(eg.t.I1nKfH),
@@ -908,17 +926,17 @@ let eN =
                                           return (t) => (0, i.jsx)(e, { ...t });
                                       }),
                                           Q.hZ(),
-                                          ex();
+                                          eN();
                                   },
                                   children: eg.intl.string(eg.t.l5xYnJ)
                               })
                           ]
                       });
                   case eh.kVF.PREMIUM_TIER_2_TRIAL_ENDING:
-                      let eX = a()().add(5, 'days').toDate();
+                      let eQ = a()().add(5, 'days').toDate();
                       return (0, i.jsx)(Y.Z, {
                           dismissCurrentNotice: () => {
-                              (0, Z.EW)(eo.m9[eh.kVF.PREMIUM_TIER_2_TRIAL_ENDING]), ex(eX);
+                              (0, Z.EW)(eo.m9[eh.kVF.PREMIUM_TIER_2_TRIAL_ENDING]), eN(eQ);
                           },
                           subscriptionTier: ef.Si.TIER_2
                       });
@@ -943,7 +961,7 @@ let eN =
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   onClick: () => {
                                       var e;
-                                      ex(null === (e = em.metadata) || void 0 === e ? void 0 : e.dismissUntil);
+                                      eN(null === (e = em.metadata) || void 0 === e ? void 0 : e.dismissUntil);
                                   },
                                   noticeType: eh.kVF.BLOCK_USER_FEEDBACK_NAGBAR
                               }),
@@ -951,7 +969,7 @@ let eN =
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   onClick: () => {
                                       var e;
-                                      (0, q.Z)(), ex(null === (e = em.metadata) || void 0 === e ? void 0 : e.dismissUntil);
+                                      (0, q.Z)(), eN(null === (e = em.metadata) || void 0 === e ? void 0 : e.dismissUntil);
                                   },
                                   noticeType: eh.kVF.BLOCK_USER_FEEDBACK_NAGBAR,
                                   children: eg.intl.string(eg.t.e4y2VF)
@@ -963,10 +981,10 @@ let eN =
               }
           })
         : null;
-function ev() {
+function eT() {
     let { analyticsLocations: e } = (0, A.ZP)(S.Z.NOTICE);
     return (0, i.jsx)(A.Gt, {
         value: e,
-        children: (0, i.jsx)(eN, {})
+        children: (0, i.jsx)(ev, {})
     });
 }

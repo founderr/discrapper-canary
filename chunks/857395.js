@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return u;
+        return h;
     }
 });
 var l = t(200651),
@@ -9,10 +9,13 @@ var l = t(200651),
     a = t(481060),
     s = t(249842),
     o = t(838367),
-    c = t(83474);
-function u(e) {
-    let { guildId: n, channelId: t, messageId: u, ...d } = e,
-        { unavailable: h, guild: m } = (0, r.cj)(
+    c = t(576306),
+    u = t(83474),
+    d = t(914620);
+function h(e) {
+    let { guildId: n, channelId: t, messageId: h, ...m } = e,
+        f = (0, c.h)(),
+        { unavailable: g, guild: x } = (0, r.cj)(
             [o.Z],
             () => ({
                 guild: o.Z.getGuild(n),
@@ -20,30 +23,36 @@ function u(e) {
             }),
             [n]
         ),
-        f = null != m,
-        g = i.useCallback(async () => {
-            try {
-                !f && (await (0, s.P)(n));
-            } catch {}
-        }, [f, n]);
-    return h
+        _ = null != x,
+        j = i.useCallback(async () => {
+            if (!f)
+                try {
+                    !_ && (await (0, s.P)(n));
+                } catch {}
+        }, [f, _, n]);
+    return g
         ? (0, l.jsx)(a.Popout, {
               position: 'right',
-              renderPopout: (e) => (0, l.jsx)(c.SK, {}),
-              ...d
+              renderPopout: (e) => (0, l.jsx)(u.SK, {}),
+              ...m
           })
         : (0, l.jsx)(a.Popout, {
               position: 'right',
-              preload: g,
+              preload: j,
               renderPopout: (e) =>
-                  null == m
-                      ? (0, l.jsx)(l.Fragment, {})
-                      : (0, l.jsx)(c.sK, {
+                  f
+                      ? (0, l.jsx)(d.Z, {
                             ...e,
-                            guild: m,
-                            channelId: t,
-                            messageId: u
-                        }),
-              ...d
+                            guildId: n
+                        })
+                      : null == x
+                        ? (0, l.jsx)(l.Fragment, {})
+                        : (0, l.jsx)(u.sK, {
+                              ...e,
+                              guild: x,
+                              channelId: t,
+                              messageId: h
+                          }),
+              ...m
           });
 }
