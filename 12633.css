@@ -21181,6 +21181,11 @@ h3.improved_f017d0:after {
     margin-right: 8px
 }
 
+.visual-refresh .icon_d03bba {
+    margin-left: -2px;
+    margin-right: calc(-2px + var(--space-8))
+}
+
 .size56_d03bba .avatarContainer_d03bba {
     width: 56px;
     height: 56px
