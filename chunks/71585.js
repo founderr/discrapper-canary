@@ -2,8 +2,9 @@ var i,
     a = r(47120);
 var s = r(653041);
 var o = r(442837),
-    l = r(570140);
-function u(e, n, r) {
+    l = r(570140),
+    u = r(162461);
+function c(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -16,8 +17,7 @@ function u(e, n, r) {
         e
     );
 }
-let c = 2592000000,
-    d = 57600000,
+let d = 2592000000,
     f = 2048,
     _ = () => ({
         itemImpressions: [],
@@ -34,20 +34,21 @@ function T() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     if (!e && Date.now() < g) return;
     let n = 0,
-        r = Date.now() - c;
+        r = Date.now() - d;
     for (let e = 0; e < h.itemImpressions.length; e++) {
         let [i, a] = h.itemImpressions[e];
         if (a < r) n = e + 1;
         else break;
     }
     n > 0 && (h.itemImpressions = h.itemImpressions.slice(n)), h.itemImpressions.length > f && (h.itemImpressions = h.itemImpressions.slice(-f));
-    let i = v ? I : d,
-        a = new Set(),
+    let { impressionAge: i } = (0, u.m6)('ContentInventoryPersistedStore.updateImpressionCaches'),
+        a = v ? I : i,
         s = new Set(),
-        o = Date.now() - i,
-        l = null;
-    for (let [e, n] of h.itemImpressions) n < o ? a.add(e) : null == l && (l = n + i), s.add(e);
-    (p = a), (m = s), (g = null != l ? l : 1 / 0), (E = !0);
+        o = new Set(),
+        l = Date.now() - a,
+        c = null;
+    for (let [e, n] of h.itemImpressions) n < l ? s.add(e) : null == c && (c = n + a), o.add(e);
+    (p = s), (m = o), (g = null != c ? c : 1 / 0), (E = !0);
 }
 function b(e) {
     let { itemIds: n } = e;
@@ -92,8 +93,8 @@ class C extends (i = o.ZP.PersistedStore) {
         h = _();
     }
 }
-u(C, 'displayName', 'ContentInventoryPersistedStore'),
-    u(C, 'persistKey', 'ContentInventoryPersistedStore'),
+c(C, 'displayName', 'ContentInventoryPersistedStore'),
+    c(C, 'persistKey', 'ContentInventoryPersistedStore'),
     (n.Z = new C(l.Z, {
         CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS: b,
         CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS: y,
