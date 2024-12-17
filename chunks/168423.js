@@ -1,5 +1,6 @@
 e.exports = {
     subtitleContainer: 'subtitleContainer_a6ec51',
+    winnerImage: 'winnerImage_a6ec51',
     modalContent: 'modalContent_a6ec51',
     notes: 'notes_a6ec51',
     row: 'row_a6ec51',

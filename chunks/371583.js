@@ -1,13 +1,15 @@
 r.d(n, {
-    I: function () {
-        return s;
+    j: function () {
+        return c;
     },
-    K: function () {
-        return a;
+    r: function () {
+        return l;
     }
 });
-var i = r(99815);
-function a(e) {
+var i = r(99815),
+    a = r(81063),
+    s = r(463031);
+function o(e) {
     var n;
     let a = e.users[0],
         s = null == a ? void 0 : null === (n = a.statistics[i.E.LOL_MOST_PLAYED_CHAMPION_ID]) || void 0 === n ? void 0 : n.value;
@@ -17,10 +19,19 @@ function a(e) {
         return r(721191).Z;
     }
 }
-function s(e) {
+function l(e) {
+    return e.leaderboard_id === s._ ? o(e) : null != e.settings.splash_asset_id ? (0, a.getAssetImage)(e.settings.application_id, e.settings.splash_asset_id) : null;
+}
+function u(e) {
+    var n, a;
+    let s = null == e ? void 0 : null === (n = e.users) || void 0 === n ? void 0 : n[0],
+        o = null == s ? void 0 : null === (a = s.statistics[i.E.LOL_MOST_PLAYED_CHAMPION_ID]) || void 0 === a ? void 0 : a.value;
     try {
-        return null != e ? r(692425)('./champion_'.concat(e, '.jpg')).default : null;
+        return null != o ? r(692425)('./champion_'.concat(o, '.jpg')).default : null;
     } catch {
         return null;
     }
+}
+function c(e) {
+    return e.leaderboard_id === s._ ? u(e) : (0, a.getAssetImage)(e.settings.application_id, e.settings.winner_asset_id);
 }

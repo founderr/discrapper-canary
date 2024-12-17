@@ -1,9 +1,9 @@
 r.d(n, {
     M: function () {
-        return g;
+        return E;
     },
     Z: function () {
-        return E;
+        return v;
     }
 });
 var i = r(200651),
@@ -16,50 +16,54 @@ var i = r(200651),
     d = r(594174),
     f = r(5192),
     _ = r(709737),
-    h = r(69589),
-    p = r(388032),
-    m = r(417776);
-let g = [r(191420), r(774621), r(49274), r(904141)];
-function E(e) {
+    h = r(986398),
+    p = r(69589),
+    m = r(388032),
+    g = r(417776);
+let E = [r(191420), r(774621), r(49274), r(904141)];
+function v(e) {
     var n, r;
-    let { generateImageRef: s, leaderboard: g, userId: E, guildId: v } = e,
-        I = (0, l.e7)([d.default], () => d.default.getUser(E)),
-        T = g.guild_settings.sort_by_statistic_id,
-        b = a.useMemo(() => g.users.findIndex((e) => e.user_id === E) + 1, [g, E]),
-        y = a.useMemo(() => g.users.find((e) => e.user_id === E), [g, E]);
-    o()(null != y, 'User row should not be null'), o()(null != I, 'User must exist');
-    let S = f.ZP.getName(v, void 0, I),
-        A = null !== (r = null === (n = y.statistics[T]) || void 0 === n ? void 0 : n.value) && void 0 !== r ? r : 0;
+    let { generateImageRef: s, leaderboard: E, userId: v, guildId: I } = e,
+        T = (0, l.e7)([d.default], () => d.default.getUser(v)),
+        b = E.guild_settings.sort_by_statistic_id,
+        y = a.useMemo(() => E.users.findIndex((e) => e.user_id === v) + 1, [E, v]),
+        S = a.useMemo(() => E.users.find((e) => e.user_id === v), [E, v]);
+    o()(null != S, 'User row should not be null'), o()(null != T, 'User must exist');
+    let A = f.ZP.getName(I, void 0, T),
+        N = null !== (r = null === (n = S.statistics[b]) || void 0 === n ? void 0 : n.value) && void 0 !== r ? r : 0;
     return (0, i.jsxs)('div', {
         ref: s,
-        className: m.container,
+        className: g.container,
         children: [
-            (0, i.jsx)(h.Z, {
-                user: I,
-                rank: b,
-                avatarClassName: m.avatar,
+            (0, i.jsx)(p.Z, {
+                user: T,
+                rank: y,
+                avatarClassName: g.avatar,
                 rankBadgeVisibility: 'visibleWithoutBorder'
             }),
             (0, i.jsxs)('div', {
                 children: [
                     (0, i.jsxs)('div', {
-                        className: m.gameTitleContainer,
+                        className: g.gameTitleContainer,
                         children: [
-                            (0, i.jsx)(u.LeagueOfLegendsBrandIcon, { size: 'xs' }),
+                            (0, i.jsx)(h.Z, {
+                                className: g.winnerImage,
+                                leaderboard: E
+                            }),
                             (0, i.jsx)(u.Text, {
                                 variant: 'text-sm/medium',
-                                className: m.gameTitle,
+                                className: g.gameTitle,
                                 children: 'League of Legends'
                             })
                         ]
                     }),
                     (0, i.jsx)(u.Spacer, { size: 4 }),
                     (0, i.jsx)(u.Text, {
-                        className: m.title,
+                        className: g.title,
                         variant: 'text-md/semibold',
-                        children: p.intl.format(p.t.tluICw, {
-                            username: S,
-                            rank: b
+                        children: m.intl.format(m.t.tluICw, {
+                            username: A,
+                            rank: y
                         })
                     }),
                     (0, i.jsx)(u.Spacer, { size: 2 }),
@@ -67,12 +71,12 @@ function E(e) {
                         location: c.Gt.EMBED,
                         children: [
                             (0, i.jsx)(_.DC, {
-                                value: A,
-                                statisticId: T
+                                value: N,
+                                statisticId: b
                             }),
                             (0, i.jsx)(_.Js, {
-                                intervalStart: g.interval_start,
-                                intervalEnd: g.interval_end
+                                intervalStart: E.interval_start,
+                                intervalEnd: E.interval_end
                             })
                         ]
                     })

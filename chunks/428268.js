@@ -8,47 +8,54 @@ var a = r(442837),
     c = r(511010),
     d = r(553795),
     f = r(979192),
-    _ = r(981631),
-    h = r(388032),
-    p = r(804665);
-function m(e) {
-    let { guildId: n, leaderboardId: m } = e,
-        { leaderboardsDisabled: g } = (0, f.O)(n, m),
-        E = (0, a.e7)([d.Z], () => d.Z.getAccount(null, _.ABu.RIOT_GAMES)),
-        v = (0, a.e7)([d.Z], () => d.Z.getAccount(null, _.ABu.LEAGUE_OF_LEGENDS));
-    if (null != E && null != v && !g) return null;
-    let I = l.Z.get(_.ABu.RIOT_GAMES),
-        T = null == E && null == v,
-        b = null != E && null == v,
-        y = null == E && null != v,
-        S = b || y;
-    function A() {
-        (0, o.openModalLazy)(async () => {
-            let { default: e } = await r.e('73217').then(r.bind(r, 139964));
-            return (r) =>
-                (0, i.jsx)(e, {
-                    ...r,
-                    guildId: n
-                });
+    _ = r(873128),
+    h = r(981631),
+    p = r(388032),
+    m = r(804665);
+function g(e) {
+    let { guildId: n, leaderboardId: g } = e,
+        { leaderboardsDisabled: E } = (0, f.O)(n, g),
+        v = (0, a.e7)([d.Z], () => d.Z.getAccount(null, h.ABu.RIOT_GAMES)),
+        I = (0, a.e7)([d.Z], () => d.Z.getAccount(null, h.ABu.LEAGUE_OF_LEGENDS)),
+        T = (0, _.Z)({
+            guildId: n,
+            leaderboardId: g
         });
-    }
-    function N() {
-        return T || S ? (0, u.Z)({ platformType: _.ABu.RIOT_GAMES }) : A();
-    }
+    if (null != v && null != I && !E) return null;
+    let b = l.Z.get(h.ABu.RIOT_GAMES),
+        y = null == v && null == I,
+        S = null != v && null == I,
+        A = null == v && null != I,
+        N = S || A;
     function C() {
-        return T ? h.intl.string(h.t.w6VSSE) : S ? h.intl.string(h.t.CHNBdn) : h.intl.string(h.t['0yRXHx']);
+        if (null != T)
+            (0, o.openModalLazy)(async () => {
+                let { default: e } = await r.e('73217').then(r.bind(r, 139964));
+                return (r) =>
+                    (0, i.jsx)(e, {
+                        ...r,
+                        guildId: n,
+                        leaderboard: T
+                    });
+            });
     }
     function R() {
-        if (g) return null;
-        let e = T
-                ? (0, i.jsx)(o.CircleInformationIcon, { className: p.infoMessageIcon })
+        return y || N ? (0, u.Z)({ platformType: h.ABu.RIOT_GAMES }) : C();
+    }
+    function O() {
+        return y ? p.intl.string(p.t.w6VSSE) : N ? p.intl.string(p.t.CHNBdn) : p.intl.string(p.t['0yRXHx']);
+    }
+    function D() {
+        if (E) return null;
+        let e = y
+                ? (0, i.jsx)(o.CircleInformationIcon, { className: m.infoMessageIcon })
                 : (0, i.jsx)(o.WarningIcon, {
                       color: s.Z.colors.STATUS_WARNING,
-                      className: p.infoMessageIcon
+                      className: m.infoMessageIcon
                   }),
-            n = T ? h.intl.string(h.t['Ihg/Dg']) : h.intl.string(h.t['J8U+Iy']);
+            n = y ? p.intl.string(p.t['Ihg/Dg']) : p.intl.string(p.t['J8U+Iy']);
         return (0, i.jsxs)('div', {
-            className: p.updateMessage,
+            className: m.updateMessage,
             children: [
                 e,
                 (0, i.jsx)(o.Text, {
@@ -61,23 +68,23 @@ function m(e) {
     }
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(c.Z, { className: p.divider }),
-            R(),
+            (0, i.jsx)(c.Z, { className: m.divider }),
+            D(),
             (0, i.jsxs)(o.Button, {
-                className: p.joinLeaderboardButton,
-                innerClassName: p.joinLeaderboardButtonInner,
-                onClick: N,
+                className: m.joinLeaderboardButton,
+                innerClassName: m.joinLeaderboardButtonInner,
+                onClick: R,
                 children: [
-                    !g &&
+                    !E &&
                         (0, i.jsx)('img', {
                             alt: 'Riot Games',
-                            src: I.icon.whiteSVG,
-                            className: p.riotIcon
+                            src: b.icon.whiteSVG,
+                            className: m.riotIcon
                         }),
-                    C()
+                    O()
                 ]
             })
         ]
     });
 }
-n.Z = m;
+n.Z = g;
