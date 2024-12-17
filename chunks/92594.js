@@ -1,6 +1,6 @@
 n.d(t, {
     t: function () {
-        return j;
+        return E;
     }
 }),
     n(47120);
@@ -15,66 +15,73 @@ var i = n(200651),
     u = n(643939),
     c = n(45595),
     p = n(823188),
-    x = n(563132),
-    h = n(474936),
-    f = n(388032),
-    _ = n(988113);
-function j() {
-    let { purchaseError: e, paymentError: t, setPurchaseError: n, selectedSkuId: s, selectedPlan: j, setSelectedSkuId: m, setSelectedPlanId: L, setSelectedPlanNotification: g } = (0, x.usePaymentContext)(),
-        [E, S] = l.useState(!1),
-        [I, M] = l.useState(!1),
-        [v, y] = l.useState(!1);
+    x = n(626135),
+    _ = n(987209),
+    h = n(563132),
+    f = n(981631),
+    j = n(474936),
+    m = n(388032),
+    L = n(988113);
+function E() {
+    let { activeSubscription: e, purchaseError: t, paymentError: n, setPurchaseError: s, selectedSkuId: E, selectedPlan: S, setSelectedSkuId: g, setSelectedPlanId: I, setSelectedPlanNotification: M } = (0, h.usePaymentContext)(),
+        { isGift: v } = (0, _.wD)(),
+        [y, T] = l.useState(!1),
+        [N, P] = l.useState(!1),
+        [Z, A] = l.useState(!1);
     return (
         l.useEffect(() => {
-            let n = setTimeout(() => {
-                if (s === h.Si.TIER_2) ((null == e ? void 0 : e.code) === d.SM.BILLING_INSUFFICIENT_FUNDS || (null == t ? void 0 : t.code) === d.SM.BILLING_INSUFFICIENT_FUNDS) && y(!0);
+            let i = setTimeout(() => {
+                if (E === j.Si.TIER_2 && (null == e ? !void 0 : !e.isPremium) && !v) ((null == t ? void 0 : t.code) === d.SM.BILLING_INSUFFICIENT_FUNDS || (null == n ? void 0 : n.code) === d.SM.BILLING_INSUFFICIENT_FUNDS) && A(!0);
             }, 1500);
-            return () => clearTimeout(n);
-        }, [t, e, s, y]),
+            return () => clearTimeout(i);
+        }, [e, v, n, t, E, A]),
         (0, i.jsxs)('div', {
-            className: r()(_.upsellContainer, v ? _.interactable : null),
-            hidden: I,
+            className: r()(L.upsellContainer, Z ? L.interactable : null),
+            hidden: N,
             children: [
                 (0, i.jsx)(c.H, {}),
                 (0, i.jsx)(c.Z, {
-                    show: v,
+                    show: Z,
                     children: (0, i.jsx)(u.L, {
-                        message: f.intl.format(f.t.dk8zl5, {
+                        message: m.intl.format(m.t.dk8zl5, {
                             perkHover: (e, t) =>
                                 (0, i.jsx)(
                                     'span',
                                     {
-                                        onMouseEnter: () => S(!0),
-                                        onMouseLeave: () => S(!1),
+                                        onMouseEnter: () => {
+                                            x.default.track(f.rMx.NITRO_BASIC_UPSELL_PERK_HOVERED), T(!0);
+                                        },
+                                        onMouseLeave: () => T(!1),
                                         children: e
                                     },
                                     'post-failure-nitro-basic-upsell-perk-hover'
                                 )
                         }),
                         handleClick: () => {
-                            n(null), a.Z.wait(C.pB), a.Z.wait(o.fw), g(f.intl.string(f.t['/5p4ws'])), m(h.Si.TIER_0);
-                            let e = h.Xh.PREMIUM_MONTH_TIER_0;
-                            (null == j ? void 0 : j.id) === h.Xh.PREMIUM_YEAR_TIER_2 && (e = h.Xh.PREMIUM_YEAR_TIER_0), L(e), M(!0);
+                            s(null), a.Z.wait(C.pB), a.Z.wait(o.fw), M(m.intl.string(m.t['/5p4ws'])), g(j.Si.TIER_0);
+                            let e = j.Xh.PREMIUM_MONTH_TIER_0;
+                            (null == S ? void 0 : S.id) === j.Xh.PREMIUM_YEAR_TIER_2 && (e = j.Xh.PREMIUM_YEAR_TIER_0), I(e), P(!0);
                         },
-                        handleClose: () => M(!0),
+                        handleClose: () => P(!0),
                         handleImageClick: () => {},
-                        buttonText: f.intl.string(f.t['7aa9vr']),
+                        buttonText: m.intl.string(m.t['7aa9vr']),
                         useInitialGlow: !0,
                         useGlowOnHover: !0,
                         upsellType: 'post-failure-nitro-basic-upsell',
-                        themeOverride: u.T.NITRO_BASIC
+                        themeOverride: u.T.NITRO_BASIC,
+                        analyticsLocations: f.Sbl.NITRO_BASIC_UPSELL
                     })
                 }),
-                E &&
+                y &&
                     (0, i.jsxs)('div', {
-                        className: _.tooltip,
+                        className: L.tooltip,
                         children: [
                             (0, i.jsx)(p.lq, {
-                                className: _.tier0Card,
+                                className: L.tier0Card,
                                 showWumpus: !0,
                                 showYearlyPrice: !0
                             }),
-                            (0, i.jsx)('div', { className: _.tooltipTail })
+                            (0, i.jsx)('div', { className: L.tooltipTail })
                         ]
                     })
             ]
