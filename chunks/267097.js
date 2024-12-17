@@ -8,12 +8,10 @@ var i = r(580747),
 function s(e) {
     let n = null == e ? void 0 : e.paymentGateway,
         r = (0, i.Z)('shop_disable_cache'),
-        s = (0, i.Z)('shop_include_unpublished'),
-        o = (0, i.Z)('shop_request_home_payload');
+        s = (0, i.Z)('shop_include_unpublished');
     return (0, a.e)({
         noCache: r,
         includeUnpublished: s,
-        requestHomePayload: o,
         paymentGateway: n,
         includeBundles: !0
     });

@@ -1,31 +1,39 @@
-n.d(t, {
+r.d(n, {
+    n: function () {
+        return l;
+    },
     s: function () {
-        return u;
+        return o;
     }
 });
-var r = n(46973),
-    i = n(37113);
-let u = (e, t, n) => {
-    let u = {
-        qualityOptions: {
-            preset: i.tI.PRESET_CUSTOM,
-            resolution: e,
-            frameRate: t
-        },
-        context: r.Yn.STREAM
+var i = r(311570),
+    a = r(46973),
+    s = r(37113);
+let o = (e, n, r) => {
+        let i = {
+            qualityOptions: {
+                preset: s.tI.PRESET_CUSTOM,
+                resolution: e,
+                frameRate: n
+            },
+            context: a.Yn.STREAM
+        };
+        return (
+            null != r &&
+                (null != r.desktopSource &&
+                    (i.desktopSettings = {
+                        sourceId: r.desktopSource.id,
+                        sound: !0
+                    }),
+                null != r.cameraSource &&
+                    (i.cameraSettings = {
+                        videoDeviceGuid: r.cameraSource.videoDeviceGuid,
+                        audioDeviceGuid: r.cameraSource.audioDeviceGuid
+                    })),
+            i
+        );
+    },
+    l = (e) => {
+        let n = {};
+        return null == e ? n : (!0 === e.noCache && (n.no_cache = !0), !0 === e.includeUnpublished && (n.include_unpublished = !0), !0 === e.includeBundles && (n.include_bundles = !0), null != e.countryCode && (n.country_code = e.countryCode), null !== e.paymentGateway && (n.payment_gateway = e.paymentGateway), e.variantsReturnStyle === i.v.VARIANTS_GROUP && (n.variants_return_style = i.v.VARIANTS_GROUP), n);
     };
-    return (
-        null != n &&
-            (null != n.desktopSource &&
-                (u.desktopSettings = {
-                    sourceId: n.desktopSource.id,
-                    sound: !0
-                }),
-            null != n.cameraSource &&
-                (u.cameraSettings = {
-                    videoDeviceGuid: n.cameraSource.videoDeviceGuid,
-                    audioDeviceGuid: n.cameraSource.audioDeviceGuid
-                })),
-        u
-    );
-};
