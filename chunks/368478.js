@@ -32,14 +32,14 @@ function C(e) {
         E = null != x && x.applicationId === a.id && (0, s.p)(x.location) === t.id,
         { analyticsLocations: b } = (0, d.ZP)(c.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON),
         Z = null != t.recipients ? t.recipients[0] : void 0,
-        N = (0, p.ms)({
+        S = (0, p.ms)({
             channel: t,
             applicationId: a.id,
             botUserId: Z
         });
     return {
         isExecutingLaunchInteraction: h,
-        buttonText: N && I ? (E ? g.intl.string(g.t['Hi1/aW']) : null != _ ? _ : g.intl.string(g.t.zKX8Nj)) : g.intl.string(v),
+        buttonText: S && I ? (E ? g.intl.string(g.t['Hi1/aW']) : null != _ ? _ : g.intl.string(g.t.zKX8Nj)) : g.intl.string(v),
         hasActiveMatchingEmbeddedActivity: E,
         isEmbeddedApp: I,
         currentEmbeddedActivity: x,

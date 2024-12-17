@@ -50,7 +50,7 @@ function C(e) {
                     botUserId: v.id
                 });
         }, [null == v ? void 0 : v.id]);
-    let N = (0, o.v1)(
+    let S = (0, o.v1)(
             C,
             {
                 commandTypes: [a.yU.PRIMARY_ENTRY_POINT, a.yU.CHAT, a.yU.MESSAGE, a.yU.USER]
@@ -61,12 +61,12 @@ function C(e) {
                 allowApplicationState: !0
             }
         ),
-        S = N.commands.filter((e) => e.type === a.yU.PRIMARY_ENTRY_POINT && e.applicationId === Z)[0],
-        T = N.commands.filter((e) => '0' !== e.id && !e.id.startsWith('-')),
-        j = N.loading,
+        N = S.commands.filter((e) => e.type === a.yU.PRIMARY_ENTRY_POINT && e.applicationId === Z)[0],
+        T = S.commands.filter((e) => '0' !== e.id && !e.id.startsWith('-')),
+        j = S.loading,
         A =
             null ===
-                (t = N.descriptors.find((e) => {
+                (t = S.descriptors.find((e) => {
                     var t;
                     return (null === (t = e.application) || void 0 === t ? void 0 : t.id) === Z;
                 })) || void 0 === t
@@ -79,7 +79,7 @@ function C(e) {
     return {
         application: M,
         isInitialLoading: R,
-        primaryEntryPointCommand: S,
+        primaryEntryPointCommand: N,
         isProfileFetching: _,
         wasProfileFetching: I,
         applicationId: Z,

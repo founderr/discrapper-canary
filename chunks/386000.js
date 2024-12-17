@@ -20,9 +20,9 @@ function u(e) {
         { Component: I, play: E, events: b } = (0, a.O)(x ? 'unmute' : 'mute');
     l.useEffect(() => () => E(), [E, x]);
     let Z = C === c.B.GroupedButtonsRedMic && x ? (0, o.Lq)(r.I.RED_400) : void 0,
-        N = C !== c.B.GroupedButtonsRedMic;
+        S = C !== c.B.GroupedButtonsRedMic;
     return (0, i.jsx)(v, {
-        isActive: !!N && !x,
+        isActive: !!S && !x,
         iconComponent: I,
         iconColor: Z,
         label: _,

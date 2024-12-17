@@ -26,7 +26,7 @@ var i = n(200651),
 function g(e) {
     var t;
     let { renderHeader: n, referralTrialOfferId: a, handleClose: g } = e,
-        { selectedSkuId: A, step: v, selectedPlan: R, purchaseState: x, purchaseType: P, selectedSku: M } = (0, S.usePaymentContext)(),
+        { selectedSkuId: A, step: v, selectedPlan: R, purchaseState: P, purchaseType: x, selectedSku: M } = (0, S.usePaymentContext)(),
         { isGift: I, selectedGiftStyle: b, giftRecipient: y } = (0, L.wD)(),
         O = I && (0, m.pO)(y) && v === p.h8.CONFIRM && null != b && (null == M ? void 0 : M.productLine) !== T.POd.COLLECTIBLES,
         D = null != n && null != v,
@@ -59,7 +59,7 @@ function g(e) {
                 ]
             });
         else if (D) e = n(null != R ? R : null, g, v);
-        else if (P === N.GZ.ONE_TIME)
+        else if (x === N.GZ.ONE_TIME)
             e = (0, i.jsx)(_.t, {
                 step: v,
                 onClose: g
@@ -68,7 +68,7 @@ function g(e) {
             r()(A in E.y7, 'invalid sku id: '.concat(A)),
                 (e = (0, i.jsx)(C.Z, {
                     currentStep: null != v ? v : void 0,
-                    purchaseState: x,
+                    purchaseState: P,
                     premiumType: E.y7[A],
                     onClose: g,
                     showTrialBadge: F,
@@ -78,5 +78,5 @@ function g(e) {
                     useWinterTheme: V
                 }));
         return e;
-    }, [b, g, x, n, R, A, v, F, U, O, w, D, P, I, y, V]);
+    }, [b, g, P, n, R, A, v, F, U, O, w, D, x, I, y, V]);
 }

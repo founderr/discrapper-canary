@@ -38,9 +38,9 @@ let h = (e) => {
 t.Z = function (e) {
     var t;
     let n;
-    let { hideCloseButton: l = !1, hideCloseOnFullScreen: S, shouldShowPrice: g, plan: A, renderAnimation: v, onClose: R, isGift: x, upgradeToPremiumType: P, headerTheme: M = T.nL.DEFAULT, className: I, showTrialBadge: b = !1, showDiscountBadge: y = !1 } = e,
-        O = P === T.p9.TIER_2;
-    n = P === T.p9.TIER_0 ? d.Z : P === T.p9.TIER_1 ? f.Z : c.Z;
+    let { hideCloseButton: l = !1, hideCloseOnFullScreen: S, shouldShowPrice: g, plan: A, renderAnimation: v, onClose: R, isGift: P, upgradeToPremiumType: x, headerTheme: M = T.nL.DEFAULT, className: I, showTrialBadge: b = !1, showDiscountBadge: y = !1 } = e,
+        O = x === T.p9.TIER_2;
+    n = x === T.p9.TIER_0 ? d.Z : x === T.p9.TIER_1 ? f.Z : c.Z;
     let D = (0, r.e7)([u.Z], () => u.Z.useReducedMotion),
         Z = (0, L.Ng)(),
         w = null == Z ? void 0 : null === (t = Z.discount) || void 0 === t ? void 0 : t.amount;
@@ -72,7 +72,7 @@ t.Z = function (e) {
                             (0, i.jsx)(n, { className: a()(N.headerIcon, { [N.nonTier2]: !O }) }),
                             (b || y) &&
                                 (0, i.jsx)(h, {
-                                    isTier0: P === T.p9.TIER_0,
+                                    isTier0: x === T.p9.TIER_0,
                                     discountAmount: y ? w : void 0
                                 })
                         ]
@@ -99,7 +99,7 @@ t.Z = function (e) {
                               case T.rV.YEAR:
                                   return E.intl.formatToPlainString(E.t.rS8FAw, { price: l });
                           }
-                      })(A, x)
+                      })(A, P)
                   })
                 : null
         ]

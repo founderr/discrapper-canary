@@ -26,8 +26,8 @@ var i,
     E = n(471253),
     b = n(431328),
     Z = n(145834),
-    N = n(590415),
-    S = n(614173),
+    S = n(590415),
+    N = n(614173),
     T = n(618896),
     j = n(231338),
     A = n(388032),
@@ -66,10 +66,10 @@ let P = a.memo(function (e) {
                 isMobile: I.Z.isMobileOnline(i.user.id),
                 status: I.Z.getStatus(i.user.id, g)
             })),
-            S = (0, u.e7)([v.ZP], () => v.ZP.getMember(g, i.user.id)),
+            N = (0, u.e7)([v.ZP], () => v.ZP.getMember(g, i.user.id)),
             T = a.useMemo(() => ({ [g]: [i.user.id] }), [g, i.user.id]);
         (0, f.$)(T);
-        let j = i.rtsState === N.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+        let j = i.rtsState === S.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
         function P() {
             (0, E.DT)(t, i.user.id, !1);
         }
@@ -126,7 +126,7 @@ let P = a.memo(function (e) {
                                     children: [
                                         (0, r.jsx)(h.NameWithRole, {
                                             name: i.userNick,
-                                            color: null !== (t = null == S ? void 0 : S.colorString) && void 0 !== t ? t : void 0,
+                                            color: null !== (t = null == N ? void 0 : N.colorString) && void 0 !== t ? t : void 0,
                                             className: y.participantName
                                         }),
                                         (0, r.jsx)(h.Text, {
@@ -176,7 +176,7 @@ let P = a.memo(function (e) {
     }),
     R = a.memo(function (e) {
         let { channel: t } = e,
-            [n, i] = (0, S.h)(t.id);
+            [n, i] = (0, N.h)(t.id);
         return (0, r.jsx)(h.FormSwitch, {
             className: y.toggle,
             onChange: i,

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return S;
     }
 }),
     n(47120),
@@ -37,12 +37,12 @@ function Z(e) {
         children: l
     });
 }
-function N(e) {
+function S(e) {
     let { channel: t, showLeftDivider: n = !1, ...x } = e,
-        N = (0, m.Z)(),
-        S = (0, r.e7)([p.Z], () => {
+        S = (0, m.Z)(),
+        N = (0, r.e7)([p.Z], () => {
             var e, t;
-            return null === (e = p.Z.getSessionById(null !== (t = null == N ? void 0 : N.sessionId) && void 0 !== t ? t : '')) || void 0 === e ? void 0 : e.clientInfo.os;
+            return null === (e = p.Z.getSessionById(null !== (t = null == S ? void 0 : S.sessionId) && void 0 !== t ? t : '')) || void 0 === e ? void 0 : e.clientInfo.os;
         }),
         T = (0, r.e7)([h.Z], () => h.Z.hasLayers()),
         [j, A] = (0, r.Wu)([o.Z], () => [o.Z.getMode(t.id), o.Z.getLayout(t.id)]),
@@ -50,7 +50,7 @@ function N(e) {
         P = (0, f.Z)(),
         M = P.filter((e) => e.twoWayLink),
         [R, L] = l.useState(!1);
-    if (null == N && 0 === P.length) return null;
+    if (null == S && 0 === P.length) return null;
     let k = _.WtW.VOICE !== j && [_.AEg.NO_CHAT, _.AEg.FULL_SCREEN].includes(A) ? 'top' : 'bottom',
         O = [];
     return (
@@ -95,8 +95,8 @@ function N(e) {
                                     ...e,
                                     ...x,
                                     onClick: () => L(!0),
-                                    label: null != (t = S) ? (t === v.YE.XBOX ? E.intl.string(E.t.T0uYKy) : E.intl.string(E.t.FWAzS0)) : E.intl.string(E.t['mbi/fH']),
-                                    iconComponent: (0, C.Z)(S)
+                                    label: null != (t = N) ? (t === v.YE.XBOX ? E.intl.string(E.t.T0uYKy) : E.intl.string(E.t.FWAzS0)) : E.intl.string(E.t['mbi/fH']),
+                                    iconComponent: (0, C.Z)(N)
                                 });
                             }
                         })

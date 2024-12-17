@@ -14,13 +14,13 @@ e.exports = {
     rankChangeIndicator: 'rankChangeIndicator_cf8a7d',
     userRank: 'userRank_cf8a7d',
     userPlayer: 'userPlayer_cf8a7d',
+    userWinnerImage: 'userWinnerImage_cf8a7d',
     joinLeaderboardCTAContainer: 'joinLeaderboardCTAContainer_cf8a7d',
-    joinLeaderboardCTA: 'joinLeaderboardCTA_cf8a7d',
-    leagueIcon: 'leagueIcon_cf8a7d',
+    joinLeaderboardCTAWinnerImage: 'joinLeaderboardCTAWinnerImage_cf8a7d',
     rankChangeBadge: 'rankChangeBadge_cf8a7d',
     emptyTitleContainer: 'emptyTitleContainer_cf8a7d',
     emptyTitle: 'emptyTitle_cf8a7d',
-    emptyCrownIcon: 'emptyCrownIcon_cf8a7d',
+    emptyWinnerImage: 'emptyWinnerImage_cf8a7d',
     badgesContainer: 'badgesContainer_cf8a7d',
     tooltip: 'tooltip_cf8a7d'
 };

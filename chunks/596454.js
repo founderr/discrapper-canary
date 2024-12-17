@@ -28,44 +28,44 @@ function b(e) {
         [L, x] = o.useState(!1),
         [w, P] = o.useState(void 0),
         M = o.useRef(),
-        { triggerAnimation: k } = o.useContext(f.Rm),
-        U = p.Yk.useSetting(),
-        B = T(),
-        G = null == R ? U : R,
-        Z = I.kV[b],
-        F = o.useRef(null),
-        V = o.useMemo(() => {
+        { triggerAnimation: k, untriggerAnimation: U } = o.useContext(f.Rm),
+        B = p.Yk.useSetting(),
+        G = T(),
+        Z = null == R ? B : R,
+        F = I.kV[b],
+        V = o.useRef(null),
+        j = o.useMemo(() => {
             if (null != i) return i;
             if (null != c) {
-                let e = !0 === S && G;
+                let e = !0 === S && Z;
                 return g.ZP.getEmojiURL({
                     id: c,
-                    animated: B && !0 === v && (e || L || !0 === y),
-                    size: Z
+                    animated: G && !0 === v && (e || L || !0 === y),
+                    size: F
                 });
             }
             if (null != d) return E.ZP.getURL(d);
             throw Error('Unknown Src for Emoji');
-        }, [v, G, c, d, Z, B, L, y, S, i]),
-        j = o.useCallback(() => {
-            null != V &&
-                (M.current = (0, _.po)(V, (e) => {
+        }, [v, Z, c, d, F, G, L, y, S, i]),
+        H = o.useCallback(() => {
+            null != j &&
+                (M.current = (0, _.po)(j, (e) => {
                     !e && P(Date.now());
                 }));
-        }, [V]),
-        H = o.useCallback(
+        }, [j]),
+        Y = o.useCallback(
             (e) => {
                 v && x(!0), null == c && k(d), null == A || A(e);
             },
             [v, d, A, k, c]
         ),
-        Y = o.useCallback(
+        W = o.useCallback(
             (e) => {
-                v && x(!1), null == N || N(e);
+                v && x(!1), null == c && U(d), null == N || N(e);
             },
-            [v, N]
+            [v, c, d, N, U]
         ),
-        W = o.useMemo(() => {
+        K = o.useMemo(() => {
             let e = null != c && '' !== c ? { 'data-id': c } : { 'data-name': d };
             return {
                 ...D,
@@ -73,13 +73,13 @@ function b(e) {
                     jumboable: 'jumbo' === b,
                     reactionLarge: 'reactionLarge' === b
                 }),
-                onError: j,
-                onMouseEnter: H,
-                onMouseLeave: Y,
+                onError: H,
+                onMouseEnter: Y,
+                onMouseLeave: W,
                 'data-type': 'emoji',
                 ...e
             };
-        }, [l, c, d, H, Y, j, D, b]);
+        }, [l, c, d, Y, W, H, D, b]);
     o.useEffect(
         () => () => {
             var e;
@@ -87,13 +87,13 @@ function b(e) {
         },
         []
     );
-    let K = o.useCallback(
+    let z = o.useCallback(
         (e) => {
-            (F.current = e), null == O || O(e);
+            (V.current = e), null == O || O(e);
         },
         [O]
     );
-    return null == V || '' === V
+    return null == j || '' === j
         ? (0, s.jsx)('span', {
               className: u()('emoji', 'emoji-text'),
               children: d
@@ -104,16 +104,16 @@ function b(e) {
                       channelId: h,
                       messageId: m,
                       emojiName: d,
-                      disable: !1 === G || !1 === U,
-                      emojiRef: F.current
+                      disable: !1 === Z || !1 === B,
+                      emojiRef: V.current
                   }),
                   C
                       ? (0, s.jsx)(
                             'img',
                             {
-                                ...W,
-                                ref: K,
-                                src: V,
+                                ...K,
+                                ref: z,
+                                src: j,
                                 alt: null !== (n = null != a ? a : d) && void 0 !== n ? n : void 0,
                                 draggable: !1
                             },
@@ -122,12 +122,12 @@ function b(e) {
                       : (0, s.jsx)(
                             'div',
                             {
-                                ...W,
-                                ref: K,
+                                ...K,
+                                ref: z,
                                 role: 'img',
                                 'aria-label': null !== (r = null != a ? a : d) && void 0 !== r ? r : void 0,
                                 style: {
-                                    backgroundImage: 'url('.concat(V, ')'),
+                                    backgroundImage: 'url('.concat(j, ')'),
                                     backgroundSize: 'contain',
                                     backgroundRepeat: 'no-repeat',
                                     backgroundPosition: 'center center'

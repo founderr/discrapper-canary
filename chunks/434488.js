@@ -1,6 +1,6 @@
 n.d(t, {
     h: function () {
-        return N;
+        return S;
     }
 });
 var i = n(200651),
@@ -25,10 +25,10 @@ var i = n(200651),
     E = n(388032),
     b = n(414360),
     Z = n(334732);
-function N(e) {
+function S(e) {
     let { channel: t, guild: n, width: l, inPopout: r, handleClose: a, userParticipantCount: s } = e;
     return l < 250
-        ? (0, i.jsx)(S, {
+        ? (0, i.jsx)(N, {
               channel: t,
               guild: n,
               width: l,
@@ -52,7 +52,7 @@ function N(e) {
                 inPopout: r
             });
 }
-function S(e) {
+function N(e) {
     let { channel: t, inPopout: n, handleClose: l } = e,
         { analyticsLocations: r } = (0, f.ZP)(m.Z.VC_TILE_ACTIVITY_SHELF_BUTTON),
         s = (0, d.O)(),
@@ -207,9 +207,9 @@ function j(e) {
         });
     }, []);
     let p = (0, u.Z)({ guildId: n.id }).slice(0, 3),
-        { analyticsLocations: N } = (0, f.ZP)(m.Z.VC_TILE_ACTIVITY_SUGGESTION);
+        { analyticsLocations: S } = (0, f.ZP)(m.Z.VC_TILE_ACTIVITY_SUGGESTION);
     return (0, i.jsx)(f.Gt, {
-        value: N,
+        value: S,
         children: (0, i.jsxs)(_.Z, {
             className: b.root,
             children: [

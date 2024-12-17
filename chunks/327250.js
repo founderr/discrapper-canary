@@ -26,8 +26,8 @@ var l = n(120356),
     E = n(572004),
     b = n(5192),
     Z = n(51144),
-    N = n(981631),
-    S = n(308083),
+    S = n(981631),
+    N = n(308083),
     T = n(388032),
     j = n(125712);
 function A(e) {
@@ -66,7 +66,7 @@ function A(e) {
                                         clan: null == t ? void 0 : t.clan,
                                         userId: null == t ? void 0 : t.id,
                                         contextGuildId: n,
-                                        badgeSize: S.NC.SIZE_16,
+                                        badgeSize: N.NC.SIZE_16,
                                         textVariant: 'heading-md/semibold',
                                         className: j.memberClanTag,
                                         containerClassName: j.memberClanTagContainer
@@ -126,17 +126,17 @@ function P(e) {
         } = (0, a.cj)(
             [x.Z, I.default, C.Z],
             () => ({
-                canKickUser: null != d && x.Z.canManageUser(N.Plq.KICK_MEMBERS, t, d),
-                canBanUser: null != d && x.Z.canManageUser(N.Plq.BAN_MEMBERS, t, d),
+                canKickUser: null != d && x.Z.canManageUser(S.Plq.KICK_MEMBERS, t, d),
+                canBanUser: null != d && x.Z.canManageUser(S.Plq.BAN_MEMBERS, t, d),
                 canModerateMembers: null != d && (0, p.F)(d.id, t.id, [I.default, C.Z, x.Z])
             }),
             [t, d]
         ),
         b = (0, u.b)(l),
-        { analyticsLocations: Z, newestAnalyticsLocation: S } = (0, c.ZP)(),
+        { analyticsLocations: Z, newestAnalyticsLocation: N } = (0, c.ZP)(),
         A = (0, m.sE)(r, {
             targetUserId: t.id,
-            location: S,
+            location: N,
             locations: Z
         }),
         P = (0, a.e7)([f.default], () => f.default.getId() === (null == t ? void 0 : t.id));
@@ -165,7 +165,7 @@ function P(e) {
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
-                                location: S,
+                                location: N,
                                 guildId: r,
                                 user: t
                             });
@@ -187,7 +187,7 @@ function P(e) {
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
-                                location: S,
+                                location: N,
                                 guildId: r,
                                 user: t
                             });
