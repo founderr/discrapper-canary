@@ -405,6 +405,7 @@ class eI extends g.Z {
                 ...(null != this._voiceQuality ? this._voiceQuality.getTransportStats() : null),
                 ...(null != this._voiceQuality ? this._voiceQuality.getE2EEStats() : null),
                 ...(null != this._voiceDuration ? this._voiceDuration.getDurationStats() : null),
+                ...this.getAudioDeviceStates(),
                 media_session_id: this.getMediaSessionId(),
                 channel_bitrate: null != a ? a.bitrate : null,
                 cloudflare_best_region: n,
@@ -426,10 +427,6 @@ class eI extends g.Z {
                 voice_output_volume: r.outputVolume,
                 encryption_mode: this._encryptionMode,
                 channel_count: this.channelIds.size,
-                input_device: this.getInputDeviceName(),
-                input_device_count: Object.keys(G.Z.getInputDevices()).length,
-                output_device: this.getOutputDeviceName(),
-                output_device_count: Object.keys(G.Z.getOutputDevices()).length,
                 device_performance_class: (0, C.Z)(),
                 num_fast_udp_reconnects: null != this._connection ? (null === (c = this._connection) || void 0 === c ? void 0 : c.getNumFastUdpReconnects()) : null,
                 parent_media_session_id: this.parentMediaSessionId,
@@ -1049,6 +1046,11 @@ class eI extends g.Z {
         let n = G.Z.getOutputDeviceId();
         return null === (e = G.Z.getOutputDevices()[n]) || void 0 === e ? void 0 : e.name;
     }
+    getVideoDeviceName() {
+        var e;
+        let n = G.Z.getVideoDeviceId();
+        return null === (e = G.Z.getVideoDevices()[n]) || void 0 === e ? void 0 : e.name;
+    }
     getGoLiveSource() {
         return G.Z.getGoLiveSource();
     }
@@ -1166,10 +1168,22 @@ class eI extends g.Z {
                     this._voiceQualityPeriodicStatsSequenceId++;
                 }
             }),
+            eu(this, 'getAudioDeviceStates', () => ({
+                input_device: this.getInputDeviceName(),
+                input_device_count: Object.keys(G.Z.getInputDevices()).length,
+                output_device: this.getOutputDeviceName(),
+                output_device_count: Object.keys(G.Z.getOutputDevices()).length
+            })),
+            eu(this, 'getVideoDeviceStates', () => ({
+                camera_device: this.getVideoDeviceName(),
+                camera_device_count: Object.keys(G.Z.getVideoDevices()).length
+            })),
             eu(this, '_trackVoiceConnectionConnecting', () => {
                 let e = B.Z.getChannel(this.channelId),
                     n = null != e ? e.type : null;
                 H.default.track(eo.rMx.VOICE_CONNECTION_CONNECTING, {
+                    ...this.getAudioDeviceStates(),
+                    ...this.getVideoDeviceStates(),
                     guild_id: this.guildId,
                     channel_id: this.channelId,
                     rtc_connection_id: this.getRTCConnectionId(),
@@ -1177,7 +1191,8 @@ class eI extends g.Z {
                     connect_count: this._connectCount,
                     context: this.context,
                     channel_type: n,
-                    participant_type: this.getVoiceParticipantType()
+                    participant_type: this.getVoiceParticipantType(),
+                    is_muted: G.Z.isMute()
                 });
             }),
             eu(this, 'incomingVideoEnabledChanged', (e) => {
