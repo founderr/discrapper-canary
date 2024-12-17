@@ -76,7 +76,8 @@ let g = (() => {
         bugReporterEnabled: !0,
         idleStatusIndicatorEnabled: !1,
         appDirectoryIncludesInactiveCollections: !1,
-        isStreamInfoOverlayEnabled: !1
+        isStreamInfoOverlayEnabled: !1,
+        preventPopoutClose: !1
     },
     I = { ...v };
 function T(e) {
@@ -151,6 +152,9 @@ class A extends (i = l.ZP.Store) {
     }
     get isStreamInfoOverlayEnabled() {
         return I.isStreamInfoOverlayEnabled;
+    }
+    get preventPopoutClose() {
+        return I.preventPopoutClose;
     }
     getDebugOptionsHeaderValue() {
         return (

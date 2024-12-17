@@ -1717,6 +1717,12 @@ let eV = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 parent: eZ.s6.DEVELOPER_OPTIONS,
                 predicate: () => L.Z.isDeveloper
             },
+            [eZ.s6.DEVELOPER_OPTIONS_PREVENT_POPOUT_CLOSE]: {
+                section: eF.oAB.DEVELOPER_OPTIONS,
+                searchableTitles: ['Prevent Popouts From Closing Automatically'],
+                parent: eZ.s6.DEVELOPER_OPTIONS,
+                predicate: () => L.Z.isDeveloper
+            },
             [eZ.s6.HOTSPOT_OPTIONS]: {
                 section: eF.oAB.HOTSPOT_OPTIONS,
                 searchableTitles: ['Hotspot Options'],

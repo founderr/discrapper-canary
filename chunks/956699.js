@@ -1008,9 +1008,10 @@ let $ = d.ZP.connectStores([R.default], () => ({
     isSourceMapsEnabled: R.default.sourceMapsEnabled,
     isAnalyticsDebuggerEnabled: R.default.isAnalyticsDebuggerEnabled,
     isIdleStatusIndicatorEnabled: R.default.isIdleStatusIndicatorEnabled,
-    appDirectoryIncludesInactiveCollections: R.default.appDirectoryIncludesInactiveCollections
+    appDirectoryIncludesInactiveCollections: R.default.appDirectoryIncludesInactiveCollections,
+    preventPopoutClose: R.default.preventPopoutClose
 }))((e) => {
-    let { isTracingRequests: t, isForcedCanary: n, isLoggingGatewayEvents: s, isLoggingOverlayEvents: r, isLoggingAnalyticsEvents: l, isAxeEnabled: a, cssDebuggingEnabled: o, layoutDebuggingEnabled: c, isSourceMapsEnabled: d, isAnalyticsDebuggerEnabled: u, isIdleStatusIndicatorEnabled: h, appDirectoryIncludesInactiveCollections: g } = e;
+    let { isTracingRequests: t, isForcedCanary: n, isLoggingGatewayEvents: s, isLoggingOverlayEvents: r, isLoggingAnalyticsEvents: l, isAxeEnabled: a, cssDebuggingEnabled: o, layoutDebuggingEnabled: c, isSourceMapsEnabled: d, isAnalyticsDebuggerEnabled: u, isIdleStatusIndicatorEnabled: h, appDirectoryIncludesInactiveCollections: g, preventPopoutClose: x } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(O.F, {
@@ -1098,6 +1099,15 @@ let $ = d.ZP.connectStores([R.default], () => ({
                                 note: 'Runs Axe auditing for accessibility while using the app. Violations get logged to the console. Only available in development',
                                 onChange: (e) => (0, p.y)({ axeEnabled: e }),
                                 children: 'Enable Accessibility Auditing'
+                            })
+                        }),
+                        (0, i.jsx)(O.F, {
+                            setting: Z.s6.DEVELOPER_OPTIONS_PREVENT_POPOUT_CLOSE,
+                            children: (0, i.jsx)(m.FormSwitch, {
+                                value: x,
+                                note: 'This is to enable viewing console logs for popout crashes. This may leave your app/popout in a weird state.',
+                                onChange: (e) => (0, p.y)({ preventPopoutClose: e }),
+                                children: 'Prevent Popouts From Closing Automatically'
                             })
                         }),
                         (0, i.jsx)(O.F, {
