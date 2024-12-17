@@ -1,10 +1,10 @@
 n.d(e, {
     P: function () {
-        return E;
+        return l;
     }
 });
 var i = n(442837),
-    l = n(236289);
-function E() {
-    return (0, i.e7)([l.Z], () => l.Z.getAccountStanding());
+    E = n(236289);
+function l() {
+    return (0, i.e7)([E.Z], () => E.Z.getAccountStanding());
 }

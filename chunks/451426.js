@@ -19,7 +19,7 @@ var i = t(200651),
     h = t(734517),
     N = t(816742);
 function p(e) {
-    let { className: n, isDsaEligible: t, onClose: p, onNext: _, onBack: g } = e,
+    let { className: n, isDsaEligible: t, onClose: p, onNext: g, onBack: _ } = e,
         j = (0, a.e7)([d.Z], () => d.Z.getAppealClassificationId()),
         { classification: b } = (0, x.YG)(null != j ? j : m.lds),
         I = (0, u.c7)(null == b ? void 0 : b.description),
@@ -37,12 +37,12 @@ function p(e) {
         L = l.useCallback(async () => {
             if (null !== j)
                 try {
-                    k(''), await c.uR(j, T, S), null == _ || _();
+                    k(''), await c.uR(j, T, S), null == g || g();
                 } catch (n) {
                     var e;
                     k((0, u.Zs)(null === (e = n.body) || void 0 === e ? void 0 : e.code));
                 }
-        }, [j, T, S, _]);
+        }, [j, T, S, g]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(s.ModalHeader, {
@@ -143,7 +143,7 @@ function p(e) {
                             (0, i.jsx)(s.Button, {
                                 look: s.Button.Looks.LINK,
                                 color: s.Button.Colors.PRIMARY,
-                                onClick: g,
+                                onClick: _,
                                 disabled: E,
                                 children: C.intl.string(C.t['13/7kZ'])
                             }),

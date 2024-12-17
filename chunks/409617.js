@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return _;
+        return g;
     }
 }),
     t(47120);
@@ -19,8 +19,8 @@ var i = t(200651),
     h = t(388032),
     N = t(681242),
     p = t(816742);
-function _(e) {
-    let { className: n, isDsaEligible: t = !1, onClose: a, onNext: _, onBack: g } = e,
+function g(e) {
+    let { className: n, isDsaEligible: t = !1, onClose: a, onNext: g, onBack: _ } = e,
         j = (0, m.U0)(),
         b = (0, o.e7)([u.Z], () => u.Z.getFreeTextAppealReason()),
         [I, E] = l.useState(''),
@@ -119,7 +119,7 @@ function _(e) {
                                 type: 'SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE',
                                 userInput: I
                             }),
-                                null == _ || _();
+                                null == g || g();
                         },
                         color: r.Button.Colors.BRAND,
                         children: h.intl.string(h.t.PDTjLC)
@@ -130,7 +130,7 @@ function _(e) {
                                 type: 'SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE',
                                 userInput: I
                             }),
-                                null == g || g();
+                                null == _ || _();
                         },
                         color: r.Button.Colors.PRIMARY,
                         look: r.Button.Looks.LINK,

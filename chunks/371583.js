@@ -20,7 +20,7 @@ function o(e) {
     }
 }
 function l(e) {
-    return e.leaderboard_id === s._ ? o(e) : null != e.settings.splash_asset_id ? (0, a.getAssetImage)(e.settings.application_id, e.settings.splash_asset_id) : null;
+    return e.leaderboard_id === s.z ? o(e) : null != e.settings.splash_asset_id ? (0, a.getAssetImage)(e.settings.application_id, e.settings.splash_asset_id) : null;
 }
 function u(e) {
     var n, a;
@@ -33,5 +33,5 @@ function u(e) {
     }
 }
 function c(e) {
-    return e.leaderboard_id === s._ ? u(e) : (0, a.getAssetImage)(e.settings.application_id, e.settings.winner_asset_id);
+    return e.leaderboard_id === s.z ? u(e) : (0, a.getAssetImage)(e.settings.application_id, e.settings.winner_asset_id);
 }

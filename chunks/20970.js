@@ -3,7 +3,7 @@ r.d(n, {
         return p;
     }
 });
-var i = r(302454);
+var i = r(477660);
 let { newline: a, paragraph: s, url: o, link: l, strong: u, u: c, br: d, em: f, image: _, text: h } = i.defaultRules,
     p = {
         newline: a,

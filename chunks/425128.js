@@ -53,7 +53,7 @@ let u = 900000,
                 null != e.update_enqueued_timestamp &&
                     a.Z.dispatch({
                         type: 'SET_USER_LEADERBOARD_LAST_UPDATE_REQUESTED',
-                        leaderboardId: o._,
+                        leaderboardId: o.z,
                         lastUpdateRequested: e.update_enqueued_timestamp
                     }),
                 e

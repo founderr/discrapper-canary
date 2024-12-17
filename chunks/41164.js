@@ -15,7 +15,7 @@ t.default = (e) => {
     let { transitionState: t, onClose: i, classificationId: p, source: x } = e,
         f = (0, s.Z)(),
         g = (0, o._p)({ location: 'classification-detail-modal' }),
-        _ = () => {
+        v = () => {
             i(), g ? l.Z.open(c.oAB.ACCOUNT, d.s6.PRIVACY_AND_SAFETY_STANDING) : l.Z.open(c.oAB.PRIVACY_AND_SAFETY, d.s6.PRIVACY_ACCOUNT_STANDING);
         };
     return (0, n.jsxs)(a.ModalRoot, {
@@ -43,8 +43,8 @@ t.default = (e) => {
                     : (0, n.jsx)(r.Z, {
                           classificationId: p,
                           source: x,
-                          onError: _,
-                          onClose: _
+                          onError: v,
+                          onClose: v
                       })
             }),
             (0, n.jsx)(a.ModalFooter, {
@@ -52,7 +52,7 @@ t.default = (e) => {
                     className: m.__invalid_button,
                     type: 'button',
                     color: a.Button.Colors.BRAND,
-                    onClick: _,
+                    onClick: v,
                     children: u.intl.string(u.t.elrEjI)
                 })
             })

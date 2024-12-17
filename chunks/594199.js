@@ -3,7 +3,7 @@ r.d(n, {
         return o;
     }
 });
-var i = r(302454),
+var i = r(477660),
     a = r.n(i);
 let s = /^[\s\S]+?(?=[^0-9A-Za-z\s\u00c0-\uffff]|\n\n| {2,}\n|\w+:\S|[0-9]+\.|$)/,
     o = (e) => new RegExp('^[\\s\\S]+?(?='.concat(e, '|[^0-9A-Za-z\\s\\u00ff-\\uffff]|\\n\\n| {2,}\\n|\\w+:\\S|[0-9]+\\.|$)')),

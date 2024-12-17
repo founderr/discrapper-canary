@@ -20,26 +20,26 @@ var i = t(200651),
     h = t(676566);
 function N(e) {
     let { classificationId: n, transitionState: t, initialSlide: N = m.Cs.SPEED_BUMP, onClose: p } = e,
-        [_, g] = l.useState(N),
+        [g, _] = l.useState(N),
         { classification: j, isDsaEligible: b } = (0, o.YG)(null != n ? n : C.lds),
         I = (null == j ? void 0 : j.is_spam) || !1,
         E = (null == j ? void 0 : j.is_coppa) || !1;
     l.useEffect(() => {
-        g(N);
-    }, [g, N]);
+        _(N);
+    }, [_, N]);
     let T = l.useCallback(() => {
             d.Z.close(), p();
         }, [p]),
         S = l.useCallback(() => {
             var e;
-            let n = null === (e = m.JQ[_]) || void 0 === e ? void 0 : e.next;
-            n ? g(n) : T();
-        }, [_, T]),
+            let n = null === (e = m.JQ[g]) || void 0 === e ? void 0 : e.next;
+            n ? _(n) : T();
+        }, [g, T]),
         v = l.useCallback(() => {
             var e;
-            let n = null === (e = m.JQ[_]) || void 0 === e ? void 0 : e.prev;
-            n ? g(n) : T();
-        }, [_, T]);
+            let n = null === (e = m.JQ[g]) || void 0 === e ? void 0 : e.prev;
+            n ? _(n) : T();
+        }, [g, T]);
     return (0, i.jsx)(s.ModalRoot, {
         transitionState: t,
         disableTrack: !0,
@@ -47,7 +47,7 @@ function N(e) {
         children: (0, i.jsx)('div', {
             className: h.container,
             children: (0, i.jsxs)(s.Slides, {
-                activeSlide: _,
+                activeSlide: g,
                 width: 500,
                 children: [
                     (0, i.jsx)(s.Slide, {

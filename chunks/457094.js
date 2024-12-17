@@ -161,8 +161,8 @@ let e4 = o.ZP.connectStores([F.Z, ek.Z, eD.default], () => ({
         }
     ),
     e3 = (0, b.e)(A.Z, null, { passProps: !1 }),
-    e7 = (0, b.e)(T.default, null, { passProps: !1 }),
-    e6 = [eJ.Z5c.GUILD_BOOSTING_MARKETING(ef.Hw.guildId()), ...Array.from(e$.Vg).map((e) => eJ.Z5c.CHANNEL(ef.Hw.guildId(), e))];
+    e6 = (0, b.e)(T.default, null, { passProps: !1 }),
+    e7 = [eJ.Z5c.GUILD_BOOSTING_MARKETING(ef.Hw.guildId()), ...Array.from(e$.Vg).map((e) => eJ.Z5c.CHANNEL(ef.Hw.guildId(), e))];
 function e5(e) {
     let { guildId: t, channelId: n = null, messageId: i = null, threadId: r = null } = e.params;
     return {
@@ -361,7 +361,7 @@ let e9 = [
     },
     {
         path: [eJ.Z5c.APPLICATION_DIRECTORY],
-        render: e7,
+        render: e6,
         isSessionRequired: !0
     }
 ];
@@ -510,7 +510,7 @@ class tt extends r.PureComponent {
                     var f;
                     if (
                         ((f = e),
-                        !e6.some((e) => {
+                        !e7.some((e) => {
                             var t;
                             return (null === (t = (0, a.LX)(f, e)) || void 0 === t ? void 0 : t.isExact) === !0;
                         }))

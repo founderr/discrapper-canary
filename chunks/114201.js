@@ -118,7 +118,7 @@ function A(e) {
                       children: (0, i.jsx)(i.Fragment, {
                           children: (0, i.jsxs)(o.MenuGroup, {
                               children: [
-                                  C.leaderboard_id === v._ &&
+                                  C.leaderboard_id === v.z &&
                                       null != A &&
                                       (0, i.jsx)(o.MenuItem, {
                                           id: 'refresh-my-data',

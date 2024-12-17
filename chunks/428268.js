@@ -22,7 +22,7 @@ function E(e) {
             guildId: n,
             leaderboardId: E
         }),
-        y = E === h._;
+        y = E === h.z;
     if ((!y || (null != I && null != T)) && !v) return null;
     let S = l.Z.get(p.ABu.RIOT_GAMES),
         A = y && null == I && null == T,

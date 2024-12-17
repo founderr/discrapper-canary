@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var l = n(442837),
-    a = n(481060),
+var a = n(442837),
+    l = n(481060),
     o = n(565138),
     s = n(430824),
     r = n(63063),
@@ -16,18 +16,18 @@ var l = n(442837),
     m = n(767688);
 function x(e) {
     let { guildId: t, title: n, transitionState: x, children: h, buttons: g, onClose: j } = e,
-        _ = (0, l.e7)([s.Z], () => s.Z.getGuild(t));
-    if (null == _) return null;
-    let p = (0, i.jsx)(a.Button, {
+        p = (0, a.e7)([s.Z], () => s.Z.getGuild(t));
+    if (null == p) return null;
+    let _ = (0, i.jsx)(l.Button, {
         onClick: j,
         children: c.intl.string(c.t.i4jeWV)
     });
-    return (0, i.jsxs)(a.ModalRoot, {
+    return (0, i.jsxs)(l.ModalRoot, {
         transitionState: x,
-        size: a.ModalSize.SMALL,
+        size: l.ModalSize.SMALL,
         className: u.container,
         children: [
-            (0, i.jsxs)(a.ModalHeader, {
+            (0, i.jsxs)(l.ModalHeader, {
                 separator: !1,
                 className: u.modalHeader,
                 children: [
@@ -37,30 +37,30 @@ function x(e) {
                         src: m,
                         className: u.heroImage
                     }),
-                    (0, i.jsx)(a.Spacer, { size: 16 }),
-                    (0, i.jsx)(a.Heading, {
+                    (0, i.jsx)(l.Spacer, { size: 16 }),
+                    (0, i.jsx)(l.Heading, {
                         variant: 'heading-xl/bold',
                         color: 'header-primary',
                         className: u.title,
                         children: n
                     }),
-                    (0, i.jsx)(a.Spacer, { size: 4 }),
+                    (0, i.jsx)(l.Spacer, { size: 4 }),
                     (0, i.jsxs)('div', {
                         className: u.guildContainer,
                         children: [
                             (0, i.jsx)(o.Z, {
                                 size: o.Z.Sizes.SMOL,
-                                guild: _,
+                                guild: p,
                                 className: u.guildIcon
                             }),
-                            (0, i.jsx)(a.Text, {
+                            (0, i.jsx)(l.Text, {
                                 variant: 'text-md/semibold',
                                 color: 'text-secondary',
-                                children: _.name
+                                children: p.name
                             })
                         ]
                     }),
-                    (0, i.jsx)(a.ModalCloseButton, {
+                    (0, i.jsx)(l.ModalCloseButton, {
                         onClick: j,
                         innerClassName: u.closeButton,
                         className: u.close
@@ -68,14 +68,14 @@ function x(e) {
                 ]
             }),
             h,
-            (0, i.jsxs)(a.ModalFooter, {
+            (0, i.jsxs)(l.ModalFooter, {
                 className: u.footer,
                 children: [
                     (0, i.jsx)('div', {
                         className: u.footerButtons,
-                        children: null != g ? g : p
+                        children: null != g ? g : _
                     }),
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-secondary',
                         children: c.intl.format(c.t.zbMH0d, { link: r.Z.getArticleURL(d.BhN.GUILD_LEADERBOARD) })

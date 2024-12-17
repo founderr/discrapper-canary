@@ -110,7 +110,7 @@ let x = (0, g.Un)({
         name: 'Overlay'
     }),
     K = (0, g.Un)({
-        createPromise: () => Promise.all([r.e('34842'), r.e('18824'), r.e('88205')]).then(r.bind(r, 430075)),
+        createPromise: () => Promise.all([r.e('3940'), r.e('18824'), r.e('88205')]).then(r.bind(r, 430075)),
         webpackId: 430075,
         name: 'SuspendedUserSafetyHubPage'
     }),

@@ -1,4 +1,4 @@
-var i = r(302454),
+var i = r(477660),
     a = r.n(i),
     s = r(914216);
 let o = RegExp('^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/shop#itemSkuId=(\\d+)?'),

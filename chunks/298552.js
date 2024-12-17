@@ -1,4 +1,4 @@
-var i = r(302454),
+var i = r(477660),
     a = r.n(i),
     s = r(818083);
 let o = /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com))\/(?:attachments|ephemeral-attachments)\/\d+\/\d+\/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?/,

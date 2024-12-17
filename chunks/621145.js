@@ -20,8 +20,8 @@ var n = i(200651),
     x = i(219797),
     f = i(524444),
     g = i(884182),
-    _ = i(25015),
-    v = i(963550),
+    v = i(25015),
+    _ = i(963550),
     A = i(845080),
     E = i(594174),
     T = i(956664),
@@ -166,7 +166,7 @@ function U(e) {
         h = (0, o.e7)([j.Z], () => j.Z.getUsername()),
         x = i[0],
         f = w(x, r, l, h),
-        g = (0, _.Z)(f, {
+        g = (0, v.Z)(f, {
             hideSimpleEmbedContent: !1,
             allowList: !1,
             allowHeading: !1,
@@ -244,7 +244,7 @@ function U(e) {
                             hideTimestamp: !1
                         }),
                         childrenAccessories: (0, n.jsx)(P, { message: f }),
-                        childrenMessageContent: (0, v.Z)({ message: f }, g.content),
+                        childrenMessageContent: (0, _.Z)({ message: f }, g.content),
                         hasThread: !1,
                         hasReply: !1
                     })
