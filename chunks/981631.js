@@ -5076,6 +5076,7 @@ let on = Object.freeze({
     (ah.MEDIA_INPUT_VOLUME_CHANGED = 'media_input_volume_changed'),
     (ah.MEDIA_OUTPUT_VOLUME_CHANGED = 'media_output_volume_changed'),
     (ah.VOICE_ACTIVATION_MODE_CHANGED = 'voice_activation_mode_changed'),
+    (ah.VOICE_ACTIVITY_THRESHOLD_CHANGED = 'voice_activity_threshold_changed'),
     (ah.GUILD_GAME_DISCOVERY_ENTRYPOINT_VIEWED = 'guild_game_discovery_entrypoint_viewed'),
     (ah.GUILD_GAME_DISCOVERY_ENTRYPOINT_DEEP_LINK_TO_DESKTOP = 'guild_game_discovery_entrypoint_deep_link_to_desktop'),
     (ah.GLOBAL_DISCOVERY_WITH_GAME_VIEWED = 'global_discovery_with_game_viewed'),
