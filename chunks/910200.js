@@ -1,42 +1,54 @@
 t.d(n, {
     Z: function () {
-        return m;
+        return x;
     }
 });
 var l = t(200651),
-    i = t(950104),
-    r = t(780384),
-    a = t(481060),
-    s = t(410030),
-    o = t(114487),
-    c = t(686546),
-    u = t(981631),
-    d = t(388032),
-    h = t(950039);
-function m(e) {
+    i = t(692547),
+    r = t(950104),
+    a = t(780384),
+    s = t(481060),
+    o = t(410030),
+    c = t(220082),
+    u = t(114487),
+    d = t(686546),
+    h = t(768581),
+    m = t(981631),
+    f = t(388032),
+    g = t(950039);
+function x(e) {
     let { profile: n } = e,
-        t = (function (e, n) {
-            var t;
-            let l = null !== (t = n.brandColorPrimary) && void 0 !== t ? t : '#f8a3e4',
-                a = e === u.BRd.DARK ? (0, i.DT)(l, 0.8) : (0, r.r5)(l, 0.8);
-            return 'linear-gradient(0deg, '.concat(l, ' 0%, ').concat(a, ' 100%)');
-        })((0, s.ZP)(), n);
+        t = (0, o.ZP)(),
+        x = (function (e, n) {
+            let t = e === m.BRd.DARK ? (0, r.DT)(n, 0.8) : (0, a.r5)(n, 0.8);
+            return 'linear-gradient(45deg, '.concat(n, ' 0%, ').concat(t, ' 100%)');
+        })(
+            t,
+            (function (e, n) {
+                let t = h.ZP.getGuildIconURL({
+                    id: e.id,
+                    icon: e.icon,
+                    size: 64
+                });
+                return (0, c.ZP)(t, n);
+            })(n, (0, s.useToken)(i.Z.colors.BG_BASE_TERTIARY).hex())
+        );
     return (0, l.jsxs)('div', {
-        className: h.container,
+        className: g.container,
         children: [
             (0, l.jsx)('div', {
-                className: h.banner,
-                style: { background: t }
+                className: g.banner,
+                style: { background: x }
             }),
             (0, l.jsx)('div', {
-                className: h.avatarContainer,
-                children: (0, l.jsx)(c.ZP, {
-                    mask: c.QS.CLAN_ICON,
+                className: g.avatarContainer,
+                children: (0, l.jsx)(d.ZP, {
+                    mask: d.QS.CLAN_ICON,
                     width: 70,
                     height: 70,
                     children: (0, l.jsx)('div', {
-                        className: h.avatarWrapper,
-                        children: (0, l.jsx)(o.b, {
+                        className: g.avatarWrapper,
+                        children: (0, l.jsx)(u.b, {
                             guildId: n.id,
                             guildName: n.name,
                             guildIcon: n.icon,
@@ -46,32 +58,32 @@ function m(e) {
                 })
             }),
             (0, l.jsxs)('div', {
-                className: h.header,
+                className: g.header,
                 children: [
-                    (0, l.jsx)(a.Heading, {
+                    (0, l.jsx)(s.Heading, {
                         variant: 'heading-lg/medium',
                         color: 'header-primary',
                         children: n.name
                     }),
                     (0, l.jsxs)('div', {
-                        className: h.members,
+                        className: g.members,
                         children: [
                             (0, l.jsx)('div', {
-                                className: h.memberCount,
-                                children: (0, l.jsx)(a.Text, {
+                                className: g.memberCount,
+                                children: (0, l.jsx)(s.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
-                                    children: d.intl.format(d.t.zRl6XV, { count: n.memberCount })
+                                    children: f.intl.format(f.t.zRl6XV, { count: n.memberCount })
                                 })
                             }),
                             (0, l.jsxs)('div', {
-                                className: h.memberCount,
+                                className: g.memberCount,
                                 children: [
-                                    (0, l.jsx)('div', { className: h.dotOnline }),
-                                    (0, l.jsx)(a.Text, {
+                                    (0, l.jsx)('div', { className: g.dotOnline }),
+                                    (0, l.jsx)(s.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'text-secondary',
-                                        children: d.intl.format(d.t['LC+S+v'], { membersOnline: n.onlineCount })
+                                        children: f.intl.format(f.t['LC+S+v'], { membersOnline: n.onlineCount })
                                     })
                                 ]
                             })
@@ -80,8 +92,8 @@ function m(e) {
                 ]
             }),
             (0, l.jsx)('div', {
-                className: h.body,
-                children: (0, l.jsx)(a.Text, {
+                className: g.body,
+                children: (0, l.jsx)(s.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-secondary',
                     children: n.description
