@@ -525,7 +525,9 @@ function tT() {
                 device_name: e.description.name,
                 time_to_first_frame_ms: e.initializationTimerExpired ? null : Math.round(e.timeToFirstFrame * J.Z.Millis.SECOND),
                 timed_out: e.initializationTimerExpired,
-                activity: e.entropy
+                activity: e.entropy,
+                media_session_id: eu.Z.getMediaSessionId(),
+                rtc_connection_id: eu.Z.getRTCConnectionId()
             });
         }),
         ek.on(b.aB.ClipsRecordingRestartNeeded, () => {
