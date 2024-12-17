@@ -9,53 +9,55 @@ var a = r(442837),
     d = r(553795),
     f = r(979192),
     _ = r(873128),
-    h = r(981631),
-    p = r(388032),
-    m = r(804665);
-function g(e) {
-    let { guildId: n, leaderboardId: g } = e,
-        { leaderboardsDisabled: E } = (0, f.O)(n, g),
-        v = (0, a.e7)([d.Z], () => d.Z.getAccount(null, h.ABu.RIOT_GAMES)),
-        I = (0, a.e7)([d.Z], () => d.Z.getAccount(null, h.ABu.LEAGUE_OF_LEGENDS)),
-        T = (0, _.Z)({
+    h = r(463031),
+    p = r(981631),
+    m = r(388032),
+    g = r(804665);
+function E(e) {
+    let { guildId: n, leaderboardId: E } = e,
+        { leaderboardsDisabled: v } = (0, f.O)(n, E),
+        I = (0, a.e7)([d.Z], () => d.Z.getAccount(null, p.ABu.RIOT_GAMES)),
+        T = (0, a.e7)([d.Z], () => d.Z.getAccount(null, p.ABu.LEAGUE_OF_LEGENDS)),
+        b = (0, _.Z)({
             guildId: n,
-            leaderboardId: g
-        });
-    if (null != v && null != I && !E) return null;
-    let b = l.Z.get(h.ABu.RIOT_GAMES),
-        y = null == v && null == I,
-        S = null != v && null == I,
-        A = null == v && null != I,
-        N = S || A;
-    function C() {
-        if (null != T)
+            leaderboardId: E
+        }),
+        y = E === h._;
+    if ((!y || (null != I && null != T)) && !v) return null;
+    let S = l.Z.get(p.ABu.RIOT_GAMES),
+        A = y && null == I && null == T,
+        N = y && null != I && null == T,
+        C = y && null == I && null != T,
+        R = N || C;
+    function O() {
+        if (null != b)
             (0, o.openModalLazy)(async () => {
                 let { default: e } = await r.e('73217').then(r.bind(r, 139964));
                 return (r) =>
                     (0, i.jsx)(e, {
                         ...r,
                         guildId: n,
-                        leaderboard: T
+                        leaderboard: b
                     });
             });
     }
-    function R() {
-        return y || N ? (0, u.Z)({ platformType: h.ABu.RIOT_GAMES }) : C();
-    }
-    function O() {
-        return y ? p.intl.string(p.t.w6VSSE) : N ? p.intl.string(p.t.CHNBdn) : p.intl.string(p.t['0yRXHx']);
-    }
     function D() {
-        if (E) return null;
-        let e = y
-                ? (0, i.jsx)(o.CircleInformationIcon, { className: m.infoMessageIcon })
+        return A || R ? (0, u.Z)({ platformType: p.ABu.RIOT_GAMES }) : O();
+    }
+    function L() {
+        return A ? m.intl.string(m.t.w6VSSE) : R ? m.intl.string(m.t.CHNBdn) : m.intl.string(m.t['0yRXHx']);
+    }
+    function x() {
+        if (v) return null;
+        let e = A
+                ? (0, i.jsx)(o.CircleInformationIcon, { className: g.infoMessageIcon })
                 : (0, i.jsx)(o.WarningIcon, {
                       color: s.Z.colors.STATUS_WARNING,
-                      className: m.infoMessageIcon
+                      className: g.infoMessageIcon
                   }),
-            n = y ? p.intl.string(p.t['Ihg/Dg']) : p.intl.string(p.t['J8U+Iy']);
+            n = A ? m.intl.string(m.t['Ihg/Dg']) : m.intl.string(m.t['J8U+Iy']);
         return (0, i.jsxs)('div', {
-            className: m.updateMessage,
+            className: g.updateMessage,
             children: [
                 e,
                 (0, i.jsx)(o.Text, {
@@ -68,23 +70,24 @@ function g(e) {
     }
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(c.Z, { className: m.divider }),
-            D(),
+            (0, i.jsx)(c.Z, { className: g.divider }),
+            x(),
             (0, i.jsxs)(o.Button, {
-                className: m.joinLeaderboardButton,
-                innerClassName: m.joinLeaderboardButtonInner,
-                onClick: R,
+                className: g.joinLeaderboardButton,
+                innerClassName: g.joinLeaderboardButtonInner,
+                onClick: D,
                 children: [
-                    !E &&
+                    y &&
+                        !v &&
                         (0, i.jsx)('img', {
                             alt: 'Riot Games',
-                            src: b.icon.whiteSVG,
-                            className: m.riotIcon
+                            src: S.icon.whiteSVG,
+                            className: g.riotIcon
                         }),
-                    O()
+                    L()
                 ]
             })
         ]
     });
 }
-n.Z = g;
+n.Z = E;

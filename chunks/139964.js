@@ -1,53 +1,55 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return p;
+            return N;
         }
     });
 var i = n(200651),
-    o = n(192379),
-    s = n(442837),
-    l = n(481060),
-    a = n(367907),
-    r = n(231757),
-    d = n(511010),
-    c = n(553795),
-    u = n(430824),
+    l = n(192379),
+    a = n(442837),
+    o = n(481060),
+    s = n(367907),
+    r = n(812206),
+    d = n(231757),
+    c = n(511010),
+    u = n(553795),
+    m = n(430824),
     x = n(979192),
-    m = n(647529),
-    h = n(986398),
-    g = n(463031),
-    j = n(981631),
-    _ = n(388032),
+    h = n(647529),
+    g = n(986398),
+    j = n(463031),
+    _ = n(981631),
+    p = n(388032),
     f = n(168423);
-function p(e) {
-    let { guildId: t, leaderboard: n, ...r } = e,
-        c = (0, s.e7)([u.Z], () => u.Z.getGuild(t));
-    return (o.useEffect(() => {
+function N(e) {
+    let { guildId: t, leaderboard: n, ...d } = e,
+        u = (0, a.e7)([m.Z], () => m.Z.getGuild(t)),
+        x = (0, a.e7)([r.Z], () => r.Z.getApplication(n.settings.application_id));
+    return (l.useEffect(() => {
         null != t &&
-            a.ZP.trackWithMetadata(j.rMx.OPEN_MODAL, {
-                type: j.jXE.GUILD_LEADERBOARD_ACCESS_MODAL,
+            s.ZP.trackWithMetadata(_.rMx.OPEN_MODAL, {
+                type: _.jXE.GUILD_LEADERBOARD_ACCESS_MODAL,
                 guild_id: t
             });
     }, [t]),
-    null == c)
+    null == u || null == x)
         ? null
-        : (0, i.jsx)(m.Z, {
+        : (0, i.jsx)(h.Z, {
               guildId: t,
-              title: _.intl.string(_.t['WWBw5+']),
-              ...r,
-              children: (0, i.jsxs)(l.ModalContent, {
+              title: p.intl.formatToPlainString(p.t['3BZonp'], { applicationName: x.name }),
+              ...d,
+              children: (0, i.jsxs)(o.ModalContent, {
                   className: f.modalContent,
                   children: [
                       (0, i.jsxs)('div', {
                           className: f.subtitleContainer,
                           children: [
-                              (0, i.jsx)(l.Text, {
+                              (0, i.jsx)(o.Text, {
                                   variant: 'text-md/normal',
                                   color: 'text-secondary',
-                                  children: _.intl.string(_.t.OBuzJi)
+                                  children: p.intl.string(p.t.OBuzJi)
                               }),
-                              (0, i.jsx)(h.Z, {
+                              (0, i.jsx)(g.Z, {
                                   className: f.winnerImage,
                                   leaderboard: n
                               })
@@ -55,7 +57,14 @@ function p(e) {
                       }),
                       (0, i.jsxs)('div', {
                           className: f.notes,
-                          children: [(0, i.jsx)(B, {}), (0, i.jsx)(l.Spacer, { size: 4 }), (0, i.jsx)(d.Z, { className: f.divider }), null != c && (0, i.jsx)(N, { guild: c })]
+                          children: [
+                              n.leaderboard_id === j._
+                                  ? (0, i.jsxs)(i.Fragment, {
+                                        children: [(0, i.jsx)(B, {}), (0, i.jsx)(o.Spacer, { size: 4 }), (0, i.jsx)(c.Z, { className: f.divider })]
+                                    })
+                                  : null,
+                              null != u && (0, i.jsx)(b, { guild: u })
+                          ]
                       })
                   ]
               })
@@ -65,44 +74,44 @@ function B() {
     return (0, i.jsxs)('div', {
         className: f.row,
         children: [
-            (0, i.jsx)(l.Text, {
+            (0, i.jsx)(o.Text, {
                 variant: 'text-md/medium',
-                children: _.intl.string(_.t.PL48CA)
+                children: p.intl.string(p.t.PL48CA)
             }),
             (0, i.jsx)(C, {})
         ]
     });
 }
 function C() {
-    return null != (0, s.e7)([c.Z], () => c.Z.getAccount(null, j.ABu.RIOT_GAMES))
-        ? (0, i.jsxs)(l.Button, {
+    return null != (0, a.e7)([u.Z], () => u.Z.getAccount(null, _.ABu.RIOT_GAMES))
+        ? (0, i.jsxs)(o.Button, {
               disabled: !0,
-              color: l.Button.Colors.TRANSPARENT,
-              look: l.Button.Looks.OUTLINED,
+              color: o.Button.Colors.TRANSPARENT,
+              look: o.Button.Looks.OUTLINED,
               innerClassName: f.doneButton,
               children: [
-                  (0, i.jsx)(l.CheckmarkSmallIcon, {}),
-                  (0, i.jsx)(l.Text, {
+                  (0, i.jsx)(o.CheckmarkSmallIcon, {}),
+                  (0, i.jsx)(o.Text, {
                       variant: 'text-sm/medium',
-                      children: _.intl.string(_.t.i4jeWV)
+                      children: p.intl.string(p.t.i4jeWV)
                   })
               ]
           })
-        : (0, i.jsx)(l.Button, {
-              onClick: () => (0, r.Z)({ platformType: j.ABu.RIOT_GAMES }),
-              size: l.Button.Sizes.SMALL,
-              color: l.Button.Colors.PRIMARY,
-              children: _.intl.string(_.t.To26Nj)
+        : (0, i.jsx)(o.Button, {
+              onClick: () => (0, d.Z)({ platformType: _.ABu.RIOT_GAMES }),
+              size: o.Button.Sizes.SMALL,
+              color: o.Button.Colors.PRIMARY,
+              children: p.intl.string(p.t.To26Nj)
           });
 }
-function N(e) {
+function b(e) {
     let { guild: t } = e,
-        { leaderboardsDisabled: n, toggleGuildLeaderboardsDisabled: o } = (0, x.O)(t.id, g._);
-    return (0, i.jsx)(l.FormSwitch, {
+        { leaderboardsDisabled: n, toggleGuildLeaderboardsDisabled: l } = (0, x.O)(t.id, j._);
+    return (0, i.jsx)(o.FormSwitch, {
         hideBorder: !0,
-        onChange: o,
+        onChange: l,
         value: !n,
         className: f.guildOptoutSwitch,
-        children: _.intl.string(_.t.eZhXQU)
+        children: p.intl.string(p.t.eZhXQU)
     });
 }
