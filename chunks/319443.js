@@ -18,12 +18,12 @@ var i = n(200651),
     I = n(680180),
     C = n(726115),
     v = n(703656),
-    S = n(594174),
-    N = n(626135),
+    N = n(594174),
+    S = n(626135),
     T = n(31569),
     b = n(881294),
-    A = n(975907),
-    x = n(119014),
+    x = n(975907),
+    A = n(119014),
     Z = n(258971),
     L = n(133743),
     P = n(726941),
@@ -87,15 +87,15 @@ t.Z = function () {
         V = (0, s.e7)([h.Z], () => h.Z.getCategories()),
         F = r.useMemo(() => [(0, m.KQ)(), ...V], [V]),
         z = r.useMemo(() => F.find((e) => e.id === Number(H)), [F, H]),
-        { tabs: Y, selectedTab: W, onSelectTab: K } = (0, x.i)(null == u ? void 0 : u.toString()),
+        { tabs: W, selectedTab: Y, onSelectTab: K } = (0, A.i)(null == u ? void 0 : u.toString()),
         [q, X] = r.useState(!0),
         Q = Z.z8.useField('trackedOpenedFromExternalEntrypoint'),
         J = Z.z8.useField('sessionId'),
-        $ = (0, s.e7)([S.default], () => S.default.getCurrentUser());
+        $ = (0, s.e7)([N.default], () => N.default.getCurrentUser());
     r.useEffect(() => {
         if (!Q && null == J) {
             let e = (0, C.PM)();
-            N.default.track(M.rMx.APP_DIRECTORY_OPENED, {
+            S.default.track(M.rMx.APP_DIRECTORY_OPENED, {
                 source: p.ApplicationDirectoryEntrypointNames.EXTERNAL,
                 session_id: e,
                 user_id: null == $ ? void 0 : $.id
@@ -117,7 +117,7 @@ t.Z = function () {
         r.useEffect(() => Z.aQ.setState({ lastItem: a }), [a]);
     let ee = null != O,
         et = (null == a ? void 0 : a.type) === Z.m_.SEARCH,
-        { searchQuery: en, onSearchTextChange: ei, onClearSearch: er, onSearchSubmit: el } = (0, A.M)({ initialQuery: null != B ? B : '' }),
+        { searchQuery: en, onSearchTextChange: ei, onClearSearch: er, onSearchSubmit: el } = (0, x.M)({ initialQuery: null != B ? B : '' }),
         ea = T.Z.useField('searchBarState'),
         {
             onTabsAvailableWidthChange: eo,
@@ -189,8 +189,8 @@ t.Z = function () {
                                             children: null != B && '' !== B ? w.intl.formatToPlainString(w.t.zHdzqa, { query: B }) : w.intl.formatToPlainString(w.t.Qhj5Bg, { categoryName: null !== (e = null == z ? void 0 : z.name) && void 0 !== e ? e : w.intl.string(w.t.E407b2) })
                                         })
                                       : (0, i.jsx)(E.Z, {
-                                            tabs: Y,
-                                            selectedTab: W,
+                                            tabs: W,
+                                            selectedTab: Y,
                                             onTabSelect: ed,
                                             onAvailableWidthChange: eo
                                         }),
@@ -221,13 +221,13 @@ t.Z = function () {
                         onSelectApplication: eu,
                         onScroll: (e) => eg(e, Z.m_.SEARCH)
                     })
-                  : W === D.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID.toString()
+                  : Y === D.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID.toString()
                     ? (0, i.jsx)(R.Z, {
                           onScroll: (e) => eg(e, Z.m_.HOME),
                           onSelectApplication: eu
                       })
                     : (0, i.jsx)(P.Z, {
-                          tabId: Number(W),
+                          tabId: Number(Y),
                           onScroll: (e) => eg(e, Z.m_.CATEGORY),
                           onSelectApplication: eu
                       })

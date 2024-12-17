@@ -36,10 +36,10 @@ function E(e) {
             [m.state, m.url, l, o]
         ),
         E = null != f,
-        S = null != p;
+        N = null != p;
     return 'loading' === m.state
         ? null
-        : S
+        : N
           ? (0, i.jsxs)(i.Fragment, {
                 children: [
                     E
@@ -138,28 +138,28 @@ t.Z = function (e) {
         }, []),
         p = r.useCallback(() => d(!1), []),
         C = (0, u.ye)(t),
-        S = t.bot,
-        { botBannerUrl: N, botBannerUrlAnimated: T } = r.useMemo(
+        N = t.bot,
+        { botBannerUrl: S, botBannerUrlAnimated: T } = r.useMemo(
             () =>
-                (null == S ? void 0 : S.id) == null || (null == S ? void 0 : S.banner) == null
+                (null == N ? void 0 : N.id) == null || (null == N ? void 0 : N.banner) == null
                     ? {}
                     : {
                           botBannerUrl: (0, m.aN)({
-                              id: S.id,
-                              banner: S.banner,
+                              id: N.id,
+                              banner: N.banner,
                               canAnimate: !1,
                               size: 600
                           }),
                           botBannerUrlAnimated: a
                               ? void 0
                               : (0, m.aN)({
-                                    id: S.id,
-                                    banner: S.banner,
+                                    id: N.id,
+                                    banner: N.banner,
                                     canAnimate: !0,
                                     size: 600
                                 })
                       },
-            [null == S ? void 0 : S.id, null == S ? void 0 : S.banner, a]
+            [null == N ? void 0 : N.id, null == N ? void 0 : N.banner, a]
         );
     return (0, i.jsx)('div', {
         className: g.bannerContainer,
@@ -173,13 +173,13 @@ t.Z = function (e) {
                 ? (0, i.jsx)(E, {
                       application: t,
                       isHovered: c,
-                      botBannerUrl: null == N ? void 0 : N,
+                      botBannerUrl: null == S ? void 0 : S,
                       botBannerUrlAnimated: null == T ? void 0 : T
                   })
-                : null != N
+                : null != S
                   ? (0, i.jsx)(I, {
                         isHovered: c,
-                        url: N,
+                        url: S,
                         animatedUrl: T
                     })
                   : (0, i.jsx)(v, { iconURL: l })

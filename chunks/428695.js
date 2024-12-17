@@ -11,18 +11,18 @@ var i = n(200651),
     m = n(173549);
 let p = (0, o.debounce)(c.ZP.trackWithMetadata, 500);
 t.Z = function (e) {
-    let { guild: t, title: n, message: l, image: o, type: g, imageStyles: f, imageMarginX: _, imageMarginTop: E, trackingSource: I, undismissable: C, onDismissed: v, onClick: S, cta: N, ctaColor: T, centerText: b, className: A } = e;
+    let { guild: t, title: n, message: l, image: o, type: g, imageStyles: f, imageMarginX: _, imageMarginTop: E, trackingSource: I, undismissable: C, onDismissed: v, onClick: N, cta: S, ctaColor: T, centerText: b, className: x } = e;
     r.useEffect(() => {
         p(u.rMx.CHANNEL_NOTICE_VIEWED, {
             notice_type: g,
             guild_id: t.id
         });
     }, [t.id, g]);
-    let x = null;
-    'function' == typeof N
-        ? (x = N())
-        : null != N &&
-          (x = (0, i.jsx)(s.Button, {
+    let A = null;
+    'function' == typeof S
+        ? (A = S())
+        : null != S &&
+          (A = (0, i.jsx)(s.Button, {
               className: m.button,
               size: s.Button.Sizes.SMALL,
               onClick: () => {
@@ -32,11 +32,11 @@ t.Z = function (e) {
                           guild_id: t.id,
                           notice_type: g
                       }),
-                      null == S || S();
+                      null == N || N();
               },
               fullWidth: !0,
               color: T,
-              children: N
+              children: S
           }));
     let Z = null;
     'function' == typeof n
@@ -60,7 +60,7 @@ t.Z = function (e) {
           }));
     let P = null != _ ? ''.concat(_, 'px') : '16px';
     return (0, i.jsxs)('div', {
-        className: a()(m.container, A),
+        className: a()(m.container, x),
         children: [
             !0 === C
                 ? null
@@ -93,7 +93,7 @@ t.Z = function (e) {
                 }),
             (0, i.jsxs)('div', {
                 className: m.message,
-                children: [Z, L, x]
+                children: [Z, L, A]
             })
         ]
     });

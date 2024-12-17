@@ -6,7 +6,7 @@ n.d(t, {
         return k;
     },
     S5: function () {
-        return W;
+        return Y;
     },
     T5: function () {
         return G;
@@ -48,7 +48,7 @@ n.d(t, {
         return z;
     },
     zy: function () {
-        return Y;
+        return W;
     }
 }),
     n(47120),
@@ -75,17 +75,17 @@ var i,
     I = n(131951),
     C = n(375954),
     v = n(158776),
-    S = n(594174),
-    N = n(979651),
+    N = n(594174),
+    S = n(979651),
     T = n(70956),
     b = n(5192),
-    A = n(226951),
-    x = n(591759),
+    x = n(226951),
+    A = n(591759),
     Z = n(996106),
     L = n(863141),
     P = n(186901),
     y = n(981631);
-let O = null !== (r = null === (i = x.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT)) || void 0 === i ? void 0 : i.host) && void 0 !== r ? r : 'localhost',
+let O = null !== (r = null === (i = A.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT)) || void 0 === i ? void 0 : i.host) && void 0 !== r ? r : 'localhost',
     R = (function () {
         let e = O.split(':')[0];
         if (!e.includes('.')) return e;
@@ -93,7 +93,7 @@ let O = null !== (r = null === (i = x.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT
             n = t[t.length - 1];
         return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
     })(),
-    j = new RegExp('^'.concat(A.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(A.Z.escape(R), '|discordapp.com|discord.com)$')),
+    j = new RegExp('^'.concat(x.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(x.Z.escape(R), '|discordapp.com|discord.com)$')),
     D = 1 * T.Z.Millis.MINUTE,
     M = {};
 function w(e) {
@@ -128,8 +128,8 @@ function G(e, t) {
             ),
         Promise.all(n).then(() => {
             var n;
-            let r = (!e.isNSFW() || (null === (n = S.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? C.Z.getMessages(e.id).toArray().map(B) : [],
-                l = Object.values(N.Z.getVoiceStatesForChannel(e.id)).map((t) => H(i, e.id, t));
+            let r = (!e.isNSFW() || (null === (n = N.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? C.Z.getMessages(e.id).toArray().map(B) : [],
+                l = Object.values(S.Z.getVoiceStatesForChannel(e.id)).map((t) => H(i, e.id, t));
             return {
                 id: e.id,
                 name: e.name,
@@ -173,7 +173,7 @@ function B(e) {
 }
 function H(e, t, n) {
     let { mute: i, deaf: r, selfMute: l, selfDeaf: a, suppress: o, userId: s } = n,
-        c = S.default.getUser(s);
+        c = N.default.getUser(s);
     if (null == c) throw Error('Invalid user id: '.concat(s));
     return {
         nick: b.ZP.getName(e, t, c),
@@ -192,7 +192,7 @@ function H(e, t, n) {
 }
 function V(e, t, n) {
     let { isSpamRequest: i, applicationId: r, userIgnored: l } = null != n ? n : {},
-        a = S.default.getUser(t);
+        a = N.default.getUser(t);
     return {
         type: e,
         user: null != a ? (0, L.Z)(a) : null,
@@ -220,7 +220,7 @@ function z(e, t, n) {
     let i = E.Z.getGuild(e.getGuildId());
     return (null != i ? i.getApplicationId() : e.getApplicationId()) === t || n.indexOf(a.x.MESSAGES_READ) > -1;
 }
-function Y(e) {
+function W(e) {
     switch (e) {
         case y.hes.RTC_CONNECTED:
         case y.hes.RTC_CONNECTING:
@@ -230,7 +230,7 @@ function Y(e) {
             return e;
     }
 }
-function W(e) {
+function Y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { instance: n, secrets: i, party: r } = e,
         l = 0;

@@ -17,12 +17,12 @@ var l,
 let I = new Set(),
     C = _.QZA.CLOSED,
     v = !1,
-    S = null,
     N = null,
+    S = null,
     T = null,
     b = null,
-    A = null,
     x = null,
+    A = null,
     Z = h.K.get(E.kf) || !1;
 function L(e) {
     let t = e.getGuildId(),
@@ -32,7 +32,7 @@ function L(e) {
 function P() {
     if (((T = g.Z.getChannel()), (b = g.Z.getCategory()), null == T)) return !1;
     let e = T.getGuildId();
-    (N = S = L(T)), null == S[A] && (A = e), (r = null != b), (i = p.o4(T, b)), (x = null), (v = !1), (C = _.QZA.CLOSED), I.clear();
+    (S = N = L(T)), null == N[x] && (x = e), (r = null != b), (i = p.o4(T, b)), (A = null), (v = !1), (C = _.QZA.CLOSED), I.clear();
 }
 class y extends (l = u.ZP.Store) {
     initialize() {
@@ -45,16 +45,16 @@ class y extends (l = u.ZP.Store) {
         return this.hasChanges();
     }
     getPermissionOverwrite(e) {
-        return null == S ? void 0 : S[e];
+        return null == N ? void 0 : N[e];
     }
     get editedPermissionIds() {
         return Array.from(I);
     }
     get permissionOverwrites() {
-        return S;
+        return N;
     }
     get selectedOverwriteId() {
-        return A;
+        return x;
     }
     get formState() {
         return C;
@@ -93,32 +93,32 @@ class y extends (l = u.ZP.Store) {
         CHANNEL_SETTINGS_PERMISSIONS_INIT: P,
         CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION: function (e) {
             let { id: t, allow: n, deny: r } = e,
-                l = null == S ? void 0 : S[t];
+                l = null == N ? void 0 : N[t];
             if (null == l || null == T) return !1;
             (l = {
                 ...l,
                 allow: n,
                 deny: r
             }),
-                (S = {
-                    ...S,
+                (N = {
+                    ...N,
                     [t]: l
                 }),
                 I.add(t),
                 (C = _.QZA.OPEN),
-                (v = !d().isEqual(S, N)),
+                (v = !d().isEqual(N, S)),
                 (i = p.o4(T, b));
         },
         CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function (e) {
             let { id: t } = e;
-            if (null != S && null != S[t]) A = t;
+            if (null != N && null != N[t]) x = t;
             else {
                 if (null == T) return !1;
-                x = t;
+                A = t;
             }
         },
         CHANNEL_SETTINGS_CLOSE: function () {
-            (C = _.QZA.CLOSED), (S = null), (N = null), (T = null), (b = null), (v = !1), I.clear(), (A = null), (x = null);
+            (C = _.QZA.CLOSED), (N = null), (S = null), (T = null), (b = null), (v = !1), I.clear(), (x = null), (A = null);
         },
         CHANNEL_UPDATES: function (e) {
             let { channels: t } = e;
@@ -131,20 +131,20 @@ class y extends (l = u.ZP.Store) {
                         b = g.Z.getCategory();
                         let t = T.getGuildId();
                         if (null == t) return !1;
-                        N = L(T);
+                        S = L(T);
                         let n = {};
                         return (
                             I.forEach((e) => {
-                                null != S && (n[e] = S[e]);
+                                null != N && (n[e] = N[e]);
                             }),
                             null == n[t] && null == T.permissionOverwrites[t] && (n[t] = p.we(t)),
                             null ==
-                            (S = {
+                            (N = {
                                 ...T.permissionOverwrites,
                                 ...n
-                            })[A]
-                                ? (A = t)
-                                : null != x && null != S[x] && ((A = x), (x = null)),
+                            })[x]
+                                ? (x = t)
+                                : null != A && null != N[A] && ((x = A), (A = null)),
                             (i = p.o4(T, b)),
                             !0
                         );

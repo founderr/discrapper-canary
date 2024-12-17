@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return x;
     }
 }),
     n(47120);
@@ -23,12 +23,12 @@ var i = n(200651),
     I = n(242291),
     C = n(792165),
     v = n(603074),
-    S = n(981631),
-    N = n(921944),
+    N = n(981631),
+    S = n(921944),
     T = n(388032),
     b = n(382290);
-function A(e) {
-    let { channel: t, iconClassName: l, className: A, innerClassName: x, ...Z } = e,
+function x(e) {
+    let { channel: t, iconClassName: l, className: x, innerClassName: A, ...Z } = e,
         L = (0, p.Q3)('SoundBoardRTCPanelButton'),
         { mute: P, suppress: y } = (0, f.Z)(t),
         O = (0, o.e7)([_.Z], () => _.Z.isDeaf()),
@@ -54,7 +54,7 @@ function A(e) {
             play: V,
             events: { onMouseEnter: F, onMouseLeave: z }
         } = (0, c.j)(),
-        Y = (e) =>
+        W = (e) =>
             (0, i.jsx)(d.Popout, {
                 animation: d.Popout.Animation.FADE,
                 shouldShow: j,
@@ -80,16 +80,16 @@ function A(e) {
                         children: (0, i.jsx)(d.Button, {
                             ...e,
                             ...t,
-                            className: a()(A, {
+                            className: a()(x, {
                                 [b.buttonActive]: j,
                                 [b.disabled]: R
                             }),
-                            wrapperClassName: A,
-                            innerClassName: x,
+                            wrapperClassName: x,
+                            innerClassName: A,
                             disabled: R,
                             onClick: () => {
                                 var t, n;
-                                null != k && k !== s.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && U(N.L.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!j), V();
+                                null != k && k !== s.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && U(S.L.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!j), V();
                             },
                             onMouseEnter: (t) => {
                                 var n, i;
@@ -101,7 +101,7 @@ function A(e) {
                             },
                             onContextMenu: B,
                             fullWidth: !0,
-                            size: L ? d.Button.Sizes.LARGE : d.Button.Sizes.SMALL,
+                            size: L ? d.Button.Sizes.MEDIUM : d.Button.Sizes.SMALL,
                             ...Z,
                             children: (0, i.jsx)(H, {
                                 className: l,
@@ -111,13 +111,13 @@ function A(e) {
                         })
                     })
             }),
-        W = r.useCallback(() => {
+        Y = r.useCallback(() => {
             !R && D(!j);
         }, [R, j]);
     return (
         (0, E.yp)({
-            event: S.CkL.TOGGLE_SOUNDBOARD,
-            handler: W
+            event: N.CkL.TOGGLE_SOUNDBOARD,
+            handler: Y
         }),
         (0, i.jsx)(m.Gt, {
             value: G,
@@ -128,7 +128,7 @@ function A(e) {
                     if (O) return T.intl.string(T.t.X1lQlp);
                     return T.intl.string(T.t['6EJvHh']);
                 })(),
-                children: (e) => Y(e)
+                children: (e) => W(e)
             })
         })
     );

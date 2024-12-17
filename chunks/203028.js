@@ -24,8 +24,8 @@ function E(e) {
     var t, r;
     let { party: E, onUserContextMenu: I } = e,
         { priorityMembers: C, guildContext: v } = E,
-        S = C[0],
-        N = (function (e) {
+        N = C[0],
+        S = (function (e) {
             let { priorityMembers: t, partiedMembers: n } = e,
                 i = new Set(
                     t.map((e) => {
@@ -59,14 +59,14 @@ function E(e) {
                 I = c.length - E,
                 C = h[0],
                 v = null == C ? void 0 : C.activity,
-                S = null == C ? void 0 : C.startedPlayingTime,
-                N = { name: null !== (t = null == v ? void 0 : v.name) && void 0 !== t ? t : '' };
+                N = null == C ? void 0 : C.startedPlayingTime,
+                S = { name: null !== (t = null == v ? void 0 : v.name) && void 0 !== t ? t : '' };
             if ((0, a.Z)(v) && null != v)
                 return {
                     subtitle: (0, i.jsx)(u.ZP, {
-                        start: S,
+                        start: N,
                         location: u.ZP.Locations.ACTIVITY_FEED_NEW,
-                        messageProps: N
+                        messageProps: S
                     }),
                     icon: null
                 };
@@ -88,9 +88,9 @@ function E(e) {
                             };
                         return {
                             subtitle: (0, i.jsx)(u.ZP, {
-                                start: S,
+                                start: N,
                                 location: u.ZP.Locations.ACTIVITY_FEED_NEW,
-                                messageProps: N
+                                messageProps: S
                             }),
                             icon: null != e ? (0, i.jsx)(p.Z.Header.Icon, { src: null != e.getIconURL(g.Z) ? e.getIconURL(g.Z) : n(211827) }) : null
                         };
@@ -153,7 +153,7 @@ function E(e) {
                         subtitle: (0, i.jsx)(u.ZP, {
                             start: r,
                             location: u.ZP.Locations.ACTIVITY_FEED_NEW,
-                            messageProps: N
+                            messageProps: S
                         }),
                         icon: null != n && null != n.getIconURL(g.Z) ? (0, i.jsx)(p.Z.Header.Icon, { src: n.getIconURL(g.Z) }) : null
                     }
@@ -164,19 +164,19 @@ function E(e) {
                 icon: (0, i.jsx)(p.Z.Header.Icon, { src: p.Z.Header.Icon.Src.MULTIPLE })
             };
         })(E),
-        A = (0, d.Z)({
+        x = (0, d.Z)({
             applicationId: null === (r = E.currentActivities[0]) || void 0 === r ? void 0 : null === (t = r.activity) || void 0 === t ? void 0 : t.application_id,
             location: 'FriendsActivityFeed',
             source: c.m1.FriendsActivityFeed
         });
     return (0, i.jsx)(p.Z.Header, {
-        priorityUser: S,
+        priorityUser: N,
         guildId: null == v ? void 0 : v.id,
-        title: N,
+        title: S,
         subtitle: T,
         icon: b,
-        onSubtitleClick: A,
-        onIconClick: A,
-        onContextMenu: (e) => I(e, S.user)
+        onSubtitleClick: x,
+        onIconClick: x,
+        onContextMenu: (e) => I(e, N.user)
     });
 }

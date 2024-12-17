@@ -1,6 +1,6 @@
 t.d(n, {
     q: function () {
-        return S;
+        return E;
     }
 }),
     t(47120);
@@ -19,15 +19,15 @@ var i = t(200651),
     h = t(96848),
     f = t(703926),
     v = t(474936),
-    E = t(388032),
+    S = t(388032),
     g = t(461405);
-let S = (e) => {
+let E = (e) => {
     let { isShopGift: n, className: t, optionsContainerClassName: r } = e,
-        { giftRecipient: S, selectedGiftStyle: j, setSelectedGiftStyle: y, emojiConfetti: I, soundEffect: P, setEmojiConfetti: T, setSoundEffect: N } = (0, c.wD)(),
+        { giftRecipient: E, selectedGiftStyle: j, setSelectedGiftStyle: y, emojiConfetti: I, soundEffect: P, setEmojiConfetti: T, setSoundEffect: N } = (0, c.wD)(),
         [b, C] = l.useState(!1),
         _ = l.useRef(null),
         O = (0, a.useRadioGroup)({ orientation: 'horizontal' }),
-        A = (0, u.MY)(S, n),
+        A = (0, u.MY)(E, n),
         Z = A === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
         R = A !== u.xr.DEFAULT,
         w = (0, m.rK)(),
@@ -83,7 +83,7 @@ let S = (e) => {
                         e.target === e.currentTarget && (null === (n = _.current) || void 0 === n || n.focus());
                     },
                     className: s()(g.giftBoxOptionContainer, r),
-                    'aria-label': E.intl.string(E.t.v54NrK),
+                    'aria-label': S.intl.string(S.t.v54NrK),
                     ...O,
                     children:
                         null != k &&

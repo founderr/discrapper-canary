@@ -24,12 +24,12 @@ var i = n(200651),
     I = n(634894),
     C = n(586902),
     v = n(570928),
-    S = n(100527),
-    N = n(906732),
+    N = n(100527),
+    S = n(906732),
     T = n(676742),
     b = n(1585),
-    A = n(304761),
-    x = n(865427),
+    x = n(304761),
+    A = n(865427),
     Z = n(571250),
     L = n(628581),
     P = n(55311),
@@ -48,8 +48,8 @@ var i = n(200651),
     V = n(332473),
     F = n(240504),
     z = n(637906),
-    Y = n(39370),
-    W = n(19199),
+    W = n(39370),
+    Y = n(19199),
     K = n(111653),
     q = n(866483),
     X = n(14357),
@@ -78,12 +78,12 @@ var i = n(200651),
     eI = n(374023),
     eC = n(51144),
     ev = n(998502),
-    eS = n(870569),
-    eN = n(345243),
+    eN = n(870569),
+    eS = n(345243),
     eT = n(115530),
     eb = n(981631),
-    eA = n(215023),
-    ex = n(388032),
+    ex = n(215023),
+    eA = n(388032),
     eZ = n(628005);
 function eL(e, t, n) {
     return (
@@ -140,7 +140,7 @@ function eR(e) {
                   children: (e) =>
                       (0, i.jsxs)(m.Clickable, {
                           ...e,
-                          'aria-label': ex.intl.string(ex.t['3Uj+2t']),
+                          'aria-label': eA.intl.string(eA.t['3Uj+2t']),
                           className: eZ.avatarWrapper,
                           children: [
                               (0, i.jsx)(eP, {
@@ -176,7 +176,7 @@ class ej extends r.PureComponent {
     }
     renderCopiedSuccess() {
         let { copiedStreak: e } = this.state,
-            t = [ex.intl.string(ex.t.MSaeTU), ex.intl.string(ex.t.UmrCw8), ex.intl.string(ex.t.gKE0Ji), ex.intl.string(ex.t['4DSKbm']), ex.intl.string(ex.t['+8ENdX']), ex.intl.string(ex.t.GlWHv7), ex.intl.string(ex.t.hIzxU1), ex.intl.string(ex.t['26uMPD']), ex.intl.string(ex.t.uFs7R0), ex.intl.string(ex.t.bLXdcX), ex.intl.string(ex.t.gPg9fX)],
+            t = [eA.intl.string(eA.t.MSaeTU), eA.intl.string(eA.t.UmrCw8), eA.intl.string(eA.t.gKE0Ji), eA.intl.string(eA.t['4DSKbm']), eA.intl.string(eA.t['+8ENdX']), eA.intl.string(eA.t.GlWHv7), eA.intl.string(eA.t.hIzxU1), eA.intl.string(eA.t['26uMPD']), eA.intl.string(eA.t.uFs7R0), eA.intl.string(eA.t.bLXdcX), eA.intl.string(eA.t.gPg9fX)],
             n = Math.min(Math.max(0, e - 1), t.length - 1);
         return (0, i.jsx)(m.Shaker, {
             isShaking: this.isCopiedStreakGodlike,
@@ -212,7 +212,7 @@ class ej extends r.PureComponent {
                     }),
                     (0, i.jsx)('div', {
                         className: eZ.panelSubtextContainer,
-                        children: (0, i.jsx)(eN.Z, { children: null != e ? e : r })
+                        children: (0, i.jsx)(eS.Z, { children: null != e ? e : r })
                     })
                 ]
             })
@@ -266,7 +266,7 @@ class ej extends r.PureComponent {
                                           serverMute: l,
                                           suppress: o,
                                           awaitingRemote: r,
-                                          tooltipText: d ? ex.intl.string(ex.t['29gnR0']) : void 0,
+                                          tooltipText: d ? eA.intl.string(eA.t['29gnR0']) : void 0,
                                           tooltipColor: d ? m.TooltipColors.GREEN : void 0,
                                           tooltipForceOpen: d || void 0,
                                           onMouseEnter: this.handleMouseEnterMute,
@@ -291,7 +291,7 @@ class ej extends r.PureComponent {
                                                           position: 'top',
                                                           align: 'center',
                                                           shouldShow: !0,
-                                                          renderPopout: () => (0, i.jsx)(Y.Z, {}),
+                                                          renderPopout: () => (0, i.jsx)(W.Z, {}),
                                                           children: this.renderSettingsGear
                                                       });
                                                   case s.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK:
@@ -396,7 +396,7 @@ class ej extends r.PureComponent {
                 (0, g.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 659580));
                     return () =>
-                        (0, i.jsx)(N.Gt, {
+                        (0, i.jsx)(S.Gt, {
                             value: t,
                             children: (0, i.jsx)(e, {
                                 onClose: g.Zy,
@@ -411,7 +411,7 @@ class ej extends r.PureComponent {
                 (0, g.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 659580));
                     return () =>
-                        (0, i.jsx)(N.Gt, {
+                        (0, i.jsx)(S.Gt, {
                             value: t,
                             children: (0, i.jsx)(e, {
                                 onClose: g.Zy,
@@ -509,9 +509,9 @@ function eD() {
         }),
         { mute: f, selfMute: _, suppress: v } = (0, ei.Z)(g),
         { selfDeaf: T, deaf: b } = (0, en.Z)(g),
-        Z = (0, o.e7)([A.C], () => {
+        Z = (0, o.e7)([x.C], () => {
             var e;
-            return (0, x.fD)() ? (null === (e = A.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
+            return (0, A.fD)() ? (null === (e = x.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
         L = (0, o.e7)([em.ZP], () => em.ZP.getPremiumTypeSubscription()),
         P = (0, o.e7)([es.Z], () => es.Z.getSpeakingWhileMuted()),
@@ -519,18 +519,18 @@ function eD() {
         O = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || y || eI.s.isDisallowPopupsSet(),
         R = (0, V.b)(),
         j = (0, o.e7)([G.Z], () => null != G.Z.getAwaitingRemoteSessionInfo()),
-        M = (0, W.D)(),
+        M = (0, Y.D)(),
         w = (0, E.u)(),
         U = (0, K.t)(),
         B = eE.ZP.canUsePremiumGuildMemberProfile(t),
-        H = (null == t ? void 0 : null === (e = t.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === eA.rL,
-        Y = 'account';
+        H = (null == t ? void 0 : null === (e = t.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === ex.rL,
+        W = 'account';
     (0, I.j)({
-        location: Y + ' auto on',
+        location: W + ' auto on',
         autoTrackExposure: !0
     }),
         (0, I.j)({
-            location: Y + ' auto off',
+            location: W + ' auto off',
             autoTrackExposure: !1
         });
     let q = (0, o.e7)([J.Z], () => J.Z.hasHadOtherUserPlaySoundInSession()),
@@ -557,14 +557,14 @@ function eD() {
                 !e && !!a && !c && null != n && n
             );
         })(),
-        { analyticsLocations: Q } = (0, N.ZP)(S.Z.ACCOUNT),
+        { analyticsLocations: Q } = (0, S.ZP)(N.Z.ACCOUNT),
         $ = {
             avatar: [],
             settings: []
         };
     return (
         !O && (X && $.settings.push(s.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), M && (1 === w ? $.settings.push(s.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : $.settings.push(s.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), q && $.settings.push(s.z.SOUNDBOARD_VOLUME_EDUCATION), U && $.settings.push(s.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), B && $.settings.push(s.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), H && $.avatar.push(s.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)),
-        (0, i.jsx)(N.Gt, {
+        (0, i.jsx)(S.Gt, {
             value: Q,
             children: (0, i.jsx)(ej, {
                 currentUser: t,
@@ -614,8 +614,8 @@ function eM(e) {
                     className: eZ.hasBuildOverride,
                     'aria-hidden': !0
                 })),
-        (0, i.jsx)(eS.Z, {
-            tooltipText: null != t ? ex.intl.formatToPlainString(ex.t.Gzh6ZG, { webBuildOverride: t.id }) : ex.intl.string(ex.t.cduTBA),
+        (0, i.jsx)(eN.Z, {
+            tooltipText: null != t ? eA.intl.formatToPlainString(eA.t.Gzh6ZG, { webBuildOverride: t.id }) : eA.intl.string(eA.t.cduTBA),
             onClick: r,
             onContextMenu: l,
             innerClassName: null != t || n ? eZ.buildOverrideButton : null,
@@ -632,17 +632,17 @@ function ew(e) {
         C = n || l ? m.MicrophoneDenyIcon : _,
         { mode: v } = (0, er.Z)({ location: 'RTC Microphone Button' }),
         T = null != o ? o : (0, L.Z)(t, n, l, a, v === er.B.GroupedButtonsRedMic),
-        { analyticsLocations: b } = (0, N.ZP)(S.Z.AUDIO_INPUT_BUTTON);
+        { analyticsLocations: b } = (0, S.ZP)(N.Z.AUDIO_INPUT_BUTTON);
     r.useEffect(() => () => E(), [f, E]);
-    let A = r.useCallback(
+    let x = r.useCallback(
         (e) => {
             g(e, b);
         },
         [g, b]
     );
-    return (0, i.jsx)(N.Gt, {
+    return (0, i.jsx)(S.Gt, {
         value: b,
-        children: (0, i.jsx)(eS.Z, {
+        children: (0, i.jsx)(eN.Z, {
             tooltipText: T,
             tooltipColor: s,
             tooltipForceOpen: c,
@@ -660,9 +660,9 @@ function ew(e) {
             }),
             iconForeground: f ? eZ.strikethrough : null,
             onClick: p,
-            onContextMenu: A,
+            onContextMenu: x,
             role: 'switch',
-            'aria-label': ex.intl.string(ex.t['w4m94+']),
+            'aria-label': eA.intl.string(eA.t['w4m94+']),
             'aria-checked': f,
             disabled: a
         })
@@ -677,7 +677,7 @@ function ek(e) {
             events: { onMouseEnter: p, onMouseLeave: g }
         } = (0, d.l)(c ? 'undeafen' : 'deafen'),
         f = n ? m.HeadphonesDenyIcon : u,
-        { analyticsLocations: _ } = (0, N.ZP)(S.Z.AUDIO_OUTPUT_BUTTON);
+        { analyticsLocations: _ } = (0, S.ZP)(N.Z.AUDIO_OUTPUT_BUTTON);
     r.useEffect(() => () => h(), [c, h]);
     let E = r.useCallback(
         (e) => {
@@ -685,9 +685,9 @@ function ek(e) {
         },
         [s, _]
     );
-    return (0, i.jsx)(N.Gt, {
+    return (0, i.jsx)(S.Gt, {
         value: _,
-        children: (0, i.jsx)(eS.Z, {
+        children: (0, i.jsx)(eN.Z, {
             tooltipText: (0, Z.Z)(t, n, l),
             onMouseEnter: p,
             onMouseLeave: g,
@@ -702,7 +702,7 @@ function ek(e) {
             innerClassName: a()({ [eZ.redIcon]: n }),
             iconForeground: c ? eZ.strikethrough : null,
             role: 'switch',
-            'aria-label': ex.intl.string(ex.t.wjcRFR),
+            'aria-label': eA.intl.string(eA.t.wjcRFR),
             'aria-checked': c,
             disabled: l
         })

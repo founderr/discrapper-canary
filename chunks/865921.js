@@ -20,7 +20,7 @@ function _(e) {
         { blockedPayments: _, hasFetchedSkus: b, paymentSources: x, hasFetchedPaymentSources: g, application: m, skusById: h, selectedSkuId: C } = (0, s.usePaymentContext)(),
         { isGift: S } = (0, d.wD)(),
         [B, k] = o.useState(!0),
-        [v, j] = (0, a.Wu)([c.Z], () => [c.Z.isFetchingCategories, c.Z.error]);
+        [v, T] = (0, a.Wu)([c.Z], () => [c.Z.isFetchingCategories, c.Z.error]);
     if (
         (o.useEffect(() => {
             let e = null != m;
@@ -43,6 +43,6 @@ function _(e) {
     )
         return (0, i.jsx)(u.Z, {});
     if (_) return (0, i.jsx)(r.Vq, { onClose: n });
-    if (null != j) return (0, i.jsx)(f.Z, { onClose: n });
+    if (null != T) return (0, i.jsx)(f.Z, { onClose: n });
     return null;
 }

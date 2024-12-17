@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return S;
     }
 });
 var i = n(200651),
@@ -22,18 +22,18 @@ var i = n(200651),
     I = n(287746),
     C = n(388032),
     v = n(837199),
-    S = n(215191);
-function N(e) {
+    N = n(215191);
+function S(e) {
     let { channel: t, baseChannelId: n } = e,
-        N = (0, E.ZP)(t),
+        S = (0, E.ZP)(t),
         T = (0, h.K)(),
         b = (0, h.V)(),
-        A = (0, l.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
-        x = (0, l.e7)([u.Z], () => u.Z.isSpam(t.id)),
+        x = (0, l.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
+        A = (0, l.e7)([u.Z], () => u.Z.isSpam(t.id)),
         Z = (0, p.V)(t.id, t.getRecipientId()),
         L = r.useCallback(() => {
-            f.Z.closeChannelSidebar(_.uZ), A && T && (0, g.Kh)(t.id), x && b && (0, g.Kh)(t.id);
-        }, [t.id, x, b, A, T]),
+            f.Z.closeChannelSidebar(_.uZ), x && T && (0, g.Kh)(t.id), A && b && (0, g.Kh)(t.id);
+        }, [t.id, A, b, x, T]),
         P = r.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(C.intl.string(C.t.pIQ3h4), a.ToastType.FAILURE));
         }, []),
@@ -60,21 +60,21 @@ function N(e) {
                 'aria-label': C.intl.string(C.t.BIYAqa),
                 children: (0, c.ud)({
                     channel: t,
-                    channelName: N,
+                    channelName: S,
                     inSidebar: !0
                 })
             }),
-            x &&
+            A &&
                 (0, i.jsxs)('div', {
-                    className: S.hamBanner,
+                    className: N.hamBanner,
                     children: [
                         (0, i.jsx)(a.Text, {
-                            className: S.__invalid_hamBannerText,
+                            className: N.__invalid_hamBannerText,
                             variant: 'text-sm/normal',
                             children: C.intl.string(C.t.XVOKgo)
                         }),
                         (0, i.jsx)(a.Button, {
-                            className: S.hamBannerButton,
+                            className: N.hamBannerButton,
                             size: a.ButtonSizes.SMALL,
                             onClick: () => y(t, Z),
                             children: C.intl.string(C.t.koqL3d)

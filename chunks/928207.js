@@ -18,31 +18,31 @@ var r = n(120356),
     I = n(278605),
     C = n(299657),
     v = n(594174),
-    S = n(74538),
-    N = n(981631),
+    N = n(74538),
+    S = n(981631),
     T = n(474936),
     b = n(388032),
-    A = n(707858);
-let x = s.ZP.connectStores([v.default], () => ({ user: v.default.getCurrentUser() }))(
+    x = n(707858);
+let A = s.ZP.connectStores([v.default], () => ({ user: v.default.getCurrentUser() }))(
     (0, m.Z)(
         (0, h.Z)((e) => {
             let { isAuthenticated: t, user: n } = e,
                 { analyticsLocations: r } = (0, f.ZP)(g.Z.HOME_PAGE_PREMIUM_TAB),
                 s = (0, I.xP)('ApplicationStoreHome'),
-                h = (0, S.I5)(n),
+                h = (0, N.I5)(n),
                 m = s && !h,
                 v = (0, p.ZP)();
             return t
                 ? (0, i.jsxs)('div', {
-                      className: A.homeWrapperNormal,
+                      className: x.homeWrapperNormal,
                       children: [
                           (0, i.jsx)(u.Z, {
-                              section: N.jXE.NAVIGATION,
+                              section: S.jXE.NAVIGATION,
                               children: (0, i.jsxs)(E.Z, {
                                   isAuthenticated: t,
-                                  className: l()(A.headerBar, {
-                                      [A.headerBarV2LightBackground]: m && !(0, c.wj)(v),
-                                      [A.headerBarV2DarkBackground]: m && (0, c.wj)(v)
+                                  className: l()(x.headerBar, {
+                                      [x.headerBarV2LightBackground]: m && !(0, c.wj)(v),
+                                      [x.headerBarV2DarkBackground]: m && (0, c.wj)(v)
                                   }),
                                   children: [
                                       (0, i.jsx)(E.Z.Icon, {
@@ -61,14 +61,14 @@ let x = s.ZP.connectStores([v.default], () => ({ user: v.default.getCurrentUser(
                                       ? (0, i.jsx)(_.Z, {
                                             align: _.Z.Align.CENTER,
                                             justify: _.Z.Justify.CENTER,
-                                            children: (0, i.jsx)(d.Spinner, { className: A.spinner })
+                                            children: (0, i.jsx)(d.Spinner, { className: x.spinner })
                                         })
                                       : (0, i.jsx)(C.Z, { entrypoint: T.EZ.ApplicationStoreHome })
                           })
                       ]
                   })
-                : (0, i.jsx)(a.l_, { to: N.Z5c.LOGIN });
+                : (0, i.jsx)(a.l_, { to: S.Z5c.LOGIN });
         })
     )
 );
-t.Z = x;
+t.Z = A;

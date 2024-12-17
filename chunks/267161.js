@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return A;
+            return x;
         },
         useAppSidebarState: function () {
             return T;
@@ -26,8 +26,8 @@ var i = n(200651),
     I = n(998502),
     C = n(950796),
     v = n(981631),
-    S = n(741764),
-    N = n(553512);
+    N = n(741764),
+    S = n(553512);
 let T = (0, l.U)(() => ({ isOpen: !0 }));
 function b() {
     let e = (0, a.e7)([E.Z], () => E.Z.getChannelId()),
@@ -36,13 +36,13 @@ function b() {
     return (
         null != n &&
         (0, i.jsxs)('div', {
-            className: N.guild,
+            className: S.guild,
             children: [
                 (0, i.jsx)(u.Z, {
                     guild: n,
                     size: u.Z.Sizes.SMALLER,
                     active: !0,
-                    className: N.guildIcon
+                    className: S.guildIcon
                 }),
                 (0, i.jsx)(o.Text, {
                     variant: 'text-sm/medium',
@@ -52,16 +52,16 @@ function b() {
         })
     );
 }
-function A() {
+function x() {
     r.useLayoutEffect(() => {
-        I.ZP.setMinimumSize(S.J, S.N);
+        I.ZP.setMinimumSize(N.J, N.N);
     }, []);
     let e = (0, d.TH)('AppTitleBar'),
         t = T((e) => e.isOpen),
         { hasBugReporterAccess: n } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     return (
         r.useLayoutEffect(() => {
-            I.ZP.setMinimumSize(S.J, S.N);
+            I.ZP.setMinimumSize(N.J, N.N);
         }, []),
         (0, i.jsx)(C.T, {
             leading:
@@ -70,14 +70,14 @@ function A() {
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(o.Clickable, {
-                            className: N.button,
+                            className: S.button,
                             onClick: () => {
                                 T.setState({ isOpen: !T.getState().isOpen });
                             },
-                            children: (0, i.jsx)(x, {})
+                            children: (0, i.jsx)(A, {})
                         }),
                         (0, i.jsx)(o.Clickable, {
-                            className: N.button,
+                            className: S.button,
                             onClick: () => {
                                 s.Z.open(v.oAB.ACCOUNT);
                             },
@@ -90,15 +90,15 @@ function A() {
                 }),
             title: !1,
             trailing: (0, i.jsxs)(i.Fragment, {
-                children: [(0, i.jsx)(g.Z, { className: N.button }), n ? (0, i.jsx)(m.Z, { className: N.button }) : (0, i.jsx)(h.Z, { className: N.button }), (0, i.jsx)(p.Z, { className: N.button })]
+                children: [(0, i.jsx)(g.Z, { className: S.button }), n ? (0, i.jsx)(m.Z, { className: S.button }) : (0, i.jsx)(h.Z, { className: S.button }), (0, i.jsx)(p.Z, { className: S.button })]
             })
         })
     );
 }
-function x() {
+function A() {
     return (0, i.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
-        className: N.icon,
+        className: S.icon,
         width: '24',
         height: '24',
         viewBox: '0 0 24 24',

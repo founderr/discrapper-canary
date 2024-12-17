@@ -1,6 +1,6 @@
 n.d(t, {
     L: function () {
-        return h;
+        return f;
     },
     T: function () {
         return _;
@@ -20,9 +20,9 @@ var i = n(200651),
     p = n(680674),
     x = n(74316);
 let _ = { NITRO_BASIC: u.nitroBasic },
-    h = l.memo(function (e) {
-        let { message: t, handleClick: n, handleClose: s, buttonText: h, useInitialGlow: f, useGlowOnHover: j, handleImageClick: m, className: L, analyticsLocations: E, upsellType: S, themeOverride: g = _.NITRO_BASIC } = e,
-            [I, M] = l.useState(f),
+    f = l.memo(function (e) {
+        let { message: t, handleClick: n, handleClose: s, buttonText: f, useInitialGlow: h, useGlowOnHover: j, handleImageClick: m, className: L, analyticsLocations: E, upsellType: S, themeOverride: g = _.NITRO_BASIC } = e,
+            [I, M] = l.useState(h),
             [v, y] = l.useState(p);
         return (
             l.useEffect(() => {
@@ -94,7 +94,7 @@ let _ = { NITRO_BASIC: u.nitroBasic },
                                         className: u.buttonNitroIcon,
                                         src: x
                                     }),
-                                    h
+                                    f
                                 ]
                             })
                         }),

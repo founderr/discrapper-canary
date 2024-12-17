@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return x;
     }
 });
 var i = n(200651),
@@ -22,17 +22,17 @@ var i = n(200651),
     I = n(355350),
     C = n(307947),
     v = n(125855),
-    S = n(687683),
-    N = n(981631),
+    N = n(687683),
+    S = n(981631),
     T = n(388032),
     b = n(300755);
-function A() {
+function x() {
     let e = r.useRef(null),
         t = (0, E.Z)(),
         n = (0, I.w)(),
         l = (0, g.V)(),
-        A = (0, d.N)(),
-        x = (0, u.Z)('message-requests-spam-list'),
+        x = (0, d.N)(),
+        A = (0, u.Z)('message-requests-spam-list'),
         { channelId: Z } = (0, _._)(),
         L = r.useCallback(() => {
             (0, c.showToast)((0, c.createToast)(T.intl.string(T.t.EDYbS0), c.ToastType.FAILURE));
@@ -42,7 +42,7 @@ function A() {
             P(t.map((e) => e.channel.id));
         }, [t, P]);
     r.useEffect(() => {
-        p.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), m.Z.increment({ name: s.V.SPAM_MESSAGE_REQUEST_VIEW });
+        p.default.track(S.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), m.Z.increment({ name: s.V.SPAM_MESSAGE_REQUEST_VIEW });
     }, []);
     let O = r.useCallback(
             (e) => {
@@ -76,7 +76,7 @@ function A() {
                         className: b.sectionTitle,
                         children: [
                             T.intl.format(T.t.C79Edn, { count: n }),
-                            A && n > 0
+                            x && n > 0
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(c.Text, {
@@ -102,12 +102,12 @@ function A() {
                     },
                     'message-requests-spam-title'
                 ),
-            [n, y, A]
+            [n, y, x]
         );
     return 0 === t.length
-        ? (0, i.jsx)(C.Z, { section: S.pS.SPAM })
+        ? (0, i.jsx)(C.Z, { section: N.pS.SPAM })
         : (0, i.jsx)(o.bG, {
-              navigator: x,
+              navigator: A,
               children: (0, i.jsx)(o.SJ, {
                   children: (n) => {
                       let { ref: r, role: l, ...a } = n;
@@ -123,8 +123,8 @@ function A() {
                               },
                               paddingTop: 24,
                               paddingBottom: 24,
-                              sectionHeight: S.oi,
-                              rowHeight: S.WN,
+                              sectionHeight: N.oi,
+                              rowHeight: N.WN,
                               renderSection: R,
                               renderRow: O,
                               sections: [t.length],

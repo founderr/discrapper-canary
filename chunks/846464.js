@@ -17,8 +17,8 @@ var l = n(120356),
     p = n(563132),
     x = n(409813),
     _ = n(614223),
-    h = n(48175),
-    f = n(474936),
+    f = n(48175),
+    h = n(474936),
     j = n(388032),
     m = n(82227);
 function L(e) {
@@ -35,8 +35,8 @@ function L(e) {
                 i(n);
                 let C = x.h8.PLAN_SELECT,
                     d = (0, u.k5)(t);
-                (d === f.Si.TIER_1 || d === f.Si.TIER_2) && n === f.Si.TIER_0 && !s && (C = x.h8.WHAT_YOU_LOSE);
-                let c = (0, h.T)({
+                (d === h.Si.TIER_1 || d === h.Si.TIER_2) && n === h.Si.TIER_0 && !s && (C = x.h8.WHAT_YOU_LOSE);
+                let c = (0, f.T)({
                         userTrialOffer: r,
                         isGift: s,
                         skuId: n

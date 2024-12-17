@@ -37,14 +37,14 @@ let g = {},
         id: null,
         justChanged: !1
     },
-    S = {
+    N = {
         id: null,
         justChanged: !1
     },
-    N = /\(([^)]+)\)/;
+    S = /\(([^)]+)\)/;
 function T(e) {
     if ((0, d.getPlatform)() === d.PlatformTypes.WINDOWS) {
-        let t = e.name.match(N);
+        let t = e.name.match(S);
         if (null != t) return t[1];
     }
     return e.name;
@@ -62,7 +62,7 @@ function b(e, t, n) {
             }
           : e;
 }
-class A extends (i = a.ZP.DeviceSettingsStore) {
+class x extends (i = a.ZP.DeviceSettingsStore) {
     initialize(e) {
         this.waitFor(u.Z, c.Z), (f = null != e ? e : g);
     }
@@ -85,12 +85,12 @@ class A extends (i = a.ZP.DeviceSettingsStore) {
         return I;
     }
     get lastOutputSystemDevice() {
-        return S;
+        return N;
     }
 }
-p(A, 'displayName', 'ConnectedDeviceStore'),
-    p(A, 'persistKey', 'ConnectedDeviceStore'),
-    (t.Z = new A(o.Z, {
+p(x, 'displayName', 'ConnectedDeviceStore'),
+    p(x, 'persistKey', 'ConnectedDeviceStore'),
+    (t.Z = new x(o.Z, {
         MEDIA_ENGINE_DEVICES: function (e) {
             let { inputDevices: t, outputDevices: n } = e,
                 i = {};
@@ -104,12 +104,12 @@ p(A, 'displayName', 'ConnectedDeviceStore'),
                 });
             let r = {};
             if (
-                ((S.justChanged = !1),
+                ((N.justChanged = !1),
                 n.forEach((e) => {
                     if (((r[T(e)] = e.id), e.id === m.w5)) {
                         var t;
                         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-                        n !== S.id && (S.justChanged = !0), (S.id = n);
+                        n !== N.id && (N.justChanged = !0), (N.id = n);
                     }
                 }),
                 !_)

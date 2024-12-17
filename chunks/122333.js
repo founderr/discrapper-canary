@@ -19,12 +19,12 @@ var l = n(481060),
     I = n(594174),
     C = n(823379),
     v = n(358085),
-    S = n(929809),
-    N = n(179645),
+    N = n(929809),
+    S = n(179645),
     T = n(701476),
     b = n(785997),
-    A = n(981631),
-    x = n(188785),
+    x = n(981631),
+    A = n(188785),
     Z = n(630724);
 function L() {
     null != i && (0, l.closeModal)(i);
@@ -39,7 +39,7 @@ class P extends o.Z {
     handleConnectionOpen() {
         var e;
         let t,
-            a = N.Z.getType();
+            a = S.Z.getType();
         if (null == a) return;
         switch (a) {
             case T.M5.INVITE_UNCLAIMED:
@@ -102,25 +102,25 @@ class P extends o.Z {
                                 });
                         },
                         {
-                            onCloseRequest: A.dG4,
+                            onCloseRequest: x.dG4,
                             onCloseCallback: e,
                             modalKey: i
                         }
                     );
                 },
-                predicate: () => P() && !x.a
+                predicate: () => P() && !A.a
             },
             {
                 key: 'New User Age Gate',
                 open: c.i,
-                predicate: () => y && !P() && !x.a
+                predicate: () => y && !P() && !A.a
             },
             {
                 key: 'Claim Account Modal',
                 open: (e) => c.j(v.isPlatformEmbedded, e),
                 predicate: () => {
                     var e;
-                    return !o && null != I.default.getCurrentUser() && !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !x.a && !(0, h.g)('new_user_manager');
+                    return !o && null != I.default.getCurrentUser() && !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !A.a && !(0, h.g)('new_user_manager');
                 }
             },
             {
@@ -128,7 +128,7 @@ class P extends o.Z {
                 open: (e) => (0, d.hk)(L, null != e ? e : void 0),
                 predicate: () => {
                     var e;
-                    return o && !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !x.a;
+                    return o && !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !A.a;
                 }
             },
             {
@@ -149,7 +149,7 @@ class P extends o.Z {
             }
         ]),
             (t = () => {
-                S.H(), m.Z.flowStep(Z.MK.ANY, Z.EW.NUF_COMPLETE, !0);
+                N.H(), m.Z.flowStep(Z.MK.ANY, Z.EW.NUF_COMPLETE, !0);
             }),
             [...e].reverse().forEach((e) => {
                 let n = t;

@@ -18,12 +18,12 @@ var i = n(200651),
     I = n(115130),
     C = n(812206),
     v = n(770146),
-    S = n(600164),
-    N = n(606081),
+    N = n(600164),
+    S = n(606081),
     T = n(252618),
     b = n(100159),
-    A = n(646288),
-    x = n(984370),
+    x = n(646288),
+    A = n(984370),
     Z = n(706454),
     L = n(210887),
     P = n(430824),
@@ -42,8 +42,8 @@ var i = n(200651),
     V = n(73346),
     F = n(3570),
     z = n(689796),
-    Y = n(15470),
-    W = n(506648),
+    W = n(15470),
+    Y = n(506648),
     K = n(449275),
     q = n(445986),
     X = n(119520),
@@ -134,24 +134,24 @@ class ec extends r.PureComponent {
     }
     renderHeader(e, t) {
         let { channel: n, isAuthenticated: l } = this.props;
-        return (0, i.jsx)(x.Z, {
+        return (0, i.jsx)(A.Z, {
             isAuthenticated: l,
             toolbar: this.renderHeaderToolbar(e, t),
             children:
                 null != n
                     ? (0, i.jsxs)(r.Fragment, {
                           children: [
-                              (0, i.jsx)(x.Z.Icon, {
+                              (0, i.jsx)(A.Z.Icon, {
                                   icon: d.TagIcon,
                                   'aria-label': ea.intl.string(ea.t['P1/Erq'])
                               }),
-                              (0, i.jsx)(x.Z.Title, { children: n.name })
+                              (0, i.jsx)(A.Z.Title, { children: n.name })
                           ]
                       })
                     : null != t && t.premium
                       ? (0, i.jsxs)(r.Fragment, {
                             children: [
-                                (0, i.jsx)(x.Z.Icon, {
+                                (0, i.jsx)(A.Z.Icon, {
                                     icon: d.NitroWheelIcon,
                                     'aria-label': ea.intl.string(ea.t.Ipxkoq)
                                 }),
@@ -161,11 +161,11 @@ class ec extends r.PureComponent {
                       : null != t
                         ? (0, i.jsxs)(r.Fragment, {
                               children: [
-                                  (0, i.jsx)(x.Z.Icon, {
+                                  (0, i.jsx)(A.Z.Icon, {
                                       icon: d.TagIcon,
                                       'aria-label': ea.intl.string(ea.t['P1/Erq'])
                                   }),
-                                  (0, i.jsx)(x.Z.Title, { children: t.name })
+                                  (0, i.jsx)(A.Z.Title, { children: t.name })
                               ]
                           })
                         : null
@@ -241,7 +241,7 @@ class ec extends r.PureComponent {
         });
     }
     renderFeatures(e) {
-        return (0, i.jsx)(W.Z, { sku: e });
+        return (0, i.jsx)(Y.Z, { sku: e });
     }
     renderSystemRequirements(e) {
         return null == e.systemRequirements || 0 === Object.keys(e.systemRequirements).length
@@ -262,7 +262,7 @@ class ec extends r.PureComponent {
                     children: ea.intl.format(ea.t.tluX4O, { name: n.name })
                 }),
                 (0, i.jsx)(f.Z, {}),
-                (0, i.jsx)(Y.Z, {
+                (0, i.jsx)(W.Z, {
                     applicationId: e.id,
                     blurb: t.summary,
                     description: l,
@@ -290,22 +290,22 @@ class ec extends r.PureComponent {
         let r = [],
             l = n.getSplashURL(1024);
         null != l && r.push(l), null != t.headerLogoLightTheme && r.unshift((0, V._W)(n.id, t.headerLogoLightTheme, 1024, 'jpg'));
-        let a = N.Z.Product({
+        let a = S.Z.Product({
                 name: e.name,
                 description: null != e.summary && '' !== e.summary ? e.summary : t.tagline,
-                image: N.Z.Product.Image(r),
+                image: S.Z.Product.Image(r),
                 sku: e.id
             }),
             o = e.getPrice();
         if (null != o) {
             let { amount: e, currency: t } = o;
-            a.offers = N.Z.Offer({
+            a.offers = S.Z.Offer({
                 priceCurrency: t.toUpperCase(),
                 price: (0, H.T4)(e, t, { style: 'decimal' })
             });
         }
-        let s = N.Z.ItemPage({ mainEntity: a });
-        return (0, i.jsx)(N.Z, { data: s });
+        let s = S.Z.ItemPage({ mainEntity: a });
+        return (0, i.jsx)(S.Z, { data: s });
     }
     renderSmall(e, t, n) {
         return (0, i.jsxs)('div', {
@@ -344,9 +344,9 @@ class ec extends r.PureComponent {
             return (0, i.jsxs)(r.Fragment, {
                 children: [
                     this.renderHeader(e, t),
-                    (0, i.jsx)(S.Z, {
-                        align: S.Z.Align.CENTER,
-                        justify: S.Z.Justify.CENTER,
+                    (0, i.jsx)(N.Z, {
+                        align: N.Z.Align.CENTER,
+                        justify: N.Z.Justify.CENTER,
                         children: (0, i.jsx)(d.Spinner, { className: eo.spinner })
                     })
                 ]
@@ -513,7 +513,7 @@ class ec extends r.PureComponent {
                             children: (0, i.jsxs)('div', {
                                 className: a()(eo.headerPurchase, { [eo.active]: s }),
                                 children: [
-                                    null != t ? (0, A.Z)(t) : null,
+                                    null != t ? (0, x.Z)(t) : null,
                                     null != e && null != t ? (0, i.jsx)('div', { children: 'deprecated!' }) : null,
                                     (0, i.jsx)(Q.Z, {
                                         messageStyle: Q.G.SHORT,
@@ -543,9 +543,9 @@ class ec extends r.PureComponent {
             es(this, 'renderListing', () => {
                 let { application: e, storeListing: t, sku: n, pageSize: r } = this.props;
                 return null == e || null == n || null == t || t.isSlimDirectoryVersion()
-                    ? (0, i.jsx)(S.Z, {
-                          align: S.Z.Align.CENTER,
-                          justify: S.Z.Justify.CENTER,
+                    ? (0, i.jsx)(N.Z, {
+                          align: N.Z.Align.CENTER,
+                          justify: N.Z.Justify.CENTER,
                           children: (0, i.jsx)(d.Spinner, {})
                       })
                     : r === ei.b.SMALL

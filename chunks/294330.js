@@ -26,18 +26,18 @@ var i = n(200651),
     I = n(134432),
     C = n(695346),
     v = n(768581),
-    S = n(356164),
-    N = n(890064),
+    N = n(356164),
+    S = n(890064),
     T = n(981631),
     b = n(388032),
-    A = n(125285),
-    x = n(129512),
+    x = n(125285),
+    A = n(129512),
     Z = n(330065),
     L = n(755386);
 function P(e) {
     let { guild: t, onClick: l, onView: o } = e,
         [f, _] = r.useState(!1),
-        [S, P] = r.useState(!1),
+        [N, P] = r.useState(!1),
         [y, O] = r.useState(!1),
         R = r.useCallback(async () => {
             P(!0);
@@ -85,7 +85,7 @@ function P(e) {
             if (w) return L;
             switch (M) {
                 case T.BRd.DARK:
-                    return x;
+                    return A;
                 case T.BRd.LIGHT:
                     return Z;
             }
@@ -101,14 +101,14 @@ function P(e) {
         ),
         G = C.Sb.useSetting();
     return (0, i.jsxs)('div', {
-        className: A.container,
+        className: x.container,
         children: [
-            S &&
+            N &&
                 (0, i.jsx)('div', {
-                    className: A.spinnerContainer,
+                    className: x.spinnerContainer,
                     children: (0, i.jsx)(c.Spinner, {
                         type: c.Spinner.Type.PULSING_ELLIPSIS,
-                        className: A.spinner
+                        className: x.spinner
                     })
                 }),
             (0, i.jsx)(s.$, {
@@ -116,36 +116,36 @@ function P(e) {
                 active: !f,
                 threshold: 0.55,
                 children: (0, i.jsxs)(g.Z, {
-                    className: A.card,
+                    className: x.card,
                     onClick: R,
-                    disabled: S,
+                    disabled: N,
                     onContextMenu: D,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: A.header,
+                            className: x.header,
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: a()(A.banner, { [A.loaded]: y }),
+                                    className: a()(x.banner, { [x.loaded]: y }),
                                     children: (0, i.jsx)('img', {
                                         src: k,
                                         alt: '',
-                                        className: A.bannerImage,
+                                        className: x.bannerImage,
                                         onLoad: () => O(!0)
                                     })
                                 }),
                                 G &&
-                                    (0, i.jsx)(N.Z, {
+                                    (0, i.jsx)(S.Z, {
                                         guild: t,
-                                        className: A.contextMenu
+                                        className: x.contextMenu
                                     }),
                                 (0, i.jsx)('div', {
-                                    className: A.icon,
+                                    className: x.icon,
                                     children: (0, i.jsx)(p.ZP, {
                                         mask: p.ZP.Masks.SQUIRCLE,
                                         width: 48,
                                         height: 48,
                                         children: (0, i.jsx)('div', {
-                                            className: A.iconMask,
+                                            className: x.iconMask,
                                             children: (0, i.jsx)(p.ZP, {
                                                 mask: p.ZP.Masks.SQUIRCLE,
                                                 width: 40,
@@ -153,7 +153,7 @@ function P(e) {
                                                 children: (0, i.jsx)('img', {
                                                     src: U,
                                                     alt: '',
-                                                    className: A.avatar
+                                                    className: x.avatar
                                                 })
                                             })
                                         })
@@ -162,39 +162,39 @@ function P(e) {
                             ]
                         }),
                         (0, i.jsxs)('div', {
-                            className: A.guildDetails,
+                            className: x.guildDetails,
                             children: [
                                 (0, i.jsxs)('div', {
-                                    className: A.title,
+                                    className: x.title,
                                     children: [
                                         (0, i.jsx)(E.Z, {
-                                            className: A.guildBadge,
+                                            className: x.guildBadge,
                                             guild: t,
                                             tooltipColor: c.Tooltip.Colors.PRIMARY
                                         }),
                                         (0, i.jsx)(c.Heading, {
                                             variant: 'heading-md/semibold',
-                                            className: A.guildName,
+                                            className: x.guildName,
                                             children: t.name
                                         })
                                     ]
                                 }),
                                 (0, i.jsx)(c.Text, {
-                                    className: A.description,
+                                    className: x.description,
                                     variant: 'text-sm/normal',
                                     color: 'header-secondary',
                                     children: t.description
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: A.memberDetails,
+                                    className: x.memberDetails,
                                     children: [
                                         null != t.presenceCount &&
                                             (0, i.jsxs)('div', {
-                                                className: A.memberDetailsCount,
+                                                className: x.memberDetailsCount,
                                                 children: [
-                                                    (0, i.jsx)('div', { className: A.presenceCountDot }),
+                                                    (0, i.jsx)('div', { className: x.presenceCountDot }),
                                                     (0, i.jsx)(c.Text, {
-                                                        className: A.memberDetailsText,
+                                                        className: x.memberDetailsText,
                                                         variant: 'text-xs/normal',
                                                         color: 'header-secondary',
                                                         children: b.intl.format(b.t['LC+S+v'], { membersOnline: t.presenceCount })
@@ -203,11 +203,11 @@ function P(e) {
                                             }),
                                         null != t.memberCount &&
                                             (0, i.jsxs)('div', {
-                                                className: A.memberDetailsCount,
+                                                className: x.memberDetailsCount,
                                                 children: [
-                                                    (0, i.jsx)('div', { className: A.memberCountDot }),
+                                                    (0, i.jsx)('div', { className: x.memberCountDot }),
                                                     (0, i.jsx)(c.Text, {
-                                                        className: A.memberDetailsText,
+                                                        className: x.memberDetailsText,
                                                         variant: 'text-xs/normal',
                                                         color: 'header-secondary',
                                                         children: b.intl.format(b.t.zRl6XV, { count: t.memberCount })
@@ -226,7 +226,7 @@ function P(e) {
 }
 function y(e) {
     let { guildId: t, onClick: n, onView: r } = e,
-        l = (0, o.e7)([S.Z], () => S.Z.getGuild(t));
+        l = (0, o.e7)([N.Z], () => N.Z.getGuild(t));
     return null == l
         ? null
         : (0, i.jsx)(P, {
@@ -246,7 +246,7 @@ function O(e) {
                           {
                               state: n,
                               cleanUp: r,
-                              children: (0, i.jsx)(f.Z, { className: A.placeholder })
+                              children: (0, i.jsx)(f.Z, { className: x.placeholder })
                           },
                           e
                       )
@@ -280,7 +280,7 @@ function O(e) {
             [t, n]
         );
     return (0, i.jsx)('div', {
-        className: A.transitionGroup,
+        className: x.transitionGroup,
         children: (0, i.jsx)(c.TransitionGroup, {
             items: u,
             renderItem: s,

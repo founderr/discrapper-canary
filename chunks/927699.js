@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return E;
+        return S;
     }
 }),
     t(47120);
@@ -22,9 +22,9 @@ let v = (0, m.kt)({
     id: '1',
     type: x.d4z.DM
 });
-function E(e) {
-    let { sectionTitle: n, errors: t, onTextChange: r, pendingText: m, placeholder: x, currentText: E, className: g, innerClassName: S, disabled: j = !1, disableThemedBackground: y = !1 } = e,
-        [I, P] = l.useState(null != m ? m : E),
+function S(e) {
+    let { sectionTitle: n, errors: t, onTextChange: r, pendingText: m, placeholder: x, currentText: S, className: g, innerClassName: E, disabled: j = !1, disableThemedBackground: y = !1 } = e,
+        [I, P] = l.useState(null != m ? m : S),
         [T, N] = l.useState((0, o.JM)(I)),
         b = l.useRef(!1);
     return (
@@ -33,10 +33,10 @@ function E(e) {
         }, []),
         l.useEffect(() => {
             if (void 0 === m) {
-                let e = (0, o.JM)(E);
-                P(E), N(e);
+                let e = (0, o.JM)(S);
+                P(S), N(e);
             }
-        }, [m, E]),
+        }, [m, S]),
         (0, i.jsx)('div', {
             className: s()(f.body, g),
             children: (0, i.jsxs)(d.Z, {
@@ -45,7 +45,7 @@ function E(e) {
                 disabled: j,
                 children: [
                     (0, i.jsx)(u.Z, {
-                        innerClassName: s()(f.textArea, S),
+                        innerClassName: s()(f.textArea, E),
                         editorClassName: f.editorTextArea,
                         maxCharacterCount: p.$n,
                         onChange: function (e, n, t) {

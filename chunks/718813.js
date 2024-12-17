@@ -23,7 +23,7 @@ var i,
     I = n(585483),
     C = n(981631),
     v = n(294981);
-function S(e, t, n) {
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function S(e, t, n) {
         e
     );
 }
-let N = (0, g.Un)({
+let S = (0, g.Un)({
         createPromise: () => Promise.all([n.e('23217'), n.e('33053'), n.e('8016'), n.e('17298'), n.e('76540'), n.e('17938'), n.e('22646'), n.e('34842'), n.e('48923'), n.e('30419'), n.e('8821'), n.e('18824'), n.e('38175'), n.e('43697')]).then(n.bind(n, 989804)),
         webpackId: 989804,
         name: 'UserSettings'
@@ -51,15 +51,15 @@ let N = (0, g.Un)({
         webpackId: 838819,
         name: 'CollectiblesShop'
     }),
-    A = (0, g.Un)({
+    x = (0, g.Un)({
         createPromise: () => Promise.all([n.e('63288'), n.e('33053'), n.e('17298'), n.e('7654'), n.e('98479'), n.e('31113'), n.e('60696'), n.e('58227'), n.e('16114'), n.e('62278')]).then(n.bind(n, 994763)),
         webpackId: 994763,
         name: 'GuildSettings'
     }),
-    x = {
-        [C.S9g.USER_SETTINGS]: () => (0, r.jsx)(N, {}),
+    A = {
+        [C.S9g.USER_SETTINGS]: () => (0, r.jsx)(S, {}),
         [C.S9g.CHANNEL_SETTINGS]: () => (0, r.jsx)(T, {}),
-        [C.S9g.GUILD_SETTINGS]: () => (0, r.jsx)(A, {}),
+        [C.S9g.GUILD_SETTINGS]: () => (0, r.jsx)(x, {}),
         [C.S9g.COLLECTIBLES_SHOP]: () => (0, r.jsx)(b, {})
     },
     Z = 'SHOWN',
@@ -172,7 +172,7 @@ class O extends (i = l.PureComponent) {
         };
     }
     constructor(e) {
-        super(e), S(this, 'containerRef', l.createRef());
+        super(e), N(this, 'containerRef', l.createRef());
         let t = 1,
             n = 1;
         e.mode === L && ((t = 0.93), (n = 0)),
@@ -184,7 +184,7 @@ class O extends (i = l.PureComponent) {
             });
     }
 }
-S(O, 'defaultProps', { baseLayer: !1 }), S(O, 'contextType', u.AccessibilityPreferencesContext);
+N(O, 'defaultProps', { baseLayer: !1 }), N(O, 'contextType', u.AccessibilityPreferencesContext);
 class R extends l.PureComponent {
     componentDidMount() {
         I.S.subscribe(C.CkL.LAYER_POP_ESCAPE_KEY, h.xf);
@@ -215,7 +215,7 @@ class R extends l.PureComponent {
     renderComponent(e, t, n) {
         let i;
         return (
-            (i = 'string' == typeof e ? x[e]() : (0, r.jsx)(e, {})),
+            (i = 'string' == typeof e ? A[e]() : (0, r.jsx)(e, {})),
             (0, r.jsxs)(
                 O,
                 {

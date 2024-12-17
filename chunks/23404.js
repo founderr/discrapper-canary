@@ -18,12 +18,12 @@ var i = n(200651),
     I = n(566078),
     C = n(602667),
     v = n(611855),
-    S = n(64141),
-    N = n(667105),
+    N = n(64141),
+    S = n(667105),
     T = n(860151),
     b = n(341907),
-    A = n(46140),
-    x = n(981631),
+    x = n(46140),
+    A = n(981631),
     Z = n(388032),
     L = n(444865);
 function P(e) {
@@ -32,7 +32,7 @@ function P(e) {
         r = (0, m.B6)(n.config.expiresAt),
         l = (0, m.B6)(I.r.build(n.config).rewardsExpireAt),
         a = (0, o.e7)([d.Z], () => d.Z.getState().theme),
-        u = (0, s.wj)(a) ? x.BRd.DARK : x.BRd.LIGHT,
+        u = (0, s.wj)(a) ? A.BRd.DARK : A.BRd.LIGHT,
         h = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
     return (0, i.jsxs)('div', {
         className: L.heading,
@@ -65,7 +65,7 @@ t.Z = function (e) {
     let { quest: s } = e,
         d = (0, o.e7)([p.Z], () => p.Z.isEnrolling(s.id), [s]),
         [E, I] = r.useState(!1),
-        x = r.useCallback(() => I(!0), []),
+        A = r.useCallback(() => I(!0), []),
         y = r.useCallback(() => I(!1), []),
         O = r.useCallback((e) => {
             e.stopPropagation();
@@ -83,7 +83,7 @@ t.Z = function (e) {
                     questContent: g.jn.ACTIVITY_PANEL,
                     questContentCTA: u.jZ.TRACK_PROGRESS
                 }),
-                (0, b.navigateToQuestHome)(A.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, s.id));
+                (0, b.navigateToQuestHome)(x.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, s.id));
         }, [s]),
         D = r.useCallback(() => {
             (0, u._3)({
@@ -91,9 +91,9 @@ t.Z = function (e) {
                 questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.LEARN_MORE
             }),
-                (0, b.navigateToQuestHome)(A.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, s.id);
+                (0, b.navigateToQuestHome)(x.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, s.id);
         }, [s]),
-        M = (0, N.hf)({
+        M = (0, S.hf)({
             quest: s,
             location: g.jn.ACTIVITY_PANEL
         }),
@@ -106,7 +106,7 @@ t.Z = function (e) {
         V = (0, _.D)({
             quest: s,
             taskDetails: H,
-            location: A.dr.ACTIVITY_PANEL,
+            location: x.dr.ACTIVITY_PANEL,
             questContent: g.jn.ACTIVITY_PANEL
         });
     return B || w || G
@@ -123,8 +123,8 @@ t.Z = function (e) {
                       className: a()(L.wrapper, { [L.wrapperQuestAccepted]: k }),
                       onClick: O,
                       onKeyPress: O,
-                      onFocus: x,
-                      onMouseEnter: x,
+                      onFocus: A,
+                      onMouseEnter: A,
                       onBlur: y,
                       onMouseLeave: y,
                       children: [
@@ -132,7 +132,7 @@ t.Z = function (e) {
                               className: L.utils,
                               children: [
                                   k ? (0, i.jsx)(P, { quest: s }) : (0, i.jsx)(v.Z, { textOpacity: 0.5 }),
-                                  (0, i.jsx)(S.r, {
+                                  (0, i.jsx)(N.r, {
                                       quest: s,
                                       questContent: g.jn.ACTIVITY_PANEL,
                                       shouldShowDisclosure: (null === (t = s.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,
@@ -169,7 +169,7 @@ t.Z = function (e) {
                                   className: L.rewardTileWithInstructions,
                                   quest: s,
                                   questContent: g.jn.ACTIVITY_PANEL,
-                                  location: A.dr.ACTIVITY_PANEL,
+                                  location: x.dr.ACTIVITY_PANEL,
                                   taskDetails: H
                               }),
                           (0, i.jsxs)('div', {

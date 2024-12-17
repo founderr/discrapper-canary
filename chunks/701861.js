@@ -18,11 +18,11 @@ var i = n(200651),
     I = n(417183),
     C = n(825682),
     v = n(170245),
-    S = n(981631),
-    N = n(65154),
+    N = n(981631),
+    S = n(65154),
     T = n(388032),
     b = n(401207);
-function A(e, t, n) {
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,12 +35,12 @@ function A(e, t, n) {
         e
     );
 }
-function x(e) {
+function A(e) {
     let { user: t, onSelect: n } = e,
         r = () => {
             u.Z.removeFriend(t.id, { location: 'Friends' });
         },
-        l = (0, o.e7)([g.Z], () => g.Z.supports(N.AN.VIDEO)),
+        l = (0, o.e7)([g.Z], () => g.Z.supports(S.AN.VIDEO)),
         a = t.isProvisional;
     return (0, i.jsxs)(s.Menu, {
         navId: 'friend-row',
@@ -131,7 +131,7 @@ class Z extends r.PureComponent {
                                     (0, i.jsx)(h.Z, {
                                         recipientUser: e,
                                         giftIntentType: o,
-                                        analyticsPage: S.ZY5.FRIENDS_LIST,
+                                        analyticsPage: N.ZY5.FRIENDS_LIST,
                                         shouldHighlight: t
                                     }),
                                 (0, i.jsx)(E.Z, {
@@ -154,20 +154,20 @@ class Z extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            A(this, 'peopleListItemRef', r.createRef()),
-            A(this, 'state', { isActiveRow: !1 }),
-            A(this, 'handleOpenPrivateChannel', (e) => {
+            x(this, 'peopleListItemRef', r.createRef()),
+            x(this, 'state', { isActiveRow: !1 }),
+            x(this, 'handleOpenPrivateChannel', (e) => {
                 let { user: t } = this.props;
                 e.stopPropagation();
-                let n = a().find(p.Z.getMutablePrivateChannels(), (e) => e.type === S.d4z.DM && e.getRecipientId() === t.id);
-                null != n ? (0, m.uL)(S.Z5c.CHANNEL(S.ME, n.id)) : c.Z.openPrivateChannel(t.id);
+                let n = a().find(p.Z.getMutablePrivateChannels(), (e) => e.type === N.d4z.DM && e.getRecipientId() === t.id);
+                null != n ? (0, m.uL)(N.Z5c.CHANNEL(N.ME, n.id)) : c.Z.openPrivateChannel(t.id);
             }),
-            A(this, 'handleOpenActionsMenu', (e) => {
+            x(this, 'handleOpenActionsMenu', (e) => {
                 let { user: t } = this.props;
                 (0, d.vq)(
                     e,
                     (e) =>
-                        (0, i.jsx)(x, {
+                        (0, i.jsx)(A, {
                             ...e,
                             user: t
                         }),

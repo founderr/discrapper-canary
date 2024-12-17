@@ -18,12 +18,12 @@ var i = n(392711),
     I = n(238679),
     C = n(452426),
     v = n(295424),
-    S = n(277272),
-    N = n(863141),
+    N = n(277272),
+    S = n(863141),
     T = n(186901),
     b = n(981631);
-let A = (e) => (0, C.Z)(e).required().keys({ channel_id: e.string().required() });
-function x(e) {
+let x = (e) => (0, C.Z)(e).required().keys({ channel_id: e.string().required() });
+function A(e) {
     var t;
     let {
             args: { channel_id: n },
@@ -166,18 +166,18 @@ let P = {
     },
     [b.zMe.MESSAGE_CREATE]: {
         scope: l.x.RPC,
-        validation: A,
-        handler: x
+        validation: x,
+        handler: A
     },
     [b.zMe.MESSAGE_UPDATE]: {
         scope: l.x.RPC,
-        validation: A,
-        handler: x
+        validation: x,
+        handler: A
     },
     [b.zMe.MESSAGE_DELETE]: {
         scope: l.x.RPC,
-        validation: A,
-        handler: x
+        validation: x,
+        handler: A
     },
     [b.zMe.SPEAKING_START]: {
         scope: {
@@ -279,7 +279,7 @@ let P = {
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
                 i = { currentUser: g.default.getCurrentUser() };
-            return null != i.currentUser && (null == t || !(0, a.Z)(i, t)) && n((0, N.Z)(i.currentUser)), i;
+            return null != i.currentUser && (null == t || !(0, a.Z)(i, t)) && n((0, S.Z)(i.currentUser)), i;
         }
     },
     [b.zMe.CURRENT_GUILD_MEMBER_UPDATE]: {
@@ -293,7 +293,7 @@ let P = {
             return (e) => {
                 let { prevState: n, dispatch: i } = e,
                     r = { currentGuildMember: u.ZP.getSelfMember(t) };
-                return null != r.currentGuildMember && (null == n || !(0, a.Z)(r, n)) && i((0, S.Z)(r.currentGuildMember)), r;
+                return null != r.currentGuildMember && (null == n || !(0, a.Z)(r, n)) && i((0, N.Z)(r.currentGuildMember)), r;
             };
         }
     },

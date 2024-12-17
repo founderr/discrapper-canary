@@ -53,8 +53,8 @@ function f(e) {
             isDarkTheme: h,
             isHovered: E
         }),
-        S = r.useCallback(() => I(!0), []),
-        N = r.useCallback(() => I(!1), []);
+        N = r.useCallback(() => I(!0), []),
+        S = r.useCallback(() => I(!1), []);
     return (0, i.jsx)(c.Popout, {
         renderPopout: (e) => {
             let { closePopout: r } = e;
@@ -78,8 +78,8 @@ function f(e) {
                 'aria-label': p.intl.string(p.t.UKOtz8),
                 children: (0, i.jsxs)('div', {
                     className: g.more,
-                    onMouseEnter: S,
-                    onMouseLeave: N,
+                    onMouseEnter: N,
+                    onMouseLeave: S,
                     children: [
                         (0, i.jsx)(c.Text, {
                             variant: f ? 'text-sm/semibold' : 'text-md/medium',
@@ -116,8 +116,8 @@ function _(e) {
             maxLines: 1,
             containerWidth: m
         }),
-        S = r.useMemo(() => l.slice(0, E + 1), [E, l]),
-        N = r.useMemo(() => l.slice(E + 1), [E, l]),
+        N = r.useMemo(() => l.slice(0, E + 1), [E, l]),
+        S = r.useMemo(() => l.slice(E + 1), [E, l]),
         T = r.useRef(null),
         b = r.useCallback(() => {
             var e;
@@ -132,8 +132,8 @@ function _(e) {
         let e = (0, h.pP)(b);
         return (0, h.YP)(e, document.body), () => (0, h.UC)(e, document.body);
     }, [b]);
-    let A = 0 !== m,
-        x = (0, u.Q3)('GlobalDiscoveryHeaderTabs');
+    let x = 0 !== m,
+        A = (0, u.Q3)('GlobalDiscoveryHeaderTabs');
     return (0, i.jsxs)('div', {
         className: a()(g.container, t),
         ref: T,
@@ -163,14 +163,14 @@ function _(e) {
                     (0, i.jsx)('div', {
                         ref: C,
                         children: (0, i.jsx)(f, {
-                            tabs: N,
+                            tabs: S,
                             onTabSelect: s,
                             selectedTab: n
                         })
                     })
                 ]
             }),
-            A &&
+            x &&
                 (0, i.jsxs)(c.TabBar, {
                     type: 'top',
                     look: 'brand',
@@ -178,22 +178,22 @@ function _(e) {
                     onItemSelect: s,
                     className: g.tabs,
                     children: [
-                        S.map((e) =>
+                        N.map((e) =>
                             (0, i.jsx)(
                                 c.TabBar.Item,
                                 {
                                     id: e.id,
                                     look: 'brand',
                                     'aria-label': e.label,
-                                    className: a()(g.tab, { [g.selected]: !x && n === e.id }),
+                                    className: a()(g.tab, { [g.selected]: !A && n === e.id }),
                                     children: e.label
                                 },
                                 e.id
                             )
                         ),
-                        0 !== N.length
+                        0 !== S.length
                             ? (0, i.jsx)(f, {
-                                  tabs: N,
+                                  tabs: S,
                                   onTabSelect: s,
                                   selectedTab: n
                               })

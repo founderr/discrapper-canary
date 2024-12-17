@@ -22,19 +22,19 @@ var i = n(200651),
     I = n(292959),
     C = n(19780),
     v = n(944486),
-    S = n(606304),
-    N = n(979651),
+    N = n(606304),
+    S = n(979651),
     T = n(938475),
     b = n(823379),
-    A = n(557177),
-    x = n(981631);
+    x = n(557177),
+    A = n(981631);
 function Z(e, t, n, i) {
     r.useEffect(() => {
         let r = t(),
             l = new o.Fh(e, () => {
                 let e = t(),
                     l = n(r, e);
-                null != l && !I.Z.isSoundDisabled(l) && (0, A.GN)(l, null != i ? i : 0.4), (r = e);
+                null != l && !I.Z.isSoundDisabled(l) && (0, x.GN)(l, null != i ? i : 0.4), (r = e);
             });
         return l.attach('useSound'), () => l.detach();
     });
@@ -80,8 +80,8 @@ function P() {
                 return {
                     channelType: t,
                     guildId: n,
-                    connected: r === x.hes.RTC_CONNECTED,
-                    connectHasStarted: (!i && r !== x.hes.DISCONNECTED) || r === x.hes.RTC_CONNECTED,
+                    connected: r === A.hes.RTC_CONNECTED,
+                    connectHasStarted: (!i && r !== A.hes.DISCONNECTED) || r === A.hes.RTC_CONNECTED,
                     awaitingRemote: null != c.Z.getAwaitingRemoteSessionInfo(),
                     connectedRemote: null != c.Z.getRemoteSessionId()
                 };
@@ -108,12 +108,12 @@ function P() {
 function y() {
     return (
         Z(
-            [S.Z],
-            () => S.Z.isCurrentUserSpeaking(),
+            [N.Z],
+            () => N.Z.isCurrentUserSpeaking(),
             (e, t) => {
                 if (e !== t) {
                     let e = E.Z.isSelfMute();
-                    if (E.Z.getMode() === x.pM4.PUSH_TO_TALK && !e) return t ? 'ptt_start' : 'ptt_stop';
+                    if (E.Z.getMode() === A.pM4.PUSH_TO_TALK && !e) return t ? 'ptt_start' : 'ptt_stop';
                 }
             }
         ),
@@ -128,7 +128,7 @@ function O() {
             (e, t) => {
                 if (e !== t) {
                     let e = E.Z.isSelfMute();
-                    if (E.Z.getMode() === x.pM4.VOICE_ACTIVITY && !e) return t ? 'ptt_stop' : 'ptt_start';
+                    if (E.Z.getMode() === A.pM4.VOICE_ACTIVITY && !e) return t ? 'ptt_stop' : 'ptt_start';
                 }
             }
         ),
@@ -138,8 +138,8 @@ function O() {
 function R() {
     return (
         Z(
-            [N.Z],
-            () => N.Z.userHasBeenMovedVersion,
+            [S.Z],
+            () => S.Z.userHasBeenMovedVersion,
             (e, t) => {
                 if (e !== t) return 'user_moved';
             }
@@ -150,11 +150,11 @@ function R() {
 function j() {
     return (
         Z(
-            [v.Z, N.Z],
+            [v.Z, S.Z],
             () => {
                 let e = v.Z.getVoiceChannelId();
                 if (null == e) return h.xO.NONE;
-                let t = N.Z.getVoiceStateForChannel(e);
+                let t = S.Z.getVoiceStateForChannel(e);
                 return (0, h.gf)(t);
             },
             (e, t) => {
@@ -167,7 +167,7 @@ function j() {
 function D() {
     return (
         Z(
-            [v.Z, p.Z, g.default, N.Z, f.Z],
+            [v.Z, p.Z, g.default, S.Z, f.Z],
             () => {
                 let e, t;
                 let n = v.Z.getVoiceChannelId(),
@@ -178,11 +178,11 @@ function D() {
                     o = p.Z.getAllActiveStreams();
                 if (null != n) {
                     let i = f.Z.getChannel(n);
-                    null != i && ((e = i.type), (t = T.ZP.countVoiceStatesForChannel(i.id) - (N.Z.isInChannel(i.id) ? 1 : 0)), (r = p.Z.getAllApplicationStreamsForChannel(i.id).map((e) => e.ownerId)));
+                    null != i && ((e = i.type), (t = T.ZP.countVoiceStatesForChannel(i.id) - (S.Z.isInChannel(i.id) ? 1 : 0)), (r = p.Z.getAllApplicationStreamsForChannel(i.id).map((e) => e.ownerId)));
                 }
                 let s = null;
                 return (
-                    (null == (s = 1 === o.length ? o[0] : p.Z.getCurrentUserActiveStream()) ? void 0 : s.state) === x.jm8.CONNECTING && (s = null),
+                    (null == (s = 1 === o.length ? o[0] : p.Z.getCurrentUserActiveStream()) ? void 0 : s.state) === A.jm8.CONNECTING && (s = null),
                     null != s && ((l = (0, d.V9)(s)), (a = p.Z.getViewerIds(l).filter((e) => e !== i).length)),
                     {
                         channelType: e,

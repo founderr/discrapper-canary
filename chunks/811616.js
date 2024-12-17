@@ -19,9 +19,9 @@ var l = t(120356),
     h = t(930153),
     f = t(74538),
     v = t(937615),
-    E = t(104494),
+    S = t(104494),
     g = t(474936),
-    S = t(388032),
+    E = t(388032),
     j = t(589242);
 function y(e) {
     let { premiumSubscription: n, planId: t, selectPlan: l, selected: s, priceOptions: y, shouldShowUpdatedPaymentModal: I, isEligibleForDiscount: P, discountAmountOff: T, isEligibleForTrial: N } = e,
@@ -36,8 +36,8 @@ function y(e) {
         M = (0, f.aS)(t, !1, _, y),
         L = (0, f.Ap)(y.paymentSourceId),
         k = null != w && !I,
-        F = (0, E.Ng)(),
-        D = C.interval === g.rV.YEAR ? S.t.ECT4Aw : S.t.v9QeOD,
+        F = (0, S.Ng)(),
+        D = C.interval === g.rV.YEAR ? E.t.ECT4Aw : E.t.v9QeOD,
         U = () =>
             null != w &&
             (0, i.jsx)(u.Text, {
@@ -45,14 +45,14 @@ function y(e) {
                 variant: 'eyebrow',
                 color: 'always-white',
                 className: j.planOptionDiscount,
-                children: S.intl.format(S.t.IAybsL, { discount: (0, h.T3)(b, w / 100) })
+                children: E.intl.format(E.t.IAybsL, { discount: (0, h.T3)(b, w / 100) })
             }),
-        B = () =>
+        G = () =>
             (C.interval === g.rV.YEAR && null != n) || (k && !Z)
                 ? C.interval === g.rV.YEAR && null != n
                     ? (0, i.jsxs)('span', {
                           className: j.planOptionMonthsFree,
-                          children: ['(', S.intl.string(S.t['122kWF']), ')']
+                          children: ['(', E.intl.string(E.t['122kWF']), ')']
                       })
                     : k && !Z
                       ? U()
@@ -99,27 +99,27 @@ function y(e) {
                                             [j.optionSelected]: s || A,
                                             [j.updatedOptionSelected]: I && (s || A)
                                         }),
-                                        children: [(0, f.L7)(C.interval, _, L, C.intervalCount, A, (0, f.Rd)(C.id)), A && B()]
+                                        children: [(0, f.L7)(C.interval, _, L, C.intervalCount, A, (0, f.Rd)(C.id)), A && G()]
                                     }),
                                     A &&
                                         (0, i.jsx)('div', {
                                             className: j.planOneTimeCost,
-                                            children: S.intl.format(S.t.ori2Ji, { currencyAmount: (0, v.T4)(M.amount, M.currency) })
+                                            children: E.intl.format(E.t.ori2Ji, { currencyAmount: (0, v.T4)(M.amount, M.currency) })
                                         })
                                 ]
                             }),
                             Z &&
                                 (0, i.jsxs)('span', {
                                     className: j.planOptionCurrentPlan,
-                                    children: ['(', S.intl.string(S.t.ymSxh4), ')']
+                                    children: ['(', E.intl.string(E.t.ymSxh4), ')']
                                 }),
-                            !A && B()
+                            !A && G()
                         ]
                     }),
                     I
                         ? (0, i.jsx)('div', {
                               className: r()({ [j.optionPriceSelected]: s }),
-                              children: S.intl.format(S.t.hXcaLS, {
+                              children: E.intl.format(E.t.hXcaLS, {
                                   price:
                                       P && null != T && C.interval === g.rV.MONTH
                                           ? (0, v.T4)(M.amount - T, M.currency)
@@ -147,14 +147,14 @@ function y(e) {
                         children: (() => {
                             if (P && null != T && C.interval === g.rV.MONTH) {
                                 var e;
-                                return S.intl.format(S.t['VeE/4O'], {
+                                return E.intl.format(E.t['VeE/4O'], {
                                     numMonths: null !== (e = null == F ? void 0 : F.discount.user_usage_limit) && void 0 !== e ? e : g.rt,
                                     discountedPrice: (0, v.T4)(M.amount - T, M.currency),
                                     regularPrice: (0, v.T4)(M.amount, M.currency)
                                 });
                             }
-                            if (N) return S.intl.format(D, { price: (0, v.T4)(M.amount, M.currency) });
-                            if (C.interval === g.rV.YEAR) return S.intl.formatToPlainString(S.t.rtLTJC, { percent: w });
+                            if (N) return E.intl.format(D, { price: (0, v.T4)(M.amount, M.currency) });
+                            if (C.interval === g.rV.YEAR) return E.intl.formatToPlainString(E.t.rtLTJC, { percent: w });
                             return null;
                         })()
                     })

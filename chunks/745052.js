@@ -18,12 +18,12 @@ var i = n(200651),
     I = n(320149),
     C = n(82295),
     v = n(252618),
-    S = n(605236),
-    N = n(243778),
+    N = n(605236),
+    S = n(243778),
     T = n(984370),
     b = n(797614),
-    A = n(359110),
-    x = n(6025),
+    x = n(359110),
+    A = n(6025),
     Z = n(897473),
     L = n(108427),
     P = n(970731),
@@ -42,8 +42,8 @@ var i = n(200651),
     V = n(899740),
     F = n(177033),
     z = n(355350),
-    Y = n(307947),
-    W = n(96479),
+    W = n(307947),
+    Y = n(96479),
     K = n(480874),
     q = n(687683),
     X = n(981631),
@@ -75,7 +75,7 @@ function en() {
                     c = null === (r = n[o + 1]) || void 0 === r ? void 0 : null === (t = r.channel) || void 0 === t ? void 0 : t.id,
                     d = s.channel.id;
                 return (0, i.jsx)(
-                    W.Z,
+                    Y.Z,
                     {
                         index: o,
                         className: a()({
@@ -128,7 +128,7 @@ function en() {
             [t, f, c]
         );
     return (n.length !== t && b.Z.increment({ name: s.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
-        ? (0, i.jsx)(Y.Z, { section: q.pS.REQUESTS })
+        ? (0, i.jsx)(W.Z, { section: q.pS.REQUESTS })
         : (0, i.jsx)(o.bG, {
               navigator: m,
               children: (0, i.jsx)(o.SJ, {
@@ -197,9 +197,9 @@ let er = function (e) {
             a = (0, y._p)({ location: 'message-request-coachmark' });
         return (
             r.useEffect(() => {
-                (0, S.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
+                (0, N.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
             }, []),
-            (0, i.jsx)(N.ZP, {
+            (0, i.jsx)(S.ZP, {
                 contentTypes: [d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
                 children: (r) => {
                     let { visibleContent: o, markAsDismissed: s } = r;
@@ -255,10 +255,10 @@ let eo = (0, p.Z)(function (e) {
         _ = (0, k.T)(g),
         E = (0, w.J)(g);
     r.useEffect(() => {
-        null != g && !_ && E && f && ((0, A.Kh)(g), x.Z.closeChannelSidebar(R.uZ));
+        null != g && !_ && E && f && ((0, x.Kh)(g), A.Z.closeChannelSidebar(R.uZ));
     }, [g, E, f, _]);
     let [I, C] = r.useState(q.pS.REQUESTS),
-        S = (e) => {
+        N = (e) => {
             C(e);
         };
     return (
@@ -288,7 +288,7 @@ let eo = (0, p.Z)(function (e) {
                                             'aria-label': $.intl.string($.t.e7GWjY),
                                             selectedItem: I,
                                             type: 'top-pill',
-                                            onItemSelect: S,
+                                            onItemSelect: N,
                                             children: [
                                                 (0, i.jsx)(u.TabBar.Item, {
                                                     id: q.pS.REQUESTS,

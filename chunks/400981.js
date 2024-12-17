@@ -18,11 +18,11 @@ var l = n(442837),
     x = n(648102);
 function _(e) {
     let { onClose: t, selectedPromotionalDecoPurchaseRecord: n, selectedGiftingPromotionReward: _ } = e,
-        h = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
-        f = (0, l.e7)([r.Z], () => r.Z.useReducedMotion),
+        f = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
+        h = (0, l.e7)([r.Z], () => r.Z.useReducedMotion),
         { analyticsLocations: j } = (0, a.ZP)(),
         m = s.AvatarSizes.SIZE_32,
-        L = (0, o.Z)(null == _ ? void 0 : _.assetId, m, !f),
+        L = (0, o.Z)(null == _ ? void 0 : _.assetId, m, !h),
         E = (0, u.Z)(),
         S = null == E ? void 0 : E.giftPurchaseConfirmation;
     return null == n || null == S
@@ -34,9 +34,9 @@ function _(e) {
                       className: x.promotionalFooter,
                       children: [
                           (0, i.jsx)(s.AnimatedAvatar, {
-                              'aria-label': null == h ? void 0 : h.username,
+                              'aria-label': null == f ? void 0 : f.username,
                               size: m,
-                              src: null == h ? void 0 : h.getAvatarURL(void 0, (0, s.getAvatarSize)(m), !f),
+                              src: null == f ? void 0 : f.getAvatarURL(void 0, (0, s.getAvatarSize)(m), !h),
                               avatarDecoration: L
                           }),
                           (0, i.jsx)(s.Button, {

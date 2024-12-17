@@ -16,12 +16,12 @@ var r = n(481060),
 t.Z = (0, p.Z)(
     (e) => {
         var t;
-        let { clientId: n, authorizations: d, scopes: u, parsedPermissions: h, responseType: p, redirectUri: _, codeChallenge: E, codeChallengeMethod: I, state: C, guildId: v, channelId: S, prompt: N, disableGuildSelect: T, disclosures: b, integrationType: A, pid: x } = e,
-            Z = 'OAuth2Authorize_'.concat(n, '_').concat(v, '_').concat(S),
-            L = null != A ? (null == d ? void 0 : d.get(A)) : void 0,
+        let { clientId: n, authorizations: d, scopes: u, parsedPermissions: h, responseType: p, redirectUri: _, codeChallenge: E, codeChallengeMethod: I, state: C, guildId: v, channelId: N, prompt: S, disableGuildSelect: T, disclosures: b, integrationType: x, pid: A } = e,
+            Z = 'OAuth2Authorize_'.concat(n, '_').concat(v, '_').concat(N),
+            L = null != x ? (null == d ? void 0 : d.get(x)) : void 0,
             P = null !== (t = null == L ? void 0 : L.application) && void 0 !== t ? t : o.Z.getApplication(n);
         return new Promise((e, t) => {
-            let o = (0, g.jU)(x),
+            let o = (0, g.jU)(A),
                 L = (i) => {
                     let { clientId: r, location: a } = i;
                     if (null == r || r === n) o.lock(), l.Z.unsubscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', L), null != location ? e(a) : t(new m.Z({ errorCode: f.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));
@@ -44,10 +44,10 @@ t.Z = (0, p.Z)(
                             state: C,
                             permissions: h.toString(),
                             guildId: v,
-                            channelId: S,
-                            prompt: N,
+                            channelId: N,
+                            prompt: S,
                             disableGuildSelect: 'boolean' == typeof T ? T : 'true' === T,
-                            integrationType: A
+                            integrationType: x
                         }
                     });
                 return;
@@ -68,10 +68,10 @@ t.Z = (0, p.Z)(
                         state: C,
                         permissions: h,
                         guildId: v,
-                        channelId: S,
-                        prompt: N,
+                        channelId: N,
+                        prompt: S,
                         disableGuildSelect: 'boolean' == typeof T ? T : 'true' === T,
-                        integrationType: A
+                        integrationType: x
                     }),
                 {
                     modalKey: Z,
@@ -83,7 +83,7 @@ t.Z = (0, p.Z)(
                     null !=
                         (0, a.ZP)({
                             application: P,
-                            channelId: S
+                            channelId: N
                         })
                     ? r.POPOUT_MODAL_CONTEXT
                     : r.DEFAULT_MODAL_CONTEXT

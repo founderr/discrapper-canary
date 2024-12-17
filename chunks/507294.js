@@ -25,12 +25,12 @@ var i = n(200651),
     I = n(271383),
     C = n(430824),
     v = n(626135),
-    S = n(63063),
-    N = n(134433),
+    N = n(63063),
+    S = n(134433),
     T = n(225104),
     b = n(981631),
-    A = n(388032),
-    x = n(698948),
+    x = n(388032),
+    A = n(698948),
     Z = n(795661);
 function L(e, t) {
     (0, c.openModalLazy)(async () => {
@@ -75,36 +75,36 @@ t.default = function (e) {
     return (0, i.jsxs)(c.ModalRoot, {
         transitionState: l,
         'aria-labelledby': w,
-        className: x.modal,
+        className: A.modal,
         children: [
             (0, i.jsxs)(c.ModalHeader, {
                 separator: !1,
                 children: [
-                    (0, i.jsx)(N.Z, {
-                        className: x.headerIcon,
+                    (0, i.jsx)(S.Z, {
+                        className: A.headerIcon,
                         size: 24
                     }),
                     (0, i.jsx)(c.Heading, {
                         variant: 'text-md/medium',
                         color: 'header-primary',
-                        children: A.intl.string(A.t.ghtnsr)
+                        children: x.intl.string(x.t.ghtnsr)
                     }),
                     (0, i.jsx)(c.ModalCloseButton, {
-                        className: x.modalCloseButton,
+                        className: A.modalCloseButton,
                         onClick: P
                     })
                 ]
             }),
             (0, i.jsxs)(c.ModalContent, {
-                className: x.container,
+                className: A.container,
                 children: [
                     (0, i.jsx)(c.Heading, {
                         variant: 'heading-md/semibold',
                         color: 'header-primary',
-                        children: A.intl.format(A.t['Y+TsER'], { helpdeskArticleUrl: S.Z.getArticleURL(b.BhN.CONNECTION_DETAILS) })
+                        children: x.intl.format(x.t['Y+TsER'], { helpdeskArticleUrl: N.Z.getArticleURL(b.BhN.CONNECTION_DETAILS) })
                     }),
                     (0, i.jsx)('div', {
-                        className: x.verifiedRoles,
+                        className: A.verifiedRoles,
                         children: k.map((e) => {
                             let l = R.roles.includes(e.id),
                                 o = (function (e) {
@@ -124,7 +124,7 @@ t.default = function (e) {
                                                     ? (0, i.jsx)('img', {
                                                           src: new _.Z(r.bot).getAvatarURL(t, 24),
                                                           alt: '',
-                                                          className: a()(x.botAvatar, Z.avatar)
+                                                          className: a()(A.botAvatar, Z.avatar)
                                                       })
                                                     : null;
                                         } else {
@@ -142,7 +142,7 @@ t.default = function (e) {
                             return (0, i.jsxs)(
                                 c.Clickable,
                                 {
-                                    className: a()(x.verifiedRole, l ? x.verifiedRoleHasRole : null),
+                                    className: a()(A.verifiedRole, l ? A.verifiedRoleHasRole : null),
                                     onClick: l ? void 0 : () => L(e, t),
                                     onContextMenu: l
                                         ? (r) => {
@@ -166,7 +166,7 @@ t.default = function (e) {
                                     children: [
                                         l
                                             ? (0, i.jsx)('div', {
-                                                  className: x.roleCheckmark,
+                                                  className: A.roleCheckmark,
                                                   children: (0, i.jsx)(c.CheckmarkSmallIcon, {
                                                       size: 'xs',
                                                       color: 'currentColor'
@@ -179,19 +179,19 @@ t.default = function (e) {
                                             size: 24
                                         }),
                                         (0, i.jsxs)('div', {
-                                            className: x.verifiedRoleNameDescriptionContainer,
+                                            className: A.verifiedRoleNameDescriptionContainer,
                                             children: [
                                                 (0, i.jsx)(c.Text, {
                                                     variant: 'text-md/medium',
                                                     color: 'header-primary',
-                                                    className: x.verifiedRoleName,
+                                                    className: A.verifiedRoleName,
                                                     children: e.name
                                                 }),
                                                 void 0 !== e.description
                                                     ? (0, i.jsx)(c.Text, {
                                                           variant: 'text-xs/normal',
                                                           color: 'header-secondary',
-                                                          className: x.verifiedRoleDescription,
+                                                          className: A.verifiedRoleDescription,
                                                           children: e.description
                                                       })
                                                     : null

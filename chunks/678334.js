@@ -19,9 +19,9 @@ var i = t(200651),
     h = t(459965),
     f = t(858987),
     v = t(975060),
-    E = t(882712),
+    S = t(882712),
     g = t(855775),
-    S = t(626135),
+    E = t(626135),
     j = t(669079),
     y = t(74538),
     I = t(987209),
@@ -33,21 +33,21 @@ var i = t(200651),
     _ = t(981631),
     O = t(374172);
 function A(e) {
-    let { premiumSubscription: n, setPurchaseState: t, onBack: r, onNext: A, legalTermsNodeRef: Z, flashLegalTerms: R, invoiceError: w, planError: M, onPurchaseError: L, baseAnalyticsData: k, flowStartTime: F, trialId: D, planGroup: U, analyticsLocation: B, purchaseTokenAuthState: G, openInvoiceId: H, metadata: W, backButtonEligible: V, disablePurchase: K, isTrial: z = !1 } = e,
+    let { premiumSubscription: n, setPurchaseState: t, onBack: r, onNext: A, legalTermsNodeRef: Z, flashLegalTerms: R, invoiceError: w, planError: M, onPurchaseError: L, baseAnalyticsData: k, flowStartTime: F, trialId: D, planGroup: U, analyticsLocation: G, purchaseTokenAuthState: B, openInvoiceId: H, metadata: W, backButtonEligible: V, disablePurchase: K, isTrial: z = !1 } = e,
         { selectedPlan: Y, priceOptions: X, setHasAcceptedTerms: q, setPurchaseError: J, purchaseType: Q, paymentSourceId: $, paymentSources: ee, selectedSkuId: en, skusById: et, skuPricePreviewsById: ei, referralCode: el, contextMetadata: er, invoicePreview: es, inReverseTrial: ea } = (0, P.usePaymentContext)(),
         { isGift: ec, selectedGiftStyle: eo, customGiftMessage: eu, emojiConfetti: ed, soundEffect: em, giftRecipient: ep, selectedGiftingPromotionReward: ex } = (0, I.wD)(),
         eh = (0, m.a5)(Y),
         ef = (0, j.MY)(ep),
         ev = {};
     (ev.gift_style = eo), (ev.reward_sku_ids = eh && (null == ex ? void 0 : ex.skuId) != null ? [null == ex ? void 0 : ex.skuId] : []), ef === j.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && (s()(null != ep, 'Gift recipient must be set at purchase review step for these gift options.'), (ev.recipient_id = ep.id), (ev.custom_message = eu), (ev.emoji_id = null == ed ? void 0 : ed.id), (ev.emoji_name = (null == ed ? void 0 : ed.id) == null ? (null == ed ? void 0 : ed.surrogates) : void 0), (ev.sound_id = null == em ? void 0 : em.soundId));
-    let eE = null == Y ? void 0 : Y.id,
-        eg = (0, b.sE)(D, X.paymentSourceId, eE),
-        eS = (0, a.e7)([v.Z], () => v.Z.popupCallbackCalled),
+    let eS = null == Y ? void 0 : Y.id,
+        eg = (0, b.sE)(D, X.paymentSourceId, eS),
+        eE = (0, a.e7)([v.Z], () => v.Z.popupCallbackCalled),
         { analyticsLocations: ej } = (0, u.ZP)(),
         ey = null != $ ? ee[$] : null,
         [eI, eP] = l.useState(eg),
         [eT, eN] = l.useState(!1),
-        { hasEntitlements: eb } = (0, h.H)(eE, ec),
+        { hasEntitlements: eb } = (0, h.H)(eS, ec),
         eC = (0, y.Ap)(X.paymentSourceId),
         e_ = eb || eg,
         eO = (0, p.U)(),
@@ -70,7 +70,7 @@ function A(e) {
             setHasRedirectURL: eN,
             isGift: ec,
             baseAnalyticsData: k,
-            analyticsLocation: B,
+            analyticsLocation: G,
             analyticsLocations: ej,
             flowStartTime: F,
             subscriptionPlan: Y,
@@ -94,14 +94,14 @@ function A(e) {
     };
     l.useEffect(() => {
         (async () => {
-            if (!0 === eS)
+            if (!0 === eE)
                 try {
                     if (null == v.Z.redirectedPaymentId) return;
                     await (0, o.OP)(v.Z.redirectedPaymentId), t(N.A.COMPLETED), A();
                 } catch (e) {
                     t(N.A.FAIL),
                         L(e),
-                        S.default.track(_.rMx.PAYMENT_FLOW_FAILED, {
+                        E.default.track(_.rMx.PAYMENT_FLOW_FAILED, {
                             ...k,
                             payment_error_code: null == e ? void 0 : e.code,
                             payment_source_id: $,
@@ -111,9 +111,9 @@ function A(e) {
                 } finally {
                     eP(!1), (0, o.K2)();
                 }
-            else G === E.I.SUCCESS && (await ew());
+            else B === S.I.SUCCESS && (await ew());
         })();
-    }, [eS]),
+    }, [eE]),
         l.useEffect(() => {
             eg && !ec && null == n && ew();
         }, [eg, ec, n]);

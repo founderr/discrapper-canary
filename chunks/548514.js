@@ -38,26 +38,26 @@ t.Z = function (e) {
             [n]
         ),
         v = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(f.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e)),
-        S = r.useCallback(() => {
+        N = r.useCallback(() => {
             (0, g.z)(f.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id }), (0, m.JG)(v(n.id)), (0, s.showToast)((0, s.createToast)(_.intl.string(_.t['L/PwZW']), s.ToastType.SUCCESS));
         }, [n.id]),
-        N = (0, o.e7)([h.default], () => h.default.locale),
+        S = (0, o.e7)([h.default], () => h.default.locale),
         T = r.useCallback(() => {
             null != n &&
                 (0, c.Z)(
                     (0, d.G)({
                         id: n.id,
                         name: n.name,
-                        locale: N
+                        locale: S
                     })
                 );
-        }, [N, n]),
+        }, [S, n]),
         b = (0, u.Z)({
             id: null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : '',
             label: _.intl.string(_.t['FfCL+/']),
             onSuccess: () => (0, s.showToast)((0, s.createToast)(_.intl.string(_.t.eNjAam), s.ToastType.SUCCESS))
         }),
-        A = r.useCallback(
+        x = r.useCallback(
             (e) =>
                 (0, i.jsxs)(s.Menu, {
                     navId: 'application-directory-profile',
@@ -96,7 +96,7 @@ t.Z = function (e) {
                       className: a()(E.iconButton, { [E.small]: 'sm' === l }),
                       innerClassName: E.innerIconButton,
                       'aria-label': _.intl.string(_.t.z4sP5O),
-                      onClick: S,
+                      onClick: N,
                       children: (0, i.jsx)(s.LinkIcon, {
                           size: 'xs',
                           color: 'currentColor'
@@ -106,7 +106,7 @@ t.Z = function (e) {
             (0, i.jsx)(s.Popout, {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
-                    return A(t);
+                    return x(t);
                 },
                 position: 'left',
                 align: 'top',

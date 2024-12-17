@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(626135),
     x = n(987209),
     _ = n(563132),
-    h = n(409813),
-    f = n(614277),
+    f = n(409813),
+    h = n(614277),
     j = n(981631),
     m = n(388032),
     L = n(732721);
@@ -85,7 +85,7 @@ function E(e) {
                         })
                     ]
                 }),
-                (0, i.jsx)(f.O3, {
+                (0, i.jsx)(h.O3, {
                     children: (0, i.jsx)(o.ModalFooter, {
                         className: L.modalFooter,
                         children: (0, i.jsx)(u.y, {
@@ -98,7 +98,7 @@ function E(e) {
                                     }),
                                     t(e);
                             },
-                            onBackClick: () => t(h.h8.PLAN_SELECT),
+                            onBackClick: () => t(f.h8.PLAN_SELECT),
                             shouldRenderUpdatedPaymentModal: !0,
                             showBackButton: !0,
                             planOptions: [s.id],

@@ -18,12 +18,12 @@ var i = n(200651),
     I = n(451478),
     C = n(434184),
     v = n(701861),
-    S = n(437314),
-    N = n(696577),
+    N = n(437314),
+    S = n(696577),
     T = n(163417),
     b = n(830880),
-    A = n(492347),
-    x = n(42575),
+    x = n(492347),
+    A = n(42575),
     Z = n(617015),
     L = n(981631),
     P = n(388032),
@@ -75,7 +75,7 @@ t.Z = function (e) {
         return (0, i.jsx)('div', {
             className: y.emptyStateContainer,
             children: (0, i.jsx)(
-                S.Z,
+                N.Z,
                 {
                     type: t,
                     onClick: F
@@ -89,8 +89,8 @@ t.Z = function (e) {
                 j
             )
         });
-    let Y = [z],
-        W = 0 === z.length && '' !== U[t],
+    let W = [z],
+        Y = 0 === z.length && '' !== U[t],
         K = z.filter((e) => e.type === L.OGo.PENDING_INCOMING).length,
         q = t === L.pJs.PENDING && K > 0 && K >= Z.yf;
     return (0, i.jsx)(p.Gt, {
@@ -100,7 +100,7 @@ t.Z = function (e) {
             children: [
                 k && w && (0, i.jsx)(b.R, {}),
                 (0, i.jsx)(s.SearchBar, {
-                    className: a()(y.searchBar, W ? y.searchEmptyState : null),
+                    className: a()(y.searchBar, Y ? y.searchEmptyState : null),
                     query: U[t],
                     onChange: H,
                     onClear: V,
@@ -109,7 +109,7 @@ t.Z = function (e) {
                 (0, i.jsxs)('div', {
                     className: y.sectionTitle,
                     children: [
-                        (0, i.jsx)(A.Z, {
+                        (0, i.jsx)(x.Z, {
                             id: l,
                             title: (function (e, t) {
                                 switch (e) {
@@ -140,14 +140,14 @@ t.Z = function (e) {
                             })
                     ]
                 }),
-                W
+                Y
                     ? (0, i.jsx)('div', {
                           className: y.emptyStateContainer,
-                          children: (0, i.jsx)(S.Z, { type: S.j.SECTION_NO_RESULTS }, j)
+                          children: (0, i.jsx)(N.Z, { type: N.j.SECTION_NO_RESULTS }, j)
                       })
                     : (0, i.jsx)(T.Z, {
                           relationshipCount: M,
-                          statusSections: Y,
+                          statusSections: W,
                           renderRow: function (e) {
                               switch (t) {
                                   case L.pJs.BLOCKED:
@@ -156,12 +156,12 @@ t.Z = function (e) {
                                           isFocused: D
                                       });
                                   case L.pJs.PENDING:
-                                      return (0, i.jsx)(N.Z, {
+                                      return (0, i.jsx)(S.Z, {
                                           ...e,
                                           isFocused: D
                                       });
                                   case L.pJs.SUGGESTIONS:
-                                      return (0, i.jsx)(x.Z, {
+                                      return (0, i.jsx)(A.Z, {
                                           ...e,
                                           isFocused: D
                                       });

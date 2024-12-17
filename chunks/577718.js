@@ -18,12 +18,12 @@ var i = n(200651),
     I = n(267642),
     C = n(337721),
     v = n(981631),
-    S = n(921944),
-    N = n(30513),
+    N = n(921944),
+    S = n(30513),
     T = n(474936),
     b = n(388032),
-    A = n(325382),
-    x = n(44669),
+    x = n(325382),
+    A = n(44669),
     Z = n(741160),
     L = n(829972),
     P = n(31932),
@@ -39,7 +39,7 @@ function R(e, t) {
                   analyticsLocations: e,
                   analyticsSourceLocation: v.jXE.PREMIUM_GUILD_INVITE_SPLASH,
                   guild: t,
-                  perks: (0, N.o9)()
+                  perks: (0, S.o9)()
               });
 }
 function j(e) {
@@ -60,7 +60,7 @@ function j(e) {
 t.Z = r.memo(function (e) {
     let { contentTypes: t, theme: n, guild: r, renderGuildHeaderDropdownButton: o } = e,
         { analyticsLocations: d } = (0, s.ZP)(),
-        N = () => {
+        S = () => {
             E.default.track(v.rMx.TOOLTIP_VIEWED, {
                 type: T.cd.PREMIUM_PROGRESS_BAR,
                 location: { page: v.ZY5.GUILD_CHANNEL }
@@ -74,7 +74,7 @@ t.Z = r.memo(function (e) {
             });
         },
         M = (0, a.wj)(n) ? L : P,
-        [w, k] = (0, c.US)(t, S.R.GUILD_HEADER_TOOLTIPS);
+        [w, k] = (0, c.US)(t, N.R.GUILD_HEADER_TOOLTIPS);
     return (0, i.jsx)(i.Fragment, {
         children: (() => {
             switch (w) {
@@ -89,12 +89,12 @@ t.Z = r.memo(function (e) {
                 case l.z.GUILD_HEADER_PREMIUM_GUILD_PROGRESS:
                     return (0, i.jsx)(j, {
                         renderPopout: (0, i.jsx)(_.ZP, {
-                            onComponentMount: N,
+                            onComponentMount: S,
                             header: b.intl.string(b.t.nxtaFx),
                             asset: (0, i.jsx)('img', {
                                 alt: '',
                                 src: M,
-                                className: x.fullWidthImage
+                                className: A.fullWidthImage
                             }),
                             content: b.intl.format(b.t.ujItEh, {}),
                             buttonCTA: b.intl.string(b.t.UzVPra),
@@ -108,12 +108,12 @@ t.Z = r.memo(function (e) {
                 case l.z.GUILD_HEADER_PROGRESS_BAR_SIZE_COACH_MARK:
                     return (0, i.jsx)(j, {
                         renderPopout: (0, i.jsx)(_.ZP, {
-                            onComponentMount: N,
+                            onComponentMount: S,
                             header: b.intl.string(b.t.KAsfPT),
                             asset: (0, i.jsx)('img', {
                                 alt: '',
                                 src: M,
-                                className: x.fullWidthImage
+                                className: A.fullWidthImage
                             }),
                             content: b.intl.format(b.t.zK1hpq, {}),
                             buttonCTA: b.intl.string(b.t.UzVPra),
@@ -150,7 +150,7 @@ t.Z = r.memo(function (e) {
                             asset: (0, i.jsx)('img', {
                                 alt: '',
                                 src: Z,
-                                className: x.fullWidthImage
+                                className: A.fullWidthImage
                             }),
                             content: e,
                             buttonCTA: t,
@@ -169,11 +169,11 @@ t.Z = r.memo(function (e) {
                 case l.z.GUILD_HEADER_ACTIVE_THREADS_NOTICE:
                     return (0, i.jsx)(j, {
                         renderPopout: (0, i.jsx)(_.ZP, {
-                            className: A.tooltipOverrideColor,
+                            className: x.tooltipOverrideColor,
                             header: b.intl.string(b.t.hLUL3t),
                             content: b.intl.string(b.t.ahWaPT),
                             buttonCTA: b.intl.string(b.t['NX+WJC']),
-                            onClick: () => k(S.L.UNKNOWN),
+                            onClick: () => k(N.L.UNKNOWN),
                             markAsDismissed: k
                         }),
                         renderGuildHeaderDropdownButton: o
@@ -188,7 +188,7 @@ t.Z = r.memo(function (e) {
                             asset: (0, i.jsx)('img', {
                                 alt: '',
                                 src: y,
-                                className: x.fullWidthImage
+                                className: A.fullWidthImage
                             }),
                             onClick: () => {
                                 m.Z.open(r.id, v.pNK.ROLES), m.Z.selectRole(r.getEveryoneRoleId(), b.intl.string(b.t.Bco7ND));

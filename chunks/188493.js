@@ -23,7 +23,7 @@ function p(e) {
             (e) => {
                 d.Z.setState({ languageCode: e });
                 let n = d.Z.getField('fetchedQuery');
-                s.Z.clearAlgoliaSearchResults({ ignoreQueries: [n] }),
+                s.Z.clearSearchResults({ ignoreQueries: [n] }),
                     c.Z.loadCategoryResults({
                         loadId: t,
                         categoryId: d.Z.getField('categoryId'),

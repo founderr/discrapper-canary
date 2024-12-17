@@ -29,17 +29,17 @@ var i = n(200651),
 function k(e) {
     var t, n;
     let { backButtonEligible: o, prevStep: k, handleStepChange: T, trialFooterMessageOverride: y, reviewWarningMessage: B, planGroup: P, openInvoiceId: N, analyticsData: E, analyticsLocation: A, handleClose: I } = e,
-        { activeSubscription: O, application: Z, setUpdatedSubscription: M, contextMetadata: H, currencies: L, paymentSources: w, priceOptions: D, purchaseError: R, purchaseTokenAuthState: W, selectedPlan: F, selectedSku: G, setCurrency: z, setPaymentSourceId: K, setPurchaseState: V, setPurchaseError: Y, purchaseState: U, subscriptionMetadataRequest: Q, setHasAcceptedTerms: q } = (0, m.usePaymentContext)();
-    a()(null != F, 'Expected plan to be selected');
+        { activeSubscription: O, application: Z, setUpdatedSubscription: M, contextMetadata: H, currencies: L, paymentSources: w, priceOptions: D, purchaseError: G, purchaseTokenAuthState: W, selectedPlan: R, selectedSku: F, setCurrency: z, setPaymentSourceId: K, setPurchaseState: U, setPurchaseError: V, purchaseState: Y, subscriptionMetadataRequest: Q, setHasAcceptedTerms: q } = (0, m.usePaymentContext)();
+    a()(null != R, 'Expected plan to be selected');
     let J = r.useRef(null),
         [X, $] = (0, s.Z)(!1, 500),
         ee = null == Q ? void 0 : Q.guild_id,
         et = (0, l.e7)([p.Z], () => p.Z.getGuild(ee), [ee]),
         [en, ei] = r.useState(null),
-        er = (0, f.KW)(null !== (t = null == G ? void 0 : G.flags) && void 0 !== t ? t : 0);
+        er = (0, f.KW)(null !== (t = null == F ? void 0 : F.flags) && void 0 !== t ? t : 0);
     r.useEffect(() => {
-        null != R && null != J.current && J.current.scrollIntoView({ behavior: 'smooth' });
-    }, [R]);
+        null != G && null != J.current && J.current.scrollIntoView({ behavior: 'smooth' });
+    }, [G]);
     let eo = r.useCallback(
             (e) => {
                 M(e), T(b.h8.CONFIRM);
@@ -47,7 +47,7 @@ function k(e) {
             [T, M]
         ),
         ea = r.useRef(null);
-    return U === _.A.PURCHASING
+    return Y === _.A.PURCHASING
         ? (0, i.jsx)(h.Z, {})
         : (0, i.jsxs)(i.Fragment, {
               children: [
@@ -97,7 +97,7 @@ function k(e) {
                               }),
                           null == O
                               ? (0, i.jsx)(d.Z, {
-                                    selectedPlanId: F.id,
+                                    selectedPlanId: R.id,
                                     paymentSources: w,
                                     onPaymentSourceChange: (e) => K(null != e ? e.id : null),
                                     priceOptions: D,
@@ -110,7 +110,7 @@ function k(e) {
                                     trialFooterMessageOverride: y,
                                     reviewWarningMessage: B,
                                     metadata: er ? void 0 : Q,
-                                    purchaseState: U,
+                                    purchaseState: Y,
                                     hideSubscriptionDetails: !0,
                                     handleClose: I
                                 })
@@ -122,7 +122,7 @@ function k(e) {
                                     onPaymentSourceAdd: () => {
                                         T(b.h8.ADD_PAYMENT_STEPS);
                                     },
-                                    planId: F.id,
+                                    planId: R.id,
                                     setHasAcceptedTerms: q,
                                     legalTermsNodeRef: ea,
                                     hasLegalTermsFlash: X,
@@ -133,7 +133,7 @@ function k(e) {
                                     currencies: L,
                                     onCurrencyChange: (e) => z(e),
                                     hasOpenInvoice: null != N,
-                                    purchaseState: U,
+                                    purchaseState: Y,
                                     handleClose: I
                                 })
                       ]
@@ -141,10 +141,10 @@ function k(e) {
                   (0, i.jsx)(C.O3, {
                       children: (0, i.jsx)(g.Z, {
                           premiumSubscription: null != O ? O : null,
-                          setPurchaseState: V,
+                          setPurchaseState: U,
                           onBack: () => null != k && T(k),
                           onNext: eo,
-                          onPurchaseError: (e) => Y(e),
+                          onPurchaseError: (e) => V(e),
                           legalTermsNodeRef: ea,
                           flashLegalTerms: () => $(!0),
                           analyticsLocation: A,

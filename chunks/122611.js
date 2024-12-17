@@ -18,35 +18,35 @@ var i = n(200651),
     I = n(849688),
     C = n(374023),
     v = n(661599),
-    S = n(617899),
-    N = n(8521),
+    N = n(617899),
+    S = n(8521),
     T = n(760326),
     b = n(785203),
-    A = n(652785),
-    x = n(921944);
+    x = n(652785),
+    A = n(921944);
 function Z(e) {
     e.stopPropagation();
 }
 function L(e) {
     var t;
     let { guild: n } = e,
-        [d, m] = r.useState(null !== (t = o.K.get(A.Iv)) && void 0 !== t ? t : 0),
+        [d, m] = r.useState(null !== (t = o.K.get(x.Iv)) && void 0 !== t ? t : 0),
         g = (e) => {
-            o.K.set(A.Iv, e), m(e);
+            o.K.set(x.Iv, e), m(e);
         },
-        f = (0, l.Wu)(A.HG, () =>
-            A.XN.filter((e) => {
+        f = (0, l.Wu)(x.HG, () =>
+            x.XN.filter((e) => {
                 let { store: t } = e;
                 return null == t ? void 0 : t.channelNoticePredicate(n, d);
             }).map((e) => e.dismissibleContentType)
         );
     return (0, i.jsx)(c.ZP, {
         contentTypes: f,
-        groupName: x.R.CHANNEL_NOTICES,
+        groupName: A.R.CHANNEL_NOTICES,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: r } = e,
                 l = () => {
-                    g(Date.now()), r(x.L.UNKNOWN);
+                    g(Date.now()), r(A.L.UNKNOWN);
                 },
                 o = (() => {
                     switch (t) {
@@ -56,7 +56,7 @@ function L(e) {
                                 markAsDismissed: l
                             });
                         case a.z.CHANNEL_NOTICE_INVITE:
-                            return (0, i.jsx)(S.Z, {
+                            return (0, i.jsx)(N.Z, {
                                 guild: n,
                                 markAsDismissed: l
                             });
@@ -78,7 +78,7 @@ function L(e) {
                         case a.z.LINKED_ROLE_ADMIN_GUILD:
                             return (0, i.jsx)(s.Z, {
                                 guild: n,
-                                markAsDismissed: () => r(x.L.UNKNOWN)
+                                markAsDismissed: () => r(A.L.UNKNOWN)
                             });
                         default:
                             return null;
@@ -101,7 +101,7 @@ t.Z = (e) => {
         case b.R.APPLIED_GUILD_BOOST_GRACE_PERIOD:
             return (0, i.jsx)(d.Z, { guild: t });
         case b.R.MAX_MEMBER_COUNT:
-            return (0, i.jsx)(N.Z, { guild: t });
+            return (0, i.jsx)(S.Z, { guild: t });
         case b.R.GUILD_LIVE_CHANNEL:
             return (0, i.jsx)(m.ZP, { guild: t });
         case b.R.GUILD_MFA_WARNING:

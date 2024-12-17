@@ -17,31 +17,31 @@ var i = n(200651),
     I = n(217702),
     C = n(388032),
     v = n(560006),
-    S = n(665162);
-let N = r.memo(function (e) {
+    N = n(665162);
+let S = r.memo(function (e) {
     let { channel: t } = e,
-        { loaded: n, error: l, message: N } = (0, _.a)(t),
+        { loaded: n, error: l, message: S } = (0, _.a)(t),
         T = (0, d.p)(),
-        { isBlocked: b, isIgnored: A } = (0, o.cj)(
+        { isBlocked: b, isIgnored: x } = (0, o.cj)(
             [f.Z],
             () => ({
-                isBlocked: null != N && f.Z.isBlockedForMessage(N),
-                isIgnored: null != N && f.Z.isIgnoredForMessage(N)
+                isBlocked: null != S && f.Z.isBlockedForMessage(S),
+                isIgnored: null != S && f.Z.isIgnoredForMessage(S)
             }),
-            [N]
+            [S]
         ),
-        x = (0, o.e7)([g.Z], () => g.Z.can(E.Plq.MANAGE_MESSAGES, t)),
+        A = (0, o.e7)([g.Z], () => g.Z.can(E.Plq.MANAGE_MESSAGES, t)),
         Z = p.cC.useSetting(),
         { content: L } = r.useMemo(
             () =>
-                (null == N ? void 0 : N.content) != null && '' !== N.content
-                    ? (0, h.ZP)(N, {
+                (null == S ? void 0 : S.content) != null && '' !== S.content
+                    ? (0, h.ZP)(S, {
                           formatInline: !0,
                           noStyleAndInteraction: !0,
                           shouldFilterKeywords: T
                       })
                     : { content: null },
-            [N, T]
+            [S, T]
         ),
         P = null;
     if (l)
@@ -52,22 +52,22 @@ let N = r.memo(function (e) {
             children: C.intl.string(C.t.BZHld3)
         });
     else if (n) {
-        if (null != N && b)
+        if (null != S && b)
             P = (0, i.jsx)(s.Text, {
                 className: v.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 children: C.intl.string(C.t['WPe+xM'])
             });
-        else if (null != N && A)
+        else if (null != S && x)
             P = (0, i.jsx)(s.Text, {
                 className: v.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 children: C.intl.string(C.t.uxrh1N)
             });
-        else if (null != N) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, m.f)(N, L, b, A, a()(v.messageContent, S.inlineFormat), {
+        else if (null != S) {
+            let { contentPlaceholder: e, renderedContent: t } = (0, m.f)(S, L, b, x, a()(v.messageContent, N.inlineFormat), {
                 leadingIconClass: v.messageContentIcon,
                 trailingIconClass: v.messageContentIcon,
                 iconSize: I.WW
@@ -96,11 +96,11 @@ let N = r.memo(function (e) {
             });
     } else P = null;
     return (0, i.jsx)(c.a.Provider, {
-        value: (0, u.Z)(Z, x),
+        value: (0, u.Z)(Z, A),
         children: (0, i.jsx)(s.FocusBlock, {
             className: v.messageFocusBlock,
             children: P
         })
     });
 });
-t.Z = N;
+t.Z = S;

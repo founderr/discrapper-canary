@@ -19,9 +19,9 @@ t.Z = () => {
             animateOnHover: !0
         }),
         _ = (0, r.Fg)(),
-        h = (0, l.ap)(_),
-        f = o.ZP.getName(e),
-        j = h ? d.Z : u.Z;
+        f = (0, l.ap)(_),
+        h = o.ZP.getName(e),
+        j = f ? d.Z : u.Z;
     return null == e
         ? null
         : (0, i.jsxs)('div', {
@@ -39,7 +39,7 @@ t.Z = () => {
                   (0, i.jsx)(s.Text, {
                       variant: 'text-xs/bold',
                       className: x.bannerHeader,
-                      children: p.intl.format(p.t.oxhCOj, { userName: f })
+                      children: p.intl.format(p.t.oxhCOj, { userName: h })
                   }),
                   (0, i.jsx)(j, { className: x.bannerIcon })
               ]

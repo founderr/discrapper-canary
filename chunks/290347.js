@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return x;
     }
 }),
     n(47120),
@@ -29,37 +29,37 @@ var i = n(200651),
     I = n(981631),
     C = n(921944),
     v = n(388032),
-    S = n(966156);
-let N = [],
+    N = n(966156);
+let S = [],
     T = (e) => {
         let { tagText: t, className: n } = e;
         return (0, i.jsx)(s.TextBadge, {
-            className: a()(S.tag, n),
+            className: a()(N.tag, n),
             text: t
         });
     },
     b = (e) => {
         let { header: t, subHeader: n, imageSrc: r, tagText: l, wideStyle: o } = e;
         return (0, i.jsxs)('div', {
-            className: a()(S.featureCard, { [S.wideStyle]: o }),
+            className: a()(N.featureCard, { [N.wideStyle]: o }),
             children: [
                 null != l
                     ? (0, i.jsx)(T, {
                           tagText: l,
-                          className: S.featureCardTag
+                          className: N.featureCardTag
                       })
                     : null,
                 (0, i.jsx)('img', {
                     alt: '',
-                    className: a()(S.featureCardImg, { [S.wideStyle]: o }),
+                    className: a()(N.featureCardImg, { [N.wideStyle]: o }),
                     src: r
                 }),
                 (0, i.jsxs)('div', {
-                    className: S.featureCardTextGroup,
+                    className: N.featureCardTextGroup,
                     children: [
                         (0, i.jsx)(s.Heading, {
                             variant: 'heading-md/extrabold',
-                            className: S.featureCardTextHeader,
+                            className: N.featureCardTextHeader,
                             children: t
                         }),
                         (0, i.jsx)(s.Text, {
@@ -71,30 +71,30 @@ let N = [],
             ]
         });
     };
-function A(e) {
-    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: T, modalDismissibleContent: A, modalTopExtra: x, header: Z, headerClassName: L, subHeader: P, subHeaderExtra: y, featureCards: O, changeLogId: R, button: j, body: D } = e,
+function x(e) {
+    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: T, modalDismissibleContent: x, modalTopExtra: A, header: Z, headerClassName: L, subHeader: P, subHeaderExtra: y, featureCards: O, changeLogId: R, button: j, body: D } = e,
         { onClose: M, transitionState: w } = n,
         k = (0, h.Dt)(),
         U = O.length % 2 == 0,
         G = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         [B, H] = r.useState(Date.now()),
         [V, F] = r.useState(0),
-        [z, Y] = r.useState(0),
-        [W, K] = r.useState(!1),
+        [z, W] = r.useState(0),
+        [Y, K] = r.useState(!1),
         [q, X] = r.useState(!0),
         Q = r.useRef(B),
         J = r.useRef(V),
         $ = r.useRef(z),
-        ee = r.useRef(W),
+        ee = r.useRef(Y),
         et = r.useRef(q),
-        [en, ei] = r.useState(N),
+        [en, ei] = r.useState(S),
         er = r.useRef(!1);
     function el() {
         let e = Date.now(),
             t = e - Q.current,
             n = J.current,
             i = $.current;
-        return ee.current && (F((n += t)), !et.current && Y((i += t))), H(e), [n, i];
+        return ee.current && (F((n += t)), !et.current && W((i += t))), H(e), [n, i];
     }
     return (
         r.useEffect(() => {
@@ -118,7 +118,7 @@ function A(e) {
                               });
                     ei(await Promise.all(t));
                 } catch (e) {
-                    _.Z.captureException(e), ei(N);
+                    _.Z.captureException(e), ei(S);
                 }
             };
             !0 !== er.current && e(), (er.current = !0);
@@ -133,8 +133,8 @@ function A(e) {
             [en]
         ),
         r.useEffect(() => {
-            (Q.current = B), (J.current = V), ($.current = z), (ee.current = W), (et.current = q);
-        }, [B, V, z, W, q]),
+            (Q.current = B), (J.current = V), ($.current = z), (ee.current = Y), (et.current = q);
+        }, [B, V, z, Y, q]),
         r.useEffect(
             () => () => {
                 if ('video' === l.type || 'embed' === l.type) {
@@ -152,7 +152,7 @@ function A(e) {
             [R, l.type]
         ),
         r.useEffect(() => {
-            null != A && (0, p.kk)(A);
+            null != x && (0, p.kk)(x);
             let e = Date.now();
             return (
                 f.default.track(I.rMx.CHANGE_LOG_OPENED, { change_log_id: R }),
@@ -161,32 +161,32 @@ function A(e) {
                         change_log_id: R,
                         seconds_open: Math.round((Date.now() - e) / 1000)
                     }),
-                        null != A && (0, p.EW)(A, { dismissAction: C.L.DISMISS });
+                        null != x && (0, p.EW)(x, { dismissAction: C.L.DISMISS });
                 }
             );
-        }, [A, R]),
+        }, [x, R]),
         (0, i.jsxs)(s.ModalRoot, {
-            className: a()(S.root, t),
+            className: a()(N.root, t),
             transitionState: w,
             'aria-labelledby': k,
             children: [
                 (0, i.jsx)(s.ModalCloseButton, {
-                    className: S.closeButton,
+                    className: N.closeButton,
                     onClick: M
                 }),
-                (0, i.jsx)(E.Z, { className: S.splash }),
-                null == x ? void 0 : x(),
+                (0, i.jsx)(E.Z, { className: N.splash }),
+                null == A ? void 0 : A(),
                 (0, i.jsxs)(s.ModalContent, {
-                    className: S.content,
+                    className: N.content,
                     children: [
                         (0, i.jsx)(s.Heading, {
                             variant: 'display-md',
-                            className: a()(S.headerText, L),
+                            className: a()(N.headerText, L),
                             children: Z
                         }),
                         'video' === l.type
                             ? (0, i.jsx)(m.Z, {
-                                  className: a()(S.video, T),
+                                  className: a()(N.video, T),
                                   autoPlay: !G,
                                   loop: !0,
                                   muted: !0,
@@ -229,7 +229,7 @@ function A(e) {
                               })
                             : 'embed' === l.type
                               ? (0, i.jsx)(d.BC, {
-                                    className: a()(S.video, T),
+                                    className: a()(N.video, T),
                                     allowFullScreen: !1,
                                     href: l.href,
                                     thumbnail: l.thumbnail,
@@ -247,24 +247,24 @@ function A(e) {
                               : 'image' === l.type
                                 ? (0, i.jsx)('img', {
                                       alt: '',
-                                      className: a()(S.video, T),
+                                      className: a()(N.video, T),
                                       src: l.src
                                   })
                                 : null,
                         (0, i.jsxs)(s.Heading, {
                             variant: 'heading-lg/semibold',
-                            className: S.subHeader,
+                            className: N.subHeader,
                             children: [P, null == y ? void 0 : y()]
                         }),
                         null != D &&
                             (0, i.jsx)(s.Heading, {
                                 variant: 'heading-md/medium',
-                                className: S.bodyText,
+                                className: N.bodyText,
                                 children: D
                             }),
                         O.length > 0 &&
                             (0, i.jsx)('div', {
-                                className: a()(S.featureCardGroup, { [S.wideStyle]: U }),
+                                className: a()(N.featureCardGroup, { [N.wideStyle]: U }),
                                 children: O.map((e, t) =>
                                     (0, i.jsx)(
                                         b,

@@ -6,7 +6,7 @@ n.d(t, {
         return b;
     },
     ZP: function () {
-        return A;
+        return x;
     }
 }),
     n(47120);
@@ -29,29 +29,29 @@ var i = n(200651),
     I = n(1964),
     C = n(762756),
     v = n(981631),
-    S = n(815660),
-    N = n(388032);
+    N = n(815660),
+    S = n(388032);
 let T = 'Email Verification',
     b = 'PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY';
-function A() {
+function x() {
     let { action: e, theme: t } = (0, a.cj)([E.Z, _.Z], () => ({
             action: E.Z.getAction(),
             theme: _.Z.theme
         })),
-        A = I.Z.getVerificationTypes(e),
-        [x, Z] = r.useState(0),
-        L = (0, h.Z)(A);
+        x = I.Z.getVerificationTypes(e),
+        [A, Z] = r.useState(0),
+        L = (0, h.Z)(x);
     (0, p.Z)(
         {
             type: l.ImpressionTypes.MODAL,
             name: l.ImpressionNames.USER_ACTION_REQUIRED,
             properties: {
-                verification_type: A[0],
-                verification_types: A
+                verification_type: x[0],
+                verification_types: x
             }
         },
         {},
-        [A.toString()]
+        [x.toString()]
     );
     let P = () => {
             (0, u.FD)(),
@@ -77,7 +77,7 @@ function A() {
                         });
                 },
                 {
-                    modalKey: S.M,
+                    modalKey: N.M,
                     Layer: g.ZP
                 }
             );
@@ -94,16 +94,16 @@ function A() {
         ),
         r.useEffect(() => {
             (null == L ? void 0 : L[0]) === v.PUi.PHONE &&
-                (null == A ? void 0 : A[0]) === v.PUi.EMAIL &&
+                (null == x ? void 0 : x[0]) === v.PUi.EMAIL &&
                 (0, s.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
-                                title: N.intl.string(N.t.KLnLIC),
-                                body: N.intl.string(N.t.XGbCq6),
-                                confirmText: N.intl.string(N.t['3oK4q6'])
+                                title: S.intl.string(S.t.KLnLIC),
+                                body: S.intl.string(S.t.XGbCq6),
+                                confirmText: S.intl.string(S.t['3oK4q6'])
                             });
                     },
                     {
@@ -112,10 +112,10 @@ function A() {
                         onCloseCallback: P
                     }
                 );
-        }, [A, L]),
+        }, [x, L]),
         (0, i.jsx)(C.Z, {
-            types: A,
-            captchaKey: x,
+            types: x,
+            captchaKey: A,
             onCaptchaVerify: (e) => {
                 o.tn
                     .post({
@@ -138,14 +138,14 @@ function A() {
                         let { ConfirmModal: e, Text: t } = await Promise.resolve().then(n.bind(n, 481060));
                         return (n) =>
                             (0, i.jsx)(e, {
-                                header: N.intl.string(N.t['2jxGen']),
-                                confirmText: N.intl.string(N.t['2jxGen']),
-                                cancelText: N.intl.string(N.t['ETE/oK']),
+                                header: S.intl.string(S.t['2jxGen']),
+                                confirmText: S.intl.string(S.t['2jxGen']),
+                                cancelText: S.intl.string(S.t['ETE/oK']),
                                 onConfirm: () => c.Z.logout(),
                                 ...n,
                                 children: (0, i.jsx)(t, {
                                     variant: 'text-md/normal',
-                                    children: N.intl.string(N.t.SUnWBA)
+                                    children: S.intl.string(S.t.SUnWBA)
                                 })
                             });
                     },

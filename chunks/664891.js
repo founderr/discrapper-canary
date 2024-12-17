@@ -19,9 +19,9 @@ var i = t(200651),
     h = t(906732),
     f = t(987209),
     v = t(563132),
-    E = t(45572),
+    S = t(45572),
     g = t(614223),
-    S = t(246946),
+    E = t(246946),
     j = t(351402),
     y = t(509545),
     I = t(74538),
@@ -40,15 +40,15 @@ var i = t(200651),
 function L(e) {
     var n;
     let t,
-        { premiumSubscription: r, paymentSources: x, priceOptions: h, onPaymentSourceChange: T, onPaymentSourceAdd: C, planId: A, setHasAcceptedTerms: w, legalTermsNodeRef: L, hasLegalTermsFlash: G, onInvoiceError: H, planGroup: W, currencies: V, onCurrencyChange: K, hasOpenInvoice: z, purchaseState: Y, handleClose: X } = e,
+        { premiumSubscription: r, paymentSources: x, priceOptions: h, onPaymentSourceChange: T, onPaymentSourceAdd: C, planId: A, setHasAcceptedTerms: w, legalTermsNodeRef: L, hasLegalTermsFlash: B, onInvoiceError: H, planGroup: W, currencies: V, onCurrencyChange: K, hasOpenInvoice: z, purchaseState: Y, handleClose: X } = e,
         { selectedSkuId: q, defaultPlanId: J, isPremium: Q, startedPaymentFlowWithPaymentSourcesRef: $ } = (0, v.usePaymentContext)(),
         { isGift: ee } = (0, f.wD)(),
         en = h.paymentSourceId,
         et = (0, c.e7)([y.Z], () => y.Z.get(A));
     s()(null != et, 'Missing newPlan');
-    let ei = (0, c.e7)([S.Z], () => S.Z.hidePersonalInformation),
+    let ei = (0, c.e7)([E.Z], () => E.Z.hidePersonalInformation),
         el = a.M.EEA_COUNTRIES.has(j.Z.ipCountryCodeWithFallback),
-        er = Y === E.A.PURCHASING || Y === E.A.COMPLETED,
+        er = Y === S.A.PURCHASING || Y === S.A.COMPLETED,
         es = (0, g.Kp)({
             isTrial: !1,
             isGift: ee,
@@ -97,7 +97,7 @@ function L(e) {
                           priceOptions: h,
                           preventFetch: er
                       })
-                    : (0, i.jsx)(B, {
+                    : (0, i.jsx)(G, {
                           premiumSubscription: r,
                           newPlan: et,
                           planGroup: W,
@@ -165,7 +165,7 @@ function L(e) {
                     ]
                 }),
                 (0, i.jsx)(_.Z, {
-                    isActive: G,
+                    isActive: B,
                     ref: L,
                     children:
                         null != r && (0, P.R4)(r, A, W)
@@ -236,10 +236,10 @@ function F(e) {
         { selectedSkuId: u, startedPaymentFlowWithPaymentSourcesRef: d } = (0, v.usePaymentContext)(),
         { isGift: m } = (0, f.wD)(),
         { analyticsLocations: p } = (0, h.ZP)(),
-        E = (0, I.al)(n, t.id, 1, new Set(s)),
-        [S, j] = (0, T.ED)({
+        S = (0, I.al)(n, t.id, 1, new Set(s)),
+        [E, j] = (0, T.ED)({
             subscriptionId: n.id,
-            items: E,
+            items: S,
             renewal: !1,
             applyEntitlements: !0,
             paymentSourceId: a.paymentSourceId,
@@ -250,7 +250,7 @@ function F(e) {
         }),
         [y, P] = (0, T.ED)({
             subscriptionId: n.id,
-            items: E,
+            items: S,
             renewal: !0,
             paymentSourceId: a.paymentSourceId,
             currency: a.currency,
@@ -272,13 +272,13 @@ function F(e) {
             selectedSkuId: u,
             startedPaymentFlowWithPaymentSources: d.current
         }),
-        _ = (0, g.$g)(C, S, t);
-    if (null == S || null == y || _) return (0, i.jsx)(o.Spinner, { className: M.__invalid_spinner });
+        _ = (0, g.$g)(C, E, t);
+    if (null == E || null == y || _) return (0, i.jsx)(o.Spinner, { className: M.__invalid_spinner });
     let O = (0, I.Ap)(a.paymentSourceId);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(A.hG, {
-                proratedInvoice: S,
+                proratedInvoice: E,
                 renewalInvoice: y
             }),
             (0, i.jsxs)(b.PO, {
@@ -286,13 +286,13 @@ function F(e) {
                 children: [
                     (0, i.jsx)(b.q9, { children: R.intl.string(R.t['2eh+Cg']) }),
                     (0, i.jsx)(A.Lu, {
-                        invoice: S,
+                        invoice: E,
                         newPlan: t,
                         isPrepaidPaymentSource: O
                     }),
                     (0, i.jsx)(A.nd, {
                         premiumSubscription: n,
-                        proratedInvoice: S,
+                        proratedInvoice: E,
                         renewalInvoice: y,
                         isUpdate: !0,
                         isPrepaidPaymentSource: O
@@ -305,7 +305,7 @@ function F(e) {
 function D(e) {
     var n, t;
     let r,
-        { premiumSubscription: s, newPlan: a, onInvoiceError: c, planGroup: u, priceOptions: m, preventFetch: f, disabled: v, isEEA: E, paymentSources: g, setHasAcceptedTerms: S } = e,
+        { premiumSubscription: s, newPlan: a, onInvoiceError: c, planGroup: u, priceOptions: m, preventFetch: f, disabled: v, isEEA: S, paymentSources: g, setHasAcceptedTerms: E } = e,
         { analyticsLocations: j } = (0, h.ZP)(),
         y = (0, I.al)(s, a.id, 1, new Set(u)),
         [P, N] = (0, T.ED)({
@@ -333,7 +333,7 @@ function D(e) {
             null == r)
           ? null
           : (0, i.jsx)(p.Z, {
-                onChange: S,
+                onChange: E,
                 finePrint: (0, i.jsx)(d.Z, {
                     subscriptionPlan: a,
                     paymentSourceType: null === (n = g[null !== (t = m.paymentSourceId) && void 0 !== t ? t : '']) || void 0 === n ? void 0 : n.type,
@@ -343,7 +343,7 @@ function D(e) {
                 }),
                 forceShow: !0,
                 showPricingLink: a.currency !== Z.pKx.USD,
-                showWithdrawalWaiver: E,
+                showWithdrawalWaiver: S,
                 disabled: v,
                 subscriptionPlan: a,
                 currentSubscription: s,
@@ -407,7 +407,7 @@ function U(e) {
         ]
     });
 }
-function B(e) {
+function G(e) {
     let n,
         { premiumSubscription: t, newPlan: l, planGroup: r, priceOptions: s, preventFetch: a } = e,
         { analyticsLocations: c } = (0, h.ZP)(),

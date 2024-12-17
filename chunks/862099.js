@@ -29,12 +29,12 @@ var i,
     I = n(501655),
     C = n(192079),
     v = n(427679),
-    S = n(448206),
-    N = n(496675),
+    N = n(448206),
+    S = n(496675),
     T = n(938475),
     b = n(626135),
-    A = n(823379),
-    x = n(15274),
+    x = n(823379),
+    A = n(15274),
     Z = n(924301),
     L = n(504160),
     P = n(151864),
@@ -202,7 +202,7 @@ function z(e) {
         })
     );
 }
-function Y(e) {
+function W(e) {
     var t;
     let { guildEvent: n, noticeType: i } = e,
         r = (0, g.Q3)('GuildUpcomingEventNotice'),
@@ -227,7 +227,7 @@ function Y(e) {
                     className: H.textBlock,
                     children: [
                         (0, l.jsx)(d.Clickable, {
-                            onClick: () => (0, x.bO)({ eventId: n.id }),
+                            onClick: () => (0, A.bO)({ eventId: n.id }),
                             className: H.eventNameClickable,
                             children: (0, l.jsx)(d.Text, {
                                 color: 'header-primary',
@@ -303,7 +303,7 @@ function Y(e) {
         })
     );
 }
-function W(e) {
+function Y(e) {
     let { guildEvent: t } = e,
         n = (0, M.cS)(t);
     return null == n
@@ -326,7 +326,7 @@ function W(e) {
 function K(e) {
     let { guildEvent: t } = e,
         n = a.useCallback(() => {
-            (0, x.bO)({ eventId: t.id });
+            (0, A.bO)({ eventId: t.id });
         }, [t]);
     return (0, l.jsx)(d.Button, {
         fullWidth: !0,
@@ -386,8 +386,8 @@ function Q(e) {
     let { channel: t, speakers: n, voiceType: i } = e,
         r = t.getGuildId(),
         o = a.useMemo(() => n.slice(0, 3), [n]),
-        h = (0, c.e7)([N.Z], () => N.Z.can(G.Plq.CONNECT, t)),
-        m = (0, S.Z)(t.id),
+        h = (0, c.e7)([S.Z], () => S.Z.can(G.Plq.CONNECT, t)),
+        m = (0, N.Z)(t.id),
         p = B.intl.string(B.t.VJlc0d);
     switch (i) {
         case 1:
@@ -400,7 +400,7 @@ function Q(e) {
             p = B.intl.string(B.t.wBoE6O);
             break;
         default:
-            (0, A.vE)(i);
+            (0, x.vE)(i);
     }
     return null == r
         ? null
@@ -467,7 +467,7 @@ function Q(e) {
                     channel: i
                 }))
               : r.entity_type === U.WX.EXTERNAL
-                ? (u = (0, l.jsx)(W, { guildEvent: r }))
+                ? (u = (0, l.jsx)(Y, { guildEvent: r }))
                 : r.entity_type === U.WX.VOICE &&
                   null != i &&
                   (u = (0, l.jsx)(F, {
@@ -477,7 +477,7 @@ function Q(e) {
         let g = t.hasFeature(G.oNc.COMMUNITY) || t.hasFeature(G.oNc.HUB);
         if (null == u && null != a && !g) {
             let { upcomingEvent: e, noticeType: t } = a;
-            u = (0, l.jsx)(Y, {
+            u = (0, l.jsx)(W, {
                 guildEvent: e,
                 noticeType: t
             });

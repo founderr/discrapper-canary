@@ -17,13 +17,13 @@ var i = n(200651),
     p = n(823188),
     x = n(626135),
     _ = n(987209),
-    h = n(563132),
-    f = n(981631),
+    f = n(563132),
+    h = n(981631),
     j = n(474936),
     m = n(388032),
     L = n(988113);
 function E() {
-    let { activeSubscription: e, purchaseError: t, paymentError: n, setPurchaseError: s, selectedSkuId: E, selectedPlan: S, setSelectedSkuId: g, setSelectedPlanId: I, setSelectedPlanNotification: M } = (0, h.usePaymentContext)(),
+    let { activeSubscription: e, purchaseError: t, paymentError: n, setPurchaseError: s, selectedSkuId: E, selectedPlan: S, setSelectedSkuId: g, setSelectedPlanId: I, setSelectedPlanNotification: M } = (0, f.usePaymentContext)(),
         { isGift: v } = (0, _.wD)(),
         [y, T] = l.useState(!1),
         [N, P] = l.useState(!1),
@@ -49,7 +49,7 @@ function E() {
                                     'span',
                                     {
                                         onMouseEnter: () => {
-                                            x.default.track(f.rMx.NITRO_BASIC_UPSELL_PERK_HOVERED), T(!0);
+                                            x.default.track(h.rMx.NITRO_BASIC_UPSELL_PERK_HOVERED), T(!0);
                                         },
                                         onMouseLeave: () => T(!1),
                                         children: e
@@ -69,7 +69,7 @@ function E() {
                         useGlowOnHover: !0,
                         upsellType: 'post-failure-nitro-basic-upsell',
                         themeOverride: u.T.NITRO_BASIC,
-                        analyticsLocations: f.Sbl.NITRO_BASIC_UPSELL
+                        analyticsLocations: h.Sbl.NITRO_BASIC_UPSELL
                     })
                 }),
                 y &&

@@ -18,12 +18,12 @@ var i = n(200651),
     I = n(812206),
     C = n(44315),
     v = n(600164),
-    S = n(167533),
-    N = n(925329),
+    N = n(167533),
+    S = n(925329),
     T = n(707409),
     b = n(210887),
-    A = n(283595),
-    x = n(417363),
+    x = n(283595),
+    A = n(417363),
     Z = n(941128),
     L = n(451478),
     P = n(424218),
@@ -234,8 +234,8 @@ function F(e) {
     throw Error('Invalid Dispatch stage');
 }
 let z = 'name',
-    Y = 'progress',
-    W = 'actions';
+    W = 'progress',
+    Y = 'actions';
 class K extends r.PureComponent {
     get isFocused() {
         let { cellProps: e } = this.props;
@@ -345,7 +345,7 @@ class K extends r.PureComponent {
     }
     renderProgressPatching() {
         return (0, i.jsx)(O.Z, {
-            getHistoricalTotalBytes: x.Z.getHistoricalTotalBytesWritten,
+            getHistoricalTotalBytes: A.Z.getHistoricalTotalBytesWritten,
             updateInterval: 5000,
             children: this.renderProgressPatchingBody
         });
@@ -450,10 +450,10 @@ let q = () =>
                 (0, i.jsxs)(v.Z, {
                     align: v.Z.Align.CENTER,
                     children: [
-                        (0, i.jsx)(N.Z, {
+                        (0, i.jsx)(S.Z, {
                             game: e.application,
                             className: M.__invalid_gameIcon,
-                            size: N.Z.Sizes.SMALL
+                            size: S.Z.Sizes.SMALL
                         }),
                         (0, i.jsx)('div', {
                             className: M.nameCellText,
@@ -463,7 +463,7 @@ let q = () =>
                 })
         },
         {
-            key: Y,
+            key: W,
             cellClassName: M.progressCell,
             headerCellClassName: M.progressCellHeader,
             bodyCellClassName: M.progressCellBody,
@@ -474,7 +474,7 @@ let q = () =>
                 })
         },
         {
-            key: W,
+            key: Y,
             cellClassName: M.actionsCell,
             render(e, t) {
                 let n, r;
@@ -531,20 +531,20 @@ class ee extends r.PureComponent {
                               (0, i.jsx)(R.Z, {
                                   className: a()(M.headerCell, M.networkProgress),
                                   title: D.intl.string(D.t.ytoXKi),
-                                  getHistoricalTotalBytes: x.Z.getHistoricalTotalBytesDownloaded,
+                                  getHistoricalTotalBytes: A.Z.getHistoricalTotalBytesDownloaded,
                                   color: j.Ilk.GREEN_360,
                                   animate: r
                               }),
                               (0, i.jsx)(R.Z, {
                                   className: a()(M.headerCell, M.diskProgress),
                                   title: D.intl.string(D.t.SjohhI),
-                                  getHistoricalTotalBytes: x.Z.getHistoricalTotalBytesWritten,
+                                  getHistoricalTotalBytes: A.Z.getHistoricalTotalBytesWritten,
                                   color: j.Ilk.BLUE_345,
                                   animate: r
                               })
                           ]
                       }),
-                      (0, i.jsx)(S.Z, {
+                      (0, i.jsx)(N.Z, {
                           hasHeader: !1,
                           columns: $,
                           data: e,
@@ -610,7 +610,7 @@ function et(e, t, n, i) {
                     branchId: o,
                     state: c,
                     application: s,
-                    libraryApplication: A.Z.getLibraryApplication(a, o),
+                    libraryApplication: x.Z.getLibraryApplication(a, o),
                     finished: t,
                     index: l
                 }),
@@ -619,10 +619,10 @@ function et(e, t, n, i) {
     }, []);
 }
 t.Z = (0, E.Z)(
-    c.ZP.connectStores([I.Z, x.Z, Z.Z, b.Z, L.Z], () => {
-        let e = et(Z.Z.activeItems, !1, I.Z, x.Z);
+    c.ZP.connectStores([I.Z, A.Z, Z.Z, b.Z, L.Z], () => {
+        let e = et(Z.Z.activeItems, !1, I.Z, A.Z);
         return {
-            applications: [...e, ...et(Z.Z.finishedItems, !0, I.Z, x.Z)],
+            applications: [...e, ...et(Z.Z.finishedItems, !0, I.Z, A.Z)],
             paused: Z.Z.paused,
             isFocused: L.Z.isFocused(),
             theme: b.Z.theme

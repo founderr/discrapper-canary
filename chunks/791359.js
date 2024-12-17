@@ -23,18 +23,18 @@ var i = n(200651),
     I = n(70956),
     C = n(225559),
     v = n(910436),
-    S = n(203028),
-    N = n(358924),
+    N = n(203028),
+    S = n(358924),
     T = n(292140),
     b = n(525296),
-    A = n(981631),
-    x = n(674563),
+    x = n(981631),
+    A = n(674563),
     Z = n(388032),
     L = n(721925);
 let P = 15 * I.Z.Millis.MINUTE,
     y = (0, b.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
-            o = (0, i.jsx)(S.Z, {
+            o = (0, i.jsx)(N.Z, {
                 party: t,
                 onUserContextMenu: n
             }),
@@ -52,10 +52,10 @@ let P = 15 * I.Z.Millis.MINUTE,
                 let e = m
                     .filter((e) => {
                         var t, n;
-                        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === x.wW.GAME;
+                        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === A.wW.GAME;
                     })
                     .map((e) => e.game.name);
-                E.default.track(A.rMx.NOW_PLAYING_CARD_HOVERED, {
+                E.default.track(x.rMx.NOW_PLAYING_CARD_HOVERED, {
                     num_users: g,
                     num_streams: f,
                     num_activities: _,
@@ -77,7 +77,7 @@ let P = 15 * I.Z.Millis.MINUTE,
                   spacing: 8,
                   children: (e, t) => {
                       let { isShown: n } = t;
-                      return (0, i.jsx)(N.Z, {
+                      return (0, i.jsx)(S.Z, {
                           ...e,
                           onMouseEnter: b,
                           'aria-haspopup': 'menu',

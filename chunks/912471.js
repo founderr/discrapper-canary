@@ -1,6 +1,6 @@
 n.d(t, {
     D: function () {
-        return A;
+        return x;
     }
 }),
     n(411104);
@@ -34,9 +34,9 @@ async function C() {
         v(),
         (E = setTimeout(
             () => {
-                S(),
+                N(),
                     (_ = setInterval(() => {
-                        S();
+                        N();
                     }, 15 * u.Z.Millis.MINUTE));
             },
             Math.max(n, 0)
@@ -45,7 +45,7 @@ async function C() {
 function v() {
     null != E && (clearTimeout(E), (E = null)), null != _ && (clearInterval(_), (_ = null));
 }
-async function S() {
+async function N() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = Date.now(),
         n = await (0, p.Gg)(),
@@ -76,10 +76,10 @@ async function S() {
     }
     d.default.track(g.rMx.CLIENT_HEARTBEAT, c), r.K.set(f, Date.now().toString()), (0, a.Z)();
 }
-let N = null,
+let S = null,
     T = !0;
 function b() {
-    if (T || (null != N && N !== g.hes.DISCONNECTED && N !== g.hes.RTC_DISCONNECTED))
+    if (T || (null != S && S !== g.hes.DISCONNECTED && S !== g.hes.RTC_DISCONNECTED))
         try {
             C();
         } catch (e) {
@@ -90,15 +90,15 @@ function b() {
             if (!!I) (I = !1), m.Z.addBreadcrumb({ message: 'Stopping Analytics Heartbeat' }), (0, p.fr)(!1), v(), (0, a.Z)();
         })();
 }
-function A() {
-    m.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), c.Z.addChangeListener(Z), l.Z.subscribe('WINDOW_FOCUS', L), l.Z.subscribe('APP_STATE_UPDATE', P), l.Z.subscribe('LOGIN_SUCCESS', x), b();
-}
 function x() {
-    S(!0);
+    m.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), c.Z.addChangeListener(Z), l.Z.subscribe('WINDOW_FOCUS', L), l.Z.subscribe('APP_STATE_UPDATE', P), l.Z.subscribe('LOGIN_SUCCESS', A), b();
+}
+function A() {
+    N(!0);
 }
 function Z() {
     let e = c.Z.getState();
-    N !== e && ((N = e), b());
+    S !== e && ((S = e), b());
 }
 function L(e) {
     let { focused: t } = e;

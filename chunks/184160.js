@@ -1,6 +1,6 @@
 n.d(t, {
     x: function () {
-        return f;
+        return h;
     }
 });
 var i = n(200651);
@@ -17,13 +17,13 @@ var l = n(512722),
     p = n(409813),
     x = n(614223),
     _ = n(388032),
-    h = n(475536);
-function f(e) {
+    f = n(475536);
+function h(e) {
     let { handleStepChange: t, handleClose: n } = e,
         l = (0, o.ZP)(),
-        { activeSubscription: f, selectedSkuId: j, setSelectedPlanId: m, startedPaymentFlowWithPaymentSourcesRef: L } = (0, c.usePaymentContext)(),
+        { activeSubscription: h, selectedSkuId: j, setSelectedPlanId: m, startedPaymentFlowWithPaymentSourcesRef: L } = (0, c.usePaymentContext)(),
         { isGift: E } = (0, u.wD)(),
-        S = null != f ? (0, d.Af)(f) : null,
+        S = null != h ? (0, d.Af)(h) : null,
         g = null != S ? (0, d.gq)(S.planId) : null,
         I = null != S ? (0, d.Rd)(S.planId) : null,
         M = (0, x.Kp)({
@@ -39,11 +39,11 @@ function f(e) {
             titleText: _.intl.string(_.t['7VcWW1']),
             subtitleText: _.intl.format(_.t.Qk34Ii, { subscriptionName: g }),
             footer: (0, i.jsxs)('div', {
-                className: h.whatYouLoseButtonContainer,
+                className: f.whatYouLoseButtonContainer,
                 children: [
                     (0, i.jsx)(a.Button, {
                         onClick: () => {
-                            M ? (m((0, x.nA)(j, f)), t(p.h8.REVIEW)) : t(p.h8.PLAN_SELECT);
+                            M ? (m((0, x.nA)(j, h)), t(p.h8.REVIEW)) : t(p.h8.PLAN_SELECT);
                         },
                         children: _.intl.string(_.t['3PatS0'])
                     }),

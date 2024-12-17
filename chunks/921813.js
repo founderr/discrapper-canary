@@ -24,8 +24,8 @@ var a = t(120356),
     v = t(154960);
 function C(e) {
     let { user: i, guild: t, canUsePremiumCustomization: a, onUpsellClick: C, pendingBanner: I, pendingBio: S, pendingPronouns: k, pendingAvatar: y, pendingAvatarDecoration: T, pendingNickname: B, pendingGlobalName: j, pendingThemeColors: P, pendingProfileEffectId: E, avatarClassName: N, containerClassName: w, isTryItOutFlow: A = !1, disabledInputs: O = !1, hideCustomStatus: Z = !1, hideBioSection: R = !1, hideMessageInput: L = !0, hideExampleButton: M = !1 } = e,
-        D = (0, l.ZP)(i.id, null == t ? void 0 : t.id),
-        { avatarSrc: G, avatarDecorationSrc: H } = (0, d.Z)({
+        G = (0, l.ZP)(i.id, null == t ? void 0 : t.id),
+        { avatarSrc: D, avatarDecorationSrc: H } = (0, d.Z)({
             user: i,
             guildId: null == t ? void 0 : t.id,
             avatarDecorationOverride: T,
@@ -35,17 +35,17 @@ function C(e) {
         }),
         U = (0, p.ZT)({
             pendingProfileEffectId: E,
-            displayProfile: D
+            displayProfile: G
         }),
-        { theme: F, primaryColor: W } = (0, c.Z)({
+        { theme: W, primaryColor: F } = (0, c.Z)({
             user: i,
-            displayProfile: D,
+            displayProfile: G,
             pendingThemeColors: P,
             isPreview: a
         });
     return (0, n.jsxs)(u.Z, {
         user: i,
-        displayProfile: D,
+        displayProfile: G,
         profileType: h.y0.BITE_SIZE,
         pendingThemeColors: P,
         className: r()(v.container, w),
@@ -56,7 +56,7 @@ function C(e) {
                 children: [
                     (0, n.jsx)(b.Z, {
                         user: i,
-                        displayProfile: D,
+                        displayProfile: G,
                         guildId: null == t ? void 0 : t.id,
                         canUsePremiumCustomization: a,
                         pendingBanner: I,
@@ -67,12 +67,12 @@ function C(e) {
                     (0, n.jsx)(_.Z, {
                         user: i,
                         guild: t,
-                        displayProfile: D,
+                        displayProfile: G,
                         canUsePremiumCustomization: a,
-                        previewAvatar: G,
+                        previewAvatar: D,
                         previewAvatarDecoration: H,
-                        previewTheme: F,
-                        previewPrimaryColor: W,
+                        previewTheme: W,
+                        previewPrimaryColor: F,
                         className: N,
                         disabledInputs: O,
                         isTryItOutFlow: A,
@@ -88,7 +88,7 @@ function C(e) {
             }),
             (0, n.jsx)(m.Z, {
                 user: i,
-                displayProfile: D,
+                displayProfile: G,
                 guild: t,
                 pendingAvatar: y,
                 pendingNickname: B,

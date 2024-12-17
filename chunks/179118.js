@@ -42,18 +42,18 @@ function O(e) {
         R = f || (null != l && null != b),
         L = (null == r ? void 0 : r.productLine) === E.POd.COLLECTIBLES,
         M = (0, x.Z)(),
-        { selectedGiftingPromotionReward: D } = (0, P.wD)(),
-        G = null == M ? void 0 : M.giftPurchaseConfirmation,
-        H = (0, g.tK)(null == D ? void 0 : D.skuId),
-        U = (0, g.a5)(s) && null != H && null != G,
-        F = () => (null != s ? s.skuId : null != r ? r.id : null),
-        W = () => {
+        { selectedGiftingPromotionReward: G } = (0, P.wD)(),
+        D = null == M ? void 0 : M.giftPurchaseConfirmation,
+        H = (0, g.tK)(null == G ? void 0 : G.skuId),
+        U = (0, g.a5)(s) && null != H && null != D,
+        W = () => (null != s ? s.skuId : null != r ? r.id : null),
+        F = () => {
             let e;
             return null != h
                 ? w.intl.string(w.t.qB8ayc)
                 : null == s
                   ? null
-                  : ((e = s.interval === N.rV.MONTH ? (R ? (U ? G.monthGiftText : w.t['4ZJ+7e']) : w.t['P+z55e']) : R ? (U ? G.yearGiftText : w.t.p0pZXF) : w.t.bXqk3t),
+                  : ((e = s.interval === N.rV.MONTH ? (R ? (U ? D.monthGiftText : w.t['4ZJ+7e']) : w.t['P+z55e']) : R ? (U ? D.yearGiftText : w.t.p0pZXF) : w.t.bXqk3t),
                     w.intl.format(e, {
                         skuName: (0, B.aq)(s.id),
                         intervalCount: s.intervalCount
@@ -122,7 +122,7 @@ function O(e) {
                             game: t,
                             className: A.__invalid_icon,
                             size: _.Z.Sizes.LARGE,
-                            skuId: F()
+                            skuId: W()
                         })
                       : null,
                   (0, n.jsx)(d.Spinner, { type: d.SpinnerTypes.PULSING_ELLIPSIS })
@@ -136,7 +136,7 @@ function O(e) {
                             game: t,
                             className: A.__invalid_icon,
                             size: _.Z.Sizes.LARGE,
-                            skuId: F()
+                            skuId: W()
                         })
                       : null,
                   (0, n.jsx)(d.Heading, {
@@ -166,7 +166,7 @@ function O(e) {
                                 }),
                                 (0, n.jsx)('div', {
                                     className: A.giftSentMessage,
-                                    children: W()
+                                    children: F()
                                 })
                             ]
                         })
@@ -183,7 +183,7 @@ function O(e) {
                                 children: [
                                     (0, n.jsx)('div', {
                                         className: A.blurb,
-                                        children: W()
+                                        children: F()
                                     }),
                                     !t &&
                                         null == h &&
