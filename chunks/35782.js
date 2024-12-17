@@ -106,23 +106,63 @@ let { Themes: i } = r(15202).V,
                     }
                 }
             },
+            BACKGROUND_MESSAGE_HIGHLIGHT: {
+                'visual-refresh': {
+                    [i.DARK]: {
+                        raw: 'OPACITY_BLURPLE_16',
+                        opacity: 0.1607843137254902
+                    },
+                    [i.LIGHT]: {
+                        raw: 'OPACITY_BLURPLE_16',
+                        opacity: 0.1607843137254902
+                    },
+                    [i.MIDNIGHT]: {
+                        raw: 'OPACITY_BLURPLE_16',
+                        opacity: 0.1607843137254902
+                    },
+                    [i.DARKER]: {
+                        raw: 'OPACITY_BLURPLE_16',
+                        opacity: 0.1607843137254902
+                    }
+                }
+            },
+            BACKGROUND_MESSAGE_HIGHLIGHT_HOVER: {
+                'visual-refresh': {
+                    [i.DARK]: {
+                        raw: 'OPACITY_BLURPLE_12',
+                        opacity: 0.12156862745098039
+                    },
+                    [i.LIGHT]: {
+                        raw: 'OPACITY_BLURPLE_20',
+                        opacity: 0.2
+                    },
+                    [i.MIDNIGHT]: {
+                        raw: 'OPACITY_BLURPLE_12',
+                        opacity: 0.12156862745098039
+                    },
+                    [i.DARKER]: {
+                        raw: 'OPACITY_BLURPLE_12',
+                        opacity: 0.12156862745098039
+                    }
+                }
+            },
             BACKGROUND_MESSAGE_HOVER: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'NEUTRAL_74',
-                        opacity: 1
+                        raw: 'OPACITY_BLACK_12',
+                        opacity: 0.12156862745098039
                     },
                     [i.LIGHT]: {
-                        raw: 'NEUTRAL_3',
-                        opacity: 1
+                        raw: 'OPACITY_12',
+                        opacity: 0.12156862745098039
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'NEUTRAL_94',
-                        opacity: 1
+                        raw: 'OPACITY_12',
+                        opacity: 0.12156862745098039
                     },
                     [i.DARKER]: {
-                        raw: 'NEUTRAL_89',
-                        opacity: 1
+                        raw: 'OPACITY_BLACK_12',
+                        opacity: 0.12156862745098039
                     }
                 }
             },
