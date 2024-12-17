@@ -28,7 +28,7 @@ function d(e, n, t) {
         e
     );
 }
-((a = r || (r = {})).UNKNOWN = 'unknown'), (a.VISA = 'visa'), (a.DISCOVER = 'discover'), (a.MASTERCARD = 'mastercard'), (a.AMEX = 'amex'), (a.PAYPAL = 'paypal'), (a.PAYMENT_REQUEST = 'paymentRequest'), (a.G_PAY = 'gPay'), (a.DINERS = 'diners'), (a.JCB = 'jcb'), (a.UNIONPAY = 'unionpay'), (a.SOFORT = 'sofort'), (a.PRZELEWY24 = 'przelewy24'), (a.GIROPAY = 'giropay'), (a.PAYSAFECARD = 'paysafecard'), (a.GCASH = 'gcash'), (a.GRABPAY = 'grabpay'), (a.MOMO_WALLET = 'momo_wallet'), (a.VENMO = 'venmo'), (a.KAKAOPAY = 'kakaopay'), (a.GOPAY_WALLET = 'gopay_wallet'), (a.BANCONTACT = 'bancontact'), (a.EPS = 'eps'), (a.IDEAL = 'ideal'), (a.CASH_APP = 'cash_app'), (a.APPLE = 'apple');
+((a = r || (r = {})).UNKNOWN = 'unknown'), (a.VISA = 'visa'), (a.DISCOVER = 'discover'), (a.MASTERCARD = 'mastercard'), (a.AMEX = 'amex'), (a.PAYPAL = 'paypal'), (a.PAYMENT_REQUEST = 'paymentRequest'), (a.G_PAY = 'gPay'), (a.DINERS = 'diners'), (a.JCB = 'jcb'), (a.UNIONPAY = 'unionpay'), (a.SOFORT = 'sofort'), (a.PRZELEWY24 = 'przelewy24'), (a.GIROPAY = 'giropay'), (a.PAYSAFECARD = 'paysafecard'), (a.GCASH = 'gcash'), (a.GRABPAY = 'grabpay'), (a.MOMO_WALLET = 'momo_wallet'), (a.VENMO = 'venmo'), (a.KAKAOPAY = 'kakaopay'), (a.GOPAY_WALLET = 'gopay_wallet'), (a.BANCONTACT = 'bancontact'), (a.EPS = 'eps'), (a.IDEAL = 'ideal'), (a.CASH_APP = 'cash_app'), (a.APPLE = 'apple'), (a.APPLE_LIGHT = 'apple_light');
 let p = {
     SMALL: u.cardIconSmall,
     MEDIUM: u.cardIconMedium,

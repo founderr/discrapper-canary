@@ -50,40 +50,40 @@ function Z(e) {
         u = (0, p.Q3)('FolderIconContent'),
         { color: h, children: m } = r,
         f = null != h ? h : v.Wyy,
-        g = m.map((e) => e.id),
-        [C, _] = l.useState(!1),
-        [E, Z] = l.useState(c),
-        N = c ? 0 : -b,
-        y = (0, d.useSpring)(
+        g = f === v.Wyy,
+        C = m.map((e) => e.id),
+        [_, E] = l.useState(!1),
+        [Z, N] = l.useState(c),
+        y = c ? 0 : -b,
+        T = (0, d.useSpring)(
             {
-                transform: 'translate3d(0, '.concat(N, 'px, 0)'),
+                transform: 'translate3d(0, '.concat(y, 'px, 0)'),
                 config: { duration: I },
                 onStart() {
-                    _(!0), Z(c);
+                    E(!0), N(c);
                 },
                 onRest() {
-                    _(!1), Z(c);
+                    E(!1), N(c);
                 }
             },
             'animate-always'
         ),
-        T = C ? y : void 0;
-    return (
-        (C || E) &&
-            (t = (0, i.jsx)(a.animated.div, {
-                style: T,
-                className: x.expandedFolderIconWrapper,
-                children: (0, i.jsx)(d.FolderIcon, {
-                    size: u ? 'sm' : 'md',
-                    color: 'currentColor',
-                    style: { color: (0, s.Rf)(f) }
-                })
-            })),
-        (C || !E) &&
+        j = _ ? T : void 0;
+    (_ || Z) &&
+        (t = (0, i.jsx)(a.animated.div, {
+            style: j,
+            className: x.expandedFolderIconWrapper,
+            children: (0, i.jsx)(d.FolderIcon, {
+                size: u ? 'sm' : 'md',
+                color: 'currentColor',
+                style: { color: (0, s.Rf)(f) }
+            })
+        })),
+        (_ || !Z) &&
             (n = (0, i.jsx)(a.animated.div, {
-                style: T,
+                style: j,
                 className: x.closedFolderIconWrapper,
-                children: g.slice(0, 4).map((e, t) =>
+                children: C.slice(0, 4).map((e, t) =>
                     (0, i.jsx)(
                         S,
                         {
@@ -94,14 +94,14 @@ function Z(e) {
                         e
                     )
                 )
-            })),
-        (0, i.jsxs)('div', {
-            'aria-hidden': !0,
-            style: c ? void 0 : { backgroundColor: (0, s.br)(f, 0.4) },
-            className: x.folderIconWrapper,
-            children: [t, n]
-        })
-    );
+            }));
+    let A = { backgroundColor: u && g ? d.tokens.colors.BACKGROUND_PRIMARY.css : (0, s.br)(f, 0.4) };
+    return (0, i.jsxs)('div', {
+        'aria-hidden': !0,
+        style: c ? void 0 : A,
+        className: x.folderIconWrapper,
+        children: [t, n]
+    });
 }
 function N(e) {
     let {

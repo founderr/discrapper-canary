@@ -6,6 +6,7 @@ e.exports = {
     row: 'row_ecbdaf',
     guildIcon: 'guildIcon_ecbdaf',
     body: 'body_ecbdaf',
+    divider: 'divider_ecbdaf',
     icon: 'icon_ecbdaf',
     channelIcon: 'channelIcon_ecbdaf',
     clickable: 'clickable_ecbdaf',
@@ -14,6 +15,5 @@ e.exports = {
     locationText: 'locationText_ecbdaf',
     externalLocation: 'externalLocation_ecbdaf',
     interestedCount: 'interestedCount_ecbdaf',
-    creator: 'creator_ecbdaf',
-    divider: 'divider_ecbdaf'
+    creator: 'creator_ecbdaf'
 };

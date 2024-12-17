@@ -16,8 +16,8 @@ var l = t(200651),
     m = t(73346),
     x = t(591759),
     h = t(886253),
-    v = t(680005),
-    f = t(938337);
+    f = t(680005),
+    v = t(938337);
 function p(e) {
     var n, t;
     let { appId: p, subscriptionType: _, onClose: j, skuId: N, guildId: I, transitionState: S, onHeaderTitleClick: C } = e,
@@ -50,7 +50,7 @@ function p(e) {
               transitionState: S,
               onHeaderTitleClick: null != C ? C : j,
               onClose: j,
-              footer: (0, l.jsx)(v.pV, {
+              footer: (0, l.jsx)(f.pV, {
                   onClick: R,
                   appId: p,
                   subscriptionType: _,
@@ -58,7 +58,7 @@ function p(e) {
                   subscriptionPlan: B,
                   state: E
               }),
-              children: (0, l.jsx)(f.i, {
+              children: (0, l.jsx)(v.i, {
                   appId: p,
                   skuId: N,
                   benefits:

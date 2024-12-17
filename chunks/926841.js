@@ -1,6 +1,6 @@
 n.d(t, {
     a: function () {
-        return i;
+        return s;
     },
     b: function () {
         return l;
@@ -28,6 +28,6 @@ let l = (0, a.B)({
         }
     ]
 });
-function i() {
+function s() {
     return l.getCurrentConfig({ location: 'premium_payment_flow_started_1' }, { autoTrackExposure: !0 });
 }

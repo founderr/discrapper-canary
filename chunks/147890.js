@@ -31,7 +31,7 @@ n.r(t),
     n(815648),
     n(47120);
 var r = n(749681),
-    o = n(352057),
+    o = n(926061),
     i = n(703656),
     l = n(626135),
     c = n(34674),
@@ -42,7 +42,7 @@ var r = n(749681),
     S = n(979007);
 let I = (e) => {
         let { view: t = a.ApplicationDirectoryViews.HOME, guildId: n, applicationId: i, applicationSection: c, entrypoint: I, skuId: P, restorePreviousView: y } = e;
-        if ((0, o.K0)({ location: I.name })) {
+        if ((0, o.l5)({ location: I.name })) {
             let e = null == i ? void 0 : c === u.ApplicationDirectoryProfileSections.STORE ? S.GlobalDiscoveryAppsSections.STORE : S.GlobalDiscoveryAppsSections.ABOUT;
             return (0, r.transitionToGlobalDiscovery)({
                 tab: p.GlobalDiscoveryTab.APPS,

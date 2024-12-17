@@ -19,7 +19,7 @@ var u = r(873546),
     m = r(421474),
     g = r(960904),
     E = r(830121),
-    v = r(352057),
+    v = r(926061),
     I = r(15274),
     T = r(924301),
     b = r(543842),
@@ -97,7 +97,7 @@ function F(e) {
                     guild_id: d,
                     channel_id: D.Z.getChannelId()
                 });
-                (0, v.K0)({ location: 'embedded_link' })
+                (0, v.l5)({ location: 'embedded_link' })
                     ? r
                           .e('11866')
                           .then(r.bind(r, 749681))
@@ -167,7 +167,7 @@ function F(e) {
             s = n && 'categories' === i && 'featured' !== e[4];
         return (n) => {
             var i, o, l, u;
-            if ((null == n || n.preventDefault(), (0, v.K0)({ location: 'embedded_link' }))) {
+            if ((null == n || n.preventDefault(), (0, v.l5)({ location: 'embedded_link' }))) {
                 let n, u, c;
                 if (a) {
                     let e = new URLSearchParams(f);

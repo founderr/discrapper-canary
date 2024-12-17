@@ -2,8 +2,8 @@ n(47120);
 var a = n(200651),
     r = n(192379),
     l = n(120356),
-    i = n.n(l),
-    s = n(481060),
+    s = n.n(l),
+    i = n(481060),
     o = n(600164),
     c = n(498918);
 function u(e, t, n) {
@@ -49,28 +49,28 @@ class d extends r.PureComponent {
             u(this, 'state', { changedSinceError: new Set() }),
             u(this, 'renderFormSection', (e) => {
                 let { values: t, onFieldChange: n, onFieldFocus: r, onFieldBlur: l, layout: o, ...c } = this.props,
-                    { getClassNameForLayout: u, renderInput: d, title: m, name: p, id: h, placeholder: A, ...E } = e,
+                    { getClassNameForLayout: u, renderInput: d, title: p, name: m, id: h, placeholder: A, ...E } = e,
                     N = {
                         ...E,
                         placeholder: null == A ? void 0 : A(),
                         layout: o,
-                        error: this.getError(p),
-                        value: t[p],
-                        name: p,
+                        error: this.getError(m),
+                        value: t[m],
+                        name: m,
                         'aria-labelledby': h,
                         onChange: n,
                         onFocus: r,
                         onBlur: l
                     };
                 return (0, a.jsx)(
-                    s.FormSection,
+                    i.FormSection,
                     {
-                        className: i()(null == u ? void 0 : u(o)),
-                        title: m(),
+                        className: s()(null == u ? void 0 : u(o)),
+                        title: p(),
                         titleId: h,
                         children: d(N, c)
                     },
-                    p
+                    m
                 );
             }),
             u(this, 'renderFormRow', (e) => {
@@ -78,7 +78,7 @@ class d extends r.PureComponent {
                 return (0, a.jsx)(
                     o.Z,
                     {
-                        className: i()(c.row, e.className),
+                        className: s()(c.row, e.className),
                         children: t
                     },
                     e.fields.map((e) => e.name).join('')

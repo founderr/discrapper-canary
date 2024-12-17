@@ -89,8 +89,8 @@ t.Z = function (e) {
                 j
             )
         });
-    let W = [z],
-        Y = 0 === z.length && '' !== U[t],
+    let Y = [z],
+        W = 0 === z.length && '' !== U[t],
         K = z.filter((e) => e.type === L.OGo.PENDING_INCOMING).length,
         q = t === L.pJs.PENDING && K > 0 && K >= Z.yf;
     return (0, i.jsx)(p.Gt, {
@@ -100,7 +100,7 @@ t.Z = function (e) {
             children: [
                 k && w && (0, i.jsx)(b.R, {}),
                 (0, i.jsx)(s.SearchBar, {
-                    className: a()(y.searchBar, Y ? y.searchEmptyState : null),
+                    className: a()(y.searchBar, W ? y.searchEmptyState : null),
                     query: U[t],
                     onChange: H,
                     onClear: V,
@@ -140,14 +140,14 @@ t.Z = function (e) {
                             })
                     ]
                 }),
-                Y
+                W
                     ? (0, i.jsx)('div', {
                           className: y.emptyStateContainer,
                           children: (0, i.jsx)(N.Z, { type: N.j.SECTION_NO_RESULTS }, j)
                       })
                     : (0, i.jsx)(T.Z, {
                           relationshipCount: M,
-                          statusSections: W,
+                          statusSections: Y,
                           renderRow: function (e) {
                               switch (t) {
                                   case L.pJs.BLOCKED:

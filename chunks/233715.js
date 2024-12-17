@@ -1,34 +1,34 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return o;
     }
 }),
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(752877),
-    a = n(481060);
-function s(e) {
-    let { children: t, className: n, flashKey: s } = e,
-        o = (0, a.useToken)(a.tokens.colors.BACKGROUND_MESSAGE_HIGHLIGHT).spring({ opacity: 1 }),
-        c = (0, a.useToken)(a.tokens.colors.BACKGROUND_MESSAGE_HIGHLIGHT).spring({ opacity: 0 }),
-        [d, u] = (0, a.useSpring)(() => ({ from: { backgroundColor: o } }), 'animate-never');
+    r = n(120356),
+    a = n.n(r),
+    s = n(329683);
+function o(e) {
+    let { children: t, className: n, flashKey: r } = e,
+        [o, c] = l.useState(!1),
+        d = l.useRef(null);
     return (
-        l.useEffect(() => {
-            u({
-                reset: !0,
-                immediate: !0,
-                to: { backgroundColor: o }
-            }),
-                u({
-                    delay: 1000,
-                    immediate: !1,
-                    to: { backgroundColor: c }
-                });
-        }, [s, u]),
-        (0, i.jsx)(r.animated.div, {
-            style: d,
-            className: n,
+        l.useEffect(
+            () => (
+                c(!0),
+                (d.current = window.setTimeout(() => {
+                    c(!1);
+                }, 2000)),
+                () => {
+                    null != d.current && clearTimeout(d.current);
+                }
+            ),
+            [r]
+        ),
+        (0, i.jsx)('div', {
+            'data-flash': o,
+            className: a()(s.flash, n),
             children: t
         })
     );

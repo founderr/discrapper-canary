@@ -18,7 +18,7 @@ var s = r(653041);
 var o = r(433517),
     l = r(388032);
 !(function (e) {
-    (e.CLASSIC = 'classic'), (e.RETRO = 'retro'), (e.BUBBLE = 'bop'), (e.DUCKY = 'ducky'), (e.LOFI = 'lofi'), (e.ASMR = 'asmr'), (e.DISCODO = 'discodo'), (e.HALLOWEEN = 'halloween');
+    (e.CLASSIC = 'classic'), (e.RETRO = 'retro'), (e.BUBBLE = 'bop'), (e.DUCKY = 'ducky'), (e.LOFI = 'lofi'), (e.ASMR = 'asmr'), (e.DISCODO = 'discodo'), (e.HALLOWEEN = 'halloween'), (e.WINTER_HOLIDAY = 'winter_holiday');
 })(i || (i = {}));
 let u = 'custom_notification_sounds_asmr',
     c = 'custom_notification_sounds_discodo';

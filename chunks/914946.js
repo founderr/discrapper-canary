@@ -6,7 +6,7 @@ n.d(t, {
         return k;
     },
     S5: function () {
-        return Y;
+        return W;
     },
     T5: function () {
         return G;
@@ -48,7 +48,7 @@ n.d(t, {
         return z;
     },
     zy: function () {
-        return W;
+        return Y;
     }
 }),
     n(47120),
@@ -220,7 +220,7 @@ function z(e, t, n) {
     let i = E.Z.getGuild(e.getGuildId());
     return (null != i ? i.getApplicationId() : e.getApplicationId()) === t || n.indexOf(a.x.MESSAGES_READ) > -1;
 }
-function W(e) {
+function Y(e) {
     switch (e) {
         case y.hes.RTC_CONNECTED:
         case y.hes.RTC_CONNECTING:
@@ -230,7 +230,7 @@ function W(e) {
             return e;
     }
 }
-function Y(e) {
+function W(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { instance: n, secrets: i, party: r } = e,
         l = 0;

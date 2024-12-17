@@ -51,14 +51,14 @@ function C(e) {
     let {
             state: M,
             executeStateUpdate: P,
-            visualState: B,
-            isDisabled: A,
+            visualState: A,
+            isDisabled: B,
             error: w
         } = (0, m.Ee)(n, {
             type: C,
             selectedOptions: Array.from(T.values())
         }),
-        U = B === f.gH.LOADING;
+        U = A === f.gH.LOADING;
     a.useEffect(() => {
         if ((null == M ? void 0 : M.type) === u.re.USER_SELECT || (null == M ? void 0 : M.type) === u.re.ROLE_SELECT || (null == M ? void 0 : M.type) === u.re.MENTIONABLE_SELECT || (null == M ? void 0 : M.type) === u.re.CHANNEL_SELECT) {
             let e = new Map(M.selectedOptions.map((e) => [e.value, e]));
@@ -76,7 +76,7 @@ function C(e) {
     }, [b, S, y, T, G]);
     let D = 0 === T.size || b,
         H = {
-            isDisabled: I || A,
+            isDisabled: I || B,
             wrapperClassName: x.select,
             options: (e) =>
                 new Promise((n) => {

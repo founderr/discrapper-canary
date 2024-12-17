@@ -79,13 +79,13 @@ function x(e) {
         G = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         [B, H] = r.useState(Date.now()),
         [V, F] = r.useState(0),
-        [z, W] = r.useState(0),
-        [Y, K] = r.useState(!1),
+        [z, Y] = r.useState(0),
+        [W, K] = r.useState(!1),
         [q, X] = r.useState(!0),
         Q = r.useRef(B),
         J = r.useRef(V),
         $ = r.useRef(z),
-        ee = r.useRef(Y),
+        ee = r.useRef(W),
         et = r.useRef(q),
         [en, ei] = r.useState(S),
         er = r.useRef(!1);
@@ -94,7 +94,7 @@ function x(e) {
             t = e - Q.current,
             n = J.current,
             i = $.current;
-        return ee.current && (F((n += t)), !et.current && W((i += t))), H(e), [n, i];
+        return ee.current && (F((n += t)), !et.current && Y((i += t))), H(e), [n, i];
     }
     return (
         r.useEffect(() => {
@@ -133,8 +133,8 @@ function x(e) {
             [en]
         ),
         r.useEffect(() => {
-            (Q.current = B), (J.current = V), ($.current = z), (ee.current = Y), (et.current = q);
-        }, [B, V, z, Y, q]),
+            (Q.current = B), (J.current = V), ($.current = z), (ee.current = W), (et.current = q);
+        }, [B, V, z, W, q]),
         r.useEffect(
             () => () => {
                 if ('video' === l.type || 'embed' === l.type) {

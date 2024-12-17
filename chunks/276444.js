@@ -21,14 +21,14 @@ function f(e, n, r) {
 }
 let _ = 5,
     h = null,
-    p = {},
-    m = [],
+    p = new Map(),
+    m = new Set(),
     g = new Map(),
     E = new Set(),
     v = !1,
     I = new Set(),
     T = new Set(),
-    b = {},
+    b = new Map(),
     y = 0,
     S = null,
     A = [],
@@ -41,7 +41,7 @@ let _ = 5,
     x = !1,
     w = d.g2L.NOT_ELIGIBLE;
 function P() {
-    (h = null), (p = {}), (m = []), (E = new Set()), (v = !1), (I = new Set()), (T = new Set()), (b = {}), (y = 0), (S = null), (A = []), (N = !1), (C = 0), (R = !1), (O = null), (g = new Map()), (D = !1), (L = !1), (x = !1), (w = d.g2L.NOT_ELIGIBLE);
+    (h = null), (p = new Map()), (m = new Set()), (E = new Set()), (v = !1), (I = new Set()), (T = new Set()), (b = new Map()), (y = 0), (S = null), (A = []), (N = !1), (C = 0), (R = !1), (O = null), (g = new Map()), (D = !1), (L = !1), (x = !1), (w = d.g2L.NOT_ELIGIBLE);
 }
 let M = () => !0;
 function k(e) {
@@ -50,7 +50,7 @@ function k(e) {
 }
 function U(e) {
     let { referrals_remaining: n, sent_user_ids: r, refresh_at: i, recipient_status: a, has_eligible_friends: s, isUserEligibleForIncentive: o, isUserQualifiedForIncentive: l, userReferralIncentiveState: u } = e;
-    (R = null == i && s), (v = !1), (h = n), (m = r), (O = i), (g = a), (D = o && (s || g.size > 0)), (L = l), (w = u);
+    (R = null == i && s), (v = !1), (h = n), (m = new Set(r)), (O = i), (g = a), (D = o && (s || g.size > 0)), (L = l), (w = u);
 }
 function B(e) {
     let {} = e;
@@ -62,26 +62,26 @@ function G(e) {
 }
 function Z(e) {
     let { recipientId: n, is_eligible: r } = e;
-    (p[n] = r), E.delete(n);
+    p.set(n, r), E.delete(n);
 }
 function F(e) {
     let { recipientId: n } = e;
-    (p[n] = !1), E.delete(n);
+    p.set(n, !1), E.delete(n);
 }
 function V(e) {
     let { userTrialOffer: n } = e;
-    (0, c.C$)(), (b[n.id] = n), (m = [...m, n.user_id]);
+    (0, c.C$)(), b.set(n.id, n), m.add(n.user_id);
 }
 function j(e) {
     let { userTrialOffers: n } = e;
-    for (let e of ((0, c.C$)(), n)) (b[e.id] = e), (m = [...m, e.user_id]);
+    for (let e of ((0, c.C$)(), n)) b.set(e.id, e), m.add(e.user_id);
 }
 function H(e) {
     I.add(e);
 }
 function Y(e) {
     let { userTrialOffer: n } = e;
-    null != n && (I.delete(n.id), T.add(n.id), (b[n.id] = n));
+    null != n && (I.delete(n.id), T.add(n.id), b.set(n.id, n));
 }
 function W(e) {
     let { userTrialOfferId: n } = e;
@@ -135,7 +135,7 @@ class er extends (i = o.ZP.Store) {
         return this.checkAndFetchReferralsRemaining(), h;
     }
     getSentUserIds() {
-        return this.checkAndFetchReferralsRemaining(), null == m ? [] : m;
+        return this.checkAndFetchReferralsRemaining(), Array.from(m.values());
     }
     isFetchingReferralsRemaining() {
         return v;
@@ -144,10 +144,10 @@ class er extends (i = o.ZP.Store) {
         return E.has(e);
     }
     getRecipientEligibility(e) {
-        return void 0 === p[e] && !E.has(e) && (0, c.Ve)(e), p[e];
+        return !p.has(e) && !E.has(e) && (0, c.Ve)(e), p.get(e) || !1;
     }
     getRelevantUserTrialOffer(e) {
-        return b[e];
+        return b.get(e);
     }
     isResolving(e) {
         return I.has(e);
@@ -167,8 +167,8 @@ class er extends (i = o.ZP.Store) {
     getRefreshAt() {
         return O;
     }
-    getRelevantReferralTrialOffers() {
-        return b;
+    getAllRelevantReferralTrialOffers() {
+        return Array.from(b.values());
     }
     getRecipientStatus() {
         return g;

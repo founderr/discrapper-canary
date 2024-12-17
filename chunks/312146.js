@@ -3,12 +3,12 @@ n.d(t, {
         return a;
     },
     p$: function () {
-        return d;
+        return s;
     }
 });
-var r = n(818083),
-    o = n(981631);
-let i = (0, r.B)({
+var i = n(818083),
+    r = n(981631);
+let l = (0, i.B)({
     kind: 'guild',
     id: '2023-03_guild_media_channel',
     label: 'Media Channel',
@@ -23,16 +23,16 @@ let i = (0, r.B)({
 });
 function a(e) {
     var t;
-    let { enabled: n } = i.useExperiment(
+    let { enabled: n } = l.useExperiment(
         {
-            guildId: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : o.lds,
+            guildId: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : r.lds,
             location: '96e84c_1'
         },
         { autoTrackExposure: !0 }
     );
     return (null == e ? void 0 : e.id) != null && n;
 }
-let l = (0, r.B)({
+let o = (0, i.B)({
     kind: 'user',
     id: '2023-04_guild_media_channel_post_preview_embed_users',
     label: 'Guild Role Subscription Users',
@@ -45,7 +45,7 @@ let l = (0, r.B)({
         }
     ]
 });
-function d() {
-    let { enabledForUser: e } = l.useExperiment({ location: '96e84c_2' }, { autoTrackExposure: !0 });
+function s() {
+    let { enabledForUser: e } = o.useExperiment({ location: '96e84c_2' }, { autoTrackExposure: !0 });
     return e;
 }

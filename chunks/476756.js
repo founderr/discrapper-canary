@@ -24,8 +24,8 @@ function h() {
             label: m.intl.string(m.t.p3Hg5e)
         },
         {
-            value: u.YC.HALLOWEEN,
-            label: m.intl.string(m.t['+LasFR'])
+            value: t.soundpack,
+            label: m.intl.string(t.soundpackLabel)
         }
     ];
     return (0, i.jsx)(a.SingleSelect, {

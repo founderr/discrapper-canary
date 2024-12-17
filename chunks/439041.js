@@ -1,12 +1,12 @@
 var a,
     r,
     l,
-    i,
-    s = n(442837),
+    s,
+    i = n(442837),
     o = n(570140);
 let c = null,
     u = null;
-class d extends (i = s.ZP.Store) {
+class d extends (s = i.ZP.Store) {
     get client() {
         return c;
     }
@@ -23,7 +23,7 @@ class d extends (i = s.ZP.Store) {
               writable: !0
           })
         : (a[r] = l);
-let m = new d(o.Z, {
+let p = new d(o.Z, {
     ADYEN_CREATE_CLIENT_SUCCESS: function (e) {
         let { client: t } = e;
         c = t;
@@ -36,4 +36,4 @@ let m = new d(o.Z, {
         u = t;
     }
 });
-t.Z = m;
+t.Z = p;

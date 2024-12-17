@@ -6,7 +6,7 @@ var i = n(200651),
     s = n(481060),
     c = n(132871),
     d = n(147890),
-    u = n(352057),
+    u = n(926061),
     h = n(31569),
     m = n(164991),
     p = n(859921),
@@ -81,7 +81,7 @@ function S(e) {
     });
 }
 t.Z = function () {
-    let e = (0, u.h$)({ location: 'GlobalDiscoverySidebar' });
+    let e = (0, u.YP)({ location: 'GlobalDiscoverySidebar' });
     return (0, i.jsxs)('div', {
         className: N.container,
         children: [

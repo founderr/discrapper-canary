@@ -150,12 +150,12 @@ function C(e) {
     i.useEffect(() => {
         if (!(y || (k.size === R.size && Array.from(R).every((e) => k.has(e))))) P();
     }, [y, k, R, P]);
-    let B = o.singleSelect;
-    T ? (B = o.multiSelect) : 0 === C && (B = o.toggleSelect);
-    let A = (0, o.useVariableSelect)({
+    let A = o.singleSelect;
+    T ? (A = o.multiSelect) : 0 === C && (A = o.toggleSelect);
+    let B = (0, o.useVariableSelect)({
         value: k,
         onChange: (e) => L(e),
-        onSelectInteraction: B
+        onSelectInteraction: A
     });
     return (0, l.jsxs)(i.Fragment, {
         children: [
@@ -182,7 +182,7 @@ function C(e) {
                                 isOffset: M
                             }),
                         renderOptionValue: (e) => (T ? (0, l.jsx)(v, { options: e }) : (0, l.jsx)(h, { ...e[0] })),
-                        ...A
+                        ...B
                     }),
                     E
                         ? (0, l.jsx)('div', {

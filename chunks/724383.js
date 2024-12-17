@@ -3,7 +3,7 @@ var i = n(200651),
     l = n(512969),
     a = n(509451),
     o = n(252618),
-    s = n(352057),
+    s = n(926061),
     c = n(319443),
     d = n(106075),
     u = n(121711),
@@ -14,7 +14,7 @@ var i = n(200651),
     f = n(49898),
     _ = n(156212);
 t.Z = function () {
-    let e = (0, s.h$)({ location: 'DiscoveryUISelectedTab' }),
+    let e = (0, s.YP)({ location: 'DiscoveryUISelectedTab' }),
         t = p.Z.useField('selectedTab'),
         n = (function (e) {
             switch (e) {
