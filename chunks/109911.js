@@ -208,17 +208,4 @@ function _(e) {
             config: { enabled: !0 }
         }
     ]
-}),
-    (0, a.B)({
-        kind: 'user',
-        id: '2024-10_icymi_legacy',
-        label: 'Legacy ICYMI experiment',
-        defaultConfig: { enabled: !1 },
-        treatments: [
-            {
-                id: 1,
-                label: 'enable legacy ICYMI',
-                config: { enabled: !0 }
-            }
-        ]
-    });
+});
