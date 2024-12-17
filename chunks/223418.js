@@ -17,6 +17,7 @@ n.d(t, {
     (s.LOST_FOCUS = 'LOST_FOCUS'),
     (s.MODAL_CLOSED = 'MODAL_CLOSED'),
     ((a = l || (l = {})).ERROR = 'ERROR'),
+    (a.SOURCE_ERROR = 'SOURCE_ERROR'),
     (a.ABORT = 'ABORT'),
     (a.EMPTIED = 'EMPTIED'),
     (a.STALLED = 'STALLED'),

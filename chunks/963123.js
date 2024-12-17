@@ -33,19 +33,19 @@ var r = n(200651),
     j = n(223418),
     b = n(604162),
     L = n(747717),
-    k = n(281055),
-    R = n(920393),
-    O = n(981631),
+    R = n(281055),
+    O = n(920393),
+    k = n(981631),
     M = n(217702),
     y = n(388032),
     P = n(451680);
-let q = new Set([O.IyS.FIVE_G, O.IyS.FOUR_G, O.IyS.UNKNOWN]),
+let q = new Set([k.IyS.FIVE_G, k.IyS.FOUR_G, k.IyS.UNKNOWN]),
     w = {
         tension: 250,
         friction: 5,
         clamp: !0
     };
-function B() {
+function U() {
     let e = (0, u.e7)([E.Z], () => E.Z.getState().theme);
     return (0, r.jsx)('div', {
         className: P.pauseText,
@@ -57,7 +57,7 @@ function B() {
         })
     });
 }
-function U(e) {
+function B(e) {
     let { quest: t, shouldShow: n } = e,
         l = i.useMemo(() => (0, _.z)(_.i.VIDEO_PLAYER_THUMBNAIL, t), [t]);
     return null == l
@@ -129,8 +129,8 @@ function F(e) {
         ee = (0, h.km)((e) => e.setCaptionEnabled),
         et = (0, h.km)((e) => e.fullScreenEnabled),
         en = (0, h.km)((e) => e.setFullScreenEnabled),
-        { focused: er, focusedChanged: ei } = (0, k.xU)(),
-        { visible: el, visibleChanged: eo, targetRef: es } = (0, k.Yy)(),
+        { focused: er, focusedChanged: ei } = (0, R.xU)(),
+        { visible: el, visibleChanged: eo, targetRef: es } = (0, R.Yy)(),
         [ea, eu] = i.useState(!0 === K ? j.rq.PLAYING : j.rq.PAUSED),
         [ec, ed] = i.useState(!1),
         em = (0, x.il)(z),
@@ -143,8 +143,8 @@ function F(e) {
         [eI, eN] = i.useState(0),
         [eA, ej] = i.useState(0),
         [eb, eL] = i.useState(!1),
-        [ek, eR] = i.useState(!1),
-        eO = i.useRef(null),
+        [eR, eO] = i.useState(!1),
+        ek = i.useRef(null),
         eM = i.useRef(null),
         ey = (0, i.useRef)(-1),
         eP = (0, h.km)((e) => {
@@ -158,8 +158,8 @@ function F(e) {
         }, a.X),
         eq = (0, h.km)((e) => e.setVideoProgress),
         ew = (0, h.km)((e) => e.muted),
-        eB = (0, h.km)((e) => e.volume),
-        eU = (0, u.e7)([m.Z], () => m.Z.useReducedMotion),
+        eU = (0, h.km)((e) => e.volume),
+        eB = (0, u.e7)([m.Z], () => m.Z.useReducedMotion),
         eZ = (0, i.useRef)(null),
         eF = (0, i.useRef)(null),
         eV = i.useRef(!0),
@@ -177,7 +177,7 @@ function F(e) {
                 null != eZ.current &&
                     (0, C.dA)({
                         questId: z.id,
-                        event: O.rMx.QUEST_VIDEO_SEGMENT_WATCHED,
+                        event: k.rMx.QUEST_VIDEO_SEGMENT_WATCHED,
                         properties: {
                             ...e,
                             video_asset_id: e1,
@@ -190,7 +190,7 @@ function F(e) {
             },
             [z.id, e1, eY, H]
         ),
-        { forceSendCurrentSegment: e4 } = (0, R.Z)({
+        { forceSendCurrentSegment: e4 } = (0, O.Z)({
             videoRef: eZ,
             isPlaying: ea === j.rq.PLAYING,
             isMetadataLoaded: eQ,
@@ -207,7 +207,7 @@ function F(e) {
                             eZ.current.play(),
                                 (0, C.dA)({
                                     questId: z.id,
-                                    event: O.rMx.QUEST_VIDEO_RESUMED,
+                                    event: k.rMx.QUEST_VIDEO_RESUMED,
                                     properties: {
                                         video_timestamp_seconds: eZ.current.currentTime,
                                         pause_reason: ez,
@@ -233,7 +233,7 @@ function F(e) {
                 null != ez &&
                 (0, C.dA)({
                     questId: z.id,
-                    event: O.rMx.QUEST_VIDEO_PAUSED,
+                    event: k.rMx.QUEST_VIDEO_PAUSED,
                     properties: {
                         video_timestamp_seconds: eZ.current.currentTime,
                         reason: ez,
@@ -246,7 +246,7 @@ function F(e) {
                 null != eZ.current &&
                 (0, C.dA)({
                     questId: z.id,
-                    event: er ? O.rMx.QUEST_VIDEO_APP_FOCUSED : O.rMx.QUEST_VIDEO_APP_UNFOCUSED,
+                    event: er ? k.rMx.QUEST_VIDEO_APP_FOCUSED : k.rMx.QUEST_VIDEO_APP_UNFOCUSED,
                     properties: {
                         video_timestamp_seconds: eZ.current.currentTime,
                         video_state: ea,
@@ -261,7 +261,7 @@ function F(e) {
                 null != eZ.current &&
                     (0, C.dA)({
                         questId: z.id,
-                        event: O.rMx.QUEST_VIDEO_PROGRESSED,
+                        event: k.rMx.QUEST_VIDEO_PROGRESSED,
                         properties: {
                             progress: (0, D.formatVideoProgressRatio)(eZ.current.currentTime, eZ.current.duration),
                             video_timestamp_seconds: eZ.current.currentTime,
@@ -290,7 +290,7 @@ function F(e) {
                 en(!1),
                 (0, C.dA)({
                     questId: z.id,
-                    event: O.rMx.QUEST_VIDEO_FULLSCREEN_EXITED,
+                    event: k.rMx.QUEST_VIDEO_FULLSCREEN_EXITED,
                     properties: { video_session_id: H }
                 }));
         }, [z.id, en, H]),
@@ -368,18 +368,26 @@ function F(e) {
     }, [eF, ts]);
     let ta = i.useCallback(
             (e) => {
-                let t = null != eZ.current ? (0, D.formatVideoProgressRatio)(eZ.current.currentTime, eZ.current.duration) : void 0;
-                (0, C.dA)({
-                    questId: z.id,
-                    event: O.rMx.QUEST_VIDEO_ERROR,
-                    properties: {
-                        video_progress: t,
-                        video_error_type: e,
-                        video_asset_id: e1,
-                        network_connection_speed: eT,
-                        video_session_id: H
-                    }
-                });
+                try {
+                    var t, n;
+                    let r = null === (t = eZ.current) || void 0 === t ? void 0 : t.error,
+                        i = null === (n = eZ.current) || void 0 === n ? void 0 : n.networkState,
+                        l = null != eZ.current ? (0, D.formatVideoProgressRatio)(eZ.current.currentTime, eZ.current.duration) : void 0;
+                    (0, C.dA)({
+                        questId: z.id,
+                        event: k.rMx.QUEST_VIDEO_ERROR,
+                        properties: {
+                            video_progress: l,
+                            video_error_type: e,
+                            video_asset_id: e1,
+                            network_connection_speed: eT,
+                            video_session_id: H,
+                            video_error_code: null == r ? void 0 : r.code,
+                            video_error_message: null == r ? void 0 : r.message,
+                            video_network_state: i
+                        }
+                    });
+                } catch (e) {}
             },
             [eT, z.id, e1, H]
         ),
@@ -389,7 +397,7 @@ function F(e) {
                     let e = null != eM.current ? Date.now() - eM.current : null;
                     (0, C.dA)({
                         questId: z.id,
-                        event: O.rMx.QUEST_VIDEO_BUFFERING_ENDED,
+                        event: k.rMx.QUEST_VIDEO_BUFFERING_ENDED,
                         properties: {
                             video_asset_id: e1,
                             network_connection_speed: eT,
@@ -414,10 +422,10 @@ function F(e) {
             from: { controlBarAnimSpring: 0 },
             config: w,
             onStart: () => {
-                eR(!1);
+                eO(!1);
             },
             onRest: (e) => {
-                1 === e.value && eR(!0);
+                1 === e.value && eO(!0);
             }
         })),
         tm = (0, i.useRef)(null),
@@ -430,24 +438,24 @@ function F(e) {
         return (
             tE({
                 captionHeightSpring: $ && null != eJ && null !== (t = null === (e = tm.current) || void 0 === e ? void 0 : e.clientHeight) && void 0 !== t ? t : 0,
-                immediate: eU
+                immediate: eB
             }),
             () => {
                 tv.stop();
             }
         );
-    }, [$, tE, eU, eJ, tv]),
+    }, [$, tE, eB, eJ, tv]),
         i.useEffect(
             () => (
                 td({
                     controlBarAnimSpring: e5 || eb ? 1 : 0,
-                    immediate: eU
+                    immediate: eB
                 }),
                 () => {
                     tc.stop();
                 }
             ),
-            [e5, td, eU, eb, tc]
+            [e5, td, eB, eb, tc]
         );
     let tp = ea === j.rq.ENDED,
         tf = i.useMemo(() => (0, _.z)(_.i.VIDEO_PLAYER_THUMBNAIL, z), [z]),
@@ -465,7 +473,7 @@ function F(e) {
             children: (0, r.jsxs)('div', {
                 className: P.videoContInnerRelative,
                 children: [
-                    (0, r.jsx)(U, {
+                    (0, r.jsx)(B, {
                         quest: z,
                         shouldShow: tp
                     }),
@@ -492,10 +500,10 @@ function F(e) {
                         },
                         onLoadedData: (e) => {
                             if (eC) {
-                                let e = null != eO.current ? Date.now() - eO.current : null;
+                                let e = null != ek.current ? Date.now() - ek.current : null;
                                 (0, C.dA)({
                                     questId: z.id,
-                                    event: O.rMx.QUEST_VIDEO_LOADING_ENDED,
+                                    event: k.rMx.QUEST_VIDEO_LOADING_ENDED,
                                     properties: {
                                         video_asset_id: e1,
                                         network_connection_speed: eT,
@@ -507,13 +515,13 @@ function F(e) {
                             }
                         },
                         onLoadedMetadata: (e) => {
-                            if (null != eZ.current) eK(!0), tr(eY ? eP.timestampSec : Math.max(eP.timestampSec, em.progressSeconds)), ew ? (eZ.current.volume = 0) : (eZ.current.volume = eB);
+                            if (null != eZ.current) eK(!0), tr(eY ? eP.timestampSec : Math.max(eP.timestampSec, em.progressSeconds)), ew ? (eZ.current.volume = 0) : (eZ.current.volume = eU);
                         },
                         onLoadStart: () => {
-                            (eO.current = Date.now()),
+                            (ek.current = Date.now()),
                                 (0, C.dA)({
                                     questId: z.id,
-                                    event: O.rMx.QUEST_VIDEO_LOADING_STARTED,
+                                    event: k.rMx.QUEST_VIDEO_LOADING_STARTED,
                                     properties: {
                                         video_asset_id: e1,
                                         network_connection_speed: eT,
@@ -526,7 +534,7 @@ function F(e) {
                                 (ey.current += 1),
                                 (0, C.dA)({
                                     questId: z.id,
-                                    event: O.rMx.QUEST_VIDEO_BUFFERING_STARTED,
+                                    event: k.rMx.QUEST_VIDEO_BUFFERING_STARTED,
                                     properties: {
                                         video_asset_id: e1,
                                         network_connection_speed: eT,
@@ -576,6 +584,7 @@ function F(e) {
                                 }),
                             null != e2 &&
                                 (0, r.jsx)('source', {
+                                    onError: () => ta(j.CY.SOURCE_ERROR),
                                     src: e2.url,
                                     type: e2.mimetype
                                 })
@@ -587,7 +596,7 @@ function F(e) {
                             type: d.Spinner.Type.WANDERING_CUBES,
                             className: P.loadingSpinner
                         }),
-                    ea === j.rq.PAUSED && ez === j.yE.LOST_FOCUS && (0, r.jsx)(B, {}),
+                    ea === j.rq.PAUSED && ez === j.yE.LOST_FOCUS && (0, r.jsx)(U, {}),
                     X &&
                         ea !== j.rq.ENDED &&
                         (0, r.jsxs)(r.Fragment, {
@@ -719,11 +728,11 @@ function F(e) {
                             (0, r.jsx)(N.Z, {
                                 percent: ev,
                                 animate: !0 !== eV.current && !ep,
-                                interactionEnabled: eY && ek,
+                                interactionEnabled: eY && eR,
                                 backgroundColor: e5 ? void 0 : 'rgba(0, 0, 0, 0.0)',
                                 preloadedBuffers: e5 ? eh : void 0,
                                 duration: null !== (G = null === (T = eZ.current) || void 0 === T ? void 0 : T.duration) && void 0 !== G ? G : 1,
-                                maxSeekableTime: e5 && ek ? e0 : void 0,
+                                maxSeekableTime: e5 && eR ? e0 : void 0,
                                 onClick: (e) => {
                                     tr(e), ea === j.rq.ENDED && e7(j.rq.PLAYING);
                                 },
@@ -800,7 +809,7 @@ function F(e) {
                                               n.addEventListener(f.NO, te),
                                               (0, C.dA)({
                                                   questId: z.id,
-                                                  event: O.rMx.QUEST_VIDEO_FULLSCREEN_ENTERED,
+                                                  event: k.rMx.QUEST_VIDEO_FULLSCREEN_ENTERED,
                                                   properties: { video_session_id: H }
                                               }))
                                             : !t &&
@@ -808,7 +817,7 @@ function F(e) {
                                               (n.removeEventListener(f.NO, te),
                                               (0, C.dA)({
                                                   questId: z.id,
-                                                  event: O.rMx.QUEST_VIDEO_FULLSCREEN_EXITED,
+                                                  event: k.rMx.QUEST_VIDEO_FULLSCREEN_EXITED,
                                                   properties: { video_session_id: H }
                                               }),
                                               (0, f.Pr)(n)),
