@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return N;
+        return h;
     }
 });
 var i = t(200651);
@@ -9,101 +9,99 @@ var l = t(120356),
     a = t.n(l),
     s = t(481060),
     o = t(600164),
-    r = t(219230),
-    c = t(788080),
-    d = t(548647),
-    u = t(696375),
-    x = t(97568),
-    m = t(800530),
-    C = t(388032),
-    h = t(816742);
-function N(e) {
+    r = t(788080),
+    c = t(548647),
+    d = t(696375),
+    u = t(97568),
+    x = t(800530),
+    m = t(388032),
+    C = t(816742);
+function h(e) {
     var n, t;
-    let { classification: l, isDsaEligible: N = !1, isSpam: p = !1, isCoppa: _ = !1, className: g, onClose: j, onNext: b } = e,
-        I = (0, d.n)(),
-        E = null !== (n = null == l ? void 0 : l.explainer_link) && void 0 !== n ? n : '',
-        T = null != l && null != l.flagged_content && l.flagged_content.length > 0,
-        S = (0, c.c7)(null == l ? void 0 : l.description),
-        v = !p && !_,
-        f = (0, r.B)('classification_evidence'),
-        A = null != l && (((0, c.FB)(l) && f) || T);
+    let { classification: l, isDsaEligible: h = !1, isSpam: N = !1, isCoppa: p = !1, className: g, onClose: _, onNext: j } = e,
+        b = (0, c.n)(),
+        I = null !== (n = null == l ? void 0 : l.explainer_link) && void 0 !== n ? n : '',
+        E = null != l && null != l.flagged_content && l.flagged_content.length > 0,
+        T = (0, r.c7)(null == l ? void 0 : l.description),
+        S = !N && !p,
+        v = null != l && ((0, r.FB)(l) || E);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(s.ModalHeader, {
                 direction: o.Z.Direction.VERTICAL,
-                className: h.header,
+                className: C.header,
                 separator: !1,
                 children: [
                     (0, i.jsx)(s.Heading, {
-                        className: h.title,
+                        className: C.title,
                         variant: 'heading-xl/semibold',
-                        children: C.intl.string(C.t['C5q+pa'])
+                        children: m.intl.string(m.t['C5q+pa'])
                     }),
                     (0, i.jsx)(s.Text, {
-                        className: h.subtitle,
+                        className: C.subtitle,
                         color: 'header-secondary',
                         variant: 'text-md/normal',
-                        children: C.intl.string(C.t.URt7VF)
+                        children: m.intl.string(m.t.URt7VF)
                     }),
-                    null != j &&
+                    null != _ &&
                         (0, i.jsx)(s.ModalCloseButton, {
-                            className: h.closeButton,
-                            onClick: j
+                            className: C.closeButton,
+                            onClick: _
                         })
                 ]
             }),
             (0, i.jsxs)(s.ModalContent, {
-                className: a()(h.modalContent, !A && h.evidenceOffset, g),
+                className: a()(C.modalContent, !v && C.evidenceOffset, g),
                 paddingFix: !1,
                 children: [
-                    A && (0, i.jsx)(x.s, { flaggedContent: null !== (t = l.flagged_content) && void 0 !== t ? t : [] }),
+                    v && (0, i.jsx)(u.s, { flaggedContent: null !== (t = l.flagged_content) && void 0 !== t ? t : [] }),
                     (0, i.jsx)(s.Text, {
-                        className: h.optionHeader,
+                        className: C.optionHeader,
                         color: 'header-secondary',
                         variant: 'text-xs/bold',
-                        children: C.intl.string(C.t.xsdcxs)
+                        children: m.intl.string(m.t.xsdcxs)
                     }),
                     (0, i.jsx)('div', {
-                        className: h.policyContainer,
+                        className: C.policyContainer,
                         children: (0, i.jsx)(s.Text, {
                             variant: 'text-md/semibold',
-                            children: S
+                            children: T
                         })
                     }),
-                    _ &&
-                        (0, i.jsx)(u.Z, {
-                            url: m.sQ.AGE_VERIFICATION_LINK,
-                            text: C.intl.string(C.t['gJs+kZ']),
-                            onClick: () => I(m.n0.ClickAgeVerificationLink)
-                        }),
                     p &&
-                        !_ &&
-                        (0, i.jsx)(u.Z, {
-                            url: m.sQ.SPAM_LINK,
-                            text: C.intl.string(C.t['PaNS+P']),
-                            onClick: () => I(m.n0.ClickSpamWebformLink)
+                        (0, i.jsx)(d.Z, {
+                            url: x.sQ.AGE_VERIFICATION_LINK,
+                            text: m.intl.string(m.t['gJs+kZ']),
+                            onClick: () => b(x.n0.ClickAgeVerificationLink)
                         }),
-                    !_ &&
-                        (0, i.jsx)(u.Z, {
-                            text: C.intl.string(C.t['Vtyn//']),
-                            url: E,
-                            onClick: () => I(m.n0.ClickLearnMoreLink)
+                    N &&
+                        !p &&
+                        (0, i.jsx)(d.Z, {
+                            url: x.sQ.SPAM_LINK,
+                            text: m.intl.string(m.t['PaNS+P']),
+                            onClick: () => b(x.n0.ClickSpamWebformLink)
                         }),
-                    v &&
-                        N &&
+                    !p &&
+                        (0, i.jsx)(d.Z, {
+                            text: m.intl.string(m.t['Vtyn//']),
+                            url: I,
+                            onClick: () => b(x.n0.ClickLearnMoreLink)
+                        }),
+                    S &&
+                        h &&
                         (0, i.jsx)(s.Text, {
-                            className: h.learnMore,
+                            className: C.learnMore,
                             variant: 'text-xs/normal',
-                            children: C.intl.format(C.t.WMUgCQ, {})
+                            children: m.intl.format(m.t.WMUgCQ, {})
                         })
                 ]
             }),
-            v &&
+            S &&
                 (0, i.jsx)(s.ModalFooter, {
                     children: (0, i.jsx)(s.Button, {
-                        onClick: b,
+                        onClick: j,
                         color: s.Button.Colors.BRAND,
-                        children: C.intl.string(C.t.PDTjLC)
+                        children: m.intl.string(m.t.PDTjLC)
                     })
                 })
         ]

@@ -1,6 +1,6 @@
 n.d(e, {
     N: function () {
-        return y;
+        return A;
     }
 }),
     n(47120);
@@ -14,47 +14,46 @@ var i = n(200651),
     d = n(499033),
     u = n(626135),
     m = n(709054),
-    x = n(219230),
-    h = n(531441),
-    g = n(236289),
-    v = n(788080),
-    j = n(467432),
-    N = n(451284),
-    f = n(613734),
-    p = n(800530),
-    S = n(981631),
-    T = n(388032),
-    I = n(849963);
-let E = (t) => {
+    x = n(531441),
+    h = n(236289),
+    g = n(788080),
+    v = n(467432),
+    j = n(451284),
+    N = n(613734),
+    f = n(800530),
+    p = n(981631),
+    S = n(388032),
+    T = n(849963);
+let I = (t) => {
         let { status: e, onClick: n, opened: a, count: s } = t;
         return (0, i.jsxs)(c.Clickable, {
-            className: I.header,
+            className: T.header,
             onClick: n,
             children: [
                 (0, i.jsx)('div', {
-                    className: I.headerIconWrapper,
+                    className: T.headerIconWrapper,
                     children: (0, i.jsx)(c.WarningIcon, {
                         size: 'md',
                         color: 'active' === e ? c.tokens.colors.INTERACTIVE_ACTIVE : c.tokens.colors.INTERACTIVE_MUTED
                     })
                 }),
                 (0, i.jsxs)('div', {
-                    className: I.title,
+                    className: T.title,
                     children: [
                         (0, i.jsx)(c.Heading, {
                             variant: 'heading-md/semibold',
                             color: 'text-normal',
-                            children: 'active' === e ? T.intl.formatToPlainString(T.t.IeV2oa, { count: s.toString() }) : T.intl.formatToPlainString(T.t.fZAHBQ, { count: s.toString() })
+                            children: 'active' === e ? S.intl.formatToPlainString(S.t.IeV2oa, { count: s.toString() }) : S.intl.formatToPlainString(S.t.fZAHBQ, { count: s.toString() })
                         }),
                         (0, i.jsx)(c.Heading, {
                             variant: 'text-sm/normal',
                             color: 'text-muted',
-                            children: 'active' === e ? T.intl.string(T.t.XJ2YVV) : T.intl.string(T.t.SzGV0t)
+                            children: 'active' === e ? S.intl.string(S.t.XJ2YVV) : S.intl.string(S.t.SzGV0t)
                         })
                     ]
                 }),
                 (0, i.jsx)('div', {
-                    className: I.caret,
+                    className: T.caret,
                     children: (0, i.jsx)(o.Z, {
                         width: 18,
                         height: 18,
@@ -64,66 +63,65 @@ let E = (t) => {
             ]
         });
     },
-    _ = () =>
+    E = () =>
         (0, i.jsxs)('div', {
-            className: I.emptyState,
+            className: T.emptyState,
             children: [
                 (0, i.jsxs)('div', {
-                    className: I.iconContainer,
+                    className: T.iconContainer,
                     children: [
                         (0, i.jsx)('div', {
-                            className: I.iconBackground,
+                            className: T.iconBackground,
                             children: (0, i.jsx)(c.TrophyIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: I.icon
+                                className: T.icon
                             })
                         }),
-                        (0, i.jsx)(d.Z, { className: I.stars })
+                        (0, i.jsx)(d.Z, { className: T.stars })
                     ]
                 }),
                 (0, i.jsx)(c.Heading, {
                     variant: 'heading-md/bold',
-                    className: I.emptyStateText,
-                    children: T.intl.string(T.t.reLFaW)
+                    className: T.emptyStateText,
+                    children: S.intl.string(S.t.reLFaW)
                 }),
                 (0, i.jsx)(c.Text, {
                     variant: 'text-xs/normal',
-                    className: I.emptyStateSubtext,
-                    children: T.intl.string(T.t.ERdH1t)
+                    className: T.emptyStateSubtext,
+                    children: S.intl.string(S.t.ERdH1t)
                 })
             ]
         }),
-    b = () =>
+    _ = () =>
         (0, i.jsx)('div', {
-            className: I.emptyState,
+            className: T.emptyState,
             children: (0, i.jsx)(c.Text, {
                 variant: 'text-xs/normal',
-                className: I.emptyStateSubtext,
-                children: T.intl.string(T.t.RV3AXV)
+                className: T.emptyStateSubtext,
+                children: S.intl.string(S.t.RV3AXV)
             })
         }),
-    C = (t) => {
+    b = (t) => {
         let { timestamp: e } = t;
         return (0, i.jsx)(c.Text, {
             variant: 'text-xs/normal',
-            className: I.timestamp,
-            children: (0, v.XX)(e)
+            className: T.timestamp,
+            children: (0, g.XX)(e)
         });
     },
-    k = () =>
+    C = () =>
         (0, i.jsx)(c.Text, {
             variant: 'text-xs/bold',
-            className: I.newBadge,
-            children: T.intl.string(T.t.QKMRCw)
+            className: T.newBadge,
+            children: S.intl.string(S.t.QKMRCw)
         }),
-    D = (t) => {
+    k = (t) => {
         let { classification: e } = t,
             { id: s, description: r } = e,
             o = m.default.extractTimestamp(s),
-            d = (0, j.e)(e),
-            u = (0, x.B)('violations_container'),
-            g = a.useMemo(() => {
+            d = (0, v.e)(e),
+            u = a.useMemo(() => {
                 var t, n, a;
                 let s = {
                     description: r,
@@ -134,18 +132,18 @@ let E = (t) => {
                             children: t
                         })
                 };
-                if (!(u && (0, v.FB)(e))) return T.intl.format(T.t.QY4g5u, s);
-                return (null == e ? void 0 : null === (t = e.guild_metadata) || void 0 === t ? void 0 : t.member_type) === h.wO.OWNER
-                    ? T.intl.format(T.t.Lb0HVl, {
+                if (!(0, g.FB)(e)) return S.intl.format(S.t.QY4g5u, s);
+                return (null == e ? void 0 : null === (t = e.guild_metadata) || void 0 === t ? void 0 : t.member_type) === x.wO.OWNER
+                    ? S.intl.format(S.t.Lb0HVl, {
                           ...s,
                           guildName: null == e ? void 0 : null === (n = e.guild_metadata) || void 0 === n ? void 0 : n.name
                       })
-                    : T.intl.format(T.t.rmpEPD, {
+                    : S.intl.format(S.t.rmpEPD, {
                           guildName: null == e ? void 0 : null === (a = e.guild_metadata) || void 0 === a ? void 0 : a.name,
                           classification_type: s.description,
                           classificationHook: s.descriptionHook
                       });
-            }, [e, r, u]);
+            }, [e, r]);
         return (0, i.jsx)(
             c.Clickable,
             {
@@ -155,19 +153,19 @@ let E = (t) => {
                         return (e) =>
                             (0, i.jsx)(t, {
                                 classificationId: s,
-                                source: p.s.StandingTab,
+                                source: f.s.StandingTab,
                                 ...e
                             });
                     });
                 },
-                className: l()(I.itemDetail, { [I.itemDetailNew]: d }),
+                className: l()(T.itemDetail, { [T.itemDetailNew]: d }),
                 children: (0, i.jsxs)('div', {
-                    className: I.descriptionContainer,
+                    className: T.descriptionContainer,
                     children: [
-                        d ? (0, i.jsx)(k, {}) : (0, i.jsx)(C, { timestamp: o }),
+                        d ? (0, i.jsx)(C, {}) : (0, i.jsx)(b, { timestamp: o }),
                         (0, i.jsx)(c.Heading, {
                             variant: 'heading-lg/normal',
-                            children: g
+                            children: u
                         })
                     ]
                 })
@@ -175,29 +173,29 @@ let E = (t) => {
             s
         );
     },
-    A = (t) => {
+    D = (t) => {
         let { status: e, classifications: n } = t,
             [s, l] = a.useState(!1),
             [o, d] = a.useState(3),
-            m = (0, N.P)(),
-            x = (0, r.e7)([g.Z], () => g.Z.getIsDsaEligible()),
-            h = a.useMemo(() => n.slice(0, o), [n, o]);
+            m = (0, j.P)(),
+            x = (0, r.e7)([h.Z], () => h.Z.getIsDsaEligible()),
+            g = a.useMemo(() => n.slice(0, o), [n, o]);
         a.useEffect(() => {
             s &&
-                u.default.track(S.rMx.SAFETY_HUB_ACTION, {
-                    action: p.n0.ViewViolationsDropdown,
+                u.default.track(p.rMx.SAFETY_HUB_ACTION, {
+                    action: f.n0.ViewViolationsDropdown,
                     account_standing: m.state,
-                    classification_ids: h.map((t) => Number(t.id)),
-                    source: p.s.StandingTab,
+                    classification_ids: g.map((t) => Number(t.id)),
+                    source: f.s.StandingTab,
                     is_violative_content_shown: !1,
                     is_dsa_eligible: x
                 });
-        }, [s, m.state, h, x]);
-        let v = n.length - h.length > 3 ? 3 : n.length - h.length;
+        }, [s, m.state, g, x]);
+        let v = n.length - g.length > 3 ? 3 : n.length - g.length;
         return (0, i.jsxs)('div', {
-            className: I.dropdown,
+            className: T.dropdown,
             children: [
-                (0, i.jsx)(E, {
+                (0, i.jsx)(I, {
                     status: e,
                     onClick: () => l((t) => !t),
                     opened: s,
@@ -205,7 +203,7 @@ let E = (t) => {
                 }),
                 s &&
                     (0, i.jsxs)('div', {
-                        className: I.items,
+                        className: T.items,
                         children: [
                             (0, i.jsx)(c.TabBar.Separator, {
                                 style: {
@@ -213,8 +211,8 @@ let E = (t) => {
                                     width: '100%'
                                 }
                             }),
-                            h.length > 0 && h.map((t) => (0, i.jsx)(D, { classification: t }, t.id)),
-                            h.length < n.length &&
+                            g.length > 0 && g.map((t) => (0, i.jsx)(k, { classification: t }, t.id)),
+                            g.length < n.length &&
                                 (0, i.jsxs)(i.Fragment, {
                                     children: [
                                         (0, i.jsx)(c.TabBar.Separator, {
@@ -224,31 +222,31 @@ let E = (t) => {
                                             }
                                         }),
                                         (0, i.jsx)('button', {
-                                            className: I.paginationButton,
+                                            className: T.paginationButton,
                                             onClick: () => d((t) => t + v),
-                                            children: T.intl.format(T.t['9Ml56O'], { nextPageSize: v })
+                                            children: S.intl.format(S.t['9Ml56O'], { nextPageSize: v })
                                         })
                                     ]
                                 }),
-                            0 === h.length && 'active' === e && (0, i.jsx)(_, {}),
-                            0 === h.length && 'expired' === e && (0, i.jsx)(b, {})
+                            0 === g.length && 'active' === e && (0, i.jsx)(E, {}),
+                            0 === g.length && 'expired' === e && (0, i.jsx)(_, {})
                         ]
                     })
             ]
         });
     },
-    y = () => {
-        let t = (0, f.y9)(),
-            e = (0, f.KM)();
+    A = () => {
+        let t = (0, N.y9)(),
+            e = (0, N.KM)();
         return 0 === t.length && 0 === e.length
             ? null
             : (0, i.jsxs)('div', {
                   children: [
-                      (0, i.jsx)(A, {
+                      (0, i.jsx)(D, {
                           status: 'active',
                           classifications: t
                       }),
-                      (0, i.jsx)(A, {
+                      (0, i.jsx)(D, {
                           status: 'expired',
                           classifications: e
                       })

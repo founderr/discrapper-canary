@@ -7,75 +7,73 @@ var n = i(200651),
     c = i(797614),
     d = i(706454),
     u = i(626135),
-    m = i(219230),
-    h = i(531441),
-    p = i(236289),
-    x = i(788080),
-    f = i(451284),
-    g = i(613734),
-    _ = i(846488),
+    m = i(531441),
+    h = i(236289),
+    p = i(788080),
+    x = i(451284),
+    f = i(613734),
+    g = i(846488),
     v = i(384725),
-    A = i(853178),
-    E = i(97568),
-    T = i(800530),
-    C = i(981631),
-    j = i(388032),
-    N = i(729779);
-let y = (e) => {
+    _ = i(853178),
+    A = i(97568),
+    E = i(800530),
+    T = i(981631),
+    C = i(388032),
+    j = i(729779);
+let N = (e) => {
         let { classificationTypeText: t, guildMetadata: i } = e,
-            l = (0, m.B)('classification_detail'),
-            o = a.useMemo(() => {
+            l = a.useMemo(() => {
                 let e = {
                     classification_type: t,
                     classificationHook: (e, t) => (0, n.jsx)('strong', { children: e }, t)
                 };
-                return l && null != i
-                    ? (null == i ? void 0 : i.member_type) === h.wO.OWNER
-                        ? j.intl.format(j.t.X1ngSU, {
-                              ...e,
-                              guildName: null == i ? void 0 : i.name
-                          })
-                        : j.intl.format(j.t.rmpEPD, {
-                              ...e,
-                              guildName: null == i ? void 0 : i.name
-                          })
-                    : j.intl.format(j.t.HpvELi, e);
-            }, [t, i, l]);
+                return null == i
+                    ? C.intl.format(C.t.HpvELi, e)
+                    : (null == i ? void 0 : i.member_type) === m.wO.OWNER
+                      ? C.intl.format(C.t.X1ngSU, {
+                            ...e,
+                            guildName: null == i ? void 0 : i.name
+                        })
+                      : C.intl.format(C.t.rmpEPD, {
+                            ...e,
+                            guildName: null == i ? void 0 : i.name
+                        });
+            }, [t, i]);
         return (0, n.jsx)('div', {
-            className: N.classificationHeader,
+            className: j.classificationHeader,
             children: (0, n.jsx)(s.Heading, {
                 variant: 'heading-xl/normal',
-                children: o
+                children: l
             })
         });
     },
-    S = (e) => {
+    y = (e) => {
         let { actions: t, classificationExpiration: i } = e,
             a = (0, r.e7)([d.default], () => d.default.locale);
         return 0 === t.filter((e) => e.descriptions.length > 0).length && null == i
             ? null
             : (0, n.jsxs)('div', {
-                  className: N.classificationActionsTakenContainer,
+                  className: j.classificationActionsTakenContainer,
                   children: [
                       (0, n.jsx)(s.Text, {
                           variant: 'eyebrow',
                           color: 'text-muted',
-                          children: j.intl.string(j.t.O2nYk5)
+                          children: C.intl.string(C.t.O2nYk5)
                       }),
                       (0, n.jsxs)('ul', {
-                          className: N.classificationActionsTakenList,
+                          className: j.classificationActionsTakenList,
                           children: [
-                              t.map((e) => (0, n.jsx)(I, { action: e }, e.id)),
+                              t.map((e) => (0, n.jsx)(S, { action: e }, e.id)),
                               null != i
                                   ? (0, n.jsx)(
                                         'li',
                                         {
-                                            className: N.classificationActionsTakenRow,
+                                            className: j.classificationActionsTakenRow,
                                             children: (0, n.jsx)(s.Text, {
                                                 tag: 'span',
                                                 variant: 'heading-md/normal',
                                                 color: 'text-normal',
-                                                children: j.intl.format(j.t.TByIjY, { expirationDate: i.toLocaleDateString(a, { dateStyle: 'medium' }) })
+                                                children: C.intl.format(C.t.TByIjY, { expirationDate: i.toLocaleDateString(a, { dateStyle: 'medium' }) })
                                             })
                                         },
                                         'expiration'
@@ -86,14 +84,14 @@ let y = (e) => {
                   ]
               });
     },
-    I = (e) => {
+    S = (e) => {
         let { action: t } = e;
         return (0, n.jsx)(n.Fragment, {
             children: t.descriptions.map((e, t) =>
                 (0, n.jsx)(
                     'li',
                     {
-                        className: N.classificationActionsTakenRow,
+                        className: j.classificationActionsTakenRow,
                         children: (0, n.jsx)(s.Text, {
                             tag: 'span',
                             variant: 'heading-md/normal',
@@ -106,29 +104,29 @@ let y = (e) => {
             )
         });
     },
-    L = (e) => {
+    I = (e) => {
         let { classificationTypeText: t, policyExplainerLink: i } = e;
         return (0, n.jsxs)(s.Anchor, {
             href: i,
-            className: N.classificationPolicyCard,
+            className: j.classificationPolicyCard,
             useDefaultUnderlineStyles: !1,
             children: [
                 (0, n.jsx)('div', {
-                    className: N.classificationPolicyCardIcon,
+                    className: j.classificationPolicyCardIcon,
                     children: (0, n.jsx)(s.ShieldIcon, {
                         size: 'md',
                         color: o.Z.colors.FOCUS_PRIMARY
                     })
                 }),
                 (0, n.jsx)('div', {
-                    className: N.classificationPolicyDescriptionContainer,
+                    className: j.classificationPolicyDescriptionContainer,
                     children: (0, n.jsx)(s.Text, {
                         variant: 'text-md/normal',
-                        children: j.intl.format(j.t.zxUdpq, { classificationDescription: t })
+                        children: C.intl.format(C.t.zxUdpq, { classificationDescription: t })
                     })
                 }),
                 (0, n.jsx)('div', {
-                    className: N.classificationPolicyLinkIcon,
+                    className: j.classificationPolicyLinkIcon,
                     children: (0, n.jsx)(s.ChevronSmallRightIcon, {
                         size: 'md',
                         color: o.Z.colors.INTERACTIVE_NORMAL
@@ -137,17 +135,17 @@ let y = (e) => {
             ]
         });
     },
-    w = () =>
+    L = () =>
         (0, n.jsx)(s.Text, {
             variant: 'text-md/normal',
             color: 'text-muted',
-            children: j.intl.string(j.t['I2H0/P'])
+            children: C.intl.string(C.t['I2H0/P'])
         }),
-    P = (e) =>
+    w = (e) =>
         (0, n.jsx)(s.Text, {
             variant: 'text-md/normal',
             color: 'text-muted',
-            children: j.intl.format(j.t.IFxUaW, {
+            children: C.intl.format(C.t.IFxUaW, {
                 letUsKnowHook: (t, i) =>
                     (0, n.jsx)(
                         s.Anchor,
@@ -160,36 +158,36 @@ let y = (e) => {
                     )
             })
         }),
-    U = (e) =>
+    P = (e) =>
         (0, n.jsx)('div', {
-            className: N.classificationLetUsKnowContainer,
+            className: j.classificationLetUsKnowContainer,
             children: e.hasBeenAppealed
-                ? (0, n.jsx)(w, {})
-                : (0, n.jsx)(P, {
-                      appealLink: T.sQ.APPEALS_LINK,
+                ? (0, n.jsx)(L, {})
+                : (0, n.jsx)(w, {
+                      appealLink: E.sQ.APPEALS_LINK,
                       letUsKnowClick: e.onLetUsKnowClick,
                       isAppealEligible: e.isAppealEligible
                   })
         }),
-    k = (e) => {
+    U = (e) => {
         let { tosLink: t, communityGuidelinesLink: i, classificationTypeText: a, policyExplainerLink: l, appealComponent: o } = e;
         return (0, n.jsxs)('div', {
-            className: N.classificationActionExplanationContainer,
+            className: j.classificationActionExplanationContainer,
             children: [
                 (0, n.jsx)(s.Text, {
                     variant: 'eyebrow',
                     color: 'text-muted',
-                    children: j.intl.string(j.t['977ien'])
+                    children: C.intl.string(C.t['977ien'])
                 }),
                 (0, n.jsx)(s.Text, {
-                    className: N.guidelinesExplanation,
+                    className: j.guidelinesExplanation,
                     variant: 'text-sm/normal',
-                    children: j.intl.format(j.t['1Z/+aG'], {
+                    children: C.intl.format(C.t['1Z/+aG'], {
                         tosLink: t,
                         communityGuidelinesLink: i
                     })
                 }),
-                (0, n.jsx)(L, {
+                (0, n.jsx)(I, {
                     classificationTypeText: a,
                     policyExplainerLink: l
                 }),
@@ -200,16 +198,16 @@ let y = (e) => {
 t.Z = (e) => {
     var t;
     let { classificationId: i, source: o, onError: s, onClose: d } = e,
-        { classification: m, classificationRequestState: j, isAppealEligible: I, isDsaEligible: L, violationType: w } = (0, g.YG)(i),
-        P = (0, r.e7)([p.Z], () => p.Z.getAppealEligibility()),
-        Z = (0, f.P)(),
-        M = null != m && null != m.flagged_content && m.flagged_content.length > 0,
-        O = (0, _.e)(),
-        D = !!(null == m ? void 0 : m.is_coppa) && P.includes(h.tG.AGE_VERIFY_ELIGIBLE);
+        { classification: C, classificationRequestState: S, isAppealEligible: I, isDsaEligible: L, violationType: w } = (0, f.YG)(i),
+        k = (0, r.e7)([h.Z], () => h.Z.getAppealEligibility()),
+        Z = (0, x.P)(),
+        M = null != C && null != C.flagged_content && C.flagged_content.length > 0,
+        O = (0, g.e)(),
+        D = !!(null == C ? void 0 : C.is_coppa) && k.includes(m.tG.AGE_VERIFY_ELIGIBLE);
     return (a.useEffect(() => {
         O &&
-            u.default.track(C.rMx.SAFETY_HUB_ACTION, {
-                action: T.n0.ViewViolationDetail,
+            u.default.track(T.rMx.SAFETY_HUB_ACTION, {
+                action: E.n0.ViewViolationDetail,
                 account_standing: Z.state,
                 classification_ids: [Number(i)],
                 source: o,
@@ -218,32 +216,32 @@ t.Z = (e) => {
                 violation_type: w
             });
     }, [O]),
-    null == m && j === h.OY.FAILED)
+    null == C && S === m.OY.FAILED)
         ? (s(), null)
-        : null == m
+        : null == C
           ? null
           : (0, n.jsxs)('div', {
-                className: N.classificationContainer,
+                className: j.classificationContainer,
                 children: [
+                    (0, n.jsx)(N, {
+                        classificationTypeText: C.description,
+                        guildMetadata: null == C ? void 0 : C.guild_metadata
+                    }),
+                    (0, n.jsx)(A.s, { flaggedContent: null !== (t = C.flagged_content) && void 0 !== t ? t : [] }),
                     (0, n.jsx)(y, {
-                        classificationTypeText: m.description,
-                        guildMetadata: null == m ? void 0 : m.guild_metadata
+                        actions: C.actions,
+                        classificationExpiration: (0, p.Pu)(C)
                     }),
-                    (0, n.jsx)(E.s, { flaggedContent: null !== (t = m.flagged_content) && void 0 !== t ? t : [] }),
-                    (0, n.jsx)(S, {
-                        actions: m.actions,
-                        classificationExpiration: (0, x.Pu)(m)
-                    }),
-                    (0, n.jsx)(k, {
-                        classificationTypeText: m.description,
-                        tosLink: T.sQ.TOS_LINK,
-                        communityGuidelinesLink: T.sQ.COMMUNITY_GUIDELINES,
-                        policyExplainerLink: m.explainer_link,
-                        appealComponent: (0, n.jsx)(U, {
-                            hasBeenAppealed: null != m.appeal_status,
+                    (0, n.jsx)(U, {
+                        classificationTypeText: C.description,
+                        tosLink: E.sQ.TOS_LINK,
+                        communityGuidelinesLink: E.sQ.COMMUNITY_GUIDELINES,
+                        policyExplainerLink: C.explainer_link,
+                        appealComponent: (0, n.jsx)(P, {
+                            hasBeenAppealed: null != C.appeal_status,
                             onLetUsKnowClick: () => {
-                                u.default.track(C.rMx.SAFETY_HUB_ACTION, {
-                                    action: T.n0.ClickLetUsKnow,
+                                u.default.track(T.rMx.SAFETY_HUB_ACTION, {
+                                    action: E.n0.ClickLetUsKnow,
                                     account_standing: Z.state,
                                     classification_ids: [Number(i)],
                                     source: o,
@@ -251,7 +249,7 @@ t.Z = (e) => {
                                     is_dsa_eligible: L,
                                     violation_type: w
                                 }),
-                                    D ? A.Z.open(d) : I && (c.Z.increment({ name: l.V.APPEAL_INGESTION_VIEW }), v.Z.open(i));
+                                    D ? _.Z.open(d) : I && (c.Z.increment({ name: l.V.APPEAL_INGESTION_VIEW }), v.Z.open(i));
                             },
                             isAppealEligible: I || D
                         })
