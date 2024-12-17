@@ -1,12 +1,12 @@
 r.d(n, {
-    K0: function () {
-        return l;
+    YP: function () {
+        return o;
     },
-    g: function () {
+    Zq: function () {
         return s;
     },
-    h$: function () {
-        return o;
+    l5: function () {
+        return l;
     }
 });
 var i = r(818083),
@@ -14,7 +14,7 @@ var i = r(818083),
 let s = (0, i.B)({
     kind: 'user',
     id: '2024-09_global_discovery_apps',
-    label: 'Global Discovery Apps',
+    label: 'Global Discovery Apps - Logged In',
     defaultConfig: { enabled: !1 },
     commonTriggerPoint: a.$P.CONNECTION_OPEN,
     treatments: [
