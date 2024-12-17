@@ -3,13 +3,13 @@ t.d(n, {
         return N;
     },
     Ef: function () {
-        return C;
+        return I;
     },
     HO: function () {
         return b;
     },
     NZ: function () {
-        return I;
+        return C;
     },
     Pq: function () {
         return T;
@@ -162,9 +162,9 @@ async function b(e, n, t, l) {
     let i = await (0, g.me)(e.id, n, t, l);
     return p(e, !1, !0), i;
 }
-async function C(e, n, t) {
+async function I(e, n, t) {
     if ('' !== n) return await (0, g.Dk)(e.id, n, t);
 }
-async function I(e) {
+async function C(e) {
     await (0, g.Ix)(e.id);
 }

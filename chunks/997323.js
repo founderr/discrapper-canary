@@ -1,9 +1,9 @@
 n.d(t, {
     Gq: function () {
-        return s;
+        return o;
     },
     SN: function () {
-        return c;
+        return E;
     },
     Zu: function () {
         return a;
@@ -12,7 +12,7 @@ n.d(t, {
         return d;
     },
     x8: function () {
-        return E;
+        return c;
     }
 }),
     n(411104);
@@ -20,15 +20,15 @@ var r = n(544891),
     i = n(343817),
     u = n(570140),
     l = n(959546),
-    o = n(981631);
-let s = async (e) => {
+    s = n(981631);
+let o = async (e) => {
         u.Z.dispatch({
             type: 'CONSUMABLES_PRICE_FETCH_STARTED',
             skuId: e
         });
         try {
             let t = await r.tn.get({
-                url: o.ANM.CONSUMABLE_FETCH_PRICE(e),
+                url: s.ANM.CONSUMABLE_FETCH_PRICE(e),
                 rejectWithError: !1
             });
             if (null == t.body.price)
@@ -69,7 +69,7 @@ let s = async (e) => {
         });
         try {
             let t = await r.tn.get({
-                    url: o.ANM.FETCH_HD_STREAMING_ENTITLEMENT,
+                    url: s.ANM.FETCH_HD_STREAMING_ENTITLEMENT,
                     rejectWithError: !1
                 }),
                 n = null != t.body.entitlement ? l.Z.createFromServer(t.body.entitlement) : null;
@@ -94,7 +94,7 @@ let s = async (e) => {
     a = async (e, t) => {
         try {
             await r.tn.post({
-                url: o.ANM.CONSUME_HD_STREAMING_POTION,
+                url: s.ANM.CONSUME_HD_STREAMING_POTION,
                 body: { channel_id: e },
                 rejectWithError: !1
             }),
@@ -106,13 +106,13 @@ let s = async (e) => {
             throw new i.Hx(e);
         }
     },
-    c = (e) => {
+    E = (e) => {
         u.Z.dispatch({
             type: 'CONSUMABLES_CLEAR_ERROR',
             skuId: e
         });
     },
-    E = (e) => {
+    c = (e) => {
         u.Z.dispatch({
             type: 'SET_PREVIOUS_GO_LIVE_SETTINGS',
             previousGoLiveSettings: e

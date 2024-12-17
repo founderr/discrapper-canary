@@ -3,8 +3,8 @@ var r,
     i = n(442837),
     u = n(253135),
     l = n(570140),
-    o = n(709054);
-function s(e, t, n) {
+    s = n(709054);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,14 +35,14 @@ class a extends (r = i.ZP.PersistedStore) {
         return null != this.getKeyTrustedAt(e, t);
     }
     getUserIds() {
-        return o.default.keys(d);
+        return s.default.keys(d);
     }
     getUserVerifiedKeys(e) {
         return d[e];
     }
 }
-s(a, 'displayName', 'VerifiedKeyStore'),
-    s(a, 'persistKey', 'VerifiedKeyStore'),
+o(a, 'displayName', 'VerifiedKeyStore'),
+    o(a, 'persistKey', 'VerifiedKeyStore'),
     (t.Z = new a(l.Z, {
         SECURE_FRAMES_VERIFIED_KEY_CREATE: function (e) {
             let { userId: t, key: n } = e,

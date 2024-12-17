@@ -3,7 +3,7 @@ t.d(n, {
         return A;
     },
     ZP: function () {
-        return Z;
+        return w;
     },
     sK: function () {
         return O;
@@ -33,35 +33,35 @@ var l = t(200651),
     P = t(914620),
     T = t(981631),
     b = t(388032),
-    C = t(302602),
-    I = t(892561),
+    I = t(302602),
+    C = t(892561),
     S = t(494536);
 function y() {
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)('div', { className: C.splashPlaceholder }),
+            (0, l.jsx)('div', { className: I.splashPlaceholder }),
             (0, l.jsxs)('div', {
-                className: a()(C.body, C.hasSplash),
+                className: a()(I.body, I.hasSplash),
                 children: [
-                    (0, l.jsx)('div', { className: C.iconPlaceholder }),
+                    (0, l.jsx)('div', { className: I.iconPlaceholder }),
                     (0, l.jsx)('div', {
-                        className: C.__invalid_headerText,
-                        children: (0, l.jsx)('div', { className: C.namePlaceholder })
+                        className: I.__invalid_headerText,
+                        children: (0, l.jsx)('div', { className: I.namePlaceholder })
                     }),
                     (0, l.jsxs)('div', {
-                        className: C.memberInfo,
+                        className: I.memberInfo,
                         children: [
                             (0, l.jsx)('div', {
-                                className: C.memberCount,
-                                children: (0, l.jsx)('div', { className: C.memberInfoPlaceholder })
+                                className: I.memberCount,
+                                children: (0, l.jsx)('div', { className: I.memberInfoPlaceholder })
                             }),
                             (0, l.jsx)('div', {
-                                className: C.memberCount,
-                                children: (0, l.jsx)('div', { className: C.memberInfoPlaceholder })
+                                className: I.memberCount,
+                                children: (0, l.jsx)('div', { className: I.memberInfoPlaceholder })
                             })
                         ]
                     }),
-                    (0, l.jsx)('div', { className: C.viewButtonPlaceholder })
+                    (0, l.jsx)('div', { className: I.viewButtonPlaceholder })
                 ]
             })
         ]
@@ -71,19 +71,19 @@ function A() {
     let e = (0, d.ZP)();
     return (0, l.jsx)(u.Dialog, {
         'aria-label': b.intl.string(b.t['8LKcho']),
-        className: C.guildPopout,
+        className: I.guildPopout,
         children: (0, l.jsxs)('div', {
-            className: C.body,
+            className: I.body,
             children: [
                 (0, l.jsx)('img', {
-                    src: (0, c.wj)(e) ? I : S,
-                    className: C.unavailableIcon,
+                    src: (0, c.wj)(e) ? C : S,
+                    className: I.unavailableIcon,
                     width: 80,
                     height: 80,
                     alt: ''
                 }),
                 (0, l.jsx)(u.Heading, {
-                    className: C.unavailableHeader,
+                    className: I.unavailableHeader,
                     variant: 'heading-md/semibold',
                     children: b.intl.string(b.t['+kdPHx'])
                 }),
@@ -98,12 +98,12 @@ function A() {
 function O(e) {
     var n, t;
     let { guild: r, channelId: c, messageId: d } = e,
-        { name: p, id: E, discoverySplash: N, icon: P, description: I, presenceCount: S, memberCount: y, emojis: A } = r,
+        { name: p, id: E, discoverySplash: N, icon: P, description: C, presenceCount: S, memberCount: y, emojis: A } = r,
         O = (0, s.e7)([x.default], () => x.default.getId()),
-        w = (0, s.e7)([_.ZP], () => _.ZP.isMember(E, O), [E, O]),
-        [Z, D] = i.useState(!1),
+        Z = (0, s.e7)([_.ZP], () => _.ZP.isMember(E, O), [E, O]),
+        [w, R] = i.useState(!1),
         U = (e) => {
-            if ((e.stopPropagation(), w)) (0, g.XU)(E, c, d);
+            if ((e.stopPropagation(), Z)) (0, g.XU)(E, c, d);
             else {
                 let e = {
                     page: T.ZY5.GUILD_CHANNEL,
@@ -112,9 +112,9 @@ function O(e) {
                 };
                 (0, v.Ub)(E, e);
             }
-            D(!0);
+            R(!0);
         },
-        R = j.ZP.getGuildDiscoverySplashURL({
+        D = j.ZP.getGuildDiscoverySplashURL({
             id: E,
             splash: N,
             size: 250 * (0, f.x_)()
@@ -134,20 +134,20 @@ function O(e) {
         null != L && L.length > 6 && null != A && ((L = null !== (t = null == A ? void 0 : A.slice(Math.max((null == A ? void 0 : A.length) - 6, 0))) && void 0 !== t ? t : []), (M = A.length - 6)),
         (0, l.jsxs)(u.Dialog, {
             'aria-label': p,
-            className: C.guildPopout,
+            className: I.guildPopout,
             children: [
-                null != R
+                null != D
                     ? (0, l.jsx)('img', {
-                          src: R,
+                          src: D,
                           alt: '',
-                          className: C.splashImage
+                          className: I.splashImage
                       })
                     : null,
                 (0, l.jsxs)('div', {
-                    className: a()(C.body, { [C.hasSplash]: null != R }),
+                    className: a()(I.body, { [I.hasSplash]: null != D }),
                     children: [
                         (0, l.jsx)('div', {
-                            className: a()({ [C.iconWithSplash]: null != R }),
+                            className: a()({ [I.iconWithSplash]: null != D }),
                             children: (0, l.jsx)(u.Clickable, {
                                 onClick: U,
                                 children: (0, l.jsx)(h.ZP, {
@@ -155,7 +155,7 @@ function O(e) {
                                     width: 88,
                                     height: 88,
                                     children: (0, l.jsx)('div', {
-                                        className: C.iconMask,
+                                        className: I.iconMask,
                                         children: (0, l.jsx)(h.ZP, {
                                             mask: h.ZP.Masks.SQUIRCLE,
                                             width: 80,
@@ -163,7 +163,7 @@ function O(e) {
                                             children: (0, l.jsx)('img', {
                                                 src: G,
                                                 alt: '',
-                                                className: C.avatar
+                                                className: I.avatar
                                             })
                                         })
                                     })
@@ -172,10 +172,10 @@ function O(e) {
                         }),
                         null != p
                             ? (0, l.jsxs)('div', {
-                                  className: C.guildNameWrapper,
+                                  className: I.guildNameWrapper,
                                   children: [
                                       (0, l.jsx)(m.Z, {
-                                          className: C.badge,
+                                          className: I.badge,
                                           guild: r,
                                           tooltipPosition: 'top',
                                           tooltipColor: u.Tooltip.Colors.PRIMARY,
@@ -183,31 +183,31 @@ function O(e) {
                                       }),
                                       (0, l.jsx)(u.Text, {
                                           variant: 'text-md/semibold',
-                                          className: C.guildName,
+                                          className: I.guildName,
                                           children: p
                                       })
                                   ]
                               })
                             : null,
-                        null != I
+                        null != C
                             ? (0, l.jsx)(u.Text, {
                                   color: 'header-secondary',
-                                  className: C.description,
+                                  className: I.description,
                                   variant: 'text-sm/normal',
-                                  children: I
+                                  children: C
                               })
                             : null,
                         (0, l.jsxs)('div', {
-                            className: C.memberInfo,
+                            className: I.memberInfo,
                             children: [
                                 null != S
                                     ? (0, l.jsxs)('div', {
-                                          className: C.memberCount,
+                                          className: I.memberCount,
                                           children: [
-                                              (0, l.jsx)('div', { className: C.dotOnline }),
+                                              (0, l.jsx)('div', { className: I.dotOnline }),
                                               (0, l.jsx)(u.Text, {
                                                   variant: 'text-xs/normal',
-                                                  className: C.memberText,
+                                                  className: I.memberText,
                                                   children: b.intl.format(b.t['LC+S+v'], { membersOnline: S })
                                               })
                                           ]
@@ -215,12 +215,12 @@ function O(e) {
                                     : null,
                                 null != y
                                     ? (0, l.jsxs)('div', {
-                                          className: C.memberCount,
+                                          className: I.memberCount,
                                           children: [
-                                              (0, l.jsx)('div', { className: C.dotOffline }),
+                                              (0, l.jsx)('div', { className: I.dotOffline }),
                                               (0, l.jsx)(u.Text, {
                                                   variant: 'text-xs/normal',
-                                                  className: C.memberText,
+                                                  className: I.memberText,
                                                   children: b.intl.format(b.t.zRl6XV, { count: y })
                                               })
                                           ]
@@ -231,19 +231,19 @@ function O(e) {
                     ]
                 }),
                 (0, l.jsxs)('div', {
-                    className: C.footer,
+                    className: I.footer,
                     children: [
                         null != L && L.length > 0
                             ? (0, l.jsxs)(l.Fragment, {
                                   children: [
                                       (0, l.jsx)(u.Heading, {
                                           variant: 'heading-deprecated-12/semibold',
-                                          className: C.emojiHeader,
+                                          className: I.emojiHeader,
                                           color: 'header-secondary',
                                           children: b.intl.string(b.t.Q60n1N)
                                       }),
                                       (0, l.jsxs)('div', {
-                                          className: a()(C.emojiContainer, { [C.withCounter]: null != M }),
+                                          className: a()(I.emojiContainer, { [I.withCounter]: null != M }),
                                           children: [
                                               L.map((e) => {
                                                   let n = j.ZP.getEmojiURL({
@@ -261,7 +261,7 @@ function O(e) {
                                                                   width: 24,
                                                                   height: 24,
                                                                   src: n,
-                                                                  className: a()({ [C.emoji]: null == M }),
+                                                                  className: a()({ [I.emoji]: null == M }),
                                                                   alt: ''
                                                               })
                                                       },
@@ -271,7 +271,7 @@ function O(e) {
                                               null != M
                                                   ? (0, l.jsx)(u.Heading, {
                                                         variant: 'heading-deprecated-12/semibold',
-                                                        className: C.emojiCounter,
+                                                        className: I.emojiCounter,
                                                         color: 'header-secondary',
                                                         children: '+'.concat(M)
                                                     })
@@ -286,7 +286,7 @@ function O(e) {
                             color: u.Button.Colors.BRAND,
                             size: u.Button.Sizes.SMALL,
                             onClick: U,
-                            submitting: Z,
+                            submitting: w,
                             autoFocus: !0,
                             children: b.intl.string(b.t['K+WeR0'])
                         })
@@ -296,7 +296,7 @@ function O(e) {
         })
     );
 }
-function w(e) {
+function Z(e) {
     let { guildId: n, channelId: t, messageId: r } = e,
         {
             loading: a,
@@ -317,7 +317,7 @@ function w(e) {
     a)
         ? (0, l.jsx)(u.Dialog, {
               'aria-label': b.intl.string(b.t.ZTNur6),
-              className: C.guildPopout,
+              className: I.guildPopout,
               children: (0, l.jsx)(y, {})
           })
         : null == c || o
@@ -328,11 +328,11 @@ function w(e) {
                 messageId: r
             });
 }
-function Z(e) {
+function w(e) {
     return (0, N.h)()
         ? (0, l.jsx)(P.Z, {
               setPopoutRef: e.setPopoutRef,
               guildId: e.guildId
           })
-        : (0, l.jsx)(w, { ...e });
+        : (0, l.jsx)(Z, { ...e });
 }

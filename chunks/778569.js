@@ -9,22 +9,22 @@ var r = n(192379),
 let u = ['embedded_cover', 'embedded_background'];
 function l(e) {
     let { applicationId: t, size: n, names: l = u } = e,
-        [o, s] = r.useState(null),
+        [s, o] = r.useState(null),
         [d, a] = r.useState(!0),
-        c = (0, i.getAssetImage)(t, o, n);
+        E = (0, i.getAssetImage)(t, s, n);
     return (
         r.useEffect(() => {
             (0, i.getAssets)(t).then((e) => {
                 for (let [t, n] of (a(!1), Object.entries(e)))
                     if (null != n && '' !== n.id && l.includes(n.name)) {
-                        s(n.id);
+                        o(n.id);
                         return;
                     }
             });
         }, [t]),
         {
-            url: c,
-            state: d ? 'loading' : null != c ? 'fetched' : 'not-found'
+            url: E,
+            state: d ? 'loading' : null != E ? 'fetched' : 'not-found'
         }
     );
 }

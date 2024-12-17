@@ -550,7 +550,7 @@ class eI extends g.Z {
                     this.logger.warn('Socket mismatch, disconnecting');
                     return;
                 }
-                switch (((this._voiceQuality = new ea.Z(f)), this._voiceQuality.start(), (this._voiceQualityPeriodicStatsSequenceId = 0), (this._voiceQualityPeriodicStatsInterval = setInterval(this._handleVoiceQualityPeriodicsStats, 300000)), (this._noiseCancellationError = 0), (this._voiceDuration = new ei.Z(this.userId, f)), this._voiceDuration.start(), (this.protocol = i), i)) {
+                switch (((this._voiceQuality = new ea.Z(f)), this._voiceQuality.start(), (this._voiceQualityPeriodicStatsSequenceId = 0), (this._voiceQualityPeriodicStatsInterval = setInterval(this._handleVoiceQualityPeriodicsStats, 300000)), (this._noiseCancellationError = 0), (this._voiceDuration = new ei.Z(this.userId, f)), this._voiceDuration.start(f.getSelfMute()), (this.protocol = i), i)) {
                     case 'udp':
                         this.logger.info('Sending UDP info to RTC server.', a, this._selectedExperiments),
                             e.once($.V.Encryption, (e, n) => {
