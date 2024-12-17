@@ -244,7 +244,7 @@
         },
         G = !1;
     try {
-        RegExp('(?<=a)'), RegExp('(?<!a)'), (G = !0);
+        RegExp('(?<=a)'), RegExp('(?<!a)'), (G = !1);
     } catch (e) {}
     var Z = 0,
         F = {
