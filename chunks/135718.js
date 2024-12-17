@@ -14,7 +14,7 @@ var i = n(200651),
     d = n(241209),
     u = n(563132),
     m = n(586585),
-    h = n(233138),
+    h = n(439021),
     g = n(622999),
     p = n(526156),
     x = n(726985),
@@ -124,7 +124,7 @@ function v(e) {
             paymentRequestRef: t,
             onStripePaymentMethodReceived: () => {},
             onPaymentRequestFailure: () => {},
-            onValidGooglePay: () => {},
+            onValidPaymentRequest: () => {},
             onChooseType: () => {},
             loadingComponent: (0, i.jsx)(o.Button, {
                 color: o.Button.Colors.TRANSPARENT,
@@ -133,20 +133,26 @@ function v(e) {
             })
         };
     return e.renderStepBody
-        ? (0, i.jsx)(h.z, {
+        ? (0, i.jsx)(h.t, {
               ...n,
               ...e
           })
-        : (0, i.jsx)(c.T, {
-              ...n,
-              ...e
-          });
+        : 'applePay' === e.paymentRequestWallet
+          ? (0, i.jsx)(c.Ch, {
+                ...n,
+                ...e
+            })
+          : (0, i.jsx)(c.Tr, {
+                ...n,
+                ...e
+            });
 }
-function j() {
-    let e = s.useRef(null),
-        [t, n] = s.useState(!1),
-        r = () => {
-            null != e.current && e.current.show();
+function j(e) {
+    let { paymentRequestWallet: t } = e,
+        n = s.useRef(null),
+        [r, l] = s.useState(!1),
+        c = () => {
+            null != n.current && n.current.show();
         };
     return (0, i.jsx)('div', {
         className: a()(C.root, C.focusLock, C.small, C.rootWithShadow, E.modal),
@@ -161,15 +167,16 @@ function j() {
                     children: (0, i.jsx)(v, {
                         renderConnectorView: !0,
                         renderStepBody: !0,
-                        paymentRequestRef: e,
-                        onValidGooglePay: () => n(!0)
+                        paymentRequestWallet: t,
+                        paymentRequestRef: n,
+                        onValidPaymentRequest: () => l(!0)
                     })
                 }),
                 (0, i.jsx)(m.Z, {
                     primaryCTA: m.Z.CTAType.CONTINUE,
-                    primaryText: T.intl.string(T.t.wnVVr6),
-                    primaryDisabled: !t,
-                    onPrimary: () => r(),
+                    primaryText: T.intl.string('applePay' === t ? T.t.WoXvJC : T.t.wnVVr6),
+                    primaryDisabled: !r,
+                    onPrimary: () => c(),
                     onBack: () => {}
                 })
             ]
@@ -182,7 +189,7 @@ function O() {
         children: [
             (0, i.jsx)(o.Heading, {
                 variant: 'heading-xl/semibold',
-                children: 'Payment Request Components'
+                children: 'Payment Request Components - Google Pay'
             }),
             (0, i.jsx)(N, {
                 label: 'Google Pay - Default View',
@@ -195,6 +202,25 @@ function O() {
             (0, i.jsx)(N, {
                 label: 'Google Pay - Add Payment Step Body Connector View',
                 children: (0, i.jsx)(j, {})
+            }),
+            (0, i.jsx)(o.Heading, {
+                variant: 'heading-xl/semibold',
+                children: 'Payment Request Components - Apple Pay'
+            }),
+            (0, i.jsx)(N, {
+                label: 'Apple Pay - Default View',
+                children: (0, i.jsx)(v, { paymentRequestWallet: 'applePay' })
+            }),
+            (0, i.jsx)(N, {
+                label: 'Apple Pay - Connector View',
+                children: (0, i.jsx)(v, {
+                    renderConnectorView: !0,
+                    paymentRequestWallet: 'applePay'
+                })
+            }),
+            (0, i.jsx)(N, {
+                label: 'Apple Pay - Add Payment Step Body Connector View',
+                children: (0, i.jsx)(j, { paymentRequestWallet: 'applePay' })
             })
         ]
     });

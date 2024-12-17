@@ -3,5 +3,6 @@ e.exports = {
     button: 'button_dbc8e0',
     centerContainer: 'centerContainer_dbc8e0',
     connectionInstructions: 'connectionInstructions_dbc8e0',
-    googlePayIcon: 'googlePayIcon_dbc8e0'
+    paymentRequestIcon: 'paymentRequestIcon_dbc8e0',
+    appleConnectorIcon: 'appleConnectorIcon_dbc8e0'
 };

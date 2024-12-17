@@ -25,6 +25,7 @@ n.r(
         ideal: 'ideal_c4e271',
         cash_app: 'cash_app_c4e271',
         apple: 'apple_c4e271',
+        apple_light: 'apple_light_c4e271',
         cardIconSmall: 'cardIconSmall_c4e271 cardIcon_c4e271',
         cardIconMedium: 'cardIconMedium_c4e271 cardIcon_c4e271',
         cardIconLarge: 'cardIconLarge_c4e271 cardIcon_c4e271',

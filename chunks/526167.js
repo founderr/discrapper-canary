@@ -1,4 +1,7 @@
 r.d(n, {
+    G6: function () {
+        return T;
+    },
     hY: function () {
         return g;
     },
@@ -6,7 +9,7 @@ r.d(n, {
         return I;
     },
     rO: function () {
-        return T;
+        return b;
     },
     vu: function () {
         return _;
@@ -40,9 +43,13 @@ function I() {
     return -1 !== _() || -1 !== p() || -1 !== g() || -1 !== v();
 }
 function T() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : navigator.userAgent,
+        n = e.toLowerCase();
+    return -1 !== n.indexOf('safari') && !(-1 !== n.indexOf('chrome')) && -1 !== n.indexOf('version/');
+}
+function b() {
     var e;
     let n = window.navigator,
-        r = n.userAgent.toLowerCase(),
-        i = (null === (e = n.mediaCapabilities) || void 0 === e ? void 0 : e.decodingInfo) != null;
-    return -1 !== r.indexOf('safari') && !(-1 !== r.indexOf('chrome')) && -1 !== r.indexOf('version/') && i;
+        r = (null === (e = n.mediaCapabilities) || void 0 === e ? void 0 : e.decodingInfo) != null;
+    return T(n.userAgent) && r;
 }
