@@ -1,6 +1,6 @@
 r.d(n, {
     B: function () {
-        return I;
+        return v;
     }
 });
 var i = r(47120);
@@ -9,13 +9,12 @@ var a = r(147913),
     o = r(19780),
     l = r(699516),
     u = r(70956),
-    c = r(280006),
-    d = r(33194);
+    c = r(33194);
 r(452369);
-var f = r(807031),
-    _ = r(189275),
-    h = r(451092);
-function p(e, n, r) {
+var d = r(807031),
+    f = r(189275),
+    _ = r(451092);
+function h(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -29,9 +28,9 @@ function p(e, n, r) {
     );
 }
 r(334431);
-let m = 1 * u.Z.Millis.HOUR,
-    g = 3 * u.Z.Millis.DAY;
-function E(e) {
+let p = 1 * u.Z.Millis.HOUR,
+    m = 3 * u.Z.Millis.DAY;
+function g(e) {
     let { channelId: n } = e;
     if (null == n) return;
     let r = s.Z.getChannel(n);
@@ -39,36 +38,35 @@ function E(e) {
         let e = r.recipients.filter((e) => l.Z.isBlocked(e)),
             i = r.recipients.filter((e) => l.Z.isIgnored(e));
         (e.length > 0 || i.length > 0) &&
-            c.E.getCurrentConfig({ location: 'channel_select' }, { autoTrackExposure: !0 }).showAsModal &&
             !r.blockedUserWarningDismissed &&
-            !T(n) &&
-            (0, _.O)({
+            !I(n) &&
+            (0, f.O)({
                 channelId: n,
                 blockedUserIds: e,
                 ignoredUserIds: i
             });
     }
 }
-function v(e) {
+function E(e) {
     let { state: n } = e;
 }
+function v(e) {
+    return (0, c.Iu)(e) > Date.now() - p;
+}
 function I(e) {
-    return (0, d.Iu)(e) > Date.now() - m;
+    return (0, c.Iu)(e) > Date.now() - m;
 }
-function T(e) {
-    return (0, d.Iu)(e) > Date.now() - g;
-}
-class b extends a.Z {
+class T extends a.Z {
     handleBlockedOrIgnoredUserVoiceChannelJoin(e, n) {
         let r = o.Z.getChannelId();
-        if (e === r && null != s.Z.getChannel(e)) (0, f.wC)({ location: 'warning_manager' }) && !I(e) && (0, h.H)(r, n);
+        if (e === r && null != s.Z.getChannel(e)) (0, d.wC)({ location: 'warning_manager' }) && !v(e) && (0, _.H)(r, n);
     }
     constructor(...e) {
         super(...e),
-            p(this, 'actions', {
-                CHANNEL_SELECT: E,
-                APP_STATE_UPDATE: v
+            h(this, 'actions', {
+                CHANNEL_SELECT: g,
+                APP_STATE_UPDATE: E
             });
     }
 }
-n.Z = new b();
+n.Z = new T();
