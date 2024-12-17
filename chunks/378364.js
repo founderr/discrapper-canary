@@ -10,7 +10,7 @@ var i,
     l = r(586393),
     u = r(464912);
 !(function (e) {
-    e[(e.THROW_EMOJI = 0)] = 'THROW_EMOJI';
+    (e[(e.THROW_EMOJI = 0)] = 'THROW_EMOJI'), (e[(e.SNOW = 1)] = 'SNOW');
 })(i || (i = {}));
 let c = {
     experiment: a.Z,
@@ -22,6 +22,9 @@ let c = {
     appSpinnerSources: {
         webmDark: l,
         webmLight: u
-    }
+    },
+    emojiAnimationType: 1,
+    emojiAnimationTriggers: ['snowflake'],
+    triggerEmojiAnimationFromSentMessage: !1
 };
 n.Z = c;
