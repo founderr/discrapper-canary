@@ -11,16 +11,15 @@ var a = r(200651),
     h = r(114201),
     p = r(154658),
     m = r(370611),
-    g = r(463031),
-    E = r(981631),
-    v = r(701488),
-    I = r(231338),
-    T = r(388032),
-    b = r(743022);
-function y(e) {
+    g = r(981631),
+    E = r(701488),
+    v = r(231338),
+    I = r(388032),
+    T = r(743022);
+function b(e) {
     let { children: n } = e;
     return (0, a.jsx)(o.ThemeProvider, {
-        theme: I.BR.DARK,
+        theme: v.BR.DARK,
         disableAdaptiveTheme: !0,
         children: (e) =>
             (0, a.jsx)('div', {
@@ -29,7 +28,7 @@ function y(e) {
             })
     });
 }
-function S(e) {
+function y(e) {
     let { guildId: n, leaderboardId: r, source: i } = e,
         a = (0, f.Z)({
             guildId: null != n ? n : '',
@@ -51,7 +50,7 @@ function S(e) {
                 i = o.users[0];
             (e = null == i ? void 0 : i.user_id), (r = null == i ? void 0 : null === (c = i.statistics) || void 0 === c ? void 0 : null === (l = c[n]) || void 0 === l ? void 0 : l.value);
         }
-        u.default.track(E.rMx.LEADERBOARD_POPOUT_VIEWED, {
+        u.default.track(g.rMx.LEADERBOARD_POPOUT_VIEWED, {
             guild_id: n,
             leaderboard_id: a.leaderboard_id,
             interval_start: a.interval_start,
@@ -69,61 +68,60 @@ function S(e) {
         });
     }, [n, r, i]);
 }
-let A = (e) => {
+let S = (e) => {
     var n;
-    let { guildId: r, previewMode: i = !1, source: u, trackRankingItemInteraction: c } = e,
-        d = g._,
-        [h, E] = s.useState(i),
-        v = s.useRef(null),
-        I = (0, f.Z)({
+    let { guildId: r, leaderboardId: i, previewMode: u = !1, source: c, trackRankingItemInteraction: d } = e,
+        [h, g] = s.useState(u),
+        E = s.useRef(null),
+        v = (0, f.Z)({
             guildId: r,
-            leaderboardId: g._,
+            leaderboardId: i,
             intervalOffset: 0
         }),
-        A = (0, f.Z)({
+        S = (0, f.Z)({
             guildId: r,
-            leaderboardId: g._,
+            leaderboardId: i,
             intervalOffset: -1
         });
-    (0, o.useFocusLock)(v),
-        S({
+    (0, o.useFocusLock)(E),
+        y({
             guildId: r,
-            leaderboardId: d,
-            source: u
+            leaderboardId: i,
+            source: c
         });
-    let C = (0, l.q)(null == I ? void 0 : null === (n = I.settings) || void 0 === n ? void 0 : n.application_id);
-    return null == I || null == C
+    let N = (0, l.q)(null == v ? void 0 : null === (n = v.settings) || void 0 === n ? void 0 : n.application_id);
+    return null == v || null == N
         ? null
-        : (0, a.jsx)(y, {
+        : (0, a.jsx)(b, {
               children: (0, a.jsxs)('div', {
-                  className: b.popout,
-                  ref: v,
+                  className: T.popout,
+                  ref: E,
                   children: [
                       (0, a.jsxs)('div', {
-                          className: b.content,
+                          className: T.content,
                           children: [
-                              (0, a.jsx)(N, {
-                                  leaderboard: I,
-                                  application: C
+                              (0, a.jsx)(A, {
+                                  leaderboard: v,
+                                  application: N
                               }),
                               (0, a.jsx)(m.Z, {
-                                  leaderboard: I,
+                                  leaderboard: v,
                                   previewMode: h,
-                                  trackRankingItemInteraction: c
+                                  trackRankingItemInteraction: d
                               }),
                               h
                                   ? null
                                   : (0, a.jsxs)(a.Fragment, {
                                         children: [
-                                            null != A &&
+                                            null != S &&
                                                 (0, a.jsx)(p.Z, {
-                                                    className: b.previousChampion,
+                                                    className: T.previousChampion,
                                                     guildId: r,
-                                                    leaderboard: A
+                                                    leaderboard: S
                                                 }),
                                             (0, a.jsx)(_.Z, {
                                                 guildId: r,
-                                                leaderboardId: d
+                                                leaderboardId: i
                                             })
                                         ]
                                     })
@@ -132,13 +130,13 @@ let A = (e) => {
                       h
                           ? (0, a.jsx)(a.Fragment, {
                                 children: (0, a.jsx)(o.Clickable, {
-                                    onClick: () => E(!1),
+                                    onClick: () => g(!1),
                                     children: (0, a.jsx)('div', {
-                                        className: b.exitPreviewModeButton,
+                                        className: T.exitPreviewModeButton,
                                         children: (0, a.jsx)(o.Text, {
                                             variant: 'text-sm/medium',
-                                            className: b.exitPreviewModeText,
-                                            children: T.intl.string(T.t.GLeQe3)
+                                            className: T.exitPreviewModeText,
+                                            children: I.intl.string(I.t.GLeQe3)
                                         })
                                     })
                                 })
@@ -148,21 +146,21 @@ let A = (e) => {
               })
           });
 };
-function N(e) {
+function A(e) {
     let { leaderboard: n, application: r } = e,
         i = s.useMemo(() => (0, d.n)(c.default.extractTimestamp(n.interval_end)), [n]),
-        l = r.getIconURL(v.Si.LARGE),
+        l = r.getIconURL(E.Si.LARGE),
         u =
             null == l
                 ? null
                 : (0, a.jsx)('img', {
-                      className: b.gameIcon,
+                      className: T.gameIcon,
                       src: l,
                       'aria-hidden': !0,
                       alt: ''
                   });
     return (0, a.jsxs)('div', {
-        className: b.header,
+        className: T.header,
         children: [
             u,
             (0, a.jsx)(o.Spacer, {
@@ -171,8 +169,8 @@ function N(e) {
             }),
             (0, a.jsx)(o.Heading, {
                 variant: 'text-xs/normal',
-                className: b.leaderboardTitle,
-                children: T.intl.format(T.t['MlT4+P'], {
+                className: T.leaderboardTitle,
+                children: I.intl.format(I.t['MlT4+P'], {
                     leaderboardName: r.name,
                     timeLeft: i,
                     leaderboardNameHook: (e, n) =>
@@ -180,7 +178,7 @@ function N(e) {
                             o.Text,
                             {
                                 variant: 'text-sm/medium',
-                                className: b.leaderboardName,
+                                className: T.leaderboardName,
                                 children: e
                             },
                             n
@@ -189,9 +187,9 @@ function N(e) {
             }),
             (0, a.jsx)(h.Z, {
                 guildId: n.guild_id,
-                leaderboardId: g._
+                leaderboardId: n.leaderboard_id
             })
         ]
     });
 }
-n.Z = A;
+n.Z = S;

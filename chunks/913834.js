@@ -19,7 +19,7 @@ function h(e) {
         p = s.useRef(!1),
         m = (0, u.Z)({
             guildId: n.id,
-            leaderboardId: f._,
+            leaderboardId: f.z,
             intervalOffset: 0
         }),
         g = s.useMemo(() => {
@@ -53,7 +53,8 @@ function h(e) {
                 (0, a.jsx)(c.Z, {
                     guildId: n.id,
                     previewMode: !0,
-                    source: l.Z.MEMBER_LIST
+                    source: l.Z.MEMBER_LIST,
+                    leaderboardId: m.leaderboard_id
                 }),
             children: () =>
                 (0, a.jsx)(d.Z, {

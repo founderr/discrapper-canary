@@ -147,6 +147,7 @@ let H = (e) => {
                 return (null === (a = n.channel) || void 0 === a ? void 0 : a.guild_id) != null
                     ? (0, l.jsx)(C.Z, {
                           guildId: n.channel.guild_id,
+                          leaderboardId: t.extra.leaderboard_id,
                           source: h.Z.MEMBER_LIST,
                           trackRankingItemInteraction: n.trackRankingItemInteraction
                       })
