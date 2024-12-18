@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return v;
+        return g;
     }
 });
 var i = r(200651),
@@ -8,38 +8,33 @@ var i = r(200651),
     s = r(442837),
     o = r(606992),
     l = r(314897),
-    u = r(944486),
-    c = r(843693),
-    d = r(576125),
-    f = r(112843),
-    _ = r(524484),
-    h = r(981631),
-    p = r(675654);
-let m = 16,
-    g = 0.05;
-function E(e) {
+    u = r(843693),
+    c = r(576125),
+    d = r(112843),
+    f = r(524484),
+    _ = r(675654);
+let h = 16,
+    p = 0.05;
+function m(e) {
     var n, r;
-    let { editorHeight: i, textValue: d } = e,
-        _ = a.useRef(d),
-        E = (0, o.Z)({ editorHeight: i }),
-        v = (0, f.Z)(),
-        I = (0, s.e7)([c.ZP, l.default, u.Z], () => {
-            var e;
-            return c.ZP.isComboing(l.default.getId(), null !== (e = u.Z.getChannelId()) && void 0 !== e ? e : h.lds);
-        }),
-        T = null !== (n = null == E ? void 0 : E.left) && void 0 !== n ? n : 0,
-        b = (null !== (r = null == E ? void 0 : E.top) && void 0 !== r ? r : 0) - m,
-        y = a.useMemo(() => Math.random() < g, [0 === d.length]);
+    let { editorHeight: i, textValue: c, channelId: f } = e,
+        m = a.useRef(c),
+        g = (0, o.Z)({ editorHeight: i }),
+        E = (0, d.Z)(),
+        v = (0, s.e7)([u.ZP, l.default], () => u.ZP.isComboing(l.default.getId(), f)),
+        I = null !== (n = null == g ? void 0 : g.left) && void 0 !== n ? n : 0,
+        T = (null !== (r = null == g ? void 0 : g.top) && void 0 !== r ? r : 0) - h,
+        b = a.useMemo(() => Math.random() < p, [0 === c.length]);
     return (
         a.useEffect(() => {
-            0 !== d.length && d !== _.current && I && (v.fire(T, b, y ? { sprite: p.vv } : null), (_.current = d));
-        }, [d, I, T, b, y, v]),
+            0 !== c.length && c !== m.current && v && (E.fire(I, T, b ? { sprite: _.vv } : null), (m.current = c));
+        }, [c, v, I, T, b, E]),
         null
     );
 }
-function v(e) {
-    return (0, i.jsx)(d.Z, {
-        confettiLocation: _.Hn.CHAT_INPUT,
-        children: (0, i.jsx)(E, { ...e })
+function g(e) {
+    return (0, i.jsx)(c.Z, {
+        confettiLocation: f.Hn.CHAT_INPUT,
+        children: (0, i.jsx)(m, { ...e })
     });
 }

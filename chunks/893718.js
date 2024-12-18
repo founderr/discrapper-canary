@@ -615,7 +615,8 @@ function ew(e, n) {
                         }),
                         (0, s.jsx)(B.Z, {
                             textValue: G,
-                            editorHeight: tM
+                            editorHeight: tM,
+                            channelId: X.id
                         }),
                         tK
                             ? (0, s.jsx)(el.Z, {
