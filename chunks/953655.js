@@ -14,9 +14,9 @@ var a = n(120356),
     p = n(218142);
 t.Z = (e) => {
     let { isLoading: t, handleTransition: n, categories: a } = e,
-        g = (0, d.c)('CollectiblesFeedShop') && null != c.Z.getCategory(l.T.ROBERT);
+        f = (0, d.c)('CollectiblesFeedShop') && null != c.Z.getCategory(l.T.ROBERT);
     if (a.length < 2) return s.Z.captureMessage('Collectible Featured Block requires at least 2 categories'), null;
-    let [f, C] = a;
+    let [g, C] = a;
     if (t)
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -30,9 +30,9 @@ t.Z = (e) => {
                 })
             ]
         });
-    let v = (null == f ? void 0 : f.unpublishedAt) != null ? h.intl.string(h.t['h/uBCQ']) : void 0,
+    let v = (null == g ? void 0 : g.unpublishedAt) != null ? h.intl.string(h.t['h/uBCQ']) : void 0,
         b = h.intl.string(new Date() > m.gJ ? h.t.l0CjbW : h.t.uPewb2),
-        x = g ? b : h.intl.string(h.t['o/oRJC']);
+        x = f ? b : h.intl.string(h.t['o/oRJC']);
     return (0, r.jsx)('div', {
         className: i()(p.section, p.col2, p.featuredBlocksContainer),
         children: (0, r.jsxs)(o.k0, {
@@ -41,9 +41,9 @@ t.Z = (e) => {
                 pageSection: 'featured_block'
             },
             children: [
-                null != f &&
+                null != g &&
                     (0, r.jsx)(u.q, {
-                        category: f,
+                        category: g,
                         badgeText: v,
                         handleTransition: n
                     }),

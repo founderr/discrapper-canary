@@ -18,10 +18,10 @@ t.d(n, {
         return j;
     },
     RK: function () {
-        return p;
+        return v;
     },
     _0: function () {
-        return v;
+        return p;
     },
     hz: function () {
         return P;
@@ -61,7 +61,7 @@ function j(e, n) {
         })
     );
 }
-function v(e, n) {
+function p(e, n) {
     let t = e.getGuildId();
     return (
         i()(null != t, 'This channel cannot be guildless.'),
@@ -76,7 +76,7 @@ function v(e, n) {
         })
     );
 }
-function p(e, n) {
+function v(e, n) {
     let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         l = null == e ? void 0 : e.getGuildId();
     i()(null != l, 'This channel cannot be guildless.');
@@ -160,7 +160,7 @@ async function b(e, n, t, l) {
     if ('' === n) return;
     u.Z.getVoiceChannelId() !== e.id && (0, m.TM)(e);
     let i = await (0, g.me)(e.id, n, t, l);
-    return p(e, !1, !0), i;
+    return v(e, !1, !0), i;
 }
 async function I(e, n, t) {
     if ('' !== n) return await (0, g.Dk)(e.id, n, t);

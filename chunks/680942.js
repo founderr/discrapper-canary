@@ -10,8 +10,8 @@ var r = n(200651),
     m = n(67409),
     h = n(474936),
     p = n(231338),
-    g = n(388032),
-    f = n(74483);
+    f = n(388032),
+    g = n(74483);
 let C = {
     dark: [
         {
@@ -77,25 +77,25 @@ let C = {
 t.Z = (e) => {
     let { product: t, selectedVariantIndex: n, returnRef: v, onSuccess: b, tooltipDelay: x, isGiftEasterEggEnabled: _, disableCustomColor: k = !1 } = e,
         { analyticsLocations: I } = (0, s.ZP)(),
-        S = a.useRef(null),
-        j = (0, l.Z)(S),
-        E = k ? p.BR.DARK : p.BR.LIGHT,
+        E = a.useRef(null),
+        S = (0, l.Z)(E),
+        j = k ? p.BR.DARK : p.BR.LIGHT,
         T = (0, u.hv)('CollectiblesShopGiftButton');
     return (0, d.x6)(t)
         ? null
         : (0, r.jsx)(i.Tooltip, {
-              text: g.intl.string(g.t['JCFN//']),
+              text: f.intl.string(f.t['JCFN//']),
               delay: x,
               children: (e) =>
                   (0, r.jsx)(i.Button, {
                       ...e,
-                      buttonRef: S,
-                      className: f.giftButton,
+                      buttonRef: E,
+                      className: g.giftButton,
                       color: k ? i.ButtonColors.BRAND : i.ButtonColors.CUSTOM,
                       look: i.Button.Looks.FILLED,
                       size: i.ButtonSizes.ICON,
-                      innerClassName: f.giftButtonInner,
-                      'aria-label': g.intl.string(g.t.PEjaCw),
+                      innerClassName: g.giftButtonInner,
+                      'aria-label': f.intl.string(f.t.PEjaCw),
                       onClick: (e) => {
                           e.stopPropagation(),
                               (0, o.Z)({
@@ -118,9 +118,9 @@ t.Z = (e) => {
                       },
                       children: _
                           ? (0, r.jsx)(c.e, {
-                                hovered: j,
+                                hovered: S,
                                 isContentDismissed: !0,
-                                themeOverride: E,
+                                themeOverride: j,
                                 boxColors: C
                             })
                           : (0, r.jsx)(i.GiftIcon, {

@@ -1349,20 +1349,20 @@ let { Themes: i } = r(15202).V,
             INFO_DANGER_BACKGROUND: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'RED_NEW_71',
-                        opacity: 1
+                        raw: 'OPACITY_RED_20',
+                        opacity: 0.2
                     },
                     [i.LIGHT]: {
-                        raw: 'RED_NEW_1',
-                        opacity: 1
+                        raw: 'OPACITY_RED_20',
+                        opacity: 0.2
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'RED_NEW_88',
-                        opacity: 1
+                        raw: 'OPACITY_RED_20',
+                        opacity: 0.2
                     },
                     [i.DARKER]: {
-                        raw: 'RED_NEW_81',
-                        opacity: 1
+                        raw: 'OPACITY_RED_20',
+                        opacity: 0.2
                     }
                 }
             },
@@ -1373,15 +1373,15 @@ let { Themes: i } = r(15202).V,
                         opacity: 1
                     },
                     [i.LIGHT]: {
-                        raw: 'RED_NEW_74',
+                        raw: 'RED_NEW_88',
                         opacity: 1
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'RED_NEW_16',
+                        raw: 'RED_NEW_5',
                         opacity: 1
                     },
                     [i.DARKER]: {
-                        raw: 'RED_NEW_9',
+                        raw: 'RED_NEW_1',
                         opacity: 1
                     }
                 }
@@ -1389,39 +1389,39 @@ let { Themes: i } = r(15202).V,
             INFO_HELP_BACKGROUND: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'BLUE_NEW_93',
-                        opacity: 1
+                        raw: 'OPACITY_BLUE_20',
+                        opacity: 0.2
                     },
                     [i.LIGHT]: {
-                        raw: 'BLUE_NEW_9',
-                        opacity: 1
+                        raw: 'OPACITY_BLUE_20',
+                        opacity: 0.2
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'BLUE_NEW_93',
-                        opacity: 1
+                        raw: 'OPACITY_BLUE_20',
+                        opacity: 0.2
                     },
                     [i.DARKER]: {
-                        raw: 'BLUE_NEW_93',
-                        opacity: 1
+                        raw: 'OPACITY_BLUE_20',
+                        opacity: 0.2
                     }
                 }
             },
             INFO_HELP_TEXT: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'BLUE_NEW_26',
+                        raw: 'BLUE_NEW_1',
                         opacity: 1
                     },
                     [i.LIGHT]: {
-                        raw: 'BLUE_NEW_49',
+                        raw: 'BLUE_NEW_87',
                         opacity: 1
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'BLUE_NEW_42',
+                        raw: 'BLUE_NEW_7',
                         opacity: 1
                     },
                     [i.DARKER]: {
-                        raw: 'BLUE_NEW_36',
+                        raw: 'BLUE_NEW_1',
                         opacity: 1
                     }
                 }
@@ -1429,39 +1429,39 @@ let { Themes: i } = r(15202).V,
             INFO_POSITIVE_BACKGROUND: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'GREEN_NEW_93',
-                        opacity: 1
+                        raw: 'OPACITY_GREEN_20',
+                        opacity: 0.2
                     },
                     [i.LIGHT]: {
-                        raw: 'GREEN_NEW_9',
-                        opacity: 1
+                        raw: 'OPACITY_GREEN_20',
+                        opacity: 0.2
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'GREEN_NEW_93',
-                        opacity: 1
+                        raw: 'OPACITY_GREEN_20',
+                        opacity: 0.2
                     },
                     [i.DARKER]: {
-                        raw: 'GREEN_NEW_93',
-                        opacity: 1
+                        raw: 'OPACITY_GREEN_20',
+                        opacity: 0.2
                     }
                 }
             },
             INFO_POSITIVE_TEXT: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'GREEN_NEW_27',
+                        raw: 'GREEN_NEW_1',
                         opacity: 1
                     },
                     [i.LIGHT]: {
-                        raw: 'GREEN_NEW_48',
+                        raw: 'GREEN_NEW_87',
                         opacity: 1
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'GREEN_NEW_41',
+                        raw: 'GREEN_NEW_9',
                         opacity: 1
                     },
                     [i.DARKER]: {
-                        raw: 'GREEN_NEW_36',
+                        raw: 'GREEN_NEW_1',
                         opacity: 1
                     }
                 }
@@ -1469,39 +1469,39 @@ let { Themes: i } = r(15202).V,
             INFO_WARNING_BACKGROUND: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'YELLOW_NEW_93',
-                        opacity: 1
+                        raw: 'OPACITY_YELLOW_20',
+                        opacity: 0.2
                     },
                     [i.LIGHT]: {
-                        raw: 'YELLOW_NEW_9',
-                        opacity: 1
+                        raw: 'OPACITY_YELLOW_20',
+                        opacity: 0.2
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'YELLOW_NEW_93',
-                        opacity: 1
+                        raw: 'OPACITY_YELLOW_20',
+                        opacity: 0.2
                     },
                     [i.DARKER]: {
-                        raw: 'YELLOW_NEW_93',
-                        opacity: 1
+                        raw: 'OPACITY_YELLOW_20',
+                        opacity: 0.2
                     }
                 }
             },
             INFO_WARNING_TEXT: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'YELLOW_NEW_25',
+                        raw: 'YELLOW_NEW_1',
                         opacity: 1
                     },
                     [i.LIGHT]: {
-                        raw: 'YELLOW_NEW_47',
+                        raw: 'YELLOW_NEW_87',
                         opacity: 1
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'YELLOW_NEW_40',
+                        raw: 'YELLOW_NEW_6',
                         opacity: 1
                     },
                     [i.DARKER]: {
-                        raw: 'YELLOW_NEW_34',
+                        raw: 'YELLOW_NEW_1',
                         opacity: 1
                     }
                 }
@@ -1529,20 +1529,20 @@ let { Themes: i } = r(15202).V,
             INPUT_BORDER: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'OPACITY_12',
-                        opacity: 0.12156862745098039
+                        raw: 'OPACITY_20',
+                        opacity: 0.2
                     },
                     [i.LIGHT]: {
-                        raw: 'OPACITY_28',
-                        opacity: 0.2784313725490196
+                        raw: 'OPACITY_36',
+                        opacity: 0.3607843137254902
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'OPACITY_28',
-                        opacity: 0.2784313725490196
+                        raw: 'OPACITY_36',
+                        opacity: 0.3607843137254902
                     },
                     [i.DARKER]: {
-                        raw: 'OPACITY_12',
-                        opacity: 0.12156862745098039
+                        raw: 'OPACITY_20',
+                        opacity: 0.2
                     }
                 }
             },
@@ -1861,19 +1861,19 @@ let { Themes: i } = r(15202).V,
             TEXT_POSITIVE: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'GREEN_NEW_27',
+                        raw: 'GREEN_NEW_1',
                         opacity: 1
                     },
                     [i.LIGHT]: {
-                        raw: 'GREEN_NEW_48',
+                        raw: 'GREEN_NEW_87',
                         opacity: 1
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'GREEN_NEW_41',
+                        raw: 'GREEN_NEW_9',
                         opacity: 1
                     },
                     [i.DARKER]: {
-                        raw: 'GREEN_NEW_36',
+                        raw: 'GREEN_NEW_1',
                         opacity: 1
                     }
                 }
@@ -1921,19 +1921,19 @@ let { Themes: i } = r(15202).V,
             TEXT_WARNING: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'YELLOW_NEW_25',
+                        raw: 'YELLOW_NEW_1',
                         opacity: 1
                     },
                     [i.LIGHT]: {
-                        raw: 'YELLOW_NEW_47',
+                        raw: 'YELLOW_NEW_87',
                         opacity: 1
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'YELLOW_NEW_40',
+                        raw: 'YELLOW_NEW_6',
                         opacity: 1
                     },
                     [i.DARKER]: {
-                        raw: 'YELLOW_NEW_34',
+                        raw: 'YELLOW_NEW_1',
                         opacity: 1
                     }
                 }

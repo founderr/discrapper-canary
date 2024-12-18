@@ -15,8 +15,8 @@ var r = n(200651),
     m = n(984370),
     h = n(594174),
     p = n(471731),
-    g = n(335131),
-    f = n(388032),
+    f = n(335131),
+    g = n(388032),
     C = n(2381);
 function v(e) {
     let { isFullScreen: t, isLayer: n, onClose: i, isCatalogView: v, handleTransition: b, transparent: x } = e,
@@ -43,7 +43,7 @@ function v(e) {
                                 (0, r.jsx)(c.Clickable, {
                                     onClick: b,
                                     className: C.back,
-                                    'aria-label': f.intl.string(f.t['13/7kZ']),
+                                    'aria-label': g.intl.string(g.t['13/7kZ']),
                                     children: (0, r.jsx)(c.ArrowLargeLeftIcon, {})
                                 }),
                             (0, r.jsx)(p.Z, {
@@ -52,16 +52,16 @@ function v(e) {
                             })
                         ]
                     }),
-                    (0, r.jsx)(m.Z.Title, { children: f.intl.string(f.t.pWG4zc) }),
+                    (0, r.jsx)(m.Z.Title, { children: g.intl.string(g.t.pWG4zc) }),
                     v &&
                         (0, r.jsx)(m.Z.Title, {
                             className: C.shopAllHeader,
-                            children: f.intl.string(f.t.xFcotb)
+                            children: g.intl.string(g.t.xFcotb)
                         }),
                     t &&
                         (0, r.jsx)(d.Z, {
                             className: C.closeIcon,
-                            closeAction: n ? g.DR : i,
+                            closeAction: n ? f.DR : i,
                             keybind: 'ESC'
                         })
                 ]

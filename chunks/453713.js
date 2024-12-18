@@ -15,8 +15,8 @@ var r = n(200651),
     m = n(481060),
     h = n(209613),
     p = n(429368),
-    g = n(724994),
-    f = n(388032),
+    f = n(724994),
+    g = n(388032),
     C = n(474083);
 let v = o()((e) => {
         let t = !1;
@@ -28,7 +28,7 @@ let v = o()((e) => {
     }),
     b = (e) => {
         let { variantGroupProduct: t, variant: n, variantIndex: i, totalVariants: s, selectedVariantIndex: o, onEnter: u, onLeave: h, minimal: b } = e,
-            { isPurchased: x } = (0, g.L)(n),
+            { isPurchased: x } = (0, f.L)(n),
             { onFocus: _, ...k } = (0, c.JA)('shop-variants-group-'.concat(t.storeListingId, '-').concat(i)),
             I = a.useCallback(
                 (e) => {
@@ -37,7 +37,7 @@ let v = o()((e) => {
                 [_, t, i]
             );
         return (0, r.jsx)(m.Tooltip, {
-            text: f.intl.string(f.t['/bUsx8']),
+            text: g.intl.string(g.t['/bUsx8']),
             'aria-label': !1,
             shouldShow: !b && x,
             children: (e) =>
@@ -86,16 +86,16 @@ let v = o()((e) => {
     },
     x = (e) => {
         var t, n;
-        let { variantGroupProduct: a, className: i, previewingVariantIndexProps: s, setIsHoveringOnSwitch: o, minimal: u, purchases: g, alternativeBackgroundColor: v } = e,
-            x = (0, p.o)(a, g),
+        let { variantGroupProduct: a, className: i, previewingVariantIndexProps: s, setIsHoveringOnSwitch: o, minimal: u, purchases: f, alternativeBackgroundColor: v } = e,
+            x = (0, p.o)(a, f),
             _ = s.previewingVariantIndex,
             k = null === (t = a.variants) || void 0 === t ? void 0 : t[x],
             I = null !== _ ? (null === (n = a.variants) || void 0 === n ? void 0 : n[_]) : void 0,
-            S = (0, h.Z)('shop-variants-group-'.concat(a.storeListingId), d.hy.HORIZONTAL);
+            E = (0, h.Z)('shop-variants-group-'.concat(a.storeListingId), d.hy.HORIZONTAL);
         if (null == k) return null;
-        let j = null != I ? I.variantLabel : null == k ? void 0 : k.variantLabel;
+        let S = null != I ? I.variantLabel : null == k ? void 0 : k.variantLabel;
         return (0, r.jsx)(c.bG, {
-            navigator: S,
+            navigator: E,
             children: (0, r.jsx)(c.SJ, {
                 children: (e) => {
                     var t;
@@ -137,7 +137,7 @@ let v = o()((e) => {
                                 variant: 'text-xs/medium',
                                 color: 'text-secondary',
                                 className: C.variantLabel,
-                                children: u ? f.intl.string(f.t.wbgaj4) : j
+                                children: u ? g.intl.string(g.t.wbgaj4) : S
                             })
                         ]
                     });

@@ -18,7 +18,7 @@ t.Z = (e) => {
         a = (0, u.ZP)();
     if (null == t.unpublishedAt) return null;
     let l = (0, m.OT)(t.unpublishedAt);
-    function g(e) {
+    function f(e) {
         return (0, i.jsx)(d.TextBadge, {
             disableColor: !0,
             text: e,
@@ -27,7 +27,7 @@ t.Z = (e) => {
     }
     return (0, o.EQ)([n, l > 1])
         .with(['card', !0], () => null)
-        .with(['banner', !0], () => g(h.intl.formatToPlainString(h.t['8gsP5O'], { days: l })))
-        .with(['modal', !0], () => g(h.intl.formatToPlainString(h.t.Io7ozs, { days: l })))
-        .otherwise(() => g(h.intl.string(h.t.Bc13HB)));
+        .with(['banner', !0], () => f(h.intl.formatToPlainString(h.t['8gsP5O'], { days: l })))
+        .with(['modal', !0], () => f(h.intl.formatToPlainString(h.t.Io7ozs, { days: l })))
+        .otherwise(() => f(h.intl.string(h.t.Bc13HB)));
 };

@@ -15,8 +15,8 @@ var r = t(481060),
     x = t(702321),
     M = t(461535),
     _ = t(776568),
-    m = t(299206),
-    h = t(895563),
+    h = t(299206),
+    m = t(895563),
     p = t(212205),
     v = t(62420),
     j = t(455395),
@@ -86,16 +86,16 @@ e.default = (0, a.Z)(
                 }),
                 ng = (0, _.ZP)(t),
                 nx = (0, N.Uf)(B.aIL, t.id, 'trailing'),
-                nM = (0, m.Z)({
+                nM = (0, h.Z)({
                     id: e.id,
                     label: V.intl.string(V.t['/AXYnJ'])
                 }),
-                n_ = (0, m.Z)({
+                n_ = (0, h.Z)({
                     id: t.id,
                     label: V.intl.string(V.t.gFHI3t)
                 }),
-                nm = (0, M.Z)(t),
-                nh = (0, f.Z)(e.id),
+                nh = (0, M.Z)(t),
+                nm = (0, f.Z)(e.id),
                 np = (0, c.Z)(t.id),
                 nv = (0, S.Z)(e),
                 nj = (0, I.Z)(e.id),
@@ -106,8 +106,8 @@ e.default = (0, a.Z)(
                     guildId: void 0,
                     onHeightUpdate: H
                 }),
-                nZ = (0, h.l)(t),
-                nT = (0, h.P)(t),
+                nZ = (0, m.l)(t),
+                nT = (0, m.P)(t),
                 nE = (0, p.Z)(t),
                 nN = (0, v.Z)(t),
                 nS = (0, Z.V)(t),
@@ -123,7 +123,7 @@ e.default = (0, a.Z)(
                 'aria-label': V.intl.string(V.t.liqwPD),
                 onSelect: q,
                 children: [
-                    (0, i.jsx)(r.MenuGroup, { children: !(nG && !(0, x.Z)(t.id)) && nm }),
+                    (0, i.jsx)(r.MenuGroup, { children: !(nG && !(0, x.Z)(t.id)) && nh }),
                     (0, i.jsx)(r.MenuGroup, { children: nS }),
                     (0, i.jsx)(r.MenuGroup, { children: nO }),
                     (0, i.jsx)(r.MenuGroup, { children: nU }),
@@ -156,7 +156,7 @@ e.default = (0, a.Z)(
                                 }),
                                 W &&
                                     (0, i.jsxs)(r.MenuGroup, {
-                                        children: [np, nh]
+                                        children: [np, nm]
                                     })
                             ]
                         }),

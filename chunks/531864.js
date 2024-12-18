@@ -102,7 +102,7 @@ let h = {
 t.Z = (e) => {
     let { peaking: t, transitioning: n, style: i } = e,
         h = window.innerHeight,
-        [g, f] = a.useState(!1),
+        [f, g] = a.useState(!1),
         C = p.map((e) => {
             let { skuId: t } = e;
             return c.Z.getProduct(t);
@@ -111,18 +111,18 @@ t.Z = (e) => {
         a.useEffect(() => {
             n &&
                 setTimeout(() => {
-                    f(!0);
+                    g(!0);
                 }, u.lb);
         }, [n]),
         (0, r.jsx)('div', {
             style: i,
             className: l()(m.jumbleWrapper, {
                 [m.peaking]: t,
-                [m.transitioned]: g
+                [m.transitioned]: f
             }),
             children: p.map((e, t) => {
                 var a, i;
-                let { top: l, left: c, rotation: p, size: g, skuId: f } = e,
+                let { top: l, left: c, rotation: p, size: f, skuId: g } = e,
                     v = null === (a = C[t]) || void 0 === a ? void 0 : a.items[0],
                     b = null === (i = C[t]) || void 0 === i ? void 0 : i.type,
                     x = b === s.Z.AVATAR_DECORATION ? 384 : 512;
@@ -134,8 +134,8 @@ t.Z = (e) => {
                             top: n ? -h - x : l,
                             left: n ? ''.concat(c - 75 - 350 * Math.random()) : c,
                             transform: 'rotate('.concat(p, 'deg)'),
-                            height: g.y,
-                            width: g.x,
+                            height: f.y,
+                            width: f.x,
                             transitionDelay: ''.concat(Math.random() / 3, 's'),
                             transitionDuration: ''.concat(u.lb - 200 * Math.random(), 'ms')
                         },
@@ -150,7 +150,7 @@ t.Z = (e) => {
                                 })
                         ]
                     },
-                    f + t
+                    g + t
                 );
             })
         })

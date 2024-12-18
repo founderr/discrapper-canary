@@ -16,22 +16,22 @@ var a = n(120356),
     m = n(487667);
 function h(e) {
     let { product: t, isPremiumUser: n, discount: a, className: h, nitroUpsell: p = !1 } = e,
-        g = (0, s.ql)(t, d.tuJ.DEFAULT);
-    if (null == g) return null;
-    if (g.amount <= 0)
+        f = (0, s.ql)(t, d.tuJ.DEFAULT);
+    if (null == f) return null;
+    if (f.amount <= 0)
         return (0, r.jsx)('div', {
             className: i()(m.priceTagsContainer, h),
-            children: (0, r.jsx)(o.F, { price: g })
+            children: (0, r.jsx)(o.F, { price: f })
         });
-    let f = (0, s.ql)(t, d.tuJ.PREMIUM_TIER_2),
+    let g = (0, s.ql)(t, d.tuJ.PREMIUM_TIER_2),
         C = !n && !(0, s.x6)(t),
         v =
             (0, s.x6)(t) && n
                 ? {
-                      ...g,
+                      ...f,
                       amount: a.original
                   }
-                : g;
+                : f;
     return (0, r.jsxs)('div', {
         className: i()(m.priceTagsContainer, h),
         children: [
@@ -44,9 +44,9 @@ function h(e) {
                     [m.fullPrice]: C
                 })
             }),
-            null != f &&
+            null != g &&
                 (0, r.jsx)(o.F, {
-                    price: f,
+                    price: g,
                     discount: n ? a : s.f_,
                     renderPrice: p
                         ? (e) =>

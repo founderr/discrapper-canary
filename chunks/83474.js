@@ -26,8 +26,8 @@ var l = t(200651),
     x = t(314897),
     _ = t(271383),
     j = t(768581),
-    v = t(900849),
-    p = t(249842),
+    p = t(900849),
+    v = t(249842),
     E = t(838367),
     N = t(576306),
     P = t(914620),
@@ -98,7 +98,7 @@ function A() {
 function O(e) {
     var n, t;
     let { guild: r, channelId: c, messageId: d } = e,
-        { name: p, id: E, discoverySplash: N, icon: P, description: C, presenceCount: S, memberCount: y, emojis: A } = r,
+        { name: v, id: E, discoverySplash: N, icon: P, description: C, presenceCount: S, memberCount: y, emojis: A } = r,
         O = (0, s.e7)([x.default], () => x.default.getId()),
         Z = (0, s.e7)([_.ZP], () => _.ZP.isMember(E, O), [E, O]),
         [w, R] = i.useState(!1),
@@ -110,7 +110,7 @@ function O(e) {
                     section: T.jXE.GUILD_POPOUT,
                     object: T.qAy.CARD
                 };
-                (0, v.Ub)(E, e);
+                (0, p.Ub)(E, e);
             }
             R(!0);
         },
@@ -133,7 +133,7 @@ function O(e) {
     return (
         null != L && L.length > 6 && null != A && ((L = null !== (t = null == A ? void 0 : A.slice(Math.max((null == A ? void 0 : A.length) - 6, 0))) && void 0 !== t ? t : []), (M = A.length - 6)),
         (0, l.jsxs)(u.Dialog, {
-            'aria-label': p,
+            'aria-label': v,
             className: I.guildPopout,
             children: [
                 null != D
@@ -170,7 +170,7 @@ function O(e) {
                                 })
                             })
                         }),
-                        null != p
+                        null != v
                             ? (0, l.jsxs)('div', {
                                   className: I.guildNameWrapper,
                                   children: [
@@ -184,7 +184,7 @@ function O(e) {
                                       (0, l.jsx)(u.Text, {
                                           variant: 'text-md/semibold',
                                           className: I.guildName,
-                                          children: p
+                                          children: v
                                       })
                                   ]
                               })
@@ -312,7 +312,7 @@ function Z(e) {
             [n]
         );
     return (i.useEffect(() => {
-        null == c && !a && !o && (0, p.P)(n);
+        null == c && !a && !o && (0, v.P)(n);
     }, [c, n, a, o]),
     a)
         ? (0, l.jsx)(u.Dialog, {

@@ -98,7 +98,7 @@ function et(e) {
         eC = (0, r.e7)([Z.Z], () => Z.Z.shouldShowTopicsBar() && !ed),
         ex = (0, E.P)(p.id),
         ev = (0, _.z)(p.id, J.zr),
-        e_ = (0, u.k)(p.id, J.zr),
+        e_ = (0, u.k)(p.id),
         eI = (0, w.Z)(),
         eE = (function (e, t) {
             if (e.isDM() && null != t)

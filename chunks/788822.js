@@ -18,7 +18,7 @@ let h = (e) => {
     var t;
     let { category: n, badgeText: a, handleTransition: h } = e,
         { handleCardVisibilityChange: p } = (0, c.E)(n.skuId, 'home', 'marketing'),
-        g = (0, o.uV)(null !== (t = null == n ? void 0 : n.featuredBlock) && void 0 !== t ? t : '', {
+        f = (0, o.uV)(null !== (t = null == n ? void 0 : n.featuredBlock) && void 0 !== t ? t : '', {
             size: d.J0,
             format: 'png'
         });
@@ -27,7 +27,7 @@ let h = (e) => {
         threshold: 0,
         children: (0, r.jsxs)(s.Clickable, {
             className: i()(m.featuredBlock),
-            style: { backgroundImage: 'url('.concat(g, ')') },
+            style: { backgroundImage: 'url('.concat(f, ')') },
             onClick: () => h('shop marketing tile', null == n ? void 0 : n.skuId),
             children: [
                 null != a &&
