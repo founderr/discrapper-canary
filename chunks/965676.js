@@ -9,6 +9,7 @@ e.exports = {
     popout: 'popout_d880dc',
     poppedOut: 'poppedOut_d880dc',
     callContainer: 'callContainer_d880dc',
+    callContent: 'callContent_d880dc',
     leftTrayIcon: 'leftTrayIcon_d880dc',
     rightTrayIcon: 'rightTrayIcon_d880dc',
     viewersButton: 'viewersButton_d880dc',
