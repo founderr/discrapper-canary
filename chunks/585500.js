@@ -84,20 +84,18 @@ function m(e) {
         a
     );
 }
-function g(e, n) {
-    var r;
-    let i = u.r.build(e.config).defaultReward.messages.nameWithArticle,
-        a = null === (r = e.config.videoMetadata) || void 0 === r ? void 0 : r.messages.videoTitle;
-    return null == a
-        ? f(c.t['g+InPD'], { rewardNameWithArticle: i }, n)
-        : f(
-              c.t.yMsQ7e,
-              {
-                  videoTitle: a,
-                  rewardNameWithArticle: i
-              },
-              n
-          );
+function g(e, n, r) {
+    var i, a;
+    let s = null !== (a = null === (i = e.config.videoMetadata) || void 0 === i ? void 0 : i.messages.videoTitle) && void 0 !== a ? a : 'video',
+        o = u.r.build(e.config).defaultReward.messages.nameWithArticle;
+    return f(
+        c.t.yMsQ7e,
+        {
+            videoTitle: s,
+            rewardNameWithArticle: o
+        },
+        r
+    );
 }
 function E(e) {
     let { quest: n, taskDetails: r, withoutMarkdown: i } = e,
@@ -145,7 +143,7 @@ function v(e) {
             taskDetails: r,
             withoutMarkdown: d
         });
-    else if ((0, s.q8)(n)) return g(n, d);
+    else if ((0, s.q8)(n)) return g(n, b, d);
     else if ((0, s.pO)(n))
         return E({
             quest: n,
