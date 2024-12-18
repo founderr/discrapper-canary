@@ -18,7 +18,7 @@ r.d(n, {
         return a;
     }
 });
-var i = r(760578);
+var i = r(119617);
 let a = r(177351),
     s = ['#FF73FA', '#FFC0FF', '#FFD836', '#FF9A15', '#A5F7DE', '#51BC9D', '#AEC7FF', '#3E70DD'],
     o = [

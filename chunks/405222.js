@@ -9,7 +9,7 @@ function l(e) {
         name: e.name,
         description: e.description,
         icon: e.icon_hash,
-        onlineCount: 1,
+        onlineCount: e.online_count,
         memberCount: e.member_count,
         brandColorPrimary: e.brand_color_primary
     };

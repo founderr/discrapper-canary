@@ -48,10 +48,10 @@ function I(e) {
         u = s.useMemo(
             () => ({
                 triggerAnimation: (e) => {
-                    o === g.IlC.APP && E(e) && r(e);
+                    o !== g.IlC.OVERLAY && E(e) && r(e);
                 },
                 untriggerAnimation: (e) => {
-                    o === g.IlC.APP && E(e) && i(e);
+                    o !== g.IlC.OVERLAY && E(e) && i(e);
                 }
             }),
             [o, r, i]
@@ -92,7 +92,7 @@ function y(e) {
         d = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         f = _.Z.useIsEligible(),
         h = (0, l.bp)();
-    return s || h !== g.IlC.APP || !f || null == r || null == n || d || null == c || !E(i)
+    return s || h === g.IlC.OVERLAY || !f || null == r || null == n || d || null == c || !E(i)
         ? null
         : (0, a.jsx)(b, {
               emojiRef: c,

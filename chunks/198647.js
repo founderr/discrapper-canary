@@ -17,6 +17,6 @@ class a {
         return new a(e);
     }
     constructor(e) {
-        i(this, 'categorySkuId', void 0), i(this, 'name', void 0), i(this, 'categoryStoreListingId', void 0), i(this, 'bannerUrl', void 0), i(this, 'logoUrl', void 0), i(this, 'rankedSkuIds', void 0), (this.type = ShopBlockType.HERO), (this.categorySkuId = e.category_sku_id), (this.name = e.name), (this.categoryStoreListingId = e.category_store_listing_id), (this.bannerUrl = e.banner_url), (this.logoUrl = e.hero_logo), (this.rankedSkuIds = e.ranked_sku_ids);
+        i(this, 'categorySkuId', void 0), i(this, 'name', void 0), i(this, 'categoryStoreListingId', void 0), i(this, 'fallbackBannerUrl', void 0), i(this, 'bannerAsset', void 0), i(this, 'logoUrl', void 0), i(this, 'rankedSkuIds', void 0), (this.type = ShopBlockType.HERO), (this.categorySkuId = e.category_sku_id), (this.name = e.name), (this.categoryStoreListingId = e.category_store_listing_id), (this.fallbackBannerUrl = e.fallback_banner_url), (this.bannerAsset = e.bannerAsset), (this.logoUrl = e.hero_logo), (this.rankedSkuIds = e.ranked_sku_ids);
     }
 }
