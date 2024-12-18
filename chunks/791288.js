@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return D;
     }
 }),
     n(47120);
@@ -8,10 +8,10 @@ var i = n(200651),
     s = n(192379),
     r = n(512722),
     a = n.n(r),
-    l = n(442837),
-    o = n(481060),
-    c = n(493683),
-    d = n(13245),
+    o = n(442837),
+    l = n(481060),
+    d = n(493683),
+    c = n(13245),
     u = n(99690),
     h = n(835473),
     p = n(194082),
@@ -19,35 +19,37 @@ var i = n(200651),
     g = n(297781),
     m = n(371991),
     v = n(656709),
-    _ = n(561308),
-    E = n(593481),
-    x = n(703656),
-    Z = n(199902),
-    S = n(592125),
-    C = n(158776),
-    I = n(594174),
-    y = n(5192),
-    N = n(312839),
-    T = n(981631),
-    b = n(701488),
-    O = n(987650),
-    j = n(388032),
-    A = n(522634);
-function M(e) {
+    x = n(561308),
+    _ = n(593481),
+    S = n(371651),
+    Z = n(703656),
+    E = n(199902),
+    C = n(592125),
+    I = n(158776),
+    y = n(594174),
+    N = n(5192),
+    b = n(145597),
+    T = n(312839),
+    O = n(981631),
+    j = n(701488),
+    M = n(987650),
+    R = n(388032),
+    P = n(522634);
+function w(e) {
     let { game: t } = e,
         n = (0, h.q)(t.id);
     if (null == n) return null;
-    let s = n.getIconURL(b.Si.LARGE);
+    let s = n.getIconURL(j.Si.LARGE);
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
-            className: A.header,
+            className: P.header,
             children: [
                 (0, i.jsx)(f.f, {
                     src: s,
                     size: 32
                 }),
-                (0, i.jsx)(o.Text, {
-                    className: A.gameInfo,
+                (0, i.jsx)(l.Text, {
+                    className: P.gameInfo,
                     variant: 'text-md/semibold',
                     color: 'header-primary',
                     children: n.name
@@ -56,16 +58,16 @@ function M(e) {
         })
     });
 }
-function P(e) {
+function A(e) {
     let { entry: t, idx: n } = e,
-        r = (0, l.e7)([I.default], () => I.default.getUser(t.author_id)),
-        h = (0, _.kr)(t),
-        f = h ? o.tokens.colors.TEXT_POSITIVE : o.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
-        [E, N] = s.useState('unsent'),
-        [b, O] = s.useState(!1),
-        M = (0, l.e7)([Z.Z], () => (null != r ? Z.Z.getAnyStreamForUser(r.id) : null), [r]),
-        { isMobileOnline: P, status: L } = (0, l.cj)(
-            [C.Z],
+        r = (0, o.e7)([y.default], () => y.default.getUser(t.author_id)),
+        h = (0, x.kr)(t),
+        f = h ? l.tokens.colors.TEXT_POSITIVE : l.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
+        [_, S] = s.useState('unsent'),
+        [b, T] = s.useState(!1),
+        j = (0, o.e7)([E.Z], () => (null != r ? E.Z.getAnyStreamForUser(r.id) : null), [r]),
+        { isMobileOnline: M, status: w } = (0, o.cj)(
+            [I.Z],
             () =>
                 null == r
                     ? {
@@ -73,80 +75,80 @@ function P(e) {
                           status: void 0
                       }
                     : {
-                          isMobileOnline: C.Z.isMobileOnline(r.id),
-                          status: C.Z.getStatus(r.id)
+                          isMobileOnline: I.Z.isMobileOnline(r.id),
+                          status: I.Z.getStatus(r.id)
                       },
             [r]
         );
     s.useEffect(() => {
-        if ('sent' === E) {
-            let e = setTimeout(() => O(!0), 2000);
+        if ('sent' === _) {
+            let e = setTimeout(() => T(!0), 2000);
             return () => clearTimeout(e);
         }
-    }, [E]);
-    let R = async (e) => {
-            if (null != r && 'unsent' === E) {
+    }, [_]);
+    let A = async (e) => {
+            if (null != r && 'unsent' === _) {
                 e.stopPropagation();
                 try {
                     var i;
-                    N('sending');
-                    let e = await c.Z.getOrEnsurePrivateChannel(r.id),
-                        s = null !== (i = S.Z.getChannel(e)) && void 0 !== i ? i : null;
+                    S('sending');
+                    let e = await d.Z.getOrEnsurePrivateChannel(r.id),
+                        s = null !== (i = C.Z.getChannel(e)) && void 0 !== i ? i : null;
                     a()(null != s, 'Send channel must be defined'),
-                        (0, x.uL)(T.Z5c.CHANNEL(s.guild_id, s.id)),
+                        (0, Z.uL)(O.Z5c.CHANNEL(s.guild_id, s.id)),
                         await (0, v.p)({
                             channel: s,
-                            content: j.intl.string(j.t.DwAcMz),
+                            content: R.intl.string(R.t.DwAcMz),
                             entry: t,
                             whenReady: !0
                         }),
-                        d.Z.track(T.rMx.OVERLAY_GAME_INVITE_SENT, {
+                        c.Z.track(O.rMx.OVERLAY_GAME_INVITE_SENT, {
                             target_user_id: r.id,
                             target_content_entry_id: t.id,
                             target_index: n
                         }),
-                        N('sent');
+                        S('sent');
                 } catch (e) {
-                    N('unsent');
+                    S('unsent');
                 }
             }
         },
-        w = async () => {
+        k = async () => {
             var e;
             if (null == r) return;
-            let t = await c.Z.getOrEnsurePrivateChannel(r.id),
-                n = null !== (e = S.Z.getChannel(t)) && void 0 !== e ? e : null;
-            a()(null != n, 'Send channel must be defined'), (0, x.uL)(T.Z5c.CHANNEL(n.guild_id, n.id));
+            let t = await d.Z.getOrEnsurePrivateChannel(r.id),
+                n = null !== (e = C.Z.getChannel(t)) && void 0 !== e ? e : null;
+            a()(null != n, 'Send channel must be defined'), (0, Z.uL)(O.Z5c.CHANNEL(n.guild_id, n.id));
         };
     return null == r
         ? null
         : (0, i.jsxs)('div', {
-              className: A.userRow,
+              className: P.userRow,
               children: [
                   (0, i.jsx)(u.Z, {
-                      className: A.avatarContainer,
+                      className: P.avatarContainer,
                       user: r,
-                      isMobile: P,
-                      status: L
+                      isMobile: M,
+                      status: w
                   }),
                   (0, i.jsxs)('div', {
-                      className: A.userInfo,
+                      className: P.userInfo,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: A.usernameWrapper,
+                              className: P.usernameWrapper,
                               children: [
-                                  (0, i.jsx)(o.Text, {
-                                      className: A.username,
+                                  (0, i.jsx)(l.Text, {
+                                      className: P.username,
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
-                                      children: y.ZP.getName(void 0, void 0, r)
+                                      children: N.ZP.getName(void 0, void 0, r)
                                   }),
-                                  null != M && (0, i.jsx)(p.ZP, {})
+                                  null != j && (0, i.jsx)(p.ZP, {})
                               ]
                           }),
                           (0, i.jsxs)(g.m7, {
                               children: [
-                                  (0, i.jsx)(o.GameControllerIcon, {
+                                  (0, i.jsx)(l.GameControllerIcon, {
                                       size: 'xxs',
                                       color: f
                                   }),
@@ -160,43 +162,43 @@ function P(e) {
                       ]
                   }),
                   (0, i.jsx)('div', {
-                      className: A.inviteButtonWrapper,
-                      children: (0, i.jsx)(o.Button, {
-                          submitting: 'sending' === E,
-                          onClick: b ? w : R,
-                          className: A.inviteButton,
-                          color: o.ButtonColors.PRIMARY,
-                          look: 'sent' === E ? o.ButtonLooks.OUTLINED : o.ButtonLooks.FILLED,
-                          size: o.ButtonSizes.MAX,
+                      className: P.inviteButtonWrapper,
+                      children: (0, i.jsx)(l.Button, {
+                          submitting: 'sending' === _,
+                          onClick: b ? k : A,
+                          className: P.inviteButton,
+                          color: l.ButtonColors.PRIMARY,
+                          look: 'sent' === _ ? l.ButtonLooks.OUTLINED : l.ButtonLooks.FILLED,
+                          size: l.ButtonSizes.MAX,
                           children:
-                              'sent' === E
+                              'sent' === _
                                   ? b
-                                      ? (0, i.jsx)(o.ChatIcon, { size: 'sm' })
-                                      : (0, i.jsx)(o.CheckmarkSmallBoldIcon, {
+                                      ? (0, i.jsx)(l.ChatIcon, { size: 'sm' })
+                                      : (0, i.jsx)(l.CheckmarkSmallBoldIcon, {
                                             size: 'sm',
-                                            color: o.tokens.colors.WHITE
+                                            color: l.tokens.colors.WHITE
                                         })
-                                  : (0, i.jsx)(o.SendMessageIcon, { size: 'sm' })
+                                  : (0, i.jsx)(l.SendMessageIcon, { size: 'sm' })
                       })
                   })
               ]
           });
 }
-function L(e) {
+function k(e) {
     let { entries: t } = e,
         n = t.slice(0, 5);
     return (0, i.jsxs)('div', {
         children: [
-            (0, i.jsx)(E.iz, {}),
-            (0, i.jsxs)(o.Text, {
-                className: A.helpText,
+            (0, i.jsx)(_.iz, {}),
+            (0, i.jsxs)(l.Text, {
+                className: P.helpText,
                 variant: 'text-sm/medium',
                 color: 'header-secondary',
-                children: [(0, i.jsx)(o.ChatPlusIcon, { size: 'xxs' }), j.intl.string(j.t.y9eo7e)]
+                children: [(0, i.jsx)(l.ChatPlusIcon, { size: 'xxs' }), R.intl.string(R.t.y9eo7e)]
             }),
             n.map((e, t) =>
                 (0, i.jsx)(
-                    P,
+                    A,
                     {
                         idx: t,
                         entry: e
@@ -207,23 +209,23 @@ function L(e) {
         ]
     });
 }
-function R(e, t) {
-    let { trackView: n, trackClick: s } = (0, N.R)(O.n0.SendGameInvitesNotification, { notif_type: O.n0.SendGameInvitesNotification });
+function D(e, t) {
+    let { trackView: n, trackClick: s } = (0, T.R)(M.n0.SendGameInvitesNotification, { notif_type: M.n0.SendGameInvitesNotification });
     return (
         a()(t.length > 0, 'Some entries must be present'),
         {
             icon: null,
-            title: (0, i.jsx)(M, { game: e }),
-            body: (0, i.jsx)(L, { entries: t }),
+            title: (0, i.jsx)(w, { game: e }),
+            body: (0, i.jsx)(k, { entries: t }),
             onNotificationShow: () => {
                 n(),
-                    d.Z.track(T.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
+                    c.Z.track(O.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
                         user_ids: t.map((e) => e.author_id),
                         entry_ids: t.map((e) => e.id)
                     });
             },
             onNotificationClick: (e, t) => {
-                s('unlock'), d.Z.setInstanceLocked(!1);
+                s('unlock'), S.Z.isOverlayOOPEnabledForPid((0, b.QF)()) ? c.Z.setInputLocked(!1, (0, b.QF)()) : c.Z.setInstanceLocked(!1);
             },
             onDismissClick: () => {
                 s('dismiss');

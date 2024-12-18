@@ -1,90 +1,81 @@
-let i, a;
+let i;
 r.d(n, {
     FW: function () {
-        return p;
-    },
-    Gr: function () {
-        return h;
-    },
-    Ht: function () {
-        return T;
-    },
-    Js: function () {
-        return g;
-    },
-    QF: function () {
-        return v;
-    },
-    Te: function () {
-        return b;
-    },
-    Tq: function () {
         return _;
     },
-    VS: function () {
-        return S;
+    Gr: function () {
+        return f;
     },
-    W2: function () {
-        return A;
-    },
-    qU: function () {
-        return m;
-    },
-    tB: function () {
+    Ht: function () {
         return I;
     },
-    vR: function () {
+    Js: function () {
+        return p;
+    },
+    QF: function () {
+        return E;
+    },
+    R2: function () {
+        return m;
+    },
+    Te: function () {
+        return T;
+    },
+    Tq: function () {
+        return d;
+    },
+    VS: function () {
         return y;
+    },
+    qU: function () {
+        return h;
+    },
+    tB: function () {
+        return v;
+    },
+    vR: function () {
+        return b;
     }
 });
-var s = r(610138);
-var o = r(216116);
-var l = r(78328);
-var u = r(815648);
-var c = r(47120);
+var a = r(610138);
+var s = r(216116);
+var o = r(78328);
+var l = r(815648);
+var u = r(47120);
 r(490029);
-var d = r(32300),
-    f = r(358085);
+var c = r(358085);
 r(981631);
-let _ = 2,
-    h = {
+let d = 2,
+    f = {
         width: 3840,
         height: 2160
     },
-    p = {
+    _ = {
         width: 768,
         height: 432
     },
-    m = 'overlay_default',
-    g = -2,
-    E = !1;
-function v() {
+    h = 'overlay_default',
+    p = -2,
+    m = -1,
+    g = !1;
+function E() {
     var e;
-    if (void 0 !== i) return i;
+    if (void 0 !== i && i !== m) return i;
     let n = parseInt(null !== (e = new URLSearchParams(window.location.search).get('pid')) && void 0 !== e ? e : '', 10);
-    return isNaN(n) && (n = -1), (i = n);
+    return isNaN(n) && (n = m), (i = n);
 }
-function I(e) {
-    A() && (i = e);
+function v(e) {
+    i = e;
 }
-function T() {
+function I() {
     return new URLSearchParams(window.location.search).get('rpc_auth_token');
 }
+function T(e) {
+    return !c.isPlatformEmbedded || (e.width >= _.width && e.height >= _.height);
+}
 function b(e) {
-    return !f.isPlatformEmbedded || (e.width >= p.width && e.height >= p.height);
+    g = e;
 }
-function y(e) {
-    E = e;
-}
-function S() {
-    return E;
-}
-function A() {
-    if (void 0 !== a) return a;
-    if ((0, d.R)()) a = !0;
-    else {
-        var e;
-        a = (null !== (e = new URLSearchParams(window.location.search).get('oop')) && void 0 !== e ? e : '') === 'true';
-    }
-    return a;
+function y() {
+    return g;
 }

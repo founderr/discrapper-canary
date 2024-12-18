@@ -53,10 +53,11 @@ let o = (0, i.B)({
     ]
 });
 function l() {
-    return o.getCurrentConfig({ location: 'getIsActivityPopoutOverlayEnabled' }).enableOverlayInActivityPopoutWindow && (0, a.R)();
+    let e = (0, a.Rb)('ActivityPopout');
+    return o.getCurrentConfig({ location: 'getIsActivityPopoutOverlayEnabled' }).enableOverlayInActivityPopoutWindow && e;
 }
 function u() {
-    let e = a.Z.useExperiment({ location: 'useIsActivityPopoutOverlayEnabled' }).useOverlayV3;
+    let e = (0, a.o4)('ActivityPopout');
     return o.useExperiment({ location: 'useIsActivityPopoutOverlayEnabled' }).enableOverlayInActivityPopoutWindow && e;
 }
 function c() {

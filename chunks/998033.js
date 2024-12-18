@@ -1,26 +1,30 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return x;
     }
 });
 var i = n(200651);
 n(192379);
 var s = n(13245),
-    r = n(703656),
-    a = n(974180),
+    r = n(371651),
+    a = n(703656),
+    o = n(974180),
     l = n(237997),
-    o = n(150097),
-    c = n(557177),
-    d = n(312839),
-    u = n(981631),
-    h = n(987650),
-    p = n(388032);
-function f(e, t, n, f) {
-    var g;
-    let { icon: m, title: v, body: _ } = (0, o.Xi)(e, t, n),
-        { trackView: E, trackClick: x } = (0, d.R)(h.n0.TextChat, {
-            notif_type: h.n0.TextChat,
-            notif_user_id: null === (g = t.author) || void 0 === g ? void 0 : g.id,
+    d = n(150097),
+    c = n(358085),
+    u = n(557177),
+    h = n(998502),
+    p = n(145597),
+    f = n(312839),
+    g = n(981631),
+    m = n(987650),
+    v = n(388032);
+function x(e, t, n, x) {
+    var _;
+    let { icon: S, title: Z, body: E } = (0, d.Xi)(e, t, n),
+        { trackView: C, trackClick: I } = (0, f.R)(m.n0.TextChat, {
+            notif_type: m.n0.TextChat,
+            notif_user_id: null === (_ = t.author) || void 0 === _ ? void 0 : _.id,
             message_id: t.id,
             message_type: t.type,
             guild_id: e.guild_id,
@@ -28,25 +32,28 @@ function f(e, t, n, f) {
             channel_type: e.type
         });
     return {
-        icon: m,
-        title: v,
-        body: _,
+        icon: S,
+        title: Z,
+        body: E,
         renderFooter: (e) =>
             e
                 ? (0, i.jsx)('div', {
                       style: { textAlign: 'center' },
-                      children: p.intl.string(p.t['+MJm39'])
+                      children: v.intl.string(v.t['+MJm39'])
                   })
                 : null,
         maxBodyLines: 2,
         onNotificationShow: () => {
-            f && (0, c.GN)(a.Ay, a.yk), E();
+            x && (0, u.GN)(o.Ay, o.yk), C();
         },
         onNotificationClick: () => {
-            (0, r.uL)(u.Z5c.CHANNEL(e.guild_id, e.id)), x('jump'), l.Z.isInstanceLocked() && s.Z.setInstanceLocked(!1);
+            if (r.Z.isOverlayOOPEnabledForPid((0, p.QF)())) {
+                let n = (0, p.QF)();
+                l.Z.isInstanceLocked() ? (I('unlock'), s.Z.setInputLocked(!1, n)) : (I('jump'), (0, a.uL)(g.Z5c.CHANNEL(e.guild_id, e.id, t.id)), c.isPlatformEmbedded && h.ZP.focus());
+            } else (0, a.uL)(g.Z5c.CHANNEL(e.guild_id, e.id)), I('jump'), l.Z.isInstanceLocked() && s.Z.setInstanceLocked(!1);
         },
         onDismissClick: () => {
-            x('dismiss');
+            I('dismiss');
         }
     };
 }

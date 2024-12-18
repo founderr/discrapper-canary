@@ -301,6 +301,25 @@ let m = {
             associatedGame: r
         });
     },
+    forceRenderMode(e) {
+        o.Z.dispatch({
+            type: 'OVERLAY_FORCE_RENDER_MODE',
+            mode: e
+        });
+    },
+    updateOverlayMethod: (e, n) =>
+        o.Z.dispatch({
+            type: 'OVERLAY_UPDATE_OVERLAY_METHOD',
+            pid: e,
+            overlayMethod: n
+        }),
+    updateOverlayState(e, n) {
+        o.Z.dispatch({
+            type: 'OVERLAY_UPDATE_OVERLAY_STATE',
+            pid: e,
+            overlayState: n
+        });
+    },
     notifyReadyToShow(e) {
         o.Z.dispatch({
             type: 'OVERLAY_NOTIFY_READY_TO_SHOW',

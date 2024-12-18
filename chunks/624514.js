@@ -8,7 +8,6 @@ t.d(e, {
     t(481060);
 var i = t(32300);
 function l() {
-    let { useOverlayV3: n } = i.Z.useExperiment({ location: 'channel_context_menu' });
-    return null;
+    return (0, i.XE)('channel_context_menu'), null;
 }
 t(388627);

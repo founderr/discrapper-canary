@@ -15,10 +15,10 @@ var s = n(512722),
     u = n(13245),
     m = n(825209),
     h = n(887278),
-    g = n(630699),
-    p = n(212632),
-    x = n(32300),
-    S = n(809357),
+    g = n(212632),
+    p = n(32300),
+    x = n(809357),
+    S = n(371651),
     T = n(556296),
     E = n(808506),
     C = n(237997),
@@ -56,17 +56,14 @@ function j(e) {
 }
 function O(e) {
     let { className: t, showHeader: n = !0 } = e,
-        { enabled: s, legacyEnabled: l } = (0, o.cj)([E.Z], () => ({
-            enabled: E.Z.enabled,
-            legacyEnabled: E.Z.legacyEnabled
-        })),
+        { enabled: s, legacyEnabled: l } = (0, o.cj)([S.Z], () => S.Z.getEnabledStatus()),
         {
-            avatarSizeMode: f,
-            displayNameMode: O,
-            displayUserMode: R,
-            notificationPositionMode: P,
-            textChatNotificationMode: D,
-            shouldShowKeybindIndicators: y
+            avatarSizeMode: E,
+            displayNameMode: f,
+            displayUserMode: O,
+            notificationPositionMode: R,
+            textChatNotificationMode: P,
+            shouldShowKeybindIndicators: D
         } = (0, o.cj)([C.Z], () => ({
             avatarSizeMode: C.Z.getAvatarSizeMode(),
             displayNameMode: C.Z.getDisplayNameMode(),
@@ -75,18 +72,18 @@ function O(e) {
             textChatNotificationMode: C.Z.getTextChatNotificationMode(),
             shouldShowKeybindIndicators: C.Z.showKeybindIndicators
         })),
-        B = (0, o.e7)([T.Z], () => T.Z.getOverlayKeybind()),
-        L = (0, S.Z)({ location: 'overlay_user_settings' }),
-        Z = (0, h.$1)(),
-        { useOverlayV3: F } = x.Z.useExperiment({ location: 'overlay_user_settings' });
-    function M(e) {
+        y = (0, o.e7)([T.Z], () => T.Z.getOverlayKeybind()),
+        B = (0, x.Z)({ location: 'overlay_user_settings' }),
+        L = (0, h.$1)(),
+        Z = (0, p.XE)('overlay_user_settings');
+    function F(e) {
         u.Z.setEnabled(e, l, !1),
             _.default.track(I.rMx.OVERLAY_TOGGLED, {
                 enabled: e,
                 setting_type: 'overlay toggled - global'
             });
     }
-    function k(e) {
+    function M(e) {
         u.Z.setEnabled(s, e, !1),
             _.default.track(I.rMx.OVERLAY_TOGGLED, {
                 enabled: e,
@@ -109,7 +106,7 @@ function O(e) {
                         (0, i.jsxs)('div', {
                             className: A.enableOverlaySection,
                             children: [
-                                (0, g.H)()
+                                Z
                                     ? (0, i.jsxs)(c.FormItem, {
                                           title: N.intl.string(N.t.XkaTrq),
                                           className: A.enableOverlayItem,
@@ -118,16 +115,16 @@ function O(e) {
                                                   className: A.enableSwitch,
                                                   value: s,
                                                   hideBorder: !0,
-                                                  onChange: M,
+                                                  onChange: F,
                                                   children: N.intl.string(N.t.vSP6c3)
                                               }),
                                               (0, i.jsx)(c.FormSwitch, {
                                                   className: A.enableSwitch,
                                                   value: l,
-                                                  disabled: Z || !s,
-                                                  note: Z ? N.intl.string(N.t.Eb0lnJ) : null,
+                                                  disabled: L || !s,
+                                                  note: L ? N.intl.string(N.t.Eb0lnJ) : null,
                                                   hideBorder: !0,
-                                                  onChange: k,
+                                                  onChange: M,
                                                   children: N.intl.string(N.t.znUpRE)
                                               })
                                           ]
@@ -138,10 +135,10 @@ function O(e) {
                                           children: (0, i.jsx)(c.FormSwitch, {
                                               className: A.enableSwitch,
                                               value: s,
-                                              disabled: Z,
-                                              note: Z ? N.intl.string(N.t.Eb0lnJ) : null,
+                                              disabled: L,
+                                              note: L ? N.intl.string(N.t.Eb0lnJ) : null,
                                               hideBorder: !0,
-                                              onChange: M,
+                                              onChange: F,
                                               children: N.intl.string(N.t.vSP6c3)
                                           })
                                       }),
@@ -150,11 +147,11 @@ function O(e) {
                                     className: A.enableOverlayItem,
                                     children: (0, i.jsx)(m.Z, {
                                         disabled: !s,
-                                        defaultValue: null != B ? B.shortcut : [],
+                                        defaultValue: null != y ? y.shortcut : [],
                                         onChange: function (e) {
-                                            r()(null != B, 'Keybind should never be undefined'),
+                                            r()(null != y, 'Keybind should never be undefined'),
                                                 d.Z.setKeybind({
-                                                    ...B,
+                                                    ...y,
                                                     shortcut: e
                                                 });
                                         }
@@ -179,7 +176,7 @@ function O(e) {
                                     let { value: t } = e;
                                     return u.Z.setAvatarSizeMode(t);
                                 },
-                                value: f
+                                value: E
                             })
                         }),
                         (0, i.jsx)(j, {
@@ -203,7 +200,7 @@ function O(e) {
                                     let { value: t } = e;
                                     return u.Z.setDisplayNameMode(t);
                                 },
-                                value: O
+                                value: f
                             })
                         }),
                         (0, i.jsx)(j, {
@@ -223,13 +220,13 @@ function O(e) {
                                     let { value: t } = e;
                                     return u.Z.setDisplayUserMode(t);
                                 },
-                                value: R
+                                value: O
                             })
                         }),
-                        L &&
+                        B &&
                             (0, i.jsx)(j, {
                                 children: (0, i.jsx)(c.FormSwitch, {
-                                    value: y,
+                                    value: D,
                                     onChange: (e) => u.Z.setShowKeybindIndicators(e),
                                     hideBorder: !0,
                                     children: N.intl.string(N.t.XZTl9v)
@@ -242,25 +239,25 @@ function O(e) {
                     title: N.intl.string(N.t['3GMnLi']),
                     className: A.notificationSection,
                     children: [
-                        F
+                        Z
                             ? null
                             : (0, i.jsx)(j, {
                                   title: N.intl.string(N.t.IQv8Eh),
                                   children: (0, i.jsx)('div', {
                                       className: A.notificationSettings,
-                                      children: (0, i.jsx)(p.Z, {
-                                          position: P,
+                                      children: (0, i.jsx)(g.Z, {
+                                          position: R,
                                           onChange: (e, t) => u.Z.setNotificationPositionMode(t)
                                       })
                                   })
                               }),
                         (0, i.jsx)(j, {
                             children: (0, i.jsx)(c.FormSwitch, {
-                                value: P !== I._vf.DISABLED && D === I.Ypu.ENABLED,
-                                disabled: P === I._vf.DISABLED,
+                                value: R !== I._vf.DISABLED && P === I.Ypu.ENABLED,
+                                disabled: R === I._vf.DISABLED,
                                 onChange: function () {
                                     let { ENABLED: e, DISABLED: t } = I.Ypu;
-                                    u.Z.setTextChatNotificationMode(D === e ? t : e);
+                                    u.Z.setTextChatNotificationMode(P === e ? t : e);
                                 },
                                 hideBorder: !0,
                                 children: N.intl.string(N.t.Fy5kPj)

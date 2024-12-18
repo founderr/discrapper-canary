@@ -15,7 +15,7 @@ r.d(t, {
         return nj.$V;
     },
     $Y6: function () {
-        return _x;
+        return _K;
     },
     $ib: function () {
         return o;
@@ -48,10 +48,10 @@ r.d(t, {
         return nj.B1;
     },
     B9o: function () {
-        return _v;
+        return _w;
     },
     BFP: function () {
-        return _1;
+        return _3;
     },
     BRd: function () {
         return nj.BR;
@@ -93,7 +93,7 @@ r.d(t, {
         return _e;
     },
     E07: function () {
-        return _j;
+        return _$;
     },
     EKQ: function () {
         return nj.EK;
@@ -102,7 +102,7 @@ r.d(t, {
         return nj.ET;
     },
     EYA: function () {
-        return _X;
+        return _j;
     },
     EkH: function () {
         return i;
@@ -123,7 +123,10 @@ r.d(t, {
         return n$.Fs;
     },
     GNZ: function () {
-        return oc;
+        return oI;
+    },
+    GOo: function () {
+        return eo;
     },
     GQo: function () {
         return tE;
@@ -138,7 +141,7 @@ r.d(t, {
         return nj.H0;
     },
     HGf: function () {
-        return ou;
+        return oT;
     },
     HN8: function () {
         return _l;
@@ -147,10 +150,10 @@ r.d(t, {
         return nj.He;
     },
     Hqc: function () {
-        return oo;
+        return oc;
     },
     HsE: function () {
-        return oN;
+        return oO;
     },
     IE4: function () {
         return g;
@@ -186,22 +189,22 @@ r.d(t, {
         return nj.Jj;
     },
     JkL: function () {
-        return _k;
+        return _V;
     },
     Jn9: function () {
-        return oC;
+        return oM;
     },
     JuI: function () {
         return _N;
     },
     JwP: function () {
-        return oa;
+        return oo;
     },
     K3D: function () {
         return tV;
     },
     KA4: function () {
-        return _z;
+        return _Q;
     },
     KFR: function () {
         return e2;
@@ -222,7 +225,7 @@ r.d(t, {
         return eU;
     },
     Lg6: function () {
-        return oL;
+        return oD;
     },
     M7m: function () {
         return eG;
@@ -243,13 +246,16 @@ r.d(t, {
         return te;
     },
     N_j: function () {
-        return ol;
+        return oR;
     },
     NgX: function () {
         return s;
     },
     O0b: function () {
         return ex;
+    },
+    O0n: function () {
+        return X;
     },
     O42: function () {
         return n$.O4;
@@ -258,7 +264,7 @@ r.d(t, {
         return nJ;
     },
     OBo: function () {
-        return or;
+        return o_;
     },
     OGo: function () {
         return J;
@@ -300,7 +306,7 @@ r.d(t, {
         return L;
     },
     PrS: function () {
-        return _H;
+        return _x;
     },
     PyE: function () {
         return nj.Py;
@@ -333,10 +339,10 @@ r.d(t, {
         return eX;
     },
     R7I: function () {
-        return _K;
+        return _k;
     },
     REU: function () {
-        return od;
+        return oL;
     },
     RG5: function () {
         return nj.RG;
@@ -345,10 +351,10 @@ r.d(t, {
         return nj.RK;
     },
     RcX: function () {
-        return _B;
+        return _W;
     },
     Rg9: function () {
-        return oi;
+        return ol;
     },
     S7T: function () {
         return nj.S7;
@@ -360,7 +366,7 @@ r.d(t, {
         return tc;
     },
     SRg: function () {
-        return o_;
+        return oi;
     },
     Sap: function () {
         return eW;
@@ -375,19 +381,19 @@ r.d(t, {
         return nj.Sk;
     },
     T23: function () {
-        return oP;
+        return oG;
     },
     TC2: function () {
         return nj.TC;
     },
     TNx: function () {
-        return _J;
+        return _z;
     },
     TPd: function () {
         return nw.T;
     },
     TU7: function () {
-        return _b;
+        return _v;
     },
     TaA: function () {
         return td;
@@ -444,10 +450,13 @@ r.d(t, {
         return _L;
     },
     WND: function () {
-        return ot;
+        return on;
     },
     WtW: function () {
         return en;
+    },
+    Wyy: function () {
+        return _9;
     },
     X5t: function () {
         return nj.X5;
@@ -462,7 +471,7 @@ r.d(t, {
         return n4;
     },
     XKF: function () {
-        return oI;
+        return oA;
     },
     XmY: function () {
         return _h;
@@ -504,7 +513,7 @@ r.d(t, {
         return K;
     },
     _8R: function () {
-        return oD;
+        return og;
     },
     _s_: function () {
         return l;
@@ -522,7 +531,7 @@ r.d(t, {
         return nj.aO;
     },
     aZC: function () {
-        return _0;
+        return _2;
     },
     aib: function () {
         return ec;
@@ -531,13 +540,13 @@ r.d(t, {
         return tA;
     },
     b2L: function () {
-        return _8;
+        return oe;
     },
     b4C: function () {
         return tz;
     },
     b8q: function () {
-        return _Q;
+        return _0;
     },
     bL: function () {
         return er;
@@ -569,11 +578,14 @@ r.d(t, {
     dN1: function () {
         return _f;
     },
+    dYL: function () {
+        return _Z;
+    },
     e3s: function () {
-        return oA;
+        return od;
     },
     eBq: function () {
-        return oR;
+        return oN;
     },
     eHb: function () {
         return tn;
@@ -588,7 +600,7 @@ r.d(t, {
         return e1;
     },
     eez: function () {
-        return _w;
+        return _B;
     },
     en1: function () {
         return _c;
@@ -618,7 +630,7 @@ r.d(t, {
         return nj.fr;
     },
     fzT: function () {
-        return _3;
+        return _4;
     },
     g2L: function () {
         return _;
@@ -651,7 +663,7 @@ r.d(t, {
         return nj.i$;
     },
     iC$: function () {
-        return of;
+        return op;
     },
     iEv: function () {
         return tT;
@@ -681,7 +693,7 @@ r.d(t, {
         return tK;
     },
     jsM: function () {
-        return oT;
+        return of;
     },
     jwA: function () {
         return e0;
@@ -726,19 +738,19 @@ r.d(t, {
         return Q;
     },
     nkL: function () {
-        return os;
+        return ou;
     },
     nnr: function () {
         return n;
     },
     o3l: function () {
-        return oe;
+        return oa;
     },
     oAB: function () {
-        return _Z;
+        return _1;
     },
     oCV: function () {
-        return _9;
+        return or;
     },
     oNc: function () {
         return C;
@@ -747,13 +759,13 @@ r.d(t, {
         return n0;
     },
     p3w: function () {
-        return _Y;
+        return _H;
     },
     p6O: function () {
-        return _6;
+        return _5;
     },
     pAY: function () {
-        return _W;
+        return _Y;
     },
     pJs: function () {
         return N;
@@ -768,13 +780,13 @@ r.d(t, {
         return I;
     },
     pTL: function () {
-        return oS;
+        return oU;
     },
     pjP: function () {
         return ti;
     },
     pmI: function () {
-        return _4;
+        return _8;
     },
     q5t: function () {
         return eu;
@@ -786,7 +798,7 @@ r.d(t, {
         return eN;
     },
     qWG: function () {
-        return op;
+        return oC;
     },
     qc2: function () {
         return tf;
@@ -804,10 +816,10 @@ r.d(t, {
         return eF;
     },
     rnv: function () {
-        return _$;
+        return _q;
     },
     rsA: function () {
-        return oE;
+        return os;
     },
     rtL: function () {
         return eB;
@@ -825,7 +837,7 @@ r.d(t, {
         return tN;
     },
     scU: function () {
-        return _V;
+        return _F;
     },
     si2: function () {
         return tk;
@@ -848,6 +860,9 @@ r.d(t, {
     tPk: function () {
         return nj.tP;
     },
+    t_t: function () {
+        return H;
+    },
     tuJ: function () {
         return eH;
     },
@@ -864,13 +879,13 @@ r.d(t, {
         return eZ;
     },
     vTt: function () {
-        return _7;
+        return ot;
     },
     vbS: function () {
-        return _2;
+        return _6;
     },
     vpv: function () {
-        return _q;
+        return _J;
     },
     vtS: function () {
         return eO;
@@ -882,7 +897,7 @@ r.d(t, {
         return tR;
     },
     w2V: function () {
-        return oO;
+        return oh;
     },
     wC$: function () {
         return B;
@@ -893,8 +908,17 @@ r.d(t, {
     wZ8: function () {
         return z;
     },
+    wli: function () {
+        return oS;
+    },
+    x8Z: function () {
+        return tw;
+    },
     xAR: function () {
-        return oh;
+        return oP;
+    },
+    xGv: function () {
+        return _b;
     },
     xPJ: function () {
         return w;
@@ -927,13 +951,13 @@ r.d(t, {
         return tJ;
     },
     yqN: function () {
-        return on;
+        return oE;
     },
     ys_: function () {
         return ea;
     },
     z7k: function () {
-        return _F;
+        return _X;
     },
     zMe: function () {
         return nj.zM;
@@ -2641,18 +2665,19 @@ let _P = 128,
     _m = '0000',
     _y = '1',
     _b = 10000,
-    _v = 50,
-    _w = 150,
-    _B = 300,
-    _W = 10,
-    _Y = 25,
-    _H = 240,
-    _x = 480,
-    _K = 650,
-    _k = 'DEVICE_TOKEN',
-    _V = 'DEVICE_VOIP_TOKEN',
-    _F = 'first_run_date_key',
-    _X = Object.freeze({
+    _v = 10000,
+    _w = 50,
+    _B = 150,
+    _W = 300,
+    _Y = 10,
+    _H = 25,
+    _x = 240,
+    _K = 480,
+    _k = 650,
+    _V = 'DEVICE_TOKEN',
+    _F = 'DEVICE_VOIP_TOKEN',
+    _X = 'first_run_date_key',
+    _j = Object.freeze({
         API_DOCS: ''.concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/developers/docs/intro'),
         API_DOCS_GAME_AND_SERVER_MANAGEMENT: ''.concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/developers/docs/game-and-server-management/alpha-and-beta-testing'),
         API_DOCS_APPLICATION_SKUS_INDEX: (e) => ''.concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/developers/applications/').concat(e, '/skus'),
@@ -2686,16 +2711,17 @@ let _P = 128,
         INVITES_HELP: 'https://support.discord.com/hc/en-us/articles/208866998-Invites-101',
         SAFETY_CENTER: ''.concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/safetycenter')
     }),
-    _j = Object.freeze({
+    _$ = Object.freeze({
         DEVELOPER_PORTAL: '/developers',
         DEVELOPER_PORTAL_GUILD_ANALYTICS: (e) => '/developers/servers/'.concat(e),
         DEVELOPER_PORTAL_TEAMS: '/developers/teams',
         DEVELOPER_PORTAL_EDIT_PAYOUTS: (e) => '/developers/teams/'.concat(e, '/payout-settings')
     }),
-    _$ = 10,
-    _q = 25,
-    _J = /^FILTER_/,
-    _z = /^ANSWER_/;
+    _q = 10,
+    _J = 25,
+    _z = /^FILTER_/,
+    _Q = /^ANSWER_/,
+    _Z = 32;
 ((rz = ec || (ec = {})).GUILD = 'GUILD'),
     (rz.FAVORITES = 'FAVORITES'),
     (rz.CHANNEL = 'CHANNEL'),
@@ -3049,7 +3075,7 @@ let _P = 128,
     (r3.GUILD_BOOSTING_USER_SETTINGS = 'Guild Boosting User Settings'),
     (r3.COLLECTIBLES_SHOP = 'Collectibles Shop'),
     (r3.NITRO_HOME = 'Nitro Home');
-let _Q = 'help_center_cta';
+let _0 = 'help_center_cta';
 ((r6 = eT || (eT = {})).HERO = 'Hero'),
     (r6.BODY = 'Body'),
     (r6.NAVIGATION = 'Navigation'),
@@ -3529,7 +3555,7 @@ let _Q = 'help_center_cta';
     ((r8 = ef || (ef = {})).PRIMARY = 'primary'),
     (r8.SECONDARY = 'secondary'),
     (r8.DISMISS = 'dismiss');
-let _Z = Object.freeze({
+let _1 = Object.freeze({
     TEXT_PLAYGROUND: 'Text Playground',
     DESIGN_SYSTEMS: 'Design System',
     INTL_TESTING: 'Intl Testing',
@@ -3812,7 +3838,7 @@ let _Z = Object.freeze({
     ((aE = eU || (eU = {})).TOGGLE_REACTION_POPOUT = 'TOGGLE_REACTION_POPOUT'),
     (aE.ANIMATE_CHAT_AVATAR = 'ANIMATE_CHAT_AVATAR'),
     (aE.VOICE_MESSAGE_SEND = 'VOICE_MESSAGE_SEND');
-let _0 = 50;
+let _2 = 50;
 ((ai = eM || (eM = {})).TWITCH = 'twitch'),
     (ai.YOUTUBE = 'youtube'),
     (ai.SKYPE = 'skype'),
@@ -3861,30 +3887,32 @@ let _0 = 50;
         GAME_INVITE_FRAGMENT: '/_discord/join?secret=',
         AUTHORIZATION_CANCEL_FRAGMENT: '/_discord/auth?cancel=true'
     });
-let _1 = new Set(['facebook', 'contacts']),
-    _2 = new Set(['spotify', 'xbox', 'playstation', 'playstation-stg', 'crunchyroll']),
-    _3 = Object.freeze({
+let _3 = new Set(['facebook', 'contacts']),
+    _6 = new Set(['spotify', 'xbox', 'playstation', 'playstation-stg', 'crunchyroll']),
+    _4 = Object.freeze({
         DESKTOP: ''.concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT, '/download'),
         IOS: 'https://itunes.apple.com/app/discord/id985746746',
         ANDROID: 'https://play.google.com/store/apps/details?id=com.discord'
     }),
-    _6 = 10070709,
-    _4 = [1752220, 3066993, 3447003, 10181046, 15277667, 15844367, 15105570, 15158332, 9807270, 6323595, 1146986, 2067276, 2123412, 7419530, 11342935, 12745742, 11027200, 10038562, 9936031, 5533306],
-    _5 = (0, nH._i)(nv.Z.BRAND_500);
-nb()(null != _5, 'Brand color could not be parsed'), ((aI = eb || (eb = {})).ROLE = 'ROLE'), (aI.MEMBER = 'MEMBER'), ((au = ev || (ev = {})).VOICE_LEGACY_SUBSYSTEM = 'voice_legacy_subsystem'), (au.DEBUG_LOGGING = 'debug_logging'), (au.POPOUT_WINDOWS = 'popout_windows'), (au.ELEVATED_HOOK = 'elevated_hook'), (au.CREATE_HOST_ON_ATTACH = 'create_host_on_attach'), (au.USER_DATA_CACHE = 'user_data_cache'), (au.WEBAUTHN = 'webauthn'), ((aR = ew || (ew = {})).FILTER_FROM = 'FILTER_FROM'), (aR.FILTER_MENTIONS = 'FILTER_MENTIONS'), (aR.ANSWER_USERNAME_FROM = 'ANSWER_USERNAME_FROM'), (aR.ANSWER_USERNAME_MENTIONS = 'ANSWER_USERNAME_MENTIONS'), (aR.FILTER_HAS = 'FILTER_HAS'), (aR.ANSWER_HAS = 'ANSWER_HAS'), (aR.FILTER_FILE_TYPE = 'FILTER_FILE_TYPE'), (aR.ANSWER_FILE_TYPE = 'ANSWER_FILE_TYPE'), (aR.FILTER_FILE_NAME = 'FILTER_FILE_NAME'), (aR.ANSWER_FILE_NAME = 'ANSWER_FILE_NAME'), (aR.FILTER_BEFORE = 'FILTER_BEFORE'), (aR.ANSWER_BEFORE = 'ANSWER_BEFORE'), (aR.FILTER_AFTER = 'FILTER_AFTER'), (aR.ANSWER_AFTER = 'ANSWER_AFTER'), (aR.FILTER_ON = 'FILTER_ON'), (aR.ANSWER_ON = 'ANSWER_ON'), (aR.FILTER_IN = 'FILTER_IN'), (aR.ANSWER_IN = 'ANSWER_IN'), (aR.FILTER_PINNED = 'FILTER_PINNED'), (aR.ANSWER_PINNED = 'ANSWER_PINNED'), ((aA = eB || (eB = {})).HISTORY = 'HISTORY'), (aA.SEARCH_OPTIONS = 'SEARCH_OPTIONS'), (aA.DATES = 'DATES'), ((aT = eW || (eW = {})).EMPTY = 'EMPTY'), (aT.FILTER = 'FILTER'), (aT.FILTER_ALL = 'FILTER_ALL');
-let _8 = 'YYYY-MM-DD',
-    _7 = 'PrivateChannelRecipientsInvitePopout';
+    _5 = 10070709,
+    _8 = [1752220, 3066993, 3447003, 10181046, 15277667, 15844367, 15105570, 15158332, 9807270, 6323595, 1146986, 2067276, 2123412, 7419530, 11342935, 12745742, 11027200, 10038562, 9936031, 5533306],
+    _7 = (0, nH._i)(nv.Z.BRAND_500);
+nb()(null != _7, 'Brand color could not be parsed');
+let _9 = _7;
+((aI = eb || (eb = {})).ROLE = 'ROLE'), (aI.MEMBER = 'MEMBER'), ((au = ev || (ev = {})).VOICE_LEGACY_SUBSYSTEM = 'voice_legacy_subsystem'), (au.DEBUG_LOGGING = 'debug_logging'), (au.POPOUT_WINDOWS = 'popout_windows'), (au.ELEVATED_HOOK = 'elevated_hook'), (au.CREATE_HOST_ON_ATTACH = 'create_host_on_attach'), (au.USER_DATA_CACHE = 'user_data_cache'), (au.WEBAUTHN = 'webauthn'), ((aR = ew || (ew = {})).FILTER_FROM = 'FILTER_FROM'), (aR.FILTER_MENTIONS = 'FILTER_MENTIONS'), (aR.ANSWER_USERNAME_FROM = 'ANSWER_USERNAME_FROM'), (aR.ANSWER_USERNAME_MENTIONS = 'ANSWER_USERNAME_MENTIONS'), (aR.FILTER_HAS = 'FILTER_HAS'), (aR.ANSWER_HAS = 'ANSWER_HAS'), (aR.FILTER_FILE_TYPE = 'FILTER_FILE_TYPE'), (aR.ANSWER_FILE_TYPE = 'ANSWER_FILE_TYPE'), (aR.FILTER_FILE_NAME = 'FILTER_FILE_NAME'), (aR.ANSWER_FILE_NAME = 'ANSWER_FILE_NAME'), (aR.FILTER_BEFORE = 'FILTER_BEFORE'), (aR.ANSWER_BEFORE = 'ANSWER_BEFORE'), (aR.FILTER_AFTER = 'FILTER_AFTER'), (aR.ANSWER_AFTER = 'ANSWER_AFTER'), (aR.FILTER_ON = 'FILTER_ON'), (aR.ANSWER_ON = 'ANSWER_ON'), (aR.FILTER_IN = 'FILTER_IN'), (aR.ANSWER_IN = 'ANSWER_IN'), (aR.FILTER_PINNED = 'FILTER_PINNED'), (aR.ANSWER_PINNED = 'ANSWER_PINNED'), ((aA = eB || (eB = {})).HISTORY = 'HISTORY'), (aA.SEARCH_OPTIONS = 'SEARCH_OPTIONS'), (aA.DATES = 'DATES'), ((aT = eW || (eW = {})).EMPTY = 'EMPTY'), (aT.FILTER = 'FILTER'), (aT.FILTER_ALL = 'FILTER_ALL');
+let oe = 'YYYY-MM-DD',
+    ot = 'PrivateChannelRecipientsInvitePopout';
 ((aN = eY || (eY = {}))[(aN.NONE = 0)] = 'NONE'), (aN[(aN.TIER_1 = 1)] = 'TIER_1'), (aN[(aN.TIER_2 = 2)] = 'TIER_2'), (aN[(aN.TIER_3 = 3)] = 'TIER_3');
-let _9 = Object.freeze({
+let or = Object.freeze({
         0: 0,
         1: 2,
         2: 7,
         3: 14
     }),
-    oe = 7,
-    ot = 0;
+    oa = 7,
+    on = 0;
 ((ad = eH || (eH = {}))[(ad.DEFAULT = 0)] = 'DEFAULT'), (ad[(ad.GIFT = 1)] = 'GIFT'), (ad[(ad.SALE = 2)] = 'SALE'), (ad[(ad.PREMIUM_TIER_1 = 3)] = 'PREMIUM_TIER_1'), (ad[(ad.PREMIUM_TIER_2 = 4)] = 'PREMIUM_TIER_2'), (ad[(ad.MOBILE = 5)] = 'MOBILE'), (ad[(ad.PREMIUM_TIER_0 = 6)] = 'PREMIUM_TIER_0'), (ad[(ad.MOBILE_PREMIUM_TIER_2 = 7)] = 'MOBILE_PREMIUM_TIER_2');
-let or = Object.freeze({
+let o_ = Object.freeze({
     fonts: [
         {
             src: 'url(https://cdn.discordapp.com/assets/stripe/ggsans-vf.woff2)',
@@ -3893,13 +3921,13 @@ let or = Object.freeze({
     ]
 });
 ((af = ex || (ex = {}))[(af.UNPAID = 0)] = 'UNPAID'), (af[(af.ACTIVE = 1)] = 'ACTIVE'), (af[(af.PAST_DUE = 2)] = 'PAST_DUE'), (af[(af.CANCELED = 3)] = 'CANCELED'), (af[(af.ENDED = 4)] = 'ENDED'), (af[(af.ACCOUNT_HOLD = 6)] = 'ACCOUNT_HOLD'), (af[(af.BILLING_RETRY = 7)] = 'BILLING_RETRY'), (af[(af.PAUSED = 8)] = 'PAUSED'), (af[(af.PAUSE_PENDING = 9)] = 'PAUSE_PENDING');
-let oa = {
+let oo = {
     ALL_PAUSE: new Set([9, 8]),
     ALL_PAUSEABLE: new Set([1, 8]),
     INACTIVE: new Set([0, 4, 6, 7])
 };
 ((aO = eK || (eK = {}))[(aO.OPEN = 1)] = 'OPEN'), (aO[(aO.PAID = 2)] = 'PAID'), (aO[(aO.VOID = 3)] = 'VOID'), (aO[(aO.UNCOLLECTIBLE = 4)] = 'UNCOLLECTIBLE'), ((aL = ek || (ek = {})).USER = 'USER'), (aL.GLOBAL = 'GLOBAL'), (aL.ROLE = 'ROLE'), (aL.CHANNEL = 'CHANNEL'), (aL.EMOJI = 'EMOJI'), (aL.EMOJI_PREMIUM_UPSELL = 'EMOJI_PREMIUM_UPSELL'), (aL.SLASH = 'SLASH'), (aL.CHOICE = 'CHOICE'), (aL.STICKER = 'STICKER'), (aL.CHOICE_LOADING = 'CHOICE_LOADING'), (aL.LABEL = 'LABEL');
-let on = Object.freeze({
+let oE = Object.freeze({
     FONT_SIZE_DEFAULT: 16,
     FONT_SIZE_MIN: 12,
     FONT_SIZE_MAX: 24,
@@ -5156,7 +5184,7 @@ let on = Object.freeze({
     (aP.SUMMARIES = 'SUMMARIES'),
     (aP.SUMMARIES_ENABLED = 'SUMMARIES_ENABLED'),
     (aP.CLAN_ADMIN_UPSELL = 'CLAN_ADMIN_UPSELL');
-let o_ = Object.freeze({
+let oi = Object.freeze({
         STORAGE_MANIFEST: (e, t) => ''.concat(e, '/storage/').concat(t, '/MANIFEST'),
         INSTALL_DIR: (e) => ''.concat(e, '/content'),
         ROOT_PATTERN: ['**/*'],
@@ -5168,9 +5196,9 @@ let o_ = Object.freeze({
             linux: 'linux'
         }
     }),
-    oo = 86400000;
+    oc = 86400000;
 ((ag = eJ || (eJ = {})).NORMAL = 'normal'), (ag.MINIMUM = 'minimum'), (ag.NO_CHAT = 'no-chat'), (ag.FULL_SCREEN = 'full-screen'), ((aU = ez || (ez = {})).THEATRE = 'theatre'), (aU.FULL_SCREEN = 'full-screen'), (aU.PIP = 'pip'), (aU.POPOUT = 'popout'), (aU.PORTRAIT = 'portrait'), (aU.LANDSCAPE = 'landscape'), (aU.MINIMIZED = 'minimized'), ((aM = eQ || (eQ = {})).USER_SETTINGS = 'USER_SETTINGS'), (aM.CHANNEL_SETTINGS = 'CHANNEL_SETTINGS'), (aM.GUILD_SETTINGS = 'GUILD_SETTINGS'), (aM.RTC_DEBUG = 'RTC_DEBUG'), (aM.GUILD_IDENTITY_SETTINGS = 'GUILD_IDENTITY_SETTINGS'), (aM.COLLECTIBLES_SHOP = 'COLLECTIBLES_SHOP');
-let oE = Object.freeze({
+let os = Object.freeze({
     ALL: null,
     GUILD_UPDATE: 1,
     CHANNEL_CREATE: 10,
@@ -5410,11 +5438,11 @@ let oE = Object.freeze({
     (av.SCHEDULED_END_TIME = 'scheduled_end_time'),
     (av.IS_CANCELED = 'is_canceled'),
     (av.LINKED_LOBBY = 'linked_lobby');
-let oi = 50;
+let ol = 50;
 ((aw = e6 || (e6 = {})).AGREEMENTS = 'AGREEMENTS'), (aw.REQUIRE_CAPTCHA = 'REQUIRE_CAPTCHA'), (aw.REQUIRE_VERIFIED_EMAIL = 'REQUIRE_VERIFIED_EMAIL'), (aw.REQUIRE_VERIFIED_PHONE = 'REQUIRE_VERIFIED_PHONE'), (aw.REQUIRE_REVERIFIED_EMAIL = 'REQUIRE_REVERIFIED_EMAIL'), (aw.REQUIRE_REVERIFIED_PHONE = 'REQUIRE_REVERIFIED_PHONE'), (aw.REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE = 'REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE'), (aw.REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE = 'REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE'), (aw.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE = 'REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE'), (aw.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE = 'REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE'), ((e4 || (e4 = {})).UPDATE_PASSWORD = 'update_password'), ((aB = e5 || (e5 = {})).CAPTCHA = 'captcha'), (aB.EMAIL_OR_PHONE = 'email_or_phone'), (aB.PHONE = 'phone'), (aB.EMAIL = 'email'), (aB.REVERIFY_PHONE = 'reverify_phone'), (aB.REVERIFY_EMAIL = 'reverify_email');
-let oc = 512;
+let oI = 512;
 ((aW = e8 || (e8 = {}))[(aW.PRIMARY = 0)] = 'PRIMARY'), (aW[(aW.SECONDARY = 2)] = 'SECONDARY'), (aW[(aW.WHEEL = 4)] = 'WHEEL'), (aW[(aW.BACK = 8)] = 'BACK'), (aW[(aW.FORWARD = 16)] = 'FORWARD'), ((aY = e7 || (e7 = {}))[(aY.BACKSPACE = 8)] = 'BACKSPACE'), (aY[(aY.TAB = 9)] = 'TAB'), (aY[(aY.ENTER = 13)] = 'ENTER'), (aY[(aY.ESCAPE = 27)] = 'ESCAPE'), (aY[(aY.SPACE = 32)] = 'SPACE'), (aY[(aY.END = 35)] = 'END'), (aY[(aY.HOME = 36)] = 'HOME'), (aY[(aY.ARROW_LEFT = 37)] = 'ARROW_LEFT'), (aY[(aY.ARROW_UP = 38)] = 'ARROW_UP'), (aY[(aY.ARROW_RIGHT = 39)] = 'ARROW_RIGHT'), (aY[(aY.ARROW_DOWN = 40)] = 'ARROW_DOWN'), (aY[(aY.DELETE = 46)] = 'DELETE'), (aY[(aY.DIGIT_0 = 48)] = 'DIGIT_0'), (aY[(aY.DIGIT_1 = 49)] = 'DIGIT_1'), (aY[(aY.DIGIT_2 = 50)] = 'DIGIT_2'), (aY[(aY.DIGIT_3 = 51)] = 'DIGIT_3'), (aY[(aY.DIGIT_4 = 52)] = 'DIGIT_4'), (aY[(aY.DIGIT_5 = 53)] = 'DIGIT_5'), (aY[(aY.DIGIT_6 = 54)] = 'DIGIT_6'), (aY[(aY.DIGIT_7 = 55)] = 'DIGIT_7'), (aY[(aY.DIGIT_8 = 56)] = 'DIGIT_8'), (aY[(aY.DIGIT_9 = 57)] = 'DIGIT_9'), (aY[(aY.A = 65)] = 'A'), (aY[(aY.B = 66)] = 'B'), (aY[(aY.D = 68)] = 'D'), (aY[(aY.E = 69)] = 'E'), (aY[(aY.H = 72)] = 'H'), (aY[(aY.I = 73)] = 'I'), (aY[(aY.K = 75)] = 'K'), (aY[(aY.N = 78)] = 'N'), (aY[(aY.P = 80)] = 'P'), (aY[(aY.S = 83)] = 'S'), (aY[(aY.U = 85)] = 'U'), (aY[(aY.COMMA = 188)] = 'COMMA'), ((aH = e9 || (e9 = {})).TOP_LEFT = 'top-left'), (aH.TOP_RIGHT = 'top-right'), (aH.BOTTOM_LEFT = 'bottom-left'), (aH.BOTTOM_RIGHT = 'bottom-right'), ((ax = te || (te = {})).VIDEO = 'VIDEO'), (ax.EMBED_IFRAME = 'EMBED_IFRAME'), ((aK = tt || (tt = {})).GIF = 'GIF'), (aK.STICKER = 'STICKER');
-let os = Object.freeze({
+let ou = Object.freeze({
     GIF: {
         type: 'GIF',
         command: 'gif',
@@ -5631,18 +5659,18 @@ let os = Object.freeze({
         twitch: 'Twitch',
         epic: 'Epic'
     });
-let ol = 6016,
-    oI = 3384;
+let oR = 6016,
+    oA = 3384;
 ((a$ = ti || (ti = {})).USAGE_STATISTICS = 'usage_statistics'), (a$.PERSONALIZATION = 'personalization'), ((aq = tc || (tc = {}))[(aq.MUTUAL_FRIENDS = 2)] = 'MUTUAL_FRIENDS'), (aq[(aq.MUTUAL_GUILDS = 4)] = 'MUTUAL_GUILDS'), (aq[(aq.NO_RELATION = 8)] = 'NO_RELATION');
-let ou = 14;
+let oT = 14;
 ((aJ = ts || (ts = {}))[(aJ.NONE = 0)] = 'NONE'), (aJ[(aJ.FIND_BY_PHONE = 2)] = 'FIND_BY_PHONE'), (aJ[(aJ.FIND_BY_EMAIL = 4)] = 'FIND_BY_EMAIL');
-let oR = 30;
+let oN = 30;
 ((az = tl || (tl = {})).OVERLAY = 'OVERLAY'), (az.APP = 'APP'), (az.POPOUT = 'POPOUT');
-let oA = __OVERLAY__ ? 'OVERLAY' : 'APP';
+let od = __OVERLAY__ ? 'OVERLAY' : 'APP';
 ((aQ = tI || (tI = {})).COMPLETE = 'complete'), (aQ.TRANSITION = 'transition'), ((aZ = tu || (tu = {})).QUEUED = 'queued'), (aZ.PLANNING = 'planning'), (aZ.ALLOCATING_DISK = 'allocating_disk'), (aZ.PATCHING = 'patching'), (aZ.FINALIZING = 'finalizing'), (aZ.PAUSING = 'pausing'), (aZ.VERIFYING = 'verifying'), (aZ.REPAIRING = 'repairing'), (aZ.POST_INSTALL_SCRIPTS = 'running_install_scripts'), (aZ.UNINSTALLING = 'uninstalling'), ((a0 = tR || (tR = {})).INSTALL_REQUIRED = 'install_required'), (a0.INSTALLING = 'installing'), (a0.UP_TO_DATE = 'up_to_date'), (a0.UPDATE_REQUIRED = 'update_required'), (a0.UPDATING = 'updating'), (a0.REPAIRING = 'repairing'), (a0.UNINSTALLING = 'uninstalling'), ((a1 = tA || (tA = {})).PLAY = 'play'), (a1.INSTALL = 'install'), (a1.UPDATE = 'update'), (a1.PAUSE = 'pause'), (a1.MOVE_UP = 'move_up'), (a1.RESUME = 'resume'), ((a2 = tT || (tT = {})).NAME = 'name'), (a2.PLATFORM = 'platform'), (a2.ACTIONS = 'actions'), (a2.LAST_PLAYED = 'last_played'), ((a3 = tN || (tN = {})).ASCENDING = 'asc'), (a3.DESCENDING = 'desc'), ((a6 = td || (td = {})).WINDOWS = '1'), (a6.MACOS = '2'), (a6.LINUX = '3'), ((a4 = tf || (tf = {}))[(a4.PURCHASE = 1)] = 'PURCHASE'), (a4[(a4.PREMIUM_SUBSCRIPTION = 2)] = 'PREMIUM_SUBSCRIPTION'), (a4[(a4.DEVELOPER_GIFT = 3)] = 'DEVELOPER_GIFT'), (a4[(a4.TEST_MODE_PURCHASE = 4)] = 'TEST_MODE_PURCHASE'), (a4[(a4.FREE_PURCHASE = 5)] = 'FREE_PURCHASE'), (a4[(a4.USER_GIFT = 6)] = 'USER_GIFT'), (a4[(a4.PREMIUM_PURCHASE = 7)] = 'PREMIUM_PURCHASE'), (a4[(a4.APPLICATION_SUBSCRIPTION = 8)] = 'APPLICATION_SUBSCRIPTION'), (a4[(a4.FREE_STAFF_PURCHASE = 9)] = 'FREE_STAFF_PURCHASE'), (a4[(a4.QUEST_REWARD = 10)] = 'QUEST_REWARD'), (a4[(a4.FRACTIONAL_REDEMPTION = 11)] = 'FRACTIONAL_REDEMPTION'), (a4[(a4.VIRTUAL_CURRENCY_REDEMPTION = 12)] = 'VIRTUAL_CURRENCY_REDEMPTION'), ((a5 = tO || (tO = {})).ESRB = '1'), (a5.PEGI = '2'), ((a8 = tL || (tL = {}))[(a8.DURABLE_PRIMARY = 1)] = 'DURABLE_PRIMARY'), (a8[(a8.DURABLE = 2)] = 'DURABLE'), (a8[(a8.CONSUMABLE = 3)] = 'CONSUMABLE'), (a8[(a8.BUNDLE = 4)] = 'BUNDLE'), (a8[(a8.SUBSCRIPTION = 5)] = 'SUBSCRIPTION'), (a8[(a8.SUBSCRIPTION_GROUP = 6)] = 'SUBSCRIPTION_GROUP'), ((a7 = tp || (tp = {}))[(a7.FULL = 1)] = 'FULL'), (a7[(a7.EARLY_ACCESS = 2)] = 'EARLY_ACCESS'), (a7[(a7.VIP_ACCESS = 3)] = 'VIP_ACCESS'), ((a9 = th || (th = {}))[(a9.PREMIUM_PURCHASE = 1)] = 'PREMIUM_PURCHASE'), (a9[(a9.HAS_FREE_PREMIUM_CONTENT = 2)] = 'HAS_FREE_PREMIUM_CONTENT'), (a9[(a9.AVAILABLE = 4)] = 'AVAILABLE'), (a9[(a9.PREMIUM_AND_DISTRIBUTION = 8)] = 'PREMIUM_AND_DISTRIBUTION'), (a9[(a9.STICKER_PACK = 16)] = 'STICKER_PACK'), (a9[(a9.GUILD_ROLE = 32)] = 'GUILD_ROLE'), (a9[(a9.AVAILABLE_FOR_SUBSCRIPTION_GIFTING = 64)] = 'AVAILABLE_FOR_SUBSCRIPTION_GIFTING'), (a9[(a9.APPLICATION_GUILD_SUBSCRIPTION = 128)] = 'APPLICATION_GUILD_SUBSCRIPTION'), (a9[(a9.APPLICATION_USER_SUBSCRIPTION = 256)] = 'APPLICATION_USER_SUBSCRIPTION'), ((ne = tD || (tD = {}))[(ne.PREMIUM = 1)] = 'PREMIUM'), (ne[(ne.BOOST = 2)] = 'BOOST'), (ne[(ne.ACTIVITY_IAP = 3)] = 'ACTIVITY_IAP'), (ne[(ne.GUILD_ROLE = 4)] = 'GUILD_ROLE'), (ne[(ne.GUILD_PRODUCT = 5)] = 'GUILD_PRODUCT'), (ne[(ne.APPLICATION = 6)] = 'APPLICATION'), (ne[(ne.COLLECTIBLES = 7)] = 'COLLECTIBLES'), ((nt = tS || (tS = {})).HOME = '1'), (nt.BROWSE = '2'), ((nr = tC || (tC = {})).WIN32 = 'win32'), (nr.WIN64 = 'win64'), (nr.MACOS = 'macos'), (nr.LINUX = 'linux'), ((na = tP || (tP = {})).HOUSE_1 = 'HOUSE_1'), (na.HOUSE_2 = 'HOUSE_2'), (na.HOUSE_3 = 'HOUSE_3');
-let oT = 'RANDOM_HYPESQUAD_HOUSE';
+let of = 'RANDOM_HYPESQUAD_HOUSE';
 ((nn = tg || (tg = {}))[(nn.KEYBOARD_KEY = 0)] = 'KEYBOARD_KEY'), (nn[(nn.MOUSE_BUTTON = 1)] = 'MOUSE_BUTTON'), (nn[(nn.KEYBOARD_MODIFIER_KEY = 2)] = 'KEYBOARD_MODIFIER_KEY'), (nn[(nn.GAMEPAD_BUTTON = 3)] = 'GAMEPAD_BUTTON');
-let oN = Object.freeze({
+let oO = Object.freeze({
         esc: 9,
         f1: 67,
         f2: 68,
@@ -5761,7 +5789,7 @@ let oN = Object.freeze({
         'track back': 173,
         'track skip': 171
     }),
-    od = Object.freeze({
+    oL = Object.freeze({
         a: 4,
         s: 22,
         d: 7,
@@ -5873,7 +5901,7 @@ let oN = Object.freeze({
         up: 82
     });
 ((n_ = tU || (tU = {}))[(n_.Left = 0)] = 'Left'), (n_[(n_.Right = 1)] = 'Right'), (n_[(n_.Center = 2)] = 'Center'), (n_[(n_.Back = 3)] = 'Back'), (n_[(n_.Forward = 4)] = 'Forward');
-let of = Object.freeze({
+let op = Object.freeze({
     a: 65,
     s: 83,
     d: 68,
@@ -5989,16 +6017,18 @@ let of = Object.freeze({
     "'": 222
 });
 ((no = tM || (tM = {}))[(no.WINDOWS = 1)] = 'WINDOWS'), (no[(no.MACOS = 2)] = 'MACOS'), (no[(no.LINUX = 3)] = 'LINUX'), (no[(no.BROWSER = 4)] = 'BROWSER'), ((nE = tG || (tG = {})).EMPTY_MESSAGE = 'EMPTY_MESSAGE'), (nE.MESSAGE_TOO_LONG = 'MESSAGE_TOO_LONG'), (nE.RATE_LIMITED = 'RATE_LIMITED'), (nE.SHOUTING_CANCELLED = 'SHOUTING_CANCELLED'), (nE.SLOWMODE_COOLDOWN = 'SLOWMODE_COOLDOWN'), ((ni = tm || (tm = {}))[(ni.IMG = 1)] = 'IMG'), (ni[(ni.YOUTUBE_VIDEO = 2)] = 'YOUTUBE_VIDEO'), (ni[(ni.VIDEO = 3)] = 'VIDEO'), ((nc = ty || (ty = {})).NOW_PLAYING = '1'), (nc.RECENTLY_PLAYED = '2'), (nc.EVER_PLAYED = '3'), (nc.FLAVOR_TEXT = '4'), (nc.RECENT_RELEASE_DATE = '6'), (nc.RELEASE_DATE = '7'), (nc.EARLY_ACCESS = '8'), (nc.HAS_FREE_PREMIUM_CONTENT = '9'), ((ns = tb || (tb = {})).INPUT = 'INPUT'), (ns.OUTPUT = 'OUTPUT'), (ns.INPUT_AND_OUTPUT = 'INPUT_AND_OUTPUT'), ((nl = tv || (tv = {})).INPUT = 'INPUT'), (nl.OUTPUT = 'OUTPUT'), (nl.INPUT_AND_OUTPUT = 'INPUT_AND_OUTPUT'), ((nI = tw || (tw = {})).APPLICATION_LIBRARY_BADGE = 'application_library_badge_18_11_02'), (nI.SERVER_DISCOVERY_BADGE = 'server_discovery_badge_19_02_11'), (nI.E3_SERVER_DISCOVERY_BADGE = 'e3_server_discovery_badge_19_06_08'), ((nu = tB || (tB = {})).MESSAGE = 'MESSAGE'), (nu.MESSAGE_FAILED_TO_SEND = 'MESSAGE_FAILED_TO_SEND'), (nu.FORUM_THREAD_CREATED = 'FORUM_THREAD_CREATED'), (nu.BUG_REPORTER = 'BUG_REPORTER'), (nu.ALERT = 'ALERT'), (nu.REACTION = 'REACTION'), (nu.MESSAGE_REMINDER = 'MESSAGE_REMINDER'), ((nR = tW || (tW = {})).TRENDING_GIFS = 'Trending'), (nR.FAVORITES = 'Favorites'), (nR.TRENDING_CATEGORY = 'Category'), (nR.SEARCH = 'Search'), (nR.SEARCH_SUGGESTION = 'Search Suggestion');
-let oO = new Set([nj.pK.USD, nj.pK.CAD, nj.pK.EUR, nj.pK.AUD, nj.pK.GBP, nj.pK.PHP, nj.pK.MYR, nj.pK.VND, nj.pK.KRW, nj.pK.IDR]);
+let oh = new Set([nj.pK.USD, nj.pK.CAD, nj.pK.EUR, nj.pK.AUD, nj.pK.GBP, nj.pK.PHP, nj.pK.MYR, nj.pK.VND, nj.pK.KRW, nj.pK.IDR]);
 ((nA = tY || (tY = {})).ALWAYS = 'ALWAYS'), (nA.ON_CLICK = 'ON_CLICK'), (nA.IF_MODERATOR = 'IF_MODERATOR');
-let oL = [];
-((nT = tH || (tH = {})).CHANNEL_CALL_POPOUT = 'DISCORD_CHANNEL_CALL_POPOUT'), (nT.SOUNDBOARD = 'DISCORD_SOUNDBOARD'), (nT.RTC_DEBUG_POPOUT = 'DISCORD_RTC_DEBUG_POPOUT'), (nT.CHANNEL_POPOUT = 'DISCORD_CHANNEL_POPOUT'), (nT.ACTIVITY_POPOUT = 'DISCORD_ACTIVITY_POPOUT'), (nT.OVERLAY_POPOUT = 'DISCORD_OVERLAY_POPOUT'), ((nN = tx || (tx = {})).LOADED = 'loaded'), (nN.UNLOADED = 'unloaded'), ((nd = tK || (tK = {})).CONNECTING = 'CONNECTING'), (nd.ACTIVE = 'ACTIVE'), (nd.RECONNECTING = 'RECONNECTING'), (nd.ENDED = 'ENDED'), (nd.PAUSED = 'PAUSED'), (nd.FAILED = 'FAILED'), ((nf = tk || (tk = {})).USER_REQUESTED = 'user_requested'), (nf.STREAM_FULL = 'stream_full'), (nf.UNAUTHORIZED = 'unauthorized'), (nf.SAFETY_GUILD_RATE_LIMITED = 'safety_guild_rate_limited'), ((nO = tV || (tV = {})).SOUND = 'SOUND'), (nO.VIDEO = 'VIDEO'), ((nL = tF || (tF = {})).PLAYING = 'playing'), (nL.PAUSED = 'paused'), ((np = tX || (tX = {})).NONE = 'none'), (np.WIFI = 'wifi'), (np.CELLULAR = 'cellular'), (np.UNKNOWN = 'unknown'), (np.ETHERNET = 'ethernet'), (np.BLUETOOTH = 'bluetooth'), (np.WIMAX = 'wimax'), (np.OTHER = 'other'), ((nh = tj || (tj = {})).UNKNOWN = 'unknown'), (nh.SLOW_TWO_G = 'slow-2g'), (nh.TWO_G = '2g'), (nh.THREE_G = '3g'), (nh.FOUR_G = '4g'), (nh.FIVE_G = '5g'), ((nD = t$ || (t$ = {})).INITIAL = 'initial'), (nD.ENTER = 'enter'), (nD.UPDATE = 'update'), (nD.LEAVE = 'leave'), ((nS = tq || (tq = {})).CHANNEL_SETTINGS = 'Channel Settings'), (nS.CHANNEL_NOTIFICATION_SETTINGS = 'Channel Notification Settings'), (nS.GUILD_NOTIFICATION_SETTINGS = 'Guild Notification Settings'), ((nC = tJ || (tJ = {}))[(nC.INCOMING = 1)] = 'INCOMING'), (nC[(nC.CHANNEL_FOLLOWER = 2)] = 'CHANNEL_FOLLOWER'), ((nP = tz || (tz = {}))[(nP.APPLICATION = 0)] = 'APPLICATION'), (nP[(nP.OVERVIEW = 1)] = 'OVERVIEW'), (nP[(nP.CHANNEL_FOLLOWING = 2)] = 'CHANNEL_FOLLOWING'), (nP[(nP.TWITCH = 3)] = 'TWITCH'), (nP[(nP.YOUTUBE = 4)] = 'YOUTUBE'), (nP[(nP.WEBHOOKS = 5)] = 'WEBHOOKS'), (nP[(nP.CHANNELS_SYNCING = 6)] = 'CHANNELS_SYNCING');
-let op = 2500,
-    oh = 0,
-    oD = 2592000000;
+let oD = [];
+((nT = tH || (tH = {})).CHANNEL_CALL_POPOUT = 'DISCORD_CHANNEL_CALL_POPOUT'), (nT.SOUNDBOARD = 'DISCORD_SOUNDBOARD'), (nT.RTC_DEBUG_POPOUT = 'DISCORD_RTC_DEBUG_POPOUT'), (nT.CHANNEL_POPOUT = 'DISCORD_CHANNEL_POPOUT'), (nT.ACTIVITY_POPOUT = 'DISCORD_ACTIVITY_POPOUT'), (nT.OVERLAY_POPOUT = 'DISCORD_OVERLAY_POPOUT'), ((nN = tx || (tx = {})).LOADED = 'loaded'), (nN.UNLOADED = 'unloaded'), ((nd = tK || (tK = {})).CONNECTING = 'CONNECTING'), (nd.ACTIVE = 'ACTIVE'), (nd.RECONNECTING = 'RECONNECTING'), (nd.ENDED = 'ENDED'), (nd.PAUSED = 'PAUSED'), (nd.FAILED = 'FAILED'), ((nf = tk || (tk = {})).USER_REQUESTED = 'user_requested'), (nf.STREAM_FULL = 'stream_full'), (nf.UNAUTHORIZED = 'unauthorized'), (nf.SAFETY_GUILD_RATE_LIMITED = 'safety_guild_rate_limited'), ((nO = tV || (tV = {})).SOUND = 'SOUND'), (nO.VIDEO = 'VIDEO'), ((nL = tF || (tF = {})).PLAYING = 'playing'), (nL.PAUSED = 'paused'), ((np = tX || (tX = {})).NONE = 'none'), (np.WIFI = 'wifi'), (np.CELLULAR = 'cellular'), (np.UNKNOWN = 'unknown'), (np.ETHERNET = 'ethernet'), (np.BLUETOOTH = 'bluetooth'), (np.WIMAX = 'wimax'), (np.OTHER = 'other'), ((nh = tj || (tj = {})).UNKNOWN = 'unknown'), (nh.SLOW_TWO_G = 'slow-2g'), (nh.TWO_G = '2g'), (nh.THREE_G = '3g'), (nh.FOUR_G = '4g'), (nh.FIVE_G = '5g');
+let oS = 'discodoEasterEgg';
+((nD = t$ || (t$ = {})).INITIAL = 'initial'), (nD.ENTER = 'enter'), (nD.UPDATE = 'update'), (nD.LEAVE = 'leave'), ((nS = tq || (tq = {})).CHANNEL_SETTINGS = 'Channel Settings'), (nS.CHANNEL_NOTIFICATION_SETTINGS = 'Channel Notification Settings'), (nS.GUILD_NOTIFICATION_SETTINGS = 'Guild Notification Settings'), ((nC = tJ || (tJ = {}))[(nC.INCOMING = 1)] = 'INCOMING'), (nC[(nC.CHANNEL_FOLLOWER = 2)] = 'CHANNEL_FOLLOWER'), ((nP = tz || (tz = {}))[(nP.APPLICATION = 0)] = 'APPLICATION'), (nP[(nP.OVERVIEW = 1)] = 'OVERVIEW'), (nP[(nP.CHANNEL_FOLLOWING = 2)] = 'CHANNEL_FOLLOWING'), (nP[(nP.TWITCH = 3)] = 'TWITCH'), (nP[(nP.YOUTUBE = 4)] = 'YOUTUBE'), (nP[(nP.WEBHOOKS = 5)] = 'WEBHOOKS'), (nP[(nP.CHANNELS_SYNCING = 6)] = 'CHANNELS_SYNCING');
+let oC = 2500,
+    oP = 0,
+    og = 2592000000;
 ((ng = tQ || (tQ = {})).USERS = 'users'), (ng.ROLES = 'roles'), (ng.EVERYONE = 'everyone'), ((nU = tZ || (tZ = {}))[(nU.AUTO = 1)] = 'AUTO'), (nU[(nU.FULL = 2)] = 'FULL');
-let oS = 100,
-    oC = /(mfa\.[a-z0-9_-]{20,})|([a-z0-9_-]{23,28}\.[a-z0-9_-]{6,7}\.[a-z0-9_-]{27})/i;
+let oU = 100,
+    oM = /(mfa\.[a-z0-9_-]{20,})|([a-z0-9_-]{23,28}\.[a-z0-9_-]{6,7}\.[a-z0-9_-]{27})/i;
 ((nM = t0 || (t0 = {}))[(nM.NULL = 0)] = 'NULL'), (nM[(nM.DISABLED = 1)] = 'DISABLED'), (nM[(nM.ENABLED = 2)] = 'ENABLED');
-let oP = 'https://creator-support.discord.com/hc/en-us/articles/12653663868823';
+let oG = 'https://creator-support.discord.com/hc/en-us/articles/12653663868823';
 ((nG = t1 || (t1 = {}))[(nG.CLIPS_ENABLED = 1)] = 'CLIPS_ENABLED'), (nG[(nG.ALLOW_VOICE_RECORDING = 2)] = 'ALLOW_VOICE_RECORDING'), (nG[(nG.ALLOW_ANY_VIEWER_CLIPS = 4)] = 'ALLOW_ANY_VIEWER_CLIPS'), ((nm = t2 || (t2 = {})).LOADING = 'LOADING'), (nm.ERROR = 'ERROR'), (nm.READY = 'READY');

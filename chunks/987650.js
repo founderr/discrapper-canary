@@ -3,19 +3,16 @@ r.d(n, {
         return a;
     },
     YK: function () {
-        return d;
+        return c;
     },
     ap: function () {
-        return f;
+        return d;
     },
     bv: function () {
         return o;
     },
-    gl: function () {
-        return l;
-    },
     iP: function () {
-        return c;
+        return u;
     },
     n0: function () {
         return s;
@@ -24,17 +21,16 @@ r.d(n, {
         return i;
     },
     wF: function () {
-        return _;
+        return f;
     }
 });
 var i,
     a,
     s,
     o,
-    l,
-    u = r(358085);
-let c = u.isPlatformEmbedded && ((0, u.isWindows)() || !1);
-function d(e) {
+    l = r(358085);
+let u = l.isPlatformEmbedded && ((0, l.isWindows)() || !1);
+function c(e) {
     switch (e) {
         case 'News Nudge':
         case 'Welcome Nudge':
@@ -67,19 +63,16 @@ function d(e) {
     !(function (e) {
         (e[(e.Viewed = 0)] = 'Viewed'), (e[(e.Clicked = 1)] = 'Clicked');
     })(o || (o = {}));
-let f = Object.freeze({
-    LOW: 'background-opacity-low',
-    MEDIUM: 'background-opacity-medium',
-    HIGH: 'background-opacity-high',
-    FULL: 'background-opacity-full',
-    DISABLED: null
-});
-!(function (e) {
-    (e[(e.Disabled = 0)] = 'Disabled'), (e[(e.Hook = 1)] = 'Hook'), (e[(e.OutOfProcess = 2)] = 'OutOfProcess');
-})(l || (l = {}));
-let _ = Object.freeze({
-    BOTTOM: 0,
-    LOWER: 0.25,
-    UPPER: 0.75,
-    TOP: 1
-});
+let d = Object.freeze({
+        LOW: 'background-opacity-low',
+        MEDIUM: 'background-opacity-medium',
+        HIGH: 'background-opacity-high',
+        FULL: 'background-opacity-full',
+        DISABLED: null
+    }),
+    f = Object.freeze({
+        BOTTOM: 0,
+        LOWER: 0.25,
+        UPPER: 0.75,
+        TOP: 1
+    });

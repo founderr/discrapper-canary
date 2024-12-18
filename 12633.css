@@ -11298,8 +11298,11 @@ div.modalHeader_c5e09c {
 
 .animated_f40049:active:not(:focus-within) {
     box-shadow: none;
-    transform: translatey(2px);
     outline-width: 1px
+}
+
+.full-motion .animated_f40049:active:not(:focus-within) {
+    transform: translatey(2px)
 }
 
 .theme-light .soundButtonRefresh_f40049 {
@@ -11372,7 +11375,10 @@ div.modalHeader_c5e09c {
     gap: 4px;
     box-shadow: 0 6px 0 0 rgba(0, 0, 0, 8%);
     border-radius: var(--radius-sm);
-    height: 60px;
+    height: 60px
+}
+
+.full-motion .soundInfoRefresh_f40049 {
     transition: gap.1s ease, padding-bottom.1s ease, box-shadow.1s ease-in-out
 }
 
@@ -11536,10 +11542,13 @@ div.modalHeader_c5e09c {
 }
 
 .buttonOverlayActionsRefresh_f40049 {
-    margin-top: -2px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-start
+}
+
+.full-motion .buttonOverlayActionsRefresh_f40049 {
+    margin-top: -2px;
     transition: margin-top.2s ease
 }
 
@@ -11783,7 +11792,10 @@ div.modalHeader_c5e09c {
 .inlineButton_f38a29:active {
     border: 1px solid rgba(255, 255, 255, .5);
     background: var(--card-primary-pressed-bg);
-    box-shadow: none;
+    box-shadow: none
+}
+
+.full-motion .inlineButton_f38a29:active {
     transform: translatey(2px)
 }
 
