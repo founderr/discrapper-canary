@@ -28101,6 +28101,10 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
     text-align: center
 }
 
+.container_c198fb:after {
+    right: 8px !important
+}
+
 .asset_c198fb {
     width: 150px;
     position: absolute;

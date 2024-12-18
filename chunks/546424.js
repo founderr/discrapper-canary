@@ -24,6 +24,7 @@ function g(e) {
             (0, u.RO)(_.X1.SOUNDBOARD, l.Ie.NORMAL);
         }, []);
     return (0, i.jsx)(c.ZP, {
+        className: m.container,
         asset: (0, i.jsxs)('div', {
             className: m.headerContainer,
             children: [
