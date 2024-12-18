@@ -26311,16 +26311,17 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
     scrollbar-width: none
 }
 
-:where(.visual-refresh) .scrollableContainer_bdf0de {
+:where(.visual-refresh) .channelTextArea_bdf0de {
     box-sizing: border-box;
     border: 1px solid var(--border-faint);
     border-radius: var(--radius-sm);
     transition: border-color.2s ease;
     box-shadow: var(--shadow-low);
+    background: var(--bg-overlay-3, var(--channeltextarea-background));
     overflow-y: auto
 }
 
-:where(.visual-refresh) .scrollableContainer_bdf0de:focus-within {
+:where(.visual-refresh) .channelTextArea_bdf0de:focus-within {
     border-color: var(--border-subtle)
 }
 
@@ -26335,7 +26336,7 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
 }
 
 .visual-refresh .themedBackground_bdf0de {
-    background: var(--bg-overlay-3, var(--chat-background-default))
+    background: none
 }
 
 .sticker_bdf0de {
@@ -26732,7 +26733,7 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
     display: flex;
     align-items: center;
     max-height: var(--custom-channel-textarea-text-area-height);
-    margin-right: var(--space-16)
+    margin-right: var(--space-4)
 }
 
 .enable-forced-colors .scrollableContainer_bdf0de {
@@ -29136,6 +29137,23 @@ div.popoutCloseButton_d523a2:hover {
     margin-right: 4px
 }
 
+.visual-refresh .characterCount_b82429 {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    border-right: 1px solid var(--border-subtle);
+    padding-right: var(--space-16);
+    margin-right: var(--space-8)
+}
+
+.visual-refresh .premiumFlair_b82429 {
+    color: var(--icon-secondary)
+}
+
+.visual-refresh .premiumFlair_b82429:not(:last-child) {
+    margin-right: var(--space-8)
+}
+
 .flairContainer_b82429 {
     display: flex;
     align-items: center;
@@ -29144,14 +29162,6 @@ div.popoutCloseButton_d523a2:hover {
 
 .upsell_b82429 {
     margin-top: 8px
-}
-
-.theme-dark .error_b82429 {
-    color: var(--red-360)
-}
-
-.theme-light .error_b82429 {
-    color: var(--status-danger)
 }
 
 .container_f45dac {
