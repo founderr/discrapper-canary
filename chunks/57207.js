@@ -27,7 +27,10 @@ let c = {
         [a.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR]: 0,
         [a.z.REFERRAL_INCENTIVE_AWARDED_INFO]: 0,
         [a.z.WHATS_NEW_TENURE_BADGE_REWARD]: 0,
-        [a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL]: 0
+        [a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL]: 0,
+        [a.z.TRIAL_NUX_EMOJI_BUTTON]: 0,
+        [a.z.TRIAL_NUX_EMOJI_PICKER]: 0,
+        [a.z.TRIAL_NUX_STREAM_COACH_MARK]: 0
     },
     d = o.Z.Millis.DAY;
 function f(e) {
