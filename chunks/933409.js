@@ -1,6 +1,6 @@
 n.d(l, {
     Z: function () {
-        return x;
+        return j;
     }
 }),
     n(47120),
@@ -14,46 +14,47 @@ var t = n(200651),
     d = n(616780),
     s = n(251794),
     c = n(386696),
-    Z = n(71619),
+    m = n(71619),
+    Z = n(946273),
     g = n(910693),
-    m = n(592125),
-    M = n(271383),
-    E = n(430824),
-    v = n(496675),
-    f = n(594174),
-    I = n(979651),
+    M = n(592125),
+    E = n(271383),
+    v = n(430824),
+    f = n(496675),
+    I = n(594174),
+    h = n(979651),
     C = n(630388),
     P = n(5192),
-    h = n(813872),
-    S = n(981631),
-    b = n(590433),
-    O = n(372897),
-    R = n(388032);
-function x(e, l, x, j) {
-    let p = i.useMemo(() => ({ [l]: [e.id] }), [l, e.id]),
-        T = null != j ? [j] : [];
-    (0, d.$)(p), (0, a.e7)([v.Z], () => v.Z.getGuildVersion(l), [l]);
-    let _ = (0, a.e7)([E.Z], () => E.Z.getGuild(l), [l]),
-        A = (0, a.e7)(
-            [f.default],
+    S = n(813872),
+    b = n(981631),
+    O = n(590433),
+    R = n(372897),
+    x = n(388032);
+function j(e, l, j, p) {
+    let T = i.useMemo(() => ({ [l]: [e.id] }), [l, e.id]),
+        A = null != p ? [p] : [];
+    (0, d.$)(T), (0, a.e7)([f.Z], () => f.Z.getGuildVersion(l), [l]);
+    let _ = (0, a.e7)([v.Z], () => v.Z.getGuild(l), [l]),
+        N = (0, a.e7)(
+            [I.default],
             () => {
                 var l;
-                return (null === (l = f.default.getCurrentUser()) || void 0 === l ? void 0 : l.id) === e.id;
+                return (null === (l = I.default.getCurrentUser()) || void 0 === l ? void 0 : l.id) === e.id;
             },
             [e.id]
         ),
-        N = (0, a.e7)([M.ZP], () => M.ZP.isGuestOrLurker(l, e.id), [l, e.id]),
-        U = (0, a.e7)([m.Z], () => m.Z.getChannel(x), [x]),
-        [, q] = (0, Z.ZP)(e.id, l),
-        y = null == U ? void 0 : U.isGuildStageVoice(),
+        U = (0, a.e7)([E.ZP], () => E.ZP.isGuestOrLurker(l, e.id), [l, e.id]),
+        y = (0, a.e7)([M.Z], () => M.Z.getChannel(j), [j]),
+        [, q] = (0, m.ZP)(e.id, l),
+        k = null == y ? void 0 : y.isGuildStageVoice(),
         {
             muted: B,
-            deafened: k,
-            suppressed: L,
-            voiceChannelId: D
-        } = (0, a.cj)([I.Z], () => {
+            deafened: L,
+            suppressed: D,
+            voiceChannelId: V
+        } = (0, a.cj)([h.Z], () => {
             var n, t, i;
-            let a = I.Z.getVoiceState(l, e.id);
+            let a = h.Z.getVoiceState(l, e.id);
             return {
                 muted: null !== (n = null == a ? void 0 : a.mute) && void 0 !== n && n,
                 deafened: null !== (t = null == a ? void 0 : a.deaf) && void 0 !== t && t,
@@ -61,55 +62,55 @@ function x(e, l, x, j) {
                 voiceChannelId: null == a ? void 0 : a.channelId
             };
         }),
-        V = (0, a.e7)([M.ZP], () => M.ZP.getMember(l, e.id)),
-        G = (0, h.Z)({
+        G = (0, a.e7)([E.ZP], () => E.ZP.getMember(l, e.id)),
+        F = (0, S.Z)({
             userId: e.id,
             guildId: l,
-            channelId: x,
-            location: j
+            channelId: j,
+            location: p
         }),
-        F = (0, g.sE)(l, {
-            location: j,
+        w = (0, g.sE)(l, {
+            location: p,
             targetUserId: e.id
         }),
-        w = (0, c.Z)(l, e.id),
-        K =
-            null != D && null != x && v.Z.canWithPartialContext(S.Plq.VIEW_CHANNEL, { channelId: D }) && !N
+        K = (0, c.Z)(l, e.id),
+        Y =
+            null != V && null != j && f.Z.canWithPartialContext(b.Plq.VIEW_CHANNEL, { channelId: V }) && !U
                 ? [
-                      (!y || (y && !L)) && v.Z.canWithPartialContext(S.Plq.MUTE_MEMBERS, { channelId: x })
+                      (!k || (k && !D)) && f.Z.canWithPartialContext(b.Plq.MUTE_MEMBERS, { channelId: j })
                           ? (0, t.jsx)(
                                 r.MenuCheckboxItem,
                                 {
                                     id: 'voice-mute',
-                                    label: R.intl.string(R.t.e9e9UV),
+                                    label: x.intl.string(x.t.e9e9UV),
                                     checked: B,
                                     color: 'danger',
                                     action: () => {
-                                        !1 === B && F(g.jQ.MUTE), o.Z.setServerMute(l, e.id, !B);
+                                        !1 === B && w(g.jQ.MUTE), o.Z.setServerMute(l, e.id, !B);
                                     }
                                 },
                                 'voice-mute'
                             )
                           : null,
-                      (!y || (y && !L)) && v.Z.canWithPartialContext(S.Plq.DEAFEN_MEMBERS, { channelId: x })
+                      (!k || (k && !D)) && f.Z.canWithPartialContext(b.Plq.DEAFEN_MEMBERS, { channelId: j })
                           ? (0, t.jsx)(
                                 r.MenuCheckboxItem,
                                 {
                                     id: 'voice-deafen',
-                                    label: R.intl.string(R.t.hMA2GB),
-                                    checked: k,
+                                    label: x.intl.string(x.t.hMA2GB),
+                                    checked: L,
                                     color: 'danger',
-                                    action: () => o.Z.setServerDeaf(l, e.id, !k)
+                                    action: () => o.Z.setServerDeaf(l, e.id, !L)
                                 },
                                 'voice-deafen'
                             )
                           : null,
-                      !A && null != _ && v.Z.canWithPartialContext(S.Plq.MOVE_MEMBERS, { channelId: x })
+                      !N && null != _ && f.Z.canWithPartialContext(b.Plq.MOVE_MEMBERS, { channelId: j })
                           ? (0, t.jsx)(
                                 r.MenuItem,
                                 {
                                     id: 'voice-disconnect',
-                                    label: A ? R.intl.string(R.t['6vrfgo']) : R.intl.string(R.t['/jERiI']),
+                                    label: N ? x.intl.string(x.t['6vrfgo']) : x.intl.string(x.t['/jERiI']),
                                     color: 'danger',
                                     action: () => o.Z.setChannel(l, e.id, null)
                                 },
@@ -118,29 +119,29 @@ function x(e, l, x, j) {
                           : null
                   ]
                 : [],
-        Y = async (l, n, t) => {
+        Q = async (l, n, t) => {
             if (l.ctrlKey || l.metaKey)
                 try {
                     var i;
-                    await u.Z.setCommunicationDisabledDuration(n, t, b.UK.DURATION_60_SEC, null, j), F(g.jQ.TIMEOUT), (0, r.showToast)((0, r.createToast)(R.intl.formatToPlainString(R.t.O9C3Nj, { user: null !== (i = P.ZP.getName(n, null, e)) && void 0 !== i ? i : '' }), r.ToastType.SUCCESS));
+                    await u.Z.setCommunicationDisabledDuration(n, t, O.UK.DURATION_60_SEC, null, p), w(g.jQ.TIMEOUT), (0, r.showToast)((0, r.createToast)(x.intl.formatToPlainString(x.t.O9C3Nj, { user: null !== (i = P.ZP.getName(n, null, e)) && void 0 !== i ? i : '' }), r.ToastType.SUCCESS));
                 } catch (e) {
-                    (0, r.showToast)((0, r.createToast)(R.intl.string(R.t.epyCur), r.ToastType.FAILURE));
+                    (0, r.showToast)((0, r.createToast)(x.intl.string(x.t.epyCur), r.ToastType.FAILURE));
                 }
         },
-        Q = null,
-        W = null != _ && v.Z.canManageUser(S.Plq.MODERATE_MEMBERS, e, _) && v.Z.canManageUser(S.Plq.KICK_MEMBERS, e, _) && v.Z.canManageUser(S.Plq.BAN_MEMBERS, e, _),
-        z = null != _ && (v.Z.canManageUser(S.Plq.MANAGE_GUILD, e, _) || v.Z.canManageUser(S.Plq.MANAGE_ROLES, e, _));
-    if (!A && null != _ && null != V && null != V.joinedAt && (W || z) && _.hasFeature(S.oNc.GUILD_ONBOARDING_EVER_ENABLED)) {
-        var H;
-        Q = (0, C.yE)(null !== (H = V.flags) && void 0 !== H ? H : 0, O.q.BYPASSES_VERIFICATION)
+        W = null,
+        z = null != _ && f.Z.canManageUser(b.Plq.MODERATE_MEMBERS, e, _) && f.Z.canManageUser(b.Plq.KICK_MEMBERS, e, _) && f.Z.canManageUser(b.Plq.BAN_MEMBERS, e, _),
+        H = null != _ && (f.Z.canManageUser(b.Plq.MANAGE_GUILD, e, _) || f.Z.canManageUser(b.Plq.MANAGE_ROLES, e, _));
+    if (!N && null != _ && null != G && null != G.joinedAt && (z || H) && _.hasFeature(b.oNc.GUILD_ONBOARDING_EVER_ENABLED)) {
+        var J;
+        W = (0, C.yE)(null !== (J = G.flags) && void 0 !== J ? J : 0, R.q.BYPASSES_VERIFICATION)
             ? (0, t.jsx)(
                   r.MenuItem,
                   {
                       id: 'verify',
-                      label: R.intl.string(R.t.NbhSIy),
+                      label: x.intl.string(x.t.NbhSIy),
                       action: () => {
                           var l;
-                          return o.Z.setMemberFlags(_.id, e.id, (0, C.mB)(null !== (l = V.flags) && void 0 !== l ? l : 0, O.q.BYPASSES_VERIFICATION, !1));
+                          return o.Z.setMemberFlags(_.id, e.id, (0, C.mB)(null !== (l = G.flags) && void 0 !== l ? l : 0, R.q.BYPASSES_VERIFICATION, !1));
                       }
                   },
                   'verify'
@@ -149,35 +150,35 @@ function x(e, l, x, j) {
                   r.MenuItem,
                   {
                       id: 'verify',
-                      label: R.intl.string(R.t['6QlTeH']),
+                      label: x.intl.string(x.t['6QlTeH']),
                       action: () => {
                           var l;
-                          return o.Z.setMemberFlags(_.id, e.id, (0, C.mB)(null !== (l = V.flags) && void 0 !== l ? l : 0, O.q.BYPASSES_VERIFICATION, !0));
+                          return o.Z.setMemberFlags(_.id, e.id, (0, C.mB)(null !== (l = G.flags) && void 0 !== l ? l : 0, R.q.BYPASSES_VERIFICATION, !0));
                       }
                   },
                   'verify'
               );
     }
     return [
-        ...K,
-        ...(A || null == _
+        ...Y,
+        ...(N || null == _
             ? []
             : [
-                  G,
-                  Q,
-                  w && !N
+                  F,
+                  W,
+                  K && !U
                       ? q
                           ? (0, t.jsx)(
                                 r.MenuItem,
                                 {
                                     id: 'removetimeout',
-                                    label: R.intl.formatToPlainString(R.t.csKetb, { user: e.username }),
+                                    label: x.intl.formatToPlainString(x.t.csKetb, { user: e.username }),
                                     color: 'danger',
                                     action: () => {
                                         (0, s.q)({
                                             guildId: l,
                                             userId: e.id,
-                                            anaylticsLocations: T
+                                            anaylticsLocations: A
                                         });
                                     }
                                 },
@@ -187,26 +188,26 @@ function x(e, l, x, j) {
                                 r.MenuItem,
                                 {
                                     id: 'timeout',
-                                    label: R.intl.formatToPlainString(R.t.OhsOy8, { user: e.username }),
+                                    label: x.intl.formatToPlainString(x.t.OhsOy8, { user: e.username }),
                                     color: 'danger',
                                     action: (n) => {
-                                        if (n.ctrlKey || n.metaKey) return Y(n, l, e.id);
+                                        if (n.ctrlKey || n.metaKey) return Q(n, l, e.id);
                                         (0, s.z)({
                                             guildId: l,
                                             userId: e.id,
-                                            anaylticsLocations: T
+                                            anaylticsLocations: A
                                         });
                                     }
                                 },
                                 'timeout'
                             )
                       : null,
-                  v.Z.canManageUser(S.Plq.KICK_MEMBERS, e, _) && !e.isClyde()
+                  (0, Z.BK)(e, _)
                       ? (0, t.jsx)(
                             r.MenuItem,
                             {
                                 id: 'kick',
-                                label: R.intl.formatToPlainString(R.t['9l/iTU'], { user: e.username }),
+                                label: x.intl.formatToPlainString(x.t['9l/iTU'], { user: e.username }),
                                 color: 'danger',
                                 action: () =>
                                     (0, r.openModalLazy)(async () => {
@@ -214,7 +215,7 @@ function x(e, l, x, j) {
                                         return (n) =>
                                             (0, t.jsx)(i, {
                                                 ...n,
-                                                location: j,
+                                                location: p,
                                                 guildId: l,
                                                 user: e
                                             });
@@ -223,12 +224,12 @@ function x(e, l, x, j) {
                             'kick'
                         )
                       : null,
-                  v.Z.canManageUser(S.Plq.BAN_MEMBERS, e, _)
+                  (0, Z.mm)(e, _)
                       ? (0, t.jsx)(
                             r.MenuItem,
                             {
                                 id: 'ban',
-                                label: R.intl.formatToPlainString(R.t.WnpUBg, { user: e.username }),
+                                label: x.intl.formatToPlainString(x.t.WnpUBg, { user: e.username }),
                                 color: 'danger',
                                 action: () =>
                                     (0, r.openModalLazy)(async () => {
@@ -236,7 +237,7 @@ function x(e, l, x, j) {
                                         return (n) =>
                                             (0, t.jsx)(i, {
                                                 ...n,
-                                                location: j,
+                                                location: p,
                                                 guildId: l,
                                                 user: e
                                             });
