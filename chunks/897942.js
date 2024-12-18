@@ -19,13 +19,14 @@ function p(e) {
     let { maxRewardImageSrc: n, claimableRewards: r, size: p } = e,
         m = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
         g = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
-        E = (0, s.getAvatarSize)(p);
+        E = (0, s.getAvatarSize)(p),
+        v = 56 === E ? void 0 : { height: Math.round(E * _) };
     return r.length > 2
         ? (0, i.jsx)('img', {
               alt: '',
               src: n,
               className: c.image,
-              style: { height: Math.round(E * _) }
+              style: v
           })
         : (0, i.jsxs)('div', {
               className: c.container,
