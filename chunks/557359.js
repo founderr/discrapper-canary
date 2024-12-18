@@ -17,25 +17,38 @@ var i = n(200651),
     h = n(388032),
     g = n(457255);
 function x(e) {
-    let { requireTerms: t, rules: n } = e,
-        l = (0, o.e7)([m.Z], () => m.Z.getProps().guild),
-        x = r.useCallback(
+    let { requireTerms: t, rules: l } = e,
+        x = (0, o.e7)([m.Z], () => m.Z.getProps().guild),
+        p = null == x ? void 0 : x.id,
+        f = r.useCallback(() => {
+            if (null != p)
+                (0, c.openModalLazy)(async () => {
+                    let { default: e } = await Promise.all([n.e('80026'), n.e('36869')]).then(n.bind(n, 645264));
+                    return (t) =>
+                        (0, i.jsx)(e, {
+                            ...t,
+                            guildId: p,
+                            isPreview: !0
+                        });
+                });
+        }, [p]),
+        C = r.useCallback(
             (e) => {
-                if (null == l || null == n) return null;
-                u.Z.setPendingInviteRules(l.id, e, [...n]);
+                if (null == p || null == l) return null;
+                u.Z.setPendingInviteRules(p, e, [...l]);
             },
-            [l, n]
+            [p, l]
         ),
-        p = r.useCallback(
+        v = r.useCallback(
             (e) => {
-                if (null == l) return null;
-                u.Z.setPendingInviteRules(l.id, t, e);
+                if (null == p) return null;
+                u.Z.setPendingInviteRules(p, t, e);
             },
-            [l, t]
+            [p, t]
         );
-    return null == l
+    return null == x
         ? null
-        : null == n
+        : null == l
           ? (0, i.jsx)(c.Spinner, {})
           : (0, i.jsxs)(i.Fragment, {
                 children: [
@@ -59,11 +72,21 @@ function x(e) {
                                 ]
                             }),
                             (0, i.jsx)(c.Switch, {
-                                onChange: x,
+                                onChange: C,
                                 checked: t
                             })
                         ]
                     }),
+                    t &&
+                        (0, i.jsx)('div', {
+                            className: g.previewContainer,
+                            children: (0, i.jsx)(c.LinkButton, {
+                                text: h.intl.string(h.t.SKNnqq),
+                                icon: c.WindowLaunchIcon,
+                                variant: 'primary',
+                                onClick: f
+                            })
+                        }),
                     (0, i.jsx)('div', {
                         className: s()(g.rules, { [g.disabled]: !t }),
                         children: (0, i.jsxs)('div', {
@@ -76,9 +99,9 @@ function x(e) {
                                     children: h.intl.string(h.t.XcAzbm)
                                 }),
                                 (0, i.jsx)(d.k, {
-                                    guild: l,
-                                    rules: n,
-                                    setRules: p
+                                    guild: x,
+                                    rules: l,
+                                    setRules: v
                                 })
                             ]
                         })

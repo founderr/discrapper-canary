@@ -8,7 +8,7 @@ var i = n(200651),
     c = n(975298),
     d = n(410154),
     u = n(314684),
-    m = n(565626),
+    m = n(687362),
     g = n(32173),
     f = n(976465),
     p = n(391110),
@@ -50,39 +50,38 @@ t.Z = (e) => {
     let { className: a, variant: x = p.R0.PERKS_DISCOVERABILITY, noBackground: C = !1, leftAlignHeaders: T = !1, showAllPerksButton: v, headerClassname: N, isFullScreen: I = !0 } = e,
         S = r.useRef(null),
         R = (0, u.yQ)(),
-        A = (0, m.Ag)(R),
-        j = (0, d.ZP)('perks-discoverability');
-    (0, m.I2)();
-    let P = x === p.R0.WHATS_NEW,
+        j = (0, m.vi)(R),
+        A = (0, d.ZP)('perks-discoverability'),
+        P = x === p.R0.WHATS_NEW,
         Z = (0, u.IY)(),
         M = (0, f.x$)();
     r.useEffect(() => {
-        P && !A && (Z(), M());
-    }, [Z, M, P, A]),
+        P && !j && (Z(), M());
+    }, [Z, M, P, j]),
         r.useEffect(() => {
             let e = S.current;
-            if (null == e || !A || !P) return;
+            if (null == e || !j || !P) return;
             let t = requestAnimationFrame(() => {
                 e.scrollIntoView({ behavior: 'smooth' }), P && Z();
             });
             return () => {
                 cancelAnimationFrame(t), P && Z();
             };
-        }, [S, A, P, Z]);
+        }, [S, j, P, Z]);
     let B = (0, _.Op)(P),
         O = (0, g.Z)(),
         w = (0, _.mN)(),
-        { fractionalState: k } = (0, c.Z)(),
-        y = (0, _.sP)({
+        { fractionalState: y } = (0, c.Z)(),
+        k = (0, _.sP)({
             perksCards: O,
             variant: x,
-            shopMarketingVariation: j,
+            shopMarketingVariation: A,
             isFullScreen: I,
             showTenureCard: null == R ? void 0 : R.showCard,
             isPremiumSubscriber: w,
-            fractionalState: k
+            fractionalState: y
         }),
-        L = y.some((e) => null != e.pillText),
+        L = k.some((e) => null != e.pillText),
         [U, D] = r.useState(null),
         H = r.useRef(new l.qA());
     return (0, i.jsxs)(i.Fragment, {
@@ -134,7 +133,7 @@ t.Z = (e) => {
                             [E.cardContainer]: I,
                             [E.cardContainerNarrowWidth]: !I
                         }),
-                        children: y.map((e, t) =>
+                        children: k.map((e, t) =>
                             (0, i.jsx)(
                                 h.Z,
                                 {

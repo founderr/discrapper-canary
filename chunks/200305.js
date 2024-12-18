@@ -1,6 +1,6 @@
 n.d(t, {
     Y: function () {
-        return G;
+        return H;
     }
 }),
     n(47120);
@@ -8,132 +8,135 @@ var l,
     i,
     s = n(200651),
     r = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     d = n(442837),
     u = n(481060),
     c = n(893776),
     m = n(809206),
-    x = n(607070),
-    h = n(600164),
-    f = n(339085),
+    f = n(607070),
+    x = n(600164),
+    h = n(339085),
     g = n(565138),
-    v = n(601964),
-    j = n(650774),
-    N = n(271383),
-    p = n(430824),
-    C = n(594174),
-    I = n(626135),
-    M = n(768581),
-    T = n(863249),
-    F = n(944163),
-    b = n(246364),
-    E = n(983736),
-    Z = n(266395),
-    y = n(990488),
-    S = n(592286),
-    L = n(981631),
-    P = n(388032),
-    R = n(832311),
-    A = n(419851),
-    U = n(296507),
-    w = n(866402),
-    O = n(246403);
+    v = n(894376),
+    j = n(446495),
+    p = n(601964),
+    N = n(650774),
+    C = n(271383),
+    I = n(430824),
+    M = n(594174),
+    T = n(626135),
+    F = n(768581),
+    b = n(863249),
+    E = n(944163),
+    S = n(63568),
+    y = n(246364),
+    Z = n(983736),
+    L = n(266395),
+    P = n(990488),
+    R = n(592286),
+    A = n(981631),
+    U = n(388032),
+    w = n(832311),
+    O = n(419851),
+    _ = n(296507),
+    B = n(866402),
+    G = n(246403);
 ((i = l || (l = {}))[(i.CLAIM_ACCOUNT = 0)] = 'CLAIM_ACCOUNT'), (i[(i.EMAIL_CONFIRMATION = 1)] = 'EMAIL_CONFIRMATION'), (i[(i.VERIFICATION_FORM = 2)] = 'VERIFICATION_FORM');
-let _ = (e) => {
-        let { headerId: t, email: n, password: l, setEmail: i, setPassword: r, emailError: a, passwordError: o } = e;
+let k = (e) => {
+        let { headerId: t, email: n, password: l, setEmail: i, setPassword: r, emailError: o, passwordError: a } = e;
         return (0, s.jsxs)('div', {
-            className: R.content,
+            className: w.content,
             children: [
                 (0, s.jsx)('div', {
-                    className: R.applicationIconContainer,
+                    className: w.applicationIconContainer,
                     children: (0, s.jsx)('img', {
-                        alt: P.intl.string(P.t.ewGfjo),
-                        src: A,
-                        className: R.applicationIcon
+                        alt: U.intl.string(U.t.ewGfjo),
+                        src: O,
+                        className: w.applicationIcon
                     })
                 }),
                 (0, s.jsx)(u.Heading, {
                     id: t,
                     variant: 'heading-xl/semibold',
-                    className: R.header,
-                    children: P.intl.string(P.t.MhcDLy)
+                    className: w.header,
+                    children: U.intl.string(U.t.MhcDLy)
                 }),
                 (0, s.jsx)(u.Text, {
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
-                    children: P.intl.string(P.t.SPlaR0)
+                    children: U.intl.string(U.t.SPlaR0)
                 }),
-                (0, s.jsx)('hr', { className: R.divider }),
+                (0, s.jsx)('hr', { className: w.divider }),
                 (0, s.jsx)(u.FormItem, {
-                    title: P.intl.string(P.t.dI4d4e),
-                    className: R.formItem,
+                    title: U.intl.string(U.t.dI4d4e),
+                    className: w.formItem,
                     children: (0, s.jsx)(u.TextInput, {
                         value: n,
-                        error: a,
+                        error: o,
                         onChange: i,
                         autoFocus: !0
                     })
                 }),
                 (0, s.jsx)(u.FormItem, {
-                    title: P.intl.string(P.t['CIGa+/']),
-                    className: R.formItem,
+                    title: U.intl.string(U.t['CIGa+/']),
+                    className: w.formItem,
                     children: (0, s.jsx)(u.TextInput, {
                         type: 'password',
                         value: l,
-                        error: o,
+                        error: a,
                         onChange: r
                     })
                 })
             ]
         });
     },
-    B = (e) => {
+    V = (e) => {
         let { headerId: t, email: n } = e;
         return (0, s.jsxs)('div', {
-            className: R.content,
+            className: w.content,
             children: [
                 (0, s.jsx)('img', {
-                    alt: P.intl.string(P.t.wNAbl5),
-                    src: O,
-                    className: R.applicationIcon
+                    alt: U.intl.string(U.t.wNAbl5),
+                    src: G,
+                    className: w.applicationIcon
                 }),
                 (0, s.jsx)(u.Heading, {
                     id: t,
                     variant: 'heading-xl/semibold',
-                    className: R.header,
-                    children: P.intl.format(P.t.v01XgI, { email: n })
+                    className: w.header,
+                    children: U.intl.format(U.t.v01XgI, { email: n })
                 }),
                 (0, s.jsx)(u.Text, {
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
-                    children: P.intl.string(P.t['/Hw5aW'])
+                    children: U.intl.string(U.t['/Hw5aW'])
                 }),
                 (0, s.jsx)(u.Button, {
-                    className: R.resendButton,
+                    className: w.resendButton,
                     size: u.Button.Sizes.NONE,
                     look: u.Button.Looks.LINK,
                     onClick: () => c.Z.verifyResend(),
-                    children: P.intl.string(P.t['MLk/mJ'])
+                    children: U.intl.string(U.t['MLk/mJ'])
                 })
             ]
         });
     },
-    G = (e) => {
+    H = (e) => {
         var t;
-        let { guildId: n, formState: l, updateFormState: i, isPreview: r = !1, disableVerification: a = !1 } = e,
-            o = (0, d.e7)([F.Z], () => F.Z.get(n));
-        if (null == o) return null;
-        let u = null !== (t = null != l ? l : null == o ? void 0 : o.formFields) && void 0 !== t ? t : [],
-            c = r ? y.W : y.r;
+        let { guildId: n, formState: l, updateFormState: i, isPreview: r = !1, disableVerification: o = !1 } = e,
+            a = (0, d.e7)([E.Z], () => E.Z.get(n));
+        if (null == a) return null;
+        let u = null !== (t = null != l ? l : null == a ? void 0 : a.formFields) && void 0 !== t ? t : [],
+            c = r ? P.W : P.r;
         return (0, s.jsx)(c, {
             guildId: n,
             formFields: u,
             updateFormFields: i,
-            disableVerification: a
+            disableVerification: o
         });
     },
-    k = () =>
+    z = () =>
         n
             .e('26176')
             .then(n.t.bind(n, 737848, 19))
@@ -141,87 +144,115 @@ let _ = (e) => {
                 let { default: t } = e;
                 return t;
             }),
-    H = (e) => {
-        let { headerId: t, guildId: n, formState: l, updateFormState: i, useReducedMotion: r, isPreview: a = !1 } = e;
+    J = (e) => {
+        let { headerId: t, guildId: n, formState: l, updateFormState: i, useReducedMotion: r, isPreview: o = !1 } = e;
         return (0, s.jsxs)('div', {
-            className: R.content,
+            className: w.content,
             children: [
                 (0, s.jsxs)('div', {
-                    className: R.animationAndSparklesContainer,
+                    className: w.animationAndSparklesContainer,
                     children: [
                         (0, s.jsx)('img', {
-                            alt: P.intl.string(P.t.VoB8OT),
-                            src: w,
-                            className: o()(R.sparkleIcon, R.sparkleBottom)
+                            alt: U.intl.string(U.t.VoB8OT),
+                            src: B,
+                            className: a()(w.sparkleIcon, w.sparkleBottom)
                         }),
                         (0, s.jsx)(u.LottieAnimation, {
-                            importData: k,
+                            importData: z,
                             shouldAnimate: !r,
-                            className: R.animation
+                            className: w.animation
                         }),
                         (0, s.jsx)('img', {
-                            alt: P.intl.string(P.t.VoB8OT),
-                            src: U,
-                            className: o()(R.sparkleIcon, R.sparkleTop)
+                            alt: U.intl.string(U.t.VoB8OT),
+                            src: _,
+                            className: a()(w.sparkleIcon, w.sparkleTop)
                         })
                     ]
                 }),
                 (0, s.jsx)(u.Heading, {
                     id: t,
                     variant: 'heading-xl/semibold',
-                    className: R.header,
-                    children: P.intl.string(P.t.DrEECw)
+                    className: w.header,
+                    children: U.intl.string(U.t.DrEECw)
                 }),
                 (0, s.jsx)(u.Text, {
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
-                    className: R.subheader,
-                    children: P.intl.string(P.t['7D3C5u'])
+                    className: w.subheader,
+                    children: U.intl.string(U.t['7D3C5u'])
                 }),
-                (0, s.jsx)('hr', { className: R.divider }),
-                (0, s.jsx)(G, {
+                (0, s.jsx)('hr', { className: w.divider }),
+                (0, s.jsx)(H, {
                     guildId: n,
                     formState: l,
                     updateFormState: i,
-                    isPreview: a
+                    isPreview: o
                 })
             ]
         });
     };
 t.Z = (e) => {
     var t, n;
-    let { headerId: l, guildId: i, onClose: a, onComplete: c, inviteCode: y, isPreview: A = !1, disableVerification: U = !1 } = e,
-        w = (0, Z.rb)((e) => e.hasUnsubmittedChanges),
-        O = (0, d.e7)([p.Z], () => p.Z.getGuild(i)),
-        G = (0, d.e7)([F.Z], () => F.Z.get(i)),
-        k = null == G ? void 0 : G.formFields.some((e) => e.field_type !== b.QJ.TERMS),
-        z = (0, d.e7)([C.default], () => C.default.getCurrentUser()),
-        V = !(null == z ? void 0 : z.isClaimed()),
-        D = null == z ? void 0 : z.verified,
-        J = null == z ? void 0 : z.isPhoneVerified(),
-        Q = (0, d.e7)([f.ZP], () => f.ZP.getGuildEmoji(i)),
-        { storeMemberCount: q, storeOnlineCount: W } = (0, d.cj)([j.Z], () => ({
-            storeMemberCount: j.Z.getMemberCount(i),
-            storeOnlineCount: j.Z.getOnlineCount(i)
+    let { headerId: l, guildId: i, onClose: o, onComplete: c, inviteCode: P, isPreview: O = !1, disableVerification: _ = !1 } = e,
+        B = (0, L.rb)((e) => e.hasUnsubmittedChanges),
+        G = (0, d.e7)([I.Z], () => I.Z.getGuild(i)),
+        H = (0, d.e7)([E.Z], () => E.Z.get(i)),
+        z = (0, S.jS)(i, 'MemberVerificationScreens'),
+        D = (0, d.e7)([v.Z], () => v.Z.pendingState),
+        Q = r.useMemo(() => {
+            var e, t;
+            let n;
+            if (!O || !z) return null;
+            if ((null == D ? void 0 : D.joinType) === j.A.APPLY && null != D.pendingVerificationFields) n = [...D.pendingVerificationFields];
+            else if ((null == D ? void 0 : D.joinType) === j.A.INVITE && null != D.termRules) {
+                let e = D.termRules.map((e) => e.value.trim()).filter((e) => '' !== e);
+                n = [
+                    {
+                        field_type: y.QJ.TERMS,
+                        label: U.intl.string(U.t['9suSIC']),
+                        values: e,
+                        required: !0
+                    }
+                ];
+            }
+            return null == n
+                ? null
+                : {
+                      version: null !== (e = null == H ? void 0 : H.version) && void 0 !== e ? e : '',
+                      description: null !== (t = null == H ? void 0 : H.description) && void 0 !== t ? t : '',
+                      formFields: n,
+                      guild: null == H ? void 0 : H.guild
+                  };
+        }, [z, O, D, H]),
+        q = null != Q ? Q : H,
+        Y = null == q ? void 0 : q.formFields.some((e) => e.field_type !== y.QJ.TERMS),
+        W = (0, d.e7)([M.default], () => M.default.getCurrentUser()),
+        X = !(null == W ? void 0 : W.isClaimed()),
+        K = null == W ? void 0 : W.verified,
+        $ = null == W ? void 0 : W.isPhoneVerified(),
+        ee = (0, d.e7)([h.ZP], () => h.ZP.getGuildEmoji(i)),
+        { storeMemberCount: et, storeOnlineCount: en } = (0, d.cj)([N.Z], () => ({
+            storeMemberCount: N.Z.getMemberCount(i),
+            storeOnlineCount: N.Z.getOnlineCount(i)
         })),
-        [Y, X] = r.useState(null !== (t = null == G ? void 0 : G.formFields) && void 0 !== t ? t : []),
-        [K, $] = r.useState(!1),
-        [ee, et] = r.useState(null),
-        [en, el] = r.useState(!U && V ? 0 : 2),
-        [ei, es] = r.useState(''),
-        [er, ea] = r.useState(''),
-        [eo, ed] = r.useState(null),
-        [eu, ec] = r.useState(null),
-        em = null == G ? void 0 : G.guild,
-        ex = r.useMemo(() => (null != O ? O : null != em ? new v.ZP(em) : null), [O, em]),
-        eh = null !== (n = null == ex ? void 0 : ex.hasFeature(L.oNc.CLAN)) && void 0 !== n && n,
+        [el, ei] = r.useState(null !== (t = null == q ? void 0 : q.formFields) && void 0 !== t ? t : []),
+        [es, er] = r.useState(!1),
+        [eo, ea] = r.useState(null),
+        [ed, eu] = r.useState(!_ && X ? 0 : 2),
+        [ec, em] = r.useState(''),
+        [ef, ex] = r.useState(''),
+        [eh, eg] = r.useState(null),
+        [ev, ej] = r.useState(null),
+        ep = null == q ? void 0 : q.guild,
+        eN = r.useMemo(() => (null != G ? G : null != ep ? new p.ZP(ep) : null), [G, ep]),
+        eC = null !== (n = null == eN ? void 0 : eN.hasFeature(A.oNc.CLAN)) && void 0 !== n && n,
         {
-            emojisToRender: ef,
-            remainingEmojis: eg,
-            numGuildEmoji: ev
+            emojisToRender: eI,
+            remainingEmojis: eM,
+            numGuildEmoji: eT
         } = r.useMemo(() => {
             var e;
-            let t = [...(null !== (e = 0 === Q.length ? (null == em ? void 0 : em.emojis) : Q) && void 0 !== e ? e : [])].reverse(),
+            let t = [...(null !== (e = 0 === ee.length ? (null == ep ? void 0 : ep.emojis) : ee) && void 0 !== e ? e : [])].reverse(),
                 n = 0,
                 l = t.length;
             return (
@@ -232,119 +263,119 @@ t.Z = (e) => {
                     numGuildEmoji: l
                 }
             );
-        }, [em, Q]),
-        ej = null != q ? q : null == em ? void 0 : em.approximate_member_count,
-        eN = null != W ? W : null == em ? void 0 : em.approximate_presence_count;
+        }, [ep, ee]),
+        eF = null != et ? et : null == ep ? void 0 : ep.approximate_member_count,
+        eb = null != en ? en : null == ep ? void 0 : ep.approximate_presence_count;
     r.useEffect(
         () => (
-            (0, Z.a5)(!1),
+            (0, L.a5)(!1),
             () => {
-                (0, Z.a5)(!1);
+                (0, L.a5)(!1);
             }
         ),
         []
     ),
         r.useEffect(() => {
-            T.ZP.fetchVerificationForm(i, y);
-        }, [i, y]),
+            if (!O) b.ZP.fetchVerificationForm(i, P);
+        }, [i, P, O]),
         r.useEffect(() => {
-            null != G && X(G.formFields);
-        }, [G]),
+            null != q && ei(q.formFields);
+        }, [q]),
         r.useEffect(() => {
-            null != z && z.isClaimed() && el(2);
-        }, [z]),
+            null != W && W.isClaimed() && eu(2);
+        }, [W]),
         r.useEffect(() => {
-            1 === en && D && el(2);
-        }, [en, D]),
+            1 === ed && K && eu(2);
+        }, [ed, K]),
         r.useEffect(() => {
             null != i &&
-                I.default.track(L.rMx.OPEN_MODAL, {
-                    type: S.N4,
+                T.default.track(A.rMx.OPEN_MODAL, {
+                    type: R.N4,
                     guild_id: i
                 });
         }, [i]),
         r.useEffect(() => {
-            let e = Y.some((e) => e.field_type !== b.QJ.TERMS && (0, E.OA)(e));
-            e && !w ? (0, Z.a5)(!0) : !e && w && (0, Z.a5)(!1);
-        }, [Y, w]);
-    let ep = r.useMemo(() => !(U || (((null == ex ? void 0 : ex.verificationLevel) !== L.sFg.VERY_HIGH || (null == z ? void 0 : z.isStaff())) && D) || J) || Y.some((e) => !(0, E.OA)(e)), [Y, ex, J, D, z, U]),
-        eC = (0, d.e7)([x.Z], () => x.Z.useReducedMotion);
-    if (null == ex) return null;
-    let eI = async () => {
-            $(!0), ed(null), ec(null);
+            let e = el.some((e) => e.field_type !== y.QJ.TERMS && (0, Z.OA)(e));
+            e && !B ? (0, L.a5)(!0) : !e && B && (0, L.a5)(!1);
+        }, [el, B]);
+    let eE = r.useMemo(() => !(_ || (((null == eN ? void 0 : eN.verificationLevel) !== A.sFg.VERY_HIGH || (null == W ? void 0 : W.isStaff())) && K) || $) || el.some((e) => !(0, Z.OA)(e)), [el, eN, $, K, W, _]),
+        eS = (0, d.e7)([f.Z], () => f.Z.useReducedMotion);
+    if (null == eN) return null;
+    let ey = async () => {
+            er(!0), eg(null), ej(null);
             try {
                 await (0, m.S2)({
-                    email: ei,
-                    password: er
+                    email: ec,
+                    password: ef
                 }),
-                    $(!1),
-                    el(1);
+                    er(!1),
+                    eu(1);
             } catch (n) {
                 var e, t;
-                ed(null == n ? void 0 : null === (e = n.body) || void 0 === e ? void 0 : e.email), ec(null == n ? void 0 : null === (t = n.body) || void 0 === t ? void 0 : t.password);
+                eg(null == n ? void 0 : null === (e = n.body) || void 0 === e ? void 0 : e.email), ej(null == n ? void 0 : null === (t = n.body) || void 0 === t ? void 0 : t.password);
             } finally {
-                $(!1);
+                er(!1);
             }
         },
-        eM = async () => {
-            $(!0), et(null);
-            let e = null != z ? N.ZP.getMember(i, z.id) : null;
+        eZ = async () => {
+            er(!0), ea(null);
+            let e = null != W ? C.ZP.getMember(i, W.id) : null;
             if (null != e && !e.isPending) {
-                null == a || a(!0);
+                null == o || o(!0);
                 return;
             }
             try {
                 await (null == c
                     ? void 0
                     : c({
-                          ...(null != G ? G : F.t),
-                          formFields: Y
+                          ...(null != q ? q : E.t),
+                          formFields: el
                       })),
-                    null == a || a(!0);
+                    null == o || o(!0);
             } catch (l) {
                 var t, n;
                 let e = null == l ? void 0 : l.body;
-                (null == e ? void 0 : null === (t = e.errors) || void 0 === t ? void 0 : t.version) != null || (null == e ? void 0 : null === (n = e.errors) || void 0 === n ? void 0 : n.form_fields) != null ? et(P.intl.string(P.t.PD09Sk)) : et(null == e ? void 0 : e.message);
+                (null == e ? void 0 : null === (t = e.errors) || void 0 === t ? void 0 : t.version) != null || (null == e ? void 0 : null === (n = e.errors) || void 0 === n ? void 0 : n.form_fields) != null ? ea(U.intl.string(U.t.PD09Sk)) : ea(null == e ? void 0 : e.message);
             } finally {
-                $(!1);
+                er(!1);
             }
         };
     return (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, s.jsxs)(h.Z, {
-                direction: h.Z.Direction.VERTICAL,
-                justify: h.Z.Justify.BETWEEN,
-                className: R.guildSidebar,
+            (0, s.jsxs)(x.Z, {
+                direction: x.Z.Direction.VERTICAL,
+                justify: x.Z.Justify.BETWEEN,
+                className: w.guildSidebar,
                 shrink: 0,
                 children: [
                     (0, s.jsxs)('div', {
                         children: [
                             (0, s.jsx)(g.Z, {
-                                guild: ex,
+                                guild: eN,
                                 active: !0,
-                                className: o()(R.guildIcon, { [R.guildIconNoIcon]: null == ex.icon })
+                                className: a()(w.guildIcon, { [w.guildIconNoIcon]: null == eN.icon })
                             }),
                             (0, s.jsx)(u.Heading, {
                                 variant: 'heading-lg/semibold',
-                                className: R.guildName,
-                                children: null == ex ? void 0 : ex.name
+                                className: w.guildName,
+                                children: null == eN ? void 0 : eN.name
                             }),
                             (0, s.jsx)(u.Text, {
-                                className: R.guildDescription,
+                                className: w.guildDescription,
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: null == G ? void 0 : G.description
+                                children: null == q ? void 0 : q.description
                             }),
-                            null != ef && ef.length > 0
+                            null != eI && eI.length > 0
                                 ? (0, s.jsxs)(s.Fragment, {
                                       children: [
-                                          (0, s.jsx)('hr', { className: R.divider }),
-                                          (0, s.jsx)(u.FormTitle, { children: P.intl.format(P.t.KHLg5e, { emojis: ev }) }),
+                                          (0, s.jsx)('hr', { className: w.divider }),
+                                          (0, s.jsx)(u.FormTitle, { children: U.intl.format(U.t.KHLg5e, { emojis: eT }) }),
                                           (0, s.jsxs)('div', {
-                                              className: R.emojisContainer,
+                                              className: w.emojisContainer,
                                               children: [
-                                                  ef.map((e) => {
-                                                      let t = M.ZP.getEmojiURL({
+                                                  eI.map((e) => {
+                                                      let t = F.ZP.getEmojiURL({
                                                           id: e.id,
                                                           animated: !1,
                                                           size: 24
@@ -359,19 +390,19 @@ t.Z = (e) => {
                                                                       width: 24,
                                                                       height: 24,
                                                                       src: t,
-                                                                      className: R.emoji,
+                                                                      className: w.emoji,
                                                                       alt: ''
                                                                   })
                                                           },
                                                           e.id
                                                       );
                                                   }),
-                                                  null != eg && eg > 0
+                                                  null != eM && eM > 0
                                                       ? (0, s.jsx)(u.Heading, {
                                                             variant: 'heading-deprecated-12/semibold',
-                                                            className: R.emoji,
+                                                            className: w.emoji,
                                                             color: 'header-secondary',
-                                                            children: '+'.concat(eg)
+                                                            children: '+'.concat(eM)
                                                         })
                                                       : null
                                               ]
@@ -383,26 +414,26 @@ t.Z = (e) => {
                     }),
                     (0, s.jsxs)('div', {
                         children: [
-                            null != eN &&
-                                (0, s.jsxs)(h.Z, {
-                                    align: h.Z.Align.CENTER,
-                                    className: R.onlineCount,
+                            null != eb &&
+                                (0, s.jsxs)(x.Z, {
+                                    align: x.Z.Align.CENTER,
+                                    className: w.onlineCount,
                                     children: [
-                                        (0, s.jsx)('div', { className: R.dotOnline }),
+                                        (0, s.jsx)('div', { className: w.dotOnline }),
                                         (0, s.jsx)(u.Text, {
                                             variant: 'text-sm/normal',
-                                            children: P.intl.format(P.t['Oj3M6+'], { membersOnline: eN })
+                                            children: U.intl.format(U.t['Oj3M6+'], { membersOnline: eb })
                                         })
                                     ]
                                 }),
-                            null != ej &&
-                                (0, s.jsxs)(h.Z, {
-                                    align: h.Z.Align.CENTER,
+                            null != eF &&
+                                (0, s.jsxs)(x.Z, {
+                                    align: x.Z.Align.CENTER,
                                     children: [
-                                        (0, s.jsx)('div', { className: R.dotMembers }),
+                                        (0, s.jsx)('div', { className: w.dotMembers }),
                                         (0, s.jsx)(u.Text, {
                                             variant: 'text-sm/normal',
-                                            children: P.intl.format(P.t.LM4ufX, { members: ej })
+                                            children: U.intl.format(U.t.LM4ufX, { members: eF })
                                         })
                                     ]
                                 })
@@ -411,62 +442,62 @@ t.Z = (e) => {
                 ]
             }),
             (0, s.jsxs)('div', {
-                className: R.modal,
+                className: w.modal,
                 children: [
                     (0, s.jsx)(u.ModalContent, {
-                        className: R.modalContent,
+                        className: w.modalContent,
                         children: (0, s.jsx)(u.Sequencer, {
-                            className: o()(R.sequencer, { [R.centerContent]: 2 !== en }),
+                            className: a()(w.sequencer, { [w.centerContent]: 2 !== ed }),
                             steps: [0, 1, 2],
-                            step: en,
+                            step: ed,
                             children: (() => {
-                                switch (en) {
+                                switch (ed) {
                                     case 0:
-                                        return (0, s.jsx)(_, {
+                                        return (0, s.jsx)(k, {
                                             headerId: l,
-                                            email: ei,
-                                            password: er,
-                                            setEmail: es,
-                                            setPassword: ea,
-                                            emailError: eo,
-                                            passwordError: eu
+                                            email: ec,
+                                            password: ef,
+                                            setEmail: em,
+                                            setPassword: ex,
+                                            emailError: eh,
+                                            passwordError: ev
                                         });
                                     case 1:
-                                        return (0, s.jsx)(B, {
+                                        return (0, s.jsx)(V, {
                                             headerId: l,
-                                            email: ei
+                                            email: ec
                                         });
                                     case 2:
-                                        return (0, s.jsx)(H, {
+                                        return (0, s.jsx)(J, {
                                             headerId: l,
                                             guildId: i,
-                                            formState: Y,
-                                            updateFormState: X,
-                                            isPreview: A,
-                                            useReducedMotion: eC
+                                            formState: el,
+                                            updateFormState: ei,
+                                            isPreview: O,
+                                            useReducedMotion: eS
                                         });
                                 }
                             })()
                         })
                     }),
                     (() => {
-                        switch (en) {
+                        switch (ed) {
                             case 0:
                                 return (0, s.jsxs)(u.ModalFooter, {
-                                    className: R.footer,
+                                    className: w.footer,
                                     children: [
                                         (0, s.jsx)(u.Button, {
-                                            className: R.submitButton,
+                                            className: w.submitButton,
                                             type: 'submit',
-                                            submitting: K,
-                                            onClick: eI,
-                                            disabled: 0 === ei.length || 0 === er.length,
-                                            children: P.intl.string(P.t.PDTjLC)
+                                            submitting: es,
+                                            onClick: ey,
+                                            disabled: 0 === ec.length || 0 === ef.length,
+                                            children: U.intl.string(U.t.PDTjLC)
                                         }),
                                         (0, s.jsx)(u.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'header-secondary',
-                                            children: P.intl.string(P.t['9GPiR0'])
+                                            children: U.intl.string(U.t['9GPiR0'])
                                         })
                                     ]
                                 });
@@ -474,38 +505,38 @@ t.Z = (e) => {
                                 return null;
                             case 2:
                                 return (0, s.jsxs)(u.ModalFooter, {
-                                    className: R.footer,
+                                    className: w.footer,
                                     children: [
                                         (0, s.jsx)(u.Button, {
-                                            className: R.submitButton,
+                                            className: w.submitButton,
                                             type: 'submit',
-                                            submitting: K,
-                                            onClick: eM,
+                                            submitting: es,
+                                            onClick: eZ,
                                             color: u.Button.Colors.GREEN,
-                                            disabled: null == c || ep,
-                                            children: P.intl.string(P.t.geKm7u)
+                                            disabled: null == c || eE,
+                                            children: U.intl.string(U.t.geKm7u)
                                         }),
-                                        null != ee &&
+                                        null != eo &&
                                             (0, s.jsx)(u.Text, {
                                                 variant: 'text-xs/normal',
                                                 color: 'text-danger',
-                                                children: ee
+                                                children: eo
                                             }),
-                                        null == ee &&
-                                            k &&
+                                        null == eo &&
+                                            Y &&
                                             (0, s.jsxs)('div', {
-                                                className: R.disclaimerFooter,
+                                                className: w.disclaimerFooter,
                                                 children: [
                                                     (0, s.jsx)(u.Text, {
                                                         color: 'header-secondary',
                                                         variant: 'text-xs/normal',
-                                                        children: P.intl.string(P.t['+fPCTU'])
+                                                        children: U.intl.string(U.t['+fPCTU'])
                                                     }),
-                                                    eh &&
+                                                    eC &&
                                                         (0, s.jsx)(u.Text, {
                                                             color: 'header-secondary',
                                                             variant: 'text-xs/normal',
-                                                            children: P.intl.string(P.t.FwXzw8)
+                                                            children: U.intl.string(U.t.FwXzw8)
                                                         })
                                                 ]
                                             })

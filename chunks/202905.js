@@ -16,21 +16,22 @@ var i = n(200651),
 function h(e) {
     let { pendingFields: t } = e,
         h = (0, s.e7)([c.Z], () => c.Z.getProps().guild),
-        g = r.useCallback(() => {
-            if (null != h)
+        g = null == h ? void 0 : h.id,
+        x = r.useCallback(() => {
+            if (null != g)
                 (0, a.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([n.e('80026'), n.e('36869')]).then(n.bind(n, 645264));
                     return (t) =>
                         (0, i.jsx)(e, {
                             ...t,
-                            guildId: h.id,
+                            guildId: g,
                             isPreview: !0
                         });
                 });
-        }, [h]),
-        x = (0, s.e7)([o.Z], () => o.Z.get(null == h ? void 0 : h.id));
+        }, [g]),
+        p = (0, s.e7)([o.Z], () => o.Z.get(g));
     if (null == h) return null;
-    let p = null != t ? t : null == x ? void 0 : x.formFields;
+    let f = null != t ? t : null == p ? void 0 : p.formFields;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(l.X6, {
@@ -49,15 +50,15 @@ function h(e) {
                 text: u.intl.string(u.t.SKNnqq),
                 icon: a.WindowLaunchIcon,
                 variant: 'primary',
-                onClick: g
+                onClick: x
             }),
             (0, i.jsx)('div', {
                 className: m.form,
                 children:
-                    null != p
+                    null != f
                         ? (0, i.jsx)(d.y, {
                               guild: h,
-                              formFields: p
+                              formFields: f
                           })
                         : (0, i.jsx)(a.Spinner, {})
             })
