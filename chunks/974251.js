@@ -128,6 +128,7 @@ t.Z = l.memo(function (e) {
     V = eS
         ? (0, i.jsx)(c.CirclePlusIcon, {
               size: eA ? 'refresh_sm' : void 0,
+              color: 'currentColor',
               colorClass: F.attachButtonPlus
           })
         : eP

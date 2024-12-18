@@ -36,52 +36,55 @@ function I(e) {
         k = P < 0 && w,
         U = 0 === P ? E.intl.string(E.t.tU6YQ0) : P > 0 ? E.intl.formatToPlainString(E.t.qH8uFR, { count: P }) : E.intl.string(E.t.YSRIqa),
         { analyticsLocations: B } = (0, c.ZP)(u.Z.CHARACTER_COUNT);
-    return (L && P >= 0) || !M || (x && !M)
-        ? (0, i.jsx)(c.Gt, {
-              value: B,
-              children: (0, i.jsxs)('div', {
-                  className: s()(A, v.characterCount, { [v.error]: P < 0 }),
-                  children: [
-                      (0, i.jsxs)('div', {
-                          className: v.flairContainer,
-                          children: [
-                              L && P >= 0
-                                  ? (0, i.jsx)(l.Tooltip, {
-                                        text: E.intl.formatToPlainString(E.t.vcvHa2, { maxLength: R }),
-                                        position: 'top',
-                                        children: (e) =>
-                                            (0, i.jsx)(l.NitroWheelIcon, {
-                                                size: 'md',
-                                                color: 'currentColor',
-                                                className: v.premiumFlair,
-                                                ...e
-                                            })
-                                    })
-                                  : null,
-                              M || k
-                                  ? null
-                                  : (0, i.jsx)(l.Tooltip, {
-                                        text: U,
-                                        position: 'top',
-                                        children: (e) =>
-                                            (0, i.jsx)('span', {
-                                                'aria-hidden': !0,
-                                                ...e,
-                                                children: P
-                                            })
-                                    })
-                          ]
-                      }),
-                      (0, i.jsx)(l.HiddenVisually, { children: E.intl.format(E.t.qH8uFR, { count: P }) }),
-                      x && !M
-                          ? (0, i.jsx)(p.Z, {
-                                className: v.upsell,
-                                iconOnly: (null === (a = T.upsellLongMessages) || void 0 === a ? void 0 : a.iconOnly) || !1,
-                                remaining: P
-                            })
-                          : null
-                  ]
-              })
-          })
-        : null;
+    if (!((L && P >= 0) || !M || (x && !M))) return null;
+    let G = P >= 0;
+    return (0, i.jsx)(c.Gt, {
+        value: B,
+        children: (0, i.jsxs)('div', {
+            className: s()(A, v.characterCount),
+            children: [
+                (0, i.jsxs)('div', {
+                    className: v.flairContainer,
+                    children: [
+                        L && G
+                            ? (0, i.jsx)(l.Tooltip, {
+                                  text: E.intl.formatToPlainString(E.t.vcvHa2, { maxLength: R }),
+                                  position: 'top',
+                                  children: (e) =>
+                                      (0, i.jsx)(l.NitroWheelIcon, {
+                                          size: 'md',
+                                          color: 'currentColor',
+                                          className: v.premiumFlair,
+                                          ...e
+                                      })
+                              })
+                            : null,
+                        M || k
+                            ? null
+                            : (0, i.jsx)(l.Tooltip, {
+                                  text: U,
+                                  position: 'top',
+                                  children: (e) =>
+                                      (0, i.jsx)(l.Text, {
+                                          variant: 'text-sm/semibold',
+                                          tabularNumbers: !0,
+                                          'aria-hidden': !0,
+                                          ...e,
+                                          color: G ? 'text-normal' : 'text-danger',
+                                          children: P
+                                      })
+                              })
+                    ]
+                }),
+                (0, i.jsx)(l.HiddenVisually, { children: E.intl.format(E.t.qH8uFR, { count: P }) }),
+                x && !M
+                    ? (0, i.jsx)(p.Z, {
+                          className: v.upsell,
+                          iconOnly: (null === (a = T.upsellLongMessages) || void 0 === a ? void 0 : a.iconOnly) || !1,
+                          remaining: P
+                      })
+                    : null
+            ]
+        })
+    });
 }

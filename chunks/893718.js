@@ -442,7 +442,16 @@ function eP(e, n) {
             showAllButtons: tr,
             children: e5 ? (null == ev ? void 0 : ev()) : null
         }),
-        t6 = e5
+        t6 = tK
+            ? (0, s.jsx)(eu.Z, {
+                  type: J,
+                  textValue: G,
+                  className: u()(eq, { [ep.indentCharacterCount]: tX }),
+                  maxCharacterCount: eW,
+                  showRemainingCharsAfterCount: eK
+              })
+            : null,
+        t5 = e5
             ? (0, s.jsxs)('div', {
                   className: ep.accessoryBar,
                   children: [
@@ -459,9 +468,9 @@ function eP(e, n) {
                                   : null
                           ]
                       }),
-                      (0, s.jsx)('div', {
+                      (0, s.jsxs)('div', {
                           className: ep.accessoryBarRight,
-                          children: t4
+                          children: [t6, t4]
                       })
                   ]
               })
@@ -592,10 +601,10 @@ function eP(e, n) {
                                               })
                                             : t4
                                     ]
-                                }),
-                                e5 ? t6 : null
+                                })
                             ]
                         }),
+                        e5 ? t5 : null,
                         tp
                             ? null
                             : (0, s.jsx)(A.Z, {
@@ -630,15 +639,7 @@ function eP(e, n) {
                             editorHeight: tM,
                             channelId: X.id
                         }),
-                        tK
-                            ? (0, s.jsx)(eu.Z, {
-                                  type: J,
-                                  textValue: G,
-                                  className: u()(eq, { [ep.indentCharacterCount]: tX }),
-                                  maxCharacterCount: eW,
-                                  showRemainingCharsAfterCount: eK
-                              })
-                            : null,
+                        e5 ? null : t6,
                         tq
                             ? (0, s.jsx)(P.Z, {
                                   editorRef: e9,
