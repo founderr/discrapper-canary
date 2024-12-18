@@ -9,7 +9,6 @@ e.exports = {
     tagline: 'tagline_b5b752',
     actions: 'actions_b5b752',
     media: 'media_b5b752',
-    birthdayReferral: 'birthdayReferral_b5b752',
     referral: 'referral_b5b752',
     description: 'description_b5b752'
 };

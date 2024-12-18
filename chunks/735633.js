@@ -7,8 +7,6 @@ e.exports = {
     generalButtonContainer: 'generalButtonContainer_a2f60b',
     generalBodyContainer: 'generalBodyContainer_a2f60b',
     innerContent: 'innerContent_a2f60b',
-    birthdayBackgroundImage: 'birthdayBackgroundImage_a2f60b',
-    confirmationBirthdayBody: 'confirmationBirthdayBody_a2f60b',
     confirmationBody: 'confirmationBody_a2f60b',
     confirmationHeading: 'confirmationHeading_a2f60b',
     confirmationBodyCopy: 'confirmationBodyCopy_a2f60b',
