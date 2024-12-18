@@ -8,8 +8,8 @@ n.d(t, {
     n(653041);
 var i = n(200651),
     r = n(192379),
-    l = n(658722),
-    o = n.n(l),
+    o = n(658722),
+    l = n.n(o),
     u = n(392711),
     a = n.n(u),
     s = n(149765),
@@ -36,7 +36,7 @@ function v(e) {
 function b(e) {
     let { guildId: t } = e,
         n = (0, c.e7)([p.default], () => p.default.getCurrentUser()),
-        l = (0, c.e7)([_.Z], () => _.Z.getGuild(t)),
+        o = (0, c.e7)([_.Z], () => _.Z.getGuild(t)),
         u = (0, c.e7)([_.Z], () => _.Z.getRoles(t)),
         { impersonateType: b, viewingRoles: N } = (0, c.cj)([I.Z], () => ({
             impersonateType: I.Z.getImpersonateType(t),
@@ -45,7 +45,7 @@ function b(e) {
         A = b === h.z.SERVER_SHOP,
         O = (0, c.e7)([f.ZP], () => (null != n ? f.ZP.getTrueMember(t, n.id) : null)),
         [L, P] = (0, d.useMultiSelect)(null == N ? [] : E.default.keys(N)),
-        R = r.useRef(l);
+        R = r.useRef(o);
     r.useEffect(() => {
         let e = {},
             t = R.current;
@@ -61,7 +61,7 @@ function b(e) {
         }
     }, [L, b, u]);
     let M =
-            null != l && null != n && null != O
+            null != o && null != n && null != O
                 ? a()(u)
                       .filter((e) => -1 !== O.roles.indexOf(e.id))
                       .sortBy((e) => -e.position)
@@ -69,18 +69,18 @@ function b(e) {
                 : void 0,
         y = r.useMemo(
             () =>
-                null != l && null != n
+                null != o && null != n
                     ? Object.values(u)
-                          .filter((e) => e.id !== l.id)
+                          .filter((e) => e.id !== o.id)
                           .filter((e) => {
                               var t;
                               return !A || (null === (t = e.tags) || void 0 === t ? void 0 : t.subscription_listing_id) != null;
                           })
-                          .filter((e) => (null == M ? void 0 : M.id) === e.id || g.r6(l, n.id, M, e))
+                          .filter((e) => (null == M ? void 0 : M.id) === e.id || g.r6(o, n.id, M, e))
                     : [],
-            [l, n, A, M, u]
+            [o, n, A, M, u]
         );
-    if (null == n || null == l || null == O) return null;
+    if (null == n || null == o || null == O) return null;
     let x = {};
     return (O.roles.forEach((e) => {
         let t = u[e];
@@ -89,10 +89,10 @@ function b(e) {
     s.e$(
         g.I0({
             forceRoles: x,
-            context: l
+            context: o
         }),
         s.$e(C.Plq.MANAGE_GUILD, C.Plq.MANAGE_ROLES)
-    ) || l.isOwner(n.id))
+    ) || o.isOwner(n.id))
         ? (0, i.jsx)('div', {
               className: T.container,
               children: (0, i.jsx)(d.Combobox, {
@@ -103,7 +103,7 @@ function b(e) {
                   children: (e) => {
                       let t = y.reduce(
                               (t, n) => (
-                                  o()(e.toLowerCase(), n.name.toLowerCase()) &&
+                                  l()(e.toLowerCase(), n.name.toLowerCase()) &&
                                       t.push(
                                           (0, i.jsxs)(
                                               d.ComboboxItem,
@@ -118,7 +118,7 @@ function b(e) {
                               ),
                               []
                           ),
-                          n = u[l.getEveryoneRoleId()];
+                          n = u[o.getEveryoneRoleId()];
                       return (
                           null != n &&
                               t.push(

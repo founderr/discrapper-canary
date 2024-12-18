@@ -3,13 +3,13 @@ n.d(t, {
         return r;
     },
     Z: function () {
-        return o;
+        return a;
     }
 });
 var i = n(726542),
     l = n(973616);
 let r = 'xbox:';
-class o extends l.ZP {
+class a extends l.ZP {
     getIconURL() {
         return i.Z.get('xbox').icon.lightPNG;
     }

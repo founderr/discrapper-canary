@@ -1,16 +1,16 @@
 n.d(t, {
     S: function () {
-        return r;
+        return a;
     }
 });
-var o = n(259076),
-    s = n(388032);
+var s = n(308569),
+    o = n(388032);
 let l = {
-    [o.pw.DISCORD_EMPLOYEE_ASKED_ME_TO]: () => s.intl.string(s.t.naBTFB),
-    [o.pw.SOMEONE_ASKED_ME_TO]: () => s.intl.string(s.t.LQ0RUF),
-    [o.pw.NEW_EMAIL]: () => s.intl.string(s.t.oOqQj4),
-    [o.pw.SOMETHING_ELSE]: () => s.intl.string(s.t.p38n1d)
+    [s.pw.DISCORD_EMPLOYEE_ASKED_ME_TO]: () => o.intl.string(o.t.naBTFB),
+    [s.pw.SOMEONE_ASKED_ME_TO]: () => o.intl.string(o.t.LQ0RUF),
+    [s.pw.NEW_EMAIL]: () => o.intl.string(o.t.oOqQj4),
+    [s.pw.SOMETHING_ELSE]: () => o.intl.string(o.t.p38n1d)
 };
-function r(e) {
+function a(e) {
     return l[e]();
 }

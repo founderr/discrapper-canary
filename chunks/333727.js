@@ -1,54 +1,54 @@
-n.d(t, {
+i.d(t, {
     Z: function () {
         return h;
     }
 });
-var i = n(278323),
-    l = n(13245),
-    o = n(45114),
-    r = n(237997),
-    s = n(145597),
-    a = n(620954),
-    u = n(987650),
-    c = n(981631),
-    d = n(388032);
-function h(e, t, n, h) {
+var n = i(278323),
+    l = i(13245),
+    o = i(45114),
+    s = i(237997),
+    r = i(145597),
+    a = i(620954),
+    u = i(987650),
+    d = i(981631),
+    c = i(388032);
+function h(e, t, i, h) {
     let f = t.username,
-        p = d.intl.format(d.t.VDODnp, {
+        p = c.intl.format(c.t.VDODnp, {
             username: '',
-            game: n.name
+            game: i.name
         }),
-        m = t.getAvatarURL(e.guild_id, 80),
-        { trackView: v, trackClick: g } = (0, a.R)(u.n0.ActivityInvite, {
+        E = t.getAvatarURL(e.guild_id, 80),
+        { trackView: m, trackClick: v } = (0, a.R)(u.n0.ActivityInvite, {
             notif_type: u.n0.ActivityInvite,
             notif_user_id: t.id,
-            activity_type: c.mFx.JOIN_REQUEST,
+            activity_type: d.mFx.JOIN_REQUEST,
             activity_name: h.name
         });
     return {
-        icon: m,
+        icon: E,
         title: f,
         body: p,
-        confirmText: d.intl.string(d.t['fgP/wc']),
-        cancelText: d.intl.string(d.t.tpXzJy),
+        confirmText: c.intl.string(c.t['fgP/wc']),
+        cancelText: c.intl.string(c.t.tpXzJy),
         onNotificationShow: () => {
-            v();
+            m();
         },
-        onConfirmClick: (t, n) => {
-            i.Z.sendActivityInvite({
+        onConfirmClick: (t, i) => {
+            n.Z.sendActivityInvite({
                 channelId: e.id,
-                type: c.mFx.JOIN,
+                type: d.mFx.JOIN,
                 activity: h,
-                location: r.Z.isLocked((0, s.QF)()) ? c.Sbl.LOCKED_OVERLAY : c.Sbl.UNLOCKED_OVERLAY
+                location: s.Z.isLocked((0, r.QF)()) ? d.Sbl.LOCKED_OVERLAY : d.Sbl.UNLOCKED_OVERLAY
             }),
-                g('join'),
-                l.Z.updateNotificationStatus(n);
+                v('join'),
+                l.Z.updateNotificationStatus(i);
         },
-        onCancelClick: (t, n) => {
-            (0, o.In)(e.id, !0, !0), l.Z.updateNotificationStatus(n), g('decline');
+        onCancelClick: (t, i) => {
+            (0, o.In)(e.id, !0, !0), l.Z.updateNotificationStatus(i), v('decline');
         },
         onDismissClick: () => {
-            g('dismiss');
+            v('dismiss');
         }
     };
 }

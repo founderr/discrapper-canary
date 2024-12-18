@@ -79,7 +79,7 @@ let B = (e) => {
         { canCreateExpressions: z } = (0, b.XJ)(I),
         q = (0, _.e7)([R.default], () => R.default.getCurrentUser()),
         Q = (0, D.I5)(q),
-        X = (0, y.x8)('useEmojiGrid'),
+        X = (0, y.B4)({ location: 'useEmojiGrid' }),
         J = B.getCustomEmoji(),
         $ = (e) => {
             if (e.type === m.B.GUILD) return e.guildId;

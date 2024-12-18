@@ -4,62 +4,62 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    l = n(192379),
-    o = n(120356),
-    r = n.n(o),
-    s = n(752877),
-    a = n(481060),
-    u = n(110924),
-    c = n(752802),
+    r = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(752877),
+    s = n(481060),
+    c = n(110924),
+    u = n(752802),
     d = n(340101),
     h = n(228680);
 let f = 8,
-    p = (e) => {
-        let { participant: t, width: n, locked: l, widgetId: o, pinned: r } = e;
+    m = (e) => {
+        let { participant: t, width: n, locked: r, widgetId: l, pinned: o } = e;
         return (0, i.jsx)(
-            c.Z,
+            u.Z,
             {
                 participant: t,
                 width: n,
-                locked: l,
-                widgetId: o,
-                pinned: r
+                locked: r,
+                widgetId: l,
+                pinned: o
             },
             t.user.id
         );
     },
-    m = {
+    v = {
         mass: 1,
         tension: 250,
         friction: 18,
         clamp: !0
     };
-t.Z = l.memo(function (e) {
-    let { widgetId: t, tileWidth: n, layout: l, locked: o, streamParticipants: c, participantsVersion: v, pinned: g } = e,
-        E = (9 / 16) * n,
-        C = c.map((e) => ({
+t.Z = r.memo(function (e) {
+    let { widgetId: t, tileWidth: n, layout: r, locked: l, streamParticipants: u, participantsVersion: p, pinned: x } = e,
+        g = (9 / 16) * n,
+        C = u.map((e) => ({
             participant: e,
             key: e.user.id,
             width: n,
-            locked: o,
+            locked: l,
             widgetId: t,
-            height: E,
-            pinned: g
+            height: g,
+            pinned: x
         })),
-        x = (0, u.Z)(n),
-        Z = l === d.C5.VERTICAL,
+        Z = (0, c.Z)(n),
+        I = r === d.C5.VERTICAL,
+        j = 0,
         _ = 0,
-        S = 0,
-        I = (0, a.useTransition)(
-            Z
+        E = (0, s.useTransition)(
+            I
                 ? C.map((e, t) => ({
                       ...e,
-                      y: (_ += e.height + (t > 0 ? f : 0)) - e.height,
+                      y: (j += e.height + (t > 0 ? f : 0)) - e.height,
                       x: 0
                   }))
                 : C.map((e, t) => ({
                       ...e,
-                      x: (S += e.width + (t > 0 ? f : 0)) - e.width,
+                      x: (_ += e.width + (t > 0 ? f : 0)) - e.width,
                       y: 0
                   })),
             {
@@ -73,45 +73,45 @@ t.Z = l.memo(function (e) {
                     opacity: 0
                 },
                 enter: (e) => {
-                    let { x: t, y: n, width: i, height: l } = e;
+                    let { x: t, y: n, width: i, height: r } = e;
                     return {
                         x: t,
                         y: n,
                         width: i,
-                        height: l,
+                        height: r,
                         opacity: 1
                     };
                 },
                 update: (e) => {
-                    let { x: t, y: n, width: i, height: l } = e;
+                    let { x: t, y: n, width: i, height: r } = e;
                     return {
                         x: t,
                         y: n,
                         width: i,
-                        height: l
+                        height: r
                     };
                 },
-                config: m,
-                trail: n !== x ? 0 : 100
+                config: v,
+                trail: n !== Z ? 0 : 100
             },
-            n !== x ? 'animate-never' : 'respect-motion-settings'
+            n !== Z ? 'animate-never' : 'respect-motion-settings'
         );
     return (0, i.jsx)('div', {
-        className: r()({
+        className: o()({
             [h.gridContainer]: !0,
-            [h.vertical]: Z,
-            [h.horizontal]: !Z
+            [h.vertical]: I,
+            [h.horizontal]: !I
         }),
-        style: Z ? { height: _ } : { width: S },
-        children: I((e, t, l, o) =>
-            (0, i.jsx)(s.animated.div, {
+        style: I ? { height: j } : { width: _ },
+        children: E((e, t, r, l) =>
+            (0, i.jsx)(a.animated.div, {
                 className: h.gridItem,
                 style: Object.assign({}, e, {
                     width: n,
-                    height: E,
-                    zIndex: C.length - o
+                    height: g,
+                    zIndex: C.length - l
                 }),
-                children: p(t)
+                children: m(t)
             })
         )
     });

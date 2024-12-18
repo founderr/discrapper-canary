@@ -110,10 +110,10 @@ let N = (e, t) => {
 t.Z = r.memo(function (e) {
     let { wheelWidth: t, wheelHeight: n, itemWidth: C, itemHeight: f, showDeadZoneIndicator: p, activeItem: m, onItemSelect: E, onItemAction: T, interactive: I = !0, children: v } = e,
         O = r.useRef(null),
-        y = r.useRef([]),
-        j = r.useRef(!1),
+        j = r.useRef([]),
+        y = r.useRef(!1),
         _ = r.useRef(null),
-        [S, b] = r.useState(0),
+        [b, S] = r.useState(0),
         [R, A] = r.useState({
             x: 0,
             y: 0
@@ -122,9 +122,9 @@ t.Z = r.memo(function (e) {
         P = r.useMemo(() => i().chunk(v, x), [v]),
         k = r.useCallback(
             (e, t) => {
-                null == y.current[S] ? (y.current[S] = []) : (y.current[S][t] = e);
+                null == j.current[b] ? (j.current[b] = []) : (j.current[b][t] = e);
             },
-            [S]
+            [b]
         ),
         D = r.useCallback(
             (e, t) => {
@@ -137,12 +137,12 @@ t.Z = r.memo(function (e) {
         }, [E]),
         w = r.useCallback(
             (e) => {
-                B(), (j.current = e);
+                B(), (y.current = e);
             },
             [B]
         ),
         M = r.useCallback((e, t, n) => {
-            if (j.current) {
+            if (y.current) {
                 A({
                     x: 0,
                     y: 0
@@ -164,9 +164,9 @@ t.Z = r.memo(function (e) {
         }, []),
         L = r.useCallback(
             (e) => {
-                if (null != _.current) e.preventDefault(), e.stopPropagation(), null == T || T(x * S + _.current);
+                if (null != _.current) e.preventDefault(), e.stopPropagation(), null == T || T(x * b + _.current);
             },
-            [T, S]
+            [T, b]
         ),
         G = r.useMemo(
             () =>
@@ -182,35 +182,35 @@ t.Z = r.memo(function (e) {
                             x: e.clientX,
                             y: e.clientY
                         };
-                    if ((M(i, s, Math.max(t, n)), j.current)) {
+                    if ((M(i, s, Math.max(t, n)), y.current)) {
                         null != m && B();
                         return;
                     }
                     let o = (0, a.ld)(s, i, Math.max(t, n));
-                    for (let e = 0; e < y.current[S].length; e++) {
-                        let t = y.current[S][e];
+                    for (let e = 0; e < j.current[b].length; e++) {
+                        let t = j.current[b][e];
                         if (null == t) continue;
                         let n = t.getBoundingClientRect();
                         if ((0, a.Vr)(s, o, n)) {
-                            D(S, e);
+                            D(b, e);
                             return;
                         }
                     }
                     B();
                 }, 16),
-            [m, M, B, D, S, n, t]
+            [m, M, B, D, b, n, t]
         ),
         V = r.useCallback(
             (e) => {
                 if (!I) return;
-                let t = S + (e.deltaY > 0 ? 1 : -1);
-                t >= 0 && t < P.length && (null != _.current && (P[t].length > _.current ? D(t, _.current) : B()), b(t));
+                let t = b + (e.deltaY > 0 ? 1 : -1);
+                t >= 0 && t < P.length && (null != _.current && (P[t].length > _.current ? D(t, _.current) : B()), S(t));
             },
-            [I, S, P, D, B]
+            [I, b, P, D, B]
         ),
         U = r.useMemo(
             () =>
-                P[S].map((e, r) => {
+                P[b].map((e, r) => {
                     let s = h[r];
                     if (null == s) throw Error('Too many items supplied '.concat(v.length, ' expected max of ').concat(h.length));
                     let i = g(s.x, t, C),
@@ -231,7 +231,7 @@ t.Z = r.memo(function (e) {
                         r
                     );
                 }),
-            [P, S, t, C, n, f, v.length, k]
+            [P, b, t, C, n, f, v.length, k]
         );
     return (0, l.jsx)(o.Clickable, {
         className: u.chatWheelMouseInput,

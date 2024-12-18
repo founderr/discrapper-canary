@@ -1,23 +1,23 @@
 e.d(t, {
     u: function () {
-        return a;
+        return s;
     }
 });
 var i = e(211739),
-    l = e(680089),
-    o = e(984933),
-    r = e(914010),
-    u = e(981631);
-let a = {
+    o = e(680089),
+    r = e(984933),
+    l = e(914010),
+    d = e(981631);
+let s = {
     binds: ['mod+shift+a'],
     comboKeysBindGlobal: !0,
     action() {
-        let n = r.Z.getGuildId();
+        let n = l.Z.getGuildId();
         return (
             null != n &&
-            (o.ZP.getChannels(n)[u.d4z.GUILD_CATEGORY].some((n) => {
+            (r.ZP.getChannels(n)[d.d4z.GUILD_CATEGORY].some((n) => {
                 let { channel: t } = n;
-                return 'null' !== t.id && !l.Z.isCollapsed(t.id);
+                return 'null' !== t.id && !o.Z.isCollapsed(t.id);
             })
                 ? (0, i.N5)(n)
                 : (0, i.lc)(n),

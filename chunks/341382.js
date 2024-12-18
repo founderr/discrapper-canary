@@ -1,11 +1,11 @@
 n.d(t, {
     M: function () {
-        return l;
+        return i;
     }
 });
-var i = n(570140);
-function l(e) {
-    i.Z.dispatch({
+var s = n(570140);
+function i(e) {
+    s.Z.dispatch({
         type: 'PREMIUM_REQUIRED_MODAL_CLOSE',
         shouldContinue: e
     });

@@ -6,7 +6,7 @@ n.d(t, {
         return d;
     },
     RT: function () {
-        return p;
+        return m;
     },
     ls: function () {
         return h;
@@ -14,18 +14,18 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var l = n(120356),
-    o = n.n(l),
-    r = n(692547),
-    s = n(481060),
-    a = n(765250),
-    u = n(388032),
-    c = n(122087);
+var r = n(120356),
+    l = n.n(r),
+    o = n(692547),
+    a = n(481060),
+    s = n(765250),
+    c = n(388032),
+    u = n(122087);
 function d(e) {
     let { children: t } = e;
     return (0, i.jsx)('div', {
-        className: c.titleWrapper,
-        children: (0, i.jsx)(s.Text, {
+        className: u.titleWrapper,
+        children: (0, i.jsx)(a.Text, {
             variant: 'text-xs/semibold',
             color: 'header-primary',
             children: t
@@ -34,57 +34,57 @@ function d(e) {
 }
 function h(e) {
     let { onClick: t } = e,
-        n = u.intl.string(u.t['3D5yo6']);
-    return (0, i.jsx)(s.Tooltip, {
+        n = c.intl.string(c.t['3D5yo6']);
+    return (0, i.jsx)(a.Tooltip, {
         text: n,
         'aria-label': n,
         children: (e) =>
-            (0, i.jsx)(s.Clickable, {
+            (0, i.jsx)(a.Clickable, {
                 ...e,
-                className: c.button,
+                className: u.button,
                 onClick: t,
-                children: (0, i.jsx)(s.SettingsIcon, {
+                children: (0, i.jsx)(a.SettingsIcon, {
                     size: 'xxs',
-                    color: r.Z.colors.INTERACTIVE_ACTIVE
+                    color: o.Z.colors.INTERACTIVE_ACTIVE
                 })
             })
     });
 }
 function f(e) {
     let { widgetId: t, showAllStreams: n } = e,
-        l = n ? u.intl.string(u.t.q2B3rq) : u.intl.string(u.t.JKGi6u),
+        r = n ? c.intl.string(c.t.q2B3rq) : c.intl.string(c.t.JKGi6u),
         d = () => {
-            (0, a.zG)(t, { showAllStreams: !n });
+            (0, s.zG)(t, { showAllStreams: !n });
         };
-    return (0, i.jsx)(s.Tooltip, {
-        text: l,
-        'aria-label': l,
+    return (0, i.jsx)(a.Tooltip, {
+        text: r,
+        'aria-label': r,
         children: (e) =>
-            (0, i.jsx)(s.Clickable, {
+            (0, i.jsx)(a.Clickable, {
                 ...e,
-                className: o()(c.button, n && c.active),
+                className: l()(u.button, n && u.active),
                 onClick: d,
-                children: (0, i.jsx)(s.ScreenIcon, {
+                children: (0, i.jsx)(a.ScreenIcon, {
                     size: 'xxs',
-                    color: n ? r.Z.colors.BG_BRAND : r.Z.colors.INTERACTIVE_ACTIVE
+                    color: n ? o.Z.colors.BG_BRAND : o.Z.colors.INTERACTIVE_ACTIVE
                 })
             })
     });
 }
-function p(e) {
+function m(e) {
     let { id: t, pinned: n } = e,
-        l = n ? u.intl.string(u.t.cSu80t) : u.intl.string(u.t.cM8Vnp);
-    return (0, i.jsx)(s.Tooltip, {
-        text: l,
-        'aria-label': l,
+        r = n ? c.intl.string(c.t.cSu80t) : c.intl.string(c.t.cM8Vnp);
+    return (0, i.jsx)(a.Tooltip, {
+        text: r,
+        'aria-label': r,
         children: (e) =>
-            (0, i.jsx)(s.Clickable, {
+            (0, i.jsx)(a.Clickable, {
                 ...e,
-                className: o()(c.button, n && c.active),
-                onClick: () => (0, a.xh)(t),
-                children: (0, i.jsx)(s.PinUprightIcon, {
+                className: l()(u.button, n && u.active),
+                onClick: () => (0, s.xh)(t),
+                children: (0, i.jsx)(a.PinUprightIcon, {
                     size: 'xxs',
-                    color: n ? r.Z.colors.BG_BRAND : r.Z.colors.INTERACTIVE_ACTIVE
+                    color: n ? o.Z.colors.BG_BRAND : o.Z.colors.INTERACTIVE_ACTIVE
                 })
             })
     });

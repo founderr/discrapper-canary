@@ -1,6 +1,6 @@
 n.d(t, {
     EB: function () {
-        return o;
+        return l;
     },
     Je: function () {
         return a;
@@ -14,14 +14,14 @@ n.d(t, {
 });
 var i = n(570140),
     r = n(881052),
-    l = n(824389);
-let o = async (e) => {
+    o = n(824389);
+let l = async (e) => {
         i.Z.dispatch({
             type: 'GUILD_PRODUCTS_FETCH',
             guildId: e
         });
         try {
-            let t = await l.uV(e);
+            let t = await o.uV(e);
             i.Z.dispatch({
                 type: 'GUILD_PRODUCTS_FETCH_SUCCESS',
                 guildId: e,
@@ -40,7 +40,7 @@ let o = async (e) => {
             productId: t
         });
         try {
-            let n = await l.p9(e, t);
+            let n = await o.p9(e, t);
             return (
                 i.Z.dispatch({
                     type: 'GUILD_PRODUCT_FETCH_SUCCESS',
@@ -60,7 +60,7 @@ let o = async (e) => {
         }
     };
 async function a(e, t, n) {
-    let r = await l.Je(e, t, n);
+    let r = await o.Je(e, t, n);
     return (
         i.Z.dispatch({
             type: 'GUILD_PRODUCT_UPDATE',
@@ -71,7 +71,7 @@ async function a(e, t, n) {
 }
 async function s(e, t) {
     return (
-        await l.mh(e, t),
+        await o.mh(e, t),
         i.Z.dispatch({
             type: 'GUILD_PRODUCT_DELETE',
             productId: t

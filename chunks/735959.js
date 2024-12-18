@@ -16,13 +16,13 @@ var r = n(200651),
     h = n(665149),
     m = n(706454),
     x = n(428530),
-    f = n(257785),
-    p = n(388032);
+    p = n(257785),
+    f = n(388032);
 function g() {
     let e = (0, c.e7)([m.default], () => m.default.locale),
         [t, n] = a.useState(),
         i = (0, l.runtimeHashMessageKey)(null != t ? t : ''),
-        g = a.useMemo(() => p.t[i], [i]);
+        g = a.useMemo(() => f.t[i], [i]);
     return (0, r.jsxs)('div', {
         children: [
             (0, r.jsxs)(h.ZP, {
@@ -34,25 +34,25 @@ function g() {
                     (0, r.jsx)(h.ZP.Title, { children: 'Locale' })
                 ]
             }),
-            (0, r.jsxs)(f.E, {
+            (0, r.jsxs)(p.E, {
                 children: [
-                    (0, r.jsx)(f.Z9, {
+                    (0, r.jsx)(p.Z9, {
                         name: 'Active System',
                         children: u.vJ ? '@discord/intl' : '@discordapp/i18n'
                     }),
-                    (0, r.jsx)(f.Z9, {
+                    (0, r.jsx)(p.Z9, {
                         name: 'App',
                         children: e
                     }),
-                    (0, r.jsx)(f.Z9, {
+                    (0, r.jsx)(p.Z9, {
                         name: '@discord/intl',
-                        children: p.intl.currentLocale
+                        children: f.intl.currentLocale
                     }),
-                    (0, r.jsx)(f.Z9, {
+                    (0, r.jsx)(p.Z9, {
                         name: 'common i18n',
                         children: s.Z.getLocale()
                     }),
-                    (0, r.jsx)(f.Z9, {
+                    (0, r.jsx)(p.Z9, {
                         name: 'Moment',
                         children: o().locale()
                     })
@@ -75,13 +75,13 @@ function g() {
                 style: { margin: 16 },
                 placeholder: 'Find a message'
             }),
-            (0, r.jsxs)(f.E, {
+            (0, r.jsxs)(p.E, {
                 children: [
-                    (0, r.jsx)(f.Z9, {
+                    (0, r.jsx)(p.Z9, {
                         name: 'Hashed key',
                         children: i
                     }),
-                    (0, r.jsx)(f.Z9, {
+                    (0, r.jsx)(p.Z9, {
                         name: 'Exists?',
                         children: null != g ? 'yes' : 'no'
                     })

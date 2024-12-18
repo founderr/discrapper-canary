@@ -3,14 +3,14 @@ n.d(t, {
         return r;
     }
 });
-var i = n(200651);
+var s = n(200651);
 n(192379);
-var l = n(481060);
+var i = n(481060);
 function r(e) {
-    (0, l.openModalLazy)(async () => {
+    (0, i.openModalLazy)(async () => {
         let { default: t } = await n.e('16554').then(n.bind(n, 917314));
         return (n) =>
-            (0, i.jsx)(t, {
+            (0, s.jsx)(t, {
                 guildId: e,
                 ...n
             });

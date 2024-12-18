@@ -1,13 +1,13 @@
 e.d(t, {
     iN: function () {
-        return l;
+        return o;
     },
     oV: function () {
-        return o;
+        return r;
     }
 });
 var i = e(846027);
-let l = {
+let o = {
         binds: ['mod+shift+m'],
         comboKeysBindGlobal: !0,
         action: () => (
@@ -18,7 +18,7 @@ let l = {
             !1
         )
     },
-    o = {
+    r = {
         binds: ['mod+shift+d'],
         comboKeysBindGlobal: !0,
         action: () => (

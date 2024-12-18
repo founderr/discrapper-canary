@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return f;
     }
 });
 var r = n(200651);
@@ -16,7 +16,7 @@ var a = n(120356),
     h = n(594174),
     m = n(173183),
     x = n(232186);
-let f = () => {
+let p = () => {
     Promise.all([n.e('52030'), n.e('66411')])
         .then(n.bind(n, 24031))
         .then((e) => {
@@ -42,7 +42,7 @@ let f = () => {
             );
         });
 };
-function p() {
+function f() {
     let e = h.default.getCurrentUser(),
         t = null == e ? void 0 : e.isStaff(),
         n = d.Rt.useSetting();
@@ -55,7 +55,7 @@ function p() {
             (0, r.jsx)('div', {
                 className: l()(m.buttonsContainer, x.marginBottom20),
                 children: (0, r.jsx)(i.Button, {
-                    onClick: f,
+                    onClick: p,
                     children: 'Launch MFA'
                 })
             }),

@@ -1,4 +1,4 @@
-let i = (0, n(818083).B)({
+let n = (0, i(818083).B)({
     kind: 'user',
     id: '2024-10_hotwheels_overlay_invites',
     label: 'Overlay Invites Notification',
@@ -11,4 +11,4 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-t.Z = i;
+t.Z = n;

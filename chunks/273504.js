@@ -42,13 +42,13 @@ n.d(t, {
         return f;
     },
     jj: function () {
-        return l.j;
+        return o.j;
     },
     n4: function () {
         return s;
     },
     q4: function () {
-        return o.q;
+        return l.q;
     },
     uE: function () {
         return p;
@@ -56,8 +56,8 @@ n.d(t, {
 });
 var i,
     r,
-    l = n(401653),
-    o = n(95930),
+    o = n(401653),
+    l = n(95930),
     u = n(41381);
 ((i = r || (r = {}))[(i.PROFANITY = 1)] = 'PROFANITY'), (i[(i.SEXUAL_CONTENT = 2)] = 'SEXUAL_CONTENT'), (i[(i.SLURS = 3)] = 'SLURS'), u.f.USER_PROFILE, u.f.SERVER_POLICY, u.f.MENTION_SPAM, u.f.ML_SPAM, u.f.DEFAULT_KEYWORD_LIST, u.f.KEYWORD;
 let a = 1000,

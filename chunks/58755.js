@@ -17,11 +17,11 @@ var r = n(200651),
     h = n(246992),
     m = n(500949),
     x = n(833999);
-let f = Object.keys(m.jQ).map((e) => ({
+let p = Object.keys(m.jQ).map((e) => ({
         value: e,
         label: e
     })),
-    p = Array.from(
+    f = Array.from(
         Array.from(
             Object.keys(c.b).reduce((e, t) => {
                 let [n] = t.split('.');
@@ -40,7 +40,7 @@ function g(e) {
             className: x.section,
             children: [
                 (0, r.jsx)(d.SearchableSelect, {
-                    options: p,
+                    options: f,
                     placeholder: 'Select a scale to edit...',
                     value: void 0,
                     onChange: (e) => {
@@ -91,7 +91,7 @@ function g(e) {
             ]
         }),
         u = l.find((e) => e.name === i),
-        f =
+        p =
             null != u
                 ? (0, r.jsx)(b, {
                       onClose: () => o(null),
@@ -99,11 +99,11 @@ function g(e) {
                       setState: n
                   })
                 : s;
-    return (0, r.jsx)('div', { children: f });
+    return (0, r.jsx)('div', { children: p });
 }
 function b(e) {
     let { scale: t, setState: n, onClose: a } = e,
-        { name: c, base: p, darkness: g, lightness: b, showColumnarPalettePreview: v, colorSpace: C, easingStrength: _ = 1, useP3ColorSpace: T, steps: S = 26 } = t,
+        { name: c, base: f, darkness: g, lightness: b, showColumnarPalettePreview: v, colorSpace: C, easingStrength: T = 1, useP3ColorSpace: _, steps: S = 26 } = t,
         N = (0, m.XM)(t),
         y = (0, m.W6)(N, c);
     return (0, r.jsxs)(d.FormSection, {
@@ -151,7 +151,7 @@ function b(e) {
                     }),
                     (0, r.jsx)('input', {
                         type: 'color',
-                        value: p,
+                        value: f,
                         onChange: (e) => (0, m.Ib)(c, e.target.value, n)
                     })
                 ]
@@ -164,7 +164,7 @@ function b(e) {
                         children: 'The color space used to generate the palette. Different color spaces will produce different results.'
                     }),
                     (0, r.jsx)(d.SingleSelect, {
-                        options: f,
+                        options: p,
                         value: C,
                         onChange: (e) => (0, m.t4)(c, e, n),
                         popoutLayerContext: h.O$
@@ -218,7 +218,7 @@ function b(e) {
             (0, r.jsx)(d.FormSection, {
                 title: 'Easing',
                 children: (0, r.jsxs)(d.FormItem, {
-                    title: 'Easing Strength ('.concat(_.toFixed(2), ')'),
+                    title: 'Easing Strength ('.concat(T.toFixed(2), ')'),
                     children: [
                         (0, r.jsx)(d.FormText, {
                             type: d.FormTextTypes.DESCRIPTION,
@@ -226,7 +226,7 @@ function b(e) {
                         }),
                         (0, r.jsx)(d.Slider, {
                             onValueRender: () => null,
-                            initialValue: _,
+                            initialValue: T,
                             minValue: 1,
                             maxValue: 5,
                             onValueChange: (e) => (0, m.rd)(c, e, n),
@@ -249,7 +249,7 @@ function b(e) {
                     (0, r.jsx)(d.FormItem, {
                         children: (0, r.jsx)(d.FormSwitch, {
                             note: 'Renders the palette preview in a single column, useful for comparing the luminance of each step.',
-                            value: T,
+                            value: _,
                             disabled: !m.S2,
                             onChange: (e) => (0, m.uF)(c, e, n),
                             children: 'Use P3 Color Space'

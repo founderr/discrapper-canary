@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return _;
     }
 }),
     n(47120),
@@ -8,26 +8,26 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    o = n(481060),
-    a = n(110924),
+    a = n(481060),
+    o = n(110924),
     s = n(693546),
     c = n(863249),
     u = n(937111),
     d = n(914010),
     h = n(289090),
     p = n(727258),
-    m = n(234383),
-    f = n(179809),
+    f = n(234383),
+    m = n(179809),
     g = n(588275),
-    C = n(388032),
-    v = n(738945);
-function _(e) {
+    v = n(388032),
+    C = n(738945);
+function x(e) {
     let { onActivate: t, children: n } = e,
         s = (0, r.e7)([u.Z], () => u.Z.hasJoinRequestCoackmark()),
         d = l.useCallback(() => {
             c.ZP.clearCoachmark();
         }, []),
-        h = (0, a.Z)(s),
+        h = (0, o.Z)(s),
         p = l.useRef(null);
     return (
         l.useEffect(() => {
@@ -37,42 +37,42 @@ function _(e) {
             }
         }, [p, s, h, t]),
         (0, i.jsxs)('div', {
-            className: v.container,
+            className: C.container,
             children: [
-                (0, i.jsx)(o.Popout, {
+                (0, i.jsx)(a.Popout, {
                     ref: p,
                     shouldShow: s,
                     renderPopout: () =>
                         (0, i.jsxs)('div', {
-                            className: v.popoutContainer,
+                            className: C.popoutContainer,
                             children: [
                                 (0, i.jsxs)('div', {
-                                    className: v.popoutContent,
+                                    className: C.popoutContent,
                                     children: [
                                         (0, i.jsxs)('div', {
-                                            className: v.coachmarkTextContainer,
+                                            className: C.coachmarkTextContainer,
                                             children: [
-                                                (0, i.jsx)(o.Heading, {
+                                                (0, i.jsx)(a.Heading, {
                                                     variant: 'heading-md/medium',
-                                                    children: C.intl.string(C.t.fRUGzs)
+                                                    children: v.intl.string(v.t.fRUGzs)
                                                 }),
-                                                (0, i.jsx)(o.Text, {
+                                                (0, i.jsx)(a.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'text-muted',
-                                                    children: C.intl.string(C.t.ja0Tg4)
+                                                    children: v.intl.string(v.t.ja0Tg4)
                                                 })
                                             ]
                                         }),
-                                        (0, i.jsx)(o.Button, {
+                                        (0, i.jsx)(a.Button, {
                                             fullWidth: !0,
-                                            size: o.ButtonSizes.SMALL,
-                                            color: o.ButtonColors.BRAND,
+                                            size: a.ButtonSizes.SMALL,
+                                            color: a.ButtonColors.BRAND,
                                             onClick: d,
-                                            children: C.intl.string(C.t.E0MgHh)
+                                            children: v.intl.string(v.t.E0MgHh)
                                         })
                                     ]
                                 }),
-                                (0, i.jsx)('div', { className: v.popoutCaretLeft })
+                                (0, i.jsx)('div', { className: C.popoutCaretLeft })
                             ]
                         }),
                     position: 'right',
@@ -82,7 +82,7 @@ function _(e) {
                     children: (e) =>
                         (0, i.jsx)('div', {
                             ...e,
-                            className: v.popoutAnchor
+                            className: C.popoutAnchor
                         })
                 }),
                 n
@@ -90,50 +90,50 @@ function _(e) {
         })
     );
 }
-function x(e) {
+function _(e) {
     let { onActivate: t } = e,
-        [n, x] = l.useState(!1),
+        [n, _] = l.useState(!1),
         I = (0, r.e7)([d.Z], () => d.Z.getGuildId()),
-        b = (0, r.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
-        E = (0, m.Z)(),
-        S = (0, a.Z)(I),
-        Z = l.useMemo(() => {
+        Z = (0, r.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
+        b = (0, f.Z)(),
+        S = (0, o.Z)(I),
+        N = l.useMemo(() => {
             let e = (0, p.qQ)({
                 folderId: h.S.PENDING_JOIN_REQUESTS_FOLDER,
-                folderName: C.intl.string(C.t['scsU+v']),
+                folderName: v.intl.string(v.t['scsU+v']),
                 expanded: n,
                 guildIds: []
             });
-            for (let t of E) e.children.push((0, p.Mg)(t, e.id));
+            for (let t of b) e.children.push((0, p.Mg)(t, e.id));
             return e;
-        }, [E, n]);
+        }, [b, n]);
     l.useEffect(() => {
-        n && !b && s.Z.fetchRequestToJoinGuilds();
-    }, [n, b]);
-    let N = null != I && E.includes(I);
+        n && !Z && s.Z.fetchRequestToJoinGuilds();
+    }, [n, Z]);
+    let E = null != I && b.includes(I);
     return (l.useEffect(() => {
-        !n && N && S !== I && x(!0);
-    }, [n, N, S, I]),
-    0 === E.length)
+        !n && E && S !== I && _(!0);
+    }, [n, E, S, I]),
+    0 === b.length)
         ? null
-        : (0, i.jsx)(_, {
+        : (0, i.jsx)(x, {
               onActivate: t,
-              children: (0, i.jsx)(f.Z, {
-                  folderNode: Z,
+              children: (0, i.jsx)(m.Z, {
+                  folderNode: N,
                   expanded: n,
-                  useCircleMask: !n && !N,
-                  selected: N,
+                  useCircleMask: !n && !E,
+                  selected: E,
                   draggable: !1,
                   sorting: !1,
                   onExpandCollapse: () => {
-                      x(!n), c.ZP.clearCoachmark();
+                      _(!n), c.ZP.clearCoachmark();
                   },
-                  folderIconContent: (0, i.jsx)(o.HourglassIcon, {
+                  folderIconContent: (0, i.jsx)(a.HourglassIcon, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 24,
                       height: 24,
-                      className: v.pendingIcon
+                      className: C.pendingIcon
                   }),
                   renderChildNode: function (e) {
                       return e.type !== p.eD.GUILD ? null : (0, i.jsx)(g.Z, { guildNode: e }, e.id);

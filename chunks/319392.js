@@ -1,77 +1,77 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return f;
+        return C;
     }
 });
-var o = n(200651);
-n(192379);
-var r = n(481060),
-    i = n(726542),
-    c = n(198993),
-    s = n(63063),
-    l = n(376340),
-    a = n(981631),
-    d = n(927923),
-    u = n(388032),
-    x = n(961324),
-    C = n(418811);
-function p() {
+var o = t(200651);
+t(192379);
+var i = t(481060),
+    r = t(726542),
+    c = t(198993),
+    s = t(63063),
+    a = t(376340),
+    l = t(981631),
+    d = t(927923),
+    u = t(388032),
+    f = t(961324),
+    p = t(629582);
+function x() {
     return (0, o.jsxs)('div', {
-        className: x.getXboxApp,
+        className: f.getXboxApp,
         children: [
             (0, o.jsxs)('div', {
-                className: x.getXboxAppBody,
+                className: f.getXboxAppBody,
                 children: [
-                    (0, o.jsxs)(r.Heading, {
-                        className: x.getXboxAppHeading,
+                    (0, o.jsxs)(i.Heading, {
+                        className: f.getXboxAppHeading,
                         variant: 'text-lg/semibold',
                         children: [
                             (0, o.jsx)('div', {
-                                className: x.xboxLogoBox,
+                                className: f.xboxLogoBox,
                                 children: (0, o.jsx)('img', {
-                                    src: i.Z.get(a.ABu.XBOX).icon.whiteSVG,
+                                    src: r.Z.get(l.ABu.XBOX).icon.whiteSVG,
                                     alt: ''
                                 })
                             }),
                             u.intl.string(u.t['12Kx2t'])
                         ]
                     }),
-                    (0, o.jsx)(r.Text, {
+                    (0, o.jsx)(i.Text, {
                         tag: 'p',
                         variant: 'text-md/normal',
                         color: 'header-secondary',
                         children: u.intl.string(u.t.M5yEcX)
                     }),
-                    (0, o.jsx)(r.Text, {
+                    (0, o.jsx)(i.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        children: (0, o.jsx)(r.Anchor, {
-                            href: s.Z.getArticleURL(a.BhN.XBOX_CONNECTION),
+                        children: (0, o.jsx)(i.Anchor, {
+                            href: s.Z.getArticleURL(l.BhN.XBOX_CONNECTION),
                             children: u.intl.string(u.t.hvVgAQ)
                         })
                     })
                 ]
             }),
             (0, o.jsx)(c.ZP, {
-                className: x.getXboxAppQR,
+                className: f.getXboxAppQR,
                 text: d.X3,
                 size: 90
             })
         ]
     });
 }
-function f(e) {
-    let { onClose: t } = e;
-    return (0, o.jsx)(l.L, {
+function C(e) {
+    let { onClose: n } = e;
+    return (0, o.jsx)(a.L, {
         img: (0, o.jsx)('img', {
-            src: C,
-            width: '232',
-            height: '113',
+            src: p.Z,
+            width: '124',
+            height: '160',
             alt: ''
         }),
         title: u.intl.string(u.t['7QsHmp']),
         body: u.intl.string(u.t.byYNPT),
-        content: (0, o.jsx)(p, {}),
-        onClose: t
+        content: (0, o.jsx)(x, {}),
+        onClose: n
     });
 }

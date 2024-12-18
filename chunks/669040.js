@@ -196,7 +196,7 @@ let Q = 0,
                     }),
                 [h, n, Q, D, x]
             ),
-            ed = (0, A.x8)('EmojiPickerList-useListRenderers'),
+            ed = (0, A.B4)({ location: 'EmojiPickerList-useListRenderers' }),
             ef = s.useCallback(
                 (e, r) => {
                     let i = h[e],

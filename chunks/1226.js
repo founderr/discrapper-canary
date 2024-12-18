@@ -1,9 +1,9 @@
 n.d(t, {
     BO: function () {
-        return a;
+        return s;
     },
     cq: function () {
-        return c;
+        return u;
     },
     gI: function () {
         return d;
@@ -12,25 +12,25 @@ n.d(t, {
         return h;
     },
     yA: function () {
-        return u;
+        return c;
     }
 });
 var i = n(348327),
-    l = n.n(i),
-    o = n(972959),
-    r = n(569545);
-let s = (0, o.H)(() => ({ streams: {} }));
-function a(e) {
+    r = n.n(i),
+    l = n(972959),
+    o = n(569545);
+let a = (0, l.H)(() => ({ streams: {} }));
+function s(e) {
     var t, n;
-    let i = (0, r.V9)(e);
-    return null !== (n = null === (t = s.useState((e) => e.streams, l())[i]) || void 0 === t ? void 0 : t.zoom) && void 0 !== n ? n : 100;
+    let i = (0, o.V9)(e);
+    return null !== (n = null === (t = a.useState((e) => e.streams, r())[i]) || void 0 === t ? void 0 : t.zoom) && void 0 !== n ? n : 100;
 }
-function u(e) {
-    return a(e) / 100;
+function c(e) {
+    return s(e) / 100;
 }
-function c(e, t) {
-    let n = (0, r.V9)(e);
-    s.setState((e) => {
+function u(e, t) {
+    let n = (0, o.V9)(e);
+    a.setState((e) => {
         var i;
         return {
             ...e,
@@ -45,8 +45,8 @@ function c(e, t) {
     }, !0);
 }
 function d(e, t) {
-    let n = (0, r.V9)(e);
-    s.setState((e) => {
+    let n = (0, o.V9)(e);
+    a.setState((e) => {
         var i;
         return {
             ...e,
@@ -62,6 +62,6 @@ function d(e, t) {
 }
 function h(e) {
     var t;
-    let n = (0, r.V9)(e);
-    return null === (t = s.useState((e) => e.streams, l())[n]) || void 0 === t ? void 0 : t.fitOverride;
+    let n = (0, o.V9)(e);
+    return null === (t = a.useState((e) => e.streams, r())[n]) || void 0 === t ? void 0 : t.fitOverride;
 }

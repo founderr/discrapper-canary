@@ -2,50 +2,50 @@ n(47120);
 var i,
     l,
     r,
-    o,
-    a = n(442837),
+    a,
+    o = n(442837),
     s = n(570140),
     c = n(131704),
     u = n(251625),
     d = n(592125),
     h = n(306680),
     p = n(944486),
-    m = n(55589);
-let f = [];
+    f = n(55589);
+let m = [];
 function g() {
-    let e = m.Z.getPrivateChannelIds().filter((e) => h.ZP.getMentionCount(e) > 0);
-    return e.length > 20 && (e.length = 20), !(0, u.EF)(e, f) && ((f = e), !0);
+    let e = f.Z.getPrivateChannelIds().filter((e) => h.ZP.getMentionCount(e) > 0);
+    return e.length > 20 && (e.length = 20), !(0, u.EF)(e, m) && ((m = e), !0);
 }
-function C() {
+function v() {
     return g();
 }
-function v(e) {
+function C(e) {
     let { channelId: t } = e,
         n = d.Z.getChannel(t);
     return !!(null != n && (0, c.hv)(n.type)) && g();
 }
-class _ extends (i = a.ZP.Store) {
+class x extends (i = o.ZP.Store) {
     initialize() {
-        this.waitFor(m.Z, d.Z, p.Z, h.ZP);
+        this.waitFor(f.Z, d.Z, p.Z, h.ZP);
     }
     getUnreadPrivateChannelIds() {
-        return f;
+        return m;
     }
 }
-(o = 'PrivateChannelReadStateStore'),
-    (r = 'displayName') in (l = _)
+(a = 'PrivateChannelReadStateStore'),
+    (r = 'displayName') in (l = x)
         ? Object.defineProperty(l, r, {
-              value: o,
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = o),
-    (t.Z = new _(s.Z, {
-        CONNECTION_OPEN: C,
-        OVERLAY_INITIALIZE: C,
-        MESSAGE_CREATE: v,
-        MESSAGE_ACK: v,
+        : (l[r] = a),
+    (t.Z = new x(s.Z, {
+        CONNECTION_OPEN: v,
+        OVERLAY_INITIALIZE: v,
+        MESSAGE_CREATE: C,
+        MESSAGE_ACK: C,
         CHANNEL_SELECT: function (e) {
             let { channelId: t } = e,
                 n = d.Z.getChannel(t);

@@ -1,9 +1,9 @@
 n.d(t, {
     I: function () {
-        return l;
+        return i;
     }
 });
-var i = n(570140);
-function l() {
-    i.Z.dispatch({ type: 'HD_STREAMING_VIEWER_UPDATE_LAST_TRIGGERED' });
+var s = n(570140);
+function i() {
+    s.Z.dispatch({ type: 'HD_STREAMING_VIEWER_UPDATE_LAST_TRIGGERED' });
 }

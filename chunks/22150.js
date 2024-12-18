@@ -1,76 +1,76 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return m;
     }
 }),
     n(47120);
-var o = n(200651),
-    s = n(192379),
+var s = n(200651),
+    o = n(192379),
     l = n(442837),
-    r = n(481060),
+    a = n(481060),
     i = n(479531),
-    a = n(393869),
-    c = n(594174),
-    d = n(388032),
+    r = n(393869),
+    d = n(594174),
+    c = n(388032),
     u = n(981818);
-function E(e) {
+function m(e) {
     let { onNext: t, onClose: n } = e,
-        [E, _] = s.useState(!1),
-        m = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
+        [m, _] = o.useState(!1),
+        E = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
         N = async (e) => {
             e.preventDefault(), _(!0);
             try {
-                await (0, a.i)(), t();
+                await (0, r.i)(), t();
             } catch (t) {
                 let e = new i.Z(t).getAnyErrorMessage();
-                null != e && (0, r.showToast)((0, r.createToast)(e, r.ToastType.FAILURE));
+                null != e && (0, a.showToast)((0, a.createToast)(e, a.ToastType.FAILURE));
             } finally {
                 _(!1);
             }
         };
-    return (0, o.jsxs)('form', {
+    return (0, s.jsxs)('form', {
         onSubmit: N,
         children: [
-            (0, o.jsxs)(r.ModalHeader, {
+            (0, s.jsxs)(a.ModalHeader, {
                 separator: !1,
                 className: u.header,
                 children: [
-                    (0, o.jsx)(r.Heading, {
+                    (0, s.jsx)(a.Heading, {
                         className: u.title,
                         variant: 'heading-xl/extrabold',
-                        children: d.intl.string(d.t.uFxYq6)
+                        children: c.intl.string(c.t.uFxYq6)
                     }),
-                    (0, o.jsx)(r.ModalCloseButton, {
+                    (0, s.jsx)(a.ModalCloseButton, {
                         onClick: n,
                         className: u.modalCloseButton
                     })
                 ]
             }),
-            (0, o.jsx)(r.ModalContent, {
+            (0, s.jsx)(a.ModalContent, {
                 className: u.content,
-                children: (0, o.jsx)(r.Text, {
+                children: (0, s.jsx)(a.Text, {
                     className: u.description,
                     variant: 'text-md/normal',
-                    children: d.intl.format(d.t.oMFSgo, { oldEmail: null == m ? void 0 : m.email })
+                    children: c.intl.format(c.t.oMFSgo, { oldEmail: null == E ? void 0 : E.email })
                 })
             }),
-            (0, o.jsxs)(r.ModalFooter, {
+            (0, s.jsxs)(a.ModalFooter, {
                 className: u.modalFooter,
                 children: [
-                    (0, o.jsx)(r.Button, {
+                    (0, s.jsx)(a.Button, {
                         type: 'submit',
-                        color: r.Button.Colors.BRAND,
-                        size: r.Button.Sizes.MEDIUM,
-                        submitting: E,
+                        color: a.Button.Colors.BRAND,
+                        size: a.Button.Sizes.MEDIUM,
+                        submitting: m,
                         className: u.__invalid_submit,
-                        children: d.intl.string(d.t.rXV81N)
+                        children: c.intl.string(c.t.rXV81N)
                     }),
-                    (0, o.jsx)(r.Button, {
+                    (0, s.jsx)(a.Button, {
                         className: u.__invalid_cancel,
-                        look: r.Button.Looks.LINK,
-                        color: r.Button.Colors.PRIMARY,
+                        look: a.Button.Looks.LINK,
+                        color: a.Button.Colors.PRIMARY,
                         onClick: n,
-                        children: d.intl.string(d.t['ETE/oK'])
+                        children: c.intl.string(c.t['ETE/oK'])
                     })
                 ]
             })

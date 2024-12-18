@@ -7,60 +7,60 @@ var i,
     l,
     r = n(200651);
 n(192379);
-var o = n(442837),
-    a = n(481060),
+var a = n(442837),
+    o = n(481060),
     s = n(893776),
     c = n(391650),
     u = n(313201),
     d = n(144114),
     h = n(607744),
     p = n(594174),
-    m = n(981631),
-    f = n(815660),
+    f = n(981631),
+    m = n(815660),
     g = n(388032),
-    C = n(496472);
+    v = n(496472);
 (i = l || (l = {}))[(i.VOICE = 0)] = 'VOICE';
 t.Z = (e) => {
     let { type: t, guildId: i, closePopout: l } = e,
-        v = (0, u.Dt)(),
-        { notClaimed: _, notEmailVerified: x, notPhoneVerified: I, newAccount: b, newMember: E } = (0, o.e7)([h.Z], () => h.Z.getCheck(i), [i]),
+        C = (0, u.Dt)(),
+        { notClaimed: x, notEmailVerified: _, notPhoneVerified: I, newAccount: Z, newMember: b } = (0, a.e7)([h.Z], () => h.Z.getCheck(i), [i]),
         S = 0 === t ? g.intl.string(g.t['6zY8BA']) : null,
-        Z = null,
-        N = null;
-    return (0 === t && (_ ? ((Z = g.intl.string(g.t.IRxUlJ)), (N = g.intl.string(g.t.fiNVio))) : I ? ((Z = g.intl.string(g.t.vW8iUF)), (N = g.intl.string(g.t['50gfOj']))) : x ? ((Z = g.intl.string(g.t.vdSOp6)), (N = g.intl.string(g.t.lm1UKi))) : E ? ((Z = g.intl.formatToPlainString(g.t.v1ktYW, { min: m.YeM.MEMBER_AGE })), (N = g.intl.string(g.t.BddRzc))) : b && ((Z = g.intl.formatToPlainString(g.t['sncw4+'], { min: m.YeM.ACCOUNT_AGE })), (N = g.intl.string(g.t.BddRzc)))), null == S || null == Z)
+        N = null,
+        E = null;
+    return (0 === t && (x ? ((N = g.intl.string(g.t.IRxUlJ)), (E = g.intl.string(g.t.fiNVio))) : I ? ((N = g.intl.string(g.t.vW8iUF)), (E = g.intl.string(g.t['50gfOj']))) : _ ? ((N = g.intl.string(g.t.vdSOp6)), (E = g.intl.string(g.t.lm1UKi))) : b ? ((N = g.intl.formatToPlainString(g.t.v1ktYW, { min: f.YeM.MEMBER_AGE })), (E = g.intl.string(g.t.BddRzc))) : Z && ((N = g.intl.formatToPlainString(g.t['sncw4+'], { min: f.YeM.ACCOUNT_AGE })), (E = g.intl.string(g.t.BddRzc)))), null == S || null == N)
         ? null
-        : (0, r.jsxs)(a.Dialog, {
-              className: C.container,
-              'aria-labelledby': v,
+        : (0, r.jsxs)(o.Dialog, {
+              className: v.container,
+              'aria-labelledby': C,
               children: [
                   (0, r.jsx)('img', {
                       alt: '',
-                      className: C.image,
+                      className: v.image,
                       src: n(64395)
                   }),
                   (0, r.jsxs)('div', {
-                      className: C.content,
+                      className: v.content,
                       children: [
-                          (0, r.jsx)(a.Heading, {
+                          (0, r.jsx)(o.Heading, {
                               variant: 'heading-md/semibold',
-                              id: v,
+                              id: C,
                               children: S
                           }),
-                          (0, r.jsx)(a.Text, {
+                          (0, r.jsx)(o.Text, {
                               color: 'header-secondary',
                               variant: 'text-sm/normal',
-                              children: Z
+                              children: N
                           }),
                           (0, r.jsxs)('div', {
-                              className: C.buttonContainer,
+                              className: v.buttonContainer,
                               children: [
-                                  null != N
-                                      ? (0, r.jsx)(a.Button, {
+                                  null != E
+                                      ? (0, r.jsx)(o.Button, {
                                             onClick: () => {
-                                                _
+                                                x
                                                     ? c.j()
                                                     : I
-                                                      ? (0, a.openModalLazy)(
+                                                      ? (0, o.openModalLazy)(
                                                             async () => {
                                                                 let { default: e } = await Promise.all([n.e('76540'), n.e('51501')]).then(n.bind(n, 607018));
                                                                 return (t) =>
@@ -69,18 +69,18 @@ t.Z = (e) => {
                                                                         ...t
                                                                     });
                                                             },
-                                                            { modalKey: f.M }
+                                                            { modalKey: m.M }
                                                         )
-                                                      : x &&
+                                                      : _ &&
                                                         (s.Z.verifyResend(),
-                                                        (0, a.openModal)((e) => {
+                                                        (0, o.openModal)((e) => {
                                                             var t;
-                                                            return (0, r.jsx)(a.ConfirmModal, {
+                                                            return (0, r.jsx)(o.ConfirmModal, {
                                                                 header: g.intl.string(g.t.LykQYm),
                                                                 confirmText: g.intl.string(g.t.BddRzc),
-                                                                confirmButtonColor: a.Button.Colors.BRAND,
+                                                                confirmButtonColor: o.Button.Colors.BRAND,
                                                                 ...e,
-                                                                children: (0, r.jsx)(a.Text, {
+                                                                children: (0, r.jsx)(o.Text, {
                                                                     variant: 'text-md/normal',
                                                                     children: g.intl.format(g.t.azKEPz, { email: null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.email })
                                                                 })
@@ -88,15 +88,15 @@ t.Z = (e) => {
                                                         })),
                                                     l();
                                             },
-                                            className: C.primaryButton,
-                                            children: N
+                                            className: v.primaryButton,
+                                            children: E
                                         })
                                       : null,
-                                  _ || I || x
-                                      ? (0, r.jsx)(a.Button, {
+                                  x || I || _
+                                      ? (0, r.jsx)(o.Button, {
                                             onClick: l,
-                                            look: a.Button.Looks.BLANK,
-                                            className: C.cancel,
+                                            look: o.Button.Looks.BLANK,
+                                            className: v.cancel,
                                             children: g.intl.string(g.t.oEAioK)
                                         })
                                       : null

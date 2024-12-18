@@ -17,8 +17,8 @@ var i = n(913527),
     h = n(883904),
     m = n(211644),
     x = n(675478),
-    f = n(681619),
-    p = n(388958);
+    p = n(681619),
+    f = n(388958);
 ((a = r || (r = {})).EVENT = 'events'), (a.CANDIDATES = 'candidates');
 let g = (e) => {
         switch (e) {
@@ -68,23 +68,23 @@ function j() {
             dismissibleContent: e
         }));
     return (0, l.jsxs)('div', {
-        className: p.panelContainer,
+        className: f.panelContainer,
         children: [
             (0, l.jsxs)('div', {
-                className: p.buttonContainer,
+                className: f.buttonContainer,
                 children: [
                     (0, l.jsx)(d.Button, {
-                        className: p.button,
+                        className: f.button,
                         onClick: () => (0, h.EG)(),
                         children: 'Reset Daily Cap'
                     }),
                     (0, l.jsx)(d.Button, {
-                        className: p.button,
+                        className: f.button,
                         onClick: x.sr,
                         children: 'Clear All Dismissed Contents'
                     }),
                     (0, l.jsx)(d.Button, {
-                        className: p.button,
+                        className: f.button,
                         onClick: x.bE,
                         children: 'Check All Dismissed Contents'
                     })
@@ -92,20 +92,20 @@ function j() {
             }),
             (0, l.jsx)('br', {}),
             (0, l.jsxs)('div', {
-                className: p.info,
+                className: f.info,
                 children: ['Last winner time: ', r]
             }),
             (0, l.jsx)('br', {}),
             (0, l.jsx)('div', {
-                className: p.candidatesTableContainer,
-                children: (0, l.jsx)(f.Z, {
-                    className: p.candidatesTable,
+                className: f.candidatesTableContainer,
+                children: (0, l.jsx)(p.Z, {
+                    className: f.candidatesTable,
                     columns: v,
                     data: i
                 })
             }),
             (0, l.jsx)('br', {}),
-            (0, l.jsx)(f.Z, {
+            (0, l.jsx)(p.Z, {
                 columns: b,
                 data: a
             })

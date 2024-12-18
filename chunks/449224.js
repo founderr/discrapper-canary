@@ -31,7 +31,7 @@ class _ extends (a = s.ZP.Store) {
         return u.Z.getGameByName(r);
     }
     getGame() {
-        return __OVERLAY__ ? i : null;
+        return i;
     }
 }
 c(_, 'displayName', 'OverlayRunningGameStore'),

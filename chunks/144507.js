@@ -17,8 +17,8 @@ n.d(t, {
 });
 var i,
     r,
-    l = n(442837),
-    o = n(223892),
+    o = n(442837),
+    l = n(223892),
     u = n(674180),
     a = n(496675),
     s = n(594174),
@@ -29,27 +29,27 @@ function f(e) {
     if (e.guild.hasFeature(d.oNc.CREATOR_MONETIZABLE_DISABLED)) return 0;
     if (
         (function (e) {
-            let { guild: t, isOwner: n, canManageGuildRoleSubscriptions: i, isGuildEligibleForRoleSubscriptions: r, isExpeditedMonetizationOnboardingGuild: l, isUserInCreatorMonetizationEligibleCountry: o, shouldRestrictUpdatingRoleSubscriptionSettings: u } = e;
-            return !!i && (!u || !!n) && (!!(t.hasFeature(d.oNc.CREATOR_MONETIZABLE) || t.hasFeature(d.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) || (!!t.hasFeature(d.oNc.COMMUNITY) && (!!r || !!l) && n && o));
+            let { guild: t, isOwner: n, canManageGuildRoleSubscriptions: i, isGuildEligibleForRoleSubscriptions: r, isExpeditedMonetizationOnboardingGuild: o, isUserInCreatorMonetizationEligibleCountry: l, shouldRestrictUpdatingRoleSubscriptionSettings: u } = e;
+            return !!i && (!u || !!n) && (!!(t.hasFeature(d.oNc.CREATOR_MONETIZABLE) || t.hasFeature(d.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) || (!!t.hasFeature(d.oNc.COMMUNITY) && (!!r || !!o) && n && l));
         })(e)
     )
         return 3;
-    let { guild: t, isOwner: n, isUserInCreatorMonetizationEligibleCountry: i, isMonetizationWaitlistEnabledForGuild: r, isGuildEligibleForRoleSubscriptions: l, isExpeditedMonetizationOnboardingGuild: o } = e;
-    return n && !i && r ? 1 : n && r && (l || o) && !t.hasFeature(d.oNc.COMMUNITY) ? 2 : 0;
+    let { guild: t, isOwner: n, isUserInCreatorMonetizationEligibleCountry: i, isMonetizationWaitlistEnabledForGuild: r, isGuildEligibleForRoleSubscriptions: o, isExpeditedMonetizationOnboardingGuild: l } = e;
+    return n && !i && r ? 1 : n && r && (o || l) && !t.hasFeature(d.oNc.COMMUNITY) ? 2 : 0;
 }
 function _(e) {
     return 0 !== f(e);
 }
 function p(e) {
     let t = (0, c.Bt)(null == e ? void 0 : e.id),
-        n = (0, o.Ob)(e),
-        i = (0, o.gS)(null == e ? void 0 : e.id),
+        n = (0, l.Ob)(e),
+        i = (0, l.gS)(null == e ? void 0 : e.id),
         r = g(e),
-        a = (0, l.e7)([s.default], () => {
+        a = (0, o.e7)([s.default], () => {
             let t = s.default.getCurrentUser();
             return null != t && (null == e ? void 0 : e.isOwner(t)) === !0;
         }),
-        d = (0, o.Sd)(),
+        d = (0, l.Sd)(),
         { shouldRestrictUpdatingCreatorMonetizationSettings: _ } = (0, u.gX)(null == e ? void 0 : e.id);
     return null == e
         ? 0
@@ -65,7 +65,7 @@ function p(e) {
           });
 }
 function g(e) {
-    return (0, l.e7)([a.Z], () => E(e), [e]);
+    return (0, o.e7)([a.Z], () => E(e), [e]);
 }
 function E(e) {
     return null != e && a.Z.can(d.Plq.ADMINISTRATOR, e);

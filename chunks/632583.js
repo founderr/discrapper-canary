@@ -76,33 +76,33 @@ let u = 'currentColor',
             })
         });
     },
-    T = (e, n, r, i, a) => {
-        if (!n || i) return e ? c : u;
-        let s = r ? [...E.keys()].filter((e) => e !== a) : [...g.keys()].filter((e) => e !== a),
-            o = Math.floor(Math.random() * s.length);
-        return s[o];
+    T = (e, n, r, i) => {
+        if (r) return e ? c : u;
+        let a = n ? [...E.keys()].filter((e) => e !== i) : [...g.keys()].filter((e) => e !== i),
+            s = Math.floor(Math.random() * a.length);
+        return a[s];
     };
 function b(e) {
     var n;
-    let { width: r = 31, height: i = 22, referralsRemaining: c, isResending: d, hovered: f, shouldShowBirthdayUX: _, isLightTheme: h, ...p } = e,
-        [m, E] = s.useState(u),
-        b = null !== (n = g.get(m)) && void 0 !== n ? n : null;
+    let { width: r = 31, height: i = 22, referralsRemaining: c, isResending: d, hovered: f, isLightTheme: _, ...h } = e,
+        [p, m] = s.useState(u),
+        E = null !== (n = g.get(p)) && void 0 !== n ? n : null;
     return (
         s.useEffect(() => {
-            f ? E((e) => T(f, _, h, d, e)) : d && E(u);
-        }, [f, _, h, d]),
+            f ? m((e) => T(f, _, d, e)) : d && m(u);
+        }, [f, _, d]),
         (0, a.jsxs)('svg', {
             width: r,
             height: i,
-            ...(0, l.Z)(p),
+            ...(0, l.Z)(h),
             xmlns: 'http://www.w3.org/2000/svg',
             children: [
                 d
-                    ? (0, a.jsx)(I, { fillColor: m })
+                    ? (0, a.jsx)(I, { fillColor: p })
                     : (0, a.jsx)(v, {
                           referralsRemaining: c,
-                          fillColor: f ? m : u,
-                          secondaryFillColor: f ? b : null
+                          fillColor: f ? p : u,
+                          secondaryFillColor: f ? E : null
                       }),
                 (0, a.jsxs)('defs', {
                     children: [

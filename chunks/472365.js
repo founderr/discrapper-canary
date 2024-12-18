@@ -1,124 +1,124 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return w;
     }
 }),
     n(411104);
-var i = n(200651),
-    l = n(192379),
+var s = n(200651),
+    i = n(192379),
     r = n(120356),
     o = n.n(r),
-    a = n(399606),
-    s = n(481060),
+    l = n(399606),
+    a = n(481060),
     c = n(588705),
     u = n(100527),
     d = n(906732),
     h = n(388905),
-    p = n(792766),
-    m = n(600164),
-    f = n(436774),
-    g = n(313201),
+    E = n(792766),
+    p = n(600164),
+    _ = n(436774),
+    m = n(313201),
     C = n(451603),
-    v = n(885714),
-    _ = n(973616),
-    x = n(594174),
-    I = n(855981),
-    b = n(55543),
-    E = n(626135),
-    S = n(768581),
-    Z = n(358085),
-    N = n(998502),
-    y = n(379164),
-    T = n(590965),
-    j = n(981631),
-    A = n(474936),
+    g = n(885714),
+    f = n(973616),
+    N = n(594174),
+    b = n(855981),
+    R = n(55543),
+    I = n(626135),
+    T = n(768581),
+    S = n(358085),
+    O = n(998502),
+    A = n(379164),
+    x = n(590965),
+    y = n(981631),
+    M = n(474936),
     P = n(388032),
-    R = n(939661),
-    M = n(232186);
-function L() {
+    L = n(939661),
+    v = n(232186);
+function D() {
     let { analyticsLocations: e, sourceAnalyticsLocations: t } = (0, d.ZP)(u.Z.PREMIUM_UPSELL_TOOLTIP);
     return (
-        l.useEffect(() => {
-            E.default.track(j.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: A.cd.GUILD_CAP_INLINE_INVITE_MODAL,
-                location: { page: j.ZY5.NATIVE_INVITE_MODAL },
+        i.useEffect(() => {
+            I.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: M.cd.GUILD_CAP_INLINE_INVITE_MODAL,
+                location: { page: y.ZY5.NATIVE_INVITE_MODAL },
                 location_stack: t
             });
         }, [t]),
-        (0, i.jsxs)(s.Clickable, {
+        (0, s.jsxs)(a.Clickable, {
             onClick: () =>
-                (0, v.Z)({
-                    analyticsSource: { page: j.Sbl.EXTERNAL_INVITE_LINK_MODAL },
+                (0, g.Z)({
+                    analyticsSource: { page: y.Sbl.EXTERNAL_INVITE_LINK_MODAL },
                     analyticsLocation: {
-                        page: j.Sbl.EXTERNAL_INVITE_LINK_MODAL,
-                        section: j.jXE.GUILD_CAP_UPSELL_MODAL
+                        page: y.Sbl.EXTERNAL_INVITE_LINK_MODAL,
+                        section: y.jXE.GUILD_CAP_UPSELL_MODAL
                     },
                     analyticsLocations: e
                 }),
-            className: R.experimentUpsellError,
+            className: L.experimentUpsellError,
             children: [
-                (0, i.jsx)(s.NitroWheelIcon, {
+                (0, s.jsx)(a.NitroWheelIcon, {
                     size: 'md',
-                    className: R.experimentUpsellIcon,
-                    color: f.JX.PREMIUM_TIER_2
+                    className: L.experimentUpsellIcon,
+                    color: _.JX.PREMIUM_TIER_2
                 }),
-                (0, i.jsx)('span', {
-                    className: R.experimentUpsellText,
+                (0, s.jsx)('span', {
+                    className: L.experimentUpsellText,
                     children: P.intl.string(P.t['4/W4Pz'])
                 }),
-                (0, i.jsx)('span', {
-                    className: R.experimentGetNitro,
+                (0, s.jsx)('span', {
+                    className: L.experimentGetNitro,
                     children: P.intl.string(P.t.b6KOkJ)
                 })
             ]
         })
     );
 }
-function w(e) {
+function Z(e) {
     let { className: t } = e;
-    return (0, i.jsxs)('div', {
+    return (0, s.jsxs)('div', {
         'aria-hidden': 'true',
-        className: o()(R.iconContainer, t),
+        className: o()(L.iconContainer, t),
         children: [
-            (0, i.jsx)(I.Z, { className: R.iconSparklePlus }),
-            (0, i.jsx)(s.LinkIcon, {
+            (0, s.jsx)(b.Z, { className: L.iconSparklePlus }),
+            (0, s.jsx)(a.LinkIcon, {
                 size: 'custom',
                 color: 'currentColor',
-                className: R.iconLink,
+                className: L.iconLink,
                 width: 40,
                 height: 40
             }),
-            (0, i.jsx)(b.Z, { className: R.iconSparkleStar })
+            (0, s.jsx)(R.Z, { className: L.iconSparkleStar })
         ]
     });
 }
-function D(e) {
+function U(e) {
     let { transitionState: t } = e,
-        n = (0, g.Dt)(),
-        { analyticsLocations: l } = (0, d.ZP)(u.Z.INVITE_MODAL);
-    return (0, i.jsx)(d.Gt, {
-        value: l,
-        children: (0, i.jsx)(s.ModalRoot, {
-            size: s.ModalSize.DYNAMIC,
+        n = (0, m.Dt)(),
+        { analyticsLocations: i } = (0, d.ZP)(u.Z.INVITE_MODAL);
+    return (0, s.jsx)(d.Gt, {
+        value: i,
+        children: (0, s.jsx)(a.ModalRoot, {
+            size: a.ModalSize.DYNAMIC,
             'aria-labelledby': n,
             transitionState: t,
-            children: (0, i.jsxs)(s.ModalContent, {
-                className: R.errorContent,
+            children: (0, s.jsxs)(a.ModalContent, {
+                className: L.errorContent,
                 children: [
-                    (0, i.jsx)(w, { className: R.errorImage }),
-                    (0, i.jsx)(s.Heading, {
+                    (0, s.jsx)(Z, { className: L.errorImage }),
+                    (0, s.jsx)(a.Heading, {
                         id: n,
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
                         children: P.intl.string(P.t.u9zxnZ)
                     }),
-                    (0, i.jsx)('div', {
-                        className: R.errorBody,
+                    (0, s.jsx)('div', {
+                        className: L.errorBody,
                         children: P.intl.string(P.t.FWkU6O)
                     }),
-                    (0, i.jsx)(h.zx, {
+                    (0, s.jsx)(h.zx, {
                         size: h.zx.Sizes.LARGE,
-                        onClick: () => y.Z.close(),
+                        onClick: () => A.Z.close(),
                         color: h.zx.Colors.BRAND,
                         children: P.intl.string(P.t.wcqOoK)
                     })
@@ -127,125 +127,125 @@ function D(e) {
         })
     });
 }
-function O(e) {
+function w(e) {
     let t,
         n,
         { transitionState: r } = e;
-    (0, a.e7)([x.default], () => {
+    (0, l.e7)([N.default], () => {
         var e;
-        return null === (e = x.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType;
+        return null === (e = N.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType;
     });
-    let { invite: f, error: v, submitting: I } = (0, a.cj)([T.Z], () => T.Z.getProps());
-    l.useEffect(() => {
-        !__OVERLAY__ && Z.isPlatformEmbedded && ((0, Z.isWindows)() ? N.ZP.minimize() : N.ZP.restore(), N.ZP.focus());
+    let { invite: _, error: g, submitting: b } = (0, l.cj)([x.Z], () => x.Z.getProps());
+    i.useEffect(() => {
+        !__OVERLAY__ && S.isPlatformEmbedded && ((0, S.isWindows)() ? O.ZP.minimize() : O.ZP.restore(), O.ZP.focus());
     }, []);
-    let b = (0, g.Dt)(),
-        { analyticsLocations: E } = (0, d.ZP)(u.Z.INVITE_MODAL);
-    if (null == f) return null;
-    if (f.state === j.r2o.EXPIRED || f.state === j.r2o.BANNED || f.state === j.r2o.ERROR) return (0, i.jsx)(D, { transitionState: r });
-    if (null == f.channel) return null;
-    function A() {
-        null != f && y.Z.acceptInvite(f);
+    let R = (0, m.Dt)(),
+        { analyticsLocations: I } = (0, d.ZP)(u.Z.INVITE_MODAL);
+    if (null == _) return null;
+    if (_.state === y.r2o.EXPIRED || _.state === y.r2o.BANNED || _.state === y.r2o.ERROR) return (0, s.jsx)(U, { transitionState: r });
+    if (null == _.channel) return null;
+    function M() {
+        null != _ && A.Z.acceptInvite(_);
     }
-    let { guild: w, channel: O, inviter: k, target_application: G } = f,
-        U = null != w,
-        B = null != f.stage_instance,
-        H = null == f.guild && null == f.channel && null != f.inviter;
-    if (null != G) (t = null == w ? void 0 : w.name), (n = _.ZP.createFromServer(G).getCoverImageURL(1024));
-    else if (null != w)
-        (t = w.name),
-            (n = S.ZP.getGuildSplashURL({
-                id: w.id,
-                splash: w.splash
+    let { guild: Z, channel: w, inviter: k, target_application: j } = _,
+        H = null != Z,
+        V = null != _.stage_instance,
+        G = null == _.guild && null == _.channel && null != _.inviter;
+    if (null != j) (t = null == Z ? void 0 : Z.name), (n = f.ZP.createFromServer(j).getCoverImageURL(1024));
+    else if (null != Z)
+        (t = Z.name),
+            (n = T.ZP.getGuildSplashURL({
+                id: Z.id,
+                splash: Z.splash
             }));
-    else if (((null == (t = O.name) || '' === t) && null != k && (t = k.username), null == t)) throw Error('no name for group DM invite');
-    let V = (0, C.yU)(),
-        F = B ? P.intl.string(P.t['5UKyUl']) : P.intl.format(P.t.QD7BDA, { guildName: t });
+    else if (((null == (t = w.name) || '' === t) && null != k && (t = k.username), null == t)) throw Error('no name for group DM invite');
+    let K = (0, C.yU)(),
+        W = V ? P.intl.string(P.t['5UKyUl']) : P.intl.format(P.t.QD7BDA, { guildName: t });
     return (
-        H && (F = P.intl.string(P.t['e/6Ogo'])),
-        (0, i.jsx)(d.Gt, {
-            value: E,
-            children: (0, i.jsxs)(s.ModalRoot, {
-                size: s.ModalSize.DYNAMIC,
-                'aria-labelledby': b,
+        G && (W = P.intl.string(P.t['e/6Ogo'])),
+        (0, s.jsx)(d.Gt, {
+            value: I,
+            children: (0, s.jsxs)(a.ModalRoot, {
+                size: a.ModalSize.DYNAMIC,
+                'aria-labelledby': R,
                 transitionState: r,
-                className: R.container,
+                className: L.container,
                 children: [
-                    (0, i.jsx)('div', {
-                        className: R.contentWrapper,
-                        children: (0, i.jsx)(s.Scroller, {
-                            className: R.scroller,
-                            children: (0, i.jsxs)(m.Z, {
-                                className: R.inviteContent,
-                                direction: m.Z.Direction.VERTICAL,
-                                justify: m.Z.Justify.BETWEEN,
+                    (0, s.jsx)('div', {
+                        className: L.contentWrapper,
+                        children: (0, s.jsx)(a.Scroller, {
+                            className: L.scroller,
+                            children: (0, s.jsxs)(p.Z, {
+                                className: L.inviteContent,
+                                direction: p.Z.Direction.VERTICAL,
+                                justify: p.Z.Justify.BETWEEN,
                                 children: [
-                                    (0, i.jsx)('div', {
-                                        id: b,
-                                        className: M.marginBottom20,
-                                        children: (0, i.jsx)(c.Z, {
-                                            invite: f,
-                                            disableUser: U,
-                                            error: v
+                                    (0, s.jsx)('div', {
+                                        id: R,
+                                        className: v.marginBottom20,
+                                        children: (0, s.jsx)(c.Z, {
+                                            invite: _,
+                                            disableUser: H,
+                                            error: g
                                         })
                                     }),
-                                    B && null != w
-                                        ? (0, i.jsx)('div', {
-                                              className: o()(M.marginBottom20, R.stage),
-                                              children: (0, i.jsx)(p.Z, {
+                                    V && null != Z
+                                        ? (0, s.jsx)('div', {
+                                              className: o()(v.marginBottom20, L.stage),
+                                              children: (0, s.jsx)(E.Z, {
                                                   isCard: !0,
-                                                  stageInstance: f.stage_instance,
-                                                  guild: w
+                                                  stageInstance: _.stage_instance,
+                                                  guild: Z
                                               })
                                           })
                                         : null,
-                                    (0, i.jsxs)('div', {
+                                    (0, s.jsxs)('div', {
                                         children: [
-                                            V ? (0, i.jsx)(L, {}) : null,
-                                            null == G
-                                                ? (0, i.jsx)(s.Tooltip, {
-                                                      text: V ? P.intl.string(P.t.iLyuDA) : null,
+                                            K ? (0, s.jsx)(D, {}) : null,
+                                            null == j
+                                                ? (0, s.jsx)(a.Tooltip, {
+                                                      text: K ? P.intl.string(P.t.iLyuDA) : null,
                                                       position: 'bottom',
                                                       children: (e) => {
                                                           let { onMouseEnter: t, onMouseLeave: n } = e;
-                                                          return (0, i.jsx)(h.zx, {
+                                                          return (0, s.jsx)(h.zx, {
                                                               size: h.zx.Sizes.LARGE,
-                                                              onClick: A,
-                                                              submitting: I,
-                                                              disabled: V,
-                                                              color: B ? h.zx.Colors.GREEN : h.zx.Colors.BRAND,
+                                                              onClick: M,
+                                                              submitting: b,
+                                                              disabled: K,
+                                                              color: V ? h.zx.Colors.GREEN : h.zx.Colors.BRAND,
                                                               onMouseEnter: t,
                                                               onMouseLeave: n,
-                                                              children: V ? P.intl.string(P.t.ZNCziI) : F
+                                                              children: K ? P.intl.string(P.t.ZNCziI) : W
                                                           });
                                                       }
                                                   })
-                                                : (0, i.jsxs)('div', {
-                                                      className: R.buttonGroup,
+                                                : (0, s.jsxs)('div', {
+                                                      className: L.buttonGroup,
                                                       children: [
-                                                          (0, i.jsx)(h.zx, {
+                                                          (0, s.jsx)(h.zx, {
                                                               size: h.zx.Sizes.LARGE,
-                                                              onClick: A,
-                                                              submitting: I,
+                                                              onClick: M,
+                                                              submitting: b,
                                                               children: P.intl.string(P.t.RscU7O)
                                                           }),
-                                                          (0, i.jsx)(h.zx, {
+                                                          (0, s.jsx)(h.zx, {
                                                               color: h.zx.Colors.PRIMARY,
                                                               size: h.zx.Sizes.LARGE,
-                                                              onClick: A,
-                                                              submitting: I,
+                                                              onClick: M,
+                                                              submitting: b,
                                                               children: P.intl.string(P.t.eylRaW)
                                                           })
                                                       ]
                                                   }),
-                                            (0, i.jsx)(m.Z, {
-                                                justify: m.Z.Justify.CENTER,
-                                                className: M.marginTop8,
-                                                children: (0, i.jsx)(h.zx, {
+                                            (0, s.jsx)(p.Z, {
+                                                justify: p.Z.Justify.CENTER,
+                                                className: v.marginTop8,
+                                                children: (0, s.jsx)(h.zx, {
                                                     look: h.zx.Looks.LINK,
-                                                    className: R.noThanksButton,
+                                                    className: L.noThanksButton,
                                                     onClick: function () {
-                                                        y.Z.close();
+                                                        A.Z.close();
                                                     },
                                                     color: h.zx.Colors.TRANSPARENT,
                                                     children: P.intl.string(P.t.ndsK4e)
@@ -258,8 +258,8 @@ function O(e) {
                         })
                     }),
                     null != n &&
-                        (0, i.jsx)('div', {
-                            className: R.inviteSplash,
+                        (0, s.jsx)('div', {
+                            className: L.inviteSplash,
                             style: { backgroundImage: 'url('.concat(n, ')') }
                         })
                 ]

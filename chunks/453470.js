@@ -67,7 +67,7 @@ function _(e) {
                 }),
                 b();
         },
-        S = () => {
+        N = () => {
             (0, a.openModalLazy)(async () => {
                 let { default: e } = await n.e('59385').then(n.bind(n, 480884));
                 return (n) => {
@@ -154,7 +154,7 @@ function _(e) {
                     text: C.intl.string(C.t.tC1pvL),
                     color: a.Button.Colors.BRAND,
                     onclick: () => {
-                        S(),
+                        N(),
                             (0, h.qc)({
                                 channelId: t,
                                 warningId: _,

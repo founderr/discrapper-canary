@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return f;
     }
 }),
     n(47120),
@@ -8,8 +8,8 @@ n.d(t, {
 var i = n(442837),
     l = n(853856),
     r = n(592125),
-    o = n(938475),
-    a = n(823379),
+    a = n(938475),
+    o = n(823379),
     s = n(136015),
     c = n(709054),
     u = n(565799),
@@ -17,7 +17,7 @@ var i = n(442837),
     h = n(981631);
 function p(e) {
     let { voiceState: t, userNick: n, user: i } = e,
-        l = (0, o.sQ)(t, n);
+        l = (0, a.sQ)(t, n);
     return {
         user: i,
         voiceState: t,
@@ -25,7 +25,7 @@ function p(e) {
         comparator: l
     };
 }
-function m(e) {
+function f(e) {
     let [t] = (0, i.e7)(
         [u.Z, r.Z, l.Z],
         () => {
@@ -35,7 +35,7 @@ function m(e) {
                     ? c.default
                           .keys(l.Z.getFavoriteChannels())
                           .map((e) => r.Z.getChannel(e))
-                          .filter(a.lm)
+                          .filter(o.lm)
                           .filter((e) => e.isGuildStageVoice())
                     : u.Z.getChannels(e)).reduce((e, t) => {
                 let n = u.Z.getMutableParticipants(t.id, d.pV.SPEAKER);

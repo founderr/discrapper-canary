@@ -569,40 +569,40 @@ let { Themes: i } = r(15202).V,
             BUTTON_DANGER_BORDER: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'WHITE_500',
-                        opacity: 0.1
+                        raw: 'OPACITY_WHITE_8',
+                        opacity: 0.0784313725490196
                     },
                     [i.LIGHT]: {
-                        raw: 'WHITE_500',
-                        opacity: 0.1
+                        raw: 'OPACITY_WHITE_8',
+                        opacity: 0.0784313725490196
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'WHITE_500',
-                        opacity: 0.1
+                        raw: 'OPACITY_WHITE_8',
+                        opacity: 0.0784313725490196
                     },
                     [i.DARKER]: {
-                        raw: 'WHITE_500',
-                        opacity: 0.1
+                        raw: 'OPACITY_WHITE_8',
+                        opacity: 0.0784313725490196
                     }
                 }
             },
             BUTTON_FILLED_BRAND_BORDER: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'WHITE_500',
-                        opacity: 0.1
+                        raw: 'OPACITY_WHITE_8',
+                        opacity: 0.0784313725490196
                     },
                     [i.LIGHT]: {
-                        raw: 'WHITE_500',
-                        opacity: 0.1
+                        raw: 'OPACITY_WHITE_8',
+                        opacity: 0.0784313725490196
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'WHITE_500',
-                        opacity: 0.1
+                        raw: 'OPACITY_WHITE_8',
+                        opacity: 0.0784313725490196
                     },
                     [i.DARKER]: {
-                        raw: 'WHITE_500',
-                        opacity: 0.1
+                        raw: 'OPACITY_WHITE_8',
+                        opacity: 0.0784313725490196
                     }
                 }
             },
@@ -989,20 +989,20 @@ let { Themes: i } = r(15202).V,
             BUTTON_POSITIVE_BORDER: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'WHITE_500',
-                        opacity: 0.1
+                        raw: 'OPACITY_WHITE_8',
+                        opacity: 0.0784313725490196
                     },
                     [i.LIGHT]: {
-                        raw: 'WHITE_500',
-                        opacity: 0.1
+                        raw: 'OPACITY_WHITE_8',
+                        opacity: 0.0784313725490196
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'WHITE_500',
-                        opacity: 0.1
+                        raw: 'OPACITY_WHITE_8',
+                        opacity: 0.0784313725490196
                     },
                     [i.DARKER]: {
-                        raw: 'WHITE_500',
-                        opacity: 0.1
+                        raw: 'OPACITY_WHITE_8',
+                        opacity: 0.0784313725490196
                     }
                 }
             },

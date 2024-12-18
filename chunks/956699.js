@@ -865,7 +865,7 @@ function Q() {
     throw Error('Send help');
 }
 function J() {
-    let { useOverlayV3: e } = v.Z.useExperiment({ location: 'developer_settings' }),
+    let e = (0, v.XE)('developer_settings'),
         [t, n] = s.useState(!1),
         [r, l] = s.useState('');
     return (s.useEffect(() => {
@@ -884,7 +884,7 @@ function J() {
                               setting: Z.s6.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY,
                               children: e
                                   ? (0, i.jsx)(m.Button, {
-                                        onClick: j.fK,
+                                        onClick: () => (0, j.fK)(),
                                         children: 'Open Overlay'
                                     })
                                   : (0, i.jsx)(m.Button, {

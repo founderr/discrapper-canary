@@ -1,10 +1,10 @@
 e.d(t, {
     p: function () {
-        return l;
+        return o;
     }
 });
 var i = e(358085);
-let l = {
+let o = {
     binds: ['mod+alt+i'],
     comboKeysBindGlobal: !0,
     action(n) {

@@ -13,7 +13,7 @@ n.d(t, {
     }
 });
 var i = n(13245),
-    r = n(32300),
+    r = n(371651),
     l = n(808506),
     a = n(998502),
     o = n(13140),
@@ -28,7 +28,7 @@ function m(e) {
             lock: u.VqG,
             context: u.IlC.APP
         };
-    let t = (0, r.R)();
+    let t = r.Z.isOverlayOOPEnabledForPid(e);
     return l.Z.isReady(e)
         ? (i.Z.setInputLocked(!1, e),
           {

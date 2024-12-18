@@ -1,4 +1,4 @@
-n.d(t, {
+i.d(t, {
     Z: function () {
         return u;
     },
@@ -6,18 +6,18 @@ n.d(t, {
         return a;
     }
 });
-var i = n(442837),
-    l = n(214629),
-    o = n(928518),
-    r = n(501787),
-    s = n(981631);
+var n = i(442837),
+    l = i(214629),
+    o = i(928518),
+    s = i(501787),
+    r = i(981631);
 function a() {
     var e, t;
-    let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : o.Z,
-        i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : (0, l.e1)();
-    return null !== (t = null !== (e = n.getWindow(r.OVERLAY_V3_KEY)) && void 0 !== e ? e : i ? n.getWindow(s.KJ3.ACTIVITY_POPOUT) : void 0) && void 0 !== t ? t : window;
+    let i = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : o.Z,
+        n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : (0, l.e1)();
+    return null !== (t = null !== (e = i.getWindow(s.OVERLAY_V3_KEY)) && void 0 !== e ? e : n ? i.getWindow(r.KJ3.ACTIVITY_POPOUT) : void 0) && void 0 !== t ? t : window;
 }
 function u() {
     let e = (0, l.PR)();
-    return (0, i.e7)([o.Z], () => a(o.Z, e));
+    return (0, n.e7)([o.Z], () => a(o.Z, e));
 }

@@ -326,7 +326,7 @@ class b {
         if (((this.prevScrollTop = t), null == l)) return;
         let a = this.isInPlaceholderRegion(e),
             s = t - l;
-        0 !== a && (1 === a && t + s <= 0 ? (this.mergeTo(r - n), (this.prevScrollTop = r - n)) : 2 === a && t + s >= i - n && (this.mergeTo(i - r), (this.prevScrollTop = i - r)));
+        0 !== a && 0 !== s && (1 === a && t + s <= 0 ? (this.mergeTo(r - n), (this.prevScrollTop = r - n)) : 2 === a && t + s >= i - n && (this.mergeTo(i - r), (this.prevScrollTop = i - r)));
     }
     enableAutomaticAck() {
         this.isInitialized() &&

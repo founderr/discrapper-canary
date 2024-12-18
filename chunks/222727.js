@@ -1,11 +1,11 @@
 n.d(t, {
     U: function () {
-        return l;
+        return o;
     }
 });
 var i = n(990547),
     r = n(213609);
-function l(e, t) {
+function o(e, t) {
     (0, r.Z)({
         type: i.ImpressionTypes.VIEW,
         name: i.ImpressionNames.LOCALIZED_PRICING_UPSELL_VIEWED,

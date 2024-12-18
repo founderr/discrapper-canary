@@ -130,7 +130,7 @@ function w(e) {
             disable: V
         }
     );
-    let W = (0, Z.x8)('StreamSettings'),
+    let W = (0, Z.B4)({ location: 'StreamSettings' }),
         H = N.default.getUser(null == G ? void 0 : G.hdStreamingBuyerId),
         Y = null != G && null != G.hdStreamingUntil && new Date(G.hdStreamingUntil) > new Date() && null != H,
         K = (0, v.So)(u.q.STREAM_HIGH_QUALITY),

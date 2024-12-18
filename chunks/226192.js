@@ -15,18 +15,18 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    l = n(273504),
-    o = n(388032);
+    o = n(273504),
+    l = n(388032);
 function u(e) {
     return {
-        [l.jj.BLOCK_MESSAGE]: (e, t) =>
+        [o.jj.BLOCK_MESSAGE]: (e, t) =>
             new Promise((e) => {
                 (0, r.openModalLazy)(async () => {
                     let { default: r } = await n.e('94005').then(n.bind(n, 144462));
                     return (n) => {
-                        var l;
+                        var o;
                         return (0, i.jsx)(r, {
-                            initialCustomMessage: null !== (l = t.metadata.customMessage) && void 0 !== l ? l : '',
+                            initialCustomMessage: null !== (o = t.metadata.customMessage) && void 0 !== o ? o : '',
                             onSubmit: (i) => {
                                 (t.metadata.customMessage = i), e(t), n.onClose();
                             },
@@ -36,46 +36,46 @@ function u(e) {
                     };
                 });
             }),
-        [l.jj.FLAG_TO_CHANNEL]: (t, o) =>
+        [o.jj.FLAG_TO_CHANNEL]: (t, l) =>
             new Promise((u) => {
                 (0, r.openModalLazy)(async () => {
                     let { default: r } = await n.e('74543').then(n.bind(n, 643611)),
-                        a = t.actions.find((e) => e.type === l.jj.FLAG_TO_CHANNEL);
+                        a = t.actions.find((e) => e.type === o.jj.FLAG_TO_CHANNEL);
                     return (n) =>
                         (0, i.jsx)(r, {
-                            action: o,
+                            action: l,
                             isEdit: null != a,
                             triggerType: t.triggerType,
                             guildId: e,
                             onEditChannel: (e) => {
-                                (o.metadata.channelId = e), t.exemptChannels.add(e), u(o), n.onClose();
+                                (l.metadata.channelId = e), t.exemptChannels.add(e), u(l), n.onClose();
                             },
                             ...n,
                             onClose: () => (u(null), n.onClose())
                         });
                 });
             }),
-        [l.jj.USER_COMMUNICATION_DISABLED]: (e, t) =>
-            new Promise((o) => {
+        [o.jj.USER_COMMUNICATION_DISABLED]: (e, t) =>
+            new Promise((l) => {
                 (0, r.openModalLazy)(async () => {
                     let { default: r } = await n.e('78273').then(n.bind(n, 41767)),
-                        u = e.actions.find((e) => e.type === l.jj.USER_COMMUNICATION_DISABLED);
+                        u = e.actions.find((e) => e.type === o.jj.USER_COMMUNICATION_DISABLED);
                     return (n) =>
                         (0, i.jsx)(r, {
                             action: t,
                             isEdit: null != u,
                             triggerType: e.triggerType,
                             onUpdateDuration: (e) => {
-                                null != e && (t.metadata.durationSeconds = e), o(t), n.onClose();
+                                null != e && (t.metadata.durationSeconds = e), l(t), n.onClose();
                             },
                             ...n,
-                            onClose: () => (o(null), n.onClose())
+                            onClose: () => (l(null), n.onClose())
                         });
                 });
             })
     };
 }
-function a(e, t, l, o) {
+function a(e, t, o, l) {
     (0, r.openModalLazy)(async () => {
         let { default: r } = await n.e('37483').then(n.bind(n, 241046));
         return (n) =>
@@ -84,8 +84,8 @@ function a(e, t, l, o) {
                 automodDecision: {
                     messageId: e,
                     messageContent: t,
-                    decisionId: l,
-                    channel: o
+                    decisionId: o,
+                    channel: l
                 }
             });
     });
@@ -104,14 +104,14 @@ function s(e, t) {
 function c(e) {
     (0, r.openModal)((t) =>
         (0, i.jsx)(r.ConfirmModal, {
-            header: o.intl.string(o.t.wLGrjI),
-            confirmText: o.intl.string(o.t['cY+Ooa']),
+            header: l.intl.string(l.t.wLGrjI),
+            confirmText: l.intl.string(l.t['cY+Ooa']),
             onConfirm: e,
-            cancelText: o.intl.string(o.t['ETE/oK']),
+            cancelText: l.intl.string(l.t['ETE/oK']),
             ...t,
             children: (0, i.jsx)(r.Text, {
                 variant: 'text-md/normal',
-                children: o.intl.string(o.t.arYQ2d)
+                children: l.intl.string(l.t.arYQ2d)
             })
         })
     );

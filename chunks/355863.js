@@ -298,7 +298,7 @@ let y = 'migrated',
     };
 function A(e) {
     let { layoutId: n, widgets: r, version: s, defaultResolution: o } = e;
-    if (null != i[n]) return !1;
+    if (null != i[n] && i[n].version === s) return !1;
     let l = [];
     r.forEach((e, n) => {
         let r = N(e.type),

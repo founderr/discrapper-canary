@@ -27,8 +27,8 @@ n.d(t, {
     n(47120);
 var i = n(544891),
     r = n(570140),
-    l = n(367907),
-    o = n(430824),
+    o = n(367907),
+    l = n(430824),
     u = n(496675),
     a = n(823379),
     s = n(709054),
@@ -152,10 +152,10 @@ async function v(e, t, n) {
         });
 }
 function b(e, t, n) {
-    let r = o.Z.getGuild(e);
+    let r = l.Z.getGuild(e);
     if (null != r && !!u.Z.can(_.Plq.MANAGE_GUILD, r))
         (0, f.UV)(() => {
-            (0, l.yw)(_.rMx.GUILD_AUTOMOD_FEEDBACK, {
+            (0, o.yw)(_.rMx.GUILD_AUTOMOD_FEEDBACK, {
                 feedback_type: c.x2.MENTION_RAID_REMOVE_RESTRICTION,
                 decision_id: t
             }),

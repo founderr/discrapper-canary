@@ -7,12 +7,12 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    o = n(481060),
-    a = n(686546),
+    a = n(481060),
+    o = n(686546),
     s = n(32986);
 function c(e) {
-    let { tooltipText: t, children: n, onContextMenu: l, onClick: c, disabled: u, icon: d, iconForeground: h, innerClassName: p, tooltipClassName: m, onMouseEnter: f, onMouseLeave: g, 'aria-label': C, 'aria-checked': v, role: _, tooltipColor: x, tooltipForceOpen: I, tooltipContentClassName: b } = e,
-        E =
+    let { tooltipText: t, children: n, onContextMenu: l, onClick: c, disabled: u, icon: d, iconForeground: h, innerClassName: p, tooltipClassName: f, onMouseEnter: m, onMouseLeave: g, 'aria-label': v, 'aria-checked': C, role: x, tooltipColor: _, tooltipForceOpen: I, tooltipContentClassName: Z } = e,
+        b =
             'function' == typeof d
                 ? (0, i.jsx)(d, {
                       width: 20,
@@ -22,19 +22,19 @@ function c(e) {
                       color: 'currentColor'
                   })
                 : d;
-    return (0, i.jsx)(o.Tooltip, {
-        tooltipClassName: m,
+    return (0, i.jsx)(a.Tooltip, {
+        tooltipClassName: f,
         text: t,
-        'aria-label': C,
-        color: x,
-        tooltipContentClassName: b,
+        'aria-label': v,
+        color: _,
+        tooltipContentClassName: Z,
         forceOpen: I,
         children: (e) => {
-            let { onClick: t, onMouseEnter: d, onMouseLeave: h, ...m } = e;
-            return (0, i.jsxs)(o.Button, {
-                ...m,
-                look: o.Button.Looks.BLANK,
-                size: o.Button.Sizes.NONE,
+            let { onClick: t, onMouseEnter: d, onMouseLeave: h, ...f } = e;
+            return (0, i.jsxs)(a.Button, {
+                ...f,
+                look: a.Button.Looks.BLANK,
+                size: a.Button.Sizes.NONE,
                 disabled: u,
                 innerClassName: p,
                 wrapperClassName: s.button,
@@ -46,23 +46,23 @@ function c(e) {
                     null != t && t(), null != c && c(e);
                 },
                 onMouseEnter: () => {
-                    null == d || d(), null == f || f();
+                    null == d || d(), null == m || m();
                 },
                 onMouseLeave: () => {
                     null == h || h(), null == g || g();
                 },
                 onContextMenu: l,
-                role: _,
-                'aria-checked': v,
+                role: x,
+                'aria-checked': C,
                 children: [
                     null != n
-                        ? (0, i.jsx)(a.ZP, {
+                        ? (0, i.jsx)(o.ZP, {
                               width: 20,
                               height: 20,
-                              mask: a.ZP.Masks.PANEL_BUTTON,
-                              children: E
+                              mask: o.ZP.Masks.PANEL_BUTTON,
+                              children: b
                           })
-                        : E,
+                        : b,
                     n
                 ]
             });

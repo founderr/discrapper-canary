@@ -21,8 +21,8 @@ var i = n(200651),
     E = n(829750),
     b = n(189771),
     Z = n(294629),
-    S = n(793319),
-    N = n(411840),
+    N = n(793319),
+    S = n(411840),
     T = n(560688),
     j = n(390322),
     A = n(871499),
@@ -66,7 +66,7 @@ function ei(e) {
         r = (0, X.Z)(l.id),
         [a, c] = (0, Q.Z)(l),
         d = (0, s.e7)([k.Z], () => k.Z.can($.Plq.REQUEST_TO_SPEAK, l)),
-        { groupedButtons: u } = (0, N.Z)({ location: 'AudienceRaiseHandButton' });
+        { groupedButtons: u } = (0, S.Z)({ location: 'AudienceRaiseHandButton' });
     if (r) return null;
     return (0, i.jsx)(A.d, {
         isActive: a,
@@ -80,7 +80,7 @@ function ei(e) {
 let el = l.memo(function (e) {
     let { channel: t } = e,
         n = (0, s.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]),
-        { groupedButtons: l } = (0, N.Z)({ location: 'AudienceControlTray' });
+        { groupedButtons: l } = (0, S.Z)({ location: 'AudienceControlTray' });
     return l
         ? (0, i.jsxs)('div', {
               className: et.container,
@@ -99,7 +99,7 @@ let el = l.memo(function (e) {
 });
 function er(e) {
     let { onClick: t } = e,
-        { groupedButtons: n } = (0, N.Z)({ location: 'MakeMeASpeakerButton' });
+        { groupedButtons: n } = (0, S.Z)({ location: 'MakeMeASpeakerButton' });
     return n
         ? (0, i.jsx)(A.d, {
               onClick: t,
@@ -141,7 +141,7 @@ function ea(e) {
         g = F.ZP.isModerator(m, t.id),
         x = (0, H.B)(t.id),
         v = r(u),
-        { groupedButtons: I } = (0, N.Z)({ location: 'ExitStageButton' });
+        { groupedButtons: I } = (0, S.Z)({ location: 'ExitStageButton' });
     if (!h)
         return (0, i.jsx)(o.Button, {
             size: o.Button.Sizes.MEDIUM,
@@ -255,7 +255,7 @@ function ea(e) {
 }
 function es(e) {
     let { onClick: t } = e,
-        { groupedButtons: n } = (0, N.Z)({ location: 'MoveToAudienceButton' });
+        { groupedButtons: n } = (0, S.Z)({ location: 'MoveToAudienceButton' });
     return n
         ? (0, i.jsx)(A.d, {
               iconComponent: o.GroupArrowDownIcon,
@@ -318,7 +318,7 @@ let ec = l.memo(function (e) {
         U = (0, z.PK)(t.id),
         G = _ > 0,
         F = (A && !U) || (null != w && w.user.id !== (null == y ? void 0 : y.id)),
-        { groupedButtons: V } = (0, N.Z)({ location: 'SpeakerControlTray' });
+        { groupedButtons: V } = (0, S.Z)({ location: 'SpeakerControlTray' });
     if (null == y) return null;
     let W = (0, i.jsxs)(i.Fragment, {
         children: [
@@ -339,7 +339,7 @@ let ec = l.memo(function (e) {
                         hasPermission: v,
                         enabled: x,
                         cameraUnavailable: C,
-                        onChange: S.r,
+                        onChange: N.r,
                         onCameraUnavailable: T.Z,
                         channelLimitReached: A,
                         channelLimit: _,
@@ -350,7 +350,7 @@ let ec = l.memo(function (e) {
             }),
             V
                 ? null
-                : (0, i.jsx)(S.NZ, {
+                : (0, i.jsx)(N.NZ, {
                       channel: t,
                       currentUser: y,
                       exitFullScreen: () => null,
@@ -415,7 +415,7 @@ let ec = l.memo(function (e) {
                       className: et.buttonSection,
                       children: [
                           k && !n && G
-                              ? (0, i.jsx)(S.NZ, {
+                              ? (0, i.jsx)(N.NZ, {
                                     channel: t,
                                     currentUser: y,
                                     exitFullScreen: () => null,
@@ -483,7 +483,7 @@ let ec = l.memo(function (e) {
 });
 function ed(e) {
     let { channel: t } = e,
-        { groupedButtons: n } = (0, N.Z)({ location: 'StartStageControlTray' });
+        { groupedButtons: n } = (0, S.Z)({ location: 'StartStageControlTray' });
     return n
         ? (0, i.jsxs)('div', {
               className: et.experimentWrapper,

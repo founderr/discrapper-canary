@@ -16,8 +16,8 @@ var r = n(200651),
     h = n(719);
 let m = 60000,
     x = 3600000,
-    f = 86400000,
-    p = [
+    p = 86400000,
+    f = [
         {
             label: 'second(s)',
             value: 1000
@@ -40,11 +40,11 @@ function g() {
         [n, g] = a.useState(0),
         [b, v] = a.useState(1000),
         [j, C] = a.useState(0),
-        _ = (0, l.e7)([c.Z], () => {
+        T = (0, l.e7)([c.Z], () => {
             var t;
             return null === e ? null : null !== (t = c.Z.getFeedbackConfig(e)) && void 0 !== t ? t : s.R[e];
         }),
-        T = Object.keys(s.R).map((e) => ({
+        _ = Object.keys(s.R).map((e) => ({
             label: e,
             value: e
         })),
@@ -57,7 +57,7 @@ function g() {
                 className: h.formElement,
                 tag: i.FormTitleTags.H3,
                 children: (0, r.jsx)(i.SingleSelect, {
-                    options: T,
+                    options: _,
                     value: e,
                     onChange: (e) => {
                         t(e);
@@ -71,7 +71,7 @@ function g() {
                 className: h.formElement,
                 tag: i.FormTitleTags.H3,
                 children: [
-                    null != _ &&
+                    null != T &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(d.Z, {
@@ -83,19 +83,19 @@ function g() {
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(_.cooldown / 1000, ' second(s) or')
+                                    children: ''.concat(T.cooldown / 1000, ' second(s) or')
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(_.cooldown / m, ' minute(s) or')
+                                    children: ''.concat(T.cooldown / m, ' minute(s) or')
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(_.cooldown / x, ' hour(s) or')
+                                    children: ''.concat(T.cooldown / x, ' hour(s) or')
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(_.cooldown / f, ' day(s)')
+                                    children: ''.concat(T.cooldown / p, ' day(s)')
                                 })
                             ]
                         }),
@@ -117,7 +117,7 @@ function g() {
                                 onChange: (e) => g(parseFloat(e))
                             }),
                             (0, r.jsx)(i.SingleSelect, {
-                                options: p,
+                                options: f,
                                 value: b,
                                 onChange: (e) => {
                                     v(e);
@@ -133,7 +133,7 @@ function g() {
                 className: h.formElement,
                 tag: i.FormTitleTags.H3,
                 children: [
-                    null != _ &&
+                    null != T &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(d.Z, {
@@ -145,7 +145,7 @@ function g() {
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(100 * _.chance, '%')
+                                    children: ''.concat(100 * T.chance, '%')
                                 })
                             ]
                         }),

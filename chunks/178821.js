@@ -16,8 +16,8 @@ var r = n(200651),
 let h = 1000 / 60,
     m = 1000 / 45,
     x = 3 * h,
-    f = Math.ceil(3000 / h);
-function p(e) {
+    p = Math.ceil(3000 / h);
+function f(e) {
     let { socket: t, isAverageFrameTime: n } = e,
         [l, i] = (function (e) {
             let t = e.dispatcher.getIsSchedulerBackgrounded(),
@@ -36,12 +36,12 @@ function p(e) {
             averageFrameTime: c,
             timeSinceLastDrop: u,
             onResetFrameData: m,
-            droppedFramesRef: p,
+            droppedFramesRef: f,
             renderedFrameCount: g,
             bufferFramecountRef: b,
             frameCheckerEffect: v
         } = (function (e, t) {
-            let n = a.useRef(Array(f).fill(0)),
+            let n = a.useRef(Array(p).fill(0)),
                 r = a.useRef(performance.now()),
                 l = a.useRef(0),
                 i = a.useRef(0),
@@ -57,7 +57,7 @@ function p(e) {
                         let a = performance.now(),
                             u = a - r.current;
                         if (((r.current = a), t.current)) return;
-                        if (((i.current -= n.current[c.current]), (n.current[c.current] = u), (i.current += u), s.current < f && (s.current += 1), (c.current = (c.current + 1) % f), u > x)) {
+                        if (((i.current -= n.current[c.current]), (n.current[c.current] = u), (i.current += u), s.current < p && (s.current += 1), (c.current = (c.current + 1) % p), u > x)) {
                             let t = 0 === s.current ? h : i.current / s.current,
                                 n = Math.min(2 * h, t),
                                 r = Math.floor(u / (e ? n : h));
@@ -68,10 +68,10 @@ function p(e) {
                     },
                     [e, t]
                 ),
-                p = 0 === s.current ? 0 : i.current / s.current;
+                f = 0 === s.current ? 0 : i.current / s.current;
             return {
-                currentFPS: 0 === p ? 0 : (h / p) * 60,
-                averageFrameTime: p,
+                currentFPS: 0 === f ? 0 : (h / f) * 60,
+                averageFrameTime: f,
                 timeSinceLastDrop: (performance.now() - d.current) / 1000,
                 droppedFramesRef: l,
                 bufferFramecountRef: s,
@@ -80,8 +80,8 @@ function p(e) {
                 onResetFrameData: u
             };
         })(n, l),
-        [j, C, _] = (function (e) {
-            let t = a.useRef(Array(f).fill(0)),
+        [j, C, T] = (function (e) {
+            let t = a.useRef(Array(p).fill(0)),
                 n = a.useRef(performance.now()),
                 r = a.useRef(0),
                 l = a.useRef(0),
@@ -96,7 +96,7 @@ function p(e) {
             let d = a.useCallback(function () {
                 let e = performance.now(),
                     a = e - n.current;
-                if (((n.current = e), !s.current)) (r.current -= t.current[i.current]), (t.current[i.current] = a), (r.current += a), l.current < f && (l.current += 1), (i.current = (i.current + 1) % f);
+                if (((n.current = e), !s.current)) (r.current -= t.current[i.current]), (t.current[i.current] = a), (r.current += a), l.current < p && (l.current += 1), (i.current = (i.current + 1) % p);
             }, []);
             return [
                 d,
@@ -111,7 +111,7 @@ function p(e) {
                 }
             ];
         })(t),
-        [T, S] = (function (e, t) {
+        [_, S] = (function (e, t) {
             let n = a.useRef(null),
                 r = a.useRef(null),
                 l = a.useRef(null),
@@ -137,7 +137,7 @@ function p(e) {
         y = C(c, b.current);
     a.useEffect(
         () => (
-            T(),
+            _(),
             () => {
                 S();
             }
@@ -145,8 +145,8 @@ function p(e) {
         []
     );
     let k = a.useCallback(() => {
-        m(), _(), T();
-    }, [m, _, T]);
+        m(), T(), _();
+    }, [m, T, _]);
     return (0, r.jsxs)('div', {
         className: d.panelGroup,
         children: [
@@ -174,14 +174,14 @@ function p(e) {
                         tag: 'span',
                         variant: 'text-md/bold',
                         color: u < 2 ? 'text-danger' : u < 5 ? 'text-warning' : 'text-primary',
-                        children: p.current
+                        children: f.current
                     }),
                     (0, r.jsxs)(s.Text, {
                         tag: 'span',
                         variant: 'text-sm/normal',
                         color: 'text-muted',
                         className: d.secondaryInfoText,
-                        children: ['(Dropped: ', ((p.current / g.current) * 100).toFixed(4), '%)']
+                        children: ['(Dropped: ', ((f.current / g.current) * 100).toFixed(4), '%)']
                     }),
                     N &&
                         (0, r.jsx)(s.Tooltip, {
@@ -528,7 +528,7 @@ function j() {
             children: (0, r.jsxs)(s.ScrollerThin, {
                 className: d.panel,
                 children: [
-                    (0, r.jsx)(p, {
+                    (0, r.jsx)(f, {
                         socket: e,
                         isAverageFrameTime: t
                     }),

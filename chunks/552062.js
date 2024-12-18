@@ -9,10 +9,10 @@ var i,
     s,
     r,
     a = n(200651),
-    l = n(192379),
-    o = n(120356),
-    c = n.n(o),
-    d = n(902704),
+    o = n(192379),
+    l = n(120356),
+    d = n.n(l),
+    c = n(902704),
     u = n(434529),
     h = n(981631),
     p = n(53203);
@@ -39,7 +39,7 @@ function v(e, t, n) {
         height: 'auto' === s ? 'auto' : Math.max(n, s)
     };
 }
-function _(e) {
+function x(e) {
     let { top: t, left: n, bottom: i, right: s } = e;
     return (
         null == n && null == s && (n = 0),
@@ -54,10 +54,10 @@ function _(e) {
         }
     );
 }
-function E(e) {
+function _(e) {
     return 'auto' === e || null == e ? 'auto' : ''.concat(e, 'px');
 }
-function x(e, t) {
+function S(e, t) {
     let n = 0,
         i = 0;
     return (
@@ -107,12 +107,12 @@ function Z(e, t) {
             throw Error('getOrientedCoords: Invalid orientation: '.concat(e));
     }
 }
-class S extends (s = l.Component) {
+class E extends (s = o.Component) {
     shouldComponentUpdate(e, t) {
-        return !(0, d.Z)(t, this.state) || !(0, d.Z)(e, this.props, ['anchor', 'size', 'minSize', 'container']) || !(0, d.Z)(e.anchor, this.props.anchor) || !(0, d.Z)(e.size, this.props.size) || !(0, d.Z)(e.minSize, this.props.minSize) || !(0, d.Z)(e.container, this.props.container);
+        return !(0, c.Z)(t, this.state) || !(0, c.Z)(e, this.props, ['anchor', 'size', 'minSize', 'container']) || !(0, c.Z)(e.anchor, this.props.anchor) || !(0, c.Z)(e.size, this.props.size) || !(0, c.Z)(e.minSize, this.props.minSize) || !(0, c.Z)(e.container, this.props.container);
     }
     componentDidUpdate(e, t) {
-        null == t.operation && (!(0, d.Z)(this.props.anchor, e.anchor) && this.setDOMPositions(_(this.props.anchor)), !(0, d.Z)(this.props.size, e.size) && this.setDOMSize(v(this.props.size, this.props.minSize.width, this.props.minSize.height)));
+        null == t.operation && (!(0, c.Z)(this.props.anchor, e.anchor) && this.setDOMPositions(x(this.props.anchor)), !(0, c.Z)(this.props.size, e.size) && this.setDOMSize(v(this.props.size, this.props.minSize.width, this.props.minSize.height)));
     }
     componentWillUnmount() {
         this.handleOperationEnd();
@@ -126,24 +126,24 @@ class S extends (s = l.Component) {
             ref: { current: n },
             props: {
                 id: i,
-                container: { maxX: s, maxY: r, minX: a, minY: l },
-                onDragStart: o,
-                onDrag: c,
-                snapOrientation: d
+                container: { maxX: s, maxY: r, minX: a, minY: o },
+                onDragStart: l,
+                onDrag: d,
+                snapOrientation: c
             },
             dragState: { offsetX: h, offsetY: p },
             state: { operationStarted: f }
         } = this;
         if (null == n) return null;
-        (e = Math.max(Math.min(s, e), a)), (t = Math.max(Math.min(r, t), l));
-        let { width: g, height: m } = x(n, this.size),
+        (e = Math.max(Math.min(s, e), a)), (t = Math.max(Math.min(r, t), o));
+        let { width: g, height: m } = S(n, this.size),
             v = t - p,
-            _ = e - h,
-            E = (0, u.ou)(
+            x = e - h,
+            _ = (0, u.ou)(
                 (0, u.PY)(
                     {
                         top: v,
-                        left: _,
+                        left: x,
                         bottom: void 0,
                         right: void 0
                     },
@@ -153,25 +153,25 @@ class S extends (s = l.Component) {
                     m
                 )
             ),
-            S = d ? (0, u.R)(E) : Z('RESIZE_SOUTH_EAST', E);
-        this.setDOMPositions(S), !f && (null != o && o(), this.setState({ operationStarted: !0 })), null != c && c(i, 'MOVE', this.anchor, this.size);
+            E = c ? (0, u.R)(_) : Z('RESIZE_SOUTH_EAST', _);
+        this.setDOMPositions(E), !f && (null != l && l(), this.setState({ operationStarted: !0 })), null != d && d(i, 'MOVE', this.anchor, this.size);
     }
     handleResizeMove(e, t) {
         let {
                 props: {
                     id: n,
                     minSize: i,
-                    container: { maxX: s, maxY: r, minX: a, minY: l },
-                    onDragStart: o,
-                    onDrag: c
+                    container: { maxX: s, maxY: r, minX: a, minY: o },
+                    onDragStart: l,
+                    onDrag: d
                 },
-                state: { operation: d, operationStarted: u }
+                state: { operation: c, operationStarted: u }
             } = this,
             { startX: h, startY: p, offsetWidth: f, offsetHeight: g } = this.dragState,
             m = 0,
             v = 0;
-        if (null != d) {
-            switch (((e = Math.max(Math.min(s, e), a)), (t = Math.max(Math.min(r, t), l)), d)) {
+        if (null != c) {
+            switch (((e = Math.max(Math.min(s, e), a)), (t = Math.max(Math.min(r, t), o)), c)) {
                 case 'RESIZE_EAST':
                 case 'RESIZE_SOUTH_EAST':
                 case 'RESIZE_NORTH_EAST':
@@ -182,7 +182,7 @@ class S extends (s = l.Component) {
                 case 'RESIZE_NORTH_WEST':
                     m += h - e;
             }
-            switch (d) {
+            switch (c) {
                 case 'RESIZE_SOUTH':
                 case 'RESIZE_SOUTH_WEST':
                 case 'RESIZE_SOUTH_EAST':
@@ -199,8 +199,8 @@ class S extends (s = l.Component) {
                     width: f,
                     height: g
                 }),
-                !u && (null != o && o(), this.setState({ operationStarted: !0 })),
-                null != c && c(n, d, this.anchor, this.size);
+                !u && (null != l && l(), this.setState({ operationStarted: !0 })),
+                null != d && d(n, c, this.anchor, this.size);
         }
     }
     setDOMPositions(e) {
@@ -215,7 +215,7 @@ class S extends (s = l.Component) {
             }),
             null != r)
         )
-            (r.style.top = E(t)), (r.style.bottom = E(i)), (r.style.left = E(n)), (r.style.right = E(s));
+            (r.style.top = _(t)), (r.style.bottom = _(i)), (r.style.left = _(n)), (r.style.right = _(s));
     }
     setDOMSize(e) {
         let { width: t, height: n } = e,
@@ -229,57 +229,57 @@ class S extends (s = l.Component) {
             }),
             null != i)
         )
-            (i.style.width = E(t)), (i.style.height = E(n));
+            (i.style.width = _(t)), (i.style.height = _(n));
     }
     renderResizeHandles() {
         let { resizeY: e, resizeX: t, active: n } = this.props;
-        return (0, a.jsxs)(l.Fragment, {
+        return (0, a.jsxs)(o.Fragment, {
             children: [
                 e
-                    ? (0, a.jsxs)(l.Fragment, {
+                    ? (0, a.jsxs)(o.Fragment, {
                           children: [
                               (0, a.jsx)('div', {
-                                  className: c()(p.resizeNorth, { [p.resizeNSCursor]: n }),
+                                  className: d()(p.resizeNorth, { [p.resizeNSCursor]: n }),
                                   onMouseDown: (e) => this.handleResizeMouseDown(e, 'RESIZE_NORTH')
                               }),
                               (0, a.jsx)('div', {
-                                  className: c()(p.resizeSouth, { [p.resizeNSCursor]: n }),
+                                  className: d()(p.resizeSouth, { [p.resizeNSCursor]: n }),
                                   onMouseDown: (e) => this.handleResizeMouseDown(e, 'RESIZE_SOUTH')
                               })
                           ]
                       })
                     : null,
                 t
-                    ? (0, a.jsxs)(l.Fragment, {
+                    ? (0, a.jsxs)(o.Fragment, {
                           children: [
                               (0, a.jsx)('div', {
-                                  className: c()(p.resizeEast, { [p.resizeEWCursor]: n }),
+                                  className: d()(p.resizeEast, { [p.resizeEWCursor]: n }),
                                   onMouseDown: (e) => this.handleResizeMouseDown(e, 'RESIZE_EAST')
                               }),
                               (0, a.jsx)('div', {
-                                  className: c()(p.resizeWest, { [p.resizeEWCursor]: n }),
+                                  className: d()(p.resizeWest, { [p.resizeEWCursor]: n }),
                                   onMouseDown: (e) => this.handleResizeMouseDown(e, 'RESIZE_WEST')
                               })
                           ]
                       })
                     : null,
                 t && e
-                    ? (0, a.jsxs)(l.Fragment, {
+                    ? (0, a.jsxs)(o.Fragment, {
                           children: [
                               (0, a.jsx)('div', {
-                                  className: c()(p.resizeNorthWest, { [p.resizeNWSECursor]: n }),
+                                  className: d()(p.resizeNorthWest, { [p.resizeNWSECursor]: n }),
                                   onMouseDown: (e) => this.handleResizeMouseDown(e, 'RESIZE_NORTH_WEST')
                               }),
                               (0, a.jsx)('div', {
-                                  className: c()(p.resizeNorthEast, { [p.resizeNESWCursor]: n }),
+                                  className: d()(p.resizeNorthEast, { [p.resizeNESWCursor]: n }),
                                   onMouseDown: (e) => this.handleResizeMouseDown(e, 'RESIZE_NORTH_EAST')
                               }),
                               (0, a.jsx)('div', {
-                                  className: c()(p.resizeSouthWest, { [p.resizeNESWCursor]: n }),
+                                  className: d()(p.resizeSouthWest, { [p.resizeNESWCursor]: n }),
                                   onMouseDown: (e) => this.handleResizeMouseDown(e, 'RESIZE_SOUTH_WEST')
                               }),
                               (0, a.jsx)('div', {
-                                  className: c()(p.resizeSouthEast, { [p.resizeNWSECursor]: n }),
+                                  className: d()(p.resizeSouthEast, { [p.resizeNWSECursor]: n }),
                                   onMouseDown: (e) => this.handleResizeMouseDown(e, 'RESIZE_SOUTH_EAST')
                               })
                           ]
@@ -292,21 +292,21 @@ class S extends (s = l.Component) {
         let {
             props: { children: e, hidden: t, onClick: n, id: i, style: s },
             size: r,
-            anchor: l,
-            state: { operation: o, operationStarted: d }
+            anchor: o,
+            state: { operation: l, operationStarted: c }
         } = this;
         return (0, a.jsxs)('div', {
             ref: this.ref,
             style: {
-                ...l,
+                ...o,
                 ...r,
                 ...s,
-                ...(null != o ? { zIndex: 1000 } : void 0),
+                ...(null != l ? { zIndex: 1000 } : void 0),
                 ...(t ? { visibility: 'hidden' } : void 0)
             },
-            className: c()({
+            className: d()({
                 [p.wrapper]: !0,
-                [p.operation]: d
+                [p.operation]: c
             }),
             onMouseDown: this.handleMouseDown,
             onClick: null != n ? () => n(i) : void 0,
@@ -317,7 +317,7 @@ class S extends (s = l.Component) {
         super(e),
             f(this, 'anchor', void 0),
             f(this, 'size', void 0),
-            f(this, 'ref', l.createRef()),
+            f(this, 'ref', o.createRef()),
             f(this, 'dragState', {
                 startX: 0,
                 startY: 0,
@@ -351,12 +351,12 @@ class S extends (s = l.Component) {
                     props: {
                         targetWindow: s,
                         active: r,
-                        container: { maxX: a, maxY: l }
+                        container: { maxX: a, maxY: o }
                     }
                 } = this;
                 if (null == i || !r) return;
-                let { width: o, height: c } = x(i, this.size),
-                    d = (0, u.PY)(this.anchor, a, l, o, c);
+                let { width: l, height: d } = S(i, this.size),
+                    c = (0, u.PY)(this.anchor, a, o, l, d);
                 if ('MOVE' === e) {
                     let { x: e, y: i } = (function (e) {
                         let { top: t, left: n } = e;
@@ -364,7 +364,7 @@ class S extends (s = l.Component) {
                             x: n,
                             y: t
                         };
-                    })(d);
+                    })(c);
                     this.dragState = {
                         ...this.dragState,
                         startX: t,
@@ -373,14 +373,14 @@ class S extends (s = l.Component) {
                         offsetY: n - i
                     };
                 } else {
-                    let i = Z(e, d);
+                    let i = Z(e, c);
                     this.setDOMPositions(i),
                         (this.dragState = {
                             ...this.dragState,
                             startX: t,
                             startY: n,
-                            offsetWidth: o,
-                            offsetHeight: c
+                            offsetWidth: l,
+                            offsetHeight: d
                         });
                 }
                 this.setState(
@@ -400,12 +400,12 @@ class S extends (s = l.Component) {
                 let s = t
                     ? () => {
                           let { onUpdate: t, id: n } = this.props;
-                          t(e, n, this.anchor, this.size, x(this.ref.current, this.size));
+                          t(e, n, this.anchor, this.size, S(this.ref.current, this.size));
                       }
                     : void 0;
                 if (t) {
                     let { maxX: e, maxY: t } = this.props.container,
-                        { width: n, height: s } = x(this.ref.current, this.size),
+                        { width: n, height: s } = S(this.ref.current, this.size),
                         r = (0, u.PY)(this.anchor, e, t, n, s),
                         a = (0, u.R)(r);
                     this.setDOMPositions(a),
@@ -423,12 +423,12 @@ class S extends (s = l.Component) {
                     s
                 );
             }),
-            (this.anchor = _(e.anchor)),
+            (this.anchor = x(e.anchor)),
             (this.size = v(e.size, e.minSize.width, e.minSize.height));
     }
 }
-f(S, 'Operations', i),
-    f(S, 'defaultProps', {
+f(E, 'Operations', i),
+    f(E, 'defaultProps', {
         snapOrientation: !0,
         minSize: {
             width: 0,
@@ -447,4 +447,4 @@ f(S, 'Operations', i),
         active: !0,
         targetWindow: window
     }),
-    (t.Z = S);
+    (t.Z = E);

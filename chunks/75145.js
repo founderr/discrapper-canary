@@ -54,8 +54,8 @@ function v(e) {
 }
 function I() {
     let e = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
-        [n, i] = (0, _.US)([c.z.TRIAL_FOR_ALL_EMOJI_PCIKER]),
-        o = n === c.z.TRIAL_FOR_ALL_EMOJI_PCIKER;
+        [n, i] = (0, _.US)([c.z.TRIAL_NUX_EMOJI_PICKER]),
+        o = n === c.z.TRIAL_NUX_EMOJI_PICKER;
     return (
         s.useEffect(
             () => () => {

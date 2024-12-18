@@ -1,18 +1,18 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
         return c;
     }
 });
-var o = n(200651);
-n(192379);
-var r = n(859097),
-    i = n(388032);
+var o = t(200651);
+t(192379);
+var i = t(859097),
+    r = t(388032);
 function c(e) {
-    let { onContinue: t, onClose: n } = e;
-    return (0, o.jsx)(r.C, {
-        title: i.intl.string(i.t.INwPCQ),
-        body: i.intl.string(i.t.GyXRR0),
-        onClose: n,
-        onContinue: t
+    let { onContinue: n, onClose: t } = e;
+    return (0, o.jsx)(i.C, {
+        title: r.intl.string(r.t.INwPCQ),
+        body: r.intl.string(r.t.GyXRR0),
+        onClose: t,
+        onContinue: n
     });
 }

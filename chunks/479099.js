@@ -9,8 +9,8 @@ n.d(t, {
     n(47120);
 var i,
     r,
-    l = n(200651),
-    o = n(192379),
+    o = n(200651),
+    l = n(192379),
     u = n(120356),
     a = n.n(u),
     s = n(91192),
@@ -28,12 +28,12 @@ function C(e) {
     let { tag: t, size: i = 1, disabled: r, className: u, onClick: C, onRemove: S, selected: T, ariaLabel: v } = e,
         { name: b, emojiId: N, emojiName: A } = t,
         O = null != S,
-        [L, P] = o.useState(!1),
+        [L, P] = l.useState(!1),
         R = (0, c.e7)([g.ZP], () => (null != N ? g.ZP.getUsableCustomEmojiById(N) : null)),
         M = O || null != C,
         y = (!O || !L) && (null != N || null != A),
         x = 0 === i,
-        Z = o.useRef(null),
+        Z = l.useRef(null),
         j = (0, c.e7)([p.Z], () => p.Z.keyboardModeEnabled),
         U = (e) => {
             let i = E.Sb.getSetting();
@@ -42,16 +42,16 @@ function C(e) {
                 (0, f.jW)(e, async () => {
                     let { default: e } = await n.e('29646').then(n.bind(n, 955116));
                     return (n) =>
-                        (0, l.jsx)(e, {
+                        (0, o.jsx)(e, {
                             ...n,
                             tag: t
                         });
                 });
         },
-        D = (0, l.jsxs)(l.Fragment, {
+        D = (0, o.jsxs)(o.Fragment, {
             children: [
                 y
-                    ? (0, l.jsx)(_.Z, {
+                    ? (0, o.jsx)(_.Z, {
                           className: a()(h.emoji, { [h.small]: x }),
                           emojiId: N,
                           emojiName: A,
@@ -61,15 +61,15 @@ function C(e) {
                     : null,
                 L &&
                     O &&
-                    (0, l.jsx)('div', {
+                    (0, o.jsx)('div', {
                         className: h.closeCircle,
-                        children: (0, l.jsx)(d.XSmallIcon, {
+                        children: (0, o.jsx)(d.XSmallIcon, {
                             size: 'md',
                             color: 'currentColor',
                             className: h.close
                         })
                     }),
-                (0, l.jsx)(d.Text, {
+                (0, o.jsx)(d.Text, {
                     variant: x ? 'text-xs/semibold' : 'text-sm/semibold',
                     lineClamp: 1,
                     children: b
@@ -97,7 +97,7 @@ function C(e) {
         },
         w = (0, s.JA)('forum-tag-'.concat(t.id));
     return M
-        ? (0, l.jsx)(d.Clickable, {
+        ? (0, o.jsx)(d.Clickable, {
               ...w,
               innerRef: Z,
               focusProps: { ringTarget: Z },
@@ -107,7 +107,7 @@ function C(e) {
               ...F,
               children: D
           })
-        : (0, l.jsx)('div', {
+        : (0, o.jsx)('div', {
               ...F,
               children: D
           });
@@ -115,11 +115,11 @@ function C(e) {
 function S(e) {
     let { tags: t, count: n, size: i = 1 } = e,
         r = 0 === i;
-    return (0, l.jsx)(d.Tooltip, {
+    return (0, o.jsx)(d.Tooltip, {
         'aria-label': I.intl.string(I.t['P/y+sr']),
-        text: (0, l.jsx)(l.Fragment, {
+        text: (0, o.jsx)(o.Fragment, {
             children: t.map((e) =>
-                (0, l.jsx)(
+                (0, o.jsx)(
                     C,
                     {
                         tag: e,
@@ -131,10 +131,10 @@ function S(e) {
             )
         }),
         children: (e) =>
-            (0, l.jsx)('div', {
+            (0, o.jsx)('div', {
                 ...e,
                 className: a()(h.pill, { [h.small]: r }),
-                children: (0, l.jsxs)(d.Text, {
+                children: (0, o.jsxs)(d.Text, {
                     variant: r ? 'text-xs/semibold' : 'text-sm/semibold',
                     children: ['+', n]
                 })

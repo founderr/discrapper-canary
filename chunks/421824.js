@@ -1,4 +1,4 @@
-n.d(t, {
+i.d(t, {
     f: function () {
         return p;
     },
@@ -6,29 +6,29 @@ n.d(t, {
         return f;
     }
 });
-var i = n(200651);
-n(192379);
-var l = n(481060),
-    o = n(522474),
-    r = n(556296),
-    s = n(13140),
-    a = n(44359),
-    u = n(620954),
-    c = n(987650),
-    d = n(981631),
-    h = n(388032);
+var n = i(200651);
+i(192379);
+var l = i(481060),
+    o = i(522474),
+    s = i(556296),
+    r = i(13140),
+    a = i(44359),
+    u = i(620954),
+    d = i(987650),
+    c = i(981631),
+    h = i(388032);
 function f() {
-    if (o.Z.getWindowOpen(d.KJ3.ACTIVITY_POPOUT)) return null;
-    let { trackView: e, trackClick: t } = (0, u.R)(c.n0.ClipsReminderNotification, { notif_type: c.n0.ClipsReminderNotification }),
-        n = r.Z.getKeybindForAction(d.kg4.SAVE_CLIP);
-    if (null == n) return null;
-    let f = s.BB(n.shortcut, !0);
+    if (o.Z.getWindowOpen(c.KJ3.ACTIVITY_POPOUT)) return null;
+    let { trackView: e, trackClick: t } = (0, u.R)(d.n0.ClipsReminderNotification, { notif_type: d.n0.ClipsReminderNotification }),
+        i = s.Z.getKeybindForAction(c.kg4.SAVE_CLIP);
+    if (null == i) return null;
+    let f = r.BB(i.shortcut, !0);
     return {
         title: h.intl.format(h.t.S5uhCA, {
             keybind: f,
-            keybindHook: (e, t) => (0, i.jsx)(a.Z, { keybind: f.split('+') }, t)
+            keybindHook: (e, t) => (0, n.jsx)(a.Z, { keybind: f.split('+') }, t)
         }),
-        icon: (0, i.jsx)(l.ClipsIcon, {
+        icon: (0, n.jsx)(l.ClipsIcon, {
             size: 'lg',
             color: 'currentColor'
         }),
@@ -41,10 +41,10 @@ function f() {
     };
 }
 function p(e) {
-    let { trackView: t, trackClick: n } = (0, u.R)(c.n0.ClipsNotification, { notif_type: c.n0.ClipsNotification });
+    let { trackView: t, trackClick: i } = (0, u.R)(d.n0.ClipsNotification, { notif_type: d.n0.ClipsNotification });
     return {
         title: e,
-        icon: (0, i.jsx)(l.ClipsIcon, {
+        icon: (0, n.jsx)(l.ClipsIcon, {
             size: 'lg',
             color: 'currentColor'
         }),
@@ -52,7 +52,7 @@ function p(e) {
             t();
         },
         onDismissClick: () => {
-            n('dismiss');
+            i('dismiss');
         }
     };
 }

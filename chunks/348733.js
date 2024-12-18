@@ -2,10 +2,10 @@ var i = n(200651),
     s = n(192379),
     r = n(120356),
     a = n.n(r),
-    l = n(442837),
-    o = n(261435),
-    c = n(237997),
-    d = n(438015),
+    o = n(442837),
+    l = n(261435),
+    d = n(237997),
+    c = n(438015),
     u = n(981631),
     h = n(544690);
 class p extends s.Component {
@@ -20,7 +20,7 @@ class p extends s.Component {
                     ? null
                     : ((r += 1),
                       (0, i.jsx)(
-                          d.Z,
+                          c.Z,
                           {
                               index: r,
                               zIndex: 100 - r,
@@ -35,7 +35,7 @@ class p extends s.Component {
         });
     }
 }
-t.Z = l.ZP.connectStores([o.Z, c.Z], () => ({
-    notifications: o.Z.getNotifications(),
-    position: c.Z.getNotificationPositionMode()
+t.Z = o.ZP.connectStores([l.Z, d.Z], () => ({
+    notifications: l.Z.getNotifications(),
+    position: d.Z.getNotificationPositionMode()
 }))(p);

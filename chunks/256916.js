@@ -2,15 +2,15 @@ n(47120), n(653041);
 var i,
     l = n(200651),
     r = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(954955),
     c = n.n(s),
     u = n(748780),
     d = n(902704),
     h = n(481060),
-    p = n(109489);
-function m(e, t, n) {
+    p = n(702294);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function m(e, t, n) {
         e
     );
 }
-let f = {
+let m = {
     friction: 10,
     tension: 300
 };
@@ -52,7 +52,7 @@ class g extends r.Component {
         this._timeout = setTimeout(() => {
             u.Z.spring(e, {
                 toValue: 0,
-                ...f
+                ...m
             }).start();
         }, 100);
     }
@@ -64,13 +64,13 @@ class g extends r.Component {
         }
         u.Z.spring(e, {
             toValue: 1,
-            ...f
+            ...m
         }).start();
     }
     render() {
         let { className: e, text: t, hide: n, onClick: i } = this.props;
         return (0, l.jsx)(u.Z.div, {
-            className: a()(p.bar, e),
+            className: o()(p.bar, e),
             onClick: i,
             style: this.getAnimatedStyle(),
             'aria-hidden': n,
@@ -96,14 +96,14 @@ class g extends r.Component {
     }
     constructor(e) {
         super(e),
-            m(this, '_timeout', void 0),
+            f(this, '_timeout', void 0),
             (this.state = {
                 translateY: new u.Z.Value(),
                 reduceMotion: !1
             });
     }
 }
-class C extends (i = r.PureComponent) {
+class v extends (i = r.PureComponent) {
     componentDidMount() {
         this.calculateState();
     }
@@ -115,13 +115,13 @@ class C extends (i = r.PureComponent) {
     }
     render() {
         let { unread: e, mention: t } = this.state,
-            { textMention: n, textUnread: i, reverse: r, className: o, barClassName: s, hide: c, animate: u } = this.props,
+            { textMention: n, textUnread: i, reverse: r, className: a, barClassName: s, hide: c, animate: u } = this.props,
             { reducedMotion: d } = this.context;
         return (0, l.jsx)('div', {
-            className: null != o ? o : void 0,
+            className: null != a ? a : void 0,
             children: (0, l.jsx)(g, {
                 hide: !0 === c || (null == e && null == t),
-                className: a()(s, null != t ? p.mention : p.unread),
+                className: o()(s, null != t ? p.mention : p.unread),
                 text: null != t ? n : i,
                 reverse: r,
                 animate: u && !d.enabled,
@@ -131,23 +131,23 @@ class C extends (i = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            m(this, 'state', {
+            f(this, 'state', {
                 unread: null,
                 mention: null
             }),
-            m(
+            f(
                 this,
                 'calculateState',
                 c()(() => {
-                    let { items: e, expandedFolders: t, isVisible: n, isUnread: i, isMentioned: l, reverse: r, onCalculate: o } = this.props,
-                        a = null,
+                    let { items: e, expandedFolders: t, isVisible: n, isUnread: i, isMentioned: l, reverse: r, onCalculate: a } = this.props,
+                        o = null,
                         s = null,
                         c = [];
                     e.forEach((e) => {
                         'string' == typeof e ? c.push(e) : 'object' == typeof e && null != e.folderId ? (null != t && t.has(e.folderId) ? (c.push('folder:'.concat(e.folderId)), e.guildIds.forEach((e) => c.push(e))) : c.push(e.guildIds)) : c.push(e.guildIds[0]);
                     });
                     let u = (e) => {
-                            null == a && l(e, r, c) && (a = e), null == s && i(e, r, c) && (s = e);
+                            null == o && l(e, r, c) && (o = e), null == s && i(e, r, c) && (s = e);
                         },
                         d = r ? c.length - 1 : 0,
                         h = c[d];
@@ -168,14 +168,14 @@ class C extends (i = r.PureComponent) {
                         }
                         (d += r ? -1 : 1), (h = c[d]);
                     }
-                    null != o && o(a, s, r),
+                    null != a && a(o, s, r),
                         this.setState({
-                            mention: a,
+                            mention: o,
                             unread: s
                         });
                 }, 200)
             ),
-            m(this, 'handleClick', (e) => {
+            f(this, 'handleClick', (e) => {
                 e.preventDefault(), e.stopPropagation();
                 let { unread: t, mention: n } = this.state,
                     { onJumpTo: i } = this.props,
@@ -184,11 +184,11 @@ class C extends (i = r.PureComponent) {
             });
     }
 }
-m(C, 'contextType', h.AccessibilityPreferencesContext),
-    m(C, 'defaultProps', {
+f(v, 'contextType', h.AccessibilityPreferencesContext),
+    f(v, 'defaultProps', {
         className: p.container,
         reverse: !1,
         hide: !1,
         animate: !0
     }),
-    (t.Z = C);
+    (t.Z = v);

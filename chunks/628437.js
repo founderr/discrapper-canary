@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     container: 'container_feab95',
     title: 'title_feab95',
     tabs: 'tabs_feab95',

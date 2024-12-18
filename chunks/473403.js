@@ -9,9 +9,9 @@ t.d(n, {
 var l = t(200651),
     i = t(192379),
     r = t(120356),
-    u = t.n(r);
-if (12633 == t.j) var a = t(91192);
-var s = t(442837),
+    u = t.n(r),
+    a = t(91192),
+    s = t(442837),
     I = t(481060),
     o = t(43267),
     T = t(933557),
@@ -40,7 +40,7 @@ function U(e) {
     e.preventDefault(), e.stopPropagation();
 }
 let p = P.ZP.getEnableHardwareAcceleration() ? I.AnimatedAvatar : I.Avatar;
-function v(e) {
+function A(e) {
     let { channel: n } = e;
     return (0, l.jsx)(p, {
         src: (0, o.x)(n),
@@ -48,7 +48,7 @@ function v(e) {
         size: I.AvatarSizes.SIZE_20
     });
 }
-function A(e) {
+function v(e) {
     let { channel: n } = e,
         t = (0, s.e7)([m.default], () => m.default.getUser(null == n ? void 0 : n.recipients[0])),
         i = (0, s.e7)([f.Z], () => !(null == t || null == n || n.isMultiUserDM()) && null != f.Z.getTypingUsers(null == n ? void 0 : n.id)[null == t ? void 0 : t.id]),
@@ -93,11 +93,11 @@ let V = (e) => {
             switch (e.type) {
                 case g.d4z.DM:
                     return function () {
-                        return (0, l.jsx)(A, { channel: e });
+                        return (0, l.jsx)(v, { channel: e });
                     };
                 case g.d4z.GROUP_DM:
                     return function () {
-                        return (0, l.jsx)(v, { channel: e });
+                        return (0, l.jsx)(A, { channel: e });
                     };
                 default:
                     return (0, _.KS)(e, n, t);
@@ -142,8 +142,8 @@ function R(e) {
             onMouseDown: m,
             onMouseUp: P,
             onContextMenu: p,
-            connectDragPreview: v,
-            className: A,
+            connectDragPreview: A,
+            className: v,
             iconClassName: R,
             subtitle: C,
             subtitleColor: L,
@@ -232,7 +232,7 @@ function R(e) {
         },
         children: (0, l.jsxs)('div', {
             className: u()(
-                A,
+                v,
                 null != f || null != P || null != m || j ? M.wrapper : M.notInteractive,
                 (() => {
                     if (o) return D.SELECTED;
@@ -266,7 +266,7 @@ function R(e) {
             onContextMenu: (e) => (null == p ? void 0 : p(e, t)),
             onMouseEnter: y,
             onMouseLeave: Z,
-            children: [s || !N ? null : (0, l.jsx)('div', { className: u()(M.unread, B ? M.unreadImportant : void 0) }), null !== (n = null == v ? void 0 : v(et)) && void 0 !== n ? n : et]
+            children: [s || !N ? null : (0, l.jsx)('div', { className: u()(M.unread, B ? M.unreadImportant : void 0) }), null !== (n = null == A ? void 0 : A(et)) && void 0 !== n ? n : et]
         })
     });
 }

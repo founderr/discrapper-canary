@@ -3,7 +3,7 @@ e.d(t, {
         return i;
     },
     Rv: function () {
-        return X;
+        return Y;
     },
     U6: function () {
         return x;
@@ -12,50 +12,50 @@ e.d(t, {
         return w;
     },
     oT: function () {
-        return Y;
+        return W;
     }
 }),
     e(411104),
     e(653041);
 var i,
-    l,
-    o = e(346610),
-    r = e(2818),
-    u = e(186070),
-    a = e(185514),
-    d = e(395878),
-    E = e(321697),
-    s = e(775774),
-    c = e(570408),
-    _ = e(438846),
-    C = e(360038),
+    o,
+    r = e(346610),
+    l = e(2818),
+    d = e(186070),
+    s = e(185514),
+    u = e(395878),
+    a = e(321697),
+    c = e(775774),
+    E = e(570408),
+    C = e(438846),
+    b = e(360038),
     A = e(175724),
     S = e(705371),
-    I = e(138976),
-    T = e(296805),
-    L = e(561716),
-    h = e(239748),
-    g = e(337482),
-    f = e(679080),
-    p = e(777019),
-    O = e(523147),
-    N = e(400332),
-    b = e(510761),
-    R = e(189509),
-    G = e(673553),
-    Z = e(280492),
-    P = e(746887),
-    D = e(861007),
-    H = e(89028),
-    U = e(300644),
-    M = e(721383),
-    m = e(207234),
-    k = e(997292),
-    v = e(743810),
-    y = e(620212),
-    V = e(188051),
-    K = e(547420),
-    B = e(981631),
+    p = e(138976),
+    g = e(296805),
+    f = e(771935),
+    _ = e(239748),
+    L = e(337482),
+    O = e(679080),
+    I = e(777019),
+    T = e(523147),
+    h = e(400332),
+    N = e(510761),
+    G = e(189509),
+    H = e(673553),
+    R = e(280492),
+    k = e(746887),
+    Z = e(861007),
+    M = e(89028),
+    m = e(300644),
+    D = e(721383),
+    P = e(207234),
+    U = e(997292),
+    y = e(743810),
+    K = e(620212),
+    B = e(188051),
+    v = e(547420),
+    V = e(981631),
     F = e(388032);
 function w(n) {
     switch (n) {
@@ -83,110 +83,110 @@ function x(n) {
             return null;
     }
 }
-function W() {
+function X() {
     for (var n = arguments.length, t = Array(n), e = 0; e < n; e++) t[e] = arguments[e];
     return t.map((n) => {
-        let t = Y[n];
+        let t = W[n];
         if (null == t) throw Error('getBindsFor(...): No bind for '.concat(t));
         return t.binds[0];
     });
 }
-((l = i || (i = {})).NAVIGATION = 'NAVIGATION'), (l.CHAT = 'CHAT'), (l.VOICE_AND_VIDEO = 'VOICE_AND_VIDEO'), (l.MISCELLANEOUS = 'MISCELLANEOUS'), (l.MESSAGE = 'MESSAGE'), (l.DND = 'DND');
-let Y = {
-    [B.EkH.SERVER_NEXT]: b.nq,
-    [B.EkH.SERVER_PREV]: b.X3,
-    [B.EkH.CHANNEL_NEXT]: a.tQ,
-    [B.EkH.CHANNEL_PREV]: a.x5,
-    [B.EkH.NAVIGATE_BACK]: a.Nx,
-    [B.EkH.NAVIGATE_FORWARD]: a.On,
-    [B.EkH.UNREAD_NEXT]: v.pd,
-    [B.EkH.UNREAD_PREV]: v.wk,
-    [B.EkH.MENTION_CHANNEL_NEXT]: v.Nv,
-    [B.EkH.MENTION_CHANNEL_PREV]: v.uX,
-    [B.EkH.TOGGLE_PREVIOUS_GUILD]: a.$c,
-    [B.EkH.JUMP_TO_GUILD]: C.u,
-    [B.EkH.SUBMIT]: R.z,
-    [B.EkH.TEXTAREA_FOCUS]: G.U,
-    [B.EkH.MARK_CHANNEL_READ]: A.f,
-    [B.EkH.MARK_SERVER_READ]: S.l,
-    [B.EkH.TOGGLE_CHANNEL_PINS]: D.u,
-    [B.EkH.TOGGLE_FOR_LATER]: H.f,
-    [B.EkH.TOGGLE_INBOX]: m.a,
-    [B.EkH.MARK_TOP_INBOX_CHANNEL_READ]: m.M,
-    [B.EkH.TOGGLE_USERS]: k.r,
-    [B.EkH.TOGGLE_HELP]: U.O,
-    [B.EkH.VIBE_WITH_WUMPUS]: V.w,
-    [B.EkH.TOGGLE_MUTE]: Z.iN,
-    [B.EkH.TOGGLE_DEAFEN]: Z.oV,
-    [B.EkH.TOGGLE_CATEGORY_COLLAPSED]: P.u,
-    [B.EkH.SEARCH_SOUNDBOARD]: O.Z,
-    [B.EkH.SCROLL_UP]: g.B2,
-    [B.EkH.SCROLL_DOWN]: g.gN,
-    [B.EkH.QUICKSWITCHER_SHOW]: L.$,
-    [B.EkH.CREATE_DM_GROUP]: d.K,
-    [B.EkH.SEARCH_EMOJIS]: f.S,
-    [B.EkH.SEARCH_GIFS]: p.O,
-    [B.EkH.SEARCH_STICKERS]: N.U,
-    [B.EkH.TOGGLE_HOTKEYS]: M._,
-    [B.EkH.JUMP_TO_FIRST_UNREAD]: I.O,
-    [B.EkH.CREATE_GUILD]: E.r,
-    [B.EkH.UPLOAD_FILE]: y.U,
-    [B.EkH.RETURN_TO_AUDIO_CHANNEL]: h.F,
-    [B.EkH.CALL_ACCEPT]: u.IL,
-    [B.EkH.CALL_START]: u.FI,
-    [B.EkH.FOCUS_SEARCH]: c.I,
-    [B.EkH.JUMP_TO_CURRENT_CALL]: _.K,
-    [B.EkH.ZOOM_IN]: K.UF,
-    [B.EkH.ZOOM_OUT]: K.RC,
-    [B.EkH.ZOOM_RESET]: K.MY,
-    [B.EkH.OPEN_APP_DIRECTORY]: T.T,
-    [B.EkH.BROWSER_DEVTOOLS]: s.p
+((o = i || (i = {})).NAVIGATION = 'NAVIGATION'), (o.CHAT = 'CHAT'), (o.VOICE_AND_VIDEO = 'VOICE_AND_VIDEO'), (o.MISCELLANEOUS = 'MISCELLANEOUS'), (o.MESSAGE = 'MESSAGE'), (o.DND = 'DND');
+let W = {
+    [V.EkH.SERVER_NEXT]: N.nq,
+    [V.EkH.SERVER_PREV]: N.X3,
+    [V.EkH.CHANNEL_NEXT]: s.tQ,
+    [V.EkH.CHANNEL_PREV]: s.x5,
+    [V.EkH.NAVIGATE_BACK]: s.Nx,
+    [V.EkH.NAVIGATE_FORWARD]: s.On,
+    [V.EkH.UNREAD_NEXT]: y.pd,
+    [V.EkH.UNREAD_PREV]: y.wk,
+    [V.EkH.MENTION_CHANNEL_NEXT]: y.Nv,
+    [V.EkH.MENTION_CHANNEL_PREV]: y.uX,
+    [V.EkH.TOGGLE_PREVIOUS_GUILD]: s.$c,
+    [V.EkH.JUMP_TO_GUILD]: b.u,
+    [V.EkH.SUBMIT]: G.z,
+    [V.EkH.TEXTAREA_FOCUS]: H.U,
+    [V.EkH.MARK_CHANNEL_READ]: A.f,
+    [V.EkH.MARK_SERVER_READ]: S.l,
+    [V.EkH.TOGGLE_CHANNEL_PINS]: Z.u,
+    [V.EkH.TOGGLE_FOR_LATER]: M.f,
+    [V.EkH.TOGGLE_INBOX]: P.a,
+    [V.EkH.MARK_TOP_INBOX_CHANNEL_READ]: P.M,
+    [V.EkH.TOGGLE_USERS]: U.r,
+    [V.EkH.TOGGLE_HELP]: m.O,
+    [V.EkH.VIBE_WITH_WUMPUS]: B.w,
+    [V.EkH.TOGGLE_MUTE]: R.iN,
+    [V.EkH.TOGGLE_DEAFEN]: R.oV,
+    [V.EkH.TOGGLE_CATEGORY_COLLAPSED]: k.u,
+    [V.EkH.SEARCH_SOUNDBOARD]: T.Z,
+    [V.EkH.SCROLL_UP]: L.B2,
+    [V.EkH.SCROLL_DOWN]: L.gN,
+    [V.EkH.QUICKSWITCHER_SHOW]: f.$,
+    [V.EkH.CREATE_DM_GROUP]: u.K,
+    [V.EkH.SEARCH_EMOJIS]: O.S,
+    [V.EkH.SEARCH_GIFS]: I.O,
+    [V.EkH.SEARCH_STICKERS]: h.U,
+    [V.EkH.TOGGLE_HOTKEYS]: D._,
+    [V.EkH.JUMP_TO_FIRST_UNREAD]: p.O,
+    [V.EkH.CREATE_GUILD]: a.r,
+    [V.EkH.UPLOAD_FILE]: K.U,
+    [V.EkH.RETURN_TO_AUDIO_CHANNEL]: _.F,
+    [V.EkH.CALL_ACCEPT]: d.IL,
+    [V.EkH.CALL_START]: d.FI,
+    [V.EkH.FOCUS_SEARCH]: E.I,
+    [V.EkH.JUMP_TO_CURRENT_CALL]: C.K,
+    [V.EkH.ZOOM_IN]: v.UF,
+    [V.EkH.ZOOM_OUT]: v.RC,
+    [V.EkH.ZOOM_RESET]: v.MY,
+    [V.EkH.OPEN_APP_DIRECTORY]: g.T,
+    [V.EkH.BROWSER_DEVTOOLS]: c.p
 };
-function X() {
+function Y() {
     let n = [
         {
             description: F.intl.string(F.t.bx4Uy8),
-            binds: W(B.EkH.SERVER_PREV, B.EkH.SERVER_NEXT),
+            binds: X(V.EkH.SERVER_PREV, V.EkH.SERVER_NEXT),
             group: 'NAVIGATION'
         },
         {
             description: F.intl.string(F.t['+Wem6u']),
-            binds: W(B.EkH.CHANNEL_PREV, B.EkH.CHANNEL_NEXT),
+            binds: X(V.EkH.CHANNEL_PREV, V.EkH.CHANNEL_NEXT),
             group: 'NAVIGATION'
         },
         {
             description: F.intl.string(F.t['+2fcd3']),
-            binds: W(B.EkH.NAVIGATE_BACK, B.EkH.NAVIGATE_FORWARD),
+            binds: X(V.EkH.NAVIGATE_BACK, V.EkH.NAVIGATE_FORWARD),
             group: 'NAVIGATION'
         },
         {
             description: F.intl.string(F.t.eVmj1N),
-            binds: W(B.EkH.UNREAD_PREV, B.EkH.UNREAD_NEXT),
+            binds: X(V.EkH.UNREAD_PREV, V.EkH.UNREAD_NEXT),
             group: 'NAVIGATION'
         },
         {
             description: F.intl.string(F.t.EcqS7e),
-            binds: W(B.EkH.MENTION_CHANNEL_PREV, B.EkH.MENTION_CHANNEL_NEXT),
+            binds: X(V.EkH.MENTION_CHANNEL_PREV, V.EkH.MENTION_CHANNEL_NEXT),
             group: 'NAVIGATION'
         },
         {
             description: F.intl.string(F.t['4I3pwc']),
-            binds: W(B.EkH.JUMP_TO_CURRENT_CALL),
+            binds: X(V.EkH.JUMP_TO_CURRENT_CALL),
             group: 'NAVIGATION'
         },
         {
             description: F.intl.string(F.t['Bqss7+']),
-            binds: W(B.EkH.TOGGLE_PREVIOUS_GUILD),
+            binds: X(V.EkH.TOGGLE_PREVIOUS_GUILD),
             group: 'NAVIGATION'
         },
         {
             description: F.intl.string(F.t.yYsRlJ),
-            binds: W(B.EkH.QUICKSWITCHER_SHOW),
+            binds: X(V.EkH.QUICKSWITCHER_SHOW),
             group: 'NAVIGATION'
         },
         {
             description: F.intl.string(F.t.O7ouXF),
-            binds: W(B.EkH.CREATE_GUILD),
+            binds: X(V.EkH.CREATE_GUILD),
             group: 'NAVIGATION',
             groupEnd: !0
         },
@@ -213,114 +213,114 @@ function X() {
         },
         {
             description: F.intl.string(F.t.UaXAPz),
-            binds: W(B.EkH.MARK_SERVER_READ),
+            binds: X(V.EkH.MARK_SERVER_READ),
             group: 'CHAT'
         },
         {
             description: F.intl.string(F.t['5X9vFh']),
-            binds: W(B.EkH.MARK_CHANNEL_READ),
+            binds: X(V.EkH.MARK_CHANNEL_READ),
             group: 'CHAT'
         },
         {
             description: F.intl.string(F.t.wxQFsr),
-            binds: W(B.EkH.CREATE_DM_GROUP),
+            binds: X(V.EkH.CREATE_DM_GROUP),
             group: 'CHAT'
         },
         {
             description: F.intl.string(F.t['C+XV7e']),
-            binds: W(B.EkH.TOGGLE_CHANNEL_PINS),
+            binds: X(V.EkH.TOGGLE_CHANNEL_PINS),
             group: 'CHAT'
         },
         {
             description: F.intl.string(F.t['Q+YV/f']),
-            binds: W(B.EkH.TOGGLE_INBOX),
+            binds: X(V.EkH.TOGGLE_INBOX),
             group: 'CHAT'
         },
         {
             description: F.intl.string(F.t['YEjV+f']),
-            binds: W(B.EkH.MARK_TOP_INBOX_CHANNEL_READ),
+            binds: X(V.EkH.MARK_TOP_INBOX_CHANNEL_READ),
             group: 'CHAT'
         },
         {
             description: F.intl.string(F.t.AcBI9f),
-            binds: W(B.EkH.TOGGLE_USERS),
+            binds: X(V.EkH.TOGGLE_USERS),
             group: 'CHAT'
         },
         {
             description: F.intl.string(F.t.JoxNnp),
-            binds: W(B.EkH.SEARCH_EMOJIS),
+            binds: X(V.EkH.SEARCH_EMOJIS),
             group: 'CHAT'
         },
         {
             description: F.intl.string(F.t['3PHxo6']),
-            binds: W(B.EkH.SEARCH_GIFS),
+            binds: X(V.EkH.SEARCH_GIFS),
             group: 'CHAT'
         },
         {
             description: F.intl.string(F.t.YFl7eX),
-            binds: W(B.EkH.SEARCH_STICKERS),
+            binds: X(V.EkH.SEARCH_STICKERS),
             group: 'CHAT'
         },
         {
             description: F.intl.string(F.t.L3RYYG),
-            binds: W(B.EkH.SCROLL_UP, B.EkH.SCROLL_DOWN),
+            binds: X(V.EkH.SCROLL_UP, V.EkH.SCROLL_DOWN),
             group: 'CHAT'
         },
         {
             description: F.intl.string(F.t['3HAurK']),
-            binds: W(B.EkH.JUMP_TO_FIRST_UNREAD),
+            binds: X(V.EkH.JUMP_TO_FIRST_UNREAD),
             group: 'CHAT'
         },
         {
             description: F.intl.string(F.t.rrYBEh),
-            binds: W(B.EkH.TEXTAREA_FOCUS),
+            binds: X(V.EkH.TEXTAREA_FOCUS),
             group: 'CHAT'
         },
         {
             description: F.intl.string(F.t.sUJlPD),
-            binds: W(B.EkH.UPLOAD_FILE),
+            binds: X(V.EkH.UPLOAD_FILE),
             group: 'CHAT',
             groupEnd: !0
         },
         {
             description: F.intl.string(F.t.tL6eVV),
-            binds: W(B.EkH.TOGGLE_MUTE),
+            binds: X(V.EkH.TOGGLE_MUTE),
             group: 'VOICE_AND_VIDEO'
         },
         {
             description: F.intl.string(F.t['QXe/7e']),
-            binds: W(B.EkH.TOGGLE_DEAFEN),
+            binds: X(V.EkH.TOGGLE_DEAFEN),
             group: 'VOICE_AND_VIDEO'
         },
         {
             description: F.intl.string(F.t.d6UIio),
-            binds: W(B.EkH.CALL_ACCEPT),
+            binds: X(V.EkH.CALL_ACCEPT),
             group: 'VOICE_AND_VIDEO'
         },
         {
             description: F.intl.string(F.t.IcEW09),
-            binds: W(B.EkH.MARK_CHANNEL_READ),
+            binds: X(V.EkH.MARK_CHANNEL_READ),
             group: 'VOICE_AND_VIDEO'
         },
         {
             description: F.intl.string(F.t.WN2dsb),
-            binds: W(B.EkH.CALL_START),
+            binds: X(V.EkH.CALL_START),
             group: 'VOICE_AND_VIDEO',
             groupEnd: !0
         },
         {
             description: F.intl.string(F.t.rUK0kp),
-            binds: W(B.EkH.SEARCH_SOUNDBOARD),
+            binds: X(V.EkH.SEARCH_SOUNDBOARD),
             group: 'VOICE_AND_VIDEO'
         },
         {
             description: F.intl.string(F.t.vkGkSk),
-            binds: W(B.EkH.TOGGLE_HELP),
+            binds: X(V.EkH.TOGGLE_HELP),
             group: 'MISCELLANEOUS'
         },
         {
             description: F.intl.string(F.t['FJvZ8/']),
-            binds: W(B.EkH.FOCUS_SEARCH),
+            binds: X(V.EkH.FOCUS_SEARCH),
             group: 'MISCELLANEOUS'
         },
         {
@@ -372,26 +372,26 @@ function X() {
         },
         {
             description: F.intl.string(F.t.z9c6mp),
-            binds: W(B.EkH.VIBE_WITH_WUMPUS),
+            binds: X(V.EkH.VIBE_WITH_WUMPUS),
             group: 'MISCELLANEOUS'
         }
     ];
-    (0, o.WT)({ location: 'keybinds' }, { autoTrackExposure: !1 }).canForwardMessages &&
+    (0, r.WT)({ location: 'keybinds' }, { autoTrackExposure: !1 }).canForwardMessages &&
         n.push({
             description: F.intl.string(F.t.zSyDdH),
             binds: ['f'],
             group: 'MESSAGE'
         });
-    let { enabled: t, inInbox: e } = r.Z.getCurrentConfig({ location: 'keybinds' }, { autoTrackExposure: !1 });
+    let { enabled: t, inInbox: e } = l.Z.getCurrentConfig({ location: 'keybinds' }, { autoTrackExposure: !1 });
     return (
         t &&
             !e &&
             n.push({
                 description: F.intl.string(F.t.IWNSoK),
-                binds: W(B.EkH.TOGGLE_FOR_LATER),
+                binds: X(V.EkH.TOGGLE_FOR_LATER),
                 group: 'CHAT'
             }),
         n
     );
 }
-t.ZP = 12633 == e.j ? Y : null;
+t.ZP = 12633 == e.j ? W : null;

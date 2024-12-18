@@ -3,25 +3,25 @@ t.d(n, {
         return M;
     },
     Mx: function () {
-        return k;
+        return _;
     },
     PZ: function () {
-        return Z;
+        return D;
     },
     h4: function () {
-        return P;
+        return A;
     },
     ic: function () {
         return z;
     },
     n5: function () {
-        return D;
+        return k;
     },
     rU: function () {
-        return A;
+        return P;
     },
     s8: function () {
-        return _;
+        return S;
     }
 }),
     t(47120);
@@ -38,11 +38,11 @@ var s,
     p = t(925329),
     m = t(565138),
     x = t(754688),
-    f = t(237583),
+    N = t(237583),
     j = t(430824),
     C = t(699516),
     g = t(594174),
-    N = t(51144),
+    f = t(51144),
     v = t(388032),
     b = t(431872);
 function I(e, n, t) {
@@ -221,7 +221,7 @@ class M extends (s = i.Component) {
         let { voiceStates: e, channel: n } = this.props;
         return null == e
             ? null
-            : (0, r.jsx)(f.Z, {
+            : (0, r.jsx)(N.Z, {
                   className: b.voiceSummaryContainer,
                   guildId: n.guild_id,
                   users: e.map((e) => {
@@ -274,7 +274,7 @@ class M extends (s = i.Component) {
     }
 }
 I(M, 'defaultProps', { unread: !1 });
-class Z extends i.Component {
+class D extends i.Component {
     renderIcon() {
         let { channel: e } = this.props;
         return (0, r.jsx)('div', {
@@ -347,7 +347,7 @@ class Z extends i.Component {
         });
     }
 }
-class D extends i.Component {
+class k extends i.Component {
     renderIcon() {
         let { user: e } = this.props;
         return (0, r.jsx)('div', {
@@ -363,7 +363,7 @@ class D extends i.Component {
         let e;
         let { user: n, comparator: t } = this.props,
             s = C.Z.getNickname(n.id);
-        return ((e = t === n.tag || null == t || '' === t ? n.username : t) === n.username || e === n.id) && (e = null != s ? s : N.ZP.getName(n)), e;
+        return ((e = t === n.tag || null == t || '' === t ? n.username : t) === n.username || e === n.id) && (e = null != s ? s : f.ZP.getName(n)), e;
     }
     renderName() {
         let e;
@@ -386,7 +386,7 @@ class D extends i.Component {
                     e,
                     (0, r.jsx)('span', {
                         className: b.username,
-                        children: N.ZP.getUserTag(n)
+                        children: f.ZP.getUserTag(n)
                     })
                 ]
             })
@@ -409,7 +409,7 @@ class D extends i.Component {
     getAccessibilityLabel() {
         let { mentions: e, user: n } = this.props,
             t = this.getDisplayNickname(),
-            s = N.ZP.getUserTag(n);
+            s = f.ZP.getUserTag(n);
         return null != e && e > 0
             ? v.intl.formatToPlainString(v.t['6b9Ura'], {
                   name: t,
@@ -436,7 +436,7 @@ class D extends i.Component {
         });
     }
 }
-class k extends i.Component {
+class _ extends i.Component {
     renderContent() {
         let { children: e, application: n } = this.props;
         return (0, r.jsxs)('div', {
@@ -471,7 +471,7 @@ class k extends i.Component {
         });
     }
 }
-class P extends i.Component {
+class A extends i.Component {
     render() {
         return (0, r.jsx)('div', {
             className: b.__invalid_resultDefault,
@@ -485,7 +485,7 @@ class P extends i.Component {
         });
     }
 }
-class A extends i.Component {
+class P extends i.Component {
     renderContent() {
         let e, n;
         let { link: t, children: s } = this.props,
@@ -538,7 +538,7 @@ class A extends i.Component {
         });
     }
 }
-class _ extends i.Component {
+class S extends i.Component {
     renderContent() {
         let e, n;
         let { navigationRecord: t, children: s } = this.props;

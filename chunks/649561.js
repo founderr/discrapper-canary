@@ -1,50 +1,50 @@
-n(47120), n(177593);
-var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    l = n(392711),
-    o = n.n(l),
-    c = n(818405),
-    d = n(587158),
-    u = n(286379),
-    h = n(481060),
-    p = n(13245),
-    f = n(490029),
-    g = n(797614),
-    m = n(593481),
-    v = n(703656),
-    _ = n(254761),
-    E = n(70956),
-    x = n(960048),
-    Z = n(145597),
-    S = n(692546),
-    C = n(518084),
-    I = n(987650),
-    y = n(981631),
-    N = n(388032),
-    T = n(974881);
-function b(e, t, n) {
+t(47120), t(177593);
+var i = t(200651),
+    a = t(192379),
+    o = t(120356),
+    r = t.n(o),
+    l = t(392711),
+    c = t.n(l),
+    s = t(818405),
+    d = t(587158),
+    u = t(286379),
+    p = t(481060),
+    _ = t(13245),
+    h = t(490029),
+    m = t(797614),
+    f = t(593481),
+    v = t(703656),
+    g = t(254761),
+    E = t(70956),
+    Z = t(960048),
+    b = t(145597),
+    y = t(692546),
+    C = t(518084),
+    I = t(987650),
+    x = t(981631),
+    S = t(388032),
+    k = t(974881);
+function L(e, n, t) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: t,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = t),
         e
     );
 }
-let O = 10 * E.Z.Millis.SECOND;
-function j() {
-    let e = (0, Z.QF)(),
-        t = (0, Z.Ht)();
-    (0, f.lW)({
-        type: y.BmY.DISPATCH,
+let N = 10 * E.Z.Millis.SECOND;
+function A() {
+    let e = (0, b.QF)(),
+        n = (0, b.Ht)();
+    (0, h.lW)({
+        type: x.BmY.DISPATCH,
         pid: e,
-        token: t,
+        token: n,
         payloads: [
             {
                 type: 'OVERLAY_SET_INPUT_LOCKED',
@@ -54,52 +54,52 @@ function j() {
         ]
     });
 }
-class A extends s.PureComponent {
+class T extends a.PureComponent {
     componentDidMount() {
-        (this.notificationTimer = setTimeout(this.hideNotification, O)), p.Z.track(y.rMx.NOTIFICATION_VIEWED, { notif_type: I.n0.OverlayCrashed });
+        (this.notificationTimer = setTimeout(this.hideNotification, N)), _.Z.track(x.rMx.NOTIFICATION_VIEWED, { notif_type: I.n0.OverlayCrashed });
     }
     componentWillUnmount() {
         let { notificationTimer: e } = this;
         null != e && clearTimeout(e);
     }
     render() {
-        let { info: e, error: t } = this.props,
-            { showTrace: n } = this.state,
-            { notificationTimer: s } = this;
-        return null == s
+        let { info: e, error: n } = this.props,
+            { showTrace: t } = this.state,
+            { notificationTimer: a } = this;
+        return null == a
             ? null
-            : (0, i.jsx)(S.Z, {
+            : (0, i.jsx)(y.Z, {
                   observe: !1,
-                  children: (0, i.jsx)(h.ThemeProvider, {
-                      theme: y.BRd.DARK,
-                      children: (s) =>
-                          (0, i.jsxs)(h.Clickable, {
-                              className: a()(s, T.container),
+                  children: (0, i.jsx)(p.ThemeProvider, {
+                      theme: x.BRd.DARK,
+                      children: (a) =>
+                          (0, i.jsxs)(p.Clickable, {
+                              className: r()(a, k.container),
                               onClick: (e) => e.stopPropagation(),
                               children: [
-                                  (0, i.jsx)(m.ZP, {
+                                  (0, i.jsx)(f.ZP, {
                                       expand: !0,
-                                      icon: (0, i.jsx)(_.Z, {
+                                      icon: (0, i.jsx)(g.Z, {
                                           width: 40,
                                           height: 40,
-                                          className: T.notificationIcon
+                                          className: k.notificationIcon
                                       }),
-                                      title: N.intl.string(N.t.U38qZm),
-                                      confirmText: N.intl.string(N.t.TzAl1d),
+                                      title: S.intl.string(S.t.U38qZm),
+                                      confirmText: S.intl.string(S.t.TzAl1d),
                                       onNotificationClick: this.handleNotificationClick,
                                       onConfirmClick: this.handleReload,
                                       onDismissClick: this.hideNotification
                                   }),
-                                  n && null != e
+                                  t && null != e
                                       ? (0, i.jsxs)(C.ZP, {
-                                            className: T.stackTrace,
+                                            className: k.stackTrace,
                                             children: [
                                                 (0, i.jsx)(C.ZP.Bar, { children: 'Error Details' }),
                                                 (0, i.jsx)(C.ZP.Content, {
-                                                    className: T.stackTraceCode,
+                                                    className: k.stackTraceCode,
                                                     children: (0, i.jsx)('code', {
-                                                        className: T.code,
-                                                        children: (0, i.jsx)('pre', { children: t.stack })
+                                                        className: k.code,
+                                                        children: (0, i.jsx)('pre', { children: n.stack })
                                                     })
                                                 })
                                             ]
@@ -112,21 +112,21 @@ class A extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            b(this, 'state', {
+            L(this, 'state', {
                 showTrace: !1,
                 busy: !1
             }),
-            b(this, 'notificationTimer', void 0),
-            b(this, 'hideNotification', () => {
-                j();
+            L(this, 'notificationTimer', void 0),
+            L(this, 'hideNotification', () => {
+                A();
                 let { notificationTimer: e } = this;
                 null != e && clearTimeout(e), (this.notificationTimer = null);
             }),
-            b(this, 'handleReload', (e) => {
+            L(this, 'handleReload', (e) => {
                 this.setState({ busy: !0 }),
-                    j(),
-                    p.Z.track(
-                        y.rMx.NOTIFICATION_CLICKED,
+                    A(),
+                    _.Z.track(
+                        x.rMx.NOTIFICATION_CLICKED,
                         {
                             notif_type: I.n0.OverlayCrashed,
                             action_type: 'reload'
@@ -136,19 +136,19 @@ class A extends s.PureComponent {
                     e.stopPropagation(),
                     setTimeout(() => location.reload(!0), 200);
             }),
-            b(this, 'handleNotificationClick', (e) => {
+            L(this, 'handleNotificationClick', (e) => {
                 e.stopPropagation();
-                let { notificationTimer: t } = this;
-                null != t && clearTimeout(t), e.shiftKey && this.setState({ showTrace: !0 });
+                let { notificationTimer: n } = this;
+                null != n && clearTimeout(n), e.shiftKey && this.setState({ showTrace: !0 });
             });
     }
 }
-let M = o().throttle(
+let P = c().throttle(
     () => {
-        g.Z.increment(
+        m.Z.increment(
             {
                 name: u.V.APP_CRASHED,
-                tags: ['reason:'.concat(c.v.UNHANDLED_JS_ERROR), 'level:'.concat(d.c.FATAL)]
+                tags: ['reason:'.concat(s.v.UNHANDLED_JS_ERROR), 'level:'.concat(d.c.FATAL)]
             },
             !0
         );
@@ -156,19 +156,19 @@ let M = o().throttle(
     100,
     { trailing: !1 }
 );
-class P extends s.PureComponent {
-    componentDidCatch(e, t) {
-        let n = (0, v.s1)().location;
+class w extends a.PureComponent {
+    componentDidCatch(e, n) {
+        let t = (0, v.s1)().location;
         this.setState({
             error: e,
-            info: t
+            info: n
         });
-        let i = (0, Z.QF)(),
-            s = (0, Z.Ht)();
-        (0, f.lW)({
-            type: y.BmY.DISPATCH,
-            pid: (0, Z.QF)(),
-            token: s,
+        let i = (0, b.QF)(),
+            a = (0, b.Ht)();
+        (0, h.lW)({
+            type: x.BmY.DISPATCH,
+            pid: (0, b.QF)(),
+            token: a,
             payloads: [
                 {
                     type: 'OVERLAY_CRASHED',
@@ -181,37 +181,37 @@ class P extends s.PureComponent {
                 }
             ]
         }),
-            setImmediate(() => window.addEventListener('click', j));
-        let r = x.Z.captureCrash(e, { extra: t });
-        p.Z.track(y.rMx.APP_CRASHED, {
-            path: n.pathname,
-            extra: t,
+            setImmediate(() => window.addEventListener('click', A));
+        let o = Z.Z.captureCrash(e, { extra: n });
+        _.Z.track(x.rMx.APP_CRASHED, {
+            path: t.pathname,
+            extra: n,
             error_message: e.message,
             error_stack: e.stack,
-            sentry_issue_id: r,
+            sentry_issue_id: o,
             error_level: 'fatal'
         }),
-            M();
+            P();
     }
     render() {
-        let { children: e, className: t } = this.props,
-            { error: n, info: s } = this.state;
-        return null != n
-            ? (0, i.jsx)(A, {
-                  error: n,
-                  info: s
+        let { children: e, className: n } = this.props,
+            { error: t, info: a } = this.state;
+        return null != t
+            ? (0, i.jsx)(T, {
+                  error: t,
+                  info: a
               })
             : (0, i.jsx)('div', {
-                  className: t,
+                  className: n,
                   children: e
               });
     }
     constructor(...e) {
         super(...e),
-            b(this, 'state', {
+            L(this, 'state', {
                 error: null,
                 info: null
             });
     }
 }
-t.Z = P;
+n.Z = w;

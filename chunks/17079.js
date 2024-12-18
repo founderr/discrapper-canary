@@ -1,11 +1,11 @@
 n.d(t, {
     T: function () {
-        return l;
+        return o;
     }
 });
 var i = n(570140),
     r = n(155414);
-async function l(e, t) {
+async function o(e, t) {
     i.Z.dispatch({
         type: 'CREATOR_MONETIZATION_PRICE_TIERS_FETCH',
         guildId: e,

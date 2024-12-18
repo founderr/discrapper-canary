@@ -3,35 +3,35 @@ n.d(t, {
         return d;
     },
     S_: function () {
-        return c;
+        return u;
     },
     V5: function () {
-        return s;
-    },
-    VX: function () {
-        return r;
-    },
-    ih: function () {
         return a;
     },
+    VX: function () {
+        return o;
+    },
+    ih: function () {
+        return s;
+    },
     xc: function () {
-        return u;
+        return c;
     }
 });
 var i = n(972959);
-let l = {
+let r = {
         timeToLiveMs: 5000,
         reappearTimeMs: 10000
     },
-    o = (0, i.H)(() => l),
-    r = 10000,
-    s = 20000,
-    a = 500,
-    u = 1000;
-function c(e) {
-    o.setState({ timeToLiveMs: e });
+    l = (0, i.H)(() => r),
+    o = 10000,
+    a = 20000,
+    s = 500,
+    c = 1000;
+function u(e) {
+    l.setState({ timeToLiveMs: e });
 }
 function d(e) {
-    o.setState({ reappearTimeMs: e });
+    l.setState({ reappearTimeMs: e });
 }
-t.ZP = o;
+t.ZP = l;

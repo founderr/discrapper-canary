@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return a;
     }
 });
 var i = n(200651);
 n(192379);
 var l = n(481060),
     r = n(986038);
-function o(e) {
+function a(e) {
     let { userCount: t } = e;
     return (0, i.jsxs)('div', {
         className: r.container,

@@ -9,122 +9,122 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    o = n.n(r),
-    a = n(91192),
+    a = n.n(r),
+    o = n(91192),
     s = n(442837),
     c = n(481060),
     u = n(493683),
     d = n(239091),
     h = n(317381),
     p = n(16609),
-    m = n(540059),
-    f = n(276952),
+    f = n(540059),
+    m = n(276952),
     g = n(682662),
-    C = n(674552),
-    v = n(593364),
-    _ = n(905423),
-    x = n(199902),
+    v = n(674552),
+    C = n(593364),
+    x = n(905423),
+    _ = n(199902),
     I = n(592125),
-    b = n(944486),
-    E = n(979651),
+    Z = n(944486),
+    b = n(979651),
     S = n(709054),
-    Z = n(853856),
-    N = n(593214),
+    N = n(853856),
+    E = n(593214),
     y = n(919755),
-    T = n(110977),
-    j = n(603274),
-    A = n(981631),
-    P = n(388032),
-    R = n(120555);
+    j = n(110977),
+    T = n(603274),
+    P = n(981631),
+    A = n(388032),
+    w = n(120555);
 let M = {
     analyticsSource: {
-        page: A.ZY5.GUILD_CHANNEL,
-        section: A.jXE.CHANNEL_LIST,
-        object: A.qAy.CHANNEL
+        page: P.ZY5.GUILD_CHANNEL,
+        section: P.jXE.CHANNEL_LIST,
+        object: P.qAy.CHANNEL
     }
 };
 function L() {
-    let e = (0, a.Ie)('favorites'),
-        { favoriteAdded: t, clearFavoriteAdded: r } = (0, N.up)(),
-        [L, w] = l.useState(!1),
-        { favoriteServerMuted: D, favoriteChannels: O } = (0, s.cj)([Z.Z], () => ({
-            favoriteChannels: Z.Z.getFavoriteChannels(),
-            favoriteServerMuted: Z.Z.favoriteServerMuted
+    let e = (0, o.Ie)('favorites'),
+        { favoriteAdded: t, clearFavoriteAdded: r } = (0, E.up)(),
+        [L, R] = l.useState(!1),
+        { favoriteServerMuted: D, favoriteChannels: G } = (0, s.cj)([N.Z], () => ({
+            favoriteChannels: N.Z.getFavoriteChannels(),
+            favoriteServerMuted: N.Z.favoriteServerMuted
         })),
-        k = (0, s.e7)([b.Z], () => b.Z.getChannelId(A.I_8)),
-        G = (0, s.e7)([I.Z], () => I.Z.getChannel(k)),
-        U = (0, _.Z)((e) => e.guildId) === A.I_8,
-        { badge: B, unread: H } = (0, y.Z)(O),
-        V = (function (e) {
-            let t = (0, s.e7)([b.Z], () => b.Z.getVoiceChannelId()),
+        k = (0, s.e7)([Z.Z], () => Z.Z.getChannelId(P.I_8)),
+        B = (0, s.e7)([I.Z], () => I.Z.getChannel(k)),
+        U = (0, x.Z)((e) => e.guildId) === P.I_8,
+        { badge: O, unread: V } = (0, y.Z)(G),
+        H = (function (e) {
+            let t = (0, s.e7)([Z.Z], () => Z.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
-                i = (0, s.e7)([x.Z], () => {
+                i = (0, s.e7)([_.Z], () => {
                     if (!n) return !1;
-                    let t = x.Z.getCurrentUserActiveStream();
+                    let t = _.Z.getCurrentUserActiveStream();
                     return null != t && null != e[t.channelId];
                 }),
-                l = (0, s.e7)([x.Z], () => x.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
-                r = (0, s.e7)([E.Z], () => n && null != t && E.Z.hasVideo(t), [n, t]),
-                o = (0, s.Wu)([h.ZP], () => S.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
-                a = (0, s.e7)([h.ZP], () =>
+                l = (0, s.e7)([_.Z], () => _.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
+                r = (0, s.e7)([b.Z], () => n && null != t && b.Z.hasVideo(t), [n, t]),
+                a = (0, s.Wu)([h.ZP], () => S.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
+                o = (0, s.e7)([h.ZP], () =>
                     Array.from(h.ZP.getSelfEmbeddedActivities().values()).some((t) => {
                         let { location: n } = t,
                             i = (0, p.p)(n);
                         return null != i && null != e[i];
                     })
                 ),
-                c = o.length > 0,
+                c = a.length > 0,
                 u = !1,
                 d = !1,
-                m = !1,
-                f = !1;
+                f = !1,
+                m = !1;
             return (
-                n ? ((u = !r), (d = r), (m = i), (f = a)) : ((m = l), (f = c)),
-                (0, C.Or)({
+                n ? ((u = !r), (d = r), (f = i), (m = o)) : ((f = l), (m = c)),
+                (0, v.Or)({
                     audio: u,
                     video: d,
-                    screenshare: m,
+                    screenshare: f,
                     liveStage: !1,
                     isCurrentUserConnected: n,
-                    activity: f
+                    activity: m
                 })
             );
-        })(O),
-        F = B > 0 ? (0, v.N)(B) : null,
-        W = (0, m.Q3)('FavoritesButton'),
+        })(G),
+        F = O > 0 ? (0, C.N)(O) : null,
+        W = (0, f.Q3)('FavoritesButton'),
         z = l.useCallback(() => {
             r();
         }, [r]);
     return (0, i.jsxs)(g.H, {
         children: [
-            (0, i.jsx)(f.Z, {
+            (0, i.jsx)(m.Z, {
                 selected: U,
                 hovered: L,
-                unread: H && !D,
-                className: R.pill
+                unread: V && !D,
+                className: w.pill
             }),
-            (0, i.jsx)(j.Z, {
+            (0, i.jsx)(T.Z, {
                 onShow: z,
-                children: (0, i.jsx)(T.S, {
+                children: (0, i.jsx)(j.S, {
                     children: (0, i.jsx)(c.BlobMask, {
                         selected: W || U || L,
-                        upperBadge: V,
+                        upperBadge: H,
                         lowerBadge: F,
                         children: (0, i.jsx)(c.NavItem, {
                             ...e,
-                            ariaLabel: P.intl.formatToPlainString(P.t['/uzRsr'], {
-                                guildName: P.intl.string(P.t.wMWycn),
-                                mentions: B
+                            ariaLabel: A.intl.formatToPlainString(A.t['/uzRsr'], {
+                                guildName: A.intl.string(A.t.wMWycn),
+                                mentions: O
                             }),
                             to: {
-                                pathname: A.Z5c.CHANNEL(A.I_8, k),
+                                pathname: P.Z5c.CHANNEL(P.I_8, k),
                                 state: M
                             },
                             selected: U || L,
-                            onMouseEnter: () => w(!0),
-                            onMouseLeave: () => w(!1),
+                            onMouseEnter: () => R(!0),
+                            onMouseLeave: () => R(!1),
                             onMouseDown: function () {
-                                if (null != G) u.Z.preload(G.guild_id, G.id);
+                                if (null != B) u.Z.preload(B.guild_id, B.id);
                             },
                             onContextMenu: function (e) {
                                 (0, d.jW)(e, async () => {
@@ -133,11 +133,11 @@ function L() {
                                 });
                             },
                             children: (0, i.jsx)('div', {
-                                className: o()(R.ring, { [R.ringActive]: t }),
+                                className: a()(w.ring, { [w.ringActive]: t }),
                                 children: (0, i.jsx)(c.StarIcon, {
                                     size: 'custom',
                                     color: 'currentColor',
-                                    className: R.favoriteIcon,
+                                    className: w.favoriteIcon,
                                     width: 20,
                                     height: 20
                                 })

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return p;
     }
 }),
     n(47120);
@@ -36,7 +36,7 @@ function x(e) {
           })
         : e;
 }
-function f(e) {
+function p(e) {
     let { data: t } = e,
         n = (0, i.ZP)();
     return (0, r.jsx)('div', {

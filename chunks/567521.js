@@ -8,11 +8,11 @@ t(192379);
 var l = t(442837),
     r = t(481060),
     u = t(471253),
-    o = t(146085),
-    a = t(496675),
+    a = t(146085),
+    o = t(496675),
     c = t(388032);
 function d(n, e) {
-    let t = (0, l.e7)([a.Z], () => a.Z.can(o.yP, n), [n]);
+    let t = (0, l.e7)([o.Z], () => o.Z.can(a.yP, n), [n]);
     return null != e && t
         ? (0, i.jsx)(r.MenuItem, {
               id: 'end-stage',

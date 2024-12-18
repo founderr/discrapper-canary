@@ -16,8 +16,8 @@ var r = n(200651),
     h = n(681619),
     m = n(621060),
     x = n(941469),
-    f = n(668055);
-function p(e, t) {
+    p = n(668055);
+function f(e, t) {
     return e.store.getName().localeCompare(t.store.getName());
 }
 function g(e) {
@@ -35,7 +35,7 @@ function g(e) {
             );
         }, [t, n]),
         (0, r.jsx)(s.ScrollerThin, {
-            className: f.inspectorContainer,
+            className: p.inspectorContainer,
             children: (0, r.jsx)(d.Z, { data: l })
         })
     );
@@ -43,7 +43,7 @@ function g(e) {
 let b = [
         {
             key: 'name',
-            cellClassName: f.__invalid_eventColumn,
+            cellClassName: p.__invalid_eventColumn,
             render(e) {
                 let { store: t } = e;
                 return t.getName();
@@ -58,7 +58,7 @@ let b = [
                 let { store: t } = e;
                 return null == t.__getLocalVars
                     ? (0, r.jsxs)('div', {
-                          className: f.inspectorContainer,
+                          className: p.inspectorContainer,
                           children: ['Store is missing ', (0, r.jsx)('code', { children: '__getLocalVars' }), ' method.']
                       })
                     : (0, r.jsx)(g, {
@@ -83,13 +83,13 @@ function j(e) {
     let { store: t, initialHeight: n } = e,
         { TabBar: a, renderSelectedTab: l } = (0, m.Z)({ tabs: v }, []);
     return (0, r.jsxs)(u.Z, {
-        className: f.subPanel,
+        className: p.subPanel,
         minHeight: 100,
         initialHeight: n,
         children: [
             (0, r.jsx)(a, {}),
             (0, r.jsxs)(c.ZP, {
-                className: i()(x.headerBar, f.subPanelHeaderBar),
+                className: i()(x.headerBar, p.subPanelHeaderBar),
                 children: [
                     (0, r.jsx)(c.ZP.Icon, {
                         icon: s.TagIcon,
@@ -114,7 +114,7 @@ function C() {
                             key: e._dispatchToken,
                             store: e
                         }))
-                        .sort(p),
+                        .sort(f),
                 [l]
             )
             .filter((e) =>
@@ -127,12 +127,12 @@ function C() {
         m = l.find((e) => e._dispatchToken === d);
     return (0, r.jsxs)('div', {
         ref: e,
-        className: i()(x.panel, f.panel),
+        className: i()(x.panel, p.panel),
         children: [
             (0, r.jsx)('div', {
-                className: f.toolbar,
+                className: p.toolbar,
                 children: (0, r.jsx)(s.SearchBar, {
-                    className: f.searchBar,
+                    className: p.searchBar,
                     size: s.SearchBar.Sizes.SMALL,
                     query: t,
                     onChange: n,

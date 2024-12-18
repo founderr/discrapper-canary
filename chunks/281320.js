@@ -6,15 +6,15 @@ n.d(t, {
     n(47120);
 var i,
     r,
-    l,
     o,
+    l,
     u,
     a,
     s = n(442837),
     c = n(570140);
 let d = new Map(),
     f = new Map();
-((l = i || (i = {}))[(l.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (l[(l.FETCHING = 1)] = 'FETCHING'), (l[(l.FETCHED = 2)] = 'FETCHED');
+((o = i || (i = {}))[(o.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (o[(o.FETCHING = 1)] = 'FETCHING'), (o[(o.FETCHED = 2)] = 'FETCHED');
 class _ extends (r = s.ZP.Store) {
     getPriceTiersFetchStateForGuildAndType(e, t) {
         var n, i;
@@ -26,14 +26,14 @@ class _ extends (r = s.ZP.Store) {
     }
 }
 (a = 'CreatorMonetizationStore'),
-    (u = 'displayName') in (o = _)
-        ? Object.defineProperty(o, u, {
+    (u = 'displayName') in (l = _)
+        ? Object.defineProperty(l, u, {
               value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (o[u] = a),
+        : (l[u] = a),
     (t.Z = new _(c.Z, {
         CONNECTION_OPEN: function () {
             d.clear(), f.clear();

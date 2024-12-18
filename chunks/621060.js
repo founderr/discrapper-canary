@@ -29,7 +29,7 @@ function m(e) {
         i = a.useRef(null),
         m = a.useRef(0),
         x = a.useRef(new Map()),
-        [f, p] = a.useState([]),
+        [p, f] = a.useState([]),
         g = a.useCallback(() => {
             var e, r, a, l;
             if (null == i.current) return;
@@ -39,7 +39,7 @@ function m(e) {
                 for (let i of ((m.current = s), (s -= null !== (r = null === (e = x.current.get(n)) || void 0 === e ? void 0 : e.width) && void 0 !== r ? r : 0), t)) {
                     if (i.id !== n) (s -= null !== (l = null === (a = x.current.get(i.id)) || void 0 === a ? void 0 : a.width) && void 0 !== l ? l : 0) < 0 && o.push(i.id);
                 }
-                p(o);
+                f(o);
             }
         }, [t, n]),
         b = a.useRef(null);
@@ -66,7 +66,7 @@ function m(e) {
                 children: t
                     .map((e) => {
                         let { id: t, name: a } = e;
-                        return f.includes(t) && n !== t
+                        return p.includes(t) && n !== t
                             ? (0, r.jsx)(
                                   o.MenuItem,
                                   {
@@ -81,7 +81,7 @@ function m(e) {
                     .filter(c.lm)
             });
         },
-        [t, f, l, n]
+        [t, p, l, n]
     );
     return (0, r.jsxs)('div', {
         className: u.tabBar,
@@ -90,7 +90,7 @@ function m(e) {
             t
                 .map((e) => {
                     let { id: t, name: a } = e;
-                    if (!f.includes(t))
+                    if (!p.includes(t))
                         return (0, r.jsx)(
                             h,
                             {
@@ -111,7 +111,7 @@ function m(e) {
                         );
                 })
                 .filter(c.lm),
-            f.length > 0 &&
+            p.length > 0 &&
                 (0, r.jsx)(r.Fragment, {
                     children: (0, r.jsx)(o.Popout, {
                         layerContext: d.O$,

@@ -1,79 +1,79 @@
 n.d(t, {
     B: function () {
-        return j;
+        return L;
     }
 }),
     n(47120);
 var i = n(200651),
-    l = n(192379),
-    o = n(512722),
-    r = n.n(o),
-    s = n(442837),
-    a = n(481060),
-    u = n(872810),
-    c = n(594190),
+    r = n(192379),
+    l = n(512722),
+    o = n.n(l),
+    a = n(442837),
+    s = n(481060),
+    c = n(872810),
+    u = n(594190),
     d = n(74299),
     h = n(451467),
     f = n(537413),
-    p = n(989941),
-    m = n(567126),
-    v = n(143135),
-    g = n(751571),
-    E = n(361291),
+    m = n(989941),
+    v = n(567126),
+    p = n(143135),
+    x = n(751571),
+    g = n(361291),
     C = n(592125),
-    x = n(430824),
-    Z = n(131951),
-    _ = n(944486),
-    S = n(594174),
-    I = n(449224),
-    N = n(358085),
-    b = n(981631),
-    O = n(37113),
-    y = n(761274);
-function j() {
-    let e = (0, s.e7)([_.Z], () => _.Z.getVoiceChannelId()),
-        t = (0, s.e7)([C.Z], () => C.Z.getChannel(e), [e]),
-        o = (0, s.e7)([S.default], () => {
-            let e = S.default.getCurrentUser();
-            return r()(null != e, 'useGoLiveImmidateAction: user cannot be undefined'), e;
+    Z = n(430824),
+    I = n(131951),
+    j = n(944486),
+    _ = n(594174),
+    E = n(449224),
+    b = n(358085),
+    w = n(981631),
+    N = n(37113),
+    k = n(761274);
+function L() {
+    let e = (0, a.e7)([j.Z], () => j.Z.getVoiceChannelId()),
+        t = (0, a.e7)([C.Z], () => C.Z.getChannel(e), [e]),
+        l = (0, a.e7)([_.default], () => {
+            let e = _.default.getCurrentUser();
+            return o()(null != e, 'useGoLiveImmidateAction: user cannot be undefined'), e;
         }),
-        j = null == t ? void 0 : t.getGuildId(),
-        T = (0, s.e7)([Z.Z], () => (0, d.Z)(Z.Z));
-    async function k() {
+        L = null == t ? void 0 : t.getGuildId(),
+        S = (0, a.e7)([I.Z], () => (0, d.Z)(I.Z));
+    async function y() {
         var e;
-        return null !== (e = (await (0, m._Q)()).sort((e, t) => (0, m.ov)(t) - (0, m.ov)(e))[0]) && void 0 !== e ? e : null;
+        return null !== (e = (await (0, v._Q)()).sort((e, t) => (0, v.ov)(t) - (0, v.ov)(e))[0]) && void 0 !== e ? e : null;
     }
-    let w = l.useCallback(async () => {
+    let T = r.useCallback(async () => {
         var n, i;
         if (null == t || null == e) return !1;
-        let l = await k(),
-            r = (0, N.isWindows)() ? (0, p.Z)(c.ZP, I.Z) : null;
-        if (null == r && null == l) return !1;
-        let s = null != j ? (null === (n = x.Z.getGuild(j)) || void 0 === n ? void 0 : n.premiumTier) : null,
-            { preset: a, resolution: d, fps: m, soundshareEnabled: C } = E.Z.getState(),
-            [_, S] = null !== (i = (0, f.Z)(a, o, s)) && void 0 !== i ? i : [O.LY.RESOLUTION_720, O.ws.FPS_30],
-            b = a,
-            T = d,
-            w = m;
-        b !== O.tI.PRESET_CUSTOM && ((T = _), (w = S)),
-            !(0, h.Z)(b, T, w, o, s) && ((T = _), (w = S)),
-            !(0, h.Z)(b, T, w, o, s, t) && ((b = O.tI.PRESET_VIDEO), (T = O.LY.RESOLUTION_720), (w = O.ws.FPS_30)),
-            (0, u.Rc)({
-                preset: b,
-                resolution: T,
-                frameRate: w,
+        let r = await y(),
+            o = (0, b.isWindows)() ? (0, m.Z)(u.ZP, E.Z) : null;
+        if (null == o && null == r) return !1;
+        let a = null != L ? (null === (n = Z.Z.getGuild(L)) || void 0 === n ? void 0 : n.premiumTier) : null,
+            { preset: s, resolution: d, fps: v, soundshareEnabled: C } = g.Z.getState(),
+            [j, _] = null !== (i = (0, f.Z)(s, l, a)) && void 0 !== i ? i : [N.LY.RESOLUTION_720, N.ws.FPS_30],
+            w = s,
+            S = d,
+            T = v;
+        w !== N.tI.PRESET_CUSTOM && ((S = j), (T = _)),
+            !(0, h.Z)(w, S, T, l, a) && ((S = j), (T = _)),
+            !(0, h.Z)(w, S, T, l, a, t) && ((w = N.tI.PRESET_VIDEO), (S = N.LY.RESOLUTION_720), (T = N.ws.FPS_30)),
+            (0, c.Rc)({
+                preset: w,
+                resolution: S,
+                frameRate: T,
                 soundshareEnabled: C
             });
-        let L = (0, v.Z)(r, l, c.ZP.getRunningGames()),
-            A = !(0, N.isWindows)() || null == L || (null == l ? void 0 : l.id.startsWith('camera:')) || null == L ? null : L.pid,
-            R = null,
+        let A = (0, p.Z)(o, r, u.ZP.getRunningGames()),
+            O = !(0, b.isWindows)() || null == A || (null == r ? void 0 : r.id.startsWith('camera:')) || null == A ? null : A.pid,
+            V = null,
             M = null;
         return (
-            null == A && null != l && ((R = l.id), (M = l.name)),
-            !!(Z.Z.getUseSystemScreensharePicker() || (await g.Z.hasPermission(y.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }))) &&
-                ((0, u.WH)(j, e, {
-                    pid: A,
-                    sourceId: R,
+            null == O && null != r && ((V = r.id), (M = r.name)),
+            !!(I.Z.getUseSystemScreensharePicker() || (await x.Z.hasPermission(k.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }))) &&
+                ((0, c.WH)(L, e, {
+                    pid: O,
+                    sourceId: V,
                     sourceName: M,
                     audioSourceId: null,
                     sound: C,
@@ -81,18 +81,18 @@ function j() {
                 }),
                 !0)
         );
-    }, [t, j, o, e]);
-    return l.useCallback(async () => {
-        if (!(!T || null == e || (await w())))
-            (0, a.openModalLazy)(async () => {
+    }, [t, L, l, e]);
+    return r.useCallback(async () => {
+        if (!(!S || null == e || (await T())))
+            (0, s.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('79477'), n.e('81741')]).then(n.bind(n, 60594));
                 return (t) =>
                     (0, i.jsx)(e, {
                         ...t,
                         selectSource: !1,
-                        guildId: j,
-                        analyticsLocation: b.Sbl.UNLOCKED_OVERLAY
+                        guildId: L,
+                        analyticsLocation: w.Sbl.UNLOCKED_OVERLAY
                     });
             });
-    }, [T, w, j, e]);
+    }, [S, T, L, e]);
 }

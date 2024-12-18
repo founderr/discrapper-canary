@@ -1,54 +1,54 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return x;
+        return u;
     }
 });
-var o = n(200651);
-n(192379);
-var r = n(481060),
-    i = n(63063),
-    c = n(921869),
-    s = n(514161),
-    l = n(981631),
-    a = n(388032),
-    d = n(932508);
-function u() {
-    return (0, o.jsxs)(s.yC, {
-        children: [
-            (0, o.jsx)(s.Ux, {
-                text: a.intl.string(a.t['VU+McX']),
-                children: (0, o.jsx)(r.VoiceNormalIcon, {
-                    size: 'md',
-                    color: 'currentColor'
-                })
-            }),
-            (0, o.jsx)(s.Ux, {
-                text: a.intl.string(a.t.zMpLER),
-                children: (0, o.jsx)(r.GameControllerIcon, {
-                    size: 'md',
-                    color: 'currentColor'
-                })
-            })
-        ]
-    });
-}
-function x(e) {
-    let { onContinue: t, onClose: n } = e,
-        r = i.Z.getArticleURL(l.BhN.XBOX_CONNECTION);
-    return (0, o.jsx)(c.m, {
-        platformType: l.ABu.XBOX,
-        headerConnect: a.intl.string(a.t['7FGNVF']),
-        headerReconnect: a.intl.string(a.t.z3rAho),
-        body: a.intl.string(a.t.oJquQU),
-        learnMoreLink: r,
-        onClose: n,
-        onContinue: t,
+var o = t(200651),
+    i = t(192379),
+    r = t(481060),
+    c = t(63063),
+    s = t(921869),
+    a = t(981631),
+    l = t(388032),
+    d = t(493358);
+function u(e) {
+    let { onContinue: n, onClose: t } = e,
+        u = c.Z.getArticleURL(a.BhN.XBOX_CONNECTION),
+        f = l.intl.format(l.t.CIc3IC, { helpdeskArticleUrl: u }),
+        p = i.useMemo(
+            () => [
+                {
+                    label: l.intl.string(l.t.ihQXsb),
+                    icon: r.VoiceNormalIcon
+                },
+                {
+                    label: l.intl.string(l.t.Xt1n4O),
+                    icon: r.ScreenStreamIcon
+                },
+                {
+                    label: l.intl.string(l.t.xqVY3t),
+                    icon: r.GroupIcon
+                },
+                {
+                    label: l.intl.string(l.t.iQsKVV),
+                    icon: r.GameControllerIcon
+                }
+            ],
+            []
+        );
+    return (0, o.jsx)(s.m, {
+        platformType: a.ABu.XBOX,
+        headerConnect: l.intl.string(l.t.m8aaho),
+        headerReconnect: l.intl.string(l.t.z3rAho),
+        body: f,
+        onClose: t,
+        onContinue: n,
         img: (0, o.jsx)('img', {
-            src: d,
-            width: 234,
-            height: 152,
+            src: d.Z,
+            width: 230,
+            height: 160,
             alt: ''
         }),
-        valueProps: (0, o.jsx)(u, {})
+        valueProps: p
     });
 }

@@ -1,7 +1,6 @@
 e.exports = {
     chat: 'chat_a7d72e',
     threadSidebarOpen: 'threadSidebarOpen_a7d72e',
-    channelTextArea: 'channelTextArea_a7d72e',
     uploadArea: 'uploadArea_a7d72e',
     threadSidebarFloating: 'threadSidebarFloating_a7d72e',
     form: 'form_a7d72e',
@@ -11,6 +10,7 @@ e.exports = {
     content: 'content_a7d72e',
     noChat: 'noChat_a7d72e',
     channelBottomBarArea: 'channelBottomBarArea_a7d72e',
+    channelTextArea: 'channelTextArea_a7d72e',
     title: 'title_a7d72e',
     avatar: 'avatar_a7d72e',
     parentChannelName: 'parentChannelName_a7d72e',

@@ -25,8 +25,8 @@ var l = n(200651),
     E = n(710111),
     T = n(6609);
 function I(e) {
-    let { guildId: t, channel: n, width: I, height: v, keepOpen: O, interactive: y = !0, analyticsSource: j, onClose: _ } = e,
-        S = (function (e) {
+    let { guildId: t, channel: n, width: I, height: v, keepOpen: O, interactive: j = !0, analyticsSource: y, onClose: _ } = e,
+        b = (function (e) {
             let [t, n] = (0, i.Wu)([g.Z], () => [g.Z.getSounds(), g.Z.getFavorites()]);
             return r.useMemo(() => {
                 let l = [],
@@ -41,7 +41,7 @@ function I(e) {
                 return r.forEach((e) => s(e, !0)), r.forEach((e) => s(e, !1)), l;
             }, [t, n, e]);
         })((0, f.h)(n, !0)),
-        b = (0, C.j)(),
+        S = (0, C.j)(),
         R = r.useRef(null),
         [A, Z] = r.useState(void 0),
         P = (0, i.e7)([d.Z], () => d.Z.getMediaSessionId()),
@@ -56,8 +56,8 @@ function I(e) {
         x.w(), u.DZ.loadIfNecessary();
     }, []),
         r.useEffect(() => {
-            0 === S.length && 0 === b.length && _();
-        }, [S.length, b, _]),
+            0 === b.length && 0 === S.length && _();
+        }, [b.length, S, _]),
         r.useEffect(
             () => () => {
                 let e = R.current;
@@ -70,12 +70,12 @@ function I(e) {
                 type: s.ImpressionTypes.POPOUT,
                 name: s.ImpressionNames.SOUNDBOARD_POPOUT,
                 properties: {
-                    source: j,
+                    source: y,
                     guild_id: t,
                     media_session_id: P
                 }
             },
-            { disableTrack: !y }
+            { disableTrack: !j }
         );
     let B = r.useCallback((e) => {
             (R.current = e), Z(null == e ? void 0 : e.soundId);
@@ -86,26 +86,26 @@ function I(e) {
                     B(null);
                     return;
                 }
-                let t = S[e];
+                let t = b[e];
                 if (null != t) B(t);
             },
-            [B, S]
+            [B, b]
         ),
         M = r.useCallback(
             (e) => {
                 if (null == e) return;
-                let t = S[e];
+                let t = b[e];
                 if (null != t) D(t);
             },
-            [S, D]
+            [b, D]
         ),
         L = r.useMemo(
             () =>
-                S.map((e) =>
+                b.map((e) =>
                     (0, l.jsx)(
                         m.ZP,
                         {
-                            interactive: y,
+                            interactive: j,
                             className: T.soundButton,
                             sound: e,
                             focused: A === e.soundId,
@@ -114,9 +114,9 @@ function I(e) {
                         e.soundId
                     )
                 ),
-            [A, n, y, S]
+            [A, n, j, b]
         );
-    return 0 === S.length
+    return 0 === b.length
         ? null
         : (0, l.jsx)(a.Gt, {
               value: k,
@@ -129,7 +129,7 @@ function I(e) {
                   activeItem: A,
                   onItemSelect: w,
                   onItemAction: M,
-                  interactive: y,
+                  interactive: j,
                   children: L
               })
           });

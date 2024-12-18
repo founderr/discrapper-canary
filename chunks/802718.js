@@ -1,27 +1,27 @@
 n.d(t, {
     U: function () {
-        return v;
+        return C;
     }
 });
 var i = n(200651),
     l = n(192379),
     r = n(91192),
-    o = n(481060),
-    a = n(442837),
+    a = n(481060),
+    o = n(442837),
     s = n(239091),
     c = n(410030),
     u = n(377171),
     d = n(682662),
     h = n(662146),
     p = n(678513),
-    m = n(981631),
-    f = n(388032),
+    f = n(981631),
+    m = n(388032),
     g = n(477090);
-function C(e) {
+function v(e) {
     let { target: t } = e,
-        a = (0, r.Ie)('fakedoor'),
+        o = (0, r.Ie)('fakedoor'),
         p = l.useCallback(() => {
-            (0, o.openModalLazy)(async () => {
+            (0, a.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('22862'), n.e('96252')]).then(n.bind(n, 646202));
                 return (n) =>
                     (0, i.jsx)(e, {
@@ -30,7 +30,7 @@ function C(e) {
                     });
             });
         }, [t]),
-        C = l.useCallback(
+        v = l.useCallback(
             (e) => {
                 (0, s.jW)(e, async () => {
                     let { default: e } = await n.e('39612').then(n.bind(n, 761624));
@@ -43,45 +43,45 @@ function C(e) {
             },
             [t]
         ),
-        v = 'url('.concat(t.backgroundAssetUrl, ') black top / cover no-repeat'),
-        _ = (0, i.jsxs)('div', {
+        C = 'url('.concat(t.backgroundAssetUrl, ') black top / cover no-repeat'),
+        x = (0, i.jsxs)('div', {
             className: g.tooltipContainer,
             children: [
                 (0, i.jsx)('div', {
                     className: g.tooltipBackground,
-                    style: { background: v }
+                    style: { background: C }
                 }),
-                (0, i.jsx)(o.Heading, {
+                (0, i.jsx)(a.Heading, {
                     variant: 'heading-sm/medium',
                     children: t.tooltipHeader
                 }),
-                (0, i.jsx)(o.Text, {
+                (0, i.jsx)(a.Text, {
                     variant: 'text-xs/normal',
-                    children: f.intl.string(f.t.IIbwAg)
+                    children: m.intl.string(m.t.IIbwAg)
                 })
             ]
         }),
-        x = (0, c.Fg)();
+        _ = (0, c.Fg)();
     return (0, i.jsxs)(d.H, {
         children: [
-            (0, i.jsx)(o.ThemeContextProvider, {
-                theme: m.BRd.DARK,
+            (0, i.jsx)(a.ThemeContextProvider, {
+                theme: f.BRd.DARK,
                 children: (0, i.jsx)(h.Z, {
-                    text: _,
+                    text: x,
                     tooltipClass: g.tooltip,
                     tooltipContentClass: g.tooltipContent,
-                    children: (0, i.jsx)(o.ThemeContextProvider, {
-                        theme: x,
-                        children: (0, i.jsx)(o.BlobMask, {
-                            lowerBadge: (0, i.jsx)(o.NumberBadge, {
+                    children: (0, i.jsx)(a.ThemeContextProvider, {
+                        theme: _,
+                        children: (0, i.jsx)(a.BlobMask, {
+                            lowerBadge: (0, i.jsx)(a.NumberBadge, {
                                 count: 1,
                                 color: u.Z.BG_BRAND
                             }),
-                            children: (0, i.jsx)(o.NavItem, {
-                                ...a,
+                            children: (0, i.jsx)(a.NavItem, {
+                                ...o,
                                 onClick: p,
-                                onContextMenu: C,
-                                children: (0, i.jsx)(o.BellIcon, { color: u.Z.TEXT_NORMAL })
+                                onContextMenu: v,
+                                children: (0, i.jsx)(a.BellIcon, { color: u.Z.TEXT_NORMAL })
                             })
                         })
                     })
@@ -89,7 +89,7 @@ function C(e) {
             }),
             (0, i.jsx)('div', {
                 style: {
-                    background: v,
+                    background: C,
                     width: 0,
                     height: 0
                 }
@@ -97,7 +97,7 @@ function C(e) {
         ]
     });
 }
-function v() {
-    let e = (0, a.e7)([p.Z], () => p.Z.getActiveUserSignUp());
-    return null == e ? null : (0, i.jsx)(C, { target: e });
+function C() {
+    let e = (0, o.e7)([p.Z], () => p.Z.getActiveUserSignUp());
+    return null == e ? null : (0, i.jsx)(v, { target: e });
 }

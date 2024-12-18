@@ -1,14 +1,14 @@
 var i,
     r,
-    l,
     o,
+    l,
     u = n(442837),
     a = n(570140),
     s = n(131704),
     c = n(592125);
 let d = {},
     f = {};
-class _ extends (o = u.ZP.Store) {
+class _ extends (l = u.ZP.Store) {
     getTemplates(e) {
         return d[e];
     }
@@ -20,15 +20,15 @@ class _ extends (o = u.ZP.Store) {
         return f[e];
     }
 }
-(l = 'GuildRoleSubscriptionTierTemplatesStore'),
+(o = 'GuildRoleSubscriptionTierTemplatesStore'),
     (r = 'displayName') in (i = _)
         ? Object.defineProperty(i, r, {
-              value: l,
+              value: o,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[r] = l),
+        : (i[r] = o),
     (t.Z = new _(a.Z, {
         GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS: function (e) {
             let { selectedTemplate: t, guildId: n } = e,

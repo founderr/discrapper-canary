@@ -23,7 +23,7 @@ var i,
     T = n(933557),
     b = n(194082),
     x = n(264165),
-    A = n(630186),
+    A = n(548816),
     Z = n(925329),
     L = n(102172),
     P = n(871118),
@@ -45,8 +45,8 @@ let z = {
         SMALL: 64,
         LARGE: 160
     },
-    Y = [14, 14, 12, 12, 10, 8, 6],
-    W = function (e) {
+    W = [14, 14, 12, 12, 10, 8, 6],
+    Y = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         return (0, l.jsx)(u.Text, {
             className: s()(F.textContent, t),
@@ -131,7 +131,7 @@ class Q extends a.Component {
                               })
                           }),
                     (0, l.jsxs)('div', {
-                        children: [W(null != r && '' !== r ? r : V.intl.string(V.t['2TbM/P'])), null != a ? K(a) : null, this.renderTimePlayed()]
+                        children: [Y(null != r && '' !== r ? r : V.intl.string(V.t['2TbM/P'])), null != a ? K(a) : null, this.renderTimePlayed()]
                     })
                 ]
             })
@@ -282,7 +282,7 @@ let ee = (e) => {
                                           className: F.voiceSectionNoGuildImageWrapper,
                                           children: (0, l.jsx)('div', {
                                               className: F.voiceSectionNoGuildImage,
-                                              style: { fontSize: null !== (n = Y[i.acronym.length]) && void 0 !== n ? n : Y[Y.length - 1] },
+                                              style: { fontSize: null !== (n = W[i.acronym.length]) && void 0 !== n ? n : W[W.length - 1] },
                                               children: i.acronym
                                           })
                                       }),
@@ -302,7 +302,7 @@ let ee = (e) => {
                         focusProps: { ringTarget: m },
                         children: (0, l.jsxs)('div', {
                             className: F.voiceSectionDetails,
-                            children: [W(i.toString(), F.voiceSectionText), K(p, F.voiceSectionText)]
+                            children: [Y(i.toString(), F.voiceSectionText), K(p, F.voiceSectionText)]
                         })
                     }),
                     (0, l.jsx)(B.Z, {
@@ -328,7 +328,7 @@ let ee = (e) => {
                           })
                         : null,
                     (0, l.jsxs)('div', {
-                        children: [W(n), K(V.intl.formatToPlainString(V.t.C4WXvb, { memberCount: i.totalSize }))]
+                        children: [Y(n), K(V.intl.formatToPlainString(V.t.C4WXvb, { memberCount: i.totalSize }))]
                     }),
                     (0, l.jsx)(B.Z, {
                         partySize: i,
@@ -348,7 +348,7 @@ let ee = (e) => {
                     (0, l.jsx)(w.Z, { className: F.xboxSectionIcon }),
                     (0, l.jsxs)('div', {
                         className: F.__invalid_xboxSectionDetails,
-                        children: [W(t), K(V.intl.string(V.t['JG9r+/']))]
+                        children: [Y(t), K(V.intl.string(V.t['JG9r+/']))]
                     })
                 ]
             })
@@ -386,7 +386,7 @@ let ee = (e) => {
                           })
                         : (0, l.jsx)('div', {}),
                     (0, l.jsxs)('div', {
-                        children: [null != i ? W(i) : null, null != r ? K(r) : null]
+                        children: [null != i ? Y(i) : null, null != r ? K(r) : null]
                     }),
                     (0, l.jsx)(B.Z, {
                         minAvatarsShown: u ? 2 : 1,
@@ -439,7 +439,7 @@ let ee = (e) => {
                             className: F.twitchSectionIcon
                         }),
                         (0, l.jsxs)('div', {
-                            children: [W(c), null != d ? K(d) : null]
+                            children: [Y(c), null != d ? K(d) : null]
                         }),
                         null != r
                             ? (0, l.jsx)(u.Avatar, {
@@ -489,7 +489,7 @@ let ee = (e) => {
                             className: F.applicationStreamingAvatar
                         }),
                         (0, l.jsxs)('div', {
-                            children: [W(G.ZP.getName(r)), K(g)]
+                            children: [Y(G.ZP.getName(r)), K(g)]
                         }),
                         (0, l.jsx)(b.ZP, { size: b.ZP.Sizes.SMALL })
                     ]

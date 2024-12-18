@@ -3,83 +3,83 @@ n.d(t, {
         return _;
     }
 });
-var o = n(200651);
+var s = n(200651);
 n(192379);
-var s = n(481060),
+var o = n(481060),
     l = n(488889),
-    r = n(226186),
+    a = n(226186),
     i = n(626135),
-    a = n(981631),
-    c = n(259076),
-    d = n(388032),
+    r = n(981631),
+    d = n(308569),
+    c = n(388032),
     u = n(511023),
-    E = n(981818);
+    m = n(981818);
 function _(e) {
-    let { onNext: t, onClose: n, reason: _, onReasonChange: m, freeTextResponse: N, setFreeTextResponse: x } = e,
-        A = c.zf.map((e) => ({
+    let { onNext: t, onClose: n, reason: _, onReasonChange: E, freeTextResponse: N, setFreeTextResponse: x } = e,
+        A = d.zf.map((e) => ({
             value: e,
             name: (0, l.S)(e)
         })),
-        C = (0, r.u)('change_email_collect_reasons_slide');
-    return (0, o.jsxs)('form', {
+        C = (0, a.u)('change_email_collect_reasons_slide');
+    return (0, s.jsxs)('form', {
         onSubmit: t,
         children: [
-            (0, o.jsxs)(s.ModalHeader, {
+            (0, s.jsxs)(o.ModalHeader, {
                 separator: !1,
-                className: E.header,
+                className: m.header,
                 children: [
-                    (0, o.jsx)(s.Heading, {
+                    (0, s.jsx)(o.Heading, {
                         variant: 'heading-xl/extrabold',
-                        children: d.intl.string(d.t['41NIIi'])
+                        children: c.intl.string(c.t['41NIIi'])
                     }),
-                    (0, o.jsx)(s.ModalCloseButton, {
+                    (0, s.jsx)(o.ModalCloseButton, {
                         onClick: n,
-                        className: E.modalCloseButton
+                        className: m.modalCloseButton
                     })
                 ]
             }),
-            (0, o.jsxs)(s.ModalContent, {
+            (0, s.jsxs)(o.ModalContent, {
                 className: u.content,
                 children: [
-                    (0, o.jsx)(s.RadioGroup, {
+                    (0, s.jsx)(o.RadioGroup, {
                         radioPosition: 'right',
                         radioItemClassName: u.radioItem,
-                        size: s.RadioGroup.Sizes.NOT_SET,
+                        size: o.RadioGroup.Sizes.NOT_SET,
                         value: _,
                         options: A,
                         onChange: (e) => {
                             let { value: t } = e;
-                            i.default.track(a.rMx.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED, { change_email_reason_enum: t }), m(t), x(''), t === c.pw.SOMETHING_ELSE && r.Z.trackExposure({ location: 'change_email_collect_reasons_slide' });
+                            i.default.track(r.rMx.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED, { change_email_reason_enum: t }), E(t), x(''), t === d.pw.SOMETHING_ELSE && a.Z.trackExposure({ location: 'change_email_collect_reasons_slide' });
                         }
                     }),
                     C &&
-                        _ === c.pw.SOMETHING_ELSE &&
-                        (0, o.jsx)(s.FormItem, {
-                            children: (0, o.jsx)(s.TextArea, {
+                        _ === d.pw.SOMETHING_ELSE &&
+                        (0, s.jsx)(o.FormItem, {
+                            children: (0, s.jsx)(o.TextArea, {
                                 value: N,
-                                maxLength: c.mF,
+                                maxLength: d.mF,
                                 onChange: x,
                                 className: u.textArea,
-                                placeholder: d.intl.string(d.t.Q8Rk7O)
+                                placeholder: c.intl.string(c.t.Q8Rk7O)
                             })
                         })
                 ]
             }),
-            (0, o.jsxs)(s.ModalFooter, {
-                className: E.modalFooter,
+            (0, s.jsxs)(o.ModalFooter, {
+                className: m.modalFooter,
                 children: [
-                    (0, o.jsx)(s.Button, {
-                        color: s.Button.Colors.BRAND,
+                    (0, s.jsx)(o.Button, {
+                        color: o.Button.Colors.BRAND,
                         disabled: null == _,
-                        size: s.Button.Sizes.MEDIUM,
+                        size: o.Button.Sizes.MEDIUM,
                         onClick: t,
-                        children: d.intl.string(d.t['3PatS0'])
+                        children: c.intl.string(c.t['3PatS0'])
                     }),
-                    (0, o.jsx)(s.Button, {
-                        look: s.Button.Looks.LINK,
-                        color: s.Button.Colors.PRIMARY,
+                    (0, s.jsx)(o.Button, {
+                        look: o.Button.Looks.LINK,
+                        color: o.Button.Colors.PRIMARY,
                         onClick: n,
-                        children: d.intl.string(d.t['ETE/oK'])
+                        children: c.intl.string(c.t['ETE/oK'])
                     })
                 ]
             })

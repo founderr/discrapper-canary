@@ -144,7 +144,7 @@ function L(e) {
             },
             [R]
         ),
-        Y = r.useCallback(
+        W = r.useCallback(
             (e, t) => {
                 (0, C.z)(A.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
                     current_page: N.m_.SEARCH,
@@ -157,7 +157,7 @@ function L(e) {
             },
             [null == V ? void 0 : V.loadId, n, R]
         ),
-        W = (0, I.K)();
+        Y = (0, I.K)();
     return (0, i.jsxs)('div', {
         className: Z.container,
         children: [
@@ -181,8 +181,8 @@ function L(e) {
                                 children:
                                     U === h.M.FETCHED && (null == V || (null == V ? void 0 : V.results.length) === 0)
                                         ? (0, i.jsx)(b.Z, {
-                                              selectedCategoryId: null != D ? D : W.id,
-                                              searchAllCategories: () => z(W)
+                                              selectedCategoryId: null != D ? D : Y.id,
+                                              searchAllCategories: () => z(Y)
                                           })
                                         : (0, i.jsx)('div', {
                                               className: Z.content,
@@ -196,7 +196,7 @@ function L(e) {
                                                                     v.Z,
                                                                     {
                                                                         application: n,
-                                                                        onSelectApplication: (e) => Y(e, t),
+                                                                        onSelectApplication: (e) => W(e, t),
                                                                         showCategory: !0
                                                                     },
                                                                     n.id

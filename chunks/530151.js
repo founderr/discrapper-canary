@@ -234,8 +234,8 @@ function F(e) {
     throw Error('Invalid Dispatch stage');
 }
 let z = 'name',
-    Y = 'progress',
-    W = 'actions';
+    W = 'progress',
+    Y = 'actions';
 class K extends r.PureComponent {
     get isFocused() {
         let { cellProps: e } = this.props;
@@ -463,7 +463,7 @@ let q = () =>
                 })
         },
         {
-            key: Y,
+            key: W,
             cellClassName: M.progressCell,
             headerCellClassName: M.progressCellHeader,
             bodyCellClassName: M.progressCellBody,
@@ -474,7 +474,7 @@ let q = () =>
                 })
         },
         {
-            key: W,
+            key: Y,
             cellClassName: M.actionsCell,
             render(e, t) {
                 let n, r;

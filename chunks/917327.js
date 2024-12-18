@@ -1,6 +1,6 @@
 t.d(e, {
     Z: function () {
-        return x;
+        return f;
     }
 });
 var i = t(200651);
@@ -8,21 +8,21 @@ t(192379);
 var l = t(442837),
     r = t(481060),
     u = t(787014),
-    o = t(362721),
-    a = t(339340),
+    a = t(362721),
+    o = t(339340),
     c = t(869768),
     d = t(496675),
     s = t(12498),
     Z = t(981631),
     h = t(388032);
-function x(n, e) {
-    let x = (0, l.e7)([d.Z], () => d.Z.can(Z.Plq.MANAGE_CHANNELS, e)),
-        f = (0, o.ZP)(n),
+function f(n, e) {
+    let f = (0, l.e7)([d.Z], () => d.Z.can(Z.Plq.MANAGE_CHANNELS, e)),
+        x = (0, a.ZP)(n),
         g = (0, c.W)(n),
         p = (0, l.e7)([s.Z], () => s.Z.getChannelStatus(n)),
         M = null != p && p.length > 0;
-    return n.isGuildVoice() && (x || f)
-        ? !g && x && M
+    return n.isGuildVoice() && (f || x)
+        ? !g && f && M
             ? (0, i.jsx)(r.MenuItem, {
                   id: 'clear-status',
                   label: h.intl.string(h.t['22CYiY']),
@@ -30,7 +30,7 @@ function x(n, e) {
                       u.ZP.updateVoiceChannelStatus(n.id, '');
                   }
               })
-            : g && f
+            : g && x
               ? (0, i.jsx)(r.MenuItem, {
                     id: 'set-status',
                     label: h.intl.string(h.t.Mgpxi4),
@@ -44,7 +44,7 @@ function x(n, e) {
                                         ...t
                                     });
                             },
-                            { modalKey: a.VOICE_CHANNEL_STATUS_MODAL_KEY }
+                            { modalKey: o.VOICE_CHANNEL_STATUS_MODAL_KEY }
                         );
                     }
                 })

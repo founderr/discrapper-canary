@@ -11,17 +11,17 @@ n(192379);
 var s = n(481060),
     r = n(312839),
     a = n(556296),
-    l = n(13140),
-    o = n(981631),
-    c = n(987650),
-    d = n(388032);
+    o = n(13140),
+    l = n(981631),
+    d = n(987650),
+    c = n(388032);
 function u() {
-    let { trackView: e, trackClick: t } = (0, r.R)(c.n0.ClipsReminderNotification, { notif_type: c.n0.ClipsReminderNotification }),
-        n = a.Z.getKeybindForAction(o.kg4.SAVE_CLIP);
+    let { trackView: e, trackClick: t } = (0, r.R)(d.n0.ClipsReminderNotification, { notif_type: d.n0.ClipsReminderNotification }),
+        n = a.Z.getKeybindForAction(l.kg4.SAVE_CLIP);
     if (null == n) return null;
-    let u = l.BB(n.shortcut, !0);
+    let u = o.BB(n.shortcut, !0);
     return {
-        title: d.intl.format(d.t.S5uhCA, {
+        title: c.intl.format(c.t.S5uhCA, {
             keybind: u,
             keybindHook: () =>
                 (0, i.jsx)('span', {
@@ -42,7 +42,7 @@ function u() {
     };
 }
 function h(e) {
-    let { trackView: t, trackClick: n } = (0, r.R)(c.n0.ClipsNotification, { notif_type: c.n0.ClipsNotification });
+    let { trackView: t, trackClick: n } = (0, r.R)(d.n0.ClipsNotification, { notif_type: d.n0.ClipsNotification });
     return {
         title: e,
         icon: (0, i.jsx)(s.ClipsIcon, {

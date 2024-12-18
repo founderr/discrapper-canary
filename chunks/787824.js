@@ -4,8 +4,8 @@ n.d(t, {
             return null == t
                 ? t
                 : Object.keys(t).reduce((n, r) => {
-                      let l = (0, i.camelCase)(r);
-                      return 'object' != typeof t[r] || Array.isArray(t[r]) ? (n[l] = t[r]) : (n[l] = e(t[r])), n;
+                      let o = (0, i.camelCase)(r);
+                      return 'object' != typeof t[r] || Array.isArray(t[r]) ? (n[o] = t[r]) : (n[o] = e(t[r])), n;
                   }, {});
         };
     },
@@ -14,8 +14,8 @@ n.d(t, {
             return null == t
                 ? t
                 : Object.keys(t).reduce((n, r) => {
-                      let l = (0, i.snakeCase)(r);
-                      return 'object' != typeof t[r] || Array.isArray(t[r]) ? (n[l] = t[r]) : (n[l] = e(t[r])), (n[l] = t[r]), n;
+                      let o = (0, i.snakeCase)(r);
+                      return 'object' != typeof t[r] || Array.isArray(t[r]) ? (n[o] = t[r]) : (n[o] = e(t[r])), (n[o] = t[r]), n;
                   }, {});
         };
     }

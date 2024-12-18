@@ -26,8 +26,8 @@ var i = n(200651),
     E = n(788983),
     b = n(928518),
     Z = n(703656),
-    S = n(493754),
-    N = n(880831),
+    N = n(493754),
+    S = n(880831),
     T = n(73563),
     j = n(800965),
     A = n(107169),
@@ -123,7 +123,7 @@ function ea(e) {
         a = (0, o.e7)([H.Z], () => H.Z.getStageInstanceByChannel(t.id)),
         s = l || (null == a ? void 0 : a.invite_code) != null;
     return null != r && s
-        ? (0, i.jsx)(S.Z, {
+        ? (0, i.jsx)(N.Z, {
               channel: t,
               appContext: n,
               className: ee.__invalid_leftTrayIcon,
@@ -141,12 +141,12 @@ function es(e) {
         I = (0, o.e7)([g.Z], () => g.Z.getSelectedParticipant(n.id)),
         E = h && f !== J.IlC.POPOUT,
         [b, Z] = l.useState(0),
-        { isOnStartStageScreen: S } = (0, G.ZP)();
+        { isOnStartStageScreen: N } = (0, G.ZP)();
     (0, G.MV)(n);
     let j = (0, o.e7)([M.Z], () => M.Z.getToastsEnabled(n.id)),
         A = (0, X.Z)(n) ? (null != I ? '84px' : '124px') : null != I ? '0px' : '48px';
     return (
-        (t = S
+        (t = N
             ? (0, i.jsx)(Y.Z, {
                   channel: n,
                   onContinueClick: () => {
@@ -177,7 +177,7 @@ function es(e) {
                 C
                     ? (0, i.jsx)(K.Z, {
                           channel: n,
-                          isOnStartStageScreen: S
+                          isOnStartStageScreen: N
                       })
                     : null,
             renderBottomRight: () =>
@@ -202,7 +202,7 @@ function es(e) {
                 !j || m || E
                     ? null
                     : (0, i.jsx)(x.ZP, {
-                          children: (0, i.jsx)(N.Z, {
+                          children: (0, i.jsx)(S.Z, {
                               className: a()(ee.chatToasts, { [ee.rtsSidebarOpen]: c }),
                               channelId: n.id
                           })
@@ -228,8 +228,8 @@ function eo(e) {
             popoutWindowAlwaysOnTop: b.Z.getIsAlwaysOnTop(J.KJ3.CHANNEL_CALL_POPOUT)
         })),
         Z = null != C && !C.closed,
-        { analyticsLocations: S } = (0, f.ZP)(m.Z.STAGE_CHANNEL_CALL),
-        N = (0, p.bp)(),
+        { analyticsLocations: N } = (0, f.ZP)(m.Z.STAGE_CHANNEL_CALL),
+        S = (0, p.bp)(),
         { chatOpen: T, participantsListOpen: j } = (0, o.cj)(
             [g.Z],
             () => ({
@@ -250,9 +250,9 @@ function eo(e) {
     }, []);
     let { width: P = 0, ref: M } = (0, h.Z)(),
         L = P - 550,
-        k = !Z || (Z && N === J.IlC.POPOUT);
+        k = !Z || (Z && S === J.IlC.POPOUT);
     return (0, i.jsx)(f.Gt, {
-        value: S,
+        value: N,
         children: (0, i.jsxs)(x.B2, {
             children: [
                 (0, i.jsxs)('div', {

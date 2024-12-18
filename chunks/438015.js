@@ -3,10 +3,10 @@ var i = n(200651),
     s = n(192379),
     r = n(13245),
     a = n(593481),
-    l = n(692546),
-    o = n(981631),
-    c = n(606953);
-function d(e, t, n) {
+    o = n(692546),
+    l = n(981631),
+    d = n(606953);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,16 +26,16 @@ class u extends s.Component {
             props: { position: s, zIndex: r }
         } = this;
         switch (s) {
-            case o._vf.TOP_LEFT:
-            case o._vf.BOTTOM_LEFT:
+            case l._vf.TOP_LEFT:
+            case l._vf.BOTTOM_LEFT:
                 e = 0;
                 break;
             default:
                 t = 0;
         }
         switch (s) {
-            case o._vf.BOTTOM_LEFT:
-            case o._vf.BOTTOM_RIGHT:
+            case l._vf.BOTTOM_LEFT:
+            case l._vf.BOTTOM_RIGHT:
                 n = 0;
                 break;
             default:
@@ -55,18 +55,18 @@ class u extends s.Component {
                     locked: e,
                     index: t,
                     notification: {
-                        props: { renderFooter: n, onNotificationShow: s, onDismissClick: r, onNotificationClick: o, onConfirmClick: d, onCancelClick: u, ...h }
+                        props: { renderFooter: n, onNotificationShow: s, onDismissClick: r, onNotificationClick: l, onConfirmClick: c, onCancelClick: u, ...h }
                     }
                 }
             } = this,
             p = (0, i.jsx)('div', {
-                className: c.notificationContainer,
+                className: d.notificationContainer,
                 children: (0, i.jsx)(a.ZP, {
                     ...h,
                     onNotificationShow: 0 === t ? this.handleNotificationShow : null,
                     onDismissClick: this.handleDismissClick,
-                    onNotificationClick: null != o ? this.handleNotificationClick : null,
-                    onConfirmClick: null != d ? this.handleConfirmClick : null,
+                    onNotificationClick: null != l ? this.handleNotificationClick : null,
+                    onConfirmClick: null != c ? this.handleConfirmClick : null,
                     onCancelClick: null != u ? this.handleCancelClick : null,
                     renderFooter: this.renderFooter,
                     expand: !e && 0 === t,
@@ -74,7 +74,7 @@ class u extends s.Component {
                 })
             });
         return 0 === t
-            ? (0, i.jsx)(l.Z, {
+            ? (0, i.jsx)(o.Z, {
                   observeInterval: 200,
                   children: p
               })
@@ -82,42 +82,42 @@ class u extends s.Component {
     }
     constructor(...e) {
         super(...e),
-            d(this, 'handleNotificationShow', () => {
+            c(this, 'handleNotificationShow', () => {
                 let {
                     id: e,
                     props: { onNotificationShow: t }
                 } = this.props.notification;
                 t(e);
             }),
-            d(this, 'handleDismissClick', (e) => {
+            c(this, 'handleDismissClick', (e) => {
                 let {
                     id: t,
                     props: { onDismissClick: n }
                 } = this.props.notification;
                 r.Z.updateNotificationStatus(t), null != n && n(e, t);
             }),
-            d(this, 'handleNotificationClick', (e) => {
+            c(this, 'handleNotificationClick', (e) => {
                 let {
                     id: t,
                     props: { onNotificationClick: n }
                 } = this.props.notification;
                 null != n && n(e, t);
             }),
-            d(this, 'handleConfirmClick', (e) => {
+            c(this, 'handleConfirmClick', (e) => {
                 let {
                     id: t,
                     props: { onConfirmClick: n }
                 } = this.props.notification;
                 null != n && n(e, t);
             }),
-            d(this, 'handleCancelClick', (e) => {
+            c(this, 'handleCancelClick', (e) => {
                 let {
                     id: t,
                     props: { onCancelClick: n }
                 } = this.props.notification;
                 null != n && n(e, t);
             }),
-            d(this, 'renderFooter', (e) => {
+            c(this, 'renderFooter', (e) => {
                 let {
                     id: t,
                     props: { renderFooter: n }

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return M;
+        return R;
     }
 }),
     n(47120);
@@ -8,10 +8,10 @@ var i = n(200651),
     s = n(192379),
     r = n(120356),
     a = n.n(r),
-    l = n(568611),
-    o = n(442837),
-    c = n(481060),
-    d = n(846027),
+    o = n(568611),
+    l = n(442837),
+    d = n(481060),
+    c = n(846027),
     u = n(925549),
     h = n(287734),
     p = n(933557),
@@ -19,17 +19,17 @@ var i = n(200651),
     g = n(870569),
     m = n(345243),
     v = n(873596),
-    _ = n(917405),
-    E = n(430824),
-    x = n(131951),
+    x = n(917405),
+    _ = n(430824),
+    S = n(131951),
     Z = n(699516),
-    S = n(594174),
+    E = n(594174),
     C = n(979651),
     I = n(362446),
     y = n(518084),
     N = n(981631),
-    T = n(388032),
-    b = n(963656),
+    b = n(388032),
+    T = n(963656),
     O = n(382290);
 function j(e, t, n) {
     return (
@@ -44,16 +44,16 @@ function j(e, t, n) {
         e
     );
 }
-class A extends s.PureComponent {
+class M extends s.PureComponent {
     handleDisconnect() {
         h.default.selectVoiceChannel(null);
     }
     renderChannelLink(e) {
         let { guild: t } = this.props,
-            n = (0, p.F6)(e, S.default, Z.Z),
+            n = (0, p.F6)(e, E.default, Z.Z),
             s = null != t ? ''.concat(n, ' / ').concat(t.name) : n,
             r = null != t ? t.id : N.ME;
-        return (0, i.jsx)(l.rU, {
+        return (0, i.jsx)(o.rU, {
             to: N.Z5c.CHANNEL(r),
             onClick: (t) => {
                 t.stopPropagation(), u.Z.channelListScrollTo(r, e.id);
@@ -65,28 +65,28 @@ class A extends s.PureComponent {
         });
     }
     render() {
-        let { className: e, contentClassName: t, pinned: n, lobbyId: s, channel: r, quality: l, lastPing: o, hasVideo: d, connectionState: u, deaf: h, mute: p } = this.props;
+        let { className: e, contentClassName: t, pinned: n, lobbyId: s, channel: r, quality: o, lastPing: l, hasVideo: c, connectionState: u, deaf: h, mute: p } = this.props;
         return null == r
             ? null
             : (0, i.jsx)(y.ZP.Bar, {
-                  className: a()(e, b.controls, { [b.unpinned]: !n }),
+                  className: a()(e, T.controls, { [T.unpinned]: !n }),
                   children: (0, i.jsxs)(y.ZP.Content, {
-                      className: a()(t, b.content),
+                      className: a()(t, T.content),
                       dynamicSize: !0,
                       children: [
                           (0, i.jsx)('div', {
                               className: O.inner,
-                              children: (0, i.jsx)(c.Popout, {
+                              children: (0, i.jsx)(d.Popout, {
                                   renderPopout: () => this.renderPopout(r.id),
                                   position: 'top',
                                   children: (e) =>
-                                      (0, i.jsx)(c.Clickable, {
+                                      (0, i.jsx)(d.Clickable, {
                                           ...e,
-                                          children: (0, i.jsx)(_.Z, {
+                                          children: (0, i.jsx)(x.Z, {
                                               channelId: r.id,
-                                              quality: l,
-                                              lastPing: o,
-                                              hasVideo: d,
+                                              quality: o,
+                                              lastPing: l,
+                                              hasVideo: c,
                                               state: u,
                                               children: this.renderChannelLink(r)
                                           })
@@ -97,22 +97,22 @@ class A extends s.PureComponent {
                               grow: 0,
                               children: [
                                   (0, i.jsx)(g.Z, {
-                                      tooltipText: p ? T.intl.string(T.t.YqAjX1) : T.intl.string(T.t['w4m94+']),
-                                      icon: p ? c.MicrophoneSlashIcon : c.MicrophoneIcon,
-                                      iconForeground: p ? b.strikethrough : null,
+                                      tooltipText: p ? b.intl.string(b.t.YqAjX1) : b.intl.string(b.t['w4m94+']),
+                                      icon: p ? d.MicrophoneSlashIcon : d.MicrophoneIcon,
+                                      iconForeground: p ? T.strikethrough : null,
                                       onClick: this.handleToggleSelfMute
                                   }),
                                   (0, i.jsx)(g.Z, {
-                                      tooltipText: h ? T.intl.string(T.t['2US87+']) : T.intl.string(T.t.wjcRFR),
-                                      icon: h ? c.HeadphonesSlashIcon : c.HeadphonesIcon,
+                                      tooltipText: h ? b.intl.string(b.t['2US87+']) : b.intl.string(b.t.wjcRFR),
+                                      icon: h ? d.HeadphonesSlashIcon : d.HeadphonesIcon,
                                       onClick: this.handleToggleSelfDeaf,
-                                      iconForeground: h ? b.strikethrough : null
+                                      iconForeground: h ? T.strikethrough : null
                                   }),
                                   null == s &&
                                       (0, i.jsx)(g.Z, {
-                                          tooltipText: T.intl.string(T.t['6vrfgo']),
+                                          tooltipText: b.intl.string(b.t['6vrfgo']),
                                           onClick: this.handleDisconnect,
-                                          icon: c.PhoneHangUpIcon
+                                          icon: d.PhoneHangUpIcon
                                       })
                               ]
                           })
@@ -124,14 +124,14 @@ class A extends s.PureComponent {
         super(...e),
             j(this, 'handleToggleSelfMute', () => {
                 let { context: e } = this.props;
-                d.Z.toggleSelfMute({
+                c.Z.toggleSelfMute({
                     context: e,
                     location: 'Overlay Controls'
                 });
             }),
             j(this, 'handleToggleSelfDeaf', () => {
                 let { context: e } = this.props;
-                d.Z.toggleSelfDeaf({
+                c.Z.toggleSelfDeaf({
                     context: e,
                     location: 'Overlay Controls'
                 });
@@ -146,21 +146,21 @@ class A extends s.PureComponent {
             });
     }
 }
-function M(e) {
+function R(e) {
     let { context: t, lobbyId: n, channel: s, ...r } = e,
-        a = (0, o.e7)([E.Z], () => E.Z.getGuild(null == s ? void 0 : s.getGuildId())),
-        l = (0, o.e7)([C.Z], () => null != s && C.Z.hasVideo(s.id)),
-        [c, d] = (0, o.Wu)([x.Z], () => [x.Z.isSelfMute(t) || x.Z.isSelfMutedTemporarily(t), x.Z.isSelfDeaf(t)]),
-        [u, h, p] = (0, o.Wu)([I.Z], () => [I.Z.getConnectionState(n), I.Z.getLastPing(n), I.Z.getQuality(n)]);
-    return (0, i.jsx)(A, {
+        a = (0, l.e7)([_.Z], () => _.Z.getGuild(null == s ? void 0 : s.getGuildId())),
+        o = (0, l.e7)([C.Z], () => null != s && C.Z.hasVideo(s.id)),
+        [d, c] = (0, l.Wu)([S.Z], () => [S.Z.isSelfMute(t) || S.Z.isSelfMutedTemporarily(t), S.Z.isSelfDeaf(t)]),
+        [u, h, p] = (0, l.Wu)([I.Z], () => [I.Z.getConnectionState(n), I.Z.getLastPing(n), I.Z.getQuality(n)]);
+    return (0, i.jsx)(M, {
         ...r,
         context: t,
         lobbyId: n,
         channel: s,
         guild: a,
-        hasVideo: l,
-        mute: c,
-        deaf: d,
+        hasVideo: o,
+        mute: d,
+        deaf: c,
         connectionState: u,
         lastPing: h,
         quality: p

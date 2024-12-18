@@ -65,28 +65,28 @@ function P(e) {
     let { tabIndex: n, className: r, renderButtonContents: i, active: o, onClick: C, 'aria-controls': R, focusProps: O, shouldShowSoundmojiCoachmark: P = !1 } = e,
         [M, k] = s.useState(!1),
         [U, B] = s.useState(50),
-        G = (0, g.x8)('EmojiButton'),
-        Z = M || o,
-        F = (0, T.l)(N, 'emojiButton', Z ? 'Hovered' : 'Normal'),
-        V = w(U, (0, h.Q3)('EmojiButton')),
-        j = s.useCallback(() => {
-            if (Z) return;
+        G = M || o,
+        Z = (0, T.l)(N, 'emojiButton', G ? 'Hovered' : 'Normal'),
+        F = w(U, (0, h.Q3)('EmojiButton')),
+        V = s.useCallback(() => {
+            if (G) return;
             let e = Math.floor(Math.random() * D);
             k(!0), B(e), (0, m.x)(S.qR.EmojiButtonMouseEntered);
-        }, [Z, k, B]),
-        H = s.useCallback(() => {
+        }, [G, k, B]),
+        j = s.useCallback(() => {
             k(!1);
         }, [k]),
-        Y = s.useCallback(() => (0, m.x)(S.qR.EmojiButtonFocused), []),
-        [W, K] = (0, p.US)(G ? [d.z.TRIAL_FOR_ALL_EMOJI_BUTTON] : [], void 0, !0),
-        z = W === d.z.TRIAL_FOR_ALL_EMOJI_BUTTON,
-        q = (0, c.e7)([_.Z], () => _.Z.useReducedMotion),
-        [Q, X] = s.useState(!1),
-        J = G && !o && z,
+        H = s.useCallback(() => (0, m.x)(S.qR.EmojiButtonFocused), []),
+        Y = (0, g.B4)({ location: 'EmojiButton' }),
+        [W, K] = (0, p.US)(Y ? [d.z.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
+        z = W === d.z.TRIAL_NUX_EMOJI_BUTTON,
+        q = !o && z,
+        Q = (0, c.e7)([_.Z], () => _.Z.useReducedMotion),
+        [X, J] = s.useState(!1),
         [$, ee] = s.useState(!1),
         et = (0, E.V2)({ location: 'EmojiButton' }),
         [en, er] = (0, p.US)(P && et ? [d.z.SOUNDMOJI_COACHMARK] : []),
-        ei = !Q && en === d.z.SOUNDMOJI_COACHMARK && !$;
+        ei = !X && en === d.z.SOUNDMOJI_COACHMARK && !$;
     return (0, a.jsx)(f.Popout, {
         renderPopout: () => (0, a.jsx)(v.Z, { markAsDismissed: er }),
         position: 'top',
@@ -99,9 +99,9 @@ function P(e) {
                 text: () => (0, a.jsx)(x, {}),
                 'aria-label': A.intl.formatToMarkdownString(A.t['/7R4q6'], {}),
                 position: 'top',
-                shouldShow: J,
-                onTooltipHide: () => X(!1),
-                onTooltipShow: () => X(J),
+                shouldShow: q,
+                onTooltipHide: () => J(!1),
+                onTooltipShow: () => J(q),
                 tooltipClassName: N.premiumTooltip,
                 tooltipContentClassName: N.premiumTooltipContainer,
                 children: (s) =>
@@ -110,17 +110,17 @@ function P(e) {
                         look: f.Button.Looks.BLANK,
                         size: f.Button.Sizes.NONE,
                         tabIndex: n,
-                        className: l()(F, r),
+                        className: l()(Z, r),
                         onMouseEnter: () => {
                             var e;
-                            j(), null === (e = s.onMouseEnter) || void 0 === e || e.call(s), I.default.track(b.rMx.EMOJI_PICKER_BUTTON_HOVERED);
+                            V(), null === (e = s.onMouseEnter) || void 0 === e || e.call(s), I.default.track(b.rMx.EMOJI_PICKER_BUTTON_HOVERED);
                         },
-                        onMouseOver: j,
+                        onMouseOver: V,
                         onMouseLeave: () => {
                             var e;
-                            H(), null === (e = s.onMouseLeave) || void 0 === e || e.call(s), z && K(y.L.USER_DISMISS);
+                            j(), null === (e = s.onMouseLeave) || void 0 === e || e.call(s), z && K(y.L.USER_DISMISS);
                         },
-                        onFocus: Y,
+                        onFocus: H,
                         onClick: (e) => {
                             var n;
                             null == C || C(e), null === (n = s.onClick) || void 0 === n || n.call(s);
@@ -136,16 +136,16 @@ function P(e) {
                                 ? i()
                                 : (0, a.jsx)(f.Spring, {
                                       config: L,
-                                      to: { value: Z ? 1 : 0 },
+                                      to: { value: G ? 1 : 0 },
                                       children: (e) => {
                                           let { value: n } = e;
                                           return (0, a.jsxs)(u.animated.div, {
                                               className: N.spriteContainer,
                                               style: {
-                                                  ...V,
+                                                  ...F,
                                                   transform: n.to([0, 1], [1, 1.14]).to((e) => 'scale('.concat(e, ')'))
                                               },
-                                              children: [(0, a.jsx)('div', { className: l()(N.sprite, N.spriteColored, Z ? N.active : N.inactive) }), (0, a.jsx)('div', { className: l()(N.sprite, G && z ? N.spritePremiumColored : N.spriteGreyscale, Z ? N.inactive : N.active, { [N.reducedMotion]: q }) })]
+                                              children: [(0, a.jsx)('div', { className: l()(N.sprite, N.spriteColored, G ? N.active : N.inactive) }), (0, a.jsx)('div', { className: l()(N.sprite, z ? N.spritePremiumColored : N.spriteGreyscale, G ? N.inactive : N.active, { [N.reducedMotion]: Q }) })]
                                           });
                                       }
                                   })

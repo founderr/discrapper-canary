@@ -11,8 +11,8 @@ var r,
     h = n(906467);
 let m = 0,
     x = [],
-    f = 0,
-    p = [],
+    p = 0,
+    f = [],
     g = !1;
 class b extends (r = c.ZP.Store) {
     initialize() {
@@ -22,10 +22,10 @@ class b extends (r = c.ZP.Store) {
         return x;
     }
     get loggedEventsVersion() {
-        return f;
+        return p;
     }
     get loggedTriggers() {
-        return p;
+        return f;
     }
     get trackTriggers() {
         return g;
@@ -52,7 +52,7 @@ class b extends (r = c.ZP.Store) {
                     fingerprint: null != (a = r) ? (0, s.s)(a) : u.default.getId(),
                     timestamp: new Date()
                 }),
-                    f++,
+                    p++,
                     x.length > 500 && (x = x.slice(-Math.floor(250)));
             }
         },
@@ -60,8 +60,8 @@ class b extends (r = c.ZP.Store) {
             let { experimentId: t, descriptor: n, exposureType: r, excluded: a, location: l, previouslyTracked: i } = e;
             if (!!h.Z.isDeveloper)
                 g &&
-                    (p = [
-                        ...p,
+                    (f = [
+                        ...f,
                         {
                             key: (0, o.Z)(),
                             experimentId: t,
@@ -73,13 +73,13 @@ class b extends (r = c.ZP.Store) {
                             timestamp: new Date()
                         }
                     ]).length > 500 &&
-                    p.shift();
+                    f.shift();
         },
         SET_TRACK_TRIGGERS: function (e) {
             let { enabled: t } = e;
             g = t;
         },
         ANALYTICS_LOG_CLEAR: function () {
-            (x = []), f++, (p = []);
+            (x = []), p++, (f = []);
         }
     }));

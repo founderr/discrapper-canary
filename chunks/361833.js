@@ -1,88 +1,88 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return m;
     }
 }),
     n(47120);
-var o = n(200651),
-    s = n(192379),
+var s = n(200651),
+    o = n(192379),
     l = n(442837),
-    r = n(481060),
+    a = n(481060),
     i = n(809206),
-    a = n(25990),
-    c = n(155433),
-    d = n(388032),
+    r = n(25990),
+    d = n(155433),
+    c = n(388032),
     u = n(981818);
-function E(e) {
+function m(e) {
     var t, n;
-    let { emailToken: E, isSlideReady: _, onClose: m, onBack: N, onNext: x } = e,
-        [A, C] = s.useState(''),
-        [h, M] = s.useState(''),
-        [S, p] = s.useState(!1),
-        f = (0, l.e7)([a.Z], () => a.Z.getErrors()),
-        I = s.useRef(null);
+    let { emailToken: m, isSlideReady: _, onClose: E, onBack: N, onNext: x } = e,
+        [A, C] = o.useState(''),
+        [h, M] = o.useState(''),
+        [S, p] = o.useState(!1),
+        I = (0, l.e7)([r.Z], () => r.Z.getErrors()),
+        f = o.useRef(null);
     async function j(e) {
         e.preventDefault(), p(!0);
         let t = await (0, i.Mn)({
             email: A,
-            emailToken: E,
+            emailToken: m,
             password: h
         });
         if ((p(!1), null == t ? void 0 : t.ok)) x(A);
         else {
-            var n, o;
-            (null == t ? void 0 : null === (n = t.body) || void 0 === n ? void 0 : n.username) != null ? (0, c.P)() : (null == t ? void 0 : null === (o = t.body) || void 0 === o ? void 0 : o.email_token) != null && (null == N || N());
+            var n, s;
+            (null == t ? void 0 : null === (n = t.body) || void 0 === n ? void 0 : n.username) != null ? (0, d.P)() : (null == t ? void 0 : null === (s = t.body) || void 0 === s ? void 0 : s.email_token) != null && (null == N || N());
         }
     }
     return (
-        s.useEffect(() => {
+        o.useEffect(() => {
             if (_) {
                 var e;
-                null === (e = I.current) || void 0 === e || e.focus();
+                null === (e = f.current) || void 0 === e || e.focus();
             }
         }, [_]),
-        (0, o.jsxs)('form', {
+        (0, s.jsxs)('form', {
             onSubmit: j,
             children: [
-                (0, o.jsxs)(r.ModalHeader, {
+                (0, s.jsxs)(a.ModalHeader, {
                     separator: !1,
                     className: u.header,
                     children: [
-                        (0, o.jsx)(r.Heading, {
+                        (0, s.jsx)(a.Heading, {
                             className: u.title,
                             variant: 'heading-xl/extrabold',
-                            children: d.intl.string(d.t.p3280t)
+                            children: c.intl.string(c.t.p3280t)
                         }),
-                        (0, o.jsx)(r.Text, {
+                        (0, s.jsx)(a.Text, {
                             color: 'header-secondary',
                             variant: 'text-md/normal',
                             className: u.subtitle,
-                            children: d.intl.string(d.t['1k44EB'])
+                            children: c.intl.string(c.t['1k44EB'])
                         }),
-                        (0, o.jsx)(r.ModalCloseButton, {
-                            onClick: m,
+                        (0, s.jsx)(a.ModalCloseButton, {
+                            onClick: E,
                             className: u.modalCloseButton
                         })
                     ]
                 }),
-                (0, o.jsxs)(r.ModalContent, {
+                (0, s.jsxs)(a.ModalContent, {
                     className: u.content,
                     children: [
-                        (0, o.jsx)(r.FormItem, {
-                            title: d.intl.string(d.t['w/qqKC']),
-                            error: null == f ? void 0 : null === (t = f.email) || void 0 === t ? void 0 : t[0],
-                            children: (0, o.jsx)(r.TextInput, {
+                        (0, s.jsx)(a.FormItem, {
+                            title: c.intl.string(c.t['w/qqKC']),
+                            error: null == I ? void 0 : null === (t = I.email) || void 0 === t ? void 0 : t[0],
+                            children: (0, s.jsx)(a.TextInput, {
                                 type: 'email',
                                 value: A,
                                 onChange: C,
-                                inputRef: I
+                                inputRef: f
                             })
                         }),
-                        (0, o.jsx)(r.FormItem, {
+                        (0, s.jsx)(a.FormItem, {
                             className: u.password,
-                            title: d.intl.string(d.t.TmdnJy),
-                            error: null == f ? void 0 : null === (n = f.password) || void 0 === n ? void 0 : n[0],
-                            children: (0, o.jsx)(r.TextInput, {
+                            title: c.intl.string(c.t.TmdnJy),
+                            error: null == I ? void 0 : null === (n = I.password) || void 0 === n ? void 0 : n[0],
+                            children: (0, s.jsx)(a.TextInput, {
                                 type: 'password',
                                 value: h,
                                 onChange: M
@@ -90,29 +90,29 @@ function E(e) {
                         })
                     ]
                 }),
-                (0, o.jsxs)(r.ModalFooter, {
+                (0, s.jsxs)(a.ModalFooter, {
                     children: [
-                        (0, o.jsx)(r.Button, {
+                        (0, s.jsx)(a.Button, {
                             type: 'submit',
-                            color: r.Button.Colors.BRAND,
-                            size: r.Button.Sizes.MEDIUM,
+                            color: a.Button.Colors.BRAND,
+                            size: a.Button.Sizes.MEDIUM,
                             submitting: S,
-                            children: d.intl.string(d.t.i4jeWV)
+                            children: c.intl.string(c.t.i4jeWV)
                         }),
                         null != N
-                            ? (0, o.jsx)(r.Button, {
+                            ? (0, s.jsx)(a.Button, {
                                   className: u.__invalid_cancel,
-                                  look: r.Button.Looks.LINK,
-                                  color: r.Button.Colors.PRIMARY,
+                                  look: a.Button.Looks.LINK,
+                                  color: a.Button.Colors.PRIMARY,
                                   onClick: N,
-                                  children: d.intl.string(d.t['13/7kZ'])
+                                  children: c.intl.string(c.t['13/7kZ'])
                               })
-                            : (0, o.jsx)(r.Button, {
+                            : (0, s.jsx)(a.Button, {
                                   className: u.__invalid_cancel,
-                                  look: r.Button.Looks.LINK,
-                                  color: r.Button.Colors.PRIMARY,
-                                  onClick: m,
-                                  children: d.intl.string(d.t['ETE/oK'])
+                                  look: a.Button.Looks.LINK,
+                                  color: a.Button.Colors.PRIMARY,
+                                  onClick: E,
+                                  children: c.intl.string(c.t['ETE/oK'])
                               })
                     ]
                 })

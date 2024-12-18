@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     ping: 'ping_c02c63',
     smallPing: 'smallPing_c02c63',
     rtcConnectionStatus: 'rtcConnectionStatus_c02c63',

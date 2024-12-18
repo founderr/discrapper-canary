@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return f;
     }
 }),
     n(47120);
@@ -34,7 +34,7 @@ let m = [
             value: !0
         }
     ],
-    f = [
+    p = [
         {
             label: '1 day',
             value: 1
@@ -44,10 +44,10 @@ let m = [
             value: 7
         }
     ];
-function p() {
+function f() {
     let e = (0, i.e7)([d.default], () => d.default.getCurrentUser()),
         [t, n] = a.useState(!1),
-        [p, g] = a.useState(!1),
+        [f, g] = a.useState(!1),
         [b, v] = a.useState(1);
     return (0, r.jsxs)('div', {
         className: h.container,
@@ -71,7 +71,7 @@ function p() {
                 tag: o.FormTitleTags.H3,
                 children: (0, r.jsx)(o.SingleSelect, {
                     options: x,
-                    value: p,
+                    value: f,
                     onChange: (e) => {
                         g(e);
                     },
@@ -83,7 +83,7 @@ function p() {
                 className: h.formElement,
                 tag: o.FormTitleTags.H3,
                 children: (0, r.jsx)(o.SingleSelect, {
-                    options: f,
+                    options: p,
                     value: b,
                     onChange: (e) => {
                         v(e);
@@ -98,7 +98,7 @@ function p() {
                         perkType: l.q.STREAM_HIGH_QUALITY,
                         user: e,
                         available: t,
-                        activateSuccess: p,
+                        activateSuccess: f,
                         demoDuration: b
                     }),
                     (0, c.Vk)()),

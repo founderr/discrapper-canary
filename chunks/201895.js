@@ -6,8 +6,8 @@ n.d(t, {
     n(653041);
 var i = n(131704),
     r = n(699516),
-    l = n(594174),
-    o = n(933557),
+    o = n(594174),
+    l = n(933557),
     u = n(981631),
     a = n(388032);
 function s(e) {
@@ -17,7 +17,7 @@ function s(e) {
 function c(e) {
     let t,
         { channel: n, unread: c = !1, mentionCount: d = 0, userCount: f, embeddedActivitiesCount: _, isSubscriptionGated: p, needSubscriptionToAccess: g } = e,
-        E = (0, o.F6)(n, l.default, r.Z);
+        E = (0, l.F6)(n, o.default, r.Z);
     switch (n.type) {
         case u.d4z.DM:
             t = c ? a.t.F2MZsr : a.t.fYqXVV;

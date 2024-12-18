@@ -1,53 +1,53 @@
-n.d(t, {
+i.d(t, {
     Z: function () {
         return u;
     }
 });
-var i = n(224706),
-    l = n(13245),
-    o = n(150097),
-    r = n(620954),
-    s = n(987650),
-    a = n(388032);
-function u(e, t, n, u, c) {
+var n = i(224706),
+    l = i(13245),
+    o = i(150097),
+    s = i(620954),
+    r = i(987650),
+    a = i(388032);
+function u(e, t, i, u, d) {
     if (null == t.activity || null == u.id) return null;
-    let d = t.activity.type,
-        h = c.session_id;
+    let c = t.activity.type,
+        h = d.session_id;
     if (null == h) return null;
-    let { icon: f, title: p, body: m } = (0, o.Xi)(e, t, n),
-        { trackView: v, trackClick: g } = (0, r.R)(s.n0.ActivityInvite, {
-            notif_type: s.n0.ActivityInvite,
-            notif_user_id: n.id,
+    let { icon: f, title: p, body: E } = (0, o.Xi)(e, t, i),
+        { trackView: m, trackClick: v } = (0, s.R)(r.n0.ActivityInvite, {
+            notif_type: r.n0.ActivityInvite,
+            notif_user_id: i.id,
             message_id: t.id,
             message_type: t.type,
             guild_id: e.guild_id,
             channel_id: e.id,
             channel_type: e.type,
-            activity_type: d,
-            activity_name: c.name
+            activity_type: c,
+            activity_name: d.name
         });
     return {
         icon: f,
         title: p,
-        body: m,
+        body: E,
         onNotificationShow: () => {
-            v();
+            m();
         },
         confirmText: a.intl.string(a.t.VJlc0d),
-        onConfirmClick: (o, r) => {
-            var s;
-            i.Z.join({
-                userId: n.id,
+        onConfirmClick: (o, s) => {
+            var r;
+            n.Z.join({
+                userId: i.id,
                 sessionId: h,
-                applicationId: null !== (s = u.altId) && void 0 !== s ? s : u.id,
+                applicationId: null !== (r = u.altId) && void 0 !== r ? r : u.id,
                 channelId: e.id,
                 messageId: t.id
             }),
-                l.Z.updateNotificationStatus(r),
-                g('join');
+                l.Z.updateNotificationStatus(s),
+                v('join');
         },
         onDismissClick: () => {
-            g('dismiss');
+            v('dismiss');
         }
     };
 }

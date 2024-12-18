@@ -1,6 +1,6 @@
 n.d(t, {
     a3: function () {
-        return o;
+        return l;
     },
     eJ: function () {
         return a;
@@ -9,13 +9,13 @@ n.d(t, {
         return s;
     },
     zJ: function () {
-        return l;
+        return o;
     }
 });
 var i,
     r,
-    l,
     o,
+    l,
     u = n(388032);
 function a(e) {
     return {
@@ -25,5 +25,5 @@ function a(e) {
         1: u.intl.string(u.t.uOU7Pz)
     }[e];
 }
-((i = l || (l = {}))[(i.NAME = 1)] = 'NAME'), (i[(i.PRICE_ASC = 2)] = 'PRICE_ASC'), (i[(i.PRICE_DESC = 3)] = 'PRICE_DESC'), (i[(i.NEWEST_ARRIVALS = 4)] = 'NEWEST_ARRIVALS'), ((r = o || (o = {}))[(r.SUBS_FIRST = 1)] = 'SUBS_FIRST'), (r[(r.PRODUCTS_FIRST = 2)] = 'PRODUCTS_FIRST');
+((i = o || (o = {}))[(i.NAME = 1)] = 'NAME'), (i[(i.PRICE_ASC = 2)] = 'PRICE_ASC'), (i[(i.PRICE_DESC = 3)] = 'PRICE_DESC'), (i[(i.NEWEST_ARRIVALS = 4)] = 'NEWEST_ARRIVALS'), ((r = l || (l = {}))[(r.SUBS_FIRST = 1)] = 'SUBS_FIRST'), (r[(r.PRODUCTS_FIRST = 2)] = 'PRODUCTS_FIRST');
 let s = [4, 2, 3, 1];

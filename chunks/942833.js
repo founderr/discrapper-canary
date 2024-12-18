@@ -1,6 +1,6 @@
 n.d(t, {
     C: function () {
-        return o;
+        return l;
     },
     k: function () {
         return u;
@@ -8,15 +8,15 @@ n.d(t, {
 });
 var i = n(192379),
     r = n(937615),
-    l = n(388032);
-function o(e) {
+    o = n(388032);
+function l(e) {
     return i.useMemo(() => {
         if (null == e) return;
         let t = null != e.role_id,
             n = e.attachments_count > 0;
-        if (t && n) return l.intl.string(l.t.ih4QMT);
-        if (t) return l.intl.string(l.t.o9xphY);
-        if (n) return l.intl.string(l.t.DWYJub);
+        if (t && n) return o.intl.string(o.t.ih4QMT);
+        if (t) return o.intl.string(o.t.o9xphY);
+        if (n) return o.intl.string(o.t.DWYJub);
     }, [e]);
 }
 function u(e) {

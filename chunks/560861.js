@@ -68,7 +68,7 @@ function v(e) {
         return () => clearTimeout(e);
     });
     let b = v ? [o.z.HD_STREAMING_POTION_BANNER] : [],
-        [Z, S] = (0, u.US)(b);
+        [Z, N] = (0, u.US)(b);
     return null == r
         ? null
         : (0, i.jsxs)(i.Fragment, {
@@ -84,7 +84,7 @@ function v(e) {
                           buyer: r,
                           streaming: !0,
                           onClose: () => {
-                              C(!1), v && S(g.L.DISMISS);
+                              C(!1), v && N(g.L.DISMISS);
                           }
                       })
               ]

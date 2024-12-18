@@ -1,29 +1,29 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return d;
     }
 });
 var i = n(593481),
     s = n(768581),
     r = n(312839),
     a = n(981631),
-    l = n(987650),
-    o = n(388032);
-function c(e, t) {
+    o = n(987650),
+    l = n(388032);
+function d(e, t) {
     let n = e.username,
-        c = o.intl.format(o.t['Yk+uYG'], { username: '' }),
-        d = (0, s.ov)(e),
-        { trackView: u, trackClick: h } = (0, r.R)(l.n0.ActivityUserJoin, {
-            notif_type: l.n0.ActivityUserJoin,
+        d = l.intl.format(l.t['Yk+uYG'], { username: '' }),
+        c = (0, s.ov)(e),
+        { trackView: u, trackClick: h } = (0, r.R)(o.n0.ActivityUserJoin, {
+            notif_type: o.n0.ActivityUserJoin,
             notif_user_id: e.id,
             activity_type: a.mFx.JOIN,
             activity_name: t.name
         });
     return {
-        icon: d,
+        icon: c,
         title: n,
-        body: c,
-        hint: (e) => (0, i.Yj)(e, o.intl.string(o.t.WRj1Wl)),
+        body: d,
+        hint: (e) => (0, i.Yj)(e, l.intl.string(l.t.WRj1Wl)),
         onNotificationShow: () => {
             u();
         },

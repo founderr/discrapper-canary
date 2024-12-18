@@ -1,4 +1,4 @@
-let i = (0, n(818083).B)({
+let s = (0, n(818083).B)({
     kind: 'user',
     id: '2021-02_staff_qc_debugging',
     label: 'Display QS scores in results. Not a real experiment',
@@ -11,4 +11,4 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-t.Z = i;
+t.Z = s;

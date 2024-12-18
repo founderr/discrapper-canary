@@ -1,4 +1,7 @@
 r.d(n, {
+    B4: function () {
+        return y;
+    },
     Nx: function () {
         return g;
     },
@@ -13,9 +16,6 @@ r.d(n, {
     },
     t7: function () {
         return E;
-    },
-    x8: function () {
-        return y;
     }
 });
 var i = r(47120);
@@ -25,10 +25,10 @@ var a = r(192379),
     l = r(442837),
     u = r(544891),
     c = r(78839),
-    d = r(775412),
-    f = r(769415);
-r(464900);
-var _ = r(104494),
+    d = r(775412);
+r(769415);
+var f = r(464900),
+    _ = r(104494),
     h = r(639119),
     p = r(474936),
     m = r(981631);
@@ -135,17 +135,17 @@ let E = () => {
         return r && !i && !n;
     },
     y = (e) => {
-        let n = (0, l.e7)([c.ZP], () => c.ZP.inReverseTrial()),
+        let { location: n } = e,
             r = (0, l.e7)([c.ZP], () => {
-                var e;
-                return (null === (e = c.ZP.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialId) === p.jz;
+                let e = c.ZP.getPremiumTypeSubscription();
+                return (null == e ? void 0 : e.trialId) === p.i_;
             }),
-            i = f.Z.useExperiment(
-                { location: e },
+            i = f.L.useExperiment(
+                { location: n },
                 {
                     disable: !r,
                     autoTrackExposure: r
                 }
             ).enabled;
-        return n || i;
+        return r && i;
     };

@@ -1,14 +1,14 @@
 e.d(t, {
     I: function () {
-        return o;
+        return r;
     }
 });
 var i = e(585483),
-    l = e(981631);
-let o = {
+    o = e(981631);
+let r = {
     binds: ['mod+f'],
     comboKeysBindGlobal: !0,
     action(n) {
-        n.preventDefault(), n.stopPropagation(), i.S.dispatch(l.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !0 });
+        n.preventDefault(), n.stopPropagation(), i.S.dispatch(o.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !0 });
     }
 };

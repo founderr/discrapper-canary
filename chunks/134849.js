@@ -1,47 +1,47 @@
 n(653041), n(47120);
 var i = n(200651),
-    l = n(192379),
-    o = n(442837),
-    r = n(481060),
-    s = n(237997),
-    a = n(388627),
-    u = n(561064),
-    c = n(380736),
+    r = n(192379),
+    l = n(442837),
+    o = n(481060),
+    a = n(237997),
+    s = n(388627),
+    c = n(561064),
+    u = n(380736),
     d = n(693091),
     h = n(371467),
     f = n(981631),
-    p = n(109020);
-let m = [];
-function v(e) {
+    m = n(109020);
+let v = [];
+function p(e) {
     return e.notification.id;
 }
-function g(e, t, n, l) {
-    let { index: o, notification: r, locked: s } = t;
+function x(e, t, n, r) {
+    let { index: l, notification: o, locked: a } = t;
     return (0, i.jsx)(
-        c.Z,
+        u.Z,
         {
-            index: o,
-            notification: r,
-            locked: s,
+            index: l,
+            notification: o,
+            locked: a,
             transitionState: n,
-            cleanUp: l
+            cleanUp: r
         },
         e
     );
 }
-function E(e) {
+function g(e) {
     return (0, i.jsx)('div', {
-        className: p.container,
+        className: m.container,
         children: e
     });
 }
-let C = (e) => l.useState(() => new d.AS(e))[0];
-t.Z = l.memo(function (e) {
+let C = (e) => r.useState(() => new d.AS(e))[0];
+t.Z = r.memo(function (e) {
     let { locked: t } = e,
-        n = (0, o.e7)(
-            [s.Z, h.Z],
+        n = (0, l.e7)(
+            [a.Z, h.Z],
             () => {
-                if (s.Z.getNotificationPositionMode() === f._vf.DISABLED) return m;
+                if (a.Z.getNotificationPositionMode() === f._vf.DISABLED) return v;
                 let e = [],
                     n = 0;
                 for (let i of h.Z.getNotifications()) {
@@ -57,19 +57,19 @@ t.Z = l.memo(function (e) {
                 return e;
             },
             [t],
-            a.E6
+            s.E6
         ),
-        c = C(t);
+        u = C(t);
     return (
-        l.useLayoutEffect(() => c.updateState(n, t)),
-        l.useLayoutEffect(() => (c.initialize((0, u.i)()), () => c.cleanUp()), [c]),
+        r.useLayoutEffect(() => u.updateState(n, t)),
+        r.useLayoutEffect(() => (u.initialize((0, c.i)()), () => u.cleanUp()), [u]),
         (0, i.jsx)(d.S4.Provider, {
-            value: c,
-            children: (0, i.jsx)(r.TransitionGroup, {
+            value: u,
+            children: (0, i.jsx)(o.TransitionGroup, {
                 items: n,
-                renderItem: g,
-                getItemKey: v,
-                wrapChildren: E
+                renderItem: x,
+                getItemKey: p,
+                wrapChildren: g
             })
         })
     );

@@ -1,41 +1,41 @@
-n.d(t, {
+i.d(t, {
     AS: function () {
-        return r;
-    },
-    S4: function () {
         return s;
     },
+    S4: function () {
+        return r;
+    },
     X4: function () {
-        return c;
+        return d;
     }
 }),
-    n(47120);
-var i = n(192379),
-    l = n(481060);
-function o(e, t, n) {
+    i(47120);
+var n = i(192379),
+    l = i(481060);
+function o(e, t, i) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: n,
+                  value: i,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[t] = i),
         e
     );
 }
-class r {
+class s {
     updateState(e, t) {
         this.items = e;
-        let n = this.locked !== t;
-        (this.locked = t), this.computeLayout(n);
+        let i = this.locked !== t;
+        (this.locked = t), this.computeLayout(i);
     }
     initialize(e) {
         if (null == this.resizeObserver) {
-            for (let [, { element: n }] of ((this.resizeObserver = new e.ResizeObserver(this.handleResize)), this.listeners)) {
+            for (let [, { element: i }] of ((this.resizeObserver = new e.ResizeObserver(this.handleResize)), this.listeners)) {
                 var t;
-                null === (t = this.resizeObserver) || void 0 === t || t.observe(n);
+                null === (t = this.resizeObserver) || void 0 === t || t.observe(i);
             }
             this.queueCompute();
         }
@@ -51,12 +51,12 @@ class r {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         this.queuedCompute = !1;
         let t = 0,
-            n = 0;
-        for (let i of this.items) {
-            let l = this.listeners.get(i.notification.id);
+            i = 0;
+        for (let n of this.items) {
+            let l = this.listeners.get(n.notification.id);
             if (null == l) continue;
             let { offsetHeight: o } = l.element;
-            (l.top !== t || l.height !== o || l.index !== n) && (e = !0), (l.top = t), (l.height = o), (l.index = n), 0 === t && (this.matchHeight !== o && (e = !0), (this.matchHeight = o)), (t += o + 8), n++;
+            (l.top !== t || l.height !== o || l.index !== i) && (e = !0), (l.top = t), (l.height = o), (l.index = i), 0 === t && (this.matchHeight !== o && (e = !0), (this.matchHeight = o)), (t += o + 8), i++;
         }
         e && this.broadcastLayoutUpdates();
     }
@@ -73,23 +73,23 @@ class r {
                 });
         }
     }
-    subscribe(e, t, n) {
-        var i;
+    subscribe(e, t, i) {
+        var n;
         this.listeners.set(e, {
             notificationId: e,
-            callback: n,
+            callback: i,
             element: t,
             height: 0,
             top: 0,
             index: 0
         }),
-            null === (i = this.resizeObserver) || void 0 === i || i.observe(t),
+            null === (n = this.resizeObserver) || void 0 === n || n.observe(t),
             this.queueCompute();
     }
     unsubscribe(e) {
         var t;
-        let n = this.listeners.get(e);
-        null != n && (null === (t = this.resizeObserver) || void 0 === t || t.unobserve(n.element), this.listeners.delete(e), this.queueCompute());
+        let i = this.listeners.get(e);
+        null != i && (null === (t = this.resizeObserver) || void 0 === t || t.unobserve(i.element), this.listeners.delete(e), this.queueCompute());
     }
     getLayoutSpecs(e) {
         return this.listeners.get(e);
@@ -107,17 +107,17 @@ class r {
             (this.locked = e);
     }
 }
-let s = i.createContext(new r(!0));
-function a(e, t, n) {
-    return t && 0 !== e ? 20 * Math.max(e / 5, 0) : n;
+let r = n.createContext(new s(!0));
+function a(e, t, i) {
+    return t && 0 !== e ? 20 * Math.max(e / 5, 0) : i;
 }
 let u = {
     mass: 0.8,
     friction: 25,
     tension: 320
 };
-function c(e, t, n) {
-    let [o, r] = (0, l.useSpring)(
+function d(e, t, i) {
+    let [o, s] = (0, l.useSpring)(
             () => ({
                 from: {
                     opacity: 0,
@@ -130,23 +130,23 @@ function c(e, t, n) {
             void 0,
             []
         ),
-        c = i.useRef(r),
-        d = i.useContext(s),
-        h = i.useMemo(() => {
+        d = n.useRef(s),
+        c = n.useContext(r),
+        h = n.useMemo(() => {
             let t = !1;
-            return (n) => {
-                null == n
-                    ? d.unsubscribe(e)
-                    : d.subscribe(e, n, (e) => {
-                          var n, i, l, o;
-                          let { locked: r, matchHeight: s, height: d, top: h, index: f } = e,
-                              { current: p } = c;
-                          let m = {
-                              opacity: ((n = f), (i = r) && n > 4 ? 0 : i ? Math.min(1 - n / 4, 1) : 1),
-                              scale: ((l = f), r ? Math.min(1 - l / 4, 1) : 1),
-                              transform: a(f, r, h),
-                              contentOpacity: ((o = f), r ? (o > 0 ? 0 : 1) : 1),
-                              height: r ? s : d
+            return (i) => {
+                null == i
+                    ? c.unsubscribe(e)
+                    : c.subscribe(e, i, (e) => {
+                          var i, n, l, o;
+                          let { locked: s, matchHeight: r, height: c, top: h, index: f } = e,
+                              { current: p } = d;
+                          let E = {
+                              opacity: ((i = f), (n = s) && i > 4 ? 0 : n ? Math.min(1 - i / 4, 1) : 1),
+                              scale: ((l = f), s ? Math.min(1 - l / 4, 1) : 1),
+                              transform: a(f, s, h),
+                              contentOpacity: ((o = f), s ? (o > 0 ? 0 : 1) : 1),
+                              height: s ? r : c
                           };
                           p({
                               from: t
@@ -154,36 +154,36 @@ function c(e, t, n) {
                                   : {
                                         opacity: 0,
                                         scale: 1.1,
-                                        transform: -((r ? s : d) * 1),
+                                        transform: -((s ? r : c) * 1),
                                         contentOpacity: 1,
-                                        height: r ? s : d
+                                        height: s ? r : c
                                     },
-                              to: m,
+                              to: E,
                               config: u
                           }),
                               (t = !0);
                       });
             };
-        }, [e, d]);
+        }, [e, c]);
     return (
-        i.useLayoutEffect(() => {
+        n.useLayoutEffect(() => {
             if (t === l.TransitionStates.YEETED) {
-                let t = d.getLayoutSpecs(e);
+                let t = c.getLayoutSpecs(e);
                 if (null == t) {
-                    n();
+                    i();
                     return;
                 }
-                c.current({
+                d.current({
                     to: {
                         scale: 0.8,
                         opacity: 0,
-                        transform: a(t.index, d.locked, t.top) + (d.locked ? 0 : t.height / 2)
+                        transform: a(t.index, c.locked, t.top) + (c.locked ? 0 : t.height / 2)
                     },
                     config: u
                 }),
-                    setTimeout(n, 300);
+                    setTimeout(i, 300);
             }
-        }, [t, n, e, d]),
+        }, [t, i, e, c]),
         {
             ref: h,
             springs: o

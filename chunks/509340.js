@@ -1,23 +1,23 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return l;
+        return a;
     }
 });
-var o = n(200651);
-n(192379);
-var r = n(159277),
-    i = n(585183),
-    c = n(981631),
-    s = n(927923);
-function l(e) {
-    let { authToken: t, onContinue: n, onError: l, onClose: a } = e;
-    return (0, o.jsx)(i.h, {
+var o = t(200651);
+t(192379);
+var i = t(159277),
+    r = t(585183),
+    c = t(981631),
+    s = t(927923);
+function a(e) {
+    let { authToken: n, onContinue: t, onError: a, onClose: l } = e;
+    return (0, o.jsx)(r.h, {
         platformType: c.ABu.XBOX,
-        clientId: r.t.XBOX_APPLICATION_ID,
+        clientId: i.t.XBOX_APPLICATION_ID,
         scopes: s.tA,
-        authToken: t,
-        onContinue: n,
-        onError: l,
-        onClose: a
+        authToken: n,
+        onContinue: t,
+        onError: a,
+        onClose: l
     });
 }

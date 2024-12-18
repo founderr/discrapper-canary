@@ -3,10 +3,10 @@ var i,
     s = n(200651),
     r = n(192379),
     a = n(120356),
-    l = n.n(a),
-    o = n(442837),
-    c = n(552062),
-    d = n(416568),
+    o = n.n(a),
+    l = n(442837),
+    d = n(552062),
+    c = n(416568),
     u = n(914010),
     h = n(518084),
     p = n(178528),
@@ -14,8 +14,8 @@ var i,
     g = n(483962),
     m = n(711553),
     v = n(388032),
-    _ = n(433217);
-function E(e, t, n) {
+    x = n(433217);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,14 +28,14 @@ function E(e, t, n) {
         e
     );
 }
-function x(e) {
+function S(e) {
     let { closePopout: t } = e;
     return (0, s.jsx)(f.Z, { onClose: t });
 }
 class Z extends (i = r.PureComponent) {
     render() {
-        let { selectedGuildId: e, locked: t, contained: n } = this.props,
-            i =
+        let { selectedGuildId: e, locked: t, contained: n, className: i } = this.props,
+            r =
                 null != e
                     ? (0, s.jsx)(
                           p.Z,
@@ -47,29 +47,29 @@ class Z extends (i = r.PureComponent) {
                       )
                     : (0, s.jsx)(m.Z, {
                           title: v.intl.string(v.t.YUU0RE),
-                          renderSettings: x,
+                          renderSettings: S,
                           onDragStart: this.onDragStart,
                           children: (0, s.jsx)(g.Z, {})
                       }),
-            r = n ? 'div' : h.ZP;
-        return (0, s.jsxs)(r, {
-            className: l()(_.base, { [_.widget]: !n }),
+            a = n ? 'div' : h.ZP;
+        return (0, s.jsxs)(a, {
+            className: o()(x.base, { [x.widget]: !n }, i),
             children: [
-                (0, s.jsx)(d.Z, {
+                (0, s.jsx)(c.Z, {
                     isOverlay: !0,
                     disableAppDownload: !0,
                     isVisible: !t
                 }),
-                i
+                r
             ]
         });
     }
     constructor(...e) {
         super(...e),
-            E(this, 'onDragStart', (e) => {
+            _(this, 'onDragStart', (e) => {
                 let { dragStart: t } = this.props;
-                t(c.B.MOVE, e.clientX, e.clientY);
+                t(d.B.MOVE, e.clientX, e.clientY);
             });
     }
 }
-E(Z, 'defaultProps', { contained: !1 }), (t.Z = o.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(Z));
+_(Z, 'defaultProps', { contained: !1 }), (t.Z = l.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(Z));

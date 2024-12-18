@@ -172,7 +172,7 @@ function F(e) {
         e0 = eY ? (null !== (L = null === (n = eZ.current) || void 0 === n ? void 0 : n.duration) && void 0 !== L ? L : 0) : Math.max(eP.maxTimestampSec, em.progressSeconds),
         e1 = i.useMemo(() => (q.has(eT) ? _.i.VIDEO_PLAYER_VIDEO : _.i.VIDEO_PLAYER_VIDEO_LOW_RES), [eT]),
         e2 = i.useMemo(() => (null != e1 ? (0, _.z)(e1, z) : null), [e1, z]),
-        e6 = i.useCallback(
+        e4 = i.useCallback(
             (e) => {
                 null != eZ.current &&
                     (0, C.dA)({
@@ -190,12 +190,12 @@ function F(e) {
             },
             [z.id, e1, eY, H]
         ),
-        { forceSendCurrentSegment: e4 } = (0, O.Z)({
+        { forceSendCurrentSegment: e6 } = (0, O.Z)({
             videoRef: eZ,
             isPlaying: ea === j.rq.PLAYING,
             isMetadataLoaded: eQ,
             isInitialSeekComplete: eW,
-            onAnalytics: e6,
+            onAnalytics: e4,
             emitIntervalMs: 4000,
             minSegmentDurationMs: 2000
         }),
@@ -217,13 +217,13 @@ function F(e) {
                                 eH(null);
                             break;
                         case j.rq.PAUSED:
-                            eZ.current.pause(), e4();
+                            eZ.current.pause(), e6();
                             break;
                         case j.rq.ENDED:
-                            J(!1), e4();
+                            J(!1), e6();
                     }
             },
-            [z.id, ez, e4, J, H]
+            [z.id, ez, e6, J, H]
         );
     i.useLayoutEffect(() => {
         eV.current && ((eV.current = !1), eD(p.Z.getEffectiveConnectionSpeed()), eY && eP.timestampSec >= eP.duration && eq(z.id, 0, eP.duration));
@@ -324,9 +324,9 @@ function F(e) {
     }, [te]);
     let tr = i.useCallback(
             (e) => {
-                null != eZ.current && (e4(), ef(!0), eX(!1), (eZ.current.currentTime = e), eq(z.id, e, eZ.current.duration));
+                null != eZ.current && (e6(), ef(!0), eX(!1), (eZ.current.currentTime = e), eq(z.id, e, eZ.current.duration));
             },
-            [eZ, eq, z.id, e4]
+            [eZ, eq, z.id, e6]
         ),
         ti = () => {
             if (null != eZ.current)

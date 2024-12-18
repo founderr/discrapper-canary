@@ -7,20 +7,20 @@ var i = n(200651);
 n(192379);
 var l = n(239091),
     r = n(396828),
-    o = n(703656),
-    a = n(434479),
+    a = n(703656),
+    o = n(434479),
     s = n(981631),
     c = n(176505),
     u = n(388032);
 function d(e) {
     let { guild: t, selected: d } = e;
-    return (0, i.jsx)(a.m, {
+    return (0, i.jsx)(o.m, {
         id: 'subscriptions-'.concat(t.id),
         renderIcon: (e) => (0, i.jsx)(r.Z, { className: e }),
         text: u.intl.string(u.t['KzCF//']),
         selected: d,
         onClick: () => {
-            (0, o.uL)(s.Z5c.CHANNEL(t.id, c.oC.ROLE_SUBSCRIPTIONS));
+            (0, a.uL)(s.Z5c.CHANNEL(t.id, c.oC.ROLE_SUBSCRIPTIONS));
         },
         onContextMenu: (e) => {
             null != t &&

@@ -1,44 +1,44 @@
-n(47120);
-var i = n(200651),
-    s = n(149765),
-    r = n(481060),
-    a = n(570140),
-    l = n(700785);
+t(47120);
+var i = t(200651),
+    a = t(149765),
+    o = t(481060),
+    r = t(570140),
+    l = t(700785);
 __OVERLAY__ &&
-    a.Z.subscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN', function (e) {
+    r.Z.subscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN', function (e) {
         let {
-                clientId: t,
-                authorizeProps: { authorizations: o, permissions: c, ...d }
+                clientId: n,
+                authorizeProps: { authorizations: c, permissions: s, ...d }
             } = e,
-            u = 'OAuth2Authorize_'.concat(t, '_').concat(d.guildId, '_').concat(d.channelId);
-        function h(e) {
-            let { location: n } = e;
-            a.Z.dispatch({
+            u = 'OAuth2Authorize_'.concat(n, '_').concat(d.guildId, '_').concat(d.channelId);
+        function p(e) {
+            let { location: t } = e;
+            r.Z.dispatch({
                 type: 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE',
-                clientId: t,
-                location: n
+                clientId: n,
+                location: t
             });
         }
-        let p = l.Hn;
+        let _ = l.Hn;
         try {
-            p = s.vB(null != c ? c : 0);
+            _ = a.vB(null != s ? s : 0);
         } catch (e) {}
-        (0, r.openModalLazy)(
+        (0, o.openModalLazy)(
             async () => {
-                let { OAuth2AuthorizeModal: e } = await Promise.resolve().then(n.bind(n, 69580));
-                return (t) =>
+                let { OAuth2AuthorizeModal: e } = await Promise.resolve().then(t.bind(t, 69580));
+                return (n) =>
                     (0, i.jsx)(e, {
-                        ...t,
+                        ...n,
                         ...d,
-                        authorizations: new Map(o),
-                        permissions: p,
-                        callback: h
+                        authorizations: new Map(c),
+                        permissions: _,
+                        callback: p
                     });
             },
             {
                 modalKey: u,
                 onCloseRequest: () => {
-                    (0, r.closeModal)(u), h({});
+                    (0, o.closeModal)(u), p({});
                 }
             }
         );

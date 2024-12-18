@@ -8,8 +8,8 @@ e(192379);
 var i = e(481060),
     r = e(63063),
     c = e(376340),
-    l = e(981631),
-    s = e(388032),
+    s = e(981631),
+    l = e(388032),
     a = e(567770),
     u = e(592240);
 function d() {
@@ -21,8 +21,8 @@ function d() {
                 variant: 'text-sm/medium',
                 color: 'header-secondary',
                 children: (0, o.jsx)(i.Anchor, {
-                    href: r.Z.getArticleURL(l.BhN.CRUNCHYROLL_CONNECTION),
-                    children: s.intl.string(s.t.hvVgAQ)
+                    href: r.Z.getArticleURL(s.BhN.CRUNCHYROLL_CONNECTION),
+                    children: l.intl.string(l.t.hvVgAQ)
                 })
             })
         })
@@ -37,8 +37,8 @@ function C(n) {
             height: '104',
             alt: ''
         }),
-        title: s.intl.string(s.t.Fnvxvr),
-        body: s.intl.string(s.t.YwXcen),
+        title: l.intl.string(l.t.Fnvxvr),
+        body: l.intl.string(l.t.YwXcen),
         content: (0, o.jsx)(d, {}),
         onClose: t
     });

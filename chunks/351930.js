@@ -16,8 +16,8 @@ var r = n(200651),
     h = n(981631),
     m = n(474936),
     x = n(941469),
-    f = n(509345);
-let p = async () =>
+    p = n(509345);
+let f = async () =>
         (
             await o.tn.get({
                 url: h.ANM.BILLING_SUBSCRIPTIONS,
@@ -66,7 +66,7 @@ function b() {
     let [e, t] = a.useState('511651880837840896'),
         [n, l] = a.useState([]),
         c = async () => {
-            l(await p());
+            l(await f());
         };
     a.useEffect(() => {
         c();
@@ -91,7 +91,7 @@ function b() {
     return (0, r.jsx)(s.ScrollerThin, {
         className: i()(x.panel),
         children: (0, r.jsxs)('div', {
-            className: f.panelInner,
+            className: p.panelInner,
             children: [
                 (0, r.jsx)(s.Text, {
                     style: { marginBottom: '8px' },
@@ -99,7 +99,7 @@ function b() {
                     children: 'Manage Subscription'
                 }),
                 (0, r.jsx)('section', {
-                    className: i()([f.section, f.buttons]),
+                    className: i()([p.section, p.buttons]),
                     children:
                         null == m &&
                         (0, r.jsxs)(r.Fragment, {
@@ -129,7 +129,7 @@ function b() {
                     children: 'Bulk action'
                 }),
                 (0, r.jsx)('section', {
-                    className: i()([f.section, f.buttons]),
+                    className: i()([p.section, p.buttons]),
                     children: (0, r.jsx)(s.Button, {
                         size: s.Button.Sizes.SMALL,
                         onClick: j,

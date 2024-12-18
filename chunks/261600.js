@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(399606),
-    o = n(481060),
-    a = n(592125),
+    a = n(481060),
+    o = n(592125),
     s = n(922482),
     c = n(750154),
     u = n(427679),
@@ -16,22 +16,22 @@ function h(e) {
     var t, n;
     let { activity: h } = e,
         { channelId: p } = null !== (t = (0, c.rq)(h)) && void 0 !== t ? t : {},
-        m = (0, r.e7)([u.Z], () => u.Z.getStageInstanceByChannel(p), [p]),
-        f = l.useRef(null),
+        f = (0, r.e7)([u.Z], () => u.Z.getStageInstanceByChannel(p), [p]),
+        m = l.useRef(null),
         g = l.useCallback(() => {
-            let e = a.Z.getChannel(p);
+            let e = o.Z.getChannel(p);
             null != e && s.Cq(e);
         }, [p]),
-        C = null !== (n = null == m ? void 0 : m.topic) && void 0 !== n ? n : h.name,
-        v = d.intl.formatToPlainString(d.t['T+DNAA'], { channel: C });
+        v = null !== (n = null == f ? void 0 : f.topic) && void 0 !== n ? n : h.name,
+        C = d.intl.formatToPlainString(d.t['T+DNAA'], { channel: v });
     return (0, i.jsx)('div', {
-        ref: f,
-        children: (0, i.jsx)(o.Clickable, {
+        ref: m,
+        children: (0, i.jsx)(a.Clickable, {
             onClick: g,
-            focusProps: { ringTarget: f },
-            children: (0, i.jsx)(o.Heading, {
+            focusProps: { ringTarget: m },
+            children: (0, i.jsx)(a.Heading, {
                 variant: 'heading-sm/semibold',
-                children: v
+                children: C
             })
         })
     });

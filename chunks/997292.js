@@ -1,40 +1,40 @@
 e.d(t, {
     r: function () {
-        return C;
+        return b;
     }
 });
 var i = e(106351),
-    l = e(475179),
-    o = e(816782),
-    r = e(358221),
-    u = e(221292),
-    a = e(687158),
-    d = e(433355),
-    E = e(592125),
-    s = e(944486),
-    c = e(914010),
-    _ = e(981631);
-let C = {
+    o = e(475179),
+    r = e(816782),
+    l = e(358221),
+    d = e(221292),
+    s = e(687158),
+    u = e(433355),
+    a = e(592125),
+    c = e(944486),
+    E = e(914010),
+    C = e(981631);
+let b = {
     binds: ['mod+u'],
     comboKeysBindGlobal: !0,
     action() {
-        let n = c.Z.getGuildId(),
-            t = s.Z.getChannelId(n),
-            e = E.Z.getChannel(t);
-        if (null != t && null != e && e.type === i.d.GUILD_VOICE) return l.Z.updateChatOpen(t, !r.Z.getChatOpen(t)), !1;
+        let n = E.Z.getGuildId(),
+            t = c.Z.getChannelId(n),
+            e = a.Z.getChannel(t);
+        if (null != t && null != e && e.type === i.d.GUILD_VOICE) return o.Z.updateChatOpen(t, !l.Z.getChatOpen(t)), !1;
         if (null != t && null != e && e.type === i.d.DM) {
-            let n = d.ZP.getSection(t, null == e ? void 0 : e.isDM()),
-                i = (0, a.Of)(e.getRecipientId()),
-                l = n === _.ULH.PROFILE;
+            let n = u.ZP.getSection(t, null == e ? void 0 : e.isDM()),
+                i = (0, s.Of)(e.getRecipientId()),
+                o = n === C.ULH.PROFILE;
             return (
-                (0, u.TY)({
+                (0, d.TY)({
                     displayProfile: i,
-                    isProfileOpen: !l
+                    isProfileOpen: !o
                 }),
-                o.Z.toggleProfilePanelSection(),
+                r.Z.toggleProfilePanelSection(),
                 !1
             );
         }
-        return o.Z.toggleMembersSection(), !1;
+        return r.Z.toggleMembersSection(), !1;
     }
 };

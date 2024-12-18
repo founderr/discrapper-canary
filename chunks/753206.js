@@ -1,7 +1,7 @@
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    o = n.n(l),
+    o = n(120356),
+    l = n.n(o),
     u = n(628238),
     a = n(492593),
     s = n(25015),
@@ -10,7 +10,7 @@ var i = n(200651),
     f = n(46124);
 t.Z = r.memo(function (e) {
     var t;
-    let { message: n, channel: r, compact: l, className: _, isGroupStart: p, hideSimpleEmbedContent: g = !0, disableInteraction: E } = e,
+    let { message: n, channel: r, compact: o, className: _, isGroupStart: p, hideSimpleEmbedContent: g = !0, disableInteraction: E } = e,
         m = (0, u.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
         { content: I } = (0, s.Z)(n, {
             hideSimpleEmbedContent: g,
@@ -20,10 +20,10 @@ t.Z = r.memo(function (e) {
             previewLinkTarget: !0
         });
     return (0, i.jsx)(a.Z, {
-        compact: l,
-        className: o()(_, {
+        compact: o,
+        className: l()(_, {
             [f.message]: !0,
-            [f.cozyMessage]: !l,
+            [f.cozyMessage]: !o,
             [f.groupStart]: p
         }),
         childrenHeader: (0, d.Z)({

@@ -1,31 +1,31 @@
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    o = n(481060),
-    a = n(554747),
+    a = n(481060),
+    o = n(554747),
     s = n(434479),
     c = n(593364),
     u = n(703656),
     d = n(944486),
     h = n(147754),
     p = n(688438),
-    m = n(981631),
-    f = n(388032);
+    f = n(981631),
+    m = n(388032);
 let g = [
     {
         key: 'EVENTS',
         renderIcon: (e) =>
-            (0, i.jsx)(o.CalendarIcon, {
+            (0, i.jsx)(a.CalendarIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: e
             }),
         getName: (e) => {
             let { numEvents: t } = e;
-            return t > 0 ? f.intl.formatToPlainString(f.t.IBdqSk, { number: t }) : f.intl.string(f.t.tlopTE);
+            return t > 0 ? m.intl.formatToPlainString(m.t.IBdqSk, { number: t }) : m.intl.string(m.t.tlopTE);
         },
         handler: (e) =>
-            (0, o.openModalLazy)(async () => {
+            (0, a.openModalLazy)(async () => {
                 let { default: t } = await Promise.all([n.e('22347'), n.e('56236'), n.e('22506')]).then(n.bind(n, 17671));
                 return (n) =>
                     (0, i.jsx)(t, {
@@ -37,25 +37,25 @@ let g = [
     {
         key: 'JOIN_SERVERS',
         renderIcon: (e) =>
-            (0, i.jsx)(o.CompassIcon, {
+            (0, i.jsx)(a.CompassIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: e
             }),
-        getName: () => f.intl.string(f.t.K50GHR),
+        getName: () => m.intl.string(m.t.K50GHR),
         handler: (e, t) => (0, u.XU)(e.id, t.id)
     },
     {
         key: 'ADD_SERVERS',
         renderIcon: (e) =>
-            (0, i.jsx)(o.PlusSmallIcon, {
+            (0, i.jsx)(a.PlusSmallIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: e
             }),
-        getName: () => f.intl.string(f.t.emRpdX),
+        getName: () => m.intl.string(m.t.emRpdX),
         handler: (e, t) =>
-            (0, o.openModalLazy)(async () => {
+            (0, a.openModalLazy)(async () => {
                 let { default: l } = await n.e('79764').then(n.bind(n, 533202));
                 return (n) =>
                     (0, i.jsx)(l, {
@@ -68,24 +68,24 @@ let g = [
     },
     {
         key: 'INVITE_MEMBERS',
-        renderIcon: (e) => (0, i.jsx)(o.GroupPlusIcon, { className: e }),
-        getName: () => f.intl.string(f.t.MJQOuL),
+        renderIcon: (e) => (0, i.jsx)(a.GroupPlusIcon, { className: e }),
+        getName: () => m.intl.string(m.t.MJQOuL),
         handler: (e, t) =>
-            (0, o.openModalLazy)(async () => {
+            (0, a.openModalLazy)(async () => {
                 let { default: l } = await Promise.all([n.e('7654'), n.e('86004')]).then(n.bind(n, 560114));
                 return (n) =>
                     (0, i.jsx)(l, {
                         ...n,
                         guild: e,
                         channel: t,
-                        source: m.t4x.HUB_SIDEBAR
+                        source: f.t4x.HUB_SIDEBAR
                     });
             })
     }
 ];
 t.Z = (e) => {
     let { guild: t, channel: n } = e,
-        o = (0, a.ZP)(t.id);
+        a = (0, o.ZP)(t.id);
     l.useEffect(() => {
         h.Z.trackExposure({
             guildId: t.id,
@@ -99,23 +99,23 @@ t.Z = (e) => {
             },
             { autoTrackExposure: !1 }
         ),
-        m = (0, r.e7)([d.Z], () => null != n && d.Z.getChannelId() === n.id),
-        f = l.useMemo(() => ({ numEvents: o.length }), [o.length]),
-        C = (0, p.t)(n);
+        f = (0, r.e7)([d.Z], () => null != n && d.Z.getChannelId() === n.id),
+        m = l.useMemo(() => ({ numEvents: a.length }), [a.length]),
+        v = (0, p.t)(n);
     return (0, i.jsx)(i.Fragment, {
         children: g.map((e) => {
-            let { key: l, getName: r, handler: o, renderIcon: a } = e;
+            let { key: l, getName: r, handler: a, renderIcon: o } = e;
             if (!u && 'EVENTS' === l) return null;
             let d = ''.concat(l, '-').concat(t.id);
             return (0, i.jsx)(
                 s.m,
                 {
                     id: d,
-                    renderIcon: a,
-                    text: r(f),
-                    selected: m && 'JOIN_SERVERS' === l,
-                    onClick: null != n ? () => o(t, n) : void 0,
-                    trailing: 'JOIN_SERVERS' === l && C > 0 ? (0, c.N)(C) : null
+                    renderIcon: o,
+                    text: r(m),
+                    selected: f && 'JOIN_SERVERS' === l,
+                    onClick: null != n ? () => a(t, n) : void 0,
+                    trailing: 'JOIN_SERVERS' === l && v > 0 ? (0, c.N)(v) : null
                 },
                 d
             );
