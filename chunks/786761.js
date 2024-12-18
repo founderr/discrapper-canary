@@ -119,6 +119,7 @@ function R(e) {
               roleSubscriptionData: e.role_subscription_data,
               purchaseNotification: e.purchase_notification,
               poll: null == e.poll ? void 0 : (0, c.Z)(e.poll),
+              potions: e.potions,
               giftInfo: null == L ? void 0 : L,
               giftingPrompt: w
           });
