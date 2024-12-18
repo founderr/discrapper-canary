@@ -1,70 +1,58 @@
 r.d(n, {
     Z: function () {
-        return b;
+        return v;
     }
 });
 var i = r(200651),
     a = r(192379),
     s = r(120356),
     o = r.n(s),
-    l = r(990547),
-    u = r(442837),
-    c = r(481060),
-    d = r(100527),
-    f = r(906732),
-    _ = r(213609),
-    h = r(28546),
-    p = r(675478),
-    m = r(19780),
-    g = r(208049),
-    E = r(522811),
-    v = r(763296),
-    I = r(526617),
-    T = r(620492);
-function b(e) {
-    let { guildId: n, channel: r, containerWidth: s, onClose: b, onSelect: y, analyticsSource: S, suppressPlaySound: A, shouldValidateSelectedSound: N, shouldShowUpsell: C = !0, gridNotice: R, inExpressionPicker: O, soundButtonOverlay: D, listPadding: L, renderHeader: x, defaultSoundsOnly: w } = e,
-        P = (0, u.e7)([v.Z], () => v.Z.isFetchingSounds() || v.Z.isFetchingDefaultSounds()),
-        M = (0, u.e7)([m.Z], () => m.Z.getMediaSessionId()),
-        { analyticsLocations: k } = (0, f.ZP)(d.Z.SOUNDBOARD_POPOUT);
-    (0, _.Z)({
-        type: l.ImpressionTypes.POPOUT,
-        name: l.ImpressionNames.SOUNDBOARD_POPOUT,
-        properties: {
-            source: S,
-            guild_id: n,
-            media_session_id: M
-        }
-    }),
-        a.useEffect(() => {
-            g.w(), p.DZ.loadIfNecessary(), (0, h.ql)('');
-        }, []);
-    let { refreshEnabled: U } = (0, E.Z)({ location: 'SoundboardSoundPicker' });
-    return (0, i.jsx)(f.Gt, {
-        value: k,
-        children: (0, i.jsx)(c.Dialog, {
-            className: o()(T.picker, {
-                [T.fetching]: P,
-                [T.inExpressionPicker]: O,
-                [T.refresh]: U
+    l = r(442837),
+    u = r(481060),
+    c = r(100527),
+    d = r(906732),
+    f = r(28546),
+    _ = r(675478),
+    h = r(208049),
+    p = r(522811),
+    m = r(763296),
+    g = r(526617),
+    E = r(620492);
+function v(e) {
+    let { guildId: n, channel: r, containerWidth: s, onClose: v, onSelect: I, analyticsSource: T, suppressPlaySound: b, shouldValidateSelectedSound: y, shouldShowUpsell: S = !0, gridNotice: A, inExpressionPicker: N, soundButtonOverlay: C, listPadding: R, renderHeader: O, defaultSoundsOnly: D } = e,
+        L = (0, l.e7)([m.Z], () => m.Z.isFetchingSounds() || m.Z.isFetchingDefaultSounds()),
+        { analyticsLocations: x } = (0, d.ZP)(c.Z.SOUNDBOARD_POPOUT);
+    a.useEffect(() => {
+        h.w(), _.DZ.loadIfNecessary(), (0, f.ql)('');
+    }, []);
+    let { refreshEnabled: w } = (0, p.Z)({ location: 'SoundboardSoundPicker' });
+    return (0, i.jsx)(d.Gt, {
+        value: x,
+        children: (0, i.jsx)(u.Dialog, {
+            className: o()(E.picker, {
+                [E.fetching]: L,
+                [E.inExpressionPicker]: N,
+                [E.refresh]: w
             }),
-            children: P
-                ? (0, i.jsx)(c.Spinner, {})
-                : (0, i.jsx)(I.Z, {
+            children: L
+                ? (0, i.jsx)(u.Spinner, {})
+                : (0, i.jsx)(g.Z, {
                       guildId: n,
                       channel: r,
-                      onClose: b,
-                      onSelect: y,
-                      shouldValidateSelectedSound: N,
+                      onClose: v,
+                      onSelect: I,
+                      shouldValidateSelectedSound: y,
                       containerWidth: s,
-                      suppressPlaySound: A,
-                      shouldShowUpsell: C,
-                      gridNotice: R,
-                      soundButtonOverlay: D,
-                      listPadding: L,
-                      renderHeader: x,
-                      defaultSoundsOnly: w,
-                      inExpressionPicker: O,
-                      refreshEnabled: U
+                      suppressPlaySound: b,
+                      shouldShowUpsell: S,
+                      gridNotice: A,
+                      soundButtonOverlay: C,
+                      listPadding: R,
+                      renderHeader: O,
+                      defaultSoundsOnly: D,
+                      inExpressionPicker: N,
+                      refreshEnabled: w,
+                      analyticsSource: T
                   })
         })
     });

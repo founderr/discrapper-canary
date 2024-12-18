@@ -189,7 +189,11 @@ function E() {
                                     value: s,
                                     note: S.intl.string(S.t.hrSIhI),
                                     onChange: (e) => {
-                                        g.eR.updateSetting(e);
+                                        h.default.track(x.rMx.SOUNDMOJI_IN_AUTOCOMPLETE_TOGGLED, {
+                                            checked: e,
+                                            location: { section: x.jXE.SETTINGS_TEXT_AND_IMAGES }
+                                        }),
+                                            g.eR.updateSetting(e);
                                     },
                                     children: S.intl.string(S.t['CtYr+f'])
                                 })

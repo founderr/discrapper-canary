@@ -137,15 +137,22 @@ function C(e) {
         P = O(),
         M = (0, o.Wu)([m.Z], () => m.Z.recentlyHeardSoundIds);
     return s.useMemo(() => {
-        let e = [];
+        let e = 0,
+            i = 0,
+            s = [];
         return r
-            ? (N(e, u),
+            ? (N(s, u),
               {
-                  categories: e,
-                  isFetching: I
+                  categories: s,
+                  isFetching: I,
+                  soundCounts: {
+                      favoriteSoundCount: 0,
+                      unlockedCustomSoundCount: 0,
+                      lockedCustomSoundCount: 0
+                  }
               })
             : (y({
-                  sections: e,
+                  sections: s,
                   guildIds: b,
                   allSounds: u,
                   potentialSoundIdsForSection: Array.from(h),
@@ -154,7 +161,7 @@ function C(e) {
               }),
               x &&
                   y({
-                      sections: e,
+                      sections: s,
                       guildIds: b,
                       allSounds: u,
                       potentialSoundIdsForSection: M,
@@ -163,20 +170,28 @@ function C(e) {
                   }),
               w &&
                   y({
-                      sections: e,
+                      sections: s,
                       guildIds: b,
                       allSounds: u,
                       potentialSoundIdsForSection: P.map((e) => e.soundId),
                       sectionType: E.bg.FREQUENTLY_USED,
                       sortById: !1
                   }),
-              A(e, D, L, u, n),
-              !R && N(e, u),
-              S(e, C, null == D ? void 0 : D.id, u, a),
-              R && N(e, u),
+              A(s, D, L, u, n),
+              !R && N(s, u),
+              S(s, C, null == D ? void 0 : D.id, u, a),
+              R && N(s, u),
+              s.forEach((n) => {
+                  n.categoryInfo.type === E.bg.GUILD && (n.categoryInfo.isNitroLocked ? (i += n.items.length) : (e += n.items.length));
+              }),
               {
-                  categories: e,
-                  isFetching: I
+                  categories: s,
+                  isFetching: I,
+                  soundCounts: {
+                      favoriteSoundCount: h.size,
+                      unlockedCustomSoundCount: e,
+                      lockedCustomSoundCount: i
+                  }
               });
     }, [b, u, h, M, P, w, x, D, L, n, R, C, r, I, a]);
 }
