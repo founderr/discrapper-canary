@@ -157,6 +157,12 @@ class et extends s.Component {
                       ? C.isPlatformEmbedded
                           ? (0, a.jsxs)(l.rs, {
                                 children: [
+                                    n
+                                        ? null
+                                        : (0, a.jsx)(l.AW, {
+                                              path: O.Z5c.ACCOUNT_STANDING,
+                                              component: K
+                                          }),
                                     (0, a.jsx)(l.AW, {
                                         exact: !0,
                                         path: O.Z5c.INDEX,
