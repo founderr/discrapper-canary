@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     },
     Z: function () {
-        return I;
+        return v;
     }
 });
 var i = n(200651);
@@ -49,12 +49,12 @@ function C(e) {
               })
           });
 }
-function I(e) {
+function v(e) {
     let { guild: t } = e,
         n = (0, c.Z)(t),
         { eligibilityLoading: m, eligibilityError: h, eligibility: g } = n,
         p = (0, a.j)(g),
-        { isLoading: I, error: _, creatorMonetizationOnboardingMarketing: v } = (0, o.Z)(t.id);
+        { isLoading: v, error: _, creatorMonetizationOnboardingMarketing: I } = (0, o.Z)(t.id);
     return ((0, s.Z)(
         {
             type: r.ImpressionTypes.PANE,
@@ -68,7 +68,7 @@ function I(e) {
         },
         { disableTrack: null == t.id || null == g }
     ),
-    m || null == g || I)
+    m || null == g || v)
         ? (0, i.jsx)(l.Spinner, {})
         : g.actionRequired
           ? (0, i.jsx)(x.Z, { guild: t })
@@ -82,7 +82,7 @@ function I(e) {
                           monetizationEligibility: n
                       }),
                       (0, i.jsx)(C, {
-                          onboardingMarketing: v,
+                          onboardingMarketing: I,
                           onboardingMarketingError: _
                       })
                   ]

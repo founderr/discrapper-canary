@@ -19,9 +19,9 @@ var i,
     p = n(766434),
     f = n(755930),
     C = n(334820),
-    I = n(198139),
+    v = n(198139),
     _ = n(388032),
-    v = n(927332);
+    I = n(927332);
 ((i = r || (r = {})).DROPDOWN = 'DROPDOWN'), (i.PERIOD = 'PERIOD'), (i.AMOUNT = 'AMOUNT '), (i.STATUS = 'STATUS ');
 let N = (e) => {
     let { dateUtc: t } = e;
@@ -37,71 +37,71 @@ function T(e) {
         a = null != s ? d()(s).add(15, 'days').toISOString() : void 0,
         o = (0, m.Zo)(a, 'MMM D');
     switch (n) {
-        case I.x_.OPEN:
+        case v.x_.OPEN:
             return (0, l.jsxs)(l.Fragment, {
-                children: [null != o ? _.intl.formatToPlainString(_.t.I6YOjY, { payoutDate: o }) : _.intl.string(_.t.G5ATX1), (0, l.jsx)(g.Z, { className: v.statusScheduledIcon })]
+                children: [null != o ? _.intl.formatToPlainString(_.t.I6YOjY, { payoutDate: o }) : _.intl.string(_.t.G5ATX1), (0, l.jsx)(g.Z, { className: I.statusScheduledIcon })]
             });
-        case I.x_.CANCELED:
+        case v.x_.CANCELED:
             return (0, l.jsxs)(l.Fragment, {
                 children: [
                     _.intl.string(_.t['0SrNPz']),
                     (0, l.jsx)(u.CircleXIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: v.statusErrorIcon
+                        className: I.statusErrorIcon
                     })
                 ]
             });
-        case I.x_.PAYOUT_DEFERRED:
-            if ((null == r ? void 0 : r.includes(I.XL.PAYOUT_SEIZED)) === !0)
+        case v.x_.PAYOUT_DEFERRED:
+            if ((null == r ? void 0 : r.includes(v.XL.PAYOUT_SEIZED)) === !0)
                 return (0, l.jsxs)(l.Fragment, {
                     children: [
                         _.intl.string(_.t['0SrNPz']),
                         (0, l.jsx)(u.CircleXIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: v.statusErrorIcon
+                            className: I.statusErrorIcon
                         })
                     ]
                 });
             return (0, l.jsxs)(l.Fragment, {
-                children: [_.intl.string(_.t.OtZ5k5), (0, l.jsx)(x.Z, { className: v.statusDeferredIcon })]
+                children: [_.intl.string(_.t.OtZ5k5), (0, l.jsx)(x.Z, { className: I.statusDeferredIcon })]
             });
     }
     switch (i) {
-        case I.jw.MANUAL:
-        case I.jw.OPEN:
-        case I.jw.PENDING:
-        case I.jw.PROCESSING:
-        case I.jw.SUBMITTED:
-        case I.jw.PENDING_FUNDS:
-        case I.jw.CANCELED:
-        case I.jw.ERROR:
+        case v.jw.MANUAL:
+        case v.jw.OPEN:
+        case v.jw.PENDING:
+        case v.jw.PROCESSING:
+        case v.jw.SUBMITTED:
+        case v.jw.PENDING_FUNDS:
+        case v.jw.CANCELED:
+        case v.jw.ERROR:
             return (0, l.jsxs)(l.Fragment, {
-                children: [null != o ? _.intl.formatToPlainString(_.t.I6YOjY, { payoutDate: o }) : _.intl.string(_.t.ubdQTk), (0, l.jsx)(g.Z, { className: v.statusScheduledIcon })]
+                children: [null != o ? _.intl.formatToPlainString(_.t.I6YOjY, { payoutDate: o }) : _.intl.string(_.t.ubdQTk), (0, l.jsx)(g.Z, { className: I.statusScheduledIcon })]
             });
-        case I.jw.PAID:
+        case v.jw.PAID:
             return (0, l.jsxs)(l.Fragment, {
                 children: [
                     _.intl.string(_.t.eoSslJ),
                     (0, l.jsx)(u.CircleCheckIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: v.statusPaidIcon
+                        className: I.statusPaidIcon
                     })
                 ]
             });
-        case I.jw.DEFERRED:
-        case I.jw.DEFERRED_INTERNAL:
-        case I.jw.REJECTED:
-        case I.jw.RISK_REVIEW:
+        case v.jw.DEFERRED:
+        case v.jw.DEFERRED_INTERNAL:
+        case v.jw.REJECTED:
+        case v.jw.RISK_REVIEW:
             return (0, l.jsxs)(l.Fragment, {
                 children: [
                     h.Z.getStatusErrorText(i),
                     (0, l.jsx)(u.CircleXIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: v.statusErrorIcon
+                        className: I.statusErrorIcon
                     })
                 ]
             });
@@ -110,7 +110,7 @@ function T(e) {
 }
 let b = (0, f.i$)({
         key: 'AMOUNT ',
-        cellClassName: v.amountColumn,
+        cellClassName: I.amountColumn,
         renderHeader() {
             let e = (0, l.jsx)(u.Tooltip, {
                 text: _.intl.string(_.t.q3PkLy),
@@ -118,7 +118,7 @@ let b = (0, f.i$)({
                     (0, l.jsx)(u.CircleInformationIcon, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: v.amountDisclaimer,
+                        className: I.amountDisclaimer,
                         ...e
                     })
             });
@@ -132,7 +132,7 @@ let b = (0, f.i$)({
         [
             (0, C.Fd)({
                 key: 'PERIOD',
-                cellClassName: v.periodColumn,
+                cellClassName: I.periodColumn,
                 renderHeader: () => (0, l.jsx)(f.qN, { children: _.intl.string(_.t.fThnXV) }),
                 renderContent: (e) => (0, l.jsx)(N, { dateUtc: e.periodStartingAt }),
                 renderExpandedContent(e, t) {
@@ -148,7 +148,7 @@ let b = (0, f.i$)({
             }),
             (0, f.wy)({
                 key: 'STATUS ',
-                cellClassName: v.statusColumn,
+                cellClassName: I.statusColumn,
                 renderHeader() {
                     let e = (0, l.jsx)(u.Tooltip, {
                         text: _.intl.string(_.t.cIGvZG),
@@ -156,7 +156,7 @@ let b = (0, f.i$)({
                             (0, l.jsx)(u.CircleInformationIcon, {
                                 size: 'xs',
                                 color: 'currentColor',
-                                className: v.statusDisclaimer,
+                                className: I.statusDisclaimer,
                                 ...e
                             })
                     });
@@ -166,7 +166,7 @@ let b = (0, f.i$)({
                 },
                 renderContent: (e) =>
                     (0, l.jsx)(f.bL, {
-                        className: v.statusCell,
+                        className: I.statusCell,
                         children: (0, l.jsx)(T, { item: e })
                     })
             })

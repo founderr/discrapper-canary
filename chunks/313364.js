@@ -19,9 +19,9 @@ var i = n(200651),
     p = n(305473),
     f = n(113679),
     C = n(440857),
-    I = n(472596),
+    v = n(472596),
     _ = n(598948),
-    v = n(428936),
+    I = n(428936),
     N = n(41586),
     T = n(918192),
     b = n(981631),
@@ -45,13 +45,13 @@ function E(e) {
             },
             [l]
         ),
-        A = r.useRef(null),
-        Z = r.useCallback(() => {
+        Z = r.useRef(null),
+        A = r.useCallback(() => {
             var e;
-            null === (e = A.current) || void 0 === e || e.resetSearchText();
+            null === (e = Z.current) || void 0 === e || e.resetSearchText();
         }, []);
     if (null == n) return null;
-    let L = (0, I.xb)(!1, !1, R);
+    let L = (0, v.xb)(!1, !1, R);
     return (0, i.jsx)(d.Gt, {
         value: l,
         children: (0, i.jsx)('div', {
@@ -89,16 +89,16 @@ function E(e) {
                                                       children: [
                                                           (0, i.jsx)(N.Z, {
                                                               guild: n,
-                                                              ref: A
+                                                              ref: Z
                                                           }),
                                                           (0, i.jsx)(_.Z, {
                                                               guild: n,
                                                               searchState: L,
                                                               compact: !0,
                                                               onSelectRow: y,
-                                                              onResetForNewMembers: Z
+                                                              onResetForNewMembers: A
                                                           }),
-                                                          L !== I.po.SUCCESS_STILL_INDEXING && (0, i.jsx)(v.Z, { guildId: n.id })
+                                                          L !== v.po.SUCCESS_STILL_INDEXING && (0, i.jsx)(I.Z, { guildId: n.id })
                                                       ]
                                                   })
                                                 : (0, i.jsx)('div', {

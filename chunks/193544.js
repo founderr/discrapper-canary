@@ -18,13 +18,13 @@ var i = n(200651),
     g = n(975247);
 function x(e) {
     var t, n, l;
-    let { changeTitle: x, value: p, options: f, className: C, onChange: I } = e,
-        [_, v] = r.useState(p),
+    let { changeTitle: x, value: p, options: f, className: C, onChange: v } = e,
+        [_, I] = r.useState(p),
         [N, T] = r.useState(!1),
         [b, j] = r.useState(!1),
         S = r.useRef(null);
     r.useEffect(() => {
-        v(p);
+        I(p);
     }, [p]),
         r.useEffect(
             () => () => {
@@ -36,8 +36,8 @@ function x(e) {
         R = (e) => {
             if (!e.disabled && e.value !== _)
                 j(!0),
-                    null == I || I(e),
-                    v(e.value),
+                    null == v || v(e),
+                    I(e.value),
                     (S.current = setTimeout(() => {
                         j(!1), T(!1);
                     }, 1000));

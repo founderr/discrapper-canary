@@ -20,15 +20,15 @@ t.Z = (e) => {
         I = (0, d.N)(),
         S = null == I ? void 0 : I.subscription_trial,
         R = (0, c.Ng)(),
-        A = (0, l.Rt)({
+        j = (0, l.Rt)({
             intervalType: null == S ? void 0 : S.interval,
             intervalCount: null == S ? void 0 : S.interval_count
         }),
-        j = (0, o._)({
+        A = (0, o._)({
             defaultResponse: p.intl.string(p.t['8x0jKS']),
             onNonTier2Subscriber: p.intl.string(p.t.IJI7ys),
-            onTier2TrialOffer: A,
-            onTier0TrialOffer: A,
+            onTier2TrialOffer: j,
+            onTier0TrialOffer: j,
             onDiscountOffer: p.intl.formatToPlainString(p.t.bkQ4bG, { percent: null == R ? void 0 : R.discount.amount })
         }),
         P = (0, u._)(N);
@@ -46,7 +46,7 @@ t.Z = (e) => {
                 (0, i.jsx)(g.Z, {
                     className: E,
                     subscriptionTier: f.Si.TIER_2,
-                    buttonText: j,
+                    buttonText: A,
                     color: s.Button.Colors.GREEN,
                     look: s.Button.Looks.FILLED
                 }),

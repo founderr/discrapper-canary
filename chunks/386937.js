@@ -15,9 +15,9 @@ var i = n(200651),
     p = n(237583),
     f = n(899667),
     C = n(271383),
-    I = n(594174),
+    v = n(594174),
     _ = n(267642),
-    v = n(624138),
+    I = n(624138),
     N = n(981631),
     T = n(388032),
     b = n(534560);
@@ -34,7 +34,7 @@ function j(e, t, n) {
         e
     );
 }
-let S = (0, v.Mg)(d.Z.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
+let S = (0, I.Mg)(d.Z.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
 class E extends r.Component {
     componentDidMount() {
         this.measure();
@@ -247,13 +247,13 @@ class E extends r.Component {
             );
     }
 }
-let R = c.ZP.connectStores([g.Z, I.default, f.Z, C.ZP], () => {
+let R = c.ZP.connectStores([g.Z, v.default, f.Z, C.ZP], () => {
     let e = g.Z.getGuildId(),
         t = null != e ? f.Z.getAppliedGuildBoostsForGuild(e) : null,
         n = o()(null != t ? t : []).uniqBy((e) => e.userId),
         i = n
             .map((t) => ({
-                user: I.default.getUser(t.userId),
+                user: v.default.getUser(t.userId),
                 nick: C.ZP.getNick(e, t.userId)
             }))
             .filter((e) => null != e.user)

@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: function () {
-        return Z;
+        return A;
     },
     fp: function () {
         return R;
@@ -26,9 +26,9 @@ var i = n(200651),
     p = n(594174),
     f = n(63063),
     C = n(78451),
-    I = n(434404),
+    v = n(434404),
     _ = n(999382),
-    v = n(181339),
+    I = n(181339),
     N = n(193544),
     T = n(981631),
     b = n(388032),
@@ -40,7 +40,7 @@ function S(e) {
             async (e) => {
                 let { value: n } = e;
                 try {
-                    await I.Z.saveGuild(t.id, { verificationLevel: n }), I.Z.updateGuild({ verificationLevel: n });
+                    await v.Z.saveGuild(t.id, { verificationLevel: n }), v.Z.updateGuild({ verificationLevel: n });
                 } catch (e) {
                     (0, c.showToast)((0, c.createToast)(b.intl.string(b.t['46Rs3t']), c.ToastType.FAILURE));
                 }
@@ -90,7 +90,7 @@ function E(e) {
             async (e) => {
                 let { value: n } = e;
                 try {
-                    await I.Z.saveGuild(t.id, { explicitContentFilter: n }), I.Z.updateGuild({ explicitContentFilter: n });
+                    await v.Z.saveGuild(t.id, { explicitContentFilter: n }), v.Z.updateGuild({ explicitContentFilter: n });
                 } catch (e) {
                     (0, c.showToast)((0, c.createToast)(b.intl.string(b.t['46Rs3t']), c.ToastType.FAILURE));
                 }
@@ -141,7 +141,7 @@ function E(e) {
 async function R(e, t) {
     if (e.hasFeature(T.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) === t) return;
     let n = e.features;
-    return t ? n.add(T.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) : n.delete(T.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY), await I.Z.saveGuild(e.id, { features: n });
+    return t ? n.add(T.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) : n.delete(T.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY), await v.Z.saveGuild(e.id, { features: n });
 }
 function y(e) {
     let { guild: t } = e,
@@ -195,7 +195,7 @@ function y(e) {
               ]
           });
 }
-function A(e) {
+function Z(e) {
     let { guild: t, mfaLevel: n } = e,
         l = (0, o.e7)([g.Z], () => null != t && g.Z.can(T.Plq.MANAGE_GUILD, t), [t]),
         s = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
@@ -215,7 +215,7 @@ function A(e) {
         h = n === T.BpS.ELEVATED,
         x = (0, a.throttle)(async (e) => {
             if (!!u && !m)
-                await I.Z.updateMFALevel({
+                await v.Z.updateMFALevel({
                     guildId: t.id,
                     level: e ? T.BpS.ELEVATED : T.BpS.NONE,
                     isEnabled: !e
@@ -266,7 +266,7 @@ function A(e) {
           })
         : null;
 }
-function Z() {
+function A() {
     let { guild: e, mfaLevel: t } = (0, o.cj)([_.Z], () => _.Z.getProps(), []),
         n = (0, o.e7)([x.Z], () => x.Z.enabled, []);
     return null == e
@@ -280,7 +280,7 @@ function Z() {
                 children: [
                     (0, i.jsx)(y, { guild: e }),
                     (0, i.jsx)(S, { guild: e }),
-                    (0, i.jsx)(A, {
+                    (0, i.jsx)(Z, {
                         guild: e,
                         mfaLevel: t
                     }),
@@ -288,7 +288,7 @@ function Z() {
                     (0, i.jsx)(c.FormDivider, { className: j.divider }),
                     (0, i.jsx)('div', {
                         className: s()(j.setupContainer),
-                        children: (0, i.jsx)(v.w, { guild: e })
+                        children: (0, i.jsx)(I.w, { guild: e })
                     })
                 ]
             });

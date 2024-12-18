@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     },
     _O: function () {
-        return j;
+        return A;
     }
 });
 var i = n(200651);
@@ -50,13 +50,13 @@ let R = (e) => {
             children: [c, ' ', d]
         });
     },
-    A = (e) => {
+    j = (e) => {
         let { isFullscreen: t } = e;
         return (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(d.A, { className: t ? S.fullscreenSparkleStar1 : S.settingsSparkleStar1 }), (0, i.jsx)(d.A, { className: t ? S.fullscreenSparkleStar2 : S.settingsSparkleStar2 }), (0, i.jsx)(d.A, { className: t ? S.fullscreenSparkleStar3 : S.settingsSparkleStar3 }), (0, i.jsx)(d.A, { className: t ? S.fullscreenSparkleStar4 : S.settingsSparkleStar4 })]
         });
     };
-function j(e) {
+function A(e) {
     let { variant: t = 'text-lg/normal', withBottomMargin: n = !0, isMarketingPageV2Enabled: r } = e,
         s = (0, x.$)();
     return (0, i.jsx)(l.Text, {
@@ -76,8 +76,8 @@ t.ZP = (e) => {
         B = (0, g._O)(),
         O = (0, p.Ng)(),
         w = (0, p.Wp)(O, N.Si.TIER_2) ? N.Si.TIER_2 : void 0,
-        k = (0, _.N)(),
-        y = (0, m.Nx)(),
+        y = (0, _.N)(),
+        k = (0, m.Nx)(),
         L = (0, E.Vi)(),
         U = (0, s.e7)([u.Z], () => u.Z.affinities),
         D = (0, h.Z)(),
@@ -111,7 +111,7 @@ t.ZP = (e) => {
                                         smallerText: !r
                                     })
                                 })
-                              : (0, i.jsx)(j, {}),
+                              : (0, i.jsx)(A, {}),
                         L || B
                             ? (0, i.jsx)('div', {
                                   className: a()(S.buttonContainer),
@@ -121,20 +121,20 @@ t.ZP = (e) => {
                                   })
                               })
                             : (0, i.jsx)(R, {
-                                  subscriptionTier: null !== (n = null != v ? v : null == k ? void 0 : null === (t = k.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : w,
-                                  inOfferExperience: y,
+                                  subscriptionTier: null !== (n = null != v ? v : null == y ? void 0 : null === (t = y.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : w,
+                                  inOfferExperience: k,
                                   buttonClassName: x,
                                   isDarkMode: Z
                               }),
                         V &&
                             !G &&
-                            (0, i.jsx)(j, {
+                            (0, i.jsx)(A, {
                                 variant: 'text-md/normal',
                                 withBottomMargin: !1
                             })
                     ]
                 }),
-                !y && (0, i.jsx)(A, { isFullscreen: r })
+                !k && (0, i.jsx)(j, { isFullscreen: r })
             ]
         })
     });

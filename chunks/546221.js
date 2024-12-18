@@ -20,7 +20,7 @@ var r = n(481060),
     p = n(215124),
     f = n(981631),
     C = n(388032),
-    I = n(899621);
+    v = n(899621);
 function _(e) {
     let { payoutsByPeriod: t, team: n } = e,
         l = (0, c.mY)() ? null : C.intl.format(C.t.d1sCiY, { url: null != n ? f.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(n.id) : null });
@@ -40,7 +40,7 @@ function _(e) {
               ]
           });
 }
-function v(e) {
+function I(e) {
     let { guildId: t, totalPayoutsForPeriod: n } = e,
         r = (0, o.qi)(t, { includeSoftDeleted: !0 });
     return null == n && 0 === r.length
@@ -48,7 +48,7 @@ function v(e) {
         : (0, i.jsx)(m.Z, {
               totalPayoutsForPeriod: n,
               guildId: t,
-              className: I.currentMonthEarningsTable
+              className: v.currentMonthEarningsTable
           });
 }
 let N = (e) => {
@@ -67,11 +67,11 @@ let N = (e) => {
                       }),
                   (0, i.jsxs)(r.FormSection, {
                       title: C.intl.string(C.t.ofmOzc),
-                      className: I.formSection,
+                      className: v.formSection,
                       children: [
                           (0, i.jsx)(r.Spacer, { size: 8 }),
                           (0, i.jsxs)('div', {
-                              className: I.metricsContainer,
+                              className: v.metricsContainer,
                               children: [
                                   (0, i.jsx)(g.Z, {
                                       label: C.intl.string(C.t.iY1jW1),
@@ -90,7 +90,7 @@ let N = (e) => {
                                               (0, i.jsx)(r.UserIcon, {
                                                   size: 'md',
                                                   color: 'currentColor',
-                                                  className: I.totalMembersIcon,
+                                                  className: v.totalMembersIcon,
                                                   'aria-hidden': !0
                                               })
                                           ]
@@ -99,7 +99,7 @@ let N = (e) => {
                                   })
                               ]
                           }),
-                          (0, i.jsx)(v, {
+                          (0, i.jsx)(I, {
                               guildId: a,
                               totalPayoutsForPeriod: N
                           })
@@ -107,7 +107,7 @@ let N = (e) => {
                   }),
                   (0, i.jsx)(r.FormSection, {
                       title: C.intl.string(C.t['+5Rmho']),
-                      className: I.formSection,
+                      className: v.formSection,
                       children: (0, i.jsx)(_, {
                           payoutsByPeriod: T,
                           team: h
@@ -116,7 +116,7 @@ let N = (e) => {
                   (0, i.jsx)(r.FormSection, {
                       title: C.intl.string(C.t.O8cDAA),
                       disabled: S,
-                      className: I.formSection,
+                      className: v.formSection,
                       children: (0, i.jsx)(x.Z, {
                           guildId: a,
                           application: o
@@ -124,7 +124,7 @@ let N = (e) => {
                   }),
                   (0, i.jsx)(r.FormSection, {
                       title: C.intl.string(C.t['0n7R2d']),
-                      className: I.formSection,
+                      className: v.formSection,
                       children: (0, i.jsx)(p.Z, {
                           guildId: a,
                           allPeriods: T

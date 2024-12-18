@@ -24,7 +24,7 @@ var i = n(200651),
     I = n(768236),
     S = n(314907),
     R = n(826701);
-let A = () =>
+let j = () =>
         (0, i.jsx)('div', {
             className: v.comparisonTablePill,
             children: (0, i.jsx)(c.Heading, {
@@ -33,7 +33,7 @@ let A = () =>
                 children: T.intl.string(T.t.TR2B4e)
             })
         }),
-    j = () =>
+    A = () =>
         (0, i.jsx)('div', {
             className: v.comparisonTablePill,
             children: (0, i.jsx)(c.Heading, {
@@ -126,10 +126,10 @@ t.Z = (e) => {
         B = (0, h.Ng)(),
         O = null != B && (0, h.Wp)(B, C.Si.TIER_2),
         w = (0, b.A)(C.Xh.PREMIUM_MONTH_TIER_2),
-        k = ''.concat(w, '/').concat((0, _.eP)(C.rV.MONTH)),
-        y = (0, _.CY)(C.Xh.PREMIUM_MONTH_TIER_0),
+        y = ''.concat(w, '/').concat((0, _.eP)(C.rV.MONTH)),
+        k = (0, _.CY)(C.Xh.PREMIUM_MONTH_TIER_0),
         L = (0, _.CY)(C.Xh.PREMIUM_MONTH_TIER_2),
-        U = (0, x.a)(y, L, O, k);
+        U = (0, x.a)(k, L, O, y);
     if (!N || !I) return null;
     U.push({
         label: null,
@@ -137,7 +137,7 @@ t.Z = (e) => {
         tier2Column: null,
         withBottomBorder: !1
     }),
-        (n = o ? null : null != R ? (0, i.jsx)(j, {}) : (0, i.jsx)(A, {}));
+        (n = o ? null : null != R ? (0, i.jsx)(A, {}) : (0, i.jsx)(j, {}));
     let D = P === C.Si.TIER_0 || u === C.p9.TIER_0;
     return (0, i.jsx)(g.Gt, {
         value: T,

@@ -19,9 +19,9 @@ var i = n(200651),
     p = n(899667),
     f = n(626135),
     C = n(267642),
-    I = n(63063),
+    v = n(63063),
     _ = n(999382),
-    v = n(981631),
+    I = n(981631),
     N = n(388032),
     T = n(981004);
 function b(e) {
@@ -106,12 +106,12 @@ function E() {
                     (0, i.jsx)(s.FormText, {
                         type: s.FormText.Types.DESCRIPTION,
                         className: T.titleBlurb,
-                        children: N.intl.format(N.t.hLOkp6, { helpdeskArticle: I.Z.getArticleURL(v.BhN.GUILD_SUBSCRIPTIONS) })
+                        children: N.intl.format(N.t.hLOkp6, { helpdeskArticle: v.Z.getArticleURL(I.BhN.GUILD_SUBSCRIPTIONS) })
                     })
                 ]
             }),
             (0, i.jsx)(g.Z, {
-                tiers: (0, C.cP)(null != e && e.hasFeature(v.oNc.COMMUNITY) && e.maxStageVideoChannelUsers >= v.B9o),
+                tiers: (0, C.cP)(null != e && e.hasFeature(I.oNc.COMMUNITY) && e.maxStageVideoChannelUsers >= I.B9o),
                 renderTier: S
             }),
             (0, i.jsx)('div', { className: T.divider }),
@@ -119,11 +119,11 @@ function E() {
             n
                 ? (0, i.jsx)(m.Z, {
                       onOpenPremiumClick: () =>
-                          void f.default.track(v.rMx.PREMIUM_PROMOTION_OPENED, {
+                          void f.default.track(I.rMx.PREMIUM_PROMOTION_OPENED, {
                               location: {
-                                  page: v.ZY5.GUILD_SETTINGS,
-                                  section: v.jXE.NITRO_CROSS_PROMO_FROM_BOOSTING,
-                                  object: v.qAy.BUTTON_CTA
+                                  page: I.ZY5.GUILD_SETTINGS,
+                                  section: I.jXE.NITRO_CROSS_PROMO_FROM_BOOSTING,
+                                  object: I.qAy.BUTTON_CTA
                               }
                           })
                   })

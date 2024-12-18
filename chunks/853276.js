@@ -96,27 +96,27 @@ let h = r.forwardRef(function (e, t) {
             });
 });
 function g(e) {
-    let { value: t, onChange: n, onBlur: l, onFocus: g, onRemove: x, isSelected: p, isSelecting: f, error: C, forceShowErrorTooltip: I } = e,
+    let { value: t, onChange: n, onBlur: l, onFocus: g, onRemove: x, isSelected: p, isSelecting: f, error: C, forceShowErrorTooltip: v } = e,
         _ = r.useRef(null),
-        v = r.useRef(null),
+        I = r.useRef(null),
         [N, T] = r.useState(!1),
         { ref: b, width: j = 0 } = (0, c.Z)(N),
         { ref: S, width: E = 0 } = (0, c.Z)(N),
         R = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
-        [y, A] = r.useState(I),
-        Z = r.useRef(null),
+        [y, Z] = r.useState(v),
+        A = r.useRef(null),
         L = j > E ? j : E;
     r.useEffect(() => {
-        I
-            ? (A(!0),
-              (Z.current = setTimeout(() => {
-                  A(!1), (Z.current = null);
+        v
+            ? (Z(!0),
+              (A.current = setTimeout(() => {
+                  Z(!1), (A.current = null);
               }, u.I5)))
-            : A(!1);
-    }, [I]),
+            : Z(!1);
+    }, [v]),
         r.useEffect(
             () => () => {
-                clearTimeout(Z.current);
+                clearTimeout(A.current);
             },
             []
         );
@@ -129,22 +129,22 @@ function g(e) {
         O = r.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                if ((t.trim().length <= 0 && x(), null != _.current && null != b.current && null != v.current)) {
+                if ((t.trim().length <= 0 && x(), null != _.current && null != b.current && null != I.current)) {
                     var n;
-                    _.current.scrollTo(0, 0), _.current.setSelectionRange(0, 0), (_.current.scrollLeft = 0), (b.current.scrollLeft = 0), (null === (n = v.current) || void 0 === n ? void 0 : n.ref) != null && (v.current.ref.scrollLeft = 0);
+                    _.current.scrollTo(0, 0), _.current.setSelectionRange(0, 0), (_.current.scrollLeft = 0), (b.current.scrollLeft = 0), (null === (n = I.current) || void 0 === n ? void 0 : n.ref) != null && (I.current.ref.scrollLeft = 0);
                 }
                 T(!1), l(e);
             },
             [t, b, l, x]
         ),
-        P = r.useCallback(
+        k = r.useCallback(
             (e) => {
                 let n = t.trim().length <= 0;
                 u.ye.has(e.key) ? (e.preventDefault(), e.stopPropagation(), O(!0)) : 'Backspace' === e.key && n && (e.preventDefault(), e.stopPropagation(), O(!0));
             },
             [O, t]
         ),
-        k = r.useCallback(
+        P = r.useCallback(
             (e) => {
                 let t = e.metaKey || e.ctrlKey;
                 g(t), t ? e.preventDefault() : T(!0), e.stopPropagation();
@@ -172,15 +172,15 @@ function g(e) {
                 (0, i.jsxs)(o.Clickable, {
                     tag: 'div',
                     onBlur: () => O(!1),
-                    onClick: k,
+                    onClick: P,
                     ignoreKeyPress: !0,
-                    onMouseEnter: () => A(!0),
-                    onMouseLeave: () => A(!1),
+                    onMouseEnter: () => Z(!0),
+                    onMouseLeave: () => Z(!1),
                     className: s()(m.chipletContainerInner, {
                         [m.isSelecting]: f,
                         [m.isEditing]: N
                     }),
-                    ref: v,
+                    ref: I,
                     children: [
                         (0, i.jsx)('input', {
                             className: s()(m.chipletInput, {
@@ -189,7 +189,7 @@ function g(e) {
                             }),
                             ref: _,
                             onChange: D,
-                            onKeyDownCapture: P,
+                            onKeyDownCapture: k,
                             value: t,
                             style: { width: L > 0 ? L : 'calc('.concat(t.length, 'ch + 10px)') }
                         }),

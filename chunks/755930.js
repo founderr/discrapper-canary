@@ -1,6 +1,6 @@
 n.d(t, {
     GW: function () {
-        return I;
+        return v;
     },
     Qg: function () {
         return g;
@@ -21,7 +21,7 @@ n.d(t, {
         return f;
     },
     qN: function () {
-        return v;
+        return I;
     },
     wy: function () {
         return x;
@@ -114,7 +114,7 @@ function C(e) {
         ...s
     });
 }
-function I(e) {
+function v(e) {
     let { cellClassName: t, getCount: n, key: r, renderHeader: l, ...s } = e;
     return x({
         key: r,
@@ -138,7 +138,7 @@ function _(e) {
     }
     return t;
 }
-let v = (e) => {
+let I = (e) => {
         let { children: t } = e;
         return (0, i.jsx)(a.Text, {
             className: h.headerCell,

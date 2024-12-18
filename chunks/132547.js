@@ -29,7 +29,7 @@ t.Z = () => {
     let e = r.useRef(null),
         [t, n] = r.useState(!1),
         { analyticsLocations: a } = (0, d.ZP)(c.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
-        [A, j] = r.useState(!1);
+        [j, A] = r.useState(!1);
     (0, p.FM)();
     let P = (0, f.b)(R),
         Z = (0, b.TW)(R);
@@ -73,7 +73,7 @@ t.Z = () => {
                             (0, i.jsx)('div', { className: I.footerSpacing }),
                             (0, i.jsx)(l.$, {
                                 onChange: (e) => {
-                                    e && !A && (g.default.track(v.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: a }), j(!0));
+                                    e && !j && (g.default.track(v.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: a }), A(!0));
                                 },
                                 children: (0, i.jsx)('div', { className: I.bottomOfPageVisibilitySensor })
                             }),

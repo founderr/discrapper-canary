@@ -20,14 +20,14 @@ var i,
     p = n(402766),
     f = n(267642),
     C = n(981631),
-    I = n(388032),
+    v = n(388032),
     _ = n(534560);
-let v = {
+let I = {
         tension: 200,
         friction: 20
     },
     N = {
-        ...v,
+        ...I,
         clamp: !0
     };
 function T(e) {
@@ -61,7 +61,7 @@ function T(e) {
                     }),
                     (0, a.jsx)('div', {
                         className: d()(_.tierCloseHint, x),
-                        children: I.intl.format(I.t.qV3Erq, { numLeft: r - i })
+                        children: v.intl.format(v.t.qV3Erq, { numLeft: r - i })
                     }),
                     (0, a.jsx)(m.Clickable, {
                         onClick: l,
@@ -89,7 +89,7 @@ function b(e) {
         (0, a.jsx)(m.Spring, {
             from: { unlockedTranslateY: 50 },
             to: { unlockedTranslateY: 0 === f ? 50 : 0 },
-            config: v,
+            config: I,
             children: (e) =>
                 (0, a.jsx)('div', {
                     className: d()(
@@ -133,7 +133,7 @@ function b(e) {
 function j(e) {
     let { children: t, subscriptionCount: n, onSetRef: i, tier: r, isAnimatedTo: l, hasBottomMargin: s, headerButton: o = null, withCardBody: c = !0, guildId: u, showHeaderLockStatus: h = !0 } = e,
         p = (0, f.vn)(u)[r.tier],
-        v = l && n >= p,
+        I = l && n >= p,
         N = r.tier !== C.Eu4.NONE && r.tier !== C.Eu4.TIER_1,
         T = (e, t) => {
             var n;
@@ -159,7 +159,7 @@ function j(e) {
                                         e.isNew
                                             ? (0, a.jsx)(m.TextBadge, {
                                                   className: _.newBadge,
-                                                  text: I.intl.string(I.t.y2b7CA)
+                                                  text: v.intl.string(v.t.y2b7CA)
                                               })
                                             : null
                                     ]
@@ -192,7 +192,7 @@ function j(e) {
                     guildId: u,
                     hasBottomMargin: s,
                     subscriptionsRequired: p,
-                    hasAnimatedUnlocked: v,
+                    hasAnimatedUnlocked: I,
                     isAnimatedTo: l
                 }),
                 (0, a.jsx)('div', {
@@ -205,13 +205,13 @@ function j(e) {
                                       N
                                           ? (0, a.jsx)('div', {
                                                 className: _.previousPerks,
-                                                children: I.intl.string(I.t.oKzyRU)
+                                                children: v.intl.string(v.t.oKzyRU)
                                             })
                                           : null,
                                       null != r.perks &&
                                           (0, a.jsx)('div', {
                                               className: _.perks,
-                                              children: r.perks.map((e) => T(e, v))
+                                              children: r.perks.map((e) => T(e, I))
                                           })
                                   ]
                               })
@@ -231,7 +231,7 @@ let S = (e) => {
         return (0, a.jsx)(u.animated.div, {
             style: { transform: t },
             className: _.tierUnlocked,
-            children: I.intl.string(I.t.dNGM0t)
+            children: v.intl.string(v.t.dNGM0t)
         });
     },
     R = (e) => {
@@ -240,7 +240,7 @@ let S = (e) => {
             children: [
                 (0, a.jsx)('div', {
                     className: _.tierRequirement,
-                    children: I.intl.format(I.t.t2Wbo6, { required: t })
+                    children: v.intl.format(v.t.t2Wbo6, { required: t })
                 }),
                 (0, a.jsx)(m.LockIcon, {
                     size: 'md',

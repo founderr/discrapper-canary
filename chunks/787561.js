@@ -21,9 +21,9 @@ var i = n(200651),
     p = n(430824),
     f = n(496675),
     C = n(699516),
-    I = n(594174),
+    v = n(594174),
     _ = n(434404),
-    v = n(999382),
+    I = n(999382),
     N = n(54842),
     T = n(929834),
     b = n(981631),
@@ -37,10 +37,10 @@ let R = 'dismissedCommunityFeaturesUpsell',
                 guild: t,
                 submitting: n,
                 errors: r
-            } = (0, a.cj)([v.Z], () => ({
-                submitting: v.Z.isSubmitting(),
-                guild: v.Z.getGuild(),
-                errors: v.Z.getErrors()
+            } = (0, a.cj)([I.Z], () => ({
+                submitting: I.Z.isSubmitting(),
+                guild: I.Z.getGuild(),
+                errors: I.Z.getErrors()
             })),
             l = Object.keys(r),
             s = l.length > 0 ? l[0] : null;
@@ -65,7 +65,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
             errorMessage: e
         });
     },
-    A = (e) => {
+    Z = (e) => {
         let { discoveryEnabled: t, onboardingEnabled: n, guild: l } = e,
             [s, u] = r.useState(!0 === c.K.get(R)),
             m = (0, a.e7)([x.Z], () => {
@@ -85,9 +85,9 @@ let R = 'dismissedCommunityFeaturesUpsell',
                 .catch(() => f(!1));
         }, []);
         let C = (0, a.e7)([p.Z], () => p.Z.getGuild('942897714956472401')),
-            I = l.isCommunity() && m >= 1000 && g && !(null != C);
-        if (t && n && !I) return null;
-        let v = async () => {
+            v = l.isCommunity() && m >= 1000 && g && !(null != C);
+        if (t && n && !v) return null;
+        let I = async () => {
             try {
                 let e = await o.tn.post({
                     url: b.ANM.JOIN_ADMIN_SERVER(l.id),
@@ -97,7 +97,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
                 _.Z.close(), (0, h.X)(e.body.id);
             } catch {}
         };
-        return s && !I
+        return s && !v
             ? null
             : (0, i.jsxs)('div', {
                   className: S.upsellContainer,
@@ -142,10 +142,10 @@ let R = 'dismissedCommunityFeaturesUpsell',
                       (0, i.jsxs)('div', {
                           className: S.upsellFooter,
                           children: [
-                              I &&
+                              v &&
                                   (0, i.jsx)(d.Button, {
                                       size: d.Button.Sizes.SMALL,
-                                      onClick: v,
+                                      onClick: I,
                                       className: S.upsellButton,
                                       children: j.intl.string(j.t.iF1Asr)
                                   }),
@@ -184,8 +184,8 @@ let R = 'dismissedCommunityFeaturesUpsell',
                   ]
               });
     },
-    Z = () => {
-        let e = (0, a.e7)([v.Z], () => v.Z.getGuild()),
+    A = () => {
+        let e = (0, a.e7)([I.Z], () => I.Z.getGuild()),
             { canManageGuild: t, isGuildAdmin: n } = (0, a.cj)([f.Z], () => ({
                 canManageGuild: f.Z.can(b.Plq.MANAGE_GUILD, e),
                 isGuildAdmin: f.Z.can(b.Plq.ADMINISTRATOR, e)
@@ -201,7 +201,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
                 t.type === b.d4z.GUILD_TEXT &&
                     h.push({
                         value: t.id,
-                        label: (0, m.F6)(t, I.default, C.Z, !0)
+                        label: (0, m.F6)(t, v.default, C.Z, !0)
                     });
             });
         let x = () => {
@@ -229,7 +229,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
             y = (e) => {
                 _.Z.updateGuild({ publicUpdatesChannelId: e });
             },
-            Z = (e) => {
+            A = (e) => {
                 _.Z.updateGuild({ preferredLocale: e });
             },
             L = (e) => {
@@ -300,7 +300,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
             tag: d.FormTitleTags.H1,
             children: [
                 u
-                    ? (0, i.jsx)(A, {
+                    ? (0, i.jsx)(Z, {
                           discoveryEnabled: e.features.has(b.oNc.DISCOVERABLE),
                           onboardingEnabled: e.features.has(b.oNc.GUILD_ONBOARDING),
                           guild: e
@@ -415,7 +415,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
                             children: (0, i.jsx)(d.SearchableSelect, {
                                 value: e.preferredLocale,
                                 options: o,
-                                onChange: Z,
+                                onChange: A,
                                 isDisabled: !t
                             })
                         })
@@ -483,6 +483,6 @@ let R = 'dismissedCommunityFeaturesUpsell',
         });
     };
 t.Z = () => {
-    let e = (0, a.e7)([v.Z], () => v.Z.getGuild());
-    return null == e ? null : e.features.has(b.oNc.COMMUNITY) ? (0, i.jsx)(Z, {}) : (0, i.jsx)(N.Z, { guild: e });
+    let e = (0, a.e7)([I.Z], () => I.Z.getGuild());
+    return null == e ? null : e.features.has(b.oNc.COMMUNITY) ? (0, i.jsx)(A, {}) : (0, i.jsx)(N.Z, { guild: e });
 };

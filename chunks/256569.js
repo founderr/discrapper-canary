@@ -64,9 +64,9 @@ function p(e) {
     var t;
     let { initialValue: n, onChangeTags: l, onChangeNewTagValue: c, tagErrors: u = {}, placeholder: g, className: p, maxTags: f } = e,
         C = r.useRef(null),
-        I = r.useRef(null),
+        v = r.useRef(null),
         _ = r.useRef(null),
-        v = (0, m.V)(n),
+        I = (0, m.V)(n),
         {
             handlePasteEvent: N,
             handleInputChange: T,
@@ -76,25 +76,25 @@ function p(e) {
             handleTagChangeEvent: E,
             handleSelectTag: R,
             handleUnselectTag: y,
-            handleResetTagSelections: A,
-            handleInputBlurEvent: Z
-        } = (0, m.Q)(v, {
+            handleResetTagSelections: Z,
+            handleInputBlurEvent: A
+        } = (0, m.Q)(I, {
             scrollerRef: _,
             mainInputRef: C,
-            mainContainerRef: I
+            mainContainerRef: v
         }),
         {
-            state: { value: L, tags: D, selections: O, isSelecting: P }
-        } = v,
-        k = (0, o.Z)(D),
+            state: { value: L, tags: D, selections: O, isSelecting: k }
+        } = I,
+        P = (0, o.Z)(D),
         [M, w] = r.useState(!1),
         B = r.useCallback(() => {
             var e;
-            w(!1), A(), null === (e = C.current) || void 0 === e || e.focus({ preventScroll: !0 });
-        }, [A]);
+            w(!1), Z(), null === (e = C.current) || void 0 === e || e.focus({ preventScroll: !0 });
+        }, [Z]);
     r.useEffect(() => {
-        if (!M && k !== D) l(D);
-    }, [l, k, D, M]),
+        if (!M && P !== D) l(D);
+    }, [l, P, D, M]),
         r.useEffect(() => {
             if (!M) c(L);
         }, [c, L, M]);
@@ -119,7 +119,7 @@ function p(e) {
                                   null === (e = C.current) || void 0 === e || e.blur(),
                                       setTimeout(() => {
                                           var e;
-                                          return null === (e = I.current) || void 0 === e ? void 0 : e.focus();
+                                          return null === (e = v.current) || void 0 === e ? void 0 : e.focus();
                                       }, 16);
                               }));
                 } else y(e, !0), w(!0);
@@ -128,7 +128,7 @@ function p(e) {
         );
     return (0, i.jsxs)('div', {
         className: s()(h.mainContainer, p),
-        ref: I,
+        ref: v,
         tabIndex: 0,
         onKeyUp: j,
         children: [
@@ -146,7 +146,7 @@ function p(e) {
                                 onFocus: G(t),
                                 onRemove: () => S(t),
                                 isSelected: O.includes(e),
-                                isSelecting: P,
+                                isSelecting: k,
                                 error: u[e],
                                 forceShowErrorTooltip: !M && t === D.length - 1
                             },
@@ -159,7 +159,7 @@ function p(e) {
                         onChange: T,
                         onKeyDownCapture: b,
                         onPaste: N,
-                        onBlur: Z,
+                        onBlur: A,
                         placeholder: 0 === D.length ? g : void 0,
                         value: L
                     })

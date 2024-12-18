@@ -21,9 +21,9 @@ var i = n(200651),
     p = n(65912),
     f = n(51248),
     C = n(546513),
-    I = n(572456),
+    v = n(572456),
     _ = n(273504),
-    v = n(981631),
+    I = n(981631),
     N = n(388032),
     T = n(925144);
 function b(e) {
@@ -31,15 +31,15 @@ function b(e) {
     let { guildId: b, setPreventNavigation: j = () => {} } = e,
         { editingRule: S, setEditingRule: E } = (0, p.V)(),
         { guild: R, subsection: y } = (0, l.cj)([o.Z], () => o.Z.getProps()),
-        A = null !== (n = null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : b) && void 0 !== n ? n : v.lds,
-        Z = null != S,
-        [L] = (0, h.RD)(A),
-        { rulesByTriggerType: D } = (0, h.pH)(A),
+        Z = null !== (n = null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : b) && void 0 !== n ? n : I.lds,
+        A = null != S,
+        [L] = (0, h.RD)(Z),
+        { rulesByTriggerType: D } = (0, h.pH)(Z),
         O = {
             [g.vh.MEMBERS]: N.intl.string(N.t.sx4E5u),
             [g.vh.CONTENT]: N.intl.string(N.t.fphZb2)
         },
-        P = r.useMemo(
+        k = r.useMemo(
             () =>
                 Object.values(null != D ? D : {})
                     .flat()
@@ -47,16 +47,16 @@ function b(e) {
             [D]
         );
     r.useEffect(() => {
-        Z && E(null);
-    }, [A]);
-    let k = r.useCallback(
+        A && E(null);
+    }, [Z]);
+    let P = r.useCallback(
             (e, t) => {
                 if (null != e) {
                     var n, i;
                     return null !==
                         (i =
                             null ===
-                                (n = P.find((t) => {
+                                (n = k.find((t) => {
                                     let { id: n } = t;
                                     return n === e;
                                 })) || void 0 === n
@@ -67,16 +67,16 @@ function b(e) {
                 }
                 return null != t ? g.I6[t].getDefaultRuleName() : null;
             },
-            [P]
+            [k]
         ),
         M = r.useMemo(() => {
             var e, t;
-            return k(null !== (e = null == S ? void 0 : S.id) && void 0 !== e ? e : null, null !== (t = null == S ? void 0 : S.triggerType) && void 0 !== t ? t : null);
-        }, [k, S]);
+            return P(null !== (e = null == S ? void 0 : S.id) && void 0 !== e ? e : null, null !== (t = null == S ? void 0 : S.triggerType) && void 0 !== t ? t : null);
+        }, [P, S]);
     r.useEffect(() => {
-        j(Z, (0, I.af)(M));
-    }, [j, Z, M]);
-    let w = (0, g.Z6)(A),
+        j(A, (0, v.af)(M));
+    }, [j, A, M]);
+    let w = (0, g.Z6)(Z),
         B = (e) =>
             (0, i.jsx)(i.Fragment, {
                 children: e.map((e) => {
@@ -84,10 +84,10 @@ function b(e) {
                     return (0, i.jsx)(
                         C.Z,
                         {
-                            guildId: A,
+                            guildId: Z,
                             triggerType: e,
                             rules: null !== (t = D[e]) && void 0 !== t ? t : [],
-                            initWithEdit: y === v.KsC.AUTOMOD_MENTION_SPAM && e === _.fX.MENTION_SPAM
+                            initWithEdit: y === I.KsC.AUTOMOD_MENTION_SPAM && e === _.fX.MENTION_SPAM
                         },
                         e
                     );
@@ -113,7 +113,7 @@ function b(e) {
                             (0, i.jsx)(a.Text, {
                                 variant: 'text-sm/medium',
                                 className: T.helpUrl,
-                                children: N.intl.format(N.t['B+sgGh'], { helpUrl: u.Z.getArticleURL(v.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
+                                children: N.intl.format(N.t['B+sgGh'], { helpUrl: u.Z.getArticleURL(I.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
                             })
                         ]
                     }),
@@ -181,10 +181,10 @@ function b(e) {
                     className: T.explicitContentFilterSection
                 }),
             (0, i.jsx)(f.Z, {
-                guildId: A,
-                existingRules: P
+                guildId: Z,
+                existingRules: k
             }),
-            Z && (0, i.jsx)('div', { className: T.endSpacer })
+            A && (0, i.jsx)('div', { className: T.endSpacer })
         ]
     });
 }

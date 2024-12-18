@@ -1,6 +1,6 @@
 n.d(t, {
     C: function () {
-        return W;
+        return V;
     },
     K: function () {
         return G;
@@ -24,9 +24,9 @@ var i,
     p = n(596454),
     f = n(471445),
     C = n(605436),
-    I = n(91218),
+    v = n(91218),
     _ = n(313201),
-    v = n(339085),
+    I = n(339085),
     N = n(518738),
     T = n(131704),
     b = n(324067),
@@ -35,18 +35,18 @@ var i,
     E = n(624138),
     R = n(817460),
     y = n(166803),
-    A = n(629262),
-    Z = n(686807),
+    Z = n(629262),
+    A = n(686807),
     L = n(981631),
     D = n(388032),
     O = n(846605);
-let P = (0, _.hQ)(),
-    k = (0, _.hQ)(),
+let k = (0, _.hQ)(),
+    P = (0, _.hQ)(),
     M = (0, E.Mg)(g.Z.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
 function w(e) {
     var t;
     let { emojiId: n, emojiName: i, className: r } = e,
-        s = (0, m.e7)([v.ZP], () => (null != n ? v.ZP.getCustomEmojiById(n) : void 0));
+        s = (0, m.e7)([I.ZP], () => (null != n ? I.ZP.getCustomEmojiById(n) : void 0));
     return (0, l.jsx)(p.Z, {
         emojiId: n,
         emojiName: i,
@@ -145,7 +145,7 @@ function U(e) {
                                       (0, l.jsx)(x.Text, {
                                           color: 'header-primary',
                                           variant: 'text-md/semibold',
-                                          children: (0, Z.Z)(e)
+                                          children: (0, A.Z)(e)
                                       }),
                                       (0, l.jsx)(x.Text, {
                                           color: 'interactive-normal',
@@ -167,12 +167,12 @@ function G(e) {
         c = n.role_benefits.benefits,
         [d, u] = s.useState(() => new Set(c)),
         m = s.useMemo(() => c.filter(R.rC), [c]),
-        g = (0, A.Z)(m),
+        g = (0, Z.Z)(m),
         p = s.useMemo(() => c.filter(R.lL), [c]),
         f = s.useMemo(() => new Set(g.filter((e) => i.some((t) => t.ref_id === e.ref_id))), [g, i]),
         C = s.useMemo(() => new Set(p.filter((e) => r.some((t) => (0, h.Z)(e, t)))), [r, p]),
-        I = (0, _.Dt)();
-    function v(e, t) {
+        v = (0, _.Dt)();
+    function I(e, t) {
         u((n) => {
             let i = new Set(n);
             return t ? i.add(e) : i.delete(e), i;
@@ -191,12 +191,12 @@ function G(e) {
         },
         children: (0, l.jsxs)(x.ModalRoot, {
             transitionState: t,
-            'aria-labelledby': I,
+            'aria-labelledby': v,
             children: [
                 (0, l.jsxs)(x.ModalHeader, {
                     children: [
                         (0, l.jsx)(x.Heading, {
-                            id: I,
+                            id: v,
                             variant: 'heading-md/semibold',
                             children: D.intl.format(D.t['7zpiYG'], { tierName: n.name })
                         }),
@@ -215,7 +215,7 @@ function G(e) {
                             benefits: g,
                             dupeBenefits: f,
                             selectedBenefits: d,
-                            onToggleBenefit: v
+                            onToggleBenefit: I
                         }),
                         (0, l.jsx)(U, {
                             title: D.intl.string(D.t.RdwKw8),
@@ -223,7 +223,7 @@ function G(e) {
                             benefits: p,
                             dupeBenefits: C,
                             selectedBenefits: d,
-                            onToggleBenefit: v
+                            onToggleBenefit: I
                         })
                     ]
                 }),
@@ -261,7 +261,7 @@ function F(e) {
                 className: O.rowIconWrapper,
                 children:
                     null != a
-                        ? (0, l.jsx)(I.Z, { ...a })
+                        ? (0, l.jsx)(v.Z, { ...a })
                         : (0, l.jsx)(x.ShieldUserIcon, {
                               size: 'custom',
                               width: 23,
@@ -358,7 +358,7 @@ function z(e) {
                   (0, l.jsxs)(x.ModalHeader, {
                       children: [
                           (0, l.jsx)(x.Heading, {
-                              id: P,
+                              id: k,
                               variant: 'heading-md/semibold',
                               children: D.intl.string(D.t['3JrZ/P'])
                           }),
@@ -378,7 +378,7 @@ function z(e) {
               ]
           });
 }
-function V(e) {
+function W(e) {
     let { onClose: t, guildId: n, role: i, onCancel: r, onImport: a } = e,
         o = s.useRef(i);
     null != i && (o.current = i);
@@ -414,7 +414,7 @@ function V(e) {
             (0, l.jsxs)(x.ModalHeader, {
                 children: [
                     (0, l.jsx)(x.Heading, {
-                        id: k,
+                        id: P,
                         variant: 'heading-md/semibold',
                         children: D.intl.format(D.t.iuPodH, { roleName: d.name })
                     }),
@@ -495,12 +495,12 @@ function V(e) {
         ]
     });
 }
-function W(e) {
+function V(e) {
     let { transitionState: t, guildId: n, onClose: i, onImport: r } = e,
         [a, o] = s.useState();
     return (0, l.jsx)(x.ModalRoot, {
         transitionState: t,
-        'aria-labelledby': null == a ? P : k,
+        'aria-labelledby': null == a ? k : P,
         children: (0, l.jsxs)(x.Slides, {
             contentDisplay: 'flex',
             activeSlide: null == a ? 0 : 1,
@@ -516,7 +516,7 @@ function W(e) {
                 }),
                 (0, l.jsx)(x.Slide, {
                     id: 1,
-                    children: (0, l.jsx)(V, {
+                    children: (0, l.jsx)(W, {
                         onClose: i,
                         guildId: n,
                         role: a,

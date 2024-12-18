@@ -36,18 +36,18 @@ let I = (e) => {
 };
 t.Z = (e) => {
     var t, n;
-    let { isFullscreen: r, className: S, buttonClassName: R, subscriptionTier: A, entrypoint: j, isDarkMode: P } = e,
+    let { isFullscreen: r, className: S, buttonClassName: R, subscriptionTier: j, entrypoint: A, isDarkMode: P } = e,
         { analyticsLocations: Z } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
         M = (0, m._O)(),
         B = (0, f.Ng)(),
         O = (0, f.Wp)(B, T.Si.TIER_2) ? T.Si.TIER_2 : void 0,
         w = (0, p.N)(),
-        k = (0, u.Nx)(),
-        y = (0, h.Vi)(),
+        y = (0, u.Nx)(),
+        k = (0, h.Vi)(),
         L = (0, s.e7)([d.Z], () => d.Z.affinities),
         U = (0, _.Z)(),
         { enabled: D } = g._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
-        H = j === T.EZ.ApplicationStoreHome && null != U && D,
+        H = A === T.EZ.ApplicationStoreHome && null != U && D,
         G = L.length > 0;
     return (0, i.jsx)(c.Gt, {
         value: Z,
@@ -57,7 +57,7 @@ t.Z = (e) => {
             children: (0, i.jsxs)('div', {
                 className: N.marketingPageV2TextContainer,
                 children: [
-                    k &&
+                    y &&
                         (0, i.jsx)(I, {
                             trialOffer: w,
                             discountOffer: B
@@ -82,7 +82,7 @@ t.Z = (e) => {
                                   isMarketingPageV2Enabled: !0
                               })
                           }),
-                    y || M
+                    k || M
                         ? (0, i.jsx)('div', {
                               className: a()(N.buttonContainer, N.marketingPageV2CTAContainer, { [N.marketingPageV2CTAMargin]: !(G || H) }),
                               children: (0, i.jsx)(x.Z, {
@@ -91,8 +91,8 @@ t.Z = (e) => {
                               })
                           })
                         : (0, i.jsx)(C.PK, {
-                              subscriptionTier: null !== (n = null != A ? A : null == w ? void 0 : null === (t = w.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : O,
-                              inOfferExperience: k,
+                              subscriptionTier: null !== (n = null != j ? j : null == w ? void 0 : null === (t = w.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : O,
+                              inOfferExperience: y,
                               containerClassName: a()(N.marketingPageV2CTAContainer, { [N.marketingPageV2CTAMargin]: !(G || H) }),
                               buttonClassName: R,
                               isMarketingPageV2Enabled: !0,

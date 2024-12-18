@@ -24,13 +24,13 @@ function x(e) {
             let t = s.default.getCurrentUser();
             return (null == e ? void 0 : e.isOwner(t)) === !0;
         }),
-        { error: C, loading: I, createEnableRequest: _, submittedRequest: v } = (0, c.Z)(null == e ? void 0 : e.id),
+        { error: C, loading: v, createEnableRequest: _, submittedRequest: I } = (0, c.Z)(null == e ? void 0 : e.id),
         { loading: N, error: T, refresh: b, eligibility: j } = (0, d.Z)(null == e ? void 0 : e.id),
         { isApplicationRejected: S, requestCooldownDuration: E } = (0, u.Z)(j),
         R = (null == e ? void 0 : e.hasFeature(h.oNc.CREATOR_MONETIZABLE_RESTRICTED)) === !0 || (null == e ? void 0 : e.hasFeature(h.oNc.CREATOR_MONETIZABLE_DISABLED)) === !0,
         { isMonetizationReapplicationDisabled: y } = (0, l.eC)(null == e ? void 0 : e.id),
-        A = v || (null == j ? void 0 : j.isApplicationPending) === !0,
-        Z = (null == j ? void 0 : j.canApply) === !0,
+        Z = I || (null == j ? void 0 : j.isApplicationPending) === !0,
+        A = (null == j ? void 0 : j.canApply) === !0,
         L = g.intl.format(g.t.aJUdOj, { faqUrl: a.Z.getArticleURL(h.BhN.CREATOR_FAQ) });
     S && y
         ? (t = !0 === x ? g.intl.format(g.t['0o1Q+v'], { communityGuidelineUrl: h.EYA.GUIDELINES }) : g.intl.format(g.t.b6h59v, { communityGuidelineUrl: h.EYA.GUIDELINES }))
@@ -42,31 +42,31 @@ function x(e) {
           }));
     let D = n && f && !1 === p,
         O = n && !1 === x,
-        P = (0, m.f)(),
-        k = S && Z && f ? g.intl.format(g.t.wbVIUF, {}) : void 0;
+        k = (0, m.f)(),
+        P = S && A && f ? g.intl.format(g.t.wbVIUF, {}) : void 0;
     return (
         i.useEffect(() => {
             D && b();
         }, [b, D]),
         {
-            resubmittingEnableRequest: I,
+            resubmittingEnableRequest: v,
             resubmissionError: C,
             isGuildOwner: f,
             createEnableRequest: _,
-            resubmittedRequest: v,
+            resubmittedRequest: I,
             eligibilityLoading: N,
             eligibilityError: T,
             refreshEligibility: b,
             eligibility: j,
-            eligibleForMonetization: Z,
-            isApplicationPending: A,
+            eligibleForMonetization: A,
+            isApplicationPending: Z,
             hasPreviousApplicationRejection: S,
             requestRejectedNoticeText: t,
-            reapplyNoticeText: k,
+            reapplyNoticeText: P,
             showAcceptTermsFlow: O,
             wasRejectedInV1: O && (R || S),
             requirementsFinePrintText: L,
-            acceptTermsCheckboxText: P
+            acceptTermsCheckboxText: k
         }
     );
 }

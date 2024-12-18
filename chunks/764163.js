@@ -23,9 +23,9 @@ var i = n(200651),
     p = n(984933),
     f = n(691886),
     C = n(185923),
-    I = n(388032),
+    v = n(388032),
     _ = n(575769);
-function v(e) {
+function I(e) {
     let { guildId: t, emojiData: n, 'aria-labelledby': l, onSelectEmoji: s } = e,
         d = (0, a.e7)([g.ZP], () => (null != n.id ? g.ZP.getCustomEmojiById(n.id) : void 0)),
         u = (0, a.e7)([p.ZP], () => p.ZP.getDefaultChannel(t)),
@@ -56,7 +56,7 @@ function v(e) {
             },
             [s, u]
         ),
-        v = r.useMemo(
+        I = r.useMemo(
             () =>
                 null == d && null == n.name
                     ? null
@@ -87,11 +87,11 @@ function v(e) {
                             className: _.emojiButton,
                             active: n,
                             tabIndex: 0,
-                            renderButtonContents: v
+                            renderButtonContents: I
                         }),
                         (0, i.jsx)(o.TextInput, {
                             inputClassName: _.emojiText,
-                            placeholder: I.intl.string(I.t.qJPLNT),
+                            placeholder: v.intl.string(v.t.qJPLNT),
                             value: N,
                             'aria-labelledby': l,
                             readOnly: !0
@@ -134,7 +134,7 @@ function N(e) {
                         (0, i.jsx)(o.Heading, {
                             id: p,
                             variant: 'heading-md/semibold',
-                            children: I.intl.string(I.t['2qf9EB'])
+                            children: v.intl.string(v.t['2qf9EB'])
                         }),
                         (0, i.jsx)(o.ModalCloseButton, {
                             className: _.closeButton,
@@ -148,7 +148,7 @@ function N(e) {
                         s,
                         (0, i.jsx)(o.Spacer, { size: 24 }),
                         (0, i.jsx)(o.FormSection, {
-                            title: I.intl.string(I.t['1Ts7QE']),
+                            title: v.intl.string(v.t['1Ts7QE']),
                             titleId: f,
                             children: (0, i.jsx)(o.TextArea, {
                                 placeholder: a,
@@ -161,9 +161,9 @@ function N(e) {
                         }),
                         (0, i.jsx)(o.Spacer, { size: 24 }),
                         (0, i.jsx)(o.FormSection, {
-                            title: I.intl.string(I.t.sMOuub),
+                            title: v.intl.string(v.t.sMOuub),
                             titleId: C,
-                            children: (0, i.jsx)(v, {
+                            children: (0, i.jsx)(I, {
                                 guildId: n,
                                 emojiData: b,
                                 onSelectEmoji: j,
@@ -181,7 +181,7 @@ function N(e) {
                                 (0, i.jsx)(o.Button, {
                                     type: 'submit',
                                     disabled: !S,
-                                    children: null == l ? I.intl.string(I.t.OYkgVl) : I.intl.string(I.t.R3BPHx)
+                                    children: null == l ? v.intl.string(v.t.OYkgVl) : v.intl.string(v.t.R3BPHx)
                                 }),
                                 null != h &&
                                     (0, i.jsx)(o.Button, {
@@ -194,7 +194,7 @@ function N(e) {
                                         children: (0, i.jsx)(o.TrashIcon, {
                                             size: 'md',
                                             color: 'currentColor',
-                                            'aria-label': I.intl.string(I.t.oyYWHB)
+                                            'aria-label': v.intl.string(v.t.oyYWHB)
                                         })
                                     })
                             ]
@@ -204,7 +204,7 @@ function N(e) {
                             color: o.Button.Colors.PRIMARY,
                             className: _.cancelButton,
                             onClick: x,
-                            children: I.intl.string(I.t['ETE/oK'])
+                            children: v.intl.string(v.t['ETE/oK'])
                         })
                     ]
                 })
@@ -220,11 +220,11 @@ function T(e) {
             children: [
                 (0, i.jsx)(o.HelpMessage, {
                     messageType: o.HelpMessageTypes.WARNING,
-                    children: I.intl.string(I.t.xunxCg)
+                    children: v.intl.string(v.t.xunxCg)
                 }),
                 (0, i.jsx)(o.Spacer, { size: 24 }),
                 (0, i.jsx)(o.FormSection, {
-                    title: I.intl.string(I.t.GK18KC),
+                    title: v.intl.string(v.t.GK18KC),
                     titleId: x,
                     children: (0, i.jsx)(f.Z, {
                         guildId: t,
@@ -243,7 +243,7 @@ function T(e) {
         guildId: t,
         initialData: l,
         benefitTypeInput: p,
-        descriptionPlaceholder: I.intl.string(I.t.J8O1Li),
+        descriptionPlaceholder: v.intl.string(v.t.J8O1Li),
         canSubmit: null != h,
         onSave: function (e) {
             s()(null != h, 'Cannot submit null channel'),
@@ -263,10 +263,10 @@ function b(e) {
         [h, g] = r.useState(null !== (t = null == n ? void 0 : n.name) && void 0 !== t ? t : ''),
         x = (0, u.Dt)(),
         p = (0, i.jsx)(o.FormSection, {
-            title: I.intl.string(I.t.NPOJra),
+            title: v.intl.string(v.t.NPOJra),
             titleId: x,
             children: (0, i.jsx)(o.TextArea, {
-                placeholder: I.intl.string(I.t.NPOJra),
+                placeholder: v.intl.string(v.t.NPOJra),
                 value: h,
                 rows: 1,
                 onChange: function (e) {
@@ -279,7 +279,7 @@ function b(e) {
         guildId: m,
         initialData: n,
         benefitTypeInput: p,
-        descriptionPlaceholder: I.intl.string(I.t.ucP4Tk),
+        descriptionPlaceholder: v.intl.string(v.t.ucP4Tk),
         canSubmit: '' !== h,
         onSave: function (e) {
             s()('' !== h, 'Cannot submit empty name'),

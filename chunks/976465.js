@@ -3,13 +3,13 @@ n.d(t, {
         return w;
     },
     V6: function () {
-        return k;
+        return y;
     },
     f9: function () {
         return P;
     },
     g_: function () {
-        return A;
+        return j;
     },
     kG: function () {
         return S;
@@ -18,7 +18,7 @@ n.d(t, {
         return M;
     },
     x$: function () {
-        return y;
+        return k;
     }
 }),
     n(724458),
@@ -75,7 +75,7 @@ let S = () => {
             return r >= i ? n : e;
         }, null);
     },
-    A = (e) => {
+    j = (e) => {
         switch (e) {
             case _.VU.PREMIUM_TENURE_1_MONTH:
                 return E;
@@ -97,7 +97,7 @@ let S = () => {
                 return;
         }
     },
-    j = () => A(S()),
+    A = () => j(S()),
     P = (e) => {
         switch (e) {
             case _.VU.PREMIUM_TENURE_1_MONTH:
@@ -146,18 +146,18 @@ let S = () => {
     },
     w = () => ({
         badge: S(),
-        image: j(),
+        image: A(),
         name: Z(),
         earnedOnDate: O(),
         tenureRequirement: B()
     }),
-    k = () => {
+    y = () => {
         let e = R(),
             { enabled: t } = (0, p.Z)(!0),
             [n] = (0, c.US)(t && null != e ? [l.z.WHATS_NEW_TENURE_BADGE_REWARD] : []);
         return n === l.z.WHATS_NEW_TENURE_BADGE_REWARD ? h.intl.string(h.t.jyYgZ2).toLocaleUpperCase() : null;
     },
-    y = () => {
+    k = () => {
         let e = R(),
             { enabled: t } = (0, p.Z)(),
             [n] = (0, c.US)(t && null != e ? [l.z.WHATS_NEW_TENURE_BADGE_REWARD] : []);

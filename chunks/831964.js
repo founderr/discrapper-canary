@@ -31,8 +31,8 @@ var i,
     I = n(751125),
     S = n(904505),
     R = n(712626),
-    A = n(386014),
-    j = n(845571),
+    j = n(386014),
+    A = n(845571),
     P = n(220046),
     Z = n(385874),
     M = n(371000),
@@ -82,14 +82,14 @@ t.ZP = (e) => {
                 descriptionCta: g.intl.string(g.t.jVcuVV),
                 onClick: n,
                 previewImage: b,
-                videoUrl: r ? j.Z : P.Z
+                videoUrl: r ? A.Z : P.Z
             },
             referralProgram: {
                 name: 'referralProgram',
                 title: g.intl.string(g.t.tPY4o6),
                 description: g.intl.format(g.t.jRPQUF, { learnMoreLink: f }),
                 previewImage: R.Z,
-                videoUrl: r ? S.Z : A.Z
+                videoUrl: r ? S.Z : j.Z
             },
             newAppStyles: {
                 name: 'newAppStyles',

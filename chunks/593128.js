@@ -15,9 +15,9 @@ var i = n(200651),
     p = n(389134),
     f = n(35313),
     C = n(94963),
-    I = n(745628),
+    v = n(745628),
     _ = n(950279),
-    v = n(796918),
+    I = n(796918),
     N = n(513532),
     T = n(741595),
     b = n(974842),
@@ -26,8 +26,8 @@ var i = n(200651),
     E = n(981631),
     R = n(231338),
     y = n(388032),
-    A = n(131800);
-let Z = (e) => [
+    Z = n(131800);
+let A = (e) => [
         {
             section: m.ID.HEADER,
             label: y.intl.string(y.t['7r0U+/'])
@@ -102,7 +102,7 @@ let Z = (e) => [
             };
         return (0, i.jsxs)(o.TabBar.Item, {
             selectedItem: !1,
-            className: A.deleteItem,
+            className: Z.deleteItem,
             'aria-label': y.intl.string(y.t.vc5h39),
             onClick: () => {
                 if (s) {
@@ -130,7 +130,7 @@ let Z = (e) => [
                 (0, i.jsx)(o.TrashIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: A.statusDanger
+                    className: Z.statusDanger
                 }),
                 (0, i.jsx)(o.Text, {
                     variant: 'text-md/medium',
@@ -146,12 +146,12 @@ let Z = (e) => [
             r = (0, o.useToken)(o.tokens.colors.TEXT_MUTED, R.BR.DARK);
         return t
             ? (0, i.jsxs)('div', {
-                  className: A.tooltipContents,
+                  className: Z.tooltipContents,
                   children: [
                       (0, i.jsx)(o.WarningIcon, {
                           size: 'xs',
                           color: 'currentColor',
-                          className: A.errorIconTooltip
+                          className: Z.errorIconTooltip
                       }),
                       (0, i.jsxs)('div', {
                           children: [
@@ -176,8 +176,8 @@ t.Z = (e) => {
         [R, L] = r.useState(S.Wy.GAMES),
         {
             initialSettings: O,
-            settings: P,
-            errors: k,
+            settings: k,
+            errors: P,
             submitting: M,
             dirty: w
         } = (0, s.cj)([p.Z], () => {
@@ -225,23 +225,23 @@ t.Z = (e) => {
     let F = r.useCallback((e) => (0, g.mf)(t, { gameApplicationIds: e }), [t]),
         H = r.useCallback((e) => (0, g.mf)(t, { playstyle: e }), [t]),
         z = r.useCallback((e) => (0, g.mf)(t, { interests: e }), [t]),
-        V = r.useCallback((e) => (0, g.mf)(t, e), [t]),
-        W = r.useCallback(() => {
+        W = r.useCallback((e) => (0, g.mf)(t, e), [t]),
+        V = r.useCallback(() => {
             w ? h.S.dispatch(E.CkL.EMPHASIZE_NOTICE) : n();
         }, [w, n]),
         Y = async () => {
-            await (0, g.Ii)(t, P), (0, x.Af)(t);
+            await (0, g.Ii)(t, k), (0, x.Af)(t);
         },
-        K = r.useMemo(() => null != k && Object.values(k).some((e) => null != e), [k]);
-    if (null == P) return null;
-    let q = Z(k);
+        K = r.useMemo(() => null != P && Object.values(P).some((e) => null != e), [P]);
+    if (null == k) return null;
+    let q = A(P);
     return (0, i.jsxs)(l.animated.div, {
         style: U,
-        className: A.modal,
+        className: Z.modal,
         children: [
             (0, i.jsx)(o.Tooltip, {
                 color: o.Tooltip.Colors.GREY,
-                tooltipClassName: A.tooltip,
+                tooltipClassName: Z.tooltip,
                 text: (0, i.jsx)(D, { isErrorVisible: K }),
                 position: 'left',
                 'aria-label': null != K ? y.intl.string(y.t.M6w76e) : void 0,
@@ -250,18 +250,18 @@ t.Z = (e) => {
                 children: (e) =>
                     (0, i.jsx)(d.Z, {
                         ...e,
-                        className: A.closeButton,
-                        closeAction: W,
+                        className: Z.closeButton,
+                        closeAction: V,
                         keybind: 'ESC'
                     })
             }),
             (0, i.jsxs)('div', {
-                className: A.modalContents,
+                className: Z.modalContents,
                 children: [
                     (0, i.jsx)('div', {
-                        className: A.sidebarWrapper,
+                        className: Z.sidebarWrapper,
                         children: (0, i.jsx)(o.TabBar, {
-                            className: A.sidebar,
+                            className: Z.sidebar,
                             selectedItem: R,
                             onItemSelect: B,
                             orientation: 'vertical',
@@ -286,7 +286,7 @@ t.Z = (e) => {
                                         return (0, i.jsx)(
                                             o.TabBar.Item,
                                             {
-                                                className: A.settingsTab,
+                                                className: Z.settingsTab,
                                                 'aria-label': e.label,
                                                 id: e.section,
                                                 children: (0, i.jsxs)(i.Fragment, {
@@ -302,7 +302,7 @@ t.Z = (e) => {
                                                                         size: 'xs',
                                                                         color: 'currentColor',
                                                                         ...e,
-                                                                        className: A.errorIcon
+                                                                        className: Z.errorIcon
                                                                     })
                                                             })
                                                     ]
@@ -315,7 +315,7 @@ t.Z = (e) => {
                         })
                     }),
                     (0, i.jsxs)('div', {
-                        className: A.mainContent,
+                        className: Z.mainContent,
                         children: [
                             (0, i.jsx)(o.ScrollerThin, {
                                 children: (() => {
@@ -326,8 +326,8 @@ t.Z = (e) => {
                                                 title: y.intl.string(y.t.t6Mbq6),
                                                 description: y.intl.string(y.t.E7Ymwc),
                                                 onUpdateGames: F,
-                                                gameApplicationIds: null !== (e = P.gameApplicationIds) && void 0 !== e ? e : new Set(),
-                                                error: k.gameApplicationIds,
+                                                gameApplicationIds: null !== (e = k.gameApplicationIds) && void 0 !== e ? e : new Set(),
+                                                error: P.gameApplicationIds,
                                                 guildId: t,
                                                 includeSuggestedGames: !0
                                             });
@@ -336,8 +336,8 @@ t.Z = (e) => {
                                                 title: y.intl.string(y.t.W0h7pa),
                                                 description: y.intl.string(y.t.JHYekZ),
                                                 onUpdatePlaystyle: H,
-                                                playstyle: P.playstyle,
-                                                error: k.playstyle
+                                                playstyle: k.playstyle,
+                                                error: P.playstyle
                                             });
                                         case S.Wy.UTILITY_TRAITS:
                                             return (0, i.jsx)(j.Z, {
@@ -345,30 +345,30 @@ t.Z = (e) => {
                                                 title: y.intl.string(y.t.G4tP09),
                                                 description: y.intl.string(y.t['6Eos19']),
                                                 onUpdateTraits: z,
-                                                progress: P
+                                                progress: k
                                             });
                                         case S.Wy.INTERESTS:
-                                            return (0, i.jsx)(v.Z, {
-                                                guildId: t,
-                                                handleUpdate: V,
-                                                progress: P,
-                                                error: k.interests
-                                            });
-                                        case S.Wy.DESCRIPTION:
                                             return (0, i.jsx)(I.Z, {
                                                 guildId: t,
-                                                handleUpdate: V,
-                                                progress: P,
-                                                errors: k
+                                                handleUpdate: W,
+                                                progress: k,
+                                                error: P.interests
+                                            });
+                                        case S.Wy.DESCRIPTION:
+                                            return (0, i.jsx)(v.Z, {
+                                                guildId: t,
+                                                handleUpdate: W,
+                                                progress: k,
+                                                errors: P
                                             });
                                         case S.Wy.CUSTOMIZE_TAG_BADGE:
                                             return (0, i.jsx)(b.Z, {
-                                                handleUpdate: V,
-                                                tag: P.tag,
-                                                error: k.tag,
-                                                badge: P.badgeKind,
-                                                primaryColor: P.badgePrimaryColor,
-                                                secondaryColor: P.badgeSecondaryColor,
+                                                handleUpdate: W,
+                                                tag: k.tag,
+                                                error: P.tag,
+                                                badge: k.badgeKind,
+                                                primaryColor: k.badgePrimaryColor,
+                                                secondaryColor: k.badgeSecondaryColor,
                                                 furthestStep: S.Wy.CUSTOMIZE_TAG_BADGE,
                                                 inSettings: !0
                                             });
@@ -376,13 +376,13 @@ t.Z = (e) => {
                                             return (0, i.jsx)(N.Z, {
                                                 guildId: t,
                                                 inSettings: !0,
-                                                error: k.verificationForm
+                                                error: P.verificationForm
                                             });
                                         case S.Wy.CUSTOMIZE_BANNER:
                                             return (0, i.jsx)(C.Z, {
                                                 guildId: t,
-                                                handleUpdate: V,
-                                                progress: P
+                                                handleUpdate: W,
+                                                progress: k
                                             });
                                         default:
                                             return null;
@@ -394,14 +394,14 @@ t.Z = (e) => {
                                 children:
                                     w &&
                                     (0, i.jsx)(o.SlideIn, {
-                                        className: A.noticeRegion,
+                                        className: Z.noticeRegion,
                                         children: (0, i.jsx)(u.Z, {
                                             onSave: Y,
                                             submitting: M,
                                             onReset: () => {
                                                 (0, g.mf)(t, O);
                                             },
-                                            errorMessage: Object.values(k).find((e) => null != e)
+                                            errorMessage: Object.values(P).find((e) => null != e)
                                         })
                                     })
                             })

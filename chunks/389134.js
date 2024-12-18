@@ -31,17 +31,17 @@ let C = () => ({
         brandPrimaryColor: p.ym['0'].primary,
         brandSecondaryColor: p.ym['0'].secondary
     }),
-    I = C(),
-    _ = d()(I),
-    v = !1,
+    v = C(),
+    _ = d()(v),
+    I = !1,
     N = !1,
     T = {};
 class b extends (i = u.ZP.Store) {
     getState() {
         return {
-            initialSettings: I,
+            initialSettings: v,
             settings: _,
-            dirty: v,
+            dirty: I,
             errors: T,
             submitting: N
         };
@@ -58,16 +58,16 @@ class b extends (i = u.ZP.Store) {
         : (r[l] = s),
     (t.Z = new b(m.Z, {
         CLAN_SETTINGS_FETCH_START: function () {
-            (N = !1), (I = C()), (_ = d()(I)), (v = !1), (T = {});
+            (N = !1), (v = C()), (_ = d()(v)), (I = !1), (T = {});
         },
         CLAN_SETTINGS_FETCH_SUCCESS: function (e) {
             let { settings: t } = e;
-            (I = {
+            (v = {
                 ...C(),
                 ...t
             }),
-                ((_ = d()(I)).gameApplicationIds = f(_.gameApplicationIds)),
-                (v = !1);
+                ((_ = d()(v)).gameApplicationIds = f(_.gameApplicationIds)),
+                (I = !1);
         },
         CLAN_SETTINGS_UPDATE: function (e) {
             let { updates: t } = e,
@@ -79,13 +79,13 @@ class b extends (i = u.ZP.Store) {
             }),
             t))
                 delete T[e], (T = { ...T });
-            v = !o().isEqual(o().omit(_, 'verificationForm'), o().omit(I, 'verificationForm'));
+            I = !o().isEqual(o().omit(_, 'verificationForm'), o().omit(v, 'verificationForm'));
         },
         CLAN_SETTINGS_SUBMIT: function () {
             (N = !0), (T = {});
         },
         CLAN_SETTINGS_SUBMIT_SUCCESS: function () {
-            (N = !1), (I = d()(_)), (v = !1), (T = {});
+            (N = !1), (v = d()(_)), (I = !1), (T = {});
         },
         CLAN_SETTINGS_SUBMIT_ERROR: function (e) {
             let { error: t } = e;
@@ -114,7 +114,7 @@ class b extends (i = u.ZP.Store) {
                 n)
             ) {
                 var i;
-                v = !o().isEqual(_.verificationForm.formFields, null === (i = I.verificationForm) || void 0 === i ? void 0 : i.formFields);
-            } else v = !1;
+                I = !o().isEqual(_.verificationForm.formFields, null === (i = v.verificationForm) || void 0 === i ? void 0 : i.formFields);
+            } else I = !1;
         }
     }));

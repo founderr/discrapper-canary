@@ -20,9 +20,9 @@ var i = n(200651),
     p = n(753206),
     f = n(598077),
     C = n(496675),
-    I = n(764260),
+    v = n(764260),
     _ = n(95242),
-    v = n(541575),
+    I = n(541575),
     N = n(420966),
     T = n(337344),
     b = n(275296),
@@ -31,13 +31,13 @@ var i = n(200651),
     E = n(388032),
     R = n(837349),
     y = n(490909),
-    A = n(179517),
-    Z = n(79829);
+    Z = n(179517),
+    A = n(79829);
 let L = (0, m.Un)({
         createPromise: () => n.e('5609').then(n.bind(n, 336231)),
         webpackId: 336231
     }),
-    D = o().debounce((e, t) => (0, I.Uv)(e, t), 200);
+    D = o().debounce((e, t) => (0, v.Uv)(e, t), 200);
 function O(e) {
     let { role: t, disabled: n } = e,
         [l, s] = r.useState(t.name);
@@ -60,7 +60,7 @@ function O(e) {
         })
     );
 }
-function P(e) {
+function k(e) {
     let { role: t, disabled: n } = e;
     return (0, i.jsxs)(d.FormItem, {
         className: R.colorPicker,
@@ -80,7 +80,7 @@ function P(e) {
                     disabled: n,
                     onChange: (e) =>
                         (function (e, t) {
-                            if (e.color !== t && (t !== S.p6O || 0 !== e.color)) t === S.p6O && (t = 0), (0, I.OW)(e.id, t);
+                            if (e.color !== t && (t !== S.p6O || 0 !== e.color)) t === S.p6O && (t = 0), (0, v.OW)(e.id, t);
                         })(t, e),
                     customPickerPosition: 'right'
                 },
@@ -89,7 +89,7 @@ function P(e) {
         ]
     });
 }
-function k(e) {
+function P(e) {
     var t, l;
     let { role: s, guildId: a } = e;
     let o =
@@ -119,11 +119,11 @@ function k(e) {
             colorString: null !== (t = s.colorString) && void 0 !== t ? t : void 0
         },
         u = {
-            src: A,
+            src: Z,
             name: s.name
         },
         m = {
-            src: Z,
+            src: A,
             name: s.name
         },
         C = (0, h.oC)(a, s);
@@ -176,7 +176,7 @@ function M(e) {
             (0, i.jsx)(d.FormSwitch, {
                 disabled: n,
                 value: t.hoist,
-                onChange: (e) => (0, I.we)(t.id, e, t.mentionable),
+                onChange: (e) => (0, v.we)(t.id, e, t.mentionable),
                 hideBorder: !0,
                 children: E.intl.string(E.t.vceJPj)
             }),
@@ -184,7 +184,7 @@ function M(e) {
             (0, i.jsx)(d.FormSwitch, {
                 disabled: n,
                 value: t.mentionable,
-                onChange: (e) => (0, I.we)(t.id, t.hoist, e),
+                onChange: (e) => (0, v.we)(t.id, t.hoist, e),
                 note: E.intl.string(E.t.kRg5W1),
                 hideBorder: !0,
                 children: E.intl.format(E.t.DTXoJS, {})
@@ -225,16 +225,16 @@ function w(e) {
                     children: (0, i.jsx)(b.Z, { role: n })
                 }),
                 (0, i.jsx)(d.FormDivider, { className: R.divider }),
-                (0, i.jsx)(P, {
+                (0, i.jsx)(k, {
                     role: n,
                     disabled: o
                 }),
-                (0, i.jsx)(v.Z, {
+                (0, i.jsx)(I.Z, {
                     guild: t,
                     disabled: o,
                     role: n
                 }),
-                (0, i.jsx)(k, {
+                (0, i.jsx)(P, {
                     role: n,
                     guildId: t.id
                 }),

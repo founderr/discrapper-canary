@@ -91,11 +91,11 @@ let v = o()((e) => {
             _ = s.previewingVariantIndex,
             k = null === (t = a.variants) || void 0 === t ? void 0 : t[x],
             I = null !== _ ? (null === (n = a.variants) || void 0 === n ? void 0 : n[_]) : void 0,
-            E = (0, h.Z)('shop-variants-group-'.concat(a.storeListingId), d.hy.HORIZONTAL);
+            S = (0, h.Z)('shop-variants-group-'.concat(a.storeListingId), d.hy.HORIZONTAL);
         if (null == k) return null;
-        let S = null != I ? I.variantLabel : null == k ? void 0 : k.variantLabel;
+        let j = null != I ? I.variantLabel : null == k ? void 0 : k.variantLabel;
         return (0, r.jsx)(c.bG, {
-            navigator: E,
+            navigator: S,
             children: (0, r.jsx)(c.SJ, {
                 children: (e) => {
                     var t;
@@ -137,7 +137,7 @@ let v = o()((e) => {
                                 variant: 'text-xs/medium',
                                 color: 'text-secondary',
                                 className: C.variantLabel,
-                                children: u ? f.intl.string(f.t.wbgaj4) : S
+                                children: u ? f.intl.string(f.t.wbgaj4) : j
                             })
                         ]
                     });

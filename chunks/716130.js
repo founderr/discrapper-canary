@@ -20,16 +20,16 @@ var i = n(200651),
     p = n(290511),
     f = n(388032),
     C = n(554205);
-function I(e) {
+function v(e) {
     let { guild: t, prejoinOnly: n, postjoinOnly: l } = e,
         c = (0, a.e7)([g.Z], () => g.Z.editedOnboardingPrompts),
         u = c.filter((e) => e.inOnboarding),
         m = u.length,
         {
             drag: x,
-            drop: I,
+            drop: v,
             dragSourcePosition: _,
-            setIsDraggable: v
+            setIsDraggable: I
         } = (0, d.Z)({
             type: 'ONBOARDING_PROMPT_CARD',
             index: m,
@@ -41,11 +41,11 @@ function I(e) {
         N = r.useRef(null);
     return (
         r.useEffect(() => {
-            v(!1);
-        }, [v]),
+            I(!1);
+        }, [I]),
         r.useEffect(() => {
-            x(I(N));
-        }, [x, I, N]),
+            x(v(N));
+        }, [x, v, N]),
         (0, i.jsxs)('div', {
             ref: N,
             className: s()(C.separatorSection, {
@@ -98,10 +98,10 @@ function _(e) {
     let { guildId: t, prejoinOnly: n, postjoinOnly: r, includeCount: l, singleColumn: s } = e,
         d = (0, a.e7)([m.Z], () => m.Z.getGuild(t)),
         _ = (0, a.e7)([g.Z], () => g.Z.editedOnboardingPrompts),
-        v = _.filter((e) => e.inOnboarding),
+        I = _.filter((e) => e.inOnboarding),
         N = _.filter((e) => !0 !== e.inOnboarding),
         T = [
-            ...v.map((e) => ({
+            ...I.map((e) => ({
                 id: e.id,
                 data: e
             })),
@@ -162,7 +162,7 @@ function _(e) {
                                               })
                                           ]
                                       }),
-                                v.map((e, t) =>
+                                I.map((e, t) =>
                                     (0, i.jsx)(
                                         x.Z,
                                         {
@@ -182,7 +182,7 @@ function _(e) {
                                 )
                             ]
                         }),
-                  (0, i.jsx)(I, {
+                  (0, i.jsx)(v, {
                       guild: d,
                       prejoinOnly: n,
                       postjoinOnly: r
@@ -197,8 +197,8 @@ function _(e) {
                                         {
                                             guild: d,
                                             prompt: e,
-                                            promptIndex: t + v.length,
-                                            dragIndex: t + v.length + 1,
+                                            promptIndex: t + I.length,
+                                            dragIndex: t + I.length + 1,
                                             onPromptDragStart: b,
                                             onPromptDragReset: j,
                                             onPromptDragComplete: S

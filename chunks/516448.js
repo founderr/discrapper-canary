@@ -20,11 +20,11 @@ var i = n(200651),
     p = n(574085),
     f = n(293810),
     C = n(388032),
-    I = n(83701);
+    v = n(83701);
 function _(e) {
     let { allSubscriptionListings: t } = e,
         { editStateId: n, guildId: _ } = (0, o.N)(),
-        [v, N] = c.UE(n),
+        [I, N] = c.UE(n),
         [T, b] = c.R7(n),
         j = r.useMemo(() => t.filter((e) => e.id !== n), [t, n]),
         { isFullServerGating: S } = (0, d.Z)(_),
@@ -40,12 +40,12 @@ function _(e) {
                 children: [
                     (0, i.jsx)(l.FormText, {
                         type: l.FormText.Types.DESCRIPTION,
-                        className: I.formDescription,
+                        className: v.formDescription,
                         disabled: R,
                         children: C.intl.string(C.t.kHalVF)
                     }),
                     (0, i.jsx)(m.Z, {
-                        channelBenefits: v,
+                        channelBenefits: I,
                         intangibleBenefits: T,
                         subscriptionListings: j,
                         onImport: function (e, t) {
@@ -86,7 +86,7 @@ function _(e) {
                 children: [
                     (0, i.jsx)(l.FormText, {
                         type: l.FormText.Types.DESCRIPTION,
-                        className: I.formDescription,
+                        className: v.formDescription,
                         disabled: R,
                         children: C.intl.string(C.t['5a4Axc'])
                     }),
@@ -110,7 +110,7 @@ function _(e) {
                 children: [
                     (0, i.jsx)(l.FormText, {
                         type: l.FormText.Types.DESCRIPTION,
-                        className: I.formDescription,
+                        className: v.formDescription,
                         disabled: R,
                         children: C.intl.string(C.t.zAww7e)
                     }),

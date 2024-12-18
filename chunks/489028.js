@@ -15,9 +15,9 @@ var i = n(200651),
     p = n(626135),
     f = n(584825),
     C = n(723047),
-    I = n(416867),
+    v = n(416867),
     _ = n(903773),
-    v = n(215124),
+    I = n(215124),
     N = n(326578),
     T = n(981631),
     b = n(674563),
@@ -54,7 +54,7 @@ function y(e) {
         p = async () => {
             (await d(t, a, b.wW.GUILD_ROLE_SUBSCRIPTIONS)) &&
                 (h(t.id),
-                (0, I.B)({
+                (0, v.B)({
                     Icon: N.Z,
                     title: S.intl.string(S.t['AP/2qa']),
                     body: S.intl.string(S.t.kHMgaG)
@@ -98,35 +98,35 @@ t.Z = (e) => {
         c = t.isOwner(n),
         f = (0, o.Ob)(t),
         C = (0, l.e7)([x.Z], () => x.Z.isFocused()),
-        { teams: I, loading: N } = (0, h.Z)({ refreshOnDepChange: C }),
+        { teams: v, loading: N } = (0, h.Z)({ refreshOnDepChange: C }),
         b = r.useMemo(
             () =>
-                I.filter((e) => {
+                v.filter((e) => {
                     var t;
                     return e.payout_account_status !== j.C.BLOCKED && (0, m.Z)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : T.lds, e);
                 }),
-            [I, n]
+            [v, n]
         ),
-        A = b.length > 0,
-        Z = r.useCallback(async () => {
+        Z = b.length > 0,
+        A = r.useCallback(async () => {
             p.default.track(T.rMx.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
                 is_onboarding_v2: f,
-                has_eligible_team: A,
+                has_eligible_team: Z,
                 guild_id: t.id,
                 is_owner: c
             });
             let e = await (0, d.$)(T.E07.DEVELOPER_PORTAL_TEAMS);
             (0, a.Z)(e);
-        }, [t, c, f, A]),
+        }, [t, c, f, Z]),
         L = r.useCallback(
             (e) =>
                 c
                     ? (0, i.jsx)(u.Z, {
-                          onClick: Z,
+                          onClick: A,
                           children: e
                       })
                     : e,
-            [Z, c]
+            [A, c]
         );
     return N
         ? (0, i.jsx)(s.Spinner, {})
@@ -147,14 +147,14 @@ t.Z = (e) => {
                               disabled: !c,
                               children: S.intl.format(S.t['5mfqpa'], { onCreateTeamHook: L })
                           }),
-                          A
+                          Z
                               ? (0, i.jsx)(y, {
                                     guild: t,
                                     eligibleTeams: b,
                                     isGuildOwner: c
                                 })
                               : (0, i.jsx)(R, {
-                                    onCreateTeamClick: Z,
+                                    onCreateTeamClick: A,
                                     isGuildOwner: c
                                 })
                       ]
@@ -162,7 +162,7 @@ t.Z = (e) => {
                   (0, i.jsx)(s.FormSection, {
                       title: S.intl.string(S.t['0n7R2d']),
                       className: E.selfDemonetization,
-                      children: (0, i.jsx)(v.Z, {
+                      children: (0, i.jsx)(I.Z, {
                           guildId: t.id,
                           allPeriods: []
                       })

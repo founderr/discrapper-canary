@@ -25,7 +25,7 @@ function p() {
             return null === (e = g.Z.getProps().guild) || void 0 === e ? void 0 : e.id;
         }),
         C = (0, l.e7)([m.Z], () => m.Z.pendingState),
-        I = r.useCallback(() => {
+        v = r.useCallback(() => {
             p(null), u.Z.reset();
         }, []),
         _ = r.useCallback(async (e) => {
@@ -37,7 +37,7 @@ function p() {
                 t(!1);
             }
         }, []),
-        v = r.useCallback(() => {
+        I = r.useCallback(() => {
             if (null != f && null != C) {
                 if (C.joinType === h.A.INVITE) {
                     let { requireTerms: e, termRules: t = [] } = C,
@@ -76,7 +76,7 @@ function p() {
     return (0, i.jsx)(s.Z, {
         submitting: e,
         errorMessage: n,
-        onReset: I,
-        onSave: v
+        onReset: v,
+        onSave: I
     });
 }

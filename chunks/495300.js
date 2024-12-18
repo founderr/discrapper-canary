@@ -19,9 +19,9 @@ var i = n(200651),
     p = n(208665),
     f = n(359191),
     C = n(84658),
-    I = n(142961),
+    v = n(142961),
     _ = n(729311),
-    v = n(850864),
+    I = n(850864),
     N = n(729995),
     T = n(966301),
     b = n(707076),
@@ -40,7 +40,7 @@ function y(e) {
             let e = (0, C.lg)(l);
             return null != e && !f.Z.isEducationUpsellDismissed(e);
         }),
-        p = (0, I.Z)(n),
+        p = (0, v.Z)(n),
         R = !p && m;
     switch (
         (r.useEffect(() => {
@@ -66,7 +66,7 @@ function y(e) {
             t = (0, i.jsx)(T.ZP, { saveOnClose: !p });
             break;
         case C.PG.HOME_SETTINGS:
-            t = (0, i.jsx)(v.Z, { saveOnClose: !p });
+            t = (0, i.jsx)(I.Z, { saveOnClose: !p });
             break;
         case C.PG.REVIEW:
             t = (0, i.jsx)(N.Z, {
@@ -79,7 +79,7 @@ function y(e) {
         children: [
             !p &&
                 l !== C.PG.LANDING &&
-                (0, i.jsx)(A, {
+                (0, i.jsx)(Z, {
                     setOnboardingStep: g.$K,
                     page: l,
                     homeSettingsEnabled: !0
@@ -111,7 +111,7 @@ function y(e) {
         ]
     });
 }
-function A(e) {
+function Z(e) {
     let { page: t, setOnboardingStep: n, homeSettingsEnabled: r } = e,
         l = (0, a.e7)([f.Z], () => f.Z.hasErrors()),
         o = (e) => {

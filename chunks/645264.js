@@ -1,68 +1,68 @@
 t.r(n);
-var o = t(200651),
-    r = t(192379),
+var s = t(200651),
+    o = t(192379),
     i = t(442837),
-    a = t(215569),
-    s = t(481060),
-    l = t(852860),
+    l = t(215569),
+    r = t(481060),
+    a = t(852860),
     c = t(313201),
     u = t(944163),
     d = t(266395),
-    m = t(200305),
-    f = t(592286),
-    h = t(388032),
-    b = t(832311);
-let _ = () =>
-    (0, o.jsx)(l.Z, {
+    g = t(200305),
+    h = t(592286),
+    x = t(388032),
+    C = t(832311);
+let f = () =>
+    (0, s.jsx)(a.Z, {
         submitting: !1,
-        message: h.intl.string(h.t['8g514e']),
+        message: x.intl.string(x.t['8g514e']),
         onReset: () => {
             (0, d.PE)(!1);
         },
-        onResetText: h.intl.string(h.t['ETE/oK']),
+        onResetText: x.intl.string(x.t['ETE/oK']),
         onSave: () => {
-            (0, d.PE)(!1), (0, s.closeModal)(f.Pn);
+            (0, d.PE)(!1), (0, r.closeModal)(h.Pn);
         },
-        onSaveText: h.intl.string(h.t['Xt+UaW']),
-        onSaveButtonColor: s.ButtonColors.RED
+        onSaveText: x.intl.string(x.t['Xt+UaW']),
+        onSaveButtonColor: r.ButtonColors.RED
     });
 n.default = (e) => {
-    let { guildId: n, transitionState: t, onClose: l, onComplete: f, isPreview: h = !1 } = e,
-        p = (0, d.rb)((e) => e.shouldShowWarning),
-        x = (0, i.e7)([u.Z], () => u.Z.get(n)),
-        C = (0, c.Dt)();
-    return (r.useEffect(() => {
-        x === u.t && l();
-    }, [l, x]),
-    x === u.t)
+    let { guildId: n, transitionState: t, onClose: a, onComplete: h, isPreview: x = !1 } = e,
+        E = (0, d.rb)((e) => e.shouldShowWarning),
+        T = (0, i.e7)([u.Z], () => u.Z.get(n)),
+        k = (0, c.Dt)();
+    return (o.useEffect(() => {
+        T === u.t && a();
+    }, [a, T]),
+    T === u.t)
         ? null
-        : (0, o.jsxs)(o.Fragment, {
+        : (0, s.jsxs)(s.Fragment, {
               children: [
-                  (0, o.jsxs)(s.ModalRoot, {
-                      size: s.ModalSize.MEDIUM,
-                      className: b.container,
+                  (0, s.jsxs)(r.ModalRoot, {
+                      size: r.ModalSize.MEDIUM,
+                      className: C.container,
                       transitionState: t,
-                      'aria-labelledby': C,
+                      'aria-labelledby': k,
                       children: [
-                          (0, o.jsx)(s.ModalCloseButton, {
-                              onClick: () => l(!1),
-                              className: b.closeButton
+                          (0, s.jsx)(r.ModalCloseButton, {
+                              onClick: () => a(!1),
+                              className: C.closeButton
                           }),
-                          (0, o.jsx)(m.Z, {
-                              headerId: C,
+                          (0, s.jsx)(g.Z, {
+                              headerId: k,
                               guildId: n,
-                              onClose: l,
-                              onComplete: f,
-                              isPreview: h
+                              onClose: a,
+                              onComplete: h,
+                              isPreview: x
                           })
                       ]
                   }),
-                  (0, o.jsx)(a.W, {
+                  (0, s.jsx)(l.W, {
                       children:
-                          !0 === p &&
-                          (0, o.jsx)(s.SlideIn, {
-                              className: b.notice,
-                              children: (0, o.jsx)(_, {})
+                          !0 === E &&
+                          (0, s.jsx)(r.SlideIn, {
+                              className: C.notice,
+                              children: (0, s.jsx)(f, {})
                           })
                   })
               ]

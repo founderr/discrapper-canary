@@ -79,7 +79,7 @@ function m(e) {
             },
             [n, p]
         ),
-        I = r.useMemo(() => p.filter((e) => o.WZ.has(e) || o.gh.has(e)), [p]),
+        v = r.useMemo(() => p.filter((e) => o.WZ.has(e) || o.gh.has(e)), [p]),
         _ = r.useCallback(
             (e) => {
                 let t = new Set(x);
@@ -135,7 +135,7 @@ function m(e) {
                     (0, i.jsx)(a.Z, {
                         guildId: t,
                         progress: s,
-                        traitsToHighlight: I,
+                        traitsToHighlight: v,
                         maskDescription: !0,
                         onTraitClick: _
                     })

@@ -20,18 +20,18 @@ var i = n(200651),
     p = n(592125),
     f = n(984933),
     C = n(540457),
-    I = n(681460),
+    v = n(681460),
     _ = n(592286),
-    v = n(981631),
+    I = n(981631),
     N = n(388032),
     T = n(163537);
 let b = 'RULE';
 function j(e) {
-    let { rule: t, rulesChannel: n, index: l, onChange: a, onKeyDown: o, onClear: u, onRuleReorder: p, isDropHovered: f, focused: C, onFocus: I, previewEnabled: v } = e,
+    let { rule: t, rulesChannel: n, index: l, onChange: a, onKeyDown: o, onClear: u, onRuleReorder: p, isDropHovered: f, focused: C, onFocus: v, previewEnabled: I } = e,
         j = r.useRef(null),
         S = r.useRef(null),
         [{ textValue: E, richValue: R }, y] = r.useState((0, g.eK)(t.value)),
-        [, A, Z] = (0, c.c)({
+        [, Z, A] = (0, c.c)({
             type: b,
             item: {
                 rule: t,
@@ -59,13 +59,13 @@ function j(e) {
         });
     r.useLayoutEffect(
         () => (
-            A(S),
-            Z(L(j)),
+            Z(S),
+            A(L(j)),
             () => {
-                A(null), L(null);
+                Z(null), L(null);
             }
         ),
-        [A, L, Z]
+        [Z, L, A]
     );
     if (
         (r.useEffect(() => {
@@ -83,7 +83,7 @@ function j(e) {
             className: T.inputWrapper,
             children: [
                 (0, i.jsx)(m.Clickable, {
-                    onMouseDown: () => I(l),
+                    onMouseDown: () => v(l),
                     children: (0, i.jsx)(x.Z, {
                         innerClassName: T.rulesTextAreaInput,
                         type: h.Ie.RULES_INPUT,
@@ -103,8 +103,8 @@ function j(e) {
                                 });
                         },
                         onKeyDown: o,
-                        canMentionChannels: v,
-                        canMentionRoles: v,
+                        canMentionChannels: I,
+                        canMentionRoles: I,
                         maxCharacterCount: _.fn,
                         onSubmit: () =>
                             Promise.resolve({
@@ -141,7 +141,7 @@ function j(e) {
 function S(e) {
     let { rules: t, setRules: n, guild: l } = e,
         s = l.rulesChannelId,
-        a = l.hasFeature(v.oNc.PREVIEW_ENABLED),
+        a = l.hasFeature(I.oNc.PREVIEW_ENABLED),
         c = (0, u.e7)([p.Z], () => (null != s ? p.Z.getChannel(s) : null)),
         d = (0, u.e7)([f.ZP], () => f.ZP.getDefaultChannel(l.id)),
         [h, g] = r.useState(null),
@@ -194,7 +194,7 @@ function S(e) {
                     : i
             );
         },
-        A = r.useCallback(
+        Z = r.useCallback(
             (e, i, r) => {
                 if (null == t) return;
                 let l = t.indexOf(e);
@@ -206,36 +206,36 @@ function S(e) {
             },
             [h, t, n]
         ),
-        Z = t.length === _.X2,
+        A = t.length === _.X2,
         L = r.useMemo(() => {
-            let e = Z ? N.intl.formatToPlainString(N.t.tU718P, { number: _.X2 }) : void 0;
+            let e = A ? N.intl.formatToPlainString(N.t.tU718P, { number: _.X2 }) : void 0;
             return [
                 {
                     text: N.intl.string(N.t.DXq2oa),
                     onClick: () => S(N.intl.string(N.t.XudkSk)),
-                    disabled: Z,
+                    disabled: A,
                     tooltipText: e
                 },
                 {
                     text: N.intl.string(N.t.nSqTjI),
                     onClick: () => S(N.intl.string(N.t.np91jI)),
-                    disabled: Z,
+                    disabled: A,
                     tooltipText: e
                 },
                 {
                     text: N.intl.string(N.t.AtRxsL),
                     onClick: () => S(N.intl.string(N.t.PNIDDA)),
-                    disabled: Z,
+                    disabled: A,
                     tooltipText: e
                 },
                 {
                     text: N.intl.string(N.t['0K5NJi']),
                     onClick: () => S(N.intl.string(N.t.HolIDw)),
-                    disabled: Z,
+                    disabled: A,
                     tooltipText: e
                 }
             ];
-        }, [S, Z]);
+        }, [S, A]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
@@ -249,7 +249,7 @@ function S(e) {
                             index: t,
                             onChange: (e) => R(e, t),
                             onClear: () => y(t),
-                            onRuleReorder: A,
+                            onRuleReorder: Z,
                             isDropHovered: t === h,
                             focused: t === x,
                             onFocus: b,
@@ -259,7 +259,7 @@ function S(e) {
                     )
                 )
             }),
-            !Z &&
+            !A &&
                 (0, i.jsx)(C.A, {
                     text: N.intl.string(N.t.Cq5Jub),
                     onClick: E
@@ -270,7 +270,7 @@ function S(e) {
                 className: T.exampleRulesTitle,
                 children: N.intl.string(N.t.XHWj8f)
             }),
-            (0, i.jsx)(I.j, {
+            (0, i.jsx)(v.j, {
                 pills: L,
                 pillClassName: T.pill
             })

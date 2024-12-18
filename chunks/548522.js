@@ -23,9 +23,9 @@ function x(e) {
     r.useEffect(() => h(l), [l]);
     let x = null !== (t = (0, a.A)({ guildId: n.id })) && void 0 !== t ? t : 0,
         [f, C] = r.useState(null),
-        I = r.useMemo(() => (null == c ? void 0 : c.some((e) => (0, s.J)(e))), [c]),
+        v = r.useMemo(() => (null == c ? void 0 : c.some((e) => (0, s.J)(e))), [c]),
         _ = r.useMemo(() => c.length === m.nx, [c]),
-        v = r.useCallback(
+        I = r.useCallback(
             (e) => {
                 u.Z.setPendingMemberVerificationRules(n.id, e), h(e), null != f && C(null);
             },
@@ -33,31 +33,31 @@ function x(e) {
         ),
         N = r.useCallback(
             (e) => {
-                v([...c, e]);
+                I([...c, e]);
             },
-            [c, v]
+            [c, I]
         ),
         T = r.useCallback(
             (e) => {
-                v([...c.slice(0, e), ...c.slice(e + 1)]);
+                I([...c.slice(0, e), ...c.slice(e + 1)]);
             },
-            [c, v]
+            [c, I]
         ),
         b = r.useCallback(
             (e, t) => {
                 if (c[e] === t) return;
                 let n = [...c];
-                (n[e] = t), v(n);
+                (n[e] = t), I(n);
             },
-            [c, v]
+            [c, I]
         ),
         j = r.useCallback(
             (e, t, n) => {
                 let i = c.indexOf(e),
                     r = [...c];
-                null != t && t !== i && (r.splice(i, 1), r.splice(t, 0, e), h(r)), n ? (v(r), null !== f && C(null)) : f !== t && C(t);
+                null != t && t !== i && (r.splice(i, 1), r.splice(t, 0, e), h(r)), n ? (I(r), null !== f && C(null)) : f !== t && C(t);
             },
-            [f, c, v]
+            [f, c, I]
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -83,7 +83,7 @@ function x(e) {
                     children: (0, i.jsx)(o.Z, {
                         addFormField: N,
                         guild: n,
-                        allowTerms: !I
+                        allowTerms: !v
                     })
                 }),
             !_ && (0, i.jsx)(p, { addFormField: N })

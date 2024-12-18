@@ -15,9 +15,9 @@ var i = n(200651),
     p = n(388032),
     f = n(543286),
     C = n(240938);
-let I = [g.ZD.SWORD, g.ZD.WATER_DROP, g.ZD.SKULL, g.ZD.TOADSTOOL, g.ZD.MOON, g.ZD.LIGHTNING, g.ZD.LEAF, g.ZD.HEART, g.ZD.FIRE, g.ZD.COMPASS, g.ZD.CROSSHAIRS, g.ZD.FLOWER, g.ZD.FORCE, g.ZD.GEM, g.ZD.LAVA, g.ZD.PSYCHIC, g.ZD.SMOKE, g.ZD.SNOW, g.ZD.SOUND, g.ZD.SUN, g.ZD.WIND];
+let v = [g.ZD.SWORD, g.ZD.WATER_DROP, g.ZD.SKULL, g.ZD.TOADSTOOL, g.ZD.MOON, g.ZD.LIGHTNING, g.ZD.LEAF, g.ZD.HEART, g.ZD.FIRE, g.ZD.COMPASS, g.ZD.CROSSHAIRS, g.ZD.FLOWER, g.ZD.FORCE, g.ZD.GEM, g.ZD.LAVA, g.ZD.PSYCHIC, g.ZD.SMOKE, g.ZD.SNOW, g.ZD.SOUND, g.ZD.SUN, g.ZD.WIND];
 t.Z = (e) => {
-    let { handleUpdate: t, badge: n, primaryColor: l, secondaryColor: a, tag: _, error: v, furthestStep: N, inSettings: T } = e,
+    let { handleUpdate: t, badge: n, primaryColor: l, secondaryColor: a, tag: _, error: I, furthestStep: N, inSettings: T } = e,
         b = r.useMemo(() => {
             let e = (0, g.yf)();
             return {
@@ -38,7 +38,7 @@ t.Z = (e) => {
         }, [b.primary, b.secondary]),
         [S, E] = r.useState(!1),
         R = r.useCallback(() => {
-            let e = I[Math.floor(Math.random() * I.length)],
+            let e = v[Math.floor(Math.random() * v.length)],
                 n = s().random().hex();
             t({
                 badgeKind: e,
@@ -86,7 +86,7 @@ t.Z = (e) => {
                                         }),
                                         (0, i.jsx)('div', {
                                             className: f.pickerGrid,
-                                            children: I.map((e) =>
+                                            children: v.map((e) =>
                                                 (0, i.jsx)(
                                                     d.Clickable,
                                                     {
@@ -176,12 +176,12 @@ t.Z = (e) => {
                                     color: 'text-muted',
                                     children: p.intl.string(p.t['3eZP8/'])
                                 }),
-                                null != v &&
+                                null != I &&
                                     (0, i.jsx)(d.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'status-danger',
                                         className: C.errorText,
-                                        children: v
+                                        children: I
                                     }),
                                 (0, i.jsx)(d.TextInput, {
                                     className: f.tagInputWrapper,

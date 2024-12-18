@@ -25,8 +25,8 @@ t.Z = (e) => {
     let t,
         n,
         { isAllPerksVisible: a, setIsAllPerksVisible: I, previousComponent: S, isFullScreen: R } = e,
-        A = r.useRef(null),
-        j = Object.entries((0, E.Z)()).reduce((e, t) => {
+        j = r.useRef(null),
+        A = Object.entries((0, E.Z)()).reduce((e, t) => {
             let [n, i] = t;
             return !1 !== i.canReveal && 'upcomingDropUntimed' !== i.name && (e[n] = i), e;
         }, {}),
@@ -35,7 +35,7 @@ t.Z = (e) => {
         B = (0, f.ZP)('perks-discoverability'),
         O = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         w = (0, x.mN)(),
-        { fractionalState: k } = (0, g.Z)();
+        { fractionalState: y } = (0, g.Z)();
     return (
         w ? ((t = T.intl.string(T.t['+vt7w8'])), (n = T.intl.string(T.t.LgHbnJ))) : ((t = T.intl.string(T.t.LgHbnJ)), (n = T.intl.string(T.t['+vt7w8']))),
         (0, i.jsx)(c.AdvancedScrollerAuto, {
@@ -43,7 +43,7 @@ t.Z = (e) => {
                 [v.open]: a,
                 [v.openCloseReduceMotion]: O
             }),
-            ref: A,
+            ref: j,
             children: (0, i.jsx)('div', {
                 className: v.container,
                 children: (0, i.jsxs)(m.Gt, {
@@ -72,12 +72,12 @@ t.Z = (e) => {
                                 (0, i.jsx)(h.Z, {
                                     className: v.cardCarousel,
                                     cards: (0, x.sP)({
-                                        perksCards: j,
+                                        perksCards: A,
                                         variant: b.R0.CARD_CAROUSEL_FIRST_ROW,
                                         shopMarketingVariation: B,
                                         isPremiumSubscriber: w,
                                         isFullScreen: R,
-                                        fractionalState: k
+                                        fractionalState: y
                                     }),
                                     cardType: b.R0.CARD_CAROUSEL_FIRST_ROW
                                 }),
@@ -90,12 +90,12 @@ t.Z = (e) => {
                                 (0, i.jsx)(h.Z, {
                                     className: v.cardCarousel,
                                     cards: (0, x.sP)({
-                                        perksCards: j,
+                                        perksCards: A,
                                         variant: b.R0.CARD_CAROUSEL_SECOND_ROW,
                                         shopMarketingVariation: B,
                                         isPremiumSubscriber: w,
                                         isFullScreen: R,
-                                        fractionalState: k
+                                        fractionalState: y
                                     }),
                                     cardType: b.R0.CARD_CAROUSEL_SECOND_ROW
                                 }),
@@ -108,12 +108,12 @@ t.Z = (e) => {
                                 (0, i.jsx)(h.Z, {
                                     className: v.cardCarousel,
                                     cards: (0, x.sP)({
-                                        perksCards: j,
+                                        perksCards: A,
                                         variant: b.R0.CARD_CAROUSEL_THIRD_ROW,
                                         shopMarketingVariation: B,
                                         isPremiumSubscriber: w,
                                         isFullScreen: R,
-                                        fractionalState: k
+                                        fractionalState: y
                                     }),
                                     cardType: b.R0.CARD_CAROUSEL_THIRD_ROW
                                 })

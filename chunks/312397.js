@@ -3,7 +3,7 @@ n.d(t, {
         return ef;
     },
     Z: function () {
-        return eI;
+        return ev;
     }
 }),
     n(47120),
@@ -24,9 +24,9 @@ var i = n(200651),
     p = n(902840),
     f = n(410030),
     C = n(100527),
-    I = n(367907),
+    v = n(367907),
     _ = n(906732),
-    v = n(740504),
+    I = n(740504),
     N = n(933557),
     T = n(471445),
     b = n(890477),
@@ -35,13 +35,13 @@ var i = n(200651),
     E = n(688465),
     R = n(807582),
     y = n(48217),
-    A = n(26323),
-    Z = n(35125),
+    Z = n(26323),
+    A = n(35125),
     L = n(536442),
     D = n(142497),
     O = n(884858),
-    P = n(516129),
-    k = n(813197),
+    k = n(516129),
+    P = n(813197),
     M = n(208567),
     w = n(592125),
     B = n(324067),
@@ -50,8 +50,8 @@ var i = n(200651),
     F = n(699516),
     H = n(594174),
     z = n(709586),
-    V = n(768581),
-    W = n(630388),
+    W = n(768581),
+    V = n(630388),
     Y = n(823379),
     K = n(63063),
     q = n(434404),
@@ -177,7 +177,7 @@ class eC extends r.PureComponent {
     }
     handleSystemChannelFlagsChange(e, t) {
         let { guild: n } = this.props,
-            i = (0, W.mB)(n.systemChannelFlags, e, t);
+            i = (0, V.mB)(n.systemChannelFlags, e, t);
         q.Z.updateGuild({ systemChannelFlags: i });
     }
     handlePremiumProgressBarEnabledChange(e) {
@@ -206,7 +206,7 @@ class eC extends r.PureComponent {
                                     disabled: !n,
                                     hint: en.intl.string(en.t['6yrpFR']),
                                     makeURL: (t) =>
-                                        V.ZP.getGuildIconURL({
+                                        W.ZP.getGuildIconURL({
                                             id: e.id,
                                             icon: t,
                                             canAnimate: !0,
@@ -244,7 +244,7 @@ class eC extends r.PureComponent {
                                     onClick: this.handleUploadImage,
                                     children: [
                                         en.intl.string(en.t['MsUY/f']),
-                                        (0, i.jsx)(k.ZP, {
+                                        (0, i.jsx)(P.ZP, {
                                             ref: this._imageInputRef,
                                             onChange: this.handleOpenImageCroppingModal,
                                             disabled: !n
@@ -375,9 +375,9 @@ class eC extends r.PureComponent {
             value: eo,
             label: en.intl.string(en.t.ibUhoa)
         });
-        let c = (0, Z.eI)(t),
-            u = c || (0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
-            m = c || (0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES);
+        let c = (0, A.eI)(t),
+            u = c || (0, V.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
+            m = c || (0, V.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES);
         return (0, i.jsxs)(g.FormSection, {
             className: ei.divider,
             children: [
@@ -398,7 +398,7 @@ class eC extends r.PureComponent {
                 (0, i.jsx)(g.FormSwitch, {
                     className: ei.marginTop20,
                     onChange: this.handleShowJoinsChange,
-                    value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_JOIN_NOTIFICATIONS),
+                    value: !(0, V.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_JOIN_NOTIFICATIONS),
                     hideBorder: !0,
                     disabled: !r || a === eo,
                     children: en.intl.string(en.t['+f0bXV'])
@@ -406,7 +406,7 @@ class eC extends r.PureComponent {
                 (0, i.jsx)(g.FormSwitch, {
                     className: s()(ei.__invalid_marginReset, ei.marginTop20),
                     onChange: this.handleShowJoinRepliesChange,
-                    value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES),
+                    value: !(0, V.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES),
                     hideBorder: !0,
                     disabled: !r || a === eo,
                     children: en.intl.string(en.t['72k7jY'])
@@ -414,7 +414,7 @@ class eC extends r.PureComponent {
                 (0, i.jsx)(g.FormSwitch, {
                     className: s()(ei.__invalid_marginReset, ei.marginTop20),
                     onChange: this.handleShowSubscriptionsChange,
-                    value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_PREMIUM_SUBSCRIPTIONS),
+                    value: !(0, V.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_PREMIUM_SUBSCRIPTIONS),
                     hideBorder: !0,
                     disabled: !r || a === eo,
                     children: en.intl.string(en.t['2L8NCA'])
@@ -422,7 +422,7 @@ class eC extends r.PureComponent {
                 (0, i.jsx)(g.FormSwitch, {
                     className: s()(ei.__invalid_marginReset, ei.marginTop20),
                     onChange: this.handleShowGuildRemindersChange,
-                    value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS),
+                    value: !(0, V.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS),
                     hideBorder: !0,
                     disabled: !r || a === eo,
                     children: en.intl.string(en.t['NvnW+f'])
@@ -431,7 +431,7 @@ class eC extends r.PureComponent {
                     (0, i.jsx)(g.FormSwitch, {
                         className: s()(ei.__invalid_marginReset, ei.marginTop20),
                         onChange: this.handleShowGuildRoleSubscriptionPurchaseMessages,
-                        value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
+                        value: !(0, V.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
                         hideBorder: !0,
                         disabled: !r || a === eo,
                         children: en.intl.string(en.t['54n19f'])
@@ -440,7 +440,7 @@ class eC extends r.PureComponent {
                     (0, i.jsx)(g.FormSwitch, {
                         className: s()(ei.__invalid_marginReset, ei.marginTop20),
                         onChange: this.handleShowGuildRoleSubscriptionPurchaseMessageRepliesChange,
-                        value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
+                        value: !(0, V.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
                         hideBorder: !0,
                         disabled: !r || a === eo,
                         children: en.intl.string(en.t.IhF5d3)
@@ -449,7 +449,7 @@ class eC extends r.PureComponent {
                     (0, i.jsx)(g.FormSwitch, {
                         className: s()(ei.__invalid_marginReset, ei.marginTop20),
                         onChange: this.handleShowDeadchatPromptMessageChange,
-                        value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_CHANNEL_PROMPT_DEADCHAT),
+                        value: !(0, V.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_CHANNEL_PROMPT_DEADCHAT),
                         hideBorder: !0,
                         disabled: !r || a === eo,
                         children: (0, i.jsxs)('div', {
@@ -555,11 +555,11 @@ class eC extends r.PureComponent {
         let { guild: e, canManageGuild: t } = this.props,
             n = e.hasFeature(J.oNc.INVITE_SPLASH),
             r = t && n,
-            l = (0, i.jsx)(P.Z, {
+            l = (0, i.jsx)(k.Z, {
                 image: e.splash,
                 makeURL: (t) =>
                     null != t
-                        ? V.ZP.getGuildSplashURL({
+                        ? W.ZP.getGuildSplashURL({
                               id: e.id,
                               splash: t
                           })
@@ -612,7 +612,7 @@ class eC extends r.PureComponent {
                                           className: ei.marginTop16,
                                           children: [
                                               en.intl.string(en.t.yG2pUl),
-                                              (0, i.jsx)(k.ZP, {
+                                              (0, i.jsx)(P.ZP, {
                                                   disabled: !r,
                                                   onChange: this.handleSplashChange,
                                                   maxFileSizeBytes: et.B,
@@ -646,11 +646,11 @@ class eC extends r.PureComponent {
             r = e.hasFeature(J.oNc.BANNER),
             l = e.hasFeature(J.oNc.ANIMATED_BANNER),
             s = r && t,
-            a = (0, i.jsx)(P.Z, {
+            a = (0, i.jsx)(k.Z, {
                 image: e.banner,
                 makeURL: (t) =>
                     null != t
-                        ? V.ZP.getGuildBannerURL(
+                        ? W.ZP.getGuildBannerURL(
                               {
                                   id: e.id,
                                   banner: t
@@ -897,7 +897,7 @@ class eC extends r.PureComponent {
             es(this, 'handleShowModalUpsell', (e, t, n, i) => {
                 e.preventDefault(), e.stopPropagation();
                 let { guild: r, analyticsLocations: l } = this.props;
-                (0, I.yw)(J.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                (0, v.yw)(J.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                     location: {
                         section: t,
                         object: J.qAy.LEARN_MORE
@@ -905,7 +905,7 @@ class eC extends r.PureComponent {
                     guild_id: null == r ? void 0 : r.id,
                     location_stack: l
                 }),
-                    (0, A.Z)({
+                    (0, Z.Z)({
                         analyticsLocations: l,
                         analyticsSourceLocation: {
                             section: t,
@@ -963,7 +963,7 @@ class eC extends r.PureComponent {
             );
     }
 }
-function eI() {
+function ev() {
     var e;
     let { guild: t, errors: n, submitting: l, subsection: s } = (0, u.cj)([X.Z], () => X.Z.getProps()),
         a = (0, f.ZP)(),
@@ -972,15 +972,15 @@ function eI() {
         (0, D.Kw)(L.v6.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL);
     }, []);
     let d = (0, u.e7)([B.Z], () => B.Z.getCategories(null == t ? void 0 : t.id)),
-        m = r.useMemo(() => (0, v.Z)(d._categories, d), [d]),
+        m = r.useMemo(() => (0, I.Z)(d._categories, d), [d]),
         { canManageGuild: h, isGuildAdmin: g } = (0, u.cj)([G.Z], () => ({
             canManageGuild: G.Z.can(J.Plq.MANAGE_GUILD, t),
             isGuildAdmin: G.Z.can(J.Plq.ADMINISTRATOR, t)
         })),
         x = (0, u.e7)([U.Z], () => U.Z.getMemberCount(null == t ? void 0 : t.id)),
         p = (0, j.E)(t),
-        I = (0, u.e7)([H.default], () => H.default.getCurrentUser());
-    o()(null != I, 'GuildSettingsOverview: currentUser cannot be undefined');
+        v = (0, u.e7)([H.default], () => H.default.getCurrentUser());
+    o()(null != v, 'GuildSettingsOverview: currentUser cannot be undefined');
     let { enableDeadchat: N } = b.Z.useExperiment(
         {
             guildId: null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : J.lds,
@@ -1003,7 +1003,7 @@ function eI() {
                   guild: t,
                   errors: n,
                   submitting: l,
-                  currentUser: I,
+                  currentUser: v,
                   guildMemberCount: x,
                   isInventoryFeedEnabled: p,
                   theme: a,

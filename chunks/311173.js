@@ -40,8 +40,8 @@ function p(e) {
 function f(e) {
     var t, n;
     let { rule: l, onChangeText: a, className: o } = e,
-        { patterns: m, valueError: f, errors: C, validatePatternsChanged: I, validateEditingValueChanged: _ } = (0, d.Z)(l, a),
-        [v] = r.useState(() => ({
+        { patterns: m, valueError: f, errors: C, validatePatternsChanged: v, validateEditingValueChanged: _ } = (0, d.Z)(l, a),
+        [I] = r.useState(() => ({
             tags: m,
             value: '',
             selections: [],
@@ -65,9 +65,9 @@ function f(e) {
         ),
         T = r.useCallback(
             (e) => {
-                I(e, m);
+                v(e, m);
             },
-            [I, m]
+            [v, m]
         ),
         b = r.useCallback(
             (e) => {
@@ -80,7 +80,7 @@ function f(e) {
         children: [
             (0, i.jsx)(c.Z, {
                 placeholder: '^b(a|@)d$\nw(o|0)rd(s|$)',
-                initialValue: v,
+                initialValue: I,
                 onChangeTags: T,
                 onChangeNewTagValue: b,
                 tagErrors: N,

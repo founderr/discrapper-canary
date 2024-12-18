@@ -28,16 +28,16 @@ var i = n(399606),
     I = n(994554),
     S = n(1549),
     R = n(13327),
-    A = n(59137),
-    j = n(405991),
+    j = n(59137),
+    A = n(405991),
     P = n(24615),
     Z = n(193943),
     M = n(334347),
     B = n(943734),
     O = n(603076),
     w = n(472656),
-    k = n(912429),
-    y = n(772969),
+    y = n(912429),
+    k = n(772969),
     L = n(926262);
 let U = (e, t, n) => ((0, r.wj)(e) ? t : n),
     D = (e) => {
@@ -128,25 +128,25 @@ let U = (e, t, n) => ((0, r.wj)(e) ? t : n),
             stickers: {
                 title: g.intl.string(g.t['1c+xwc']),
                 description: g.intl.string(g.t.hJG8ZG),
-                imageSource: U(n, I, k),
+                imageSource: U(n, I, y),
                 imageClassName: t.stickersImage
             },
             stickersBurst: {
                 title: g.intl.string(g.t.tzdIwM),
                 description: g.intl.string(g.t.hJG8ZG),
-                imageSource: U(n, I, k),
+                imageSource: U(n, I, y),
                 imageClassName: t.stickersImage
             },
             stickersPerkDiscoverability: {
                 title: g.intl.string(g.t.tzdIwM),
                 description: g.intl.string(g.t.FXlU29),
-                imageSource: U(n, I, k),
+                imageSource: U(n, I, y),
                 imageClassName: t.stickersImage
             },
             streaming: {
                 title: g.intl.string(g.t.RSXQYG),
                 description: g.intl.string(g.t.ymCPxs),
-                imageSource: y,
+                imageSource: k,
                 imageClassName: t.streamingImage
             },
             superReactions: {
@@ -164,7 +164,7 @@ let U = (e, t, n) => ((0, r.wj)(e) ? t : n),
             videoBackground: {
                 title: g.intl.string(g.t.NaGpTU),
                 description: g.intl.string(g.t['A8O/Q0']),
-                imageSource: U(n, A, j),
+                imageSource: U(n, j, A),
                 imageClassName: t.videoBackgroundImage
             }
         };

@@ -20,7 +20,7 @@ var r = n(399606),
     p = n(287576),
     f = n(894610),
     C = n(388032);
-function I(e) {
+function v(e) {
     let { listingId: t } = e,
         n = (0, x.r)(t);
     return null == n ? null : (0, i.jsx)(a.bL, { children: n.name });
@@ -29,7 +29,7 @@ function _(e) {
     var t, n, a;
     let { guildId: x } = e,
         _ = (0, p.Z)(x),
-        v = (0, s.f3)(),
+        I = (0, s.f3)(),
         N = (0, r.e7)([g.Z], () => g.Z.getGuild());
     return _.loading || null == N
         ? (0, i.jsx)(l.Spinner, {})
@@ -52,14 +52,14 @@ function _(e) {
                     (0, i.jsx)(l.FormSection, {
                         title: C.intl.string(C.t['+5Rmho']),
                         children: (0, i.jsx)(o.Z, {
-                            ListingIdLabel: I,
+                            ListingIdLabel: v,
                             payoutsByPeriod: _.payoutsByPeriod,
                             team: null === (t = _.application) || void 0 === t ? void 0 : t.team
                         })
                     }),
                     (0, i.jsx)(l.FormSection, {
                         title: C.intl.string(C.t.O8cDAA),
-                        disabled: v,
+                        disabled: I,
                         children: (0, i.jsx)(m.Z, {
                             guildId: x,
                             application: _.application

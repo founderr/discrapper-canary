@@ -18,13 +18,13 @@ n.d(t, {
         return _;
     },
     bj: function () {
-        return A;
+        return Z;
     },
     el: function () {
         return f;
     },
     hS: function () {
-        return I;
+        return v;
     },
     lq: function () {
         return b;
@@ -39,7 +39,7 @@ n.d(t, {
         return y;
     },
     r2: function () {
-        return v;
+        return I;
     },
     vR: function () {
         return p;
@@ -83,7 +83,7 @@ function C(e) {
         channelId: e
     });
 }
-function I(e) {
+function v(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_REORDER_NEW_MEMBER_ACTION',
         actions: e
@@ -120,7 +120,7 @@ async function _(e, t, n, i) {
         );
     }
 }
-function v(e) {
+function I(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_ADD_RESOURCE_CHANNEL',
         resourceChannel: e
@@ -250,6 +250,6 @@ function y(e, t) {
             channelIds: t
         });
 }
-function A() {
+function Z() {
     s.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESET' });
 }

@@ -21,12 +21,12 @@ function g(e) {
         g = (0, r.e7)([a.Z], () => a.Z.isAdvancedMode(t)),
         x = (0, r.e7)([c.Z], () => c.Z.editedDefaultChannelIds),
         [p, f] = (0, o.VF)(t, x),
-        [C, I] = (0, d.OA)(t, [...x]),
-        _ = g ? I.length : f.length,
-        v = g ? C.length : p.length,
+        [C, v] = (0, d.OA)(t, [...x]),
+        _ = g ? v.length : f.length,
+        I = g ? C.length : p.length,
         N = _ < u.md,
-        T = v >= u.X,
-        b = I.length - f.length,
+        T = I >= u.X,
+        b = v.length - f.length,
         j = (0, i.jsx)(s.CircleCheckIcon, {
             size: 'sm',
             color: l.Z.unsafe_rawColors.BRAND_500.css,
@@ -39,7 +39,7 @@ function g(e) {
             color: l.Z.colors.WHITE.css,
             secondaryColor: l.Z.colors.BACKGROUND_ACCENT.css
         }),
-        E = [(Math.min(u.X, v) / u.md) * 100, (Math.min(u.md, _) / u.md) * 100],
+        E = [(Math.min(u.X, I) / u.md) * 100, (Math.min(u.md, _) / u.md) * 100],
         R = !N && T ? [l.Z.colors.TEXT_POSITIVE.css, l.Z.colors.TEXT_POSITIVE.css] : [l.Z.colors.TEXT_BRAND.css, l.Z.colors.TEXT_MUTED.css];
     return (0, i.jsxs)('div', {
         className: h.container,
@@ -50,7 +50,7 @@ function g(e) {
                     (0, i.jsx)(s.Text, {
                         variant: 'text-xs/bold',
                         color: 'text-brand',
-                        children: m.intl.format(m.t.kvroKC, { count: v })
+                        children: m.intl.format(m.t.kvroKC, { count: I })
                     }),
                     (0, i.jsx)(s.Text, {
                         variant: 'text-xs/bold',

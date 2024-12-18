@@ -22,7 +22,7 @@ function x() {
         [, x] = a.p9(e, t),
         [p, f] = a.Ek(e, t),
         C = a.qs(e, t);
-    function I() {
+    function v() {
         (0, r.openModalLazy)(async () => {
             let { default: e } = await n.e('22942').then(n.bind(n, 660727));
             return (n) =>
@@ -75,14 +75,14 @@ function x() {
                                 (0, i.jsx)(u.Z, {
                                     role: C,
                                     'aria-label': m.intl.string(m.t.mD1oGB),
-                                    onClick: I,
+                                    onClick: v,
                                     disabled: _
                                 }),
                                 (0, i.jsx)(r.Button, {
                                     look: r.Button.Looks.OUTLINED,
                                     color: r.Button.Colors.PRIMARY,
                                     className: h.__invalid_imageUploadButtonCTA,
-                                    onClick: I,
+                                    onClick: v,
                                     disabled: _,
                                     children: m.intl.string(m.t.mD1oGB)
                                 })

@@ -36,8 +36,8 @@ function h(e) {
     )
         return (0, i.jsx)(i.Fragment, { children: d({}) });
     let R = b >= _.length - 1,
-        A = R ? l.TooltipColors.RED : l.TooltipColors.GREEN,
-        j = C ? A : l.TooltipColors.PRIMARY,
+        j = R ? l.TooltipColors.RED : l.TooltipColors.GREEN,
+        A = C ? j : l.TooltipColors.PRIMARY,
         P = () => {
             null == m || m(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), !v && x(b + 1), N(!0), T(!0), I.start(g, () => N(!1)), S.start(f, () => x(0));
         };
@@ -54,7 +54,7 @@ function h(e) {
         })(),
         delay: E,
         'aria-label': h,
-        color: j,
+        color: A,
         forceOpen: v,
         onAnimationRest: (e, t) => {
             !v && C && t.phase === u.UkZ.LEAVE && T(!1);

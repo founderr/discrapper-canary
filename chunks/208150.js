@@ -15,9 +15,9 @@ var r = n(442837),
     p = n(999382),
     f = n(981631),
     C = n(611480),
-    I = n(388032),
+    v = n(388032),
     _ = n(64462);
-let v = {
+let I = {
         page: f.ZY5.GUILD_SETTINGS,
         section: f.jXE.GUILD_SETTINGS_STICKERS,
         object: f.qAy.BOOSTING_BANNER
@@ -32,12 +32,12 @@ let v = {
                 (0, i.jsx)(l.Heading, {
                     className: _.upsellHeader,
                     variant: 'heading-xl/semibold',
-                    children: I.intl.string(I.t.hzCkys)
+                    children: v.intl.string(v.t.hzCkys)
                 }),
                 (0, i.jsx)(l.Text, {
                     className: _.upsellDescription,
                     variant: 'text-md/normal',
-                    children: I.intl.string(I.t.jcesAA)
+                    children: v.intl.string(v.t.jcesAA)
                 }),
                 (0, i.jsxs)('div', {
                     className: _.upsellButtons,
@@ -49,11 +49,11 @@ let v = {
                             onClick: () =>
                                 (0, d.Z)({
                                     analyticsLocations: n,
-                                    analyticsLocation: v,
+                                    analyticsLocation: I,
                                     guildId: t.id,
                                     totalNumberOfSlotsToAssign: r
                                 }),
-                            children: I.intl.string(I.t.Q5dbTk)
+                            children: v.intl.string(v.t.Q5dbTk)
                         }),
                         (0, i.jsx)(l.Button, {
                             innerClassName: _.upsellButton,
@@ -63,7 +63,7 @@ let v = {
                                     guildId: t.id,
                                     location: { section: f.jXE.GUILD_SETTINGS_STICKERS }
                                 }),
-                            children: I.intl.string(I.t.hvVgAQ)
+                            children: v.intl.string(v.t.hvVgAQ)
                         })
                     ]
                 })
@@ -72,15 +72,15 @@ let v = {
     },
     T = () =>
         (0, i.jsxs)(l.FormSection, {
-            title: I.intl.string(I.t['9N2OWF']),
+            title: v.intl.string(v.t['9N2OWF']),
             children: [
                 (0, i.jsx)(l.FormText, {
                     type: l.FormTextTypes.DESCRIPTION,
-                    children: I.intl.format(I.t.hxLvi4, { fileSize: (0, h.IC)(C.Ht, { useKibibytes: !0 }) })
+                    children: v.intl.format(v.t.hxLvi4, { fileSize: (0, h.IC)(C.Ht, { useKibibytes: !0 }) })
                 }),
                 (0, i.jsx)(l.FormText, {
                     type: l.FormTextTypes.DESCRIPTION,
-                    children: I.intl.format(I.t.UBj0aW, { articleUrl: x.Z.getArticleURL(f.BhN.STICKERS_UPLOAD) })
+                    children: v.intl.format(v.t.UBj0aW, { articleUrl: x.Z.getArticleURL(f.BhN.STICKERS_UPLOAD) })
                 })
             ]
         }),
@@ -97,9 +97,9 @@ let v = {
         return null == d || a === f.Eu4.TIER_3 || o > 0
             ? (0, i.jsx)(i.Fragment, {})
             : (m > u
-                  ? ((t = I.intl.formatToPlainString(I.t.ZtAY1d, { level: d })), (n = I.intl.formatToPlainString(I.t['13hOWl'], { level: d })), (r = f.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL))
-                  : ((t = I.intl.string(I.t.zT9Sxc)),
-                    (n = I.intl.formatToPlainString(I.t.YaW9wM, {
+                  ? ((t = v.intl.formatToPlainString(v.t.ZtAY1d, { level: d })), (n = v.intl.formatToPlainString(v.t['13hOWl'], { level: d })), (r = f.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL))
+                  : ((t = v.intl.string(v.t.zT9Sxc)),
+                    (n = v.intl.formatToPlainString(v.t.YaW9wM, {
                         level: d,
                         numAdditional: (0, g.ig)(d)
                     })),
@@ -132,7 +132,7 @@ t.Z = () => {
     return (0, i.jsx)(a.Gt, {
         value: n,
         children: (0, i.jsxs)(l.FormSection, {
-            title: I.intl.string(I.t.R5nQkZ),
+            title: v.intl.string(v.t.R5nQkZ),
             tag: l.FormTitleTags.H1,
             children: [
                 o

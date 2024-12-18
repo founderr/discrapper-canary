@@ -15,9 +15,9 @@ var i = n(200651),
     p = n(709054),
     f = n(434404),
     C = n(118215),
-    I = n(981631),
+    v = n(981631),
     _ = n(388032),
-    v = n(555437);
+    I = n(555437);
 let N = (e) => {
     let { name: t, failingName: n, description: r, checked: l, pending: s, pendingDescription: a, failingDescription: o } = e,
         c = t,
@@ -50,14 +50,14 @@ let N = (e) => {
                 (c = null != n ? n : t),
                 (u = null != o ? o : r)),
         (0, i.jsxs)('div', {
-            className: v.checklistItem,
+            className: I.checklistItem,
             children: [
                 (0, i.jsx)('div', {
-                    className: v.checklistIcon,
+                    className: I.checklistIcon,
                     children: d
                 }),
                 (0, i.jsxs)('div', {
-                    className: v.checklistText,
+                    className: I.checklistText,
                     children: [
                         (0, i.jsx)(h.Heading, {
                             variant: 'heading-md/semibold',
@@ -94,7 +94,7 @@ t.Z = (e) => {
     let { guild: t, guildId: l, className: a, noHeader: o = !1, failedItemsOnly: c = !1 } = e,
         [m, b] = (0, u.Wu)([C.ZP], () => [C.ZP.getDiscoveryChecklist(l), C.ZP.isLoading()], [l]),
         { nsfwProperties: j } = null != m ? m : {},
-        S = null == t ? void 0 : t.hasFeature(I.oNc.PARTNERED),
+        S = null == t ? void 0 : t.hasFeature(v.oNc.PARTNERED),
         E = null == j ? void 0 : j.channels_banned_keywords,
         R = (0, u.e7)(
             [g.ZP],
@@ -130,26 +130,26 @@ t.Z = (e) => {
         );
     if (b || null == m)
         return (0, i.jsxs)('div', {
-            className: s()(v.container, v.loaderContainer, a),
+            className: s()(I.container, I.loaderContainer, a),
             children: [
                 (0, i.jsx)(h.Heading, {
-                    className: v.loadingText,
+                    className: I.loadingText,
                     variant: 'heading-md/semibold',
                     color: 'header-secondary',
                     children: _.intl.string(_.t.e1gm0d)
                 }),
-                (0, i.jsx)(h.Spinner, { className: v.__invalid_spinner })
+                (0, i.jsx)(h.Spinner, { className: I.__invalid_spinner })
             ]
         });
     let y = S ? _.t['WH+1Y2'] : _.t.a4MYDA,
-        A = [
+        Z = [
             {
                 name: _.intl.string(_.t.yvk9p6),
                 failingName: _.intl.string(_.t['IY/UT0']),
                 description: _.intl.string(_.t.hSLSMz),
                 failingDescription: _.intl.format(_.t.odsGg4, {
-                    termsURL: I.EYA.TERMS,
-                    guidelinesURL: x.Z.getArticleURL(I.BhN.PUBLIC_GUILD_GUILDLINES)
+                    termsURL: v.EYA.TERMS,
+                    guidelinesURL: x.Z.getArticleURL(v.BhN.PUBLIC_GUILD_GUILDLINES)
                 }),
                 checked: null == m ? void 0 : m.safeEnvironment
             },
@@ -178,7 +178,7 @@ t.Z = (e) => {
                     children: [
                         (0, i.jsx)(h.Text, {
                             color: 'text-muted',
-                            className: v.healthFailingDescription,
+                            className: I.healthFailingDescription,
                             variant: 'text-sm/normal',
                             children: _.intl.string(_.t.LjqS0N)
                         }),
@@ -203,7 +203,7 @@ t.Z = (e) => {
                             return (!e && null != l) || (!t && null != i && null != r);
                         })() &&
                             (0, i.jsx)(h.Button, {
-                                className: v.detailsButton,
+                                className: I.detailsButton,
                                 look: h.Button.Looks.LINK,
                                 size: h.Button.Sizes.NONE,
                                 color: h.Button.Colors.LINK,
@@ -226,7 +226,7 @@ t.Z = (e) => {
                               (0, i.jsx)(
                                   'strong',
                                   {
-                                      className: v.healthPending,
+                                      className: I.healthPending,
                                       children: e
                                   },
                                   t
@@ -251,7 +251,7 @@ t.Z = (e) => {
                                           (0, i.jsx)(
                                               'span',
                                               {
-                                                  className: v.doesNot,
+                                                  className: I.doesNot,
                                                   children: e
                                               },
                                               t
@@ -261,7 +261,7 @@ t.Z = (e) => {
                             : null,
                         R.length > 0
                             ? (0, i.jsx)('div', {
-                                  className: v.indent,
+                                  className: I.indent,
                                   children: R.map((e) => {
                                       let [t, n] = e;
                                       return null != t
@@ -287,7 +287,7 @@ t.Z = (e) => {
                                           (0, i.jsx)(
                                               'span',
                                               {
-                                                  className: v.doesNot,
+                                                  className: I.doesNot,
                                                   children: e
                                               },
                                               t
@@ -304,7 +304,7 @@ t.Z = (e) => {
                                           (0, i.jsx)(
                                               'span',
                                               {
-                                                  className: v.doesNot,
+                                                  className: I.doesNot,
                                                   children: e
                                               },
                                               t
@@ -320,12 +320,12 @@ t.Z = (e) => {
                 name: _.intl.string(_.t.lSXnLy),
                 failingName: _.intl.string(_.t.awA3PT),
                 description: _.intl.string(_.t.QbBJ7e),
-                failingDescription: _.intl.format(_.t.kBXInZ, { onClick: () => f.Z.setSection(I.pNK.SAFETY, I.KsC.SAFETY_PERMISSIONS) }),
+                failingDescription: _.intl.format(_.t.kBXInZ, { onClick: () => f.Z.setSection(v.pNK.SAFETY, v.KsC.SAFETY_PERMISSIONS) }),
                 checked: null == m ? void 0 : m.protected
             }
         ];
     return (0, i.jsxs)('div', {
-        className: s()(v.container, a),
+        className: s()(I.container, a),
         children: [
             (() => {
                 let e = _.t['+6Hylp'],
@@ -333,12 +333,12 @@ t.Z = (e) => {
                 return o
                     ? null
                     : (0, i.jsxs)('div', {
-                          className: v.header,
+                          className: I.header,
                           children: [
                               (0, i.jsx)('img', {
                                   alt: '',
                                   src: t,
-                                  className: v.headerIcon,
+                                  className: I.headerIcon,
                                   width: 40
                               }),
                               (0, i.jsx)(h.Heading, {
@@ -350,7 +350,7 @@ t.Z = (e) => {
                                                 (0, i.jsx)(
                                                     'strong',
                                                     {
-                                                        className: v.doesNot,
+                                                        className: I.doesNot,
                                                         children: e
                                                     },
                                                     t
@@ -360,11 +360,11 @@ t.Z = (e) => {
                           ]
                       });
             })(),
-            A.filter((e) => !c || null == e.checked || !e.checked).map((e, t) =>
+            Z.filter((e) => !c || null == e.checked || !e.checked).map((e, t) =>
                 (0, i.jsxs)(
                     r.Fragment,
                     {
-                        children: [(0, i.jsx)(N, { ...e }), t < A.length - 1 ? (0, i.jsx)('hr', { className: v.separator }) : null]
+                        children: [(0, i.jsx)(N, { ...e }), t < Z.length - 1 ? (0, i.jsx)('hr', { className: I.separator }) : null]
                     },
                     ''.concat(e.name)
                 )

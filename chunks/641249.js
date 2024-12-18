@@ -22,10 +22,10 @@ function p() {
     let { editStateId: e, guildId: t } = (0, o.N)(),
         [p, f] = c.XZ(e, t),
         C = (0, d.Z)(t, e),
-        { setCurrentTab: I } = (0, h.dw)(),
-        _ = () => I(h.ue.EMOJIS),
-        v = (0, r.e7)([s.Z], () => s.Z.getGuild(t)),
-        N = null == v ? void 0 : v.getMaxRoleSubscriptionEmojiSlots();
+        { setCurrentTab: v } = (0, h.dw)(),
+        _ = () => v(h.ue.EMOJIS),
+        I = (0, r.e7)([s.Z], () => s.Z.getGuild(t)),
+        N = null == I ? void 0 : I.getMaxRoleSubscriptionEmojiSlots();
     function T(e) {
         null == p ? f(new Set(e)) : f(new Set([...p, ...e]));
     }

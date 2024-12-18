@@ -31,16 +31,16 @@ var i = n(200651),
     I = n(626135),
     S = n(260722),
     R = n(914788),
-    A = n(841409),
-    j = n(652262),
+    j = n(841409),
+    A = n(652262),
     P = n(880257),
     Z = n(631885),
     M = n(830746),
     B = n(731934),
     O = n(521450),
     w = n(292352),
-    k = n(981631),
-    y = n(723359),
+    y = n(981631),
+    k = n(723359),
     L = n(921944),
     U = n(388032),
     D = n(228351);
@@ -154,8 +154,8 @@ function W() {
         t = (0, Z.M8)(),
         n = (0, E.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
         a = (0, c.e7)([R.Z], () => R.Z.getIsInitialized()),
-        l = (0, j.M)(),
-        { selectedTab: m, handleTabChange: f } = (0, A.Z)(),
+        l = (0, A.M)(),
+        { selectedTab: m, handleTabChange: f } = (0, j.Z)(),
         p = (0, h.Dt)(),
         b = N.default.getCurrentUser(),
         T = null != e,
@@ -172,7 +172,7 @@ function W() {
     r.useEffect(() => {
         a &&
             T &&
-            (I.default.track(k.rMx.FAMILY_CENTER_VIEWED, {
+            (I.default.track(y.rMx.FAMILY_CENTER_VIEWED, {
                 is_considered_adult: e,
                 num_of_accepted_links: t,
                 selected_teen_id: l,
@@ -182,7 +182,7 @@ function W() {
             x.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
     }, [a, T]),
     r.useEffect(() => {
-        v && (0, g.mN)(y.L0.FAMILY_CENTER);
+        v && (0, g.mN)(k.L0.FAMILY_CENTER);
     }, [v]),
     v)
         ? null
@@ -212,15 +212,15 @@ function z() {
         n = (0, Z.M8)(),
         a = (0, E.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
         l = (0, c.e7)([R.Z], () => R.Z.getIsInitialized()),
-        b = (0, j.M)(),
+        b = (0, A.M)(),
         M = (0, c.e7)([T.Z], () => T.Z.theme),
-        { selectedTab: B, handleTabChange: O } = (0, A.Z)(),
+        { selectedTab: B, handleTabChange: O } = (0, j.Z)(),
         H = (0, h.Dt)(),
         V = N.default.getCurrentUser(),
         W = null != t,
         z = l && null != V && !W;
     r.useEffect(() => {
-        m.Y(k.Z5c.FAMILY_CENTER),
+        m.Y(y.Z5c.FAMILY_CENTER),
             (0, C.e)('family-center'),
             !R.Z.isLoading() && R.Z.canRefetch() && S.ZP.initialPageLoad(),
             !a &&
@@ -232,7 +232,7 @@ function z() {
         r.useEffect(() => {
             l &&
                 W &&
-                (I.default.track(k.rMx.FAMILY_CENTER_VIEWED, {
+                (I.default.track(y.rMx.FAMILY_CENTER_VIEWED, {
                     is_considered_adult: t,
                     num_of_accepted_links: n,
                     selected_teen_id: b,
@@ -246,7 +246,7 @@ function z() {
             l && t && void 0 === e && v.Ex.updateSetting(!0);
         }, [l, t]),
         r.useEffect(() => {
-            z && (0, g.mN)(y.L0.FAMILY_CENTER);
+            z && (0, g.mN)(k.L0.FAMILY_CENTER);
         }, [z]);
     if (z) return null;
     let Y = B !== w.dG.SETTINGS ? B : w.dG.ACTIVITY,

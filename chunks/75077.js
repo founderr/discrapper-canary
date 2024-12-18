@@ -9,7 +9,7 @@ n.d(t, {
         return T;
     },
     Op: function () {
-        return j;
+        return A;
     },
     gx: function () {
         return I;
@@ -27,7 +27,7 @@ n.d(t, {
         return x;
     },
     sP: function () {
-        return A;
+        return j;
     },
     t2: function () {
         return v;
@@ -165,7 +165,7 @@ let I = (e, t, n) => ((0, a.wj)(e) ? t : n),
             h = Z();
         return null != n.tenureRewardCollectible && !0 === r && o({ card: n.tenureRewardCollectible }), null != n.freeBoost && !0 === r && o({ card: n.freeBoost }), null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.shyProject && o({ card: n.shyProject }), i && h ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : i && !h && (_ || null != n.shyProject ? _ && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
     },
-    A = (e) => {
+    j = (e) => {
         let { perksCards: t, variant: n, shopMarketingVariation: r, isFullScreen: a, showTenureCard: s, isPremiumSubscriber: l, fractionalState: o } = e,
             c = [];
         switch (n) {
@@ -208,7 +208,7 @@ let I = (e, t, n) => ((0, a.wj)(e) ? t : n),
         }
         return !a && (c = c.filter((e) => !e.hideOnNarrowScreen)), c;
     },
-    j = (e) => {
+    A = (e) => {
         let t = (0, r.e7)([o.ZP], () => o.ZP.getPremiumTypeSubscription()),
             n = null != t ? c.ZP.getPremiumPlanItem(t) : null,
             i = (null != n ? c.ZP.getSkuIdForPlan(n.planId) : null) === f.Si.TIER_2;

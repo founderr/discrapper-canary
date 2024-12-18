@@ -35,8 +35,8 @@ t.Z = (e) => {
         }),
         S = (0, c.Ng)(),
         R = null != N && n === N.sku_id,
-        { enabled: A } = o._.useExperiment({ location: 'SubscribeButton' }, { autoTrackExposure: !1 }),
-        j = A && (null == v ? void 0 : v.trial_id) === m.a7,
+        { enabled: j } = o._.useExperiment({ location: 'SubscribeButton' }, { autoTrackExposure: !1 }),
+        A = j && (null == v ? void 0 : v.trial_id) === m.a7,
         P = h
             ? g.intl.string(g.t.J61px8)
             : null != S
@@ -47,7 +47,7 @@ t.Z = (e) => {
                     shouldShowUpsells: !1,
                     trialDurationCopy: I,
                     isPersistentCTA: E,
-                    shouldShowReferralTrialCopy: j,
+                    shouldShowReferralTrialCopy: A,
                     subscriptionTrial: N
                 });
     return (0, i.jsx)(u.Z, {

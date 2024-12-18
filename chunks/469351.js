@@ -1,6 +1,6 @@
 n.d(t, {
     t: function () {
-        return A;
+        return Z;
     }
 }),
     n(47120),
@@ -21,9 +21,9 @@ var i,
     p = n(962086),
     f = n(225675),
     C = n(703656),
-    I = n(430824),
+    v = n(430824),
     _ = n(594174),
-    v = n(63063),
+    I = n(63063),
     N = n(267101),
     T = n(294294),
     b = n(310800),
@@ -32,18 +32,18 @@ var i,
     E = n(176505),
     R = n(388032),
     y = n(969033);
-function A(e) {
+function Z(e) {
     let { guildId: t, hasValidApplication: n } = e,
         { listingsLoaded: i } = (0, N.eD)(t),
-        r = (0, o.e7)([I.Z], () => I.Z.getGuild(t)),
-        A = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
-        Z = (null == r ? void 0 : r.isOwner(A)) === !0,
+        r = (0, o.e7)([v.Z], () => v.Z.getGuild(t)),
+        Z = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
+        A = (null == r ? void 0 : r.isOwner(Z)) === !0,
         { loading: L } = (0, d.H)(t),
         [D, O] = s.useState(n ? 'manage_listings' : 'payment');
     (0, h.P)(r);
-    let P = s.useCallback(() => {
+    let k = s.useCallback(() => {
         if (null == r) return;
-        let e = I.Z.getRole(r.id, r.getEveryoneRoleId());
+        let e = v.Z.getRole(r.id, r.getEveryoneRoleId());
         if (null == e) return;
         x.Z.close();
         let t = { [e.id]: e };
@@ -57,7 +57,7 @@ function A(e) {
     }, [r]);
     if (!i || L) return (0, l.jsx)(c.Spinner, {});
     if (null == r) return null;
-    let k = (0, l.jsxs)(l.Fragment, {
+    let P = (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(c.FormTitle, {
                     tag: c.FormTitleTags.H1,
@@ -66,8 +66,8 @@ function A(e) {
                 (0, l.jsx)(c.FormText, {
                     type: c.FormText.Types.DESCRIPTION,
                     children: R.intl.format(R.t.xiYuDg, {
-                        monetizationPolicyLink: v.Z.getArticleURL(S.BhN.CREATOR_POLICY),
-                        serverProductsSupportLink: v.Z.getCreatorSupportArticleURL(S.BhN.SERVER_PRODUCTS)
+                        monetizationPolicyLink: I.Z.getArticleURL(S.BhN.CREATOR_POLICY),
+                        serverProductsSupportLink: I.Z.getCreatorSupportArticleURL(S.BhN.SERVER_PRODUCTS)
                     })
                 })
             ]
@@ -92,7 +92,7 @@ function A(e) {
                     disabled: !n,
                     children: R.intl.string(R.t.wlZ1mp)
                 }),
-                Z
+                A
                     ? (0, l.jsx)(c.TabBar.Item, {
                           id: 'payment',
                           className: y.tabBarItem,
@@ -103,7 +103,7 @@ function A(e) {
                     ? (0, l.jsx)('div', {
                           className: y.previewButton,
                           children: (0, l.jsx)(c.Button, {
-                              onClick: P,
+                              onClick: k,
                               color: c.Button.Colors.PRIMARY,
                               size: c.Button.Sizes.SMALL,
                               look: c.Button.Looks.OUTLINED,
@@ -127,7 +127,7 @@ function A(e) {
     return (0, l.jsxs)(u.AL, {
         guildId: t,
         children: [
-            k,
+            P,
             (0, l.jsx)(g.Z, { guild: r }),
             (0, l.jsx)('div', {
                 className: y.tabBarContainer,

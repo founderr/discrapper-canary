@@ -16,37 +16,37 @@ var i = n(200651),
     f = n(240938);
 t.Z = (e) => {
     let { guildId: t, handleUpdate: n, progress: l, error: C } = e,
-        { interests: I } = l,
-        [_, v] = r.useState(''),
+        { interests: v } = l,
+        [_, I] = r.useState(''),
         [N, T] = r.useState(0),
         b = (0, c.e7)([d.default], () => d.default.getId()),
         j = r.useMemo(() => (0, a.chunk)((0, u.XV)(g.i6, b), 9), [b]),
         S = [...j[N], ...j[(N + 1) % j.length]],
-        E = r.useMemo(() => Array.from(I), [I]),
+        E = r.useMemo(() => Array.from(v), [v]),
         R = r.useMemo(() => E.filter((e) => !g.WZ.has(e) && !g.gh.has(e)), [E]),
         y = (e) => {
-            let t = new Set(I);
+            let t = new Set(v);
             t.delete(e), n({ interests: t });
         },
-        A = r.useCallback(
+        Z = r.useCallback(
             (e) => {
-                if (I.size === g.c4) return;
+                if (v.size === g.c4) return;
                 let t = null != e ? e : _.trim();
                 if (0 === t.length) return;
-                let i = new Set(I);
-                i.add(t), n({ interests: i }), v('');
+                let i = new Set(v);
+                i.add(t), n({ interests: i }), I('');
             },
-            [n, _, I]
+            [n, _, v]
         ),
-        Z = r.useCallback(
+        A = r.useCallback(
             (e) => {
                 switch (e.key) {
                     case 'Enter':
                     case 'Tab':
-                        e.preventDefault(), e.stopPropagation(), A();
+                        e.preventDefault(), e.stopPropagation(), Z();
                 }
             },
-            [A]
+            [Z]
         ),
         L = r.useCallback(() => {
             T((e) => (e + 1) % j.length);
@@ -91,15 +91,15 @@ t.Z = (e) => {
                                         autoFocus: !0,
                                         inputClassName: f.input,
                                         value: _,
-                                        onKeyDown: Z,
-                                        onChange: v,
+                                        onKeyDown: A,
+                                        onChange: I,
                                         placeholder: x.intl.string(x.t.axCpsL),
                                         maxLength: g.Sq,
-                                        disabled: I.size === g.c4
+                                        disabled: v.size === g.c4
                                     }),
                                     _.length > 0 &&
                                         (0, i.jsx)(o.Clickable, {
-                                            onClick: () => A(_.trim()),
+                                            onClick: () => Z(_.trim()),
                                             className: s()(f.plusIcon, f.clickable),
                                             children: (0, i.jsx)(o.PlusSmallIcon, {
                                                 size: 'md',
@@ -131,8 +131,8 @@ t.Z = (e) => {
                                             variant: 'text-xs/semibold',
                                             color: 'interactive-normal',
                                             text: e,
-                                            selected: I.has(e),
-                                            onClick: I.has(e) ? y : A
+                                            selected: v.has(e),
+                                            onClick: v.has(e) ? y : Z
                                         },
                                         e
                                     ),

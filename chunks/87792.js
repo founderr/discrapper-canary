@@ -24,8 +24,8 @@ var i = n(200651),
     I = n(895328),
     S = n(292352),
     R = n(981631),
-    A = n(388032),
-    j = n(95857);
+    j = n(388032),
+    A = n(95857);
 function P() {
     let e = r.useCallback(() => {
         (0, o.openModalLazy)(async () => {
@@ -34,12 +34,12 @@ function P() {
         });
     }, []);
     return (0, i.jsx)(o.Clickable, {
-        className: j.tooltip,
+        className: A.tooltip,
         onClick: e,
         children: (0, i.jsx)(o.CircleInformationIcon, {
             size: 'custom',
             color: 'currentColor',
-            className: j.icon,
+            className: A.icon,
             width: 15,
             height: 15
         })
@@ -48,7 +48,7 @@ function P() {
 function Z(e) {
     let { displayType: t } = e,
         n = r.useCallback(() => {
-            (0, o.showToast)((0, o.createToast)(A.intl.string(A.t.Wu8BKy), o.ToastType.FAILURE));
+            (0, o.showToast)((0, o.createToast)(j.intl.string(j.t.Wu8BKy), o.ToastType.FAILURE));
         }, []),
         a = (0, E.Z)(),
         l = (0, _.ws)(t),
@@ -87,14 +87,14 @@ function Z(e) {
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(o.Text, {
-                            className: j.sectionHeader,
+                            className: A.sectionHeader,
                             variant: 'eyebrow',
                             color: 'header-secondary',
                             children: I
                         }),
                         void 0 !== h.sectionDescription
                             ? (0, i.jsx)(o.Text, {
-                                  className: j.sectionDescription,
+                                  className: A.sectionDescription,
                                   variant: 'text-md/medium',
                                   color: 'text-muted',
                                   children: h.sectionDescription(null != a && a, v)
@@ -107,28 +107,28 @@ function Z(e) {
     if (0 === l.length) return null;
     let Z = l.slice(0, b);
     return (0, i.jsxs)('div', {
-        className: j.actionSection,
+        className: A.actionSection,
         children: [
             P(),
             (0, i.jsx)('div', {
-                className: j.actions,
+                className: A.actions,
                 style: { maxHeight: 65 * Z.length },
                 children: Z.map((e, t) => R({ row: t }))
             }),
             Z.length !== c
                 ? (0, i.jsx)(o.Clickable, {
-                      className: j.loadMoreBar,
+                      className: A.loadMoreBar,
                       onClick: N,
                       role: 'button',
                       children: f
                           ? (0, i.jsx)(o.Spinner, {
                                 type: o.Spinner.Type.PULSING_ELLIPSIS,
-                                className: j.spinner
+                                className: A.spinner
                             })
                           : (0, i.jsx)(o.Text, {
-                                className: j.loadMore,
+                                className: A.loadMore,
                                 variant: 'text-sm/bold',
-                                children: A.intl.format(A.t['7dMmJS'], { pageSize: Math.min(c - Z.length, S.iB) })
+                                children: j.intl.format(j.t['7dMmJS'], { pageSize: Math.min(c - Z.length, S.iB) })
                             })
                   })
                 : null
@@ -138,7 +138,7 @@ function Z(e) {
 let M = () => {
         let e = (0, E.Z)(),
             t = (0, b.mq)(S.ne.ACTIVE),
-            n = (0, f.o)(A.intl.formatToPlainString(A.t['7hqFl5'], { activeLinks: t.length }), A.intl.string(A.t['Q/D/0d'])),
+            n = (0, f.o)(j.intl.formatToPlainString(j.t['7hqFl5'], { activeLinks: t.length }), j.intl.string(j.t['Q/D/0d'])),
             r = (0, m.Qr)(!!e),
             a = (0, b.Rd)(r);
         return e && t.length > 1
@@ -153,7 +153,7 @@ let M = () => {
                           : (0, i.jsx)(o.EyeIcon, {
                                 size: 'xs',
                                 color: 'currentColor',
-                                className: j.icon
+                                className: A.icon
                             }),
                       (0, i.jsx)(o.Text, {
                           variant: 'eyebrow',
@@ -168,14 +168,14 @@ let M = () => {
         return void 0 === a
             ? null
             : (0, i.jsxs)('div', {
-                  className: j.accountRow,
+                  className: A.accountRow,
                   children: [
                       (0, i.jsx)(v.r, {
                           user: a,
                           avatarSize: r
                       }),
                       (0, i.jsxs)('div', {
-                          className: j.headerText,
+                          className: A.headerText,
                           children: [
                               (0, i.jsx)(N.Z, { user: a }),
                               void 0 !== n
@@ -207,7 +207,7 @@ let M = () => {
                 []
             );
         return (0, i.jsx)(o.Select, {
-            className: j.select,
+            className: A.select,
             renderOptionLabel: s,
             renderOptionValue: (e) => {
                 let [t] = e;
@@ -241,24 +241,24 @@ t.Z = (e) => {
         a = (0, m.t3)(),
         s = (0, b.Rd)(a);
     return (0, i.jsxs)('div', {
-        className: j.container,
+        className: A.container,
         children: [
             (0, i.jsxs)('div', {
-                className: j.connectedCounter,
+                className: A.connectedCounter,
                 children: [(0, i.jsx)(M, {}), (0, i.jsx)(P, {})]
             }),
             (0, i.jsxs)('div', {
-                className: j.card,
+                className: A.card,
                 children: [
                     (0, i.jsx)('div', {
-                        className: j.header,
+                        className: A.header,
                         children: (0, i.jsx)(w, { userId: t.id })
                     }),
                     (0, i.jsxs)('div', {
-                        className: j.content,
+                        className: A.content,
                         children: [
                             (0, i.jsx)('div', {
-                                className: j.activityCounterRow,
+                                className: A.activityCounterRow,
                                 children: n.map((e) => {
                                     let [t, n] = e;
                                     return (0, i.jsx)(
@@ -272,14 +272,14 @@ t.Z = (e) => {
                                 })
                             }),
                             (0, i.jsx)('div', {
-                                className: j.activityOverview,
+                                className: A.activityOverview,
                                 children: r
                                     ? n.map((e) => {
                                           let [t] = e;
                                           return (0, i.jsx)(Z, { displayType: t }, ''.concat(t, '-list'));
                                       })
                                     : (0, i.jsx)(I.Z, {
-                                          className: j.emptyActivity,
+                                          className: A.emptyActivity,
                                           text: null != s ? s : ''
                                       })
                             })

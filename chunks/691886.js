@@ -21,7 +21,7 @@ var i = n(200651),
     p = n(981631),
     f = n(388032),
     C = n(904685);
-function I(e) {
+function v(e) {
     return String(e);
 }
 function _(e) {
@@ -52,7 +52,7 @@ function _(e) {
         ]
     });
 }
-function v() {
+function I() {
     return (0, i.jsx)(_, {
         icon: (0, i.jsx)(o.PlusSmallIcon, {
             size: 'md',
@@ -80,18 +80,18 @@ function N(e) {
 }
 function T(e) {
     let { value: t } = e;
-    return null != t ? (0, i.jsx)(N, { channelId: t }) : (0, i.jsx)(v, {});
+    return null != t ? (0, i.jsx)(N, { channelId: t }) : (0, i.jsx)(I, {});
 }
 function b(e) {
     let { guildId: t, value: l, initialChannelId: s, omitChannelIds: d, 'aria-labelledby': C, onChange: _ } = e,
-        v = f.intl.string(f.t.d7YJMD),
+        I = f.intl.string(f.t.d7YJMD),
         N = (0, a.e7)([m.Z], () => m.Z.getCategories(t), [t]),
         b = (0, x.m7)(null != l ? l : p.lds),
         j = r.useMemo(() => {
             let e = [
                     {
                         value: null,
-                        label: v
+                        label: I
                     }
                 ],
                 t = !1;
@@ -115,7 +115,7 @@ function b(e) {
                     }),
                 e
             );
-        }, [v, l, b, N, d, s]);
+        }, [I, l, b, N, d, s]);
     return (0, i.jsx)(o.Select, {
         placeholder: f.intl.string(f.t.r2pts7),
         options: j,
@@ -132,8 +132,8 @@ function b(e) {
                   })
                 : _(e);
         },
-        isSelected: (e) => null != l && I(e) === I(l),
-        serialize: I,
+        isSelected: (e) => null != l && v(e) === v(l),
+        serialize: v,
         renderOptionLabel: T,
         renderOptionValue: (e) => {
             let [t] = e;

@@ -24,7 +24,7 @@ var i = n(200651),
     I = n(259289),
     S = n(232186),
     R = n(926895);
-function A(e) {
+function j(e) {
     let { header: t, description: n, stepNumber: r } = e;
     return (0, i.jsxs)('div', {
         className: I.step,
@@ -53,7 +53,7 @@ function A(e) {
         ]
     });
 }
-function j() {
+function A() {
     return (0, i.jsxs)('div', {
         className: s()(I.box, I.linkingBanner, I.linkingBannerParent),
         children: [
@@ -86,17 +86,17 @@ function j() {
             (0, i.jsxs)('div', {
                 className: I.steps,
                 children: [
-                    (0, i.jsx)(A, {
+                    (0, i.jsx)(j, {
                         header: N.intl.string(N.t['7xxAnp']),
                         description: N.intl.string(N.t['1M9So6']),
                         stepNumber: 1
                     }),
-                    (0, i.jsx)(A, {
+                    (0, i.jsx)(j, {
                         header: N.intl.string(N.t['AXgx+f']),
                         description: N.intl.string(N.t.GzMFnZ),
                         stepNumber: 2
                     }),
-                    (0, i.jsx)(A, {
+                    (0, i.jsx)(j, {
                         header: N.intl.string(N.t.MZn1tL),
                         description: N.intl.string(N.t['8rLBxM']),
                         stepNumber: 3
@@ -301,6 +301,6 @@ t.Z = () => {
     let e = (0, p.Z)();
     return (0, i.jsxs)('div', {
         className: I.container,
-        children: [e ? (0, i.jsx)(j, {}) : (0, i.jsx)(P, {}), (0, i.jsx)(M, {}), (0, i.jsx)(w, {}), (0, i.jsx)(B, {}), (0, i.jsx)(O, {})]
+        children: [e ? (0, i.jsx)(A, {}) : (0, i.jsx)(P, {}), (0, i.jsx)(M, {}), (0, i.jsx)(w, {}), (0, i.jsx)(B, {}), (0, i.jsx)(O, {})]
     });
 };

@@ -14,8 +14,8 @@ var i = n(200651),
 t.Z = (e) => {
     let { className: t, isDisabled: l, sticker: x, canManageSticker: p } = e,
         [f, C] = r.useState(!1),
-        [I, _] = (0, c.Z)(null, 4000),
-        v = () => {
+        [v, _] = (0, c.Z)(null, 4000),
+        I = () => {
             (0, a.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('93626'), n.e('64493')]).then(n.bind(n, 136735));
                 return (t) =>
@@ -37,8 +37,8 @@ t.Z = (e) => {
         T = d.ZP.useUserTag(x.user);
     return (0, i.jsx)(a.Tooltip, {
         color: a.Tooltip.Colors.RED,
-        forceOpen: null != I,
-        text: I,
+        forceOpen: null != v,
+        text: v,
         children: () =>
             (0, i.jsxs)('div', {
                 className: s()(g.wrapper, t, { [g.wrapperDisabled]: l }),
@@ -83,7 +83,7 @@ t.Z = (e) => {
                                       children: [
                                           (0, i.jsx)(a.Clickable, {
                                               className: g.action,
-                                              onClick: v,
+                                              onClick: I,
                                               'aria-label': h.intl.string(h.t.bt75u7),
                                               children: (0, i.jsx)(a.PencilIcon, {
                                                   size: 'xs',

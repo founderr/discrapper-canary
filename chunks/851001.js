@@ -24,8 +24,8 @@ t.Z = (e) => {
     let { className: a, isFooterVisible: v, isDarkMode: N, isReducedMotion: I } = e,
         { analyticsLocations: S } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_FOOTER_CTA),
         R = (0, g.Ng)(),
-        A = (0, g.Wp)(R, _.Si.TIER_2) ? _.Si.TIER_2 : void 0,
-        j = (0, f.N)(),
+        j = (0, g.Wp)(R, _.Si.TIER_2) ? _.Si.TIER_2 : void 0,
+        A = (0, f.N)(),
         P = (0, m.Nx)(),
         Z = (0, u.rO)(),
         M = r.useRef(null),
@@ -46,7 +46,7 @@ t.Z = (e) => {
                         children: E.intl.string(E.t.lEw32t)
                     }),
                     (0, i.jsx)(p.PK, {
-                        subscriptionTier: null !== (n = null == j ? void 0 : null === (t = j.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : A,
+                        subscriptionTier: null !== (n = null == A ? void 0 : null === (t = A.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : j,
                         inOfferExperience: P,
                         containerClassName: s()(b.footerCTAContainer),
                         isMarketingPageV2Enabled: !0,

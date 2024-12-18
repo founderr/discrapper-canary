@@ -15,9 +15,9 @@ var i = n(200651),
     p = n(175557),
     f = n(688298),
     C = n(995119),
-    I = n(116175),
+    v = n(116175),
     _ = n(308083),
-    v = n(388032),
+    I = n(388032),
     N = n(463297),
     T = n(240938);
 let b = [
@@ -89,8 +89,8 @@ let b = [
 t.Z = (e) => {
     var t;
     let { handleUpdate: n, progress: l, guildId: a } = e,
-        { banner: S, brandPrimaryColor: E, brandSecondaryColor: R, badgePrimaryColor: y, badgeSecondaryColor: A } = l,
-        Z = (0, u.e7)([g.Z], () => g.Z.getGuild(a)),
+        { banner: S, brandPrimaryColor: E, brandSecondaryColor: R, badgePrimaryColor: y, badgeSecondaryColor: Z } = l,
+        A = (0, u.e7)([g.Z], () => g.Z.getGuild(a)),
         L = null !== (t = (0, u.e7)([h.Z], () => h.Z.getMemberCount(a))) && void 0 !== t ? t : 0,
         D = r.useMemo(
             () => ({
@@ -100,19 +100,19 @@ t.Z = (e) => {
             [E, R]
         ),
         O = r.useMemo(() => {
-            if (E === y && R === A) return 1;
+            if (E === y && R === Z) return 1;
             for (let e = 0; e < _.ym.length; e++) if (_.ym[e].primary === l.brandPrimaryColor && _.ym[e].secondary === l.brandSecondaryColor) return 2 + e;
             return 0;
-        }, [E, R, y, A, l.brandPrimaryColor, l.brandSecondaryColor]),
-        [P, k] = r.useState(!1),
+        }, [E, R, y, Z, l.brandPrimaryColor, l.brandSecondaryColor]),
+        [k, P] = r.useState(!1),
         M = 0 === O,
         w = 1 === O,
         B = r.useMemo(() => {
             if (M) return D;
             if (w)
                 return {
-                    primary: null != y ? y : I.Nh,
-                    secondary: null != A ? A : I.vY
+                    primary: null != y ? y : v.Nh,
+                    secondary: null != Z ? Z : v.vY
                 };
             {
                 let e = _.ym[O - 2];
@@ -121,7 +121,7 @@ t.Z = (e) => {
                     secondary: e.secondary
                 };
             }
-        }, [D, w, M, y, A, O]),
+        }, [D, w, M, y, Z, O]),
         U = r.useCallback(() => {
             let e = b[Math.floor(Math.random() * b.length)].bannerKind,
                 t = s().random().hex();
@@ -143,8 +143,8 @@ t.Z = (e) => {
         return {
             ...l,
             id: a,
-            name: null !== (e = null == Z ? void 0 : Z.name) && void 0 !== e ? e : '',
-            icon: null == Z ? void 0 : Z.icon,
+            name: null !== (e = null == A ? void 0 : A.name) && void 0 !== e ? e : '',
+            icon: null == A ? void 0 : A.icon,
             memberCount: L,
             games: Array.from(l.gameApplicationIds),
             traits: Array.from(l.interests),
@@ -152,7 +152,7 @@ t.Z = (e) => {
             badge: {
                 badgeKind: l.badgeKind,
                 primaryColor: null != y ? y : _.OH,
-                secondaryColor: null != A ? A : _.K_
+                secondaryColor: null != Z ? Z : _.K_
             },
             branding: {
                 primaryColor: null !== (t = B.primary) && void 0 !== t ? t : _.OH,
@@ -169,20 +169,20 @@ t.Z = (e) => {
                 {}
             )
         };
-    }, [l, a, Z, L, S, y, A, B]);
+    }, [l, a, A, L, S, y, Z, B]);
     return (0, i.jsxs)('div', {
         className: T.slideContent,
         children: [
             (0, i.jsx)(m.Heading, {
                 variant: 'heading-xxl/medium',
                 className: T.title,
-                children: v.intl.string(v.t.kPwMOz)
+                children: I.intl.string(I.t.kPwMOz)
             }),
             (0, i.jsx)(m.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
                 className: T.subtitle,
-                children: v.intl.string(v.t['E+KhDA'])
+                children: I.intl.string(I.t['E+KhDA'])
             }),
             (0, i.jsxs)('div', {
                 className: N.content,
@@ -199,7 +199,7 @@ t.Z = (e) => {
                                         (0, i.jsx)(m.Text, {
                                             variant: 'text-xs/semibold',
                                             color: 'text-muted',
-                                            children: v.intl.string(v.t.Ul1tIS)
+                                            children: I.intl.string(I.t.Ul1tIS)
                                         }),
                                         (0, i.jsxs)('div', {
                                             className: N.colorPickerGrid,
@@ -213,17 +213,17 @@ t.Z = (e) => {
                                                     onSecondaryColorChange: (e) => {
                                                         n({ brandSecondaryColor: (0, d.Rf)(e) });
                                                     },
-                                                    shouldShow: P,
-                                                    onRequestClose: () => k(!1),
+                                                    shouldShow: k,
+                                                    onRequestClose: () => P(!1),
                                                     children: (e) =>
                                                         (0, i.jsx)(m.Clickable, {
                                                             ...e,
                                                             onClick: () => {
-                                                                k((e) => !e);
+                                                                P((e) => !e);
                                                             },
                                                             className: o()(N.brandItemContainer, { [N.brandItemContainerSelected]: 0 === O }),
                                                             children: (0, i.jsx)(j, {
-                                                                name: v.intl.string(v.t.AemVoa),
+                                                                name: I.intl.string(I.t.AemVoa),
                                                                 isCustom: !0
                                                             })
                                                         })
@@ -232,14 +232,14 @@ t.Z = (e) => {
                                                     onClick: () => {
                                                         n({
                                                             brandPrimaryColor: null != y ? y : _.OH,
-                                                            brandSecondaryColor: null != A ? A : _.K_
+                                                            brandSecondaryColor: null != Z ? Z : _.K_
                                                         });
                                                     },
                                                     className: o()(N.brandItemContainer, { [N.brandItemContainerSelected]: 1 === O }),
                                                     children: (0, i.jsx)(j, {
-                                                        name: v.intl.string(v.t['1Pvr/v']),
+                                                        name: I.intl.string(I.t['1Pvr/v']),
                                                         primaryColor: y,
-                                                        secondaryColor: A
+                                                        secondaryColor: Z
                                                     })
                                                 }),
                                                 _.ym.map((e, t) =>
@@ -273,7 +273,7 @@ t.Z = (e) => {
                                         (0, i.jsx)(m.Text, {
                                             variant: 'text-xs/semibold',
                                             color: 'text-muted',
-                                            children: v.intl.string(v.t.nH6S2d)
+                                            children: I.intl.string(I.t.nH6S2d)
                                         }),
                                         (0, i.jsx)('div', {
                                             className: N.bannerPickerGrid,

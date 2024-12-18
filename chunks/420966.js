@@ -36,7 +36,7 @@ function p(e) {
             },
             [f]
         ),
-        I = (0, l.e7)(
+        v = (0, l.e7)(
             [d.Z],
             () => {
                 var e;
@@ -45,7 +45,7 @@ function p(e) {
             [x.id, t.id]
         ),
         _ = (0, o.pM)(t.id, x.id),
-        v = (0, u.Z)(x);
+        I = (0, u.Z)(x);
     r.useEffect(() => {
         _ && f(m.ZI.PERMISSIONS);
     }, [_, f]);
@@ -84,10 +84,10 @@ function p(e) {
                         : null
                 ]
             }),
-            null != v
+            null != I
                 ? (0, i.jsx)(s.HelpMessage, {
                       messageType: s.HelpMessageTypes.WARNING,
-                      children: v
+                      children: I
                   })
                 : null,
             (0, i.jsxs)(s.TabBar, {
@@ -119,7 +119,7 @@ function p(e) {
                         className: g.tabBarItem,
                         id: m.ZI.MEMBERS,
                         disabled: _,
-                        children: _ ? h.intl.string(h.t['kg//+/']) : h.intl.formatToPlainString(h.t.bHnZWV, { numMembers: String(I) })
+                        children: _ ? h.intl.string(h.t['kg//+/']) : h.intl.formatToPlainString(h.t.bHnZWV, { numMembers: String(v) })
                     })
                 ]
             })

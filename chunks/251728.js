@@ -12,7 +12,7 @@ function a(e, n, r) {
         e
     );
 }
-r(685816), r(794934), r(198647);
+r(685816), r(549616), r(794934), r(198647);
 class s {
     static fromServer(e) {
         return new s(e);
@@ -30,6 +30,6 @@ class s {
                         throw Error('Unknown block type: '.concat(e.type));
                 }
             })),
-            (this.categories = e.categories);
+            (this.categories = e.categories.map((e) => CollectiblesCategoryRecord.fromServer(e)));
     }
 }

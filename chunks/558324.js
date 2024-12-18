@@ -9,7 +9,7 @@ var i = n(200651),
 t.Z = (e) => {
     let { className: t, tags: n, value: l, onRemoveTag: d, onAddTag: u, maxTaxLength: m, maxTags: h, disabled: g, placeholder: x, ...p } = e,
         [f, C] = r.useState(null != l ? l : ''),
-        I = n.map((e, t) =>
+        v = n.map((e, t) =>
             (0, i.jsxs)(
                 'span',
                 {
@@ -35,7 +35,7 @@ t.Z = (e) => {
             let e = f.trim();
             if (0 !== e.length) (null == h || !(n.length >= h)) && (u(e), C(''));
         }, [f, h, u, n.length]),
-        v = r.useCallback(
+        I = r.useCallback(
             (e) => {
                 switch (e.keyCode) {
                     case o.yXg.BACKSPACE:
@@ -52,13 +52,13 @@ t.Z = (e) => {
     return (0, i.jsxs)('div', {
         className: s()(t, c.inputWrapper, { [c.disabled]: g }),
         children: [
-            I,
+            v,
             (0, i.jsx)(a.TextInput, {
                 className: c.inputOuter,
                 inputClassName: c.inputInner,
                 ...p,
                 value: f,
-                onKeyDown: v,
+                onKeyDown: I,
                 onChange: C,
                 maxLength: m,
                 disabled: g,

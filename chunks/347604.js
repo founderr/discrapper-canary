@@ -15,9 +15,9 @@ var i = n(200651),
     p = n(259674),
     f = n(845377),
     C = n(981631),
-    I = n(388032),
+    v = n(388032),
     _ = n(442344),
-    v = n(716455);
+    I = n(716455);
 let N = ['322850917248663552', '172018499005317120', '414234792121597953', '228406572756369408'],
     T = ['620723483965653003', '662246299369734154', '181970867549503489', '102860784329052160'];
 t.Z = (e) => {
@@ -35,19 +35,19 @@ t.Z = (e) => {
             }),
             [t.id]
         ),
-        [A, Z] = (0, o.Wu)([d.Z], () => [null, d.Z.getMemberCount(t.id)], [t.id]),
+        [Z, A] = (0, o.Wu)([d.Z], () => [null, d.Z.getMemberCount(t.id)], [t.id]),
         L = r.useCallback(() => {
             null != n && n();
         }, [n]),
         D = null;
     return (
-        l ? (y ? (D = I.intl.string(I.t.zP8DFx)) : !R && (D = I.intl.string(I.t.ABFu19))) : (D = I.intl.string(I.t['5VbUBw'])),
+        l ? (y ? (D = v.intl.string(v.t.zP8DFx)) : !R && (D = v.intl.string(v.t.ABFu19))) : (D = v.intl.string(v.t['5VbUBw'])),
         (0, i.jsxs)('div', {
             className: _.container,
             children: [
                 (0, i.jsx)('img', {
                     alt: '',
-                    src: v,
+                    src: I,
                     className: _.sparkles
                 }),
                 (0, i.jsxs)('div', {
@@ -63,9 +63,9 @@ t.Z = (e) => {
                         (0, i.jsx)(g.Z, {
                             className: _.previewCard,
                             guild: t,
-                            description: I.intl.string(I.t['0k7fyM']),
-                            presenceCount: A,
-                            memberCount: Z
+                            description: v.intl.string(v.t['0k7fyM']),
+                            presenceCount: Z,
+                            memberCount: A
                         }),
                         (0, i.jsx)(g.Z, {
                             className: _.placeholderCard,
@@ -79,13 +79,13 @@ t.Z = (e) => {
                 (0, i.jsx)(c.Heading, {
                     className: _.header,
                     variant: 'heading-xl/semibold',
-                    children: I.intl.string(I.t.UwPrKS)
+                    children: v.intl.string(v.t.UwPrKS)
                 }),
                 (0, i.jsx)(c.Text, {
                     variant: 'text-md/normal',
                     className: _.valueProp,
                     color: 'header-secondary',
-                    children: I.intl.format(I.t.BhkgBg, {
+                    children: v.intl.format(v.t.BhkgBg, {
                         onLinkClick: () =>
                             (0, p.lW)({
                                 articleId: C.BhN.SERVER_DISCOVERY,
@@ -98,7 +98,7 @@ t.Z = (e) => {
                     variant: 'text-md/normal',
                     className: _.byline,
                     color: 'header-secondary',
-                    children: I.intl.format(I.t.ALSi8v, {
+                    children: v.intl.format(v.t.ALSi8v, {
                         onGuidelinesClick: () =>
                             (0, p.lW)({
                                 articleId: C.BhN.SERVER_DISCOVERY_GUIDELINES,
@@ -117,7 +117,7 @@ t.Z = (e) => {
                             size: c.Button.Sizes.LARGE,
                             disabled: !R || !l,
                             onClick: L,
-                            children: I.intl.string(I.t.oBIZwc)
+                            children: v.intl.string(v.t.oBIZwc)
                         })
                 }),
                 (0, i.jsx)(f.Z, {

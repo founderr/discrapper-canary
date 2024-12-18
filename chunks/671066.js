@@ -20,7 +20,7 @@ function h(e) {
         p = (e) => () => x(e),
         f = (0, d.c)(n.type, n, h),
         C = null === (t = n.metadata) || void 0 === t ? void 0 : t.channelId,
-        I = (0, r.e7)(
+        v = (0, r.e7)(
             [c.default, o.Z, a.Z],
             () => {
                 let e = a.Z.getChannel(C);
@@ -29,7 +29,7 @@ function h(e) {
             [C]
         );
     if (null == f) return null;
-    let { headerText: _, descriptionText: v, icon: N } = f;
+    let { headerText: _, descriptionText: I, icon: N } = f;
     return (0, i.jsxs)('div', {
         className: m.actionContainer,
         children: [
@@ -51,14 +51,14 @@ function h(e) {
                     (0, i.jsx)(l.Text, {
                         color: 'interactive-normal',
                         variant: 'text-xs/medium',
-                        children: v
+                        children: I
                     }),
                     g &&
                         (0, i.jsxs)(l.Text, {
                             color: 'text-muted',
                             variant: 'text-xs/medium',
                             children: [
-                                null != I && u.intl.format(u.t['8Sr/am'], { channelName: I }),
+                                null != v && u.intl.format(u.t['8Sr/am'], { channelName: v }),
                                 (0, i.jsx)(l.Clickable, {
                                     onClick: p(!0),
                                     className: m.editChannel,

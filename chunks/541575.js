@@ -15,9 +15,9 @@ var r = n(780384),
     p = n(388032),
     f = n(792464);
 t.Z = function (e) {
-    let { guild: t, disabled: C, role: I } = e,
+    let { guild: t, disabled: C, role: v } = e,
         _ = (0, s.ZP)(),
-        v = (0, u.oC)(t.id, I),
+        I = (0, u.oC)(t.id, v),
         { analyticsLocations: N } = (0, o.ZP)(),
         T = () => {
             (0, l.openModalLazy)(async () => {
@@ -26,8 +26,8 @@ t.Z = function (e) {
                     (0, i.jsx)(e, {
                         ...n,
                         guildId: t.id,
-                        onUploadIcon: (e) => (0, h._l)(I.id, e, null),
-                        onSelectUnicodeEmoji: (e) => (0, h._l)(I.id, null, e)
+                        onUploadIcon: (e) => (0, h._l)(v.id, e, null),
+                        onSelectUnicodeEmoji: (e) => (0, h._l)(v.id, null, e)
                     });
             });
         },
@@ -82,9 +82,9 @@ t.Z = function (e) {
                     (0, i.jsx)('div', {
                         className: f.previewContainer,
                         children:
-                            null != v
+                            null != I
                                 ? (0, i.jsx)(c.Z, {
-                                      ...v,
+                                      ...I,
                                       className: f.roleIconPreview,
                                       enableTooltip: !1
                                   })
@@ -104,13 +104,13 @@ t.Z = function (e) {
                         disabled: C,
                         children: p.intl.string(p.t.mD1oGB)
                     }),
-                    null != v
+                    null != I
                         ? (0, i.jsx)(l.Button, {
                               className: f.button,
                               color: (0, r.ap)(_) ? l.Button.Colors.PRIMARY : l.Button.Colors.TRANSPARENT,
                               look: l.Button.Looks.BLANK,
                               onClick: () => {
-                                  (0, h._l)(I.id, null, null);
+                                  (0, h._l)(v.id, null, null);
                               },
                               disabled: C,
                               children: p.intl.string(p.t['uY+Nk5'])

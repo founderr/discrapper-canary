@@ -23,9 +23,9 @@ var i = n(200651),
     p = n(958832),
     f = n(324067),
     C = n(984933),
-    I = n(259580),
+    v = n(259580),
     _ = n(999382),
-    v = n(743475),
+    I = n(743475),
     N = n(889369),
     T = n(570961),
     b = n(208665),
@@ -34,8 +34,8 @@ var i = n(200651),
     E = n(2348),
     R = n(353890),
     y = n(716130),
-    A = n(388032),
-    Z = n(152623);
+    Z = n(388032),
+    A = n(152623);
 function L(e) {
     let { guild: t } = e,
         l = (0, a.e7)([m.Z], () => m.Z.getEnabled(t.id)),
@@ -43,7 +43,7 @@ function L(e) {
         c = (0, j.Z)(t),
         f = (0, a.e7)([N.Z], () => N.Z.editedDefaultChannelIds),
         C = c.filter((e) => !f.has(e.id)),
-        [I, _] = r.useState(!1);
+        [v, _] = r.useState(!1);
     r.useEffect(() => {
         !s && !l && (0, x.S)(t.id);
     }, [t.id, s, l]);
@@ -58,65 +58,65 @@ function L(e) {
                 });
         });
     };
-    return I || 0 === C.length
+    return v || 0 === C.length
         ? null
         : (0, i.jsxs)('div', {
-              className: Z.recommendations,
+              className: A.recommendations,
               children: [
                   (0, i.jsx)(o.Text, {
                       variant: 'text-md/medium',
                       color: 'header-primary',
-                      children: A.intl.string(A.t.NN7rDw)
+                      children: Z.intl.string(Z.t.NN7rDw)
                   }),
                   (0, i.jsxs)('div', {
-                      className: Z.recsSubheader,
+                      className: A.recsSubheader,
                       children: [
                           (0, i.jsx)(o.Text, {
                               variant: 'text-xs/normal',
                               color: 'text-muted',
-                              children: A.intl.string(A.t['3Uuql5'])
+                              children: Z.intl.string(Z.t['3Uuql5'])
                           }),
                           (0, i.jsxs)(o.Clickable, {
-                              className: Z.dismissAll,
+                              className: A.dismissAll,
                               onClick: () => _(!0),
                               children: [
                                   (0, i.jsx)(o.CheckmarkLargeIcon, {
                                       size: 'xxs',
                                       color: 'currentColor',
-                                      className: Z.checkmark
+                                      className: A.checkmark
                                   }),
                                   (0, i.jsx)(o.Text, {
-                                      className: Z.dismissAllText,
+                                      className: A.dismissAllText,
                                       variant: 'text-xs/medium',
                                       color: 'text-brand',
-                                      children: A.intl.string(A.t.ZC3PJy)
+                                      children: Z.intl.string(Z.t.ZC3PJy)
                                   })
                               ]
                           })
                       ]
                   }),
                   (0, i.jsx)('div', {
-                      className: Z.recommendedChannels,
+                      className: A.recommendedChannels,
                       children: C.map((e, n) =>
                           (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsxs)('div', {
-                                      className: Z.channelRow,
+                                      className: A.channelRow,
                                       children: [
                                           (0, i.jsxs)('div', {
-                                              className: Z.channelInfo,
+                                              className: A.channelInfo,
                                               children: [
                                                   (0, i.jsxs)('div', {
-                                                      className: Z.channelName,
+                                                      className: A.channelName,
                                                       children: [
                                                           (0, i.jsx)(h._, {
                                                               channel: e,
                                                               guild: t
                                                           }),
                                                           (0, i.jsx)(d.Z, {
-                                                              className: Z.__invalid_name,
+                                                              className: A.__invalid_name,
                                                               children: (0, i.jsx)(o.Text, {
-                                                                  className: Z.__invalid_channelText,
+                                                                  className: A.__invalid_channelText,
                                                                   variant: 'text-md/medium',
                                                                   lineClamp: 1,
                                                                   color: 'text-normal',
@@ -130,7 +130,7 @@ function L(e) {
                                                             d.Z,
                                                             {
                                                                 children: (0, i.jsx)(o.Text, {
-                                                                    className: Z.topic,
+                                                                    className: A.topic,
                                                                     variant: 'text-xs/normal',
                                                                     children: g.Z.parseTopic(e.topic, !0, { channelId: e.id })
                                                                 })
@@ -144,15 +144,15 @@ function L(e) {
                                               ? (0, i.jsx)(o.Button, {
                                                     color: o.Button.Colors.BRAND,
                                                     size: o.Button.Sizes.SMALL,
-                                                    className: Z.addChannelCTA,
-                                                    onClick: () => (0, v.pt)(e.id),
-                                                    children: A.intl.string(A.t.OYkgVl)
+                                                    className: A.addChannelCTA,
+                                                    onClick: () => (0, I.pt)(e.id),
+                                                    children: Z.intl.string(Z.t.OYkgVl)
                                                 })
                                               : (0, i.jsxs)(o.Button, {
                                                     look: o.Button.Looks.OUTLINED,
                                                     color: o.Button.Colors.PRIMARY,
-                                                    className: Z.lockedPill,
-                                                    innerClassName: Z.lockedPillInner,
+                                                    className: A.lockedPill,
+                                                    innerClassName: A.lockedPillInner,
                                                     onClick: () => T(e.id),
                                                     children: [
                                                         (0, i.jsx)(o.LockIcon, {
@@ -161,18 +161,18 @@ function L(e) {
                                                         }),
                                                         (0, i.jsx)(o.Text, {
                                                             variant: 'text-sm/medium',
-                                                            children: A.intl.string(A.t.zA9d1N)
+                                                            children: Z.intl.string(Z.t.zA9d1N)
                                                         })
                                                     ]
                                                 })
                                       ]
                                   }),
-                                  n < C.length - 1 ? (0, i.jsx)('div', { className: Z.separator }) : null
+                                  n < C.length - 1 ? (0, i.jsx)('div', { className: A.separator }) : null
                               ]
                           })
                       )
                   }),
-                  (0, i.jsx)('div', { className: Z.largeSeparator })
+                  (0, i.jsx)('div', { className: A.largeSeparator })
               ]
           });
 }
@@ -189,7 +189,7 @@ function D(e) {
         if (t)
             return () => {
                 null != n &&
-                    (0, v.DO)(n)
+                    (0, I.DO)(n)
                         .then(() => {
                             u && (0, T.rS)(n, { ignoreDefaultPrompt: !0 }).catch(() => {});
                         })
@@ -201,32 +201,32 @@ function D(e) {
         : l
           ? (0, i.jsx)(o.Spinner, {})
           : (0, i.jsxs)('div', {
-                className: Z.columns,
+                className: A.columns,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: Z.channelBrowser,
+                        className: A.channelBrowser,
                         children: [
                             (0, i.jsx)(o.Clickable, {
-                                className: Z.collapseButton,
+                                className: A.collapseButton,
                                 onClick: () => x((e) => !e),
-                                children: (0, i.jsx)(I.Z, {
-                                    direction: g ? I.Z.Directions.DOWN : I.Z.Directions.UP,
+                                children: (0, i.jsx)(v.Z, {
+                                    direction: g ? v.Z.Directions.DOWN : v.Z.Directions.UP,
                                     height: 16,
                                     width: 16
                                 })
                             }),
                             (0, i.jsx)(o.Heading, {
-                                className: Z.header,
+                                className: A.header,
                                 variant: 'heading-lg/extrabold',
-                                children: A.intl.string(A.t['4GSygo'])
+                                children: Z.intl.string(Z.t['4GSygo'])
                             }),
                             (0, i.jsx)(o.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: A.intl.string(A.t.Kq7FAQ)
+                                children: Z.intl.string(Z.t.Kq7FAQ)
                             }),
                             (0, i.jsx)(S.Wu, {
-                                className: Z.advancedModeToggle,
+                                className: A.advancedModeToggle,
                                 guildId: n.id
                             }),
                             g
@@ -235,7 +235,7 @@ function D(e) {
                                       children: [
                                           (0, i.jsx)(L, { guild: n }),
                                           (0, i.jsx)(E.Z, {
-                                              className: s()(Z.channelBrowserOuter),
+                                              className: s()(A.channelBrowserOuter),
                                               guild: n,
                                               categories: d,
                                               channels: c,
@@ -246,21 +246,21 @@ function D(e) {
                             u &&
                                 (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        (0, i.jsx)('div', { className: Z.largeSeparator }),
+                                        (0, i.jsx)('div', { className: A.largeSeparator }),
                                         (0, i.jsx)(o.Heading, {
-                                            className: Z.prejoinHeader,
+                                            className: A.prejoinHeader,
                                             variant: 'heading-lg/extrabold',
-                                            children: A.intl.string(A.t.g2Rnpa)
+                                            children: Z.intl.string(Z.t.g2Rnpa)
                                         }),
                                         (0, i.jsx)(o.Text, {
-                                            className: Z.prejoinSubHeader,
+                                            className: A.prejoinSubHeader,
                                             variant: 'text-sm/normal',
                                             color: 'header-secondary',
-                                            children: A.intl.string(A.t.bLDQ1d)
+                                            children: Z.intl.string(Z.t.bLDQ1d)
                                         }),
                                         (0, i.jsx)('div', {
                                             ref: h,
-                                            className: Z.advancedModeQuestions,
+                                            className: A.advancedModeQuestions,
                                             children: (0, i.jsx)(y.Z, {
                                                 guildId: n.id,
                                                 prejoinOnly: !0,
@@ -289,14 +289,14 @@ function O() {
         ? null
         : (0, i.jsx)(c.Z, {
               onSave: () => {
-                  (0, v.DO)(e)
+                  (0, I.DO)(e)
                       .then(() => {
                           n && (0, T.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
                       })
                       .catch(() => {});
               },
-              onReset: v.BG,
+              onReset: I.BG,
               submitting: t,
-              onSaveText: A.intl.string(A.t.R3BPHx)
+              onSaveText: Z.intl.string(Z.t.R3BPHx)
           });
 }

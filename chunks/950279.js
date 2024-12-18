@@ -15,7 +15,7 @@ function x(e) {
     let { gameApplicationIds: t, preventGameRemoval: n, onUpdateGames: l, minGames: o = 1, error: x } = e,
         { options: p, matchSorterOptions: f } = (0, c.P)(),
         C = r.useMemo(() => Array.from(t), [t]),
-        I = r.useCallback(
+        v = r.useCallback(
             (e) => {
                 if (!(e.length < o)) l(new Set(e));
             },
@@ -29,7 +29,7 @@ function x(e) {
             },
             [n, t, l]
         ),
-        v = r.useCallback(() => null, []);
+        I = r.useCallback(() => null, []);
     return (0, i.jsx)('div', {
         className: h.inputContainer,
         children: (0, i.jsxs)(a.FormItem, {
@@ -43,12 +43,12 @@ function x(e) {
                     options: p,
                     value: C,
                     placeholder: m.intl.string(m.t.acyezc),
-                    onChange: I,
+                    onChange: v,
                     isDisabled: t.size === u.cm,
                     matchSorterOptions: f,
                     clearQueryOnSelect: !0,
                     customPillContainerClassName: h.pills,
-                    renderCustomPill: v
+                    renderCustomPill: I
                 }),
                 C.length > 0 &&
                     (0, i.jsxs)('div', {

@@ -19,9 +19,9 @@ var i = n(200651),
     p = n(464610),
     f = n(733629),
     C = n(598622),
-    I = n(921944),
+    v = n(921944),
     _ = n(388032),
-    v = n(232203);
+    I = n(232203);
 function N(e) {
     let t,
         { hideChangelog: n } = e,
@@ -30,7 +30,7 @@ function N(e) {
         b = (0, l.e7)([g.Z], () => g.Z.getCurrentPage());
     if (
         (r.useEffect(() => {
-            (0, o.EW)(s.z.COMMUNITY_GUILD_SETTINGS_SAFETY, { dismissAction: I.L.AUTO });
+            (0, o.EW)(s.z.COMMUNITY_GUILD_SETTINGS_SAFETY, { dismissAction: v.L.AUTO });
         }, []),
         null == T)
     )
@@ -68,8 +68,8 @@ function N(e) {
         children: [
             b !== x.u.OVERVIEW &&
                 (0, i.jsxs)(a.Button, {
-                    className: v.back,
-                    innerClassName: v.backButton,
+                    className: I.back,
+                    innerClassName: I.backButton,
                     look: a.Button.Looks.BLANK,
                     size: a.Button.Sizes.MIN,
                     onClick: () => {
@@ -77,7 +77,7 @@ function N(e) {
                     },
                     children: [
                         (0, i.jsx)(d.Z, {
-                            className: v.__invalid_arrow,
+                            className: I.__invalid_arrow,
                             direction: d.Z.Directions.LEFT
                         }),
                         (0, i.jsx)(a.Text, {

@@ -161,7 +161,7 @@ function c(e, t) {
             },
             [u]
         ),
-        I = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 var t;
                 u((e) => {
@@ -192,7 +192,7 @@ function c(e, t) {
             },
             [u]
         ),
-        v = i.useCallback(
+        I = i.useCallback(
             function (e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                     i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
@@ -292,16 +292,16 @@ function c(e, t) {
         ),
         j = i.useCallback(
             (e) => {
-                e.relatedTarget !== e.currentTarget && v(e, !1, !1);
+                e.relatedTarget !== e.currentTarget && I(e, !1, !1);
             },
-            [v]
+            [I]
         ),
         S = i.useCallback(
             (e) => {
                 let t = e.metaKey || e.ctrlKey;
-                if ('Meta' !== e.key) a.ye.has(e.key) ? v(e) : 'Backspace' === e.key ? N(e) : 'Escape' === e.key ? I(e) : 'a' === e.key && t ? b(e) : a.Bd.has(e.key) && t && T(e);
+                if ('Meta' !== e.key) a.ye.has(e.key) ? I(e) : 'Backspace' === e.key ? N(e) : 'Escape' === e.key ? v(e) : 'a' === e.key && t ? b(e) : a.Bd.has(e.key) && t && T(e);
             },
-            [v, N, I, b, T]
+            [I, N, v, b, T]
         );
     return {
         handlePasteEvent: g,
@@ -311,15 +311,15 @@ function c(e, t) {
             (e) => {
                 if (document.activeElement !== l.current) return;
                 let t = e.metaKey || e.ctrlKey;
-                'Backspace' === e.key ? N(e) : 'a' === e.key && t ? b(e) : 'Escape' === e.key ? I(e) : a.Bd.has(e.key) && t ? T(e) : 'Meta' !== e.key && I(e);
+                'Backspace' === e.key ? N(e) : 'a' === e.key && t ? b(e) : 'Escape' === e.key ? v(e) : a.Bd.has(e.key) && t ? T(e) : 'Meta' !== e.key && v(e);
             },
-            [T, N, b, I, l]
+            [T, N, b, v, l]
         ),
         handleRemoveTag: x,
         handleTagChangeEvent: p,
         handleSelectTag: f,
         handleUnselectTag: C,
-        handleResetTagSelections: I,
+        handleResetTagSelections: v,
         handleInputBlurEvent: j
     };
 }

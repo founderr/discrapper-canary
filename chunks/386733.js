@@ -79,7 +79,7 @@ let S = (e) => {
             ]
         });
     },
-    A = (e) => {
+    j = (e) => {
         let { userRecords: t, recipientStatus: n } = e,
             r = t.length,
             a = r < 1 ? null : t[0],
@@ -120,27 +120,27 @@ t.Z = (e) => {
         { isInSettings: u = !1 } = e,
         S = (0, l.e7)([_.Z], () => _.Z.getRecipientStatus()),
         R = (0, C.uv)('ReferralProgramProgressBar'),
-        j = (0, C.TW)('ReferralProgramProgressBar'),
+        A = (0, C.TW)('ReferralProgramProgressBar'),
         { referralSentUsers: P, hasSentAllReferrals: Z, refreshAt: M } = (0, E.G)(),
         B = r.useMemo(() => P.map((e) => new m.Z(e)), [P]),
         { subscriberHomeVariant: O } = h.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
         w = R === T.g2L.UNAPPLIED || R === T.g2L.QUALIFIED,
-        k = O === h.p.VARIANT_2,
-        y = {
+        y = O === h.p.VARIANT_2,
+        k = {
             redeemed: 0,
             converted: 0,
             sent: S.size
         };
     S.forEach((e) => {
-        e === p.Fe.REDEEMED && y.redeemed++, e === p.Fe.CONVERTED && (y.redeemed++, y.converted++);
+        e === p.Fe.REDEEMED && k.redeemed++, e === p.Fe.CONVERTED && (k.redeemed++, k.converted++);
     });
-    let L = y.sent === E.Q,
+    let L = k.sent === E.Q,
         U = f.Z.getArticleURL(T.BhN.REFERRAL_PROGRAM),
         { analyticsLocations: D } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
         H = r.useRef(null),
-        G = (y.sent / E.Q) * 100,
+        G = (k.sent / E.Q) * 100,
         V = !1;
-    j && null != M && ((V = 0 < (t = Math.ceil((new Date(M).getTime() - new Date().getTime()) / 86400000)) && t < C.AV), (a = (100 * (C.AV - t)) / C.AV));
+    A && null != M && ((V = 0 < (t = Math.ceil((new Date(M).getTime() - new Date().getTime()) / 86400000)) && t < C.AV), (a = (100 * (C.AV - t)) / C.AV));
     let F = V && null != t,
         W = (0, i.jsxs)('div', {
             className: N.referralInfoContent,
@@ -162,7 +162,7 @@ t.Z = (e) => {
                             children: (0, C.$s)({
                                 referralIncentiveLifecycleState: R,
                                 hasSentAll: L,
-                                referralsStatuses: y
+                                referralsStatuses: k
                             })
                         }),
                         F
@@ -182,7 +182,7 @@ t.Z = (e) => {
                                       })
                                   ]
                               })
-                            : (0, i.jsx)(A, {
+                            : (0, i.jsx)(j, {
                                   userRecords: B,
                                   recipientStatus: S
                               }),
@@ -191,7 +191,7 @@ t.Z = (e) => {
                             children: (0, C.Hg)({
                                 helpdeskArticle: U,
                                 referralIncentiveLifecycleState: R,
-                                referralsStatuses: y,
+                                referralsStatuses: k,
                                 isWithinCountdownRange: V
                             })
                         }),
@@ -199,7 +199,7 @@ t.Z = (e) => {
                             className: s()(N.expandedProgressBarButtonContainer, { [N.expandedProgressBarButtonContainerLayout]: !u }),
                             children: [
                                 !u &&
-                                    !k &&
+                                    !y &&
                                     (0, i.jsx)(b.Z, {
                                         color: o.ButtonColors.CUSTOM,
                                         buttonText: v.intl.string(v.t.Ve9Ge3),
@@ -241,7 +241,7 @@ t.Z = (e) => {
                 })
             ]
         }),
-        z = y.redeemed === E.Q;
+        z = k.redeemed === E.Q;
     return (0, i.jsx)(d.Gt, {
         value: D,
         children: (0, i.jsx)('div', {
@@ -258,8 +258,8 @@ t.Z = (e) => {
                 className: s()({
                     [N.expandedProgressBarContainer]: !u,
                     [N.expandedProgressBarContainerSettingsPage]: u,
-                    [N.expandedProgressBarContainerVariant1]: !k && !u,
-                    [N.expandedProgressBarContainerVariant2]: k && !u,
+                    [N.expandedProgressBarContainerVariant1]: !y && !u,
+                    [N.expandedProgressBarContainerVariant2]: y && !u,
                     [N.allReferralsSentBorder]: !F && z,
                     [N.containerWithBanner]: !F && w
                 }),

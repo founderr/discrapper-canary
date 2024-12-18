@@ -18,8 +18,8 @@ let b = (e) => {
     let { name: t, title: n, description: a, descriptionCta: h, previewImage: b, videoUrl: x, shouldLoadVideo: C, index: T, isCompact: v, isReducedMotion: N, onClick: I } = e,
         S = (0, g.rO)(),
         R = r.useRef(null),
-        A = r.useRef(0),
-        j = (function (e) {
+        j = r.useRef(0),
+        A = (function (e) {
             let t;
             switch (e) {
                 case f.dm.EMOJIS:
@@ -52,12 +52,12 @@ let b = (e) => {
             m.default.track(p.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
         }, 800),
         O = () => {
-            null != R.current && !N && ((R.current.currentTime = A.current), R.current.play());
+            null != R.current && !N && ((R.current.currentTime = j.current), R.current.play());
         },
         w = () => {
-            null != R.current && !N && ((A.current = R.current.currentTime), R.current.pause());
+            null != R.current && !N && ((j.current = R.current.currentTime), R.current.pause());
         },
-        k = () =>
+        y = () =>
             (0, i.jsxs)('div', {
                 className: s()({
                     [E.whatsNewTextBoxOuter]: !v,
@@ -92,7 +92,7 @@ let b = (e) => {
                         })
                 ]
             }),
-        y = (e) => {
+        k = (e) => {
             let { isLeft: t } = e;
             return (0, i.jsx)('div', {
                 className: s()({
@@ -124,7 +124,7 @@ let b = (e) => {
         },
         L = T % 2 == 0;
     return (0, i.jsx)('div', {
-        className: s()(j, {
+        className: s()(A, {
             [E.whatsNewBoxContainer]: !v,
             [E.compactBoxContainer]: v
         }),
@@ -134,10 +134,10 @@ let b = (e) => {
         onMouseLeave: w,
         children: L
             ? (0, i.jsxs)(i.Fragment, {
-                  children: [(0, i.jsx)(k, {}), (0, i.jsx)(y, { isLeft: L })]
+                  children: [(0, i.jsx)(y, {}), (0, i.jsx)(k, { isLeft: L })]
               })
             : (0, i.jsxs)(i.Fragment, {
-                  children: [(0, i.jsx)(y, { isLeft: L }), (0, i.jsx)(k, {})]
+                  children: [(0, i.jsx)(k, { isLeft: L }), (0, i.jsx)(y, {})]
               })
     });
 };

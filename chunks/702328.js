@@ -24,16 +24,16 @@ var i = n(200651),
     I = n(278605),
     S = n(286961),
     R = n(91802),
-    A = n(104494),
-    j = n(639119),
+    j = n(104494),
+    A = n(639119),
     P = n(906461),
     Z = n(8647),
     M = n(568126),
     B = n(605289),
     O = n(346497),
     w = n(218390),
-    k = n(823188),
-    y = n(241158),
+    y = n(823188),
+    k = n(241158),
     L = n(135785),
     U = n(498765),
     D = n(635921),
@@ -81,12 +81,12 @@ let eu = (e) => {
                               isFullScreen: t
                           }),
                       l &&
-                          (0, i.jsx)(y.Z, {
+                          (0, i.jsx)(k.Z, {
                               shouldLoadVideo: a,
                               isReducedMotion: o
                           }),
                       l &&
-                          (0, i.jsx)(y.Z, {
+                          (0, i.jsx)(k.Z, {
                               isBestOfNitro: !0,
                               shouldLoadVideo: a,
                               isReducedMotion: o
@@ -119,9 +119,9 @@ let eu = (e) => {
     };
 t.Z = (e) => {
     var t, n;
-    let { isFullscreen: a, entrypoint: y } = e;
+    let { isFullscreen: a, entrypoint: k } = e;
     (0, E.z)(h.X);
-    let U = y === $.EZ.ApplicationStoreHome,
+    let U = k === $.EZ.ApplicationStoreHome,
         H = r.useRef(null),
         G = r.useRef(null),
         V = (0, l.e7)([g.Z], () => g.Z.useReducedMotion),
@@ -135,16 +135,16 @@ t.Z = (e) => {
         [eT, ev] = r.useState(!1),
         [eN, eI] = r.useState(!1),
         eS = (0, T.rO)(),
-        [eR, eA] = r.useState(!1),
-        ej = (0, l.e7)([x.ZP], () => x.ZP.getPremiumTypeSubscription()),
-        eP = null != ej ? (0, v.Af)(ej) : null,
+        [eR, ej] = r.useState(!1),
+        eA = (0, l.e7)([x.ZP], () => x.ZP.getPremiumTypeSubscription()),
+        eP = null != eA ? (0, v.Af)(eA) : null,
         eZ = null != eP ? v.ZP.getSkuIdForPlan(eP.planId) : null,
         eM = null !== eZ && eZ !== $.Si.TIER_2 ? $.Si.TIER_2 : null,
         eB = (0, R.n)(),
         eO = null != eB,
-        [ew, ek] = r.useState(!1),
-        ey = (0, A.Ng)(),
-        eL = (0, j.N)(),
+        [ew, ey] = r.useState(!1),
+        ek = (0, j.Ng)(),
+        eL = (0, A.N)(),
         eU = null == eL ? void 0 : null === (t = eL.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
         eD = (0, N.Nx)(),
         eH = (0, O.Vi)(),
@@ -160,7 +160,7 @@ t.Z = (e) => {
             autoTrackExposure: !1
         }),
         r.useEffect(() => {
-            eA(!0);
+            ej(!0);
         }, []);
     let eW = (0, i.jsx)('div', {
             className: s()({
@@ -171,11 +171,11 @@ t.Z = (e) => {
                 onChange: (e) => ev(e),
                 threshold: 0.1,
                 active: !0,
-                children: (0, i.jsx)(k.ZP, {
-                    variant: eh ? k.NN.MARKETING_PAGE_V2 : k.NN.DEFAULT,
+                children: (0, i.jsx)(y.ZP, {
+                    variant: eh ? y.NN.MARKETING_PAGE_V2 : y.NN.DEFAULT,
                     showWumpus: !eh,
                     tier0CTAButton:
-                        (eU === $.Si.TIER_2 || eH || null != ey) && !eh
+                        (eU === $.Si.TIER_2 || eH || null != ek) && !eh
                             ? (0, i.jsx)(Q.Z, {
                                   forceInverted: !0,
                                   showIcon: !1,
@@ -229,7 +229,7 @@ t.Z = (e) => {
                         alt: ''
                     }),
                 (0, i.jsx)(L.Z, {
-                    premiumSubscription: ej,
+                    premiumSubscription: eA,
                     className: s()(a ? ei.fullscreenExistingSubscriberSpacing : ei.existingSubscriberSpacing, { [ei.zIndex1]: eD }),
                     isFullscreen: a
                 }),
@@ -254,7 +254,7 @@ t.Z = (e) => {
                                       ? (0, i.jsx)(K.Z, {
                                             subscriptionTier: eM,
                                             isFullscreen: a || eD,
-                                            entrypoint: y,
+                                            entrypoint: k,
                                             isDarkMode: ef
                                         })
                                       : (0, i.jsx)(D.ZP, {
@@ -267,9 +267,9 @@ t.Z = (e) => {
                                                 [ei.trialMarketingMargin]: eD,
                                                 [ei.settingsHeroBogoHeight]: !a && eH,
                                                 [ei.settingsHeroBogoMarginFullscreen]: a && eH,
-                                                [ei.noTopPaddingOverride]: null != ej
+                                                [ei.noTopPaddingOverride]: null != eA
                                             }),
-                                            entrypoint: y,
+                                            entrypoint: k,
                                             isDarkMode: ef
                                         })
                               }),
@@ -297,7 +297,7 @@ t.Z = (e) => {
                     children: [(0, i.jsx)(Z.Z, { isFullScreen: a }), (0, i.jsx)(P.Z, { isFullScreen: a }), a && eO && (0, i.jsx)(M.Z, { localizedPricingPromo: eB })]
                 }),
                 !eh && eW,
-                y === $.EZ.UserSettings &&
+                k === $.EZ.UserSettings &&
                     null != eG &&
                     (0, i.jsx)(w.C, {
                         className: ei.giftPromoCard,
@@ -306,7 +306,7 @@ t.Z = (e) => {
                 (0, i.jsx)(eg, {
                     isFullscreen: a,
                     inOfferExperience: eD,
-                    setIsAllPerksVisible: ek,
+                    setIsAllPerksVisible: ey,
                     hasRenderedOnce: eR,
                     isMarketingPageV2Enabled: eh,
                     isReducedMotion: V
@@ -389,7 +389,7 @@ t.Z = (e) => {
                   (0, i.jsx)(J.Z, {
                       previousComponent: q.MQ.MARKETING,
                       isAllPerksVisible: ew,
-                      setIsAllPerksVisible: ek,
+                      setIsAllPerksVisible: ey,
                       isFullScreen: a
                   })
               ]

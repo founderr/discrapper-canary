@@ -27,9 +27,9 @@ var i = n(200651),
     p = n(134432),
     f = n(813197),
     C = n(208567),
-    I = n(496675),
+    v = n(496675),
     _ = n(768581),
-    v = n(63063),
+    I = n(63063),
     N = n(434404),
     T = n(999382),
     b = n(450474),
@@ -38,8 +38,8 @@ var i = n(200651),
     E = n(981631),
     R = n(128449),
     y = n(388032),
-    A = n(633963);
-let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
+    Z = n(633963);
+let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
     L = () => {
         let {
             guild: e,
@@ -84,15 +84,15 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
         r.useEffect(() => {
             !d && null != n && ((0, g.le)(), (0, g.aC)(n.id), (0, g.i3)(n.id), L(!0));
         }, [n, d]);
-        let { canManageGuild: D } = (0, l.cj)([I.Z], () => ({ canManageGuild: I.Z.can(E.Plq.MANAGE_GUILD, n) })),
+        let { canManageGuild: D } = (0, l.cj)([v.Z], () => ({ canManageGuild: v.Z.can(E.Plq.MANAGE_GUILD, n) })),
             O = (0, l.e7)([T.Z], () => T.Z.isGuildMetadataLoaded()),
-            P = (0, l.e7)([T.Z], () => (null != n ? T.Z.getMetadata() : null)),
-            k = (0, l.e7)([T.Z], () => (null != n && (null == P ? void 0 : P.isPublished) ? T.Z.getSlug() : null)),
+            k = (0, l.e7)([T.Z], () => (null != n ? T.Z.getMetadata() : null)),
+            P = (0, l.e7)([T.Z], () => (null != n && (null == k ? void 0 : k.isPublished) ? T.Z.getSlug() : null)),
             [M, w] = r.useState([!0]),
             [B, U] = r.useState(!0),
             [G, F] = r.useState([!1]),
             [H, z] = r.useState(['']),
-            V = (e) => {
+            W = (e) => {
                 let t = Object.entries(S.z)
                     .filter((e) => !H.includes(e[1].presentation))
                     .map((e) => ({
@@ -106,7 +106,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                           value: e
                       });
             },
-            W = (e) => {
+            V = (e) => {
                 try {
                     var t, n, i, r;
                     let l = new URL(e).hostname.split('.');
@@ -119,12 +119,12 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                 }
             };
         r.useEffect(() => {
-            if (null !== P) {
+            if (null !== k) {
                 let e = [],
                     t = [];
-                P.socialLinks.forEach((n, i) => {
+                k.socialLinks.forEach((n, i) => {
                     if ('' !== n) {
-                        let r = W(n);
+                        let r = V(n);
                         null !== r ? ((t[i] = r), (e[i] = !0)) : (e[i] = !1);
                     } else e[i] = !0;
                 }),
@@ -132,10 +132,10 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                     w(e),
                     U(e.every((e) => !0 === e));
             }
-        }, [P]);
+        }, [k]);
         let Y = (0, l.e7)([T.Z], () => (null != n ? T.Z.getErrors() : null)),
             K = (0, l.e7)([x.Z], () => x.Z.getPrimaryCategories(), [], x.j);
-        if (null == n || null == P) return null;
+        if (null == n || null == k) return null;
         let q = (e) => {
                 N.Z.updateGuild({ discoverySplash: e });
             },
@@ -155,27 +155,27 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                     e
                         ? (0, g.Vv)({
                               guildId: n.id,
-                              primaryCategoryId: P.primaryCategoryId,
-                              keywords: P.keywords,
-                              emojiDiscoverabilityEnabled: P.emojiDiscoverabilityEnabled,
-                              partnerActionedTimestamp: P.partnerActionedTimestamp,
-                              partnerApplicationTimestamp: P.partnerApplicationTimestamp,
+                              primaryCategoryId: k.primaryCategoryId,
+                              keywords: k.keywords,
+                              emojiDiscoverabilityEnabled: k.emojiDiscoverabilityEnabled,
+                              partnerActionedTimestamp: k.partnerActionedTimestamp,
+                              partnerApplicationTimestamp: k.partnerApplicationTimestamp,
                               isPublished: !0,
-                              reasonsToJoin: P.reasonsToJoin,
-                              socialLinks: P.socialLinks,
-                              about: P.about
+                              reasonsToJoin: k.reasonsToJoin,
+                              socialLinks: k.socialLinks,
+                              about: k.about
                           })
                         : (0, g.Vv)({
                               guildId: n.id,
-                              primaryCategoryId: P.primaryCategoryId,
-                              keywords: P.keywords,
-                              emojiDiscoverabilityEnabled: P.emojiDiscoverabilityEnabled,
-                              partnerActionedTimestamp: P.partnerActionedTimestamp,
-                              partnerApplicationTimestamp: P.partnerApplicationTimestamp,
+                              primaryCategoryId: k.primaryCategoryId,
+                              keywords: k.keywords,
+                              emojiDiscoverabilityEnabled: k.emojiDiscoverabilityEnabled,
+                              partnerActionedTimestamp: k.partnerActionedTimestamp,
+                              partnerApplicationTimestamp: k.partnerApplicationTimestamp,
                               isPublished: !1,
-                              reasonsToJoin: P.reasonsToJoin,
-                              socialLinks: P.socialLinks,
-                              about: P.about
+                              reasonsToJoin: k.reasonsToJoin,
+                              socialLinks: k.socialLinks,
+                              about: k.about
                           }),
                     N.Z.saveGuild(n.id, {
                         discoverySplash: n.discoverySplash,
@@ -183,19 +183,19 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                     });
             },
             ee = () => {
-                if (P.socialLinks.length < 9) {
-                    let e = [...P.socialLinks];
+                if (k.socialLinks.length < 9) {
+                    let e = [...k.socialLinks];
                     (0, g.t$)(n.id, e.concat('')), z(H.concat(''));
                 }
             },
             et = (e, t) => {
-                let i = [...P.socialLinks],
+                let i = [...k.socialLinks],
                     r = [...H],
                     l = [...M];
                 (r[t] = e), (i[t] = S.z[e].baseUrl), (l[t] = !0), w(l), z(r), U(l.every((e) => !0 === e)), (0, g.t$)(n.id, i);
             },
             en = (e, t) => {
-                let i = [...P.socialLinks],
+                let i = [...k.socialLinks],
                     r = i[t],
                     l = e;
                 0 === r.length && l.length > 1 && !1 === RegExp('^https?:').test(l) && (l = 'https://' + l);
@@ -208,7 +208,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                 i.splice(e, 1), w(i);
                 let r = [...H];
                 r.splice(e, 1), z(r);
-                let l = [...P.socialLinks];
+                let l = [...k.socialLinks];
                 l.splice(e, 1), (0, g.t$)(n.id, l);
             },
             er = (e) => {
@@ -233,11 +233,11 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                         },
                         {
                             description: y.intl.string(y.t.m3b3WF),
-                            completed: null !== P.about && P.about.length >= 300 && P.about.length <= 2400
+                            completed: null !== k.about && k.about.length >= 300 && k.about.length <= 2400
                         },
                         {
                             description: y.intl.string(y.t.qpx5MD),
-                            completed: null !== P.reasonsToJoin && P.reasonsToJoin.every((e) => el(e) || er(e)) && P.reasonsToJoin.filter(er).length >= 2
+                            completed: null !== k.reasonsToJoin && k.reasonsToJoin.every((e) => el(e) || er(e)) && k.reasonsToJoin.filter(er).length >= 2
                         }
                     ]
                 }
@@ -251,45 +251,45 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                 (n[e] = t), F(n);
             };
         return (0, i.jsx)('div', {
-            className: A.settingsColumn,
+            className: Z.settingsColumn,
             children: (0, i.jsx)('div', {
-                className: A.settingsContainer,
+                className: Z.settingsContainer,
                 children: (0, i.jsx)(a.ScrollerAuto, {
-                    className: A.settingsScroller,
+                    className: Z.settingsScroller,
                     children: (0, i.jsx)('main', {
                         ref: t,
-                        className: A.settingsContent,
+                        className: Z.settingsContent,
                         children: (0, i.jsx)(a.FocusRingScope, {
                             containerRef: t,
                             children: (0, i.jsxs)('div', {
-                                className: A.container,
+                                className: Z.container,
                                 children: [
                                     (0, i.jsxs)(a.FormSection, {
-                                        className: A.mainContent,
+                                        className: Z.mainContent,
                                         title: (0, i.jsxs)('div', {
-                                            children: [y.intl.string(y.t.kGlQGB), ' ', (0, i.jsx)(u.Z, { className: A.betaTag })]
+                                            children: [y.intl.string(y.t.kGlQGB), ' ', (0, i.jsx)(u.Z, { className: Z.betaTag })]
                                         }),
                                         tag: a.FormTitleTags.H1,
                                         children: [
                                             (0, i.jsxs)(a.FormText, {
-                                                className: A.tabMainDescription,
+                                                className: Z.tabMainDescription,
                                                 type: a.FormTextTypes.DESCRIPTION,
-                                                children: [y.intl.format(y.t['+ScrMT'], { discordURL: window.GLOBAL_ENV.MARKETING_ENDPOINT }), ' ', y.intl.format(y.t.T6WtKy, { learnMoreURL: v.Z.getArticleURL(E.BhN.SERVER_WEB_PAGES) })]
+                                                children: [y.intl.format(y.t['+ScrMT'], { discordURL: window.GLOBAL_ENV.MARKETING_ENDPOINT }), ' ', y.intl.format(y.t.T6WtKy, { learnMoreURL: I.Z.getArticleURL(E.BhN.SERVER_WEB_PAGES) })]
                                             }),
                                             (() => {
-                                                if (!P.isPublished || null == k) return;
-                                                let e = Z + k;
+                                                if (!k.isPublished || null == P) return;
+                                                let e = A + P;
                                                 return (0, i.jsx)(i.Fragment, {
                                                     children: (0, i.jsxs)(a.FormSection, {
-                                                        className: A.noDividerFormSection,
+                                                        className: Z.noDividerFormSection,
                                                         children: [
                                                             (0, i.jsx)(a.FormTitle, {
-                                                                className: A.formTitle,
+                                                                className: Z.formTitle,
                                                                 children: y.intl.string(y.t.safBZ2)
                                                             }),
                                                             (0, i.jsx)(c.Z, { value: e }),
                                                             (0, i.jsx)(a.Button, {
-                                                                className: A.viewPageButton,
+                                                                className: Z.viewPageButton,
                                                                 size: a.Button.Sizes.SMALL,
                                                                 color: a.Button.Colors.BRAND,
                                                                 onClick: () => window.open(e),
@@ -299,7 +299,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                     })
                                                 });
                                             })(),
-                                            (0, i.jsx)(a.FormDivider, { className: A.divider }),
+                                            (0, i.jsx)(a.FormDivider, { className: Z.divider }),
                                             (() => {
                                                 if (null != n)
                                                     return (0, i.jsxs)(i.Fragment, {
@@ -307,18 +307,18 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                             (0, i.jsxs)(a.FormSection, {
                                                                 children: [
                                                                     (0, i.jsx)(a.FormTitle, {
-                                                                        className: A.formTitle,
+                                                                        className: Z.formTitle,
                                                                         children: y.intl.string(y.t.GjPpSk)
                                                                     }),
                                                                     (0, i.jsx)(a.FormText, {
                                                                         type: a.FormTextTypes.DESCRIPTION,
-                                                                        className: A.description,
+                                                                        className: Z.description,
                                                                         children: y.intl.string(y.t.MVXonJ)
                                                                     })
                                                                 ]
                                                             }),
                                                             (0, i.jsx)(h.Z, {
-                                                                value: P.primaryCategoryId === R.o3 ? null : null == P ? void 0 : P.primaryCategoryId,
+                                                                value: k.primaryCategoryId === R.o3 ? null : null == k ? void 0 : k.primaryCategoryId,
                                                                 placeholder: y.intl.string(y.t.XqMe3N),
                                                                 options: ea,
                                                                 onChange: X,
@@ -327,15 +327,15 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                 clearable: !0
                                                             }),
                                                             (0, i.jsxs)(a.FormSection, {
-                                                                className: A.noDividerFormSection,
+                                                                className: Z.noDividerFormSection,
                                                                 children: [
                                                                     (0, i.jsx)(a.FormTitle, {
-                                                                        className: A.formTitle,
+                                                                        className: Z.formTitle,
                                                                         children: y.intl.string(y.t.oOPlPD)
                                                                     }),
                                                                     (0, i.jsx)(b.Z, {
                                                                         guild: n,
-                                                                        guildMetadata: P,
+                                                                        guildMetadata: k,
                                                                         disabled: !D
                                                                     })
                                                                 ]
@@ -343,7 +343,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                             (null == Y ? void 0 : Y.category) != null
                                                                 ? (0, i.jsx)(a.Text, {
                                                                       color: 'text-danger',
-                                                                      className: A.error,
+                                                                      className: Z.error,
                                                                       variant: 'text-sm/normal',
                                                                       children: Y.category
                                                                   })
@@ -351,23 +351,23 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                         ]
                                                     });
                                             })(),
-                                            (0, i.jsx)(a.FormDivider, { className: A.divider }),
+                                            (0, i.jsx)(a.FormDivider, { className: Z.divider }),
                                             (() => {
                                                 if (null != n)
                                                     return (0, i.jsxs)(i.Fragment, {
                                                         children: [
                                                             (0, i.jsxs)(a.FormSection, {
-                                                                className: A.twoColumnFormSection,
+                                                                className: Z.twoColumnFormSection,
                                                                 children: [
                                                                     (0, i.jsxs)('div', {
                                                                         children: [
                                                                             (0, i.jsx)(a.FormTitle, {
-                                                                                className: A.formTitle,
+                                                                                className: Z.formTitle,
                                                                                 children: y.intl.string(y.t['8bT/Cg'])
                                                                             }),
                                                                             (0, i.jsx)(a.FormText, {
                                                                                 type: a.FormTextTypes.DESCRIPTION,
-                                                                                className: A.formDescription,
+                                                                                className: Z.formDescription,
                                                                                 children: y.intl.string(y.t.WCWT7O)
                                                                             }),
                                                                             (0, i.jsxs)(a.Button, {
@@ -394,7 +394,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                         disabled: !D,
                                                                         onChange: q,
                                                                         hint: y.intl.string(y.t.uPvxqK),
-                                                                        imageClassName: A.imageUploaderInnerSquare,
+                                                                        imageClassName: Z.imageUploaderInnerSquare,
                                                                         hideSize: !0
                                                                     })
                                                                 ]
@@ -409,15 +409,15 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                         ]
                                                     });
                                             })(),
-                                            (0, i.jsx)(a.FormDivider, { className: A.divider }),
+                                            (0, i.jsx)(a.FormDivider, { className: Z.divider }),
                                             (0, i.jsxs)(a.FormSection, {
                                                 children: [
                                                     (0, i.jsx)(a.FormTitle, {
-                                                        className: A.formTitle,
+                                                        className: Z.formTitle,
                                                         children: y.intl.string(y.t['RSfm+v'])
                                                     }),
                                                     (0, i.jsx)(a.FormText, {
-                                                        className: A.description,
+                                                        className: Z.description,
                                                         type: a.FormTextTypes.DESCRIPTION,
                                                         children: y.intl.string(y.t.IBi6h4)
                                                     }),
@@ -430,29 +430,29 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                     })
                                                 ]
                                             }),
-                                            (0, i.jsx)(a.FormDivider, { className: A.divider }),
+                                            (0, i.jsx)(a.FormDivider, { className: Z.divider }),
                                             (() => {
-                                                if (null == P) return null;
+                                                if (null == k) return null;
                                                 let e =
-                                                    0 === P.reasonsToJoin.length
+                                                    0 === k.reasonsToJoin.length
                                                         ? [, , , ,].fill({
                                                               reason: '',
                                                               emoji_name: null
                                                           })
-                                                        : P.reasonsToJoin;
+                                                        : k.reasonsToJoin;
                                                 return (0, i.jsxs)(a.FormSection, {
                                                     children: [
                                                         (0, i.jsx)(a.FormTitle, {
-                                                            className: A.formTitle,
+                                                            className: Z.formTitle,
                                                             children: y.intl.string(y.t.vUmXsb)
                                                         }),
                                                         (0, i.jsx)(a.FormText, {
                                                             type: a.FormTextTypes.DESCRIPTION,
-                                                            className: A.description,
+                                                            className: Z.description,
                                                             children: y.intl.string(y.t.esnBnZ)
                                                         }),
                                                         (0, i.jsx)('div', {
-                                                            className: A.reasonToJoin,
+                                                            className: Z.reasonToJoin,
                                                             children: (0, i.jsx)(j.Z, {
                                                                 reasonMinLength: 10,
                                                                 reasonMaxLength: 128,
@@ -470,17 +470,17 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                     ]
                                                 });
                                             })(),
-                                            (0, i.jsx)(a.FormDivider, { className: A.divider }),
+                                            (0, i.jsx)(a.FormDivider, { className: Z.divider }),
                                             (0, i.jsxs)(i.Fragment, {
                                                 children: [
                                                     (0, i.jsxs)(a.FormSection, {
                                                         children: [
                                                             (0, i.jsx)(a.FormTitle, {
-                                                                className: A.formTitle,
+                                                                className: Z.formTitle,
                                                                 children: y.intl.string(y.t['lu+BmJ'])
                                                             }),
                                                             (0, i.jsx)(a.FormText, {
-                                                                className: A.description,
+                                                                className: Z.description,
                                                                 type: a.FormTextTypes.DESCRIPTION,
                                                                 children: y.intl.string(y.t.ozSi8v)
                                                             }),
@@ -488,14 +488,14 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                 a.TextArea,
                                                                 {
                                                                     showCharacterCount: !0,
-                                                                    className: A.textArea,
-                                                                    value: P.about,
+                                                                    className: Z.textArea,
+                                                                    value: k.about,
                                                                     placeholder: y.intl.string(y.t.TduTbm),
                                                                     onChange: J,
                                                                     minLength: 300,
                                                                     maxLength: 2400,
                                                                     disabled: !D,
-                                                                    defaultDirty: (null === (e = P.about) || void 0 === e ? void 0 : e.length) > 0
+                                                                    defaultDirty: (null === (e = k.about) || void 0 === e ? void 0 : e.length) > 0
                                                                 },
                                                                 'text-area-'.concat(O)
                                                             )
@@ -510,24 +510,24 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                         : null
                                                 ]
                                             }),
-                                            (0, i.jsx)(a.FormDivider, { className: A.divider }),
+                                            (0, i.jsx)(a.FormDivider, { className: Z.divider }),
                                             (0, i.jsx)(i.Fragment, {
                                                 children: (0, i.jsxs)(a.FormSection, {
                                                     children: [
                                                         (0, i.jsx)(a.FormTitle, {
-                                                            className: A.formTitle,
+                                                            className: Z.formTitle,
                                                             children: y.intl.string(y.t.V5mNyc)
                                                         }),
                                                         (0, i.jsx)(a.FormText, {
-                                                            className: A.description,
+                                                            className: Z.description,
                                                             type: a.FormTextTypes.DESCRIPTION,
                                                             children: y.intl.string(y.t.d3kA9f)
                                                         }),
-                                                        P.socialLinks.map((e, t) =>
+                                                        k.socialLinks.map((e, t) =>
                                                             (0, i.jsxs)(
                                                                 'div',
                                                                 {
-                                                                    className: A.socialLinksContainer,
+                                                                    className: Z.socialLinksContainer,
                                                                     onMouseOver: () => eo(t, !0),
                                                                     onFocus: () => eo(t, !0),
                                                                     onMouseOut: () => eo(t, !1),
@@ -536,8 +536,8 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                         (0, i.jsx)(
                                                                             a.SingleSelect,
                                                                             {
-                                                                                className: P.isPublished ? A.socialLinksDropdownMax : A.socialLinksDropdownMin,
-                                                                                options: V(H[t]),
+                                                                                className: k.isPublished ? Z.socialLinksDropdownMax : Z.socialLinksDropdownMin,
+                                                                                options: W(H[t]),
                                                                                 placeholder: y.intl.string(y.t.xSALIC),
                                                                                 value: H[t],
                                                                                 onChange: (e) => et(e, t),
@@ -549,7 +549,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                             a.TextInput,
                                                                             {
                                                                                 value: e,
-                                                                                className: P.isPublished ? A.socialLinksMax : A.socialLinksMin,
+                                                                                className: k.isPublished ? Z.socialLinksMax : Z.socialLinksMin,
                                                                                 onChange: (e) => en(e, t),
                                                                                 placeholder: y.intl.string(y.t.Q6o4pK),
                                                                                 maxLength: 150,
@@ -562,7 +562,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                                   a.CircleCheckIcon,
                                                                                   {
                                                                                       size: 'custom',
-                                                                                      className: P.isPublished ? A.validationButtonMax : A.validationButtonMin,
+                                                                                      className: k.isPublished ? Z.validationButtonMax : Z.validationButtonMin,
                                                                                       color: s.Z.unsafe_rawColors.GREEN_230.css,
                                                                                       width: 20,
                                                                                       height: 20
@@ -573,7 +573,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                                   a.CircleXIcon,
                                                                                   {
                                                                                       size: 'custom',
-                                                                                      className: P.isPublished ? A.validationButtonMax : A.validationButtonMin,
+                                                                                      className: k.isPublished ? Z.validationButtonMax : Z.validationButtonMin,
                                                                                       color: s.Z.unsafe_rawColors.RED_400.css,
                                                                                       width: 20,
                                                                                       height: 20
@@ -584,7 +584,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                             (0, i.jsx)(
                                                                                 o.Z,
                                                                                 {
-                                                                                    className: G[t] ? (P.isPublished ? A.deleteButtonMax : A.deleteButtonMin) : P.isPublished ? A.deleteButtonHiddenMax : A.deleteButtonHiddenMin,
+                                                                                    className: G[t] ? (k.isPublished ? Z.deleteButtonMax : Z.deleteButtonMin) : k.isPublished ? Z.deleteButtonHiddenMax : Z.deleteButtonHiddenMin,
                                                                                     onClick: () => ei(t)
                                                                                 },
                                                                                 'delete-button-' + t
@@ -605,24 +605,24 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                             size: a.Button.Sizes.SMALL,
                                                             color: a.Button.Colors.PRIMARY,
                                                             onClick: ee,
-                                                            disabled: !D || P.socialLinks.length >= 9,
+                                                            disabled: !D || k.socialLinks.length >= 9,
                                                             children: y.intl.string(y.t.QvovjY)
                                                         })
                                                     ]
                                                 })
                                             }),
-                                            P.isPublished &&
+                                            k.isPublished &&
                                                 (0, i.jsxs)(i.Fragment, {
                                                     children: [
-                                                        (0, i.jsx)(a.FormDivider, { className: A.divider }),
+                                                        (0, i.jsx)(a.FormDivider, { className: Z.divider }),
                                                         (0, i.jsxs)(a.FormSection, {
                                                             children: [
                                                                 (0, i.jsx)(a.FormTitle, {
-                                                                    className: A.formTitle,
+                                                                    className: Z.formTitle,
                                                                     children: y.intl.string(y.t['5yF7e3'])
                                                                 }),
                                                                 (0, i.jsx)(a.FormText, {
-                                                                    className: A.description,
+                                                                    className: Z.description,
                                                                     type: a.FormTextTypes.DESCRIPTION,
                                                                     children: y.intl.string(y.t.eOFvqa)
                                                                 }),
@@ -646,9 +646,9 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                 : null
                                         ]
                                     }),
-                                    !P.isPublished &&
+                                    !k.isPublished &&
                                         (0, i.jsx)('div', {
-                                            className: A.checklist,
+                                            className: Z.checklist,
                                             children: (0, i.jsx)(m.Z, {
                                                 title: y.intl.string(y.t['2kCyn5']),
                                                 children: es,

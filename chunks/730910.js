@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return k;
     }
 }),
     n(47120);
@@ -20,9 +20,9 @@ var i = n(200651),
     p = n(626135),
     f = n(585483),
     C = n(999382),
-    I = n(743475),
+    v = n(743475),
     _ = n(983135),
-    v = n(8426),
+    I = n(8426),
     N = n(969632),
     T = n(570961),
     b = n(208665),
@@ -31,22 +31,22 @@ var i = n(200651),
     E = n(142961),
     R = n(232764),
     y = n(729311),
-    A = n(850864),
-    Z = n(966301),
+    Z = n(850864),
+    A = n(966301),
     L = n(981631),
     D = n(388032),
     O = n(203035);
-function P() {
+function k() {
     let e = (0, o.e7)([C.Z], () => C.Z.getGuild());
-    return null == e ? null : (0, i.jsx)(k, { guild: e });
+    return null == e ? null : (0, i.jsx)(P, { guild: e });
 }
-function k(e) {
+function P(e) {
     let { guild: t } = e,
         l = t.id,
         C = (0, o.e7)([j.Z], () => j.Z.getCurrentPage()),
-        P = (0, E.Z)(l),
+        k = (0, E.Z)(l),
         {
-            hasChanges: k,
+            hasChanges: P,
             hasConfiguredAnythingForCurrentStep: M,
             hasErrors: w
         } = (0, o.cj)([j.Z], () => ({
@@ -81,31 +81,31 @@ function k(e) {
         );
     }, [H]);
     let z = (0, m.useToken)(c.Z.colors.BACKGROUND_FLOATING).hex(),
-        V = (0, m.useToken)(c.Z.unsafe_rawColors.PRIMARY_160).hex(),
-        W = (0, u.wj)(U) ? z : V,
+        W = (0, m.useToken)(c.Z.unsafe_rawColors.PRIMARY_160).hex(),
+        V = (0, u.wj)(U) ? z : W,
         Y = F.to({
             range: [0, 1],
             output: [(0, m.useToken)(c.Z.unsafe_rawColors.WHITE_500).hex(), (0, m.useToken)(c.Z.colors.TEXT_NORMAL).hex()]
         }),
         K = F.to({
             range: [0, 1],
-            output: [W, (0, m.useToken)(c.Z.colors.STATUS_DANGER).hex()]
+            output: [V, (0, m.useToken)(c.Z.colors.STATUS_DANGER).hex()]
         });
-    if (P) {
+    if (k) {
         if (C === S.PG.DEFAULT_CHANNELS) return (0, i.jsx)(y.j, {});
-        if (C === S.PG.CUSTOMIZATION_QUESTIONS) return (0, i.jsx)(Z.Zm, {});
-        else if (C === S.PG.HOME_SETTINGS) return (0, i.jsx)(A.T, {});
+        if (C === S.PG.CUSTOMIZATION_QUESTIONS) return (0, i.jsx)(A.Zm, {});
+        else if (C === S.PG.HOME_SETTINGS) return (0, i.jsx)(Z.T, {});
     }
     let q = C === S.xh[S.xh.length - 1],
         X = async () => {
             let e = b.Z.advancedMode;
-            if (k)
+            if (P)
                 try {
-                    if (C === S.PG.DEFAULT_CHANNELS) await (0, I.DO)(t).then(() => (e ? (0, T.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
+                    if (C === S.PG.DEFAULT_CHANNELS) await (0, v.DO)(t).then(() => (e ? (0, T.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
                     else if (C === S.PG.CUSTOMIZATION_QUESTIONS) await (0, T.rS)(t, { ignoreDefaultPrompt: !0 });
                     else if (C === S.PG.HOME_SETTINGS) {
                         let e = N.Z.getSettings();
-                        await (0, v.oo)(t.id, e);
+                        await (0, I.oo)(t.id, e);
                     }
                 } catch {
                     return !1;
@@ -117,7 +117,7 @@ function k(e) {
                 ...(0, g.hH)(l),
                 step: S.PG[C],
                 back: !1,
-                skip: !k
+                skip: !P
             }),
                 (0, _.Nb)((0, S.lg)(C)),
                 (await X()) && (0, _.IG)(l, C);

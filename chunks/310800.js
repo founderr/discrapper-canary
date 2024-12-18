@@ -22,7 +22,7 @@ function f(e) {
     let { guildId: t, handleCreateOrEditProduct: u } = e,
         f = (0, c.ue)(t, { publishedOnly: !1 }),
         { shouldRestrictUpdatingCreatorMonetizationSettings: C } = (0, a.gX)(t),
-        I = (e) => {
+        v = (e) => {
             (0, o.Je)(t, e, { published: !1 });
         },
         _ = (e, r) => {
@@ -37,7 +37,7 @@ function f(e) {
                     });
             });
         },
-        v = (e, t) => {
+        I = (e, t) => {
             (0, r.J)((0, d.ar)(e, t));
         },
         N = f.length > 0;
@@ -60,9 +60,9 @@ function f(e) {
                                       guildId: t,
                                       product: e,
                                       onEditProduct: () => u(e.id),
-                                      onUnpublishProduct: () => I(e.id),
+                                      onUnpublishProduct: () => v(e.id),
                                       onDeleteProduct: () => _(e.id, e.name),
-                                      onCopyProductLink: () => v(t, e.id),
+                                      onCopyProductLink: () => I(t, e.id),
                                       onTestDownload: () =>
                                           m.Z.open({
                                               guildId: t,

@@ -17,9 +17,9 @@ t.Z = (e) => {
         r,
         { title: p, titleClassName: _, buttonClassName: h, perkImage: E, isCarousel: b, onCtaClick: x, perkComponent: C, subtitle: T = '', descriptionCta: v = '', cardVariant: N, subtitleClassName: I, imageOverlayText: S } = e,
         R = (0, o._)(N),
-        A = (0, l.yQ)(),
-        j = (null == A ? void 0 : A.nitroTenureStatus) === d.EB.REDEEMABLE;
-    switch (null == A ? void 0 : A.nitroTenureStatus) {
+        j = (0, l.yQ)(),
+        A = (null == j ? void 0 : j.nitroTenureStatus) === d.EB.REDEEMABLE;
+    switch (null == j ? void 0 : j.nitroTenureStatus) {
         case d.EB.REDEEMABLE:
             (n = f), (r = 'unlocked icon');
             break;
@@ -75,7 +75,7 @@ t.Z = (e) => {
                                 null != x &&
                                 (0, i.jsx)(s.Button, {
                                     className: h,
-                                    disabled: !j,
+                                    disabled: !A,
                                     fullWidth: !0,
                                     onClick: x,
                                     children: (0, i.jsxs)('div', {

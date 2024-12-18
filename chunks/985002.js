@@ -68,7 +68,7 @@ function o(e) {
             },
             [N, t, n]
         ),
-        A = i.useCallback(
+        j = i.useCallback(
             async (e) => {
                 if (!N) {
                     p(!0);
@@ -84,7 +84,7 @@ function o(e) {
             },
             [N, t, n]
         ),
-        j = i.useCallback(async () => {
+        A = i.useCallback(async () => {
             if (!_) {
                 h(!0);
                 try {
@@ -133,9 +133,9 @@ function o(e) {
         acceptLinkRequest: I,
         declineLinkRequest: S,
         disconnectLinkRequest: R,
-        cancelLinkRequest: A,
+        cancelLinkRequest: j,
         selectTeenUser: P,
-        getLinkCode: j,
+        getLinkCode: A,
         requestLink: Z,
         loadMore: i.useCallback(
             async (e) => {

@@ -20,9 +20,9 @@ var i = n(200651),
     p = n(393238),
     f = n(313201),
     C = n(345861),
-    I = n(208567),
+    v = n(208567),
     _ = n(73346),
-    v = n(624138),
+    I = n(624138),
     N = n(584825),
     T = n(723047),
     b = n(927954),
@@ -31,8 +31,8 @@ var i = n(200651),
     E = n(293810),
     R = n(333866),
     y = n(388032),
-    A = n(848720);
-let Z = (0, v.Mg)(h.Z.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_OVERVIEW_SETTINGS_MAX_WIDTH);
+    Z = n(848720);
+let A = (0, I.Mg)(h.Z.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_OVERVIEW_SETTINGS_MAX_WIDTH);
 function L() {
     return [
         {
@@ -60,12 +60,12 @@ function D(e) {
                     icon: function () {
                         let { icon: t } = e;
                         return (0, i.jsx)('div', {
-                            className: A.formatRadioIconWrapper,
-                            children: (0, i.jsx)(t, { className: A.formatRadioIcon })
+                            className: Z.formatRadioIconWrapper,
+                            children: (0, i.jsx)(t, { className: Z.formatRadioIcon })
                         });
                     },
-                    radioBarClassName: A.formatOptionRadioBar,
-                    radioItemIconClassName: A.formatOptionRadioItemIcon
+                    radioBarClassName: Z.formatOptionRadioBar,
+                    radioItemIconClassName: Z.formatOptionRadioItemIcon
                 })),
             [d]
         ),
@@ -77,8 +77,8 @@ function D(e) {
             value: t,
             orientation: h ? 'horizontal' : 'vertical',
             size: g.RadioGroup.Sizes.NONE,
-            className: s()({ [A.radioGroupHorizontal]: h }),
-            radioItemClassName: A.formatOptionRadioItem,
+            className: s()({ [Z.radioGroupHorizontal]: h }),
+            radioItemClassName: Z.formatOptionRadioItem,
             onChange: (e) => {
                 let { value: t } = e;
                 return l(t);
@@ -95,29 +95,29 @@ function O(e) {
         a = (0, N.YB)(n.id),
         c = r.useCallback(() => {
             var e;
-            return (null == a ? void 0 : null === (e = a.cover_image_asset) || void 0 === e ? void 0 : e.application_id) == null ? null : (0, _._W)(a.cover_image_asset.application_id, a.cover_image_asset, Z);
+            return (null == a ? void 0 : null === (e = a.cover_image_asset) || void 0 === e ? void 0 : e.application_id) == null ? null : (0, _._W)(a.cover_image_asset.application_id, a.cover_image_asset, A);
         }, [a]),
         [u, h] = r.useState(s),
-        [p, v] = r.useState(null !== (t = null == a ? void 0 : a.description) && void 0 !== t ? t : ''),
+        [p, I] = r.useState(null !== (t = null == a ? void 0 : a.description) && void 0 !== t ? t : ''),
         [L, O] = r.useState(c),
-        [P, k] = r.useState(null == a ? void 0 : a.store_page_guild_products_default_sort),
+        [k, P] = r.useState(null == a ? void 0 : a.store_page_guild_products_default_sort),
         [M, w] = r.useState(null == a ? void 0 : a.server_shop_tab_order),
         { loading: B, error: U, updateSubscriptionsSettings: G } = (0, N.QV)(),
         { imageCTA: F, imageAriaLabel: H, setFilename: z } = (0, b.Z)(null == a ? void 0 : a.cover_image_asset),
-        V = (0, f.Dt)(),
         W = (0, f.Dt)(),
+        V = (0, f.Dt)(),
         Y = (0, f.Dt)();
     function K(e, t) {
         o()(null != e, 'Null value not allowed'), null != t && z(t.name), O(e);
     }
     let q = r.useMemo(() => {
             var e;
-            return (null != p && p !== (null !== (e = null == a ? void 0 : a.description) && void 0 !== e ? e : '')) || (null == L ? void 0 : L.startsWith('data:')) === !0 || u !== s || (null == a ? void 0 : a.store_page_guild_products_default_sort) !== P || (null == a ? void 0 : a.server_shop_tab_order) !== M;
-        }, [L, s, p, a, u, P, M]),
+            return (null != p && p !== (null !== (e = null == a ? void 0 : a.description) && void 0 !== e ? e : '')) || (null == L ? void 0 : L.startsWith('data:')) === !0 || u !== s || (null == a ? void 0 : a.store_page_guild_products_default_sort) !== k || (null == a ? void 0 : a.server_shop_tab_order) !== M;
+        }, [L, s, p, a, u, k, M]),
         X = null != p && '' !== p && null != L;
     r.useEffect(() => {
         var e;
-        (null == a ? void 0 : null === (e = a.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null && O((0, _._W)(a.cover_image_asset.application_id, a.cover_image_asset, Z));
+        (null == a ? void 0 : null === (e = a.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null && O((0, _._W)(a.cover_image_asset.application_id, a.cover_image_asset, A));
     }, [null == a ? void 0 : a.cover_image_asset]);
     let Q = (0, T.mY)(),
         J = r.useMemo(
@@ -142,7 +142,7 @@ function O(e) {
             []
         );
     return (0, i.jsxs)('div', {
-        className: A.container,
+        className: Z.container,
         children: [
             null != U &&
                 (0, i.jsxs)(i.Fragment, {
@@ -154,12 +154,12 @@ function O(e) {
                       children: [
                           (0, i.jsxs)(g.FormSection, {
                               title: y.intl.string(y.t['PAVi+/']),
-                              titleId: V,
+                              titleId: W,
                               disabled: Q,
                               children: [
                                   (0, i.jsx)(g.FormText, {
                                       type: g.FormText.Types.DESCRIPTION,
-                                      className: A.formDescription,
+                                      className: Z.formDescription,
                                       disabled: Q,
                                       children: y.intl.string(y.t.x87YqK)
                                   }),
@@ -182,17 +182,17 @@ function O(e) {
                                               ),
                                               h(e);
                                       },
-                                      'aria-labelledby': V,
+                                      'aria-labelledby': W,
                                       disabled: Q
                                   })
                               ]
                           }),
-                          (0, i.jsx)(g.FormDivider, { className: A.divider })
+                          (0, i.jsx)(g.FormDivider, { className: Z.divider })
                       ]
                   }),
             (0, i.jsx)(g.FormSection, {
                 title: y.intl.string(y.t['1+Ho1d']),
-                titleId: W,
+                titleId: V,
                 disabled: Q,
                 children: (0, i.jsx)(g.TextArea, {
                     placeholder: l ? y.intl.string(y.t.SD6LRU) : y.intl.string(y.t['aVhW/f']),
@@ -200,32 +200,32 @@ function O(e) {
                     value: p,
                     rows: 2,
                     autosize: !0,
-                    onChange: v,
-                    'aria-labelledby': W,
+                    onChange: I,
+                    'aria-labelledby': V,
                     disabled: Q
                 })
             }),
-            (0, i.jsx)(g.FormDivider, { className: A.divider }),
+            (0, i.jsx)(g.FormDivider, { className: Z.divider }),
             (0, i.jsxs)(g.FormSection, {
                 title: y.intl.string(y.t['0kpTpK']),
                 disabled: Q,
                 children: [
                     (0, i.jsx)(g.FormText, {
                         type: g.FormText.Types.DESCRIPTION,
-                        className: A.formDescription,
+                        className: Z.formDescription,
                         disabled: Q,
                         children: y.intl.string(y.t.i2rCwc)
                     }),
-                    (0, i.jsx)(I.Z, {
+                    (0, i.jsx)(v.Z, {
                         image: L,
                         hint: F,
                         showIcon: !0,
                         showRemoveButton: !1,
                         hideSize: !0,
-                        className: A.coverImageUploader,
-                        iconWrapperClassName: A.coverImageUploaderIconWrapper,
-                        imageClassName: A.coverImageUploaderInner,
-                        iconClassName: A.coverImageUploaderIcon,
+                        className: Z.coverImageUploader,
+                        iconWrapperClassName: Z.coverImageUploaderIconWrapper,
+                        imageClassName: Z.coverImageUploaderInner,
+                        iconClassName: Z.coverImageUploaderIcon,
                         onChange: K,
                         'aria-label': H,
                         disabled: Q
@@ -244,7 +244,7 @@ function O(e) {
             l
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsx)(g.FormDivider, { className: A.divider }),
+                          (0, i.jsx)(g.FormDivider, { className: Z.divider }),
                           (0, i.jsxs)(g.FormSection, {
                               title: y.intl.string(y.t.aaZ9pK),
                               titleId: Y,
@@ -252,15 +252,15 @@ function O(e) {
                               children: [
                                   (0, i.jsx)(g.FormText, {
                                       type: g.FormText.Types.DESCRIPTION,
-                                      className: A.formDescription,
+                                      className: Z.formDescription,
                                       disabled: Q,
                                       children: y.intl.string(y.t.TILN8v)
                                   }),
                                   (0, i.jsx)(g.SingleSelect, {
-                                      value: P,
+                                      value: k,
                                       placeholder: y.intl.string(y.t.XqMe3N),
                                       options: J,
-                                      onChange: (e) => k(e)
+                                      onChange: (e) => P(e)
                                   })
                               ]
                           })
@@ -270,7 +270,7 @@ function O(e) {
             $.length > 0 &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(g.FormDivider, { className: A.divider }),
+                        (0, i.jsx)(g.FormDivider, { className: Z.divider }),
                         (0, i.jsxs)(g.FormSection, {
                             title: y.intl.string(y.t['+dtmw8']),
                             titleId: Y,
@@ -278,7 +278,7 @@ function O(e) {
                             children: [
                                 (0, i.jsx)(g.FormText, {
                                     type: g.FormText.Types.DESCRIPTION,
-                                    className: A.formDescription,
+                                    className: Z.formDescription,
                                     disabled: Q,
                                     children: y.intl.string(y.t.n8WSWF)
                                 }),
@@ -294,7 +294,7 @@ function O(e) {
                 }),
             (0, i.jsx)(m.W, {
                 component: 'div',
-                className: A.contentRegion,
+                className: Z.contentRegion,
                 children:
                     q &&
                     (0, i.jsx)(g.SlideIn, {
@@ -303,12 +303,12 @@ function O(e) {
                             disabled: !X,
                             onReset: () => {
                                 var e;
-                                h(s), v(null !== (e = null == a ? void 0 : a.description) && void 0 !== e ? e : ''), O(c), k(null == a ? void 0 : a.store_page_guild_products_default_sort), w(null == a ? void 0 : a.server_shop_tab_order);
+                                h(s), I(null !== (e = null == a ? void 0 : a.description) && void 0 !== e ? e : ''), O(c), P(null == a ? void 0 : a.store_page_guild_products_default_sort), w(null == a ? void 0 : a.server_shop_tab_order);
                             },
                             onSave: () => {
                                 o()(null != a, 'Settings must be defined');
                                 let e = {};
-                                p !== a.description && (e.description = p), null != L && L.startsWith('data:') && (e.cover_image = L), u !== s && (e.full_server_gate = u === E.e3.ALL_CHANNELS), P !== a.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = P), M !== a.server_shop_tab_order && (e.server_shop_tab_order = M), !d().isEmpty(e) && G(n.id, e);
+                                p !== a.description && (e.description = p), null != L && L.startsWith('data:') && (e.cover_image = L), u !== s && (e.full_server_gate = u === E.e3.ALL_CHANNELS), k !== a.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = k), M !== a.server_shop_tab_order && (e.server_shop_tab_order = M), !d().isEmpty(e) && G(n.id, e);
                             },
                             saveButtonTooltip: X ? void 0 : y.intl.string(y.t['6HRvio'])
                         })

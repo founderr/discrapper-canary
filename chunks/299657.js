@@ -24,19 +24,19 @@ var i = n(200651),
     I = n(78839),
     S = n(626135),
     R = n(111361),
-    A = n(357355),
-    j = n(937579),
+    j = n(357355),
+    A = n(937579),
     P = n(471309),
     Z = n(91802),
     M = n(104494),
     B = n(639119),
     O = n(2359),
     w = n(132547),
-    k = n(474936),
-    y = n(981631),
+    y = n(474936),
+    k = n(981631),
     L = n(579521);
 t.Z = function (e) {
-    let { entrypoint: t = k.EZ.UserSettings } = e;
+    let { entrypoint: t = y.EZ.UserSettings } = e;
     (0, C.z)(x.X);
     let n = (0, h.Q)(),
         { sourceAnalyticsLocations: a, analyticsLocations: U } = (0, _.ZP)(p.Z.PREMIUM_MARKETING),
@@ -48,12 +48,12 @@ t.Z = function (e) {
         W = (0, E.V)(),
         [z, Y] = r.useState(!0),
         K = r.useRef(0),
-        Q = (0, R.M5)(H, k.p9.TIER_2),
+        Q = (0, R.M5)(H, y.p9.TIER_2),
         q = (0, Z.n)(),
         J = null == q ? void 0 : q.countryCode,
         { enabled: X } = (0, P.Z)(),
         $ = (0, l.e7)([T.Z], () => (null != H ? T.Z.getUserProfile(H.id) : null)),
-        ee = (0, l.e7)([A.Z], () => A.Z.hasFetched);
+        ee = (0, l.e7)([j.Z], () => j.Z.hasFetched);
     if (
         (r.useEffect(() => {
             !ee && d.MH();
@@ -61,15 +61,15 @@ t.Z = function (e) {
         r.useEffect(() => {
             c.Z.wait(async () => {
                 let e = Date.now();
-                await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(J, null, y.JjL.DISCOVERY), null != G && X && Q && (0, g.In)(G)]), (K.current = Date.now() - e), Y(!1);
+                await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(J, null, k.JjL.DISCOVERY), null != G && X && Q && (0, g.In)(G)]), (K.current = Date.now() - e), Y(!1);
             });
         }, [J, G, X, Q]),
         r.useEffect(() => {
-            n && (null != V || null != F) && (0, j.a)(V, F);
+            n && (null != V || null != F) && (0, A.a)(V, F);
         }, [n, V, F]),
         r.useEffect(() => {
             !z &&
-                S.default.track(y.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
+                S.default.track(k.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
                     location_stack: a,
                     load_duration_ms: K.current
                 });
@@ -78,7 +78,7 @@ t.Z = function (e) {
     )
         return (0, i.jsx)(f.Z, {});
     if (n) return (0, i.jsx)(b.c8, {});
-    if (t === k.EZ.ApplicationStoreHome && Q)
+    if (t === y.EZ.ApplicationStoreHome && Q)
         return X && null == $
             ? (0, i.jsx)('div', {
                   className: s()(L.container, L.loading),

@@ -21,9 +21,9 @@ var i = n(200651),
     p = n(357156),
     f = n(208049),
     C = n(763296),
-    I = n(22382),
+    v = n(22382),
     _ = n(747071),
-    v = n(286654),
+    I = n(286654),
     N = n(171368),
     T = n(430824),
     b = n(594174),
@@ -32,15 +32,15 @@ var i = n(200651),
     E = n(267642),
     R = n(358085),
     y = n(51144),
-    A = n(999382),
-    Z = n(70409),
+    Z = n(999382),
+    A = n(70409),
     L = n(981631),
     D = n(710111),
     O = n(388032),
-    P = n(572005);
-let k = R.isPlatformEmbedded || ('Safari' !== o().name && 'Firefox' !== o().name);
+    k = n(572005);
+let P = R.isPlatformEmbedded || ('Safari' !== o().name && 'Firefox' !== o().name);
 function M() {
-    let e = (0, c.e7)([A.Z], () => A.Z.getProps().guild);
+    let e = (0, c.e7)([Z.Z], () => Z.Z.getProps().guild);
     return null == e
         ? null
         : (0, i.jsx)(u.FormSection, {
@@ -52,7 +52,7 @@ function M() {
 function w(e) {
     let { children: t } = e;
     return (0, i.jsx)(u.Heading, {
-        className: P.tableHeader,
+        className: k.tableHeader,
         variant: 'heading-sm/semibold',
         color: 'header-secondary',
         children: t
@@ -75,7 +75,7 @@ function B(e) {
                       text: O.intl.formatToPlainString(O.t.tuuJJS, { currentBoostLevel: t }),
                       children: (e) =>
                           (0, i.jsx)(u.Clickable, {
-                              className: P.boostingIconWrapper,
+                              className: k.boostingIconWrapper,
                               onClick: () => {
                                   var e;
                                   return (
@@ -115,7 +115,7 @@ let U = (e) => {
             shouldShow: s,
             renderPopout: (e) =>
                 (0, i.jsx)(u.Dialog, {
-                    className: P.browserUnsupportedDialog,
+                    className: k.browserUnsupportedDialog,
                     onMouseEnter: c,
                     onMouseLeave: m,
                     children: t(e)
@@ -153,8 +153,8 @@ function F(e) {
     r.useEffect(() => {
         (0, f.w)();
     }, []);
-    let x = r.useMemo(() => l.reduce((e, t) => ((e[t.soundId] = new Audio((0, I.Z)(t.soundId))), e), {}), [l]),
-        v = 0 === l.length && !s;
+    let x = r.useMemo(() => l.reduce((e, t) => ((e[t.soundId] = new Audio((0, v.Z)(t.soundId))), e), {}), [l]),
+        I = 0 === l.length && !s;
     function N(e) {
         var t;
         null === (t = o.current) || void 0 === t || t.pause();
@@ -169,7 +169,7 @@ function F(e) {
         []
     );
     if (s) return (0, i.jsx)(u.Spinner, {});
-    let T = k
+    let T = P
         ? (0, i.jsx)(u.Button, {
               onClick: function () {
                   (0, u.openModalLazy)(async () => {
@@ -190,21 +190,21 @@ function F(e) {
             (0, i.jsxs)('div', {
                 children: [
                     (0, i.jsx)(u.Text, {
-                        className: P.helpText,
+                        className: k.helpText,
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
                         children: O.intl.string(O.t.BohnsL)
                     }),
                     (0, i.jsx)('div', {
-                        className: P.buttons,
-                        children: !v && T
+                        className: k.buttons,
+                        children: !I && T
                     })
                 ]
             }),
-            v
+            I
                 ? (0, i.jsxs)(u.EmptyState, {
                       theme: d,
-                      className: P.empty,
+                      className: k.empty,
                       children: [
                           (0, i.jsx)(u.EmptyStateImage, {
                               darkSrc: n(458601),
@@ -214,7 +214,7 @@ function F(e) {
                           }),
                           (0, i.jsx)(u.EmptyStateText, {
                               note: O.intl.string(O.t.ZhoSBA),
-                              noteClassName: P.emptyText,
+                              noteClassName: k.emptyText,
                               children: O.intl.string(O.t.I6P1p6)
                           }),
                           T
@@ -222,9 +222,9 @@ function F(e) {
                   })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsx)(u.FormDivider, { className: P.divider }),
+                          (0, i.jsx)(u.FormDivider, { className: k.divider }),
                           (0, i.jsx)(u.Heading, {
-                              className: P.tableTitle,
+                              className: k.tableTitle,
                               variant: 'heading-md/bold',
                               color: 'header-primary',
                               children: (0, i.jsx)(B, {
@@ -233,16 +233,16 @@ function F(e) {
                                   availableSounds: h
                               })
                           }),
-                          (0, i.jsx)(Z.Z, {
+                          (0, i.jsx)(A.Z, {
                               guild: t,
                               numSounds: l.length,
                               isOutOfSlots: 0 === h
                           }),
                           (0, i.jsxs)('div', {
-                              className: P.soundTable,
+                              className: k.soundTable,
                               children: [
                                   (0, i.jsxs)('div', {
-                                      className: P.tableHeaders,
+                                      className: k.tableHeaders,
                                       children: [(0, i.jsx)(w, { children: O.intl.string(O.t.sMOuub) }), (0, i.jsx)(w, { children: O.intl.string(O.t.lLFvlZ) }), (0, i.jsx)(w, { children: O.intl.string(O.t['85qMS0']) })]
                                   }),
                                   l.map((e) =>
@@ -266,20 +266,20 @@ function F(e) {
 }
 function H(e) {
     let { sound: t, isPlaying: l, onPlaySound: a, guild: o } = e,
-        { soundId: d, name: g, user: x, userId: C, emojiId: I, emojiName: _ } = t,
+        { soundId: d, name: g, user: x, userId: C, emojiId: v, emojiName: _ } = t,
         T = (0, c.e7)([b.default], () => (null != x ? x : b.default.getUser(C)), [C, x]),
         { canManageGuildExpression: j } = (0, p.XJ)(o),
         E = r.useMemo(() => j(t), [t, j]),
-        R = null != I || null != _,
-        [A, Z] = r.useState(!1),
-        D = (0, v.z)(t, o.id);
-    async function k() {
-        if (!A) {
-            Z(!0);
+        R = null != v || null != _,
+        [Z, A] = r.useState(!1),
+        D = (0, I.z)(t, o.id);
+    async function P() {
+        if (!Z) {
+            A(!0);
             try {
                 await (0, f.AA)(o.id, d);
             } catch {
-                Z(!1);
+                A(!1);
             }
         }
     }
@@ -299,48 +299,48 @@ function H(e) {
         }, [T, o.id]),
         w = y.ZP.useUserTag(T);
     return (0, i.jsxs)('div', {
-        className: s()(P.row, { [P.active]: l }),
+        className: s()(k.row, { [k.active]: l }),
         children: [
             R
                 ? (0, i.jsx)(h.Z, {
-                      emojiId: I,
+                      emojiId: v,
                       emojiName: _,
-                      className: P.emoji
+                      className: k.emoji
                   })
                 : (0, i.jsx)(u.ImageIcon, {
                       size: 'md',
                       color: 'currentColor',
-                      className: P.emoji
+                      className: k.emoji
                   }),
             (0, i.jsx)(u.Clickable, {
                 onClick: () => {
-                    !A && a(t);
+                    !Z && a(t);
                 },
                 onContextMenu: D,
-                className: P.soundName,
+                className: k.soundName,
                 children: (0, i.jsxs)(u.Text, {
                     variant: 'text-sm/normal',
-                    className: P.soundName,
+                    className: k.soundName,
                     children: [
                         g,
                         ' ',
                         (0, i.jsx)(u.VoiceNormalIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: P.soundPreviewIcon
+                            className: k.soundPreviewIcon
                         })
                     ]
                 })
             }),
             null != T &&
                 (0, i.jsxs)(u.Clickable, {
-                    className: P.uploader,
+                    className: k.uploader,
                     onClick: M,
                     children: [
                         (0, i.jsx)(u.Avatar, {
                             'aria-label': w,
                             size: u.AvatarSizes.SIZE_24,
-                            className: P.uploaderAvatar,
+                            className: k.uploaderAvatar,
                             src: (0, S.ov)(T, !1, 24)
                         }),
                         (0, i.jsx)(u.Text, {
@@ -352,10 +352,10 @@ function H(e) {
                 }),
             E
                 ? (0, i.jsxs)('div', {
-                      className: P.soundEditContainer,
+                      className: k.soundEditContainer,
                       children: [
                           (0, i.jsx)(u.Clickable, {
-                              className: P.soundUpdate,
+                              className: k.soundUpdate,
                               onClick: function (e) {
                                   e.stopPropagation(),
                                       (0, u.openModalLazy)(async () => {
@@ -372,11 +372,11 @@ function H(e) {
                               children: (0, i.jsx)(u.PencilIcon, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: P.soundEditIcon
+                                  className: k.soundEditIcon
                               })
                           }),
                           (0, i.jsx)(u.Clickable, {
-                              className: P.soundRemove,
+                              className: k.soundRemove,
                               onClick: function (e) {
                                   e.stopPropagation(),
                                       (0, u.openModal)((e) =>
@@ -384,7 +384,7 @@ function H(e) {
                                               header: O.intl.formatToPlainString(O.t['PR/VbG'], { soundName: g }),
                                               confirmText: O.intl.string(O.t.oyYWHB),
                                               cancelText: O.intl.string(O.t['ETE/oK']),
-                                              onConfirm: k,
+                                              onConfirm: P,
                                               ...e,
                                               children: (0, i.jsx)(u.Text, {
                                                   variant: 'text-md/normal',
@@ -397,7 +397,7 @@ function H(e) {
                               children: (0, i.jsx)(u.XSmallIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: P.soundEditIcon
+                                  className: k.soundEditIcon
                               })
                           })
                       ]

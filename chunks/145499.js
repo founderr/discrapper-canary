@@ -15,9 +15,9 @@ var i = n(200651),
     p = n(267642),
     f = n(268350),
     C = n(926491),
-    I = n(386937),
+    v = n(386937),
     _ = n(316350),
-    v = n(863562),
+    I = n(863562),
     N = n(981631),
     T = n(388032),
     b = n(744488);
@@ -95,7 +95,7 @@ t.Z = (e) => {
         ),
         { analyticsLocations: x } = (0, u.ZP)(),
         E = t.hasFeature(N.oNc.MORE_STICKERS) ? N.Eu4.TIER_3 : t.premiumTier,
-        A = t.hasFeature(N.oNc.MORE_STICKERS) ? (0, p.vn)(t.id)[N.Eu4.TIER_3] : t.premiumSubscriberCount;
+        Z = t.hasFeature(N.oNc.MORE_STICKERS) ? (0, p.vn)(t.id)[N.Eu4.TIER_3] : t.premiumSubscriberCount;
     if (
         (r.useEffect(() => {
             let e = !1;
@@ -114,7 +114,7 @@ t.Z = (e) => {
         l)
     )
         return (0, i.jsx)(o.Spinner, {});
-    let Z = (e, n) => {
+    let A = (e, n) => {
             let i = null;
             n === N.Eu4.TIER_1 ? (i = N.Qqv.TIER_1) : n === N.Eu4.TIER_2 ? (i = N.Qqv.TIER_2) : n === N.Eu4.TIER_3 && (i = N.Qqv.TIER_3),
                 (0, h.Z)({
@@ -167,30 +167,30 @@ t.Z = (e) => {
                 })
             }
         ];
-    return (0, i.jsx)(I.Z, {
+    return (0, i.jsx)(v.Z, {
         tiers: L,
         renderTier: (e) => {
             let r,
                 { isAnimatedTo: l, onSetRef: a, tier: c, tiers: u, tierIndex: h } = e,
                 { canCreateExpressions: x, canManageGuildExpression: f } = (0, g.Gw)(t),
                 C = u[h - 1],
-                I = null != C ? (0, p.A3)(C.tier) : 0,
+                v = null != C ? (0, p.A3)(C.tier) : 0,
                 S = (0, p.A3)(c.tier, t),
                 L = (0, p.ig)(c.tier),
-                D = d.slice(I, S),
+                D = d.slice(v, S),
                 O = D.length > 0,
-                P = E < c.tier,
-                k = j(d.length, t),
-                M = x && !P && k === c.tier && S !== D.length,
+                k = E < c.tier,
+                P = j(d.length, t),
+                M = x && !k && P === c.tier && S !== D.length,
                 w = M || D.length > 0,
-                B = S - I,
+                B = S - v,
                 U = n(872732),
                 G = L - D.length,
                 F = M ? Math.min(5 - ((D.length + 0) % 5), G) : 0,
                 H = [];
             for (let e = 0; e < F; e++) H.push((0, i.jsx)(R, {}, 'placeholder-'.concat(e)));
-            let z = k === h + 1 && k > E,
-                V = M || z || h > E;
+            let z = P === h + 1 && P > E,
+                W = M || z || h > E;
             return (
                 z
                     ? (r = (0, i.jsx)(m.Z, {
@@ -210,14 +210,14 @@ t.Z = (e) => {
                 (0, i.jsxs)(
                     _.Z,
                     {
-                        subscriptionCount: A,
+                        subscriptionCount: Z,
                         tier: c,
                         onSetRef: a,
                         isAnimatedTo: l,
                         hasBottomMargin: h !== u.length - 1,
                         withCardBody: !w,
                         headerButton: r,
-                        showHeaderLockStatus: V,
+                        showHeaderLockStatus: W,
                         guildId: t.id,
                         children: [
                             w &&
@@ -226,9 +226,9 @@ t.Z = (e) => {
                                     children: [
                                         D.map((e) =>
                                             (0, i.jsx)(
-                                                v.Z,
+                                                I.Z,
                                                 {
-                                                    isDisabled: P,
+                                                    isDisabled: k,
                                                     sticker: e,
                                                     canManageSticker: f(e)
                                                 },
@@ -238,7 +238,7 @@ t.Z = (e) => {
                                         H
                                     ]
                                 }),
-                            !P &&
+                            !k &&
                                 !M &&
                                 0 === D.length &&
                                 (0, i.jsx)('div', {
@@ -249,7 +249,7 @@ t.Z = (e) => {
                                         children: T.intl.string(T.t.lqwv0N)
                                     })
                                 }),
-                            P &&
+                            k &&
                                 !O &&
                                 (0, i.jsxs)('div', {
                                     className: b.emptyTierWrapper,
@@ -273,7 +273,7 @@ t.Z = (e) => {
                                         }),
                                         (0, i.jsx)(o.Button, {
                                             color: o.Button.Colors.GREEN,
-                                            onClick: () => Z((0, p.vn)(t.id)[c.tier] - t.premiumSubscriberCount, c.tier),
+                                            onClick: () => A((0, p.vn)(t.id)[c.tier] - t.premiumSubscriberCount, c.tier),
                                             children: T.intl.string(T.t.dtFw5e)
                                         })
                                     ]

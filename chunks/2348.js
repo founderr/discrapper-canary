@@ -20,9 +20,9 @@ var i = n(200651),
     p = n(827907),
     f = n(868814),
     C = n(981631),
-    I = n(388032),
+    v = n(388032),
     _ = n(683559);
-function v(e) {
+function I(e) {
     let { guild: t, channel: r } = e,
         l = (0, p.Mf)(r.id);
     return 'null' === r.id
@@ -98,14 +98,14 @@ let N = r.memo(function () {
         );
     }),
     b = r.memo(function (e) {
-        let { channel: t, category: r, guild: l, isFirstChannel: g, isLastChannel: v, tooltipDirection: b = 'right' } = e,
+        let { channel: t, category: r, guild: l, isFirstChannel: g, isLastChannel: I, tooltipDirection: b = 'right' } = e,
             j = (0, p.Mf)(t.id, r.id),
             S = (0, p.t4)(t.id, r.id),
             E = (0, p.EH)(t.id, r.id),
             R = (0, p.lL)(l.id, r.id),
             y = null != (0, f.Z)(l).find((e) => e.id === t.id),
-            A = (0, m.mn)(t.id),
-            Z = (e) => {
+            Z = (0, m.mn)(t.id),
+            A = (e) => {
                 if (!S)
                     return (
                         e.stopPropagation(),
@@ -154,11 +154,11 @@ let N = r.memo(function () {
                         (0, i.jsxs)(o.Clickable, {
                             className: s()(_.channelRow, {
                                 [_.firstChannel]: g,
-                                [_.lastChannel]: v,
+                                [_.lastChannel]: I,
                                 [_.disabled]: S
                             }),
                             ...e,
-                            onClick: Z,
+                            onClick: A,
                             onContextMenu: L,
                             children: [
                                 (0, i.jsx)('div', {
@@ -188,7 +188,7 @@ let N = r.memo(function () {
                                                               variant: 'text-xs/medium',
                                                               className: _.channelSubtitle,
                                                               color: 'text-brand',
-                                                              children: I.intl.string(I.t.mPxmeH)
+                                                              children: v.intl.string(v.t.mPxmeH)
                                                           })
                                                       ]
                                                   })
@@ -204,7 +204,7 @@ let N = r.memo(function () {
                                               value: j,
                                               type: o.Checkbox.Types.INVERTED,
                                               disabled: S,
-                                              color: A ? a.Z.colors.TEXT_BRAND.css : a.Z.colors.BUTTON_SECONDARY_BACKGROUND.css,
+                                              color: Z ? a.Z.colors.TEXT_BRAND.css : a.Z.colors.BUTTON_SECONDARY_BACKGROUND.css,
                                               innerClassName: _.checkboxInner,
                                               displayOnly: !0
                                           })
@@ -222,7 +222,7 @@ let N = r.memo(function () {
                                                   (0, i.jsx)(o.Text, {
                                                       variant: 'text-sm/medium',
                                                       color: 'none',
-                                                      children: I.intl.string(I.t.zA9d1N)
+                                                      children: v.intl.string(v.t.zA9d1N)
                                                   })
                                               ]
                                           })
@@ -230,7 +230,7 @@ let N = r.memo(function () {
                             ]
                         })
                 }),
-                !v && (0, i.jsx)(N, {})
+                !I && (0, i.jsx)(N, {})
             ]
         });
     });
@@ -240,7 +240,7 @@ function j(e) {
             (e) => {
                 let r = t._categories[e];
                 return (0, i.jsx)(
-                    v,
+                    I,
                     {
                         channel: r.channel,
                         guild: n
