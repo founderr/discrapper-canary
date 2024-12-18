@@ -12,27 +12,27 @@ var t = n(200651),
     d = n(189357),
     s = n(944486),
     c = n(626135),
-    Z = n(981631),
-    g = n(176505),
-    m = n(50493),
+    m = n(981631),
+    Z = n(176505),
+    g = n(50493),
     M = n(388032);
 function E(e) {
     let { userId: l, guildId: n, channelId: E, location: v, onAction: f } = e,
         I = i.useContext(c.AnalyticsContext),
-        C = (0, u.Aq)(),
-        P = (0, a.e7)([s.Z], () => (null != E ? E : s.Z.getChannelId(n, !0)), [E, n]),
-        h = (0, d.ms)(n, !0);
-    return null != n && h
+        h = (0, u.Aq)(),
+        C = (0, a.e7)([s.Z], () => (null != E ? E : s.Z.getChannelId(n, !0)), [E, n]),
+        P = (0, d.ms)(n, !0);
+    return null != n && P
         ? (0, t.jsx)(r.MenuItem, {
               id: 'mod-view',
               label: M.intl.string(M.t.kj3tz8),
               action: () => {
                   null == f || f(),
-                      (0, o.r)(n, l, null != P ? P : g.oC.MEMBER_SAFETY, {
-                          modViewPanel: m.k.INFO,
+                      (0, o.r)(n, l, null != C ? C : Z.oC.MEMBER_SAFETY, {
+                          modViewPanel: g.k.INFO,
                           sourceLocation: null != v ? v : I.location
                       }),
-                      C.dispatch(Z.CkL.POPOUT_CLOSE);
+                      h.dispatch(m.CkL.POPOUT_CLOSE);
               }
           })
         : null;

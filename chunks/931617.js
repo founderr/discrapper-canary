@@ -44,8 +44,8 @@ function h(e, n) {
         i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
         v = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
         h = (0, r.e7)([Z.Z], () => Z.Z.getGuild(n)),
-        P = (0, r.e7)([Z.Z], () => Z.Z.getRoles(n)),
-        p = (0, r.e7)([u.Z], () => u.Z.roleStyle),
+        p = (0, r.e7)([Z.Z], () => Z.Z.getRoles(n)),
+        P = (0, r.e7)([u.Z], () => u.Z.roleStyle),
         C = (0, d.sE)(n, {
             location: i,
             targetUserId: e
@@ -68,7 +68,7 @@ function h(e, n) {
         );
     if (__OVERLAY__ || null == I || null == h || !b) return null;
     let j = f.Z.getHighestRole(h),
-        T = Object.values(P).filter((e) => !(0, o.pM)(h.id, e.id)),
+        T = Object.values(p).filter((e) => !(0, o.pM)(h.id, e.id)),
         O =
             E && !v
                 ? T.map((t) => {
@@ -80,7 +80,7 @@ function h(e, n) {
                                 a.MenuCheckboxItem,
                                 {
                                     id: t.id,
-                                    label: () => x(t, p),
+                                    label: () => x(t, P),
                                     disabled: i,
                                     action: () => {
                                         var l;
@@ -110,7 +110,7 @@ function h(e, n) {
                                 a.MenuItem,
                                 {
                                     id: e.id,
-                                    label: () => x(e, p)
+                                    label: () => x(e, P)
                                 },
                                 e.id
                             )

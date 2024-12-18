@@ -21,8 +21,8 @@ var i = t(442837),
     v = t(979651),
     x = t(934415),
     h = t(700785),
-    P = t(981631),
-    p = t(388032);
+    p = t(981631),
+    P = t(388032);
 function C(e, n) {
     let t = (0, i.e7)([c.ZP], () => c.ZP.getChannels(n)[c.Zb], [n]),
         C = (0, i.e7)(
@@ -35,17 +35,17 @@ function C(e, n) {
         );
     if ((0, i.e7)([Z.ZP], () => Z.ZP.isGuestOrLurker(n, e.id), [n, e.id]) || null == C) return null;
     let I = e.id === d.default.getId();
-    if (!I && !g.Z.can(P.Plq.MOVE_MEMBERS, C)) return null;
+    if (!I && !g.Z.can(p.Plq.MOVE_MEMBERS, C)) return null;
     let b = t.filter((n) => {
         let { channel: t } = n;
         return (
             t.id !== C.id &&
             (I
-                ? g.Z.can(P.Plq.CONNECT, t) && !(0, x.rY)(t, v.Z, f.Z)
-                : g.Z.can(P.Plq.MOVE_MEMBERS, t) &&
-                  (g.Z.can(P.Plq.CONNECT, t) ||
+                ? g.Z.can(p.Plq.CONNECT, t) && !(0, x.rY)(t, v.Z, f.Z)
+                : g.Z.can(p.Plq.MOVE_MEMBERS, t) &&
+                  (g.Z.can(p.Plq.CONNECT, t) ||
                       h.BT({
-                          permission: P.Plq.CONNECT,
+                          permission: p.Plq.CONNECT,
                           user: e,
                           context: t
                       })) &&
@@ -56,7 +56,7 @@ function C(e, n) {
         ? null
         : (0, l.jsx)(r.MenuItem, {
               id: 'voice-move',
-              label: p.intl.string(p.t.FAplmp),
+              label: P.intl.string(P.t.FAplmp),
               children: b.map((t) => {
                   let { channel: i } = t;
                   return (0, l.jsx)(

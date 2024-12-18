@@ -15,25 +15,25 @@ var l = n(120356),
     u = n(69882),
     h = n(251794),
     p = n(386696),
-    m = n(910693),
-    f = n(314897),
-    g = n(271383),
-    C = n(430824),
-    x = n(496675),
-    v = n(158776),
-    _ = n(885110),
-    I = n(594174),
-    E = n(572004),
-    b = n(5192),
-    Z = n(51144),
-    S = n(981631),
+    m = n(946273),
+    f = n(910693),
+    g = n(314897),
+    C = n(271383),
+    x = n(430824),
+    v = n(496675),
+    _ = n(158776),
+    I = n(885110),
+    E = n(594174),
+    b = n(572004),
+    Z = n(5192),
+    S = n(51144),
     N = n(308083),
     T = n(388032),
     j = n(125712);
 function A(e) {
     let { user: t, guildId: n, onClose: l } = e,
         r = t.id,
-        o = (0, a.e7)([_.Z, v.Z, f.default], () => (r === f.default.getId() ? _.Z.getStatus() : v.Z.getStatus(r, n)), [r, n]);
+        o = (0, a.e7)([I.Z, _.Z, g.default], () => (r === g.default.getId() ? I.Z.getStatus() : _.Z.getStatus(r, n)), [r, n]);
     return (0, i.jsxs)('div', {
         className: j.topRow,
         children: [
@@ -58,7 +58,7 @@ function A(e) {
                                     (0, i.jsx)(s.Text, {
                                         variant: 'text-lg/medium',
                                         children: (0, i.jsx)(s.NameWithRole, {
-                                            name: b.ZP.getName(n, null, t),
+                                            name: Z.ZP.getName(n, null, t),
                                             color: s.tokens.colors.HEADER_PRIMARY.css
                                         })
                                     }),
@@ -76,7 +76,7 @@ function A(e) {
                             (0, i.jsx)(s.Text, {
                                 variant: 'text-md/medium',
                                 color: 'text-normal',
-                                children: Z.ZP.getUserTag(t)
+                                children: S.ZP.getUserTag(t)
                             })
                         ]
                     })
@@ -118,28 +118,28 @@ function y(e) {
 }
 function P(e) {
     let { user: t, member: l, guildId: r } = e,
-        d = (0, a.e7)([C.Z], () => C.Z.getGuild(r)),
+        d = (0, a.e7)([x.Z], () => x.Z.getGuild(r)),
         {
-            canKickUser: g,
-            canBanUser: v,
-            canModerateMembers: _
+            canKickUser: C,
+            canBanUser: _,
+            canModerateMembers: I
         } = (0, a.cj)(
-            [x.Z, I.default, C.Z],
+            [v.Z, E.default, x.Z],
             () => ({
-                canKickUser: null != d && x.Z.canManageUser(S.Plq.KICK_MEMBERS, t, d),
-                canBanUser: null != d && x.Z.canManageUser(S.Plq.BAN_MEMBERS, t, d),
-                canModerateMembers: null != d && (0, p.F)(d.id, t.id, [I.default, C.Z, x.Z])
+                canKickUser: (0, m.BK)(t, d),
+                canBanUser: (0, m.mm)(t, d),
+                canModerateMembers: null != d && (0, p.F)(d.id, t.id, [E.default, x.Z, v.Z])
             }),
             [t, d]
         ),
-        b = (0, u.b)(l),
-        { analyticsLocations: Z, newestAnalyticsLocation: N } = (0, c.ZP)(),
-        A = (0, m.sE)(r, {
+        Z = (0, u.b)(l),
+        { analyticsLocations: S, newestAnalyticsLocation: N } = (0, c.ZP)(),
+        A = (0, f.sE)(r, {
             targetUserId: t.id,
             location: N,
-            locations: Z
+            locations: S
         }),
-        P = (0, a.e7)([f.default], () => f.default.getId() === (null == t ? void 0 : t.id));
+        P = (0, a.e7)([g.default], () => g.default.getId() === (null == t ? void 0 : t.id));
     return (0, i.jsxs)('div', {
         className: j.bottomRow,
         children: [
@@ -157,7 +157,7 @@ function P(e) {
                 })
             }),
             (0, i.jsx)(y, {
-                disabled: !g,
+                disabled: !C,
                 text: T.intl.string(T.t['3glT6e']),
                 onClick: () => {
                     (0, s.openModalLazy)(async () => {
@@ -179,7 +179,7 @@ function P(e) {
                 })
             }),
             (0, i.jsx)(y, {
-                disabled: !v,
+                disabled: !_,
                 text: T.intl.string(T.t['5MBJ5O']),
                 onClick: () => {
                     (0, s.openModalLazy)(async () => {
@@ -201,19 +201,19 @@ function P(e) {
                 })
             }),
             (0, i.jsx)(y, {
-                disabled: !_,
-                text: b ? T.intl.string(T.t.N86XcH) : T.intl.string(T.t.kTlLr6),
+                disabled: !I,
+                text: Z ? T.intl.string(T.t.N86XcH) : T.intl.string(T.t.kTlLr6),
                 onClick: () => {
-                    b
+                    Z
                         ? (0, h.q)({
                               guildId: l.guildId,
                               userId: l.userId,
-                              anaylticsLocations: Z
+                              anaylticsLocations: S
                           })
                         : (0, h.z)({
                               guildId: l.guildId,
                               userId: l.userId,
-                              anaylticsLocations: Z
+                              anaylticsLocations: S
                           });
                 },
                 children: (0, i.jsx)(s.ClockWarningIcon, {
@@ -226,9 +226,9 @@ function P(e) {
             (0, i.jsx)(y, {
                 text: T.intl.string(T.t.IHTjzM),
                 onClick: () => {
-                    A(m.jQ.COPY_ID), (0, E.JG)(t.id);
+                    A(f.jQ.COPY_ID), (0, b.JG)(t.id);
                 },
-                disabled: !E.wS,
+                disabled: !b.wS,
                 children: (0, i.jsx)(s.IdIcon, {
                     size: 'custom',
                     width: 24,
@@ -241,8 +241,8 @@ function P(e) {
 }
 function M(e) {
     let { userId: t, guildId: n, onClose: l } = e,
-        r = (0, a.e7)([I.default], () => I.default.getUser(t), [t]),
-        s = (0, a.e7)([g.ZP], () => g.ZP.getMember(n, t), [n, t]);
+        r = (0, a.e7)([E.default], () => E.default.getUser(t), [t]),
+        s = (0, a.e7)([C.ZP], () => C.ZP.getMember(n, t), [n, t]);
     return null == r || null == s
         ? null
         : (0, i.jsxs)('div', {
