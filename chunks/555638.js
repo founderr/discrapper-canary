@@ -1,43 +1,41 @@
 e.d(t, {
     A: function () {
-        return a;
+        return l;
     }
 });
-var i = e(200651);
+var o = e(200651);
 e(192379);
-var o = e(212598),
-    r = e(927923),
-    l = e(388032),
-    c = e(283554),
-    s = e(124248);
-function a(n) {
-    let { platformType: t, isWaitingForConnection: e, onWaitingForConnection: a, expectedCallbackState: d, onAuthToken: u, onError: C, onClose: f } = n,
-        h = e
-            ? (0, i.jsx)('img', {
-                  src: s,
-                  width: '180',
-                  height: '125',
+var i = e(212598),
+    c = e(388032),
+    r = e(436200),
+    s = e(757685);
+function l(n) {
+    let { platformType: t, isWaitingForConnection: e, onWaitingForConnection: l, expectedCallbackState: a, onAuthToken: d, onError: u, onClose: p } = n,
+        A = e
+            ? (0, o.jsx)('img', {
+                  src: s.Z,
+                  width: '231',
+                  height: '172',
                   alt: ''
               })
-            : (0, i.jsx)('img', {
-                  src: c,
-                  width: '180',
-                  height: '111',
+            : (0, o.jsx)('img', {
+                  src: r.Z,
+                  width: '231',
+                  height: '160',
                   alt: ''
               }),
-        T = e ? l.intl.string(l.t.TTIocn) : l.intl.string(l.t.LDTnRk),
-        A = e ? l.intl.string(l.t.MNmoKC) : l.intl.string(l.t.JA1He3);
-    return (0, i.jsx)(o.t, {
+        T = e ? c.intl.string(c.t.TTIocn) : c.intl.string(c.t['6n+UPT']),
+        f = e ? c.intl.string(c.t.MNmoKC) : c.intl.string(c.t.JaaqIS);
+    return (0, o.jsx)(i.t, {
         platformType: t,
         isWaitingForConnection: e,
-        onWaitingForConnection: a,
-        expectedCallbackState: d,
-        onAuthToken: u,
-        onError: C,
-        onClose: f,
-        img: h,
+        onWaitingForConnection: l,
+        expectedCallbackState: a,
+        onAuthToken: d,
+        onError: u,
+        onClose: p,
+        img: A,
         title: T,
-        body: A,
-        redirectDestination: r.uu
+        body: f
     });
 }

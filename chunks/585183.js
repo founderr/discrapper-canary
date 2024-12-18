@@ -9,43 +9,43 @@ var a = n(200651),
     l = n(512722),
     o = n.n(l),
     s = n(481060),
-    i = n(457330),
-    c = n(600164),
+    c = n(457330),
+    i = n(600164),
     d = n(710845),
     u = n(69580),
     x = n(424071),
     h = n(388032),
-    m = n(38920);
-let N = new d.Z('TwoWayLinkDiscordConsentWeb');
+    N = n(38920);
+let m = new d.Z('TwoWayLinkDiscordConsentWeb');
 function C(e) {
     let { platformType: t, clientId: n, scopes: l, authToken: d, onContinue: C, onError: j, onClose: f, redirectUri: v } = e,
         [p, b] = r.useState(!1),
-        T = r.useCallback(
+        E = r.useCallback(
             async (e) => {
                 let n,
                     a,
                     { location: r } = e,
                     { callbackCode: l, callbackState: o } = d;
                 try {
-                    n = await i.Z.completeTwoWayLink(t, r, l, o);
+                    n = await c.Z.completeTwoWayLink(t, r, l, o);
                 } catch (e) {
                     var s;
-                    N.error(''.concat(t, ' link error:'), e), (a = null === (s = e.body) || void 0 === s ? void 0 : s.code);
+                    m.error(''.concat(t, ' link error:'), e), (a = null === (s = e.body) || void 0 === s ? void 0 : s.code);
                 }
                 null != n ? C() : j(a);
             },
             [t, d, C, j]
         ),
         {
-            header: E,
+            header: g,
             body: k,
-            appDetails: g,
+            appDetails: T,
             sendAuthorize: B
         } = (0, u.useOAuth2AuthorizeForm)({
             clientId: n,
             scopes: l,
             responseType: 'code',
-            callback: T,
+            callback: E,
             isTrustedName: !0,
             isEmbeddedFlow: !0,
             redirectUri: v
@@ -56,12 +56,12 @@ function C(e) {
     return (0, a.jsxs)(x.Z, {
         children: [
             (0, a.jsxs)(s.ModalHeader, {
-                direction: c.Z.Direction.VERTICAL,
-                className: m.header,
+                direction: i.Z.Direction.VERTICAL,
+                className: N.header,
                 separator: !1,
                 children: [
                     (0, a.jsx)(s.Text, {
-                        className: m.stepHeader,
+                        className: N.stepHeader,
                         variant: 'text-xs/bold',
                         color: 'header-secondary',
                         children: h.intl.format(h.t.fHz6eX, {
@@ -71,19 +71,20 @@ function C(e) {
                     }),
                     null != f &&
                         (0, a.jsx)(s.ModalCloseButton, {
-                            className: m.closeButton,
+                            className: N.closeButton,
                             onClick: f
                         })
                 ]
             }),
             (0, a.jsxs)(s.ModalContent, {
+                className: N.consentContent,
                 paddingFix: !1,
-                children: [E, k, g]
+                children: [g, k, T]
             }),
             (0, a.jsx)(s.ModalFooter, {
-                className: m.footer,
+                className: N.footer,
                 children: (0, a.jsx)(s.Button, {
-                    className: m.footerButton,
+                    className: N.footerButton,
                     color: s.Button.Colors.BRAND,
                     submitting: p,
                     onClick: O,

@@ -1,56 +1,47 @@
 e.d(t, {
     A: function () {
-        return f;
+        return u;
     }
 });
-var i = e(200651);
-e(192379);
-var o = e(362470),
-    r = e(961842),
-    l = e(63063),
-    c = e(921869),
-    s = e(514161),
-    a = e(981631),
-    d = e(388032),
-    u = e(913045);
-function C() {
-    let n = [d.intl.string(d.t.xBZGTE), d.intl.string(d.t.z8Ude3)],
-        t = [d.intl.string(d.t.z8Ude3)];
-    return (0, i.jsxs)(i.Fragment, {
-        children: [
-            (0, i.jsx)(s.yC, {
-                children: (0, i.jsx)(s.pT, {
-                    icon: (0, i.jsx)(r.Z, {}),
-                    title: d.intl.string(d.t.oElqNz),
-                    bulletPoints: n
-                })
-            }),
-            (0, i.jsx)(s.yC, {
-                children: (0, i.jsx)(s.pT, {
-                    icon: (0, i.jsx)(o.Z, {}),
-                    title: d.intl.string(d.t.fJyyQk),
-                    bulletPoints: t
-                })
-            })
-        ]
-    });
-}
-function f(n) {
-    let { platformType: t, onContinue: e, onClose: o } = n;
-    return (0, i.jsx)(c.m, {
+var o = e(200651),
+    i = e(192379),
+    c = e(481060),
+    r = e(63063),
+    s = e(921869),
+    l = e(981631),
+    a = e(388032),
+    d = e(660025);
+function u(n) {
+    let { platformType: t, onContinue: e, onClose: u } = n,
+        p = i.useMemo(
+            () => [
+                {
+                    label: a.intl.string(a.t['+eJP7u']),
+                    subLabel: a.intl.string(a.t['+0VIUl']),
+                    icon: c.VoiceNormalIcon
+                },
+                {
+                    label: a.intl.string(a.t.ZH4QFR),
+                    icon: c.GameControllerIcon
+                }
+            ],
+            []
+        ),
+        A = r.Z.getArticleURL(l.BhN.PS_CONNECTION),
+        T = a.intl.format(a.t.kqZQNT, { helpdeskArticleUrl: A });
+    return (0, o.jsx)(s.m, {
         platformType: t,
-        headerConnect: d.intl.string(d.t.n2I5mJ),
-        headerReconnect: d.intl.string(d.t['ZJ/vBg']),
-        body: d.intl.string(d.t.EVyQLS),
-        onClose: o,
+        headerConnect: a.intl.string(a.t.xAWHOz),
+        headerReconnect: a.intl.string(a.t['ZJ/vBg']),
+        body: T,
+        onClose: u,
         onContinue: e,
-        img: (0, i.jsx)('img', {
-            src: u,
+        img: (0, o.jsx)('img', {
+            src: d.Z,
             width: 230,
-            height: 138,
+            height: 160,
             alt: ''
         }),
-        valueProps: (0, i.jsx)(C, {}),
-        learnMoreLink: l.Z.getArticleURL(a.BhN.PS_CONNECTION)
+        valueProps: p
     });
 }

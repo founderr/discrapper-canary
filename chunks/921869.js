@@ -1,76 +1,96 @@
 n.d(t, {
     m: function () {
-        return u;
+        return h;
     }
 });
-var a = n(200651);
-n(192379);
-var r = n(442837),
-    l = n(481060),
-    o = n(600164),
-    s = n(553795),
+var a = n(200651),
+    r = n(192379),
+    l = n(442837),
+    o = n(481060),
+    s = n(600164),
+    c = n(553795),
     i = n(424071),
-    c = n(388032),
-    d = n(38920);
-function u(e) {
-    let { platformType: t, onContinue: n, onClose: u, img: x, headerConnect: h, headerReconnect: m, body: N, learnMoreLink: C, valueProps: j } = e,
-        f = (0, r.e7)([s.Z], () => {
-            let e = s.Z.getAccount(null, t);
+    d = n(239358),
+    u = n(388032),
+    x = n(38920);
+function h(e) {
+    let { platformType: t, onContinue: n, onClose: h, img: N, headerConnect: m, headerReconnect: C, body: j, learnMoreLink: f, valueProps: v } = e,
+        p = (0, l.e7)([c.Z], () => {
+            let e = c.Z.getAccount(null, t);
             return (null == e ? void 0 : e.twoWayLink) === !1;
         });
     return (0, a.jsxs)(i.Z, {
         children: [
-            (0, a.jsxs)(l.ModalHeader, {
-                direction: o.Z.Direction.VERTICAL,
-                className: d.header,
+            (0, a.jsxs)(o.ModalHeader, {
+                direction: s.Z.Direction.VERTICAL,
+                className: x.header,
                 separator: !1,
                 children: [
                     (0, a.jsxs)('div', {
-                        className: d.illustration,
-                        children: [x, ' ']
+                        className: x.illustration,
+                        children: [N, ' ']
                     }),
-                    (0, a.jsx)(l.Heading, {
-                        className: d.title,
+                    (0, a.jsx)(o.Heading, {
+                        className: x.title,
                         variant: 'heading-xl/extrabold',
-                        children: f && null != m ? m : h
+                        children: p && null != C ? C : m
                     }),
-                    (0, a.jsx)(l.ModalCloseButton, {
-                        className: d.closeButton,
-                        onClick: u
+                    (0, a.jsx)(o.ModalCloseButton, {
+                        className: x.closeButton,
+                        onClick: h
                     })
                 ]
             }),
-            (0, a.jsxs)(l.ModalContent, {
-                className: d.body,
-                paddingFix: !1,
+            (0, a.jsxs)(o.ModalContent, {
+                className: x.body,
                 children: [
-                    (0, a.jsx)(l.Text, {
+                    (0, a.jsx)(o.Text, {
                         tag: 'p',
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: N
-                    }),
-                    (0, a.jsx)('div', {
-                        className: d.valueProps,
                         children: j
                     }),
-                    null != C
-                        ? (0, a.jsx)(l.Text, {
+                    (0, a.jsx)('div', {
+                        className: x.valueProps,
+                        children: v.map((e, t) => {
+                            let { label: n, subLabel: l, icon: o } = e;
+                            return (0, a.jsxs)(
+                                r.Fragment,
+                                {
+                                    children: [
+                                        (0, a.jsx)(
+                                            d.Z,
+                                            {
+                                                label: n,
+                                                subLabel: l,
+                                                icon: o
+                                            },
+                                            n
+                                        ),
+                                        t !== v.length - 1 && (0, a.jsx)('div', { className: x.valuePropDivider })
+                                    ]
+                                },
+                                n
+                            );
+                        })
+                    }),
+                    null != f
+                        ? (0, a.jsx)(o.Text, {
                               tag: 'p',
                               variant: 'text-sm/normal',
                               color: 'header-secondary',
-                              children: c.intl.format(c.t['/l3n+/'], { helpCenterLink: C })
+                              children: u.intl.format(u.t['/l3n+/'], { helpCenterLink: f })
                           })
                         : null
                 ]
             }),
-            (0, a.jsx)(l.ModalFooter, {
-                className: d.footer,
-                children: (0, a.jsx)(l.Button, {
-                    className: d.footerButton,
-                    color: l.Button.Colors.BRAND,
+            (0, a.jsx)(o.ModalFooter, {
+                className: x.footer,
+                children: (0, a.jsx)(o.Button, {
+                    className: x.footerButton,
+                    color: o.Button.Colors.BRAND,
                     onClick: n,
-                    children: c.intl.string(c.t['3PatS0'])
+                    children: u.intl.string(u.t['3PatS0'])
                 })
             })
         ]

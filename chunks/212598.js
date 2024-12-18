@@ -9,19 +9,19 @@ var a = n(200651),
     l = n(512722),
     o = n.n(l),
     s = n(478677),
-    i = n(481060),
-    c = n(570140),
+    c = n(481060),
+    i = n(570140),
     d = n(275759),
     u = n(202120),
     x = n(600164),
     h = n(710845),
-    m = n(424071),
-    N = n(388032),
+    N = n(424071),
+    m = n(388032),
     C = n(38920);
 let j = new h.Z('TwoWayLink');
 function f(e) {
-    let { platformType: t, isWaitingForConnection: n, onWaitingForConnection: l, expectedCallbackState: h, onAuthToken: f, onError: v, onClose: p, img: b, title: T, body: E, redirectDestination: k } = e,
-        g = r.useCallback(async () => {
+    let { platformType: t, isWaitingForConnection: n, onWaitingForConnection: l, expectedCallbackState: h, onAuthToken: f, onError: v, onClose: p, img: b, title: E, body: g, redirectDestination: k } = e,
+        T = r.useCallback(async () => {
             let e;
             try {
                 if (((e = await (0, u.H)(t, { twoWayLinkType: s.g.DESKTOP })), null == e)) throw Error('missing authorizeURL');
@@ -49,25 +49,25 @@ function f(e) {
     return (
         r.useEffect(
             () => (
-                c.Z.subscribe('USER_CONNECTIONS_LINK_CALLBACK', B),
+                i.Z.subscribe('USER_CONNECTIONS_LINK_CALLBACK', B),
                 () => {
-                    c.Z.unsubscribe('USER_CONNECTIONS_LINK_CALLBACK', B);
+                    i.Z.unsubscribe('USER_CONNECTIONS_LINK_CALLBACK', B);
                 }
             ),
             [B]
         ),
-        (0, a.jsxs)(m.Z, {
+        (0, a.jsxs)(N.Z, {
             children: [
-                (0, a.jsxs)(i.ModalHeader, {
+                (0, a.jsxs)(c.ModalHeader, {
                     direction: x.Z.Direction.VERTICAL,
                     className: C.header,
                     separator: !1,
                     children: [
-                        (0, a.jsx)(i.Text, {
+                        (0, a.jsx)(c.Text, {
                             className: C.stepHeader,
                             variant: 'text-xs/bold',
                             color: 'header-secondary',
-                            children: N.intl.format(N.t.fHz6eX, {
+                            children: m.intl.format(m.t.fHz6eX, {
                                 number: 1,
                                 total: 2
                             })
@@ -76,46 +76,47 @@ function f(e) {
                             className: C.illustration,
                             children: [b, ' ']
                         }),
-                        (0, a.jsx)(i.Heading, {
+                        (0, a.jsx)(c.Heading, {
                             className: C.title,
                             variant: 'heading-xl/extrabold',
-                            children: T
+                            children: E
                         }),
                         null != p &&
-                            (0, a.jsx)(i.ModalCloseButton, {
+                            (0, a.jsx)(c.ModalCloseButton, {
                                 className: C.closeButton,
                                 onClick: p
                             })
                     ]
                 }),
-                (0, a.jsxs)(i.ModalContent, {
+                (0, a.jsxs)(c.ModalContent, {
                     className: C.body,
                     paddingFix: !1,
                     children: [
-                        (0, a.jsx)(i.Text, {
+                        (0, a.jsx)(c.Text, {
                             tag: 'p',
                             variant: 'text-md/normal',
                             color: 'header-secondary',
-                            children: E
+                            children: g
                         }),
                         !n &&
-                            (0, a.jsx)(i.Text, {
+                            null != k &&
+                            (0, a.jsx)(c.Text, {
                                 tag: 'p',
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: N.intl.format(N.t.XhlYYm, { redirectUrl: k })
+                                children: m.intl.format(m.t.XhlYYm, { redirectUrl: k })
                             })
                     ]
                 }),
-                (0, a.jsx)(i.ModalFooter, {
+                (0, a.jsx)(c.ModalFooter, {
                     className: C.footer,
-                    children: (0, a.jsxs)(i.Button, {
+                    children: (0, a.jsxs)(c.Button, {
                         className: C.footerButton,
-                        color: n ? i.Button.Colors.PRIMARY : i.Button.Colors.BRAND,
-                        onClick: g,
+                        color: n ? c.Button.Colors.PRIMARY : c.Button.Colors.BRAND,
+                        onClick: T,
                         children: [
-                            n ? N.intl.string(N.t['5911LS']) : N.intl.string(N.t['3PatS0']),
-                            (0, a.jsx)(i.WindowLaunchIcon, {
+                            n ? m.intl.string(m.t['5911LS']) : m.intl.string(m.t['3PatS0']),
+                            (0, a.jsx)(c.WindowLaunchIcon, {
                                 color: 'currentColor',
                                 className: C.launchIcon,
                                 size: 'xs'

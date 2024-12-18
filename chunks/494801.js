@@ -1,44 +1,42 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return d;
+        return l;
     }
 });
-var o = n(200651);
-n(192379);
-var r = n(212598),
-    i = n(981631),
-    c = n(927923),
-    s = n(388032),
-    l = n(397995),
-    a = n(848499);
-function d(e) {
-    let { isWaitingForConnection: t, onWaitingForConnection: n, expectedCallbackState: d, onAuthToken: u, onError: x, onClose: C } = e,
-        p = t
+var o = t(200651);
+t(192379);
+var i = t(212598),
+    r = t(981631),
+    c = t(388032),
+    s = t(250331),
+    a = t(300778);
+function l(e) {
+    let { isWaitingForConnection: n, onWaitingForConnection: t, expectedCallbackState: l, onAuthToken: d, onError: u, onClose: f } = e,
+        p = n
             ? (0, o.jsx)('img', {
-                  src: a,
-                  width: '168',
-                  height: '124',
+                  src: a.Z,
+                  width: '231',
+                  height: '172',
                   alt: ''
               })
             : (0, o.jsx)('img', {
-                  src: l,
-                  width: '152',
-                  height: '124',
+                  src: s.Z,
+                  width: '231',
+                  height: '160',
                   alt: ''
               }),
-        f = t ? s.intl.string(s.t.EuwcxM) : s.intl.string(s.t.a3MfQU),
-        g = t ? s.intl.string(s.t['1GjS/f']) : s.intl.string(s.t['Y+UQDg']);
-    return (0, o.jsx)(r.t, {
-        platformType: i.ABu.XBOX,
-        isWaitingForConnection: t,
-        onWaitingForConnection: n,
-        expectedCallbackState: d,
-        onAuthToken: u,
-        onError: x,
-        onClose: C,
+        x = n ? c.intl.string(c.t.EuwcxM) : c.intl.string(c.t['e/z3nZ']),
+        C = n ? c.intl.string(c.t['1GjS/f']) : c.intl.string(c.t['7tXu0t']);
+    return (0, o.jsx)(i.t, {
+        platformType: r.ABu.XBOX,
+        isWaitingForConnection: n,
+        onWaitingForConnection: t,
+        expectedCallbackState: l,
+        onAuthToken: d,
+        onError: u,
+        onClose: f,
         img: p,
-        title: f,
-        body: g,
-        redirectDestination: c.zM
+        title: x,
+        body: C
     });
 }
