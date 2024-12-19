@@ -156,12 +156,14 @@ class j extends (i = c.yh) {
     }
     getFractionalPremium(e) {
         var n;
-        let r = [];
+        let r = [],
+            i = new Date();
         return (
             null === (n = this.getForApplication(g.CL)) ||
                 void 0 === n ||
                 n.forEach((n) => {
-                    n.type === m.qc2.FRACTIONAL_REDEMPTION && n.consumed === e && r.push(n);
+                    let a = null != n.endsAt && n.endsAt < i;
+                    n.type === m.qc2.FRACTIONAL_REDEMPTION && (!a || e) && r.push(n);
                 }),
             r
         );
