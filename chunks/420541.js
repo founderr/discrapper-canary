@@ -1,6 +1,6 @@
 t.r(n);
-var r = t(200651),
-    i = t(192379),
+var i = t(200651),
+    r = t(192379),
     a = t(597846),
     c = t(885006),
     o = t(278788),
@@ -8,7 +8,7 @@ var r = t(200651),
     l = t(936003);
 let s = () => {
     let e = (0, c.Z)(),
-        n = i.useMemo(
+        n = r.useMemo(
             () => ({
                 w: e.width,
                 h: e.height
@@ -16,9 +16,10 @@ let s = () => {
             [e]
         ),
         t = (0, u.Z)(n, 90);
-    return (0, r.jsx)('div', {
+    return (0, i.jsx)('div', {
         className: l.canvasWrapper,
-        children: (0, r.jsx)(a.z, {
+        id: 'simple-confetti-canvas',
+        children: (0, i.jsx)(a.z, {
             size: n,
             drawCallback: (e, n) => {
                 t.update(n), t.draw(e);
@@ -26,4 +27,4 @@ let s = () => {
         })
     });
 };
-n.default = () => ((0, o.kf)('ConfettiCanvasComponent') ? null : (0, r.jsx)(s, {}));
+n.default = () => ((0, o.kf)('ConfettiCanvasComponent') ? (0, i.jsx)(s, {}) : null);
