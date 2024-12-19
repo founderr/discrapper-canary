@@ -46,7 +46,9 @@ let _ = (e, n) => ({
             case a.re.ROLE_SELECT:
             case a.re.MENTIONABLE_SELECT:
             case a.re.CHANNEL_SELECT:
+            case a.re.SECTION:
             case a.re.TEXT_DISPLAY:
+            case a.re.THUMBNAIL:
             case a.re.MEDIA_GALLERY:
             case a.re.FILE:
             case a.re.SEPARATOR:
@@ -56,12 +58,22 @@ let _ = (e, n) => ({
         }
     };
 function g(e, n) {
-    if (((e[n.id] = n), n.type === ComponentType.ACTION_ROW)) n.components.forEach((n) => g(e, n));
+    switch (((e[n.id] = n), n.type)) {
+        case ComponentType.ACTION_ROW:
+            n.components.forEach((n) => g(e, n));
+            break;
+        case ComponentType.SECTION:
+            n.components.forEach((n) => g(e, n)), g(e, n.accessory);
+    }
 }
 function E(e, n) {
-    if (e.type === a.re.ACTION_ROW) {
-        var r;
-        return null !== (r = e.components.find((e) => e.id === n)) && void 0 !== r ? r : null;
+    var r, i;
+    switch (e.type) {
+        case a.re.ACTION_ROW:
+            return null !== (r = e.components.find((e) => e.id === n)) && void 0 !== r ? r : null;
+        case a.re.SECTION:
+            if (e.accessory.id === n) return e.accessory;
+            return null !== (i = e.components.find((e) => e.id === n)) && void 0 !== i ? i : null;
     }
 }
 function v(e) {
@@ -176,11 +188,30 @@ function I(e, n, r) {
                 channelTypes: e.channel_types,
                 defaultValues: e.default_values
             };
+        case a.re.SECTION: {
+            let n = e.components.map((e, n) => v(e, n)).filter(u.lm),
+                i = v(e.accessory, n.length);
+            if (0 === n.length || null == i) return null;
+            return {
+                type: a.re.SECTION,
+                id: T(r),
+                components: n,
+                accessory: i
+            };
+        }
         case a.re.TEXT_DISPLAY:
             return {
                 type: a.re.TEXT_DISPLAY,
                 id: T(r),
                 content: e.content
+            };
+        case a.re.THUMBNAIL:
+            return {
+                type: a.re.THUMBNAIL,
+                id: T(r),
+                image: (0, o.ym)(e.image),
+                description: e.description,
+                spoiler: e.spoiler
             };
         case a.re.MEDIA_GALLERY:
             return {

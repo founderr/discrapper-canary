@@ -1,9 +1,9 @@
 t.d(n, {
     ZP: function () {
-        return I;
+        return j;
     },
     xX: function () {
-        return g;
+        return b;
     }
 });
 var l = t(200651);
@@ -19,21 +19,23 @@ var i = t(120356),
     m = t(732586),
     f = t(988075),
     p = t(12067),
-    x = t(676149),
-    h = t(861529),
-    v = t(770009),
-    C = t(889515),
-    _ = t(785225);
-function g(e) {
+    h = t(676149),
+    x = t(861529),
+    v = t(568248),
+    C = t(770009),
+    g = t(889515),
+    _ = t(892519),
+    I = t(785225);
+function b(e) {
     return e.map((e, n) =>
         (function (e, n) {
             switch (e.type) {
                 case a.re.ACTION_ROW:
                     return (0, l.jsx)(
-                        C.Z,
+                        g.Z,
                         {
                             ...e,
-                            renderComponents: g
+                            renderComponents: b
                         },
                         n
                     );
@@ -49,30 +51,34 @@ function g(e) {
                     return (0, l.jsx)(u.Z, { ...e }, n);
                 case a.re.TEXT_INPUT:
                     return (0, l.jsx)(m.Z, { ...e }, n);
+                case a.re.SECTION:
+                    return (0, l.jsx)(_.Z, { ...e }, n);
                 case a.re.TEXT_DISPLAY:
-                    return (0, l.jsx)(h.Z, { ...e }, n);
+                    return (0, l.jsx)(x.Z, { ...e }, n);
                 case a.re.MEDIA_GALLERY:
                     return (0, l.jsx)(p.Z, { ...e }, n);
+                case a.re.THUMBNAIL:
+                    return (0, l.jsx)(v.Z, { ...e }, n);
                 case a.re.FILE:
                     return (0, l.jsx)(f.Z, { ...e }, n);
                 case a.re.SEPARATOR:
-                    return (0, l.jsx)(x.Z, { ...e }, n);
+                    return (0, l.jsx)(h.Z, { ...e }, n);
                 case a.re.CONTENT_INVENTORY_ENTRY:
-                    return (0, l.jsx)(v.Z, { ...e }, n);
+                    return (0, l.jsx)(C.Z, { ...e }, n);
             }
         })(e, n.toString())
     );
 }
-function I(e) {
+function j(e) {
     let { message: n } = e,
         { components: t } = n;
     return 0 === t.length
         ? null
         : (0, l.jsx)('div', {
-              className: r()([_.container, { [_.containerUikit]: n.isUIKitComponents() }]),
+              className: r()([I.container, { [I.containerUikit]: n.isUIKitComponents() }]),
               children: (0, l.jsx)(o.Il, {
                   message: n,
-                  children: g(t)
+                  children: b(t)
               })
           });
 }

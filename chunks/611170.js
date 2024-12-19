@@ -1,61 +1,34 @@
 t.d(n, {
     aB: function () {
-        return x;
+        return s;
     },
     rJ: function () {
-        return h;
+        return c;
     },
     yF: function () {
-        return p;
+        return o;
     }
 });
-var l = t(200651),
-    i = t(192379),
-    r = t(916616),
-    a = t(981729),
-    o = t(911969),
-    s = t(558522),
-    c = t(591759),
-    u = t(524444),
-    d = t(981631),
-    m = t(388032),
-    f = t(650519);
-function p(e) {
-    let n = i.useRef(null),
-        t = e.item.originalItem.media;
-    if (t.loadingState === o.f.LOADED_NOT_FOUND)
-        return (0, l.jsx)(a.u, {
-            text: m.intl.string(m.t.UvDfMz),
-            position: 'bottom',
-            align: 'center',
-            targetElementRef: n,
-            children: (e) =>
-                (0, l.jsx)('div', {
-                    ...e,
-                    className: f.notFoundPlaceholder,
-                    role: 'img',
-                    children: (0, l.jsx)(s.Z, {
-                        ref: n,
-                        className: f.brokenImageIcon
-                    })
-                })
-        });
-    let c = t.loadingState === o.f.LOADING ? d.zo9.LOADING : d.zo9.ERROR;
-    return (0, l.jsx)(r.E, {
-        readyState: c,
-        src: '',
-        width: 350,
-        height: 350,
+var l = t(200651);
+t(192379);
+var i = t(295435),
+    r = t(591759),
+    a = t(524444);
+function o(e) {
+    let n = e.item.originalItem.media;
+    return (0, l.jsx)(i.S, {
+        media: n,
+        placeholderWidth: 350,
+        placeholderHeight: 350,
         maxWidth: e.maxWidth,
         maxHeight: e.maxHeight,
-        mediaLayoutType: e.mediaLayoutType,
         useFullWidth: e.useFullWidth,
-        zoomable: !1
+        mediaLayoutType: e.mediaLayoutType
     });
 }
-function x(e) {
+function s(e) {
     let n = e.item.originalItem.media;
-    return (0, u.Yi)({
+    return (0, a.Yi)({
         ...e,
         alt: e.item.originalItem.description,
         src: n.proxyUrl,
@@ -65,13 +38,13 @@ function x(e) {
         sourceMetadata: { message: e.message }
     });
 }
-function h(e) {
+function c(e) {
     let n = e.item.originalItem.media,
-        t = c.Z.toURLSafe(n.proxyUrl);
+        t = r.Z.toURLSafe(n.proxyUrl);
     return null == t
         ? null
         : (t.searchParams.append('format', 'webp'),
-          (0, u.lV)({
+          (0, a.lV)({
               ...e,
               poster: t.toString(),
               alt: e.item.originalItem.description,
