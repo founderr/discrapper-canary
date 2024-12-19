@@ -710,8 +710,9 @@ class eC extends l.PureComponent {
         let { currentUser: t } = this.props,
             { requestingHarvest: n, currentHarvestRequest: i } = this.state,
             s = (0, K.$6)(i, t),
-            a = (0, r.jsx)(p.Tooltip, {
-                text: t.verified ? null : ea.intl.string(ea.t['c1f88/']),
+            a = null != i && m()().diff(m()(i.created_at), 'days') < er.eBq,
+            o = (0, r.jsx)(p.Tooltip, {
+                text: t.isStaff() ? ea.intl.string(ea.t.ZPQLHx) : t.verified ? null : ea.intl.string(ea.t['c1f88/']),
                 children: (e) => {
                     let { onMouseEnter: t, onMouseLeave: i } = e;
                     return (0, r.jsx)(p.Button, {
@@ -728,7 +729,7 @@ class eC extends l.PureComponent {
             });
         return (
             s &&
-                null != i &&
+                a &&
                 ((e = (0, r.jsx)(p.Card, {
                     className: ec.card,
                     children: (0, r.jsx)(p.Text, {
@@ -736,8 +737,8 @@ class eC extends l.PureComponent {
                         children: ea.intl.format(ea.t.RNDlV1, { date: m()(i.created_at).add(er.eBq, 'days').format('MMMM Do YYYY') })
                     })
                 })),
-                (a = null)),
-            null != a && (a = (0, r.jsx)(f.Z, { children: a })),
+                (o = null)),
+            null != o && (o = (0, r.jsx)(f.Z, { children: o })),
             (0, r.jsxs)(l.Fragment, {
                 children: [
                     (0, r.jsx)(p.FormTitle, {
@@ -750,7 +751,7 @@ class eC extends l.PureComponent {
                         children: ea.intl.format(ea.t['3en439'], { helpdeskArticle: Y.Z.getArticleURL(er.BhN.GDPR_REQUEST_DATA) })
                     }),
                     e,
-                    a
+                    o
                 ]
             })
         );

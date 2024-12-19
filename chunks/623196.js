@@ -41,8 +41,9 @@ function _() {
         [r, _] = s.useState(!1);
     if (null == e) return null;
     let f = (0, m.$6)(t, e) || n,
-        I = f && null != t,
-        N = () => {
+        I = null != t && l()().diff(l()(t.created_at), 'days') < S.eBq,
+        N = f && I,
+        A = () => {
             C({
                 header: T.intl.string(T.t.jxXMEx),
                 body: T.intl.format(T.t.fSv59f, { helpdeskArticle: u.Z.getArticleURL(S.BhN.GDPR_PACKAGE_CONTENTS) }),
@@ -78,7 +79,7 @@ function _() {
                 header: T.intl.string(T.t.XAHCgI),
                 description: T.intl.format(T.t.P3kNfn, { helpdeskArticle: u.Z.getArticleURL(S.BhN.GDPR_REQUEST_DATA) })
             }),
-            I
+            N
                 ? (0, i.jsx)(o.Card, {
                       className: E.card,
                       children: (0, i.jsx)(o.Text, {
@@ -89,12 +90,12 @@ function _() {
                 : (0, i.jsx)('div', {
                       className: E.button,
                       children: (0, i.jsx)(o.Tooltip, {
-                          text: e.verified ? null : T.intl.string(T.t['c1f88/']),
+                          text: e.isStaff() ? T.intl.string(T.t.ZPQLHx) : e.verified ? T.intl.string(T.t['c1f88/']) : null,
                           children: (e) => {
                               let { onMouseEnter: t, onMouseLeave: s } = e;
                               return (0, i.jsx)(o.Button, {
                                   disabled: f,
-                                  onClick: N,
+                                  onClick: A,
                                   onMouseEnter: t,
                                   onMouseLeave: s,
                                   look: o.Button.Looks.FILLED,
