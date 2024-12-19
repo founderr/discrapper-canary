@@ -1,10 +1,10 @@
 t.r(n),
     t.d(n, {
         default: function () {
-            return U;
+            return k;
         },
         useMessageMenu: function () {
-            return k;
+            return F;
         }
     });
 var i = t(200651);
@@ -21,9 +21,9 @@ var l = t(374470),
     f = t(988500),
     m = t(570870),
     h = t(786095),
-    E = t(268623),
-    I = t(667922),
-    v = t(941389),
+    v = t(268623),
+    E = t(667922),
+    I = t(941389),
     M = t(449751),
     p = t(749339),
     Z = t(601184),
@@ -43,27 +43,28 @@ var l = t(374470),
     R = t(627938),
     O = t(512303),
     G = t(481300),
-    w = t(388032);
-function U(e) {
+    w = t(975368),
+    U = t(388032);
+function k(e) {
     var n, t;
     let i,
         r,
         o,
         s,
         { channel: u, message: d, target: c, mediaItem: g, shouldHideMediaOptions: f, onSelect: m, onHeightUpdate: h } = e,
-        E = c,
-        I = c.getAttribute('data-type'),
-        v = c.getAttribute('data-id'),
+        v = c,
+        E = c.getAttribute('data-type'),
+        I = c.getAttribute('data-id'),
         M = c.getAttribute('data-name');
     if (null != g) r = i = o = g.url;
-    else for (; (0, l.k)(E); ) (0, l.k)(E, HTMLImageElement) && null != E.src && (r = E.src), (0, l.k)(E, HTMLAnchorElement) && null != E.href && ((i = E.href), (s = E.textContent), null == r && 'img' === E.getAttribute('data-role') && ((r = i), E.hasAttribute('data-safe-src') && '' !== E.getAttribute('data-safe-src') && (o = E.getAttribute('data-safe-src')))), (E = E.parentNode);
-    return k({
+    else for (; (0, l.k)(v); ) (0, l.k)(v, HTMLImageElement) && null != v.src && (r = v.src), (0, l.k)(v, HTMLAnchorElement) && null != v.href && ((i = v.href), (s = v.textContent), null == r && 'img' === v.getAttribute('data-role') && ((r = i), v.hasAttribute('data-safe-src') && '' !== v.getAttribute('data-safe-src') && (o = v.getAttribute('data-safe-src')))), (v = v.parentNode);
+    return F({
         message: d,
         channel: u,
         mediaItem: g,
         textSelection: null !== (t = null === (n = document.getSelection()) || void 0 === n ? void 0 : n.toString()) && void 0 !== t ? t : '',
-        favoriteableType: I,
-        favoriteableId: v,
+        favoriteableType: E,
+        favoriteableId: I,
         favoriteableName: M,
         itemHref: i,
         itemSrc: r,
@@ -74,82 +75,83 @@ function U(e) {
         onSelect: m,
         onClose: a.Zy,
         navId: 'message',
-        ariaLabel: w.intl.string(w.t.ChPNkJ),
+        ariaLabel: U.intl.string(U.t.ChPNkJ),
         shouldHideMediaOptions: f
     });
 }
-function k(e) {
-    let { message: n, channel: t, mediaItem: l, textSelection: a, favoriteableType: U, favoriteableId: k, favoriteableName: F, itemHref: z, itemSrc: K, itemSafeSrc: H, itemTextContent: B, canReport: X, onHeightUpdate: V, onSelect: q, onClose: J, navId: W, ariaLabel: $, shouldHideMediaOptions: Y = !1 } = e,
-        Q = (0, u.Z)(a),
-        ee = (0, g.Z)(a),
-        en = (0, A.Z)(n, t),
-        et = (0, I.Z)(n, t),
-        ei = (0, x.Z)(n, t),
-        el = (0, b.Z)(n, t),
-        er = (0, S.Z)({
-            type: U,
-            id: k,
-            name: F
+function F(e) {
+    let { message: n, channel: t, mediaItem: l, textSelection: a, favoriteableType: k, favoriteableId: F, favoriteableName: z, itemHref: K, itemSrc: H, itemSafeSrc: B, itemTextContent: X, canReport: V, onHeightUpdate: q, onSelect: J, onClose: W, navId: $, ariaLabel: Y, shouldHideMediaOptions: Q = !1 } = e,
+        ee = (0, u.Z)(a),
+        en = (0, g.Z)(a),
+        et = (0, A.Z)(n, t),
+        ei = (0, E.Z)(n, t),
+        el = (0, x.Z)(n, t),
+        er = (0, b.Z)(n, t),
+        ea = (0, S.Z)({
+            type: k,
+            id: F,
+            name: z
         }),
-        ea = (0, L.Z)(n, t),
-        eo = (0, _.Z)(n, t),
-        es = (0, P.Z)(n),
-        eu = (0, v.Z)(n, t),
-        ed = (0, M.Z)(n, t),
-        ec = (0, N.Z)(n, t),
-        eg = (0, T.Z)(n, t),
-        ef = (0, Z.Z)(n, t),
-        em = (0, C.Z)(n),
-        eh = (0, C.e)(n),
+        eo = (0, L.Z)(n, t),
+        es = (0, _.Z)(n, t),
+        eu = (0, P.Z)(n),
+        ed = (0, I.Z)(n, t),
+        ec = (0, M.Z)(n, t),
+        eg = (0, N.Z)(n, t),
+        ef = (0, T.Z)(n, t),
+        em = (0, Z.Z)(n, t),
+        eh = (0, C.Z)(n),
+        ev = (0, C.e)(n),
         eE = (0, D.Z)(n, t),
-        eI = (0, c.Z)(null != z ? z : K, B, n, { shouldHideMediaOptions: Y }),
-        ev = (0, d.Z)(H, n, { shouldHideMediaOptions: Y }),
-        eM = (0, G.Z)(n, l),
-        ep = (0, s.Z)({
+        eI = (0, c.Z)(null != K ? K : H, X, n, { shouldHideMediaOptions: Q }),
+        eM = (0, d.Z)(B, n, { shouldHideMediaOptions: Q }),
+        ep = (0, G.Z)(n, l),
+        eZ = (0, s.Z)({
             id: n.id,
-            label: w.intl.string(w.t.zBoHlZ),
+            label: U.intl.string(U.t.zBoHlZ),
             shiftId: ''.concat(n.channel_id, '-').concat(n.id)
         }),
-        eZ = (0, y.Z)(n, t),
-        ex = (0, j.Z)(n, t),
-        eS = (0, R.Z)(n, t),
-        ej = (0, h.Z)(a, t.getGuildId()),
-        e_ = (0, E.Z)(n),
-        eb = (0, p.Z)(n),
-        eA = (0, m.Z)({
+        ex = (0, y.Z)(n, t),
+        eS = (0, j.Z)(n, t),
+        ej = (0, R.Z)(n, t),
+        e_ = (0, h.Z)(a, t.getGuildId()),
+        eb = (0, v.Z)(n),
+        eA = (0, p.Z)(n),
+        eP = (0, w.Z)(n),
+        eN = (0, m.Z)({
             commandType: o.yU.MESSAGE,
             commandTargetId: n.id,
             channel: t,
             guildId: void 0,
-            onHeightUpdate: V
+            onHeightUpdate: q
         }),
-        eP = (0, O.Z)(n),
-        eN = (0, f.Z)(n);
+        eT = (0, O.Z)(n),
+        ey = (0, f.Z)(n);
     return (0, i.jsxs)(r.Menu, {
-        navId: W,
-        onClose: J,
-        'aria-label': $,
-        onSelect: q,
+        navId: $,
+        onClose: W,
+        'aria-label': Y,
+        onSelect: J,
         children: [
-            (0, i.jsx)(r.MenuGroup, { children: Q }),
             (0, i.jsx)(r.MenuGroup, { children: ee }),
+            (0, i.jsx)(r.MenuGroup, { children: en }),
             (0, i.jsxs)(r.MenuGroup, {
-                children: ['' === a ? en : null, et, es]
+                children: ['' === a ? et : null, ei, eu]
             }),
             (0, i.jsxs)(r.MenuGroup, {
-                children: [ei, eZ, ex, eS]
+                children: [el, ex, eS, ej]
             }),
             (0, i.jsxs)(r.MenuGroup, {
-                children: [eb, el, e_, eA, ea, eo, eu, ed, eE, eN, eP]
+                children: [eA, er, eb, eN, eo, es, ed, ec, eE, ey, eT]
             }),
             (0, i.jsxs)(r.MenuGroup, {
-                children: [eg, ec, ef, X && em, X && eh]
+                children: [ef, eg, em, V && eh, V && ev]
             }),
             (0, i.jsxs)(r.MenuGroup, {
-                children: [er, ej, ev, eM]
+                children: [ea, e_, eM, ep, eP]
             }),
             (0, i.jsx)(r.MenuGroup, { children: eI }),
-            (0, i.jsx)(r.MenuGroup, { children: ep })
+            (0, i.jsx)(r.MenuGroup, { children: eZ })
         ]
     });
 }
