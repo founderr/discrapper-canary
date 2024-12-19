@@ -18,14 +18,15 @@ var i = n(200651),
     _ = n(605236),
     I = n(819640),
     E = n(291407),
-    b = n(61356),
-    Z = n(981631),
-    N = n(314734),
-    S = n(921944),
-    T = n(388032),
-    j = n(805660),
-    A = n(795361);
-let y = l.forwardRef(function (e, t) {
+    b = n(685006),
+    Z = n(61356),
+    N = n(981631),
+    S = n(314734),
+    T = n(921944),
+    j = n(388032),
+    A = n(805660),
+    y = n(795361);
+let P = l.forwardRef(function (e, t) {
     let { type: n, animateRef: r } = e,
         f = (0, s.e7)([p.Z], () => p.Z.shouldShowPopup() && p.Z.activeViewType() === n),
         { Component: g, events: C, play: x } = (0, c.w)(),
@@ -40,18 +41,18 @@ let y = l.forwardRef(function (e, t) {
         [C]
     );
     let E = l.useCallback(() => {
-        (0, u.yw)(Z.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), f ? h.yT(m.ti.DISMISSED) : ((0, _.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: S.L.TAKE_ACTION }), h.__(m._b.TEXT, n)), x();
+        (0, u.yw)(N.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), f ? h.yT(m.ti.DISMISSED) : ((0, _.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: T.L.TAKE_ACTION }), h.__(m._b.TEXT, n)), x();
     }, [f, n, x]);
     return (0, i.jsx)('div', {
-        className: a()(j.buttonContainer, N.t4),
+        className: a()(A.buttonContainer, S.t4),
         ref: t,
         children: (0, i.jsx)(d.Button, {
             look: d.Button.Looks.BLANK,
             size: d.Button.Sizes.NONE,
             tabIndex: 0,
-            className: a()(j.button, { [j.buttonActive]: f }),
+            className: a()(A.button, { [A.buttonActive]: f }),
             onClick: E,
-            'aria-label': T.intl.string(T.t.erHFxM),
+            'aria-label': j.intl.string(j.t.erHFxM),
             focusProps: {
                 offset: {
                     top: 4,
@@ -60,7 +61,7 @@ let y = l.forwardRef(function (e, t) {
                     right: -4
                 }
             },
-            innerClassName: j.buttonContents,
+            innerClassName: A.buttonContents,
             ...C,
             children: (0, i.jsx)(g, {
                 size: I ? 'refresh_sm' : void 0,
@@ -69,7 +70,7 @@ let y = l.forwardRef(function (e, t) {
         })
     });
 });
-function P(e) {
+function M(e) {
     let { showAppLauncherPopup: t, children: n } = e,
         l = (0, s.e7)([I.Z], () => I.Z.hasLayers()),
         {
@@ -85,21 +86,21 @@ function P(e) {
     let h =
         o && (null == c ? void 0 : c.iconURL) != null
             ? (0, i.jsxs)('div', {
-                  className: j.channelAppLauncherButtonPopoutIconContainer,
+                  className: A.channelAppLauncherButtonPopoutIconContainer,
                   children: [
                       (0, i.jsx)('img', {
-                          className: a()(j.buttonContainer, j.button, j.channelAppLauncherButtonPopoutIcon),
-                          alt: T.intl.string(T.t.X4IxWF),
+                          className: a()(A.buttonContainer, A.button, A.channelAppLauncherButtonPopoutIcon),
+                          alt: j.intl.string(j.t.X4IxWF),
                           src: null == c ? void 0 : c.iconURL,
                           'aria-hidden': !0,
                           draggable: !1
                       }),
                       (0, i.jsx)('div', {
-                          className: j.channelAppLauncherButtonPopoutIconShimmerContainer,
+                          className: A.channelAppLauncherButtonPopoutIconShimmerContainer,
                           children: (0, i.jsx)('img', {
-                              className: a()(j.channelAppLauncherButtonPopoutIconShimmer),
-                              alt: T.intl.string(T.t.X4IxWF),
-                              src: A,
+                              className: a()(A.channelAppLauncherButtonPopoutIconShimmer),
+                              alt: j.intl.string(j.t.X4IxWF),
+                              src: y,
                               'aria-hidden': !0,
                               draggable: !1
                           })
@@ -109,7 +110,7 @@ function P(e) {
             : null;
     return u
         ? (0, i.jsx)(d.Tooltip, {
-              text: T.intl.string(T.t.JDj6Xl),
+              text: j.intl.string(j.t.JDj6Xl),
               shouldShow: o,
               forceOpen: o,
               children: () =>
@@ -129,21 +130,22 @@ t.Z = l.memo(function (e) {
             chatInputType: n,
             location: 'chat_input'
         }),
-        d = (0, b.Z)({ type: n }),
+        d = (0, Z.Z)({ type: n }),
         u = (0, x.h9)(t.id, 'ChannelAppLauncher'),
-        h = (0, s.e7)([p.Z], () => p.Z.appDMChannelsWithFailedLoads().has(t.id));
+        h = (0, s.e7)([p.Z], () => p.Z.appDMChannelsWithFailedLoads().has(t.id)),
+        { visible: m } = (0, b.xL)();
     return c
         ? (0, i.jsxs)('div', {
-              className: j.channelAppLauncher,
+              className: A.channelAppLauncher,
               children: [
                   (0, i.jsx)(E.Z, {
                       channel: t,
-                      animationContainerClassName: j.entrypointAnimation,
-                      glowClassName: j.animationGlow,
-                      trinketsClassName: j.animationTrinkets,
-                      children: (0, i.jsx)(P, {
+                      animationContainerClassName: A.entrypointAnimation,
+                      glowClassName: A.animationGlow,
+                      trinketsClassName: A.animationTrinkets,
+                      children: (0, i.jsx)(M, {
                           showAppLauncherPopup: d,
-                          children: (0, i.jsx)(y, {
+                          children: (0, i.jsx)(P, {
                               type: n,
                               ref: o,
                               animateRef: r
@@ -152,7 +154,7 @@ t.Z = l.memo(function (e) {
                   }),
                   d
                       ? (0, i.jsx)(g.Z, {
-                            positionTargetRef: u && !h ? a : o,
+                            positionTargetRef: u && !h && m ? a : o,
                             channel: t
                         })
                       : null
