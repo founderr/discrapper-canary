@@ -26333,7 +26333,7 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
     border-radius: var(--radius-sm);
     transition: border-color.2s ease;
     box-shadow: var(--shadow-low);
-    background: var(--bg-overlay-3, var(--channeltextarea-background))
+    background: var(--bg-overlay-3, var(--chat-background-default))
 }
 
 :where(.visual-refresh) .channelTextArea_bdf0de:focus-within {
