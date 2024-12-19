@@ -118,7 +118,15 @@ class v extends l.PureComponent {
             C(this, 'setInputRef', (e) => {
                 var t;
                 let { registerNativeRecorder: n, onChange: i } = this.props;
-                (this._inputRef.current = e), null === (t = this._unregisterNativeRecorder) || void 0 === t || t.call(this), null != e && (null != n && null != i ? (this._unregisterNativeRecorder = n(e.id, i)) : null != i && (new (u())(e).handleKey = i));
+                if (((this._inputRef.current = e), null === (t = this._unregisterNativeRecorder) || void 0 === t || t.call(this), null != e)) {
+                    if (null != n && null != i)
+                        try {
+                            this._unregisterNativeRecorder = n(e.id, i);
+                        } catch (e) {
+                            this._unregisterNativeRecorder = null;
+                        }
+                    else null != i && (new (u())(e).handleKey = i);
+                }
             }),
             C(this, 'handleClick', (e) => {
                 e.stopPropagation(), e.preventDefault();

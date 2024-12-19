@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return v;
+        return I;
     }
 });
 var i = r(47120);
@@ -10,53 +10,56 @@ var a = r(200651),
     l = r(541716),
     u = r(752305),
     c = r(893718),
-    d = r(131704),
-    f = r(5192),
-    _ = r(785717),
-    h = r(698305),
-    p = r(981631),
-    m = r(388032),
-    g = r(522420);
-let E = (0, d.kt)({
+    d = r(540059),
+    f = r(131704),
+    _ = r(5192),
+    h = r(785717),
+    p = r(698305),
+    m = r(981631),
+    g = r(388032),
+    E = r(522420);
+let v = (0, f.kt)({
     id: '1',
-    type: p.d4z.DM
+    type: m.d4z.DM
 });
-function v(e) {
-    let { user: n, guildId: r, channelId: i, onClose: d } = e,
-        { newestAnalyticsLocation: p } = (0, o.ZP)(),
-        { trackUserProfileAction: v } = (0, _.KZ)(),
-        [I, T] = s.useState(''),
-        [b, y] = s.useState((0, u.JM)(I)),
-        S = s.useRef(!1);
+function I(e) {
+    let { user: n, guildId: r, channelId: i, onClose: f } = e,
+        { newestAnalyticsLocation: m } = (0, o.ZP)(),
+        { trackUserProfileAction: I } = (0, h.KZ)(),
+        [T, b] = s.useState(''),
+        [y, S] = s.useState((0, u.JM)(T)),
+        A = s.useRef(!1),
+        N = (0, d.Q3)('UserProfilePopoutDirectMessageSection');
     return (0, a.jsx)(c.Z, {
-        innerClassName: g.inner,
-        editorClassName: g.editor,
+        innerClassName: N ? void 0 : E.inner,
+        className: N ? E.inner : void 0,
+        editorClassName: E.editor,
         type: l.Ie.USER_PROFILE,
-        placeholder: m.intl.formatToPlainString(m.t['0ZQw/f'], { name: f.ZP.getName(r, i, n) }),
-        channel: E,
-        textValue: I,
-        richValue: b,
+        placeholder: g.intl.formatToPlainString(g.t['0ZQw/f'], { name: _.ZP.getName(r, i, n) }),
+        channel: v,
+        textValue: T,
+        richValue: y,
         onChange: (e, n, r) => {
-            if (n !== I) T(n), y(r);
+            if (n !== T) b(n), S(r);
         },
-        focused: S.current,
+        focused: A.current,
         onFocus: () => {
-            S.current = !0;
+            A.current = !0;
         },
         onBlur: () => {
-            S.current = !1;
+            A.current = !1;
         },
         onSubmit: async (e) => {
             let { value: r } = e;
             try {
                 return (
-                    v({ action: 'SEND_DIRECT_MESSAGE' }),
-                    await (0, h.Z)({
+                    I({ action: 'SEND_DIRECT_MESSAGE' }),
+                    await (0, p.Z)({
                         userId: n.id,
                         content: r.trim(),
-                        location: p
+                        location: m
                     }),
-                    null == d || d(),
+                    null == f || f(),
                     {
                         shouldClear: !0,
                         shouldRefocus: !1

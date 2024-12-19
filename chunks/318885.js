@@ -1,52 +1,58 @@
 r.d(n, {
     Q: function () {
-        return f;
+        return h;
     },
     t: function () {
-        return d;
+        return _;
     }
 });
-var i = r(594190),
-    a = r(388627),
-    s = r(131951),
-    o = r(449224),
-    l = r(626135),
-    u = r(367907),
-    c = r(981631);
-function d() {
-    let e, n, r, a, o;
-    let l = s.Z.getGoLiveSource();
-    if (null != l && ((e = l.quality.resolution), (n = l.quality.frameRate), null != l.desktopSource)) {
+var i = r(615287),
+    a = r(594190),
+    s = r(371651),
+    o = r(388627),
+    l = r(131951),
+    u = r(449224),
+    c = r(626135),
+    d = r(367907),
+    f = r(981631);
+function _() {
+    let e, n, r, i, s;
+    let o = l.Z.getGoLiveSource();
+    if (null != o && ((e = o.quality.resolution), (n = o.quality.frameRate), null != o.desktopSource)) {
         var u, c;
-        r = l.desktopSource.soundshareSession;
-        let e = null != l.desktopSource.sourcePid ? i.ZP.getGameForPID(l.desktopSource.sourcePid) : null;
-        (a = null !== (u = null == e ? void 0 : e.name) && void 0 !== u ? u : null), (o = null !== (c = null == e ? void 0 : e.id) && void 0 !== c ? c : null);
+        r = o.desktopSource.soundshareSession;
+        let e = null != o.desktopSource.sourcePid ? a.ZP.getGameForPID(o.desktopSource.sourcePid) : null;
+        (i = null !== (u = null == e ? void 0 : e.name) && void 0 !== u ? u : null), (s = null !== (c = null == e ? void 0 : e.id) && void 0 !== c ? c : null);
     }
     return {
         video_input_resolution: e,
         video_input_frame_rate: n,
         soundshare_session: r,
-        share_game_name: a,
-        share_game_id: o
+        share_game_name: i,
+        share_game_id: s
     };
 }
-function f(e, n) {
-    let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        i = __OVERLAY__ ? o.Z.getGame() : (0, a.pL)();
+function h(e, n) {
+    var r;
+    let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        _ = __OVERLAY__ ? u.Z.getGame() : (0, o.pL)(),
+        h = a.ZP.getRunningGames().find((e) => e.name === (null == _ ? void 0 : _.name)),
+        p = null !== (r = s.Z.getRenderMethod(null == h ? void 0 : h.pid)) && void 0 !== r ? r : i.gl.Disabled;
     switch (
         ((n = {
             ...n,
-            overlay_game_name: null != i ? i.name : 'Unknown Game',
-            overlay_app_id: null != i ? i.id : null
+            overlay_game_name: null != _ ? _.name : 'Unknown Game',
+            overlay_app_id: null != _ ? _.id : null,
+            overlay_method: i.gl[p]
         }),
         e)
     ) {
-        case c.rMx.VOICE_CHANNEL_SELECTED:
-        case c.rMx.SETTINGS_PANE_VIEWED:
-        case c.rMx.GUILD_VIEWED:
-        case c.rMx.CHANNEL_OPENED:
-            return (0, u.yw)(e, n, r);
+        case f.rMx.VOICE_CHANNEL_SELECTED:
+        case f.rMx.SETTINGS_PANE_VIEWED:
+        case f.rMx.GUILD_VIEWED:
+        case f.rMx.CHANNEL_OPENED:
+            return (0, d.yw)(e, n, l);
         default:
-            return l.default.track(e, n, { flush: r });
+            return c.default.track(e, n, { flush: l });
     }
 }

@@ -347,6 +347,10 @@ class ec extends (i = s.ZP.Store) {
             legacyEnabled: C
         };
     }
+    getRenderMethod(e) {
+        var n, r;
+        if (null != e) return null !== (r = null === (n = M(e)) || void 0 === n ? void 0 : n.overlayMethod) && void 0 !== r ? r : void 0;
+    }
 }
 y(ec, 'displayName', 'OverlayRenderStore');
 let ed = new ec(o.Z, {

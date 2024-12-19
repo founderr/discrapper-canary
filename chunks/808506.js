@@ -95,7 +95,8 @@ let er = {},
             eE.error(r),
                 q.default.track(ee.rMx.OVERLAY_HOOK_RESULT, {
                     success: !1,
-                    error_description: r
+                    error_description: r,
+                    overlay_method: P.gl[P.gl.Hook]
                 });
         },
         timeoutMs: 180000
@@ -302,6 +303,7 @@ function ex(e, n, r) {
             game_name: a,
             game_id: null == s ? null : s.id,
             success: n,
+            overlay_method: P.gl[P.gl.Hook],
             ...r
         };
     (0, L.te)($.qU, z.Z.getDefaultLayout($.qU), 0, {
@@ -433,7 +435,7 @@ function eY(e) {
     let { port: n } = e;
     ef = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let r = new URLSearchParams();
-    r.append('build_id', '1feef446fb95ec8dd53885715fe0697195938bd5'), r.append('rpc', String(n)), r.append('rpc_auth_token', ef), (i = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(r.toString()));
+    r.append('build_id', 'b1e570f413cb996d23cd3769053cf9db50389877'), r.append('rpc', String(n)), r.append('rpc_auth_token', ef), (i = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(r.toString()));
 }
 function eW(e) {
     let { channelId: n, ring: r } = e;
