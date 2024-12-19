@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return E;
+        return v;
     }
 }),
     t(724458),
@@ -18,15 +18,15 @@ var i = t(200651),
     f = t(176354),
     m = t(981631),
     h = t(388032);
-function E(e, n) {
+function v(e, n) {
     let { reducedMotion: t } = l.useContext(a.AccessibilityPreferencesContext),
         g = (0, d.$R)(n),
         f = (0, r.e7)([c.Z], () => c.Z.can(m.Plq.MANAGE_MESSAGES, n) && g, [n, g]),
-        E = e.reactions.reduce((e, n) => {
+        v = e.reactions.reduce((e, n) => {
             var t;
             return (null === (t = n.count_details) || void 0 === t ? void 0 : t.vote) != null || null != e.find((e) => (null != e.id && e.id === n.emoji.id) || e.name === n.emoji.name) ? e : [...e, n.emoji];
         }, []),
-        v = (t, i) => {
+        I = (t, i) => {
             t.shiftKey
                 ? (0, u.$E)(n.id, e.id, i)
                 : o.Z.show({
@@ -45,16 +45,16 @@ function E(e, n) {
               id: 'remove-emoji-reactions',
               label: h.intl.string(h.t['zx/e4O']),
               color: 'danger',
-              children: E.map((e) => {
+              children: v.map((e) => {
                   var n, l;
                   return (0, i.jsx)(
                       a.MenuItem,
                       {
                           id: 'remove-emoji-reactions-'.concat(null !== (n = e.name) && void 0 !== n ? n : e.id),
                           label: null == e.id ? e.name : ':'.concat(e.name, ':'),
-                          action: (n) => v(n, e),
+                          action: (n) => I(n, e),
                           icon: (n) =>
-                              (0, i.jsx)(I, {
+                              (0, i.jsx)(E, {
                                   ...n,
                                   reducedMotionEnabled: t.enabled,
                                   emoji: e
@@ -66,7 +66,7 @@ function E(e, n) {
               })
           });
 }
-function I(e) {
+function E(e) {
     var n;
     let { emoji: t, reducedMotionEnabled: l, className: r = '', isFocused: a = !1 } = e;
     return (0, i.jsx)('img', {

@@ -22,8 +22,8 @@ var i = n(200651),
     C = n(906037),
     Z = n(501787),
     I = n(65154),
-    j = n(827202);
-function _(e) {
+    _ = n(827202);
+function j(e) {
     var t;
     let { participant: n, channel: r, context: l } = e,
         o = null === (t = n.user) || void 0 === t ? void 0 : t.id;
@@ -60,17 +60,17 @@ function E(e) {
         ? (0, i.jsx)('div', {
               ref: m,
               className: o()({
-                  [j.videoList]: !0,
-                  [j.vertical]: !x
+                  [_.videoList]: !0,
+                  [_.vertical]: !x
               }),
               style: { opacity: c.opacity },
               children: l.map((e) =>
                   (0, i.jsx)(
-                      _,
+                      j,
                       {
                           participant: e,
                           width: d,
-                          className: j.tile,
+                          className: _.tile,
                           containerStyle: {
                               width: d,
                               height: h
@@ -105,17 +105,17 @@ function b(e) {
             cropSelfVideo: !0,
             version: o
         }),
-        j = {
+        _ = {
             id: e.widget.id,
             size: e.widget.size,
             containerWidth: e.width,
             containerHeight: e.height
         },
-        _ = r.useRef(j);
+        j = r.useRef(_);
     return (
-        r.useLayoutEffect(() => void (_.current = j)),
+        r.useLayoutEffect(() => void (j.current = _)),
         r.useLayoutEffect(() => {
-            let { size: e, id: t, containerWidth: n, containerHeight: i } = _.current;
+            let { size: e, id: t, containerWidth: n, containerHeight: i } = j.current;
             ((s && e.height > e.width) || (!s && e.width > e.height)) &&
                 (0, c.nv)({
                     widgetId: t,

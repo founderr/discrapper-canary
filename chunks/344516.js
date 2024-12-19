@@ -116,8 +116,8 @@ let I = o.ZP.connectStores([p.Z], (e) => {
         Z = l().first(p),
         O = null != Z && Z.disabled,
         M = l().first(I),
-        V = null != M && M.disabled,
-        y = [
+        y = null != M && M.disabled,
+        V = [
             {
                 value: b.pM4.VOICE_ACTIVITY,
                 name: C.intl.string(C.t.cHCEOD)
@@ -218,7 +218,7 @@ let I = o.ZP.connectStores([p.Z], (e) => {
                                 label: n
                             };
                         }),
-                        isDisabled: V
+                        isDisabled: y
                     })
                 }),
                 (0, i.jsxs)(a.FormItem, {
@@ -244,7 +244,7 @@ let I = o.ZP.connectStores([p.Z], (e) => {
                             let { value: t } = e;
                             return d.Z.setMode(t, {}, n);
                         },
-                        options: y,
+                        options: V,
                         value: r
                     })
                 }),

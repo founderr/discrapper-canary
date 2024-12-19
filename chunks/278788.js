@@ -6,10 +6,10 @@ t.d(n, {
         return o;
     }
 });
-var r = t(192379),
-    i = t(818083),
+var i = t(192379),
+    r = t(818083),
     a = t(987338);
-let c = (0, i.B)({
+let c = (0, r.B)({
         kind: 'user',
         id: '2024-12_confetti_potion',
         label: 'Confetti Potion Experiment',
@@ -43,4 +43,4 @@ let c = (0, i.B)({
             }
         ]
     }),
-    o = (e) => r.useMemo(() => c.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }), [e]).canSeeConfetti;
+    o = (e) => i.useMemo(() => c.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }), [e]).canSeeConfetti;

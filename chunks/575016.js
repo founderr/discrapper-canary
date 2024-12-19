@@ -67,6 +67,6 @@ async function g(e, t) {
             if (null == t.recipients || t.recipients.length > 1) return;
             await c.Z.ensurePrivateChannel(t.recipients.map((e) => e.id));
         } catch (e) {}
-    (0, u.Z)(h.Z5c.CHANNEL(null == t ? void 0 : t.getGuildId(), e.saveData.channelId, e.saveData.messageId));
+    (0, u.Z)(h.Z5c.CHANNEL(null == t ? void 0 : t.getGuildId(), e.saveData.channelId, e.saveData.messageId), { openChannel: !0 });
 }
 ((i = r || (r = {}))[(i.LONG = 0)] = 'LONG'), (i[(i.SHORT = 1)] = 'SHORT');

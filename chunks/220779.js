@@ -1,190 +1,190 @@
-n.d(e, {
+t.d(n, {
     A7: function () {
-        return P;
+        return I;
     },
     dE: function () {
         return C;
     }
 }),
-    n(47120);
-var i = n(200651),
-    l = n(192379),
-    o = n(120356),
-    r = n.n(o),
-    a = n(481060),
-    s = n(410030),
-    u = n(541716),
-    c = n(752305),
-    d = n(893718),
-    h = n(318766),
-    f = n(931651),
-    v = n(131704),
-    p = n(142550),
-    x = n(981631),
-    g = n(388032),
-    m = n(26858);
-let w = (0, v.kt)({
+    t(47120);
+var l = t(200651),
+    i = t(192379),
+    r = t(120356),
+    o = t.n(r),
+    a = t(481060),
+    u = t(410030),
+    d = t(541716),
+    s = t(752305),
+    c = t(893718),
+    p = t(318766),
+    f = t(931651),
+    v = t(131704),
+    m = t(142550),
+    h = t(981631),
+    g = t(388032),
+    Z = t(26858);
+let P = (0, v.kt)({
         id: '1',
-        type: x.d4z.DM
+        type: h.d4z.DM
     }),
-    y = l.forwardRef(function (t, e) {
-        let { placeholder: n, headerText: l, onEnter: o, showPopout: u, children: c, body: d, hide: h } = t,
-            f = (0, s.ZP)();
-        return (0, i.jsx)(a.Popout, {
+    x = i.forwardRef(function (e, n) {
+        let { placeholder: t, headerText: i, onEnter: r, showPopout: d, children: s, body: c, hide: p } = e,
+            f = (0, u.ZP)();
+        return (0, l.jsx)(a.Popout, {
             align: 'right',
             position: 'bottom',
-            shouldShow: u,
+            shouldShow: d,
             disablePointerEvents: !1,
             renderPopout: () =>
-                (0, i.jsx)(a.ThemeProvider, {
+                (0, l.jsx)(a.ThemeProvider, {
                     theme: f,
-                    children: (t) =>
-                        (0, i.jsx)('div', {
-                            className: r()([m.reply, t]),
-                            ref: e,
-                            children: (0, i.jsx)(a.FocusLock, {
-                                containerRef: e,
-                                children: (0, i.jsxs)('div', {
+                    children: (e) =>
+                        (0, l.jsx)('div', {
+                            className: o()([Z.reply, e]),
+                            ref: n,
+                            children: (0, l.jsx)(a.FocusLock, {
+                                containerRef: n,
+                                children: (0, l.jsxs)('div', {
                                     children: [
-                                        (0, i.jsx)(a.Text, {
+                                        (0, l.jsx)(a.Text, {
                                             variant: 'text-xs/bold',
-                                            className: m.replyHeader,
-                                            children: null != l ? l : g.intl.string(g.t['/VQax8'])
+                                            className: Z.replyHeader,
+                                            children: null != i ? i : g.intl.string(g.t['/VQax8'])
                                         }),
-                                        d,
-                                        (0, i.jsx)(P, {
-                                            onEnter: (t) => {
-                                                o(t), h();
+                                        c,
+                                        (0, l.jsx)(I, {
+                                            onEnter: (e) => {
+                                                r(e), p();
                                             },
-                                            placeholder: null != n ? n : g.intl.string(g.t['/VQax8'])
+                                            placeholder: null != t ? t : g.intl.string(g.t['/VQax8'])
                                         })
                                     ]
                                 })
                             })
                         })
                 }),
-            children: () => c
+            children: () => s
         });
     });
-function P(t) {
-    let { placeholder: e, onEnter: n, setEditorRef: o, showEmojiButton: a = !1, renderAttachButton: s, autoFocus: h = !0, onFocus: f, channel: v, className: x } = t,
-        [g, y] = l.useState(''),
-        [P, Z] = l.useState((0, c.JM)('')),
+function I(e) {
+    let { placeholder: n, onEnter: t, setEditorRef: r, showEmojiButton: a = !1, renderAttachButton: u, autoFocus: p = !0, onFocus: f, channel: v, className: h } = e,
+        [g, x] = i.useState(''),
+        [I, E] = i.useState((0, s.JM)('')),
         C = () => {
-            y(''), Z((0, c.JM)(''));
+            x(''), E((0, s.JM)(''));
         },
-        I = u.Ie.ATOMIC_REACTOR_REPLY_INPUT,
-        S = l.useRef(null);
-    return (0, i.jsx)(d.Z, {
-        ref: S,
-        placeholder: e,
-        editorClassName: x,
-        className: r()(m.replyInput, x),
+        S = d.Ie.ATOMIC_REACTOR_REPLY_INPUT,
+        b = i.useRef(null);
+    return (0, l.jsx)(c.Z, {
+        ref: b,
+        placeholder: n,
+        editorClassName: h,
+        className: o()(Z.replyInput, h),
         showRemainingCharsAfterCount: -1,
         allowNewLines: !1,
-        maxCharacterCount: p.z,
-        channel: null != v ? v : w,
-        onChange: (t, e, n) => {
-            y(e), Z(n);
+        maxCharacterCount: m.z,
+        channel: null != v ? v : P,
+        onChange: (e, n, t) => {
+            x(n), E(t);
         },
         type: a
             ? {
-                  ...I,
+                  ...S,
                   emojis: { button: !0 }
               }
-            : I,
+            : S,
         textValue: g,
-        richValue: P,
-        onSubmit: (t) => {
-            let { value: e } = t;
-            return e.length > p.z
+        richValue: I,
+        onSubmit: (e) => {
+            let { value: n } = e;
+            return n.length > m.z
                 ? Promise.resolve({
                       shouldClear: !1,
                       shouldRefocus: !0
                   })
-                : (n(e),
+                : (t(n),
                   C(),
                   Promise.resolve({
                       shouldClear: !0,
                       shouldRefocus: !1
                   }));
         },
-        setEditorRef: o,
-        focused: h,
+        setEditorRef: r,
+        focused: p,
         onFocus: f,
         disableThemedBackground: !0,
         emojiPickerCloseOnModalOuterClick: !0,
         disabled: !1,
         autoCompletePosition: (() => {
-            if (null == S.current) return 'top';
-            let t = S.current.getBoundingClientRect(),
-                e = window.innerHeight;
-            return t.top < e / 2 ? 'bottom' : 'top';
+            if (null == b.current) return 'top';
+            let e = b.current.getBoundingClientRect(),
+                n = window.innerHeight;
+            return e.top < n / 2 ? 'bottom' : 'top';
         })(),
-        renderAttachButton: s
+        renderAttachButton: u
     });
 }
-let Z = (t, e) => {
-        l.useEffect(() => {
-            let n = (e) => {
-                    'Escape' === e.key && t();
+let E = (e, n) => {
+        i.useEffect(() => {
+            let t = (n) => {
+                    'Escape' === n.key && e();
                 },
-                i = (n) => {
-                    var i;
-                    null != n.target && !(null == e ? void 0 : null === (i = e.current) || void 0 === i ? void 0 : i.contains(null == n ? void 0 : n.target)) && t();
+                l = (t) => {
+                    var l;
+                    null != t.target && !(null == n ? void 0 : null === (l = n.current) || void 0 === l ? void 0 : l.contains(null == t ? void 0 : t.target)) && e();
                 };
             return (
-                document.addEventListener('keydown', n),
-                document.addEventListener('mousedown', i),
+                document.addEventListener('keydown', t),
+                document.addEventListener('mousedown', l),
                 () => {
-                    document.removeEventListener('keydown', n), document.removeEventListener('mousedown', i);
+                    document.removeEventListener('keydown', t), document.removeEventListener('mousedown', l);
                 }
             );
-        }, [t, e]);
+        }, [e, n]);
     },
-    C = (t) => {
-        let { onSelectEmoji: e, onClick: n } = t,
-            o = (0, s.ZP)(),
-            [r, u] = l.useState(!1),
-            c = l.useRef(null);
+    C = (e) => {
+        let { onSelectEmoji: n, onClick: t } = e,
+            r = (0, u.ZP)(),
+            [o, d] = i.useState(!1),
+            s = i.useRef(null);
         return (
-            Z(() => u(!1), c),
-            (0, i.jsx)(a.Popout, {
+            E(() => d(!1), s),
+            (0, l.jsx)(a.Popout, {
                 align: 'right',
                 position: 'top',
-                shouldShow: r,
+                shouldShow: o,
                 disablePointerEvents: !1,
                 renderPopout: () =>
-                    (0, i.jsx)(a.ThemeProvider, {
-                        theme: o,
-                        children: (t) =>
-                            (0, i.jsx)('div', {
-                                className: t,
-                                ref: c,
-                                children: (0, i.jsx)(f.$, {
-                                    messageId: x.lds,
-                                    channel: w,
+                    (0, l.jsx)(a.ThemeProvider, {
+                        theme: r,
+                        children: (e) =>
+                            (0, l.jsx)('div', {
+                                className: e,
+                                ref: s,
+                                children: (0, l.jsx)(f.$, {
+                                    messageId: h.lds,
+                                    channel: P,
                                     closePopout: () => {
-                                        u(!1);
+                                        d(!1);
                                     },
-                                    onSelectEmoji: (t, n, i) => {
-                                        null != t && (e(t, n, i), u(!1));
+                                    onSelectEmoji: (e, t, l) => {
+                                        null != e && (n(e, t, l), d(!1));
                                     }
                                 })
                             })
                     }),
                 children: () =>
-                    (0, i.jsx)(a.Tooltip, {
+                    (0, l.jsx)(a.Tooltip, {
                         text: g.intl.string(g.t.lfIHs7),
-                        children: (t) =>
-                            (0, i.jsx)('div', {
-                                ...t,
-                                className: m.reaction,
-                                children: (0, i.jsx)(h.Z, {
+                        children: (e) =>
+                            (0, l.jsx)('div', {
+                                ...e,
+                                className: Z.reaction,
+                                children: (0, l.jsx)(p.Z, {
                                     active: !1,
                                     tabIndex: 0,
                                     onClick: () => {
-                                        null == n || n(), u(!0);
+                                        null == t || t(), d(!0);
                                     }
                                 })
                             })
@@ -192,66 +192,66 @@ let Z = (t, e) => {
             })
         );
     };
-e.ZP = (t) => {
-    let { onInteraction: e, showReact: n = !0, showReply: o = !0, popoutProps: s = {} } = t,
-        { replyHeaderText: u, replyPlaceholder: c, popoutBody: d } = s,
-        [h, f] = l.useState(!1),
-        v = l.useRef(null);
+n.ZP = (e) => {
+    let { onInteraction: n, showReact: t = !0, showReply: r = !0, popoutProps: u = {} } = e,
+        { replyHeaderText: d, replyPlaceholder: s, popoutBody: c } = u,
+        [p, f] = i.useState(!1),
+        v = i.useRef(null);
     return (
-        Z(() => f(!1), v),
-        (0, i.jsx)(i.Fragment, {
-            children: (0, i.jsxs)('div', {
-                className: m.reactions,
+        E(() => f(!1), v),
+        (0, l.jsx)(l.Fragment, {
+            children: (0, l.jsxs)('div', {
+                className: Z.reactions,
                 children: [
-                    n &&
-                        (0, i.jsx)(C, {
-                            onSelectEmoji: (t) => {
-                                null != t &&
-                                    e({
-                                        interactionType: p.L.ReactSubmit,
-                                        emoji: t,
+                    t &&
+                        (0, l.jsx)(C, {
+                            onSelectEmoji: (e) => {
+                                null != e &&
+                                    n({
+                                        interactionType: m.L.ReactSubmit,
+                                        emoji: e,
                                         reply: null
                                     });
                             },
                             onClick: () => {
-                                e({
-                                    interactionType: p.L.ReactBegin,
+                                n({
+                                    interactionType: m.L.ReactBegin,
                                     emoji: null,
                                     reply: null
                                 }),
                                     f(!1);
                             }
                         }),
-                    o &&
-                        (0, i.jsx)(y, {
+                    r &&
+                        (0, l.jsx)(x, {
                             hide: () => f(!1),
                             ref: v,
-                            headerText: u,
-                            placeholder: c,
-                            showPopout: h,
-                            body: d,
-                            onEnter: (t) => {
-                                e({
-                                    interactionType: p.L.ReplySubmit,
+                            headerText: d,
+                            placeholder: s,
+                            showPopout: p,
+                            body: c,
+                            onEnter: (e) => {
+                                n({
+                                    interactionType: m.L.ReplySubmit,
                                     emoji: null,
-                                    reply: t
+                                    reply: e
                                 });
                             },
-                            children: (0, i.jsx)(a.Tooltip, {
+                            children: (0, l.jsx)(a.Tooltip, {
                                 text: g.intl.string(g.t['5IEsGx']),
-                                children: (t) =>
-                                    (0, i.jsx)('button', {
-                                        ...t,
-                                        className: r()(m.reaction, m.emojiButton),
+                                children: (e) =>
+                                    (0, l.jsx)('button', {
+                                        ...e,
+                                        className: o()(Z.reaction, Z.emojiButton),
                                         onClick: () => {
-                                            e({
-                                                interactionType: p.L.ReplyBegin,
+                                            n({
+                                                interactionType: m.L.ReplyBegin,
                                                 emoji: null,
                                                 reply: null
                                             }),
                                                 f(!0);
                                         },
-                                        children: (0, i.jsx)(a.ArrowAngleLeftUpIcon, {})
+                                        children: (0, l.jsx)(a.ArrowAngleLeftUpIcon, {})
                                     })
                             })
                         })

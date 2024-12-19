@@ -3,8 +3,8 @@ n.d(e, {
         return i;
     },
     n: function () {
-        return l;
+        return s;
     }
 });
 let i = 12,
-    l = 24;
+    s = 24;

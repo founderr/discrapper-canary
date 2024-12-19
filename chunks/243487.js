@@ -23,8 +23,8 @@ var i = n(200651),
     C = n(565799),
     Z = n(501655),
     I = n(597998),
-    j = n(199902),
-    _ = n(314897),
+    _ = n(199902),
+    j = n(314897),
     E = n(592125),
     b = n(355863),
     w = n(131951),
@@ -63,15 +63,15 @@ function P(e) {
 }
 function z(e) {
     let { channel: t, flipped: n = !1, locked: l = !1, user: c, nick: u, displayNameMode: d, displayUserMode: m, size: v = O.ipw.LARGE, onClick: p, onContextMenu: g, context: C, guildId: Z, voiceState: E, showStreamPreview: b, onShowStreamPreview: N, onWatchStream: k } = e,
-        L = (0, a.e7)([_.default], () => _.default.getId() === c.id, [c.id]),
+        L = (0, a.e7)([j.default], () => j.default.getId() === c.id, [c.id]),
         [S, y, T] = (0, a.Wu)([w.Z], () => (L ? [!w.Z.isSupported() || w.Z.isSelfMute() || w.Z.isSelfMutedTemporarily(), w.Z.isSelfDeaf(), !1] : [!w.Z.isSupported() || w.Z.isLocalMute(c.id), !1, w.Z.isLocalVideoDisabled(c.id)]), [L, c.id]),
-        A = (0, a.e7)([j.Z], () => j.Z.getCurrentUserActiveStream()),
-        V = (0, a.Wu)([j.Z], () => (null != A ? j.Z.getViewerIds(A) : [])),
+        A = (0, a.e7)([_.Z], () => _.Z.getCurrentUserActiveStream()),
+        V = (0, a.Wu)([_.Z], () => (null != A ? _.Z.getViewerIds(A) : [])),
         z = (0, f.Z)({
             userId: c.id,
             context: C
         }),
-        R = (0, a.e7)([j.Z], () => j.Z.getStreamForUser(c.id, Z)),
+        R = (0, a.e7)([_.Z], () => _.Z.getStreamForUser(c.id, Z)),
         D = null != R,
         W = r.useMemo(() => null != A && A.ownerId !== c.id && V.includes(c.id), [A, c.id, V]),
         U = r.useCallback(() => N(null), [N]),
@@ -176,7 +176,7 @@ function R(e) {
             });
         },
         I = a.length > 0 && null != l && null != o && (!f || m),
-        j = r.useCallback(() => {
+        _ = r.useCallback(() => {
             var e, n;
             let i = null === (e = b.Z.getWidget(t)) || void 0 === e ? void 0 : e.layoutId,
                 r = null != i ? (null === (n = b.Z.getWidgetsForLayout(i)) || void 0 === n ? void 0 : n.find((e) => e.type === O.Odu.GO_LIVE)) : null;
@@ -216,7 +216,7 @@ function R(e) {
                                 channel: o,
                                 showStreamPreview: n.id === g,
                                 onShowStreamPreview: C,
-                                onWatchStream: j
+                                onWatchStream: _
                             },
                             n.id
                         );
@@ -240,11 +240,11 @@ function D(e) {
             );
             return e;
         })(),
-        o = (0, a.e7)([j.Z], () => j.Z.getStreamerActiveStreamMetadata()),
+        o = (0, a.e7)([_.Z], () => _.Z.getStreamerActiveStreamMetadata()),
         s = (0, A.II)(),
         c = (0, m.q)(null == s ? void 0 : s.id),
-        u = (0, a.cj)([j.Z, L.Z], () => {
-            let e = j.Z.getCurrentUserActiveStream();
+        u = (0, a.cj)([_.Z, L.Z], () => {
+            let e = _.Z.getCurrentUserActiveStream();
             return {
                 displayUserMode: L.Z.getDisplayUserMode(),
                 displayNameMode: L.Z.getDisplayNameMode(),

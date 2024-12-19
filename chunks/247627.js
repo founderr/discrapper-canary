@@ -1,5 +1,6 @@
 e.exports = {
     chat: 'chat_a7d72e',
+    content: 'content_a7d72e',
     threadSidebarOpen: 'threadSidebarOpen_a7d72e',
     uploadArea: 'uploadArea_a7d72e',
     threadSidebarFloating: 'threadSidebarFloating_a7d72e',
@@ -7,7 +8,6 @@ e.exports = {
     formWithLoadedChatInput: 'formWithLoadedChatInput_a7d72e',
     chatContent: 'chatContent_a7d72e',
     cursorPointer: 'cursorPointer_a7d72e',
-    content: 'content_a7d72e',
     noChat: 'noChat_a7d72e',
     channelBottomBarArea: 'channelBottomBarArea_a7d72e',
     channelTextArea: 'channelTextArea_a7d72e',

@@ -40,8 +40,8 @@ var i = n(200651),
     C = n(100527),
     Z = n(906732),
     I = n(571250),
-    j = n(628581),
-    _ = n(659580),
+    _ = n(628581),
+    j = n(659580),
     E = n(793865),
     b = n(55311),
     w = n(575175),
@@ -123,14 +123,14 @@ function et(e) {
     let { voiceChannel: t, locked: n } = e,
         { suppress: l, selfMute: o, mute: a } = (0, M.Z)(t),
         s = o || a || l,
-        c = (0, j.Z)(o, a, l, !1),
+        c = (0, _.Z)(o, a, l, !1),
         { Component: d, play: h, events: f } = (0, u.O)(s ? 'unmute' : 'mute');
     r.useEffect(() => () => h(), [h, s]);
     let v = $(n);
     return (0, i.jsx)(m.Popout, {
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(_.default, {
+            return (0, i.jsx)(j.default, {
                 onClose: v(t),
                 renderInputDevices: !0,
                 renderOutputDevices: !0,
@@ -234,7 +234,7 @@ function ei(e) {
             play: C,
             events: { onMouseEnter: Z, onMouseLeave: I }
         } = (0, f.o)(o ? 'disable' : 'enable'),
-        j =
+        _ =
             null != n
                 ? (0, P.X)({
                       enabled: o,
@@ -244,12 +244,12 @@ function ei(e) {
                   })
                 : void 0;
     r.useEffect(() => () => C(), [o, C]);
-    let _ = $(l),
+    let j = $(l),
         b = null == n || !d;
     return (0, i.jsx)(m.Popout, {
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(E.Z, { onClose: _(t) });
+            return (0, i.jsx)(E.Z, { onClose: j(t) });
         },
         align: 'center',
         position: 'top',
@@ -262,7 +262,7 @@ function ei(e) {
                     color: 'currentColor',
                     size: 'sm'
                 }),
-                tooltip: j,
+                tooltip: _,
                 onClick: x,
                 isToggled: o,
                 onCutoutClick: n,
@@ -310,7 +310,7 @@ function er(e) {
             play: I
         } = (0, d.P)(v ? 'disable' : 'enable');
     r.useEffect(() => () => I(), [v, I]);
-    let j = $(l);
+    let _ = $(l);
     return (0, i.jsx)(m.Popout, {
         renderPopout: (e) => {
             let { closePopout: t } = e;
@@ -320,7 +320,7 @@ function er(e) {
                       currentUser: o,
                       activeStreams: null != u ? [u] : [],
                       handleGoLive: f,
-                      onClose: j(t),
+                      onClose: _(t),
                       appContext: h,
                       disableChangeWindows: !0
                   })

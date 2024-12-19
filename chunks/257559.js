@@ -12,9 +12,9 @@ var i = t(200651),
     f = t(726521),
     m = t(294218),
     h = t(699516),
-    E = t(594174),
-    I = t(630388),
-    v = t(970257),
+    v = t(594174),
+    E = t(630388),
+    I = t(970257),
     M = t(981631),
     p = t(388032),
     Z = t(463096);
@@ -36,14 +36,14 @@ class S extends l.PureComponent {
         let e, n;
         let { report: t } = this.state,
             { channel: l, message: r, showContextMenuHint: a, ...s } = this.props,
-            u = l.type === M.d4z.GUILD_ANNOUNCEMENT && (0, I.yE)(r.flags, M.iLy.CROSSPOSTED);
+            u = l.type === M.d4z.GUILD_ANNOUNCEMENT && (0, E.yE)(r.flags, M.iLy.CROSSPOSTED);
         return (
             a &&
                 (e = (0, i.jsx)(c.Z, {
                     className: Z.spacingTop,
                     children: p.intl.format(p.t.IxY7Ex, {})
                 })),
-            (0, v.vc)(r) &&
+            (0, I.vc)(r) &&
                 (n = (0, i.jsx)(o.FormSwitch, {
                     value: t,
                     onChange: this.handleToggleReport,
@@ -97,7 +97,7 @@ n.Z = {
     confirmPin: function (e, n) {
         (0, o.openModal)((t) => {
             let l;
-            let r = (0, d.F6)(e, E.default, h.Z);
+            let r = (0, d.F6)(e, v.default, h.Z);
             return (
                 (l = e.isPrivate() ? p.intl.string(p.t.hMRngI) : p.intl.formatToPlainString(p.t['3IRluL'], { channelName: r })),
                 (0, i.jsx)(g.Z.Provider, {

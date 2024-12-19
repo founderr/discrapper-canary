@@ -42,8 +42,8 @@ var i = n(200651),
     V = n(142497),
     F = n(810788),
     z = n(160404),
-    W = n(703656),
-    Y = n(917405),
+    Y = n(703656),
+    W = n(917405),
     K = n(641015),
     q = n(848543),
     X = n(565799),
@@ -188,7 +188,7 @@ function eB(e) {
                 if (eE.Z.isVideoEnabled() === e) return;
                 let n = () => {
                     var n;
-                    _.Z.setVideoEnabled(e), e && (0, W.uL)(eO.Z5c.CHANNEL(null !== (n = t.getGuildId()) && void 0 !== n ? n : eO.ME, t.id));
+                    _.Z.setVideoEnabled(e), e && (0, Y.uL)(eO.Z5c.CHANNEL(null !== (n = t.getGuildId()) && void 0 !== n ? n : eO.ME, t.id));
                 };
                 e ? (0, eu.Z)(n, I) : n();
             },
@@ -435,7 +435,7 @@ class eF extends r.PureComponent {
         let s = (0, D.F6)(t, eN.default, ev.Z);
         return (
             null != n ? ((e = eO.Z5c.CHANNEL(n.id, t.id)), (s = ''.concat(s, ' / ').concat(n.name))) : (e = eO.Z5c.CHANNEL(eO.ME, t.id)),
-            (0, i.jsx)(Y.Z, {
+            (0, i.jsx)(W.Z, {
                 channelId: t.id,
                 quality: r,
                 state: l,

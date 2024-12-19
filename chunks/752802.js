@@ -23,8 +23,8 @@ var i = n(200651),
     C = n(352978),
     Z = n(833519),
     I = n(839662),
-    j = n(199902),
-    _ = n(314897),
+    _ = n(199902),
+    j = n(314897),
     E = n(131951),
     b = n(594174),
     w = n(5192),
@@ -43,7 +43,7 @@ function y(e) {
             },
             [t]
         ),
-        o = (0, a.e7)([_.default], () => _.default.getId()),
+        o = (0, a.e7)([j.default], () => j.default.getId()),
         { hasVideo: d } = (0, I.Z)(t, o),
         h = l && d,
         f = r.useCallback(() => {
@@ -190,7 +190,7 @@ function T(e) {
 let A = new Set([k.jm8.ENDED, k.jm8.FAILED, k.jm8.PAUSED]),
     O = r.memo(function (e) {
         let { participant: t, width: n, locked: r, widgetId: l, pinned: s } = e,
-            c = (0, a.e7)([j.Z], () => j.Z.getActiveStreamForUser(t.user.id, t.stream.guildId), [t.user.id, t.stream.guildId]),
+            c = (0, a.e7)([_.Z], () => _.Z.getActiveStreamForUser(t.user.id, t.stream.guildId), [t.user.id, t.stream.guildId]),
             u = null != c && A.has(c.state),
             d = null != c,
             f = (0, N.yA)(t.stream),

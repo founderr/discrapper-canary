@@ -16,9 +16,9 @@ var l = t(481060),
     c = t(388032);
 function g(e) {
     let { channelId: n, messageId: t, mediaItemUrl: g, embedId: f, transitionState: m, onClose: h } = e,
-        E = (0, a.yh)(),
-        I = (0, u.K)(n, t, g),
-        v = (0, u.b)(n, t, f),
+        v = (0, a.yh)(),
+        E = (0, u.K)(n, t, g),
+        I = (0, u.b)(n, t, f),
         { reportFalsePositive: M, isReportFalsePositiveLoading: p } = (0, s.$)({
             onSuccess: () => (0, d.s)(h),
             onError: () => {
@@ -28,21 +28,21 @@ function g(e) {
                 (0, r.Uj)(
                     n,
                     t,
-                    I.map((e) => e.id),
-                    v.map((e) => e.id)
+                    E.map((e) => e.id),
+                    I.map((e) => e.id)
                 );
             }
         });
     return (
-        !(E && (I.length > 0 || v.length > 0)) && h(),
+        !(v && (E.length > 0 || I.length > 0)) && h(),
         (0, i.jsx)(d.$, {
             messageId: t,
             channelId: n,
             isReportFalsePositiveLoading: p,
             analyticsContext: o.UU.EXPLICIT_MEDIA_OBSCURED_FALSE_POSITIVE_FLOW,
             onConfirmPress: M,
-            attachmentPreview: 1 === I.length && 0 === v.length ? I[0] : void 0,
-            embedPreview: 1 === v.length && 0 === I.length ? v[0] : void 0,
+            attachmentPreview: 1 === E.length && 0 === I.length ? E[0] : void 0,
+            embedPreview: 1 === I.length && 0 === E.length ? I[0] : void 0,
             transitionState: m,
             onClose: h
         })

@@ -14,7 +14,7 @@ var i,
 })(i || (i = {}));
 let c = {
     experiment: a.Z,
-    startTimeMs: 1734717600000,
+    startTimeMs: 1734631200000,
     endTimeMs: 1735952400000,
     isDesktopOnly: !0,
     soundpack: s.YC.WINTER_HOLIDAY,

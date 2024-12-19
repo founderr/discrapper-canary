@@ -95,7 +95,7 @@ function L(e) {
         }, [O, s, t, P, R, S]);
     let F = r.useCallback((e) => n(e, P), [n, P]),
         z = r.useMemo(() => (m ? [s.length, 0] : [s.length]), [s.length, m]),
-        W = r.useCallback(
+        Y = r.useCallback(
             (e, n, r) => {
                 switch (e) {
                     case 0:
@@ -124,7 +124,7 @@ function L(e) {
             },
             [y, D, t]
         ),
-        Y = r.useCallback(
+        W = r.useCallback(
             (e) => {
                 switch (e) {
                     case 0:
@@ -242,8 +242,8 @@ function L(e) {
             itemGutter: 16,
             padding: $,
             renderItem: Q,
-            renderSection: W,
-            getSectionHeight: Y,
+            renderSection: Y,
+            getSectionHeight: W,
             getItemKey: K,
             getItemHeight: q,
             chunkSize: 24,

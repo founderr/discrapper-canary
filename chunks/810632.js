@@ -23,18 +23,18 @@ var i = n(200651),
     C = n(592125),
     Z = n(430824),
     I = n(131951),
-    j = n(944486),
-    _ = n(594174),
+    _ = n(944486),
+    j = n(594174),
     E = n(449224),
     b = n(358085),
     w = n(981631),
     N = n(37113),
     k = n(761274);
 function L() {
-    let e = (0, a.e7)([j.Z], () => j.Z.getVoiceChannelId()),
+    let e = (0, a.e7)([_.Z], () => _.Z.getVoiceChannelId()),
         t = (0, a.e7)([C.Z], () => C.Z.getChannel(e), [e]),
-        l = (0, a.e7)([_.default], () => {
-            let e = _.default.getCurrentUser();
+        l = (0, a.e7)([j.default], () => {
+            let e = j.default.getCurrentUser();
             return o()(null != e, 'useGoLiveImmidateAction: user cannot be undefined'), e;
         }),
         L = null == t ? void 0 : t.getGuildId(),
@@ -51,12 +51,12 @@ function L() {
         if (null == o && null == r) return !1;
         let a = null != L ? (null === (n = Z.Z.getGuild(L)) || void 0 === n ? void 0 : n.premiumTier) : null,
             { preset: s, resolution: d, fps: v, soundshareEnabled: C } = g.Z.getState(),
-            [j, _] = null !== (i = (0, f.Z)(s, l, a)) && void 0 !== i ? i : [N.LY.RESOLUTION_720, N.ws.FPS_30],
+            [_, j] = null !== (i = (0, f.Z)(s, l, a)) && void 0 !== i ? i : [N.LY.RESOLUTION_720, N.ws.FPS_30],
             w = s,
             S = d,
             T = v;
-        w !== N.tI.PRESET_CUSTOM && ((S = j), (T = _)),
-            !(0, h.Z)(w, S, T, l, a) && ((S = j), (T = _)),
+        w !== N.tI.PRESET_CUSTOM && ((S = _), (T = j)),
+            !(0, h.Z)(w, S, T, l, a) && ((S = _), (T = j)),
             !(0, h.Z)(w, S, T, l, a, t) && ((w = N.tI.PRESET_VIDEO), (S = N.LY.RESOLUTION_720), (T = N.ws.FPS_30)),
             (0, c.Rc)({
                 preset: w,

@@ -42,8 +42,8 @@ var i = n(200651),
     V = n(531551),
     F = n(38618),
     z = n(972830),
-    W = n(981283),
-    Y = n(584233),
+    Y = n(981283),
+    W = n(584233),
     K = n(15274),
     q = n(434404),
     X = n(543842),
@@ -96,8 +96,8 @@ var i = n(200651),
     eV = n(914010),
     eF = n(695103),
     ez = n(241890),
-    eW = n(897607),
-    eY = n(417363),
+    eY = n(897607),
+    eW = n(417363),
     eK = n(900974),
     eq = n(358085),
     eX = n(998502),
@@ -147,7 +147,7 @@ let e4 = o.ZP.connectStores([F.Z, ek.Z, eD.default], () => ({
         class extends r.Component {
             componentDidMount() {
                 let { match: e } = this.props;
-                null != e && null != e.params.inviteCode && (0, Y.x)({ code: e.params.inviteCode });
+                null != e && null != e.params.inviteCode && (0, W.x)({ code: e.params.inviteCode });
             }
             render() {
                 let { isConnected: e, defaultRoute: t, token: n, defaultRouteFallback: r } = this.props;
@@ -161,8 +161,8 @@ let e4 = o.ZP.connectStores([F.Z, ek.Z, eD.default], () => ({
         }
     ),
     e3 = (0, b.e)(A.Z, null, { passProps: !1 }),
-    e5 = (0, b.e)(T.default, null, { passProps: !1 }),
-    e6 = [eJ.Z5c.GUILD_BOOSTING_MARKETING(ef.Hw.guildId()), ...Array.from(e$.Vg).map((e) => eJ.Z5c.CHANNEL(ef.Hw.guildId(), e))];
+    e6 = (0, b.e)(T.default, null, { passProps: !1 }),
+    e5 = [eJ.Z5c.GUILD_BOOSTING_MARKETING(ef.Hw.guildId()), ...Array.from(e$.Vg).map((e) => eJ.Z5c.CHANNEL(ef.Hw.guildId(), e))];
 function e7(e) {
     let { guildId: t, channelId: n = null, messageId: i = null, threadId: r = null } = e.params;
     return {
@@ -211,7 +211,7 @@ let e9 = [
             let { match: t } = e,
                 { gameId: n, action: r } = t.params;
             return (
-                eY.Z.whenInitialized(() => {
+                eW.Z.whenInitialized(() => {
                     eB.Z.whenInitialized(() => {
                         switch (r) {
                             case 'launch': {
@@ -361,7 +361,7 @@ let e9 = [
     },
     {
         path: [eJ.Z5c.APPLICATION_DIRECTORY],
-        render: e5,
+        render: e6,
         isSessionRequired: !0
     }
 ];
@@ -402,9 +402,9 @@ class tt extends r.PureComponent {
             eR.Z.initialize(),
             ec.Z.initialize(),
             I.Z.initialize(),
-            W.Z.init(),
+            Y.Z.init(),
             J.Z.init(),
-            eW.Z.init(),
+            eY.Z.init(),
             eK.Z.init(),
             E.Z.initialize(),
             eA.Z.init(),
@@ -510,7 +510,7 @@ class tt extends r.PureComponent {
                     var f;
                     if (
                         ((f = e),
-                        !e6.some((e) => {
+                        !e5.some((e) => {
                             var t;
                             return (null === (t = (0, a.LX)(f, e)) || void 0 === t ? void 0 : t.isExact) === !0;
                         }))

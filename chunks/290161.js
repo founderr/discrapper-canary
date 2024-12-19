@@ -12,8 +12,8 @@ var i = t(200651),
     _ = t(686546),
     h = t(314910),
     m = t(367207),
-    f = t(241890),
-    v = t(649561),
+    v = t(241890),
+    f = t(649561),
     g = t(631553),
     E = t(981631);
 t(635324), t(167666), t(308765), t(913487), o.ZP.initialize();
@@ -23,7 +23,7 @@ n.default = function () {
             () => (
                 m.Z.initialize(),
                 d.Z.initialize(),
-                f.Z.init(),
+                v.Z.init(),
                 () => {
                     m.Z.terminate(), d.Z.terminate();
                 }
@@ -34,7 +34,7 @@ n.default = function () {
             children: [
                 (0, i.jsx)(u.Z, {}),
                 (0, i.jsx)(c.T, {
-                    children: (0, i.jsxs)(v.Z, {
+                    children: (0, i.jsxs)(f.Z, {
                         children: [
                             (0, i.jsx)(_.Co, {}),
                             (0, i.jsx)(p.ZP, {}),

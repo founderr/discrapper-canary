@@ -41,13 +41,13 @@ t.Z = (0, r.memo)(function (e) {
         }),
         F = null !== (A = null === (n = L.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== A ? A : 0,
         z = L.config.rewards[F],
-        W = (null == z ? void 0 : z.type) === o.w.COLLECTIBLE,
-        Y = (null == z ? void 0 : z.type) === o.w.FRACTIONAL_PREMIUM,
-        { product: K } = (0, p.T)(W && null != z ? z.skuId : null),
+        Y = (null == z ? void 0 : z.type) === o.w.COLLECTIBLE,
+        W = (null == z ? void 0 : z.type) === o.w.FRACTIONAL_PREMIUM,
+        { product: K } = (0, p.T)(Y && null != z ? z.skuId : null),
         q = null == K ? void 0 : null === (l = K.items) || void 0 === l ? void 0 : l[0];
     (0, u.P)(M, (e) => {
         let { height: t } = e;
-        if (!W || null == t || null == w.current || null == M.current || null == k.current) return;
+        if (!Y || null == t || null == w.current || null == M.current || null == k.current) return;
         let n = M.current.getBoundingClientRect(),
             i = w.current.getBoundingClientRect(),
             r = k.current.getBoundingClientRect();
@@ -86,7 +86,7 @@ t.Z = (0, r.memo)(function (e) {
                   className: a()(x.container, { [x.hovered]: P }),
                   children: [
                       null != U &&
-                          W &&
+                          Y &&
                           (0, i.jsx)('div', {
                               ref: k,
                               className: x.decoWrapper,
@@ -97,7 +97,7 @@ t.Z = (0, r.memo)(function (e) {
                                   guildId: null
                               })
                           }),
-                      Y
+                      W
                           ? (0, i.jsx)(N.Z, { className: x.image })
                           : J.isAnimated
                             ? (0, i.jsx)(i.Fragment, {

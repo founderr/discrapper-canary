@@ -193,7 +193,7 @@ function z(e) {
         })
     );
 }
-function W(e) {
+function Y(e) {
     var t;
     let { guildEvent: n, noticeType: i } = e,
         r = (0, g.Q3)('GuildUpcomingEventNotice'),
@@ -294,7 +294,7 @@ function W(e) {
         })
     );
 }
-function Y(e) {
+function W(e) {
     let { guildEvent: t } = e,
         n = (0, M.cS)(t);
     return null == n
@@ -458,7 +458,7 @@ function Q(e) {
                     channel: i
                 }))
               : r.entity_type === U.WX.EXTERNAL
-                ? (u = (0, l.jsx)(Y, { guildEvent: r }))
+                ? (u = (0, l.jsx)(W, { guildEvent: r }))
                 : r.entity_type === U.WX.VOICE &&
                   null != i &&
                   (u = (0, l.jsx)(F, {
@@ -468,7 +468,7 @@ function Q(e) {
         let g = t.hasFeature(G.oNc.COMMUNITY) || t.hasFeature(G.oNc.HUB);
         if (null == u && null != a && !g) {
             let { upcomingEvent: e, noticeType: t } = a;
-            u = (0, l.jsx)(W, {
+            u = (0, l.jsx)(Y, {
                 guildEvent: e,
                 noticeType: t
             });

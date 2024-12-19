@@ -17,9 +17,9 @@ var l = t(120356),
     f = t(496675),
     m = t(768581),
     h = t(176354),
-    E = t(981631),
-    I = t(185923),
-    v = t(388032),
+    v = t(981631),
+    E = t(185923),
+    I = t(388032),
     M = t(953568);
 let p = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
 function Z(e) {
@@ -43,7 +43,7 @@ function Z(e) {
                 forceOpen: l,
                 children: (e) =>
                     (0, i.jsx)('div', {
-                        'aria-label': v.intl.formatToPlainString(v.t['/iYSo6'], { emojiName: t.name }),
+                        'aria-label': I.intl.formatToPlainString(I.t['/iYSo6'], { emojiName: t.name }),
                         className: r()(M.button, { [M.focused]: l }),
                         ...e,
                         children:
@@ -72,15 +72,15 @@ function x(e, n) {
             !h.ZP.isEmojiPremiumLocked({
                 emoji: e,
                 channel: n,
-                intention: I.Hz.REACTION
+                intention: E.Hz.REACTION
             })
         );
     });
     t.length > 4 && (t.length = 4);
     let l = g.nc.useSetting(),
         r = (0, c.$R)(n),
-        m = (0, a.e7)([f.Z], () => l && r && (n.isPrivate() || f.Z.can(E.Plq.ADD_REACTIONS, n)), [n, r, l]),
-        v = (t) => {
+        m = (0, a.e7)([f.Z], () => l && r && (n.isPrivate() || f.Z.can(v.Plq.ADD_REACTIONS, n)), [n, r, l]),
+        I = (t) => {
             (0, u.rU)(n.id, e.id, (0, d.g1)(t), u.TW.MESSAGE_CONTEXT_MENU);
         };
     return m && t.length > 0
@@ -99,7 +99,7 @@ function x(e, n) {
                                   isFocused: t
                               });
                           },
-                          action: () => v(e),
+                          action: () => I(e),
                           dontCloseOnActionIfHoldingShiftKey: !0
                       },
                       n

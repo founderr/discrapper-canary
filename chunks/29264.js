@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return E;
+        return v;
     }
 });
 var i = t(200651);
@@ -23,7 +23,7 @@ function h(e, n) {
     }),
         d.Z.captureException(n);
 }
-function E(e, n, t) {
+function v(e, n, t) {
     if ((0, o.Z)(null == n ? void 0 : n.getChannelId()) || (null == t ? void 0 : t.shouldHideMediaOptions) === !0 || !u.isPlatformEmbedded || null == e || !(0, a.gS)(e)) return null;
     let r = (0, a.s$)(e),
         d = async () => {
@@ -33,7 +33,7 @@ function E(e, n, t) {
                 s.default.track(f.rMx.CONTEXT_MENU_IMAGE_SAVE_FAILED, { ...(0, g.v)() }), h(m.intl.string(m.t['8Ve/S0']), e);
             }
         },
-        E = async () => {
+        v = async () => {
             try {
                 await c.ZP.copyImage(r), s.default.track(f.rMx.CONTEXT_MENU_IMAGE_COPIED, { ...(0, g.v)() });
             } catch (e) {
@@ -47,7 +47,7 @@ function E(e, n, t) {
                   {
                       id: 'copy-image',
                       label: m.intl.string(m.t.tvUqWl),
-                      action: E
+                      action: v
                   },
                   'copy-image'
               )

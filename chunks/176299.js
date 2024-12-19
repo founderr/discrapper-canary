@@ -47,8 +47,8 @@ var i = n(200651),
     V = n(659971),
     F = n(179742),
     z = n(270759),
-    W = n(918701),
-    Y = n(905423),
+    Y = n(918701),
+    W = n(905423),
     K = n(304445),
     q = n(893607),
     X = n(187819),
@@ -196,13 +196,13 @@ let e_ = (0, c.Un)({
         return (0, i.jsx)(v.Z, {});
     },
     ex = r.memo(function () {
-        let { guildId: e, channelId: t } = (0, Y.Z)(),
+        let { guildId: e, channelId: t } = (0, W.Z)(),
             n = (0, u.e7)([et.Z], () => (null != t ? t : et.Z.getChannelId(e)));
         return (function () {
             return window.location.pathname.startsWith(em.Z5c.GLOBAL_DISCOVERY);
         })() ||
             (function () {
-                return window.location.pathname.startsWith(em.Z5c.GUILD_DISCOVERY) || (0, W.OG)();
+                return window.location.pathname.startsWith(em.Z5c.GUILD_DISCOVERY) || (0, Y.OG)();
             })()
             ? (0, i.jsx)(L.Z, {})
             : null != e

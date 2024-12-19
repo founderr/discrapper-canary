@@ -54,7 +54,7 @@ function x(e) {
             play: V,
             events: { onMouseEnter: F, onMouseLeave: z }
         } = (0, c.j)(),
-        W = (e) =>
+        Y = (e) =>
             (0, i.jsx)(d.Popout, {
                 animation: d.Popout.Animation.FADE,
                 shouldShow: j,
@@ -111,13 +111,13 @@ function x(e) {
                         })
                     })
             }),
-        Y = r.useCallback(() => {
+        W = r.useCallback(() => {
             !R && D(!j);
         }, [R, j]);
     return (
         (0, E.yp)({
             event: N.CkL.TOGGLE_SOUNDBOARD,
-            handler: Y
+            handler: W
         }),
         (0, i.jsx)(m.Gt, {
             value: G,
@@ -128,7 +128,7 @@ function x(e) {
                     if (O) return T.intl.string(T.t.X1lQlp);
                     return T.intl.string(T.t['6EJvHh']);
                 })(),
-                children: (e) => W(e)
+                children: (e) => Y(e)
             })
         })
     );

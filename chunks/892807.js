@@ -25,8 +25,8 @@ var i = n(200651),
     C = n(594174),
     Z = n(979651),
     I = n(823379),
-    j = n(981631),
-    _ = n(388032),
+    _ = n(981631),
+    j = n(388032),
     E = n(693215);
 function b(e) {
     let { channel: t, currentVoiceChannel: n } = e,
@@ -117,7 +117,7 @@ function k(e) {
                 let e = new Set(
                         f.Z.getChannelHistory().reduce((e, t) => {
                             let n = v.Z.getChannel(t);
-                            return null != n && x.Z.can(j.Plq.CONNECT, n) && e.length < 5 && e.push(t), e;
+                            return null != n && x.Z.can(_.Plq.CONNECT, n) && e.length < 5 && e.push(t), e;
                         }, [])
                     ),
                     t = u
@@ -126,7 +126,7 @@ function k(e) {
                             let i = null == n ? void 0 : n.channelId;
                             if (null == i) return t;
                             let r = v.Z.getChannel(i);
-                            return null != r && x.Z.can(j.Plq.CONNECT, r) && !e.has(i) && t.size < 3 && t.add(i), t;
+                            return null != r && x.Z.can(_.Plq.CONNECT, r) && !e.has(i) && t.size < 3 && t.add(i), t;
                         }, new Set());
                 return [...Array.from(e), ...t].map((e) => v.Z.getChannel(e)).filter(I.lm);
             },
@@ -139,12 +139,12 @@ function k(e) {
             [l, n]
         );
     return (0, i.jsx)(c.Z, {
-        section: j.jXE.CONTEXT_MENU,
+        section: _.jXE.CONTEXT_MENU,
         children: (0, i.jsx)(s.Menu, {
             onSelect: n,
             navId: 'manage-streams',
             onClose: n,
-            'aria-label': _.intl.string(_.t['+9QSnp']),
+            'aria-label': j.intl.string(j.t['+9QSnp']),
             children: (0, i.jsx)(s.MenuGroup, {
                 children: d.map((e) =>
                     (0, i.jsx)(

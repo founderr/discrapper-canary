@@ -50,8 +50,8 @@ var i,
     V = n(474936),
     F = n(981631),
     z = n(921944),
-    W = n(388032),
-    Y = n(398645),
+    Y = n(388032),
+    W = n(398645),
     K = n(693988),
     q = n(155357),
     X = n(513885),
@@ -127,7 +127,7 @@ let ee = (e) => {
             em)
         ) {
             var eO, eR, ej;
-            (n = Y.trialForAllButton),
+            (n = W.trialForAllButton),
                 (r = 10),
                 (i = (0, l.jsxs)(l.Fragment, {
                     children: [
@@ -138,9 +138,9 @@ let ee = (e) => {
                         }),
                         eZ &&
                             (0, l.jsx)('div', {
-                                className: Y.tabBackground,
+                                className: W.tabBackground,
                                 children: (0, l.jsx)('img', {
-                                    className: s()(Y.tabBackgroundImage, { [Y.tabBackgroundImageHovered]: ea }),
+                                    className: s()(W.tabBackgroundImage, { [W.tabBackgroundImageHovered]: ea }),
                                     src: ((eO = er), (eR = el), (ej = ea), eR ? (eO || !ej ? Q.Z : X.Z) : eO || !ej ? q.Z : K.Z),
                                     alt: ''
                                 })
@@ -149,14 +149,14 @@ let ee = (e) => {
                 }));
         } else
             eI
-                ? ((t = Y.referralIncentive), (r = 7))
+                ? ((t = W.referralIncentive), (r = 7))
                 : eC
-                  ? ((i = (0, l.jsx)(G.Z, { copy: W.intl.string(W.t.jyYgZ2) })), (r = 8))
+                  ? ((i = (0, l.jsx)(G.Z, { copy: Y.intl.string(Y.t.jyYgZ2) })), (r = 8))
                   : eg
                     ? ((i = (0, l.jsx)(R.Z, {})), (r = 0))
                     : null != eP && eP === u.z.REVERSE_TRIAL_NITRO_TAB_BADGE
                       ? ((i = (0, l.jsx)(H.Z, {
-                            copy: W.intl.string(W.t.HwUCnp),
+                            copy: Y.intl.string(Y.t.HwUCnp),
                             showStars: !1
                         })),
                         (r = 4))
@@ -186,7 +186,7 @@ let ee = (e) => {
                                         onSelect: () => (0, I.EW)(u.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, { dismissAction: z.L.TAKE_ACTION })
                                     })),
                                     (r = 6))
-                                  : ep && ((i = (0, l.jsx)(D.k, { entryPoint: D.U.PrivateMessages })), !o && (t = Y.localizeBadge), (r = 5))
+                                  : ep && ((i = (0, l.jsx)(D.k, { entryPoint: D.U.PrivateMessages })), !o && (t = W.localizeBadge), (r = 5))
                               : ((i = (0, l.jsx)(w.$H, {
                                     trialOffer: ed,
                                     isTabSelected: o
@@ -196,7 +196,7 @@ let ee = (e) => {
             selected: o,
             route: A,
             icon: m.NitroWheelIcon,
-            text: W.intl.string(W.t.Ipxkoq),
+            text: Y.intl.string(Y.t.Ipxkoq),
             locationState: $,
             onClick: () => {
                 eb === u.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && ex(z.L.TAKE_ACTION),

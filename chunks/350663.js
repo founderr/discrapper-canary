@@ -48,18 +48,18 @@ t.Z = r.memo(function (e) {
         })),
         Z = (0, c.Z)(n),
         I = r === d.C5.VERTICAL,
-        j = 0,
         _ = 0,
+        j = 0,
         E = (0, s.useTransition)(
             I
                 ? C.map((e, t) => ({
                       ...e,
-                      y: (j += e.height + (t > 0 ? f : 0)) - e.height,
+                      y: (_ += e.height + (t > 0 ? f : 0)) - e.height,
                       x: 0
                   }))
                 : C.map((e, t) => ({
                       ...e,
-                      x: (_ += e.width + (t > 0 ? f : 0)) - e.width,
+                      x: (j += e.width + (t > 0 ? f : 0)) - e.width,
                       y: 0
                   })),
             {
@@ -102,7 +102,7 @@ t.Z = r.memo(function (e) {
             [h.vertical]: I,
             [h.horizontal]: !I
         }),
-        style: I ? { height: j } : { width: _ },
+        style: I ? { height: _ } : { width: j },
         children: E((e, t, r, l) =>
             (0, i.jsx)(a.animated.div, {
                 className: h.gridItem,

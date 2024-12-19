@@ -1,5 +1,5 @@
-var r = t(192379),
-    i = t(570140),
+var i = t(192379),
+    r = t(570140),
     a = t(4646),
     c = t(258340),
     o = t(768581),
@@ -7,30 +7,30 @@ var r = t(192379),
 n.Z = function (e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 30,
         { update: t, draw: l, emit: s } = (0, c.Z)(e),
-        d = r.useMemo(() => new a.ZP(), []),
-        f = r.useCallback(
+        d = i.useMemo(() => new a.ZP(), []),
+        f = i.useCallback(
             (e) => {
                 (e.assetMap = d), l(e);
             },
             [d, l]
         );
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             async function e(e) {
-                var t, r;
-                let { emoji: i } = e,
-                    a = null !== (t = i.id) && void 0 !== t ? t : i.name,
+                var t, i;
+                let { emoji: r } = e,
+                    a = null !== (t = r.id) && void 0 !== t ? t : r.name,
                     c =
-                        null == i.id
-                            ? u.ZP.getURL(null !== (r = i.name) && void 0 !== r ? r : i.uniqueName)
+                        null == r.id
+                            ? u.ZP.getURL(null !== (i = r.name) && void 0 !== i ? i : r.uniqueName)
                             : o.ZP.getEmojiURL({
-                                  id: i.id,
+                                  id: r.id,
                                   animated: !1,
                                   size: 32
                               });
                 await d.loadRemoteImage(a, c), s(a, n);
             }
-            return i.Z.subscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e), () => i.Z.unsubscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e);
+            return r.Z.subscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e), () => r.Z.unsubscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e);
         }),
         {
             update: t,

@@ -12,8 +12,8 @@ var i = t(200651),
     _ = t(13245),
     h = t(490029),
     m = t(797614),
-    f = t(593481),
-    v = t(703656),
+    v = t(593481),
+    f = t(703656),
     g = t(254761),
     E = t(70956),
     Z = t(960048),
@@ -77,7 +77,7 @@ class T extends a.PureComponent {
                               className: r()(a, k.container),
                               onClick: (e) => e.stopPropagation(),
                               children: [
-                                  (0, i.jsx)(f.ZP, {
+                                  (0, i.jsx)(v.ZP, {
                                       expand: !0,
                                       icon: (0, i.jsx)(g.Z, {
                                           width: 40,
@@ -158,7 +158,7 @@ let P = c().throttle(
 );
 class w extends a.PureComponent {
     componentDidCatch(e, n) {
-        let t = (0, v.s1)().location;
+        let t = (0, f.s1)().location;
         this.setState({
             error: e,
             info: n

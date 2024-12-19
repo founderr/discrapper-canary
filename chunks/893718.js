@@ -500,7 +500,8 @@ function eP(e, n) {
                         [ep.channelTextArea]: !0,
                         [ep.channelTextAreaDisabled]: tY,
                         [ep.highlighted]: ej,
-                        [ep.textAreaMobileThemed]: h.tq
+                        [ep.textAreaMobileThemed]: h.tq,
+                        [ep.inlineContainer]: t2
                     }),
                     children: [
                         (0, s.jsx)(es.Z, { bars: tQ }),
@@ -511,7 +512,6 @@ function eP(e, n) {
                                 [ep.scrollableContainer]: !0,
                                 [ep.themedBackground]: !e1,
                                 [ep.hasStackedBar]: tQ.stacked.length > 0,
-                                [ep.inlineContainer]: t2,
                                 [ep.flushContainer]: t3
                             }),
                             children: [

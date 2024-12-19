@@ -28,7 +28,7 @@ function v(e) {
         [x, g] = r.useState(0),
         C = r.useRef(0),
         [Z, I] = r.useState(0),
-        { timeToLiveMs: j, reappearTimeMs: _ } = d.ZP.useState(
+        { timeToLiveMs: _, reappearTimeMs: j } = d.ZP.useState(
             (e) => ({
                 timeToLiveMs: e.timeToLiveMs,
                 reappearTimeMs: e.reappearTimeMs
@@ -36,8 +36,8 @@ function v(e) {
             s()
         ),
         E = {
-            timeToLiveMs: j,
-            reappearTimeMs: _
+            timeToLiveMs: _,
+            reappearTimeMs: j
         },
         b = r.useRef(E);
     r.useEffect(() => void (b.current = E)),
@@ -64,7 +64,7 @@ function v(e) {
             a(Date.now()), I((e) => e + 1);
         },
         N = l > 0 && v - l < 1000,
-        k = (0, u.useTransition)(x > 0 && x < v && v - x < j, {
+        k = (0, u.useTransition)(x > 0 && x < v && v - x < _, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },

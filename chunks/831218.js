@@ -389,7 +389,7 @@ class B extends (l = o.Component) {
                         let e = r[t];
                         if (o.isValidElement(e)) {
                             var s;
-                            a = (null === (s = e.key) || void 0 === s ? void 0 : s.startsWith('section-divider')) ? 25 : 'dm-quick-launcher' === e.key ? 67 : 'compact' === l ? 44 : 50;
+                            a = (null === (s = e.key) || void 0 === s ? void 0 : s.startsWith('section-divider')) ? 25 : 'dm-quick-launcher' === e.key ? 67 : 'compact' === l ? 32 : 40;
                         }
                     } else a = 'compact' === l ? 44 : 50;
                 } else if (0 === e) {

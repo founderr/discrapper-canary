@@ -26,8 +26,8 @@ function C(e, t, n, i) {
 }
 function Z(e) {
     var t;
-    let { id: n, size: Z, locked: I, padding: j, borderWidth: _, opacity: E, horizontal: b, pinned: w } = e,
-        N = 2 * j + 2 * _;
+    let { id: n, size: Z, locked: I, padding: _, borderWidth: j, opacity: E, horizontal: b, pinned: w } = e,
+        N = 2 * _ + 2 * j;
     let { width: k, height: L } = {
             width: 'number' == typeof (t = Z).width ? t.width : 256,
             height: 'number' == typeof t.height ? t.height : 144
@@ -101,7 +101,7 @@ function Z(e) {
             height: L,
             sizeOffset: N,
             layout: U,
-            padding: j,
+            padding: _,
             participants: z.length
         };
     return (!(function (e) {

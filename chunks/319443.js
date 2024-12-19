@@ -87,7 +87,7 @@ t.Z = function () {
         V = (0, s.e7)([h.Z], () => h.Z.getCategories()),
         F = r.useMemo(() => [(0, m.KQ)(), ...V], [V]),
         z = r.useMemo(() => F.find((e) => e.id === Number(H)), [F, H]),
-        { tabs: W, selectedTab: Y, onSelectTab: K } = (0, A.i)(null == u ? void 0 : u.toString()),
+        { tabs: Y, selectedTab: W, onSelectTab: K } = (0, A.i)(null == u ? void 0 : u.toString()),
         [q, X] = r.useState(!0),
         Q = Z.z8.useField('trackedOpenedFromExternalEntrypoint'),
         J = Z.z8.useField('sessionId'),
@@ -189,8 +189,8 @@ t.Z = function () {
                                             children: null != B && '' !== B ? w.intl.formatToPlainString(w.t.zHdzqa, { query: B }) : w.intl.formatToPlainString(w.t.Qhj5Bg, { categoryName: null !== (e = null == z ? void 0 : z.name) && void 0 !== e ? e : w.intl.string(w.t.E407b2) })
                                         })
                                       : (0, i.jsx)(E.Z, {
-                                            tabs: W,
-                                            selectedTab: Y,
+                                            tabs: Y,
+                                            selectedTab: W,
                                             onTabSelect: ed,
                                             onAvailableWidthChange: eo
                                         }),
@@ -221,13 +221,13 @@ t.Z = function () {
                         onSelectApplication: eu,
                         onScroll: (e) => eg(e, Z.m_.SEARCH)
                     })
-                  : Y === D.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID.toString()
+                  : W === D.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID.toString()
                     ? (0, i.jsx)(R.Z, {
                           onScroll: (e) => eg(e, Z.m_.HOME),
                           onSelectApplication: eu
                       })
                     : (0, i.jsx)(P.Z, {
-                          tabId: Number(Y),
+                          tabId: Number(W),
                           onScroll: (e) => eg(e, Z.m_.CATEGORY),
                           onSelectApplication: eu
                       })
