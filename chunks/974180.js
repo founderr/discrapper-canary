@@ -29,8 +29,8 @@ var i,
     S = n(11352),
     C = n(671105),
     m = n(106371),
-    v = n(703656),
-    Z = n(359110),
+    Z = n(703656),
+    v = n(359110),
     A = n(922482),
     y = n(427679),
     P = n(488131),
@@ -152,8 +152,8 @@ K(tu, 'displayName', 'NotificationStore'),
                       let h = !D.Z.isSoundDisabled(j),
                           p = x.ZP.canUseCustomNotificationSounds(_),
                           m = S.Y.getCurrentConfig({ location: 'NotificationStore' }).enabled,
-                          v = p && m && h ? (null !== (o = (0, C.bb)(null !== (l = f.guild_id) && void 0 !== l ? l : B.aIL, a)) && void 0 !== o ? o : (0, C.iD)(f.guild_id)) : void 0;
-                      if ((I && (h && z.GN('message3', 0.4, void 0, v), !tt)) || !N) return !1;
+                          Z = p && m && h ? (null !== (o = (0, C.bb)(null !== (l = f.guild_id) && void 0 !== l ? l : B.aIL, a)) && void 0 !== o ? o : (0, C.iD)(f.guild_id)) : void 0;
+                      if ((I && (h && z.GN('message3', 0.4, void 0, Z), !tt)) || !N) return !1;
                       let A = n(808506).Z,
                           y = n(237997).Z;
                       if (null != A.getFocusedPID() && y.getTextChatNotificationMode() === B.Ypu.ENABLED && !w.Z.disableNotifications) return !1;
@@ -170,7 +170,7 @@ K(tu, 'displayName', 'NotificationStore'),
                           (0, T.R)(r, f.guild_id),
                           D.Z.getDesktopType() === B.qrD.NEVER)
                       )
-                          return h && z.GN(j, Q, void 0, v), !1;
+                          return h && z.GN(j, Q, void 0, Z), !1;
                       let U = H.Z.showNotification(
                           P,
                           R,
@@ -188,10 +188,10 @@ K(tu, 'displayName', 'NotificationStore'),
                               omitViewTracking: !0,
                               tag: r.id,
                               sound: h ? j : void 0,
-                              soundpack: v,
+                              soundpack: Z,
                               volume: Q,
                               onClick() {
-                                  (0, Z.Kh)(f.id), (f.type === B.d4z.GUILD_VOICE || f.type === B.d4z.GUILD_STAGE_VOICE) && s.Z.updateChatOpen(f.id, !0), c.default.clickedNotification();
+                                  (0, v.Kh)(f.id), (f.type === B.d4z.GUILD_VOICE || f.type === B.d4z.GUILD_STAGE_VOICE) && s.Z.updateChatOpen(f.id, !0), c.default.clickedNotification();
                               }
                           }
                       );
@@ -438,7 +438,7 @@ K(tu, 'displayName', 'NotificationStore'),
                                   {
                                       overrideStreamerMode: !0,
                                       onClick: () => {
-                                          (0, v.uL)(B.Z5c.SETTINGS(t ? 'windows' : 'linux'));
+                                          (0, Z.uL)(B.Z5c.SETTINGS(t ? 'windows' : 'linux'));
                                       },
                                       onShown: () => {
                                           a.K.set($, !0);

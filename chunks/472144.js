@@ -1,8 +1,8 @@
 var o = t(200651),
     r = t(192379),
     c = t(120356),
-    a = t.n(c),
-    i = t(752877),
+    i = t.n(c),
+    a = t(752877),
     s = t(481060),
     l = t(569379),
     d = t(642145),
@@ -11,16 +11,16 @@ n.Z = r.forwardRef((e, n) => {
     let { quest: t, percentComplete: r, size: c = 42, strokeWidth: u = 3, glowBlur: p = 0.4, percentCompleteText: _, percentCompleteTextVariant: C = 'text-lg/medium', children: v } = e,
         g = (0, l.E)(t, r > 0),
         m = c / 2,
-        x = c / 2 - u / 2,
-        B = 2 * Math.PI * x,
-        b = B - r * B,
+        B = c / 2 - u / 2,
+        x = 2 * Math.PI * B,
+        b = x - r * x,
         S = {
-            strokeDasharray: ''.concat(B, ' ').concat(B),
+            strokeDasharray: ''.concat(x, ' ').concat(x),
             strokeDashoffset: b
         },
         h = {
-            strokeDasharray: ''.concat(B, ' ').concat(B),
-            strokeDashoffset: -r * B
+            strokeDasharray: ''.concat(x, ' ').concat(x),
+            strokeDashoffset: -r * x
         },
         y = { boxShadow: '0 0 30px 0px '.concat(g.glow) },
         { progressTextAnimation: k } = (0, s.useSpring)({
@@ -36,11 +36,11 @@ n.Z = r.forwardRef((e, n) => {
                 style: y,
                 children: [
                     v,
-                    (0, o.jsxs)(i.animated.div, {
+                    (0, o.jsxs)(a.animated.div, {
                         style: { opacity: k },
-                        className: a()(f.coverContent, f.progressTextWrapper),
+                        className: i()(f.coverContent, f.progressTextWrapper),
                         children: [
-                            (0, o.jsx)('div', { className: a()(f.coverContent, f.progressTextOverlay) }),
+                            (0, o.jsx)('div', { className: i()(f.coverContent, f.progressTextOverlay) }),
                             (0, o.jsx)(s.Text, {
                                 variant: C,
                                 color: 'text-primary',
@@ -93,7 +93,7 @@ n.Z = r.forwardRef((e, n) => {
                         className: f.progress,
                         strokeWidth: u,
                         fill: 'transparent',
-                        r: x,
+                        r: B,
                         cx: m,
                         cy: m,
                         stroke: 'url(#linear)',
@@ -103,7 +103,7 @@ n.Z = r.forwardRef((e, n) => {
                         className: f.progress,
                         strokeWidth: u,
                         fill: 'transparent',
-                        r: x,
+                        r: B,
                         cx: m,
                         cy: m,
                         stroke: g.foreground,

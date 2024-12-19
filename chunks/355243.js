@@ -23,14 +23,14 @@ function E(e) {
     let { percent: t, animate: n, interactionEnabled: l, backgroundColor: E, preloadedBuffers: p, duration: f, maxSeekableTime: C, onClick: S, onScrubBack: g, onScrubForward: x } = e,
         [h, _] = i.useState(null),
         [T, D] = i.useState(null),
-        [I, N] = i.useState(null),
+        [N, I] = i.useState(null),
         [A, j] = i.useState(!1),
         b = i.useRef(null),
         L = (e) => {
             (b.current = e), _(e);
         };
     i.useEffect(() => {
-        null != h && (null == C ? N(null) : N(v(C, f, h)));
+        null != h && (null == C ? I(null) : I(v(C, f, h)));
     }, [h, C, f]);
     let R = (0, a.y)(() => {
         if (null != R.current) L(R.current.getBoundingClientRect());
@@ -55,10 +55,10 @@ function E(e) {
             [g, x]
         ),
         M = null != T && null != h ? m(T, h, f) : 0,
-        y = (0, u.yv)(M),
-        P = null != h ? h.right - v((t / 100) * f, f, h) : null,
+        P = (0, u.yv)(M),
+        y = null != h ? h.right - v((t / 100) * f, f, h) : null,
         q = null != T && null != h ? h.right - T : null,
-        w = null != I && null != h ? h.right - I : null;
+        w = null != N && null != h ? h.right - N : null;
     return (0, r.jsxs)('div', {
         className: d.cont,
         ref: R,
@@ -121,7 +121,7 @@ function E(e) {
                         animate: n
                     }),
                     A &&
-                        null != y &&
+                        null != P &&
                         (0, r.jsx)(s.Text, {
                             className: d.timeDisplay,
                             variant: 'text-xs/normal',
@@ -129,14 +129,14 @@ function E(e) {
                                 right: null != q ? ''.concat(q - 10, 'px') : 'auto',
                                 color: '#FFFFFF'
                             },
-                            children: y
+                            children: P
                         }),
                     A &&
                         l &&
-                        null != P &&
+                        null != y &&
                         (0, r.jsx)('div', {
                             className: d.grabber,
-                            style: { right: ''.concat(P - 6, 'px') }
+                            style: { right: ''.concat(y - 6, 'px') }
                         })
                 ]
             }),

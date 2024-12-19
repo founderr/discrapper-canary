@@ -1,19 +1,19 @@
 n.d(e, {
     Y: function () {
-        return i;
+        return r;
     }
 });
-var r = n(388032);
-function i(t) {
-    let { application: e, username: n, usernameOnClick: i } = t;
+var i = n(388032);
+function r(t) {
+    let { application: e, username: n, usernameOnClick: r } = t;
     return null != e
-        ? r.intl.formatToParts(r.t.Tes5Oj, {
+        ? i.intl.formatToParts(i.t.Tes5Oj, {
               username: n,
               applicationName: e.name,
-              usernameOnClick: i
+              usernameOnClick: r
           })
-        : r.intl.formatToParts(r.t.PUJtgo, {
+        : i.intl.formatToParts(i.t.PUJtgo, {
               username: n,
-              usernameOnClick: i
+              usernameOnClick: r
           });
 }

@@ -192,11 +192,11 @@ function Q() {
                 .map((e) => e.pid)
         ),
         n = new Set(k()),
-        r = n.difference(e);
+        r = new Set([...n].filter((n) => !e.has(n)));
     for (let e of r) W(e);
-    let i = e.difference(n);
+    let i = new Set([...e].filter((e) => !n.has(e)));
     for (let e of i) Y(e);
-    let a = n.intersection(e);
+    let a = new Set([...n].filter((n) => e.has(n)));
     ee(a),
         (r.size > 0 || i.size > 0) &&
             S.verbose('Tracked games have changes', {

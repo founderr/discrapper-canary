@@ -1,6 +1,6 @@
 n.d(e, {
     HG: function () {
-        return o;
+        return u;
     },
     Md: function () {
         return a;
@@ -13,7 +13,7 @@ var r = n(373228),
     i = n(388032);
 let l = () => [i.intl.string(i.t.b6wEe3), i.intl.string(i.t.i8o9hY)],
     a = () => [i.intl.string(i.t.vqnToa), i.intl.string(i.t['9yh+dH'])],
-    o = [
+    u = [
         {
             id: '781323471249604648',
             format_type: r.u3.APNG,

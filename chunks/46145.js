@@ -3,8 +3,8 @@ var r,
     i = n(442837),
     l = n(570140),
     a = n(592125),
-    o = n(271383),
-    u = n(430824);
+    u = n(271383),
+    o = n(430824);
 function s(t, e, n) {
     return (
         e in t
@@ -23,7 +23,7 @@ let c = [],
 class f extends (r = i.ZP.PersistedStore) {
     initialize(t) {
         var e;
-        this.waitFor(o.ZP, u.Z, a.Z), (d = new Set([...(c = null !== (e = null == t ? void 0 : t.channelHistory) && void 0 !== e ? e : [])]));
+        this.waitFor(u.ZP, o.Z, a.Z), (d = new Set([...(c = null !== (e = null == t ? void 0 : t.channelHistory) && void 0 !== e ? e : [])]));
     }
     getState() {
         return { channelHistory: c };

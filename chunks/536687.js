@@ -27,8 +27,8 @@ var r = n(200651),
     _ = n(644646),
     T = n(604162),
     D = n(747717),
-    I = n(963123),
-    N = n(281055),
+    N = n(963123),
+    I = n(281055),
     A = n(46140),
     j = n(981631),
     b = n(388032),
@@ -38,10 +38,10 @@ function R(e) {
     let { transitionState: n, onClose: l, quest: E, autoplay: R, videoSessionId: O } = e,
         k = (0, f.il)(E),
         M = (0, s.e7)([d.Z], () => d.Z.getState().theme),
-        y = (0, a.wj)(M) ? j.BRd.DARK : j.BRd.LIGHT,
-        P = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
+        P = (0, a.wj)(M) ? j.BRd.DARK : j.BRd.LIGHT,
+        y = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
         [q, w] = i.useState(k.progressSeconds),
-        [U, B] = i.useState(!1),
+        [B, U] = i.useState(!1),
         { completedRatio: Z, completedRatioDisplay: F } = (0, v.I)(E),
         [V, Y] = (0, T.G6)(b.intl.string(b.t.RDE0SU), b.intl.string(b.t['+5kSoa']), 1700),
         G = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null ? b.intl.string(b.t.vTgCW1) : b.intl.string(b.t.cfY4PD),
@@ -58,11 +58,11 @@ function R(e) {
                 ctaContent: m.jZ.OPEN_GAME_LINK
             });
         },
-        Q = () => {
-            B(!0);
-        },
         K = () => {
-            B(!1);
+            U(!0);
+        },
+        Q = () => {
+            U(!1);
         },
         W = i.useMemo(() => S.r.build(E.config).defaultReward.messages.name, [E]),
         X = b.intl.formatToPlainString(b.t['12IWPz'], { rewardName: W });
@@ -73,7 +73,7 @@ function R(e) {
         children: (0, r.jsx)(h.A, {
             questOrQuests: E,
             questContent: p.jn.VIDEO_MODAL,
-            minViewTimeSeconds: N.zw,
+            minViewTimeSeconds: I.zw,
             trackGuildAndChannelMetadata: !0,
             children: (e) => {
                 var t, i;
@@ -97,7 +97,7 @@ function R(e) {
                                                 (0, r.jsx)('img', {
                                                     alt: E.config.messages.gameTitle,
                                                     className: o()(L.contentHeaderLogotype, L.accentOnHover),
-                                                    src: (0, C.fh)(E, C.eC.LOGO_TYPE, y).url
+                                                    src: (0, C.fh)(E, C.eC.LOGO_TYPE, P).url
                                                 }),
                                                 (0, r.jsx)(D.Z, {}),
                                                 (0, r.jsxs)('div', {
@@ -120,8 +120,8 @@ function R(e) {
                                         (0, r.jsx)(u.Tooltip, {
                                             position: 'left',
                                             text: X,
-                                            onTooltipShow: Q,
-                                            onTooltipHide: K,
+                                            onTooltipShow: K,
+                                            onTooltipHide: Q,
                                             children: (e) =>
                                                 (0, r.jsx)(u.Clickable, {
                                                     className: L.progressCont,
@@ -130,7 +130,7 @@ function R(e) {
                                                         quest: E,
                                                         size: 48,
                                                         percentComplete: Z,
-                                                        percentCompleteText: U ? F : void 0,
+                                                        percentCompleteText: B ? F : void 0,
                                                         percentCompleteTextVariant: 'text-sm/medium',
                                                         children: (0, r.jsx)(_.Z, {
                                                             className: L.questProgressRewardTile,
@@ -144,7 +144,7 @@ function R(e) {
                                         })
                                     ]
                                 }),
-                                (0, r.jsx)(I.Z, {
+                                (0, r.jsx)(N.Z, {
                                     quest: E,
                                     videoSessionId: O,
                                     parentTransitionState: n,
@@ -174,7 +174,7 @@ function R(e) {
                                                     className: L.claimBtn,
                                                     size: u.Button.Sizes.MEDIUM,
                                                     quest: E,
-                                                    useReducedMotion: P,
+                                                    useReducedMotion: y,
                                                     isExpanded: (null === (t = E.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
                                                     disabled: (null === (i = E.userStatus) || void 0 === i ? void 0 : i.completedAt) == null,
                                                     ctaLabel: G

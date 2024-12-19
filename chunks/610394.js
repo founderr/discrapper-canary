@@ -101,7 +101,7 @@ function Y() {
             })
             .map((e) => e.pid)
     );
-    for (let n of R.difference(e)) V(n);
+    for (let n of new Set([...R].filter((n) => !e.has(n)))) V(n);
     for (let e of R) F(e);
 }
 function W(e) {

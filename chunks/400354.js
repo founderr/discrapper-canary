@@ -1,6 +1,6 @@
 n.d(e, {
     l: function () {
-        return o;
+        return u;
     }
 });
 var r = n(200651),
@@ -28,11 +28,11 @@ let a = {
             duration: 70
         }
     },
-    o = (t) => {
+    u = (t) => {
         let e = i.useRef(null),
-            o = i.useRef(t);
-        o.current = t;
-        let u = i.useMemo(
+            u = i.useRef(t);
+        u.current = t;
+        let o = i.useMemo(
                 () => () => {
                     null != e.current && e.current.play(t);
                 },
@@ -50,18 +50,18 @@ let a = {
             }, [t]);
         return {
             events: {
-                onClick: u,
+                onClick: o,
                 onMouseEnter: s,
                 onMouseLeave: c
             },
-            play: u,
+            play: o,
             Component: i.useCallback(
                 (t) =>
                     (0, r.jsx)(l.L, {
                         ...t,
                         src: () => n.e('68449').then(n.t.bind(n, 406785, 19)),
                         ref: e,
-                        initialAnimation: o.current,
+                        initialAnimation: u.current,
                         markers: a
                     }),
                 []

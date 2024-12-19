@@ -539,7 +539,7 @@ class eJ extends l.PureComponent {
                     Z && !T
                         ? (0, i.jsx)('div', {
                               className: eV.entryPointButtonContainer,
-                              children: (0, i.jsx)(ew.Z, {
+                              children: (0, i.jsx)(ew.ZP, {
                                   channel: n,
                                   entryPointCommandButtonRef: S,
                                   type: c
