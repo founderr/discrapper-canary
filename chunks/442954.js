@@ -17,10 +17,6 @@ var r = n(200651),
     m = n(509345);
 function x() {
     let e = {
-            BOGOAnnouncementModal: async () => {
-                let { default: e } = await n.e('34049').then(n.bind(n, 868508));
-                return (t) => (0, r.jsx)(e, { renderModalProps: t });
-            },
             PremiumSubscriptionAprilMarketingDecoModal: async () => {
                 let { default: e } = await n.e('18327').then(n.bind(n, 731433));
                 return (t) => (0, r.jsx)(e, { ...t });
