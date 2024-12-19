@@ -77,7 +77,11 @@ let ec = (0, et.Un)({
         createPromise: () => r.e('46369').then(r.bind(r, 177741)),
         webpackId: 177741
     }),
-    ed = o.memo(function (e) {
+    ed = (0, et.Un)({
+        createPromise: () => Promise.all([r.e('78447'), r.e('81465')]).then(r.bind(r, 420541)),
+        webpackId: 420541
+    }),
+    ef = o.memo(function (e) {
         let n = (0, G.Q3)('ChannelSidebar'),
             r = (0, _.e7)([J.Z], () => J.Z.isFocused());
         return n
@@ -87,7 +91,7 @@ let ec = (0, et.Un)({
                   focused: r
               });
     });
-function ef(e) {
+function e_(e) {
     let { children: n, skipsSettingDefaultPageTitle: r } = e,
         { pathname: i } = (0, d.TH)(),
         a = (0, $.getPlatform)(),
@@ -95,17 +99,17 @@ function ef(e) {
         p = (0, _.e7)([z.Z], () => (z.Z.darkSidebar ? eo.BRd.DARK : void 0)),
         b = (0, _.e7)([S.Z], () => (S.Z.useForcedColors ? 'yes' : 'no')),
         [G, J, et] = (0, _.Wu)([P.Z], () => [P.Z.isEditorOpen, P.Z.isCoachmark, P.Z.isPreview]),
-        [es, ef] = (0, _.Wu)([D.Z], () => [D.Z.isEditorOpen, D.Z.isUpsellPreview]),
-        e_ = (0, _.e7)([Q.Z], () => Q.Z.getLayers().includes(eo.S9g.USER_SETTINGS)),
-        eh = (0, _.e7)([X.default], () => ee.ZP.canUseClientThemes(X.default.getCurrentUser())),
-        ep = G && !e_,
-        em = es && !e_,
-        eg = [];
-    ep && J && !eh && eg.push(h.z.CLIENT_THEMES_COACHMARK);
-    let [eE, ev] = (0, F.US)(eg, el.R.SIDEBAR, !0);
-    eg.push(h.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
-    let eI = eE === h.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
-        eT = eE === h.z.CLIENT_THEMES_COACHMARK;
+        [es, e_] = (0, _.Wu)([D.Z], () => [D.Z.isEditorOpen, D.Z.isUpsellPreview]),
+        eh = (0, _.e7)([Q.Z], () => Q.Z.getLayers().includes(eo.S9g.USER_SETTINGS)),
+        ep = (0, _.e7)([X.default], () => ee.ZP.canUseClientThemes(X.default.getCurrentUser())),
+        em = G && !eh,
+        eg = es && !eh,
+        eE = [];
+    em && J && !ep && eE.push(h.z.CLIENT_THEMES_COACHMARK);
+    let [ev, eI] = (0, F.US)(eE, el.R.SIDEBAR, !0);
+    eE.push(h.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
+    let eT = ev === h.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
+        eb = ev === h.z.CLIENT_THEMES_COACHMARK;
     o.useEffect(() => {
         null ==
             (0, d.LX)(i, {
@@ -113,16 +117,16 @@ function ef(e) {
                 exact: !1,
                 strict: !1
             }) &&
-            eI &&
-            !eT &&
+            eT &&
+            !eb &&
             ((0, O.nJ)(),
             g.Z.dispatch({
                 type: 'APP_ICON_TRACK_IMPRESSION',
-                markAsDismissed: ev
+                markAsDismissed: eI
             }));
-    }, [eI, eT, ev, i]);
-    let eb = o.useRef(document.body),
-        ey = () => {
+    }, [eT, eb, eI, i]);
+    let ey = o.useRef(document.body),
+        eS = () => {
             let e = (0, d.LX)(i, {
                 path: eo.Z5c.APPLICATION_DIRECTORY,
                 exact: !1,
@@ -130,14 +134,14 @@ function ef(e) {
             });
             return ((!!f.tq || !!f.Em) && null != e) || !1;
         },
-        eS = (ep && !J) || eT,
-        eA = em && !eT,
-        eN = et || ef,
-        { enabled: eC } = W.Z.useExperiment(
+        eA = (em && !J) || eb,
+        eN = eg && !eb,
+        eC = et || e_,
+        { enabled: eR } = W.Z.useExperiment(
             { location: 'AppSkeleton' },
             {
-                autoTrackExposure: eN && (eS || eA),
-                disable: !eN
+                autoTrackExposure: eC && (eA || eN),
+                disable: !eC
             }
         );
     return (0, s.jsx)(
@@ -150,7 +154,7 @@ function ef(e) {
                         (0, s.jsx)(T.T, {
                             children: (0, s.jsx)(er.Z, {
                                 children: (0, s.jsxs)(m.FocusRingScope, {
-                                    containerRef: eb,
+                                    containerRef: ey,
                                     children: [
                                         (0, s.jsx)(ea.Co, {}),
                                         (0, s.jsx)(ei.ZP, {}),
@@ -161,13 +165,13 @@ function ef(e) {
                                             children: (0, s.jsxs)(V.yP, {
                                                 children: [
                                                     null != a
-                                                        ? (0, s.jsx)(ed, {
+                                                        ? (0, s.jsx)(ef, {
                                                               type: a,
                                                               themeOverride: p
                                                           })
                                                         : null,
                                                     (0, s.jsxs)('div', {
-                                                        className: u()(eu.appAsidePanelWrapper, l && eu.mobileAppAsidePanelWrapper, { [eu.allowsScrolling]: ey() }),
+                                                        className: u()(eu.appAsidePanelWrapper, l && eu.mobileAppAsidePanelWrapper, { [eu.allowsScrolling]: eS() }),
                                                         children: [
                                                             (0, s.jsx)(B.K, {}),
                                                             (0, s.jsx)('div', {
@@ -193,7 +197,8 @@ function ef(e) {
                                                                                     (0, s.jsx)(m.ToastContainer, {}),
                                                                                     (0, s.jsx)(R.Z, {}),
                                                                                     (0, s.jsx)(Y.Z, {}),
-                                                                                    (0, s.jsx)(ec, {})
+                                                                                    (0, s.jsx)(ec, {}),
+                                                                                    (0, s.jsx)(ed, {})
                                                                                 ]
                                                                             })
                                                                         })
@@ -202,18 +207,18 @@ function ef(e) {
                                                             }),
                                                             (0, s.jsx)(w.Z, {}),
                                                             (0, s.jsx)(E.Z, {}),
-                                                            eS && !eC && (0, s.jsx)(M.Z, { markAsDismissed: ev }),
-                                                            eA &&
-                                                                !eC &&
+                                                            eA && !eR && (0, s.jsx)(M.Z, { markAsDismissed: eI }),
+                                                            eN &&
+                                                                !eR &&
                                                                 (0, s.jsx)(L.Z, {
-                                                                    isCoachmark: eI,
-                                                                    markAsDismissed: ev
+                                                                    isCoachmark: eT,
+                                                                    markAsDismissed: eI
                                                                 }),
-                                                            (eS || eA) &&
-                                                                eC &&
+                                                            (eA || eN) &&
+                                                                eR &&
                                                                 (0, s.jsx)(q.Z, {
-                                                                    initialTab: eA ? q._.APP_ICONS : q._.CLIENT_THEMES,
-                                                                    markAsDismissed: ev
+                                                                    initialTab: eN ? q._.APP_ICONS : q._.CLIENT_THEMES,
+                                                                    markAsDismissed: eI
                                                                 }),
                                                             (0, s.jsx)(Z.Z, { mobile: l })
                                                         ]
@@ -234,4 +239,4 @@ function ef(e) {
         b
     );
 }
-n.Z = ef;
+n.Z = e_;
