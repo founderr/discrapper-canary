@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return v;
     }
 }),
     n(757143),
@@ -37,21 +37,23 @@ function C() {
                 iconPosition: 'end',
                 icon: d.TrashIcon
             }),
-            (0, i.jsx)(b, {}),
+            (0, i.jsx)(j, {}),
+            (0, i.jsx)(B, {}),
+            (0, i.jsx)(L, {}),
             (0, i.jsx)(D, {}),
-            (0, i.jsx)(y, {}),
+            (0, i.jsx)(P, {}),
             (0, i.jsx)(R, {}),
             (0, i.jsx)(O, {}),
-            (0, i.jsx)(j, {}),
-            (0, i.jsx)(v, {}),
-            (0, i.jsx)(B, {})
+            (0, i.jsx)(Z, {})
         ]
     });
 }
 let _ = ['neutral', 'blue_new', 'blurple', 'green_new', 'red_new', 'teal_new', 'yellow_new', 'orange_new'],
     f = ['background-surface-highest', 'background-surface-higher', 'background-surface-high', 'background-base-low', 'background-base-lower', 'background-base-lowest'],
-    I = ['background-mod-subtle', 'background-mod-normal', 'background-mod-strong'];
-function N() {
+    I = ['background-mod-subtle', 'background-mod-normal', 'background-mod-strong'],
+    N = ['critical', 'warning', 'positive', 'info'],
+    A = ['text-default', 'text-primary', 'text-secondary', 'text-tertiary', 'text-feedback-critical', 'text-feedback-warning', 'text-feedback-positive', 'text-feedback-info'];
+function b() {
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(d.Heading, {
@@ -77,10 +79,10 @@ function N() {
                                 style: {
                                     display: 'grid',
                                     gap: 8,
-                                    gridAutoFlow: 'column'
+                                    gridTemplateColumns: 'repeat(3, 1fr)'
                                 },
                                 children: I.map((e) =>
-                                    (0, i.jsx)(
+                                    (0, i.jsxs)(
                                         'div',
                                         {
                                             className: x.color,
@@ -88,15 +90,71 @@ function N() {
                                                 padding: 16,
                                                 background: 'var(--'.concat(e, ')')
                                             },
-                                            children: (0, i.jsx)(d.Text, {
-                                                variant: 'text-xs/medium',
-                                                color: 'text-secondary',
-                                                children: e
-                                            })
+                                            children: [
+                                                (0, i.jsx)(d.Text, {
+                                                    variant: 'text-xs/semibold',
+                                                    color: 'header-secondary',
+                                                    children: e
+                                                }),
+                                                (0, i.jsx)('hr', { className: x.sectionDivider }),
+                                                A.map((e) =>
+                                                    (0, i.jsx)(
+                                                        d.Text,
+                                                        {
+                                                            variant: 'text-xs/medium',
+                                                            style: { color: 'var(--'.concat(e, ')') },
+                                                            children: e
+                                                        },
+                                                        e
+                                                    )
+                                                )
+                                            ]
                                         },
                                         e
                                     )
                                 )
+                            }),
+                            (0, i.jsx)('hr', { className: x.sectionDivider }),
+                            (0, i.jsx)('div', {
+                                style: {
+                                    display: 'grid',
+                                    gap: 8,
+                                    gridTemplateColumns: 'repeat(3, 1fr)'
+                                },
+                                children: N.map((e) => {
+                                    let t = 'var(--text-feedback-'.concat(e, ')');
+                                    return (0, i.jsxs)(
+                                        'div',
+                                        {
+                                            className: x.color,
+                                            style: {
+                                                padding: 16,
+                                                background: 'var(--background-feedback-'.concat(e, ')')
+                                            },
+                                            children: [
+                                                (0, i.jsx)(d.Text, {
+                                                    variant: 'text-xs/semibold',
+                                                    color: 'header-secondary'
+                                                }),
+                                                (0, i.jsxs)(d.Stack, {
+                                                    children: [
+                                                        (0, i.jsxs)(d.Text, {
+                                                            variant: 'text-xs/semibold',
+                                                            style: { color: t },
+                                                            children: ['background-feedback-', e]
+                                                        }),
+                                                        (0, i.jsx)(d.Text, {
+                                                            variant: 'text-xs/normal',
+                                                            style: { color: t },
+                                                            children: 'Lorem ipsum odor amet, consectetuer adipiscing elit. Sem semper venenatis a quisque suspendisse urna litora.'
+                                                        })
+                                                    ]
+                                                })
+                                            ]
+                                        },
+                                        e
+                                    );
+                                })
                             })
                         ]
                     },
@@ -148,7 +206,7 @@ function N() {
         ]
     });
 }
-function A() {
+function v() {
     return (0, i.jsx)(m.Z, {
         parentSetting: h.s6.DESIGN_SYSTEMS,
         settingsSection: g.oAB.DESIGN_SYSTEMS,
@@ -160,13 +218,13 @@ function A() {
             },
             {
                 title: 'Colors',
-                component: () => (0, i.jsx)(N, {}),
+                component: () => (0, i.jsx)(b, {}),
                 setting: h.s6.DESIGN_SYSTEMS_COLORS
             }
         ]
     });
 }
-function b() {
+function j() {
     let [e, t] = s.useState(!1),
         n = S.flatMap((e) => [
             ...T.map((t) =>
@@ -300,11 +358,11 @@ function b() {
                     children: 'Large'
                 })
             }),
-            (0, i.jsx)(P, {})
+            (0, i.jsx)(y, {})
         ]
     });
 }
-function v() {
+function O() {
     let [e, t] = s.useState('1');
     return (0, i.jsxs)('div', {
         className: x.section,
@@ -341,7 +399,7 @@ function v() {
         ]
     });
 }
-function j() {
+function R() {
     let [e, t] = s.useState(1),
         [n, r] = s.useState(!1),
         [l, a] = s.useState(5),
@@ -459,7 +517,7 @@ function j() {
         ]
     });
 }
-function O() {
+function P() {
     return (0, i.jsxs)('div', {
         className: x.section,
         children: [
@@ -516,7 +574,7 @@ function O() {
         ]
     });
 }
-function R() {
+function D() {
     let [e, t] = s.useState(!1),
         [n, r] = s.useState(!1),
         [l, a] = s.useState('auto');
@@ -718,7 +776,7 @@ function R() {
         ]
     });
 }
-function P() {
+function y() {
     return (0, i.jsxs)('div', {
         className: x.shinyButtonExamples,
         children: [
@@ -738,7 +796,7 @@ function P() {
         ]
     });
 }
-function D() {
+function B() {
     let [e, t] = s.useState(null),
         [n, r] = s.useState(null),
         [l, o] = s.useState([]),
@@ -803,7 +861,7 @@ function D() {
         ]
     });
 }
-function y() {
+function L() {
     let [e, t] = s.useState(''),
         [n, r] = s.useState(''),
         [l, a] = s.useState('');
@@ -872,7 +930,7 @@ function y() {
         ]
     });
 }
-function B() {
+function Z() {
     let e = (0, o.e7)([u.Z], () => u.Z.gradientPreset);
     return (0, i.jsx)(d.ThemeProvider, {
         theme: p.BR.DARKER,
