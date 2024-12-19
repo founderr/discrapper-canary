@@ -6,6 +6,8 @@ e.exports = {
     header: 'header_f798f8',
     members: 'members_f798f8',
     memberCount: 'memberCount_f798f8',
+    dot: 'dot_f798f8',
     dotOnline: 'dotOnline_f798f8',
+    established: 'established_f798f8',
     body: 'body_f798f8'
 };
