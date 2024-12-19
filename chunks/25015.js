@@ -12,8 +12,8 @@ var i = r(192379),
     c = r(388032),
     d = r(617768);
 function f(e, n) {
-    let { hideSimpleEmbedContent: r, formatInline: f = !1, noStyleAndInteraction: _ = !1, isInteracting: h = !1, allowHeading: p = !1, allowList: m = !1, allowLinks: g = !1, allowDevLinks: E = !1, allowSubtext: v = !1, previewLinkTarget: I = !1, viewingChannelId: T } = n,
-        b = (0, a.p)();
+    let { hideSimpleEmbedContent: r, formatInline: f = !1, noStyleAndInteraction: _ = !1, isInteracting: h = !1, allowHeading: p = !1, allowList: m = !1, allowLinks: g = !1, allowDevLinks: E = !1, previewLinkTarget: v = !1, viewingChannelId: I } = n,
+        T = (0, a.p)();
     return i.useMemo(
         () =>
             null != e.customRenderedContent
@@ -39,12 +39,11 @@ function f(e, n) {
                             allowHeading: p,
                             allowList: m,
                             allowLinks: g,
-                            allowSubtext: v,
                             allowDevLinks: E,
-                            previewLinkTarget: I,
-                            shouldFilterKeywords: b,
-                            viewingChannelId: T
+                            previewLinkTarget: v,
+                            shouldFilterKeywords: T,
+                            viewingChannelId: I
                         }),
-        [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, r, f, _, h, p, m, g, I, v, b]
+        [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, r, f, _, h, p, m, g, v, T]
     );
 }

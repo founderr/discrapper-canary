@@ -7,6 +7,5 @@ let l = {
     allowList: !0,
     allowHeading: !0,
     allowLinks: !0,
-    allowSubtext: !0,
     previewLinkTarget: !0
 };

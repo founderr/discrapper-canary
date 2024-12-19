@@ -1,17 +1,13 @@
 var i = r(477660),
-    a = r.n(i),
-    s = r(777547);
-let o = /\n$/,
-    l = /^ *-# +((?!(-#)+)[^\n]+?) *(?:\n|$)/,
-    u = {
+    a = r.n(i);
+let s = /\n$/,
+    o = /^ *-# +((?!(-#)+)[^\n]+?) *(?:\n|$)/,
+    l = {
         order: a().defaultRules.heading.order,
         requiredFirstCharacters: ['-'],
-        match: (e, n, r) => {
-            let { showSubtextMarkdown: a } = s.m.getCurrentConfig({ location: 'MarkupSubtextRule' });
-            return a ? (null == r || '' === r || null != r.match(o) ? (0, i.anyScopeRegex)(l)(e, n, r) : null) : null;
-        },
+        match: (e, n, r) => (null == r || '' === r || null != r.match(s) ? (0, i.anyScopeRegex)(o)(e, n, r) : null),
         parse: function (e, n, r) {
             return { content: (0, i.parseInline)(n, e[1].trim(), r) };
         }
     };
-n.Z = u;
+n.Z = l;
