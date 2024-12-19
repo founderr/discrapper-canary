@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return x;
+        return h;
     }
 });
 var l = t(200651),
@@ -15,18 +15,18 @@ var l = t(200651),
     m = t(866040),
     f = t(388032),
     p = t(633942);
-function x(e) {
+function h(e) {
     let { entry: n, channel: t, className: i } = e,
-        { displayParticipants: x, participant1: h, participant2: v, numOtherParticipants: C, orderedParticipants: _ } = (0, c.Z)(n),
-        g = [h, v];
+        { displayParticipants: h, participant1: x, participant2: v, numOtherParticipants: C, orderedParticipants: g } = (0, c.Z)(n),
+        _ = [x, v];
     return (0, l.jsxs)('div', {
         className: r()(p.container, i),
         children: [
-            x.length > 0
+            h.length > 0
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(m.Z, {
-                              participants: _,
+                              participants: g,
                               channel: t,
                               children: (e) =>
                                   (0, l.jsx)(a.Clickable, {
@@ -34,7 +34,7 @@ function x(e) {
                                       ...e,
                                       children: (0, l.jsx)(o.Z, {
                                           maxUsers: 3,
-                                          users: x,
+                                          users: h,
                                           size: a.AvatarSizes.SIZE_20,
                                           avatarClassName: p.stackedAvatar,
                                           hideOverflowCount: !0,
@@ -55,15 +55,15 @@ function x(e) {
                 className: r()(p.truncatedText, p.usersHeader),
                 scaleFontToUserSetting: !0,
                 children: f.intl.format(f.t.rH95Gh, {
-                    user0: s.ZP.getName(t.guild_id, t.id, g[0]),
-                    user1: s.ZP.getName(t.guild_id, t.id, g[1]),
+                    user0: s.ZP.getName(t.guild_id, t.id, _[0]),
+                    user1: s.ZP.getName(t.guild_id, t.id, _[1]),
                     countOthers: C,
                     name0Hook: (e, n) =>
                         (0, l.jsx)(
                             d.Z,
                             {
                                 text: e,
-                                user: g[0],
+                                user: _[0],
                                 channel: t
                             },
                             n
@@ -73,7 +73,7 @@ function x(e) {
                             d.Z,
                             {
                                 text: e,
-                                user: g[1],
+                                user: _[1],
                                 channel: t
                             },
                             n
@@ -82,7 +82,7 @@ function x(e) {
                         (0, l.jsx)(
                             m.Z,
                             {
-                                participants: _,
+                                participants: g,
                                 channel: t,
                                 children: (n) =>
                                     (0, l.jsx)(u.Z, {

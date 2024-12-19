@@ -17,28 +17,28 @@ function d(e) {
         m = (0, i.q)(t.extra.application_id),
         f = null == m ? void 0 : m.getIconURL(128),
         p = (0, r.getAssetImage)(t.extra.application_id, t.extra.media_assets_large_image, [c.Si.LARGE, c.Si.LARGE]),
-        x = t.extra.media_title,
-        h = t.extra.media_subtitle,
+        h = t.extra.media_title,
+        x = t.extra.media_subtitle,
         v = (0, o.Jg)(t) ? u.t['LH+Z39'] : u.t.YuKgmp,
         C = { type: s.kG.CRUNCHYROLL },
-        _ = l.useMemo(() => {
+        g = l.useMemo(() => {
             if (null == t.extra.url) return;
             let e = a.Z.safeParseWithQuery(t.extra.url);
             if (null != e && null != e.protocol && null != e.hostname) return e;
         }, [t.extra.url]);
     return (
-        null != _ &&
+        null != g &&
             (n = {
-                href: a.Z.format(_),
-                ariaDescription: u.intl.formatToPlainString(u.t.aFFQ3t, { title: x })
+                href: a.Z.format(g),
+                ariaDescription: u.intl.formatToPlainString(u.t.aFFQ3t, { title: h })
             }),
         {
             ...d,
             thumbnailUrl: null != p ? p : f,
-            title: x,
+            title: h,
             titleClickable: n,
             thumbnailClickable: n,
-            subtitle: h,
+            subtitle: x,
             userDescription: v,
             providerIconProps: C
         }

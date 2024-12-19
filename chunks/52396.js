@@ -1,6 +1,6 @@
 t.d(n, {
     B: function () {
-        return h;
+        return x;
     },
     r: function () {
         return C;
@@ -19,9 +19,9 @@ var l = t(200651),
     m = t(482417),
     f = t(301419),
     p = t(397035);
-let x = i.createContext(void 0);
-function h() {
-    let e = i.useContext(x);
+let h = i.createContext(void 0);
+function x() {
+    let e = i.useContext(h);
     return a()(null != e, 'useEntryDataContext must be used within a EntryDataContextProvider'), e;
 }
 function v(e) {
@@ -35,7 +35,7 @@ function v(e) {
         };
     switch (n.content_type) {
         case o.s.TOP_ARTIST:
-            return (0, l.jsx)(g, {
+            return (0, l.jsx)(_, {
                 entry: n,
                 ...i
             });
@@ -60,7 +60,7 @@ function v(e) {
                 ...i
             });
         case o.s.LAUNCHED_ACTIVITY:
-            return (0, l.jsx)(_, {
+            return (0, l.jsx)(g, {
                 entry: n,
                 ...i
             });
@@ -75,13 +75,13 @@ function C(e) {
         children: (0, l.jsx)(v, { ...t })
     });
 }
-function _(e) {
+function g(e) {
     let { entry: n, children: t, ...i } = e,
         r = (0, c.Z)({
             entry: n,
             ...i
         });
-    return (0, l.jsx)(x.Provider, {
+    return (0, l.jsx)(h.Provider, {
         value: {
             parsedEntry: r,
             ...i
@@ -89,13 +89,13 @@ function _(e) {
         children: t
     });
 }
-function g(e) {
+function _(e) {
     let { entry: n, children: t, ...i } = e,
         r = (0, f.Z)({
             entry: n,
             ...i
         });
-    return (0, l.jsx)(x.Provider, {
+    return (0, l.jsx)(h.Provider, {
         value: {
             parsedEntry: r,
             ...i
@@ -109,7 +109,7 @@ function I(e) {
             entry: n,
             ...i
         });
-    return (0, l.jsx)(x.Provider, {
+    return (0, l.jsx)(h.Provider, {
         value: {
             parsedEntry: r,
             ...i
@@ -123,7 +123,7 @@ function b(e) {
             entry: n,
             ...i
         });
-    return (0, l.jsx)(x.Provider, {
+    return (0, l.jsx)(h.Provider, {
         value: {
             parsedEntry: r,
             ...i
@@ -137,7 +137,7 @@ function j(e) {
             entry: n,
             ...i
         });
-    return (0, l.jsx)(x.Provider, {
+    return (0, l.jsx)(h.Provider, {
         value: {
             parsedEntry: r,
             ...i
@@ -151,7 +151,7 @@ function S(e) {
             entry: n,
             ...i
         });
-    return (0, l.jsx)(x.Provider, {
+    return (0, l.jsx)(h.Provider, {
         value: {
             parsedEntry: r,
             ...i

@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return x;
+        return h;
     }
 });
 var l = t(876215),
@@ -18,13 +18,13 @@ let f = {
         [i.z.PLAYSTATION]: c.kG.PLAYSTATION
     },
     p = { [u._.EMBED]: a.m1.Embed };
-function x(e) {
+function h(e) {
     let n,
         t,
         { entry: i, location: a, baseEntryData: c } = e,
         u = (0, r.q)(i.extra.application_id),
-        x = null == u ? void 0 : u.getIconURL(d.Si.LARGE),
-        h = i.extra.game_name;
+        h = null == u ? void 0 : u.getIconURL(d.Si.LARGE),
+        x = i.extra.game_name;
     if (null != i.extra.platform) {
         let e = f[i.extra.platform];
         null != e && (n = { type: e });
@@ -39,12 +39,12 @@ function x(e) {
                 trackEntryPointImpression: !0,
                 sourceUserId: i.author_id
             }),
-            ariaDescription: m.intl.formatToPlainString(m.t['9sZWVl'], { gameName: h })
+            ariaDescription: m.intl.formatToPlainString(m.t['9sZWVl'], { gameName: x })
         };
     return {
         ...c,
-        thumbnailUrl: x,
-        title: h,
+        thumbnailUrl: h,
+        title: x,
         titleClickable: C,
         thumbnailClickable: C,
         userDescription: t,

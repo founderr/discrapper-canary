@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return _;
+        return g;
     }
 });
 var l = t(200651);
@@ -16,8 +16,8 @@ var i = t(120356),
     m = t(572004),
     f = t(49012),
     p = t(970184),
-    x = t(280501),
-    h = t(388032),
+    h = t(280501),
+    x = t(388032),
     v = t(647927);
 function C(e) {
     let { url: n, onSelect: t } = e;
@@ -25,35 +25,35 @@ function C(e) {
         ? (0, l.jsx)(o.Menu, {
               navId: 'component-button',
               onClose: s.Zy,
-              'aria-label': h.intl.string(h.t.tvTXy8),
+              'aria-label': x.intl.string(x.t.tvTXy8),
               onSelect: t,
               children: (0, l.jsx)(o.MenuGroup, {
                   children: (0, l.jsx)(o.MenuItem, {
                       id: 'copy',
-                      label: h.intl.string(h.t.uHhnfX),
+                      label: x.intl.string(x.t.uHhnfX),
                       action: () => (0, m.JG)(n)
                   })
               })
           })
         : null;
 }
-function _(e) {
+function g(e) {
     let n;
-    let { label: t, style: i, disabled: m, emoji: h, url: _, skuId: g } = e,
+    let { label: t, style: i, disabled: m, emoji: x, url: g, skuId: _ } = e,
         { executeStateUpdate: I, visualState: b, isDisabled: j } = (0, p.Ee)(e),
-        S = (0, d.s)(g),
-        N = null != g && i === u.ZJ.PREMIUM,
+        S = (0, d.s)(_),
+        N = null != _ && i === u.ZJ.PREMIUM,
         T = N && (null == S ? void 0 : S.disabled),
-        E = N ? (null == S ? void 0 : S.label) : t,
-        y = null != h,
-        Z = null != E && E.length > 0,
-        k = i === u.ZJ.LINK && null != _ && _.length > 0,
-        L = b === x.gH.LOADING || (N && null == S);
+        y = N ? (null == S ? void 0 : S.label) : t,
+        E = null != x,
+        Z = null != y && y.length > 0,
+        k = i === u.ZJ.LINK && null != g && g.length > 0,
+        L = b === h.gH.LOADING || (N && null == S);
     return (
         (n = k
             ? () => {
                   (0, f.q)({
-                      href: null != _ ? _ : '',
+                      href: null != g ? g : '',
                       shouldConfirm: !0
                   });
               }
@@ -77,14 +77,14 @@ function _(e) {
                 }
             })(i),
             size: o.Button.Sizes.SMALL,
-            disabled: m || b === x.gH.DISABLED || j || T,
+            disabled: m || b === h.gH.DISABLED || j || T,
             onClick: n,
             onContextMenu: (e) => {
                 k &&
                     (0, s.vq)(e, (e) =>
                         (0, l.jsx)(C, {
                             ...e,
-                            url: _
+                            url: g
                         })
                     );
             },
@@ -106,19 +106,19 @@ function _(e) {
                                   })
                               })
                             : null,
-                        y
+                        E
                             ? (0, l.jsx)(c.Z, {
                                   className: r()({ [v.textEmoji]: Z }),
-                                  src: h.src,
-                                  emojiId: h.id,
-                                  emojiName: h.name,
-                                  animated: h.animated
+                                  src: x.src,
+                                  emojiId: x.id,
+                                  emojiName: x.name,
+                                  animated: x.animated
                               })
                             : null,
                         Z
                             ? (0, l.jsx)('div', {
                                   className: v.label,
-                                  children: E
+                                  children: y
                               })
                             : null,
                         k

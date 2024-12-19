@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return x;
+        return h;
     }
 }),
     t(411104);
@@ -42,11 +42,11 @@ function p(e) {
         )
     });
 }
-function x(e) {
+function h(e) {
     let { children: n, participants: t, channel: o, onPopoutClosed: s } = e,
         m = (0, r.e7)([d.Z], () => d.Z.theme),
         f = 1 === t.length ? t[0] : null,
-        x = (0, i.useCallback)(
+        h = (0, i.useCallback)(
             (e) => {
                 if (null != f)
                     return (0, l.jsx)(u.Z, {
@@ -70,7 +70,7 @@ function x(e) {
     return (0, l.jsx)(a.ThemeContextProvider, {
         theme: m,
         children: (0, l.jsx)(a.Popout, {
-            renderPopout: x,
+            renderPopout: h,
             preload: () =>
                 null != f
                     ? (0, c.Z)(f, {

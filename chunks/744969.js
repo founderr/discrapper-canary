@@ -1,6 +1,6 @@
 t.d(n, {
     s: function () {
-        return g;
+        return _;
     }
 }),
     t(789020);
@@ -16,11 +16,11 @@ var l = t(200651),
     m = t(551428),
     f = t(74538),
     p = t(937615),
-    x = t(147496),
-    h = t(519896),
+    h = t(147496),
+    x = t(519896),
     v = t(981631),
     C = t(388032);
-let _ = (0, r.Kb)([d.Z, u.Z, m.Z], {
+let g = (0, r.Kb)([d.Z, u.Z, m.Z], {
     queryId: (e) => (null != e ? ['premium-button', e] : null),
     get: (e) => {
         var n;
@@ -64,8 +64,8 @@ let _ = (0, r.Kb)([d.Z, u.Z, m.Z], {
     },
     useStateHook: r.cj
 });
-function g(e) {
-    let { data: n } = _(e),
+function _(e) {
+    let { data: n } = g(e),
         t = null == n ? void 0 : n.parentSku,
         r = null == n ? void 0 : n.sku,
         a = null == n ? void 0 : n.storeListing,
@@ -74,7 +74,7 @@ function g(e) {
             if ((null == r ? void 0 : r.applicationId) == null || (null == r ? void 0 : r.id) == null || (null == r ? void 0 : r.flags) == null) return null;
             (0, o.openModal)((e) => {
                 let { onClose: n, transitionState: t } = e;
-                return (0, l.jsx)(h.SubscriptionDetailsModal, {
+                return (0, l.jsx)(x.SubscriptionDetailsModal, {
                     appId: r.applicationId,
                     subscriptionType: (0, c.KW)(r.flags) ? 'user' : 'guild',
                     onClose: n,
@@ -88,7 +88,7 @@ function g(e) {
             if (null == r) return null;
             (0, o.openModal)((e) => {
                 let { onClose: n, transitionState: t } = e;
-                return (0, l.jsx)(x.ItemDetailsModal, {
+                return (0, l.jsx)(h.ItemDetailsModal, {
                     appId: r.applicationId,
                     skuId: r.id,
                     onClose: n,

@@ -28,7 +28,7 @@ class f {
         var n;
         return new f(
             Object.fromEntries(
-                Object.entries(null !== (n = e.marketings) && void 0 !== n ? n : {}).map((e) => {
+                Object.entries(null !== (n = null == e ? void 0 : e.marketings) && void 0 !== n ? n : {}).map((e) => {
                     let [n, r] = e;
                     return [
                         n,

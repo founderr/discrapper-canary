@@ -6,10 +6,10 @@ t.d(n, {
         return p;
     },
     af: function () {
-        return x;
+        return h;
     },
     tx: function () {
-        return h;
+        return x;
     }
 }),
     t(47120);
@@ -60,7 +60,7 @@ function p(e, n, t) {
         }))
     ];
 }
-function x(e, n, t) {
+function h(e, n, t) {
     let l = r.Z.getChannel(n);
     return null == l
         ? []
@@ -75,7 +75,7 @@ function x(e, n, t) {
               label: e.name
           }));
 }
-function h(e, n) {
+function x(e, n) {
     let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
     if (null == e) return;
     let i = o.Z.getGuild(n);
