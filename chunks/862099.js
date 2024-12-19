@@ -51,14 +51,8 @@ var i,
     B = n(388032),
     H = n(832019);
 let V = a.memo(function (e) {
-    let { heading: t, location: n, locationIcon: i, details: r, detailsIcon: a, topic: o, onClickCloseIcon: c, onClickTopicText: u, children: h } = e,
-        m = (0, g.Q3)('GuildNoticeBody'),
-        p = (0, l.jsx)(d.Text, {
-            color: 'header-primary',
-            variant: 'text-md/semibold',
-            className: H.eventName,
-            children: o
-        });
+    let { heading: t, location: n, locationIcon: i, details: r, detailsIcon: a, topic: o, onClickCloseIcon: c, children: u } = e,
+        h = (0, g.Q3)('GuildNoticeBody');
     return (0, l.jsxs)('div', {
         className: H.channelNotice,
         children: [
@@ -68,7 +62,7 @@ let V = a.memo(function (e) {
                     (0, l.jsx)('div', { className: H.liveIndicator }),
                     (0, l.jsx)(d.Text, {
                         color: 'text-positive',
-                        variant: m ? 'text-xs/semibold' : 'text-xs/bold',
+                        variant: h ? 'text-xs/semibold' : 'text-xs/bold',
                         className: H.liveNowText,
                         children: t
                     }),
@@ -84,21 +78,18 @@ let V = a.memo(function (e) {
                         })
                 ]
             }),
-            null == u
-                ? p
-                : (0, l.jsx)(d.Button, {
-                      size: d.Button.Sizes.MIN,
-                      look: d.Button.Looks.LINK,
-                      color: d.Button.Colors.PRIMARY,
-                      onClick: u,
-                      children: p
-                  }),
+            (0, l.jsx)(d.Heading, {
+                color: 'header-primary',
+                variant: h ? 'heading-md/semibold' : 'text-md/semibold',
+                className: H.eventName,
+                children: o
+            }),
             (0, l.jsxs)('div', {
                 className: s()(H.textBlock, H.singleLine),
                 children: [
                     i,
                     (0, l.jsx)(d.Text, {
-                        color: m ? 'none' : 'header-secondary',
+                        color: h ? 'none' : 'header-secondary',
                         variant: 'text-xs/normal',
                         className: H.channelName,
                         children: n
@@ -109,13 +100,13 @@ let V = a.memo(function (e) {
                             children: [
                                 (0, l.jsx)(d.Text, {
                                     className: H.dotDivider,
-                                    color: m ? 'none' : 'header-secondary',
+                                    color: h ? 'none' : 'header-secondary',
                                     variant: 'text-xs/normal',
                                     children: '\u2022'
                                 }),
                                 a,
                                 (0, l.jsx)(d.Text, {
-                                    color: m ? 'none' : 'header-secondary',
+                                    color: h ? 'none' : 'header-secondary',
                                     variant: 'text-xs/normal',
                                     className: H.details,
                                     children: r
@@ -124,7 +115,7 @@ let V = a.memo(function (e) {
                         })
                 ]
             }),
-            h
+            u
         ]
     });
 });
@@ -417,7 +408,7 @@ function Q(e) {
                                     size: u.u.SIZE_16
                                 }),
                                 (0, l.jsx)(d.Text, {
-                                    color: 'header-secondary',
+                                    color: 'none',
                                     variant: 'text-xs/normal',
                                     className: H.userNames,
                                     children: (0, C.ER)(r, o, null == t ? void 0 : t.id, n.length)

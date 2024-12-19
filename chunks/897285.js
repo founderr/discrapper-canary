@@ -18,17 +18,20 @@ function u(e, n, r) {
 }
 let c = {},
     d = new Set(),
-    f = 1800000,
-    _ = async (e) => {
-        if (!(0 === o.ZP.getGuildScheduledEventsForGuild(e).length || d.has(e)))
+    f = new Set(),
+    _ = 1800000,
+    h = async (e) => {
+        if (!(0 === o.ZP.getGuildScheduledEventsForGuild(e).length || d.has(e) || f.has(e)))
             try {
-                await l.Z.getGuildEventsForCurrentUser(e), d.add(e);
-            } catch (e) {}
+                d.add(e), await l.Z.getGuildEventsForCurrentUser(e), f.add(e);
+            } catch (n) {
+                d.delete(e);
+            }
     };
-class h extends a.Z {
+class p extends a.Z {
     async getGuildEventUserCounts(e, n, r) {
-        let i = r.filter((r) => null == c[''.concat(e, '-').concat(n, '-').concat(r)] || Date.now() - c[''.concat(e, '-').concat(n, '-').concat(r)] > f);
-        if (!(Date.now() - c[''.concat(e, '-').concat(n)] < f) || 0 !== i.length) {
+        let i = r.filter((r) => null == c[''.concat(e, '-').concat(n, '-').concat(r)] || Date.now() - c[''.concat(e, '-').concat(n, '-').concat(r)] > _);
+        if (!(Date.now() - c[''.concat(e, '-').concat(n)] < _) || 0 !== i.length) {
             (c[''.concat(e, '-').concat(n)] = Date.now()), i.forEach((r) => (c[''.concat(e, '-').concat(n, '-').concat(r)] = Date.now()));
             try {
                 await l.Z.fetchGuildEventUserCounts(e, n, i);
@@ -39,26 +42,26 @@ class h extends a.Z {
         return l.Z.fetchUsersForGuildEvent(e, n, r);
     }
     getGuildEventsForCurrentUser(e) {
-        return _(e);
+        return h(e);
     }
     async handleConnectionOpen() {
-        d.clear(), (c = {}), s.Z.getLastSelectedGuildId();
+        d.clear(), f.clear(), (c = {}), s.Z.getLastSelectedGuildId();
     }
     handleGuildUnavailable(e) {
         let { guildId: n } = e;
-        d.delete(n), delete c[n];
+        d.delete(n), f.delete(n), delete c[n];
     }
     handleGuildDelete(e) {
         let { guild: n } = e,
             r = n.id;
-        d.delete(r), delete c[r];
+        d.delete(r), f.delete(r), delete c[r];
     }
     handleInviteResolveSuccess(e) {
         var n;
         let { invite: r } = e,
             i = r.guild_scheduled_event,
             a = null === (n = r.guild) || void 0 === n ? void 0 : n.id;
-        if (null != i && null != a) _(a);
+        if (null != i && null != a) h(a);
     }
     async handleChannelSelect(e) {
         let { guildId: n } = e;
@@ -81,4 +84,4 @@ class h extends a.Z {
             });
     }
 }
-n.Z = new h();
+n.Z = new p();

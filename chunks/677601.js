@@ -279,16 +279,13 @@ class eB extends l.PureComponent {
                     theme: m ? eR.BRd.DARK : void 0,
                     children: (e) =>
                         (0, i.jsx)('div', {
-                            className: ek.callContainer,
+                            className: a()(ek.callContainer, e),
                             ref: (e) => {
                                 (this._callContainerRef.current = e), (this.props.callContainerRef.current = e);
                             },
-                            children: (0, i.jsx)('div', {
-                                className: a()(ek.callContent, e),
-                                children: (0, i.jsx)(K.ZP, {
-                                    timeout: 2000,
-                                    children: (e) => this.renderContent(e)
-                                })
+                            children: (0, i.jsx)(K.ZP, {
+                                timeout: 2000,
+                                children: (e) => this.renderContent(e)
                             })
                         })
                 }),

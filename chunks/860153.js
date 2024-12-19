@@ -24,12 +24,11 @@ let g = a.memo(function (e) {
         : (0, i.jsx)(i.Fragment, {
               children: (0, i.jsx)('div', {
                   className: f.messageContents,
-                  onClick: (e) => e.stopPropagation(),
                   children: (0, i.jsxs)(c.Z.Provider, {
                       value: t.guild_id,
                       children: [
                           (0, i.jsx)(u.Z, { user: n.author }),
-                          (0, i.jsx)('div', {
+                          (0, i.jsx)(s.FocusBlock, {
                               children: (0, i.jsx)(h.Z, {
                                   message: n,
                                   channel: t
