@@ -31,57 +31,53 @@ n.Z = function (e) {
             planGroup: R,
             isPrepaidPaymentSource: !1
         }),
-        M = '',
-        j = '';
+        M = m.intl.format(m.t.Y2Rkqa, {
+            primaryText: S,
+            paidURL: p.EYA.PAID_TERMS
+        }),
+        j = m.intl.format(m.t.H2uH5e, {
+            primaryText: S,
+            paidURL: p.EYA.PAID_TERMS
+        }),
+        L = '',
+        k = '';
     if (T) {
-        if (null != v && (null == g ? void 0 : g.subscriptionPeriodEnd) != null) M = m.intl.format(m.t['2VPTa2'], { subtotalRate: h });
+        if (null != v && (null == g ? void 0 : g.subscriptionPeriodEnd) != null) L = m.intl.format(m.t['2VPTa2'], { subtotalRate: h });
         else
             switch (n) {
                 case f.rV.MONTH:
-                    M = 1 === t ? m.intl.format(m.t['+ywPmZ'], {}) : m.intl.format(m.t.oBwZfn, { intervalCount: t });
+                    L = 1 === t ? m.intl.format(m.t['+ywPmZ'], {}) : m.intl.format(m.t.oBwZfn, { intervalCount: t });
                     break;
                 case f.rV.YEAR:
-                    M = m.intl.format(m.t.y9gsX1, {});
+                    L = m.intl.format(m.t.y9gsX1, {});
                     break;
                 case void 0:
-                    (j = m.intl.format(m.t.Y2Rkqa, {
-                        primaryText: S,
-                        paidURL: p.EYA.PAID_TERMS
-                    })),
-                        (M = m.intl.format(m.t.UxGFHx, {}));
+                    (k = M), (L = m.intl.format(m.t.UxGFHx, {}));
                     break;
                 default:
                     throw Error('Unexpected interval: '.concat(n));
             }
     } else if (I === p.GZQ.ONE_TIME)
-        x === p.POd.COLLECTIBLES
-            ? ((j = m.intl.format(m.t.Y2Rkqa, {
-                  primaryText: S,
-                  paidURL: p.EYA.PAID_TERMS
-              })),
-              (M = A ? m.intl.format(m.t.ofqyUl, { paidURL: p.EYA.PAID_TERMS }) : m.intl.format(m.t.G3l0s7, { paidURL: p.EYA.PAID_TERMS })))
-            : ((j = m.intl.format(m.t.H2uH5e, {
-                  primaryText: S,
-                  paidURL: p.EYA.PAID_TERMS
-              })),
-              (M = m.intl.string(m.t['9/siSU'])));
+        switch (x) {
+            case p.POd.COLLECTIBLES:
+                (k = M), (L = A ? m.intl.format(m.t.ofqyUl, { paidURL: p.EYA.PAID_TERMS }) : m.intl.format(m.t.G3l0s7, { paidURL: p.EYA.PAID_TERMS }));
+                break;
+            case p.POd.GUILD_PRODUCT:
+                (k = M), (L = m.intl.format(m.t['GEAQ+v'], { paidURL: p.EYA.PAID_TERMS }));
+                break;
+            default:
+                (k = j), (L = m.intl.string(m.t['9/siSU']));
+        }
     else if (null == P || A)
-        switch (
-            (A &&
-                (j = m.intl.format(m.t.Y2Rkqa, {
-                    primaryText: S,
-                    paidURL: p.EYA.PAID_TERMS
-                })),
-            n)
-        ) {
+        switch ((A && (k = M), n)) {
             case f.rV.MONTH:
-                (M = A ? m.intl.string(m.t.IjNapq) : m.intl.string(m.t['/sGXPj'])), (M = A ? m.intl.string(m.t.IjNapq) : 1 === t ? m.intl.string(m.t['/sGXPj']) : m.intl.formatToPlainString(m.t.Fqjiho, { intervalCount: t }));
+                (L = A ? m.intl.string(m.t.IjNapq) : m.intl.string(m.t['/sGXPj'])), (L = A ? m.intl.string(m.t.IjNapq) : 1 === t ? m.intl.string(m.t['/sGXPj']) : m.intl.formatToPlainString(m.t.Fqjiho, { intervalCount: t }));
                 break;
             case f.rV.YEAR:
-                M = A ? m.intl.string(m.t.vAfbGx) : m.intl.string(m.t.IGzFc3);
+                L = A ? m.intl.string(m.t.vAfbGx) : m.intl.string(m.t.IGzFc3);
                 break;
             case void 0:
-                M = '';
+                L = '';
                 break;
             default:
                 throw Error('Unexpected interval: '.concat(n));
@@ -100,7 +96,7 @@ n.Z = function (e) {
             let e = Error('Missing base rate for legal fine print');
             (0, s.q2)(e, { tags: { planId: P.id } });
         }
-        M = (null == N ? void 0 : N.isPaused)
+        L = (null == N ? void 0 : N.isPaused)
             ? m.intl.format(m.t.B6oNwM, {
                   primaryText: r,
                   rate: e,
@@ -133,11 +129,11 @@ n.Z = function (e) {
     }
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            '' !== j &&
+            '' !== k &&
                 (0, r.jsxs)('div', {
-                    children: [(0, r.jsx)('div', { children: j }), (0, r.jsx)('div', { className: b.divider })]
+                    children: [(0, r.jsx)('div', { children: k }), (0, r.jsx)('div', { className: b.divider })]
                 }),
-            '' !== M && (0, r.jsx)('div', { children: M }),
+            '' !== L && (0, r.jsx)('div', { children: L }),
             y === p.HeQ.PAYSAFE_CARD &&
                 (0, r.jsx)('div', {
                     className: b.paymentSourceNoticeCopy,
