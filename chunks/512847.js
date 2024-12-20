@@ -22,8 +22,8 @@ var i = n(200651),
     I = n(292959),
     C = n(19780),
     v = n(944486),
-    N = n(606304),
-    S = n(979651),
+    S = n(606304),
+    N = n(979651),
     T = n(938475),
     b = n(823379),
     x = n(557177),
@@ -108,8 +108,8 @@ function P() {
 function y() {
     return (
         Z(
-            [N.Z],
-            () => N.Z.isCurrentUserSpeaking(),
+            [S.Z],
+            () => S.Z.isCurrentUserSpeaking(),
             (e, t) => {
                 if (e !== t) {
                     let e = E.Z.isSelfMute();
@@ -138,8 +138,8 @@ function O() {
 function R() {
     return (
         Z(
-            [S.Z],
-            () => S.Z.userHasBeenMovedVersion,
+            [N.Z],
+            () => N.Z.userHasBeenMovedVersion,
             (e, t) => {
                 if (e !== t) return 'user_moved';
             }
@@ -150,11 +150,11 @@ function R() {
 function j() {
     return (
         Z(
-            [v.Z, S.Z],
+            [v.Z, N.Z],
             () => {
                 let e = v.Z.getVoiceChannelId();
                 if (null == e) return h.xO.NONE;
-                let t = S.Z.getVoiceStateForChannel(e);
+                let t = N.Z.getVoiceStateForChannel(e);
                 return (0, h.gf)(t);
             },
             (e, t) => {
@@ -167,7 +167,7 @@ function j() {
 function D() {
     return (
         Z(
-            [v.Z, p.Z, g.default, S.Z, f.Z],
+            [v.Z, p.Z, g.default, N.Z, f.Z],
             () => {
                 let e, t;
                 let n = v.Z.getVoiceChannelId(),
@@ -178,7 +178,7 @@ function D() {
                     o = p.Z.getAllActiveStreams();
                 if (null != n) {
                     let i = f.Z.getChannel(n);
-                    null != i && ((e = i.type), (t = T.ZP.countVoiceStatesForChannel(i.id) - (S.Z.isInChannel(i.id) ? 1 : 0)), (r = p.Z.getAllApplicationStreamsForChannel(i.id).map((e) => e.ownerId)));
+                    null != i && ((e = i.type), (t = T.ZP.countVoiceStatesForChannel(i.id) - (N.Z.isInChannel(i.id) ? 1 : 0)), (r = p.Z.getAllApplicationStreamsForChannel(i.id).map((e) => e.ownerId)));
                 }
                 let s = null;
                 return (

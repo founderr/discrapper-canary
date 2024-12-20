@@ -24,8 +24,8 @@ function E(e) {
     var t, r;
     let { party: E, onUserContextMenu: I } = e,
         { priorityMembers: C, guildContext: v } = E,
-        N = C[0],
-        S = (function (e) {
+        S = C[0],
+        N = (function (e) {
             let { priorityMembers: t, partiedMembers: n } = e,
                 i = new Set(
                     t.map((e) => {
@@ -59,14 +59,14 @@ function E(e) {
                 I = c.length - E,
                 C = h[0],
                 v = null == C ? void 0 : C.activity,
-                N = null == C ? void 0 : C.startedPlayingTime,
-                S = { name: null !== (t = null == v ? void 0 : v.name) && void 0 !== t ? t : '' };
+                S = null == C ? void 0 : C.startedPlayingTime,
+                N = { name: null !== (t = null == v ? void 0 : v.name) && void 0 !== t ? t : '' };
             if ((0, a.Z)(v) && null != v)
                 return {
                     subtitle: (0, i.jsx)(u.ZP, {
-                        start: N,
+                        start: S,
                         location: u.ZP.Locations.ACTIVITY_FEED_NEW,
-                        messageProps: S
+                        messageProps: N
                     }),
                     icon: null
                 };
@@ -88,9 +88,9 @@ function E(e) {
                             };
                         return {
                             subtitle: (0, i.jsx)(u.ZP, {
-                                start: N,
+                                start: S,
                                 location: u.ZP.Locations.ACTIVITY_FEED_NEW,
-                                messageProps: S
+                                messageProps: N
                             }),
                             icon: null != e ? (0, i.jsx)(p.Z.Header.Icon, { src: null != e.getIconURL(g.Z) ? e.getIconURL(g.Z) : n(211827) }) : null
                         };
@@ -153,7 +153,7 @@ function E(e) {
                         subtitle: (0, i.jsx)(u.ZP, {
                             start: r,
                             location: u.ZP.Locations.ACTIVITY_FEED_NEW,
-                            messageProps: S
+                            messageProps: N
                         }),
                         icon: null != n && null != n.getIconURL(g.Z) ? (0, i.jsx)(p.Z.Header.Icon, { src: n.getIconURL(g.Z) }) : null
                     }
@@ -170,13 +170,13 @@ function E(e) {
             source: c.m1.FriendsActivityFeed
         });
     return (0, i.jsx)(p.Z.Header, {
-        priorityUser: N,
+        priorityUser: S,
         guildId: null == v ? void 0 : v.id,
-        title: S,
+        title: N,
         subtitle: T,
         icon: b,
         onSubtitleClick: x,
         onIconClick: x,
-        onContextMenu: (e) => I(e, N.user)
+        onContextMenu: (e) => I(e, S.user)
     });
 }

@@ -504,7 +504,7 @@ function eP(e, n) {
                         [ep.inlineContainer]: t2
                     }),
                     children: [
-                        (0, s.jsx)(es.Z, { bars: tQ }),
+                        t2 ? null : (0, s.jsx)(es.Z, { bars: tQ }),
                         (0, s.jsxs)('div', {
                             ref: te,
                             onScroll: tP,

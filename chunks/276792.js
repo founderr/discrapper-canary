@@ -21,14 +21,14 @@ var r = n(704215),
 function _(e) {
     var t, n;
     let { content: _, renderModalProps: E, analyticsLocations: I, analyticsLocation: C, isLightTheme: v } = e,
-        N = 'AnnouncementModalVariant1_'.concat(r.z[Number(_.dismissKey)]),
-        { onClose: S } = E,
+        S = 'AnnouncementModalVariant1_'.concat(r.z[Number(_.dismissKey)]),
+        { onClose: N } = E,
         T = null != _.button && '' !== _.button.copy ? _.button.copy : p.intl.string(p.t.YScQSE),
         b = (null === (t = _.button) || void 0 === t ? void 0 : t.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button',
         x =
             (null === (n = _.button) || void 0 === n ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE
                 ? () => {
-                      (0, s.uL)(m.Z5c.APPLICATION_STORE), S();
+                      (0, s.uL)(m.Z5c.APPLICATION_STORE), N();
                   }
                 : () =>
                       (0, o.Z)({
@@ -40,7 +40,7 @@ function _(e) {
                               objectType: m.Qqv.TIER_2
                           },
                           onClose: (e) => {
-                              e && S();
+                              e && N();
                           }
                       }),
         A =
@@ -96,7 +96,7 @@ function _(e) {
             imageSrc: v ? e.imageLinkLightTheme : e.imageLink,
             tagText: '' !== e.pill ? e.pill : void 0
         })),
-        changeLogId: N,
+        changeLogId: S,
         button: () => {
             let e = Date.now();
             return (0, i.jsxs)(a.ShinyButton, {
@@ -106,10 +106,10 @@ function _(e) {
                 size: a.Button.Sizes.SMALL,
                 onClick: () => {
                     c.default.track(m.rMx.CHANGE_LOG_CTA_CLICKED, {
-                        change_log_id: N,
+                        change_log_id: S,
                         cta_type: b,
                         seconds_open: Math.round((Date.now() - e) / 1000),
-                        target: N
+                        target: S
                     }),
                         x();
                 },

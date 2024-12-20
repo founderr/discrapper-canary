@@ -24,8 +24,8 @@ var i = n(200651),
     I = n(108427),
     C = n(911314),
     v = n(429899),
-    N = n(843445),
-    S = n(981631),
+    S = n(843445),
+    N = n(981631),
     T = n(388032),
     b = n(32304);
 function x(e, t, n) {
@@ -46,14 +46,14 @@ let A = (0, f.Un)({
     webpackId: 496691
 });
 function Z(e) {
-    return e < N.x ? N.b.SMALL : N.b.LARGE;
+    return e < S.x ? S.b.SMALL : S.b.LARGE;
 }
 o.ZP.initialize();
 class L extends r.PureComponent {
     componentDidMount() {
         (0, s.Y)(this.props.location),
             (this.stopListeningToHistory = (0, E.s1)().listen((e) => {
-                e.pathname.startsWith(S.Z5c.APPLICATION_STORE) && (0, s.Y)(e);
+                e.pathname.startsWith(N.Z5c.APPLICATION_STORE) && (0, s.Y)(e);
             })),
             this.props.isAuthenticated && (0, c.tZ)(),
             g.Z.disable(),
@@ -99,7 +99,7 @@ class L extends r.PureComponent {
                     { width: o } = this.props,
                     s = (0, l.parse)(a.search);
                 return (0, i.jsx)(d.Z, {
-                    page: S.ZY5.STORE_LISTING,
+                    page: N.ZY5.STORE_LISTING,
                     root: !0,
                     children: (0, i.jsx)(v.Z, {
                         skuId: t,
@@ -115,32 +115,32 @@ class L extends r.PureComponent {
                 (0, i.jsxs)(a.rs, {
                     children: [
                         (0, i.jsx)(a.AW, {
-                            path: S.Z5c.APPLICATION_STORE,
+                            path: N.Z5c.APPLICATION_STORE,
                             exact: !0,
                             render: () =>
                                 (0, i.jsx)(d.Z, {
-                                    page: S.ZY5.STORE_DIRECTORY_HOME,
+                                    page: N.ZY5.STORE_DIRECTORY_HOME,
                                     root: !0,
                                     children: (0, i.jsx)(C.Z, {})
                                 })
                         }),
                         (0, i.jsx)(a.AW, {
-                            path: S.Z5c.APPLICATION_STORE_LISTING_APPLICATION(':applicationId', ':slug'),
+                            path: N.Z5c.APPLICATION_STORE_LISTING_APPLICATION(':applicationId', ':slug'),
                             render: this.renderStoreListing
                         }),
                         (0, i.jsx)(a.AW, {
-                            path: S.Z5c.APPLICATION_STORE_LISTING_APPLICATION(':applicationId'),
+                            path: N.Z5c.APPLICATION_STORE_LISTING_APPLICATION(':applicationId'),
                             render: this.renderStoreListing
                         }),
                         (0, i.jsx)(a.AW, {
-                            path: S.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId', ':slug'),
+                            path: N.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId', ':slug'),
                             render: this.renderStoreListing
                         }),
                         (0, i.jsx)(a.AW, {
-                            path: S.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId'),
+                            path: N.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId'),
                             render: this.renderStoreListing
                         }),
-                        (0, i.jsx)(a.l_, { to: S.Z5c.APP })
+                        (0, i.jsx)(a.l_, { to: N.Z5c.APP })
                     ]
                 })
             );

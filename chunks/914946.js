@@ -6,7 +6,7 @@ n.d(t, {
         return k;
     },
     S5: function () {
-        return W;
+        return Y;
     },
     T5: function () {
         return G;
@@ -48,7 +48,7 @@ n.d(t, {
         return z;
     },
     zy: function () {
-        return Y;
+        return W;
     }
 }),
     n(47120),
@@ -75,8 +75,8 @@ var i,
     I = n(131951),
     C = n(375954),
     v = n(158776),
-    N = n(594174),
-    S = n(979651),
+    S = n(594174),
+    N = n(979651),
     T = n(70956),
     b = n(5192),
     x = n(226951),
@@ -128,8 +128,8 @@ function G(e, t) {
             ),
         Promise.all(n).then(() => {
             var n;
-            let r = (!e.isNSFW() || (null === (n = N.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? C.Z.getMessages(e.id).toArray().map(B) : [],
-                l = Object.values(S.Z.getVoiceStatesForChannel(e.id)).map((t) => H(i, e.id, t));
+            let r = (!e.isNSFW() || (null === (n = S.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? C.Z.getMessages(e.id).toArray().map(B) : [],
+                l = Object.values(N.Z.getVoiceStatesForChannel(e.id)).map((t) => H(i, e.id, t));
             return {
                 id: e.id,
                 name: e.name,
@@ -173,7 +173,7 @@ function B(e) {
 }
 function H(e, t, n) {
     let { mute: i, deaf: r, selfMute: l, selfDeaf: a, suppress: o, userId: s } = n,
-        c = N.default.getUser(s);
+        c = S.default.getUser(s);
     if (null == c) throw Error('Invalid user id: '.concat(s));
     return {
         nick: b.ZP.getName(e, t, c),
@@ -192,7 +192,7 @@ function H(e, t, n) {
 }
 function V(e, t, n) {
     let { isSpamRequest: i, applicationId: r, userIgnored: l } = null != n ? n : {},
-        a = N.default.getUser(t);
+        a = S.default.getUser(t);
     return {
         type: e,
         user: null != a ? (0, L.Z)(a) : null,
@@ -220,7 +220,7 @@ function z(e, t, n) {
     let i = E.Z.getGuild(e.getGuildId());
     return (null != i ? i.getApplicationId() : e.getApplicationId()) === t || n.indexOf(a.x.MESSAGES_READ) > -1;
 }
-function Y(e) {
+function W(e) {
     switch (e) {
         case y.hes.RTC_CONNECTED:
         case y.hes.RTC_CONNECTING:
@@ -230,7 +230,7 @@ function Y(e) {
             return e;
     }
 }
-function W(e) {
+function Y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { instance: n, secrets: i, party: r } = e,
         l = 0;

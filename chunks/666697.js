@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(571737),
     C = n(101400),
     v = n(946542),
-    N = n(213746),
-    S = n(979007),
+    S = n(213746),
+    N = n(979007),
     T = n(981631),
     b = n(388032),
     x = n(890030);
@@ -36,11 +36,11 @@ t.Z = function (e) {
         }, [t]),
         r.useEffect(() => () => L(!0), [L]);
     let R = null == y ? void 0 : y.storefront_available,
-        [j, D] = r.useState(null != Z ? Z : S.GlobalDiscoveryAppsSections.ABOUT),
+        [j, D] = r.useState(null != Z ? Z : N.GlobalDiscoveryAppsSections.ABOUT),
         M = r.useCallback(
             (e) => {
                 var t;
-                null === (t = P.current) || void 0 === t || t.scrollTo({ to: 0 }), D(S.GlobalDiscoveryAppsSections.ABOUT), n(e);
+                null === (t = P.current) || void 0 === t || t.scrollTo({ to: 0 }), D(N.GlobalDiscoveryAppsSections.ABOUT), n(e);
             },
             [n]
         );
@@ -65,11 +65,11 @@ t.Z = function (e) {
     let B = r.useMemo(
             () => [
                 {
-                    id: S.GlobalDiscoveryAppsSections.ABOUT,
+                    id: N.GlobalDiscoveryAppsSections.ABOUT,
                     label: b.intl.string(b.t.DkyHMD)
                 },
                 {
-                    id: S.GlobalDiscoveryAppsSections.STORE,
+                    id: N.GlobalDiscoveryAppsSections.STORE,
                     label: b.intl.string(b.t.jgEXGB)
                 }
             ],
@@ -78,10 +78,10 @@ t.Z = function (e) {
         H = r.useMemo(() => {
             if (null == y) return null;
             switch (j) {
-                case S.GlobalDiscoveryAppsSections.ABOUT:
+                case N.GlobalDiscoveryAppsSections.ABOUT:
                     return (0, i.jsx)(E.Z, { application: y });
-                case S.GlobalDiscoveryAppsSections.STORE:
-                    return (0, i.jsx)(N.Z, { application: y });
+                case N.GlobalDiscoveryAppsSections.STORE:
+                    return (0, i.jsx)(S.Z, { application: y });
             }
         }, [j, y]),
         V = r.useCallback(
@@ -91,7 +91,7 @@ t.Z = function (e) {
                     tab_name: e
                 }),
                     D(e),
-                    e === S.GlobalDiscoveryAppsSections.ABOUT ? (0, _.Gp)(T.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t)) : (0, _.Gp)(T.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, e));
+                    e === N.GlobalDiscoveryAppsSections.ABOUT ? (0, _.Gp)(T.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t)) : (0, _.Gp)(T.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, e));
             },
             [t]
         ),
@@ -103,7 +103,7 @@ t.Z = function (e) {
             }),
                 (0, _.pR)({ categoryId: e.id });
         }, []),
-        z = j === S.GlobalDiscoveryAppsSections.ABOUT;
+        z = j === N.GlobalDiscoveryAppsSections.ABOUT;
     return (0, i.jsx)(m.Z, {
         onScroll: A,
         ref: P,

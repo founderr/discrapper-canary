@@ -1,6 +1,6 @@
 n.d(t, {
     $: function () {
-        return g;
+        return f;
     }
 }),
     n(653041);
@@ -15,8 +15,8 @@ var r = n(200651),
     u = n(388032),
     m = n(962528),
     h = n(781385),
-    p = n(585616);
-function f(e) {
+    g = n(585616);
+function p(e) {
     let { endDate: t } = e,
         { days: n, hours: a, minutes: i, seconds: l } = (0, d.Z)(t),
         s = (function (e, t, n, r) {
@@ -35,7 +35,7 @@ function f(e) {
         })
     });
 }
-let g = a.memo(function (e) {
+let f = a.memo(function (e) {
     let { unpublishedAt: t, isVisible: n, displayOptions: a, isFullScreen: i } = e,
         d = (0, c.useSpring)({
             transform: 'translateX(-50%) '.concat(n ? 'translateY(-75%)' : 'translateY(0%)'),
@@ -65,7 +65,7 @@ let g = a.memo(function (e) {
                     alt: '',
                     'aria-hidden': !0
                 }),
-            (0, r.jsx)(f, { endDate: t }),
+            (0, r.jsx)(p, { endDate: t }),
             (0, r.jsx)('img', {
                 src: h.Z,
                 className: l()(m.sparkles, m.left),
@@ -73,7 +73,7 @@ let g = a.memo(function (e) {
                 'aria-hidden': !0
             }),
             (0, r.jsx)('img', {
-                src: p.Z,
+                src: g.Z,
                 className: l()(m.sparkles, m.right),
                 alt: '',
                 'aria-hidden': !0

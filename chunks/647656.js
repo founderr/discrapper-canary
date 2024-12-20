@@ -86,16 +86,16 @@ t.Z = {
             let _ = i.transport === m.He.POST_MESSAGE,
                 E = (0, u.S5)(h, _);
             E > 0 && (h.flags = E), delete h.instance, null === (t = h.party) || void 0 === t || delete t.privacy;
-            let { assets: I, party: C, secrets: v, timestamps: N, buttons: S, type: T } = h;
+            let { assets: I, party: C, secrets: v, timestamps: S, buttons: N, type: T } = h;
             if ((null == T && (h.type = p.IIU.PLAYING), null != v)) {
                 let e = r()
                     .values(v)
                     .filter((e) => !!e);
                 if (null != C && r().intersection(e, [C.id]).length > 0 && !g.includes(i.application.id)) throw new d.Z({ errorCode: p.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot match the party id');
                 if (r().uniq(e).length < e.length) throw new d.Z({ errorCode: p.lTL.INVALID_ACTIVITY_SECRET }, 'secrets must be unique');
-                if (null != S) throw new d.Z({ errorCode: p.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot currently be sent with buttons');
+                if (null != N) throw new d.Z({ errorCode: p.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot currently be sent with buttons');
             }
-            if ((null != S && ((h.metadata = { button_urls: S.map((e) => e.url) }), (h.buttons = S.map((e) => e.label))), null != N)) for (let e of Object.keys(N)) Date.now().toString().length - N[e].toString().length > 2 && (N[e] = Math.floor(N[e] * c.Z.Millis.SECOND));
+            if ((null != N && ((h.metadata = { button_urls: N.map((e) => e.url) }), (h.buttons = N.map((e) => e.label))), null != S)) for (let e of Object.keys(S)) Date.now().toString().length - S[e].toString().length > 2 && (S[e] = Math.floor(S[e] * c.Z.Millis.SECOND));
             if (null == I) n = Promise.resolve([]);
             else {
                 if (null == i.application || null == i.application.id) throw Error();

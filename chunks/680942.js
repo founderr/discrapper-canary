@@ -9,9 +9,9 @@ var r = n(200651),
     u = n(228624),
     m = n(67409),
     h = n(474936),
-    p = n(231338),
-    f = n(388032),
-    g = n(74483);
+    g = n(231338),
+    p = n(388032),
+    f = n(74483);
 let C = {
     dark: [
         {
@@ -75,27 +75,27 @@ let C = {
     ]
 };
 t.Z = (e) => {
-    let { product: t, selectedVariantIndex: n, returnRef: v, onSuccess: b, tooltipDelay: x, isGiftEasterEggEnabled: _, disableCustomColor: k = !1 } = e,
+    let { product: t, selectedVariantIndex: n, returnRef: b, onSuccess: v, tooltipDelay: x, isGiftEasterEggEnabled: _, disableCustomColor: k = !1 } = e,
         { analyticsLocations: I } = (0, s.ZP)(),
-        E = a.useRef(null),
-        S = (0, l.Z)(E),
-        j = k ? p.BR.DARK : p.BR.LIGHT,
+        S = a.useRef(null),
+        E = (0, l.Z)(S),
+        j = k ? g.BR.DARK : g.BR.LIGHT,
         T = (0, u.hv)('CollectiblesShopGiftButton');
     return (0, d.x6)(t)
         ? null
         : (0, r.jsx)(i.Tooltip, {
-              text: f.intl.string(f.t['JCFN//']),
+              text: p.intl.string(p.t['JCFN//']),
               delay: x,
               children: (e) =>
                   (0, r.jsx)(i.Button, {
                       ...e,
-                      buttonRef: E,
-                      className: g.giftButton,
+                      buttonRef: S,
+                      className: f.giftButton,
                       color: k ? i.ButtonColors.BRAND : i.ButtonColors.CUSTOM,
                       look: i.Button.Looks.FILLED,
                       size: i.ButtonSizes.ICON,
-                      innerClassName: g.giftButtonInner,
-                      'aria-label': f.intl.string(f.t.PEjaCw),
+                      innerClassName: f.giftButtonInner,
+                      'aria-label': p.intl.string(p.t.PEjaCw),
                       onClick: (e) => {
                           e.stopPropagation(),
                               (0, o.Z)({
@@ -106,19 +106,19 @@ t.Z = (e) => {
                                   isGift: !0,
                                   giftingOrigin: h.Wt.SHOP_PAGE,
                                   analyticsLocations: I,
-                                  returnRef: v,
+                                  returnRef: b,
                                   variantsReturnStyle: T,
                                   onClose:
-                                      null != b
+                                      null != v
                                           ? (e) => {
-                                                e && b();
+                                                e && v();
                                             }
                                           : void 0
                               });
                       },
                       children: _
                           ? (0, r.jsx)(c.e, {
-                                hovered: S,
+                                hovered: E,
                                 isContentDismissed: !0,
                                 themeOverride: j,
                                 boxColors: C

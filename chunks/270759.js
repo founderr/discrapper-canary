@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(199104),
     C = n(922611),
     v = n(108427),
-    N = n(210887),
-    S = n(974042),
+    S = n(210887),
+    N = n(974042),
     T = n(666286),
     b = n(596957),
     x = n(981631),
@@ -52,8 +52,8 @@ t.Z = function (e) {
         r.useEffect(() => {
             null != t && m.Z.setInitialSection(t);
         }, [t]);
-    let y = (0, c.e7)([N.Z], () => N.Z.theme),
-        { section: O, pendingCount: R } = (0, c.cj)([S.ZP], () => S.ZP.getState()),
+    let y = (0, c.e7)([S.Z], () => S.Z.theme),
+        { section: O, pendingCount: R } = (0, c.cj)([N.ZP], () => N.ZP.getState()),
         j = (0, c.e7)([f.Z], () => f.Z.getSuggestionCount()),
         D = (e) => {
             m.Z.setSection(e);

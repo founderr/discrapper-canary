@@ -24,8 +24,8 @@ var i = n(200651),
     I = n(634894),
     C = n(586902),
     v = n(570928),
-    N = n(100527),
-    S = n(906732),
+    S = n(100527),
+    N = n(906732),
     T = n(676742),
     b = n(1585),
     x = n(304761),
@@ -48,8 +48,8 @@ var i = n(200651),
     V = n(332473),
     F = n(240504),
     z = n(637906),
-    Y = n(39370),
-    W = n(19199),
+    W = n(39370),
+    Y = n(19199),
     K = n(111653),
     q = n(866483),
     X = n(14357),
@@ -78,8 +78,8 @@ var i = n(200651),
     eI = n(374023),
     eC = n(51144),
     ev = n(998502),
-    eN = n(870569),
-    eS = n(345243),
+    eS = n(870569),
+    eN = n(345243),
     eT = n(115530),
     eb = n(981631),
     ex = n(215023),
@@ -212,7 +212,7 @@ class ej extends r.PureComponent {
                     }),
                     (0, i.jsx)('div', {
                         className: eZ.panelSubtextContainer,
-                        children: (0, i.jsx)(eS.Z, { children: null != e ? e : r })
+                        children: (0, i.jsx)(eN.Z, { children: null != e ? e : r })
                     })
                 ]
             })
@@ -291,7 +291,7 @@ class ej extends r.PureComponent {
                                                           position: 'top',
                                                           align: 'center',
                                                           shouldShow: !0,
-                                                          renderPopout: () => (0, i.jsx)(Y.Z, {}),
+                                                          renderPopout: () => (0, i.jsx)(W.Z, {}),
                                                           children: this.renderSettingsGear
                                                       });
                                                   case s.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK:
@@ -396,7 +396,7 @@ class ej extends r.PureComponent {
                 (0, g.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 659580));
                     return () =>
-                        (0, i.jsx)(S.Gt, {
+                        (0, i.jsx)(N.Gt, {
                             value: t,
                             children: (0, i.jsx)(e, {
                                 onClose: g.Zy,
@@ -411,7 +411,7 @@ class ej extends r.PureComponent {
                 (0, g.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 659580));
                     return () =>
-                        (0, i.jsx)(S.Gt, {
+                        (0, i.jsx)(N.Gt, {
                             value: t,
                             children: (0, i.jsx)(e, {
                                 onClose: g.Zy,
@@ -519,18 +519,18 @@ function eD() {
         O = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || y || eI.s.isDisallowPopupsSet(),
         R = (0, V.b)(),
         j = (0, o.e7)([G.Z], () => null != G.Z.getAwaitingRemoteSessionInfo()),
-        M = (0, W.D)(),
+        M = (0, Y.D)(),
         w = (0, E.u)(),
         U = (0, K.t)(),
         B = eE.ZP.canUsePremiumGuildMemberProfile(t),
         H = (null == t ? void 0 : null === (e = t.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === ex.rL,
-        Y = 'account';
+        W = 'account';
     (0, I.j)({
-        location: Y + ' auto on',
+        location: W + ' auto on',
         autoTrackExposure: !0
     }),
         (0, I.j)({
-            location: Y + ' auto off',
+            location: W + ' auto off',
             autoTrackExposure: !1
         });
     let q = (0, o.e7)([J.Z], () => J.Z.hasHadOtherUserPlaySoundInSession()),
@@ -557,14 +557,14 @@ function eD() {
                 !e && !!a && !c && null != n && n
             );
         })(),
-        { analyticsLocations: Q } = (0, S.ZP)(N.Z.ACCOUNT),
+        { analyticsLocations: Q } = (0, N.ZP)(S.Z.ACCOUNT),
         $ = {
             avatar: [],
             settings: []
         };
     return (
         !O && (X && $.settings.push(s.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), M && (1 === w ? $.settings.push(s.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : $.settings.push(s.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), q && $.settings.push(s.z.SOUNDBOARD_VOLUME_EDUCATION), U && $.settings.push(s.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), B && $.settings.push(s.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), H && $.avatar.push(s.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)),
-        (0, i.jsx)(S.Gt, {
+        (0, i.jsx)(N.Gt, {
             value: Q,
             children: (0, i.jsx)(ej, {
                 currentUser: t,
@@ -614,7 +614,7 @@ function eM(e) {
                     className: eZ.hasBuildOverride,
                     'aria-hidden': !0
                 })),
-        (0, i.jsx)(eN.Z, {
+        (0, i.jsx)(eS.Z, {
             tooltipText: null != t ? eA.intl.formatToPlainString(eA.t.Gzh6ZG, { webBuildOverride: t.id }) : eA.intl.string(eA.t.cduTBA),
             onClick: r,
             onContextMenu: l,
@@ -632,7 +632,7 @@ function ew(e) {
         C = n || l ? m.MicrophoneDenyIcon : _,
         { mode: v } = (0, en.ZP)({ location: 'RTC Microphone Button' }),
         T = null != o ? o : (0, L.Z)(t, n, l, a, v === en.BK.GroupedButtonsRedMic),
-        { analyticsLocations: b } = (0, S.ZP)(N.Z.AUDIO_INPUT_BUTTON);
+        { analyticsLocations: b } = (0, N.ZP)(S.Z.AUDIO_INPUT_BUTTON);
     r.useEffect(() => () => E(), [f, E]);
     let x = r.useCallback(
         (e) => {
@@ -640,9 +640,9 @@ function ew(e) {
         },
         [g, b]
     );
-    return (0, i.jsx)(S.Gt, {
+    return (0, i.jsx)(N.Gt, {
         value: b,
-        children: (0, i.jsx)(eN.Z, {
+        children: (0, i.jsx)(eS.Z, {
             tooltipText: T,
             tooltipColor: s,
             tooltipForceOpen: c,
@@ -677,7 +677,7 @@ function ek(e) {
             events: { onMouseEnter: p, onMouseLeave: g }
         } = (0, d.l)(c ? 'undeafen' : 'deafen'),
         f = n ? m.HeadphonesDenyIcon : u,
-        { analyticsLocations: _ } = (0, S.ZP)(N.Z.AUDIO_OUTPUT_BUTTON);
+        { analyticsLocations: _ } = (0, N.ZP)(S.Z.AUDIO_OUTPUT_BUTTON);
     r.useEffect(() => () => h(), [c, h]);
     let E = r.useCallback(
         (e) => {
@@ -685,9 +685,9 @@ function ek(e) {
         },
         [s, _]
     );
-    return (0, i.jsx)(S.Gt, {
+    return (0, i.jsx)(N.Gt, {
         value: _,
-        children: (0, i.jsx)(eN.Z, {
+        children: (0, i.jsx)(eS.Z, {
             tooltipText: (0, Z.Z)(t, n, l),
             onMouseEnter: p,
             onMouseLeave: g,

@@ -17,8 +17,8 @@ var r = n(481060),
 t.Z = (0, g.Z)(
     (e) => {
         var t;
-        let { clientId: n, authorizations: d, scopes: u, parsedPermissions: h, responseType: g, redirectUri: E, codeChallenge: I, codeChallengeMethod: C, state: v, guildId: N, channelId: S, prompt: T, disableGuildSelect: b, disclosures: x, integrationType: A, pid: Z } = e,
-            L = 'OAuth2Authorize_'.concat(n, '_').concat(N, '_').concat(S),
+        let { clientId: n, authorizations: d, scopes: u, parsedPermissions: h, responseType: g, redirectUri: E, codeChallenge: I, codeChallengeMethod: C, state: v, guildId: S, channelId: N, prompt: T, disableGuildSelect: b, disclosures: x, integrationType: A, pid: Z } = e,
+            L = 'OAuth2Authorize_'.concat(n, '_').concat(S, '_').concat(N),
             P = null != A ? (null == d ? void 0 : d.get(A)) : void 0,
             y = null !== (t = null == P ? void 0 : P.application) && void 0 !== t ? t : o.Z.getApplication(n);
         return new Promise((e, t) => {
@@ -44,8 +44,8 @@ t.Z = (0, g.Z)(
                             codeChallengeMethod: C,
                             state: v,
                             permissions: h.toString(),
-                            guildId: N,
-                            channelId: S,
+                            guildId: S,
+                            channelId: N,
                             prompt: T,
                             disableGuildSelect: 'boolean' == typeof b ? b : 'true' === b,
                             integrationType: A
@@ -68,8 +68,8 @@ t.Z = (0, g.Z)(
                         codeChallengeMethod: C,
                         state: v,
                         permissions: h,
-                        guildId: N,
-                        channelId: S,
+                        guildId: S,
+                        channelId: N,
                         prompt: T,
                         disableGuildSelect: 'boolean' == typeof b ? b : 'true' === b,
                         integrationType: A
@@ -84,7 +84,7 @@ t.Z = (0, g.Z)(
                     null !=
                         (0, a.ZP)({
                             application: y,
-                            channelId: S
+                            channelId: N
                         })
                     ? r.POPOUT_MODAL_CONTEXT
                     : r.DEFAULT_MODAL_CONTEXT

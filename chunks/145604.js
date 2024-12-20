@@ -24,8 +24,8 @@ var i = n(200651),
     I = n(38618),
     C = n(501640),
     v = n(924301),
-    N = n(734307),
-    S = n(355298),
+    S = n(734307),
+    N = n(355298),
     T = n(371651),
     b = n(829907),
     x = n(427679),
@@ -48,22 +48,22 @@ var i = n(200651),
     V = n(237997),
     F = n(626135),
     z = n(630388),
-    Y = n(823379),
-    W = n(981631);
+    W = n(823379),
+    Y = n(981631);
 class K extends r.PureComponent {
     componentDidMount() {
         let { selectedChannelId: e, connected: t, isNSFWChannel: n, isTextInVoice: i } = this.props;
-        t && null != e && ((0, d.yw)(W.rMx.CHANNEL_OPENED, { ...(0, d.$H)(e) }), (0, h.a)(W.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: e }), i && (0, d.yw)(W.rMx.TEXT_IN_VOICE_OPENED, { channel_is_nsfw: n }));
+        t && null != e && ((0, d.yw)(Y.rMx.CHANNEL_OPENED, { ...(0, d.$H)(e) }), (0, h.a)(Y.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: e }), i && (0, d.yw)(Y.rMx.TEXT_IN_VOICE_OPENED, { channel_is_nsfw: n }));
     }
     componentDidUpdate(e) {
         var t, n, i;
-        let { voiceChannelId: r, voiceChannelGuildId: l, voiceChannelType: c, voiceChannelBitrate: I, videoEnabled: C, isScreenSharing: S, runningGame: P, runningGamePid: O, selectedChannelId: D, selectedGuildId: U, connected: G, homeLink: B, friendsTabSection: K, isNSFWChannel: q, isMemberPending: X, hasPreviewEnabled: Q, postableChannelCount: J, isTextInVoice: $, numMessageRequests: ee } = this.props;
+        let { voiceChannelId: r, voiceChannelGuildId: l, voiceChannelType: c, voiceChannelBitrate: I, videoEnabled: C, isScreenSharing: N, runningGame: P, runningGamePid: O, selectedChannelId: D, selectedGuildId: U, connected: G, homeLink: B, friendsTabSection: K, isNSFWChannel: q, isMemberPending: X, hasPreviewEnabled: Q, postableChannelCount: J, isTextInVoice: $, numMessageRequests: ee } = this.props;
         if (e.voiceChannelId !== r && null != e.voiceChannelId) {
             let t = E.ZP.getCurrentGameForAnalytics(),
                 n = null != t ? t.name : '',
                 i = x.Z.getStageInstanceByChannel(e.voiceChannelId),
                 r = v.ZP.getActiveEventByChannel(e.voiceChannelId);
-            F.default.track(W.rMx.LEAVE_VOICE_CHANNEL, {
+            F.default.track(Y.rMx.LEAVE_VOICE_CHANNEL, {
                 channel_id: e.voiceChannelId,
                 channel_type: e.voiceChannelType,
                 channel_bitrate: e.voiceChannelBitrate,
@@ -86,11 +86,11 @@ class K extends r.PureComponent {
                 t = null != e ? e.name : '',
                 n = x.Z.getStageInstanceByChannel(r),
                 i = v.ZP.getActiveEventByChannel(r);
-            (0, d.yw)(W.rMx.CHANNEL_OPENED, { ...(0, d.$H)(r) }), (0, h.a)(W.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: r });
+            (0, d.yw)(Y.rMx.CHANNEL_OPENED, { ...(0, d.$H)(r) }), (0, h.a)(Y.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: r });
             let a = null,
                 s = V.Z.getFocusedPID();
-            null != s && T.Z.getOverlayMethod(s) !== o.gl.Disabled && (V.Z.isInstanceLocked() ? (a = W.ADE.OVERLAY_LOCKED_ACTIVATED) : !V.Z.isInstanceLocked() && (a = V.Z.isPinned(W.Odu.TEXT) ? W.ADE.OVERLAY_UNLOCKED_PINNED : W.ADE.OVERLAY_UNLOCKED)),
-                F.default.track(W.rMx.JOIN_VOICE_CHANNEL, {
+            null != s && T.Z.getOverlayMethod(s) !== o.gl.Disabled && (V.Z.isInstanceLocked() ? (a = Y.ADE.OVERLAY_LOCKED_ACTIVATED) : !V.Z.isInstanceLocked() && (a = V.Z.isPinned(Y.Odu.TEXT) ? Y.ADE.OVERLAY_UNLOCKED_PINNED : Y.ADE.OVERLAY_UNLOCKED)),
+                F.default.track(Y.rMx.JOIN_VOICE_CHANNEL, {
                     location: a,
                     channel_id: r,
                     channel_type: c,
@@ -119,13 +119,13 @@ class K extends r.PureComponent {
                     var t;
                     let n = await (0, b.hj)(P.pid),
                         { gameName: i, gameId: a, exe: m, distributor: p } = (0, _.G8)(P);
-                    F.default.track(W.rMx.LAUNCH_GAME, {
+                    F.default.track(Y.rMx.LAUNCH_GAME, {
                         game: i,
                         game_id: a,
                         verified: null != e && (0, _.vp)(m, null == e ? void 0 : e.executables),
                         elevated: P.elevated,
                         is_launcher: null !== (t = null == P ? void 0 : P.isLauncher) && void 0 !== t && t,
-                        game_platform: W.M7m.DESKTOP,
+                        game_platform: Y.M7m.DESKTOP,
                         detection_method: u,
                         distributor: p,
                         is_overlay_enabled: H.Z.enabled,
@@ -153,12 +153,12 @@ class K extends r.PureComponent {
                     .catch((e) => new f.Z('AutoAnalytics').error('Cannot identify game', e));
             }
         }
-        if ((e.videoEnabled !== C || e.isScreenSharing !== S) && null != r) {
+        if ((e.videoEnabled !== C || e.isScreenSharing !== N) && null != r) {
             let e = 'none',
-                t = [S ? 'screen' : null, C ? 'camera' : null].filter(Y.lm),
+                t = [N ? 'screen' : null, C ? 'camera' : null].filter(W.lm),
                 n = null;
-            S ? ((e = 'screen'), (n = (0, p.t)())) : C && (e = 'camera'),
-                F.default.track(W.rMx.VIDEO_INPUT_TOGGLED, {
+            N ? ((e = 'screen'), (n = (0, p.t)())) : C && (e = 'camera'),
+                F.default.track(Y.rMx.VIDEO_INPUT_TOGGLED, {
                     video_input_type: e,
                     video_toggle_source: __OVERLAY__ ? 'overlay' : 'app',
                     enabled_inputs: t,
@@ -179,10 +179,10 @@ class K extends r.PureComponent {
                 postable_channels: J,
                 premium_progress_bar_enabled: null !== (n = null === (t = y.Z.getGuild(M.Z.getGuildId())) || void 0 === t ? void 0 : t.premiumProgressBarEnabled) && void 0 !== n && n,
                 viewing_all_channels: !k.ZP.isOptInEnabled(U),
-                num_recent_channels: N.Z.recentsChannelCount(U)
+                num_recent_channels: S.Z.recentsChannelCount(U)
             };
-            (0, d.yw)(W.rMx.GUILD_VIEWED, e), (0, h.a)(W.rMx.GUILD_VIEWED_CLICKSTREAM, { guildId: U });
-        } else G && null == U && B === W.Z5c.FRIENDS && (!e.connected || K !== e.friendsTabSection || B !== e.homeLink) ? (0, m.Z)({ tab_opened: K }) : G && null == U && B === W.Z5c.MESSAGE_REQUESTS && (!e.connected || B !== e.homeLink) && !this.isMessageRequestsInitialized && ((this.isMessageRequestsInitialized = !0), F.default.track(W.rMx.MESSAGE_REQUESTS_INITIALIZED, { num_message_requests: ee }));
+            (0, d.yw)(Y.rMx.GUILD_VIEWED, e), (0, h.a)(Y.rMx.GUILD_VIEWED_CLICKSTREAM, { guildId: U });
+        } else G && null == U && B === Y.Z5c.FRIENDS && (!e.connected || K !== e.friendsTabSection || B !== e.homeLink) ? (0, m.Z)({ tab_opened: K }) : G && null == U && B === Y.Z5c.MESSAGE_REQUESTS && (!e.connected || B !== e.homeLink) && !this.isMessageRequestsInitialized && ((this.isMessageRequestsInitialized = !0), F.default.track(Y.rMx.MESSAGE_REQUESTS_INITIALIZED, { num_message_requests: ee }));
         if (G && null != D && (!e.connected || D !== e.selectedChannelId || U !== e.selectedGuildId)) {
             let t = e.selectedChannelId,
                 n = Z.Z.getChannel(t),
@@ -194,9 +194,9 @@ class K extends r.PureComponent {
                         .reverse()
                         .find((e) => {
                             var t;
-                            return (0, z.yE)(e.flags, W.iLy.IS_CROSSPOST) && (null === (t = e.messageReference) || void 0 === t ? void 0 : t.guild_id) === '667560445975986187';
+                            return (0, z.yE)(e.flags, Y.iLy.IS_CROSSPOST) && (null === (t = e.messageReference) || void 0 === t ? void 0 : t.guild_id) === '667560445975986187';
                         });
-                F.default.track(W.rMx.ACK_COMMUNITY_MESSAGES, {
+                F.default.track(Y.rMx.ACK_COMMUNITY_MESSAGES, {
                     last_message_id: null == l ? void 0 : l.id,
                     last_message_reference_message_id: null == l ? void 0 : null === (i = l.messageReference) || void 0 === i ? void 0 : i.message_id,
                     messages_loaded: e.hasFetched,
@@ -205,12 +205,12 @@ class K extends r.PureComponent {
                 });
             }
             let l = (0, u.K)(Z.Z.getChannel(D), !0);
-            (0, d.yw)(W.rMx.CHANNEL_OPENED, {
+            (0, d.yw)(Y.rMx.CHANNEL_OPENED, {
                 ...l,
                 ...(0, d.$H)(D)
             }),
-                (0, h.a)(W.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: D }),
-                $ && (0, d.yw)(W.rMx.TEXT_IN_VOICE_OPENED, { channel_is_nsfw: q });
+                (0, h.a)(Y.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: D }),
+                $ && (0, d.yw)(Y.rMx.TEXT_IN_VOICE_OPENED, { channel_is_nsfw: q });
         }
     }
     getGameMetadata() {
@@ -260,10 +260,10 @@ function q() {
         p = (0, l.e7)([G.Z], () => G.Z.getHomeLink(), []),
         f = (0, l.e7)([I.Z], () => I.Z.isConnected(), []),
         [_, v] = (0, l.Wu)([O.Z], () => [O.Z.isVideoEnabled(), O.Z.isScreenSharing()], []),
-        N = (0, l.e7)([w.Z], () => w.Z.getPrimaryActivity(), []),
+        S = (0, l.e7)([w.Z], () => w.Z.getPrimaryActivity(), []),
         T = (0, l.e7)([E.ZP], () => E.ZP.getCurrentGameForAnalytics(), []),
         b = (0, C.Z)(s),
-        x = (0, l.e7)([S.Z], () => S.Z.getMessageRequestsCount(), []),
+        x = (0, l.e7)([N.Z], () => N.Z.getMessageRequestsCount(), []),
         A = {
             selectedChannelId: t,
             isNSFWChannel: a,
@@ -279,11 +279,11 @@ function q() {
             voiceChannelBitrate: null == o ? void 0 : o.bitrate,
             runningGame: T,
             runningGamePid: null != T ? T.pid : null,
-            gamePlatform: (0, c.Z)(N),
-            gameName: null != N ? N.name : null,
-            gameId: null != N ? N.application_id : null,
+            gamePlatform: (0, c.Z)(S),
+            gameName: null != S ? S.name : null,
+            gameId: null != S ? S.application_id : null,
             gameExeName: null != T ? T.exeName : null,
-            hasPreviewEnabled: null == d ? void 0 : d.features.has(W.oNc.PREVIEW_ENABLED),
+            hasPreviewEnabled: null == d ? void 0 : d.features.has(Y.oNc.PREVIEW_ENABLED),
             isMemberPending: h,
             postableChannelCount: b,
             isTextInVoice: r,

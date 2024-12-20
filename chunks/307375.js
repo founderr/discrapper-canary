@@ -53,7 +53,7 @@ function h(e) {
                     id: c.A.APPLY,
                     title: u.intl.string(u.t.LrFEYW),
                     body: u.intl.string(u.t.kJj2oK),
-                    icon: a.LockUnlockedIcon,
+                    icon: a.EnvelopeIcon,
                     enabled: !C,
                     ineligibleText: u.intl.string(u.t.dUXCFh)
                 },

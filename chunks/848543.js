@@ -23,8 +23,8 @@ var i = n(200651),
     I = n(242291),
     C = n(792165),
     v = n(603074),
-    N = n(981631),
-    S = n(921944),
+    S = n(981631),
+    N = n(921944),
     T = n(388032),
     b = n(382290);
 function x(e) {
@@ -54,7 +54,7 @@ function x(e) {
             play: V,
             events: { onMouseEnter: F, onMouseLeave: z }
         } = (0, c.j)(),
-        Y = (e) =>
+        W = (e) =>
             (0, i.jsx)(d.Popout, {
                 animation: d.Popout.Animation.FADE,
                 shouldShow: j,
@@ -89,7 +89,7 @@ function x(e) {
                             disabled: R,
                             onClick: () => {
                                 var t, n;
-                                null != k && k !== s.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && U(S.L.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!j), V();
+                                null != k && k !== s.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && U(N.L.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!j), V();
                             },
                             onMouseEnter: (t) => {
                                 var n, i;
@@ -111,13 +111,13 @@ function x(e) {
                         })
                     })
             }),
-        W = r.useCallback(() => {
+        Y = r.useCallback(() => {
             !R && D(!j);
         }, [R, j]);
     return (
         (0, E.yp)({
-            event: N.CkL.TOGGLE_SOUNDBOARD,
-            handler: W
+            event: S.CkL.TOGGLE_SOUNDBOARD,
+            handler: Y
         }),
         (0, i.jsx)(m.Gt, {
             value: G,
@@ -128,7 +128,7 @@ function x(e) {
                     if (O) return T.intl.string(T.t.X1lQlp);
                     return T.intl.string(T.t['6EJvHh']);
                 })(),
-                children: (e) => Y(e)
+                children: (e) => W(e)
             })
         })
     );

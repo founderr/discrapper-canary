@@ -220,31 +220,29 @@ function eX(e) {
             }),
             predicate: () => U
         },
-        e0 = er
-            ? {
-                  section: eF.pNK.DISCOVERY,
-                  impressionName: l.ImpressionNames.GUILD_SETTINGS_DISCOVERY,
-                  label: eV.intl.string(eV.t.oGaVGx),
-                  element: eU.O,
-                  notice: {
-                      stores: [eo.Z],
-                      element: eG.w
-                  },
-                  predicate: () => d,
-                  ariaLabel: eV.intl.string(eV.t.oGaVGx)
-              }
-            : {
-                  section: eF.pNK.DISCOVERY,
-                  impressionName: l.ImpressionNames.GUILD_SETTINGS_DISCOVERY,
-                  label: eV.intl.string(eV.t.oGaVGx),
-                  element: eT.Z,
-                  notice: {
-                      stores: [ed.Z],
-                      element: eT.s
-                  },
-                  predicate: () => d && r.hasFeature(eF.oNc.COMMUNITY),
-                  ariaLabel: r.hasFeature(eF.oNc.DISCOVERABLE) ? eV.intl.string(eV.t.oGaVGx) : eV.intl.string(eV.t.XU0S6u)
-              };
+        e0 = {
+            section: eF.pNK.ACCESS,
+            label: eV.intl.string(eV.t['+hFV+P']),
+            element: eU.O,
+            notice: {
+                stores: [eo.Z],
+                element: eG.w
+            },
+            predicate: () => er && d,
+            ariaLabel: eV.intl.string(eV.t['+hFV+P'])
+        },
+        e1 = {
+            section: eF.pNK.DISCOVERY,
+            impressionName: l.ImpressionNames.GUILD_SETTINGS_DISCOVERY,
+            label: eV.intl.string(eV.t.oGaVGx),
+            element: eT.Z,
+            notice: {
+                stores: [ed.Z],
+                element: eT.s
+            },
+            predicate: () => !er && d && r.hasFeature(eF.oNc.COMMUNITY),
+            ariaLabel: r.hasFeature(eF.oNc.DISCOVERABLE) ? eV.intl.string(eV.t.oGaVGx) : eV.intl.string(eV.t.XU0S6u)
+        };
     if (el) {
         let e = [
                 { section: u.ID.DIVIDER },
@@ -340,7 +338,8 @@ function eX(e) {
                               element: eE.Z,
                               type: u.bT.CUSTOM,
                               predicate: () => d
-                          }
+                          },
+                          e0
                       ]
                     : [],
             n = r.hasFeature(eF.oNc.COMMUNITY),
@@ -446,7 +445,7 @@ function eX(e) {
                               newIndicatorDismissibleContentTypes: W ? [a.z.GUILD_INSIGHTS_ACCESS_RATE_NEW] : null,
                               predicate: () => N
                           },
-                          e0,
+                          e1,
                           {
                               section: eF.pNK.DISCOVERY_LANDING_PAGE,
                               impressionName: l.ImpressionNames.GUILD_SETTINGS_DISCOVERY_LANDING_PAGE,
@@ -548,7 +547,7 @@ function eX(e) {
                               },
                               predicate: () => ei
                           },
-                          ei ? e0 : void 0,
+                          e1,
                           {
                               section: eF.pNK.WIDGET,
                               impressionName: l.ImpressionNames.GUILD_SETTINGS_WIDGET,
@@ -579,7 +578,7 @@ function eX(e) {
                               },
                               predicate: () => d
                           }
-                      ].filter((e) => void 0 !== e)
+                      ]
                     : [];
         return [
             {
@@ -702,6 +701,7 @@ function eX(e) {
             },
             predicate: () => s
         },
+        e0,
         {
             section: u.ID.DIVIDER,
             predicate: () => d || b
@@ -854,7 +854,7 @@ function eX(e) {
             newIndicatorDismissibleContentTypes: W ? [a.z.GUILD_INSIGHTS_ACCESS_RATE_NEW] : null,
             predicate: () => A && r.hasFeature(eF.oNc.COMMUNITY)
         },
-        e0,
+        e1,
         {
             section: eF.pNK.DISCOVERY_LANDING_PAGE,
             impressionName: l.ImpressionNames.GUILD_SETTINGS_DISCOVERY_LANDING_PAGE,

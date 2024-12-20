@@ -26,8 +26,8 @@ var i = n(200651),
     I = n(812236),
     C = n(82295),
     v = n(740492),
-    N = n(973616),
-    S = n(592125),
+    S = n(973616),
+    N = n(592125),
     T = n(626135),
     b = n(823379),
     x = n(404295),
@@ -43,14 +43,14 @@ async function R(e, t, n) {
     if (null == i)
         try {
             var r, l, a;
-            i = null !== (a = null === (r = Z.Z.getApplication(e.id)) || void 0 === r ? void 0 : r.bot) && void 0 !== a ? a : null === (l = N.ZP.createFromServer(await (0, A.UM)(e.id))) || void 0 === l ? void 0 : l.bot;
+            i = null !== (a = null === (r = Z.Z.getApplication(e.id)) || void 0 === r ? void 0 : r.bot) && void 0 !== a ? a : null === (l = S.ZP.createFromServer(await (0, A.UM)(e.id))) || void 0 === l ? void 0 : l.bot;
         } catch (e) {
             t(void 0);
             return;
         }
     if (null != i) {
         let r,
-            l = null == S.Z.getDMFromUserId(i.id);
+            l = null == N.Z.getDMFromUserId(i.id);
         try {
             r = await c.Z.openPrivateChannel([i.id], !1, !1, p.Z.APP_DMS_QUICK_LAUNCHER);
         } catch (e) {
@@ -88,7 +88,7 @@ async function R(e, t, n) {
 }
 function j(e) {
     let { application: t, loadingAppId: n, setLoadingAppId: r, botUserId: l, analyticsLocations: c } = e,
-        d = (0, o.e7)([S.Z], () => S.Z.getDMFromUserId(l)),
+        d = (0, o.e7)([N.Z], () => N.Z.getDMFromUserId(l)),
         h = (0, o.e7)([u.ZP], () => u.ZP.getCurrentEmbeddedActivity()),
         p = null != h && h.applicationId === t.id && (0, m.p)(h.location) === d,
         g = n === t.id,

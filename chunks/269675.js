@@ -22,8 +22,8 @@ var i = n(200651),
     I = n(772021),
     C = n(396828),
     v = n(293423),
-    N = n(20967),
-    S = n(504762),
+    S = n(20967),
+    N = n(504762),
     T = n(807152),
     b = n(176505),
     x = n(388032),
@@ -53,8 +53,8 @@ function Z(e) {
         }, [t, M]),
         l.tq && M)
     ) {
-        let e = null == n ? N.J.NOT_GUILD_MEMBER : N.J.GUILD_NOT_ELIGIBLE;
-        return (0, i.jsx)(N.z, { errorType: e });
+        let e = null == n ? S.J.NOT_GUILD_MEMBER : S.J.GUILD_NOT_ELIGIBLE;
+        return (0, i.jsx)(S.z, { errorType: e });
     }
     return (0, i.jsxs)('div', {
         className: A.container,
@@ -81,7 +81,7 @@ function Z(e) {
                               children: D ? (0, i.jsx)(o.Spinner, {}) : (0, i.jsx)(v.Z, { guild: n })
                           })
                       })
-                    : (0, i.jsx)(S.Z, {})
+                    : (0, i.jsx)(N.Z, {})
             })
         ]
     });

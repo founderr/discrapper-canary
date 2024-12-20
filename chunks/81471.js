@@ -17,31 +17,31 @@ var i = n(200651),
     I = n(217702),
     C = n(388032),
     v = n(560006),
-    N = n(665162);
-let S = r.memo(function (e) {
+    S = n(665162);
+let N = r.memo(function (e) {
     let { channel: t } = e,
-        { loaded: n, error: l, message: S } = (0, _.a)(t),
+        { loaded: n, error: l, message: N } = (0, _.a)(t),
         T = (0, d.p)(),
         { isBlocked: b, isIgnored: x } = (0, o.cj)(
             [f.Z],
             () => ({
-                isBlocked: null != S && f.Z.isBlockedForMessage(S),
-                isIgnored: null != S && f.Z.isIgnoredForMessage(S)
+                isBlocked: null != N && f.Z.isBlockedForMessage(N),
+                isIgnored: null != N && f.Z.isIgnoredForMessage(N)
             }),
-            [S]
+            [N]
         ),
         A = (0, o.e7)([g.Z], () => g.Z.can(E.Plq.MANAGE_MESSAGES, t)),
         Z = p.cC.useSetting(),
         { content: L } = r.useMemo(
             () =>
-                (null == S ? void 0 : S.content) != null && '' !== S.content
-                    ? (0, h.ZP)(S, {
+                (null == N ? void 0 : N.content) != null && '' !== N.content
+                    ? (0, h.ZP)(N, {
                           formatInline: !0,
                           noStyleAndInteraction: !0,
                           shouldFilterKeywords: T
                       })
                     : { content: null },
-            [S, T]
+            [N, T]
         ),
         P = null;
     if (l)
@@ -52,22 +52,22 @@ let S = r.memo(function (e) {
             children: C.intl.string(C.t.BZHld3)
         });
     else if (n) {
-        if (null != S && b)
+        if (null != N && b)
             P = (0, i.jsx)(s.Text, {
                 className: v.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 children: C.intl.string(C.t['WPe+xM'])
             });
-        else if (null != S && x)
+        else if (null != N && x)
             P = (0, i.jsx)(s.Text, {
                 className: v.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 children: C.intl.string(C.t.uxrh1N)
             });
-        else if (null != S) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, m.f)(S, L, b, x, a()(v.messageContent, N.inlineFormat), {
+        else if (null != N) {
+            let { contentPlaceholder: e, renderedContent: t } = (0, m.f)(N, L, b, x, a()(v.messageContent, S.inlineFormat), {
                 leadingIconClass: v.messageContentIcon,
                 trailingIconClass: v.messageContentIcon,
                 iconSize: I.WW
@@ -103,4 +103,4 @@ let S = r.memo(function (e) {
         })
     });
 });
-t.Z = S;
+t.Z = N;

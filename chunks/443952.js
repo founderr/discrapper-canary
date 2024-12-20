@@ -19,8 +19,8 @@ var r = n(243814),
     I = n(23750),
     C = n(592125),
     v = n(293273),
-    N = n(885110),
-    S = n(451478),
+    S = n(885110),
+    N = n(451478),
     T = n(630388),
     b = n(823379),
     x = n(709054),
@@ -39,7 +39,7 @@ async function k(e, t, n, i) {
     let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : '',
         l = v.Z.getApplicationActivity(t);
     if (null == l || null == l.secrets || !(0, P.t9)(i, l.party, l.secrets)) throw new L.Z({ errorCode: M.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
-    let a = (0, g.Z)(l, N.Z);
+    let a = (0, g.Z)(l, S.Z);
     if (a) {
         let { lock: t } = (0, j.jU)(e);
         return (0, s.h7)(l, a).then(() => {
@@ -185,7 +185,7 @@ t.Z = {
             return new Promise((e, t) => {
                 !(function (e, t) {
                     var n;
-                    let i = S.Z.getLastFocusedWindowId(),
+                    let i = N.Z.getLastFocusedWindowId(),
                         r = null == i ? null : null === (n = (0, h.g0)(i)) || void 0 === n ? void 0 : n.renderWindow;
                     if (null == r) throw new L.Z({ errorCode: M.lTL.UNKNOWN_ERROR }, 'No valid window found');
                     let l = r.document.createElement('input');

@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(113434),
     C = n(497505),
     v = n(475595),
-    N = n(352084),
-    S = n(685613),
+    S = n(352084),
+    N = n(685613),
     T = n(981631),
     b = n(388032),
     x = n(625844);
@@ -41,13 +41,13 @@ t.Z = (0, r.memo)(function (e) {
         }),
         F = null !== (A = null === (n = L.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== A ? A : 0,
         z = L.config.rewards[F],
-        Y = (null == z ? void 0 : z.type) === o.w.COLLECTIBLE,
-        W = (null == z ? void 0 : z.type) === o.w.FRACTIONAL_PREMIUM,
-        { product: K } = (0, p.T)(Y && null != z ? z.skuId : null),
+        W = (null == z ? void 0 : z.type) === o.w.COLLECTIBLE,
+        Y = (null == z ? void 0 : z.type) === o.w.FRACTIONAL_PREMIUM,
+        { product: K } = (0, p.T)(W && null != z ? z.skuId : null),
         q = null == K ? void 0 : null === (l = K.items) || void 0 === l ? void 0 : l[0];
     (0, u.P)(M, (e) => {
         let { height: t } = e;
-        if (!Y || null == t || null == w.current || null == M.current || null == k.current) return;
+        if (!W || null == t || null == w.current || null == M.current || null == k.current) return;
         let n = M.current.getBoundingClientRect(),
             i = w.current.getBoundingClientRect(),
             r = k.current.getBoundingClientRect();
@@ -86,7 +86,7 @@ t.Z = (0, r.memo)(function (e) {
                   className: a()(x.container, { [x.hovered]: P }),
                   children: [
                       null != U &&
-                          Y &&
+                          W &&
                           (0, i.jsx)('div', {
                               ref: k,
                               className: x.decoWrapper,
@@ -97,8 +97,8 @@ t.Z = (0, r.memo)(function (e) {
                                   guildId: null
                               })
                           }),
-                      W
-                          ? (0, i.jsx)(N.Z, { className: x.image })
+                      Y
+                          ? (0, i.jsx)(S.Z, { className: x.image })
                           : J.isAnimated
                             ? (0, i.jsx)(i.Fragment, {
                                   children: (0, i.jsx)(g.Z, {
@@ -127,7 +127,7 @@ t.Z = (0, r.memo)(function (e) {
                           ref: w,
                           className: x.logoContainer,
                           style: { transform: 'translateY(-'.concat($, 'px)') },
-                          children: (0, i.jsx)(S.ZP, {
+                          children: (0, i.jsx)(N.ZP, {
                               logotypeClassName: a()(x.logo, { [x.logoWithCosponsor]: Q }),
                               quest: L,
                               withGameTile: !1

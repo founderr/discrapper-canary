@@ -23,8 +23,8 @@ var i = n(200651),
     I = n(1964),
     C = n(762756),
     v = n(308569),
-    N = n(981631),
-    S = n(815660),
+    S = n(981631),
+    N = n(815660),
     T = n(388032);
 function b() {
     let { action: e, theme: t } = (0, a.cj)([E.Z, _.Z], () => ({
@@ -70,7 +70,7 @@ function b() {
                         });
                 },
                 {
-                    modalKey: S.M,
+                    modalKey: N.M,
                     Layer: g.ZP
                 }
             );
@@ -86,8 +86,8 @@ function b() {
             []
         ),
         r.useEffect(() => {
-            (null == Z ? void 0 : Z[0]) === N.PUi.PHONE &&
-                (null == b ? void 0 : b[0]) === N.PUi.EMAIL &&
+            (null == Z ? void 0 : Z[0]) === S.PUi.PHONE &&
+                (null == b ? void 0 : b[0]) === S.PUi.EMAIL &&
                 (0, s.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
@@ -112,7 +112,7 @@ function b() {
             onCaptchaVerify: (e) => {
                 o.tn
                     .post({
-                        url: N.ANM.CAPTCHA,
+                        url: S.ANM.CAPTCHA,
                         body: { captcha_key: e },
                         oldFormErrors: !0,
                         rejectWithError: !0
@@ -123,7 +123,7 @@ function b() {
             },
             theme: t,
             onClick: (e) => {
-                e === N.PUi.EMAIL_OR_PHONE || e === N.PUi.EMAIL || e === N.PUi.REVERIFY_EMAIL ? L() : P();
+                e === S.PUi.EMAIL_OR_PHONE || e === S.PUi.EMAIL || e === S.PUi.REVERIFY_EMAIL ? L() : P();
             },
             onLogout: () => {
                 (0, s.openModalLazy)(

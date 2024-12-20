@@ -19,8 +19,8 @@ var l = n(481060),
     I = n(594174),
     C = n(823379),
     v = n(358085),
-    N = n(929809),
-    S = n(179645),
+    S = n(929809),
+    N = n(179645),
     T = n(701476),
     b = n(785997),
     x = n(981631),
@@ -39,7 +39,7 @@ class P extends o.Z {
     handleConnectionOpen() {
         var e;
         let t,
-            a = S.Z.getType();
+            a = N.Z.getType();
         if (null == a) return;
         switch (a) {
             case T.M5.INVITE_UNCLAIMED:
@@ -149,7 +149,7 @@ class P extends o.Z {
             }
         ]),
             (t = () => {
-                N.H(), m.Z.flowStep(Z.MK.ANY, Z.EW.NUF_COMPLETE, !0);
+                S.H(), m.Z.flowStep(Z.MK.ANY, Z.EW.NUF_COMPLETE, !0);
             }),
             [...e].reverse().forEach((e) => {
                 let n = t;

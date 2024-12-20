@@ -26,8 +26,8 @@ var i = n(200651),
     I = n(134432),
     C = n(695346),
     v = n(768581),
-    N = n(356164),
-    S = n(890064),
+    S = n(356164),
+    N = n(890064),
     T = n(981631),
     b = n(388032),
     x = n(125285),
@@ -37,7 +37,7 @@ var i = n(200651),
 function P(e) {
     let { guild: t, onClick: l, onView: o } = e,
         [f, _] = r.useState(!1),
-        [N, P] = r.useState(!1),
+        [S, P] = r.useState(!1),
         [y, O] = r.useState(!1),
         R = r.useCallback(async () => {
             P(!0);
@@ -103,7 +103,7 @@ function P(e) {
     return (0, i.jsxs)('div', {
         className: x.container,
         children: [
-            N &&
+            S &&
                 (0, i.jsx)('div', {
                     className: x.spinnerContainer,
                     children: (0, i.jsx)(c.Spinner, {
@@ -118,7 +118,7 @@ function P(e) {
                 children: (0, i.jsxs)(g.Z, {
                     className: x.card,
                     onClick: R,
-                    disabled: N,
+                    disabled: S,
                     onContextMenu: D,
                     children: [
                         (0, i.jsxs)('div', {
@@ -134,7 +134,7 @@ function P(e) {
                                     })
                                 }),
                                 G &&
-                                    (0, i.jsx)(S.Z, {
+                                    (0, i.jsx)(N.Z, {
                                         guild: t,
                                         className: x.contextMenu
                                     }),
@@ -226,7 +226,7 @@ function P(e) {
 }
 function y(e) {
     let { guildId: t, onClick: n, onView: r } = e,
-        l = (0, o.e7)([N.Z], () => N.Z.getGuild(t));
+        l = (0, o.e7)([S.Z], () => S.Z.getGuild(t));
     return null == l
         ? null
         : (0, i.jsx)(P, {

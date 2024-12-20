@@ -31,10 +31,10 @@ function _(e) {
                     fromFriendSuggestion: !0
                 });
         },
-        N = (e) => {
+        S = (e) => {
             null == e || e.stopPropagation(), s.Z.ignore(t.id);
         },
-        S = _ === p.Skl.OFFLINE ? p.Skl.UNKNOWN : _;
+        N = _ === p.Skl.OFFLINE ? p.Skl.UNKNOWN : _;
     return (0, i.jsx)(h.Z, {
         isFocused: E,
         user: t,
@@ -58,7 +58,7 @@ function _(e) {
                         icon: l.XSmallIcon,
                         actionType: u.Z.ActionTypes.DENY,
                         tooltip: g.intl.string(g.t.xuio0N),
-                        onClick: N,
+                        onClick: S,
                         shouldHighlight: e
                     })
                 ]
@@ -69,7 +69,7 @@ function _(e) {
                     (0, i.jsx)(m.Z, {
                         user: t,
                         hovered: e,
-                        status: S,
+                        status: N,
                         subText: n,
                         className: f.__invalid_userInfo
                     }),

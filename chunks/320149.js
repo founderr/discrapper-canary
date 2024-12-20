@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return N;
     }
 });
 var i = n(200651),
@@ -22,10 +22,10 @@ var i = n(200651),
     I = n(287746),
     C = n(388032),
     v = n(837199),
-    N = n(215191);
-function S(e) {
+    S = n(215191);
+function N(e) {
     let { channel: t, baseChannelId: n } = e,
-        S = (0, E.ZP)(t),
+        N = (0, E.ZP)(t),
         T = (0, h.K)(),
         b = (0, h.V)(),
         x = (0, l.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
@@ -60,21 +60,21 @@ function S(e) {
                 'aria-label': C.intl.string(C.t.BIYAqa),
                 children: (0, c.ud)({
                     channel: t,
-                    channelName: S,
+                    channelName: N,
                     inSidebar: !0
                 })
             }),
             A &&
                 (0, i.jsxs)('div', {
-                    className: N.hamBanner,
+                    className: S.hamBanner,
                     children: [
                         (0, i.jsx)(a.Text, {
-                            className: N.__invalid_hamBannerText,
+                            className: S.__invalid_hamBannerText,
                             variant: 'text-sm/normal',
                             children: C.intl.string(C.t.XVOKgo)
                         }),
                         (0, i.jsx)(a.Button, {
-                            className: N.hamBannerButton,
+                            className: S.hamBannerButton,
                             size: a.ButtonSizes.SMALL,
                             onClick: () => y(t, Z),
                             children: C.intl.string(C.t.koqL3d)

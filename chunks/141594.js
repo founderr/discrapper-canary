@@ -16,10 +16,10 @@ t.Z = () => {
         I = (0, a.e7)([u.Z], () => u.Z.getMarketingBySurface(r.K.DESKTOP_SHOP_BUTTON)),
         C = (null == I ? void 0 : I.dismissibleContent) === o.z.COLLECTIBLES_SHOP_ENTRY_MARKETING,
         v = i.useMemo(() => ((0, d.Fc)(E) && null != I && !C ? [I.dismissibleContent] : []), [E, I, C]),
-        [N, S] = (0, s.US)(v, void 0, !0),
+        [S, N] = (0, s.US)(v, void 0, !0),
         [T, b] = (0, s.XR)(C && (null == I ? void 0 : I.type) === l.Z.COACHTIP ? o.z.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, null !== (e = null == I ? void 0 : I.version) && void 0 !== e ? e : 0, void 0, !0),
         x = null;
-    if ((null != N || null != T) && null != I && I.type === l.Z.COACHTIP) {
+    if ((null != S || null != T) && null != I && I.type === l.Z.COACHTIP) {
         x = {
             type: h.k2.COACHTIP,
             title: () => I.title,
@@ -40,7 +40,7 @@ t.Z = () => {
     return {
         collectiblesShopTabNewBadgeDisplayOptions: x,
         dismissCollectiblesShopTabNewBadge: () => {
-            let e = C ? b : S;
+            let e = C ? b : N;
             null != x && e(m.L.AUTO);
         }
     };

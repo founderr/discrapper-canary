@@ -202,7 +202,7 @@ function eo(e) {
                     d.Z.track(G.rMx.OVERLAY_INITIALIZED, {
                         voice_widget_connected: s,
                         text_widget_connected: !1,
-                        overlay_method: h.gl[h.gl.OutOfProcess]
+                        overlay_render_method: h.gl[h.gl.OutOfProcess]
                     });
                 let r = null !== (i = w.Z.getFocusedPID()) && void 0 !== i ? i : (0, T.QF)();
                 if (R.Z.hasChangedRenderMode(r)) return;

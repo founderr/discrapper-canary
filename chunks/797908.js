@@ -15,8 +15,8 @@ let g = 28;
 t.Z = function (e) {
     var t, n, f, _, E;
     let { application: I, onSelectApplication: C, showCategory: v = !1 } = e,
-        N = (0, c.Z)({ application: I }),
-        S = null === (t = I.categories) || void 0 === t ? void 0 : t[0],
+        S = (0, c.Z)({ application: I }),
+        N = null === (t = I.categories) || void 0 === t ? void 0 : t[0],
         [T, b] = r.useState(!1),
         x = r.useCallback((e) => {
             e && b(!0);
@@ -36,16 +36,16 @@ t.Z = function (e) {
                     : void 0,
             [T, I]
         ),
-        P = (null !== (_ = null === (n = I.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== _ ? _ : 0) > 0 || N.length > 0,
+        P = (null !== (_ = null === (n = I.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== _ ? _ : 0) > 0 || S.length > 0,
         y = (0, i.jsx)(s.Z, {
             application: I,
             textVariant: 'text-xs/medium',
-            mutualGuilds: N,
+            mutualGuilds: S,
             mutualGuildShownMax: 3,
             guildIconSize: s.x.SMALL,
             compact: !0
         }),
-        O = v && null != S;
+        O = v && null != N;
     return (0, i.jsx)(l.$, {
         onChange: x,
         active: !T,
@@ -116,7 +116,7 @@ t.Z = function (e) {
                                                     className: p.appCategory,
                                                     variant: 'text-xs/medium',
                                                     color: 'text-normal',
-                                                    children: S.name
+                                                    children: N.name
                                                 })
                                               : null,
                                           O && A

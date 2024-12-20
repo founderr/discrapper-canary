@@ -160,7 +160,7 @@ class ef extends o.Component {
         g.Z.track(el.rMx.OVERLAY_INITIALIZED, {
             voice_widget_connected: e,
             text_widget_connected: Y.Z.isPinned(el.Odu.TEXT),
-            overlay_method: Z.gl[Z.gl.Hook]
+            overlay_render_method: Z.gl[Z.gl.Hook]
         }),
             J.Z.trackExposure({ location: 'Overlay' });
         let s = t && !i && null != r,

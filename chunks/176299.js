@@ -23,8 +23,8 @@ var i = n(200651),
     I = n(765717),
     C = n(358221),
     v = n(823748),
-    N = n(626421),
-    S = n(118379),
+    S = n(626421),
+    N = n(118379),
     T = n(267161),
     b = n(652515),
     x = n(544978),
@@ -47,8 +47,8 @@ var i = n(200651),
     V = n(659971),
     F = n(179742),
     z = n(270759),
-    Y = n(918701),
-    W = n(905423),
+    W = n(918701),
+    Y = n(905423),
     K = n(304445),
     q = n(893607),
     X = n(187819),
@@ -99,13 +99,13 @@ let e_ = (0, c.Un)({
         name: 'GuildHomePage',
         renderLoader: eE
     }),
-    eN = (0, c.Un)({
+    eS = (0, c.Un)({
         createPromise: () => Promise.all([n.e('60696'), n.e('44400')]).then(n.bind(n, 545918)),
         webpackId: 545918,
         name: 'MemberSafetyPage',
         renderLoader: eE
     }),
-    eS = (0, c.Un)({
+    eN = (0, c.Un)({
         createPromise: () => Promise.all([n.e('63288'), n.e('98479'), n.e('58227'), n.e('38359'), n.e('35566')]).then(n.bind(n, 603072)),
         webpackId: 603072,
         name: 'ChannelsAndRolesPage',
@@ -161,19 +161,19 @@ let e_ = (0, c.Un)({
                 case ep.oC.GUILD_HOME:
                     return (0, i.jsx)(ev, { guildId: r });
                 case ep.oC.CHANNEL_BROWSER:
-                    return (0, i.jsx)(eS, {
+                    return (0, i.jsx)(eN, {
                         guildId: r,
                         selectedSection: eg.l7.BROWSE
                     });
                 case ep.oC.GUILD_ONBOARDING:
                     return (0, i.jsx)(eT, { guildId: r });
                 case ep.oC.CUSTOMIZE_COMMUNITY:
-                    return (0, i.jsx)(eS, {
+                    return (0, i.jsx)(eN, {
                         guildId: r,
                         selectedSection: eg.l7.CUSTOMIZE
                     });
                 case ep.oC.MEMBER_SAFETY:
-                    return (0, i.jsx)(eN, { guildId: r });
+                    return (0, i.jsx)(eS, { guildId: r });
                 default:
                     (0, ei.vE)(l);
             }
@@ -196,13 +196,13 @@ let e_ = (0, c.Un)({
         return (0, i.jsx)(v.Z, {});
     },
     ex = r.memo(function () {
-        let { guildId: e, channelId: t } = (0, W.Z)(),
+        let { guildId: e, channelId: t } = (0, Y.Z)(),
             n = (0, u.e7)([et.Z], () => (null != t ? t : et.Z.getChannelId(e)));
         return (function () {
             return window.location.pathname.startsWith(em.Z5c.GLOBAL_DISCOVERY);
         })() ||
             (function () {
-                return window.location.pathname.startsWith(em.Z5c.GUILD_DISCOVERY) || (0, Y.OG)();
+                return window.location.pathname.startsWith(em.Z5c.GUILD_DISCOVERY) || (0, W.OG)();
             })()
             ? (0, i.jsx)(L.Z, {})
             : null != e
@@ -241,7 +241,7 @@ let e_ = (0, c.Un)({
     eR = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         return function (t) {
-            return (0, i.jsx)(S.Z, {
+            return (0, i.jsx)(N.Z, {
                 isFullScreen: e,
                 ...t
             });
@@ -298,7 +298,7 @@ function eG(e) {
     let E = (0, u.e7)([C.Z], () => C.Z.isFullscreenInContext()),
         I = (0, A.TH)('ChannelSidebar'),
         v = (0, A.Q3)('ChannelSidebar'),
-        N = (0, T.useAppSidebarState)((e) => !e.isOpen) && I;
+        S = (0, T.useAppSidebarState)((e) => !e.isOpen) && I;
     r.useLayoutEffect(() => {
         if (I) {
             var e;
@@ -316,14 +316,14 @@ function eG(e) {
         }
     }, [I]),
         r.useLayoutEffect(() => {
-            if (N) eU(ed.p8);
+            if (S) eU(ed.p8);
             else {
                 var e;
                 let t = parseInt(null !== (e = h.K.get(ed.nT)) && void 0 !== e ? e : '');
                 Number.isNaN(t) && (t = ed.qO), eU(t);
             }
-        }, [N]);
-    let S = r.useRef(null),
+        }, [S]);
+    let N = r.useRef(null),
         b = r.useCallback(
             (e, t) => {
                 var n;
@@ -331,7 +331,7 @@ function eG(e) {
                 let i = t < ed.li / 3;
                 t <= ed.li ? document.body.classList.add(ef.draggingMin) : document.body.classList.remove(ef.draggingMin), t >= ed.zx ? document.body.classList.add(ef.draggingMax) : document.body.classList.remove(ef.draggingMax);
                 let r = t - e;
-                null === (n = S.current) || void 0 === n || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(r / ed.p8), 0.25))), I && (T.useAppSidebarState.setState({ isOpen: !i }), i && eU(ed.p8));
+                null === (n = N.current) || void 0 === n || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(r / ed.p8), 0.25))), I && (T.useAppSidebarState.setState({ isOpen: !i }), i && eU(ed.p8));
             },
             [I]
         ),
@@ -340,12 +340,12 @@ function eG(e) {
         }, []),
         Z = r.useCallback((e) => {
             var t;
-            document.body.classList.remove(ef.dragging), document.body.classList.remove(ef.draggingMin), document.body.classList.remove(ef.draggingMax), document.body.classList.remove(ef.collapsing), null === (t = S.current) || void 0 === t || t.style.setProperty('--custom-overdrag', '0px'), h.K.set(ed.nT, e);
+            document.body.classList.remove(ef.dragging), document.body.classList.remove(ef.draggingMin), document.body.classList.remove(ef.draggingMax), document.body.classList.remove(ef.collapsing), null === (t = N.current) || void 0 === t || t.style.setProperty('--custom-overdrag', '0px'), h.K.set(ed.nT, e);
         }, []),
         L = (0, f.Z)({
             minDimension: ed.li,
             maxDimension: ed.zx,
-            resizableDomNodeRef: S,
+            resizableDomNodeRef: N,
             onElementResize: b,
             onElementResizeStart: x,
             onElementResizeEnd: Z,
@@ -357,8 +357,8 @@ function eG(e) {
         }, []);
     if (
         (r.useLayoutEffect(() => {
-            N && eU(ed.p8);
-        }, [N]),
+            S && eU(ed.p8);
+        }, [S]),
         l || (!v && o))
     )
         return null;
@@ -368,8 +368,8 @@ function eG(e) {
         theme: n,
         children: (e) =>
             (0, i.jsxs)('div', {
-                ref: v ? S : void 0,
-                'data-collapsed': N,
+                ref: v ? N : void 0,
+                'data-collapsed': S,
                 className: a()(ef.sidebar, e, {
                     [ef.hasNotice]: t,
                     [ef.fullWidth]: d.tq,
@@ -449,7 +449,7 @@ function eB() {
         E = r.useCallback(() => H.Z.openSidebar(), []),
         C = (0, A.Q3)('AppView'),
         v = (0, A.TH)('AppView'),
-        S = C ? 'div' : r.Fragment,
+        N = C ? 'div' : r.Fragment,
         b = (0, T.useAppSidebarState)((e) => !e.isOpen);
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
@@ -472,7 +472,7 @@ function eB() {
                             (0, i.jsxs)('div', {
                                 className: ef.content,
                                 children: [
-                                    (0, i.jsx)(N.Z, {}),
+                                    (0, i.jsx)(S.Z, {}),
                                     (0, i.jsx)(eG, {
                                         isOnFullScreenCollectiblesShopRoute: h,
                                         isSidebarOpen: m,
@@ -481,7 +481,7 @@ function eB() {
                                         hideChannelList: f,
                                         hideSidebar: !m || h
                                     }),
-                                    (0, i.jsx)(S, {
+                                    (0, i.jsx)(N, {
                                         className: ef.page,
                                         'data-collapsed': !!v && b,
                                         children: (0, i.jsx)(_.Z.Provider, {

@@ -38,20 +38,20 @@ t.Z = function (e) {
             [n]
         ),
         v = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(f.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e)),
-        N = r.useCallback(() => {
+        S = r.useCallback(() => {
             (0, g.z)(f.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id }), (0, m.JG)(v(n.id)), (0, s.showToast)((0, s.createToast)(_.intl.string(_.t['L/PwZW']), s.ToastType.SUCCESS));
         }, [n.id]),
-        S = (0, o.e7)([h.default], () => h.default.locale),
+        N = (0, o.e7)([h.default], () => h.default.locale),
         T = r.useCallback(() => {
             null != n &&
                 (0, c.Z)(
                     (0, d.G)({
                         id: n.id,
                         name: n.name,
-                        locale: S
+                        locale: N
                     })
                 );
-        }, [S, n]),
+        }, [N, n]),
         b = (0, u.Z)({
             id: null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : '',
             label: _.intl.string(_.t['FfCL+/']),
@@ -96,7 +96,7 @@ t.Z = function (e) {
                       className: a()(E.iconButton, { [E.small]: 'sm' === l }),
                       innerClassName: E.innerIconButton,
                       'aria-label': _.intl.string(_.t.z4sP5O),
-                      onClick: N,
+                      onClick: S,
                       children: (0, i.jsx)(s.LinkIcon, {
                           size: 'xs',
                           color: 'currentColor'

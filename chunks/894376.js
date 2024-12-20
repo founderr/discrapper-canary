@@ -114,7 +114,7 @@ function _() {
 }
 function j(e) {
     let { section: n } = e;
-    return n !== h.pNK.DISCOVERY ? R() : C();
+    return n !== h.pNK.ACCESS ? R() : C();
 }
 function R() {
     (r = void 0), (N = !1);

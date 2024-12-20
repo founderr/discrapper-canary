@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(812206),
     C = n(44315),
     v = n(600164),
-    N = n(167533),
-    S = n(925329),
+    S = n(167533),
+    N = n(925329),
     T = n(707409),
     b = n(210887),
     x = n(283595),
@@ -234,8 +234,8 @@ function F(e) {
     throw Error('Invalid Dispatch stage');
 }
 let z = 'name',
-    Y = 'progress',
-    W = 'actions';
+    W = 'progress',
+    Y = 'actions';
 class K extends r.PureComponent {
     get isFocused() {
         let { cellProps: e } = this.props;
@@ -450,10 +450,10 @@ let q = () =>
                 (0, i.jsxs)(v.Z, {
                     align: v.Z.Align.CENTER,
                     children: [
-                        (0, i.jsx)(S.Z, {
+                        (0, i.jsx)(N.Z, {
                             game: e.application,
                             className: M.__invalid_gameIcon,
-                            size: S.Z.Sizes.SMALL
+                            size: N.Z.Sizes.SMALL
                         }),
                         (0, i.jsx)('div', {
                             className: M.nameCellText,
@@ -463,7 +463,7 @@ let q = () =>
                 })
         },
         {
-            key: Y,
+            key: W,
             cellClassName: M.progressCell,
             headerCellClassName: M.progressCellHeader,
             bodyCellClassName: M.progressCellBody,
@@ -474,7 +474,7 @@ let q = () =>
                 })
         },
         {
-            key: W,
+            key: Y,
             cellClassName: M.actionsCell,
             render(e, t) {
                 let n, r;
@@ -544,7 +544,7 @@ class ee extends r.PureComponent {
                               })
                           ]
                       }),
-                      (0, i.jsx)(N.Z, {
+                      (0, i.jsx)(S.Z, {
                           hasHeader: !1,
                           columns: $,
                           data: e,

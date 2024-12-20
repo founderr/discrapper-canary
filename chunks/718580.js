@@ -113,8 +113,8 @@ function I(e) {
     return (0, i.jsx)(s.animated.div, {
         style: {
             position: 'relative',
-            width: F,
-            height: V,
+            minWidth: F,
+            minHeight: V,
             ...H
         },
         children: U((e, n, r) => {

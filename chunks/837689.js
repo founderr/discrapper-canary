@@ -19,8 +19,8 @@ var r = n(873546),
     I = n(346497),
     C = n(278945),
     v = n(727310),
-    N = n(318199),
-    S = n(474936);
+    S = n(318199),
+    N = n(474936);
 function T(e, t, n) {
     return (
         t in e
@@ -45,7 +45,7 @@ class x extends s.Z {
     constructor(...e) {
         super(...e),
             T(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
-                let r = (0, N.extractAnnouncementModalContent)({
+                let r = (0, S.extractAnnouncementModalContent)({
                     content: e,
                     isPreview: t
                 });
@@ -75,7 +75,7 @@ class x extends s.Z {
             T(this, 'getOfferFromStore', () => {
                 let e = d.default.getCurrentUser();
                 if ((0, h.I5)(e)) return {};
-                let t = [S.hs, S.RU, S.rB, S.ih]
+                let t = [N.hs, N.RU, N.rB, N.ih]
                     .map((e) => u.Z.getUserDiscountOffer(e))
                     .filter((e) => null != e && !(0, _.kA)(e))
                     .shift();

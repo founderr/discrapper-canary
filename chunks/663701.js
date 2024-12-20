@@ -23,8 +23,8 @@ var i = n(200651),
     I = n(143757),
     C = n(463119),
     v = n(377171),
-    N = n(540059),
-    S = n(243778),
+    S = n(540059),
+    N = n(243778),
     T = n(922409),
     b = n(899740),
     x = n(28476),
@@ -47,8 +47,8 @@ var i = n(200651),
     V = n(774343),
     F = n(626135),
     z = n(814225),
-    Y = n(515753),
-    W = n(831218),
+    W = n(515753),
+    Y = n(831218),
     K = n(339149),
     q = n(981631),
     X = n(675654),
@@ -75,7 +75,7 @@ let ee = (e) => {
         return (0, i.jsxs)('div', {
             className: $.friendsButtonContainer,
             children: [
-                (0, i.jsx)(Y.Qj, {
+                (0, i.jsx)(W.Qj, {
                     onClick: () => {
                         m && (F.default.track(q.rMx.GIFT_INTENT_BADGE_CLICKED, { gift_intent_type: Q.hX.FRIEND_ANNIVERSARY }), f.Z.setSection(q.pJs.ALL), (0, P.Gk)());
                     },
@@ -122,7 +122,7 @@ let ee = (e) => {
     et = (e) => {
         let { selected: t, hideGameUpdateProgressIndicator: n, ...r } = e,
             l = (0, c.JA)('library');
-        return (0, i.jsx)(Y.Qj, {
+        return (0, i.jsx)(W.Qj, {
             selected: t,
             route: q.Z5c.APPLICATION_LIBRARY,
             icon: p.InventoryIcon,
@@ -142,7 +142,7 @@ let ee = (e) => {
             { channelId: r } = (0, T._)();
         if (!(0, x.a)()) return null;
         let l = null == r ? void 0 : () => g.Z.preload(q.ME, r);
-        return (0, i.jsx)(Y.Qj, {
+        return (0, i.jsx)(W.Qj, {
             selected: t,
             route: q.Z5c.MESSAGE_REQUESTS,
             icon: p.EnvelopeIcon,
@@ -157,7 +157,7 @@ let ee = (e) => {
             n = J.intl.string(J.t.Rkdixs),
             l = (0, c.JA)('family-center'),
             [a, o] = r.useState(!0);
-        return (0, i.jsx)(Y.Qj, {
+        return (0, i.jsx)(W.Qj, {
             selected: t,
             route: q.Z5c.FAMILY_CENTER,
             icon: p.GroupIcon,
@@ -177,7 +177,7 @@ let ee = (e) => {
         let { isParentHovered: t } = e,
             r = (0, Z.gU)();
         return t
-            ? (0, i.jsx)(Y.PZ, {
+            ? (0, i.jsx)(W.PZ, {
                   onClick: () => {
                       (0, m.ZD)(async () => {
                           let { default: e } = await n.e('44153').then(n.bind(n, 760949));
@@ -191,7 +191,7 @@ let ee = (e) => {
                     className: $.familyCenterPendingBadge,
                     children: (0, i.jsx)(p.NumberBadge, { count: r })
                 })
-              : (0, i.jsx)(S.ZP, {
+              : (0, i.jsx)(N.ZP, {
                     contentTypes: [h.z.FAMILY_CENTER_NEW_BADGE],
                     children: (e) => {
                         let { visibleContent: t } = e;
@@ -223,7 +223,7 @@ let es = (e) => {
             let { channelId: t, path: n } = e;
             return [t, n];
         }, o.X),
-        u = (0, N.Q3)('PrivateChannels'),
+        u = (0, S.Q3)('PrivateChannels'),
         h = (0, O.i)({ selected: null == c ? l : c.startsWith(q.Z5c.APPLICATION_STORE) }),
         m = (0, x.a)(),
         g = (function () {
@@ -259,7 +259,7 @@ let es = (e) => {
                           })
                 })
             }),
-            (0, i.jsxs)(W.Z, {
+            (0, i.jsxs)(Y.Z, {
                 ...e,
                 version: c,
                 selectedChannelId: s,

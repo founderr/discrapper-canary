@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(513202),
     C = n(318891),
     v = n(687751),
-    N = n(912471),
-    S = n(100527),
+    S = n(912471),
+    N = n(100527),
     T = n(838134),
     b = n(77987),
     x = n(679891),
@@ -42,8 +42,8 @@ var i = n(200651),
     V = n(531551),
     F = n(38618),
     z = n(972830),
-    Y = n(981283),
-    W = n(584233),
+    W = n(981283),
+    Y = n(584233),
     K = n(15274),
     q = n(434404),
     X = n(543842),
@@ -72,8 +72,8 @@ var i = n(200651),
     eI = n(719256),
     eC = n(6025),
     ev = n(897473),
-    eN = n(377368),
-    eS = n(262702),
+    eS = n(377368),
+    eN = n(262702),
     eT = n(639033),
     eb = n(479313),
     ex = n(911560),
@@ -96,8 +96,8 @@ var i = n(200651),
     eV = n(914010),
     eF = n(695103),
     ez = n(241890),
-    eY = n(897607),
-    eW = n(417363),
+    eW = n(897607),
+    eY = n(417363),
     eK = n(900974),
     eq = n(358085),
     eX = n(998502),
@@ -120,7 +120,7 @@ function e1(e, t, n) {
 }
 n(117240), n(801077), n(967368), n(272053), n(974180), n(574254), n(551428), n(55563), n(882029), n(959457), n(653255), n(663389), n(25990), n(778825), n(999382), n(388610), n(533947), n(277053), n(371398), n(141233), n(471073);
 let e2 = !1;
-(0, N.D)(),
+(0, S.D)(),
     o.ZP.initialize(),
     eE.Z.loadServer(),
     eq.isPlatformEmbedded &&
@@ -147,7 +147,7 @@ let e4 = o.ZP.connectStores([F.Z, ek.Z, eD.default], () => ({
         class extends r.Component {
             componentDidMount() {
                 let { match: e } = this.props;
-                null != e && null != e.params.inviteCode && (0, W.x)({ code: e.params.inviteCode });
+                null != e && null != e.params.inviteCode && (0, Y.x)({ code: e.params.inviteCode });
             }
             render() {
                 let { isConnected: e, defaultRoute: t, token: n, defaultRouteFallback: r } = this.props;
@@ -161,8 +161,8 @@ let e4 = o.ZP.connectStores([F.Z, ek.Z, eD.default], () => ({
         }
     ),
     e3 = (0, b.e)(A.Z, null, { passProps: !1 }),
-    e5 = (0, b.e)(T.default, null, { passProps: !1 }),
-    e6 = [eJ.Z5c.GUILD_BOOSTING_MARKETING(ef.Hw.guildId()), ...Array.from(e$.Vg).map((e) => eJ.Z5c.CHANNEL(ef.Hw.guildId(), e))];
+    e6 = (0, b.e)(T.default, null, { passProps: !1 }),
+    e5 = [eJ.Z5c.GUILD_BOOSTING_MARKETING(ef.Hw.guildId()), ...Array.from(e$.Vg).map((e) => eJ.Z5c.CHANNEL(ef.Hw.guildId(), e))];
 function e7(e) {
     let { guildId: t, channelId: n = null, messageId: i = null, threadId: r = null } = e.params;
     return {
@@ -197,7 +197,7 @@ let e9 = [
                     (0, eZ.openUserProfileModal)({
                         userId: o,
                         friendToken: r,
-                        sourceAnalyticsLocations: [S.Z.URI_SCHEME],
+                        sourceAnalyticsLocations: [N.Z.URI_SCHEME],
                         analyticsLocation: { section: eJ.jXE.DIRECT_ROUTE_ACCESS }
                     })
                 ),
@@ -211,7 +211,7 @@ let e9 = [
             let { match: t } = e,
                 { gameId: n, action: r } = t.params;
             return (
-                eW.Z.whenInitialized(() => {
+                eY.Z.whenInitialized(() => {
                     eB.Z.whenInitialized(() => {
                         switch (r) {
                             case 'launch': {
@@ -361,7 +361,7 @@ let e9 = [
     },
     {
         path: [eJ.Z5c.APPLICATION_DIRECTORY],
-        render: e5,
+        render: e6,
         isSessionRequired: !0
     }
 ];
@@ -402,22 +402,22 @@ class tt extends r.PureComponent {
             eR.Z.initialize(),
             ec.Z.initialize(),
             I.Z.initialize(),
-            Y.Z.init(),
+            W.Z.init(),
             J.Z.init(),
-            eY.Z.init(),
+            eW.Z.init(),
             eK.Z.init(),
             E.Z.initialize(),
             eA.Z.init(),
             ez.Z.init(),
             eP.Z.init(),
-            eS.Z.initialize(),
+            eN.Z.initialize(),
             eT.Z.initialize(),
             eL.Z.initialize(),
             ey.Z.init(),
             w.Z.initialize(),
             _.Z.initialize(),
             eI.Z.initialize(),
-            eN.Z.initialize(),
+            eS.Z.initialize(),
             eo.Z.initialize(),
             ea.Z.initialize(),
             es.Z.initialize(),
@@ -442,7 +442,7 @@ class tt extends r.PureComponent {
             (this.historyUnlisten = eg.Z.addRouteChangeListener(this.handleHistoryChange));
     }
     componentWillUnmount() {
-        ej.Z.terminate(), eh.Z.terminate(), ed.Z.terminate(), x.Z.terminate(), C.ZP.terminate(), eR.Z.terminate(), I.Z.terminate(), em.Z.terminate(), ec.Z.terminate(), eL.Z.terminate(), E.Z.terminate(), w.Z.terminate(), et.Z.terminate(), _.Z.terminate(), ep.Z.terminate(), eI.Z.terminate(), eN.Z.terminate(), eo.Z.terminate(), ea.Z.terminate(), es.Z.terminate(), P.Z.terminate(), y.Z.terminate(), eu.Z.terminate(), j.Z.terminate(), U.Z.terminate(), Z.Z.terminate(), L.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
+        ej.Z.terminate(), eh.Z.terminate(), ed.Z.terminate(), x.Z.terminate(), C.ZP.terminate(), eR.Z.terminate(), I.Z.terminate(), em.Z.terminate(), ec.Z.terminate(), eL.Z.terminate(), E.Z.terminate(), w.Z.terminate(), et.Z.terminate(), _.Z.terminate(), ep.Z.terminate(), eI.Z.terminate(), eS.Z.terminate(), eo.Z.terminate(), ea.Z.terminate(), es.Z.terminate(), P.Z.terminate(), y.Z.terminate(), eu.Z.terminate(), j.Z.terminate(), U.Z.terminate(), Z.Z.terminate(), L.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
     }
     handleHistoryChange(e) {
         let { pathname: t, search: n } = e;
@@ -510,7 +510,7 @@ class tt extends r.PureComponent {
                     var f;
                     if (
                         ((f = e),
-                        !e6.some((e) => {
+                        !e5.some((e) => {
                             var t;
                             return (null === (t = (0, a.LX)(f, e)) || void 0 === t ? void 0 : t.isExact) === !0;
                         }))

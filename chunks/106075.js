@@ -22,8 +22,8 @@ var i = n(200651),
     I = n(273596),
     C = n(128449),
     v = n(49898),
-    N = n(388032),
-    S = n(608576);
+    S = n(388032),
+    N = n(608576);
 function T() {
     let e = r.useRef((0, m.PM)()),
         { onScroll: t, scrollPosition: n, resetScrollPosition: T } = (0, a.M)(),
@@ -76,7 +76,7 @@ function T() {
             !j && u.Z.setState({ scrollPosition: null });
         }, [j]),
         (0, i.jsxs)('div', {
-            className: S.container,
+            className: N.container,
             children: [
                 (0, i.jsxs)(s.ZP, {
                     variant: j ? s._6.RELATIVE : s._6.OVERLAY,
@@ -100,13 +100,13 @@ function T() {
                             (0, i.jsx)(l.Heading, {
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
-                                className: S.searchResultsHeader,
-                                children: N.intl.format(N.t.zHdzqa, { query: G })
+                                className: N.searchResultsHeader,
+                                children: S.intl.format(S.t.zHdzqa, { query: G })
                             }),
                         L &&
                             (0, i.jsx)(d.Z, {
                                 query: P,
-                                placeholder: N.intl.string(N.t['5h0QOD']),
+                                placeholder: S.intl.string(S.t['5h0QOD']),
                                 onTextChange: y,
                                 onClear: O,
                                 onSubmit: R,

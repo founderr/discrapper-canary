@@ -53,8 +53,8 @@ function f(e) {
             isDarkTheme: h,
             isHovered: E
         }),
-        N = r.useCallback(() => I(!0), []),
-        S = r.useCallback(() => I(!1), []);
+        S = r.useCallback(() => I(!0), []),
+        N = r.useCallback(() => I(!1), []);
     return (0, i.jsx)(c.Popout, {
         renderPopout: (e) => {
             let { closePopout: r } = e;
@@ -78,8 +78,8 @@ function f(e) {
                 'aria-label': p.intl.string(p.t.UKOtz8),
                 children: (0, i.jsxs)('div', {
                     className: g.more,
-                    onMouseEnter: N,
-                    onMouseLeave: S,
+                    onMouseEnter: S,
+                    onMouseLeave: N,
                     children: [
                         (0, i.jsx)(c.Text, {
                             variant: f ? 'text-sm/semibold' : 'text-md/medium',
@@ -116,8 +116,8 @@ function _(e) {
             maxLines: 1,
             containerWidth: m
         }),
-        N = r.useMemo(() => l.slice(0, E + 1), [E, l]),
-        S = r.useMemo(() => l.slice(E + 1), [E, l]),
+        S = r.useMemo(() => l.slice(0, E + 1), [E, l]),
+        N = r.useMemo(() => l.slice(E + 1), [E, l]),
         T = r.useRef(null),
         b = r.useCallback(() => {
             var e;
@@ -163,7 +163,7 @@ function _(e) {
                     (0, i.jsx)('div', {
                         ref: C,
                         children: (0, i.jsx)(f, {
-                            tabs: S,
+                            tabs: N,
                             onTabSelect: s,
                             selectedTab: n
                         })
@@ -178,7 +178,7 @@ function _(e) {
                     onItemSelect: s,
                     className: g.tabs,
                     children: [
-                        N.map((e) =>
+                        S.map((e) =>
                             (0, i.jsx)(
                                 c.TabBar.Item,
                                 {
@@ -191,9 +191,9 @@ function _(e) {
                                 e.id
                             )
                         ),
-                        0 !== S.length
+                        0 !== N.length
                             ? (0, i.jsx)(f, {
-                                  tabs: S,
+                                  tabs: N,
                                   onTabSelect: s,
                                   selectedTab: n
                               })

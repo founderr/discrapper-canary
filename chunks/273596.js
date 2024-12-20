@@ -24,8 +24,8 @@ var i = n(200651),
     I = n(140700),
     C = n(665807),
     v = n(188493),
-    N = n(294330),
-    S = n(981631),
+    S = n(294330),
+    N = n(981631),
     T = n(841787);
 let b = Object.freeze({
         top: 0,
@@ -40,9 +40,9 @@ let b = Object.freeze({
         right: 32
     }),
     A = {
-        page: S.ZY5.GUILD_DISCOVERY,
-        object: S.qAy.CARD,
-        section: S.jXE.DISCOVER_SEARCH
+        page: N.ZY5.GUILD_DISCOVERY,
+        object: N.qAy.CARD,
+        section: N.jXE.DISCOVER_SEARCH
     },
     Z = s().throttle(m.c6, 1000, {
         leading: !1,
@@ -50,7 +50,7 @@ let b = Object.freeze({
     });
 function L(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: l } = e,
-        { guildIds: s, loading: m, searchResultsQuery: S, loadMore: L, searchCategoryId: P } = (0, _.f)({ loadId: t }),
+        { guildIds: s, loading: m, searchResultsQuery: N, loadMore: L, searchCategoryId: P } = (0, _.f)({ loadId: t }),
         y = 0 === s.length && !m,
         O = r.useContext(u.AnalyticsContext),
         [R, j] = r.useState((0, f.PM)()),
@@ -82,20 +82,20 @@ function L(e) {
     }, [V, H]),
         r.useEffect(() => {
             j((0, f.PM)());
-        }, [S]),
+        }, [N]),
         r.useEffect(() => {
             Z({
                 loadId: t,
                 searchId: R,
-                query: S,
+                query: N,
                 guildResults: s.map(p.Z.getGuild).filter(h.lm),
                 analyticsContext: O,
                 categoryId: P
             });
-        }, [O, s, t, P, R, S]);
+        }, [O, s, t, P, R, N]);
     let F = r.useCallback((e) => n(e, P), [n, P]),
         z = r.useMemo(() => (m ? [s.length, 0] : [s.length]), [s.length, m]),
-        Y = r.useCallback(
+        W = r.useCallback(
             (e, n, r) => {
                 switch (e) {
                     case 0:
@@ -124,7 +124,7 @@ function L(e) {
             },
             [y, D, t]
         ),
-        W = r.useCallback(
+        Y = r.useCallback(
             (e) => {
                 switch (e) {
                     case 0:
@@ -178,7 +178,7 @@ function L(e) {
                         'div',
                         {
                             style: n,
-                            children: (0, i.jsx)(N.ZP, {
+                            children: (0, i.jsx)(S.ZP, {
                                 guildId: e,
                                 onClick: async (e) => await X(e, t, P, A),
                                 onView: (e) => F(e)
@@ -242,8 +242,8 @@ function L(e) {
             itemGutter: 16,
             padding: $,
             renderItem: Q,
-            renderSection: Y,
-            getSectionHeight: W,
+            renderSection: W,
+            getSectionHeight: Y,
             getItemKey: K,
             getItemHeight: q,
             chunkSize: 24,

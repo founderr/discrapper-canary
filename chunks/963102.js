@@ -1,6 +1,6 @@
 n.d(t, {
     I: function () {
-        return v;
+        return b;
     }
 });
 var r = n(200651),
@@ -14,12 +14,12 @@ var r = n(200651),
     u = n(410030),
     m = n(984370),
     h = n(594174),
-    p = n(471731),
-    f = n(335131),
-    g = n(388032),
+    g = n(471731),
+    p = n(335131),
+    f = n(388032),
     C = n(2381);
-function v(e) {
-    let { isFullScreen: t, isLayer: n, onClose: i, isCatalogView: v, handleTransition: b, transparent: x } = e,
+function b(e) {
+    let { isFullScreen: t, isLayer: n, onClose: i, isCatalogView: b, handleTransition: v, transparent: x } = e,
         _ = (0, u.ZP)(),
         k = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
         I = (null == k ? void 0 : k.isStaff()) || (null == k ? void 0 : k.isStaffPersonal()) || !1;
@@ -38,30 +38,30 @@ function v(e) {
                 children: [
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            v &&
-                                null != b &&
+                            b &&
+                                null != v &&
                                 (0, r.jsx)(c.Clickable, {
-                                    onClick: b,
+                                    onClick: v,
                                     className: C.back,
-                                    'aria-label': g.intl.string(g.t['13/7kZ']),
+                                    'aria-label': f.intl.string(f.t['13/7kZ']),
                                     children: (0, r.jsx)(c.ArrowLargeLeftIcon, {})
                                 }),
-                            (0, r.jsx)(p.Z, {
+                            (0, r.jsx)(g.Z, {
                                 color: x ? ((0, o.wj)(_) ? 'white' : 'black') : void 0,
                                 className: C.discordLogo
                             })
                         ]
                     }),
-                    (0, r.jsx)(m.Z.Title, { children: g.intl.string(g.t.pWG4zc) }),
-                    v &&
+                    (0, r.jsx)(m.Z.Title, { children: f.intl.string(f.t.pWG4zc) }),
+                    b &&
                         (0, r.jsx)(m.Z.Title, {
                             className: C.shopAllHeader,
-                            children: g.intl.string(g.t.xFcotb)
+                            children: f.intl.string(f.t.xFcotb)
                         }),
                     t &&
                         (0, r.jsx)(d.Z, {
                             className: C.closeIcon,
-                            closeAction: n ? f.DR : i,
+                            closeAction: n ? p.DR : i,
                             keybind: 'ESC'
                         })
                 ]

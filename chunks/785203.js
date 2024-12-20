@@ -25,11 +25,11 @@ var i,
     I = n(192513),
     C = n(255791),
     v = n(70956),
-    N = n(267642),
-    S = n(981631);
+    S = n(267642),
+    N = n(981631);
 function T(e) {
     var t;
-    let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : S.lds,
+    let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : N.lds,
         { lastFetchedAt: i } = (0, a.cj)([f.Z], () => ({
             appliedGuildBoosts: f.Z.getAppliedGuildBoostsForGuild(n),
             lastFetchedAt: f.Z.getLastFetchedAtForGuild(n)
@@ -40,10 +40,10 @@ function T(e) {
         })),
         b = (0, a.e7)([p.Z], () => p.Z.isVisible(e)),
         x = (0, a.e7)([C.Z], () => C.Z.isVisible(e)),
-        A = (0, a.e7)([_.Z], () => _.Z.can(S.Plq.ADMINISTRATOR, e)),
-        Z = null != r && Date.now() - r <= S.Dge,
+        A = (0, a.e7)([_.Z], () => _.Z.can(N.Plq.ADMINISTRATOR, e)),
+        Z = null != r && Date.now() - r <= N.Dge,
         L = null != e ? e.premiumSubscriberCount : 0,
-        P = (0, N.rF)(L, n) !== S.Eu4.NONE,
+        P = (0, S.rF)(L, n) !== N.Eu4.NONE,
         y = null != i && Date.now() - i <= 43200000,
         O = !y && !Z && A && P,
         R = (0, c.m)(n),
@@ -52,7 +52,7 @@ function T(e) {
         M = (0, m.h6)(e),
         { enableStudyGroup: w } = (0, u.s)(e),
         k = M.length > 0,
-        U = w && !(null == e ? void 0 : e.hasFeature(S.oNc.HUB)),
+        U = w && !(null == e ? void 0 : e.hasFeature(N.oNc.HUB)),
         G = (0, d.Vm)(n),
         B = (0, a.e7)([g.Z], () => null != g.Z.getActiveGuildSignUp(n));
     if (

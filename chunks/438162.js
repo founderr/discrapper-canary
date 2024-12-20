@@ -205,7 +205,7 @@ function ed() {
                     d.Z.track(Q.rMx.OVERLAY_INITIALIZED, {
                         voice_widget_connected: o,
                         text_widget_connected: !1,
-                        overlay_method: f.gl[f.gl.OutOfProcess]
+                        overlay_render_method: f.gl[f.gl.OutOfProcess]
                     });
                 let i = null;
                 (i = s

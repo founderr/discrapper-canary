@@ -34,9 +34,9 @@ async function C() {
         v(),
         (E = setTimeout(
             () => {
-                N(),
+                S(),
                     (_ = setInterval(() => {
-                        N();
+                        S();
                     }, 15 * u.Z.Millis.MINUTE));
             },
             Math.max(n, 0)
@@ -45,7 +45,7 @@ async function C() {
 function v() {
     null != E && (clearTimeout(E), (E = null)), null != _ && (clearInterval(_), (_ = null));
 }
-async function N() {
+async function S() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = Date.now(),
         n = await (0, p.Gg)(),
@@ -76,10 +76,10 @@ async function N() {
     }
     d.default.track(g.rMx.CLIENT_HEARTBEAT, c), r.K.set(f, Date.now().toString()), (0, a.Z)();
 }
-let S = null,
+let N = null,
     T = !0;
 function b() {
-    if (T || (null != S && S !== g.hes.DISCONNECTED && S !== g.hes.RTC_DISCONNECTED))
+    if (T || (null != N && N !== g.hes.DISCONNECTED && N !== g.hes.RTC_DISCONNECTED))
         try {
             C();
         } catch (e) {
@@ -94,11 +94,11 @@ function x() {
     m.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), c.Z.addChangeListener(Z), l.Z.subscribe('WINDOW_FOCUS', L), l.Z.subscribe('APP_STATE_UPDATE', P), l.Z.subscribe('LOGIN_SUCCESS', A), b();
 }
 function A() {
-    N(!0);
+    S(!0);
 }
 function Z() {
     let e = c.Z.getState();
-    S !== e && ((S = e), b());
+    N !== e && ((N = e), b());
 }
 function L(e) {
     let { focused: t } = e;

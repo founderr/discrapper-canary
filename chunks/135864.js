@@ -17,8 +17,8 @@ var i = n(200651),
     I = n(49898),
     C = n(46140),
     v = n(388032),
-    N = n(729922);
-function S(e) {
+    S = n(729922);
+function N(e) {
     let { tab: t } = e,
         n = f.Z.useField('selectedTab'),
         l = r.useMemo(
@@ -37,7 +37,7 @@ function S(e) {
         ),
         u = r.useMemo(() => (0, _.s)(t), [t]),
         v = n === t,
-        S = r.useCallback(() => {
+        N = r.useCallback(() => {
             switch (t) {
                 case I.GlobalDiscoveryTab.QUESTS:
                     return (
@@ -65,11 +65,11 @@ function S(e) {
             }
         }, [t, v]);
     return (0, i.jsxs)(s.Clickable, {
-        onClick: S,
-        className: a()(N.navItem, { [N.selected]: v }),
+        onClick: N,
+        className: a()(S.navItem, { [S.selected]: v }),
         children: [
             (0, i.jsx)('div', {
-                className: N.navItemIcon,
+                className: S.navItemIcon,
                 children: l
             }),
             (0, i.jsx)(s.Text, {
@@ -83,18 +83,18 @@ function S(e) {
 t.Z = function () {
     let e = (0, u.YP)({ location: 'GlobalDiscoverySidebar' });
     return (0, i.jsxs)('div', {
-        className: N.container,
+        className: S.container,
         children: [
             (0, i.jsx)('div', {
-                className: N.header,
+                className: S.header,
                 children: (0, i.jsx)(s.Heading, {
                     variant: 'text-lg/semibold',
                     children: v.intl.string(v.t['1KqYnp'])
                 })
             }),
             (0, i.jsx)('nav', {
-                className: N.nav,
-                children: I.GLOBAL_DISCOVERY_TABS.map((t) => (t !== I.GlobalDiscoveryTab.APPS || e ? (0, i.jsx)(S, { tab: t }, t) : null))
+                className: S.nav,
+                children: I.GLOBAL_DISCOVERY_TABS.map((t) => (t !== I.GlobalDiscoveryTab.APPS || e ? (0, i.jsx)(N, { tab: t }, t) : null))
             })
         ]
     });

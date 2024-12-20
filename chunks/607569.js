@@ -188,27 +188,27 @@ n.default = function (e) {
                 )
             ),
             C.length !== h.mb &&
-                (0, l.jsxs)('div', {
+                (0, l.jsx)('div', {
                     className: x.addItemContainer,
-                    children: [
-                        (0, l.jsx)(d.CirclePlusIcon, {
-                            size: 'custom',
-                            height: 17,
-                            width: 17,
-                            color: c.Z.unsafe_rawColors.BLUE_345.css
-                        }),
-                        (0, l.jsx)(d.Clickable, {
-                            className: x.addItemButton,
-                            onClick: () => {
-                                null != j && _(null), C.length !== h.mb && v([...C, '']);
-                            },
-                            children: (0, l.jsx)(d.Text, {
+                    children: (0, l.jsxs)(d.Clickable, {
+                        className: x.addItemButton,
+                        onClick: () => {
+                            null != j && _(null), C.length !== h.mb && v([...C, '']);
+                        },
+                        children: [
+                            (0, l.jsx)(d.CirclePlusIcon, {
+                                size: 'custom',
+                                height: 17,
+                                width: 17,
+                                color: c.Z.unsafe_rawColors.BLUE_345.css
+                            }),
+                            (0, l.jsx)(d.Text, {
                                 color: 'text-link',
                                 variant: 'text-md/normal',
                                 children: p.intl.string(p.t.sVfx9v)
                             })
-                        })
-                    ]
+                        ]
+                    })
                 })
         ]
     });

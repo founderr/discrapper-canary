@@ -23,8 +23,8 @@ let C = {
 };
 t.Z = function (e) {
     var t;
-    let { categoryId: n, onSelectApplication: v, resetScroll: N } = e,
-        [S, T] = r.useState(1),
+    let { categoryId: n, onSelectApplication: v, resetScroll: S } = e,
+        [N, T] = r.useState(1),
         b = r.useCallback((e) => {
             T(e);
         }, []);
@@ -34,16 +34,16 @@ t.Z = function (e) {
     let x = r.useMemo(
             () => ({
                 query: _.EMPTY_QUERY,
-                page: S,
+                page: N,
                 pageSize: _.PAGE_SIZE,
                 categoryId: n
             }),
-            [S, n]
+            [N, n]
         ),
         A = (0, a.e7)([u.Z], () =>
             u.Z.getFetchState({
                 query: _.EMPTY_QUERY,
-                page: S,
+                page: N,
                 pageSize: _.PAGE_SIZE,
                 categoryId: n
             })
@@ -74,13 +74,13 @@ t.Z = function (e) {
                 });
         }, []);
     r.useEffect(() => {
-        N(),
+        S(),
             j({
-                page: S,
+                page: N,
                 activeCategoryId: n,
                 onSuccessCallback: () => {}
             });
-    }, [n, N, j, S]);
+    }, [n, S, j, N]);
     let D = r.useCallback(
         (e, t) => {
             (0, m.z)(E.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
@@ -127,7 +127,7 @@ t.Z = function (e) {
                       pageSize: _.PAGE_SIZE,
                       disablePaginationGap: !0,
                       hideMaxPage: !0,
-                      currentPage: S,
+                      currentPage: N,
                       onPageChange: b
                   })
               ]

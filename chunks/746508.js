@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(925549),
     C = n(284056),
     v = n(730749),
-    N = n(2052),
-    S = n(40851),
+    S = n(2052),
+    N = n(40851),
     T = n(317381),
     b = n(596040),
     x = n(588580),
@@ -42,8 +42,8 @@ var i = n(200651),
     V = n(142497),
     F = n(810788),
     z = n(160404),
-    Y = n(703656),
-    W = n(917405),
+    W = n(703656),
+    Y = n(917405),
     K = n(641015),
     q = n(848543),
     X = n(565799),
@@ -72,8 +72,8 @@ var i = n(200651),
     eI = n(496675),
     eC = n(19780),
     ev = n(699516),
-    eN = n(594174),
-    eS = n(979651),
+    eS = n(594174),
+    eN = n(979651),
     eT = n(938475),
     eb = n(626135),
     ex = n(63063),
@@ -182,20 +182,20 @@ function eB(e) {
         E = r.useCallback(() => {
             (0, es.Z)();
         }, []),
-        I = (0, S.bp)(),
+        I = (0, N.bp)(),
         C = r.useCallback(
             (e) => {
                 if (eE.Z.isVideoEnabled() === e) return;
                 let n = () => {
                     var n;
-                    _.Z.setVideoEnabled(e), e && (0, Y.uL)(eO.Z5c.CHANNEL(null !== (n = t.getGuildId()) && void 0 !== n ? n : eO.ME, t.id));
+                    _.Z.setVideoEnabled(e), e && (0, W.uL)(eO.Z5c.CHANNEL(null !== (n = t.getGuildId()) && void 0 !== n ? n : eO.ME, t.id));
                 };
                 e ? (0, eu.Z)(n, I) : n();
             },
             [t, I]
         ),
         v = u || n || h,
-        { Component: N, play: b, events: x } = (0, p.o)(s.enabled ? 'disable' : 'enable');
+        { Component: S, play: b, events: x } = (0, p.o)(s.enabled ? 'disable' : 'enable');
     return (
         r.useEffect(() => () => b(), [s.enabled, b]),
         (0, i.jsx)(eh.Z, {
@@ -208,7 +208,7 @@ function eB(e) {
             enabled: !l && s.enabled,
             children: (e) => {
                 let { unavailable: t, isActive: n, label: r, iconComponent: l, ...s } = e,
-                    c = (0, i.jsx)(N, {
+                    c = (0, i.jsx)(S, {
                         size: o ? 'md' : 'sm',
                         className: a()(eD.buttonIcon, { [eD.withText]: !v }),
                         color: 'currentColor'
@@ -275,13 +275,13 @@ function eH(e) {
         n,
         { channel: r, enableActivities: l } = e,
         o = (0, w.Q3)('ConnectedVideoButton'),
-        s = (0, S.bp)(),
+        s = (0, N.bp)(),
         { analyticsLocations: c } = (0, O.ZP)(),
         m = s === eO.IlC.POPOUT,
         p = (0, A.KF)(r.id),
         g = (0, A.g5)(p),
         { userInActivity: _ } = (0, d.cj)([T.ZP], () => ({ userInActivity: null != T.ZP.getSelfEmbeddedActivityForChannel(r.id) })),
-        E = (0, N.O)(),
+        E = (0, S.O)(),
         I = (0, x.a)(),
         C = p !== A.jy.CAN_LAUNCH,
         { enabled: v } = R.nS.useExperiment({ location: 'RTCConnection' }, { autoTrackExposure: !0 }),
@@ -351,7 +351,7 @@ function eV(e) {
     let t,
         { channel: n, canGoLive: l, enableActivities: o, disabled: s } = e,
         c = (0, w.Q3)('ConnectedStreamButton'),
-        u = (0, d.e7)([eN.default], () => eN.default.getCurrentUser()),
+        u = (0, d.e7)([eS.default], () => eS.default.getCurrentUser()),
         h = (0, d.Wu)([em.Z], () => em.Z.getAllActiveStreams()),
         p = (0, ea.Z)(n),
         g = n.getGuildId(),
@@ -363,8 +363,8 @@ function eV(e) {
         C = h.find((e) => e.ownerId === (null == u ? void 0 : u.id)),
         v = (0, eo.E)(n, u, h);
     t = null == C ? (l ? I : ec.Z) : () => (0, H.Z)(C);
-    let N = null != C || v.length > 0,
-        S = p ? ej.intl.string(ej.t.fjBNo6) : ej.intl.string(ej.t.uQn9Bw),
+    let S = null != C || v.length > 0,
+        N = p ? ej.intl.string(ej.t.fjBNo6) : ej.intl.string(ej.t.uQn9Bw),
         b = _ || o || E,
         x = null != C,
         { Component: A, events: Z, play: L } = (0, m.P)(x ? 'disable' : 'enable');
@@ -391,21 +391,21 @@ function eV(e) {
         children: (e) => {
             let { onClick: n, onMouseEnter: r, ...l } = e;
             return (0, i.jsx)(f.Tooltip, {
-                text: S,
+                text: N,
                 children: (e) =>
                     (0, i.jsx)(f.Button, {
                         ...e,
                         size: c ? f.Button.Sizes.MEDIUM : f.Button.Sizes.SMALL,
                         onClick: (i) => {
                             var r;
-                            N ? n(i) : t(), null === (r = e.onClick) || void 0 === r || r.call(e);
+                            S ? n(i) : t(), null === (r = e.onClick) || void 0 === r || r.call(e);
                         },
                         disabled: !p || s,
                         className: a()(eD.button, eD.buttonColor, {
                             [eD.buttonActive]: null != C,
                             [eD.disabled]: !p || s
                         }),
-                        ...(N ? l : null),
+                        ...(S ? l : null),
                         onMouseEnter: () => {
                             var t;
                             null == r || r(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e), Z.onMouseEnter();
@@ -432,10 +432,10 @@ class eF extends r.PureComponent {
         let e;
         let { channel: t, guild: n, rtcConnectionQuality: r, rtcConnectionState: l, rtcConnectionLastPing: a, hasVideo: o } = this.props;
         if (null == t) return null;
-        let s = (0, D.F6)(t, eN.default, ev.Z);
+        let s = (0, D.F6)(t, eS.default, ev.Z);
         return (
             null != n ? ((e = eO.Z5c.CHANNEL(n.id, t.id)), (s = ''.concat(s, ' / ').concat(n.name))) : (e = eO.Z5c.CHANNEL(eO.ME, t.id)),
-            (0, i.jsx)(W.Z, {
+            (0, i.jsx)(Y.Z, {
                 channelId: t.id,
                 quality: r,
                 state: l,
@@ -678,7 +678,7 @@ t.Z = (0, v.Z)(function (e) {
     let t = (0, w.Q3)('ConnectedRTCConnection'),
         n = (0, U.Z)(),
         l = (0, d.e7)([k.Z], () => k.Z.getAwaitingRemoteSessionInfo()),
-        a = (0, d.e7)([eN.default], () => eN.default.getCurrentUser()),
+        a = (0, d.e7)([eS.default], () => eS.default.getCurrentUser()),
         { channelId: o, ...s } = (0, d.cj)([eC.Z], () =>
             null != n
                 ? {
@@ -704,22 +704,22 @@ t.Z = (0, v.Z)(function (e) {
             canGoLive: (0, B.Z)(eE.Z)
         })),
         p = (0, d.e7)([eE.Z, F.Z], () => F.Z.hasHotspot(eR.v.VOICE_PANEL_INTRODUCTION) && (0, eA.EO)(a) && !eE.Z.isInteractionRequired() && !(null == c ? void 0 : c.isGuildStageVoice())),
-        g = (0, d.e7)([eS.Z], () => null != o && eS.Z.hasVideo(o), [o]),
+        g = (0, d.e7)([eN.Z], () => null != o && eN.Z.hasVideo(o), [o]),
         _ = (0, d.e7)([em.Z], () => em.Z.getCurrentUserActiveStream()),
         E = (0, d.e7)([e_.Z], () => e_.Z.hasLayers()),
         I = (0, d.e7)([z.Z], () => z.Z.isViewingRoles(u)),
         C = (0, d.e7)([eI.Z], () => I && !eI.Z.can(eO.Plq.VIEW_CHANNEL, c), [I, c]),
         v = ei.Fg.useSetting(),
-        [N, S, T] = (0, d.Wu)([eT.ZP, X.Z], () => ((null == c ? void 0 : c.isGuildStageVoice()) ? [X.Z.getMutableParticipants(c.id, Q.pV.SPEAKER), X.Z.getParticipantsVersion(c.id), null] : [null, null, null != c ? eT.ZP.getVoiceStatesForChannel(c) : null]), [c]),
+        [S, N, T] = (0, d.Wu)([eT.ZP, X.Z], () => ((null == c ? void 0 : c.isGuildStageVoice()) ? [X.Z.getMutableParticipants(c.id, Q.pV.SPEAKER), X.Z.getParticipantsVersion(c.id), null] : [null, null, null != c ? eT.ZP.getVoiceStatesForChannel(c) : null]), [c]),
         x = r.useMemo(() => {
             var e, t;
             return null !==
                 (t =
                     null !==
                         (e =
-                            null == N
+                            null == S
                                 ? void 0
-                                : N.map((e) => {
+                                : S.map((e) => {
                                       let { user: t, userNick: n, voiceState: i } = e;
                                       return {
                                           user: t,
@@ -731,7 +731,7 @@ t.Z = (0, v.Z)(function (e) {
                         : T) && void 0 !== t
                 ? t
                 : [];
-        }, [N, S, T]),
+        }, [S, N, T]),
         [A, L] = r.useState(!1);
     r.useEffect(() => {
         (I || C) && L(!1);

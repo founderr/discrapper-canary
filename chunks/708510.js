@@ -51,7 +51,7 @@ function C() {
             (0, i.jsx)(s.Heading, {
                 color: 'header-primary',
                 variant: 'heading-lg/semibold',
-                children: x.intl.string(x.t.oGaVGx)
+                children: x.intl.string(x.t['+hFV+P'])
             }),
             (0, i.jsx)(g.h, {
                 onTypePicked: n,

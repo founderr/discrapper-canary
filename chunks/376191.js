@@ -23,7 +23,7 @@ var r = n(442837),
     I = n(81471),
     C = n(388032),
     v = n(993595);
-let N = (e) => {
+let S = (e) => {
         let { userId: t } = e,
             n = (0, E.O)(t);
         return null == n || 0 === n.length
@@ -51,7 +51,7 @@ let N = (e) => {
                   ]
               });
     },
-    S = f.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+    N = f.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 function T(e) {
     var t;
     let { channel: n, otherUser: c, active: m } = e,
@@ -66,7 +66,7 @@ function T(e) {
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(S, {
+            (0, i.jsx)(N, {
                 className: v.avatar,
                 src: (0, h.x)(n, 40, T),
                 avatarDecoration: x,
@@ -98,7 +98,7 @@ function T(e) {
                     (0, i.jsx)(s.Z, {
                         hoverText: (0, i.jsx)(I.Z, { channel: n }),
                         forceHover: m,
-                        children: (0, i.jsx)(N, { userId: c.id })
+                        children: (0, i.jsx)(S, { userId: c.id })
                     })
                 ]
             })

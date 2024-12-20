@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return N;
     }
 }),
     n(653041),
@@ -50,9 +50,9 @@ let C = { offset: 2 },
             getStatus: () => E.intl.string(E.t['9F+xJS'])
         }
     };
-function N(e) {
+function S(e) {
     var t, r;
-    let { channel: l, user: p, nick: N, mute: S, deaf: T, serverMute: b, serverDeaf: x } = e,
+    let { channel: l, user: p, nick: S, mute: N, deaf: T, serverMute: b, serverDeaf: x } = e,
         A = (0, o.e7)([g.Z], () => g.Z.isLocalMute(p.id)),
         Z = (0, d.Z)({
             userId: p.id,
@@ -60,7 +60,7 @@ function N(e) {
         }),
         L = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0,
         P = p.getAvatarURL(l.guild_id, 24),
-        y = null != N ? N : f.ZP.getName(p),
+        y = null != S ? S : f.ZP.getName(p),
         {
             icon: O,
             colorize: R,
@@ -77,7 +77,7 @@ function N(e) {
                 serverDeaf: x,
                 deaf: T,
                 serverMute: b,
-                mute: S,
+                mute: N,
                 localMute: A
             })) && void 0 !== r
             ? r
@@ -156,7 +156,7 @@ function N(e) {
             })
     });
 }
-function S(e) {
+function N(e) {
     let { voiceStates: t, channel: n, className: l } = e,
         [c, d] = r.useState(!1),
         u = c ? s.MinusIcon : s.PlusSmallIcon,
@@ -198,7 +198,7 @@ function S(e) {
                           let { user: t, nick: r, voiceState: l } = e;
                           return t.id !== m
                               ? (0, i.jsx)(
-                                    N,
+                                    S,
                                     {
                                         channel: n,
                                         user: t,

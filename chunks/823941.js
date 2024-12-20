@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return y;
+        return L;
     },
     n: function () {
-        return N;
+        return B;
     }
 });
 var r = n(200651),
@@ -17,26 +17,26 @@ var r = n(200651),
     u = n(906732),
     m = n(70097),
     h = n(963249),
-    p = n(594174),
-    f = n(451478),
-    g = n(754347),
+    g = n(594174),
+    p = n(451478),
+    f = n(754347),
     C = n(74538),
-    v = n(884697),
-    b = n(624377),
+    b = n(884697),
+    v = n(624377),
     x = n(141011),
     _ = n(813083),
     k = n(67938),
     I = n(372654),
-    E = n(215023),
-    S = n(474936),
+    S = n(215023),
+    E = n(474936),
     j = n(388032),
     T = n(539181);
-let N = (0, v.IC)(96),
-    B = (e) => {
+let B = (0, b.IC)(96),
+    N = (e) => {
         let { category: t } = e,
             { analyticsLocations: n } = (0, u.ZP)(),
             i = a.useRef(null),
-            l = (0, o.e7)([p.default], () => p.default.getCurrentUser());
+            l = (0, o.e7)([g.default], () => g.default.getCurrentUser());
         return C.ZP.canUseCollectibles(l)
             ? (0, r.jsx)(r.Fragment, { children: t.summary })
             : (0, r.jsx)(r.Fragment, {
@@ -47,7 +47,7 @@ let N = (0, v.IC)(96),
                               className: T.getPremiumHook,
                               onClick: () => {
                                   (0, h.Z)({
-                                      subscriptionTier: S.Si.TIER_2,
+                                      subscriptionTier: E.Si.TIER_2,
                                       analyticsLocations: n,
                                       returnRef: i
                                   });
@@ -63,7 +63,7 @@ let N = (0, v.IC)(96),
                   })
               });
     },
-    L = (e) => {
+    y = (e) => {
         let { src: t } = e;
         return /.*\.png/i.test(t)
             ? (0, r.jsx)('img', {
@@ -78,18 +78,18 @@ let N = (0, v.IC)(96),
                   loop: !0
               });
     };
-function y(e) {
+function L(e) {
     var t, n, a, i, u, m, h;
-    let { category: p, className: C, hideLimitedTimeBadge: S = !1 } = e,
-        { backgroundColors: j } = (0, b.Z)(p.styles),
-        y = (0, E.ZS)(p.skuId),
+    let { category: g, className: C, hideLimitedTimeBadge: E = !1 } = e,
+        { backgroundColors: j } = (0, v.Z)(g.styles),
+        L = (0, S.ZS)(g.skuId),
         P = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
-        Z = (0, o.e7)([f.Z], () => f.Z.isFocused());
-    if (p.skuId === s.T.CHANCE) return (0, r.jsx)(k.O, { category: p });
-    let O = !!(null == y ? void 0 : y.showDarkBannerText),
-        w = null !== (m = null == y ? void 0 : y.animatedBanner) && void 0 !== m ? m : null === (t = p.bannerAsset) || void 0 === t ? void 0 : t.animated;
+        Z = (0, o.e7)([p.Z], () => p.Z.isFocused());
+    if (g.skuId === s.T.CHANCE) return (0, r.jsx)(k.O, { category: g });
+    let O = !!(null == L ? void 0 : L.showDarkBannerText),
+        w = null !== (m = null == L ? void 0 : L.animatedBanner) && void 0 !== m ? m : null === (t = g.bannerAsset) || void 0 === t ? void 0 : t.animated;
     return (0, r.jsxs)(x.Z, {
-        asset: null !== (h = null === (n = p.bannerAsset) || void 0 === n ? void 0 : n.static) && void 0 !== h ? h : p.banner,
+        asset: null !== (h = null === (n = g.bannerAsset) || void 0 === n ? void 0 : n.static) && void 0 !== h ? h : g.banner,
         className: l()(T.shopBanner, C),
         style:
             null != j
@@ -99,8 +99,8 @@ function y(e) {
                   }
                 : void 0,
         children: [
-            !P && void 0 !== w && Z && (0, r.jsx)(L, { src: w }),
-            (null === (a = E.Ve[p.skuId]) || void 0 === a ? void 0 : a.addAttributionLogo)
+            !P && void 0 !== w && Z && (0, r.jsx)(y, { src: w }),
+            (null === (a = S.Ve[g.skuId]) || void 0 === a ? void 0 : a.addAttributionLogo)
                 ? (0, r.jsxs)('div', {
                       className: T.discordLogo,
                       children: [
@@ -111,26 +111,26 @@ function y(e) {
                               color: 'currentColor',
                               className: T.discordIcon
                           }),
-                          (0, r.jsx)(g.Z, { className: T.discordWordmark })
+                          (0, r.jsx)(f.Z, { className: T.discordWordmark })
                       ]
                   })
                 : (0, r.jsx)(c.Spacer, { size: 28 }),
-            (null === (i = E.Ve[p.skuId]) || void 0 === i ? void 0 : i.addLogo)
+            (null === (i = S.Ve[g.skuId]) || void 0 === i ? void 0 : i.addLogo)
                 ? (0, r.jsx)('img', {
                       className: T.categoryLogo,
-                      src: (0, v.uV)(p.logo, { size: N }),
-                      alt: p.name,
-                      style: { maxWidth: null === (u = E.Ve[p.skuId]) || void 0 === u ? void 0 : u.logoMaxWidth }
+                      src: (0, b.uV)(g.logo, { size: B }),
+                      alt: g.name,
+                      style: { maxWidth: null === (u = S.Ve[g.skuId]) || void 0 === u ? void 0 : u.logoMaxWidth }
                   })
                 : (0, r.jsx)(c.Spacer, { size: 96 }),
             (0, r.jsx)(c.Text, {
                 className: l()(T.summary, { [T.blackSummary]: O }),
                 variant: 'text-md/normal',
-                children: p.skuId === s.T.DISXCORE ? (0, r.jsx)(B, { category: p }) : p.summary
+                children: g.skuId === s.T.DISXCORE ? (0, r.jsx)(N, { category: g }) : g.summary
             }),
-            !S &&
+            !E &&
                 (0, r.jsx)(_.Z, {
-                    category: p,
+                    category: g,
                     className: T.limitedTimeBadge,
                     display: 'banner'
                 })

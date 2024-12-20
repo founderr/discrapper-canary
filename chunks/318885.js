@@ -40,10 +40,10 @@ function h(e, n) {
         p = null !== (r = s.Z.getRenderMethod(null == h ? void 0 : h.pid)) && void 0 !== r ? r : i.gl.Disabled;
     switch (
         ((n = {
-            ...n,
             overlay_game_name: null != _ ? _.name : 'Unknown Game',
             overlay_app_id: null != _ ? _.id : null,
-            overlay_method: i.gl[p]
+            overlay_render_method: i.gl[p],
+            ...n
         }),
         e)
     ) {
