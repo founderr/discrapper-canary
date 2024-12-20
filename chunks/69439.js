@@ -16,8 +16,8 @@ var o = n(200651),
     p = n(569984),
     m = n(497505),
     x = n(918701),
-    f = n(667105),
-    g = n(341907),
+    g = n(667105),
+    f = n(341907),
     h = n(284851),
     C = n(46140),
     v = n(388032),
@@ -59,7 +59,7 @@ function E(e) {
     var t, n, s, E;
     let { quest: N, location: B, onReceiveErrorHints: T, contentPosition: S, rowIndex: A } = e,
         y = (0, i.e7)([c.Z], () => c.Z.useReducedMotion),
-        R = (0, f.g2)({ useReducedMotion: y }),
+        R = (0, g.g2)({ useReducedMotion: y }),
         w = (0, u._s)({ quest: N }),
         I = (0, u.z)(N),
         k = (0, u.B6)(N.config.expiresAt, {
@@ -94,7 +94,7 @@ function E(e) {
             text: $,
             onClick: ee,
             tooltipText: et
-        } = (0, f.Ks)({
+        } = (0, g.Ks)({
             progressState: Z,
             quest: N,
             location: B,
@@ -139,7 +139,7 @@ function E(e) {
                               className: j.button,
                               style: { flex: 1 },
                               onClick: () => {
-                                  (0, g.openVideoQuestModal)(N);
+                                  (0, f.openVideoQuestModal)(N);
                               },
                               children: (0, o.jsxs)('div', {
                                   className: j.ctaInner,

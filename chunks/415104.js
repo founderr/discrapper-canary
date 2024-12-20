@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return g;
     }
 }),
     n(47120);
@@ -16,8 +16,8 @@ var o = n(200651),
     p = n(43779),
     m = n(981631),
     x = n(263740);
-function f(e) {
-    let { quest: t, className: n, questContent: s, contentPosition: f, rowIndex: g } = e,
+function g(e) {
+    let { quest: t, className: n, questContent: s, contentPosition: g, rowIndex: f } = e,
         [h, C] = r.useState(!1),
         [v, j] = r.useState([]),
         _ = (0, l.qb)(t),
@@ -40,8 +40,8 @@ function f(e) {
     return (0, o.jsx)(d.A, {
         questOrQuests: t,
         questContent: s,
-        questContentPosition: f,
-        questContentRowIndex: g,
+        questContentPosition: g,
+        questContentRowIndex: f,
         trackGuildAndChannelMetadata: s === c.jn.QUESTS_EMBED,
         children: (e) =>
             (0, o.jsxs)('div', {
@@ -63,8 +63,8 @@ function f(e) {
                         quest: t,
                         questContent: s,
                         isHovering: h,
-                        contentPosition: f,
-                        rowIndex: g,
+                        contentPosition: g,
+                        rowIndex: f,
                         onReceiveErrorHints: j
                     })
                 ]

@@ -1,9 +1,9 @@
 n.r(t), n(47120), n(757143);
-var i = n(200651),
-    r = n(192379),
-    o = n(481060),
-    l = n(239091),
-    a = n(230711),
+var r = n(200651),
+    o = n(192379),
+    i = n(481060),
+    a = n(239091),
+    l = n(230711),
     c = n(493544),
     u = n(108843),
     s = n(100527),
@@ -24,7 +24,7 @@ var i = n(200651),
 t.default = (0, u.Z)(
     function (e) {
         let { webBuildOverride: t, onSelect: n } = e,
-            [u, s] = r.useState(!1),
+            [u, s] = o.useState(!1),
             I = (0, _.Z)(),
             v = (0, S.Z)(),
             j = (0, p.Z)(),
@@ -32,9 +32,9 @@ t.default = (0, u.Z)(
             E = (0, C.Z)(),
             R = (0, x.Z)(),
             T = (0, h.Z)(),
-            y = (0, M.Z)(),
-            { analyticsLocations: D } = (0, d.ZP)(),
-            G = r.useMemo(() => (0, m.j)(), []);
+            D = (0, M.Z)(),
+            { analyticsLocations: y } = (0, d.ZP)(),
+            G = o.useMemo(() => (0, m.j)(), []);
         async function O() {
             try {
                 s(!0), await (0, g.bF)(), window.location.reload(!0);
@@ -42,7 +42,7 @@ t.default = (0, u.Z)(
                 s(!1);
             }
         }
-        let U = (e) => {
+        let w = (e) => {
                 switch (e) {
                     case Z.oAB.GAMES:
                         return I;
@@ -59,53 +59,53 @@ t.default = (0, u.Z)(
                     case Z.oAB.EXPERIMENTS:
                         return T;
                     case Z.oAB.DEVELOPER_OPTIONS:
-                        return y;
+                        return D;
                     default:
                         return null;
                 }
             },
-            w = (0, b.VO)()
+            U = (0, b.VO)()
                 .filter((e) => {
                     let { section: t } = e;
                     return t !== c.ID.HEADER && t !== c.ID.CUSTOM && t !== c.ID.DIVIDER && 'logout' !== t;
                 })
                 .filter((e) => null == e.predicate || e.predicate());
-        return (0, i.jsx)(d.Gt, {
-            value: D,
-            children: (0, i.jsxs)(o.Menu, {
+        return (0, r.jsx)(d.Gt, {
+            value: y,
+            children: (0, r.jsxs)(i.Menu, {
                 navId: 'user-settings-cog',
-                onClose: l.Zy,
+                onClose: a.Zy,
                 'aria-label': k.intl.string(k.t.opYYHh),
                 onSelect: n,
                 children: [
-                    w.map((e) => {
-                        let { section: t, label: n, onClick: r } = e,
-                            l = t.replace(/\W/gi, '_');
-                        return (0, i.jsx)(
-                            o.MenuItem,
+                    U.map((e) => {
+                        let { section: t, label: n, onClick: o } = e,
+                            a = t.replace(/\W/gi, '_');
+                        return (0, r.jsx)(
+                            i.MenuItem,
                             {
-                                id: l,
+                                id: a,
                                 label: n,
                                 action: () =>
-                                    null != r
-                                        ? r()
+                                    null != o
+                                        ? o()
                                         : (function (e, t) {
                                               let n = Object.values(Z.oAB).filter((t) => t === e)[0];
-                                              null != n && a.Z.open(n, void 0, { analyticsLocations: t });
-                                          })(t, D),
-                                children: U(t)
+                                              null != n && l.Z.open(n, void 0, { analyticsLocations: t });
+                                          })(t, y),
+                                children: w(t)
                             },
-                            l
+                            a
                         );
                     }),
                     e.user.isStaff() && G.length > 0
-                        ? (0, i.jsx)(o.MenuItem, {
+                        ? (0, r.jsx)(i.MenuItem, {
                               label: 'Build overrides',
                               id: 'build_overrides',
-                              children: (0, i.jsx)(o.MenuGroup, {
+                              children: (0, r.jsx)(i.MenuGroup, {
                                   children: G.map((e) =>
-                                      (0, i.jsx)(
-                                          o.MenuRadioItem,
+                                      (0, r.jsx)(
+                                          i.MenuRadioItem,
                                           {
                                               id: 'input-'.concat(e.payload),
                                               group: 'build_overrides',
@@ -122,8 +122,8 @@ t.default = (0, u.Z)(
                           })
                         : null,
                     null != t
-                        ? (0, i.jsx)(o.MenuGroup, {
-                              children: (0, i.jsx)(o.MenuItem, {
+                        ? (0, r.jsx)(i.MenuGroup, {
+                              children: (0, r.jsx)(i.MenuItem, {
                                   id: 'clear-build-override',
                                   disabled: u,
                                   label: k.intl.string(k.t['/Nz9ra']),

@@ -16,8 +16,8 @@ var o = n(200651),
     p = n(819640),
     m = n(617136),
     x = n(113434),
-    f = n(497505),
-    g = n(977156),
+    g = n(497505),
+    f = n(977156),
     h = n(5881),
     C = n(602667),
     v = n(78826),
@@ -33,7 +33,7 @@ function S(e) {
     return (
         (0, x.qI)({
             mode: t ? N.NH.EXPANDED : N.NH.COLLAPSED,
-            questContent: f.jn.QUEST_BAR_V2,
+            questContent: g.jn.QUEST_BAR_V2,
             questId: n
         }),
         null
@@ -46,7 +46,7 @@ function A(e) {
             quest: s,
             location: N.dr.QUESTS_BAR
         }),
-        A = (0, g.Zy)({ location: N.dr.QUESTS_BAR }),
+        A = (0, f.Zy)({ location: N.dr.QUESTS_BAR }),
         y = (0, j.qN)({
             quest: s,
             location: N.dr.QUESTS_BAR
@@ -107,7 +107,7 @@ function A(e) {
             (0, m.dA)({
                 questId: s.id,
                 event: B.rMx.QUEST_HOVER,
-                properties: (0, m.mH)(f.jn.QUEST_BAR)
+                properties: (0, m.mH)(g.jn.QUEST_BAR)
             }),
                 (D.current = !0),
                 ea({ withDelay: !0 });
@@ -116,7 +116,7 @@ function A(e) {
             (0, m.dA)({
                 questId: s.id,
                 event: B.rMx.QUEST_HOVER_OFF,
-                properties: (0, m.mH)(f.jn.QUEST_BAR)
+                properties: (0, m.mH)(g.jn.QUEST_BAR)
             }),
                 (D.current = !1),
                 el();
@@ -174,7 +174,7 @@ function A(e) {
                 questId: s.id,
                 event: B.rMx.QUEST_CONTENT_RENDERING_FAILURE,
                 properties: {
-                    ...(0, m.mH)(f.jn.QUEST_BAR),
+                    ...(0, m.mH)(g.jn.QUEST_BAR),
                     reason: 'asset_loading_error'
                 }
             }),
@@ -183,7 +183,7 @@ function A(e) {
                     questId: s.id,
                     event: B.rMx.QUEST_CONTENT_RENDERING_FAILURE,
                     properties: {
-                        ...(0, m.mH)(f.jn.QUEST_BAR),
+                        ...(0, m.mH)(g.jn.QUEST_BAR),
                         reason: 'not_eligible_for_quest'
                     }
                 });

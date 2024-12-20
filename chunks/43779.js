@@ -15,8 +15,8 @@ var o = n(200651),
     p = n(113434),
     m = n(566078),
     x = n(472144),
-    f = n(644646),
-    g = n(69439),
+    g = n(644646),
+    f = n(69439),
     h = n(46140),
     C = n(642145),
     v = n(388032),
@@ -100,7 +100,7 @@ function b(e) {
                                               percentCompleteText: N ? L : void 0,
                                               children: (0, o.jsx)('div', {
                                                   className: j.circularRewardTileWrapper,
-                                                  children: (0, o.jsx)(f.Z, {
+                                                  children: (0, o.jsx)(g.Z, {
                                                       quest: b,
                                                       questContent: E,
                                                       className: j.circularQuestRewardTileAsset,
@@ -110,7 +110,7 @@ function b(e) {
                                           })
                                       ]
                                   })
-                                : (0, o.jsx)(f.Z, {
+                                : (0, o.jsx)(g.Z, {
                                       quest: b,
                                       autoplay: N,
                                       questContent: E,
@@ -147,7 +147,7 @@ function b(e) {
                         })
                 ]
             }),
-            (0, o.jsx)(g.Z, {
+            (0, o.jsx)(f.Z, {
                 quest: b,
                 location: E,
                 contentPosition: B,

@@ -10,8 +10,8 @@ var o = n(200651),
     p = n(70097),
     m = n(703656),
     x = n(358085),
-    f = n(617136),
-    g = n(272008),
+    g = n(617136),
+    f = n(272008),
     h = n(113434),
     C = n(569984),
     v = n(497505),
@@ -40,10 +40,10 @@ let M = r.forwardRef(function (e, t) {
         K = (0, h.B6)(Y.rewardsExpireAt),
         X = r.useMemo(() => (0, E.fh)(U, E.eC.HERO), [U]),
         J = (0, R.tP)(Y.application.id),
-        $ = Y.features.has(w.S7.START_QUEST_CTA) ? f.jZ.START_QUEST : f.jZ.ACCEPT_QUEST,
+        $ = Y.features.has(w.S7.START_QUEST_CTA) ? g.jZ.START_QUEST : g.jZ.ACCEPT_QUEST,
         ee = Y.features.has(w.S7.START_QUEST_CTA) ? q.intl.string(q.t.E80Bdn) : q.intl.string(q.t.l7E81t),
         et = r.useCallback(() => {
-            (0, g.AH)(U.id, {
+            (0, f.AH)(U.id, {
                 questContent: v.jn.QUEST_BAR,
                 questContentCTA: $
             }),
@@ -56,7 +56,7 @@ let M = r.forwardRef(function (e, t) {
         eo = r.useCallback(() => {
             (0, j.FE)(U, {
                 content: v.jn.QUEST_BAR,
-                ctaContent: f.jZ.OPEN_GAME_LINK
+                ctaContent: g.jZ.OPEN_GAME_LINK
             });
         }, [U]),
         er = Y.features.has(w.S7.POST_ENROLLMENT_CTA),
