@@ -61,19 +61,17 @@ let g = (e) => {
         ]
     });
 };
-class E extends a.PureComponent {
-    render() {
-        let { children: e, theme: n, className: r, style: a } = this.props;
-        return (0, i.jsx)(h, {
-            value: n,
-            children: (0, i.jsx)(c.Z, {
-                direction: c.Z.Direction.VERTICAL,
-                align: c.Z.Align.CENTER,
-                justify: c.Z.Justify.CENTER,
-                className: o()(f.wrapper, r),
-                style: a,
-                children: e
-            })
-        });
-    }
+function E(e) {
+    let { children: n, theme: r, className: a, style: s } = e;
+    return (0, i.jsx)(h, {
+        value: r,
+        children: (0, i.jsx)(c.Z, {
+            direction: c.Z.Direction.VERTICAL,
+            align: c.Z.Align.CENTER,
+            justify: c.Z.Justify.CENTER,
+            className: o()(f.wrapper, a),
+            style: s,
+            children: n
+        })
+    });
 }

@@ -1,4 +1,9 @@
-n(47120);
+n.d(t, {
+    Z: function () {
+        return m;
+    }
+}),
+    n(47120);
 var i = n(200651),
     s = n(192379),
     r = n(442837),
@@ -8,9 +13,10 @@ var i = n(200651),
     c = n(388032),
     d = n(808463),
     u = n(444675);
-t.Z = r.ZP.connectStores([o.default], () => ({ currentLocale: o.default.locale }))(function (e) {
-    let [t, r] = s.useState(e.currentLocale),
-        [o] = s.useState(() =>
+function m() {
+    let e = (0, r.e7)([o.default], () => o.default.locale),
+        [t, m] = s.useState(e),
+        [h] = s.useState(() =>
             (0, c.getAvailableLocales)().map((e) => {
                 let t;
                 try {
@@ -45,9 +51,9 @@ t.Z = r.ZP.connectStores([o.default], () => ({ currentLocale: o.default.locale }
                 };
             })
         ),
-        m = s.useCallback((e) => {
+        g = s.useCallback((e) => {
             let { value: t } = e;
-            r(t), u.nextTick(() => a.ZP.updateLocale(t));
+            m(t), u.nextTick(() => a.ZP.updateLocale(t));
         }, []);
     return (0, i.jsx)(l.FormSection, {
         tag: l.FormTitleTags.H1,
@@ -56,11 +62,11 @@ t.Z = r.ZP.connectStores([o.default], () => ({ currentLocale: o.default.locale }
             children: (0, i.jsx)(l.FormItem, {
                 title: c.intl.string(c.t['mx+sp6']),
                 children: (0, i.jsx)(l.RadioGroup, {
-                    onChange: m,
-                    options: o,
+                    onChange: g,
+                    options: h,
                     value: t
                 })
             })
         })
     });
-});
+}
