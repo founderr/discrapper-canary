@@ -1,24 +1,29 @@
 r.d(n, {
-    B: function () {
+    BK: function () {
         return i;
     },
-    Z: function () {
+    ZP: function () {
+        return l;
+    },
+    kX: function () {
         return o;
     }
 });
 var i,
-    a = r(818083);
+    a = r(818083),
+    s = r(987338);
 !(function (e) {
     (e.MicPushToEnable = 'mic-push-to-enable'), (e.MicButtonMovedLeft = 'mic-button-moved-left'), (e.GroupedButtonsControlColors = 'grouped-buttons-control-colors'), (e.GroupedButtonsRedMic = 'grouped-buttons-red-mic');
 })(i || (i = {}));
-let s = (0, a.B)({
+let o = (0, a.B)({
     kind: 'user',
-    id: '2024-12_voice_icon_states',
+    id: '2024-12_voice_call_buttons',
     label: 'Voice/Video icon states',
     defaultConfig: {
         mode: 'mic-push-to-enable',
         groupedButtons: !1
     },
+    commonTriggerPoint: s.$P.VOICE_CALL,
     treatments: [
         {
             id: 1,
@@ -46,6 +51,6 @@ let s = (0, a.B)({
         }
     ]
 });
-function o(e) {
-    return s.useExperiment(e);
+function l(e) {
+    return o.useExperiment(e, { autoTrackExposure: !1 });
 }
