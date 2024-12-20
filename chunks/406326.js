@@ -1,99 +1,102 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return d;
     }
 });
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    r = n(63063),
-    a = n(981631),
-    s = n(388032),
-    o = n(842194);
-function c(e) {
+    r = n(540059),
+    a = n(63063),
+    s = n(981631),
+    o = n(388032),
+    c = n(842194);
+function d(e) {
     let { searchMode: t, searchByMode: n } = e;
     return (0, i.jsxs)('header', {
-        className: o.searchHeader,
+        className: c.searchHeader,
         children: [
-            (0, i.jsx)(d, { ...e }),
+            (0, i.jsx)(u, { ...e }),
             (0, i.jsxs)(l.TabBar, {
                 orientation: 'horizontal',
-                className: o.searchHeaderTabList,
+                className: c.searchHeaderTabList,
                 selectedItem: t,
                 onItemSelect: n,
                 children: [
                     (0, i.jsx)(l.TabBar.Item, {
-                        id: a.QIO.NEWEST,
-                        children: s.intl.string(s.t.rLjqbW)
+                        id: s.QIO.NEWEST,
+                        children: o.intl.string(o.t.rLjqbW)
                     }),
                     (0, i.jsx)(l.TabBar.Item, {
-                        id: a.QIO.OLDEST,
-                        children: s.intl.string(s.t.a1BaUl)
+                        id: s.QIO.OLDEST,
+                        children: o.intl.string(o.t.a1BaUl)
                     }),
                     (0, i.jsx)(l.TabBar.Item, {
-                        id: a.QIO.MOST_RELEVANT,
-                        children: s.intl.string(s.t.FtR97u)
+                        id: s.QIO.MOST_RELEVANT,
+                        children: o.intl.string(o.t.FtR97u)
                     })
                 ]
             })
         ]
     });
 }
-function d(e) {
+function u(e) {
     let t;
     let { isSearching: n, isIndexing: r, documentsIndexed: a } = e;
     (r || n) &&
         (t = (0, i.jsx)('div', {
-            className: o.spinnerWrapper,
+            className: c.spinnerWrapper,
             children: (0, i.jsx)(l.Spinner, {
                 type: l.Spinner.Type.SPINNING_CIRCLE,
-                className: o.spinner,
-                itemClassName: o.spinnerPath
+                className: c.spinner,
+                itemClassName: c.spinnerPath
             })
         }));
-    let c = r && !n;
+    let s = r && !n;
     return (0, i.jsxs)('div', {
-        className: o.totalResults,
+        className: c.totalResults,
         role: 'status',
         children: [
-            c
+            s
                 ? (0, i.jsx)(l.Tooltip, {
-                      text: s.intl.formatToPlainString(s.t['4Y3O+P'], { count: a }),
+                      text: o.intl.formatToPlainString(o.t['4Y3O+P'], { count: a }),
                       children: (n) =>
                           (0, i.jsxs)('div', {
-                              className: o.totalResultsWrapper,
+                              className: c.totalResultsWrapper,
                               ...n,
-                              children: [(0, i.jsx)(u, { ...e }), t]
+                              children: [(0, i.jsx)(h, { ...e }), t]
                           })
                   })
-                : (0, i.jsx)(u, { ...e }),
-            c ? null : t
+                : (0, i.jsx)(h, { ...e }),
+            s ? null : t
         ]
     });
 }
-function u(e) {
-    let { isSearching: t, isIndexing: n, totalResults: c } = e;
+function h(e) {
+    let { isSearching: t, isIndexing: n, totalResults: d } = e,
+        u = (0, r.Q3)('TotalResultsText') ? 'text-md/medium' : 'text-md/normal';
     if (t)
         return (0, i.jsx)(l.Text, {
-            variant: 'text-md/normal',
-            color: 'header-primary',
-            children: s.intl.string(s.t.uixzLS)
+            variant: u,
+            color: 'header-secondary',
+            children: o.intl.string(o.t.uixzLS)
         });
     if (n)
         return (0, i.jsx)(l.Text, {
-            variant: 'text-md/normal',
+            variant: u,
+            color: 'text-muted',
             children: (0, i.jsx)(l.Anchor, {
-                className: o.helpdeskLink,
-                href: r.Z.getArticleURL(a.BhN.SEARCH_INDEXING),
-                children: s.intl.string(s.t['G3EA+/'])
+                className: c.helpdeskLink,
+                href: a.Z.getArticleURL(s.BhN.SEARCH_INDEXING),
+                children: o.intl.string(o.t['G3EA+/'])
             })
         });
     {
-        let e = c.toLocaleString();
+        let e = d.toLocaleString();
         return (0, i.jsx)(l.Text, {
-            variant: 'text-md/normal',
+            variant: u,
             color: 'header-primary',
-            children: s.intl.format(s.t.ZGVL3t, { count: e })
+            children: o.intl.format(o.t.ZGVL3t, { count: e })
         });
     }
 }
