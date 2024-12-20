@@ -2,8 +2,8 @@ var l,
     o,
     t,
     s,
-    c,
-    a = n(200651),
+    a,
+    c = n(200651),
     i = n(192379),
     d = n(120356),
     u = n.n(d),
@@ -34,20 +34,20 @@ let h = {
         large: m.large,
         none: null
     };
-class N extends (c = i.PureComponent) {
+class _ extends (a = i.PureComponent) {
     render() {
         let { icon: e, color: r, children: n, iconSize: l, className: o, iconClassName: t } = this.props;
-        return (0, a.jsxs)(p.Z, {
+        return (0, c.jsxs)(p.Z, {
             className: u()(m.note, h[r], o),
             align: p.Z.Align.CENTER,
             children: [
-                (0, a.jsx)(e, {
+                (0, c.jsx)(e, {
                     className: u()(m.icon, x[l], t),
                     color: 'currentColor'
                 }),
-                (0, a.jsx)('div', { children: n })
+                (0, c.jsx)('div', { children: n })
             ]
         });
     }
 }
-f(N, 'Colors', t), f(N, 'Sizes', s), (r.Z = N);
+f(_, 'Colors', t), f(_, 'Sizes', s), (r.Z = _);

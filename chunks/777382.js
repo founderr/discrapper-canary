@@ -16,7 +16,7 @@ var i = t(200651),
 function m(e) {
     return e.widget.id;
 }
-function g(e, n, t, r) {
+function Z(e, n, t, r) {
     return t === a.TransitionStates.YEETED
         ? null
         : (0, i.jsx)(
@@ -37,7 +37,7 @@ n.Z = r.memo(function (e) {
         t = (0, p.Z)(),
         h = (0, l.e7)([u.Z], () => u.Z.windowSize((0, d.ZY)(t))),
         v = (0, l.e7)([c.Z], () => c.Z.isPreviewingInGame()),
-        Z = (0, l.e7)(
+        I = (0, l.e7)(
             [o.Z],
             () => {
                 let e = o.Z.getLayout(s.qU);
@@ -65,7 +65,7 @@ n.Z = r.memo(function (e) {
             [v],
             _.HP
         ),
-        E = r.useCallback(
+        g = r.useCallback(
             (e) =>
                 (0, i.jsx)('div', {
                     className: n,
@@ -75,9 +75,9 @@ n.Z = r.memo(function (e) {
             [n, h]
         );
     return (0, i.jsx)(a.TransitionGroup, {
-        items: Z,
-        renderItem: g,
+        items: I,
+        renderItem: Z,
         getItemKey: m,
-        wrapChildren: E
+        wrapChildren: g
     });
 });

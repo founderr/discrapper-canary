@@ -18,10 +18,10 @@ t.d(n, {
         return j;
     },
     RK: function () {
-        return v;
+        return p;
     },
     _0: function () {
-        return p;
+        return v;
     },
     hz: function () {
         return P;
@@ -43,8 +43,8 @@ var o = t(911969),
     h = t(700785),
     m = t(922482),
     f = t(192079),
-    g = t(706058),
-    x = t(590415),
+    x = t(706058),
+    g = t(590415),
     _ = t(981631);
 function j(e, n) {
     let t = e.getGuildId();
@@ -61,7 +61,7 @@ function j(e, n) {
         })
     );
 }
-function p(e, n) {
+function v(e, n) {
     let t = e.getGuildId();
     return (
         i()(null != t, 'This channel cannot be guildless.'),
@@ -76,13 +76,13 @@ function p(e, n) {
         })
     );
 }
-function v(e, n) {
+function p(e, n) {
     let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         l = null == e ? void 0 : e.getGuildId();
     i()(null != l, 'This channel cannot be guildless.');
     let r = d.Z.getVoiceStateForChannel(e.id);
     return (
-        (0, x.gf)(r) === x.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && !n && (0, c.yw)(_.rMx.PROMOTED_TO_SPEAKER, { ...(0, f.s$)(e) }),
+        (0, g.gf)(r) === g.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && !n && (0, c.yw)(_.rMx.PROMOTED_TO_SPEAKER, { ...(0, f.s$)(e) }),
         a.tn.patch({
             url: _.ANM.UPDATE_VOICE_STATE(l),
             body: {
@@ -159,12 +159,12 @@ function T(e, n, t) {
 async function b(e, n, t, l) {
     if ('' === n) return;
     u.Z.getVoiceChannelId() !== e.id && (0, m.TM)(e);
-    let i = await (0, g.me)(e.id, n, t, l);
-    return v(e, !1, !0), i;
+    let i = await (0, x.me)(e.id, n, t, l);
+    return p(e, !1, !0), i;
 }
 async function I(e, n, t) {
-    if ('' !== n) return await (0, g.Dk)(e.id, n, t);
+    if ('' !== n) return await (0, x.Dk)(e.id, n, t);
 }
 async function C(e) {
-    await (0, g.Ix)(e.id);
+    await (0, x.Ix)(e.id);
 }

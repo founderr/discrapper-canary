@@ -82,9 +82,9 @@ async function v(e) {
     let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : E,
         i = await _(e, r),
         a = l.ZP.getGameForPID(e);
-    if (null == a || null == a.name) return null;
+    if (null == a || null == a.name) return i;
     let s = null === (n = u.Z.getGameByName(a.name)) || void 0 === n ? void 0 : n.id;
-    if (null == s) return null;
+    if (null == s) return i;
     let o = g[s];
     return null != o ? o(e, a, i) : i;
 }

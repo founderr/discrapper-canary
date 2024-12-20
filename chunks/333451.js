@@ -23,8 +23,8 @@ var o = t(200651),
     P = t(930153),
     T = t(74538),
     I = t(937615),
-    x = t(981631),
-    b = t(474936),
+    b = t(981631),
+    x = t(474936),
     C = t(388032),
     y = t(427930);
 function N(e) {
@@ -36,12 +36,12 @@ function N(e) {
             (0, o.jsx)(S.Z, {
                 icon: E.Z,
                 iconClassName: y.perkIconGuild,
-                description: C.intl.formatToPlainString(C.t.sQBgs7, { numFreeGuildSubscriptions: b.cb })
+                description: C.intl.formatToPlainString(C.t.sQBgs7, { numFreeGuildSubscriptions: x.cb })
             }),
             (0, o.jsx)(S.Z, {
                 icon: E.Z,
                 iconClassName: y.perkIconGuild,
-                description: C.intl.formatToPlainString(C.t['1A6vXl'], { percent: (0, P.T3)(t, b.Rr / 100) })
+                description: C.intl.formatToPlainString(C.t['1A6vXl'], { percent: (0, P.T3)(t, x.Rr / 100) })
             }),
             n
                 ? (0, o.jsx)(S.Z, {
@@ -70,15 +70,15 @@ function k(e) {
         { theme: v } = (0, c.useThemeContext)(),
         L = (0, s.ap)(v) ? c.Button.Colors.PRIMARY : c.Button.Colors.WHITE,
         R = null == t || null == t.premiumSubscriptionType,
-        j = T.ZP.getPrice(b.Xh.PREMIUM_MONTH_TIER_2, !1, !1, k),
+        j = T.ZP.getPrice(x.Xh.PREMIUM_MONTH_TIER_2, !1, !1, k),
         B = (0, I.T4)(j.amount, j.currency),
         Z = (0, m.N)(),
         D = null == Z ? void 0 : Z.trial_id,
-        O = (null == Z ? void 0 : null === (n = Z.subscription_trial) || void 0 === n ? void 0 : n.sku_id) === b.Si.TIER_2;
+        O = (null == Z ? void 0 : null === (n = Z.subscription_trial) || void 0 === n ? void 0 : n.sku_id) === x.Si.TIER_2;
     return (
         l.useEffect(() => {
-            h.default.track(x.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: b.cd.GUILD_PREMIUM_UPSELL_MODAL,
+            h.default.track(b.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: x.cd.GUILD_PREMIUM_UPSELL_MODAL,
                 location_stack: M
             });
         }, [M]),
@@ -120,11 +120,11 @@ function k(e) {
                                         i(),
                                             (0, f.Z)({
                                                 initialPlanId: null,
-                                                subscriptionTier: b.Si.TIER_2,
+                                                subscriptionTier: x.Si.TIER_2,
                                                 analyticsLocations: A,
                                                 analyticsObject: {
                                                     ...E,
-                                                    section: x.jXE.PREMIUM_GUILD_PURCHASE_MODAL
+                                                    section: b.jXE.PREMIUM_GUILD_PURCHASE_MODAL
                                                 },
                                                 analyticsSourceLocation: P,
                                                 onSubscriptionConfirmation: g,

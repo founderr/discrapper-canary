@@ -15,7 +15,7 @@ var l = t(200651),
 function h(e) {
     let { guildId: n, channelId: t, messageId: h, ...m } = e,
         f = (0, c.h)(),
-        { unavailable: g, guild: x } = (0, r.cj)(
+        { unavailable: x, guild: g } = (0, r.cj)(
             [o.Z],
             () => ({
                 guild: o.Z.getGuild(n),
@@ -23,14 +23,14 @@ function h(e) {
             }),
             [n]
         ),
-        _ = null != x,
+        _ = null != g,
         j = i.useCallback(async () => {
             if (!f)
                 try {
                     !_ && (await (0, s.P)(n));
                 } catch {}
         }, [f, _, n]);
-    return g
+    return x
         ? (0, l.jsx)(a.Popout, {
               position: 'right',
               renderPopout: (e) => (0, l.jsx)(u.SK, {}),
@@ -45,11 +45,11 @@ function h(e) {
                             ...e,
                             guildId: n
                         })
-                      : null == x
+                      : null == g
                         ? (0, l.jsx)(l.Fragment, {})
                         : (0, l.jsx)(u.sK, {
                               ...e,
-                              guild: x,
+                              guild: g,
                               channelId: t,
                               messageId: h
                           }),

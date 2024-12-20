@@ -20,15 +20,15 @@ var l = n(200651),
     h = n(639119),
     N = n(165583),
     x = n(197115),
-    S = n(185139),
+    C = n(185139),
     b = n(263954),
-    C = n(706454),
+    S = n(706454),
     E = n(853872),
     g = n(930153),
     y = n(74538),
-    P = n(937615),
-    j = n(981631),
-    v = n(474936),
+    v = n(937615),
+    P = n(981631),
+    j = n(474936),
     I = n(388032),
     k = n(866803);
 let T = (e) => {
@@ -44,8 +44,8 @@ let T = (e) => {
                     icon: s.BoostTier2SimpleIcon,
                     iconClassName: k.iconColorPink,
                     description: I.intl.formatToPlainString(I.t.sWnv5O, {
-                        numGuildSubscriptions: v.cb,
-                        discountPercent: (0, g.T3)(r, v.Rr / 100)
+                        numGuildSubscriptions: j.cb,
+                        discountPercent: (0, g.T3)(r, j.Rr / 100)
                     })
                 }),
                 (0, l.jsx)(b.Z, {
@@ -58,7 +58,7 @@ let T = (e) => {
     },
     R = (e) => {
         let { trialOffer: r, discountOffer: o, isLoading: t, price: a, onClose: d } = e,
-            u = (0, c.e7)([C.default], () => C.default.locale),
+            u = (0, c.e7)([S.default], () => S.default.locale),
             p = null != r || null != o;
         return (0, l.jsxs)('div', {
             className: k.wrapper,
@@ -80,7 +80,7 @@ let T = (e) => {
                               (0, l.jsx)(s.Text, {
                                   variant: 'text-md/normal',
                                   className: k.heading,
-                                  children: null == a ? (0, l.jsx)(s.Spinner, { type: s.Spinner.Type.PULSING_ELLIPSIS }) : I.intl.format(I.t.TBsJfX, { monthlyPrice: (0, P.T4)(a.amount, a.currency) })
+                                  children: null == a ? (0, l.jsx)(s.Spinner, { type: s.Spinner.Type.PULSING_ELLIPSIS }) : I.intl.format(I.t.TBsJfX, { monthlyPrice: (0, v.T4)(a.amount, a.currency) })
                               }),
                               (0, l.jsx)('div', {
                                   className: k.perks,
@@ -93,7 +93,7 @@ let T = (e) => {
     },
     A = (e) => {
         let { trialOffer: r, discountOffer: n, onClose: o } = e,
-            t = { section: j.jXE.STICKER_PREMIUM_TIER_2_UPSELL_MODAL };
+            t = { section: P.jXE.STICKER_PREMIUM_TIER_2_UPSELL_MODAL };
         return (0, l.jsxs)(s.ModalFooter, {
             className: k.footer,
             children: [
@@ -107,7 +107,7 @@ let T = (e) => {
                 (0, l.jsx)(x.Z, {
                     buttonText: null != r || null != n ? I.intl.string(I.t['Gd/XHB']) : void 0,
                     premiumModalAnalyticsLocation: t,
-                    subscriptionTier: v.Si.TIER_2,
+                    subscriptionTier: j.Si.TIER_2,
                     size: s.Button.Sizes.SMALL,
                     color: s.Button.Colors.GREEN,
                     onClick: () => {
@@ -126,10 +126,10 @@ function B(e) {
         b = (0, _.Ng)();
     o.useEffect(() => {
         a.Z.wait(() => {
-            (0, d.tZ)(), (0, u.Y2)(null, null, j.JjL.DISCOVERY);
+            (0, d.tZ)(), (0, u.Y2)(null, null, P.JjL.DISCOVERY);
         });
     }, []);
-    let C = N ? y.ZP.getDefaultPrice(v.Xh.PREMIUM_MONTH_TIER_2) : null;
+    let S = N ? y.ZP.getDefaultPrice(j.Xh.PREMIUM_MONTH_TIER_2) : null;
     return (0, l.jsx)(m.PaymentContextProvider, {
         activeSubscription: null,
         stepConfigs: [],
@@ -137,13 +137,13 @@ function B(e) {
         children: (0, l.jsx)(s.ModalRoot, {
             ...n,
             'aria-labelledby': 'sticker-pack-premium-upsell-modal-header',
-            children: (0, l.jsx)(S.Z, {
+            children: (0, l.jsx)(C.Z, {
                 hideBreadcrumbs: !0,
                 body: (0, l.jsx)(R, {
                     trialOffer: x,
                     discountOffer: b,
                     isLoading: !N,
-                    price: C,
+                    price: S,
                     onClose: r
                 }),
                 footer: (0, l.jsx)(A, {

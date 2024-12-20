@@ -28,8 +28,8 @@ var i = n(200651),
     h = n(477690),
     g = n(481060),
     I = n(995648),
-    x = n(445986),
-    v = n(9807),
+    v = n(445986),
+    x = n(9807),
     b = n(330726),
     C = n(782568),
     S = n(581364),
@@ -82,8 +82,8 @@ var i = n(200651),
     eh = n(902294);
 let eg = d().parserFor(es.Z),
     eI = d().reactFor(d().ruleOutput(es.Z, 'react')),
-    ex = (0, m.Mg)(h.Z.APPLICATION_DIRECTORY_PROFILE_ICON_SIZE),
-    ev = 'redirect_to_support_server',
+    ev = (0, m.Mg)(h.Z.APPLICATION_DIRECTORY_PROFILE_ICON_SIZE),
+    ex = 'redirect_to_support_server',
     eb = 'start_application_install',
     eC = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(ep.Z5c.APPLICATION_DIRECTORY_PROFILE(e));
 function eS(e) {
@@ -166,15 +166,15 @@ function eS(e) {
     a.useEffect(() => {
         if (null == eZ) return;
         let e = new URL(location.href);
-        if (T && null != eD && 'true' === e.searchParams.get(ev)) {
-            e.searchParams.delete(ev);
+        if (T && null != eD && 'true' === e.searchParams.get(ex)) {
+            e.searchParams.delete(ex);
             let t = e.pathname + e.search;
             (0, k.dL)(t), eH();
         }
     }, [T, eH, eD, eZ]);
     let eM = a.useCallback(() => {
             var e;
-            null != (null == eZ ? void 0 : null === (e = eZ.guild) || void 0 === e ? void 0 : e.id) && (T ? eH() : (0, X.rf)({ [ev]: 'true' }));
+            null != (null == eZ ? void 0 : null === (e = eZ.guild) || void 0 === e ? void 0 : e.id) && (T ? eH() : (0, X.rf)({ [ex]: 'true' }));
         }, [eZ, T, eH]),
         eF = a.useCallback(() => {
             (0, en.replaceAppDirectoryURLWith)(''.concat(ep.Z5c.APPLICATION_DIRECTORY_PROFILE(m)).concat(location.search));
@@ -208,7 +208,7 @@ function eS(e) {
     let eU = H.ZP.getApplicationIconURL({
             id: null !== (l = null == eZ ? void 0 : eZ.id) && void 0 !== l ? l : '-1',
             icon: null == eZ ? void 0 : eZ.icon,
-            size: ex
+            size: ev
         }),
         eG = (0, P.Z)({
             id: null !== (c = null == eZ ? void 0 : eZ.id) && void 0 !== c ? c : '',
@@ -256,7 +256,7 @@ function eS(e) {
                         n = t.findIndex((t) => t === e);
                     if (n < 0) return;
                     let i = t.map((e) => ({
-                        url: (0, x.Q)(e.src),
+                        url: (0, v.Q)(e.src),
                         original: e.src,
                         width: e.width,
                         height: e.height,
@@ -507,7 +507,7 @@ function eS(e) {
                             : (e.alt = e_.intl.string(e_.t['5UVm9/']));
                     }),
                         e.push(
-                            (0, i.jsx)(v.Z, {
+                            (0, i.jsx)(x.Z, {
                                 className: ef.carousel,
                                 themedPagination: !0,
                                 items: eq,
@@ -653,8 +653,8 @@ function eS(e) {
                                                       alt: '',
                                                       'aria-hidden': !0,
                                                       src: eU,
-                                                      width: ex,
-                                                      height: ex
+                                                      width: ev,
+                                                      height: ev
                                                   }),
                                                   (0, i.jsx)(Q.Z, {
                                                       application: eZ,

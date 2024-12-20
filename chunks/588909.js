@@ -86,7 +86,6 @@ function O(e, t) {
                     });
         }
     return {
-        ...g,
         icon:
             null != e
                 ? (0, n.jsx)(C, { game: e })
@@ -107,6 +106,7 @@ function O(e, t) {
         },
         onDismissClick: () => {
             u('dismiss');
-        }
+        },
+        ...g
     };
 }

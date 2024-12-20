@@ -25,18 +25,18 @@ var t = n(200651),
     f = n(624138),
     N = n(790954),
     S = n(453070),
-    x = n(926491),
-    E = n(378233),
-    C = n(515005),
+    C = n(926491),
+    x = n(378233),
+    E = n(515005),
     g = n(282896),
     P = n(929204),
-    I = n(981631),
-    k = n(388032),
-    v = n(9520);
+    v = n(981631),
+    I = n(388032),
+    k = n(9520);
 let y = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSIONS),
-    j = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_PADDING),
-    b = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_MARGIN),
-    A = y + 2 * j,
+    b = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_PADDING),
+    j = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_MARGIN),
+    A = y + 2 * b,
     T = a()(N.pF, 250),
     R = () => {
         T.cancel();
@@ -47,7 +47,7 @@ let y = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSION
     },
     M = (e) => {
         let { stickerPack: r, width: n, hasHeaderImage: o, isScrolling: s, onInspect: a } = e,
-            c = l.useMemo(() => [(0, E.z)(r)], [r]),
+            c = l.useMemo(() => [(0, x.z)(r)], [r]),
             d = (0, N.Y6)((e) => e.inspectedStickerPosition),
             {
                 rowCountBySection: u,
@@ -55,17 +55,17 @@ let y = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSION
                 gutterWidth: p
             } = (0, S.el)({
                 stickersCategories: c,
-                stickerNodeMargin: b,
+                stickerNodeMargin: j,
                 stickerNodeWidth: A,
                 listWidth: n
             });
         return (0, t.jsxs)('div', {
-            className: i()(v.container, { [v.containerWithHeader]: o }),
+            className: i()(k.container, { [k.containerWithHeader]: o }),
             children: [
                 (0, t.jsx)(
                     g.Z,
                     {
-                        className: v.header,
+                        className: k.header,
                         stickerPack: r,
                         withDescription: !0
                     },
@@ -82,7 +82,7 @@ let y = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSION
                         for (let r = 0; r < u[0]; r++)
                             e.push(
                                 (0, t.jsx)(
-                                    C.Z,
+                                    E.Z,
                                     {
                                         enlargeOnInteraction: !0,
                                         preferAnimation: !0,
@@ -92,7 +92,7 @@ let y = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSION
                                         onInspect: a,
                                         rowIndex: r,
                                         stickerDescriptors: m[r],
-                                        stickerPadding: j,
+                                        stickerPadding: b,
                                         stickerSize: y,
                                         isDisplayingIndividualStickers: !0,
                                         checkSendability: !1
@@ -109,30 +109,30 @@ let y = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSION
     W = (e) => {
         let { onClose: r, stickerPack: n } = e;
         (0, S.fP)();
-        let l = (0, c.e7)([x.Z], () => x.Z.isPremiumPack(n.id));
+        let l = (0, c.e7)([C.Z], () => C.Z.isPremiumPack(n.id));
         return (0, t.jsxs)(u.ModalFooter, {
-            className: v.footer,
+            className: k.footer,
             children: [
                 (0, t.jsx)(u.Anchor, {
                     onClick: r,
-                    className: v.skuPreviewFooterCloseButton,
-                    children: k.intl.string(k.t.cpT0Cg)
+                    className: k.skuPreviewFooterCloseButton,
+                    children: I.intl.string(I.t.cpT0Cg)
                 }),
                 l &&
                     (0, t.jsxs)(u.ShinyButton, {
                         color: u.Button.Colors.GREEN,
                         type: 'submit',
-                        innerClassName: v.premiumButtonInner,
+                        innerClassName: k.premiumButtonInner,
                         onClick: () => {
-                            r(), (0, P.Z)({ section: I.jXE.STICKER_PACK_VIEW_ALL });
+                            r(), (0, P.Z)({ section: v.jXE.STICKER_PACK_VIEW_ALL });
                         },
                         children: [
                             (0, t.jsx)(u.NitroWheelIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: v.premiumButtonNitroWheel
+                                className: k.premiumButtonNitroWheel
                             }),
-                            k.intl.string(k.t['w+kuhY'])
+                            I.intl.string(I.t['w+kuhY'])
                         ]
                     })
             ]
@@ -140,19 +140,19 @@ let y = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSION
     },
     D = (e) => {
         let { stickerPack: r, onClose: n } = e,
-            l = (0, E.sM)(r, 1024);
+            l = (0, x.sM)(r, 1024);
         return null == l
             ? null
             : (0, t.jsxs)(u.ModalHeader, {
-                  className: v.headerWithImage,
+                  className: k.headerWithImage,
                   children: [
                       (0, t.jsx)('div', {
                           role: 'image',
                           style: { backgroundImage: 'url('.concat(l, ')') },
-                          className: v.backgroundImage
+                          className: k.backgroundImage
                       }),
                       (0, t.jsx)(u.ModalCloseButton, {
-                          className: v.closeButton,
+                          className: k.closeButton,
                           onClick: n
                       })
                   ]

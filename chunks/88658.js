@@ -67,7 +67,7 @@ function p(e) {
           };
 }
 function f(e, t) {
-    return !t.verified || (null != e && d > Date.now() - new Date(e.created_at).getTime());
+    return !!(!t.verified || t.isStaff()) || (null != e && d > Date.now() - new Date(e.created_at).getTime());
 }
 ((a = r || (r = {}))[(a.UNDECIDED = 0)] = 'UNDECIDED'), (a[(a.OPTIN = 1)] = 'OPTIN'), (a[(a.OPTOUT = 2)] = 'OPTOUT');
 let g = {

@@ -3,7 +3,7 @@ t.d(n, {
         return A;
     },
     ZP: function () {
-        return w;
+        return Z;
     },
     sK: function () {
         return O;
@@ -22,12 +22,12 @@ var l = t(200651),
     h = t(686546),
     m = t(372769),
     f = t(134432),
-    g = t(703656),
-    x = t(314897),
+    x = t(703656),
+    g = t(314897),
     _ = t(271383),
     j = t(768581),
-    p = t(900849),
-    v = t(249842),
+    v = t(900849),
+    p = t(249842),
     E = t(838367),
     N = t(576306),
     P = t(914620),
@@ -98,23 +98,23 @@ function A() {
 function O(e) {
     var n, t;
     let { guild: r, channelId: c, messageId: d } = e,
-        { name: v, id: E, discoverySplash: N, icon: P, description: C, presenceCount: S, memberCount: y, emojis: A } = r,
-        O = (0, s.e7)([x.default], () => x.default.getId()),
-        Z = (0, s.e7)([_.ZP], () => _.ZP.isMember(E, O), [E, O]),
-        [w, R] = i.useState(!1),
-        U = (e) => {
-            if ((e.stopPropagation(), Z)) (0, g.XU)(E, c, d);
+        { name: p, id: E, discoverySplash: N, icon: P, description: C, presenceCount: S, memberCount: y, emojis: A } = r,
+        O = (0, s.e7)([g.default], () => g.default.getId()),
+        w = (0, s.e7)([_.ZP], () => _.ZP.isMember(E, O), [E, O]),
+        [Z, D] = i.useState(!1),
+        R = (e) => {
+            if ((e.stopPropagation(), w)) (0, x.XU)(E, c, d);
             else {
                 let e = {
                     page: T.ZY5.GUILD_CHANNEL,
                     section: T.jXE.GUILD_POPOUT,
                     object: T.qAy.CARD
                 };
-                (0, p.Ub)(E, e);
+                (0, v.Ub)(E, e);
             }
-            R(!0);
+            D(!0);
         },
-        D = j.ZP.getGuildDiscoverySplashURL({
+        U = j.ZP.getGuildDiscoverySplashURL({
             id: E,
             splash: N,
             size: 250 * (0, f.x_)()
@@ -133,23 +133,23 @@ function O(e) {
     return (
         null != L && L.length > 6 && null != A && ((L = null !== (t = null == A ? void 0 : A.slice(Math.max((null == A ? void 0 : A.length) - 6, 0))) && void 0 !== t ? t : []), (M = A.length - 6)),
         (0, l.jsxs)(u.Dialog, {
-            'aria-label': v,
+            'aria-label': p,
             className: I.guildPopout,
             children: [
-                null != D
+                null != U
                     ? (0, l.jsx)('img', {
-                          src: D,
+                          src: U,
                           alt: '',
                           className: I.splashImage
                       })
                     : null,
                 (0, l.jsxs)('div', {
-                    className: a()(I.body, { [I.hasSplash]: null != D }),
+                    className: a()(I.body, { [I.hasSplash]: null != U }),
                     children: [
                         (0, l.jsx)('div', {
-                            className: a()({ [I.iconWithSplash]: null != D }),
+                            className: a()({ [I.iconWithSplash]: null != U }),
                             children: (0, l.jsx)(u.Clickable, {
-                                onClick: U,
+                                onClick: R,
                                 children: (0, l.jsx)(h.ZP, {
                                     mask: h.ZP.Masks.SQUIRCLE,
                                     width: 88,
@@ -170,7 +170,7 @@ function O(e) {
                                 })
                             })
                         }),
-                        null != v
+                        null != p
                             ? (0, l.jsxs)('div', {
                                   className: I.guildNameWrapper,
                                   children: [
@@ -184,7 +184,7 @@ function O(e) {
                                       (0, l.jsx)(u.Text, {
                                           variant: 'text-md/semibold',
                                           className: I.guildName,
-                                          children: v
+                                          children: p
                                       })
                                   ]
                               })
@@ -285,8 +285,8 @@ function O(e) {
                             look: u.Button.Looks.FILLED,
                             color: u.Button.Colors.BRAND,
                             size: u.Button.Sizes.SMALL,
-                            onClick: U,
-                            submitting: w,
+                            onClick: R,
+                            submitting: Z,
                             autoFocus: !0,
                             children: b.intl.string(b.t['K+WeR0'])
                         })
@@ -296,7 +296,7 @@ function O(e) {
         })
     );
 }
-function Z(e) {
+function w(e) {
     let { guildId: n, channelId: t, messageId: r } = e,
         {
             loading: a,
@@ -312,7 +312,7 @@ function Z(e) {
             [n]
         );
     return (i.useEffect(() => {
-        null == c && !a && !o && (0, v.P)(n);
+        null == c && !a && !o && (0, p.P)(n);
     }, [c, n, a, o]),
     a)
         ? (0, l.jsx)(u.Dialog, {
@@ -328,11 +328,11 @@ function Z(e) {
                 messageId: r
             });
 }
-function w(e) {
+function Z(e) {
     return (0, N.h)()
         ? (0, l.jsx)(P.Z, {
               setPopoutRef: e.setPopoutRef,
               guildId: e.guildId
           })
-        : (0, l.jsx)(Z, { ...e });
+        : (0, l.jsx)(w, { ...e });
 }

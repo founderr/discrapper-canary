@@ -1,38 +1,38 @@
-i.r(e),
-    i.d(e, {
+n.r(e),
+    n.d(e, {
         default: function () {
             return E;
         }
     }),
-    i(47120);
-var n,
-    a,
-    o = i(200651),
-    r = i(192379),
-    c = i(541822),
-    s = i(442837),
-    l = i(481060),
-    d = i(728345),
-    u = i(812206),
-    _ = i(600164),
-    p = i(886176),
-    C = i(572004),
-    f = i(504211),
-    S = i(283836),
-    I = i(507608),
-    T = i(533159),
-    b = i(981631),
-    m = i(272242),
-    N = i(388032),
-    L = i(671702);
+    n(47120);
+var i,
+    o,
+    a = n(200651),
+    r = n(192379),
+    c = n(541822),
+    s = n(442837),
+    l = n(481060),
+    d = n(728345),
+    u = n(812206),
+    _ = n(600164),
+    p = n(886176),
+    C = n(572004),
+    f = n(504211),
+    S = n(283836),
+    I = n(507608),
+    T = n(533159),
+    b = n(981631),
+    m = n(272242),
+    N = n(388032),
+    L = n(671702);
 function E(t) {
-    let { onClose: e, transitionState: i, appId: n, guildId: a } = t,
-        E = (0, s.e7)([u.Z], () => u.Z.getApplication(n), [n]),
-        [h, g] = r.useState(() => (u.Z.isFetchingApplication(n) ? { status: 1 } : { status: 0 }));
+    let { onClose: e, transitionState: n, appId: i, guildId: o } = t,
+        E = (0, s.e7)([u.Z], () => u.Z.getApplication(i), [i]),
+        [h, g] = r.useState(() => (u.Z.isFetchingApplication(i) ? { status: 1 } : { status: 0 }));
     r.useEffect(() => {
         0 === h.status &&
             (g({ status: 1 }),
-            d.ZP.fetchApplication(n)
+            d.ZP.fetchApplication(i)
                 .then(() => {
                     g({ status: 2 });
                 })
@@ -42,45 +42,45 @@ function E(t) {
                         error: t.message
                     });
                 }));
-    }, [n, h.status]);
-    let { subscriptions: P, otps: O } = (0, S.q)(n);
+    }, [i, h.status]);
+    let { subscriptions: P, otps: O } = (0, S.q)(i);
     if (null == E) return null;
     let A = N.intl.formatToPlainString(N.t.XDRjs7, { appName: E.name });
-    return (0, o.jsxs)(l.ModalRoot, {
-        transitionState: i,
+    return (0, a.jsxs)(l.ModalRoot, {
+        transitionState: n,
         'aria-label': A,
         size: l.ModalSize.DYNAMIC,
         className: L.modal,
         children: [
-            (0, o.jsxs)(l.ModalHeader, {
+            (0, a.jsxs)(l.ModalHeader, {
                 className: L.modalHeader,
                 children: [
-                    (0, o.jsxs)('div', {
+                    (0, a.jsxs)('div', {
                         className: L.modalTitle,
                         children: [
-                            (0, o.jsx)(p.Z, {}),
-                            (0, o.jsx)(l.Heading, {
+                            (0, a.jsx)(p.Z, {}),
+                            (0, a.jsx)(l.Heading, {
                                 variant: 'heading-md/semibold',
                                 children: A
                             })
                         ]
                     }),
-                    (0, o.jsxs)('div', {
+                    (0, a.jsxs)('div', {
                         className: L.modalHeaderLinks,
                         children: [
                             C.wS &&
-                                (0, o.jsx)(l.Button, {
+                                (0, a.jsx)(l.Button, {
                                     look: l.ButtonLooks.BLANK,
                                     size: l.ButtonSizes.ICON,
                                     color: l.ButtonColors.TRANSPARENT,
                                     'aria-label': N.intl.string(N.t.WqhZsr),
                                     onClick: () => {
-                                        let t = ''.concat(location.protocol, '//').concat(location.host).concat(b.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(n, m.ApplicationDirectoryProfileSections.STORE));
-                                        (0, C.JG)(t), (0, l.showToast)((0, l.createToast)(N.intl.string(N.t['L/PwZW']), l.ToastType.SUCCESS)), (0, f.X)(n, f.B.STORE_MODAL);
+                                        let t = ''.concat(location.protocol, '//').concat(location.host).concat(b.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(i, m.ApplicationDirectoryProfileSections.STORE));
+                                        (0, C.JG)(t), (0, l.showToast)((0, l.createToast)(N.intl.string(N.t['L/PwZW']), l.ToastType.SUCCESS)), (0, f.X)(i, f.B.STORE_MODAL);
                                     },
-                                    children: (0, o.jsx)(l.LinkIcon, { size: 'sm' })
+                                    children: (0, a.jsx)(l.LinkIcon, { size: 'sm' })
                                 }),
-                            (0, o.jsx)(l.ModalCloseButton, {
+                            (0, a.jsx)(l.ModalCloseButton, {
                                 onClick: e,
                                 className: L.modalCloseBtn
                             })
@@ -88,25 +88,25 @@ function E(t) {
                     })
                 ]
             }),
-            (0, o.jsx)('div', {
+            (0, a.jsx)('div', {
                 className: L.scrollerWrapper,
-                children: (0, o.jsx)(c.Z, {
+                children: (0, a.jsx)(c.Z, {
                     className: L.scroller,
-                    children: (0, o.jsx)(I.AF, {
+                    children: (0, a.jsx)(I.AF, {
                         app: E,
-                        guildId: a,
+                        guildId: o,
                         subscriptions: P,
                         otps: O
                     })
                 })
             }),
-            (0, o.jsx)(l.ModalFooter, {
+            (0, a.jsx)(l.ModalFooter, {
                 justify: _.Z.Justify.END,
-                children: (0, o.jsx)(l.Text, {
+                children: (0, a.jsx)(l.Text, {
                     variant: 'text-md/normal',
                     children:
                         null != E.termsOfServiceUrl || null != E.privacyPolicyUrl
-                            ? (0, o.jsx)(T.Z, {
+                            ? (0, a.jsx)(T.Z, {
                                   termsOfServiceUrl: E.termsOfServiceUrl,
                                   privacyPolicyUrl: E.privacyPolicyUrl
                               })
@@ -116,4 +116,4 @@ function E(t) {
         ]
     });
 }
-((a = n || (n = {}))[(a.NONE = 0)] = 'NONE'), (a[(a.FETCHING = 1)] = 'FETCHING'), (a[(a.FETCHED = 2)] = 'FETCHED'), (a[(a.ERROR = 3)] = 'ERROR');
+((o = i || (i = {}))[(o.NONE = 0)] = 'NONE'), (o[(o.FETCHING = 1)] = 'FETCHING'), (o[(o.FETCHED = 2)] = 'FETCHED'), (o[(o.ERROR = 3)] = 'ERROR');
