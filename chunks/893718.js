@@ -501,18 +501,18 @@ function eP(e, n) {
                         [ep.channelTextAreaDisabled]: tY,
                         [ep.highlighted]: ej,
                         [ep.textAreaMobileThemed]: h.tq,
-                        [ep.inlineContainer]: t2
+                        [ep.inlineContainer]: t2,
+                        [ep.flushContainer]: t3
                     }),
                     children: [
-                        t2 ? null : (0, s.jsx)(es.Z, { bars: tQ }),
+                        t2 || t3 ? null : (0, s.jsx)(es.Z, { bars: tQ }),
                         (0, s.jsxs)('div', {
                             ref: te,
                             onScroll: tP,
                             className: u()(V, {
                                 [ep.scrollableContainer]: !0,
                                 [ep.themedBackground]: !e1,
-                                [ep.hasStackedBar]: tQ.stacked.length > 0,
-                                [ep.flushContainer]: t3
+                                [ep.hasStackedBar]: tQ.stacked.length > 0
                             }),
                             children: [
                                 (0, s.jsx)(ei.Z, {
