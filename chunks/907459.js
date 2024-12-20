@@ -127,6 +127,7 @@ function x(e) {
               children: (0, i.jsx)('div', {
                   ref: I,
                   className: o()(R.editor, g ? R.editorAnimate : null),
+                  'data-app-right-panel': !0,
                   children: (0, i.jsxs)(u.HeadingLevel, {
                       children: [
                           (0, i.jsx)(D, { markAsDismissed: r }),

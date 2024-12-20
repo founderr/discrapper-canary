@@ -176,6 +176,7 @@ function G(e) {
             value: r,
             children: (0, s.jsx)('div', {
                 ref: p,
+                'data-app-right-panel': !0,
                 className: u()(P.themeEditor, c ? P.editorAnimate : null),
                 children: (0, s.jsxs)(_.HeadingLevel, {
                     children: [

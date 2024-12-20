@@ -271,11 +271,12 @@ function $() {
         ? null
         : (0, r.jsxs)('div', {
               ref: e,
-              className: i()(K.container, 'DevTools'),
+              className: i()(K.container),
               style: {
                   minWidth: g.h,
                   width: n
               },
+              'data-app-right-panel': !0,
               children: [
                   (0, r.jsx)(X, {
                       resizableNode: e,
