@@ -1,18 +1,15 @@
 r.d(n, {
     ZP: function () {
-        return T;
+        return v;
     },
     k$: function () {
-        return S;
-    },
-    n0: function () {
-        return I;
+        return b;
     },
     p6: function () {
-        return g;
+        return m;
     },
     rs: function () {
-        return m;
+        return p;
     }
 });
 var i = r(47120);
@@ -22,14 +19,13 @@ var s = r(865427),
     l = r(202131),
     u = r(454585);
 r(665430);
-var c = r(55406),
-    d = r(408433),
-    f = r(981631);
-let _ = 30,
-    h = new Set([f.hBH.IMAGE, f.hBH.GIFV]),
-    p = new Set(['strong', 'em', 'u', 'text', 'inlineCode', 's', 'spoiler']);
-function m(e, n) {
-    let r = g({
+var c = r(408433),
+    d = r(981631);
+let f = 30,
+    _ = new Set([d.hBH.IMAGE, d.hBH.GIFV]),
+    h = new Set(['strong', 'em', 'u', 'text', 'inlineCode', 's', 'spoiler']);
+function p(e, n) {
+    let r = m({
             channelId: e.channel_id,
             messageId: e.id,
             renderOptions: n
@@ -42,7 +38,7 @@ function m(e, n) {
         mentionChannels: e.mentionChannels
     };
 }
-function g(e) {
+function m(e) {
     let { channelId: n, messageId: r, renderOptions: i } = e;
     return {
         channelId: n,
@@ -65,7 +61,7 @@ function g(e) {
         forceWhite: !!i.forceWhite
     };
 }
-function E(e, n, r) {
+function g(e, n, r) {
     var i;
     let { toAST: a = !1, hideSimpleEmbedContent: s = !0, formatInline: o = !1, postProcessor: u, shouldFilterKeywords: c, contentMessage: d } = r,
         f = !1,
@@ -80,15 +76,15 @@ function E(e, n, r) {
                   })
                 : _,
             !0,
-            m(n, r),
-            (e, r) => (!Array.isArray(e) && (e = [e]), s && (e = D(e, (null != d ? d : n).embeds)), !o && (e = A(e, r)), (e = v(e)), n.embeds.length > 0 && (f = C(e, r)), o && (e = L(e)), null != u && (e = u(e, r)), e)
+            p(n, r),
+            (e, r) => (!Array.isArray(e) && (e = [e]), s && (e = R(e, (null != d ? d : n).embeds)), !o && (e = y(e, r)), (e = E(e)), n.embeds.length > 0 && (f = A(e, r)), o && (e = O(e)), null != u && (e = u(e, r)), e)
         );
     return {
         hasSpoilerEmbeds: f,
         content: h
     };
 }
-function v(e) {
+function E(e) {
     let n = e.some((e) => 'link' !== e.type || !1);
     return e.filter((e) => {
         let r = 'link' === e.type,
@@ -96,17 +92,11 @@ function v(e) {
         return !(r && i && !n);
     });
 }
-function I(e, n, r) {
-    return {
-        hasSpoilerEmbeds: !1,
-        content: u.Z.reactParserFor(c.Z.getDefaultRules(n))(e.content, !1, null != r ? { changeLog: r } : {})
-    };
-}
-function T(e) {
+function v(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    return E(n.formatInline ? u.Z.parseInlineReply : u.Z.parse, e, n);
+    return g(n.formatInline ? u.Z.parseInlineReply : u.Z.parse, e, n);
 }
-function b(e, n) {
+function I(e, n) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { content: i, guildId: a, channelId: s, messageId: o } = n,
         l = {
@@ -140,7 +130,7 @@ function b(e, n) {
         (e) => (!Array.isArray(e) && (e = [e]), e)
     );
 }
-function y(e, n, r, i) {
+function T(e, n, r, i) {
     return e(
         n,
         !0,
@@ -163,49 +153,49 @@ function y(e, n, r, i) {
         (e) => (!Array.isArray(e) && (e = [e]), e)
     );
 }
-function S(e, n, r) {
-    return y(u.Z.parseAutoModerationSystemMessage, e, n, r);
+function b(e, n, r) {
+    return T(u.Z.parseAutoModerationSystemMessage, e, n, r);
 }
-function A(e, n) {
-    return n ? N(e) : ('paragraph' === e[0].type && e[0].content instanceof Array && (e[0].content = N(e[0].content)), e);
+function y(e, n) {
+    return n ? S(e) : ('paragraph' === e[0].type && e[0].content instanceof Array && (e[0].content = S(e[0].content)), e);
 }
-function N(e) {
+function S(e) {
     if (e.some((e) => 'emoji' !== e.type && 'customEmoji' !== e.type && 'soundboard' !== e.type && ('string' != typeof e.content || '' !== e.content.trim()) && !0)) return e;
     let n = 0;
     return (e.forEach((e) => {
-        if ((('emoji' === e.type || 'customEmoji' === e.type || 'soundboard' === e.type) && (n += 1), n > _)) return !1;
+        if ((('emoji' === e.type || 'customEmoji' === e.type || 'soundboard' === e.type) && (n += 1), n > f)) return !1;
     }),
-    n > _)
+    n > f)
         ? e
         : (e.forEach((e) => {
               e.jumboable = !0;
           }),
           e);
 }
-function C(e, n) {
-    return n ? O(e) : 'paragraph' === e[0].type && e[0].content instanceof Array && O(e[0].content);
+function A(e, n) {
+    return n ? C(e) : 'paragraph' === e[0].type && e[0].content instanceof Array && C(e[0].content);
 }
-function R(e, n) {
-    if (e instanceof Array) return e.some((e) => R(e, n));
+function N(e, n) {
+    if (e instanceof Array) return e.some((e) => N(e, n));
     let r = n(e);
     if (null != r) return r;
-    if (e.content instanceof Array) return R(e.content, n);
-    if (e.items instanceof Array) return e.items.some((e) => R(e, n));
+    if (e.content instanceof Array) return N(e.content, n);
+    if (e.items instanceof Array) return e.items.some((e) => N(e, n));
     else return !1;
 }
-function O(e) {
-    return R(e, (e) => ('spoiler' === e.type ? R(e, (e) => 'link' === e.type || 'attachmentLink' === e.type || null) : null));
+function C(e) {
+    return N(e, (e) => ('spoiler' === e.type ? N(e, (e) => 'link' === e.type || 'attachmentLink' === e.type || null) : null));
 }
-function D(e, n) {
+function R(e, n) {
     if (1 !== e.length || 1 !== n.length) return e;
     let r = e[0],
         i = n[0];
-    return ('link' === r.type || 'attachmentLink' === r.type) && h.has(i.type) && (0, d.dY)(i) ? [] : e;
+    return ('link' === r.type || 'attachmentLink' === r.type) && _.has(i.type) && (0, c.dY)(i) ? [] : e;
 }
-function L(e) {
+function O(e) {
     return (
         e.forEach((e) => {
-            p.has(e.type) && null != e.content && (Array.isArray(e.content) ? L(e.content) : (e.content = e.content.replace(/\n/g, ' ')));
+            h.has(e.type) && null != e.content && (Array.isArray(e.content) ? O(e.content) : (e.content = e.content.replace(/\n/g, ' ')));
         }),
         e
     );
