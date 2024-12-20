@@ -24,9 +24,9 @@ var i = n(200651),
     v = n(434404),
     C = n(496675),
     x = n(259580),
-    _ = n(267642),
+    Z = n(267642),
     I = n(624138),
-    Z = n(667815),
+    _ = n(667815),
     b = n(531572),
     S = n(26323),
     N = n(30513),
@@ -67,8 +67,8 @@ t.ZP = (e) => {
         r = (0, g.Q3)('GuildBoostingSidebarDisplay'),
         { analyticsLocations: u } = (0, m.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
         { premiumSubscriberCount: v, id: I } = t,
-        T = (0, _.rF)(v, I),
-        A = (0, _.FZ)(T, t.id),
+        T = (0, Z.rF)(v, I),
+        A = (0, Z.FZ)(T, t.id),
         w = null == A,
         L = null != A ? A : T,
         R = (0, c.e7)([b.Z], () => {
@@ -77,9 +77,9 @@ t.ZP = (e) => {
         }),
         D = (0, c.e7)([C.Z], () => C.Z.can(E.Plq.MANAGE_GUILD, t));
     l.useEffect(() => {
-        R !== v && (0, Z.v)(I, v);
+        R !== v && (0, _.v)(I, v);
     }, [I, R, v]);
-    let G = ''.concat(Math.min(100, (v / (0, _.vn)(t.id)[L]) * 100), '%'),
+    let G = ''.concat(Math.min(100, (v / (0, Z.vn)(t.id)[L]) * 100), '%'),
         { current: k } = l.useRef(G),
         B = {
             from: { width: R === v ? k : '0%' },
@@ -105,16 +105,16 @@ t.ZP = (e) => {
                     perkIntro: y.intl.string(y.t.ZhvSn5)
                 });
         },
-        H = y.intl.formatToPlainString(y.t['2oNfMT'], { levelName: (0, _.e9)(L) }),
+        H = y.intl.formatToPlainString(y.t['2oNfMT'], { levelName: (0, Z.e9)(L) }),
         F = y.intl.format(y.t.dhKnYm, {
             numBoosts: v,
-            numTotal: (0, _.vn)(t.id)[L]
+            numTotal: (0, Z.vn)(t.id)[L]
         });
-    w && ((H = (0, _.e9)(L)), (F = y.intl.format(y.t.B2byER, { numBoosts: v }))), r && (H = H.toLocaleLowerCase());
+    w && ((H = (0, Z.e9)(L)), (F = y.intl.format(y.t.B2byER, { numBoosts: v }))), r && (H = H.toLocaleLowerCase());
     let W = (0, s.JA)('boosts-'.concat(t.id));
     return (0, i.jsx)('li', {
         children: (0, i.jsx)(d.Tooltip, {
-            text: w ? y.intl.string(y.t['Y+V9go']) : y.intl.formatToPlainString(y.t.UyDKl5, { levelName: (0, _.nW)(L) }),
+            text: w ? y.intl.string(y.t['Y+V9go']) : y.intl.formatToPlainString(y.t.UyDKl5, { levelName: (0, Z.nW)(L) }),
             color: d.Tooltip.Colors.BLACK,
             position: 'top',
             delay: 200,

@@ -16,9 +16,9 @@ var i,
     v = n(420660),
     C = n(728345),
     x = n(812206),
-    _ = n(750881),
+    Z = n(750881),
     I = n(710845),
-    Z = n(38618),
+    _ = n(38618),
     b = n(656063),
     S = n(761282),
     N = n(814443),
@@ -97,8 +97,8 @@ function er(e, t, n) {
         g = t.map((e) => e.id),
         v = t.filter((t) => e.has(t.id)),
         C = !1,
-        _ = [],
-        Z = new Set(),
+        Z = [],
+        _ = new Set(),
         N = !1,
         A = [];
     for (let e of t) {
@@ -142,7 +142,7 @@ function er(e, t, n) {
             )
                 continue;
         } else if (null == g) continue;
-        if (!S.JE(o) || null == u || Z.has(u.id)) continue;
+        if (!S.JE(o) || null == u || _.has(u.id)) continue;
         let v = null != o ? en(o) : null;
         (null == v || v.id !== u.id) && (o = null);
         let D = [];
@@ -158,8 +158,8 @@ function er(e, t, n) {
                       return null != n && n.id === u.id;
                   })),
             (D = s().orderBy(D, [el], ['desc'])).length !== t.length && (C = !0),
-            Z.add(u.id),
-            _.push({
+            _.add(u.id),
+            Z.push({
                 game: u,
                 activity: o,
                 activityUser: e,
@@ -210,7 +210,7 @@ function er(e, t, n) {
         partiedMembers: t,
         showPlayingMembers: C,
         guildContext: u,
-        currentActivities: ((o = _),
+        currentActivities: ((o = Z),
         (c = (e) => {
             var t;
             return null !== (t = e.startedPlayingTime) && void 0 !== t ? t : 0;
@@ -221,7 +221,7 @@ function er(e, t, n) {
 }
 function ea(e) {
     return (
-        !!(0 !== e.voiceChannels.length && (0, _.$W)('now-playing-view-store')) &&
+        !!(0 !== e.voiceChannels.length && (0, Z.$W)('now-playing-view-store')) &&
         e.voiceChannels.length > 0 &&
         e.voiceChannels.some((e) => {
             let { voiceStates: t } = e;
@@ -231,7 +231,7 @@ function ea(e) {
 }
 function eo(e) {
     return (
-        !!(0 !== e.voiceChannels.length && (0, _.$W)('now-playing-view-store')) &&
+        !!(0 !== e.voiceChannels.length && (0, Z.$W)('now-playing-view-store')) &&
         e.voiceChannels.length > 0 &&
         e.voiceChannels.every((e) => {
             let { voiceStates: t } = e;
@@ -240,10 +240,10 @@ function eo(e) {
     );
 }
 function es(e) {
-    return !!(0, _.sb)('now-playing-view-store') && e.partiedMembers.some((e) => G.Z.isBlocked(e.id));
+    return !!(0, Z.sb)('now-playing-view-store') && e.partiedMembers.some((e) => G.Z.isBlocked(e.id));
 }
 function ec() {
-    return H && Z.Z.isConnected();
+    return H && _.Z.isConnected();
 }
 let eu = s().throttle(() => {
     !(function () {
@@ -269,7 +269,7 @@ let eu = s().throttle(() => {
                 .values()
                 .orderBy([ea, (e) => e.partiedMembers.length > 1, (e) => e.applicationStreams.length > 0, (e) => e.voiceChannels.length > 0, (e) => e.currentActivities.length > 0, (e) => e.isSpotifyActivity, (e) => e.priorityMembers.map((e) => e.user.username.toLowerCase()).join(' ')], ['asc', 'desc', 'desc', 'desc', 'desc', 'asc', 'asc'])
                 .value(),
-            { blockeeExperimentEnabled: n, blockerExperimentEnabled: i, analyticsEligible: l } = (0, _.p7)('now-playing-view-store');
+            { blockeeExperimentEnabled: n, blockerExperimentEnabled: i, analyticsEligible: l } = (0, Z.p7)('now-playing-view-store');
         l &&
             t.forEach((e) => {
                 let t = (0, c.EQ)({
@@ -283,23 +283,23 @@ let eu = s().throttle(() => {
                             blockerExperimentEnabled: !0,
                             party: c.P.when(es)
                         },
-                        () => _.h9.HIDE
+                        () => Z.h9.HIDE
                     )
                     .with(
                         {
                             blockeeExperimentEnabled: !0,
                             party: c.P.when(eo)
                         },
-                        () => _.h9.HIDE
+                        () => Z.h9.HIDE
                     )
                     .with(
                         {
                             blockeeExperimentEnabled: !0,
                             party: c.P.when(ea)
                         },
-                        () => _.h9.DERANK
+                        () => Z.h9.DERANK
                     )
-                    .otherwise(() => _.h9.SHOW);
+                    .otherwise(() => Z.h9.SHOW);
                 e.voiceChannels.forEach((e) => {
                     let { voiceStates: n, channel: i } = e,
                         l = s().map(n, 'userId'),
@@ -316,7 +316,7 @@ let eu = s().throttle(() => {
                 });
             }),
             (z = (W = t.filter((e) => {
-                let { blockeeExperimentEnabled: t, blockerExperimentEnabled: n } = (0, _.p7)('now-playing-view-store'),
+                let { blockeeExperimentEnabled: t, blockerExperimentEnabled: n } = (0, Z.p7)('now-playing-view-store'),
                     i = n && es(e),
                     l = t && eo(e);
                 return (e.voiceChannels.length >= 1 || e.currentActivities.length > 0 || e.applicationStreams.length > 0) && !i && !l;
@@ -339,7 +339,7 @@ function ed() {
 }
 class eh extends (i = u.ZP.Store) {
     initialize() {
-        this.syncWith([k.default, x.Z, D.Z, w.Z, B.Z, T.Z, G.Z, A.Z, N.Z], ed), this.waitFor(Z.Z, L.Z, x.Z, k.default, N.Z);
+        this.syncWith([k.default, x.Z, D.Z, w.Z, B.Z, T.Z, G.Z, A.Z, N.Z], ed), this.waitFor(_.Z, L.Z, x.Z, k.default, N.Z);
     }
     get currentActivityParties() {
         return W;

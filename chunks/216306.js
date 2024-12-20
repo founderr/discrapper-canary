@@ -1,6 +1,6 @@
 n.d(t, {
     Fo: function () {
-        return h;
+        return p;
     },
     KY: function () {
         return C;
@@ -36,31 +36,31 @@ var r = n(192379),
     N = n(592125),
     g = n(324067),
     R = n(306680),
-    O = n(709054),
-    f = n(981631),
+    f = n(709054),
+    O = n(981631),
     S = n(176505),
     D = n(443063),
     U = n(490897),
     L = n(388032);
-function p(e, t) {
+function h(e, t) {
     e.index = t;
 }
-function h(e, t, n, l) {
+function p(e, t, n, l) {
     l = l.toLowerCase();
     let s = (0, _.g)(e),
-        a = r.useCallback((e, t) => !(s && e.channel.hasFlag(S.zZ.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== f.d4z.GUILD_DIRECTORY && (0 === t.length || i()(t, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(t)), [s]);
+        a = r.useCallback((e, t) => !(s && e.channel.hasFlag(S.zZ.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== O.d4z.GUILD_DIRECTORY && (0 === t.length || i()(t, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(t)), [s]);
     return r.useMemo(() => {
         let e = {
             null: [],
             _categories: []
         };
         return (
-            n[f.d4z.GUILD_CATEGORY].forEach((n) => {
+            n[O.d4z.GUILD_CATEGORY].forEach((n) => {
                 let { channel: r } = n;
                 'null' === r.id && (e.null = t.null.filter((e) => a(e, l))), (e[r.id] = t[r.id].filter((e) => a(e, l)));
             }),
             (e._categories = t._categories.filter((t) => 'null' === t.channel.id || 0 === l.length || e[t.channel.id].length > 0)),
-            (0, c.Z)(e._categories, e).forEach(p),
+            (0, c.Z)(e._categories, e).forEach(h),
             e
         );
     }, [t, n, a, l]);
@@ -94,7 +94,7 @@ function M(e, t) {
                 messageId: R.ZP.lastMessageId(e)
             }))
         ),
-        null != n && (0, I.uL)(f.Z5c.CHANNEL(e, n));
+        null != n && (0, I.uL)(O.Z5c.CHANNEL(e, n));
 }
 function m(e, t, n, r) {
     let l = (0, d.wE)(E.z.CHANNEL_BROWSER_NUX),
@@ -142,5 +142,5 @@ function v(e) {
 }
 function b(e) {
     var t;
-    return L.intl.formatToPlainString(L.t['8N0BHR'], { timeAgo: a()(O.default.extractTimestamp(null !== (t = R.ZP.lastMessageId(e)) && void 0 !== t ? t : e)).fromNow() });
+    return L.intl.formatToPlainString(L.t['8N0BHR'], { timeAgo: a()(f.default.extractTimestamp(null !== (t = R.ZP.lastMessageId(e)) && void 0 !== t ? t : e)).fromNow() });
 }

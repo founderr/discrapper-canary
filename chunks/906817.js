@@ -56,7 +56,7 @@ function v(e, t) {
 t.ZP = l.memo(function (e) {
     let { sectionIndex: t, guild: n, guildChannels: m, guildChannelsVersion: g, selectedChannelId: v, disableManageChannels: C } = e,
         { isFavoritesPerk: x } = (0, a.z)('ChannelListSection'),
-        _ = l.useCallback(() => {
+        Z = l.useCallback(() => {
             let e = m.getCategoryFromSection(m.recentsSectionNumber);
             if (null == e) return;
             let t = null,
@@ -74,7 +74,7 @@ t.ZP = l.memo(function (e) {
         case m.recentsSectionNumber:
             return (0, i.jsx)(u.P, {
                 name: p.intl.string(p.t.gKcrqK),
-                onDismiss: _
+                onDismiss: Z
             });
         case m.voiceChannelsSectionNumber: {
             var I;

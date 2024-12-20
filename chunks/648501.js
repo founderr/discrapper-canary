@@ -21,9 +21,9 @@ var l = n(442837),
     v = n(790901),
     C = n(714794),
     x = n(355363),
-    _ = n(687352),
+    Z = n(687352),
     I = n(135724),
-    Z = n(25601),
+    _ = n(25601),
     b = n(981631),
     S = n(490897),
     N = n(388032),
@@ -50,7 +50,7 @@ function y(e) {
             return null !== (t = null === (e = h.Z.getGuild(n.guild_id)) || void 0 === e ? void 0 : e.hasFeature(b.oNc.COMMUNITY)) && void 0 !== t && t;
         });
     if ((0, C.Z)(G))
-        return (0, i.jsx)(Z.Z, {
+        return (0, i.jsx)(_.Z, {
             mentionsCount: G,
             isMentionLowImportance: k
         });
@@ -86,7 +86,7 @@ function y(e) {
                 color: r.Z.unsafe_rawColors.RED_400.css
             })
           : null != A && A && (0, v.u)(B)
-            ? (0, i.jsx)(_.Z, {
+            ? (0, i.jsx)(Z.Z, {
                   embeddedApps: B,
                   muted: R
               })

@@ -21,7 +21,7 @@ var i = n(200651),
     v = n(823379),
     C = n(51144),
     x = n(823469);
-let _ = d.u.SIZE_24;
+let Z = d.u.SIZE_24;
 function I(e) {
     var t, n;
     let { activity: r, user: a, embeddedApp: o, onOpenSpotifyAlbum: u } = e,
@@ -76,7 +76,7 @@ function I(e) {
           }))
         : C;
 }
-function Z(e) {
+function _(e) {
     let { activity: t, embeddedApp: n, onOpenSpotifyTrack: l } = e,
         r = null == t ? void 0 : t.details,
         a = null == t ? void 0 : t.name,
@@ -186,7 +186,7 @@ function E(e) {
                           (0, i.jsxs)('div', {
                               className: x.detailsAndAvatarsContainer,
                               children: [
-                                  (0, i.jsx)(Z, {
+                                  (0, i.jsx)(_, {
                                       activity: t,
                                       embeddedApp: n,
                                       onOpenSpotifyTrack: h
@@ -202,7 +202,7 @@ function E(e) {
                                           className: x.usersSummary,
                                           guildId: a.guild_id,
                                           users: E,
-                                          size: _,
+                                          size: Z,
                                           max: 7,
                                           renderUser: (e) => {
                                               var t;
@@ -217,7 +217,7 @@ function E(e) {
                                                       children: (0, i.jsx)(
                                                           'img',
                                                           {
-                                                              src: e.getAvatarURL(a.guild_id, _),
+                                                              src: e.getAvatarURL(a.guild_id, Z),
                                                               alt: l,
                                                               className: x.avatar
                                                           },

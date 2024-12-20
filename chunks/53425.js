@@ -16,7 +16,7 @@ t.Z = l.memo(function (e) {
         { density: v } = (0, s.useThemeContext)(),
         C = (0, c.Q3)('GuildSidebarThreadList'),
         x = (0, o.Wu)([u.Z], () => r.map((e) => u.Z.getChannel(e)).filter(h.lm), [r]),
-        _ = (0, o.e7)([d.ZP], () => {
+        Z = (0, o.e7)([d.ZP], () => {
             let e = x[x.length - 1];
             if (null == e) return 0;
             let t = d.ZP.getVoiceStates(e.guild_id)[e.id];
@@ -30,7 +30,7 @@ t.Z = l.memo(function (e) {
             children: [
                 (0, i.jsx)('div', {
                     className: a()(m.spineBorder, { [m.spineBorderWithGuildIcon]: g }),
-                    style: { bottom: (C && 'cozy' === v ? 28 : 24) + _ }
+                    style: { bottom: (C && 'cozy' === v ? 28 : 24) + Z }
                 }),
                 x.map((e, t) =>
                     (0, i.jsx)(

@@ -14,9 +14,9 @@ var i = n(200651),
     m = n(981631);
 t.Z = l.memo(function (e) {
     let { folderNode: t, ...g } = e,
-        { id: v, name: C, color: x, children: _ } = t,
-        I = _.map((e) => e.id),
-        Z = (0, s.Z)((e) => e.guildId),
+        { id: v, name: C, color: x, children: Z } = t,
+        I = Z.map((e) => e.id),
+        _ = (0, s.Z)((e) => e.guildId),
         b = (0, r.e7)([c.Z], () => c.Z.isFolderExpanded(v)),
         S = (function (e) {
             let t = e.children
@@ -64,7 +64,7 @@ t.Z = l.memo(function (e) {
         ...g,
         folderNode: t,
         expanded: b,
-        selected: null != Z && I.includes(Z),
+        selected: null != _ && I.includes(_),
         mentionCount: E,
         isMentionLowImportance: y,
         unread: j,

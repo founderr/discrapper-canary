@@ -23,9 +23,9 @@ var l = n(120356),
     v = n(378844),
     C = n(359110),
     x = n(922482),
-    _ = n(431328),
+    Z = n(431328),
     I = n(501655),
-    Z = n(427679),
+    _ = n(427679),
     b = n(368442),
     S = n(201469),
     N = n(680089),
@@ -90,9 +90,9 @@ class F extends L.ZP {
         return this.props.channelInfo;
     }
     render() {
-        let { channel: e, selected: t, connected: n, locked: l, connectChannelDropTarget: a, connectChannelDragSource: s, connectUserDropTarget: c, connectDragPreview: u, canReorderChannel: d, canMoveMembers: p, stageInstance: f, isSubscriptionGated: m, needSubscriptionToAccess: g, unread: v, resolvedUnreadSetting: C, mentionCount: x, isFavoriteSuggestion: _ } = this.props,
+        let { channel: e, selected: t, connected: n, locked: l, connectChannelDropTarget: a, connectChannelDragSource: s, connectUserDropTarget: c, connectDragPreview: u, canReorderChannel: d, canMoveMembers: p, stageInstance: f, isSubscriptionGated: m, needSubscriptionToAccess: g, unread: v, resolvedUnreadSetting: C, mentionCount: x, isFavoriteSuggestion: Z } = this.props,
             { shouldShowGuildVerificationPopout: I } = this.state,
-            Z = this.getVoiceStatesCount(),
+            _ = this.getVoiceStatesCount(),
             b = (0, i.jsxs)('li', {
                 className: r()(this.getModeClass(), { [O.disabled]: this.isDisabled() }),
                 'data-dnd-name': e.name,
@@ -112,7 +112,7 @@ class F extends L.ZP {
                                         className: O.iconVisibility,
                                         iconClassName: r()({ [V.iconLive]: null != f }),
                                         channel: e,
-                                        selected: !_ && t,
+                                        selected: !Z && t,
                                         connected: n,
                                         unread: n ? v : void 0,
                                         resolvedUnreadSetting: C,
@@ -126,17 +126,17 @@ class F extends L.ZP {
                                         },
                                         connectDragPreview: u,
                                         subtitle: this.renderSubtitle(),
-                                        isFavoriteSuggestion: _,
+                                        isFavoriteSuggestion: Z,
                                         'aria-label': (0, h.ZP)({
                                             channel: e,
                                             unread: v,
                                             mentionCount: x,
-                                            userCount: Z,
+                                            userCount: _,
                                             isSubscriptionGated: m,
                                             needSubscriptionToAccess: g
                                         }),
                                         ...c,
-                                        children: [_ && this.renderAcceptSuggestionButton(), _ && this.renderRemoveSuggestionButton(), !_ && this.renderOpenChatButton(), !_ && this.renderInviteButton(), !_ && this.renderEditButton(), !_ && this.renderChannelInfo()]
+                                        children: [Z && this.renderAcceptSuggestionButton(), Z && this.renderRemoveSuggestionButton(), !Z && this.renderOpenChatButton(), !Z && this.renderInviteButton(), !Z && this.renderEditButton(), !Z && this.renderChannelInfo()]
                                     });
                                 }
                             })
@@ -245,8 +245,8 @@ function z(e) {
         }),
         h = (0, a.e7)([N.Z], () => N.Z.isCollapsed(n.parent_id)),
         p = (0, S.ZP)(n.id),
-        f = (0, a.e7)([Z.Z], () => Z.Z.getStageInstanceByChannel(n.id), [n.id]),
-        m = (0, _.Rk)(n.id, I.pV.AUDIENCE),
+        f = (0, a.e7)([_.Z], () => _.Z.getStageInstanceByChannel(n.id), [n.id]),
+        m = (0, Z.Rk)(n.id, I.pV.AUDIENCE),
         { isSubscriptionGated: v, needSubscriptionToAccess: C } = (0, g.Z)(n.id),
         x = (0, a.e7)([A.ZP], () => A.ZP.isFavorite(t.id, n.id)),
         y = (0, b.xJ)(n.id),

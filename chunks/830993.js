@@ -22,14 +22,14 @@ var i = n(200651),
     v = n(355363),
     C = n(449932),
     x = n(561788),
-    _ = n(135724),
+    Z = n(135724),
     I = n(543432),
-    Z = n(981631),
+    _ = n(981631),
     b = n(388032),
     S = n(684393);
 function N(e) {
     var t, d;
-    let { channel: h, guild: p, onAction: m, voiceStates: v, isChannelSelected: x, shouldShowSettingNudge: _ } = e;
+    let { channel: h, guild: p, onAction: m, voiceStates: v, isChannelSelected: x, shouldShowSettingNudge: Z } = e;
     !(function (e, t) {
         let n = l.useMemo(() => {
             var n;
@@ -51,7 +51,7 @@ function N(e) {
     let I = (0, s.ZP)(h),
         N = Array.from((0, s.uF)(I).values()),
         y = null !== (t = null == v ? void 0 : v.filter(g.lm)) && void 0 !== t ? t : [],
-        j = (e) => (t) => ([Z.IIU.PLAYING, Z.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === Z.IIU.LISTENING,
+        j = (e) => (t) => ([_.IIU.PLAYING, _.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === _.IIU.LISTENING,
         T = (0, r.e7)(
             [f.Z],
             () => {
@@ -69,7 +69,7 @@ function N(e) {
                                               members: [],
                                               activity: n
                                           };
-                            s.members.push(t), !(0, c.Z)(s.activity, Z.xjy.JOIN) && (s.activity = n), (e[o] = s);
+                            s.members.push(t), !(0, c.Z)(s.activity, _.xjy.JOIN) && (s.activity = n), (e[o] = s);
                         }
                     }),
                     Object.values(e)
@@ -115,7 +115,7 @@ function N(e) {
                           t
                       );
                   }),
-                  _ &&
+                  Z &&
                       (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)('div', { className: S.headerDivider }),
@@ -145,7 +145,7 @@ function N(e) {
 }
 function E(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: l } = e,
-        a = (0, r.e7)([p.Z], () => !p.Z.can(Z.Plq.CONNECT, t)),
+        a = (0, r.e7)([p.Z], () => !p.Z.can(_.Plq.CONNECT, t)),
         o = (0, r.e7)([m.Z], () => m.Z.hasVideo(t.id)),
         s = (0, v.ZP)({
             channel: t,
@@ -161,7 +161,7 @@ function E(e) {
               children: [
                   (0, i.jsx)(x.Z, { channel: t }),
                   s
-                      ? (0, i.jsx)(_.Z, {
+                      ? (0, i.jsx)(Z.Z, {
                             userCount: l,
                             video: o,
                             channel: t

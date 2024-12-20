@@ -3,7 +3,7 @@ n.d(t, {
         return I;
     },
     y: function () {
-        return _;
+        return Z;
     }
 });
 var i = n(200651),
@@ -23,7 +23,7 @@ var i = n(200651),
     v = n(981631),
     C = n(388032),
     x = n(272371);
-function _(e, t, n) {
+function Z(e, t, n) {
     return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === v.IIU.PLAYING && (0, u.Z)(t, v.xjy.JOIN));
 }
 let I = l.memo(function (e) {
@@ -31,8 +31,8 @@ let I = l.memo(function (e) {
         r,
         u,
         I,
-        { stream: Z, canGoLive: b, guildId: S, isStreaming: N, channel: E, canStream: y, runningGame: j, embeddedActivity: T, activity: P, application: A, analyticsContext: w } = e,
-        M = _(A, P, T),
+        { stream: _, canGoLive: b, guildId: S, isStreaming: N, channel: E, canStream: y, runningGame: j, embeddedActivity: T, activity: P, application: A, analyticsContext: w } = e,
+        M = Z(A, P, T),
         L = l.useCallback(() => {
             a()(null != P, 'Received null activity'),
                 m.default.track(v.rMx.OPEN_MODAL, {
@@ -53,8 +53,8 @@ let I = l.memo(function (e) {
             []
         ),
         D = l.useCallback(() => {
-            (0, p.Z)(Z);
-        }, [Z]),
+            (0, p.Z)(_);
+        }, [_]),
         G = l.useCallback(() => {
             let e = null != E && (0, f.vd)(E.type) ? E : null,
                 t = null != e ? e.getGuildId() : S;
@@ -98,7 +98,7 @@ let I = l.memo(function (e) {
                       onClick: R(T.applicationId, T.location),
                       icon: o.DoorExitIcon
                   }),
-        O = null == Z ? null : (0, i.jsx)(h.Z, {});
+        O = null == _ ? null : (0, i.jsx)(h.Z, {});
     return null == k && null == B && null == U
         ? null
         : (0, i.jsxs)('div', {

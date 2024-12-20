@@ -23,9 +23,9 @@ var i,
     v = n(941128),
     C = n(780570),
     x = n(353042),
-    _ = n(981631),
+    Z = n(981631),
     I = n(388032),
-    Z = n(282115);
+    _ = n(282115);
 function b(e, t, n) {
     return (
         t in e
@@ -40,7 +40,7 @@ function b(e, t, n) {
     );
 }
 let S = {
-    [_.vxO.INSTALLING]: {
+    [Z.vxO.INSTALLING]: {
         [f.J6.NONE]: (e, t) => I.intl.formatToPlainString(I.t['p+2sEx'], { name: e }),
         [f.J6.SECONDS]: (e, t) =>
             I.intl.formatToPlainString(I.t['/0NgPD'], {
@@ -58,7 +58,7 @@ let S = {
                 timeRemaining: t
             })
     },
-    [_.vxO.UPDATING]: {
+    [Z.vxO.UPDATING]: {
         [f.J6.NONE]: (e, t) => I.intl.formatToPlainString(I.t['6F9QzM'], { name: e }),
         [f.J6.SECONDS]: (e, t) =>
             I.intl.formatToPlainString(I.t['2OVgVl'], {
@@ -76,7 +76,7 @@ let S = {
                 timeRemaining: t
             })
     },
-    [_.vxO.REPAIRING]: {
+    [Z.vxO.REPAIRING]: {
         [f.J6.NONE]: (e, t) => I.intl.formatToPlainString(I.t['p+2sEx'], { name: e }),
         [f.J6.SECONDS]: (e, t) =>
             I.intl.formatToPlainString(I.t['/0NgPD'], {
@@ -98,9 +98,9 @@ let S = {
 class N extends r.PureComponent {
     renderText() {
         let { state: e, isPaused: t } = this.props;
-        if (e.type === _.vxO.UPDATING || e.type === _.vxO.REPAIRING || e.type === _.vxO.INSTALLING) {
+        if (e.type === Z.vxO.UPDATING || e.type === Z.vxO.REPAIRING || e.type === Z.vxO.INSTALLING) {
             if (t) return I.intl.string(I.t['5oxtFR']);
-            if (e.stage === _.f07.PATCHING || e.stage === _.f07.REPAIRING)
+            if (e.stage === Z.f07.PATCHING || e.stage === Z.f07.REPAIRING)
                 return (0, l.jsx)(x.Z, {
                     getHistoricalTotalBytes: g.Z.getHistoricalTotalBytesWritten,
                     updateInterval: 5000,
@@ -162,7 +162,7 @@ class E extends (i = r.PureComponent) {
         let { percent: e, isPaused: t, className: n } = this.props;
         return (0, l.jsx)(s.Z.div, {
             style: { transform: [{ scale: this.state.animationScale }] },
-            className: o()(n, Z.progressContainer),
+            className: o()(n, _.progressContainer),
             onClick: this.handleOnClick,
             children: (0, l.jsx)(h.Tooltip, {
                 text: this.getTooltipText(),
@@ -177,7 +177,7 @@ class E extends (i = r.PureComponent) {
                             children: (0, l.jsx)(h.DownloadIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: Z.downloadIcon
+                                className: _.downloadIcon
                             })
                         })
                     })
@@ -189,7 +189,7 @@ class E extends (i = r.PureComponent) {
             b(this, 'state', { animationScale: new s.Z.Value(0) }),
             b(this, 'handleOnClick', (e) => {
                 let { onClick: t } = this.props;
-                e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, m.uL)(_.Z5c.APPLICATION_LIBRARY);
+                e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, m.uL)(Z.Z5c.APPLICATION_LIBRARY);
             });
     }
 }

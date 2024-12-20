@@ -21,7 +21,7 @@ function x(e) {
         return (t) => (0, i.jsx)(e, { ...t });
     });
 }
-function _() {
+function Z() {
     (0, m.C1)();
 }
 let I = (e) => {
@@ -94,7 +94,7 @@ t.Z = () => {
         children: (0, i.jsx)(c.Z, {
             disabled: r,
             tooltipText: null != o ? v.intl.formatToPlainString(v.t.HIMcv7, { hotkey: h.BB(null == o ? void 0 : o.shortcut, !0) }) : v.intl.string(v.t.s52pjo),
-            onClick: _,
+            onClick: Z,
             onContextMenu: x,
             icon: a.ClipsIcon
         })

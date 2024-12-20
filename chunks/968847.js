@@ -21,9 +21,9 @@ var i,
     v = n(592125),
     C = n(430824),
     x = n(306680),
-    _ = n(914010),
+    Z = n(914010),
     I = n(9156),
-    Z = n(938475),
+    _ = n(938475),
     b = n(823379),
     S = n(734307),
     N = n(981631);
@@ -53,7 +53,7 @@ function A(e) {
     return (!i || !l) && x.ZP.getMentionCount(e) > 0;
 }
 function w(e) {
-    return !I.ZP.isChannelMuted(e.guild_id, e.id) && (e.isGuildStageVoice() ? f.Z.getMutableParticipants(e.id, m.pV.SPEAKER).length > 0 : Z.ZP.getVoiceStatesForChannel(e).length > 0);
+    return !I.ZP.isChannelMuted(e.guild_id, e.id) && (e.isGuildStageVoice() ? f.Z.getMutableParticipants(e.id, m.pV.SPEAKER).length > 0 : _.ZP.getVoiceStatesForChannel(e).length > 0);
 }
 function M(e) {
     var t, n, i;
@@ -74,28 +74,28 @@ function M(e) {
         let t = v[e];
         if (((P(t.id) || u().some(t.threadIds, P)) && (h = !1), (A(t.id) || u().some(t.threadIds, A)) && (d = !1), m.includes(t.id) && (p = !0), !h && !d && p)) break;
     }
-    let _ = 0,
+    let Z = 0,
         I = !1,
-        Z = 0,
+        _ = 0,
         b = !1;
     if (h || d)
         for (let e = g.length - 1; e >= 0; e--) {
             let t = g[e];
-            (P(t.id) || u().some(t.threadIds, P)) && (null == o && (o = t.id), (I = !0)), (A(t.id) || u().some(t.threadIds, A)) && (null == a && (a = t.id), (_ += x.ZP.getMentionCount(t.id) + u().sumBy(t.threadIds, x.ZP.getMentionCount)));
+            (P(t.id) || u().some(t.threadIds, P)) && (null == o && (o = t.id), (I = !0)), (A(t.id) || u().some(t.threadIds, A)) && (null == a && (a = t.id), (Z += x.ZP.getMentionCount(t.id) + u().sumBy(t.threadIds, x.ZP.getMentionCount)));
         }
     if (h || d)
         for (let e = 0; e < C.length; e++) {
             let t = C[e];
             if (!h && !d) break;
-            (P(t.id) || u().some(t.threadIds, P)) && (null == c && (c = t.id), (b = !0)), (A(t.id) || u().some(t.threadIds, A)) && (null == s && (s = t.id), (Z += x.ZP.getMentionCount(t.id) + u().sumBy(t.threadIds, x.ZP.getMentionCount)));
+            (P(t.id) || u().some(t.threadIds, P)) && (null == c && (c = t.id), (b = !0)), (A(t.id) || u().some(t.threadIds, A)) && (null == s && (s = t.id), (_ += x.ZP.getMentionCount(t.id) + u().sumBy(t.threadIds, x.ZP.getMentionCount)));
         }
     let N = null,
         y = null,
         M = null !== (i = null == f ? void 0 : f.getChannelRecords()) && void 0 !== i ? i : [];
-    d && Z > 0
+    d && _ > 0
         ? (N = {
               mode: 'mentions',
-              mentionCount: Z,
+              mentionCount: _,
               targetChannelId: s
           })
         : !p && u().some(M, w)
@@ -111,10 +111,10 @@ function M(e) {
                 mentionCount: 0,
                 targetChannelId: c
             }),
-        d && _ > 0
+        d && Z > 0
             ? (y = {
                   mode: 'mentions',
-                  mentionCount: _,
+                  mentionCount: Z,
                   targetChannelId: a
               })
             : h &&
@@ -159,7 +159,7 @@ function k(e) {
         n = v.Z.getChannel(t);
     if (null == n) return !1;
     let i = C.Z.getGuild(n.guild_id);
-    return !!(null != i && i.hasFeature(N.oNc.COMMUNITY)) && _.Z.getGuildId() === n.guild_id && L(n.guild_id);
+    return !!(null != i && i.hasFeature(N.oNc.COMMUNITY)) && Z.Z.getGuildId() === n.guild_id && L(n.guild_id);
 }
 function B(e) {
     let { guildId: t } = e;
@@ -167,7 +167,7 @@ function B(e) {
 }
 class U extends (l = d.ZP.Store) {
     initialize() {
-        this.waitFor(S.Z, x.ZP, I.ZP, g.Z, Z.ZP, _.Z, C.Z);
+        this.waitFor(S.Z, x.ZP, I.ZP, g.Z, _.ZP, Z.Z, C.Z);
     }
     getUnreadStateForGuildId(e) {
         var t;
@@ -231,7 +231,7 @@ class U extends (l = d.ZP.Store) {
         CATEGORY_EXPAND_ALL: R,
         VOICE_STATE_UPDATES: function (e) {
             let { voiceStates: t } = e,
-                n = _.Z.getGuildId();
+                n = Z.Z.getGuildId();
             if (null == n || !new Set(t.map((e) => e.guildId)).has(n)) return !1;
             let i = j[n];
             return null != i && 'voice-channels' === i.bottomBar.mode && L(n);

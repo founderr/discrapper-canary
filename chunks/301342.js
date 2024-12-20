@@ -29,9 +29,9 @@ var i = n(200651),
     v = n(430824),
     C = n(496675),
     x = n(9156),
-    _ = n(203818),
+    Z = n(203818),
     I = n(438144),
-    Z = n(981631),
+    _ = n(981631),
     b = n(388032),
     S = n(147903);
 function N(e) {
@@ -39,11 +39,11 @@ function N(e) {
 }
 let E = l.memo(function (e) {
     let t,
-        { channel: r, connectChannelDragSource: h, connectChannelDropTarget: _, disableManageChannels: I, position: E, sortingPosition: y, hideIcon: j, children: T } = e,
+        { channel: r, connectChannelDragSource: h, connectChannelDropTarget: Z, disableManageChannels: I, position: E, sortingPosition: y, hideIcon: j, children: T } = e,
         P = (0, m.Q3)('CategoryChannel'),
         A = (0, s.e7)([x.ZP], () => x.ZP.isChannelMuted(r.getGuildId(), r.id)),
         w = (0, s.e7)([g.Z], () => g.Z.isCollapsed(r.id)),
-        M = (0, s.e7)([C.Z], () => C.Z.can(Z.Plq.MANAGE_CHANNELS, r));
+        M = (0, s.e7)([C.Z], () => C.Z.can(_.Plq.MANAGE_CHANNELS, r));
     t = null != y ? (E > y ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
     let L = l.useCallback(() => {
             w ? (0, u.mJ)(r.id) : (0, u.c4)(r.id);
@@ -67,7 +67,7 @@ let E = l.memo(function (e) {
             [r]
         ),
         D = l.useCallback(() => {
-            let e = r.type === Z.d4z.GUILD_CATEGORY ? null : r.type,
+            let e = r.type === _.d4z.GUILD_CATEGORY ? null : r.type,
                 t = r.getGuildId();
             null != t &&
                 (0, c.openModalLazy)(async () => {
@@ -182,7 +182,7 @@ let E = l.memo(function (e) {
                 T
             ]
         });
-    return null != _ && null != h ? _(h(V)) : V;
+    return null != Z && null != h ? Z(h(V)) : V;
 });
 t.ZP = (0, h.B)(E);
 let y = l.memo(function (e) {
@@ -220,7 +220,7 @@ let y = l.memo(function (e) {
     }),
     j = l.memo(function (e) {
         let { category: t } = e,
-            n = (0, s.e7)([_.Z], () => _.Z.isVoiceCategoryCollapsed(t.guild.id)),
+            n = (0, s.e7)([Z.Z], () => Z.Z.isVoiceCategoryCollapsed(t.guild.id)),
             r = l.useCallback(() => {
                 n ? (0, I.s)(t.guild.id) : (0, I.M)(t.guild.id);
             }, [t.guild.id, n]);
@@ -258,8 +258,8 @@ let y = l.memo(function (e) {
     }),
     T = l.memo(function (e) {
         let { category: t, channel: n } = e,
-            l = (0, s.e7)([_.Z], () => _.Z.isVoiceCategoryCollapsed(t.guild.id));
-        return l || null == n || n.record.type === Z.d4z.GUILD_CATEGORY
+            l = (0, s.e7)([Z.Z], () => Z.Z.isVoiceCategoryCollapsed(t.guild.id));
+        return l || null == n || n.record.type === _.d4z.GUILD_CATEGORY
             ? l
                 ? (0, i.jsx)('li', {
                       className: a()(S.containerDefault),

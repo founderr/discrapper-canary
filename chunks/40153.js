@@ -1,6 +1,6 @@
 n.d(t, {
     OG: function () {
-        return Z;
+        return _;
     },
     Zu: function () {
         return I;
@@ -70,7 +70,7 @@ function x(e) {
         className: a()(g.target)
     });
 }
-function _(e) {
+function Z(e) {
     let { name: t, targetNode: n, onDragOverChanged: r } = e,
         [{ canDrop: o, isOver: s }, u] = (0, c.L)(() => C([h.eD.GUILD], n, !0, !0));
     l.useEffect(() => {
@@ -119,7 +119,7 @@ function I(e) {
         })
     });
 }
-function Z(e) {
+function _(e) {
     let { children: t } = e,
         [, n] = (0, c.L)({ accept: [] });
     return (0, i.jsx)('div', {
@@ -140,7 +140,7 @@ t.ZP = l.memo(function (e) {
                 below: r
             }),
             o
-                ? (0, i.jsx)(_, {
+                ? (0, i.jsx)(Z, {
                       name: t,
                       targetNode: n,
                       onDragOverChanged: a

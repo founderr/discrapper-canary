@@ -24,9 +24,9 @@ var l = n(120356),
     v = n(594174),
     C = n(938475),
     x = n(823379),
-    _ = n(709054),
+    Z = n(709054),
     I = n(853856),
-    Z = n(981631),
+    _ = n(981631),
     b = n(388032),
     S = n(782451),
     N = n(572488);
@@ -51,14 +51,14 @@ function E(e, t) {
 function y() {
     var e, t;
     let n = (0, s.Wu)([I.Z, g.Z], () =>
-            _.default
+            Z.default
                 .keys(I.Z.getFavoriteChannels())
                 .map((e) => g.Z.getChannel(e))
                 .filter(x.lm)
         ),
         l = n.map((e) => e.id),
-        r = n.filter((e) => e.type === Z.d4z.GUILD_VOICE),
-        a = n.filter((e) => e.type === Z.d4z.GUILD_STAGE_VOICE).map((e) => e.id),
+        r = n.filter((e) => e.type === _.d4z.GUILD_VOICE),
+        a = n.filter((e) => e.type === _.d4z.GUILD_STAGE_VOICE).map((e) => e.id),
         h = (0, s.Wu)(
             [C.ZP],
             () =>

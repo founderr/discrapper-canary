@@ -16,9 +16,9 @@ var i = n(200651),
     v = n(35225),
     C = n(703656),
     x = n(769654),
-    _ = n(271383),
+    Z = n(271383),
     I = n(771845),
-    Z = n(727258),
+    _ = n(727258),
     b = n(276952),
     S = n(249792),
     N = n(40153),
@@ -56,7 +56,7 @@ t.Z = l.memo(function (e) {
     null == el && q > 0 ? (el = null !== (r = (0, T.Ne)(q, Y ? m.Z.BACKGROUND_ACCENT : m.Z.STATUS_DANGER)) && void 0 !== r ? r : void 0) : null == el && null != $ && (el = null !== (p = (0, T.jt)({ guildJoinRequestStatus: $ })) && void 0 !== p ? p : void 0);
     let er = null !== (R = e.lowerBadgeSize) && void 0 !== R ? R : { width: (0, d.getBadgeWidthForValue)(q) },
         [{ dragging: ea }, eo] = (0, o.c)({
-            type: Z.eD.GUILD,
+            type: _.eD.GUILD,
             item: () => (
                 requestAnimationFrame(() => {
                     null == k || k();
@@ -90,8 +90,8 @@ t.Z = l.memo(function (e) {
             let e = (0, v.V)(O.id);
             if (null != e) h.Z.preload(O.id, e);
         }, [U, O, z, X]),
-        ex = (0, c.e7)([_.ZP], () => _.ZP.isCurrentUserGuest(ee)),
-        e_ = l.useCallback(
+        ex = (0, c.e7)([Z.ZP], () => Z.ZP.isCurrentUserGuest(ee)),
+        eZ = l.useCallback(
             (e) => {
                 null != O && !ex && Q(e, O);
             },
@@ -106,7 +106,7 @@ t.Z = l.memo(function (e) {
             },
             [et]
         ),
-        eZ = l.useCallback(
+        e_ = l.useCallback(
             (e) => {
                 if (e) {
                     eg.delay();
@@ -150,7 +150,7 @@ t.Z = l.memo(function (e) {
                           K || eu(!1);
                       },
                       onMouseDown: eC,
-                      onContextMenu: e_,
+                      onContextMenu: eZ,
                       onKeyDown: eI,
                       icon: O.getIconURL((en ? 44 : 48) * 2, ed && V),
                       selected: H || ed,
@@ -194,7 +194,7 @@ t.Z = l.memo(function (e) {
                 ? (0, i.jsx)(N.ZP, {
                       name: O.name,
                       targetNode: D,
-                      onDragOverChanged: eZ
+                      onDragOverChanged: e_
                   })
                 : null
         ]

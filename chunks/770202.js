@@ -16,7 +16,7 @@ var i = n(200651),
     v = n(473403),
     C = n(981631),
     x = n(490897),
-    _ = n(831746);
+    Z = n(831746);
 function I(e, t, n) {
     return (
         t in e
@@ -30,7 +30,7 @@ function I(e, t, n) {
         e
     );
 }
-function Z(e, t) {
+function _(e, t) {
     let n = t.getGuildId();
     if (null == n) throw Error('TextChannel, preloadChannel: Channel does not have a guildId');
     s.Z.preload(n, t.id);
@@ -39,14 +39,14 @@ class b extends g.ZP {
     render() {
         let { channel: e, selected: t, connectChannelDropTarget: n, connectChannelDragSource: l, connectDragPreview: r, canReorderChannel: o } = this.props,
             s = (0, i.jsx)('li', {
-                className: a()(this.getClassName(), { [_.disabled]: this.isDisabled() }),
+                className: a()(this.getClassName(), { [Z.disabled]: this.isDisabled() }),
                 'data-dnd-name': e.name,
                 children: (0, i.jsxs)(v.Z, {
-                    className: _.iconVisibility,
+                    className: Z.iconVisibility,
                     channel: e,
                     selected: t,
                     onClick: this.handleClick,
-                    onMouseDown: Z,
+                    onMouseDown: _,
                     onContextMenu: this.handleContextMenu,
                     connectDragPreview: o ? r : null,
                     'aria-label': (0, d.ZP)({ channel: e }),

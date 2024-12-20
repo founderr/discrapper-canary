@@ -6,7 +6,7 @@ n.d(t, {
         return m;
     },
     xO: function () {
-        return p;
+        return h;
     }
 }),
     n(653041);
@@ -27,17 +27,17 @@ var r = n(200651),
     N = n(594174),
     g = n(934415),
     R = n(823379),
-    O = n(624138),
-    f = n(51144),
+    f = n(624138),
+    O = n(51144),
     S = n(909746),
     D = n(981631),
     U = n(388032),
     L = n(52330);
-function p(e, t) {
+function h(e, t) {
     let n = S.vc[e.targetType];
     return null != n && !0 === n[t.key];
 }
-let h = {
+let p = {
     [D.vB8.CREATE]: L.typeCreate,
     [D.vB8.UPDATE]: L.typeUpdate,
     [D.vB8.DELETE]: L.typeDelete
@@ -56,10 +56,10 @@ class M extends l.PureComponent {
     render() {
         var e, t;
         let { actionType: n, targetType: l, action: i, themeOverride: a } = this.props,
-            o = null != a ? L['themeOverride'.concat((0, O.De)(a))] : null;
+            o = null != a ? L['themeOverride'.concat((0, f.De)(a))] : null;
         let E = s()(
             L.icon,
-            h[n],
+            p[n],
             ((e = l),
             (t = i) === D.rsA.MESSAGE_DELETE
                 ? L.targetMessage
@@ -104,7 +104,7 @@ function m(e) {
                     E = o()
                         .flatten(
                             t.changes.map((i) => {
-                                if (p(t, i)) return null;
+                                if (h(t, i)) return null;
                                 let { oldValue: s, newValue: a } = (() => {
                                         if ((t.action === D.rsA.CHANNEL_UPDATE || t.action === D.rsA.CHANNEL_CREATE) && i.key === D.zUn.TYPE) {
                                             var e, n;
@@ -122,8 +122,8 @@ function m(e) {
                                         }
                                         if (t.action === D.rsA.GUILD_UPDATE && i.key === D.zUn.OWNER_ID)
                                             return {
-                                                oldValue: f.ZP.getUserTag(i.oldValue, { mode: 'username' }),
-                                                newValue: f.ZP.getUserTag(i.newValue, { mode: 'username' })
+                                                oldValue: O.ZP.getUserTag(i.oldValue, { mode: 'username' }),
+                                                newValue: O.ZP.getUserTag(i.newValue, { mode: 'username' })
                                             };
                                         return i;
                                     })(),
@@ -531,7 +531,7 @@ function m(e) {
                                         return null;
                                     })(),
                                     _ = e[i.key],
-                                    O = 'function' == typeof _ ? _(i) : _;
+                                    f = 'function' == typeof _ ? _(i) : _;
                                 return (function (e) {
                                     var t, n;
                                     let { changeItem: l, subChanges: i, changeNumber: s, log: a, oldValue: o, newValue: E, change: u } = e;
@@ -631,7 +631,7 @@ function m(e) {
                                               s
                                           );
                                 })({
-                                    changeItem: O,
+                                    changeItem: f,
                                     subChanges: E,
                                     changeNumber: ++l,
                                     log: t,

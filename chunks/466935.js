@@ -22,8 +22,8 @@ var i = n(200651),
 function x(e) {
     let { guild: t, selected: n } = e,
         x = (0, r.e7)([p.Z], () => p.Z.can(g.Plq.KICK_MEMBERS, t)),
-        _ = (0, r.e7)([c.Z], () => c.Z.getSubmittedGuildJoinRequestTotal(t.id)),
-        I = x && null != _ ? _ : 0;
+        Z = (0, r.e7)([c.Z], () => c.Z.getSubmittedGuildJoinRequestTotal(t.id)),
+        I = x && null != Z ? Z : 0;
     return (
         l.useEffect(() => {
             x &&

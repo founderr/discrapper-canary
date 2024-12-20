@@ -24,9 +24,9 @@ var i = n(200651),
     v = n(385499),
     C = n(570908),
     x = n(702321),
-    _ = n(201895),
+    Z = n(201895),
     I = n(43267),
-    Z = n(933557),
+    _ = n(933557),
     b = n(979264),
     S = n(588688),
     N = n(163889),
@@ -96,8 +96,8 @@ let q = V.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
             className: z.favoriteIcon
         });
 function $(e) {
-    let { route: t, selected: n, icon: l, iconClassName: r, avatarWithTextClassName: o, interactiveClassName: s, text: u, children: h, locationState: f, onClick: m, className: g, role: v, 'aria-posinset': x, 'aria-setsize': _, ...I } = e,
-        Z = (0, y.Q3)('PrivateChannelLinkButton');
+    let { route: t, selected: n, icon: l, iconClassName: r, avatarWithTextClassName: o, interactiveClassName: s, text: u, children: h, locationState: f, onClick: m, className: g, role: v, 'aria-posinset': x, 'aria-setsize': Z, ...I } = e,
+        _ = (0, y.Q3)('PrivateChannelLinkButton');
     return (0, i.jsx)(N.Z, {
         className: a()(z.channel, { [z.fullWidth]: d.tq }, g),
         onClick: m,
@@ -107,7 +107,7 @@ function $(e) {
             ...Y
         },
         'aria-posinset': x,
-        'aria-setsize': _,
+        'aria-setsize': Z,
         children: (0, i.jsx)(p.Interactive, {
             as: 'div',
             selected: n,
@@ -124,7 +124,7 @@ function $(e) {
                         selected: n,
                         muted: !1,
                         avatar: (0, i.jsx)(l, {
-                            size: Z ? 'refresh_sm' : void 0,
+                            size: _ ? 'refresh_sm' : void 0,
                             className: a()(z.linkButtonIcon, r),
                             color: 'currentColor'
                         }),
@@ -158,7 +158,7 @@ function ee(e) {
             blocked: G.Z.isBlocked(r.getRecipientId())
         })),
         ec = (0, h.e7)([D.ZP], () => D.ZP.getMentionCount(r.id) > 0),
-        eu = (0, Z.ZP)(r),
+        eu = (0, _.ZP)(r),
         ed = (0, h.e7)([j.Z], () => j.Z.isFavorite(r.id)),
         eh = () => {
             ee(!0);
@@ -224,7 +224,7 @@ function ee(e) {
                         });
                 });
         },
-        e_ = () => {
+        eZ = () => {
             let e = {
                 className: z.activity,
                 textClassName: z.activityText,
@@ -292,10 +292,10 @@ function ee(e) {
                 })
             );
         },
-        eZ = r.isMultiUserDM(),
+        e_ = r.isMultiUserDM(),
         eb = r.isSystemDM(),
         eS = (0, A.Q)(),
-        eN = !eZ && !eb && r.type === F.d4z.DM,
+        eN = !e_ && !eb && r.type === F.d4z.DM,
         eE = eN && (null == y ? void 0 : y.clan) != null,
         ey = eN && eo,
         ej = eN && es,
@@ -347,7 +347,7 @@ function ee(e) {
                             innerRef: et,
                             to: F.Z5c.CHANNEL(F.ME, r.id),
                             className: z.link,
-                            'aria-label': (0, _.ZP)({
+                            'aria-label': (0, Z.ZP)({
                                 channel: r,
                                 unread: ec
                             }),
@@ -357,7 +357,7 @@ function ee(e) {
                                 selected: d,
                                 highlighted: ec,
                                 muted: eP,
-                                subText: e_(),
+                                subText: eZ(),
                                 name: (0, i.jsx)(E.Z, {
                                     tooltipClassName: z.overflowTooltip,
                                     children: eT
@@ -375,8 +375,8 @@ function ee(e) {
                         ey ? (0, i.jsx)(K, {}) : null,
                         ej ? (0, i.jsx)(X, {}) : null,
                         (0, i.jsx)(Q, {
-                            'aria-label': eZ ? W.intl.string(W.t['26C4oq']) : W.intl.string(W.t.jsvgc3),
-                            onClick: eZ ? ex : ef,
+                            'aria-label': e_ ? W.intl.string(W.t['26C4oq']) : W.intl.string(W.t.jsvgc3),
+                            onClick: e_ ? ex : ef,
                             onMouseDown: eg
                         })
                     ]

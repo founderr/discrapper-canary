@@ -49,7 +49,7 @@ function x(e) {
         })
     });
 }
-function _(e) {
+function Z(e) {
     let { guild: t, controller: n, hasBanner: l, hasSubheader: r } = e,
         { value: s } = n.springs,
         u = t.hasFeature(m.oNc.DISCOVERABLE),
@@ -102,7 +102,7 @@ function I() {
     });
 }
 t.ZP = l.memo(function (e) {
-    let { bannerVisible: t, controller: n, className: r, onClick: o, onContextMenu: Z, onMouseDown: b, disableBannerAnimation: S, 'aria-expanded': N, 'aria-controls': E, guild: y, guildBanner: j, animationOverlayHeight: T, children: P, headerClassName: A, communityInfoVisible: w, hasSubheader: M } = e,
+    let { bannerVisible: t, controller: n, className: r, onClick: o, onContextMenu: _, onMouseDown: b, disableBannerAnimation: S, 'aria-expanded': N, 'aria-controls': E, guild: y, guildBanner: j, animationOverlayHeight: T, children: P, headerClassName: A, communityInfoVisible: w, hasSubheader: M } = e,
         L = y.hasFeature(m.oNc.ANIMATED_BANNER),
         R = (0, d.Z)(y),
         D = !R && y.hasCommunityInfoSubheader(),
@@ -151,7 +151,7 @@ t.ZP = l.memo(function (e) {
                             [C.communityInfoVisible]: G || (M && D)
                         }),
                         onMouseDown: b,
-                        onContextMenu: Z,
+                        onContextMenu: _,
                         onClick: o,
                         children: [
                             (0, i.jsxs)('header', {
@@ -181,7 +181,7 @@ t.ZP = l.memo(function (e) {
                                                         offset: 4
                                                     },
                                                     onClick: o,
-                                                    onContextMenu: Z,
+                                                    onContextMenu: _,
                                                     'aria-label': v.intl.formatToPlainString(v.t.xMXpl5, { guildName: null !== (l = null == y ? void 0 : y.toString()) && void 0 !== l ? l : '' })
                                                 }),
                                             (0, i.jsx)('div', {
@@ -191,7 +191,7 @@ t.ZP = l.memo(function (e) {
                                         ]
                                     }),
                                     D &&
-                                        (0, i.jsx)(_, {
+                                        (0, i.jsx)(Z, {
                                             guild: y,
                                             controller: n,
                                             hasBanner: null != j,

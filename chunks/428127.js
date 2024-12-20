@@ -23,7 +23,7 @@ let x = {
     friction: 30,
     tension: 300
 };
-function _(e) {
+function Z(e) {
     var t;
     let { guildChannels: n, jumpToVoiceChannels: r } = e,
         o = n.getCategoryFromSection(n.voiceChannelsSectionNumber),
@@ -73,7 +73,7 @@ function I(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: r, jumpToVoiceChannels: c, jumpToChannel: h } = e,
         p = (0, d.Q3)('UnreadBar'),
         { bottomBar: m, topBar: I } = (0, s.cj)([g.Z], () => g.Z.getUnreadStateForGuildId(n.id)),
-        Z = (0, s.e7)([f.Z], () => f.Z.isFocused()),
+        _ = (0, s.e7)([f.Z], () => f.Z.isFocused()),
         { mode: b, mentionCount: S, targetChannelId: N } = 'bottom' === t ? m : I,
         E = b === g.x.HIDDEN,
         y = (0, u.useSpring)(
@@ -81,7 +81,7 @@ function I(e) {
                 to: { transform: E ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
                 config: x
             },
-            Z ? 'respect-motion-settings' : 'animate-never'
+            _ ? 'respect-motion-settings' : 'animate-never'
         ),
         j = l.useCallback(
             (e) => {
@@ -141,7 +141,7 @@ function I(e) {
                               })
                           })
                         : b === g.x.VOICE_CHANNELS
-                          ? (0, i.jsx)(_, {
+                          ? (0, i.jsx)(Z, {
                                 jumpToVoiceChannels: c,
                                 guildChannels: n,
                                 guildChannelsVersion: r

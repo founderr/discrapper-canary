@@ -20,9 +20,9 @@ var i = n(200651),
     v = n(603592),
     C = n(981631),
     x = n(675999),
-    _ = n(388032),
+    Z = n(388032),
     I = n(940722);
-let Z = {
+let _ = {
     origin: {
         x: -16,
         y: 0
@@ -66,7 +66,7 @@ function S(e) {
             },
             selected: y,
             onContextMenu: b,
-            tooltip: _.intl.string(_.t.l5WIbW),
+            tooltip: Z.intl.string(Z.t.l5WIbW),
             icon: T ? a.CirclePlusIcon : a.PlusMediumIcon
         });
     return t
@@ -75,13 +75,13 @@ function S(e) {
               className: I.tutorialContainer,
               children: (0, i.jsxs)(p.Z, {
                   tutorialId: E ? 'create-more-servers' : 'create-first-server',
-                  inlineSpecs: Z,
+                  inlineSpecs: _,
                   position: 'right',
                   children: [
                       P,
                       null != n &&
                           (0, i.jsx)(g.ZP, {
-                              name: _.intl.string(_.t['45xjMz']),
+                              name: Z.intl.string(Z.t['45xjMz']),
                               targetNode: n,
                               below: !0,
                               noCombine: !0

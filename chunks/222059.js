@@ -21,9 +21,9 @@ var i = n(200651),
     v = n(594174),
     C = n(431),
     x = n(774343),
-    _ = n(417363),
+    Z = n(417363),
     I = n(941128),
-    Z = n(780570),
+    _ = n(780570),
     b = n(557177),
     S = n(278464),
     N = n(276952),
@@ -51,17 +51,17 @@ function R(e) {
     let { selected: t, user: n, badge: p, link: m, showProgressBadge: g } = e,
         v = (0, a.e7)([u.Z], () => u.Z.isEditorOpen),
         [C, x] = l.useState(!1),
-        [_, I] = l.useState(!1),
-        [Z, S] = l.useState(null),
+        [Z, I] = l.useState(!1),
+        [_, S] = l.useState(null),
         [P, R] = l.useState(0),
         D = (0, r.Ie)('home'),
         G = (0, h.Q3)('DefaultHomeButton'),
         k = () => {
-            S(null), R(0), clearTimeout(Z);
+            S(null), R(0), clearTimeout(_);
         };
     if (null == n) return null;
     let B = w.intl.string(w.t.YUU0RE);
-    _ && (B = o.K.get(T.wli) ? w.intl.string(w.t.nkq1l5) : w.intl.string(w.t.Be8Q5O));
+    Z && (B = o.K.get(T.wli) ? w.intl.string(w.t.nkq1l5) : w.intl.string(w.t.Be8Q5O));
     let U = null;
     !t &&
         g &&
@@ -79,7 +79,7 @@ function R(e) {
                 onMouseEnter: () => x(!0),
                 onMouseLeave: () => x(!1),
                 onClick: () => {
-                    if (!__OVERLAY__ && (null != Z && clearTimeout(Z), S(setTimeout(k, 500)), R(P + 1), 15 === P)) {
+                    if (!__OVERLAY__ && (null != _ && clearTimeout(_), S(setTimeout(k, 500)), R(P + 1), 15 === P)) {
                         k();
                         let e = !o.K.get(T.wli);
                         o.K.set(T.wli, e),
@@ -134,10 +134,10 @@ function R(e) {
 }
 function D() {
     let e = (0, S.n)(),
-        t = (0, a.e7)([I.Z, _.Z], () => {
-            let e = (0, c.E)(I.Z.activeItems, _.Z),
-                { total: t, progress: n } = Z.lK(e),
-                i = Z.xI(n, t);
+        t = (0, a.e7)([I.Z, Z.Z], () => {
+            let e = (0, c.E)(I.Z.activeItems, Z.Z),
+                { total: t, progress: n } = _.lK(e),
+                i = _.xI(n, t);
             return i > 0 && i < 100;
         }),
         n = (0, a.e7)([m.Z], () => m.Z.getPendingCount()),

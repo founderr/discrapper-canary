@@ -21,9 +21,9 @@ var i = n(200651),
     v = n(768581),
     C = n(709054),
     x = n(981631),
-    _ = n(124368),
+    Z = n(124368),
     I = n(388032),
-    Z = n(247472);
+    _ = n(247472);
 function b(e) {
     let { channel: t } = e,
         r = (0, o.Wu)([d.Z, m.ZP, f.Z], () => {
@@ -47,10 +47,10 @@ function b(e) {
             (0, h.q)();
         }, []),
         (0, i.jsxs)('div', {
-            className: Z.popout,
+            className: _.popout,
             children: [
                 (0, i.jsx)(s.Text, {
-                    className: Z.title,
+                    className: _.title,
                     variant: 'text-xs/bold',
                     color: 'header-secondary',
                     children: t.isForumLikeChannel() ? I.intl.string(I.t.ioVdOz) : I.intl.string(I.t.VNYs2t)
@@ -61,7 +61,7 @@ function b(e) {
                     .filter((e) => l.isValidElement(e))
                     .slice(0, c),
                 (0, i.jsx)(s.Clickable, {
-                    className: Z.more,
+                    className: _.more,
                     onClick: () => {
                         t.isForumLikeChannel()
                             ? (0, u.Kh)(t.id)
@@ -89,35 +89,35 @@ function S(e) {
         n = (0, o.e7)([g.default], () => g.default.getUser(t.ownerId)),
         l = (0, h.Ok)(t);
     return (0, i.jsxs)(s.Clickable, {
-        className: Z.row,
+        className: _.row,
         onClick: (e) => {
-            (0, p.ok)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, _.on.POPOUT);
+            (0, p.ok)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, Z.on.POPOUT);
         },
         children: [
             null == n
                 ? (0, i.jsx)('img', {
-                      className: Z.avatar,
+                      className: _.avatar,
                       src: v.ZP.getDefaultAvatarURL(void 0, void 0),
                       alt: ''
                   })
                 : (0, i.jsx)(c.Z, {
-                      className: Z.avatar,
+                      className: _.avatar,
                       user: n,
                       size: s.AvatarSizes.SIZE_16
                   }),
             (0, i.jsx)(s.Text, {
-                className: Z.name,
+                className: _.name,
                 variant: 'text-sm/normal',
                 color: 'none',
                 children: t.name
             }),
             (0, i.jsxs)(s.Text, {
-                className: Z.timestamp,
+                className: _.timestamp,
                 variant: 'text-sm/normal',
                 color: 'none',
                 children: [
                     (0, i.jsx)('span', {
-                        className: Z.bullet,
+                        className: _.bullet,
                         children: '\u2022'
                     }),
                     (0, h.Ye)(l)

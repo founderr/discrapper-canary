@@ -23,9 +23,9 @@ var i = n(200651),
     v = n(674552),
     C = n(593364),
     x = n(905423),
-    _ = n(199902),
+    Z = n(199902),
     I = n(592125),
-    Z = n(944486),
+    _ = n(944486),
     b = n(979651),
     S = n(709054),
     N = n(853856),
@@ -51,19 +51,19 @@ function L() {
             favoriteChannels: N.Z.getFavoriteChannels(),
             favoriteServerMuted: N.Z.favoriteServerMuted
         })),
-        k = (0, s.e7)([Z.Z], () => Z.Z.getChannelId(P.I_8)),
+        k = (0, s.e7)([_.Z], () => _.Z.getChannelId(P.I_8)),
         B = (0, s.e7)([I.Z], () => I.Z.getChannel(k)),
         U = (0, x.Z)((e) => e.guildId) === P.I_8,
         { badge: O, unread: V } = (0, y.Z)(G),
         H = (function (e) {
-            let t = (0, s.e7)([Z.Z], () => Z.Z.getVoiceChannelId()),
+            let t = (0, s.e7)([_.Z], () => _.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
-                i = (0, s.e7)([_.Z], () => {
+                i = (0, s.e7)([Z.Z], () => {
                     if (!n) return !1;
-                    let t = _.Z.getCurrentUserActiveStream();
+                    let t = Z.Z.getCurrentUserActiveStream();
                     return null != t && null != e[t.channelId];
                 }),
-                l = (0, s.e7)([_.Z], () => _.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
+                l = (0, s.e7)([Z.Z], () => Z.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
                 r = (0, s.e7)([b.Z], () => n && null != t && b.Z.hasVideo(t), [n, t]),
                 a = (0, s.Wu)([h.ZP], () => S.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
                 o = (0, s.e7)([h.ZP], () =>

@@ -16,9 +16,9 @@ var i = n(200651),
     v = n(636449),
     C = n(214629),
     x = n(566620),
-    _ = n(317381),
+    Z = n(317381),
     I = n(835473),
-    Z = n(933557),
+    _ = n(933557),
     b = n(194082),
     S = n(436774),
     N = n(594190),
@@ -198,12 +198,12 @@ t.Z = (0, m.Z)(function (e) {
         r = (0, c.e7)([G.default], () => G.default.getId()),
         a = (0, c.e7)([N.ZP, q.Z], () => (0, A.Z)(N.ZP, q.Z)),
         o = (0, c.e7)([W.Z, k.Z], () => k.Z.getChannel(W.Z.getVoiceChannelId())),
-        s = (0, c.e7)([_.ZP], () => _.ZP.getConnectedActivityChannelId()),
+        s = (0, c.e7)([Z.ZP], () => Z.ZP.getConnectedActivityChannelId()),
         u = (0, c.e7)([k.Z], () => k.Z.getChannel(s)),
         d = (0, c.e7)([U.Z], () => U.Z.getGuild(null == u ? void 0 : u.guild_id)),
         [h, p] = (0, c.Wu)([D.Z], () => [D.Z.getCurrentUserActiveStream(), D.Z.getStreamerActiveStreamMetadata()]),
         f = (0, c.e7)([g.Z], () => g.Z.useReducedMotion),
-        m = (0, c.e7)([_.ZP], () => (null != u ? _.ZP.getSelfEmbeddedActivityForChannel(u.id) : null)),
+        m = (0, c.e7)([Z.ZP], () => (null != u ? Z.ZP.getSelfEmbeddedActivityForChannel(u.id) : null)),
         x = (0, c.e7)([U.Z, V.Z, B.ZP], () => (null != o ? y.JL(o, U.Z, V.Z, !1) : null != n && y.h_(B.ZP.getChannels(n), U.Z, V.Z).length > 0)),
         [b] = (0, I.Z)([
             null !==
@@ -215,12 +215,12 @@ t.Z = (0, m.Z)(function (e) {
                 ? t
                 : ''
         ]),
-        S = (0, c.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
+        S = (0, c.e7)([Z.ZP], () => Z.ZP.getCurrentEmbeddedActivity()),
         E = (0, C.Z0)() && null != S && (0, v.R)(),
         T = (0, c.e7)([O.Z], () => (0, j.Z)(O.Z) && (0, Y.isWindows)()),
         P = (0, c.e7)([H.Z], () => (null != r ? H.Z.findActivity(r, (e) => e.type === $.IIU.PLAYING) : null)),
         w = null != h && h.ownerId === r && h.state !== $.jm8.ENDED,
-        L = (0, c.e7)([z.default, F.Z], () => (null != u ? (0, Z.F6)(u, z.default, F.Z) : void 0)),
+        L = (0, c.e7)([z.default, F.Z], () => (null != u ? (0, _.F6)(u, z.default, F.Z) : void 0)),
         R = (0, M.Z)();
     return (0, i.jsx)(ei, {
         ...l,

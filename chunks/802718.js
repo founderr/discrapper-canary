@@ -61,7 +61,7 @@ function v(e) {
                 })
             ]
         }),
-        _ = (0, c.Fg)();
+        Z = (0, c.Fg)();
     return (0, i.jsxs)(d.H, {
         children: [
             (0, i.jsx)(a.ThemeContextProvider, {
@@ -71,7 +71,7 @@ function v(e) {
                     tooltipClass: g.tooltip,
                     tooltipContentClass: g.tooltipContent,
                     children: (0, i.jsx)(a.ThemeContextProvider, {
-                        theme: _,
+                        theme: Z,
                         children: (0, i.jsx)(a.BlobMask, {
                             lowerBadge: (0, i.jsx)(a.NumberBadge, {
                                 count: 1,

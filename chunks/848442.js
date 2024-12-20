@@ -21,9 +21,9 @@ var l = n(120356),
     v = n(605236),
     C = n(703656),
     x = n(984933),
-    _ = n(430824),
+    Z = n(430824),
     I = n(626135),
-    Z = n(434479),
+    _ = n(434479),
     b = n(981631),
     S = n(176505),
     N = n(629481),
@@ -32,11 +32,11 @@ var l = n(120356),
 function j(e) {
     let { guildId: t, selected: n, handleClick: l } = e,
         u = (0, f.RF)(t, 'guild_shop_channel_row'),
-        m = (0, a.e7)([_.Z], () => _.Z.getGuild(t)),
+        m = (0, a.e7)([Z.Z], () => Z.Z.getGuild(t)),
         S = (null == m ? void 0 : m.hasFeature(b.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
         j = 'false' === s.K.get(N.tM, 'false'),
         T = (0, a.e7)([d.Z], () => d.Z.useReducedMotion);
-    return (0, i.jsx)(Z.m, {
+    return (0, i.jsx)(_.m, {
         id: 'shop-'.concat(t),
         className: r()(y.previewChannelRow, {
             [y.selected]: n,
@@ -105,7 +105,7 @@ function T(e) {
               selected: l,
               handleClick: a
           })
-        : (0, i.jsx)(Z.m, {
+        : (0, i.jsx)(_.m, {
               id: 'shop-'.concat(t.id),
               renderIcon: (e) =>
                   (0, i.jsx)(g.Z, {

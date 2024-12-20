@@ -20,9 +20,9 @@ var i = n(200651),
     v = n(540126),
     C = n(434479),
     x = n(981631),
-    _ = n(176505),
+    Z = n(176505),
     I = n(490897),
-    Z = n(388032),
+    _ = n(388032),
     b = n(518360);
 function S(e) {
     let { guild: t, selected: S } = e,
@@ -39,7 +39,7 @@ function S(e) {
             return null != e && e > i;
         }),
         A = l.useCallback(() => {
-            (0, f.uL)(x.Z5c.CHANNEL(t.id, N ? _.oC.CUSTOMIZE_COMMUNITY : _.oC.CHANNEL_BROWSER));
+            (0, f.uL)(x.Z5c.CHANNEL(t.id, N ? Z.oC.CUSTOMIZE_COMMUNITY : Z.oC.CHANNEL_BROWSER));
         }, [t.id, N]),
         w = l.useCallback(
             (e) => {
@@ -61,7 +61,7 @@ function S(e) {
             !P &&
             (M = (0, i.jsx)(s.TextBadge, {
                 color: o.Z.colors.BADGE_BRAND_BG.css,
-                text: Z.intl.string(Z.t.y2b7CA),
+                text: _.intl.string(_.t.y2b7CA),
                 className: b.newChannel
             })),
         (0, i.jsx)(C.m, {
@@ -72,7 +72,7 @@ function S(e) {
                     color: 'currentColor',
                     className: e
                 }),
-            text: N ? Z.intl.string(Z.t.h9mGOD) : Z.intl.string(Z.t.et6wam),
+            text: N ? _.intl.string(_.t.h9mGOD) : _.intl.string(_.t.et6wam),
             selected: S,
             onClick: A,
             onContextMenu: w,

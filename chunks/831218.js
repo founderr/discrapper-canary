@@ -16,9 +16,9 @@ var i,
     v = n(367907),
     C = n(453542),
     x = n(702321),
-    _ = n(82295),
+    Z = n(82295),
     I = n(313201),
-    Z = n(540059),
+    _ = n(540059),
     b = n(860144),
     S = n(214852),
     N = n(518311),
@@ -358,7 +358,7 @@ class B extends (l = o.Component) {
                     { showDMHeader: n } = this.props;
                 return 0 !== t && n
                     ? (0, a.jsxs)(
-                          _.Z,
+                          Z.Z,
                           {
                               className: D.privateChannelsHeaderContainer,
                               children: [
@@ -402,7 +402,7 @@ class B extends (l = o.Component) {
 }
 G(B, 'defaultProps', { padding: 8 });
 t.Z = (e) => {
-    let t = (0, Z.Q3)('ConnectedPrivateChannelsList'),
+    let t = (0, _.Q3)('ConnectedPrivateChannelsList'),
         { density: n } = (0, f.useThemeContext)(),
         { version: i, theme: l, children: r, showDMHeader: s } = e,
         c = o.Children.count(r),
@@ -423,7 +423,7 @@ t.Z = (e) => {
             version: null != i ? ''.concat(i, ':').concat(P.Z.getPrivateChannelsVersion()) : P.Z.getPrivateChannelsVersion()
         })),
         x = o.useRef(null),
-        _ = o.useCallback((e) => {
+        Z = o.useCallback((e) => {
             let t = x.current,
                 n = document.querySelector(e);
             null != t &&
@@ -467,7 +467,7 @@ t.Z = (e) => {
             scrollToStart: N,
             scrollToEnd: A,
             defaultFocused: (c + (s ? 1 : 0)).toString(),
-            setFocus: _
+            setFocus: Z
         });
     return (0, a.jsx)(u.bG, {
         navigator: R,

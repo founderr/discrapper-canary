@@ -16,14 +16,14 @@ var r,
 let N = [I.Plq.KICK_MEMBERS, I.Plq.BAN_MEMBERS, I.Plq.ADMINISTRATOR, I.Plq.MANAGE_CHANNELS, I.Plq.MANAGE_GUILD, I.Plq.MANAGE_MESSAGES, I.Plq.MANAGE_NICKNAMES, I.Plq.MANAGE_ROLES, I.Plq.MANAGE_WEBHOOKS, I.Plq.MANAGE_GUILD_EXPRESSIONS, I.Plq.MOVE_MEMBERS, I.Plq.MUTE_MEMBERS, I.Plq.DEAFEN_MEMBERS],
     g = null,
     R = [],
-    O = [],
     f = [],
+    O = [],
     S = [],
     D = [],
     U = [],
     L = [],
-    p = [],
-    h = !0,
+    h = [],
+    p = !0,
     C = !1,
     M = !1,
     m = !0,
@@ -92,7 +92,7 @@ function y(e) {
     let n = A.ZP.getMembers(g),
         r = T.Z.getGuild(g),
         l = null != g ? T.Z.getRoles(g) : void 0;
-    f = o()(n)
+    O = o()(n)
         .filter((e) =>
             e.roles.some((t) => {
                 if (null != r) {
@@ -105,12 +105,12 @@ function y(e) {
         .map((e) => e.userId)
         .value();
 }
-class z extends (r = u.ZP.Store) {
+class B extends (r = u.ZP.Store) {
     get logs() {
         return R;
     }
     get integrations() {
-        return O;
+        return f;
     }
     get webhooks() {
         return S;
@@ -125,10 +125,10 @@ class z extends (r = u.ZP.Store) {
         return L;
     }
     get applicationCommands() {
-        return p;
+        return h;
     }
     get isInitialLoading() {
-        return h;
+        return p;
     }
     get isLoading() {
         return C;
@@ -143,7 +143,7 @@ class z extends (r = u.ZP.Store) {
         return v;
     }
     get userIds() {
-        return f;
+        return O;
     }
     get userIdFilter() {
         return b;
@@ -162,7 +162,7 @@ class z extends (r = u.ZP.Store) {
     }
 }
 (s = 'GuildSettingsAuditLogStore'),
-    (i = 'displayName') in (l = z)
+    (i = 'displayName') in (l = B)
         ? Object.defineProperty(l, i, {
               value: s,
               enumerable: !0,
@@ -170,13 +170,13 @@ class z extends (r = u.ZP.Store) {
               writable: !0
           })
         : (l[i] = s),
-    (t.Z = new z(c.Z, {
+    (t.Z = new B(c.Z, {
         AUDIT_LOG_FETCH_START: function () {
             C = !0;
         },
         AUDIT_LOG_FETCH_SUCCESS: function (e) {
             var t;
-            (F = 0), (h = !1), (C = !1), (m = !0), (v = !1), (R = j(e.logs)), (O = e.integrations), (S = e.webhooks), (D = e.guildScheduledEvents), (U = null !== (t = e.automodRules) && void 0 !== t ? t : []), (L = e.threads), (p = e.applicationCommands), e.logs.length < I.Rg9 && (m = !1);
+            (F = 0), (p = !1), (C = !1), (m = !0), (v = !1), (R = j(e.logs)), (f = e.integrations), (S = e.webhooks), (D = e.guildScheduledEvents), (U = null !== (t = e.automodRules) && void 0 !== t ? t : []), (L = e.threads), (h = e.applicationCommands), e.logs.length < I.Rg9 && (m = !1);
         },
         AUDIT_LOG_FETCH_FAIL: function () {
             (C = !1), (v = !0), (R = []);
@@ -187,7 +187,7 @@ class z extends (r = u.ZP.Store) {
         },
         AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: function (e) {
             let { logs: t, integrations: n, webhooks: r, guildScheduledEvents: l, automodRules: i, threads: s, applicationCommands: a } = e;
-            if (((M = !1), (O = n), (S = r), (D = l), (U = i), (L = s), (p = a), (0 === t.length || t.length < I.Rg9) && (m = !1), t.length > 0)) {
+            if (((M = !1), (f = n), (S = r), (D = l), (U = i), (L = s), (h = a), (0 === t.length || t.length < I.Rg9) && (m = !1), t.length > 0)) {
                 let e = j(t);
                 R = [...R, ...e];
             }
@@ -213,6 +213,6 @@ class z extends (r = u.ZP.Store) {
             return (g = t), (x = null), y({ section: n });
         },
         GUILD_SETTINGS_CLOSE: function () {
-            (R = []), (f = []), (P = I.rsA.ALL), (b = null), (x = null), (G = {}), (F = 0), (h = !0), (O = []), (S = []), (D = []), (U = []), (L = []);
+            (R = []), (O = []), (P = I.rsA.ALL), (b = null), (x = null), (G = {}), (F = 0), (p = !0), (f = []), (S = []), (D = []), (U = []), (L = []);
         }
     }));
