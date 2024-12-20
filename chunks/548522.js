@@ -18,75 +18,84 @@ var i = n(200651),
     g = n(792942);
 function x(e) {
     var t;
-    let { guild: n, formFields: l } = e,
-        [c, h] = r.useState(l);
-    r.useEffect(() => h(l), [l]);
-    let x = null !== (t = (0, a.A)({ guildId: n.id })) && void 0 !== t ? t : 0,
-        [f, C] = r.useState(null),
-        v = r.useMemo(() => (null == c ? void 0 : c.some((e) => (0, s.J)(e))), [c]),
-        _ = r.useMemo(() => c.length === m.nx, [c]),
-        I = r.useCallback(
-            (e) => {
-                u.Z.setPendingMemberVerificationRules(n.id, e), h(e), null != f && C(null);
-            },
-            [f, n.id]
-        ),
-        N = r.useCallback(
-            (e) => {
-                I([...c, e]);
-            },
-            [c, I]
-        ),
+    let { guild: n, formFields: c } = e,
+        [x, f] = r.useState(c);
+    r.useEffect(() => f(c), [c]);
+    let C = null !== (t = (0, a.A)({ guildId: n.id })) && void 0 !== t ? t : 0,
+        [v, _] = r.useState(null),
+        I = r.useMemo(() => (null == x ? void 0 : x.some((e) => (0, s.J)(e))), [x]),
+        N = r.useMemo(() => x.length === m.nx, [x]),
         T = r.useCallback(
             (e) => {
-                I([...c.slice(0, e), ...c.slice(e + 1)]);
+                u.Z.setPendingMemberVerificationRules(n.id, e), f(e), null != v && _(null);
             },
-            [c, I]
+            [v, n.id]
         ),
         b = r.useCallback(
-            (e, t) => {
-                if (c[e] === t) return;
-                let n = [...c];
-                (n[e] = t), I(n);
+            (e) => {
+                T([...x, e]);
             },
-            [c, I]
+            [x, T]
         ),
         j = r.useCallback(
-            (e, t, n) => {
-                let i = c.indexOf(e),
-                    r = [...c];
-                null != t && t !== i && (r.splice(i, 1), r.splice(t, 0, e), h(r)), n ? (I(r), null !== f && C(null)) : f !== t && C(t);
+            (e) => {
+                T([...x.slice(0, e), ...x.slice(e + 1)]);
             },
-            [f, c, I]
+            [x, T]
+        ),
+        S = r.useCallback(
+            (e, t) => {
+                if (x[e] === t) return;
+                let n = [...x];
+                (n[e] = t), T(n);
+            },
+            [x, T]
+        ),
+        E = r.useCallback(
+            (e, t, n) => {
+                let i = x.indexOf(e),
+                    r = [...x];
+                null != t && t !== i && (r.splice(i, 1), r.splice(t, 0, e), f(r)), n ? (T(r), null !== v && _(null)) : v !== t && _(t);
+            },
+            [v, x, T]
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            c.map((e) =>
+            (0, i.jsx)(l.X6, {
+                variant: 'text-xs/bold',
+                color: 'text-muted',
+                className: g.title,
+                children: h.intl.format(h.t['sm+75u'], {
+                    currentCount: x.length,
+                    maxCount: m.nx
+                })
+            }),
+            x.map((e) =>
                 (0, d.a0)({
-                    dropHoveredIndex: f,
+                    dropHoveredIndex: v,
                     formField: e,
                     guild: n,
-                    index: c.indexOf(e),
+                    index: x.indexOf(e),
                     isDragEnabled: !0,
-                    submittedGuildJoinRequestsCount: x,
-                    removeFormField: T,
-                    updateFormField: b,
-                    updateFormFieldOrder: j,
-                    canRemove: c.length > 1,
+                    submittedGuildJoinRequestsCount: C,
+                    removeFormField: j,
+                    updateFormField: S,
+                    updateFormFieldOrder: E,
+                    canRemove: x.length > 1,
                     actionsLocation: 'side',
                     fieldStyle: s.it.COMPACT
                 })
             ),
-            !_ &&
+            !N &&
                 (0, i.jsx)('div', {
                     className: g.addQuestionsContainer,
                     children: (0, i.jsx)(o.Z, {
-                        addFormField: N,
+                        addFormField: b,
                         guild: n,
-                        allowTerms: !v
+                        allowTerms: !I
                     })
                 }),
-            !_ && (0, i.jsx)(p, { addFormField: N })
+            !N && (0, i.jsx)(p, { addFormField: b })
         ]
     });
 }

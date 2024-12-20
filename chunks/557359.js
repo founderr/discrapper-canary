@@ -67,6 +67,7 @@ function x(e) {
                                         tag: 'p',
                                         variant: 'text-sm/medium',
                                         color: 'text-secondary',
+                                        className: g.bodyText,
                                         children: h.intl.string(h.t.SzpUBA)
                                     })
                                 ]
@@ -78,14 +79,11 @@ function x(e) {
                         ]
                     }),
                     t &&
-                        (0, i.jsx)('div', {
-                            className: g.previewContainer,
-                            children: (0, i.jsx)(c.LinkButton, {
-                                text: h.intl.string(h.t.SKNnqq),
-                                icon: c.WindowLaunchIcon,
-                                variant: 'primary',
-                                onClick: f
-                            })
+                        (0, i.jsx)(c.LinkButton, {
+                            text: h.intl.string(h.t.SKNnqq),
+                            icon: c.WindowLaunchIcon,
+                            variant: 'primary',
+                            onClick: f
                         }),
                     (0, i.jsx)('div', {
                         className: s()(g.rules, { [g.disabled]: !t }),
