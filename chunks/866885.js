@@ -155,7 +155,9 @@ function G(e) {
             instance_id: null !== (i = null !== (r = Z.compositeInstanceId) && void 0 !== r ? r : Z.launchId) && void 0 !== i ? i : '',
             channel_id: o.id,
             location_id: null === (n = Z.location) || void 0 === n ? void 0 : n.id,
-            launch_id: Z.launchId
+            launch_id: Z.launchId,
+            referrer_id: Z.referrerId,
+            custom_id: Z.customId
         };
     return (
         null != o.guild_id && '' !== o.guild_id && (el.guild_id = o.guild_id),
