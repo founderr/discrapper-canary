@@ -10,54 +10,61 @@ var s = n(120356),
     d = n(594174),
     u = n(509545),
     m = n(78839),
-    h = n(74538),
-    g = n(393411),
-    p = n(474936),
-    x = n(388032),
-    S = n(461538);
-function T(e) {
-    let { user: t, planId: n, count: s, userPremiumSubscription: l } = e,
-        [a, d] = (0, o.Wu)([u.Z], () => [u.Z.get(n), null != l ? u.Z.get(l.planId) : null]);
-    if (null == a || h.ZP.getInterval(n).intervalType !== p.rV.MONTH) return null;
-    let m = null != d ? d.skuId : null,
-        g = a.skuId === m,
-        T = h.ZP.getDisplayName(n);
+    h = n(580130),
+    g = n(74538),
+    p = n(393411),
+    x = n(474936),
+    S = n(981631),
+    T = n(388032),
+    E = n(461538);
+function C(e) {
+    let t,
+        { user: n, planId: s, count: l, userPremiumSubscription: a, unconsumedFractionalPremiumUnits: d = [] } = e,
+        [m, h] = (0, o.Wu)([u.Z], () => [u.Z.get(s), null != a ? u.Z.get(a.planId) : null]);
+    if (null == m || g.ZP.getInterval(s).intervalType !== x.rV.MONTH) return null;
+    let p = null != h ? h.skuId : null,
+        C = m.skuId === p,
+        _ = g.ZP.getDisplayName(s);
+    if (null != a) {
+        let e;
+        (e = a.status === S.O0b.PAUSED && null != a.pauseEndsAt ? new Date(a.pauseEndsAt) : new Date(a.currentPeriodEnd)), (t = (0, g.N1)(e, d));
+    }
     return (0, i.jsxs)('div', {
-        className: S.accountCreditRow,
+        className: E.accountCreditRow,
         children: [
             (0, i.jsx)('div', {
                 className: r()({
-                    [S.iconBackgroundTier0]: a.skuId === p.Si.TIER_0,
-                    [S.iconBackgroundTier1]: a.skuId === p.Si.TIER_1,
-                    [S.iconBackgroundTier2]: a.skuId === p.Si.TIER_2
+                    [E.iconBackgroundTier0]: m.skuId === x.Si.TIER_0,
+                    [E.iconBackgroundTier1]: m.skuId === x.Si.TIER_1,
+                    [E.iconBackgroundTier2]: m.skuId === x.Si.TIER_2
                 }),
                 children: (0, i.jsx)(c.NitroWheelIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: S.icon
+                    className: E.icon
                 })
             }),
             (0, i.jsxs)('div', {
-                className: S.rowDetails,
+                className: E.rowDetails,
                 children: [
                     (0, i.jsx)(c.Heading, {
                         variant: 'heading-md/semibold',
-                        children: x.intl.format(x.t.LzobT0, { planName: T })
+                        children: T.intl.format(T.t.LzobT0, { planName: _ })
                     }),
-                    t.hasFreePremium() || (null != l && l.isPurchasedExternally)
+                    n.hasFreePremium() || (null != a && a.isPurchasedExternally)
                         ? null
                         : (0, i.jsx)(c.Heading, {
-                              className: S.rowApplied,
+                              className: E.rowApplied,
                               variant: 'heading-sm/semibold',
                               color: 'header-secondary',
-                              children: g && null != l ? x.intl.formatToPlainString(x.t['5CNRRE'], { date: l.currentPeriodEnd }) : x.intl.formatToPlainString(x.t.eNXZ5O, { planName: T })
+                              children: C && null != a ? T.intl.formatToPlainString(T.t['5CNRRE'], { date: null != t ? t : 0 }) : T.intl.formatToPlainString(T.t.eNXZ5O, { planName: _ })
                           })
                 ]
             }),
             (0, i.jsx)(c.Text, {
-                className: S.rowCreditCount,
+                className: E.rowCreditCount,
                 variant: 'text-md/semibold',
-                children: x.intl.format(x.t['ess/xs'], { count: s })
+                children: T.intl.format(T.t['ess/xs'], { count: l })
             })
         ]
     });
@@ -71,39 +78,41 @@ t.Z = function (e) {
             })
             .groupBy((e) => e.subscriptionPlanId)
             .value(),
-        l = (0, o.e7)([m.ZP], () => m.ZP.getPremiumSubscription()),
-        u = (0, o.e7)([m.ZP], () => null == m.ZP.getPremiumTypeSubscription()),
-        h = Object.keys(s).some((e) => e === p.Xh.PREMIUM_MONTH_TIER_1),
-        E = (0, o.e7)([d.default], () => d.default.getCurrentUser());
-    return null == E
+        l = (0, o.Wu)([h.Z], () => h.Z.getUnactivatedFractionalPremiumUnits()),
+        u = (0, o.e7)([m.ZP], () => m.ZP.getPremiumSubscription()),
+        g = (0, o.e7)([m.ZP], () => null == m.ZP.getPremiumTypeSubscription()),
+        S = Object.keys(s).some((e) => e === x.Xh.PREMIUM_MONTH_TIER_1),
+        _ = (0, o.e7)([d.default], () => d.default.getCurrentUser());
+    return null == _
         ? null
         : (0, i.jsxs)('div', {
               children: [
                   (0, i.jsx)('div', {
-                      className: r()(t, S.premiumSubscriptionAccountCredit, S.accountCreditsContainer),
+                      className: r()(t, E.premiumSubscriptionAccountCredit, E.accountCreditsContainer),
                       children: Object.keys(s).map((e) =>
                           (0, i.jsx)(
-                              T,
+                              C,
                               {
                                   planId: e,
                                   count: s[e].length,
-                                  userPremiumSubscription: l,
-                                  user: E
+                                  userPremiumSubscription: u,
+                                  user: _,
+                                  unconsumedFractionalPremiumUnits: l
                               },
                               e
                           )
                       )
                   }),
-                  h &&
-                      u &&
+                  S &&
+                      g &&
                       (0, i.jsxs)('div', {
                           children: [
                               (0, i.jsx)(c.Text, {
-                                  className: S.tier1AccountCreditHeader,
+                                  className: E.tier1AccountCreditHeader,
                                   variant: 'text-md/normal',
-                                  children: x.intl.string(x.t['VNr4+P'])
+                                  children: T.intl.string(T.t['VNr4+P'])
                               }),
-                              (0, i.jsx)(g.R, {})
+                              (0, i.jsx)(p.R, {})
                           ]
                       })
               ]
