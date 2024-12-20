@@ -530,7 +530,6 @@ function Q() {
                             setting: M.s6.NOTIFICATIONS_UNREAD_SETTINGS,
                             children: (0, i.jsx)(u.FormSwitch, {
                                 className: G.marginBottom40,
-                                style: { marginTop: -20 },
                                 value: n,
                                 disabled: r || !n,
                                 note: U.intl.string(U.t.frbLrK),
@@ -546,7 +545,9 @@ function Q() {
                                   value: n,
                                   disabled: r || n,
                                   note: 'Turns on the new notification system',
-                                  onChange: () => (0, A.R)(!0),
+                                  onChange: (e) => {
+                                      g.Z.setAccountFlag(w.c.USE_NEW_NOTIFICATIONS, e);
+                                  },
                                   children: U.intl.string(U.t.z21l8P)
                               })
                           })
