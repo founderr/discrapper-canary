@@ -31,8 +31,8 @@ var a = l(200651),
     E = l(176505),
     S = l(388032),
     M = l(588898),
-    k = l(247627);
-let y = Z.q + 300 + 64,
+    y = l(247627);
+let k = Z.q + 300 + 64,
     w = i.memo(function (e) {
         let { guild: n } = e;
         return (0, a.jsxs)(m.Z, {
@@ -56,7 +56,7 @@ function P(e) {
     let { guild: t, width: m } = e,
         S = (0, s.e7)([x.ZP], () => x.ZP.getSection(E.oC.GUILD_HOME)),
         [P, B] = i.useState(!1),
-        [T, R] = i.useState(A.$Y6),
+        [R, T] = i.useState(A.$Y6),
         H = S === A.ULH.SIDEBAR_CHAT,
         L = (0, d.useFocusJumpSection)(),
         D = (0, s.e7)([v.Z], () => v.Z.getSettings(t.id)),
@@ -64,8 +64,8 @@ function P(e) {
         U = (0, p.Z)(t.id),
         G = !U && (null !== (l = null == D ? void 0 : null === (n = D.resourceChannels) || void 0 === n ? void 0 : n.length) && void 0 !== l ? l : 0) === 0,
         O = (0, c.Z)('(max-width: 1300px)'),
-        z = m - A.PrS - T,
-        F = (H && z < y) || O || G;
+        z = m - A.PrS - R,
+        F = (H && z < k) || O || G;
     return (i.useEffect(() => {
         if (D === v.P) (0, C.cP)(t.id);
         else if (null != D) {
@@ -92,9 +92,9 @@ function P(e) {
         : (0, a.jsxs)(a.Fragment, {
               children: [
                   (0, a.jsxs)('div', {
-                      className: r()(k.chat, M.background, {
-                          [k.threadSidebarOpen]: H,
-                          [k.threadSidebarFloating]: H && P
+                      className: r()(y.chat, M.background, {
+                          [y.threadSidebarOpen]: H,
+                          [y.threadSidebarFloating]: H && P
                       }),
                       children: [
                           (0, a.jsx)(w, { guild: t }),
@@ -147,7 +147,7 @@ function P(e) {
                       ? (0, a.jsx)(Z.Z, {
                             pageWidth: m,
                             onSidebarResize: (e, n) => {
-                                B(n), R(e);
+                                B(n), T(e);
                             }
                         })
                       : null

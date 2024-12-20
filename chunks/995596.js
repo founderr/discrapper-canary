@@ -16,26 +16,26 @@ var l = t(200651),
     m = t(328977),
     x = t(571728),
     h = t(984370),
-    b = t(433355),
-    C = t(889711),
-    j = t(384433),
+    C = t(433355),
+    j = t(889711),
+    b = t(384433),
     g = t(388032),
     f = t(998810);
-let v = (e) => [
+let N = (e) => [
         {
-            id: j.e.ALL_MEMBERS,
+            id: b.e.ALL_MEMBERS,
             label: g.intl.string(g.t.NOOm1d)
         },
         {
-            id: j.e.PENDING,
-            label: 0 === e ? g.intl.string(g.t['4eQVBA']) : g.intl.formatToPlainString(g.t['Wo+zLy'], { count: e })
+            id: b.e.PENDING,
+            label: e > 0 ? g.intl.formatToPlainString(g.t['Wo+zLy'], { count: e }) : g.intl.string(g.t['4eQVBA'])
         },
         {
-            id: j.e.REJECTED,
+            id: b.e.REJECTED,
             label: g.intl.string(g.t.bSZklZ)
         }
     ],
-    N = (e) => {
+    v = (e) => {
         let { tabs: n, selectedTab: t, onTabSelect: i, onClose: r } = e;
         return (0, l.jsx)(d.Menu, {
             navId: 'members-tabs-overflow-menu',
@@ -82,7 +82,7 @@ function _(e) {
     return (0, l.jsx)(d.Popout, {
         renderPopout: (e) => {
             let { closePopout: i } = e;
-            return (0, l.jsx)(N, {
+            return (0, l.jsx)(v, {
                 selectedTab: r,
                 onClose: i,
                 tabs: t,
@@ -120,51 +120,51 @@ function _(e) {
     });
 }
 function E(e) {
-    var n;
-    let { guildId: t, currentTab: r, onTabSelect: a } = e,
-        [c, u] = i.useState(0),
-        N = i.useRef(null),
-        E = i.useRef(c),
-        T = v(null !== (n = (0, x.A)({ guildId: t })) && void 0 !== n ? n : 0),
+    let { guildId: n, currentTab: t, onTabSelect: r } = e,
+        [a, c] = i.useState(0),
+        u = i.useRef(null),
+        v = i.useRef(a),
+        E = (0, x.A)({ guildId: n }),
+        I = N(null != E ? E : 0),
         {
-            lastVisibleIndex: I,
+            lastVisibleIndex: T,
             onItemLayout: S,
             overflowItemsRef: p
         } = (0, o.zP)({
-            items: T,
+            items: I,
             itemGapPx: 16,
             maxLines: 1,
-            containerWidth: c - 200
+            containerWidth: a - 200
         }),
-        M = (0, s.e7)([b.ZP], () => null != b.ZP.getGuildSidebarState(t), [t]),
-        R = (0, m.L)({ guildId: t }),
-        A = i.useMemo(() => (r === j.e.ALL_MEMBERS ? M : null != R && null != R.user), [r, M, R]),
-        Z = i.useMemo(() => T.slice(0, I + 1), [I, T]),
-        k = i.useMemo(() => T.slice(I + 1), [I, T]),
-        B = i.useCallback(() => {
+        M = (0, s.e7)([C.ZP], () => null != C.ZP.getGuildSidebarState(n), [n]),
+        R = (0, m.L)({ guildId: n }),
+        A = i.useMemo(() => (t === b.e.ALL_MEMBERS ? M : null != R && null != R.user), [t, M, R]),
+        Z = i.useMemo(() => I.slice(0, T + 1), [T, I]),
+        k = i.useMemo(() => I.slice(T + 1), [T, I]),
+        L = i.useCallback(() => {
             var e;
-            let n = null === (e = N.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
-            null != n && E.current !== n.width && (u(n.width), (E.current = n.width));
+            let n = null === (e = u.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
+            null != n && v.current !== n.width && (c(n.width), (v.current = n.width));
         }, []);
     return (
         i.useEffect(() => {
-            let e = (0, C.pP)(B);
-            return (0, C.YP)(e, document.body), () => (0, C.UC)(e, document.body);
-        }, [B]),
+            let e = (0, j.pP)(L);
+            return (0, j.YP)(e, document.body), () => (0, j.UC)(e, document.body);
+        }, [L]),
         i.useEffect(() => {
-            B();
-        }, [B, A]),
+            L();
+        }, [L, A]),
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(h.Z.Divider, { className: f.divider }),
                 (0, l.jsxs)('div', {
                     className: f.tabsContainer,
-                    ref: N,
+                    ref: u,
                     children: [
                         (0, l.jsxs)('div', {
                             className: f.measurements,
                             children: [
-                                T.map((e, n) =>
+                                I.map((e, n) =>
                                     (0, l.jsx)(
                                         o.AJ,
                                         {
@@ -183,17 +183,17 @@ function E(e) {
                                     ref: p,
                                     children: (0, l.jsx)(_, {
                                         tabs: k,
-                                        onTabSelect: a,
-                                        selectedTab: r
+                                        onTabSelect: r,
+                                        selectedTab: t
                                     })
                                 })
                             ]
                         }),
                         (0, l.jsxs)(d.TabBar, {
                             'aria-label': g.intl.string(g.t.tcvVXF),
-                            selectedItem: r,
+                            selectedItem: t,
                             type: 'top-pill',
-                            onItemSelect: a,
+                            onItemSelect: r,
                             children: [
                                 Z.map((e) =>
                                     (0, l.jsx)(
@@ -209,8 +209,8 @@ function E(e) {
                                 0 !== k.length
                                     ? (0, l.jsx)(_, {
                                           tabs: k,
-                                          onTabSelect: a,
-                                          selectedTab: r
+                                          onTabSelect: r,
+                                          selectedTab: t
                                       })
                                     : null
                             ]

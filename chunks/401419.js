@@ -1,4 +1,4 @@
-l.d(t, {
+t.d(l, {
     Z: function () {
         return c;
     },
@@ -6,24 +6,24 @@ l.d(t, {
         return m;
     }
 });
-var n = l(200651);
-l(192379);
-var i = l(120356),
-    r = l.n(i),
-    a = l(729594),
-    s = l(388032),
-    o = l(112197);
+var n = t(200651);
+t(192379);
+var i = t(120356),
+    r = t.n(i),
+    a = t(729594),
+    o = t(388032),
+    s = t(112197);
 let d = ['sessionshare.sp-int.playstation.com', 'session-share.playstation.com'],
-    u = (e, t, l) => 'https://'.concat(e, '/embed/').concat(t, '?locale=').concat(l),
+    u = (e, l, t) => 'https://'.concat(e, '/embed/').concat(l, '?locale=').concat(t),
     m = ['PlayStation'],
-    h = (e, t) => {
-        let { host: l, pathname: n } = t,
+    h = (e, l) => {
+        let { host: t, pathname: n } = l,
             i = [];
         switch ((null != n && (i = n.split('/')), e)) {
             case 'PlayStation':
-                if (null == l || !d.includes(l) || 2 !== i.length) break;
+                if (null == t || !d.includes(t) || 2 !== i.length) break;
                 return {
-                    embedUrl: u(l, i[1], s.intl.currentLocale),
+                    embedUrl: u(t, i[1], o.intl.currentLocale),
                     style: {
                         width: 400,
                         height: 300,
@@ -34,22 +34,22 @@ let d = ['sessionshare.sp-int.playstation.com', 'session-share.playstation.com']
         return null;
     };
 function c(e) {
-    var t;
-    let l = e.embed.url,
-        i = null === (t = e.embed.provider) || void 0 === t ? void 0 : t.name;
-    if (null == l || null == i) return null;
-    let s = null;
+    var l;
+    let t = e.embed.url,
+        i = null === (l = e.embed.provider) || void 0 === l ? void 0 : l.name;
+    if (null == t || null == i) return null;
+    let o = null;
     try {
-        s = a.parse(l, !0);
+        o = a.parse(t, !0);
     } catch (e) {
         return null;
     }
-    let d = h(i, s);
+    let d = h(i, o);
     return null == d
         ? null
         : (0, n.jsx)('iframe', {
               src: d.embedUrl,
-              className: r()(o.embedIFrame, e.className),
+              className: r()(s.embedIFrame, e.className),
               style: d.style,
               sandbox: 'allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts'
           });

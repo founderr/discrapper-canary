@@ -24,28 +24,28 @@ let _ = {
 };
 function p(e) {
     let { media: n, fit: t = _.DEFAULT, obscured: r = !1, onContextMenu: p } = e,
-        { width: m, height: C, url: E, proxyUrl: g, alt: S, type: L, maxWidth: x, maxHeight: v, ...A } = n,
-        { width: O, height: b } = (0, s.zp)(null != m ? m : 0, null != C ? C : 0),
-        N = (0, o.q)({
-            proxyURL: g,
+        { width: m, height: C, url: E, proxyUrl: S, alt: g, type: L, maxWidth: O, maxHeight: x, ...A } = n,
+        { width: v, height: N } = (0, s.zp)(null != m ? m : 0, null != C ? C : 0),
+        R = (0, o.q)({
+            proxyURL: S,
             url: E
         }),
-        R = !(null == m || 0 === m || null == C || 0 === C);
-    if ('VIDEO' === L && R && null != g) {
+        b = !(null == m || 0 === m || null == C || 0 === C);
+    if ('VIDEO' === L && b && null != S) {
         var D;
         let e = (function (e) {
             let n = c.Z.toURLSafe(e);
             return null == n ? null : (n.searchParams.append('format', 'webp'), n.toString());
-        })(g);
+        })(S);
         if (null == e) return null;
         let t = null !== (D = n.renderLinkComponent) && void 0 !== D ? D : l.iT;
         return (0, a.jsx)(f.Z, {
             ...A,
-            src: N,
+            src: R,
             width: m,
             height: C,
-            maxWidth: O,
-            maxHeight: b,
+            maxWidth: v,
+            maxHeight: N,
             poster: e,
             naturalWidth: m,
             naturalHeight: C,
@@ -55,30 +55,30 @@ function p(e) {
             onMute: u.Zj,
             renderLinkComponent: t,
             autoPlay: !r,
-            alt: S,
+            alt: g,
             onContextMenu: p
         });
     }
     if ('IMAGE' === L)
-        return R
+        return b
             ? (0, a.jsx)(d.ZP, {
                   ...A,
                   imageClassName: i()(h.slide, t),
-                  src: N,
+                  src: R,
                   width: m,
                   height: C,
                   shouldLink: !1,
-                  maxWidth: O,
-                  maxHeight: b,
+                  maxWidth: v,
+                  maxHeight: N,
                   animated: !r && n.animated,
                   autoPlay: !r,
-                  alt: S,
+                  alt: g,
                   zoomThumbnailPlaceholder: n.zoomThumbnailPlaceholder,
                   onContextMenu: p
               })
             : (0, a.jsx)('img', {
-                  src: N,
-                  alt: S,
+                  src: R,
+                  alt: g,
                   className: i()(h.slide, t),
                   onContextMenu: p
               });

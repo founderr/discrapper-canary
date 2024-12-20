@@ -15,9 +15,9 @@ var l = t(200651),
     m = t(472596),
     x = t(598948),
     h = t(428936),
-    b = t(41586),
-    C = t(676391);
-function j(e) {
+    C = t(41586),
+    j = t(676391);
+function b(e) {
     let { guild: n } = e,
         t = (0, d.$j)(n.id),
         i = (0, c.useSpring)({
@@ -25,9 +25,9 @@ function j(e) {
             config: s.config.stiff
         });
     return (0, l.jsx)('div', {
-        className: C.loaderContainer,
+        className: j.loaderContainer,
         children: (0, l.jsx)(s.animated.div, {
-            className: C.loaderBar,
+            className: j.loaderBar,
             style: i
         })
     });
@@ -36,33 +36,33 @@ function g(e) {
     let { guild: n, className: t, onPageChange: r, onMemberSelect: s } = e,
         g = n.id,
         f = (0, o.e7)([u.Z], () => u.Z.getEstimatedMemberSearchCountByGuildId(g), [g]),
-        v = (0, d.$j)(g),
-        N = (0, d.M3)(g),
+        N = (0, d.$j)(g),
+        v = (0, d.M3)(g),
         _ = i.useCallback(
             (e) => {
                 if (null != e) null == s || s(e);
             },
             [s]
         ),
-        E = (0, m.xb)(N, v, f),
-        T = i.useRef(null),
+        E = (0, m.xb)(v, N, f),
         I = i.useRef(null),
+        T = i.useRef(null),
         S = i.useCallback(() => {
             var e;
-            null === (e = T.current) || void 0 === e || e.resetSearchText();
+            null === (e = I.current) || void 0 === e || e.resetSearchText();
         }, []);
     return (0, l.jsx)('div', {
-        className: a()(C.mainTableContainer, t),
+        className: a()(j.mainTableContainer, t),
         children: (0, l.jsxs)(c.AdvancedScroller, {
-            className: a()(C.horizatonalScroller),
-            ref: I,
+            className: a()(j.horizatonalScroller),
+            ref: T,
             orientation: 'horizontal',
             children: [
-                (0, l.jsx)(b.Z, {
+                (0, l.jsx)(C.Z, {
                     guild: n,
-                    ref: T
+                    ref: I
                 }),
-                (0, l.jsx)(j, { guild: n }),
+                (0, l.jsx)(b, { guild: n }),
                 (0, l.jsx)(x.Z, {
                     guild: n,
                     onSelectRow: _,

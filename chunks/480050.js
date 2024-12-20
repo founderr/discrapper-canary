@@ -8,16 +8,16 @@ var i = t(200651),
 n.Z = a.memo(function (e) {
     let { children: n, active: t, onClick: r, className: u, style: c, width: d, height: h, maxWidth: m, maxHeight: p } = e,
         f = (0, a.useRef)(null),
-        [g, _] = (0, a.useState)(!1),
+        [_, g] = (0, a.useState)(!1),
+        [S, E] = (0, a.useState)({
+            x: 0,
+            y: 0
+        }),
         [x, C] = (0, a.useState)({
             x: 0,
             y: 0
         }),
-        [S, v] = (0, a.useState)({
-            x: 0,
-            y: 0
-        }),
-        [E, I] = (0, a.useState)({
+        [v, I] = (0, a.useState)({
             x: 0,
             y: 0
         });
@@ -27,7 +27,7 @@ n.Z = a.memo(function (e) {
                 x: 0,
                 y: 0
             }),
-            v({
+            C({
                 x: 0,
                 y: 0
             }));
@@ -37,38 +37,38 @@ n.Z = a.memo(function (e) {
                 if (!t || 0 !== e.button) return;
                 e.preventDefault();
                 let { clientX: n, clientY: i } = e;
-                _(!0),
-                    C({
+                g(!0),
+                    E({
                         x: n,
                         y: i
                     }),
-                    v({
-                        x: n - E.x,
-                        y: i - E.y
+                    C({
+                        x: n - v.x,
+                        y: i - v.y
                     });
             },
-            [t, E]
+            [t, v]
         ),
-        b = (0, a.useCallback)(
+        M = (0, a.useCallback)(
             (e) => {
                 if (!t) {
                     0 === e.button && (null == r || r(e));
                     return;
                 }
-                (e.clientX - x.x) ** 2 + (e.clientY - x.y) ** 2 < 400 && (null == r || r(e)), _(!1);
+                (e.clientX - S.x) ** 2 + (e.clientY - S.y) ** 2 < 400 && (null == r || r(e)), g(!1);
             },
-            [t, r, x]
+            [t, r, S]
         ),
-        L = (0, a.useCallback)(
+        O = (0, a.useCallback)(
             (e) => {
                 var n;
-                if (!g) return;
+                if (!_) return;
                 let t = null === (n = f.current) || void 0 === n ? void 0 : n.getBoundingClientRect();
                 if (null == t) return;
                 let [i, a] = [t.width > window.innerWidth, t.height > window.innerHeight];
                 if (!i && !a) return;
-                let { x: r, y: l } = E,
-                    [o, s] = [i ? e.clientX - S.x : 0, a ? e.clientY - S.y : 0],
+                let { x: r, y: l } = v,
+                    [o, s] = [i ? e.clientX - x.x : 0, a ? e.clientY - x.y : 0],
                     [u, c] = [o - r, s - l];
                 i && u + t.x >= 0 && (o -= u + t.x), a && c + t.y >= 0 && (s -= c + t.y);
                 let [d, h] = [t.x + t.width, t.y + t.height];
@@ -79,29 +79,29 @@ n.Z = a.memo(function (e) {
                         y: s
                     });
             },
-            [g, E, S.x, S.y]
+            [_, v, x.x, x.y]
         ),
-        M = t ? (0, o.vV)(d, h, m, p) : 1,
-        A = (0, a.useCallback)(() => {
+        L = t ? (0, o.vV)(d, h, m, p) : 1,
+        b = (0, a.useCallback)(() => {
             let e = f.current;
             if (null == e) return !1;
-            let n = null != M ? M : 1;
+            let n = null != L ? L : 1;
             return e.offsetWidth * n > window.innerWidth || e.offsetHeight * n > window.innerHeight;
-        }, [M]);
+        }, [L]);
     return (0, i.jsx)('div', {
         ref: f,
         onMouseDown: y,
-        onMouseUp: b,
-        onMouseMove: L,
-        onMouseLeave: () => _(!1),
+        onMouseUp: M,
+        onMouseMove: O,
+        onMouseLeave: () => g(!1),
         className: l()(u, s.wrapper, {
-            [s.panning]: t && g,
-            [s.pannable]: t && A()
+            [s.panning]: t && _,
+            [s.pannable]: t && b()
         }),
         style: {
             ...(null != c ? c : {}),
-            translate: ''.concat(E.x, 'px ').concat(E.y, 'px'),
-            scale: ''.concat(null != M ? M : 1)
+            translate: ''.concat(v.x, 'px ').concat(v.y, 'px'),
+            scale: ''.concat(null != L ? L : 1)
         },
         children: n
     });

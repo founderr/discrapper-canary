@@ -14,9 +14,9 @@ var i = t(200651),
     x = t(665817);
 let g = Math.round((I.mT - 8) / 3),
     p = Math.round((I.mT - 4) / 2),
-    f = Math.round((I.Jj - 4) / 2),
-    C = Math.round((2 * (I.mT - 4)) / 3),
-    j = C / 2;
+    C = Math.round((I.Jj - 4) / 2),
+    f = Math.round((2 * (I.mT - 4)) / 3),
+    j = f / 2;
 function v(e) {
     let { visualMediaItems: n, footer: t } = e;
     null != t && r()(1 === n.length, 'footer only gets applied to single items');
@@ -27,12 +27,12 @@ function v(e) {
             isSingleImage: !0,
             footer: t
         });
-    if (2 === l) return (0, i.jsx)(T, { itemsForLayout: n });
-    if (3 === l) return (0, i.jsx)(E, { itemsForLayout: n });
-    if (4 === l) return (0, i.jsx)(M, { itemsForLayout: n });
+    if (2 === l) return (0, i.jsx)(E, { itemsForLayout: n });
+    if (3 === l) return (0, i.jsx)(M, { itemsForLayout: n });
+    if (4 === l) return (0, i.jsx)(T, { itemsForLayout: n });
     let o = l % 3;
     return (0, i.jsxs)(i.Fragment, {
-        children: [1 === o && (0, i.jsx)(y, { itemsForLayout: n.slice(0, o) }), 2 === o && (0, i.jsx)(T, { itemsForLayout: n.slice(0, o) }), 0 === o ? (0, i.jsx)(N, { itemsForLayout: n }) : (0, i.jsx)(N, { itemsForLayout: n.slice(o) })]
+        children: [1 === o && (0, i.jsx)(y, { itemsForLayout: n.slice(0, o) }), 2 === o && (0, i.jsx)(E, { itemsForLayout: n.slice(0, o) }), 0 === o ? (0, i.jsx)(N, { itemsForLayout: n }) : (0, i.jsx)(N, { itemsForLayout: n.slice(o) })]
     });
 }
 function y(e) {
@@ -44,7 +44,7 @@ function y(e) {
             [x.oneByOneGridMosaic]: !t,
             [x.hasFooter]: null != l
         }),
-        children: (0, i.jsx)(L, {
+        children: (0, i.jsx)(A, {
             props: o,
             useFullWidth: !t,
             isSingleItem: !0,
@@ -52,7 +52,7 @@ function y(e) {
         })
     });
 }
-function T(e) {
+function E(e) {
     let { itemsForLayout: n } = e;
     return (0, i.jsx)('div', {
         className: x.oneByTwoGrid,
@@ -61,7 +61,7 @@ function T(e) {
                 'div',
                 {
                     className: x.oneByTwoGridItem,
-                    children: (0, i.jsx)(L, {
+                    children: (0, i.jsx)(A, {
                         props: e,
                         maxWidth: p,
                         maxHeight: p
@@ -72,16 +72,16 @@ function T(e) {
         )
     });
 }
-function E(e) {
+function M(e) {
     let { itemsForLayout: n } = e;
     return (0, i.jsxs)('div', {
         className: s()(x.oneByTwoGrid, x.oneByTwoLayoutThreeGrid),
         children: [
             (0, i.jsx)('div', {
                 className: x.oneByTwoSoloItem,
-                children: (0, i.jsx)(L, {
+                children: (0, i.jsx)(A, {
                     props: n[0],
-                    maxWidth: C
+                    maxWidth: f
                 })
             }),
             (0, i.jsx)('div', {
@@ -93,10 +93,10 @@ function E(e) {
                             'div',
                             {
                                 className: x.twoByOneGridItem,
-                                children: (0, i.jsx)(L, {
+                                children: (0, i.jsx)(A, {
                                     props: e,
                                     maxWidth: j,
-                                    maxHeight: f
+                                    maxHeight: C
                                 })
                             },
                             e.item.uniqueId
@@ -107,17 +107,17 @@ function E(e) {
         ]
     });
 }
-function M(e) {
+function T(e) {
     let { itemsForLayout: n } = e;
     return (0, i.jsx)('div', {
         className: x.twoByTwoGrid,
         children: n.map((e) =>
             (0, i.jsx)(
-                L,
+                A,
                 {
                     props: e,
                     maxWidth: p,
-                    maxHeight: f
+                    maxHeight: C
                 },
                 e.item.uniqueId
             )
@@ -130,7 +130,7 @@ function N(e) {
         className: x.threeByThreeGrid,
         children: n.map((e) =>
             (0, i.jsx)(
-                L,
+                A,
                 {
                     props: e,
                     maxWidth: g,
@@ -147,7 +147,7 @@ let w = (e) => ({
         imgClassName: x.lazyImg
     }),
     O = (e) => ({ className: s()(e, x.lazyImg) });
-function L(e) {
+function A(e) {
     let { props: n, maxWidth: t = I.mT, maxHeight: l = I.Jj, useFullWidth: o = !0, isSingleItem: s = !1, footer: a } = e,
         r = n.item.type,
         u = {
@@ -229,7 +229,7 @@ n.Z = function (e) {
                             'div',
                             {
                                 className: x.nonVisualMediaItem,
-                                children: (0, i.jsx)(L, { props: e })
+                                children: (0, i.jsx)(A, { props: e })
                             },
                             e.item.uniqueId
                         )

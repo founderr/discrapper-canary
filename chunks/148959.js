@@ -34,7 +34,7 @@ function m(e, n, r) {
 let g = 10 * _.Z.Millis.SECOND,
     E = 10 * _.Z.Millis.SECOND;
 function v(e, n) {
-    !e && h.Z.captureMessage('Assert failed: ' + n);
+    !e && h.Z.captureMessage('Assert failed in GoLiveQualityManager: ' + n);
 }
 !(function (e) {
     (e.RequestedSSRCsUpdate = 'requested-ssrcs-update'), (e.RequestedStreamsUpdate = 'requested-streams-update');
@@ -60,7 +60,7 @@ class I extends c.Z {
             let e = null !== (o = null === (a = u().minBy(this.videoStreams, (e) => e.quality)) || void 0 === a ? void 0 : a.ssrc) && void 0 !== o ? o : 0,
                 n = null !== (l = null === (s = u().maxBy(this.videoStreams, (e) => e.quality)) || void 0 === s ? void 0 : s.ssrc) && void 0 !== l ? l : 0;
             (e !== this.lqSSRC || n !== this.hqSSRC || i) && ((this.lqSSRC = e), (this.hqSSRC = n), this.reset(), this.update());
-        } else this.update();
+        } else i && this.reset(), this.update();
     }
     setGoLiveStreamDowngraded(e) {
         if (!(!this.senderSupportsSimulcast() || this.isOneToOneCall()) && this.debugQualityOverride === p.Z.NO_OVERRIDE && e !== this.downgraded) this.isDowngradeChangeAllowed(e) && (this.logger.info('Setting downgraded to '.concat(e)), (this.downgraded = e), (this.lastDowngradeChangeTime = Date.now()), this.update());

@@ -1,6 +1,6 @@
 l.d(n, {
     Z: function () {
-        return y;
+        return k;
     },
     k: function () {
         return M;
@@ -100,7 +100,7 @@ function M(e) {
         ]
     });
 }
-function k(e) {
+function y(e) {
     var n;
     let { action: l, completed: o } = e,
         { channelId: c, title: u, emoji: h, icon: g } = l,
@@ -130,7 +130,7 @@ function k(e) {
         })
     });
 }
-function y(e) {
+function k(e) {
     var n;
     let { guildId: l } = e,
         s = (0, t.e7)([Z.Z], () => Z.Z.getNewMemberActions(l), [l]),
@@ -184,7 +184,7 @@ function y(e) {
                       }),
                   s.map((e) =>
                       (0, a.jsx)(
-                          k,
+                          y,
                           {
                               action: e,
                               completed: (null == d ? void 0 : d[e.channelId]) === !0,

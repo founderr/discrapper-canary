@@ -32,24 +32,24 @@ function _(e) {
         E = (0, d.e7)([p.default], () => p.default.getUser(null == t ? void 0 : t.authorIds[0])),
         S = i.useMemo(() => (null != b && null != E && (0, g.Y)(b, E) ? E : null), [b, E]),
         M = (0, d.e7)([p.default], () => p.default.getCurrentUser()),
-        k = (0, x.ZP)(null !== (n = null == S ? void 0 : S.id) && void 0 !== n ? n : '0', l),
-        { theme: y, primaryColor: w } = (0, f.Z)({
+        y = (0, x.ZP)(null !== (n = null == S ? void 0 : S.id) && void 0 !== n ? n : '0', l),
+        { theme: k, primaryColor: w } = (0, f.Z)({
             user: null != S ? S : void 0,
-            displayProfile: k
+            displayProfile: y
         }),
         P = (0, u.ZP)(),
-        B = (0, o.useToken)(o.tokens.colors.BACKGROUND_SECONDARY, y).hex(),
-        T = i.useMemo(() => {
+        B = (0, o.useToken)(o.tokens.colors.BACKGROUND_SECONDARY, k).hex(),
+        R = i.useMemo(() => {
             var e;
             return null !== (e = null == t ? void 0 : t.authorIds) && void 0 !== e ? e : [];
         }, [t]);
     i.useEffect(() => {
-        c.Z.requestMembersById(l, T);
-    }, [l, T]),
+        c.Z.requestMembersById(l, R);
+    }, [l, R]),
         i.useEffect(() => {
             null != S && (0, C.Z)(S.id, S.getAvatarURL(l, 48), { guildId: l });
         }, [S, l]);
-    let R = (0, j._T)(M),
+    let T = (0, j._T)(M),
         H = null != w ? (0, s.br)(w, 1) : B,
         L = (0, m.$0)(H);
     if (null == S || null == M || null == t) return null;
@@ -59,7 +59,7 @@ function _(e) {
         children: (0, a.jsxs)(v.Z, {
             className: N.welcomeMessageProfileContainer,
             user: S,
-            displayProfile: k,
+            displayProfile: y,
             profileType: null,
             themeOverride: P,
             forceShowPremium: !0,
@@ -128,7 +128,7 @@ function _(e) {
                                         )
                                     )
                                 });
-                            })(null == t ? void 0 : t.message, null != R ? R : M.username)
+                            })(null == t ? void 0 : t.message, null != T ? T : M.username)
                         })
                     ]
                 })

@@ -1,18 +1,18 @@
 n.r(t),
     n.d(t, {
         ApplicationCommandShareModal: function () {
-            return y;
+            return N;
         },
         useQueryForAppCommands: function () {
-            return N;
+            return y;
         }
     }),
     n(47120);
 var l = n(200651),
     r = n(192379),
     i = n(481060),
-    s = n(911969),
-    a = n(835473),
+    a = n(911969),
+    s = n(835473),
     o = n(987509),
     u = n(72214),
     c = n(592125),
@@ -30,17 +30,17 @@ let S = () => {
     (0, i.closeModal)(b.s);
 };
 function Z(e) {
-    let { sendLabel: t, canSend: n, isSending: s, onSend: a } = e,
+    let { sendLabel: t, canSend: n, isSending: a, onSend: s } = e,
         o = r.useCallback(() => {
-            a();
-        }, [a]);
+            s();
+        }, [s]);
     return (0, l.jsx)(i.ModalFooter, {
         className: v.footerWithMessage,
         children: (0, l.jsx)('div', {
             className: v.footerButtons,
             children: (0, l.jsx)(i.Button, {
                 className: v.sendWithMessage,
-                submitting: s,
+                submitting: a,
                 disabled: !n,
                 onClick: o,
                 children: t
@@ -48,10 +48,10 @@ function Z(e) {
         })
     });
 }
-function N(e, t) {
+function y(e, t) {
     return (0, f.v1)(
         e,
-        { commandTypes: [s.yU.CHAT] },
+        { commandTypes: [a.yU.CHAT] },
         {
             applicationId: t,
             allowFetch: !1,
@@ -59,11 +59,11 @@ function N(e, t) {
         }
     );
 }
-function y(e) {
-    let { applicationId: t, channel: n, command: s, onClose: f, onRequestSent: b, previewMessage: y, ..._ } = e,
+function N(e) {
+    let { applicationId: t, channel: n, command: a, onClose: f, onRequestSent: b, previewMessage: N, ..._ } = e,
         j = r.useMemo(() => (0, o.dL)(n.id), [n]),
         [E, M] = r.useState(!1),
-        { commands: L, loading: T } = N(n, t),
+        { commands: L, loading: T } = y(n, t),
         P = r.useRef(0),
         [w, A] = r.useState([j]),
         R = w.length,
@@ -83,7 +83,7 @@ function y(e) {
         q = r.useCallback(() => {
             f();
         }, [f]),
-        [W] = (0, a.Z)([t]),
+        [W] = (0, s.Z)([t]),
         z = r.useCallback(() => {
             I('');
         }, [I]),
@@ -110,9 +110,9 @@ function y(e) {
         ),
         [G, V] = r.useMemo(() => {
             if (T) return [null, !1];
-            let e = L.find((e) => e.untranslatedName === s);
+            let e = L.find((e) => e.untranslatedName === a);
             return void 0 !== e ? [e, !1] : [null, !0];
-        }, [s, L, T]),
+        }, [a, L, T]),
         X = r.useCallback(
             async function (e) {
                 let { closeAfterSend: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -216,7 +216,7 @@ function y(e) {
                             })
                         ]
                     }),
-                    void 0 !== y ? (0, l.jsx)(g.z, { previewMessage: y }) : null,
+                    void 0 !== N ? (0, l.jsx)(g.z, { previewMessage: N }) : null,
                     (0, l.jsx)(i.SearchBar, {
                         className: v.search,
                         ref: O,

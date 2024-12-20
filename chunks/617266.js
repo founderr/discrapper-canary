@@ -6,9 +6,9 @@ n.d(t, {
 var l = n(200651),
     r = n(192379),
     i = n(120356),
-    s = n.n(i),
-    a = n(913527),
-    o = n.n(a),
+    a = n.n(i),
+    s = n(913527),
+    o = n.n(s),
     u = n(91192),
     c = n(442837),
     d = n(481060),
@@ -23,8 +23,8 @@ var l = n(200651),
     C = n(987509),
     S = n(131704),
     Z = n(592125),
-    N = n(430824),
-    y = n(496675),
+    y = n(430824),
+    N = n(496675),
     _ = n(158776),
     j = n(306680),
     E = n(699516),
@@ -37,7 +37,7 @@ var l = n(200651),
     R = n(388032),
     k = n(5859);
 function D(e) {
-    let { destination: t, icon: n, label: i, subLabel: a, selected: o, disabled: c, onPressDestination: h, 'aria-setsize': m, 'aria-posinset': g } = e,
+    let { destination: t, icon: n, label: i, subLabel: s, selected: o, disabled: c, onPressDestination: h, 'aria-setsize': m, 'aria-posinset': g } = e,
         p = (0, u.JA)(t.id),
         b = r.useRef(!1),
         x = r.useCallback(() => {
@@ -54,7 +54,7 @@ function D(e) {
                     }));
         }),
         (0, l.jsxs)(d.Clickable, {
-            className: s()(k.destinationRow, { [k.disabled]: c }),
+            className: a()(k.destinationRow, { [k.disabled]: c }),
             onClick: x,
             'aria-selected': o,
             'aria-setsize': m,
@@ -82,7 +82,7 @@ function D(e) {
                                     className: k.subLabel,
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
-                                    children: a
+                                    children: s
                                 })
                             ]
                         })
@@ -102,8 +102,8 @@ function D(e) {
 function I(e) {
     let { user: t, subLabel: n, ...r } = e,
         i = P.ZP.useName(t),
-        s = P.ZP.useUserTag(t, { decoration: 'never' }),
-        a = (0, c.e7)([E.Z], () => E.Z.getNickname(t.id)),
+        a = P.ZP.useUserTag(t, { decoration: 'never' }),
+        s = (0, c.e7)([E.Z], () => E.Z.getNickname(t.id)),
         o = (0, c.e7)([_.Z], () => _.Z.getStatus(t.id));
     return (0, l.jsx)(D, {
         ...r,
@@ -113,14 +113,14 @@ function I(e) {
             user: t,
             status: o
         }),
-        label: null != a ? a : i,
-        subLabel: null != n ? n : s
+        label: null != s ? s : i,
+        subLabel: null != n ? n : a
     });
 }
 function F(e) {
     let { channel: t, subLabel: n, ...r } = e,
         i = (0, p.ZP)(t),
-        s = (0, v._)(t);
+        a = (0, v._)(t);
     return (0, l.jsx)(D, {
         ...r,
         icon: (0, l.jsx)(b.Z, {
@@ -130,14 +130,14 @@ function F(e) {
             experimentLocation: 'application-command-modal'
         }),
         label: i,
-        subLabel: null != n ? n : s
+        subLabel: null != n ? n : a
     });
 }
 function H(e) {
     let { channel: t, subLabel: n, ...r } = e,
-        i = (0, c.e7)([N.Z], () => N.Z.getGuild(null == t ? void 0 : t.guild_id)),
-        s = (0, p.ZP)(t),
-        a = (0, c.e7)([Z.Z, M.default, E.Z], () => {
+        i = (0, c.e7)([y.Z], () => y.Z.getGuild(null == t ? void 0 : t.guild_id)),
+        a = (0, p.ZP)(t),
+        s = (0, c.e7)([Z.Z, M.default, E.Z], () => {
             let e = Z.Z.getChannel(t.parent_id);
             return null == e ? null : (0, p.F6)(e, M.default, E.Z, !1);
         }),
@@ -156,7 +156,7 @@ function H(e) {
                     variant: 'text-xs/medium',
                     color: 'text-secondary',
                     lineClamp: 1,
-                    children: a
+                    children: s
                 }),
                 null != u
                     ? (0, l.jsxs)(l.Fragment, {
@@ -185,12 +185,12 @@ function H(e) {
             guild: i,
             channel: t
         }),
-        label: s,
+        label: a,
         subLabel: null != n ? n : h
     });
 }
 function U(e) {
-    let { rowData: t, selectedDestinations: n, handleToggleDestination: i, disableSelection: s, originDestination: a, ...o } = e,
+    let { rowData: t, selectedDestinations: n, handleToggleDestination: i, disableSelection: a, originDestination: s, ...o } = e,
         c = r.useMemo(() => [t.length], [t.length]),
         h = r.useCallback(() => 48, []),
         f = r.useMemo(() => {
@@ -216,18 +216,18 @@ function U(e) {
                     d = (0, C.hC)(c),
                     h = (function (e, t) {
                         if (t instanceof S.Sf && (0, S.Km)(t.type)) {
-                            if (null != t.rateLimitPerUser && t.rateLimitPerUser > 0 && !(y.Z.can(w.Plq.MANAGE_CHANNELS, t) || y.Z.can(w.Plq.MANAGE_MESSAGES, t))) return { label: R.intl.string(R.t.Icu3bW) };
-                            if (t.isThread() || t.isForumPost() || !y.Z.can(w.Plq.USE_APPLICATION_COMMANDS, t)) return { label: R.intl.string(R.t.v8MLq6) };
+                            if (null != t.rateLimitPerUser && t.rateLimitPerUser > 0 && !(N.Z.can(w.Plq.MANAGE_CHANNELS, t) || N.Z.can(w.Plq.MANAGE_MESSAGES, t))) return { label: R.intl.string(R.t.Icu3bW) };
+                            if (t.isThread() || t.isForumPost() || !N.Z.can(w.Plq.USE_APPLICATION_COMMANDS, t)) return { label: R.intl.string(R.t.v8MLq6) };
                             let n = (0, C.dL)(t.id);
                             if (e.id === n.id) return { label: R.intl.string(R.t.mD4gqa) };
                         }
-                    })(a, u),
+                    })(s, u),
                     m = f.includes(d),
                     p = {
                         key: d,
                         destination: c,
                         subLabel: null != h ? h.label : void 0,
-                        disabled: (s && !m) || null != h,
+                        disabled: (a && !m) || null != h,
                         selected: m,
                         onPressDestination: i,
                         'aria-posinset': r + 1,
@@ -250,7 +250,7 @@ function U(e) {
                     });
                 else (0, T.vE)(o);
             },
-            [s, i, a, t, f]
+            [a, i, s, t, f]
         ),
         b = r.useRef(null),
         x = (0, m.Z)('share-command-modal', b);

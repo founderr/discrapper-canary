@@ -263,7 +263,7 @@ function H() {
     let i = {},
         a = window.GLOBAL_ENV.RELEASE_CHANNEL;
     a && (i.release_channel = a.split('-')[0]);
-    let s = parseInt(((r = '355506'), '355506'), 10);
+    let s = parseInt(((r = '355575'), '355575'), 10);
     !isNaN(s) && (i.client_build_number = s);
     let o = null == R ? void 0 : null === (e = (n = R.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(n);
     return !isNaN(o) && (i.native_build_number = o), (i.client_event_source = j()), (i.has_client_mods = (0, p.e)()), i;
@@ -293,7 +293,7 @@ let K = (e) => {
         if (null != r.g.isServerRendering && !0 === r.g.isServerRendering) return Promise.resolve();
         let o = null != i ? i : {},
             l = n[e];
-        if (null != l) {
+        if (null != l && (null == l.throttleFilter || l.throttleFilter(o))) {
             if ('throttlePeriod' in l) {
                 let n = [e, ...l.throttleKeys(o)].join('_');
                 if (Y(n)) return Promise.resolve();

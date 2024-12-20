@@ -1,4 +1,4 @@
-l.d(t, {
+t.d(l, {
     ZP: function () {
         return c;
     },
@@ -8,29 +8,29 @@ l.d(t, {
 });
 var n,
     i,
-    r = l(200651),
-    a = l(192379),
-    s = l(591759),
-    o = l(340702);
-function d(e, t) {
-    let l = s.Z.toURLSafe(null != e ? e : '');
-    if (null === l) return '';
-    if (null == t) return l.toString();
-    for (let e in t) {
-        let n = t[e];
-        null != n && l.searchParams.set(e, n);
+    r = t(200651),
+    a = t(192379),
+    o = t(591759),
+    s = t(340702);
+function d(e, l) {
+    let t = o.Z.toURLSafe(null != e ? e : '');
+    if (null === t) return '';
+    if (null == l) return t.toString();
+    for (let e in l) {
+        let n = l[e];
+        null != n && t.searchParams.set(e, n);
     }
-    return l.toString();
+    return t.toString();
 }
 function u(e) {
-    let { src: t, autoMute: l, ...n } = e,
+    let { src: l, autoMute: t, ...n } = e,
         i = a.useRef(null),
-        s = a.useCallback(
+        o = a.useCallback(
             (e) => {
                 if (!!e.data['x-tiktok-player'] && 'https://www.tiktok.com' === e.origin) {
                     if ('onPlayerReady' === e.data.type) {
-                        var t, n, r, a;
-                        l &&
+                        var l, n, r, a;
+                        t &&
                             (null === (a = i.current) ||
                                 void 0 === a ||
                                 null === (r = a.contentWindow) ||
@@ -44,9 +44,9 @@ function u(e) {
                                 )),
                             null === (n = i.current) ||
                                 void 0 === n ||
-                                null === (t = n.contentWindow) ||
-                                void 0 === t ||
-                                t.postMessage(
+                                null === (l = n.contentWindow) ||
+                                void 0 === l ||
+                                l.postMessage(
                                     {
                                         type: 'play',
                                         'x-tiktok-player': !0
@@ -56,32 +56,32 @@ function u(e) {
                     }
                 }
             },
-            [l]
+            [t]
         );
-    a.useEffect(() => (window.addEventListener('message', s), () => window.removeEventListener('message', s)), [s]);
-    let o = d(t, { utm_source: 'discord.gg' });
+    a.useEffect(() => (window.addEventListener('message', o), () => window.removeEventListener('message', o)), [o]);
+    let s = d(l, { utm_source: 'discord.gg' });
     return (0, r.jsx)(h, {
-        src: o,
+        src: s,
         ref: i,
         ...n
     });
 }
 function m(e) {
-    let { src: t, autoMute: l, ...n } = e,
-        i = d(t, {
+    let { src: l, autoMute: t, ...n } = e,
+        i = d(l, {
             autoplay: '1',
             auto_play: '1',
-            mute: l ? '1' : void 0
+            mute: t ? '1' : void 0
         });
     return (0, r.jsx)(h, {
         src: i,
         ...n
     });
 }
-let h = a.forwardRef(function (e, t) {
+let h = a.forwardRef(function (e, l) {
     return (0, r.jsx)('iframe', {
-        ref: t,
-        className: o.embedIframe,
+        ref: l,
+        className: s.embedIframe,
         allow: 'autoplay',
         frameBorder: 0,
         scrolling: 'no',

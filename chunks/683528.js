@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return _;
+        return g;
     }
 });
 var i = t(200651),
@@ -18,7 +18,7 @@ var i = t(200651),
 function f(e) {
     return 'media-view-scroll-thumbnail-'.concat(e);
 }
-let g = a.memo(function (e) {
+let _ = a.memo(function (e) {
     var n;
     let { item: t } = e;
     let a =
@@ -42,7 +42,7 @@ let g = a.memo(function (e) {
               mediaLayoutType: h.hV.MOSAIC
           });
 });
-function _(e) {
+function g(e) {
     let { items: n, currentIndex: t, onGalleryItemClick: r } = e,
         u = a.useRef(null);
     return (
@@ -76,7 +76,7 @@ function _(e) {
                                 totalPages: n.length
                             }),
                             onClick: () => r(a),
-                            children: [(0, i.jsx)('div', { className: l()(p.galleryItemOverlay, { [p.selected]: s }) }), (0, i.jsx)(g, { item: e })]
+                            children: [(0, i.jsx)('div', { className: l()(p.galleryItemOverlay, { [p.selected]: s }) }), (0, i.jsx)(_, { item: e })]
                         },
                         a
                     );
