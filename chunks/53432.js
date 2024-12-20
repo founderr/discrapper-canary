@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return _;
     }
 }),
     n(653041);
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(442837),
-    o = n(481060),
-    l = n(153867),
-    a = n(857595),
+var o = n(442837),
+    i = n(481060),
+    a = n(153867),
+    l = n(857595),
     c = n(607070),
     u = n(906732),
     s = n(705262),
@@ -19,64 +19,62 @@ var r = n(442837),
     b = n(695346),
     f = n(874893),
     p = n(981631),
-    h = n(969943),
-    _ = n(388032);
-function S() {
+    h = n(388032);
+function _() {
     let e = b.jU.useSetting(),
         { analyticsLocations: t } = (0, u.ZP)(),
         {
             theme: n,
-            useSystemTheme: S,
-            useForcedColors: x,
-            listDensity: C
-        } = (0, r.cj)([g.Z, m.ZP, c.Z], () => ({
+            useSystemTheme: _,
+            useForcedColors: S
+        } = (0, o.cj)([g.Z, m.ZP, c.Z], () => ({
             theme: g.Z.theme,
             useSystemTheme: m.ZP.useSystemTheme,
-            useForcedColors: c.Z.useForcedColors,
-            listDensity: m.ZP.listDensity
+            useForcedColors: c.Z.useForcedColors
         })),
-        M = (0, d.Q3)('appearance_settings'),
-        Z = (0, d.o9)('appearance_settings'),
-        k = (e, r) =>
-            (0, i.jsx)(o.MenuRadioItem, {
+        x = b.N5.useSetting(),
+        C = (0, d.Q3)('appearance_settings'),
+        M = (0, d.o9)('appearance_settings'),
+        Z = (e, o) =>
+            (0, r.jsx)(i.MenuRadioItem, {
                 id: e,
                 group: 'input-modes',
-                label: r,
-                disabled: x,
-                checked: S === f.K.ON ? 'system' === e : e === n,
+                label: o,
+                disabled: S,
+                checked: _ === f.K.ON ? 'system' === e : e === n,
                 action: () => {
                     (0, s.Yk)({
                         isPersisted: !0,
                         analyticsLocations: t,
                         themeName: 'default '.concat(e)
                     }),
-                        (0, l.ZI)({ theme: e });
+                        (0, a.ZI)({ theme: e });
                 }
             }),
-        I = [
-            (0, i.jsxs)(
-                o.MenuGroup,
+        k = [
+            (0, r.jsxs)(
+                i.MenuGroup,
                 {
                     children: [
-                        k(p.BRd.DARK, _.intl.string(_.t.b8Cei4)),
-                        k(p.BRd.LIGHT, _.intl.string(_.t.K2sFfn)),
-                        M &&
-                            (0, i.jsxs)(i.Fragment, {
-                                children: [k(p.BRd.DARKER, 'Darker'), k(p.BRd.MIDNIGHT, _.intl.string(_.t.pQwSpa))]
+                        Z(p.BRd.DARK, h.intl.string(h.t.b8Cei4)),
+                        Z(p.BRd.LIGHT, h.intl.string(h.t.K2sFfn)),
+                        C &&
+                            (0, r.jsxs)(r.Fragment, {
+                                children: [Z(p.BRd.DARKER, 'Darker'), Z(p.BRd.MIDNIGHT, h.intl.string(h.t.pQwSpa))]
                             }),
-                        k('system', _.intl.string(_.t['7rOU6u']))
+                        Z('system', h.intl.string(h.t['7rOU6u']))
                     ]
                 },
                 'theme-items'
             ),
-            (0, i.jsx)(
-                o.MenuGroup,
+            (0, r.jsx)(
+                i.MenuGroup,
                 {
-                    children: (0, i.jsx)(o.MenuItem, {
+                    children: (0, r.jsx)(i.MenuItem, {
                         id: 'compact-mode',
-                        label: e ? _.intl.string(_.t.CTpwDw) : _.intl.string(_.t['J/FISU']),
+                        label: e ? h.intl.string(h.t.CTpwDw) : h.intl.string(h.t['J/FISU']),
                         action: () => {
-                            b.jU.updateSetting(!e), (0, a.ZZ)();
+                            b.jU.updateSetting(!e), (0, l.ZZ)();
                         }
                     })
                 },
@@ -84,28 +82,28 @@ function S() {
             )
         ];
     return (
-        Z &&
-            (I.push(
-                (0, i.jsxs)(
-                    o.MenuGroup,
+        M &&
+            (k.push(
+                (0, r.jsxs)(
+                    i.MenuGroup,
                     {
                         children: [
-                            (0, i.jsx)(o.MenuRadioItem, {
+                            (0, r.jsx)(i.MenuRadioItem, {
                                 id: 'cozy',
                                 group: 'list-density',
                                 label: 'Cozy lists',
-                                checked: 'cozy' === C,
+                                checked: 'cozy' === x,
                                 action: () => {
-                                    l.ZP.updatedUnsyncedSettings({ listDensity: h.fx.COZY });
+                                    b.N5.updateSetting('cozy');
                                 }
                             }),
-                            (0, i.jsx)(o.MenuRadioItem, {
+                            (0, r.jsx)(i.MenuRadioItem, {
                                 id: 'compact',
                                 group: 'list-density',
                                 label: 'Compact lists',
-                                checked: 'compact' === C,
+                                checked: 'compact' === x,
                                 action: () => {
-                                    l.ZP.updatedUnsyncedSettings({ listDensity: h.fx.COMPACT });
+                                    b.N5.updateSetting('compact');
                                 }
                             })
                         ]
@@ -113,22 +111,22 @@ function S() {
                     'list-density'
                 )
             ),
-            I.push(
-                (0, i.jsx)(
-                    o.MenuGroup,
+            k.push(
+                (0, r.jsx)(
+                    i.MenuGroup,
                     {
-                        children: (0, i.jsx)(o.MenuCheckboxItem, {
+                        children: (0, r.jsx)(i.MenuCheckboxItem, {
                             id: 'desktop-refresh-override',
                             label: 'Enable Desktop Refresh',
                             action: () => {
-                                l.ZP.updatedUnsyncedSettings({ disableVisualRefresh: M });
+                                a.ZP.updatedUnsyncedSettings({ disableVisualRefresh: C });
                             },
-                            checked: M
+                            checked: C
                         })
                     },
                     'refresh-experiment'
                 )
             )),
-        I
+        k
     );
 }

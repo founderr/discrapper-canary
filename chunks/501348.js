@@ -485,7 +485,7 @@ class $ extends s.Component {
             }),
             H(this, 'handleListDensityModeChange', (e) => {
                 let { value: t } = e;
-                m.ZP.updatedUnsyncedSettings({ listDensity: t });
+                B.N5.updateSetting(t);
             });
     }
 }
@@ -501,11 +501,12 @@ function et() {
         t = B.RS.useSetting(),
         n = B.NA.useSetting(),
         r = B.L1.useSetting(),
-        l = B.hg.useSetting();
+        l = B.hg.useSetting(),
+        c = B.N5.useSetting();
     s.useEffect(() => {
         ee(o.z.CLIENT_THEMES_SETTINGS_BADGE), ee(o.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), ee(o.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
     }, []);
-    let c = (0, a.cj)([D.Z, y.ZP, x.Z, R.default, T.Z], () => {
+    let d = (0, a.cj)([D.Z, y.ZP, x.Z, R.default, T.Z], () => {
             var e, t;
             return {
                 theme: D.Z.theme,
@@ -517,19 +518,19 @@ function et() {
                 messageGroupSpacing: x.Z.messageGroupSpacing,
                 displayCompactAvatars: y.ZP.displayCompactAvatars,
                 isStaff: null !== (t = null === (e = R.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== t && t,
-                gradientPreset: T.Z.gradientPreset,
-                listDensity: y.ZP.listDensity
+                gradientPreset: T.Z.gradientPreset
             };
         }),
-        d = (0, f.o9)('UserSettingsAppearance'),
-        u = (0, f.Q3)('UserSettingsAppearance');
+        u = (0, f.o9)('UserSettingsAppearance'),
+        m = (0, f.Q3)('UserSettingsAppearance');
     return (0, i.jsx)($, {
         messageDisplayCompact: e,
         hideSimpleEmbedContent: t && n,
         clientTheme: r,
         timestampHourCycle: l,
-        isRefreshEnabled: u,
-        isRefreshExperimentEnabled: d,
-        ...c
+        isRefreshEnabled: m,
+        isRefreshExperimentEnabled: u,
+        listDensity: c,
+        ...d
     });
 }
