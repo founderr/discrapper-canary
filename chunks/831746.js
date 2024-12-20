@@ -12,5 +12,6 @@ e.exports = {
     disabled: 'disabled_f6f816',
     actionIcon: 'actionIcon_f6f816',
     channelInfo: 'channelInfo_f6f816',
-    iconLive: 'iconLive_f6f816'
+    iconLive: 'iconLive_f6f816',
+    selectedChannel: 'selectedChannel_f6f816'
 };
