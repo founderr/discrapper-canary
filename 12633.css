@@ -15631,10 +15631,6 @@ div.cardContainer_c22357 {
     margin-left: 8px
 }
 
-.visual-refresh .member_a31c43 {
-    max-width: calc(-16px + var(--custom-member-list-width))
-}
-
 .memberInner_a31c43 {
     padding-top: calc(.5*var(--custom-member-list-item-avatar-decoration-padding));
     padding-bottom: calc(.5*var(--custom-member-list-item-avatar-decoration-padding))
@@ -15721,6 +15717,20 @@ span.clanTag_a31c43 {
     margin-top: 1px;
     margin-left: 4px;
     margin-bottom: 1px
+}
+
+.visual-refresh .member_a31c43 {
+    max-width: calc(-16px + var(--custom-member-list-width))
+}
+
+.visual-refresh .memberInner_a31c43 {
+    box-sizing: border-box;
+    padding: var(--space-xxs)var(--space-16)var(--space-xxs)var(--space-xs);
+    height: auto
+}
+
+.visual-refresh .activityText_a31c43 {
+    color: var(--text-secondary)
 }
 
 .container_a5ad5c {

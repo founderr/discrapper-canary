@@ -19,5 +19,7 @@ e.exports = {
     dismissButton: 'dismissButton_a08117',
     dismiss: 'dismiss_a08117',
     voiceChannelsButton: 'voiceChannelsButton_a08117',
-    voiceChannelsToggleIcon: 'voiceChannelsToggleIcon_a08117'
+    voiceChannelsToggleIcon: 'voiceChannelsToggleIcon_a08117',
+    refreshVoiceChannelsButton: 'refreshVoiceChannelsButton_a08117',
+    refreshVoiceChannelsButtonInner: 'refreshVoiceChannelsButtonInner_a08117'
 };

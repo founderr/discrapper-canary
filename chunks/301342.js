@@ -221,13 +221,17 @@ let y = l.memo(function (e) {
     j = l.memo(function (e) {
         let { category: t } = e,
             n = (0, s.e7)([Z.Z], () => Z.Z.isVoiceCategoryCollapsed(t.guild.id)),
-            r = l.useCallback(() => {
+            r = (0, m.Q3)('VoiceChannelCategoryButton'),
+            a = l.useCallback(() => {
                 n ? (0, I.s)(t.guild.id) : (0, I.M)(t.guild.id);
             }, [t.guild.id, n]);
-        return n
-            ? (0, i.jsxs)(c.Clickable, {
-                  className: S.voiceChannelsButton,
-                  onClick: r,
+        return r
+            ? (0, i.jsxs)(c.Button, {
+                  look: c.Button.Looks.FILLED,
+                  color: c.Button.Colors.PRIMARY,
+                  className: S.refreshVoiceChannelsButton,
+                  innerClassName: S.refreshVoiceChannelsButtonInner,
+                  onClick: a,
                   children: [
                       (0, i.jsx)(c.VoiceNormalIcon, {
                           size: 'xs',
@@ -236,13 +240,13 @@ let y = l.memo(function (e) {
                       }),
                       (0, i.jsx)(c.Text, {
                           variant: 'text-sm/medium',
-                          children: b.intl.string(b.t['/eB9Bg'])
+                          children: n ? b.intl.string(b.t['/eB9Bg']) : b.intl.string(b.t.Q2gPWl)
                       })
                   ]
               })
             : (0, i.jsxs)(c.Clickable, {
                   className: S.voiceChannelsButton,
-                  onClick: r,
+                  onClick: a,
                   children: [
                       (0, i.jsx)(c.VoiceNormalIcon, {
                           size: 'xs',
@@ -251,7 +255,7 @@ let y = l.memo(function (e) {
                       }),
                       (0, i.jsx)(c.Text, {
                           variant: 'text-sm/medium',
-                          children: b.intl.string(b.t.Q2gPWl)
+                          children: n ? b.intl.string(b.t['/eB9Bg']) : b.intl.string(b.t.Q2gPWl)
                       })
                   ]
               });

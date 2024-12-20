@@ -150,28 +150,31 @@ function R(e) {
     return (0, i.jsx)(u.Gt, {
         value: c,
         children: (0, i.jsx)('div', {
-            className: j.membersWrap,
-            children: (0, i.jsxs)(s.Scroller, {
-                className: j.members,
-                fade: !0,
-                children: [
-                    (0, i.jsxs)(p.Z, {
-                        className: j.membersGroup,
-                        children: [''.concat(T.intl.string(T.t['9Oq93t']), '\u2014').concat(m.length, ' '), f && (0, i.jsx)(h.Z, { type: h.Z.Types.STAFF_ONLY_DM })]
-                    }),
-                    m.map((e) =>
-                        (0, i.jsx)(
-                            P,
-                            {
-                                user: e.user,
-                                status: e.status,
-                                activities: e.activities,
-                                channel: n
-                            },
-                            e.user.id
+            className: j.container,
+            children: (0, i.jsx)('aside', {
+                className: j.membersWrap,
+                children: (0, i.jsxs)(s.Scroller, {
+                    className: j.members,
+                    fade: !0,
+                    children: [
+                        (0, i.jsxs)(p.Z, {
+                            className: j.membersGroup,
+                            children: [''.concat(T.intl.string(T.t['9Oq93t']), '\u2014').concat(m.length, ' '), f && (0, i.jsx)(h.Z, { type: h.Z.Types.STAFF_ONLY_DM })]
+                        }),
+                        m.map((e) =>
+                            (0, i.jsx)(
+                                P,
+                                {
+                                    user: e.user,
+                                    status: e.status,
+                                    activities: e.activities,
+                                    channel: n
+                                },
+                                e.user.id
+                            )
                         )
-                    )
-                ]
+                    ]
+                })
             })
         })
     });
