@@ -1,39 +1,42 @@
 r.d(n, {
     B1: function () {
-        return O;
-    },
-    DR: function () {
-        return T;
-    },
-    F$: function () {
-        return A;
-    },
-    K$: function () {
         return D;
     },
-    R2: function () {
-        return L;
-    },
-    Sm: function () {
-        return v;
-    },
-    fK: function () {
-        return R;
-    },
-    jr: function () {
-        return C;
-    },
-    mK: function () {
-        return I;
-    },
-    oK: function () {
+    DR: function () {
         return b;
     },
+    F$: function () {
+        return N;
+    },
+    K$: function () {
+        return L;
+    },
+    Ov: function () {
+        return w;
+    },
+    R2: function () {
+        return x;
+    },
+    Sm: function () {
+        return I;
+    },
+    fK: function () {
+        return O;
+    },
+    jr: function () {
+        return R;
+    },
+    mK: function () {
+        return T;
+    },
+    oK: function () {
+        return y;
+    },
     oc: function () {
-        return S;
+        return A;
     },
     qg: function () {
-        return N;
+        return C;
     }
 });
 var i = r(561842),
@@ -49,42 +52,42 @@ var d = r(703656),
     _ = r(549616),
     h = r(833798),
     p = r(778787),
-    m = r(161226);
-r(251728);
-var g = r(578976),
-    E = r(981631);
+    m = r(161226),
+    g = r(251728),
+    E = r(578976),
+    v = r(981631);
 r(597688), r(574709), r(328347), r(874703), r(52030);
-let v = (e) => {
+let I = (e) => {
         l.Z.dispatch({
             type: 'COLLECTIBLES_SHOP_OPEN',
             ...e
         });
     },
-    I = (e) => {
+    T = (e) => {
         let { openInLayer: n = !0, ...r } = e;
-        v(r);
-        n ? (0, u.jN)(E.S9g.COLLECTIBLES_SHOP) : (0, d.uL)(E.Z5c.COLLECTIBLES_SHOP);
+        I(r);
+        n ? (0, u.jN)(v.S9g.COLLECTIBLES_SHOP) : (0, d.uL)(v.Z5c.COLLECTIBLES_SHOP);
     },
-    T = () => {
+    b = () => {
         l.Z.dispatch({ type: 'COLLECTIBLES_SHOP_CLOSE' }), (0, u.xf)();
     },
-    b = (e) => {
+    y = (e) => {
         l.Z.dispatch({
             type: 'COLLECTIBLES_PRODUCT_DETAILS_OPEN',
             item: e
         });
     },
-    y = (e, n) => !!e == !!n,
-    S = (e, n) => y(null == e ? void 0 : e.noCache, null == n ? void 0 : n.noCache) && y(null == e ? void 0 : e.includeUnpublished, null == n ? void 0 : n.includeUnpublished) && y(null == e ? void 0 : e.includeBundles, null == n ? void 0 : n.includeBundles) && (null == e ? void 0 : e.countryCode) === (null == n ? void 0 : n.countryCode) && (null == e ? void 0 : e.paymentGateway) === (null == n ? void 0 : n.paymentGateway),
-    A = async (e) => {
+    S = (e, n) => !!e == !!n,
+    A = (e, n) => S(null == e ? void 0 : e.noCache, null == n ? void 0 : n.noCache) && S(null == e ? void 0 : e.includeUnpublished, null == n ? void 0 : n.includeUnpublished) && S(null == e ? void 0 : e.includeBundles, null == n ? void 0 : n.includeBundles) && (null == e ? void 0 : e.countryCode) === (null == n ? void 0 : n.countryCode) && (null == e ? void 0 : e.paymentGateway) === (null == n ? void 0 : n.paymentGateway),
+    N = async (e) => {
         l.Z.dispatch({
             type: 'COLLECTIBLES_CATEGORIES_FETCH',
             options: null != e ? e : {}
         });
-        let n = (0, g.n)(e);
+        let n = (0, E.n)(e);
         try {
             let e = await o.tn.get({
-                url: E.ANM.COLLECTIBLES_CATEGORIES,
+                url: v.ANM.COLLECTIBLES_CATEGORIES,
                 query: n,
                 rejectWithError: !0
             });
@@ -102,12 +105,12 @@ let v = (e) => {
             );
         }
     },
-    N = async (e) => {
+    C = async (e) => {
         if (!f.Z.isFetching) {
             l.Z.dispatch({ type: 'COLLECTIBLES_PURCHASES_FETCH' });
             try {
                 let n = {
-                    url: E.ANM.COLLECTIBLES_PURCHASES,
+                    url: v.ANM.COLLECTIBLES_PURCHASES,
                     rejectWithError: !0
                 };
                 (null == e ? void 0 : e.variantsReturnStyle) === s.v.VARIANTS_GROUP && (n.query = { variants_return_style: s.v.VARIANTS_GROUP });
@@ -127,7 +130,7 @@ let v = (e) => {
             }
         }
     },
-    C = async (e, n) => {
+    R = async (e, n) => {
         l.Z.dispatch({
             type: 'COLLECTIBLES_PRODUCT_FETCH',
             skuId: e
@@ -136,7 +139,7 @@ let v = (e) => {
             let r = {};
             (null == n ? void 0 : n.countryCode) !== null && (r.country_code = null == n ? void 0 : n.countryCode), (null == n ? void 0 : n.paymentGateway) !== null && (r.payment_gateway = null == n ? void 0 : n.paymentGateway);
             let i = await o.tn.get({
-                url: E.ANM.COLLECTIBLES_PRODUCTS(e),
+                url: v.ANM.COLLECTIBLES_PRODUCTS(e),
                 query: r,
                 rejectWithError: !0
             });
@@ -156,7 +159,7 @@ let v = (e) => {
             );
         }
     },
-    R = async (e) => {
+    O = async (e) => {
         l.Z.dispatch({
             type: 'COLLECTIBLES_CLAIM',
             skuId: e
@@ -164,7 +167,7 @@ let v = (e) => {
         try {
             var n;
             let r = await o.tn.put({
-                url: E.ANM.COLLECTIBLES_CLAIM,
+                url: v.ANM.COLLECTIBLES_CLAIM,
                 body: { sku_id: e },
                 rejectWithError: !0
             });
@@ -184,11 +187,11 @@ let v = (e) => {
             );
         }
     },
-    O = async (e, n) => {
+    D = async (e, n) => {
         try {
             return (
                 await o.tn.get({
-                    url: E.ANM.COLLECTIBLES_VALID_GIFT_RECIPIENT,
+                    url: v.ANM.COLLECTIBLES_VALID_GIFT_RECIPIENT,
                     query: {
                         sku_id: n,
                         recipient_id: e
@@ -200,20 +203,20 @@ let v = (e) => {
             throw new c.Hx(e);
         }
     },
-    D = (e) => {
+    L = (e) => {
         l.Z.dispatch({
             type: 'COLLECTIBLES_CATEGORY_ITEMS_VIEWED',
             ...e
         });
     },
-    L = async (e) => {
+    x = async (e) => {
         let { release: n = a.P.PROD } = e;
         l.Z.dispatch({ type: 'COLLECTIBLES_MARKETING_FETCH' });
         let r = { platform: i.h.DESKTOP };
         n !== a.P.PROD && (r.release = n);
         try {
             let e = await o.tn.get({
-                url: E.ANM.COLLECTIBLES_MARKETING,
+                url: v.ANM.COLLECTIBLES_MARKETING,
                 query: r,
                 rejectWithError: !0
             });
@@ -223,5 +226,31 @@ let v = (e) => {
             });
         } catch (e) {
             throw (l.Z.dispatch({ type: 'COLLECTIBLES_MARKETING_FETCH_FAILURE' }), new c.Hx(e));
+        }
+    },
+    w = async (e) => {
+        l.Z.dispatch({
+            type: 'COLLECTIBLES_SHOP_HOME_FETCH',
+            options: null != e ? e : {}
+        });
+        let n = (0, E.n)(e);
+        try {
+            let e = await o.tn.get({
+                url: v.ANM.COLLECTIBLES_SHOP_HOME,
+                query: n,
+                rejectWithError: !0
+            });
+            l.Z.dispatch({
+                type: 'COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS',
+                shopHome: g.Y.fromServer(e.body)
+            });
+        } catch (e) {
+            throw (
+                (l.Z.dispatch({
+                    type: 'COLLECTIBLES_SHOP_HOME_FETCH_FAILURE',
+                    error: new c.Hx(e)
+                }),
+                new c.Hx(e))
+            );
         }
     };

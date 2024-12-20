@@ -1,4 +1,12 @@
-function i(e, n, r) {
+r.d(n, {
+    I: function () {
+        return l;
+    }
+});
+var i = r(87290),
+    a = r(685816),
+    s = r(565669);
+function o(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -11,12 +19,11 @@ function i(e, n, r) {
         e
     );
 }
-r(87290), r(685816), r(565669);
-class a {
+class l {
     static fromServer(e) {
-        return new a(e);
+        return new l(e);
     }
     constructor(e) {
-        i(this, 'subblocks', void 0), (this.type = ShopBlockType.FEATURED), (this.subblocks = e.subblocks.map((e) => (e.type === FeaturedSubblockType.CATEGORY ? FeaturedCategorySubblockRecord.fromServer(e) : e)));
+        o(this, 'subblocks', void 0), (this.type = a.z.FEATURED), (this.subblocks = e.subblocks.map((e) => (e.type === i.O.CATEGORY ? s.H.fromServer(e) : e)));
     }
 }

@@ -1,4 +1,10 @@
-function i(e, n, r) {
+r.d(n, {
+    s: function () {
+        return s;
+    }
+});
+var i = r(685816);
+function a(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -11,12 +17,11 @@ function i(e, n, r) {
         e
     );
 }
-r(685816);
-class a {
+class s {
     static fromServer(e) {
-        return new a(e);
+        return new s(e);
     }
     constructor(e) {
-        i(this, 'categorySkuId', void 0), i(this, 'name', void 0), i(this, 'categoryStoreListingId', void 0), i(this, 'fallbackBannerUrl', void 0), i(this, 'bannerAsset', void 0), i(this, 'logoUrl', void 0), i(this, 'rankedSkuIds', void 0), (this.type = ShopBlockType.HERO), (this.categorySkuId = e.category_sku_id), (this.name = e.name), (this.categoryStoreListingId = e.category_store_listing_id), (this.fallbackBannerUrl = e.fallback_banner_url), (this.bannerAsset = e.bannerAsset), (this.logoUrl = e.hero_logo), (this.rankedSkuIds = e.ranked_sku_ids);
+        a(this, 'categorySkuId', void 0), a(this, 'name', void 0), a(this, 'summary', void 0), a(this, 'categoryStoreListingId', void 0), a(this, 'fallbackBannerUrl', void 0), a(this, 'bannerAsset', void 0), a(this, 'logoUrl', void 0), a(this, 'rankedSkuIds', void 0), a(this, 'unpublishedAt', void 0), (this.type = i.z.HERO), (this.categorySkuId = e.category_sku_id), (this.name = e.name), (this.summary = e.summary), (this.categoryStoreListingId = e.category_store_listing_id), (this.fallbackBannerUrl = e.fallback_banner_url), (this.bannerAsset = e.banner_asset), (this.logoUrl = e.logo_url), (this.rankedSkuIds = e.ranked_sku_ids), (this.unpublishedAt = null != e.unpublished_at ? new Date(e.unpublished_at) : null);
     }
 }

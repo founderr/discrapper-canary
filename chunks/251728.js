@@ -1,5 +1,14 @@
+r.d(n, {
+    Y: function () {
+        return c;
+    }
+});
 var i = r(411104);
-function a(e, n, r) {
+var a = r(685816),
+    s = r(549616),
+    o = r(794934),
+    l = r(198647);
+function u(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -12,24 +21,23 @@ function a(e, n, r) {
         e
     );
 }
-r(685816), r(549616), r(794934), r(198647);
-class s {
+class c {
     static fromServer(e) {
-        return new s(e);
+        return new c(e);
     }
     constructor(e) {
-        a(this, 'shopBlocks', void 0),
-            a(this, 'categories', void 0),
+        u(this, 'shopBlocks', void 0),
+            u(this, 'categories', void 0),
             (this.shopBlocks = e.shop_blocks.map((e) => {
                 switch (e.type) {
-                    case ShopBlockType.HERO:
-                        return HeroBlockRecord.fromServer(e);
-                    case ShopBlockType.FEATURED:
-                        return FeaturedBlockRecord.fromServer(e);
+                    case a.z.HERO:
+                        return l.s.fromServer(e);
+                    case a.z.FEATURED:
+                        return o.I.fromServer(e);
                     default:
                         throw Error('Unknown block type: '.concat(e.type));
                 }
             })),
-            (this.categories = e.categories.map((e) => CollectiblesCategoryRecord.fromServer(e)));
+            (this.categories = e.categories.map((e) => s.Z.fromServer(e)));
     }
 }

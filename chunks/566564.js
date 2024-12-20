@@ -4,112 +4,187 @@ var r = n(200651),
     i = n(120356),
     l = n.n(i),
     s = n(180650),
-    o = n(442837),
-    c = n(481060),
-    d = n(580747),
+    o = n(685816),
+    c = n(442837),
+    d = n(481060),
     u = n(594174),
     m = n(960048),
     h = n(381585),
-    p = n(597688),
-    f = n(606414),
-    g = n(744112),
-    C = n(223143),
-    v = n(937510),
-    b = n(752053),
-    x = n(38900),
-    _ = n(709999),
-    k = n(953655),
-    I = n(580914),
-    E = n(957058),
-    S = n(215023),
-    j = n(388032),
-    T = n(218142);
+    g = n(597688),
+    p = n(606414),
+    f = n(67696),
+    C = n(744112),
+    b = n(223143),
+    v = n(364111),
+    x = n(937510),
+    _ = n(752053),
+    k = n(38900),
+    I = n(709999),
+    S = n(81136),
+    E = n(953655),
+    j = n(580914),
+    T = n(957058),
+    B = n(215023),
+    N = n(388032),
+    y = n(218142);
+let L = (e) => {
+    let { handleTransition: t } = e,
+        { noCache: n, includeUnpublished: i } = (0, S.Z)(),
+        {
+            isFetchingShopHome: l,
+            fetchShopHomeError: s,
+            shopBlocks: c,
+            refreshShopHome: d
+        } = (0, v.E)({
+            noCache: n,
+            includeUnpublished: i,
+            includeBundles: !0
+        }),
+        u = a.useCallback(() => {
+            d();
+        }, [d]);
+    return null != s
+        ? (0, r.jsx)(_.Z, {
+              onRetry: u,
+              errorOrigin: _.i.SHOP_PAGE,
+              errorMessage: s.message
+          })
+        : l || 0 === c.length
+          ? (0, r.jsxs)(r.Fragment, {
+                children: [
+                    (0, r.jsx)(j.Z, {
+                        isLoading: l,
+                        handleTransition: t
+                    }),
+                    (0, r.jsx)(E.Z, {
+                        isLoading: l,
+                        handleTransition: t,
+                        categories: []
+                    })
+                ]
+            })
+          : (0, r.jsx)(r.Fragment, {
+                children: c.map((e, n) => {
+                    if (null == e) return null;
+                    switch (e.type) {
+                        case o.z.HERO:
+                            return (0, r.jsx)(
+                                j.Z,
+                                {
+                                    isLoading: l,
+                                    handleTransition: t,
+                                    heroBlock: e
+                                },
+                                n
+                            );
+                        case o.z.FEATURED:
+                            return (0, r.jsx)(
+                                E.Z,
+                                {
+                                    isLoading: l,
+                                    handleTransition: t,
+                                    featuredBlockRecord: e
+                                },
+                                n
+                            );
+                        default:
+                            return null;
+                    }
+                })
+            });
+};
 t.Z = (e) => {
     var t;
     let { handleTransition: n, numVisibleItems: i } = e,
-        { categories: N, isFetchingCategories: B, fetchCategoriesError: L, fetchPurchasesError: y, claimError: P, refreshCategories: Z } = (0, C.ZP)({ location: 'CollectiblesFeedShop' }),
-        O = null !== (t = null != L ? L : y) && void 0 !== t ? t : P,
-        w = Array.from(N.values()),
-        A = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
-        R = (0, f.c)('CollectiblesFeedShop') && null != p.Z.getCategory(s.T.ROBERT),
-        H = a.createRef(),
-        F = (0, g.b)('Collectibles Shop Button'),
-        V = (0, d.Z)('shop_disable_cache'),
-        D = (0, d.Z)('shop_include_unpublished'),
-        M = (0, E.u)(),
-        W = w[0],
-        U = [w[1], p.Z.getCategory(R ? s.T.ROBERT : s.T.ANIME_V2)],
-        G = a.useCallback(() => {
-            Z();
-        }, [Z]),
-        z = a.useMemo(() => M(S.yo), [B, M]),
-        $ = (0, v.l)(z);
-    if (null == A) return null;
-    if (null != O) {
+        { categories: o, isFetchingCategories: v, fetchCategoriesError: P, fetchPurchasesError: Z, claimError: O, refreshCategories: w } = (0, b.ZP)({ location: 'CollectiblesFeedShop' }),
+        A = null !== (t = null != P ? P : Z) && void 0 !== t ? t : O,
+        R = Array.from(o.values()),
+        H = (0, c.e7)([u.default], () => u.default.getCurrentUser()),
+        F = (0, f.n)('CollectiblesFeedShop'),
+        D = (0, p.c)('CollectiblesFeedShop') && null != g.Z.getCategory(s.T.ROBERT),
+        V = a.createRef(),
+        M = (0, C.b)('Collectibles Shop Button'),
+        { noCache: W, includeUnpublished: U } = (0, S.Z)(),
+        G = (0, T.u)(),
+        z = R[0],
+        $ = [R[1], g.Z.getCategory(D ? s.T.ROBERT : s.T.ANIME_V2)],
+        K = a.useCallback(() => {
+            w();
+        }, [w]),
+        q = a.useMemo(() => G(B.yo), [v, G]),
+        J = (0, x.l)(q);
+    if (null == H) return null;
+    if (null != A) {
         let e = [];
-        null != L ? e.push('shop load fetch categories error: '.concat(O.message)) : null != y ? e.push('shop load fetch purchase error: '.concat(O.message)) : e.push('shop load claim error: '.concat(O.message)),
+        null != P ? e.push('shop load fetch categories error: '.concat(A.message)) : null != Z ? e.push('shop load fetch purchase error: '.concat(A.message)) : e.push('shop load claim error: '.concat(A.message)),
             m.Z.captureMessage(e.join('\n'), {
                 tags: {
-                    isStaff: A.isStaff().toString(),
-                    preloadEnabled: F.toString(),
-                    disableCache: V.toString(),
-                    includeUnpublished: D.toString()
+                    isStaff: H.isStaff().toString(),
+                    preloadEnabled: M.toString(),
+                    disableCache: W.toString(),
+                    includeUnpublished: U.toString()
                 }
             });
     }
-    return null != L
-        ? (0, r.jsx)(b.Z, {
-              onRetry: G,
-              errorOrigin: b.i.SHOP_PAGE,
-              errorMessage: L.message
+    return null != P
+        ? (0, r.jsx)(_.Z, {
+              onRetry: K,
+              errorOrigin: _.i.SHOP_PAGE,
+              errorMessage: P.message
           })
         : (0, r.jsx)(r.Fragment, {
               children: (0, r.jsx)('div', {
-                  className: T.shop,
+                  className: y.shop,
                   children: (0, r.jsxs)('div', {
-                      className: l()(T.content, T.mainContent),
+                      className: l()(y.content, y.mainContent),
                       children: [
-                          (0, r.jsx)(I.Z, {
-                              isLoading: B,
-                              handleTransition: n,
-                              category: W
-                          }),
-                          (0, r.jsx)(k.Z, {
-                              isLoading: B,
-                              handleTransition: n,
-                              categories: U
-                          }),
+                          F
+                              ? (0, r.jsx)(L, { handleTransition: n })
+                              : (0, r.jsxs)(r.Fragment, {
+                                    children: [
+                                        (0, r.jsx)(j.Z, {
+                                            isLoading: v,
+                                            handleTransition: n,
+                                            category: z
+                                        }),
+                                        (0, r.jsx)(E.Z, {
+                                            isLoading: v,
+                                            handleTransition: n,
+                                            categories: $
+                                        })
+                                    ]
+                                }),
                           (0, r.jsxs)('div', {
-                              className: l()(T.row, T.between, T.section, T.popularPicksSection),
+                              className: l()(y.row, y.between, y.section, y.popularPicksSection),
                               children: [
                                   (0, r.jsxs)('div', {
-                                      className: T.popularPicksHeader,
+                                      className: y.popularPicksHeader,
                                       children: [
-                                          (0, r.jsx)(c.Heading, {
+                                          (0, r.jsx)(d.Heading, {
                                               variant: 'heading-lg/semibold',
-                                              children: j.intl.string(j.t.ivaAAw)
+                                              children: N.intl.string(N.t.ivaAAw)
                                           }),
-                                          (0, r.jsxs)(c.Clickable, {
-                                              className: T.shopAll,
+                                          (0, r.jsxs)(d.Clickable, {
+                                              className: y.shopAll,
                                               onClick: () => n('shop all top'),
                                               children: [
-                                                  (0, r.jsx)(c.ServerGridIcon, {}),
-                                                  (0, r.jsx)(c.Text, {
+                                                  (0, r.jsx)(d.ServerGridIcon, {}),
+                                                  (0, r.jsx)(d.Text, {
                                                       variant: 'text-sm/medium',
-                                                      children: j.intl.string(j.t.xFcotb)
+                                                      children: N.intl.string(N.t.xFcotb)
                                                   })
                                               ]
                                           })
                                       ]
                                   }),
                                   (0, r.jsx)('div', {
-                                      className: T.feed,
-                                      ref: H,
-                                      children: B
-                                          ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(x.K, {}, t + 1)) })
+                                      className: y.feed,
+                                      ref: V,
+                                      children: v
+                                          ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(k.K, {}, t + 1)) })
                                           : (0, r.jsx)(r.Fragment, {
-                                                children: $.slice(0, i).map((e, t) => {
-                                                    let n = p.Z.getCategoryForProduct(e.skuId);
+                                                children: J.slice(0, i).map((e, t) => {
+                                                    let n = g.Z.getCategoryForProduct(e.skuId);
                                                     return null == e || null == n
                                                         ? null
                                                         : (0, r.jsx)(
@@ -121,11 +196,11 @@ t.Z = (e) => {
                                                                       categoryPosition: 2
                                                                   },
                                                                   children: (0, r.jsx)(
-                                                                      _.Z,
+                                                                      I.Z,
                                                                       {
                                                                           product: e,
                                                                           category: n,
-                                                                          user: A,
+                                                                          user: H,
                                                                           isInFeedView: !0
                                                                       },
                                                                       e.skuId
@@ -138,23 +213,23 @@ t.Z = (e) => {
                                   })
                               ]
                           }),
-                          i >= S.iA &&
+                          i >= B.iA &&
                               (0, r.jsxs)('div', {
-                                  className: T.endOfFeed,
+                                  className: y.endOfFeed,
                                   children: [
-                                      (0, r.jsx)(c.Heading, {
+                                      (0, r.jsx)(d.Heading, {
                                           variant: 'heading-md/semibold',
-                                          children: j.intl.string(j.t.Yr70c3)
+                                          children: N.intl.string(N.t.Yr70c3)
                                       }),
-                                      (0, r.jsx)(c.Button, {
-                                          className: T.endOfFeedButton,
+                                      (0, r.jsx)(d.Button, {
+                                          className: y.endOfFeedButton,
                                           onClick: () => {
                                               n('shop all bottom', void 0, !0);
                                           },
-                                          children: (0, r.jsx)(c.Text, {
+                                          children: (0, r.jsx)(d.Text, {
                                               variant: 'text-md/medium',
                                               color: 'always-white',
-                                              children: j.intl.string(j.t.AfrvRE)
+                                              children: N.intl.string(N.t.AfrvRE)
                                           })
                                       })
                                   ]

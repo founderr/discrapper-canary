@@ -1,7 +1,8 @@
-var i,
-    a = r(442837),
-    s = r(570140);
-function o(e, n, r) {
+let i, a, s;
+var o,
+    l = r(442837),
+    u = r(570140);
+function c(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -14,37 +15,47 @@ function o(e, n, r) {
         e
     );
 }
-let l = [],
-    u = {
-        lastSuccessfulFetch: void 0,
-        lastErrorTimestamp: void 0,
-        lastFetchOptions: {},
-        fetchShopHomeError: void 0,
-        isFetchingShopHome: !1,
-        shopBlocks: l
+let d = [];
+let f = {};
+let _ = !1,
+    h = d,
+    p = (e) => {
+        (_ = !0), (s = void 0), (f = e.options), (a = void 0);
     },
-    c = (e) => {
-        (u.isFetchingShopHome = !0), (u.fetchShopHomeError = void 0), (u.lastFetchOptions = e.options), (u.lastErrorTimestamp = void 0);
+    m = (e) => {
+        (h = e.shopHome.shopBlocks), (i = Date.now()), (_ = !1), (s = void 0), (a = void 0);
     },
-    d = (e) => {
-        (u.shopBlocks = e.shopHome.shopBlocks), (u.lastSuccessfulFetch = Date.now()), (u.isFetchingShopHome = !1), (u.fetchShopHomeError = void 0), (u.lastErrorTimestamp = void 0);
-    },
-    f = (e) => {
+    g = (e) => {
         let { error: n } = e;
-        (u.shopBlocks = l), (u.isFetchingShopHome = !1), (u.fetchShopHomeError = n), (u.lastErrorTimestamp = Date.now());
+        (h = d), (_ = !1), (s = n), (a = Date.now());
     },
-    _ = () => {
-        (u.shopBlocks = l), (u.lastFetchOptions = {}), (u.fetchShopHomeError = void 0), (u.isFetchingShopHome = !1), (u.lastSuccessfulFetch = void 0), (u.lastErrorTimestamp = void 0);
+    E = () => {
+        (h = d), (f = {}), (s = void 0), (_ = !1), (i = void 0), (a = void 0);
     };
-class h extends (i = a.ZP.Store) {
-    get state() {
-        return u;
+class v extends (o = l.ZP.Store) {
+    get lastSuccessfulFetch() {
+        return i;
+    }
+    get lastErrorTimestamp() {
+        return a;
+    }
+    get lastFetchOptions() {
+        return f;
+    }
+    get fetchShopHomeError() {
+        return s;
+    }
+    get isFetchingShopHome() {
+        return _;
+    }
+    get shopBlocks() {
+        return h;
     }
 }
-o(h, 'displayName', 'CollectiblesShopHomesStore'),
-    new h(s.Z, {
-        COLLECTIBLES_SHOP_HOME_FETCH: c,
-        COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: d,
-        COLLECTIBLES_SHOP_HOME_FETCH_FAILURE: f,
-        LOGOUT: _
-    });
+c(v, 'displayName', 'CollectiblesShopHomesStore'),
+    (n.Z = new v(u.Z, {
+        COLLECTIBLES_SHOP_HOME_FETCH: p,
+        COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: m,
+        COLLECTIBLES_SHOP_HOME_FETCH_FAILURE: g,
+        LOGOUT: E
+    }));

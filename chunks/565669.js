@@ -1,4 +1,10 @@
-function i(e, n, r) {
+r.d(n, {
+    H: function () {
+        return s;
+    }
+});
+var i = r(87290);
+function a(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -11,12 +17,11 @@ function i(e, n, r) {
         e
     );
 }
-r(87290);
-class a {
+class s {
     static fromServer(e) {
-        return new a(e);
+        return new s(e);
     }
     constructor(e) {
-        i(this, 'categoryStoreListingId', void 0), i(this, 'name', void 0), i(this, 'bannerUrl', void 0), (this.type = FeaturedSubblockType.CATEGORY), (this.categoryStoreListingId = e.category_store_listing_id), (this.name = e.name), (this.bannerUrl = e.banner_url);
+        a(this, 'categoryStoreListingId', void 0), a(this, 'name', void 0), a(this, 'bannerUrl', void 0), a(this, 'unpublishedAt', void 0), (this.type = i.O.CATEGORY), (this.categoryStoreListingId = e.category_store_listing_id), (this.name = e.name), (this.bannerUrl = e.banner_url), (this.unpublishedAt = null != e.unpublished_at ? new Date(e.unpublished_at) : null);
     }
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     q: function () {
-        return h;
+        return g;
     }
 });
 var r = n(200651);
@@ -9,38 +9,45 @@ var a = n(120356),
     i = n.n(a),
     l = n(622535),
     s = n(481060),
-    o = n(884697),
-    c = n(297651),
-    d = n(215023),
-    u = n(388032),
-    m = n(218142);
-let h = (e) => {
-    var t;
-    let { category: n, badgeText: a, handleTransition: h } = e,
-        { handleCardVisibilityChange: p } = (0, c.E)(n.skuId, 'home', 'marketing'),
-        f = (0, o.uV)(null !== (t = null == n ? void 0 : n.featuredBlock) && void 0 !== t ? t : '', {
-            size: d.J0,
-            format: 'png'
-        });
+    o = n(597688),
+    c = n(884697),
+    d = n(297651),
+    u = n(215023),
+    m = n(388032),
+    h = n(218142);
+let g = (e) => {
+    var t, n, a, g;
+    let p,
+        { category: f, subblock: C, badgeText: b, handleTransition: v } = e;
+    null != C && (p = null === (t = o.Z.getCategoryByStoreListingId(null == C ? void 0 : C.categoryStoreListingId)) || void 0 === t ? void 0 : t.skuId);
+    let x = null !== (n = null != p ? p : null == f ? void 0 : f.skuId) && void 0 !== n ? n : '',
+        { handleCardVisibilityChange: _ } = (0, d.E)(x, 'home', 'marketing'),
+        k =
+            null !== (g = null == C ? void 0 : C.bannerUrl) && void 0 !== g
+                ? g
+                : (0, c.uV)(null !== (a = null == f ? void 0 : f.featuredBlock) && void 0 !== a ? a : '', {
+                      size: u.J0,
+                      format: 'png'
+                  });
     return (0, r.jsx)(l.$, {
-        onChange: p,
+        onChange: _,
         threshold: 0,
         children: (0, r.jsxs)(s.Clickable, {
-            className: i()(m.featuredBlock),
-            style: { backgroundImage: 'url('.concat(f, ')') },
-            onClick: () => h('shop marketing tile', null == n ? void 0 : n.skuId),
+            className: i()(h.featuredBlock),
+            style: { backgroundImage: 'url('.concat(k, ')') },
+            onClick: () => v('shop marketing tile', x),
             children: [
-                null != a &&
+                null != b &&
                     (0, r.jsx)(s.TextBadge, {
                         disableColor: !0,
-                        text: a,
-                        className: m.featuredBlockBadge
+                        text: b,
+                        className: h.featuredBlockBadge
                     }),
                 (0, r.jsx)(s.Button, {
-                    className: m.featuredBlockButton,
+                    className: h.featuredBlockButton,
                     color: s.ButtonColors.WHITE,
                     onClick: () => {},
-                    children: u.intl.string(u.t.jVcuVV)
+                    children: m.intl.string(m.t.jVcuVV)
                 })
             ]
         })
