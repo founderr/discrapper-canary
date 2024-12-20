@@ -26442,6 +26442,8 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
 }
 
 .visual-refresh .flushContainer_bdf0de {
+    background-color: transparent;
+    background-color: initial;
     border: none
 }
 
