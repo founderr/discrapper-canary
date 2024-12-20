@@ -6,5 +6,7 @@ e.exports = {
     sortIcon: 'sortIcon_b03ab6',
     placeholderText: 'placeholderText_b03ab6',
     placeholderTextSmall: 'placeholderTextSmall_b03ab6',
-    placeholderAvatar: 'placeholderAvatar_b03ab6'
+    placeholderAvatar: 'placeholderAvatar_b03ab6',
+    emptyContainer: 'emptyContainer_b03ab6',
+    checkmark: 'checkmark_b03ab6'
 };

@@ -13,24 +13,24 @@ var l = t(200651),
     d = t(979264),
     u = t(252618),
     m = t(693546),
-    x = t(328977),
-    h = t(666233),
-    b = t(360328),
-    C = t(171368),
-    j = t(598077),
-    g = t(430824),
-    f = t(51144),
-    v = t(384433),
-    N = t(981631),
+    x = t(246364),
+    h = t(328977),
+    C = t(666233),
+    j = t(360328),
+    b = t(171368),
+    g = t(598077),
+    f = t(430824),
+    N = t(51144),
+    v = t(981631),
     _ = t(308083),
     E = t(388032),
-    T = t(861683),
-    I = t(125712);
+    I = t(861683),
+    T = t(125712);
 function S(e) {
     let { icon: n, label: t, onClick: i, disabled: r } = e;
     return (0, l.jsxs)(o.Clickable, {
-        className: a()(T.actionButton, { [T.disabled]: r }),
-        onClick: r ? N.dG4 : i,
+        className: a()(I.actionButton, { [I.disabled]: r }),
+        onClick: r ? v.dG4 : i,
         'aria-label': t,
         children: [
             (0, l.jsx)(n, {
@@ -51,25 +51,25 @@ function p(e) {
     let { user: n, guildId: t, joinRequest: i } = e,
         { analyticsLocations: r } = (0, c.ZP)(),
         s = () => {
-            (0, C.openUserProfileModal)({
+            (0, b.openUserProfileModal)({
                 userId: n.id,
                 joinRequestId: i.joinRequestId,
                 sourceAnalyticsLocations: r,
                 analyticsLocation: {
-                    section: N.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
-                    object: N.qAy.JOIN_REQUEST
+                    section: v.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
+                    object: v.qAy.JOIN_REQUEST
                 }
             });
         };
     return (0, l.jsxs)('div', {
-        className: T.infoContainer,
+        className: I.infoContainer,
         children: [
             (0, l.jsxs)('div', {
-                className: I.memberNameContainer,
+                className: T.memberNameContainer,
                 children: [
                     (0, l.jsx)(o.Clickable, {
                         onClick: s,
-                        className: a()(T.clickable, I.memberAvatar),
+                        className: a()(I.clickable, T.memberAvatar),
                         children: (0, l.jsx)(o.Avatar, {
                             src: n.getAvatarURL(t, 48),
                             'aria-label': n.username,
@@ -77,14 +77,14 @@ function p(e) {
                         })
                     }),
                     (0, l.jsxs)('div', {
-                        className: I.memberNameAndTagContainer,
+                        className: T.memberNameAndTagContainer,
                         children: [
                             (0, l.jsxs)('div', {
-                                className: I.memberNameTextContainer,
+                                className: T.memberNameTextContainer,
                                 children: [
                                     (0, l.jsx)(o.Clickable, {
                                         onClick: s,
-                                        className: T.clickable,
+                                        className: I.clickable,
                                         children: (0, l.jsx)(o.Text, {
                                             variant: 'text-lg/medium',
                                             children: null == n ? void 0 : n.globalName
@@ -96,18 +96,18 @@ function p(e) {
                                         contextGuildId: t,
                                         badgeSize: _.NC.SIZE_16,
                                         textVariant: 'heading-md/semibold',
-                                        className: I.memberClanTag,
-                                        containerClassName: I.memberClanTagContainer
+                                        className: T.memberClanTag,
+                                        containerClassName: T.memberClanTagContainer
                                     })
                                 ]
                             }),
                             (0, l.jsx)(o.Clickable, {
                                 onClick: s,
-                                className: T.clickable,
+                                className: I.clickable,
                                 children: (0, l.jsx)(o.Text, {
                                     variant: 'text-md/medium',
                                     color: 'text-normal',
-                                    children: f.ZP.getUserTag(n)
+                                    children: N.ZP.getUserTag(n)
                                 })
                             })
                         ]
@@ -115,7 +115,7 @@ function p(e) {
                 ]
             }),
             (0, l.jsx)(o.Clickable, {
-                className: I.closeAction,
+                className: T.closeAction,
                 onClick: () => m.Z.setSelectedGuildJoinRequest(t, null),
                 children: (0, l.jsx)(o.XSmallIcon, {
                     size: 'md',
@@ -127,9 +127,9 @@ function p(e) {
 }
 function M(e) {
     let { user: n, guildId: t, joinRequest: i } = e,
-        { approveRequest: r, rejectRequest: a, handleOpenInterview: s, submitting: c } = (0, b.s)(t, n.id, i.joinRequestId, i.interviewChannelId);
+        { approveRequest: r, rejectRequest: a, handleOpenInterview: s, submitting: c } = (0, j.s)(t, n.id, i.joinRequestId, i.interviewChannelId);
     return (0, l.jsxs)('div', {
-        className: T.actionRow,
+        className: I.actionRow,
         children: [
             (0, l.jsx)(S, {
                 icon: o.CircleCheckIcon,
@@ -153,48 +153,49 @@ function M(e) {
     });
 }
 function R(e) {
-    let { guildId: n, currentTab: t } = e,
-        r = (0, x.L)({ guildId: n }),
-        { user: c } = null != r ? r : {},
-        d = i.useMemo(() => {
+    let { guildId: n } = e,
+        t = (0, h.L)({ guildId: n }),
+        { user: r } = null != t ? t : {},
+        c = i.useMemo(() => {
             var e;
-            return null !== (e = null == r ? void 0 : r.formResponses) && void 0 !== e ? e : [];
-        }, [null == r ? void 0 : r.formResponses]),
-        m = i.useMemo(() => (null != c ? new j.Z(c) : null), [c]),
-        b = (0, s.e7)([g.Z], () => g.Z.getGuild(n), [n]);
+            return null !== (e = null == t ? void 0 : t.formResponses) && void 0 !== e ? e : [];
+        }, [null == t ? void 0 : t.formResponses]),
+        d = i.useMemo(() => (null != r ? new g.Z(r) : null), [r]),
+        m = (0, s.e7)([f.Z], () => f.Z.getGuild(n), [n]);
     return ((0, u.Tt)({
         subsection: E.intl.string(E.t.nqrK8f),
-        location: null == b ? void 0 : b.name
+        location: null == m ? void 0 : m.name
     }),
-    null != r && null != b && null != m && null != c)
+    null != t && null != m && null != d && null != r)
         ? (0, l.jsx)('section', {
-              className: T.sidebar,
+              className: I.sidebar,
               children: (0, l.jsx)(o.Scroller, {
                   children: (0, l.jsxs)('div', {
-                      className: T.innerContainer,
+                      className: I.innerContainer,
                       children: [
                           (0, l.jsxs)('div', {
-                              className: T.cardContainer,
+                              className: I.cardContainer,
                               children: [
                                   (0, l.jsx)(p, {
-                                      user: m,
+                                      user: d,
                                       guildId: n,
-                                      joinRequest: r
+                                      joinRequest: t
                                   }),
-                                  t === v.e.PENDING &&
+                                  t.applicationStatus === x.wB.SUBMITTED &&
                                       (0, l.jsx)(M, {
-                                          user: m,
+                                          user: d,
                                           guildId: n,
-                                          joinRequest: r
+                                          joinRequest: t
                                       })
                               ]
                           }),
                           (0, l.jsx)('div', {
-                              className: a()(T.cardContainer, T.responsesContainer),
-                              children: (0, l.jsx)(h.Z, {
-                                  guildId: b.id,
-                                  formFields: d,
-                                  user: m
+                              className: a()(I.cardContainer, I.responsesContainer),
+                              children: (0, l.jsx)(C.Z, {
+                                  guildId: m.id,
+                                  formFields: c,
+                                  user: d,
+                                  showRequirements: !1
                               })
                           })
                       ]

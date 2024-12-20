@@ -1,7 +1,7 @@
 t.r(n),
     t.d(n, {
         default: function () {
-            return K;
+            return W;
         }
     }),
     t(47120);
@@ -17,71 +17,72 @@ var l = t(200651),
     m = t(252618),
     x = t(189432),
     h = t(189357),
-    b = t(693546),
-    C = t(863249),
-    j = t(63568),
+    C = t(693546),
+    j = t(863249),
+    b = t(63568),
     g = t(246364),
     f = t(697379),
-    v = t(98493),
-    N = t(412222),
+    N = t(98493),
+    v = t(412222),
     _ = t(223312),
-    E = t(473403),
+    E = t(571728),
+    I = t(473403),
     T = t(984370),
-    I = t(703656),
-    S = t(171368),
-    p = t(433355),
-    M = t(592125),
-    R = t(984933),
-    A = t(430824),
-    Z = t(944486),
-    k = t(384433),
+    S = t(703656),
+    p = t(171368),
+    M = t(433355),
+    R = t(592125),
+    A = t(984933),
+    Z = t(430824),
+    k = t(944486),
+    L = t(384433),
     B = t(241559),
-    w = t(575766),
-    L = t(901066),
-    P = t(987491),
-    D = t(305473),
+    P = t(575766),
+    w = t(901066),
+    D = t(987491),
+    G = t(305473),
     y = t(995596),
-    G = t(937283),
-    O = t(440857),
-    U = t(707113),
-    z = t(981631),
-    F = t(176505),
-    q = t(50493),
-    H = t(388032),
-    J = t(998810),
-    Y = t(247627);
+    O = t(937283),
+    U = t(440857),
+    z = t(707113),
+    F = t(981631),
+    q = t(176505),
+    H = t(50493),
+    J = t(388032),
+    Y = t(998810),
+    K = t(247627);
 function V(e) {
     let { guild: n, previousChannel: t, currentTab: r, onTabSelect: a } = e,
-        s = (0, j.jS)(n.id, 'Member Safety Page'),
+        s = (0, b.jS)(n.id, 'Member Safety Page'),
         c = (0, f.W)(n.id),
-        d = H.intl.string(H.t.oclz3d),
-        x = H.intl.string(H.t.oclz3d);
+        d = J.intl.string(J.t.oclz3d),
+        x = J.intl.string(J.t.oclz3d);
     return (
         (0, m.Tt)({
             location: n.name,
             subsection: d
         }),
         (0, l.jsxs)(T.Z, {
-            className: J.header,
-            innerClassname: J.__invalid_innerHeader,
-            channelId: F.oC.MEMBER_SAFETY,
+            className: Y.header,
+            innerClassname: Y.__invalid_innerHeader,
+            channelId: q.oC.MEMBER_SAFETY,
             guildId: n.id,
             hideSearch: !0,
             toolbar:
                 null != t
                     ? (0, l.jsx)(o.Button, {
-                          className: J.returnButton,
+                          className: Y.returnButton,
                           size: o.Button.Sizes.SMALL,
                           look: o.Button.Looks.OUTLINED,
                           color: o.Button.Colors.PRIMARY,
                           onClick: () => {
-                              null != t && (0, I.XU)(n.id, t.id);
+                              null != t && (0, S.XU)(n.id, t.id);
                           },
                           children: (0, l.jsx)(o.Text, {
-                              className: J.returnButtonText,
+                              className: Y.returnButtonText,
                               variant: 'text-xs/medium',
                               color: 'none',
-                              children: H.intl.format(H.t.IX7oWl, {
+                              children: J.intl.format(J.t.IX7oWl, {
                                   channelNameHook: () =>
                                       null == t
                                           ? null
@@ -89,8 +90,8 @@ function V(e) {
                                                 i.Fragment,
                                                 {
                                                     children: [
-                                                        (0, l.jsx)(E._, {
-                                                            className: J.returnIcon,
+                                                        (0, l.jsx)(I._, {
+                                                            className: Y.returnIcon,
                                                             guild: n,
                                                             channel: t
                                                         }),
@@ -126,118 +127,114 @@ function V(e) {
         })
     );
 }
-function K(e) {
-    let { guildId: n } = e,
-        [t, r] = i.useState(k.e.ALL_MEMBERS),
-        u = (0, s.e7)([A.Z], () => A.Z.getGuild(n)),
-        { analyticsLocations: m } = (0, d.ZP)(c.Z.MEMBER_SAFETY_PAGE),
-        f = (0, N.C)({ guildId: n }),
-        E = (0, j.jS)(n, 'Member Safety Page'),
-        { guildJoinRequests: T } = (0, _.j)({
-            guildId: n,
-            applicationStatus: 'ALL_MEMBERS' === t ? g.wB.SUBMITTED : t,
-            sortOrder: f
+function W(e) {
+    var n;
+    let { guildId: t } = e,
+        r = null !== (n = (0, E.A)({ guildId: t })) && void 0 !== n ? n : 0,
+        u = (0, b.jS)(t, 'Member Safety Page'),
+        [m, f] = i.useState(u && r > 0 ? L.e.PENDING : L.e.ALL_MEMBERS),
+        I = (0, s.e7)([Z.Z], () => Z.Z.getGuild(t)),
+        { analyticsLocations: T } = (0, d.ZP)(c.Z.MEMBER_SAFETY_PAGE),
+        y = (0, v.C)({ guildId: t }),
+        { guildJoinRequests: J } = (0, _.j)({
+            guildId: t,
+            applicationStatus: 'ALL_MEMBERS' === m ? g.wB.SUBMITTED : m,
+            sortOrder: y
         }),
-        y = (0, B.n2)(n),
-        H = (0, h.ms)(n, y),
-        K = (0, s.e7)([Z.Z], () => Z.Z.getLastSelectedChannelId(n)),
-        W = (0, s.e7)([M.Z], () => M.Z.getChannel(K)),
-        Q = i.useRef(null);
-    (0, w.n)(n);
-    let { fetchNextPage: X } = (0, v.m)({
-            guildId: n,
-            guildJoinRequests: T
+        W = (0, B.n2)(t),
+        Q = (0, h.ms)(t, W),
+        X = (0, s.e7)([k.Z], () => k.Z.getLastSelectedChannelId(t)),
+        $ = (0, s.e7)([R.Z], () => R.Z.getChannel(X)),
+        ee = i.useRef(null);
+    (0, P.n)(t);
+    let { fetchNextPage: en } = (0, N.m)({
+            guildId: t,
+            guildJoinRequests: J
         }),
-        $ = i.useCallback(async () => {
+        et = i.useCallback(async () => {
             var e;
-            if (t === k.e.ALL_MEMBERS) return;
-            let n = null === (e = Q.current) || void 0 === e ? void 0 : e.getScrollerState();
-            if (null != n) n.scrollHeight - n.scrollTop - n.offsetHeight < 200 && (await X(f, t));
-        }, [t, t, f, X]),
-        ee = i.useCallback(
+            if (m === L.e.ALL_MEMBERS) return;
+            let n = null === (e = ee.current) || void 0 === e ? void 0 : e.getScrollerState();
+            if (null != n) n.scrollHeight - n.scrollTop - n.offsetHeight < 200 && (await en(y, m));
+        }, [m, m, y, en]),
+        el = i.useCallback(
             async (e) => {
-                if (t !== e) {
-                    if (E) {
-                        if ((r(e), b.Z.setSelectedGuildJoinRequest(n, null), 'ALL_MEMBERS' === e)) return;
-                        await X(f, e);
+                if (m !== e) {
+                    if (u) {
+                        if ((f(e), C.Z.setSelectedGuildJoinRequest(t, null), 'ALL_MEMBERS' === e)) return;
+                        await en(y, e);
                     }
                 }
             },
-            [t, E, n, X, f]
+            [m, u, t, en, y]
         );
     i.useEffect(() => {
-        if (!y && null != u) {
+        if (!W && null != I) {
             var e;
-            let n = null === (e = R.ZP.getDefaultChannel(u.id)) || void 0 === e ? void 0 : e.id;
-            (0, I.XU)(u.id, n);
+            let n = null === (e = A.ZP.getDefaultChannel(I.id)) || void 0 === e ? void 0 : e.id;
+            (0, S.XU)(I.id, n);
         }
-    }, [u, y]),
+    }, [I, W]),
         i.useEffect(() => {
-            E && C.ZP.fetchVerificationForm(n);
-        }, [n, E]);
-    let en = (0, s.e7)([p.ZP], () => null != p.ZP.getGuildSidebarState(n), [n]),
-        et = i.useCallback(
+            u && j.ZP.fetchVerificationForm(t);
+        }, [t, u]);
+    let ei = (0, s.e7)([M.ZP], () => null != M.ZP.getGuildSidebarState(t), [t]),
+        er = i.useCallback(
             (e) => {
                 (0, h.By)(e.guildId, !0)
-                    ? (0, x.r)(e.guildId, e.userId, F.oC.MEMBER_SAFETY, { modViewPanel: q.k.INFO })
-                    : (0, S.openUserProfileModal)({
+                    ? (0, x.r)(e.guildId, e.userId, q.oC.MEMBER_SAFETY, { modViewPanel: H.k.INFO })
+                    : (0, p.openUserProfileModal)({
                           userId: e.userId,
                           guildId: e.guildId,
-                          sourceAnalyticsLocations: m,
-                          analyticsLocation: { section: z.jXE.MEMBER_SAFETY_PAGE }
+                          sourceAnalyticsLocations: T,
+                          analyticsLocation: { section: F.jXE.MEMBER_SAFETY_PAGE }
                       });
             },
-            [m]
+            [T]
         );
-    if (null == u || !y) return null;
-    let el =
-            t === k.e.ALL_MEMBERS
+    if (null == I || !W) return null;
+    let ea =
+            m === L.e.ALL_MEMBERS
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)(D.Z, { guild: u }),
-                          (0, l.jsx)(U.Z, {
-                              guild: u,
-                              onMemberSelect: et
+                          (0, l.jsx)(G.Z, { guild: I }),
+                          (0, l.jsx)(z.Z, {
+                              guild: I,
+                              onMemberSelect: er
                           })
                       ]
                   })
-                : (0, l.jsx)(P.Z, {
-                      guildId: u.id,
-                      currentTab: t
+                : (0, l.jsx)(D.Z, {
+                      guildId: I.id,
+                      currentTab: m
                   }),
-        ei =
-            t === k.e.ALL_MEMBERS
-                ? (0, l.jsx)(G.Z, { guildId: u.id })
-                : (0, l.jsx)(L.Z, {
-                      guildId: u.id,
-                      currentTab: t
-                  });
+        es = m === L.e.ALL_MEMBERS ? (0, l.jsx)(O.Z, { guildId: I.id }) : (0, l.jsx)(w.Z, { guildId: I.id });
     return (0, l.jsxs)(d.Gt, {
-        value: m,
+        value: T,
         children: [
             (0, l.jsxs)('div', {
-                className: a()(Y.chat, J.page, { [Y.threadSidebarOpen]: en }),
+                className: a()(K.chat, Y.page, { [K.threadSidebarOpen]: ei }),
                 children: [
                     (0, l.jsx)(V, {
-                        guild: u,
-                        previousChannel: W,
-                        currentTab: t,
-                        onTabSelect: ee
+                        guild: I,
+                        previousChannel: $,
+                        currentTab: m,
+                        onTabSelect: el
                     }),
                     (0, l.jsx)(o.AdvancedScroller, {
-                        onScroll: $,
-                        className: a()(J.scroller),
-                        ref: Q,
+                        onScroll: et,
+                        className: a()(Y.scroller),
+                        ref: ee,
                         orientation: 'vertical',
                         children: (0, l.jsx)('div', {
-                            className: a()(Y.content, J.container),
-                            children: el
+                            className: a()(K.content, Y.container),
+                            children: ea
                         })
                     }),
-                    (0, l.jsx)(O.Z, { guildId: u.id })
+                    (0, l.jsx)(U.Z, { guildId: I.id })
                 ]
             }),
-            H && ei
+            Q && es
         ]
     });
 }
