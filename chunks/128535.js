@@ -13,22 +13,21 @@ var s = n(120356),
     x = n(111382),
     h = n(113434),
     C = n(918701),
-    p = n(566078),
-    g = n(667105),
-    E = n(388032),
-    j = n(882924);
-let T = (e) => (0 === e.length ? j.warning : j.danger),
-    f = (e, t) => (0 === e.length ? E.intl.formatToPlainString(E.t.gX0Qc3, { gameTitle: t }) : E.intl.formatToPlainString(E.t['28Ql29'], { gameTitle: t })),
-    v = (e) => {
+    p = n(667105),
+    g = n(388032),
+    E = n(882924);
+let j = (e) => (0 === e.length ? E.warning : E.danger),
+    T = (e, t) => (0 === e.length ? g.intl.formatToPlainString(g.t.gX0Qc3, { gameTitle: t }) : g.intl.formatToPlainString(g.t['28Ql29'], { gameTitle: t })),
+    f = (e) => {
         let { quest: t, location: n, errors: s, gameTitle: l, consoleHelpArticle: o, expiredCredentialsInteractable: u } = e;
         if (0 === s.length)
             return (0, i.jsx)(a.Text, {
                 variant: 'text-sm/medium',
                 color: 'text-muted',
-                children: E.intl.format(E.t.GXqvCw, { gameTitle: l })
+                children: g.intl.format(g.t.GXqvCw, { gameTitle: l })
             });
         let x = [];
-        (0, C.Nj)({ quest: t }) && x.push((0, d.isWeb)() ? E.intl.string(E.t['0UTkPz']) : E.intl.string(E.t.XGRUho));
+        (0, C.Nj)({ quest: t }) && x.push((0, d.isWeb)() ? g.intl.string(g.t['0UTkPz']) : g.intl.string(g.t.XGRUho));
         let h = [
             ...x,
             ...s.map((e) => {
@@ -36,7 +35,7 @@ let T = (e) => (0 === e.length ? j.warning : j.danger),
                 let i = c.Z.getAccount(e.connected_account_id, e.connected_account_type),
                     s = (0, C.C9)(e),
                     l = (0, C._j)(e);
-                return E.intl.format(s, {
+                return g.intl.format(s, {
                     account_name: null == i ? void 0 : i.name,
                     onClick: () => {
                         (0, C.fY)(
@@ -61,18 +60,18 @@ let T = (e) => (0 === e.length ? j.warning : j.danger),
         });
     };
 t.Z = function (e) {
-    let t = p.r.build(e.quest.config).application.name,
+    let t = e.quest.config.messages.gameTitle,
         n = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-        s = (0, g.k3)(e.quest.id, e.location),
+        s = (0, p.k3)(e.quest.id, e.location),
         r = (0, x.n)(),
-        c = (0, g.g2)({
+        c = (0, p.g2)({
             useReducedMotion: n,
-            className: j.refreshIcon
+            className: E.refreshIcon
         }),
         {
             errorHints: d,
             startingConsoleQuest: C,
-            startConsoleQuest: S
+            startConsoleQuest: v
         } = (0, h.GI)({
             questId: e.quest.id,
             beforeRequest: () => {
@@ -86,16 +85,16 @@ t.Z = function (e) {
             afterRequest: c.stopAnimation
         });
     return (0, i.jsxs)('div', {
-        className: l()(j.container, { [j.inFlight]: C }),
+        className: l()(E.container, { [E.inFlight]: C }),
         children: [
             (0, i.jsxs)('div', {
-                className: j.info,
+                className: E.info,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: j.header,
+                        className: E.header,
                         children: [
                             (0, i.jsx)(a.CircleWarningIcon, {
-                                className: l()(j.headerIcon, T(d)),
+                                className: l()(E.headerIcon, j(d)),
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 16,
@@ -103,11 +102,11 @@ t.Z = function (e) {
                             }),
                             (0, i.jsx)(a.Text, {
                                 variant: 'text-sm/semibold',
-                                children: f(d, t)
+                                children: T(d, t)
                             })
                         ]
                     }),
-                    v({
+                    f({
                         quest: e.quest,
                         errors: d,
                         gameTitle: t,
@@ -118,14 +117,14 @@ t.Z = function (e) {
                 ]
             }),
             (0, i.jsx)('div', {
-                className: j.cta,
+                className: E.cta,
                 children: (0, i.jsx)(a.Button, {
                     color: a.ButtonColors.PRIMARY,
-                    onClick: S,
+                    onClick: v,
                     disabled: C,
                     children: (0, i.jsxs)('div', {
-                        className: j.ctaInner,
-                        children: [c.render(), E.intl.string(E.t.nPThNT)]
+                        className: E.ctaInner,
+                        children: [c.render(), g.intl.string(g.t.nPThNT)]
                     })
                 })
             })
