@@ -21,10 +21,8 @@ let d = 'data-client-themes',
             if (null == e) return null;
             let n = u.Z.getLinearGradient();
             if (null == n) return null;
-            let [r, i] = [...e.colors]
-                    .sort((e, n) => n.stop - e.stop)
-                    .slice(0, 2)
-                    .map((e) => s.b[e.token].hex),
+            let r = s.b[e.colors[0].token].hex,
+                i = s.b[e.colors[e.colors.length - 1].token].hex,
                 a = (0, c.W4)({
                     enabled: !0,
                     primaryColor: r,
