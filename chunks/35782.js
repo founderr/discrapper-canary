@@ -1658,6 +1658,46 @@ let { Themes: i } = r(15202).V,
                     }
                 }
             },
+            MODAL_BACKGROUND: {
+                'visual-refresh': {
+                    [i.DARK]: {
+                        raw: 'NEUTRAL_66',
+                        opacity: 1
+                    },
+                    [i.LIGHT]: {
+                        raw: 'NEUTRAL_1',
+                        opacity: 1
+                    },
+                    [i.MIDNIGHT]: {
+                        raw: 'NEUTRAL_91',
+                        opacity: 1
+                    },
+                    [i.DARKER]: {
+                        raw: 'NEUTRAL_79',
+                        opacity: 1
+                    }
+                }
+            },
+            MODAL_FOOTER_BACKGROUND: {
+                'visual-refresh': {
+                    [i.DARK]: {
+                        raw: 'NEUTRAL_66',
+                        opacity: 1
+                    },
+                    [i.LIGHT]: {
+                        raw: 'NEUTRAL_1',
+                        opacity: 1
+                    },
+                    [i.MIDNIGHT]: {
+                        raw: 'NEUTRAL_91',
+                        opacity: 1
+                    },
+                    [i.DARKER]: {
+                        raw: 'NEUTRAL_79',
+                        opacity: 1
+                    }
+                }
+            },
             SCROLLBAR_AUTO_SCROLLBAR_COLOR_THUMB: {
                 'visual-refresh': {
                     [i.DARK]: {
