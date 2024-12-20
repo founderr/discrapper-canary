@@ -6,13 +6,13 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(864094),
-    a = n(411840),
+    a = n(861254),
     s = n(871499),
     o = n(388032);
 function c(e) {
     let t,
         { hasPermission: n, streamActive: c, isSelfStream: d, centerButton: u, onMouseEnter: h, onMouseLeave: p, premiumGlow: m, buttonRef: f, ...g } = e,
-        { mode: C } = (0, a.Z)({ location: 'StreamButton' }),
+        { mode: C } = (0, a.ZP)({ location: 'StreamButton' }),
         x = u ? s.d : s.Z;
     t = c ? (d ? o.intl.string(o.t.S5anIS) : o.intl.string(o.t.q3O3Jy)) : n ? o.intl.string(o.t.fjBNo6) : o.intl.string(o.t.uQn9Bw);
     let { Component: v, events: _, play: I } = (0, r.P)(c ? 'disable' : 'enable');
@@ -24,8 +24,8 @@ function c(e) {
             disabled: !n,
             iconComponent: v,
             isActive: c,
-            color: C === a.B.GroupedButtonsRedMic && c ? 'green' : void 0,
-            ignoreColorForCaret: C === a.B.GroupedButtonsRedMic && c,
+            color: C === a.BK.GroupedButtonsRedMic && c ? 'green' : void 0,
+            ignoreColorForCaret: C === a.BK.GroupedButtonsRedMic && c,
             onMouseEnter: (e) => {
                 null == h || h(e), _.onMouseEnter();
             },

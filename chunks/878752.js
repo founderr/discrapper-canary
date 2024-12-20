@@ -18,7 +18,7 @@ var i = n(200651),
     m = n(441167),
     f = n(822183),
     g = n(641015),
-    C = n(411840),
+    C = n(861254),
     x = n(131951),
     v = n(594174),
     _ = n(700785),
@@ -37,7 +37,7 @@ function y(e) {
             let e = v.default.getCurrentUser();
             return a()(null != e, 'CenterControlTray: currentUser cannot be undefined'), e;
         }),
-        { groupedButtons: P } = (0, C.Z)({ location: 'VoiceEffectsActionBar' }),
+        { groupedButtons: P } = (0, C.ZP)({ location: 'VoiceEffectsActionBar' }),
         M = (0, u.Ou)(t),
         R = l.useRef(null),
         L = (0, p.Z)(),

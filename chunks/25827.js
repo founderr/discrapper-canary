@@ -12,15 +12,15 @@ var i = r(200651),
     o = r.n(s),
     l = r(75735),
     u = r(40851),
-    c = r(67844),
-    d = r(411840),
+    c = r(861254),
+    d = r(67844),
     f = r(871499),
     _ = r(541234);
 function h(e) {
-    let n = (0, c.X)(e),
-        { enabled: r, cameraUnavailable: s, onChange: o, onCameraUnavailable: d, hasPermission: f, children: _, channelLimitReached: h = !1, join: p } = e,
+    let n = (0, d.X)(e),
+        { enabled: r, cameraUnavailable: s, onChange: o, onCameraUnavailable: c, hasPermission: f, children: _, channelLimitReached: h = !1, join: p } = e,
         m = (0, u.bp)(),
-        g = s ? () => d() : () => o(!e.enabled, m),
+        g = s ? () => c() : () => o(!e.enabled, m),
         { Component: E, play: v, events: I } = (0, l.o)(p || r ? 'disable' : 'enable');
     return (
         a.useEffect(() => () => v(), [r, v]),
@@ -40,9 +40,9 @@ function h(e) {
     );
 }
 function p(e) {
-    let { enabled: n, join: r, channel: a, onChange: s, onCameraUnavailable: l, cameraUnavailable: u, hasPermission: c, className: p, channelLimitReached: m, channelLimit: g, centerButton: E = !1, onPopoutClick: v, ...I } = e,
+    let { enabled: n, join: r, channel: a, onChange: s, onCameraUnavailable: l, cameraUnavailable: u, hasPermission: d, className: p, channelLimitReached: m, channelLimit: g, centerButton: E = !1, onPopoutClick: v, ...I } = e,
         T = E ? f.d : f.Z,
-        { mode: b } = (0, d.Z)({ location: 'VideoButton' });
+        { mode: b } = (0, c.ZP)({ location: 'VideoButton' });
     return (0, i.jsx)(h, {
         enabled: n,
         join: r,
@@ -50,7 +50,7 @@ function p(e) {
         onChange: s,
         onCameraUnavailable: l,
         cameraUnavailable: u,
-        hasPermission: c,
+        hasPermission: d,
         channelLimitReached: m,
         channelLimit: g,
         children: (e) => {
@@ -58,8 +58,8 @@ function p(e) {
             return (0, i.jsx)(T, {
                 ...u,
                 ...I,
-                color: b === d.B.GroupedButtonsRedMic && l ? 'green' : I.color,
-                ignoreColorForCaret: b === d.B.GroupedButtonsRedMic && !r,
+                color: b === c.BK.GroupedButtonsRedMic && l ? 'green' : I.color,
+                ignoreColorForCaret: b === c.BK.GroupedButtonsRedMic && !r,
                 isActive: l,
                 onMouseEnter: (e) => {
                     var n;

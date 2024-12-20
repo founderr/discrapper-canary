@@ -16,7 +16,7 @@ var a = r(200651),
     d = r(131388),
     f = r(686546),
     _ = r(70097),
-    h = r(411840),
+    h = r(861254),
     p = r(259580),
     m = r(937995),
     g = r(618158),
@@ -108,7 +108,7 @@ function A(e) {
     s.useEffect(() => {
         null != w.current && (P ? w.current.pause() : w.current.play());
     }, [P]);
-    let { groupedButtons: M } = (0, h.Z)({ location: 'CenterControlButton' }),
+    let { groupedButtons: M } = (0, h.ZP)({ location: 'CenterControlButton' }),
         k = M ? [I.experimentButton, S[D], R && null == A && I.fullRegionButton] : [y[D]],
         U = (0, a.jsx)(b, {
             ...O,

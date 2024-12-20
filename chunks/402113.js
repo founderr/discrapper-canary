@@ -7,12 +7,12 @@ var i = r(200651);
 r(192379);
 var a = r(481060),
     s = r(513202),
-    o = r(411840),
+    o = r(861254),
     l = r(871499),
     u = r(388032);
 function c(e) {
     let { location: n, applicationId: r, centerButton: c = !1, ...d } = e,
-        { groupedButtons: f } = (0, o.Z)({ location: 'LeaveActivityButton' }),
+        { groupedButtons: f } = (0, o.ZP)({ location: 'LeaveActivityButton' }),
         _ = c ? l.d : l.Z,
         h = () => {
             s.Z.leaveActivity({

@@ -8,7 +8,7 @@ n(192379);
 var l = n(592471),
     r = n(749280),
     a = n(424602),
-    s = n(411840),
+    s = n(861254),
     o = n(871499);
 function c(e) {
     let t,
@@ -16,8 +16,8 @@ function c(e) {
         c,
         d,
         { isActivityActive: u, onMouseEnter: h, onMouseLeave: p, onClick: m, ...f } = e,
-        { mode: g } = (0, s.Z)({ location: 'VideoButton' });
-    g === s.B.GroupedButtonsRedMic && u && (t = 'green');
+        { mode: g } = (0, s.ZP)({ location: 'VideoButton' });
+    g === s.BK.GroupedButtonsRedMic && u && (t = 'green');
     let { enabled: C } = a.nS.useExperiment({ location: 'ActivityButton' }, { autoTrackExposure: !0 }),
         { Component: x, events: v, play: _ } = (0, l.s)(),
         { Component: I, events: E, play: b } = (0, r.w)();

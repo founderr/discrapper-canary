@@ -21,9 +21,9 @@ var a = r(200651),
     v = r(932724),
     I = r(672339),
     T = r(898531),
-    b = r(923973),
-    y = r(189771),
-    S = r(411840),
+    b = r(861254),
+    y = r(923973),
+    S = r(189771),
     A = r(560688),
     N = r(88479),
     C = r(136995),
@@ -85,9 +85,9 @@ function H(e) {
 }
 function Y(e) {
     let { canVideo: n, channel: r, numVideoDevices: i } = e,
-        { cameraUnavailable: s, enabled: o } = (0, b.Z)(),
-        u = (0, y.Z)(r),
-        { groupedButtons: c } = (0, S.Z)({ location: 'CallActionButtons' });
+        { cameraUnavailable: s, enabled: o } = (0, y.Z)(),
+        u = (0, S.Z)(r),
+        { groupedButtons: c } = (0, b.ZP)({ location: 'CallActionButtons' });
     return (0, a.jsxs)('div', {
         className: l()(B.wrapper, c ? B.experimentActions : B.actions),
         children: [
