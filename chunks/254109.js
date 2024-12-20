@@ -1,52 +1,63 @@
-l.d(t, {
+r.d(n, {
     VO: function () {
-        return u;
-    },
-    f0: function () {
-        return m;
+        return f;
     },
     fS: function () {
         return d;
+    },
+    uG: function () {
+        return i;
+    },
+    yg: function () {
+        return _;
     }
 });
-var n = l(15729),
-    i = l(731965),
-    r = l(626135),
-    a = l(981631);
-let s = {
+var i,
+    a = r(15729),
+    s = r(731965),
+    o = r(626135),
+    l = r(981631);
+!(function (e) {
+    (e.VIEWER_SWIPE = 'number_viewer_swipes'), (e.THUMBNAIL_SWIPE = 'number_thumbnail_swipes'), (e.SELECTED_ITEM_CHANGE = 'number_selected_item_changes'), (e.ZOOM_IN_BUTTON_PRESSED = 'number_zoom_in_button_pressed'), (e.ZOOM_IN_IMAGE_PRESSED = 'number_zoom_in_image_pressed'), (e.ZOOM_OUT_BUTTON_PRESSED = 'number_zoom_out_button_pressed'), (e.ZOOM_OUT_IMAGE_PRESSED = 'number_zoom_out_image_pressed'), (e.FORWARD_PRESSED = 'number_forward_button_pressed'), (e.SAVE_MEDIA_PRESSED = 'number_save_media_button_pressed'), (e.OPEN_LINK_PRESSED = 'number_open_link_button_pressed'), (e.MORE_BUTTON_PRESSED = 'number_more_button_pressed'), (e.COPY_IMAGE_PRESSED = 'number_copy_image_more_menu_pressed'), (e.COPY_LINK_PRESSED = 'number_copy_link_more_menu_pressed'), (e.CONTEXT_MENU_OPENED = 'number_context_menu_opened');
+})(i || (i = {}));
+let u = {
         guildId: void 0,
         channelId: void 0,
         channelType: void 0,
-        viewerSwipes: 0,
-        thumbnailSwipes: 0,
-        selectedItemChanges: 0,
-        numMediaItems: 0
+        numMediaItems: 0,
+        hasMediaOptions: void 0,
+        source: void 0,
+        incrementableActions: Object.fromEntries(Object.values(i).map((e) => [e, 0]))
     },
-    o = (0, n.U)(() => s);
-function d(e, t, l, n) {
-    (0, i.j)(() =>
-        o.setState({
-            ...s,
-            guildId: e,
-            channelId: t,
-            channelType: l,
-            numMediaItems: n
+    c = (0, a.U)(() => u);
+function d(e) {
+    (0, s.j)(() =>
+        c.setState({
+            ...u,
+            ...e
         })
     );
 }
-function u() {
-    let e = o.getState();
-    r.default.track(a.rMx.MEDIA_VIEWER_SESSION_COMPLETED, {
+function f() {
+    let e = c.getState();
+    o.default.track(l.rMx.MEDIA_VIEWER_SESSION_COMPLETED, {
+        source: e.source,
         guild_id: e.guildId,
         channel_id: e.channelId,
         channel_type: e.channelType,
-        number_viewer_swipes: e.viewerSwipes,
-        number_thumbnail_swipes: e.thumbnailSwipes,
-        number_selected_item_changes: e.selectedItemChanges,
-        number_media_items: e.numMediaItems
+        number_media_items: e.numMediaItems,
+        has_media_options: e.hasMediaOptions,
+        ...e.incrementableActions
     }),
-        (0, i.j)(() => o.setState({ ...s }));
+        (0, s.j)(() => c.setState({ ...u }));
 }
-function m() {
-    (0, i.j)(() => o.setState((e) => ({ selectedItemChanges: e.selectedItemChanges + 1 })));
+function _(e) {
+    (0, s.j)(() => {
+        c.setState((n) => ({
+            incrementableActions: {
+                ...n.incrementableActions,
+                [e]: n.incrementableActions[e] + 1
+            }
+        }));
+    });
 }

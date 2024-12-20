@@ -36,8 +36,8 @@ function C(e) {
     });
 }
 function E(e) {
-    let { onClose: n, items: t, startingIndex: i, onIndexChange: u, fit: E, shouldRedactExplicitContent: g, shouldHideMediaOptions: S, shouldAnimateCarousel: L, className: x, transitionState: v, ...A } = e,
-        O = o.tq && null != n;
+    let { onClose: n, items: t, startingIndex: i, fit: u, shouldRedactExplicitContent: E, shouldHideMediaOptions: S, shouldAnimateCarousel: g, className: L, transitionState: O, ...x } = e,
+        A = o.tq && null != n;
     return (
         r.useEffect(() => {
             if (null != n)
@@ -50,32 +50,31 @@ function E(e) {
         }, [n]),
         r.useEffect(
             () => (
-                v === s.ModalTransitionState.ENTERED && (d.Z.disable(), d.Z.enableTemp(c.P)),
-                v === s.ModalTransitionState.HIDDEN && (d.Z.disable(), d.Z.enableTemp(c.v)),
+                O === s.ModalTransitionState.ENTERED && (d.Z.disable(), d.Z.enableTemp(c.P)),
+                O === s.ModalTransitionState.HIDDEN && (d.Z.disable(), d.Z.enableTemp(c.v)),
                 () => {
                     d.Z.disableTemp();
                 }
             ),
-            [v]
+            [O]
         ),
         (0, a.jsxs)(s.ModalRoot, {
             hideShadow: !0,
-            className: l()(m.carouselModal, x),
-            transitionState: v,
-            ...A,
+            className: l()(m.carouselModal, L),
+            transitionState: O,
+            ...x,
             size: s.ModalSize.DYNAMIC,
             'aria-label': p.intl.string(p.t.AMTX3t),
             onClick: n,
             children: [
-                O ? (0, a.jsx)(C, { onClose: n }) : null,
+                A ? (0, a.jsx)(C, { onClose: n }) : null,
                 (0, a.jsx)(h.Z, {
                     items: t,
                     startIndex: i,
-                    onIndexChange: u,
-                    fit: E,
-                    shouldRedactExplicitContent: g,
+                    fit: u,
+                    shouldRedactExplicitContent: E,
                     shouldHideMediaOptions: S,
-                    shouldAnimateCarousel: L
+                    shouldAnimateCarousel: g
                 })
             ]
         })

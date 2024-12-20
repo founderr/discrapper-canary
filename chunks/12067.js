@@ -29,13 +29,7 @@ function x(e) {
                 srcIsAnimated: e.media.srcIsAnimated
             }))
             .filter((e) => 'INVALID' !== e.type),
-        b = {
-            source: 'Media Mosaic',
-            guild_id: t.guild_id,
-            channel_id: t.id,
-            channel_type: t.type
-        },
-        j =
+        b =
             I.length > 1
                 ? (0, d._)(
                       I,
@@ -43,14 +37,14 @@ function x(e) {
                           shouldHideMediaOptions: x,
                           shouldRedactExplicitContent: v
                       },
-                      b
+                      'Media Mosaic'
                   )
                 : {};
-    function S(e, n) {
+    function j(e, n) {
         let t = e.originalItem;
         return (0, a.lK)(t.media, n, t.spoiler);
     }
-    let N = e.items.map((e, t) => {
+    let S = e.items.map((e, t) => {
         let l = e.media,
             i = null == _ ? void 0 : _(l),
             r = {
@@ -68,7 +62,7 @@ function x(e) {
                 },
                 onContextMenu: i,
                 autoPlayGif: C,
-                getObscureReason: S,
+                getObscureReason: j,
                 renderImageComponent: s.aB,
                 renderVideoComponent: s.rJ,
                 renderVisualPlaceholderComponent: s.yF,
@@ -85,7 +79,7 @@ function x(e) {
                 proxyURL: l.proxyUrl,
                 url: l.url
             });
-        return a in j && (r.onClick = j[a]), r;
+        return a in b && (r.onClick = b[a]), r;
     });
-    return (0, l.jsx)('div', { children: (0, l.jsx)(u.Z, { items: N }) });
+    return (0, l.jsx)('div', { children: (0, l.jsx)(u.Z, { items: S }) });
 }

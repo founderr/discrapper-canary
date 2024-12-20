@@ -4695,6 +4695,7 @@ let oc = Object.freeze({
     (aS.MEDIA_VIEWER_SESSION_COMPLETED = 'media_viewer_session_completed'),
     (aS.MEDIA_VIEWER_SHARE_BUTTON_TAPPED = 'media_viewer_share_button_tapped'),
     (aS.MEDIA_VIEWER_DOWNLOAD_BUTTON_TAPPED = 'media_viewer_download_button_tapped'),
+    (aS.MEDIA_VIEWER_AFFORDANCE_CLICKED = 'media_viewer_affordance_clicked'),
     (aS.FILE_SIZE_LIMIT_EXCEEDED = 'file_size_limit_exceeded'),
     (aS.MOBILE_FILE_PICKER_ERROR = 'mobile_file_picker_error'),
     (aS.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED = 'premium_uncancel_winback_cta_clicked'),

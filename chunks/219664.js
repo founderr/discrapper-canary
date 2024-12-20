@@ -271,7 +271,12 @@ t.Z = i.memo(function (e) {
 });
 let H = (e) => e.preventDefault(),
     D = i.memo(function (e) {
-        return (0, a.jsx)(a.Fragment, { children: (0, v.Yi)(e) });
+        return (0, a.jsx)(a.Fragment, {
+            children: (0, v.Yi)({
+                ...e,
+                analyticsSource: 'ForumPostMediaPreviewImage'
+            })
+        });
     }),
     U = i.memo(function (e) {
         let { mediaAttachments: t, globalSpoilerRenderSetting: n, containerWidth: r, containerHeight: s, canAutoPlay: o, shouldMaintainAspectRatio: c = !1 } = e,

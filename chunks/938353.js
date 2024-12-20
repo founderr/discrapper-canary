@@ -379,26 +379,20 @@ class e3 extends (i = l.Component) {
                     };
                 })
                 .filter((e) => 'INVALID' !== e.type),
-            f = {
-                source: 'Media Mosaic',
-                guild_id: t.guild_id,
-                channel_id: t.id,
-                channel_type: t.type
-            },
-            p = (0, q._)(
+            f = (0, q._)(
                 h,
                 {
                     shouldRedactExplicitContent: s,
                     shouldHideMediaOptions: c
                 },
-                f
+                'Media Mosaic'
             ),
-            _ = h.length > 1,
-            g = (0, eC.yE)(d, eH.iLy.IS_VOICE_MESSAGE);
-        function E(e, t) {
+            p = h.length > 1,
+            _ = (0, eC.yE)(d, eH.iLy.IS_VOICE_MESSAGE);
+        function g(e, t) {
             return (0, eN.dn)(e.originalItem, t);
         }
-        let C = m.map((n) => {
+        let E = m.map((n) => {
                 let r = (0, K.VY)(n),
                     s = {
                         message: e,
@@ -407,14 +401,14 @@ class e3 extends (i = l.Component) {
                         canRemoveItem: l && (m.length > 1 || '' !== e.content),
                         onRemoveItem: this.handleRemoveAttachment,
                         className: eY.embedWrapper,
-                        getObscureReason: E,
+                        getObscureReason: g,
                         onContextMenu:
                             null != o
                                 ? (e) => {
                                       e.stopPropagation(), e.preventDefault(), o(e, r);
                                   }
                                 : void 0,
-                        renderAudioComponent: g ? eO.jY : eO.q7,
+                        renderAudioComponent: _ ? eO.jY : eO.q7,
                         renderImageComponent: eO.dS,
                         renderVideoComponent: eO.vZ,
                         renderPlaintextFilePreview: eO.d4,
@@ -438,9 +432,9 @@ class e3 extends (i = l.Component) {
                         proxyURL: n.proxy_url,
                         url: n.url
                     });
-                return c in p && (_ && (s.onClick = p[c]), (s.onViewItem = p[c])), s;
+                return c in f && (p && (s.onClick = f[c]), (s.onViewItem = f[c])), s;
             }),
-            I = n
+            C = n
                 ? (0, r.jsx)(y.Z, {
                       className: eK.hideIfMessageNotFocused,
                       messageId: e.id,
@@ -449,8 +443,8 @@ class e3 extends (i = l.Component) {
                   })
                 : void 0;
         return (0, r.jsx)(ew.Z, {
-            items: C,
-            inlineForwardButton: I
+            items: E,
+            inlineForwardButton: C
         });
     }
     renderEmbeds(e) {

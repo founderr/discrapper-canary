@@ -1,7 +1,7 @@
 t.r(n),
     t.d(n, {
         default: function () {
-            return _;
+            return S;
         }
     }),
     t(47120);
@@ -13,88 +13,86 @@ var i = t(200651),
     s = t(376641),
     u = t(714338),
     c = t(585483),
-    d = t(212459),
-    h = t(730606),
-    m = t(860153),
-    p = t(981631),
-    f = t(388032),
+    d = t(254109),
+    h = t(212459),
+    m = t(730606),
+    p = t(860153),
+    f = t(981631),
+    _ = t(388032),
     g = t(176598);
-function _(e) {
-    let { onClose: n, items: t, startingIndex: r, onIndexChange: _, shouldRedactExplicitContent: x, shouldHideMediaOptions: C = !1, className: S, transitionState: v, ...E } = e,
+function S(e) {
+    let { onClose: n, items: t, startingIndex: r, shouldRedactExplicitContent: S, shouldHideMediaOptions: E = !1, className: x, transitionState: C, ...v } = e,
         [I, y] = a.useState(null != r ? r : 0),
-        [b, L] = a.useState(!1),
-        [M, A] = a.useState(!0),
-        [j, O] = a.useState(void 0);
+        [M, O] = a.useState(!1),
+        [L, b] = a.useState(!0),
+        [A, T] = a.useState(void 0);
     a.useEffect(() => {
         if (null != n)
             return (
-                c.S.subscribe(p.CkL.MEDIA_MODAL_CLOSE, n),
+                c.S.subscribe(f.CkL.MEDIA_MODAL_CLOSE, n),
                 () => {
-                    c.S.unsubscribe(p.CkL.MEDIA_MODAL_CLOSE, n);
+                    c.S.unsubscribe(f.CkL.MEDIA_MODAL_CLOSE, n);
                 }
             );
     }, [n]),
         a.useEffect(
             () => (
-                v === o.ModalTransitionState.ENTERED && (u.Z.disable(), u.Z.enableTemp(s.P)),
-                v === o.ModalTransitionState.HIDDEN && (u.Z.disable(), u.Z.enableTemp(s.v)),
+                C === o.ModalTransitionState.ENTERED && (u.Z.disable(), u.Z.enableTemp(s.P)),
+                C === o.ModalTransitionState.HIDDEN && (u.Z.disable(), u.Z.enableTemp(s.v)),
                 () => {
                     u.Z.disableTemp();
                 }
             ),
-            [v]
+            [C]
         );
-    let T = a.useCallback(
-            (e) => {
-                y(e), null == _ || _(e);
-            },
-            [_]
-        ),
+    let j = a.useCallback((e) => {
+            y(e), (0, d.yg)(d.uG.SELECTED_ITEM_CHANGE);
+        }, []),
         R = a.useMemo(
             () => ({
-                zoomed: b,
-                setZoomed: L,
-                topBarVisible: M,
-                setTopBarVisible: A
+                zoomed: M,
+                setZoomed: O,
+                topBarVisible: L,
+                setTopBarVisible: b
             }),
-            [b, M]
+            [M, L]
         ),
-        w = a.useCallback(() => {
-            !M && A(!0), clearTimeout(j), O(setTimeout(() => A(!1), 1000));
-        }, [M, j]),
         N = a.useCallback(() => {
-            w(), null == n || n();
-        }, [w, n]),
-        k = t[I];
+            !L && b(!0), clearTimeout(A), T(setTimeout(() => b(!1), 1000));
+        }, [L, A]),
+        D = a.useCallback(() => {
+            N(), null == n || n();
+        }, [N, n]),
+        P = t[I];
     return (0, i.jsx)(o.ThemeProvider, {
-        theme: p.BRd.DARK,
+        theme: f.BRd.DARK,
         children: (e) =>
             (0, i.jsx)(o.ModalRoot, {
                 hideShadow: !0,
                 className: l()(g.carouselModal, e, {
-                    [g.opening]: null != v && v <= o.ModalTransitionState.ENTERED,
-                    [g.closing]: null != v && v >= o.ModalTransitionState.EXITING
+                    [g.opening]: null != C && C <= o.ModalTransitionState.ENTERED,
+                    [g.closing]: null != C && C >= o.ModalTransitionState.EXITING
                 }),
-                transitionState: v,
-                ...E,
+                transitionState: C,
+                ...v,
                 size: o.ModalSize.DYNAMIC,
                 fullscreenOnMobile: !1,
-                onMouseMove: w,
-                onClick: N,
-                'aria-label': f.intl.string(f.t.AMTX3t),
-                children: (0, i.jsxs)(d.z.Provider, {
+                onMouseMove: N,
+                onClick: D,
+                'aria-label': _.intl.string(_.t.AMTX3t),
+                children: (0, i.jsxs)(h.z.Provider, {
                     value: R,
                     children: [
-                        (0, i.jsx)(m.Z, {
-                            item: k,
+                        (0, i.jsx)(p.Z, {
+                            item: P,
                             onClose: n
                         }),
-                        (0, i.jsx)(h.Z, {
+                        (0, i.jsx)(m.Z, {
                             items: t,
                             startIndex: I,
-                            onIndexChange: T,
-                            shouldRedactExplicitContent: x,
-                            shouldHideMediaOptions: C
+                            onIndexChange: j,
+                            shouldRedactExplicitContent: S,
+                            shouldHideMediaOptions: E
                         })
                     ]
                 })

@@ -1,7 +1,7 @@
 r.r(n),
     r.d(n, {
         AnalyticEventConfigs: function () {
-            return M;
+            return P;
         },
         AnalyticsContext: function () {
             return T;
@@ -10,37 +10,37 @@ r.r(n),
             return h;
         },
         addExtraAnalyticsDecorator: function () {
-            return P;
+            return w;
         },
         clearAnalyticsEventsRecording: function () {
-            return q;
-        },
-        debugLogEvent: function () {
-            return j;
-        },
-        expandEventProperties: function () {
-            return V;
-        },
-        expandLocation: function () {
-            return k;
-        },
-        getAnalyticsEventsRecording: function () {
             return z;
         },
-        getNewAnalyticsLoadId: function () {
-            return ee;
+        debugLogEvent: function () {
+            return V;
         },
-        setUTMContext: function () {
+        expandEventProperties: function () {
             return F;
         },
-        startRecordingAnalyticsEvents: function () {
-            return W;
+        expandLocation: function () {
+            return M;
         },
-        stopRecordingAnalyticsEvents: function () {
+        getAnalyticsEventsRecording: function () {
             return K;
         },
-        trackNetworkAction: function () {
+        getNewAnalyticsLoadId: function () {
             return $;
+        },
+        setUTMContext: function () {
+            return Z;
+        },
+        startRecordingAnalyticsEvents: function () {
+            return Y;
+        },
+        stopRecordingAnalyticsEvents: function () {
+            return W;
+        },
+        trackNetworkAction: function () {
+            return J;
         }
     });
 var i = r(653041);
@@ -69,14 +69,13 @@ let I = { location: {} },
     C = 900000,
     R = 3600000,
     O = 86400000,
-    D = 0.01,
-    L = 0.001,
-    x = performance.now(),
-    w = [];
-function P(e) {
-    w.push(e);
+    D = 0.001,
+    L = performance.now(),
+    x = [];
+function w(e) {
+    x.push(e);
 }
-let M = {
+let P = {
     [g.rMx.APP_OPENED]: {
         throttlePeriod: N,
         throttleKeys: () => []
@@ -176,12 +175,12 @@ let M = {
     [g.rMx.RPC_COMMAND_SENT]: {
         throttlePeriod: O,
         throttleKeys: (e) => [e.application_id, e.command],
-        throttlePercent: L
+        throttlePercent: D
     },
     [g.rMx.RPC_SUBSCRIPTION_REQUESTED]: {
         throttlePeriod: O,
         throttleKeys: (e) => [e.application_id, e.event],
-        throttlePercent: L
+        throttlePercent: D
     },
     [g.rMx.ACTIVITY_HANDSHAKE]: {
         throttlePeriod: O,
@@ -207,7 +206,10 @@ let M = {
         throttlePeriod: S,
         throttleKeys: (e) => [e.user_id]
     },
-    [g.rMx.MEDIA_VIEWER_SESSION_COMPLETED]: { throttlePercent: D },
+    [g.rMx.MEDIA_VIEWER_SESSION_COMPLETED]: {
+        throttlePeriod: S,
+        throttleKeys: () => []
+    },
     [g.rMx.SUMMARIES_UNREAD_BAR_VIEWED]: {
         throttlePeriod: N,
         throttleKeys: (e) => [e.channel_id]
@@ -269,9 +271,14 @@ let M = {
     [g.rMx.MEMBER_LIST_SWIPE_PEEK]: {
         throttlePeriod: 1000,
         throttleKeys: (e) => [e.channel_id]
+    },
+    [g.rMx.OPEN_MODAL]: {
+        throttlePeriod: S,
+        throttleKeys: () => [],
+        throttleFilter: (e) => e.type === g.jXE.MEDIA_VIEWER
     }
 };
-function k(e) {
+function M(e) {
     return 'string' == typeof e
         ? { location: e }
         : {
@@ -282,7 +289,7 @@ function k(e) {
               location_object_type: e.objectType
           };
 }
-function U(e) {
+function k(e) {
     return 'string' == typeof e
         ? { source: e }
         : {
@@ -293,65 +300,65 @@ function U(e) {
               source_promotion_id: e.promotionId
           };
 }
-let B = () => E.E.NONE;
-function G(e) {
-    B = e;
+let U = () => E.E.NONE;
+function B(e) {
+    U = e;
 }
-let Z = (0, l.trackMaker)({
-    analyticEventConfigs: M,
+let G = (0, l.trackMaker)({
+    analyticEventConfigs: P,
     dispatcher: u.Z,
     TRACK_ACTION_NAME: 'TRACK'
 });
-function F(e) {
+function Z(e) {
     return (b = e);
 }
-function V(e) {
+function F(e) {
     var n, r, i, a;
     let s = e;
     if ((!s && (s = {}), null != s.location)) {
         let { location: e, ...n } = s;
         s = {
             ...n,
-            ...k(e)
+            ...M(e)
         };
     }
     if (null != s.source) {
         let { source: e, ...n } = s;
         s = {
             ...n,
-            ...U(e)
+            ...k(e)
         };
     }
-    (s.client_performance_cpu = p.Z.getCurrentCPUUsagePercent()), (s.client_performance_memory = p.Z.getCurrentMemoryUsageKB()), (s.cpu_core_count = p.Z.getCPUCoreCount()), (s.accessibility_features = B()), (s.rendered_locale = v.intl.currentLocale), (s.uptime_app = Math.floor((performance.now() - x) / 1000));
+    (s.client_performance_cpu = p.Z.getCurrentCPUUsagePercent()), (s.client_performance_memory = p.Z.getCurrentMemoryUsageKB()), (s.cpu_core_count = p.Z.getCPUCoreCount()), (s.accessibility_features = U()), (s.rendered_locale = v.intl.currentLocale), (s.uptime_app = Math.floor((performance.now() - L) / 1000));
     let o = p.Z.getProcessUptime();
     null != o && (s.uptime_process_renderer = Math.floor(o));
     let { utmSource: l, utmMedium: u, utmCampaign: c, utmContent: d } = b;
-    return (s.utm_source = null !== (n = s.utm_source) && void 0 !== n ? n : l), (s.utm_medium = null !== (r = s.utm_medium) && void 0 !== r ? r : u), (s.utm_campaign = null !== (i = s.utm_campaign) && void 0 !== i ? i : c), (s.utm_content = null !== (a = s.utm_content) && void 0 !== a ? a : d), w.forEach((e) => e(s)), s;
+    return (s.utm_source = null !== (n = s.utm_source) && void 0 !== n ? n : l), (s.utm_medium = null !== (r = s.utm_medium) && void 0 !== r ? r : u), (s.utm_campaign = null !== (i = s.utm_campaign) && void 0 !== i ? i : c), (s.utm_content = null !== (a = s.utm_content) && void 0 !== a ? a : d), x.forEach((e) => e(s)), s;
 }
-function j(e, n) {
+function V(e, n) {
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     _.default.isLoggingAnalyticsEvents && console.info('AnalyticsUtils.track(...):', e, n), r ? d.Hj('Analytics', e, n) : d.Hj('Analytics', e);
 }
-let H = !1,
-    Y = {};
+let j = !1,
+    H = {};
+function Y() {
+    j = !0;
+}
 function W() {
-    H = !0;
+    j = !1;
 }
 function K() {
-    H = !1;
+    return H;
 }
 function z() {
-    return Y;
-}
-function q() {
-    Object.keys(Y).forEach((e) => {
-        delete Y[e];
+    Object.keys(H).forEach((e) => {
+        delete H[e];
     });
 }
-function Q(e, n) {
-    return !!H && (null != n && (Array.isArray(Y[e]) ? Y[e].push(n) : (Y[e] = [n])), !0);
+function q(e, n) {
+    return !!j && (null != n && (Array.isArray(H[e]) ? H[e].push(n) : (H[e] = [n])), !0);
 }
-function X(e, n) {
+function Q(e, n) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         i = String(e);
     if (
@@ -360,26 +367,26 @@ function X(e, n) {
                 category: 'analytics',
                 message: ''.concat(i)
             }),
-        Q(e, n),
+        q(e, n),
         null != r.throttlePercent && Math.random() > r.throttlePercent)
     )
         return Promise.resolve();
-    let a = V(n);
+    let a = F(n);
     return (
-        j(i, a, r.logEventProperties),
-        Z(e, a, {
+        V(i, a, r.logEventProperties),
+        G(e, a, {
             flush: r.flush,
             fingerprint: r.fingerprint
         })
     );
 }
-let J = (0, l.trackMaker)({
-    analyticEventConfigs: M,
+let X = (0, l.trackMaker)({
+    analyticEventConfigs: P,
     dispatcher: u.Z,
     TRACK_ACTION_NAME: 'TRACK'
 });
-function $(e, n) {
-    let r = V({
+function J(e, n) {
+    let r = F({
         location: (0, c.k$)(),
         ...n
     });
@@ -387,16 +394,16 @@ function $(e, n) {
         type: 'action',
         ...n
     }),
-        j(e, r),
-        J(e, r);
+        V(e, r),
+        X(e, r);
 }
-function ee() {
+function $() {
     return (0, o.Z)();
 }
 n.default = {
     ...l,
     getCampaignParams: l.getCampaignParams,
-    setSystemAccessibilityFeatures: G,
-    expandEventProperties: V,
-    track: X
+    setSystemAccessibilityFeatures: B,
+    expandEventProperties: F,
+    track: Q
 };

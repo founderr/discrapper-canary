@@ -539,7 +539,8 @@ function em(e) {
                               animated: r && !d && l,
                               srcIsAnimated: a.srcIsAnimated,
                               containerClassName: ee.thumbnailContainer,
-                              imageClassName: s()({ [ee.obscured]: d })
+                              imageClassName: s()({ [ee.obscured]: d }),
+                              analyticsSource: 'ForumPostMediaPreview'
                           }),
                     d &&
                         (0, i.jsx)(H.Z, {

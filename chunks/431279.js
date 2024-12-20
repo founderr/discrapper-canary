@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return T;
+        return v;
     }
 });
 var i,
@@ -12,13 +12,11 @@ var s = r(200651),
     c = r(40851),
     d = r(124347),
     f = r(312097),
-    _ = r(626135),
-    h = r(956664),
-    p = r(506071),
-    m = r(981631),
-    g = r(701865),
-    E = r(765568);
-function v(e, n, r) {
+    _ = r(956664),
+    h = r(506071),
+    p = r(701865),
+    m = r(765568);
+function g(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -31,7 +29,7 @@ function v(e, n, r) {
         e
     );
 }
-class I extends (i = o.PureComponent) {
+class E extends (i = o.PureComponent) {
     render() {
         let { appContext: e, isWindowFocused: n, ...r } = this.props;
         return (0, s.jsx)(d.ZP, {
@@ -43,20 +41,20 @@ class I extends (i = o.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            v(this, 'onMouseEnter', (e, n) => {
+            g(this, 'onMouseEnter', (e, n) => {
                 let { preloadImage: r } = n,
                     { width: i, height: a, onMouseEnter: s } = this.props;
-                null == s || s(e, { preloadImage: r }), r((0, h.zp)(i, a));
+                null == s || s(e, { preloadImage: r }), r((0, _.zp)(i, a));
             }),
-            v(this, 'modalContext', (0, u.modalContextFromAppContext)(this.props.appContext)),
-            v(this, 'onCloseImage', () => {
-                (0, u.closeModal)(g.U, this.modalContext);
+            g(this, 'modalContext', (0, u.modalContextFromAppContext)(this.props.appContext)),
+            g(this, 'onCloseImage', () => {
+                (0, u.closeModal)(p.U, this.modalContext);
             }),
-            v(this, 'onZoom', (e, n) => {
+            g(this, 'onZoom', (e, n) => {
                 let { zoomThumbnailPlaceholder: r, trigger: i } = n;
                 e.preventDefault();
-                let { alt: a, src: s, original: o, width: u, height: c, animated: d, srcIsAnimated: h, children: p, shouldHideMediaOptions: g = !1, sourceMetadata: v } = this.props,
-                    I = {
+                let { alt: a, src: s, original: o, width: u, height: c, animated: d, srcIsAnimated: _, children: h, shouldHideMediaOptions: p = !1, sourceMetadata: g, analyticsSource: E } = this.props,
+                    v = {
                         url: s,
                         width: u,
                         height: c,
@@ -64,35 +62,34 @@ class I extends (i = o.PureComponent) {
                         alt: a,
                         zoomThumbnailPlaceholder: r,
                         animated: d,
-                        srcIsAnimated: h,
-                        children: p,
+                        srcIsAnimated: _,
+                        children: h,
                         trigger: i,
-                        sourceMetadata: v,
+                        sourceMetadata: g,
                         original: null != o ? o : s
                     };
                 (0, l.k)(e.currentTarget) && e.currentTarget.blur(),
-                    _.default.track(m.rMx.OPEN_MODAL, { type: 'Media Modal' }),
                     (0, f.K)({
-                        className: E.modal,
+                        className: m.modal,
                         onClose: this.onCloseImage,
-                        items: [I],
-                        shouldHideMediaOptions: g,
-                        location: 'LazyImageZoomable',
+                        items: [v],
+                        shouldHideMediaOptions: p,
+                        location: null != E ? E : 'LazyImageZoomable',
                         contextKey: this.modalContext
                     });
             });
     }
 }
-function T(e) {
+function v(e) {
     let n = (0, c.bp)(),
-        r = (0, p.n)();
-    return (0, s.jsx)(I, {
+        r = (0, h.n)();
+    return (0, s.jsx)(E, {
         ...e,
         isWindowFocused: r,
         appContext: n
     });
 }
-v(I, 'defaultProps', {
+g(E, 'defaultProps', {
     shouldLink: !0,
     autoPlay: !1,
     animated: !1

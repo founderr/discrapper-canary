@@ -18,9 +18,9 @@ function _() {
     (0, o.closeModal)(d.U);
 }
 function p(e) {
-    let { className: n, message: t, target: i } = e,
-        s = r.useCallback(() => {
-            if ('embed' === i.type) {
+    let { className: n, message: t, target: i, onClick: s } = e,
+        u = r.useCallback(() => {
+            if ((null == s || s(), 'embed' === i.type)) {
                 (0, c.l8)({
                     messageId: t.id,
                     channelId: t.channel_id,
@@ -39,10 +39,10 @@ function p(e) {
                 forwardOptions: { onlyAttachmentIds: [i.attachmentId] },
                 onRequestSent: _
             });
-        }, [t, i]);
+        }, [t, i, s]);
     return (0, a.jsx)(o.Clickable, {
         className: l()(h.container, n),
-        onClick: s,
+        onClick: u,
         children: (0, a.jsx)(o.Text, {
             className: h.text,
             variant: 'text-sm/medium',
@@ -51,15 +51,16 @@ function p(e) {
         })
     });
 }
-function m(e, n) {
-    let { canForwardMessages: t } = (0, s.WT)({ location: 'ForwardLink' }, { autoTrackExposure: !1 });
-    return t && (0, u.h)(e)
-        ? (t) => {
-              let { className: r } = t;
+function m(e, n, t) {
+    let { canForwardMessages: r } = (0, s.WT)({ location: 'ForwardLink' }, { autoTrackExposure: !1 });
+    return r && (0, u.h)(e)
+        ? (r) => {
+              let { className: i } = r;
               return (0, a.jsx)(p, {
-                  className: r,
+                  className: i,
                   message: e,
-                  target: n
+                  target: n,
+                  onClick: t
               });
           }
         : () => null;

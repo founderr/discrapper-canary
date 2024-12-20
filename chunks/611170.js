@@ -35,7 +35,8 @@ function s(e) {
         original: n.url,
         placeholder: n.placeholder,
         placeholderVersion: n.placeholderVersion,
-        sourceMetadata: { message: e.message }
+        sourceMetadata: { message: e.message },
+        analyticsSource: 'renderImageComponentForGalleryItem'
     });
 }
 function c(e) {

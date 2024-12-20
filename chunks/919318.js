@@ -1,6 +1,6 @@
 l.d(n, {
     ZP: function () {
-        return T;
+        return R;
     }
 }),
     l(47120);
@@ -31,8 +31,8 @@ var a = l(200651),
     E = l(825334),
     S = l(981631),
     M = l(388032),
-    k = l(288622),
-    y = l(665162),
+    y = l(288622),
+    k = l(665162),
     w = l(931057);
 function P(e) {
     let n,
@@ -51,7 +51,7 @@ function P(e) {
     return (
         _ > j ? (l = 72) : (n = 72),
         (0, a.jsxs)('div', {
-            className: k.media,
+            className: y.media,
             children: [
                 (0, x.Yi)({
                     src: Z,
@@ -62,13 +62,14 @@ function P(e) {
                     alt: null != b && o && null != h ? h : b,
                     autoPlay: p,
                     animated: C && !o && f,
-                    containerClassName: k.thumbnailContainer,
-                    imageClassName: r()({ [k.obscured]: o })
+                    containerClassName: y.thumbnailContainer,
+                    imageClassName: r()({ [y.obscured]: o }),
+                    analyticsSource: 'ResourceChannelMedia'
                 }),
                 o &&
                     (0, a.jsx)(u.Z, {
                         obscureReason: c,
-                        iconClassname: k.obscuredTag
+                        iconClassname: y.obscuredTag
                     })
             ]
         })
@@ -99,7 +100,7 @@ function B(e) {
         }),
         N = null == n.description || 0 === n.description.length;
     return (0, a.jsxs)(d.Clickable, {
-        className: k.row,
+        className: y.row,
         onClick: (e) => {
             null != l &&
                 (e.shiftKey
@@ -111,10 +112,10 @@ function B(e) {
         },
         children: [
             (0, a.jsxs)('div', {
-                className: k.content,
+                className: y.content,
                 children: [
                     (0, a.jsx)(d.Text, {
-                        className: k.title,
+                        className: y.title,
                         variant: 'text-md/bold',
                         color: 'header-primary',
                         children: n.title
@@ -122,7 +123,7 @@ function B(e) {
                     N &&
                         null != g &&
                         (0, a.jsx)(d.Text, {
-                            className: k.messageContent,
+                            className: y.messageContent,
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
                             lineClamp: 3,
@@ -133,7 +134,7 @@ function B(e) {
                         }),
                     !N &&
                         (0, a.jsx)(d.Text, {
-                            className: r()(k.messageContent, y.markup),
+                            className: r()(y.messageContent, k.markup),
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
                             lineClamp: 3,
@@ -146,10 +147,10 @@ function B(e) {
             }),
             null != n.icon && null != p
                 ? (0, a.jsx)('div', {
-                      className: k.media,
+                      className: y.media,
                       children: (0, a.jsx)('img', {
                           src: p,
-                          className: k.__invalid_thumbnail,
+                          className: y.__invalid_thumbnail,
                           width: 72,
                           height: 72,
                           alt: '',
@@ -166,14 +167,14 @@ function B(e) {
         ]
     });
 }
-function T(e) {
+function R(e) {
     let { guild: n, isNewMember: l } = e,
         i = (0, E.Z)(n.id);
     if (0 === i.length)
         return l
             ? null
             : (0, a.jsxs)('div', {
-                  className: k.emptyContainer,
+                  className: y.emptyContainer,
                   children: [
                       (0, a.jsx)(d.Heading, {
                           variant: 'heading-xl/bold',
@@ -181,12 +182,12 @@ function T(e) {
                           children: M.intl.string(M.t.owvC9f)
                       }),
                       (0, a.jsx)('img', {
-                          className: k.emptyStateImage,
+                          className: y.emptyStateImage,
                           src: w,
                           alt: ''
                       }),
                       (0, a.jsx)(d.Button, {
-                          className: k.emptyStateButton,
+                          className: y.emptyStateButton,
                           onClick: () => {
                               let e = p.ZP.getDefaultChannel(n.id);
                               null != e && (0, f.uL)(S.Z5c.CHANNEL(n.id, e.id));
@@ -197,7 +198,7 @@ function T(e) {
                   ]
               });
     return (0, a.jsxs)('div', {
-        className: k.container,
+        className: y.container,
         children: [
             (0, a.jsx)(d.Heading, {
                 variant: 'heading-lg/bold',

@@ -59,7 +59,8 @@ function I(e) {
                 type: 'attachment',
                 attachmentId: n.id
             }
-        }
+        },
+        analyticsSource: 'ImageComponentForMessageAttachment'
     });
 }
 function x(e) {
