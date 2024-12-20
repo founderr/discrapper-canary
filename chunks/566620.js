@@ -197,19 +197,17 @@ async function et(e) {
         throw e;
     }
     if (!(c.handler !== p.VC.APP_HANDLER || q.Yq.includes(n))) {
-        let e =
-                null != a
-                    ? await (0, g.FN)({
-                          type: 'guild',
-                          guildId: a
-                      })
-                    : g.ZP.getGuildState(a),
-            r = await (0, g.FN)({ type: 'user' });
+        null != i &&
+            (await (0, g.FN)({
+                type: 'channel',
+                channelId: i
+            })),
+            await (0, g.FN)({ type: 'user' });
+        let e = R.Z.getChannel(i);
         if (
             !(await (0, m.L)({
                 applicationId: n,
-                userIndexState: r,
-                guildIndexState: e,
+                channel: e,
                 commandIntegrationTypes: c.integration_types
             }))
         )

@@ -151,43 +151,41 @@ function U() {
     });
 }
 function B(e) {
-    let { channel: n, command: t, sectionName: a } = e,
-        o = (0, h.PL)(!0, !0),
-        r = (0, h.LD)(n.guild_id, !0),
-        c = (0, A.D)(n),
-        [u, m] = l.useState(!1),
-        p = l.useCallback(
+    let { channel: n, command: t, sectionName: a } = e;
+    (0, h.PL)(!0, !0), (0, h.em)(n, !0, !0);
+    let o = (0, A.D)(n),
+        [r, c] = l.useState(!1),
+        u = l.useCallback(
             async (e) => {
                 e.stopPropagation();
-                let n = N.Z.lastShownEntrypoint();
+                let i = N.Z.lastShownEntrypoint();
                 try {
                     (await (0, P.L)({
                         applicationId: t.applicationId,
-                        userIndexState: o,
-                        guildIndexState: r,
+                        channel: n,
                         sectionName: a,
                         location: C.Vh.APP_LAUNCHER_APPLICATION_VIEW,
-                        entrypoint: n,
+                        entrypoint: i,
                         commandIntegrationTypes: t.integration_types
                     })) &&
                         (await (0, I.Y$)({
                             command: t,
                             optionValues: {},
-                            context: c,
+                            context: o,
                             sectionName: a,
                             commandOrigin: C.bB.APP_LAUNCHER_APPLICATION_VIEW
                         }),
                         _.yT(g.ti.COMMAND));
                 } finally {
-                    m(!1);
+                    c(!1);
                 }
             },
-            [t, o, r, a, c]
+            [t, n, a, o]
         );
     return (0, i.jsxs)(d.Button, {
         type: 'submit',
-        onClick: p,
-        disabled: u,
+        onClick: u,
+        disabled: r,
         size: d.ButtonSizes.ICON,
         color: d.Button.Colors.PRIMARY,
         className: M.commandSentCTAButton,
