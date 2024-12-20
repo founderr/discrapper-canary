@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return I;
+        return T;
     }
 });
 var i = r(47120);
@@ -17,29 +17,31 @@ var s = r(192379),
     p = r(580130),
     m = r(122289),
     g = r(111361),
-    E = r(981631),
-    v = r(474936);
-function I() {
+    E = r(74538),
+    v = r(981631),
+    I = r(474936);
+function T() {
     let { forceFetch: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : { forceFetch: !1 },
         n = (0, d.e7)([_.default], () => _.default.getCurrentUser()),
         r = (0, d.Wu)([p.Z], () => p.Z.getFractionalPremium(!1)),
-        i = (0, d.e7)([h.ZP], () => h.ZP.getPremiumTypeSubscription()),
-        [a, o] = s.useState({
-            fractionalState: v.a$.NONE,
+        i = (0, d.Wu)([p.Z], () => p.Z.getUnactivatedFractionalPremiumUnits()),
+        a = (0, d.e7)([h.ZP], () => h.ZP.getPremiumTypeSubscription()),
+        [o, u] = s.useState({
+            fractionalState: I.a$.NONE,
             endsAt: c()(0),
             currentEntitlementId: ''
         });
     return (
         s.useEffect(() => {
-            if ((null != n && !!(0, g.I5)(n)) || !!e) !p.Z.fetchingAllEntitlements && (0, f.p0)({ entitlementType: E.qc2.FRACTIONAL_REDEMPTION });
+            if ((null != n && !!(0, g.I5)(n)) || !!e) !p.Z.fetchingAllEntitlements && (0, f.p0)({ entitlementType: v.qc2.FRACTIONAL_REDEMPTION });
         }, []),
         s.useEffect(() => {
             if (null == n || !(0, g.I5)(n) || 0 === r.length) {
-                o((e) =>
-                    e.endsAt.isSame(c()(0)) && e.fractionalState === v.a$.NONE
+                u((e) =>
+                    e.endsAt.isSame(c()(0)) && e.fractionalState === I.a$.NONE
                         ? e
                         : {
-                              fractionalState: v.a$.NONE,
+                              fractionalState: I.a$.NONE,
                               endsAt: c()(0),
                               currentEntitlementId: ''
                           }
@@ -52,12 +54,12 @@ function I() {
                     n = 'fractional redemption entitlements should have startsAt/endsAt';
                 throw ((0, m.g9)(n, { extra: { entitlementIds: e } }), Error(n));
             }
-            o({
-                fractionalState: null == i || E.JwP.INACTIVE.has(i.status) || i.isBoostOnly ? v.a$.FP_ONLY : v.a$.FP_SUB_PAUSED,
-                endsAt: c()(e[0].endsAt),
+            u({
+                fractionalState: null == a || v.JwP.INACTIVE.has(a.status) || a.isBoostOnly ? I.a$.FP_ONLY : I.a$.FP_SUB_PAUSED,
+                endsAt: c()((0, E.N1)(e[0].endsAt, i)),
                 currentEntitlementId: e.length > 0 ? e[0].id : ''
             });
-        }, [n, r, i]),
-        a
+        }, [n, r, a, i]),
+        o
     );
 }
