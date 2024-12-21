@@ -171,6 +171,14 @@ class p {
             encrypt_missing_key_count: this.outboundStats.encryptMissingKeyCount
         };
     }
+    getAudioDeviceStats() {
+        return {
+            input_device_restart_count: this.inputDeviceStats.restartCount,
+            output_device_restart_count: this.outputDeviceStats.restartCount,
+            input_device_time_to_first_audio: this.inputDeviceStats.timeToFirstCallbackMs,
+            output_device_time_to_first_audio: this.outputDeviceStats.timeToFirstCallbackMs
+        };
+    }
     getPeriodicStats() {
         let e = [];
         for (let [m, g] of Object.entries(this.periodicInboundStats)) {
@@ -217,8 +225,15 @@ class p {
             _(this, 'decryptionFailures', void 0),
             _(this, 'routingFailures', void 0),
             _(this, 'periodicInboundStats', void 0),
+            _(this, 'inputDeviceStats', void 0),
+            _(this, 'outputDeviceStats', void 0),
+            _(this, 'sampleAudioDevice', void 0),
             _(this, 'sampleStats', void 0),
             (this.connection = e),
+            (this.sampleAudioDevice = (e, n) => {
+                var r, i, a;
+                if (void 0 !== e) void 0 !== e.restartCount && ((n.lastRestartCount = null !== (r = n.lastRestartCount) && void 0 !== r ? r : 0), (n.restartCount = null !== (i = n.restartCount) && void 0 !== i ? i : 0), n.lastRestartCount > e.restartCount ? (n.restartCount += e.restartCount) : (n.restartCount += e.restartCount - n.lastRestartCount), (n.lastRestartCount = e.restartCount)), (null !== (a = e.timeToFirstCallbackMs) && void 0 !== a ? a : 0) !== 0 && void 0 === n.timeToFirstCallbackMs && (n.timeToFirstCallbackMs = e.timeToFirstCallbackMs);
+            }),
             (this.sampleStats = (e) => {
                 if (null == e) return;
                 this.networkQuality.incrementNetworkStats((0, c.zO)()), this.systemResources.takeSample(), (this.decryptionFailures = e.transport.decryptionFailures), (this.routingFailures = e.transport.routingFailures), this.duration.connected++;
@@ -336,7 +351,8 @@ class p {
                                         });
                             }
                         });
-                    });
+                    }),
+                    void 0 !== e.audioDevice && (this.sampleAudioDevice(e.audioDevice.input, this.inputDeviceStats), this.sampleAudioDevice(e.audioDevice.output, this.outputDeviceStats));
                 let i = !1,
                     a = !1;
                 this.outboundStats.packetsSent > n && ((i = !0), this.duration.speaking++), l().reduce(this.inboundStats, (e, n) => ((e.packetsReceived += n.packetsReceived), e), { packetsReceived: 0 }).packetsReceived > r.packetsReceived && ((a = !0), this.duration.listening++), (i || a) && this.duration.participation++;
@@ -362,6 +378,8 @@ class p {
                 participation: 0,
                 connected: 0
             }),
-            (this.periodicInboundStats = {});
+            (this.periodicInboundStats = {}),
+            (this.inputDeviceStats = {}),
+            (this.outputDeviceStats = {});
     }
 }

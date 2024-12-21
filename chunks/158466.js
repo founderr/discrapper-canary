@@ -304,7 +304,7 @@ function h(e, n, r, i) {
     let { transport: T, clips: b } = E,
         y = {};
     null != T && ((y.availableOutgoingBitrate = T.sendBandwidth), (y.ping = T.rtt), (y.decryptionFailures = T.decryptionFailures), null != T.routingFailures && (y.routingFailures = T.routingFailures), (y.localAddress = T.localAddress), (y.pacerDelay = T.pacerDelay), null != T.receiverReports && (y.receiverReports = T.receiverReports), (y.receiverBitrateEstimate = T.receiverBitrateEstimate), (y.outboundBitrateEstimate = T.outboundBitrateEstimate), (y.inboundBitrateEstimate = null !== (a = T.inboundBitrateEstimate) && void 0 !== a ? a : 0), (y.packetsReceived = T.packetsReceived), (y.packetsSent = T.packetsSent), null != T.secureFramesProtocolVersion && (y.secureFramesProtocolVersion = T.secureFramesProtocolVersion)), ((null == T ? void 0 : T.bytesReceived) != null || (null != m && !Number.isNaN(m))) && (y.bytesReceived = null !== (c = null !== (u = null == T ? void 0 : T.bytesReceived) && void 0 !== u ? u : m) && void 0 !== c ? c : void 0), ((null == T ? void 0 : T.bytesSent) != null || (null != g && !Number.isNaN(g))) && (y.bytesSent = null !== (p = null !== (h = null == T ? void 0 : T.bytesSent) && void 0 !== h ? h : g) && void 0 !== p ? p : void 0);
-    let { screenshare: S, camera: A } = E;
+    let { screenshare: S, camera: A, audioDevice: N } = E;
     return {
         mediaEngineConnectionId: e,
         transport: y,
@@ -319,6 +319,7 @@ function h(e, n, r, i) {
                   }
                 : null,
         clips: b,
+        audioDevice: N,
         rtp: {
             inbound: I,
             outbound: v

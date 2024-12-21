@@ -404,6 +404,7 @@ class eI extends g.Z {
                 ...(null != this._voiceQuality ? this._voiceQuality.getDurationStats() : null),
                 ...(null != this._voiceQuality ? this._voiceQuality.getTransportStats() : null),
                 ...(null != this._voiceQuality ? this._voiceQuality.getE2EEStats() : null),
+                ...(null != this._voiceQuality ? this._voiceQuality.getAudioDeviceStats() : null),
                 ...(null != this._voiceDuration ? this._voiceDuration.getDurationStats() : null),
                 ...this.getAudioDeviceStates(),
                 media_session_id: this.getMediaSessionId(),
