@@ -58670,8 +58670,8 @@ code {
     --bg-overlay-opacity-3: 0.8;
     --bg-overlay-opacity-4: 0.75;
     --bg-overlay-opacity-5: 0.7;
-    --bg-overlay-opacity-6: 0.65;
-    --bg-overlay-opacity-app-frame: var(--bg-overlay-opacity-6)
+    --bg-overlay-opacity-6: 0.15;
+    --bg-overlay-opacity-app-frame: var(--bg-overlay-opacity-5)
 }
 
 .theme-dark.custom-theme-background,
@@ -58711,8 +58711,8 @@ code {
     --bg-overlay-opacity-3: 0.75;
     --bg-overlay-opacity-4: 0.7;
     --bg-overlay-opacity-5: 0.65;
-    --bg-overlay-opacity-6: 0.6;
-    --bg-overlay-opacity-app-frame: var(--bg-overlay-opacity-6)
+    --bg-overlay-opacity-6: 0.15;
+    --bg-overlay-opacity-app-frame: var(--bg-overlay-opacity-5)
 }
 
 .theme-light.custom-theme-background,
