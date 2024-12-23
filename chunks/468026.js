@@ -65,6 +65,7 @@ let g = (e) => {
             })),
         (0, i.jsx)(c.Y0, {
             transitionState: R,
+            size: c.Cg.DYNAMIC,
             className: s()(v, m.container),
             'aria-label': C,
             children: (0, i.jsxs)('form', {
